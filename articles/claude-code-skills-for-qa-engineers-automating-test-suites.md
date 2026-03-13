@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Skills for QA Engineers Automating Test Suites"
-description: "Discover how Claude Code skills transform QA automation workflows. Learn to leverage specialized skills for test generation, maintenance, and continuous integration."
+description: "Discover how Claude Code skills transform QA automation workflows. Learn to leverage specialized skills for test generation, maintenance, and continuous..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 4
 ---
 
 # Claude Code Skills for QA Engineers Automating Test Suites
@@ -52,7 +54,7 @@ describe('User authentication', () => {
 
 Test data preparation often consumes more time than test execution itself. The **xlsx** skill enables QA engineers to programmatically generate, transform, and validate test data from spreadsheet sources. You can create data-driven tests that read from Excel files, validate data integrity, and generate synthetic datasets.
 
-This skill integrates seamlessly with parameterized testing frameworks in Python, JavaScript, and other languages. Instead of hardcoding test data, you maintain spreadsheets that stakeholders can update without touching code.
+This skill integrates reliably with parameterized testing frameworks in Python, JavaScript, and other languages. Instead of hardcoding test data, you maintain spreadsheets that stakeholders can update without touching code.
 
 ### The pdf Skill for Documentation Validation
 
@@ -97,11 +99,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: Generate additional tests
         run: |
-          claude --skill tdd --generate --target ./src
+          /skill-name tdd --generate --target ./src
       - name: Run test suite
         run: npm test -- --coverage
       - name: Report results
-        run: claude --skill supermemory --record ./coverage
+        run: /skill-name supermemory --record ./coverage
 ```
 
 ## Best Practices for QA Engineers
