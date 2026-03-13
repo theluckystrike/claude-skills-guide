@@ -1,10 +1,14 @@
 ---
 layout: post
-title: "Claude Skills Slack Bot Integration Tutorial"
-description: "Build a Slack bot using @anthropic-ai/sdk that routes slash commands to Claude with skill-specific system prompts for code review, PDF processing, and more."
+title: "Claude Skills with Slack Bot Integration"
+description: "Build a Slack bot that invokes Claude skills on demand for code review, document processing, and memory recall directly from Slack using Node.js."
 date: 2026-03-13
-categories: [integrations, tutorials]
-tags: [claude-code, claude-skills, slack, bot, anthropic-sdk, nodejs]
+categories: [integrations, guides]
+tags: [claude-code, claude-skills, slack, bot, node-js, integration]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
+---
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
