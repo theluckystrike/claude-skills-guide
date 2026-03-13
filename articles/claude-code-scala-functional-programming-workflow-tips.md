@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code Scala Functional Programming Workflow Tips"
-description: "Practical strategies for using Claude Code to enhance your Scala functional programming development workflow. Learn pattern matching, monad transformations, and concise code practices."
+description: "Claude Code Scala functional programming workflow tips. Learn pattern matching, monad transformations, and concise code practices with Claude skills."
 date: 2026-03-13
 author: "Claude Skills Guide"
 categories: [guides, tutorials]

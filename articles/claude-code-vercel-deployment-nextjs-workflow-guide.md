@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code Vercel Deployment Next.js Workflow Guide"
-description: "Master Claude Code deployment to Vercel for Next.js: automated previews, production builds, environment management, and CI/CD pipelines with practical examples."
+description: "Claude Code Vercel deployment guide for Next.js. Automate previews, production builds, environment management, and CI/CD pipelines."
 date: 2026-03-13
 categories: [integrations, guides]
 tags: [claude-code, claude-skills, vercel, nextjs, deployment, devops]

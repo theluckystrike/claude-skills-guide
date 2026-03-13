@@ -12,7 +12,7 @@ score: 8
 
 # How Claude Skills Auto Invocation Works
 
-When you type a message and Claude Code invokes your `/tdd` skill without you explicitly calling it, that is auto invocation. Understanding how it works helps you write skills that trigger reliably and avoid false positives.
+When you type a message and Claude Code invokes your [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) without you explicitly calling it, that is auto invocation. Understanding how it works helps you write skills that trigger reliably and avoid false positives.
 
 ## The Auto Invocation Pipeline
 
@@ -81,7 +81,7 @@ Once a skill's TRIGGER conditions match, the skill's instructions get injected i
 
 **Instruction Priority**: Skill instructions supplement Claude's base behavior without replacing it entirely.
 
-**State Management**: Skills like `/supermemory` maintain persistent state across conversations. When auto-invoked, they load accumulated context from previous sessions.
+**State Management**: Skills like [`/supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) maintain persistent state across conversations. When auto-invoked, they load accumulated context from previous sessions.
 
 Example `/supermemory` trigger definition:
 

@@ -14,7 +14,7 @@ Pull request reviews consume significant developer time. Claude skills provide t
 
 ## Using /tdd for Test Coverage Verification
 
-When a PR opens, invoke `/tdd` and describe the changed files:
+When a PR opens, invoke [`/tdd`](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) and describe the changed files:
 
 ```
 /tdd Review src/auth/login.py and src/auth/token.py for test coverage gaps
@@ -24,7 +24,7 @@ Claude will list any uncovered functions and generate test stubs for each.
 
 ## Documenting Reviews with /pdf and /docx
 
-The `/pdf` and `/docx` skills enable Claude to read existing specification documents:
+The [`/pdf`](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) and `/docx` skills enable Claude to read existing specification documents:
 
 ```
 /pdf Load API-spec-v2.pdf and check if the new /users/profile endpoint matches the spec
