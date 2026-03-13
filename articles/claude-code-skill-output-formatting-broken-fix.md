@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Claude Code Skill Output Formatting Broken Fix"
-description: "Fix broken output formatting in Claude Code skills. Covers markdown rendering, code block problems, instruction mismatches, and terminal vs. IDE display."
+layout: post
+title: "Claude Code Skill Output Formatting: Fix Guide"
+description: "Fix broken output formatting in Claude Code skills: markdown rendering, code block issues, instruction mismatches, and terminal vs IDE display differences."
 date: 2026-03-13
-author: theluckystrike
+categories: [troubleshooting, claude-skills]
+tags: [claude-code, claude-skills, output-formatting, debugging, troubleshooting]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Skill Output Formatting Broken Fix
@@ -152,12 +156,7 @@ After generating code, run: npx eslint --fix {filename}
 
 If `supermemory` stored entries with broken formatting (e.g., markdown inside a JSON value field), reading them back may produce garbled output.
 
-**Check the raw store:**
-
-```bash
-ls ~/.claude-memory/
-cat ~/.claude-memory/latest.json 2>/dev/null | python3 -m json.tool
-```
+**Clear corrupted entries by asking supermemory to delete them:**
 
 **Fix — purge and re-write the corrupted entries:**
 

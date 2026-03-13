@@ -1,54 +1,47 @@
 ---
-layout: default
-title: "Claude Code Multi-Agent and Subagent Communication Guide"
-description: "How to design multi-agent workflows with Claude Code — spawning subagents, passing context between agents, and coordinating parallel work with skills."
+layout: post
+title: "Claude Code Multi-Agent Subagent Communication"
+description: "Design multi-agent workflows with Claude Code. Spawn subagents, pass context between agents, and coordinate parallel work using files and Claude Code print mode."
 date: 2026-03-13
-author: theluckystrike
+categories: [advanced, workflows]
+tags: [claude-code, claude-skills, multi-agent, automation, agentic]
+author: "Claude Skills Guide"
+reviewed: true
+score: 5
 ---
 
 # Claude Code Multi-Agent and Subagent Communication Guide
 
-Claude Code supports multi-agent workflows where a primary agent orchestrates one or more subagents, each running in isolated contexts with their own skills, tools, and system prompts. This architecture enables parallel work, task specialization, and the kind of complex autonomous workflows that single-agent approaches can't handle cleanly.
+Claude Code supports multi-agent workflows where a primary agent orchestrates one or more subagents, each running in isolated sessions with their own context. This architecture enables parallel work, task specialization, and complex autonomous workflows that single-session approaches cannot handle cleanly.
 
 ## The Multi-Agent Mental Model
 
-In a multi-agent Claude Code setup, you have:
+In a multi-agent Claude Code setup:
 
-- **Orchestrator**: A primary Claude Code session (often with a skill that manages coordination)
-- **Subagents**: Claude Code instances spawned by the orchestrator, each handling a specific task
-- **Shared state**: Files, databases, or message queues that agents use to communicate
+- **Orchestrator**: A Claude Code session (or shell script) that breaks tasks into pieces and assigns them
+- **Subagents**: Claude Code instances run in print mode (`claude -p "..."`) to handle specific tasks
+- **Shared state**: Files, directories, or JSON that agents use to communicate
 
-The orchestrator assigns work, subagents execute it, and results flow back through shared state. The orchestrator monitors completion and aggregates results.
+The orchestrator writes task specifications, subagents execute them and write results, and the orchestrator aggregates and reports.
 
 ## Spawning Subagents
 
-Claude Code can spawn subagents using the `bash` tool to invoke `claude` CLI commands:
+Claude Code subagents run using the `-p` (print mode) flag, which runs a non-interactive session, outputs to stdout, and exits. You capture the output in your orchestration script:
 
-```python
-# Inside an orchestrator skill
-# The orchestrator writes a task specification and spawns a worker
-task_spec = {
-    "task": "write_tests",
-    "target_file": "src/auth/login.ts",
-    "test_framework": "jest",
-    "output_file": "src/auth/login.test.ts"
-}
+```bash
+#!/bin/bash
+# Spawn a subagent to write tests for one file
 
-# Write task to shared state
-with open(".claude/agent-tasks/task-001.json", "w") as f:
-    json.dump(task_spec, f)
+SOURCE_FILE="$1"
+OUTPUT_FILE="$2"
 
-# Spawn subagent
-subprocess.run([
-    "claude",
-    "--skill", "tdd",
-    "--input-file", ".claude/agent-tasks/task-001.json",
-    "--output-file", ".claude/agent-results/result-001.json",
-    "--non-interactive"
-])
+RESULT=$(claude -p "/tdd Write comprehensive Jest tests for $SOURCE_FILE. Output only the test file content." 2>/dev/null)
+
+echo "$RESULT" > "$OUTPUT_FILE"
+echo "Subagent complete: $SOURCE_FILE -> $OUTPUT_FILE"
 ```
 
-The `--non-interactive` flag runs Claude Code without waiting for user input. The subagent reads its task specification, executes it, and writes results to the output file.
+This is the correct way to invoke Claude Code non-interactively. There are no `--skill`, `--input-file`, or `--non-interactive` flags in the Claude Code CLI.
 
 ## Communication Patterns
 
@@ -62,205 +55,247 @@ The simplest and most reliable pattern: agents communicate via files in a shared
     task-001.json    # Written by orchestrator
     task-002.json
   agent-results/
-    result-001.json  # Written by subagent
-    result-002.json
+    result-001.md    # Written by subagent
+    result-002.md
   agent-status/
-    agent-001.status # "pending" | "running" | "complete" | "failed"
+    task-001.status  # "pending" | "running" | "complete" | "failed"
 ```
 
-Orchestrator writes task files, updates status to "pending". Subagents poll for pending tasks, set status to "running", execute, write results, set status to "complete".
-
-This pattern is simple, debuggable, and doesn't require any infrastructure beyond the filesystem.
-
-### 2. Skill-Based Coordination
-
-You can design skills specifically for multi-agent coordination. An orchestrator skill might look like this:
-
-```yaml
----
-name: orchestrate
-description: Coordinates multiple Claude agents to complete complex multi-step tasks
-tools:
-  - read_file
-  - write_file
-  - bash
-  - list_directory
-max_turns: 50
----
-
-You are an orchestration agent. You break complex tasks into parallel subtasks, 
-assign them to specialized subagents, monitor their progress, and aggregate results.
-
-For each task:
-1. Analyze the request and identify parallelizable subtasks
-2. Write a task specification JSON file for each subtask to .claude/agent-tasks/
-3. Spawn a subagent for each task using: claude --skill {skill_name} --non-interactive ...
-4. Monitor .claude/agent-status/ for completion
-5. Aggregate results from .claude/agent-results/ into a final output
-6. Clean up task files after successful completion
-
-Available subagent skills: tdd, frontend-design, pdf, docx
-```
-
-### 3. MCP Server as Communication Bus
-
-For more complex setups, a Model Context Protocol (MCP) server can act as a centralized communication bus between agents. Each agent connects to the MCP server as a client and can publish/subscribe to task queues.
-
-This requires more setup but enables:
-- Real-time task assignment without polling
-- Centralized logging and monitoring
-- Agent discovery (agents can find each other dynamically)
-- Backpressure and rate limiting
-
-## Passing Context Between Agents
-
-Context doesn't flow automatically between agents — each subagent starts fresh. You must explicitly package and pass any context the subagent needs.
-
-### Task Specification Format
-
-A well-structured task specification contains everything the subagent needs:
-
-```json
-{
-  "task_id": "task-001",
-  "task_type": "write_tests",
-  "inputs": {
-    "source_file": "src/auth/login.ts",
-    "source_content": "// contents of the file...",
-    "test_framework": "jest",
-    "existing_tests": "// any existing test patterns...",
-    "project_conventions": "// relevant conventions..."
-  },
-  "constraints": {
-    "max_tokens_output": 4000,
-    "output_format": "complete_file",
-    "no_mocks": ["bcrypt", "database"]
-  },
-  "output": {
-    "file": ".claude/agent-results/result-001.json",
-    "schema": {
-      "test_file_content": "string",
-      "files_created": "string[]",
-      "explanation": "string"
-    }
-  }
-}
-```
-
-By including `source_content` directly in the task spec rather than just a file path, you avoid the subagent needing to read files from the project (which may be slow or require additional permissions).
-
-## Parallel Execution
-
-The power of multi-agent workflows is parallelism. If you have 10 files to test, you can spawn 10 subagents simultaneously rather than processing them sequentially.
+Orchestrator shell script writes task files:
 
 ```bash
 #!/bin/bash
-# Orchestrate parallel test generation
+# orchestrate-tests.sh — spawn subagents for each source file
+
+mkdir -p .claude/agent-tasks .claude/agent-results .claude/agent-status
 
 FILES=$(find src -name "*.ts" -not -name "*.test.ts")
-TASK_COUNT=0
+PIDS=()
+COUNT=0
 
 for FILE in $FILES; do
-    TASK_COUNT=$((TASK_COUNT + 1))
-    TASK_FILE=".claude/agent-tasks/task-${TASK_COUNT}.json"
+    COUNT=$((COUNT + 1))
+    TASK_ID="task-$(printf '%03d' $COUNT)"
+    RESULT_FILE=".claude/agent-results/${TASK_ID}.md"
     
-    # Write task specification
-    cat > "$TASK_FILE" << EOF
-    {
-        "task_id": "task-${TASK_COUNT}",
-        "task_type": "write_tests",
-        "inputs": {
-            "source_file": "${FILE}"
-        },
-        "output": {
-            "file": ".claude/agent-results/result-${TASK_COUNT}.json"
-        }
-    }
-EOF
+    echo "pending" > ".claude/agent-status/${TASK_ID}.status"
     
     # Spawn subagent in background
-    claude --skill tdd \
-           --input-file "$TASK_FILE" \
-           --output-file ".claude/agent-results/result-${TASK_COUNT}.json" \
-           --non-interactive &
+    (
+        echo "running" > ".claude/agent-status/${TASK_ID}.status"
+        
+        OUTPUT=$(claude -p "/tdd Write Jest tests for $FILE. Only output the test file, no explanation." 2>/dev/null)
+        
+        if [[ $? -eq 0 && -n "$OUTPUT" ]]; then
+            echo "$OUTPUT" > "$RESULT_FILE"
+            echo "complete" > ".claude/agent-status/${TASK_ID}.status"
+        else
+            echo "failed" > ".claude/agent-status/${TASK_ID}.status"
+        fi
+    ) &
+    
+    PIDS+=($!)
 done
 
-# Wait for all subagents to complete
-wait
-echo "All ${TASK_COUNT} tasks complete"
+echo "Spawned $COUNT subagents..."
+
+# Wait for all to finish
+for PID in "${PIDS[@]}"; do
+    wait $PID
+done
+
+echo "All $COUNT tasks complete"
 ```
 
-## Aggregating Results
+### 2. Passing Context Between Subagents
 
-After subagents complete, the orchestrator aggregates results:
+Context does not flow automatically between subagents — each starts fresh. Package any context the subagent needs directly in the prompt:
+
+```bash
+#!/bin/bash
+# Context-aware subagent invocation
+
+FILE="$1"
+CONVENTIONS="$2"  # Path to project conventions file
+
+CONTEXT=$(cat "$CONVENTIONS")
+SOURCE=$(cat "$FILE")
+
+OUTPUT=$(claude -p "/tdd 
+Project conventions:
+$CONTEXT
+
+Write tests for this file:
+$SOURCE
+
+Output only the complete test file." 2>/dev/null)
+
+echo "$OUTPUT"
+```
+
+By including file contents directly in the prompt rather than just a file path, you avoid the subagent needing file read access and reduce tool call overhead.
+
+### 3. Aggregating Results
+
+After subagents complete, aggregate their output:
 
 ```python
-import json, glob
+#!/usr/bin/env python3
+import os
+import glob
 
-results = []
-for result_file in sorted(glob.glob(".claude/agent-results/result-*.json")):
+result_files = sorted(glob.glob(".claude/agent-results/*.md"))
+status_files = sorted(glob.glob(".claude/agent-status/*.status"))
+
+completed = 0
+failed = 0
+
+for status_file in status_files:
+    with open(status_file) as f:
+        status = f.read().strip()
+    if status == "complete":
+        completed += 1
+    elif status == "failed":
+        failed += 1
+
+print(f"Results: {completed} complete, {failed} failed, {len(result_files)} files written")
+
+# Write test files to their proper locations
+for result_file in result_files:
     with open(result_file) as f:
-        result = json.load(f)
-        results.append(result)
+        content = f.read().strip()
+    if content:
+        # Parse the target path from the result file name
+        task_id = os.path.basename(result_file).replace(".md", "")
+        print(f"  {task_id}: {len(content)} chars")
+```
 
-# Write aggregated test files
-for result in results:
-    if result.get("status") == "success":
-        with open(result["output_file"], "w") as f:
-            f.write(result["test_file_content"])
-    else:
-        print(f"Task {result['task_id']} failed: {result.get('error')}")
+## Parallel Execution
 
-print(f"Completed: {sum(1 for r in results if r.get('status') == 'success')}/{len(results)} tasks")
+The power of multi-agent workflows is parallelism. Running 10 subagents in background processes is much faster than sequential runs:
+
+```bash
+#!/bin/bash
+# Parallel review of all changed files
+
+CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD -- "*.ts" "*.tsx")
+PIDS=()
+RESULTS=()
+
+for FILE in $CHANGED_FILES; do
+    OUTPUT_FILE="/tmp/review-$(echo $FILE | tr '/' '-').md"
+    RESULTS+=("$OUTPUT_FILE")
+    
+    # Spawn background subagent
+    (
+        claude -p "/tdd Identify any missing test coverage in $FILE. Be specific about function names." > "$OUTPUT_FILE" 2>/dev/null
+    ) &
+    PIDS+=($!)
+done
+
+# Wait for all subagents
+for PID in "${PIDS[@]}"; do
+    wait $PID
+done
+
+# Print all results
+for RESULT_FILE in "${RESULTS[@]}"; do
+    echo "=== $(basename $RESULT_FILE) ==="
+    cat "$RESULT_FILE"
+    echo
+done
+```
+
+## Rate Limiting Concurrent Subagents
+
+Running too many subagents simultaneously can exhaust your API rate limits. Use a semaphore pattern:
+
+```bash
+#!/bin/bash
+# Rate-limited parallel execution
+
+MAX_CONCURRENT=5
+PIDS=()
+
+run_with_limit() {
+    local FILE="$1"
+    local OUTPUT="$2"
+    
+    # Wait if at max concurrent
+    while [ ${#PIDS[@]} -ge $MAX_CONCURRENT ]; do
+        for i in "${!PIDS[@]}"; do
+            if ! kill -0 "${PIDS[$i]}" 2>/dev/null; then
+                unset "PIDS[$i]"
+            fi
+        done
+        PIDS=("${PIDS[@]}")
+        sleep 0.5
+    done
+    
+    # Spawn new subagent
+    (claude -p "/tdd Write tests for $FILE" > "$OUTPUT" 2>/dev/null) &
+    PIDS+=($!)
+}
+
+for FILE in src/**/*.ts; do
+    run_with_limit "$FILE" "/tmp/result-$(basename $FILE).md"
+done
+
+wait
+echo "All tasks complete"
 ```
 
 ## Error Handling and Retries
 
-Subagents fail. Network issues, context limits, and model errors happen. Design your orchestration layer to handle failures gracefully:
+Subagents fail — network errors, rate limits, and context length issues all happen. Wrap subagent calls with retry logic:
 
-```python
-MAX_RETRIES = 3
-
-def run_subagent(task_file, output_file, skill, retry=0):
-    result = subprocess.run(
-        ["claude", "--skill", skill, "--input-file", task_file,
-         "--output-file", output_file, "--non-interactive"],
-        capture_output=True, timeout=120
-    )
+```bash
+run_subagent_with_retry() {
+    local FILE="$1"
+    local OUTPUT="$2"
+    local MAX_RETRIES=3
+    local ATTEMPT=0
     
-    if result.returncode != 0 and retry < MAX_RETRIES:
-        print(f"Subagent failed (attempt {retry + 1}), retrying...")
-        return run_subagent(task_file, output_file, skill, retry + 1)
+    while [ $ATTEMPT -lt $MAX_RETRIES ]; do
+        RESULT=$(claude -p "/tdd Write tests for $FILE" 2>/dev/null)
+        
+        if [[ $? -eq 0 && -n "$RESULT" ]]; then
+            echo "$RESULT" > "$OUTPUT"
+            return 0
+        fi
+        
+        ATTEMPT=$((ATTEMPT + 1))
+        echo "Attempt $ATTEMPT failed for $FILE, retrying..." >&2
+        sleep $((ATTEMPT * 2))  # Exponential backoff
+    done
     
-    return result.returncode == 0
+    echo "All retries failed for $FILE" >&2
+    return 1
+}
 ```
 
-## Skill Design for Subagents
+## Using /supermemory for Shared Context
 
-Skills designed to run as subagents need different characteristics than interactive skills:
+If subagents need to share learned context, use `/supermemory` to store context before spawning subagents, then retrieve it in each subagent's prompt:
 
-- **Non-interactive output**: The subagent should write output to files, not to the terminal
-- **Explicit completion signals**: Write a result JSON with a clear success/failure status
-- **No clarifying questions**: Subagents cannot ask for clarification. Handle ambiguity in the skill body.
-- **Strict output format**: The orchestrator parses subagent output programmatically
+```bash
+# Store shared context once
+claude -p "/supermemory Store project context: uses Jest, all mocks go in __mocks__/, test files named *.test.ts"
 
-Add a "subagent mode" section to any skill you intend to use as a subagent:
+# Retrieve in each subagent
+CONTEXT=$(claude -p "/supermemory Retrieve the project testing conventions")
 
-```
-When running in non-interactive mode (indicated by the presence of --input-file 
-in the invocation or by the input being a JSON task specification):
-1. Read the task specification from the provided JSON
-2. Execute the task completely
-3. Write results to the specified output file in the required schema
-4. Exit without asking questions or providing interactive output
+for FILE in src/**/*.ts; do
+    (
+        claude -p "/tdd 
+Context: $CONTEXT
+Write tests for: $FILE" > "/tmp/result-$(basename $FILE).md" 2>/dev/null
+    ) &
+done
+
+wait
 ```
 
 ---
-
-## Related Reading
-
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The skills most suited for subagent use (tdd, pdf, frontend-design) are profiled here with invocation patterns that translate to multi-agent workflows
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understanding auto-invocation is essential for orchestration: you need to know when skills fire automatically versus when to invoke them explicitly in subagent mode
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Running many subagents in parallel multiplies API costs; these optimization techniques are especially important in multi-agent architectures
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
