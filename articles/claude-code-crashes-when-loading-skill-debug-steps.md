@@ -16,7 +16,7 @@ When Claude Code fails loading a skill, it usually comes down to one of three th
 
 ## What a Skill File Actually Is
 
-Claude Code skills are single `.md` files — plain Markdown with YAML front matter. There are no companion `.js` files, no compiled assets, no build steps. The entire skill lives in one file:
+Claude Code skills are single [skill.md files](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — plain Markdown with YAML front matter. There are no companion `.js` files, no compiled assets, no build steps. The entire skill lives in one file:
 
 ```
 ~/.claude/skills/

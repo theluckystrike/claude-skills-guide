@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Frontend Design Skill Review and Tutorial"
-description: "Practical review and tutorial on Claude's frontend-design skill: React/Vue/Svelte component generation, accessibility, design tokens, and skill integrations."
+description: "Review and tutorial for Claude frontend-design skill: React/Vue/Svelte component generation, accessibility, design tokens, and skill integrations."
 date: 2026-03-13
 categories: [skills, tutorials]
 tags: [claude-code, claude-skills, frontend-design, react]

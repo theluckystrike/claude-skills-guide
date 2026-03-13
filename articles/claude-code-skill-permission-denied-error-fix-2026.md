@@ -36,7 +36,7 @@ ls -la /path/to/your/script.sh
 chmod +x /path/to/your/script.sh
 ```
 
-Skills like `tdd` and `frontend-design` sometimes call local wrapper scripts. If you customised those scripts and copied them into place without preserving permissions, this is the most common cause.
+Skills like the [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) and `frontend-design` sometimes call local wrapper scripts. If you customised those scripts and copied them into place without preserving permissions, this is the most common cause.
 
 ## Cause 2: Claude Code Sandbox Blocking File Access
 
@@ -122,7 +122,7 @@ Update your skill definition to reference `~/bin/my-skill-helper.sh` instead.
 
 ## Cause 7: PDF or DOCX Skill Accessing Quarantined Files
 
-The `pdf` and `docx` skills read files from your filesystem. If those files are in a directory with extended quarantine attributes — common on corporate-managed macOS — you will see permission denied even though `ls` shows you own the file.
+The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) and `docx` skills read files from your filesystem. If those files are in a directory with extended quarantine attributes — common on corporate-managed macOS — you will see permission denied even though `ls` shows you own the file.
 
 **Check extended attributes:**
 ```bash
@@ -138,7 +138,7 @@ If you are on a managed device, copy the file to your home directory first.
 
 ## Cause 8: supermemory Skill Writing to a Read-Only Volume
 
-The `supermemory` skill writes session state to disk. If Claude Code's working directory is on a read-only volume — a network share, mounted image, or CI filesystem — `supermemory` will throw permission denied when trying to persist memory.
+The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) writes session state to disk. If Claude Code's working directory is on a read-only volume — a network share, mounted image, or CI filesystem — `supermemory` will throw permission denied when trying to persist memory.
 
 **Fix — set a writable memory path:**
 ```json

@@ -17,7 +17,7 @@ This guide walks through building that workflow from scratch, covering inline co
 - Claude Code installed and running
 - A project with source code (JavaScript, TypeScript, Python, or similar)
 - The `pdf` skill for generating formatted documentation outputs
-- The `supermemory` skill for storing documentation decisions across sessions
+- The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) for storing documentation decisions across sessions
 - Git access to your repo (for commit-based change detection)
 
 No additional packages or CI setup required to start. You can layer in CI automation once the local workflow is solid.

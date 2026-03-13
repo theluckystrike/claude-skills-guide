@@ -152,6 +152,9 @@ Once you've got the basics down, here's where to go next:
 | [How to Use Claude Skills with n8n Automation Workflows](/claude-skills-guide/articles/how-to-use-claude-skills-with-n8n-automation-workflows/) | Integrating Claude skills into n8n automation pipelines |
 | [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) | Full specification of every field and rule in the skill.md format |
 | [Understanding Claude Code Hooks System: Complete Guide](/claude-skills-guide/articles/understanding-claude-code-hooks-system-complete-guide/) | How the Claude Code hooks system works and how to use it |
+| [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) | Diagnosing and fixing slow skill performance in Claude Code |
+| [How to Fix Claude Skill Infinite Loop Issue](/claude-skills-guide/articles/how-to-fix-claude-skill-infinite-loop-issue/) | Identifying and resolving infinite loop bugs in Claude skills |
+| [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/articles/how-to-optimize-claude-skill-prompts-for-accuracy/) | Techniques to improve skill prompt precision and output quality |
 
 ---
 

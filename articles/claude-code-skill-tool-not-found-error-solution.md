@@ -140,7 +140,7 @@ tools:
 
 ### Step 5: External tool dependencies (pdf, docx skills)
 
-The `pdf` skill, `docx` skill, and similar document-processing skills require external binaries. These are separate from Claude Code's built-in tools.
+The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/), `docx` skill, and similar document-processing skills require external binaries. These are separate from Claude Code's built-in tools.
 
 **For the `pdf` skill:**
 ```bash
@@ -159,7 +159,7 @@ When the external binary is missing, the skill loads but the tool call fails wit
 
 ## The `supermemory` Skill: Storage Tool Errors
 
-The `supermemory` skill uses a custom storage tool to persist session memory. If the storage path is on a read-only filesystem, you will get:
+The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) uses a custom storage tool to persist session memory. If the storage path is on a read-only filesystem, you will get:
 
 ```
 ToolError: supermemory storage write failed
@@ -179,7 +179,7 @@ Fix by configuring a writable path:
 
 ## The `frontend-design` Skill: Missing Linter Tools
 
-The `frontend-design` skill optionally calls ESLint and Prettier for output validation. If these are not installed in your project, the validation step produces a tool-not-found error.
+The [`frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) optionally calls ESLint and Prettier for output validation. If these are not installed in your project, the validation step produces a tool-not-found error.
 
 ```bash
 # Install project-local (preferred)
