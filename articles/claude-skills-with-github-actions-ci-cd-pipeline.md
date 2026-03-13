@@ -247,4 +247,12 @@ Integrating Claude skills with GitHub Actions transforms your CI/CD pipeline int
 
 The combination of Claude's AI capabilities and GitHub Actions' automation platform creates a powerful development environment where code quality checks, testing, and documentation happen automatically—freeing you to focus on building features rather than managing infrastructure.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — The top skills for infrastructure automation, deployment pipelines, and operational workflows in 2026
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — A comprehensive roundup of developer-focused skills covering testing, documentation, and code quality automation
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — How to structure CI/CD skill invocations to minimize API usage while maintaining thorough analysis coverage
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

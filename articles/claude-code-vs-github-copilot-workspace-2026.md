@@ -128,3 +128,11 @@ For developers with network restrictions or data sensitivity concerns, review ea
 ## Summary
 
 Copilot Workspace is a strong embedded pair programmer for continuous in-editor assistance. Claude Code is a more directive tool — you invoke skills to execute specific, bounded tasks. The tools complement each other, and most teams find more value in using both than in treating them as competing choices.
+
+---
+
+## Related Reading
+
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — A breakdown of what distinguishes first-party skills from community-contributed alternatives and when each category makes sense
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — How reusable skills compare to ad-hoc prompting for consistency, reproducibility, and long-running projects
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understanding how Claude decides when to invoke a skill automatically versus waiting for an explicit slash command

@@ -207,4 +207,12 @@ Automated GitHub issue triage using Claude skills reduces maintainer burden whil
 
 The initial investment pays dividends as your issue queue grows. What once required hours of manual triage becomes a background process that keeps your project organized and helps contributors get their issues addressed faster.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — A curated overview of the highest-impact skills for professional developers, including triage, review, and testing workflows
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — How Claude skills integrate with CI/CD pipelines, infrastructure automation, and deployment processes
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Practical techniques for keeping triage and automation workflows efficient without exceeding token budgets
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

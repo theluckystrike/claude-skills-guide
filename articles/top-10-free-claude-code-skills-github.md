@@ -214,4 +214,12 @@ Most developers find three to five skills covers the majority of daily work. Ins
 
 ---
 
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — An in-depth look at which skills deliver the most value across different development contexts and project types
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to trigger a skill automatically based on context, and how to configure invocation behavior
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Strategies for getting the most out of skills like pdf, xlsx, and tdd without unnecessary API overhead
+
+---
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
