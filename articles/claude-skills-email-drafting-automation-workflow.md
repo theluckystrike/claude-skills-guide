@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Email Drafting Automation Workflow"
-description: "Build an email drafting automation workflow with Claude skills. Create templates for technical communications, incident reports, and team updates that stay consistent and save time."
+description: "Build an email drafting workflow using custom Claude skills: incident reports, API deprecation notices, and sprint updates with consistent structure."
 date: 2026-03-13
-author: theluckystrike
+categories: [workflows, claude-skills]
+tags: [claude-code, claude-skills, email, automation, productivity]
+author: "Claude Skills Guide"
+reviewed: true
+score: 9
 ---
 
 # Claude Skills Email Drafting Automation Workflow
