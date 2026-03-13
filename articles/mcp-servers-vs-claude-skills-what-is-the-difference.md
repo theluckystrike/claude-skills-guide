@@ -1,136 +1,153 @@
 ---
-layout: post
-title: "MCP Servers vs Claude Skills: What's the Difference?"
-description: "MCP servers connect Claude to external systems; skills shape how Claude behaves. Learn when to use each with real-world examples and decision criteria."
+layout: default
+title: "MCP Servers vs Claude Skills: What Is the Difference?"
+description: "A clear explanation of the difference between MCP servers and Claude skills for developers — what each does, how they relate, and when to use one versus the other."
 date: 2026-03-13
-categories: [comparisons]
-tags: [claude-code, claude-skills, mcp-servers, architecture]
-author: "Claude Skills Guide"
-reviewed: true
-score: 7
+author: theluckystrike
 ---
 
 # MCP Servers vs Claude Skills: What Is the Difference?
 
-If you're building AI-powered applications or extending Claude's capabilities, you've likely encountered two distinct extension mechanisms: MCP servers and Claude skills. While both extend functionality, they serve different purposes and operate at different levels of the stack. Understanding when to use each approach will help you make better architectural decisions for your projects.
+If you have been using Claude Code, you have probably encountered both MCP servers and Claude skills. They can seem similar on the surface — both extend what Claude can do — but they operate at different layers of the system and serve different purposes. This article explains both clearly so you can use them effectively.
 
-## What Are MCP Servers?
+## Quick Answer
 
-MCP (Model Context Protocol) servers are standalone services that expose tools and resources to Claude through a standardized protocol. Think of MCP servers as bridges between Claude and external systems—databases, APIs, file systems, or third-party services.
+- **MCP servers** give Claude access to external tools, data sources, and APIs — they expand what Claude can *connect to*.
+- **Claude skills** define reusable agent behaviors and workflows — they shape what Claude *does* and how it *approaches tasks*.
 
-An MCP server runs as a separate process, typically as a local service or a remote API endpoint. Claude connects to these servers using the MCP protocol, which defines how to discover available tools, invoke them, and handle responses. This architecture means MCP servers can be written in any programming language and deployed independently from your Claude setup.
+They are complementary, not interchangeable. Most sophisticated Claude Code setups use both.
 
-Here's a minimal example of what an MCP server configuration looks like:
+---
 
+## What Is an MCP Server?
+
+MCP stands for Model Context Protocol. It is an open protocol defined by Anthropic that standardizes how Claude (and other AI systems) connect to external tools and data sources.
+
+An MCP server is a lightweight process that exposes capabilities — called "tools" — over the MCP protocol. When Claude Code connects to an MCP server, it gains access to those tools and can call them during a session.
+
+**Examples of what MCP servers provide:**
+
+- A filesystem MCP server that allows Claude to read and write files in a controlled way
+- A GitHub MCP server that lets Claude interact with repositories, issues, and pull requests
+- A database MCP server that allows Claude to run SQL queries
+- A browser automation MCP server that lets Claude control a headless browser
+- A custom company API MCP server that exposes internal services
+
+MCP servers are infrastructure. They are running processes, configured in Claude Code's settings, that remain available throughout your sessions. You configure them once and they persist.
+
+**MCP server example configuration (claude_desktop_config.json):**
 ```json
 {
   "mcpServers": {
-    "filesystem": {
+    "github": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/mike/projects"]
-    },
-    "postgres": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost:5432/mydb"]
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "your_token_here"
+      }
     }
   }
 }
 ```
 
-This configuration connects Claude to a filesystem server and a PostgreSQL database. Once configured, Claude can read files, query databases, and perform operations on these external systems as if they were native capabilities.
+---
 
-## What Are Claude Skills?
+## What Is a Claude Skill?
 
-Claude skills are packaged prompt templates that define how Claude should behave for specific tasks or domains. Unlike MCP servers that connect to external systems, skills modify Claude's behavior and responses by providing structured instructions, examples, and tool access patterns.
+A Claude skill is a file-based definition of how Claude should approach a specific task or workflow. Skills are typically markdown files (`.md`) stored in a `.claude/skills/` directory in your project or home directory.
 
-Skills live in your Claude configuration directory and load automatically when relevant context is detected. The **pdf** skill enables PDF manipulation—extracting text, filling forms, creating new documents. The **xlsx** skill handles spreadsheet operations with formula support, data analysis, and visualization. The **pptx** skill creates and edits presentations.
+A skill might specify:
+- The objective of the task ("generate a pull request summary")
+- The steps Claude should follow
+- Which tools to use and in what order
+- What output format to produce
+- How to handle errors or edge cases
 
-Here's what a skill definition looks like in a skill.md file:
+Skills are behavioral — they instruct Claude on *how to work*, not on *what tools it has access to*. A skill for "run the full test suite and fix any failures" assumes Claude has shell access; it does not provide that access itself.
 
+**Example skill file (`.claude/skills/pr-summary.md`):**
 ```markdown
-# Skill: TDD Assistant
+---
+name: pr-summary
+description: Generate a structured pull request summary from git diff
+---
 
-## Description
-Helps with test-driven development workflows
+# PR Summary Skill
 
-## Triggers
-- "write tests"
-- "TDD"
-- "test driven"
-
-## Capabilities
-- Generate unit tests using pytest
-- Run test suites and report results
-- Refactor code while maintaining test coverage
-- Explain test failures
-
-## Examples
-User: "Write tests for this function"
-Skill: Creates comprehensive test suite with edge cases
+1. Run `git diff main...HEAD` to get the changes
+2. Run `git log main...HEAD --oneline` to get commit history
+3. Analyze the changes for: purpose, scope, risk areas
+4. Output a PR description with: Summary, Changes, Testing Notes, Risk Assessment
+5. Keep each section to 3-5 bullet points
 ```
-
-The **tdd** skill understands your testing preferences, preferred frameworks, and workflows without requiring you to explain them in every conversation.
-
-## Key Differences
-
-The fundamental distinction lies in what each mechanism extends. MCP servers extend what Claude *can access*—external systems, APIs, and resources. Skills extend how Claude *behaves*—its reasoning patterns, response styles, and task-specific capabilities.
-
-### Scope and Purpose
-
-MCP servers are ideal for connecting Claude to specific external systems. Need Claude to query your database? Use the **postgres MCP server**. Want Claude to interact with your GitHub repository? Configure the **GitHub MCP server**. The focus is on integration.
-
-Skills excel at shaping Claude's approach to specific task types. The **frontend-design** skill knows design principles, component libraries, and styling conventions. The **supermemory** skill maintains persistent context across conversations. The **docx** skill understands document formatting and structure. The focus is on behavior.
-
-### Configuration and Deployment
-
-MCP servers require setup in your Claude configuration file and may need running services. Skills are simpler—they're text files that Claude loads automatically based on triggers.
-
-### State Management
-
-MCP servers can maintain their own state and connection pools. Skills rely on Claude's conversation context. For persistent memory across sessions, you'd typically use an MCP server like supermemory rather than a skill.
-
-## When to Use Each
-
-Use MCP servers when you need Claude to interact with external systems. Use skills when you need Claude to behave differently for specific task types.
-
-A practical scenario: you're building a code review workflow. You'd use an MCP server to connect to your GitHub API, enabling Claude to fetch pull requests and post comments. You'd use the **tdd** skill to ensure Claude applies test-driven development principles when reviewing code. The MCP server handles the integration; the skill shapes the behavior.
-
-Another example: document processing. The **pdf** skill handles PDF manipulation natively. But if you need to extract data from a specific enterprise document management system, you'd build or configure an MCP server to connect to that system.
-
-## Practical Example
-
-Consider building a data analysis workflow:
-
-**Using MCP servers only:**
-- Connect to your database via PostgreSQL MCP server
-- Query data directly using SQL
-- Process results in Python
-
-**Using skills only:**
-- Use the **xlsx** skill for spreadsheet operations
-- Apply data analysis patterns from the skill's instructions
-- Generate visualizations based on skill-defined templates
-
-**Combined approach:**
-- PostgreSQL MCP server for data retrieval
-- **xlsx** skill for spreadsheet manipulation
-- **tdd** skill if you're building testable analysis scripts
-
-The combined approach leverages MCP for system access and skills for behavior customization—often the most powerful pattern.
-
-## Making the Choice
-
-Start by asking what you need. Need to access external systems? Look at MCP servers. Need Claude to handle tasks differently? Explore available skills like **pdf**, **pptx**, **docx**, or **xlsx** for document work, or **tdd** for development workflows.
-
-Many workflows benefit from combining both mechanisms. MCP servers handle the plumbing; skills handle the craftsmanship. Understanding when each shines helps you build more capable AI-powered systems.
 
 ---
 
-## Related Reading
+## How They Work Together
 
-- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+MCP servers and skills are designed to be used together. Here is a concrete example:
 
+**Scenario:** You want Claude to automatically create a GitHub PR after finishing a coding task.
+
+- The **GitHub MCP server** gives Claude the ability to call the GitHub API — create PRs, add labels, assign reviewers.
+- A **Claude skill** defines the workflow: check the diff, generate a summary, create the PR with the right title/body format, assign the appropriate reviewer based on changed files.
+
+Without the MCP server, the skill cannot reach GitHub. Without the skill, Claude might create PRs but not follow your team's conventions. Together, they create a reliable, repeatable workflow.
+
+---
+
+## Comparison Table
+
+| Dimension | MCP Servers | Claude Skills |
+|---|---|---|
+| What it provides | Access to external tools and APIs | Reusable behavioral workflows |
+| Lives in | System/project configuration | Files in your repository |
+| Persistence | Running process, always available | Invoked when needed |
+| Version controlled | Config file (partially) | Yes — full file |
+| Written by | Server implementer (often open source) | You or your team |
+| Composable | By combining multiple servers | Skills can invoke other skills |
+| Example | GitHub MCP server, filesystem server | "generate-pr", "run-and-fix-tests" |
+| Replaces | API wrappers, manual tool setup | Repeated prompt patterns, macros |
+
+---
+
+## Common Misunderstandings
+
+**"Skills and MCP servers do the same thing."**
+They do not. Skills describe behavior; MCP servers provide capabilities. You need both if you want Claude to do something useful with an external service.
+
+**"I need to write my own MCP server to extend Claude."**
+Not necessarily. Many useful MCP servers already exist (GitHub, filesystem, databases, browsers). You might only need to write a skill to use them effectively. Custom MCP servers make sense when you need to expose a proprietary internal API.
+
+**"Skills replace system prompts."**
+Skills can replace repeated system prompt patterns, but they are more structured and composable than raw system prompts. Skills can call other skills, which system prompts cannot do cleanly.
+
+**"MCP servers are only for Claude Code."**
+No — MCP is an open protocol. Other tools and AI systems can implement MCP clients and benefit from the same server ecosystem.
+
+---
+
+## When to Add an MCP Server
+
+- You need Claude to access an external service, API, or database
+- You want consistent, authenticated access to a tool across all your Claude sessions
+- You are building a capability that multiple skills or team members will rely on
+
+## When to Write a Claude Skill
+
+- You have a workflow you repeat more than a few times
+- You want to encode your team's conventions and preferences into a reusable behavior
+- You want to share a reliable agent workflow across your team via Git
+- You are composing multiple steps that Claude should follow consistently
+
+---
+
+## Summary
+
+MCP servers are the pipes; Claude skills are the playbooks. MCP servers connect Claude to the world — giving it access to your GitHub, your database, your internal APIs. Claude skills define how Claude should work within that world — the conventions, steps, and output formats that make the agent's behavior predictable and useful.
+
+The Claude skills ecosystem grows in value as you add more MCP servers, because each server unlocks new capabilities that skills can orchestrate. Together, they are the foundation of a serious Claude Code workflow.
+
+---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
