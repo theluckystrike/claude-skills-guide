@@ -132,7 +132,7 @@ To begin using these skills, ensure you have Claude Code installed and the appro
 
 The initial investment in setting up documentation automation pays dividends quickly. Teams report saving several hours per week on documentation tasks after implementing these skills, with the added benefit of more consistent, accurate documentation.
 
-Documentation generation doesn't need to be a manual chore. By leveraging Claude skills strategically, you can automate significant portions of your documentation workflow while maintaining high quality standards.
+Documentation generation doesn't need to be a manual chore. By using Claude skills strategically, you can automate significant portions of your documentation workflow while maintaining high quality standards.
 
 ## Related Reading
 

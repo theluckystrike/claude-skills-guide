@@ -16,7 +16,7 @@ The Claude skills ecosystem has evolved rapidly over the past year, transforming
 
 ## Standardization Through the Model Context Protocol
 
-The adoption of MCP (Model Context Protocol) is accelerating, and the next year will see this become the de facto standard for AI agent communication. Skills that previously operated in isolation will increasingly leverage MCP servers to maintain persistent memory, connect to external APIs, and coordinate multi-agent workflows.
+The adoption of MCP (Model Context Protocol) is accelerating, and the next year will see this become the de facto standard for AI agent communication. Skills that previously operated in isolation will increasingly use MCP servers to maintain persistent memory, connect to external APIs, and coordinate multi-agent workflows.
 
 The **supermemory** skill exemplifies this shift. Rather than treating memory as a simple key-value store, upcoming versions will integrate deeply with MCP memory servers, enabling Claude to maintain context across sessions and even across different projects. Developers can expect:
 

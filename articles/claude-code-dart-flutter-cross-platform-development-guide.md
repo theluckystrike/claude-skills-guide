@@ -254,7 +254,7 @@ Claude Code helps with CI/CD configuration, helping you set up builds for multip
 
 ## Conclusion
 
-Claude Code transforms Flutter development from manual coding to collaborative problem-solving. By leveraging skills like **tdd** for test-driven development, **frontend-design** for UI implementation, and Claude Code for deployment automation, you build production-quality applications faster.
+Claude Code transforms Flutter development from manual coding to collaborative problem-solving. By using skills like **tdd** for test-driven development, **frontend-design** for UI implementation, and Claude Code for deployment automation, you build production-quality applications faster.
 
 Start with a clean architecture, write tests first using the tdd workflow, and let Claude handle boilerplate generation. Your cross-platform application will reach iOS, Android, web, and desktop users efficiently.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Do I Combine Two Claude Skills in One Workflow"
-description: "Learn to chain and combine Claude skills for powerful multi-step workflows. Practical patterns for developers to leverage skill composition."
+description: "Learn to chain and combine Claude skills for powerful multi-step workflows. Practical patterns for developers combining skills in workflows."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills]
@@ -12,7 +12,7 @@ score: 8
 
 # How Do I Combine Two Claude Skills in One Workflow
 
-Claude skills transform how you work by packaging specialized capabilities into reusable prompts. But the real power emerges when you combine multiple skills in a single workflow. Skill chaining lets you leverage the strengths of different skills sequentially, creating pipelines that handle complex tasks efficiently.
+Claude skills transform how you work by packaging specialized capabilities into reusable prompts. But the real power emerges when you combine multiple skills in a single workflow. Skill chaining lets you apply the strengths of different skills sequentially, creating pipelines that handle complex tasks efficiently.
 
 This guide shows you practical patterns for combining Claude skills, with real examples you can adapt to your projects.
 

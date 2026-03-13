@@ -172,7 +172,7 @@ Restricting Claude skill file access requires a layered approach:
 4. **Enable audit logging** to track access patterns and identify potential issues
 5. **Review and adjust** permissions as project requirements evolve
 
-These controls give you the flexibility to leverage skills like pdf, xlsx, tdd, and frontend-design while maintaining security boundaries appropriate for your development environment.
+These controls give you the flexibility to use skills like pdf, xlsx, tdd, and frontend-design while maintaining security boundaries appropriate for your development environment.
 
 ## Related Reading
 

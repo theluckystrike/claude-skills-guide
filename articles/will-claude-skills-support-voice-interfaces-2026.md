@@ -153,7 +153,7 @@ The real power emerges when you combine voice with skill chaining:
 5. Use /supermemory to remember the pattern for next time
 ```
 
-This workflow keeps your hands free while still leveraging skill-powered automation.
+This workflow keeps your hands free while still using skill-powered automation.
 
 ## Limitations to Accept
 

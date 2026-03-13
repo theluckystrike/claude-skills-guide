@@ -90,7 +90,7 @@ Restart Claude Code, and the `greet` tool becomes available in your conversation
 
 ## Building a Custom Skill with MCP
 
-For more complex integrations, combine MCP servers with the **skill-creator** skill. This approach lets you define custom behaviors while leveraging Claude's built-in tool infrastructure.
+For more complex integrations, combine MCP servers with the **skill-creator** skill. This approach lets you define custom behaviors while using Claude's built-in tool infrastructure.
 
 Suppose you want to create a skill that manages GitHub issues. First, create an MCP server that authenticates with GitHub's API:
 

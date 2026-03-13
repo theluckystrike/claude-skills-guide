@@ -164,7 +164,7 @@ The **xlsx** skill helps track crash history and patterns across versions:
 
 Core dump analysis doesn't have to be a tedious manual process. By combining GDB's raw analysis power with Claude Code's contextual understanding, you can identify root causes faster and document your findings more thoroughly.
 
-The key is having core dumps configured before crashes happen, extracting actionable information through targeted GDB commands, and leveraging Claude skills like **supermemory** for pattern recognition across debugging sessions.
+The key is having core dumps configured before crashes happen, extracting actionable information through targeted GDB commands, and using Claude skills like **supermemory** for pattern recognition across debugging sessions.
 
 When segfaults occur, this workflow transforms a cryptic crash into a solvable problem.
 ---

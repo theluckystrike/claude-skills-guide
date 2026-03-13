@@ -166,7 +166,7 @@ The **canvas-design** skill also helps by generating accessible color palettes d
 
 ## Conclusion
 
-Addressing color contrast accessibility issues does not require manual testing across every page of your application. By leveraging Claude Code skills like frontend-design, tdd, pdf, and supermemory, you can build automated workflows that detect, fix, test, and document accessibility compliance. This systematic approach saves development time while ensuring your applications remain accessible to all users.
+Addressing color contrast accessibility issues does not require manual testing across every page of your application. By using Claude Code skills like frontend-design, tdd, pdf, and supermemory, you can build automated workflows that detect, fix, test, and document accessibility compliance. This systematic approach saves development time while ensuring your applications remain accessible to all users.
 
 Implement this workflow in your next project sprint, and you will see measurable improvements in both accessibility compliance and development efficiency.
 ---

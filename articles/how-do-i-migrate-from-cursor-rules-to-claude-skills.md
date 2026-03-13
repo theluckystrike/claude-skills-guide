@@ -4,6 +4,8 @@ title: "How Do I Migrate from Cursor Rules to Claude Skills"
 description: "A practical guide for developers moving custom AI rules from Cursor to Claude Code skills. Includes step-by-step migration, code examples, and skill rec..."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills, migration]
 reviewed: true
 score: 9
 ---
@@ -124,7 +126,7 @@ When reviewing, check component composition and reusability.
 
 ### Documentation Rules
 
-For documentation-focused rules, leverage the **pdf** skill alongside custom documentation standards:
+For documentation-focused rules, use the **pdf** skill alongside custom documentation standards:
 
 ```markdown
 # Documentation Skill

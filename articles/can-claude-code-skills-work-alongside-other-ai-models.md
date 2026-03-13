@@ -151,7 +151,7 @@ This local operation complements cloud-based AI tools that generate code but can
 
 ### Model Context Protocol (MCP)
 
-Claude's MCP support enables integration with external services. Skills can leverage MCP servers to connect with databases, APIs, and development tools. This creates bridges between Claude and other AI systems:
+Claude's MCP support enables integration with external services. Skills can use MCP servers to connect with databases, APIs, and development tools. This creates bridges between Claude and other AI systems:
 
 ```javascript
 // MCP server integration example

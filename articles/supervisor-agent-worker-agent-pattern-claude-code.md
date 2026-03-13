@@ -79,7 +79,7 @@ class CodeReviewWorker:
         return results
 ```
 
-This pattern allows you to combine multiple workers seamlessly. A testing worker using the [tdd skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) can work alongside a documentation worker using the docx skill, all coordinated by the supervisor.
+This pattern allows you to combine multiple workers effectively. A testing worker using the [tdd skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) can work alongside a documentation worker using the docx skill, all coordinated by the supervisor.
 
 ## Dynamic Worker Coordination
 
@@ -103,7 +103,7 @@ When building production systems with Claude Code, several patterns emerge as pa
 
 ## Integrating Claude Skills Naturally
 
-The supervisor worker pattern pairs exceptionally well with Claude's built-in skills. When a worker needs to generate a PDF document, it can leverage the pdf skill. When testing is required, the tdd skill provides structured test generation. The frontend-design skill can work alongside a worker handling UI implementation.
+The supervisor worker pattern pairs exceptionally well with Claude's built-in skills. When a worker needs to generate a PDF document, it can use the pdf skill. When testing is required, the tdd skill provides structured test generation. The frontend-design skill can work alongside a worker handling UI implementation.
 
 This integration happens through the supervisor's routing logic. The supervisor recognizes when a subtask requires specialized capability and invokes the appropriate worker that has access to or integrates with specific skills.
 
@@ -143,7 +143,7 @@ When scaling the supervisor worker pattern, consider these factors:
 
 ## Conclusion
 
-The supervisor agent worker pattern provides a robust foundation for building complex AI agent systems with Claude Code. By clearly defining roles and responsibilities, implementing proper coordination logic, and leveraging Claude's skill ecosystem, you can create agents that handle sophisticated multi-step workflows effectively. Start with simple two-worker configurations and gradually expand as your requirements grow.
+The supervisor agent worker pattern provides a robust foundation for building complex AI agent systems with Claude Code. By clearly defining roles and responsibilities, implementing proper coordination logic, and using Claude's skill ecosystem, you can create agents that handle sophisticated multi-step workflows effectively. Start with simple two-worker configurations and gradually expand as your requirements grow.
 
 ## Related Reading
 

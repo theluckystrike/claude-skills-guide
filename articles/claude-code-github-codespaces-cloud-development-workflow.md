@@ -108,7 +108,7 @@ if [ $? -eq 0 ]; then
 fi
 ```
 
-This approach streamlines your development cycle by automating the review and commit process while leveraging Claude Code's understanding of your changes.
+This approach streamlines your development cycle by automating the review and commit process while using Claude Code's understanding of your changes.
 
 ## Managing Multiple Codespaces
 

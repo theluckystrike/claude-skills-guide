@@ -124,7 +124,7 @@ QA engineers using these combined approaches report significant time savings in 
 
 ## Conclusion
 
-Claude Code skills represent a fundamental shift in test automation approaches. By leveraging specialized skills for different aspects of QA work, engineers focus more on quality strategy and less on repetitive test maintenance tasks. The skills work together, creating a comprehensive automation ecosystem that scales with your project.
+Claude Code skills represent a fundamental shift in test automation approaches. By using specialized skills for different aspects of QA work, engineers focus more on quality strategy and less on repetitive test maintenance tasks. The skills work together, creating a comprehensive automation ecosystem that scales with your project.
 
 Start by installing the tdd, xlsx, pdf, and supermemory skills. Experiment with each individually, then explore combinations that match your specific testing challenges. The learning curve is minimal, and the productivity gains are substantial.
 

@@ -131,7 +131,7 @@ async function storeLargeOutput(content, filename) {
 }
 ```
 
-The `mcp-builder` skill can create integrations with cloud storage services that handle these transfers seamlessly.
+The `mcp-builder` skill can create integrations with cloud storage services that handle these transfers reliably.
 
 ## Prevention Best Practices
 

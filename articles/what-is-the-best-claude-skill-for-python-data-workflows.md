@@ -43,7 +43,7 @@ summary = df.groupby("region").agg({"revenue": "sum", "units": "count"})
 # - Create multi-sheet workbooks
 ```
 
-This skill integrates seamlessly with pandas DataFrames, meaning you don't need to rewrite existing code. The skill acts as a layer on top of your current workflow.
+This skill integrates well with pandas DataFrames, meaning you don't need to rewrite existing code. The skill acts as a layer on top of your current workflow.
 
 ### Document Generation and PDF Output
 

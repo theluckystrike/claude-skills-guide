@@ -129,7 +129,7 @@ Choosing the best Claude skill for REST API development depends on your workflow
 
 For most REST API projects, the **tdd skill** provides the best foundation. It enforces good practices from the beginning and pays dividends as your API grows in complexity. The tests it helps you write serve as both validation and documentation, reducing the need for separate testing and documentation phases.
 
-Remember that these skills work well together. You don't have to choose just one—Claude Code allows you to leverage multiple skills throughout your development process, adapting to each phase of your API project's lifecycle.
+Remember that these skills work well together. You don't have to choose just one—Claude Code allows you to use multiple skills throughout your development process, adapting to each phase of your API project's lifecycle.
 
 ---
 

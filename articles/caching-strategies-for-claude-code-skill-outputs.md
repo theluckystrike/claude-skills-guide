@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Caching Strategies for Claude Code Skill Outputs"
-description: "Practical caching approaches to speed up Claude Code skill execution. Store skill outputs, leverage persistent storage, and reduce redundant processing across sessions."
+description: "Practical caching approaches to speed up Claude Code skill execution. Store skill outputs, use persistent storage, and reduce redundant processing across sessions."
 date: 2026-03-14
 author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, caching, performance]
+reviewed: true
+score: 8
 ---
 
 # Caching Strategies for Claude Code Skill Outputs
@@ -80,7 +84,7 @@ CACHED_OUTPUT="$CACHE_DIR/$CACHE_VERSION-$SKILL_NAME-$INPUT_HASH.output"
 
 ## Using Claude Code Sessions for Context Caching
 
-Claude Code maintains conversation context within sessions. You can leverage this to avoid reprocessing information across skill invocations.
+Claude Code maintains conversation context within sessions. You can use this to avoid reprocessing information across skill invocations.
 
 ### Session-Level Caching Pattern
 
@@ -108,7 +112,7 @@ The `supermemory` skill demonstrates this effectively. It maintains an indexed m
 
 ## MCP-Based Persistent Caching
 
-For more sophisticated caching, leverage MCP (Model Context Protocol) servers with persistent storage capabilities. This approach works across sessions and supports distributed caching for teams.
+For more sophisticated caching, use MCP (Model Context Protocol) servers with persistent storage capabilities. This approach works across sessions and supports distributed caching for teams.
 
 ### MCP Cache Server Example
 

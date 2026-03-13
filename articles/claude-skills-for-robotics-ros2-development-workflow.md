@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Skills for Robotics ROS2 Development Workflow"
-description: "Learn how to leverage Claude Code skills to accelerate your ROS2 robotics development. Practical workflow examples, skill recommendations, and integration "
+description: "Learn how to use Claude Code skills to accelerate your ROS2 robotics development. Practical workflow examples, skill recommendations, and integration "
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, robotics, ros2, development-workflow]
@@ -25,7 +25,7 @@ colcon build
 source install/setup.bash
 ```
 
-With your environment ready, you can begin leveraging Claude skills throughout the development lifecycle.
+With your environment ready, you can begin using Claude skills throughout the development lifecycle.
 
 ## Essential Claude Skills for ROS2 Development
 
