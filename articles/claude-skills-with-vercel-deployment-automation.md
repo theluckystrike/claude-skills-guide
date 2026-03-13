@@ -3,7 +3,7 @@ layout: post
 title: "Claude Skills + Vercel Deployment Automation Guide"
 description: "Automate Vercel deployments with Claude API: pre-deployment TDD gate, post-deployment checks, AI-generated changelogs, and deployment history tracking."
 date: 2026-03-13
-categories: [integrations, devops]
+categories: [workflows]
 tags: [claude-code, claude-skills, vercel, deployment, automation, ci-cd]
 author: "Claude Skills Guide"
 reviewed: true

@@ -3,7 +3,7 @@ layout: post
 title: "How to Optimize Claude Skill Prompts for Accuracy"
 description: "Write Claude skill bodies that produce consistent, accurate results: role framing, output constraints, edge case handling, and iterative refinement."
 date: 2026-03-13
-categories: [skill-development, best-practices]
+categories: [advanced]
 tags: [claude-code, claude-skills, prompting, skill-writing, accuracy]
 author: "Claude Skills Guide"
 reviewed: true

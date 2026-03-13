@@ -3,7 +3,7 @@ layout: post
 title: "Claude Code GCP Google Cloud Setup and Deployment Guide"
 description: "Set up Claude Code for Google Cloud deployment workflows. Practical patterns for Cloud Run, Cloud Functions, and automated deployment pipelines."
 date: 2026-03-13
-categories: [integrations, cloud]
+categories: [guides]
 tags: [claude-code, claude-skills, gcp, google-cloud, cloud-run, deployment, devops]
 author: "Claude Skills Guide"
 reviewed: true

@@ -132,7 +132,7 @@ Your documentation file becomes valuable for future reference and for frontend d
 
 ## Step 3: Frontend Development with frontend-design and canvas-design
 
-For the React frontend, leverage the **frontend-design** skill to generate component structures rapidly. This skill understands React patterns and creates accessible, well-structured components.
+For the React frontend, use the **frontend-design** skill to generate component structures rapidly. This skill understands React patterns and creates accessible, well-structured components.
 
 ### Creating the Task List Component
 

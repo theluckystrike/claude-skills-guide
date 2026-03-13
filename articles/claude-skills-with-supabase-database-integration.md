@@ -3,7 +3,7 @@ layout: post
 title: "Claude Skills with Supabase: Practical Workflows"
 description: "How to use Claude Code skills alongside Supabase for database-backed projects — what works, what does not, and practical patterns."
 date: 2026-03-13
-categories: [integrations, claude-skills]
+categories: [guides]
 tags: [claude-code, claude-skills, supabase, database, backend]
 author: "Claude Skills Guide"
 reviewed: true
