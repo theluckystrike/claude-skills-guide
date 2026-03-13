@@ -1,13 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Fan Out Fan In Pattern with Claude Code Subagents"
-description: "Learn how to implement the fan out fan in pattern using Claude Code subagents for parallel task execution. Practical examples and code snippets for developers."
+description: "Learn how to implement the fan out fan in pattern using Claude Code subagents for parallel task execution. Practical examples and code snippets for develop"
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, subagents, parallel-processing, automation, workflows]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Fan Out Fan In Pattern with Claude Code Subagents
