@@ -186,7 +186,7 @@ Keep hooks fast. If you need to do heavy async work such as sending data to a lo
 
 ## Global vs Project Hooks
 
-Like skills, hooks can be configured globally (`~/.claude/settings.json`) or per project (`.claude/settings.json`). Both sets are loaded. Global hooks run first, then project hooks. They stack — there is no override mechanism that prevents a global hook from running.
+Like skills, hooks can be configured globally (`~/.claude/settings.json`) or per project (`.claude/settings.json`). Both sets are loaded. Global hooks run first, then project hooks. This is different from [auto-invocation](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/), which is skill-level behavior. They stack — there is no override mechanism that prevents a global hook from running.
 
 This lets you have a global audit hook that logs all tool calls, plus project-specific hooks that enforce project-specific rules, without conflict.
 

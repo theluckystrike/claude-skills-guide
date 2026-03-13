@@ -18,7 +18,7 @@ Credential leaks represent one of the most dangerous security vulnerabilities in
 
 Developers frequently work with multiple API keys, database credentials, and authentication tokens across projects. When using AI-assisted development tools like Claude Code, there's an additional attack surface: your prompts might inadvertently include sensitive values, or generated code might hardcode credentials that should remain externalized.
 
-The tdd skill and other automation skills often generate code templates that could accidentally contain placeholder patterns resembling real credentials. Without proper scanning, these secrets can slip into version control, CI/CD pipelines, or deployed applications.
+The [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) and other automation skills often generate code templates that could accidentally contain placeholder patterns resembling real credentials. Without proper scanning, these secrets can slip into version control, CI/CD pipelines, or deployed applications.
 
 A solid secret scanning strategy addresses three distinct scenarios: scanning your codebase for existing leaked secrets, preventing new secrets from being committed, and ensuring Claude Code interactions don't expose sensitive information.
 
@@ -119,7 +119,7 @@ function validateEnvironment() {
 
 You can create a dedicated Claude Code skill that orchestrates all scanning activities. This skill should coordinate between different tools and provide unified reporting.
 
-The skill definition would include tools for file scanning, git history analysis, and environment validation. It can integrate with the supermemory skill to track historical findings and track remediation progress across your codebase.
+The skill definition would include tools for file scanning, git history analysis, and environment validation. It can integrate with the [supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to track historical findings and track remediation progress across your codebase.
 
 When scanning large repositories, performance matters. Implement parallel scanning using worker threads or child processes to scan multiple files simultaneously. The tdd skill can generate tests for your scanner itself, ensuring pattern accuracy and handling edge cases.
 

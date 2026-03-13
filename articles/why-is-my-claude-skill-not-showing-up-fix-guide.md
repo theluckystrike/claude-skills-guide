@@ -58,7 +58,7 @@ If two skill files have the same `name` field, rename one and restart.
 
 ## 6. Understand Built-in Skills
 
-The built-in skills — `/pdf`, `/tdd`, `/docx`, `/xlsx`, `/pptx`, `/frontend-design`, `/canvas-design`, `/supermemory`, `/webapp-testing`, `/skill-creator` — do not require external API keys or additional installations.
+The built-in [skills](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — `/pdf`, `/tdd`, `/docx`, `/xlsx`, `/pptx`, `/frontend-design`, `/canvas-design`, `/supermemory`, `/webapp-testing`, `/skill-creator` — do not require external API keys or additional installations.
 
 ## 7. Check Permissions
 

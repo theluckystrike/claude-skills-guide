@@ -42,7 +42,7 @@ The skill handles text extraction, table detection, and structured data output. 
 
 ## 2. TDD Skill — Test-Driven Development
 
-The `tdd` skill generates test cases before implementation, enforcing test-first patterns.
+The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) generates test cases before implementation, enforcing test-first patterns.
 
 ```
 /tdd
@@ -96,7 +96,7 @@ Supports React, Vue, and vanilla HTML/CSS projects.
 
 ## 4. Supermemory Skill — Context Across Sessions
 
-The `supermemory` skill maintains project context across Claude Code sessions, so you don't re-explain your stack every time you return to a project.
+The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) maintains project context across Claude Code sessions, so you don't re-explain your stack every time you return to a project.
 
 ```
 /supermemory

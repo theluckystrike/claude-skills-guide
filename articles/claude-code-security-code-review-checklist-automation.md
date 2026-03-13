@@ -24,7 +24,7 @@ Claude Code skills excel at this because they combine natural language understan
 
 ### Setting Up the Foundation
 
-Start by creating a skill dedicated to security checks. The supermemory skill helps maintain your checklist context across Claude sessions, so your security rules persist between code reviews.
+Start by creating a skill dedicated to security checks. The [supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) helps maintain your checklist context across Claude sessions, so your security rules persist between code reviews.
 
 ```
 /supermemory remember my security checklist: 
@@ -86,7 +86,7 @@ def check_sql_injection(file_content):
     return issues
 ```
 
-The tdd skill complements this by generating parameterized query examples when it detects unsafe patterns in your code.
+The [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) complements this by generating parameterized query examples when it detects unsafe patterns in your code.
 
 ### Authentication Token Handling
 

@@ -35,11 +35,11 @@ The biggest differentiator is the **skills system**. Skills are Markdown files t
 
 Instead of being a generic AI assistant, you configure skills for your workflow:
 
-- The `tdd` skill makes Claude write tests before implementation, every time
+- The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) makes Claude write tests before implementation, every time
 - The `frontend-design` skill makes Claude always follow your design system when building components
 - The `pdf` skill generates properly formatted PDF documents from Markdown
 - The `docx` skill creates Word documents from your content
-- The `supermemory` skill gives Claude persistent memory across sessions
+- The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) gives Claude persistent memory across sessions
 
 Skills are just `.md` files you create and customize. You define the role, the constraints, the output format, and the context the skill should have. Once a skill is set up, it can trigger automatically when Claude detects relevant work — you ask for tests, the `tdd` skill activates without you having to specify it.
 

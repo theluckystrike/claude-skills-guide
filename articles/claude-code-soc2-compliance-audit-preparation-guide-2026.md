@@ -34,7 +34,7 @@ Start by creating a standardized folder structure for your compliance documents:
   /audits
 ```
 
-Use the `supermemory` skill to maintain a persistent knowledge base of your compliance-related decisions, policy updates, and control implementations. This creates an searchable audit trail that proves continuous compliance effort rather than last-minute scrambling.
+Use the [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to maintain a persistent knowledge base of your compliance-related decisions, policy updates, and control implementations. This creates an searchable audit trail that proves continuous compliance effort rather than last-minute scrambling.
 
 ## Automating Evidence Collection
 
@@ -50,7 +50,7 @@ Several Claude skills directly support SOC 2 compliance efforts:
 
 **Access Management**: Use the permissions model features to enforce least-privilege access principles. Document your permission structures and regularly audit them using Claude Code's built-in analysis capabilities.
 
-**Change Management**: Implement code review workflows that automatically document approval chains. The `tdd` skill encourages test-driven development practices, which directly supports the processing integrity criterion by ensuring code changes are validated before production deployment.
+**Change Management**: Implement code review workflows that automatically document approval chains. The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) encourages test-driven development practices, which directly supports the processing integrity criterion by ensuring code changes are validated before production deployment.
 
 **Incident Response**: Create custom skills that guide your team through incident response procedures. Document each incident thoroughly, including timeline reconstruction, root cause analysis, and remediation steps.
 
