@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Official vs Community Claude Skills Guide (2026)"
 description: "Compare official vs community Claude skills to find the best fit for your workflow. See reliability, security, and flexibility trade-offs explained."
 date: 2026-03-13

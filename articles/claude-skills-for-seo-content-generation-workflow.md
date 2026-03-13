@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills for SEO Content Generation: 2026 Guide"
 description: "Build an SEO content workflow with Claude Code skills. Use xlsx, pdf, docx, and supermemory for keyword research, content briefs, and tracking."
 date: 2026-03-13

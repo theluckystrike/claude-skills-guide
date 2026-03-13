@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code GitLab CI Pipeline Docker Registry Tutorial"
 <<<<<<< Updated upstream
 description: "A practical guide to building CI/CD pipelines with GitLab and Docker Registry. Includes .gitlab-ci.yml examples, Docker configuration, and automation patte"

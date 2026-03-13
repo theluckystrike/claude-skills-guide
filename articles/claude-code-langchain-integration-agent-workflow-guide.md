@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code + LangChain Integration: Agent Workflow"
 description: "Integrate Claude Code with LangChain to build AI agent workflows for automation and development tasks."
 date: 2026-03-13

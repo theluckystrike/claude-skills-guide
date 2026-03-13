@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Skill Output Formatting: Fix Guide"
 description: "Fix broken output formatting in Claude Code skills: markdown rendering, code block issues, instruction mismatches, and terminal vs IDE display differences."
 date: 2026-03-13

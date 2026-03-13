@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Fix Claude Code Skill Tool Not Found Error (2026)"
 description: "Solve the tool not found error in Claude Code skills. Fix tool name mismatches, missing skill declarations, sandbox restrictions, and dependencies."
 date: 2026-03-13

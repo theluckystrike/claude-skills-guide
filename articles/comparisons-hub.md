@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills vs Prompts: The Complete Comparisons Guide"
 description: "Side-by-side comparisons of Claude skills vs prompts, official vs community skills. Decision frameworks for every workflow."
 date: 2026-03-13

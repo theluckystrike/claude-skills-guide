@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Best Claude Skills for Solo Developers and Freelancers"
 description: "Top Claude Code skills for solo developers and freelancers: PDF processing, invoicing, TDD, and knowledge management across client projects."
 date: 2026-03-13

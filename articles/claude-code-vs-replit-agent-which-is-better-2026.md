@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code vs Replit Agent: Which Is Better in 2026?"
 description: "Claude Code vs Replit Agent (2026): autonomous capabilities, deployment workflow, pricing, and which AI coding tool fits your team type."
 date: 2026-03-13

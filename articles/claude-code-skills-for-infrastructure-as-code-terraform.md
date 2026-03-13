@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Skills for Terraform IaC: Complete Guide"
 description: "Use Claude Code skills for Terraform and IaC workflows. Covers shell-expert, tdd, and git-workflow skills with real Terraform examples."
 date: 2026-03-13

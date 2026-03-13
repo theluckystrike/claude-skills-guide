@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Full Stack Web App with Claude Skills Step-by-Step"
 description: "Build a full stack web app with Claude Code skills step by step. From project setup to deployment using specialized skills for each phase."
 date: 2026-03-13

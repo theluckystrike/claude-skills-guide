@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code with Docker: Container Setup Guide"
 description: "Run Claude Code with Docker for isolated skill execution. Covers Dockerfile setup, Compose stacks, HTTP API containers, and CI/CD integration."
 date: 2026-03-13

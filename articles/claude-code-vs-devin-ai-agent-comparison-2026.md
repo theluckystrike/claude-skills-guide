@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code vs Devin AI Agent: 2026 Comparison"
 description: "Compare Claude Code and Devin AI for developer teams in 2026 — autonomy, oversight, pricing, and which coding agent fits your workflow."
 date: 2026-03-13

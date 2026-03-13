@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "How to Write a Skill MD File for Claude Code"
 description: "Step-by-step guide to creating Claude Code skill files (.md) with proper structure, front matter, and real code examples."
 date: 2026-03-13

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills Context Window Management Best Practices"
 description: "Manage context windows in Claude skill workflows: focused prompts, file references, chunking, and using supermemory for cross-session persistence."
 date: 2026-03-13

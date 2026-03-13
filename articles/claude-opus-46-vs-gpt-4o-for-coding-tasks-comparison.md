@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Opus 4.6 vs GPT-4o for Coding Tasks: 2026 Comparison"
 description: "Claude Opus 4.6 vs GPT-4o for coding tasks (2026): code quality, reasoning, context handling, tool use, and which model developers should choose."
 date: 2026-03-13

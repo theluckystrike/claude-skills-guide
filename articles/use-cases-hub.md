@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills by Use Case: Frontend, Data & DevOps (2026)"
 description: "Find the right Claude skills for your workflow. Covers frontend development, data analysis, and DevOps with concrete skill recommendations."
 date: 2026-03-13

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "How to Connect Claude Skills to External APIs Guide"
 description: "Connect Claude Code skills to external APIs: tool use patterns, authentication, rate limiting, and building reliable AI-powered integrations."
 date: 2026-03-13

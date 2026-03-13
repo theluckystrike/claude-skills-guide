@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Skill Permission Scope Error: Fix Guide"
 description: "Understand and fix permission scope errors in Claude Code skills. Covers sandbox model, settings.json allow/deny rules, and skill-specific patterns."
 date: 2026-03-13

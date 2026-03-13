@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Secret Scanning: Prevent Credential Leaks Guide"
 description: "Implement secret scanning with Claude Code to prevent credential leaks and protect sensitive information in dev workflows."
 date: 2026-03-13

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code vs GitHub Copilot Workspace 2026"
 description: "Claude Code vs GitHub Copilot Workspace 2026: compare agentic features, GitHub integration, team workflows, and pricing."
 date: 2026-03-13

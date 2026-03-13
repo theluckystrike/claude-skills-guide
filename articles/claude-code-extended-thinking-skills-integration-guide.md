@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Extended Thinking + Claude Skills: Integration Guide"
 description: "Combine Claude Code skills with extended thinking to tackle complex workflows. Practical patterns for /supermemory, /tdd, /pdf, and /xlsx in 2026."
 date: 2026-03-13

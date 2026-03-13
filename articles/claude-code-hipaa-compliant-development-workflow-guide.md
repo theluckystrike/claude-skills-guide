@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code HIPAA Compliant Development Workflow Guide"
 description: "Build HIPAA-compliant applications using Claude Code. Workflow patterns, code examples, and security best practices for healthcare development."
 date: 2026-03-13

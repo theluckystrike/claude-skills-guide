@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Advanced Claude Skills: Tool Use Patterns 2026"
 description: "Design Claude skills that use tools precisely. Patterns for reading files, running bash commands, MCP custom tools, and reliable tool chaining."
 date: 2026-03-13

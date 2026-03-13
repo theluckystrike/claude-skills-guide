@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Worktrees and Skills Isolation Guide"
 description: "How Claude Code uses git worktrees to isolate agent work. Learn what gets isolated, what is shared, and how to design skills for worktree environments."
 date: 2026-03-13
