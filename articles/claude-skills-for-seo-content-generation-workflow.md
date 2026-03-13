@@ -68,7 +68,7 @@ Claude generates a properly formatted `.docx` file with SEO requirements built i
 
 ### Document Processing for Research
 
-The **pdf** skill is essential when researching competitor content or extracting data from industry reports:
+The [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) is essential when researching competitor content or extracting data from industry reports:
 
 ```
 /pdf
@@ -126,7 +126,7 @@ Claude writes the openpyxl code to open the file and append the row correctly.
 
 ### Memory and Knowledge Management
 
-The **supermemory** skill enhances long-term SEO strategy by maintaining a knowledge base of what content performs well:
+The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) enhances long-term SEO strategy by maintaining a knowledge base of what content performs well:
 
 ```
 /supermemory store: "claude skills for seo" article published 2026-03-20, ranked position 8 by April 1, 1,200 organic visits in first month

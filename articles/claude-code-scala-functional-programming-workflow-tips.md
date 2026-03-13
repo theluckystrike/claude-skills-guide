@@ -131,4 +131,12 @@ Claude Code becomes a powerful ally when developing functional Scala application
 
 Practice integrating these workflow tips incrementally. Start with pattern matching improvements, then gradually adopt more functional approaches to error handling and state management. Your Scala code will become more concise, testable, and expressive over time.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Essential skills that complement any language workflow including Scala
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How Claude selects the right skill for TDD and refactoring tasks
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during complex functional programming sessions
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

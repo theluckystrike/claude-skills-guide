@@ -242,4 +242,12 @@ When integrating Claude Code with Azure DevOps, follow these security practices:
 
 Integrating Claude Code with Azure DevOps transforms your development workflow through intelligent automation. The combination handles everything from test generation through deployment validation, reducing manual effort and improving consistency. Start with one integration—perhaps the pipeline trigger—and expand as your needs grow.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Skills for CI/CD pipelines, infrastructure, and automated deployments
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The most useful developer skills in the Claude ecosystem
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep your DevOps automation loops cost-efficient
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

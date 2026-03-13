@@ -217,4 +217,12 @@ Claude Code transforms GCP deployment workflows from manual processes into autom
 
 The key is treating Claude Code as a local development tool that interfaces with GCP through the `gcloud` CLI. This maintains security while unlocking significant automation potential. Start with simple deployments and incrementally add complexity as your workflow matures.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Skills tailored for cloud deployments and infrastructure automation
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Start with the foundational developer skills before adding cloud-specific ones
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep cloud automation sessions cost-effective
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

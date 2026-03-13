@@ -159,4 +159,12 @@ Combining Claude Code with Selenium creates a powerful testing workflow. Claude 
 
 By integrating skills like frontend-design and tdd, you build a comprehensive testing approach that catches issues early and scales with your project. Start with simple tests, establish good patterns, and gradually expand your automation coverage.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The tdd skill powers test-driven browser automation workflows
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — Frontend skills that pair with Selenium for full-stack testing
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Trigger testing skills automatically when working on browser test files
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

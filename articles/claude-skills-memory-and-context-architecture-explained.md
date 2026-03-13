@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Claude Skills Memory and Context Architecture"
-description: "How Claude skills manage context and memory across turns and sessions: context window, CLAUDE.md, supermemory skill, and file-based state patterns."
+title: "Claude Skills Memory and Context Architecture Explained"
+description: "How Claude skills manage context and memory across turns and sessions: context_files injection, the supermemory skill, and stateful session design."
 date: 2026-03-13
 categories: [advanced, guides]
 tags: [claude-code, claude-skills, memory, context, supermemory, state-management]
@@ -25,7 +25,7 @@ Every Claude skill operates within a context window. The context window holds ev
 
 When the context window fills up, older conversation history is dropped. Tool outputs are typically more aggressively truncated than conversation text.
 
-A key point: **skills do not share context windows**. If you switch from your `tdd` skill to your `frontend-design` skill mid-session, the new skill starts with only the shared conversation history — it does not inherit the previous skill's context or tool outputs.
+A key point: **skills do not share context windows**. If you switch from your [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) to your `frontend-design` skill mid-session, the new skill starts with only the shared conversation history — it does not inherit the previous skill's context or tool outputs.
 
 ## CLAUDE.md: Project-Level Context
 
@@ -62,7 +62,7 @@ Claude: [still in tdd skill, with PostgreSQL context still in window] Writes pg-
 
 ## The /supermemory Skill: Cross-Session Persistence
 
-The `/supermemory` skill solves the cross-session memory problem. It maintains a storage layer that persists between sessions.
+The [`/supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) solves the cross-session memory problem. It maintains a storage layer that persists between sessions.
 
 To store something important, invoke the skill explicitly:
 

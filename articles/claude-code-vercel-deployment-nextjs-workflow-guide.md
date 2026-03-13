@@ -190,4 +190,12 @@ This workflow transforms Vercel deployments from manual processes into automated
 
 Start with the preview deployment workflow, then gradually add production safeguards as your project matures.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — DevOps skills for managing preview and production deployments
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — Frontend skills that pair with Vercel and Next.js workflows
+- [Claude Skills with Vercel Deployment Automation](/claude-skills-guide/articles/claude-skills-with-vercel-deployment-automation/) — Step-by-step Vercel deployment automation using Claude skills
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

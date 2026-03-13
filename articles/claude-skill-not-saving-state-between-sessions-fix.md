@@ -192,4 +192,12 @@ This is a reminder, not an automated save — Claude still needs to be given a s
 
 ---
 
+---
+
+## Related Reading
+
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Efficient context management reduces both cost and the need for manual state saving
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The supermemory skill is covered in detail alongside other essential developer skills
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understanding skill invocation helps you know when to explicitly save session state
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

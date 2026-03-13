@@ -18,7 +18,7 @@ Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with 
 
 ## Speed Up Documentation with the pdf Skill
 
-Every startup deals with contracts, pitch decks, and technical documentation. The **pdf** skill lets you automate document processing tasks that would otherwise consume hours.
+Every startup deals with contracts, pitch decks, and technical documentation. The [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) lets you automate document processing tasks that would otherwise consume hours.
 
 Invoke it to extract and summarize key information:
 
@@ -65,7 +65,7 @@ For founders validating ideas quickly, this removes the need to hire designers o
 
 ## Test-Driven Development Without the Overhead
 
-The **tdd** skill makes writing tests practical even when you're building alone. Instead of treating testing as an afterthought, invoke the skill to write tests before implementing features:
+The [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) makes writing tests practical even when you're building alone. Instead of treating testing as an afterthought, invoke the skill to write tests before implementing features:
 
 ```
 /tdd
@@ -99,7 +99,7 @@ This approach prevents bugs from reaching production and gives you confidence wh
 
 ## Remember Everything with supermemory
 
-Founders juggle conversations across multiple channels. The **supermemory** skill stores and retrieves context from meetings, customer interactions, and decisions made across sessions.
+Founders juggle conversations across multiple channels. The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) stores and retrieves context from meetings, customer interactions, and decisions made across sessions.
 
 Store important information during a Claude Code session:
 

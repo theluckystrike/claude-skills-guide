@@ -258,4 +258,12 @@ Claude Code transforms Flutter development from manual coding to collaborative p
 
 Start with a clean architecture, write tests first using the tdd workflow, and let Claude handle boilerplate generation. Your cross-platform application will reach iOS, Android, web, and desktop users efficiently.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — Frontend-focused skills for building polished interfaces
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Core developer skills for any stack including Flutter
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Automatically trigger the right skill for frontend or test tasks
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
