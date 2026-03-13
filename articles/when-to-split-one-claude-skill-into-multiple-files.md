@@ -4,6 +4,8 @@ title: "When to Split One Claude Skill Into Multiple Files"
 description: "A practical guide for developers on recognizing the signs that your Claude skill needs to be broken into multiple files, with real examples and decision..."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [advanced]
+tags: [claude-code, claude-skills, skill-design, modular-skills, best-practices]
 reviewed: true
 score: 9
 ---

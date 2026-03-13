@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "Claude Code Batch Processing with Skills Guide"
-description: "Learn how to leverage Claude Code skills for batch processing multiple files, automating repetitive tasks, and scaling your development workflow efficie..."
+description: "Learn how to use Claude Code skills for batch processing multiple files, automating repetitive tasks, and scaling your development workflow efficie..."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills, batch-processing, automation, workflow]
 reviewed: true
 score: 9
 ---

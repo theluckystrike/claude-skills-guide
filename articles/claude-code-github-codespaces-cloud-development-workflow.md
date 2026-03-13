@@ -4,6 +4,8 @@ title: "Claude Code GitHub Codespaces Cloud Development Workflow"
 description: "Learn how to build an efficient cloud development workflow using Claude Code and GitHub Codespaces. Set up browser-based development environments with A..."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills, github-codespaces, cloud-dev, devcontainers]
 reviewed: true
 score: 3
 ---

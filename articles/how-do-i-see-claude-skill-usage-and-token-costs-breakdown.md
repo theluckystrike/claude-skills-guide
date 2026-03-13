@@ -4,6 +4,8 @@ title: "How Do I See Claude Skill Usage and Token Costs Breakdown"
 description: "A practical guide for developers and power users to track Claude skill usage, monitor token consumption, and understand cost attribution across differen..."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills, token-costs, usage-tracking, monitoring]
 reviewed: true
 score: 9
 ---

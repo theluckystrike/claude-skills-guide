@@ -3,7 +3,7 @@ layout: post
 title: "How Do I Make a Claude Skill Available Organization Wide"
 description: "A practical guide to sharing Claude Code skills across your team. Learn to distribute, install, and maintain skills organization-wide using git repositories, shared configs, and documentation patterns."
 date: 2026-03-14
-categories: [how-to]
+categories: [guides]
 tags: [claude-code, claude-skills, organization, team, collaboration, deployment]
 author: theluckystrike
 reviewed: true

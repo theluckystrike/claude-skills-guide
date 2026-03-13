@@ -4,6 +4,8 @@ title: "How Do I Debug a Claude Skill That Silently Fails"
 description: "Diagnose and fix Claude Code skills that fail silently: skill loading issues, permission errors, YAML parsing problems, and tool invocation failures."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [troubleshooting]
+tags: [claude-code, claude-skills, debugging, troubleshooting, silent-failures]
 reviewed: true
 score: 8
 ---
