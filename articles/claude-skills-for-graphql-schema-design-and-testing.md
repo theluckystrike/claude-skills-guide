@@ -3,11 +3,19 @@ layout: post
 title: "Claude Skills for GraphQL Schema Design and Testing"
 description: "A practical guide to using Claude skills for building, testing, and documenting GraphQL schemas — with real examples and code snippets."
 date: 2026-03-14
+<<<<<<< Updated upstream
 categories: [tutorials]
 tags: [graphql, schema, testing, claude-skills, tdd, api]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+=======
+author: "Claude Skills Guide"
+categories: [development]
+tags: [graphql, schema, testing, claude-skills, tdd, api]
+reviewed: true
+score: 9
+>>>>>>> Stashed changes
 ---
 
 # Claude Skills for GraphQL Schema Design and Testing
