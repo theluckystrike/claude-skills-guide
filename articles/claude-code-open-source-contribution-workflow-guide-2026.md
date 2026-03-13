@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Claude Code Open Source Contribution Workflow Guide 2026"
-description: "A practical guide for developers using Claude Code to contribute to open source projects in 2026. Learn workflows, skills, and best practices."
+layout: post
+title: "Open Source Contribution Workflow with Claude Code 2026"
+description: "Practical guide for developers using Claude Code to contribute to open source in 2026. Workflows, skills, and best practices."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, workflows]
+tags: [claude-code, claude-skills, open-source, contribution, workflow, git]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Open Source Contribution Workflow Guide 2026

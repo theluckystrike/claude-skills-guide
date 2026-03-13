@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Claude Code Semantic HTML Accessibility Improvement Guide"
-description: "Learn how to use Claude Code to write semantic HTML that improves accessibility. Practical patterns for developers building inclusive web applications."
+layout: post
+title: "Semantic HTML Accessibility with Claude Code"
+description: "Use Claude Code to write semantic HTML that improves accessibility. Practical patterns for building inclusive web applications."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, accessibility]
+tags: [claude-code, claude-skills, semantic-html, accessibility, wcag, frontend-design]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Semantic HTML Accessibility Improvement Guide

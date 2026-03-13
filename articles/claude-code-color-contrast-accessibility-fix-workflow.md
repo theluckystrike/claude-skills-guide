@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Claude Code Color Contrast Accessibility Fix Workflow"
-description: "A practical workflow for developers to identify and fix color contrast and accessibility issues using Claude Code skills and automated tooling."
+layout: post
+title: "Fix Color Contrast and Accessibility with Claude Code"
+description: "Practical workflow for identifying and fixing color contrast and accessibility issues using Claude Code skills and automated tooling."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, accessibility]
+tags: [claude-code, claude-skills, accessibility, color-contrast, wcag, frontend-design]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Color Contrast Accessibility Fix Workflow

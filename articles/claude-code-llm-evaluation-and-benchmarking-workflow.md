@@ -1,13 +1,13 @@
 ---
-layout: default
-title: "Claude Code LLM Evaluation and Benchmarking Workflow"
-description: "Learn how to build an effective LLM evaluation and benchmarking workflow using Claude Code skills. Automate testing, measure performance, and make data-driven model selection decisions."
+layout: post
+title: "LLM Evaluation and Benchmarking with Claude Code"
+description: "Build an LLM evaluation and benchmarking workflow with Claude Code. Automate testing, measure performance, and make data-driven model decisions."
 date: 2026-03-13
-categories: [skills, tutorials]
-tags: [claude-code, llm-evaluation, benchmarking, ai-testing]
-author: theluckystrike
-reviewed: false
-score: 0
+categories: [guides, workflows]
+tags: [claude-code, claude-skills, llm-evaluation, benchmarking, ai-testing]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code LLM Evaluation and Benchmarking Workflow
@@ -101,28 +101,8 @@ Several Claude skills enhance the evaluation workflow. The **pdf** skill helps y
 
 The **xlsx** skill automates spreadsheet operations for results tracking. Build dynamic dashboards that update as new evaluation runs complete:
 
-```python
-from openpyxl import Workbook
-
-def create_evaluation_dashboard(results):
-    wb = Workbook()
-    ws = wb.active
-    ws.title = "Results"
-    
-    # Header row
-    headers = ["Prompt ID", "Category", "Model", "Score", "Latency (ms)"]
-    ws.append(headers)
-    
-    for result in results:
-        ws.append([
-            result["prompt_id"],
-            result["category"],
-            result["model"],
-            result.get("score", "N/A"),
-            result.get("latency", "N/A")
-        ])
-    
-    wb.save("evaluation_results.xlsx")
+```
+/xlsx create evaluation_results.xlsx with columns: Prompt ID, Category, Model, Score, Latency (ms). Populate with this data: [paste results JSON]. Add a summary tab with average scores grouped by Model and Category.
 ```
 
 The **tdd** skill proves valuable when building evaluation infrastructure itself. Use it to develop your benchmarking code following test-driven development principles, ensuring your evaluation pipeline remains reliable as complexity grows.
