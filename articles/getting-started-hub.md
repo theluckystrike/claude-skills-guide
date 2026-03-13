@@ -133,6 +133,23 @@ Once you've got the basics down, here's where to go next:
 | [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) | How the system detects and loads skills automatically |
 | [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) | Every field and pattern in the skill.md format |
 | [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) | Step-by-step skill creation from blank file to working skill |
+| [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) | When to reach for a skill vs a one-off prompt |
+| [What Is Claude Code and Why Developers Love It in 2026](/claude-skills-guide/articles/what-is-claude-code-and-why-developers-love-it-2026/) | Overview of Claude Code capabilities and why developers adopt it |
+| [Claude Skills Explained Simply for Non-Programmers](/claude-skills-guide/articles/claude-skills-explained-simply-for-non-programmers/) | Plain-language explanation of how skills work |
+| [Claude Skills Directory: Where to Find Skills](/claude-skills-guide/articles/claude-skills-directory-where-to-find-skills/) | Where to discover official and community Claude skills |
+| [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) | The highest-value skills to install when starting out |
+| [How Claude Skills Auto Invocation Actually Works — Deep Dive](/claude-skills-guide/articles/how-claude-skills-auto-invocation-actually-works-deep-dive/) | Under-the-hood mechanics of auto-invocation triggers |
+| [Claude Skill Not Triggering? Troubleshooting Guide](/claude-skills-guide/articles/claude-skill-not-triggering-automatically-troubleshoot/) | Why skills sometimes don't activate and how to fix it |
+| [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/articles/why-is-my-claude-skill-not-showing-up-fix-guide/) | Step-by-step fixes for skills that fail to appear |
+| [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/articles/claude-skill-yaml-front-matter-parsing-error-fix/) | Diagnose and fix YAML parsing errors in skill files |
+| [Claude Code Crashes When Loading Skill: Debug Steps](/claude-skills-guide/articles/claude-code-crashes-when-loading-skill-debug-steps/) | Debugging crashes triggered by skill load failures |
+| [Claude Skill Not Saving State Between Sessions Fix](/claude-skills-guide/articles/claude-skill-not-saving-state-between-sessions-fix/) | Why session state is lost and how to preserve it |
+| [Claude Code Skill Permission Denied Error Fix](/claude-skills-guide/articles/claude-code-skill-permission-denied-error-fix-2026/) | Resolving permission denied errors when running skills |
+| [Claude Code Skill Tool Not Found Error: Solutions](/claude-skills-guide/articles/claude-code-skill-tool-not-found-error-solution/) | Fix tool-not-found errors in Claude Code skill execution |
+| [Claude Code Skills: Context Window Exceeded Error Fix](/claude-skills-guide/articles/claude-code-skills-context-window-exceeded-error-fix/) | Handle and prevent context window overflow in skill sessions |
+| [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) | Understanding Claude Code's permission and security model |
+| [MCP Servers vs Claude Skills: What's the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) | How MCP servers relate to and differ from skills |
+| [How to Use Claude Skills with n8n Automation Workflows](/claude-skills-guide/articles/how-to-use-claude-skills-with-n8n-automation-workflows/) | Integrating Claude skills into n8n automation pipelines |
 
 ---
 

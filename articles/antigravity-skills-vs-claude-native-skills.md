@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Antigravity Skills vs Claude Native Skills: Key Differences"
-description: "Practical comparison of community Antigravity skills versus native Claude skills. Learn when to use each type and how to install skills from ~/.claude/skills/."
+title: "Antigravity vs Claude Native Skills: Complete Guide (2026)"
+description: "Compare Antigravity skills vs native Claude skills. Learn when to use each type and how to install community skills in Claude Code (2026)."
 date: 2026-03-13
 categories: [comparisons, guides]
 tags: [claude-code, claude-skills, antigravity, native-skills]
@@ -38,11 +38,11 @@ Native skills ship pre-installed in `~/.claude/skills/` as part of the standard 
 
 The core native skills include:
 
-- **pdf** — Extract text, tables, and forms from PDF files
+- [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Extract text, tables, and forms from PDF files
 - **xlsx** — Create and edit spreadsheets with formula support
-- **tdd** — Guide test-first development and generate test cases
+- [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Guide test-first development and generate test cases
 - **frontend-design** — Generate and verify UI component implementations
-- **supermemory** — Persist context and decisions across sessions
+- [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Persist context and decisions across sessions
 
 Native skills receive updates through Claude Code's release cycle. When Anthropic improves the `tdd` skill, you get the improvement automatically.
 

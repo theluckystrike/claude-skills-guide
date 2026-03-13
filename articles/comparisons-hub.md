@@ -79,6 +79,18 @@ When building custom skills, the path is: understand the [skill.md format](/clau
 |---------|-------------------|
 | [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) | When skills beat prompts and vice versa |
 | [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) | Reliability, security, and flexibility trade-offs |
+| [Antigravity Skills vs Claude Native Skills: Key Differences](/claude-skills-guide/articles/antigravity-skills-vs-claude-native-skills/) | How third-party Antigravity skills compare to built-in Claude skills |
+| [Claude Code Skills vs Bolt.new for Web Development](/claude-skills-guide/articles/claude-code-skills-vs-bolt-new-for-web-development/) | Side-by-side comparison for web app development workflows |
+| [Claude Code vs Amazon Q Developer: 2026 Comparison](/claude-skills-guide/articles/claude-code-vs-amazon-q-developer-comparison-2026/) | When to choose Claude Code over Amazon Q for enterprise dev |
+| [Claude Code vs GitHub Copilot Workspace: 2026 Comparison](/claude-skills-guide/articles/claude-code-vs-github-copilot-workspace-2026/) | Feature-by-feature breakdown of Claude Code vs Copilot |
+| [Claude Code vs Replit Agent: Which Is Better in 2026?](/claude-skills-guide/articles/claude-code-vs-replit-agent-which-is-better-2026/) | Comparing Claude Code and Replit Agent for app development |
+| [Claude Code vs Windsurf for AI Development](/claude-skills-guide/articles/claude-code-vs-windsurf-for-ai-development/) | Choosing between Claude Code and Windsurf IDE |
+| [Claude Code vs Cursor AI Editor Comparison 2026](/claude-skills-guide/articles/claude-cowork-vs-cursor-ai-editor-comparison-2026/) | Deep comparison of Claude Code and Cursor for daily coding |
+| [Claude Memory Feature vs SuperMemory Skill Comparison](/claude-skills-guide/articles/claude-memory-feature-vs-supermemory-skill-comparison/) | Built-in memory feature vs the supermemory community skill |
+| [Claude Opus 4.6 vs GPT-4o for Coding Tasks](/claude-skills-guide/articles/claude-opus-46-vs-gpt-4o-for-coding-tasks-comparison/) | Model-level comparison for coding-heavy workloads |
+| [Claude Skills vs Custom GPTs: 2026 Comparison](/claude-skills-guide/articles/claude-skills-vs-custom-gpts-comparison-2026/) | Claude skills vs OpenAI Custom GPTs for workflow automation |
+| [Claude Skills vs OpenAI Assistants API Comparison](/claude-skills-guide/articles/claude-skills-vs-openai-assistants-api-comparison/) | API-level comparison for developers building AI integrations |
+| [MCP Servers vs Claude Skills: What's the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) | Structural differences between MCP servers and Claude skills |
 
 ---
 

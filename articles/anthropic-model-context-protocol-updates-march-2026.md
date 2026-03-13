@@ -34,7 +34,7 @@ Dynamic registration is useful when skills need to expose context-specific tools
 
 The update introduces a standardized checkpoint format for tool state. This allows MCP servers to serialize and restore internal state across sessions, so workflows don't lose progress when you switch between projects.
 
-Practically, this means skills like `/tdd` can maintain test context between Claude Code sessions without requiring you to re-explain the project structure each time.
+Practically, this means skills like the [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) can maintain test context between Claude Code sessions without requiring you to re-explain the project structure each time.
 
 ### OAuth 2.1 Authentication
 
@@ -82,7 +82,7 @@ The updated MCP makes multi-database configurations simpler. Here is an example 
 }
 ```
 
-With both servers active, Claude Code can query either database in the same session. This pairs well with the `/pdf` skill when generating reports that pull from multiple sources.
+With both servers active, Claude Code can query either database in the same session. This pairs well with the [pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) when generating reports that pull from multiple sources.
 
 ## Migration Path
 

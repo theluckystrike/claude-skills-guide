@@ -116,6 +116,32 @@ Token efficiency matters when running multi-skill sessions. See [Claude Skills T
 | [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) | Top 8 skills for React, Vue, Svelte, and design workflows |
 | [Best Claude Skills for Data Analysis in 2026](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) | pdf + xlsx + tdd pipelines for analysts |
 | [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) | shell-expert, devops, and CI/CD optimization |
+| [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) | Skills that automate code review for better quality feedback |
+| [Best Claude Skills for Solo Developers and Freelancers](/claude-skills-guide/articles/best-claude-skills-for-solo-developers-and-freelancers/) | High-leverage skills for independent developers working alone |
+| [Best Claude Skills for Writing and Content Creation](/claude-skills-guide/articles/best-claude-skills-for-writing-and-content-creation/) | Skills for blog writing, documentation, and content workflows |
+| [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/articles/claude-frontend-design-skill-review-and-tutorial/) | Hands-on review and usage tutorial for the frontend-design skill |
+| [Claude xlsx Skill Spreadsheet Automation Tutorial](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/) | How to automate spreadsheet tasks with the xlsx skill |
+| [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/) | Using Claude skills inside Jupyter for data science workflows |
+| [Full Stack Web App with Claude Skills Step by Step](/claude-skills-guide/articles/full-stack-web-app-with-claude-skills-step-by-step/) | Building a complete web application using Claude skills |
+| [How to Build a SaaS MVP with Claude Code Skills Guide](/claude-skills-guide/articles/how-to-build-saas-mvp-with-claude-code-skills-guide/) | Using Claude skills to ship a SaaS product faster |
+| [Claude Skills with Supabase Database Integration](/claude-skills-guide/articles/claude-skills-with-supabase-database-integration/) | Connecting Claude skills to Supabase for database-driven apps |
+| [Claude Code Skills Zapier Integration Step by Step](/claude-skills-guide/articles/claude-code-skills-zapier-integration-step-by-step/) | Automating workflows by connecting Claude skills to Zapier |
+| [How to Integrate Claude Skills with Notion API Guide](/claude-skills-guide/articles/how-to-integrate-claude-skills-with-notion-api-guide/) | Linking Claude skills to Notion for knowledge management |
+| [How to Use Claude Skills with n8n Automation Workflows](/claude-skills-guide/articles/how-to-use-claude-skills-with-n8n-automation-workflows/) | Building n8n pipelines that invoke Claude skills |
+| [Claude Code Skills for Terraform Infrastructure as Code](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) | Using Claude skills to write and manage Terraform configs |
+| [Claude Skills AWS Lambda Serverless Integration Guide](/claude-skills-guide/articles/claude-skills-aws-lambda-serverless-integration/) | Deploying Claude skill workflows as serverless Lambda functions |
+| [Claude Skills with Linear Project Management Tutorial](/claude-skills-guide/articles/claude-skills-with-linear-project-management-tutorial/) | Integrating Claude skills into Linear for project tracking |
+| [Claude Skills for SEO Content Generation Workflow](/claude-skills-guide/articles/claude-skills-for-seo-content-generation-workflow/) | Building SEO-optimized content pipelines with Claude skills |
+| [Claude Skills for Startup Founders and Solopreneurs](/claude-skills-guide/articles/claude-skills-for-startup-founders-and-solopreneurs/) | High-impact skills for founders building fast with limited resources |
+| [Claude Skills for Publishers: A Practical Guide](/claude-skills-guide/articles/claude-skills-marketplace-skillsmp-guide-for-publishers/) | How to publish and distribute Claude skills via the marketplace |
+| [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/articles/how-to-automate-code-reviews-with-claude-skills/) | Setting up automated code review workflows end-to-end |
+| [Automate Social Media Content with Claude Skills](/claude-skills-guide/articles/claude-skills-automated-social-media-content-workflow/) | Building social media content pipelines with Claude skills |
+| [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) | Architecture patterns for production AI agents using skills |
+| [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) | End-to-end setup of MCP servers in Claude Code |
+| [Claude Code Extended Thinking Skills Integration Guide](/claude-skills-guide/articles/claude-code-extended-thinking-skills-integration-guide/) | Enabling and using extended thinking in skill workflows |
+| [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) | Understanding how permissions affect skill behavior in production |
+| [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) | Orchestrating multiple Claude subagents for complex tasks |
+| [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/articles/why-is-my-claude-skill-not-showing-up-fix-guide/) | Diagnosing skill visibility problems in Claude Code |
 
 ---
 
