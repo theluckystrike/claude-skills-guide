@@ -126,7 +126,7 @@ When the user says: "Create a test for the user authentication function"
 
 ### Define Boundaries Clearly
 
-Explicitly state what your skill does not cover. The `supermemory` skill, for instance, might focus on memory retrieval and organization while explicitly excluding external API integrations or real-time sync functionality.
+Explicitly state what your skill does not cover. The [`supermemory` skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), for instance, might focus on memory retrieval and organization while explicitly excluding external API integrations or real-time sync functionality.
 
 ## Testing Your Skill Complexity
 
@@ -144,5 +144,12 @@ If you answer "no" to any of these, consider refactoring.
 Optimal skill complexity balances comprehensiveness with maintainability. Aim for files between 2,000 and 8,000 characters, split larger skills into focused modules, and use clear structural organization. Skills like `pdf` and `tdd` demonstrate that focused, well-structured skills outperform monolithic alternatives.
 
 Start with a narrow scope and expand only when clear patterns emerge across multiple use cases. Your future self—and your users—will thank you for the discipline.
+
+## Related Reading
+
+- [What Is the Best File Structure for a Complex Claude Skill](/claude-skills-guide/articles/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Apply these complexity guidelines to a concrete directory structure for larger multi-file skills
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Master the skill.md format to structure your skills at the right file size from the start
+- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/articles/claude-skill-inheritance-and-composition-patterns/) — Split complex skills using composition patterns that keep each component within optimal size bounds
+- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational skill authoring patterns and best practices for skill design
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

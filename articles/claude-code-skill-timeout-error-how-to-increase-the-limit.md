@@ -18,7 +18,7 @@ When working with Claude Code skills like `frontend-design`, `pdf`, `tdd`, or `s
 
 Claude Code skills execute within a managed environment that imposes time limits on operations. These limits exist to prevent runaway processes and ensure fair resource allocation across concurrent sessions. When a skill exceeds its allocated time, you receive a timeout error that halts execution.
 
-Timeout errors typically manifest in several ways depending on the skill you're using. The `pdf` skill may fail when processing large documents with extensive formatting. The `tdd` skill might timeout during comprehensive test generation for large codebases. The `supermemory` skill could hit limits when indexing extensive collections of notes or documents.
+Timeout errors typically manifest in several ways depending on the skill you're using. Understanding [rate limit management](/claude-skills-guide/articles/rate-limit-management-claude-code-skill-intensive-workflows/) alongside timeout behavior helps you build more resilient workflows. The `pdf` skill may fail when processing large documents with extensive formatting. The `tdd` skill might timeout during comprehensive test generation for large codebases. The `supermemory` skill could hit limits when indexing extensive collections of notes or documents.
 
 The error message usually indicates which operation timed out and provides a reference to the time limit that was exceeded. This feedback helps you identify whether you need to optimize your approach or increase the timeout threshold.
 
@@ -145,5 +145,12 @@ When adjusting timeouts, choose values that provide comfortable margins without 
 Timeout errors in Claude Code skills like `pdf`, `tdd`, `supermemory`, `frontend-design`, and others are manageable through configuration adjustments and optimization strategies. Start by understanding your specific skill's requirements, then apply appropriate timeout increases or operational optimizations.
 
 Remember that timeout limits exist for good reasons. Balance your need for longer execution with system resource considerations. Most importantly, develop workflows that work with Claude Code's strengths rather than against its limitations.
+
+## Related Reading
+
+- [Rate Limit Management for Skill-Intensive Workflows](/claude-skills-guide/articles/rate-limit-management-claude-code-skill-intensive-workflows/) — Pair timeout management with rate limit strategies for robust long-running automated pipelines
+- [Claude Code Skill Exceeded Maximum Output Length Error Fix](/claude-skills-guide/articles/claude-code-skill-exceeded-maximum-output-length-error-fix/) — Fix the related output length error that often accompanies timeout issues in heavy skill operations
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) — Optimize skill performance so operations complete within default timeout bounds
+- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced timeout management and resource optimization for production Claude workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

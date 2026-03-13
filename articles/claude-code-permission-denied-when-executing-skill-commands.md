@@ -97,7 +97,7 @@ execution:
 ---
 ```
 
-For the supermemory skill or other skills that manage external resources, you may need to explicitly grant file system access:
+For the [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) or other skills that manage external resources, you may need to explicitly grant file system access:
 
 ```yaml
 execution:
@@ -247,5 +247,12 @@ Whether you're using the tdd skill for test-driven development workflows, the pd
 For persistent issues, checking the skill's documentation and ensuring it was built for the current Claude Code version will often reveal version-specific requirements.
 
 ---
+
+## Related Reading
+
+- [Claude Code Permissions Model and Security Guide 2026](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) — Understand the full permissions model that governs what skill commands can execute in your environment
+- [How Do I Limit What a Claude Skill Can Access on Disk](/claude-skills-guide/articles/how-do-i-limit-what-a-claude-skill-can-access-on-disk/) — Pair permission denied fixes with proactive disk access restrictions to prevent future errors
+- [Claude Code Skill Permission Scope Error Explained](/claude-skills-guide/articles/claude-code-skill-permission-scope-error-explained/) — Understand the specific permission scope errors that relate to command execution failures
+- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational Claude Code permission and security configuration patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

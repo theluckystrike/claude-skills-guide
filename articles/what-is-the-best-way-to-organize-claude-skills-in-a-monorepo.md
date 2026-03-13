@@ -60,7 +60,7 @@ claude-skills-monorepo/
 └── README.md
 ```
 
-This structure allows you to invoke any skill using its path: `/development/tdd` or `/data/pdf`. Claude Code loads the `skill.md` file from the specified directory and applies its instructions to your current task.
+This structure allows you to invoke any skill using its path: `/development/tdd` or `/data/pdf`. Claude Code loads the `skill.md` file from the specified directory and applies its instructions to your current task. For the full specification of the skill.md format, see the [skill MD format guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/).
 
 ## Implementing Shared Dependencies
 
@@ -223,5 +223,12 @@ This catches errors before they reach production usage.
 Organizing Claude skills in a monorepo provides structure, reuse, and maintainability for growing skill libraries. The key is establishing clear directory conventions, implementing shared component patterns, and configuring Claude Code to point to your centralized repository. Whether you manage five skills or fifty, this approach scales without becoming chaotic.
 
 Start with the recommended directory layout, add your skills progressively, and build shared resources as you identify common patterns. Your future self will thank you when debugging a skill invocation takes minutes instead of hunting through scattered files.
+
+## Related Reading
+
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Master the full skill.md specification to author well-structured skills for your monorepo
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Distribute your monorepo-organized skills consistently across all team members
+- [What Is the Best File Structure for a Complex Claude Skill](/claude-skills-guide/articles/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Apply the individual skill file structure guidance alongside this monorepo organization approach
+- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational patterns for skill organization, authoring, and team distribution
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

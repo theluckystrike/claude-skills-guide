@@ -77,7 +77,7 @@ Trace what happens to data processed by the skill. For skills like `xlsx` that h
 - No data persists in logs beyond the session
 - Sensitive data in context windows is handled appropriately
 
-The `supermemory` skill warrants special attention here since it is designed to persist context. Audit what gets stored and ensure no sensitive information is retained unintentionally.
+The [`supermemory` skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) warrants special attention here since it is designed to persist context. Audit what gets stored and ensure no sensitive information is retained unintentionally.
 
 ### 6. Cross-Skill Interaction Review
 
@@ -145,5 +145,12 @@ This checklist provides a foundation, but adapt it to your organization's risk t
 Document your governance decisions. When you approve a skill for production use, record what you verified, what permissions you granted, and any constraints on its use. This documentation supports compliance audits and helps future team members understand your security posture.
 
 Regular review keeps your governance effective as the Claude skills ecosystem evolves. New skills release frequently, and the threat landscape changes. Your audit checklist should be a living document, updated as you learn and as the ecosystem matures.
+
+## Related Reading
+
+- [How Do I Limit What a Claude Skill Can Access on Disk](/claude-skills-guide/articles/how-do-i-limit-what-a-claude-skill-can-access-on-disk/) — Implement the disk access controls this audit checklist requires before deploying skills to production
+- [Claude Code Permissions Model and Security Guide 2026](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) — Understand the permissions model that governs what each skill can access and execute
+- [Claude Skills for Regulated Industries: Fintech and Healthcare](/claude-skills-guide/articles/claude-skills-for-regulated-industries-fintech-healthcare/) — Apply skill governance in high-compliance contexts where security audits are mandatory
+- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced security, compliance, and governance patterns for enterprise Claude deployments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

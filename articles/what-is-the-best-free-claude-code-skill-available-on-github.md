@@ -150,10 +150,17 @@ Before installing any skill, check the repository for recent commits, issue acti
 
 The best free Claude Code skill depends entirely on your workflow. If you build web applications regularly, the frontend-design skill will provide the most immediate value. If you work with documentation or data extraction, the pdf and xlsx skills are more relevant. For long-running projects where memory matters, supermemory fills a critical gap.
 
-Many developers install multiple skills and let Claude determine which one applies to the current task. This approach works well because Claude automatically selects the most appropriate skill based on your prompts and the context of your request.
+Many developers install multiple skills and let Claude determine which one applies to the current task through [auto-invocation](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/). This approach works well because Claude automatically selects the most appropriate skill based on your prompts and the context of your request.
 
 ## Conclusion
 
 Claude skills represent a powerful way to extend Claude Code's capabilities without additional cost. The skills mentioned above represent the most practical and well-maintained options available on GitHub. Start with the skill that aligns closest to your primary work, and expand from there as your needs evolve.
+
+## Related Reading
+
+- [Claude Skills Directory: Where to Find Skills](/claude-skills-guide/articles/claude-skills-directory-where-to-find-skills/) — The comprehensive directory of available Claude skills including free GitHub-hosted options
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The definitive developer-focused skill recommendations expanding on the free GitHub options listed here
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understand how Claude selects which installed skill to use automatically based on your prompt
+- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore installation guides and first-use workflows for all the free skills mentioned in this article
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -49,7 +49,7 @@ Rather than building comprehensive skills that handle everything, create smaller
 /impl-scaffold   # Generate code from plan
 ```
 
-Each skill in the chain remains lightweight, and users pay only for the steps they need. The **supermemory** skill exemplifies this pattern by maintaining lightweight index files rather than loading entire knowledge bases at invocation.
+Each skill in the chain remains lightweight, and users pay only for the steps they need. The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) exemplifies this pattern by maintaining lightweight index files rather than loading entire knowledge bases at invocation.
 
 ## Minimizing Tool Request Overhead
 
@@ -205,5 +205,12 @@ This structure keeps base invocation under 100ms while still providing detailed 
 Skill latency optimization focuses on three areas: prompt length reduction, explicit tool guidance, and efficient data access. Apply conditional loading for optional instructions, specify exact tools and commands, and cache frequently accessed data. Measure results and iterate—small optimizations compound into noticeable improvements across your skill library.
 
 For skills like **pdf**, **frontend-design**, **tdd**, **supermemory**, **webapp-testing**, **mcp-builder**, **docx**, **pptx**, **xlsx**, and **algorithmic-art**, these patterns reduce response times while preserving the detailed guidance that makes skills powerful.
+
+## Related Reading
+
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Combine latency optimization with token reduction to maximize both speed and cost efficiency
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) — Diagnose and fix slow skill performance with complementary speed optimization strategies
+- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/articles/caching-strategies-for-claude-code-skill-outputs/) — Cache skill outputs to eliminate repeat latency on identical operations
+- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced performance optimization and skill architecture patterns for production workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

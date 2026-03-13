@@ -136,3 +136,11 @@ Adding a new API endpoint:
 ## Summary
 
 The real built-in skills for backend development are `/tdd` for tests, `/supermemory` for preserving context across sessions, and `/pdf` for documentation. For stack-specific automation, write custom skill files — they're just `.md` files in `~/.claude/skills/` with instructions. Claude Code handles the rest.
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Deep dive into the tdd skill used for Node.js and Python test generation in this guide
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — See the broader landscape of developer skills that complement backend workflows
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Build a complete automated testing pipeline for your Node.js or Python backend project
+- [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more backend development, API, and infrastructure use case guides
+
