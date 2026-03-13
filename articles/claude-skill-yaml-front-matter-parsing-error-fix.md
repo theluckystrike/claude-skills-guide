@@ -1,286 +1,275 @@
 ---
-layout: post
+layout: default
 title: "Claude Skill YAML Front Matter Parsing Error Fix"
-description: "Fix YAML front matter parsing errors in Claude skill files: indentation issues, unquoted special characters, duplicate keys, and validation workflows."
+description: "Fix YAML front matter parsing errors in Claude Code skill files. Covers indentation, special characters, missing closing delimiters, and validation tools."
 date: 2026-03-13
-categories: [guides, tutorials]
-tags: [claude-code, claude-skills, yaml, debugging]
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
+author: theluckystrike
 ---
 
 # Claude Skill YAML Front Matter Parsing Error Fix
 
-YAML front matter is the foundation of how Claude skills define their metadata, configuration, and capabilities. When parsing errors occur, your skill fails to load or behaves unpredictably. This guide covers the most common causes of YAML front matter parsing errors in Claude skills and provides practical solutions you can implement immediately.
+A malformed YAML front matter block is one of the most common reasons a Claude Code skill silently fails to load. The skill file exists, permissions are correct, but Claude either ignores the invocation or loads the skill without its configured metadata. This guide covers every known cause of YAML front matter parsing errors and gives you the exact fix for each.
 
-## Understanding YAML Front Matter in Claude Skills
+## What YAML Front Matter Does in a Skill File
 
-Claude skills use YAML front matter to declare their properties—name, description, capabilities, and configuration. This metadata lives between triple-dashed lines at the top of your skill file:
+Skill `.md` files begin with a YAML front matter block delimited by triple dashes:
 
 ```yaml
 ---
-name: my-custom-skill
-description: Processes data files and generates reports
-capabilities:
-  - file-reading
-  - data-transformation
-version: 1.0.0
+description: "Run tests before writing implementation code (TDD)"
+tools:
+  - Bash
+  - Read
+  - Write
+---
+
+# The rest of the skill instructions go here...
+```
+
+Claude Code parses this block to get the skill's metadata, declared tools, and configuration. If parsing fails, the skill body may still load — but tool declarations, descriptions, and any configuration keys are lost.
+
+## Error 1: Missing or Mismatched Closing Delimiter
+
+The most common mistake. YAML front matter requires exactly three dashes on the opening and closing lines.
+
+```yaml
+# Broken — closing delimiter is missing
+---
+description: "My skill"
+tools:
+  - Bash
+
+# Skill body starts here but YAML never closed...
+```
+
+```yaml
+# Fixed
+---
+description: "My skill"
+tools:
+  - Bash
 ---
 ```
 
-When this YAML is invalid, Claude cannot parse the skill definition, resulting in errors that prevent the skill from loading or functioning correctly.
+Also watch for trailing spaces after `---`. Some editors add a trailing space, which is invisible but causes the parser to miss the delimiter.
 
-## Common Causes of Parsing Errors
-
-### 1. Indentation Problems
-
-YAML relies entirely on indentation for structure. A single misplaced space causes parsing to fail. This error often occurs when mixing tabs and spaces or copying YAML from different sources with inconsistent formatting.
-
-```yaml
-# Wrong - inconsistent indentation
-skills:
-  pdf:
-    enabled: true
-   description: "PDF processing"
-  
-# Correct - consistent two-space indentation
-skills:
-  pdf:
-    enabled: true
-    description: "PDF processing"
-```
-
-### 2. Unquoted Special Characters
-
-Colons, quotes, and special characters in YAML values can break parsing if not handled correctly. Values containing colons or special characters require quoting.
-
-```yaml
-# Problematic - colon in unquoted string
-description: This handles: special cases
-
-# Fixed - properly quoted
-description: "This handles: special cases"
-```
-
-### 3. Invalid YAML Syntax
-
-Common syntax errors include duplicate keys, trailing whitespace, and improper list formatting:
-
-```yaml
-# Error - duplicate key
-name: my-skill
-name: another-skill
-
-# Error - trailing colon without value
-config:
-  option:
-
-# Correct - proper value or null
-config:
-  option: null
-```
-
-### 4. Missing Required Fields
-
-Skills may require specific fields like `name` or `capabilities`. Missing these fields causes validation failures.
-
-```yaml
-# Missing required fields
----
-description: "My skill without proper name"
----
-```
-
-## Debugging Techniques
-
-### Using YAML Validators
-
-Before deploying a skill, validate your YAML using online validators or command-line tools:
-
+**Check with:**
 ```bash
-# Install yamllint for CLI validation
-npm install -g yamllint
-
-# Validate your skill file
-yamllint skill-file.yaml
+cat -A ~/.claude/skills/tdd.md | head -10
+# Lines ending in $ are clean. Lines ending in  $ have trailing spaces.
 ```
 
-The Python YAML library also helps:
+## Error 2: Tabs Instead of Spaces
 
-```python
+YAML does not allow tabs for indentation. This is the single most common source of parse errors in skill files edited in IDEs with smart-tab enabled.
+
+```yaml
+# Broken — tab characters used for indentation
+---
+tools:
+	- Bash
+	- Read
+---
+```
+
+```yaml
+# Fixed — two spaces per level
+---
+tools:
+  - Bash
+  - Read
+---
+```
+
+**Check and fix:**
+```bash
+# Check for tabs in YAML front matter
+python3 -c "
+content = open('$HOME/.claude/skills/tdd.md').read()
+front = content.split('---')[1]
+if '\t' in front:
+    print('TAB FOUND — replace with spaces')
+else:
+    print('No tabs found')
+"
+
+# Replace tabs with spaces
+expand -t 2 ~/.claude/skills/tdd.md > /tmp/tdd-fixed.md && mv /tmp/tdd-fixed.md ~/.claude/skills/tdd.md
+```
+
+## Error 3: Unquoted Strings With Colons
+
+A colon followed by a space in an unquoted YAML value starts a new key-value pair. This breaks the intended value.
+
+```yaml
+# Broken — the colon after "Fix:" confuses the parser
+description: Fix: handle edge cases in auth
+```
+
+```yaml
+# Fixed — quote the string
+description: "Fix: handle edge cases in auth"
+```
+
+This hits frequently with `description` fields in the `tdd` and `frontend-design` skills when people write descriptions like "Step 1: write test, Step 2: implement".
+
+## Error 4: Unquoted Special Characters
+
+Certain characters have special meaning in YAML and must be quoted when used literally:
+
+| Character | Problem | Fix |
+|---|---|---|
+| `:` | Starts key-value pair | Quote the string |
+| `#` | Starts a comment | Quote the string |
+| `{` `}` | Flow mapping | Quote the string |
+| `[` `]` | Flow sequence | Quote the string |
+| `*` `&` | Anchors and aliases | Quote the string |
+
+```yaml
+# Broken
+description: Use {curly braces} for templates
+tags: [tdd, test-first]  # this is actually valid inline list syntax
+
+# Safe approach — always quote description values
+description: "Use {curly braces} for templates"
+```
+
+## Error 5: Duplicate Keys
+
+If the same key appears twice in the front matter block, most YAML parsers use the last value and silently discard the first. Some parsers throw an error. Either way, the behavior is unintended.
+
+```yaml
+# Broken — description appears twice
+---
+description: "My skill v1"
+tools:
+  - Bash
+description: "My skill v2"
+---
+```
+
+Grep for duplicates:
+```bash
+python3 -c "
+content = open('$HOME/.claude/skills/supermemory.md').read()
+front = content.split('---')[1]
 import yaml
+data = yaml.safe_load(front)
+print('Keys:', list(data.keys()))
+"
+```
 
-with open('skill.yaml', 'r') as f:
+## Error 6: Incorrect `tools` List Syntax
+
+The `tools` key is a list. Incorrectly formatting it as a string or using the wrong list syntax causes the declared tools to be ignored.
+
+```yaml
+# Broken — tools as a string
+tools: Bash, Read, Write
+
+# Also broken — inline list with wrong quoting
+tools: ["Bash" "Read" "Write"]
+
+# Fixed — block list
+tools:
+  - Bash
+  - Read
+  - Write
+
+# Also valid — inline list with commas
+tools: [Bash, Read, Write]
+```
+
+## Validating Your Skill Files
+
+**Quick Python check:**
+```bash
+python3 -c "
+import yaml, sys
+
+path = '$HOME/.claude/skills/pdf.md'
+content = open(path).read()
+parts = content.split('---')
+if len(parts) < 3:
+    print('ERROR: front matter delimiters not found')
+    sys.exit(1)
+try:
+    data = yaml.safe_load(parts[1])
+    print('VALID:', list(data.keys()))
+except yaml.YAMLError as e:
+    print('PARSE ERROR:', e)
+"
+```
+
+**Batch validate all skills:**
+```bash
+python3 << 'EOF'
+import yaml, os, glob
+
+for path in glob.glob(os.path.expanduser('~/.claude/skills/*.md')):
+    content = open(path).read()
+    parts = content.split('---')
+    if len(parts) < 3:
+        print(f'MISSING DELIMITERS: {path}')
+        continue
     try:
-        data = yaml.safe_load(f)
-        print("Valid YAML")
+        yaml.safe_load(parts[1])
+        print(f'OK: {os.path.basename(path)}')
     except yaml.YAMLError as e:
-        print(f"Parse error: {e}")
+        print(f'ERROR {os.path.basename(path)}: {e}')
+EOF
 ```
 
-### Enabling Verbose Logging
+## Using yamllint for Strict Validation
 
-When working with complex skills that interact with systems like the **pdf** skill or **xlsx** skill, enable verbose logging to catch parsing issues early:
-
-```yaml
----
-name: document-processor
-description: Processes various document formats
-logging:
-  level: debug
-  output: stderr
-capabilities:
-  - file-processing
-  - format-conversion
----
-```
-
-### Checking Character Encoding
-
-UTF-8 encoding issues frequently cause silent parsing failures. Ensure your skill files use consistent UTF-8 encoding, particularly when sharing skills across different systems or editing with tools that might introduce encoding changes.
-
-## Practical Solutions
-
-### Fixing Complex Nested Structures
-
-Skills with nested configurations like those used by the **tdd** skill or **frontend-design** skill often have complex YAML:
-
-```yaml
-# Complex nested structure - working example
-skill:
-  name: tdd-workflow
-  config:
-    test-framework: jest
-    assertion-library: expect
-    coverage:
-      threshold: 80
-      reporters:
-        - text
-        - html
-    hooks:
-      pre-test: "npm run pretest"
-      post-test: "npm run posttest"
-```
-
-When nesting becomes deep, consider extracting configuration into separate files and including them:
-
-```yaml
-# Using YAML anchors for reusable config
-base-config: &base
-  timeout: 30000
-  retries: 3
-
-skill:
-  primary:
-    <<: *base
-    priority: high
-  secondary:
-    <<: *base
-    priority: low
-```
-
-### Handling Multi-line Values
-
-Long descriptions or instructions require proper multi-line YAML syntax:
-
-```yaml
-# Correct multi-line syntax
-description: |
-  This skill handles complex data transformations.
-  It supports multiple input formats and provides
-  configurable output options.
-
-# Also correct - folded style
-instructions: >
-  Step 1: Load the data file.
-  Step 2: Apply transformations.
-  Step 3: Export results.
-```
-
-### Resolving Boolean Parsing Issues
-
-YAML boolean values can be tricky across different parsers. Use explicit `true` and `false` rather than yes/no or on/off:
-
-```yaml
-# Reliable boolean values
-settings:
-  enabled: true
-  debug: false
-  verbose: true
-```
-
-### Working with Lists and Arrays
-
-Improper list formatting causes frequent errors:
-
-```yaml
-# Correct list formatting
-capabilities:
-  - file-reading
-  - data-processing
-  - format-conversion
-
-# Alternative inline format (valid but less readable)
-capabilities: [file-reading, data-processing, format-conversion]
-```
-
-## Preventing Future Errors
-
-### Establish a Validation Pipeline
-
-Add YAML validation to your skill development workflow:
+`yamllint` catches issues Python's `yaml.safe_load` tolerates:
 
 ```bash
-# Pre-commit validation check
-#!/bin/bash
-yamllint .github/skills/*.yaml || { echo "YAML validation failed"; exit 1; }
+pip install yamllint
+
+# Extract front matter to a temp file and lint it
+python3 -c "
+content = open('$HOME/.claude/skills/docx.md').read()
+front = content.split('---')[1]
+open('/tmp/skill-front.yaml', 'w').write(front)
+"
+yamllint /tmp/skill-front.yaml
 ```
 
-### Use Schema Validation
+## Minimum Valid Front Matter
 
-For skills that follow specific patterns, implement schema validation:
+If you are unsure what is required, this is the minimum that will parse without errors:
 
 ```yaml
-# Add schema declaration for validation
 ---
-$schema: "https://schemas.example.com/claude-skill/v1"
-name: validated-skill
+description: "One sentence description of what this skill does"
 ---
 ```
 
-### Document Your Configuration Patterns
+Add `tools` only if you need to declare tool access. A missing `tools` key does not cause a parse error — Claude uses its default tool access instead.
 
-When building skills for specific workflows—like those using the **supermemory** skill for knowledge retrieval or the **algorithmic-art** skill for generative visuals—document the YAML patterns that work reliably.
+## The `supermemory` and `pdf` Skills Specifically
 
-## Quick Reference Checklist
+Both `supermemory` and `pdf` have configuration keys beyond `description` and `tools`. If you are customising these skills, the most common breaking change is adding a nested key without proper indentation:
 
-Before deploying any Claude skill, verify:
+```yaml
+# Broken
+---
+description: "Persistent memory across sessions"
+storage:
+path: ~/.claude-memory
+---
 
-- [ ] Consistent indentation (spaces, not tabs)
-- [ ] All strings with special characters properly quoted
-- [ ] No duplicate keys
-- [ ] Required fields present (name, description, capabilities)
-- [ ] Valid boolean values (true/false)
-- [ ] Properly formatted lists
-- [ ] UTF-8 encoding confirmed
-- [ ] YAML validated with linter
+# Fixed
+---
+description: "Persistent memory across sessions"
+storage:
+  path: ~/.claude-memory
+---
+```
 
-## Conclusion
-
-YAML front matter parsing errors in Claude skills are preventable with careful attention to syntax and proper debugging techniques. Most issues stem from indentation inconsistencies, unquoted special characters, or missing required fields. By establishing validation workflows and understanding YAML's quirks, you can create reliable skills that work consistently.
-
-The time invested in proper YAML formatting pays off when your skills load reliably across different environments and Claude sessions. Whether you're building a simple file processor or integrating complex workflows with the **docx** skill or **pptx** skill, clean YAML front matter ensures your skill definitions remain stable and maintainable.
+Two spaces before `path` — the nested key under `storage` — are required.
 
 ---
 
-## Related Reading
-
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Complete skill.md format reference
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation guide
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
-
-
----
-
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
