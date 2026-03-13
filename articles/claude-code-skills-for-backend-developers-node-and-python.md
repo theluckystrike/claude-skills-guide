@@ -1,123 +1,138 @@
 ---
 layout: post
-title: "Claude Code Skills for Backend Developers: Node.js and Pytho"
-description: "A practical guide to Claude Code skills tailored for backend developers working with Node.js and Python. Learn which skills accelerate API development, dat"
+title: "Claude Code Skills for Backend Developers: Node.js and Python"
+description: "Claude Code skills for backend developers working with Node.js and Python. Practical patterns for /tdd, /pdf, /supermemory in API and data workflows."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, claude-skills]
+categories: [tutorials]
+tags: [claude-code, claude-skills, backend, nodejs, python, api, tdd]
 author: "Claude Skills Guide"
 reviewed: true
-score: 9
+score: 2
 ---
 
 # Claude Code Skills for Backend Developers: Node.js and Python
 
-Backend development involves repetitive tasks that consume valuable development time. Claude Code skills automate these workflows, allowing you to focus on building features rather than wrestling with boilerplate or debugging configuration issues. This guide covers the most practical skills for backend developers working with Node.js and Python.
+Backend development involves repetitive tasks that consume development time. Claude Code and its built-in skills help automate these workflows. This guide covers practical applications of the real skills for Node.js and Python backend work.
 
-## Understanding Claude Skills in the Backend Context
+## What Skills Are Available
 
-Claude skills are modular prompt templates that extend Claude's capabilities for specific tasks. When you invoke a skill, Claude receives targeted instructions that shape its behavior for your particular workflow. For backend developers, this means skills that understand your stack, coding conventions, and deployment pipelines.
+Claude Code ships with these built-in skills:
 
-The skill system works through simple Markdown files stored in your skills directory. Each skill contains a system prompt that guides Claude's responses, and you activate them with a forward slash command. The real power comes from chaining multiple skills together — using one skill for API scaffolding and another for generating test cases.
+- `/tdd` — test-driven development guidance
+- `/pdf` — document processing
+- `/docx` — Word document generation
+- `/xlsx` — spreadsheet operations
+- `/supermemory` — persistent context across sessions
+- `/frontend-design` — UI component guidance
+- `/webapp-testing` — web application testing workflows
 
-## Essential Skills for Node.js Developers
+There are no `/api-design`, `/database`, `/fastapi`, `/django`, `/pytest`, `/typescript`, `/security-audit`, `/performance`, `/celery`, or `/documentation` built-in skills. For stack-specific work, you describe your task directly to Claude Code or write custom skills.
 
-### API Development Workflows
+## Using /tdd for Backend Testing
 
-When building REST APIs with Express, Fastify, or NestJS, the **api-design** skill accelerates your initial setup significantly. It generates route handlers, middleware, and validation schemas based on your requirements. You describe your endpoint, and the skill outputs complete handler code with proper error handling and type definitions.
+The `/tdd` skill works for both Node.js and Python testing workflows:
 
-For TypeScript projects, the **typescript** skill ensures your code follows best practices and catches potential issues before runtime. It understands Node.js-specific patterns like async/await error handling, event emitter conventions, and stream processing. Running this skill on your Express routes helps identify missing error catches and suggests improvements to your type definitions.
+**Node.js with Jest:**
+```
+/tdd
+Write tests for this Express route handler:
+[paste your route code]
 
-### Database Integration
-
-Working with PostgreSQL, MongoDB, or Redis becomes smoother with the **database** skill. It generates optimized queries, migration scripts, and connection pool configurations. The skill understands ORMs like Prisma, Sequelize, and Mongoose, producing code that matches your established patterns.
-
-For example, when you need a Prisma schema for a new feature, you can describe your data model:
-
-```bash
-/User skill: database
-/Create a Prisma schema for a user authentication system with email, password hash, refresh tokens, and role-based access
+Use Jest. Cover: successful response, validation error, and database error cases.
 ```
 
-The skill outputs complete schema definitions, relation mappings, and even seed scripts for development data.
+**Python with pytest:**
+```
+/tdd
+Write pytest tests for this FastAPI endpoint:
+[paste your endpoint code]
 
-### Testing with Node.js
-
-The **tdd** skill transforms your testing workflow. It generates test files following your project's testing framework — whether you use Jest, Mocha, or Vitest. The skill creates meaningful test cases covering happy paths, edge cases, and error conditions.
-
-For integration testing, the **testing** skill helps you set up test databases, mock external services, and structure your test suites for maintainability. It understands how to handle async operations in tests and suggests appropriate assertions for different scenarios.
-
-## Essential Skills for Python Developers
-
-### Django and FastAPI Development
-
-Python backend development benefits enormously from specialized skills. The **python** skill understands Django, FastAPI, Flask, and SQLAlchemy patterns. It generates views, serializers, and URL configurations for Django projects, or route handlers and Pydantic models for FastAPI APIs.
-
-The **fastapi** skill is particularly powerful for modern Python API development. It handles dependency injection, middleware configuration, and OpenAPI schema generation. When you need to add a new endpoint with authentication, the skill produces complete code including the route handler, request/response models, and dependency setup.
-
-```python
-# Example: Using the fastapi skill output
-from fastapi import Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer
-
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
-
-async def get_current_user(token: str = Depends(oauth2_scheme)):
-    credentials_exception = HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Could not validate credentials",
-        headers={"WWW-Authenticate": "Bearer"},
-    )
-    # Token validation logic here
-    return token
+Cover: successful response, missing required fields, and unauthorized access.
 ```
 
-### Data Processing and ETL
+The skill generates test structure and cases based on your existing code.
 
-The **data-processing** skill helps when building data pipelines with Python. It generates code for pandas operations, PySpark transformations, and database bulk operations. The skill understands chunked processing for large datasets and suggests memory-efficient approaches.
+## Using /supermemory for Long Sessions
 
-For Celery-based background task systems, the **celery** skill generates task definitions, beat schedules, and result backend configurations. It ensures your tasks follow best practices for retry logic, error handling, and logging.
+Backend projects span many sessions. Use `/supermemory` to preserve architectural decisions:
 
-### Python Testing Patterns
+```
+/supermemory store "Database schema decisions: Users table has uuid primary key, email is unique, password_hash never returned in API responses. Using Prisma ORM."
+```
 
-The **pytest** skill generates comprehensive test suites for Python applications. It creates fixtures, parametrize tests, and mock configurations that integrate seamlessly with your existing test structure. The skill understands pytest plugins like pytest-django, pytest-asyncio, and pytest-cov, configuring them appropriately.
+In future sessions:
+```
+/supermemory recall database schema
+```
 
-## Cross-Language Skills for All Backend Developers
+Store API contracts, configuration choices, and design decisions. This prevents repeating context across long projects.
 
-### Documentation Generation
+## Using /pdf for Documentation
 
-The **documentation** skill works across languages to generate API documentation, README files, and code comments. For backend projects, it creates OpenAPI/Swagger specifications from your route handlers, or docstrings that integrate with Sphinx for Python projects. This keeps your documentation synchronized with your code without manual maintenance.
+Generate API documentation from your codebase:
 
-### Security and Compliance
+```
+/pdf
+Create API documentation for our backend service.
 
-The **security-audit** skill analyzes your backend code for common vulnerabilities. It checks for SQL injection risks, improper input validation, hardcoded secrets, and insecure dependency usage. Running this skill before deployment catches issues that might otherwise reach production.
+Routes:
+POST /auth/login - accepts email/password, returns JWT token
+GET /users/:id - returns user profile (requires auth)
+DELETE /users/:id - soft-deletes user (requires admin role)
 
-### Performance Optimization
+Include: request format, response format, error codes, and authentication notes.
+```
 
-For identifying bottlenecks, the **performance** skill analyzes your code and suggests optimization opportunities. It understands database query patterns, identifies N+1 query problems, and recommends caching strategies. The skill produces specific, actionable recommendations based on your stack.
+## Writing Custom Skills for Your Stack
 
-### Memory and Task Management
+Create custom skills for stack-specific workflows. A custom Node.js API review skill:
 
-The **supermemory** skill helps maintain context across long development sessions. For complex backend projects with multiple services, it tracks architectural decisions, configuration details, and API contracts that you've established. This prevents the fragmentation that happens when context gets lost across different conversations.
-
-## Practical Integration Examples
-
-Combining skills creates powerful workflows. Here's a typical session for adding a new feature:
-
-1. Use **api-design** to generate the endpoint structure
-2. Apply **database** skill for the data model
-3. Invoke **tdd** or **pytest** to generate test cases
-4. Run **security-audit** to verify the implementation
-5. Use **documentation** to update API specs
-
-Each skill builds on the previous output, creating a complete feature implementation in significantly less time.
-
-## Choosing Skills for Your Stack
-
-The most effective approach starts with identifying your biggest time sinks. If you spend hours writing tests, prioritize **tdd** and **pytest**. If API documentation falls out of sync, the **documentation** skill addresses that directly. Python developers should explore **fastapi** and **django** skills, while Node.js developers benefit most from **api-design** and **typescript**.
-
-Skills evolve as your project grows. A startup building an MVP might emphasize speed with **api-design** and **fastapi**, while a mature system needs **security-audit** and **performance** to maintain quality at scale.
-
+```markdown
+---
+name: node-api-review
+description: Review Express route handlers for common issues
 ---
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+# Node.js API Review
+
+When reviewing Express route handlers, check:
+
+1. **Error handling**: Every async handler has a try/catch or uses express-async-errors
+2. **Input validation**: All inputs validated before processing (use Zod or Joi)
+3. **Authentication**: Protected routes verify JWT before proceeding
+4. **Response codes**: Correct HTTP status codes (201 for create, 204 for delete)
+5. **No secrets in responses**: Never return password_hash, tokens, or internal IDs
+
+Report each issue with the line number and suggested fix.
+```
+
+Save as `~/.claude/skills/node-api-review.md`, then invoke with:
+```
+/node-api-review
+[paste your route handler]
+```
+
+## Typical Backend Workflow Example
+
+Adding a new API endpoint:
+
+```
+1. Describe the endpoint to Claude Code directly:
+   "Add a POST /orders endpoint that creates a new order. Uses Prisma.
+   Fields: user_id, items (array), total_price. Returns the created order."
+
+2. Review the generated code and ask Claude to adjust
+
+3. Use /tdd to generate tests:
+   /tdd
+   Write Jest tests for this order creation handler:
+   [paste the generated handler]
+
+4. Store design decisions:
+   /supermemory store "Orders endpoint: POST /orders, requires user auth,
+   validates item IDs exist before creating order, returns full order object with items"
+```
+
+## Summary
+
+The real built-in skills for backend development are `/tdd` for tests, `/supermemory` for preserving context across sessions, and `/pdf` for documentation. For stack-specific automation, write custom skill files — they're just `.md` files in `~/.claude/skills/` with instructions. Claude Code handles the rest.
