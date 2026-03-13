@@ -217,4 +217,10 @@ If you are consistently beyond these ranges on simple tasks, context bloat or to
 
 ---
 
+## Related Reading
+
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Performance and cost optimization are closely related; the token reduction techniques in this guide directly improve response speed
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Understanding what each skill does helps you identify which ones are worth the performance overhead for your specific workflows
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Unintended auto-invocations can load skill context you did not need; understanding the mechanism helps prevent surprise performance degradation
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

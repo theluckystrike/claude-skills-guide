@@ -93,6 +93,7 @@ When building custom skills, the path is: understand the [skill.md format](/clau
 | [MCP Servers vs Claude Skills: What's the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) | Structural differences between MCP servers and Claude skills |
 | [Claude Code vs Gemini CLI for Developers 2026](/claude-skills-guide/articles/claude-code-vs-gemini-cli-for-developers-2026/) | Comparing Claude Code and Google Gemini CLI for developer workflows |
 | [Claude Code vs OpenAI Codex CLI Comparison 2026](/claude-skills-guide/articles/claude-code-vs-openai-codex-cli-comparison-2026/) | Head-to-head comparison of Claude Code and OpenAI Codex CLI |
+| [Claude Skills vs Langflow for Building AI Agents](/claude-skills-guide/articles/claude-skills-vs-langflow-for-building-ai-agents/) | Comparing Claude skills and Langflow as AI agent frameworks |
 
 ---
 

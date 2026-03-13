@@ -229,4 +229,10 @@ The output should be a properly formatted Jest test in a typescript code block. 
 
 ---
 
+## Related Reading
+
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The skill body section is where output format instructions live; this guide shows annotated examples of well-structured format specifications
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Covers how to write clear output format instructions as part of authoring a skill from scratch
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Precise output format instructions reduce retries and wasted tokens from malformed responses
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

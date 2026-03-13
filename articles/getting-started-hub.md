@@ -155,6 +155,7 @@ Once you've got the basics down, here's where to go next:
 | [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) | Diagnosing and fixing slow skill performance in Claude Code |
 | [How to Fix Claude Skill Infinite Loop Issue](/claude-skills-guide/articles/how-to-fix-claude-skill-infinite-loop-issue/) | Identifying and resolving infinite loop bugs in Claude skills |
 | [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/articles/how-to-optimize-claude-skill-prompts-for-accuracy/) | Techniques to improve skill prompt precision and output quality |
+| [Claude Code Skill Output Formatting Broken Fix](/claude-skills-guide/articles/claude-code-skill-output-formatting-broken-fix/) | Diagnosing and fixing broken output formatting in Claude skills |
 
 ---
 

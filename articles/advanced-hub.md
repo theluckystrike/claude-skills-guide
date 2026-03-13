@@ -92,6 +92,9 @@ Advanced optimization isn't just about prompts. It's about workflow design:
 | [Claude Code vs Replit Agent: Which Is Better in 2026?](/claude-skills-guide/articles/claude-code-vs-replit-agent-which-is-better-2026/) | Evaluating agentic capabilities across Claude Code and Replit |
 | [MCP Memory Server: Persistent Storage for Claude Agents](/claude-skills-guide/articles/mcp-memory-server-persistent-storage-for-claude-agents/) | Using MCP memory servers to give Claude agents persistent storage |
 | [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) | Diagnosing and optimizing slow skill execution performance |
+| [Advanced Claude Skills with Tool Use and Function Calling](/claude-skills-guide/articles/advanced-claude-skills-with-tool-use-and-function-calling/) | Using tool use and function calling in advanced Claude skill workflows |
+| [Claude Code Multi-Agent and Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) | Patterns for multi-agent coordination and subagent communication |
+| [Claude Skills vs Langflow for Building AI Agents](/claude-skills-guide/articles/claude-skills-vs-langflow-for-building-ai-agents/) | When to use Claude skills vs Langflow for building production AI agents |
 
 ---
 
