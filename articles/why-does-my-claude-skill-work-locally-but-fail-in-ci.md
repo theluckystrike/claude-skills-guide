@@ -1,9 +1,13 @@
 ---
 layout: post
 title: "Why Does My Claude Skill Work Locally But Fail in CI?"
-description: "Debug Claude skills that run perfectly on your machine but break in CI pipelines. Common environment differences, dependency issues, and configuration problems explained."
+description: "Debug Claude skills that run perfectly on your machine but break in CI pipelines. Common environment differences, dependency issues, and configuration prob"
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Why Does My Claude Skill Work Locally But Fail in CI?
