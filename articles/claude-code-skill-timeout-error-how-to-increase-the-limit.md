@@ -7,7 +7,7 @@ author: "Claude Skills Guide"
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 reviewed: true
-score: 9
+score: 8
 ---
 
 # Claude Code Skill Timeout Error: How to Increase the Limit
@@ -130,7 +130,7 @@ Some operations genuinely require significant time regardless of optimization. I
 
 The `pptx` skill and `xlsx` skill sometimes encounter timeout issues with complex presentations or spreadsheets. For these scenarios, consider processing data in stages or using external tools for initial transformations before invoking Claude Code skills for final refinement.
 
-Long-running `algorithmic-art` generations may also benefit from client-side preprocessing. Generate base assets using local tools, then use Claude Code skills for artistic direction and refinement.
+For any skill invocation that takes too long, consider breaking the task into smaller steps: process a subset of data first, verify the output, then continue with the next batch.
 
 ## Best Practices for Timeout Management
 
