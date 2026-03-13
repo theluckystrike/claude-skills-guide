@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "What Is the Best Claude Skill for Generating Documentation"
-description: "A practical guide to Claude skills for documentation generation, comparing the best options for developers who need to create API docs, README files, and technical guides."
+description: "A practical guide to Claude skills for documentation generation, comparing the best options for developers who need to create API docs, README files, an..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # What Is the Best Claude Skill for Generating Documentation

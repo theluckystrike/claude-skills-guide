@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "What Is the Best Way to Organize Claude Skills in a Monorepo"
-description: "A practical guide to organizing Claude Code skills in a monorepo structure. Includes directory layouts, skill dependencies, and real-world examples for developers."
+description: "A practical guide to organizing Claude Code skills in a monorepo structure. Includes directory layouts, skill dependencies, and real-world examples for ..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 9
 ---
 
 # What Is the Best Way to Organize Claude Skills in a Monorepo
