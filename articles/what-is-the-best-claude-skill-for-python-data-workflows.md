@@ -143,4 +143,11 @@ For Python data workflows, the **xlsx skill** offers the best starting point due
 
 The beauty of Claude skills is their composability—you're not locked into a single choice. Start with one, measure the impact on your productivity, and expand as your needs evolve.
 
+## Related Reading
+
+- [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-guide/articles/claude-skills-for-computational-biology-bioinformatics/) — Apply Python data skills to specialized scientific computing domains
+- [Claude Code Skills for Scientific Python: NumPy and SciPy](/claude-skills-guide/articles/claude-code-skills-for-scientific-python-numpy-scipy/) — Go deeper on NumPy/SciPy integration for numerical Python workflows
+- [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/) — Combine the best Python data skills with Jupyter notebook automation
+- [Claude Skills Hub](/claude-skills-guide/use-cases-hub/) — Explore data science and Python workflow use cases for Claude Code
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

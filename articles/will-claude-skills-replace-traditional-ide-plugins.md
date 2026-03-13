@@ -132,4 +132,11 @@ The most effective developers will use both: skills for intelligent assistance a
 
 Rather than asking whether skills will replace plugins, ask which specific workflows benefit from each approach. Your IDE becomes more capable not by choosing one over the other, but by composing them intelligently.
 
+## Related Reading
+
+- [Can You Use Claude Skills Inside VS Code Extensions](/claude-skills-guide/articles/can-you-use-claude-skills-inside-vs-code-extensions/) — Explore how skills and VS Code extensions can work together rather than compete
+- [Claude Code vs GitHub Copilot Workspace 2026](/claude-skills-guide/articles/claude-code-vs-github-copilot-workspace-2026/) — Compare Claude Code's skill ecosystem against Copilot's plugin-based approach
+- [Claude Skills Ecosystem: Predictions for the Next 12 Months](/claude-skills-guide/articles/claude-skills-ecosystem-predictions-next-12-months/) — See how the skills ecosystem is positioned to evolve alongside IDE tooling
+- [Claude Skills Hub](/claude-skills-guide/comparisons-hub/) — Compare Claude skills against traditional development tools and IDE plugins
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -105,4 +105,11 @@ Several trends will shape the coming year. Skill composition—combining multipl
 
 For developers and power users, the message is clear: the Claude skills ecosystem offers genuine capability expansion today. Skills like tdd, frontend-design, pdf, and supermemory provide measurable productivity improvements. The barrier to entry—finding, evaluating, and integrating skills—has dropped considerably. Start with one skill addressing a specific pain point, then expand systematically.
 
+## Related Reading
+
+- [Claude Skills Ecosystem: Predictions for the Next 12 Months](/claude-skills-guide/articles/claude-skills-ecosystem-predictions-next-12-months/) — Deep dive into where the Claude skills ecosystem is heading in 2026 and beyond
+- [Claude Skills Marketplace: SkillsMP Guide for Publishers](/claude-skills-guide/articles/claude-skills-marketplace-skillsmp-guide-for-publishers/) — Publish and distribute open source skills to the wider community
+- [Claude Skills Directory: Where to Find Skills](/claude-skills-guide/articles/claude-skills-directory-where-to-find-skills/) — Discover the best community-built skills available today
+- [Claude Skills Hub](/claude-skills-guide/best-of-hub/) — Explore the best open source Claude skills and community resources
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

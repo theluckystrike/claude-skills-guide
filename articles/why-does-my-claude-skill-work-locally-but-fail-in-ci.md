@@ -173,4 +173,11 @@ Build skills that declare their requirements clearly and handle missing dependen
 
 The gap between your machine and CI runners is real, but it's a gap you can close with proper tooling and explicit dependency management.
 
+## Related Reading
+
+- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/articles/how-do-i-debug-a-claude-skill-that-silently-fails/) — Apply systematic debugging to CI failures that produce no useful output
+- [Claude Code GitLab CI Pipeline and Docker Registry Tutorial](/claude-skills-guide/articles/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/) — Integrate Claude Code properly into GitLab CI to prevent skill failures
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — Configure GitHub Actions environments to match local skill expectations
+- [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions to CI/CD and environment-specific skill problems
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
