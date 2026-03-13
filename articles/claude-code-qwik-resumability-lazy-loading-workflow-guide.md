@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Qwik Resumability Lazy Loading Workflow Guide"
-description: "Master Qwik's resumability and lazy loading with Claude Code. This workflow guide covers component architecture, state management, and performance optimization."
+description: "Master Qwik's resumability and lazy loading with Claude Code. This workflow guide covers component architecture, state management, and performance optimiza"
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Claude Code Qwik Resumability Lazy Loading Workflow Guide

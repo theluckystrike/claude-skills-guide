@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Remix Loader Action Data Fetching Tutorial"
 description: "Learn how to use Claude Code with Remix loaders and actions for efficient data fetching. Practical examples for building full-stack React applications."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Claude Code Remix Loader Action Data Fetching Tutorial
