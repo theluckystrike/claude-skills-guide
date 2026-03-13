@@ -114,3 +114,11 @@ If you value terminal-based workflows, explicit skill invocation, and persistent
 If you prefer staying inside VS Code, want AI assistance as you type, and work primarily on single-file or same-session tasks, Windsurf offers a lower-friction experience.
 
 Many developers find value in both: Windsurf for daily in-editor work, Claude Code for larger tasks where skill-based structure and session continuity matter.
+
+---
+
+## Related Reading
+
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically

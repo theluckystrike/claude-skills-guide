@@ -109,3 +109,11 @@ With Bolt.new: describe "a dashboard with charts and data tables" and receive a 
 ## Summary
 
 Claude Code skills suit workflows where you need controlled, testable, version-managed development inside your own codebase. Bolt.new suits rapid prototyping and greenfield exploration where setup speed matters more than immediate integration. Most developers find the tools complementary rather than competing — Bolt.new for initial scaffolding, Claude Code skills for everything that comes after.
+
+---
+
+## Related Reading
+
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically

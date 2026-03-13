@@ -108,3 +108,11 @@ Choose **Amazon Q Developer** if you:
 - Want IDE-native AI assistance tightly coupled to AWS services
 
 Many developers use both: Claude Code for general development and large-context tasks, Amazon Q Developer for AWS infrastructure work. The tools are not mutually exclusive.
+
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The essential developer skill stack
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — DevOps-specific skill recommendations
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically

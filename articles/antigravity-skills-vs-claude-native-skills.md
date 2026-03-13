@@ -117,4 +117,13 @@ When evaluating a community skill, read the `.md` file itself before using it. S
 
 ---
 
+## Related Reading
+
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
+---
+
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*

@@ -157,3 +157,11 @@ echo "Skill files:" && find ~/.claude/skills/ -name "*.md" -exec ls -la {} \; 2>
 ## Summary
 
 Permission denied errors in Claude Code skills usually come down to file ownership or missing executable bits. Start with `ls -la ~/.claude/skills/`, restore ownership with `chown`, and set directories to `755` and skill files to `644`. For tool-execution errors, verify the relevant binary has `+x` set.
+
+---
+
+## Related Reading
+
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Complete skill.md format reference
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically

@@ -214,4 +214,13 @@ This gives you immediate feedback on generated tests without manually switching 
 
 ---
 
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
+---
+
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*

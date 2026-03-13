@@ -110,3 +110,11 @@ The file is the state. Claude reads it to restore context and writes to it to up
 ## Summary
 
 Claude skills are stateless by design — they are `.md` instruction files, not running processes with memory. To persist state between sessions, use `/supermemory` for conversational notes, `CLAUDE.md` for project-level context, or instruct Claude to write progress to files that later sessions can read back.
+
+---
+
+## Related Reading
+
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Complete skill.md format reference
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically

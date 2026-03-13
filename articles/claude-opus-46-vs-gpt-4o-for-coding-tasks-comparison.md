@@ -149,3 +149,11 @@ Choose **GPT-4o** when you need:
 ## Summary
 
 Both models are capable for coding tasks. The practical difference in most workflows comes from Claude Code's skill system — `/tdd`, `/supermemory`, and `/frontend-design` impose structure that produces more consistent results than prompting either model cold. If you are evaluating these models for production development workflows, test with your specific codebase and the skills active, not just as raw models.
+
+---
+
+## Related Reading
+
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically

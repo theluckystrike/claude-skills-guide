@@ -169,3 +169,11 @@ echo "\n## Project Conventions\n- Use Tailwind classes only\n- Colors from /pack
 ## Summary
 
 Claude skills do not trigger automatically — you invoke them with `/skill-name`. If invocation is not working, check that the file exists in `~/.claude/skills/` or `.claude/skills/`, the filename matches your invocation exactly (case-sensitive), and the file has read permissions. Those three checks resolve the vast majority of issues.
+
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
