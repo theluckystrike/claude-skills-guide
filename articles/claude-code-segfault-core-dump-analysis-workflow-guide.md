@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Segfault and Core Dump Analysis with Claude Code"
+title: "Segfault and Core Dump Analysis with Claude Code Guide"
 description: "Analyze segfaults and core dumps using Claude Code. Configure core dump capture, extract stack traces, and identify root causes with AI-assisted debugging."
 date: 2026-03-13
 categories: [debugging, troubleshooting]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Accessible Forms with Claude Code: Error Handling"
+title: "Accessible Forms with Claude Code: Error Handling Guide"
 description: "Build accessible, WCAG-compliant forms with proper validation and error handling using Claude Code and frontend-design skill."
 date: 2026-03-13
 categories: [guides, accessibility]

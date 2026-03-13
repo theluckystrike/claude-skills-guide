@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kotlin Android Development with Claude Code"
+title: "Kotlin Android Development with Claude Code Guide"
 description: "Practical guide to using Claude Code for Kotlin Android development. TDD workflows, code generation, and testing for Android projects."
 date: 2026-03-13
 categories: [guides, mobile]
