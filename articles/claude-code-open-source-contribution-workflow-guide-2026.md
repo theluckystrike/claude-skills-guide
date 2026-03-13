@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Open Source Contribution Workflow with Claude Code 2026"
 description: "Practical guide for developers using Claude Code to contribute to open source in 2026. Workflows, skills, and best practices."
 date: 2026-03-13

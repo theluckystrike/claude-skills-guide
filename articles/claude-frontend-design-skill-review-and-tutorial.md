@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Frontend Design Skill Review and Tutorial"
 description: "Review and tutorial for Claude frontend-design skill: React/Vue/Svelte component generation, accessibility, design tokens, and skill integrations."
 date: 2026-03-13

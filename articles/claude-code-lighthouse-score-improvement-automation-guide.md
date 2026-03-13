@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Lighthouse Score Improvement Automation Guide"
 description: "Practical automation strategies for improving Lighthouse scores using Claude Code skills, with code examples and workflows for developers."
 date: 2026-03-13

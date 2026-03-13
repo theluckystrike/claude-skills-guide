@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Best Claude Code Skills 2026: Complete Rankings"
 description: "Ranked guide to the best Claude Code skills in 2026. Top picks for developers, data analysts, DevOps teams, and power users with skill comparisons."
 date: 2026-03-13

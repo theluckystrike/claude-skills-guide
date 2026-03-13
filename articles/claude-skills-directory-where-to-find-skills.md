@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Directory: Where to Find Skills 2026"
 description: "Where to find Claude Code skills: built-in skills, community GitHub repositories, skill file locations, and how to install new skills locally."
 date: 2026-03-13

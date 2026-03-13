@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "LLM Evaluation and Benchmarking with Claude Code 2026"
 description: "Build an LLM evaluation and benchmarking workflow with Claude Code. Automate testing, measure performance, and make data-driven model decisions."
 date: 2026-03-13

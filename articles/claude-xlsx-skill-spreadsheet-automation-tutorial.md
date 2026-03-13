@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude /xlsx Skill: Spreadsheet Automation Guide"
 description: "How to use Claude Code's /xlsx skill to automate Excel and CSV tasks — practical examples for reports, batch processing, and data cleanup."
 date: 2026-03-13

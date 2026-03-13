@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Automated Blog Workflow with Claude Skills"
 description: "Build an automated blog post workflow using Claude skills. Step-by-step tutorial for content creation, formatting, and publishing with real examples."
 date: 2026-03-13

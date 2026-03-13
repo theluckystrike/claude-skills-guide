@@ -1,21 +1,24 @@
 ---
 layout: post
-title: "Claude Code AWS ECS Fargate Setup Deployment Tutorial"
-description: "A practical guide to setting up and deploying applications to AWS ECS Fargate using Claude Code. Learn infrastructure-as-code, container deployment, and au"
+title: "Claude Code AWS ECS Fargate Setup and Deployment Tutorial"
+description: "Set up and deploy containerized apps to AWS ECS Fargate using Claude Code. Covers task definitions, CI/CD, secrets management, and auto-scaling."
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, aws, ecs, fargate, deployment, containers]
+categories: [guides, tutorials]
+tags: [claude-code, claude-skills, aws, ecs, fargate, deployment, containers]
 author: "Claude Skills Guide"
 reviewed: true
-score: 8---
+score: 8
+---
 
 # Claude Code AWS ECS Fargate Setup Deployment Tutorial
 
-AWS ECS Fargate provides serverless container orchestration, eliminating the need to manage underlying infrastructure. This guide walks you through setting up and deploying applications to ECS Fargate using Claude Code and its powerful skills.
+AWS ECS Fargate provides serverless container orchestration, eliminating the need to manage underlying EC2 instances. This guide walks through setting up and deploying containerized applications to ECS Fargate using Claude Code.
+
+Skills referenced here are `.md` files in `~/.claude/skills/` and invoked with `/skill-name`. There are no `shell-expert`, `docker-expert`, or `terraform-expert` skills — those do not exist. Real built-in skills for this workflow are `/tdd`, `/pdf`, and `/supermemory`.
 
 ## Prerequisites and Environment Setup
 
-Before deploying to ECS Fargate, ensure you have the AWS CLI configured with appropriate credentials. You also need Docker installed for building container images. The **shell-expert** skill proves invaluable here for managing environment variables and CLI operations across different shells.
+Before deploying to ECS Fargate, configure the AWS CLI with appropriate credentials. Docker is required for building container images.
 
 Install and configure the AWS CLI:
 
@@ -24,17 +27,17 @@ aws configure
 # Enter your Access Key ID, Secret Access Key, Region, and Output format
 ```
 
-Verify your configuration works:
+Verify your configuration:
 
 ```bash
 aws sts get-caller-identity
 ```
 
-The **docker-expert** skill helps troubleshoot container issues and optimize Dockerfiles for production workloads. If you're building multi-architecture images or working with build secrets, this skill provides targeted guidance.
+Use Claude Code directly to troubleshoot container and CLI issues — describe the error in your session and Claude will diagnose it.
 
 ## Creating Your Container Image
 
-Create a simple application to deploy. For demonstration, here's a minimal Node.js Express application:
+Create a simple Node.js Express application to deploy:
 
 ```javascript
 // index.js
@@ -63,18 +66,24 @@ EXPOSE 3000
 CMD ["node", "index.js"]
 ```
 
-Build and test your container locally:
+Build and test locally:
 
 ```bash
 docker build -t myapp:latest .
 docker run -p 3000:3000 myapp:latest
 ```
 
-The **devops-skills** collection offers comprehensive guidance on container best practices, including security scanning with Trivy and image optimization techniques.
+The [`/tdd` skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) helps write integration tests for your API endpoints before deploying:
+
+```
+/tdd
+Write Jest integration tests for the Express app in index.js.
+Test the GET / endpoint — verify status 200 and response shape.
+```
 
 ## Setting Up ECS Fargate Infrastructure
 
-Create an ECS cluster using the AWS CLI:
+Create an ECS cluster:
 
 ```bash
 aws ecs create-cluster \

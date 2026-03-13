@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code 2026: Skills and Hooks Feature Roundup"
 description: "Claude Code 2026 skills and hooks roundup: pdf, tdd, supermemory, webapp-testing, and hook system with real invocation examples and config patterns."
 date: 2026-03-13

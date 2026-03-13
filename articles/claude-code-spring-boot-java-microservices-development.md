@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Spring Boot Java Microservices Guide 2026"
 description: "Master Spring Boot Java microservices with Claude Code. Practical workflows for building, testing, and deploying Java microservices with AI assistance."
 date: 2026-03-13

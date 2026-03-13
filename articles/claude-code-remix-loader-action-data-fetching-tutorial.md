@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Remix Loader Action Data Fetching Tutorial"
 description: "Learn how to use Claude Code with Remix loaders and actions for efficient data fetching. Practical examples for building full-stack React applications."
 date: 2026-03-14
@@ -7,12 +7,12 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 8
 ---
 
 # Claude Code Remix Loader Action Data Fetching Tutorial
 
-Remix has revolutionized how developers think about data fetching in React applications. By leveraging loaders for server-side data retrieval and actions for form submissions, you can build powerful full-stack applications with clean, predictable data flow. This tutorial shows you how to integrate Claude Code with Remix projects to streamline your development workflow.
+Remix changes how developers approach data fetching in React applications. Using loaders for server-side data retrieval and actions for form submissions, you can build full-stack applications with clean, predictable data flow. This tutorial shows you how to integrate Claude Code with Remix projects to streamline your development workflow.
 
 ## Understanding Remix Data Flow
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Fix Color Contrast and Accessibility with Claude Code"
 description: "Practical workflow for identifying and fixing color contrast and accessibility issues using Claude Code skills and automated tooling."
 date: 2026-03-13

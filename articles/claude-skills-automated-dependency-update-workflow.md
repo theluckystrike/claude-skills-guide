@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Automated Dependency Update Workflow"
 description: "Build an automated dependency update workflow using Claude skills. Practical examples for scanning, testing, and PR creation across npm and pip projects."
 date: 2026-03-13

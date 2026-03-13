@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code SOC 2 Compliance Audit Preparation Guide 2026"
 description: "Prepare for SOC 2 compliance audits using Claude Code. Practical strategies, automation techniques, and skill recommendations."
 date: 2026-03-13

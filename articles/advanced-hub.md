@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Advanced Claude Skills: Token Optimization & Chaining"
 description: "Advanced Claude skills guide covering token optimization, skill chaining strategies, and cost reduction for power users and engineering teams."
 date: 2026-03-13

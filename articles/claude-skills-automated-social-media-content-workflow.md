@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Automated Social Media Content Workflow"
 description: "Automate social media content creation with Claude Code skills. Build a workflow for generating posts, managing schedules, and tracking engagement."
 date: 2026-03-13

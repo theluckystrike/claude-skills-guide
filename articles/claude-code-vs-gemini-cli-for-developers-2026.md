@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code vs Gemini CLI for Developers 2026"
 description: "Claude Code vs Gemini CLI: agentic capabilities, skills ecosystem, context window, GCP integration, and which tool fits your workflow in 2026."
 date: 2026-03-13

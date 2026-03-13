@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Automated Code Documentation Workflow with Claude Skills"
 description: "Build automated code documentation using Claude skills: inline docs, README generation, and API reference with step-by-step examples."
 date: 2026-03-13

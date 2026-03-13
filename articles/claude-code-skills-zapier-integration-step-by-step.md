@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Skills + Zapier: Step-by-Step"
 description: "Connect Claude Code skills to Zapier using webhooks. Practical guide with real examples for automating workflows triggered by skill output."
 date: 2026-03-13

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills for Enterprise Security & Compliance Guide"
 description: "Deploy Claude Code skills in enterprise environments with security controls, audit logging, access management, and compliance requirements."
 date: 2026-03-13

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Qwik Resumability Lazy Loading Workflow Guide"
 description: "Master Qwik's resumability and lazy loading with Claude Code. This workflow guide covers component architecture, state management, and performance optimiza"
 date: 2026-03-14
@@ -7,12 +7,12 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 8
 ---
 
 # Claude Code Qwik Resumability Lazy Loading Workflow Guide
 
-Qwik represents a fundamental shift in how web applications handle interactivity. Unlike traditional frameworks that rely on hydration, Qwik uses resumability to deliver near-instant page loads. When combined with Claude Code and its ecosystem of specialized skills, you can build highly performant Qwik applications while maintaining development velocity.
+Qwik changes how web applications handle interactivity. Unlike traditional frameworks that rely on hydration, Qwik uses resumability to deliver near-instant page loads. When combined with Claude Code and its ecosystem of specialized skills, you can build highly performant Qwik applications while maintaining development velocity.
 
 This workflow guide walks you through implementing Qwik projects using Claude Code, focusing on resumability patterns, lazy loading strategies, and practical development workflows.
 

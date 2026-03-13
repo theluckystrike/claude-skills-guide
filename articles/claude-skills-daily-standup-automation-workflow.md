@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Daily Standup Automation Workflow"
 description: "Automate daily standup reports using Claude Code skills. Pull git activity, format updates, and deliver to Slack or Teams with minimal manual effort."
 date: 2026-03-13

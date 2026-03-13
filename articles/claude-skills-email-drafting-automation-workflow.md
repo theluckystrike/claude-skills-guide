@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Email Drafting Automation Workflow"
 description: "Build an email drafting workflow using custom Claude skills: incident reports, API deprecation notices, and sprint updates with consistent structure."
 date: 2026-03-13

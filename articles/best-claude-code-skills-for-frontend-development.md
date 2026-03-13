@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Best Claude Code Skills for Frontend Development"
 description: "The most useful Claude Code skills for frontend developers: UI generation, TDD, documentation, and data visualization — with invocation examples."
 date: 2026-03-13

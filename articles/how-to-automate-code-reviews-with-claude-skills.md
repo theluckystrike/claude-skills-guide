@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "How to Automate Code Reviews with Claude Skills"
 description: "Use Claude Code skills to automate code reviews: invoke /tdd for test coverage, /frontend-design for UI checks, and chain them into a pre-commit workflow."
 date: 2026-03-13

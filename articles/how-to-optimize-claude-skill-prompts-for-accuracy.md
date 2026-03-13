@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "How to Optimize Claude Skill Prompts for Accuracy"
 description: "Write Claude skill bodies that produce consistent, accurate results: role framing, output constraints, edge case handling, and iterative refinement."
 date: 2026-03-13

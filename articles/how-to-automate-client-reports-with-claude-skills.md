@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "How to Automate Client Reports with Claude Skills"
 description: "Automate client report workflows using Claude Code skills. Learn how /pdf, /tdd, and /supermemory work together in a practical reporting pipeline."
 date: 2026-03-13

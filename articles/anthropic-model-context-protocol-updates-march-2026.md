@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "MCP Updates March 2026: What Developers Need to Know"
 description: "Key Model Context Protocol updates in March 2026: enhanced tool discovery, improved state persistence, and OAuth 2.1 for Claude Code developers."
 date: 2026-03-13

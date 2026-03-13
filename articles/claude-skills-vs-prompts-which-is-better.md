@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills vs Prompts: Which Is Better?"
 description: "A practical comparison of Claude skills versus traditional prompts for developers and power users. When to use each approach for maximum productivity."
 date: 2026-03-13

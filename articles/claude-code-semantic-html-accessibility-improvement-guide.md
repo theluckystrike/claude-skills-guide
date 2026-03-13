@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Semantic HTML Accessibility with Claude Code Guide"
 description: "Use Claude Code to write semantic HTML that improves accessibility. Practical patterns for building inclusive web applications."
 date: 2026-03-13

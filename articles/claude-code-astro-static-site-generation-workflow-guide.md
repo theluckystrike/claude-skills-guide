@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Astro Static Site Generation Workflow Guide"
 description: "A practical guide to building static sites with Claude Code and Astro. Learn workflow patterns, skill integration, and automation for 2026."
 date: 2026-03-13

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "What Is Claude Code and Why Developers Love It in 2026"
 description: "Claude Code is Anthropic's AI coding assistant in your terminal. Learn what it is, how it works, and why developers are switching to it in 2026."
 date: 2026-03-13

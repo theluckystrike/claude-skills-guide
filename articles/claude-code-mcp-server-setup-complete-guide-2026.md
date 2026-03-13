@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code MCP Server Setup: Complete Guide 2026"
 description: "Set up MCP servers for Claude Code in 2026. Configure Model Context Protocol servers, build custom skills, and connect external APIs step by step."
 date: 2026-03-13

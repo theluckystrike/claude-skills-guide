@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Best Claude Skills for Writing and Content Creation"
 description: "Top Claude skills for writing and content creation: docx, pdf, pptx, xlsx, and supermemory with real /skill-name invocation examples for writers."
 date: 2026-03-13

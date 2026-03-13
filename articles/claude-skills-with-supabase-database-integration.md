@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills with Supabase: Practical Workflows"
 description: "How to use Claude Code skills alongside Supabase for database-backed projects — what works, what does not, and practical patterns."
 date: 2026-03-13

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Azure DevOps Integration Workflow Tutorial"
 description: "Learn how to integrate Claude Code with Azure DevOps for automated builds, deployments, and CI/CD pipelines. Practical examples with code snippets."
 date: 2026-03-13

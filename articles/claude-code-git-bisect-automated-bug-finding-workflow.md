@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Git Bisect + Claude Code: Automated Bug Finding Guide"
 description: "Use git bisect with Claude Code to automatically locate buggy commits. Practical workflow automation for regression hunting."
 date: 2026-03-13

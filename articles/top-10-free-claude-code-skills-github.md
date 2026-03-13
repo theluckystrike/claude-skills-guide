@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Top 10 Free Claude Code Skills for GitHub Projects"
 description: "The best free Claude Code skills for GitHub workflows: PDF processing, TDD, frontend design, webapp testing, and more. How to invoke each one."
 date: 2026-03-13

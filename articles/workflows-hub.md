@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Workflow Guide: Build, Chain & Contribute"
 description: "Build repeatable Claude skills workflows. Covers skill chaining patterns, contributing to open source, and production-ready automation pipelines."
 date: 2026-03-13
