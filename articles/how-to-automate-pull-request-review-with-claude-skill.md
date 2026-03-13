@@ -3,11 +3,7 @@ layout: default
 title: "How to Automate Pull Request Review with Claude Skill"
 description: "Learn how to automate pull request reviews using Claude skills like tdd, supermemory, pdf, and frontend-design. Practical examples and code snippets included."
 date: 2026-03-13
-categories: [skills, guides]
-tags: [claude-code, claude-skills, pull-request, automation, code-review, tdd, supermemory]
 author: theluckystrike
-reviewed: true
-score: 5
 ---
 
 Pull request reviews consume significant developer time, yet much of the work follows predictable patterns. Style violations, basic security checks, documentation consistency, and test coverage verification can all run automatically. Claude skills provide the building blocks to construct a comprehensive PR review automation system that catches issues before human reviewers even see the code.
