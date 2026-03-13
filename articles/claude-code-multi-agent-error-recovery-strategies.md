@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Multi-Agent Error Recovery Strategies"
 description: "Practical strategies for handling errors in Claude Code multi-agent workflows. Code examples, retry patterns, and skill integration for robust AI-assisted development."
 date: 2026-03-14

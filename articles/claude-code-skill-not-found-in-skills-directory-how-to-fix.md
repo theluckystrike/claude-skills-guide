@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Skill Not Found in Skills Directory — How to Fix"
 description: "Encountering 'skill not found' in Claude Code? This guide covers the exact steps to diagnose and resolve skill directory issues with practical solutions."
 date: 2026-03-14
