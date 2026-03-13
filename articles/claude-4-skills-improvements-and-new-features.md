@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude 4 Skills: New Features and Improvements Guide"
 description: "Claude 4 skills improvements: better pdf extraction, smarter tdd detection, supermemory semantic search, and enhanced webapp-testing in 2026."
 date: 2026-03-13

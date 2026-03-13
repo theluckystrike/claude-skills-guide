@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Best Claude Code Skills to Install First in 2026"
 description: "The most essential Claude Code skills to install in 2026. Practical invocation examples for pdf, tdd, xlsx, supermemory, and frontend-design skills."
 date: 2026-03-13

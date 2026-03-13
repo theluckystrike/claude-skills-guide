@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Permissions Model and Security Guide"
 description: "A precise security guide to Claude Code's permissions model: tool access, file system boundaries, skill scoping, and hooks for keeping your codebase safe."
 date: 2026-03-13

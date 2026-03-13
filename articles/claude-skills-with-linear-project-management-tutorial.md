@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills with Linear Project Management Tutorial"
 description: "Integrate Claude Code skills with Linear's API to automate issue triage, generate technical specs, and improve project management workflows."
 date: 2026-03-13

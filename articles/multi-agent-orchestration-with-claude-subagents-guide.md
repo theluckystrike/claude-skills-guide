@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Multi-Agent Orchestration with Claude Subagents Guide"
 description: "Orchestrate multiple Claude Code subagents with practical patterns. Covers sequential, parallel, and hierarchical coordination with workflow examples."
 date: 2026-03-13

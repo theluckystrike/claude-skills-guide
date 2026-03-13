@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills for Publishers: A Practical Guide"
 description: "How publishers can use Claude Code skills to automate manuscript processing, editorial reviews, contract management, and sales material generation."
 date: 2026-03-13

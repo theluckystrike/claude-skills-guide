@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "How to Fix Claude Skill Infinite Loop Issues"
 description: "Diagnose and fix infinite loop behavior in Claude Code skills: exit conditions, tool re-invocation, CLAUDE.md cycles, and recursive bash calls."
 date: 2026-03-13

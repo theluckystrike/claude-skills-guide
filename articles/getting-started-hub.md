@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Getting Started with Claude Code Skills (2026 Guide)"
 description: "Learn what Claude Code skills are, how auto-invocation works, and how to write your first skill.md file. The complete beginner's reference."
 date: 2026-03-13

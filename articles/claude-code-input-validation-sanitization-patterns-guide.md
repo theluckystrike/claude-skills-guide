@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Input Validation and Sanitization with Claude Code Guide"
 description: "Implement input validation and sanitization patterns in Claude Code skills for secure, reliable AI agent development."
 date: 2026-03-13

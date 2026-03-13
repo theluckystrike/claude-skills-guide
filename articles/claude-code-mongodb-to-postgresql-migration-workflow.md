@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code MongoDB to PostgreSQL Migration Workflow"
 description: "A practical developer guide for migrating from MongoDB to PostgreSQL using Claude Code with code examples and workflow patterns."
 date: 2026-03-13

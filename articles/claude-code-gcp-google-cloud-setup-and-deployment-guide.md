@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code GCP Google Cloud Setup and Deployment Guide"
 description: "Set up Claude Code for Google Cloud deployment workflows. Practical patterns for Cloud Run, Cloud Functions, and automated deployment pipelines."
 date: 2026-03-13

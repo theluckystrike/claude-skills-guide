@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Best Claude Skills for Developers in 2026"
 description: "The most useful Claude AI skills for developers in 2026: PDF processing, TDD, spreadsheet automation, memory management, and web testing."
 date: 2026-03-13

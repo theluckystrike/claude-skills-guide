@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code for Beginners: Getting Started 2026"
 description: "Step-by-step beginner guide to Claude Code: installation, first session, skills, CLAUDE.md setup, and practical tips for your first AI-assisted workflow."
 date: 2026-03-13

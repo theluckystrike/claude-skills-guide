@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Hooks System: Complete Guide"
 description: "How Claude Code hooks work: configuring pre-tool, post-tool, and session hooks in settings.json to audit, modify, or block Claude's tool calls."
 date: 2026-03-13

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "How to Contribute Claude Skills to Open Source"
 description: "Step-by-step guide to contributing Claude AI skills to open source. Learn code structure, testing, PR best practices, and how to get your skill adopted."
 date: 2026-03-13

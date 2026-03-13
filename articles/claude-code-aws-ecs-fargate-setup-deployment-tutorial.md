@@ -3,12 +3,11 @@ layout: post
 title: "Claude Code AWS ECS Fargate Setup Deployment Tutorial"
 description: "A practical guide to setting up and deploying applications to AWS ECS Fargate using Claude Code. Learn infrastructure-as-code, container deployment, and au"
 date: 2026-03-14
-categories: [tutorials, aws, devops]
+categories: [tutorials]
 tags: [claude-code, aws, ecs, fargate, deployment, containers]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
----
+score: 8---
 
 # Claude Code AWS ECS Fargate Setup Deployment Tutorial
 

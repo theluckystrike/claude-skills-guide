@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code CloudFormation Template Generation Workflow Guid"
 description: "Learn how to generate AWS CloudFormation templates efficiently using Claude Code. Practical workflow patterns, code examples, and skill integration for inf"
 date: 2026-03-14

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills + AWS Lambda: Serverless Guide"
 description: "Integrate Claude Code skills with AWS Lambda for serverless AI workflows. Patterns for document processing, test generation, and event-driven pipelines."
 date: 2026-03-13

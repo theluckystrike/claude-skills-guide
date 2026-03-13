@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Selenium Browser Testing Automation Guide"
 description: "Learn how to automate browser testing with Claude Code and Selenium. Practical examples, code snippets, and integration strategies for developers."
 date: 2026-03-13

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "How to Use Claude Skills with n8n Automation Workflows"
 description: "Connect Claude Code skills to n8n workflows via Anthropic API. Practical patterns for PR review and document processing automation."
 date: 2026-03-13

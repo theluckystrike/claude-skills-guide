@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Vercel Deployment Next.js Workflow Guide"
 description: "Claude Code Vercel deployment guide for Next.js. Automate previews, production builds, environment management, and CI/CD pipelines."
 date: 2026-03-13

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "MCP Memory Server: Persistent Storage for Claude Guide"
 description: "Set up the MCP memory server for persistent storage across Claude Code sessions. Configuration, usage, and tips for 2026."
 date: 2026-03-13

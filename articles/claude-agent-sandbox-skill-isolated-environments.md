@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Agent Sandbox Skill: Complete Guide (2026)"
 description: "How Claude agent sandbox skill provides isolated environments. Security benefits, configuration patterns, and examples for safe AI workflows."
 date: 2026-03-13

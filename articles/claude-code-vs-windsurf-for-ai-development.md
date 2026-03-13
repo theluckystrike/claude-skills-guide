@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code vs Windsurf for AI Development"
 description: "Claude Code vs Windsurf compared for AI-assisted development: terminal workflow, skill invocation, editor integration, and persistent project memory."
 date: 2026-03-13

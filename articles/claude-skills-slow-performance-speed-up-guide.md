@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills Slow Performance: Speed Up Guide"
 description: "Speed up slow Claude Code skill execution. Covers token reduction, skill trimming, tool call batching, and focused session architecture."
 date: 2026-03-13

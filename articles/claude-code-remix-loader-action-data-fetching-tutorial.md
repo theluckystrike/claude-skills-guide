@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Remix Loader Action Data Fetching Tutorial"
 description: "Learn how to use Claude Code with Remix loaders and actions for efficient data fetching. Practical examples for building full-stack React applications."
 date: 2026-03-14

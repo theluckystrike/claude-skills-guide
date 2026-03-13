@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Building Stateful Agents with Claude Skills Guide"
 description: "Design Claude Code agents that maintain state across turns and sessions using files, /supermemory, and structured state management patterns."
 date: 2026-03-13

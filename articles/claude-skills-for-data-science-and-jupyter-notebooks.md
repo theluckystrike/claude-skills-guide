@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills for Data Science and Jupyter: 2026 Guide"
 description: "Claude skills for data science and Jupyter: automate data cleaning, generate visualizations, build ML pipelines, and accelerate research workflows."
 date: 2026-03-13

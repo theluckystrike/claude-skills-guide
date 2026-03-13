@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code vs Amazon Q Developer Comparison 2026"
 description: "Claude Code vs Amazon Q Developer (2026): coding assistance quality, AWS integration, enterprise features, and which tool AWS shops should use."
 date: 2026-03-13

@@ -7,8 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
----
+score: 8---
 
 # Claude Code GitHub Actions Workflow Matrix Strategy Guide
 
@@ -186,7 +185,7 @@ Matrix jobs can consume significant GitHub Actions minutes. Consider these optim
       ${{ runner.os }}-npm-
 ```
 
-**Leverage the [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)** to track historical matrix runtimes and suggest optimizations based on past performance data.
+**Use the `supermemory` skill** to track historical matrix runtimes and suggest optimizations based on past performance data.
 
 ## Generating Matrix Reports with Claude
 

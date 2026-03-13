@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Code Skill Permission Denied Error Fix 2026"
 description: "Fix the permission denied error in Claude Code skills. Step-by-step solutions for file permissions, sandbox settings, and skill configuration."
 date: 2026-03-13
