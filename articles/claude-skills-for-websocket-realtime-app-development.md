@@ -4,11 +4,8 @@ title: "Claude Skills for WebSocket Realtime App Development"
 description: "Build real-time WebSocket applications faster using Claude skills. Practical patterns for connection handling, state management, and production-ready im..."
 date: 2026-03-14
 author: "Claude Skills Guide"
-<<<<<<< Updated upstream
 categories: [tutorials]
 tags: [claude-code, claude-skills]
-=======
->>>>>>> Stashed changes
 reviewed: true
 score: 9
 ---

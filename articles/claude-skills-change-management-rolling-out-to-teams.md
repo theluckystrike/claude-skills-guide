@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Change Management: Rolling Out to Teams"
 description: "A practical guide to deploying Claude Code skills across engineering teams with version control, testing, and governance policies."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Claude Skills Change Management: Rolling Out to Teams

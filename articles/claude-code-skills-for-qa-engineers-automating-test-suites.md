@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code Skills for QA Engineers Automating Test Suites"
-description: "Discover how Claude Code skills transform QA automation workflows. Learn to uses specialized skills for test generation, maintenance, and continuous..."
+description: "Discover how Claude Code skills transform QA automation workflows. Learn to use specialized skills for test generation, maintenance, and continuous..."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
@@ -18,7 +18,7 @@ Quality assurance engineers face increasing pressure to deliver comprehensive te
 
 Modern test suites often become unwieldy as applications grow. Maintaining hundreds or thousands of test cases consumes significant engineering time. Flaky tests accumulate. Regression testing takes hours. These challenges demand smarter solutions beyond traditional automation frameworks.
 
-Claude Code skills address these pain points by providing AI-powered assistance throughout the testing lifecycle. Rather than manually writing every test case, you can uses specialized skills that understand testing patterns, generate meaningful assertions, and adapt to your codebase structure.
+Claude Code skills address these pain points by providing AI-powered assistance throughout the testing lifecycle. Rather than manually writing every test case, you can use specialized skills that understand testing patterns, generate meaningful assertions, and adapt to your codebase structure.
 
 ## Essential Claude Skills for Test Automation
 
