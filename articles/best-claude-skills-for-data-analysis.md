@@ -38,7 +38,7 @@ Extracting structured data from PDF documents represents a common pain point in 
 
 This skill proves invaluable when analyzing vendor contracts, extracting line items from invoices, or pulling data points from research papers. Rather than manually transcribing information or purchasing expensive OCR software, developers integrate the pdf skill into pipelines that process hundreds of documents automatically.
 
-The skill supports both text-based PDFs and scanned documents through optional OCR capabilities, making it versatile for处理各种数据源.
+The skill supports both text-based PDFs and scanned documents through optional OCR capabilities, making it versatile for processing various data sources.
 
 ## Test-Driven Data Processing with tdd Skill
 
