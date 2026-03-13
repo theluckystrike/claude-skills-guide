@@ -7,7 +7,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, directory, installation]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # Claude Skills Directory: Where to Find Skills

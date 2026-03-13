@@ -7,7 +7,7 @@ categories: [skills, guides]
 tags: [claude-code, claude-skills, agent, sandbox, security, isolation]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # Claude Agent Sandbox Skill: Isolated Environments Explained

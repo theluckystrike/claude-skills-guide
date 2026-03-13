@@ -7,7 +7,7 @@ categories: [integrations, workflows]
 tags: [claude-code, claude-skills, zapier, webhooks, automation]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # Claude Code Skills + Zapier: Step-by-Step Integration

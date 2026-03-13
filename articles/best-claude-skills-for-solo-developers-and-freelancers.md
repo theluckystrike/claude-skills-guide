@@ -7,7 +7,7 @@ categories: [skills, guides]
 tags: [claude-code, claude-skills, freelancers, solo-developers]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # Best Claude Skills for Solo Developers and Freelancers

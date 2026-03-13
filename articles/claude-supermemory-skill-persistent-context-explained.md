@@ -7,7 +7,7 @@ categories: [skills]
 tags: [claude-code, claude-skills, supermemory, persistent-context, memory]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # Claude SuperMemory Skill: Persistent Context Explained

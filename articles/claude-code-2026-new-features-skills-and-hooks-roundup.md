@@ -7,7 +7,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills, hooks, pdf, tdd, supermemory, webapp-testing]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 8
 ---
 
 # Claude Code 2026 New Features: Skills and Hooks Roundup
