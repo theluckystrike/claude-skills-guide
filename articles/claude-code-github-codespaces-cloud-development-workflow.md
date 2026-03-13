@@ -136,8 +136,8 @@ This creates API documentation you can share with team members or include in pul
 
 When working on complex features across multiple sessions, the **supermemory** skill maintains context:
 
-```bash
-claude skill invoke supermemory --save "Working on user authentication flow with OAuth2"
+```
+/supermemory store "Working on user authentication flow with OAuth2. Current branch: feat/oauth2. Files modified: src/auth/, src/middleware/auth.ts"
 ```
 
 This prevents context loss when your Codespace times out or you switch between tasks. Claude Code retrieves this context when you resume work, maintaining continuity in your development process.
