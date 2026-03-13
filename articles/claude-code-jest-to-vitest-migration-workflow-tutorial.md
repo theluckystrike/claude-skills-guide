@@ -169,5 +169,12 @@ Consider implementing snapshot management. Vitest handles snapshots similarly to
 Migrating from Jest to Vitest with Claude Code as your migration assistant follows a structured path: assess your current setup, install Vitest dependencies, migrate test files using the provided patterns, update CI configuration, and verify everything works correctly. The performance improvements and simplified tooling make this migration worthwhile for any modern JavaScript project.
 
 The key to success lies in taking incremental steps rather than attempting a complete migration overnight. Run the migration in stages, verify test coverage at each phase, and leverage Claude Code's capabilities to handle the repetitive refactoring work.
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The tdd skill drives test-first migration workflows for Jest-to-Vitest transitions
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Auto-trigger the tdd skill when working on test configuration files
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep incremental migration sessions efficient and affordable
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
