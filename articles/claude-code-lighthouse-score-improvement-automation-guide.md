@@ -230,5 +230,12 @@ Automation solves the initial optimization problem, but maintenance requires ong
 Automating Lighthouse score improvement with Claude Code skills transforms performance from a manual, sporadic task into a systematic process. The **frontend-design**, **tdd**, **supermemory**, and **pdf** skills work together to audit, test, track, and report on performance metrics.
 
 Start with automated audits, then layer in optimization scripts for the highest-impact fixes. Integrate everything into your CI pipeline to catch regressions before they reach production. With proper automation, maintaining Lighthouse scores of 90+ becomes achievable without dedicated performance teams.
+---
+
+## Related Reading
+
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — Frontend skills for performance optimization and building high-scoring production UIs
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The tdd and pdf skills power automated performance testing and reporting workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep automated Lighthouse audit sessions economical
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
