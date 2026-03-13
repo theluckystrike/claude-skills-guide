@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code vs Amazon Q Developer Comparison 2026"
-description: "An in-depth comparison of Claude Code and Amazon Q Developer for software teams in 2026, covering coding assistance quality, AWS integration, enterprise features, and which tool AWS shops should choose."
+description: "Claude Code vs Amazon Q Developer (2026): coding assistance quality, AWS integration, enterprise features, and which tool AWS shops should use."
 date: 2026-03-13
 author: theluckystrike
 ---

@@ -115,7 +115,7 @@ context_files:
   - src/components/index.ts
 ```
 
-This is how the `frontend-design` skill typically gets access to your project's design token documentation without you having to paste it each time.
+This is how the [`frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) typically gets access to your project's design token documentation without you having to paste it each time.
 
 ### `memory` (optional)
 
@@ -125,7 +125,7 @@ Whether the skill should persist learned information across sessions using the s
 memory: true
 ```
 
-When set to `true`, the skill has read/write access to the supermemory store scoped to its name. Skills like `supermemory` use this to build persistent context.
+When set to `true`, the skill has read/write access to the [supermemory](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) store scoped to its name. Skills like `supermemory` use this to build persistent context.
 
 ## The Skill Body
 
@@ -140,7 +140,7 @@ The body should:
 4. Include any constraints or guardrails
 5. Provide 1-2 examples if the task is non-obvious
 
-Example for a `tdd` skill:
+Example for a [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/):
 
 ```markdown
 You are a test-driven development assistant. When given a description of a feature, you will:

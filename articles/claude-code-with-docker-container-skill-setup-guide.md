@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code with Docker Container Setup Guide
 
-Running Claude Code with Docker gives you reproducible, isolated execution that works identically across developer machines, CI runners, and production servers. This guide covers the full setup from a basic Dockerfile through multi-container orchestration with Compose, including patterns for the `tdd`, `pdf`, `supermemory`, and `frontend-design` skills.
+Running Claude Code with Docker gives you reproducible, isolated execution that works identically across developer machines, CI runners, and production servers. This guide covers the full setup from a basic Dockerfile through multi-container orchestration with Compose, including patterns for the [`tdd`](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/), `pdf`, `supermemory`, and `frontend-design` skills.
 
 ## Why Containerize Claude Code
 
@@ -74,7 +74,7 @@ Run a skill:
 docker run --rm   -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY   -v $(pwd)/src:/workspace/src   claude-skills:runner   "/tdd Write Jest tests for /workspace/src/auth/login.ts"
 ```
 
-Or for PDF extraction:
+Or for [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) extraction:
 
 ```bash
 docker run --rm   -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY   -v $(pwd)/documents:/workspace/documents   -v $(pwd)/output:/workspace/output   claude-skills:runner   "/pdf Extract all tables from /workspace/documents/report.pdf and save to /workspace/output/tables.md"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Integrate Claude Skills with Notion API"
-description: "Connect Claude Code skills to Notion's API for automated knowledge workflows. Practical patterns using /pdf, /tdd, and /supermemory with real Node.js examples."
+description: "Connect Claude Code skills to Notion API for automated knowledge workflows. Patterns using /pdf, /tdd, and /supermemory with Node.js examples."
 date: 2026-03-13
 categories: [integrations, workflows]
 tags: [claude-code, claude-skills, notion, api, automation]

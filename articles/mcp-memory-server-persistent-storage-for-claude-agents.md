@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MCP Memory Server: Persistent Storage for Claude Agents (2026)"
+title: "MCP Memory Server: Persistent Storage for Agents (2026)"
 description: "Set up an MCP memory server for persistent storage across Claude agent sessions. Practical configuration, examples, and deployment tips for 2026."
 date: 2026-03-13
 categories: [mcp, memory, integrations, guides]

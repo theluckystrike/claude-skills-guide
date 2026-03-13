@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Skills for Startup Founders and Solopreneurs"
-description: "Practical Claude Code skills for startup founders and solopreneurs: automate docs, build frontends, write tests, and track finances without technical bottlenecks."
+description: "Top Claude Code skills for startup founders: automate docs, build frontends, write tests, and track finances without technical bottlenecks in 2026."
 date: 2026-03-13
 categories: [guides, workflows]
 tags: [claude-code, claude-skills, startup, solopreneur, productivity]

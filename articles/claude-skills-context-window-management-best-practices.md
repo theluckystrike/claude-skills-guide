@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Skills Context Window Management Best Practices"
-description: "Practical techniques to manage context windows in Claude AI skill workflows: focused prompts, file references, chunking, and external memory with supermemory."
+description: "Manage context windows in Claude skill workflows: focused prompts, file references, chunking, and external memory management with supermemory."
 date: 2026-03-13
 categories: [guides, tutorials]
 tags: [claude-code, claude-skills, context-window, token-optimization]

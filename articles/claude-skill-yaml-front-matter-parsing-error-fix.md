@@ -111,7 +111,7 @@ description: Fix: handle edge cases in auth
 description: "Fix: handle edge cases in auth"
 ```
 
-This hits frequently with `description` fields in the `tdd` and `frontend-design` skills when people write descriptions like "Step 1: write test, Step 2: implement".
+This hits frequently with `description` fields in the [`tdd`](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) and `frontend-design` skills when people write descriptions like "Step 1: write test, Step 2: implement".
 
 ## Error 4: Unquoted Special Characters
 
@@ -250,7 +250,7 @@ Add `tools` only if you need to declare tool access. A missing `tools` key does 
 
 ## The `supermemory` and `pdf` Skills Specifically
 
-Both `supermemory` and `pdf` have configuration keys beyond `description` and `tools`. If you are customising these skills, the most common breaking change is adding a nested key without proper indentation:
+Both the [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) and `pdf` have configuration keys beyond `description` and `tools`. If you are customising these skills, the most common breaking change is adding a nested key without proper indentation:
 
 ```yaml
 # Broken

@@ -59,7 +59,7 @@ Neither is universally better — the right model depends on what you are buildi
 
 **Works in your environment.** Claude Code runs on your machine with access to your local tools, credentials, databases, and internal services. Devin works in a cloud sandbox that can only access what you explicitly share. For codebases with complex local dependencies or internal tools, Claude Code has access to the real environment while Devin has a simplified replica.
 
-**Skills ecosystem.** The Claude skills framework enables your team to define how the agent should approach recurring tasks — the conventions, constraints, and output formats your organization needs. This is a meaningful productivity multiplier over time. Devin does not have an equivalent system for encoding reusable team behaviors.
+**Skills ecosystem.** The [Claude skills framework](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) enables your team to define how the agent should approach recurring tasks — the conventions, constraints, and output formats your organization needs. This is a meaningful productivity multiplier over time. Devin does not have an equivalent system for encoding reusable team behaviors.
 
 **Cost transparency.** Claude Code's per-token API pricing scales with actual usage. You pay for what you use. Devin's subscription pricing starts high and scales further. For teams that need AI assistance for specific, bounded tasks, Claude Code's cost model is more predictable.
 
