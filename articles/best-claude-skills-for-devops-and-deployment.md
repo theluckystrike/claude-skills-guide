@@ -18,7 +18,7 @@ Claude Code has skills that accelerate DevOps work: shell scripting, infrastruct
 
 The **shell-expert** skill stands as a foundational tool for any DevOps workflow. It provides deep expertise in shell scripting, command-line operations, and system administration tasks. When you're writing deployment scripts or debugging infrastructure issues, shell-expert helps you craft efficient bash commands and pipeline scripts.
 
-For example, when deploying a Docker container and checking its status, shell-expert can help you create robust scripts:
+For example, when deploying a Docker container and checking its status, shell-expert can help you create reliable scripts:
 
 ```bash
 #!/bin/bash
@@ -36,7 +36,7 @@ This skill becomes invaluable when building CI/CD pipelines that require reliabl
 
 Working with containers demands precise command execution and troubleshooting capabilities. Claude's container-related skills help you manage Docker and Kubernetes deployments effectively.
 
-When building Dockerfiles, you can leverage Claude's expertise to optimize layer caching and reduce image sizes. A well-structured Dockerfile might look like:
+When building Dockerfiles, you can use Claude's expertise to optimize layer caching and reduce image sizes. A well-structured Dockerfile might look like:
 
 ```dockerfile
 # Multi-stage build for Go applications

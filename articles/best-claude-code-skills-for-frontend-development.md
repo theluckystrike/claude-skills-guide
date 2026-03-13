@@ -110,7 +110,7 @@ The real power emerges when you combine these skills in your workflow. Here is a
 
 1. Use **frontend-design** to scaffold a new component
 2. Apply **tdd** to write tests before implementation
-3. Leverage **supermemory** to reference similar patterns in your codebase
+3. Use **supermemory** to reference similar patterns in your codebase
 4. Generate documentation with **pdf** or **docx**
 5. Create performance reports using **xlsx**
 
@@ -121,7 +121,7 @@ This integrated approach reduces context switching and keeps your development pr
 Not every project requires all skills. Consider these factors:
 
 - **Project size**: Larger projects benefit more from supermemory and tdd
-- **Documentation needs**: Technical teams should leverage pdf and docx skills
+- **Documentation needs**: Technical teams should use pdf and docx skills
 - **Design iteration**: Frontend-design and canvas-design speed up visual work
 - **Performance requirements**: The alg skill helps with optimization challenges
 

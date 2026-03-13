@@ -70,7 +70,7 @@ Claude Code and Replit Agent are both pitched as autonomous AI coding tools, but
 
 **Claude Code** has a steeper initial setup curve — you need an Anthropic API key, a working terminal environment, and familiarity with your project structure. It is not designed for complete beginners. It also does not handle deployment — you still need to manage your own hosting.
 
-**Replit Agent** struggles with large, existing codebases. It is optimized for new projects in Replit's environment. If you have a production system with years of history, dependencies, and infrastructure, Replit Agent is not the right tool. The Git integration is not robust enough for complex workflows, and the hosted environment imposes constraints (compute limits, supported runtimes) that professional projects quickly outgrow.
+**Replit Agent** struggles with large, existing codebases. It is optimized for new projects in Replit's environment. If you have a production system with years of history, dependencies, and infrastructure, Replit Agent is not the right tool. The Git integration is not reliable enough for complex workflows, and the hosted environment imposes constraints (compute limits, supported runtimes) that professional projects quickly outgrow.
 
 ---
 

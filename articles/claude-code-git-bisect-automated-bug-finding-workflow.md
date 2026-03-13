@@ -141,7 +141,7 @@ Document your findings. After bisect completes, use the commit hash to understan
 
 Automated bug finding with git bisect and Claude Code dramatically reduces mean time to resolution. What used to take hours of manual testing now takes minutes. The combination leverages Git's proven binary search algorithm while using Claude's capabilities to craft better tests and understand the results.
 
-Instead of dreading regressions, you gain confidence that you can quickly identify and resolve issues—making your development process more robust and your codebase healthier.
+Instead of dreading regressions, you gain confidence that you can quickly identify and resolve issues—making your development process more reliable and your codebase healthier.
 
 Next time you encounter a mysterious bug, remember: git bisect with Claude Code is your automated detective, systematically narrowing down the search until the culprit is found.
 ---

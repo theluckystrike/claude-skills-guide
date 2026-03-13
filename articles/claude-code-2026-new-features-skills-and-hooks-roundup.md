@@ -183,7 +183,7 @@ Hooks receive context about the current operation as environment variables. `CLA
 
 ## Combining Skills with Hooks
 
-The real leverage comes from combining skills with hooks in automation pipelines. For example, a documentation-to-test workflow:
+The real use comes from combining skills with hooks in automation pipelines. For example, a documentation-to-test workflow:
 
 ```
 Step 1: /pdf extract all function signatures from api-docs.pdf

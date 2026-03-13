@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Spring Boot Java Microservices Development
 
-Building Spring Boot applications and Java microservices becomes significantly more productive when you leverage Claude Code's specialized skills. This guide walks you through practical workflows that accelerate your development cycle from project setup to deployment.
+Building Spring Boot applications and Java microservices becomes significantly more productive when you use Claude Code's specialized skills. This guide walks you through practical workflows that accelerate your development cycle from project setup to deployment.
 
 ## Setting Up Your Spring Boot Development Environment
 
@@ -60,7 +60,7 @@ When working with data persistence, consider combining Spring Data JPA with the 
 
 ## Implementing Service Communication
 
-Microservices architecture requires robust inter-service communication. Spring Boot supports both synchronous (REST, gRPC) and asynchronous (Kafka, RabbitMQ) patterns. Here's a practical example using Spring's RestClient:
+Microservices architecture requires reliable inter-service communication. Spring Boot supports both synchronous (REST, gRPC) and asynchronous (Kafka, RabbitMQ) patterns. Here's a practical example using Spring's RestClient:
 
 ```java
 @Service
@@ -147,7 +147,7 @@ class UserControllerIntegrationTest {
 
 ## Monitoring and Observability
 
-Production microservices require robust monitoring. Spring Boot Actuator exposes health endpoints, metrics, and environment information. Integrate with Prometheus and Grafana for visualization, or use Spring Cloud Sleuth for distributed tracing.
+Production microservices require solid monitoring. Spring Boot Actuator exposes health endpoints, metrics, and environment information. Integrate with Prometheus and Grafana for visualization, or use Spring Cloud Sleuth for distributed tracing.
 
 The **pdf skill** generates daily health reports that can be scheduled and emailed to your operations team, providing visibility into service availability and performance metrics.
 

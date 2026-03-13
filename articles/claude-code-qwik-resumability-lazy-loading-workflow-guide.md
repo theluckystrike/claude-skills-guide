@@ -42,7 +42,7 @@ Notice the `$` suffix on `component$` and `onClick$`. This marker tells Qwik to 
 
 ## Setting Up Qwik with Claude Code Skills
 
-When starting a new Qwik project, leverage Claude Code's skills to accelerate development. The `/frontend-design` skill helps establish component patterns and design system integration. For testing, `/tdd` ensures your components have proper test coverage from the beginning.
+When starting a new Qwik project, use Claude Code's skills to accelerate development. The `/frontend-design` skill helps establish component patterns and design system integration. For testing, `/tdd` ensures your components have proper test coverage from the beginning.
 
 Initialize your Qwik project with the standard CLI:
 
@@ -238,6 +238,6 @@ Run your app and navigate to the visualizer endpoint to see which chunks load at
 
 Qwik's resumability model transforms how developers think about application performance. By letting the framework handle lazy loading automatically, you focus on building features rather than optimizing bundles. Claude Code accelerates this workflow by providing intelligent assistance across development, testing, and documentation phases.
 
-Start with simple components, leverage signals for reactivity, and progressively adopt advanced patterns as your application grows. The combination of Qwik's architecture and Claude Code's capabilities delivers exceptional user experiences with minimal JavaScript overhead.
+Start with simple components, use signals for reactivity, and progressively adopt advanced patterns as your application grows. The combination of Qwik's architecture and Claude Code's capabilities delivers exceptional user experiences with minimal JavaScript overhead.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

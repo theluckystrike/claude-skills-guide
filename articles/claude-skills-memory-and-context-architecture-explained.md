@@ -50,7 +50,7 @@ Within a single Claude Code session, memory is implicit — it is the conversati
 
 This is stateful within a session but ephemeral across sessions. When you close Claude Code and reopen it, that conversation history is gone.
 
-Skills can leverage within-session memory naturally:
+Skills can use within-session memory naturally:
 
 ```
 User: "Remember that we're using PostgreSQL for this project."
