@@ -1,214 +1,243 @@
 ---
-layout: post
+layout: default
 title: "Caching Strategies for Claude Code Skill Outputs"
-description: "Practical caching strategies to optimize Claude Code skill outputs. Learn how to cache pdf, tdd, xlsx, and supermemory skill results for faster development workflows."
+description: "Practical caching approaches to speed up Claude Code skill execution. Store skill outputs, leverage persistent storage, and reduce redundant processing across sessions."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, caching, performance, skills, pdf, tdd, xlsx, supermemory, frontend-design]
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
+author: theluckystrike
 ---
 
 # Caching Strategies for Claude Code Skill Outputs
 
-Claude Code skills transform how you work with AI-assisted development. Skills like **pdf**, **tdd**, **xlsx**, **supermemory**, and **frontend-design** extend Claude's capabilities into specialized domains. However, repeated invocations can become slow, especially when processing large files or running comprehensive tests. Implementing caching strategies for skill outputs significantly improves your workflow efficiency.
+When you use Claude Code skills repeatedly, you likely encounter situations where the same computation or generation task runs multiple times. The `pdf` skill regenerates a document from identical source data. The `frontend-design` skill recomputes the same design tokens. The `tdd` skill reruns identical test suites. Caching eliminates this redundancy by storing and reusing previous outputs, significantly reducing execution time and API costs.
 
-This guide covers practical caching approaches for Claude Code skill outputs, focusing on file-based caching, in-memory caching, and skill-specific optimization patterns.
+This guide covers practical caching strategies you can implement for Claude Code skills, from simple file-based caches to sophisticated persistent storage systems.
 
-## Understanding Skill Output Patterns
+## Understanding Skill Caching Opportunities
 
-Before implementing caching, recognize how different skills produce outputs. The **pdf** skill extracts text and tables from documents, often generating substantial markdown. The **tdd** skill creates test files and test suites that require multiple file writes. The **xlsx** skill builds spreadsheets with formulas and formatting. The **supermemory** skill manages knowledge graphs and retrieval operations.
+Not every skill benefit from caching. The key is identifying operations that are:
 
-Each skill exhibits different caching characteristics. The **pdf** skill benefits from caching extracted content when source files remain unchanged. The **tdd** skill can cache test skeletons for recurring code patterns. The **xlsx** skill caches spreadsheet structures for templates.
+- **Deterministic**: Same inputs always produce same outputs
+- **Expensive**: The operation consumes significant time or API tokens
+- **Frequent**: You run the skill repeatedly with similar inputs
+
+The `pdf` skill excels at this. Generating a PDF from Markdown involves parsing, formatting, and rendering—work that doesn't change if the source content remains identical. Similarly, the `supermemory` skill benefits from caching when retrieving previously indexed information, avoiding redundant embedding computations.
 
 ## File-Based Caching for Skill Outputs
 
-The simplest caching strategy uses filesystem timestamps and content hashes. Create a caching layer that checks whether source files changed before invoking a skill.
+The simplest approach stores cached outputs as files in your project. This works well for skills that generate artifacts like documents, images, or compiled code.
+
+### Implementing a Basic File Cache
+
+Create a cache directory and check for existing outputs before running expensive operations:
 
 ```bash
-#!/bin/bash
-# cache-skill.sh - Basic file-based caching for skill outputs
+# In your skill or wrapper script
+CACHE_DIR=".claude/skill-cache"
+INPUT_HASH=$(echo "$INPUT_CONTENT" | md5sum | cut -d' ' -f1)
+CACHED_OUTPUT="$CACHE_DIR/$SKILL_NAME-$INPUT_HASH.output"
 
-CACHE_DIR="$HOME/.claude/skill-cache"
-SOURCE_FILE="$1"
-CACHE_KEY=$(md5 -q "$SOURCE_FILE")
-CACHED_OUTPUT="$CACHE_DIR/$CACHE_KEY.out"
-
-# Check if cache exists and is valid
 if [ -f "$CACHED_OUTPUT" ]; then
-    SOURCE_MTIME=$(stat -f %m "$SOURCE_FILE")
-    CACHE_MTIME=$(stat -f %m "$CACHED_OUTPUT")
-    
-    if [ "$SOURCE_MTIME" -le "$CACHE_MTIME" ]; then
+    cat "$CACHED_OUTPUT"
+    echo "Output retrieved from cache"
+    exit 0
+fi
+
+# Run the actual skill operation
+OUTPUT=$(claude -p "$SKILL_PROMPT" "$INPUT_CONTENT")
+
+# Store in cache
+mkdir -p "$CACHE_DIR"
+echo "$OUTPUT" > "$CACHED_OUTPUT"
+
+echo "$OUTPUT"
+```
+
+This pattern works with any skill that produces file output. The `docx` skill, the `pptx` skill, and the `algorithmic-art` skill all generate deterministic outputs from input data—perfect candidates for this approach.
+
+### Cache Invalidation Strategies
+
+File-based caching requires careful invalidation to avoid serving stale data. Common approaches include:
+
+**Time-based expiration:**
+```bash
+CACHE_MAX_AGE=86400  # 24 hours in seconds
+
+if [ -f "$CACHED_OUTPUT" ]; then
+    CACHE_AGE=$(($(date +%s) - $(stat -f %m "$CACHED_OUTPUT")))
+    if [ "$CACHE_AGE" -lt "$CACHE_MAX_AGE" ]; then
         cat "$CACHED_OUTPUT"
-        echo "<!-- Loaded from cache -->"
         exit 0
     fi
 fi
-
-# Cache miss - invoke skill and store result
-mkdir -p "$CACHE_DIR"
-claude -p "Use the pdf skill to extract all text from $SOURCE_FILE" > "$CACHED_OUTPUT"
-cat "$CACHED_OUTPUT"
 ```
 
-This script works well with the **pdf** skill and **xlsx** skill, where source files change infrequently but processing takes time.
-
-## Python-Based Caching with TTL
-
-For more sophisticated caching with time-to-live (TTL) support, use Python with a cache decorator:
-
-```python
-import os
-import time
-import hashlib
-from functools import wraps
-
-class SkillCache:
-    def __init__(self, cache_dir="~/.claude/skill-cache", ttl=3600):
-        self.cache_dir = os.path.expanduser(cache_dir)
-        self.ttl = ttl
-        os.makedirs(self.cache_dir, exist_ok=True)
-    
-    def _get_cache_path(self, key):
-        hash_key = hashlib.sha256(key.encode()).hexdigest()
-        return os.path.join(self.cache_dir, f"{hash_key}.cache")
-    
-    def get(self, key):
-        cache_path = self._get_cache_path(key)
-        if not os.path.exists(cache_path):
-            return None
-        
-        mtime = os.path.getmtime(cache_path)
-        if time.time() - mtime > self.ttl:
-            os.remove(cache_path)
-            return None
-        
-        with open(cache_path, 'r') as f:
-            return f.read()
-    
-    def set(self, key, value):
-        cache_path = self._get_cache_path(key)
-        with open(cache_path, 'w') as f:
-            f.write(value)
-
-def cached_skill_call(skill_name, input_data, ttl=3600):
-    cache = SkillCache(ttl=ttl)
-    cache_key = f"{skill_name}:{input_data}"
-    
-    cached = cache.get(cache_key)
-    if cached:
-        return cached, True
-    
-    # Execute skill (simplified - integrate with Claude CLI)
-    result = f"Skill {skill_name} output for {input_data}"
-    cache.set(cache_key, result)
-    return result, False
-```
-
-This approach works particularly well with the **tdd** skill, where you might regenerate test files only when source code changes or after a TTL expires.
-
-## Integrating with Specific Skills
-
-### Caching for the pdf Skill
-
-When working with the **pdf** skill, cache extracted content by document hash:
+**Content-based invalidation:** Include a version marker in your cache keys:
 
 ```bash
-PDF_SOURCE="technical-manual.pdf"
-PDF_HASH=$(md5 -q "$PDF_SOURCE")
-CACHE_FILE="$HOME/.claude/skill-cache/pdf-$PDF_HASH.md"
-
-if [ -f "$CACHE_FILE" ]; then
-    echo "Using cached extraction for $PDF_SOURCE"
-    cat "$CACHE_FILE"
-else
-    claude -p "/pdf extract all headings and tables from $PDF_SOURCE" | tee "$CACHE_FILE"
-fi
+CACHE_VERSION="v2"
+CACHED_OUTPUT="$CACHE_DIR/$CACHE_VERSION-$SKILL_NAME-$INPUT_HASH.output"
 ```
 
-### Caching for the tdd Skill
+## Using Claude Code Sessions for Context Caching
 
-The **tdd** skill generates test files based on source code structure. Cache test output by source file hash:
+Claude Code maintains conversation context within sessions. You can leverage this to avoid reprocessing information across skill invocations.
 
-```python
-import hashlib
+### Session-Level Caching Pattern
 
-def cache_tdd_output(source_file, test_template):
-    """Cache TDD skill output based on source and template combination."""
-    source_hash = hashlib.md5(open(source_file).read()).hexdigest()
-    template_hash = hashlib.md5(test_template.encode()).hexdigest()
-    cache_key = f"tdd-{source_hash}-{template_hash}"
-    
-    cache = SkillCache()
-    cached = cache.get(cache_key)
-    if cached:
-        return cached
-    
-    # Invoke tdd skill through Claude
-    result = invoke_tdd_skill(source_file, test_template)
-    cache.set(cache_key, result)
-    return result
-```
-
-### Caching for the xlsx Skill
-
-The **xlsx** skill builds spreadsheets with formulas. Cache spreadsheet templates:
-
-```python
-def get_cached_spreadsheet(template_name, data_hash):
-    """Retrieve cached spreadsheet or generate new one."""
-    cache_key = f"xlsx-{template_name}-{data_hash}"
-    cache = SkillCache(ttl=86400)  # 24-hour TTL for spreadsheets
-    
-    cached = cache.get(cache_key)
-    if cached:
-        return cached
-    
-    # Generate new spreadsheet using xlsx skill
-    spreadsheet = generate_with_xlsx_skill(template_name)
-    cache.set(cache_key, spreadsheet)
-    return spreadsheet
-```
-
-## Smart Cache Invalidation
-
-Cache invalidation remains challenging. Implement smart invalidation strategies:
-
-1. **Source-based invalidation**: Invalidate when source file changes (using modification time or content hash)
-2. **Template-based invalidation**: Invalidate when skill prompt or template changes
-3. **Periodic invalidation**: Use TTL for time-sensitive outputs
-4. **Manual invalidation**: Provide a clear-cache command for force regeneration
+When running multiple skills that share context, maintain a single session rather than starting fresh each time:
 
 ```bash
-# Clear skill cache manually
-rm -rf ~/.claude/skill-cache/*
-echo "Skill cache cleared"
+# Instead of separate invocations:
+claude -p "@skill:pdf" "generate report.md"
+claude -p "@skill:pdf" "generate report.md"  # Repeats work
+
+# Use a single session with context retention:
+claude -i <<EOF
+@skill:pdf
+Generate report.md
+
+[Claude processes and caches internal representations]
+
+@skill:pdf
+Generate updated report.md  
+[Claude may reuse parsed structures from previous invocation]
+EOF
 ```
 
-## Performance Considerations
+The `supermemory` skill demonstrates this effectively. It maintains an indexed memory across interactions, so repeated queries about the same content retrieve cached embeddings rather than recomputing them.
 
-When implementing caching for Claude Code skills, monitor these metrics:
+## MCP-Based Persistent Caching
 
-- **Cache hit rate**: Track how often cached outputs are used
-- **Storage growth**: Monitor cache directory size and implement cleanup
-- **Stale data**: Ensure TTL values match your workflow patterns
-- **Memory usage**: Keep in-memory caches small; prefer file-based caching for large outputs
+For more sophisticated caching, leverage MCP (Model Context Protocol) servers with persistent storage capabilities. This approach works across sessions and supports distributed caching for teams.
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) particularly benefits from caching because knowledge graph queries can be expensive. Cache common query patterns while ensuring fresh data for time-sensitive retrievals.
+### MCP Cache Server Example
+
+```python
+# cache-server.py - MCP server with Redis-backed caching
+from mcp.server import Server
+from mcp.server.stdio import stdio_server
+from mcp.types import Tool, TextContent
+import redis
+import json
+import hashlib
+
+server = Server("cache-server")
+redis_client = redis.Redis(host='localhost', port=6379, db=0)
+
+@server.list_tools()
+async def list_tools():
+    return [
+        Tool(
+            name="cache_get",
+            description="Retrieve cached skill output if available",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "skill_name": {"type": "string"},
+                    "input_hash": {"type": "string"}
+                },
+                "required": ["skill_name", "input_hash"]
+            }
+        ),
+        Tool(
+            name="cache_set",
+            description="Store skill output in cache",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "skill_name": {"type": "string"},
+                    "input_hash": {"type": "string"},
+                    "output": {"type": "string"}
+                },
+                "required": ["skill_name", "input_hash", "output"]
+            }
+        )
+    ]
+
+@server.call_tool()
+async def call_tool(name: str, arguments: dict):
+    if name == "cache_get":
+        key = f"{arguments['skill_name']}:{arguments['input_hash']}"
+        result = redis_client.get(key)
+        return [TextContent(type="text", text=result.decode() if result else "")]
+    
+    if name == "cache_set":
+        key = f"{arguments['skill_name']}:{arguments['input_hash']}"
+        redis_client.set(key, arguments['output'], ex=86400)  # 24h TTL
+        return [TextContent(type="text", text="Cached successfully")]
+
+async def main():
+    async with stdio_server() as (read_stream, write_stream):
+        await server.run(read_stream, write_stream, 
+                        server.create_initialization_options())
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
+```
+
+Register this in your `.claude/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "cache": {
+      "command": "python3",
+      "args": ["cache-server.py"]
+    }
+  }
+}
+```
+
+Now any skill can use `cache_get` and `cache_set` tools for instant retrieval of previous outputs.
+
+## Skill-Specific Caching Recommendations
+
+Different skills warrant different caching strategies:
+
+**The `pdf` skill**: Cache generated PDFs by hashing the Markdown source plus any style parameters. Include font selections and page layout options in your cache key to avoid serving wrong-formatted documents.
+
+**The `tdd` skill**: Cache test run results for unchanged test files. The compilation and test execution phases are expensive; storing results prevents redundant work when only unrelated code changed.
+
+**The `frontend-design` skill**: Cache design token computations and component scaffold outputs. Design systems often repeat patterns—caching computed styles avoids re-parsing the same token files.
+
+**The `algorithmic-art` skill**: Cache rendered outputs by seed value. Since algorithmic art with the same seed produces identical results, caching renders provides instant delivery on repeated seed requests.
+
+**The `supermemory` skill**: This skill handles caching internally by design, but you can enhance it by providing context about what information was previously retrieved in your session.
+
+## Monitoring Cache Effectiveness
+
+Track your cache hit rate to ensure your strategy delivers value:
+
+```bash
+# Simple hit/miss tracking
+CACHE_STATS=".claude/cache-stats.json"
+
+record_cache_hit() {
+    python3 -c "
+    import json
+    stats = json.load(open('$CACHE_STATS', 'r')) if open('$CACHE_STATS').read() else {'hits': 0, 'misses': 0}
+    stats['hits'] += 1
+    json.dump(stats, open('$CACHE_STATS', 'w'))
+    "
+}
+
+record_cache_miss() {
+    python3 -c "
+    import json
+    stats = json.load(open('$CACHE_STATS', 'r')) if open('$CACHE_STATS').read() else {'hits': 0, 'misses': 0}
+    stats['misses'] += 1
+    json.dump(stats, open('$CACHE_STATS', 'w'))
+    "
+}
+```
+
+A healthy cache hit rate depends on your use case but typically ranges from 40-80% for active projects. If you see low hit rates, examine whether your cache keys are too specific or your input patterns vary more than expected.
 
 ## Conclusion
 
-Implementing caching strategies for Claude Code skill outputs dramatically reduces wait times and improves development workflow efficiency. File-based caching provides simplicity and persistence. Python-based caching offers TTL support and sophisticated invalidation logic. Tailor your approach to each skill's output characteristics—cache **pdf** extractions by document hash, **tdd** outputs by source and template combination, and **xlsx** spreadsheets with appropriate time-based expiration.
+Implementing caching for Claude Code skills reduces redundant computation, speeds up repeated operations, and lowers API costs. Start with simple file-based caching for skills like `pdf` and `docx` that generate deterministic outputs. Scale to MCP-backed persistent caching for team environments and complex workflows. Monitor your hit rates and adjust cache TTL and invalidation strategies as your usage patterns evolve.
 
-Start with simple timestamp-based caching and evolve toward sophisticated content-hash caching as your workflows mature.
-
-## Related Reading
-
-- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Reduce the API usage that makes caching necessary in the first place with token optimization techniques.
-- [Rate Limit Management for Claude Code Skill Intensive Workflows](/claude-skills-guide/articles/rate-limit-management-claude-code-skill-intensive-workflows/) — Complement caching with rate limit strategies for sustained skill-intensive automation pipelines.
-- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) — Diagnose performance issues that caching alone may not solve.
-- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Explore advanced skill optimization patterns beyond basic caching.
+The investment in caching infrastructure pays dividends through faster skill execution and more predictable performance across your Claude Code workflow.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
