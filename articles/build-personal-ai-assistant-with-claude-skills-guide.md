@@ -97,7 +97,7 @@ Today I have a 10am design review and need to ship the recurring invoice feature
 
 ## Step 3: Create a Code Review Skill
 
-Code review is one of the highest-leverage tasks you can partially automate. Build a personal review skill tuned to your standards:
+Code review is one of the highest-use tasks you can partially automate. Build a personal review skill tuned to your standards:
 
 Create `~/.claude/skills/my-review.md`:
 

@@ -18,7 +18,7 @@ Building static sites with Claude Code and Astro creates a powerful combination 
 
 Astro's zero-JavaScript-by-default architecture makes it ideal for content-focused sites, blogs, and documentation. When paired with Claude Code, you get AI assistance throughout the development process—from initial scaffolding to final deployment.
 
-The workflow leverages Claude skills like `/frontend-design` for component creation, `/tdd` for test coverage, and `/supermemory` for context retention across sessions. Each skill adds capabilities without requiring additional infrastructure.
+The workflow uses Claude skills like `/frontend-design` for component creation, `/tdd` for test coverage, and `/supermemory` for context retention across sessions. Each skill adds capabilities without requiring additional infrastructure.
 
 ## Setting Up Your Astro Project with Claude
 

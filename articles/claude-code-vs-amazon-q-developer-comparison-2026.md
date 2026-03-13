@@ -111,7 +111,7 @@ For AWS-native teams, the practical approach is often: Amazon Q Developer for AW
 
 For pure agentic coding capability and reusable team workflows, **Claude Code** is the stronger tool. For AWS-native development, especially when AWS service knowledge, inline completion, and built-in security scanning matter, **Amazon Q Developer** is genuinely competitive and often free to start.
 
-Teams building on AWS will benefit from both: Q Developer for AWS-specific work and inline coding assistance; Claude Code for the complex reasoning tasks where agentic quality and the skills ecosystem create real leverage.
+Teams building on AWS will benefit from both: Q Developer for AWS-specific work and inline coding assistance; Claude Code for the complex reasoning tasks where agentic quality and the skills ecosystem create real use.
 
 ---
 

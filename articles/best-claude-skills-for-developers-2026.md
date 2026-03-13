@@ -86,7 +86,7 @@ Instead of re-explaining your stack at the start of every session, you recall it
 
 ## Web Application Testing with Webapp-Testing
 
-The **webapp-testing** skill leverages Playwright for comprehensive frontend verification. Use it to run browser-based tests against a local dev server:
+The **webapp-testing** skill uses Playwright for comprehensive frontend verification. Use it to run browser-based tests against a local dev server:
 
 ```
 /webapp-testing verify the login flow at http://localhost:3000: navigate to /login, fill in testuser@example.com / testpass, submit, confirm redirect to /dashboard, screenshot the result

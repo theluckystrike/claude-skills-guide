@@ -82,7 +82,7 @@ They applied similar optimizations to their **tdd** workflow. By narrowing test 
 
 ## Summary
 
-Token optimization in Claude Skills comes down to three principles: specificity, efficiency, and awareness. Write focused prompts, leverage each skill's optimized workflows, and monitor your consumption patterns. Skills like **supermemory**, **pdf**, **xlsx**, and **tdd** all offer unique opportunities to reduce waste when used thoughtfully.
+Token optimization in Claude Skills comes down to three principles: specificity, efficiency, and awareness. Write focused prompts, use each skill's optimized workflows, and monitor your consumption patterns. Skills like **supermemory**, **pdf**, **xlsx**, and **tdd** all offer unique opportunities to reduce waste when used thoughtfully.
 
 The goal isn't to limit what Claude can do—it's to ensure every token delivers maximum value. Start with one or two of these strategies, measure the impact, and iterate from there.
 

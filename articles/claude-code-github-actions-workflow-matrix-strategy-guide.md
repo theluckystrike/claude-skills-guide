@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code GitHub Actions Workflow Matrix Strategy Guide"
-description: "Master GitHub Actions matrix workflows with Claude Code. Learn to run parallel CI/CD jobs across multiple Node versions, Python versions, OS platforms, and custom dimensions using practical examples."
+description: "Master GitHub Actions matrix workflows with Claude Code. Learn to run parallel CI/CD jobs across multiple Node versions, Python versions, OS platforms, and"
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Claude Code GitHub Actions Workflow Matrix Strategy Guide

@@ -95,7 +95,7 @@ The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-opti
 ```
 
 ```
-/supermemory store: acme-taboo-words = leverage, utilize, synergy, cutting-edge, state-of-the-art, best-in-class
+/supermemory store: acme-taboo-words = use, use, collaboration, advanced, modern, best-in-class
 ```
 
 In any future session:

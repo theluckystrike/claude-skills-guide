@@ -81,7 +81,7 @@ DevOps benefits from Claude skills in areas that require precision and repeatabi
 
 | Skill | Best For |
 |-------|----------|
-| `shell-expert` | Writing robust bash scripts for deployment automation |
+| `shell-expert` | Writing reliable bash scripts for deployment automation |
 | `devops` | Terraform, Ansible, CloudFormation templates |
 | `webapp-testing` | Playwright-based visual regression and E2E testing |
 | `tdd` | Test-driven infrastructure code |

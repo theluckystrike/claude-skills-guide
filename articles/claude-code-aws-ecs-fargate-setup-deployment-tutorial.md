@@ -1,11 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code AWS ECS Fargate Setup Deployment Tutorial"
-description: "A practical guide to setting up and deploying applications to AWS ECS Fargate using Claude Code. Learn infrastructure-as-code, container deployment, and automation."
+description: "A practical guide to setting up and deploying applications to AWS ECS Fargate using Claude Code. Learn infrastructure-as-code, container deployment, and au"
 date: 2026-03-14
-author: theluckystrike
 categories: [tutorials, aws, devops]
 tags: [claude-code, aws, ecs, fargate, deployment, containers]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Claude Code AWS ECS Fargate Setup Deployment Tutorial
@@ -276,7 +278,7 @@ The **observability-skills** collection helps set up comprehensive monitoring, i
 
 ## Conclusion
 
-Deploying to AWS ECS Fargate combines the simplicity of serverless with the control of container orchestration. By leveraging Claude Code skills like **shell-expert**, **docker-expert**, **terraform-expert**, and **ci-cd-pipeline**, you can build robust, automated deployment pipelines that handle everything from infrastructure provisioning to production monitoring.
+Deploying to AWS ECS Fargate combines the simplicity of serverless with the control of container orchestration. By leveraging Claude Code skills like **shell-expert**, **docker-expert**, **terraform-expert**, and **ci-cd-pipeline**, you can build reliable, automated deployment pipelines that handle everything from infrastructure provisioning to production monitoring.
 
 Start with a simple deployment and incrementally add complexity—automated scaling, secrets management, and CI/CD pipelines—as your application requirements grow.
 

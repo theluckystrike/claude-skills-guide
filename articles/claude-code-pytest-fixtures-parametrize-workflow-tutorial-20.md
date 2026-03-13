@@ -138,7 +138,7 @@ For advanced scenarios, you can use `pytest fixtures` from external plugins. The
 
 ## Practical Workflow with Claude Code
 
-When developing pytest workflows with Claude Code, you can leverage several skills to accelerate testing. The `tdd` skill guides you through [test-driven development practices](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/), helping you write tests before implementation code. The `pdf` skill lets you generate test documentation automatically. For web applications, `frontend-design` complements backend testing by ensuring consistent behavior between client and server.
+When developing pytest workflows with Claude Code, you can use several skills to accelerate testing. The `tdd` skill guides you through test-driven development practices, helping you write tests before implementation code. The `pdf` skill lets you generate test documentation automatically. For web applications, `frontend-design` complements backend testing by ensuring consistent behavior between client and server.
 
 The typical workflow involves writing fixtures for shared setup, using parametrize for comprehensive input coverage, and running tests iteratively as you implement features. Claude Code can suggest fixture configurations based on your project structure and recommend parametrization strategies for edge cases you might otherwise miss.
 

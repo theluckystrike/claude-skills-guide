@@ -16,7 +16,7 @@ Reducing bundle size remains one of the most impactful optimizations you can mak
 
 ## Why Vite Beats Webpack on Bundle Size
 
-Vite uses native ES modules and leverages modern browser capabilities, eliminating the need for extensive bundling during development. In production, Vite ships with Rollup under the hood, which generally produces smaller bundles than Webpack due to more aggressive tree-shaking and simpler chunking strategies.
+Vite uses native ES modules and uses modern browser capabilities, eliminating the need for extensive bundling during development. In production, Vite ships with Rollup under the hood, which generally produces smaller bundles than Webpack due to more aggressive tree-shaking and simpler chunking strategies.
 
 The typical reduction ranges from 15% to 40% depending on your existing Webpack configuration and dependencies. However, realizing these gains requires proper setup—simply swapping build tools without configuration adjustments often yields subpar results.
 
