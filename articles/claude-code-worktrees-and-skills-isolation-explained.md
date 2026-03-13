@@ -1,21 +1,25 @@
 ---
-layout: default
-title: "Claude Code Worktrees and Skills Isolation Explained"
-description: "How Claude Code uses git worktrees to isolate skill execution — what gets isolated, what doesn't, and how to design skills that work correctly in worktree environments."
+layout: post
+title: "Claude Code Worktrees and Skills Isolation"
+description: "How Claude Code uses git worktrees to isolate agent work. Learn what gets isolated, what is shared, and how to design skills for worktree environments."
 date: 2026-03-13
-author: theluckystrike
+categories: [advanced, guides]
+tags: [claude-code, claude-skills, worktrees, git, isolation, parallel-work]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
-# Claude Code Worktrees and Skills Isolation Explained
+# Claude Code Worktrees and Skills Isolation
 
-Claude Code's worktree feature is one of the most useful but least understood capabilities in the system. It lets you run Claude agents in isolated git worktrees — separate working directories checked out from the same repository — so that parallel work doesn't interfere with your main branch. Understanding how this interacts with skills is essential for multi-agent and parallel-workflow setups.
+Claude Code's worktree feature lets you run agents in isolated git worktrees — separate working directories checked out from the same repository — so parallel work does not interfere with your main branch. Understanding how this interacts with skills is essential for multi-agent and parallel-workflow setups.
 
 ## What Is a Worktree?
 
 A git worktree is an additional working directory associated with the same git repository. Unlike cloning, which creates a full copy of the repository, a worktree shares the same `.git` object store with the main repository but has its own checked-out files and branch.
 
 ```bash
-# Create a worktree for Claude to use
+# Create a worktree manually
 git worktree add .claude/worktrees/feature-auth feature/auth-system
 
 # Claude Code creates this for you with:
@@ -24,12 +28,12 @@ git worktree add .claude/worktrees/feature-auth feature/auth-system
 
 The resulting directory structure:
 ```
-myproject/              ← main worktree (your working directory)
+myproject/              <- main worktree (your working directory)
   .git/
   .claude/
     worktrees/
-      feature-auth/     ← Claude's isolated worktree
-        .git            ← file pointing back to main .git
+      feature-auth/     <- Claude's isolated worktree
+        .git            <- file pointing back to main .git
         src/
         ...
 ```
@@ -58,10 +62,10 @@ The key isolation benefit: Claude can modify files freely in the worktree withou
 - Git hooks (`.git/hooks/`)
 - The underlying git history
 
-**Partially shared (important):**
-- `.claude/skills/` — skill files are read from the project root `.claude/skills/`, not from the worktree. See below.
-- `.claude/settings.json` — session settings come from the main project, not the worktree.
-- MCP servers — registered globally, not per-worktree.
+**Partially shared:**
+- `.claude/skills/` — skill files are read from the project root `.claude/skills/`, not from the worktree
+- `.claude/settings.json` — session settings come from the main project, not the worktree
+- MCP servers — registered globally, not per-worktree
 
 ## Skills and Worktrees: The Critical Detail
 
@@ -69,13 +73,13 @@ Skills are read from `.claude/skills/` relative to the **main project root**, no
 
 1. All worktrees share the same set of skills
 2. Changes to skills affect all worktrees immediately (since they read from the same path)
-3. A skill cannot be "scoped" to a specific worktree through normal placement
+3. A skill cannot be scoped to a specific worktree through normal placement
 
-This is by design — you don't want different worktrees running different versions of your `tdd` skill. It creates consistency across parallel workstreams.
+This is by design — you do not want different worktrees running different versions of your `/tdd` skill. It creates consistency across parallel workstreams.
 
 ### Worktree-Aware context_files
 
-The `context_files` in a skill's front matter are resolved relative to the **current working directory** at invocation time, which for a worktree session is the worktree directory. This means context files will correctly read from the worktree's version of the files:
+The `context_files` in a skill's front matter are resolved relative to the **current working directory** at invocation time, which for a worktree session is the worktree directory. This means context files correctly read from the worktree's version of the files:
 
 ```yaml
 ---
@@ -86,11 +90,11 @@ context_files:
 ---
 ```
 
-This is the correct behavior — when Claude is working in a worktree branch for a feature, it should see that branch's version of the test utilities, not the main branch's version.
+This is correct behavior — when Claude is working in a worktree branch for a feature, it should see that branch's version of the test utilities.
 
 ## Designing Skills for Worktree Use
 
-Skills that will be used in worktrees need to be explicit about which directory they're operating in.
+Skills that will be used in worktrees need to be explicit about which directory they are operating in.
 
 ### Avoid Hardcoded Absolute Paths
 
@@ -105,49 +109,38 @@ Write test files to the appropriate __tests__ directory relative to the source f
 Use the project root as the base: {project_root}/src/
 ```
 
-The `{{project_root}}` template variable resolves to the current worktree's root, not the main project root.
+The `{project_root}` template variable resolves to the current worktree's root, not the main project root.
 
 ### State Files and Worktrees
 
-If your skill uses state files (see the stateful agents guide), the state file should be written to the worktree directory, not the main project root:
+If your skill uses state files, write them to the worktree directory:
 
 ```
 Write state files to .claude/state/ within the current project root.
-In a worktree, this will be {project_root}/.claude/state/ — which is inside 
-the worktree directory, keeping state isolated per worktree.
+In a worktree, this will be {project_root}/.claude/state/ — keeping state isolated per worktree.
 ```
 
-However, the `.claude/state/` directory is inside the worktree's `.claude/` which is separate from the main project's `.claude/`. This is the right behavior: each worktree has its own task state.
+Each worktree has its own `.claude/state/` directory, so task state does not bleed across parallel workstreams.
 
 ## Parallel Skill Execution via Worktrees
 
-The most powerful use of worktrees is running the same skill in parallel across multiple branches:
+The most powerful use of worktrees is running the same skill across multiple branches in parallel. You can set this up with a shell script that creates worktrees for each feature branch and then runs Claude Code in print mode in each:
 
 ```bash
 #!/bin/bash
-# Spawn parallel Claude agents in separate worktrees
+# Prepare parallel worktrees for feature branches
 
 FEATURES=("auth-system" "payment-flow" "user-profile")
 
 for FEATURE in "${FEATURES[@]}"; do
     # Create worktree from feature branch
     git worktree add ".claude/worktrees/${FEATURE}" "feature/${FEATURE}" 2>/dev/null || true
-    
-    # Run tdd skill non-interactively in the worktree
-    (
-        cd ".claude/worktrees/${FEATURE}"
-        claude --skill tdd \
-               --message "Generate comprehensive tests for all new files in this branch" \
-               --non-interactive \
-               --output-file ".claude/results/tdd-${FEATURE}.json" &
-    )
+    mkdir -p ".claude/worktrees/${FEATURE}/.claude/results"
+    echo "Worktree ready: .claude/worktrees/${FEATURE}"
 done
-
-wait
-echo "All parallel tdd runs complete"
 ```
 
-Each agent runs the same `tdd` skill but in a completely isolated working tree. They cannot interfere with each other's file writes.
+Then run Claude Code in each worktree. Since Claude Code is interactive, you would open each worktree as a separate Claude Code session and invoke the `/tdd` skill there.
 
 ## Worktree Cleanup
 
@@ -213,20 +206,27 @@ Some skills are not safe to run in worktrees because they affect shared state:
 
 - **Skills that modify `~/.claude/` global config**: These affect all sessions, not just the worktree.
 - **Skills that write to the main `.git/` directory directly**: Could corrupt the shared git store.
-- **Skills that manage git remotes or push to origin**: Should typically be done from the main worktree, not from a feature worktree.
+- **Skills that manage git remotes or push to origin**: Should typically be done from the main worktree.
 
 Add a guard to such skills:
 
 ```
 Safety check:
 Before starting, verify you are not running in a worktree:
-bash: git rev-parse --git-common-dir
+bash("git rev-parse --git-common-dir")
 
 If the output is ".git" (same as current directory), you are in the main worktree.
-If the output is a different path, you are in a worktree. For this skill, that is 
+If the output is a different path, you are in a worktree. For this skill, that is
 unexpected — warn the user and stop.
 ```
 
 ---
+
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Building Stateful Agents with Claude Skills](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) — State management patterns for long-running agent tasks
+
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
