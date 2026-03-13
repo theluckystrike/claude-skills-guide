@@ -1,12 +1,13 @@
 ---
-layout: default
-title: "Complete Guide to Claude Skills 2026: Getting Started"
-description: "Your complete guide to Claude Code skills in 2026. Learn what skills are, how auto-invocation works, and how to write your first skill.md file."
+layout: post
+title: "Getting Started with Claude Code Skills (2026 Guide)"
+description: "Learn what Claude Code skills are, how auto-invocation works, and how to write your first skill.md file. The complete beginner's reference."
 date: 2026-03-13
-author: theluckystrike
-is_pillar: true
-categories: [hub]
-tags: [getting-started, claude-skills, claude-code]
+categories: [guides]
+tags: [claude-code, claude-skills, getting-started, skill-md]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Complete Guide to Claude Skills 2026

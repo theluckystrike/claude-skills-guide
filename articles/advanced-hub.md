@@ -1,12 +1,13 @@
 ---
-layout: default
-title: "Advanced Claude Skills Architecture: Token Optimization & Multi-Agent"
-description: "Advanced Claude skills guide covering token optimization, multi-agent orchestration, and skill chaining for power users and engineering teams."
+layout: post
+title: "Advanced Claude Skills: Token Optimization & Chaining"
+description: "Advanced Claude skills guide covering token optimization, skill chaining strategies, and cost reduction for power users and engineering teams."
 date: 2026-03-13
-author: theluckystrike
-is_pillar: true
-categories: [hub]
-tags: [advanced, claude-skills, token-optimization]
+categories: [guides, workflows]
+tags: [claude-code, claude-skills, token-optimization, advanced]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Advanced Claude Skills Architecture

@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Claude Skills vs Custom GPTs: A 2026 Comparison for Developers"
-description: "Compare Claude Code skills with Custom GPTs in 2026. Learn when to use each approach for development workflows, automation, and AI-powered tooling."
+layout: post
+title: "Claude Skills vs Custom GPTs: 2026 Comparison"
+description: "Compare Claude Code skills with Custom GPTs in 2026. Learn when to use each for development workflows, automation, and AI-powered tooling."
 date: 2026-03-13
-author: theluckystrike
+categories: [comparisons]
+tags: [claude-code, claude-skills, custom-gpts, openai, comparison]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Skills vs Custom GPTs: A 2026 Comparison for Developers
@@ -90,39 +94,30 @@ Custom GPTs would need you to paste code for review, lacking direct project acce
 
 ### Example 2: Documentation Generation
 
-The **pdf** skill generates technical documentation:
+The **pdf** skill generates technical documentation directly in your Claude Code session:
 
-```python
-# Generate API documentation as PDF
-from pdf import DocumentBuilder
-
-doc = DocumentBuilder()
-doc.add_title("Payment API Reference")
-doc.add_endpoint("/charge", "POST", {
-    "amount": "Integer in cents",
-    "currency": "ISO 4217 code"
-})
-doc.render("api-docs.pdf")
+```
+/pdf
+Create a PDF titled "Payment API Reference" documenting two endpoints:
+- POST /charge: params are amount (integer in cents) and currency (ISO 4217 code)
+- GET /charge/:id: returns charge status and metadata
+Save it to docs/api-docs.pdf
 ```
 
-This requires Claude Code running locally. Custom GPTs can explain your documentation but cannot generate new files in your project.
+Claude writes the file to your project directory. Custom GPTs can explain your documentation but cannot generate new files in your project.
 
 ### Example 3: UI Development
 
 The **frontend-design** skill helps create layouts:
 
-```javascript
-// The frontend-design skill generates component code
-// based on natural language descriptions
-const design = await claude.generateLayout({
-    description: "Dashboard with sidebar navigation",
-    framework: "React",
-    style: "Tailwind CSS"
-});
-
-// Outputs ready-to-use component files
-// in your src/components directory
 ```
+/frontend-design
+Create a dashboard layout with sidebar navigation. Use React with Tailwind CSS.
+Include: collapsible sidebar, top navigation bar with user avatar, main content area.
+Output to src/components/DashboardLayout.jsx
+```
+
+Claude generates the component file directly in your project directory.
 
 ## When to Choose Each Approach
 
@@ -134,7 +129,7 @@ Choose Custom GPTs when sharing AI assistants with non-developers, creating publ
 
 Many developers use both. Run Claude Code locally for development work while deploying Custom GPTs for team documentation and customer support. The key is recognizing that these tools serve different purposes—one excels at acting within your project, the other at representing your knowledge to external users.
 
-The **algorithmic-art** skill and **canvas-design** skill demonstrate another advantage: Claude skills can generate files directly, whether they're images, presentations, or spreadsheets. This file-generation capability, combined with code execution, makes skills the more powerful option for developer productivity.
+Skills like **pptx** and **xlsx** demonstrate another advantage: Claude skills can generate files directly—presentations, spreadsheets, documents—in your project directory. This file-generation capability, combined with code execution, makes skills the more powerful option for developer productivity.
 
 ## Summary
 

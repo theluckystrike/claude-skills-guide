@@ -1,25 +1,43 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills for SEO Content Generation Workflow"
-description: "Learn how to leverage Claude skills for SEO content generation. Discover practical workflows using pdf, docx, xlsx, and other skills to streamline your content pipeline."
+description: "Build an SEO content workflow using Claude Code skills. Practical examples with xlsx, pdf, docx, and supermemory for keyword research, briefs, and tracking."
 date: 2026-03-13
-author: theluckystrike
+categories: [workflows, guides]
+tags: [claude-code, claude-skills, seo, content-generation, automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Skills for SEO Content Generation Workflow
 
-Creating SEO-optimized content at scale requires a systematic approach. Developers and power users can leverage Claude skills to automate research, generate outlines, optimize content, and track performance. This guide walks through a practical workflow using specialized Claude skills for each stage of the content generation pipeline.
+Creating SEO-optimized content at scale requires a systematic approach. Developers and power users can leverage Claude skills to automate research, generate outlines, optimize content, and track performance. This guide walks through a practical workflow using Claude Code skills for each stage of the content generation pipeline.
+
+Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session.
 
 ## The SEO Content Pipeline
 
-A modern SEO content workflow involves multiple stages: keyword research, content brief creation, drafting, optimization, and performance tracking. Claude skills can assist with each phase, reducing manual effort while maintaining quality standards.
+A modern SEO content workflow involves multiple stages: keyword research, content brief creation, drafting, optimization, and performance tracking. Claude skills assist with each phase, reducing manual effort while maintaining quality standards.
 
 ### Keyword Research with Spreadsheet Automation
 
-The **xlsx** skill transforms how you handle keyword data. Instead of manually sorting through CSV exports from SEO tools, you can create automated pipelines that categorize keywords, calculate difficulty scores, and generate content opportunities.
+The **xlsx** skill transforms how you handle keyword data. Instead of manually sorting through CSV exports from SEO tools, create automated pipelines that categorize keywords, calculate difficulty scores, and generate content opportunities.
+
+Invoke the skill with your exported keyword data:
+
+```
+/xlsx
+I have a CSV export from Ahrefs with columns: keyword, search_volume, difficulty, CPC. Group keywords by search intent (informational, transactional, navigational) based on these signals:
+- Informational: contains what, how, why, guide, tutorial
+- Transactional: contains buy, price, discount, deal
+- Navigational: contains login, sign in, app, tool
+Output a spreadsheet with intent as a new column and sort by search_volume descending.
+```
+
+Claude generates the pandas code and applies the transformations:
 
 ```python
-# Using xlsx skill for keyword clustering
 import pandas as pd
 
 def cluster_keywords_by_intent(keywords_df):
@@ -29,216 +47,114 @@ def cluster_keywords_by_intent(keywords_df):
         'transactional': ['buy', 'price', 'discount', 'deal'],
         'navigational': ['login', 'sign in', 'app', 'tool']
     }
-    
-    for intent, terms in intent_mapping.items():
-        mask = keywords_df['keyword'].str.contains('|'.join(terms))
-        keywords_df.loc[mask, 'intent'] = intent
-    
-    return keywords_df[keywords_df['intent'].notna()]
-```
 
-This script reads your keyword exports, applies intent classification, and outputs a structured spreadsheet ready for content planning. The xlsx skill handles the formatting, formulas, and conditional styling automatically.
+    for intent, terms in intent_mapping.items():
+        mask = keywords_df['keyword'].str.contains('|'.join(terms), case=False)
+        keywords_df.loc[mask, 'intent'] = intent
+
+    return keywords_df.sort_values('search_volume', ascending=False)
+```
 
 ### Content Brief Generation
 
-Once you have target keywords, the **docx** skill helps generate structured content briefs. Instead of manually creating templates for each piece of content, you can generate briefs programmatically with SEO requirements built in.
+Once you have target keywords, the **docx** skill generates structured content briefs:
 
-```python
-from docx import Document
-
-def generate_seo_brief(keyword, target_url, competitors):
-    doc = Document()
-    doc.add_heading(f'Content Brief: {keyword}', 0)
-    
-    doc.add_heading('Target Keyword', level=1)
-    doc.add_paragraph(keyword)
-    
-    doc.add_heading('Target URL', level=1)
-    doc.add_paragraph(target_url)
-    
-    doc.add_heading('Competitor Analysis', level=1)
-    for competitor in competitors:
-        doc.add_paragraph(competitor, style='List Bullet')
-    
-    doc.add_heading('SEO Requirements', level=1)
-    requirements = [
-        f'Primary keyword in H1: {keyword}',
-        'Secondary keywords in first 100 words',
-        'Internal links to related content',
-        'Meta description under 160 characters'
-    ]
-    for req in requirements:
-        doc.add_paragraph(req, style='List Bullet')
-    
-    return doc
+```
+/docx
+Create a content brief document for the keyword "claude skills for seo". Include: target keyword, target URL, competitor URLs to analyze, word count target, required H2 sections, internal link targets, and meta description draft. Format it as a Word document brief.
 ```
 
-The docx skill preserves formatting, handles images, and can even generate tracked changes for editorial review workflows.
+Claude generates a properly formatted `.docx` file with SEO requirements built in. The skill handles formatting, heading hierarchy, and can include tables for competitor analysis sections.
 
 ### Document Processing for Research
 
-The **pdf** skill becomes essential when researching competitor content or extracting data from industry reports. You can automate extraction of key statistics, quotes, and references that strengthen your content.
+The **pdf** skill is essential when researching competitor content or extracting data from industry reports:
 
-```python
-def extract_research_insights(pdf_path, target_keywords):
-    """Extract relevant insights from research PDFs."""
-    from pdfreader import PDFDocument, SimplePDFViewer
-    
-    doc = PDFDocument(pdf_path)
-    viewer = SimplePDFViewer(doc)
-    
-    insights = []
-    for page_num, page in enumerate(doc.pages, 1):
-        text = page.text
-        for keyword in target_keywords:
-            if keyword.lower() in text.lower():
-                insights.append({
-                    'page': page_num,
-                    'keyword': keyword,
-                    'context': text[:200]
-                })
-    
-    return insights
+```
+/pdf
+Extract all statistics, data points, and quotes from this industry report PDF. Flag any that are relevant to the topic of AI developer tools. Output as a numbered list with page references.
 ```
 
-This approach lets you process industry reports, whitepapers, and academic research in bulk, building a knowledge base that informs your content strategy.
+This lets you process industry reports, whitepapers, and academic research in bulk, building a knowledge base that informs your content strategy without manual reading.
 
 ### Content Optimization Workflow
 
-For existing content that needs SEO improvements, the **tdd** skill provides a framework for systematic optimization. While originally designed for test-driven development, its structured approach translates well to content auditing.
+For existing content that needs SEO improvements, create a custom audit skill at `~/.claude/skills/seo-audit.md`:
 
-```javascript
-// Content audit checklist using tdd skill patterns
-const contentAudit = {
-  keyword: {
-    primary: 'claude skills for seo',
-    density: { min: 1.0, max: 2.5 },
-    locations: ['title', 'h1', 'firstParagraph', 'meta']
-  },
-  
-  structure: {
-    headings: ['h1', 'h2', 'h3'],
-    minWordCount: 800,
-    requiredElements: ['introduction', 'body', 'conclusion']
-  },
-  
-  technical: {
-    metaDescriptionLength: { min: 120, max: 160 },
-    titleTagLength: { min: 30, max: 60 },
-    internalLinks: { min: 2 },
-    externalLinks: { min: 1 }
-  }
-};
+```markdown
+# SEO Content Audit
 
-function auditContent(content, auditSpec) {
-  const results = { passed: [], failed: [] };
-  
-  // Check keyword density
-  const wordCount = content.split(/\s+/).length;
-  const keywordCount = (content.match(/claude skills for seo/gi) || []).length;
-  const density = (keywordCount / wordCount) * 100;
-  
-  if (density >= auditSpec.keyword.density.min && 
-      density <= auditSpec.keyword.density.max) {
-    results.passed.push('Keyword density');
-  } else {
-    results.failed.push('Keyword density');
-  }
-  
-  return results;
-}
+Audit a piece of content for SEO effectiveness.
+
+## Checks to Perform
+
+1. Primary keyword present in: title, H1, first 100 words, at least two H2s, meta description
+2. Meta description length: 120-155 characters
+3. Title length: 30-60 characters
+4. Internal links: at least 2
+5. External links to authoritative sources: at least 1
+6. Word count appropriate for topic (check top 3 SERP results for benchmark)
+7. No keyword stuffing (primary keyword density under 2.5%)
+
+## Output Format
+
+Return a pass/fail checklist with specific notes on each failed item and recommended fixes.
+```
+
+Invoke it against any content:
+
+```
+/seo-audit
+[paste article content here]
 ```
 
 ### Content Calendar Management
 
-The **xlsx** skill also handles content calendar management. Track publication dates, keyword targets, and performance metrics in a structured spreadsheet that updates automatically.
+The **xlsx** skill handles content calendar management. Track publication dates, keyword targets, and performance metrics:
 
-```python
-def update_content_calendar(calendar_path, new_content):
-    """Update content calendar with new pieces."""
-    from openpyxl import load_workbook
-    
-    wb = load_workbook(calendar_path)
-    ws = wb['Content Calendar']
-    
-    next_row = ws.max_row + 1
-    ws.cell(next_row, 1, new_content['title'])
-    ws.cell(next_row, 2, new_content['target_keyword'])
-    ws.cell(next_row, 3, new_content['publish_date'])
-    ws.cell(next_row, 4, new_content['status'])
-    
-    wb.save(calendar_path)
-    return next_row
 ```
+/xlsx
+Update my content calendar spreadsheet (content-calendar.xlsx). Add a new row for:
+Title: "Claude Skills for SEO Content Generation Workflow"
+Target keyword: claude skills for seo
+Publish date: 2026-03-20
+Status: draft
+Assigned to: mike
+```
+
+Claude writes the openpyxl code to open the file and append the row correctly.
 
 ### Memory and Knowledge Management
 
-The **supermemory** skill enhances long-term SEO strategy by maintaining a knowledge base of what content performs well, which keywords drive traffic, and how search intent evolves over time.
+The **supermemory** skill enhances long-term SEO strategy by maintaining a knowledge base of what content performs well:
 
-```python
-# Storing content performance insights with supermemory
-def record_performance_insight(page_url, metrics):
-    insight = {
-        'url': page_url,
-        'metrics': metrics,
-        'timestamp': '2026-03-13',
-        'insights': []
-    }
-    
-    if metrics['organic_traffic'] > 1000:
-        insight['insights'].append('High-performing page - analyze top keywords')
-    
-    if metrics['bounce_rate'] < 0.5:
-        insight['insights'].append('Good engagement - replicate content structure')
-    
-    return insight
+```
+/supermemory store: "claude skills for seo" article published 2026-03-20, ranked position 8 by April 1, 1,200 organic visits in first month
+/supermemory store: long-form guides (2000+ words) consistently outrank shorter posts for developer-tool keywords
+/supermemory find: which content formats perform best for our site?
 ```
 
 This pattern builds institutional knowledge that improves future content decisions.
 
 ### Frontend Design Integration
 
-When creating landing pages or content-heavy sites, the **frontend-design** skill ensures your SEO content displays properly across devices. Proper rendering impacts Core Web Vitals, which Google uses as ranking signals.
+When creating landing pages or content-heavy sites, proper rendering impacts Core Web Vitals, which Google uses as ranking signals. Use Claude Code directly to audit your content templates:
 
-```css
-/* SEO-friendly content styling with frontend-design principles */
-.content-container {
-  max-width: 65ch;
-  line-height: 1.6;
-  font-size: 1.125rem;
-}
-
-.headline {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.meta-description {
-  font-size: 1rem;
-  color: #666;
-}
-
-@media (max-width: 768px) {
-  .headline {
-    font-size: 1.75rem;
-  }
-  
-  .content-container {
-    padding: 0 1rem;
-  }
-}
 ```
+Review my article template for Core Web Vitals impact. Check for: render-blocking scripts, images without explicit dimensions, large layout shifts from dynamic content, and font loading delays.
+```
+
+Claude reviews your HTML/CSS and surfaces specific fixes—no separate skill invocation required.
 
 ## Automating the Entire Pipeline
 
-Combining these skills creates a powerful content generation system:
+Combining these skills creates a practical content generation system:
 
-1. **Research**: Use xlsx to process keyword data, pdf to extract competitor insights
-2. **Briefing**: Generate structured briefs with docx
-3. **Creation**: Write content with SEO requirements embedded
-4. **Optimization**: Apply tdd-style audits for quality assurance
-5. **Tracking**: Update content calendars and performance databases
+1. **Research**: Use `/xlsx` to process keyword data, `/pdf` to extract competitor insights
+2. **Briefing**: Generate structured briefs with `/docx`
+3. **Creation**: Write content with SEO requirements embedded in context
+4. **Optimization**: Run `/seo-audit` for quality assurance
+5. **Tracking**: Update content calendars with `/xlsx` and log performance with `/supermemory`
 
 Each skill handles its domain, and Claude orchestrates the workflow between them. This approach scales content production while maintaining consistency across your SEO portfolio.
 

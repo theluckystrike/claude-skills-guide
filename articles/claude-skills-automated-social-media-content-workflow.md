@@ -1,129 +1,115 @@
 ---
-layout: default
-title: "Claude Skills Automated Social Media Content Workflow"
-description: "Automate your social media content creation with Claude Code skills. Learn how to generate posts, schedule publications, and analyze engagement using specialized skills."
+layout: post
+title: "Automate Social Media Content with Claude Skills"
+description: "Automate social media content creation with Claude Code skills. Build a workflow for generating posts, managing schedules, and tracking engagement."
 date: 2026-03-13
-author: theluckystrike
+categories: [workflows, tutorials]
+tags: [claude-code, claude-skills, social-media, content, automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 5
 ---
 
-# Claude Skills Automated Social Media Content Workflow
+# Automate Social Media Content with Claude Skills
 
-Social media management consumes significant time for developers and content creators. Automating the content workflow with Claude Code skills transforms how you plan, create, and publish posts across platforms. This guide walks through building an automated social media content workflow using specialized Claude skills.
+Social media management consumes significant time for developers and content creators. This guide walks through building an automated social media content workflow using Claude Code skills—Markdown files stored in `~/.claude/skills/` that you invoke with `/skill-name` inside a Claude Code session.
 
 ## Understanding the Workflow Architecture
 
-An effective automated social media content workflow consists of four key phases: content generation, scheduling, publication, and analytics. Claude Code skills address each phase differently, allowing you to assemble a pipeline that fits your specific needs.
+An effective automated social media content workflow consists of four phases: content generation, scheduling, publication, and analytics. Claude Code skills address each phase, letting you assemble a pipeline that fits your specific needs.
 
-The workflow begins with content creation, where skills like **pdf** and **docx** help generate underlying content assets. From there, **xlsx** manages scheduling data, while **supermemory** maintains your content calendar and brand guidelines. Each skill plays a distinct role in streamlining operations.
+The workflow begins with content creation, where skills like **pdf** and **docx** help process underlying content assets. The **xlsx** skill manages scheduling data, while **supermemory** maintains your content calendar and brand guidelines across sessions.
 
 ## Content Generation with Claude Skills
 
-Creating social media content starts with having the right原材料. The **pdf** skill converts long-form content into platform-ready snippets. Suppose you have a whitepaper or blog post; this skill extracts key points and formats them for Twitter threads, LinkedIn posts, or Instagram captions.
+Creating social media content starts with existing assets—blog posts, whitepapers, product announcements. The **pdf** skill reads long-form PDF documents and extracts platform-ready snippets. Invoke it to process a whitepaper:
 
-```bash
-# Extract key points from a PDF for social sharing
-"Convert this technical documentation into five tweet-length insights"
+```
+/pdf
+Extract five tweet-length insights from this technical whitepaper: [paste path or content]
 ```
 
-The **docx** skill complements this by generating formatted marketing documents. Create press releases, product announcements, or company updates as Word documents, then convert them into social posts. This maintains consistency across channels while reducing duplicate work.
+The **docx** skill complements this by generating or reading Word documents. Create a product announcement as a `.docx` file, then use the skill to convert key points into social posts:
 
-For visual content, **canvas-design** generates platform-specific graphics. Instead of manually resizing images for each platform, describe your requirements and receive properly sized assets:
-
-```javascript
-// Generate a social media banner
-"Create an event banner sized 1200x630px with text 'Product Launch' in modern typography"
+```
+/docx
+Read product-launch.docx and generate three LinkedIn post drafts from the key benefits section
 ```
 
-The **alg** skill proves valuable when you need algorithmically-generated content, such as data visualizations or infographics. Present raw data, and receive chart-ready visuals that communicate metrics effectively.
+For image requirements, describe your needs directly to Claude Code—it can generate HTML/CSS mockups or prompt structures for tools like Figma or Canva, but there is no `canvas-design` skill with a `require()` API.
 
 ## Scheduling and Calendar Management
 
-Once content exists, organization becomes critical. The **xlsx** skill builds scheduling spreadsheets that track publication times, platform assignments, and content status:
+Once content exists, organization is critical. The **xlsx** skill builds and manages scheduling spreadsheets:
 
-```javascript
-// Create a content calendar spreadsheet
-"Generate a weekly social media calendar with columns for platform, post time, content type, and approval status"
+```
+/xlsx
+Create a weekly social media calendar spreadsheet with columns: platform, scheduled_time, content_type, post_text, status, approval_owner
 ```
 
-This spreadsheet serves as your central source of truth. Update it manually or populate it programmatically based on your analytics data. The skill understands formulas, so you can calculate optimal posting times automatically.
+This spreadsheet becomes your central source of truth. The skill understands formulas, so you can calculate optimal posting times and flag overdue items automatically.
 
-**Supermemory** enhances this further by storing your content strategy decisions. When you establish that video posts perform best on Tuesdays, record that decision and query it later:
+**Supermemory** enhances this by storing strategy decisions across sessions. Record what works and query it later:
 
-```bash
-# Query your content strategy
-"What days work best for video content based on our testing?"
+```
+/supermemory store: video posts on Tuesday and Thursday drive 3x more clicks than Monday
+/supermemory find: best days for video content
 ```
 
-This creates institutional knowledge that improves over time rather than starting fresh with each campaign.
+This creates institutional knowledge that improves over time.
 
 ## Publication Automation
 
-Direct publication through Claude Code requires API integration, but several approaches exist. The **pdf** skill can generate formatted content that integrates with scheduling tools through webhook connections. More commonly, you export content from your spreadsheet and use platform-specific tools for actual publication.
+Direct publication requires API integration with platform SDKs—this happens outside Claude Code via scripts or scheduling tools. The practical pattern is to export your approved content from the xlsx calendar and feed it to a posting script:
 
-For developer-centric workflows, create custom scripts that read from your scheduling spreadsheet and interact with platform APIs. The **xlsx** skill generates the data structure, while external tools handle authentication and posting:
+```python
+import requests
+from openpyxl import load_workbook
 
-```javascript
-// Pseudocode for automated reading from scheduling spreadsheet
-const posts = readSpreadsheet("content-calendar.xlsx");
-posts.filter(p => p.status === "ready" && p.scheduledTime <= now())
-     .forEach(post => publishToSocial(post));
+wb = load_workbook("content-calendar.xlsx")
+ws = wb["Schedule"]
+
+for row in ws.iter_rows(min_row=2, values_only=True):
+    title, platform, scheduled_time, content, status = row
+    if status == "approved" and scheduled_time <= now():
+        post_to_platform(platform, content)
 ```
 
-The **tdd** skill helps if you build custom publication tooling. Write tests before implementing your automation scripts to ensure reliable operation:
+The **tdd** skill helps if you build custom publication tooling. Use it to write tests for your posting logic before implementing:
 
-```javascript
-// Test the publication workflow
-"Write tests for a function that validates post length by platform"
 ```
-
-Validating content before publication prevents embarrassing mistakes and maintains brand consistency.
+/tdd
+Write tests for a function that validates post character limits per platform (Twitter: 280, LinkedIn: 3000, Instagram caption: 2200)
+```
 
 ## Analytics and Performance Tracking
 
-Measuring content performance closes the workflow loop. The **xlsx** skill creates analytics dashboards that aggregate engagement metrics:
+The **xlsx** skill creates analytics dashboards that aggregate engagement metrics:
 
-```bash
-# Create an analytics template
-"Build a spreadsheet with columns for post date, platform, impressions, engagements, and calculated engagement rate"
+```
+/xlsx
+Build a spreadsheet template with: post_date, platform, impressions, engagements, clicks, calculated engagement_rate formula
 ```
 
-Import platform analytics into this structure weekly. Use formulas to identify trends and calculate ROI. The skill supports pivot tables and charts, making visual analysis straightforward.
+Import platform analytics weekly. Use formulas to identify trends. For historical pattern recognition, log findings in supermemory:
 
-**Supermemory** remembers which content types performed well, enabling data-driven decisions:
-
-```bash
-# Query historical performance
-"Which blog topics from last quarter generated the most social engagement?"
 ```
-
-This knowledge compounds over time, informing future content creation strategies.
-
-## Integrating Multiple Skills
-
-The real power emerges when skills work together. Consider this workflow sequence:
-
-1. Use **pdf** to extract insights from long-form content
-2. Apply **canvas-design** to create supporting visuals
-3. Build the publication schedule with **xlsx**
-4. Record strategic decisions in **supermemory**
-5. Validate automation scripts with **tdd**
-6. Analyze results using **xlsx** dashboards
-
-Each skill handles its domain effectively, but the combination creates a cohesive system.
+/supermemory store: Q1 2026 - blog topics about developer productivity outperformed product announcements by 40% engagement
+```
 
 ## Practical Example: Product Launch Campaign
 
-Imagine launching a new feature. Here is how the workflow operates:
+Here is how the workflow operates for a feature launch:
 
-First, use **docx** to create the feature announcement document. Extract key benefits using **pdf**, generating tweet-length highlights. Generate launch graphics with **canvas-design** in multiple sizes for different platforms. Populate your **xlsx** calendar with specific post times over the two-week launch window. Record your launch hashtags and key messages in **supermemory** for team consistency.
-
-After publication, import analytics into your **xlsx** dashboard. Calculate which posts drove the most traffic. Store these insights in **supermemory** for reference in future launches.
-
-This end-to-end process reduces manual effort significantly while maintaining content quality.
+1. Use `/docx` to read the feature announcement document and extract key benefits
+2. Use `/pdf` to process any supporting research or competitive analysis
+3. Use `/xlsx` to build a two-week publication schedule with specific post times per platform
+4. Store launch hashtags and key messages with `/supermemory` for team consistency
+5. After launch, import analytics into the xlsx dashboard and log results with `/supermemory`
 
 ## Building Your Own Workflow
 
-Start simple. Choose one phase to automate first, such as content extraction or scheduling organization. Add components gradually as your needs become clearer.
+Start with one phase. Automating the scheduling spreadsheet with `/xlsx` is the lowest-friction starting point—it immediately centralizes your content calendar. Add supermemory for strategy tracking, then layer in pdf or docx for content extraction as needs become clearer.
 
 Consider these factors when designing your workflow:
 

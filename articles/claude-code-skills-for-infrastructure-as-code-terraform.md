@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Claude Code Skills for Infrastructure as Code with Terraform"
-description: "Practical guide to using Claude Code skills for Terraform and infrastructure-as-code. Includes skill recommendations and code examples for IaC workflows."
+layout: post
+title: "Claude Code Skills for Terraform Infrastructure as Code"
+description: "Use Claude Code skills for Terraform and IaC workflows. Covers shell-expert, tdd, and git-workflow skills with real Terraform examples."
 date: 2026-03-13
-author: theluckystrike
+categories: [tutorials, workflows]
+tags: [claude-code, claude-skills, terraform, infrastructure-as-code]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code Skills for Infrastructure as Code with Terraform

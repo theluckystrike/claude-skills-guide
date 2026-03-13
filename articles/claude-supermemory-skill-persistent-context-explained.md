@@ -1,153 +1,137 @@
 ---
-layout: default
+layout: post
 title: "Claude SuperMemory Skill: Persistent Context Explained"
-description: "A comprehensive guide to understanding how the SuperMemory skill provides persistent context across Claude sessions. Practical examples and code snippets for developers."
+description: "How the SuperMemory skill stores project context across Claude sessions. Invocation, storage patterns, and when to use it over CLAUDE.md."
 date: 2026-03-13
-author: theluckystrike
+categories: [skills]
+tags: [claude-code, claude-skills, supermemory, persistent-context, memory]
+author: "Claude Skills Guide"
+reviewed: true
+score: 6
 ---
 
 # Claude SuperMemory Skill: Persistent Context Explained
 
-Developers working with Claude Code often encounter a fundamental limitation: context disappears when a conversation ends. The SuperMemory skill solves this problem by providing persistent context that survives across sessions. This guide explains how it works and when to use it.
+The SuperMemory skill provides persistent context across Claude Code sessions. Where a standard session starts fresh each time, SuperMemory maintains a knowledge base — project preferences, architecture decisions, coding conventions — that Claude loads automatically at the start of subsequent sessions.
 
 ## The Context Persistence Problem
 
-When you start a new Claude session, you begin with a blank slate. Claude has no memory of your previous conversations, project preferences, or accumulated knowledge. This works fine for simple, isolated tasks, but becomes problematic when working on complex projects that span multiple sessions.
+When you start a new Claude session, Claude has no memory of previous conversations. For isolated tasks this is fine, but for multi-day projects it creates friction: you re-explain your stack, remind Claude of your conventions, and rebuild shared understanding every time.
 
-Consider a typical development workflow: you might spend hours on a project across several days, discussing architecture decisions, coding conventions, and implementation details. Without persistent context, you constantly need to re-explain your setup, remind Claude about your preferences, and rebuild project understanding from scratch.
+Claude Code ships with a built-in partial solution: the `CLAUDE.md` file at the root of your project. That file loads automatically on every session and is the right place for stable, long-lived project context. SuperMemory fills a different niche — it's suited for context that changes over time: solutions you discover mid-session, decisions you make during a sprint, or notes you want preserved without editing `CLAUDE.md` manually.
 
-The SuperMemory skill addresses this gap by maintaining a persistent knowledge base that Claude references across all your sessions.
+## Invoking SuperMemory
 
-## How SuperMemory Provides Persistent Context
+Skills in Claude Code are `.md` files stored in `~/.claude/skills/`. You invoke them with a slash command:
 
-SuperMemory works by storing information in a structured format that Claude can retrieve and apply automatically. Unlike the built-in memory that lasts only for a single conversation, SuperMemory persists until you explicitly clear it.
-
-The skill captures several types of information:
-
-- **Project context**: Framework versions, directory structure, key files
-- **User preferences**: Coding style, communication preferences, tool choices
-- **Accumulated knowledge**: Decisions made, solutions found, patterns discovered
-- **Cross-session references**: Links between related concepts across different conversations
-
-This information gets stored in a local database that SuperMemory manages. When you start a new session, Claude automatically loads relevant context before responding to your first message.
-
-## Using SuperMemory in Your Workflow
-
-To use SuperMemory effectively, you first need to load the skill and configure it for your project. Here's a practical example:
-
-```bash
-# Load the SuperMemory skill
-@supermemory
+```
+/supermemory
 ```
 
-After loading, you can store important context:
+Once the skill is active, you interact with it through natural-language instructions within your Claude session. There is no separate CLI binary and no `claude code run supermemory` subcommand — the skill runs inside your Claude Code conversation.
 
-```markdown
-Remember that this project uses:
-- React 18 with TypeScript
-- Tailwind CSS for styling
-- Vite as the build tool
-- ESLint with the airbnb-config preset
+## Storing Context
 
-Our coding conventions:
-- Functional components only
-- Props interfaces prefixed with component names
-- Custom hooks in the /hooks directory
+After invoking the skill, tell Claude what to remember:
+
+```
+/supermemory
+
+Remember for this project:
+- Stack: React 18, TypeScript, Vite, Tailwind CSS
+- Conventions: functional components only, props interfaces prefixed with component name
+- Custom hooks live in /hooks, shared types in /types/index.ts
+- ESLint config: airbnb-typescript preset
 ```
 
-Once stored, this context automatically applies to future sessions. You don't need to repeat this information when you return to the project days later.
+The skill stores this in a local file (typically within `~/.claude/memory/` or a project-scoped location defined in the skill's own front matter). The exact storage path depends on how the skill author configured it — check the skill's own `README` or front matter if you need the precise location.
 
 ## Practical Examples
 
-### Example 1: Multi-Session Project Development
+### Multi-Session Project Development
 
-Imagine you're building a complex application over several weeks. In your first session, you discuss the architecture with Claude:
-
-```
-I've decided on a microservices architecture with three services: 
-auth, billing, and notifications. We're using Docker for containerization
-and Kubernetes for orchestration. The auth service uses JWT tokens with
-a 1-hour expiry.
-```
-
-SuperMemory stores this information. When you return a week later and ask "continue implementing the billing API," Claude already knows about your architecture decisions without you re-explaining everything.
-
-### Example 2: Remembering Debugging Solutions
-
-When you solve a tricky bug, store the solution:
+On day one of a project, you document an architecture decision:
 
 ```
-The webpack config needed the resolve.fallback configuration set to false 
-for the fs module. This fixed the module not found error in production builds.
+/supermemory
+
+Architecture decision (2026-03-10): chose microservices over monolith.
+Three services: auth (JWT, 1h expiry), billing (Stripe), notifications (SendGrid).
+Auth service owns the user table; billing and notifications call auth's /verify endpoint.
 ```
 
-Future sessions can reference this when similar issues arise, saving hours of redundant debugging.
+When you return three days later, Claude loads this context before you type your first message. You can ask "continue the billing service" without re-explaining the architecture.
 
-### Example 3: Team Convention Documentation
+### Preserving Debugging Solutions
 
-For team projects, document conventions once:
+When you solve a non-obvious bug, store the solution:
 
 ```
-We use feature branches named feature/TICKET--description.
-All PRs require 2 approvals. We squash merge to main.
-Our CI runs unit tests, linting, and build before allowing merges.
+/supermemory
+
+Fix: webpack `resolve.fallback` must be set to `false` for the `fs` module in
+production builds. Without this, the build throws "Module not found: Error: Can't
+resolve 'fs'" for any package that optionally imports Node built-ins.
 ```
 
-Every team member's Claude sessions automatically follow these conventions.
+This prevents the same debugging session from happening twice.
+
+### Team Convention Notes
+
+```
+/supermemory
+
+Branch naming: feature/TICKET-ID-short-description
+PR rules: 2 approvals required, squash merge to main
+CI gates: unit tests + lint + build (all must pass)
+```
+
+## SuperMemory vs CLAUDE.md
+
+| | `CLAUDE.md` | SuperMemory skill |
+|---|---|---|
+| **Best for** | Stable project facts | Evolving notes and discoveries |
+| **Edited by** | You (text editor) | Claude (during session) |
+| **Loaded** | Automatically, always | When skill is active |
+| **Scope** | Per-repo (place in project root) | Configurable; often per-user |
+| **Versioned** | Yes (it's a tracked file) | Depends on storage path |
+
+For anything you'd want in your repo's git history — tech stack, architecture overview, team conventions — `CLAUDE.md` is the better tool. SuperMemory shines for ephemeral-to-medium-term notes that don't belong in version control.
 
 ## Combining SuperMemory with Other Skills
 
-SuperMemory works well alongside other Claude skills. The frontend-design skill benefits significantly from persistent context about your design system. When SuperMemory remembers your color palette, component library, and spacing conventions, the frontend-design skill generates more accurate code from the start.
+SuperMemory composes well with other skills. The `tdd` skill benefits from remembering where your test files live and which framework you use. The `frontend-design` skill produces better output when it already knows your component library and design tokens. The `pdf` skill can store extraction schemas so you don't re-specify column mappings for recurring document types.
 
-Similarly, combining SuperMemory with pdf lets you maintain context across document processing sessions. The tdd skill can remember your test file locations and testing patterns, making test generation more intelligent over time.
+Invoke both in the same session:
 
-The skill-creator skill also benefits when SuperMemory remembers your preferred skill patterns and conventions. Rather than re-specifying your template preferences for each new skill you create, SuperMemory handles it automatically.
+```
+/supermemory
+/tdd
 
-## Managing Your Persistent Context
-
-SuperMemory provides commands for managing stored information:
-
-```bash
-# View all stored context
-@supermemory list
-
-# Clear specific context
-@supermemory clear project
-
-# Export context for backup
-@supermemory export
-
-# Import previously exported context
-@supermemory import backup.json
+Review my test coverage for src/auth.ts and remember any patterns we agree on.
 ```
 
-Regular maintenance keeps your context relevant. Remove outdated information periodically to prevent stale data from affecting new sessions.
+## Limitations
+
+**Storage is local.** Context stored on one machine does not sync to another unless you manually copy the storage file or use a shared path.
+
+**Manual, not automatic.** SuperMemory only stores what you explicitly ask it to. Claude will not silently record everything you discuss.
+
+**Token budget still applies.** If your stored context grows very large, the skill may summarize or truncate older entries to stay within Claude's context window. Prune stale entries periodically.
+
+**No official sub-commands.** Unlike the hallucinated `@supermemory list` or `@supermemory export` syntax you may see in other guides, the skill operates through natural language inside Claude Code. Ask Claude to "show what's stored" or "clear the project context" and it will handle it through its normal tool use.
 
 ## When to Use SuperMemory
 
-SuperMemory excels in these scenarios:
+SuperMemory is worth reaching for when:
 
-- **Long-running projects** that span days or weeks
-- **Complex applications** with many components and dependencies
-- **Team environments** where consistency matters
-- **Iterative development** with frequent context switching
-- **Knowledge accumulation** where solutions should be remembered
+- You're working on the same project across multiple sessions over days or weeks
+- You want Claude to remember something you discovered mid-session without editing a file manually
+- You need a scratchpad for decisions that haven't hardened into `CLAUDE.md` material yet
 
-For quick, isolated tasks like generating a simple script or answering a one-off question, the built-in memory suffices. Save SuperMemory for work that benefits from continuity.
+For quick one-off tasks, the built-in session context is enough. Save SuperMemory for work where continuity matters.
 
-## Limitations and Considerations
-
-SuperMemory stores context locally, which means it's specific to your machine and Claude configuration. Context doesn't sync across different devices unless you explicitly export and import it.
-
-The skill also requires explicit storage commands. Claude won't automatically remember everything—you need to tell it what to preserve using the @supermemory command followed by your context information.
-
-Token limits still apply. While SuperMemory helps prioritize relevant context, extremely large context stores may need manual trimming to fit within Claude's context window.
-
-## Getting Started
-
-To begin using SuperMemory, ensure you have the skill installed in your Claude Code setup. Load it with `@supermemory` in your conversation, then start storing context for your projects. The skill activates automatically for subsequent sessions once context exists.
-
-Over time, you'll notice improved efficiency as Claude arrives at each session already understanding your project, preferences, and history. This persistent context transforms Claude from a session-based tool into a true long-term development partner.
+---
 
 ---
 

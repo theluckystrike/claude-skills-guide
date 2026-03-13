@@ -5,244 +5,232 @@ description: "Practical guide to Claude skills for data science and Jupyter note
 date: 2026-03-13
 categories: [skills, guides]
 tags: [claude-code, claude-skills, data-science, jupyter, python, machine-learning]
-author: "theluckystrike"
+author: "Claude Skills Guide"
 reviewed: true
-score: 5
+score: 6
 ---
 
-Data science workflows involve repetitive tasks that drain productivity: cleaning messy datasets, generating visualizations, building machine learning pipelines, and documenting findings. Claude Code skills transform these workflows by automating common operations and enabling AI-assisted development directly within Jupyter notebooks and Python environments. This guide covers practical Claude skills that data scientists and developers use daily.
+Data science workflows involve repetitive tasks that drain productivity: cleaning messy datasets, generating visualizations, building machine learning pipelines, and documenting findings. Claude Code skills transform these workflows by automating common operations and enabling AI-assisted development directly within Jupyter notebooks and Python environments.
+
+Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. They give Claude standing instructions for specialized tasks. There are no `from canvas_design import` or `from supermemory import` Python packages—skills are invoked conversationally, not imported.
+
+This guide covers practical Claude skills that data scientists and developers use daily.
 
 ## Foundation Skills for Data Science
 
 ### xlsx Skill for Data Import and Export
 
-The xlsx skill handles spreadsheet operations essential to data science workflows. Loading datasets from Excel, applying transformations, and exporting results all benefit from programmatic control.
+The xlsx skill handles spreadsheet operations essential to data science workflows. Loading datasets from Excel, applying transformations, and exporting results all benefit from programmatic guidance.
 
-```python
-# Load data from Excel with xlsx skill
-# Automatically preserves formulas and formatting
-import pandas as pd
+Invoke the skill when working with Excel files:
 
-# Read Excel file with multiple sheets
-df = pd.read_excel('dataset.xlsx', sheet_name='TrainingData')
-
-# Apply transformations using xlsx capabilities
-df_cleaned = df.dropna().rename(columns={'old_name': 'new_name'})
-
-# Export with formatting preserved
-df_cleaned.to_excel('processed_data.xlsx', index=False)
+```
+/xlsx
+Load dataset.xlsx, check for missing values in all columns, and export a cleaned version with rows containing >50% null values removed
 ```
 
-The skill supports reading CSV, TSV, and Excel formats while maintaining data integrity through type inference and handling of merged cells.
+Claude will write the pandas code to accomplish this and run it in your session:
+
+```python
+import pandas as pd
+
+df = pd.read_excel('dataset.xlsx', sheet_name='TrainingData')
+threshold = len(df.columns) * 0.5
+df_cleaned = df.dropna(thresh=threshold)
+df_cleaned.to_excel('processed_data.xlsx', index=False)
+print(f"Removed {len(df) - len(df_cleaned)} rows with >50% null values")
+```
+
+The skill knows how to handle merged cells, multiple sheets, and type inference edge cases without requiring you to specify every detail.
 
 ### pdf Skill for Research Paper Extraction
 
-Extracting data from academic papers, financial reports, and industry studies becomes straightforward with the pdf skill. Data scientists frequently need to parse tables and figures from PDF documents.
+Extracting data from academic papers, financial reports, and industry studies is straightforward with the pdf skill:
 
-```python
-# Extract tables from research papers using pdf skill
-from pdf_extract import extract_tables
-
-# Process multiple pages containing relevant data
-tables = extract_tables('research_paper.pdf', pages=[3, 4, 5])
-
-# Convert extracted tables to pandas DataFrames
-dataframes = [pd.read_html(table.html) for table in tables]
-combined = pd.concat(dataframes, ignore_index=True)
+```
+/pdf
+Extract all tables from pages 3-5 of research_paper.pdf and convert them to CSV format
 ```
 
-This capability accelerates literature review and allows integration of published data into analysis pipelines.
+Claude uses available tools to parse the PDF and output the tables as structured data you can load directly into pandas. This accelerates literature review and lets you integrate published data into analysis pipelines without manual transcription.
 
 ## Jupyter Notebook Automation
 
-### Code Generation and Refactoring
+### Code Generation and Refactoring with tdd
 
-Claude Code skills enhance Jupyter workflows through intelligent code generation. The tdd skill promotes test-driven development practices even in notebook environments, ensuring reproducible results.
+The tdd skill promotes test-driven development practices even in notebook environments, ensuring reproducible results:
+
+```
+/tdd
+I need a function that calculates classification metrics. Write the tests first, then implement it.
+```
+
+Claude produces the test and implementation together:
 
 ```python
-# Using tdd skill for notebook cell development
 def calculate_metrics(predictions, actual):
     """Calculate classification metrics with built-in validation"""
     from sklearn.metrics import accuracy_score, precision_score, recall_score
-    
+
     assert len(predictions) == len(actual), "Length mismatch"
-    
+
     return {
         'accuracy': accuracy_score(actual, predictions),
         'precision': precision_score(actual, predictions, average='weighted'),
         'recall': recall_score(actual, predictions, average='weighted')
     }
 
-# Test the function immediately in notebook
+# Tests
 test_preds = [1, 0, 1, 1, 0]
 test_actual = [1, 0, 0, 1, 1]
 metrics = calculate_metrics(test_preds, test_actual)
+assert 0 <= metrics['accuracy'] <= 1
+assert 0 <= metrics['precision'] <= 1
 ```
 
 The tdd skill generates test cases alongside implementation, reducing errors in complex transformations.
 
 ### Visualization and Reporting
 
-The canvas-design skill enables generation of custom visualizations beyond standard matplotlib plots. Create publication-quality figures and interactive dashboards directly from notebook cells.
+For custom visualizations, describe what you need directly in a Claude Code session or invoke skills for specific output formats:
 
-```python
-# Generate visualization using canvas-design skill
-from canvas_design import create_chart
-
-# Create interactive chart from DataFrame
-chart = create_chart(
-    data=performance_df,
-    chart_type='scatter',
-    x='feature_importance',
-    y='model_accuracy',
-    color='algorithm',
-    title='Model Performance Comparison'
-)
-
-# Export as PNG or interactive HTML
-chart.save('analysis_results.html')
+```
+/pdf
+Generate a PDF report containing: title page, summary statistics table, and the three charts I just created in this session
 ```
 
-The theme-factory skill applies consistent styling across all visualizations, maintaining brand alignment in presentations and reports.
+```
+/pptx
+Create a presentation from today's model evaluation results. Include the confusion matrix, ROC curve, and a feature importance bar chart. Use a clean, minimal theme.
+```
+
+The **supermemory** skill tracks experiment context across sessions:
+
+```
+/supermemory store: RandomForest with n_estimators=200, max_depth=10 achieved accuracy=0.92, f1=0.89 on customer_churn dataset 2026-03-13
+/supermemory find: best accuracy on customer_churn dataset
+```
+
+This replaces manual experiment logging in notebooks and makes it easy to recall configurations weeks later.
 
 ## Machine Learning Pipeline Skills
 
 ### Data Preprocessing Automation
 
-Building ML pipelines requires consistent preprocessing. Claude skills automate feature engineering and transformation steps that typically consume significant development time.
+Claude Code can generate and refine preprocessing pipelines through conversation. Describe your data characteristics and ask for appropriate transformations:
+
+```
+/tdd
+Build a preprocessing pipeline for a dataset with 10 numeric features and 3 categorical features. Handle missing values, scale numerics, and one-hot encode categoricals. Write tests for each transformation step.
+```
+
+Claude produces:
 
 ```python
-# Automated feature engineering pipeline
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
 
-# Define preprocessing with categorical and numerical handling
-preprocessing = Pipeline([
-    ('numeric', StandardScaler()),
-    ('categorical', OneHotEncoder(handle_unknown='ignore'))
+numeric_features = ['age', 'income', 'score', ...]
+categorical_features = ['region', 'product_type', 'tier']
+
+numeric_transformer = Pipeline([
+    ('imputer', SimpleImputer(strategy='median')),
+    ('scaler', StandardScaler())
 ])
 
-# Apply to mixed dataset
-X_processed = preprocessing.fit_transform(X_raw)
+categorical_transformer = Pipeline([
+    ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
+    ('onehot', OneHotEncoder(handle_unknown='ignore'))
+])
 
-# Save preprocessing pipeline for production
-import joblib
-joblib.dump(preprocessing, 'preprocessing_pipeline.joblib')
+preprocessor = ColumnTransformer([
+    ('num', numeric_transformer, numeric_features),
+    ('cat', categorical_transformer, categorical_features)
+])
 ```
 
-### Model Evaluation and Comparison
+### Model Evaluation Tracking
 
-The supermemory skill tracks experiments across notebook sessions, maintaining a searchable history of model configurations and results. This eliminates manual experiment logging.
+Use supermemory to maintain experiment history across notebook sessions:
 
-```python
-# Track experiments with supermemory skill
-from supermemory import log_experiment
-
-# Log model configuration and results
-log_experiment(
-    model='RandomForest',
-    params={'n_estimators': 200, 'max_depth': 10},
-    metrics={'accuracy': 0.92, 'f1': 0.89},
-    dataset='customer_churn',
-    timestamp='2026-03-13'
-)
-
-# Query past experiments for comparison
-results = supermemory.query('accuracy > 0.90')
+```
+/supermemory store: GradientBoosting, lr=0.1, n_estimators=300, accuracy=0.94, f1=0.91, dataset=churn_v2, date=2026-03-13
+/supermemory find: all experiments with accuracy > 0.90 on churn dataset
 ```
 
-Retrieving previous experiments becomes as simple as natural language queries.
+Combine this with the xlsx skill to export your experiment log to a spreadsheet for sharing with colleagues:
+
+```
+/xlsx
+Create a spreadsheet from these experiment results: [paste supermemory query output]. Include columns for model, hyperparameters, accuracy, f1, and date.
+```
 
 ## Production Deployment Considerations
 
 ### Converting Notebooks to Scripts
 
-Moving from exploration to production requires converting notebook cells to modular Python scripts. Claude skills assist with refactoring and maintaining code quality.
+When moving from exploration to production, use Claude Code to refactor notebook cells into modular Python scripts:
 
-```python
-# Refactor notebook cells into production-ready modules
-# Use code organization skills for clean separation
-
-# Extract cell logic to src/models/train.py
-def train_model(X, y, config):
-    """Production training function"""
-    from sklearn.ensemble import RandomForestClassifier
-    
-    model = RandomForestClassifier(**config)
-    model.fit(X, y)
-    
-    return model
-
-# Extract preprocessing to src/features/preprocess.py
-def preprocess_data(df, config):
-    """Production preprocessing"""
-    # Implement consistent transformations
-    return df
+```
+Review my Jupyter notebook attached here. Extract the training logic into src/models/train.py and the preprocessing into src/features/preprocess.py. Add docstrings and type hints.
 ```
 
-### API Integration for Model Serving
+Claude reads the notebook structure and produces clean, importable modules.
 
-The webapp-testing skill validates that deployed models function correctly in production environments, catching issues before they affect users.
+### API Validation
 
-```python
-# Validate model API with webapp-testing skill
-from webapp_testing import verify_endpoint
+The **webapp-testing** skill validates that deployed models function correctly:
 
-# Test prediction endpoint
-response = verify_endpoint(
-    url='https://api.example.com/predict',
-    method='POST',
-    payload={'features': [0.5, 1.2, 3.1]},
-    expected_status=200,
-    response_schema={'prediction': 'float', 'confidence': 'float'}
-)
+```
+/webapp-testing
+Test the prediction API at http://localhost:8000/predict. Send POST requests with sample feature vectors and verify the response schema contains 'prediction' (float) and 'confidence' (float between 0 and 1).
 ```
 
 ## Workflow Integration Strategies
 
 ### Version Control for Notebooks
 
-Tracking notebook changes requires specific strategies. Use nbdime or similar tools to diff notebook versions effectively, reviewing changes before committing to git repositories.
+Track notebook changes effectively using nbdime:
 
 ```bash
-# Install nbdime for notebook diffing
 pip install nbdime
-
-# Configure git to use nbdime
 nbdime config-git --enable --global
+```
+
+This gives you readable diffs for notebook cells in git. Use it alongside Claude Code's ability to review and summarize notebook changes:
+
+```
+Review the git diff for analysis.ipynb and summarize what changed in the model training section
 ```
 
 ### Environment Management
 
-Reproducible environments ensure others can execute your notebooks. The skills system works best with properly configured Python environments using uv or similar tools.
+Reproducible environments ensure others can run your notebooks:
 
 ```bash
-# Create reproducible environment
 uv venv .venv
-uv pip install pandas scikit-learn matplotlib
-uv pip install -r requirements.txt
+uv pip install pandas scikit-learn matplotlib jupyterlab
+uv pip freeze > requirements.txt
 ```
 
-Building consistent environments across team members eliminates the common "it works on my machine" problems.
+Ask Claude Code to verify your environment setup matches the notebook requirements before sharing:
 
-## Practical Implementation
-
-Start by installing skills relevant to your primary workflow:
-
-```bash
-# Install foundational data science skills
-claude install xlsx
-claude install pdf
-claude install tdd
-claude install supermemory
-
-# Add visualization and testing skills
-claude install canvas-design
-claude install theme-factory
-claude install webapp-testing
+```
+Check my requirements.txt against the imports in all .ipynb files in this directory and flag any missing dependencies
 ```
 
-Select skills based on specific needs rather than installing everything at once. The xlsx and pdf skills provide immediate value for most data science workflows. Add specialized skills as requirements demand.
+## Practical Starting Point
+
+Select skills based on your primary workflow needs rather than trying to use all of them at once. For most data science workflows, start with:
+
+- `/xlsx` for data import/export and reporting
+- `/pdf` for research paper and report extraction
+- `/tdd` for reliable, tested transformations
+- `/supermemory` for experiment tracking
+
+Add `/webapp-testing` and `/pptx` as your needs expand into deployment validation and stakeholder reporting.
 
 Claude skills for data science and Jupyter notebooks eliminate friction between exploration and production. By automating repetitive tasks, maintaining experiment history, and enabling reproducible workflows, these tools let data scientists focus on extracting insights rather than managing infrastructure.
 

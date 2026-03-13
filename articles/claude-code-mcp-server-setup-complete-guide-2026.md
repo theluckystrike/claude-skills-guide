@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code MCP Server Setup: Complete Guide 2026"
-description: "A practical guide to setting up MCP servers for Claude Code in 2026. Learn how to configure Model Context Protocol servers, build custom skills, and extend Claude's capabilities."
+description: "Set up MCP servers for Claude Code in 2026. Configure Model Context Protocol servers, build custom skills, and connect external APIs step by step."
 date: 2026-03-13
-author: theluckystrike
+categories: [tutorials, guides]
+tags: [claude-code, claude-skills, mcp, model-context-protocol]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code MCP Server Setup: Complete Guide 2026
@@ -145,7 +149,7 @@ The **supermemory** skill integrates with this MCP server to index your codebase
 
 ## Using Claude Skills with MCP
 
-Many built-in Claude skills work seamlessly with MCP servers. The **pdf** skill can process documents retrieved through MCP tools. The **xlsx** skill handles spreadsheet operations on data fetched from external sources. The **webapp-testing** skill validates frontend behavior while MCP servers provide test data.
+Many built-in Claude skills work directly with MCP servers. The **pdf** skill can process documents retrieved through MCP tools. The **xlsx** skill handles spreadsheet operations on data fetched from external sources. The **webapp-testing** skill validates frontend behavior while MCP servers provide test data.
 
 For example, combine the **tdd** skill with a database MCP server to generate tests against live data fixtures:
 

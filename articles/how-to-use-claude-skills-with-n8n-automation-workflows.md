@@ -1,177 +1,236 @@
 ---
-layout: default
+layout: post
 title: "How to Use Claude Skills with n8n Automation Workflows"
-description: "Learn to integrate Claude Code skills like PDF processing, TDD, and frontend design into n8n workflows for powerful automation pipelines."
+description: "Integrate Claude Code skills into n8n pipelines using the Anthropic API. Real patterns for PDF processing, TDD, and document generation automation."
 date: 2026-03-13
-author: theluckystrike
+categories: [workflows]
+tags: [claude-code, claude-skills, n8n, automation, anthropic-api, pdf, tdd]
+author: "Claude Skills Guide"
+reviewed: true
+score: 5
 ---
 
 # How to Use Claude Skills with n8n Automation Workflows
 
-n8n is a powerful workflow automation tool that connects APIs, services, and data sources into executable pipelines. When you combine n8n with Claude Code skills, you unlock intelligent automation that handles document processing, testing, design generation, and memory management without manual intervention.
+n8n is a workflow automation tool that connects APIs, services, and data sources into repeatable pipelines. Claude skills are `.md` files in `~/.claude/skills/` designed to be invoked inside Claude Code sessions. Connecting these two systems requires understanding what each one actually does — and where the boundary sits.
 
-This guide shows you how to integrate Claude skills into your n8n workflows for production-grade automation.
+## How the Integration Actually Works
 
-## Setting Up the Integration
+Claude Code skills run inside interactive Claude Code sessions; they are not an HTTP API you can call from n8n's HTTP Request node on `localhost:11434` (that port belongs to Ollama). The correct integration point is the **Anthropic Messages API** (`https://api.anthropic.com/v1/messages`).
 
-The connection between n8n and Claude skills works through a simple architecture: n8n handles the workflow orchestration and triggers, while Claude skills execute specialized tasks. You need a running Claude Code instance and n8n's HTTP Request node to communicate with it.
+The pattern is: n8n calls the Anthropic API and passes the skill's instructions as part of the system prompt. You copy the relevant skill content from `~/.claude/skills/<skill-name>.md` and embed it in the system prompt so Claude behaves as if the skill is active.
+
+```
+n8n trigger → HTTP Request node (Anthropic API) → parse response → downstream action
+```
+
+This is a practical, working architecture. It does not require Claude Code to be running on the same machine as n8n.
+
+## Setting Up the Anthropic API Node in n8n
+
+In n8n, add an **HTTP Request** node with:
+
+- **Method:** POST
+- **URL:** `https://api.anthropic.com/v1/messages`
+- **Headers:**
+  - `x-api-key: {{ $env.ANTHROPIC_API_KEY }}`
+  - `anthropic-version: 2023-06-01`
+  - `content-type: application/json`
+- **Body (JSON):**
 
 ```json
 {
-  "nodes": [
+  "model": "claude-opus-4-6",
+  "max_tokens": 2048,
+  "system": "{{ $json.systemPrompt }}",
+  "messages": [
     {
-      "name": "Claude API",
-      "type": "n8n-nodes-base.httpRequest",
-      "parameters": {
-        "url": "http://localhost:11434/api/generate",
-        "method": "POST",
-        "bodyParameters": {
-          "parameters": {
-            "skill": "pdf",
-            "action": "extract_tables",
-            "file_path": "{{ $json.file_path }}"
-          }
-        }
-      }
+      "role": "user",
+      "content": "{{ $json.userMessage }}"
     }
   ]
 }
 ```
 
-This basic setup allows any n8n workflow to invoke Claude skills by sending requests to your local Claude Code instance.
-
-## Automating Document Processing with the PDF Skill
-
-The **pdf** skill excels at extracting text, tables, and images from PDF documents. When integrated with n8n, you can build pipelines that process invoices, contracts, and technical documentation automatically.
-
-Consider a workflow that processes incoming vendor invoices:
+A preceding **Code** node builds `systemPrompt` by injecting the skill instructions. For example, to use the pdf skill's behavior:
 
 ```javascript
-// n8n Function node - prepares the prompt for pdf skill
-const filePath = $input.first().json.filePath;
-const prompt = `Extract the following from this invoice:
-- Vendor name
-- Invoice number
-- Total amount
-- Due date
-- Line items as JSON array`;
+// n8n Code node
+const pdfSkillInstructions = `You are operating with the pdf skill active.
+When given a PDF file path or base64 content, extract:
+- All text, preserving structure
+- Tables as JSON arrays
+- Named entities (dates, amounts, parties)
+Return results as structured JSON.`;
 
 return {
   json: {
-    model: "claude-3",
-    prompt: prompt,
-    skill: "pdf",
-    action: "extract",
-    file: filePath
+    systemPrompt: pdfSkillInstructions,
+    userMessage: `Extract invoice data from this document: ${$input.first().json.fileContent}`
   }
 };
 ```
 
-This workflow triggers whenever a new file lands in your monitored folder. The pdf skill extracts structured data that n8n then routes to your accounting software or database. The same pattern works for processing resumes, legal documents, or research papers.
+## Document Processing Pipeline
 
-## Building Test Automation with the TDD Skill
+A practical invoice-processing workflow in n8n:
 
-The **tdd** skill generates test cases following test-driven development principles. Integrating it with n8n enables automated test creation for every code change in your repository.
-
-Create an n8n workflow that listens for git push events:
-
-```yaml
-Trigger: GitHub Webhook (push event)
-Action 1: Clone repository to temp directory
-Action 2: HTTP Request to Claude Code
-  - endpoint: /api/tdd/generate
-  - payload:
-      files: ["src/auth.js", "src/api.js"]
-      framework: "jest"
-      coverage: "80%"
-Action 3: Create Pull Request with generated tests
+```
+Trigger: Watch folder (new file)
+→ Read file (base64 encode PDF)
+→ Code node (build pdf skill prompt)
+→ HTTP Request (Anthropic API)
+→ Code node (parse JSON response)
+→ Google Sheets / database insert
 ```
 
-The tdd skill analyzes your source files and generates comprehensive test suites including unit tests, integration tests, and edge case coverage. This automation ensures every feature ships with appropriate test coverage.
-
-## Memory-Augmented Workflows with SuperMemory
-
-The **supermemory** skill provides persistent context across conversations and tasks. When combined with n8n, you can build workflows that maintain stateful interactions with external systems.
-
-A practical example: customer support automation that remembers previous interactions:
+The Code node that builds the prompt:
 
 ```javascript
-// n8n code node - retrieves context from supermemory
-const customerEmail = $input.first().json.email;
+const fileContent = $input.first().json.fileContentBase64;
+const fileName = $input.first().json.fileName;
 
-const memoryQuery = {
-  skill: "supermemory",
-  action: "search",
-  query: `customer ${customerEmail} recent tickets`,
-  limit: 5
+const systemPrompt = `You are a document extraction assistant using the pdf skill.
+Extract the following fields from invoices and return valid JSON only:
+{
+  "vendor_name": string,
+  "invoice_number": string,
+  "total_amount": number,
+  "due_date": "YYYY-MM-DD",
+  "line_items": [{"description": string, "quantity": number, "unit_price": number}]
+}`;
+
+return {
+  json: {
+    systemPrompt,
+    userMessage: `Extract invoice data. File: ${fileName}\nContent (base64): ${fileContent}`
+  }
 };
-
-return { json: memoryQuery };
 ```
 
-The workflow retrieves past interactions before generating responses, enabling personalized support without repetitive context gathering. SuperMemory stores conversation history, preferences, and resolved issues that your automation can query.
+## Test Generation with TDD Skill Instructions
 
-## Visual Content Generation with Canvas and Design Skills
+For a GitHub webhook workflow that auto-generates tests on push:
 
-The **canvas-design** skill generates visual assets programmatically. Use it with n8n to automate social media content, reports, and marketing materials.
+```
+Trigger: GitHub webhook (push event)
+→ Filter: only .js/.ts files changed
+→ HTTP Request (fetch changed file content from GitHub API)
+→ Code node (build tdd skill prompt)
+→ HTTP Request (Anthropic API)
+→ GitHub API (create PR comment with suggested tests)
+```
 
-Build a workflow that generates weekly report graphics:
+The tdd-skill Code node:
+
+```javascript
+const changedFile = $input.first().json.fileContent;
+const filePath = $input.first().json.filePath;
+
+const systemPrompt = `You are operating with the tdd skill active.
+Given source code, generate a complete test file using Jest.
+Follow these conventions:
+- One describe block per exported function
+- Cover happy path, edge cases, and error cases
+- Use descriptive test names in plain English
+Return only the test file content, no explanation.`;
+
+return {
+  json: {
+    systemPrompt,
+    userMessage: `Generate tests for ${filePath}:\n\n${changedFile}`
+  }
+};
+```
+
+## Memory-Augmented Workflows
+
+The supermemory skill maintains context across sessions inside Claude Code. For n8n workflows, you replicate this by storing and retrieving context yourself — typically in a database or n8n's built-in key-value store — and injecting it into the system prompt on each run.
+
+Customer support example:
+
+```javascript
+// Code node: load previous interactions from database
+const customerEmail = $input.first().json.email;
+const previousTickets = await $db.query(
+  'SELECT summary FROM tickets WHERE customer_email = ? ORDER BY created_at DESC LIMIT 5',
+  [customerEmail]
+);
+
+const contextSummary = previousTickets.map(t => t.summary).join('\n');
+
+const systemPrompt = `You are a support assistant.
+Previous interactions with this customer:
+${contextSummary}
+
+Use this history to provide continuity without asking the customer to repeat themselves.`;
+
+return {
+  json: {
+    systemPrompt,
+    userMessage: $input.first().json.newMessage
+  }
+};
+```
+
+## Report Generation with docx/pptx Skills
+
+For scheduled report generation:
 
 ```
 Trigger: Schedule (every Monday 9am)
-Action 1: Query database for weekly metrics
-Action 2: HTTP Request to canvas-design skill
-  - payload:
-      template: "weekly-report"
-      data: {
-        "users": "{{ $json.totalUsers }}",
-        "revenue": "{{ $json.revenue }}",
-        "growth": "{{ $json.growthRate }}"
-      }
-      format: "png"
-Action 3: Upload to S3 / Send via email
+→ HTTP Request (query your analytics API)
+→ Code node (build docx skill prompt with data)
+→ HTTP Request (Anthropic API)
+→ Code node (write response to .docx file or send via email)
 ```
 
-The canvas-design skill renders your data into branded templates automatically. You can also use the **frontend-design** skill to generate UI components or landing pages based on specifications from your n8n workflow.
+The docx skill prompt:
 
-## Web Testing Integration
+```javascript
+const metrics = $input.first().json.weeklyMetrics;
 
-The **webapp-testing** skill provides Playwright-based browser automation. Connect it to n8n for regression testing, screenshot capture, and UI validation in your deployment pipelines.
+const systemPrompt = `You are operating with the docx skill.
+Generate a Word document structure as markdown that can be converted to .docx.
+Use ## for section headings, | for tables, and **bold** for key metrics.`;
 
-```yaml
-Workflow: Post-deployment verification
-Trigger: Deployment completed (webhook from CI/CD)
-Action 1: HTTP Request to webapp-testing skill
-  - action: "test_suite"
-  - url: "https://staging.yourapp.com"
-  - tests:
-      - "homepage loads"
-      - "login flow works"
-      - "checkout completes"
-Action 2: If tests fail → Send Slack notification
-Action 3: If tests pass → Switch traffic to staging
+const userMessage = `Generate a weekly metrics report with this data:
+- Total users: ${metrics.users}
+- Revenue: $${metrics.revenue}
+- Conversion rate: ${metrics.conversionRate}%
+- Top 3 issues by volume: ${metrics.topIssues.join(', ')}`;
+
+return { json: { systemPrompt, userMessage } };
 ```
 
-This automation catches UI bugs before they reach production, reducing manual testing overhead.
+## Error Handling
 
-## Combining Multiple Skills
+n8n workflows calling the Anthropic API should handle:
 
-The real power emerges when chaining multiple Claude skills in a single n8n workflow. Consider a complete document processing pipeline:
+- **Rate limits (429):** Add a Wait node and retry with exponential backoff
+- **Context length errors (400):** Truncate input in the preceding Code node
+- **Empty or malformed JSON responses:** Validate with a Code node before downstream steps
 
-1. **Trigger**: New document uploaded to cloud storage
-2. **pdf skill**: Extract text and tables from the document
-3. **tdd skill**: Generate validation tests for the extracted data
-4. **supermemory skill**: Store results for future reference
-5. **canvas-design skill**: Generate a summary visualization
-6. **Action**: Send results to stakeholder
+```javascript
+// Code node: validate Anthropic response
+const responseContent = $input.first().json.content[0].text;
 
-Each skill handles its specialized task while n8n orchestrates the flow. This modular approach lets you build complex automations without writing custom code for each step.
+let parsed;
+try {
+  parsed = JSON.parse(responseContent);
+} catch (e) {
+  // Return error state for n8n error branch
+  return { json: { error: true, rawResponse: responseContent } };
+}
 
-## Getting Started
+return { json: { error: false, data: parsed } };
+```
 
-Start small by integrating one skill into an existing n8n workflow. The HTTP Request node connects to your local Claude Code instance running on port 11434. Most skills accept a JSON payload defining the action, input data, and parameters.
+## What to Expect
 
-As your automation needs grow, layer in additional skills for document processing, testing, design generation, and memory management. The combination of n8n's workflow capabilities with Claude's specialized skills creates a flexible foundation for intelligent process automation.
+n8n + Anthropic API is a proven, production-ready combination. The skill layer adds value by giving you tested, reusable system prompts for specific domains — document extraction, test generation, report formatting — rather than writing one-off prompts for each workflow. The skill `.md` file becomes the canonical source of the system prompt; update it once and all workflows that reference it pick up the change.
+
+---
 
 ---
 

@@ -1,188 +1,143 @@
 ---
-layout: default
+layout: post
 title: "Best Claude Skills for Code Review Automation"
-description: "Discover the top Claude skills for automating code review workflows: tdd, supermemory, docx, pdf, and more for efficient review processes."
+description: "Top Claude skills for automating code review: tdd, supermemory, pdf, and frontend-design with real invocation examples for faster, consistent PR reviews."
 date: 2026-03-13
-categories: [skills, guides]
+categories: [skills, workflows]
 tags: [claude-code, claude-skills, code-review, automation, tdd, supermemory]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
-score: 5
+score: 6
 ---
 
-Code review remains one of the most time-intensive activities in software development. Manually checking pull requests for style violations, security vulnerabilities, and architectural inconsistencies drains developer hours each week. Claude Code skills transform this bottleneck into an automated workflow, handling repetitive checks while you focus on logic and architecture. This guide covers the most effective Claude skills for code review automation, with practical examples you can implement today.
+# Best Claude Skills for Code Review Automation
 
-## Test-Driven Review with tdd Skill
+Code review is one of the most time-intensive activities in software development. Manually checking pull requests for style violations, security vulnerabilities, and architectural inconsistencies drains developer hours each week. Claude Code skills reduce this load by handling repetitive checks while you focus on logic and architecture.
 
-The tdd skill brings structured testing to your review pipeline. Rather than writing tests after code, this skill helps you build review checkpoints that validate code behavior automatically.
+Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`. Here are the skills that deliver the most value in code review workflows.
 
-```python
-# Using tdd skill for code review validation
-# Define review criteria as test cases
+## Test-Driven Review with the tdd Skill
 
-def review_security_checks(code):
-    """Verify authentication patterns are present"""
-    assert "authenticate" in code.lower() or "verify" in code.lower()
-    return True
+The `tdd` skill is the most direct tool for review automation. Rather than reviewing untested code and hoping for the best, use it to verify test coverage before approving a PR.
 
-def review_error_handling(code):
-    """Ensure proper exception handling exists"""
-    assert "try:" in code and ("except" in code or "finally" in code)
-    return True
+```
+/tdd analyze this pull request diff and identify which functions lack test coverage: [paste diff]
 ```
 
-The tdd skill integrates with existing CI/CD pipelines, generating review reports that highlight exactly which checks failed and why. Development teams using this approach report reducing manual review time by 40% while catching issues earlier in the cycle.
-
-## Documentation Validation with docx Skill
-
-The docx skill handles review of technical documentation embedded in pull requests. Many teams require API documentation updates with code changes, but manual review of markdown and docx files wastes time.
-
-```python
-# Automated doc review with docx skill
-# Check documentation completeness against code changes
-
-def validate_api_docs(doc_path, code_changes):
-    """Verify API endpoints are documented"""
-    doc = docx.Document(doc_path)
-    doc_text = "\n".join([p.text for p in doc.paragraphs])
-    
-    for endpoint in code_changes.get("endpoints", []):
-        if endpoint not in doc_text:
-            raise ReviewFailure(f"Missing documentation for {endpoint}")
+```
+/tdd write missing tests for UserService.resetPassword() based on this implementation: [paste function]
 ```
 
-This skill proves essential for teams maintaining external APIs or requiring compliance documentation. It catches missing parameter descriptions, outdated return types, and incomplete examples before they reach production.
-
-## PDF Specification Review with pdf Skill
-
-When reviewing code against PDF specifications or technical requirements, the pdf skill extracts relevant criteria automatically. Instead of manually cross-referencing code against 50-page specification documents, your review pipeline pulls requirements directly.
-
-```python
-# Extract requirements from specification PDFs
-# Compare against implementation
-
-def extract_requirements(spec_path):
-    """Pull functional requirements from specification"""
-    requirements = []
-    # pdf skill identifies numbered requirements
-    # and extracts acceptance criteria
-    return requirements
-
-def validate_against_spec(code, spec_path):
-    """Verify implementation matches specification"""
-    reqs = extract_requirements(spec_path)
-    for req in reqs:
-        if not satisfies_requirement(code, req):
-            report_gap(req)
+```
+/tdd check this test suite for common coverage gaps: no boundary tests, no error path tests, missing async error handling
 ```
 
-This approach eliminates the common problem of implementation drift, where code evolves away from original requirements without anyone noticing.
+Development teams using this approach report catching coverage gaps before merge that would otherwise surface as production bugs. The skill suggests specific edge cases based on the code pattern — numeric boundary conditions, null inputs, async failure paths — rather than generic advice.
 
-## Knowledge Context with supermemory Skill
+## Reviewing Against Specifications with the pdf Skill
 
-The supermemory skill maintains institutional knowledge across reviews. It remembers previous decisions, established patterns, and team conventions, applying them consistently to new pull requests.
+When code must implement a PDF specification or comply with requirements documents, manual cross-referencing is tedious and error-prone. The `pdf` skill extracts the requirements so you can review against them directly.
 
-```python
-# supermemory for consistent review standards
-# Recall team conventions and past decisions
-
-def check_conventions(pull_request):
-    """Apply team coding standards from memory"""
-    conventions = supermemory.recall("coding_conventions")
-    violations = []
-    
-    for file in pull_request.changed_files:
-        if file.violates(conventions):
-            violations.append(file.violation_details)
-    
-    return violations
+```
+/pdf extract all numbered requirements from api-spec-v2.pdf
 ```
 
-Teams using supermemory eliminate inconsistent reviews where one developer flags issues another would have approved. The skill builds a searchable knowledge base of past review decisions, making it easy to reference how similar issues were handled previously.
+Then in the same session:
 
-## Code Pattern Detection with regex and analysis
-
-While not a dedicated skill, combining Claude's built-in analysis with pattern matching catches common issues efficiently.
-
-```python
-# Automated pattern detection in code review
-# Identify security risks, performance issues, code smells
-
-patterns = {
-    "sql_injection": r".*execute\s*\(\s*f['\"]",
-    "hardcoded_secret": r"password\s*=\s*['\"][^'\"]+['\"]",
-    "console_log_production": r"console\.(log|debug)\(",
-    "nested_callbacks": r"\.then\(.+\.then\("
-}
-
-def scan_for_patterns(code, patterns):
-    """Find problematic patterns in code"""
-    findings = []
-    for pattern_name, regex in patterns.items():
-        if re.search(regex, code):
-            findings.append(pattern_name)
-    return findings
+```
+/tdd verify this implementation satisfies requirements 4.1 through 4.7 from the spec: [paste requirements, paste implementation]
 ```
 
-This approach scales across large codebases, identifying issues that human reviewers might miss when fatigue sets in after reviewing dozens of files.
+This catches implementation drift — where code evolves away from original requirements across multiple PRs without anyone tracking the gap.
 
-## Frontend Validation with frontend-design Skill
+## Documentation Completeness with the docx Skill
 
-For web applications, the frontend-design skill validates UI code against design specifications. When design files accompany pull requests, this skill extracts specs and verifies implementation matches.
+Many teams require documentation updates alongside code changes. The `docx` skill reads and creates Word documents, which is useful when your PR process involves reviewing `.docx` API references or runbooks.
 
-```javascript
-// Frontend review automation
-// Validate component implementations against design tokens
-
-function validateDesignTokens(code, designSpec) {
-  const requiredTokens = designSpec.colors.map(c => c.hex);
-  const usedColors = extractColorValues(code);
-  
-  const invalid = usedColors.filter(c => !requiredTokens.includes(c));
-  if (invalid.length > 0) {
-    return { valid: false, invalidColors: invalid };
-  }
-  return { valid: true };
-}
+```
+/docx read API-reference-v3.docx and list all endpoints documented there
 ```
 
-This catches visual inconsistencies before they reach users, ensuring brand guidelines and design system rules are followed across all components.
+Compare the output against the endpoints in the PR diff:
 
-## Putting It All Together
-
-The real power emerges when combining these skills into a unified review pipeline. A typical automated review flow might look like:
-
-1. **tdd** validates code passes all testable requirements
-2. **docx** checks documentation completeness
-3. **pdf** verifies implementation against specifications
-4. **supermemory** applies team conventions and recalls past decisions
-5. **Pattern analysis** catches security and performance issues
-6. **frontend-design** validates UI implementation
-
-```yaml
-# Example review pipeline configuration
-review_stages:
-  - name: requirements_validation
-    skills: [tdd, pdf]
-  - name: documentation_check
-    skills: [docx]
-  - name: convention_enforcement
-    skills: [supermemory]
-  - name: security_scan
-    method: pattern_analysis
-  - name: frontend_review
-    skills: [frontend-design]
+```
+Are these new endpoints from the PR documented in the API reference?
+New endpoints: POST /users/bulk, DELETE /users/{id}/sessions
+Documented endpoints: [paste docx output]
 ```
 
-Each stage generates actionable feedback, reducing the time developers spend on repetitive checks. The result: faster reviews, more consistent quality, and developers focusing their attention on what truly matters—logic, architecture, and user value.
+For teams maintaining external APIs or compliance documentation, this prevents missing parameter descriptions and stale return types from reaching external consumers.
+
+## Consistent Standards with the supermemory Skill
+
+The `supermemory` skill maintains institutional knowledge across review sessions. Store your team's established conventions once, then recall them in every review.
+
+```
+/supermemory store: code-review-standards = no console.log in production code, all async functions must have try/catch, use named exports not default exports, SQL queries must use parameterized inputs
+```
+
+In a future review session:
+
+```
+/supermemory recall code-review-standards
+```
+
+Then apply them:
+
+```
+Review this PR diff against our standards: [paste recalled standards]
+Diff: [paste diff]
+Flag every violation.
+```
+
+This eliminates the inconsistency where one reviewer flags issues another would have ignored. The stored conventions become the shared baseline.
+
+## Frontend Validation with the frontend-design Skill
+
+For web application PRs, the `frontend-design` skill validates UI code against design system rules and accessibility requirements.
+
+```
+/frontend-design review this component for design token violations — our primary color is #1A73E8, spacing grid is 8px, border radius is 4px: [paste component]
+```
+
+```
+/frontend-design check this React component for WCAG 2.1 AA issues: missing aria labels, low contrast, keyboard navigation gaps: [paste component]
+```
+
+This catches visual inconsistencies before they reach production, keeping brand guidelines and design system rules enforced across all components.
+
+## A Practical Review Pipeline
+
+Combining these skills into a structured review workflow produces consistent results:
+
+**Step 1 — Recall team standards:**
+```
+/supermemory recall code-review-standards
+```
+
+**Step 2 — Check coverage:**
+```
+/tdd analyze coverage gaps in this diff: [paste diff]
+```
+
+**Step 3 — Verify spec compliance (if applicable):**
+```
+/pdf extract requirements from requirements.pdf
+```
+Then cross-reference against the implementation.
+
+**Step 4 — Validate frontend (if applicable):**
+```
+/frontend-design check for design token and accessibility violations: [paste changed components]
+```
+
+**Step 5 — Store any new decisions:**
+```
+/supermemory store: [date] decided to allow default exports in legacy modules only, new modules use named exports
+```
+
+Each stage produces specific, actionable findings. The result is faster reviews with fewer inconsistencies, and a growing institutional memory that makes each subsequent review easier.
 
 ---
 
-## Related Reading
-
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
-
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)*

@@ -1,173 +1,217 @@
 ---
-layout: default
+layout: post
 title: "Top 10 Free Claude Code Skills for GitHub Projects"
-description: "Discover the best free Claude Code skills that integrate with GitHub workflows. From PDF processing to TDD and frontend design verification, these skills boost developer productivity."
+description: "The best free Claude Code skills for GitHub workflows: PDF processing, TDD, frontend design, webapp testing, and more. How to invoke each one."
 date: 2026-03-13
-author: theluckystrike
+categories: [skills]
+tags: [claude-code, claude-skills, github, tdd, pdf, frontend-design, free-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 6
 ---
 
 # Top 10 Free Claude Code Skills for GitHub Projects
 
-Claude Code skills transform how you work with GitHub repositories. These community-built and officially supported skills handle everything from document processing to test-driven development, and they're all free to use. Here's a curated list of ten skills that integrate seamlessly with your GitHub workflow.
+Claude Code skills are `.md` files stored in `~/.claude/skills/`. You invoke them with a slash command inside a Claude Code session. This list covers ten skills that add genuine value to GitHub-based development workflows — each one free to use.
 
-## 1. PDF Skill for Documentation Handling
+## How to Invoke Skills
 
-The **pdf** skill processes invoices, technical specifications, and documentation directly in your Claude session. For GitHub projects, this becomes invaluable when reviewing pull requests that include PDF documentation or generating release notes.
+Every skill on this list is invoked the same way: type `/skill-name` in your Claude Code session to activate it, then continue with your request.
 
-```bash
-# Using the pdf skill to extract text from a specification
-# Simply invoke the skill and process your document
-Skill: pdf
+```
+/pdf
+Extract the vendor name, invoice number, and total from this document: [paste content]
 ```
 
-The skill supports text extraction, table detection, form filling, and document creation. Developers automating release processes use this to parse changelog PDFs or extract requirements from specification documents.
+There is no separate marketplace install step — skills are `.md` files you place in `~/.claude/skills/` or that come bundled with Claude Code.
 
-## 2. TDD Skill for Test-Driven Development
+---
 
-The **tdd** skill enforces test-first development patterns. It generates test cases before implementation, ensuring your GitHub CI/CD pipeline catches issues early.
+## 1. PDF Skill — Documentation and Document Handling
 
-```python
-# Example: Using tdd skill to generate tests
-# The skill analyzes your function signature and creates comprehensive tests
+The `pdf` skill processes invoices, technical specifications, and documentation directly in your Claude session.
+
+```
+/pdf
+Extract all API endpoints and their parameters from this spec PDF: [paste content or path]
+```
+
+The skill handles text extraction, table detection, and structured data output. Useful when reviewing PRs that reference PDF specifications or generating release notes from PDF changelogs.
+
+---
+
+## 2. TDD Skill — Test-Driven Development
+
+The `tdd` skill generates test cases before implementation, enforcing test-first patterns.
+
+```
+/tdd
+Write tests for this function before I implement it:
 
 def calculate_pricing(items: list[dict]) -> float:
     """Calculate total pricing with discounts"""
     pass
+```
 
-# TDD skill generates:
+Claude with `tdd` active will produce:
+
+```python
 def test_calculate_pricing_empty_list():
     assert calculate_pricing([]) == 0.0
 
 def test_calculate_pricing_single_item():
-    assert calculate_pricing([{"price": 10}]) == 10.0
+    assert calculate_pricing([{"price": 10.0}]) == 10.0
+
+def test_calculate_pricing_negative_price():
+    with pytest.raises(ValueError):
+        calculate_pricing([{"price": -5.0}])
 ```
 
-This skill works with pytest, unittest, and Jest, making it versatile across Python, JavaScript, and TypeScript projects.
+Works with pytest, unittest, and Jest across Python, JavaScript, and TypeScript projects.
 
-## 3. Frontend Design Skill for UI Verification
+---
 
-The **frontend-design** skill validates your UI implementations against design specifications. When reviewing GitHub PRs, you can verify that the frontend matches expected layouts, color schemes, and component structures.
+## 3. Frontend Design Skill — UI Verification
 
-```bash
-# Verify a component matches design specifications
-Skill: frontend-design
-Analyze the Button component in components/Button.tsx
-against the design specs in figma/design-system.md
+The `frontend-design` skill validates UI code against design specifications and catches common React issues.
+
+```
+/frontend-design
+Review the Button component in components/Button.tsx.
+Check for missing aria attributes, prop-type issues, and useEffect dependency errors.
 ```
 
-This skill supports React, Vue, and vanilla HTML/CSS projects, and integrates with storybook for component documentation.
+The skill catches problems like:
 
-## 4. Supermemory Skill for Context Management
-
-The **supermemory** skill maintains project context across sessions. It indexes your GitHub repository, issues, and PRs, enabling Claude to answer questions about your codebase without repeated context loading.
-
-```bash
-# Initialize supermemory for your repo
-Skill: supermemory
-Index the current repository for project context
+```jsx
+// frontend-design flags the empty dependency array
+useEffect(() => {
+    fetchUser(userId).then(setUser);
+}, []); // Missing userId dependency
 ```
 
-This skill is particularly useful for onboarding new team members or resuming work after weekends. It stores embeddings locally and respects your privacy.
+Supports React, Vue, and vanilla HTML/CSS projects.
 
-## 5. Webapp Testing Skill for Playwright Integration
+---
 
-The **webapp-testing** skill automates browser testing using Playwright. For GitHub Actions workflows, this skill can validate that your web application functions correctly before merging PRs.
+## 4. Supermemory Skill — Context Across Sessions
 
-```javascript
-// Using webapp-testing skill to verify login flow
-Skill: webapp-testing
+The `supermemory` skill maintains project context across Claude Code sessions, so you don't re-explain your stack every time you return to a project.
+
+```
+/supermemory
+Remember: this repo uses React 18, TypeScript, Vite, and Tailwind.
+Components are in src/components/. Custom hooks in src/hooks/.
+```
+
+On subsequent sessions, invoke `/supermemory` at the start and Claude loads your stored project context automatically.
+
+---
+
+## 5. Webapp Testing Skill — Playwright Integration
+
+The `webapp-testing` skill drives Playwright-based browser testing through natural language instructions.
+
+```
+/webapp-testing
 Navigate to http://localhost:3000/login
-Fill username field with "testuser"
-Fill password field with "testpass123"
-Click submit button
-Verify redirect to /dashboard
+Fill the username field with "testuser" and password with "testpass123"
+Click the submit button
+Verify the page redirects to /dashboard
 ```
 
-This skill handles authentication flows, form submissions, and complex user interactions without writing boilerplate test code.
+Useful for validating login flows, form submissions, and user journeys before merging PRs. Integrate into GitHub Actions by running Claude Code non-interactively with `claude --print`.
 
-## 6. Spreadsheet Skill for Data Operations
+---
 
-The **xlsx** skill manipulates spreadsheets programmatically. When your GitHub project involves data exports, financial reports, or metrics tracking, this skill automates the heavy lifting.
+## 6. Spreadsheet Skill — Data Operations
 
-```python
-# Using xlsx skill to generate a project status report
-Skill: xlsx
-Create a spreadsheet with:
-- Sheet 1: Sprint metrics (velocity, completed, in-progress)
-- Sheet 2: Bug counts by severity
-- Apply formatting: green for resolved, red for critical
+The `xlsx` skill creates and modifies spreadsheets, applies formulas, and formats data.
+
+```
+/xlsx
+Create a spreadsheet with two sheets:
+- Sheet 1: Sprint metrics with columns: Story, Points, Status
+- Sheet 2: Bug counts with severity levels (Critical, High, Medium, Low)
+Apply conditional formatting: red background for Critical, yellow for High
 ```
 
-The skill supports .xlsx, .xlsm, .csv, and .tsv formats with full formula support.
+Supports `.xlsx`, `.xlsm`, `.csv`, and `.tsv` with full formula support.
 
-## 7. Presentation Skill for Documentation
+---
 
-The **pptx** skill creates slide decks from structured data. Use it to generate project update presentations, architecture reviews, or sprint demos directly from your GitHub issues.
+## 7. Presentation Skill — Slide Decks
 
-```bash
-# Generate a presentation from project milestones
-Skill: pptx
-Create slides from milestones.md
-Use corporate template at templates/quarterly.pptx
+The `pptx` skill generates PowerPoint presentations from structured content.
+
+```
+/pptx
+Create a sprint retrospective deck from milestones.md
+Use the template at templates/quarterly.pptx for branding
 ```
 
-This skill integrates with your existing PowerPoint templates, maintaining brand consistency across organizational presentations.
+Integrates with existing PowerPoint templates, preserving corporate formatting and theme consistency.
 
-## 8. Document Skill for Word Processing
+---
 
-The **docx** skill handles Microsoft Word document generation and editing. For requirements documents, technical specs, or API documentation, this skill automates formatting and content organization.
+## 8. Document Skill — Word Processing
 
-```bash
-# Generate API documentation as a Word document
-Skill: docx
-Create document "API Reference"
-Include endpoints from openapi.yaml
-Apply heading styles automatically
+The `docx` skill handles Microsoft Word document generation and editing.
+
+```
+/docx
+Create an API reference document.
+Pull endpoint definitions from openapi.yaml.
+Apply heading styles automatically and include a table of contents.
 ```
 
-The skill preserves tracked changes, comments, and complex formatting—useful for collaborative technical writing workflows.
+The skill preserves tracked changes and comments — useful for collaborative technical writing.
 
-## 9. Canvas Design Skill for Visual Assets
+---
 
-The **canvas-design** skill generates visual assets like diagrams, flowcharts, and infographics. For README files, architecture documents, or technical blog posts, you can create custom visuals without external tools.
+## 9. Canvas Design Skill — Visual Assets
 
-```bash
-# Create a system architecture diagram
-Skill: canvas-design
-Generate architecture diagram showing:
-- Frontend (React) -> API Gateway -> Microservices
-- Include labels and arrows
-- Output as PNG
+The `canvas-design` skill generates diagrams, flowcharts, and visual assets as code (SVG, canvas instructions, or structured descriptions for rendering).
+
+```
+/canvas-design
+Generate an architecture diagram showing:
+Frontend (React) → API Gateway → three microservices (auth, billing, notifications)
+Include arrows and service labels. Output as SVG.
 ```
 
-This skill produces publication-ready images in PNG and PDF formats.
+Use this for README diagrams, architecture documentation, and technical blog posts.
 
-## 10. Algorithmic Art Skill for Creative Visualizations
+---
 
-The **algorithmic-art** skill creates generative art and data visualizations. While more niche, it serves projects needing unique visualizations, loading animations, or creative brand assets.
+## 10. Algorithmic Art Skill — Generative Visualizations
 
-```bash
-# Generate a flow field visualization
-Skill: algorithmic-art
-Create flow field with:
-- Seed: project-name-v1
-- Color palette: cool blues
-- Output as SVG
+The `algorithmic-art` skill creates generative art and data visualizations, primarily using p5.js.
+
+```
+/algorithmic-art
+Create a flow field visualization.
+Seed: "project-v1" (for reproducibility)
+Color palette: cool blues (#1a3a5c, #2e6da4, #4a9fd4)
+Output: p5.js sketch as JavaScript
 ```
 
-This skill uses p5.js with seeded randomness, ensuring reproducible results across renders.
+Seeded randomness ensures you get the same output on every render — useful for branded assets that need to be reproducible.
 
-## Choosing the Right Skills for Your Workflow
+---
 
-Not every skill fits every project. Here's a quick decision framework:
+## Choosing Skills for Your Workflow
 
-- **Documentation-heavy projects**: Prioritize pdf, docx, and xlsx skills
-- **Web applications**: frontend-design, webapp-testing, and pptx for demos
-- **API development**: tdd for test coverage, docx for OpenAPI documentation
-- **Data pipelines**: xlsx for exports, canvas-design for reporting
+| Project type | Start with |
+|---|---|
+| Documentation-heavy | `pdf`, `docx`, `xlsx` |
+| Web applications | `frontend-design`, `webapp-testing`, `pptx` |
+| API development | `tdd`, `docx` |
+| Data pipelines | `xlsx`, `canvas-design` |
+| Long-running projects | `supermemory` (always) |
 
-Most developers find that installing three to five skills covers 80% of their daily work. You can always explore additional skills as your needs evolve.
+Most developers find three to five skills covers the majority of daily work. Install skills by placing their `.md` files in `~/.claude/skills/` — official skills ship with Claude Code; community skills are available on GitHub.
 
-These ten skills represent the most practical additions to your Claude Code setup. They handle real-world development scenarios without requiring paid subscriptions or external services. Install them through the Claude skills marketplace and start integrating them into your GitHub workflow today.
+---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

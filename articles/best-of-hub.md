@@ -1,12 +1,13 @@
 ---
-layout: default
-title: "Best Claude Code Skills 2026: Complete Rankings & Guide"
-description: "The definitive ranking of the best Claude Code skills in 2026. Covers top skills for developers, data analysts, DevOps teams, and power users."
+layout: post
+title: "Best Claude Code Skills 2026: Complete Rankings"
+description: "Ranked guide to the best Claude Code skills in 2026. Top picks for developers, data analysts, DevOps teams, and power users with skill comparisons."
 date: 2026-03-13
-author: theluckystrike
-is_pillar: true
-categories: [hub]
-tags: [best-of, claude-skills, claude-code]
+categories: [guides, tutorials]
+tags: [claude-code, claude-skills, best-of]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Best Claude Code Skills 2026: Complete Rankings

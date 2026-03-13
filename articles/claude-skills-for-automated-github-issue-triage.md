@@ -1,16 +1,22 @@
 ---
-layout: default
-title: "Claude Skills for Automated GitHub Issue Triage"
-description: "Learn how to use Claude skills to automate GitHub issue triage, labeling, and prioritization workflows. Practical examples with code snippets."
+layout: post
+title: "Automated GitHub Issue Triage with Claude Skills"
+description: "Automate GitHub issue triage, labeling, and prioritization with Claude Code skills. Practical examples using gh CLI, GitHub Actions, and supermemory."
 date: 2026-03-13
-author: theluckystrike
+categories: [workflows, tutorials]
+tags: [claude-code, claude-skills, github, issue-triage, automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
-# Claude Skills for Automated GitHub Issue Triage
+# Automated GitHub Issue Triage with Claude Skills
 
 Managing GitHub issues at scale quickly becomes overwhelming. When your repository accumulates hundreds of issues, manually triaging each one—categorizing, labeling, assigning priority, and routing to the right maintainers—eats away development time. Claude skills offer a practical solution by automating these workflows while maintaining accuracy.
 
 This guide covers how to build an automated GitHub issue triage system using Claude skills, with concrete examples you can adapt to your project.
+
+Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. They give Claude standing instructions for recurring tasks without requiring you to re-explain the context each time.
 
 ## Understanding the Triage Pipeline
 
@@ -21,58 +27,70 @@ Before implementing automation, identify the stages where Claude skills add valu
 3. **Priority assessment** — Issues are ranked by severity or impact
 4. **Routing** — Issues get assigned to appropriate team members or projects
 
-Each stage can leverage different Claude skills to process the issue content intelligently.
+Each stage can leverage Claude skills to process the issue content intelligently.
 
 ## Extracting Issue Content with Claude Code
 
-The foundation of automated triage is reading issue data reliably. Claude Code provides several ways to access GitHub issues:
+The foundation of automated triage is reading issue data reliably. Claude Code can fetch issue data directly via the GitHub CLI:
 
 ```bash
-# Using GitHub CLI to fetch issue details
-gh issue view 123 --json title,body,labels,author > issue_123.json
+# Fetch issue details as structured JSON
+gh issue view 123 --json title,body,labels,author,reactions > issue_123.json
+
+# List all open unlabeled issues
+gh issue list --label "" --json number,title,body --limit 50 > unlabeled_issues.json
 ```
 
-Once you have the issue data, the **pdf** skill proves useful when issues reference attached documentation or screenshots that need analysis. Even though PDFs aren't common in issues directly, many bug reports include PDF stack traces or technical specifications.
+With the data in hand, you can paste it into a Claude Code session or reference the file directly.
 
-For text processing, the **xlsx** skill helps when your triage system needs to cross-reference issue data with spreadsheets containing release schedules or milestone information.
+## Creating a Triage Skill
 
-## Classifying Issues with Natural Language Skills
+Build a custom triage skill at `~/.claude/skills/issue-triage.md`:
 
-The real power of Claude skills lies in understanding issue content. Consider this Python-based triage workflow:
+```markdown
+# Issue Triage
 
-```python
-import anthropic
+Classify and label GitHub issues systematically.
 
-def classify_issue(title, body):
-    """Use Claude to classify issue content."""
-    client = anthropic.Anthropic()
-    
-    prompt = f"""Analyze this GitHub issue and classify it:
-    
-Title: {title}
-Body: {body}
+## Instructions
 
-Respond with JSON containing:
-- type: "bug", "feature", "question", or "other"
-- priority: "high", "medium", "low"
-- labels: array of suggested labels
-- assignee: suggested team member or "unassigned"
-"""
-    
-    response = client.messages.create(
-        model="claude-3-5-sonnet-20241022",
-        max_tokens=500,
-        prompt=prompt
-    )
-    
-    return parse_response(response)
+Given an issue title and body:
+1. Determine issue type: bug, feature-request, question, documentation, or needs-info
+2. Assess priority: high (data loss, crash, security), medium (functional bug, common use case), low (enhancement, cosmetic)
+3. Suggest labels from the project's label set
+4. Identify if a "needs-information" label is warranted (missing steps to reproduce, vague description)
+5. Suggest an assignee if the affected area maps to a known owner
+
+Output a JSON block with: type, priority, labels[], assignee, comment_if_needed
 ```
 
-This pattern works because Claude understands context. A vague title like "App crashes" gets analyzed against the body content to determine whether it's a `bug` requiring `high` priority, or if more information is needed.
+Invoke it against a batch of issues:
+
+```
+/issue-triage
+Here are 10 unlabeled issues from our repository. Classify each one.
+
+[paste issue JSON from gh issue list output]
+```
+
+## Applying Labels with GitHub CLI
+
+Once Claude provides triage decisions, apply them programmatically:
+
+```bash
+# Apply labels from triage output
+gh issue edit 123 --add-label "bug,high-priority"
+
+# Add a comment requesting more information
+gh issue comment 123 --body "Thanks for the report! Could you share steps to reproduce this issue and the version of the library you're using?"
+
+# Close a duplicate
+gh issue close 456 --comment "Closing as duplicate of #123"
+```
 
 ## Integrating with GitHub Actions
 
-Combine Claude-powered classification with GitHub Actions for a complete automated pipeline:
+For a fully automated pipeline, combine shell-based triage with GitHub Actions:
 
 ```yaml
 name: Issue Triage
@@ -87,92 +105,92 @@ jobs:
       - name: Fetch issue data
         id: issue
         run: |
-          echo 'title=${{ github.event.issue.title }}' >> $GITHUB_OUTPUT
-          echo 'body=${{ github.event.issue.body }}' >> $GITHUB_OUTPUT
-      
-      - name: Classify with Claude
-        id: classify
+          gh issue view ${{ github.event.issue.number }} \
+            --json title,body,labels,reactions \
+            --repo ${{ github.repository }} > issue_data.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Classify and label
         run: |
-          # Call your classification function
-          result=$(python triage_classifier.py "${{ steps.issue.outputs.title }}" "${{ steps.issue.outputs.body }}")
-          echo "labels=$result" >> $GITHUB_OUTPUT
-      
-      - name: Apply labels
-        uses: actions-ecosystem/action-add-labels@v1
-        with:
-          labels: ${{ steps.classify.outputs.labels }}
+          # Call your classification script
+          python triage_classifier.py issue_data.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 ```
+
+The classification script uses Claude's API to analyze the issue, then applies labels via `gh issue edit`. This is separate from Claude skills—it's a standalone script that calls the Anthropic API programmatically for a server-side automation task.
 
 ## Practical Triage Rules
 
-Rather than relying entirely on AI, establish rules that Claude can apply consistently:
+Rather than relying entirely on AI classification, establish rules that can be applied consistently:
 
 **Bug detection** — Issues containing error messages, stack traces, or words like "crashes", "broken", "fails" receive the `bug` label automatically.
 
 **Feature requests** — Body text containing "should add", "would be nice", "implement", or "new feature" gets tagged as `enhancement`.
 
-**Priority scoring** — Issues with many reactions or comments from multiple users indicate community priority. The **supermemory** skill can track historical issue resolution times to estimate when a request might be addressed.
+**Priority scoring** — Issues with many reactions or comments from multiple users indicate community priority:
 
 ```python
 def calculate_priority(issue_data):
     """Score issue priority based on multiple factors."""
     score = 0
-    
-    # Factor 1: Issue author reputation
+
     if issue_data['author_association'] == 'MEMBER':
         score += 2
     elif issue_data['author_association'] == 'CONTRIBUTOR':
         score += 1
-    
-    # Factor 2: Community interest
+
     score += min(issue_data['reactions']['+1'] / 5, 3)
-    
-    # Factor 3: Reproducibility indicators
-    if issue_data['body'].lower().count('steps to reproduce') > 0:
+
+    if 'steps to reproduce' in issue_data['body'].lower():
         score += 1
-    
+
     return 'high' if score >= 4 else 'medium' if score >= 2 else 'low'
 ```
 
-## Handling Edge Cases
+## Using supermemory for Pattern Tracking
 
-Automated triage requires human oversight for certain scenarios:
+The **supermemory** skill tracks historical patterns across triage sessions. Invoke it to record what you learn:
 
-**Duplicate detection** — Before creating new labels, check for existing issues covering the same topic. Claude can compare issue similarity:
-
-```python
-def find_duplicates(new_issue, existing_issues):
-    """Find potential duplicate issues."""
-    client = anthropic.Anthropic()
-    
-    similar = []
-    for existing in existing_issues:
-        similarity = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
-            max_tokens=100,
-            prompt=f"Are these two issues duplicates? Issue 1: {new_issue['title']}. Issue 2: {existing['title']}. Respond YES or NO."
-        )
-        if similarity.text.strip().upper() == "YES":
-            similar.append(existing['number'])
-    
-    return similar
+```
+/supermemory store: issues mentioning "authentication" are usually assigned to @sarah - she owns the auth module
+/supermemory store: "export fails" issues are almost always the CSV encoder - label them bug + csv-export
+/supermemory find: which labels does the payments module use?
 ```
 
-**Needs more info** — Issues lacking reproduction steps or clear descriptions get a `needs-information` label and a polite comment requesting details.
+Over time, supermemory builds a reference that makes triage faster and more consistent.
 
-## Skills Worth Integrating
+## Handling Edge Cases
 
-For a robust triage system, these Claude skills provide specialized capabilities:
+**Duplicate detection** — Before labeling a new issue, search for existing ones:
 
-- **tdd** — When issues describe desired behavior, generate test cases automatically
-- **frontend-design** — UI bug reports get analyzed for design consistency issues
-- **webapp-testing** — Reproduce reported bugs by running the application and attempting to trigger the described behavior
+```bash
+# Search for potentially duplicate issues
+gh issue list --search "authentication token expires" --json number,title
+```
 
-Each skill handles specific aspects of the triage workflow, reducing manual effort while maintaining quality.
+Pass the results to Claude Code for similarity assessment:
+
+```
+/issue-triage
+New issue title: "JWT tokens expire too quickly"
+Existing open issues on this topic: [paste list]
+Are any of these duplicates? If so, which one should we close as a duplicate of which?
+```
+
+**Needs more info** — Issues lacking reproduction steps get a `needs-information` label and a polite comment. Your triage skill's output includes a `comment_if_needed` field—use that text with `gh issue comment`.
+
+## Skills Worth Adding to Your Triage Workflow
+
+- **tdd** — When issues describe desired behavior, use `/tdd` to generate test cases that capture the expected functionality
+- **webapp-testing** — For UI bug reports, use `/webapp-testing` to attempt reproducing the described behavior against a local dev server
+- **supermemory** — Maintains ongoing context about issue patterns, module owners, and historical resolution times
 
 ## Monitoring and Iteration
 
-Track your triage accuracy over time. Log when humans override Claude-generated labels and use that data to refine your classification prompts. A simple feedback loop:
+Track triage accuracy over time. Log when humans override AI-generated labels:
 
 ```python
 def log_triage_feedback(issue_id, ai_labels, human_labels):
@@ -181,11 +199,11 @@ def log_triage_feedback(issue_id, ai_labels, human_labels):
         f.write(f"{issue_id}: {ai_labels} -> {human_labels}\n")
 ```
 
-Review these logs weekly. Patterns emerge—perhaps Claude consistently misclassifies certain issue types, or priority scoring needs adjustment based on your team's velocity.
+Review these logs monthly. Patterns emerge—perhaps certain issue types are consistently misclassified, or priority scoring needs adjustment based on your team's actual velocity.
 
 ## Summary
 
-Automated GitHub issue triage using Claude skills reduces maintainer burden while ensuring consistent classification. Start with simple rule-based labeling, then layer in AI-powered classification for nuanced decisions. Integrate with GitHub Actions for seamless automation, and maintain a feedback loop for continuous improvement.
+Automated GitHub issue triage using Claude skills reduces maintainer burden while ensuring consistent classification. Start with a custom `/issue-triage` skill for interactive triage sessions, then layer in GitHub Actions for automated labeling on new issues. Use supermemory to accumulate pattern knowledge, and maintain a feedback loop for continuous improvement.
 
 The initial investment pays dividends as your issue queue grows. What once required hours of manual triage becomes a background process that keeps your project organized and helps contributors get their issues addressed faster.
 
