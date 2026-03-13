@@ -18,7 +18,7 @@ Building Spring Boot applications and Java microservices becomes significantly m
 
 Before diving into microservices development, ensure your local environment is properly configured. You'll need Java 17 or later, Maven or Gradle, and Docker for containerization. Claude Code can help you verify your setup and troubleshoot common configuration issues.
 
-The foundation of any Spring Boot project starts with proper dependency management. Using the **tdd skill** ensures your tests drive your implementation, while the **pdf skill** helps generate API documentation automatically from your code annotations.
+The foundation of any Spring Boot project starts with proper dependency management. Using the [**tdd skill**](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) ensures your tests drive your implementation, while the [**pdf skill**](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) helps generate API documentation automatically from your code annotations.
 
 ## Creating Your First Microservice
 
@@ -95,7 +95,7 @@ public class OrderService {
 
 Externalized configuration is essential for microservices. Spring Cloud Config Server provides centralized configuration management across your services. Store your configuration files in a Git repository and let clients pull their settings at startup.
 
-The **supermemory skill** helps you maintain context across configuration changes, tracking which services use which properties and alerting you to potential conflicts during updates.
+The [**supermemory skill**](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) helps you maintain context across configuration changes, tracking which services use which properties and alerting you to potential conflicts during updates.
 
 ## Containerization with Docker
 

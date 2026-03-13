@@ -75,7 +75,7 @@ Make the script executable: `chmod +x deploy.sh`
 
 ## Integrating Claude Skills into Your Workflow
 
-The `/tdd` skill adds value to your deployment pipeline by reviewing test coverage before deployment. In a Claude Code session before deploying:
+The [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) adds value to your deployment pipeline by reviewing test coverage before deployment. In a Claude Code session before deploying:
 
 ```
 /tdd
@@ -132,7 +132,7 @@ jobs:
 
 ## Using Claude Skills for Deployment Documentation
 
-After each deployment, use `/pdf` to generate a deployment summary:
+After each deployment, use [`/pdf`](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) to generate a deployment summary:
 
 ```
 /pdf
@@ -143,7 +143,7 @@ Create a deployment summary document from:
 Save to docs/deployments/2026-03-13-v1.2.3.pdf
 ```
 
-Track deployment history across sessions with `/supermemory`:
+Track deployment history across sessions with [`/supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/):
 
 ```
 /supermemory

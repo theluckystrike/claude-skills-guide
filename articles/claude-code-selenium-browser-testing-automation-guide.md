@@ -123,9 +123,9 @@ pytest tests/ -n auto --dist loadfile
 
 ## Leveraging Claude Skills for Enhanced Testing
 
-Several Claude skills complement Selenium testing workflows. The frontend-design skill helps you understand CSS selectors and web element hierarchies, making your locators more resilient to UI changes. When building tests for complex interfaces, this skill provides insights into semantic HTML structure.
+Several Claude skills complement Selenium testing workflows. The [frontend-design skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) helps you understand CSS selectors and web element hierarchies, making your locators more resilient to UI changes. When building tests for complex interfaces, this skill provides insights into semantic HTML structure.
 
-The tdd (Test-Driven Development) skill integrates seamlessly with Selenium projects. It guides you through writing tests before implementation, ensuring your application code meets testable requirements from the start.
+The [tdd (Test-Driven Development) skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) integrates seamlessly with Selenium projects. It guides you through writing tests before implementation, ensuring your application code meets testable requirements from the start.
 
 For documentation purposes, use the docx skill to generate test reports in Word format. The xlsx skill helps you create spreadsheets tracking test coverage, execution times, and bug correlations.
 

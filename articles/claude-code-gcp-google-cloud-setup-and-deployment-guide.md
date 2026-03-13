@@ -39,7 +39,7 @@ The integration relies on Claude Code's ability to execute shell commands, which
 
 ## Deploying to Cloud Run with Claude Code
 
-Cloud Run is GCP's serverless container platform. Claude Code can generate Dockerfiles, build container images, and deploy directly to Cloud Run. Use the `/tdd` skill for testing your containerized application before deployment.
+Cloud Run is GCP's serverless container platform. Claude Code can generate Dockerfiles, build container images, and deploy directly to Cloud Run. Use the [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) for testing your containerized application before deployment.
 
 ### Automated Dockerfile Generation
 
@@ -112,7 +112,7 @@ gcloud functions deploy my-function \
   --entry-point handle_upload
 ```
 
-Pair this with the `/pdf` skill if your function processes PDF documents, or use the `/frontend-design` skill for generating static site deployment functions to Cloud Storage.
+Pair this with the [`/pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) if your function processes PDF documents, or use the `/frontend-design` skill for generating static site deployment functions to Cloud Storage.
 
 ## Using GCP Services with Claude Code Skills
 
@@ -189,7 +189,7 @@ jobs:
 
 ## State Management with Cloud SQL
 
-For applications requiring persistent state, integrate Cloud SQL with your deployed services. Use `/supermemory` to track deployment context across sessions:
+For applications requiring persistent state, integrate Cloud SQL with your deployed services. Use [`/supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to track deployment context across sessions:
 
 ```
 /supermemory
