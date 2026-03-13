@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Open Source Claude Skills Ecosystem Outlook 2026"
-description: "Discover the open source Claude skills ecosystem in 2026. Learn about popular community skills like frontend-design, pdf, tdd, and supermemory that enhance AI development."
+description: "Discover the open source Claude skills ecosystem in 2026. Learn about popular community skills like frontend-design, pdf, tdd, and supermemory that enha..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 9
 ---
 
 # Open Source Claude Skills Ecosystem Outlook 2026
