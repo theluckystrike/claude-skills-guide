@@ -1,30 +1,34 @@
 ---
-layout: default
-title: "Claude Skills Daily Standup Automation Workflow"
-description: "Automate your daily standup reporting with Claude skills. Learn practical workflows, code examples, and integration strategies for seamless team updates."
+layout: post
+title: "Daily Standup Automation with Claude Skills"
+description: "Automate daily standup reports using Claude Code skills. Pull git activity, format updates, and deliver to Slack or Teams with minimal manual effort."
 date: 2026-03-13
-author: theluckystrike
+categories: [workflows, tutorials]
+tags: [claude-code, claude-skills, standup, automation, productivity]
+author: "Claude Skills Guide"
+reviewed: true
+score: 6
 ---
 
-# Claude Skills Daily Standup Automation Workflow
+# Daily Standup Automation with Claude Skills
 
-Daily standups are a cornerstone of agile development, but manually compiling status updates eats into valuable coding time. With Claude skills, you can automate this ritual entirely, transforming how your team captures and shares progress. This guide walks you through building a practical daily standup automation workflow using Claude's specialized capabilities.
+Daily standups are a cornerstone of agile development, but manually compiling status updates eats into valuable coding time. With Claude skills, you can automate this ritual, transforming how your team captures and shares progress. This guide walks through building a practical daily standup automation workflow using Claude's specialized capabilities.
+
+Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. Skills give Claude specific instructions and context for recurring tasks—they're not Python packages or shell commands.
 
 ## Why Automate Standups with Claude Skills
 
-Developers spend an average of 10-15 minutes each morning crafting standup messages—time that compounds across a team. Rather than treating standups as a chore, automation lets you capture what actually matters: blockers, progress, and upcoming priorities. The workflow combines several Claude skills to pull data from multiple sources, format it correctly, and deliver it to your team channels.
+Developers spend an average of 10–15 minutes each morning crafting standup messages—time that compounds across a team. Rather than treating standups as a chore, automation lets you capture what actually matters: blockers, progress, and upcoming priorities.
 
-The real power comes from treating your development activity as structured data. Git commits, issue trackers, and project management tools all contain the information your standup needs. Claude skills can extract and synthesize this data automatically.
+The real power comes from treating your development activity as structured data. Git commits, issue trackers, and project management tools all contain the information your standup needs. Claude Code sessions can execute shell commands to pull this data, and skills provide the formatting and synthesis instructions.
 
 ## Core Skills You Will Need
 
 Several Claude skills work together to make this workflow function:
 
-- **supermemory** - Maintains context about your projects, tasks, and ongoing work
-- **tdd** - Helps structure testable code and tracks development progress
-- **pdf** - Generates formatted standup documents when needed
-- **frontend-design** - Useful if your standup includes visual progress elements
-- **webapp-testing** - Verifies your automation endpoints work correctly
+- **supermemory** — Maintains context about your projects, tasks, and ongoing work across sessions
+- **tdd** — Helps structure testable code and tracks development progress
+- **pdf** — Generates formatted standup documents when needed
 
 Each skill plays a specific role in the pipeline, from data collection to final output.
 
@@ -32,14 +36,14 @@ Each skill plays a specific role in the pipeline, from data collection to final 
 
 ### Step 1: Configure Data Sources
 
-Your standup needs three types of information: what you completed yesterday, what you're working on today, and any blockers. Start by connecting your development tools. For GitHub-based projects, use the CLI to fetch recent activity:
+Your standup needs three types of information: what you completed yesterday, what you're working on today, and any blockers. For GitHub-based projects, fetch recent activity via the shell:
 
 ```bash
 # Fetch your commits from yesterday
-gh api search/repositories --method GET -f query="repo:yourorg/project commit author:@me since:$(date -d 'yesterday' +%Y-%m-%d)"
+gh api search/commits --method GET -f query="repo:yourorg/project author:@me" --jq '.items[] | {sha: .sha[0:7], message: .commit.message}'
 ```
 
-Store these configurations in a dedicated directory that your Claude skills can access. A simple YAML file works well:
+Store project configurations in a YAML file your standup skill can reference:
 
 ```yaml
 # standup-config.yaml
@@ -55,29 +59,47 @@ data_sources:
     project_key: PROJ
 ```
 
-### Step 2: Create the Standup Generation Skill
+### Step 2: Create the Standup Generator Skill
 
-Build a custom skill that orchestrates the data collection. Create a file at `~/.claude/skills/standup-generator/skill.md`:
+Build a custom skill at `~/.claude/skills/standup-generator.md`:
 
 ```markdown
----
-name: standup-generator
-description: Generates daily standup reports from development activity
-actions:
-  - name: fetch_yesterday_commits
-    description: Get commits from the previous day
-  - name: fetch_open_issues
-    description: List currently open blockers and priorities
-  - name: generate_standup
-    description: Format the collected data into a standup message
----
+# Standup Generator
+
+Generate a daily standup report from development activity.
+
+## Instructions
+
+1. Run `git log --since="yesterday" --author="$(git config user.email)" --oneline` in each configured project directory
+2. Fetch open issues labeled "in-progress" from the configured issue tracker
+3. Ask the user if there are any blockers not captured in the tracker
+4. Format the results as a standup message using the template below
+
+## Output Template
+
+## Daily Standup - {date}
+
+### Yesterday
+- {bullet per commit or completed task}
+
+### Today
+- {bullet per open in-progress issue}
+
+### Blockers
+- {bullet per blocker, or "None"}
 ```
 
-The skill uses your configured data sources to pull relevant information. For each source, Claude formats the raw data into human-readable summaries.
+Invoke it each morning with:
 
-### Step 3: Generate the Standup Message
+```
+/standup-generator
+```
 
-Once your skill collects the data, it transforms everything into a clean standup format. Here's what the output looks like:
+Claude executes the shell commands, fetches the relevant data, and produces the formatted standup.
+
+### Step 3: Example Output
+
+Once your skill collects the data, it produces a clean standup format:
 
 ```markdown
 ## Daily Standup - March 13, 2026
@@ -96,18 +118,15 @@ Once your skill collects the data, it transforms everything into a clean standup
 - Need access to staging environment for testing
 ```
 
-The formatting is intentionally simple—your team can read it quickly, and it integrates well with Slack, Teams, or Discord webhooks.
-
 ### Step 4: Delivery Integration
 
-Automate delivery to your team's communication channel. A simple webhook script handles this:
+Automate delivery to your team's communication channel using a webhook script:
 
 ```python
 import os
 import requests
-from datetime import date
 
-def deliver_standup(message: str, webhook_url: str):
+def deliver_standup(message: str, webhook_url: str) -> bool:
     """Send standup to team channel via webhook."""
     payload = {
         "text": message,
@@ -125,66 +144,41 @@ if __name__ == "__main__":
 
 Schedule this with a cron job or GitHub Actions workflow that runs every morning at your team's standup time.
 
-## Advanced Workflow Enhancements
+## Advanced Enhancements
 
 ### Using supermemory for Context
 
-The supermemory skill maintains long-term context about your projects. Configure it to remember recurring themes in your work:
+The supermemory skill maintains long-term context about your projects. Use it to track recurring blockers that span multiple days:
 
-```markdown
-# In your supermemory configuration
-remember:
-  - Long-running projects and their current phase
-  - Team members' focus areas this sprint
-  - Pending reviews and their status
+```
+/supermemory store: 2026-03-12 blocker - waiting on design specs for dashboard, still unresolved
+/supermemory find: unresolved blockers from this week
 ```
 
-When generating standups, supermemory can reference previous blockers that are still open, ensuring nothing falls through the cracks.
+When generating standups, supermemory surfaces blockers that are still open, ensuring nothing falls through the cracks.
 
 ### Handling Multiple Projects
 
-If you work across several projects, modify your skill to aggregate standups per project:
+If you work across several projects, modify your standup skill to aggregate activity per project:
 
-```python
-def generate_multi_project_standup(projects: list) -> dict:
-    """Generate separate standup sections for each project."""
-    standup = {"yesterday": [], "today": [], "blockers": []}
-    
-    for project in projects:
-        commits = fetch_project_commits(project, since="yesterday")
-        issues = fetch_project_issues(project, status="in-progress")
-        
-        standup["yesterday"].extend(format_commits(commits))
-        standup["today"].extend(format_issues(issues))
-        standup["blockers"].extend(fetch_blockers(project))
-    
-    return standup
+```bash
+# Collect commits from multiple repos
+for project in backend-api frontend-app mobile-app; do
+    echo "## $project"
+    cd ~/projects/$project
+    git log --since="yesterday" --author="$(git config user.email)" --oneline
+done
 ```
 
-This approach scales to any number of projects while keeping the output organized.
+Pass this output to Claude with your `/standup-generator` skill for formatting.
 
 ### PDF Generation for Records
 
-For teams that maintain meeting records, the pdf skill can generate formal standup documents:
+For teams that maintain meeting records, the **pdf** skill generates formal standup documents:
 
-```python
-from claude_skills import pdf
-
-def create_standup_document(standup_data: dict) -> bytes:
-    """Generate a PDF version of the daily standup."""
-    content = f"""
-    Daily Standup - {date.today()}
-    
-    Completed Yesterday:
-    {format_list(standup_data['yesterday'])}
-    
-    Working On Today:
-    {format_list(standup_data['today'])}
-    
-    Blockers:
-    {format_list(standup_data['blockers'])}
-    """
-    return pdf.generate(content, title="Daily Standup")
+```
+/pdf
+Convert this standup message into a formatted PDF document titled "Daily Standup - March 13, 2026" and save it to standups/2026-03-13.pdf
 ```
 
 Store these in a shared drive for historical reference and sprint reviews.
@@ -193,20 +187,20 @@ Store these in a shared drive for historical reference and sprint reviews.
 
 **Problem**: The generated standup includes irrelevant commits.
 
-**Solution**: Add filtering logic in your data fetch. Exclude dependency updates, documentation changes, or other low-signal commits using a configuration file.
+**Solution**: Add filtering in your git log command. Exclude dependency updates and chore commits using `grep -v "chore\|deps\|bump"`.
 
 **Problem**: Webhook delivery fails silently.
 
-**Solution**: Implement error handling with retry logic and notify via alternative channels when the primary delivery method fails.
+**Solution**: Implement error handling with retry logic and notify via email when the primary delivery method fails.
 
 **Problem**: Standup feels too generic.
 
-**Solution**: Add manual override capability. Allow developers to append custom notes before final delivery.
+**Solution**: Add a manual override step. After `/standup-generator` produces the draft, review and append custom notes before running the delivery script.
 
 ## Putting It All Together
 
-The complete workflow runs in under a minute once configured. Each morning, Claude pulls your development activity, filters and formats it according to team preferences, and delivers a polished standup to your team channel. The time investment upfront—configuring data sources and building the skill—pays dividends daily.
+The complete workflow runs in under a minute once configured. Each morning, invoke `/standup-generator` in Claude Code. Claude pulls your development activity via shell commands, filters and formats it, and produces a polished standup. Run the delivery script to post it to your team channel.
 
-This automation works particularly well with teams using the tdd skill, since test-driven development naturally produces well-structured commits that translate into clear progress updates. Pair the two workflows, and your standups become a byproduct of good development practices rather than an extra task.
+This automation pairs well with the **tdd** skill—test-driven development produces well-structured commits that translate directly into clear progress updates. Pair the two workflows, and standups become a byproduct of good development practices rather than an extra task.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

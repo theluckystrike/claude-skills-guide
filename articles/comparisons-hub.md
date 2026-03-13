@@ -1,12 +1,13 @@
 ---
-layout: default
-title: "Claude Code vs Everything: The Complete Comparisons Guide"
-description: "Side-by-side comparisons of Claude skills vs prompts, official vs community skills, and Claude Code vs other AI coding tools. Make informed decisions."
+layout: post
+title: "Claude Skills vs Prompts: The Complete Comparisons Guide"
+description: "Side-by-side comparisons of Claude skills vs prompts, official vs community skills. Decision frameworks for every workflow."
 date: 2026-03-13
-author: theluckystrike
-is_pillar: true
-categories: [hub]
-tags: [comparisons, claude-skills, claude-code]
+categories: [comparisons]
+tags: [claude-code, claude-skills, comparisons, official-skills, community-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code vs Everything: The Complete Comparisons Guide

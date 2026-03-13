@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "MCP Servers vs Claude Skills: What Is the Difference?"
-description: "A practical guide for developers and power users understanding the distinction between MCP servers and Claude skills, with real-world use cases and code examples."
+layout: post
+title: "MCP Servers vs Claude Skills: What's the Difference?"
+description: "MCP servers connect Claude to external systems; skills shape how Claude behaves. Learn when to use each with real-world examples and decision criteria."
 date: 2026-03-13
-author: theluckystrike
+categories: [comparisons]
+tags: [claude-code, claude-skills, mcp-servers, architecture]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # MCP Servers vs Claude Skills: What Is the Difference?

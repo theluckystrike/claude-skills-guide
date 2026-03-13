@@ -1,154 +1,179 @@
 ---
-layout: default
-title: "Multi Agent Orchestration with Claude Subagents Guide"
-description: "A practical guide to orchestrating multiple AI agents using Claude Code subagents. Learn patterns for building sophisticated multi-agent systems."
+layout: post
+title: "Multi-Agent Orchestration with Claude Subagents Guide"
+description: "Practical patterns for orchestrating multiple Claude Code subagents. Covers sequential, parallel, and hierarchical coordination with real workflow examples."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, multi-agent, subagents, orchestration, automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 6
 ---
 
-# Multi Agent Orchestration with Claude Subagents Guide
+# Multi-Agent Orchestration with Claude Subagents Guide
 
-Claude Code enables developers to create sophisticated multi-agent systems through its subagent architecture. Rather than relying on a single AI interaction, you can orchestrate multiple specialized agents that collaborate on complex tasks. This guide covers practical patterns for building and managing these agent systems effectively.
+Claude Code enables multi-agent systems through its subagent architecture. Rather than one long conversation handling everything, you can orchestrate multiple specialized Claude instances that collaborate on complex tasks — each focused on a narrow domain, coordinated by a parent agent that tracks overall progress.
 
 ## Understanding Claude Subagents
 
-Claude subagents are independent AI agents that operate within the context of a parent Claude session. Each subagent can handle specific domains—whether that involves writing code, processing documents, or running tests—while the parent agent coordinates their efforts and maintains overall project context.
+In Claude Code, a subagent is a separate Claude process spawned by a parent agent using the `Task` tool. Each subagent runs with its own context window, can be assigned a specific skill, and reports back structured output to the parent.
 
-The key advantage of this architecture is separation of concerns. When building a full-stack application, you might have one subagent handling the frontend with the **frontend-design** skill, another processing backend logic, and a third running test suites using the **tdd** skill. Each agent focuses on its specialty while sharing a common goal.
+The key advantage is separation of concerns. A parent agent coordinating a full-stack feature can delegate to:
+- A frontend subagent loaded with the `frontend-design` skill
+- A backend subagent focused on API and database work
+- A QA subagent loaded with the `tdd` skill
 
-## Setting Up Your First Agent Orchestra
+Each subagent works in its domain; the parent integrates their outputs.
 
-The foundation of multi-agent orchestration lies in clear communication channels. Define the responsibilities of each subagent before initiating the system:
+## How Subagents Are Invoked in Practice
 
-```yaml
-# agent-config.yaml
-agents:
-  - name: frontend-specialist
-    skill: frontend-design
-    responsibilities:
-      - React component creation
-      - Tailwind styling
-      - Responsive layouts
-    context: "./src/components"
+The parent agent uses the `Task` tool to spawn subagents. From within a Claude Code session, this looks like:
 
-  - name: backend-engineer
-    responsibilities:
-      - API endpoint development
-      - Database schema design
-      - Authentication flows
-    context: "./src/server"
-
-  - name: quality-assurance
-    skill: tdd
-    responsibilities:
-      - Unit test generation
-      - Integration testing
-      - E2E scenario validation
-    context: "./tests"
+```
+Use the Task tool to start a subagent with the frontend-design skill.
+Instruct it to scaffold a notification bell component in src/components/NotificationBell.tsx
+using Tailwind CSS and our existing design tokens from src/styles/tokens.ts.
 ```
 
-This configuration establishes clear boundaries while allowing agents to communicate through shared files and documentation.
+Claude Code's orchestration layer handles process management. You define what each subagent should do in its task description, and optionally which skill to activate:
+
+```
+Task for subagent 1:
+/frontend-design
+Create a NotificationBell component. Requirements: [...]
+Output: the component file content
+
+Task for subagent 2:
+/tdd
+Write Jest tests for the NotificationBell component.
+Input: [component code from subagent 1]
+Output: the test file content
+```
+
+There is no `from claude import SubAgent` Python library. Subagent orchestration happens inside Claude Code itself, not through an external SDK.
 
 ## Coordination Patterns
 
 ### Sequential Workflow
 
-The simplest orchestration pattern involves passing work from one agent to another in sequence. The parent agent acts as a pipeline, directing output from one subagent to become input for the next:
+Sequential orchestration passes output from one subagent as input to the next. The parent waits for each step to complete before starting the next:
 
-1. **frontend-design** agent creates component structure
-2. Backend agent implements API routes based on component needs
-3. **tdd** agent generates tests for the integrated system
+1. `frontend-design` subagent creates component structure
+2. Backend subagent implements API routes based on component requirements
+3. `tdd` subagent generates tests for the integrated system
 
-This pattern works well for linear workflows where each stage depends on the previous one completing successfully.
+This is the right pattern when each step depends on the previous one's output.
 
 ### Parallel Execution
 
-For independent tasks, parallel execution dramatically reduces total processing time. Multiple subagents can work simultaneously on different aspects of the same project:
+For independent tasks, the parent can launch multiple subagents simultaneously using multiple `Task` tool calls in a single turn. Claude Code will execute them concurrently:
 
-```python
-# orchestrator.py - Parallel agent execution
-import asyncio
-from claude import SubAgent
+```
+Launch three parallel subagents:
+1. frontend-design subagent: build the dashboard component
+2. pdf subagent: extract the API spec from docs/api-spec.pdf and produce a summary
+3. tdd subagent: write integration tests for the existing auth module
 
-async def build_application():
-    agents = [
-        SubAgent(skill="frontend-design", task="Create dashboard components"),
-        SubAgent(skill="pdf", task="Generate API documentation"),
-        SubAgent(skill="tdd", task="Write integration tests for auth module")
-    ]
-    
-    results = await asyncio.gather(*[agent.execute() for agent in agents])
-    
-    return {
-        "components": results[0],
-        "documentation": results[1],
-        "tests": results[2]
-    }
+Collect all three outputs and summarize what was completed.
 ```
 
-The **supermemory** skill becomes valuable here, storing context about what each agent has accomplished so the parent can track overall progress.
+The `supermemory` skill is useful in the parent context here — it stores what each subagent has completed so the parent maintains a coherent picture across many concurrent tasks.
 
 ### Hierarchical Control
 
-Complex projects benefit from a hierarchy where mid-level agents manage specific subsystems. A project manager agent might oversee domain-specific agents, each handling different business logic areas. This reduces the cognitive load on the parent agent and allows for more granular progress tracking.
+For large projects, mid-level manager agents can own specific subsystems:
+
+```
+Parent agent
+├── Frontend manager (owns src/components/)
+│   ├── UI subagent (frontend-design)
+│   └── Test subagent (tdd)
+└── Infrastructure manager (owns deployment/)
+    ├── Scripts subagent (shell-expert)
+    └── Config subagent (devops)
+```
+
+Each manager reduces the cognitive load on the parent and allows finer-grained progress tracking.
+
+## Defining Agent Responsibilities
+
+Clear task definitions are more important than any other factor in subagent quality. Vague instructions produce inconsistent outputs. Specify:
+
+- **Domain:** exactly what files or directories the subagent should work in
+- **Skill:** which skill to activate (`/tdd`, `/frontend-design`, etc.)
+- **Input:** what context or artifacts the subagent needs
+- **Output format:** what to return and how (file content, JSON summary, list of issues)
+
+A well-structured task definition:
+
+```
+Subagent task: Backend API routes
+Skill: none (general purpose)
+Working directory: src/server/routes/
+Context: The frontend NotificationBell component expects GET /api/notifications
+  returning [{id, message, timestamp, read}] and POST /api/notifications/:id/read.
+Output: Express route handler file for these two endpoints, including input validation.
+```
 
 ## Context Management Across Agents
 
-Maintaining coherent context across multiple subagents requires deliberate strategies. Each agent needs enough information to work independently while avoiding context window overflow from redundant data.
+Each subagent has its own context window. Avoid dumping the entire codebase into every subagent; give each one only what it needs:
 
-The recommended approach involves three context layers:
+| Layer | Contents | Who holds it |
+|-------|----------|--------------|
+| Global context | Architecture overview, key dependencies, team conventions | Parent agent (often from CLAUDE.md) |
+| Agent-specific | Relevant files, requirements for this domain | Each subagent's task prompt |
+| Session state | Task status, inter-agent messages, blockers | Parent agent, optionally persisted via supermemory |
 
-1. **Global context**: Project overview, architecture decisions, key dependencies
-2. **Agent-specific context**: Files and requirements relevant to each subagent's domain
-3. **Session context**: Current task status, pending decisions, inter-agent messages
-
-When using skills like **webapp-testing**, ensure the agent has access to running application state. Share URLs, environment variables, and authentication tokens through a centralized configuration that all agents can reference.
+When one subagent needs to reference another's output, the parent summarizes and passes only the relevant portion — not the full conversation history.
 
 ## Handling Agent Communication
 
-Subagents communicate through structured outputs that the parent agent interprets and routes. Establish conventions for how agents signal completion, request clarification, or flag issues:
+Establish a convention for how subagents report results. A structured output format lets the parent make routing decisions without parsing free-form text:
 
 ```json
 {
   "agent": "backend-engineer",
   "status": "completed",
-  "deliverables": ["auth_controller.js", "user_model.py"],
-  "next_steps_needed": ["API documentation from pdf skill"],
-  "blockers": ["Missing database connection string"]
+  "deliverables": ["src/server/routes/notifications.js"],
+  "depends_on_next": ["tests from tdd subagent"],
+  "blockers": []
 }
 ```
 
-This structured format allows the parent to make intelligent routing decisions without manually parsing agent outputs.
+If a subagent hits a blocker, the parent can retry with adjusted context, re-assign the task, or escalate to the user.
 
 ## Error Handling and Recovery
 
-Multi-agent systems need robust error handling. When one agent fails, the parent should have clear recovery procedures:
+Multi-agent workflows need defined recovery paths:
 
-- **Retry with adjusted parameters**: Some failures stem from ambiguous instructions
-- **Fallback to alternative agent**: If the **frontend-design** agent struggles with a particular component, try a different approach or agent
-- **Escalation paths**: Define when human intervention becomes necessary
+- **Retry with clarified instructions:** Most failures come from ambiguous task definitions. Restate the task with more specific constraints.
+- **Reduce scope:** If a subagent fails on a large task, break it into smaller subtasks and retry.
+- **Human escalation:** Define upfront which failure modes require user input (e.g., missing environment variables, authentication issues).
 
-Log all agent interactions with timestamps. The **supermemory** skill can persist these logs, creating an audit trail that helps diagnose systemic issues.
+Log all subagent interactions. The `supermemory` skill in the parent context can persist these logs across sessions, creating an audit trail for multi-day projects.
 
-## Real-World Example: Full-Stack Feature Development
+## Real-World Example: Adding a Notification System
 
-Consider adding a real-time notification system to an existing application:
+A complete feature addition across a real codebase:
 
-1. Parent agent receives the feature requirement
-2. **frontend-design** agent prototypes the notification UI component
-3. Backend agent designs WebSocket infrastructure and notification schema
-4. **tdd** agent creates test scenarios for message delivery and edge cases
-5. **webapp-testing** agent validates the integrated system
-6. Parent agent reviews all outputs and assembles the final implementation
+1. **Parent** receives the feature request and plans the work
+2. **`frontend-design` subagent** scaffolds the NotificationBell UI component
+3. **Backend subagent** designs WebSocket infrastructure and notification schema
+4. **`tdd` subagent** creates test scenarios for delivery, ordering, and read-state
+5. **`webapp-testing` subagent** validates the integrated feature in a running browser
+6. **Parent** reviews all outputs, resolves conflicts, and assembles the final PR description
 
-Each step builds on previous work while maintaining independence. If the UI prototype requires changes, only the frontend agent needs to iterate—backend work continues unaffected.
+Steps 2, 3, and 4 can run in parallel once the schema is agreed. Step 5 depends on all three completing. The parent manages that dependency.
 
 ## Best Practices
 
-Keep agent responsibilities narrow and well-defined. Agents with multiple responsibilities tend to produce mediocre results across all of them. Specialized agents with clear boundaries outperform general-purpose agents attempting to handle everything.
+Keep subagent responsibilities narrow. Agents with multiple unrelated responsibilities produce mediocre results across all of them. Specialized agents with clear boundaries consistently outperform general-purpose ones.
 
-Invest time in prompt engineering for your orchestration layer. The parent agent's ability to coordinate effectively determines system performance. Clear instructions for context sharing, error handling, and result aggregation pay dividends.
+Invest time in the parent agent's orchestration prompts. The quality of the parent's coordination determines the quality of the whole system more than any individual subagent.
 
-Monitor token usage across agents. Context accumulation can balloon costs and hit window limits. Periodically summarize agent histories and reset contexts for long-running projects.
+Monitor token usage. Context accumulates quickly in long-running multi-agent projects. Periodically summarize completed work and reset contexts for tasks that have finished.
+
+---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

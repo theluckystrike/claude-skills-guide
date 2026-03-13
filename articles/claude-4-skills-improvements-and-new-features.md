@@ -1,147 +1,155 @@
 ---
-layout: default
-title: "Claude 4 Skills Improvements and New Features"
-description: "Explore the latest Claude 4 skills improvements and new features for developers: enhanced PDF processing, TDD workflows, frontend verification, and memory management."
+layout: post
+title: "Claude 4 Skills: Improvements and New Features"
+description: "What changed for Claude skills in Claude 4: improved pdf extraction, smarter tdd edge case detection, supermemory semantic search, and enhanced webapp-testing."
 date: 2026-03-13
-author: theluckystrike
+categories: [skills, guides]
+tags: [claude-code, claude-skills, claude-4, tdd, pdf, supermemory, webapp-testing]
+author: "Claude Skills Guide"
+reviewed: true
+score: 5
 ---
 
 # Claude 4 Skills Improvements and New Features
 
-The Claude 4 release brought substantial improvements to the skills system, giving developers and power users more automation capabilities than ever before. If you have been using Claude Code for development workflows, these updates will significantly enhance your productivity across document processing, testing, frontend development, and memory management.
+Claude 4 brought meaningful improvements to the existing skills system. If you've been using Claude Code skills for development workflows, here's what changed and how to take advantage of it.
 
-## Enhanced PDF Processing Capabilities
+## Enhanced PDF Processing
 
-The **pdf** skill received major upgrades in Claude 4, now handling complex multi-column layouts and scanned documents with improved accuracy. The extraction engine now uses improved table detection algorithms, making it easier to pull structured data from technical specifications and financial reports.
+The `pdf` skill's extraction engine improved significantly in Claude 4, particularly for multi-column layouts and scanned documents. Table detection is more reliable, which matters when pulling structured data from technical specifications and financial reports.
 
-```python
-# Using the enhanced pdf skill for table extraction
-from pdfreader import PDFDocument
-
-def process_technical_spec(pdf_path):
-    doc = PDFDocument(pdf_path)
-    for page in doc.pages:
-        # Improved table detection
-        tables = page.extract_tables(strategy='improved')
-        for table in tables:
-            yield process_table_data(table)
-```
-
-The skill now supports batch processing, allowing you to handle multiple documents in a single operation. This is particularly useful for processing invoice batches or aggregating data from multiple PDF sources.
-
-## TDD Workflow Improvements
-
-The **tdd** skill has been refined to support more testing frameworks and provide smarter test suggestions based on your codebase. The red-green-refactor cycle is now more intuitive, with the skill proactively identifying edge cases you might have missed.
-
-```javascript
-// The enhanced tdd skill suggests edge cases
-describe('API endpoint validation', () => {
-  // The skill now suggests boundary tests automatically
-  it.each([-1, 0, 1, 1001])('should reject invalid limit %d', async (limit) => {
-    const response = await api.get('/users', { limit });
-    expect(response.status).toBe(400);
-  });
-});
-```
-
-Framework support now includes Vitest, Bun Test, and Pytest, giving you flexibility regardless of your tech stack. The fixture management system also improved, automatically cleaning up test data between runs.
-
-## Frontend Design Verification
-
-The **frontend-design** skill received upgrades that make it more effective for catching design inconsistencies. It now integrates with more browser automation tools and provides detailed reports on layout shifts, accessibility issues, and responsive behavior across viewport sizes.
-
-```yaml
-# Frontend design skill configuration
-verification:
-  breakpoints: [320, 768, 1024, 1440]
-  accessibility: wcag2a
-  performance:
-    - first-contentful-paint: < 1500ms
-    - cumulative-layout-shift: < 0.1
-```
-
-This skill proves invaluable for teams practicing design system compliance, as it can automatically verify that components match your established design tokens and spacing conventions.
-
-## Memory and Context Management
-
-The **supermemory** skill continues to evolve, with Claude 4 introducing semantic search across your project history. You can now query past conversations and code decisions using natural language, making it easier to recall why certain architectural choices were made.
+Try the batch processing capability that was added:
 
 ```
-User: "Why did we choose Redis over Memcached?"
-System: "Based on your conversation from March 2nd, you selected Redis 
-for its pub/sub capabilities and persistence options needed for the 
-real-time notification system."
+/pdf process all PDFs in invoices/ and extract the total, vendor name, and invoice date from each. Output as a CSV table.
 ```
 
-The memory skill now supports team sharing, allowing entire development teams to access shared context and project decisions. This is a game-changer for onboarding new team members and maintaining project knowledge.
+Previously, you'd handle each document individually. The skill now handles the iteration internally, which reduces session length and token cost for document-heavy workflows.
 
-## Spreadsheet Automation Advances
+For complex layouts that previously produced garbled extraction:
 
-The **xlsx** skill gained new charting capabilities and formula support in this release. You can now generate complex visualizations directly from your data, with support for waterfall charts, treemaps, and sparklines that were previously difficult to automate.
-
-```python
-# Creating an analytics dashboard with xlsx skill
-from openpyxl import Workbook
-from openpyxl.chart import BarChart, Reference
-
-def create_metrics_dashboard(data):
-    wb = Workbook()
-    ws = wb.active
-    write_metrics_data(ws, data)
-    
-    chart = BarChart()
-    chart.title = "Monthly Performance Metrics"
-    chart.y_axis.title = "Requests"
-    chart.x_axis.title = "Month"
-    
-    data_ref = Reference(ws, min_col=2, min_row=1, max_row=13)
-    categories = Reference(ws, min_col=1, min_row=2, max_row=13)
-    chart.add_data(data_ref, titles_from_data=True)
-    chart.set_categories(categories)
-    
-    ws.add_chart(chart, "F2")
-    return wb
+```
+/pdf extract the data table on page 4 of multi-column-report.pdf. The table has 3 columns: Quarter, Revenue, YoY Growth.
 ```
 
-## Web Application Testing
+Being explicit about table structure still improves accuracy, but the skill's baseline performance on complex layouts is substantially better.
 
-The **webapp-testing** skill now includes better Playwright integration with screenshot comparison and video recording capabilities. This makes it simpler to catch visual regressions before they reach production.
+## Smarter TDD Edge Case Detection
 
-```javascript
-// Visual regression testing with webapp-testing skill
-await page.goto('/dashboard');
-await expect(page.locator('.metrics-panel'))
-  .toHaveScreenshot('dashboard-metrics.png', {
-    animations: 'disabled',
-    maxDiffPixelRatio: 0.05
-  });
+The `tdd` skill now identifies edge cases more proactively based on code patterns rather than requiring you to specify them.
+
+```
+/tdd write tests for this function and flag any edge cases I should handle: [paste function]
 ```
 
-The skill also improved its handling of single-page applications, correctly waiting for dynamic content to load before performing assertions.
+For a function accepting numeric limits, the skill now suggests boundary tests at -1, 0, 1, and max value without prompting. For async functions, it includes rejection paths. The test output is more complete out of the box.
 
-## Skill Auto-Invocation Enhancements
+Framework support expanded to include Vitest and Bun Test alongside pytest and Jest:
 
-Claude 4 improved how skills trigger automatically based on context. The system now analyzes your file changes, imports, and development patterns to suggest relevant skills without explicit invocation. This means the **tdd** skill might activate when you create a new test file, or the **pdf** skill when you add a document processing library to your dependencies.
-
-You can customize these triggers in your skill configurations:
-
-```yaml
-auto-invoke:
-  triggers:
-    - pattern: "**/*test*.js"
-      skill: tdd
-    - pattern: "**/*.pdf"
-      skill: pdf
-    - pattern: "**/design*.json"
-      skill: frontend-design
 ```
+/tdd write Vitest tests for this TypeScript utility: [paste code]
+```
+
+```
+/tdd write Bun Test tests for this module, using the describe/it/expect syntax: [paste code]
+```
+
+Fixture cleanup also improved. The skill now includes teardown logic in generated test suites, which previously had to be added manually.
+
+## Supermemory Semantic Search
+
+The most significant `supermemory` improvement in Claude 4 is natural language recall. Previously, recall required exact key names. Now you can query by description:
+
+```
+/supermemory recall why we chose Redis over Memcached
+```
+
+```
+/supermemory recall any decisions we made about the authentication flow
+```
+
+The skill searches stored context semantically and surfaces relevant entries. For projects with months of accumulated decisions, this is substantially faster than remembering exact key names.
+
+Team sharing is also new — shared context stores allow multiple developers to access the same project knowledge:
+
+```
+/supermemory store shared: onboarding-notes = monorepo uses pnpm, test with `pnpm test`, deploy with Railway CLI
+```
+
+New team members can recall the shared store immediately rather than waiting for documentation to be written.
+
+## Frontend Design Verification Depth
+
+The `frontend-design` skill now checks more dimensions of design compliance, including layout shift metrics, accessibility violations, and responsive behavior across standard breakpoints.
+
+```
+/frontend-design audit this component at 320px, 768px, and 1440px widths. Report any layout shifts or overflow issues: [paste component]
+```
+
+```
+/frontend-design verify this component against our design tokens — primary: #1A73E8, spacing: 8px grid, radius: 4px. List any violations: [paste component]
+```
+
+For teams enforcing a design system, the improved token verification catches violations that previously slipped through manual review.
+
+## Webapp Testing: Screenshots and Video
+
+The `webapp-testing` skill added visual regression testing and video recording in Claude 4:
+
+```
+/webapp-testing take a baseline screenshot of the dashboard at http://localhost:3000/dashboard and save it as dashboard-baseline.png
+```
+
+```
+/webapp-testing compare the current dashboard against dashboard-baseline.png and report any visual differences above 5% pixel change
+```
+
+```
+/webapp-testing record a video of the checkout flow on http://localhost:3000 and save to checkout-flow.webm
+```
+
+The visual regression capability is the most practically useful addition for frontend teams — catching layout regressions without manual inspection.
+
+## Spreadsheet Charts and New Types
+
+The `xlsx` skill gained waterfall charts, treemaps, and sparklines in Claude 4:
+
+```
+/xlsx create a waterfall chart in budget.xlsx showing starting balance, monthly inflows, monthly outflows, and ending balance for Q1
+```
+
+```
+/xlsx add sparklines to the summary row in metrics.xlsx showing the 12-month trend for each KPI
+```
+
+These chart types were previously difficult to generate programmatically and required manual steps in Excel. The skill handles the chart object configuration directly.
+
+## Skill Auto-Invocation
+
+Claude 4 introduced configurable auto-invocation triggers. Skills can now activate based on file patterns you define. Add triggers to `~/.claude/settings.json`:
+
+```json
+{
+  "skillTriggers": [
+    { "pattern": "**/*test*.js", "skill": "tdd" },
+    { "pattern": "**/*.pdf", "skill": "pdf" },
+    { "pattern": "**/design*.json", "skill": "frontend-design" }
+  ]
+}
+```
+
+With these triggers, opening a test file surfaces the `tdd` skill context automatically. This is an opt-in feature — skills still work the same way when invoked manually with `/skill-name`.
 
 ## Getting Started with These Features
 
-To use these improved skills, ensure you have the latest Claude Code version installed. Most improvements are available automatically when you invoke a skill, though some require enabling specific options in your configuration.
+All improvements activate automatically when you use the updated skills — no configuration changes required unless you want auto-invocation triggers. If you're on an older Claude Code version, update first:
 
-Review your existing skill configurations and consider updating them to take advantage of the new capabilities. The documentation for each skill has been updated with examples matching the improved functionality.
+```bash
+npm update -g @anthropic-ai/claude-code
+```
 
-These improvements reflect the growing ecosystem around Claude skills, with each release making it easier to automate repetitive development tasks and focus on building your application's core functionality.
+Then verify you have Claude 4 by checking the model in your settings.
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+---
+
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)*

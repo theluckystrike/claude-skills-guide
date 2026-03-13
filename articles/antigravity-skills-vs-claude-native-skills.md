@@ -1,97 +1,120 @@
 ---
-layout: default
-title: "Antigravity Skills vs Claude Native Skills: What's the Difference?"
-description: "A practical comparison of community-built Antigravity skills versus built-in Claude native skills. Learn when to use each type for your development workflow."
+layout: post
+title: "Antigravity Skills vs Claude Native Skills: Key Differences"
+description: "Practical comparison of community Antigravity skills versus native Claude skills. Learn when to use each type and how to install skills from ~/.claude/skills/."
 date: 2026-03-13
-author: theluckystrike
+categories: [comparisons, guides]
+tags: [claude-code, claude-skills, antigravity, native-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 6
 ---
 
 # Antigravity Skills vs Claude Native Skills: What's the Difference?
 
-When you start using Claude Code or the Claude desktop app, you'll encounter two categories of skills: native skills that ship with Claude and community-built skills found in the Antigravity registry. Understanding the differences between these two types will help you build a more productive workflow.
+When you start using Claude Code, you'll encounter two categories of skills: native skills that ship with Claude and community-built skills distributed through the Antigravity registry. Understanding the difference helps you build a more productive workflow.
+
+## How Claude Skills Actually Work
+
+Skills are Markdown files stored in `~/.claude/skills/`. When you invoke `/skill-name` in a Claude Code session, Claude loads the corresponding file and uses its instructions to guide behavior. There is no package manager, no `claude skills install` CLI command, and no Python import API — skills are plain `.md` files that you place in the skills directory.
+
+To use any skill, invoke it by name:
+
+```
+/pdf extract tables from Q3-report.pdf
+```
+
+```
+/tdd write tests for the auth module using pytest
+```
+
+```
+/supermemory store: this project uses pnpm workspaces and ESLint Airbnb config
+```
 
 ## What Are Claude Native Skills?
 
-Claude native skills are built directly into Claude's core functionality. These skills are maintained by Anthropic and ship as part of the standard installation. They cover fundamental capabilities that most developers need daily.
+Native skills ship pre-installed in `~/.claude/skills/` as part of the standard Claude Code distribution. They cover the tasks most developers encounter daily: document processing, test-driven development, spreadsheet automation, memory management, and frontend verification.
 
-The native skills include document processing, test-driven development, spreadsheet automation, memory management, and frontend verification. For example, the **pdf** skill handles PDF manipulation, the **xlsx** skill manages spreadsheet operations, and the **tdd** skill assists with test creation. The **frontend-design** skill helps with UI implementation, while **supermemory** provides persistent memory across conversations.
+The core native skills include:
 
-These skills share several characteristics. They receive updates whenever Claude releases new versions, so you always have the latest functionality without manual intervention. They integrate deeply with Claude's internal tools and have consistent behavior across different projects. The documentation is centralized in official Anthropic resources, making troubleshooting straightforward.
+- **pdf** — Extract text, tables, and forms from PDF files
+- **xlsx** — Create and edit spreadsheets with formula support
+- **tdd** — Guide test-first development and generate test cases
+- **frontend-design** — Generate and verify UI component implementations
+- **supermemory** — Persist context and decisions across sessions
+
+Native skills receive updates through Claude Code's release cycle. When Anthropic improves the `tdd` skill, you get the improvement automatically.
 
 ## What Are Antigravity Skills?
 
-Antigravity skills come from the community-driven skill registry. Developers create and publish these skills to extend Claude's capabilities beyond what ships natively. You can browse and install them using Claude's skill management commands.
+Antigravity skills are community-created `.md` files distributed through the Antigravity registry. Developers publish skills to extend Claude's capabilities beyond the native set. To install one, you download the `.md` file to `~/.claude/skills/`:
 
-The Antigravity ecosystem includes skills for specialized tasks. Some popular examples handle video processing, canvas design, algorithmic art generation, and web app testing. The **pptx** skill creates presentations, the **docx** skill manages Word documents, and the **slack-gif-creator** generates animated content for team communication.
+```bash
+# Download an Antigravity skill
+curl -o ~/.claude/skills/pptx.md https://antigravity.dev/skills/pptx.md
+```
 
-Community skills fill gaps in the native offering. When a developer needs capabilities that don't exist natively, someone in the community often builds and shares a solution. These skills range from simple utilities to comprehensive frameworks for specific domains.
+Once in place, invoke it like any other skill:
 
-## Key Differences Between Native and Antigravity Skills
+```
+/pptx create a slide deck from this outline: [paste outline]
+```
+
+Community skills fill gaps in the native offering. Popular Antigravity skills handle presentation generation (`pptx`), Word document creation (`docx`), web app testing (`webapp-testing`), and algorithmic art (`algorithmic-art`).
+
+## Key Differences
 
 ### Maintenance and Updates
 
-Native skills receive automatic updates through Claude's release cycle. When Anthropic improves the **tdd** skill or fixes a bug in the **pdf** skill, you get those improvements without any action. Antigravity skills depend on their individual maintainers. Some receive regular updates while others become unmaintained over time.
+Native skills update automatically with Claude Code. Antigravity skills depend on their individual maintainers — some receive regular updates, others go unmaintained. Before relying on a community skill for production work, check when it was last updated.
 
-### Integration Depth
+### Stability
 
-Native skills integrate seamlessly with Claude's tool system. The **supermemory** skill, for instance, works out of the box with Claude's conversation context. Community skills may require additional configuration or setup steps to achieve similar integration.
+Anthropic tests native skills before release. Community skills vary in quality. Test an Antigravity skill in a low-stakes context before integrating it into a critical workflow.
 
-### Testing and Stability
+### Installation
 
-Anthropic tests native skills extensively before inclusion. Community skills vary in quality and stability. When installing from Antigravity, you should review the skill's documentation, check for recent updates, and test thoroughly in your environment.
+Native skills require no setup — they're available immediately. Antigravity skills require manually copying the `.md` file to `~/.claude/skills/`, then verifying the invocation works as expected.
 
 ## When to Use Each Type
 
-Use native skills as your foundation. The **pdf**, **xlsx**, **tdd**, **frontend-design**, and **supermemory** skills handle most common development tasks reliably. They require no additional setup and work consistently.
+Use native skills as your foundation. The `pdf`, `xlsx`, `tdd`, `frontend-design`, and `supermemory` skills handle most common development tasks reliably.
 
-Turn to Antigravity skills when you need specialized capabilities. If you're building presentations, the **pptx** skill from the community might offer features beyond your current workflow. For testing web applications, the **webapp-testing** skill provides Playwright integration that complements native options.
+Turn to Antigravity skills when you need specialized capabilities the native set doesn't cover. If you're generating presentations, `/pptx` from the community may offer features tailored to that specific task. For browser-based testing, `/webapp-testing` provides Playwright integration that complements native options.
 
-Here's a practical scenario: suppose you're building a documentation pipeline. You might use the native **pdf** skill for PDF generation while adding an Antigravity skill for converting markdown to various formats. This hybrid approach gives you the stability of native tools with the flexibility of community extensions.
-
-## Installation and Management
-
-Native skills don't require installation—they're available from the start. To use an Antigravity skill, you typically invoke it through Claude's skill loading mechanism:
-
-```bash
-# Listing available skills
-claude skills list
-
-# Loading a specific skill
-claude skills load @skillname
-```
-
-Managing community skills requires occasional maintenance. Check periodically for updates and remove skills you no longer use:
-
-```bash
-# Updating a community skill
-claude skills update @skillname
-
-# Removing an unused skill
-claude skills remove @skillname
-```
-
-## Making the Right Choice
-
-Choose native skills for core functionality where reliability matters most. Use Antigravity skills for specialized needs where community solutions excel. Many productive workflows combine both approaches—leaning on native skills for daily tasks while extending capability through carefully selected community offerings.
-
-The key is understanding that neither type is universally better. Native skills offer stability and deep integration. Community skills offer flexibility and specialized functionality. Your optimal setup depends on your specific use cases and how you balance these tradeoffs.
-
-## Practical Examples for Common Workflows
+## Practical Workflows Using Both
 
 ### Documentation Pipeline
 
-Here's a practical scenario: suppose you're building a documentation pipeline. You might use the native **pdf** skill for PDF generation while adding an Antigravity skill for converting markdown to various formats. This hybrid approach gives you the stability of native tools with the flexibility of community extensions.
+```
+/pdf extract all section headings from spec.pdf
+```
+Then:
+```
+/docx create a requirements doc from these headings: [paste output]
+```
 
-### Data Analysis Workflow
+Using the native `pdf` skill for extraction and an Antigravity `docx` skill for document generation gives you the stability of native tools with the flexibility of community extensions.
 
-For data analysis, the native **xlsx** skill handles spreadsheet operations reliably. When you need to visualize data in canvas format or create algorithmic charts, the **canvas-design** skill from Antigravity provides additional capabilities. This combination lets you process data with native tools and create custom visualizations with community skills.
+### Test Coverage Workflow
 
-### Testing Setup
+```
+/tdd write unit tests for UserService.authenticate() using Jest
+```
+Then:
+```
+/webapp-testing verify the login flow on http://localhost:3000 using Playwright
+```
 
-The native **tdd** skill helps you write tests from the ground up. For browser-based testing, the Antigravity **webapp-testing** skill offers Playwright integration that handles complex frontend scenarios. Using both skills together gives you comprehensive test coverage across unit and integration levels.
+The native `tdd` skill handles unit tests; the Antigravity `webapp-testing` skill covers browser-level integration. Both are invoked the same way — the only difference is where the `.md` file came from.
 
-### Content Creation
+## Making the Right Choice
 
-When creating presentations, the community **pptx** skill offers features tailored for slide generation. The **docx** skill handles Word document creation. Combined with native skills for PDF output, you can build content pipelines that produce multiple output formats from a single source.
+Neither type is universally better. Native skills offer stability and deep integration. Community skills offer flexibility and specialized functionality. Most productive setups combine both: native skills for daily tasks, carefully selected Antigravity skills for specific needs.
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+When evaluating a community skill, read the `.md` file itself before using it. Since skills are plain Markdown, you can see exactly what instructions they give Claude — which is the most direct way to assess quality.
+
+---
+
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)*

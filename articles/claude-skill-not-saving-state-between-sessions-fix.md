@@ -1,173 +1,112 @@
 ---
-layout: default
+layout: post
 title: "Claude Skill Not Saving State Between Sessions Fix"
-description: "A practical guide to fixing state persistence issues in Claude skills. Learn why your skills lose data between sessions and how to implement persistent storage."
+description: "Why Claude skills lose context between sessions and how to fix it. Covers supermemory, external files, and CLAUDE.md for persistent project state."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, tutorials]
+tags: [claude-code, claude-skills, troubleshooting, state-management]
+author: "Claude Skills Guide"
+reviewed: true
+score: 5
 ---
 
 # Claude Skill Not Saving State Between Sessions Fix
 
-If you've been working with Claude skills like the `pdf` skill, `xlsx` skill, or the `frontend-design` skill, you may have encountered a frustrating issue: your skill loses all its state when a new conversation session begins. This happens because Claude skills, by design, operate within isolated session contexts that don't automatically persist data between conversations.
+Claude skills are `.md` files — they contain instructions, not running code with variables or caches. When a conversation ends, all context accumulated during that session is gone. There is no built-in state container inside a skill. This is by design: each session starts fresh from the skill's `.md` definition.
 
-Understanding why this happens and how to fix it will help you build more robust automation workflows using skills like the `tdd` skill, `pptx` skill, and others.
+If you need information to persist across sessions, you need an external store that Claude can read from and write to. This guide covers the practical approaches.
 
-## Why Claude Skills Lose State Between Sessions
+## Why Skills Lose State
 
-Claude skills run as independent modules that load during your conversation. When a session ends, the skill's internal variables, caches, and temporary data are discarded. This architecture works well for stateless operations—reading a PDF once, generating a spreadsheet, or creating a single design artifact—but breaks down when you need continuity.
+A skill like `/tdd`, `/pdf`, or `/frontend-design` is a plain `.md` file stored in `~/.claude/skills/`. When you invoke it with `/skill-name`, its contents are loaded into the current conversation as instructions for Claude. When the session ends, those instructions and all context derived from them are gone.
 
-For example, if you're using the `supermemory` skill to maintain a knowledge base across sessions, you might expect your stored memories to persist. However, without explicit state management, each new session starts fresh.
+This works fine for stateless operations — generating a document, writing tests for a specific function, producing a design component. It breaks down when you want Claude to remember decisions, accumulated knowledge, or work-in-progress state across sessions.
 
-The solution involves implementing external persistence using files, databases, or shared storage that the skill can read from and write to across sessions.
+## The Right Approach: External Persistent Storage
 
-## Implementing Persistent State Storage
+Since skills cannot hold state internally, the fix is to use an external file or store that Claude can read at the start of a session and update during it.
 
-The most straightforward approach is using filesystem-based persistence. Your skill can read existing data at initialization and write updates after each operation.
+### Option 1: Use the `/supermemory` Skill
 
-Here's a pattern for a skill that maintains counter state across sessions:
+The `/supermemory` skill is designed for cross-session persistence. It maintains a local notes file and lets you store and retrieve information by instructing Claude:
 
-```python
-import json
-import os
-
-class PersistentSkill:
-    def __init__(self, state_file='skill_state.json'):
-        self.state_file = state_file
-        self.state = self._load_state()
-    
-    def _load_state(self):
-        if os.path.exists(self.state_file):
-            with open(self.state_file, 'r') as f:
-                return json.load(f)
-        return {'counter': 0, 'history': []}
-    
-    def _save_state(self):
-        with open(self.state_file, 'w') as f:
-            json.dump(self.state, f, indent=2)
-    
-    def increment(self):
-        self.state['counter'] += 1
-        self.state['history'].append(f'Incremented at {pd.Timestamp.now()}')
-        self._save_state()
-        return self.state['counter']
+```
+/supermemory
+Store: auth module uses JWT with 15-minute access tokens.
+Refresh token logic is in src/auth/refresh.ts.
+We decided not to use sessions because of horizontal scaling.
 ```
 
-This pattern works for any skill that needs persistence—the `pdf` skill could track processed documents, the `xlsx` skill could maintain a workbook cache, and the `tdd` skill could preserve test history.
+To retrieve it in a later session:
 
-## Handling Complex State Structures
-
-For skills that manage more complex data, consider using a dedicated storage format. The `docx` skill might need to track document templates and their usage statistics:
-
-```python
-import sqlite3
-from pathlib import Path
-
-class DocumentSkillState:
-    def __init__(self, db_path='documents.db'):
-        self.db_path = db_path
-        self._init_db()
-    
-    def _init_db(self):
-        conn = sqlite3.connect(self.db_path)
-        conn.execute('''
-            CREATE TABLE IF NOT EXISTS documents (
-                id INTEGER PRIMARY KEY,
-                name TEXT,
-                template TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                modifications INTEGER DEFAULT 0
-            )
-        ''')
-        conn.commit()
-        conn.close()
-    
-    def record_document(self, name, template):
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        cursor.execute(
-            'INSERT INTO documents (name, template) VALUES (?, ?)',
-            (name, template)
-        )
-        conn.commit()
-        doc_id = cursor.lastrowid
-        conn.close()
-        return doc_id
+```
+/supermemory
+What do we know about the auth module?
 ```
 
-SQLite works well for skills that need structured queries, while the filesystem approach suits simpler use cases.
+The skill reads from and writes to a local store. Your notes accumulate across sessions, so returning to a project after weeks does not require re-explaining the architecture.
 
-## Using Environment Variables for Session Bridging
+### Option 2: Maintain a `CLAUDE.md` Project File
 
-Another technique involves using environment variables to pass state between sessions. This works when your skill integrates with external tools:
+For team projects or complex workflows, a `CLAUDE.md` file in your project root is a straightforward persistent context mechanism. Claude Code reads this file automatically when present. Document the information you want available at the start of every session:
 
-```bash
-export CLAUDE_SKILL_STATE='{"last_operation": "pdf_merge", "output_file": "merged.pdf"}'
+```markdown
+# Project Context
+
+## Architecture
+- Frontend: React with TypeScript in /apps/web
+- API: Fastify in /apps/api
+- Shared UI: /packages/ui
+
+## Active Decisions
+- JWT auth, access tokens 15 min, refresh 30 days
+- Tests use Vitest, not Jest — do not suggest Jest
+
+## Current Work in Progress
+- PR #142: Add OAuth provider support (branch: feature/oauth)
+- Known issue: refresh token race condition under investigation
 ```
 
-Your skill reads this environment variable at startup and restores its context. The `canvas-design` skill might use this approach to remember the last canvas dimensions or color palette across sessions.
+Any skill invoked during a session will have access to this context because it is loaded at session start.
 
-## Best Practices for State Management
+### Option 3: Instruct Claude to Write Output Files
 
-When implementing persistence for your Claude skills, follow these guidelines:
+For skills that produce accumulated results — a running test log, a design decision record — instruct Claude explicitly to write the output to a file at the end of each session:
 
-**Choose the right storage mechanism.** Files work for simple data, SQLite for structured data, and external databases for distributed systems. The `frontend-design` skill might use files for theme configurations but SQLite for design system components.
-
-**Handle initialization gracefully.** Always provide defaults when loading state fails. Your skill should work even on first run with no existing data.
-
-**Implement atomic writes.** Use temporary files and atomic renaming to prevent data corruption if a session crashes mid-write:
-
-```python
-import tempfile
-import shutil
-
-def atomic_write(data, filepath):
-    dir_path = os.path.dirname(filepath)
-    with tempfile.NamedTemporaryFile(mode='w', dir=dir_path, delete=False) as tmp:
-        json.dump(data, tmp)
-        tmp_path = tmp.name
-    shutil.move(tmp_path, filepath)
+```
+/tdd
+We're writing tests for the payment module. At the end of
+our session, append a summary of tests written to
+docs/test-progress.md.
 ```
 
-**Consider versioning.** Store state version numbers so your skill can migrate data structures when you update the skill logic. This prevents crashes when old state formats conflict with new code.
+In the next session:
 
-## Common Pitfalls to Avoid
-
-One frequent mistake is storing absolute paths that won't work across different environments. Always use relative paths or environment-aware path resolution:
-
-```python
-STATE_DIR = os.path.join(os.path.dirname(__file__), '.skill_state')
-os.makedirs(STATE_DIR, exist_ok=True)
+```
+/tdd
+Read docs/test-progress.md to see where we left off,
+then continue with the refund processing tests.
 ```
 
-Another issue involves forgetting to save state after operations. Every function that modifies state should trigger a save, or use a context manager that auto-saves:
+The file is the state. Claude reads it to restore context and writes to it to update progress.
 
-```python
-class AutoSavingSkill:
-    def __init__(self):
-        self.state = self._load_state()
-    
-    def __enter__(self):
-        return self
-    
-    def __exit__(self, *args):
-        self._save_state()
-    
-    def modify(self):
-        self.state['count'] += 1
-        return self.state['count']
+## Choosing the Right Approach
 
-# Usage
-with AutoSavingSkill() as skill:
-    skill.modify()
-# State automatically saved on exit
-```
+| Scenario | Recommended approach |
+|----------|---------------------|
+| Personal project, long-term context | `/supermemory` skill |
+| Team project, shared context | `CLAUDE.md` in project root |
+| Task-specific progress tracking | Instruct Claude to write/read a file |
+| Architecture decisions that every skill should know | `CLAUDE.md` |
 
-## Skills That Benefit from Persistence
+## Common Pitfalls
 
-Several Claude skills particularly benefit from stateful implementations. The `supermemory` skill relies entirely on persistent storage to function as a long-term knowledge base. The `tdd` skill can track test suites and coverage metrics across sessions, helping you maintain test-driven development discipline. The `xlsx` skill might maintain workbook caches to avoid reloading large files. The `algorithmic-art` skill can preserve generation seeds and parameter histories.
+**Not updating the persistent store during the session.** If you rely on `/supermemory` or a notes file but forget to instruct Claude to save new decisions before closing, that context is lost. Build the habit of ending sessions with an explicit save step.
 
-By implementing proper state management, you transform these skills from session-bound tools into persistent workflow components that accumulate knowledge and maintain context across your entire development session.
+**Expecting skills to remember automatically.** Skills do not watch for state to save. You must explicitly instruct Claude to write to a file or use `/supermemory`. The skill's `.md` file is read-only instructions — it does not accumulate state on its own.
 
----
+**Using volatile session variables instead of files.** Anything Claude "knows" because you told it earlier in the same conversation is lost when that conversation ends. Only information written to the filesystem (or another external store) survives.
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+## Summary
+
+Claude skills are stateless by design — they are `.md` instruction files, not running processes with memory. To persist state between sessions, use `/supermemory` for conversational notes, `CLAUDE.md` for project-level context, or instruct Claude to write progress to files that later sessions can read back.

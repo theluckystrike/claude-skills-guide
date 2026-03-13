@@ -1,172 +1,171 @@
 ---
-layout: default
-title: "Claude Skill Not Triggering Automatically? Here's How to Troubleshoot"
-description: "Your Claude skill won't activate automatically? This guide covers common reasons skills fail to trigger, configuration fixes, and debugging steps for pdf, tdd, frontend-design, and other skills."
+layout: post
+title: "Claude Skill Not Triggering? Troubleshooting Guide"
+description: "Claude skill not triggering when you type /skill-name? This guide covers installation checks, file location, invocation syntax, and common configuration issues."
 date: 2026-03-13
-categories: [troubleshooting, guides]
+categories: [guides, tutorials]
 tags: [claude-code, claude-skills, troubleshooting, debugging]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 5
 ---
 
 # Claude Skill Not Triggering Automatically? Here's How to Troubleshoot
 
-Claude skills are designed to activate automatically when their capabilities match your request. Sometimes, however, a skill stays silent despite being relevant. This guide walks through the most common reasons skills fail to trigger and provides concrete solutions you can apply immediately.
+Claude skills are invoked manually with `/skill-name` — they do not activate automatically based on context detection or relevance scoring. If your skill is not responding when you type `/skill-name`, the issue is almost always one of: the skill file does not exist where Claude looks, the filename does not match what you typed, or there is a permission problem preventing Claude from reading the file.
 
-## Understanding Skill Activation Triggers
+This guide walks through each cause systematically.
 
-Claude skills use a progressive disclosure system. At the first level, you see skill names and descriptions. At the second level, the full skill content loads when needed. The system should automatically detect when a skill applies to your task, but several factors can prevent this detection.
+## How Skill Invocation Actually Works
 
-Before troubleshooting, verify that the skill is actually installed. Some skills come pre-installed with Claude Code, while others require explicit loading using the `get_skill()` function. Check your available skills by reviewing the startup metadata or using the list_skills tool.
+When you type `/tdd` or `/pdf` in a Claude Code session, Claude looks for a file named `tdd.md` or `pdf.md` in:
 
-## Common Reasons Skills Fail to Trigger
+1. `.claude/skills/` in your current project directory (project-local skills)
+2. `~/.claude/skills/` in your home directory (global skills)
 
-### Incorrect Skill Name Usage
+If the file is found and readable, its contents are loaded into the conversation as instructions. If the file is not found, Claude either ignores the invocation or treats it as plain text.
 
-One of the most frequent issues stems from typos or incorrect skill names. Claude skills are case-sensitive and must match exactly. For example, if you want the spreadsheet manipulation skill, you must reference it as `xlsx` — not `xls` or `excel`. Similarly, the PDF processing skill works only when you call it as `pdf`, not "document" or "pdf-skill".
+There is no automatic triggering based on what you are doing — you must invoke the skill explicitly.
 
-When working with composite skills like `frontend-design`, ensure you use the hyphenated form. The system treats `frontend design` (with a space) as separate tokens, which may prevent automatic triggering.
+## Step 1: Verify the Skill File Exists
 
-### Context Window Limitations
+Check both locations:
 
-Skills activate based on relevance scoring within your conversation context. If your request is too brief or lacks sufficient context, the system may not recognize that a particular skill would help. This commonly occurs when you're working on a complex task but only ask a simple question.
+```bash
+# Check global skills
+ls ~/.claude/skills/
 
-For instance, if you're building a React component and need help with the `canvas-design` skill, saying "make this look better" provides insufficient context. A more specific request like "create a header design using the canvas-design skill with our brand colors" gives the system enough information to activate the appropriate skill.
-
-### Skill Loading Errors
-
-Sometimes a skill exists but fails to load properly, which prevents automatic triggering. Check for error messages during skill initialization. Skills that depend on external tools or Python packages may fail silently if dependencies are missing.
-
-The `pdf` skill requires certain Python packages for PDF manipulation. If these are not installed, the skill loads but becomes non-functional. Similarly, `webapp-testing` depends on Playwright being available in your environment. Without proper setup, the skill may appear to exist but never activate because it cannot initialize its dependencies.
-
-## Debugging Steps
-
-### Step 1: Verify Skill Availability
-
-Start by confirming the skill is recognized in your environment. Use Claude Code to query available skills:
-
-```
-List all available skills and confirm [skill-name] is present.
+# Check project-local skills
+ls .claude/skills/
 ```
 
-If the skill doesn't appear, you may need to install it or check your Claude Code configuration.
+If your skill does not appear in either listing, it is not installed. For community or built-in skills, copy the `.md` file to the appropriate directory:
 
-### Step 2: Test Explicit Activation
+```bash
+# Install a skill globally
+cp tdd.md ~/.claude/skills/tdd.md
 
-Rather than waiting for automatic triggering, attempt explicit activation. Use the get_skill function to load the skill directly:
-
-```javascript
-// Explicitly load a skill
-get_skill('pdf')
-get_skill('tdd')
-get_skill('frontend-design')
+# Or install it for the current project only
+mkdir -p .claude/skills/
+cp tdd.md .claude/skills/tdd.md
 ```
 
-This approach bypasses the automatic detection system and loads the skill directly into context. If explicit loading works but automatic triggering doesn't, the issue lies with the relevance scoring, not the skill itself.
+## Step 2: Check the Filename Matches Your Invocation
 
-### Step 3: Check Skill-Specific Requirements
+Skill filenames are case-sensitive and must match exactly. If the file is named `TDD.md` and you type `/tdd`, it will not be found on case-sensitive filesystems (Linux). The file must be `tdd.md` to match `/tdd`.
 
-Each skill has specific requirements that must be met for proper functioning. The `tdd` skill, for example, requires your project to have a test directory structure. Without proper test folders (like `tests/` or `__tests__/`), the skill may not activate even when you're discussing testing.
+Common mismatches:
 
-The `supermemory` skill needs an initialized memory store. If you haven't set up memory indexing for your project, the skill may stay inactive. Check the skill documentation for environment-specific requirements.
+| What you type | File must be named |
+|---------------|-------------------|
+| `/tdd` | `tdd.md` |
+| `/frontend-design` | `frontend-design.md` |
+| `/pdf` | `pdf.md` |
+| `/supermemory` | `supermemory.md` |
 
-### Step 4: Review Configuration Files
+```bash
+# Rename if the case is wrong
+mv ~/.claude/skills/TDD.md ~/.claude/skills/tdd.md
+```
 
-Claude skills can be configured through project-specific or global settings. Check for configuration files that might affect skill behavior:
+## Step 3: Check File Permissions
 
-- `.claude/settings.json` — Project-level skill preferences
-- `~/.claude/config` — Global skill configuration
-- Skill-specific config files in your project root
+Claude Code must be able to read the skill file. If the file is not world-readable, it may fail silently:
 
-Incorrect configuration can suppress skill activation. For example, you might have disabled a skill globally without realizing it.
+```bash
+# Check permissions
+ls -la ~/.claude/skills/
 
-### Step 5: Examine Console Output
+# Fix if needed (skills should be readable)
+chmod 644 ~/.claude/skills/*.md
+chmod 755 ~/.claude/skills/
+```
 
-When Claude Code runs, it provides diagnostic information about skill loading. Check the console for messages like:
+## Step 4: Confirm You Are in a Claude Code Session
 
-- "Skill [name] loaded successfully" — Normal operation
-- "Failed to load skill [name]" — Dependency or configuration issue
-- "Skill [name] not found in registry" — Skill not installed
+Skill invocation with `/skill-name` is a Claude Code feature. If you are using Claude through claude.ai in a browser, the `/skill-name` syntax is not supported — skills only work in Claude Code (the CLI tool).
 
-These messages help pinpoint whether the issue is with installation, loading, or activation.
+Verify you are in an active Claude Code session:
+
+```bash
+# Start Claude Code if not already running
+claude
+```
+
+## Step 5: Check for Typos and Hyphenation
+
+Hyphens in skill names must be exact. `/frontend-design` is different from `/frontenddesign` or `/frontend design` (with a space). Check the actual filename:
+
+```bash
+ls ~/.claude/skills/ | grep -i frontend
+```
+
+Use the exact name shown in the listing as your `/skill-name` invocation.
+
+## Step 6: Explicit Invocation Debugging
+
+If you are unsure whether the skill is loading, ask Claude directly after invoking it:
+
+```
+/tdd
+Confirm you have loaded the tdd skill and summarize
+its instructions in one sentence.
+```
+
+If the skill loaded, Claude will describe its purpose. If it did not load, Claude will respond without the skill's context — often just treating `/tdd` as part of your message.
 
 ## Practical Examples
 
-### Example 1: PDF Skill Not Activating
-
-You need to extract tables from a contract PDF, but the `pdf` skill never triggers.
-
-**Problem**: Your request is too generic — "extract this data"
-
-**Solution**: Be explicit about needing PDF-specific capabilities:
-
-```
-Can you use the pdf skill to extract all tables from contract.pdf and save them as structured data?
-```
-
-The skill now has clear activation signals: PDF file handling, table extraction, and structured output.
-
-### Example 2: TDD Skill Staying Silent
-
-You're writing tests but the `tdd` skill doesn't activate.
-
-**Problem**: No test directory exists in your project.
-
-**Solution**: Ensure your project has a proper test structure:
+### PDF Skill Not Responding
 
 ```bash
-mkdir -p tests/unit
-touch tests/unit/.gitkeep
+# Check the file exists and has the right name
+ls -la ~/.claude/skills/pdf.md
+
+# If missing, install it
+# If present, verify permissions:
+chmod 644 ~/.claude/skills/pdf.md
 ```
 
-The `tdd` skill activates more reliably when it detects an existing test infrastructure.
-
-### Example 3: Frontend-Design Skill Not Triggering
-
-You want design help but `frontend-design` stays inactive.
-
-**Problem**: No design context in your request.
-
-**Solution**: Provide explicit context:
-
+Then invoke:
 ```
-Using the frontend-design skill, create a card component with our brand colors (#3B82F6, #1E40AF) in the style of our design system.
+/pdf
+Extract the table of contents from contract.pdf
 ```
 
-### Example 4: Supermemory Not Finding Context
+### TDD Skill Not Applying Test-First Behavior
 
-The `supermemory` skill doesn't surface relevant past discussions.
+If you invoke `/tdd` and Claude jumps straight to implementation without writing tests first, the skill file may not be loading. Verify:
 
-**Problem**: Memory index not built or empty.
-
-**Solution**: Explicitly index your project:
-
-```
-Initialize supermemory for this project and index all documentation files.
+```bash
+ls ~/.claude/skills/tdd.md
+# Should exist and be readable
 ```
 
-After indexing, the skill can retrieve relevant context from your project history.
+If the file is present and readable but behavior seems wrong, check the file content:
+
+```bash
+cat ~/.claude/skills/tdd.md
+```
+
+The skill file should contain instructions telling Claude to write tests before implementation. If the file is empty or malformed, that explains the behavior.
+
+### Frontend-Design Skill Ignoring Project Conventions
+
+If `/frontend-design` is not applying your design system conventions, the skill file likely does not include them. Edit the skill to add your project-specific instructions:
+
+```bash
+# Add project context to the skill
+echo "\n## Project Conventions\n- Use Tailwind classes only\n- Colors from /packages/ui/tokens.ts" >> ~/.claude/skills/frontend-design.md
+```
 
 ## Preventing Future Issues
 
-Develop a consistent approach to skill usage:
+1. Keep skill files in `~/.claude/skills/` with permissions `644`
+2. Name files exactly as you intend to invoke them (`/tdd` → `tdd.md`)
+3. For project-specific skills, use `.claude/skills/` in the project root
+4. Periodically run `ls ~/.claude/skills/` to audit what is installed
 
-1. **Use exact skill names** — Double-check spelling and formatting
-2. **Provide clear context** — Give enough information for relevance scoring
-3. **Verify installations** — Confirm skills are properly loaded before use
-4. **Check dependencies** — Ensure Python packages and external tools are available
-5. **Review configurations** — Check for settings that might suppress activation
+## Summary
 
-## When All Else Fails
-
-If you've tried all troubleshooting steps and a skill still won't trigger automatically, try these final options:
-
-- **Restart Claude Code** — Sometimes the skill registry needs a fresh initialization
-- **Reinstall the skill** — Delete and reload the skill to ensure clean installation
-- **Check for conflicts** — Other skills or extensions might be interfering
-- **Consult skill documentation** — Each skill may have unique activation requirements
-
-The skill ecosystem is continuously improving. If you encounter persistent issues, report them through appropriate channels — many skill problems get resolved in subsequent updates.
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Claude skills do not trigger automatically — you invoke them with `/skill-name`. If invocation is not working, check that the file exists in `~/.claude/skills/` or `.claude/skills/`, the filename matches your invocation exactly (case-sensitive), and the file has read permissions. Those three checks resolve the vast majority of issues.

@@ -1,12 +1,13 @@
 ---
-layout: default
-title: "AI Agent Workflow Guide: Claude Skills for Real-World Automation"
-description: "Practical Claude skills workflow guide for developers. Covers contributing skills, building skill chains, and integrating Claude into production workflows."
+layout: post
+title: "Claude Skills Workflow Guide: Build, Chain & Contribute"
+description: "Build repeatable Claude skills workflows. Covers skill chaining patterns, contributing to open source, and production-ready automation pipelines."
 date: 2026-03-13
-author: theluckystrike
-is_pillar: true
-categories: [hub]
-tags: [workflows, claude-skills, automation]
+categories: [workflows]
+tags: [claude-code, claude-skills, workflows, automation, open-source]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # AI Agent Workflow Guide: Claude Skills for Real-World Automation

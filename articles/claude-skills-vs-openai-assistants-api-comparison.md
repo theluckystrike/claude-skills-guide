@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Claude Skills vs OpenAI Assistants API: A Practical Comparison for Developers"
-description: "A technical comparison of Claude skills versus OpenAI Assistants API. Learn which approach suits your development workflow better with real code examples."
+layout: post
+title: "Claude Skills vs OpenAI Assistants API Comparison"
+description: "Technical comparison of Claude skills vs OpenAI Assistants API. Learn which suits your dev workflow with real setup examples, cost factors, and use case guidance."
 date: 2026-03-13
-author: theluckystrike
+categories: [comparisons]
+tags: [claude-code, claude-skills, openai, assistants-api, comparison]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Skills vs OpenAI Assistants API: A Practical Comparison for Developers
@@ -20,18 +24,19 @@ OpenAI's Assistants API takes a different route. It provides a framework for bui
 
 ## Architecture and Setup Complexity
 
-Setting up Claude skills requires minimal configuration. Skills live in your project's `skills/` directory or a central skills folder. A skill definition typically includes metadata and guidance that Claude uses automatically:
+Setting up Claude skills requires minimal configuration. Skills are Markdown files stored in `~/.claude/skills/`. A skill definition is plain Markdown that provides Claude with standing instructions—there's no YAML schema or tool registration required:
 
-```yaml
-# Example skill structure
-name: pdf
-description: "Comprehensive PDF manipulation for extraction and creation"
-tools:
-  - read_file
-  - write_file
+```markdown
+# pdf
+
+Handle PDF extraction and creation tasks.
+
+## Instructions
+When asked to read a PDF, use available file tools to extract text and tables.
+When asked to create a PDF, generate the content and write it to the specified path.
 ```
 
-This simplicity means you can start using skills within minutes of installing Claude Code.
+Invoke any skill by typing `/skill-name` in a Claude Code session. This simplicity means you can start using skills within minutes of writing your first skill file.
 
 OpenAI Assistants API requires more infrastructure. You need to create assistant objects, manage thread IDs, handle message pagination, and implement webhooks for async operations. Here's a typical Python setup:
 

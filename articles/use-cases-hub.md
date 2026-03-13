@@ -1,12 +1,13 @@
 ---
-layout: default
-title: "Claude Skills by Industry and Use Case: Complete Guide 2026"
-description: "Find the right Claude skills for your industry. Covers frontend development, data analysis, DevOps, and more with practical skill recommendations."
+layout: post
+title: "Claude Skills by Use Case: Frontend, Data & DevOps (2026)"
+description: "Find the right Claude skills for your workflow. Covers frontend development, data analysis, and DevOps with concrete skill recommendations."
 date: 2026-03-13
-author: theluckystrike
-is_pillar: true
-categories: [hub]
-tags: [use-cases, claude-skills, claude-code]
+categories: [guides]
+tags: [claude-code, claude-skills, use-cases, frontend, devops, data-analysis]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Skills by Industry and Use Case (2026)

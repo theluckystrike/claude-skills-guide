@@ -1,211 +1,122 @@
 ---
-layout: default
-title: "Claude Skills Competitive Analysis Automation Workflow"
-description: "Learn how to build an automated competitive analysis workflow using Claude skills for market research, competitor tracking, and data-driven insights."
+layout: post
+title: "Competitive Analysis Automation with Claude Skills"
+description: "Automate competitive analysis using Claude Code skills for document processing, data extraction, memory management, and stakeholder reporting."
 date: 2026-03-13
-author: theluckystrike
+categories: [workflows, tutorials]
+tags: [claude-code, claude-skills, competitive-analysis, market-research, automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 6
 ---
 
-# Claude Skills Competitive Analysis Automation Workflow
+# Competitive Analysis Automation with Claude Skills
 
-Competitive analysis remains one of the most time-consuming tasks for developers and product teams. Manually gathering data about competitors, processing their content, and synthesizing insights takes hours that could be spent building. By combining Claude skills strategically, you can automate substantial portions of this workflow and focus on actionable intelligence rather than data collection.
+Competitive analysis is one of the most time-consuming tasks for developers and product teams. Manually gathering data about competitors, processing their content, and synthesizing insights takes hours that could be spent building. By combining Claude skills strategically, you can automate substantial portions of this workflow and focus on actionable intelligence rather than data collection.
 
-This guide walks through building an automated competitive analysis pipeline using Claude skills that handle document processing, data extraction, memory management, and reporting.
+Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. This guide walks through building an automated competitive analysis pipeline using skills that handle document processing, data extraction, memory management, and reporting.
 
-## The Core Skill组合
+## The Core Skill Combination
 
-A robust competitive analysis workflow requires several specialized skills working together. The **pdf** skill processes competitor documentation, whitepapers, and reports. The **xlsx** skill manages competitive data spreadsheets and generates analysis visualizations. The **supermemory** skill maintains an organized knowledge base of competitor information across sessions. The **pptx** skill creates presentation-ready reports for stakeholder communication.
+A competitive analysis workflow requires several specialized skills working together:
+
+- **pdf** — Processes competitor documentation, whitepapers, and annual reports
+- **xlsx** — Manages competitive data spreadsheets and generates analysis structures
+- **supermemory** — Maintains an organized knowledge base of competitor information across sessions
+- **pptx** — Creates presentation-ready reports for stakeholder communication
 
 Each skill handles a specific stage of the workflow, and when chained together, they reduce manual effort significantly.
 
-## Stage 1: Gathering Competitor Documents
+## Stage 1: Gathering and Processing Competitor Documents
 
-Start by collecting publicly available competitor materials—pricing pages, feature comparison sheets, annual reports, and technical documentation. Store these as PDF files in a designated directory. The **pdf** skill excels at extracting structured data from these documents.
+Start by collecting publicly available competitor materials—pricing pages, feature comparison sheets, annual reports, and technical documentation. Store these as PDF files in a designated directory, then invoke the pdf skill to extract structured data:
 
-```python
-# Using the pdf skill to extract competitor pricing data
-from pdfreader import PDFDocument, SimplePDFViewer
-
-def extract_competitor_pricing(pdf_path):
-    doc = PDFDocument(pdf_path)
-    viewer = SimplePDFViewer(doc)
-    
-    pricing_data = []
-    for page_num, page in enumerate(doc.pages, 1):
-        viewer.navigate(page_num)
-        viewer.render()
-        text = viewer.canvas.strings
-        
-        # Extract price patterns like $99/month or $199/year
-        for line in text:
-            if '$' in line and any(month in line for month in ['month', 'year', 'annual']):
-                pricing_data.append(line)
-    
-    return pricing_data
+```
+/pdf
+Extract all pricing tiers, feature names, and positioning statements from competitor-acme.pdf and output as a structured list
 ```
 
-This approach scales to dozens of competitor documents, extracting relevant pricing tiers, feature lists, and positioning statements automatically.
+Claude will read the file and return organized content you can copy into your tracking systems. For plain-text competitor pages, paste the content directly into the Claude Code session and ask for the same extraction.
 
-## Stage 2: Processing Web Content and Social Signals
+This approach scales to dozens of competitor documents. Work through them one at a time or batch them by pasting multiple documents in sequence.
 
-For competitor websites and social media, combine the **webapp-testing** skill with content extraction. This skill can navigate competitor sites programmatically, capturing pricing changes, new feature announcements, and content updates.
+## Stage 2: Processing Web Content
 
-```javascript
-// Using webapp-testing to monitor competitor landing pages
-const { chromium } = require('playwright');
+For competitor websites, you can use Claude Code's built-in ability to read content you paste or fetch via shell commands. The **webapp-testing** skill helps when you need to verify what's actually rendering on a competitor's page:
 
-async function captureCompetitorPage(url, outputPath) {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
-  
-  await page.goto(url);
-  
-  // Extract key conversion elements
-  const data = {
-    headline: await page.locator('h1').textContent(),
-    cta_text: await page.locator('button').first().textContent(),
-    pricing_visible: await page.locator('[class*="price"]').count(),
-    timestamp: new Date().toISOString()
-  };
-  
-  await page.screenshot({ path: outputPath, fullPage: true });
-  await browser.close();
-  
-  return data;
-}
+```
+/webapp-testing
+Navigate to https://competitor.com/pricing, capture the page content, and extract all plan names and prices
 ```
 
-Schedule this script to run weekly, storing screenshots and structured data for trend analysis.
+Schedule a shell script to capture web data weekly using `curl` or `wget`, saving snapshots to a local directory that your Claude Code session can reference.
 
 ## Stage 3: Building the Competitive Intelligence Database
 
-The **supermemory** skill serves as your long-term memory layer. Unlike a simple database, it understands context and relationships between pieces of information. Store competitor profiles with key attributes:
+The **supermemory** skill serves as your long-term memory layer. Use it to store competitor profiles with key attributes so context persists across sessions:
 
-```markdown
-# Competitor: Acme Corp
-
-## Last Updated: 2026-03-10
-
-### Products
-- Enterprise Plan: $299/month
-- Starter Plan: $49/month
-
-### Strengths
-- Strong API documentation
-- Excellent developer experience
-- Active community (12k Discord members)
-
-### Weaknesses
-- Limited customization options
-- No on-premise option
-- Slow support response times
-
-### Recent Changes
-- Added AI features in v3.2 (2026-02)
-- Increased pricing by 20% (2026-01)
+```
+/supermemory store:
+Competitor: Acme Corp
+Updated: 2026-03-10
+Enterprise Plan: $299/month, Starter: $49/month
+Strengths: strong API docs, active community (12k Discord)
+Weaknesses: no on-premise option, slow support
+Recent: added AI features v3.2 Feb 2026, raised prices 20% Jan 2026
 ```
 
-When you revisit the analysis later, the **supermemory** skill retrieves relevant context automatically, maintaining continuity across sessions.
+Query it later to recall specific details without re-reading all your notes:
+
+```
+/supermemory find: Acme Corp pricing history
+/supermemory find: competitors offering on-premise deployment
+```
 
 ## Stage 4: Data Analysis and Visualization
 
-The **xlsx** skill transforms raw competitive data into analyzable formats and generates visualizations. Create spreadsheets that track competitor metrics over time:
+The **xlsx** skill transforms raw competitive data into analyzable formats. Create a feature comparison matrix:
 
-```python
-# Using xlsx skill to create competitive analysis workbook
-from openpyxl import Workbook
-from openpyxl.chart import LineChart, Reference
-
-def create_competitive_tracker():
-    wb = Workbook()
-    ws = wb.active
-    ws.title = "Feature Comparison"
-    
-    # Headers
-    headers = ["Feature", "Our Product", "Competitor A", "Competitor B", "Competitor C"]
-    ws.append(headers)
-    
-    # Feature matrix
-    features = [
-        ["API Access", True, True, True, False],
-        ["SSO", True, True, False, True],
-        ["Custom Branding", True, False, False, True],
-        ["24/7 Support", True, True, False, True],
-        ["On-premise", True, False, False, False]
-    ]
-    
-    for feature in features:
-        ws.append(feature)
-    
-    # Add visualization
-    chart = LineChart()
-    data = Reference(ws, min_col=2, min_row=1, max_col=5, max_row=6)
-    chart.add_data(data, titles_from_headers=True)
-    ws.add_chart(chart, "H2")
-    
-    wb.save("competitive_analysis.xlsx")
+```
+/xlsx
+Create a competitive analysis workbook with a Feature Comparison sheet. Columns: Feature, Our Product, Acme Corp, Beta Inc, Gamma LLC. Rows: API Access, SSO, Custom Branding, 24/7 Support, On-Premise. Mark each cell TRUE or FALSE. Add a second sheet called Pricing with monthly and annual prices for each competitor.
 ```
 
-This creates a living document that updates as you gather more data, with charts that highlight gaps and opportunities.
+Claude generates the spreadsheet structure, which you can open in Excel or Google Sheets for further manipulation. The skill also supports adding charts—ask for a bar chart comparing feature coverage percentages per competitor.
 
 ## Stage 5: Automated Reporting
 
-Finally, use the **pptx** skill to generate stakeholder-ready presentations. Instead of manually building slides each week, the skill constructs them from your stored competitive intelligence:
+Use the **pptx** skill to generate stakeholder-ready presentations from your stored competitive intelligence:
 
-```python
-# Using pptx skill to generate competitive updates
-from pptx import Presentation
-from pptx.util import Inches, Pt
-
-def generate_weekly_update(competitor_data):
-    prs = Presentation()
-    
-    # Title slide
-    slide = prs.slides.add_slide(prs.slide_layouts[0])
-    slide.shapes.title.text = "Weekly Competitive Analysis"
-    slide.placeholders[1].text = f"Updated: {datetime.now().strftime('%Y-%m-%d')}"
-    
-    # Key findings slide
-    slide = prs.slides.add_slide(prs.slide_layouts[1])
-    slide.shapes.title.text = "Key Findings"
-    
-    content = slide.placeholders[1]
-    content.text = "1. Competitor A launched new AI features\n"
-    content.text += "2. Competitor B reduced pricing by 15%\n"
-    content.text += "3. Our product leads in API access and on-premise options"
-    
-    prs.save("competitive_update.pptx")
 ```
+/pptx
+Create a weekly competitive update presentation with these slides:
+1. Title: "Competitive Analysis - Week of March 13, 2026"
+2. Key Findings: Acme launched AI features; Beta reduced pricing 15%; we lead on API access and on-premise
+3. Feature Comparison table (pull from my competitive tracker)
+4. Recommended Actions: 3 bullet points
+```
+
+Instead of building slides manually each week, the skill constructs them from your stored data and current session context.
 
 ## Workflow Automation Tips
 
-Chain these stages together using a simple scheduling approach. A basic shell script can trigger the entire pipeline:
+Chain these stages using a regular workflow. A basic shell script triggers data collection, and you run the Claude Code analysis in a dedicated session:
 
 ```bash
 #!/bin/bash
-# Run competitive analysis pipeline
+# Weekly competitive intelligence data collection
 
-echo "Starting competitive analysis..."
+echo "Capturing competitor web snapshots..."
+curl -s https://acmecorp.com/pricing > snapshots/acme-pricing-$(date +%Y%m%d).html
+curl -s https://betainc.com/pricing > snapshots/beta-pricing-$(date +%Y%m%d).html
 
-# Extract data from PDFs
-python extract_competitor_pricing.py
-
-# Capture web data
-node capture_competitor_pages.js
-
-# Generate analysis
-python analyze_competitors.py
-
-# Create reports
-python generate_report.py
-
-echo "Competitive analysis complete!"
+echo "Data ready for Claude Code analysis session"
 ```
 
-Run this weekly or monthly depending on how quickly your market changes. The **supermemory** skill persists insights between runs, so each iteration builds on previous work rather than starting fresh.
+Run this weekly or monthly depending on how quickly your market changes. The supermemory skill persists insights between Claude Code sessions, so each iteration builds on previous work rather than starting fresh.
 
 ## When to Use Manual Review
 
-Automation handles the heavy lifting, but human judgment remains essential for strategic interpretation. Use automated outputs as a starting point, then apply domain expertise to identify implications the system cannot assess—market positioning, brand perception, and emerging competitive threats require contextual understanding beyond data extraction.
+Automation handles data collection and formatting, but human judgment is essential for strategic interpretation. Use automated outputs as a starting point, then apply domain expertise to identify implications the system cannot assess—market positioning, brand perception, and emerging competitive threats require contextual understanding beyond data extraction.
 
 ## Built by theluckystrike — More at [zovo.one](https://zovo.one)

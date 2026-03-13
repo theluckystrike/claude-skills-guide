@@ -1,147 +1,217 @@
 ---
-layout: default
-title: "Claude Code 2026 New Features: Skills and Hooks Roundup"
-description: "A comprehensive guide to Claude Code's 2026 updates including the new skills system, hooks for workflow automation, and practical implementation examples for developers."
+layout: post
+title: "Claude Code 2026: Skills and Hooks Feature Roundup"
+description: "Claude Code 2026 skills and hooks roundup: pdf, tdd, supermemory, webapp-testing, and the hook system with real invocation examples and configuration patterns."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, tutorials]
+tags: [claude-code, claude-skills, hooks, pdf, tdd, supermemory, webapp-testing]
+author: "Claude Skills Guide"
+reviewed: true
+score: 6
 ---
 
 # Claude Code 2026 New Features: Skills and Hooks Roundup
 
-Claude Code's 2026 release cycle brought substantial improvements to how developers interact with AI-assisted workflows. The most significant changes center on the expanded skills ecosystem and the new hooks system, which together transform Claude from a simple chat interface into a programmable development environment. This guide covers what is new, what matters, and how to integrate these features into your daily workflow.
+Claude Code has expanded significantly in 2026. The skills ecosystem now covers over fifty specialized capabilities, and the hook system gives developers structured control over when and how Claude acts. This roundup covers the most impactful additions.
 
-## The Evolved Skills System
+Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`. Hooks are shell commands configured in `~/.claude/settings.json` that fire before and after Claude's actions.
 
-The skills system in Claude Code 2026 represents a fundamental shift in how Claude extends its capabilities. Rather than relying solely on custom prompts or external scripts, you now have access to a curated library of specialized skills that function as first-class extensions.
+## PDF Processing with the pdf Skill
 
-### Installing and Managing Skills
+The `pdf` skill handles technical documentation, contracts, and data extraction. It now supports batch processing and encrypted documents:
 
-Skills are installed through the Claude CLI using straightforward commands:
-
-```bash
-# List available skills
-claude skill list
-
-# Install a specific skill
-claude skill install pdf
-
-# Install multiple skills at once
-claude skill install xlsx pptx docx
+```
+/pdf process all files in invoices/ and extract the vendor, amount, and date from each. Format as a markdown table.
 ```
 
-The installation process pulls pre-configured skill packages that include not just prompt templates but also supporting code, API integrations, and example workflows. This makes skills significantly more powerful than their predecessors.
-
-### Essential Skills for Common Workflows
-
-Several skills stand out for everyday development tasks. The **pdf** skill handles document generation and text extraction without requiring external libraries. If you build documentation systems or process contracts programmatically, this skill eliminates the need for separate PDF tooling.
-
-```python
-# Generating a report with the pdf skill
-from pdf import PDFDocument, add_page, write_text
-
-doc = PDFDocument()
-add_page(doc)
-write_text(doc, "Project Status Report", x=50, y=50)
-write_text(doc, "Build: PASSING | Tests: 47/47", x=50, y=80)
-doc.save("status.pdf")
+```
+/pdf extract the data table from page 7 of technical-spec.pdf. The table has columns: Parameter, Type, Default, Description.
 ```
 
-The **xlsx** skill complements this by enabling spreadsheet automation. Create financial reports, track sprint metrics, or build data dashboards directly through Claude commands:
-
-```python
-from xlsx import Workbook, write_data, add_chart
-
-wb = Workbook("sprint-metrics.xlsx")
-write_data(wb, "Velocity", data=[["Week", "Points"], ["W1", 23], ["W2", 31]])
-add_chart(wb, "Velocity", type="line")
-wb.save()
+```
+/pdf merge cover-letter.pdf and portfolio.pdf into application-packet.pdf
 ```
 
-For frontend developers, the **frontend-design** skill provides layout generation, color scheme recommendations, and component scaffolding. This skill works particularly well when combined with the **tdd** skill for generating tests alongside your components:
+The skill integrates into documentation pipelines by pulling code examples, API signatures, and configuration blocks from PDF-based resources — technical docs distributed as PDFs are no longer a dead end.
 
-```bash
-# Generate a React component with tests
-claude skill run frontend-design --component Button --framework react
-claude skill run tdd --target Button.tsx --framework vitest
+## Frontend Design with the frontend-design Skill
+
+The `frontend-design` skill generates component code and validates UI implementations:
+
+```
+/frontend-design create a responsive card component in React with Tailwind: image top, title H3, description text, CTA button. Primary color #1A73E8, 8px spacing grid.
 ```
 
-### Memory and Context Skills
-
-The **supermemory** skill addresses one of the persistent challenges with AI assistants: maintaining context across sessions. This skill indexes your project files, codebases, and documentation, allowing Claude to reference relevant prior context automatically:
-
-```bash
-# Query your project memory
-claude skill run supermemory --query "authentication implementation"
+```
+/frontend-design audit this component for WCAG 2.1 AA violations — check contrast ratios, aria labels, and keyboard navigation: [paste component]
 ```
 
-When working on large codebases, supermemory eliminates the need to repeatedly explain project structure or coding conventions. The skill learns from your interactions and surfaces relevant historical context when you need it.
+```
+/frontend-design verify this implementation matches the Figma spec: [paste spec details and component code]
+```
 
-## The New Hooks System
+The skill's Figma integration (paste spec, receive code) is the most-used new capability in 2026 for frontend teams.
 
-Hooks represent the most significant architectural addition to Claude Code in 2026. Unlike skills, which extend Claude's capabilities, hooks intercept and modify Claude's behavior at specific points in the interaction lifecycle.
+## Test-Driven Development with the tdd Skill
 
-### Hook Types and Triggers
+The `tdd` skill guides test-first development and generates meaningful test cases:
 
-Claude Code 2026 supports several hook categories:
+```
+/tdd write Jest tests for UserService.authenticate() — include valid credential tests, invalid credential tests, and network timeout handling
+```
 
-- **Pre-processing hooks** run before Claude processes your input, enabling input transformation or validation
-- **Context hooks** inject additional context into conversations based on external triggers
-- **Post-processing hooks** modify Claude's output before it reaches you
-- **Event hooks** respond to system events like file changes or git operations
+```
+/tdd given this failing test, implement the function that makes it pass: [paste test]
+```
 
-### Practical Hook Implementations
+```
+/tdd add property-based tests for this pure function using fast-check: [paste function]
+```
 
-A common use case involves automatically running tests when code changes:
+Property-based testing support and fuzz input generation are new in 2026 — the skill can now generate randomized inputs to find edge cases that manually written tests miss.
 
-```javascript
-// .claude/hooks/on-file-change.js
-export function onFileChange(event) {
-  if (event.path.endsWith('.test.js') || event.path.endsWith('.spec.js')) {
-    return { run: ['npm test', '--', event.path] };
+## Memory Management with the supermemory Skill
+
+The `supermemory` skill provides persistent context across sessions:
+
+```
+/supermemory store: project-stack = Next.js 14, TypeScript, PostgreSQL, Prisma, Railway deployment
+```
+
+```
+/supermemory store: linting = ESLint Airbnb config, Prettier, 2-space indent, single quotes
+```
+
+```
+/supermemory recall project-stack
+```
+
+The semantic search capability added in 2026 makes recall more flexible:
+
+```
+/supermemory recall any decisions about the database setup
+```
+
+Previously this required remembering exact key names. Now the skill searches stored context by meaning.
+
+## Web Testing with the webapp-testing Skill
+
+The `webapp-testing` skill provides Playwright integration for frontend testing:
+
+```
+/webapp-testing verify the checkout flow on http://localhost:3000: add item to cart, proceed to checkout, fill in test card 4242424242424242, submit, confirm redirect to /confirmation
+```
+
+```
+/webapp-testing take a baseline screenshot of /dashboard and save as dashboard-baseline.png
+```
+
+```
+/webapp-testing compare the current /dashboard against dashboard-baseline.png and report visual differences above 5%
+```
+
+Visual regression testing is the most impactful new capability — screenshot comparisons catch layout regressions without manual inspection.
+
+## Hook System
+
+Claude Code's hook system lets you intercept and modify behavior at key decision points. Hooks are shell commands, not JavaScript functions. Configure them in `~/.claude/settings.json`:
+
+```json
+{
+  "hooks": {
+    "preToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Running bash command: ' >> ~/.claude/audit.log"
+          }
+        ]
+      }
+    ],
+    "postToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx prettier --write \"$CLAUDE_TOOL_OUTPUT_PATH\""
+          }
+        ]
+      }
+    ]
   }
 }
 ```
 
-Context hooks prove invaluable for project-specific customization. For instance, you can inject team coding standards or architecture decisions into every conversation:
+### Available Hook Types
 
-```javascript
-// .claude/hooks/pre-context.js
-export function preContext(conversation) {
-  return {
-    system: `You are working on the api-gateway project. 
-    - Use TypeScript strict mode
-    - Follow RESTful conventions
-    - All endpoints require JWT validation`
-  };
+- **PreToolUse** — fires before Claude executes a tool (Bash, Write, Edit, etc.)
+- **PostToolUse** — fires after tool execution with access to the output
+- **Notification** — fires when Claude sends a notification
+
+Hooks receive context about the current operation as environment variables. `CLAUDE_TOOL_NAME`, `CLAUDE_TOOL_INPUT`, and `CLAUDE_TOOL_OUTPUT_PATH` are available depending on the hook type.
+
+### Practical Hook Uses
+
+**Auto-format writes:** Run Prettier after every file write.
+
+**Audit logging:** Log every bash command to a file for review.
+
+**Enforce commit hooks:** Run lint-staged before any git commit the agent makes.
+
+**Block dangerous operations:** Exit with a non-zero code in a PreToolUse hook to block a specific operation and surface an error to Claude.
+
+```json
+{
+  "hooks": {
+    "preToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -q 'rm -rf'; then echo 'Blocked: rm -rf not allowed' >&2; exit 1; fi"
+          }
+        ]
+      }
+    ]
+  }
 }
 ```
 
-### Hook Configuration
+## Combining Skills with Hooks
 
-Hooks live in your project's `.claude/hooks` directory. Each hook is a JavaScript module that exports specific functions matching the hook type:
+The real leverage comes from combining skills with hooks in automation pipelines. For example, a documentation-to-test workflow:
 
-```bash
-.claude/
-├── hooks/
-│   ├── pre-input.js      # Transform user input
-│   ├── pre-context.js    # Inject context
-│   ├── post-output.js    # Modify responses
-│   └── on-event.js       # Handle system events
-└── skills/               # Project-specific skills
+```
+Step 1: /pdf extract all function signatures from api-docs.pdf
+Step 2: /tdd generate unit tests for each of these function signatures: [paste output]
 ```
 
-The configuration system supports both project-level and global hooks, allowing you to maintain personal automation while respecting team-specific configurations.
+Add a PostToolUse hook that runs your test suite after every Write operation, so you immediately know if a generated test file is syntactically valid:
 
-## Combining Skills and Hooks
+```json
+{
+  "hooks": {
+    "postToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$CLAUDE_TOOL_OUTPUT_PATH\" == *.test.* ]]; then npx jest \"$CLAUDE_TOOL_OUTPUT_PATH\" --passWithNoTests 2>&1 | tail -5; fi"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
-The real power of Claude Code 2026 emerges when you combine skills with hooks. A sophisticated workflow might use the **tdd** skill for test generation, hooks for automatically running those tests on file changes, and the **xlsx** skill for tracking test coverage over time.
+This gives you immediate feedback on generated tests without manually switching to the terminal.
 
-This integration creates a closed loop where your development environment becomes increasingly automated. Each interaction teaches Claude more about your preferences, and each hook execution refines your workflow.
+---
 
-## Looking Forward
-
-The skills and hooks system in Claude Code 2026 provides the foundation for highly personalized AI-assisted development. As more skill packages become available and the hook ecosystem matures, the boundary between "using Claude" and "programming with Claude" continues to blur.
-
-Start by installing a few skills relevant to your domain, experiment with simple hooks for common tasks, and progressively build toward more sophisticated automation. The investment in learning these systems pays dividends in reduced manual effort and more consistent development practices.
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
