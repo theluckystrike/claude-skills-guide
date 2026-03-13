@@ -5,9 +5,9 @@ description: "Resolve memory limit exceeded and process killed errors when runni
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, memory, troubleshooting, process-killed]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Claude Code Skill Memory Limit Exceeded Process Killed Fix

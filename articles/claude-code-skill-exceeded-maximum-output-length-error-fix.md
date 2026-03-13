@@ -7,7 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 8
 ---
 
 # Claude Code Skill Exceeded Maximum Output Length Error Fix
@@ -113,7 +113,7 @@ Skill: project-generator
 
 Each subskill handles a smaller output scope, preventing any single invocation from hitting the limit. This architecture scales well and maintains separation of concerns.
 
-## Solution 6: Leverage External Storage for Large Outputs
+## Solution 6: Use External Storage for Large Outputs
 
 For skills that genuinely need to produce large amounts of content, store the output externally and provide links:
 

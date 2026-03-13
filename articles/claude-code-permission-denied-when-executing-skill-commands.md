@@ -7,7 +7,7 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills, troubleshooting, permissions, error-fix]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 8
 ---
 
 # Claude Code Permission Denied When Executing Skill Commands
