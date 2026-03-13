@@ -7,7 +7,7 @@ author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, private-skills, local-skills, how-to]
 reviewed: true
-score: 4
+score: 7
 ---
 
 # How to Create a Private Claude Skill Not on GitHub
@@ -32,7 +32,7 @@ Create the directory structure:
 mkdir -p ~/.claude/skills
 ```
 
-Each skill gets its own subdirectory containing the main skill file (typically named after the directory). For example, a skill called `company-workflow` would have its files in `~/.claude/skills/company-workflow/`.
+Each skill is a single `.md` file placed directly in `~/.claude/skills/`. For example, a skill called `company-workflow` lives at `~/.claude/skills/company-workflow.md`.
 
 ## Creating Your First Private Skill
 
@@ -41,11 +41,13 @@ A private skill follows the same format as public skills. You need a `skill.md` 
 Create the directory and file:
 
 ```bash
-mkdir -p ~/.claude/skills/api-formatter
-touch ~/.claude/skills/api-formatter/skill.md
+mkdir -p ~/.claude/skills
+touch ~/.claude/skills/api-formatter.md
 ```
 
 Now add the skill content:
+
+Place this content in `~/.claude/skills/api-formatter.md`:
 
 ```markdown
 ---
@@ -113,16 +115,14 @@ As you create more private skills, organize them logically. A common pattern gro
 
 ```
 ~/.claude/skills/
-├── api-formatter/
-├── database-scripts/
-├── deployment-helpers/
-├── company-internal/
-│   ├── expense-approver/
-│   ├── time-tracker/
-│   └── client-reports/
-└── experimental/
-    ├── ai-prompt-tester/
-    └── code-explainer/
+├── api-formatter.md
+├── database-scripts.md
+├── deployment-helpers.md
+├── company-expense-approver.md
+├── company-time-tracker.md
+├── company-client-reports.md
+├── experimental-prompt-tester.md
+└── experimental-code-explainer.md
 ```
 
 This structure keeps related skills together and makes it easy to find what you need.
@@ -133,7 +133,7 @@ Even without GitHub, teams can share private skills. Several approaches work:
 
 **Direct file sharing**: Zip your skill directories and share through secure channels. Recipients unzip into their skills folder.
 
-**Private git repositories**: Use GitHub or GitLab's private repositories. Team members clone using SSH keys or deploy tokens. The skill still installs via `cp skill.md ~/.claude/skills/`, but the repository remains private.
+**Private git repositories**: Use GitHub or GitLab's private repositories. Team members clone using SSH keys or deploy tokens. Team members can copy the `.md` file into their `~/.claude/skills/` directory, and the skill remains private.
 
 **Network file systems**: If your team shares a network drive or uses tools like Syncthing, skills can live on shared storage that multiple machines access.
 
@@ -150,11 +150,7 @@ Private skills need the same maintenance as public ones. Update them when:
 
 Keep a changelog within each skill directory:
 
-```
-~/.claude/skills/api-formatter/
-├── CHANGELOG.md
-└── skill.md
-```
+Keep a changelog in a comment at the top of the skill file, or maintain a separate log alongside your skills directory.
 
 Document what each version adds or changes. This matters more for private skills since you don't have commit history to reference.
 

@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Container Debugging: Docker Logs Workflow Guide"
 description: "A practical workflow guide for debugging Docker containers using Claude Code and Docker logs. Real commands, scripts, and patterns for developers."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Claude Code Container Debugging: Docker Logs Workflow Guide

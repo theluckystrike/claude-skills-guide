@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Why Does Claude Skill Auto Invocation Fail Intermittently?"
 description: "Understanding why Claude skills fail to auto-invoke unexpectedly. Common causes, debugging strategies, and practical solutions for developers."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Why Does Claude Skill Auto Invocation Fail Intermittently?

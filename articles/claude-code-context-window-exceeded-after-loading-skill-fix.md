@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Context Window Exceeded After Loading Skill Fix"
-description: "Resolve Claude Code context window exceeded errors when loading skills. Practical solutions for developers and power users working with complex skill configurations."
+description: "Resolve Claude Code context window exceeded errors when loading skills. Practical solutions for developers and power users working with complex skill confi"
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Claude Code Context Window Exceeded After Loading Skill Fix
