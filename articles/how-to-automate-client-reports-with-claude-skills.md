@@ -1,224 +1,162 @@
 ---
 layout: post
-title: "How to Automate Client Reports with Claude Skills"
-description: "Learn how to automate client reports using Claude skills. This guide covers PDF generation, data extraction, test-driven reporting, and workflow automation for developers."
+title: "Automate Client Reports with Claude Skills"
+description: "Automate client report workflows using Claude Code skills. Learn how /pdf, /tdd, and /supermemory work together in a practical reporting pipeline."
 date: 2026-03-13
 categories: [skills, guides]
-tags: [claude-code, automation, client-reports, pdf, tdd, supermemory]
-author: theluckystrike
+tags: [claude-code, claude-skills, automation, client-reports, pdf, tdd, supermemory]
+author: "Claude Skills Guide"
 reviewed: true
-score: 5
+score: 8
 ---
 
-# How to Automate Client Reports with Claude Skills
+# Automate Client Reports with Claude Skills
 
-Generating client reports manually eats up hours every week. Whether you're tracking project milestones, compiling analytics, or summarizing development work, the process often involves copying data between spreadsheets, formatting documents, and manually crafting narratives. Claude Skills transforms this workflow into something you can automate entirely.
+Generating client reports manually eats up hours every week. Whether you are tracking project milestones, compiling analytics, or summarizing development work, the process often involves copying data between spreadsheets, formatting documents, and manually crafting narratives. Claude Code skills let you build a reliable automation layer for this process using tools already built into your workflow.
 
-This guide shows you how to build automated client report generation using Claude's specialized skills. You'll learn to extract data, generate polished PDFs, maintain context across report generations, and integrate testing into your reporting pipeline.
+This guide walks through building an automated client report pipeline using the `/pdf`, `/tdd`, and `/supermemory` skills.
 
-## Extracting Client Data with the PDF Skill
+## Extracting Data from PDF Source Documents
 
-Most client data arrives as PDFs—invoices, contract summaries, or existing reports. The **pdf** skill lets you extract this data programmatically, feeding it directly into your report generation pipeline.
+Most client data arrives as PDFs: invoices, contract summaries, or existing reports. The `/pdf` skill can extract this data, feeding it into your report generation pipeline.
 
-```python
-import json
-from pdf import PDFDocument, extract_text, extract_tables
+Start by invoking the skill and describing your extraction task:
 
-def harvest_client_data(pdf_path):
-    doc = PDFDocument(pdf_path)
-    
-    # Extract all text content
-    full_text = extract_text(doc)
-    
-    # Pull out tables for structured data
-    tables = extract_tables(doc)
-    
-    return {
-        "text": full_text,
-        "tables": tables,
-        "page_count": len(doc.pages)
-    }
-
-# Process multiple client documents
-client_docs = ["invoice.pdf", "contract.pdf", "report.pdf"]
-collected_data = [harvest_client_data(doc) for doc in client_docs]
+```
+/pdf
+Extract the invoice total, line items, and billing period from invoice.pdf.
+Return the data as a JSON structure I can pass into my report generator.
 ```
 
-This approach works well when clients send monthly statements or project updates as PDFs. You extract the raw data once, then use it as the foundation for your automated reports.
+The `/pdf` skill reads the document and returns structured output. You can store this data and continue building your report without leaving Claude Code.
 
-## Generating Professional PDFs with the PDF Skill
+For batch processing multiple documents in one session:
 
-The **pdf** skill doesn't just read PDFs—it creates them. You can generate polished client reports with proper formatting, branding, and structure.
+```
+/pdf
+I have three PDF files: invoice.pdf, contract-summary.pdf, and monthly-metrics.pdf.
+Extract the following from each:
+- invoice.pdf: line items, totals, billing period
+- contract-summary.pdf: project name, deliverables list, deadline
+- monthly-metrics.pdf: all numeric metrics with their labels
 
-```python
-from pdf import PDFReport, add_section, add_table, add_chart
-
-def build_monthly_report(client_name, metrics, deliverables):
-    report = PDFReport(title=f"Monthly Report - {client_name}")
-    
-    # Executive summary
-    add_section(report, "Executive Summary", """
-        This month we completed {deliverable_count} major deliverables
-        with a {completion_rate}% completion rate.
-    """.format(
-        deliverable_count=len(deliverables),
-        completion_rate=metrics['completion_rate']
-    ))
-    
-    # Metrics table
-    add_table(report, "Key Metrics", metrics)
-    
-    # Add charts from data
-    add_chart(report, "Weekly Progress", metrics['weekly_data'])
-    
-    return report.save(f"reports/{client_name}-monthly.pdf")
+Return each as a separate JSON object.
 ```
 
-The skill handles pagination, headers, footers, and styling automatically. You focus on the data and structure; the PDF skill handles the rendering.
+## Generating Professional PDF Reports
 
-## Test-Driven Report Development with the TDD Skill
+The `/pdf` skill does not just read PDFs. It creates them. Generate polished client reports with proper formatting, sections, and tables by describing the structure you want:
 
-Before deploying automated report generation, validate your output using the **tdd** skill. This ensures your reports contain accurate data and render correctly.
+```
+/pdf
+Create a monthly client report PDF with:
+- Header: "Monthly Report - Acme Corp - February 2026"
+- Executive Summary section: 3-sentence summary of the month
+- Key Metrics table: [Tasks Completed: 47, +12%], [Bugs Fixed: 23, -8%], [Uptime: 99.7%]
+- Deliverables section: API redesign (complete), Dashboard v2 (in progress)
+- Next Steps section with 3 bullet points
 
-```python
-from tdd import describe, it, expect
-
-describe("Client Report Generation", () => {
-    it("includes all required sections", () => {
-        report = generate_report(test_client_data)
-        expect(report.sections).toContain("Executive Summary")
-        expect(report.sections).toContain("Metrics")
-        expect(report.sections).toContain("Next Steps")
-    })
-    
-    it("calculates totals correctly", () => {
-        report = generate_report(incomplete_data)
-        expect(report.total_hours).toEqual(142.5)
-        expect(report.total_cost).toEqual(8550.00)
-    })
-    
-    it("generates valid PDF output", () => {
-        pdf_output = build_monthly_report(client, metrics, deliverables)
-        expect(pdf_output.is_valid).toBe(true)
-        expect(pdf_output.page_count).toBeGreaterThan(0)
-    })
-})
+Save as acme-corp-feb-2026.pdf
 ```
 
-Running these tests catches data errors, missing fields, and formatting issues before clients ever see your reports.
+The skill handles pagination, headers, footers, and document structure.
 
-## Maintaining Context with SuperMemory
+## Validating Reports with the TDD Skill
 
-When generating recurring client reports, context matters. The **supermemory** skill stores and retrieves client preferences, historical data, and communication patterns.
+Before delivering reports to clients, validate them using the `/tdd` skill:
 
-```python
-from supermemory import MemoryClient
+```
+/tdd
+I have generated a client report PDF. Write and run tests that verify:
+1. The report file exists and is readable
+2. The executive summary is present and non-empty
+3. The metrics table contains at least 3 rows
+4. The total revenue figure matches $8,550.00
+5. The PDF has more than 1 page
+6. No placeholder text like "TBD" or "TODO" appears
 
-client_memory = MemoryClient(collection="client_reports")
-
-# Store client preferences
-client_memory.add("acme_corp_preferences", {
-    "format": "executive_summary",
-    "include_invoice": True,
-    "contact_email": "pm@acmecorp.com",
-    "preferred_metrics": ["velocity", "bug_count", "uptime"]
-})
-
-# Retrieve for report generation
-def generate_client_report(client_name):
-    prefs = client_memory.get(f"{client_name}_preferences")
-    
-    # Customize report based on stored preferences
-    report = Report(format=prefs['format'])
-    
-    if prefs['include_invoice']:
-        report.add_invoice_section()
-        
-    for metric in prefs['preferred_metrics']:
-        report.add_metric(metric)
-    
-    return report.build()
+Use Python with pytest and PyPDF2 for PDF reading.
 ```
 
-This means each client gets exactly the format they prefer, without you remembering every detail across months.
+Running these tests catches data errors and formatting issues before clients ever see your reports.
 
-## Automating the Full Workflow
+## Maintaining Client Context with SuperMemory
 
-Combine these skills into a cohesive pipeline that runs on schedule or triggers from webhooks.
+When generating recurring client reports, context matters. The `/supermemory` skill stores and retrieves client preferences across sessions.
 
-```python
-from pdf import build_monthly_report
-from supermemory import get_client_context
-from tdd import validate_report
-from notification import send_email
+Store client requirements after onboarding:
 
-def automated_report_pipeline(client_name, period):
-    # 1. Gather client context and preferences
-    context = get_client_context(client_name)
-    
-    # 2. Extract data from source documents
-    source_data = extract_client_sources(client_name, period)
-    
-    # 3. Transform data into report format
-    metrics = calculate_metrics(source_data, context)
-    
-    # 4. Generate the PDF
-    report = build_monthly_report(client_name, metrics, context)
-    
-    # 5. Validate output
-    validation = validate_report(report)
-    if not validation.passed:
-        notify_dev_team(validation.errors)
-        return
-    
-    # 6. Deliver to client
-    send_email(
-        to=context.contact_email,
-        subject=f"Monthly Report - {period}",
-        attachment=report.path
-    )
-    
-    # 7. Archive for history
-    archive_report(client_name, period, report)
+```
+/supermemory
+Store the following for Acme Corp client reports:
+- Preferred format: executive summary first, then detailed metrics
+- Always include invoice section
+- Contact email: pm@acmecorp.com
+- Key metrics: velocity, bug count, uptime
+- Report frequency: monthly, due on the 5th
+- Tone: formal, minimal jargon
 ```
 
-This pipeline runs unattended. You define it once, and it handles every report generation from then on.
+Load context before generating a report:
 
-## Integrating Frontend Design Verification
-
-If your client reports include web dashboards or UI components, the **frontend-design** skill verifies that your visual outputs match specifications.
-
-```python
-from frontend_design import verify_dashboard_screenshot
-
-def validate_dashboard_inclusion(report_data):
-    dashboard_path = capture_dashboard(report_data['dashboard_url'])
-    
-    # Verify key elements appear correctly
-    verification = verify_dashboard_screenshot(
-        actual=dashboard_path,
-        expected="mockups/client-dashboard-v2.png",
-        tolerance=0.95
-    )
-    
-    return verification.matches
+```
+/supermemory
+Load all stored context for Acme Corp, including preferences and previous report notes.
 ```
 
-This ensures visual consistency between what clients see in dashboards and what appears in their PDF reports.
+## The Full Reporting Workflow
+
+Combine these skills in a structured session:
+
+**Step 1: Load client context**
+```
+/supermemory
+Load all stored context for Acme Corp.
+```
+
+**Step 2: Extract source data**
+```
+/pdf
+Extract structured data from timesheets-feb.pdf and expenses-feb.pdf. Return as JSON.
+```
+
+**Step 3: Generate the report**
+```
+/pdf
+Using the extracted data and stored Acme Corp preferences, generate the February report.
+Include: executive summary, hours table, expense breakdown, deliverables status, next steps.
+Save as acme-corp-feb-2026.pdf.
+```
+
+**Step 4: Validate before sending**
+```
+/tdd
+Run validation tests on acme-corp-feb-2026.pdf:
+- All sections present
+- Hours total matches 142.5
+- No placeholder text
+- File size reasonable (>50KB)
+```
+
+**Step 5: Archive notes**
+```
+/supermemory
+Store notes for Acme Corp February 2026 report:
+- Delivered on time
+- Client requested velocity trend chart next month
+```
 
 ## Key Takeaways
 
-Automating client reports with Claude skills eliminates repetitive manual work while improving consistency and accuracy. The **pdf** skill handles both extraction and generation. The **tdd** skill validates your output before delivery. The **supermemory** skill maintains client context across report cycles. Together, these create a pipeline that runs with minimal intervention.
-
-Start small—automate one client report type, validate it with tests, then expand to your full client roster. The time investment pays back within the first few report cycles.
+The `/pdf` skill handles both extraction and generation. The `/tdd` skill validates output before delivery. The `/supermemory` skill maintains client context across sessions. Start with one client and one report type, validate it works, then expand to your full roster.
 
 ---
 
 ## Related Reading
 
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) -- Complete data analysis skill guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) -- Keep data workflows cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) -- How skills activate automatically
 
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike -- More at [zovo.one](https://zovo.one)

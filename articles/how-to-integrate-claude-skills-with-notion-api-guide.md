@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "How to Integrate Claude Skills with Notion API Guide"
-description: "A complete guide to integrating Claude Code skills with the Notion API, enabling AI-powered document creation, database updates, and knowledge management workflows."
+layout: post
+title: "Integrate Claude Skills with Notion API"
+description: "Connect Claude Code skills to Notion API for automated workflows, database management, and knowledge base sync."
 date: 2026-03-13
-author: theluckystrike
+author: "Claude Skills Guide"
+categories: [guides, workflows]
+tags: [claude-code, claude-skills, notion, api, automation]
+reviewed: true
+score: 7
 ---
 
 # How to Integrate Claude Skills with Notion API Guide
