@@ -1,232 +1,269 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills with Linear Project Management Tutorial"
-description: "Integrate Claude Code skills with Linear's API for automated issue documentation, sprint reporting, and Slack notifications using the Linear SDK."
+description: "Learn how to integrate Claude Code skills with Linear's API to automate issue triage, generate technical specs, and enhance your engineering team's project management workflow."
 date: 2026-03-13
-categories: [tutorials, guides]
-tags: [claude-code, claude-skills, linear, project-management]
-author: "Claude Skills Guide"
-reviewed: true
-score: 6
+author: theluckystrike
 ---
 
 # Claude Skills with Linear Project Management Tutorial
 
-Linear has become one of the most popular project management tools for engineering teams, offering a fast, intuitive interface with powerful API capabilities. Combining Linear with Claude skills creates a powerful automation system that can transform how your team manages projects, tracks issues, and communicates progress.
+Linear is a project management tool built for engineering teams, known for its speed and clean keyboard-driven interface. Integrating Claude skills with Linear lets you automate issue triage, generate technical specifications, analyze sprint data, and write issue descriptions that actually help developers. This tutorial covers Claude skills with Linear project management from API setup to automated workflows.
 
-## Why Combine Claude Skills with Linear?
+## What You Can Automate
 
-Linear's API-first approach makes it ideal for automation. By leveraging Claude skills, you can create sophisticated workflows that connect Linear to your entire development ecosystem. Whether you need automated status updates, intelligent issue triage, or seamless documentation generation, the combination of Linear and Claude skills provides the flexibility to build exactly what your team needs.
+- **Issue triage**: Incoming bug reports run through `tdd` skill to assess test impact and suggest repro steps
+- **Spec generation**: Feature requests sent to Claude return structured technical specs ready to paste into Linear
+- **Sprint summaries**: Completed issues analyzed by Claude and summarized for stakeholder updates
+- **PR-to-issue linking**: GitHub PR descriptions processed to auto-update Linear issue status and add review notes
+- **Supermemory context**: `supermemory` skill tracks patterns across sprint cycles
 
-The **supermemory** skill proves invaluable here, indexing your Linear projects and allowing you to search across issues using natural language. Instead of manually filtering through dozens of tickets, you can ask "Show me all critical bugs from last sprint" and receive instant results.
+## Prerequisites
 
-## Setting Up the Integration
+- Linear workspace with API access
+- Linear API key (Personal API Keys in Linear settings)
+- Claude API key from console.anthropic.com
+- Node.js 18+
 
-Before creating automation workflows, you'll need to configure the connection between Linear and Claude Code. This requires generating an API key from your Linear workspace settings.
+## Step 1: Get Your Linear API Key
+
+1. Open Linear → Settings → API
+2. Under **Personal API keys**, create a new key with label "Claude Skills Bot"
+3. Copy the key — it starts with `lin_api_`
+
+## Step 2: Install Dependencies
 
 ```bash
-# Store your Linear API key securely
-export LINEAR_API_KEY="lin_api_xxxxxxxxxxxxx"
-
-# Verify the connection works
-curl -H "Authorization: $LINEAR_API_KEY" \
-  https://api.linear.app/graphql \
-  -d '{"query":"{ me { name } }"}'
+mkdir claude-linear-bot && cd claude-linear-bot
+npm install @linear/sdk @anthropic-ai/sdk dotenv
 ```
 
-Once authenticated, you can use the **skill-creator** skill to build a custom Linear integration skill tailored to your team's specific workflows. This follows the same MCP (Model Context Protocol) pattern that powers other Claude skills.
+Create `.env`:
+```
+LINEAR_API_KEY=lin_api_your_key_here
+ANTHROPIC_API_KEY=your_claude_api_key
+LINEAR_TEAM_ID=your_team_id
+```
 
-## Automating Issue Creation
+Find your team ID from the Linear URL or API: `https://linear.app/{workspace}/team/{team_id}/`
 
-One of the most practical applications combines the **docx** skill with Linear to automatically generate issue documentation. When a new issue is created, Claude can automatically produce technical specifications, test plans, or design documents.
+## Step 3: Initialize Clients
 
 ```javascript
-// Example: Auto-generate issue documentation
+require('dotenv').config();
 const { LinearClient } = require('@linear/sdk');
+const Anthropic = require('@anthropic-ai/sdk');
+
 const linear = new LinearClient({ apiKey: process.env.LINEAR_API_KEY });
-
-async function createIssueWithDocs(issueData) {
-  const issue = await linear.issueCreate({
-    teamId: issueData.teamId,
-    title: issueData.title,
-    description: issueData.description,
-    labels: issueData.labels
-  });
-
-  // Use docx skill to generate technical specification
-  const specDoc = await generateTechSpec(issue);
-  
-  // Attach document to issue
-  await linear.attachmentCreate({
-    issueId: issue.id,
-    title: "Technical Specification",
-    url: specDoc.url
-  });
-
-  return issue;
-}
+const claude = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 ```
 
-This automation ensures every issue has proper documentation from the start, reducing back-and-forth communication and helping developers understand requirements quickly.
-
-## Streamlining Sprint Planning
-
-The **xlsx** skill pairs excellently with Linear for sprint planning and capacity management. You can extract Linear data and transform it into useful reports for planning meetings.
-
-```python
-import requests
-import openpyxl
-
-def generate_sprint_report(team_id, sprint_id, linear_api_key):
-    query = """
-    query($teamId: String!, $sprintId: String!) {
-        issues(filter: { team: { id: { eq: $teamId } }, sprint: { id: { eq: $sprintId } } }) {
-            nodes {
-                title
-                estimate
-                assignee { name }
-                labels { nodes { name } }
-            }
-        }
-    }
-    """
-
-    response = requests.post(
-        'https://api.linear.app/graphql',
-        json={'query': query, 'variables': {'teamId': team_id, 'sprintId': sprint_id}},
-        headers={'Authorization': f'Bearer {linear_api_key}'}
-    )
-
-    issues = response.json()['data']['issues']['nodes']
-
-    wb = openpyxl.Workbook()
-    ws = wb.active
-    ws.title = 'Sprint Capacity'
-    ws.append(['Issue', 'Estimate', 'Assignee', 'Labels'])
-
-    for issue in issues:
-        assignee = issue['assignee']['name'] if issue['assignee'] else 'Unassigned'
-        labels = ', '.join(l['name'] for l in issue['labels']['nodes'])
-        ws.append([issue['title'], issue['estimate'] or 0, assignee, labels])
-
-    wb.save('sprint-capacity.xlsx')
-```
-
-This report helps team leads quickly understand sprint load distribution and identify potential bottlenecks before sprint planning meetings.
-
-## Creating Feedback Loops with Slack Notifications
-
-Many teams use Slack for daily communication. By combining Linear webhooks with Claude skills, you can create intelligent notification workflows that keep everyone informed without overwhelming channels.
+## Step 4: Fetch Issues and Run Claude Analysis
 
 ```javascript
-// Slack notification workflow
-const { WebClient } = require('@slack/web-api');
-const slack = new WebClient(process.env.SLACK_TOKEN);
+async function getRecentIssues(teamId, limit = 20) {
+  const issues = await linear.issues({
+    filter: { team: { id: { eq: teamId } } },
+    orderBy: 'createdAt',
+    first: limit,
+  });
+  
+  return issues.nodes.map(issue => ({
+    id: issue.id,
+    identifier: issue.identifier,
+    title: issue.title,
+    description: issue.description || '',
+    state: issue.state?.name,
+    priority: issue.priority,
+  }));
+}
 
-async function handleLinearWebhook(payload) {
-  const { action, issue, user } = payload;
+async function triageIssue(issue) {
+  const prompt = `Issue: ${issue.identifier} — ${issue.title}
+
+Description: ${issue.description || 'No description provided'}
+
+As the TDD skill for Claude Code, analyze this bug report:
+1. What tests would catch this bug?
+2. What are the likely code areas affected?
+3. Suggest concrete reproduction steps if missing
+4. Estimate risk level: low/medium/high
+
+Return JSON: { "test_suggestions": [], "affected_areas": [], "repro_steps": [], "risk_level": "", "triage_notes": "" }`;
+
+  const message = await claude.messages.create({
+    model: 'claude-opus-4-6',
+    max_tokens: 1024,
+    system: `You are the TDD skill for Claude Code. Analyze issues for test coverage implications and technical risk.`,
+    messages: [{ role: 'user', content: prompt }],
+  });
   
-  // Use supermemory to find related context
-  const context = await supermemory.search(
-    `previous discussions about ${issue.labels?.map(l => l.name).join(', ')}`
-  );
-  
-  const message = formatIssueMessage(issue, action, user, context);
-  
-  // Route to appropriate channel based on issue type
-  const channel = issue.labels?.includes('bug') ? '#bugs' : '#features';
-  await slack.chat.postMessage({ channel, text: message });
+  try {
+    return JSON.parse(message.content[0].text);
+  } catch {
+    return { triage_notes: message.content[0].text };
+  }
 }
 ```
 
-The supermemory skill adds context by retrieving previous discussions about similar issues, making notifications more informative.
+## Step 5: Update Linear Issues with Claude Analysis
 
-## Automating Code Review Links
+```javascript
+async function addTriageComment(issueId, analysis) {
+  const commentBody = `## Claude Triage Analysis
 
-For teams using GitHub or GitLab, connecting Linear issues to pull requests creates a clear traceability chain. You can automate this connection using the **tdd** skill to ensure test coverage is tracked alongside issue progress.
+**Risk Level:** ${analysis.risk_level || 'Unknown'}
 
-```bash
-# GitHub Action to link PRs to Linear issues
-name: Link Linear Issue
+### Suggested Tests
+${(analysis.test_suggestions || []).map(t => `- ${t}`).join('\n')}
 
-on:
-  pull_request:
-    branches: [main]
+### Affected Code Areas
+${(analysis.affected_areas || []).map(a => `- ${a}`).join('\n')}
 
-jobs:
-  link-linear:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/github-script@v6
-        with:
-          script: |
-            const pr = context.payload.pull_request;
-            const issueMatch = pr.body.match(/LINEAR-(\d+)/);
-            
-            if (issueMatch) {
-              const linearId = issueMatch[1];
-              // Update Linear issue with PR link
-              await linear.issueUpdate(linearId, {
-                description: `${pr.body}\n\n🔗 [PR #${pr.number}](${pr.html_url})`
-              });
-            }
+### Reproduction Steps
+${(analysis.repro_steps || []).map((s, i) => `${i + 1}. ${s}`).join('\n')}
+
+### Notes
+${analysis.triage_notes || ''}
+
+*Generated by Claude TDD Skill*`;
+
+  await linear.createComment({
+    issueId,
+    body: commentBody,
+  });
+}
 ```
 
-When developers reference Linear issue IDs in pull request descriptions, the integration automatically links the PR and updates the issue with the relevant code review link.
+## Step 6: Generate Technical Specs from Feature Requests
 
-## Weekly Status Reports with PDF Generation
+```javascript
+async function generateTechSpec(featureRequest) {
+  const message = await claude.messages.create({
+    model: 'claude-opus-4-6',
+    max_tokens: 2048,
+    system: `You are a senior software architect. Generate clear, actionable technical specifications for feature requests. Include implementation approach, API changes, database changes, and testing strategy.`,
+    messages: [{
+      role: 'user',
+      content: `Generate a technical spec for this feature request:\n\n${featureRequest}`,
+    }],
+  });
+  
+  return message.content[0].text;
+}
 
-The **pdf** skill enables automatic weekly status report generation. Instead of manually compiling updates, Claude can aggregate Linear data and produce professional reports for stakeholders.
-
-```python
-# Automated weekly status report
-# Use /pdf skill to ask Claude to format and generate the PDF from this data
-
-from datetime import datetime, timedelta
-import requests
-
-def fetch_weekly_status(linear_api_key, team_id):
-    week_ago = datetime.now() - timedelta(days=7)
-
-    completed_query = """
-    query($teamId: String!, $since: DateTime!) {
-        issues(filter: {
-            team: { id: { eq: $teamId } },
-            completedAt: { gte: $since }
-        }) {
-            nodes { title state { name } labels { nodes { name } } }
-        }
-    }
-    """
-
-    response = requests.post(
-        'https://api.linear.app/graphql',
-        json={'query': completed_query, 'variables': {'teamId': team_id, 'since': week_ago.isoformat()}},
-        headers={'Authorization': f'Bearer {linear_api_key}'}
-    )
-    return response.json()['data']['issues']['nodes']
-
-# Then ask Claude with /pdf active:
-# /pdf Create a formatted weekly status PDF from this issue list: [paste output]
+async function createSpecIssue(teamId, title, spec) {
+  const states = await linear.workflowStates({
+    filter: { team: { id: { eq: teamId } } },
+  });
+  const backlogState = states.nodes.find(s => s.name === 'Backlog' || s.name === 'Todo');
+  
+  await linear.createIssue({
+    teamId,
+    title: `[Tech Spec] ${title}`,
+    description: spec,
+    stateId: backlogState?.id,
+    labelIds: [], // add your "spec" label ID here
+  });
+}
 ```
 
-## Best Practices for Linear-Claude Integration
+## Step 7: Sprint Summary with Supermemory Tracking
 
-When building these workflows, consider starting with one automation that addresses your team's biggest pain point. The skill-creator skill makes it straightforward to extend integrations as your needs evolve.
+```javascript
+async function generateSprintSummary(teamId) {
+  // Get issues completed in last 2 weeks
+  const twoWeeksAgo = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString();
+  
+  const completedIssues = await linear.issues({
+    filter: {
+      team: { id: { eq: teamId } },
+      completedAt: { gt: twoWeeksAgo },
+    },
+    first: 50,
+  });
+  
+  const issueList = completedIssues.nodes
+    .map(i => `- ${i.identifier}: ${i.title} (${i.estimate || '?'} pts)`)
+    .join('\n');
+  
+  const message = await claude.messages.create({
+    model: 'claude-opus-4-6',
+    max_tokens: 1024,
+    system: `You are the supermemory skill for Claude Code. Generate concise sprint summaries for stakeholders. Focus on impact, not tasks.`,
+    messages: [{
+      role: 'user',
+      content: `Summarize this sprint's completed work for a stakeholder update:\n\n${issueList}`,
+    }],
+  });
+  
+  return message.content[0].text;
+}
+```
 
-Maintain clear naming conventions for automated actions so team members understand what changed issues and when. Use Linear's built-in automation rules alongside Claude skills for complementary functionality—Linear handles straightforward state transitions while Claude manages more complex logic.
+## Step 8: Set Up a Webhook for Real-Time Triage
 
-Regularly review which automations are actually being used and producing value. Some integrations might seem useful in theory but end up adding noise rather than helping. The **supermemory** skill can help you analyze usage patterns by tracking which queries your team makes most frequently.
+Linear supports webhooks for real-time events. Create an Express server to receive them:
 
-The combination of Linear's clean API and Claude's flexible skill system opens up countless possibilities for project management automation. Start simple, measure impact, and iterate based on what your team actually needs.
+```javascript
+const express = require('express');
+const crypto = require('crypto');
+const app = express();
 
----
+app.use(express.json());
 
-## Related Reading
+app.post('/webhook/linear', async (req, res) => {
+  // Verify Linear webhook signature
+  const signature = req.headers['linear-signature'];
+  const expected = crypto
+    .createHmac('sha256', process.env.LINEAR_WEBHOOK_SECRET)
+    .update(JSON.stringify(req.body))
+    .digest('hex');
+  
+  if (signature !== expected) {
+    return res.status(401).send('Invalid signature');
+  }
+  
+  res.status(200).send('OK'); // Respond quickly
+  
+  const { action, type, data } = req.body;
+  
+  // Auto-triage new bug reports
+  if (type === 'Issue' && action === 'create' && data.labelNames?.includes('bug')) {
+    const analysis = await triageIssue(data);
+    await addTriageComment(data.id, analysis);
+    console.log(`Triaged: ${data.identifier}`);
+  }
+});
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+app.listen(3000, () => console.log('Linear webhook server running on :3000'));
+```
 
+## Step 9: Batch Triage Existing Issues
+
+Run this once to triage your backlog:
+
+```javascript
+async function triageBacklog(teamId) {
+  const issues = await getRecentIssues(teamId, 50);
+  const bugs = issues.filter(i => i.state === 'Todo' || i.state === 'Backlog');
+  
+  for (const issue of bugs) {
+    console.log(`Triaging ${issue.identifier}...`);
+    const analysis = await triageIssue(issue);
+    await addTriageComment(issue.id, analysis);
+    // Respect rate limits
+    await new Promise(r => setTimeout(r, 1000));
+  }
+  
+  console.log(`Triaged ${bugs.length} issues`);
+}
+
+triageBacklog(process.env.LINEAR_TEAM_ID);
+```
+
+## Conclusion
+
+Claude skills with Linear project management transforms routine PM work into automated intelligence. The `tdd` skill makes triage actionable, `supermemory` tracks patterns across sprints, and spec generation saves hours per feature. Start with the webhook-based real-time triage and add batch processing for your existing backlog.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
