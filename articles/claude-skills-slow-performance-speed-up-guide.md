@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Speed Up Slow Claude Code Skills: Fix Guide"
-description: "Practical steps to speed up slow Claude Code skill execution. Covers token reduction, skill trimming, tool call batching, and session architecture."
+title: "Claude Skills Slow Performance: Speed Up Guide"
+description: "Speed up slow Claude Code skill execution. Covers token reduction, skill trimming, tool call batching, and focused session architecture."
 date: 2026-03-13
-categories: [troubleshooting, guides]
-tags: [claude-code, claude-skills, performance, troubleshooting, optimization]
+categories: [troubleshooting, performance]
+tags: [claude-code, claude-skills, performance, optimization]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8

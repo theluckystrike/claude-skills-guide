@@ -49,7 +49,7 @@ Always run the formatter on any file you write before completing the task.
 
 ### Specify Output File Handling
 
-For skills like `docx` and the [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) that create files, be precise about file naming and location:
+For skills like `docx` and `pdf` that create files, be precise about file naming and location:
 
 ```
 Write output files to the ./output/ directory.
@@ -142,7 +142,7 @@ Some tasks require chaining multiple tool calls in a specific sequence. Guide th
 
 ### Read-Modify-Write Pattern
 
-For the [`frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/):
+For the `frontend-design` skill:
 
 ```
 To add a new component:
@@ -160,7 +160,7 @@ If step 8 produces errors, fix them and re-run before completing.
 
 ### Test-Execute-Verify Pattern
 
-For the [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/):
+For the `tdd` skill:
 
 ```
 For any implementation task:
@@ -203,11 +203,5 @@ This helps trace the tool call sequence.
 Remove this debugging instruction once the skill is working correctly.
 
 ---
-
-## Related Reading
-
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The `tools` and `max_turns` fields that control tool access are fully documented here with annotated examples
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — A step-by-step guide for writing skill bodies that orchestrate tool calls effectively
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Tool-heavy skills accumulate context quickly from tool outputs; this article explains how to keep per-session costs manageable
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

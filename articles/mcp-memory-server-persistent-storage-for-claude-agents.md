@@ -3,242 +3,190 @@ layout: post
 title: "MCP Memory Server: Persistent Storage for Claude Agents (2026)"
 description: "Set up an MCP memory server for persistent storage across Claude agent sessions. Practical configuration, examples, and deployment tips."
 date: 2026-03-13
-categories: [mcp, memory, integrations, guides]
-tags: [claude-code, mcp, memory, persistent-storage, agents, server]
+categories: [mcp, integrations, guides]
+tags: [claude-code, mcp, memory, persistent-storage, agents]
 author: "Claude Skills Guide"
-reviewed: false
-score: 0
+reviewed: true
+score: 6
 ---
 
-# MCP Memory Server: Persistent Storage for Claude Agents
+The Model Context Protocol (MCP) enables Claude Code to connect to external servers that expose tools and resources. An MCP memory server provides persistent storage capabilities — so context, notes, and data can survive across multiple Claude Code sessions.
 
-Claude's Model Context Protocol (MCP) enables powerful server integrations, and the memory server provides persistent storage capabilities for maintaining context across agent sessions. This guide walks you through setting up and using an MCP memory server with Claude Code.
+## What Is an MCP Memory Server?
 
-## What is the MCP Memory Server
+An MCP memory server is a local process that Claude Code connects to via the MCP protocol. It exposes tools like `store_memory`, `retrieve_memory`, and `search_memories` that Claude can call during a session. The data persists in a local file or database, so it is available in future sessions.
 
-The MCP memory server is a server implementation that stores and retrieves contextual information across Claude Code sessions. Unlike ephemeral conversation context, the memory server persists data to a database, allowing your Claude agents to maintain long-term memory and reference previous interactions.
-
-The memory server uses a simple key-value store backed by SQLite or PostgreSQL, making it easy to deploy and maintain. Each Claude agent can read from and write to this shared memory space, enabling collaborative workflows and continuity across sessions.
+This is different from the built-in `/supermemory` skill, which provides memory within Claude Code's own storage. An MCP memory server gives you a custom, programmable memory layer you control.
 
 ## Prerequisites
 
-Before setting up the MCP memory server, ensure you have:
-
 - Node.js 18 or higher installed
 - Claude Code configured on your machine
-- npm or yarn for package management
-- Optional: PostgreSQL for production deployments
+- Basic familiarity with JSON configuration
 
-## Installing the MCP Memory Server
+## Option 1: Use the Official MCP Memory Server
 
-Create a new directory for your memory server and install the required packages:
+Anthropic's official MCP repository includes a reference memory server implementation. Clone it and follow the README to run it locally:
 
-```
-mkdir mcp-memory-server && cd mcp-memory-server
-npm init -y
-npm install @modelcontextprotocol/server-memory
-npm install better-sqlite3
-```
-
-Create a configuration file named `server.js`:
-
-```javascript
-const { MCPServer } = require('@modelcontextprotocol/server-memory');
-const Database = require('better-sqlite3');
-
-const db = new Database('memory.db');
-
-// Initialize the database schema
-db.exec(`
-  CREATE TABLE IF NOT EXISTS memories (
-    key TEXT PRIMARY KEY,
-    value TEXT NOT NULL,
-    timestamp INTEGER NOT NULL,
-    agent_id TEXT
-  )
-`);
-
-const server = new MCPServer({
-  name: 'memory-server',
-  version: '1.0.0',
-  capabilities: {
-    memory: {
-      read: true,
-      write: true,
-      delete: true,
-      list: true
-    }
-  },
-  storage: {
-    get: (key) => {
-      const row = db.prepare('SELECT value FROM memories WHERE key = ?').get(key);
-      return row ? JSON.parse(row.value) : null;
-    },
-    set: (key, value, agentId = 'default') => {
-      const stmt = db.prepare(`
-        INSERT OR REPLACE INTO memories (key, value, timestamp, agent_id)
-        VALUES (?, ?, ?, ?)
-      `);
-      stmt.run(key, JSON.stringify(value), Date.now(), agentId);
-    },
-    delete: (key) => {
-      db.prepare('DELETE FROM memories WHERE key = ?').run(key);
-    },
-    list: (prefix = '') => {
-      const rows = db.prepare(`
-        SELECT key, value, timestamp, agent_id FROM memories
-        WHERE key LIKE ?
-        ORDER BY timestamp DESC
-      `).all(`${prefix}%`);
-      return rows.map(row => ({
-        key: row.key,
-        value: JSON.parse(row.value),
-        timestamp: row.timestamp,
-        agentId: row.agent_id
-      }));
-    }
-  }
-});
-
-server.listen(3000, () => {
-  console.log('MCP Memory Server running on port 3000');
-});
+```bash
+git clone https://github.com/modelcontextprotocol/servers
+cd servers/src/memory
+npm install
+npm run build
 ```
 
-Start the server:
-
-```
-node server.js
-```
-
-## Connecting Claude Code to Your Memory Server
-
-Now configure Claude Code to use your memory server. Create or edit your Claude settings file at `~/.claude/settings.json`:
+Register it in your `~/.claude/settings.json`:
 
 ```json
 {
   "mcpServers": {
     "memory": {
       "command": "node",
-      "args": ["/path/to/mcp-memory-server/server.js"],
-      "env": {}
+      "args": ["/path/to/servers/src/memory/dist/index.js"]
     }
   }
 }
 ```
 
-Restart Claude Code to load the new configuration. The memory server will now be available as an MCP tool.
+Restart Claude Code. Claude will now have access to the memory server's tools.
 
-## Using Memory in Claude Sessions
+## Option 2: Build a Custom Memory Server
 
-Once connected, you can use the memory server tools in your Claude sessions. The memory skill provides several functions:
+You can build a minimal MCP memory server using the MCP SDK. The official `@modelcontextprotocol/sdk` package is the correct dependency:
 
-### Writing to Memory
-
-Store important context for later retrieval:
-
-```
-Use the memory_write tool to store:
-- key: "project-context"
-- value: { "name": "E-commerce API", "stack": "Node.js, PostgreSQL", "status": "In development" }
+```bash
+npm install @modelcontextprotocol/sdk better-sqlite3
 ```
 
-### Reading from Memory
-
-Retrieve previously stored information:
-
-```
-Use memory_read with key "project-context" to get the project details.
-```
-
-### Listing Memory Entries
-
-View all stored memories, optionally filtered by prefix:
-
-```
-List all memories starting with "project-" to see all project-related context.
-```
-
-### Deleting Memory Entries
-
-Remove outdated or sensitive information:
-
-```
-Delete the memory entry with key "temp-calc-results".
-```
-
-## Integrating Memory with Claude Skills
-
-The memory server works seamlessly with Claude skills like `/supermemory`, `/pdf`, and `/tdd`. You can create workflows that automatically persist relevant information:
-
-For example, with the `/tdd` skill, you can store test results:
-
-```
-Use /tdd to write tests for the payment module, then store the test results in memory with key "payment-tests-2026-03-13".
-```
-
-With the `/supermemory` skill, maintain a knowledge base:
-
-```
-Use /supermemory to add "API authentication patterns" to the knowledge base, then sync to the memory server.
-```
-
-## Production Deployment
-
-For production environments, consider these improvements:
-
-### Using PostgreSQL
-
-Replace SQLite with PostgreSQL for better concurrency:
+Create `memory-server.js`:
 
 ```javascript
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL
-});
-```
+import { Server } from "@modelcontextprotocol/sdk/server/index.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import Database from "better-sqlite3";
 
-### Adding Authentication
+const db = new Database("memory.db");
 
-Protect your memory server with authentication:
+db.exec(`
+  CREATE TABLE IF NOT EXISTS memories (
+    key TEXT PRIMARY KEY,
+    value TEXT NOT NULL,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
+  )
+`);
 
-```javascript
-const server = new MCPServer({
-  // ... other config
-  auth: {
-    validate: (token) => token === process.env.MCP_TOKEN
+const server = new Server(
+  { name: "memory-server", version: "1.0.0" },
+  { capabilities: { tools: {} } }
+);
+
+server.setRequestHandler("tools/list", async () => ({
+  tools: [
+    {
+      name: "store_memory",
+      description: "Store a key-value memory entry",
+      inputSchema: {
+        type: "object",
+        properties: {
+          key: { type: "string" },
+          value: { type: "string" }
+        },
+        required: ["key", "value"]
+      }
+    },
+    {
+      name: "retrieve_memory",
+      description: "Retrieve a stored memory by key",
+      inputSchema: {
+        type: "object",
+        properties: { key: { type: "string" } },
+        required: ["key"]
+      }
+    }
+  ]
+}));
+
+server.setRequestHandler("tools/call", async (request) => {
+  const { name, arguments: args } = request.params;
+
+  if (name === "store_memory") {
+    db.prepare("INSERT OR REPLACE INTO memories (key, value) VALUES (?, ?)")
+      .run(args.key, args.value);
+    return { content: [{ type: "text", text: `Stored: ${args.key}` }] };
+  }
+
+  if (name === "retrieve_memory") {
+    const row = db.prepare("SELECT value FROM memories WHERE key = ?")
+      .get(args.key);
+    return {
+      content: [{
+        type: "text",
+        text: row ? row.value : `No memory found for key: ${args.key}`
+      }]
+    };
   }
 });
+
+const transport = new StdioServerTransport();
+await server.connect(transport);
 ```
 
-### Setting Up Health Checks
+Register it in `~/.claude/settings.json`:
 
-Add health check endpoints for monitoring:
-
-```javascript
-server.get('/health', (req, res) => {
-  res.json({ status: 'healthy', timestamp: Date.now() });
-});
+```json
+{
+  "mcpServers": {
+    "memory": {
+      "command": "node",
+      "args": ["/absolute/path/to/memory-server.js"]
+    }
+  }
+}
 ```
 
-## Best Practices
+## Using the Memory Server in Claude Code
 
-Follow these guidelines for effective memory management:
+Once configured, Claude can call the memory tools during a session:
 
-- Use descriptive, consistent key naming conventions like `project-name:context-type`
-- Clean up temporary memories periodically to avoid database bloat
-- Tag memories with agent IDs to track which agent created each entry
-- Implement TTL (time-to-live) for temporary data that should expire
-- Back up your memory database regularly, especially in production
+```
+Store the API endpoint for our production database as a memory
 
-The MCP memory server transforms Claude Code from a session-based tool into a persistent, collaborative AI assistant capable of maintaining context across time and sessions.
+> Claude calls: store_memory("prod_db_endpoint", "https://db.example.com:5432")
+```
+
+In a later session:
+
+```
+What was the production database endpoint?
+
+> Claude calls: retrieve_memory("prod_db_endpoint")
+> Returns: https://db.example.com:5432
+```
+
+## Comparison: MCP Memory Server vs /supermemory Skill
+
+| Aspect | MCP Memory Server | /supermemory Skill |
+|---|---|---|
+| Storage | Custom database (SQLite/PostgreSQL) | Built into Claude Code |
+| Access | Via MCP tool calls | Via skill invocation |
+| Control | Full control over schema and queries | Managed by the skill |
+| Setup | Requires running a server process | Zero setup |
+
+For most developers, the built-in `/supermemory` skill is sufficient. Build a custom MCP memory server when you need custom storage schemas, integration with existing databases, or memory accessible from multiple tools.
+
+## Deployment Tips
+
+Run the memory server as a background process using a process manager like `pm2`:
+
+```bash
+npm install -g pm2
+pm2 start memory-server.js --name "claude-memory"
+pm2 save
+pm2 startup
+```
+
+This ensures the memory server starts automatically and restarts on failure.
 
 ---
-
-## Related Reading
-
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Covers the supermemory skill and other memory-related capabilities that the MCP memory server extends and enhances
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understanding how skills and MCP servers interact helps you design agents that retrieve memory at the right points automatically
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Persistent memory via MCP servers can dramatically reduce repeated context loading; this article explains the token savings strategies
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
