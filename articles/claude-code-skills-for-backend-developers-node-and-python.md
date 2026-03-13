@@ -7,7 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 9
 ---
 
 # Claude Code Skills for Backend Developers: Node.js and Python
