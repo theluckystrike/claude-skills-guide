@@ -87,7 +87,7 @@ If your front matter includes tags or categories as a list, use the correct YAML
 layout: default
 title: "Skill with Tags"
 tags: [claude-code, debugging, yaml]
-categories: [tutorial, development]
+categories: [troubleshooting]
 ---
 ```
 

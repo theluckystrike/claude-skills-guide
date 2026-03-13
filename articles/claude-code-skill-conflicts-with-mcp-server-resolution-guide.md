@@ -4,7 +4,9 @@ title: "Claude Code Skill Conflicts with MCP Server Resolution Guide"
 description: "Resolve conflicts between Claude Code skills and MCP servers. Practical solutions for tool name collisions, permission issues, and configuration conflicts."
 date: 2026-03-14
 author: "Claude Skills Guide"
-reviewed: true
+categories: [troubleshooting]
+tags: [claude-code, claude-skills, mcp]
+
 score: 9
 ---
 

@@ -4,6 +4,8 @@ title: "What Is the Best Way to Name Claude Skill Files Consistently"
 description: "A practical guide to naming conventions for Claude Code skill files. Learn patterns that improve discoverability, reduce confusion, and scale your skill..."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
 ---

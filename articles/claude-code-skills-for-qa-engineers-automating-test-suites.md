@@ -4,6 +4,8 @@ title: "Claude Code Skills for QA Engineers Automating Test Suites"
 description: "Discover how Claude Code skills transform QA automation workflows. Learn to leverage specialized skills for test generation, maintenance, and continuous..."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills]
 reviewed: true
 score: 4
 ---

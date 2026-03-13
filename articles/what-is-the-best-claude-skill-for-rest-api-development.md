@@ -4,6 +4,8 @@ title: "What Is the Best Claude Skill for REST API Development"
 description: "Discover the top Claude skills for building REST APIs efficiently. Compare skills like tdd, code-generation, and more for your API projects."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
 ---
