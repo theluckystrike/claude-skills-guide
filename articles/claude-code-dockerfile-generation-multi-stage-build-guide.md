@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Dockerfile Generation: Multi-Stage Build Guide
 
-Multi-stage builds are essential for creating lean, production-ready container images. This guide shows you how to leverage Claude Code skills to generate optimized Dockerfiles with multi-stage patterns for various programming languages and frameworks.
+Multi-stage builds are essential for creating lean, production-ready container images. This guide shows you how to uses Claude Code skills to generate optimized Dockerfiles with multi-stage patterns for various programming languages and frameworks.
 
 ## Why Multi-Stage Builds Matter
 

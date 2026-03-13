@@ -110,7 +110,7 @@ This approach lets you run network diagnostic tools against the target container
 
 ## Integrating Claude Code into Your Debugging Workflow
 
-Claude Code accelerates container debugging through natural language commands and skill-based automation. When debugging containers, you can leverage specific skills to enhance productivity.
+Claude Code accelerates container debugging through natural language commands and skill-based automation. When debugging containers, you can uses specific skills to enhance productivity.
 
 The `supermemory` skill maintains a running log of debugging steps, findings, and hypotheses. During complex debugging sessions spanning multiple terminals and time periods, this skill preserves context that would otherwise be lost:
 

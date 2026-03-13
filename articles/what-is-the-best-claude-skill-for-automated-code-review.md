@@ -104,7 +104,7 @@ Review src/auth/ and src/api/ for security vulnerabilities.
 
 ### Step 1: Pre-Commit Review
 
-Catch issues before they reach your team. Add a pre-commit hook that invokes Claude:
+Catch issues before they reach your team. Add a pre-commit hook that invokes Claude in print mode:
 
 ```bash
 # .git/hooks/pre-commit
@@ -114,11 +114,11 @@ STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(js|
 
 if [ -n "$STAGED_FILES" ]; then
   echo "Running Claude Code review on staged files..."
-  claude --review "Review these changes for issues: $STAGED_FILES"
+  claude -p "/tdd Review these staged files for code quality issues: $STAGED_FILES"
 fi
 ```
 
-This runs review on every commit, blocking low-quality code from entering the repository.
+This runs review on every commit. The `-p` flag runs Claude in non-interactive print mode. There is no `--review` flag — use `/tdd` or a custom skill invoked via `-p`.
 
 ### Step 2: Pull Request Review
 

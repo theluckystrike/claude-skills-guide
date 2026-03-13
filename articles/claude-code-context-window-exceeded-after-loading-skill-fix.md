@@ -76,7 +76,7 @@ When creating MCP tools:
 
 This alias consumes perhaps 200 tokens instead of 2,000.
 
-## Fix 4: Leverage Context Compression
+## Fix 4: Uses Context Compression
 
 Claude Code supports context compression in some configurations. When you approach the limit, explicitly request compression:
 

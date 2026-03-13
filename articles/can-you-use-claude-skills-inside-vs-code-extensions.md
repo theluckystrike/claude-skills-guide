@@ -11,7 +11,7 @@ score: 8---
 
 # Can You Use Claude Skills Inside VS Code Extensions?
 
-If you build VS Code extensions and want to use Claude Code skills within them, you're looking at a technical challenge that requires understanding how both systemseperate. The short answer is yes, you can integrate Claude skills into VS Code extensions, but the implementation path depends on your specific use case and how much control you need over the skill's execution environment.
+If you build VS Code extensions and want to use Claude Code skills within them, you're looking at a technical challenge that requires understanding how both systems operate. The short answer is yes, you can integrate Claude skills into VS Code extensions, but the implementation path depends on your specific use case and how much control you need over the skill's execution environment.
 
 ## Understanding the Architecture
 

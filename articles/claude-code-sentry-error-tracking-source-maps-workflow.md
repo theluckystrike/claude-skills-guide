@@ -4,8 +4,10 @@ title: "Claude Code Sentry Error Tracking Source Maps Workflow"
 description: "A practical guide to integrating Claude Code with Sentry for error tracking and source maps. Automate debugging workflows using the tdd skill and relate..."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [guides, tutorials]
+tags: [claude-code, claude-skills, sentry, error-tracking, source-maps, debugging]
 reviewed: true
-score: 9
+score: 8
 ---
 
 # Claude Code Sentry Error Tracking Source Maps Workflow
@@ -76,7 +78,7 @@ This automation ensures every deployment includes the corresponding source maps 
 
 ## Connecting Claude Code to Sentry
 
-While there's no dedicated Sentry skill for Claude Code, you can leverage the **tdd** skill to create a debugging workflow. The **tdd** skill provides structured test-driven development patterns that integrate well with error tracking workflows.
+While there's no dedicated Sentry skill for Claude Code, you can use the **tdd** skill to create a debugging workflow. The **tdd** skill provides structured test-driven development patterns that integrate well with error tracking workflows.
 
 Here's how to use Claude Code with Sentry:
 

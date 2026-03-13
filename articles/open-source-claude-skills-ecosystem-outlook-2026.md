@@ -4,8 +4,10 @@ title: "Open Source Claude Skills Ecosystem Outlook 2026"
 description: "Discover the open source Claude skills ecosystem in 2026. Learn about popular community skills like frontend-design, pdf, tdd, and supermemory that enha..."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [guides, best-of]
+tags: [claude-code, claude-skills, open-source, ecosystem, 2026, community]
 reviewed: true
-score: 9
+score: 8
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 ---
@@ -83,7 +85,7 @@ For creative exploration, the algorithmic-art skill generates unique visuals usi
 
 ## The Ecosystem Infrastructure
 
-The skills ecosystem benefits from robust supporting infrastructure.
+The skills ecosystem benefits from strong supporting infrastructure.
 
 ### Skill Development Frameworks
 
