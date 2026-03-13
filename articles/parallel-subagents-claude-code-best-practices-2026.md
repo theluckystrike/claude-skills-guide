@@ -7,7 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 10
 ---
 
 # Parallel Subagents in Claude Code: Best Practices for 2026
