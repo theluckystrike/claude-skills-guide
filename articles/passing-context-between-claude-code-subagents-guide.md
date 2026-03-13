@@ -12,7 +12,7 @@ score:
 
 # Passing Context Between Claude Code Subagents Guide
 
-Claude Code enables powerful multi-agent architectures through subagents. When building complex workflows, you need reliable ways to pass context, share state, and coordinate results between subagents. This guide covers practical patterns for context passing that work in real production workflows.
+Claude Code enables powerful multi-agent architectures through subagents. For an introduction to subagent coordination, see [multi-agent orchestration with Claude subagents](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/). When building complex workflows, you need reliable ways to pass context, share state, and coordinate results between subagents. This guide covers practical patterns for context passing that work in real production workflows.
 
 ## Understanding Subagent Context Architecture
 
@@ -123,5 +123,13 @@ For example, a documentation generation pipeline might invoke the pdf skill to e
 If subagents appear to miss context, verify the parent agent actually received and stored the information first. Check file permissions if using file-based storage. Review whether the context exceeded token limits, which can cause truncation.
 
 When results seem inconsistent across subagents, ensure they're reading from the same version of shared files. Timestamp your context files to detect stale data issues.
+
+
+## Related Reading
+
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Understand the subagent coordination model before implementing context-passing patterns.
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) — Implement robust communication protocols alongside context passing for reliable workflows.
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — Use the supermemory skill to persist and share context across subagent sessions.
+- [Claude Skills Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced context management and subagent coordination patterns.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

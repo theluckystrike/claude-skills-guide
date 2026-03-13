@@ -53,7 +53,7 @@ async function optimizedOutputHandler(stream) {
 }
 ```
 
-This pattern reduces perceived latency by 40-60% for skills that generate substantial output, such as those using the **pdf** skill for document processing or the **xlsx** skill for spreadsheet automation.
+This pattern reduces perceived latency by 40-60% for skills that generate substantial output, especially when combined with [caching strategies for skill outputs](/claude-skills-guide/articles/caching-strategies-for-claude-code-skill-outputs/), such as those using the **pdf** skill for document processing or the **xlsx** skill for spreadsheet automation.
 
 ## Buffer Management Strategies
 
@@ -170,5 +170,12 @@ First, implement adaptive buffering and measure the improvement. Second, enable 
 Most skills will see meaningful improvements from the first two optimizations alone. The compression step provides diminishing returns unless you're dealing with genuinely large outputs.
 
 ---
+
+## Related Reading
+
+- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/articles/caching-strategies-for-claude-code-skill-outputs/) — Cache streaming outputs to avoid regenerating them in future sessions and compound the performance gains
+- [Claude Code Response Latency Optimization with Skills](/claude-skills-guide/articles/claude-code-response-latency-optimization-with-skills/) — Broader latency optimization strategies that complement streaming optimization for faster overall response times
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Reduce token consumption per stream chunk to lower costs while maintaining streaming throughput
+- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced performance optimization and skill architecture patterns for production workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

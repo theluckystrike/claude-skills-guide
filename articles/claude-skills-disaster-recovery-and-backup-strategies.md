@@ -12,7 +12,7 @@ score:
 
 # Claude Skills Disaster Recovery and Backup Strategies
 
-Your Claude skills represent significant investment—hours spent crafting precise prompts, configuring MCP integrations, and fine-tuning behavior patterns. Without proper backup strategies, a system crash, accidental deletion, or corrupted configuration can wipe out months of work in seconds. This guide covers practical disaster recovery and backup approaches specifically designed for Claude skills workflows.
+Your Claude skills represent significant investment—hours spent crafting precise prompts, configuring MCP integrations, and fine-tuning behavior patterns. For proper version control, see [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/articles/claude-code-dotfiles-management-and-skill-sync-workflow/). Without proper backup strategies, a system crash, accidental deletion, or corrupted configuration can wipe out months of work in seconds. This guide covers practical disaster recovery and backup approaches specifically designed for Claude skills workflows. For version-controlling your skills, see [Claude skill versioning with semver best practices](/claude-skills-guide/articles/claude-skill-versioning-semver-best-practices/).
 
 ## Understanding What Needs Protection
 
@@ -163,5 +163,13 @@ Store skill definitions in platform-agnostic formats where possible. Markdown-ba
 ---
 
 Backing up Claude skills requires more than copying files. By implementing version control, automated backups, credential management, and tested recovery procedures, you protect the value of your skill investments. The time spent building these systems pays dividends when disaster strikes—and it will.
+
+
+## Related Reading
+
+- [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/articles/claude-code-dotfiles-management-and-skill-sync-workflow/) — Use dotfiles management as the foundation for skill backup and cross-machine sync.
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Distribute skill backups to team members as part of a recovery strategy.
+- [How Do I Make a Claude Skill Available Organization Wide](/claude-skills-guide/articles/how-do-i-make-a-claude-skill-available-organization-wide/) — Store organization skills in a git repository for automatic disaster recovery.
+- [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Understand skill storage locations before implementing backup and recovery strategies.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

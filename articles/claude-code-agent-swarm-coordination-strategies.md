@@ -15,7 +15,7 @@ Running multiple Claude Code agents simultaneously transforms your development w
 
 ## The Case for Agent Swarms
 
-Single-agent workflows handle individual tasks well, but production scenarios often require parallel execution. Processing hundreds of PDF documents, running test suites across multiple modules, or generating documentation for a large codebase benefits from concurrent agent execution. The **tdd** skill demonstrates this naturally—when you run test generation across twenty files, coordinating multiple agents reduces completion time from minutes to seconds.
+Single-agent workflows handle individual tasks well, but production scenarios often require parallel execution. Processing hundreds of PDF documents, running test suites across multiple modules, or generating documentation for a large codebase benefits from concurrent agent execution. The [**tdd** skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) demonstrates this naturally—when you run test generation across twenty files, coordinating multiple agents reduces completion time from minutes to seconds.
 
 Claude Code supports spawning multiple agents within a single session through the `/spawn` command or via structured tool calls. Understanding how to coordinate these agents effectively separates basic usage from professional-grade automation.
 
@@ -159,5 +159,12 @@ The **docx** skill also proves valuable when generating coordination reports or 
 ## Conclusion
 
 Agent swarm coordination transforms Claude Code from a single assistant into a parallel processing platform. Start with the fan-out/fan-in pattern for independent tasks, scale to hierarchical trees for complex projects, and implement checkpointing for production reliability. The key insight: treat agents as disposable workers that communicate through structured channels, and your automation pipelines will scale horizontally with minimal overhead.
+
+## Related Reading
+
+- [Fan-Out Fan-In Pattern with Claude Code Subagents](/claude-skills-guide/articles/fan-out-fan-in-pattern-claude-code-subagents/) — The foundational concurrency pattern that enables the fan-out distribution strategies in agent swarm coordination
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Broader orchestration patterns that build on agent swarm coordination for complex workflows
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) — How agents in a swarm communicate and pass state during coordination
+- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced multi-agent architecture and coordination patterns for production deployments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

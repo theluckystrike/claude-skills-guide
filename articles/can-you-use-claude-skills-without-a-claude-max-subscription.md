@@ -12,7 +12,7 @@ score:
 
 # Can You Use Claude Skills Without a Claude Max Subscription?
 
-If you're exploring Claude Code as a developer, you've likely encountered skills—modular instruction sets that extend Claude's capabilities. A common question surfaces in forums and Discord channels: do you need a Claude Max subscription to unlock these skills? The answer is more nuanced than a simple yes or no.
+If you're exploring Claude Code as a developer, you've likely encountered skills—modular instruction sets that extend Claude's capabilities. A common question surfaces in forums and Discord channels: do you need a Claude Max subscription to unlock these skills? The answer is more nuanced than a simple yes or no. For an overview of the best skills to start with on any tier, see [best Claude Code skills to install first in 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/).
 
 ## Understanding Claude Skills and Subscription Tiers
 
@@ -96,7 +96,7 @@ Both skills work on free and paid tiers. The limitation appears only in usage vo
 
 Free tier users can optimize their workflow to get the most from skills. Break large tasks into smaller chunks to avoid rate limits. Use the `tdd` skill module-by-module rather than attempting entire application coverage at once. Process documents in sections when working with the `pdf` skill on substantial files.
 
-The `supermemory` skill proves particularly valuable on the free tier because it creates persistent knowledge bases. Once you've indexed your documentation, subsequent queries draw from that indexed content rather than consuming fresh API calls. This makes the skill especially efficient for ongoing projects.
+The [supermemory skill proves particularly valuable on the free tier](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) because it creates persistent knowledge bases. Once you've indexed your documentation, subsequent queries draw from that indexed content rather than consuming fresh API calls. This makes the skill especially efficient for ongoing projects.
 
 ## Skills That Require Special Attention
 
