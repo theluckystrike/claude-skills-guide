@@ -1,198 +1,158 @@
 ---
-layout: default
-title: "Claude Skills with Supabase Database Integration"
-description: "Learn how to integrate Claude Code skills with Supabase for persistent storage, data sync, and backend automation in your AI-powered workflows."
+layout: post
+title: "Claude Skills with Supabase: Practical Workflows"
+description: "How to use Claude Code skills alongside Supabase for database-backed projects — what works, what does not, and practical patterns."
 date: 2026-03-13
-author: theluckystrike
+categories: [integrations, claude-skills]
+tags: [claude-code, claude-skills, supabase, database, backend]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
-# Claude Skills with Supabase Database Integration
+# Claude Skills with Supabase: Practical Workflows
 
-Supabase has become a go-to backend solution for developers building AI-powered applications. When combined with Claude Code skills, you get persistent data storage, real-time sync, and powerful database operations directly from your AI assistant. This guide shows you how to connect Claude skills with Supabase to create robust, data-driven workflows.
+Supabase is a popular open-source backend platform built on PostgreSQL. Claude Code skills are plain `.md` instruction files invoked with slash commands. These two tools are entirely separate — but they work well together because Claude Code can help you write, review, and debug the code that talks to Supabase.
 
-## Setting Up Supabase for Your Claude Skills
+This article covers practical patterns for using Claude Code skills to speed up Supabase-related development work.
 
-Before connecting Claude to Supabase, you need a project and the right credentials. Create a new Supabase project at supabase.com and grab your project URL and anon key from the project settings. These credentials go directly into your skill's environment configuration.
+## What Skills Are (and Are Not)
 
-The connection process uses the Supabase JavaScript client, which works seamlessly in Node.js environments where Claude skills execute. Install the client in your skill's directory:
+Before diving in: Claude skills are not Node.js modules, Python packages, or server-side plugins. A skill is a text file in `~/.claude/skills/` that loads when you type a slash command like `/tdd` or `/frontend-design`. The skill gives Claude structured guidance for a type of task.
 
-```bash
-npm install @supabase/supabase-js
+Skills do not run code. They do not have npm dependencies. They do not execute in a Node.js environment. When this article says "use the /pdf skill with Supabase," it means: use the `/pdf` skill to help you write the code that your application uses to store PDF-extracted data in Supabase.
+
+## Using /tdd for Supabase Query Testing
+
+The `/tdd` skill is useful when writing functions that query Supabase. Invoke it, describe the function you need, and Claude will help you write tests first — then the implementation.
+
+Example workflow:
+
+```
+/tdd
+
+I need a function that queries a Supabase table called "projects"
+filtered by owner_id and status. Write tests first, then the implementation.
 ```
 
-Create a connection helper in your skill that initializes the client:
+Claude will produce tests using your preferred test framework (Jest, Vitest, pytest, etc.) and then the function implementation. You get tested Supabase query code rather than untested boilerplate.
+
+For the Supabase JavaScript client, a tested query function might look like:
 
 ```javascript
-const { createClient } = require('@supabase/supabase-js');
+import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_ANON_KEY;
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_ANON_KEY
+)
 
-const supabase = createClient(supabaseUrl, supabaseKey);
+export async function getProjectsByOwner(ownerId, status) {
+  const { data, error } = await supabase
+    .from('projects')
+    .select('id, title, created_at')
+    .eq('owner_id', ownerId)
+    .eq('status', status)
+    .order('created_at', { ascending: false })
 
-module.exports = { supabase };
+  if (error) throw new Error(error.message)
+  return data
+}
 ```
 
-Store your credentials in a `.env` file and never commit it to version control. Claude skills support environment variable loading through standard Node.js patterns.
+The `/tdd` skill helps you think through edge cases: what happens when `ownerId` is null, when the table is empty, or when Supabase returns a network error.
 
-## Practical Integration Patterns
+## Using /frontend-design for Supabase-Backed UIs
 
-### Storing Conversation Context with the Supermemory Skill
+When you are building a UI that reads from or writes to Supabase, the `/frontend-design` skill loads guidance for component structure, accessibility, and responsive layouts.
 
-The **supermemory** skill already handles persistent context, but you might want finer control over how data persists. By extending it with Supabase, you can build custom memory schemas that fit your specific needs.
+```
+/frontend-design
 
-Create a table for storing conversation threads:
+Build a React component that displays a list of projects fetched from Supabase.
+Show a loading state, an empty state, and the list when data arrives.
+```
+
+Claude produces clean, accessible component code that integrates with your data layer. The skill's guidance ensures the UI handles the async nature of database queries properly — loading indicators, error boundaries, and empty state messaging.
+
+## Using /webapp-testing for Integration Testing
+
+The `/webapp-testing` skill is useful for end-to-end testing of features that depend on your Supabase backend.
+
+```
+/webapp-testing
+
+Write Playwright tests for the project list page.
+The page fetches from Supabase. Mock the API calls
+and test the loading, error, and success states.
+```
+
+This approach gives you integration tests that do not depend on a live Supabase instance in CI — the tests mock the network layer and verify the UI behavior independently.
+
+## Using /docx and /pdf for Document Storage Workflows
+
+If your application stores documents in Supabase Storage and you need to process their contents, the `/pdf` or `/docx` skills help you write the extraction code.
+
+A common pattern:
+
+1. User uploads a PDF to Supabase Storage via your application.
+2. A database trigger or webhook fires.
+3. A server-side function downloads the file and extracts text.
+4. The extracted text gets stored back to a `documents` table for search.
+
+```
+/pdf
+
+Write a Node.js function that downloads a PDF from a Supabase Storage
+signed URL, extracts the text content using pdf-parse, and returns
+a string. Include error handling for corrupt files and network failures.
+```
+
+Claude provides the implementation with proper error handling for each failure point.
+
+## Schema Design with Claude Code
+
+You do not need a specific skill for database schema work — Claude Code itself handles SQL well. But you can combine the `/tdd` skill with schema design to produce a migration file and tests simultaneously:
 
 ```sql
-create table conversation_memory (
+-- Example: projects table
+create table projects (
   id uuid default gen_random_uuid() primary key,
-  thread_id text not null,
-  role text not null,
-  content text not null,
-  tokens_used integer,
+  owner_id uuid references auth.users not null,
+  title text not null,
+  status text default 'active' check (status in ('active', 'archived', 'deleted')),
   created_at timestamptz default now()
 );
 
-create index idx_thread_id on conversation_memory(thread_id);
+-- Row-Level Security
+alter table projects enable row level security;
+
+create policy "Users can read their own projects"
+  on projects for select
+  using (auth.uid() = owner_id);
+
+create policy "Users can insert their own projects"
+  on projects for insert
+  with check (auth.uid() = owner_id);
 ```
 
-Your skill can then query previous context before responding:
+Ask Claude to review your schema for common issues — missing indexes, overly permissive RLS policies, or enum patterns that should use a lookup table.
 
-```javascript
-async function getConversationHistory(threadId, limit = 10) {
-  const { data, error } = await supabase
-    .from('conversation_memory')
-    .select('role, content')
-    .eq('thread_id', threadId)
-    .order('created_at', { ascending: true })
-    .limit(limit);
-  
-  if (error) throw error;
-  return data;
-}
-```
+## Practical Tips
 
-This pattern works exceptionally well with the **tdd** skill for maintaining test context across sessions, or with **frontend-design** skills to preserve design preferences.
+**Keep credentials out of prompts**: Never paste your Supabase service role key into a Claude Code session. Use environment variable names in your code examples and keep actual keys in `.env` files outside version control.
 
-### Building a Project Knowledge Base
+**Use the anon key for client-side code**: The anon key combined with Row-Level Security policies is the correct pattern for browser and mobile clients. The service role key bypasses RLS and should only appear in trusted server-side code.
 
-Use Supabase to create a shared knowledge base that multiple Claude skills can access. This works particularly well for teams using the **pdf** skill to process documentation—store extracted content in your database for semantic retrieval later.
-
-```javascript
-async function storeDocumentMetadata(docId, title, extractedText) {
-  const { data, error } = await supabase
-    .from('documents')
-    .insert({
-      doc_id: docId,
-      title: title,
-      content_preview: extractedText.substring(0, 500),
-      word_count: extractedText.split(/\s+/).length,
-      processed_at: new Date().toISOString()
-    });
-  
-  return { data, error };
-}
-```
-
-### Real-Time Data Sync for Automation Workflows
-
-Supabase's real-time capabilities shine when building reactive workflows. Combine it with skills like **webapp-testing** to trigger test runs based on database events:
-
-```javascript
-// Subscribe to changes in your deployment queue
-const channel = supabase
-  .channel('deployments')
-  .on('postgres_changes', 
-    { event: 'INSERT', schema: 'public', table: 'deploy_queue' },
-    async (payload) => {
-      const { id, repository, branch } = payload.new;
-      // Trigger your testing workflow
-      await runTestSuite(id, repository, branch);
-    }
-  )
-  .subscribe();
-```
-
-This pattern enables entirely new categories of automated responses—database triggers that invoke Claude skills for code review, documentation generation, or deployment validation.
-
-## Authentication and Row-Level Security
-
-Supabase provides built-in authentication and Row-Level Security (RLS) policies. When integrating with Claude skills, you have two approaches:
-
-**Service Role Key**: Bypasses RLS entirely. Use this only for admin operations like data migration or maintenance scripts. Never expose this key in user-facing workflows.
-
-**Anon Key with RLS**: The recommended approach. Configure policies that control what data your skill can access based on the authenticated context:
-
-```sql
-create policy "Skills can read project data"
-on projects
-for select
-to authenticated
-using (true);
-
-create policy "Skills can insert findings"
-on findings
-for insert
-to authenticated
-with check (true);
-```
-
-This ensures your Claude skills respect the same access controls as your application users.
-
-## Error Handling and Retry Logic
-
-Network calls to Supabase can fail. Implement proper error handling in your skills:
-
-```javascript
-async function withRetry(operation, maxRetries = 3) {
-  let lastError;
-  
-  for (let attempt = 1; attempt <= maxRetries; attempt++) {
-    try {
-      return await operation();
-    } catch (error) {
-      lastError = error;
-      console.log(`Attempt ${attempt} failed: ${error.message}`);
-      
-      if (attempt < maxRetries) {
-        await new Promise(r => setTimeout(r, 1000 * attempt));
-      }
-    }
-  }
-  
-  throw new Error(`All ${maxRetries} attempts failed: ${lastError.message}`);
-}
-```
-
-This retry logic handles transient Supabase issues gracefully, making your skills more reliable in production environments.
-
-## Performance Considerations
-
-When building Supabase-backed Claude skills, watch for these common bottlenecks:
-
-**Query Optimization**: Use `.select()` with specific column names rather than selecting everything. Create indexes on frequently queried fields.
-
-**Token Management**: Storing full conversation history in Supabase can grow quickly. Implement cleanup policies that archive or delete old data:
-
-```sql
-delete from conversation_memory 
-where created_at < now() - interval '30 days'
-and thread_id not in (select distinct thread_id from pinned_threads);
-```
-
-**Connection Pooling**: For high-throughput skills, consider using connection pooling rather than creating new connections for each request.
-
-## Next Steps
-
-Start small—connect a single skill like **xlsx** or **docx** to Supabase for document metadata storage, then expand into more complex patterns as you build confidence. The combination of Claude's AI capabilities with Supabase's backend infrastructure opens up possibilities for truly intelligent, data-aware automation.
+**Test RLS policies explicitly**: RLS bugs are silent — a policy that is too permissive allows data leaks without errors. Use the `/tdd` skill to write tests that verify policies reject unauthorized access, not just that they allow authorized access.
 
 ---
 
 ## Related Reading
 
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Skills for data-heavy workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep long sessions cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate in context
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
