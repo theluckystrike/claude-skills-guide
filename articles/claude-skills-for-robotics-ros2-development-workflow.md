@@ -1,11 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills for Robotics ROS2 Development Workflow"
-description: "Learn how to leverage Claude Code skills to accelerate your ROS2 robotics development. Practical workflow examples, skill recommendations, and integration tips."
+description: "Learn how to leverage Claude Code skills to accelerate your ROS2 robotics development. Practical workflow examples, skill recommendations, and integration "
 date: 2026-03-14
-author: theluckystrike
 categories: [tutorials]
 tags: [claude-code, claude-skills, robotics, ros2, development-workflow]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Claude Skills for Robotics ROS2 Development Workflow
