@@ -49,7 +49,7 @@ Claude skills and Langflow both help developers build AI agents, but they take f
 
 **True version control.** Skills are plain files. `git diff` shows you exactly what changed in a skill. Pull requests for skill changes go through the same review process as code changes. Langflow exports JSON that technically can be committed to Git, but diffing and reviewing JSON flow definitions is painful in practice.
 
-**Composability.** Skills can call other skills, creating hierarchical, modular agent behaviors. A "release" skill might invoke a "test" skill, a "changelog" skill, and a "deploy" skill in sequence. This composition pattern is natural to implement and understand.
+**Composability.** Skills can call other skills, creating hierarchical, modular agent behaviors. A "release" skill might invoke a "test" skill (like the [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/)), a "changelog" skill, and a "deploy" skill in sequence. This composition pattern is natural to implement and understand.
 
 **No infrastructure required.** Skills work wherever Claude Code runs. No server to provision, no Docker container to manage, no cloud account to configure.
 

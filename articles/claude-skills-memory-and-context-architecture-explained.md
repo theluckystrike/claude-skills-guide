@@ -62,7 +62,7 @@ Claude: [still in tdd skill, with PostgreSQL context still in window] Writes pg-
 
 ## The /supermemory Skill: Cross-Session Persistence
 
-The /supermemory skill solves the cross-session memory problem. It maintains a storage layer that persists between sessions.
+The [/supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) solves the cross-session memory problem. It maintains a storage layer that persists between sessions.
 
 To store something important, invoke the skill explicitly:
 
@@ -101,7 +101,7 @@ design system:
 Then respond to the user's component request using the established patterns.
 ```
 
-This approach is transparent, version-controllable, and completely predictable. If you update design-tokens.md, the next invocation of the skill will see the updated version.
+This approach is transparent, version-controllable, and completely predictable. If you update design-tokens.md, the next invocation of the skill will see the updated version. This pairs naturally with the [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) when you want consistent test patterns across skill handoffs.
 
 ## Context Architecture for Multi-Skill Workflows
 

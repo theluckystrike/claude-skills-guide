@@ -82,7 +82,7 @@ The OpenAI Assistants API is a hosted API product that lets you create persisten
 
 - You are building developer-facing automation that runs in a coding environment
 - You want agent definitions that live in your repository and are version-controlled
-- You are composing multi-step development workflows (CI, testing, deployment, code review)
+- You are composing multi-step development workflows (CI, testing with the [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/), deployment, code review)
 - Portability and avoiding vendor lock-in are priorities
 - Your team already uses Claude Code
 

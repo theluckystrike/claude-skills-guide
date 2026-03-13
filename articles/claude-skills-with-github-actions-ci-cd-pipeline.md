@@ -19,8 +19,8 @@ GitHub Actions handles orchestration. Claude handles intelligence. Together they
 
 Common use cases include:
 
-- Automated code review comments on PRs using the `tdd` skill
-- PDF report generation from test results using the `pdf` skill
+- Automated code review comments on PRs using the [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/)
+- PDF report generation from test results using the [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/)
 - Accessibility and design checks on front-end PRs using `frontend-design`
 - Persistent context across runs using `supermemory` to track regressions
 
@@ -134,7 +134,7 @@ Use Claude to validate infrastructure changes before deployment. Add this job af
 
 ## Step 4: Using Supermemory for Context Persistence
 
-The `supermemory` skill lets Claude retain context across pipeline runs — useful for tracking flaky tests, recurring review feedback, or build patterns over time.
+The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) lets Claude retain context across pipeline runs — useful for tracking flaky tests, recurring review feedback, or build patterns over time.
 
 ```yaml
       - name: Check regression patterns with supermemory

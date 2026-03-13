@@ -39,7 +39,7 @@ Anything above 400 words is worth reviewing. Common sources of bloat:
 - Redundant instructions that repeat the same constraint multiple times
 - Old instructions left in from earlier versions of the skill
 
-Cut to the minimal set of instructions that changes Claude's behavior. The `tdd` skill, for example, needs to say "write tests before implementation" and specify the test framework — not explain what TDD is.
+Cut to the minimal set of instructions that changes Claude's behavior. The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/), for example, needs to say "write tests before implementation" and specify the test framework — not explain what TDD is.
 
 **Before:**
 ```markdown
@@ -118,7 +118,7 @@ Each session starts fresh with a small context, producing faster responses throu
 
 ## Fix 5: Cut `supermemory` Read Scope
 
-The `supermemory` skill can slow down session starts if it reads a large memory store. If you have been using `supermemory` for months across many projects, the store may have hundreds of entries.
+The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) can slow down session starts if it reads a large memory store. If you have been using `supermemory` for months across many projects, the store may have hundreds of entries.
 
 **Fix — scope memory reads:**
 ```
@@ -188,7 +188,7 @@ tools:
 
 ## Fix 8: Use the `pdf` Skill With Page Ranges
 
-The `pdf` skill processing a 200-page document is inherently slow because of the volume of text being loaded. Always specify page ranges for large documents:
+The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) processing a 200-page document is inherently slow because of the volume of text being loaded. Always specify page ranges for large documents:
 
 ```
 /pdf

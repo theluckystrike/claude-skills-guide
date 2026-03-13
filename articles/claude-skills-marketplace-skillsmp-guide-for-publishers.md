@@ -16,7 +16,7 @@ Publishing workflows involve high volumes of structured documents — manuscript
 
 ## Document Processing with the PDF Skill
 
-Manuscript submissions, contracts, and industry reports arrive as PDFs. The **pdf** skill gives Claude deep context for working with PDF files: extracting text, identifying tables, handling form fields, and merging documents.
+Manuscript submissions, contracts, and industry reports arrive as PDFs. The [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) gives Claude deep context for working with PDF files: extracting text, identifying tables, handling form fields, and merging documents.
 
 A typical manuscript intake workflow:
 
@@ -68,7 +68,7 @@ Generating from a consistent template ensures brand alignment across your catalo
 
 ## Knowledge Management with Supermemory
 
-The **supermemory** skill lets Claude remember project context across sessions. For ongoing series, author relationships, or multi-year contracts, you can store key facts:
+The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) lets Claude remember project context across sessions. For ongoing series, author relationships, or multi-year contracts, you can store key facts:
 
 ```
 /supermemory store: Author Jane Smith prefers chapter-by-chapter delivery. Contract #2024-JS-01 signed March 2026 for 3-book deal, 15% royalty on net.
