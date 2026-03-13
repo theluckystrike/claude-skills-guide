@@ -3,7 +3,7 @@ layout: post
 title: "Claude Code AWS ECS Fargate Setup and Deployment Tutorial"
 description: "Set up and deploy containerized apps to AWS ECS Fargate using Claude Code. Covers task definitions, CI/CD, secrets management, and auto-scaling."
 date: 2026-03-14
-categories: [guides, tutorials]
+categories: [tutorials]
 tags: [claude-code, claude-skills, aws, ecs, fargate, deployment, containers]
 author: "Claude Skills Guide"
 reviewed: true
@@ -91,27 +91,17 @@ aws ecs create-cluster \
   --cluster-configuration "executeCommandConfiguration={logging=DEFAULT}"
 ```
 
-Create a VPC and security groups for your Fargate tasks. The **terraform-expert** skill can generate infrastructure-as-code definitions for reproducible deployments:
+For infrastructure-as-code, describe your requirements to Claude Code directly:
 
-```hcl
-# main.tf (example structure)
-resource "aws_ecs_cluster" "myapp" {
-  name = "myapp-cluster"
-  
-  setting {
-    name  = "containerInsights"
-    value = "enabled"
-  }
-}
-
-resource "aws_vpc" "myapp" {
-  cidr_block = "10.0.0.0/16"
-  
-  tags = {
-    Name = "myapp-vpc"
-  }
-}
 ```
+Write Terraform for an ECS Fargate service:
+- cluster name: myapp-cluster
+- VPC with 2 public subnets
+- security group allowing port 3000 inbound
+- ECS task with 256 CPU / 512 MB memory
+```
+
+Claude will generate the Terraform configuration. The [Claude Code Skills for Terraform](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) guide covers more complex IaC patterns.
 
 ## Creating ECS Task Definitions
 
@@ -155,8 +145,6 @@ Register the task definition:
 aws ecs register-task-definition \
   --cli-input-json file://task-definition.json
 ```
-
-The **automation-hub** skill helps generate these configurations programmatically and validate them before deployment.
 
 ## Deploying the Application
 
@@ -225,8 +213,6 @@ jobs:
             --service myapp-service \
             --force-new-deployment
 ```
-
-The **ci-cd-pipeline** skill provides detailed guidance on setting up continuous integration and deployment pipelines, including integration with GitHub Actions, GitLab CI, and AWS CodeBuild.
 
 ## Managing Environment Variables and Secrets
 
