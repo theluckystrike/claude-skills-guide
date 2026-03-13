@@ -27,8 +27,8 @@ The key insight is that skills operate at the prompt layer. They don't compete w
 Use Claude skills for tasks where they excel while running other AI models simultaneously:
 
 ```bash
-# Run Claude Code skill for documentation
-claude /pdf --generate-docs ./src/
+# Run Claude Code - invoke /pdf skill interactively in a Claude Code session
+# (skills are interactive, not CLI flags: type /pdf in a Claude session)
 
 # Meanwhile, use GPT-4 API for a different task
 curl -s https://api.openai.com/v1/chat/completions \
@@ -99,8 +99,7 @@ The `pdf` skill shines in documentation workflows:
 Combine this with an AI summarization tool:
 
 ```
-# Claude extracts the tables
-claude /pdf --extract-tables ./Q4-report.docx > tables.json
+# Claude extracts the tables via /pdf skill (invoked interactively in a Claude Code session)
 
 # AI summarizer processes the content
 summarizer --input ./tables.json --format markdown

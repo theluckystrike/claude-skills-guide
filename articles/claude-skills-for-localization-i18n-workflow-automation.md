@@ -113,7 +113,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Sync translations
-        run: claude --skill /localization-sync --target-locales de,fr,ja
+        run: claude -p 'Use the localization-sync skill to update translations for locales de,fr,ja'
 ```
 
 This pipeline automatically pushes new translation keys to your translation management system (TMS) or notifies translators when source content changes.
