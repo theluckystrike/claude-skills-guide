@@ -131,4 +131,10 @@ If you are deciding where to invest your AI tooling budget in 2026, start with C
 
 ---
 
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — A practical guide to what Claude Code's skills ecosystem enables, making the case for why it competes with Devin's autonomous capabilities
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Claude Code's automatic skill triggering provides some of the autonomous behavior that Devin offers at a fraction of the cost
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Claude Code's cost advantage over Devin is only maintained with efficient token usage; these techniques help maximize that advantage
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

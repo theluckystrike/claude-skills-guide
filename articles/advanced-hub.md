@@ -98,6 +98,8 @@ Advanced optimization isn't just about prompts. It's about workflow design:
 | [Building Stateful Agents with Claude Skills: Complete Guide](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) | Architecture for building agents with persistent state using Claude skills |
 | [Claude Code Worktrees and Skills Isolation Explained](/claude-skills-guide/articles/claude-code-worktrees-and-skills-isolation-explained/) | Using git worktrees to isolate skill environments in Claude Code |
 | [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/articles/claude-skills-for-enterprise-security-compliance-guide/) | Using Claude skills securely in enterprise environments with compliance requirements |
+| [Claude Code vs Devin AI Agent: 2026 Comparison](/claude-skills-guide/articles/claude-code-vs-devin-ai-agent-comparison-2026/) | Comparing Claude Code's agentic capabilities against Devin's autonomous coding agent |
+| [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/articles/how-to-optimize-claude-skill-prompts-for-accuracy/) | Advanced prompt optimization strategies for consistent skill output quality |
 
 ---
 

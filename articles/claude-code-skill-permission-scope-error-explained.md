@@ -231,4 +231,10 @@ Deny rules take precedence over allow rules when both match.
 
 ---
 
+## Related Reading
+
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The `tools` field in skill YAML directly affects which permissions are required; this guide covers the full format
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Writing minimal, precise tool declarations in your skill files is the first step to avoiding scope errors
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can activate skills with broader scope than intended; understanding the mechanism helps diagnose unexpected permission errors
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

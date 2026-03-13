@@ -49,7 +49,7 @@ Always run the formatter on any file you write before completing the task.
 
 ### Specify Output File Handling
 
-For skills like `docx` and `pdf` that create files, be precise about file naming and location:
+For skills like `docx` and the [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) that create files, be precise about file naming and location:
 
 ```
 Write output files to the ./output/ directory.
@@ -142,7 +142,7 @@ Some tasks require chaining multiple tool calls in a specific sequence. Guide th
 
 ### Read-Modify-Write Pattern
 
-For the `frontend-design` skill:
+For the [`frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/):
 
 ```
 To add a new component:
@@ -160,7 +160,7 @@ If step 8 produces errors, fix them and re-run before completing.
 
 ### Test-Execute-Verify Pattern
 
-For the `tdd` skill:
+For the [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/):
 
 ```
 For any implementation task:

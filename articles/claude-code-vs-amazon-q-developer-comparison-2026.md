@@ -111,4 +111,10 @@ Teams building on AWS will benefit from both: Q Developer for AWS-specific work 
 
 ---
 
+## Related Reading
+
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's skills ecosystem is a key differentiator from Amazon Q Developer; this guide maps out what is available
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Understanding reusable skills vs raw prompting helps clarify Claude Code's structural advantage over Q Developer's prompt-based approach
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Cost comparison between Claude Code and Amazon Q Developer depends partly on how efficiently you use tokens; these techniques help
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -22,7 +22,7 @@ A stateful agent can answer these questions reliably:
 - What decisions did I make and why?
 - Where should I resume if interrupted?
 
-Statefulness in Claude Code is achieved by writing state to durable storage — files, databases, or the `/supermemory` skill — and reading it back at the start of each invocation.
+Statefulness in Claude Code is achieved by writing state to durable storage — files, databases, or the [`/supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — and reading it back at the start of each invocation.
 
 ## The State File Pattern
 
@@ -121,7 +121,7 @@ Idempotency rules:
 - Never write over a completed test file without explicit user confirmation
 ```
 
-This means you can interrupt the agent, close Claude Code, reopen it, invoke the same skill again, and it picks up where it left off.
+This means you can interrupt the agent, close Claude Code, reopen it, invoke the same skill again, and it picks up where it left off. This pattern is especially useful with skills like the [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) where test generation tasks may span multiple sessions.
 
 ## Long-Running Task Patterns
 
