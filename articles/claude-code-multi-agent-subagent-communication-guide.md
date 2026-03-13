@@ -7,7 +7,7 @@ categories: [advanced, workflows]
 tags: [claude-code, claude-skills, multi-agent, automation, agentic]
 author: "Claude Skills Guide"
 reviewed: true
-score: 5
+score: 8
 ---
 
 # Claude Code Multi-Agent and Subagent Communication Guide

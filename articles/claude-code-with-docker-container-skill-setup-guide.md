@@ -7,7 +7,7 @@ categories: [integrations, devops]
 tags: [claude-code, docker, containers, ci-cd, devops]
 author: "Claude Skills Guide"
 reviewed: true
-score: 4
+score: 8
 ---
 
 # Claude Code with Docker Container Setup Guide
