@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skill Not Triggering Automatically? Here's How to Troubleshoot"
 description: "Your Claude skill won't activate automatically? This guide covers common reasons skills fail to trigger, configuration fixes, and debugging steps for pdf, tdd, frontend-design, and other skills."
 date: 2026-03-13
