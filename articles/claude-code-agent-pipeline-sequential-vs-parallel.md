@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Agent Pipeline: Sequential vs Parallel Execution"
-description: "Understand when to use sequential vs parallel agent pipelines in Claude Code. Includes practical examples, code patterns, and recommendations for different workflows."
+description: "Understand when to use sequential vs parallel agent pipelines in Claude Code. Includes practical examples, code patterns, and recommendations for differ..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 9
 ---
 
 # Claude Code Agent Pipeline: Sequential vs Parallel Execution
