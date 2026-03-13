@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "How to Create a Private Claude Skill Not on GitHub"
-description: "Learn how to create and use private Claude Code skills that stay local on your machine without publishing to GitHub. Step-by-step guide with practical examples."
+description: "Learn how to create and use private Claude Code skills that stay local on your machine without publishing to GitHub. Step-by-step guide with practical e..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 4
 ---
 
 # How to Create a Private Claude Skill Not on GitHub
@@ -12,7 +14,7 @@ Private Claude skills let you build custom workflows that stay completely local.
 
 ## Understanding Private vs Public Skills
 
-Claude Code skills live in a designated skills directory, typically `~/.claude/skills/` on Linux and macOS, or `%USERPROFILE%\.claude\skills\` on Windows. When you install a skill from GitHub using `claude skill install`, it clones the repository into this folder. However, you can create skills manually in this directory without any GitHub involvement.
+Claude Code skills live in a designated skills directory, typically `~/.claude/skills/` on Linux and macOS, or `%USERPROFILE%\.claude\skills\` on Windows. When you install a skill from GitHub using `cp skill.md ~/.claude/skills/`, it clones the repository into this folder. However, you can create skills manually in this directory without any GitHub involvement.
 
 Public skills like `frontend-design`, `pdf`, `tdd`, and `supermemory` get shared because developers want community contributions and widespread usage. Private skills serve different purposes: internal company workflows, personal automation scripts, or experimental features you aren't ready to publish.
 
@@ -129,7 +131,7 @@ Even without GitHub, teams can share private skills. Several approaches work:
 
 **Direct file sharing**: Zip your skill directories and share through secure channels. Recipients unzip into their skills folder.
 
-**Private git repositories**: Use GitHub or GitLab's private repositories. Team members clone using SSH keys or deploy tokens. The skill still installs via `claude skill install`, but the repository remains private.
+**Private git repositories**: Use GitHub or GitLab's private repositories. Team members clone using SSH keys or deploy tokens. The skill still installs via `cp skill.md ~/.claude/skills/`, but the repository remains private.
 
 **Network file systems**: If your team shares a network drive or uses tools like Syncthing, skills can live on shared storage that multiple machines access.
 
@@ -170,7 +172,7 @@ Run `claude skill list` to see all installed skills and verify yours appears.
 
 ## Using Private Skills with Official Skills
 
-Private skills integrate seamlessly with public skills from the registry. You might combine:
+Private skills integrate reliably with public skills from the registry. You might combine:
 
 - A private `company-auth` skill for your organization's authentication flows
 - The public `pdf` skill for generating invoices

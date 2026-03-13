@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "How Do I Debug a Claude Skill That Silently Fails"
 description: "Diagnose and fix Claude Code skills that fail silently: skill loading issues, permission errors, YAML parsing problems, and tool invocation failures."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # How Do I Debug a Claude Skill That Silently Fails

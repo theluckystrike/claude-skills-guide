@@ -22,7 +22,7 @@ This shift from reactive assistance to proactive delegation represents the most 
 
 ## Cross-Skill Orchestration
 
-One of the most powerful developments in 2026 is the ability for skills to work together seamlessly. The **frontend-design** skill can generate UI mockups, while the **pptx** skill can package those designs into client presentations. The **docx** skill can draft technical documentation, and the **pdf** skill can convert and optimize that documentation for distribution.
+One of the most powerful developments in 2026 is the ability for skills to work together. The **frontend-design** skill can generate UI mockups, while the **pptx** skill can package those designs into client presentations. The **docx** skill can draft technical documentation, and the **pdf** skill can convert and optimize that documentation for distribution.
 
 This orchestration happens through a common execution context that skills share. When you invoke multiple skills in sequence, the AI agent maintains state across those invocations, understanding that output from one skill serves as input to the next. You don't need to manually copy-paste between tools or manage file paths—the agent handles the integration.
 
