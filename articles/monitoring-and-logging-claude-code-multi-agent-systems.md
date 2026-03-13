@@ -1,170 +1,199 @@
 ---
-layout: post
+layout: default
 title: "Monitoring and Logging in Claude Code Multi-Agent Systems"
-description: "Implement robust monitoring and logging for Claude Code multi-agent setups. Track agent activities, debug issues, and maintain observability across distrib"
+description: "Implement robust monitoring and logging for Claude Code multi-agent setups. Learn observability patterns, structured logging, and debugging strategies for complex agent workflows."
 date: 2026-03-14
-categories: [advanced]
-tags: [claude-code, monitoring, logging, multi-agent, observability]
-author: "Claude Skills Guide"
-reviewed: true
-score: 10
+author: theluckystrike
 ---
 
 # Monitoring and Logging in Claude Code Multi-Agent Systems
 
-Building multi-agent systems with Claude Code requires careful attention to observability. When multiple AI agents work together, understanding what each agent does, tracking their interactions, and debugging issues becomes critical. This guide shows you how to implement effective monitoring and logging for your Claude Code multi-agent workflows.
+Building multi-agent systems with Claude Code requires visibility into agent behavior, message flows, and error conditions. Without proper monitoring, debugging distributed agent workflows becomes nearly impossible. This guide covers practical patterns for observability in Claude Code-based multi-agent architectures.
 
 ## Why Multi-Agent Monitoring Matters
 
-Multi-agent architectures distribute tasks across specialized agents. One agent might handle code generation while another manages testing, and a third handles deployment. Without proper monitoring, you lose visibility into agent decision-making, making it impossible to debug failures or optimize performance.
+When you orchestrate multiple Claude agents to handle different aspects of a task—such as one agent for code review, another for testing, and a third for deployment—each agent generates logs, state changes, and potential errors. A production-grade system needs centralized logging to trace requests across agents, measure latency, and detect failures early.
 
-Effective logging lets you reconstruct the complete sequence of actions, understand why an agent made a particular choice, and identify bottlenecks in your agent workflows. The /tdd skill, for example, generates test-driven development cycles, and logging those cycles helps you understand test coverage patterns over time.
+The challenge: Claude Code doesn't provide built-in observability for multi-agent orchestration. You need to implement it yourself using available tools like bash commands, file operations, and external logging services.
 
-## Structured Logging for Agent Actions
+## Structured Logging Pattern
 
-Start with a consistent logging format across all your agents. Each log entry should include a timestamp, agent identifier, action type, input parameters, and outcome. This structured approach makes log parsing and analysis straightforward.
+The foundation of monitoring is structured logging. Instead of scattered print statements, emit JSON-formatted log entries that external tools can parse and aggregate.
 
-```javascript
-function logAgentAction(agentId, action, params, result) {
-  const entry = {
-    timestamp: new Date().toISOString(),
-    agent: agentId,
-    action: action,
-    input: params,
-    output: result,
-    duration: result.endTime - result.startTime
-  };
-  
-  console.log(JSON.stringify(entry));
-  
-  // Also write to file for persistence
-  fs.appendFileSync('agent-logs.jsonl', JSON.stringify(entry) + '\n');
-}
+```python
+import json
+import datetime
+import os
+
+def log_agent_event(agent_id: str, event_type: str, message: str, metadata: dict = None):
+    """Emit a structured log entry for agent events."""
+    entry = {
+        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+        "agent_id": agent_id,
+        "event_type": event_type,
+        "message": message,
+        "metadata": metadata or {}
+    }
+    
+    log_file = os.environ.get("AGENT_LOG_FILE", "/var/log/claude-agents.log")
+    with open(log_file, "a") as f:
+        f.write(json.dumps(entry) + "\n")
 ```
 
-The /supermemory skill can store these log entries for long-term analysis, allowing you to query historical patterns and identify recurring issues across your agent fleet.
+Call this function from your agent orchestration layer:
+
+```python
+# When an agent starts processing
+log_agent_event(
+    agent_id="code-reviewer-01",
+    event_type="task_started",
+    message="Beginning code review for PR #247",
+    metadata={"pr_number": 247, "files_count": 12}
+)
+
+# When the agent completes
+log_agent_event(
+    agent_id="code-reviewer-01",
+    event_type="task_completed",
+    message="Code review finished",
+    metadata={"issues_found": 3, "duration_seconds": 45}
+)
+```
 
 ## Centralized Log Aggregation
 
-When running multiple agents, centralize your logs to get a unified view. A simple approach uses a shared log directory with rotation:
+For multi-agent systems, aggregate logs from all agents into a single location. A simple approach uses a shared log file or directory:
 
 ```bash
-# Create centralized log directory
+# Create a centralized log directory
 mkdir -p /var/log/claude-agents
+chmod 755 /var/log/claude-agents
 
-# Configure log rotation
-logrotate -d /etc/logrotate.d/claude-agents <<EOF
-/var/log/claude-agents/*.log {
-  daily
-  rotate 14
-  compress
-  delaycompress
-  notifempty
-  create 0644 root root
-}
-EOF
+# Each agent writes to its own file
+export AGENT_LOG_FILE="/var/log/claude-agents/${AGENT_NAME}.log"
 ```
 
-For more sophisticated setups, consider shipping logs to a centralized service. The /frontend-design skill demonstrates this pattern when building observability dashboards that aggregate metrics from multiple sources.
+For more sophisticated setups, integrate with log aggregation services:
 
-## Tracking Agent Communication
+- **Loki**: Grafana Labs' log aggregation system works well with Prometheus metrics
+- **ELK Stack**: Elasticsearch, Logstash, and Kibana provide powerful search and visualization
+- **CloudWatch**: If running on AWS, CloudWatch Logs offers native integration
 
-Multi-agent systems require monitoring not just individual agent actions, but also inter-agent communication. Track message passing between agents to understand task delegation patterns.
-
-```python
-class AgentMessageLogger:
-    def __init__(self, log_file="agent-messages.jsonl"):
-        self.log_file = log_file
-    
-    def log_message(self, from_agent, to_agent, message_type, payload):
-        entry = {
-            "timestamp": datetime.now().isoformat(),
-            "from": from_agent,
-            "to": to_agent,
-            "type": message_type,
-            "payload_size": len(str(payload)),
-            "payload_preview": str(payload)[:200]
-        }
-        
-        with open(self.log_file, 'a') as f:
-            f.write(json.dumps(entry) + '\n')
-```
-
-This pattern helps you visualize agent workflows and identify communication bottlenecks. If one agent consistently acts as a bottleneck, you can redistribute its responsibilities.
+The skill `super-memory` can help you recall patterns from previous debugging sessions, making it easier to identify recurring issues across agent runs.
 
 ## Health Checks and Metrics
 
-Implement health checks to monitor agent availability and performance. Track metrics like:
+Implement health checks to verify each agent's operational status:
 
-- **Uptime**: How long each agent has been running
-- **Task throughput**: Tasks completed per hour
-- **Error rate**: Percentage of failed tasks
-- **Response time**: Average time to complete tasks
-- **Queue depth**: Pending tasks waiting for each agent
+```python
+import subprocess
+import time
 
-```javascript
-const agentMetrics = new Map();
-
-function recordTaskCompletion(agentId, duration, success) {
-  if (!agentMetrics.has(agentId)) {
-    agentMetrics.set(agentId, {
-      totalTasks: 0,
-      successfulTasks: 0,
-      failedTasks: 0,
-      totalDuration: 0,
-      startTime: Date.now()
-    });
-  }
-  
-  const metrics = agentMetrics.get(agentId);
-  metrics.totalTasks++;
-  metrics.totalDuration += duration;
-  
-  if (success) {
-    metrics.successfulTasks++;
-  } else {
-    metrics.failedTasks++;
-  }
-  
-  // Expose metrics for Prometheus or similar
-  console.log(`agent_${agentId}_tasks_total ${metrics.totalTasks}`);
-}
+def check_agent_health(agent_id: str) -> dict:
+    """Perform a health check on a specific agent."""
+    health_file = f"/tmp/claude-agent-{agent_id}.health"
+    
+    # Check if the agent's health file exists and is recent
+    try:
+        mtime = os.path.getmtime(health_file)
+        is_healthy = (time.time() - mtime) < 300  # 5 minute threshold
+        return {"agent_id": agent_id, "healthy": is_healthy, "last_seen": mtime}
+    except FileNotFoundError:
+        return {"agent_id": agent_id, "healthy": False, "last_seen": None}
 ```
 
-The /pdf skill can generate periodic health reports from these metrics, giving you automated insights into system performance.
-
-## Debugging Multi-Agent Failures
-
-When something goes wrong, structured logs let you trace the exact sequence of events. Search logs by agent ID, timestamp range, or action type to reconstruct what happened:
+Each agent should periodically update its health file:
 
 ```bash
-# Find all actions by a specific agent
-grep '"agent": "code-generator"' agent-logs.jsonl
-
-# Find failed tasks in a time window
-grep -E '"success": false' agent-logs.jsonl | \
-  jq 'select(.timestamp > "2026-03-14T10:00:00")'
-
-# Trace a specific task through multiple agents
-grep '"task_id": "task-12345"' agent-logs.jsonl
+# In your agent's main loop
+while true; do
+    date > /tmp/claude-agent-${AGENT_NAME}.health
+    sleep 60
+done
 ```
 
-This debugging approach works especially well with the /tdd skill, where test failures in one agent can cascade through the development workflow.
+## Distributed Tracing
+
+When agents communicate through message queues or HTTP APIs, implement distributed tracing to follow requests end-to-end:
+
+```python
+import uuid
+
+def create_trace_context() -> str:
+    """Generate a unique trace ID for request correlation."""
+    return str(uuid.uuid4())
+
+def trace_agent_call(trace_id: str, from_agent: str, to_agent: str, payload: dict):
+    """Log an inter-agent communication event."""
+    log_agent_event(
+        agent_id=from_agent,
+        event_type="agent_call",
+        message=f"Calling {to_agent}",
+        metadata={
+            "trace_id": trace_id,
+            "target_agent": to_agent,
+            "payload_size": len(str(payload))
+        }
+    )
+```
+
+This pattern enables you to reconstruct the full flow when something goes wrong. The `tdd` skill complements this by letting you write tests that verify agent communication contracts.
+
+## Error Tracking and Alerting
+
+Capture errors with enough context for debugging:
+
+```python
+def log_error(agent_id: str, error: Exception, context: dict):
+    """Log an error with full context for debugging."""
+    import traceback
+    
+    log_agent_event(
+        agent_id=agent_id,
+        event_type="error",
+        message=str(error),
+        metadata={
+            "error_type": type(error).__name__,
+            "traceback": traceback.format_exc(),
+            "context": context
+        }
+    )
+    
+    # Optionally trigger an alert
+    if os.environ.get("ALERT_ON_ERROR") == "true":
+        subprocess.run([
+            "curl", "-X", "POST",
+            os.environ["ALERT_WEBHOOK_URL"],
+            "-d", f'{{"text": f"Agent {agent_id} failed: {error}"}}'
+        ])
+```
+
+## Monitoring Dashboard
+
+Build a simple monitoring dashboard using available skills:
+
+- Use `canvas-design` to create visual representations of agent status
+- Use `pdf` to generate daily or weekly status reports
+- Use `xlsx` to maintain a spreadsheet of agent metrics over time
+
+A minimal dashboard might display:
+
+- Active agents and their current tasks
+- Recent errors across all agents
+- Average task completion time per agent type
+- Success/failure rates
 
 ## Best Practices Summary
 
-Effective multi-agent monitoring combines several practices. First, use structured logging with consistent formats across all agents. Second, centralize logs for unified analysis. Third, track inter-agent communication to understand workflows. Fourth, collect metrics for proactive health monitoring. Fifth, design logs with debugging in mind from the start.
+1. **Emit structured JSON logs** from every agent for parseable output
+2. **Use trace IDs** to correlate events across agent boundaries
+3. **Implement health checks** with timely heartbeat updates
+4. **Log context-rich errors** including stack traces and relevant state
+5. **Aggregate logs centrally** for unified searching and analysis
+6. **Build observability into agent prompts** — include logging instructions in skill definitions
 
-With these patterns in place, your Claude Code multi-agent systems become observable, debuggable, and optimizable. The /supermemory skill helps maintain institutional knowledge about agent behavior, while /frontend-design enables building custom dashboards for your specific monitoring needs.
+The `frontend-design` skill can help you build monitoring interfaces if you need a visual component. The `pdf` skill enables generating automated status reports. For alerting, the `slack-gif-creator` skill offers patterns for notification systems, though you'll primarily work with webhook integrations.
 
-Remember: the time invested in monitoring pays dividends when debugging production issues or optimizing agent performance. Start simple, add complexity as needed, and always log with the debugger in mind.
-
-
-## Related Reading
-
-- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/) — Implement coordination patterns for the multi-agent systems you monitor and log.
-- [Fan Out Fan In Pattern with Claude Code Subagents](/claude-skills-guide/articles/fan-out-fan-in-pattern-claude-code-subagents/) — Add monitoring to fan out fan in workflows to track parallel subagent execution.
-- [Measuring Claude Code Skill Efficiency Metrics](/claude-skills-guide/articles/measuring-claude-code-skill-efficiency-metrics/) — Combine monitoring data with efficiency metrics for comprehensive skill performance analysis.
-- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Explore more advanced patterns for building production-ready multi-agent Claude systems.
+Monitoring multi-agent Claude Code systems requires deliberate architecture. Start with structured logging, add health checks, and progressively build toward comprehensive observability as your system grows.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
