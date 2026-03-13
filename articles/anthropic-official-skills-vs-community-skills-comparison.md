@@ -7,7 +7,7 @@ categories: [comparisons, guides]
 tags: [claude-code, claude-skills, community-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 5
+score: 8
 ---
 
 # Anthropic Official Skills vs Community Skills
@@ -30,19 +30,8 @@ Anthropic's official skills ship with Claude Code and are maintained alongside t
 
 **Integration depth**: Official skills integrate directly with Claude's tool system. The `xlsx` skill, for example, can read and write spreadsheet files while preserving formulas:
 
-```python
-# Using openpyxl to create a spreadsheet with preserved formulas
-from openpyxl import Workbook
-
-wb = Workbook()
-ws = wb.active
-ws['A1'] = 'Product'
-ws['B1'] = 'Price'
-ws['C1'] = 'Quantity'
-ws['D1'] = 'Total'
-ws['D2'] = '=B2*C2'
-ws['D3'] = '=B3*C3'
-wb.save('inventory.xlsx')
+```
+/xlsx create inventory.xlsx with columns: Product, Price, Quantity, Total. Add formula =B2*C2 in the Total column for each row. Preserve the formulas when saving.
 ```
 
 **Security**: Official skills pass Anthropic's review process, making them appropriate for sensitive data.

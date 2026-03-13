@@ -7,7 +7,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills, publishing, pdf, docx]
 author: "Claude Skills Guide"
 reviewed: true
-score: 5
+score: 8
 ---
 
 # Claude Skills for Publishers: A Practical Guide
@@ -84,18 +84,8 @@ Then retrieve it in any future session:
 
 For publishers with digital platforms — e-book previews, reader portals, or CMS systems — the **webapp-testing** skill provides Playwright-based browser testing:
 
-```python
-# Test the e-book preview page loads correctly
-from playwright.sync_api import sync_playwright
-
-def test_ebook_preview():
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page()
-        page.goto('https://publisher.com/preview/9781234567890')
-        assert page.locator('.chapter-title').is_visible()
-        page.screenshot(path='previews/chapter-one.png')
-        browser.close()
+```
+/webapp-testing verify the e-book preview page at https://publisher.com/preview/9781234567890: confirm the .chapter-title element is visible, then screenshot the result to previews/chapter-one.png
 ```
 
 ## Getting Started

@@ -7,7 +7,7 @@ categories: [skills, guides]
 tags: [claude-code, claude-skills, claude-4, tdd, pdf, supermemory, webapp-testing]
 author: "Claude Skills Guide"
 reviewed: true
-score: 5
+score: 8
 ---
 
 # Claude 4 Skills Improvements and New Features
@@ -18,7 +18,7 @@ Claude 4 brought meaningful improvements to the existing skills system. If you'v
 
 The [`pdf` skill's](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) extraction engine improved significantly in Claude 4, particularly for multi-column layouts and scanned documents. Table detection is more reliable, which matters when pulling structured data from technical specifications and financial reports.
 
-Try the batch processing capability that was added:
+Batch processing capability was added in this version:
 
 ```
 /pdf process all PDFs in invoices/ and extract the total, vendor name, and invoice date from each. Output as a CSV table.
@@ -92,7 +92,7 @@ The `frontend-design` skill now checks more dimensions of design compliance, inc
 
 For teams enforcing a design system, the improved token verification catches violations that previously slipped through manual review.
 
-## Webapp Testing: Screenshots and Video
+## Webapp Testing: Screenshots and Visual Regression
 
 The `webapp-testing` skill added visual regression testing and video recording in Claude 4:
 
@@ -124,31 +124,34 @@ The `xlsx` skill gained waterfall charts, treemaps, and sparklines in Claude 4:
 
 These chart types were previously difficult to generate programmatically and required manual steps in Excel. The skill handles the chart object configuration directly.
 
-## Skill Auto-Invocation
+## Skill Auto-Invocation Triggers
 
-Claude 4 introduced configurable auto-invocation triggers. Skills can now activate based on file patterns you define. Add triggers to `~/.claude/settings.json`:
+Claude 4 introduced configurable auto-invocation triggers. Skills can now activate based on file patterns you define in `~/.claude/settings.json` under the `"hooks"` key:
 
 ```json
 {
-  "skillTriggers": [
-    { "pattern": "**/*test*.js", "skill": "tdd" },
-    { "pattern": "**/*.pdf", "skill": "pdf" },
-    { "pattern": "**/design*.json", "skill": "frontend-design" }
-  ]
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": { "tool_name": "Read", "file_pattern": "**/*.test.ts" },
+        "command": "echo 'tdd skill active for test files'"
+      }
+    ]
+  }
 }
 ```
 
-With these triggers, opening a test file surfaces the `tdd` skill context automatically. This is an opt-in feature — skills still work the same way when invoked manually with `/skill-name`.
+The `/tdd`, `/pdf`, and other skills still work exactly the same way when invoked manually with `/skill-name`. Auto-invocation via hooks is an optional pattern for teams that want skills to surface contextually without manual invocation.
 
 ## Getting Started with These Features
 
-All improvements activate automatically when you use the updated skills — no configuration changes required unless you want auto-invocation triggers. If you're on an older Claude Code version, update first:
+All improvements activate automatically when you use the updated skills — no configuration changes required for the core improvements. If you're on an older Claude Code version, update first:
 
 ```bash
 npm update -g @anthropic-ai/claude-code
 ```
 
-Then verify you have Claude 4 by checking the model in your settings.
+Then verify you have Claude 4 by checking the model in your settings or running `claude --version`.
 
 ---
 

@@ -7,7 +7,7 @@ categories: [skills, guides]
 tags: [claude-code, claude-skills, data-analysis, xlsx, pdf]
 author: "Claude Skills Guide"
 reviewed: true
-score: 5
+score: 8
 ---
 
 Data analysis workflows demand tools that handle diverse file formats, automate repetitive tasks, and transform raw information into actionable insights. Claude Code skills extend the AI assistant's capabilities beyond conversational queries, enabling programmatic manipulation of spreadsheets, documents, and datasets. This guide examines the most valuable Claude skills for data analysis workflows, focusing on practical applications developers and power users can implement immediately.
@@ -16,17 +16,8 @@ Data analysis workflows demand tools that handle diverse file formats, automate 
 
 The xlsx skill stands as the cornerstone for any data analysis workflow involving tabular data. This skill enables creation, modification, and analysis of Excel files, CSV files, and other spreadsheet formats while preserving formulas and formatting.
 
-```python
-# Example: Analyzing sales data with xlsx skill
-# The skill handles formulas, formatting, and data visualization
-
-# Create a new spreadsheet with analysis
-data = {
-    'Product': ['Widget A', 'Widget B', 'Widget C'],
-    'Q1_Sales': [15000, 22000, 18000],
-    'Q2_Sales': [17500, 19500, 21000]
-}
-# xlsx skill automatically applies formatting and formulas
+```
+/xlsx Create a new spreadsheet in sales-analysis.xlsx with columns: Product, Q1_Sales, Q2_Sales. Add a row for Widget A (15000, 17500), Widget B (22000, 19500), Widget C (18000, 21000). Add a SUM formula row at the bottom.
 ```
 
 The xlsx skill excels at batch processing multiple files, applying consistent formatting across workbooks, and generating calculated fields. For analysts working with financial models or recurring reports, the ability to programmatically update spreadsheets eliminates manual copy-paste workflows that consume hours each week.
@@ -35,9 +26,8 @@ The xlsx skill excels at batch processing multiple files, applying consistent fo
 
 Extracting structured data from PDF documents represents a common pain point in data analysis. The pdf skill transforms static documents into usable datasets through intelligent text and table extraction.
 
-```python
-# Extract tables from financial reports
-# pdf skill identifies tabular structures and converts to Python data
+```
+/pdf extract all tables from Q3-financial-report.pdf and format them as markdown tables
 ```
 
 This skill proves invaluable when analyzing vendor contracts, extracting line items from invoices, or pulling data points from research papers. Rather than manually transcribing information or purchasing expensive OCR software, developers integrate the pdf skill into pipelines that process hundreds of documents automatically.
@@ -66,9 +56,8 @@ The tdd skill guides developers through the red-green-refactor cycle, automatica
 
 Analysis results often require distribution through formal documents. The docx skill generates Word documents programmatically, enabling automated report generation from analysis outputs.
 
-```python
-# Generate analysis reports automatically
-# docx skill creates formatted documents with tables, charts, and text
+```
+/docx create a formatted analysis report from this data: [paste analysis results]. Include a title page, executive summary, and data tables.
 ```
 
 This skill pairs effectively with xlsx—when your Python script completes spreadsheet analysis, docx packages the findings into a professionally formatted report ready for stakeholder distribution.
@@ -77,9 +66,8 @@ This skill pairs effectively with xlsx—when your Python script completes sprea
 
 Translating data insights into presentations demands a separate skill entirely. The pptx skill automates slide creation, enabling data-driven storytelling without manual PowerPoint work.
 
-```python
-# Create slides from analysis results
-# pptx skill builds presentations with charts, tables, and speaker notes
+```
+/pptx create a 6-slide presentation from this monthly analysis. Include one data chart per slide and speaker notes: [paste analysis]
 ```
 
 For teams that run weekly or monthly analyses, automating slide generation ensures consistency while saving hours of repetitive work. The skill supports corporate templates, enabling brand-aligned outputs without manual formatting.
@@ -101,22 +89,21 @@ The real power emerges when combining these skills into integrated pipelines. Co
 5. **pptx** creates presentation slides for stakeholder meetings
 6. **tdd** ensures each transformation step produces accurate results
 
-```python
-# Integrated pipeline example
-def process_monthly_report(invoice_files):
-    # Extract with pdf skill
-    raw_data = extract_all_invoices(invoice_files)
+```bash
+#!/bin/bash
+# Monthly report pipeline using Claude skills
 
-    # Clean with tested functions (tdd verified)
-    cleaned = clean_and_normalize(raw_data)
+# Step 1: Extract data from invoice PDFs
+INVOICE_DATA=$(claude -p "/pdf process all PDFs in ./invoices/ and extract vendor, date, and total from each. Output as CSV.")
 
-    # Analyze with xlsx skill
-    summary = generate_summary(cleaned)
+# Step 2: Create summary spreadsheet
+claude -p "/xlsx Create invoice-summary.xlsx from this CSV data: $INVOICE_DATA. Add subtotals by vendor and a monthly trend chart."
 
-    # Output to multiple formats
-    save_spreadsheet(summary)  # xlsx
-    generate_word_report(summary)  # docx
-    create_presentation(summary)  # pptx
+# Step 3: Generate Word report
+claude -p "/docx Create management-report.docx summarizing: $INVOICE_DATA. Include a table of totals, key findings, and recommendations."
+
+# Step 4: Build presentation
+claude -p "/pptx Create a 5-slide summary deck from the invoice analysis: $INVOICE_DATA"
 ```
 
 For frontend teams that need to surface this data in dashboards, see [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) for how these analysis outputs integrate with UI workflows.
