@@ -197,4 +197,10 @@ Run `/skill your-skill-name` to invoke it directly and verify the output matches
 
 ---
 
+## Related Reading
+
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Complementary examples and annotated templates for the fields covered in this specification
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — A practical walkthrough for writing your first skill from scratch, following the format rules in this guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — How skill body design and context_files declarations affect token consumption in every skill invocation
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

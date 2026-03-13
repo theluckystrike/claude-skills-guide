@@ -96,4 +96,10 @@ In 2026, **Claude Code** is the better choice for developers who think of their 
 
 ---
 
+## Related Reading
+
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — A deep look at Claude Code's skills ecosystem, a core differentiator not found in OpenAI Codex CLI
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — How packaged skills compare to single-turn prompting approaches, directly relevant to the Claude Code vs Codex CLI decision
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — The mechanics behind Claude Code's automatic skill firing, one of its most powerful features over simpler CLI tools
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

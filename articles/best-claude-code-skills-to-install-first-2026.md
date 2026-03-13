@@ -42,7 +42,7 @@ The skill handles multi-column layouts, scanned documents, and form fields. For 
 
 ## Test-Driven Development with the TDD Skill
 
-The **tdd** skill enforces test-first development practices. It generates unit tests, integration tests, and edge case suggestions based on code you provide.
+The [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) enforces test-first development practices. It generates unit tests, integration tests, and edge case suggestions based on code you provide.
 
 ```
 /tdd write pytest tests for this function: [paste function]
@@ -78,7 +78,7 @@ Business analysts processing financial data or generating weekly reports find th
 
 ## Memory Management with the supermemory Skill
 
-The **supermemory** skill provides persistent context across Claude sessions. Default conversations reset; this skill maintains knowledge of your projects, preferences, and decisions.
+The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) provides persistent context across Claude sessions. Default conversations reset; this skill maintains knowledge of your projects, preferences, and decisions.
 
 ```
 /supermemory store: project-architecture = Next.js with TypeScript, PostgreSQL, Prisma ORM, deployed on Railway
@@ -96,7 +96,7 @@ Power users managing multiple long-running projects benefit most. Instead of re-
 
 ## Frontend Design with the frontend-design Skill
 
-The **frontend-design** skill generates responsive layouts, applies design system tokens, and validates UI implementations against specifications.
+The [**frontend-design** skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) generates responsive layouts, applies design system tokens, and validates UI implementations against specifications.
 
 ```
 /frontend-design create a responsive card component in React with Tailwind: elevated shadow, image top, title, subtitle, CTA button. Match our 8px spacing grid.

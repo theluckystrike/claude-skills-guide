@@ -206,4 +206,12 @@ Then call `./scripts/claude-with-retry.sh --skill tdd ...` in your workflow step
 
 Wiring Claude skills with GitHub Actions CI/CD pipeline bridges the gap between automated testing and intelligent code analysis. By combining skills like `tdd`, `supermemory`, and `pdf` at specific pipeline stages, you get context-aware AI participation without building a separate service. Start with the PR review workflow and expand to deployment gates once you trust the output quality.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — A curated list of skills that integrate with CI/CD workflows, infrastructure tooling, and deployment automation
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Covers the full spectrum of developer skills including tdd, supermemory, and code review automation
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — How to structure CI/CD skill invocations to minimize API spend while keeping pipeline coverage thorough
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -12,7 +12,7 @@ score: 7
 
 # Automated Testing Pipeline with Claude TDD Skill
 
-The `/tdd` skill in Claude Code brings test-driven development workflows directly into your AI sessions. This guide walks through building a practical automated testing pipeline using the skill, with real configuration examples and CI/CD integration patterns.
+The [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) in Claude Code brings test-driven development workflows directly into your AI sessions. This guide walks through building a practical automated testing pipeline using the skill, with real configuration examples and CI/CD integration patterns.
 
 ## Understanding the TDD Skill
 
@@ -197,8 +197,8 @@ jobs:
 Pair `/tdd` with other skills for related tasks in the same session:
 
 - Use `/frontend-design` to scaffold a React component, then activate `/tdd` to write tests for it
-- Use `/supermemory` to store your preferred test patterns so Claude remembers them across sessions
-- Use `/pdf` to generate a test coverage report from your project's existing data
+- Use the [supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to store your preferred test patterns so Claude remembers them across sessions
+- Use the [pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) to generate a test coverage report from your project's existing data
 
 Each skill is invoked independently with its slash command; you can use multiple in the same session.
 

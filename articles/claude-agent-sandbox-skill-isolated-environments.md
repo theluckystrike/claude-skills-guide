@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Claude Agent Sandbox Skill: Isolated Environments Explained"
-description: "How the Claude agent sandbox skill provides isolated execution environments. Security benefits, configuration patterns, and practical examples for safe AI workflows."
+title: "Claude Agent Sandbox Skill: Complete Guide (2026)"
+description: "How Claude agent sandbox skill provides isolated environments. Security benefits, configuration patterns, and examples for safe AI workflows."
 date: 2026-03-13
 categories: [skills, guides]
 tags: [claude-code, claude-skills, agent, sandbox, security, isolation]
