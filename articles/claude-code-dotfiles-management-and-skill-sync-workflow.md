@@ -43,7 +43,7 @@ skills/
 !.claude/
 ```
 
-The key insight is treating `skills/` as source-controlled content while acknowledging that some files—like runtime cache or local overrides—should remain machine-specific.
+The key insight is treating `skills/` as [source-controlled content](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) while acknowledging that some files—like runtime cache or local overrides—should remain machine-specific.
 
 ## Skill Organization Patterns
 
@@ -183,5 +183,12 @@ This watches for file changes and automatically commits and pushes. Adjust the t
 Managing Claude Code dotfiles and skills through git provides consistency across machines, backup protection, and the ability to share configurations with teammates. Start by organizing skills in a flat, descriptive structure, choose a sync strategy that matches your workflow, and automate incremental updates to keep machines in sync.
 
 The initial setup takes maybe thirty minutes, but the time saved over months of use far exceeds the investment. Your Claude configuration becomes as portable as your dotfiles—exactly the way it should be.
+
+## Related Reading
+
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Distribute your synced skill files across engineering teams with consistent naming and versioning.
+- [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-guide/articles/claude-skills-directory-where-to-find-skills/) — Discover which skills are worth adding to your dotfiles repository in the first place.
+- [Skill MD File Format Explained With Examples Guide](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Understand the format of the skill files you are managing in your dotfiles.
+- [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — The foundational guide before you start syncing and managing skill files across machines.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -72,7 +72,7 @@ cp skill.md ~/.claude/skills/ pdf
 cp skill.md ~/.claude/skills/ supermemory
 ```
 
-The **tdd** skill guides test-driven development practices. When working on new features, invoke it to generate test cases before implementation. The **pdf** skill helps generate documentation directly from your codebase. For maintaining project memory across sessions, **supermemory** stores context that Claude Code references in future sessions.
+The [**tdd** skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) guides test-driven development practices. When working on new features, invoke it to generate test cases before implementation. The **pdf** skill helps generate documentation directly from your codebase. For maintaining project memory across sessions, **supermemory** stores context that Claude Code references in future sessions.
 
 ## Practical Example: Building an API Endpoint
 
@@ -202,5 +202,12 @@ When using Claude Code in cloud environments:
 - Review Claude Code's generated code before committing
 
 Claude Code can assist with security scanning using the appropriate skills, helping identify vulnerabilities before they reach production.
+
+## Related Reading
+
+- [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/articles/claude-code-dotfiles-management-and-skill-sync-workflow/) — Persist your Codespace skill configuration with dotfiles so every new environment is pre-configured.
+- [Claude Code Permissions Model and Security Guide](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) — Understand how Claude Code's permission model applies in cloud-based Codespace environments.
+- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — Connect your Codespace development workflow to automated CI/CD pipelines with Claude skills.
+- [Claude Skills Workflow Guide](/claude-skills-guide/workflows-hub/) — Explore broader workflow patterns that pair well with cloud-based development environments.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

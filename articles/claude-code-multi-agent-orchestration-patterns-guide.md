@@ -18,7 +18,7 @@ Claude Code supports multi-agent workflows through skill orchestration and coord
 
 Multi-agent orchestration in Claude Code involves coordinating multiple skills or agents to handle tasks that require diverse expertise. Rather than relying on a single agent to handle everything, you can invoke specialized skills sequentially or in parallel to use their individual strengths.
 
-The foundation of this approach lies in Claude's skill system. Skills are Markdown files in `~/.claude/skills/` that define agent behavior for specific domains. By combining skills strategically, you create powerful orchestration pipelines.
+The foundation of this approach lies in Claude's skill system. Skills are [Markdown files in `~/.claude/skills/`](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) that define agent behavior for specific domains. By combining skills strategically, you create powerful orchestration pipelines.
 
 ## Core Orchestration Patterns
 
@@ -193,5 +193,12 @@ Monitor skill interactions for unexpected behaviors. Some skill combinations pro
 Multi-agent orchestration in Claude Code transforms isolated skills into coordinated workflows. By understanding sequential chaining, parallel execution, and context passing, you can build sophisticated automation pipelines that handle complex development tasks efficiently. The key lies in treating skills as specialized components that combine through well-defined interfaces.
 
 Start with simple two-skill sequences and gradually expand as your patterns mature. The skill ecosystem continues growing, offering new capabilities to incorporate into your orchestrations.
+
+## Related Reading
+
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Complement sequential skill chaining with parallel subagent orchestration for complex projects.
+- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/) — Scale beyond single skill chains to full agent swarms for large-scale automation.
+- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) — Architecture patterns for taking orchestrated skill pipelines to production.
+- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Explore advanced patterns for building reliable, scalable multi-skill pipelines.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

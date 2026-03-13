@@ -62,7 +62,7 @@ Task coordination:
 Do not modify tasks assigned to other agents. Always read tasks.json fresh before claiming.
 ```
 
-This pattern works well with the `frontend-design` skill for component generation, or the `pdf` skill for batch document processing. Each agent operates independently, and the shared file acts as the coordination mechanism.
+This pattern works well with the [frontend-design skill](/claude-skills-guide/articles/claude-frontend-design-skill-review-and-tutorial/) for component generation, or the `pdf` skill for batch document processing. Each agent operates independently, and the shared file acts as the coordination mechanism.
 
 ## Pattern 2: Event-Driven Coordination via MCP
 
@@ -269,5 +269,12 @@ This approach uses the `pdf` skill's table extraction capabilities in parallel, 
 Start simple: use a task queue file and spawn 2-3 Claude agents to handle parallel work. As your coordination needs grow, add MCP-based event broadcasting. The hierarchical supervisor pattern handles the most complex scenarios.
 
 The key insight is that Claude Code's tool-based architecture translates naturally to multi-agent systems. Each agent is just a Claude process with access to tools—the coordination layer connects them.
+
+## Related Reading
+
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Structured orchestration patterns that complement agent swarm coordination for complex projects.
+- [Fan Out Fan In Pattern with Claude Code Subagents](/claude-skills-guide/articles/fan-out-fan-in-pattern-claude-code-subagents/) — Implement the fan-out/fan-in concurrency pattern to distribute and collect swarm workloads.
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) — Deep dive into inter-agent communication protocols for swarm coordination.
+- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Explore advanced patterns for production agent architectures.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

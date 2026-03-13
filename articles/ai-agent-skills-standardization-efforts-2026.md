@@ -53,7 +53,7 @@ The community has developed a skill interface specification that standardizes ho
 - **Output**: Defined response formats for skill results
 - **State**: Clear conventions for maintaining skill state across sessions
 
-Skills built to these interfaces work similarly regardless of which AI platform runs them. The `tdd` skill, for example, can generate test cases following the same patterns whether invoked through Claude or another compatible assistant.
+Skills built to these interfaces work similarly regardless of which AI platform runs them. The [tdd skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/), for example, can generate test cases following the same patterns whether invoked through Claude or another compatible assistant.
 
 ### Capability Registry Systems
 
@@ -117,6 +117,11 @@ For now, adopt standards that reduce lock-in while maintaining flexibility. Buil
 
 The fragmentation problem won't solve itself, but the tools and patterns emerging in 2026 give developers real options for building portable AI agent capabilities.
 
----
+## Related Reading
+
+- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand the structural foundations that make cross-platform skill standardization possible via MCP.
+- [Claude Code Skills Roadmap 2026: What Is Coming](/claude-skills-guide/articles/claude-code-skills-roadmap-2026-what-is-coming/) — See how Anthropic's own skill roadmap aligns with the broader standardization movement.
+- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/articles/how-to-contribute-claude-skills-to-open-source/) — Build portable skills today that align with emerging standards for cross-platform distribution.
+- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Explore advanced skill patterns that benefit most from cross-platform portability.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

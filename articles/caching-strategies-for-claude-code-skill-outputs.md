@@ -196,12 +196,19 @@ When implementing caching for Claude Code skills, monitor these metrics:
 - **Stale data**: Ensure TTL values match your workflow patterns
 - **Memory usage**: Keep in-memory caches small; prefer file-based caching for large outputs
 
-The **supermemory** skill particularly benefits from caching because knowledge graph queries can be expensive. Cache common query patterns while ensuring fresh data for time-sensitive retrievals.
+The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) particularly benefits from caching because knowledge graph queries can be expensive. Cache common query patterns while ensuring fresh data for time-sensitive retrievals.
 
 ## Conclusion
 
 Implementing caching strategies for Claude Code skill outputs dramatically reduces wait times and improves development workflow efficiency. File-based caching provides simplicity and persistence. Python-based caching offers TTL support and sophisticated invalidation logic. Tailor your approach to each skill's output characteristics—cache **pdf** extractions by document hash, **tdd** outputs by source and template combination, and **xlsx** spreadsheets with appropriate time-based expiration.
 
 Start with simple timestamp-based caching and evolve toward sophisticated content-hash caching as your workflows mature.
+
+## Related Reading
+
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Reduce the API usage that makes caching necessary in the first place with token optimization techniques.
+- [Rate Limit Management for Claude Code Skill Intensive Workflows](/claude-skills-guide/articles/rate-limit-management-claude-code-skill-intensive-workflows/) — Complement caching with rate limit strategies for sustained skill-intensive automation pipelines.
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) — Diagnose performance issues that caching alone may not solve.
+- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Explore advanced skill optimization patterns beyond basic caching.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
