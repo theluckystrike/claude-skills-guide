@@ -266,4 +266,12 @@ triageBacklog(process.env.LINEAR_TEAM_ID);
 
 Claude skills with Linear project management transforms routine PM work into automated intelligence. The `tdd` skill makes triage actionable, `supermemory` tracks patterns across sprints, and spec generation saves hours per feature. Start with the webhook-based real-time triage and add batch processing for your existing backlog.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Covers the tdd and supermemory skills used throughout this Linear integration guide, with usage patterns and invocation tips
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Extends the Linear workflow into deployment pipelines, closing the loop from issue creation to production release
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Batch triage of Linear issues can generate significant API costs; these techniques help you keep them manageable
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

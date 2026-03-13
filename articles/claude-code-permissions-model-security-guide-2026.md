@@ -236,4 +236,10 @@ The permissions model in 2026 still has gaps that teams should be aware of:
 
 ---
 
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Understanding which skills are most powerful helps you prioritize which ones need tightest permission controls
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The `tools` field in skill YAML directly controls the permission surface; this guide explains every available option
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can trigger skills with broad tool access unexpectedly; understanding the mechanism is part of a sound security posture
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

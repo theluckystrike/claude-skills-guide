@@ -237,4 +237,10 @@ If the stripped skill works but the original does not, a tool declaration in the
 
 ---
 
+## Related Reading
+
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The authoritative reference for the `tools` field and all other YAML front matter fields in skill files
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — A hands-on walkthrough for writing skill files that correctly declare their tool dependencies
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Minimizing declared tools is also a token optimization strategy; this article explains the full picture
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
