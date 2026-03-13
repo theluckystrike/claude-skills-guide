@@ -7,7 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, robotics, ros2, development-workflow]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 8
 ---
 
 # Claude Skills for Robotics ROS2 Development Workflow

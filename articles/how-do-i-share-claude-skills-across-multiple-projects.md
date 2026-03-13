@@ -7,7 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 8
 ---
 
 Sharing Claude skills across multiple projects is one of the most powerful ways to standardize your development workflow and avoid duplicating effort. Whether you're working on a monorepo with multiple packages or maintaining separate repositories for different applications, having a strategy for skill sharing can significantly boost your productivity.

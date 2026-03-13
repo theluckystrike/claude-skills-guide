@@ -1,21 +1,13 @@
 ---
 layout: post
 title: "Claude Code Skills for Kubernetes Operator Development"
-<<<<<<< Updated upstream
-description: "Learn how Claude Code skills accelerate Kubernetes operator development with practical examples, code generation, testing workflows, and documentation auto"
-=======
 description: "Learn how Claude Code skills accelerate Kubernetes operator development with practical examples, code generation, testing workflows, and documentation a..."
->>>>>>> Stashed changes
 date: 2026-03-14
-categories: [development]
+categories: [advanced]
 tags: [claude-code, kubernetes, operator-development, devops, go]
 author: "Claude Skills Guide"
 reviewed: true
-<<<<<<< Updated upstream
-score: 
-=======
 score: 9
->>>>>>> Stashed changes
 ---
 
 # Claude Code Skills for Kubernetes Operator Development

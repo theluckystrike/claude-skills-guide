@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Claude Skills for Computational Biology and Bioinformatics: "
-description: "Claude skills for computational biology bioinformatics: automate sequence analysis, build phylogenetic pipelines, process NGS data, and accelerate research"
+title: "Claude Skills for Computational Biology and Bioinformatics"
+description: "Claude skills for computational biology: automate sequence analysis, build phylogenetic pipelines, process NGS data, and accelerate bioinformatics research."
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, claude-skills]
+categories: [guides]
+tags: [claude-code, claude-skills, bioinformatics, computational-biology, python, data-science]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 8
 ---
 
 Computational biology and bioinformatics workflows involve intensive data processing, statistical analysis, and visualization tasks that consume significant researcher time. Claude Code skills provide specialized automation for sequence analysis, genome annotation, protein structure prediction, and reproducible research pipelines. These skills work alongside your existing toolchain—Biopython, Bowtie, BLAST, R/Bioconductor—to accelerate common operations without replacing your core analysis tools.

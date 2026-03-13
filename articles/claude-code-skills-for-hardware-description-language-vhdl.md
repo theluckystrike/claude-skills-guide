@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code Skills for Hardware Description Language VHDL"
-description: "A practical guide to using Claude Code skills for VHDL development. Learn how to leverage AI-assisted workflows for hardware design, testing, and documentation."
+description: "A practical guide to using Claude Code skills for VHDL development. Use AI-assisted workflows for hardware design, simulation testing, and documentation."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, vhdl, hardware-description-language, fpga, digital-design, development-tools]

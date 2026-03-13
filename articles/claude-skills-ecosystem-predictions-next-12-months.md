@@ -7,7 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 7
 ---
 
 # Claude Skills Ecosystem: Predictions for the Next 12 Months
