@@ -192,7 +192,7 @@ Maintain code quality by following these guidelines when working with Claude:
 
 **Iterate Gradually**: Make small, incremental changes rather than requesting large feature implementations at once. This approach makes debugging easier and keeps your commit history clean.
 
-**Use Skills Strategically**: Activate relevant skills at the start of development sessions. The tdd skill for test-heavy features, pdf for documentation, and frontend-design for UI work maximize productivity.
+**Activate Skills at Session Start**: Use `/tdd` for test-heavy features, `/pdf` for documentation, and `/frontend-design` for UI work at the beginning of your session to give Claude the right context.
 
 **Document Your Conventions**: Use supermemory to store project-specific patterns. This creates institutional knowledge that improves over time.
 
