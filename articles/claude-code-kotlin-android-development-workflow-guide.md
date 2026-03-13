@@ -26,7 +26,7 @@ Claude's skill system extends its capabilities for specific development scenario
 
 ### The TDD Skill for Android
 
-The `tdd` skill transforms how you approach Android development. Activate it in your Claude session:
+The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) transforms how you approach Android development. Activate it in your Claude session:
 
 ```
 /tdd
@@ -158,7 +158,7 @@ fun `should show error when user not found`() = runTest {
 
 ## Memory and Knowledge Management
 
-For ongoing Android projects, consider integrating `supermemory` to maintain project context across sessions:
+For ongoing Android projects, consider integrating [`supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to maintain project context across sessions:
 
 ```
 /supermemory

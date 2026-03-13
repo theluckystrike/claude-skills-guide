@@ -16,7 +16,7 @@ Performance optimization is a continuous process, not a one-time fix. Automating
 
 Lighthouse measures five core categories: Performance, Accessibility, Best Practices, SEO, and Progressive Web App compliance. Each category requires specific attention, and manually checking these metrics after every code change quickly becomes tedious. The solution lies in automating both the detection and remediation of performance issues.
 
-Claude Code skills provide the building blocks for this automation. The **frontend-design** skill offers initial site audits, while the **tdd** skill helps ensure performance tests pass before deployment. For persistent memory across sessions, the **supermemory** skill stores historical scores and tracks trends.
+Claude Code skills provide the building blocks for this automation. The [**frontend-design** skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) offers initial site audits, while the **tdd** skill helps ensure performance tests pass before deployment. For persistent memory across sessions, the [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) stores historical scores and tracks trends.
 
 ## Setting Up Automated Lighthouse Audits
 

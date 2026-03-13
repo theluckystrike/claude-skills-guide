@@ -16,9 +16,9 @@ Building reliable Claude Code skills requires careful attention to how data flow
 
 ## Why Input Validation Matters for Claude Skills
 
-Claude Code skills interact with external systems through tools, MCP servers, and APIs. Each interface point represents a potential vulnerability where unexpected input can cause failures or security issues. When you chain multiple skills together—like using the tdd skill for test generation followed by the frontend-design skill for UI creation—the data passing between them must be predictable and safe.
+Claude Code skills interact with external systems through tools, MCP servers, and APIs. Each interface point represents a potential vulnerability where unexpected input can cause failures or security issues. When you chain multiple skills together—like using the [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) for test generation followed by the frontend-design skill for UI creation—the data passing between them must be predictable and safe.
 
-Without proper validation, a malformed response from one skill can cascade into failures across your entire workflow. The supermemory skill, for instance, relies on clean data structures to store and retrieve context. Corrupted input can corrupt your persisted knowledge base.
+Without proper validation, a malformed response from one skill can cascade into failures across your entire workflow. The [supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/), for instance, relies on clean data structures to store and retrieve context. Corrupted input can corrupt your persisted knowledge base.
 
 ## Core Validation Patterns
 

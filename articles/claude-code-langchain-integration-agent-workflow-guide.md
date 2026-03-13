@@ -104,7 +104,7 @@ Invoke this from Claude Code using a simple shell command that runs your Python 
 
 ### Document Processing Pipeline
 
-Use the **pdf** skill alongside LangChain to build document understanding workflows. LangChain's document loaders combined with Claude Code's file handling create powerful extraction pipelines:
+Use the [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) alongside LangChain to build document understanding workflows. LangChain's document loaders combined with Claude Code's file handling create powerful extraction pipelines:
 
 ```python
 from langchain.document_loaders import PyPDFLoader
@@ -120,7 +120,7 @@ def summarize_pdf(pdf_path: str) -> str:
 
 ### Test-Driven Development Workflow
 
-Integrate the **tdd** skill with LangChain agents to automate test creation. Your LangChain agent can generate unit tests that Claude Code then executes:
+Integrate the [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) with LangChain agents to automate test creation. Your LangChain agent can generate unit tests that Claude Code then executes:
 
 ```python
 def generate_tests(source_file: str) -> str:

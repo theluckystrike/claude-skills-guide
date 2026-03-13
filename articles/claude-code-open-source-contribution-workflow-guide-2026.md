@@ -16,7 +16,7 @@ Open source contribution remains one of the most effective ways to improve your 
 
 ## Setting Up Your Development Environment
 
-Before contributing, ensure Claude Code is installed and configured with the skills most useful for open source work. The tdd skill is particularly valuable for maintaining test coverage when modifying existing code. Install it alongside the pdf skill if you plan to review documentation and the supermemory skill to maintain context across multiple contribution sessions.
+Before contributing, ensure Claude Code is installed and configured with the skills most useful for open source work. The [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) is particularly valuable for maintaining test coverage when modifying existing code. Install it alongside the pdf skill if you plan to review documentation and the supermemory skill to maintain context across multiple contribution sessions.
 
 ```bash
 # Verify Claude Code installation
@@ -29,7 +29,7 @@ Most open source projects follow similar contribution patterns: fork the reposit
 
 Start by identifying projects aligned with your interests and expertise. GitHub's "good first issue" label remains the standard way to find beginner-friendly contributions. You can also use Claude Code to scan repositories for issues matching your criteria.
 
-The supermemory skill proves invaluable here if you're tracking multiple potential contributions across several repositories. It maintains your research context, allowing you to return to promising projects without re-explaining your goals.
+The [supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) proves invaluable here if you're tracking multiple potential contributions across several repositories. It maintains your research context, allowing you to return to promising projects without re-explaining your goals.
 
 ## Understanding Project Structure and Conventions
 

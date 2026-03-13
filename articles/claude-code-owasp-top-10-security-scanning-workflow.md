@@ -22,7 +22,7 @@ claude install skill pdf
 claude install skill supermemory
 ```
 
-The **tdd** skill helps you write security-focused tests, while **supermemory** maintains a persistent vulnerability database across sessions. If you're building PDF reports of findings, the **pdf** skill generates professional documentation.
+The [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) helps you write security-focused tests, while [**supermemory**](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) maintains a persistent vulnerability database across sessions. If you're building PDF reports of findings, the **pdf** skill generates professional documentation.
 
 ## Building the OWASP Scanning Workflow
 
