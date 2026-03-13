@@ -18,7 +18,7 @@ This workflow guide walks you through implementing Qwik projects using Claude Co
 
 ## Understanding Qwik Resumability
 
-Traditional frameworks like React execute JavaScript on page load to rebuild the application state—this process is called hydration. Qwik eliminates this overhead entirely. Instead of replaying application logic, Qwik serializes the state into the HTML and resumes execution exactly where the server left off.
+Traditional frameworks like React execute JavaScript on page load to rebuild the application state—this process is called hydration. Qwik eliminates this overhead entirely. Instead of replaying application logic, Qwik serializes the state into the HTML and resumes execution exactly where the server left off. The performance improvements this delivers are measurable: tools like the [Lighthouse score improvement workflow](/claude-skills-guide/articles/claude-code-lighthouse-score-improvement-automation-guide/) can quantify the gains.
 
 The key difference lies in how components become interactive. In Qwik, each component can have its JavaScript loaded independently. When a user clicks a button, only the JavaScript for that specific interaction downloads and executes. This approach achieves what Qwik calls "zero JavaScript" by default.
 
@@ -42,7 +42,7 @@ Notice the `$` suffix on `component$` and `onClick$`. This marker tells Qwik to 
 
 ## Setting Up Qwik with Claude Code Skills
 
-When starting a new Qwik project, leverage Claude Code's skills to accelerate development. The `/frontend-design` skill helps establish component patterns and design system integration. For testing, `/tdd` ensures your components have proper test coverage from the beginning.
+When starting a new Qwik project, leverage Claude Code's skills to accelerate development. The [/frontend-design skill](/claude-skills-guide/articles/claude-frontend-design-skill-review-and-tutorial/) helps establish component patterns and design system integration. For testing, `/tdd` ensures your components have proper test coverage from the beginning.
 
 Initialize your Qwik project with the standard CLI:
 
@@ -239,5 +239,12 @@ Run your app and navigate to the visualizer endpoint to see which chunks load at
 Qwik's resumability model transforms how developers think about application performance. By letting the framework handle lazy loading automatically, you focus on building features rather than optimizing bundles. Claude Code accelerates this workflow by providing intelligent assistance across development, testing, and documentation phases.
 
 Start with simple components, leverage signals for reactivity, and progressively adopt advanced patterns as your application grows. The combination of Qwik's architecture and Claude Code's capabilities delivers exceptional user experiences with minimal JavaScript overhead.
+
+## Related Reading
+
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — The full roster of frontend skills including frontend-design, tdd, and canvas-design for building modern UI applications.
+- [Bundle Size Reduction: Webpack to Vite 2026 Guide](/claude-skills-guide/articles/claude-code-bundle-size-reduction-webpack-vite-workflow/) — Complement Qwik's zero-JS approach with bundle optimization techniques for other toolchains.
+- [Claude Code Lighthouse Score Improvement Automation Guide](/claude-skills-guide/articles/claude-code-lighthouse-score-improvement-automation-guide/) — Measure and automate the performance wins your Qwik resumability implementation delivers.
+- [Claude Skills Workflow Guide](/claude-skills-guide/workflows-hub/) — See how frontend skill workflows chain together for complete development pipelines.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
