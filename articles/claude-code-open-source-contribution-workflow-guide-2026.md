@@ -118,7 +118,7 @@ git push origin fix/issue-description
 
 When creating the PR, provide a clear description explaining what you changed and why. Reference any related issues using keywords like "Closes #456" or "Fixes #789".
 
-## Leveraging Claude Skills for Better Contributions
+## Claude Skills That Help With Contributions
 
 Several skills enhance the open source contribution experience:
 
@@ -154,7 +154,7 @@ These automations save time and ensure consistency across your contributions.
 
 ## Conclusion
 
-Open source contribution in 2026 has evolved significantly with Claude Code and its skill ecosystem. By leveraging tools like tdd for test-driven development, supermemory for context persistence, and the various other skills available, you can make higher-quality contributions more efficiently.
+Open source contribution in 2026 has evolved significantly with Claude Code and its skill ecosystem. Using tools like `/tdd` for test-driven development and `/supermemory` for context persistence, you can make higher-quality contributions more efficiently.
 
 The key remains consistent: start with small, manageable contributions, understand the project conventions, and communicate clearly with maintainers. Claude Code serves as a powerful assistant throughout this process, handling both technical implementation and helping you navigate the social aspects of open source collaboration.
 
