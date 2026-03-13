@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "What Is the Best Free Claude Code Skill Available on GitHub"
 description: "Discover the top free Claude Code skills on GitHub that can supercharge your development workflow. Expert recommendations for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # What Is the Best Free Claude Code Skill Available on GitHub

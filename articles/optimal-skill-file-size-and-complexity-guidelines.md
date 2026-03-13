@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Optimal Skill File Size and Complexity Guidelines"
-description: "Practical guidelines for structuring Claude skills at the right granularity. Learn when to split skills, how to manage complexity, and best practices for skill file organization."
+description: "Practical guidelines for structuring Claude skills at the right granularity. Learn when to split skills, how to manage complexity, and best practices for s"
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Optimal Skill File Size and Complexity Guidelines

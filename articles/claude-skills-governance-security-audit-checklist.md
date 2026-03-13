@@ -1,11 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Governance Security Audit Checklist"
 description: "A practical security audit checklist for Claude skills governance. Learn how to audit skill permissions, validate tool access, and secure your AI workflow."
 date: 2026-03-14
-author: theluckystrike
 categories: [guides]
 tags: [claude-code, claude-skills, security, governance]
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Claude Skills Governance Security Audit Checklist
