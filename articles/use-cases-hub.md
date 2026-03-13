@@ -148,6 +148,9 @@ Token efficiency matters when running multi-skill sessions. See [Claude Skills T
 | [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/articles/how-to-connect-claude-skills-to-external-apis-guide/) | Connecting Claude skills to third-party APIs for extended capabilities |
 | [Claude Skills with Vercel Deployment Automation](/claude-skills-guide/articles/claude-skills-with-vercel-deployment-automation/) | Automating Vercel deployments with Claude skills |
 | [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/articles/claude-skills-for-enterprise-security-compliance-guide/) | Deploying Claude skills in enterprise environments with security and compliance in mind |
+| [Building Stateful Agents with Claude Skills: Complete Guide](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) | Architecture patterns for stateful AI agents built on Claude skills |
+| [Claude Code Multi-Agent and Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) | Multi-agent workflows for complex orchestration use cases |
+| [Understanding Claude Code Hooks System: Complete Guide](/claude-skills-guide/articles/understanding-claude-code-hooks-system-complete-guide/) | Using Claude Code hooks to automate actions in your development workflow |
 
 ---
 
