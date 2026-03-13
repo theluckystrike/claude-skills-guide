@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Use Claude Skills with n8n Automation Workflows"
-description: "Connect Claude Code skills to n8n automation workflows using the Anthropic API HTTP Request node, with practical patterns for PR review and document processing."
+description: "Connect Claude Code skills to n8n workflows via Anthropic API. Practical patterns for PR review and document processing automation."
 date: 2026-03-13
 categories: [guides, automation]
 tags: [claude-code, claude-skills, n8n, automation, anthropic-api, workflows]
@@ -66,7 +66,7 @@ This gives you a basic Claude call. To invoke a specific skill's behavior, add a
 
 ## Step 3: Apply Skill Behavior via System Prompts
 
-Claude skills are markdown files that define how Claude should approach tasks. In n8n, you replicate this by including the skill's guidance as a system prompt. For TDD review behavior:
+Claude [skills are markdown files](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) that define how Claude should approach tasks. In n8n, you replicate this by including the skill's guidance as a system prompt. For TDD review behavior:
 
 ```json
 {

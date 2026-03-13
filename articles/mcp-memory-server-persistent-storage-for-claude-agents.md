@@ -122,9 +122,9 @@ Claude calls `read_graph` and returns all entities and relations.
 
 ## Integrating Memory with Claude Skills
 
-The memory server complements Claude skills naturally. Use it alongside `/supermemory`, `/tdd`, and other skills to build persistent workflows:
+The memory server complements Claude skills naturally. Use it alongside [`/supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/), `/tdd`, and other skills to build persistent workflows:
 
-**With `/tdd`:** After writing tests, ask Claude to store a summary of what was tested:
+**With [`/tdd`](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/):** After writing tests, ask Claude to store a summary of what was tested:
 
 ```
 /tdd Write tests for the payment module.

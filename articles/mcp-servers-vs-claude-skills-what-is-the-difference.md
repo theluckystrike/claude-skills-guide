@@ -57,7 +57,7 @@ MCP servers are infrastructure. They are running processes, configured in Claude
 
 ## What Is a Claude Skill?
 
-A Claude skill is a file-based definition of how Claude should approach a specific task or workflow. Skills are typically markdown files (`.md`) stored in a `.claude/skills/` directory in your project or home directory.
+A Claude skill is a file-based definition of how Claude should approach a specific task or workflow. Skills are typically [markdown files (`.md`)](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) stored in a `.claude/skills/` directory in your project or home directory.
 
 A skill might specify:
 - The objective of the task ("generate a pull request summary")
@@ -123,7 +123,7 @@ They do not. Skills describe behavior; MCP servers provide capabilities. You nee
 Not necessarily. Many useful MCP servers already exist (GitHub, filesystem, databases, browsers). You might only need to write a skill to use them effectively. Custom MCP servers make sense when you need to expose a proprietary internal API.
 
 **"Skills replace system prompts."**
-Skills can replace repeated system prompt patterns, but they are more structured and composable than raw system prompts. Skills can call other skills, which system prompts cannot do cleanly.
+Skills can replace repeated system prompt patterns, but they are more structured and composable than raw system prompts. Skills can call other skills (see [auto-invocation](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/)), which system prompts cannot do cleanly.
 
 **"MCP servers are only for Claude Code."**
 No — MCP is an open protocol. Other tools and AI systems can implement MCP clients and benefit from the same server ecosystem.

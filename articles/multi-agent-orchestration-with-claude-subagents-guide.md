@@ -21,7 +21,7 @@ In Claude Code, a subagent is a separate Claude process spawned by a parent agen
 The key advantage is separation of concerns. A parent agent coordinating a full-stack feature can delegate to:
 - A frontend subagent loaded with the `frontend-design` skill
 - A backend subagent focused on API and database work
-- A QA subagent loaded with the `tdd` skill
+- A QA subagent loaded with the [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/)
 
 Each subagent works in its domain; the parent integrates their outputs.
 
@@ -71,13 +71,13 @@ For independent tasks, the parent can launch multiple subagents simultaneously u
 ```
 Launch three parallel subagents:
 1. frontend-design subagent: build the dashboard component
-2. pdf subagent: extract the API spec from docs/api-spec.pdf and produce a summary
+2. [pdf](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) subagent: extract the API spec from docs/api-spec.pdf and produce a summary
 3. tdd subagent: write integration tests for the existing auth module
 
 Collect all three outputs and summarize what was completed.
 ```
 
-The `supermemory` skill is useful in the parent context here — it stores what each subagent has completed so the parent maintains a coherent picture across many concurrent tasks.
+The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) is useful in the parent context here — it stores what each subagent has completed so the parent maintains a coherent picture across many concurrent tasks.
 
 ### Hierarchical Control
 

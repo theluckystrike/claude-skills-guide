@@ -50,6 +50,8 @@ triggers:
 
 ## A Practical Example: The pdf Skill
 
+The [pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) extracts text, tables, and content from PDF files and can generate new PDFs. Here is its skill definition:
+
 ```
 ---
 name: pdf
@@ -78,6 +80,8 @@ How to work:
 Invoke with: `/pdf extract all tables from Q3-financial-report.pdf`
 
 ## A Practical Example: The tdd Skill
+
+The [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) enforces test-driven development by writing failing tests before implementation. Here is its skill definition:
 
 ```
 ---
