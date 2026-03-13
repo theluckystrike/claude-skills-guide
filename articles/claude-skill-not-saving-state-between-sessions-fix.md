@@ -1,120 +1,194 @@
 ---
-layout: post
+layout: default
 title: "Claude Skill Not Saving State Between Sessions Fix"
-description: "Why Claude skills lose context between sessions and how to fix it. Covers supermemory, external files, and CLAUDE.md for persistent project state."
+description: "Fix Claude Code skills losing state between sessions. Covers supermemory setup, CLAUDE.md project context, file-based state persistence, and common pitfalls."
 date: 2026-03-13
-categories: [guides, tutorials]
-tags: [claude-code, claude-skills, troubleshooting, state-management]
-author: "Claude Skills Guide"
-reviewed: true
-score: 5
+author: theluckystrike
 ---
 
 # Claude Skill Not Saving State Between Sessions Fix
 
-Claude skills are `.md` files — they contain instructions, not running code with variables or caches. When a conversation ends, all context accumulated during that session is gone. There is no built-in state container inside a skill. This is by design: each session starts fresh from the skill's `.md` definition.
+Every Claude Code session starts fresh. When you close a session — or it times out — everything Claude knew from that conversation is gone. Skills like `tdd`, `pdf`, `frontend-design`, and even `supermemory` do not automatically remember what happened in the previous session unless you have explicitly configured persistence. This guide explains the mechanics and gives you practical fixes.
 
-If you need information to persist across sessions, you need an external store that Claude can read from and write to. This guide covers the practical approaches.
+## Why Claude Skills Are Stateless
 
-## Why Skills Lose State
+A Claude Code skill is a `.md` file stored in `~/.claude/skills/`. When you invoke `/tdd`, Claude reads that file and uses its instructions to shape behavior for the current session. The file is **read-only instructions** — it does not accumulate state, write logs, or remember previous sessions.
 
-A skill like `/tdd`, `/pdf`, or `/frontend-design` is a plain `.md` file stored in `~/.claude/skills/`. When you invoke it with `/skill-name`, its contents are loaded into the current conversation as instructions for Claude. When the session ends, those instructions and all context derived from them are gone.
+This is by design. Skills are instruction templates, not running services. They are stateless in the same way a Bash alias is stateless: the alias is always the same, but the effect depends on what you pass it each time.
 
-This works fine for stateless operations — generating a document, writing tests for a specific function, producing a design component. It breaks down when you want Claude to remember decisions, accumulated knowledge, or work-in-progress state across sessions.
+**What gets lost between sessions:**
+- File modifications Claude made on your behalf (these DO persist — they are on disk)
+- Claude's understanding of your project architecture (does NOT persist)
+- Decisions you explained during the session (does NOT persist)
+- Work-in-progress context ("we are on step 3 of 7") (does NOT persist)
 
-## The Right Approach: External Persistent Storage
+## Fix 1: Use `supermemory` for Cross-Session Notes
 
-Since skills cannot hold state internally, the fix is to use an external file or store that Claude can read at the start of a session and update during it.
+The `supermemory` skill is the primary tool for cross-session persistence. It reads from and writes to a local file store on your machine.
 
-### Option 1: Use the `/supermemory` Skill
-
-The `/supermemory` skill is designed for cross-session persistence. It maintains a local notes file and lets you store and retrieve information by instructing Claude:
-
+**Saving state at end of session:**
 ```
 /supermemory
-Store: auth module uses JWT with 15-minute access tokens.
-Refresh token logic is in src/auth/refresh.ts.
-We decided not to use sessions because of horizontal scaling.
+Save: [project:myapp] Auth module uses JWT. Access tokens expire 15 min.
+Refresh logic is in src/auth/refresh.ts. We chose JWT over sessions
+for horizontal scaling. PR #142 adds OAuth, in review.
 ```
 
-To retrieve it in a later session:
-
+**Restoring state at start of next session:**
 ```
 /supermemory
-What do we know about the auth module?
+Load all notes tagged [project:myapp]. Summarize current state.
 ```
 
-The skill reads from and writes to a local store. Your notes accumulate across sessions, so returning to a project after weeks does not require re-explaining the architecture.
+**Important: `supermemory` only works if you invoke it explicitly.** It does not auto-save. Build the habit of ending every significant session with a save command.
 
-### Option 2: Maintain a `CLAUDE.md` Project File
+### Configure the storage path
 
-For team projects or complex workflows, a `CLAUDE.md` file in your project root is a straightforward persistent context mechanism. Claude Code reads this file automatically when present. Document the information you want available at the start of every session:
+By default `supermemory` writes to a path relative to your home directory. If that path ends up on a read-only or synced volume, saves will silently fail. Configure an explicit path in `.claude/settings.json`:
+
+```json
+{
+  "skills": {
+    "supermemory": {
+      "storagePath": "/Users/yourname/.claude-memory"
+    }
+  }
+}
+```
+
+Verify the path exists and is writable:
+```bash
+mkdir -p ~/.claude-memory
+touch ~/.claude-memory/.test && rm ~/.claude-memory/.test && echo "Writable"
+```
+
+## Fix 2: Use `CLAUDE.md` for Project-Level Context
+
+`CLAUDE.md` in the project root is read automatically at the start of every Claude Code session. It is not a skill — it is a context file that any skill can access.
+
+Use it to document things that should be available in every session:
 
 ```markdown
-# Project Context
+# Project: MyApp
 
 ## Architecture
-- Frontend: React with TypeScript in /apps/web
-- API: Fastify in /apps/api
-- Shared UI: /packages/ui
+- Frontend: React + TypeScript in /apps/web
+- API: Fastify in /apps/api, Node 22
+- Database: PostgreSQL via Prisma
 
 ## Active Decisions
-- JWT auth, access tokens 15 min, refresh 30 days
-- Tests use Vitest, not Jest — do not suggest Jest
+- Use Vitest for all tests — not Jest
+- JWT auth: 15-min access tokens, 30-day refresh
+- No Redux — use Zustand for state management
 
-## Current Work in Progress
-- PR #142: Add OAuth provider support (branch: feature/oauth)
-- Known issue: refresh token race condition under investigation
+## Work in Progress (update manually)
+- PR #142: OAuth provider — branch feature/oauth, in code review
+- Issue #87: Refresh token race condition — root cause not yet found
 ```
 
-Any skill invoked during a session will have access to this context because it is loaded at session start.
+Any skill you invoke during the session will have this context automatically. The `tdd` skill will know to use Vitest. The `frontend-design` skill will know the tech stack.
 
-### Option 3: Instruct Claude to Write Output Files
+**Keep `CLAUDE.md` updated manually.** It is a living document, not auto-updated. After each significant session, add new decisions to it.
 
-For skills that produce accumulated results — a running test log, a design decision record — instruct Claude explicitly to write the output to a file at the end of each session:
+## Fix 3: Use File-Based State for In-Progress Tasks
 
-```
-/tdd
-We're writing tests for the payment module. At the end of
-our session, append a summary of tests written to
-docs/test-progress.md.
-```
+For tasks that span multiple sessions — implementing a feature, writing a test suite, building a component library — instruct Claude to write progress to a dedicated file:
 
-In the next session:
-
+**End of session:**
 ```
 /tdd
-Read docs/test-progress.md to see where we left off,
-then continue with the refund processing tests.
+Before we close, write a progress summary to docs/tdd-progress.md.
+Include: tests written so far, tests remaining, any blocked items.
 ```
 
-The file is the state. Claude reads it to restore context and writes to it to update progress.
+**Start of next session:**
+```
+/tdd
+Read docs/tdd-progress.md. Continue from where we left off.
+Start with the first remaining test listed.
+```
 
-## Choosing the Right Approach
+The file IS the state. Claude writes to it, reads from it, and updates it. This works for any skill.
 
-| Scenario | Recommended approach |
-|----------|---------------------|
-| Personal project, long-term context | `/supermemory` skill |
-| Team project, shared context | `CLAUDE.md` in project root |
-| Task-specific progress tracking | Instruct Claude to write/read a file |
-| Architecture decisions that every skill should know | `CLAUDE.md` |
+**Example progress file format:**
+```markdown
+# TDD Progress: PaymentService
+
+## Completed Tests
+- [x] processPayment returns order ID on success
+- [x] processPayment throws on declined card
+- [x] refund validates amount against original charge
+
+## Remaining Tests
+- [ ] processPayment handles network timeout
+- [ ] refund fails if order not found
+- [ ] webhook signature validation
+
+## Blocked
+- Stripe test mode credentials needed for webhook tests
+```
+
+## Fix 4: Combine `supermemory` With `CLAUDE.md`
+
+For teams or long-running projects, use both:
+
+- `CLAUDE.md` — project-wide decisions and architecture (shared in git, readable by all)
+- `supermemory` — personal session notes and task-specific context (local, not committed)
+
+Workflow:
+```
+Session start:
+1. CLAUDE.md loads automatically (project context)
+2. /supermemory — load my personal notes for this project
+
+Session end:
+1. /supermemory — save any new decisions or progress
+2. Update CLAUDE.md manually if a project-wide decision was made
+```
+
+## Fix 5: Automate Session-End Saves With a Hook
+
+Claude Code supports hooks that run at session end. You can use a hook to automatically prompt for a `supermemory` save:
+
+```json
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Session ended. Remember to save to supermemory.'"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+This is a reminder, not an automated save — Claude still needs to be given a save command before the session closes.
 
 ## Common Pitfalls
 
-**Not updating the persistent store during the session.** If you rely on `/supermemory` or a notes file but forget to instruct Claude to save new decisions before closing, that context is lost. Build the habit of ending sessions with an explicit save step.
+**Expecting skills to auto-save.** No Claude Code skill auto-saves state. You must explicitly instruct Claude to write to a file or call `supermemory` before the session ends.
 
-**Expecting skills to remember automatically.** Skills do not watch for state to save. You must explicitly instruct Claude to write to a file or use `/supermemory`. The skill's `.md` file is read-only instructions — it does not accumulate state on its own.
+**Closing the session before saving.** If you close the terminal window or the session times out, any unsaved in-session context is gone permanently. Save early, save often.
 
-**Using volatile session variables instead of files.** Anything Claude "knows" because you told it earlier in the same conversation is lost when that conversation ends. Only information written to the filesystem (or another external store) survives.
+**`supermemory` writes failing silently.** Check the storage path is writable. On macOS, some directories need explicit permission grants in System Settings > Privacy & Security.
 
-## Summary
+**Outdated `CLAUDE.md` causing confusion.** If `CLAUDE.md` says "PR #142 is in review" but it merged months ago, Claude gets incorrect context. Keep the file current.
 
-Claude skills are stateless by design — they are `.md` instruction files, not running processes with memory. To persist state between sessions, use `/supermemory` for conversational notes, `CLAUDE.md` for project-level context, or instruct Claude to write progress to files that later sessions can read back.
+## Summary: Choosing the Right Approach
+
+| What you want to persist | Use |
+|---|---|
+| Architecture decisions (team-wide) | `CLAUDE.md` in project root |
+| Personal session notes | `supermemory` skill |
+| Task progress (tests written, files changed) | Explicit file (e.g., `docs/progress.md`) |
+| All of the above | Combine all three |
 
 ---
 
-## Related Reading
-
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Complete skill.md format reference
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation guide
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
