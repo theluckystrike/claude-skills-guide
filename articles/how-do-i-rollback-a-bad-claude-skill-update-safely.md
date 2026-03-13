@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: default
 title: "How Do I Rollback a Bad Claude Skill Update Safely"
-description: "Learn how to identify, rollback, and prevent problematic Claude Code skill updates. Covers git-based restoration, backup strategies, and safety best practi"
+description: "Learn how to safely rollback problematic Claude Code skill updates using git-based restoration, backup strategies, and prevention best practices for developers."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills]
-author: "Claude Skills Guide"
+author: theluckystrike
 reviewed: true
 score: 8
 ---
