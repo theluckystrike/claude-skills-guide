@@ -4,6 +4,8 @@ title: "Claude Code Lighthouse Score Improvement Automation Guide"
 description: "Practical automation strategies for improving Lighthouse scores using Claude Code skills, with code examples and workflows for developers."
 date: 2026-03-13
 author: "Claude Skills Guide"
+categories: [guides, tutorials]
+tags: [claude-code, claude-skills, lighthouse, performance, automation]
 reviewed: true
 score: 8
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Claude Code AWS ECS Fargate Setup and Deployment Tutorial"
 description: "Set up and deploy containerized apps to AWS ECS Fargate using Claude Code. Covers task definitions, CI/CD, secrets management, and auto-scaling."
 date: 2026-03-14
-categories: [guides, tutorials]
+categories: [tutorials]
 tags: [claude-code, claude-skills, aws, ecs, fargate, deployment, containers]
 author: "Claude Skills Guide"
 reviewed: true
@@ -274,19 +274,27 @@ View logs using CloudWatch:
 aws logs tail /ecs/myapp-task --follow
 ```
 
-The **observability-skills** collection helps set up comprehensive monitoring, including log aggregation, alerting, and performance dashboards.
+Use the [`/pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) to generate deployment health reports from CloudWatch metrics:
 
-## Conclusion
+```
+/pdf
+Generate a deployment health report from these CloudWatch metrics:
+[paste metrics output]
+Include: uptime percentage, p95 latency, error rate, and scaling events.
+```
 
-Deploying to AWS ECS Fargate combines the simplicity of serverless with the control of container orchestration. By leveraging Claude Code skills like **shell-expert**, **docker-expert**, **terraform-expert**, and **ci-cd-pipeline**, you can build reliable, automated deployment pipelines that handle everything from infrastructure provisioning to production monitoring.
+## Summary
 
-Start with a simple deployment and incrementally add complexity—automated scaling, secrets management, and CI/CD pipelines—as your application requirements grow.
+ECS Fargate combines serverless convenience with container control. The workflow covered here — cluster setup, task definitions, CI/CD integration, secrets management, and auto-scaling — applies to most production containerized workloads.
+
+Claude Code accelerates each phase: generating Terraform and task definitions, writing tests with `/tdd`, tracking configuration with `/supermemory`, and producing reports with `/pdf`. Start with a single-task deployment and add complexity incrementally.
+
+---
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — The full toolkit of DevOps skills including shell-expert, devops, and CI/CD optimization for production deployments.
-- [Claude Code Skills for Terraform IaC: Complete Guide](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) — Generate and manage your ECS infrastructure with Terraform using Claude Code skills.
-- [Claude Skills AWS Lambda Serverless Guide](/claude-skills-guide/articles/claude-skills-aws-lambda-serverless-integration/) — Compare Fargate container deployments with Lambda serverless patterns for the right AWS architecture.
-- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — Deepen your GitHub Actions deployment pipeline with advanced Claude skill integrations.
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrating Claude Code into automated deployment pipelines
+- [Claude Code Skills for Terraform Infrastructure as Code](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) — IaC patterns for reproducible cloud infrastructure
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Skills for deployment workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
