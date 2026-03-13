@@ -1,167 +1,186 @@
 ---
-layout: post
-title: "Claude Code Skill Permission Denied Error Fix"
-description: "Fix permission denied errors when loading or running Claude Code skills. Covers file permissions, skill directory setup, and tool execution issues."
+layout: default
+title: "Claude Code Skill Permission Denied Error Fix 2026"
+description: "Step-by-step fixes for the 'permission denied' error when running Claude Code skills. Covers file permissions, sandbox settings, and skill configuration issues."
 date: 2026-03-13
-categories: [guides, tutorials]
-tags: [claude-code, claude-skills, troubleshooting, permissions]
-author: "Claude Skills Guide"
-reviewed: true
-score: 7
+author: theluckystrike
 ---
 
 # Claude Code Skill Permission Denied Error Fix 2026
 
-Permission denied errors when working with Claude Code skills typically occur during skill loading, file access, or when a skill invokes an external tool. This guide covers the most common causes and practical solutions.
+If you have hit a **permission denied** error while running a Claude Code skill, you are not alone. This error surfaces in several distinct situations — and the fix depends on which layer is actually refusing access. This guide walks through every known cause in 2026 and gives you the exact steps to resolve each one.
 
-## Understanding Permission Denied Errors
+## What the Error Looks Like
 
-Skills are `.md` files stored in `~/.claude/skills/` (global) or `.claude/skills/` (project-local). Claude Code reads these files when you invoke a skill with `/skill-name`. Permission errors arise when the process lacks read access to those files, or when a skill instructs Claude to execute a tool or script that the current user cannot run.
+The error typically appears in one of these forms:
 
-Common scenarios:
-
-- Skills cannot be read because `~/.claude/skills/` has restrictive ownership
-- File operations (writing output, reading project files) fail mid-execution
-- External tools invoked by a skill lack executable permissions
-
-## File System Permission Fixes
-
-### Checking File Permissions
-
-```bash
-# Verify skill files are readable
-ls -la ~/.claude/skills/
-
-# Check a specific skill file
-ls -la ~/.claude/skills/your-skill-name.md
+```
+Error: EACCES: permission denied, open '/path/to/file'
+SkillExecutionError: permission denied — tool call rejected by sandbox policy
+bash: /usr/local/bin/my-script: Permission denied
 ```
 
-### Fixing Ownership and Permissions
+The first is a Node.js filesystem error. The second is Claude's built-in sandbox rejecting a tool call. The third is a shell-level execution bit problem. Each requires a different fix.
 
+## Cause 1: Missing Execute Bit on a Script the Skill Calls
+
+If your skill definition calls a shell script or binary, that file must be executable.
+
+**Check:**
 ```bash
-# Restore ownership to current user
-sudo chown -R $(whoami) ~/.claude/
+ls -la /path/to/your/script.sh
+```
 
-# Ensure the skills directory and files are readable
+**Fix:**
+```bash
+chmod +x /path/to/your/script.sh
+```
+
+Skills like `tdd` and `frontend-design` sometimes call local wrapper scripts. If you customised those scripts and copied them into place without preserving permissions, this is the most common cause.
+
+## Cause 2: Claude Code Sandbox Blocking File Access
+
+Claude Code runs skills inside a permission sandbox. By default, the sandbox restricts access to directories outside the project root. If your skill tries to read or write outside the allowed scope, you get a sandbox rejection.
+
+**Symptoms:**
+- Error happens even with correct file permissions
+- Error message contains `sandbox policy` or `tool call rejected`
+- Works when you disable the skill and run the command manually
+
+**Fix — allow additional paths in `.claude/settings.json`:**
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Bash(/home/user/shared-data/**)",
+      "Read(/etc/myapp/config.toml)"
+    ]
+  }
+}
+```
+
+Restart Claude Code after editing `settings.json`. The sandbox re-reads this file on startup, not on hot reload.
+
+## Cause 3: Skill YAML Referencing a Tool With Insufficient Scope
+
+Some skills explicitly declare required tools. If the declared tool name does not match what Claude Code exposes in the current session, the runtime falls back to a restricted execution path that can produce permission errors.
+
+Check your skill's front matter:
+
+```yaml
+tools:
+  - Bash
+  - Read
+  - Write
+```
+
+Make sure every tool listed is spelled exactly as Claude Code exports it (capital first letter for built-ins). A mismatch like `bash` instead of `Bash` causes the skill to run with a degraded tool set, which can look like a permission issue.
+
+## Cause 4: Skill Files With Wrong Ownership
+
+Skills live in `~/.claude/skills/` (global) or `.claude/skills/` (project-local). If those files are owned by root — which can happen after running `sudo claude` — your regular user process cannot read them.
+
+**Check:**
+```bash
+ls -la ~/.claude/skills/
+```
+
+**Fix:**
+```bash
+sudo chown -R $(whoami) ~/.claude/
 chmod 755 ~/.claude/skills/
 chmod 644 ~/.claude/skills/*.md
 ```
 
-For project-local skills in `.claude/skills/`:
+## Cause 5: Running Claude Code as Root vs. Non-Root
+
+If you installed Claude Code globally as root (`sudo npm install -g @anthropic-ai/claude-code`) but you run it as a regular user, the node_modules path for skills may be owned by root.
+
+**Fix — reinstall without sudo using a user-owned Node version manager:**
+```bash
+# Using nvm
+nvm install --lts
+npm install -g @anthropic-ai/claude-code
+```
+
+This ensures the entire Claude Code installation is owned by your user account, eliminating root/user permission conflicts.
+
+## Cause 6: macOS Gatekeeper or SIP Blocking Execution
+
+On macOS, System Integrity Protection (SIP) can block scripts in certain protected directories. Skills that reference binaries in `/usr/bin/` or `/System/` may fail with permission denied even if the file mode is correct.
+
+**Fix — move scripts to an unprotected path:**
+```bash
+mkdir -p ~/bin
+cp my-skill-helper.sh ~/bin/
+chmod +x ~/bin/my-skill-helper.sh
+export PATH="$HOME/bin:$PATH"
+```
+
+Update your skill definition to reference `~/bin/my-skill-helper.sh` instead.
+
+## Cause 7: PDF or DOCX Skill Accessing Quarantined Files
+
+The `pdf` and `docx` skills read files from your filesystem. If those files are in a directory with extended quarantine attributes — common on corporate-managed macOS — you will see permission denied even though `ls` shows you own the file.
+
+**Check extended attributes:**
+```bash
+ls -le@ /path/to/document.pdf
+```
+
+**Fix:**
+```bash
+xattr -d com.apple.quarantine /path/to/document.pdf
+```
+
+If you are on a managed device, copy the file to your home directory first.
+
+## Cause 8: supermemory Skill Writing to a Read-Only Volume
+
+The `supermemory` skill writes session state to disk. If Claude Code's working directory is on a read-only volume — a network share, mounted image, or CI filesystem — `supermemory` will throw permission denied when trying to persist memory.
+
+**Fix — set a writable memory path:**
+```json
+{
+  "skills": {
+    "supermemory": {
+      "storagePath": "/home/user/.claude-memory"
+    }
+  }
+}
+```
+
+Or set the environment variable before launching Claude Code:
+```bash
+export CLAUDE_MEMORY_PATH="$HOME/.claude-memory"
+claude
+```
+
+## Systematic Debugging Checklist
+
+When permission denied hits and you are not sure which cause applies, work through this list in order:
+
+1. Run `ls -la` on every file the skill references
+2. Check `.claude/settings.json` for missing `allow` entries
+3. Run `claude --debug` and look for `sandbox reject` in the output
+4. Try the tool call manually in the Claude Code chat without invoking the skill
+5. Check `Console.app` (macOS) or `journalctl` (Linux) for OS-level denials
+6. Confirm Claude Code and Node.js are running as the same user
+
+## Quick Diagnostic Script
 
 ```bash
-chmod 755 .claude/skills/
-chmod 644 .claude/skills/*.md
+echo "=== Claude Code Permission Diagnostic ===" \
+  && echo "Skills directory:" && ls -la ~/.claude/skills/ 2>&1 \
+  && echo "Current user:" && id \
+  && echo "Project skills:" && ls -la .claude/skills/ 2>&1
 ```
 
-## Skill Directory Setup
+## When to File a Bug
 
-Skills live in `~/.claude/skills/`. If that directory does not exist, Claude Code cannot find any global skills:
-
-```bash
-# Create the directory if missing
-mkdir -p ~/.claude/skills
-
-chmod 755 ~/.claude
-chmod 755 ~/.claude/skills
-```
-
-### Project-Local Skill Structure
-
-```
-project-root/
-├── .claude/
-│   └── skills/
-│       └── my-skill.md
-├── src/
-└── tests/
-```
-
-```bash
-# Fix project-local skill permissions
-chmod 755 .claude
-chmod -R 755 .claude/skills/
-chmod 644 .claude/skills/*.md
-```
-
-## Tool Execution Permission Errors
-
-When a skill tells Claude to run a script or binary, that file must be executable:
-
-```bash
-# Make scripts executable
-chmod +x scripts/deploy.sh
-
-# Fix node_modules binaries if needed
-chmod +x node_modules/.bin/vitest
-chmod +x node_modules/.bin/eslint
-```
-
-### Python Virtual Environment Issues
-
-If a skill relies on a Python tool and that tool's venv has broken permissions:
-
-```bash
-# Check venv permissions
-ls -la .venv/bin/
-
-# Recreate if corrupted
-rm -rf .venv
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-## Docker and Container Scenarios
-
-When running Claude Code inside a container, volume mount permissions often cause issues:
-
-```yaml
-# docker-compose.yml — map host user into container
-services:
-  claude-agent:
-    image: claude-code:latest
-    volumes:
-      - ./project:/workspace
-    user: "${UID}:${GID}"
-```
-
-```bash
-# Or at runtime
-docker run -u $(id -u):$(id -g) claude-code:latest
-```
-
-For permission errors inside a running container:
-
-```bash
-docker exec -it container_name /bin/sh
-chmod -R 755 /app/skills/
-```
-
-## Preventing Permission Errors
-
-1. **Keep skills in standard locations** — `~/.claude/skills/` for global, `.claude/skills/` for project-scoped
-2. **Set umask 022** — New files get 644 permissions by default
-3. **Avoid running as root** — Skills executed as root can create files only root can read later
-4. **Include `.gitattributes`** — Pin file modes for team projects to avoid permission drift
-
-## Quick Diagnostic
-
-```bash
-echo "=== Claude Code Permission Diagnostic ===" &&
-echo "Skills directory:" && ls -la ~/.claude/skills/ 2>&1 &&
-echo "Current user:" && id &&
-echo "Skill files:" && find ~/.claude/skills/ -name "*.md" -exec ls -la {} \; 2>&1
-```
-
-## Summary
-
-Permission denied errors in Claude Code skills usually come down to file ownership or missing executable bits. Start with `ls -la ~/.claude/skills/`, restore ownership with `chown`, and set directories to `755` and skill files to `644`. For tool-execution errors, verify the relevant binary has `+x` set.
+If none of the above resolves the issue, the problem may be in the skill itself. Check the skill's GitHub repo for open issues tagged `permission`. The `tdd` skill had a known regression in early 2026 where it attempted to write test output to a hardcoded `/tmp/claude-tdd/` path that conflicted with strict tmpfs mounts. That was patched in v1.4.2.
 
 ---
 
-## Related Reading
-
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Complete skill.md format reference
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation guide
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
