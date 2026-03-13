@@ -5,7 +5,9 @@ description: "Troubleshooting guide for when Claude Code fails to load your skil
 date: 2026-03-14
 author: "Claude Skills Guide"
 reviewed: true
-score: 9
+score: 8
+categories: [tutorials]
+tags: [claude-code, claude-skills]
 ---
 
 # Why Does Claude Code Ignore My Skill MD File Entirely

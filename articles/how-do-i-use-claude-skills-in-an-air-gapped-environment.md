@@ -5,12 +5,14 @@ description: "A practical guide for developers and power users on running Claude
 date: 2026-03-14
 author: "Claude Skills Guide"
 reviewed: true
-score: 7
+score: 6
+categories: [tutorials]
+tags: [claude-code, claude-skills]
 ---
 
 # How Do I Use Claude Skills in an Air-Gapped Environment
 
-Air-gapped environments—systems physically isolated from the internet—present unique challenges for developers who want to leverage AI assistance. Whether you're working in cybersecurity research, government systems, or facilities with strict data policies, you might wonder whether Claude skills can function without external connectivity. The answer is yes, with the right setup and understanding of the constraints.
+Air-gapped environments—systems physically isolated from the internet—present unique challenges for developers who want to use AI assistance. Whether you're working in cybersecurity research, government systems, or facilities with strict data policies, you might wonder whether Claude skills can function without external connectivity. The answer is yes, with the right setup and understanding of the constraints.
 
 This guide walks you through the process of using Claude skills in air-gapped environments, from initial setup to practical workflows you can implement today.
 
@@ -79,7 +81,7 @@ The **tdd** skill provides structured workflows for writing tests before impleme
 
 ```bash
 # Initialize a TDD session for a new module
-claude --skill tdd --init crypto-utils
+/skill-name tdd --init crypto-utils
 # This creates the test structure and prompts you for implementation
 ```
 
@@ -111,7 +113,7 @@ Create a skill inventory specific to your environment. Not every skill translate
 
 ## Conclusion
 
-Using Claude skills in air-gapped environments is entirely feasible with proper preparation. By transferring skill files locally, configuring offline directories, and understanding which capabilities work without connectivity, developers in secure environments can still leverage powerful AI-assisted workflows. Skills like pdf, tdd, frontend-design, supermemory, and docx provide substantial value while maintaining complete data isolation.
+Using Claude skills in air-gapped environments is entirely feasible with proper preparation. By transferring skill files locally, configuring offline directories, and understanding which capabilities work without connectivity, developers in secure environments can still use powerful AI-assisted workflows. Skills like pdf, tdd, frontend-design, supermemory, and docx provide substantial value while maintaining complete data isolation.
 
 The initial setup requires effort, but the productivity gains for teams working in secure environments make this investment worthwhile. Start by transferring a few core skills, test your workflows, and expand from there based on your specific requirements.
 

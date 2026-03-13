@@ -5,7 +5,9 @@ description: "A practical guide to configuring environment variables for Claude 
 date: 2026-03-14
 author: "Claude Skills Guide"
 reviewed: true
-score: 9
+score: 8
+categories: [tutorials]
+tags: [claude-code, claude-skills]
 ---
 
 # How Do I Set Environment Variables for a Claude Skill
