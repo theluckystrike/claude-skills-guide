@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Claude Code GDPR Data Privacy Implementation Checklist"
-description: "GDPR data privacy checklist for Claude Code projects. Covers consent, data minimization, deletion endpoints, encryption, and compliance audits."
+layout: post
+title: "GDPR Data Privacy Implementation with Claude Code"
+description: "Practical checklist for implementing GDPR data privacy compliance using Claude Code. Covers consent, data handling, and code examples."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, security]
+tags: [claude-code, claude-skills, gdpr, data-privacy, compliance, security]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 Implementing GDPR compliance in software projects requires systematic attention to data handling, user consent, and privacy controls. Claude Code provides capabilities that help developers build privacy-conscious applications, though ultimate compliance responsibility rests with the development team. This checklist covers practical steps for integrating data privacy protections into your workflow using Claude Code and its ecosystem of skills.

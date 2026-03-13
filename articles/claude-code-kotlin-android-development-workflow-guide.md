@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Claude Code Kotlin Android Development Workflow Guide"
-description: "Claude Code Kotlin Android workflow guide. Leverage Claude skills for TDD, testing, and efficient code generation in Android development."
+layout: post
+title: "Kotlin Android Development with Claude Code"
+description: "Practical guide to using Claude Code for Kotlin Android development. TDD workflows, code generation, and testing for Android projects."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, mobile]
+tags: [claude-code, claude-skills, kotlin, android, tdd, mobile-development]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Kotlin Android Development Workflow Guide

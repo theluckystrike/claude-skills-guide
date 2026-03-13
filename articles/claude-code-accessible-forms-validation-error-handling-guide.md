@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Accessible Forms: Validation Error Handling Guide 2026"
-description: "Build accessible forms with proper validation and error handling using Claude Code skills. Practical examples for developers and power users."
+layout: post
+title: "Accessible Forms with Claude Code: Error Handling"
+description: "Build accessible, WCAG-compliant forms with proper validation and error handling using Claude Code and frontend-design skill."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, accessibility]
+tags: [claude-code, claude-skills, accessibility, forms, validation, wcag]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Accessible Forms: Validation Error Handling Guide

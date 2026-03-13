@@ -1,13 +1,13 @@
 ---
-layout: default
-title: "Claude Code LLM Evaluation and Benchmarking Workflow"
-description: "Build an LLM evaluation and benchmarking workflow with Claude Code. Automate testing, measure performance, and make data-driven model selection decisions."
+layout: post
+title: "LLM Evaluation and Benchmarking with Claude Code"
+description: "Build an LLM evaluation and benchmarking workflow with Claude Code. Automate testing, measure performance, and make data-driven model decisions."
 date: 2026-03-13
-categories: [skills, tutorials]
-tags: [claude-code, llm-evaluation, benchmarking, ai-testing]
-author: theluckystrike
-reviewed: false
-score: 0
+categories: [guides, workflows]
+tags: [claude-code, claude-skills, llm-evaluation, benchmarking, ai-testing]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code LLM Evaluation and Benchmarking Workflow
