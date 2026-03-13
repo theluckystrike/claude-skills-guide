@@ -98,7 +98,7 @@ def handler(event, context):
 
 ## Practical Pattern 1: Document Processing with /pdf
 
-Trigger this Lambda from an S3 `ObjectCreated` event. When a PDF lands in your uploads bucket, the function processes it using the `/pdf` skill:
+Trigger this Lambda from an S3 `ObjectCreated` event. When a PDF lands in your uploads bucket, the function processes it using the [pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/):
 
 ```python
 def handler(event, context):
@@ -163,7 +163,7 @@ Resources:
 
 ## Practical Pattern 2: Test Generation in CI/CD
 
-Trigger Claude's `/tdd` skill when a developer opens a pull request. A GitHub Actions webhook posts to API Gateway, which invokes Lambda:
+Trigger the [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) when a developer opens a pull request. A GitHub Actions webhook posts to API Gateway, which invokes Lambda:
 
 ```python
 def handler(event, context):
@@ -210,7 +210,7 @@ def handler(event, context):
 
 ## Managing State Across Invocations
 
-Lambda functions are ephemeral — each invocation starts fresh. The `/supermemory` skill stores context in `~/.claude/`, which does not persist between Lambda invocations by default.
+Lambda functions are ephemeral — each invocation starts fresh. The [supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) stores context in `~/.claude/`, which does not persist between Lambda invocations by default.
 
 To persist memory, sync the skill's storage directory to S3 before and after each run:
 

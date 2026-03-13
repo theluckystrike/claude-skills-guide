@@ -167,7 +167,7 @@ Then invoke your skill again.
 
 ## Checking the `pdf` and `docx` Skills Specifically
 
-The `pdf` and `docx` skills have an additional dependency — the underlying tools they call must be installed. If `/pdf` triggers but then fails immediately, the skill loaded but its tool dependencies are missing:
+The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) and `docx` skills have an additional dependency — the underlying tools they call must be installed. If `/pdf` triggers but then fails immediately, the skill loaded but its tool dependencies are missing:
 
 ```bash
 # Check if pdftotext is available (used by the pdf skill)
@@ -179,7 +179,7 @@ which pandoc || brew install pandoc
 
 ## The `frontend-design` Skill Not Applying Conventions
 
-If `/frontend-design` loads but ignores your project's design system, the skill file likely lacks project-specific context. The skill itself is generic — you need to customise it:
+If the [`frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) loads but ignores your project's design system, the skill file likely lacks project-specific context. The skill itself is generic — you need to customise it:
 
 ```bash
 cat >> ~/.claude/skills/frontend-design.md << 'EOF'

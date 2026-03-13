@@ -8,7 +8,7 @@ author: theluckystrike
 
 # Claude Skill Not Saving State Between Sessions Fix
 
-Every Claude Code session starts fresh. When you close a session — or it times out — everything Claude knew from that conversation is gone. Skills like `tdd`, `pdf`, `frontend-design`, and even `supermemory` do not automatically remember what happened in the previous session unless you have explicitly configured persistence. This guide explains the mechanics and gives you practical fixes.
+Every Claude Code session starts fresh. When you close a session — or it times out — everything Claude knew from that conversation is gone. Skills like [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/), `pdf`, `frontend-design`, and even `supermemory` do not automatically remember what happened in the previous session unless you have explicitly configured persistence. This guide explains the mechanics and gives you practical fixes.
 
 ## Why Claude Skills Are Stateless
 
@@ -24,7 +24,7 @@ This is by design. Skills are instruction templates, not running services. They 
 
 ## Fix 1: Use `supermemory` for Cross-Session Notes
 
-The `supermemory` skill is the primary tool for cross-session persistence. It reads from and writes to a local file store on your machine.
+The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) is the primary tool for cross-session persistence. It reads from and writes to a local file store on your machine.
 
 **Saving state at end of session:**
 ```
