@@ -1,179 +1,205 @@
 ---
-layout: post
-title: "Claude Skill Not Triggering? Troubleshooting Guide"
-description: "Claude skill not triggering when you type /skill-name? This guide covers installation checks, file location, invocation syntax, and common configuration issues."
+layout: default
+title: "Claude Skill Not Triggering Automatically: Troubleshoot Guide"
+description: "Practical troubleshooting steps when your Claude Code skill is not triggering. Covers invocation syntax, file location, permissions, and YAML front matter issues."
 date: 2026-03-13
-categories: [guides, tutorials]
-tags: [claude-code, claude-skills, troubleshooting, debugging]
-author: "Claude Skills Guide"
-reviewed: true
-score: 5
+author: theluckystrike
 ---
 
-# Claude Skill Not Triggering Automatically? Here's How to Troubleshoot
+# Claude Skill Not Triggering Automatically: Troubleshoot Guide
 
-Claude skills are invoked manually with `/skill-name` — they do not activate automatically based on context detection or relevance scoring. If your skill is not responding when you type `/skill-name`, the issue is almost always one of: the skill file does not exist where Claude looks, the filename does not match what you typed, or there is a permission problem preventing Claude from reading the file.
+You typed `/tdd` or `/pdf` in a Claude Code session and nothing happened — or Claude responded as if the skill did not exist. This is one of the most-reported issues with Claude skills, and it is almost always a configuration or file-placement problem. This guide walks through every known cause and gives you a fix for each one.
 
-This guide walks through each cause systematically.
+## How Skill Invocation Works
 
-## How Skill Invocation Actually Works
+When you type `/skill-name` in Claude Code, the runtime looks for a matching `.md` file in two locations (checked in this order):
 
-When you type `/tdd` or `/pdf` in a Claude Code session, Claude looks for a file named `tdd.md` or `pdf.md` in:
-
-1. `.claude/skills/` in your current project directory (project-local skills)
+1. `.claude/skills/` inside your current project directory
 2. `~/.claude/skills/` in your home directory (global skills)
 
-If the file is found and readable, its contents are loaded into the conversation as instructions. If the file is not found, Claude either ignores the invocation or treats it as plain text.
+The filename must match the invocation name exactly. `/tdd` looks for `tdd.md`, not `TDD.md`, not `tdd.txt`. If the file is found and readable, its YAML front matter and body are loaded into the session context. If not found, the invocation is silently dropped.
 
-There is no automatic triggering based on what you are doing — you must invoke the skill explicitly.
+There is no automatic context-based triggering in 2026 — you must invoke skills explicitly.
 
-## Step 1: Verify the Skill File Exists
-
-Check both locations:
+## Step 1: Confirm the Skill File Exists
 
 ```bash
 # Check global skills
 ls ~/.claude/skills/
 
 # Check project-local skills
-ls .claude/skills/
+ls .claude/skills/ 2>/dev/null || echo "No project-local skills directory"
 ```
 
-If your skill does not appear in either listing, it is not installed. For community or built-in skills, copy the `.md` file to the appropriate directory:
+If the file is missing, install it:
 
 ```bash
-# Install a skill globally
-cp tdd.md ~/.claude/skills/tdd.md
+# Install globally
+cp path/to/tdd.md ~/.claude/skills/tdd.md
 
-# Or install it for the current project only
+# Install project-local
 mkdir -p .claude/skills/
-cp tdd.md .claude/skills/tdd.md
+cp path/to/tdd.md .claude/skills/tdd.md
 ```
 
-## Step 2: Check the Filename Matches Your Invocation
+## Step 2: Verify Filename Case and Hyphens
 
-Skill filenames are case-sensitive and must match exactly. If the file is named `TDD.md` and you type `/tdd`, it will not be found on case-sensitive filesystems (Linux). The file must be `tdd.md` to match `/tdd`.
+Skill filenames are **case-sensitive** on Linux and case-preserving on macOS. Hyphens must match exactly.
 
-Common mismatches:
-
-| What you type | File must be named |
-|---------------|-------------------|
+| Invocation | Required filename |
+|---|---|
 | `/tdd` | `tdd.md` |
-| `/frontend-design` | `frontend-design.md` |
 | `/pdf` | `pdf.md` |
+| `/docx` | `docx.md` |
 | `/supermemory` | `supermemory.md` |
+| `/frontend-design` | `frontend-design.md` |
 
 ```bash
-# Rename if the case is wrong
+# Rename if case is wrong
 mv ~/.claude/skills/TDD.md ~/.claude/skills/tdd.md
 ```
 
 ## Step 3: Check File Permissions
 
-Claude Code must be able to read the skill file. If the file is not world-readable, it may fail silently:
+Claude Code must be able to read the skill file. Restrictive permissions cause silent failures:
 
 ```bash
-# Check permissions
 ls -la ~/.claude/skills/
+# Skill files should show -rw-r--r-- (644) or -rw-rw-r-- (664)
 
-# Fix if needed (skills should be readable)
+# Fix if needed
 chmod 644 ~/.claude/skills/*.md
 chmod 755 ~/.claude/skills/
 ```
 
-## Step 4: Confirm You Are in a Claude Code Session
+## Step 4: Validate the YAML Front Matter
 
-Skill invocation with `/skill-name` is a Claude Code feature. If you are using Claude through claude.ai in a browser, the `/skill-name` syntax is not supported — skills only work in Claude Code (the CLI tool).
+A malformed YAML block at the top of the skill file causes the runtime to skip the file. Verify the front matter parses correctly:
 
-Verify you are in an active Claude Code session:
-
-```bash
-# Start Claude Code if not already running
-claude
+```yaml
+---
+description: "Run tests before implementation using TDD principles"
+tools:
+  - Bash
+  - Read
+  - Write
+---
 ```
 
-## Step 5: Check for Typos and Hyphenation
+Common mistakes:
+- Missing closing `---`
+- Tabs instead of spaces in the YAML block
+- Unquoted string values containing colons (e.g., `title: Fix: the bug` breaks YAML)
 
-Hyphens in skill names must be exact. `/frontend-design` is different from `/frontenddesign` or `/frontend design` (with a space). Check the actual filename:
-
+Test it:
 ```bash
-ls ~/.claude/skills/ | grep -i frontend
+python3 -c "
+import sys
+content = open('$HOME/.claude/skills/tdd.md').read()
+front = content.split('---')[1]
+import yaml; yaml.safe_load(front)
+print('YAML OK')
+"
 ```
 
-Use the exact name shown in the listing as your `/skill-name` invocation.
+## Step 5: Confirm You Are in Claude Code CLI
 
-## Step 6: Explicit Invocation Debugging
+The `/skill-name` syntax is a **Claude Code CLI** feature. It does not work on claude.ai in the browser, in the API, or in third-party Claude integrations. Confirm you are running the CLI:
 
-If you are unsure whether the skill is loading, ask Claude directly after invoking it:
+```bash
+which claude
+claude --version
+```
+
+If `claude` is not found, install it:
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+## Step 6: Check for CLAUDE.md Auto-Invocation Config
+
+Some workflows configure skills to load automatically via `CLAUDE.md`. If you expected automatic triggering (not manual `/skill-name` invocation), you may need to add the skill to your `CLAUDE.md`:
+
+```markdown
+<!-- CLAUDE.md in project root -->
+# Project Instructions
+
+Load the following skills at session start:
+- /supermemory
+- /tdd
+```
+
+Without this, `supermemory` and `tdd` skills need explicit invocation every session.
+
+## Step 7: Debug With an Explicit Confirmation Prompt
+
+After invoking a skill, immediately ask Claude to confirm it loaded:
 
 ```
 /tdd
-Confirm you have loaded the tdd skill and summarize
-its instructions in one sentence.
+You have just loaded the tdd skill. Confirm this and summarize its instructions in one sentence.
 ```
 
-If the skill loaded, Claude will describe its purpose. If it did not load, Claude will respond without the skill's context — often just treating `/tdd` as part of your message.
+If the skill loaded, Claude will describe it accurately. If it did not load, Claude will respond generically — which tells you the file was not read.
 
-## Practical Examples
+## Step 8: Check for Conflicting Project and Global Skill Names
 
-### PDF Skill Not Responding
+If you have a `tdd.md` in both `.claude/skills/` and `~/.claude/skills/`, the project-local version takes priority. If the project-local version is outdated or broken, the global one never loads.
 
 ```bash
-# Check the file exists and has the right name
-ls -la ~/.claude/skills/pdf.md
-
-# If missing, install it
-# If present, verify permissions:
-chmod 644 ~/.claude/skills/pdf.md
+# See both versions
+diff .claude/skills/tdd.md ~/.claude/skills/tdd.md 2>/dev/null || echo "Only one version found"
 ```
 
-Then invoke:
-```
-/pdf
-Extract the table of contents from contract.pdf
-```
+## Step 9: Restart the Claude Code Session
 
-### TDD Skill Not Applying Test-First Behavior
-
-If you invoke `/tdd` and Claude jumps straight to implementation without writing tests first, the skill file may not be loading. Verify:
+Claude Code reads skill files when the session starts, not on every invocation. If you added or modified a skill file while a session was already running, you need to restart:
 
 ```bash
-ls ~/.claude/skills/tdd.md
-# Should exist and be readable
+# Exit the current session
+exit
+
+# Start a new session
+claude
 ```
 
-If the file is present and readable but behavior seems wrong, check the file content:
+Then invoke your skill again.
+
+## Checking the `pdf` and `docx` Skills Specifically
+
+The `pdf` and `docx` skills have an additional dependency — the underlying tools they call must be installed. If `/pdf` triggers but then fails immediately, the skill loaded but its tool dependencies are missing:
 
 ```bash
-cat ~/.claude/skills/tdd.md
+# Check if pdftotext is available (used by the pdf skill)
+which pdftotext || brew install poppler
+
+# Check pandoc (used by docx skill)
+which pandoc || brew install pandoc
 ```
 
-The skill file should contain instructions telling Claude to write tests before implementation. If the file is empty or malformed, that explains the behavior.
+## The `frontend-design` Skill Not Applying Conventions
 
-### Frontend-Design Skill Ignoring Project Conventions
-
-If `/frontend-design` is not applying your design system conventions, the skill file likely does not include them. Edit the skill to add your project-specific instructions:
+If `/frontend-design` loads but ignores your project's design system, the skill file likely lacks project-specific context. The skill itself is generic — you need to customise it:
 
 ```bash
-# Add project context to the skill
-echo "\n## Project Conventions\n- Use Tailwind classes only\n- Colors from /packages/ui/tokens.ts" >> ~/.claude/skills/frontend-design.md
+cat >> ~/.claude/skills/frontend-design.md << 'EOF'
+
+## Project Conventions
+- Use Tailwind CSS only — no inline styles
+- Import components from `@/components/ui/`
+- Color tokens defined in `src/tokens/colors.ts`
+EOF
 ```
 
-## Preventing Future Issues
+## Summary Checklist
 
-1. Keep skill files in `~/.claude/skills/` with permissions `644`
-2. Name files exactly as you intend to invoke them (`/tdd` → `tdd.md`)
-3. For project-specific skills, use `.claude/skills/` in the project root
-4. Periodically run `ls ~/.claude/skills/` to audit what is installed
-
-## Summary
-
-Claude skills do not trigger automatically — you invoke them with `/skill-name`. If invocation is not working, check that the file exists in `~/.claude/skills/` or `.claude/skills/`, the filename matches your invocation exactly (case-sensitive), and the file has read permissions. Those three checks resolve the vast majority of issues.
+- File exists in `~/.claude/skills/` or `.claude/skills/`
+- Filename matches invocation exactly (case-sensitive)
+- File permissions are `644` or more permissive
+- YAML front matter is valid (no tabs, closing `---` present)
+- You are using Claude Code CLI, not claude.ai browser
+- Session was restarted after adding the skill file
 
 ---
 
-## Related Reading
-
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
