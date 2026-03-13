@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skill Memory Limit Exceeded Process Killed Fix
 
-Memory limit exceeded errors can abruptly terminate your Claude Code sessions, especially when running resource-intensive skills like pdf processing, algorithmic art generation, or working with large codebases. The [tdd skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) and other code analysis skills are common triggers due to large codebase loading. This guide provides practical solutions for developers and power users facing these issues.
+Memory limit exceeded errors can abruptly terminate your Claude Code sessions, especially when working with resource-intensive tasks like PDF processing, large codebase analysis, or generating complex output. This guide provides practical solutions for developers and power users facing these issues.
 
 ## Understanding the Error
 
