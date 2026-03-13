@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Claude Skills vs Langflow for AI Agents (2026)"
-description: "Claude skills vs Langflow for AI agents: file-based vs visual approaches, version control, deployment, and which platform fits your team."
+description: "Claude skills vs Langflow for AI agents: developer-native file-based approach vs visual drag-and-drop pipelines. Strengths, weaknesses, and when to use each."
 date: 2026-03-13
-categories: [comparisons, guides]
-tags: [claude-code, claude-skills, langflow, comparison, ai-agents]
+categories: [comparison, tools]
+tags: [claude-code, claude-skills, langflow, ai-agents, comparison]
 author: "Claude Skills Guide"
 reviewed: true
-score: 8
+score: 9
 ---
 
 # Claude Skills vs Langflow for Building AI Agents

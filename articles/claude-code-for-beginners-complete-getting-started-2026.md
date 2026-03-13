@@ -1,25 +1,27 @@
 ---
 layout: post
 title: "Claude Code for Beginners: Getting Started 2026"
-description: "A step-by-step beginner guide to Claude Code in 2026 — installation, first session, understanding skills, and building your first AI-assisted workflow."
+description: "Step-by-step beginner guide to Claude Code: installation, first session, skills, CLAUDE.md setup, and practical tips for your first AI-assisted workflow."
 date: 2026-03-13
-categories: [getting-started, guides]
-tags: [claude-code, claude-skills, beginners, getting-started]
+categories: [getting-started, tutorials]
+tags: [claude-code, claude-skills, beginners, tutorial, getting-started]
 author: "Claude Skills Guide"
 reviewed: true
 score: 6
 ---
 
-Claude Code is Anthropic's command-line tool that brings Claude directly into your development workflow. Instead of switching to a browser to ask Claude questions, you work with Claude right in your terminal, and Claude can read your files, write code, and run commands. This guide walks you through getting started from zero.
+# Claude Code for Beginners: Getting Started in 2026
+
+Claude Code is Anthropic's command-line tool that brings Claude directly into your development workflow. Instead of switching to a browser to ask Claude questions, you work with Claude in your terminal, and Claude can read your files, write code, and run commands. This guide walks you through getting started from zero.
 
 ## What You Need Before Starting
 
 - A computer running macOS, Linux, or Windows (via WSL)
 - Node.js installed (version 18 or later) — check with `node --version`
 - An Anthropic account at console.anthropic.com
-- Basic comfort with using a terminal
+- Basic comfort using a terminal
 
-You do not need to know Python, be a senior developer, or understand how AI models work.
+You do not need to be a senior developer or understand how AI models work. If you can navigate a terminal and open files, you are ready.
 
 ## Step 1: Install Claude Code
 
@@ -35,11 +37,11 @@ Verify the installation:
 claude --version
 ```
 
-You should see a version number. If you see "command not found", try restarting your terminal.
+You should see a version number. If you see "command not found", restart your terminal.
 
 ## Step 2: Authenticate
 
-Claude Code needs your Anthropic API key to work. Get one at console.anthropic.com — go to "API Keys" and create a new key.
+Claude Code needs your Anthropic API key to work. Get one at console.anthropic.com under "API Keys".
 
 Then run:
 
@@ -47,11 +49,11 @@ Then run:
 claude auth
 ```
 
-You'll be prompted to paste your API key. It gets stored securely in your system's keychain — you only need to do this once.
+You will be prompted to paste your API key. It gets stored securely — you only need to do this once.
 
 ## Step 3: Start Your First Session
 
-Navigate to a project folder you're working on (or create a new one for practice):
+Navigate to a project folder you are working on (or create a new one for practice):
 
 ```bash
 mkdir my-first-claude-project
@@ -59,15 +61,13 @@ cd my-first-claude-project
 claude
 ```
 
-Claude Code starts up and gives you a prompt. You're now in an interactive session. Type a message just like you would in any chat interface.
-
-Try asking something simple:
+Claude Code starts and gives you a prompt. You are now in an interactive session. Type a message:
 
 ```
 > Create a JavaScript function that takes a list of numbers and returns their average.
 ```
 
-Claude will write the function in the terminal. You can then ask it to save it to a file:
+Claude will write the function. Ask it to save to a file:
 
 ```
 > Save that to a file called math-utils.js
@@ -77,19 +77,25 @@ Claude will write the file to your current directory.
 
 ## Step 4: Understand What Claude Code Can Do
 
-Claude Code is different from regular Claude (the website) because it has **tools** — abilities to take action on your computer. By default it can:
+Claude Code has **tools** — abilities to take action on your computer. By default it can:
 
 - **Read files** in your project folder
 - **Write files** and create new files
 - **Run bash commands** like `npm install` or `git commit`
 - **Search the web** for documentation or answers
-- **Fetch web pages** like API documentation
 
-When Claude needs to use one of these tools, it will tell you what it's doing. You can ask Claude to explain what it's doing or to check before taking actions if you prefer more control.
+When Claude uses a tool, it tells you what it is doing:
+
+```
+I'll write this to math-utils.js
+
+[Writing file: math-utils.js]
+Done. The file has been created with the average function.
+```
 
 ## Step 5: Try a Real Task
 
-In your project folder, create a simple project:
+Create a simple Node.js project:
 
 ```bash
 npm init -y
@@ -99,87 +105,82 @@ claude
 Ask Claude to build something:
 
 ```
-> Build a simple command-line tool that takes a CSV file path as input and
-  prints a summary of the data (number of rows, column names, and a sample
-  of the first 5 rows).
+> Build a command-line tool that takes a CSV file path as input and prints
+  a summary: number of rows, column names, and the first 5 rows.
 ```
 
-Watch what Claude does. It will think through the problem, write the code, potentially install a CSV parsing library, test the code, and show you the result. This is the core loop: you describe what you want, Claude builds it.
+Watch what Claude does. It will think through the problem, write the code, install any needed packages, test it, and show you the result. This is the core loop: describe what you want, Claude builds it.
 
 ## Step 6: Use Skills
 
-Skills are plain `.md` files in `~/.claude/skills/` that make Claude especially good at specific tasks. Instead of Claude being a generalist, a skill makes it a specialist.
+Skills are pre-configured modes that make Claude especially good at specific tasks. A skill is a Markdown file stored in `~/.claude/skills/`. You invoke skills with a `/skill-name` slash command at the start of your message.
 
-Claude Code includes built-in skills:
+Built-in skills you can use right away:
 
-- `/tdd` — test-driven development
-- `/pdf` — read and generate PDF documents
-- `/docx` — read and create Word documents
-- `/frontend-design` — UI component design
-- `/supermemory` — extended memory across sessions
-- `/xlsx`, `/pptx`, `/canvas-design`, `/webapp-testing`, `/skill-creator`
+| Command | What it does |
+|---|---|
+| `/tdd` | Test-driven development — write tests first |
+| `/pdf` | Process and generate PDF documents |
+| `/docx` | Create and edit Word documents |
+| `/frontend-design` | Generate UI components |
+| `/supermemory` | Store context that persists between sessions |
+| `/canvas-design` | Create visual assets |
 
-### Using a Skill
-
-To use the `/tdd` skill (test-driven development), type:
+To use the `tdd` skill:
 
 ```
 /tdd Write tests for my math-utils.js file
 ```
 
-Claude will now operate in TDD mode — it'll write tests first, then implementation.
+To remember something about your project across sessions:
 
-### Installing Community Skills
-
-To use a community skill, place the `.md` file in `~/.claude/skills/`:
-
-```bash
-cp my-skill.md ~/.claude/skills/
+```
+/supermemory Remember that this project uses ES modules (import/export), not CommonJS
 ```
 
-Then start a new Claude Code session and invoke it with `/my-skill`.
+In future sessions, retrieve it:
+
+```
+/supermemory What are the module conventions for this project?
+```
 
 ## Step 7: Set Up CLAUDE.md
 
-The `CLAUDE.md` file is like a briefing document that Claude reads at the start of every session. Put information about your project there so Claude does not need you to explain it every time.
+The `CLAUDE.md` file is a project briefing document that Claude reads at the start of every session. Put information about your project there so Claude does not need you to explain it every time.
 
-Create one in your project root:
+Create one:
 
 ```
 > Create a CLAUDE.md file for this project with the project structure and key conventions
 ```
 
-Claude will generate a draft. Review it and add any important details: what the project does, technologies you're using, coding conventions, how to run tests.
-
-## Step 8: Common Beginner Commands
-
-| Command | What it does |
-|---------|--------------|
-| `claude` | Start a session in the current directory |
-| `/help` | Show available commands |
-| `/clear` | Clear conversation history (fresh start) |
-| `/exit` | End the session |
-
-Within the conversation, you do not need any special syntax. Just type what you want.
+Claude will generate a draft. Review it and add:
+- What the project does
+- Technologies you are using
+- Coding conventions (tabs vs spaces, file naming)
+- How to run tests
+- Any important constraints
 
 ## Common Beginner Mistakes
 
 **Trying to do too much in one message**: Break large requests into steps. "Build me a full e-commerce site" will not go well. "Build a product listing page that shows items from a JSON file" is a good start.
 
-**Not reviewing what Claude writes**: Claude is good but not perfect. Always read the code it writes, especially before running it or committing it to git.
+**Not reviewing what Claude writes**: Claude is good but not perfect. Always read the code it writes before running or committing it.
 
 **Forgetting to set up CLAUDE.md**: Without it, Claude has to rediscover your project every session. Spending 10 minutes on CLAUDE.md saves hours over time.
 
-**Running Claude Code in the wrong directory**: Claude can only read files in your current directory and subdirectories. Make sure you're in your project root when starting a session.
+**Running Claude Code in the wrong directory**: Claude can only read files in your current directory and subdirectories. Start sessions from your project root.
 
 ## What to Try Next
 
-Once you're comfortable with the basics:
+Once you are comfortable with the basics:
 
-1. **Use the `/supermemory` skill** — it gives Claude extended memory for project context
-2. **Try the `/tdd` skill** — great for adding tests to existing code
-3. **Try `/frontend-design`** — builds React components to match your design system
-4. **Read the hooks guide** — learn to control what Claude can and can't do
+1. **Use `/supermemory`** — persistent memory across sessions
+2. **Use `/tdd`** — add tests to existing code
+3. **Try `/frontend-design`** — builds UI components that match your design system
+4. **Read the hooks guide** — learn to control what Claude can do via shell hooks in `.claude/settings.json`
+
+Claude Code's power grows as you learn to structure tasks well and customize it for your workflow. Start simple, then layer in more capabilities.
 
 ---
 
