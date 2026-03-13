@@ -70,7 +70,7 @@ However, many developers succeed entirely on the free tier. If your work involve
 
 ## Practical Installation and Usage
 
-Installing community skills follows a consistent pattern regardless of your subscription tier. Skills live in `~/.claude/skills/` as Markdown files. You can browse available skills on GitHub repositories dedicated to Claude Code extensions, then clone or copy them to your local skills directory.
+Installing community skills follows a consistent pattern regardless of your subscription tier. Skills live in `~/.claude/skills/` as Markdown files. For a complete list of available skills, see the [Claude skills directory](/claude-skills-guide/articles/claude-skills-directory-where-to-find-skills/). You can browse available skills on GitHub repositories dedicated to Claude Code extensions, then clone or copy them to your local skills directory.
 
 After installation, invocation is straightforward:
 
@@ -111,5 +111,13 @@ Your decision between free and Max should depend on usage volume rather than ski
 For developers exploring Claude Code skills for the first time, the free tier provides an excellent starting point. Install a few community skills—try the `pdf` skill for document tasks, the `tdd` skill for test generation, the `xlsx` skill for spreadsheet work. You'll find that skill functionality remains consistent regardless of subscription status.
 
 Only consider Max when your usage patterns exceed free tier capacity. By then, you'll have enough experience to know whether the additional features align with your workflow.
+
+
+## Related Reading
+
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) — Start with the highest-impact skills that work great on both free and paid tiers.
+- [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-guide/articles/claude-skills-directory-where-to-find-skills/) — Browse the full directory of community skills available to install at no cost.
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Explore one of the most useful free skills — the tdd skill for test generation.
+- [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn how to install and use Claude skills regardless of your subscription tier.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
