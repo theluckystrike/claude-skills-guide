@@ -1,13 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Multi Agent Orchestration Patterns Guide"
 description: "A practical guide to multi-agent orchestration patterns in Claude Code. Learn to coordinate multiple specialized agents for complex development workflows."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, multi-agent, orchestration, automation, ai]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
-score: 7
+score: 9
 ---
 
 # Claude Code Multi Agent Orchestration Patterns Guide
@@ -16,7 +16,7 @@ Claude Code supports multi-agent workflows through skill orchestration and coord
 
 ## Understanding Multi-Agent Orchestration in Claude Code
 
-Multi-agent orchestration in Claude Code involves coordinating multiple skills or agents to handle tasks that require diverse expertise. Rather than relying on a single agent to handle everything, you can invoke specialized skills sequentially or in parallel to leverage their individual strengths.
+Multi-agent orchestration in Claude Code involves coordinating multiple skills or agents to handle tasks that require diverse expertise. Rather than relying on a single agent to handle everything, you can invoke specialized skills sequentially or in parallel to use their individual strengths.
 
 The foundation of this approach lies in Claude's skill system. Skills are Markdown files in `~/.claude/skills/` that define agent behavior for specific domains. By combining skills strategically, you create powerful orchestration pipelines.
 

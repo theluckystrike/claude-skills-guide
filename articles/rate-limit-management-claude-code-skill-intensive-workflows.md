@@ -1,9 +1,11 @@
 ---
-layout: default
-title: "Rate Limit Management for Claude Code Skill Intensive Workflows"
-description: "Practical strategies for managing rate limits when running multiple Claude Code skills. Learn how to optimize heavy workflows using pdf, tdd, frontend-design, xlsx and more."
+layout: post
+title: "Rate Limit Management for Claude Code Skill Intensive Wor..."
+description: "Practical strategies for managing rate limits when running multiple Claude Code skills. Learn how to optimize heavy workflows using pdf, tdd, frontend-d..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Rate Limit Management for Claude Code Skill Intensive Workflows

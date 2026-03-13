@@ -254,25 +254,29 @@ Add `tools` only if you need to declare tool access. A missing `tools` key does 
 
 ## Nested Keys: Get Indentation Right
 
-If you add nested keys to your skill front matter, indentation must be consistent:
+If you add nested keys to your skill front matter, indentation must be consistent. The `tools` key is the most common nested field:
 
 ```yaml
-# Broken — nested key not indented
+# Broken — list items not indented under parent key
 ---
-description: "Persistent memory across sessions"
-context_files:
-- docs/conventions.md
+description: "Test-driven development workflow"
+tools:
+- Bash
+- Read
 ---
 
 # Fixed — list items indented under parent key
 ---
-description: "Persistent memory across sessions"
-context_files:
-  - docs/conventions.md
+description: "Test-driven development workflow"
+tools:
+  - Bash
+  - Read
 ---
 ```
 
 Two spaces before list items under a key are required.
+
+The valid front matter fields for skill files are `description` and `tools`. Fields like `context_files` are not recognized by Claude Code and should not be added to skill files.
 
 ---
 
@@ -280,6 +284,6 @@ Two spaces before list items under a key are required.
 
 - [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The canonical reference for valid YAML front matter fields, including all optional configuration keys
 - [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — A walkthrough for writing skill files from scratch with properly structured YAML that avoids common parse errors
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — How `context_files` and other YAML-configured fields affect token consumption, helping you tune for cost efficiency
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — How skill design and YAML front matter affect token consumption, helping you tune for cost efficiency
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
