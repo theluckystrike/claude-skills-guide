@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code GCP Google Cloud Setup and Deployment Guide
 
-Google Cloud Platform provides robust infrastructure for deploying applications at scale. Integrating Claude Code into your GCP workflow enables intelligent automation, from generating deployment configurations to managing multi-service architectures. This guide walks through practical setups for deploying to Cloud Run, Cloud Functions, and using GCP services alongside Claude Code skills.
+Google Cloud Platform provides reliable, scalable infrastructure for deploying applications. Integrating Claude Code into your GCP workflow enables intelligent automation, from generating deployment configurations to managing multi-service architectures. This guide walks through practical setups for deploying to Cloud Run, Cloud Functions, and using GCP services alongside Claude Code skills.
 
 ## Prerequisites and Environment Setup
 
@@ -68,8 +68,6 @@ Create a custom skill at `~/.claude/skills/gcp-deploy.md` that combines build, p
 ```markdown
 ---
 description: "Build and deploy to Google Cloud Run"
-tools:
-  - Bash
 ---
 
 # GCP Cloud Run Deploy Skill
