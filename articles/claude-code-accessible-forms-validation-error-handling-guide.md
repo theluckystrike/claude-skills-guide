@@ -108,7 +108,7 @@ This pattern updates both visual error display and ARIA attributes, ensuring scr
 
 ## Custom Error Announcements with ARIA
 
-The **alg** skill helps implement sophisticated error announcement strategies. Rather than relying solely on `aria-live`, consider these approaches:
+For sophisticated error announcement strategies, go beyond a single `aria-live` container. Rather than relying solely on `aria-live`, consider these approaches:
 
 ```javascript
 const announceError = (message, containerId) => {

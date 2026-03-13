@@ -21,9 +21,6 @@ Before contributing, ensure Claude Code is installed and configured with the ski
 ```bash
 # Verify Claude Code installation
 claude --version
-
-# List installed skills
-claude skill list
 ```
 
 Most open source projects follow similar contribution patterns: fork the repository, create a feature branch, make your changes, and submit a pull request. Claude Code accelerates each of these steps.
@@ -36,7 +33,7 @@ The supermemory skill proves invaluable here if you're tracking multiple potenti
 
 ## Understanding Project Structure and Conventions
 
-Once you've selected a project, clone it and explore the codebase structure. Most projects include CONTRIBUTING.md, CODE_OF_CONDUCT.md, and README.md files. Read these documents carefully— они определяют expectations for commits, coding style, and pull request descriptions.
+Once you've selected a project, clone it and explore the codebase structure. Most projects include CONTRIBUTING.md, CODE_OF_CONDUCT.md, and README.md files. Read these documents carefully—they define expectations for commits, coding style, and pull request descriptions.
 
 Claude Code can help parse this documentation quickly. Use it to summarize key points:
 

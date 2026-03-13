@@ -135,7 +135,7 @@ Keep your test scripts fast—bisect runs multiply the execution time by the num
 
 Start with a recent known-good commit. The more recent, the fewer iterations needed. If you go too far back, you might find ancient bugs already fixed.
 
-Document your findings. After bisect completes, use the commit hash to understand what changed and why it caused the problem. The **document-skills** or **docx** skill can help generate bug reports.
+Document your findings. After bisect completes, use the commit hash to understand what changed and why it caused the problem. The **docx** skill (`/docx`) can help generate formal bug reports documenting the problematic commit, reproduction steps, and the fix applied.
 
 ## Why This Matters
 

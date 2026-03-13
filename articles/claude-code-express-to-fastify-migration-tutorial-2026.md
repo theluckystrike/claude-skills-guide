@@ -33,7 +33,7 @@ cd myapp-fastify
 npm install express@^4.18.0
 ```
 
-The migration works best when you copy your existing Express route handlers and adapt them to Fastify's interface. The **super-memory** skill helps maintain context across your migration sessions, remembering which routes you've converted and any issues encountered.
+The migration works best when you copy your existing Express route handlers and adapt them to Fastify's interface. The **supermemory** skill helps maintain context across your migration sessions, remembering which routes you've converted and any issues encountered.
 
 ## Converting Route Handlers
 
@@ -199,7 +199,7 @@ Compare results against your Express baseline. Most teams see significant improv
 
 ## Conclusion
 
-Migrating from Express to Fastify requires thoughtful refactoring but delivers substantial performance and developer experience improvements. Claude Code's ecosystem—including the **tdd** skill for test-driven migration, **super-memory** for tracking progress, **pdf** for documentation, and **frontend-design** for code patterns—makes the process more manageable. Start with non-critical routes, establish validation schemas early, and verify performance at each step.
+Migrating from Express to Fastify requires thoughtful refactoring but delivers substantial performance and developer experience improvements. Claude Code's ecosystem—including the **tdd** skill for test-driven migration, **supermemory** for tracking progress, **pdf** for documentation, and **frontend-design** for code patterns—makes the process more manageable. Start with non-critical routes, establish validation schemas early, and verify performance at each step.
 ---
 
 ## Related Reading

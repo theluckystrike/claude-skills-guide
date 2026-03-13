@@ -10,6 +10,8 @@ reviewed: true
 score: 8
 ---
 
+# GDPR Data Privacy Implementation Checklist for Claude Code
+
 Implementing GDPR compliance in software projects requires systematic attention to data handling, user consent, and privacy controls. Claude Code provides capabilities that help developers build privacy-conscious applications, though ultimate compliance responsibility rests with the development team. This checklist covers practical steps for integrating data privacy protections into your workflow using Claude Code and its ecosystem of skills.
 
 ## Foundation: Understand Data Flow Before Coding
@@ -94,7 +96,7 @@ DATABASE_URL=postgresql://user:password@host/db
 ENCRYPTION_KEY=your-256-bit-key
 ```
 
-The claude-skills-with-github-actions-cicd-pipeline skill can help set up CI/CD pipelines that include security scanning for exposed secrets before they reach production.
+Claude Code can help you configure CI/CD pipeline checks for exposed secrets. Add a pre-commit hook that scans staged files for patterns like private keys or API tokens before they reach production.
 
 ## Document Your Compliance Journey
 
