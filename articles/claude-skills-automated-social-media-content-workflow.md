@@ -1,13 +1,9 @@
 ---
-layout: post
-title: "Automate Social Media Content with Claude Skills"
+layout: default
+title: "Claude Skills Automated Social Media Content Workflow"
 description: "Automate social media content creation with Claude Code skills. Build a workflow for generating posts, managing schedules, and tracking engagement."
 date: 2026-03-13
-categories: [workflows, tutorials]
-tags: [claude-code, claude-skills, social-media, content, automation]
-author: "Claude Skills Guide"
-reviewed: true
-score: 5
+author: theluckystrike
 ---
 
 # Automate Social Media Content with Claude Skills
