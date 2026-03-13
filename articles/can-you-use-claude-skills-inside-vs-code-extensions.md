@@ -1,11 +1,13 @@
 ---
 layout: post
 title: "Can You Use Claude Skills Inside VS Code Extensions?"
-description: "A practical guide to integrating Claude Code skills into VS Code extensions. Learn the technical approaches, limitations, and real-world implementation patterns."
+description: "A practical guide to integrating Claude Code skills into VS Code extensions. Learn the technical approaches, limitations, and real-world implementation pat"
 date: 2026-03-14
 categories: [integrations]
 tags: [claude-code, vscode, extensions, integrations, skills]
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Can You Use Claude Skills Inside VS Code Extensions?
