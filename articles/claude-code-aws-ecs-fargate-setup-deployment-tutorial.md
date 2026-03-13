@@ -3,7 +3,7 @@ layout: post
 title: "Claude Code AWS ECS Fargate Setup and Deployment Tutorial"
 description: "Set up and deploy containerized apps to AWS ECS Fargate using Claude Code. Covers task definitions, CI/CD, secrets management, and auto-scaling."
 date: 2026-03-14
-categories: [tutorials]
+categories: [guides, tutorials]
 tags: [claude-code, claude-skills, aws, ecs, fargate, deployment, containers]
 author: "Claude Skills Guide"
 reviewed: true

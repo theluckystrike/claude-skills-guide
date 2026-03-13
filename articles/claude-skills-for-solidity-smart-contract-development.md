@@ -7,7 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, solidity, ethereum, smart-contracts, blockchain]
 author: "Claude Skills Guide"
 reviewed: true
-score: 
+score: 8
 ---
 
 # Claude Skills for Solidity Smart Contract Development
