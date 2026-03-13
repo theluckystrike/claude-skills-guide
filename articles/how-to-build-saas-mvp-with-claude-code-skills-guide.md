@@ -18,7 +18,7 @@ Building a SaaS MVP requires speed, reliability, and the right toolchain. Claude
 
 Before writing code, define your core feature set. A typical SaaS MVP needs user authentication, a database, API endpoints, and a frontend interface. Claude Code skills handle the repetitive parts of each layer, letting you focus on business logic.
 
-The `/supermemory` skill helps you organize research, competitor analysis, and feature requirements:
+The `/supermemory` skill helps you organize research, competitor analysis, and feature requirements. Use it to maintain a searchable knowledge base of your product decisions:
 
 ```
 /supermemory
@@ -33,7 +33,9 @@ This creates a persistent context that Claude can reference throughout developme
 
 ## Frontend Development with the frontend-design Skill
 
-The `/frontend-design` skill generates UI components, layouts, and responsive designs:
+The `/frontend-design` skill generates UI components, layouts, and responsive designs. For an MVP, you need clean, functional interfaces without spending weeks on design.
+
+Describe your component requirements directly:
 
 ```
 /frontend-design
@@ -45,9 +47,9 @@ Create a responsive SaaS dashboard layout with:
 - Dark mode support via CSS variables
 ```
 
-The skill outputs production-ready HTML, CSS, and JavaScript. For a SaaS MVP, generate your landing page, authentication forms, and dashboard views directly from descriptions.
+The skill outputs production-ready HTML, CSS, and JavaScript. It supports Tailwind CSS, custom CSS frameworks, and component libraries. For a SaaS MVP, generate your landing page, authentication forms, and dashboard views directly from descriptions.
 
-Pair this with the `/canvas-design` skill if you need mockups or promotional graphics.
+Pair this with the `/canvas-design` skill if you need mockups or promotional graphics. Generate social media images, app screenshots, and feature highlights without leaving your development environment.
 
 ## Backend and Database Setup
 
@@ -64,6 +66,8 @@ Write tests for a user service with these requirements:
 Use pytest. Include edge cases for invalid email formats and empty passwords.
 ```
 
+The `/tdd` skill generates comprehensive test coverage including edge cases you might overlook. This matters for MVPs where bugs damage early user trust.
+
 A sample test structure:
 
 ```python
@@ -71,6 +75,10 @@ def test_create_user_sets_active():
     user = create_user(email="test@example.com", plan="pro")
     assert user.plan == "pro"
     assert user.is_active is True
+
+def test_pro_plan_sets_trial_period():
+    user = create_user(email="trial@example.com", plan="pro")
+    assert user.trial_ends_at is not None
 
 def test_duplicate_email_raises_error():
     create_user(email="dupe@example.com", plan="free")
@@ -87,52 +95,79 @@ SaaS products often need PDF functionality: invoices, reports, contracts, or exp
 Generate an invoice PDF with:
 - Header: "Invoice #INV-2026-001"
 - Bill To: Acme Corp, billing@acmecorp.com
-- Line items: [Product License: $99/mo, Professional Support: $49/mo]
-- Subtotal, tax (8%), and total
+- Line items table: [Product License: $99/mo x 1, Professional Support: $49/mo x 1]
+- Subtotal, tax (8%), and total sections
 - Payment terms: Net 30
+- Footer with company contact info
 
 Save as invoices/INV-2026-001.pdf
 ```
 
+For MVPs, automating document workflows eliminates the need for expensive third-party invoice and contract services during early stages.
+
 ## Testing and Quality Assurance
 
-The `/webapp-testing` skill automates browser-based testing:
+The `/webapp-testing` skill automates browser-based testing. Use it to verify that your MVP flows work end-to-end:
 
 ```
 /webapp-testing
 Test the user signup flow on http://localhost:3000:
 1. Navigate to /signup
 2. Fill in email: "test@example.com", password: "secure123"
-3. Click "Create Account"
+3. Click the "Create Account" button
 4. Verify redirect to /dashboard
-5. Verify welcome message contains the user's email
-6. Take a screenshot
+5. Verify the welcome message contains the user's email
+6. Take a screenshot of the final state
 
 Report any failures with the element that was not found.
 ```
 
-The `/tdd` skill complements this with unit and integration tests.
+Run these tests before each deployment. The skill captures screenshots and logs, helping you debug UI issues quickly.
+
+The `/tdd` skill complements this with unit and integration tests. Together, they provide coverage across all layers of your MVP.
 
 ## Spreadsheet Data Exports
 
-The `/xlsx` skill creates and manipulates Excel files for admin dashboards or analytics exports:
+Many SaaS products need spreadsheet exports for admin dashboards or analytics. The `/xlsx` skill creates and manipulates Excel files:
 
 ```
 /xlsx
-Create a monthly analytics export with two sheets:
+Create a monthly analytics export spreadsheet with two sheets:
 - Sheet 1 "User Summary": columns for User ID, Email, Plan, Sign-up Date, Last Active
+  Include 3 sample rows for testing
 - Sheet 2 "Revenue": columns for Month, New MRR, Churned MRR, Net MRR, Total MRR
+  Include last 3 months of data
 
-Include 3 sample rows. Save as exports/analytics-march-2026.xlsx
+Save as exports/analytics-march-2026.xlsx
 ```
+
+This covers admin data needs in your MVP's early stages without building a custom export system.
 
 ## Deployment Configuration
 
 For infrastructure files, describe your requirements to Claude Code directly:
 
 ```
-Write a Dockerfile for a Node.js API that uses node:20-alpine, installs only production
-dependencies, runs as a non-root user, exposes port 3000, and starts with node server.js
+Write a Dockerfile for a Node.js API that:
+- Uses node:20-alpine as base
+- Installs only production dependencies
+- Runs as a non-root user
+- Exposes port 3000
+- Starts with "node server.js"
+```
+
+Example output:
+
+```dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
+COPY . .
+EXPOSE 3000
+CMD ["node", "server.js"]
 ```
 
 ## Putting It All Together
@@ -146,6 +181,8 @@ Here is the workflow for building your SaaS MVP with Claude Code skills:
 5. **Test**: Run `/webapp-testing` for end-to-end user flows
 6. **Data**: Use `/xlsx` for exports and admin features
 7. **Deploy**: Generate infrastructure config files directly in Claude Code
+
+Each skill addresses a specific bottleneck in MVP development. Start with the core loop of design, test, and build, then add skills as your product needs them.
 
 ## When to Add More Skills
 

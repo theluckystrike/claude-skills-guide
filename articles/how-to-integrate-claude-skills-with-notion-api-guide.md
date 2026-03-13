@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Integrate Claude Skills with Notion API"
-description: "Connect Claude Code skills to Notion API for automated workflows, database management, and knowledge base sync."
+description: "Connect Claude Code skills to Notion's API for automated knowledge workflows. Practical patterns using /pdf, /tdd, and /supermemory with real Node.js examples."
 date: 2026-03-13
-author: "Claude Skills Guide"
-categories: [guides, workflows]
+categories: [integrations, workflows]
 tags: [claude-code, claude-skills, notion, api, automation]
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
@@ -27,8 +27,8 @@ The combination solves real friction points:
 
 - A Notion workspace with API access enabled
 - Notion Internal Integration Token (from notion.so/my-integrations)
-- Claude API key from console.anthropic.com
-- Node.js 18+ with packages: `@notionhq/client`, `@anthropic-ai/sdk`
+- Node.js 18+ with the `@notionhq/client` package
+- Claude Code installed locally — skills run inside Claude Code, not via the Anthropic SDK
 
 ## Step 1: Create a Notion Integration
 
@@ -45,63 +45,63 @@ The combination solves real friction points:
 ## Step 2: Install Dependencies
 
 ```bash
-npm install @notionhq/client @anthropic-ai/sdk dotenv
+npm install @notionhq/client dotenv
 ```
 
 Create `.env`:
 ```
 NOTION_TOKEN=secret_your_token_here
-ANTHROPIC_API_KEY=your_claude_api_key
 NOTION_DATABASE_ID=your_database_id_here
 ```
 
 Find your database ID in the Notion URL: `notion.so/workspace/{database_id}?v=...`
 
-## Step 3: Initialize Clients
+## Step 3: Initialize Notion Client
 
 ```javascript
 require('dotenv').config();
 const { Client } = require('@notionhq/client');
-const Anthropic = require('@anthropic-ai/sdk');
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
-const claude = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
-const SKILL_PROMPTS = {
-  pdf: `You are the PDF processing skill for Claude Code. 
-Extract structured data from documents. Return JSON with:
-{ "title": "", "summary": "", "action_items": [], "key_points": [], "tags": [] }`,
-  
-  tdd: `You are the TDD skill for Claude Code. Review code and return JSON with:
-{ "summary": "", "untested_paths": [], "suggested_tests": [], "risk_level": "low|medium|high" }`,
-  
-  supermemory: `You are the supermemory skill for Claude Code.
-Help maintain project context. Return JSON with:
-{ "stored_items": [], "recalled_items": [], "summary": "" }`,
-};
 ```
 
-## Step 4: Call Claude with a Skill
+**Important:** Claude skills (`/pdf`, `/tdd`, `/supermemory`) run inside your Claude Code terminal session. They are not called via the Anthropic SDK in external scripts. To use skill output in this pipeline, run Claude Code in print mode and capture stdout, then pass the result to Notion:
+
+```bash
+# Run a skill in print mode and capture output
+OUTPUT=$(claude -p "/pdf Extract action items from /tmp/meeting-notes.pdf" 2>/dev/null)
+```
+
+Then your Node.js script reads from a file or stdin that Claude Code wrote.
+
+## Step 4: Run a Skill and Capture Output
+
+Shell script that calls a Claude skill and writes output to a JSON file for the Node.js pipeline:
+
+```bash
+#!/bin/bash
+# run-skill.sh — invoke a Claude skill and save output
+
+SKILL="$1"   # e.g. "pdf" or "tdd"
+INPUT="$2"   # path or description
+OUTPUT_FILE="$3"  # where to write the result
+
+RESULT=$(claude -p "/$SKILL $INPUT" 2>/dev/null)
+echo "$RESULT" > "$OUTPUT_FILE"
+echo "Skill output saved to $OUTPUT_FILE"
+```
+
+Then your Node.js script reads the output:
 
 ```javascript
-async function invokeSkill(skillName, content) {
-  const systemPrompt = SKILL_PROMPTS[skillName];
-  if (!systemPrompt) throw new Error(`Unknown skill: ${skillName}`);
-  
-  const message = await claude.messages.create({
-    model: 'claude-opus-4-6',
-    max_tokens: 2048,
-    system: systemPrompt,
-    messages: [{ role: 'user', content }],
-  });
-  
-  const text = message.content[0].text;
-  
-  // Parse JSON response if expected
+const fs = require('fs');
+
+function loadSkillOutput(filePath) {
+  const raw = fs.readFileSync(filePath, 'utf8');
   try {
-    return JSON.parse(text);
+    return JSON.parse(raw);
   } catch {
-    return { raw: text };
+    return { summary: raw, action_items: [], key_points: [], tags: [] };
   }
 }
 ```
@@ -210,12 +210,12 @@ async function buildProjectContext(pageIds) {
   const contents = await Promise.all(pageIds.map(readNotionPageContent));
   const combined = contents.join('\n\n---\n\n');
   
-  // Feed to supermemory skill
-  const context = await invokeSkill('supermemory', 
-    `Store and summarize this project context:\n\n${combined}`
-  );
+  // Feed to /supermemory skill via Claude Code CLI
+  const { execSync } = require('child_process');
+  const prompt = `/supermemory Store and summarize this project context:\n\n${combined.substring(0, 2000)}`;
+  const context = execSync(`claude -p "${prompt.replace(/"/g, '\\"')}"`, { encoding: 'utf8' });
   
-  return context;
+  return { summary: context.trim() };
 }
 ```
 
@@ -223,8 +223,21 @@ async function buildProjectContext(pageIds) {
 
 ```javascript
 async function processDocumentToNotion(documentText, databaseId) {
-  console.log('Running PDF skill...');
-  const extracted = await invokeSkill('pdf', documentText);
+  const fs = require('fs');
+  const { execSync } = require('child_process');
+  
+  // Write document text to temp file
+  fs.writeFileSync('/tmp/doc-input.txt', documentText);
+  
+  console.log('Running /pdf skill via Claude Code...');
+  const raw = execSync('claude -p "/pdf Extract title, summary, action items, key points, and tags from /tmp/doc-input.txt. Return as JSON."', { encoding: 'utf8' });
+  
+  let extracted;
+  try {
+    extracted = JSON.parse(raw);
+  } catch {
+    extracted = { title: '', summary: raw, action_items: [], key_points: [], tags: [] };
+  }
   
   const title = extracted.title || `AI Summary — ${new Date().toLocaleDateString()}`;
   const tags = extracted.tags || ['ai-generated'];
