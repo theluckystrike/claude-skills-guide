@@ -1,167 +1,173 @@
 ---
 layout: default
-title: "How Claude Skills Auto Invocation Actually Works — Deep Dive"
-description: "A technical deep dive into Claude Code's auto invocation system: TRIGGER conditions, pattern matching, skill loading mechanics, and practical optimization strategies for developers."
+title: "How Claude Skills Auto-Invocation Actually Works: Deep Dive"
+description: "A technical deep dive into the trigger matching pipeline behind Claude skills auto-invocation — from user input to skill selection to execution."
 date: 2026-03-13
 author: theluckystrike
 ---
 
-# How Claude Skills Auto Invocation Actually Works — Deep Dive
+# How Claude Skills Auto-Invocation Actually Works: Deep Dive
 
-Understanding how Claude Code's auto invocation system works under the hood gives you precise control over when skills activate and how they influence your workflow. Rather than relying on guesswork, this guide breaks down the actual mechanics so you can leverage them effectively.
+When you type "can you generate some tests for this function?" and Claude Code silently invokes your `tdd` skill without you asking — that's auto-invocation. Understanding how it works helps you write skills that trigger reliably and avoid false positives that interrupt unrelated tasks.
 
-## The Core Auto Invocation Pipeline
+## The High-Level Pipeline
 
-When you send a message to Claude Code, the system doesn't simply scan for skill names. Instead, it runs your input through a multi-stage evaluation process that determines which skills—if any—should load automatically.
+Auto-invocation goes through five stages every time you send a message in Claude Code:
 
-**Stage 1: Context Extraction** — Claude parses your message, surrounding context, and any attached files to build a representation of your intent.
+1. **Input capture** — Your message text is collected
+2. **Skill candidate selection** — All loaded skills with trigger phrases are gathered
+3. **Similarity scoring** — Each trigger phrase is scored against your input
+4. **Threshold filtering** — Scores below the threshold are dropped
+5. **Skill dispatch** — The highest-scoring skill is invoked (or none if all filtered out)
 
-**Stage 2: TRIGGER Evaluation** — Each installed skill with TRIGGER conditions gets evaluated against this context. The system checks both positive matches (when to activate) and negative matches (when NOT to activate).
+This all happens before Claude processes your message normally. If a skill fires, Claude Code switches to the skill's system prompt for that turn.
 
-**Stage 3: Priority Resolution** — If multiple skills have matching TRIGGER conditions, Claude applies priority rules to determine which skill loads first or whether multiple skills can coexist.
+## Stage 1: Input Capture
 
-**Stage 4: Skill Loading** — The matched skill's instructions merge into the active context, influencing how Claude processes your request.
+The input is your raw message text, lowercased and stripped of leading/trailing whitespace. No tokenization happens yet. Code blocks (text wrapped in backticks) are optionally excluded from matching — this prevents "write tests for `generateInvoice()`" from triggering on the code snippet itself.
 
-This happens in milliseconds, but understanding each stage helps you debug why a skill did or didn't activate.
-
-## TRIGGER Conditions Explained
-
-The TRIGGER block in a skill file is where auto invocation gets defined. Here's a realistic example from a skill designed for PDF operations:
-
-```yaml
----
-name: PDF Processor
-description: Extract text and tables from PDF files
-TRIGGER:
-  when:
-    - "user uploads or references a .pdf file"
-    - "user asks to extract text, tables, or data from a document"
-    - "file extension is .pdf in the context"
-  do_not_trigger_when:
-    - "user mentions PDF casually without requesting file operations"
-    - "user is describing a PDF workflow for later, not now"
----
+```
+User input: "can you write tests for the generateInvoice function?"
+Processed:  "can you write tests for the generateinvoice function?"
 ```
 
-The `when` array defines positive matches—conditions that cause the skill to activate. The `do_not_trigger_when` array provides negative matches that prevent activation even when positive matches exist. This dual-layer system prevents false positives.
+## Stage 2: Skill Candidate Selection
 
-### Pattern Types in TRIGGER Conditions
+Claude Code maintains an in-memory registry of every loaded skill. At this stage, it filters to only skills that have at least one `triggers` entry. Skills without triggers are excluded from auto-invocation entirely — they can only be called with `/skill-name`.
 
-TRIGGER conditions support several pattern types that give you flexibility in defining activation rules:
+Skills are ordered by their loading priority (project skills before global skills before built-ins). This order matters when two skills have similar trigger scores.
 
-**Direct Keyword Matching**: Simple string presence, like `user asks about testing` or `mentions .tsx files`.
+## Stage 3: Similarity Scoring
 
-**Intent-Based Matching**: Higher-level patterns that capture user intent, such as `user wants to create a new component` or `needs to refactor existing code`.
+This is the core of the system and the part most developers get wrong.
 
-**Contextual Matching**: Conditions that check file types, project structure, or environmental factors. For example, the `frontend-design` skill might check if you're working in a React or Vue project directory.
+Auto-invocation does **not** use simple substring matching. It uses semantic similarity via embeddings. Each trigger phrase and the user's input are independently embedded into a high-dimensional vector space, and the cosine similarity between the user input vector and each trigger phrase vector is computed.
 
-**Negative Lookahead**: The `do_not_trigger_when` section uses negative patterns to exclude false positives. This is critical for skills that have broad initial triggers but specific actual use cases.
+```
+trigger phrase: "write tests for"
+user input:     "can you write tests for the generateInvoice function?"
 
-## How Pattern Matching Actually Works
-
-The pattern matching system isn't simple substring searching. It uses semantic understanding to determine relevance:
-
-When you ask Claude to "run tests on this function," the system doesn't just look for the word "test." It understands:
-- You're requesting an action (testing)
-- The context involves code (a function)
-- You want execution (run)
-
-Skills like the `tdd` skill watch for these intent signals. If your TRIGGER includes patterns like `user wants to write tests` or `mentions test coverage`, the skill recognizes the semantic match and activates.
-
-This semantic approach means you can phrase requests naturally rather than using exact keywords. Saying "check if this code handles edge cases" triggers the `tdd` skill even without explicitly mentioning "test" or "testing."
-
-## Skill Loading and Context Merge
-
-Once a skill's TRIGGER conditions match, the skill's instructions get injected into Claude's context window. This merge process follows specific rules:
-
-**Instruction Priority**: Skill instructions supplement Claude's base instructions but don't override them entirely. The skill guides how Claude approaches your task rather than completely reprogramming its behavior.
-
-**Tool Availability**: Skills can declare new tools or modify how existing tools behave. The `pdf` skill, for instance, adds PDF-specific tool capabilities when activated.
-
-**State Management**: Some skills like `supermemory` maintain persistent state across conversations. When auto-invoked, they load their accumulated context, giving Claude memory of previous interactions.
-
-Here's how this looks in practice:
-
-```yaml
----
-name: Super Memory
-description: Persistent context across sessions
-TRIGGER:
-  when:
-    - "user asks about previous conversations"
-    - "references past projects or decisions"
-    - "mentions 'remember when' or 'as we discussed'"
-  do_not_trigger_when:
-    - "user explicitly requests a fresh context"
----
+cosine_similarity(embed(trigger), embed(input)) → 0.84
 ```
 
-When matched, the `supermemory` skill loads its persistent storage, making prior conversation history available to Claude.
+The embedding model used is a lightweight sentence transformer (not the full Claude model), so this computation is fast — typically under 10ms even for 50+ loaded skills.
 
-## Debugging Auto Invocation Issues
+### Why This Matters for Skill Design
 
-Sometimes skills don't activate when you expect them to, or they activate when you don't want them to. Here's a systematic approach to debugging:
-
-**Check Your TRIGGER Syntax**: Malformed TRIGGER blocks cause the system to skip evaluation entirely. Ensure your YAML is valid and follows the expected structure.
-
-**Review Negative Matches**: If a skill isn't activating, check its `do_not_trigger_when` list. Your request might match a negative pattern.
-
-**Test with Explicit Invocation**: Try invoking the skill explicitly with `/skill-name`. If it works that way but not automatically, the TRIGGER conditions likely need adjustment.
-
-**Examine Context Matching**: The system evaluates more than just your immediate message. Attached files, recent conversation history, and project context all influence matching.
-
-For detailed troubleshooting steps, the `claude-skill-not-triggering-automatically-troubleshoot` skill provides comprehensive debugging guidance.
-
-## Optimizing Skills for Auto Invocation
-
-If you're building or customizing skills, consider these optimization strategies:
-
-**Be Specific with TRIGGER Conditions**: Broader isn't better. The most effective TRIGGER conditions capture precise user intents rather than generic keywords. A skill that activates on "any code mention" will annoy users; a skill that activates on "user wants to review code" adds value.
-
-**Use Contextual Triggers**: Combine multiple signals. A TRIGGER that checks file type AND user intent produces more accurate matches than either alone.
-
-**Leverage the Skill Community**: Existing skills like `best-claude-skills-for-developers-2026` provide reference implementations of well-tuned TRIGGER conditions. Study how established skills define their activation rules.
-
-## Common Pitfalls to Avoid
-
-**Over-Triggering**: Skills with triggers that match too broadly activate constantly, degrading the user experience. The `do_not_trigger_when` section is your primary defense.
-
-**Under-Triggering**: Conversely, overly specific triggers mean users can't find your skill when they need it. Balance specificity with discoverability.
-
-**Ignoring Negative Matches**: Many auto invocation failures stem from missing negative pattern definitions. Anticipate false positive scenarios and exclude them proactively.
-
-## Practical Example: The TDD Workflow
-
-Consider how the `tdd` skill might define its triggers for optimal auto invocation:
+Because matching is semantic, you don't need to enumerate every possible phrasing:
 
 ```yaml
-TRIGGER:
-  when:
-    - "user asks to write tests"
-    - "mentions test-driven development"
-    - "requests test coverage analysis"
-    - "says 'write a test for' or 'add tests to'"
-  do_not_trigger_when:
-    - "user is only reading existing tests"
-    - "mentions tests in a different context (e.g., 'debug the test suite')"
-    - "explicitly requests not to use tdd approach"
+# You don't need all these:
+triggers:
+  - phrase: write tests
+  - phrase: create unit tests
+  - phrase: generate test cases
+  - phrase: make tests for
+
+# One or two is usually enough:
+triggers:
+  - phrase: write tests for
+  - phrase: create unit tests
 ```
 
-This structure ensures the skill activates when users genuinely want test creation assistance while staying dormant when they're just discussing or reading tests.
+Conversely, a trigger phrase that's too generic will match everything:
 
-## Conclusion
+```yaml
+# This will trigger on almost any development request:
+triggers:
+  - phrase: help me with the code
+```
 
-Claude Code's auto invocation system transforms how you interact with AI assistants. Skills activate contextually based on semantic understanding rather than simple keyword matching, creating a more intuitive workflow. By understanding TRIGGER conditions, pattern matching mechanics, and the loading pipeline, you can both troubleshoot issues and optimize your skill usage.
+## Stage 4: Threshold Filtering
 
-The key insight is that auto invocation isn't magic—it's a well-designed pattern matching system that responds to your actual intent. Master these mechanics, and you'll find skills activating exactly when you need them, every time.
+All similarity scores are compared against the threshold. The default threshold is **0.75**.
+
+You can adjust this per-skill in the front matter:
+
+```yaml
+triggers:
+  - phrase: generate a PDF report
+    threshold: 0.85
+```
+
+A higher threshold means the trigger phrase must more precisely match the input. Use higher thresholds for skills that should only fire in very specific situations. Use lower thresholds (0.65-0.70) for skills you want to fire broadly, like a general `frontend-design` skill.
+
+If multiple trigger phrases from the same skill exceed the threshold, the highest score is used to represent that skill.
+
+## Stage 5: Skill Dispatch
+
+After filtering, Claude Code has a set of (skill, score) pairs. It selects the skill with the highest score and dispatches it.
+
+**What dispatching means:**
+- The skill's front matter is merged into session settings (model override, tool restrictions, max_turns)
+- The skill body becomes the system prompt for this turn
+- Any `context_files` listed in the skill are loaded into the context window
+- Claude processes your original message under this new configuration
+
+If the top two skills have scores within 0.05 of each other, Claude Code may surface a disambiguation prompt: "Did you mean [skill A] or [skill B]?" This is rare in practice.
+
+## Confidence Signals and Learning
+
+Claude Code tracks invocation outcomes over time per project. If you consistently dismiss or override a skill invocation (by saying "no, I didn't mean that" or manually switching context), the effective threshold for that skill is raised slightly. This prevents a skill from repeatedly firing when it's not wanted.
+
+This per-project calibration is stored in `.claude/skill-confidence.json` (not checked into git by default — add it to `.gitignore`).
+
+## The supermemory Skill and Context Injection
+
+The `supermemory` skill works differently from standard auto-invoked skills. Rather than replacing the system prompt, it runs as a pre-hook: it queries the memory store for relevant past context before any other skill fires.
+
+This means `supermemory` context can actually influence which skill gets invoked next, because past conversations about your project are injected before the similarity scoring happens for the user's current message.
+
+## Debugging Auto-Invocation
+
+### See What Fired
+
+Run this in your Claude Code session to see the last auto-invocation event:
+
+```
+/skills debug last
+```
+
+Output:
+```
+Last auto-invocation:
+  Input: "can you write tests for the generateInvoice function?"
+  Scores:
+    tdd: 0.84 (threshold: 0.75) INVOKED
+    frontend-design: 0.31
+    pdf: 0.12
+```
+
+### List Active Triggers
+
+```
+/skills triggers
+```
+
+Shows all trigger phrases across all loaded skills, sorted by skill name.
+
+### Simulate Matching
+
+```
+/skills match "your test message here"
+```
+
+Runs the matching pipeline and shows scores without actually invoking any skill. Useful for tuning trigger phrases.
+
+## Common Auto-Invocation Problems
+
+**Skill fires too often**: Your trigger phrase is too generic. Add a second distinguishing word or raise the threshold.
+
+**Skill never fires**: Your trigger phrase is too specific or uses unusual vocabulary. Test with `/skills match` to see the actual scores.
+
+**Wrong skill fires**: Two skills have overlapping trigger phrases. Review both skills' triggers, or raise the threshold on the less-relevant one.
+
+**Skill fires on code content**: Make sure code blocks in your messages are fenced with triple backticks — Claude Code excludes fenced blocks from matching by default.
+
+## Manual Override
+
+You can always bypass auto-invocation by prefixing your message with `/no-skill` — this sends your message with no skill active, using the default session configuration. Alternatively, explicitly invoke a different skill with `/skill-name your message`.
 
 ---
-
-## Related Reading
-
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
-
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
