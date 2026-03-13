@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Secret Scanning: Prevent Credential Leaks Guide"
 description: "A practical guide to implementing secret scanning in Claude Code skills to prevent credential leaks and protect sensitive information in your development workflows."
 date: 2026-03-13
-author: theluckystrike
+author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Claude Code Secret Scanning: Prevent Credential Leaks Guide

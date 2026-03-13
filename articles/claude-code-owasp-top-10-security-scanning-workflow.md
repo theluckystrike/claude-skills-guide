@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Claude Code OWASP Top 10 Security Scanning Workflow"
 description: "Learn how to build an automated security scanning workflow using Claude Code skills to identify and remediate OWASP Top 10 vulnerabilities in your applications."
 date: 2026-03-13
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code OWASP Top 10 Security Scanning Workflow

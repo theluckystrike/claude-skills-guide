@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Security Code Review Checklist Automation"
 description: "Learn how to automate security code review checklists using Claude Code skills. Practical examples for developers and power users to streamline security checks in their workflow."
 date: 2026-03-13
-author: theluckystrike
+author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Claude Code Security Code Review Checklist Automation
