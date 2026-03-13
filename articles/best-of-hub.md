@@ -116,6 +116,7 @@ If you're just getting started with skills, these five deliver the highest value
 | [Claude Code for Beginners: Complete Getting Started Guide 2026](/claude-skills-guide/articles/claude-code-for-beginners-complete-getting-started-2026/) | The complete 2026 beginner's reference for Claude Code and skills |
 | [Claude Code vs Devin AI Agent: 2026 Comparison](/claude-skills-guide/articles/claude-code-vs-devin-ai-agent-comparison-2026/) | 2026 comparison of Claude Code and Devin for autonomous development tasks |
 | [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) | The complete specification reference for the skill.md format |
+| [Is Claude Code Worth It? An Honest Beginner Review 2026](/claude-skills-guide/articles/is-claude-code-worth-it-honest-beginner-review-2026/) | 2026 honest review of Claude Code's ROI and value for developers |
 
 ---
 

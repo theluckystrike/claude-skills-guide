@@ -158,6 +158,7 @@ Once you've got the basics down, here's where to go next:
 | [Claude Code Skill Output Formatting Broken Fix](/claude-skills-guide/articles/claude-code-skill-output-formatting-broken-fix/) | Diagnosing and fixing broken output formatting in Claude skills |
 | [Claude Code Skill Permission Scope Error Explained](/claude-skills-guide/articles/claude-code-skill-permission-scope-error-explained/) | Understanding and resolving permission scope errors in Claude Code |
 | [Claude Code for Beginners: Complete Getting Started Guide 2026](/claude-skills-guide/articles/claude-code-for-beginners-complete-getting-started-2026/) | Full beginner's guide to Claude Code covering setup, skills, and first projects |
+| [Is Claude Code Worth It? An Honest Beginner Review 2026](/claude-skills-guide/articles/is-claude-code-worth-it-honest-beginner-review-2026/) | Honest assessment of Claude Code's value for developers just getting started |
 
 ---
 
