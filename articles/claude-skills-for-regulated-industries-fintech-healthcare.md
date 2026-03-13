@@ -7,7 +7,7 @@ author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, fintech, healthcare, compliance]
 reviewed: true
-score: 8
+score: 7
 ---
 
 # Claude Skills for Regulated Industries: Fintech & Healthcare Development
@@ -101,59 +101,65 @@ The [claude-code-secret-scanning-prevent-credential-leaks-guide](/claude-skills-
 
 ## Automating Compliance Documentation
 
-Regulated industries require extensive documentation. The [pdf skill](/claude-skills-guide/articles/pdf/) generates compliance reports automatically:
+Regulated industries require extensive documentation. The [/pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) generates compliance reports:
 
-```bash
-# Generate audit-ready documentation
-claude-skill pdf generate-audit-report \
-  --type compliance \
-  --period Q1-2026 \
-  --standards SOC2,HIPAA \
-  --output audit-report-q1-2026.pdf
+```
+/pdf
+Generate a compliance audit report covering:
+- Access log summary for Q1 2026
+- SOC 2 control evidence for CC6.1 through CC6.8
+- HIPAA security rule compliance status
+Output as a formal PDF report with executive summary.
 ```
 
-The [xlsx skill](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/) builds evidence spreadsheets that auditors expect:
+The [/xlsx skill](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/) builds evidence spreadsheets auditors expect:
 
-```python
-from xlsx import Workbook
-
-def generate_evidence_workbook(audit_trail_data):
-    wb = Workbook()
-    
-    # Access log summary
-    ws = wb.add_worksheet('Access Log')
-    ws.write_row(0, ['User', 'Action', 'Resource', 'Timestamp'])
-    for idx, entry in enumerate(audit_trail_data):
-        ws.write_row(idx + 1, [
-            entry['user'],
-            entry['action'],
-            entry['resource'],
-            entry['timestamp']
-        ])
-    
-    wb.save('compliance-evidence.xlsx')
 ```
+/xlsx
+Create a compliance evidence workbook with:
+- Sheet 1: Access log data from audit_trail.json (columns: User, Action, Resource, Timestamp)
+- Sheet 2: Control status summary
+- Sheet 3: Remediation tracking
+Save as compliance-evidence.xlsx
+```
+
+Note: `from xlsx import Workbook` is not valid — the xlsx skill is invoked with `/xlsx`, not imported as a Python package.
 
 ## Security Code Review Workflow
 
-The [claude-owasp-top-10-security-scanning-workflow](/claude-skills-guide/articles/claude-code-owasp-top-10-security-scanning-workflow/) integrates security scanning into your development process:
+Integrate security scanning using Claude Code hooks in `~/.claude/settings.json`. The `PreToolUse` hook can block dangerous patterns before Claude executes bash commands:
 
-```yaml
-# .claude/settings.yaml for security-conscious development
-security:
-  scan_on_commit: true
-  blocked_patterns:
-    - pattern: "password\s*=\s*['\"][^'\"]+['\"]"
-      message: "Hardcoded passwords prohibited"
-    - pattern: "eval\s*\("
-      message: "Dynamic code execution not allowed"
-  required_tests:
-    - sql_injection_test
-    - xss_test
-    - authentication_test
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": {"tool_name": "bash"},
+        "command": ".claude/hooks/security-check.sh"
+      }
+    ]
+  }
+}
 ```
 
-The [claude-security-code-review-checklist-automation](/claude-skills-guide/articles/claude-code-security-code-review-checklist-automation/) provides automated checklist validation before merges.
+The hook script can scan for hardcoded credentials or dangerous patterns:
+
+```bash
+#!/bin/bash
+# .claude/hooks/security-check.sh
+INPUT=$(cat)
+CMD=$(echo "$INPUT" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('tool_input',{}).get('command',''))")
+
+# Block eval usage
+if echo "$CMD" | grep -qP '\beval\s*\('; then
+  echo '{"decision": "block", "reason": "Dynamic code execution not allowed"}'
+  exit 0
+fi
+
+echo "$INPUT"
+```
+
+Use the `/tdd` skill to enforce test coverage for security-critical paths before merging.
 
 ## Frontend Design for Compliance Forms
 

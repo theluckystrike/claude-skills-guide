@@ -7,7 +7,8 @@ categories: [integrations]
 tags: [claude-code, vscode, extensions, integrations, skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 8---
+score: 8
+---
 
 # Can You Use Claude Skills Inside VS Code Extensions?
 

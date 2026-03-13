@@ -4,7 +4,7 @@ title: "What Is the Best Claude Skill for Automated Code Review"
 description: "Discover the best Claude skills for automated code review: tdd, supermemory, code-audit, and how to build a complete review workflow in 2026."
 date: 2026-03-14
 author: "Claude Skills Guide"
-categories: [guides, workflows]
+categories: [guides]
 tags: [claude-code, claude-skills, code-review, automation, tdd, supermemory]
 reviewed: true
 score: 8
@@ -153,7 +153,7 @@ Files changed: src/user/profile.go, handlers/user.go
 
 ### Step 4: Performance Review
 
-For changes that might impact performance:
+For changes that might impact performance, create a custom performance-review skill in `~/.claude/skills/performance-review.md`, then invoke it:
 
 ```
 /performance-review
@@ -164,6 +164,8 @@ Analyze this code for performance issues:
 - Memory leak possibilities
 Focus on src/database/ and src/api/
 ```
+
+Or skip the custom skill and ask Claude directly in your session without invoking a skill name.
 
 ### Step 5: Persistent Learning
 
