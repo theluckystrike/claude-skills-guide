@@ -1,13 +1,9 @@
 ---
-layout: post
+layout: default
 title: "How to Build a SaaS MVP with Claude Code Skills Guide"
 description: "A practical guide for developers to build a SaaS MVP using Claude Code skills. Learn which skills to use for frontend design, testing, PDF generation, and more."
 date: 2026-03-13
-categories: [skills, guides, saas, mvp]
-tags: [claude-code, claude-skills, saas, mvp, frontend-design, tdd, pdf]
 author: theluckystrike
-reviewed: true
-score: 5
 ---
 
 # How to Build a SaaS MVP with Claude Code Skills Guide
