@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills for Localization i18n Workflow Automation"
-description: "Practical guide to automating localization and i18n workflows using Claude Code skills. Includes code examples for translation management, locale file processing, and multilingual content pipelines."
+description: "Practical guide to automating localization and i18n workflows using Claude Code skills. Includes code examples for translation management, locale file p..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Skills for Localization i18n Workflow Automation

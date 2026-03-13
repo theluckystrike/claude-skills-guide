@@ -3,11 +3,11 @@ layout: post
 title: "Claude Code Skill Output Streaming Optimization"
 description: "Optimize Claude Code skill output streaming for faster perceived response times, reduced latency, and better user experience. Practical patterns for str..."
 date: 2026-03-14
-categories: [performance]
+categories: [advanced]
 tags: [claude-code, claude-skills, streaming, optimization, performance]
 author: "Claude Skills Guide"
 reviewed: true
-score: 9
+score: 5
 ---
 
 # Claude Code Skill Output Streaming Optimization

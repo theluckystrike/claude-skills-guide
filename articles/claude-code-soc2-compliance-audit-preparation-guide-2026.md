@@ -44,7 +44,7 @@ Configure your development environment to automatically log access events, code 
 
 The `pdf` skill proves invaluable for generating audit-ready reports. You can automate the creation of monthly security summaries, access review documents, and incident reports in PDF format. This transforms what used to be quarterly projects into continuous, automated outputs.
 
-## Leveraging Claude Skills for Specific Controls
+## Claude Skills for Specific Controls
 
 Several Claude skills directly support SOC 2 compliance efforts:
 
@@ -67,7 +67,12 @@ Set up automated checks that verify security configurations before code reaches 
 - Access logs are properly configured and rotated
 - Encryption is enforced for data at rest and in transit
 
-The `mcp-memory-server` skill helps maintain persistent context across your compliance activities, ensuring that decisions made today are properly documented for tomorrow's audit.
+The `/supermemory` skill helps maintain persistent context across your compliance activities, ensuring that decisions made today are properly documented for tomorrow's audit:
+
+```
+/supermemory store: SOC 2 control CC6.1 — access review completed 2026-03-14,
+reviewed 23 users, removed 4 stale accounts, next review due 2026-06-14
+```
 
 ## Preparing for the Audit Interview
 

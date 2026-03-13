@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Claude Code GitHub Codespaces Cloud Development Workflow"
-description: "Learn how to build an efficient cloud development workflow using Claude Code and GitHub Codespaces. Set up browser-based development environments with AI assistance."
+description: "Learn how to build an efficient cloud development workflow using Claude Code and GitHub Codespaces. Set up browser-based development environments with A..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 3
 ---
 
 # Claude Code GitHub Codespaces Cloud Development Workflow
@@ -65,9 +67,9 @@ This file provides context to Claude Code for every session, improving the relev
 Claude Code excels when you leverage its skill system. Install relevant skills for your workflow:
 
 ```bash
-claude skill install tdd
-claude skill install pdf
-claude skill install supermemory
+cp skill.md ~/.claude/skills/ tdd
+cp skill.md ~/.claude/skills/ pdf
+cp skill.md ~/.claude/skills/ supermemory
 ```
 
 The **tdd** skill guides test-driven development practices. When working on new features, invoke it to generate test cases before implementation. The **pdf** skill helps generate documentation directly from your codebase. For maintaining project memory across sessions, **supermemory** stores context that Claude Code references in future sessions.

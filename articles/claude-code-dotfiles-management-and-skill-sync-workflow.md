@@ -1,13 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Dotfiles Management and Skill Sync Workflow"
-description: "A practical workflow for managing Claude Code dotfiles across machines and synchronizing skills. Includes git-based dotfiles management, skill organization patterns, and automation scripts."
+description: "A practical workflow for managing Claude Code dotfiles across machines and synchronizing skills. Includes git-based dotfiles management, skill organizat..."
 date: 2026-03-14
 categories: [workflow]
 tags: [claude-code, dotfiles, skill-sync, workflow, automation]
-author: theluckystrike
-reviewed: false
-score: 7
+author: "Claude Skills Guide"
+reviewed: true
+score: 9
 ---
 
 # Claude Code Dotfiles Management and Skill Sync Workflow

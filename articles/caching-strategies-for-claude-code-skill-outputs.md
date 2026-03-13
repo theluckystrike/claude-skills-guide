@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: post
 title: "Caching Strategies for Claude Code Skill Outputs"
 description: "Practical caching strategies to optimize Claude Code skill outputs. Learn how to cache pdf, tdd, xlsx, and supermemory skill results for faster development workflows."
 date: 2026-03-14
-categories: [optimization]
+categories: [guides]
 tags: [claude-code, caching, performance, skills, pdf, tdd, xlsx, supermemory, frontend-design]
 author: theluckystrike
 reviewed: true
