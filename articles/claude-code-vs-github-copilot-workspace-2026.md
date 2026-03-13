@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code vs GitHub Copilot Workspace 2026"
-description: "A thorough comparison of Claude Code and GitHub Copilot Workspace for professional developers in 2026, covering agentic capabilities, GitHub integration, team workflows, and pricing."
+description: "Claude Code vs GitHub Copilot Workspace 2026: compare agentic features, GitHub integration, team workflows, and pricing."
 date: 2026-03-13
 author: "Claude Skills Guide"
 categories: [guides]

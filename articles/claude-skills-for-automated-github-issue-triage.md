@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Automated GitHub Issue Triage with Claude Skills"
+title: "Automated GitHub Issue Triage with Claude Skills Guide"
 description: "Automate GitHub issue triage, labeling, and prioritization with Claude Code skills. Practical examples using gh CLI, GitHub Actions, and supermemory."
 date: 2026-03-13
 categories: [workflows, tutorials]
