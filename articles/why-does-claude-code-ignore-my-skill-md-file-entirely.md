@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Why Does Claude Code Ignore My Skill MD File Entirely"
 description: "Troubleshooting guide for when Claude Code fails to load your skill MD file. Learn the common causes and fixes for skills that get completely ignored."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 9
 ---
 
 # Why Does Claude Code Ignore My Skill MD File Entirely

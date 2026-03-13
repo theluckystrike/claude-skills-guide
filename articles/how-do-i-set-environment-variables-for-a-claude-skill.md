@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "How Do I Set Environment Variables for a Claude Skill"
-description: "A practical guide to configuring environment variables for Claude Code skills. Learn how to set up API keys, credentials, and custom configurations for skills like pdf, frontend-design, tdd, and supermemory."
+description: "A practical guide to configuring environment variables for Claude Code skills. Learn how to set up API keys, credentials, and custom configurations for ..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 9
 ---
 
 # How Do I Set Environment Variables for a Claude Skill

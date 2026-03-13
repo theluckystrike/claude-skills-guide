@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "How Do I Use Claude Skills in an Air-Gapped Environment"
 description: "A practical guide for developers and power users on running Claude AI skills offline in air-gapped or secure environments."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # How Do I Use Claude Skills in an Air-Gapped Environment

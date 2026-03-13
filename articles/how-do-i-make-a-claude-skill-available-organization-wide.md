@@ -5,7 +5,7 @@ description: "A practical guide to sharing Claude Code skills across your team. 
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, organization, team, collaboration, deployment]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
@@ -176,16 +176,13 @@ For critical skill updates that break backward compatibility, tag a release vers
 
 ## Testing Skills Before Distribution
 
-Before sharing a skill organization-wide, verify it works correctly:
+Before sharing a skill organization-wide, verify it works correctly. Open a Claude Code session and test with a simple task:
 
-```bash
-# Test that Claude recognizes the skill
-claude
-> /tdd --help
-
-# Test with a simple task
-> /tdd write tests for this function: def add(a,b): return a + b
 ```
+/tdd write tests for this function: def add(a,b): return a + b
+```
+
+Skills don't have `--help` flags — they're plain Markdown files. Test by invoking the skill with a realistic task and verifying Claude follows the instructions.
 
 Run several test cases covering common use patterns. Check that the skill produces consistent output and follows your team's conventions.
 

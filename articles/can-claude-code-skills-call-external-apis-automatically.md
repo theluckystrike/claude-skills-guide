@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Can Claude Code Skills Call External APIs Automatically?"
 description: "Learn how Claude Code skills can automatically call external APIs, with practical examples and configuration tips for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Can Claude Code Skills Call External APIs Automatically?
