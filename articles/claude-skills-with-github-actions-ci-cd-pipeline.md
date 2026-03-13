@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills with GitHub Actions CI/CD Pipeline"
-description: "Learn how to integrate Claude Code skills into GitHub Actions workflows for automated testing, deployment, and quality assurance."
+description: "Integrate Claude Code into GitHub Actions workflows for automated code analysis, documentation generation, and quality gates on every pull request."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, tutorials]
+tags: [claude-code, claude-skills, github-actions, ci-cd]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Skills with GitHub Actions CI/CD Pipeline
@@ -53,11 +57,9 @@ jobs:
       - name: Run Claude TDD skill
         run: |
           source $HOME/.cargo/env
-          uv run python -c "
-          from claude_skill_tdd import run_tests
-          result = run_tests('./tests')
-          print(result)
-          "
+          uv run claude --dangerously-skip-permissions \
+            -p "Run the tdd skill on the ./tests directory and report coverage gaps" \
+            --print-only
 ```
 
 ## Running Test-Driven Development with the TDD Skill

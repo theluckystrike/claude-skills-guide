@@ -1,105 +1,111 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Directory: Where to Find Skills"
-description: "Discover where to find Claude skills, how to access the official directory, and how to use community-built skills for enhanced AI assistance."
+description: "Where to find Claude Code skills: built-in skills, community GitHub repositories, skill file locations, and how to install new skills locally."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, directory, installation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 6
 ---
 
 # Claude Skills Directory: Where to Find Skills
 
-Finding the right Claude skills for your workflow can significantly enhance your productivity as a developer or power user. This guide walks you through the available directories, repositories, and methods for discovering and accessing skills that match your needs.
+Claude Code skills are `.md` files stored locally at `~/.claude/skills/`. When you invoke `/skill-name`, Claude Code reads that file and gains specialized context for the task. Here's where to find skills and how to install them.
 
-## Official Claude Skills Locations
+## Built-in Skills
 
-Claude Code ships with a curated collection of built-in skills that cover common development tasks. These official skills live within the Claude desktop application and are automatically available when you start a session. The primary skills include **pdf** for document manipulation, **docx** for Word document handling, **pptx** for presentations, and **xlsx** for spreadsheet operations.
+Claude Code ships with a set of official skills that cover common development tasks. These are available by default and don't require manual installation. The primary built-in skills include:
 
-These skills load dynamically when needed, following a progressive disclosure model. At the first level, you see skill names and descriptions in your startup context. At the second level, you can load a skill's complete guidance using the `get_skill()` function. Some skills even provide additional resources and scripts at deeper levels.
+- **pdf** — document text extraction, merging, form filling
+- **docx** — Word document creation and manipulation
+- **pptx** — PowerPoint presentation generation
+- **xlsx** — spreadsheet operations with formula support
+- **tdd** — test-driven development guidance
+- **frontend-design** — UI component generation for React, Vue, Svelte
+- **canvas-design** — visual asset generation
+- **supermemory** — persistent knowledge base across sessions
 
-For example, to access the PDF skill documentation, you would use:
+To see which skills are available in your session, check your `~/.claude/skills/` directory:
 
 ```bash
-get_skill(skill_name="pdf")
+ls ~/.claude/skills/
 ```
 
-This command loads the complete guidance for working with PDF files, including extraction methods, form filling, and document generation capabilities.
+To load a skill's full guidance, invoke it with a slash command:
 
-## Community Repository Access
+```
+/pdf
+/tdd
+/supermemory
+```
 
-The Claude skills ecosystem extends far beyond built-in skills through community contributions. The primary community repository at [github.com/anthropics/claude-code](https://github.com/anthropics/claude-code) contains dozens of user-submitted skills covering specialized domains.
+## Community Skills
 
-When exploring community skills, you'll find categories including:
+The community maintains additional skills in public GitHub repositories. The best place to find community Claude Code skills:
 
-- **Development tools**: Skills for specific frameworks and languages
-- **Data processing**: Skills for working with various file formats
-- **Design utilities**: Skills for visual design and theming
-- **Productivity enhancers**: Skills for documentation and communication
+- Search GitHub for `claude-code skills site:github.com`
+- Browse the [claude-code community discussions](https://github.com/anthropics/claude-code/discussions)
+- Check the [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) community list
 
-To use a community skill, you typically clone the repository and configure your local environment to recognize the skill files. Most community skills follow the skill-md format, which uses YAML front matter to define metadata and capabilities.
+Community skills are `.md` files you clone or download and place in `~/.claude/skills/`.
+
+## Installing a Community Skill
+
+```bash
+# Example: installing a skill from a GitHub repo
+curl -o ~/.claude/skills/my-skill.md \
+  https://raw.githubusercontent.com/username/claude-skills/main/my-skill.md
+
+# Or clone a skills collection
+git clone https://github.com/username/claude-skills.git /tmp/claude-skills
+cp /tmp/claude-skills/*.md ~/.claude/skills/
+```
+
+After installing, restart your Claude Code session and invoke the skill with `/skill-name`.
 
 ## Finding Skills by Use Case
 
-Different tasks require different skills. Here's a practical breakdown of where to look based on your needs:
+| Need | Skill |
+|------|-------|
+| Extract text from PDFs | `/pdf` |
+| Generate Word documents | `/docx` |
+| Create presentations | `/pptx` |
+| Spreadsheet automation | `/xlsx` |
+| TDD workflows | `/tdd` |
+| React/Vue component generation | `/frontend-design` |
+| Generate icons and graphics | `/canvas-design` |
+| Persistent cross-session memory | `/supermemory` |
+| Browser automation testing | `/webapp-testing` |
+| Build custom MCP servers | `/skill-creator` |
 
-### Document Processing
+## Evaluating Community Skills
 
-For PDF operations beyond basic extraction, the **pdf** skill handles complex tasks like form filling, multi-document merging, and table extraction. The **docx** skill manages Microsoft Word documents with support for tracked changes, comments, and formatting preservation. If you need to create presentations programmatically, the **pptx** skill provides comprehensive PowerPoint manipulation.
+Before adding a community skill:
 
-### Spreadsheet and Data Work
+1. Read the skill file — it's just Markdown, so you can review exactly what instructions it gives Claude
+2. Check the repository's maintenance activity
+3. Look for clear usage examples in the README
+4. Test in a non-critical session first
 
-The **xlsx** skill serves as your primary tool for spreadsheet operations. It supports formula creation, data visualization, and preserves existing formulas during edits. This skill handles CSV, TSV, and XLSX formats, making it versatile for data migration and reporting tasks.
+Official skills from Anthropic are tested and maintained. Community skills vary in quality — reading the `.md` file directly is the fastest way to evaluate one.
 
-### Frontend Development
+## Keeping Skills Updated
 
-The **canvas-design** skill generates visual assets in PNG and PDF formats using design philosophy principles. Combined with **theme-factory**, you can apply consistent styling across artifacts. For testing frontend applications, the **webapp-testing** skill uses Playwright for comprehensive verification including screenshot capture and console monitoring.
+For official skills, update Claude Code:
 
-### Knowledge Management
-
-The **supermemory** skill addresses information organization across projects. It indexes your codebase, documentation, and communications, making everything searchable through natural language queries. This proves invaluable when working with large codebases or maintaining multiple projects.
-
-### Testing and Development Practices
-
-The **tdd** skill guides developers through test-driven development cycles with intelligent test generation. The **skill-creator** skill enables building custom skills tailored to specific workflows, supporting both Python (FastMCP) and Node/TypeScript (MCP SDK) implementations.
-
-## Verifying Skill Quality
-
-Not all skills are created equal. When evaluating community skills, consider these factors:
-
-1. **Maintenance activity**: Check recent commits and issue responses
-2. **Documentation quality**: Look for clear examples and usage instructions
-3. **Installation requirements**: Ensure compatibility with your environment
-4. **User feedback**: Review any available testimonials or issues
-
-Official skills maintained by Anthropic undergo rigorous testing and documentation standards. Community skills vary in quality, so evaluating before adoption saves troubleshooting time later.
-
-## Installation and Configuration
-
-Most skills follow a standard installation pattern. After obtaining the skill files, you place them in your Claude skills directory and restart your session. The skill becomes available alongside built-in skills.
-
-For custom skills using the skill-creator framework, the process involves:
-
-```python
-# Example: Creating a custom MCP server with FastMCP
-from fastmcp import FastMCP
-
-mcp = FastMCP("my-custom-skill")
-
-@mcp.tool()
-def process_custom_task(input_data):
-    # Your implementation
-    return processed_result
+```bash
+npm update -g @anthropic-ai/claude-code
 ```
 
-This flexibility allows you to extend Claude's capabilities to match your exact requirements.
+For community skills stored as Git repos, pull updates periodically:
 
-## Staying Updated
+```bash
+git -C /path/to/skills-repo pull
+cp /path/to/skills-repo/*.md ~/.claude/skills/
+```
 
-The Claude skills directory continues evolving with new community contributions. To stay informed about new skills and updates:
+---
 
-- Monitor the official GitHub repository for new submissions
-- Follow the Claude Code documentation for feature announcements
-- Participate in community discussions about skill development
-
-Skills receive periodic updates that add capabilities, fix bugs, and improve integration. Keeping your local skill definitions current ensures you have access to the latest features.
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)*

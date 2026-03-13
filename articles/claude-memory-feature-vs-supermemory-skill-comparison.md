@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Claude Memory Feature vs SuperMemory Skill Comparison"
-description: "A practical guide comparing Claude's built-in memory feature with the SuperMemory skill. Learn which option best suits your workflow and when to use each."
+layout: post
+title: "Claude Memory Feature vs SuperMemory Skill"
+description: "Compare Claude's built-in conversation memory with the SuperMemory skill. Learn which suits your workflow and when to use each for persistent context."
 date: 2026-03-13
-author: theluckystrike
+categories: [comparisons, skills]
+tags: [claude-code, claude-skills, supermemory, memory]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Memory Feature vs SuperMemory Skill Comparison

@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills with Linear Project Management Tutorial"
-description: "Learn how to integrate Claude AI skills with Linear for streamlined project management, automated status updates, and efficient team workflows."
+description: "Integrate Claude Code skills with Linear's API for automated issue documentation, sprint reporting, and Slack notifications using the Linear SDK."
 date: 2026-03-13
-author: theluckystrike
+categories: [tutorials, guides]
+tags: [claude-code, claude-skills, linear, project-management]
+author: "Claude Skills Guide"
+reviewed: true
+score: 6
 ---
 
 # Claude Skills with Linear Project Management Tutorial
@@ -70,12 +74,10 @@ This automation ensures every issue has proper documentation from the start, red
 The **xlsx** skill pairs excellently with Linear for sprint planning and capacity management. You can extract Linear data and transform it into useful reports for planning meetings.
 
 ```python
-# Generate sprint capacity report using xlsx skill
 import requests
-import xlsx from 'xlsx'
+import openpyxl
 
-def generate_sprint_report(team_id, sprint_id):
-    # Fetch issues from Linear GraphQL API
+def generate_sprint_report(team_id, sprint_id, linear_api_key):
     query = """
     query($teamId: String!, $sprintId: String!) {
         issues(filter: { team: { id: { eq: $teamId } }, sprint: { id: { eq: $sprintId } } }) {
@@ -88,29 +90,26 @@ def generate_sprint_report(team_id, sprint_id):
         }
     }
     """
-    
+
     response = requests.post(
         'https://api.linear.app/graphql',
         json={'query': query, 'variables': {'teamId': team_id, 'sprintId': sprint_id}},
-        headers={'Authorization': f'Bearer {LINEAR_API_KEY}'}
+        headers={'Authorization': f'Bearer {linear_api_key}'}
     )
-    
+
     issues = response.json()['data']['issues']['nodes']
-    
-    # Create spreadsheet with xlsx skill
-    workbook = xlsx.Workbook()
-    sheet = workbook.add_worksheet('Sprint Capacity')
-    
-    sheet.write_row(['Issue', 'Estimate', 'Assignee', 'Labels'])
+
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = 'Sprint Capacity'
+    ws.append(['Issue', 'Estimate', 'Assignee', 'Labels'])
+
     for issue in issues:
-        sheet.write_row([
-            issue['title'],
-            issue['estimate'] or 0,
-            issue['assignee']['name'],
-            ', '.join([l['name'] for l in issue['labels']['nodes']])
-        ])
-    
-    workbook.save('sprint-capacity.xlsx')
+        assignee = issue['assignee']['name'] if issue['assignee'] else 'Unassigned'
+        labels = ', '.join(l['name'] for l in issue['labels']['nodes'])
+        ws.append([issue['title'], issue['estimate'] or 0, assignee, labels])
+
+    wb.save('sprint-capacity.xlsx')
 ```
 
 This report helps team leads quickly understand sprint load distribution and identify potential bottlenecks before sprint planning meetings.
@@ -181,43 +180,34 @@ The **pdf** skill enables automatic weekly status report generation. Instead of 
 
 ```python
 # Automated weekly status report
-from datetime import datetime, timedelta
-from pdf import PDFDocument
+# Use /pdf skill to ask Claude to format and generate the PDF from this data
 
-def generate_weekly_status(linear_client, team_id):
+from datetime import datetime, timedelta
+import requests
+
+def fetch_weekly_status(linear_api_key, team_id):
     week_ago = datetime.now() - timedelta(days=7)
-    
-    # Fetch completed issues
-    completed = linear_client.issues(
-        filter={
-            'team': {'id': {'eq': team_id}},
-            'completedAt': {'gte': week_ago.isoformat()}
+
+    completed_query = """
+    query($teamId: String!, $since: DateTime!) {
+        issues(filter: {
+            team: { id: { eq: $teamId } },
+            completedAt: { gte: $since }
+        }) {
+            nodes { title state { name } labels { nodes { name } } }
         }
+    }
+    """
+
+    response = requests.post(
+        'https://api.linear.app/graphql',
+        json={'query': completed_query, 'variables': {'teamId': team_id, 'since': week_ago.isoformat()}},
+        headers={'Authorization': f'Bearer {linear_api_key}'}
     )
-    
-    # Fetch in-progress issues
-    in_progress = linear_client.issues(
-        filter={
-            'team': {'id': {'eq': team_id}},
-            'state': {'name': {'eq': 'In Progress'}}
-        }
-    )
-    
-    # Generate PDF report
-    pdf = PDFDocument()
-    pdf.add_heading('Weekly Status Report', level=1)
-    pdf.add_paragraph(f"Generated: {datetime.now().strftime('%Y-%m-%d')}")
-    
-    pdf.add_heading('Completed This Week', level=2)
-    for issue in completed:
-        pdf.add_paragraph(f"✓ {issue.title} ({issue.labels})")
-    
-    pdf.add_heading('In Progress', level=2)
-    for issue in in_progress:
-        pdf.add_paragraph(f"→ {issue.title}")
-    
-    pdf.save('weekly-status.pdf')
-    return pdf
+    return response.json()['data']['issues']['nodes']
+
+# Then ask Claude with /pdf active:
+# /pdf Create a formatted weekly status PDF from this issue list: [paste output]
 ```
 
 ## Best Practices for Linear-Claude Integration

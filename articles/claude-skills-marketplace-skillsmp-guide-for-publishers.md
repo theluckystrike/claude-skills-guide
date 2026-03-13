@@ -1,184 +1,109 @@
 ---
-layout: default
-title: "Claude Skills Marketplace SkillsMP Guide for Publishers"
-description: "A practical guide for publishers on leveraging Claude Skills Marketplace to streamline content workflows, automate document processing, and enhance editorial productivity."
+layout: post
+title: "Claude Skills for Publishers: A Practical Guide"
+description: "How publishers can use Claude Code skills to automate manuscript processing, editorial reviews, contract management, and sales material generation."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, tutorials]
+tags: [claude-code, claude-skills, publishing, pdf, docx]
+author: "Claude Skills Guide"
+reviewed: true
+score: 5
 ---
 
-# Claude Skills Marketplace SkillsMP Guide for Publishers
+# Claude Skills for Publishers: A Practical Guide
 
-The Claude Skills Marketplace (SkillsMP) has become an essential platform for publishers looking to automate editorial workflows, process large volumes of documents, and maintain content quality at scale. This guide walks you through practical strategies for integrating SkillsMP into your publishing operations.
+Publishing workflows involve high volumes of structured documents — manuscripts, contracts, royalty statements, catalog entries, and sales materials. Claude Code skills are well-suited to automating the repetitive parts of these workflows. Here's what's practical today.
 
-## Getting Started with SkillsMP
+## Document Processing with the PDF Skill
 
-The SkillsMP platform provides a centralized marketplace where developers and publishers can discover, install, and manage skills that extend Claude's capabilities. Unlike standalone prompts, skills are persistent, configurable tools that maintain state across sessions and integrate with external systems.
+Manuscript submissions, contracts, and industry reports arrive as PDFs. The **pdf** skill gives Claude deep context for working with PDF files: extracting text, identifying tables, handling form fields, and merging documents.
 
-To access SkillsMP, ensure you have Claude Code installed and configured. Most publishers find that the installation process takes less than fifteen minutes, after which they can immediately begin exploring available skills.
+A typical manuscript intake workflow:
 
-## Document Processing for Publishers
+```
+/pdf Extract the title, author name, chapter count, and word count from this manuscript PDF
+```
 
-The **pdf** skill stands as one of the most valuable tools for publishing workflows. Whether you're processing manuscript submissions, extracting data from contracts, or converting industry reports into usable formats, this skill handles the heavy lifting.
+Claude will extract the metadata and return structured output you can pipe into your submission tracking system.
+
+For contracts, you can ask Claude to identify specific clauses:
+
+```
+/pdf Find all royalty rate clauses in this contract and summarize them in a table
+```
+
+## Editorial Review with the DOCX Skill
+
+Word documents remain the standard exchange format for manuscripts. The **docx** skill gives Claude context for working with `.docx` files: heading structures, tracked changes, formatting consistency, and comment threads.
+
+```
+/docx Check this manuscript for consistent heading hierarchy and flag any deviations from H1 → H2 → H3 order
+```
+
+```
+/docx Generate a formatting report: list all unique paragraph styles used in the document
+```
+
+This catches formatting problems before they reach production without manual review.
+
+## Spreadsheet Reports with the XLSX Skill
+
+The **xlsx** skill handles royalty statements, catalog spreadsheets, and inventory reports. It can create new workbooks, add formulas, and apply formatting.
+
+```
+/xlsx Create a weekly rights sales summary from this data with subtotals by territory
+```
+
+For recurring reports, describe your template once and reuse the prompt.
+
+## Presentation Generation with the PPTX Skill
+
+Rights fairs and sales meetings require slide decks. The **pptx** skill generates structured presentations from your data.
+
+```
+/pptx Create a 5-slide pitch deck for this title: [title, author, synopsis, comparable titles, key selling points]
+```
+
+Generating from a consistent template ensures brand alignment across your catalog pitches.
+
+## Knowledge Management with Supermemory
+
+The **supermemory** skill lets Claude remember project context across sessions. For ongoing series, author relationships, or multi-year contracts, you can store key facts:
+
+```
+/supermemory store: Author Jane Smith prefers chapter-by-chapter delivery. Contract #2024-JS-01 signed March 2026 for 3-book deal, 15% royalty on net.
+```
+
+Then retrieve it in any future session:
+
+```
+/supermemory search: Jane Smith contract terms
+```
+
+## Browser Testing with Webapp-Testing
+
+For publishers with digital platforms — e-book previews, reader portals, or CMS systems — the **webapp-testing** skill provides Playwright-based browser testing:
 
 ```python
-# Extracting text and tables from submitted manuscripts
-from pdf import extract_content
-
-def process_submission(pdf_path):
-    content = extract_content(pdf_path, format='structured')
-    
-    # Automatically identify chapters, headings, and metadata
-    chapters = content.sections.filter(tag='chapter')
-    word_count = content.statistics['words']
-    
-    return {
-        'title': content.metadata['title'],
-        'author': content.metadata['author'],
-        'chapters': len(chapters),
-        'word_count': word_count,
-        'extraction_date': datetime.now()
-    }
-```
-
-Publishers processing high volumes of submissions can automate the initial triage phase, extracting key metadata and generating standardized reports for editorial review.
-
-## Content Management with Supermemory
-
-The **supermemory** skill transforms how publishers manage their content libraries. This skill indexes articles, manuscripts, contracts, and communications, making everything searchable through natural language queries.
-
-Consider a scenario where your editorial team needs to find all contracts signed with authors in the science fiction genre from the past three years. Instead of manually searching file servers, you simply query:
-
-```
-"Find all author agreements for science fiction titles from 2023-2025 with royalty rates above 15%"
-```
-
-The skill returns the specific files, relevant clauses, and key terms—everything your team needs to review or negotiate new deals.
-
-## Streamlining Editorial Reviews
-
-The **docx** skill enables programmatic manipulation of Word documents, which remains the standard format for manuscript exchanges in traditional publishing. You can automate formatting consistency checks, extract revision history, and generate editorial reports without manual intervention.
-
-```javascript
-// Generating an editorial consistency report
-const docx = require('docx');
-
-async function generateEditorialReport(manuscriptPath) {
-    const doc = await docx.load(manuscriptPath);
-    
-    // Analyze heading structure
-    const headingLevels = doc.paragraphs
-        .filter(p => p.style.startsWith('Heading'))
-        .map(p => p.style);
-    
-    // Check for consistent formatting
-    const inconsistencies = doc.detectFormattingIssues({
-        headingFont: 'Times New Roman',
-        bodyFont: 'Georgia',
-        lineSpacing: 1.5
-    });
-    
-    return {
-        'heading_structure': headingLevels,
-        'formatting_issues': inconsistencies,
-        'word_count': doc.statistics.wordCount
-    };
-}
-```
-
-This automation catches formatting problems before they reach the production stage, reducing back-and-forth between authors and editors.
-
-## Presentation and Sales Materials
-
-The **pptx** skill addresses a common publisher need: creating compelling presentations for rights fairs, sales meetings, and author events. Rather than building slides from scratch, you can generate structured presentations based on catalog data or author information.
-
-```javascript
-// Generating a title presentation from metadata
-const pptx = require('pptx');
-
-async function createTitlePresentation(titleData) {
-    const pres = new pptx();
-    
-    // Title slide
-    pres.addSlide({
-        title: titleData.title,
-        subtitle: `By ${titleData.author}`,
-        background: titleData.coverImage
-    });
-    
-    // Synopsis slide
-    pres.addSlide({
-        title: 'Synopsis',
-        content: titleData.synopsis.split('\n')
-    });
-    
-    // Comparable titles
-    pres.addSlide({
-        title: 'Comparable Titles',
-        bullets: titleData.comparables
-    });
-    
-    await pres.writeFile(`presentations/${titleData.isbn}.pptx`);
-}
-```
-
-This approach ensures consistency across your sales materials while dramatically reducing the time required to prepare for events.
-
-## Quality Assurance with Webapp-Testing
-
-Publishers operating digital platforms—whether for e-book previews, content management systems, or reader communities—can leverage the **webapp-testing** skill for quality assurance. This skill uses Playwright to automate browser-based testing, capturing screenshots and monitoring performance.
-
-```python
-# Testing the e-book preview functionality
+# Test the e-book preview page loads correctly
 from playwright.sync_api import sync_playwright
 
 def test_ebook_preview():
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
-        
-        # Navigate to preview page
         page.goto('https://publisher.com/preview/9781234567890')
-        
-        # Verify chapter content renders correctly
-        assert page.locator('.chapter-title').text_content() == 'Chapter One'
-        
-        # Check for rendering errors
-        errors = page.evaluate("""
-            () => Array.from(document.querySelectorAll('.error')).length
-        """)
-        
-        assert errors == 0
-        
-        # Capture screenshot for visual review
+        assert page.locator('.chapter-title').is_visible()
         page.screenshot(path='previews/chapter-one.png')
-        
         browser.close()
 ```
 
-Automated testing catches issues before they affect readers, maintaining your platform's reputation for quality.
+## Getting Started
 
-## Integrating Skills into Your Workflow
+Start with the skill that addresses your largest manual workload. If you process dozens of PDF submissions weekly, `/pdf` pays off immediately. If contract review takes hours per deal, `/docx` and `/pdf` together reduce that significantly.
 
-The real power of SkillsMP emerges when you combine multiple skills into cohesive workflows. A typical publishing workflow might include:
+Skills work best when you give them specific, structured prompts. "Analyze this manuscript" produces less useful output than "Extract the chapter list with word counts from this manuscript."
 
-1. **Ingest** incoming manuscripts using the pdf skill
-2. **Process** contracts and metadata using docx
-3. **Index** all content with supermemory for future reference
-4. **Generate** sales materials with pptx
-5. **Test** your digital platforms using webapp-testing
+---
 
-Each skill operates independently while sharing data through Claude's context management, eliminating the need for custom integrations or middleware.
-
-## Building Custom Skills
-
-When existing skills don't address your specific needs, the **skill-creator** skill guides you through building custom solutions. Publishers have used this capability to create skills that interface with their proprietary editorial systems, automate royalty calculations, or integrate with industry-specific databases.
-
-The skill-creator follows the MCP (Model Context Protocol) standard, ensuring your custom skills maintain compatibility with the broader SkillsMP ecosystem. This means you can install community skills alongside your proprietary tools without conflicts.
-
-## Conclusion
-
-The Claude Skills Marketplace offers publishers practical solutions for common challenges in content management, editorial review, and rights handling. By starting with the pdf, docx, pptx, and supermemory skills, you can immediately reduce manual processing time while improving consistency.
-
-As your familiarity with SkillsMP grows, explore the webapp-testing skill for digital platform quality assurance and the skill-creator for custom workflows. The platform's modular design means you can adopt skills incrementally, building toward a fully automated publishing operation that scales with your needs.
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)*

@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Skill YAML Front Matter Parsing Error Fix"
-description: "A practical guide to resolving YAML front matter parsing errors in Claude skills. Learn common causes, debugging techniques, and solutions for developers."
+description: "Fix YAML front matter parsing errors in Claude skill files: indentation issues, unquoted special characters, duplicate keys, and validation workflows."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, tutorials]
+tags: [claude-code, claude-skills, yaml, debugging]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Skill YAML Front Matter Parsing Error Fix

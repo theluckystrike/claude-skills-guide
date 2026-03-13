@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Frontend Design Skill Review and Tutorial"
-description: "A practical review and tutorial on using Claude's frontend-design skill for building modern user interfaces with React, Vue, and Svelte."
+description: "Practical review and tutorial on Claude's frontend-design skill: React/Vue/Svelte component generation, accessibility, design tokens, and skill integrations."
 date: 2026-03-13
-author: theluckystrike
+categories: [skills, tutorials]
+tags: [claude-code, claude-skills, frontend-design, react]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Frontend Design Skill Review and Tutorial

@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills Context Window Management Best Practices"
-description: "Master context window management for Claude AI skills. Learn practical techniques to optimize token usage, improve responses, and build more efficient AI workflows."
+description: "Practical techniques to manage context windows in Claude AI skill workflows: focused prompts, file references, chunking, and external memory with supermemory."
 date: 2026-03-13
-author: theluckystrike
+categories: [guides, tutorials]
+tags: [claude-code, claude-skills, context-window, token-optimization]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Skills Context Window Management Best Practices

@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude TDD Skill: Test-Driven Development Workflow"
-description: "Master test-driven development with Claude's TDD skill. Learn practical workflows, see real code examples, and integrate testing into your development process."
+description: "Use Claude's TDD skill to guide red-green-refactor cycles, generate meaningful test cases, and keep test coverage growing alongside your codebase."
 date: 2026-03-13
-author: theluckystrike
+categories: [skills, tutorials]
+tags: [claude-code, claude-skills, tdd, testing]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude TDD Skill: Test-Driven Development Workflow
