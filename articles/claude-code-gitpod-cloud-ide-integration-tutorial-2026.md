@@ -16,7 +16,7 @@ Running Claude Code inside GitPod gives you AI-assisted development in a fully c
 
 ## Why Combine Claude Code with GitPod
 
-GitPod provides ephemeral, container-based development environments that spin up from GitHub repositories. When you add Claude Code to the mix, every environment automatically includes AI assistance. This approach eliminates the need for team members to install Claude Code locally—they simply open a workspace and start coding with AI help.
+GitPod provides ephemeral, container-based development environments that spin up from GitHub repositories. When you add Claude Code to the mix, every environment automatically includes AI assistance. This approach eliminates the need for team members to install Claude Code locally—they simply open a workspace and start coding with AI help. For a similar approach using Docker-based configurations, see the [devcontainer.json setup guide](/claude-skills-guide/articles/claude-code-dev-containers-devcontainer-json-setup-guide/).
 
 The integration works through GitPod's ability to run commands during workspace initialization. You configure Claude Code as part of your `.gitpod.yml` file, making it available in every new workspace automatically.
 
@@ -133,7 +133,7 @@ Track decisions and context across sessions:
 /supermemory Remember that we chose PostgreSQL over MongoDB for this project due to better relational data handling requirements.
 ```
 
-The supermemory skill maintains project context that persists across workspace restarts, helping teams maintain shared understanding.
+The [supermemory skill maintains project context](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) that persists across workspace restarts, helping teams maintain shared understanding.
 
 ## Optimizing Your GitPod + Claude Code Workflow
 
@@ -197,7 +197,7 @@ Both GitPod and Codespaces support Claude Code integration, giving you flexibili
 
 ## Summary
 
-Integrating Claude Code with GitPod creates a powerful cloud-based development environment with AI assistance built in. The setup takes minutes, and once configured, every team member gets the same AI-powered development experience without local installation overhead. Use the frontend-design skill for UI tasks, tdd for test-driven development, docx and pdf for documentation, xlsx for data work, and supermemory to maintain project context across sessions.
+Integrating Claude Code with GitPod creates a powerful cloud-based development environment with AI assistance built in. The setup takes minutes, and once configured, every team member gets the same AI-powered development experience without local installation overhead. Use the frontend-design skill for UI tasks, tdd for test-driven development, docx and pdf for documentation, xlsx for data work, and supermemory to maintain project context across sessions. To share consistent skill configurations with your team, read [how to share Claude skills across multiple projects](/claude-skills-guide/articles/how-do-i-share-claude-skills-across-multiple-projects/).
 
 Experiment with different skill combinations to find what works best for your workflow. The cloud-based approach means you can access this setup from any machine with a browser.
 

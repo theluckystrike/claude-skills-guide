@@ -73,7 +73,7 @@ After completing projects where you heavily used skills, rate your satisfaction 
 
 Based on typical usage patterns, certain skills demonstrate consistently high efficiency:
 
-The **supermemory** skill excels at retrieval tasks. It quickly surfaces relevant context from your previous conversations, reducing time spent re-explaining requirements. Most users report retrieval times under five seconds for queries spanning months of history.
+The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) excels at retrieval tasks. It quickly surfaces relevant context from your previous conversations, reducing time spent re-explaining requirements. Most users report retrieval times under five seconds for queries spanning months of history.
 
 The **pdf** skill handles document processing with high accuracy. It extracts text, tables, and metadata without requiring you to open documents manually. For workflows involving contracts, reports, or technical documentation, this skill typically reduces task time by 80%.
 
@@ -116,3 +116,10 @@ Start logging your skill usage today. Within weeks, you'll have actionable data 
 ---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Related Reading
+
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Optimize the token consumption metrics that most affect your skill efficiency calculations.
+- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/articles/caching-strategies-for-claude-code-skill-outputs/) — Improve task completion rate and time-to-output metrics by caching frequently used skill results.
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) — When your metrics reveal slow skills, use this guide to diagnose and fix the root cause.
+- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Advanced optimization patterns for engineers who take skill efficiency measurement seriously.

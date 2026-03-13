@@ -66,7 +66,7 @@ Once engineers pass initial orientation, several skills accelerate long-term pro
 - **xlsx**: Handles data analysis tasks for metrics and performance reviews
 - **canvas-design**: Creates visual diagrams for architecture documentation
 
-The `supermemory` skill becomes particularly valuable after the first month. Teams can populate it with meeting notes, architecture decisions, and debugging insights. New engineers joining six months later can search this knowledge base instead of asking the same questions repeatedly.
+The [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) becomes particularly valuable after the first month. Teams can populate it with meeting notes, architecture decisions, and debugging insights. New engineers joining six months later can search this knowledge base instead of asking the same questions repeatedly.
 
 ## Setting Up Skills for Your Team
 
@@ -106,6 +106,11 @@ As your team matures with Claude Code, consider creating custom skills tailored 
 
 Custom skills compound over time. Each new engineer benefits from skills created by previous team members, creating a virtuous cycle of improved onboarding experiences.
 
----
+## Related Reading
+
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Distribute your onboarding skill bundle to new engineers consistently across the whole team.
+- [Claude SuperMemory Skill: Persistent Context Guide 2026](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — Build the team knowledge base that makes self-service onboarding possible for future hires.
+- [Best Claude Skills for Solo Developers and Freelancers](/claude-skills-guide/articles/best-claude-skills-for-solo-developers-and-freelancers/) — The skills new engineers should know before joining team environments.
+- [Claude Skills by Use Case](/claude-skills-guide/use-cases-hub/) — Match skills to the specific technical domains new team members need to learn.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

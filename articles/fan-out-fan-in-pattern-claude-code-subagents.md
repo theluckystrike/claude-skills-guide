@@ -104,7 +104,7 @@ Coordinate the results to generate a unified code review summary with prioritize
 
 ### Batch Document Processing
 
-If you work with document processing pipelines, the pdf skill combined with subagents enables parallel extraction:
+If you work with document processing pipelines, the [pdf skill combined with subagents](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) enables parallel extraction:
 
 - Fan out: Spawn subagents to process individual documents using the pdf skill
 - Fan in: Aggregate extracted text, tables, and metadata into a searchable index
@@ -172,5 +172,12 @@ Combine these skills strategically based on your specific workflow requirements.
 The fan out fan in pattern transforms Claude Code from a sequential task executor into a parallel processing powerhouse. By distributing work across subagents and aggregating results intelligently, you can tackle batch processing, comprehensive analysis, and multi-environment workflows that would be impractical with sequential execution.
 
 Start with small parallel workloads to build intuition, then scale up as you refine your error handling and aggregation logic. The pattern adapts well to various domains—whether you are processing documents with the pdf skill, running tests with the tdd skill, or coordinating complex development workflows.
+
+## Related Reading
+
+- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/) — Complement fan-out/fan-in with shared state coordination patterns for swarms of agents.
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Broader orchestration patterns that build on the fan-out/fan-in foundation.
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) — How subagents communicate during fan-in aggregation phases.
+- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Advanced parallel processing and agent architecture patterns for production use.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

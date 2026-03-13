@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Claude Code Skills for Kubernetes Operator Development"
-description: "Learn how Claude Code skills accelerate Kubernetes operator development with practical examples, code generation, testing workflows, and documentation a..."
+description: "Learn how Claude Code skills accelerate Kubernetes operator development with practical examples, code generation, testing workflows, and documentation auto"
 date: 2026-03-14
-categories: [advanced]
+categories: [development]
 tags: [claude-code, kubernetes, operator-development, devops, go]
 author: "Claude Skills Guide"
 reviewed: true
-score: 9
+score: 
 ---
 
 # Claude Code Skills for Kubernetes Operator Development
@@ -207,3 +207,4 @@ Claude Code skills transform Kubernetes operator development from a manually int
 By integrating these skills into your development pipeline, you ship operators faster with better test coverage and cleaner code. The key is treating Claude as a pair programmer that remembers the boilerplate so you can focus on the business logic that makes your operator valuable.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
