@@ -18,7 +18,7 @@ Managing the context window effectively is one of the most critical skills for d
 
 The context window represents the maximum amount of text Claude can process in a single conversation. This includes your prompts, the AI's responses, and any files or documents you upload. When you exceed this limit, you lose earlier context, which can break continuity and lead to fragmented results.
 
-For example, when working with the **supermemory** skill to manage personal knowledge bases, you'll quickly discover that proper context segmentation prevents information loss across sessions. The skill works best when you provide clear boundaries around what you want remembered versus what should remain transient.
+For example, when working with the [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to manage personal knowledge bases, you'll quickly discover that proper context segmentation prevents information loss across sessions. The skill works best when you provide clear boundaries around what you want remembered versus what should remain transient.
 
 ## Practical Strategies for Context Optimization
 
@@ -35,11 +35,11 @@ The way you structure prompts directly affects token consumption. Instead of dum
 # Focus on the validate_token() function and its error handling
 ```
 
-This approach works exceptionally well with skills like **tdd** where you need focused analysis of specific functions rather than broad codebase reviews.
+This approach works exceptionally well with skills like [**tdd**](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) where you need focused analysis of specific functions rather than broad codebase reviews.
 
 ### 2. Leverage File References Wisely
 
-When using skills such as **pdf** or document processing capabilities, reference specific sections rather than loading entire documents:
+When using skills such as the [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) or document processing capabilities, reference specific sections rather than loading entire documents:
 
 ```python
 # Using the pdf skill effectively

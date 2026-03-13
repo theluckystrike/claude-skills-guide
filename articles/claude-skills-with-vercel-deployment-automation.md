@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Skills with Vercel Deployment Automation"
-description: "Automate Vercel deployments using Claude Code skills — from pre-deployment code review with the tdd skill to post-deployment checks and AI-generated changelogs."
+title: "Claude Skills with Vercel Deployment Automation (2026)"
+description: "Automate Vercel deployments with Claude Code skills: pre-deployment code review, tdd skill checks, post-deployment verification, and AI changelogs."
 date: 2026-03-13
 author: theluckystrike
 ---

@@ -18,14 +18,14 @@ Claude Code skills are `.md` files stored locally at `~/.claude/skills/`. When y
 
 Claude Code ships with a set of official skills that cover common development tasks. These are available by default and don't require manual installation. The primary built-in skills include:
 
-- **pdf** — document text extraction, merging, form filling
+- [**pdf**](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — document text extraction, merging, form filling
 - **docx** — Word document creation and manipulation
 - **pptx** — PowerPoint presentation generation
 - **xlsx** — spreadsheet operations with formula support
-- **tdd** — test-driven development guidance
+- [**tdd**](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — test-driven development guidance
 - **frontend-design** — UI component generation for React, Vue, Svelte
 - **canvas-design** — visual asset generation
-- **supermemory** — persistent knowledge base across sessions
+- [**supermemory**](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — persistent knowledge base across sessions
 
 To see which skills are available in your session, check your `~/.claude/skills/` directory:
 

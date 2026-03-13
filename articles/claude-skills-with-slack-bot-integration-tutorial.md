@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills with Slack Bot Integration Tutorial"
-description: "Build a Slack bot that invokes Claude Code skills on demand, enabling your team to run AI-powered code review, document processing, and memory recall directly from Slack."
+description: "Build a Slack bot that invokes Claude Code skills on demand for AI-powered code review, document processing, and memory recall from Slack."
 date: 2026-03-13
 author: theluckystrike
 ---

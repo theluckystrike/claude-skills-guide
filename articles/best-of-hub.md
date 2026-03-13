@@ -114,6 +114,7 @@ If you're just getting started with skills, these five deliver the highest value
 | [Build Personal AI Assistant with Claude Skills Guide](/claude-skills-guide/articles/build-personal-ai-assistant-with-claude-skills-guide/) | Step-by-step guide to building a personal AI assistant |
 | [Claude Code with Docker Container Skill Setup Guide](/claude-skills-guide/articles/claude-code-with-docker-container-skill-setup-guide/) | Getting Claude Code working with Docker for containerized dev workflows |
 | [Claude Code for Beginners: Complete Getting Started Guide 2026](/claude-skills-guide/articles/claude-code-for-beginners-complete-getting-started-2026/) | The complete 2026 beginner's reference for Claude Code and skills |
+| [Claude Code vs Devin AI Agent: 2026 Comparison](/claude-skills-guide/articles/claude-code-vs-devin-ai-agent-comparison-2026/) | 2026 comparison of Claude Code and Devin for autonomous development tasks |
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills with Linear Project Management Tutorial"
-description: "Learn how to integrate Claude Code skills with Linear's API to automate issue triage, generate technical specs, and enhance your engineering team's project management workflow."
+description: "Integrate Claude Code skills with Linear's API to automate issue triage, generate technical specs, and improve project management workflows."
 date: 2026-03-13
 author: theluckystrike
 ---

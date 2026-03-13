@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude TDD Skill: Test-Driven Development Workflow"
+title: "Claude TDD Skill: Test-Driven Development Guide (2026)"
 description: "Use Claude's TDD skill to guide red-green-refactor cycles, generate meaningful test cases, and keep test coverage growing alongside your codebase."
 date: 2026-03-13
 categories: [skills, tutorials]

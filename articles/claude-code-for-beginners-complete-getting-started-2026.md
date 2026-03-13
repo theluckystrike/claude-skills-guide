@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Beginners: Complete Getting Started Guide 2026"
+title: "Claude Code for Beginners: Complete Starter Guide 2026"
 description: "A step-by-step beginner guide to Claude Code in 2026 — installation, first session, understanding skills, and building your first AI-assisted workflow."
 date: 2026-03-13
 author: theluckystrike

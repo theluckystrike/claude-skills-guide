@@ -94,6 +94,7 @@ When building custom skills, the path is: understand the [skill.md format](/clau
 | [Claude Code vs Gemini CLI for Developers 2026](/claude-skills-guide/articles/claude-code-vs-gemini-cli-for-developers-2026/) | Comparing Claude Code and Google Gemini CLI for developer workflows |
 | [Claude Code vs OpenAI Codex CLI Comparison 2026](/claude-skills-guide/articles/claude-code-vs-openai-codex-cli-comparison-2026/) | Head-to-head comparison of Claude Code and OpenAI Codex CLI |
 | [Claude Skills vs Langflow for Building AI Agents](/claude-skills-guide/articles/claude-skills-vs-langflow-for-building-ai-agents/) | Comparing Claude skills and Langflow as AI agent frameworks |
+| [Claude Code vs Devin AI Agent: 2026 Comparison](/claude-skills-guide/articles/claude-code-vs-devin-ai-agent-comparison-2026/) | Side-by-side comparison of Claude Code and Devin for autonomous coding tasks |
 
 ---
 
