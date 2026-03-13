@@ -127,4 +127,13 @@ Both tools improve developer productivity. Claude Code's skill system provides d
 
 For developers who want the best of both worlds, using Claude Code for terminal tasks and Cursor for quick edits works well. The tools complement rather than replace each other in a mature development workflow.
 
+---
+
+## Related Reading
+
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

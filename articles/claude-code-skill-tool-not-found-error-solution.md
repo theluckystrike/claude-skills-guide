@@ -113,4 +113,13 @@ Keep these concerns separate:
 
 ---
 
+## Related Reading
+
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Complete skill.md format reference
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
+---
+
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*

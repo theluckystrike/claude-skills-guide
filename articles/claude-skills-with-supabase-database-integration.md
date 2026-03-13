@@ -186,4 +186,13 @@ and thread_id not in (select distinct thread_id from pinned_threads);
 
 Start small—connect a single skill like **xlsx** or **docx** to Supabase for document metadata storage, then expand into more complex patterns as you build confidence. The combination of Claude's AI capabilities with Supabase's backend infrastructure opens up possibilities for truly intelligent, data-aware automation.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

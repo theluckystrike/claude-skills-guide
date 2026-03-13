@@ -221,4 +221,13 @@ This enables one-command execution of complex reasoning workflows.
 
 Extended thinking in Claude Code reaches its full potential through skill integration. The supermemory skill preserves context, pdf and xlsx skills provide data, tdd structures your reasoning, and visual skills add clarity. Start with the core skills, then expand based on your specific workflow needs. Each skill you add compounds the reasoning capabilities of the others.
 
+---
+
+## Related Reading
+
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

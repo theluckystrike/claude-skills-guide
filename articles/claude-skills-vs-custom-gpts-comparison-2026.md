@@ -140,4 +140,13 @@ The **algorithmic-art** skill and **canvas-design** skill demonstrate another ad
 
 Claude skills and Custom GPTs serve different roles in 2026. Skills provide deep IDE integration, file manipulation, and tool execution. GPTs offer simplicity and shareability for knowledge-based applications. For developers building, testing, and deploying software, Claude skills deliver substantially more value through direct environment access and persistent context.
 
+---
+
+## Related Reading
+
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

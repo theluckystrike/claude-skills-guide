@@ -94,4 +94,13 @@ The native **tdd** skill helps you write tests from the ground up. For browser-b
 
 When creating presentations, the community **pptx** skill offers features tailored for slide generation. The **docx** skill handles Word document creation. Combined with native skills for PDF output, you can build content pipelines that produce multiple output formats from a single source.
 
+---
+
+## Related Reading
+
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

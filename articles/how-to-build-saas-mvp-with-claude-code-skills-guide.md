@@ -158,4 +158,13 @@ The skill system is modular. Add capabilities when your product requirements dem
 
 Building a SaaS MVP is a sprint, not a marathon. Claude Code skills eliminate busywork across the entire stack, letting you ship faster with confidence. Focus on your unique value proposition—let the skills handle the scaffolding.
 
+---
+
+## Related Reading
+
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

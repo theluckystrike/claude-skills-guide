@@ -144,4 +144,13 @@ Many developers in 2026 use both tools strategically. Claude Code handles local 
 
 The decision ultimately depends on where you spend most of your development time and how much customization you need. Claude Code rewards investment in its skill ecosystem with increasingly automated workflows. Replit Agent rewards teams wanting minimal setup with immediate productivity.
 
+---
+
+## Related Reading
+
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

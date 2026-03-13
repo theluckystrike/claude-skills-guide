@@ -212,4 +212,13 @@ Automating client reports with Claude skills eliminates repetitive manual work w
 
 Start small—automate one client report type, validate it with tests, then expand to your full client roster. The time investment pays back within the first few report cycles.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

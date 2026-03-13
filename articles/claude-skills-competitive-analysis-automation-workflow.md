@@ -208,4 +208,13 @@ Run this weekly or monthly depending on how quickly your market changes. The **s
 
 Automation handles the heavy lifting, but human judgment remains essential for strategic interpretation. Use automated outputs as a starting point, then apply domain expertise to identify implications the system cannot assess—market positioning, brand perception, and emerging competitive threats require contextual understanding beyond data extraction.
 
-## Built by theluckystrike — More at [zovo.one](https://zovo.one)
+## 
+
+---
+
+## Related Reading
+
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

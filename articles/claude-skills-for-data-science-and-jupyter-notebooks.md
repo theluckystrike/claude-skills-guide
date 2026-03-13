@@ -246,4 +246,13 @@ Select skills based on specific needs rather than installing everything at once.
 
 Claude skills for data science and Jupyter notebooks eliminate friction between exploration and production. By automating repetitive tasks, maintaining experiment history, and enabling reproducible workflows, these tools let data scientists focus on extracting insights rather than managing infrastructure.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

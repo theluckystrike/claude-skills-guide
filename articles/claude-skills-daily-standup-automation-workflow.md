@@ -209,4 +209,13 @@ The complete workflow runs in under a minute once configured. Each morning, Clau
 
 This automation works particularly well with teams using the tdd skill, since test-driven development naturally produces well-structured commits that translate into clear progress updates. Pair the two workflows, and your standups become a byproduct of good development practices rather than an extra task.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

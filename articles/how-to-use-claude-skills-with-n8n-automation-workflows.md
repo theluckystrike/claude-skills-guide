@@ -173,4 +173,13 @@ Start small by integrating one skill into an existing n8n workflow. The HTTP Req
 
 As your automation needs grow, layer in additional skills for document processing, testing, design generation, and memory management. The combination of n8n's workflow capabilities with Claude's specialized skills creates a flexible foundation for intelligent process automation.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

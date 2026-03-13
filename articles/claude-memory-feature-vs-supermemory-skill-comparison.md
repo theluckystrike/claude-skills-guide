@@ -133,4 +133,13 @@ However, the built-in memory remains perfect for quick, isolated tasks where you
 
 The SuperMemory skill ultimately proves more valuable for developers who work on complex, long-term projects and want Claude to remember their context across sessions. Combined with other skills like **supermemory**, **tdd**, **frontend-design**, and **pdf**, you can create a powerful, personalized development environment that remembers your preferences and project context.
 
+---
+
+## Related Reading
+
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

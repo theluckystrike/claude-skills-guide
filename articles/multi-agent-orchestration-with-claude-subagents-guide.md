@@ -151,4 +151,13 @@ Invest time in prompt engineering for your orchestration layer. The parent agent
 
 Monitor token usage across agents. Context accumulation can balloon costs and hit window limits. Periodically summarize agent histories and reset contexts for long-running projects.
 
+---
+
+## Related Reading
+
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

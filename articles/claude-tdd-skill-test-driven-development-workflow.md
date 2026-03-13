@@ -121,4 +121,13 @@ The tdd skill transforms test-driven development from a discipline into a natura
 
 Whether you're building a small utility function or a complex system, the tdd skill helps you maintain confidence in your code while keeping development velocity high. The tests you write become documentation, regression protection, and a safety net for future changes—all valuable outcomes from investing time in the test-driven development workflow.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

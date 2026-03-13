@@ -127,4 +127,13 @@ For example, you could develop locally with the **frontend-design** skill to gen
 
 Claude skills offer simplicity and domain expertise with minimal setup. OpenAI Assistants API provides control and persistence for application development. Your choice depends on use case: skills for development productivity and quick tasks, API for scalable production applications.
 
+---
+
+## Related Reading
+
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

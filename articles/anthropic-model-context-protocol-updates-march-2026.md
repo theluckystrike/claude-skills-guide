@@ -178,4 +178,13 @@ The Model Context Protocol March 2026 updates bring meaningful improvements for 
 
 The migration path is smooth for existing deployments, and the performance gains are immediately noticeable. Update your MCP servers to take advantage of these changes and prepare for the upcoming features in future releases.
 
+---
+
+## Related Reading
+
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Where mcp-builder fits in the developer stack
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

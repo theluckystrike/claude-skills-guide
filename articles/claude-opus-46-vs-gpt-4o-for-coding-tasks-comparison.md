@@ -186,4 +186,13 @@ Both models serve coding needs effectively, but Claude Opus 4.6's integration wi
 
 For teams evaluating AI assistants, testing both models with your specific codebase and workflows provides the most accurate comparison. The skill ecosystem around Claude Code offers advantages that compound over time as you develop established patterns for your projects.
 
+---
+
+## Related Reading
+
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
