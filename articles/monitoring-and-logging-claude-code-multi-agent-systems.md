@@ -1,11 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Monitoring and Logging in Claude Code Multi-Agent Systems"
-description: "Implement robust monitoring and logging for Claude Code multi-agent setups. Track agent activities, debug issues, and maintain observability across distributed AI agent workflows."
+description: "Implement robust monitoring and logging for Claude Code multi-agent setups. Track agent activities, debug issues, and maintain observability across distrib"
 date: 2026-03-14
 categories: [monitoring, multi-agent]
 tags: [claude-code, monitoring, logging, multi-agent, observability]
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 
 ---
 
 # Monitoring and Logging in Claude Code Multi-Agent Systems

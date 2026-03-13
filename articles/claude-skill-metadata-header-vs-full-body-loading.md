@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: post
 title: "Claude Skill Metadata Header vs Full Body Loading Explained"
-description: "A comprehensive guide comparing Claude skill metadata header loading versus full body loading, including performance implications, use cases, and best practices for 2026."
+description: "A comprehensive guide comparing Claude skill metadata header loading versus full body loading, including performance implications, use cases, and best p..."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills]
-author: theluckystrike
-reviewed: false
+author: "Claude Skills Guide"
+reviewed: true
 score: 
 ---
 

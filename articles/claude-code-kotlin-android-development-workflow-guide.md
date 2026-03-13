@@ -20,7 +20,7 @@ Before integrating Claude into your Android workflow, ensure you have the necess
 
 Initialize your Android project using the standard Gradle wrapper setup. Create your project structure first, then invite Claude into your development sessions. When working on Kotlin Android projects, having your `build.gradle.kts` files and project structure visible to Claude allows for accurate context-aware suggestions.
 
-## Leveraging Claude Skills for Android Development
+## Claude Skills for Android Development
 
 Claude's skill system extends its capabilities for specific development scenarios. For Android development with Kotlin, several skills prove particularly valuable.
 

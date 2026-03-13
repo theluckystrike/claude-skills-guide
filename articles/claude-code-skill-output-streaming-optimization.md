@@ -3,7 +3,7 @@ layout: post
 title: "Claude Code Skill Output Streaming Optimization"
 description: "Optimize Claude Code skill output streaming for faster perceived response times, reduced latency, and better user experience. Practical patterns for str..."
 date: 2026-03-14
-categories: [advanced]
+categories: [guides]
 tags: [claude-code, claude-skills, streaming, optimization, performance]
 author: "Claude Skills Guide"
 reviewed: true
@@ -57,7 +57,7 @@ The **xlsx** skill handles spreadsheet operations similarly, streaming cell-by-c
 
 For skills that integrate with external services, implement custom streaming handlers that forward responses as they arrive. This is particularly important for API calls where the external service itself supports streaming.
 
-When building skills that call APIs, use the **mcp** skill to establish connections that support streaming responses. Configure your HTTP calls to use chunked transfer encoding, and ensure your skill prompt explicitly instructs Claude to forward chunks immediately rather than buffering.
+When building skills that call external APIs, structure your skill prompt to forward chunks immediately rather than buffering results. Use the Bash tool for HTTP calls with streaming support:
 
 ```
 When receiving streaming responses from external APIs:
