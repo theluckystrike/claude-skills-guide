@@ -4,6 +4,10 @@ title: "Fan-Out Fan-In Pattern with Claude Code Subagents"
 description: "Learn how to implement the fan-out fan-in pattern using Claude Code subagents for parallel task execution and efficient result aggregation."
 date: 2026-03-14
 author: theluckystrike
+categories: [advanced]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Fan-Out Fan-In Pattern with Claude Code Subagents

@@ -5,7 +5,7 @@ description: "A practical guide to organizing Claude Code skills in a monorepo s
 date: 2026-03-14
 author: "Claude Skills Guide"
 tags: [claude-code, claude-skills, monorepo, organization, best-practices]
-categories: [guides, advanced]
+categories: [guides]
 reviewed: true
 score: 9
 ---

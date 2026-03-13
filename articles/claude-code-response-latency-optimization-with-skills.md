@@ -4,6 +4,8 @@ title: "Claude Code Response Latency Optimization with Skills"
 description: "Reduce Claude Code response times by designing efficient skills. Practical patterns for faster skill invocation, optimized prompts, and streamlined tool..."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
 ---

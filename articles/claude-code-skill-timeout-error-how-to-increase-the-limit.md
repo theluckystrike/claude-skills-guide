@@ -4,6 +4,8 @@ title: "Claude Code Skill Timeout Error: How to Increase the Limit"
 description: "A practical guide for developers and power users on resolving timeout errors in Claude Code skills and increasing execution limits."
 date: 2026-03-14
 author: "Claude Skills Guide"
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
 ---

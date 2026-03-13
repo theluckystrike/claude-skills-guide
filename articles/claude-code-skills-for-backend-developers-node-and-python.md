@@ -3,7 +3,7 @@ layout: post
 title: "Claude Code Skills for Backend Developers: Node.js and Pytho"
 description: "A practical guide to Claude Code skills tailored for backend developers working with Node.js and Python. Learn which skills accelerate API development, dat"
 date: 2026-03-14
-categories: [tutorials]
+categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
