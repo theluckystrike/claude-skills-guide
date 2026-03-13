@@ -7,7 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 2
+score: 7
 ---
 
 # Claude Skills Onboarding for New Engineering Team Members
@@ -16,7 +16,7 @@ Integrating new engineers into a development team takes time. Between learning c
 
 ## Why Skills Matter for Onboarding
 
-New engineers often struggle with tribal knowledge—information that exists in Slack threads, outdated wikis, or only in the minds of senior developers. Rather than interrupting teammates every few minutes, engineers can leverage Claude skills to answer common questions independently. Skills like `supermemory` let teams maintain searchable knowledge bases that new hires can query. The `docx` skill helps generate onboarding documentation automatically. The `pdf` skill extracts relevant information from existing technical specs.
+New engineers often struggle with tribal knowledge—information that exists in Slack threads, outdated wikis, or only in the minds of senior developers. Rather than interrupting teammates every few minutes, engineers can use Claude skills to answer common questions independently. Skills like `supermemory` let teams maintain searchable knowledge bases that new hires can query. The `docx` skill helps generate onboarding documentation automatically. The `pdf` skill extracts relevant information from existing technical specs.
 
 The key advantage is consistency. Every new engineer gets access to the same quality of guidance, regardless of which team member is available to help.
 
@@ -37,15 +37,12 @@ The `grep` and `glob` capabilities built into Claude Code complement these skill
 
 New engineers frequently need to document their changes or understand existing documentation. The `docx` skill generates formatted technical documents, while the `pdf` skill extracts text from existing architecture decision records (ADRs) and technical specs.
 
-```javascript
-// Using docx skill to create an onboarding document
-const doc = await docx.create({
-  title: "Database Schema Overview",
-  sections: [
-    { heading: "Users Table", content: schemaInfo },
-    { heading: "Authentication Flow", content: authDocs }
-  ]
-});
+```
+/docx
+Create an onboarding document with:
+- Title: "Database Schema Overview"
+- Section 1: Users Table schema (paste schema here)
+- Section 2: Authentication Flow overview
 ```
 
 ### Testing and Validation
@@ -76,13 +73,7 @@ Implementing a skill-based onboarding workflow requires initial setup but pays d
 2. **Create team-specific prompts**: Wrap common onboarding questions into custom skills that reference internal documentation
 3. **Maintain a skills wiki**: Document which skills solve which problems, reducing discovery friction
 
-```bash
-# Recommended first-day skill installation
-cp skill.md ~/.claude/skills/ supermemory
-cp skill.md ~/.claude/skills/ docx
-cp skill.md ~/.claude/skills/ tdd
-cp skill.md ~/.claude/skills/ codebase-qa
-```
+Skills are plain `.md` files. Built-in skills like `supermemory`, `docx`, `tdd` come pre-installed with Claude Code and require no setup. To verify they are available, start a session and type `/supermemory` or `/tdd`.
 
 ## Measuring Onboarding Efficiency
 
