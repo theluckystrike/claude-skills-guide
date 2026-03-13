@@ -7,7 +7,7 @@ categories: [skills, guides]
 tags: [claude-code, claude-skills, devops, deployment, shell]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 8
 ---
 
 # Best Claude Skills for DevOps and Deployment

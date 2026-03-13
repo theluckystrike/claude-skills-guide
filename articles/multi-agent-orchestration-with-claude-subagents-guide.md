@@ -7,7 +7,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, multi-agent, subagents, orchestration, automation]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # Multi-Agent Orchestration with Claude Subagents Guide

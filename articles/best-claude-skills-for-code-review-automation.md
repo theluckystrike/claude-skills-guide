@@ -7,7 +7,7 @@ categories: [skills, workflows]
 tags: [claude-code, claude-skills, code-review, automation, tdd, supermemory]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # Best Claude Skills for Code Review Automation

@@ -7,7 +7,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills, open-source, contribution]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # How to Contribute Claude Skills to Open Source

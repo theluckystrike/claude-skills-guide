@@ -7,7 +7,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills, team, collaboration]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # How to Share Claude Skills with Your Team

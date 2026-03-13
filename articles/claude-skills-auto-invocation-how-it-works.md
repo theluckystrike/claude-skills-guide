@@ -7,7 +7,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills, auto-invocation]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 8
 ---
 
 # Claude Skills Auto Invocation: How It Works

@@ -7,7 +7,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills, windsurf, developer-tools]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # Claude Code vs Windsurf for AI Development

@@ -7,7 +7,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills, debugging, troubleshooting]
 author: "Claude Skills Guide"
 reviewed: true
-score: 6
+score: 9
 ---
 
 # Claude Code Crashes When Loading Skill: Debug Steps
