@@ -7,7 +7,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, streaming, optimization, performance]
 author: "Claude Skills Guide"
 reviewed: true
-score: 5
+score: 7
 ---
 
 # Claude Code Skill Output Streaming Optimization
@@ -16,7 +16,7 @@ When you invoke a Claude Code skill, the response doesn't always arrive all at o
 
 ## Understanding Claude Code Streaming
 
-Claude Code supports Server-Sent Events (SSE) for streaming responses, which means tokens are delivered to the client as they're generated rather than waiting for the complete response. This creates that satisfying stream of text you see when Claude "thinks" out loud. Your skills can leverage this same streaming behavior to deliver faster perceived response times.
+Claude Code supports Server-Sent Events (SSE) for streaming responses, which means tokens are delivered to the client as they're generated rather than waiting for the complete response. This creates that satisfying stream of text you see when Claude "thinks" out loud. Your skills can use this same streaming behavior to deliver faster perceived response times.
 
 When a skill executes, Claude processes your skill body as a system prompt and generates tokens incrementally. By default, these tokens stream to the connected client automatically. However, there are ways to optimize this behavior for specific use cases.
 

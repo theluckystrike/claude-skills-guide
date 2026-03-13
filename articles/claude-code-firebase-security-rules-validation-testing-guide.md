@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Claude Code Firebase Security Rules Validation Testing Guide"
-description: "Learn how to validate and test Firebase security rules using Claude Code. Practical patterns for writing, testing, and debugging Firestore and Realtime Database rules."
+description: "Learn how to validate and test Firebase security rules using Claude Code. Practical patterns for writing, testing, and debugging Firestore and Realtime ..."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 9
 ---
 
 # Claude Code Firebase Security Rules Validation Testing Guide

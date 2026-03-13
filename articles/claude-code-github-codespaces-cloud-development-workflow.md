@@ -7,7 +7,7 @@ author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, github-codespaces, cloud-dev, devcontainers]
 reviewed: true
-score: 3
+score: 7
 ---
 
 # Claude Code GitHub Codespaces Cloud Development Workflow
@@ -66,7 +66,7 @@ This file provides context to Claude Code for every session, improving the relev
 
 ## Development Workflow with Claude Skills
 
-Claude Code excels when you leverage its skill system. Install relevant skills for your workflow:
+Claude Code excels when you uses its skill system. Install relevant skills for your workflow:
 
 ```bash
 cp skill.md ~/.claude/skills/ tdd
