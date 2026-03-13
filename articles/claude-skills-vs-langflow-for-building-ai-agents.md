@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Skills vs Langflow for Building AI Agents"
-description: "Comparing Claude skills and Langflow for building AI agents in 2026 — covering visual vs code-first approaches, deployment, flexibility, and which platform suits different development teams."
+title: "Claude Skills vs Langflow for Building AI Agents (2026)"
+description: "Claude skills vs Langflow for AI agents: visual vs code-first approaches, deployment, flexibility, and which platform suits your development team."
 date: 2026-03-13
 author: theluckystrike
 ---
