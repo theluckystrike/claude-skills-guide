@@ -1,236 +1,86 @@
 ---
-layout: default
-title: "Why Is My Claude Skill Not Showing Up? Fix Guide"
-description: "Complete fix guide for Claude Code skills not showing up or loading. Covers file location, naming rules, YAML parsing, permissions, and session restart steps."
+layout: post
+title: "Claude Skill Not Showing Up? Fix Guide"
+description: "Skill won't load in Claude Code? This guide covers the most common reasons skills fail to appear and how to resolve each issue quickly."
 date: 2026-03-13
-author: theluckystrike
+categories: [troubleshooting, guides]
+tags: [claude-code, claude-skills, troubleshooting, debug]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
-# Why Is My Claude Skill Not Showing Up? Fix Guide
+When a Claude Code skill fails to appear or respond to its slash command, the issue usually comes from a handful of common causes.
 
-You installed a Claude Code skill, you type `/skill-name`, and nothing happens. No acknowledgment from Claude, no error message, just the same default behavior as without the skill. This guide covers every reason why a Claude Code skill might not show up and gives you an ordered checklist to find and fix the issue.
+## 1. Verify the Skill Is in the Right Directory
 
-## The Short Version
-
-Claude Code skills are `.md` files in `~/.claude/skills/` (global) or `.claude/skills/` (project-local). They show up when:
-
-1. The file exists in the right directory
-2. The filename matches what you typed (case-sensitive)
-3. The YAML front matter is valid
-4. You are using Claude Code CLI (not the browser)
-5. The session was started after the file was placed
-
-If your skill is not showing up, one of these five conditions is not met.
-
-## Check 1: Confirm the Skill File Location
-
-```bash
-# Global skills directory
-ls ~/.claude/skills/
-
-# Project-local skills directory
-ls .claude/skills/ 2>/dev/null || echo "No project-local skills"
-```
-
-The file must be a `.md` file. A skill called `pdf` must exist as `pdf.md`. Not `pdf.txt`, not `pdf`, not `PDF.md`.
-
-**If the directory does not exist:**
-```bash
-mkdir -p ~/.claude/skills
-```
-
-**If the file is missing:**
-```bash
-# Copy from wherever you downloaded it
-cp ~/downloads/tdd.md ~/.claude/skills/tdd.md
-chmod 644 ~/.claude/skills/tdd.md
-```
-
-## Check 2: Confirm the Filename Matches Your Invocation
-
-Skill file lookup is **case-sensitive on Linux** and case-preserving on macOS.
-
-| If you type... | The file must be... |
-|---|---|
-| `/tdd` | `tdd.md` |
-| `/pdf` | `pdf.md` |
-| `/docx` | `docx.md` |
-| `/supermemory` | `supermemory.md` |
-| `/frontend-design` | `frontend-design.md` |
-
-Hyphens are literal — `/frontend-design` does NOT match `frontenddesign.md` or `frontend_design.md`.
-
-```bash
-# Find all skill files and show exact names
-ls -1 ~/.claude/skills/
-```
-
-## Check 3: Verify the YAML Front Matter is Valid
-
-A skill file with broken YAML silently fails to load. The front matter block is the `---` section at the top:
-
-```yaml
----
-description: "What this skill does"
-tools:
-  - Bash
-  - Read
----
-```
-
-**Quick validation:**
-```bash
-python3 << 'EOF'
-import yaml, os
-
-path = os.path.expanduser('~/.claude/skills/tdd.md')
-if not os.path.exists(path):
-    print('FILE NOT FOUND')
-else:
-    content = open(path).read()
-    parts = content.split('---')
-    if len(parts) < 3:
-        print('MISSING FRONT MATTER DELIMITERS')
-    else:
-        try:
-            yaml.safe_load(parts[1])
-            print('YAML OK')
-        except yaml.YAMLError as e:
-            print('YAML ERROR:', e)
-EOF
-```
-
-**Most common YAML mistakes:**
-- Tabs for indentation (must be spaces)
-- Unquoted colons: `description: Handle: this case` (broken)
-- Missing closing `---`
-- Trailing space after `---`
-
-## Check 4: Confirm You Are Using Claude Code CLI
-
-The `/skill-name` invocation syntax is a Claude Code CLI feature. It does not work in:
-
-- claude.ai browser interface
-- The Anthropic API directly
-- Third-party Claude integrations
-
-Check you are running the Claude Code CLI:
-```bash
-which claude
-claude --version
-```
-
-If `claude` is not found:
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-## Check 5: Restart the Session After Adding the Skill
-
-Claude Code reads skill files when a session starts. If you added a skill while a session was already running, it will not show up until you restart.
-
-Exit the current session and start a new one:
-```bash
-# In Claude Code session
-exit
-
-# Start fresh
-claude
-```
-
-Then invoke the skill again.
-
-## Check 6: File Permissions
-
-The skill file must be readable by the user running Claude Code:
+Skills must be placed in `~/.claude/skills/`:
 
 ```bash
 ls -la ~/.claude/skills/
-# Should show: -rw-r--r-- (644) or similar
-
-# Fix if wrong
-chmod 644 ~/.claude/skills/*.md
-chmod 755 ~/.claude/skills/
+ls ~/.claude/skills/ | grep -i "skill-name"
 ```
 
-If files are owned by root (can happen after `sudo claude`):
-```bash
-sudo chown -R $(whoami) ~/.claude/
+## 2. Check the Skill File Format
+
+Skills are plain `.md` files with YAML front matter:
+
+```markdown
+---
+name: frontend-design
+description: Generate UI components from descriptions
+---
+
+# Frontend Design Skill
 ```
 
-## Check 7: Confirm the Skill Is Being Invoked Correctly
+Common mistakes: missing `---` delimiters, invalid YAML, non-UTF-8 characters.
 
-After invoking a skill, immediately ask Claude to confirm it loaded:
+## 3. Confirm the Skill Name and Invocation
 
-```
-/tdd
-Confirm you have loaded the tdd skill. What are your main instructions?
-```
+The slash command must match the `name` field in the skill's front matter (not the filename):
 
-If Claude describes the skill accurately, it loaded. If Claude responds generically without mentioning the skill's content, it did not load.
-
-## Check 8: Look for Conflicting Project vs. Global Skills
-
-If you have both `.claude/skills/tdd.md` (project-local) and `~/.claude/skills/tdd.md` (global), the project-local version wins. If the project-local version is broken or outdated, the global one never loads.
-
-```bash
-# Check if both exist
-ls .claude/skills/tdd.md 2>/dev/null && echo "PROJECT LOCAL EXISTS"
-ls ~/.claude/skills/tdd.md 2>/dev/null && echo "GLOBAL EXISTS"
+```yaml
+name: frontend-design  # You type /frontend-design to invoke this
 ```
 
-If both exist and the project-local version is broken, fix or remove it:
-```bash
-rm .claude/skills/tdd.md   # Remove broken project-local version
-# Claude Code will now fall back to the global version
-```
+## 4. Restart Claude Code
 
-## Check 9: Verify the `supermemory` Skill Specifically
-
-The `supermemory` skill needs a writable storage path. If the storage path is missing or on a read-only volume, `supermemory` may appear to load but not work:
+Claude Code reads the skills directory at startup. Start a fresh session after adding skills:
 
 ```bash
-# Default storage path
-ls ~/.claude-memory/ 2>/dev/null || echo "Memory directory missing"
-
-# Create it if missing
-mkdir -p ~/.claude-memory
+claude
 ```
 
-## Check 10: Check Claude Code Version
+## 5. Check for Conflicting Skill Names
 
-Older versions of Claude Code have skill compatibility limitations:
+If two skill files have the same `name` field, rename one and restart.
+
+## 6. Understand Built-in Skills
+
+The built-in skills — `/pdf`, `/tdd`, `/docx`, `/xlsx`, `/pptx`, `/frontend-design`, `/canvas-design`, `/supermemory`, `/webapp-testing`, `/skill-creator` — do not require external API keys or additional installations.
+
+## 7. Check Permissions
 
 ```bash
-claude --version
-
-# Update if outdated
-npm update -g @anthropic-ai/claude-code
+claude --verbose
+chmod 644 ~/.claude/skills/your-skill.md
 ```
 
-## Full Diagnostic One-Liner
+## Final Checklist
 
-```bash
-python3 << 'EOF'
-import yaml, os, glob
-print("=== Skill Diagnostic ===")
-for path in sorted(glob.glob(os.path.expanduser('~/.claude/skills/*.md'))):
-    name = os.path.basename(path)
-    content = open(path).read()
-    parts = content.split('---')
-    if len(parts) < 3:
-        print(f"  BROKEN (no delimiters): {name}")
-        continue
-    try:
-        yaml.safe_load(parts[1])
-        size = os.path.getsize(path)
-        perms = oct(os.stat(path).st_mode)[-3:]
-        print(f"  OK [{perms}] {size}B: {name}")
-    except yaml.YAMLError as e:
-        print(f"  BROKEN (YAML error): {name} — {e}")
-EOF
-```
+1. Skill file exists in `~/.claude/skills/` (not `~/claude-skills/`)
+2. File has `.md` extension with valid YAML front matter
+3. The `name` field matches what you type after `/`
+4. No duplicate skill names
+5. Fresh session started after adding the skill
 
 ---
+
+## Related Reading
+
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/)
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
