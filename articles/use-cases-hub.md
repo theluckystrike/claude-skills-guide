@@ -151,6 +151,7 @@ Token efficiency matters when running multi-skill sessions. See [Claude Skills T
 | [Building Stateful Agents with Claude Skills: Complete Guide](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) | Architecture patterns for stateful AI agents built on Claude skills |
 | [Claude Code Multi-Agent and Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) | Multi-agent workflows for complex orchestration use cases |
 | [Understanding Claude Code Hooks System: Complete Guide](/claude-skills-guide/articles/understanding-claude-code-hooks-system-complete-guide/) | Using Claude Code hooks to automate actions in your development workflow |
+| [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) | Diagnosing skill performance problems in production environments |
 
 ---
 
