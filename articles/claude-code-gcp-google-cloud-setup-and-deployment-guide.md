@@ -134,8 +134,6 @@ Create a skill at `~/.claude/skills/gcp-static-deploy.md`:
 ```markdown
 ---
 description: "Deploy static site to Google Cloud Storage"
-tools:
-  - Bash
 ---
 
 # GCP Static Deploy Skill
