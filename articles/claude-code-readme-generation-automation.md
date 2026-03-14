@@ -192,4 +192,11 @@ Claude Code README generation automation transforms documentation from a tedious
 
 The skills mentioned throughout this guide—frontend-design, tdd, supermemory, and pdf—each contribute specialized capabilities that enhance the documentation pipeline. Start with basic structure generation, then progressively add layers of sophistication as your documentation needs grow.
 
+## Related Reading
+
+- [Claude Code Changelog Generation Workflow](/claude-skills-guide/claude-code-changelog-generation-workflow/) — Changelogs complement README documentation
+- [Claude Code Boilerplate Generation Workflow](/claude-skills-guide/claude-code-boilerplate-generation-workflow/) — README generation is often part of project scaffolding
+- [Best Way to Write CLAUDE.md File for Your Project](/claude-skills-guide/best-way-to-write-claudemd-file-for-your-project/) — CLAUDE.md and README serve different but complementary purposes
+- [Is Claude Code Worth It for Solo Developers and Freelancers](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/) — Documentation generation is where solo devs see big time savings
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -218,4 +218,11 @@ Running this skill against a new API endpoint produces a testable collection in 
 
 Combine Postman collection automation with documentation generation skills to create a complete API development workflow. Your collections become living documents that reflect your actual codebase.
 
+## Related Reading
+
+- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-openapi-guide/) — OpenAPI and Postman collections both document APIs
+- [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/) — Postman collections test REST API designs
+- [Claude Code API Contract Testing Guide](/claude-skills-guide/claude-code-api-contract-testing-guide/) — Postman automates API contract testing
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — API workflow automation guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
