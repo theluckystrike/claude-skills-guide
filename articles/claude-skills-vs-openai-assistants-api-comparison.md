@@ -83,7 +83,7 @@ The OpenAI Assistants API is a hosted API product that lets you create persisten
 
 - You are building developer-facing automation that runs in a coding environment
 - You want agent definitions that live in your repository and are version-controlled
-- You are composing multi-step development workflows (CI, testing with the [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/), deployment, code review)
+- You are composing multi-step development workflows (CI, testing with the [`/tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/), deployment, code review)
 - Portability and avoiding vendor lock-in are priorities
 - Your team already uses Claude Code
 
@@ -106,8 +106,8 @@ If you are a developer trying to automate your own workflow and want your agent 
 
 ## Related Reading
 
-- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Understand what the Claude skills ecosystem includes before deciding between skills and the OpenAI Assistants API
-- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — The trade-offs between reusable skill definitions and ad-hoc prompting are closely related to the comparison with Assistants API threads
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Token cost management is a key factor when comparing Claude skills to Assistants API pricing at scale
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Understand what the Claude skills ecosystem includes before deciding between skills and the OpenAI Assistants API
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — The trade-offs between reusable skill definitions and ad-hoc prompting are closely related to the comparison with Assistants API threads
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Token cost management is a key factor when comparing Claude skills to Assistants API pricing at scale
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -57,7 +57,7 @@ For Gradle conversions, specify the output format:
 Convert the above to Gradle dependencies with implementation and testImplementation configurations
 ```
 
-When dealing with dependencies not in public repositories, you have two options: publish to your internal repository or use file dependencies during the transition period. [The supermemory skill helps track these custom dependencies across migration phases](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/).
+When dealing with dependencies not in public repositories, you have two options: publish to your internal repository or use file dependencies during the transition period. [The supermemory skill helps track these custom dependencies across migration phases](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/).
 
 ## Mapping Ant Tasks to Maven Plugins
 
@@ -117,7 +117,7 @@ Create three Maven profiles for dev, staging, and production environments with t
 
 ## Validating Build Parity
 
-After migration, you must verify that Maven or Gradle produces identical outputs. [The tdd skill helps create validation tests](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/), though you might also compare artifacts directly.
+After migration, you must verify that Maven or Gradle produces identical outputs. [The tdd skill helps create validation tests](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/), though you might also compare artifacts directly.
 
 Build the same artifact with both systems during transition:
 
@@ -210,13 +210,13 @@ Several issues frequently cause migration failures:
 
 Migrating from Ant to Maven or Gradle requires careful analysis and systematic conversion. Claude Code accelerates this process through intelligent file parsing, configuration generation, and build comparison. The key is treating migration as a multi-phase project: inventory first, then map, configure, wrap complex tasks, and validate thoroughly.
 
-For teams managing this transition, consider [creating a reusable migration skill that captures your organization](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)'s specific patterns. The initial investment in automation pays dividends across multiple projects.
+For teams managing this transition, consider [creating a reusable migration skill that captures your organization](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)'s specific patterns. The initial investment in automation pays dividends across multiple projects.
 
 ## Related Reading
 
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -16,7 +16,7 @@ When working with Claude Code skills like `frontend-design`, `pdf`, `tdd`, or `s
 
 ## Understanding Timeout Errors in Claude Code Skills
 
-[Timeouts in Claude Code occur](/claude-skills-guide/articles/claude-code-skill-memory-limit-exceeded-process-killed-fix/) to generate. This can happen when:
+[Timeouts in Claude Code occur](/claude-skills-guide/claude-code-skill-memory-limit-exceeded-process-killed-fix/) to generate. This can happen when:
 
 - Processing very large files with the `/pdf` skill
 - Generating comprehensive test suites with `/tdd` across a large codebase
@@ -27,7 +27,7 @@ There is no `--timeout` flag for the `claude` CLI, no `skillDefaults` configurat
 
 ## How to Reduce Timeout Frequency
 
-The [break large tasks into smaller pieces](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/) into smaller pieces so each individual request completes faster.
+The [break large tasks into smaller pieces](/claude-skills-guide/claude-skills-context-window-management-best-practices/) into smaller pieces so each individual request completes faster.
 
 ### Break Large Documents Into Sections
 
@@ -102,7 +102,7 @@ This approach produces better-focused tests and avoids timeout issues.
 
 ## Summary
 
-[Timeout errors reflect the size of the request](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/), not a configurable limit. The practical solution is:
+[Timeout errors reflect the size of the request](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/), not a configurable limit. The practical solution is:
 
 1. Break large tasks into smaller, scoped requests
 2. Work module-by-module or section-by-section
@@ -110,9 +110,9 @@ This approach produces better-focused tests and avoids timeout issues.
 
 ## Related Reading
 
-- [Claude Code Skill Exceeded Maximum Output Length Error Fix](/claude-skills-guide/articles/claude-code-skill-exceeded-maximum-output-length-error-fix/) — Handle output length limits alongside timeout constraints for large operations
-- [Claude Skill Token Usage Profiling and Optimization](/claude-skills-guide/articles/claude-skill-token-usage-profiling-and-optimization/) — Reduce request size to avoid timeout errors through token optimization
-- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) — Address slow skill performance before it escalates to timeout failures
+- [Claude Code Skill Exceeded Maximum Output Length Error Fix](/claude-skills-guide/claude-code-skill-exceeded-maximum-output-length-error-fix/) — Handle output length limits alongside timeout constraints for large operations
+- [Claude Skill Token Usage Profiling and Optimization](/claude-skills-guide/claude-skill-token-usage-profiling-and-optimization/) — Reduce request size to avoid timeout errors through token optimization
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/) — Address slow skill performance before it escalates to timeout failures
 - [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions to timeout, performance, and resource limit problems
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

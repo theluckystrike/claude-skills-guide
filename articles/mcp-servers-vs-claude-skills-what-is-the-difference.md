@@ -58,7 +58,7 @@ MCP servers are infrastructure. They are running processes, configured in Claude
 
 ## What Is a Claude Skill?
 
-A Claude skill is a file-based definition of how Claude should approach a specific task or workflow. Skills are typically [markdown files (`.md`)](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) stored in a `.claude/skills/` directory in your project or home directory.
+A Claude skill is a file-based definition of how Claude should approach a specific task or workflow. Skills are typically [markdown files (`.md`)](/claude-skills-guide/skill-md-file-format-explained-with-examples/) stored in a `.claude/skills/` directory in your project or home directory.
 
 A skill might specify:
 - The objective of the task ("generate a pull request summary")
@@ -124,7 +124,7 @@ They do not. Skills describe behavior; MCP servers provide capabilities. You nee
 Not necessarily. Many useful MCP servers already exist (GitHub, filesystem, databases, browsers). You might only need to write a skill to use them effectively. Custom MCP servers make sense when you need to expose a proprietary internal API.
 
 **"Skills replace system prompts."**
-Skills can replace repeated system prompt patterns, but they are more structured and composable than raw system prompts. Skills can call other skills (see [auto-invocation](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/)), which system prompts cannot do cleanly.
+Skills can replace repeated system prompt patterns, but they are more structured and composable than raw system prompts. Skills can call other skills (see [auto-invocation](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/)), which system prompts cannot do cleanly.
 
 **"MCP servers are only for Claude Code."**
 No — MCP is an open protocol. Other tools and AI systems can implement MCP clients and benefit from the same server ecosystem.
@@ -156,8 +156,8 @@ The Claude skills ecosystem grows in value as you add more MCP servers, because 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — A practical guide to the skills worth combining with MCP servers in a production Claude Code workflow
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How Claude decides to invoke a skill automatically is relevant when designing MCP server + skill integrations that should trigger without manual invocation
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Skills that orchestrate multiple MCP server calls can accumulate context quickly; this guide covers how to keep combined workflows efficient
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — A practical guide to the skills worth combining with MCP servers in a production Claude Code workflow
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How Claude decides to invoke a skill automatically is relevant when designing MCP server + skill integrations that should trigger without manual invocation
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Skills that orchestrate multiple MCP server calls can accumulate context quickly; this guide covers how to keep combined workflows efficient
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

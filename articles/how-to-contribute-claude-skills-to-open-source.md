@@ -16,7 +16,7 @@ Claude Code skills are `.md` files — plain Markdown with YAML front matter. Th
 
 ## Understanding Claude Skills Architecture
 
-A Claude skill is a single Markdown file. Claude reads it when you invoke `/skill-name` and follows the instructions inside. There's no build step, no compiled code, and no special runtime — just the `.md` file. The skill.md format is central to this—for a complete walkthrough of how it works, see [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/).
+A Claude skill is a single Markdown file. Claude reads it when you invoke `/skill-name` and follows the instructions inside. There's no build step, no compiled code, and no special runtime — just the `.md` file. The skill.md format is central to this—for a complete walkthrough of how it works, see [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/).
 
 ```markdown
 ---
@@ -52,7 +52,7 @@ Before submitting, do these checks:
 
 **Write a clear description**: The `description` field is what users see when browsing skills. Make it specific: "Add text watermarks to PDF documents" beats "PDF helper".
 
-For guidance on writing the actual skill.md file, see [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/).
+For guidance on writing the actual skill.md file, see [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/).
 
 ## Choosing the Right Repository
 
@@ -80,7 +80,7 @@ Structure your skill's Markdown body to answer the questions users have:
 
 Keep instructions concrete. Instead of "handle errors appropriately," write "if the PDF is encrypted, Claude will prompt you for a password before proceeding."
 
-For a practical look at what the pdf skill can do that your contribution might build on, see [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/).
+For a practical look at what the pdf skill can do that your contribution might build on, see [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/).
 
 ## Submitting Your Contribution
 
@@ -97,7 +97,7 @@ In the PR description, include:
 
 Respond to reviewer feedback. Maintainers may ask for clearer wording, different examples, or adjustments to the front matter format.
 
-It also helps to understand the difference between official and community skill expectations before you submit—see [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) to calibrate the quality bar appropriately.
+It also helps to understand the difference between official and community skill expectations before you submit—see [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) to calibrate the quality bar appropriately.
 
 ## Maintaining Your Contribution
 
@@ -109,8 +109,8 @@ List your skill in community directories or forums. Skills gain adoption when pe
 
 ## Related Reading
 
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — The technical foundation for building any skill
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Deep dive into the format your contribution must follow
-- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Understand the ecosystem you're contributing to
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — The technical foundation for building any skill
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — Deep dive into the format your contribution must follow
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Understand the ecosystem you're contributing to
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*

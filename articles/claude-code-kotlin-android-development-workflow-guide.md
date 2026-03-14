@@ -26,7 +26,7 @@ Claude's skill system extends its capabilities for specific development scenario
 
 ### The TDD Skill for Android
 
-The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) transforms how you approach Android development. Activate it in your Claude session:
+The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) transforms how you approach Android development. Activate it in your Claude session:
 
 ```
 /tdd
@@ -158,7 +158,7 @@ fun `should show error when user not found`() = runTest {
 
 ## Memory and Knowledge Management
 
-For ongoing Android projects, consider integrating [`supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to maintain project context across sessions:
+For ongoing Android projects, consider integrating [`supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) to maintain project context across sessions:
 
 ```
 /supermemory
@@ -205,8 +205,8 @@ Experiment with different skill combinations to find what works best for your sp
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The tdd skill drives the test-first mobile development pattern
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — UI skills for building polished Android interfaces with Claude Code
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Auto-invoke skills for Kotlin testing and UI generation automatically
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd skill drives the test-first mobile development pattern
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — UI skills for building polished Android interfaces with Claude Code
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-invoke skills for Kotlin testing and UI generation automatically
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

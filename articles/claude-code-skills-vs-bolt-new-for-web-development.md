@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills, bolt-new, comparison, web-development]
 
 # Claude Code Skills vs Bolt.new for Web Development
 
-Bolt.new and Claude Code with skills are two very different approaches to AI-assisted [web development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/). Bolt.new is designed to get you from idea to deployed web app in minutes. Claude Code with skills is designed to assist professional developers across the full software development lifecycle. Here is how to choose between them.
+Bolt.new and Claude Code with skills are two very different approaches to AI-assisted [web development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/). Bolt.new is designed to get you from idea to deployed web app in minutes. Claude Code with skills is designed to assist professional developers across the full software development lifecycle. Here is how to choose between them.
 
 ## What Each Tool Is
 
@@ -114,8 +114,8 @@ Many experienced developers use both: Bolt.new to generate a rough scaffold they
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — The specific frontend skills (frontend-design, webapp-testing) that make Claude Code competitive with visual tools like Bolt.new
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — A comprehensive overview of the skills ecosystem that powers Claude Code's advantage for production web development
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understanding how Claude Code applies frontend skills automatically helps you get the most from it compared to manual tools like Bolt.new
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — The specific frontend skills (frontend-design, webapp-testing) that make Claude Code competitive with visual tools like Bolt.new
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — A comprehensive overview of the skills ecosystem that powers Claude Code's advantage for production web development
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understanding how Claude Code applies frontend skills automatically helps you get the most from it compared to manual tools like Bolt.new
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

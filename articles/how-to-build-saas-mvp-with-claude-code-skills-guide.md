@@ -18,7 +18,7 @@ Building a SaaS MVP requires speed, reliability, and the right toolchain. Claude
 
 Before writing code, define your core feature set. A typical SaaS MVP needs user authentication, a database, API endpoints, and a frontend interface. Claude Code skills handle the repetitive parts of each layer, letting you focus on business logic.
 
-The [`/supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) helps you organize research, competitor analysis, and feature requirements. Use it to maintain a searchable knowledge base of your product decisions:
+The [`/supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) helps you organize research, competitor analysis, and feature requirements. Use it to maintain a searchable knowledge base of your product decisions:
 
 ```
 /supermemory
@@ -53,7 +53,7 @@ Pair this with the `/canvas-design` skill if you need mockups or promotional gra
 
 ## Backend and Database Setup
 
-For backend logic, the [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) proves invaluable. Write your test cases first, then implement the feature:
+For backend logic, the [`/tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) proves invaluable. Write your test cases first, then implement the feature:
 
 ```
 /tdd
@@ -88,7 +88,7 @@ def test_duplicate_email_raises_error():
 
 ## PDF Generation and Document Handling
 
-SaaS products often need PDF functionality: invoices, reports, contracts, or exports. The [`/pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) handles both reading and creating PDFs:
+SaaS products often need PDF functionality: invoices, reports, contracts, or exports. The [`/pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) handles both reading and creating PDFs:
 
 ```
 /pdf
@@ -202,9 +202,9 @@ Building a SaaS MVP is a sprint, not a marathon. Claude Code skills eliminate bu
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) - Top frontend skills with examples
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) - Broader developer skill overview
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) - How skills activate automatically
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) - Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) - Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) - How skills activate automatically
 
 
 Built by theluckystrike - More at [zovo.one](https://zovo.one)

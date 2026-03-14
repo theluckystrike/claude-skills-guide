@@ -163,9 +163,9 @@ Once your basic CSP is working, progressively harden it:
 
 Several Claude skills can assist with CSP management:
 
-- The [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) helps you write tests that verify CSP headers are correctly applied
+- The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write tests that verify CSP headers are correctly applied
 - The **frontend-design** skill can audit your frontend code for CSP compliance
-- Use [**supermemory**](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to maintain a record of approved domains and their purposes
+- Use [**supermemory**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) to maintain a record of approved domains and their purposes
 - The **xlsx** skill helps you track CSP violations across different environments
 
 ## Common CSP Pitfalls
@@ -186,8 +186,8 @@ Remember that CSP is not a one-time configuration—it requires ongoing maintena
 
 ## Related Reading
 
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/articles/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise security framework patterns that complement CSP implementation
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Developer skills for building and testing security configurations
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Efficiently generate and iterate on security policy configurations
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise security framework patterns that complement CSP implementation
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills for building and testing security configurations
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Efficiently generate and iterate on security policy configurations
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

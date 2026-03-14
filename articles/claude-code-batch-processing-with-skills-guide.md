@@ -12,7 +12,7 @@ score: 9
 
 # Claude Code Batch Processing with Skills Guide
 
-Claude Code skills transform how developers handle repetitive tasks. Instead of processing files one at a time, you can chain skills together to handle batch operations across entire directories. This guide shows you how to build efficient batch processing workflows using Claude skills. For multi-agent approaches to parallel workloads, see [fan-out fan-in pattern with Claude Code subagents](/claude-skills-guide/articles/fan-out-fan-in-pattern-claude-code-subagents/).
+Claude Code skills transform how developers handle repetitive tasks. Instead of processing files one at a time, you can chain skills together to handle batch operations across entire directories. This guide shows you how to build efficient batch processing workflows using Claude skills. For multi-agent approaches to parallel workloads, see [fan-out fan-in pattern with Claude Code subagents](/claude-skills-guide/fan-out-fan-in-pattern-claude-code-subagents/).
 
 ## How Batch Processing Works with Skills
 
@@ -140,7 +140,7 @@ This processes multiple component files and aggregates the documentation into a 
 
 ## Memory-Augmented Batch Processing
 
-The [supermemory skill enhances batch processing](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) by maintaining context across iterations. When processing related files, this prevents redundant work:
+The [supermemory skill enhances batch processing](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) by maintaining context across iterations. When processing related files, this prevents redundant work:
 
 ```
 /supermemory
@@ -200,9 +200,9 @@ Claude Code skills combined with shell scripting create powerful batch processin
 
 ## Related Reading
 
-- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/articles/claude-code-agent-pipeline-sequential-vs-parallel/) — Understand when to run batch jobs sequentially versus in parallel for maximum throughput
-- [Rate Limit Management for Claude Code Skill-Intensive Workflows](/claude-skills-guide/articles/rate-limit-management-claude-code-skill-intensive-workflows/) — Avoid hitting API rate limits when running large batch processing jobs
-- [Fan-Out Fan-In Pattern with Claude Code Subagents](/claude-skills-guide/articles/fan-out-fan-in-pattern-claude-code-subagents/) — Distribute batch workloads across multiple subagents and collect results
+- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) — Understand when to run batch jobs sequentially versus in parallel for maximum throughput
+- [Rate Limit Management for Claude Code Skill-Intensive Workflows](/claude-skills-guide/rate-limit-management-claude-code-skill-intensive-workflows/) — Avoid hitting API rate limits when running large batch processing jobs
+- [Fan-Out Fan-In Pattern with Claude Code Subagents](/claude-skills-guide/fan-out-fan-in-pattern-claude-code-subagents/) — Distribute batch workloads across multiple subagents and collect results
 - [Claude Skills Hub](/claude-skills-guide/workflows-hub/) — Explore automation workflows and batch processing patterns with Claude Code
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

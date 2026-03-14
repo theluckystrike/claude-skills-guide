@@ -153,7 +153,7 @@ def calculate_priority(issue_data):
 
 ## Using supermemory for Pattern Tracking
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) tracks historical patterns across triage sessions. Invoke it to record what you learn:
+The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) tracks historical patterns across triage sessions. Invoke it to record what you learn:
 
 ```
 /supermemory store: issues mentioning "authentication" are usually assigned to @sarah - she owns the auth module
@@ -185,7 +185,7 @@ Are any of these duplicates? If so, which one should we close as a duplicate of 
 
 ## Skills Worth Adding to Your Triage Workflow
 
-- [**tdd**](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — When issues describe desired behavior, use `/tdd` to generate test cases that capture the expected functionality
+- [**tdd**](/claude-skills-guide/best-claude-skills-for-developers-2026/) — When issues describe desired behavior, use `/tdd` to generate test cases that capture the expected functionality
 - **webapp-testing** — For UI bug reports, use `/webapp-testing` to attempt reproducing the described behavior against a local dev server
 - **supermemory** — Maintains ongoing context about issue patterns, module owners, and historical resolution times
 
@@ -212,9 +212,9 @@ The initial investment pays dividends as your issue queue grows. What once requi
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — A curated overview of the highest-impact skills for professional developers, including triage, review, and testing workflows
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — How Claude skills integrate with CI/CD pipelines, infrastructure automation, and deployment processes
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Practical techniques for keeping triage and automation workflows efficient without exceeding token budgets
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — A curated overview of the highest-impact skills for professional developers, including triage, review, and testing workflows
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — How Claude skills integrate with CI/CD pipelines, infrastructure automation, and deployment processes
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Practical techniques for keeping triage and automation workflows efficient without exceeding token budgets
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

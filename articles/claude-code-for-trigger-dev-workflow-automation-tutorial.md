@@ -24,7 +24,7 @@ cd my-workflow-project
 npm install @trigger.dev/core @trigger.dev/github
 ```
 
-With your project ready, invoke Claude Code and load relevant skills for this workflow-heavy development environment. The [tdd skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) proves invaluable for writing tests alongside your workflow definitions.
+With your project ready, invoke Claude Code and load relevant skills for this workflow-heavy development environment. The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) proves invaluable for writing tests alongside your workflow definitions.
 
 ## Automating Workflow Creation
 
@@ -73,7 +73,7 @@ export const issueCreated = createTrigger({
 });
 ```
 
-To generate similar workflows faster, [create a custom Claude Code skill that understands Trigger.dev](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)'s API patterns. Place this skill in your `~/.claude/skills` directory:
+To generate similar workflows faster, [create a custom Claude Code skill that understands Trigger.dev](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)'s API patterns. Place this skill in your `~/.claude/skills` directory:
 
 ```markdown
 ---
@@ -166,7 +166,7 @@ The **docx** skill works similarly for Word documents, useful when sharing workf
 
 ## Maintaining Context with supermemory
 
-Complex Trigger.dev projects involve numerous workflows, secrets, and configurations. [The **supermemory** skill provides persistent context across sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/):
+Complex Trigger.dev projects involve numerous workflows, secrets, and configurations. [The **supermemory** skill provides persistent context across sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/):
 
 ```bash
 /supermemory
@@ -272,9 +272,9 @@ Claude Code skills significantly enhance Trigger.dev development through automat
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [Claude Skills Serverless Function Development Workflow](/claude-skills-guide/articles/claude-skills-serverless-function-development-workflow/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [Claude Skills Serverless Function Development Workflow](/claude-skills-guide/claude-skills-serverless-function-development-workflow/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

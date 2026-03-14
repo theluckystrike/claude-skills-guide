@@ -76,7 +76,7 @@ Skills do not configure which tools Claude can use. If Claude cannot use a speci
 
 ### External tool dependencies (pdf, docx skills)
 
-The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/), `docx` skill, and similar document-processing skills require external binaries. These are separate from Claude Code's built-in tools.
+The [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/), `docx` skill, and similar document-processing skills require external binaries. These are separate from Claude Code's built-in tools.
 
 **For the `pdf` skill:**
 ```bash
@@ -95,7 +95,7 @@ When the external binary is missing, the skill loads but the tool call fails wit
 
 ## The `supermemory` Skill: Storage Issues
 
-The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) writes session memory to disk. If the storage path is on a read-only filesystem, writes fail. Fix this by explicitly directing the skill to a writable path:
+The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) writes session memory to disk. If the storage path is on a read-only filesystem, writes fail. Fix this by explicitly directing the skill to a writable path:
 
 ```
 /supermemory
@@ -110,7 +110,7 @@ mkdir -p ~/.claude-memory
 
 ## The `frontend-design` Skill: Missing Linter Tools
 
-The [`frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) optionally calls ESLint and Prettier for output validation. If these are not installed in your project, the validation step produces a tool-not-found error.
+The [`frontend-design` skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) optionally calls ESLint and Prettier for output validation. If these are not installed in your project, the validation step produces a tool-not-found error.
 
 ```bash
 # Install project-local (preferred)
@@ -170,8 +170,8 @@ If the stripped skill works but the original does not, a tool declaration in the
 
 ## Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The authoritative reference for the `tools` field and all other YAML front matter fields in skill files
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — A hands-on walkthrough for writing skill files that correctly declare their tool dependencies
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — How skill design affects token consumption and API costs
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — The authoritative reference for the `tools` field and all other YAML front matter fields in skill files
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — A hands-on walkthrough for writing skill files that correctly declare their tool dependencies
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — How skill design affects token consumption and API costs
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

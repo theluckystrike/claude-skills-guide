@@ -97,7 +97,7 @@ which pdftotext || brew list poppler
 
 ### 4. Empty or Invalid Context
 
-[Skills that rely on conversation context can fail silently](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/) when that context is lost or corrupted. The `supermemory` skill is particularly vulnerable—if the memory store is corrupted or inaccessible, it may return empty results without indicating an error.
+[Skills that rely on conversation context can fail silently](/claude-skills-guide/claude-skills-context-window-management-best-practices/) when that context is lost or corrupted. The `supermemory` skill is particularly vulnerable—if the memory store is corrupted or inaccessible, it may return empty results without indicating an error.
 
 Try starting a fresh session and invoking the skill again. If it works in a new session, the issue was likely context-related.
 
@@ -127,7 +127,7 @@ This exposes the underlying tool invocations, helping you identify where executi
 
 ### Isolate the Skill
 
-[Create a minimal reproduction of the failing behavior](/claude-skills-guide/articles/claude-code-crashes-when-loading-skill-debug-steps/). Strip away complex prompts and test with the simplest possible invocation:
+[Create a minimal reproduction of the failing behavior](/claude-skills-guide/claude-code-crashes-when-loading-skill-debug-steps/). Strip away complex prompts and test with the simplest possible invocation:
 
 ```
 Use the [skill-name] skill to [minimal action]
@@ -200,9 +200,9 @@ Silent failures in Claude skills usually stem from permission issues, YAML synta
 
 ## Related Reading
 
-- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/articles/why-is-my-claude-skill-not-showing-up-fix-guide/) — Fix skills that don't appear in the skill list at all
-- [Claude Code Crashes When Loading Skill: Debug Steps](/claude-skills-guide/articles/claude-code-crashes-when-loading-skill-debug-steps/) — Handle hard crashes and fatal errors during skill initialization
-- [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/articles/claude-skill-yaml-front-matter-parsing-error-fix/) — Diagnose and fix YAML parsing errors that cause silent skill failures
+- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Fix skills that don't appear in the skill list at all
+- [Claude Code Crashes When Loading Skill: Debug Steps](/claude-skills-guide/claude-code-crashes-when-loading-skill-debug-steps/) — Handle hard crashes and fatal errors during skill initialization
+- [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) — Diagnose and fix YAML parsing errors that cause silent skill failures
 - [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions to common Claude skill problems and failures
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

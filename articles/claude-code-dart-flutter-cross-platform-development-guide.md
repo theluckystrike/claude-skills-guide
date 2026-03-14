@@ -63,7 +63,7 @@ final counterProvider = StateNotifierProvider<CounterNotifier, int>((ref) {
 });
 ```
 
-The [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) proves invaluable here. It guides you through test-driven development, ensuring your state management logic works correctly before building UI components. When implementing complex state flows, write tests first using the tdd workflow, then implement the code to pass those tests.
+The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) proves invaluable here. It guides you through test-driven development, ensuring your state management logic works correctly before building UI components. When implementing complex state flows, write tests first using the tdd workflow, then implement the code to pass those tests.
 
 ## Building UI Components with Claude
 
@@ -203,7 +203,7 @@ Flutter performance tuning involves several areas where Claude provides guidance
 - **ListView.builder**: For long lists, always use lazy loading
 - **Image caching**: Use `cached_network_image` for remote images
 
-Claude analyzes your code and suggests specific optimizations. The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) helps track performance metrics across builds, creating a historical record of app size, startup time, and frame rates.
+Claude analyzes your code and suggests specific optimizations. The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) helps track performance metrics across builds, creating a historical record of app size, startup time, and frame rates.
 
 ## Platform-Specific Features
 
@@ -262,8 +262,8 @@ Start with a clean architecture, write tests first using the tdd workflow, and l
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — Frontend-focused skills for building polished interfaces
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Core developer skills for any stack including Flutter
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Automatically trigger the right skill for frontend or test tasks
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend-focused skills for building polished interfaces
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills for any stack including Flutter
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Automatically trigger the right skill for frontend or test tasks
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

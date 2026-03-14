@@ -91,7 +91,7 @@ In future sessions, retrieve with:
 /supermemory recall project requirements
 ```
 
-This avoids re-running expensive `/pdf` operations when the underlying document hasn't changed. For deeper caching strategies, see [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/articles/caching-strategies-for-claude-code-skill-outputs/).
+This avoids re-running expensive `/pdf` operations when the underlying document hasn't changed. For deeper caching strategies, see [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/caching-strategies-for-claude-code-skill-outputs/).
 
 ## Real-World Workflow Example
 
@@ -191,9 +191,9 @@ These strategies keep automated pipelines running reliably without interruption.
 
 ## Related Reading
 
-- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/articles/caching-strategies-for-claude-code-skill-outputs/) — Combine rate limit management with caching to reduce total API consumption across your skill workflows.
-- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Optimize token usage so each skill invocation consumes less before you hit rate limits.
-- [Measuring Claude Code Skill Efficiency Metrics](/claude-skills-guide/articles/measuring-claude-code-skill-efficiency-metrics/) — Track which skills consume the most API budget and prioritize optimization efforts.
+- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/caching-strategies-for-claude-code-skill-outputs/) — Combine rate limit management with caching to reduce total API consumption across your skill workflows.
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Optimize token usage so each skill invocation consumes less before you hit rate limits.
+- [Measuring Claude Code Skill Efficiency Metrics](/claude-skills-guide/measuring-claude-code-skill-efficiency-metrics/) — Track which skills consume the most API budget and prioritize optimization efforts.
 - [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Advanced patterns for building robust, rate-limit-aware automation pipelines.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

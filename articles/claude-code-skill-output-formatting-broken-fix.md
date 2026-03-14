@@ -82,7 +82,7 @@ Never use unlabeled fenced blocks.
 
 ## Problem 3: `tdd` Skill Tests Formatted Incorrectly
 
-The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) generates test code. If the test output is missing structure — tests not separated, assertions run together, describe blocks collapsed — the skill instructions likely do not specify the test format.
+The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) generates test code. If the test output is missing structure — tests not separated, assertions run together, describe blocks collapsed — the skill instructions likely do not specify the test format.
 
 **Check what your `tdd.md` says about output format:**
 
@@ -104,7 +104,7 @@ Generate test files using this structure:
 
 ## Problem 4: `pdf` Skill Output Losing Table Structure
 
-When using the [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) to extract tables from PDFs, the output may lose column alignment or render as comma-separated text instead of a structured table.
+When using the [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) to extract tables from PDFs, the output may lose column alignment or render as comma-separated text instead of a structured table.
 
 **Fix — specify markdown table output explicitly:**
 
@@ -154,7 +154,7 @@ After generating code, run: npx eslint --fix {filename}
 
 ## Problem 7: `supermemory` Reading Back Corrupted Entries
 
-If the [`supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) skill stored entries with broken formatting (e.g., markdown inside a JSON value field), reading them back may produce garbled output.
+If the [`supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) skill stored entries with broken formatting (e.g., markdown inside a JSON value field), reading them back may produce garbled output.
 
 **Clear corrupted entries by asking supermemory to delete them:**
 
@@ -230,8 +230,8 @@ The output should be a properly formatted Jest test in a typescript code block. 
 
 ## Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The skill body section is where output format instructions live; this guide shows annotated examples of well-structured format specifications
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Covers how to write clear output format instructions as part of authoring a skill from scratch
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Precise output format instructions reduce retries and wasted tokens from malformed responses
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — The skill body section is where output format instructions live; this guide shows annotated examples of well-structured format specifications
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Covers how to write clear output format instructions as part of authoring a skill from scratch
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Precise output format instructions reduce retries and wasted tokens from malformed responses
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

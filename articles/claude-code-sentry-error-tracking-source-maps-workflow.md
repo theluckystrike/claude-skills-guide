@@ -22,7 +22,7 @@ Claude Code accelerates this process significantly. By combining the **tdd** ski
 
 ## Setting Up Sentry with Source Maps
 
-First, ensure your project generates [source maps](/claude-skills-guide/articles/claude-code-websocket-implementation-real-time-events-guide/) during the build process. In your `package.json`, modify the build script:
+First, ensure your project generates [source maps](/claude-skills-guide/claude-code-websocket-implementation-real-time-events-guide/) during the build process. In your `package.json`, modify the build script:
 
 ```json
 {
@@ -171,9 +171,9 @@ This workflow transforms production errors from frustrating debugging sessions i
 
 ## Related Reading
 
-- [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-skills-guide/articles/claude-code-container-debugging-docker-logs-workflow-guide/) — Debug containerized applications alongside Sentry source map workflows
-- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/articles/claude-code-owasp-top-10-security-scanning-workflow/) — Layer security scanning on top of error tracking for comprehensive coverage
-- [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/articles/monitoring-and-logging-claude-code-multi-agent-systems/) — Extend Sentry error tracking to multi-agent Claude Code orchestration
+- [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-skills-guide/claude-code-container-debugging-docker-logs-workflow-guide/) — Debug containerized applications alongside Sentry source map workflows
+- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/) — Layer security scanning on top of error tracking for comprehensive coverage
+- [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/) — Extend Sentry error tracking to multi-agent Claude Code orchestration
 - [Claude Skills Hub](/claude-skills-guide/workflows-hub/) — Explore monitoring, observability, and debugging workflows with Claude Code
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

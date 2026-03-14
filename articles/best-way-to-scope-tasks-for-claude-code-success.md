@@ -18,7 +18,7 @@ Claude Code excels at executing well-scoped tasks, but the difference between me
 
 When you hand Claude Code a vague request like "build me an API," you get generic code that requires extensive revision. When you provide a properly scoped task with clear boundaries, context, and success criteria, Claude Code produces working code that fits your architecture from the first pass.
 
-The skill system amplifies this effect. [Skills like **tdd**, **pdf**, **xlsx**, and **frontend-design** become significantly more powerful](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) when paired with well-structured prompts. A poorly scoped task wastes tokens on exploration; a well-scoped task gets straight to production-quality output.
+The skill system amplifies this effect. [Skills like **tdd**, **pdf**, **xlsx**, and **frontend-design** become significantly more powerful](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) when paired with well-structured prompts. A poorly scoped task wastes tokens on exploration; a well-scoped task gets straight to production-quality output.
 
 ## The Three-Part Task Structure
 
@@ -59,7 +59,7 @@ Consider a feature like "add user authentication." Instead of one massive task, 
 4. Add authentication middleware to protect routes
 5. Write integration tests for auth flow
 
-Each task builds on the previous output but remains independently testable. [The **tdd** skill shines in this workflow](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)—invoke it after each task to ensure your tests pass before proceeding.
+Each task builds on the previous output but remains independently testable. [The **tdd** skill shines in this workflow](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)—invoke it after each task to ensure your tests pass before proceeding.
 
 ## Leveraging Skills for Better Output
 
@@ -157,15 +157,15 @@ Several patterns consistently produce poor results. Avoid these common mistakes.
 
 For teams adopting Claude Code at scale, establish task scoping as a standard practice. Before starting a Claude Code session, write your task using the three-part structure. This investment pays dividends in reduced revision cycles and higher-quality output.
 
-[The **supermemory** skill can help teams maintain context](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) by storing project-specific guidelines and patterns. Combine this with consistent task scoping to build institutional knowledge that improves over time.
+[The **supermemory** skill can help teams maintain context](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) by storing project-specific guidelines and patterns. Combine this with consistent task scoping to build institutional knowledge that improves over time.
 
 Claude Code is a powerful development partner, but its effectiveness depends on how you communicate. Well-scoped tasks transform Claude Code from a generic coding assistant into a precise, reliable collaborator that delivers production-quality code from the first iteration.
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/articles/how-to-write-effective-prompts-for-claude-code/)
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

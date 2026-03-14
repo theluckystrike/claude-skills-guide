@@ -167,13 +167,13 @@ This approach prevents any direct interaction between skill tools and MCP server
 
 ## Summary
 
-Resolving Claude Code skill conflicts with MCP servers requires identifying the conflict type—tool name collisions, permission mismatches, or runtime execution issues—and applying the appropriate solution. Use tool prefixes to avoid naming conflicts, configure scoped permissions to prevent access issues, and implement sequential execution for runtime problems. Following naming conventions and documenting your setup prevents future conflicts as your workflow grows. For the broader MCP ecosystem, the [Claude Code MCP server setup guide](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) covers initial MCP configuration in detail.
+Resolving Claude Code skill conflicts with MCP servers requires identifying the conflict type—tool name collisions, permission mismatches, or runtime execution issues—and applying the appropriate solution. Use tool prefixes to avoid naming conflicts, configure scoped permissions to prevent access issues, and implement sequential execution for runtime problems. Following naming conventions and documenting your setup prevents future conflicts as your workflow grows. For the broader MCP ecosystem, the [Claude Code MCP server setup guide](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) covers initial MCP configuration in detail.
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) — Set up MCP servers correctly from the start to avoid conflict-prone configurations
-- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand when to use skills vs MCP servers to avoid architectural conflicts
-- [Claude Code Skill Circular Dependency Detected Error Fix](/claude-skills-guide/articles/claude-code-skill-circular-dependency-detected-error-fix/) — Fix circular dependency errors that compound with MCP server conflicts
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — Set up MCP servers correctly from the start to avoid conflict-prone configurations
+- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand when to use skills vs MCP servers to avoid architectural conflicts
+- [Claude Code Skill Circular Dependency Detected Error Fix](/claude-skills-guide/claude-code-skill-circular-dependency-detected-error-fix/) — Fix circular dependency errors that compound with MCP server conflicts
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — More guides for resolving Claude skill configuration and runtime issues
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

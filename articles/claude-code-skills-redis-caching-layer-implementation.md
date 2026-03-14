@@ -18,7 +18,7 @@ Building efficient Claude Code skills often requires persisting data across sess
 
 Redis excels in three areas relevant to Claude Code skill development: speed, data structure variety, and network accessibility. Unlike file-based caching, Redis allows multiple Claude Code instances, external services, and CI/CD pipelines to share cached data directly.
 
-Your skill might need to cache LLM responses to avoid regenerating identical outputs, store conversation context for long-running workflows, or share temporary data between parallel subagents. Redis handles all these use cases with sub-millisecond latency. For coordinating multiple subagents that write to shared state, see [parallel subagents best practices](/claude-skills-guide/articles/parallel-subagents-claude-code-best-practices-2026/).
+Your skill might need to cache LLM responses to avoid regenerating identical outputs, store conversation context for long-running workflows, or share temporary data between parallel subagents. Redis handles all these use cases with sub-millisecond latency. For coordinating multiple subagents that write to shared state, see [parallel subagents best practices](/claude-skills-guide/parallel-subagents-claude-code-best-practices-2026/).
 
 ## Setting Up Redis Connection
 
@@ -158,7 +158,7 @@ def subscribe_to_agent(redis_client, agent_id, callback):
             callback(data)
 ```
 
-This pattern becomes valuable when coordinating complex multi-agent workflows where one agent's output feeds into another's input. For more subagent coordination strategies, see the [subagent communication guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/).
+This pattern becomes valuable when coordinating complex multi-agent workflows where one agent's output feeds into another's input. For more subagent coordination strategies, see the [subagent communication guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/).
 
 ## Implementing Cache Invalidation
 
@@ -238,9 +238,9 @@ Start with simple key-value caching, then expand to hashes for session data and 
 
 ## Related Reading
 
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) — coordinate agents with Redis as the shared message bus
-- [Parallel Subagents Claude Code Best Practices 2026](/claude-skills-guide/articles/parallel-subagents-claude-code-best-practices-2026/) — run multiple agents concurrently while sharing cached outputs via Redis
-- [Building Stateful Agents with Claude Skills Guide](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) — persist workflow state across sessions using structured storage
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — coordinate agents with Redis as the shared message bus
+- [Parallel Subagents Claude Code Best Practices 2026](/claude-skills-guide/parallel-subagents-claude-code-best-practices-2026/) — run multiple agents concurrently while sharing cached outputs via Redis
+- [Building Stateful Agents with Claude Skills Guide](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) — persist workflow state across sessions using structured storage
 - [Advanced Hub](/claude-skills-guide/advanced-hub/) — explore more patterns for multi-agent orchestration and persistent memory
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

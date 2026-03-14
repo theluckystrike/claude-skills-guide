@@ -99,7 +99,7 @@ These functions form the building blocks for sophisticated orchestration logic. 
 
 ## Implementing Coordination Patterns
 
-With the foundation in place, implement coordination patterns that determine how agents interact. The [fan-out-fan-in pattern](/claude-skills-guide/articles/claude-code-agent-pipeline-sequential-vs-parallel/) with tmux-managed Claude Code agents:
+With the foundation in place, implement coordination patterns that determine how agents interact. The [fan-out-fan-in pattern](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) with tmux-managed Claude Code agents:
 
 ```bash
 #!/bin/bash
@@ -199,7 +199,7 @@ Run this script, and tmux manages six concurrent Claude Code sessions, each hand
 
 ## Best Practices and Common Pitfalls
 
-When building tmux-based multi-agent systems, avoid [spawning unlimited sessions](/claude-skills-guide/articles/parallel-subagents-claude-code-best-practices-2026/). Monitor system resources and cap concurrent agents based on available CPU and memory. Each Claude Code instance consumes resources even in print mode.
+When building tmux-based multi-agent systems, avoid [spawning unlimited sessions](/claude-skills-guide/parallel-subagents-claude-code-best-practices-2026/). Monitor system resources and cap concurrent agents based on available CPU and memory. Each Claude Code instance consumes resources even in print mode.
 
 Implement proper error handling for agent failures. Network interruptions or API timeouts can cause agents to exit unexpectedly. Your orchestration should detect these conditions and either retry or escalate:
 
@@ -238,9 +238,9 @@ Building multi-agent workflows with Claude Code and tmux transforms your termina
 
 ## Related Reading
 
-- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/articles/claude-code-agent-pipeline-sequential-vs-parallel/) — Design the execution model for agents you manage across tmux sessions
-- [Claude Opus Orchestrator-Sonnet-Worker Architecture](/claude-skills-guide/articles/claude-opus-orchestrator-sonnet-worker-architecture/) — Implement orchestrator-worker patterns inside tmux-managed agent sessions
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Coordinate Claude subagents in persistent multi-window workflows
+- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) — Design the execution model for agents you manage across tmux sessions
+- [Claude Opus Orchestrator-Sonnet-Worker Architecture](/claude-skills-guide/claude-opus-orchestrator-sonnet-worker-architecture/) — Implement orchestrator-worker patterns inside tmux-managed agent sessions
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Coordinate Claude subagents in persistent multi-window workflows
 - [Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Explore advanced multi-agent orchestration and terminal management patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

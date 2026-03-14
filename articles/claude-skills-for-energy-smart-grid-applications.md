@@ -12,11 +12,11 @@ score: 7
 
 # Claude Skills for Energy Smart Grid Applications
 
-Building energy smart grid applications requires handling real-time data streams, predictive analytics, and complex system integrations. [Claude Code skills](/claude-skills-guide/articles/claude-code-skills-for-backend-developers-node-and-python/) accelerate development across these domains, from IoT device management to demand response optimization. This guide covers the most practical skills for energy grid development.
+Building energy smart grid applications requires handling real-time data streams, predictive analytics, and complex system integrations. [Claude Code skills](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) accelerate development across these domains, from IoT device management to demand response optimization. This guide covers the most practical skills for energy grid development.
 
 ## xlsx: Energy Data Analysis and Forecasting
 
-[The **xlsx** skill handles energy consumption data](/claude-skills-guide/articles/claude-code-skills-for-agriculture-iot-monitoring/), load forecasting, and demand analysis. Smart grids generate massive datasets from smart meters, sensors, and market pricing. This skill processes historical consumption patterns, identifies peak demand periods, and generates actionable forecasts.
+[The **xlsx** skill handles energy consumption data](/claude-skills-guide/claude-code-skills-for-agriculture-iot-monitoring/), load forecasting, and demand analysis. Smart grids generate massive datasets from smart meters, sensors, and market pricing. This skill processes historical consumption patterns, identifies peak demand periods, and generates actionable forecasts.
 
 ```python
 # Load energy consumption data from CSV
@@ -33,7 +33,7 @@ The xlsx skill also enables you to create interactive demand response dashboards
 
 ## mcp-builder: Custom Grid Integration APIs
 
-[The **mcp-builder** skill creates Model Context Protocol servers](/claude-skills-guide/articles/mcp-server-creation-with-claude-code-guide/) that connect Claude to your grid infrastructure. Build custom MCP servers to interface with SCADA systems, AMI (Advanced Metering Infrastructure) platforms, and DER (Distributed Energy Resources) management systems.
+[The **mcp-builder** skill creates Model Context Protocol servers](/claude-skills-guide/mcp-server-creation-with-claude-code-guide/) that connect Claude to your grid infrastructure. Build custom MCP servers to interface with SCADA systems, AMI (Advanced Metering Infrastructure) platforms, and DER (Distributed Energy Resources) management systems.
 
 ```typescript
 // Example MCP server for grid device management
@@ -62,7 +62,7 @@ const gridServer = new MCPServer({
 });
 ```
 
-Custom MCP servers enable Claude to query your grid topology, dispatch control signals to grid edge devices, and aggregate real-time operational metrics. For broader MCP integration patterns, see the guide on [building Claude skills with serverless workflows](/claude-skills-guide/articles/claude-skills-serverless-function-development-workflow/).
+Custom MCP servers enable Claude to query your grid topology, dispatch control signals to grid edge devices, and aggregate real-time operational metrics. For broader MCP integration patterns, see the guide on [building Claude skills with serverless workflows](/claude-skills-guide/claude-skills-serverless-function-development-workflow/).
 
 ## pdf: Regulatory Reporting and Compliance
 
@@ -104,7 +104,7 @@ def test_grid_dashboard():
     assert page.locator(".alert-critical").count() == 0
 ```
 
-Use this skill to test demand response interfaces, outage management workflows, and DER coordination platforms. The [automated testing pipeline guide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) covers how to wire these tests into a CI workflow.
+Use this skill to test demand response interfaces, outage management workflows, and DER coordination platforms. The [automated testing pipeline guide](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) covers how to wire these tests into a CI workflow.
 
 ## Practical Example: Building a Demand Response Application
 
@@ -141,14 +141,14 @@ Start with the xlsx skill for immediate productivity gains on existing data. Loa
 
 Build custom MCP servers as your grid integration needs mature. Connect to your utility's AMI headend system, integrate with OSIsoft PI for real-time operational data, or link to market management systems for wholesale energy pricing. Each MCP server becomes a reusable asset for future applications.
 
-[The combination of data analysis, API development, automated testing](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/), and visualization skills provides a solid foundation for smart grid application development. These skills work well together: use MCP for data ingestion, xlsx for analysis, algorithmic-art for dashboards, webapp-testing for quality assurance, and pdf for compliance.
+[The combination of data analysis, API development, automated testing](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/), and visualization skills provides a solid foundation for smart grid application development. These skills work well together: use MCP for data ingestion, xlsx for analysis, algorithmic-art for dashboards, webapp-testing for quality assurance, and pdf for compliance.
 
 For utilities and grid operators, these skills reduce development time on data-intensive features while ensuring compliance and reliability requirements are met. The modular nature of Claude skills means you can adopt them incrementally based on your specific use cases.
 
 ## Related Reading
 
-- [Claude Skills Serverless Function Development Workflow](/claude-skills-guide/articles/claude-skills-serverless-function-development-workflow/) — Build and deploy cloud functions that power real-time grid data pipelines
-- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Set up CI-integrated test pipelines for critical grid control software
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Deploy grid applications reliably across cloud environments
+- [Claude Skills Serverless Function Development Workflow](/claude-skills-guide/claude-skills-serverless-function-development-workflow/) — Build and deploy cloud functions that power real-time grid data pipelines
+- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Set up CI-integrated test pipelines for critical grid control software
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Deploy grid applications reliably across cloud environments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -16,7 +16,7 @@ The AI agent ecosystem in 2026 faces a fundamental challenge: skills built for o
 
 ## The Portability Problem
 
-[comprehensive frontend-design skill for generating React components](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) with Tailwind CSS. This skill includes detailed prompts for component architecture, accessibility compliance, and responsive design patterns. When that developer switches from Claude to another AI assistant, they face rebuilding everything from scratch.
+[comprehensive frontend-design skill for generating React components](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) with Tailwind CSS. This skill includes detailed prompts for component architecture, accessibility compliance, and responsive design patterns. When that developer switches from Claude to another AI assistant, they face rebuilding everything from scratch.
 
 The same issue affects enterprise teams. A company standardizing on AI-assisted development needs skills that work consistently across all team members' chosen tools. Without standardization, knowledge stays locked within specific platforms.
 
@@ -53,7 +53,7 @@ The community has developed a skill interface specification that standardizes ho
 - **Output**: Defined response formats for skill results
 - **State**: Clear conventions for maintaining skill state across sessions
 
-Skills built to these interfaces work similarly regardless of which AI platform runs them. The [tdd skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/), for example, can generate test cases following the same patterns whether invoked through Claude or another compatible assistant.
+Skills built to these interfaces work similarly regardless of which AI platform runs them. The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), for example, can generate test cases following the same patterns whether invoked through Claude or another compatible assistant.
 
 ### Capability Registry Systems
 
@@ -93,7 +93,7 @@ Distribution channels now accept standardized skill packages. A single package c
 - Configuration schemas
 - Example invocations
 
-When you publish a skill, platforms parse the manifest and adapt the core prompts to their environment. [The `docx` skill for document processing demonstrates this](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)—publish once, use everywhere.
+When you publish a skill, platforms parse the manifest and adapt the core prompts to their environment. [The `docx` skill for document processing demonstrates this](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)—publish once, use everywhere.
 
 ### Version Management
 
@@ -119,9 +119,9 @@ The fragmentation problem won't solve itself, but the tools and patterns emergin
 
 ## Related Reading
 
-- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand the structural foundations that make cross-platform skill standardization possible via MCP.
-- [Claude Code Skills Roadmap 2026: What Is Coming](/claude-skills-guide/articles/claude-code-skills-roadmap-2026-what-is-coming/) — See how Anthropic's own skill roadmap aligns with the broader standardization movement.
-- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/articles/how-to-contribute-claude-skills-to-open-source/) — Build portable skills today that align with emerging standards for cross-platform distribution.
+- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand the structural foundations that make cross-platform skill standardization possible via MCP.
+- [Claude Code Skills Roadmap 2026: What Is Coming](/claude-skills-guide/claude-code-skills-roadmap-2026-what-is-coming/) — See how Anthropic's own skill roadmap aligns with the broader standardization movement.
+- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) — Build portable skills today that align with emerging standards for cross-platform distribution.
 - [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Explore advanced skill patterns that benefit most from cross-platform portability.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

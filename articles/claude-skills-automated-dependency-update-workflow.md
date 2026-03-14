@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills, automation, dependencies, workflow]
 
 # Automated Dependency Updates with Claude Skills
 
-Keeping dependencies current is essential for security and feature access, yet manually tracking updates across multiple projects quickly becomes overwhelming. An automated [dependency update](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) workflow powered by Claude skills transforms this tedious task into a streamlined process that runs with minimal intervention.
+Keeping dependencies current is essential for security and feature access, yet manually tracking updates across multiple projects quickly becomes overwhelming. An automated [dependency update](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) workflow powered by Claude skills transforms this tedious task into a streamlined process that runs with minimal intervention.
 
 ## Why Automate Dependency Updates?
 
@@ -159,9 +159,9 @@ An automated dependency update workflow using Claude skills eliminates the manua
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

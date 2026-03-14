@@ -12,7 +12,7 @@ score: 9
 
 # Claude Code vs Windsurf for AI Development
 
-Claude Code and Windsurf take different approaches to AI-assisted development. [extended by skills](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) you call with `/skill-name`. Windsurf is an IDE-integrated assistant built by Codeium, primarily for VS Code. This comparison covers where each tool excels and how to decide between them.
+Claude Code and Windsurf take different approaches to AI-assisted development. [extended by skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) you call with `/skill-name`. Windsurf is an IDE-integrated assistant built by Codeium, primarily for VS Code. This comparison covers where each tool excels and how to decide between them.
 
 ## What Claude Code Brings to Your Workflow
 
@@ -27,7 +27,7 @@ Skills are `.md` files stored in `~/.claude/skills/`. You invoke them with `/ski
 - `/tdd` — Enforces test-first development: write failing tests, then implement
 - `/supermemory` — Records and retrieves project notes across sessions
 
-For example, [invoking `/tdd` before describing a feature](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) tells Claude to produce the test suite first:
+For example, [invoking `/tdd` before describing a feature](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) tells Claude to produce the test suite first:
 
 ```
 /tdd
@@ -75,7 +75,7 @@ Windsurf is the right choice when:
 
 ### Context and Memory
 
-[Claude Code with `/supermemory`](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) can store notes about your project — architecture decisions, conventions, known issues — and retrieve them in later sessions:
+[Claude Code with `/supermemory`](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) can store notes about your project — architecture decisions, conventions, known issues — and retrieve them in later sessions:
 
 ```
 /supermemory
@@ -119,6 +119,6 @@ Many developers find value in both: Windsurf for daily in-editor work, Claude Co
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Broader developer skill overview
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically

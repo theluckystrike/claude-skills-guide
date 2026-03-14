@@ -36,7 +36,7 @@ Organizing your code into modules improves reusability and makes Claude's assist
 
 ### Claude Code for Terraform Commands
 
-[Claude Code has deep knowledge of command-line operations](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), which is critical when running Terraform plans and applies. This helps you construct complex shell commands for iterating over multiple environments or parsing Terraform output.
+[Claude Code has deep knowledge of command-line operations](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), which is critical when running Terraform plans and applies. This helps you construct complex shell commands for iterating over multiple environments or parsing Terraform output.
 
 When you need to run Terraform across multiple workspaces, Claude Code can help create efficient scripts:
 
@@ -54,7 +54,7 @@ The skill also assists with parsing Terraform's JSON output for automation. For 
 
 ### tdd for Infrastructure Testing
 
-[tdd skill applies test-driven development principles to infrastructure](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) code. While traditionally associated with application code, TDD principles work remarkably well for Terraform modules. You can write tests that validate your infrastructure before deployment.
+[tdd skill applies test-driven development principles to infrastructure](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) code. While traditionally associated with application code, TDD principles work remarkably well for Terraform modules. You can write tests that validate your infrastructure before deployment.
 
 Using tools like Terratest or Terraform's built-in test framework, you can verify that your infrastructure behaves correctly:
 
@@ -174,7 +174,7 @@ For state management, consider these practices:
 
 ### Documentation Generation
 
-[Infrastructure documentation often lags behind implementation](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/). Use Claude skills to generate and maintain documentation:
+[Infrastructure documentation often lags behind implementation](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/). Use Claude skills to generate and maintain documentation:
 
 ```hcl
 # outputs.tf
@@ -209,9 +209,9 @@ Experiment with different skill combinations to find what works best for your te
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The essential developer skill stack
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — DevOps-specific skill recommendations
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The essential developer skill stack
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — DevOps-specific skill recommendations
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

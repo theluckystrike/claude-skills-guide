@@ -56,7 +56,7 @@ The pdf skill excels when you need locked-down documentation that cannot be easi
 
 For most development workflows, the best approach combines multiple skills. Using the **xlsx** skill alongside docx allows you to generate documentation that includes data tables and metrics. The **pptx** skill enables you to create documentation presentations for stakeholder reviews.
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) proves invaluable for maintaining documentation context across sessions. Invoke it with `/supermemory` and ask Claude to remember previous documentation decisions, ensuring consistency across large documentation projects:
+The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) proves invaluable for maintaining documentation context across sessions. Invoke it with `/supermemory` and ask Claude to remember previous documentation decisions, ensuring consistency across large documentation projects:
 
 ```
 /supermemory
@@ -127,9 +127,9 @@ Documentation generation doesn't need to be a manual chore. By using Claude skil
 
 ## Related Reading
 
-- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) — Build a complete automated documentation pipeline that integrates the docx, pdf, and tdd skills
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to generate living code documentation that stays in sync with your implementation
-- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-skills-guide/articles/claude-code-skills-for-backend-developers-node-and-python/) — See how documentation skills combine with backend development workflows for Python and Node.js projects
+- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — Build a complete automated documentation pipeline that integrates the docx, pdf, and tdd skills
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to generate living code documentation that stays in sync with your implementation
+- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) — See how documentation skills combine with backend development workflows for Python and Node.js projects
 - [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more documentation and content automation use cases across the full skills ecosystem
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

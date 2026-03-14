@@ -12,13 +12,13 @@ score: 8
 
 # Claude Skills for PHP Laravel Development Workflow
 
-PHP Laravel remains one of the most productive frameworks for web application development. By combining Claude Code with [custom skills tailored for Laravel](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/), you can dramatically accelerate your development workflow—from scaffolding new projects to running database migrations and generating tests.
+PHP Laravel remains one of the most productive frameworks for web application development. By combining Claude Code with [custom skills tailored for Laravel](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/), you can dramatically accelerate your development workflow—from scaffolding new projects to running database migrations and generating tests.
 
 This guide shows you how to build Claude skills specifically designed for PHP Laravel development. These skills help you generate boilerplate code, run artisan commands, work with Eloquent models, and maintain test coverage without leaving your terminal.
 
 ## Why Laravel Benefits from Custom Claude Skills
 
-Laravel follows strict conventions for directory structure, naming, and coding patterns. These conventions are exactly what makes [custom skills powerful](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)—once you teach Claude your preferred patterns, it applies them consistently across every file it generates.
+Laravel follows strict conventions for directory structure, naming, and coding patterns. These conventions are exactly what makes [custom skills powerful](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)—once you teach Claude your preferred patterns, it applies them consistently across every file it generates.
 
 Consider the difference between asking Claude to "create a user registration controller" versus invoking a skill that knows your exact namespace structure, uses your preferred validation approach, and follows your team's coding style. The skill produces code that fits your project immediately, without repeated refinement.
 
@@ -72,7 +72,7 @@ body: |
 
 ### 3. Test Generator
 
-Maintaining [test coverage](/claude-skills-guide/articles/claude-skills-for-writing-unit-tests-automatically/) in Laravel projects becomes effortless with a dedicated skill:
+Maintaining [test coverage](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/) in Laravel projects becomes effortless with a dedicated skill:
 
 ```
 name: laravel-test
@@ -95,7 +95,7 @@ body: |
 
 ### Running Artisan Commands
 
-Your Laravel skills should work directly with artisan. Create a skill that handles command execution. For CI/CD integration patterns, see [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/).
+Your Laravel skills should work directly with artisan. Create a skill that handles command execution. For CI/CD integration patterns, see [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/).
 
 ```
 name: artisan
@@ -185,9 +185,9 @@ Claude skills for PHP Laravel development transform how you build applications. 
 
 ## Related Reading
 
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — create your own Laravel-specific skills from scratch
-- [Claude Skills for Writing Unit Tests Automatically](/claude-skills-guide/articles/claude-skills-for-writing-unit-tests-automatically/) — automated test generation workflows for PHP and other languages
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — integrate Laravel testing into CI/CD pipelines
-- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-skills-guide/articles/claude-code-skills-for-backend-developers-node-and-python/) — backend skill patterns applicable across frameworks
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — create your own Laravel-specific skills from scratch
+- [Claude Skills for Writing Unit Tests Automatically](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/) — automated test generation workflows for PHP and other languages
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — integrate Laravel testing into CI/CD pipelines
+- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) — backend skill patterns applicable across frameworks
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

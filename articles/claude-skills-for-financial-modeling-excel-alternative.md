@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skills for Financial Modeling: Excel Alternative
 
-Developers and power users increasingly seek alternatives to Excel for financial modeling. Manual spreadsheet maintenance, version control nightmares, and fragile formulas drive teams toward programmatic solutions. Claude Code skills offer a compelling path forward, combining AI assistance with reproducible code-based workflows. For similar programmatic workflows applied to data science, see [Claude skills for data science and Jupyter notebooks](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/).
+Developers and power users increasingly seek alternatives to Excel for financial modeling. Manual spreadsheet maintenance, version control nightmares, and fragile formulas drive teams toward programmatic solutions. Claude Code skills offer a compelling path forward, combining AI assistance with reproducible code-based workflows. For similar programmatic workflows applied to data science, see [Claude skills for data science and Jupyter notebooks](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/).
 
 This guide explores how Claude skills transform financial modeling from point-and-click operations into automated, version-controlled pipelines.
 
@@ -63,7 +63,7 @@ class FinancialModel:
         })
 ```
 
-This approach allows you to test calculations programmatically. Use the [**tdd** skill to validate your financial logic](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/):
+This approach allows you to test calculations programmatically. Use the [**tdd** skill to validate your financial logic](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/):
 
 ```
 /tdd
@@ -246,9 +246,9 @@ Claude skills handle the code generation heavy lifting. Your expertise in financ
 
 ## Related Reading
 
-- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/) — Complement financial modeling with data science workflows and Jupyter notebook integration.
-- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/articles/caching-strategies-for-claude-code-skill-outputs/) — Cache financial model outputs to avoid re-running expensive calculations on unchanged data.
-- [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-guide/articles/claude-skills-for-computational-biology-bioinformatics/) — Apply similar code-based, testable data modeling patterns to bioinformatics workflows.
+- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/) — Complement financial modeling with data science workflows and Jupyter notebook integration.
+- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/caching-strategies-for-claude-code-skill-outputs/) — Cache financial model outputs to avoid re-running expensive calculations on unchanged data.
+- [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-guide/claude-skills-for-computational-biology-bioinformatics/) — Apply similar code-based, testable data modeling patterns to bioinformatics workflows.
 - [Claude Skills Use Cases](/claude-skills-guide/use-cases-hub/) — Explore more domain-specific use cases where Claude skills replace manual spreadsheet workflows.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

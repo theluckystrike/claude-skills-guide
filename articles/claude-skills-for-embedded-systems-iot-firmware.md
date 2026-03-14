@@ -8,7 +8,7 @@ reviewed: true
 score: 8
 ---
 
-Embedded systems development presents unique challenges: resource constraints, real-time requirements, hardware-software interaction, and the need for rigorous testing. Claude Code skills provide specialized automation for firmware development, hardware abstraction, RTOS configuration, and embedded debugging workflows. These skills work alongside your existing toolchain—gcc, CMake, PlatformIO, FreeRTOS—to accelerate common operations without replacing your core development environment. If you are new to the Claude skills system, [the beginner guide to Claude Code](/claude-skills-guide/articles/claude-code-for-beginners-complete-getting-started-2026/) provides the foundational setup steps before applying domain-specific workflows.
+Embedded systems development presents unique challenges: resource constraints, real-time requirements, hardware-software interaction, and the need for rigorous testing. Claude Code skills provide specialized automation for firmware development, hardware abstraction, RTOS configuration, and embedded debugging workflows. These skills work alongside your existing toolchain—gcc, CMake, PlatformIO, FreeRTOS—to accelerate common operations without replacing your core development environment. If you are new to the Claude skills system, [the beginner guide to Claude Code](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) provides the foundational setup steps before applying domain-specific workflows.
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. They provide standing instructions for specialized tasks without requiring code imports or package installations.
 
@@ -16,7 +16,7 @@ Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with 
 
 ### tdd Skill for Firmware Test-Driven Development
 
-Firmware development demands rigorous testing due to the difficulty of updating deployed devices. The [tdd skill helps you build reliable, tested embedded code](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) from the start.
+Firmware development demands rigorous testing due to the difficulty of updating deployed devices. The [tdd skill helps you build reliable, tested embedded code](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) from the start.
 
 ```
 /tdd
@@ -40,7 +40,7 @@ This approach accelerates peripheral configuration and helps you avoid manual da
 
 ### xlsx Skill for Register Mapping
 
-Hardware register definitions often arrive in spreadsheet format from hardware teams. The [xlsx skill transforms this data into usable code](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/) while maintaining traceability back to the original hardware specification.
+Hardware register definitions often arrive in spreadsheet format from hardware teams. The [xlsx skill transforms this data into usable code](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/) while maintaining traceability back to the original hardware specification.
 
 ```
 /xlsx
@@ -156,7 +156,7 @@ This skill generates code handling protocol specifics while presenting unified i
 
 ## Practical Integration
 
-Skills function as collaborative assistants rather than autonomous agents—they respond to your direction while handling implementation details. This approach maintains developer control while accelerating mechanical tasks. For teams that need to scale these patterns across multiple engineers, [Claude skills for enterprise security and compliance](/claude-skills-guide/articles/claude-skills-for-enterprise-security-compliance-guide/) addresses the additional governance requirements that embedded and IoT projects often carry.
+Skills function as collaborative assistants rather than autonomous agents—they respond to your direction while handling implementation details. This approach maintains developer control while accelerating mechanical tasks. For teams that need to scale these patterns across multiple engineers, [Claude skills for enterprise security and compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) addresses the additional governance requirements that embedded and IoT projects often carry.
 
 Embedded development benefits from systematic approaches. Claude skills support these goals by automating driver generation, test creation, and configuration management. Your hardware expertise remains essential; skills amplify your productivity without substituting for domain judgment.
 
@@ -164,9 +164,9 @@ For IoT firmware specifically, skills address the tension between development sp
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/)
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/articles/claude-skills-for-enterprise-security-compliance-guide/)
-- [Claude Code for Beginners: Getting Started 2026](/claude-skills-guide/articles/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/)
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/)
+- [Claude Code for Beginners: Getting Started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

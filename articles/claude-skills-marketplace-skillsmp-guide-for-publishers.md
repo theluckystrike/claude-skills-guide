@@ -16,7 +16,7 @@ Publishing workflows involve high volumes of structured documents — manuscript
 
 ## Document Processing with the PDF Skill
 
-Manuscript submissions, contracts, and industry reports arrive as PDFs. The [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) gives Claude deep context for working with PDF files: extracting text, identifying tables, handling form fields, and merging documents.
+Manuscript submissions, contracts, and industry reports arrive as PDFs. The [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) gives Claude deep context for working with PDF files: extracting text, identifying tables, handling form fields, and merging documents.
 
 A typical manuscript intake workflow:
 
@@ -68,7 +68,7 @@ Generating from a consistent template ensures brand alignment across your catalo
 
 ## Knowledge Management with Supermemory
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) lets Claude remember project context across sessions. For ongoing series, author relationships, or multi-year contracts, you can store key facts:
+The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) lets Claude remember project context across sessions. For ongoing series, author relationships, or multi-year contracts, you can store key facts:
 
 ```
 /supermemory store: Author Jane Smith prefers chapter-by-chapter delivery. Contract #2024-JS-01 signed March 2026 for 3-book deal, 15% royalty on net.
@@ -98,9 +98,9 @@ Skills work best when you give them specific, structured prompts. "Analyze this 
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Broader developer skill overview
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

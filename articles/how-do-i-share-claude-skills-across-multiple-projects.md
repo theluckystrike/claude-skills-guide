@@ -11,7 +11,7 @@ score: 8
 ---
 {% raw %}
 
-[Sharing Claude skills across multiple projects](/claude-skills-guide/articles/how-do-i-make-a-claude-skill-available-organization-wide/) ways to standardize your development workflow and avoid duplicating effort. Whether you're working on a monorepo with multiple packages or maintaining separate repositories for different applications, having a strategy for skill sharing can significantly boost your productivity.
+[Sharing Claude skills across multiple projects](/claude-skills-guide/how-do-i-make-a-claude-skill-available-organization-wide/) ways to standardize your development workflow and avoid duplicating effort. Whether you're working on a monorepo with multiple packages or maintaining separate repositories for different applications, having a strategy for skill sharing can significantly boost your productivity.
 
 ## Understanding Claude Skill Sharing
 
@@ -34,7 +34,7 @@ git submodule add git@github.com:your-org/claude-skills.git .claude/skills
 git submodule update --init --recursive
 ```
 
-[Using submodules provides pinned versions](/claude-skills-guide/articles/shared-claude-skills-across-monorepo-multiple-packages/), so you can update skills in one place without affecting projects that depend on older versions. When you're ready to update a project's skills reference, simply pull the latest changes in the submodule directory.
+[Using submodules provides pinned versions](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/), so you can update skills in one place without affecting projects that depend on older versions. When you're ready to update a project's skills reference, simply pull the latest changes in the submodule directory.
 
 For projects that need bleeding-edge skills, consider a different approach. Instead of submodules, you can clone the skills repository directly and pull changes as needed. This works well for personal projects where you want automatic access to the latest skill improvements.
 
@@ -84,7 +84,7 @@ Once you've set up your shared skills repository, importing skills into a new pr
 }
 ```
 
-Many teams find it helpful to create a meta-skill that handles the import process. This meta-skill can scan your shared repository and automatically enable relevant skills based on your project's technology stack. The [supermemory skill pairs excellently](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/), as it can remember which skills work best for different project types.
+Many teams find it helpful to create a meta-skill that handles the import process. This meta-skill can scan your shared repository and automatically enable relevant skills based on your project's technology stack. The [supermemory skill pairs excellently](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/), as it can remember which skills work best for different project types.
 
 ## Handling Project-Specific Variations
 
@@ -136,7 +136,7 @@ jobs:
       - run: git push origin main
 ```
 
-You can extend this pattern to automatically update skill references in all your projects. The [pdf skill works well for generating change logs](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) that document what changed in each skill update.
+You can extend this pattern to automatically update skill references in all your projects. The [pdf skill works well for generating change logs](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) that document what changed in each skill update.
 
 ## Practical Workflow Example
 
@@ -157,9 +157,9 @@ Start small with your most valuable skills, then expand as you identify more opp
 
 ## Related Reading
 
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Extend project-level skill sharing to team-wide distribution with access controls and versioning.
-- [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/articles/claude-code-dotfiles-management-and-skill-sync-workflow/) — Use dotfiles management to sync shared skills automatically across all developer machines.
-- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/articles/how-to-contribute-claude-skills-to-open-source/) — Graduate from sharing skills across your projects to sharing them with the broader community.
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Extend project-level skill sharing to team-wide distribution with access controls and versioning.
+- [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/claude-code-dotfiles-management-and-skill-sync-workflow/) — Use dotfiles management to sync shared skills automatically across all developer machines.
+- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) — Graduate from sharing skills across your projects to sharing them with the broader community.
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn the foundational skill concepts before setting up cross-project sharing infrastructure.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

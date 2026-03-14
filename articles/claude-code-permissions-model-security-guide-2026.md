@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Permissions Model and Security Guide 2026
 
-Claude Code is a powerful agentic tool. With agentic tools come real [security scanning](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) considerations: Claude can read files, execute shell commands, write code, and call external APIs. Understanding the [permissions model](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-a-claude-skill/) is not optional if you're using Claude Code on anything beyond a toy project.
+Claude Code is a powerful agentic tool. With agentic tools come real [security scanning](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) considerations: Claude can read files, execute shell commands, write code, and call external APIs. Understanding the [permissions model](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) is not optional if you're using Claude Code on anything beyond a toy project.
 
 This guide covers how permissions are scoped, what the defaults are, how to tighten them, and where the current model's limitations are.
 
@@ -247,8 +247,8 @@ The permissions model in 2026 still has gaps that teams should be aware of:
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Understanding which skills are most powerful helps you prioritize which ones need tightest permission controls
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The `tools` field in skill YAML directly controls the permission surface; this guide explains every available option
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can trigger skills with broad tool access unexpectedly; understanding the mechanism is part of a sound security posture
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Understanding which skills are most powerful helps you prioritize which ones need tightest permission controls
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — The `tools` field in skill YAML directly controls the permission surface; this guide explains every available option
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can trigger skills with broad tool access unexpectedly; understanding the mechanism is part of a sound security posture
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

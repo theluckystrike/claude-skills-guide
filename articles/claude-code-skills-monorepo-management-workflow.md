@@ -12,13 +12,13 @@ score: 8
 
 # Claude Code Skills Monorepo Management Workflow
 
-Managing a monorepo presents unique challenges: coordinating builds across packages, handling shared dependencies, running targeted tests, and maintaining consistent tooling. Claude Code skills transform these complex workflows into repeatable, [skill-driven processes](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) that reduce cognitive load and accelerate development. For workspace best practices visit the [workflows hub](/claude-skills-guide/workflows-hub/).
+Managing a monorepo presents unique challenges: coordinating builds across packages, handling shared dependencies, running targeted tests, and maintaining consistent tooling. Claude Code skills transform these complex workflows into repeatable, [skill-driven processes](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) that reduce cognitive load and accelerate development. For workspace best practices visit the [workflows hub](/claude-skills-guide/workflows-hub/).
 
-[This guide shows you how to build a monorepo management system](/claude-skills-guide/articles/shared-claude-skills-across-monorepo-multiple-packages/) using Claude Code skills, with practical examples you can adapt to your own repository structure.
+[This guide shows you how to build a monorepo management system](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/) using Claude Code skills, with practical examples you can adapt to your own repository structure.
 
 ## Setting Up Your Monorepo Skills Foundation
 
-Before creating custom skills, establish the directory structure where your skills will live. Claude Code reads skills from `~/.claude/skills/` by default. For organizing skills across packages, see [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/articles/shared-claude-skills-across-monorepo-multiple-packages/). Create a dedicated skill for monorepo operations:
+Before creating custom skills, establish the directory structure where your skills will live. Claude Code reads skills from `~/.claude/skills/` by default. For organizing skills across packages, see [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/). Create a dedicated skill for monorepo operations:
 
 ```bash
 mkdir -p ~/.claude/skills/monorepo
@@ -73,7 +73,7 @@ Claude now understands your monorepo structure and will:
 
 ### Cross-Package Refactoring
 
-[When you need to update a shared component used across multiple packages](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/), the monorepo skill ensures you don't miss any consumers:
+[When you need to update a shared component used across multiple packages](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/), the monorepo skill ensures you don't miss any consumers:
 
 ```
 /monorepo
@@ -87,7 +87,7 @@ The skill instructs Claude to:
 3. Update each consumer to handle the new prop
 4. Run tests in each affected package
 
-[This prevents the common monorepo problem](/claude-skills-guide/articles/claude-code-skills-for-golang-microservices/) breaks downstream packages.
+[This prevents the common monorepo problem](/claude-skills-guide/claude-code-skills-for-golang-microservices/) breaks downstream packages.
 
 ### Managing Workspace Dependencies
 
@@ -106,7 +106,7 @@ Never install packages directly in package root unless it's a workspace-level to
 
 ### Running Targeted Tests
 
-Full test suites in monorepos are slow. A well-crafted skill teaches Claude to run only affected tests — for broader testing automation patterns see the [automated testing pipeline guide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/):
+Full test suites in monorepos are slow. A well-crafted skill teaches Claude to run only affected tests — for broader testing automation patterns see the [automated testing pipeline guide](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/):
 
 ```markdown
 ## Testing Strategy
@@ -150,7 +150,7 @@ Claude will:
 
 ## Skill Composition for Complex Operations
 
-Claude Code skills compose well. You can layer specialized skills on top of your base monorepo skill — a pattern also covered in [how to combine two Claude skills in one workflow](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/):
+Claude Code skills compose well. You can layer specialized skills on top of your base monorepo skill — a pattern also covered in [how to combine two Claude skills in one workflow](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/):
 
 - `/lint` - Enforces code quality across all packages
 - `/docs` - Generates API documentation for each package
@@ -186,9 +186,9 @@ Start with a basic skill that describes your monorepo structure, then iterate as
 
 ## Related Reading
 
-- [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/articles/shared-claude-skills-across-monorepo-multiple-packages/) — organize skills so every package in your monorepo can access them
-- [What Is the Best Way to Organize Claude Skills in a Monorepo](/claude-skills-guide/articles/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/) — directory layout and naming conventions for monorepo skills
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — run targeted test suites across affected packages automatically
-- [Claude Skills Automated Dependency Update Workflow](/claude-skills-guide/articles/claude-skills-automated-dependency-update-workflow/) — keep packages in sync with automated version management
+- [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/) — organize skills so every package in your monorepo can access them
+- [What Is the Best Way to Organize Claude Skills in a Monorepo](/claude-skills-guide/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/) — directory layout and naming conventions for monorepo skills
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — run targeted test suites across affected packages automatically
+- [Claude Skills Automated Dependency Update Workflow](/claude-skills-guide/claude-skills-automated-dependency-update-workflow/) — keep packages in sync with automated version management
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

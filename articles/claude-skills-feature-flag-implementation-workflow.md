@@ -12,7 +12,7 @@ score: 7
 
 # Claude Skills Feature Flag Implementation Workflow
 
-Feature flags provide a powerful mechanism for controlling feature availability in Claude skills without deploying new code. This guide shows you how to implement a feature flag system that enables gradual rollouts, A/B testing, and kill switches for your [custom skills](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/).
+Feature flags provide a powerful mechanism for controlling feature availability in Claude skills without deploying new code. This guide shows you how to implement a feature flag system that enables gradual rollouts, A/B testing, and kill switches for your [custom skills](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/).
 
 ## Why Feature Flags Matter in Claude Skills
 
@@ -22,7 +22,7 @@ The implementation involves three core components: a flag configuration system, 
 
 ## Implementing the Flag Configuration System
 
-[The foundation of any feature flag system is a configuration source](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). For Claude skills, you have several options: environment variables, JSON configuration files, or external services. Here's a practical approach using a local configuration file:
+[The foundation of any feature flag system is a configuration source](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). For Claude skills, you have several options: environment variables, JSON configuration files, or external services. Here's a practical approach using a local configuration file:
 
 ```json
 // ~/.claude/feature-flags.json
@@ -115,7 +115,7 @@ Always mention in your response which engine was used and the flag evaluation re
 
 ## Controlled Rollout Workflow
 
-Executing a controlled rollout follows a predictable pattern. For version control and safe deployment of skills, see [Claude Skill Versioning: Semver Best Practices](/claude-skills-guide/articles/claude-skill-versioning-semver-best-practices/). Start by enabling the flag for your internal team through the whitelist:
+Executing a controlled rollout follows a predictable pattern. For version control and safe deployment of skills, see [Claude Skill Versioning: Semver Best Practices](/claude-skills-guide/claude-skill-versioning-semver-best-practices/). Start by enabling the flag for your internal team through the whitelist:
 
 ```json
 "new-analysis-engine": {
@@ -211,9 +211,9 @@ The key is consistency: check flags consistently, log evaluations thoroughly, an
 
 ## Related Reading
 
-- [Claude Skill Versioning: Semver Best Practices](/claude-skills-guide/articles/claude-skill-versioning-semver-best-practices/) — version control strategies for skill releases
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — create the custom skills that feature flags control
-- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-guide/articles/claude-skills-change-management-rolling-out-to-teams/) — gradual rollout strategies for team-wide skill adoption
-- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) — production considerations for skill deployment
+- [Claude Skill Versioning: Semver Best Practices](/claude-skills-guide/claude-skill-versioning-semver-best-practices/) — version control strategies for skill releases
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — create the custom skills that feature flags control
+- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-guide/claude-skills-change-management-rolling-out-to-teams/) — gradual rollout strategies for team-wide skill adoption
+- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/) — production considerations for skill deployment
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

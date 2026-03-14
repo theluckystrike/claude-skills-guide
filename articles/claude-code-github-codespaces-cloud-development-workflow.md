@@ -51,7 +51,7 @@ After the Codespace initializes, install Claude Code using the official installa
 
 Claude Code skills extend the AI assistant's capabilities for specific tasks. Several skills work particularly well within a Codespaces environment.
 
-The [**tdd** skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) helps you practice test-driven development by generating test cases before implementation. When working on a new feature in your Codespace, invoke the skill to create a test file:
+The [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps you practice test-driven development by generating test cases before implementation. When working on a new feature in your Codespace, invoke the skill to create a test file:
 
 ```
 /tdd Create test cases for a user authentication module with login, logout, and password reset functions
@@ -154,9 +154,9 @@ Experiment with different configurations to find what works best for your projec
 
 ## Related Reading
 
-- [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/articles/claude-code-dotfiles-management-and-skill-sync-workflow/) — Sync your Claude Code skills and dotfiles to GitHub Codespaces so your environment is ready on first launch
-- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) — Combine Codespaces cloud development with GitHub Actions CI/CD for a complete cloud-native workflow
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Master the tdd skill used in this Codespaces workflow for test-first development in the cloud
+- [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/claude-code-dotfiles-management-and-skill-sync-workflow/) — Sync your Claude Code skills and dotfiles to GitHub Codespaces so your environment is ready on first launch
+- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) — Combine Codespaces cloud development with GitHub Actions CI/CD for a complete cloud-native workflow
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Master the tdd skill used in this Codespaces workflow for test-first development in the cloud
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Explore more cloud development and CI/CD workflow skill guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

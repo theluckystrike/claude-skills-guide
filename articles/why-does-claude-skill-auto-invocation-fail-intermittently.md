@@ -12,13 +12,13 @@ score: 8
 
 # Why Does Claude Skill Auto Invocation Fail Intermittently?
 
-If you've ever watched Claude fail to invoke a skill you expected it to use—despite having the perfect context for the `pdf` skill to kick in, or the `frontend-design` skill to handle your UI work—you're not alone. Auto invocation, the mechanism where Claude automatically selects and activates a skill based on your conversation context (explained in depth in [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/)), can fail without warning. Understanding why this happens and how to work around it will make you significantly more productive.
+If you've ever watched Claude fail to invoke a skill you expected it to use—despite having the perfect context for the `pdf` skill to kick in, or the `frontend-design` skill to handle your UI work—you're not alone. Auto invocation, the mechanism where Claude automatically selects and activates a skill based on your conversation context (explained in depth in [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/)), can fail without warning. Understanding why this happens and how to work around it will make you significantly more productive.
 
 ## How Auto Invocation Works
 
 Claude determines whether to auto-invoke a skill by analyzing your conversation context against the skill's trigger conditions. When you mention terms like "extract the text from this PDF" or start describing a component layout, Claude's underlying model evaluates whether a registered skill matches the intent. The skill registry, populated through your skill configuration files, provides the matching logic.
 
-The system relies on several signals: your explicit language, implicit task patterns, and the skill's defined triggers. For a technical breakdown, see [how Claude skills auto-invocation actually works](/claude-skills-guide/articles/how-claude-skills-auto-invocation-actually-works-deep-dive/). When any of these signals weaken or conflict, auto invocation fails.
+The system relies on several signals: your explicit language, implicit task patterns, and the skill's defined triggers. For a technical breakdown, see [how Claude skills auto-invocation actually works](/claude-skills-guide/how-claude-skills-auto-invocation-actually-works-deep-dive/). When any of these signals weaken or conflict, auto invocation fails.
 
 ## Common Causes of Intermittent Failure
 
@@ -137,16 +137,16 @@ As you develop more skills and understand your patterns, you'll naturally gravit
 
 ## Related Reading
 
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understand the auto invocation system deeply before troubleshooting intermittent failures.
-- [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skills-guide/articles/claude-skill-not-triggering-automatically-troubleshoot/) — Diagnose and fix skills that never auto-invoke, not just intermittently.
-- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/articles/why-is-my-claude-skill-not-showing-up-fix-guide/) — Resolve visibility issues that prevent skills from being available for auto invocation.
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understand the auto invocation system deeply before troubleshooting intermittent failures.
+- [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/) — Diagnose and fix skills that never auto-invoke, not just intermittently.
+- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Resolve visibility issues that prevent skills from being available for auto invocation.
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn correct skill setup to avoid common auto invocation configuration mistakes.
 
 ## Related Reading
 
-- [How Claude Skills Auto-Invocation Actually Works](/claude-skills-guide/articles/how-claude-skills-auto-invocation-actually-works-deep-dive/) — Technical explanation of the auto-invocation mechanism, including how trigger matching is evaluated at runtime
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understand the trigger system and configuration options that control when skills auto-invoke
-- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/articles/why-is-my-claude-skill-not-showing-up-fix-guide/) — If auto-invocation fails because the skill isn't loading at all, this guide diagnoses registration issues
+- [How Claude Skills Auto-Invocation Actually Works](/claude-skills-guide/how-claude-skills-auto-invocation-actually-works-deep-dive/) — Technical explanation of the auto-invocation mechanism, including how trigger matching is evaluated at runtime
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understand the trigger system and configuration options that control when skills auto-invoke
+- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — If auto-invocation fails because the skill isn't loading at all, this guide diagnoses registration issues
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore skill configuration patterns that make auto-invocation more reliable across different workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -48,7 +48,7 @@ Understanding why these limits exist helps you work more effectively with Claude
 
 ### Use Skill Files Strategically
 
-Claude skills let you provide persistent context without consuming your conversational context window. [Skills like the pdf skill can extract and summarize documentation](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), while the tdd skill can generate focused test code. By offloading repetitive patterns to skills, you preserve context space for the specific task at hand.
+Claude skills let you provide persistent context without consuming your conversational context window. [Skills like the pdf skill can extract and summarize documentation](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), while the tdd skill can generate focused test code. By offloading repetitive patterns to skills, you preserve context space for the specific task at hand.
 
 ```
 ~/.claude/skills/
@@ -80,7 +80,7 @@ Claude Code excels when you provide targeted file context rather than broad proj
 
 ### Use Efficient Skill Loading
 
-The way you load skills affects your available context. Skills with minimal but precise instructions often outperform lengthy skill files. [The frontend-design skill, for example, works best with concise specifications](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/) rather than exhaustive design system documentation.
+The way you load skills affects your available context. Skills with minimal but precise instructions often outperform lengthy skill files. [The frontend-design skill, for example, works best with concise specifications](/claude-skills-guide/claude-skills-context-window-management-best-practices/) rather than exhaustive design system documentation.
 
 ## What Happens When You Approach the Limit
 
@@ -105,9 +105,9 @@ For now, understanding the constraints and working within them makes you a more 
 
 ## Related Reading
 
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/)
-- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skills-guide/articles/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-skills-context-window-management-best-practices/)
+- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skills-guide/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

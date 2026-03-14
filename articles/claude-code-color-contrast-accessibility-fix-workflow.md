@@ -22,7 +22,7 @@ The challenge lies not just in detecting issues, but in systematically fixing th
 
 ## Setting Up Your Accessibility Workflow
 
-Before starting, ensure you have the necessary Claude Code skills installed. The [**frontend-design** skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) includes accessibility-aware component generation, while [**tdd**](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) helps you write tests that validate contrast requirements.
+Before starting, ensure you have the necessary Claude Code skills installed. The [**frontend-design** skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) includes accessibility-aware component generation, while [**tdd**](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write tests that validate contrast requirements.
 
 ```bash
 # Verify installed skills
@@ -173,8 +173,8 @@ Implement this workflow in your next project sprint, and you will see measurable
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — Frontend skills including accessibility and design system automation
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Core developer skills that pair with accessibility workflows
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep automated accessibility audit sessions cost-efficient
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend skills including accessibility and design system automation
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills that pair with accessibility workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep automated accessibility audit sessions cost-efficient
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

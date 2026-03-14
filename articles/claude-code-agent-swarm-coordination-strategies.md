@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills, agent-swarm, multi-agent, coordination, paral
 
 # Claude Code Agent Swarm Coordination Strategies
 
-[Running multiple Claude Code agents simultaneously](/claude-skills-guide/articles/parallel-subagents-claude-code-best-practices-2026/) transforms your development workflow from sequential task execution into parallel processing. This guide covers practical strategies for coordinating agent swarms, managing shared state, and building robust multi-agent pipelines.
+[Running multiple Claude Code agents simultaneously](/claude-skills-guide/parallel-subagents-claude-code-best-practices-2026/) transforms your development workflow from sequential task execution into parallel processing. This guide covers practical strategies for coordinating agent swarms, managing shared state, and building robust multi-agent pipelines.
 
 ## The Case for Agent Swarms
 
@@ -22,7 +22,7 @@ Claude Code supports spawning multiple agents within a single session through th
 
 ## Strategy One: Fan-Out/Fan-In Pattern
 
-[The fan-out/fan-in pattern spawns multiple agents](/claude-skills-guide/articles/fan-out-fan-in-pattern-claude-code-subagents/) to handle independent tasks, then aggregates results. This works when tasks share no dependencies and can execute in any order.
+[The fan-out/fan-in pattern spawns multiple agents](/claude-skills-guide/fan-out-fan-in-pattern-claude-code-subagents/) to handle independent tasks, then aggregates results. This works when tasks share no dependencies and can execute in any order.
 
 ```bash
 # Fan-out: Spawn agents for parallel PDF processing
@@ -70,7 +70,7 @@ ACTIVE_AGENTS: ["agent-1", "agent-2", "agent-3"]
 RESULTS: []
 ```
 
-Each agent reads and writes to this file. The **[supermemory** skill can track this state automatically](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/), providing a cleaner interface than raw file operations.
+Each agent reads and writes to this file. The **[supermemory** skill can track this state automatically](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/), providing a cleaner interface than raw file operations.
 
 ```bash
 # Agent 1 updates status
@@ -95,7 +95,7 @@ The **pdf** skill integrates cleanly here since it handles single-file and batch
 
 ## Strategy Five: Checkpointing and Recovery
 
-[Long-running agent swarms need fault tolerance](/claude-skills-guide/articles/claude-code-multi-agent-error-recovery-strategies/). Implement checkpoint logic so failed agents can resume without restarting the entire pipeline.
+[Long-running agent swarms need fault tolerance](/claude-skills-guide/claude-code-multi-agent-error-recovery-strategies/). Implement checkpoint logic so failed agents can resume without restarting the entire pipeline.
 
 ```
 # checkpoint.json
@@ -164,9 +164,9 @@ Agent swarm coordination transforms Claude Code from a single assistant into a p
 
 ## Related Reading
 
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Build the foundational orchestration model before scaling to swarm coordination.
-- [Fan-Out Fan-In Pattern with Claude Code Subagents](/claude-skills-guide/articles/fan-out-fan-in-pattern-claude-code-subagents/) — Apply fan-out fan-in for efficient parallel task distribution within agent swarms.
-- [Monitoring and Logging in Claude Code Multi-Agent Systems](/claude-skills-guide/articles/monitoring-and-logging-claude-code-multi-agent-systems/) — Implement observability to track swarm behavior and debug coordination issues.
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Build the foundational orchestration model before scaling to swarm coordination.
+- [Fan-Out Fan-In Pattern with Claude Code Subagents](/claude-skills-guide/fan-out-fan-in-pattern-claude-code-subagents/) — Apply fan-out fan-in for efficient parallel task distribution within agent swarms.
+- [Monitoring and Logging in Claude Code Multi-Agent Systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/) — Implement observability to track swarm behavior and debug coordination issues.
 - [Claude Skills Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced multi-agent patterns and swarm coordination architectures.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

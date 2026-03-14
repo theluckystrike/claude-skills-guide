@@ -12,13 +12,13 @@ score: 8
 
 # MCP OAuth 2.1 Authentication Implementation Guide
 
-The Model Context Protocol (MCP) increasingly requires strong authentication mechanisms for production deployments. [OAuth 2.1 provides a modern, simplified security framework for MCP servers](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/). This guide walks through implementing OAuth 2.1 authentication for your MCP integrations with practical code examples.
+The Model Context Protocol (MCP) increasingly requires strong authentication mechanisms for production deployments. [OAuth 2.1 provides a modern, simplified security framework for MCP servers](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/). This guide walks through implementing OAuth 2.1 authentication for your MCP integrations with practical code examples.
 
 ## Understanding OAuth 2.1 for MCP
 
 OAuth 2.1 consolidates best practices from OAuth 2.0 and its extensions into a unified specification. For MCP implementations, it provides secure delegated access without sharing credentials between clients and servers. The protocol handles token lifecycle management, scope definitions, and secure communication patterns essential for AI tool integrations.
 
-[MCP servers often expose sensitive capabilities](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-claude-code-skills/)—file system access, database queries, API calls. OAuth 2.1 ensures that clients receive limited, time-bound access to these resources through standardized authorization grants.
+[MCP servers often expose sensitive capabilities](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/)—file system access, database queries, API calls. OAuth 2.1 ensures that clients receive limited, time-bound access to these resources through standardized authorization grants.
 
 ## Authorization Code Flow Implementation
 
@@ -246,7 +246,7 @@ Additional security measures include: validating redirect URIs strictly, rotatin
 
 ## Practical Tips for Claude Code Integration
 
-When building MCP servers that require OAuth 2.1, consider using complementary Claude skills to streamline development. The [pdf skill](/claude-skills-guide/articles/) helps generate API documentation from your OpenAPI specs. The [tdd skill](/claude-skills-guide/articles/) assists in writing comprehensive test coverage for your authentication flows. For frontend components like consent screens, the [frontend-design skill](/claude-skills-guide/articles/) provides component patterns.
+When building MCP servers that require OAuth 2.1, consider using complementary Claude skills to streamline development. The [pdf skill](/claude-skills-guide/) helps generate API documentation from your OpenAPI specs. The [tdd skill](/claude-skills-guide/) assists in writing comprehensive test coverage for your authentication flows. For frontend components like consent screens, the [frontend-design skill](/claude-skills-guide/) provides component patterns.
 
 ## Conclusion
 
@@ -254,9 +254,9 @@ Implementing OAuth 2.1 for MCP authentication requires understanding authorizati
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [MCP Prompt Injection Attack Prevention Guide](/claude-skills-guide/articles/mcp-prompt-injection-attack-prevention-guide/)
-- [How to Make Claude Code Write Secure Code Always](/claude-skills-guide/articles/how-to-make-claude-code-write-secure-code-always/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [MCP Prompt Injection Attack Prevention Guide](/claude-skills-guide/mcp-prompt-injection-attack-prevention-guide/)
+- [How to Make Claude Code Write Secure Code Always](/claude-skills-guide/how-to-make-claude-code-write-secure-code-always/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

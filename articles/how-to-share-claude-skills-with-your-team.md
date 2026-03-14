@@ -12,7 +12,7 @@ score: 9
 
 # How to Share Claude Skills with Your Team
 
-[Claude Code skills are `.md` files in `~/.claude/skills/`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). Sharing them across a team means distributing those files consistently. Here are practical approaches that work.
+[Claude Code skills are `.md` files in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Sharing them across a team means distributing those files consistently. Here are practical approaches that work.
 
 ## The Git Repository Approach
 
@@ -67,7 +67,7 @@ The `version` field matters — when you update a skill, bump the version so dev
 
 ## Automating Distribution
 
-[A GitHub Actions workflow can notify the team when skills are updated](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/):
+[A GitHub Actions workflow can notify the team when skills are updated](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/):
 
 ```yaml
 # .github/workflows/skill-sync.yml
@@ -136,9 +136,9 @@ Ask developers which skills they actually use in team retrospectives. Remove or 
 
 ## Related Reading
 
-- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/articles/how-to-contribute-claude-skills-to-open-source/) — Full contribution walkthrough
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Format your skill correctly before submitting
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) — Full contribution walkthrough
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — Format your skill correctly before submitting
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

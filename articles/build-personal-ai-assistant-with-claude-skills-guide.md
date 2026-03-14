@@ -14,7 +14,7 @@ score: 8
 
 A personal AI assistant is useful only if it actually knows how you work — your coding conventions, your preferred tools, your recurring tasks. Generic AI chat gets you halfway there. Claude skills close the gap by letting you encode your personal workflows as reusable, invokable behaviors that persist across every session.
 
-This guide walks through [building a personal AI assistant](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) tailored to a developer's daily workflow. You will set up persistent memory, create custom skills for your most common tasks, and wire them into a system that feels genuinely assistive rather than just reactive.
+This guide walks through [building a personal AI assistant](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) tailored to a developer's daily workflow. You will set up persistent memory, create custom skills for your most common tasks, and wire them into a system that feels genuinely assistive rather than just reactive.
 
 ## What Makes Claude Skills Different from Plain Prompting
 
@@ -26,7 +26,7 @@ This means skills are:
 - **Version-controlled**: they are plain text files you can commit to a dotfiles repo
 - **Shareable**: you can publish them to a skills hub or share with teammates
 
-[The `supermemory` skill extends this further by storing structured information](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) about you, your projects, and your preferences. The `tdd` skill gives you test-driven development guidance on demand. The `pdf` skill handles document generation. The `frontend-design` skill accelerates UI work. These are your building blocks.
+[The `supermemory` skill extends this further by storing structured information](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) about you, your projects, and your preferences. The `tdd` skill gives you test-driven development guidance on demand. The `pdf` skill handles document generation. The `frontend-design` skill accelerates UI work. These are your building blocks.
 
 ## Step 1: Set Up Your Personal Memory Layer
 
@@ -238,8 +238,8 @@ Over two to three weeks, the system accumulates enough context that Claude Code 
 
 ## Related Reading
 
-- [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-guide/articles/claude-skills-automated-blog-post-workflow-tutorial/) — Apply skills to content creation
-- [Full Stack Web App with Claude Skills Step by Step](/claude-skills-guide/articles/full-stack-web-app-with-claude-skills-step-by-step/) — Skills across the full development lifecycle
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack reference
+- [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-guide/claude-skills-automated-blog-post-workflow-tutorial/) — Apply skills to content creation
+- [Full Stack Web App with Claude Skills Step by Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/) — Skills across the full development lifecycle
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack reference
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

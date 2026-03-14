@@ -50,7 +50,7 @@ triggers:
 
 ## A Practical Example: The pdf Skill
 
-The [pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) extracts text, tables, and content from PDF files and can generate new PDFs. Here is its skill definition:
+The [pdf skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) extracts text, tables, and content from PDF files and can generate new PDFs. Here is its skill definition:
 
 ```
 ---
@@ -81,7 +81,7 @@ Invoke with: `/pdf extract all tables from Q3-financial-report.pdf`
 
 ## A Practical Example: The tdd Skill
 
-The [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) enforces test-driven development by writing failing tests before implementation. Here is its skill definition:
+The [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) enforces test-driven development by writing failing tests before implementation. Here is its skill definition:
 
 ```
 ---
@@ -140,8 +140,8 @@ This is the correct way to inject project context into a skill: by instructing C
 
 ## Related Reading
 
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/)
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/)
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/)
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 
 Built by theluckystrike - More at [zovo.one](https://zovo.one)

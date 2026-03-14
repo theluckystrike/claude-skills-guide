@@ -24,11 +24,11 @@ Start with a structured prompt that includes three components: what you expected
 I'm debugging a user authentication flow. Users report being logged out randomly after 10 minutes instead of the expected 30. The token refresh logic is in auth-service.js lines 45-78. Here is the error from the server logs: [paste error]
 ```
 
-This approach gives Claude enough context to trace the issue without overwhelming it with unrelated code. For larger codebases, [using the supermemory skill to maintain context across multiple debugging sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/).
+This approach gives Claude enough context to trace the issue without overwhelming it with unrelated code. For larger codebases, [using the supermemory skill to maintain context across multiple debugging sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/).
 
 ## Essential Skills for Debugging Workflows
 
-Several Claude skills significantly improve debugging productivity. [The **tdd** skill helps by writing regression tests](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) once you identify the root cause, ensuring the bug stays fixed. After debugging a tricky race condition, you can invoke:
+Several Claude skills significantly improve debugging productivity. [The **tdd** skill helps by writing regression tests](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) once you identify the root cause, ensuring the bug stays fixed. After debugging a tricky race condition, you can invoke:
 
 ```
 /tdd write concurrent tests for this authentication flow to catch the race condition we just fixed
@@ -61,7 +61,7 @@ Claude will identify the likely cause (the data prop is undefined), suggest imme
 
 ### Pattern 2: Bisect and Isolate
 
-[Claude Code to help with git bisect workflows](/claude-skills-guide/articles/claude-code-git-bisect-automated-bug-finding-workflow/). When you have a regression with an unknown cause:
+[Claude Code to help with git bisect workflows](/claude-skills-guide/claude-code-git-bisect-automated-bug-finding-workflow/). When you have a regression with an unknown cause:
 
 ```
 Help me find which commit introduced this bug. The error appeared between version 2.1 and 2.2. I need a git bisect strategy - should I start with integration tests or unit tests?
@@ -129,9 +129,9 @@ For best results, match the debugging approach to the problem type. Use Claude C
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
-- [Claude Code Git Bisect Automated Bug Finding Workflow](/claude-skills-guide/articles/claude-code-git-bisect-automated-bug-finding-workflow/)
-- [How to Debug a Claude Skill That Silently Fails](/claude-skills-guide/articles/how-do-i-debug-a-claude-skill-that-silently-fails/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Code Git Bisect Automated Bug Finding Workflow](/claude-skills-guide/claude-code-git-bisect-automated-bug-finding-workflow/)
+- [How to Debug a Claude Skill That Silently Fails](/claude-skills-guide/how-do-i-debug-a-claude-skill-that-silently-fails/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

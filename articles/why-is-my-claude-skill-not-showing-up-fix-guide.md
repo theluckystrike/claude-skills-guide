@@ -58,7 +58,7 @@ If two skill files have the same `name` field, rename one and restart.
 
 ## 6. Understand Built-in Skills
 
-The built-in [skills](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — `/pdf`, `/tdd`, `/docx`, `/xlsx`, `/pptx`, `/frontend-design`, `/canvas-design`, `/supermemory`, `/webapp-testing`, `/skill-creator` — do not require external API keys or additional installations.
+The built-in [skills](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — `/pdf`, `/tdd`, `/docx`, `/xlsx`, `/pptx`, `/frontend-design`, `/canvas-design`, `/supermemory`, `/webapp-testing`, `/skill-creator` — do not require external API keys or additional installations.
 
 ## 7. Check Permissions
 
@@ -79,8 +79,8 @@ chmod 644 ~/.claude/skills/your-skill.md
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/)
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/)
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -32,7 +32,7 @@ Claude responds with the Python or JavaScript implementation—complete with pas
 
 The most direct solution is activating the `tdd` skill in Claude Code. This skill modifies Claude's behavior to prioritize test generation before writing implementation code.
 
-To activate the skill, type — for the full TDD skill breakdown see the [automated testing pipeline guide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/):
+To activate the skill, type — for the full TDD skill breakdown see the [automated testing pipeline guide](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/):
 
 ```
 /tdd
@@ -129,7 +129,7 @@ Then proceed with your test-first prompt.
 
 ## Configure Default Test-First Behavior
 
-If you prefer Claude to always test before implementing, you can [create a custom skill](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) that enforces this behavior by default. Create a file at `~/.claude/skills/test-first.md`:
+If you prefer Claude to always test before implementing, you can [create a custom skill](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) that enforces this behavior by default. Create a file at `~/.claude/skills/test-first.md`:
 
 ```markdown
 # Test-First Development Skill
@@ -216,9 +216,9 @@ The benefit is substantial: tests become design documents rather than afterthoug
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — build a full CI-integrated TDD pipeline with the `/tdd` skill
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — full breakdown of the TDD skill's features and configuration
-- [Claude Code Skills for Writing Integration Tests](/claude-skills-guide/articles/claude-code-skills-for-writing-integration-tests/) — extend test-first practices beyond unit tests to integration testing
-- [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) — complement TDD with automated code review workflows
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — build a full CI-integrated TDD pipeline with the `/tdd` skill
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — full breakdown of the TDD skill's features and configuration
+- [Claude Code Skills for Writing Integration Tests](/claude-skills-guide/claude-code-skills-for-writing-integration-tests/) — extend test-first practices beyond unit tests to integration testing
+- [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — complement TDD with automated code review workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

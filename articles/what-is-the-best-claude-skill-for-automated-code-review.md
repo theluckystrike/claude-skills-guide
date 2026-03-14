@@ -26,7 +26,7 @@ Claude skills enhance this further because they understand context. Unlike stati
 
 ### The tdd Skill
 
-The [`tdd` skill is the closest thing to a dedicated code review assistant](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). Originally designed for test-driven development, it excels at analyzing code structure, identifying gaps between implementation and tests, and suggesting improvements.
+The [`tdd` skill is the closest thing to a dedicated code review assistant](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). Originally designed for test-driven development, it excels at analyzing code structure, identifying gaps between implementation and tests, and suggesting improvements.
 
 When you invoke the `tdd` skill on a code change:
 
@@ -44,7 +44,7 @@ The skill analyzes both the implementation and test files, providing feedback th
 
 ### The supermemory Skill
 
-Code review consistency is a challenge across teams and time. The `[supermemory skill solves this by persisting your team](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/)'s coding standards, review preferences, and common issues across sessions.
+Code review consistency is a challenge across teams and time. The `[supermemory skill solves this by persisting your team](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/)'s coding standards, review preferences, and common issues across sessions.
 
 Store your review standards once:
 
@@ -104,7 +104,7 @@ Review src/auth/ and src/api/ for security vulnerabilities.
 
 ### Step 1: Pre-Commit Review
 
-Catch issues before they reach your team. [pre-commit hook that invokes Claude in print mode](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/):
+Catch issues before they reach your team. [pre-commit hook that invokes Claude in print mode](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/):
 
 ```bash
 # .git/hooks/pre-commit
@@ -220,8 +220,8 @@ Start with the `tdd` skill, add `supermemory` for persistent standards, and laye
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Build comprehensive test coverage
-- [Claude Skills for Token Optimization](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Reduce API costs while maintaining quality
-- [Best Claude Code Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Build comprehensive test coverage
+- [Claude Skills for Token Optimization](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Reduce API costs while maintaining quality
+- [Best Claude Code Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

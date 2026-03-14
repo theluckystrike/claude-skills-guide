@@ -12,7 +12,7 @@ score: 8
 
 # MCP Prompt Injection Attack Prevention Guide
 
-[The Model Context Protocol (MCP) enables powerful integrations between Claude and external services](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/), but these connections create potential attack surfaces for prompt injection. Understanding how to prevent these attacks is essential for developers building secure MCP-powered applications.
+[The Model Context Protocol (MCP) enables powerful integrations between Claude and external services](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), but these connections create potential attack surfaces for prompt injection. Understanding how to prevent these attacks is essential for developers building secure MCP-powered applications.
 
 ## What Is Prompt Injection in MCP?
 
@@ -180,9 +180,9 @@ Prompt injection prevention requires defense in depth. By sanitizing inputs, est
 
 ## Related Reading
 
-- [MCP Tool Description Injection Attack Explained](/claude-skills-guide/articles/mcp-tool-description-injection-attack-explained/)
-- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/)
-- [How to Make Claude Code Write Secure Code Always](/claude-skills-guide/articles/how-to-make-claude-code-write-secure-code-always/)
+- [MCP Tool Description Injection Attack Explained](/claude-skills-guide/mcp-tool-description-injection-attack-explained/)
+- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/)
+- [How to Make Claude Code Write Secure Code Always](/claude-skills-guide/how-to-make-claude-code-write-secure-code-always/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -12,11 +12,11 @@ tags: [claude-code, claude-skills]
 
 # Can Claude Code Skills Call External APIs Automatically?
 
-If you've been exploring Claude Code to automate your development workflows, you might have wondered: can skills call external APIs automatically? The short answer is yes—but there are some important details and best practices you should understand before relying on this capability in production workflows. For a complete walkthrough on wiring skills to external endpoints, see the guide on [how to connect Claude skills to external APIs](/claude-skills-guide/articles/how-to-connect-claude-skills-to-external-apis-guide/).
+If you've been exploring Claude Code to automate your development workflows, you might have wondered: can skills call external APIs automatically? The short answer is yes—but there are some important details and best practices you should understand before relying on this capability in production workflows. For a complete walkthrough on wiring skills to external endpoints, see the guide on [how to connect Claude skills to external APIs](/claude-skills-guide/how-to-connect-claude-skills-to-external-apis-guide/).
 
 ## How API Calls Work in Claude Code Skills
 
-Claude Code skills operate within the Claude Code environment, which has built-in capabilities for making HTTP requests. [When you create a skill that needs to interact](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) with external services—whether it's fetching data from a REST API, sending notifications to Slack, or querying a database—the skill can use tools and commands to execute these calls.
+Claude Code skills operate within the Claude Code environment, which has built-in capabilities for making HTTP requests. [When you create a skill that needs to interact](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) with external services—whether it's fetching data from a REST API, sending notifications to Slack, or querying a database—the skill can use tools and commands to execute these calls.
 
 The key mechanism involves using the `http` or `curl` commands directly within your skill's instructions, or by using MCP (Model Context Protocol) servers that provide API connectivity. For example, a skill designed to interact with GitHub's API can automatically create issues, pull requests, or search repositories without requiring manual intervention.
 
@@ -46,7 +46,7 @@ One of the most powerful features of Claude Code skills is auto-invocation. When
 - Format and transform incoming data
 - Trigger follow-up actions based on API results
 
-[skills like the `tdd` skill for test-driven development](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) for test-driven development, where API responses can automatically generate unit tests, or with the `supermemory` skill for maintaining context across sessions.
+[skills like the `tdd` skill for test-driven development](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) for test-driven development, where API responses can automatically generate unit tests, or with the `supermemory` skill for maintaining context across sessions.
 
 ## Practical Use Cases
 
@@ -101,9 +101,9 @@ With skills like the `tdd` skill for generating tests, the `supermemory` skill f
 
 ## Related Reading
 
-- [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/articles/how-to-connect-claude-skills-to-external-apis-guide/) — Step-by-step patterns for wiring Claude skills to REST and GraphQL APIs
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate API calls and deployments with Claude skills in CI pipelines
-- [Claude Code Batch Processing with Skills Guide](/claude-skills-guide/articles/claude-code-batch-processing-with-skills-guide/) — Scale external API calls across multiple files and workflows automatically
+- [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/how-to-connect-claude-skills-to-external-apis-guide/) — Step-by-step patterns for wiring Claude skills to REST and GraphQL APIs
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate API calls and deployments with Claude skills in CI pipelines
+- [Claude Code Batch Processing with Skills Guide](/claude-skills-guide/claude-code-batch-processing-with-skills-guide/) — Scale external API calls across multiple files and workflows automatically
 - [Claude Skills Hub](/claude-skills-guide/integrations-hub/) — Explore all integration patterns for connecting Claude skills to external services
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

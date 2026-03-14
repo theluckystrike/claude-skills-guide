@@ -12,7 +12,7 @@ score: 9
 
 # Claude Code with Nix Flakes for Reproducible Development Environments
 
-Development environment reproducibility remains one of the hardest problems in software engineering. You ship code that works on your machine, only to watch it fail on a colleague's workstation or in CI. The traditional solutions—Docker containers, virtual machines, or extensive README instructions—each bring tradeoffs around weight, speed, and flexibility. Nix Flakes offer a compelling alternative, and when combined with Claude Code, they create a powerful workflow for declarative, [reproducible environment](/claude-skills-guide/articles/claude-code-dockerfile-generation-multi-stage-build-guide/) environments.
+Development environment reproducibility remains one of the hardest problems in software engineering. You ship code that works on your machine, only to watch it fail on a colleague's workstation or in CI. The traditional solutions—Docker containers, virtual machines, or extensive README instructions—each bring tradeoffs around weight, speed, and flexibility. Nix Flakes offer a compelling alternative, and when combined with Claude Code, they create a powerful workflow for declarative, [reproducible environment](/claude-skills-guide/claude-code-dockerfile-generation-multi-stage-build-guide/) environments.
 
 ## What Nix Flakes Bring to Development
 
@@ -210,9 +210,9 @@ The goal isn't perfection—it's consistency. A flake that covers 80% of your en
 
 ## Related Reading
 
-- [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-skills-guide/articles/claude-code-dev-containers-devcontainer-json-setup-guide/) — Use dev containers as an alternative approach for reproducible environments
-- [Claude Code GitPod Cloud IDE Integration Tutorial 2026](/claude-skills-guide/articles/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Run Claude Code in ephemeral cloud environments without local Nix setup
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/articles/claude-code-with-docker-container-skill-setup-guide/) — Compare Docker-based isolation against Nix flake reproducibility
+- [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-skills-guide/claude-code-dev-containers-devcontainer-json-setup-guide/) — Use dev containers as an alternative approach for reproducible environments
+- [Claude Code GitPod Cloud IDE Integration Tutorial 2026](/claude-skills-guide/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Run Claude Code in ephemeral cloud environments without local Nix setup
+- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) — Compare Docker-based isolation against Nix flake reproducibility
 - [Claude Skills Hub](/claude-skills-guide/integrations-hub/) — Explore all environment setup and toolchain integration patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

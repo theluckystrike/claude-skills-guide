@@ -75,7 +75,7 @@ Skills are read from `.claude/skills/` relative to the **main project root**, no
 2. Changes to skills affect all worktrees immediately (since they read from the same path)
 3. A skill cannot be scoped to a specific worktree through normal placement
 
-This is by design — you do not want different worktrees running different versions of your [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/). It creates consistency across parallel workstreams.
+This is by design — you do not want different worktrees running different versions of your [`/tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/). It creates consistency across parallel workstreams.
 
 ### Skills and Relative File References
 
@@ -140,7 +140,7 @@ for FEATURE in "${FEATURES[@]}"; do
 done
 ```
 
-Then run Claude Code in each worktree. Since Claude Code is interactive, you would open each worktree as a separate Claude Code session and invoke the `/tdd` skill there. The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) can preserve context across these parallel sessions.
+Then run Claude Code in each worktree. Since Claude Code is interactive, you would open each worktree as a separate Claude Code session and invoke the `/tdd` skill there. The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) can preserve context across these parallel sessions.
 
 ## Worktree Cleanup
 
@@ -224,9 +224,9 @@ unexpected — warn the user and stop.
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
-- [Building Stateful Agents with Claude Skills](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) — State management patterns for long-running agent tasks
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Building Stateful Agents with Claude Skills](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) — State management patterns for long-running agent tasks
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

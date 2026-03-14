@@ -12,11 +12,11 @@ score: 8
 
 # Claude Code Skills for Writing CloudFormation Templates
 
-Writing AWS CloudFormation templates manually requires deep knowledge of AWS resource properties, intrinsic functions, and template anatomy. Claude Code skills transform this process by providing specialized prompts, validation rules, and generation workflows that accelerate infrastructure-as-code development. This guide covers practical approaches for using Claude Code skills to write, validate, and optimize CloudFormation templates. For broader IaC approaches, see [Claude Code Skills for Terraform IaC](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/).
+Writing AWS CloudFormation templates manually requires deep knowledge of AWS resource properties, intrinsic functions, and template anatomy. Claude Code skills transform this process by providing specialized prompts, validation rules, and generation workflows that accelerate infrastructure-as-code development. This guide covers practical approaches for using Claude Code skills to write, validate, and optimize CloudFormation templates. For broader IaC approaches, see [Claude Code Skills for Terraform IaC](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/).
 
 ## Setting Up CloudFormation Skills
 
-Before writing templates, ensure Claude Code can access CloudFormation documentation. Create a [skill using the standard .md format](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) that loads AWS CloudFormation resource reference material:
+Before writing templates, ensure Claude Code can access CloudFormation documentation. Create a [skill using the standard .md format](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) that loads AWS CloudFormation resource reference material:
 
 ```yaml
 # cloudformation-base.skill.md
@@ -49,7 +49,7 @@ Resources:
               SSEAlgorithm: AES256
 ```
 
-The `!Sub '${AWS::StackName}'` pattern demonstrates CloudFormation intrinsic functions. [Claude Code understands AWS naming conventions](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) and automatically applies best practices like using `AWS::StackName` for dynamic resource naming.
+The `!Sub '${AWS::StackName}'` pattern demonstrates CloudFormation intrinsic functions. [Claude Code understands AWS naming conventions](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) and automatically applies best practices like using `AWS::StackName` for dynamic resource naming.
 
 ## Building Complex Multi-Resource Templates
 
@@ -150,7 +150,7 @@ Integrating this validation into your workflow prevents failed stack deployments
 
 ## Working with Nested Stacks
 
-[Large CloudFormation templates benefit from nested stack patterns](/claude-skills-guide/articles/claude-code-skills-for-ansible-automation/). Claude Code helps organize resources into logical components:
+[Large CloudFormation templates benefit from nested stack patterns](/claude-skills-guide/claude-code-skills-for-ansible-automation/). Claude Code helps organize resources into logical components:
 
 ```yaml
 # Parent stack
@@ -209,7 +209,7 @@ Claude Code generates these CloudFormation primitives accurately, ensuring condi
 
 ## Generating IAM Roles and Policies
 
-IAM resources require precise policy documents. This connects naturally to [Claude Code permissions model best practices](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/). Prompt Claude Code with the required permissions:
+IAM resources require precise policy documents. This connects naturally to [Claude Code permissions model best practices](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/). Prompt Claude Code with the required permissions:
 
 > "Create an IAM role for an ECS task that can read from S3 buckets starting with 'app-data-' and write to CloudWatch Logs"
 
@@ -279,9 +279,9 @@ Claude Code skills for CloudFormation provide substantial value for teams managi
 
 ## Related Reading
 
-- [Claude Code Skills for Terraform IaC](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) — extend your IaC skills beyond CloudFormation to Terraform
-- [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/articles/claude-code-gcp-google-cloud-setup-and-deployment-guide/) — apply similar approaches to multi-cloud infrastructure
-- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) — automate CloudFormation deployments via CI/CD pipelines
-- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-skills-guide/articles/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — deploy containerized apps on top of your CloudFormation stacks
+- [Claude Code Skills for Terraform IaC](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — extend your IaC skills beyond CloudFormation to Terraform
+- [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/) — apply similar approaches to multi-cloud infrastructure
+- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) — automate CloudFormation deployments via CI/CD pipelines
+- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-skills-guide/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — deploy containerized apps on top of your CloudFormation stacks
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

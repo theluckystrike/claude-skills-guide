@@ -138,7 +138,7 @@ Skills that maintain context across sessions should use a dedicated state file:
 }
 ```
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) exemplifies this pattern, maintaining persistent context across Claude sessions.
+The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) exemplifies this pattern, maintaining persistent context across Claude sessions.
 
 ## Practical Example: A Multi-Tool Data Analysis Skill
 
@@ -242,9 +242,9 @@ Skills like **frontend-design**, **pdf**, **tdd**, **xlsx**, and **supermemory**
 
 ## Related Reading
 
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Master the complete skill.md format specification before organizing your files into complex multi-directory structures
-- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/articles/claude-skill-inheritance-and-composition-patterns/) — Build on the file structure foundation with composition patterns that let skills share components and extend each other
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Start with the basics of authoring skill.md files before scaling up to complex multi-file skill architectures
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Master the complete skill.md format specification before organizing your files into complex multi-directory structures
+- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/) — Build on the file structure foundation with composition patterns that let skills share components and extend each other
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Start with the basics of authoring skill.md files before scaling up to complex multi-file skill architectures
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore the full skill ecosystem and proven patterns for organizing skills at any scale
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

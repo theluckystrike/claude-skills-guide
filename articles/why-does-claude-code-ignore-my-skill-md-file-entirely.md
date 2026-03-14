@@ -38,7 +38,7 @@ The filename also determines how you invoke the skill. If you name your file `su
 
 ## Front Matter Parsing Issues
 
-The [YAML front matter](/claude-skills-guide/articles/claude-skill-yaml-front-matter-parsing-error-fix/) at the top of your skill file must be valid YAML. Even minor formatting errors cause Claude Code to skip the entire file. Common front matter problems include incorrect indentation, missing colons after keys, or invalid characters in values.
+The [YAML front matter](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) at the top of your skill file must be valid YAML. Even minor formatting errors cause Claude Code to skip the entire file. Common front matter problems include incorrect indentation, missing colons after keys, or invalid characters in values.
 
 A proper front matter block looks like this:
 
@@ -119,9 +119,9 @@ Building reliable skills takes iteration. Start with a minimal working skill, ve
 
 ## Related Reading
 
-- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/articles/how-do-i-debug-a-claude-skill-that-silently-fails/) — Go deeper on diagnosing skills that load but produce no output
-- [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/articles/claude-skill-yaml-front-matter-parsing-error-fix/) — Fix malformed YAML that causes Claude Code to skip your skill entirely
-- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/articles/why-is-my-claude-skill-not-showing-up-fix-guide/) — Systematic checklist for skill visibility and discovery issues
+- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/how-do-i-debug-a-claude-skill-that-silently-fails/) — Go deeper on diagnosing skills that load but produce no output
+- [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) — Fix malformed YAML that causes Claude Code to skip your skill entirely
+- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Systematic checklist for skill visibility and discovery issues
 - [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions to common skill loading and configuration problems
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

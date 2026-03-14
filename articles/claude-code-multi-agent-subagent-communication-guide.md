@@ -276,7 +276,7 @@ run_subagent_with_retry() {
 
 ## Using /supermemory for Shared Context
 
-If subagents need to share learned context, use [`/supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to store context before spawning subagents, then retrieve it in each subagent's prompt:
+If subagents need to share learned context, use [`/supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) to store context before spawning subagents, then retrieve it in each subagent's prompt:
 
 ```bash
 # Store shared context once
@@ -300,8 +300,8 @@ wait
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The skills most suited for subagent use (tdd, pdf, frontend-design) are profiled here with invocation patterns that translate to multi-agent workflows
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understanding auto-invocation is key for orchestration: you need to know when to use explicit skill invocations in subagent print mode
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Running many subagents in parallel multiplies API costs; these optimization techniques are especially important in multi-agent architectures
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The skills most suited for subagent use (tdd, pdf, frontend-design) are profiled here with invocation patterns that translate to multi-agent workflows
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understanding auto-invocation is key for orchestration: you need to know when to use explicit skill invocations in subagent print mode
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Running many subagents in parallel multiplies API costs; these optimization techniques are especially important in multi-agent architectures
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -101,7 +101,7 @@ git tag -a v1.2.0 -m "Release version 1.2.0"
 git push origin v1.2.0
 ```
 
-Users can then reference specific versions or pin to stable releases. The [**tdd** skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/), for example, benefits from pinned versions—users building CI/CD pipelines need predictable behavior.
+Users can then reference specific versions or pin to stable releases. The [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), for example, benefits from pinned versions—users building CI/CD pipelines need predictable behavior.
 
 ## Automating Version Management
 
@@ -131,9 +131,9 @@ Clear versioning builds trust. Users of the **xlsx** skill, for instance, need c
 
 ## Related Reading
 
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Distribute versioned skills consistently so all team members run the same skill release
-- [How Do I Test a Claude Skill Before Deploying to Team](/claude-skills-guide/articles/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate each version before bumping to the next release with a structured pre-deployment test workflow
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Understand the full skill.md format including version metadata fields used in semver workflows
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Distribute versioned skills consistently so all team members run the same skill release
+- [How Do I Test a Claude Skill Before Deploying to Team](/claude-skills-guide/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate each version before bumping to the next release with a structured pre-deployment test workflow
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Understand the full skill.md format including version metadata fields used in semver workflows
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore skill authoring, distribution, and maintenance patterns across the skill lifecycle
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

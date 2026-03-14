@@ -109,7 +109,7 @@ fi
 
 ## Using Claude Skills for Enhanced Deployment Validation
 
-The `/tdd` skill becomes invaluable when integrated into your deployment pipeline. It ensures code quality before any deployment proceeds — a workflow covered in detail in the [automated testing pipeline guide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/):
+The `/tdd` skill becomes invaluable when integrated into your deployment pipeline. It ensures code quality before any deployment proceeds — a workflow covered in detail in the [automated testing pipeline guide](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/):
 
 ```bash
 # Run TDD skill to validate code changes
@@ -232,7 +232,7 @@ deploy_with_retry
 
 ## Continuous Deployment with GitHub Actions
 
-Integrate your Fly.io deployment with GitHub Actions for automated CI/CD — see the [Claude Code GitHub Actions workflow guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) for advanced pipeline patterns:
+Integrate your Fly.io deployment with GitHub Actions for automated CI/CD — see the [Claude Code GitHub Actions workflow guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) for advanced pipeline patterns:
 
 ```yaml
 name: Deploy to Fly.io
@@ -266,9 +266,9 @@ The scripts and strategies in this guide provide a foundation you can customize 
 
 ## Related Reading
 
-- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) — extend your Fly.io CI with matrix testing strategies
-- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-skills-guide/articles/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — compare container deployment approaches across cloud providers
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — integrate test-driven quality gates into your deployment pipeline
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — the essential skill stack for deployment automation
+- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) — extend your Fly.io CI with matrix testing strategies
+- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-skills-guide/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — compare container deployment approaches across cloud providers
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — integrate test-driven quality gates into your deployment pipeline
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — the essential skill stack for deployment automation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

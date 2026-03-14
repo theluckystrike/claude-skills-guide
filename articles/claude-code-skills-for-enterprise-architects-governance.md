@@ -26,7 +26,7 @@ Several community and native skills directly address enterprise governance needs
 
 The **pdf** skill enables automated generation of compliance documentation, architecture decision records, and audit reports. Invoke it to extract requirements from legacy documents or generate standardized governance artifacts.
 
-The [**tdd** skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) enforces test-driven development practices by scaffolding tests before implementation code. For governance, this means ensuring every feature has corresponding test coverage before merge approval.
+The [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) enforces test-driven development practices by scaffolding tests before implementation code. For governance, this means ensuring every feature has corresponding test coverage before merge approval.
 
 The **xlsx** skill handles governance metrics tracking, compliance checklists, and architectural review spreadsheets. Teams can programmatically generate status reports or validate that projects meet required governance criteria.
 
@@ -155,9 +155,9 @@ Start small, measure impact, and expand governance coverage incrementally. Your 
 
 ## Related Reading
 
-- [Claude Skills Governance Security Audit Checklist](/claude-skills-guide/articles/claude-skills-governance-security-audit-checklist/) — Apply this security audit checklist before deploying governance-critical skills across your enterprise
-- [Claude Skills for Regulated Industries: Fintech and Healthcare](/claude-skills-guide/articles/claude-skills-for-regulated-industries-fintech-healthcare/) — Extend enterprise governance with industry-specific compliance patterns for regulated domains
-- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-guide/articles/claude-skills-change-management-rolling-out-to-teams/) — Deploy enterprise skills with proper change management so architects can govern rollouts at scale
+- [Claude Skills Governance Security Audit Checklist](/claude-skills-guide/claude-skills-governance-security-audit-checklist/) — Apply this security audit checklist before deploying governance-critical skills across your enterprise
+- [Claude Skills for Regulated Industries: Fintech and Healthcare](/claude-skills-guide/claude-skills-for-regulated-industries-fintech-healthcare/) — Extend enterprise governance with industry-specific compliance patterns for regulated domains
+- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-guide/claude-skills-change-management-rolling-out-to-teams/) — Deploy enterprise skills with proper change management so architects can govern rollouts at scale
 - [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced governance, compliance, and enterprise architecture patterns for large-scale Claude deployments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

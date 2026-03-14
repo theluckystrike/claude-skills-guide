@@ -12,7 +12,7 @@ score: 8
 
 # How Claude Skills Auto Invocation Works
 
-When you type a message and Claude Code invokes your [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) without you explicitly calling it, that is auto invocation. Understanding how it works helps you write skills that trigger reliably and avoid false positives.
+When you type a message and Claude Code invokes your [`/tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) without you explicitly calling it, that is auto invocation. Understanding how it works helps you write skills that trigger reliably and avoid false positives.
 
 ## The Auto-Invocation Pipeline
 
@@ -67,7 +67,7 @@ Once trigger conditions match, the skill instructions are injected into Claude's
 
 **Instruction Priority**: Skill instructions supplement Claude's base behavior without replacing it entirely.
 
-**State Management**: Skills like [`/supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) maintain persistent state across conversations. When auto-invoked, they load accumulated context from previous sessions.
+**State Management**: Skills like [`/supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) maintain persistent state across conversations. When auto-invoked, they load accumulated context from previous sessions.
 
 Example `/supermemory` trigger definition:
 
@@ -116,8 +116,8 @@ You can always invoke a skill directly with `/skill-name your message`, bypassin
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/)
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/)
-- [Claude Skill .md File Format: Full Specification](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/)
+- [Claude Skill .md File Format: Full Specification](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
 
 Built by theluckystrike - More at [zovo.one](https://zovo.one)

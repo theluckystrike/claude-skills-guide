@@ -46,7 +46,7 @@ This configuration works because it provides exactly the information Claude need
 
 ## Skill Loading: Curate, Do Not Accumulate
 
-[A common initialization mistake involves loading too many skills simultaneously](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/). Each skill adds tokens to every subsequent request, increases initialization time, and can create conflicting instructions. The best practice is to load only skills directly relevant to your current work.
+[A common initialization mistake involves loading too many skills simultaneously](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/). Each skill adds tokens to every subsequent request, increases initialization time, and can create conflicting instructions. The best practice is to load only skills directly relevant to your current work.
 
 Initialize with a focused skill set and expand only when specific needs arise. For a React frontend project, you might load the xlsx skill only during spreadsheet export work. For backend API development, you load testing skills during development sprints and remove them afterward.
 
@@ -83,7 +83,7 @@ This approach keeps your token usage efficient while ensuring skills are availab
 
 Large projects risk hitting Claude's context window limits during initialization. If your project contains thousands of files, Claude cannot reasonably parse all of them in a single session start. Instead, structure your initialization to focus Claude on relevant areas.
 
-[Use directory-specific CLAUDE.md files for monorepos or large codebases](/claude-skills-guide/articles/shared-claude-skills-across-monorepo-multiple-packages/). Place a CLAUDE.md in each package or module directory that describes only that component:
+[Use directory-specific CLAUDE.md files for monorepos or large codebases](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/). Place a CLAUDE.md in each package or module directory that describes only that component:
 
 ```
 my-monorepo/
@@ -104,7 +104,7 @@ When you enter a subdirectory, Claude picks up the local CLAUDE.md automatically
 
 ## Environment Variables and Secrets
 
-[Never include sensitive values in CLAUDE.md or any configuration file](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-claude-code-skills/) that might be committed to version control. Instead, establish environment variable patterns during initialization.
+[Never include sensitive values in CLAUDE.md or any configuration file](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/) that might be committed to version control. Instead, establish environment variable patterns during initialization.
 
 Create a .env.example file that documents required environment variables:
 
@@ -196,9 +196,9 @@ The goal is making every session start with Claude having exactly the context it
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/articles/how-to-write-effective-prompts-for-claude-code/)
-- [Claude Code for Beginners: Complete Getting Started 2026](/claude-skills-guide/articles/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
+- [Claude Code for Beginners: Complete Getting Started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

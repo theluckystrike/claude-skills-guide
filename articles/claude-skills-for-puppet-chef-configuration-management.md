@@ -14,7 +14,7 @@ score: 7
 
 # Claude Skills for Puppet Chef Configuration Management
 
-Configuration management tools like Puppet and Chef remain essential for managing infrastructure at scale. [Claude Code](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) brings practical assistance to your automation workflows, helping you write cleaner manifests, debug convergence issues, and maintain reusable code. This guide covers how Claude skills improve your Puppet and Chef workflows with concrete examples.
+Configuration management tools like Puppet and Chef remain essential for managing infrastructure at scale. [Claude Code](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) brings practical assistance to your automation workflows, helping you write cleaner manifests, debug convergence issues, and maintain reusable code. This guide covers how Claude skills improve your Puppet and Chef workflows with concrete examples.
 
 ## Writing Puppet Manifests with Claude
 
@@ -136,7 +136,7 @@ This custom resource becomes reusable across cookbooks, and Claude generates it 
 
 ## Debugging Convergence Issues
 
-When Puppet or Chef runs fail, Claude helps analyze error messages and suggests fixes. Share the error output and describe your expected behavior, and Claude identifies common problems. Combine this with [automated testing pipelines](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) to validate configuration changes before they hit production nodes:
+When Puppet or Chef runs fail, Claude helps analyze error messages and suggests fixes. Share the error output and describe your expected behavior, and Claude identifies common problems. Combine this with [automated testing pipelines](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) to validate configuration changes before they hit production nodes:
 
 - Missing dependencies between resources
 - Incorrect attribute precedence
@@ -155,7 +155,7 @@ Several approaches improve results when working with Claude on Puppet and Chef t
 
 **Review generated code before applying.** AI assistance speeds development but you remain responsible for the infrastructure that runs in production.
 
-**Use version control for your automation code.** Both Puppet and Chef integrate with Git, and you should review changes through pull requests before applying them to infrastructure. The [Claude Code Azure DevOps integration guide](/claude-skills-guide/articles/claude-code-azure-devops-integration-workflow-tutorial/) demonstrates how to automate configuration deployment through CI/CD pipelines.
+**Use version control for your automation code.** Both Puppet and Chef integrate with Git, and you should review changes through pull requests before applying them to infrastructure. The [Claude Code Azure DevOps integration guide](/claude-skills-guide/claude-code-azure-devops-integration-workflow-tutorial/) demonstrates how to automate configuration deployment through CI/CD pipelines.
 
 ## Summary
 
@@ -165,9 +165,9 @@ Start by describing your infrastructure needs clearly, provide context about you
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Skill recommendations for infrastructure engineers working across cloud environments
-- [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-skills-guide/articles/claude-code-azure-devops-integration-workflow-tutorial/) — Automate configuration deployment through CI/CD pipelines
-- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Validate manifests and cookbooks with test-driven workflows
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skill recommendations for infrastructure engineers working across cloud environments
+- [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-skills-guide/claude-code-azure-devops-integration-workflow-tutorial/) — Automate configuration deployment through CI/CD pipelines
+- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Validate manifests and cookbooks with test-driven workflows
 
 ---
 

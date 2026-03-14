@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Arabic Interface Development Workflow Tips
 
-Building Arabic interfaces requires attention to right-to-left (RTL) layout, typography, and bilingual content management. [Claude Code combined with specialized skills transforms this complex workflow](/claude-skills-guide/articles/claude-code-multilingual-codebase-management-guide/) into a streamlined process. This guide covers practical approaches for developers building Arabic interfaces or bilingual Arabic-English applications.
+Building Arabic interfaces requires attention to right-to-left (RTL) layout, typography, and bilingual content management. [Claude Code combined with specialized skills transforms this complex workflow](/claude-skills-guide/claude-code-multilingual-codebase-management-guide/) into a streamlined process. This guide covers practical approaches for developers building Arabic interfaces or bilingual Arabic-English applications.
 
 ## Setting Up Your Arabic Development Environment
 
@@ -34,7 +34,7 @@ export const arabicConfig = {
 };
 ```
 
-[The **frontend-design** skill generates component structures that respect RTL layouts](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) when you specify Arabic requirements in your prompt. For example:
+[The **frontend-design** skill generates component structures that respect RTL layouts](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) when you specify Arabic requirements in your prompt. For example:
 
 ```
 "Create a navigation header for an Arabic e-commerce site with RTL layout, including logo, search bar, cart icon, and user menu"
@@ -203,9 +203,9 @@ Start with frontend-design for component scaffolding, then layer in documentatio
 
 ## Related Reading
 
-- [Claude Code Multilingual Codebase Management Guide](/claude-skills-guide/articles/claude-code-multilingual-codebase-management-guide/)
-- [Claude Code i18n Workflow for React Applications](/claude-skills-guide/articles/claude-code-i18n-workflow-for-react-applications-guide/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code Multilingual Codebase Management Guide](/claude-skills-guide/claude-code-multilingual-codebase-management-guide/)
+- [Claude Code i18n Workflow for React Applications](/claude-skills-guide/claude-code-i18n-workflow-for-react-applications-guide/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

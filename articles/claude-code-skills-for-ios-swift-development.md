@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills for iOS Swift Development
 
-iOS development with Swift requires handling complex architectures, extensive testing, and detailed documentation. Claude Code and its [skill system](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) provide valuable assistance for developers working with Xcode, SwiftUI, and UIKit. This guide covers practical applications of Claude Code's built-in skills for iOS development workflows.
+iOS development with Swift requires handling complex architectures, extensive testing, and detailed documentation. Claude Code and its [skill system](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) provide valuable assistance for developers working with Xcode, SwiftUI, and UIKit. This guide covers practical applications of Claude Code's built-in skills for iOS development workflows.
 
 ## Setting Up Claude Code for iOS Development
 
@@ -37,7 +37,7 @@ While there are no iOS-specific built-in skills like `/swift`, `/xcode`, or `/sw
 
 ## Test-Driven Development with the TDD Skill
 
-The [TDD skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) transforms your iOS development approach. Activate it in your Claude session:
+The [TDD skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) transforms your iOS development approach. Activate it in your Claude session:
 
 ```
 /tdd
@@ -146,7 +146,7 @@ struct SettingsView: View {
 
 ## Documentation Generation for iOS Projects
 
-The `pdf` skill helps generate documentation for your iOS project. After completing feature development, use it to create API documentation or architecture guides. For similar cross-platform mobile workflows, see [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/articles/claude-code-dart-flutter-cross-platform-development-guide/).
+The `pdf` skill helps generate documentation for your iOS project. After completing feature development, use it to create API documentation or architecture guides. For similar cross-platform mobile workflows, see [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/claude-code-dart-flutter-cross-platform-development-guide/).
 
 ```
 /pdf
@@ -164,7 +164,7 @@ Use this to generate Swift documentation with proper formatting, including code 
 
 ## Creating Test Suites with Claude
 
-iOS testing involves multiple layers: unit tests, UI tests, and integration tests. Claude helps generate [comprehensive test coverage](/claude-skills-guide/articles/claude-code-skills-for-qa-engineers-automating-test-suites/).
+iOS testing involves multiple layers: unit tests, UI tests, and integration tests. Claude helps generate [comprehensive test coverage](/claude-skills-guide/claude-code-skills-for-qa-engineers-automating-test-suites/).
 
 For UI Testing with XCTest:
 
@@ -256,9 +256,9 @@ class NetworkViewController: UIViewController {
 
 ## Related Reading
 
-- [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/articles/claude-code-dart-flutter-cross-platform-development-guide/) — mobile cross-platform patterns with Claude Code
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — full TDD skill reference and workflow
-- [Claude Code Skills for QA Engineers Automating Test Suites](/claude-skills-guide/articles/claude-code-skills-for-qa-engineers-automating-test-suites/) — broader test automation coverage
-- [Claude Skill .md File Format: Full Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — understanding the skill file format
+- [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/claude-code-dart-flutter-cross-platform-development-guide/) — mobile cross-platform patterns with Claude Code
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — full TDD skill reference and workflow
+- [Claude Code Skills for QA Engineers Automating Test Suites](/claude-skills-guide/claude-code-skills-for-qa-engineers-automating-test-suites/) — broader test automation coverage
+- [Claude Skill .md File Format: Full Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — understanding the skill file format
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

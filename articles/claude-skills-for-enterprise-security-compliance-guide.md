@@ -124,7 +124,7 @@ def get_user_groups(email):
 
 ### Never Let Claude See Secrets Directly
 
-The biggest risk in AI coding tools: accidentally giving Claude access to production credentials. Skills like the [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) need access to run tests, while the [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) reads documents — scope each appropriately. Claude might log them, include them in generated code, or surface them in responses.
+The biggest risk in AI coding tools: accidentally giving Claude access to production credentials. Skills like the [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) need access to run tests, while the [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) reads documents — scope each appropriately. Claude might log them, include them in generated code, or surface them in responses.
 
 **Rule**: Secrets should be in environment variables or a secrets manager, never in files that a skill's instructions might reference.
 
@@ -322,8 +322,8 @@ This ensures no single developer can quietly modify skill behavior or security h
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Understanding which skills are most powerful helps security teams prioritize which ones need the strictest enterprise controls
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The `tools` field and YAML structure are the first things to audit when reviewing skills for enterprise compliance
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Enterprise deployments at scale need both security controls and cost management; these techniques address the latter
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Understanding which skills are most powerful helps security teams prioritize which ones need the strictest enterprise controls
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — The `tools` field and YAML structure are the first things to audit when reviewing skills for enterprise compliance
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Enterprise deployments at scale need both security controls and cost management; these techniques address the latter
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

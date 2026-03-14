@@ -168,7 +168,7 @@ Then invoke your skill again.
 
 ## Checking the `pdf` and `docx` Skills Specifically
 
-The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) and `docx` skills have an additional dependency — the underlying tools they call must be installed. If `/pdf` triggers but then fails immediately, the skill loaded but its tool dependencies are missing:
+The [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) and `docx` skills have an additional dependency — the underlying tools they call must be installed. If `/pdf` triggers but then fails immediately, the skill loaded but its tool dependencies are missing:
 
 ```bash
 # Check if pdftotext is available (used by the pdf skill)
@@ -180,7 +180,7 @@ which pandoc || brew install pandoc
 
 ## The `frontend-design` Skill Not Applying Conventions
 
-If the [`frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) loads but ignores your project's design system, the skill file likely lacks project-specific context. The skill itself is generic — you need to customise it:
+If the [`frontend-design` skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) loads but ignores your project's design system, the skill file likely lacks project-specific context. The skill itself is generic — you need to customise it:
 
 ```bash
 cat >> ~/.claude/skills/frontend-design.md << 'EOF'
@@ -205,8 +205,8 @@ EOF
 
 ## Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Reference for the exact YAML front matter fields that control how skills are loaded and matched
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — A guide for writing skills that actually fire, covering trigger phrases, descriptions, and invocation testing
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How the matching algorithm determines whether a skill fires automatically or needs manual invocation
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — Reference for the exact YAML front matter fields that control how skills are loaded and matched
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — A guide for writing skills that actually fire, covering trigger phrases, descriptions, and invocation testing
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How the matching algorithm determines whether a skill fires automatically or needs manual invocation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

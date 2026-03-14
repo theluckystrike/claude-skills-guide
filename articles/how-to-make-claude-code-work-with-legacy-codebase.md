@@ -10,7 +10,7 @@ score: 8
 
 # How to Make Claude Code Work with Legacy Codebase
 
-Legacy codebases present unique challenges for AI-assisted development. The [workflows hub](/claude-skills-guide/workflows-hub/) covers many patterns applicable to older projects. Years of accumulated technical debt, outdated patterns, and inconsistent styling can trip up even the most capable AI coding assistant. Start by reading [how to make Claude Code match existing code patterns](/claude-skills-guide/articles/how-to-make-claude-code-match-existing-code-patterns/) to handle conventions consistently. This guide provides concrete strategies to make Claude Code work effectively with older projects — including how to use [Claude skill files to encode legacy conventions](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/).
+Legacy codebases present unique challenges for AI-assisted development. The [workflows hub](/claude-skills-guide/workflows-hub/) covers many patterns applicable to older projects. Years of accumulated technical debt, outdated patterns, and inconsistent styling can trip up even the most capable AI coding assistant. Start by reading [how to make Claude Code match existing code patterns](/claude-skills-guide/how-to-make-claude-code-match-existing-code-patterns/) to handle conventions consistently. This guide provides concrete strategies to make Claude Code work effectively with older projects — including how to use [Claude skill files to encode legacy conventions](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/).
 
 ## Understanding the Challenge
 
@@ -82,7 +82,7 @@ This analysis phase prevents the AI from suggesting refactoring that would break
 
 ## Generate Tests Before Making Changes
 
-[The tdd skill proves especially valuable with legacy code](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). It forces Claude to write tests that capture current behavior before any modification.
+[The tdd skill proves especially valuable with legacy code](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). It forces Claude to write tests that capture current behavior before any modification.
 
 When you want to add a feature to legacy code:
 
@@ -113,7 +113,7 @@ describe('LegacyFormHandler', () => {
 
 ## Use the Super Memory Skill for Persistent Context
 
-For ongoing legacy projects, [the supermemory skill stores information that persists between Claude Code sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/). This is valuable for remembering:
+For ongoing legacy projects, [the supermemory skill stores information that persists between Claude Code sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/). This is valuable for remembering:
 
 - Which files are safe to modify
 - Why certain patterns exist
@@ -137,7 +137,7 @@ Remember that the payment module has these quirks:
 
 ## Handle Deprecated Dependencies
 
-Legacy codebases often depend on deprecated packages. For precise version control, see [making Claude Code use specific library versions](/claude-skills-guide/articles/how-to-make-claude-code-use-specific-library-version/). Tell Claude explicitly what dependencies to avoid:
+Legacy codebases often depend on deprecated packages. For precise version control, see [making Claude Code use specific library versions](/claude-skills-guide/how-to-make-claude-code-use-specific-library-version/). Tell Claude explicitly what dependencies to avoid:
 
 ```
 This project uses lodash v3 for compatibility with our IE11 support. Do not suggest upgrades to lodash v4 or replace lodash with native JavaScript equivalents.
@@ -179,7 +179,7 @@ This guidance prevents Claude from making changes that would break downstream co
 
 ## Test in Isolation Before Deployment
 
-The tdd skill helps create comprehensive test coverage, but also use integration tests that verify the entire system still works. For more on safe refactoring practices, see [making Claude Code refactor without breaking tests](/claude-skills-guide/articles/how-to-make-claude-code-refactor-without-breaking-tests/):
+The tdd skill helps create comprehensive test coverage, but also use integration tests that verify the entire system still works. For more on safe refactoring practices, see [making Claude Code refactor without breaking tests](/claude-skills-guide/how-to-make-claude-code-refactor-without-breaking-tests/):
 
 ```bash
 # Run legacy integration tests
@@ -207,9 +207,9 @@ With these patterns, Claude Code becomes an effective pair programmer for legacy
 
 ## Related Reading
 
-- [How to Make Claude Code Match Existing Code Patterns](/claude-skills-guide/articles/how-to-make-claude-code-match-existing-code-patterns/) — ensure Claude respects your legacy conventions when generating code
-- [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/articles/how-to-make-claude-code-refactor-without-breaking-tests/) — modernize legacy code while preserving test coverage
-- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/articles/claude-code-mongodb-to-postgresql-migration-workflow/) — migrate legacy data stores as part of modernization
-- [Claude Code Express to Fastify Migration Tutorial](/claude-skills-guide/articles/claude-code-express-to-fastify-migration-tutorial-2026/) — upgrade legacy Node.js frameworks with Claude Code assistance
+- [How to Make Claude Code Match Existing Code Patterns](/claude-skills-guide/how-to-make-claude-code-match-existing-code-patterns/) — ensure Claude respects your legacy conventions when generating code
+- [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/how-to-make-claude-code-refactor-without-breaking-tests/) — modernize legacy code while preserving test coverage
+- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/claude-code-mongodb-to-postgresql-migration-workflow/) — migrate legacy data stores as part of modernization
+- [Claude Code Express to Fastify Migration Tutorial](/claude-skills-guide/claude-code-express-to-fastify-migration-tutorial-2026/) — upgrade legacy Node.js frameworks with Claude Code assistance
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

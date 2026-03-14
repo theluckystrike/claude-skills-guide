@@ -175,9 +175,9 @@ Claude will generate a draft. Review it and add:
 
 Once you are comfortable with the basics:
 
-1. **Use [`/supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/)** — persistent memory across sessions
-2. **Use [`/tdd`](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/)** — add tests to existing code
-3. **Try [`/frontend-design`](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/)** — builds UI components that match your design system
+1. **Use [`/supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)** — persistent memory across sessions
+2. **Use [`/tdd`](/claude-skills-guide/best-claude-skills-for-developers-2026/)** — add tests to existing code
+3. **Try [`/frontend-design`](/claude-skills-guide/best-claude-code-skills-for-frontend-development/)** — builds UI components that match your design system
 4. **Read the hooks guide** — learn to control what Claude can do via shell hooks in `.claude/settings.json`
 
 Claude Code's power grows as you learn to structure tasks well and customize it for your workflow. Start simple, then layer in more capabilities.
@@ -186,8 +186,8 @@ Claude Code's power grows as you learn to structure tasks well and customize it 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The natural next step: an in-depth look at the most impactful skills to install once you have Claude Code running
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — When you're ready to write your own skills, this guide explains the exact format and fields
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understanding when Claude activates skills automatically helps you get more value from your setup as you grow beyond the basics
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The natural next step: an in-depth look at the most impactful skills to install once you have Claude Code running
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — When you're ready to write your own skills, this guide explains the exact format and fields
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understanding when Claude activates skills automatically helps you get more value from your setup as you grow beyond the basics
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

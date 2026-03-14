@@ -12,7 +12,7 @@ score: 7
 
 # Claude Skill Dependency Injection Patterns
 
-Dependency injection isn't just a software engineering concept. When you structure Claude skills to compose and chain together, you unlock modular AI workflows that scale. This guide shows you how to design skills that delegate to other skills, share common logic, and build composable automation pipelines. For foundational skill composition patterns, see [Claude skill inheritance and composition patterns](/claude-skills-guide/articles/claude-skill-inheritance-and-composition-patterns/).
+Dependency injection isn't just a software engineering concept. When you structure Claude skills to compose and chain together, you unlock modular AI workflows that scale. This guide shows you how to design skills that delegate to other skills, share common logic, and build composable automation pipelines. For foundational skill composition patterns, see [Claude skill inheritance and composition patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/).
 
 ## What Dependency Injection Means for Claude Skills
 
@@ -175,9 +175,9 @@ Start by identifying repetitive tasks in your Claude workflows. Extract the comm
 
 ## Related Reading
 
-- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/articles/claude-skill-inheritance-and-composition-patterns/) — Learn skill inheritance as the foundation for dependency injection and composition.
-- [When to Split One Claude Skill Into Multiple Files](/claude-skills-guide/articles/when-to-split-one-claude-skill-into-multiple-files/) — Structure skills for dependency injection by splitting them into focused modules.
-- [What Is the Best File Structure for a Complex Claude Skill](/claude-skills-guide/articles/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Design file structures that enable clean dependency injection between skill components.
+- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/) — Learn skill inheritance as the foundation for dependency injection and composition.
+- [When to Split One Claude Skill Into Multiple Files](/claude-skills-guide/when-to-split-one-claude-skill-into-multiple-files/) — Structure skills for dependency injection by splitting them into focused modules.
+- [What Is the Best File Structure for a Complex Claude Skill](/claude-skills-guide/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Design file structures that enable clean dependency injection between skill components.
 - [Claude Skills Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced skill architecture patterns including composition and dependency injection.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

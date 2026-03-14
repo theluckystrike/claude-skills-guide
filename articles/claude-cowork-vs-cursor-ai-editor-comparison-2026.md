@@ -46,7 +46,7 @@ Claude Code and Cursor AI are two of the most talked-about AI coding tools in 20
 
 **Agentic autonomy.** Claude Code is designed from the ground up as an agent. When you describe a complex task — "upgrade all dependencies, run the tests, and fix any failures" — Claude Code executes a sequence of real actions: reads package.json, runs npm outdated, makes the updates, runs the test suite, reads the failure output, diagnoses the cause, and applies the fix. Cursor's Agent mode does multi-file editing, but it is less capable of executing and adapting across a full command-and-code loop.
 
-**Skills ecosystem.** The [Claude skills framework](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) is a significant differentiator. Teams can define reusable, version-controlled agent behaviors that live in the repository. Cursor has `.cursorrules` files for customizing behavior, but these are style guides and project context — not composable, executable workflows.
+**Skills ecosystem.** The [Claude skills framework](/claude-skills-guide/best-claude-skills-for-developers-2026/) is a significant differentiator. Teams can define reusable, version-controlled agent behaviors that live in the repository. Cursor has `.cursorrules` files for customizing behavior, but these are style guides and project context — not composable, executable workflows.
 
 **Independence from the editor.** Claude Code works in any terminal, on any machine, in any project. You are not tied to a specific editor. Developers who use Vim, Emacs, JetBrains, or any other environment can use Claude Code without switching editors.
 
@@ -110,8 +110,8 @@ If forced to choose one, ask yourself: do you want AI assistance in your editor 
 
 ## Related Reading
 
-- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's skills ecosystem gives it a structural advantage over Cursor's prompt-based approach for repeatable workflows
-- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — This comparison directly maps to the Claude Code vs Cursor choice: structured skills vs inline prompting
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — One of Claude Code's key advantages over Cursor is skill auto-invocation; this explains the mechanism in detail
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's skills ecosystem gives it a structural advantage over Cursor's prompt-based approach for repeatable workflows
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — This comparison directly maps to the Claude Code vs Cursor choice: structured skills vs inline prompting
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — One of Claude Code's key advantages over Cursor is skill auto-invocation; this explains the mechanism in detail
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

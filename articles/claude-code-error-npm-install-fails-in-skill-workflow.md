@@ -16,7 +16,7 @@ When working with Claude Code skills, you may encounter npm install failures tha
 
 ## Understanding the Error
 
-The npm install fails in skill workflow error typically occurs when a Claude skill attempts to set up its Python environment but encounters issues with package installation. [Skills like `pdf`, `pptx`, `docx`, `xlsx`](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), `canvas-design`, and `algorithmic-art` all require specific Python packages to function properly.
+The npm install fails in skill workflow error typically occurs when a Claude skill attempts to set up its Python environment but encounters issues with package installation. [Skills like `pdf`, `pptx`, `docx`, `xlsx`](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), `canvas-design`, and `algorithmic-art` all require specific Python packages to function properly.
 
 When Claude tries to load a skill using `get_skill(skill_name)`, it first checks for a compatible Python environment. If packages are missing or incompatible, the operation fails with an npm-related error message, even though the actual problem is Python package management.
 
@@ -36,7 +36,7 @@ On certain systems, npm or pip may lack sufficient permissions to create directo
 
 ### Missing uv Tool
 
-[The recommended method for managing Python environments](/claude-skills-guide/articles/claude-code-error-out-of-memory-large-codebase-fix/) in skill workflows is `uv`, a fast Python package installer. If `uv` is not installed, the workflow falls back to other methods that may fail.
+[The recommended method for managing Python environments](/claude-skills-guide/claude-code-error-out-of-memory-large-codebase-fix/) in skill workflows is `uv`, a fast Python package installer. If `uv` is not installed, the workflow falls back to other methods that may fail.
 
 ## Resolution Methods
 
@@ -94,7 +94,7 @@ The `canvas-design` skill and `algorithmic-art` skill both require `pillow` for 
 
 ### Development Skills
 
-[The `tdd` skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) additional Python dependencies, focusing on code generation and structure.
+[The `tdd` skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) additional Python dependencies, focusing on code generation and structure.
 
 ### Memory Skills
 
@@ -166,9 +166,9 @@ Remember to check skill documentation for specific requirements before installat
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) — overview of which skills require Python packages and their setup
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — set up the TDD skill which needs minimal Python dependencies
-- [Claude Code Error Out of Memory Large Codebase Fix](/claude-skills-guide/articles/claude-code-error-out-of-memory-large-codebase-fix/) — related resource and environment management issues
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — overview of which skills require Python packages and their setup
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — set up the TDD skill which needs minimal Python dependencies
+- [Claude Code Error Out of Memory Large Codebase Fix](/claude-skills-guide/claude-code-error-out-of-memory-large-codebase-fix/) — related resource and environment management issues
 - [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — solutions for common Claude Code installation and dependency errors
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

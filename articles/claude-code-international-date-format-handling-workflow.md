@@ -60,7 +60,7 @@ This skill establishes clear rules that Claude Code follows whenever date-relate
 
 ### Pattern 1: Locale-Aware Input Parsing
 
-When handling user input, always establish the locale before parsing dates. [The supermemory skill can store user preferences](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), but you can also use explicit context passing:
+When handling user input, always establish the locale before parsing dates. [The supermemory skill can store user preferences](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), but you can also use explicit context passing:
 
 ```javascript
 // date-parser.js
@@ -79,7 +79,7 @@ function parseUserDate(dateString, locale = 'en-US') {
 }
 ```
 
-[The frontend-design skill includes built-in date picker components](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) that automatically handle locale-specific display, reducing the burden on your validation logic.
+[The frontend-design skill includes built-in date picker components](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) that automatically handle locale-specific display, reducing the burden on your validation logic.
 
 ### Pattern 2: Standardized Storage and Display
 
@@ -118,7 +118,7 @@ def display_date(iso_date: str, target_locale: str) -> str:
 
 ### Pattern 3: Testing Date Handling with TDD
 
-[The tdd skill provides excellent patterns for testing date handling](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). Create comprehensive test coverage for your date utilities:
+[The tdd skill provides excellent patterns for testing date handling](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). Create comprehensive test coverage for your date utilities:
 
 ```javascript
 // date-handler.test.js
@@ -209,9 +209,9 @@ The key principles remain straightforward: store in ISO 8601, parse with explici
 
 ## Related Reading
 
-- [Claude Code i18n Workflow for React Applications](/claude-skills-guide/articles/claude-code-i18n-workflow-for-react-applications-guide/)
-- [Claude Code L10n Testing Automation Workflow Tutorial](/claude-skills-guide/articles/claude-code-l10n-testing-automation-workflow-tutorial/)
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Code i18n Workflow for React Applications](/claude-skills-guide/claude-code-i18n-workflow-for-react-applications-guide/)
+- [Claude Code L10n Testing Automation Workflow Tutorial](/claude-skills-guide/claude-code-l10n-testing-automation-workflow-tutorial/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

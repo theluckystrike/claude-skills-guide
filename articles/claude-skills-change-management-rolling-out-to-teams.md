@@ -16,7 +16,7 @@ When your team grows beyond a single developer using Claude Code, you'll need a 
 
 ## The Challenge of Distributed Skill Management
 
-Individual developers install skills in their local `~/.claude/skills/` directories. When standardizing these installations, the [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) provides a valuable shared knowledge base that benefits the whole team. When multiple team members need access to the same specialized workflows—whether it's the **tdd** skill for test-driven development or the **pdf** skill for document processing—you face version drift, inconsistent behavior, and duplicated effort. Change management addresses these problems systematically.
+Individual developers install skills in their local `~/.claude/skills/` directories. When standardizing these installations, the [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) provides a valuable shared knowledge base that benefits the whole team. When multiple team members need access to the same specialized workflows—whether it's the **tdd** skill for test-driven development or the **pdf** skill for document processing—you face version drift, inconsistent behavior, and duplicated effort. Change management addresses these problems systematically.
 
 The core issue is that skills are just Markdown files with no built-in distribution mechanism. Unlike npm packages or Docker images, there's no native registry with version tagging. Your team needs to build that layer yourself.
 
@@ -247,9 +247,9 @@ Start with a small pilot group, iterate on your processes, and scale up as your 
 
 ## Related Reading
 
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — The distribution mechanics covered in this change management guide — install scripts, shared repos, and onboarding
-- [Claude Skills Onboarding for New Engineering Team Members](/claude-skills-guide/articles/claude-skills-onboarding-new-engineering-team-members/) — Combine skill rollout change management with a structured onboarding workflow for new team members
-- [How Do I Test a Claude Skill Before Deploying to Team](/claude-skills-guide/articles/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate skills through the testing workflow before each change management rollout to your team
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — The distribution mechanics covered in this change management guide — install scripts, shared repos, and onboarding
+- [Claude Skills Onboarding for New Engineering Team Members](/claude-skills-guide/claude-skills-onboarding-new-engineering-team-members/) — Combine skill rollout change management with a structured onboarding workflow for new team members
+- [How Do I Test a Claude Skill Before Deploying to Team](/claude-skills-guide/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate skills through the testing workflow before each change management rollout to your team
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational skill distribution and team adoption patterns across the Claude ecosystem
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

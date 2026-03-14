@@ -16,7 +16,7 @@ Open source contribution remains one of the most effective ways to improve your 
 
 ## Setting Up Your Development Environment
 
-Before contributing, ensure Claude Code is installed and configured with the skills most useful for open source work. The [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) is particularly valuable for maintaining test coverage when modifying existing code. Install it alongside the pdf skill if you plan to review documentation and the supermemory skill to maintain context across multiple contribution sessions.
+Before contributing, ensure Claude Code is installed and configured with the skills most useful for open source work. The [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) is particularly valuable for maintaining test coverage when modifying existing code. Install it alongside the pdf skill if you plan to review documentation and the supermemory skill to maintain context across multiple contribution sessions.
 
 ```bash
 # Verify Claude Code installation
@@ -29,7 +29,7 @@ Most open source projects follow similar contribution patterns: fork the reposit
 
 Start by identifying projects aligned with your interests and expertise. GitHub's "good first issue" label remains the standard way to find beginner-friendly contributions. You can also use Claude Code to scan repositories for issues matching your criteria.
 
-The [supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) proves invaluable here if you're tracking multiple potential contributions across several repositories. It maintains your research context, allowing you to return to promising projects without re-explaining your goals.
+The [supermemory skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) proves invaluable here if you're tracking multiple potential contributions across several repositories. It maintains your research context, allowing you to return to promising projects without re-explaining your goals.
 
 ## Understanding Project Structure and Conventions
 
@@ -163,8 +163,8 @@ Remember that every contribution—no matter how small—adds value to the ecosy
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Developer skills for writing tests and documentation before submitting PRs
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Skills auto-trigger when working on test files or documentation
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep contribution sessions efficient when working across unfamiliar codebases
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills for writing tests and documentation before submitting PRs
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Skills auto-trigger when working on test files or documentation
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep contribution sessions efficient when working across unfamiliar codebases
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -29,7 +29,7 @@ Each skill handles a specific stage of the workflow, and when chained together, 
 
 ## Stage 1: Gathering and Processing Competitor Documents
 
-Start by collecting publicly available competitor materials—pricing pages, feature comparison sheets, annual reports, and technical documentation. Store these as PDF files in a designated directory, then invoke the [pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) to extract structured data:
+Start by collecting publicly available competitor materials—pricing pages, feature comparison sheets, annual reports, and technical documentation. Store these as PDF files in a designated directory, then invoke the [pdf skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) to extract structured data:
 
 ```
 /pdf
@@ -53,7 +53,7 @@ Schedule a shell script to capture web data weekly using `curl` or `wget`, savin
 
 ## Stage 3: Building the Competitive Intelligence Database
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) serves as your long-term memory layer. Use it to store competitor profiles with key attributes so context persists across sessions:
+The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) serves as your long-term memory layer. Use it to store competitor profiles with key attributes so context persists across sessions:
 
 ```
 /supermemory store:
@@ -124,7 +124,7 @@ Automation handles data collection and formatting, but human judgment is essenti
 
 ## Related Reading
 
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

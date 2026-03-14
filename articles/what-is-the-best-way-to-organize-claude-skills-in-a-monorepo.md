@@ -60,7 +60,7 @@ claude-skills-monorepo/
 └── README.md
 ```
 
-This structure allows you to invoke any skill using its path: `/development/tdd` or `/data/pdf`. Claude Code loads the `skill.md` file from the specified directory and applies its instructions to your current task. For the full specification of the skill.md format, see the [skill MD format guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/).
+This structure allows you to invoke any skill using its path: `/development/tdd` or `/data/pdf`. Claude Code loads the `skill.md` file from the specified directory and applies its instructions to your current task. For the full specification of the skill.md format, see the [skill MD format guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/).
 
 ## Implementing Shared Dependencies
 
@@ -226,9 +226,9 @@ Start with the recommended directory layout, add your skills progressively, and 
 
 ## Related Reading
 
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Master the full skill.md specification to author well-structured skills for your monorepo
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Distribute your monorepo-organized skills consistently across all team members
-- [What Is the Best File Structure for a Complex Claude Skill](/claude-skills-guide/articles/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Apply the individual skill file structure guidance alongside this monorepo organization approach
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Master the full skill.md specification to author well-structured skills for your monorepo
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Distribute your monorepo-organized skills consistently across all team members
+- [What Is the Best File Structure for a Complex Claude Skill](/claude-skills-guide/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Apply the individual skill file structure guidance alongside this monorepo organization approach
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational patterns for skill organization, authoring, and team distribution
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

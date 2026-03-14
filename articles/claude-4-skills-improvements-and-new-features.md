@@ -16,7 +16,7 @@ Claude 4 brought meaningful improvements to the existing skills system. If you'v
 
 ## Enhanced PDF Processing
 
-The [`pdf` skill's](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) extraction engine improved significantly in Claude 4, particularly for multi-column layouts and scanned documents. Table detection is more reliable, which matters when pulling structured data from technical specifications and financial reports.
+The [`pdf` skill's](/claude-skills-guide/best-claude-skills-for-data-analysis/) extraction engine improved significantly in Claude 4, particularly for multi-column layouts and scanned documents. Table detection is more reliable, which matters when pulling structured data from technical specifications and financial reports.
 
 Batch processing capability was added in this version:
 
@@ -36,7 +36,7 @@ Being explicit about table structure still improves accuracy, but the skill's ba
 
 ## Smarter TDD Edge Case Detection
 
-The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) now identifies edge cases more proactively based on code patterns rather than requiring you to specify them.
+The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) now identifies edge cases more proactively based on code patterns rather than requiring you to specify them.
 
 ```
 /tdd write tests for this function and flag any edge cases I should handle: [paste function]
@@ -58,7 +58,7 @@ Fixture cleanup also improved. The skill now includes teardown logic in generate
 
 ## Supermemory Semantic Search
 
-The most significant [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) improvement in Claude 4 is natural language recall. Previously, recall required exact key names. Now you can query by description:
+The most significant [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) improvement in Claude 4 is natural language recall. Previously, recall required exact key names. Now you can query by description:
 
 ```
 /supermemory recall why we chose Redis over Memcached
@@ -157,9 +157,9 @@ Then verify you have Claude 4 by checking the model in your settings or running 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

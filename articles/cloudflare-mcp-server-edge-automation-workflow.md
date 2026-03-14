@@ -12,7 +12,7 @@ score: 7
 
 # Cloudflare MCP Server Edge Automation Workflow
 
-[The Model Context Protocol (MCP) server for Cloudflare enables Claude Code](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/), KV stores, Durable Objects, DNS records, and edge configurations through natural language. This workflow transforms infrastructure management into conversational commands, reducing the friction between intent and deployment.
+[The Model Context Protocol (MCP) server for Cloudflare enables Claude Code](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), KV stores, Durable Objects, DNS records, and edge configurations through natural language. This workflow transforms infrastructure management into conversational commands, reducing the friction between intent and deployment.
 
 This guide walks through setting up the Cloudflare MCP server, configuring authentication, and building practical automation workflows for edge deployments.
 
@@ -184,13 +184,13 @@ This keeps secrets out of version control while making them available to your de
 
 The Cloudflare MCP server transforms edge infrastructure management into conversational workflows. By describing desired states in natural language, you provision Workers, manage DNS, configure storage, and deploy global applications without memorizing API endpoints or writing boilerplate scripts.
 
-Start with small automations—perhaps DNS queries or single Worker deployments—and expand to complex multi-step workflows as your confidence grows. The MCP server handles the API complexity while you focus on infrastructure intent. For deployment automation strategies, see the [serverless function development workflow](/claude-skills-guide/articles/claude-skills-serverless-function-development-workflow/).
+Start with small automations—perhaps DNS queries or single Worker deployments—and expand to complex multi-step workflows as your confidence grows. The MCP server handles the API complexity while you focus on infrastructure intent. For deployment automation strategies, see the [serverless function development workflow](/claude-skills-guide/claude-skills-serverless-function-development-workflow/).
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/articles/aws-mcp-server-cloud-automation-with-claude-code/)
-- [Claude Skills Serverless Function Development Workflow](/claude-skills-guide/articles/claude-skills-serverless-function-development-workflow/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
+- [Claude Skills Serverless Function Development Workflow](/claude-skills-guide/claude-skills-serverless-function-development-workflow/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

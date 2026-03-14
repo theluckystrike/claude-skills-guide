@@ -198,7 +198,7 @@ Only include fields you actually need. Each additional line is another opportuni
 
 ### Use Templates
 
-When creating new skills, start from a proven template rather than writing front matter from scratch. This is especially helpful when working with complex skills like the [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) or the canvas-design skill that might require additional metadata.
+When creating new skills, start from a proven template rather than writing front matter from scratch. This is especially helpful when working with complex skills like the [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) or the canvas-design skill that might require additional metadata.
 
 ## Troubleshooting Persistent Issues
 
@@ -217,9 +217,9 @@ When debugging, start by validating your YAML, then isolate problematic sections
 
 ## Related Reading
 
-- [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/articles/claude-skill-yaml-front-matter-parsing-error-fix/) — Handle YAML parsing errors in the front matter with more targeted fixes for specific error types
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Master the complete skill.md format to write valid YAML front matter from the start
-- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/articles/how-do-i-debug-a-claude-skill-that-silently-fails/) — Use these debugging strategies when YAML errors cause skills to load without error but produce no output
+- [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) — Handle YAML parsing errors in the front matter with more targeted fixes for specific error types
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Master the complete skill.md format to write valid YAML front matter from the start
+- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/how-do-i-debug-a-claude-skill-that-silently-fails/) — Use these debugging strategies when YAML errors cause skills to load without error but produce no output
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore skill authoring fundamentals and common YAML patterns for well-structured Claude skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

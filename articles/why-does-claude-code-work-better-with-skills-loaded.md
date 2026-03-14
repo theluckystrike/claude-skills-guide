@@ -18,7 +18,7 @@ When you first start using Claude Code, you get a capable general-purpose coding
 
 Without skills loaded, Claude Code operates with a generic system prompt designed to handle broad programming tasks. It knows how to write code, debug issues, and explain concepts, but it lacks specialized guidance for particular workflows.
 
-[When you load a skill, you're providing Claude with a targeted system prompt](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) that encodes domain knowledge, preferred patterns, and task-specific instructions. Think of it as switching from a generalist to a specialist without changing the underlying model.
+[When you load a skill, you're providing Claude with a targeted system prompt](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) that encodes domain knowledge, preferred patterns, and task-specific instructions. Think of it as switching from a generalist to a specialist without changing the underlying model.
 
 Consider what happens when you invoke the `tdd` skill versus working without it:
 
@@ -97,7 +97,7 @@ The `pdf` skill and `docx` skill transform Claude from a text generator into a d
 
 ### Test Writing
 
-[The `tdd` skill encodes test-first development philosophy](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). When you describe a feature, Claude with this skill loaded will:
+[The `tdd` skill encodes test-first development philosophy](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). When you describe a feature, Claude with this skill loaded will:
 
 1. write_file failing tests that define expected behavior
 2. Implement the minimum code to pass those tests
@@ -107,7 +107,7 @@ This stands in contrast to base Claude, which might write implementation code fi
 
 ### Memory and Context
 
-[The `supermemory` skill enables persistent context across sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/). Instead of repeating background information in every conversation, Claude with this skill loaded can:
+[The `supermemory` skill enables persistent context across sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/). Instead of repeating background information in every conversation, Claude with this skill loaded can:
 
 - Recall previous project discussions
 - Reference past decisions and rationale
@@ -145,9 +145,9 @@ As you identify other repetitive patterns, consider whether a custom skill could
 
 ## Related Reading
 
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

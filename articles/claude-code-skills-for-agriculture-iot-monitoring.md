@@ -25,7 +25,7 @@ Modern farms deploy dozens or hundreds of sensors across fields, greenhouses, an
 - Tank level monitors for irrigation systems
 - Equipment status sensors
 
-Manually monitoring this data is impractical. [Claude Code skills can process this data automatically](/claude-skills-guide/articles/claude-code-skills-for-iot-and-embedded-systems/), detecting anomalies, triggering alerts, and even controlling connected systems.
+Manually monitoring this data is impractical. [Claude Code skills can process this data automatically](/claude-skills-guide/claude-code-skills-for-iot-and-embedded-systems/), detecting anomalies, triggering alerts, and even controlling connected systems.
 
 ## Building a Sensor Data Processing Skill
 
@@ -224,9 +224,9 @@ The key is defining clear thresholds, providing structured input formats, and sp
 
 ## Related Reading
 
-- [Claude Code Skills for IoT and Embedded Systems](/claude-skills-guide/articles/claude-code-skills-for-iot-and-embedded-systems/) — related patterns for sensor data processing and device management
-- [Claude Skills for Energy Smart Grid Applications](/claude-skills-guide/articles/claude-skills-for-energy-smart-grid-applications/) — apply similar IoT monitoring patterns to energy infrastructure
-- [Claude Code SendGrid Email Automation Setup](/claude-skills-guide/articles/claude-code-skills-sendgrid-email-automation-setup/) — set up alert notifications for critical sensor threshold breaches
+- [Claude Code Skills for IoT and Embedded Systems](/claude-skills-guide/claude-code-skills-for-iot-and-embedded-systems/) — related patterns for sensor data processing and device management
+- [Claude Skills for Energy Smart Grid Applications](/claude-skills-guide/claude-skills-for-energy-smart-grid-applications/) — apply similar IoT monitoring patterns to energy infrastructure
+- [Claude Code SendGrid Email Automation Setup](/claude-skills-guide/claude-code-skills-sendgrid-email-automation-setup/) — set up alert notifications for critical sensor threshold breaches
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — discover Claude Code applications across specialized industries
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Error Out of Memory Large Codebase Fix
 
-When you work with large codebases in Claude Code, you may encounter an out of memory error that halts your session abruptly. This problem occurs when the [combined memory footprint of your project files](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/), skill definitions, and conversation context exceeds what Claude Code can handle efficiently. The fix requires understanding the underlying causes and applying targeted strategies to reduce memory pressure.
+When you work with large codebases in Claude Code, you may encounter an out of memory error that halts your session abruptly. This problem occurs when the [combined memory footprint of your project files](/claude-skills-guide/claude-skills-context-window-management-best-practices/), skill definitions, and conversation context exceeds what Claude Code can handle efficiently. The fix requires understanding the underlying causes and applying targeted strategies to reduce memory pressure.
 
 ## Why Large Codebases Trigger Memory Errors
 
@@ -135,9 +135,9 @@ This approach keeps memory consumption predictable and prevents crashes during e
 
 ## Related Reading
 
-- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/articles/claude-code-skills-context-window-exceeded-error-fix/) — Handle context window overflow errors alongside out-of-memory crashes
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/) — Proactively manage memory and context to prevent out-of-memory errors
-- [Claude Code Skill Timeout Error: How to Increase the Limit](/claude-skills-guide/articles/claude-code-skill-timeout-error-how-to-increase-the-limit/) — Address timeouts that co-occur with memory pressure on large codebases
+- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/) — Handle context window overflow errors alongside out-of-memory crashes
+- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-skills-context-window-management-best-practices/) — Proactively manage memory and context to prevent out-of-memory errors
+- [Claude Code Skill Timeout Error: How to Increase the Limit](/claude-skills-guide/claude-code-skill-timeout-error-how-to-increase-the-limit/) — Address timeouts that co-occur with memory pressure on large codebases
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Solutions for memory, context, and performance issues
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

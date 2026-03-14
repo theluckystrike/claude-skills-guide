@@ -135,7 +135,7 @@ The frontend-design skill becomes powerful when combined with other Claude skill
 
 ### Test-Driven Development with tdd
 
-Use the [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) alongside frontend-design:
+Use the [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) alongside frontend-design:
 
 1. Describe your component requirements to frontend-design
 2. Switch context to tdd and request test cases
@@ -150,7 +150,7 @@ focus trapping, and escape key dismissal."
 
 ### Documentation with pdf
 
-The [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) generates component documentation:
+The [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) generates component documentation:
 
 ```
 Create a PDF style guide from these component specifications including 
@@ -238,9 +238,9 @@ Start with simple components to understand the skill's patterns, then scale to c
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Broader developer skill overview
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

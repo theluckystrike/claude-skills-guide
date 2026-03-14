@@ -10,11 +10,11 @@ score: 8
 
 # How to Make Claude Code Write Better Unit Tests
 
-Claude Code generates unit tests quickly, but the quality varies based on how you guide it. Visit the [workflows hub](/claude-skills-guide/workflows-hub/) for broader testing automation patterns. This guide covers practical techniques to get more maintainable, comprehensive, and meaningful test coverage from your AI coding assistant — building on the [automated testing pipeline guide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/).
+Claude Code generates unit tests quickly, but the quality varies based on how you guide it. Visit the [workflows hub](/claude-skills-guide/workflows-hub/) for broader testing automation patterns. This guide covers practical techniques to get more maintainable, comprehensive, and meaningful test coverage from your AI coding assistant — building on the [automated testing pipeline guide](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/).
 
 ## Start with the TDD Skill
 
-[The `/tdd` skill fundamentally changes how Claude approaches testing](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). Rather than writing implementation code first and retrofilling tests, the tdd skill instructs Claude to follow test-driven development principles—writing the test specification before any implementation.
+[The `/tdd` skill fundamentally changes how Claude approaches testing](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). Rather than writing implementation code first and retrofilling tests, the tdd skill instructs Claude to follow test-driven development principles—writing the test specification before any implementation.
 
 Activate it at the start of your session:
 
@@ -70,7 +70,7 @@ where amount is 0 or negative.
 
 ## Use the Right Skills for Different Scenarios
 
-Different Claude skills improve different aspects of testing. [Claude skills for writing unit tests automatically](/claude-skills-guide/articles/claude-skills-for-writing-unit-tests-automatically/) provides a full breakdown:
+Different Claude skills improve different aspects of testing. [Claude skills for writing unit tests automatically](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/) provides a full breakdown:
 
 - **tdd**: Overall test-driven development workflow
 - **frontend-design**: Testing React/Vue component behavior and rendering
@@ -132,7 +132,7 @@ Analyze this function and identify code paths that lack test coverage.
 Then write tests for each uncovered branch.
 ```
 
-This works especially well after adding new features—ask Claude to review your implementation for coverage gaps before considering the work complete. Pairing this with [automated code review](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) catches issues the tests don't cover.
+This works especially well after adding new features—ask Claude to review your implementation for coverage gaps before considering the work complete. Pairing this with [automated code review](/claude-skills-guide/best-claude-skills-for-code-review-automation/) catches issues the tests don't cover.
 
 ## Build a Testing Prompt Library
 
@@ -156,9 +156,9 @@ Getting better unit tests from Claude Code requires clear direction, the right s
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — integrate better unit tests into a complete CI pipeline
-- [How to Make Claude Code Test Before Implementing Feature](/claude-skills-guide/articles/how-to-make-claude-code-test-before-implementing-feature/) — enforce test-first development for even better tests
-- [Claude Code Pytest Fixtures Parametrize Workflow Tutorial](/claude-skills-guide/articles/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — write advanced parametrized tests with pytest and Claude
-- [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) — review generated unit tests for coverage and quality
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — integrate better unit tests into a complete CI pipeline
+- [How to Make Claude Code Test Before Implementing Feature](/claude-skills-guide/how-to-make-claude-code-test-before-implementing-feature/) — enforce test-first development for even better tests
+- [Claude Code Pytest Fixtures Parametrize Workflow Tutorial](/claude-skills-guide/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — write advanced parametrized tests with pytest and Claude
+- [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — review generated unit tests for coverage and quality
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

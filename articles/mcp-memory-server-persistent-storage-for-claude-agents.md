@@ -122,9 +122,9 @@ Claude calls `read_graph` and returns all entities and relations.
 
 ## Integrating Memory with Claude Skills
 
-The memory server complements Claude skills naturally. Use it alongside [`/supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/), `/tdd`, and other skills to build persistent workflows:
+The memory server complements Claude skills naturally. Use it alongside [`/supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/), `/tdd`, and other skills to build persistent workflows:
 
-**With [`/tdd`](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/):** After writing tests, ask Claude to store a summary of what was tested:
+**With [`/tdd`](/claude-skills-guide/best-claude-skills-for-developers-2026/):** After writing tests, ask Claude to store a summary of what was tested:
 
 ```
 /tdd Write tests for the payment module.
@@ -171,8 +171,8 @@ The MCP SDK documentation at [modelcontextprotocol.io](https://modelcontextproto
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Covers the supermemory skill and other memory-related capabilities that complement the MCP memory server
-- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) — Explains how MCP servers and Claude skills relate and when to use each
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Persistent memory via MCP servers reduces repeated context loading; this article explains token savings strategies
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Covers the supermemory skill and other memory-related capabilities that complement the MCP memory server
+- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) — Explains how MCP servers and Claude skills relate and when to use each
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Persistent memory via MCP servers reduces repeated context loading; this article explains token savings strategies
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

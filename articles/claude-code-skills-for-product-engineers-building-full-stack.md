@@ -12,7 +12,7 @@ score: 9
 
 # Claude Code Skills for Product Engineers Building Full Stack
 
-Product engineers who build full-stack applications face a unique challenge: they need competence across the entire technology stack while maintaining speed and quality. [Claude Code skills provide specialized capabilities](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) that transform how you approach frontend UI, backend APIs, database schemas, testing, and deployment. This guide covers the skills that deliver the most value for product engineers shipping features end-to-end.
+Product engineers who build full-stack applications face a unique challenge: they need competence across the entire technology stack while maintaining speed and quality. [Claude Code skills provide specialized capabilities](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) that transform how you approach frontend UI, backend APIs, database schemas, testing, and deployment. This guide covers the skills that deliver the most value for product engineers shipping features end-to-end.
 
 ## The Full-Stack Challenge
 
@@ -143,8 +143,8 @@ Invoke these skills directly in Claude Code with `/skill-name` to integrate spec
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — UI generation, design, and component workflows
-- [Claude Code Skills for Backend Developers](/claude-skills-guide/articles/best-claude-code-skills-for-backend-developers-node-and-python/) — API development and server-side patterns
-- [Claude Code TDD Workflow Guide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Test-driven development with Claude
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — UI generation, design, and component workflows
+- [Claude Code Skills for Backend Developers](/claude-skills-guide/best-claude-code-skills-for-backend-developers-node-and-python/) — API development and server-side patterns
+- [Claude Code TDD Workflow Guide](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Test-driven development with Claude
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*

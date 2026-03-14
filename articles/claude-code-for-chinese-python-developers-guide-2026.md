@@ -43,11 +43,11 @@ When Claude Code reads this file, it understands your project conventions automa
 
 ## Essential Claude Skills for Python Developers
 
-[Claude skills are Markdown files that extend Claude's capabilities](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). Several skills directly improve Python development workflows.
+[Claude skills are Markdown files that extend Claude's capabilities](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Several skills directly improve Python development workflows.
 
 ### The TDD Skill
 
-[The `/tdd` skill transforms how you write Python code](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). Activate it by typing:
+[The `/tdd` skill transforms how you write Python code](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). Activate it by typing:
 
 ```
 /tdd
@@ -74,7 +74,7 @@ This extracts documentation you can then use to generate code comments or API wr
 
 ### The Super Memory Skill
 
-[The `supermemory` skill maintains context across sessions](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/):
+[The `supermemory` skill maintains context across sessions](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/):
 
 ```
 /supermemory remember that we use Python 3.12 and prefer pydantic v2
@@ -196,9 +196,9 @@ Claude generates secure code by default, but always validate against your specif
 
 ## Related Reading
 
-- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — master the skill file format for Python development workflows
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — apply test-driven development to Python projects
-- [Building Stateful Agents with Claude Skills Guide](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) — persist project preferences with supermemory across sessions
+- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — master the skill file format for Python development workflows
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — apply test-driven development to Python projects
+- [Building Stateful Agents with Claude Skills Guide](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) — persist project preferences with supermemory across sessions
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/) — explore all skills available for Python developers
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

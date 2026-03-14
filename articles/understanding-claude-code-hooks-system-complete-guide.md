@@ -186,7 +186,7 @@ Keep hooks fast. If you need to do heavy async work such as sending data to a lo
 
 ## Global vs Project Hooks
 
-Like skills, hooks can be configured globally (`~/.claude/settings.json`) or per project (`.claude/settings.json`). Both sets are loaded. Global hooks run first, then project hooks. This is different from [auto-invocation](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/), which is skill-level behavior. They stack — there is no override mechanism that prevents a global hook from running.
+Like skills, hooks can be configured globally (`~/.claude/settings.json`) or per project (`.claude/settings.json`). Both sets are loaded. Global hooks run first, then project hooks. This is different from [auto-invocation](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/), which is skill-level behavior. They stack — there is no override mechanism that prevents a global hook from running.
 
 This lets you have a global audit hook that logs all tool calls, plus project-specific hooks that enforce project-specific rules, without conflict.
 
@@ -241,9 +241,9 @@ Register it:
 
 ## Related Reading
 
-- [Building Stateful Agents with Claude Skills](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) — Hooks are core to stateful agent design
-- [Claude Skill .md File Format: Full Specification](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Skill file format reference
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Top developer skills that work well with hooks
+- [Building Stateful Agents with Claude Skills](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) — Hooks are core to stateful agent design
+- [Claude Skill .md File Format: Full Specification](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Skill file format reference
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top developer skills that work well with hooks
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

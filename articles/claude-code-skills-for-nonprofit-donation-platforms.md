@@ -16,7 +16,7 @@ Building a nonprofit donation platform requires handling sensitive financial dat
 
 ## Understanding the Skill Model
 
-Claude skills are instruction files loaded from `~/.claude/skills/` when you invoke them with slash commands. They do not execute code — they guide Claude to produce better code for your specific domain. For nonprofit donation platforms, this means getting Stripe-ready implementations, proper receipt generation, and donor data handling patterns from the start. See the [skill .md format specification](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) for writing these instruction files correctly.
+Claude skills are instruction files loaded from `~/.claude/skills/` when you invoke them with slash commands. They do not execute code — they guide Claude to produce better code for your specific domain. For nonprofit donation platforms, this means getting Stripe-ready implementations, proper receipt generation, and donor data handling patterns from the start. See the [skill .md format specification](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) for writing these instruction files correctly.
 
 ## /stripe-integration: Payment Processing Foundation
 
@@ -107,7 +107,7 @@ export async function storeDonorInfo(donorData) {
 }
 ```
 
-This skill also covers GDPR compliance for international donors, data retention policies, and secure logging practices that avoid exposing donor information. For a deeper look at credential and secret protection, see the [secret scanning guide](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/).
+This skill also covers GDPR compliance for international donors, data retention policies, and secure logging practices that avoid exposing donor information. For a deeper look at credential and secret protection, see the [secret scanning guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/).
 
 ## /api-design: Donor Management Endpoints
 
@@ -222,9 +222,9 @@ Each skill produces production-ready code that handles the edge cases specific t
 
 ## Related Reading
 
-- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — write donation workflow skills with correct metadata and instruction structure
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) — keep Stripe API keys and donor data out of your version history
-- [Claude Code Skills for Insurance Claims Processing](/claude-skills-guide/articles/claude-code-skills-for-insurance-claims-processing/) — similar document-handling and compliance automation patterns
+- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — write donation workflow skills with correct metadata and instruction structure
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — keep Stripe API keys and donor data out of your version history
+- [Claude Code Skills for Insurance Claims Processing](/claude-skills-guide/claude-code-skills-for-insurance-claims-processing/) — similar document-handling and compliance automation patterns
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for other regulated-industry platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

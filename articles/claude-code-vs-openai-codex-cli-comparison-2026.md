@@ -16,7 +16,7 @@ OpenAI's Codex CLI and Anthropic's Claude Code both occupy the terminal-native A
 
 ## Background
 
-**Claude Code** is Anthropic's agentic coding tool for the terminal. It reads your project, edits files, runs shell commands (with your approval), and can execute multi-step plans autonomously. It is powered by the Claude model family and integrates with the Claude [skills ecosystem](/claude-skills-guide/articles/how-do-i-share-claude-skills-across-multiple-projects/) — a library of packaged, reusable agent behaviors for common developer tasks.
+**Claude Code** is Anthropic's agentic coding tool for the terminal. It reads your project, edits files, runs shell commands (with your approval), and can execute multi-step plans autonomously. It is powered by the Claude model family and integrates with the Claude [skills ecosystem](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) — a library of packaged, reusable agent behaviors for common developer tasks.
 
 **OpenAI Codex CLI** is OpenAI's terminal interface for interacting with Codex and GPT-4-class models. It focuses on code generation, explanation, and transformation from the command line. OpenAI has positioned it primarily as a generation and explanation tool rather than a full coding agent.
 
@@ -102,8 +102,8 @@ In 2026, **Claude Code** is the better choice for developers who think of their 
 
 ## Related Reading
 
-- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — A deep look at Claude Code's skills ecosystem, a core differentiator not found in OpenAI Codex CLI
-- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — How packaged skills compare to single-turn prompting approaches, directly relevant to the Claude Code vs Codex CLI decision
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — The mechanics behind Claude Code's automatic skill firing, one of its most powerful features over simpler CLI tools
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — A deep look at Claude Code's skills ecosystem, a core differentiator not found in OpenAI Codex CLI
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — How packaged skills compare to single-turn prompting approaches, directly relevant to the Claude Code vs Codex CLI decision
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — The mechanics behind Claude Code's automatic skill firing, one of its most powerful features over simpler CLI tools
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

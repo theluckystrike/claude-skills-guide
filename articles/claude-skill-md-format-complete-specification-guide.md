@@ -18,7 +18,7 @@ Every Claude skill is a Markdown file. The format is straightforward, but gettin
 
 A skill file is a plain Markdown document placed in `.claude/skills/` in your project (or `~/.claude/skills/` globally). Claude Code scans these directories and registers each `.md` file as a callable skill.
 
-The format has two parts: [YAML front matter](/claude-skills-guide/articles/claude-skill-yaml-front-matter-parsing-error-fix/) between `---` delimiters, and a Markdown body that serves as the system prompt.
+The format has two parts: [YAML front matter](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) between `---` delimiters, and a Markdown body that serves as the system prompt.
 
 ```
 ---
@@ -121,8 +121,8 @@ If the skill does not respond as expected, check: file is in `.claude/skills/`, 
 
 ## Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/)
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/)
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/)
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/)
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/)
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
 
 Built by theluckystrike - More at [zovo.one](https://zovo.one)

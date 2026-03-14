@@ -28,7 +28,7 @@ Note: There is no `/skills list` command in Claude Code. Skills are plain Markdo
 
 If you're starting fresh, add these foundational skills first:
 
-- [**supermemory**](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — captures and retrieves institutional knowledge
+- [**supermemory**](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — captures and retrieves institutional knowledge
 - **tdd** — generates test cases aligned with your team's testing conventions
 - **pdf** — processes technical documentation and API specs
 - **webapp-testing** — validates frontend changes against your team's acceptance criteria
@@ -184,9 +184,9 @@ Start with the five skills listed above, build your supermemory index with team 
 
 ## Related Reading
 
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — Set up the supermemory skill as your team's shared knowledge base that new engineers can query from day one
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Distribute the onboarding skill bundle consistently so every new engineer starts with the same toolset
-- [How Do I Test a Claude Skill Before Deploying to Team](/claude-skills-guide/articles/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate your onboarding skills before rolling them out to new engineers to ensure a smooth first experience
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Set up the supermemory skill as your team's shared knowledge base that new engineers can query from day one
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Distribute the onboarding skill bundle consistently so every new engineer starts with the same toolset
+- [How Do I Test a Claude Skill Before Deploying to Team](/claude-skills-guide/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate your onboarding skills before rolling them out to new engineers to ensure a smooth first experience
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore the complete onboarding path for new Claude Code users and foundational skill installation patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

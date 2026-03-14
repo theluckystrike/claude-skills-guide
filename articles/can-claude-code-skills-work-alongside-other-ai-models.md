@@ -12,11 +12,11 @@ score: 9
 
 # Can Claude Code Skills Work Alongside Other AI Models?
 
-[Claude Code skills are designed to be composable](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/), context-aware, and compatible with broader AI development ecosystems. Whether you're using GPT-4 for code generation, Gemini for multimodal tasks, or Cursor for IDE integration, Claude skills can enhance rather than replace your existing AI workflow.
+[Claude Code skills are designed to be composable](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/), context-aware, and compatible with broader AI development ecosystems. Whether you're using GPT-4 for code generation, Gemini for multimodal tasks, or Cursor for IDE integration, Claude skills can enhance rather than replace your existing AI workflow.
 
 ## Understanding Skill Architecture
 
-[Claude Code skills live in your `~/claude/skills/` directory as Markdown files with YAML front matter](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). Each skill defines a system prompt that shapes Claude's behavior when you invoke it with `/skill-name`. This architecture is intentionally lightweight—no API keys, no server configuration, no vendor lock-in.
+[Claude Code skills live in your `~/claude/skills/` directory as Markdown files with YAML front matter](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Each skill defines a system prompt that shapes Claude's behavior when you invoke it with `/skill-name`. This architecture is intentionally lightweight—no API keys, no server configuration, no vendor lock-in.
 
 The key insight is that skills operate at the prompt layer. They don't compete with other AI models; they collaborate with them. When you invoke a skill, Claude reads your local files, understands your project structure, and executes within your development environment. Other AI tools continue serving their roles in your pipeline.
 
@@ -135,7 +135,7 @@ This local operation complements cloud-based AI tools that generate code but can
 
 ### Model Context Protocol (MCP)
 
-Claude's MCP support enables integration with external services. Skills can use [MCP server](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)s to connect with databases, APIs, and development tools. This creates bridges between Claude and other AI systems:
+Claude's MCP support enables integration with external services. Skills can use [MCP server](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)s to connect with databases, APIs, and development tools. This creates bridges between Claude and other AI systems:
 
 ```javascript
 // MCP server integration example
@@ -172,9 +172,9 @@ The composable nature of skills means your Claude setup grows with your needs. S
 
 ## Related Reading
 
-- [Claude Skills vs Emerging Agentic Frameworks in 2026](/claude-skills-guide/articles/claude-skills-vs-emerging-agentic-frameworks-2026/) — Compare Claude skills with full agentic frameworks when planning your multi-AI integration strategy.
-- [Claude Code vs Gemini CLI for Developers 2026](/claude-skills-guide/articles/claude-code-vs-gemini-cli-for-developers-2026/) — Compare Claude Code with Gemini to understand the strengths each brings to a multi-AI workflow.
-- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand how MCP enables Claude skills to connect to external services and other AI systems.
+- [Claude Skills vs Emerging Agentic Frameworks in 2026](/claude-skills-guide/claude-skills-vs-emerging-agentic-frameworks-2026/) — Compare Claude skills with full agentic frameworks when planning your multi-AI integration strategy.
+- [Claude Code vs Gemini CLI for Developers 2026](/claude-skills-guide/claude-code-vs-gemini-cli-for-developers-2026/) — Compare Claude Code with Gemini to understand the strengths each brings to a multi-AI workflow.
+- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand how MCP enables Claude skills to connect to external services and other AI systems.
 - [Claude Skills Comparisons Hub](/claude-skills-guide/comparisons-hub/) — Explore more comparisons between Claude skills and other AI tools and platforms.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

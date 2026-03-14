@@ -12,7 +12,7 @@ score: 9
 
 # Claude Code Skills for Kubernetes Operator Development
 
-Building Kubernetes operators requires deep understanding of the Operator SDK, controller patterns, custom resource definitions, and reconciliation loops. Claude Code skills can significantly accelerate this development workflow by automating boilerplate generation, assisting with Go code, running tests, and handling documentation. This guide explores practical ways to integrate Claude skills into your operator development pipeline. For broader DevOps use cases, the [best Claude skills for DevOps and deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) guide covers CI/CD integration and infrastructure automation.
+Building Kubernetes operators requires deep understanding of the Operator SDK, controller patterns, custom resource definitions, and reconciliation loops. Claude Code skills can significantly accelerate this development workflow by automating boilerplate generation, assisting with Go code, running tests, and handling documentation. This guide explores practical ways to integrate Claude skills into your operator development pipeline. For broader DevOps use cases, the [best Claude skills for DevOps and deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) guide covers CI/CD integration and infrastructure automation.
 
 ## Setting Up Your Operator Project
 
@@ -154,7 +154,7 @@ func TestMemcachedReconciler_Reconcile(t *testing.T) {
 }
 ```
 
-The [supermemory skill helps maintain test patterns](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) across sessions, storing your testing conventions and reusable test utilities so they're available in every operator project.
+The [supermemory skill helps maintain test patterns](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) across sessions, storing your testing conventions and reusable test utilities so they're available in every operator project.
 
 ## Automating Documentation
 
@@ -202,16 +202,16 @@ Use Claude to cross-check your RBAC rules against the actual API calls your cont
 
 ## Conclusion
 
-Claude Code skills transform Kubernetes operator development from a manually intensive process into an assisted workflow. The `/tdd` skill ensures testability from project start, the `/pdf` skill processes API documentation, supermemory preserves project conventions, and Claude's code generation capabilities reduce boilerplate overhead. For multi-service infrastructure, understanding [multi-agent orchestration patterns](/claude-skills-guide/articles/claude-code-multi-agent-orchestration-patterns-guide/) helps you coordinate Claude across parallel operator workflows.
+Claude Code skills transform Kubernetes operator development from a manually intensive process into an assisted workflow. The `/tdd` skill ensures testability from project start, the `/pdf` skill processes API documentation, supermemory preserves project conventions, and Claude's code generation capabilities reduce boilerplate overhead. For multi-service infrastructure, understanding [multi-agent orchestration patterns](/claude-skills-guide/claude-code-multi-agent-orchestration-patterns-guide/) helps you coordinate Claude across parallel operator workflows.
 
 By integrating these skills into your development pipeline, you ship operators faster with better test coverage and cleaner code. The key is treating Claude as a pair programmer that remembers the boilerplate so you can focus on the business logic that makes your operator valuable.
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Top skills for CI/CD, infrastructure management, and cloud deployments
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — Preserve testing conventions and project context across operator development sessions
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Coordinate parallel Claude workflows for complex Kubernetes environments
-- [Claude Code Skills for Infrastructure as Code Terraform](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) — Pair operator development with Terraform for complete infrastructure automation
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Top skills for CI/CD, infrastructure management, and cloud deployments
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Preserve testing conventions and project context across operator development sessions
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Coordinate parallel Claude workflows for complex Kubernetes environments
+- [Claude Code Skills for Infrastructure as Code Terraform](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — Pair operator development with Terraform for complete infrastructure automation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

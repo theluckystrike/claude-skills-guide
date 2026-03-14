@@ -34,7 +34,7 @@ Dynamic registration is useful when skills need to expose context-specific tools
 
 The update introduces a standardized checkpoint format for tool state. This allows MCP servers to serialize and restore internal state across sessions, so workflows don't lose progress when you switch between projects.
 
-Practically, this means skills like the [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) can maintain test context between Claude Code sessions without requiring you to re-explain the project structure each time.
+Practically, this means skills like the [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) can maintain test context between Claude Code sessions without requiring you to re-explain the project structure each time.
 
 ### OAuth 2.1 Authentication
 
@@ -82,7 +82,7 @@ The updated MCP makes multi-database configurations simpler. Here is an example 
 }
 ```
 
-With both servers active, Claude Code can query either database in the same session. This pairs well with the [pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) when generating reports that pull from multiple sources.
+With both servers active, Claude Code can query either database in the same session. This pairs well with the [pdf skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) when generating reports that pull from multiple sources.
 
 ## Migration Path
 
@@ -122,9 +122,9 @@ The March 2026 MCP update improves tool discovery, state persistence, and authen
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Where MCP fits in the developer stack
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Where MCP fits in the developer stack
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

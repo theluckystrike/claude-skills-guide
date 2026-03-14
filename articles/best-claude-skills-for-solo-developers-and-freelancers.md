@@ -16,7 +16,7 @@ Solo developers and freelancers wear every hat. Claude Code skills let you punch
 
 ## Streamlined Documentation with the PDF Skill
 
-Handling client deliverables, invoices, and technical documentation is part of every freelance project. The [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) transforms how you process these documents programmatically.
+Handling client deliverables, invoices, and technical documentation is part of every freelance project. The [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) transforms how you process these documents programmatically.
 
 Consider a scenario where you need to extract data from client-provided specifications:
 
@@ -47,7 +47,7 @@ Solo developers can iterate on client visual proposals without Figma or Photosho
 
 ## Test-Driven Workflows with the TDD Skill
 
-Quality assurance often gets neglected when you're juggling multiple projects. The [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) enforces testing discipline by guiding you through red-green-refactor cycles and generating meaningful test cases from your existing code.
+Quality assurance often gets neglected when you're juggling multiple projects. The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) enforces testing discipline by guiding you through red-green-refactor cycles and generating meaningful test cases from your existing code.
 
 ```javascript
 // The tdd skill helps structure your tests
@@ -77,7 +77,7 @@ The skill analyzes your implementation and proactively suggests edge cases you m
 
 ## Knowledge Management with the Supermemory Skill
 
-Client projects involve context spread across documentation, code, and previous conversations. The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) gives Claude persistent memory across sessions — store key facts once, retrieve them in any future session.
+Client projects involve context spread across documentation, code, and previous conversations. The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) gives Claude persistent memory across sessions — store key facts once, retrieve them in any future session.
 
 ```
 /supermemory store: Project Alpha uses JWT auth, Postgres 15, deployed on Fly.io. Client prefers Tailwind over CSS modules. Contact: sarah@client.com
@@ -183,9 +183,9 @@ Combine skills naturally: use `/pdf` to extract client requirements, `/xlsx` to 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The essential developer skill stack
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — DevOps-specific skill recommendations
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The essential developer skill stack
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — DevOps-specific skill recommendations
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

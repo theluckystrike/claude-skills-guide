@@ -12,7 +12,7 @@ score: 8
 
 # How to Write Effective Prompts for Claude Code
 
-Claude Code responds dramatically better to well-structured prompts than to casual messages. For foundational knowledge visit the [getting-started hub](/claude-skills-guide/getting-started-hub/). The difference between a prompt that produces mediocre results and one that unlocks precise, actionable output — similar to [how prompt optimization improves skill accuracy](/claude-skills-guide/articles/how-to-optimize-claude-skill-prompts-for-accuracy/) often comes down to how you frame the task, provide context, and specify expectations. Clear prompts also help you [make Claude Code write secure code](/claude-skills-guide/articles/how-to-make-claude-code-write-secure-code-always/) by default.
+Claude Code responds dramatically better to well-structured prompts than to casual messages. For foundational knowledge visit the [getting-started hub](/claude-skills-guide/getting-started-hub/). The difference between a prompt that produces mediocre results and one that unlocks precise, actionable output — similar to [how prompt optimization improves skill accuracy](/claude-skills-guide/how-to-optimize-claude-skill-prompts-for-accuracy/) often comes down to how you frame the task, provide context, and specify expectations. Clear prompts also help you [make Claude Code write secure code](/claude-skills-guide/how-to-make-claude-code-write-secure-code-always/) by default.
 
 This guide provides practical techniques for writing prompts that get results.
 
@@ -83,7 +83,7 @@ This context prevents Claude from suggesting solutions that don't fit your stack
 
 ## Break Down Complex Tasks
 
-Large, undifferentiated requests produce shallow results. [Break complex tasks into explicit steps](/claude-skills-guide/articles/best-way-to-scope-tasks-for-claude-code-success/):
+Large, undifferentiated requests produce shallow results. [Break complex tasks into explicit steps](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/):
 
 ```
 I need to add user authentication to our API. Please:
@@ -142,7 +142,7 @@ Constraints are especially useful for avoiding common pitfalls:
 
 ## Leverage Claude Code's Skill System
 
-[Claude Code's skill system lets you package effective prompts into reusable tools](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). A well-written skill combines all the techniques above into a reusable format.
+[Claude Code's skill system lets you package effective prompts into reusable tools](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). A well-written skill combines all the techniques above into a reusable format.
 
 Example skill structure:
 
@@ -192,7 +192,7 @@ Your first prompt rarely produces perfect results. Use follow-up prompts to refi
 3. **Narrow**: "That's too complex. Simplify it to use only native JavaScript, no libraries."
 4. **Verify**: "Does this implementation handle the case where the API returns a 429 status?"
 
-Each refinement teaches Claude your preferences and produces better subsequent output. Combining iterative prompting with [Claude's skill system](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) lets you make your best prompts permanent and reusable.
+Each refinement teaches Claude your preferences and produces better subsequent output. Combining iterative prompting with [Claude's skill system](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) lets you make your best prompts permanent and reusable.
 
 ## Practical Prompt Template
 
@@ -225,9 +225,9 @@ Effective prompts for Claude Code share common characteristics: clear task frami
 
 ## Related Reading
 
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — understand how skills auto-invoke so you can prompt more effectively
-- [How to Make Claude Code Make Smaller Focused Changes](/claude-skills-guide/articles/how-to-make-claude-code-make-smaller-focused-changes/) — prompt techniques for scoping Claude to precise changes
-- [How to Make Claude Code Not Over Engineer Solutions](/claude-skills-guide/articles/how-to-make-claude-code-not-over-engineer-solutions/) — prompt patterns that keep Claude solutions lean and maintainable
-- [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/articles/how-to-optimize-claude-skill-prompts-for-accuracy/) — advanced prompt optimization to improve skill output quality
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — understand how skills auto-invoke so you can prompt more effectively
+- [How to Make Claude Code Make Smaller Focused Changes](/claude-skills-guide/how-to-make-claude-code-make-smaller-focused-changes/) — prompt techniques for scoping Claude to precise changes
+- [How to Make Claude Code Not Over Engineer Solutions](/claude-skills-guide/how-to-make-claude-code-not-over-engineer-solutions/) — prompt patterns that keep Claude solutions lean and maintainable
+- [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/how-to-optimize-claude-skill-prompts-for-accuracy/) — advanced prompt optimization to improve skill output quality
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

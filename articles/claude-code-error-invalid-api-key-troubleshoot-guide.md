@@ -25,7 +25,7 @@ Common error variations include:
 
 ## Step 1: Verify Your Environment Variables
 
-The most common cause of API key errors is incorrect or missing environment variables. [Claude Code reads API keys from environment variables](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-claude-code-skills/), and the naming must match exactly what the service expects.
+The most common cause of API key errors is incorrect or missing environment variables. [Claude Code reads API keys from environment variables](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/), and the naming must match exactly what the service expects.
 
 Check your current environment variables:
 
@@ -88,7 +88,7 @@ For skills that use the `pdf` skill to process documents or the `xlsx` skill for
 
 ## Step 5: Examine Skill-Specific Configuration
 
-[Some Claude skills include their own API key requirements](/claude-skills-guide/articles/can-claude-code-skills-call-external-apis-automatically/). If a particular skill is throwing the invalid API key error, check its documentation or the skill file itself.
+[Some Claude skills include their own API key requirements](/claude-skills-guide/can-claude-code-skills-call-external-apis-automatically/). If a particular skill is throwing the invalid API key error, check its documentation or the skill file itself.
 
 Skill files often specify required environment variables in their instructions. For example, skills integrating with GitHub might need:
 
@@ -176,9 +176,9 @@ For skills like `tdd` that automate testing workflows, or `supermemory` that han
 
 ## Related Reading
 
-- [How Do I Set Environment Variables for Claude Code Skills](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-claude-code-skills/) — correctly configure API keys and environment variables
-- [Can Claude Code Skills Call External APIs Automatically](/claude-skills-guide/articles/can-claude-code-skills-call-external-apis-automatically/) — understand skill API key requirements
-- [Claude Code Error Connection Timeout During Task Fix](/claude-skills-guide/articles/claude-code-error-connection-timeout-during-task-fix/) — resolve network and connectivity issues
+- [How Do I Set Environment Variables for Claude Code Skills](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/) — correctly configure API keys and environment variables
+- [Can Claude Code Skills Call External APIs Automatically](/claude-skills-guide/can-claude-code-skills-call-external-apis-automatically/) — understand skill API key requirements
+- [Claude Code Error Connection Timeout During Task Fix](/claude-skills-guide/claude-code-error-connection-timeout-during-task-fix/) — resolve network and connectivity issues
 - [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — solutions to common Claude Code authentication errors
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

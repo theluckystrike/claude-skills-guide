@@ -18,7 +18,7 @@ If you use Claude Code or Claude AI extensively, you've probably relied on promp
 
 Claude skills are predefined capabilities that extend Claude's functionality for specific tasks. Think of them as specialized toolkits that give Claude context-aware abilities without requiring you to explain the domain every time. The **pdf** skill lets Claude extract text and tables from PDFs programmatically. The **pptx** skill enables creating and editing presentations. The **xlsx** skill handles spreadsheet operations with formulas, formatting, and data analysis.
 
-These skills load automatically when you need them, bringing specialized knowledge and tool access to your conversations. To understand exactly how that loading works, see [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/).
+These skills load automatically when you need them, bringing specialized knowledge and tool access to your conversations. To understand exactly how that loading works, see [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/).
 
 ## Traditional Prompts: The Default Approach
 
@@ -38,11 +38,11 @@ Prompts also work well when you need creative problem-solving or want Claude to 
 
 ## The Case for Claude Skills
 
-Skills become valuable when you perform tasks repeatedly with consistent requirements. Consider the **tdd** skill—if you practice test-driven development regularly, the skill encapsulates your preferred patterns, testing frameworks, and workflows. Instead of explaining your TDD process each time, you simply invoke the skill and start coding. For the full developer skill stack built around tdd, see [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/).
+Skills become valuable when you perform tasks repeatedly with consistent requirements. Consider the **tdd** skill—if you practice test-driven development regularly, the skill encapsulates your preferred patterns, testing frameworks, and workflows. Instead of explaining your TDD process each time, you simply invoke the skill and start coding. For the full developer skill stack built around tdd, see [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/).
 
 The **frontend-design** skill demonstrates similar benefits. Rather than describing your design preferences, component library choices, and styling conventions in every prompt, the skill understands your standards upfront.
 
-**Supermemory** represents another category—skills that connect Claude to external systems and data. When your workflow involves retrieving information from your personal knowledge base, a skill handles the integration transparently. Supermemory also plays a key role in keeping token costs manageable; see [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) for strategies.
+**Supermemory** represents another category—skills that connect Claude to external systems and data. When your workflow involves retrieving information from your personal knowledge base, a skill handles the integration transparently. Supermemory also plays a key role in keeping token costs manageable; see [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) for strategies.
 
 ## Comparing Performance
 
@@ -81,7 +81,7 @@ The reality is that prompts remain essential for flexibility and quick interacti
 
 ## Getting Started
 
-If you're ready to try skills, start with one that matches a frequent workflow. The **pdf** skill is straightforward for document processing tasks—see how it fits into full data pipelines in [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/). The **xlsx** skill handles common spreadsheet operations. The **canvas-design** skill creates visual assets without design tools.
+If you're ready to try skills, start with one that matches a frequent workflow. The **pdf** skill is straightforward for document processing tasks—see how it fits into full data pipelines in [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/). The **xlsx** skill handles common spreadsheet operations. The **canvas-design** skill creates visual assets without design tools.
 
 Experiment with a skill for a week. Evaluate whether it saves time and produces consistent results. If yes, you've found a valuable addition to your workflow. If not, prompts continue serving you well.
 
@@ -91,9 +91,9 @@ The best approach depends entirely on your specific needs. Both tools have their
 
 ## Related Reading
 
-- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Not all skills are equal—know the difference
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate without explicit prompting
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The skills worth replacing prompts with
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Not all skills are equal—know the difference
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate without explicit prompting
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The skills worth replacing prompts with
 
 ---
 

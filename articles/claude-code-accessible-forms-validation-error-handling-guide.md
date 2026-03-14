@@ -25,7 +25,7 @@ Web Content Accessibility Guidelines (WCAG) specify several requirements for for
 - Error identification should be clear and specific
 - Input purpose should be programmatically determinable
 
-The [**frontend-design** skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) understands these requirements and generates form components with proper ARIA attributes, labels, and error message containers built in.
+The [**frontend-design** skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) understands these requirements and generates form components with proper ARIA attributes, labels, and error message containers built in.
 
 ## Setting Up Accessible Form Markup
 
@@ -60,7 +60,7 @@ Key accessibility attributes include `aria-describedby` linking the input to its
 
 ## Implementing Validation with the tdd Skill
 
-Use the [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) to develop validation logic test-first. This ensures your error handling works correctly for all users:
+Use the [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) to develop validation logic test-first. This ensures your error handling works correctly for all users:
 
 ```javascript
 // Request the tdd skill to write validation tests
@@ -218,8 +218,8 @@ Invoke `/frontend-design` to generate accessible form components, `/tdd` to deve
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — UI generation, testing, and component patterns
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Test-driven development workflows
-- [Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) — Automated accessibility checks
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — UI generation, testing, and component patterns
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Test-driven development workflows
+- [Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Automated accessibility checks
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*

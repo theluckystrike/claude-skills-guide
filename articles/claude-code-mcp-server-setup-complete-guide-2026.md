@@ -145,13 +145,13 @@ Beyond local stdio connections, you can run MCP servers as persistent services. 
 }
 ```
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) integrates with this MCP server to index your codebase, documentation, and conversations. Setting up the supermemory MCP server enables semantic search across your entire development context.
+The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) integrates with this MCP server to index your codebase, documentation, and conversations. Setting up the supermemory MCP server enables semantic search across your entire development context.
 
 ## Using Claude Skills with MCP
 
-Many built-in Claude skills work directly with MCP servers. The [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) can process documents retrieved through MCP tools. The **xlsx** skill handles spreadsheet operations on data fetched from external sources. The **webapp-testing** skill validates frontend behavior while MCP servers provide test data.
+Many built-in Claude skills work directly with MCP servers. The [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) can process documents retrieved through MCP tools. The **xlsx** skill handles spreadsheet operations on data fetched from external sources. The **webapp-testing** skill validates frontend behavior while MCP servers provide test data.
 
-For example, combine the [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) with a database MCP server to generate tests against live data fixtures:
+For example, combine the [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) with a database MCP server to generate tests against live data fixtures:
 
 ```javascript
 // MCP server provides test data
@@ -201,9 +201,9 @@ Each additional server follows the same pattern: implement the server, register 
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Broader developer skill overview
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

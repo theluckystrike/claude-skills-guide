@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Dev Containers: devcontainer.json Setup Guide
 
-Dev containers provide a standardized, containerized development environment that works consistently across machines. When you pair dev containers with Claude Code, you get reproducible AI-assisted development where every team member runs identical toolchain versions. This guide walks through setting up `devcontainer.json` for Claude Code workflows, from basic configuration to advanced multi-service setups. If you're evaluating different cloud-based approaches, see how [Claude Code integrates with GitPod](/claude-skills-guide/articles/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) as well.
+Dev containers provide a standardized, containerized development environment that works consistently across machines. When you pair dev containers with Claude Code, you get reproducible AI-assisted development where every team member runs identical toolchain versions. This guide walks through setting up `devcontainer.json` for Claude Code workflows, from basic configuration to advanced multi-service setups. If you're evaluating different cloud-based approaches, see how [Claude Code integrates with GitPod](/claude-skills-guide/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) as well.
 
 ## Understanding the Dev Container Workflow
 
@@ -96,7 +96,7 @@ Never commit actual secrets to your `devcontainer.json`. Instead, set them in yo
 
 ## Installing Claude Skills in Dev Containers
 
-One powerful pattern is pre-installing Claude skills during container creation. Add a `postCreateCommand` that runs skill installations. For large teams, understanding [how to share Claude skills across multiple projects](/claude-skills-guide/articles/how-do-i-share-claude-skills-across-multiple-projects/) ensures everyone works from the same skill versions:
+One powerful pattern is pre-installing Claude skills during container creation. Add a `postCreateCommand` that runs skill installations. For large teams, understanding [how to share Claude skills across multiple projects](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) ensures everyone works from the same skill versions:
 
 ```json
 {
@@ -230,15 +230,15 @@ This approach standardizes onboarding—new team members get a fully configured 
 
 ## Conclusion
 
-Dev containers transform Claude Code from a locally-installed tool into a portable, version-controlled development environment. The `devcontainer.json` configuration controls everything from base images and installed features to skill initialization and port forwarding. Start with the basic setup shown earlier, then layer in Compose support, environment variables, and skill installations as your project grows. Once your environment is stable, explore [Claude Code worktrees and skills isolation](/claude-skills-guide/articles/claude-code-worktrees-and-skills-isolation-explained/) to keep experiments separate from production workflows.
+Dev containers transform Claude Code from a locally-installed tool into a portable, version-controlled development environment. The `devcontainer.json` configuration controls everything from base images and installed features to skill initialization and port forwarding. Start with the basic setup shown earlier, then layer in Compose support, environment variables, and skill installations as your project grows. Once your environment is stable, explore [Claude Code worktrees and skills isolation](/claude-skills-guide/claude-code-worktrees-and-skills-isolation-explained/) to keep experiments separate from production workflows.
 
 For teams adopting Claude Code at scale, investing time in dev container configuration pays dividends in consistency and onboarding speed. Every developer—whether on macOS, Linux, or Windows—gets an identical environment that matches your CI/CD pipeline.
 
 ## Related Reading
 
-- [Claude Code GitPod Integration Tutorial 2026](/claude-skills-guide/articles/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Set up Claude Code in cloud-based GitPod workspaces for team environments
-- [How to Share Claude Skills Across Multiple Projects](/claude-skills-guide/articles/how-do-i-share-claude-skills-across-multiple-projects/) — Keep skill versions consistent across repositories and teams
-- [Claude Code Worktrees and Skills Isolation Explained](/claude-skills-guide/articles/claude-code-worktrees-and-skills-isolation-explained/) — Use worktrees to keep experimental skill setups separate from stable ones
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/articles/claude-code-with-docker-container-skill-setup-guide/) — Run Claude Code skills inside Docker containers for maximum isolation
+- [Claude Code GitPod Integration Tutorial 2026](/claude-skills-guide/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Set up Claude Code in cloud-based GitPod workspaces for team environments
+- [How to Share Claude Skills Across Multiple Projects](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) — Keep skill versions consistent across repositories and teams
+- [Claude Code Worktrees and Skills Isolation Explained](/claude-skills-guide/claude-code-worktrees-and-skills-isolation-explained/) — Use worktrees to keep experimental skill setups separate from stable ones
+- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) — Run Claude Code skills inside Docker containers for maximum isolation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

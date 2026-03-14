@@ -16,7 +16,7 @@ If you've ever typed `/pdf extract tables from report.pdf` and waited several se
 
 ## What Happens When a Skill Initializes
 
-When you invoke a skill like [`/tdd`](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) or `/frontend-design`, Claude Code performs several operations behind the scenes. First, it locates the skill definition file in your `~/.claude/skills/` directory. Then it parses the Markdown instructions, loads any referenced tools or scripts, and compiles the skill's prompt into the active context. Finally, it validates that all mentioned capabilities are available.
+When you invoke a skill like [`/tdd`](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) or `/frontend-design`, Claude Code performs several operations behind the scenes. First, it locates the skill definition file in your `~/.claude/skills/` directory. Then it parses the Markdown instructions, loads any referenced tools or scripts, and compiles the skill's prompt into the active context. Finally, it validates that all mentioned capabilities are available.
 
 This entire process runs every time you invoke a skill in a new session. Unlike native capabilities that stay loaded in memory, community skills and custom skills initialize on demand. The delay you experience is the time required to read, parse, and compile these instructions.
 
@@ -102,9 +102,9 @@ The initialization delay exists by design—it enables a flexible, extensible sy
 
 ## Related Reading
 
-- [Claude Code Response Latency Optimization with Skills](/claude-skills-guide/articles/claude-code-response-latency-optimization-with-skills/) — Apply proven latency optimization patterns after understanding initialization delays from this guide
-- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) — Broader skill performance optimization strategies that address post-initialization slowness
-- [Optimal Skill File Size and Complexity Guidelines](/claude-skills-guide/articles/optimal-skill-file-size-and-complexity-guidelines/) — Right-size your skill files to reduce parsing and compilation time during initialization
+- [Claude Code Response Latency Optimization with Skills](/claude-skills-guide/claude-code-response-latency-optimization-with-skills/) — Apply proven latency optimization patterns after understanding initialization delays from this guide
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/) — Broader skill performance optimization strategies that address post-initialization slowness
+- [Optimal Skill File Size and Complexity Guidelines](/claude-skills-guide/optimal-skill-file-size-and-complexity-guidelines/) — Right-size your skill files to reduce parsing and compilation time during initialization
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational skill performance and configuration patterns across the Claude Code ecosystem
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

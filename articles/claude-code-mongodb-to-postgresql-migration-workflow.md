@@ -100,7 +100,7 @@ JOIN postgresql_users p ON m._id::text = p.id
 WHERE m.email != p.email;
 ```
 
-You can automate these checks using the [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) to create test suites that validate migration correctness. Write tests that verify record counts, sample data accuracy, and referential integrity across related tables.
+You can automate these checks using the [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) to create test suites that validate migration correctness. Write tests that verify record counts, sample data accuracy, and referential integrity across related tables.
 
 ## Application Code Refactoring
 
@@ -138,7 +138,7 @@ Use the **pdf** skill to generate migration reports documenting the schema mappi
 
 Implement regression tests using the **tdd** skill to ensure your application behaves identically after the migration. Test critical user paths that involve database operations—authentication flows, data retrieval, and update operations should produce identical results.
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) helps you maintain institutional knowledge about migration decisions. Record why certain collections were denormalized, which fields use JSONB, and any performance considerations discovered during testing.
+The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) helps you maintain institutional knowledge about migration decisions. Record why certain collections were denormalized, which fields use JSONB, and any performance considerations discovered during testing.
 
 ## Performance Optimization
 
@@ -190,8 +190,8 @@ Migrating from MongoDB to PostgreSQL requires careful planning and execution, bu
 
 ## Related Reading
 
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Data skills for validating, transforming, and reporting on database migration results
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The tdd and supermemory skills drive test-driven migration and progress tracking
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during long database migration sessions
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Data skills for validating, transforming, and reporting on database migration results
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd and supermemory skills drive test-driven migration and progress tracking
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during long database migration sessions
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

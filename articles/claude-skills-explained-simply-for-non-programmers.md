@@ -67,13 +67,13 @@ That's a skill. Anyone can write one. You don't need to code.
 
 Claude Code comes with several pre-built skills. Even without writing your own, these are immediately useful:
 
-[**supermemory**](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Gives Claude the ability to remember things between conversations. Without it, Claude forgets everything when you close the session. With it, Claude can remember your preferences, decisions you've made, and context about your project.
+[**supermemory**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Gives Claude the ability to remember things between conversations. Without it, Claude forgets everything when you close the session. With it, Claude can remember your preferences, decisions you've made, and context about your project.
 
-[**tdd**](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Stands for "test-driven development." A skill for software developers that ensures Claude writes tests before writing code. If you're not a developer, this one's not for you.
+[**tdd**](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Stands for "test-driven development." A skill for software developers that ensures Claude writes tests before writing code. If you're not a developer, this one's not for you.
 
 **frontend-design** — Builds user interface components that match your visual design system. Again, developer-focused.
 
-[**pdf**](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Takes written content and formats it as a PDF document. Useful for anyone producing documents.
+[**pdf**](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Takes written content and formats it as a PDF document. Useful for anyone producing documents.
 
 **docx** — Same idea but outputs a Word document (.docx format) instead of a PDF.
 
@@ -128,8 +128,8 @@ With `supermemory` active, Claude stores important things you tell it (your writ
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — A more technical look at the same skills described in plain terms here, for when you're ready to go deeper
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Explains in plain language how Claude decides when to use a skill automatically versus waiting for you to ask
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Once you understand what skills are, this guide helps you use them efficiently without running up unexpected costs
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — A more technical look at the same skills described in plain terms here, for when you're ready to go deeper
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Explains in plain language how Claude decides when to use a skill automatically versus waiting for you to ask
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Once you understand what skills are, this guide helps you use them efficiently without running up unexpected costs
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

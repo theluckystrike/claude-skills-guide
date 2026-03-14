@@ -16,7 +16,7 @@ Implementing GDPR compliance in software projects requires systematic attention 
 
 ## Foundation: Understand Data Flow Before Coding
 
-Before writing any code, map how personal data moves through your system. Document what data you collect, where it travels, who accesses it, and how long you retain it. The [supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) helps maintain persistent context across sessions, allowing you to build a comprehensive data inventory that persists throughout the project lifecycle.
+Before writing any code, map how personal data moves through your system. Document what data you collect, where it travels, who accesses it, and how long you retain it. The [supermemory skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) helps maintain persistent context across sessions, allowing you to build a comprehensive data inventory that persists throughout the project lifecycle.
 
 Create a simple data flow document:
 
@@ -36,7 +36,7 @@ Certain Claude skills directly support GDPR implementation. The pdf skill enable
 
 For frontend implementations, the frontend-design skill incorporates accessibility considerations that intersect with privacy requirements—ensuring users can understand and control their data through properly labeled forms and clear consent mechanisms.
 
-The [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) supports test-driven development of privacy features, allowing you to write acceptance tests for consent flows, data deletion routines, and access control before implementation begins.
+The [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) supports test-driven development of privacy features, allowing you to write acceptance tests for consent flows, data deletion routines, and access control before implementation begins.
 
 ## Implement Consent Management
 
@@ -136,8 +136,8 @@ Building privacy into your development process from the start costs less than re
 
 ## Related Reading
 
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/articles/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise-grade access controls, audit logging, and compliance framework patterns
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The tdd, pdf, and xlsx skills referenced throughout GDPR implementation workflows
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep compliance audit automation sessions cost-efficient
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise-grade access controls, audit logging, and compliance framework patterns
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd, pdf, and xlsx skills referenced throughout GDPR implementation workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep compliance audit automation sessions cost-efficient
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

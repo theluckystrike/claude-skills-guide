@@ -12,7 +12,7 @@ score: 8
 
 # How Do I Rollback a Bad Claude Skill Update Safely
 
-Claude Code skills periodically receive updates from their maintainers. Sometimes these updates introduce bugs, break compatibility with your workflow, or simply don't work as expected. When this happens, knowing how to [rollback safely](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) safely is essential for maintaining productivity. This guide walks you through identifying problematic updates, restoring previous versions, and setting up prevention strategies.
+Claude Code skills periodically receive updates from their maintainers. Sometimes these updates introduce bugs, break compatibility with your workflow, or simply don't work as expected. When this happens, knowing how to [rollback safely](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) safely is essential for maintaining productivity. This guide walks you through identifying problematic updates, restoring previous versions, and setting up prevention strategies.
 
 ## Recognizing a Problematic Skill Update
 
@@ -171,7 +171,7 @@ cp -r ~/.claude/skills/SKILL_NAME ~/.claude/skills/backups/SKILL_NAME_$(date +%Y
 **Pin skill versions in your configuration:**
 If using a skill manager or `CLAUDE.md` file, specify version constraints.
 
-**Use [version control](/claude-skills-guide/articles/how-do-i-share-claude-skills-across-multiple-projects/) for custom skills:**
+**Use [version control](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) for custom skills:**
 If you've modified a skill, maintain your changes in a separate branch:
 ```
 git checkout -b my-customizations
@@ -244,9 +244,9 @@ The `supermemory` skill can help you track which versions work best for your wor
 
 ## Related Reading
 
-- [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/articles/claude-code-dotfiles-management-and-skill-sync-workflow/) — Version-control your skills with dotfiles so rollback is always one git command away.
-- [How Do I Share Claude Skills Across Multiple Projects](/claude-skills-guide/articles/how-do-i-share-claude-skills-across-multiple-projects/) — Pin shared skill versions across projects to prevent bad updates from propagating everywhere.
-- [Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/articles/why-is-my-claude-skill-not-showing-up-fix-guide/) — Diagnose whether a skill issue is update-related or a loading/configuration problem.
+- [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/claude-code-dotfiles-management-and-skill-sync-workflow/) — Version-control your skills with dotfiles so rollback is always one git command away.
+- [How Do I Share Claude Skills Across Multiple Projects](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) — Pin shared skill versions across projects to prevent bad updates from propagating everywhere.
+- [Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Diagnose whether a skill issue is update-related or a loading/configuration problem.
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Find more troubleshooting guides for common skill problems including update and version issues.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

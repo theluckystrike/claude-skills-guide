@@ -16,7 +16,7 @@ Travel booking platforms require complex integrations with multiple APIs, real-t
 
 ## Core Architecture for Travel Skills
 
-A travel booking skill needs clear boundaries between what Claude controls and what external systems handle. The skill orchestrates API calls, formats data for users, and maintains state across interactions. [Your primary tools are `bash` for executing scripts](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), `read_file` for accessing configuration, and `write_file` for generating outputs.
+A travel booking skill needs clear boundaries between what Claude controls and what external systems handle. The skill orchestrates API calls, formats data for users, and maintains state across interactions. [Your primary tools are `bash` for executing scripts](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), `read_file` for accessing configuration, and `write_file` for generating outputs.
 
 Structure your travel skill around three phases: initialization (loading API credentials and user preferences), execution (processing the booking logic), and cleanup (releasing resources and updating caches).
 
@@ -103,7 +103,7 @@ Handle edge cases gracefully: when a provider API fails, continue with available
 
 ## Price Tracking and Alerts
 
-Frequent travelers benefit from price monitoring. Build a skill that checks prices periodically and notifies users when fares drop. This requires persistent storage for user preferences and tracked routes — [the supermemory skill provides a ready-made pattern for this persistent context](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/).
+Frequent travelers benefit from price monitoring. Build a skill that checks prices periodically and notifies users when fares drop. This requires persistent storage for user preferences and tracked routes — [the supermemory skill provides a ready-made pattern for this persistent context](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/).
 
 ```python
 # price_monitor.py - Track prices and detect drops
@@ -163,7 +163,7 @@ On invocation, display upcoming trips sorted by departure date.
 Allow users to add, modify, or cancel bookings through natural language commands.
 ```
 
-[Integrate calendar APIs to automatically detect scheduling conflicts](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/). When a user adds a flight, check against existing calendar events and warn about overlaps.
+[Integrate calendar APIs to automatically detect scheduling conflicts](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/). When a user adds a flight, check against existing calendar events and warn about overlaps.
 
 ## Best Practices for Travel Skills
 
@@ -179,7 +179,7 @@ Keep these principles in mind when building travel booking skills:
 
 ## Extending Your Skills
 
-These foundational patterns scale into more sophisticated implementations. Add machine learning models to predict price trends, integrate loyalty program APIs for point redemptions, or build multi-city trip optimizers. Each extension follows the same architecture: clear input specification, reliable API orchestration, and structured output presentation. For complex booking pipelines that coordinate multiple skills, see [how to combine two Claude skills in one workflow](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/).
+These foundational patterns scale into more sophisticated implementations. Add machine learning models to predict price trends, integrate loyalty program APIs for point redemptions, or build multi-city trip optimizers. Each extension follows the same architecture: clear input specification, reliable API orchestration, and structured output presentation. For complex booking pipelines that coordinate multiple skills, see [how to combine two Claude skills in one workflow](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/).
 
 The travel booking domain benefits significantly from Claude's ability to handle multi-step reasoning. Complex itineraries with dozens of segments become manageable when Claude can programmatically coordinate each step while maintaining coherent user communication.
 
@@ -188,9 +188,9 @@ The travel booking domain benefits significantly from Claude's ability to handle
 
 ## Related Reading
 
-- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — structure travel booking skills with proper configuration
-- [How Do I Combine Two Claude Skills in One Workflow](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/) — combine search, booking, and notification skills into a complete pipeline
-- [Claude Code Skills for Real Estate Listing Platforms](/claude-skills-guide/articles/claude-code-skills-for-real-estate-listing-platforms/) — similar patterns for booking and availability management
+- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — structure travel booking skills with proper configuration
+- [How Do I Combine Two Claude Skills in One Workflow](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/) — combine search, booking, and notification skills into a complete pipeline
+- [Claude Code Skills for Real Estate Listing Platforms](/claude-skills-guide/claude-code-skills-for-real-estate-listing-platforms/) — similar patterns for booking and availability management
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for booking and marketplace platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

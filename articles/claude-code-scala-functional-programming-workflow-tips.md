@@ -81,11 +81,11 @@ Claude Code helps you identify where `view` can improve performance by lazy eval
 
 ## Integration with Testing Skills
 
-Testing functional Scala code requires different strategies than testing imperative code. The [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) provides guidance on writing tests that verify behavior without coupling to implementation details. Combine this with ScalaTest or MUnit for expressive test definitions.
+Testing functional Scala code requires different strategies than testing imperative code. The [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) provides guidance on writing tests that verify behavior without coupling to implementation details. Combine this with ScalaTest or MUnit for expressive test definitions.
 
 Property-based testing with ScalaCheck or scala-protobuf proves particularly valuable for functional code. Claude Code can help you define generators, specify properties, and interpret test results. When your functions have mathematical properties, property-based tests catch edge cases that example-based tests miss.
 
-For integration testing of services built with functional libraries, use test containers or embedded servers. The [pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) can assist if you need to generate test documentation or export test reports.
+For integration testing of services built with functional libraries, use test containers or embedded servers. The [pdf skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) can assist if you need to generate test documentation or export test reports.
 
 ## Managing State with Immutable Data Structures
 
@@ -107,7 +107,7 @@ For deeper nested updates, consider using lenses or the `mod` pattern. Claude Co
 
 ## Documentation and Code Navigation
 
-The [supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) helps maintain contextual information across your sessions, which proves valuable when working on complex Scala projects with many abstractions. Document your domain models, typeclass instances, and architectural decisions.
+The [supermemory skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) helps maintain contextual information across your sessions, which proves valuable when working on complex Scala projects with many abstractions. Document your domain models, typeclass instances, and architectural decisions.
 
 Use Scala's type system to encode constraints in types rather than comments. When Claude Code reviews your code, it can suggest where types can replace runtime checks, improving both safety and documentation.
 
@@ -135,8 +135,8 @@ Practice integrating these workflow tips incrementally. Start with pattern match
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Essential skills that complement any language workflow including Scala
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How Claude selects the right skill for TDD and refactoring tasks
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during complex functional programming sessions
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Essential skills that complement any language workflow including Scala
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How Claude selects the right skill for TDD and refactoring tasks
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during complex functional programming sessions
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

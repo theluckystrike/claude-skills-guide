@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skill Token Usage Profiling and Optimization
 
-Every token your Claude skill sends to the model costs money and affects response latency. As you build more complex skills—whether you're working with the `pdf` skill for document processing, the `tdd` skill for test-driven development, or custom skills for your workflow—understanding token usage becomes essential for keeping costs down and responses fast. For techniques on actually shrinking your skill bodies, see [Claude skill prompt compression techniques](/claude-skills-guide/articles/claude-skill-prompt-compression-techniques/).
+Every token your Claude skill sends to the model costs money and affects response latency. As you build more complex skills—whether you're working with the `pdf` skill for document processing, the `tdd` skill for test-driven development, or custom skills for your workflow—understanding token usage becomes essential for keeping costs down and responses fast. For techniques on actually shrinking your skill bodies, see [Claude skill prompt compression techniques](/claude-skills-guide/claude-skill-prompt-compression-techniques/).
 
 This guide covers practical methods for profiling token consumption in your skills and implementing optimization strategies that actually work.
 
@@ -206,7 +206,7 @@ As you create new skills, keep token efficiency in mind from the start:
 3. **Reference over repeat**: Point to external docs rather than copying content
 4. **Test during development**: Measure tokens as you iterate
 
-Skills like [supermemory for knowledge management](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) benefit from this approach from day one.
+Skills like [supermemory for knowledge management](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) benefit from this approach from day one.
 
 ## Conclusion
 
@@ -217,9 +217,9 @@ Start by measuring your current skills, then apply these strategies systematical
 
 ## Related Reading
 
-- [Claude Skill Prompt Compression Techniques](/claude-skills-guide/articles/claude-skill-prompt-compression-techniques/) — Apply compression techniques directly to the skill bodies you profile for fastest results.
-- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Extend token profiling results with broader API cost reduction strategies.
-- [Measuring Claude Code Skill Efficiency Metrics](/claude-skills-guide/articles/measuring-claude-code-skill-efficiency-metrics/) — Go beyond token counts to measure full skill efficiency including task completion rates and time to output.
+- [Claude Skill Prompt Compression Techniques](/claude-skills-guide/claude-skill-prompt-compression-techniques/) — Apply compression techniques directly to the skill bodies you profile for fastest results.
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Extend token profiling results with broader API cost reduction strategies.
+- [Measuring Claude Code Skill Efficiency Metrics](/claude-skills-guide/measuring-claude-code-skill-efficiency-metrics/) — Go beyond token counts to measure full skill efficiency including task completion rates and time to output.
 - [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Discover more advanced performance patterns for building production-quality skills.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -20,7 +20,7 @@ Semantic HTML uses elements that carry meaning. Instead of wrapping everything i
 
 When you write semantic markup, you're providing a map of your content's structure. Users of assistive technology can jump between sections, understand relationships, and find what they need without wading through meaningless containers.
 
-Claude Code, combined with the [`frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/), can analyze your existing markup and suggest improvements that enhance accessibility without changing your visual design.
+Claude Code, combined with the [`frontend-design` skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/), can analyze your existing markup and suggest improvements that enhance accessibility without changing your visual design.
 
 ## Using Claude Code to Audit Your HTML
 
@@ -95,7 +95,7 @@ The distinction matters because buttons and links have different default behavio
 
 ## Integrating Accessibility into Your Workflow
 
-The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) pairs well with accessibility testing. Write tests that verify:
+The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) pairs well with accessibility testing. Write tests that verify:
 
 - All images have alt attributes
 - Form inputs have associated labels
@@ -160,8 +160,8 @@ Accessibility isn't a destination but an ongoing commitment. With Claude Code as
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — Frontend skills for building accessible, semantic HTML structures
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Developer skills including tdd for writing accessibility tests
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Auto-trigger frontend and accessibility skills when working on HTML files
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend skills for building accessible, semantic HTML structures
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills including tdd for writing accessibility tests
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-trigger frontend and accessibility skills when working on HTML files
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

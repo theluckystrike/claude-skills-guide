@@ -38,7 +38,7 @@ The strong version establishes seniority (implies best practices), technology co
 
 Tell the skill what input it should expect. Claude will then interpret ambiguous user messages through this lens.
 
-For a [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/):
+For a [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/):
 ```
 Input: You will receive either (a) a description of a feature to test, (b) an existing 
 function signature, or (c) a failing test to make pass. Identify which type of input 
@@ -155,9 +155,9 @@ Keep a test cases file alongside each skill:
 
 ## Related Reading
 
-- [Claude Skill .md File Format: Full Specification](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Format reference for skill files
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How trigger phrases interact with skill bodies
+- [Claude Skill .md File Format: Full Specification](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Format reference for skill files
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How trigger phrases interact with skill bodies
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

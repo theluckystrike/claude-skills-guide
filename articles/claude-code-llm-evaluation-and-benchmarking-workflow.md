@@ -97,7 +97,7 @@ Provide a score from 1-10 for each quality and brief justification."""
 
 ## Integrating Claude Skills for Enhanced Evaluation
 
-Several Claude skills enhance the evaluation workflow. The [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) helps you process evaluation reports and documentation automatically. Generate detailed PDF reports comparing model performance across categories, then use the skill to extract insights from benchmark papers or model documentation.
+Several Claude skills enhance the evaluation workflow. The [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) helps you process evaluation reports and documentation automatically. Generate detailed PDF reports comparing model performance across categories, then use the skill to extract insights from benchmark papers or model documentation.
 
 The **xlsx** skill automates spreadsheet operations for results tracking. Build dynamic dashboards that update as new evaluation runs complete:
 
@@ -125,7 +125,7 @@ def create_evaluation_dashboard(results):
     wb.save("evaluation_results.xlsx")
 ```
 
-The [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) proves valuable when building evaluation infrastructure itself. Use it to develop your benchmarking code following test-driven development principles, ensuring your evaluation pipeline remains reliable as complexity grows.
+The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) proves valuable when building evaluation infrastructure itself. Use it to develop your benchmarking code following test-driven development principles, ensuring your evaluation pipeline remains reliable as complexity grows.
 
 For maintaining evaluation context across sessions, the **supermemory** skill helps persist insights about model behavior, tracking patterns that emerge over multiple evaluation cycles.
 
@@ -171,8 +171,8 @@ The evaluation workflow transforms model selection from guesswork into data-driv
 
 ## Related Reading
 
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Data analysis skills for structuring and reporting LLM evaluation results
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — pdf and xlsx skills automate benchmark report generation
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Monitor and reduce API costs while running repeated evaluation loops
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Data analysis skills for structuring and reporting LLM evaluation results
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — pdf and xlsx skills automate benchmark report generation
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Monitor and reduce API costs while running repeated evaluation loops
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

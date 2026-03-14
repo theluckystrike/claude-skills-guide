@@ -92,7 +92,7 @@ Run each test case by starting a fresh Claude session, activating your skill wit
 
 If your skill configures tool usage—such as the `pdf` skill for document processing, the `tdd` skill for test generation, or the `supermemory` skill for knowledge retrieval—verify tool integration separately.
 
-Test the [`tdd` skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) by creating a minimal project:
+Test the [`tdd` skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) by creating a minimal project:
 
 ```bash
 mkdir skill-test-project
@@ -201,9 +201,9 @@ The investment in testing pays dividends in team trust and skill adoption. A wel
 
 ## Related Reading
 
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Once your skill passes testing, distribute it consistently across all team members using these sharing patterns
-- [Claude Skills Onboarding for New Engineering Team Members](/claude-skills-guide/articles/claude-skills-onboarding-new-engineering-team-members/) — Combine tested skills with an onboarding workflow so new engineers have validated tools from day one
-- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/articles/how-do-i-debug-a-claude-skill-that-silently-fails/) — When post-deployment issues arise, use these debugging techniques to diagnose silent failures quickly
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Once your skill passes testing, distribute it consistently across all team members using these sharing patterns
+- [Claude Skills Onboarding for New Engineering Team Members](/claude-skills-guide/claude-skills-onboarding-new-engineering-team-members/) — Combine tested skills with an onboarding workflow so new engineers have validated tools from day one
+- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/how-do-i-debug-a-claude-skill-that-silently-fails/) — When post-deployment issues arise, use these debugging techniques to diagnose silent failures quickly
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore skill authoring, validation, and team distribution patterns across the full skills ecosystem
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -30,7 +30,7 @@ The **pdf** skill has become indispensable for developers handling documentation
 /pdf fill in contractor-agreement.pdf: Name=Jane Smith, Rate=$150/hr, Start=2026-04-01
 ```
 
-This skill handles complex layouts, scanned documents, and form fields. For a complete guide to building data pipelines around the pdf skill, see [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/).
+This skill handles complex layouts, scanned documents, and form fields. For a complete guide to building data pipelines around the pdf skill, see [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/).
 
 ## Test-Driven Development with the TDD Skill
 
@@ -62,7 +62,7 @@ The **canvas-design** skill produces visual assets — images, diagrams, and des
 /canvas-design generate a system architecture diagram showing three microservices communicating via a message queue
 ```
 
-For a full breakdown of the frontend skill stack, see [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/).
+For a full breakdown of the frontend skill stack, see [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/).
 
 ## Memory and Knowledge Management with Supermemory
 
@@ -132,7 +132,7 @@ These skills handle formatting preservation, tracked changes, and comments — u
 
 ## The skill-creator Advantage
 
-The **skill-creator** skill guides you through creating custom skill files tailored to your specific workflows. When none of the existing skills fit your needs, this tool helps you author a new `.md` skill file. Learn how to structure those skills properly in [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/).
+The **skill-creator** skill guides you through creating custom skill files tailored to your specific workflows. When none of the existing skills fit your needs, this tool helps you author a new `.md` skill file. Learn how to structure those skills properly in [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/).
 
 ## Choosing the Right Skills for Your Stack
 
@@ -144,8 +144,8 @@ Start with one or two skills that address your most frequent pain points. As you
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Extend skills into CI/CD and infrastructure automation
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep your skill usage cost-efficient at scale
-- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Know when to trust official vs community skills
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Extend skills into CI/CD and infrastructure automation
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep your skill usage cost-efficient at scale
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Know when to trust official vs community skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

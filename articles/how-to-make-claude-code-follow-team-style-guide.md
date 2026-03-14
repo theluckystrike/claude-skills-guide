@@ -10,7 +10,7 @@ score: 8
 
 # How to Make Claude Code Follow Team Style Guide
 
-Getting Claude Code to consistently generate code that matches your team's style guide requires a strategic approach. Rather than relying on manual corrections, you can configure Claude to understand and apply your standards from the first response. This guide walks through practical methods for achieving [style guide compliance](/claude-skills-guide/articles/how-to-make-claude-code-match-existing-code-patterns/) at scale.
+Getting Claude Code to consistently generate code that matches your team's style guide requires a strategic approach. Rather than relying on manual corrections, you can configure Claude to understand and apply your standards from the first response. This guide walks through practical methods for achieving [style guide compliance](/claude-skills-guide/how-to-make-claude-code-match-existing-code-patterns/) at scale.
 
 ## Understanding the Style Guide Challenge
 
@@ -119,7 +119,7 @@ Within this skill, define specific prompts that Claude references during code ge
 
 ### Integrating Domain-Specific Skills
 
-Your style guide skill works alongside domain-specific skills for better results. The frontend-design skill generates component architecture, but your style enforcer ensures the output matches team patterns. Similarly, the pdf skill might handle documentation generation, while your style rules govern documentation formatting. See the [automated code documentation workflow](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) for how to keep documentation in sync with evolving style standards.
+Your style guide skill works alongside domain-specific skills for better results. The frontend-design skill generates component architecture, but your style enforcer ensures the output matches team patterns. Similarly, the pdf skill might handle documentation generation, while your style rules govern documentation formatting. See the [automated code documentation workflow](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) for how to keep documentation in sync with evolving style standards.
 
 This layered approach lets you maintain a single source of truth for style while leveraging specialized skills for their core functionality.
 
@@ -162,7 +162,7 @@ Even with configuration and prompts, verification ensures consistency. Integrate
 
 ### Pre-Commit Hooks
 
-Set up pre-commit hooks using tools like prettier, eslint, or stylelint. You can also use [automated code review skills](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) to catch style violations before they land in PRs:
+Set up pre-commit hooks using tools like prettier, eslint, or stylelint. You can also use [automated code review skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) to catch style violations before they land in PRs:
 
 ```bash
 # .husky/pre-commit
@@ -200,9 +200,9 @@ Remember that style guides evolve. Build feedback mechanisms that identify when 
 
 ## Related Reading
 
-- [How to Make Claude Code Match Existing Code Patterns](/claude-skills-guide/articles/how-to-make-claude-code-match-existing-code-patterns/) — Provide representative code samples to anchor Claude's output to your project's style
-- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) — Keep docs consistent with your style guide as code evolves
-- [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) — Automate style violation detection in your PR review workflow
+- [How to Make Claude Code Match Existing Code Patterns](/claude-skills-guide/how-to-make-claude-code-match-existing-code-patterns/) — Provide representative code samples to anchor Claude's output to your project's style
+- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — Keep docs consistent with your style guide as code evolves
+- [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Automate style violation detection in your PR review workflow
 
 ---
 

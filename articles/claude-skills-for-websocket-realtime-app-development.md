@@ -24,7 +24,7 @@ Claude skills encapsulate best practices for these patterns. Rather than researc
 
 ## Essential Skills for WebSocket Projects
 
-Several Claude skills prove particularly valuable when building [real-time app](/claude-skills-guide/articles/claude-code-skills-for-backend-developers-node-and-python/)lications. Each addresses a specific aspect of the development workflow.
+Several Claude skills prove particularly valuable when building [real-time app](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/)lications. Each addresses a specific aspect of the development workflow.
 
 ### frontend-design for UI Components
 
@@ -217,9 +217,9 @@ The combination of test-driven development, thoughtful UI implementation, and li
 
 ## Related Reading
 
-- [Claude Skills for GraphQL Schema Design and Testing](/claude-skills-guide/articles/claude-skills-for-graphql-schema-design-and-testing/) — Combine WebSocket real-time subscriptions with GraphQL schema design for full-stack real-time APIs.
-- [Claude Code Skills for Kubernetes Operator Development](/claude-skills-guide/articles/claude-code-skills-for-kubernetes-operator-development/) — Scale your WebSocket application infrastructure using Kubernetes operator patterns.
-- [Rate Limit Management for Claude Code Skill Intensive Workflows](/claude-skills-guide/articles/rate-limit-management-claude-code-skill-intensive-workflows/) — Manage API rate limits when skill-generating high-frequency WebSocket message handlers.
+- [Claude Skills for GraphQL Schema Design and Testing](/claude-skills-guide/claude-skills-for-graphql-schema-design-and-testing/) — Combine WebSocket real-time subscriptions with GraphQL schema design for full-stack real-time APIs.
+- [Claude Code Skills for Kubernetes Operator Development](/claude-skills-guide/claude-code-skills-for-kubernetes-operator-development/) — Scale your WebSocket application infrastructure using Kubernetes operator patterns.
+- [Rate Limit Management for Claude Code Skill Intensive Workflows](/claude-skills-guide/rate-limit-management-claude-code-skill-intensive-workflows/) — Manage API rate limits when skill-generating high-frequency WebSocket message handlers.
 - [Claude Skills Use Cases](/claude-skills-guide/use-cases-hub/) — Explore more specialized use cases for Claude skills in real-time and event-driven architectures.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

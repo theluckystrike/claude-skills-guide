@@ -31,7 +31,7 @@ cd my-static-site
 npm install
 ```
 
-After scaffolding, activate the [`/frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) to help generate component patterns:
+After scaffolding, activate the [`/frontend-design` skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) to help generate component patterns:
 
 ```
 /frontend-design
@@ -73,7 +73,7 @@ export const collections = { blog };
 
 ### Testing with the TDD Skill
 
-Integrate the [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) for component testing. While Astro produces static output, interactive components and client-side logic benefit from test coverage:
+Integrate the [`/tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) for component testing. While Astro produces static output, interactive components and client-side logic benefit from test coverage:
 
 ```
 /tdd
@@ -89,7 +89,7 @@ The tdd skill guides Claude to produce test files using your project's test fram
 
 ### Documentation and Memory
 
-The [`/supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) maintains context across long sessions. When building a larger site, activate it early:
+The [`/supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) maintains context across long sessions. When building a larger site, activate it early:
 
 ```
 /supermemory
@@ -222,9 +222,9 @@ Build incrementally, test consistently, and deploy automatically. Your static si
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Complete frontend skill stack
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Testing workflows for any project
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understanding skill activation
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Complete frontend skill stack
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Testing workflows for any project
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understanding skill activation
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

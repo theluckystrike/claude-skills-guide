@@ -38,7 +38,7 @@ Once configured, run your crashing program. The core dump file appears in the wo
 
 ## Generating a Minimal Reproducible Case
 
-When debugging segfaults, having a reproducible case speeds up analysis dramatically. If you're developing with the [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/), create a test case that triggers the crash:
+When debugging segfaults, having a reproducible case speeds up analysis dramatically. If you're developing with the [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/), create a test case that triggers the crash:
 
 ```
 /tdd write a C test case that reproduces a null pointer dereference in a linked list traversal
@@ -86,7 +86,7 @@ Several Claude skills accelerate core dump analysis workflows. The **pdf** skill
 /pdf create a crash analysis report with the stack trace and memory dump details
 ```
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) stores patterns from your previous debugging sessions. If you've encountered similar crashes before, query your memory:
+The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) stores patterns from your previous debugging sessions. If you've encountered similar crashes before, query your memory:
 
 ```
 /supermemory recall segfault in linked list delete operations
@@ -171,8 +171,8 @@ When segfaults occur, this workflow transforms a cryptic crash into a solvable p
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Core developer skills for debugging and crash analysis workflows
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Skills activate during debugging sessions to provide relevant context
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during intensive core dump analysis sessions
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills for debugging and crash analysis workflows
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Skills activate during debugging sessions to provide relevant context
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during intensive core dump analysis sessions
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

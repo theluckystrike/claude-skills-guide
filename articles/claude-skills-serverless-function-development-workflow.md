@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skills Serverless Function Development Workflow
 
-[Creating Claude skills that deploy serverless functions](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) transforms your AI assistant into a powerful infrastructure automation tool. This workflow guides you through building skills that generate, test, and deploy cloud functions across AWS Lambda, Google Cloud Functions, and Azure Functions.
+[Creating Claude skills that deploy serverless functions](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) transforms your AI assistant into a powerful infrastructure automation tool. This workflow guides you through building skills that generate, test, and deploy cloud functions across AWS Lambda, Google Cloud Functions, and Azure Functions.
 
 ## Why Serverless Functions in Claude Skills
 
@@ -92,7 +92,7 @@ exports.handler = async (event) => {
 
 ## Creating Deployment Configuration
 
-[A production-ready skill generates deployment files automatically](/claude-skills-guide/articles/claude-skills-for-automated-changelog-generation/). For the Serverless Framework, Claude should produce a `serverless.yml`:
+[A production-ready skill generates deployment files automatically](/claude-skills-guide/claude-skills-for-automated-changelog-generation/). For the Serverless Framework, Claude should produce a `serverless.yml`:
 
 ```yaml
 service: my-serverless-function
@@ -241,16 +241,16 @@ def handler(event, context):
 
 ## Conclusion
 
-[Building serverless functions through Claude skills](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/). Your skill handles boilerplate, configuration, and deployment commands so you can focus on writing function logic. Start with a simple HTTP function, add environment configuration, then expand to scheduled jobs and event triggers.
+[Building serverless functions through Claude skills](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/). Your skill handles boilerplate, configuration, and deployment commands so you can focus on writing function logic. Start with a simple HTTP function, add environment configuration, then expand to scheduled jobs and event triggers.
 
 The key is maintaining a clear structure: separate templates for each runtime, test locally before deploying, and use environment variables for configuration. With this workflow, you can generate and deploy functions in minutes rather than hours.
 
 
 ## Related Reading
 
-- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — structure serverless deployment skills with proper configuration
-- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) — production architecture patterns for serverless AI applications
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — automate serverless function deployment in CI/CD
+- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — structure serverless deployment skills with proper configuration
+- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/) — production architecture patterns for serverless AI applications
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — automate serverless function deployment in CI/CD
 - [Workflows Hub](/claude-skills-guide/workflows-hub/) — explore Claude Code workflows for cloud and serverless development
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

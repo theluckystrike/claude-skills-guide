@@ -26,11 +26,11 @@ Regulated development differs from typical software engineering in several criti
 - **Compliance documentation**: Evidence collection for audits
 - **Incident response**: Rapid detection and remediation capabilities
 
-The [claude-tdd skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) helps enforce test coverage requirements that satisfy compliance auditors. When building for regulated industries, tests serve dual purposes: validating functionality and demonstrating due diligence.
+The [claude-tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps enforce test coverage requirements that satisfy compliance auditors. When building for regulated industries, tests serve dual purposes: validating functionality and demonstrating due diligence.
 
 ## Building HIPAA-Compliant Healthcare Applications
 
-Healthcare developers must handle protected health information (PHI) with strict safeguards. The [claude-code-hipaa-compliant-development-workflow-guide](/claude-skills-guide/articles/claude-code-hipaa-compliant-development-workflow-guide/) provides comprehensive patterns, but here are essential implementations:
+Healthcare developers must handle protected health information (PHI) with strict safeguards. The [claude-code-hipaa-compliant-development-workflow-guide](/claude-skills-guide/claude-code-hipaa-compliant-development-workflow-guide/) provides comprehensive patterns, but here are essential implementations:
 
 ```javascript
 // PHI access control with audit logging
@@ -66,11 +66,11 @@ class HealthcareDataAccess {
 }
 ```
 
-The [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) helps maintain compliance context across sessions without storing sensitive data in logs.
+The [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) helps maintain compliance context across sessions without storing sensitive data in logs.
 
 ## Fintech Payment Processing Compliance
 
-Financial applications require PCI-DSS compliance. Use the [claude-code-soc2-compliance-audit-preparation-guide-2026](/claude-skills-guide/articles/claude-code-soc2-compliance-audit-preparation-guide-2026/) for SOC 2 preparation, but implement payment handling with tokenization:
+Financial applications require PCI-DSS compliance. Use the [claude-code-soc2-compliance-audit-preparation-guide-2026](/claude-skills-guide/claude-code-soc2-compliance-audit-preparation-guide-2026/) for SOC 2 preparation, but implement payment handling with tokenization:
 
 ```python
 # Payment tokenization pattern for PCI compliance
@@ -97,11 +97,11 @@ class PaymentTokenizer:
         return {'token': token['id'], 'last_four': token['last_four']}
 ```
 
-The [claude-code-secret-scanning-prevent-credential-leaks-guide](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) prevents accidentally committing API keys or payment credentials.
+The [claude-code-secret-scanning-prevent-credential-leaks-guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) prevents accidentally committing API keys or payment credentials.
 
 ## Automating Compliance Documentation
 
-Regulated industries require extensive documentation. The [/pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) generates compliance reports:
+Regulated industries require extensive documentation. The [/pdf skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) generates compliance reports:
 
 ```
 /pdf
@@ -112,7 +112,7 @@ Generate a compliance audit report covering:
 Output as a formal PDF report with executive summary.
 ```
 
-The [/xlsx skill](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/) builds evidence spreadsheets auditors expect:
+The [/xlsx skill](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/) builds evidence spreadsheets auditors expect:
 
 ```
 /xlsx
@@ -163,7 +163,7 @@ Use the `/tdd` skill to enforce test coverage for security-critical paths before
 
 ## Frontend Design for Compliance Forms
 
-The [frontend-design skill](/claude-skills-guide/articles/claude-frontend-design-skill-review-and-tutorial/) helps build accessible, compliant forms:
+The [frontend-design skill](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) helps build accessible, compliant forms:
 
 ```jsx
 // WCAG-compliant healthcare data entry form
@@ -207,7 +207,7 @@ function PatientDataForm({ onSubmit }) {
 
 ## Infrastructure for Regulated Workloads
 
-The [claude-skills-for-infrastructure-as-code-terraform](/claude-skills-guide/articles/claude-skills-for-infrastructure-as-code-terraform/) skill helps provision compliant infrastructure:
+The [claude-skills-for-infrastructure-as-code-terraform](/claude-skills-guide/claude-skills-for-infrastructure-as-code-terraform/) skill helps provision compliant infrastructure:
 
 ```hcl
 # HIPAA-compliant AWS infrastructure
@@ -233,17 +233,17 @@ module "encrypted_vpc" {
 
 For fintech development, prioritize:
 
-- [claude-code-soc2-compliance-audit-preparation-guide-2026](/claude-skills-guide/articles/claude-code-soc2-compliance-audit-preparation-guide-2026/) for compliance preparation
-- [claude-code-secret-scanning-prevent-credential-leaks-guide](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) for security
-- [claude-tdd-skill-test-driven-development-workflow](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) for test coverage
+- [claude-code-soc2-compliance-audit-preparation-guide-2026](/claude-skills-guide/claude-code-soc2-compliance-audit-preparation-guide-2026/) for compliance preparation
+- [claude-code-secret-scanning-prevent-credential-leaks-guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) for security
+- [claude-tdd-skill-test-driven-development-workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) for test coverage
 
 For healthcare applications, focus on:
 
-- [claude-code-hipaa-compliant-development-workflow-guide](/claude-skills-guide/articles/claude-code-hipaa-compliant-development-workflow-guide/) for HIPAA patterns
-- [claude-code-gdpr-data-privacy-implementation-checklist](/claude-skills-guide/articles/claude-code-gdpr-data-privacy-implementation-checklist/) for privacy compliance
-- [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) for session management
+- [claude-code-hipaa-compliant-development-workflow-guide](/claude-skills-guide/claude-code-hipaa-compliant-development-workflow-guide/) for HIPAA patterns
+- [claude-code-gdpr-data-privacy-implementation-checklist](/claude-skills-guide/claude-code-gdpr-data-privacy-implementation-checklist/) for privacy compliance
+- [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) for session management
 
-Both industries benefit from the [claude-code-permissions-model-security-guide-2026](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) to enforce principle of least privilege.
+Both industries benefit from the [claude-code-permissions-model-security-guide-2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) to enforce principle of least privilege.
 
 ## Summary
 
@@ -260,7 +260,7 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 ## Related Reading
 
-- [Claude Code HIPAA Compliant Development Workflow Guide](/claude-skills-guide/articles/claude-code-hipaa-compliant-development-workflow-guide/) — Comprehensive HIPAA implementation patterns referenced throughout this guide, with deeper PHI handling workflows
-- [Claude Code SOC 2 Compliance Audit Preparation Guide 2026](/claude-skills-guide/articles/claude-code-soc2-compliance-audit-preparation-guide-2026/) — Step-by-step SOC 2 preparation workflow for fintech teams using Claude skills for evidence generation
-- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/articles/claude-code-owasp-top-10-security-scanning-workflow/) — Automated security scanning workflows that complement compliance documentation requirements
+- [Claude Code HIPAA Compliant Development Workflow Guide](/claude-skills-guide/claude-code-hipaa-compliant-development-workflow-guide/) — Comprehensive HIPAA implementation patterns referenced throughout this guide, with deeper PHI handling workflows
+- [Claude Code SOC 2 Compliance Audit Preparation Guide 2026](/claude-skills-guide/claude-code-soc2-compliance-audit-preparation-guide-2026/) — Step-by-step SOC 2 preparation workflow for fintech teams using Claude skills for evidence generation
+- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/) — Automated security scanning workflows that complement compliance documentation requirements
 - [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore additional use-case skill guides for security, compliance, and regulated industry development

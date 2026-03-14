@@ -46,7 +46,7 @@ Claude Code can identify this duplication pattern and suggest extracting the ema
 Claude Code's effectiveness multiplies through its skill system. Different specialized skills enhance specific refactoring scenarios:
 
 - The **tdd** skill helps ensure your refactoring maintains existing behavior by generating appropriate test cases
-- [The **supermemory** skill maintains context across large refactoring sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), remembering your architectural decisions
+- [The **supermemory** skill maintains context across large refactoring sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), remembering your architectural decisions
 - The **frontend-design** skill assists when refactoring involves improving UI component structure
 - The **pdf** skill proves valuable when refactoring code that generates or processes PDF documents
 
@@ -73,7 +73,7 @@ By working iteratively, Claude Code helps you refactor with confidence, verifyin
 
 ## Test-Driven Refactoring Support
 
-[The **tdd** skill demonstrates particularly valuable for refactoring tasks](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). Before modifying code, you need tests that verify current behavior. Claude Code can assist by:
+[The **tdd** skill demonstrates particularly valuable for refactoring tasks](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). Before modifying code, you need tests that verify current behavior. Claude Code can assist by:
 
 1. Analyzing your existing functions and generating comprehensive test cases
 2. Running tests to establish a baseline
@@ -125,9 +125,9 @@ Whether you're cleaning up technical debt, improving code readability, or applyi
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
-- [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/articles/how-to-make-claude-code-refactor-without-breaking-tests/)
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/how-to-make-claude-code-refactor-without-breaking-tests/)
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

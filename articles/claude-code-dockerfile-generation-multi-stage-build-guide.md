@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Dockerfile Generation: Multi-Stage Build Guide
 
-[Multi-stage builds are essential for creating lean, production-ready container images](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). This guide shows you how to use Claude Code skills to generate optimized Dockerfiles with multi-stage patterns for various programming languages and frameworks.
+[Multi-stage builds are essential for creating lean, production-ready container images](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). This guide shows you how to use Claude Code skills to generate optimized Dockerfiles with multi-stage patterns for various programming languages and frameworks.
 
 ## Why Multi-Stage Builds Matter
 
@@ -141,7 +141,7 @@ CMD ["python", "main.py"]
 
 ## Go Multi-Stage Builds
 
-Go applications compile to a single binary, making [multi-stage build](/claude-skills-guide/articles/claude-code-nix-flake-reproducible-development-environment/)s particularly effective:
+Go applications compile to a single binary, making [multi-stage build](/claude-skills-guide/claude-code-nix-flake-reproducible-development-environment/)s particularly effective:
 
 ```dockerfile
 # Build stage
@@ -181,7 +181,7 @@ ENTRYPOINT ["/appbinary"]
 
 ## Using Skills for Dockerfile Generation
 
-[The `/frontend-design` skill understands build optimization patterns](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) understands build optimization patterns that translate well to Dockerfiles. The `/tdd` skill helps you write tests that run inside your containers during development.
+[The `/frontend-design` skill understands build optimization patterns](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) understands build optimization patterns that translate well to Dockerfiles. The `/tdd` skill helps you write tests that run inside your containers during development.
 
 For more complex setups, combine multiple skills in a single Claude session:
 
@@ -219,8 +219,8 @@ The combination of Claude Code's assistance and understanding of multi-stage pat
 
 ## Related Reading
 
-- [Best Claude Code Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate your deployment pipeline
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Maximize skill effectiveness
-- [Understanding Claude Code Hooks System](/claude-skills-guide/articles/claude-code-hooks-system-explained/) — Trigger actions automatically
+- [Best Claude Code Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate your deployment pipeline
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Maximize skill effectiveness
+- [Understanding Claude Code Hooks System](/claude-skills-guide/claude-code-hooks-system-explained/) — Trigger actions automatically
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

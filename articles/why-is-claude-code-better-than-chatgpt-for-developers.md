@@ -32,7 +32,7 @@ When a PR is created or updated:
 4. Provide actionable feedback in PR comments
 ```
 
-This contrasts sharply with ChatGPT, where you'd need to re-explain your security requirements in every conversation. [The **supermemory** skill extends this further by maintaining context across sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)—your AI assistant remembers your codebase's patterns without manual reloading.
+This contrasts sharply with ChatGPT, where you'd need to re-explain your security requirements in every conversation. [The **supermemory** skill extends this further by maintaining context across sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)—your AI assistant remembers your codebase's patterns without manual reloading.
 
 ## Tool Use and Function Calling
 
@@ -44,7 +44,7 @@ Claude Code excels at autonomous tool execution. When you ask Claude to refactor
 
 ChatGPT can suggest code but typically stops at generating text. Claude Code's tool use means less copy-pasting between browser and editor—you get executed changes, not just recommendations.
 
-[The **tdd** skill demonstrates this well](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) and receive working implementations:
+[The **tdd** skill demonstrates this well](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) and receive working implementations:
 
 ```
 /tdd implement the payment processor to handle the test at tests/payment_test.go
@@ -54,7 +54,7 @@ This creates a genuine test-driven development loop where Claude acts as a devel
 
 ## Specialized Skills for Common Tasks
 
-[Claude Code ships with purpose-built skills that handle domain-specific work](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/):
+[Claude Code ships with purpose-built skills that handle domain-specific work](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/):
 
 - **pdf** — Extract tables, merge documents, fill forms
 - **xlsx** — Build spreadsheets with formulas, charts, and conditional formatting
@@ -138,9 +138,9 @@ For developers who want an AI partner that remembers their conventions, executes
 
 ## Related Reading
 
-- [Claude Code vs ChatGPT Code Interpreter Comparison](/claude-skills-guide/articles/claude-code-vs-chatgpt-code-interpreter-comparison/)
-- [Why Teams Switch from Copilot to Claude Code](/claude-skills-guide/articles/why-do-teams-switch-from-copilot-to-claude-code/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code vs ChatGPT Code Interpreter Comparison](/claude-skills-guide/claude-code-vs-chatgpt-code-interpreter-comparison/)
+- [Why Teams Switch from Copilot to Claude Code](/claude-skills-guide/why-do-teams-switch-from-copilot-to-claude-code/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 - [Comparisons Hub](/claude-skills-guide/comparisons-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

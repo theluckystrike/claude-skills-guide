@@ -12,7 +12,7 @@ score: 7
 
 # Will Claude Skills Support Voice Interfaces in 2026?
 
-If you have been building workflows around Claude Code skills, you might wonder whether [voice interfaces](/claude-skills-guide/articles/will-claude-skills-replace-traditional-ide-plugins/) will become a first-class option in 2026. The short answer: native voice input is not built directly into Claude skills themselves, but several practical workarounds let you drive skill-powered workflows with your voice today.
+If you have been building workflows around Claude Code skills, you might wonder whether [voice interfaces](/claude-skills-guide/will-claude-skills-replace-traditional-ide-plugins/) will become a first-class option in 2026. The short answer: native voice input is not built directly into Claude skills themselves, but several practical workarounds let you drive skill-powered workflows with your voice today.
 
 ## How Claude Skills Work Right Now
 
@@ -174,9 +174,9 @@ For now, combine voice dictation with skills like `/tdd`, `/frontend-design`, `/
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd and frontend-design
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically based on context
-- [Automating Code Documentation with Claude Skills](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) — Documentation workflow that works with voice input
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd and frontend-design
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically based on context
+- [Automating Code Documentation with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — Documentation workflow that works with voice input
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

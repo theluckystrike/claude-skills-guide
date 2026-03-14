@@ -142,9 +142,9 @@ Claude responds well to specificity. When you enumerate exactly what error handl
 
 ### Using Skills with Built-in Error Handling
 
-[Skills like the `tdd` skill encourage test-driven development](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) encourage test-driven development, which naturally surfaces error handling needs through failing tests. Similarly, the `frontend-design` skill can be configured to include validation patterns.
+[Skills like the `tdd` skill encourage test-driven development](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) encourage test-driven development, which naturally surfaces error handling needs through failing tests. Similarly, the `frontend-design` skill can be configured to include validation patterns.
 
-[Create a custom skill that always includes error handling templates](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). For example, a skill called `robust-code` could provide this guidance:
+[Create a custom skill that always includes error handling templates](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). For example, a skill called `robust-code` could provide this guidance:
 
 ```
 When generating any function or method:
@@ -214,9 +214,9 @@ With practice, you learn to work with Claude's tendencies while ensuring your co
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [How to Make Claude Code Write Secure Code Always](/claude-skills-guide/articles/how-to-make-claude-code-write-secure-code-always/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [How to Make Claude Code Write Secure Code Always](/claude-skills-guide/how-to-make-claude-code-write-secure-code-always/)
 - [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

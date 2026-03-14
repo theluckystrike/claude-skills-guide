@@ -12,13 +12,13 @@ score: 8
 
 # How to Make Claude Code Write Secure Code Always
 
-Getting Claude Code to consistently produce secure code requires more than just hoping for the best. Explore the [workflows hub](/claude-skills-guide/workflows-hub/) for related security automation patterns. You need to establish patterns, use specific skills like [OWASP security scanning](/claude-skills-guide/articles/claude-code-owasp-top-10-security-scanning-workflow/), and configure your environment to prioritize security at every step. This guide covers practical techniques that work — including how to pair Claude with [secret scanning to prevent credential leaks](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/).
+Getting Claude Code to consistently produce secure code requires more than just hoping for the best. Explore the [workflows hub](/claude-skills-guide/workflows-hub/) for related security automation patterns. You need to establish patterns, use specific skills like [OWASP security scanning](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/), and configure your environment to prioritize security at every step. This guide covers practical techniques that work — including how to pair Claude with [secret scanning to prevent credential leaks](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/).
 
 ## Start with Security-First Skill Configuration
 
 The foundation of secure code generation begins with which skills you load and how you configure them. Claude Code skills extend Claude's capabilities in specific domains, and several skills directly address security concerns.
 
-[The **tdd** skill excels at generating tests, but you can direct it to prioritize security test cases](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). When you invoke it, specify security-focused test patterns:
+[The **tdd** skill excels at generating tests, but you can direct it to prioritize security test cases](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). When you invoke it, specify security-focused test patterns:
 
 ```
 /tdd write tests for this authentication module, include test cases for SQL injection, XSS, and CSRF vulnerabilities
@@ -55,7 +55,7 @@ The second prompt gives Claude clear security requirements to follow. Include ex
 
 ## Use the Super Memory Skill for Security Context
 
-[The **supermemory** skill stores and retrieves context across sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/). Use it to maintain a security knowledge base that Claude references:
+[The **supermemory** skill stores and retrieves context across sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/). Use it to maintain a security knowledge base that Claude references:
 
 ```
 /supermemory add our company's security standards: no eval(), always use parameterized queries, strict Content Security Policy headers required
@@ -135,7 +135,7 @@ Make these tools visible in your project so Claude incorporates them into genera
 
 Some approaches undermine your security goals.
 
-Avoid vague prompts like "make this secure" — they produce inconsistent results. [Writing effective prompts for Claude Code](/claude-skills-guide/articles/how-to-write-effective-prompts-for-claude-code/) directly improves security outcomes.
+Avoid vague prompts like "make this secure" — they produce inconsistent results. [Writing effective prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/) directly improves security outcomes.
 
 Don't skip the code review step. Even good AI-generated code benefits from verification.
 
@@ -161,9 +161,9 @@ Security isn't a feature you add later. It's a requirement you specify upfront. 
 
 ## Related Reading
 
-- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/articles/claude-code-owasp-top-10-security-scanning-workflow/) — scan generated code against OWASP Top 10 vulnerabilities
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) — prevent secrets from ending up in Claude-generated code
-- [Input Validation and Sanitization with Claude Code Guide](/claude-skills-guide/articles/claude-code-input-validation-sanitization-patterns-guide/) — enforce secure input handling patterns in every Claude session
-- [Claude Code Security Code Review Checklist Automation](/claude-skills-guide/articles/claude-code-security-code-review-checklist-automation/) — automate security reviews of all code Claude generates
+- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/) — scan generated code against OWASP Top 10 vulnerabilities
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — prevent secrets from ending up in Claude-generated code
+- [Input Validation and Sanitization with Claude Code Guide](/claude-skills-guide/claude-code-input-validation-sanitization-patterns-guide/) — enforce secure input handling patterns in every Claude session
+- [Claude Code Security Code Review Checklist Automation](/claude-skills-guide/claude-code-security-code-review-checklist-automation/) — automate security reviews of all code Claude generates
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

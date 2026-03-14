@@ -14,7 +14,7 @@ score: 9
 
 When you run AI agents in production workflows, security and isolation become critical concerns. The `agent` skill in Claude Code includes sandboxing capabilities that create boundaries between the AI's operations and your actual filesystem, network, and credentials.
 
-[Skills are `.md` files in `~/.claude/skills/`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). The `agent` skill is invoked like any other:
+[Skills are `.md` files in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). The `agent` skill is invoked like any other:
 
 ```
 /agent refactor the authentication module in src/auth/ — do not touch anything outside that directory
@@ -49,7 +49,7 @@ In your Claude Code settings (`~/.claude/settings.json`):
 
 With this in place, a `/agent` invocation that tries to modify `./config/secrets.yml` will be blocked. The agent sees the restriction and should report it rather than proceeding.
 
-[For testing new community skills without risking your production code](/claude-skills-guide/articles/how-do-i-test-a-claude-skill-before-deploying-to-team/), set up an isolated directory structure:
+[For testing new community skills without risking your production code](/claude-skills-guide/how-do-i-test-a-claude-skill-before-deploying-to-team/), set up an isolated directory structure:
 
 ```
 /project/
@@ -110,7 +110,7 @@ With `shellAccess: false`, the agent cannot run arbitrary shell commands or use 
 
 ## Practical Use Case: Running Tests Safely
 
-The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) generates tests that may include third-party dependencies. Running those tests in a sandboxed context prevents buggy or malicious packages from accessing your environment variables or SSH keys.
+The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) generates tests that may include third-party dependencies. Running those tests in a sandboxed context prevents buggy or malicious packages from accessing your environment variables or SSH keys.
 
 ```
 /agent run the test suite in tests/ using the tdd skill — only read from tests/ and src/, write only to build/test-results/, no network access
@@ -170,9 +170,9 @@ Start with the strictest isolation level that still allows your workflow to func
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Overview of essential Claude Code skills for developers
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Overview of essential Claude Code skills for developers
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
 
 
 ---

@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills for WebSocket Real-Time App Development
 
-Real-time functionality has become essential for modern web applications. Whether you're building chat systems, live dashboards, collaborative tools, or gaming platforms, [WebSockets provide the bidirectional communication channels](/claude-skills-guide/articles/claude-code-skills-for-gaming-backend-development/) that make instant data exchange possible. Claude Code offers skills that help you architect, implement, and debug WebSocket-based real-time applications efficiently.
+Real-time functionality has become essential for modern web applications. Whether you're building chat systems, live dashboards, collaborative tools, or gaming platforms, [WebSockets provide the bidirectional communication channels](/claude-skills-guide/claude-code-skills-for-gaming-backend-development/) that make instant data exchange possible. Claude Code offers skills that help you architect, implement, and debug WebSocket-based real-time applications efficiently.
 
 ## Understanding WebSocket Architecture
 
@@ -197,7 +197,7 @@ function ConnectionStatus({ connected }) {
 
 Single-server WebSocket implementations work for small applications. As your user base grows, you need to consider horizontal scaling and message distribution across multiple server instances.
 
-[Redis pub/sub enables cross-server message broadcasting](/claude-skills-guide/articles/claude-code-skills-microservices-communication-patterns/):
+[Redis pub/sub enables cross-server message broadcasting](/claude-skills-guide/claude-code-skills-microservices-communication-patterns/):
 
 ```javascript
 const Redis = require('ioredis');
@@ -231,7 +231,7 @@ This pattern ensures messages reach all connected clients regardless of which se
 
 ## Security Considerations
 
-[Secure your WebSocket connections with proper authentication](/claude-skills-guide/articles/claude-code-csp-content-security-policy-generation-guide/) and authorization:
+[Secure your WebSocket connections with proper authentication](/claude-skills-guide/claude-code-csp-content-security-policy-generation-guide/) and authorization:
 
 ```javascript
 wss.on('connection', (ws, req) => {
@@ -310,9 +310,9 @@ WebSocket development with Claude Code skills follows established patterns: impl
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Complete skill stack for web developers
-- [Claude Skills for Backend Development](/claude-skills-guide/articles/best-claude-code-skills-for-backend-development/) — Server architecture patterns
-- [Real-Time Collaboration Patterns with Claude](/claude-skills-guide/articles/claude-code-skills-for-collaborative-applications/) — Building multi-user features
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Complete skill stack for web developers
+- [Claude Skills for Backend Development](/claude-skills-guide/best-claude-code-skills-for-backend-development/) — Server architecture patterns
+- [Real-Time Collaboration Patterns with Claude](/claude-skills-guide/claude-code-skills-for-collaborative-applications/) — Building multi-user features
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

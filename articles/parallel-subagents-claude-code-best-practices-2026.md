@@ -12,7 +12,7 @@ score: 10
 
 # Parallel Subagents in Claude Code: Best Practices for 2026
 
-Claude Code's subagent system lets you spawn multiple independent reasoning threads within a single session. When used correctly, [parallel subagents](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/) can dramatically accelerate complex workflows—simultaneously researching, coding, and reviewing tasks that would otherwise run sequentially.
+Claude Code's subagent system lets you spawn multiple independent reasoning threads within a single session. When used correctly, [parallel subagents](/claude-skills-guide/claude-code-agent-swarm-coordination-strategies/) can dramatically accelerate complex workflows—simultaneously researching, coding, and reviewing tasks that would otherwise run sequentially.
 
 This guide covers practical patterns for using parallel subagents effectively in 2026.
 
@@ -184,9 +184,9 @@ The key is starting simple: identify truly parallel work in your current tasks, 
 
 ## Related Reading
 
-- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/articles/claude-code-agent-pipeline-sequential-vs-parallel/) — Understand when to choose parallel versus sequential pipeline execution
-- [Fan-Out Fan-In Pattern with Claude Code Subagents](/claude-skills-guide/articles/fan-out-fan-in-pattern-claude-code-subagents/) — Implement the fan-out fan-in pattern for controlled parallel subagent workflows
-- [Claude Code Tmux Session Management Multi Agent Workflow](/claude-skills-guide/articles/claude-code-tmux-session-management-multi-agent-workflow/) — Manage parallel subagent sessions visually with tmux terminal multiplexing
+- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) — Understand when to choose parallel versus sequential pipeline execution
+- [Fan-Out Fan-In Pattern with Claude Code Subagents](/claude-skills-guide/fan-out-fan-in-pattern-claude-code-subagents/) — Implement the fan-out fan-in pattern for controlled parallel subagent workflows
+- [Claude Code Tmux Session Management Multi Agent Workflow](/claude-skills-guide/claude-code-tmux-session-management-multi-agent-workflow/) — Manage parallel subagent sessions visually with tmux terminal multiplexing
 - [Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Explore advanced parallel execution and subagent orchestration patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

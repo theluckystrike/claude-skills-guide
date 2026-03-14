@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills Context Window Exceeded Error Fix
 
-The **[context window exceeded](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/)** error is a hard wall. When the total tokens in your session — conversation history, skill definitions, file contents, and tool outputs — exceed Claude's limit, the model cannot continue. This guide explains why it happens specifically when using Claude Code skills, and gives you practical, tested fixes.
+The **[context window exceeded](/claude-skills-guide/claude-skills-context-window-management-best-practices/)** error is a hard wall. When the total tokens in your session — conversation history, skill definitions, file contents, and tool outputs — exceed Claude's limit, the model cannot continue. This guide explains why it happens specifically when using Claude Code skills, and gives you practical, tested fixes.
 
 ## Why Skills Make Context Window Errors More Likely
 
@@ -186,8 +186,8 @@ Each session starts small, uses one or two skills, and ends with a checkpoint.
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Strategies for reducing token consumption per skill invocation, directly addressing the root cause of context window errors
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Profiles the skills most prone to context overruns (tdd, pdf, supermemory) with practical usage guidance
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can fire multiple skills unexpectedly; understanding the mechanism helps prevent unintended context growth
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Strategies for reducing token consumption per skill invocation, directly addressing the root cause of context window errors
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Profiles the skills most prone to context overruns (tdd, pdf, supermemory) with practical usage guidance
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can fire multiple skills unexpectedly; understanding the mechanism helps prevent unintended context growth
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

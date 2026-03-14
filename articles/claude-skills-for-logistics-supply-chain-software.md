@@ -10,7 +10,7 @@ reviewed: true
 score: 7
 ---
 
-Logistics and supply chain operations involve complex orchestration of vendors, warehouses, transportation, and inventory systems. Developers building logistics software face unique challenges: processing shipping manifests, managing real-time inventory updates, optimizing routes, and generating compliance documentation. [Claude skills](/claude-skills-guide/articles/claude-code-skills-for-data-engineers-automating-pipelines/) provide programmatic capabilities that transform these manual workflows into automated pipelines, reducing errors and freeing teams to focus on strategic improvements.
+Logistics and supply chain operations involve complex orchestration of vendors, warehouses, transportation, and inventory systems. Developers building logistics software face unique challenges: processing shipping manifests, managing real-time inventory updates, optimizing routes, and generating compliance documentation. [Claude skills](/claude-skills-guide/claude-code-skills-for-data-engineers-automating-pipelines/) provide programmatic capabilities that transform these manual workflows into automated pipelines, reducing errors and freeing teams to focus on strategic improvements.
 
 This guide covers practical implementations of Claude skills for logistics supply chain software, with code examples you can adapt immediately.
 
@@ -70,7 +70,7 @@ shipment = {
 # save as /shipments/outbound/BOL-2026-00142.pdf
 ```
 
-[The pdf skill also handles reverse workflows](/claude-skills-guide/articles/automated-documentation-workflow-with-claude-skills/)—extracting data from carrier-provided PDFs into your internal systems. This proves essential when processing hundreds of shipping confirmations or customs clearance documents daily.
+[The pdf skill also handles reverse workflows](/claude-skills-guide/automated-documentation-workflow-with-claude-skills/)—extracting data from carrier-provided PDFs into your internal systems. This proves essential when processing hundreds of shipping confirmations or customs clearance documents daily.
 
 ```yaml
 # Extract tracking data from carrier PDFs
@@ -123,7 +123,7 @@ steps:
 
 ## Integration with Transportation Management Systems
 
-Modern logistics stacks connect multiple systems: ERPs, WMS, TMS (Transportation Management Systems), carrier portals, and customer-facing tracking. [Claude skills serve as the integration layer](/claude-skills-guide/articles/can-claude-code-skills-call-external-apis-automatically/), translating between formats and triggering downstream actions.
+Modern logistics stacks connect multiple systems: ERPs, WMS, TMS (Transportation Management Systems), carrier portals, and customer-facing tracking. [Claude skills serve as the integration layer](/claude-skills-guide/can-claude-code-skills-call-external-apis-automatically/), translating between formats and triggering downstream actions.
 
 ```python
 # Webhook handler for carrier status updates
@@ -190,9 +190,9 @@ Claude skills transform logistics operations from reactive firefighting into pro
 
 ## Related Reading
 
-- [Can Claude Code Skills Call External APIs Automatically](/claude-skills-guide/articles/can-claude-code-skills-call-external-apis-automatically/) — connect logistics skills to ERP and TMS APIs
-- [Claude Code Skills for Agriculture IoT Monitoring](/claude-skills-guide/articles/claude-code-skills-for-agriculture-iot-monitoring/) — apply IoT monitoring patterns to warehouse sensor data
-- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) — document logistics workflows and generate compliance reports
+- [Can Claude Code Skills Call External APIs Automatically](/claude-skills-guide/can-claude-code-skills-call-external-apis-automatically/) — connect logistics skills to ERP and TMS APIs
+- [Claude Code Skills for Agriculture IoT Monitoring](/claude-skills-guide/claude-code-skills-for-agriculture-iot-monitoring/) — apply IoT monitoring patterns to warehouse sensor data
+- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — document logistics workflows and generate compliance reports
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for logistics and supply chain operations
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

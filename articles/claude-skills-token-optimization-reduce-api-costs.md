@@ -38,7 +38,7 @@ When using skills like **docx** for document creation or **pptx** for presentati
 
 ## Strategy 2: Leverage Skill-Specific Optimizations
 
-Many Claude Skills are designed with efficiency in mind. The **supermemory** skill, for example, helps you organize and retrieve information without re-explaining context every session. By maintaining structured notes and references, you reduce redundant explanations in subsequent conversations. If you're using supermemory in frontend projects, pair this approach with the workflow tips in [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/).
+Many Claude Skills are designed with efficiency in mind. The **supermemory** skill, for example, helps you organize and retrieve information without re-explaining context every session. By maintaining structured notes and references, you reduce redundant explanations in subsequent conversations. If you're using supermemory in frontend projects, pair this approach with the workflow tips in [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/).
 
 Similarly, the **canvas-design** skill works efficiently with clear design specifications. Provide exact dimensions, color codes, and layout requirements in your initial request, and the skill will generate precise outputs without requiring follow-up clarifications.
 
@@ -57,7 +57,7 @@ def analyze_file(path, start_line, end_line):
     """Load only relevant sections"""
 ```
 
-When using the **pdf** skill for document processing, specify the exact pages or sections you need analyzed. When the **xlsx** skill processes spreadsheets, reference specific sheets or cell ranges rather than loading entire workbooks. For a complete overview of the pdf and xlsx skills in data pipelines, see [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/).
+When using the **pdf** skill for document processing, specify the exact pages or sections you need analyzed. When the **xlsx** skill processes spreadsheets, reference specific sheets or cell ranges rather than loading entire workbooks. For a complete overview of the pdf and xlsx skills in data pipelines, see [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/).
 
 ## Strategy 4: Optimize Skill Chains
 
@@ -78,7 +78,7 @@ Maintain a simple log of token usage per session. Review weekly to identify:
 
 Consider a development team using Claude Skills for a web application project. Initially, they invoked the **frontend-design** skill for every UI component request, loading their entire design system documentation each time. By extracting just the relevant component specifications and passing them explicitly, they reduced average token usage per request from 8,000 to 4,800 tokens.
 
-They applied similar optimizations to their **tdd** workflow. By narrowing test requests to specific functions and providing precise input-output expectations, they cut test generation time and token costs nearly in half. Understanding how tdd and other skills fit into a larger developer workflow helps you make these decisions—see [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) for context.
+They applied similar optimizations to their **tdd** workflow. By narrowing test requests to specific functions and providing precise input-output expectations, they cut test generation time and token costs nearly in half. Understanding how tdd and other skills fit into a larger developer workflow helps you make these decisions—see [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) for context.
 
 ## Summary
 
@@ -90,8 +90,8 @@ The goal isn't to limit what Claude can do—it's to ensure every token delivers
 
 ## Related Reading
 
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills load affects your token budget
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Top skills worth the token investment
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Optimize token usage in automated deployment pipelines
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills load affects your token budget
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills worth the token investment
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Optimize token usage in automated deployment pipelines
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

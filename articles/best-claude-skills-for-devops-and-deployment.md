@@ -54,7 +54,7 @@ COPY --from=builder /app/main /app/
 ENTRYPOINT ["/app/main"]
 ```
 
-Claude skills help you understand multi-stage builds, security best practices, and optimization techniques that directly impact your deployment speed and security posture. For a broader picture of how official and community security skills stack up, see [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/).
+Claude skills help you understand multi-stage builds, security best practices, and optimization techniques that directly impact your deployment speed and security posture. For a broader picture of how official and community security skills stack up, see [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/).
 
 ## Configuration Management and Infrastructure as Code
 
@@ -133,7 +133,7 @@ kubectl logs -l app=myapp --tail=100 --timestamps=true
 kubectl logs -f deployment/myapp --tail=50
 ```
 
-These capabilities accelerate incident response and help you identify root causes faster. If your monitoring pipelines generate data reports, combine this with the skills in [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) for automated log summarization.
+These capabilities accelerate incident response and help you identify root causes faster. If your monitoring pipelines generate data reports, combine this with the skills in [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) for automated log summarization.
 
 ## Security Hardening for Deployments
 
@@ -180,9 +180,9 @@ Start with the skills that address your most frequent pain points — shell scri
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Core developer skills that complement DevOps workflows
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Frontend skills for full-stack deployment pipelines
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep automation costs low as pipelines scale
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills that complement DevOps workflows
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills for full-stack deployment pipelines
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep automation costs low as pipelines scale
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

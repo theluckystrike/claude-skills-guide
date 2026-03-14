@@ -26,9 +26,9 @@ The real power comes from treating your development activity as structured data.
 
 Several Claude skills work together to make this workflow function:
 
-- [**supermemory**](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Maintains context about your projects, tasks, and ongoing work across sessions
-- [**tdd**](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Helps structure testable code and tracks development progress
-- [**pdf**](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Generates formatted standup documents when needed
+- [**supermemory**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Maintains context about your projects, tasks, and ongoing work across sessions
+- [**tdd**](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Helps structure testable code and tracks development progress
+- [**pdf**](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Generates formatted standup documents when needed
 
 Each skill plays a specific role in the pipeline, from data collection to final output.
 
@@ -207,9 +207,9 @@ This automation pairs well with the **tdd** skill—test-driven development prod
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

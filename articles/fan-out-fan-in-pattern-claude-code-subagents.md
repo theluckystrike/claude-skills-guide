@@ -203,15 +203,15 @@ When implementing this pattern, consider these factors:
 
 ## Conclusion
 
-The fan-out fan-in pattern with Claude Code subagents enables scalable, efficient processing of parallel workloads. For managing resource consumption in these workflows, apply the [rate limit management strategies](/claude-skills-guide/articles/rate-limit-management-claude-code-skill-intensive-workflows/) designed for high-intensity skill pipelines. Whether you're automating document processing with the **pdf** skill, generating comprehensive tests with **tdd**, or building complex multi-agent systems, this pattern provides a solid foundation for concurrent AI-driven workflows.
+The fan-out fan-in pattern with Claude Code subagents enables scalable, efficient processing of parallel workloads. For managing resource consumption in these workflows, apply the [rate limit management strategies](/claude-skills-guide/rate-limit-management-claude-code-skill-intensive-workflows/) designed for high-intensity skill pipelines. Whether you're automating document processing with the **pdf** skill, generating comprehensive tests with **tdd**, or building complex multi-agent systems, this pattern provides a solid foundation for concurrent AI-driven workflows.
 
 Start with simple two-agent implementations and progressively add complexity as your requirements grow. The pattern's flexibility allows it to adapt to virtually any parallel processing need in your Claude Code projects.
 
 ## Related Reading
 
-- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/) — Complement fan-out/fan-in with shared state coordination patterns for managing swarms of parallel agents
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Broader orchestration patterns that build on the fan-out/fan-in foundation for complex workflows
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) — How subagents communicate results during the fan-in aggregation phase
+- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/claude-code-agent-swarm-coordination-strategies/) — Complement fan-out/fan-in with shared state coordination patterns for managing swarms of parallel agents
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Broader orchestration patterns that build on the fan-out/fan-in foundation for complex workflows
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — How subagents communicate results during the fan-in aggregation phase
 - [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced parallel processing and agent architecture patterns for production use cases
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

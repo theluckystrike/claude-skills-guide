@@ -86,7 +86,7 @@ The `/tdd` skill ensures tests are generated alongside your contract code, while
 Smart contract security requires constant vigilance. Claude skills can help enforce security patterns:
 
 ```solidity
-// Using the [tdd skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/), Claude will suggest:
+// Using the [tdd skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/), Claude will suggest:
 contract SecureVault {
     mapping(address => uint256) public balances;
     
@@ -165,9 +165,9 @@ Claude skills significantly enhance Solidity development by providing specialize
 
 ## Related Reading
 
-- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/articles/claude-code-owasp-top-10-security-scanning-workflow/) — Apply security scanning patterns to smart contract vulnerability auditing.
-- [Claude Code Security Code Review Checklist Automation](/claude-skills-guide/articles/claude-code-security-code-review-checklist-automation/) — Automate security code reviews for Solidity smart contracts using the same checklist approach.
-- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Build comprehensive test suites for smart contract logic using the tdd skill workflow.
+- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/) — Apply security scanning patterns to smart contract vulnerability auditing.
+- [Claude Code Security Code Review Checklist Automation](/claude-skills-guide/claude-code-security-code-review-checklist-automation/) — Automate security code reviews for Solidity smart contracts using the same checklist approach.
+- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Build comprehensive test suites for smart contract logic using the tdd skill workflow.
 - [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Explore more advanced skill patterns for specialized technical development.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

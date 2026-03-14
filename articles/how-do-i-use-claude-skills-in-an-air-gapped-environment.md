@@ -14,13 +14,13 @@ tags: [claude-code, claude-skills]
 
 Air-gapped environments—systems physically isolated from the internet—present unique challenges for developers who want to use AI assistance. Whether you're working in cybersecurity research, government systems, or facilities with strict data policies, you might wonder whether Claude skills can function without external connectivity. The answer is yes, with the right setup and understanding of the constraints.
 
-This guide walks you through the process of using Claude skills in [air-gapped environment](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-a-claude-skill/)s, from initial setup to practical workflows you can implement today.
+This guide walks you through the process of using Claude skills in [air-gapped environment](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/)s, from initial setup to practical workflows you can implement today.
 
 ## Understanding Air-Gapped Constraints
 
 An air-gapped environment lacks direct internet connectivity, meaning your Claude implementation cannot fetch updates, access online documentation, or communicate with external APIs. However, Claude skills operate primarily as local extensions that define behavior patterns, prompts, and tool integrations. Once these skills are loaded into your environment, they function independently of live network connections.
 
-The key distinction is between two components: the skill definitions themselves (which are static files you can transfer manually) and any dynamic content the skills might fetch (which won't work [offline](/claude-skills-guide/articles/claude-code-nix-flake-reproducible-development-environment/)). Skills like the **pdf** skill for PDF manipulation, the **tdd** skill for test-driven development workflows, or the **frontend-design** skill for creating UI components all work offline after initial setup because they rely on local processing logic rather than external services.
+The key distinction is between two components: the skill definitions themselves (which are static files you can transfer manually) and any dynamic content the skills might fetch (which won't work [offline](/claude-skills-guide/claude-code-nix-flake-reproducible-development-environment/)). Skills like the **pdf** skill for PDF manipulation, the **tdd** skill for test-driven development workflows, or the **frontend-design** skill for creating UI components all work offline after initial setup because they rely on local processing logic rather than external services.
 
 ## Setting Up Claude Skills for Offline Use
 
@@ -114,9 +114,9 @@ The initial setup requires effort, but the productivity gains for teams working 
 
 ## Related Reading
 
-- [How to Create a Private Claude Skill Not on GitHub](/claude-skills-guide/articles/how-do-i-create-a-private-claude-skill-not-on-github/) — Keep skills local for air-gapped or sensitive environments
-- [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-skills-guide/articles/claude-code-dev-containers-devcontainer-json-setup-guide/) — Pre-install skills inside containers for offline-ready environments
-- [Claude Skills for Enterprise Security and Compliance Guide](/claude-skills-guide/articles/claude-skills-for-enterprise-security-compliance-guide/) — Deploy skills in regulated, security-hardened enterprise environments
+- [How to Create a Private Claude Skill Not on GitHub](/claude-skills-guide/how-do-i-create-a-private-claude-skill-not-on-github/) — Keep skills local for air-gapped or sensitive environments
+- [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-skills-guide/claude-code-dev-containers-devcontainer-json-setup-guide/) — Pre-install skills inside containers for offline-ready environments
+- [Claude Skills for Enterprise Security and Compliance Guide](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Deploy skills in regulated, security-hardened enterprise environments
 - [Claude Skills Hub](/claude-skills-guide/use-cases-hub/) — Explore secure and specialized deployment scenarios for Claude skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -18,7 +18,7 @@ Building Spring Boot applications and Java microservices becomes significantly m
 
 Before diving into microservices development, ensure your local environment is properly configured. You'll need Java 17 or later, Maven or Gradle, and Docker for containerization. Claude Code can help you verify your setup and troubleshoot common configuration issues.
 
-The foundation of any Spring Boot project starts with proper dependency management. Using the [**tdd skill**](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) ensures your tests drive your implementation, while the [**pdf skill**](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) helps generate API documentation automatically from your code annotations.
+The foundation of any Spring Boot project starts with proper dependency management. Using the [**tdd skill**](/claude-skills-guide/best-claude-skills-for-developers-2026/) ensures your tests drive your implementation, while the [**pdf skill**](/claude-skills-guide/best-claude-skills-for-data-analysis/) helps generate API documentation automatically from your code annotations.
 
 ## Creating Your First Microservice
 
@@ -95,7 +95,7 @@ public class OrderService {
 
 Externalized configuration is essential for microservices. Spring Cloud Config Server provides centralized configuration management across your services. Store your configuration files in a Git repository and let clients pull their settings at startup.
 
-The [**supermemory skill**](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) helps you maintain context across configuration changes, tracking which services use which properties and alerting you to potential conflicts during updates.
+The [**supermemory skill**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) helps you maintain context across configuration changes, tracking which services use which properties and alerting you to potential conflicts during updates.
 
 ## Containerization with Docker
 
@@ -165,8 +165,8 @@ Building Java microservices with Claude Code means you're never working alone—
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Core skills including tdd and pdf that complement Java microservices development
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Deploy Spring Boot services to Kubernetes and cloud platforms
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep long microservices refactoring sessions economical
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core skills including tdd and pdf that complement Java microservices development
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Deploy Spring Boot services to Kubernetes and cloud platforms
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep long microservices refactoring sessions economical
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

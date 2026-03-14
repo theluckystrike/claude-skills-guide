@@ -33,7 +33,7 @@ Both Claude Code and Google Gemini CLI have matured into serious contenders for 
 | Skills / plugins | Claude skills ecosystem | Google Cloud integrations |
 | Offline / local models | No | No |
 | Pricing (as of 2026) | Usage-based via Anthropic API | Usage-based via Google AI / Vertex |
-| IDE integration | Via [MCP server](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)s | Cloud Code plugin ecosystem |
+| IDE integration | Via [MCP server](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)s | Cloud Code plugin ecosystem |
 | GitHub integration | Native via MCP | Via Cloud Build / GitHub Actions |
 | Primary language support | All major languages | All major languages |
 
@@ -97,8 +97,8 @@ The two tools are not mutually exclusive. Some teams use Claude Code for agentic
 
 ## Related Reading
 
-- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Understanding what the skills ecosystem offers helps you evaluate Claude Code's extensibility advantage over Gemini CLI
-- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Explores how reusable skill invocations differ from raw prompting, relevant to comparing Claude Code with simpler CLI tools
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How Claude Code's automatic skill matching works and why it matters when choosing between agentic coding tools
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Understanding what the skills ecosystem offers helps you evaluate Claude Code's extensibility advantage over Gemini CLI
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Explores how reusable skill invocations differ from raw prompting, relevant to comparing Claude Code with simpler CLI tools
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How Claude Code's automatic skill matching works and why it matters when choosing between agentic coding tools
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

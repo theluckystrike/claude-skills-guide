@@ -13,7 +13,7 @@ score: 8
 
 # Claude Code with Docker Container Setup Guide
 
-Running Claude Code with Docker gives you reproducible, isolated execution that works identically across developer machines, CI runners, and production servers. This guide covers the full setup from a basic Dockerfile through multi-container orchestration with Compose, including patterns for the [`tdd`](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/), `pdf`, `supermemory`, and `frontend-design` skills.
+Running Claude Code with Docker gives you reproducible, isolated execution that works identically across developer machines, CI runners, and production servers. This guide covers the full setup from a basic Dockerfile through multi-container orchestration with Compose, including patterns for the [`tdd`](/claude-skills-guide/best-claude-skills-for-developers-2026/), `pdf`, `supermemory`, and `frontend-design` skills.
 
 ## Why Containerize Claude Code
 
@@ -75,7 +75,7 @@ Run a skill:
 docker run --rm   -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY   -v $(pwd)/src:/workspace/src   claude-skills:runner   "/tdd Write Jest tests for /workspace/src/auth/login.ts"
 ```
 
-Or for [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) extraction:
+Or for [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) extraction:
 
 ```bash
 docker run --rm   -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY   -v $(pwd)/documents:/workspace/documents   -v $(pwd)/output:/workspace/output   claude-skills:runner   "/pdf Extract all tables from /workspace/documents/report.pdf and save to /workspace/output/tables.md"
@@ -323,9 +323,9 @@ jobs:
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Deployment-oriented skills that benefit from containerized execution
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Skills worth containerizing with guidance on each
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — When running skills in containers at scale, token cost management becomes critical
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Deployment-oriented skills that benefit from containerized execution
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Skills worth containerizing with guidance on each
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — When running skills in containers at scale, token cost management becomes critical
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

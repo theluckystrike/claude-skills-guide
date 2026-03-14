@@ -100,7 +100,7 @@ For anything you'd want in your repo's git history — tech stack, architecture 
 
 ## Combining SuperMemory with Other Skills
 
-SuperMemory composes well with other skills. The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) benefits from remembering where your test files live and which framework you use. The `frontend-design` skill produces better output when it already knows your component library and design tokens. The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) can store extraction schemas so you don't re-specify column mappings for recurring document types.
+SuperMemory composes well with other skills. The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) benefits from remembering where your test files live and which framework you use. The `frontend-design` skill produces better output when it already knows your component library and design tokens. The [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) can store extraction schemas so you don't re-specify column mappings for recurring document types.
 
 Invoke both in the same session:
 
@@ -137,9 +137,9 @@ For quick one-off tasks, the built-in session context is enough. Save SuperMemor
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Complete token optimization guide
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Skills worth the token cost
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Complete token optimization guide
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Skills worth the token cost
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

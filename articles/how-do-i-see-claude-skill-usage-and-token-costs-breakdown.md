@@ -12,7 +12,7 @@ score: 9
 
 # How Do I See Claude Skill Usage and Token Costs Breakdown
 
-Understanding how Claude Code consumes tokens when you invoke skills helps you optimize workflows, manage costs, and make informed decisions about which skills to use for specific tasks. This guide covers the built-in tools and techniques for tracking skill usage and breaking down [token costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/).
+Understanding how Claude Code consumes tokens when you invoke skills helps you optimize workflows, manage costs, and make informed decisions about which skills to use for specific tasks. This guide covers the built-in tools and techniques for tracking skill usage and breaking down [token costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/).
 
 ## Token Usage Basics in Claude Code
 
@@ -193,9 +193,9 @@ Tracking Claude skill usage requires understanding the built-in token stats comm
 
 ## Related Reading
 
-- [Claude Skill Token Usage Profiling and Optimization](/claude-skills-guide/articles/claude-skill-token-usage-profiling-and-optimization/) — Measure and reduce token consumption systematically across your skills
-- [Claude Skill Prompt Compression Techniques](/claude-skills-guide/articles/claude-skill-prompt-compression-techniques/) — Cut skill body token counts by 30-60% without losing quality
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Broad strategies for reducing API costs across all Claude workflows
+- [Claude Skill Token Usage Profiling and Optimization](/claude-skills-guide/claude-skill-token-usage-profiling-and-optimization/) — Measure and reduce token consumption systematically across your skills
+- [Claude Skill Prompt Compression Techniques](/claude-skills-guide/claude-skill-prompt-compression-techniques/) — Cut skill body token counts by 30-60% without losing quality
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Broad strategies for reducing API costs across all Claude workflows
 - [Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Explore advanced token management and cost optimization strategies
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

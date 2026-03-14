@@ -13,14 +13,14 @@ score: 8
 
 # Claude Skills with Vercel Deployment Automation
 
-Vercel's deployment platform hooks into your Git workflow, but the gap between pushing code and knowing whether your deployment is production-ready still requires human judgment. Claude skills fill that gap: the [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) catches missing tests before deployment, `frontend-design` flags accessibility regressions, [`pdf`](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) generates release notes, and `supermemory` tracks deployment history for incident context. This guide covers Claude skills with Vercel deployment automation from Vercel API setup through full pre- and post-deployment pipelines.
+Vercel's deployment platform hooks into your Git workflow, but the gap between pushing code and knowing whether your deployment is production-ready still requires human judgment. Claude skills fill that gap: the [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) catches missing tests before deployment, `frontend-design` flags accessibility regressions, [`pdf`](/claude-skills-guide/best-claude-skills-for-data-analysis/) generates release notes, and `supermemory` tracks deployment history for incident context. This guide covers Claude skills with Vercel deployment automation from Vercel API setup through full pre- and post-deployment pipelines.
 
 ## What You Will Build
 
 - Pre-deployment gate: Claude `tdd` skill reviews staged changes and blocks deploys with critical test gaps
 - Post-deployment check: Claude validates the live deployment against a checklist
 - Automated changelog: `pdf` skill generates structured release notes from commit history
-- Incident context: [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) stores deployment metadata for faster debugging
+- Incident context: [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) stores deployment metadata for faster debugging
 
 ## Prerequisites
 
@@ -349,9 +349,9 @@ Claude skills with Vercel deployment automation creates an intelligent deploymen
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — The DevOps skills that integrate naturally with Vercel deployment workflows, including tdd, pdf, and supermemory
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — A comprehensive overview of the developer skills ecosystem that powers intelligent deployment pipelines
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Deployment pipelines run frequently; these techniques help keep per-deployment API costs predictable
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — The DevOps skills that integrate naturally with Vercel deployment workflows, including tdd, pdf, and supermemory
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — A comprehensive overview of the developer skills ecosystem that powers intelligent deployment pipelines
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Deployment pipelines run frequently; these techniques help keep per-deployment API costs predictable
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -92,7 +92,7 @@ Ask for confirmation before running shell commands that modify files.
 
 Skills do not have `execution:`, `allowed_commands:`, or `require_approval:` fields. These controls are not part of the skill file format. Instead, write your permission requirements as natural language instructions in the skill's Markdown body.
 
-For the [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) or other skills that manage external resources, you may need to explicitly grant file system access:
+For the [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) or other skills that manage external resources, you may need to explicitly grant file system access:
 
 ```markdown
 Only read files from ~/projects/ and ~/documents/.
@@ -246,9 +246,9 @@ For persistent issues, checking the skill's documentation and ensuring it was bu
 
 ## Related Reading
 
-- [Claude Code Permissions Model and Security Guide 2026](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) — Understand the full permissions model that governs what skill commands can execute in your environment
-- [How Do I Limit What a Claude Skill Can Access on Disk](/claude-skills-guide/articles/how-do-i-limit-what-a-claude-skill-can-access-on-disk/) — Pair permission denied fixes with proactive disk access restrictions to prevent future errors
-- [Claude Code Skill Permission Scope Error Explained](/claude-skills-guide/articles/claude-code-skill-permission-scope-error-explained/) — Understand the specific permission scope errors that relate to command execution failures
+- [Claude Code Permissions Model and Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — Understand the full permissions model that governs what skill commands can execute in your environment
+- [How Do I Limit What a Claude Skill Can Access on Disk](/claude-skills-guide/how-do-i-limit-what-a-claude-skill-can-access-on-disk/) — Pair permission denied fixes with proactive disk access restrictions to prevent future errors
+- [Claude Code Skill Permission Scope Error Explained](/claude-skills-guide/claude-code-skill-permission-scope-error-explained/) — Understand the specific permission scope errors that relate to command execution failures
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational Claude Code permission and security configuration patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

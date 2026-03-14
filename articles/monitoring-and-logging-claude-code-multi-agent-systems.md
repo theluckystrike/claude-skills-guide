@@ -13,7 +13,7 @@ score: 8
 
 # Monitoring and Logging in Claude Code Multi-Agent Systems
 
-Building multi-agent systems with Claude Code requires visibility into agent behavior, message flows, and error conditions. Without proper monitoring, debugging distributed agent workflows becomes nearly impossible. This guide covers practical patterns for observability in Claude Code-based multi-agent architectures. For coordinating the agents you will monitor, see [Claude Code agent swarm coordination strategies](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/).
+Building multi-agent systems with Claude Code requires visibility into agent behavior, message flows, and error conditions. Without proper monitoring, debugging distributed agent workflows becomes nearly impossible. This guide covers practical patterns for observability in Claude Code-based multi-agent architectures. For coordinating the agents you will monitor, see [Claude Code agent swarm coordination strategies](/claude-skills-guide/claude-code-agent-swarm-coordination-strategies/).
 
 ## Why Multi-Agent Monitoring Matters
 
@@ -204,9 +204,9 @@ Monitoring multi-agent Claude Code systems requires deliberate architecture. Sta
 
 ## Related Reading
 
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Build the multi-agent architecture you will monitor and instrument for observability.
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) — Instrument inter-agent communication channels for comprehensive observability.
-- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/) — Apply monitoring patterns to distributed agent swarm coordination workflows.
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Build the multi-agent architecture you will monitor and instrument for observability.
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — Instrument inter-agent communication channels for comprehensive observability.
+- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/claude-code-agent-swarm-coordination-strategies/) — Apply monitoring patterns to distributed agent swarm coordination workflows.
 - [Claude Skills Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced observability and coordination patterns for Claude Code agents.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

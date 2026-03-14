@@ -59,7 +59,7 @@ Neither is universally better — the right model depends on what you are buildi
 
 **Works in your environment.** Claude Code runs on your machine with access to your local tools, credentials, databases, and internal services. Devin works in a cloud sandbox that can only access what you explicitly share. For codebases with complex local dependencies or internal tools, Claude Code has access to the real environment while Devin has a simplified replica.
 
-**Skills ecosystem.** The [Claude skills framework](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) enables your team to define how the agent should approach recurring tasks — the conventions, constraints, and output formats your organization needs. This is a meaningful productivity multiplier over time. Devin does not have an equivalent system for encoding reusable team behaviors.
+**Skills ecosystem.** The [Claude skills framework](/claude-skills-guide/best-claude-skills-for-developers-2026/) enables your team to define how the agent should approach recurring tasks — the conventions, constraints, and output formats your organization needs. This is a meaningful productivity multiplier over time. Devin does not have an equivalent system for encoding reusable team behaviors.
 
 **Cost transparency.** Claude Code's per-token API pricing scales with actual usage. You pay for what you use. Devin's subscription pricing starts high and scales further. For teams that need AI assistance for specific, bounded tasks, Claude Code's cost model is more predictable.
 
@@ -133,8 +133,8 @@ If you are deciding where to invest your AI tooling budget in 2026, start with C
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — A practical guide to what Claude Code's skills ecosystem enables, making the case for why it competes with Devin's autonomous capabilities
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Claude Code's automatic skill triggering provides some of the autonomous behavior that Devin offers at a fraction of the cost
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Claude Code's cost advantage over Devin is only maintained with efficient token usage; these techniques help maximize that advantage
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — A practical guide to what Claude Code's skills ecosystem enables, making the case for why it competes with Devin's autonomous capabilities
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Claude Code's automatic skill triggering provides some of the autonomous behavior that Devin offers at a fraction of the cost
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Claude Code's cost advantage over Devin is only maintained with efficient token usage; these techniques help maximize that advantage
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

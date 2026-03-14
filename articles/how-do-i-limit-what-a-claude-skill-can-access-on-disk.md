@@ -159,7 +159,7 @@ export CLAUDE_LOG_LEVEL=debug
 export CLAUDE_LOG_FILE=/var/log/claude/audit.log
 ```
 
-Review these logs periodically to identify any skill behavior that exceeds intended boundaries. The [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), which persists conversation context, particularly benefits from audit logging since it writes to hidden directories that aren't immediately visible during normal development.
+Review these logs periodically to identify any skill behavior that exceeds intended boundaries. The [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), which persists conversation context, particularly benefits from audit logging since it writes to hidden directories that aren't immediately visible during normal development.
 
 ## Best Practices Summary
 
@@ -175,9 +175,9 @@ These controls give you the flexibility to use skills like pdf, xlsx, tdd, and f
 
 ## Related Reading
 
-- [Claude Code Permissions Model and Security Guide 2026](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) — Understand the full Claude Code permissions system that governs what skills can access by default
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) — Complement disk access controls with scanning to prevent sensitive credentials from leaking through skills
-- [How Do I Set Environment Variables for a Claude Skill](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-a-claude-skill/) — Configure skill-specific environment variables to further isolate API keys and paths from disk access
+- [Claude Code Permissions Model and Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — Understand the full Claude Code permissions system that governs what skills can access by default
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — Complement disk access controls with scanning to prevent sensitive credentials from leaking through skills
+- [How Do I Set Environment Variables for a Claude Skill](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) — Configure skill-specific environment variables to further isolate API keys and paths from disk access
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational Claude Code security patterns and permission configuration approaches
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

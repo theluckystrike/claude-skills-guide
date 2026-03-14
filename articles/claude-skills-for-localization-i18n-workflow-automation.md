@@ -18,7 +18,7 @@ Localization and internationalization (i18n) workflows consume significant devel
 
 Claude skills operate as specialized instruction sets that extend Claude Code's capabilities for particular domains. When working with localization, skills can parse JSON translation files, interface with translation APIs, validate pluralization rules, and maintain consistency across your i18n infrastructure. The key advantage involves treating translation management as code—version-controlled, reviewable, and automatable.
 
-Most localization workflows benefit from combining multiple skills. The **pdf** skill handles translation memory extraction from existing documentation. The **xlsx** skill processes translation spreadsheets from localization vendors. The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) maintains terminology consistency across projects by persisting glossaries and previously approved translations.
+Most localization workflows benefit from combining multiple skills. The **pdf** skill handles translation memory extraction from existing documentation. The **xlsx** skill processes translation spreadsheets from localization vendors. The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) maintains terminology consistency across projects by persisting glossaries and previously approved translations.
 
 ## Automating Locale File Processing
 
@@ -169,9 +169,9 @@ Claude skills reduce the mechanical burden of localization management, allowing 
 
 ## Related Reading
 
-- [Claude xlsx Skill: Spreadsheet Automation Guide](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/) — Master the xlsx skill for processing translation spreadsheets from external vendors and reviewers.
-- [Claude Skills for SEO Content Generation: 2026 Guide](/claude-skills-guide/articles/claude-skills-for-seo-content-generation-workflow/) — Apply similar automation patterns to multilingual SEO content generation workflows.
-- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate your locale file sync and translation validation as part of your CI/CD pipeline.
+- [Claude xlsx Skill: Spreadsheet Automation Guide](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/) — Master the xlsx skill for processing translation spreadsheets from external vendors and reviewers.
+- [Claude Skills for SEO Content Generation: 2026 Guide](/claude-skills-guide/claude-skills-for-seo-content-generation-workflow/) — Apply similar automation patterns to multilingual SEO content generation workflows.
+- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate your locale file sync and translation validation as part of your CI/CD pipeline.
 - [Claude Skills by Use Case](/claude-skills-guide/use-cases-hub/) — Find additional Claude skills suited to your content and automation workflows.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

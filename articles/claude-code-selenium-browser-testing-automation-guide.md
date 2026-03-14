@@ -123,9 +123,9 @@ pytest tests/ -n auto --dist loadfile
 
 ## Using Claude Skills for Enhanced Testing
 
-Several Claude skills complement Selenium testing workflows. The [frontend-design skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) helps you understand CSS selectors and web element hierarchies, making your locators more resilient to UI changes. When building tests for complex interfaces, this skill provides insights into semantic HTML structure.
+Several Claude skills complement Selenium testing workflows. The [frontend-design skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) helps you understand CSS selectors and web element hierarchies, making your locators more resilient to UI changes. When building tests for complex interfaces, this skill provides insights into semantic HTML structure.
 
-The [tdd (Test-Driven Development) skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) pairs well with Selenium projects. It guides you through writing tests before implementation, ensuring your application code meets testable requirements from the start.
+The [tdd (Test-Driven Development) skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) pairs well with Selenium projects. It guides you through writing tests before implementation, ensuring your application code meets testable requirements from the start.
 
 For documentation purposes, use the docx skill to generate test reports in Word format. The xlsx skill helps you create spreadsheets tracking test coverage, execution times, and bug correlations.
 
@@ -163,8 +163,8 @@ By integrating skills like frontend-design and tdd, you build a comprehensive te
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The tdd skill powers test-driven browser automation workflows
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — Frontend skills that pair with Selenium for full-stack testing
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Trigger testing skills automatically when working on browser test files
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd skill powers test-driven browser automation workflows
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend skills that pair with Selenium for full-stack testing
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Trigger testing skills automatically when working on browser test files
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

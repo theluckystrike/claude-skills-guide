@@ -60,7 +60,7 @@ cat src/components/Button.ts
 
 ### Leverage Skills Efficiently
 
-Many Claude skills are designed to work with focused inputs. The `pdf` skill can extract specific sections from documents rather than loading entire files. See the [Claude Skills token optimization guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) for a comprehensive cost-reduction strategy. The `docx` skill similarly works best when you target particular content. This focused approach dramatically reduces token usage.
+Many Claude skills are designed to work with focused inputs. The `pdf` skill can extract specific sections from documents rather than loading entire files. See the [Claude Skills token optimization guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) for a comprehensive cost-reduction strategy. The `docx` skill similarly works best when you target particular content. This focused approach dramatically reduces token usage.
 
 ### Clear Context Between Tasks
 
@@ -84,7 +84,7 @@ The key is intentionality: use large context when the task genuinely requires it
 
 Claude skills often have best practices that affect token consumption. When creating custom skills through the `skill-creator`, include guidance for minimal context usage. The `mcp-builder` skill can help you build tools that process data in smaller batches rather than loading everything at once.
 
-For repetitive workflows, consider writing skills that cache commonly needed information rather than reloading it each session — [caching strategies for Claude Code skill outputs](/claude-skills-guide/articles/caching-strategies-for-claude-code-skill-outputs/) covers this in depth. This upfront investment reduces ongoing token costs.
+For repetitive workflows, consider writing skills that cache commonly needed information rather than reloading it each session — [caching strategies for Claude Code skill outputs](/claude-skills-guide/caching-strategies-for-claude-code-skill-outputs/) covers this in depth. This upfront investment reduces ongoing token costs.
 
 ## The Cost-Benefit Balance
 
@@ -94,9 +94,9 @@ For most development tasks, thoughtful context management keeps costs reasonable
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — actionable techniques to cut token consumption without losing capability
-- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/articles/caching-strategies-for-claude-code-skill-outputs/) — cache skill results to avoid redundant token spend
-- [Claude Code Context Window Exceeded After Loading Skill Fix](/claude-skills-guide/articles/claude-code-context-window-exceeded-after-loading-skill-fix/) — troubleshoot and resolve context overflow issues
-- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skills-guide/articles/claude-skill-lazy-loading-token-savings-explained-deep-dive/) — understand how lazy loading keeps context lean
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — actionable techniques to cut token consumption without losing capability
+- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/caching-strategies-for-claude-code-skill-outputs/) — cache skill results to avoid redundant token spend
+- [Claude Code Context Window Exceeded After Loading Skill Fix](/claude-skills-guide/claude-code-context-window-exceeded-after-loading-skill-fix/) — troubleshoot and resolve context overflow issues
+- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skills-guide/claude-skill-lazy-loading-token-savings-explained-deep-dive/) — understand how lazy loading keeps context lean
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ score: 8
 
 # Claude Code Container Debugging: Docker Logs Workflow Guide
 
-Debugging containerized applications requires a systematic approach to log analysis, process inspection, and runtime investigation. This guide provides a practical workflow for debugging Docker containers using Claude Code, covering essential commands, automation patterns, and real-world scenarios that developers encounter daily. For setting up Claude Code itself inside Docker containers, see the [Claude Code with Docker container setup guide](/claude-skills-guide/articles/claude-code-with-docker-container-skill-setup-guide/).
+Debugging containerized applications requires a systematic approach to log analysis, process inspection, and runtime investigation. This guide provides a practical workflow for debugging Docker containers using Claude Code, covering essential commands, automation patterns, and real-world scenarios that developers encounter daily. For setting up Claude Code itself inside Docker containers, see the [Claude Code with Docker container setup guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/).
 
 ## Understanding the Container Debugging Challenge
 
@@ -113,7 +113,7 @@ This approach lets you run network diagnostic tools against the target container
 
 Claude Code accelerates container debugging through natural language commands and skill-based automation. When debugging containers, you can use specific skills to enhance productivity.
 
-The [supermemory skill maintains a running log](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) of debugging steps, findings, and hypotheses. During complex debugging sessions spanning multiple terminals and time periods, this skill preserves context that would otherwise be lost:
+The [supermemory skill maintains a running log](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) of debugging steps, findings, and hypotheses. During complex debugging sessions spanning multiple terminals and time periods, this skill preserves context that would otherwise be lost:
 
 ```
 /supermemory
@@ -232,20 +232,20 @@ logging:
 
 Container debugging requires familiarity with Docker's inspection capabilities, log management, and runtime analysis. The workflow presented here provides a structured approach: collect logs, inspect container state, interactively debug when necessary, and automate repetitive tasks.
 
-Claude Code enhances this workflow through skills that maintain context, generate tests, and extract information efficiently. Combine these tools with solid logging practices and automation scripts to handle container issues confidently in production environments. For monitoring multi-container systems, see [monitoring and logging Claude Code multi-agent systems](/claude-skills-guide/articles/monitoring-and-logging-claude-code-multi-agent-systems/).
+Claude Code enhances this workflow through skills that maintain context, generate tests, and extract information efficiently. Combine these tools with solid logging practices and automation scripts to handle container issues confidently in production environments. For monitoring multi-container systems, see [monitoring and logging Claude Code multi-agent systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/).
 
 ## Related Reading
 
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/articles/claude-code-with-docker-container-skill-setup-guide/) — Set up Claude Code to run inside Docker containers for consistent debugging environments
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — Preserve debugging findings and hypotheses across multi-session investigations
-- [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/articles/monitoring-and-logging-claude-code-multi-agent-systems/) — Extend container logging to multi-agent orchestration scenarios
-- [Claude Code Segfault and Core Dump Analysis Workflow](/claude-skills-guide/articles/claude-code-segfault-core-dump-analysis-workflow-guide/) — Debug deeper container crashes with core dump analysis
+- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) — Set up Claude Code to run inside Docker containers for consistent debugging environments
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Preserve debugging findings and hypotheses across multi-session investigations
+- [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/) — Extend container logging to multi-agent orchestration scenarios
+- [Claude Code Segfault and Core Dump Analysis Workflow](/claude-skills-guide/claude-code-segfault-core-dump-analysis-workflow-guide/) — Debug deeper container crashes with core dump analysis
 
 ## Related Reading
 
-- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-skills-guide/articles/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — Extend container debugging skills to ECS Fargate: understand deployment patterns that affect how containers behave
-- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) — Automate container testing across environments with GitHub Actions matrix strategies
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to write reproducible test cases for container-related bugs you discover during debugging
+- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-skills-guide/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — Extend container debugging skills to ECS Fargate: understand deployment patterns that affect how containers behave
+- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) — Automate container testing across environments with GitHub Actions matrix strategies
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to write reproducible test cases for container-related bugs you discover during debugging
 - [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Browse more infrastructure and DevOps skill workflows for container-heavy environments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

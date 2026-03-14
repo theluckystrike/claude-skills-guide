@@ -18,7 +18,7 @@ AI agent capabilities in 2026 have moved far beyond simple command-response inte
 
 Early AI skills functioned as glorified shortcuts—useful but limited in scope. You would ask Claude to generate a PDF document using the **pdf** skill, and it would process your request and produce output. Today, the paradigm has shifted. Skills now operate as intelligent agents that can reason about context, remember preferences across sessions using **supermemory**, and coordinate with other skills to accomplish complex objectives.
 
-Consider the difference between asking for help and delegating a task. In 2026, you can tell an AI agent to "set up a complete testing pipeline for my new Python project" and receive a fully functional TDD workflow. The [**tdd** skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) doesn't just suggest tests—it creates test files, configures pytest, establishes CI integration, and validates that your code meets the requirements you described at a high level.
+Consider the difference between asking for help and delegating a task. In 2026, you can tell an AI agent to "set up a complete testing pipeline for my new Python project" and receive a fully functional TDD workflow. The [**tdd** skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) doesn't just suggest tests—it creates test files, configures pytest, establishes CI integration, and validates that your code meets the requirements you described at a high level.
 
 This shift from reactive assistance to proactive delegation represents the most significant change in how we interact with AI tools. The agent analyzes your intent, breaks down requirements, executes steps in the correct order, and surfaces results with appropriate context.
 
@@ -63,9 +63,9 @@ The skills that succeed in this environment share common characteristics: they h
 
 ## Related Reading
 
-- [Claude Code Skills Roadmap 2026: What Is Coming](/claude-skills-guide/articles/claude-code-skills-roadmap-2026-what-is-coming/) — The concrete near-term roadmap that maps to the future trends described in this article.
-- [AI Agent Skills Standardization Efforts 2026](/claude-skills-guide/articles/ai-agent-skills-standardization-efforts-2026/) — How cross-platform standardization is enabling the future of composable AI agent skills.
-- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) — Architecture patterns for building the kind of autonomous agents this article envisions.
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The skills that define the current advanced and point toward future directions.
+- [Claude Code Skills Roadmap 2026: What Is Coming](/claude-skills-guide/claude-code-skills-roadmap-2026-what-is-coming/) — The concrete near-term roadmap that maps to the future trends described in this article.
+- [AI Agent Skills Standardization Efforts 2026](/claude-skills-guide/ai-agent-skills-standardization-efforts-2026/) — How cross-platform standardization is enabling the future of composable AI agent skills.
+- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/) — Architecture patterns for building the kind of autonomous agents this article envisions.
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The skills that define the current advanced and point toward future directions.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

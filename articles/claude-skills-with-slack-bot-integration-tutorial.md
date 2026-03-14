@@ -16,7 +16,7 @@ score: 9
 
 # Claude Skills with Slack Bot Integration Tutorial
 
-A Slack bot backed by Claude skills gives your team an AI assistant that lives inside their daily workspace. Team members can trigger code reviews with the [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/), process documents via `pdf`, recall project context through `supermemory`, or get UI feedback from `frontend-design` — all without leaving Slack. This tutorial covers the full Claude skills with Slack bot integration from app creation to skill invocation.
+A Slack bot backed by Claude skills gives your team an AI assistant that lives inside their daily workspace. Team members can trigger code reviews with the [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/), process documents via `pdf`, recall project context through `supermemory`, or get UI feedback from `frontend-design` — all without leaving Slack. This tutorial covers the full Claude skills with Slack bot integration from app creation to skill invocation.
 
 ## Architecture Overview
 
@@ -210,7 +210,7 @@ app.event('app_mention', async ({ event, say, client }) => {
 
 ## Step 5: Add Conversation Threading with Supermemory
 
-Use the [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to give the bot memory across threads:
+Use the [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) to give the bot memory across threads:
 
 ```javascript
 const threadHistory = new Map(); // In production, use Redis
@@ -273,8 +273,8 @@ This Claude skills with Slack bot integration tutorial covers the full stack fro
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The full skills list to consider for Slack bot routing, including tdd, pdf, supermemory, and frontend-design
-- [How to Share Claude Skills With Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Guidance on distributing skills across a team, relevant to deploying a shared Slack bot backed by team-maintained skills
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Managing API costs is critical for Slack bots that handle high message volumes; these techniques apply directly
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The full skills list to consider for Slack bot routing, including tdd, pdf, supermemory, and frontend-design
+- [How to Share Claude Skills With Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Guidance on distributing skills across a team, relevant to deploying a shared Slack bot backed by team-maintained skills
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Managing API costs is critical for Slack bots that handle high message volumes; these techniques apply directly
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

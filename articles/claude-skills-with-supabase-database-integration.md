@@ -24,7 +24,7 @@ Skills do not run code. They do not have npm dependencies. They do not execute i
 
 ## Using /tdd for Supabase Query Testing
 
-The [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) is useful when writing functions that query Supabase. Invoke it, describe the function you need, and Claude will help you write tests first — then the implementation.
+The [`/tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) is useful when writing functions that query Supabase. Invoke it, describe the function you need, and Claude will help you write tests first — then the implementation.
 
 Example workflow:
 
@@ -91,7 +91,7 @@ This approach gives you integration tests that do not depend on a live Supabase 
 
 ## Using /docx and /pdf for Document Storage Workflows
 
-If your application stores documents in Supabase Storage and you need to process their contents, the [`/pdf`](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) or `/docx` skills help you write the extraction code.
+If your application stores documents in Supabase Storage and you need to process their contents, the [`/pdf`](/claude-skills-guide/best-claude-skills-for-data-analysis/) or `/docx` skills help you write the extraction code.
 
 A common pattern:
 
@@ -150,9 +150,9 @@ Ask Claude to review your schema for common issues — missing indexes, overly p
 
 ## Related Reading
 
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Skills for data-heavy workflows
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep long sessions cost-efficient
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate in context
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Skills for data-heavy workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep long sessions cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate in context
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

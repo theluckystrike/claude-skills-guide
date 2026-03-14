@@ -12,7 +12,7 @@ score: 8
 
 # Claude Memory Feature vs SuperMemory Skill Comparison
 
-When working with Claude Code, there are two distinct ways to manage context: the built-in session memory that Claude maintains automatically, and the `/[supermemory](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)` skill that provides persistent storage across sessions. Understanding the difference helps you choose the right approach for each situation.
+When working with Claude Code, there are two distinct ways to manage context: the built-in session memory that Claude maintains automatically, and the `/[supermemory](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)` skill that provides persistent storage across sessions. Understanding the difference helps you choose the right approach for each situation.
 
 ## Built-in Session Memory
 
@@ -127,8 +127,8 @@ Claude Code reads `CLAUDE.md` automatically at the start of every session. No sk
 
 ## Related Reading
 
-- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) - Complete reference on the supermemory skill
-- [Building Stateful Agents with Claude Skills](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) - File-based state for long-running tasks
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) - Skills vs plain prompts decision guide
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) - Complete reference on the supermemory skill
+- [Building Stateful Agents with Claude Skills](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) - File-based state for long-running tasks
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) - Skills vs plain prompts decision guide
 
 Built by theluckystrike - More at [zovo.one](https://zovo.one)

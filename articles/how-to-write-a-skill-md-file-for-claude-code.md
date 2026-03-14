@@ -18,7 +18,7 @@ Claude Code uses skill files written in Markdown to extend its capabilities. The
 
 A skill MD file is a Markdown document that contains metadata and instructions for Claude Code. When Claude encounters a skill file, it reads the front matter to understand what the skill does, then uses the content to execute specific tasks. Skills can range from simple text transformations to complex multi-step workflows involving external APIs or tools.
 
-The file structure follows a predictable pattern. You start with YAML front matter, followed by clear documentation and implementation details. This approach makes skills easy to read, modify, and share with others. For a comprehensive reference on every supported field and format pattern, see [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/).
+The file structure follows a predictable pattern. You start with YAML front matter, followed by clear documentation and implementation details. This approach makes skills easy to read, modify, and share with others. For a comprehensive reference on every supported field and format pattern, see [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/).
 
 ## Anatomy of a Skill File
 
@@ -83,7 +83,7 @@ dependencies: [pandas, openpyxl, matplotlib]
 ---
 ```
 
-Listing dependencies helps Claude set up the correct environment before attempting to use the skill. This applies equally to skills working with the pdf or xlsx tools covered in [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/).
+Listing dependencies helps Claude set up the correct environment before attempting to use the skill. This applies equally to skills working with the pdf or xlsx tools covered in [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/).
 
 ## Advanced Skill Patterns
 
@@ -93,7 +93,7 @@ More sophisticated skills use conditional logic and multiple execution paths. Th
 - Creating test fixtures and mock objects
 - Running test suites and interpreting results
 
-Similarly, the `frontend-design` skill handles UI development tasks. It understands component structures, CSS frameworks, and responsive design principles. When you describe a UI element, the skill generates appropriate code and styling. For a broader look at how tdd and frontend-design fit into production workflows, see [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/).
+Similarly, the `frontend-design` skill handles UI development tasks. It understands component structures, CSS frameworks, and responsive design principles. When you describe a UI element, the skill generates appropriate code and styling. For a broader look at how tdd and frontend-design fit into production workflows, see [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/).
 
 ## Organizing Your Skills
 
@@ -124,7 +124,7 @@ Honest documentation builds trust with users and helps them use your skill effec
 
 Once your skill works reliably, share it with the community or keep it in your personal skill library. Version control matters for skills, just like for code. Update the version number when making changes, and maintain a changelog for significant updates.
 
-Skills like `docx` and `pptx` demonstrate active maintenance. They receive updates to support new file formats and features. Your skills benefit from the same attention and care. When you're ready to contribute, [How to Contribute Claude Skills to Open Source](/claude-skills-guide/articles/how-to-contribute-claude-skills-to-open-source/) walks through the full submission process.
+Skills like `docx` and `pptx` demonstrate active maintenance. They receive updates to support new file formats and features. Your skills benefit from the same attention and care. When you're ready to contribute, [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) walks through the full submission process.
 
 ---
 
@@ -134,8 +134,8 @@ Building skills for Claude Code transforms how you work with AI. Start with simp
 
 ## Related Reading
 
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Full format reference with real examples
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How your skill's metadata controls auto-triggering
-- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/articles/how-to-contribute-claude-skills-to-open-source/) — Share your finished skill with the community
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — Full format reference with real examples
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How your skill's metadata controls auto-triggering
+- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) — Share your finished skill with the community
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

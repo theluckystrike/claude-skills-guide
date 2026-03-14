@@ -14,7 +14,7 @@ score: 8
 
 Generating client reports manually eats up hours every week. Whether you are tracking project milestones, compiling analytics, or summarizing development work, the process often involves copying data between spreadsheets, formatting documents, and manually crafting narratives. Claude Code skills let you build a reliable automation layer for this process using tools already built into your workflow.
 
-This guide walks through building an automated client report pipeline using the [`/pdf`](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/), `/tdd`, and `/supermemory` skills.
+This guide walks through building an automated client report pipeline using the [`/pdf`](/claude-skills-guide/best-claude-skills-for-data-analysis/), `/tdd`, and `/supermemory` skills.
 
 ## Extracting Data from PDF Source Documents
 
@@ -63,7 +63,7 @@ The skill handles pagination, headers, footers, and document structure.
 
 ## Validating Reports with the TDD Skill
 
-Before delivering reports to clients, validate them using the [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/):
+Before delivering reports to clients, validate them using the [`/tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/):
 
 ```
 /tdd
@@ -82,7 +82,7 @@ Running these tests catches data errors and formatting issues before clients eve
 
 ## Maintaining Client Context with SuperMemory
 
-When generating recurring client reports, context matters. The [`/supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) stores and retrieves client preferences across sessions.
+When generating recurring client reports, context matters. The [`/supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) stores and retrieves client preferences across sessions.
 
 Store client requirements after onboarding:
 
@@ -154,9 +154,9 @@ The `/pdf` skill handles both extraction and generation. The `/tdd` skill valida
 
 ## Related Reading
 
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) -- Complete data analysis skill guide
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) -- Keep data workflows cost-efficient
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) -- How skills activate automatically
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) -- Complete data analysis skill guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) -- Keep data workflows cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) -- How skills activate automatically
 
 
 Built by theluckystrike -- More at [zovo.one](https://zovo.one)

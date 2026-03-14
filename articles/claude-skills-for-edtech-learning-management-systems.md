@@ -18,7 +18,7 @@ This guide walks you through practical implementations of Claude skills tailored
 
 ## Understanding Claude Skills Architecture
 
-Claude skills are modular AI capabilities that extend Claude's base functionality. Unlike generic AI APIs, skills are designed for specific workflows. Read the [Claude skill .md file format specification](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) to understand how to structure your EdTech skills. For EdTech applications, you need skills that understand educational context, grading rubrics, and pedagogical best practices.
+Claude skills are modular AI capabilities that extend Claude's base functionality. Unlike generic AI APIs, skills are designed for specific workflows. Read the [Claude skill .md file format specification](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) to understand how to structure your EdTech skills. For EdTech applications, you need skills that understand educational context, grading rubrics, and pedagogical best practices.
 
 The architecture typically involves three components:
 
@@ -87,7 +87,7 @@ Rubric:
 
 ## Creating Personalized Feedback Generation
 
-Students benefit from specific, actionable feedback rather than generic comments. [Claude can generate personalized responses](/claude-skills-guide/articles/build-personal-ai-assistant-with-claude-skills-guide/), previous performance patterns, and learning objectives.
+Students benefit from specific, actionable feedback rather than generic comments. [Claude can generate personalized responses](/claude-skills-guide/build-personal-ai-assistant-with-claude-skills-guide/), previous performance patterns, and learning objectives.
 
 ```javascript
 // Node.js: Generate feedback via Claude API
@@ -213,14 +213,14 @@ Track these metrics to evaluate your Claude integrations:
 
 Claude skills transform LMS platforms from static content repositories into intelligent learning partners. By automating routine tasks like grading and FAQ responses, your platform frees instructors to focus on high-impact activities like mentorship and curriculum design.
 
-The implementations above provide starting points. Adapt the code snippets to your specific LMS, grading standards, and pedagogical approach. [The most effective EdTech AI tools feel invisible](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/)—handling complexity behind the scenes while students and instructors experience seamless, personalized support.
+The implementations above provide starting points. Adapt the code snippets to your specific LMS, grading standards, and pedagogical approach. [The most effective EdTech AI tools feel invisible](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/)—handling complexity behind the scenes while students and instructors experience seamless, personalized support.
 
 
 ## Related Reading
 
-- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) — architecture patterns for embedding AI in production LMS platforms
-- [Build Personal AI Assistant with Claude Skills Guide](/claude-skills-guide/articles/build-personal-ai-assistant-with-claude-skills-guide/) — create personalized student support assistants
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — verify grading logic and LMS integrations with automated tests
+- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/) — architecture patterns for embedding AI in production LMS platforms
+- [Build Personal AI Assistant with Claude Skills Guide](/claude-skills-guide/build-personal-ai-assistant-with-claude-skills-guide/) — create personalized student support assistants
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — verify grading logic and LMS integrations with automated tests
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — discover Claude Code skills for education and learning platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

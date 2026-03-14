@@ -16,7 +16,7 @@ Building a restaurant point-of-sale system requires handling orders, inventory, 
 
 ## Order Management with Spreadsheet Automation
 
-Restaurant POS systems generate substantial operational data: daily sales, inventory counts, employee shifts, and customer orders. The [**xlsx skill**](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/) enables rapid data analysis and report generation without manual spreadsheet manipulation.
+Restaurant POS systems generate substantial operational data: daily sales, inventory counts, employee shifts, and customer orders. The [**xlsx skill**](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/) enables rapid data analysis and report generation without manual spreadsheet manipulation.
 
 ```python
 # Example: Generate daily sales report from order data
@@ -55,7 +55,7 @@ Use the xlsx skill to automate recurring reports:
 
 ## Invoice and Receipt Generation with PDF Skills
 
-Every transaction in a restaurant POS requires documentation. The **pdf skill** handles invoice generation, receipt formatting, and [batch processing](/claude-skills-guide/articles/claude-code-batch-processing-with-skills-guide/) of daily transactions.
+Every transaction in a restaurant POS requires documentation. The **pdf skill** handles invoice generation, receipt formatting, and [batch processing](/claude-skills-guide/claude-code-batch-processing-with-skills-guide/) of daily transactions.
 
 ```python
 # Example: Generate receipt PDF for restaurant orders
@@ -107,7 +107,7 @@ Practical PDF commands for POS development:
 
 ## Testing POS Workflows with TDD and Web Testing
 
-Restaurant POS systems involve complex state management: order creation, payment processing, inventory deduction, and kitchen ticket routing. The [**tdd skill**](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) and **webapp-testing skill** ensure reliable POS behavior.
+Restaurant POS systems involve complex state management: order creation, payment processing, inventory deduction, and kitchen ticket routing. The [**tdd skill**](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) and **webapp-testing skill** ensure reliable POS behavior.
 
 ```python
 # Example: Test order state transitions
@@ -210,9 +210,9 @@ Start with these skills when building restaurant POS solutions. They handle the 
 
 ## Related Reading
 
-- [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/) — full reference for the xlsx skill
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — test-first workflow for complex state machines
-- [Claude Code Batch Processing with Skills Guide](/claude-skills-guide/articles/claude-code-batch-processing-with-skills-guide/) — batch document generation and processing
-- [Claude Skills for Financial Modeling: Excel Alternative](/claude-skills-guide/articles/claude-skills-for-financial-modeling-excel-alternative/) — financial data automation with Claude skills
+- [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/) — full reference for the xlsx skill
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — test-first workflow for complex state machines
+- [Claude Code Batch Processing with Skills Guide](/claude-skills-guide/claude-code-batch-processing-with-skills-guide/) — batch document generation and processing
+- [Claude Skills for Financial Modeling: Excel Alternative](/claude-skills-guide/claude-skills-for-financial-modeling-excel-alternative/) — financial data automation with Claude skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

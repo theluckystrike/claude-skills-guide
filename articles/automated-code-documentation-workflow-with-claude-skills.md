@@ -20,8 +20,8 @@ This guide walks through building that workflow from scratch, covering inline co
 
 - Claude Code installed and running
 - A project with source code (JavaScript, TypeScript, Python, or similar)
-- The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) for generating formatted documentation outputs
-- The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) for storing documentation decisions across sessions
+- The [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) for generating formatted documentation outputs
+- The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) for storing documentation decisions across sessions
 - Git access to your repo (for commit-based change detection)
 
 No additional packages or CI setup required to start. You can layer in CI automation once the local workflow is solid.
@@ -242,8 +242,8 @@ This workflow turns documentation from a quarterly cleanup task into a continuou
 
 ## Related Reading
 
-- [Full Stack Web App with Claude Skills Step by Step](/claude-skills-guide/articles/full-stack-web-app-with-claude-skills-step-by-step/) — Skills applied across the full development lifecycle
-- [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-guide/articles/claude-skills-automated-blog-post-workflow-tutorial/) — Automate content creation with Claude skills
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack
+- [Full Stack Web App with Claude Skills Step by Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/) — Skills applied across the full development lifecycle
+- [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-guide/claude-skills-automated-blog-post-workflow-tutorial/) — Automate content creation with Claude skills
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

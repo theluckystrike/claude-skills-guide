@@ -12,7 +12,7 @@ score: 8
 
 # Can You Use Claude Skills Without a Claude Max Subscription?
 
-If you're exploring Claude Code as a developer, you've likely encountered skills—modular instruction sets that extend Claude's capabilities. A common question surfaces in forums and Discord channels: do you need a Claude Max subscription to unlock these skills? The answer is more nuanced than a simple yes or no. For an overview of the best skills to start with on any tier, see [best Claude Code skills to install first in 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/).
+If you're exploring Claude Code as a developer, you've likely encountered skills—modular instruction sets that extend Claude's capabilities. A common question surfaces in forums and Discord channels: do you need a Claude Max subscription to unlock these skills? The answer is more nuanced than a simple yes or no. For an overview of the best skills to start with on any tier, see [best Claude Code skills to install first in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/).
 
 ## Understanding Claude Skills and Subscription Tiers
 
@@ -70,7 +70,7 @@ However, many developers succeed entirely on the free tier. If your work involve
 
 ## Practical Installation and Usage
 
-Installing community skills follows a consistent pattern regardless of your subscription tier. Skills live in `~/.claude/skills/` as Markdown files. For a complete list of available skills, see the [Claude skills directory](/claude-skills-guide/articles/claude-skills-directory-where-to-find-skills/). You can browse available skills on GitHub repositories dedicated to Claude Code extensions, then clone or copy them to your local skills directory.
+Installing community skills follows a consistent pattern regardless of your subscription tier. Skills live in `~/.claude/skills/` as Markdown files. For a complete list of available skills, see the [Claude skills directory](/claude-skills-guide/claude-skills-directory-where-to-find-skills/). You can browse available skills on GitHub repositories dedicated to Claude Code extensions, then clone or copy them to your local skills directory.
 
 After installation, invocation is straightforward:
 
@@ -96,7 +96,7 @@ Both skills work on free and paid tiers. The limitation appears only in usage vo
 
 Free tier users can optimize their workflow to get the most from skills. Break large tasks into smaller chunks to avoid rate limits. Use the `tdd` skill module-by-module rather than attempting entire application coverage at once. Process documents in sections when working with the `pdf` skill on substantial files.
 
-The [supermemory skill proves particularly valuable on the free tier](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) because it creates persistent knowledge bases. Once you've indexed your documentation, subsequent queries draw from that indexed content rather than consuming fresh API calls. This makes the skill especially efficient for ongoing projects.
+The [supermemory skill proves particularly valuable on the free tier](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) because it creates persistent knowledge bases. Once you've indexed your documentation, subsequent queries draw from that indexed content rather than consuming fresh API calls. This makes the skill especially efficient for ongoing projects.
 
 ## Skills That Require Special Attention
 
@@ -113,16 +113,16 @@ Only consider Max when your usage patterns exceed free tier capacity. By then, y
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) — Start with the highest-impact skills that work great on both free and paid tiers.
-- [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-guide/articles/claude-skills-directory-where-to-find-skills/) — Browse the full directory of community skills available to install at no cost.
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Explore one of the most useful free skills — the tdd skill for test generation.
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Start with the highest-impact skills that work great on both free and paid tiers.
+- [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-guide/claude-skills-directory-where-to-find-skills/) — Browse the full directory of community skills available to install at no cost.
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Explore one of the most useful free skills — the tdd skill for test generation.
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn how to install and use Claude skills regardless of your subscription tier.
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) — Start with the highest-value free skills before considering a paid plan
-- [Claude Skills Directory: Where to Find Skills](/claude-skills-guide/articles/claude-skills-directory-where-to-find-skills/) — Find free community skills available regardless of subscription tier
-- [What Is the Best Free Claude Code Skill Available on GitHub](/claude-skills-guide/articles/what-is-the-best-free-claude-code-skill-available-on-github/) — Discover the top free skills for immediate productivity gains
+- [Best Claude Code Skills to Install First 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Start with the highest-value free skills before considering a paid plan
+- [Claude Skills Directory: Where to Find Skills](/claude-skills-guide/claude-skills-directory-where-to-find-skills/) — Find free community skills available regardless of subscription tier
+- [What Is the Best Free Claude Code Skill Available on GitHub](/claude-skills-guide/what-is-the-best-free-claude-code-skill-available-on-github/) — Discover the top free skills for immediate productivity gains
 - [Claude Skills Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational Claude skills for developers at every level
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -146,7 +146,7 @@ rollupOptions: {
 
 ## Using Claude Skills for Optimization Workflow
 
-Several Claude Code skills accelerate the optimization process. The [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) helps you set up proper test coverage to ensure your optimizations don't break functionality. Before making significant changes, invoke the skill to establish test baselines:
+Several Claude Code skills accelerate the optimization process. The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you set up proper test coverage to ensure your optimizations don't break functionality. Before making significant changes, invoke the skill to establish test baselines:
 
 ```
 /tdd Write tests for the main application components to verify functionality after bundle optimization
@@ -154,7 +154,7 @@ Several Claude Code skills accelerate the optimization process. The [**tdd** ski
 
 The **pdf** skill proves useful when you need to generate bundle size reports for stakeholders or documentation. Create automated reports that track size changes over time.
 
-For teams using [**supermemory**](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to maintain project context, store your optimization configurations and findings so they persist across sessions. This is particularly valuable when optimizing large codebases over multiple sessions.
+For teams using [**supermemory**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) to maintain project context, store your optimization configurations and findings so they persist across sessions. This is particularly valuable when optimizing large codebases over multiple sessions.
 
 ## Measuring and Monitoring Results
 
@@ -202,8 +202,8 @@ Migrating from Webpack to Vite provides a strong foundation for bundle size redu
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — Frontend skills for building optimized, lean production applications
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Core developer skills including supermemory for tracking bundle optimization sessions
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Apply token efficiency patterns to keep build optimization sessions affordable
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend skills for building optimized, lean production applications
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills including supermemory for tracking bundle optimization sessions
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Apply token efficiency patterns to keep build optimization sessions affordable
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

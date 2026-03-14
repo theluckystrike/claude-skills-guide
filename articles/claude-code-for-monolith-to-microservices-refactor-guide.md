@@ -50,7 +50,7 @@ claude "Based on the codebase analysis, identify potential bounded contexts:
 Suggest 4-6 service candidates with their proposed responsibilities."
 ```
 
-For this process, [the **supermemory** skill proves invaluable](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), keeping track of decisions and architectural patterns you've established.
+For this process, [the **supermemory** skill proves invaluable](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), keeping track of decisions and architectural patterns you've established.
 
 ## Extracting Your First Service
 
@@ -116,7 +116,7 @@ claude "Generate OpenAPI 3.0 specifications for the extracted [service-name] ser
 - Example payloads"
 ```
 
-[The **tdd** skill becomes essential here](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). Write tests before extracting to ensure the new service maintains identical behavior:
+[The **tdd** skill becomes essential here](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). Write tests before extracting to ensure the new service maintains identical behavior:
 
 ```bash
 # Using tdd skill for test-first extraction
@@ -174,7 +174,7 @@ class OrderEventPublisher {
 }
 ```
 
-[The **pdf** skill helps generate architecture documentation](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) and API references automatically.
+[The **pdf** skill helps generate architecture documentation](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) and API references automatically.
 
 ## Handling Shared Dependencies
 
@@ -282,9 +282,9 @@ The transition from monolith to microservices challenges teams across skill leve
 
 ## Related Reading
 
-- [Why Claude Code Is Recommended for Refactoring Tasks](/claude-skills-guide/articles/why-is-claude-code-recommended-for-refactoring-tasks/)
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Why Claude Code Is Recommended for Refactoring Tasks](/claude-skills-guide/why-is-claude-code-recommended-for-refactoring-tasks/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

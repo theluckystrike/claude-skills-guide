@@ -16,11 +16,11 @@ Linear is a project management tool built for engineering teams, known for its s
 
 ## What You Can Automate
 
-- **Issue triage**: Incoming bug reports run through [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) to assess test impact and suggest repro steps
+- **Issue triage**: Incoming bug reports run through [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) to assess test impact and suggest repro steps
 - **Spec generation**: Feature requests sent to Claude return structured technical specs ready to paste into Linear
 - **Sprint summaries**: Completed issues analyzed by Claude and summarized for stakeholder updates
 - **PR-to-issue linking**: GitHub PR descriptions processed to auto-update Linear issue status and add review notes
-- **Supermemory context**: [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) tracks patterns across sprint cycles
+- **Supermemory context**: [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) tracks patterns across sprint cycles
 
 ## Prerequisites
 
@@ -274,8 +274,8 @@ Claude skills with Linear project management transforms routine PM work into aut
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Covers the tdd and supermemory skills used throughout this Linear integration guide, with usage patterns and invocation tips
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Extends the Linear workflow into deployment pipelines, closing the loop from issue creation to production release
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Batch triage of Linear issues can generate significant API costs; these techniques help you keep them manageable
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Covers the tdd and supermemory skills used throughout this Linear integration guide, with usage patterns and invocation tips
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Extends the Linear workflow into deployment pipelines, closing the loop from issue creation to production release
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Batch triage of Linear issues can generate significant API costs; these techniques help you keep them manageable
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

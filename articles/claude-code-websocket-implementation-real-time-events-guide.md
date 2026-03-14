@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code WebSocket Implementation: Real-Time Events Guide
 
-WebSocket connections enable bidirectional, low-latency communication between clients and servers. When building Claude Code skills that require real-time updates—such as live dashboards, notification systems, or streaming data processing—understanding [WebSocket implementation](/claude-skills-guide/articles/claude-skills-for-websocket-realtime-app-development/) patterns becomes essential. This guide covers practical approaches for integrating WebSocket functionality into your Claude skills.
+WebSocket connections enable bidirectional, low-latency communication between clients and servers. When building Claude Code skills that require real-time updates—such as live dashboards, notification systems, or streaming data processing—understanding [WebSocket implementation](/claude-skills-guide/claude-skills-for-websocket-realtime-app-development/) patterns becomes essential. This guide covers practical approaches for integrating WebSocket functionality into your Claude skills.
 
 ## Understanding WebSocket in the Claude Code Context
 
@@ -79,7 +79,7 @@ Your Claude skill communicates with the WebSocket server through the `bash` tool
 ```markdown
 # Real-Time Event Monitor Skill
 
-You help users monitor [real-time events](/claude-skills-guide/articles/claude-code-skills-for-backend-developers-node-and-python/) via WebSocket connections.
+You help users monitor [real-time events](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) via WebSocket connections.
 
 ## Instructions
 
@@ -254,9 +254,9 @@ Start with the basic server and client examples above, then extend based on your
 
 ## Related Reading
 
-- [Claude Skills for WebSocket Real-Time App Development](/claude-skills-guide/articles/claude-skills-for-websocket-realtime-app-development/) — Build complete real-time applications using Claude skills for both client and server
-- [Can Claude Code Skills Call External APIs Automatically](/claude-skills-guide/articles/can-claude-code-skills-call-external-apis-automatically/) — Extend WebSocket patterns to REST and streaming API integrations
-- [Claude Code Skills for Scientific Python NumPy SciPy](/claude-skills-guide/articles/claude-code-skills-for-scientific-python-numpy-scipy/) — Process real-time data streams from WebSocket connections with numerical computing
+- [Claude Skills for WebSocket Real-Time App Development](/claude-skills-guide/claude-skills-for-websocket-realtime-app-development/) — Build complete real-time applications using Claude skills for both client and server
+- [Can Claude Code Skills Call External APIs Automatically](/claude-skills-guide/can-claude-code-skills-call-external-apis-automatically/) — Extend WebSocket patterns to REST and streaming API integrations
+- [Claude Code Skills for Scientific Python NumPy SciPy](/claude-skills-guide/claude-code-skills-for-scientific-python-numpy-scipy/) — Process real-time data streams from WebSocket connections with numerical computing
 - [Claude Skills Hub](/claude-skills-guide/use-cases-hub/) — Explore real-time and event-driven application use cases for Claude Code
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

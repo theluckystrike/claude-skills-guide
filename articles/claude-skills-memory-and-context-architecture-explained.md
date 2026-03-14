@@ -25,7 +25,7 @@ Every Claude skill operates within a context window. The context window holds ev
 
 When the context window fills up, older conversation history is dropped. Tool outputs are typically more aggressively truncated than conversation text.
 
-A key point: **skills do not share context windows**. If you switch from your [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) to your `frontend-design` skill mid-session, the new skill starts with only the shared conversation history — it does not inherit the previous skill's context or tool outputs.
+A key point: **skills do not share context windows**. If you switch from your [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) to your `frontend-design` skill mid-session, the new skill starts with only the shared conversation history — it does not inherit the previous skill's context or tool outputs.
 
 ## CLAUDE.md: Project-Level Context
 
@@ -62,7 +62,7 @@ Claude: [still in tdd skill, with PostgreSQL context still in window] Writes pg-
 
 ## The /supermemory Skill: Cross-Session Persistence
 
-The [`/supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) solves the cross-session memory problem. It maintains a storage layer that persists between sessions.
+The [`/supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) solves the cross-session memory problem. It maintains a storage layer that persists between sessions.
 
 To store something important, invoke the skill explicitly:
 
@@ -143,8 +143,8 @@ Understanding the limits of the memory architecture prevents design mistakes:
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) - The memory architecture described here directly affects token consumption
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) - Covers supermemory and context-aware skills in practical terms
-- [Building Stateful Agents with Claude Skills](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) - File-based state patterns in depth
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) - The memory architecture described here directly affects token consumption
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) - Covers supermemory and context-aware skills in practical terms
+- [Building Stateful Agents with Claude Skills](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) - File-based state patterns in depth
 
 Built by theluckystrike - More at [zovo.one](https://zovo.one)

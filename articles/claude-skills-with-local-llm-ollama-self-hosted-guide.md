@@ -18,11 +18,11 @@ This guide walks through configuring Claude Code to work with Ollama, optimizing
 
 ## Why Combine Claude Skills with Ollama
 
-Claude skills are Markdown files that extend Claude Code's capabilities. They work by providing domain-specific instructions, example invocations, and contextual information. When you pair skills with Ollama, you get a local inference engine that processes prompts without sending data to external servers. If you are new to the skill format itself, the [skill .md file format specification](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) is a solid starting point before configuring local inference.
+Claude skills are Markdown files that extend Claude Code's capabilities. They work by providing domain-specific instructions, example invocations, and contextual information. When you pair skills with Ollama, you get a local inference engine that processes prompts without sending data to external servers. If you are new to the skill format itself, the [skill .md file format specification](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) is a solid starting point before configuring local inference.
 
 The practical benefits matter most for developers. Your codebase never leaves your machine, which matters for proprietary projects or regulated industries. You pay once for hardware rather than per-token API fees. Response times improve for repeated tasks since local inference eliminates network latency.
 
-Skills like the tdd skill work particularly well with local LLMs because test generation follows predictable patterns. The frontend-design skill benefits from consistent, fast iterations when you need rapid prototyping without cloud overhead. For teams concerned about privacy and enterprise compliance, [the enterprise security and compliance guide for Claude skills](/claude-skills-guide/articles/claude-skills-for-enterprise-security-compliance-guide/) discusses how local deployment fits into broader security policies.
+Skills like the tdd skill work particularly well with local LLMs because test generation follows predictable patterns. The frontend-design skill benefits from consistent, fast iterations when you need rapid prototyping without cloud overhead. For teams concerned about privacy and enterprise compliance, [the enterprise security and compliance guide for Claude skills](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) discusses how local deployment fits into broader security policies.
 
 ## Prerequisites
 
@@ -85,7 +85,7 @@ Local models behave differently than cloud-based Claude. Adjust your skill expec
 
 **Prompt clarity matters more.** Cloud models have larger context windows and more training on following complex instructions. When using Ollama, write skill prompts that are explicit and linear. Break multi-step processes into numbered steps rather than flowing paragraphs.
 
-**Model selection affects skill execution.** The tdd skill works better with code-focused models like codellama or deepseek-coder. Creative tasks may work with llama3.2. Test your specific skills with different models to find optimal pairings. The [LLM evaluation and benchmarking guide](/claude-skills-guide/articles/claude-code-llm-evaluation-and-benchmarking-workflow/) provides a structured approach for measuring which models perform best for specific skill types.
+**Model selection affects skill execution.** The tdd skill works better with code-focused models like codellama or deepseek-coder. Creative tasks may work with llama3.2. Test your specific skills with different models to find optimal pairings. The [LLM evaluation and benchmarking guide](/claude-skills-guide/claude-code-llm-evaluation-and-benchmarking-workflow/) provides a structured approach for measuring which models perform best for specific skill types.
 
 **Temperature settings improve consistency.** Add temperature configuration to your Ollama requests by modifying the skill's execution context. Lower temperatures (0.1-0.3) produce more predictable outputs for tasks like generating tests or following code patterns.
 
@@ -126,7 +126,7 @@ Running locally provides inherent security advantages. Your code, business logic
 - Client work under NDA
 - Government or enterprise environments
 
-However, ensure your machine's security practices are current. Local deployment shifts security responsibility to your infrastructure rather than Anthropic's. Reviewing [Claude Code's permissions model and security guide](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) helps you understand what access skills need and how to restrict it appropriately on a local system.
+However, ensure your machine's security practices are current. Local deployment shifts security responsibility to your infrastructure rather than Anthropic's. Reviewing [Claude Code's permissions model and security guide](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) helps you understand what access skills need and how to restrict it appropriately on a local system.
 
 ## Conclusion
 
@@ -136,9 +136,9 @@ Experiment with different models for different skill types. The code-focused ski
 
 ## Related Reading
 
-- [Claude Skill .md File Format: Full Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/articles/claude-skills-for-enterprise-security-compliance-guide/)
-- [LLM Evaluation and Benchmarking with Claude Code](/claude-skills-guide/articles/claude-code-llm-evaluation-and-benchmarking-workflow/)
-- [Claude Code Permissions Model and Security Guide](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/)
+- [Claude Skill .md File Format: Full Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/)
+- [LLM Evaluation and Benchmarking with Claude Code](/claude-skills-guide/claude-code-llm-evaluation-and-benchmarking-workflow/)
+- [Claude Code Permissions Model and Security Guide](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

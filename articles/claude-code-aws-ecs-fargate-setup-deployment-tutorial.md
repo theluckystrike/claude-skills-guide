@@ -74,7 +74,7 @@ docker build -t myapp:latest .
 docker run -p 3000:3000 myapp:latest
 ```
 
-The [`/tdd` skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) helps write integration tests for your API endpoints before deploying:
+The [`/tdd` skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps write integration tests for your API endpoints before deploying:
 
 ```
 /tdd
@@ -102,7 +102,7 @@ Write Terraform for an ECS Fargate service:
 - ECS task with 256 CPU / 512 MB memory
 ```
 
-Claude will generate the Terraform configuration. The [Claude Code Skills for Terraform](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) guide covers more complex IaC patterns.
+Claude will generate the Terraform configuration. The [Claude Code Skills for Terraform](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) guide covers more complex IaC patterns.
 
 ## Creating ECS Task Definitions
 
@@ -172,7 +172,7 @@ aws ecs describe-services \
 
 ## Automating Deployments with CI/CD
 
-Set up automated deployments using AWS CodePipeline or [GitHub Actions](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/). Here's a GitHub Actions workflow:
+Set up automated deployments using AWS CodePipeline or [GitHub Actions](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/). Here's a GitHub Actions workflow:
 
 ```yaml
 name: Deploy to ECS Fargate
@@ -240,7 +240,7 @@ Update your task definition to reference these secrets:
 ]
 ```
 
-The [`/supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) tracks deployment configuration across sessions:
+The [`/supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) tracks deployment configuration across sessions:
 
 ```
 /supermemory store: myapp ECS Fargate - us-east-1, cluster=myapp-cluster,
@@ -275,7 +275,7 @@ View logs using CloudWatch:
 aws logs tail /ecs/myapp-task --follow
 ```
 
-Use the [`/pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) to generate deployment health reports from CloudWatch metrics:
+Use the [`/pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) to generate deployment health reports from CloudWatch metrics:
 
 ```
 /pdf
@@ -294,9 +294,9 @@ Claude Code accelerates each phase: generating Terraform and task definitions, w
 
 ## Related Reading
 
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrating Claude Code into automated deployment pipelines
-- [Claude Code Skills for Terraform Infrastructure as Code](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) — IaC patterns for reproducible cloud infrastructure
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Skills for deployment workflows
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrating Claude Code into automated deployment pipelines
+- [Claude Code Skills for Terraform Infrastructure as Code](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — IaC patterns for reproducible cloud infrastructure
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills for deployment workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

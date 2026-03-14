@@ -16,7 +16,7 @@ Memory limit exceeded errors can abruptly terminate your Claude Code sessions, e
 
 ## Understanding the Error
 
-When Claude Code encounters a [memory limit exceeded](/claude-skills-guide/articles/claude-code-skills-context-window-exceeded-error-fix/) error, you typically see messages like "Process killed" or "Out of memory" in your terminal. This occurs when the operating system terminates the Node.js process that runs Claude Code to prevent a complete system freeze.
+When Claude Code encounters a [memory limit exceeded](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/) error, you typically see messages like "Process killed" or "Out of memory" in your terminal. This occurs when the operating system terminates the Node.js process that runs Claude Code to prevent a complete system freeze.
 
 The error is particularly common when:
 
@@ -196,7 +196,7 @@ Identify which operations consume the most memory:
 
 ### Scenario 1: /pdf Skill Crashes on Large Files
 
-**Problem**: Processing a 500+ page PDF causes a "[process killed](/claude-skills-guide/articles/claude-code-skill-timeout-error-how-to-increase-the-limit/)" error.
+**Problem**: Processing a 500+ page PDF causes a "[process killed](/claude-skills-guide/claude-code-skill-timeout-error-how-to-increase-the-limit/)" error.
 
 **Solution**:
 1. Split the PDF using external tools first: `pdftk large.pdf burst`
@@ -235,9 +235,9 @@ When memory errors persist despite these fixes, consider upgrading your system R
 
 ## Related Reading
 
-- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/articles/claude-code-skills-context-window-exceeded-error-fix/) — Fix context window errors alongside memory limit issues for smooth skill performance.
-- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) — Investigate related performance bottlenecks that accompany memory limit errors.
-- [Claude Code Context Window Exceeded After Loading Skill Fix](/claude-skills-guide/articles/claude-code-context-window-exceeded-after-loading-skill-fix/) — Resolve context window errors that often appear together with memory limit issues.
+- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/) — Fix context window errors alongside memory limit issues for smooth skill performance.
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/) — Investigate related performance bottlenecks that accompany memory limit errors.
+- [Claude Code Context Window Exceeded After Loading Skill Fix](/claude-skills-guide/claude-code-context-window-exceeded-after-loading-skill-fix/) — Resolve context window errors that often appear together with memory limit issues.
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn best practices for skill configuration to prevent resource limit errors.
 
 

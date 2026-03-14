@@ -31,7 +31,7 @@ For automation — pre-commit hooks, CI pipelines — you drive Claude Code non-
 
 ## Checking Test Coverage with the TDD Skill
 
-The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) understands test-driven development patterns. Use it to check whether new code has corresponding tests:
+The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) understands test-driven development patterns. Use it to check whether new code has corresponding tests:
 
 ```bash
 # pre-commit-hooks/check-tests.sh
@@ -74,7 +74,7 @@ Claude with the `tdd` skill active will flag that tests should cover:
 
 ## Validating UI Code with frontend-design
 
-The [`frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) is designed for HTML, CSS, and component work. Use it to catch accessibility issues, prop-type problems, and common React hook mistakes:
+The [`frontend-design` skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) is designed for HTML, CSS, and component work. Use it to catch accessibility issues, prop-type problems, and common React hook mistakes:
 
 ```bash
 # CI step: review changed UI components
@@ -104,7 +104,7 @@ function UserProfile({ userId }) {
 
 ## Encoding Standards with supermemory
 
-The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) maintains your project's conventions across sessions. Store your review standards once:
+The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) maintains your project's conventions across sessions. Store your review standards once:
 
 ```
 /supermemory
@@ -226,9 +226,9 @@ The practical workflow is: skills handle the checklist, humans handle the judgme
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

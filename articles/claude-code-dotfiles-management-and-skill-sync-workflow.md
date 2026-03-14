@@ -43,7 +43,7 @@ skills/
 !.claude/
 ```
 
-The key insight is treating `skills/` as [source-controlled content](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) while acknowledging that some files—like runtime cache or local overrides—should remain machine-specific.
+The key insight is treating `skills/` as [source-controlled content](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) while acknowledging that some files—like runtime cache or local overrides—should remain machine-specific.
 
 ## Skill Organization Patterns
 
@@ -59,7 +59,7 @@ Organizing skills effectively improves discoverability and reduces duplication. 
 └── docx-export.md
 ```
 
-[Each skill file should be self-contained](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). If you find yourself referencing the same prompts across multiple skills, extract common instructions into a shared file and reference it using relative includes where supported.
+[Each skill file should be self-contained](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). If you find yourself referencing the same prompts across multiple skills, extract common instructions into a shared file and reference it using relative includes where supported.
 
 For skills you use frequently, create symlinks to shorter aliases:
 
@@ -106,7 +106,7 @@ Run this manually after establishing new skills, or schedule it daily with cron.
 
 Within an active Claude session, you can refresh skills without restarting. The exact mechanism depends on your Claude Code version, but typically creating or modifying a skill file triggers automatic reloading.
 
-For manual refresh, you can invoke a built-in command if available, or simply start a new session. [When you modify a skill like `tdd-workflow.md`](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)iately:
+For manual refresh, you can invoke a built-in command if available, or simply start a new session. [When you modify a skill like `tdd-workflow.md`](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)iately:
 
 ```
 /tdd create user service
@@ -186,9 +186,9 @@ The initial setup takes maybe thirty minutes, but the time saved over months of 
 
 ## Related Reading
 
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) — Distribute your synced skill files across engineering teams with consistent naming and versioning.
-- [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-guide/articles/claude-skills-directory-where-to-find-skills/) — Discover which skills are worth adding to your dotfiles repository in the first place.
-- [Skill MD File Format Explained With Examples Guide](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Understand the format of the skill files you are managing in your dotfiles.
+- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Distribute your synced skill files across engineering teams with consistent naming and versioning.
+- [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-guide/claude-skills-directory-where-to-find-skills/) — Discover which skills are worth adding to your dotfiles repository in the first place.
+- [Skill MD File Format Explained With Examples Guide](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — Understand the format of the skill files you are managing in your dotfiles.
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — The foundational guide before you start syncing and managing skill files across machines.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

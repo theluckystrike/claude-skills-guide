@@ -83,7 +83,7 @@ Save this as `skills/trigger-azure-pipeline.md` and Claude will automatically in
 
 ## Automated Testing with Claude TDD Skill
 
-The [Claude TDD skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) complements Azure DevOps integration by generating comprehensive tests before code reaches your CI pipeline. This workflow ensures higher code quality and fewer pipeline failures.
+The [Claude TDD skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) complements Azure DevOps integration by generating comprehensive tests before code reaches your CI pipeline. This workflow ensures higher code quality and fewer pipeline failures.
 
 Configure your Azure Pipeline to run TDD-generated tests:
 
@@ -159,7 +159,7 @@ commands:
 
 ## Document Generation with PDF Skill
 
-Use the [PDF skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) to generate deployment reports directly from Azure DevOps pipeline outputs. This proves valuable for compliance documentation and audit trails.
+Use the [PDF skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) to generate deployment reports directly from Azure DevOps pipeline outputs. This proves valuable for compliance documentation and audit trails.
 
 ```yaml
 # Add to your Azure Pipeline
@@ -187,7 +187,7 @@ claude -p pdf "Create deployment report from deployment-history.json"
 
 ## Memory Integration with Supermemory
 
-For teams managing multiple Azure environments, the [supermemory skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) provides context retention across sessions. This proves essential when working across development, staging, and production environments.
+For teams managing multiple Azure environments, the [supermemory skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) provides context retention across sessions. This proves essential when working across development, staging, and production environments.
 
 Configure supermemory to track environment-specific variables:
 
@@ -246,8 +246,8 @@ Integrating Claude Code with Azure DevOps transforms your development workflow t
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Skills for CI/CD pipelines, infrastructure, and automated deployments
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The most useful developer skills in the Claude ecosystem
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep your DevOps automation loops cost-efficient
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills for CI/CD pipelines, infrastructure, and automated deployments
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The most useful developer skills in the Claude ecosystem
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep your DevOps automation loops cost-efficient
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

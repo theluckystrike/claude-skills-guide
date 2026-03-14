@@ -48,14 +48,14 @@ Building a SaaS product with Claude skills changes the development pace in a mea
 4. Use the Supabase integration to build the data layer
 5. Invoke the code review skill on the final diff before deploying to Vercel
 
-The result is not a demo—it is a production-ready MVP with test coverage, accessible markup, and a real database. The [SaaS MVP guide](/claude-skills-guide/articles/how-to-build-saas-mvp-with-claude-code-skills-guide/) walks through this entire process end to end.
+The result is not a demo—it is a production-ready MVP with test coverage, accessible markup, and a real database. The [SaaS MVP guide](/claude-skills-guide/how-to-build-saas-mvp-with-claude-code-skills-guide/) walks through this entire process end to end.
 
 For solo founders and freelancers, this workflow is particularly effective because skills replace the need for a full-stack team. One developer with the right skills loaded can move at a pace previously only achievable by teams.
 
-- [How to Build a SaaS MVP with Claude Code Skills Guide](/claude-skills-guide/articles/how-to-build-saas-mvp-with-claude-code-skills-guide/)
-- [Full Stack Web App with Claude Skills Step-by-Step](/claude-skills-guide/articles/full-stack-web-app-with-claude-skills-step-by-step/)
-- [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-guide/articles/claude-skills-for-startup-founders-and-solopreneurs/)
-- [Best Claude Skills for Solo Developers and Freelancers](/claude-skills-guide/articles/best-claude-skills-for-solo-developers-and-freelancers/)
+- [How to Build a SaaS MVP with Claude Code Skills Guide](/claude-skills-guide/how-to-build-saas-mvp-with-claude-code-skills-guide/)
+- [Full Stack Web App with Claude Skills Step-by-Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/)
+- [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-guide/claude-skills-for-startup-founders-and-solopreneurs/)
+- [Best Claude Skills for Solo Developers and Freelancers](/claude-skills-guide/best-claude-skills-for-solo-developers-and-freelancers/)
 
 ---
 
@@ -79,10 +79,10 @@ Command-line tools are among the most satisfying projects to build with Claude s
 
 Claude is particularly good at shell tooling because it understands unix conventions deeply: exit codes, stderr vs stdout separation, pipe compatibility, and POSIX compliance. Explicitly loading skills that reinforce these conventions produces better output than relying on default Claude behavior alone.
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/)
-- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/)
-- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
-- [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
+- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/)
 
 ---
 
@@ -103,11 +103,11 @@ Claude Code has strong proficiency with Express, Fastify, FastAPI, and Spring Bo
 
 For microservices specifically, Claude's multi-agent capabilities become relevant. You can orchestrate multiple Claude subagents—one per service—that work in parallel on different parts of the system while a coordinator skill manages dependencies and shared contracts.
 
-- [Claude Code Express to Fastify Migration Tutorial (2026)](/claude-skills-guide/articles/claude-code-express-to-fastify-migration-tutorial-2026/)
-- [Claude Code Spring Boot Java Microservices Guide 2026](/claude-skills-guide/articles/claude-code-spring-boot-java-microservices-development/)
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/)
-- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/)
-- [Advanced Claude Skills: Tool Use Patterns 2026](/claude-skills-guide/articles/advanced-claude-skills-with-tool-use-and-function-calling/)
+- [Claude Code Express to Fastify Migration Tutorial (2026)](/claude-skills-guide/claude-code-express-to-fastify-migration-tutorial-2026/)
+- [Claude Code Spring Boot Java Microservices Guide 2026](/claude-skills-guide/claude-code-spring-boot-java-microservices-development/)
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/)
+- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/)
+- [Advanced Claude Skills: Tool Use Patterns 2026](/claude-skills-guide/advanced-claude-skills-with-tool-use-and-function-calling/)
 
 ---
 
@@ -127,11 +127,11 @@ The workflow is usually design-first: describe the page intent, have Claude gene
 
 The Vercel deployment skill and the Next.js workflow guide cover the full development-to-deployment lifecycle. Claude handles page component generation, API route scaffolding, and Vercel configuration, producing deployable Next.js applications with minimal manual intervention.
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/)
-- [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/articles/claude-frontend-design-skill-review-and-tutorial/)
-- [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/articles/claude-code-vercel-deployment-nextjs-workflow-guide/)
-- [Claude Code Astro Static Site Generation Workflow Guide](/claude-skills-guide/articles/claude-code-astro-static-site-generation-workflow-guide/)
-- [Semantic HTML Accessibility with Claude Code Guide](/claude-skills-guide/articles/claude-code-semantic-html-accessibility-improvement-guide/)
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/)
+- [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/)
+- [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/)
+- [Claude Code Astro Static Site Generation Workflow Guide](/claude-skills-guide/claude-code-astro-static-site-generation-workflow-guide/)
+- [Semantic HTML Accessibility with Claude Code Guide](/claude-skills-guide/claude-code-semantic-html-accessibility-improvement-guide/)
 
 ---
 
@@ -149,10 +149,10 @@ Browser extensions are a compact project type with a specific technical envelope
 
 The Dart/Flutter guide is worth noting for developers building cross-platform apps that include a browser extension component, as the patterns for managing platform-specific code align well with the multi-target nature of extension development.
 
-- [Claude Code CSP Content Security Policy Generation Guide](/claude-skills-guide/articles/claude-code-csp-content-security-policy-generation-guide/)
-- [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/articles/claude-code-dart-flutter-cross-platform-development-guide/)
-- [Claude Code Kotlin Android Development Workflow Guide](/claude-skills-guide/articles/claude-code-kotlin-android-development-workflow-guide/)
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code CSP Content Security Policy Generation Guide](/claude-skills-guide/claude-code-csp-content-security-policy-generation-guide/)
+- [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/claude-code-dart-flutter-cross-platform-development-guide/)
+- [Claude Code Kotlin Android Development Workflow Guide](/claude-skills-guide/claude-code-kotlin-android-development-workflow-guide/)
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 
 ---
 
@@ -171,11 +171,11 @@ Data pipeline projects are where Claude skills and automation integrations conve
 
 **For Jupyter-based data science workflows**, Claude's data science skill set integrates directly with notebook cells. Claude can write pandas transformations, generate visualizations, and help interpret statistical output without leaving the notebook environment.
 
-- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/)
-- [Best Claude Skills for Data Analysis in 2026](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/)
-- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/articles/claude-code-mongodb-to-postgresql-migration-workflow/)
-- [Claude Code LLM Evaluation and Benchmarking Workflow](/claude-skills-guide/articles/claude-code-llm-evaluation-and-benchmarking-workflow/)
-- [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/)
+- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/)
+- [Best Claude Skills for Data Analysis in 2026](/claude-skills-guide/best-claude-skills-for-data-analysis/)
+- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/claude-code-mongodb-to-postgresql-migration-workflow/)
+- [Claude Code LLM Evaluation and Benchmarking Workflow](/claude-skills-guide/claude-code-llm-evaluation-and-benchmarking-workflow/)
+- [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/)
 
 ---
 
@@ -202,31 +202,31 @@ Use this table to estimate what you are getting into before you start a new proj
 
 | Article | What You'll Learn |
 |---------|-------------------|
-| [How to Build a SaaS MVP with Claude Code Skills Guide](/claude-skills-guide/articles/how-to-build-saas-mvp-with-claude-code-skills-guide/) | End-to-end SaaS MVP development with Claude skills |
-| [Full Stack Web App with Claude Skills Step-by-Step](/claude-skills-guide/articles/full-stack-web-app-with-claude-skills-step-by-step/) | Complete full-stack app from blank project to deployed |
-| [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-guide/articles/claude-skills-for-startup-founders-and-solopreneurs/) | Leveraging skills to move fast as a solo builder |
-| [Best Claude Skills for Solo Developers and Freelancers](/claude-skills-guide/articles/best-claude-skills-for-solo-developers-and-freelancers/) | Top skill combinations for independent developers |
-| [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) | Frontend-specific skill stack and workflows |
-| [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/articles/claude-frontend-design-skill-review-and-tutorial/) | Deep dive into the official frontend-design skill |
-| [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) | Using the TDD skill effectively for real projects |
-| [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) | Building a full automated testing pipeline |
-| [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) | Skills that automate and improve code review |
-| [Claude Code Express to Fastify Migration Tutorial (2026)](/claude-skills-guide/articles/claude-code-express-to-fastify-migration-tutorial-2026/) | Migrating Express APIs to Fastify with Claude |
-| [Claude Code Spring Boot Java Microservices Guide 2026](/claude-skills-guide/articles/claude-code-spring-boot-java-microservices-development/) | Java microservices development patterns |
-| [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) | Orchestrating multiple Claude agents on complex projects |
-| [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) | Production-grade AI agent architecture |
-| [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/articles/claude-code-vercel-deployment-nextjs-workflow-guide/) | Next.js development and Vercel deployment |
-| [Claude Code Astro Static Site Generation Workflow Guide](/claude-skills-guide/articles/claude-code-astro-static-site-generation-workflow-guide/) | Building static sites with Astro and Claude |
-| [Claude Code CSP Content Security Policy Generation Guide](/claude-skills-guide/articles/claude-code-csp-content-security-policy-generation-guide/) | Generating correct CSP headers for browser extensions |
-| [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/articles/claude-code-dart-flutter-cross-platform-development-guide/) | Cross-platform app development with Flutter |
-| [Claude Code Kotlin Android Development Workflow Guide](/claude-skills-guide/articles/claude-code-kotlin-android-development-workflow-guide/) | Native Android development with Claude |
-| [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/) | Data science workflows in Jupyter with Claude |
-| [Best Claude Skills for Data Analysis in 2026](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) | Top skills for working with data |
-| [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/articles/claude-code-mongodb-to-postgresql-migration-workflow/) | Database migration with Claude assistance |
-| [Claude Code LLM Evaluation and Benchmarking Workflow](/claude-skills-guide/articles/claude-code-llm-evaluation-and-benchmarking-workflow/) | Building evaluation pipelines for LLM outputs |
-| [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-skills-guide/articles/claude-xlsx-skill-spreadsheet-automation-tutorial/) | Using the xlsx skill for data output and automation |
-| [Build a Personal AI Assistant with Claude Skills Guide](/claude-skills-guide/articles/build-personal-ai-assistant-with-claude-skills-guide/) | Building a persistent personal AI assistant |
-| [How to Contribute Claude Skills to Open Source](/claude-skills-guide/articles/how-to-contribute-claude-skills-to-open-source/) | Contributing your project skills back to the community |
+| [How to Build a SaaS MVP with Claude Code Skills Guide](/claude-skills-guide/how-to-build-saas-mvp-with-claude-code-skills-guide/) | End-to-end SaaS MVP development with Claude skills |
+| [Full Stack Web App with Claude Skills Step-by-Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/) | Complete full-stack app from blank project to deployed |
+| [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-guide/claude-skills-for-startup-founders-and-solopreneurs/) | Leveraging skills to move fast as a solo builder |
+| [Best Claude Skills for Solo Developers and Freelancers](/claude-skills-guide/best-claude-skills-for-solo-developers-and-freelancers/) | Top skill combinations for independent developers |
+| [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) | Frontend-specific skill stack and workflows |
+| [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) | Deep dive into the official frontend-design skill |
+| [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) | Using the TDD skill effectively for real projects |
+| [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) | Building a full automated testing pipeline |
+| [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) | Skills that automate and improve code review |
+| [Claude Code Express to Fastify Migration Tutorial (2026)](/claude-skills-guide/claude-code-express-to-fastify-migration-tutorial-2026/) | Migrating Express APIs to Fastify with Claude |
+| [Claude Code Spring Boot Java Microservices Guide 2026](/claude-skills-guide/claude-code-spring-boot-java-microservices-development/) | Java microservices development patterns |
+| [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) | Orchestrating multiple Claude agents on complex projects |
+| [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/) | Production-grade AI agent architecture |
+| [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) | Next.js development and Vercel deployment |
+| [Claude Code Astro Static Site Generation Workflow Guide](/claude-skills-guide/claude-code-astro-static-site-generation-workflow-guide/) | Building static sites with Astro and Claude |
+| [Claude Code CSP Content Security Policy Generation Guide](/claude-skills-guide/claude-code-csp-content-security-policy-generation-guide/) | Generating correct CSP headers for browser extensions |
+| [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/claude-code-dart-flutter-cross-platform-development-guide/) | Cross-platform app development with Flutter |
+| [Claude Code Kotlin Android Development Workflow Guide](/claude-skills-guide/claude-code-kotlin-android-development-workflow-guide/) | Native Android development with Claude |
+| [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/) | Data science workflows in Jupyter with Claude |
+| [Best Claude Skills for Data Analysis in 2026](/claude-skills-guide/best-claude-skills-for-data-analysis/) | Top skills for working with data |
+| [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/claude-code-mongodb-to-postgresql-migration-workflow/) | Database migration with Claude assistance |
+| [Claude Code LLM Evaluation and Benchmarking Workflow](/claude-skills-guide/claude-code-llm-evaluation-and-benchmarking-workflow/) | Building evaluation pipelines for LLM outputs |
+| [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/) | Using the xlsx skill for data output and automation |
+| [Build a Personal AI Assistant with Claude Skills Guide](/claude-skills-guide/build-personal-ai-assistant-with-claude-skills-guide/) | Building a persistent personal AI assistant |
+| [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) | Contributing your project skills back to the community |
 
 ---
 

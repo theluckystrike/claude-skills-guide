@@ -24,7 +24,7 @@ claude install skill pdf
 claude install skill supermemory
 ```
 
-The [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) helps you write security-focused tests, while [**supermemory**](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) maintains a persistent vulnerability database across sessions. If you're building PDF reports of findings, the **pdf** skill generates professional documentation.
+The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write security-focused tests, while [**supermemory**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) maintains a persistent vulnerability database across sessions. If you're building PDF reports of findings, the **pdf** skill generates professional documentation.
 
 ## Building the OWASP Scanning Workflow
 
@@ -238,8 +238,8 @@ Start with the ten categories above, customize the scanning rules to your tech s
 
 ## Related Reading
 
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/articles/claude-skills-for-enterprise-security-compliance-guide/) — Integrate OWASP scanning into enterprise-grade access control and audit pipelines
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Developer skills that pair with security scanning in the CI/CD pipeline
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Run regular security scans without runaway API costs
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Integrate OWASP scanning into enterprise-grade access control and audit pipelines
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills that pair with security scanning in the CI/CD pipeline
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Run regular security scans without runaway API costs
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

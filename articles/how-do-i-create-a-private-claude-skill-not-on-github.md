@@ -12,7 +12,7 @@ score: 7
 
 # How to Create a Private Claude Skill Not on GitHub
 
-Private Claude skills let you build custom workflows that stay completely local. Whether you're working with proprietary code, sensitive business logic, or just want to experiment without sharing your work publicly, keeping skills off GitHub is straightforward. This guide walks you through creating private skills that Claude Code can still discover and use. For best practices on the `.md` format these skills use, see the [Claude skill .md file format specification guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/).
+Private Claude skills let you build custom workflows that stay completely local. Whether you're working with proprietary code, sensitive business logic, or just want to experiment without sharing your work publicly, keeping skills off GitHub is straightforward. This guide walks you through creating private skills that Claude Code can still discover and use. For best practices on the `.md` format these skills use, see the [Claude skill .md file format specification guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/).
 
 ## Understanding Private vs Public Skills
 
@@ -183,9 +183,9 @@ Building private skills keeps your custom workflows secure and under your contro
 
 ## Related Reading
 
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Master the full skill file format before creating your private skills
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Learn the basics of authoring skill files before keeping them private
-- [How Do I Use Claude Skills in an Air-Gapped Environment](/claude-skills-guide/articles/how-do-i-use-claude-skills-in-an-air-gapped-environment/) — Extend private skill setups to fully offline secure environments
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Master the full skill file format before creating your private skills
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Learn the basics of authoring skill files before keeping them private
+- [How Do I Use Claude Skills in an Air-Gapped Environment](/claude-skills-guide/how-do-i-use-claude-skills-in-an-air-gapped-environment/) — Extend private skill setups to fully offline secure environments
 - [Claude Skills Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational skill creation and distribution approaches
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

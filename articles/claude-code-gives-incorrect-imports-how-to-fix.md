@@ -59,7 +59,7 @@ You can also reference your `tsconfig.json` or `jsconfig.json` path aliases dire
 }
 ```
 
-When working with skills like [**frontend-design**](/claude-skills-guide/articles/claude-frontend-design-skill-review-and-tutorial/) or **tdd**, specifying your alias configuration upfront prevents incorrect import generation.
+When working with skills like [**frontend-design**](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) or **tdd**, specifying your alias configuration upfront prevents incorrect import generation.
 
 ### Solution 2: Use Explicit Import Examples
 
@@ -72,11 +72,11 @@ import { Button, Card } from '@company/ui';
 import { useAuth } from '@company/auth hooks';
 ```
 
-This approach works well when using skills such as [**supermemory**](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) to store and reference your project's import conventions.
+This approach works well when using skills such as [**supermemory**](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) to store and reference your project's import conventions.
 
 ### Solution 3: Configure Skill Instructions
 
-You can [create a custom skill](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) or modify existing skill instructions to include your project's import rules. Add specific instructions about import patterns:
+You can [create a custom skill](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) or modify existing skill instructions to include your project's import rules. Add specific instructions about import patterns:
 
 ```markdown
 # Custom Import Rules for Our Project
@@ -180,9 +180,9 @@ Incorrect imports from Claude Code usually stem from missing context about your 
 
 ## Related Reading
 
-- [Claude Skill Not Triggering: Troubleshoot Guide](/claude-skills-guide/articles/claude-skill-not-triggering-automatically-troubleshoot/) — resolve other common skill invocation and behavior issues
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — codify your import conventions in a custom skill
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — remember project-specific conventions across sessions
-- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/articles/claude-code-skills-context-window-exceeded-error-fix/) — handle context and configuration issues in Claude Code
+- [Claude Skill Not Triggering: Troubleshoot Guide](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/) — resolve other common skill invocation and behavior issues
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — codify your import conventions in a custom skill
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — remember project-specific conventions across sessions
+- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/) — handle context and configuration issues in Claude Code
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

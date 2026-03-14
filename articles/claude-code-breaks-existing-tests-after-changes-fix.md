@@ -69,7 +69,7 @@ Document why the expectation changed so future maintainers understand the intent
 
 ## Using the TDD Skill to Prevent Breakages
 
-The [/tdd skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) in Claude Code helps prevent test breakages by enforcing test-first development. When you activate the skill before requesting changes, Claude generates tests that define the expected behavior before writing implementation code.
+The [/tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) in Claude Code helps prevent test breakages by enforcing test-first development. When you activate the skill before requesting changes, Claude generates tests that define the expected behavior before writing implementation code.
 
 To use it effectively:
 
@@ -86,7 +86,7 @@ This workflow ensures new code has corresponding test coverage and reduces the c
 
 ## Working with Project-Specific Skills
 
-Project-specific skills can encode your testing requirements directly into Claude's context. Create a [skill file](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) in your project that defines testing conventions:
+Project-specific skills can encode your testing requirements directly into Claude's context. Create a [skill file](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) in your project that defines testing conventions:
 
 ```
 ~/.claude/skills/your-project.md
@@ -131,7 +131,7 @@ git diff package.json
 
 ### Use the Supermemory Skill for Context
 
-The [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) helps maintain context across sessions. If you frequently work with Claude on the same codebase, use it to remember:
+The [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) helps maintain context across sessions. If you frequently work with Claude on the same codebase, use it to remember:
 - Which functions have known behavioral quirks
 - Test patterns specific to your project
 - Common fixes for recurring issues
@@ -196,9 +196,9 @@ By combining these strategies, you get the productivity benefits of AI-assisted 
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — enforce test-first development to prevent regressions
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — encode testing requirements into project-specific skills
-- [Claude Skills for Writing Unit Tests Automatically](/claude-skills-guide/articles/claude-skills-for-writing-unit-tests-automatically/) — automate test generation alongside code changes
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — maintain project-specific testing context across sessions
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — enforce test-first development to prevent regressions
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — encode testing requirements into project-specific skills
+- [Claude Skills for Writing Unit Tests Automatically](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/) — automate test generation alongside code changes
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — maintain project-specific testing context across sessions
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

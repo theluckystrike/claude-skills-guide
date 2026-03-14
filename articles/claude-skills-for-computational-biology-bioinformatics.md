@@ -10,7 +10,7 @@ reviewed: true
 score: 8
 ---
 
-Computational biology and bioinformatics workflows involve intensive data processing, statistical analysis, and visualization tasks that consume significant researcher time. Claude Code skills provide specialized automation for sequence analysis, genome annotation, protein structure prediction, and reproducible research pipelines. These skills work alongside your existing toolchain—Biopython, Bowtie, BLAST, R/Bioconductor—to accelerate common operations without replacing your core analysis tools. For a broader look at how Claude skills support data-heavy workflows, the [Claude skills for data science and Jupyter guide](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/) covers interactive analysis environments.
+Computational biology and bioinformatics workflows involve intensive data processing, statistical analysis, and visualization tasks that consume significant researcher time. Claude Code skills provide specialized automation for sequence analysis, genome annotation, protein structure prediction, and reproducible research pipelines. These skills work alongside your existing toolchain—Biopython, Bowtie, BLAST, R/Bioconductor—to accelerate common operations without replacing your core analysis tools. For a broader look at how Claude skills support data-heavy workflows, the [Claude skills for data science and Jupyter guide](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/) covers interactive analysis environments.
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. They provide standing instructions for specialized tasks without requiring Python imports or package installations.
 
@@ -101,7 +101,7 @@ Create R functions for DESeq2 differential expression analysis including normali
 
 ## Knowledge Management with supermemory Skill
 
-Bioinformatics projects accumulate substantial institutional knowledge: protocol notes, analysis decisions, troubleshooting logs, and results interpretations. The [supermemory skill maintains persistent context](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) across sessions, making this knowledge accessible conversationally.
+Bioinformatics projects accumulate substantial institutional knowledge: protocol notes, analysis decisions, troubleshooting logs, and results interpretations. The [supermemory skill maintains persistent context](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) across sessions, making this knowledge accessible conversationally.
 
 ```
 /supermemory
@@ -138,9 +138,9 @@ The bioinformatics community benefits from reproducible, well-documented analysi
 
 ## Related Reading
 
-- [Claude Skills for Financial Modeling: Excel Alternative](/claude-skills-guide/articles/claude-skills-for-financial-modeling-excel-alternative/) — Apply similar data-processing skill workflows to financial modeling and quantitative analysis.
-- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/) — Extend bioinformatics data workflows with Jupyter notebook integration for interactive analysis.
-- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Full guide to the tdd skill used for building reliable, tested bioinformatics pipelines.
+- [Claude Skills for Financial Modeling: Excel Alternative](/claude-skills-guide/claude-skills-for-financial-modeling-excel-alternative/) — Apply similar data-processing skill workflows to financial modeling and quantitative analysis.
+- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/) — Extend bioinformatics data workflows with Jupyter notebook integration for interactive analysis.
+- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Full guide to the tdd skill used for building reliable, tested bioinformatics pipelines.
 - [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Discover more advanced skill patterns for specialized scientific computing domains.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

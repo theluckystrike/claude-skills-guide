@@ -16,11 +16,11 @@ Development teams across industries are reconsidering their AI coding assistant 
 
 ## The Skill System Difference
 
-One of the most significant differences between Copilot and Claude Code lies in how they handle specialized tasks. [Claude Code uses a skill-based system where you can activate specific capabilities](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) by typing commands like `/tdd`, `/frontend-design`, or `/pdf`.
+One of the most significant differences between Copilot and Claude Code lies in how they handle specialized tasks. [Claude Code uses a skill-based system where you can activate specific capabilities](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) by typing commands like `/tdd`, `/frontend-design`, or `/pdf`.
 
-When you need test-driven development assistance, [the `/tdd` skill transforms Claude's behavior](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)'s behavior. Instead of just completing code, Claude actively suggests tests before implementation, reviews test coverage, and ensures your code passes those tests. This is fundamentally different from Copilot's autocomplete approach.
+When you need test-driven development assistance, [the `/tdd` skill transforms Claude's behavior](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)'s behavior. Instead of just completing code, Claude actively suggests tests before implementation, reviews test coverage, and ensures your code passes those tests. This is fundamentally different from Copilot's autocomplete approach.
 
-Similarly, [the `/supermemory` skill enables Claude to maintain context across sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), remembering your project structure, coding preferences, and previous discussions. Copilot, by contrast, operates primarily within individual files or editor sessions without persistent project memory.
+Similarly, [the `/supermemory` skill enables Claude to maintain context across sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), remembering your project structure, coding preferences, and previous discussions. Copilot, by contrast, operates primarily within individual files or editor sessions without persistent project memory.
 
 ## Context Window and Reasoning
 
@@ -103,7 +103,7 @@ The learning curve is minimal for developers already comfortable with AI assista
 
 ## Conclusion
 
-Teams switch from Copilot to Claude Code primarily because of the skill system, better context understanding, and specialized capabilities for non-coding tasks. The ability to maintain project memory, execute terminal commands, and [activate domain-specific workflows](/claude-skills-guide/articles/claude-code-skills-for-backend-developers-node-and-python/) makes Claude Code a more comprehensive development assistant.
+Teams switch from Copilot to Claude Code primarily because of the skill system, better context understanding, and specialized capabilities for non-coding tasks. The ability to maintain project memory, execute terminal commands, and [activate domain-specific workflows](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) makes Claude Code a more comprehensive development assistant.
 
 While Copilot remains capable for simple code completion, Claude Code provides the depth and flexibility that professional development teams need. The skill-based approach allows teams to customize their AI assistant to match their specific processes and requirements.
 
@@ -111,8 +111,8 @@ While Copilot remains capable for simple code completion, Claude Code provides t
 
 ## Related Reading
 
-- [Claude Code vs ChatGPT Code Interpreter Comparison](/claude-skills-guide/articles/claude-code-vs-chatgpt-code-interpreter-comparison/) — side-by-side breakdown of how Claude Code compares to ChatGPT's coding capabilities
-- [Claude Code vs GitHub Copilot Workspace 2026](/claude-skills-guide/articles/claude-code-vs-github-copilot-workspace-2026/) — detailed technical comparison of features, pricing, and workflow fit
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — the `/tdd` skill in action: a complete CI-integrated testing pipeline
+- [Claude Code vs ChatGPT Code Interpreter Comparison](/claude-skills-guide/claude-code-vs-chatgpt-code-interpreter-comparison/) — side-by-side breakdown of how Claude Code compares to ChatGPT's coding capabilities
+- [Claude Code vs GitHub Copilot Workspace 2026](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/) — detailed technical comparison of features, pricing, and workflow fit
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — the `/tdd` skill in action: a complete CI-integrated testing pipeline
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

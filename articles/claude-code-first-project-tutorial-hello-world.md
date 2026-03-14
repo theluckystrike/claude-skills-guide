@@ -58,7 +58,7 @@ Add this line to your shell profile (`~/.bashrc`, `~/.zshrc`, or equivalent) to 
 
 ## Creating Your First Project
 
-[Create a new directory for your hello world project](/claude-skills-guide/articles/claude-code-project-initialization-best-practices/):
+[Create a new directory for your hello world project](/claude-skills-guide/claude-code-project-initialization-best-practices/):
 
 ```bash
 mkdir claude-hello-world && cd claude-hello-world
@@ -102,7 +102,7 @@ Claude Code operates within interactive sessions. Each session maintains context
 claude
 ```
 
-[Within a session, you can issue follow-up requests](/claude-skills-guide/articles/how-to-write-effective-prompts-for-claude-code/):
+[Within a session, you can issue follow-up requests](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/):
 
 ```
 Add a function that takes a name parameter and returns a personalized greeting
@@ -170,7 +170,7 @@ Claude Code identifies the off-by-one error in the loop condition and suggests a
 
 ## Scripting and Automation
 
-For repetitive tasks, create Claude Code scripts that automate common workflows. You can pair this with [Claude Code skills](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) to make recurring automations repeatable. A simple script might look like:
+For repetitive tasks, create Claude Code scripts that automate common workflows. You can pair this with [Claude Code skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) to make recurring automations repeatable. A simple script might look like:
 
 ```bash
 #!/bin/bash
@@ -200,9 +200,9 @@ The hello world project you created demonstrates the fundamentals. From here, in
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started 2026](/claude-skills-guide/articles/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/articles/best-way-to-scope-tasks-for-claude-code-success/)
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/articles/how-to-write-effective-prompts-for-claude-code/)
+- [Claude Code for Beginners: Complete Getting Started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

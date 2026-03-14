@@ -38,11 +38,11 @@ Native skills ship pre-installed in `~/.claude/skills/` as part of the standard 
 
 The core native skills include:
 
-- [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Extract text, tables, and forms from PDF files
+- [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Extract text, tables, and forms from PDF files
 - **xlsx** — Create and edit spreadsheets with formula support
-- [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Guide test-first development and generate test cases
+- [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Guide test-first development and generate test cases
 - **frontend-design** — Generate and verify UI component implementations
-- [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Persist context and decisions across sessions
+- [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Persist context and decisions across sessions
 
 Native skills receive updates through Claude Code's release cycle. When Anthropic improves the `tdd` skill, you get the improvement automatically.
 
@@ -119,9 +119,9 @@ When evaluating a community skill, read the `.md` file itself before using it. S
 
 ## Related Reading
 
-- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

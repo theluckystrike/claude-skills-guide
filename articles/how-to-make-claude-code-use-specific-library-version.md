@@ -10,7 +10,7 @@ score: 8
 
 # How to Make Claude Code Use Specific Library Version
 
-When you ask Claude Code to generate code that depends on external libraries, it typically selects versions based on what it knows to be stable and widely compatible. For overall dependency management patterns, see the [workflows hub](/claude-skills-guide/workflows-hub/). However, your project may require a specific version due to legacy dependencies, API changes, or organizational constraints. This guide shows you how to ensure Claude Code uses the exact library versions you need, including [setting environment variables for skills](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-a-claude-skill/) that pin versions automatically.
+When you ask Claude Code to generate code that depends on external libraries, it typically selects versions based on what it knows to be stable and widely compatible. For overall dependency management patterns, see the [workflows hub](/claude-skills-guide/workflows-hub/). However, your project may require a specific version due to legacy dependencies, API changes, or organizational constraints. This guide shows you how to ensure Claude Code uses the exact library versions you need, including [setting environment variables for skills](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) that pin versions automatically.
 
 ## Why Version Control Matters
 
@@ -40,11 +40,11 @@ Claude reads your project's dependency files and respects their constraints. Cre
 }
 ```
 
-[When you invoke skills like `pdf` or `xlsx` for document generation](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), Claude will read your lockfile and use matching versions. The same applies when using `canvas-design` or `algorithmic-art` for visual outputs that depend on specific rendering libraries.
+[When you invoke skills like `pdf` or `xlsx` for document generation](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), Claude will read your lockfile and use matching versions. The same applies when using `canvas-design` or `algorithmic-art` for visual outputs that depend on specific rendering libraries.
 
 ## Method 3: Version Constraints in Skill Instructions
 
-[embed version requirements directly in the skill configuration](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). Skills like `superagent` or custom MCP configurations can include version pinning:
+[embed version requirements directly in the skill configuration](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Skills like `superagent` or custom MCP configurations can include version pinning:
 
 ```
 When creating HTTP requests, always use axios version 1.6.0.
@@ -136,9 +136,9 @@ Controlling library versions in Claude Code requires explicit communication. Whe
 
 ## Related Reading
 
-- [Claude Skills Automated Dependency Update Workflow](/claude-skills-guide/articles/claude-skills-automated-dependency-update-workflow/) — automate dependency upgrades safely across your codebase
-- [How to Make Claude Code Work with Legacy Codebase](/claude-skills-guide/articles/how-to-make-claude-code-work-with-legacy-codebase/) — manage pinned versions in older projects with mixed dependencies
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) — audit dependencies for security vulnerabilities alongside version pinning
-- [How to Make Claude Code Not Over Engineer Solutions](/claude-skills-guide/articles/how-to-make-claude-code-not-over-engineer-solutions/) — prevent Claude from adding unnecessary library dependencies
+- [Claude Skills Automated Dependency Update Workflow](/claude-skills-guide/claude-skills-automated-dependency-update-workflow/) — automate dependency upgrades safely across your codebase
+- [How to Make Claude Code Work with Legacy Codebase](/claude-skills-guide/how-to-make-claude-code-work-with-legacy-codebase/) — manage pinned versions in older projects with mixed dependencies
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — audit dependencies for security vulnerabilities alongside version pinning
+- [How to Make Claude Code Not Over Engineer Solutions](/claude-skills-guide/how-to-make-claude-code-not-over-engineer-solutions/) — prevent Claude from adding unnecessary library dependencies
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -12,13 +12,13 @@ score: 9
 
 # Claude Opus Orchestrator-Sonnet-Worker Architecture
 
-The [orchestrator-worker pattern](/claude-skills-guide/articles/claude-code-multi-agent-orchestration-patterns-guide/) ways to structure complex AI agent systems. By combining Claude Opus as the central orchestrator with specialized Sonnet workers handling discrete subtasks, developers can build systems that balance reasoning capability with cost efficiency and task specialization.
+The [orchestrator-worker pattern](/claude-skills-guide/claude-code-multi-agent-orchestration-patterns-guide/) ways to structure complex AI agent systems. By combining Claude Opus as the central orchestrator with specialized Sonnet workers handling discrete subtasks, developers can build systems that balance reasoning capability with cost efficiency and task specialization.
 
 ## Understanding the Architecture
 
 At its core, an orchestrator-sonnet-worker architecture consists of three layers working in concert. The **orchestrator** (typically Claude Opus) handles high-level planning, context management, and coordinating multiple specialized workers. Each **worker** runs a Claude Sonnet instance focused on a specific domain—code review, documentation generation, test writing, or file operations. The architecture creates a hierarchy where Opus provides the "big picture" thinking while Sonnet workers execute focused tasks.
 
-This separation works because [Opus excels at complex reasoning](/claude-skills-guide/articles/parallel-subagents-claude-code-best-practices-2026/), and understanding ambiguous requirements. Sonnet, being faster and more cost-effective, handles the heavy lifting of repetitive or narrowly scoped tasks. The orchestrator maintains the overall state and delegates appropriately.
+This separation works because [Opus excels at complex reasoning](/claude-skills-guide/parallel-subagents-claude-code-best-practices-2026/), and understanding ambiguous requirements. Sonnet, being faster and more cost-effective, handles the heavy lifting of repetitive or narrowly scoped tasks. The orchestrator maintains the overall state and delegates appropriately.
 
 ## When to Use This Pattern
 
@@ -61,7 +61,7 @@ Each Sonnet worker needs a clear domain and well-defined boundaries. The skill d
 
 **Documentation Worker** — Handles API docs, README files, and technical writing. Using the pdf skill, this worker can generate formatted documentation packages. It understands code structure and produces clear, accurate documentation.
 
-**Memory and Context Worker** — Manages persistent context across sessions. The [supermemory skill enables this worker](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) relevant information, maintaining continuity across complex multi-step projects.
+**Memory and Context Worker** — Manages persistent context across sessions. The [supermemory skill enables this worker](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) relevant information, maintaining continuity across complex multi-step projects.
 
 ## Implementing Worker Communication
 
@@ -90,7 +90,7 @@ The key principle: each worker should receive enough context to complete its tas
 
 Using Sonnet workers instead of Opus throughout offers significant cost advantages. Sonnet operates at roughly one-fifth the cost of Opus while maintaining strong performance on narrow tasks. A complex project that might cost $50 with pure Opus might cost $15-20 with an orchestrator-worker pattern.
 
-Response times also improve. Sonnet workers typically respond faster than Opus for focused tasks. The orchestrator can [parallelize independent subtasks](/claude-skills-guide/articles/claude-code-agent-pipeline-sequential-vs-parallel/), reducing overall latency. For a task broken into five independent subtasks, you could theoretically execute them concurrently rather than sequentially.
+Response times also improve. Sonnet workers typically respond faster than Opus for focused tasks. The orchestrator can [parallelize independent subtasks](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/), reducing overall latency. For a task broken into five independent subtasks, you could theoretically execute them concurrently rather than sequentially.
 
 However, this architecture introduces overhead. The orchestrator needs to manage worker lifecycle, handle failures, and synthesize results. For simple, single-domain tasks, a direct Sonnet call will be more efficient. Reserve the orchestrator pattern [genuinely complex projects requiring multiple skill domains](/claude-skills-guide/advanced-hub/).
 
@@ -133,9 +133,9 @@ Start by identifying distinct skill domains in your project, then assign each to
 
 ## Related Reading
 
-- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/articles/claude-code-agent-pipeline-sequential-vs-parallel/) — Compare sequential and parallel execution models for multi-agent workflows
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Build coordinated multi-agent systems with specialized subagents
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) — Implement robust communication protocols between orchestrator and worker agents
+- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) — Compare sequential and parallel execution models for multi-agent workflows
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Build coordinated multi-agent systems with specialized subagents
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — Implement robust communication protocols between orchestrator and worker agents
 - [Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Explore advanced orchestration patterns and multi-agent system design
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

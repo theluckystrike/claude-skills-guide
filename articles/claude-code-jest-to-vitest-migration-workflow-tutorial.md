@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Jest to Vitest Migration Workflow Tutorial
 
-Migrating [test suite](/claude-skills-guide/articles/what-is-the-best-claude-skill-for-automated-code-review/)s from Jest to Vitest is one of the most impactful upgrades you can make to your JavaScript development workflow. This transformation delivers dramatically faster test execution, native Vite integration, and a more intuitive API that aligns with modern frontend tooling. When you use Claude Code as your AI development assistant, the migration becomes a structured, low-friction process that handles the complexities of config translation, import rewrites, and test adaptation.
+Migrating [test suite](/claude-skills-guide/what-is-the-best-claude-skill-for-automated-code-review/)s from Jest to Vitest is one of the most impactful upgrades you can make to your JavaScript development workflow. This transformation delivers dramatically faster test execution, native Vite integration, and a more intuitive API that aligns with modern frontend tooling. When you use Claude Code as your AI development assistant, the migration becomes a structured, low-friction process that handles the complexities of config translation, import rewrites, and test adaptation.
 
 This tutorial walks you through a complete migration workflow using Claude Code, covering everything from initial assessment through final verification.
 
@@ -173,8 +173,8 @@ The key to success lies in taking incremental steps rather than attempting a com
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The tdd skill drives test-first migration workflows for Jest-to-Vitest transitions
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Auto-trigger the tdd skill when working on test configuration files
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep incremental migration sessions efficient and affordable
+- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd skill drives test-first migration workflows for Jest-to-Vitest transitions
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-trigger the tdd skill when working on test configuration files
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep incremental migration sessions efficient and affordable
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

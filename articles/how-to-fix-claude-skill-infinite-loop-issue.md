@@ -22,8 +22,8 @@ Common symptoms:
 
 - Claude calls `Bash` with the same command repeatedly (e.g., re-running a test that keeps failing)
 - Claude reads and rewrites the same file in cycles, each time reverting a previous change
-- A [`tdd`](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) or `frontend-design` workflow keeps generating new iterations without stopping
-- The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) writes a memory entry, reads it back, and re-writes it in a loop
+- A [`tdd`](/claude-skills-guide/best-claude-skills-for-developers-2026/) or `frontend-design` workflow keeps generating new iterations without stopping
+- The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) writes a memory entry, reads it back, and re-writes it in a loop
 - Token usage spikes unusually fast for a simple task
 
 ## How to Stop an Active Loop
@@ -185,8 +185,8 @@ If a loop consumed significant tokens or left your codebase in a partial state:
 
 ## Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Understanding the `max_turns` and `tools` fields helps you design skills with built-in loop prevention
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Best practices for writing skill bodies that include clear exit conditions to prevent runaway execution
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can unexpectedly re-trigger skills in ways that create loops; this guide explains the full invocation model
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — Understanding the `max_turns` and `tools` fields helps you design skills with built-in loop prevention
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Best practices for writing skill bodies that include clear exit conditions to prevent runaway execution
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can unexpectedly re-trigger skills in ways that create loops; this guide explains the full invocation model
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

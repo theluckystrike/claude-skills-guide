@@ -16,7 +16,7 @@ GitHub Copilot Workspace and Claude Code are both aiming at the same big idea: a
 
 ## What Each Tool Is
 
-**Claude Code** is Anthropic's terminal-native coding agent. It operates in your local environment, reads your codebase, edits files, runs shell commands, and executes multi-step plans. It integrates with the [reusable, version-controlled agent workflows](/claude-skills-guide/articles/how-do-i-share-claude-skills-across-multiple-projects/) — and connects to external tools via MCP servers.
+**Claude Code** is Anthropic's terminal-native coding agent. It operates in your local environment, reads your codebase, edits files, runs shell commands, and executes multi-step plans. It integrates with the [reusable, version-controlled agent workflows](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) — and connects to external tools via MCP servers.
 
 **GitHub Copilot Workspace** is GitHub's AI-powered development environment, accessible directly from GitHub issues and PRs. You open an issue, click "Open in Workspace," and Copilot Workspace proposes a plan to resolve it, generates the code changes, and lets you review, iterate, and open a PR — all within GitHub's interface.
 
@@ -51,7 +51,7 @@ GitHub Copilot Workspace and Claude Code are both aiming at the same big idea: a
 
 **Model flexibility.** Claude Code gives you the option to use different Claude models (Sonnet for speed, Opus 4.6 for quality) depending on task complexity. This token-cost optimization is not available in Copilot Workspace.
 
-**MCP server ecosystem.** [Claude Code can connect to any MCP server](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) — your internal Jira, your custom deployment pipeline, your observability tools. Copilot Workspace is limited to GitHub-native integrations.
+**MCP server ecosystem.** [Claude Code can connect to any MCP server](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — your internal Jira, your custom deployment pipeline, your observability tools. Copilot Workspace is limited to GitHub-native integrations.
 
 ---
 
@@ -92,7 +92,7 @@ For teams already on Copilot, the marginal cost of Workspace is zero. For teams 
 - Your most important development tasks require access to your local environment
 - You want to build reusable skills and shared agent workflows
 - Your toolchain extends beyond GitHub (internal tools, custom CI, observability)
-- You need [model quality control and cost optimization](/claude-skills-guide/articles/claude-opus-orchestrator-sonnet-worker-architecture/) across task types
+- You need [model quality control and cost optimization](/claude-skills-guide/claude-opus-orchestrator-sonnet-worker-architecture/) across task types
 - You work on large codebases with complex multi-service dependencies
 
 ## When to Use GitHub Copilot Workspace
@@ -116,8 +116,8 @@ Many teams will find value in using both: Copilot Workspace for quick, GitHub-na
 
 ## Related Reading
 
-- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's extensible skills ecosystem is a key differentiator from GitHub Copilot Workspace; this guide maps out what is available
-- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Understanding when skills outperform raw prompts is central to evaluating Claude Code's depth against Copilot Workspace's simplicity
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Claude Code's automatic skill triggering is one of its most powerful features compared to static GitHub Copilot suggestions
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's extensible skills ecosystem is a key differentiator from GitHub Copilot Workspace; this guide maps out what is available
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Understanding when skills outperform raw prompts is central to evaluating Claude Code's depth against Copilot Workspace's simplicity
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Claude Code's automatic skill triggering is one of its most powerful features compared to static GitHub Copilot suggestions
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

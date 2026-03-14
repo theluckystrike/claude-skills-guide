@@ -39,7 +39,7 @@ Anything above 400 words is worth reviewing. Common sources of bloat:
 - Redundant instructions that repeat the same constraint multiple times
 - Old instructions left in from earlier versions of the skill
 
-Cut to the minimal set of instructions that changes Claude's behavior. The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/), for example, needs to say "write tests before implementation" and specify the test framework — not explain what TDD is.
+Cut to the minimal set of instructions that changes Claude's behavior. The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/), for example, needs to say "write tests before implementation" and specify the test framework — not explain what TDD is.
 
 **Before:**
 ```markdown
@@ -118,7 +118,7 @@ Each session starts fresh with a small context, producing faster responses throu
 
 ## Fix 5: Cut `supermemory` Read Scope
 
-The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) can slow down session starts if it reads a large memory store. If you have been using `supermemory` for months across many projects, the store may have hundreds of entries.
+The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) can slow down session starts if it reads a large memory store. If you have been using `supermemory` for months across many projects, the store may have hundreds of entries.
 
 **Fix — scope memory reads:**
 ```
@@ -183,7 +183,7 @@ Skills are plain Markdown files with only `name:` and `description:` in the fron
 
 ## Fix 8: Use the `pdf` Skill With Page Ranges
 
-The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) processing a 200-page document is inherently slow because of the volume of text being loaded. Always specify page ranges for large documents:
+The [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) processing a 200-page document is inherently slow because of the volume of text being loaded. Always specify page ranges for large documents:
 
 ```
 /pdf
@@ -218,8 +218,8 @@ If you are consistently beyond these ranges on simple tasks, context bloat or to
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Performance and cost optimization are closely related; the token reduction techniques in this guide directly improve response speed
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Understanding what each skill does helps you identify which ones are worth the performance overhead for your specific workflows
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Unintended auto-invocations can load skill context you did not need; understanding the mechanism helps prevent surprise performance degradation
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Performance and cost optimization are closely related; the token reduction techniques in this guide directly improve response speed
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Understanding what each skill does helps you identify which ones are worth the performance overhead for your specific workflows
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Unintended auto-invocations can load skill context you did not need; understanding the mechanism helps prevent surprise performance degradation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

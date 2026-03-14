@@ -20,7 +20,7 @@ This guide covers practical patterns for implementing microservices communicatio
 
 Microservices communicate through two primary mechanisms: synchronous communication where a client waits for a response, and asynchronous communication where services exchange messages without blocking. Each approach has trade-offs around latency, consistency, and complexity that affect your system design.
 
-Claude Code skills can generate boilerplate code, validate API contracts, implement error handling, and create documentation for all these communication patterns. The [skill system](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) acts as a specialized assistant that understands your architecture and produces consistent, production-ready implementations.
+Claude Code skills can generate boilerplate code, validate API contracts, implement error handling, and create documentation for all these communication patterns. The [skill system](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/) acts as a specialized assistant that understands your architecture and produces consistent, production-ready implementations.
 
 ## Pattern 1: REST API Communication
 
@@ -112,7 +112,7 @@ class UserServiceClient {
 
 ## Pattern 2: Message Queue Communication
 
-Asynchronous communication through [message queues decouples services](/claude-skills-guide/articles/claude-code-multi-agent-orchestration-patterns-guide/) and improves system resilience. Claude Code skills can generate publisher and consumer code, handle dead letter queues, and implement idempotency.
+Asynchronous communication through [message queues decouples services](/claude-skills-guide/claude-code-multi-agent-orchestration-patterns-guide/) and improves system resilience. Claude Code skills can generate publisher and consumer code, handle dead letter queues, and implement idempotency.
 
 ```yaml
 # message-queue-skill.md
@@ -245,7 +245,7 @@ instructions: |
 
 ## Pattern 4: Saga Pattern for Distributed Transactions
 
-When microservices need to coordinate multi-step operations across services, the saga pattern provides a way to maintain consistency without distributed transactions. For broader agent coordination patterns, see [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/).
+When microservices need to coordinate multi-step operations across services, the saga pattern provides a way to maintain consistency without distributed transactions. For broader agent coordination patterns, see [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/).
 
 ```typescript
 // saga-orchestrator.ts
@@ -358,9 +358,9 @@ Claude Code skills accelerate implementing all these patterns by generating boil
 
 ## Related Reading
 
-- [Claude Code Multi-Agent Orchestration Patterns Guide](/claude-skills-guide/articles/claude-code-multi-agent-orchestration-patterns-guide/) — orchestration patterns for distributed Claude agent systems
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) — how subagents pass context and coordinate
-- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) — production architecture for Claude-powered services
-- [Claude Code Skills for Infrastructure as Code Terraform](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) — infrastructure automation for microservices deployments
+- [Claude Code Multi-Agent Orchestration Patterns Guide](/claude-skills-guide/claude-code-multi-agent-orchestration-patterns-guide/) — orchestration patterns for distributed Claude agent systems
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — how subagents pass context and coordinate
+- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/) — production architecture for Claude-powered services
+- [Claude Code Skills for Infrastructure as Code Terraform](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — infrastructure automation for microservices deployments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -16,7 +16,7 @@ As AI assistants become integral to development workflows, developers face a key
 
 ## What Claude Skills Bring to the Table
 
-Claude Code skills are specialized capabilities that extend Claude's core functionality. These skills integrate directly into your local development environment, providing deep system access, file operations, and tool execution. The [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) handles document extraction and generation. The [**tdd** skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) guides test-driven development workflows. The **frontend-design** skill assists with UI creation and responsive layouts.
+Claude Code skills are specialized capabilities that extend Claude's core functionality. These skills integrate directly into your local development environment, providing deep system access, file operations, and tool execution. The [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) handles document extraction and generation. The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) guides test-driven development workflows. The **frontend-design** skill assists with UI creation and responsive layouts.
 
 Skills operate within Claude Code's context, giving them access to your project files, git history, and local tools. This means you can build sophisticated automation that interacts with your entire codebase:
 
@@ -37,7 +37,7 @@ def refactor_component(component_path):
     return refactored
 ```
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) provides persistent context across sessions, remembering your preferences, project conventions, and accumulated knowledge. This creates a personalized AI assistant that learns your workflow over time.
+The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) provides persistent context across sessions, remembering your preferences, project conventions, and accumulated knowledge. This creates a personalized AI assistant that learns your workflow over time.
 
 ## What Custom GPTs Offer
 
@@ -139,9 +139,9 @@ Claude skills and Custom GPTs serve different roles in 2026. Skills provide deep
 
 ## Related Reading
 
-- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

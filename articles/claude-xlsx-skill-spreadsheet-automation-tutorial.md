@@ -219,18 +219,18 @@ This reduces processing time significantly for large datasets. Ask Claude via `/
 
 The `/xlsx` skill pairs naturally with others:
 
-- [`/pdf`](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — extract invoice data from PDFs, then write it to a summary spreadsheet
+- [`/pdf`](/claude-skills-guide/best-claude-skills-for-data-analysis/) — extract invoice data from PDFs, then write it to a summary spreadsheet
 - `/docx` — pull tables from Word documents into Excel for further analysis
-- [`/tdd`](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — write tests for your data transformation functions
-- [`/supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — save column mapping configurations between sessions
+- [`/tdd`](/claude-skills-guide/best-claude-skills-for-developers-2026/) — write tests for your data transformation functions
+- [`/supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — save column mapping configurations between sessions
 
 ---
 
 ## Related Reading
 
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Full data skill overview
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep sessions efficient
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate in context
+- [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Full data skill overview
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep sessions efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate in context
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -35,11 +35,11 @@ The biggest differentiator is the **skills system**. Skills are Markdown files t
 
 Instead of being a generic AI assistant, you configure skills for your workflow:
 
-- The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) makes Claude write tests before implementation, every time
+- The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) makes Claude write tests before implementation, every time
 - The `frontend-design` skill makes Claude always follow your design system when building components
 - The `pdf` skill generates properly formatted PDF documents from Markdown
 - The `docx` skill creates Word documents from your content
-- The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) gives Claude persistent memory across sessions
+- The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) gives Claude persistent memory across sessions
 
 Skills are just `.md` files you create and customize. You define the role, the constraints, the output format, and the context the skill should have. Once a skill is set up, it can trigger automatically when Claude detects relevant work — you ask for tests, the `tdd` skill activates without you having to specify it.
 
@@ -118,8 +118,8 @@ That's the full setup. The getting started guide on this site covers the first p
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The next step after understanding what Claude Code is: discovering which skills make it most powerful for your workflow
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — One of Claude Code's most distinctive features is how it activates skills automatically; this explains the mechanism
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Understanding what Claude Code is leads naturally to managing its costs; these techniques apply from day one
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The next step after understanding what Claude Code is: discovering which skills make it most powerful for your workflow
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — One of Claude Code's most distinctive features is how it activates skills automatically; this explains the mechanism
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Understanding what Claude Code is leads naturally to managing its costs; these techniques apply from day one
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

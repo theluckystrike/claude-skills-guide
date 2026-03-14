@@ -12,7 +12,7 @@ score: 9
 
 # How Do I Migrate from Cursor Rules to Claude Skills
 
-If you have invested time building custom rules in Cursor, you might wonder whether those configurations translate to Claude Code. The good news: both systems use similar concepts—custom instructions that shape AI behavior—but they organize and invoke them differently. For a broader comparison, see [Claude Code vs Cursor AI Editor Comparison](/claude-skills-guide/articles/claude-cowork-vs-cursor-ai-editor-comparison-2026/). This guide walks you through migrating your Cursor rules to Claude Code skills with practical examples.
+If you have invested time building custom rules in Cursor, you might wonder whether those configurations translate to Claude Code. The good news: both systems use similar concepts—custom instructions that shape AI behavior—but they organize and invoke them differently. For a broader comparison, see [Claude Code vs Cursor AI Editor Comparison](/claude-skills-guide/claude-cowork-vs-cursor-ai-editor-comparison-2026/). This guide walks you through migrating your Cursor rules to Claude Code skills with practical examples.
 
 ## Understanding the Difference
 
@@ -204,9 +204,9 @@ Start by migrating your most-used rules first. Test each skill thoroughly. Over 
 
 ## Related Reading
 
-- [Claude Code vs Cursor AI Editor Comparison 2026](/claude-skills-guide/articles/claude-cowork-vs-cursor-ai-editor-comparison-2026/) — Compare Claude Code and Cursor fully before deciding on your migration strategy.
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Learn the skill MD format to correctly translate Cursor rules into Claude skills.
-- [Claude Skill .md File Format: Full Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Understand the complete specification for Claude skill files during migration.
+- [Claude Code vs Cursor AI Editor Comparison 2026](/claude-skills-guide/claude-cowork-vs-cursor-ai-editor-comparison-2026/) — Compare Claude Code and Cursor fully before deciding on your migration strategy.
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Learn the skill MD format to correctly translate Cursor rules into Claude skills.
+- [Claude Skill .md File Format: Full Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Understand the complete specification for Claude skill files during migration.
 - [Claude Skills Comparisons Hub](/claude-skills-guide/comparisons-hub/) — Compare Claude skills against other AI tools and development environments.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

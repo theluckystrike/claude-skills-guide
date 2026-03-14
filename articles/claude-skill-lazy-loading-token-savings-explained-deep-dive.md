@@ -12,7 +12,7 @@ score: 9
 
 # Claude Skill Lazy Loading: Token Savings Explained
 
-When working with Claude Code and its extensible skill system, understanding lazy loading can significantly impact your token budget and response quality. This guide explains how skill lazy loading works, why it matters, and how you can apply it effectively. If you are already looking to cut costs more broadly, the [token optimization guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) covers complementary strategies worth pairing with lazy loading.
+When working with Claude Code and its extensible skill system, understanding lazy loading can significantly impact your token budget and response quality. This guide explains how skill lazy loading works, why it matters, and how you can apply it effectively. If you are already looking to cut costs more broadly, the [token optimization guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) covers complementary strategies worth pairing with lazy loading.
 
 ## What Is Lazy Loading in Claude Skills?
 
@@ -31,7 +31,7 @@ Every token processed costs money and affects response latency. When Claude init
 
 Lazy loading reduces this initial processing burden. Instead of loading all skill information upfront, Claude loads only what's necessary for your immediate request. If you invoke the `pdf` skill for text extraction, only the PDF-related capabilities load into context.
 
-This creates measurable token savings especially in sessions where you use multiple skills sequentially rather than simultaneously. For a deeper look at how context is structured and managed across skills, see the [skills memory and context architecture guide](/claude-skills-guide/articles/claude-skills-memory-and-context-architecture-explained/).
+This creates measurable token savings especially in sessions where you use multiple skills sequentially rather than simultaneously. For a deeper look at how context is structured and managed across skills, see the [skills memory and context architecture guide](/claude-skills-guide/claude-skills-memory-and-context-architecture-explained/).
 
 ## Practical Implementation
 
@@ -65,7 +65,7 @@ Different skills demonstrate lazy loading benefits across various use cases:
 
 For developers running extended Claude Code sessions, lazy loading provides several advantages:
 
-1. **Reduced Context Overflow**: Large skill sets previously risked hitting context limits. Lazy loading keeps active context manageable. The [context window management best practices guide](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/) explains how to structure your sessions to avoid overflow even when lazy loading is not an option.
+1. **Reduced Context Overflow**: Large skill sets previously risked hitting context limits. Lazy loading keeps active context manageable. The [context window management best practices guide](/claude-skills-guide/claude-skills-context-window-management-best-practices/) explains how to structure your sessions to avoid overflow even when lazy loading is not an option.
 
 2. **Faster Initial Responses**: Less initialization processing means quicker first responses in each skill invocation.
 
@@ -95,7 +95,7 @@ The lazy loading implementation interacts with Claude's tool execution system. W
 
 This means repeated invocations of the same skill within a session incur no additional loading overhead—the skill remains cached until context eviction.
 
-Some advanced workflows benefit from understanding this behavior. Long-running sessions that switch between many skills might experience varying response times as skills load and unload based on context management decisions. If you notice sluggishness, the [skill slow performance speed-up guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) offers targeted diagnostics for these situations.
+Some advanced workflows benefit from understanding this behavior. Long-running sessions that switch between many skills might experience varying response times as skills load and unload based on context management decisions. If you notice sluggishness, the [skill slow performance speed-up guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/) offers targeted diagnostics for these situations.
 
 ## Summary
 
@@ -107,9 +107,9 @@ Understanding and applying these patterns helps you build more efficient Claude 
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/)
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/)
-- [Claude Skills Memory and Context Architecture Guide](/claude-skills-guide/articles/claude-skills-memory-and-context-architecture-explained/)
-- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/)
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
+- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-skills-context-window-management-best-practices/)
+- [Claude Skills Memory and Context Architecture Guide](/claude-skills-guide/claude-skills-memory-and-context-architecture-explained/)
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -16,7 +16,7 @@ Claude Code and Replit Agent are both pitched as autonomous AI coding tools, but
 
 ## What Each Tool Is
 
-**Claude Code** is Anthropic's terminal-based agentic coding assistant. It runs in your local shell, interacts with your existing codebase, edits files, executes commands, and can work through multi-step development tasks autonomously. It integrates with the [Claude skills](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) ecosystem for building repeatable, shareable workflows.
+**Claude Code** is Anthropic's terminal-based agentic coding assistant. It runs in your local shell, interacts with your existing codebase, edits files, executes commands, and can work through multi-step development tasks autonomously. It integrates with the [Claude skills](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) ecosystem for building repeatable, shareable workflows.
 
 **Replit Agent** is an AI-powered coding agent built into the Replit cloud IDE. It can create, run, and deploy applications directly in Replit's hosted environment. You describe what you want to build, and the agent scaffolds the project, writes the code, and can deploy it — all within Replit's browser-based platform.
 
@@ -110,8 +110,8 @@ They are not really competing for the same developer. If you are reading this an
 
 ## Related Reading
 
-- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's skills ecosystem is a key differentiator; this guide explains what is available and how to evaluate options
-- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Compares Claude Code's structured skill model to simpler prompt-based approaches used by tools like Replit Agent
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — One of Claude Code's standout capabilities over Replit Agent is context-aware automatic skill firing — this explains how it works
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's skills ecosystem is a key differentiator; this guide explains what is available and how to evaluate options
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Compares Claude Code's structured skill model to simpler prompt-based approaches used by tools like Replit Agent
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — One of Claude Code's standout capabilities over Replit Agent is context-aware automatic skill firing — this explains how it works
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

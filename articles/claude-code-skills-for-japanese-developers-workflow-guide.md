@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills for Japanese Developers Workflow Guide
 
-Japanese developers have unique workflow requirements: handling multilingual projects, working with specific frameworks popular in Japan, and maintaining documentation standards that often exceed international norms. [Claude Code skills](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) provide specialized capabilities that address these needs directly.
+Japanese developers have unique workflow requirements: handling multilingual projects, working with specific frameworks popular in Japan, and maintaining documentation standards that often exceed international norms. [Claude Code skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) provide specialized capabilities that address these needs directly.
 
 This guide shows you how to integrate Claude Code skills into your development workflow, whether you work primarily with Japanese clients, maintain bilingual documentation, or build applications for the Japanese market.
 
@@ -22,7 +22,7 @@ Before implementing workflows, ensure your Claude Code environment includes the 
 
 Skills ship as built-in `.md` files with Claude Code — no installation command is needed. The core skills for Japanese development workflows are `/tdd`, `/pdf`, `/supermemory`, `/frontend-design`, and `/docx`. To see available skills, run `ls ~/.claude/skills/`. To use a skill, type `/skill-name` in a Claude Code session.
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) proves particularly valuable for Japanese developers managing long-term projects. It maintains context across sessions, remembering client preferences, project-specific terminology, and design decisions that recur throughout a project's lifecycle.
+The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) proves particularly valuable for Japanese developers managing long-term projects. It maintains context across sessions, remembering client preferences, project-specific terminology, and design decisions that recur throughout a project's lifecycle.
 
 ## Daily Development Workflow with Claude Skills
 
@@ -40,7 +40,7 @@ The skill generates test cases in your preferred framework (Jest, Vitest, or pyt
 
 ### Frontend Development with frontend-design Skill
 
-The [**frontend-design** skill](/claude-skills-guide/articles/claude-frontend-design-skill-review-and-tutorial/) accelerates UI development by converting design specifications into functional code. When working on projects for Japanese clients, you can specify design requirements in both Japanese and English:
+The [**frontend-design** skill](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) accelerates UI development by converting design specifications into functional code. When working on projects for Japanese clients, you can specify design requirements in both Japanese and English:
 
 ```bash
 /skill frontend-design
@@ -134,7 +134,7 @@ When using Claude Code skills for Japanese development, keep these points in min
 
 ## Automating Repetitive Tasks
 
-Create [custom skills](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) for recurring Japanese development tasks:
+Create [custom skills](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) for recurring Japanese development tasks:
 
 ```markdown
 ---
@@ -158,9 +158,9 @@ Start by installing the skills relevant to your current project, then gradually 
 
 ## Related Reading
 
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — detailed guide to using supermemory for long-running projects
-- [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/articles/claude-frontend-design-skill-review-and-tutorial/) — UI development workflows with the frontend-design skill
-- [Claude Skills for Localization i18n Workflow Automation](/claude-skills-guide/articles/claude-skills-for-localization-i18n-workflow-automation/) — automate multilingual and i18n workflows
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — create custom skills for your own development patterns
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — detailed guide to using supermemory for long-running projects
+- [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) — UI development workflows with the frontend-design skill
+- [Claude Skills for Localization i18n Workflow Automation](/claude-skills-guide/claude-skills-for-localization-i18n-workflow-automation/) — automate multilingual and i18n workflows
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — create custom skills for your own development patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

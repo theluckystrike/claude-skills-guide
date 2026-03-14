@@ -19,7 +19,7 @@ This guide covers the full setup from creating a Zapier webhook endpoint to trig
 
 ## How the Integration Works
 
-[Claude skills run locally inside Claude Code](/claude-skills-guide/articles/claude-skills-automated-social-media-content-workflow/). They do not natively speak HTTP. The bridge is a shell script or small helper program that:
+[Claude skills run locally inside Claude Code](/claude-skills-guide/claude-skills-automated-social-media-content-workflow/). They do not natively speak HTTP. The bridge is a shell script or small helper program that:
 
 1. Runs a Claude Code session and captures output
 2. POSTs that output to a Zapier webhook URL
@@ -40,7 +40,7 @@ Keep this Zap in test mode until you have confirmed delivery.
 
 ## Step 2: Capture Claude Skill Output
 
-[Run a Claude Code session and redirect output](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/). Here is a shell script that invokes Claude Code in print mode, captures the output, and sends it to Zapier:
+[Run a Claude Code session and redirect output](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/). Here is a shell script that invokes Claude Code in print mode, captures the output, and sends it to Zapier:
 
 ```bash
 #!/bin/bash
@@ -148,7 +148,7 @@ On future sessions, `/supermemory` surfaces this context so you maintain consist
 
 ## Practical Example: PDF Report → Zapier → Email
 
-When you [generate a report with `/pdf`](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/), send the output to Zapier, which emails it to stakeholders:
+When you [generate a report with `/pdf`](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/), send the output to Zapier, which emails it to stakeholders:
 
 ```bash
 #!/bin/bash
@@ -180,9 +180,9 @@ In Zapier, route this to Gmail or SendGrid with the report content in the email 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

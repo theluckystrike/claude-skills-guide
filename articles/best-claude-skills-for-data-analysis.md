@@ -32,7 +32,7 @@ Extracting structured data from PDF documents represents a common pain point in 
 
 This skill proves invaluable when analyzing vendor contracts, extracting line items from invoices, or pulling data points from research papers. Rather than manually transcribing information or purchasing expensive OCR software, developers integrate the pdf skill into pipelines that process hundreds of documents automatically.
 
-The skill supports both text-based PDFs and scanned documents through optional OCR capabilities, making it versatile for various data sources. To understand how pdf and other skills compare when choosing your stack, see [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/).
+The skill supports both text-based PDFs and scanned documents through optional OCR capabilities, making it versatile for various data sources. To understand how pdf and other skills compare when choosing your stack, see [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/).
 
 ## Test-Driven Data Processing with tdd Skill
 
@@ -50,7 +50,7 @@ def clean_currency(value):
 # Ensures edge cases like None, empty strings, and malformed input are handled
 ```
 
-The tdd skill guides developers through the red-green-refactor cycle, automatically generating test cases based on function signatures and docstrings. For data pipelines that run in production, this discipline prevents the subtle bugs that emerge from unhandled null values or unexpected input formats. See [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) for how tdd integrates with a broader developer skill stack.
+The tdd skill guides developers through the red-green-refactor cycle, automatically generating test cases based on function signatures and docstrings. For data pipelines that run in production, this discipline prevents the subtle bugs that emerge from unhandled null values or unexpected input formats. See [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) for how tdd integrates with a broader developer skill stack.
 
 ## Document Creation with docx Skill
 
@@ -106,7 +106,7 @@ claude -p "/docx Create management-report.docx summarizing: $INVOICE_DATA. Inclu
 claude -p "/pptx Create a 5-slide summary deck from the invoice analysis: $INVOICE_DATA"
 ```
 
-For frontend teams that need to surface this data in dashboards, see [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) for how these analysis outputs integrate with UI workflows.
+For frontend teams that need to surface this data in dashboards, see [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) for how these analysis outputs integrate with UI workflows.
 
 ## Choosing the Right Skills
 
@@ -133,9 +133,9 @@ Claude Code skills transform the AI assistant from an interactive tool into a pr
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Automate data pipelines in CI/CD environments
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep large data analysis sessions cost-efficient
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full overview of the top developer skills
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate data pipelines in CI/CD environments
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep large data analysis sessions cost-efficient
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full overview of the top developer skills
 
 ---
 

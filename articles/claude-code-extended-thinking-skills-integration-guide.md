@@ -12,7 +12,7 @@ score: 7
 
 # Extended Thinking + Claude Skills: Integration Guide
 
-Claude Code's [extended thinking](/claude-skills-guide/articles/claude-opus-orchestrator-sonnet-worker-architecture/) mode lets the model reason through complex, multi-step problems using a longer internal chain of thought. Skills extend that capability by providing domain-specific context and workflows. This guide shows how to combine skills effectively for complex problem-solving.
+Claude Code's [extended thinking](/claude-skills-guide/claude-opus-orchestrator-sonnet-worker-architecture/) mode lets the model reason through complex, multi-step problems using a longer internal chain of thought. Skills extend that capability by providing domain-specific context and workflows. This guide shows how to combine skills effectively for complex problem-solving.
 
 ## What Extended Thinking Adds
 
@@ -190,9 +190,9 @@ Extended thinking and Claude skills work best together when skills provide the c
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Broader developer skill overview
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

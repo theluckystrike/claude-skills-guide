@@ -79,7 +79,7 @@ class CodeReviewWorker:
         return results
 ```
 
-This pattern allows you to combine multiple workers effectively. A testing worker using the [tdd skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) can work alongside a documentation worker using the docx skill, all coordinated by the supervisor.
+This pattern allows you to combine multiple workers effectively. A testing worker using the [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) can work alongside a documentation worker using the docx skill, all coordinated by the supervisor.
 
 ## Dynamic Worker Coordination
 
@@ -147,9 +147,9 @@ The supervisor agent worker pattern provides a robust foundation for building co
 
 ## Related Reading
 
-- [Fan-Out Fan-In Pattern with Claude Code Subagents](/claude-skills-guide/articles/fan-out-fan-in-pattern-claude-code-subagents/) — Complement the supervisor-worker pattern with fan-out/fan-in for parallel task distribution across worker agents
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Broader orchestration patterns that expand on the supervisor-worker foundation for complex workflows
-- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/) — Scale beyond two-tier supervisor-worker to full swarm coordination with shared state
+- [Fan-Out Fan-In Pattern with Claude Code Subagents](/claude-skills-guide/fan-out-fan-in-pattern-claude-code-subagents/) — Complement the supervisor-worker pattern with fan-out/fan-in for parallel task distribution across worker agents
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Broader orchestration patterns that expand on the supervisor-worker foundation for complex workflows
+- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/claude-code-agent-swarm-coordination-strategies/) — Scale beyond two-tier supervisor-worker to full swarm coordination with shared state
 - [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced multi-agent architecture and orchestration patterns for production Claude workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

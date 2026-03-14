@@ -30,7 +30,7 @@ With your environment ready, you can begin using Claude skills throughout the de
 
 ## Essential Claude Skills for ROS2 Development
 
-Several Claude skills enhance robotics development specifically. [tdd skill proves invaluable when building ROS2 nodes](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/), ensuring your implementation follows test-driven development principles. Activate it in your Claude session before writing node code:
+Several Claude skills enhance robotics development specifically. [tdd skill proves invaluable when building ROS2 nodes](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/), ensuring your implementation follows test-driven development principles. Activate it in your Claude session before writing node code:
 
 ```
 /tdd
@@ -187,9 +187,9 @@ This integrated approach reduces context switching and maintains consistency acr
 
 ## Related Reading
 
-- [Claude Code Skills for Kubernetes Operator Development](/claude-skills-guide/articles/claude-code-skills-for-kubernetes-operator-development/) — Apply similar domain-specific skill patterns to Kubernetes operator development workflows.
-- [Claude Code Skills for Hardware Description Language VHDL](/claude-skills-guide/articles/claude-code-skills-for-hardware-description-language-vhdl/) — Extend specialized hardware skills to VHDL and FPGA development alongside ROS2 work.
-- [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-guide/articles/claude-skills-for-computational-biology-bioinformatics/) — Apply the same specialized skill workflow patterns to scientific computing and data processing.
+- [Claude Code Skills for Kubernetes Operator Development](/claude-skills-guide/claude-code-skills-for-kubernetes-operator-development/) — Apply similar domain-specific skill patterns to Kubernetes operator development workflows.
+- [Claude Code Skills for Hardware Description Language VHDL](/claude-skills-guide/claude-code-skills-for-hardware-description-language-vhdl/) — Extend specialized hardware skills to VHDL and FPGA development alongside ROS2 work.
+- [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-guide/claude-skills-for-computational-biology-bioinformatics/) — Apply the same specialized skill workflow patterns to scientific computing and data processing.
 - [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Discover more advanced skill patterns for specialized technical development domains.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

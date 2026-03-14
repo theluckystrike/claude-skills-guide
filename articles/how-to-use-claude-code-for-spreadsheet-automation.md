@@ -206,7 +206,7 @@ Claude Code reads your file, processes it according to your requirements, and pr
 
 ## Advanced: Building Reusable Automation Skills
 
-For recurring workflows, [create a Claude Skill that encapsulates your automation patterns](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). Store this as `~/.claude/skills/spreadsheet-automation.md`:
+For recurring workflows, [create a Claude Skill that encapsulates your automation patterns](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Store this as `~/.claude/skills/spreadsheet-automation.md`:
 
 ```markdown
 # Spreadsheet Automation Skill
@@ -264,9 +264,9 @@ The key to effective spreadsheet automation is treating your spreadsheets as dat
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/articles/how-to-write-effective-prompts-for-claude-code/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

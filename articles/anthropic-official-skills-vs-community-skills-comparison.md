@@ -16,7 +16,7 @@ Claude Code skills come in two categories: official skills maintained by Anthrop
 
 ## What Are Claude Skills?
 
-Claude skills are `.md` files that extend Claude Code's behavior for specific tasks. When you invoke a skill with `/skill-name`, Claude reads the skill file and gains specialized instructions, patterns, and tooling for that domain. Skills range from document processing (`/pdf`, `/xlsx`) to test-driven development (`/tdd`) to custom community integrations. If you're new to how skills activate, see [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/).
+Claude skills are `.md` files that extend Claude Code's behavior for specific tasks. When you invoke a skill with `/skill-name`, Claude reads the skill file and gains specialized instructions, patterns, and tooling for that domain. Skills range from document processing (`/pdf`, `/xlsx`) to test-driven development (`/tdd`) to custom community integrations. If you're new to how skills activate, see [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/).
 
 ## Official Skills: Built by Anthropic
 
@@ -50,7 +50,7 @@ Community skills are `.md` files created by developers outside Anthropic. They l
 
 **Specialization**: Where official skills aim for broad use, community skills solve specific problems — for example, a skill that enforces your team's commit message format or generates changelog entries in a specific style.
 
-**Flexibility**: Community skills can combine external APIs, custom context, and specialized instructions. Learn how to build and share your own in [How to Contribute Claude Skills to Open Source](/claude-skills-guide/articles/how-to-contribute-claude-skills-to-open-source/).
+**Flexibility**: Community skills can combine external APIs, custom context, and specialized instructions. Learn how to build and share your own in [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/).
 
 ### Community Skill Structure
 
@@ -96,13 +96,13 @@ Both official and community skills use the same invocation syntax:
 
 ## Practical Example: Document Processing
 
-The official `pdf` skill handles PDF manipulation—extracting text, merging documents, and filling forms. For a deeper look at the pdf skill in action, see [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) where it anchors an end-to-end pipeline.
+The official `pdf` skill handles PDF manipulation—extracting text, merging documents, and filling forms. For a deeper look at the pdf skill in action, see [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) where it anchors an end-to-end pipeline.
 
 Community skills can apply machine learning models, integrate specific OCR services, or build custom extraction pipelines that the official skill cannot match.
 
 ## Hybrid Approaches
 
-Most developers use official skills for core work (PDF handling, spreadsheet operations, testing) and community skills for specialized requirements. Both types coexist in your skill directory and work the same way. For a complete overview of what each official skill brings to developer workflows, see [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/).
+Most developers use official skills for core work (PDF handling, spreadsheet operations, testing) and community skills for specialized requirements. Both types coexist in your skill directory and work the same way. For a complete overview of what each official skill brings to developer workflows, see [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/).
 
 ## Maintaining Your Skill Stack
 
@@ -112,8 +112,8 @@ Quarterly review your active skills. Official skills update with Claude releases
 
 ## Related Reading
 
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Skills vs prompts: when to use each
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Build your own skill from scratch
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Skills vs prompts: when to use each
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Build your own skill from scratch
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The top skills every developer should know
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*

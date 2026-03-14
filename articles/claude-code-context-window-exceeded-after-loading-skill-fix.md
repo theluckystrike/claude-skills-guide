@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Context Window Exceeded After Loading Skill Fix
 
-When you load multiple Claude skills and suddenly hit the dreaded "context window exceeded" error, it disrupts your workflow. This issue commonly occurs when stacking skills like `frontend-design`, `pdf`, `tdd`, and `supermemory` simultaneously. Here's how to diagnose and fix it. For related context window errors from specific skills, see [Claude Code skills context window exceeded error fix](/claude-skills-guide/articles/claude-code-skills-context-window-exceeded-error-fix/).
+When you load multiple Claude skills and suddenly hit the dreaded "context window exceeded" error, it disrupts your workflow. This issue commonly occurs when stacking skills like `frontend-design`, `pdf`, `tdd`, and `supermemory` simultaneously. Here's how to diagnose and fix it. For related context window errors from specific skills, see [Claude Code skills context window exceeded error fix](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/).
 
 ## Understanding the Context Window Limit
 
@@ -155,13 +155,13 @@ The context window exceeded error after loading skills stems from cumulative tok
 - Splitting work across multiple sessions
 - Checking for resource-heavy references
 
-These adjustments let you use skills like `pdf`, `tdd`, `frontend-design`, and `supermemory` without hitting limits. The key principle: one skill per task phase, or none at all when a quick prompt suffices. For a deeper dive on context management, see [Claude Skills Context Window Management Best Practices](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/).
+These adjustments let you use skills like `pdf`, `tdd`, `frontend-design`, and `supermemory` without hitting limits. The key principle: one skill per task phase, or none at all when a quick prompt suffices. For a deeper dive on context management, see [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-skills-context-window-management-best-practices/).
 
 ## Related Reading
 
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/) — Comprehensive strategies for managing token budgets when using multiple skills in complex workflows
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Reduce per-invocation token consumption so you can run more skills before hitting context limits
-- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/articles/claude-code-skills-context-window-exceeded-error-fix/) — The broader error context, including causes and recovery steps beyond skill-specific overflows
+- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-skills-context-window-management-best-practices/) — Comprehensive strategies for managing token budgets when using multiple skills in complex workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Reduce per-invocation token consumption so you can run more skills before hitting context limits
+- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/) — The broader error context, including causes and recovery steps beyond skill-specific overflows
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Learn foundational skill loading patterns that prevent context window issues from the start
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

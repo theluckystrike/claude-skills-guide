@@ -12,7 +12,7 @@ score: 7
 
 # Claude Skills for Generating Mock Data and Fixtures
 
-Generating realistic [mock data](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) and test fixtures is a common pain point in software development. Whether you are building a new application, writing automated tests, or prototyping features, having access to well-structured fake data accelerates your workflow significantly. Claude Code skills offer a powerful approach to generating this data without external libraries or manual data entry.
+Generating realistic [mock data](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) and test fixtures is a common pain point in software development. Whether you are building a new application, writing automated tests, or prototyping features, having access to well-structured fake data accelerates your workflow significantly. Claude Code skills offer a powerful approach to generating this data without external libraries or manual data entry.
 
 ## Understanding Mock Data Generation in Claude
 
@@ -260,9 +260,9 @@ Follow these practices when generating test fixtures with Claude skills:
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Full developer skill stack including data handling
-- [Claude Code Pytest Fixtures and Parametrize Workflow](/claude-skills-guide/articles/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — Advanced pytest patterns
-- [Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Data handling with Claude
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack including data handling
+- [Claude Code Pytest Fixtures and Parametrize Workflow](/claude-skills-guide/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — Advanced pytest patterns
+- [Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Data handling with Claude
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

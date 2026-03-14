@@ -76,7 +76,7 @@ Make the script executable: `chmod +x deploy.sh`
 
 ## Integrating Claude Skills into Your Workflow
 
-The [`/tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) adds value to your deployment pipeline by reviewing test coverage before deployment. In a Claude Code session before deploying:
+The [`/tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) adds value to your deployment pipeline by reviewing test coverage before deployment. In a Claude Code session before deploying:
 
 ```
 /tdd
@@ -133,7 +133,7 @@ jobs:
 
 ## Using Claude Skills for Deployment Documentation
 
-After each deployment, use [`/pdf`](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) to generate a deployment summary:
+After each deployment, use [`/pdf`](/claude-skills-guide/best-claude-skills-for-data-analysis/) to generate a deployment summary:
 
 ```
 /pdf
@@ -144,7 +144,7 @@ Create a deployment summary document from:
 Save to docs/deployments/2026-03-13-v1.2.3.pdf
 ```
 
-Track deployment history across sessions with [`/supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/):
+Track deployment history across sessions with [`/supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/):
 
 ```
 /supermemory
@@ -195,9 +195,9 @@ Start with the preview deployment workflow, then gradually add production safegu
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — DevOps skills for managing preview and production deployments
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/articles/best-claude-skills-for-frontend-ui-development/) — Frontend skills that pair with Vercel and Next.js workflows
-- [Claude Skills with Vercel Deployment Automation](/claude-skills-guide/articles/claude-skills-with-vercel-deployment-automation/) — Step-by-step Vercel deployment automation using Claude skills
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — DevOps skills for managing preview and production deployments
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend skills that pair with Vercel and Next.js workflows
+- [Claude Skills with Vercel Deployment Automation](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) — Step-by-step Vercel deployment automation using Claude skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

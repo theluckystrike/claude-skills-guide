@@ -16,11 +16,11 @@ When choosing between Claude Code and ChatGPT's Code Interpreter for development
 
 ## What Each Tool Offers
 
-**Claude Code** is Anthropic's terminal-native AI coding assistant that operates as a full agent. It reads your codebase, edits files, runs shell commands, and executes multi-step plans autonomously. Claude Code integrates with a [skills ecosystem](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — reusable, packaged agent behaviors for repetitive developer tasks.
+**Claude Code** is Anthropic's terminal-native AI coding assistant that operates as a full agent. It reads your codebase, edits files, runs shell commands, and executes multi-step plans autonomously. Claude Code integrates with a [skills ecosystem](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — reusable, packaged agent behaviors for repetitive developer tasks.
 
 **ChatGPT Code Interpreter** is OpenAI's solution for running code within ChatGPT conversations. It provides an ephemeral sandboxed environment where Python (primarily) code executes in real-time. The Code Interpreter activates within the chat interface when you request data analysis, file processing, or code execution.
 
-[Claude Code lives in your terminal and maintains project context](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) across sessions, while ChatGPT Code Interpreter lives in the chat interface and treats each conversation as a fresh start.
+[Claude Code lives in your terminal and maintains project context](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) across sessions, while ChatGPT Code Interpreter lives in the chat interface and treats each conversation as a fresh start.
 
 ## Code Execution Environment
 
@@ -196,9 +196,9 @@ For professional developers working on real projects, Claude Code's terminal-nat
 
 ## Related Reading
 
-- [Why Claude Code Beats ChatGPT for Developers](/claude-skills-guide/articles/why-is-claude-code-better-than-chatgpt-for-developers/)
-- [Why Teams Switch from Copilot to Claude Code](/claude-skills-guide/articles/why-do-teams-switch-from-copilot-to-claude-code/)
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+- [Why Claude Code Beats ChatGPT for Developers](/claude-skills-guide/why-is-claude-code-better-than-chatgpt-for-developers/)
+- [Why Teams Switch from Copilot to Claude Code](/claude-skills-guide/why-do-teams-switch-from-copilot-to-claude-code/)
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
 - [Comparisons Hub](/claude-skills-guide/comparisons-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
