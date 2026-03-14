@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Pact: Contract Testing Guide"
-description: "Learn how to use Claude Code for Pact contract testing. Master consumer-driven contract testing, create Pact files, and verify API integrations with practical examples."
+description: "Learn how to use Claude Code for Pact contract testing. Master consumer-driven contract testing, create Pact files, and verify API integrations with."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-pact-contract-testing-guide/
@@ -203,5 +203,12 @@ Pact contract testing provides confidence that your services remain compatible a
 Start small—choose one critical API integration and create a consumer contract. Verify it against your provider, publish to a broker, and expand from there. Your microservices will thank you.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by the luckystrike — More at [zovo.one](https://zovo.one)

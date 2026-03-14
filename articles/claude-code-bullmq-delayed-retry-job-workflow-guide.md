@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code BullMQ Delayed Retry Job Workflow Guide"
-description: "Master BullMQ delayed retry job workflows with Claude Code. Learn practical techniques for implementing reliable job processing, delayed execution, and intelligent retry strategies."
+description: "Master BullMQ delayed retry job workflows with Claude Code. Learn practical techniques for implementing reliable job processing, delayed execution, and."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-bullmq-delayed-retry-job-workflow-guide/
@@ -200,3 +200,10 @@ Building reliable BullMQ delayed retry job workflows requires thoughtful configu
 
 Remember to always implement dead letter queues for jobs that exceed retry limits, monitor your queue health proactively, and design your retry strategy based on your specific failure modes and business requirements.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

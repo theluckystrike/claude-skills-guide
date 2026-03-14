@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code ML Engineer Model Evaluation Workflow Guide"
-description: "Master model evaluation workflows with Claude Code. Learn how ML engineers can automate testing, benchmark models, and build reproducible evaluation pipelines."
+description: "Master model evaluation workflows with Claude Code. Learn how ML engineers can automate testing, benchmark models, and build reproducible evaluation."
 date: 2026-03-14
 categories: [workflows]
 tags: [claude-code, ml-engineering, model-evaluation, benchmarking, ai-testing, machine-learning]
@@ -113,3 +113,10 @@ Building robust model evaluation workflows with Claude Code transforms ad-hoc te
 The key is starting simple: define your evaluation criteria, build baseline metrics, and gradually add sophistication as your needs evolve. Claude Code's flexibility allows you to adapt your evaluation workflows as your models and applications grow more complex.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
