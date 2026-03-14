@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Chalk Feature Workflow Tutorial"
-description: "Learn how to use Claude Code CLI to streamline chalk feature development workflows. Practical examples for implementing terminal styling features efficiently."
+description: "Learn how to use Claude Code CLI to streamline chalk feature development workflows. Practical examples for implementing terminal styling features."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-chalk-feature-workflow-tutorial/
@@ -162,3 +162,10 @@ To maximize Claude Code's effectiveness in your Chalk development workflow:
 5. **Document as you go**: Use Claude Code to generate and maintain documentation alongside your implementation.
 
 By integrating Claude Code into your Chalk workflow, you reduce the friction of looking up API details, maintain consistency across your styling, and accelerate the development cycle from idea to working feature.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Envoy Authorization Workflow Tutorial"
-description: "A practical guide to building authorization workflows with Envoy and Claude Code. Learn to implement JWT validation, RBAC, and external authz with AI assistance."
+description: "A practical guide to building authorization workflows with Envoy and Claude Code. Learn to implement JWT validation, RBAC, and external authz with AI."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-envoy-authz-workflow-tutorial/
@@ -174,3 +174,10 @@ Building authorization workflows with Envoy requires careful attention to config
 
 The key to success is understanding that authorization is a defense-in-depth strategy—combine multiple mechanisms rather than relying on any single approach. With Claude Code guiding your implementation, you can confidently build authorization systems that are both secure and maintainable.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

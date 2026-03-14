@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Tauri Plugin Workflow Tutorial"
-description: "Learn how to use Claude Code to streamline your Tauri plugin development workflow. This tutorial covers practical patterns for building, testing, and maintaining plugins with AI assistance."
+description: "Learn how to use Claude Code to streamline your Tauri plugin development workflow. This tutorial covers practical patterns for building, testing, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-tauri-plugin-workflow-tutorial/
@@ -201,3 +201,10 @@ Claude Code transforms Tauri plugin development from a potentially tedious proce
 
 Start by integrating Claude Code into small parts of your workflow—perhaps just for generating command boilerplate—and gradually expand to more complex tasks like debugging or API design. You'll find that the time invested in learning to communicate effectively with Claude Code pays dividends throughout your Tauri plugin projects.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

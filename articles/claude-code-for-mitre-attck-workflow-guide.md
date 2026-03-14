@@ -227,3 +227,10 @@ Start small—build one skill for your most common use case—and expand as your
 
 Remember: the goal isn't perfect coverage of all 190+ techniques, but rather meaningful detection of the techniques most relevant to your organization's threat landscape.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

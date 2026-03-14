@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Halmos Symbolic Workflow Guide"
-description: "Learn how to integrate Claude Code with Halmos for powerful symbolic testing workflows. This guide covers setup, configuration, and practical examples for automating symbolic execution in your Python projects."
+description: "Learn how to integrate Claude Code with Halmos for powerful symbolic testing workflows. This guide covers setup, configuration, and practical examples."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-halmos-symbolic-workflow-guide/
@@ -225,3 +225,10 @@ Integrating Claude Code with Halmos transforms symbolic testing from an advanced
 Start by adding Halmos to one module in your project, create the Claude skill for Halmos workflows, and gradually expand symbolic testing coverage. The initial investment pays dividends in code quality and confidence.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

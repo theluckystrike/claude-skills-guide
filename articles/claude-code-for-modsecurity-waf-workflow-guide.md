@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for ModSecurity WAF Workflow Guide"
-description: "Learn how to use Claude Code to streamline ModSecurity WAF rule development, configuration, and troubleshooting workflows for robust web application security."
+description: "Learn how to use Claude Code to streamline ModSecurity WAF rule development, configuration, and troubleshooting workflows for robust web application."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-modsecurity-waf-workflow-guide/
@@ -201,3 +201,10 @@ Follow these recommendations for productive Claude Code workflows:
 
 Claude Code transforms ModSecurity WAF management from a tedious manual process into an efficient, assisted workflow. By leveraging Claude Code for rule generation, configuration review, false positive analysis, and test automation, you can maintain robust web application security without sacrificing development speed. Start integrating these patterns into your workflow today, and you'll see faster rule deployment cycles and more effective protection against web application threats.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

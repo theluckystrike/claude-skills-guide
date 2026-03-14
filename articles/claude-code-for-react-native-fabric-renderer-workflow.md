@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for React Native Fabric Renderer Workflow"
-description: "Master the React Native Fabric renderer workflow with Claude Code. Learn practical patterns for building native modules, implementing renderers, and optimizing performance."
+description: "Master the React Native Fabric renderer workflow with Claude Code. Learn practical patterns for building native modules, implementing renderers, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-react-native-fabric-renderer-workflow/
@@ -259,3 +259,10 @@ When working with React Native Fabric and Claude Code, follow these recommendati
 The Fabric renderer workflow represents React Native's future, offering better performance and a more intuitive development experience. Claude Code serves as an invaluable partner in this journey, providing guidance on implementation patterns, code generation, and optimization strategies. By understanding TurboModules, Fabric components, and performance optimization techniques, you can build high-quality React Native applications that fully leverage the new architecture's capabilities.
 
 Start with small experiments, gradually migrate existing components, and leverage Claude Code's expertise to navigate challenges along the way. The investment in learning Fabric will pay dividends as React Native continues its evolution toward more native-like performance and developer experience.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

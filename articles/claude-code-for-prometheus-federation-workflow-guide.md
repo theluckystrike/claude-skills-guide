@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Prometheus Federation Workflow Guide"
-description: "Learn how to use Claude Code to automate and streamline Prometheus federation workflows. Practical examples, configuration patterns, and actionable advice for developers."
+description: "Learn how to use Claude Code to automate and streamline Prometheus federation workflows. Practical examples, configuration patterns, and actionable."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-prometheus-federation-workflow-guide/
@@ -138,3 +138,10 @@ The key is treating your monitoring infrastructure as code—versioned, document
 
 Start small: use Claude Code to generate your first federate configuration, then expand to service discovery and comprehensive alerting. Your future self will thank you when federation changes become routine rather than探险.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

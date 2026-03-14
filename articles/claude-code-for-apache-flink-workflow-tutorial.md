@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Apache Flink Workflow Tutorial"
-description: "Master Apache Flink stream processing with Claude Code. Learn efficient workflows, debugging strategies, and production-ready event-driven application patterns."
+description: "Master Apache Flink stream processing with Claude Code. Learn efficient workflows, debugging strategies, and production-ready event-driven application."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-apache-flink-workflow-tutorial/
@@ -234,3 +234,10 @@ Apache Flink enables powerful real-time processing capabilities, and Claude Code
 Start with simple pipelines and gradually incorporate advanced features like complex event processing, stateful streaming, and exactly-once guarantees. With Claude Code assistance, you'll have expert guidance at every step of your Flink journey.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

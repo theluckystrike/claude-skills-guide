@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for QuickNode RPC Workflow Guide"
-description: "Learn how to integrate Claude Code with QuickNode for efficient blockchain RPC workflows. Practical examples, code snippets, and actionable advice for developers."
+description: "Learn how to integrate Claude Code with QuickNode for efficient blockchain RPC workflows. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
 categories: [tutorials]
 tags: [claude-code, quicknode, rpc, blockchain, workflow, claude-skills]
@@ -184,3 +184,10 @@ Integrating Claude Code with QuickNode RPC endpoints unlocks powerful automation
 
 Start with simple queries, then progressively build more sophisticated pipelines as you become comfortable with the interaction patterns. The combination of AI-assisted development and reliable blockchain infrastructure makes building Web3 applications more accessible than ever.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

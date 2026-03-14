@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Web3Modal Wallet Workflow"
-description: "Learn how to integrate Web3Modal wallet connections into your dApp using Claude Code. Practical examples for connection, disconnection, and event handling workflows."
+description: "Learn how to integrate Web3Modal wallet connections into your dApp using Claude Code. Practical examples for connection, disconnection, and event."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-web3modal-wallet-workflow/
@@ -233,3 +233,10 @@ Building a reliable Web3Modal wallet workflow requires handling initialization, 
 - Handle errors gracefully with user-friendly messages
 
 These workflows integrate seamlessly with Claude Code's development assistance, making your Web3 dApp development faster and more reliable. Remember to test with multiple wallet providers during development to ensure broad compatibility.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

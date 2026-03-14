@@ -257,3 +257,10 @@ Combining Claude Code with Soda Core transforms data quality from a manual, reac
 
 Start by creating a simple skill that generates basic checks, then progressively add complexity as your confidence grows. The investment pays dividends in reduced data incidents and increased trust in your analytical outputs.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

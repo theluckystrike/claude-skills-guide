@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Backstage Software Catalog Workflow"
-description: "A comprehensive guide to managing Backstage software catalog workflows using Claude Code. Learn how to automate entity registration, documentation generation, and catalog maintenance with practical examples."
+description: "A comprehensive guide to managing Backstage software catalog workflows using Claude Code. Learn how to automate entity registration, documentation."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-backstage-software-catalog-workflow/
@@ -197,3 +197,10 @@ Claude Code transforms Backstage software catalog management from a manual, erro
 Start by setting up proper project structure, defining conventions in CLAUDE.md, and gradually automating common tasks like entity creation, validation, and documentation. The investment in establishing these workflows pays dividends in improved discoverability, clearer ownership, and better developer experience across your organization.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

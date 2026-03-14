@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Chainlink VRF Workflow Guide"
-description: "Learn how to use Claude Code to implement Chainlink VRF workflows in your smart contracts. This guide covers practical examples, code snippets, and actionable advice for developers."
+description: "Learn how to use Claude Code to implement Chainlink VRF workflows in your smart contracts. This guide covers practical examples, code snippets, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-chainlink-vrf-workflow-guide/
@@ -184,3 +184,10 @@ Monitor the `RandomWordsRequested` and `RandomWordsFulfilled` events to provide 
 Chainlink VRF enables trustless randomness for blockchain applications, and Claude Code makes implementing it significantly easier. By following the patterns in this guide—proper contract architecture, thorough testing, and careful deployment—you can build reliable VRF-powered applications efficiently.
 
 Remember to start with testnet deployment, validate your implementation thoroughly, and monitor subscription balances in production. With these practices in place, you'll be well-equipped to leverage Chainlink VRF in any project requiring provably fair randomness.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

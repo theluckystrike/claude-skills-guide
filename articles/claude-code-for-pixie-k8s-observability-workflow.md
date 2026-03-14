@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Pixie K8s Observability Workflow"
-description: "Learn how to leverage Claude Code with Pixie for powerful Kubernetes observability. This guide covers practical workflows, code examples, and actionable advice for developers."
+description: "Learn how to leverage Claude Code with Pixie for powerful Kubernetes observability. This guide covers practical workflows, code examples, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pixie-k8s-observability-workflow/
@@ -167,3 +167,10 @@ Claude Code transforms Kubernetes observability workflows by generating precise 
 Start by deploying Pixie in your cluster, then leverage Claude Code to build custom observability scripts tailored to your specific needs. The integration accelerates troubleshooting, improves understanding of system behavior, and ultimately leads to more reliable services.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
