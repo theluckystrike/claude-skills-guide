@@ -102,7 +102,7 @@ The `cache: 'pip'` parameter automatically caches pip dependencies, speeding up 
 
 ## Dynamic Matrix Generation with Claude Code
 
-Claude Code can generate matrix configurations tailored to your project. Using the claude-tdd skill, you can create test matrices that adapt based on your `package.json` or `pyproject.toml` files:
+Claude Code can generate matrix configurations tailored to your project. Using the tdd skill, you can create test matrices that adapt based on your `package.json` or `pyproject.toml` files:
 
 ```yaml
 # Claude-generated matrix from project dependencies

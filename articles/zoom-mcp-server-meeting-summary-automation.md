@@ -139,7 +139,7 @@ actions:
 
 ### Sprint Retrospective Processing
 
-After sprint retrospectives, extract action items automatically using the claude-tdd skill for test creation or the supermemory skill for persistent storage:
+After sprint retrospectives, extract action items automatically using the tdd skill for test creation or the supermemory skill for persistent storage:
 
 ```javascript
 // Process retrospective meeting

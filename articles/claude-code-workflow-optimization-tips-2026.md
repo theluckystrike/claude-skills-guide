@@ -12,11 +12,11 @@ score: 7
 
 # Claude Code Workflow Optimization Tips for 2026
 
-Claude Code continues to evolve, and [developers who master workflow optimization gain significant productivity advantages](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) This guide covers practical strategies to streamline your Claude Code experience, from skill composition to context management techniques that work in 2026.
+Claude Code continues to evolve, and [developers who master workflow optimization gain significant productivity advantages](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This guide covers practical strategies to streamline your Claude Code experience, from skill composition to context management techniques that work in 2026.
 
 ## Strategic Skill Loading
 
-One of the most effective optimization strategies involves loading only the skills you need for specific tasks. [each skill adds tokens to your context window](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/) For complex projects, this impacts response quality and speed.
+One of the most effective optimization strategies involves loading only the skills you need for specific tasks. [each skill adds tokens to your context window](/claude-skills-guide/claude-skills-context-window-management-best-practices/) For complex projects, this impacts response quality and speed.
 
 Instead of loading all your installed skills, invoke only what you need:
 
@@ -37,8 +37,8 @@ The supermemory skill deserves special attention for workflow optimization. It m
 When your task requires multiple skills, composition becomes essential. The most effective pattern involves chaining skills sequentially, each building on the previous output:
 
 ```
-/pdf extract data from report.xlsx
-/regex convert the extracted table into structured JSON
+/pdf extract data from report.pdf
+Ask Claude to convert the extracted table into structured JSON
 /xlsx generate a summary spreadsheet from the JSON
 ```
 
@@ -106,7 +106,7 @@ Create a `.claude/hooks.yml` file in your project:
 
 This runs tests automatically after creating test files.
 
-For even more advanced automation, the claude-tdd skill integrates directly with your testing workflow:
+For even more advanced automation, the tdd skill integrates directly with your testing workflow:
 
 ```bash
 # Invoke tdd skill with specific test framework
@@ -203,9 +203,9 @@ Experiment with these techniques incrementally. Track what improves your product
 
 ## Related Reading
 
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/articles/claude-code-output-quality-how-to-improve-results/)
+- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-skills-context-window-management-best-practices/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

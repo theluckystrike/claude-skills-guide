@@ -56,7 +56,7 @@ createIssue(
 
 This creates an issue in your specified team with priority level 2 (urgent). The description can include code snippets, error messages, or any context you gather during your coding session.
 
-The integration works particularly well when combined with other skills. Use the tdd skill to generate test cases for your new issue, then create the issue with those test details included. Or leverage the code-analysis skill to gather relevant code context before writing your issue description. For a broader view of how Claude skills fit into issue-driven workflows, see the [Claude skills workflow for technical product managers guide](/claude-skills-guide/articles/claude-skills-workflow-for-technical-product-managers/).
+The integration works particularly well when combined with other skills. Use the tdd skill to generate test cases for your new issue, then create the issue with those test details included. Or use the code-analysis skill to gather relevant code context before writing your issue description. For a broader view of how Claude skills fit into issue-driven workflows, see the [Claude skills workflow for technical product managers guide](/claude-skills-guide/claude-skills-workflow-for-technical-product-managers/).
 
 ## Querying and Managing Issues
 
@@ -111,7 +111,7 @@ After frontend-design generates component specs, createIssue with the design del
 
 ```
 
-**Knowledge Management with supermemory**: Use supermemory to recall similar past issues or решения before creating new ones:
+**Knowledge Management with supermemory**: Use supermemory to recall similar past issues or solutions before creating new ones:
 
 ```
 Query supermemory for related historical context, then createIssue with links to previous relevant issues or solutions.

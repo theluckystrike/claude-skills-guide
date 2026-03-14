@@ -26,7 +26,7 @@ Regulated development differs from typical software engineering in several criti
 - **Compliance documentation**: Evidence collection for audits
 - **Incident response**: Rapid detection and remediation capabilities
 
-The [claude-tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps enforce test coverage requirements that satisfy compliance auditors. When building for regulated industries, tests serve dual purposes: validating functionality and demonstrating due diligence.
+The **tdd** skill helps enforce test coverage requirements that satisfy compliance auditors. When building for regulated industries, tests serve dual purposes: validating functionality and demonstrating due diligence.
 
 ## Building HIPAA-Compliant Healthcare Applications
 

@@ -69,7 +69,7 @@ Load this skill using Claude Code's skill loading mechanism to automatically rec
 
 ## Technique 4: Use the TDD Skill for Incremental Development
 
-The claude-tdd skill enforces a test-driven development workflow that naturally produces smaller, focused changes. By requiring tests to pass before implementation, it encourages working in small increments rather than large overhauls.
+The tdd skill enforces a test-driven development workflow that naturally produces smaller, focused changes. By requiring tests to pass before implementation, it encourages working in small increments rather than large overhauls.
 
 When you use the tdd skill with specific test cases, Claude Code implements only what's needed to make those tests pass:
 
