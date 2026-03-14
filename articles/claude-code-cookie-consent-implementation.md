@@ -6,7 +6,7 @@ description: "Learn how to implement GDPR-compliant cookie consent in your web p
 date: 2026-03-14
 categories: [implementation]
 tags: [claude-code, cookie-consent, gdpr, frontend, frontend-design, claude-skills]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /claude-code-cookie-consent-implementation/
 reviewed: true
 score: 7
