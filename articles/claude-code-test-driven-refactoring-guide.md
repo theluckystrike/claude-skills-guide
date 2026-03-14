@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Test Driven Refactoring Guide"
 description: "Master test-driven refactoring with Claude Code. Learn practical workflows, skill patterns, and real-world examples for safely improving legacy codebases."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-test-driven-refactoring-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Test Driven Refactoring Guide
 

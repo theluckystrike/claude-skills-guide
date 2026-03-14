@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code Developer Advocate Blog Post Workflow Guide"
 description: "Master the art of creating developer advocacy content with Claude Code. Learn practical workflows for writing blog posts, tutorials, and technical."
@@ -7,14 +8,15 @@ date: 2026-03-14
 author: "theluckystrike"
 permalink: /claude-code-developer-advocate-blog-post-workflow-guide/
 categories: [guides]
-reviewed: false
-score: 0
-tags: [claude-code, developer-advocate, content-creation, blogging]
+reviewed: true
+score: 7
+tags: [claude-code, developer-advocate, content-creation, blogging, claude-skills]
 ---
+
 
 # Claude Code Developer Advocate Blog Post Workflow Guide
 
-Developer advocates occupy a unique space in the tech ecosystem—part educator, part technologist, part storyteller. Creating compelling content that resonates with developers requires balancing technical accuracy with accessibility, and depth with readability. Claude Code offers a powerful toolkit that can transform how you approach blog post creation, from initial ideation through final publication. This guide walks through a practical workflow that leverages Claude Code's skills and features to streamline your content creation process.
+Developer advocates occupy a unique space in the tech ecosystem—part educator, part technologist, part storyteller. Creating compelling content that resonates with developers requires balancing technical accuracy with accessibility, and depth with readability. Claude Code offers a powerful toolkit that can transform how you approach blog post creation, from initial ideation through final publication. This guide walks through a practical workflow that uses Claude Code's skills and features to streamline your content creation process.
 
 ## Setting Up Your Content Creation Environment
 

@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Pulumi TypeScript Infra Guide"
 description: "Use Claude Code with Pulumi and TypeScript to automate infrastructure provisioning. Practical patterns for building, testing, and managing cloud."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-pulumi-typescript-infra-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 {% raw %}
 # Claude Code Pulumi TypeScript Infra Guide
 
@@ -25,7 +30,7 @@ Install the required dependencies and configure your cloud provider. For AWS, yo
 
 ## How Claude Code Enhances Pulumi Workflows
 
-Claude Code brings intelligent assistance to your infrastructure projects through natural language interaction. When working with Pulumi TypeScript, you can leverage several capabilities:
+Claude Code brings intelligent assistance to your infrastructure projects through natural language interaction. When working with Pulumi TypeScript, you can use several capabilities:
 
 **Code Generation**: Describe the infrastructure you need, and Claude Code helps generate the TypeScript code. For example, "Create an S3 bucket with versioning enabled" produces the appropriate Pulumi code.
 

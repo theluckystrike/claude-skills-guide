@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code DevOps Engineer Docker Container Workflow Tips"
 description: "Practical tips for DevOps engineers using Claude Code to streamline Docker container workflows, from Dockerfile optimization to multi-container."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-devops-engineer-docker-container-workflow-tips/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 {% raw %}
 
 # Claude Code DevOps Engineer Docker Container Workflow Tips

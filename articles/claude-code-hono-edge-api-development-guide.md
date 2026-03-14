@@ -1,19 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Hono Edge API Development Guide"
 description: "Build lightning-fast edge APIs with Hono and Claude Code. Learn skill patterns, middleware optimization, and deployment strategies for serverless."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, hono, edge-computing, api-development, serverless]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [claude-code, hono, edge-computing, api-development, serverless, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /claude-code-hono-edge-api-development-guide/
 ---
 
+
 # Claude Code Hono Edge API Development Guide
 
-Building edge APIs requires a different mindset than traditional server development. With Hono's lightweight footprint and Claude Code's skill system, you can create performant, type-safe APIs that deploy instantly to Cloudflare Workers, Deno Deploy, and other edge runtimes. This guide shows you how to leverage Claude Code skills for Hono edge API development.
+Building edge APIs requires a different mindset than traditional server development. With Hono's lightweight footprint and Claude Code's skill system, you can create performant, type-safe APIs that deploy instantly to Cloudflare Workers, Deno Deploy, and other edge runtimes. This guide shows you how to use Claude Code skills for Hono edge API development.
 
 ## Why Hono for Edge APIs
 
@@ -141,7 +143,7 @@ app.post('/api/generate-pdf', async (c) => {
 
 **2. Use Durable Objects for State**
 
-For stateful edge functions, leverage Cloudflare Durable Objects:
+For stateful edge functions, use Cloudflare Durable Objects:
 
 ```typescript
 export class Counter implements DurableObject {

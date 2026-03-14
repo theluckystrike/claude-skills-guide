@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Claude Code Testing Library React Guide"
 description: "Learn how to use Claude Code with React Testing Library for efficient component testing. Practical examples for developers building modern React."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, testing-library, react, testing, frontend, development, claude-skills]
 permalink: /claude-code-testing-library-react-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Testing Library React Guide
 

@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Terragrunt Modules Workflow: A Practical Guide"
 description: "Learn how to streamline your Terragrunt infrastructure workflow using Claude Code. Practical examples for developers managing Terraform modules at scale."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-terragrunt-modules-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Claude Code Terragrunt Modules Workflow: A Practical Guide
@@ -41,7 +46,7 @@ The modules repository contains reusable Terraform code, while the live reposito
 
 ## Integrating Claude Code into Your Workflow
 
-Claude Code excels at understanding context across multiple files and can help you navigate complex Terragrunt configurations. When working with module dependencies and outputs, you can leverage Claude's ability to analyze your entire project structure.
+Claude Code excels at understanding context across multiple files and can help you navigate complex Terragrunt configurations. When working with module dependencies and outputs, you can use Claude's ability to analyze your entire project structure.
 
 ### Generating Module Configurations
 
@@ -160,7 +165,7 @@ Keep your Terragrunt configurations lean by following these principles that Clau
 
 ## Conclusion
 
-Integrating Claude Code into your Terragrunt modules workflow transforms how you manage infrastructure as code. By leveraging Claude's ability to understand context, generate configurations, and analyze dependencies, you reduce manual overhead and minimize configuration errors. The key lies in establishing clear patterns in your module repositories and letting Claude Code help enforce those patterns consistently across your environments.
+Integrating Claude Code into your Terragrunt modules workflow transforms how you manage infrastructure as code. By using Claude's ability to understand context, generate configurations, and analyze dependencies, you reduce manual overhead and minimize configuration errors. The key lies in establishing clear patterns in your module repositories and letting Claude Code help enforce those patterns consistently across your environments.
 
 Whether you're managing a handful of services or hundreds of infrastructure components, this workflow integration scales with your organization. Start by identifying repetitive configuration patterns in your existing setup, then use Claude Code to automate those patterns systematically.
 

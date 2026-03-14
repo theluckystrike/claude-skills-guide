@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Developer Environment Reproducibility with."
 description: "A practical guide to achieving fully reproducible development environments using Claude Code and Nix. Learn workflow patterns, configuration."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, nix, reproducibility, developer-environment, workflow]
+tags: [claude-code, nix, reproducibility, developer-environment, workflow, claude-skills]
 permalink: /claude-code-developer-environment-reproducibility-nix-workflow/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Developer Environment Reproducibility with Nix Workflow
 
@@ -62,7 +66,7 @@ This configuration defines exactly which versions of Node.js, Python, and other 
 
 ## Integrating Claude Code with Nix Environments
 
-Claude Code works seamlessly within Nix environments, but you can enhance the integration by creating a `.claude/settings.yml` that reflects your Nix-based setup:
+Claude Code works smoothly within Nix environments, but you can enhance the integration by creating a `.claude/settings.yml` that reflects your Nix-based setup:
 
 ```yaml
 # .claude/settings.yml

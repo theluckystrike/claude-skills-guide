@@ -1,16 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Dotfiles Configuration Management Workflow"
 description: "Learn how to use Claude Code for efficient dotfiles management. Track configuration files across machines, automate symlinking, and maintain."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-dotfiles-configuration-management-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Dotfiles Configuration Management Workflow
 
-Managing dotfiles across multiple machines is a recurring challenge for developers. Your shell configurations, editor settings, git preferences, and terminal customizations live scattered across hidden files in your home directory. A solid dotfiles configuration management workflow with Claude Code transforms this chaos into a reproducible, version-controlled system that works seamlessly across any machine you use.
+Managing dotfiles across multiple machines is a recurring challenge for developers. Your shell configurations, editor settings, git preferences, and terminal customizations live scattered across hidden files in your home directory. A solid dotfiles configuration management workflow with Claude Code transforms this chaos into a reproducible, version-controlled system that works smoothly across any machine you use.
 
 ## What Makes Dotfiles Management Difficult
 

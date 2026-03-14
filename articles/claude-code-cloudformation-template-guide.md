@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code CloudFormation Template Guide"
 description: "Learn how to use Claude Code for CloudFormation template creation. Practical examples and workflows for AWS infrastructure automation."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-cloudformation-template-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 
@@ -243,7 +248,7 @@ Review all CloudFormation templates in /infrastructure/ and identify:
 
 ## Conclusion
 
-Claude Code transforms CloudFormation template development from manual YAML editing to collaborative infrastructure design. By leveraging skills like aws-mcp-server and tdd, developers can validate templates, manage complex nested architectures, and maintain infrastructure as code more efficiently.
+Claude Code transforms CloudFormation template development from manual YAML editing to collaborative infrastructure design. By using skills like aws-mcp-server and tdd, developers can validate templates, manage complex nested architectures, and maintain infrastructure as code more efficiently.
 
 Start with simple templates, establish validation workflows, and gradually adopt more complex patterns as your infrastructure needs grow.
 

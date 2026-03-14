@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code NextJS API Routes Best Practices: A."
 description: "Master NextJS API routes with Claude Code. Learn best practices for building robust, secure, and performant API endpoints in your NextJS applications."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-nextjs-api-routes-best-practices/
 categories: [guides]
-tags: [claude-code, nextjs, api-routes, best-practices]
+tags: [claude-code, nextjs, api-routes, best-practices, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code NextJS API Routes Best Practices: A Developer Guide
 
@@ -150,7 +154,7 @@ API route performance impacts overall application responsiveness. Several strate
 
 **Implement pagination** for list endpoints from the start. Cursor-based pagination performs better than offset-based approaches for large datasets.
 
-When building frontend integrations with these APIs, leverage the [frontend-design](/frontend-design) skill to create components that handle loading states, error displays, and data refresh patterns elegantly.
+When building frontend integrations with these APIs, use the [frontend-design](/frontend-design) skill to create components that handle loading states, error displays, and data refresh patterns elegantly.
 
 ## HTTP Method Handling
 

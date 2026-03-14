@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Platform Engineer Observability Stack Workflow"
 description: "Learn how to build a comprehensive observability stack workflow using Claude Code skills. Includes practical examples for metrics, logging, tracing."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, platform-engineer, observability, monitoring, devops]
-author: theluckystrike
+tags: [claude-code, platform-engineer, observability, monitoring, devops, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-platform-engineer-observability-stack-workflow/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 
@@ -290,7 +294,7 @@ This creates comprehensive documentation that helps on-call engineers respond qu
 
 ## Conclusion
 
-Claude Code transforms observability from a manual, time-consuming task into an automated, consistent process. By leveraging specialized skills, platform engineers can:
+Claude Code transforms observability from a manual, time-consuming task into an automated, consistent process. By using specialized skills, platform engineers can:
 
 1. Generate production-ready monitoring configs in seconds
 2. Create standardized dashboards and alerts across services

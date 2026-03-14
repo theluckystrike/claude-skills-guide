@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Monorepo Turborepo Workspace Workflow Guide"
 description: "Learn how to set up and use Claude Code in a monorepo with Turborepo workspaces for efficient development workflow."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-monorepo-turborepo-workspace-workflow-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Claude Code Monorepo Turborepo Workspace Workflow Guide
@@ -81,7 +86,7 @@ For monorepos, documentation often lives across multiple packages. The **pdf** s
 
 ### Test-Driven Development
 
-The **tdd** skill works seamlessly with Turborepo's test scripts. When you implement a new feature, Claude can:
+The **tdd** skill works smoothly with Turborepo's test scripts. When you implement a new feature, Claude can:
 
 - Generate test files in the appropriate package
 - Run tests across affected packages using `turbo run test --filter=affected`
@@ -130,7 +135,7 @@ When using Claude in monorepo environments, watch out for:
 
 ## Conclusion
 
-Claude Code and Turborepo together create a powerful development environment. The combination of intelligent code understanding with fast task orchestration helps teams ship features faster with fewer integration issues. By leveraging Claude skills like **frontend-design**, **tdd**, and **supermemory**, you can automate repetitive tasks and maintain consistency across your entire monorepo.
+Claude Code and Turborepo together create a powerful development environment. The combination of intelligent code understanding with fast task orchestration helps teams ship features faster with fewer integration issues. By using Claude skills like **frontend-design**, **tdd**, and **supermemory**, you can automate repetitive tasks and maintain consistency across your entire monorepo.
 
 The key is to let Claude understand your workspace structure once, then trust its awareness of package relationships when implementing features. With proper setup, your monorepo becomes not just manageable but genuinely pleasant to work in.
 

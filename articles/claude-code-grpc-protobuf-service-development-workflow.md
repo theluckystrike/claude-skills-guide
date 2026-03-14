@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code gRPC Protobuf Service Development Workflow"
 description: "A practical guide to building gRPC services with Protocol Buffers using Claude Code, featuring workflow patterns for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-grpc-protobuf-service-development-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 Building gRPC services with Protocol Buffers requires a structured workflow that combines interface definition, code generation, and service implementation. Claude Code accelerates this process through its ability to understand protobuf schemas, generate boilerplate, and maintain consistency across your service codebase. This guide covers practical patterns for developing gRPC services efficiently.

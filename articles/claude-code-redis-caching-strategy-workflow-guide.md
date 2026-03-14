@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Redis Caching Strategy Workflow Guide"
 description: "A practical guide to implementing Redis caching strategies with Claude Code for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-redis-caching-strategy-workflow-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Claude Code Redis Caching Strategy Workflow Guide
@@ -17,7 +22,7 @@ Building efficient caching layers is essential for modern application performanc
 
 Redis serves as an in-memory data store that dramatically reduces database load when properly configured. The core concept involves storing frequently accessed data with expiration times, ensuring your application serves cached responses instead of hitting primary databases repeatedly.
 
-When working with Claude Code, you can leverage the **supermemory** skill to maintain context about your caching patterns across sessions. This becomes valuable when debugging cache invalidation issues or tracking performance metrics over time.
+When working with Claude Code, you can use the **supermemory** skill to maintain context about your caching patterns across sessions. This becomes valuable when debugging cache invalidation issues or tracking performance metrics over time.
 
 ## Setting Up Redis for Your Project
 
