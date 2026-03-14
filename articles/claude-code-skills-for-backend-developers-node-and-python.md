@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills for Backend Developers: Node.js and Python
 
-Backend development involves repetitive tasks that consume development time. Claude Code and its built-in skills help automate these workflows. This guide covers practical applications of the real skills for Node.js and Python backend work.
+[Backend development involves repetitive tasks that consume development time](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Claude Code and its built-in skills help automate these workflows. This guide covers practical applications of the real skills for Node.js and Python backend work.
 
 ## What Skills Are Available
 

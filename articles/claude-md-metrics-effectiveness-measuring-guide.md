@@ -12,7 +12,7 @@ score: 7
 
 # Claude MD Metrics Effectiveness: Measuring Guide
 
-Measuring the effectiveness of your Claude Code skills requires a structured approach to track performance, identify bottlenecks, and optimize workflows. This guide provides developers and power users with practical metrics and evaluation frameworks for assessing skill effectiveness.
+[Measuring the effectiveness of your Claude Code skills requires a structured approach](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) to track performance, identify bottlenecks, and optimize workflows. This guide provides developers and power users with practical metrics and evaluation frameworks for assessing skill effectiveness.
 
 ## Why Metrics Matter for Claude Skills
 

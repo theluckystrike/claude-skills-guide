@@ -16,7 +16,7 @@ score: 7
 
 ## Why Version Control Matters for Claude Skills
 
-Your Claude MD files are essentially configuration files that dramatically influence how Claude behaves. Without version control, a poorly written update can break workflows across your entire team. A single misplaced instruction can cause the tdd skill to generate incorrect tests or the pdf skill to produce malformed documents.
+[Your Claude MD files are essentially configuration files that dramatically influence how Claude behaves](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) Without version control, a poorly written update can break workflows across your entire team. A single misplaced instruction can cause the tdd skill to generate incorrect tests or the pdf skill to produce malformed documents.
 
 Version control solves three core problems. First, it provides a complete history of changes, so you can identify exactly when a behavior changed and why. Second, it enables safe experimentation—branch off, try new instructions, and merge only when verified. Third, it supports team collaboration with proper code review workflows for skill changes.
 

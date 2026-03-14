@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills, cursor, comparison]
 
 # Claude Code vs Cursor AI Editor Comparison 2026
 
-Claude Code and Cursor AI are two of the most talked-about AI coding tools in 2026, but they serve different primary purposes. Cursor is an AI-first code editor built for the editing experience. Claude Code is an agentic coding assistant built for the terminal. Understanding this distinction is key to choosing the right tool.
+[Claude Code and Cursor AI are two of the most talked-about AI coding tools in 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), but they serve different primary purposes. Cursor is an AI-first code editor built for the editing experience. Claude Code is an agentic coding assistant built for the terminal. Understanding this distinction is key to choosing the right tool.
 
 ## What Each Tool Is
 

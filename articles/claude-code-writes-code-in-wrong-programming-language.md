@@ -16,7 +16,7 @@ You've asked Claude to write a React component, but it output Python code. You r
 
 ## Why This Happens
 
-Claude Code generates code based on the context it receives. When the context is ambiguous or incomplete, Claude makes assumptions. These assumptions often default to what the model was trained on most frequently, which typically means Python or JavaScript depending on the query framing.
+[Claude Code generates code based on the context it receives](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) When the context is ambiguous or incomplete, Claude makes assumptions. These assumptions often default to what the model was trained on most frequently, which typically means Python or JavaScript depending on the query framing.
 
 The root causes usually fall into three categories: unclear task specification, conflicting context in your project files, or skill-level configuration issues. Each requires a different approach to resolve.
 

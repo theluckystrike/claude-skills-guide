@@ -12,7 +12,7 @@ score: 7
 
 # Claude Code Skills for QA Engineers Automating Test Suites
 
-Quality assurance engineers face increasing pressure to deliver comprehensive test coverage while keeping pace with rapid development cycles. Claude Code skills offer a powerful solution for automating test suite creation, maintenance, and execution. This guide explores practical implementations thatQA engineers can adopt immediately.
+[Quality assurance engineers face increasing pressure to deliver comprehensive test coverage](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) while keeping pace with rapid development cycles. Claude Code skills offer a powerful solution for automating test suite creation, maintenance, and execution. This guide explores practical implementations thatQA engineers can adopt immediately.
 
 ## The QA Automation Challenge
 

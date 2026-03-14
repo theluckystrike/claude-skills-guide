@@ -18,7 +18,7 @@ Bolt.new and Claude Code with skills are two very different approaches to AI-ass
 
 **Bolt.new** is a browser-based AI web development environment from StackBlitz. You describe a web app in plain language, and Bolt.new generates a complete, running project — typically using frameworks like React, Vue, or Svelte — in a browser-based environment with instant preview and one-click deployment. It is designed for speed and accessibility.
 
-**Claude Code with skills** is Anthropic's terminal-based agentic coding assistant combined with the Claude skills ecosystem. Skills are reusable, version-controlled agent workflows that extend Claude Code's capabilities — enabling things like automated testing, PR generation, component scaffolding, and deployment pipelines that fit into your existing professional development workflow.
+**[Claude Code with skills is Anthropic's terminal-based agentic coding assistant combined with the Claude skills ecosystem](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) Skills are reusable, version-controlled agent workflows that extend Claude Code's capabilities — enabling things like automated testing, PR generation, component scaffolding, and deployment pipelines that fit into your existing professional development workflow.
 
 ---
 

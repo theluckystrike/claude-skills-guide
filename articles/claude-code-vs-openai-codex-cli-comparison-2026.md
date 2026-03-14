@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code vs OpenAI Codex CLI Comparison 2026
 
-OpenAI's Codex CLI and Anthropic's Claude Code both occupy the terminal-native AI coding assistant space, but they take meaningfully different approaches. This comparison covers what each tool does well, where each falls short, and how to decide which belongs in your workflow.
+[OpenAI's Codex CLI and Anthropic's Claude Code both occupy the terminal-native AI coding assistant space](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), but they take meaningfully different approaches. This comparison covers what each tool does well, where each falls short, and how to decide which belongs in your workflow.
 
 ## Background
 

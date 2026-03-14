@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills for Agriculture IoT Monitoring
 
-Agricultural operations generate massive amounts of sensor data—from soil moisture readings to temperature fluctuations, from pH levels to equipment status updates. Building Claude Code skills to monitor and respond to this data transforms raw measurements into actionable insights. This guide shows you how to create skills that process agricultural IoT data, trigger automated responses, and help manage precision farming operations.
+[Agricultural operations generate massive amounts of sensor data](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)—from soil moisture readings to temperature fluctuations, from pH levels to equipment status updates. Building Claude Code skills to monitor and respond to this data transforms raw measurements into actionable insights. This guide shows you how to create skills that process agricultural IoT data, trigger automated responses, and help manage precision farming operations.
 
 ## The Agricultural IoT Data Challenge
 

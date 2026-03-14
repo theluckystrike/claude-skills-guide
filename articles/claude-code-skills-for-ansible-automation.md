@@ -17,7 +17,7 @@ score: 7
 
 ## Why Combine Claude Code with Ansible
 
-Ansible playbooks are declarative YAML files that describe desired state. Writing and maintaining these files requires understanding Ansible's module ecosystem, inventory management, and variable precedence. Claude Code skills can bridge this gap by generating playbook templates, validating existing configurations, explaining complex Ansible concepts, and automating routine maintenance tasks.
+[Ansible playbooks are declarative YAML files that describe desired state](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Writing and maintaining these files requires understanding Ansible's module ecosystem, inventory management, and variable precedence. Claude Code skills can bridge this gap by generating playbook templates, validating existing configurations, explaining complex Ansible concepts, and automating routine maintenance tasks.
 
 The combination works well because Ansible operations are text-based and follow predictable patterns. Claude can read your existing playbooks, suggest improvements, generate new roles, and help debug execution failures. A well-crafted skill acts as an intelligent assistant that understands both natural language requests and Ansible's domain-specific syntax.
 

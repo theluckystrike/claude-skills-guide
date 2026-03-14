@@ -16,7 +16,7 @@ When working with Claude Code, there are two distinct ways to manage context: th
 
 ## Built-in Session Memory
 
-Claude's built-in memory is the conversation history within a single session. When you have an active Claude Code session, Claude maintains awareness of everything discussed so far: which files you have looked at, what decisions you have made, what code you have already written.
+[Claude's built-in memory is the conversation history within a single session](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/). When you have an active Claude Code session, Claude maintains awareness of everything discussed so far: which files you have looked at, what decisions you have made, what code you have already written.
 
 This works automatically with no setup:
 

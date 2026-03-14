@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills for Data Engineers Automating Pipelines
 
-Data engineers spend significant time building and maintaining pipelines that move data from source to destination. The repetitive nature of pipeline work — writing transformation scripts, handling edge cases, testing data quality — makes it an ideal candidate for automation with Claude Code skills. This guide shows you which skills to use and how to combine them into a productive workflow.
+[Data engineers spend significant time building and maintaining pipelines that move data from source to destination](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) The repetitive nature of pipeline work — writing transformation scripts, handling edge cases, testing data quality — makes it an ideal candidate for automation with Claude Code skills. This guide shows you which skills to use and how to combine them into a productive workflow.
 
 ## Core Skills for Pipeline Development
 

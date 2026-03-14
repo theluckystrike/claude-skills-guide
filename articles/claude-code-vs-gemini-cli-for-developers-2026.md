@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code vs Gemini CLI for Developers 2026
 
-Both Claude Code and Google Gemini CLI have matured into serious contenders for the AI-assisted development workflow. If you are deciding where to invest your time and tooling budget in 2026, this comparison lays out the practical differences without the hype.
+[Both Claude Code and Google Gemini CLI have matured into serious contenders for the AI-assisted development workflow](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) If you are deciding where to invest your time and tooling budget in 2026, this comparison lays out the practical differences without the hype.
 
 ## What Each Tool Is
 

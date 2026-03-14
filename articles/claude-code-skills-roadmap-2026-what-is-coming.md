@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills Roadmap 2026: What Is Coming
 
-The Claude Code ecosystem is evolving rapidly. If you have been using skills like `pdf` for document automation, `xlsx` for spreadsheet manipulation, or `tdd` for test-driven development, you have seen how much power these extensions provide. The roadmap for 2026 shows significant expansion in skill capabilities, cross-tool integration, and new categories that will reshape how developers work with AI assistants.
+[The Claude Code ecosystem is evolving rapidly](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) If you have been using skills like `pdf` for document automation, `xlsx` for spreadsheet manipulation, or `tdd` for test-driven development, you have seen how much power these extensions provide. The roadmap for 2026 shows significant expansion in skill capabilities, cross-tool integration, and new categories that will reshape how developers work with AI assistants.
 
 ## Native Skills Are Getting Deeper
 

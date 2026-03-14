@@ -22,7 +22,7 @@ Before diving into workflows, ensure your environment is ready. Claude Code work
 uv pip install polars pandas pyarrow
 ```
 
-The pyarrow dependency enables seamless interoperability between Polars and other data formats you might encounter. Once installed, you can import Polars and start working with DataFrames immediately.
+[The pyarrow dependency enables seamless interoperability between Polars and other data formats](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) you might encounter. Once installed, you can import Polars and start working with DataFrames immediately.
 
 Claude can help you troubleshoot installation issues or optimize your environment. Simply describe your setup and any errors you're encountering, and Claude will guide you through resolution.
 

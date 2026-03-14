@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills for Enterprise Architects Governance
 
-Enterprise architects face a unique challenge: balancing innovation velocity with organizational standards, security requirements, and compliance obligations. Claude Code skills provide a powerful mechanism to encode governance policies directly into the development workflow, ensuring consistent enforcement without creating bottlenecks.
+[Enterprise architects face a unique challenge: balancing innovation velocity with organizational standards](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), security requirements, and compliance obligations. Claude Code skills provide a powerful mechanism to encode governance policies directly into the development workflow, ensuring consistent enforcement without creating bottlenecks.
 
 ## The Governance Problem in Development Teams
 
