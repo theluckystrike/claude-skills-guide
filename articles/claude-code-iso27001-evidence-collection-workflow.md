@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code ISO 27001 Evidence Collection Workflow"
-description: "Learn how to build automated ISO 27001 evidence collection workflows using Claude Code skills. Streamline your compliance audits with practical examples and best practices."
+description: "Learn how to build automated ISO 27001 evidence collection workflows using Claude Code skills. Streamline your compliance audits with practical."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, iso27001, compliance, evidence-collection, automation, security]
@@ -218,3 +218,11 @@ Claude Code transforms ISO 27001 evidence collection from a manual, periodic bur
 
 The workflow demonstrated here provides a foundation—customize the evidence types, collection methods, and reporting formats to match your specific ISO 27001 scope and organizational context.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

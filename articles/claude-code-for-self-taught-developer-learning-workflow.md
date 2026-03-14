@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Self-Taught Developer Learning Workflow"
-description: "Discover how Claude Code can accelerate your self-taught developer journey with interactive learning, code explanation, project scaffolding, and skill-powered workflows."
+description: "Discover how Claude Code can accelerate your self-taught developer journey with interactive learning, code explanation, project scaffolding, and."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, self-taught, learning, developer-workflow, skills]
@@ -167,3 +167,11 @@ The biggest challenge for self-taught developers is consistency. Claude Code hel
 Claude Code transforms the self-taught developer journey from isolated struggle to interactive mentorship. By leveraging its contextual understanding, skill system, and tool integration, you build a personalized learning environment that adapts to your pace and goals. The key is treating Claude not just as a code generator, but as a patient teacher available whenever you need to understand, experiment, or improve.
 
 Start with one project, use the interactive explanation features, and gradually incorporate skills that match your learning objectives. Your self-taught path just got significantly easier.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
