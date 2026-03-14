@@ -178,7 +178,6 @@ You can create a Claude Code skill that encapsulates your version management wor
 ---
 name: rtx-manager
 description: Manage RTX tool versions and GPU environments
-tools: [bash, read_file]
 ---
 
 # RTX Version Manager Helper

@@ -39,9 +39,6 @@ Let's build a Claude Code skill that handles Biome linting workflows. This skill
 ---
 name: biome-lint
 description: "Run Biome linter with auto-fix, check for errors, and maintain code quality standards"
-tools: [bash, read_file, write_file, edit_file, glob]
-category: linting
-version: 1.0.0
 ---
 
 # Biome Linting Assistant
@@ -95,9 +92,6 @@ cat > ~/.claude/skills/skill-biome-lint.md << 'EOF'
 ---
 name: biome-lint
 description: "Run Biome linter with auto-fix, check for errors, and maintain code quality standards"
-tools: [bash, read_file, write_file, edit_file, glob]
-category: linting
-version: 1.0.0
 ---
 
 # Biome Linting Assistant
@@ -202,9 +196,6 @@ If you're using the original Rome toolchain, the skill structure is similar:
 ---
 name: rome-lint
 description: "Run Rome linter for JavaScript/TypeScript projects"
-tools: [bash, read_file, glob]
-category: linting
-version: 1.0.0
 ---
 
 # Rome Linting Assistant

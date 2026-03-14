@@ -33,7 +33,6 @@ A basic pre-commit skill needs to understand your project structure, identify wh
 ---
 name: pre-commit-check
 description: Run pre-commit validation on staged files
-tools: [bash, read_file, write_file]
 ---
 
 # Pre-Commit Check

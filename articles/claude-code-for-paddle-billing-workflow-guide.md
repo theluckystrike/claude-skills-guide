@@ -56,10 +56,6 @@ Create a Claude skill that handles subscription events. This skill responds to w
 ---
 name: paddle-billing
 description: Handles Paddle billing events and manages subscription workflows
-tools:
-  - read_file
-  - write_file
-  - bash
 ---
 
 # Paddle Billing Workflow Handler

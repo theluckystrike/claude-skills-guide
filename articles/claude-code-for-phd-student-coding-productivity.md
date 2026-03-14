@@ -28,16 +28,12 @@ Unlike traditional IDE extensions that focus on syntax completion, Claude Code e
 Before diving into specific use cases, ensure your Claude Code setup supports academic workflows:
 
 ```bash
-# Initialize Claude Code in your research project
+# Set up Claude Code in your research project
 cd your-research-project
-claude init
-
-# Configure for Python/R/MATLAB research workflows
-claude config set defaultLanguage python
-claude config set researchMode true
+# Create a CLAUDE.md file to configure project context
 ```
 
-Setting up project-specific configurations helps Claude understand your stack and provide more relevant suggestions. If your research involves Python for data science, specify this upfront. For MATLAB-heavy signal processing work, let Claude know your environment.
+Create a `CLAUDE.md` file at your project root to specify your stack and preferences. For example, note that your research uses Python for data science, or that your project involves MATLAB for signal processing. This helps Claude understand your environment and provide more relevant suggestions.
 
 ## Accelerating Code Development
 

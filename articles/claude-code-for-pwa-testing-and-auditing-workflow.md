@@ -36,10 +36,6 @@ Start by creating a dedicated skill for PWA testing. Create a new skill file tha
 ---
 name: pwa-tester
 description: "Test and audit Progressive Web Apps for compliance"
-tools:
-  - read_file
-  - bash
-  - write_file
 ---
 ```
 

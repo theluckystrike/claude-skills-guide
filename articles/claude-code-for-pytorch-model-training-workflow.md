@@ -20,10 +20,11 @@ Modern machine learning development requires juggling multiple components: data 
 
 ## Getting Started with Claude Code in Your Project
 
-Before diving into model training, ensure Claude Code is installed and configured for your project. Initialize a new project with Claude Code using:
+Before diving into model training, ensure Claude Code is installed and configured for your project. For new projects, create a directory and initialize it:
 
 ```bash
-npm create claude-project@latest my-pytorch-project
+mkdir my-pytorch-project && cd my-pytorch-project
+# Create a CLAUDE.md file to set project context for Claude
 ```
 
 For existing projects, navigate to your project directory and start a Claude Code session:

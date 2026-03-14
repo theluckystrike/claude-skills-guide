@@ -185,18 +185,7 @@ Claude Code's skill system can be extended to handle rollback management specifi
 ```json
 {
   "name": "rollback-manager",
-  "description": "Manages deployment rollbacks with state snapshots and automated triggers",
-  "capabilities": [
-    "create-checkpoint",
-    "list-checkpoints",
-    "execute-rollback",
-    "monitor-health",
-    "trigger-automated-rollback"
-  ],
-  "triggers": {
-    "on_deployment": "create-checkpoint",
-    "on_health_failure": "trigger-automated-rollback"
-  }
+  "description": "Manages deployment rollbacks with state snapshots and automated triggers"
 }
 ```
 

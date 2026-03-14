@@ -23,7 +23,7 @@ Before diving into implementation, it's essential to understand the common algor
 Claude Code can help you explore these patterns and select the right approach for your use case. When starting a new rate limiting implementation, describe your requirements to Claude and ask for algorithm recommendations:
 
 ```bash
-claude "I need rate limiting for a REST API that handles 1000 requests per minute per user. Users occasionally burst to 50 requests but sustained traffic is around 10 RPS. Recommend an algorithm and explain tradeoffs."
+claude --print "I need rate limiting for a REST API that handles 1000 requests per minute per user. Users occasionally burst to 50 requests but sustained traffic is around 10 RPS. Recommend an algorithm and explain tradeoffs."
 ```
 
 This conversation helps clarify your requirements before writing any code.
@@ -42,7 +42,7 @@ cd rate-limiter
 When setting up the project, specify your language and framework in the prompt to get relevant code:
 
 ```bash
-claude "Set up a Node.js Express rate limiting middleware project with TypeScript. Include package.json with express, redis, and ioredis dependencies. Create a basic project structure."
+claude --print "Set up a Node.js Express rate limiting middleware project with TypeScript. Include package.json with express, redis, and ioredis dependencies. Create a basic project structure."
 ```
 
 Claude will generate the scaffold with appropriate configurations and dependencies.
@@ -116,7 +116,7 @@ export class TokenBucket {
 To get this implementation, prompt Claude with specific requirements:
 
 ```bash
-claude "Implement a TokenBucket class in TypeScript with tryConsume method that returns {allowed, remaining, resetTime, retryAfter}. Include automatic token refill based on elapsed time."
+claude --print "Implement a TokenBucket class in TypeScript with tryConsume method that returns {allowed, remaining, resetTime, retryAfter}. Include automatic token refill based on elapsed time."
 ```
 
 ## Building Framework-Specific Middleware
@@ -171,7 +171,7 @@ export function createRateLimitMiddleware(
 The middleware follows Express conventions, making it familiar to developers. Request Claude to generate adapters for other frameworks:
 
 ```bash
-claude "Create a Fastify rate limit middleware adapter that wraps the TokenBucket class. Follow Fastify's middleware plugin pattern with register and hook."
+claude --print "Create a Fastify rate limit middleware adapter that wraps the TokenBucket class. Follow Fastify's middleware plugin pattern with register and hook."
 ```
 
 ## Adding Distributed Rate Limiting with Redis
@@ -247,7 +247,7 @@ export class DistributedTokenBucket {
 Comprehensive testing ensures your rate limiter behaves correctly under various conditions. Claude Code can generate test cases:
 
 ```bash
-claude "Write Jest tests for the TokenBucket class covering: 
+claude --print "Write Jest tests for the TokenBucket class covering:
 1. First request should be allowed
 2. Burst traffic up to capacity should be allowed
 3. Requests exceeding capacity should be denied

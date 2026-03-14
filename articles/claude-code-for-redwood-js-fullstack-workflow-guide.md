@@ -27,11 +27,10 @@ Before diving into code, ensure your environment is ready. Initialize a new Redw
 yarn create redwood-app my-redwood-app
 cd my-redwood-app
 
-# Initialize Claude Code in the project
-claude init
+# Create a CLAUDE.md file to configure Claude's project context
 ```
 
-When prompted, configure Claude to understand your project structure. The key directories it should recognize are:
+Create a `CLAUDE.md` file to configure Claude to understand your project structure. The key directories it should recognize are:
 
 - `/api/src` - Serverless functions and services
 - `/web/src` - React frontend components

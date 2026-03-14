@@ -70,10 +70,6 @@ For more complex analysis, create a reusable skill that handles common log patte
 ---
 name: openobserve-error-analyzer
 description: Analyzes OpenObserve logs for error patterns and trends
-tools:
-  - Read
-  - Write
-  - Bash
 ---
 
 You are an OpenObserve log analysis assistant. When provided with:
@@ -126,9 +122,6 @@ Create a skill that translates natural language alert requirements into OpenObse
 ---
 name: openobserve-alert-generator
 description: Generates OpenObserve alert rules from descriptions
-tools:
-  - Read
-  - Write
 ---
 
 When creating alerts, follow this process:
@@ -170,10 +163,6 @@ Build a skill that produces consistent weekly reports:
 ---
 name: openobserve-weekly-report
 description: Generates weekly observability reports from OpenObserve data
-tools:
-  - Read
-  - Write
-  - Bash
 ---
 
 Generate weekly reports with these sections:

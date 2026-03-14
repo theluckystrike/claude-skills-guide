@@ -80,7 +80,6 @@ Create a file named `percy-visual-testing.md` in your Claude skills directory:
 ---
 name: Percy Visual Testing
 description: Execute Percy visual testing workflows, analyze visual diffs, and manage visual regression testing for web applications
-tools: [bash, read_file, write_file, edit_file]
 ---
 
 # Percy Visual Testing Skill

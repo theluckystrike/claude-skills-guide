@@ -30,8 +30,8 @@ Before starting a coding session, establish context to help Claude Code understa
 
 ```bash
 # Initialize a focused pairing session
-claude --prompt "I'm working on a React authentication flow. 
-We're implementing password reset functionality. 
+claude --print "I'm working on a React authentication flow.
+We're implementing password reset functionality.
 Key files: src/auth/reset-password.tsx, src/api/auth.ts.
 Current blockers: handling token expiration and email validation."
 ```
@@ -88,9 +88,9 @@ For larger features, establish a rhythm between implementation and review:
 
 ```bash
 # Start a session focused on a specific feature
-claude --project /path/to/project --context "Feature: 
-User dashboard with analytics. We're building the 
-initial MVP. I'll implement, you review each section."
+# Open Claude Code in your project directory, then describe:
+# "Feature: User dashboard with analytics. We're building the
+# initial MVP. I'll implement, you review each section."
 ```
 
 ### Bug Debugging Sessions
@@ -98,10 +98,10 @@ initial MVP. I'll implement, you review each section."
 When debugging, provide Claude Code with the error context and your investigation progress:
 
 ```bash
-claude --prompt "Debug help needed: 
+claude --print "Debug help needed:
 - Error: 'Cannot read property map of undefined'
 - Location: UserList.tsx line 42
-- What I've tried: Added console.log, checked props 
+- What I've tried: Added console.log, checked props
 - UserList receives data from useUsers hook
 - The issue started after merging PR #234"
 ```
@@ -114,7 +114,7 @@ Use Claude Code as a first-pass reviewer before human review:
 
 ```bash
 # Review recent changes
-claude --prompt "Review my recent changes in this 
+claude --print "Review my recent changes in this
 feature branch. Check for:
 1. Security vulnerabilities
 2. Performance issues
@@ -131,8 +131,8 @@ This catches obvious issues early and frees human reviewers to focus on architec
 Claude Skills enhance pair programming by encapsulating domain-specific knowledge. For example, the **tdd-driven-development** skill guides you through test-driven development practices:
 
 ```bash
-# Invoke a skill for structured guidance
-claude --skill tdd-driven-development
+# Invoke a skill for structured guidance using slash command
+/tdd-driven-development
 ```
 
 Skills provide reusable patterns for common workflows, making your pairing sessions more efficient over time.
@@ -173,8 +173,8 @@ Keep a session log for future reference:
 
 ```bash
 # After completing a complex implementation
-claude --prompt "Summarize the key architectural 
-decisions we made in this session and save to 
+claude --print "Summarize the key architectural
+decisions we made in this session and save to
 docs/session-notes/YYYY-MMDD-payment-webhook.md"
 ```
 

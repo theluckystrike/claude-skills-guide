@@ -96,7 +96,6 @@ Create custom Claude skills that understand your specific infrastructure pattern
 ---
 name: infra-deploy
 description: Deploy infrastructure using our standard patterns
-tools: [bash, read_file, write_file]
 ---
 
 You are a platform engineering assistant specializing in our infrastructure deployment patterns.

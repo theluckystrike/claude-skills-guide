@@ -43,7 +43,7 @@ The foundation of any good PR review is understanding what changed. Claude Code 
 
 ```bash
 # Start a review session with the PR branch
-claude "Review the changes in this branch compared to main. Focus on:
+claude --print "Review the changes in this branch compared to main. Focus on:
 1. What files changed and why (check commit messages)
 2. Any potential security issues
 3. Test coverage for new code
@@ -57,7 +57,7 @@ When you share the diff output with Claude Code, it can identify patterns that m
 Consider a PR that adds user authentication to an open source project. Here's how to use Claude Code for a security-focused review:
 
 ```
-claude "Review this authentication PR for security issues. Check:
+claude --print "Review this authentication PR for security issues. Check:
 - Password handling (never stored in plain text)
 - Session management security
 - Input validation on login forms
@@ -128,7 +128,7 @@ Open source projects receive various PR types—bug fixes, features, documentati
 For bug fixes, focus on verifying the fix actually solves the problem:
 
 ```
-claude "Review this bug fix PR. Verify:
+claude --print "Review this bug fix PR. Verify:
 1. The root cause is correctly identified
 2. The fix addresses the root cause, not just symptoms
 3. Similar issues might exist elsewhere in the codebase
@@ -142,7 +142,7 @@ Claude Code can also search for similar patterns elsewhere in the codebase that 
 New features require more extensive review:
 
 ```
-claude "Review this feature PR. Check:
+claude --print "Review this feature PR. Check:
 1. Feature meets the stated requirements
 2. API design is consistent with existing patterns
 3. Error handling is comprehensive
@@ -155,7 +155,7 @@ claude "Review this feature PR. Check:
 Refactoring PRs need special attention to ensure no behavior changes:
 
 ```
-claude "Review this refactoring PR. Verify:
+claude --print "Review this refactoring PR. Verify:
 1. No behavioral changes introduced
 2. All existing tests pass
 3. The refactoring improves code quality
@@ -167,7 +167,7 @@ claude "Review this refactoring PR. Verify:
 One of Claude Code's greatest strengths for open source maintainers is helping craft feedback that's helpful rather than discouraging. After analyzing code, ask it to help you communicate:
 
 ```
-claude "Help me write constructive feedback for this PR. The issues I found are:
+claude --print "Help me write constructive feedback for this PR. The issues I found are:
 - Missing error handling in the API calls
 - No tests for the new utility function
 - Inconsistent naming with the rest of the codebase
@@ -204,7 +204,7 @@ Some PR checks are repetitive and automatable. Use Claude Code to handle them co
 
 ```bash
 # Check for common issues automatically
-claude "Quick scan this PR for:
+claude --print "Quick scan this PR for:
 - console.log or debug statements
 - TODO comments left behind
 - Missing semicolons in JavaScript
@@ -223,7 +223,7 @@ For projects with high PR volumes, consider integrating Claude Code analysis int
 gh pr diff 123 > pr-diff.txt
 
 # Analyze with Claude Code
-claude "Review the changes in pr-diff.txt using our review checklist"
+claude --print "Review the changes in pr-diff.txt using our review checklist"
 ```
 
 This workflow scales maintainer time while ensuring consistent review quality.

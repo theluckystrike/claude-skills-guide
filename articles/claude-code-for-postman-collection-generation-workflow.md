@@ -289,7 +289,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Generate Collection
         run: |
-          claude-code -p "Generate Postman collection from openapi.yaml"
+          claude --print "Generate Postman collection from openapi.yaml"
       - name: Upload Collection
         uses: actions/upload-artifact@v4
         with:
