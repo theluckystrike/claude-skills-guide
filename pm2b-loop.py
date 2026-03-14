@@ -46,25 +46,25 @@ def assign_cluster(filename):
     if re.search(r'protocol-updates|mcp-server|build.*ai.*assistant|build.*agent', fn_stem):
         return "advanced"
 
-    # Troubleshooting: error fixes, debug guides, permission errors
+    # Troubleshooting: error fixes, debug guides, permission errors (runs BEFORE integrations)
     if re.search(r'troubleshoot|fix-guide|debug.*step|crash.*debug|permission.*denied|infinite.*loop|slow.*performance|not.*showing|not.*saving|not.*triggering|output.*format.*broken|permission.*scope', fn_stem):
         return "troubleshooting"
+    if re.search(r'error.*fix|error.*solution|error.*how|error.*debug|-error-fix|-fix-2026|error-handling|timeout.*error|memory.*limit.*exceed|output.*length.*error|circular.*depend.*error|invalid.*yaml.*error|context.*window.*exceed.*fix', fn_stem):
+        return "troubleshooting"
+    if re.search(r'crashes.*when|crash.*loading|silently.*fail|fail.*in.*ci|work.*locally.*but.*fail|not-found.*how.*fix|not-recog|not.*invoc.*fail|produce.*different.*output|skill.*take.*so.*long', fn_stem):
+        return "troubleshooting"
+    if re.search(r'^why-does|^why-is-my|^how-to-fix|^how-do-i-debug|^how-do-i-rollback', fn_stem):
+        return "troubleshooting"
 
-    # Integrations: specific platform/tool integrations
-    if re.search(r'n8n|zapier|notion|linear|supabase|github.*action|gitlab|jenkins|slack.*integration|airtable|monday|hubspot|discord.*bot|webhook|api.*integration', fn_stem):
+    # Integrations: specific platform/tool integrations (expanded; excludes bare 'teams'/'terraform' to avoid false positives)
+    if re.search(r'n8n|zapier|notion|supabase|github.*action|gitlab|jenkins|slack.*integration|airtable|monday|hubspot|discord.*bot|webhook|api.*integration', fn_stem):
         return "integrations"
-
-    # Getting started: error/troubleshooting/security/permissions
-    if re.search(r'error|fix|debug|crash|troubleshoot|not-showing|not-saving|not-triggering|permission-denied|tool-not-found|context-window-exceeded|why-is-my|slow-performance|speed-up', fn_stem):
-        return "getting-started"
-    if re.search(r'security.*guide|compliance.*guide|gdpr|hipaa|soc2|owasp|csp.*guide|secret-scanning|credential|permissions-model|input-valid|sanitiz|segfault|hooks-system', fn_stem):
-        return "getting-started"
-    # Getting started: format/yaml/what-is/install/explained
-    if re.search(r'skill-md-file|skill.*md.*format|skill.*format.*spec|write-a-skill|how-to-write.*skill|yaml-front-matter|front-matter|what-is-claude|getting-started|install|explained-simply|directory-where', fn_stem):
-        return "getting-started"
-    # Getting started: auto-invocation
-    if re.search(r'auto-invocation|auto.invoc|how-it-works|actually-works', fn_stem):
-        return "getting-started"
+    if re.search(r'github|gitlab|vscode|jetbrains|vim|neovim|emacs|slack|discord|ms-teams|microsoft-teams|jira|confluence|figma|vercel|netlify|railway|render|fly-io|heroku|cloudflare|helm', fn_stem):
+        return "integrations"
+    if re.search(r'with-github|with-gitlab|with-slack|with-linear|with-supabase|with-vercel|with-n8n|with-notion|with-discord|with-jira', fn_stem):
+        return "integrations"
+    if re.search(r'with-linear|linear.*tutorial|linear.*integration|linear.*project', fn_stem):
+        return "integrations"
 
     # Workflows: TDD, testing, CI/CD, automation workflows, code review, contribute/share
     if re.search(r'tdd|automated-testing|test-driven|ci-cd|github-actions|pull-request-review|code-review|automate.*review|review.*automat|selenium|browser-testing', fn_stem):
@@ -75,20 +75,33 @@ def assign_cluster(filename):
         return "workflows"
     if re.search(r'documentation-workflow|code-documentation|automate.*doc', fn_stem):
         return "workflows"
+    if re.search(r'automate.*report|automate.*review|automate.*pull|batch.*processing|how-to-automate|how-to-share', fn_stem):
+        return "workflows"
+
+    # Best of (before use-cases so best-for-X articles are captured here)
+    if re.search(r'^best-|^top-|developers-2026|skills-2026|install-first|worth-it|honest.*review', fn_stem):
+        return "best-of"
 
     # Use cases: frontend/UI/design/mobile/backend frameworks
     if re.search(r'frontend|frontend-design|ui\b|react|canvas|theme|astro|flutter|dart|kotlin|spring-boot|scala|semantic-html|accessibility|bundle-size|express.*fastify|fastify|webpack|vite', fn_stem):
         return "use-cases"
-    # Use cases: devops/infra/integrations/databases
-    if re.search(r'devops|deployment|infra.*code|terraform|docker|kubernetes|aws-lambda|serverless|zapier|supabase|notion|linear|mongodb|postgresql|vercel|gcp|google-cloud|azure', fn_stem):
+    # Use cases: devops/infra/databases
+    if re.search(r'devops|deployment|infra.*code|terraform|docker|kubernetes|aws-lambda|serverless|mongodb|postgresql|gcp|google-cloud|azure', fn_stem):
         return "use-cases"
     # Use cases: data/spreadsheet/fullstack/reports
-    if re.search(r'data-analysis|data-science|jupyter|xlsx|spreadsheet|client-report|full-stack|saas-mvp|startup|solopreneur|solo-developer|freelancer|writing-and-content|seo-content|slack|api-guide|optimize.*prompt|prompt.*accuracy', fn_stem):
+    if re.search(r'data-analysis|data-science|jupyter|xlsx|spreadsheet|full-stack|saas-mvp|startup|solopreneur|solo-developer|freelancer|writing-and-content|seo-content|api-guide|optimize.*prompt|prompt.*accuracy', fn_stem):
+        return "use-cases"
+    # Use cases: for-X / building-X-with / using-claude / claude-for patterns
+    if re.search(r'for-\w+|using-claude|with-claude|claude-for|building-\w+-with', fn_stem):
         return "use-cases"
 
-    # Best of
-    if re.search(r'^best-|^top-|developers-2026|skills-2026|install-first|worth-it|honest.*review', fn_stem):
-        return "best-of"
+    # Getting started: only install/what-is/format/how-it-works/security-basics
+    if re.search(r'skill-md-file|skill.*md.*format|skill.*format.*spec|write-a-skill|how-to-write.*skill|yaml-front-matter|front-matter|what-is-claude|getting-started|install|explained-simply|directory-where', fn_stem):
+        return "getting-started"
+    if re.search(r'auto-invocation|auto.invoc|how-it-works|actually-works', fn_stem):
+        return "getting-started"
+    if re.search(r'security.*guide|compliance.*guide|gdpr|hipaa|soc2|owasp|csp.*guide|secret-scanning|credential|permissions-model|input-valid|sanitiz|segfault|hooks-system', fn_stem):
+        return "getting-started"
 
     return "best-of"
 

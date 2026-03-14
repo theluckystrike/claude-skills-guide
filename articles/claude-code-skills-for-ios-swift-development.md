@@ -37,7 +37,7 @@ While there are no iOS-specific built-in skills like `/swift`, `/xcode`, or `/sw
 
 ## Test-Driven Development with the TDD Skill
 
-The TDD skill transforms your iOS development approach. Activate it in your Claude session:
+The [TDD skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) transforms your iOS development approach. Activate it in your Claude session:
 
 ```
 /tdd
@@ -146,7 +146,7 @@ struct SettingsView: View {
 
 ## Documentation Generation for iOS Projects
 
-The `pdf` skill helps generate documentation for your iOS project. After completing feature development, use it to create API documentation or architecture guides:
+The `pdf` skill helps generate documentation for your iOS project. After completing feature development, use it to create API documentation or architecture guides. For similar cross-platform mobile workflows, see [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/articles/claude-code-dart-flutter-cross-platform-development-guide/).
 
 ```
 /pdf
@@ -164,7 +164,7 @@ Use this to generate Swift documentation with proper formatting, including code 
 
 ## Creating Test Suites with Claude
 
-iOS testing involves multiple layers: unit tests, UI tests, and integration tests. Claude helps generate comprehensive test coverage.
+iOS testing involves multiple layers: unit tests, UI tests, and integration tests. Claude helps generate [comprehensive test coverage](/claude-skills-guide/articles/claude-code-skills-for-qa-engineers-automating-test-suites/).
 
 For UI Testing with XCTest:
 
@@ -252,6 +252,13 @@ class NetworkViewController: UIViewController {
 
 4. **Specify iOS version targets** — When asking for Swift code, mention your minimum deployment target for appropriate API usage.
 
-5. **Combine skills for workflows** — Chain multiple skills together. Use tdd to build features, then pdf to document the implementation.
+5. **Combine skills for workflows** — Chain multiple skills together. Use tdd to build features, then pdf to document the implementation. Explore the [use cases hub](/claude-skills-guide/use-cases-hub/) for more domain-specific workflow guides.
+
+## Related Reading
+
+- [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/articles/claude-code-dart-flutter-cross-platform-development-guide/) — mobile cross-platform patterns with Claude Code
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — full TDD skill reference and workflow
+- [Claude Code Skills for QA Engineers Automating Test Suites](/claude-skills-guide/articles/claude-code-skills-for-qa-engineers-automating-test-suites/) — broader test automation coverage
+- [Claude Skill .md File Format: Full Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — understanding the skill file format
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

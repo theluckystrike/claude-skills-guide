@@ -188,6 +188,9 @@ Major cloud platforms are integration targets for skills that manage infrastruct
 | [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) | Setting up MCP servers to extend skill capabilities |
 | [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) | When to use MCP vs a skill for integrations |
 | [How to Share Claude Skills with Your Team](/claude-skills-guide/articles/how-to-share-claude-skills-with-your-team/) | Distributing skills across a team or organization |
+| [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) | Build matrix strategies in GitHub Actions workflows with Claude |
+| [Claude Code GitHub Codespaces Cloud Development Workflow](/claude-skills-guide/articles/claude-code-github-codespaces-cloud-development-workflow/) | Running Claude Code skills inside GitHub Codespaces environments |
+| [Claude Code GitLab CI Pipeline Docker Registry Tutorial](/claude-skills-guide/articles/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/) | Set up GitLab CI pipelines with Docker registry using Claude Code |
 
 ---
 

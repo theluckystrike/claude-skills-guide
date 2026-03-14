@@ -46,32 +46,61 @@ build_content_map() {
     # Check patterns in order (most specific first)
     if echo "$fn_lower" | grep -qE 'vs|comparison|cursor|gpt|copilot|replit|amazon|windsurf|bolt'; then
       cluster="comparisons"
-    elif echo "$fn_lower" | grep -qE 'skill.*format|write.*skill|skill.*md|yaml|front.matter'; then
-      cluster="getting-started"
-    elif echo "$fn_lower" | grep -qE 'auto.invoc|how.*work|what.*is|getting.started|install'; then
-      cluster="getting-started"
+    # Advanced: MCP, agents, orchestration, token/context optimization
+    elif echo "$fn_lower" | grep -qE 'mcp|multi-agent|orchestrat|subagent|agent-sandbox|building-production.*agent|stateful.agent|personal.*assistant.*guide|langchain|tool.use.*function|function.calling|worktree'; then
+      cluster="advanced"
+    elif echo "$fn_lower" | grep -qE 'token-optim|api-cost|context-window-management|memory.*context|context.*architecture|supermemory|persistent-context|extended-thinking'; then
+      cluster="advanced"
+    elif echo "$fn_lower" | grep -qE 'protocol-updates|mcp-server|build.*ai.*assistant|build.*agent'; then
+      cluster="advanced"
+    # Troubleshooting: runs BEFORE integrations to catch error/debug articles mentioning platforms
     elif echo "$fn_lower" | grep -qE 'troubleshoot|fix-guide|debug.*step|crash.*debug|permission.*denied|infinite.*loop|slow.*performance|not.*showing|not.*saving|not.*triggering|output.*format.*broken|permission.*scope'; then
       cluster="troubleshooting"
-    elif echo "$fn_lower" | grep -qE 'n8n|zapier|notion|linear|supabase|github.*action|gitlab|jenkins|slack.*integration|airtable|monday|hubspot|discord.*bot|webhook|api.*integration'; then
+    elif echo "$fn_lower" | grep -qE 'error.*fix|error.*solution|error.*how|error.*debug|-error-fix|-fix-2026|error-handling|timeout.*error|memory.*limit.*exceed|output.*length.*error|circular.*depend.*error|invalid.*yaml.*error|context.*window.*exceed.*fix'; then
+      cluster="troubleshooting"
+    elif echo "$fn_lower" | grep -qE 'crashes.*when|crash.*loading|silently.*fail|fail.*in.*ci|work.*locally.*but.*fail|not-found.*how.*fix|not-recog'; then
+      cluster="troubleshooting"
+    elif echo "$fn_lower" | grep -qE '^why-does|^why-is-my|^how-to-fix|^how-do-i-debug|^how-do-i-rollback'; then
+      cluster="troubleshooting"
+    # Integrations: platforms and tools (no bare 'teams'/'terraform' to avoid false positives)
+    elif echo "$fn_lower" | grep -qE 'n8n|zapier|notion|supabase|github.*action|gitlab|jenkins|slack.*integration|airtable|monday|hubspot|discord.*bot|webhook|api.*integration'; then
       cluster="integrations"
-    elif echo "$fn_lower" | grep -qE 'error|fix|debug|crash|troubleshoot|permission|not.work'; then
-      cluster="getting-started"
-    elif echo "$fn_lower" | grep -qE 'tdd|test|automat|pipeline|ci-cd|review'; then
+    elif echo "$fn_lower" | grep -qE 'github|gitlab|vscode|jetbrains|vim|neovim|emacs|slack|discord|ms-teams|microsoft-teams|jira|confluence|figma|vercel|netlify|railway|render|fly-io|heroku|cloudflare|helm'; then
+      cluster="integrations"
+    elif echo "$fn_lower" | grep -qE 'with-github|with-gitlab|with-slack|with-linear|with-supabase|with-vercel|with-n8n|with-notion|with-discord|with-jira'; then
+      cluster="integrations"
+    elif echo "$fn_lower" | grep -qE 'with-linear|linear.*tutorial|linear.*integration|linear.*project'; then
+      cluster="integrations"
+    # Workflows: TDD, CI/CD, automation, code review, contribute/share
+    elif echo "$fn_lower" | grep -qE 'tdd|automated-testing|test-driven|ci-cd|github-actions|pull-request-review|code-review|automate.*review|review.*automat|selenium|browser-testing'; then
       cluster="workflows"
-    elif echo "$fn_lower" | grep -qE 'contribute|open.source|share|publish|community'; then
+    elif echo "$fn_lower" | grep -qE 'contribute|open-source|share.*team|team.*share'; then
       cluster="workflows"
-    elif echo "$fn_lower" | grep -qE 'mcp|server|protocol|agent|orchestrat|subagent|multi.agent'; then
-      cluster="advanced"
-    elif echo "$fn_lower" | grep -qE 'token|cost|optim|context|window|memory|supermemory'; then
-      cluster="advanced"
-    elif echo "$fn_lower" | grep -qE 'frontend|ui|react|design|canvas|theme'; then
-      cluster="use-cases"
-    elif echo "$fn_lower" | grep -qE 'devops|deploy|infra|terraform|docker|kubernetes'; then
-      cluster="use-cases"
-    elif echo "$fn_lower" | grep -qE 'data|xlsx|spreadsheet|analysis|report|pdf'; then
-      cluster="use-cases"
-    elif echo "$fn_lower" | grep -qE 'best.*skill|top.*skill|2026'; then
+    elif echo "$fn_lower" | grep -qE 'workflow.*guide|workflow.*tutorial|workflow.*tips|-workflow|automated-blog|automated-dep|automated-social|competitive-analysis|daily-standup|automated-github|seo-content.*workflow|client-report|email-draft|benchmarking|migration.*workflow'; then
+      cluster="workflows"
+    elif echo "$fn_lower" | grep -qE 'documentation-workflow|code-documentation|automate.*doc'; then
+      cluster="workflows"
+    elif echo "$fn_lower" | grep -qE 'automate.*report|automate.*review|automate.*pull|batch.*processing|how-to-automate|how-to-share'; then
+      cluster="workflows"
+    # Best of (before use-cases so best-for-X articles land here)
+    elif echo "$fn_lower" | grep -qE '^best-|^top-|developers-2026|skills-2026|install-first|worth-it|honest.*review'; then
       cluster="best-of"
+    # Use cases: frameworks, devops/infra, data, building-X patterns
+    elif echo "$fn_lower" | grep -qE 'frontend|ui|react|canvas|theme|astro|flutter|dart|kotlin|spring-boot|scala|semantic-html|accessibility|bundle-size|fastify|webpack|vite'; then
+      cluster="use-cases"
+    elif echo "$fn_lower" | grep -qE 'devops|deployment|infra.*code|terraform|docker|kubernetes|aws-lambda|serverless|mongodb|postgresql|gcp|google-cloud|azure'; then
+      cluster="use-cases"
+    elif echo "$fn_lower" | grep -qE 'data-analysis|data-science|jupyter|xlsx|spreadsheet|full-stack|saas-mvp|startup|solopreneur|solo-developer|freelancer|writing-and-content|seo-content|api-guide'; then
+      cluster="use-cases"
+    elif echo "$fn_lower" | grep -qE 'for-[a-z]|using-claude|with-claude|claude-for|building-[a-z].*-with'; then
+      cluster="use-cases"
+    # Getting started: install/what-is/format/how-it-works/security-basics only
+    elif echo "$fn_lower" | grep -qE 'skill-md-file|skill.*md.*format|skill.*format.*spec|write-a-skill|how-to-write.*skill|yaml-front-matter|front-matter|what-is-claude|getting-started|install|explained-simply|directory-where'; then
+      cluster="getting-started"
+    elif echo "$fn_lower" | grep -qE 'auto-invocation|auto.invoc|how-it-works|actually-works'; then
+      cluster="getting-started"
+    elif echo "$fn_lower" | grep -qE 'security.*guide|compliance.*guide|gdpr|hipaa|soc2|owasp|csp.*guide|secret-scanning|credential|permissions-model|input-valid|sanitiz|hooks-system'; then
+      cluster="getting-started"
     fi
 
     # Check for Related Reading section

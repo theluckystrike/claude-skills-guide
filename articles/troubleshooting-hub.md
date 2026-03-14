@@ -175,6 +175,25 @@ The most effective prevention strategies:
 | [Claude Skills Context Window Management Best Practices](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/) | Best practices for keeping context usage efficient |
 | [Claude Skills Memory and Context Architecture Guide](/claude-skills-guide/articles/claude-skills-memory-and-context-architecture-explained/) | How memory and context work under the hood |
 | [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) | Token-saving techniques that also prevent context overflow |
+| [Claude Code Context Window Exceeded After Loading Skill Fix](/claude-skills-guide/articles/claude-code-context-window-exceeded-after-loading-skill-fix/) | Fix context overflow errors that trigger immediately on skill load |
+| [Claude Code Skill Not Found in Skills Directory: How to Fix](/claude-skills-guide/articles/claude-code-skill-not-found-in-skills-directory-how-to-fix/) | Resolve file-not-found errors when skills fail to locate themselves |
+| [Claude Code Skill Circular Dependency Detected Error Fix](/claude-skills-guide/articles/claude-code-skill-circular-dependency-detected-error-fix/) | Diagnose and break circular dependency chains in skill files |
+| [Claude Code Skill Invalid YAML Syntax Error: How to Debug](/claude-skills-guide/articles/claude-code-skill-invalid-yaml-syntax-error-how-to-debug/) | Step-by-step YAML debugging for malformed front matter |
+| [Claude Code Skill Exceeded Maximum Output Length Error Fix](/claude-skills-guide/articles/claude-code-skill-exceeded-maximum-output-length-error-fix/) | Fix output truncation errors and manage long skill responses |
+| [Claude Code Skill Memory Limit Exceeded Process Killed Fix](/claude-skills-guide/articles/claude-code-skill-memory-limit-exceeded-process-killed-fix/) | Resolve OOM kills during skill execution |
+| [Claude Code Skill Timeout Error: How to Increase the Limit](/claude-skills-guide/articles/claude-code-skill-timeout-error-how-to-increase-the-limit/) | Configure and raise skill execution timeout thresholds |
+| [Claude Code Permission Denied When Executing Skill Commands](/claude-skills-guide/articles/claude-code-permission-denied-when-executing-skill-commands/) | Fix permission errors specifically for skill command execution |
+| [Claude Code Accessible Forms: Validation Error Handling Guide](/claude-skills-guide/articles/claude-code-accessible-forms-validation-error-handling-guide/) | Handle form validation errors accessibly with Claude Code |
+| [Claude Code Express Middleware Error Handling Patterns](/claude-skills-guide/articles/claude-code-express-middleware-error-handling-patterns-guide/) | Error handling patterns for Express middleware using Claude skills |
+| [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/articles/how-do-i-debug-a-claude-skill-that-silently-fails/) | Techniques for surfacing hidden failures in Claude skill execution |
+| [How Do I Rollback a Bad Claude Skill Update Safely](/claude-skills-guide/articles/how-do-i-rollback-a-bad-claude-skill-update-safely/) | Safe rollback strategies when a skill update breaks things |
+| [Why Does Claude Code Ignore My Skill MD File Entirely](/claude-skills-guide/articles/why-does-claude-code-ignore-my-skill-md-file-entirely/) | Root causes and fixes when Claude Code skips your skill file |
+| [Why Does Claude Code Not Recognize My Custom Skill Name?](/claude-skills-guide/articles/why-does-claude-code-not-recognize-my-custom-skill-name/) | Naming rules and conflicts that cause skill name resolution failures |
+| [Why Does Claude Code Reject My Skill Instruction Block](/claude-skills-guide/articles/why-does-claude-code-reject-my-skill-instruction-block/) | Common instruction block errors that cause silent rejections |
+| [Why Does Claude Code Skill Take So Long to Initialize?](/claude-skills-guide/articles/why-does-claude-code-skill-take-so-long-to-initialize/) | Diagnosing slow skill initialization at startup |
+| [Why Does Claude Skill Auto Invocation Fail Intermittently?](/claude-skills-guide/articles/why-does-claude-skill-auto-invocation-fail-intermittently/) | Fix intermittent auto-invocation failures in Claude skills |
+| [Why Does Claude Skill Produce Different Output Each Run](/claude-skills-guide/articles/why-does-claude-skill-produce-different-output-each-run/) | Understand output variance and how to enforce determinism |
+| [Why Does My Claude Skill Work Locally But Fail in CI?](/claude-skills-guide/articles/why-does-my-claude-skill-work-locally-but-fail-in-ci/) | Environment differences that cause local-to-CI skill failures |
 
 ---
 
