@@ -1,11 +1,13 @@
 ---
 layout: default
 title: "Claude Code Chaos Engineering Testing Automation Guide"
-description: "Practical guide to implementing chaos engineering testing automation with Claude Code. Learn to build resilient systems using Claude skills and automated testing workflows."
+description: "Implement chaos engineering testing automation with Claude Code. Build resilient systems using Claude skills and automated testing workflows."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, chaos-engineering, testing, automation, resilience, devops]
-author: theluckystrike
+tags: [claude-code, claude-skills, chaos-engineering, testing, automation, resilience, devops]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Chaos Engineering Testing Automation Guide
@@ -101,7 +103,7 @@ Integrate this with your CI/CD system to run experiments automatically. The `pdf
 
 ## Using Claude Skills for Experiment Design
 
-When designing chaos experiments, leverage multiple Claude skills together. The `frontend-design` skill helps you visualize dashboard metrics during experiments. The `supermemory` skill tracks experiment results over time, building institutional knowledge about your system's failure modes.
+When designing chaos experiments, use multiple Claude skills together. The `frontend-design` skill helps you visualize dashboard metrics during experiments. The `supermemory` skill tracks experiment results over time, building institutional knowledge about your system's failure modes.
 
 A practical experiment design process:
 

@@ -207,6 +207,6 @@ EOF
 
 - [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Reference for the exact YAML front matter fields that control how skills are loaded and matched
 - [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — A guide for writing skills that actually fire, covering trigger phrases, descriptions, and invocation testing
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — A deep dive into the matching algorithm that determines whether a skill fires automatically or needs manual invocation
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How the matching algorithm determines whether a skill fires automatically or needs manual invocation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -196,7 +196,7 @@ promql --format=table 'histogram_quantile(0.99, rate(node_cpu_seconds_total{mode
 
 Claude Code skills accelerate SRE workflows across multiple domains: incident response automation, log analysis, monitoring configuration, on-call management, chaos engineering, and capacity planning. The key is describing your infrastructure and goals clearly, then iterating on the generated code.
 
-Start by integrating Claude into your most frequent SRE tasks. Build reusable scripts for common incidents, standardize your log queries, and create templates for monitoring dashboards. Over time, these scripts become institutional knowledge that your entire team can leverage.
+Start by integrating Claude into your most frequent SRE tasks. Build reusable scripts for common incidents, standardize your log queries, and create templates for monitoring dashboards. Over time, these scripts become institutional knowledge that your entire team can share and build on.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

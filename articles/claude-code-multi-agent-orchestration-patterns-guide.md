@@ -20,7 +20,7 @@ This guide explores practical patterns for orchestrating multiple agents using C
 
 Claude Code's skill system lets you define specialized instructions that shape how Claude behaves in different contexts. Each skill acts like a focused agent with specific expertise. The key to multi-agent orchestration lies in how you sequence, nest, and communicate between these skills.
 
-When you invoke a skill with `/skill-name`, Claude loads that specific instruction set. For orchestration, you combine multiple skills through clear transitions, shared context, and structured output formats that let one "agent" pass work to another seamlessly.
+When you invoke a skill with `/skill-name`, Claude loads that specific instruction set. For orchestration, you combine multiple skills through clear transitions, shared context, and structured output formats that let one "agent" pass work to another without overlap.
 
 ## Pattern 1: Sequential Agent Pipeline
 

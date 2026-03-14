@@ -9,6 +9,7 @@ author: theluckystrike
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Claude Code Skills for Creating GitHub Actions Workflows
 
@@ -39,7 +40,7 @@ When generating GitHub Actions workflows, first determine:
 Generate a workflow that matches your project's actual setup, not a generic template.
 ```
 
-This approach ensures the generated workflow integrates seamlessly with your existing codebase.
+This approach ensures the generated workflow integrates with your existing codebase.
 
 ## Validating Workflow Files
 
@@ -167,3 +168,4 @@ Claude Code skills transform GitHub Actions workflow development from manual YAM
 Start with one skill focused on your most common workflow type, then expand as you identify more opportunities for automation. The investment pays dividends in reduced CI/CD maintenance and fewer pipeline failures.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
