@@ -76,16 +76,17 @@ This comprehensive restriction ensures your automated agents cannot execute shel
 
 ### Skill-Specific Tool Restrictions
 
-Individual skills can override the global configuration using their own tool declarations. The `frontend-design` skill might allow file operations but restrict shell access:
+To restrict tool access for specific workflows, you can set `disallowedTools` in your project-level `.claude/settings.json`. For example, to restrict the session to only file reading and pattern matching when using the `frontend-design` skill:
 
-```yaml
----
-tools: [Read, Glob, Grep, Write]
-disallowedTools: [Bash, ToolUse]
----
+```json
+{
+  "permissions": {
+    "deny": ["Bash", "Write"]
+  }
+}
 ```
 
-This creates a skill that can generate and modify design files but cannot execute build commands or run external programs—appropriate for a skill focused on design specification and implementation.
+This creates a session that can read and analyze design files but cannot execute build commands or write files—appropriate for a review-only design workflow.
 
 ## Integration with MCP Servers
 

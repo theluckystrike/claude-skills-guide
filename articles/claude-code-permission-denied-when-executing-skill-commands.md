@@ -204,10 +204,6 @@ When creating custom skills, use the skill-md format with proper YAML front matt
 ---
 name: my-productivity-skill
 description: Automates daily development tasks
-commands:
-  - name: daily-standup
-    execute: ./scripts/standup.sh
-    requires: [git, curl]
 ---
 ```
 

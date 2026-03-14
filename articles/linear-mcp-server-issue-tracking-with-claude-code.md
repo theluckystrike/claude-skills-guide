@@ -127,10 +127,9 @@ You can script common issue management patterns. Create a skill that handles rou
 ---
 name: daily-issue-update
 description: Update Linear issues with daily progress
-tools: [createIssue, updateIssue, listIssues]
 ---
 
-For each issue in the current sprint, check if there's been activity. If the issue has been waiting for review for more than 2 days, add a comment requesting review. If an issue is blocked, update the status to reflect that and notify the assignee.
+For each issue in the current sprint, check if there's been activity using the Linear MCP tools. If the issue has been waiting for review for more than 2 days, add a comment requesting review. If an issue is blocked, update the status to reflect that and notify the assignee.
 ```
 
 This automation reduces manual status updates and keeps your team aware of bottlenecks. You can explore even more patterns in the [Claude skills with Linear project management tutorial](/claude-skills-guide/claude-skills-with-linear-project-management-tutorial/).
