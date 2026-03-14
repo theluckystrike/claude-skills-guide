@@ -153,3 +153,10 @@ For persistent storage of Claude Code's project memory and settings, use named v
 Running Claude Code inside Docker containers transforms your development workflow by providing isolated, reproducible, and shareable AI-assisted development environments. Whether you're working on team projects, experimenting with new technologies, or maintaining consistent development setups across machines, Docker + Claude Code offers a powerful combination that enhances productivity while keeping your host system clean and organized.
 
 Start by creating a basic Docker setup, then gradually add complexity as you become comfortable with the workflow. The investment in setting up your containerized development environment pays dividends in consistency and collaboration capabilities.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

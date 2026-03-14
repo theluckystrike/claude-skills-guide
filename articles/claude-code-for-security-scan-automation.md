@@ -5,6 +5,7 @@ description: "Learn how to automate security scans using Claude Code. Practical 
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-for-security-scan-automation/
+categories: [guides]
 ---
 
 # Claude Code for Security Scan Automation
@@ -230,5 +231,12 @@ The real power of Claude Code for security automation comes from combining these
 For teams using the frontend-design skill to build React applications, adding security scanning to the component generation workflow catches issues like unsafe DOM manipulation or missing CSRF protections early.
 
 The key is treating security scanning as code—version controlled, automated, and integrated into your development workflow. Claude Code provides the automation layer that makes this practical without adding friction to your development process.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

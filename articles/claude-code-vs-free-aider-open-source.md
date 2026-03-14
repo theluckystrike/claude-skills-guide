@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code vs Free Aider Open Source: Which One Should You Choose?"
-description: "A comprehensive comparison between Claude Code with its powerful skills system and free Aider open source, focusing on features, capabilities, and practical use cases for developers."
+title: "Claude Code vs Free Aider Open Source: Which One Should."
+description: "A comprehensive comparison between Claude Code with its powerful skills system and free Aider open source, focusing on features, capabilities, and."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-vs-free-aider-open-source/
@@ -120,3 +120,10 @@ Both Claude Code and Aider free are capable tools that can enhance your developm
 The investment in learning Claude Code's skills system pays dividends in the form of reusable automation that grows more valuable as your projects and workflows mature.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+

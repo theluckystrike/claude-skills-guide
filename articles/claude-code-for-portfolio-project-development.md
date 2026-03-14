@@ -5,6 +5,7 @@ description: "A practical guide to using Claude Code for building professional p
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-for-portfolio-project-development/
+categories: [guides]
 ---
 
 Building a portfolio that showcases your technical abilities requires more than just writing code—it demands strategic planning, consistent quality, and the right tools. Claude Code, the command-line interface for Claude, offers developers a powerful way to accelerate portfolio project development while maintaining high standards. This guide explores practical applications of Claude Code specifically for portfolio work, helping you create projects that stand out to employers and collaborators.
@@ -145,5 +146,12 @@ Track maintenance activities in your project documentation:
 Claude Code transforms portfolio development from a tedious chore into an efficient process that produces professional results. By leveraging specialized skills for documentation, testing, design, and deployment, you create portfolio projects that demonstrate not just coding ability, but professional software engineering practices.
 
 Remember that your portfolio tells a story about who you are as a developer. Use Claude Code strategically to tell that story effectively, showing employers exactly why they should invest in your capabilities.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

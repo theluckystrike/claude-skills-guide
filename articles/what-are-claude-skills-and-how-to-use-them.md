@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "What Are Claude Skills and How to Use Them"
-description: "Learn what Claude skills are, how they work in Claude Code, and step-by-step instructions for using built-in and custom skills to automate your development workflow."
+description: "Learn what Claude skills are, how they work in Claude Code, and step-by-step instructions for using built-in and custom skills to automate your."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /what-are-claude-skills-and-how-to-use-them/

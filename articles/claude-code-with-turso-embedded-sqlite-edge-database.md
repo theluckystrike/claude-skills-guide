@@ -3,7 +3,7 @@ layout: default
 title: "Claude Code with Turso Embedded SQLite Edge Database"
 description: "Learn how to use Claude Code skills to work with Turso, the embedded SQLite database designed for edge computing. Practical examples for building."
 date: 2026-03-14
-categories: [claude-code, database, turso, sqlite, edge-computing]
+categories: [guides, database, turso, sqlite, edge-computing]
 tags: [claude-code, turso, libsql, sqlite, edge-database, embedded-database, serverless, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true

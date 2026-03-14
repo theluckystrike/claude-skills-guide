@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Batch File Processing Workflow"
-description: "Learn how to automate repetitive file operations with Claude Code. This guide covers batch processing patterns, skill composition, and practical workflows for developers."
+description: "Learn how to automate repetitive file operations with Claude Code. This guide covers batch processing patterns, skill composition, and practical."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, batch-processing, automation, file-operations, workflows]
@@ -118,5 +118,12 @@ Claude can help you implement this pattern by suggesting error handling code and
 Claude Code transforms file processing from tedious manual work into an automated, skill-driven workflow. By creating reusable skills, chaining complementary tools, and following error-resilient patterns, you can process hundreds of files efficiently while maintaining code quality.
 
 Start with simple batch operations and gradually build more complex workflows as you become comfortable with Claude's capabilities.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
