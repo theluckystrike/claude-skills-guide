@@ -3,7 +3,7 @@ layout: default
 title: "Claude Code API Mocking and Stubbing Guide"
 description: "Master API mocking and stubbing in Claude Code workflows. Learn to build reliable test doubles, intercept HTTP calls, and develop offline with practical examples."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /claude-code-api-mocking-and-stubbing-guide/
 reviewed: true
 score: 7
