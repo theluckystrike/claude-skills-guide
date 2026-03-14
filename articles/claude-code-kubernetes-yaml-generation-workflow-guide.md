@@ -263,3 +263,10 @@ spec:
 
 Claude Code transforms Kubernetes YAML generation from a tedious manual task into an intelligent, assisted workflow. By understanding your requirements and Kubernetes best practices, it generates production-ready configurations that follow industry standards. Start integrating Claude Code into your Kubernetes development workflow today and experience the difference in productivity and configuration quality.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

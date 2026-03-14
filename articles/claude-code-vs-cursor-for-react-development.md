@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code vs Cursor for React Development"
-description: "A practical comparison of Claude Code and Cursor for React development. Includes Claude Code skills, workflow examples, and recommendations for React developers."
+description: "A practical comparison of Claude Code and Cursor for React development. Includes Claude Code skills, workflow examples, and recommendations for React."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-cursor-for-react-development/
@@ -157,3 +157,10 @@ For teams building multiple React applications, Claude Code's skill system offer
 The ideal choice depends on your development style, team size, and how much you value automation versus conversational interaction. Many React developers ultimately use both tools for different aspects of their workflow.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+
