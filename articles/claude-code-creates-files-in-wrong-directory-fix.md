@@ -5,7 +5,7 @@ description: A practical guide to fixing file path issues when Claude Code skill
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, file-path, debugging, troubleshooting]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 8
 permalink: /claude-code-creates-files-in-wrong-directory-fix/

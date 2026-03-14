@@ -1,147 +1,204 @@
 ---
 layout: default
 title: "How to Make Claude Code Use Specific Library Version"
-description: Control which library versions Claude Code uses when writing code. Techniques for specifying version constraints in prompts, project files, and skill.
+description: "Learn precise techniques to control which library versions Claude Code uses in your projects, from package.json constraints to virtual environment management."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, claude-skills, dependencies, libraries]
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
+author: theluckystrike
 permalink: /how-to-make-claude-code-use-specific-library-version/
 ---
 
 # How to Make Claude Code Use Specific Library Version
 
-When you ask Claude Code to generate code that depends on external libraries, it typically selects versions based on what it knows to be stable and widely compatible. For overall dependency management patterns, see the [workflows hub](/claude-skills-guide/workflows-hub/). However, your project may require a specific version due to legacy dependencies, API changes, or organizational constraints. This guide shows you how to ensure Claude Code uses the exact library versions you need, including [setting environment variables for skills](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) that pin versions automatically.
+Getting Claude Code to work with exactly the library versions you need is essential for maintaining project stability and avoiding unexpected breaking changes. Whether you're managing a React project with specific npm dependencies or a Python project requiring exact package versions, these techniques will help you maintain precise control over your development environment.
 
-## Why Version Control Matters
+## Why Library Version Control Matters
 
-Library version mismatches cause real problems. A function that works with `lodash@4.17.21` may fail with `lodash@5.x` due to breaking changes. When using skills like `frontend-design` to build UI components, or `tdd` to generate tests, Claude needs accurate version information to produce working code.
+When Claude Code generates code or modifies existing projects, it typically uses the latest available versions of libraries unless you explicitly constrain them. This can lead to unexpected behavior when:
 
-## Method 1: Explicit Version Declarations in Prompts
+- Newer library versions introduce breaking API changes
+- Your production environment runs different versions than what Claude generated
+- Team members have inconsistent development environments
 
-The simplest approach is to state your version requirements directly in the prompt. When you begin a conversation with Claude, include the exact versions you need:
+The solution is to establish clear version constraints before and during your Claude Code sessions.
 
-```
-I need a React component using react-router-dom version 6.4.x. 
-Use useNavigate() from react-router-dom@6.4.x, not the newer hooks.
-```
+## Controlling npm Package Versions
 
-This works well for one-off requests, but becomes tedious if you repeatedly need specific versions.
-
-## Method 2: Project Configuration Files
-
-Claude reads your project's dependency files and respects their constraints. Create or update your `package.json`, `requirements.txt`, or equivalent:
+For JavaScript and TypeScript projects, the most reliable approach is to use precise version specifications in your `package.json` file. Rather than using caret (`^`) or tilde (`~`) version ranges that allow automatic updates, lock to specific versions:
 
 ```json
 {
   "dependencies": {
+    "lodash": "4.17.21",
     "axios": "1.6.0",
     "express": "4.18.2"
   }
 }
 ```
 
-[When you invoke skills like `pdf` or `xlsx` for document generation](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), Claude will read your lockfile and use matching versions. The same applies when using `canvas-design` for visual outputs that depend on specific rendering libraries.
+When you start a Claude Code session, explicitly mention your version constraints in your initial prompt. For example: "Work with lodash 4.17.21 and axios 1.6.0 — do not upgrade these packages."
 
-## Method 3: Version Constraints in Skill Instructions
+The frontend-design skill works particularly well with React projects and can help you maintain version consistency across components.
 
-[embed version requirements directly in the skill configuration](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Custom skills or CLAUDE.md instructions can include version pinning:
+## Python Virtual Environment Management
 
-```
-When creating HTTP requests, always use axios version 1.6.0.
-Do not use axios 2.x even if it would otherwise be selected.
-```
+Python projects benefit from virtual environment isolation. Before starting a Claude Code session, create and activate your environment with specific package versions:
 
-This approach works best when you have established patterns that rarely change. Skills focused on documentation generation can benefit from pinned versions if your company uses specific library versions.
-
-## Method 4: Create a Project Context File
-
-For complex projects with many version dependencies, create a `.claude-version-requirements.md` file in your project root:
-
-```
-# Claude Code Library Version Requirements
-
-- React: 18.2.0
-- TypeScript: 5.1.6
-- TailwindCSS: 3.3.3
-- Node: 18.17.0
-
-When generating code, read this file first and use these exact versions.
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install requests==2.31.0
+pip install django==4.2.7
 ```
 
-Reference this file in your prompts:
+When prompting Claude Code, reference your locked requirements file:
 
-```
-Before writing any code, read .claude-version-requirements.md 
-and ensure all generated code uses the specified versions.
-```
-
-## Method 5: Using Lockfiles
-
-Lockfiles contain exact version trees. Claude respects lockfiles when they exist. Ensure your `package-lock.json`, `yarn.lock`, or `Pipfile.lock` contains the versions you need, then mention it in your prompt:
-
-```
-Use the exact versions from package-lock.json in the project root.
-Do not suggest version upgrades.
+```bash
+# Create a requirements.txt with pinned versions
+pip freeze > requirements.txt
 ```
 
-This is particularly effective with skills that generate large amounts of code, like `scaffolding` or `fullstack` implementations.
+Then tell Claude Code: "Use the packages specified in requirements.txt — do not install or update any packages."
 
-## Practical Example: Pinning Versions for a PDF Processing Task
+The tdd skill is excellent for Python projects and respects version constraints when running test suites.
 
-Suppose you need to generate PDFs using specific library versions. Using the `pdf` skill, your prompt would be:
+## Using .nvmrc and Runtime Version Files
 
-```
-Using the pdf skill, create a report generator. 
-Required versions:
-- pdfkit: 0.13.0
-- pdf-lib: 1.17.1
+For runtime versions (Node.js, Python), create version specification files that Claude Code can detect:
 
-Do not use newer versions. The generated code must work with these exact versions.
-```
+```bash
+# .nvmrc for Node.js
+echo "18.17.0" > .nvmrc
 
-Claude will reference these constraints when writing code and avoid suggesting incompatible APIs.
-
-## Version Constraints for Test-Driven Development
-
-When using the `tdd` skill, version control becomes critical. Tests written for one library version may fail with another. Structure your requests:
-
-```
-Using tdd, write tests for the user authentication module.
-Use Jest 29.x and supertest 4.x. The tests should pass with 
-these exact versions, not Jest 30.x or supertest 5.x.
+# .python-version for Python
+echo "3.11.5" > .python-version
 ```
 
-## Handling Version Conflicts
+Claude Code often respects these files when initializing new files or configuring build tools. Make them part of your project structure and mention them in your prompts.
 
-Sometimes the version you need conflicts with another dependency. In these cases, be explicit about priorities:
+## The Claude.md Configuration File
+
+Create a `CLAUDE.md` file in your project root to establish persistent instructions:
+
+```markdown
+# Project Instructions
+
+## Library Versions
+- Use Node.js 18.17.0 (see .nvmrc)
+- Use React 18.2.0 specifically
+- Do not upgrade dependencies beyond current versions
+
+## Package Manager
+- Always use npm, not yarn or pnpm
+- Run npm install with --save-exact flag
+```
+
+The supermemory skill can help you maintain context about version requirements across sessions.
+
+## Constraining Version Upgrades
+
+When you need to upgrade libraries, be explicit about the target version:
+
+Instead of: "Update the dependencies"
+Say: "Upgrade lodash to exactly 4.17.21, no other changes"
+
+For the pdf skill, specify exact versions when generating documents to ensure compatibility with your existing tooling.
+
+## Best Practices for Version Control
+
+1. **Lock everything in version control** — Commit your lock files (package-lock.json, Pipfile.lock, requirements.txt)
+
+2. **Document version requirements** — Add a VERSIONS.md file listing critical dependencies
+
+3. **Test generated code** — Run your test suite (using the tdd skill) after Claude Code creates new files
+
+4. **Review before installing** — Have Claude Code show you the proposed changes before running npm install or pip install
+
+5. **Use Docker** — For critical projects, define your environment in a Dockerfile that Claude Code can reference
+
+## Troubleshooting Version Mismatches
+
+If Claude Code accidentally upgrades packages, revert the changes:
+
+```bash
+git checkout package-lock.json
+npm install
+```
+
+For Python:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Common Version Control Scenarios
+
+### React 18 Project Setup
+
+When working on a React 18 project, explicitly state your requirements:
 
 ```
-I need lodash 4.17.21. If this conflicts with another dependency 
-in package.json, prioritize lodash 4.17.21 and note the conflict.
+Create a new component using React 18.2.0 and react-dom 18.2.0.
+Use functional components with hooks. Do not use React 19 features.
 ```
 
-Claude will either resolve the conflict or alert you to the incompatibility rather than silently upgrading.
+The frontend-design skill is particularly useful here as it understands component lifecycle and React version compatibility.
 
-## Best Practices for Version Control with Claude Code
+### Django REST Framework Projects
 
-1. **Document versions early**: Include version requirements at the start of your session
-2. **Use lockfiles**: Keep lockfiles committed to version control
-3. **Create version manifests**: For complex projects, a version requirements file reduces repetition
-4. **Be specific in skill invocations**: When using skills like `frontend-design` or `pptx`, specify versions in the initial prompt
-5. **Verify generated code**: Always check that generated dependencies match your requirements
+For Django projects, specify both Django and DRF versions:
+
+```python
+# requirements.txt
+Django==4.2.7
+djangorestframework==3.14.0
+psycopg2-binary==2.9.9
+```
+
+When prompting Claude Code, reference these exact versions for any database-related code generation.
+
+### TypeScript Configuration
+
+TypeScript projects often have specific version requirements:
+
+```json
+{
+  "devDependencies": {
+    "typescript": "5.2.2",
+    "@types/node": "18.18.0"
+  }
+}
+```
+
+### Working with Monorepos
+
+Monorepo setups using tools like Turborepo require extra attention to version consistency across packages. Create a central versions.ts file that all packages reference:
+
+```typescript
+// packages/versions.ts
+export const VERSIONS = {
+  react: '18.2.0',
+  reactDOM: '18.2.0',
+  typescript: '5.2.2',
+  eslint: '8.49.0',
+} as const;
+```
+
+When using the frontend-design skill in a monorepo context, specify the exact package paths and versions to avoid cross-package version conflicts.
+
+## Final Checklist
+
+Before starting a Claude Code session, verify:
+
+- [ ] Lock files are committed to version control
+- [ ] CLAUDE.md contains version instructions
+- [ ] Runtime version files (.nvmrc, .python-version) exist
+- [ ] Requirements.txt or package-lock.json reflects exact versions
+- [ ] Dockerfiles specify precise base image versions
+
+The key is being explicit in every prompt about version constraints. Claude Code is helpful but cannot guess your version requirements without clear communication.
 
 ## Summary
 
-Controlling library versions in Claude Code requires explicit communication. Whether you use direct prompts, project configuration files, skill instructions, or version manifest files, the key is stating your requirements clearly and consistently. This ensures that code generated by skills like `pdf`, `xlsx`, `tdd`, or `frontend-design` uses exactly the versions your project needs.
+Controlling library versions with Claude Code requires proactive communication and proper configuration. By using lock files, version specification files, and explicit prompts, you can ensure Claude Code generates code that works with your exact environment. Remember to document your version requirements in CLAUDE.md for persistent instructions across sessions, and always verify generated code against your requirements before deploying.
 
-## Related Reading
-
-- [Claude Skills Automated Dependency Update Workflow](/claude-skills-guide/claude-skills-automated-dependency-update-workflow/) — automate dependency upgrades safely across your codebase
-- [How to Make Claude Code Work with Legacy Codebase](/claude-skills-guide/how-to-make-claude-code-work-with-legacy-codebase/) — manage pinned versions in older projects with mixed dependencies
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — audit dependencies for security vulnerabilities alongside version pinning
-- [How to Make Claude Code Not Over Engineer Solutions](/claude-skills-guide/how-to-make-claude-code-not-over-engineer-solutions/) — prevent Claude from adding unnecessary library dependencies
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by the luckystrike — More at [zovo.one](https://zovo.one)

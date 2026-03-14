@@ -1,131 +1,191 @@
 ---
 layout: default
-title: "Claude Code Writes Code in Wrong Programming Language"
-description: "Diagnose and fix when Claude generates Python instead of JavaScript, or TypeScript instead of Go. Practical solutions for developers."
+title: "Fixing Claude Code Writing Code in Wrong Programming Language"
+description: "Practical solutions for when Claude Code generates code in the wrong language. Learn context management, skill configuration, and prevention techniques."
 date: 2026-03-14
 categories: [troubleshooting]
-tags: [claude-code, claude-skills, code-generation, debugging, troubleshooting]
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
+tags: [claude-code, claude-skills, programming-languages, context-management, debugging]
+author: theluckystrike
 permalink: /claude-code-writes-code-in-wrong-programming-language/
 ---
 
-# Claude Code Writes Code in Wrong Programming Language
+# Fixing Claude Code Writing Code in Wrong Programming Language
 
-You've asked Claude to write a React component, but it output Python code. You requested a Node.js API, and Claude gave you a Flask application. This mismatch between your intent and Claude's output happens more often than you'd expect. Understanding why Claude Code writes code in the wrong programming language — and how to fix it — will save you hours of rework.
+Claude Code occasionally generates code in the wrong programming language when working on projects with multiple languages or unclear context. This issue commonly occurs in polyglot repositories, when switching between tasks, or when initial prompts lack specificity. Understanding why this happens and how to prevent it will significantly improve your AI-assisted development workflow.
 
-## Why This Happens
+## Why Claude Code Picks the Wrong Language
 
-[Claude Code generates code based on the context it receives](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When the context is ambiguous or incomplete, Claude makes assumptions. These assumptions often default to what the model was trained on most frequently, which typically means Python or JavaScript depending on the query framing.
+Claude Code analyzes your project structure, file extensions, and conversation context to determine which language to use. However, several factors can lead to incorrect language selection:
 
-The root causes usually fall into three categories: unclear task specification, conflicting context in your project files, or skill-level configuration issues. Each requires a different approach to resolve.
+**Ambiguous project structures** cause the most issues. A repository containing both Python scripts and JavaScript utilities, or a Node.js project with Python configuration files, creates confusion. Claude may default to a previously used language or choose based on the most recent file opened.
 
-## Specifying the Language Explicitly
+**Implicit assumptions** also play a role. When you ask Claude to "write a function that processes this data" without specifying the language, Claude infers from surrounding context—which may not match your intent.
 
-The most direct solution is to state the programming language clearly in your request. This seems obvious, but the difference between a vague request and an explicit one is substantial.
+**Skill activation order** matters. Some skills like `frontend-design` default to specific language stacks, and activating multiple skills can create conflicting defaults.
 
-Instead of:
-```
-Write a function to process user data
-```
+## Immediate Fixes for Wrong Language Output
 
-Write:
-```
-Write a TypeScript function to process user data. Use the zod library for validation and return a typed User object.
-```
+When you notice Claude writing Python instead of TypeScript, or Ruby instead of Go, you can intervene immediately:
 
-When you specify the language, include the context that makes that choice meaningful. Mention your framework, your project structure, and your existing code patterns. Claude Code reads your project files when available, so if your codebase is predominantly Go, mention that explicitly if you want code in a different language.
+### 1. Explicit Language Specification
 
-## Using Claude Skills to Enforce Language Constraints
-
-[Claude Skills provide a powerful mechanism for enforcing language preferences](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) across multiple requests. If you frequently work with a specific language stack, creating a skill that establishes that context can prevent repeated misfires.
-
-For example, a skill for frontend development work might include:
+The fastest solution is to explicitly state the language in your prompt:
 
 ```
-You are working on a React/TypeScript project. All code you write must be TypeScript React code.
-- Use functional components with hooks exclusively
-- Use TypeScript interfaces for all data structures
-- Follow the component structure in src/components/
-- Do not write Python, Go, or any language other than TypeScript unless explicitly requested
+Write a function to parse this JSON response in Go, not Python.
+Create a REST API client in TypeScript using fetch.
 ```
 
-Skills like frontend-design, pdf, and tdd come with their own language expectations. The tdd skill expects test files in the language of your project. The pdf skill might generate Python code for PDF manipulation, which is correct for that use case but wrong if you're building a JavaScript toolchain. Understanding what each skill expects helps you provide the right context.
+Adding the language name at the end of your prompt creates a strong recency effect that overrides prior context.
 
-## Project Context Matters
+### 2. Context Switching Command
 
-Claude Code reads files in your current directory to understand your project. This works for your benefit but can also cause confusion. If Claude detects Python files in your project, it may assume Python is the primary language even when you're requesting something different.
-
-To override this, be explicit about your intent:
+Use a clear delimiter to reset Claude's language assumptions:
 
 ```
-Create a new file api/users.js in JavaScript (not Python). Our backend is Node.js/Express, not Python/Flask.
+[Switching to Rust]
+Write a CLI tool that accepts user input and validates email addresses.
 ```
 
-You can also use the supermemory skill to maintain persistent context about your preferred languages across sessions. If you consistently work with Go but sometimes switch to Python projects, storing that preference in supermemory helps Claude adapt to each project context.
+This bracket notation signals a context boundary more effectively than simple text.
 
-## Language Mismatches with Specific Skills
+### 3. File Extension Reminder
 
-Certain Claude skills are language-specific by design. The xlsx skill typically generates Python when working with Excel files because openpyxl and pandas are Python libraries. The canvas-design skill might suggest JavaScript when creating interactive visualizations.
-
-When using skills like pdf or docx, check whether the generated code matches your tech stack. If you're building a Node.js application and the pdf skill outputs Python code for PDF generation, specify that you need a JavaScript solution:
+Reference the specific file you're working in:
 
 ```
-Use the pdfkit Node.js library, not Python's reportlab
+In src/api/client.ts, add a method to handle rate limiting.
 ```
 
-## Code Snippet Examples
+The `.ts` extension immediately clarifies the target language.
 
-Here's how to structure requests to avoid language confusion:
+## Long-Term Prevention Strategies
 
-**For a TypeScript/React project:**
-```
-Create a useAuth hook in src/hooks/useAuth.ts. TypeScript only. Export useAuth that returns { user, login, logout }.
-```
+### Configure Project-Specific Skills
 
-**For a Go backend:**
-```
-Write a handler in Go for the GET /users endpoint. Use the standard library, return JSON with id and name fields.
-```
+Create custom skills for your primary language stack to establish consistent defaults. Place these in your `~/.claude/skills/` directory:
 
-**For a Rust CLI tool:**
-```
-Create a CLI argument parser in Rust using clap. Parse --input and --output flags, both required.
+```markdown
+# skill: project-defaults.md
+# Language: TypeScript
+
+Always use TypeScript for new code. 
+Default to Node.js runtime.
+Use ESM imports, not CommonJS.
 ```
 
-Notice the pattern: state the language, state the framework, state the specific requirement. The more context you provide, the more accurate Claude's output.
+When working on Python projects, maintain a separate skill file:
 
-## Fixing Language Issues After Generation
+```markdown
+# skill: python-project.md
+# Language: Python
 
-When Claude has already generated code in the wrong language, you don't need to start over. A simple correction works:
+Default to Python 3.11+.
+Use type hints in all function signatures.
+Prefer f-strings over .format() or % formatting.
+```
+
+### Use the tdd Skill with Language Constraints
+
+The `tdd` skill helps maintain language consistency during test-driven development. Activate it with explicit language boundaries:
 
 ```
-That code is Python. Please convert it to TypeScript.
+/tdd
+Using TypeScript, write tests for a user authentication module with password hashing.
 ```
 
-Claude can translate between languages accurately. The key is catching the mismatch early and providing clear feedback. Claude learns from conversation context, so if you've corrected it once, subsequent requests in the same session are more likely to be correct.
+The tdd skill generates test cases in your specified language first, which then constrains the implementation to match.
 
-## Preventing Future Issues
+### Leverage Project Documentation
 
-Several practices reduce language mismatches over time:
+A `CLAUDE.md` file in your project root sets explicit expectations:
 
-1. **Configure your project with a README** that clearly states the tech stack
-2. **Use language-specific file extensions** in your requests (`.ts`, `.go`, `.rs`)
-3. **Create a project-specific skill** if you work on the same stack repeatedly
-4. **Keep supermemory updated** with your current project language preferences
+```markdown
+# Project Language Stack
 
-Claude Code is excellent at following explicit instructions. The challenge is usually that the instructions weren't explicit enough, not that Claude can't follow them.
+- Backend: Go 1.21+
+- Frontend: TypeScript 5.x with React 18
+- Scripts: Python 3.11 (data processing only)
+- No other languages should be used without explicit permission.
+```
 
-## Summary
+Claude Code reads this file on session start, establishing clear language boundaries from the beginning.
 
-Language mismatches with Claude Code typically stem from ambiguous requests, project context confusion, or skill-specific defaults. Fix them by being explicit about your language, framework, and project structure in every request. Use Claude Skills to enforce language constraints for recurring tasks, and use /supermemory to maintain context across sessions. When mismatches occur, correct them immediately — Claude learns from your feedback within the session.
+## Handling Multi-Language Projects
 
-## Related Reading
+Large repositories often genuinely need multiple languages. Here are patterns that work:
 
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+### Language-Specific Directories
+
+Structure your project so languages are clearly separated:
+
+```
+/backend Go code
+/frontend TypeScript/React code
+/scripts Python utilities
+```
+
+When working in each directory, the path itself provides language context.
+
+### Per-File Language Hints
+
+Add comments at the top of files in ambiguous situations:
+
+```go
+// Language: Go
+// This file implements the payment processing service.
+// Do not rewrite in other languages.
+
+package payments
+```
+
+### Skill Stacking for Polyglot Projects
+
+When using skills like `frontend-design` or `pdf` alongside backend skills, be explicit about boundaries:
+
+```
+Using the frontend-design skill, create a React component.
+[New task]
+Using Go, write the backend handler for this component's API endpoint.
+```
+
+## Detecting Language Mismatch Early
+
+Watch for these warning signs before wrong-language code appears:
+
+1. **Response latency changes** — generating code for unfamiliar languages takes longer
+2. **Syntax errors in output** — if you requested TypeScript but see Python-style indentation
+3. **Import statements** — watch for `import` vs `require` patterns, or `def` vs `function`
+
+## Using supermemory for Language Context
+
+The `supermemory` skill can store project language preferences across sessions. Configure it to remember:
+
+- Primary language per project directory
+- Preferred frameworks and libraries
+- Explicit language restrictions
+
+This creates persistent context that survives across Claude Code sessions, reducing the likelihood of language drift.
+
+## Example: Fixing a Real Scenario
+
+Consider a situation where you're building a web application with a TypeScript frontend and Go backend. You ask Claude to "add data validation" without specifying where. Claude might choose either language based on recent files.
+
+**Wrong approach:**
+```
+Add data validation to the user module.
+```
+
+**Corrected approach:**
+```
+Add data validation to the user module in backend/handlers/user.go using struct tags.
+```
+
+The corrected version specifies:
+- File path (Go directory)
+- File name with extension (.go)
+- Specific Go pattern (struct tags)
+
+---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

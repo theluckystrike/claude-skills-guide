@@ -5,7 +5,7 @@ description: Practical solutions for fixing connection timeout errors in Claude 
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, error-fix, connection-timeout, troubleshooting, network, productivity]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 8
 permalink: /claude-code-error-connection-timeout-during-task-fix/

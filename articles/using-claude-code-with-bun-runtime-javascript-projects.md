@@ -90,7 +90,7 @@ const server = Bun.serve({
 console.log(`Server running at http://localhost:${server.port}`);
 ```
 
-When working on API projects, pairing Claude Code with the **tdd** skill enhances test-driven development. The tdd skill guides Claude to write tests before implementation, and Bun's fast test runner (powered by Jest-compatible APIs) executes those tests quickly.
+When working on API projects, pairing Claude Code with the [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) enhances test-driven development. The tdd skill guides Claude to write tests before implementation, and Bun's fast test runner (powered by Jest-compatible APIs) executes those tests quickly.
 
 ### Working with Databases
 
@@ -115,7 +115,7 @@ const insert = db.prepare(
 );
 ```
 
-For more complex data workflows, the **supermemory** skill helps Claude maintain context across sessions, useful when working with evolving database schemas.
+For more complex data workflows, the [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) helps Claude maintain context across sessions, useful when working with evolving database schemas.
 
 ### Frontend Development
 

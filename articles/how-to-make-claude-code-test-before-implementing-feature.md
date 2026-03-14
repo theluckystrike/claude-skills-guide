@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "How to Make Claude Code Test Before Implementing Feature"
-description: "A practical guide to implementing test-first development workflows with Claude Code. Learn to configure AI-assisted TDD and write tests before code."
+description: A practical guide for developers to ensure Claude Code writes tests before implementing new features. Includes skill recommendations and configuration.
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, claude-skills, tdd, testing, development-workflow, best-practices]
-author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, testing, tdd, claude-skills, code-quality]
+author: theluckystrike
 reviewed: true
 score: 8
 permalink: /how-to-make-claude-code-test-before-implementing-feature/
@@ -13,213 +13,145 @@ permalink: /how-to-make-claude-code-test-before-implementing-feature/
 
 # How to Make Claude Code Test Before Implementing Feature
 
-Developers who integrate AI into their workflow often struggle with one common problem: Claude writes code first, then tests second. This reverses the proven test-driven development (TDD) methodology that leads to better software design and fewer bugs. If you want Claude Code to test before implementing a feature, you need the right skill activation and workflow configuration.
+Getting Claude Code to write tests before implementing features transforms your development workflow. Test-driven development reduces bugs, improves code quality, and creates a safety net for future changes. This guide shows you practical techniques to ensure Claude Code prioritizes tests when building new functionality.
 
-This guide shows you exactly how to structure your prompts, which skills to use, and practical techniques to enforce test-first development in every Claude session. For related automation workflows, see the [workflows hub](/claude-skills-guide/workflows-hub/).
+## Why Test-First Matters with AI Assistants
 
-## The Core Problem with AI-Assisted Coding
+When Claude Code implements a feature without tests, you receive working code that may hide edge cases and unexpected behavior. You then spend time manually verifying functionality or worse—deploying code that fails in production. Test-first development flips this pattern. Claude writes the test first, watches it fail, then implements code to make it pass. This approach catches issues at the generation stage rather than after deployment.
 
-When you ask Claude to build a feature, the default behavior is to generate implementation code immediately. This happens because Claude interprets "build" or "create" as a request for working code. The model doesn't inherently know you want tests first unless you explicitly instruct it.
+The challenge is that Claude Code responds to your prompts. If you do not explicitly request tests or set expectations, it may skip them entirely. Understanding how to guide Claude toward test-first behavior requires specific prompting strategies and skill configuration.
 
-Consider a typical prompt:
+## Technique 1: Use the tdd Skill Directly
 
-```
-Create a user authentication module with login and logout functions.
-```
-
-Claude responds with the Python or JavaScript implementation—complete with password hashing and session management—but no tests. You then have to ask for tests separately, and by then, the implementation already exists. The tests you receive often become validation tools rather than design guides, which defeats the purpose of TDD.
-
-## Activate the TDD Skill for Test-First Workflows
-
-The most direct solution is activating the `tdd` skill in Claude Code. This skill modifies Claude's behavior to prioritize test generation before writing implementation code.
-
-To activate the skill, type — for the full TDD skill breakdown see the [automated testing pipeline guide](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/):
+The **tdd** skill is specifically designed for test-driven development workflows. When you load this skill, Claude gains structured patterns for writing tests before implementation code. Invoke the skill at the start of any feature work:
 
 ```
-/tdd
+/tdd create tests for a user authentication module with login, logout, and password reset functionality
 ```
 
-Once activated, describe your feature requirement. The skill instructs Claude to:
-1. Ask clarifying questions about expected inputs and outputs
-2. Write test cases that define the expected behavior
-3. Run the tests (which will initially fail)
-4. Implement the feature to make tests pass
+The skill responds by generating test cases covering the expected behavior. These tests fail initially because the implementation does not exist. You then ask Claude to implement the feature, and the tests guide the implementation.
 
-Here's how this works in practice:
+The tdd skill works particularly well with unit testing frameworks like Jest, PyTest, and RSpec. When specifying your request, mention your testing framework explicitly:
 
 ```
-/tdd
-
-Build a function that calculates compound interest with monthly deposits.
-The function should accept principal, annual rate, monthly contribution, and years.
-Return the final amount after all deposits and interest.
+/tdd write pytest tests for an API rate limiter with concurrent request handling
 ```
 
-Claude will respond with test cases first:
+This specificity ensures the generated tests match your project's testing conventions.
 
-```python
-def test_compound_interest_monthly():
-    # Test case 1: Basic calculation
-    result = calculate_compound_interest(principal=10000, annual_rate=0.05, monthly_contribution=500, years=10)
-    assert abs(result - 78069.46) < 0.01
+## Technique 2: Configure System Prompts for Test Requirements
 
-def test_zero_years():
-    result = calculate_compound_interest(principal=5000, annual_rate=0.03, monthly_contribution=100, years=0)
-    assert result == 5000
-```
-
-Only after these tests exist and fail does Claude implement the function.
-
-## Customize Your Prompt Structure
-
-Beyond using the tdd skill, you can engineer your prompts to enforce test-first behavior. The key is being explicit about what you want produced and in what order.
-
-### Template for Test-First Prompts
-
-Use this structure for any feature request:
+Modify your Claude Code configuration to always prioritize tests. Create a custom instruction file that Claude loads on startup. Add language that establishes test expectations globally:
 
 ```
-I want you to develop using TDD methodology:
+When implementing any feature or function, first write comprehensive tests that cover:
+- Happy path scenarios
+- Edge cases and error conditions
+- Boundary value inputs
+- Expected exceptions
 
-1. First, write failing test cases that define the expected behavior
-2. Run the tests to confirm they fail
-3. Then implement the feature to make tests pass
-4. Finally, verify all tests pass
-
-Here is the requirement: [describe feature]
+Only after tests exist, implement the feature to make tests pass.
 ```
 
-This explicit sequencing works because Claude follows instructions in the order you present them. By listing "write failing test cases" first, you establish test-first as the priority.
+Store this configuration in your project's `.claude` directory or your global Claude settings. The exact location depends on your Claude Code version, but the effect remains consistent—Claude consistently generates tests before implementation code.
 
-### Example Prompt with Specification
+## Technique 3: Prompt Structure for Test-First Responses
 
-```
-TDD workflow required:
+Your prompts significantly influence Claude's behavior. Use explicit language that establishes test expectations at the start of every request:
 
-1. Write unit tests that define these requirements:
-   - Function accepts a list of transactions
-   - Returns total balance
-   - Handles empty list (returns 0)
-   - Treats negative values as deductions
+**Effective prompt structure:**
+> "Write tests first for a function that processes CSV uploads and returns parsed data. Include tests for valid CSV, empty files, malformed data, and large files. Then implement the function to pass those tests."
 
-2. Run tests and show they fail
-3. Implement the calculate_balance function
-4. Run tests again to confirm they pass
-```
+**Less effective prompt:**
+> "Write a function to parse CSV files"
 
-## Use the tdd Skill with Other Skills
+The first prompt establishes a clear sequence—tests first, implementation second. Claude understands the expectation and generates test code before functional code.
 
-Combining the tdd skill with other specialized skills creates powerful development workflows. Here are effective combinations:
+Include specific test scenarios in your prompts. Rather than leaving test coverage to Claude's discretion, enumerate the cases you want covered. This technique produces more thorough tests and reduces the need for iteration.
 
-**tdd + frontend-design**: When building UI components, write tests for component behavior (props validation, state changes, event handling) before implementing the component itself.
+## Technique 4: Leverage Skill Combinations
 
-**tdd + pdf**: For document processing features, define test cases that validate extracted data, PDF parsing behavior, and error handling before writing the extraction logic.
+Combining skills produces better test coverage than using a single skill alone. The **tdd** skill handles test generation, while the **code-review** skill analyzes both tests and implementation for gaps.
 
-**tdd + xlsx**: When building spreadsheet automation, write tests for data transformation, formula calculations, and file handling before the implementation.
+A powerful workflow sequence:
 
-**tdd + supermemory**: For features involving memory or context management, define tests that verify context retrieval, storage, and cleanup behaviors first.
-
-To combine skills, activate them sequentially:
-
-```
-/tdd
-/frontend-design
-```
-
-Then proceed with your test-first prompt.
-
-## Configure Default Test-First Behavior
-
-If you prefer Claude to always test before implementing, you can [create a custom skill](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) that enforces this behavior by default. Create a file at `~/.claude/skills/test-first.md`:
-
-```markdown
-# Test-First Development Skill
-
-When given any coding task, always follow this workflow:
-
-1. Clarify requirements through questions if needed
-2. Write failing test cases first
-3. Run tests to confirm failures
+1. Start with the **tdd** skill to generate initial tests
+2. Use the **code-review** skill to identify missing test scenarios
+3. Have Claude add the identified tests
 4. Implement the feature
-5. Run tests to confirm passing
-6. Check for edge cases and add tests
+5. Run the **code-review** skill again to verify test coverage
 
-Do not write implementation code until test cases exist and fail.
+This combination ensures comprehensive test coverage that a single skill might miss. The code-review skill acts as a safety net, catching scenarios the tdd skill did not initially generate.
+
+For projects involving specific domains, other skills complement testing workflows. The **pdf** skill helps if you need to generate test documentation. The **supermemory** skill recalls previous testing patterns from your project, maintaining consistency across features.
+
+## Technique 5: Establish Project Testing Conventions
+
+Claude Code performs better when you provide clear testing conventions. Create a testing guide in your project repository that documents:
+
+- Testing framework and version
+- Test file naming conventions
+- Directory structure for tests
+- Required test coverage percentage
+- Common testing patterns used in your codebase
+
+Reference this guide in your prompts:
+
+```
+Following our project testing conventions in TESTING.md, write tests first for a payment processing module
 ```
 
-To activate this for every session, add it to your Claude Code configuration or simply type:
+Claude reads the referenced file and generates tests that match your existing patterns. This consistency makes tests easier to maintain and understand.
 
+## Practical Example: Feature Implementation Workflow
+
+Here is a complete workflow for getting Claude Code to test before implementing:
+
+**Step 1: Define the feature requirement**
 ```
-/test-first
-```
-
-## Practical Workflow Example
-
-Here's a complete session demonstrating test-first development:
-
-**Step 1: Activate skills**
-```
-/tdd
+Feature: User notification preferences
+Users can configure email, SMS, and push notification preferences.
+Each preference is independently toggleable.
 ```
 
-**Step 2: Define requirement with TDD context**
+**Step 2: Request tests first**
 ```
-Build an API rate limiter that:
-- Tracks requests per user
-- Allows 100 requests per minute
-- Returns 429 status when limit exceeded
-- Resets after the minute window
-```
+/tdd write tests for user notification preferences:
+- Enable/disable email notifications
+- Enable/disable SMS notifications  
+- Enable/disable push notifications
+- Validate preference combinations
+- Test persistence across sessions
 
-**Step 3: Claude writes tests first**
-```python
-def test_rate_limiter_allows_requests_under_limit():
-    limiter = RateLimiter(limit=100, window=60)
-    for i in range(100):
-        assert limiter.check_limit("user1") == True
-
-def test_rate_limiter_blocks_requests_over_limit():
-    limiter = RateLimiter(limit=100, window=60)
-    for i in range(100):
-        limiter.check_limit("user1")
-    assert limiter.check_limit("user1") == False
-
-def test_rate_limiter_resets_after_window():
-    limiter = RateLimiter(limit=5, window=1)  # 1 second for testing
-    for i in range(5):
-        limiter.check_limit("user1")
-    time.sleep(1.1)
-    assert limiter.check_limit("user1") == True
+Use our Jest testing framework with the conventions in TESTING.md
 ```
 
-**Step 4: Claude implements to pass tests**
-The implementation follows, using the tests as a specification.
+**Step 3: Review generated tests**
+Claude generates test files like `notification-preferences.test.js`. Review these tests for coverage and accuracy. Add any missing scenarios using follow-up prompts.
 
-## Common Pitfalls and Solutions
+**Step 4: Implement the feature**
+Now that tests exist, request implementation:
+```
+Implement the notification preferences feature to make the tests pass.
+Follow our existing service patterns in src/services/
+```
 
-**Pitfall**: Claude skips tests when the implementation seems obvious.
+**Step 5: Verify and iterate**
+Run the test suite. If tests fail, have Claude fix the implementation rather than the tests (unless the tests themselves are incorrect).
 
-**Solution**: Add "Do not proceed to implementation until I confirm the tests are correct" at the end of your prompt.
+## Common Issues and Solutions
 
-**Pitfall**: Tests don't run due to missing dependencies.
+**Issue:** Claude writes implementation code before tests
+**Solution:** Add explicit language to your prompt: "Write all tests first. Do not write any implementation code until tests exist."
 
-**Solution**: In your initial prompt, specify: "First, tell me what test framework and dependencies are needed. Wait for my confirmation before installing."
+**Issue:** Tests do not match project conventions
+**Solution:** Provide a reference test file in your prompt: "Match the style and patterns in tests/api/auth.test.js"
 
-**Pitfall**: Claude writes implementation and tests simultaneously.
+**Issue:** Missing edge case coverage
+**Solution:** Use the **code-review** skill after initial test generation to identify gaps, then prompt Claude to add those specific cases.
 
-**Solution**: Use explicit sequencing: "Write ONLY the test file. Do not write any implementation code. Wait for me to review the tests."
+## Summary
 
-## Key Takeaways
-
-Making Claude Code test before implementing a feature requires explicit instruction and the right skill activation. The tdd skill provides the most direct path, while prompt engineering gives you fine-grained control. Combine this with other skills like frontend-design, pdf, or xlsx for domain-specific test-first workflows.
-
-The benefit is substantial: tests become design documents rather than afterthoughts, your code becomes more maintainable, and you catch edge cases before they become bugs.
-
-## Related Reading
-
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — build a full CI-integrated TDD pipeline with the `/tdd` skill
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — full breakdown of the TDD skill's features and configuration
-- [Claude Code Skills for Writing Integration Tests](/claude-skills-guide/claude-code-skills-for-writing-integration-tests/) — extend test-first practices beyond unit tests to integration testing
-- [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — complement TDD with automated code review workflows
+Getting Claude Code to test before implementing requires explicit prompting, appropriate skill selection, and consistent expectation-setting. The **tdd** skill provides the core test-first workflow, while the **code-review** skill adds a safety net for coverage verification. Configure your prompts to always specify test requirements, and your AI assistant becomes a reliable partner in test-driven development.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

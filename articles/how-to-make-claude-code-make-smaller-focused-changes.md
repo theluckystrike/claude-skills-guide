@@ -5,7 +5,7 @@ description: A practical guide for developers to get Claude Code to generate sma
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, output-quality]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 8
 permalink: /how-to-make-claude-code-make-smaller-focused-changes/
