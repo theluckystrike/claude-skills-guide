@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Runbook Documentation Guide"
 description: "Learn how to create effective runbooks for Claude Code that automate documentation workflows for developers and power users."
 date: 2026-03-14
+categories: [guides]
 author: theluckystrike
 permalink: /claude-code-runbook-documentation-guide/
 ---
