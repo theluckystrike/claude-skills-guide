@@ -1,149 +1,176 @@
 ---
-
 layout: default
 title: "Claude Code Debug Configuration Workflow"
-description: "A practical workflow for debugging Claude Code configuration issues. Learn to diagnose skill loading failures, environment conflicts, and permission."
+description: "Master the debug configuration workflow in Claude Code. Learn to set breakpoints, inspect variables, and troubleshoot skill behavior effectively."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, debugging, configuration, troubleshooting, claude-skills]
-author: "Claude Skills Guide"
-reviewed: true
-score: 7
+author: theluckystrike
 permalink: /claude-code-debug-configuration-workflow/
 ---
 
-
 # Claude Code Debug Configuration Workflow
 
-When Claude Code stops loading your skills, ignores your `.claude.md` instructions, or behaves unexpectedly with configuration changes, you need a systematic debugging approach. This guide walks you through a practical workflow to identify and resolve configuration issues quickly.
+Debugging skill configurations in Claude Code requires a systematic approach. When your skills behave unexpectedly or fail to trigger correctly, understanding the debug configuration workflow helps you identify and resolve issues quickly. This guide walks through practical debugging techniques that work with any Claude skill, from simple prompt modifications to complex multi-tool configurations.
 
-## Understanding Claude Code's Configuration Layers
+## Understanding Skill Execution Context
 
-Claude Code reads configuration from multiple sources in a specific order. Understanding this hierarchy helps you pinpoint where things go wrong.
+Every skill runs within a specific execution context that determines which tools are available and how the model interprets your instructions. When something goes wrong, the first step is understanding what the skill actually received and processed.
 
-The primary sources are: session-level settings, project-level `.claude.md` files, user-level `CLAUDE.md` in your home directory, and skill definitions stored in `~/.claude/skills/`. When Claude executes a task, it merges these sources with later layers overriding earlier ones.
+The `claude-skill-md` format stores skill definitions in markdown files with YAML front matter. Your debug workflow should start by examining the raw skill file:
 
-If your instructions aren't being applied, verify which layer is actually taking effect. A common mistake is placing project instructions in the wrong location or using incorrect file naming.
+```bash
+# List all installed skills
+ls ~/.claude/skills/
 
-## Diagnosing Skill Loading Failures
-
-Skills are the most common source of configuration problems. When a skill fails to load or behaves incorrectly, start with these verification steps.
-
-First, confirm the skill file exists in the correct location. Native skills live in system directories, while community skills should be in `~/.claude/skills/`. Check file permissions—Claude needs read access to execute skill instructions properly.
-
-```
-ls -la ~/.claude/skills/
+# View a specific skill definition
+cat ~/.claude/skills/your-skill/skill.md
 ```
 
-If you're using a custom skill, verify the front matter contains valid YAML. A missing or malformed `---` delimiter breaks the entire skill. You can test YAML validity with any online YAML parser or the command line:
+This reveals the exact configuration Claude Code uses. Pay special attention to the `tools` field, which restricts available capabilities, and the `description` field, which shapes how the model invokes the skill.
 
-```
-python3 -c "import yaml; yaml.safe_load(open('~/.claude/skills/your-skill.md'))"
-```
+## Common Configuration Issues
 
-The **supermemory** skill and other memory-related skills sometimes conflict with session context if they load after your project instructions. Check the loading order by invoking `/skill-name` and observing the system confirmation message.
+Most debugging problems fall into a few predictable categories. Understanding these patterns helps you diagnose issues faster.
 
-## Resolving Environment Variable Conflicts
+### Incorrect Tool Permissions
 
-Claude Code respects environment variables for API keys, proxy settings, and tool behavior. Conflicts between system and user-level variables cause mysterious failures.
+Skills that require specific tools must declare them in the front matter. If a skill tries to use a tool not in its allowed list, it fails silently or produces unexpected behavior:
 
-Check your current environment:
-
-```
-env | grep -i claude
-env | grep -i anthropic
-```
-
-If you're behind a proxy, ensure `HTTP_PROXY` and `HTTPS_PROXY` are set consistently. Claude respects both lowercase and uppercase variants, but some tools don't. Setting both prevents intermittent failures.
-
-For API key issues, verify the key is accessible in the environment where Claude runs. Terminal sessions started from GUI applications sometimes have different environment inheritance. Launch Claude from a clean shell to eliminate this variable:
-
-```
-bash -l -c "claude [your command]"
+```yaml
+---
+name: tdd
+description: Test-driven development assistant
+tools:
+  - Read
+  - Write
+  - Bash
+  -grep
+---
 ```
 
-## Debugging .claude.md Instruction Conflicts
+Without `grep` in the tools list, the TDD skill cannot search through test files to understand your project structure. Adding the missing tool often resolves the issue immediately.
 
-Project-level `.claude.md` files sometimes conflict with skill instructions or produce unexpected behavior. The **tdd** skill, for example, expects specific test patterns that your project instructions might override.
+### Description Ambiguity
 
-When you notice Claude ignoring your project instructions, check for conflicting directives. If your `.claude.md` says "always write tests first" but you're also using the tdd skill, you may see duplicate test generation or skipped implementations.
+The skill description guides Claude on when to invoke the skill. Vague descriptions cause the model to either ignore the skill or trigger it inappropriately. Compare these two:
 
-The solution involves explicit scoping. Use file-specific instructions:
+```yaml
+# Weak - too generic
+description: "Helps with code"
 
-```
-For *.ts files: follow test-driven development with the tdd skill
-For *.md files: use the pdf skill for documentation tasks
-For deployment: always use the supermemory skill to recall previous configs
-```
-
-This approach prevents directive conflicts while maintaining clear boundaries between skill domains.
-
-## Handling Permission and Security Restrictions
-
-Claude Code's permission system controls file access, command execution, and network calls. Misconfigured permissions block legitimate operations without clear error messages.
-
-Run Claude with verbose output to see permission decisions:
-
-```
-claude --verbose [your task]
+# Strong - specific trigger condition
+description: "Analyzes test failures and suggests fixes for broken unit tests"
 ```
 
-The output shows which tools are available and which are blocked. If you need to enable blocked functionality, modify your project permissions in the Claude settings or use the `--allow-permissions` flag for testing:
+The stronger description prevents false triggers and ensures the skill activates when you actually need test debugging assistance.
+
+### Variable Scope Problems
+
+Skills can reference variables from the conversation context, but those variables must be clearly established. If your skill references a variable that doesn't exist in the current session, the behavior becomes unpredictable. Use explicit variable declarations in your skill instructions:
 
 ```
-claude --allow-permissions [your task]
+You are debugging the {{language}} codebase at {{project_path}}.
+The current error is: {{error_message}}
 ```
 
-Remember that certain operations require explicit user confirmation even when permissions allow them. The **frontend-design** skill, for instance, may need confirmation before writing multiple files or executing build commands.
+Ensure these variables get set before invoking the skill.
 
-## Using the Debug Flag for Deep Inspection
+## Debugging with the supermemory Skill
 
-For persistent issues, the debug flag provides detailed internal state:
+The supermemory skill provides valuable context about your projects and preferences. When debugging skill behavior, checking what supermemory knows about your environment helps identify misconfigurations.
 
-```
-claude --debug [your task]
-```
-
-Debug output reveals loaded skills, parsed instructions, tool availability, and session context. This information is invaluable when troubleshooting complex configuration interactions.
-
-Pay attention to the order of loaded components. Skills loaded later in the session override earlier ones. If you're combining multiple skills, the final loaded skill takes precedence unless you scope instructions explicitly.
-
-## Quick Reference Checklist
-
-When facing configuration issues, work through this checklist in order:
-
-1. **Verify file locations**: Confirm `.claude.md` and skills are in expected directories
-2. **Check YAML validity**: Validate front matter in skill files
-3. **Review environment variables**: Ensure API keys and proxy settings are accessible
-4. **Inspect permission settings**: Confirm tool access for required operations
-5. **Examine loading order**: Skills and instructions load in specific sequences
-6. **Run with debug flag**: Get detailed state information for complex issues
-
-## Example Debug Session
-
-Here's a practical session debugging why the pdf skill isn't extracting text correctly:
-
-```
-$ claude "extract text from document.pdf"
-Error: Unable to process PDF file
-
-$ claude --debug "extract text from document.pdf"
-[DEBUG] Loading skill: pdf
-[DEBUG] Tool access: Read=true, Write=true, Bash=true
-[DEBUG] PDF tool not available in current session
+```bash
+# Query supermemory for project context
+Remember: my project uses Python Flask, pytest for testing, and is located at ~/projects/webapp
 ```
 
-The debug output reveals the root cause: the PDF processing tool isn't enabled in the session, even though the skill loaded. The solution is to enable PDF processing in Claude's session settings or use an alternative approach with the Bash tool and pdftotext.
+With accurate project context, skills like `tdd` and `frontend-design` can make better decisions about your codebase. Mismatched context leads to irrelevant suggestions and failed tool calls.
 
-This systematic approach—isolating variables, checking debug output, and verifying each configuration layer—resolves most issues within minutes rather than hours of trial and error.
+## Inspecting Tool Call Logs
 
+Claude Code logs all tool invocations, which proves invaluable for debugging. Access these logs to trace exactly what happened during skill execution:
+
+```bash
+# View recent tool calls (Claude Code desktop)
+# Check the developer console for JSON output
+```
+
+Each log entry shows the tool name, arguments, and response. Look for:
+
+- Unexpected tool calls that indicate the skill misunderstood the task
+- Failed tool calls that suggest permission or path issues
+- Missing tool calls that reveal where the skill's reasoning diverged from your intent
+
+## Testing Skill Changes Incrementally
+
+When modifying skill configurations, test incrementally. Change one element at a time and verify the behavior before proceeding. This approach isolates the cause of problems:
+
+1. Start with a minimal skill definition
+2. Add one feature or constraint
+3. Test the modification
+4. Verify the change produces expected behavior
+5. Repeat
+
+For example, if adding error handling to a skill, first confirm the basic skill works, then introduce error-handling prompts, then test with intentionally broken inputs.
+
+## Using the pdf Skill for Documentation Debugging
+
+When skills involve complex prompts or multi-step workflows, the pdf skill helps you visualize and debug the process. Export your skill instructions to PDF and review them as a document:
+
+```yaml
+---
+name: pdf
+description: Converts markdown to formatted PDF documents
+tools:
+  - Read
+  - Write
+  - Bash
+---
+```
+
+This external perspective often reveals unclear instructions or missing steps that are hard to spot in raw markdown.
+
+## Configuration Checklist
+
+Use this checklist when debugging any skill configuration:
+
+- [ ] Verify the skill file exists in the correct directory
+- [ ] Check YAML syntax is valid (no tabs, proper indentation)
+- [ ] Confirm all declared tools are actually needed
+- [ ] Test the description triggers correctly in isolation
+- [ ] Review variable references for typos
+- [ ] Examine tool call logs for failures or unexpected behavior
+- [ ] Test with minimal configuration to isolate issues
+
+## Advanced: Custom Debug Skills
+
+Create a dedicated debug skill for your workflow:
+
+```yaml
+---
+name: debug-helper
+description: "Helps diagnose skill configuration issues and suggests fixes"
+tools:
+  - Read
+  - grep
+  - Bash
 ---
 
-## Related Reading
+You analyze skill configurations and identify common problems.
+When given a skill file path, you:
+1. Validate YAML syntax
+2. Check tool declarations
+3. Review description clarity
+4. Suggest specific improvements
+```
 
-- [Claude Code Local Development Setup Guide](/claude-skills-guide/claude-code-local-development-setup-guide/) — Debug configuration is part of local dev setup
-- [Claude Code Performance Bottleneck Finding](/claude-skills-guide/claude-code-performance-bottleneck-finding/) — Debug configuration helps identify bottlenecks
-- [Claude Code Error Out of Memory Large Codebase Fix](/claude-skills-guide/claude-code-error-out-of-memory-large-codebase-fix/) — Debug config needed when diagnosing OOM errors
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Debugging and error resolution guides
+This skill becomes your go-to tool for diagnosing configuration problems across all your other skills.
+
+## Conclusion
+
+Debugging Claude Code skill configurations requires understanding the execution context, carefully reviewing tool permissions, and systematically testing changes. The workflow involves examining raw skill files, analyzing tool call logs, and iteratively improving your configurations.
+
+By following these patterns, you can resolve most configuration issues efficiently. Remember to leverage skills like supermemory for context, pdf for documentation review, and tdd for test-related debugging. Building a personal debug skill tailored to your workflow accelerates future troubleshooting.
+
+The key is patience: configuration problems often have simple causes, and methodical investigation beats guessing every time.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
