@@ -200,3 +200,10 @@ Claude Code transforms model card documentation from a tedious chore into an aut
 The key is treating model cards as integral parts of your development process—artifacts that evolve alongside your models. With Claude Code handling the heavy lifting, maintaining thorough documentation becomes sustainable even for large-scale ML projects.
 
 Start implementing these workflows today, and you'll find that well-documented models lead to better collaboration, easier debugging, and more responsible AI deployment.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

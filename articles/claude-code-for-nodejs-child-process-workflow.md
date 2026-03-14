@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Node.js Child Process Workflow"
-description: "Learn how to use Claude Code to streamline Node.js child process workflows, with practical examples for spawning, piping, and managing subprocesses effectively."
+description: "Learn how to use Claude Code to streamline Node.js child process workflows, with practical examples for spawning, piping, and managing subprocesses."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-nodejs-child-process-workflow/
@@ -202,3 +202,10 @@ When working with Node.js child processes in your projects, keep these recommend
 **Consider stdio inheritance for debugging.** During development, you can set `{ stdio: 'inherit' }` to see child process output directly in your terminal.
 
 Claude Code can review your child process code, suggest improvements, and help you implement these patterns correctly. Don't hesitate to ask for explanations of specific behaviors or recommendations for your particular use case.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

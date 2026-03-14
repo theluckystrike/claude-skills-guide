@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Node.js VM Module Workflow Guide"
-description: "Master Node.js vm module for code compilation and sandboxing with Claude Code. Learn practical workflows for secure code execution, template rendering, and dynamic script handling."
+description: "Master Node.js vm module for code compilation and sandboxing with Claude Code. Learn practical workflows for secure code execution, template rendering."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-nodejs-vm-module-workflow-guide/
@@ -247,3 +247,10 @@ Third, prefer `vm.runInNewContext()` over modifying the global object directly w
 
 The Node.js vm module is an essential tool for scenarios requiring code compilation, sandboxing, or dynamic execution. By combining Claude Code's assistance with these patterns, you can build secure, performant systems for template rendering, plugin systems, and user code execution. Remember to always prioritize security when executing untrusted code, and leverage Claude Code to explore edge cases and advanced patterns as your requirements evolve.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

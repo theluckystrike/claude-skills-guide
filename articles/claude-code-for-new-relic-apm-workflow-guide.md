@@ -225,3 +225,10 @@ Integrating Claude Code with New Relic APM transforms how you monitor and debug 
 Remember to iterate on your prompts and skills based on what works best for your specific use cases. The combination of Claude Code's natural language processing and New Relic's rich APM data creates powerful possibilities for operational excellence.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

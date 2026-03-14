@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for LLM Caching Workflow Tutorial"
-description: "Learn how to implement intelligent LLM response caching with Claude Code to reduce costs, improve latency, and optimize API usage with practical code examples."
+description: "Learn how to implement intelligent LLM response caching with Claude Code to reduce costs, improve latency, and optimize API usage with practical code."
 date: 2026-03-15
 categories: [tutorials]
 tags: [claude-code, claude-skills]
@@ -239,3 +239,10 @@ Implementing LLM caching with Claude Code is straightforward and delivers immedi
 
 Remember to monitor your metrics, tune your TTL values, and always have fallback mechanisms in place. With proper implementation, you can significantly reduce costs while delivering faster responses to your users.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Failsafe Java Resilience Workflow"
-description: "Learn how to leverage Claude Code to build robust Failsafe Java resilience patterns including retries, circuit breakers, and fallbacks for production-ready applications."
+description: "Learn how to leverage Claude Code to build robust Failsafe Java resilience patterns including retries, circuit breakers, and fallbacks for."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -175,3 +175,10 @@ Remember that resilience patterns aren't one-size-fits-all. What works for a hig
 
 With these patterns in place, your Java applications will handle failures gracefully and maintain reliability in production environments. Your users will appreciate the consistency, and your operations team will have fewer late-night pages.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

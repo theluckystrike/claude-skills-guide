@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Seldon Core Model Serving Guide"
-description: "Learn how to use Claude Code to streamline Seldon Core deployment workflows, create ML model serving configurations, and automate Kubernetes-based inference pipelines."
+description: "Learn how to use Claude Code to streamline Seldon Core deployment workflows, create ML model serving configurations, and automate Kubernetes-based."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-seldon-core-model-serving-guide/
@@ -233,3 +233,10 @@ Claude Code transforms Seldon Core deployment from manual YAML editing into an a
 
 Start by creating a deployment generator skill for your specific model types, then expand to cover testing, monitoring, and advanced inference graph patterns as your serving needs grow.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

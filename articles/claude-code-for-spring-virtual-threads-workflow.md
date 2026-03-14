@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Spring Virtual Threads Workflow"
-description: "Learn how to use Claude Code to build efficient Spring applications with Virtual Threads. Practical examples and workflow patterns for modern Java development."
+description: "Learn how to use Claude Code to build efficient Spring applications with Virtual Threads. Practical examples and workflow patterns for modern Java."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-spring-virtual-threads-workflow/
@@ -180,3 +180,10 @@ Virtual Threads in Spring represent a significant advancement in building scalab
 
 Start by enabling Virtual Threads in your Spring Boot configuration, then incrementally refactor blocking operations to take advantage of this lightweight concurrency model. With Claude Code handling the boilerplate and testing, you can focus on business logic while ensuring your applications scale efficiently.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for C# Source Generators Workflow"
-description: "Learn how to leverage Claude Code to streamline your C# source generator development workflow. Practical examples and actionable advice for .NET developers."
+description: "Learn how to leverage Claude Code to streamline your C# source generator development workflow. Practical examples and actionable advice for .NET."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-csharp-source-generators-workflow/
@@ -148,3 +148,10 @@ Integrating Claude Code into your C# source generator workflow accelerates devel
 
 The key to success lies in iterative development: start with simple generators, validate output, then progressively add complexity. Claude Code serves as an intelligent partner throughout this journey, helping you understand APIs, debug issues, and implement best practices efficiently.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

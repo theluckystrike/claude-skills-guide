@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Dhat Memory Profiling Workflow"
-description: "A practical guide to using Claude Code with Dhat for Python memory profiling. Learn how to identify memory allocation patterns and optimize your Python applications."
+description: "A practical guide to using Claude Code with Dhat for Python memory profiling. Learn how to identify memory allocation patterns and optimize your Python."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-dhat-memory-profiling-workflow/
@@ -206,3 +206,10 @@ To get the most out of your Dhat sessions:
 Dhat provides detailed memory allocation insights that are essential for building efficient Python applications. When combined with Claude Code's ability to explain results, suggest fixes, and implement changes, you have a powerful workflow for memory optimization. Start integrating Dhat into your development process today, and let Claude Code help you interpret and act on the results.
 
 Remember that memory optimization is often about trade-offs. Not all allocations are problems, and not all optimizations are worth implementing. Use Dhat data to identify the highest-impact opportunities, then work with Claude Code to implement practical solutions that balance performance, readability, and maintainability.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

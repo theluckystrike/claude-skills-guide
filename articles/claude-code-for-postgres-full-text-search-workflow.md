@@ -143,3 +143,10 @@ Document your search configuration, including stop word lists and thesaurus file
 Monitor query performance over time. As data grows and access patterns shift, you may need to adjust indexes or re-partition tables. Regular analysis with `EXPLAIN ANALYZE` catches degradation before it impacts users.
 
 PostgreSQL's full-text search provides a capable, integrated solution that eliminates external dependencies for many applications. With Claude Code assisting your implementation, you can rapidly develop search functionality that scales with your needs while maintaining query performance and result quality.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

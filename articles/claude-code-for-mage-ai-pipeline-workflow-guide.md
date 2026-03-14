@@ -172,3 +172,10 @@ Claude Code transforms Mage AI pipeline development from a manual process into a
 
 The key is treating Claude as a pair programmer who understands data engineering concepts and Mage AI specifics. Provide clear requirements, review suggestions critically, and iterate toward robust, production-ready pipelines.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

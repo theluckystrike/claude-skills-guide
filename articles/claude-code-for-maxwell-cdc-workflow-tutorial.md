@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Maxwell CDC Workflow Tutorial"
-description: "Learn how to use Claude Code with Maxwell CDC for real-time data streaming and change data capture workflows. Includes practical examples, skill configurations, and actionable advice for developers."
+description: "Learn how to use Claude Code with Maxwell CDC for real-time data streaming and change data capture workflows. Includes practical examples, skill."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, maxwell-cdc, data-engineering, database, streaming, mysql, kafka, claude-skills]
@@ -249,3 +249,10 @@ Integrating Claude Code with Maxwell CDC transforms your change data capture pip
 Start with the basic skill configuration, then expand to handle your specific requirements around schema changes, monitoring alerts, and multi-database setups. Claude Code's ability to understand your project context makes it particularly effective for complex CDC scenarios where you need both automation and flexibility.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

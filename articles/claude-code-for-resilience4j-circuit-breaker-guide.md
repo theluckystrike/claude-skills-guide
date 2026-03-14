@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Resilience4j Circuit Breaker Guide"
-description: "Learn how to use Claude Code to build resilient Java applications with Resilience4j circuit breakers. Practical examples and code snippets for implementing fault tolerance."
+description: "Learn how to use Claude Code to build resilient Java applications with Resilience4j circuit breakers. Practical examples and code snippets for."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -217,3 +217,10 @@ Resilience4j provides a robust, lightweight solution for implementing circuit br
 
 The key to success is treating circuit breakers as living components that require ongoing attention and refinement as your system evolves.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
