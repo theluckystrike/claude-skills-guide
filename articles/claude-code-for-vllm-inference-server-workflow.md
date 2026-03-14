@@ -134,33 +134,17 @@ Now let's create a Claude Code skill that automates common vLLM workflow tasks:
 
 ```yaml
 # claude-code-vllm-skill.md
+---
 name: vLLM Inference Workflow
 description: Automate vLLM inference server tasks with Claude Code
+---
 
-commands:
-  deploy:
-    description: Deploy vLLM server with specified configuration
-    args:
-      model: Model identifier from Hugging Face
-      port: Server port (default: 8000)
-      gpu_count: Number of GPUs for tensor parallelism
-    action: |
-      Generate deployment script and docker-compose configuration
-      
-  benchmark:
-    description: Run performance benchmarks
-    args:
-      model: Model to benchmark
-      concurrent_requests: Number of simultaneous requests
-    action: |
-      Generate load testing script using locust or wrk
-      
-  debug:
-    description: Analyze and debug inference issues
-    args:
-      error_log: Path to vLLM error log
-    action: |
-      Parse logs and suggest fixes for common issues
+# vLLM Inference Workflow
+
+Help with vLLM inference server tasks including:
+- Generating deployment scripts and docker-compose configurations
+- Running performance benchmarks with locust or wrk
+- Analyzing and debugging inference issues from error logs
 ```
 
 ## Integrating Monitoring and Observability

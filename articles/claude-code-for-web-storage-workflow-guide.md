@@ -39,7 +39,7 @@ First, ensure Claude Code is installed and configured. Then, you can invoke it f
 claude --version
 
 # Start a new session for storage work
-claude -p "Help me implement a localStorage wrapper for my React app"
+claude --print "Help me implement a localStorage wrapper for my React app"
 ```
 
 For persistent configuration, create a `.claude/settings.json` in your project:
@@ -236,7 +236,7 @@ Claude Code excels at helping debug storage problems. When facing issues:
 Example debugging workflow:
 
 ```bash
-claude -p "Write a script to analyze localStorage usage and suggest which items to remove"
+claude --print "Write a script to analyze localStorage usage and suggest which items to remove"
 ```
 
 This generates a diagnostic utility:

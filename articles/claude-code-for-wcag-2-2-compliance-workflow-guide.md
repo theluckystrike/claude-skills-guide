@@ -38,7 +38,6 @@ Before writing code, configure Claude Code with accessibility-aware prompts. Cre
 ---
 name: accessibility-audit
 description: Audit code for WCAG 2.2 compliance
-tools: [read_file, bash]
 ---
 
 When reviewing code for accessibility, check for:

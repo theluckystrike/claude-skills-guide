@@ -31,10 +31,10 @@ Before integrating Claude Code with Tooljet, ensure you have both tools properly
 Start by installing Claude Code on your development machine if you haven't already. Then, create a dedicated skill for Tooljet interactions that understands platform-specific syntax and best practices.
 
 ```bash
-# Initialize Claude Code project
-claude init tooljet-integration
+# Create a CLAUDE.md file to give Claude context about the Tooljet project
+touch CLAUDE.md
 
-# Create a Tooljet-specific skill
+# Create a Tooljet-specific skill directory
 mkdir -p .claude/skills
 ```
 

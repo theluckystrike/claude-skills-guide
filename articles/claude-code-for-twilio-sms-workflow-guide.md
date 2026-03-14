@@ -34,10 +34,11 @@ npm install twilio
 
 ## Setting Up Your Claude Code SMS Skill
 
-Create a dedicated Claude Code skill for Twilio SMS operations to encapsulate all messaging-related functionality:
+Create a dedicated Claude Code skill for Twilio SMS operations to encapsulate all messaging-related functionality. Copy the skill file manually to your `.claude/skills/` directory:
 
 ```bash
-claude skill create twilio-sms-workflow
+mkdir -p .claude/skills
+# Then create your skill file at .claude/skills/twilio-sms-workflow.md
 ```
 
 This creates a skill structure with proper organization for handling different SMS scenarios. Now let's build the core functionality for sending messages:

@@ -32,8 +32,8 @@ Before migrating your Travis CI configurations, ensure Claude Code is properly i
 # Install Claude Code if not already installed
 npm install -g @anthropic/claude-code
 
-# Initialize in your project
-claude init
+# Create a CLAUDE.md file to give Claude context about your project
+touch CLAUDE.md
 
 # Verify installation
 claude --version
@@ -183,12 +183,11 @@ export async function handler(args) {
 
 ## Migrating Environment Variables
 
-Travis CI uses encrypted environment variables for sensitive data. Claude Code provides secure alternatives:
+Travis CI uses encrypted environment variables for sensitive data. Claude Code provides secure alternatives by using environment variables:
 
 ```bash
-# Store sensitive variables securely
-claude config set DEPLOY_TOKEN --encrypted
-claude config set API_KEY --encrypted
+export DEPLOY_TOKEN=xxx
+export API_KEY=xxx
 ```
 
 Or use environment files that are gitignored:

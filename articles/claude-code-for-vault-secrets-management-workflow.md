@@ -67,10 +67,6 @@ A dedicated Claude skill streamlines common Vault operations. Here's a practical
 ---
 name: vault-secrets
 description: "Manage HashiCorp Vault secrets with common operations"
-tools:
-  - Bash
-  - Read
-  - Write
 ---
 
 # Vault Secrets Management Skill

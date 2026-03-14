@@ -79,17 +79,17 @@ WezTerm's spawn command functionality allows you to launch Claude Code in specif
 ```lua
 config.keybindings = {
   { key = 'c', mods = 'CMD|SHIFT', action = wezterm.action.SpawnCommandInNewTab {
-      args = { 'claude', '-p' }
+      args = { 'claude' }
     }
   },
   { key = 'v', mods = 'CMD|SHIFT', action = wezterm.action.SpawnCommandInNewWindow {
-      args = { 'claude', '--continue' }
+      args = { 'claude' }
     }
   },
 }
 ```
 
-The first binding (Cmd+Shift+C) opens Claude Code in a new tab using prompt mode (`-p`), ideal for quick questions or code reviews. The second (Cmd+Shift+V) opens a new window for continuing a previous session with the `--continue` flag.
+The first binding (Cmd+Shift+C) opens Claude Code in a new tab, ideal for quick questions or code reviews. The second (Cmd+Shift+V) opens a new window for a fresh Claude Code session.
 
 ### Terminal Multiplexing for Persistent Sessions
 

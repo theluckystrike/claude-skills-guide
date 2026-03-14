@@ -47,13 +47,13 @@ cd my-suspense-app
 npm install
 ```
 
-Initialize Claude Code in your project:
+Initialize Claude Code in your project by creating a CLAUDE.md file with Vue-specific context:
 
 ```bash
-npx @anthropic-ai/claude-code init
+touch CLAUDE.md
 ```
 
-This creates a `.claude` directory with settings. Configure it to understand Vue patterns by adding a project-specific instruction file.
+This creates a project instruction file that Claude Code reads automatically. Configure it to understand Vue patterns by adding project-specific instructions.
 
 ## Building Your First Async Component
 
