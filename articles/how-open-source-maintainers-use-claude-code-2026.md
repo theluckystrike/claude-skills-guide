@@ -1,13 +1,18 @@
 ---
 
+
 layout: default
 title: "How Open Source Maintainers Use Claude Code in 2026"
 description: "Discover practical workflows and strategies open source maintainers use to leverage Claude Code for issue triaging, documentation, code reviews, and."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-open-source-maintainers-use-claude-code-2026/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # How Open Source Maintainers Use Claude Code in 2026
 

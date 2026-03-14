@@ -1,17 +1,21 @@
 ---
+
 layout: default
 title: "How Technical Writers Use Claude Code for Docs"
 description: "Practical guide for technical writers using Claude Code with specialized skills for documentation, content generation, and publishing workflows."
 date: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, technical-writing, documentation, workflow]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-technical-writers-use-claude-code-for-docs/
+reviewed: true
+score: 7
 ---
+
 
 # How Technical Writers Use Claude Code for Docs
 
-Technical documentation demands precision, consistency, and efficiency. Claude Code provides a powerful toolkit for writers managing API docs, user guides, and developer documentation. By leveraging specialized skills, technical writers can automate repetitive tasks, maintain style consistency, and accelerate the entire documentation workflow.
+Technical documentation demands precision, consistency, and efficiency. Claude Code provides a powerful toolkit for writers managing API docs, user guides, and developer documentation. By using specialized skills, technical writers can automate repetitive tasks, maintain style consistency, and accelerate the entire documentation workflow.
 
 ## The Documentation Challenge
 
