@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "How Claude Code Accelerated Onboarding New Devs"
-description: "Discover how Claude Code transforms developer onboarding with AI-powered code reviews, automated documentation, and skill-guided workflows that reduce ramp time from weeks to days."
+description: "Discover how Claude Code transforms developer onboarding with AI-powered code reviews, automated documentation, and skill-guided workflows that reduce."
 date: 2026-03-14
 author: theluckystrike
 permalink: /how-claude-code-accelerated-onboarding-new-devs/
+categories: [guides]
 ---
 
 # How Claude Code Accelerated Onboarding New Devs
@@ -126,5 +127,12 @@ If your team wants to accelerate onboarding with Claude Code, start with these s
 The investment in setting up proper context pays dividends with every new team member who joins.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

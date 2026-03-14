@@ -5,6 +5,7 @@ description: "Practical strategies for developers to leverage Claude Code, autom
 date: 2026-03-14
 author: theluckystrike
 permalink: /how-freelancers-use-claude-code-to-take-more-clients/
+categories: [guides]
 ---
 
 # How Freelancers Use Claude Code to Take More Clients
@@ -136,5 +137,12 @@ Test each skill on a small project. Refine your prompts to match your style. Bui
 As you build confidence, layer in more automations. The compounding effect kicks in quickly—each improvement makes the next one easier.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
