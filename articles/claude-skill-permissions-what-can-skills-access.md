@@ -244,7 +244,7 @@ By understanding and properly configuring these permissions, you can build relia
 ## Related Reading
 
 - [Skill .md File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — Complete reference for skill front matter fields including `tools` and `max_turns`
-- [Advanced Claude Skills with Tool Use and Function Calling](/claude-skills-guide/advanced-claude-skills-with-tool-use-and-function-calling/) — Deep dive into building skills that orchestrate multiple tool calls effectively
+- [Advanced Claude Skills with Tool Use and Function Calling](/claude-skills-guide/advanced-claude-skills-with-tool-use-and-function-calling/) — Guide to building skills that orchestrate multiple tool calls effectively
 - [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step guide for creating well-structured skills with proper permission boundaries
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

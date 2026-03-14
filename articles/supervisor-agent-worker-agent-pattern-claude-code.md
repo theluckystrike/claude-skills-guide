@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Supervisor Agent Worker Agent Pattern in Claude Code"
-description: "Learn how to implement the supervisor agent worker pattern in Claude Code for building robust AI agent systems."
+description: "Learn how to implement the supervisor agent worker pattern in Claude Code for building reliable AI agent systems."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [advanced]
@@ -143,7 +143,7 @@ When scaling the supervisor worker pattern, consider these factors:
 
 ## Conclusion
 
-The supervisor agent worker pattern provides a robust foundation for building complex AI agent systems with Claude Code. By clearly defining roles and responsibilities, implementing proper coordination logic, and using Claude's skill ecosystem, you can create agents that handle sophisticated multi-step workflows effectively. Start with simple two-worker configurations and gradually expand as your requirements grow.
+The supervisor agent worker pattern provides a reliable foundation for building complex AI agent systems with Claude Code. By clearly defining roles and responsibilities, implementing proper coordination logic, and using Claude's skill ecosystem, you can create agents that handle sophisticated multi-step workflows effectively. Start with simple two-worker configurations and gradually expand as your requirements grow.
 
 ## Related Reading
 

@@ -141,7 +141,7 @@ Generate custom visualizations for:
 
 ## Search and Filtering Implementation
 
-Robust search functionality separates professional platforms from basic listings. Here's how to structure property search:
+Effective search functionality separates professional platforms from basic listings. Here's how to structure property search:
 
 ```python
 from typing import List, Dict, Optional

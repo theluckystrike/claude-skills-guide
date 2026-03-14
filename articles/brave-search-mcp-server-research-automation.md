@@ -222,7 +222,7 @@ You help execute multi-step research workflows using Brave Search MCP.
 ## Process
 
 1. **Initial Discovery**: Search broadly to understand the topic landscape
-2. **Deep Dive**: Query specific aspects identified in discovery
+2. **Deep Focus**: Query specific aspects identified in discovery
 3. **Synthesis**: Combine findings into actionable insights
 
 ## Tools

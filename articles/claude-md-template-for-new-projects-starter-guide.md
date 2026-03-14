@@ -18,7 +18,7 @@ When you start a new project, having a solid prompt template saves time and ensu
 
 A Claude MD template is a Markdown file containing predefined prompts, instructions, and context that you can reuse across multiple projects. Unlike Claude skills which extend Claude's capabilities, MD templates focus on structuring your prompts for specific workflows. Think of them as reusable project blueprints.
 
-[combine a template with skills like **tdd** or **frontend-design**](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), you get a powerful starting point for any project phase.
+When you combine a template with skills like **tdd** or **frontend-design**, you get a powerful starting point for any project phase.
 
 ## Creating Your First Template
 
@@ -188,7 +188,7 @@ Here is how a typical session might flow using templates and skills:
 
 ```
 1. Start new project:
-   /scaffold create webapp template with React and TypeScript
+   Ask Claude to scaffold a React TypeScript project structure
 
 2. Add first feature:
    /tdd create user authentication module with tests

@@ -12,7 +12,7 @@ score: 7
 
 # Tavily MCP Server: Research Automation Guide
 
-[Building research automation into your Claude Code workflow](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) opens up powerful possibilities for gathering, processing, and synthesizing information from across the web. The Tavily MCP Server provides a robust integration between Tavily's search capabilities and Claude's contextual understanding, enabling you to automate research tasks that previously required manual effort.
+[Building research automation into your Claude Code workflow](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) opens up powerful possibilities for gathering, processing, and synthesizing information from across the web. The Tavily MCP Server provides a direct integration between Tavily's search capabilities and Claude's contextual understanding, enabling you to automate research tasks that previously required manual effort.
 
 This guide covers practical implementation patterns for developers and power users looking to incorporate Tavily into their Claude skills workflow.
 

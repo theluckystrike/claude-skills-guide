@@ -37,7 +37,7 @@ The way you structure prompts directly affects token consumption. Instead of dum
 
 This approach works exceptionally well with skills like **tdd** where you need focused analysis of specific functions rather than broad codebase reviews.
 
-### 2. Leverage File References Wisely
+### 2. Use File References Wisely
 
 When using skills such as **pdf** or document processing capabilities, reference specific sections rather than loading entire documents:
 

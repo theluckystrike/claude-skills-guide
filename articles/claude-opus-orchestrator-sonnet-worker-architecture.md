@@ -96,7 +96,7 @@ However, this architecture introduces overhead. The orchestrator needs to manage
 
 ## Error Handling and Recovery
 
-Robust systems must handle worker failures gracefully. If one worker fails, the orchestrator should retry with adjusted parameters or skip the failed subtask and continue. Here's a pattern:
+Well-designed systems must handle worker failures gracefully. If one worker fails, the orchestrator should retry with adjusted parameters or skip the failed subtask and continue. Here's a pattern:
 
 ```python
 def execute_with_retry(worker, task, max_retries=2):

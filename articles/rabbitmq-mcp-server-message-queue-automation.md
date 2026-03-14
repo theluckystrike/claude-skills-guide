@@ -99,7 +99,7 @@ This pattern mirrors capabilities you might find in skills like the pdf skill or
 
 ## Implementing Dead Letter Queues
 
-Production systems require robust error handling. Dead letter queues capture messages that fail processing, allowing you to inspect failures without losing data. Pairing dead letter handling with [monitoring and logging for multi-agent systems](/claude-skills-guide/articles/monitoring-and-logging-claude-code-multi-agent-systems/) gives full visibility into failures across your distributed pipeline:
+Production systems require thorough error handling. Dead letter queues capture messages that fail processing, allowing you to inspect failures without losing data. Pairing dead letter handling with [monitoring and logging for multi-agent systems](/claude-skills-guide/articles/monitoring-and-logging-claude-code-multi-agent-systems/) gives full visibility into failures across your distributed pipeline:
 
 ```javascript
 async function setupQueuesWithDLQ() {

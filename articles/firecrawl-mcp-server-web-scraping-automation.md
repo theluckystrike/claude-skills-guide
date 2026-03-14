@@ -195,7 +195,7 @@ For production workloads, consider these patterns:
 
 ## Conclusion
 
-The Firecrawl MCP server transforms web scraping from a manual, error-prone task into an automated, Claude-powered workflow. By combining natural language commands with robust scraping infrastructure, you can build sophisticated data extraction pipelines without maintaining fragile scraping code.
+The Firecrawl MCP server transforms web scraping from a manual, error-prone task into an automated, Claude-powered workflow. By combining natural language commands with Firecrawl's scraping infrastructure, you can build sophisticated data extraction pipelines without maintaining fragile scraping code.
 
 Start with simple single-page extractions, then expand to crawling operations as you become comfortable with the workflow. The real power emerges when you combine Firecrawl with other Claude skills like pdf for report generation, tdd for test creation, and supermemory for persistent data storage.
 
