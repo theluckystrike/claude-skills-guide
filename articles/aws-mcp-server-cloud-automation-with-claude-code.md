@@ -5,7 +5,7 @@ description: "Learn how to automate AWS infrastructure using the Model Context P
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, aws, mcp, cloud-automation, infrastructure, devops]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
