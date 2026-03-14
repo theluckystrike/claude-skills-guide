@@ -12,10 +12,7 @@ reviewed: true
 score: 7
 ---
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d103d2003802453259ba0638c75428ce7618f4f9
 When development teams evaluate AI coding assistants, the conversation increasingly turns to Claude Code. While GitHub Copilot established the market, many teams find that Claude Code better aligns with how modern developers want to work. This shift comes down to a few practical differences that matter in daily engineering work.
 
 ## Claude Code Understands Your Entire Project

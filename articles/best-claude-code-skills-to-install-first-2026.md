@@ -17,7 +17,7 @@ permalink: /best-claude-code-skills-to-install-first-2026/
 
 ## How Skills Work
 
-Skills are `.md` files in `~/.claude/skills/`. Native skills ship pre-installed; community skills you download manually. There are no Python imports, no `claude --skill` flags, and no `require()` calls. Invocation is always:
+Skills are `.md` files in `~/.claude/skills/`. Native skills ship pre-installed; community skills you download manually. There are no Python imports, no extra flags, and no `require()` calls. Invocation is always:
 
 ```
 /skill-name [your task here]

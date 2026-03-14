@@ -14,14 +14,7 @@ score: 7
 {% raw %}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> d103d2003802453259ba0638c75428ce7618f4f9
-=======
-
->>>>>>> dd79db7f0b32e957dc44591a7c4e07e3bf178669
 # Claude Code Git Stash Workflow Tips Guide
 
 When you're deep in a development session with Claude Code, interruptions happen. Maybe you need to quickly check a different branch, hotfix a production bug, or switch context entirely. Git stash becomes your safety net, but using it effectively with Claude Code requires knowing the right patterns and commands. This guide covers practical git stash workflows specifically tailored for developers working with Claude Code and Claude Skills.

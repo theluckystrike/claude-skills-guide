@@ -12,10 +12,7 @@ reviewed: true
 score: 7
 ---
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d103d2003802453259ba0638c75428ce7618f4f9
 
 # Why Does Claude Code Need So Much Context Window?
 

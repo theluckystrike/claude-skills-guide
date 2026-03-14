@@ -4,12 +4,8 @@ layout: default
 title: "Claude Code API Backward Compatibility Guide"
 description: "A practical guide to understanding and maintaining backward compatibility when working with Claude Code and custom skills."
 date: 2026-03-14
-<<<<<<< HEAD
-author: "Claude Skills Guide"
-=======
 categories: [guides]
 author: theluckystrike
->>>>>>> b364fbd862828af183249c80524194c773b06a03
 permalink: /claude-code-api-backward-compatibility-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]

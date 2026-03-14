@@ -49,7 +49,7 @@ This approach gives Claude precise feedback and preserves working code.
 
 Always run validation after Claude makes significant changes. For Python projects, run pytest or your test suite immediately. For frontend work, use the **frontend-design** skill's validation commands if available. The **pdf** skill can generate documentation for your changes, which helps you review modifications systematically.
 
-### Leverage Version Control
+### Use Version Control
 
 Git is your safety net. Before any major Claude session, create a commit:
 

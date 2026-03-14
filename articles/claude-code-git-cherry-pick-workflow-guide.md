@@ -119,11 +119,7 @@ If conflicts arise, you'll see them immediately. Don't panic—Git stops at the 
 
 Open the conflicted files. You'll see conflict markers:
 
-```<<<<<<< HEAD
-// Your current branch code
-=======
-// Incoming changes from cherry-picked commit
->>>>>>> a1b2c3d
+```// Incoming changes from cherry-picked commit
 ```
 
 Choose the appropriate resolution, then:

@@ -189,11 +189,7 @@ This approach reduces conflict surface area and makes code reviews more manageab
 Git marks conflicts with special delimiters. Understanding these markers helps you navigate resolution:
 
 ```
-<<<<<<< HEAD
-Your current branch changes
-=======
 Incoming changes from the branch being merged
->>>>>>> branch-name
 ```
 
 The `<<<<<<< HEAD` section shows your current branch. The `=======` line separates your changes from the incoming changes. The `>>>>>>> branch-name` marks the end of the conflict section.
