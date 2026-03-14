@@ -36,7 +36,7 @@ FILES=(report1.pdf report2.pdf report3.pdf)
 
 for file in "${FILES[@]}"; do
   echo "Processing $file..."
-  claude -p "/pdf Summarize this document" --context "$file"
+  claude -p "/pdf Summarize this document: $file"
   sleep 3  # Wait 3 seconds between invocations
 done
 ```

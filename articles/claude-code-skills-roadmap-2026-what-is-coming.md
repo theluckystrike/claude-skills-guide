@@ -62,8 +62,8 @@ This declarative approach reduces the boilerplate needed to create powerful skil
 
 One of the most significant developments in the 2026 roadmap is skill chaining. You will be able to combine multiple skills in a single prompt, letting Claude orchestrate complex workflows that span different domains. For example, you could process a raw data export, generate analysis in a spreadsheet, create a PDF report, and email it to stakeholders—all in one conversation:
 
-```bash
-/process-order-report --source orders.db --skill-chain "xlsx + pdf + email"
+```
+Process the orders from orders.db, generate an xlsx analysis, create a PDF report, and draft an email summary for stakeholders
 ```
 
 The `automations` skill, expected to launch in Q2 2026, will let you define reusable workflows that combine skills with conditional logic. These automations persist across sessions and can be triggered by external events through webhook integrations.

@@ -191,22 +191,22 @@ Run this validation as part of your pre-commit checks to catch encoding issues b
 
 [The **supermemory** skill maintains translation memory across Claude Code sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/). This proves valuable when you need to reference previous translation decisions or maintain glossaries.
 
-Configure supermemory for your L10n workflow:
+Configure supermemory for your L10n workflow by invoking the skill with natural language:
 
-```bash
-/claude-supermemory init --project l10n-pipeline --context translation-glossary
+```
+/supermemory Remember: this is the l10n-pipeline project using a translation-glossary context
 ```
 
 Add terminology to your translation memory:
 
 ```
-/claude-supermemory add --term "submit button" --translations es:"botón de enviar",fr:"bouton soumettre",ja:"送信ボタン"
+/supermemory Remember: "submit button" translations — es: botón de enviar, fr: bouton soumettre, ja: 送信ボタン
 ```
 
 When the pipeline encounters ambiguous strings, query your translation memory:
 
-```bash
-/claude-supermemory query --term "submit button"
+```
+/supermemory What are the approved translations for "submit button"?
 ```
 
 The skill returns previous translations, helping maintain consistency across your project.

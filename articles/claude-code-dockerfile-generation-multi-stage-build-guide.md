@@ -187,11 +187,12 @@ ENTRYPOINT ["/appbinary"]
 For more complex setups, combine multiple skills in a single Claude session:
 
 ```
-/docker
-# Generate a multi-stage Dockerfile for a React app with API backend
+Generate a multi-stage Dockerfile for a React app with API backend
+```
 
+```
 /frontend-design
-# Help me structure the React components for the frontend
+Help me structure the React components for the frontend
 ```
 
 ## Best Practices for Claude-Generated Dockerfiles
