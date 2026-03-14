@@ -123,6 +123,10 @@ If you're just getting started with skills, these five deliver the highest value
 
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Top skills are only worth it if you use them efficiently
 - [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Not all best skills are official—understand the trade-offs
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — The right install order to get value immediately
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Deep dive on the top-rated development skill
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — How the #4 ranked skill actually works under the hood
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Once you know the best skills, learn to use them efficiently
 
 ---
 

@@ -108,6 +108,10 @@ Advanced optimization isn't just about prompts. It's about workflow design:
 
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understanding auto-loading is key to controlling token spend
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The skill investments worth the token cost
+- [Understanding Claude Code Hooks System: Complete Guide](/claude-skills-guide/understanding-claude-code-hooks-system-complete-guide/) — Hooks are the advanced complement to skills—essential for power users
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — The logical next step after mastering single-skill optimization
+- [Claude Skills Memory and Context Architecture Explained](/claude-skills-guide/claude-skills-memory-and-context-architecture-explained/) — Foundational knowledge for any advanced optimization strategy
+- [Best Claude Code Skills 2026 Rankings Hub](/claude-skills-guide/best-of-hub/) — Know which skills deserve your advanced optimization effort
 
 ---
 

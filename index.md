@@ -4,6 +4,30 @@ title: "Claude Skills Guide — Comprehensive Tutorials and Comparisons"
 description: "The most comprehensive collection of Claude Code skills guides, tutorials, and comparisons. 360+ free articles for developers."
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Claude Skills Guide",
+  "url": "https://theluckystrike.github.io/claude-skills-guide/",
+  "description": "The most comprehensive collection of Claude Code skills guides, tutorials, and comparisons. 360+ free articles for developers.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Claude Skills Guide",
+    "url": "https://theluckystrike.github.io/claude-skills-guide/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://theluckystrike.github.io/claude-skills-guide/assets/logo.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://theluckystrike.github.io/claude-skills-guide/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
 # Claude Skills Guide
 
 The most comprehensive collection of Claude Code skills guides on the web. Free, open source, updated weekly.

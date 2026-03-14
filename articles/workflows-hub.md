@@ -11,7 +11,7 @@ score: 7
 permalink: /workflows-hub/
 ---
 
-# AI Agent Workflow Guide: Claude Skills for Real-World Automation
+# Claude Skills Workflow Guide: Build, Chain & Contribute
 
 Skills are most powerful when they're embedded in repeatable workflows rather than used ad-hoc. This hub covers how to build, contribute, and maintain Claude skill workflows that scale.
 
