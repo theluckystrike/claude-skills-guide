@@ -1,15 +1,13 @@
 ---
 layout: default
 title: "How to Make Claude Code Write Better Unit Tests"
-description: Practical strategies to improve unit test quality when working with Claude Code. Learn prompt engineering techniques, skill selection, and workflow.
+description: Practical strategies to improve unit test quality when working with Claude Code. Learn prompt engineering techniques, skill selection, and workflow patterns.
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, claude-skills, unit-testing, tdd]
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
+author: theluckystrike
 permalink: /how-to-make-claude-code-write-better-unit-tests/
 ---
+
+{% raw %}
 
 # How to Make Claude Code Write Better Unit Tests
 
@@ -163,5 +161,7 @@ Getting better unit tests from Claude Code requires clear direction, the right s
 - [How to Make Claude Code Test Before Implementing Feature](/claude-skills-guide/how-to-make-claude-code-test-before-implementing-feature/) — enforce test-first development for even better tests
 - [Claude Code Pytest Fixtures Parametrize Workflow Tutorial](/claude-skills-guide/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — write advanced parametrized tests with pytest and Claude
 - [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — review generated unit tests for coverage and quality
+
+{% endraw %}
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
