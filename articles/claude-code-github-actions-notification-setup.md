@@ -10,6 +10,8 @@ reviewed: true
 score: 8
 permalink: /claude-code-github-actions-notification-setup/
 ---
+{% raw %}
+
 
 # Claude Code GitHub Actions Notification Setup
 
@@ -242,3 +244,4 @@ Setting up proper GitHub Actions notifications for Claude Code workflows transfo
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

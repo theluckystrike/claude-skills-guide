@@ -10,6 +10,8 @@ reviewed: true
 score: 8
 permalink: /mcp-prompt-injection-attack-prevention-guide/
 ---
+{% raw %}
+
 
 # MCP Prompt Injection Attack Prevention Guide
 
@@ -187,3 +189,4 @@ Prompt injection prevention requires defense in depth. By sanitizing inputs, est
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
