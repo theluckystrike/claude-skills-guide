@@ -313,7 +313,7 @@ This section lists every article in the use-cases cluster, grouped by sub-topic.
 
 - [Claude Code for Beginners: Getting Started 2026](/claude-skills-guide/articles/claude-code-for-beginners-complete-getting-started-2026/) — set up Claude Code before diving into specific use cases
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — the most impactful skills across all developer roles
-- [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-guide/articles/claude-skills-for-startup-founders-and-solopreneurs/) — high-leverage use cases for builders moving fast
+- [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-guide/articles/claude-skills-for-startup-founders-and-solopreneurs/) — key use cases for builders moving fast
 - [Claude Code Skills for Enterprise Architects Governance](/claude-skills-guide/articles/claude-code-skills-for-enterprise-architects-governance/) — apply Claude skills at organizational scale
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*

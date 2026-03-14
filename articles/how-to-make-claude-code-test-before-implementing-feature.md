@@ -217,7 +217,7 @@ The benefit is substantial: tests become design documents rather than afterthoug
 ## Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — build a full CI-integrated TDD pipeline with the `/tdd` skill
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — deep dive into the TDD skill's features and configuration
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — full breakdown of the TDD skill's features and configuration
 - [Claude Code Skills for Writing Integration Tests](/claude-skills-guide/articles/claude-code-skills-for-writing-integration-tests/) — extend test-first practices beyond unit tests to integration testing
 - [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) — complement TDD with automated code review workflows
 

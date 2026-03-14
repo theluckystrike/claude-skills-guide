@@ -185,48 +185,20 @@ Once configured, Claude becomes a persistent coding companion in your terminal�
 
 ## Choosing the Right Model for Your Needs
 
-Claude Code supports multiple models, each suited to different use cases. Understanding the options helps you optimize for speed, cost, or capability.
-
-**Sonnet** provides the best balance for most development tasks. It handles complex reasoning, multi-file analysis, and sophisticated code generation without excessive latency. Use this as your default:
-
-```json
-{
-  "model": "claude-sonnet-4-20250514"
-}
-```
-
-**Haiku** excels at fast, straightforward tasks. When you need quick explanations, simple refactoring, or one-liner code generation, Haiku responds in milliseconds. Ideal for high-volume, low-complexity requests:
-
-```json
-{
-  "model": "claude-haiku-3-20250307"
-}
-```
-
-**Opus** tackles your most demanding challenges—architectural design, intricate debugging, or full-system code generation. Expect higher latency and API costs, but receive superior results for complex problems.
-
-Switch models based on the task at hand. For routine work, Haiku keeps things snappy. For anything beyond straightforward, Sonnet or Opus deliver the necessary capability.
-
-## Environment-Specific Configurations
-
-Different projects may require different Claude configurations. Use directory-specific settings with `.claude.json` files placed in your project folders:
+Claude Code supports multiple models, each suited to different use cases. Pass the `--model` flag to select a model per command:
 
 ```bash
-# In your project root
-touch .claude.json
+# Sonnet: best balance for most development tasks
+claude --model claude-sonnet-4-5 "Refactor this function"
+
+# Haiku: fast for simple tasks
+claude --model claude-haiku-4-5 "Explain this variable name"
+
+# Opus: most capable for complex architecture decisions
+claude --model claude-opus-4-5 "Design a microservices migration plan"
 ```
 
-Add project-specific settings:
-
-```json
-{
-  "model": "claude-sonnet-4-20250514",
-  "max_tokens": 8192,
-  "system_prompt": "You are a Python expert. Follow PEP 8 style guidelines and prefer type hints."
-}
-```
-
-This override applies only when Claude runs from that directory—useful when working across projects with different language focuses or coding standards.
+Switch models based on the task at hand. For routine work, Haiku keeps things fast. For anything requiring deep reasoning, Sonnet or Opus deliver the necessary capability.
 
 ## Practical Example: Automated Code Reviews
 

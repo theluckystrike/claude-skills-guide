@@ -155,6 +155,6 @@ The key principle: tell Claude Code exactly what to change, where to change it, 
 
 - [How to Make Claude Code Not Over Engineer Solutions](/claude-skills-guide/articles/how-to-make-claude-code-not-over-engineer-solutions/) — Complementary techniques for keeping AI-generated code lean and maintainable
 - [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/articles/how-to-make-claude-code-refactor-without-breaking-tests/) — Combine focused changes with TDD to refactor safely
-- [How to Make Claude Code Match Existing Code Patterns](/claude-skills-guide/articles/how-to-make-claude-code-match-existing-code-patterns/) — Ensure scoped changes fit seamlessly into your codebase conventions
+- [How to Make Claude Code Match Existing Code Patterns](/claude-skills-guide/articles/how-to-make-claude-code-match-existing-code-patterns/) — Ensure scoped changes fit naturally into your codebase conventions
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
