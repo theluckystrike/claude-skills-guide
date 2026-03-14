@@ -5,7 +5,7 @@ description: Learn why large context windows cost more in Claude Code, how token
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, context-window, tokens, pricing, cost-optimization]
-author: "Claude Skills Guide"
+author: theluckystrike
 reviewed: true
 score: 7
 permalink: /why-is-claude-code-expensive-large-context-tokens/
@@ -13,7 +13,7 @@ permalink: /why-is-claude-code-expensive-large-context-tokens/
 
 # Why Claude Code Is Expensive: Understanding Large Context Token Costs
 
-If you've used Claude Code for substantial projects, you've likely noticed that costs can add up quickly. The primary driver of these expenses is context token usage—and understanding why large context windows carry premium pricing helps you make smarter decisions about how you work with Claude. For recommended approaches see the [best-of hub](/claude-skills-guide/best-of-hub/).
+If you've searched for "why is claude code expensive large context tokens," you want to understand the relationship between context windows and pricing. If you've used Claude Code for substantial projects, you've likely noticed that costs can add up quickly. The primary driver of these expenses is context token usage—and understanding why large context windows carry premium pricing helps you make smarter decisions about how you work with Claude. For recommended approaches see the [best-of hub](/claude-skills-guide/best-of-hub/).
 
 ## What Are Context Tokens
 
