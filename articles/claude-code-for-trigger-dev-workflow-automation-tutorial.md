@@ -73,7 +73,7 @@ export const issueCreated = createTrigger({
 });
 ```
 
-To generate similar workflows faster, create a custom Claude Code skill that understands Trigger.dev's API patterns. Place this skill in your `~/.claude/skills` directory:
+To generate similar workflows faster, [create a custom Claude Code skill that understands Trigger.dev](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)'s API patterns. Place this skill in your `~/.claude/skills` directory:
 
 ```markdown
 ---
@@ -166,7 +166,7 @@ The **docx** skill works similarly for Word documents, useful when sharing workf
 
 ## Maintaining Context with supermemory
 
-Complex Trigger.dev projects involve numerous workflows, secrets, and configurations. The **supermemory** skill provides persistent context across sessions:
+Complex Trigger.dev projects involve numerous workflows, secrets, and configurations. [The **supermemory** skill provides persistent context across sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/):
 
 ```bash
 /supermemory
@@ -269,5 +269,12 @@ When combining these tools, keep these recommendations in mind:
 ## Conclusion
 
 Claude Code skills significantly enhance Trigger.dev development through automation, testing, and documentation generation. The combination of tdd for test-first development, pdf and docx for documentation, and supermemory for persistent context creates a powerful development environment. Custom skills tailored to your Trigger.dev patterns multiply these benefits, enabling rapid workflow creation while maintaining code quality.
+
+## Related Reading
+
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+- [Claude Skills Serverless Function Development Workflow](/claude-skills-guide/articles/claude-skills-serverless-function-development-workflow/)
+- [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

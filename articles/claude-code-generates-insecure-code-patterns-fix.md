@@ -39,7 +39,7 @@ query = "SELECT * FROM users WHERE name = %s"
 cursor.execute(query, (user_input,))
 ```
 
-When you encounter this pattern, you can use the `tdd` skill to write proper test cases that verify your queries are safe.
+When you encounter this pattern, you can [use the `tdd` skill to write proper test cases](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) that verify your queries are safe.
 
 ### Hardcoded Secrets and API Keys
 
@@ -59,7 +59,7 @@ const API_KEY = process.env.API_KEY;
 const dbPassword = process.env.DB_PASSWORD;
 ```
 
-The `supermemory` skill can help you maintain a secure checklist of patterns to review in every project.
+The [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) can help you maintain a secure checklist of patterns to review in every project.
 
 ### Insecure Random Number Generation
 
@@ -208,4 +208,11 @@ Claude Code generates code based on patterns it has seen in training data, which
 The key is establishing security as a consistent part of your development workflow. Use the `tdd` skill for test-driven security, create custom security review skills, and automate scanning where possible. With these practices in place, you get the speed benefits of AI-assisted development without sacrificing code security.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+## Related Reading
+
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [How to Make Claude Code Write Secure Code Always](/claude-skills-guide/articles/how-to-make-claude-code-write-secure-code-always/)
+- [Claude Code GDPR Data Privacy Implementation Checklist](/claude-skills-guide/articles/claude-code-gdpr-data-privacy-implementation-checklist/)
+- [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+
 {% endraw %}

@@ -77,7 +77,7 @@ When managing Android build variants, Gradle configurations, or dependency versi
 /xlsx
 ```
 
-Use this skill to create spreadsheets that track your dependency versions, build variant configurations, or API endpoints across environments. This proves valuable when managing multi-module Android projects with complex dependency trees.
+[Use this skill to create spreadsheets that track your dependency versions](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), build variant configurations, or API endpoints across environments. This proves valuable when managing multi-module Android projects with complex dependency trees.
 
 ### Documentation Generation Skills
 

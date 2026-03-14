@@ -38,7 +38,7 @@ When you specify the language, include the context that makes that choice meanin
 
 ## Using Claude Skills to Enforce Language Constraints
 
-Claude Skills provide a powerful mechanism for enforcing language preferences across multiple requests. If you frequently work with a specific language stack, creating a skill that establishes that context can prevent repeated misfires.
+[Claude Skills provide a powerful mechanism for enforcing language preferences](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) across multiple requests. If you frequently work with a specific language stack, creating a skill that establishes that context can prevent repeated misfires.
 
 For example, a skill for frontend development work might include:
 
@@ -119,5 +119,12 @@ Claude Code is excellent at following explicit instructions. The challenge is us
 ## Summary
 
 Language mismatches with Claude Code typically stem from ambiguous requests, project context confusion, or skill-specific defaults. Fix them by being explicit about your language, framework, and project structure in every request. Use Claude Skills to enforce language constraints for recurring tasks, and use /supermemory to maintain context across sessions. When mismatches occur, correct them immediately — Claude learns from your feedback within the session.
+
+## Related Reading
+
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/articles/best-way-to-scope-tasks-for-claude-code-success/)
+- [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
