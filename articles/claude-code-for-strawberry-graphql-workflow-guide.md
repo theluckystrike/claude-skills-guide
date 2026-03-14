@@ -2,141 +2,140 @@
 
 layout: default
 title: "Claude Code for Strawberry GraphQL Workflow Guide"
-description: "Learn how to use Claude Code CLI to accelerate your Strawberry GraphQL development workflow with practical examples and actionable tips."
+description: "Learn how to use Claude Code with Strawberry GraphQL for efficient Python GraphQL development. This guide covers schema creation, resolvers, subscriptions, and production best practices."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: Claude Skills Guide
 permalink: /claude-code-for-strawberry-graphql-workflow-guide/
-categories: [guides]
+categories: [Development, GraphQL, Python]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
 
-
+{% raw %}
 # Claude Code for Strawberry GraphQL Workflow Guide
 
-Strawberry GraphQL has become one of the most popular Python libraries for building GraphQL APIs thanks to its type hints-first approach and clean decorator-based syntax. When combined with Claude Code, you can dramatically accelerate your development workflow by using AI-assisted code generation, schema scaffolding, and resolver implementation. This guide shows you how to integrate Claude Code into your Strawberry GraphQL projects effectively.
+Strawberry GraphQL has emerged as one of the most popular Python libraries for building type-safe GraphQL APIs. Its decorator-based approach and native type hints integration make it a developer-friendly choice for Python projects. When combined with Claude Code, you get a powerful workflow that accelerates development while maintaining code quality. This guide walks you through integrating Claude Code into your Strawberry GraphQL projects for maximum productivity.
+
+## Why Strawberry GraphQL with Claude Code?
+
+Strawberry GraphQL distinguishes itself from other Python GraphQL libraries through its modern approach. Unlike older libraries that require manual type definitions, Strawberry leverages Python's type hints to automatically generate GraphQL schemas. This means less boilerplate code and fewer opportunities for inconsistencies between your Python types and GraphQL schema.
+
+When you add Claude Code to this mix, you gain an AI assistant that understands both Python type systems and GraphQL schema design. Claude Code can help you:
+
+- Generate type-safe schemas from your Python models
+- Create resolvers that properly handle async operations
+- Implement subscriptions for real-time functionality
+- Set up testing strategies for your GraphQL endpoints
+- Optimize query performance with data loaders
+
+The combination is particularly powerful for teams working on Python backends who want to ship GraphQL APIs faster without sacrificing type safety.
 
 ## Setting Up Your Strawberry GraphQL Project
 
-Before integrating Claude Code, ensure you have a properly configured Strawberry GraphQL project. Install Strawberry along with your preferred ASGI server:
+Start by creating a new Python project or navigating to your existing Strawberry project. If you're starting fresh, here's a quick setup:
 
 ```bash
-pip install strawberry-graphql[fastapi] strawberry[sqlalchemy]
+mkdir strawberry-api && cd strawberry-api
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install strawberry-graphql[fastapi] httpx
 ```
 
-Create a basic project structure:
-
-```
-my-graphql-api/
-├── app/
-│   ├── __init__.py
-│   ├── schema.py
-│   ├── queries.py
-│   ├── mutations.py
-│   └── types/
-│       └── __init__.py
-└── main.py
-```
-
-Now you're ready to use Claude Code to scaffold and expand your GraphQL implementation.
-
-## Using Claude Code to Generate Types
-
-One of Claude Code's strongest capabilities is generating type definitions from descriptions. With Strawberry's type system, you can describe your data models and let Claude generate the corresponding type classes.
-
-For example, when you need a User type with common fields, ask Claude:
-
-```
-Create a Strawberry GraphQL type for a User with id, username, email, created_at, and is_active fields. Use appropriate Python type hints including Optional for nullable fields.
-```
-
-Claude will generate:
+Now create your first Strawberry schema. Let me show you a practical example with a blog system:
 
 ```python
-import strawberry
-from datetime import datetime
-from typing import Optional
-
-@strawberry.type
-class User:
-    id: strawberry.ID
-    username: str
-    email: str
-    created_at: datetime
-    is_active: bool = True
-```
-
-This pattern scales well for complex types with relationships. You can also ask Claude to generate types from existing SQLAlchemy or Pydantic models:
-
-```
-Convert this SQLAlchemy User model to a Strawberry type:
-class User(Base):
-    __tablename__ = 'users'
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    email = Column(String, unique=True)
-```
-
-Claude understands Strawberry's type system and will produce clean, properly annotated code.
-
-## Building Queries with Claude Code Assistance
-
-Strawberry's query definition uses the `@strawberry.query` decorator. Claude can help you scaffold queries that fetch data from your database or external APIs.
-
-To create a query that retrieves a list of users with filtering capability:
-
-```python
+# schema.py
 import strawberry
 from typing import List, Optional
-from app.types import User
+from datetime import datetime
 
-@strawberry.query
-async def users(first: int = 10, offset: int = 0) -> List[User]:
-    """Fetch users with pagination."""
-    return await User.all(limit=first, offset=offset)
+@strawberry.type
+class Author:
+    id: strawberry.ID
+    name: str
+    email: str
+    bio: Optional[str] = None
 
-@strawberry.query
-async def user_by_id(id: strawberry.ID) -> Optional[User]:
-    """Fetch a single user by ID."""
-    return await User.get(id)
+@strawberry.type
+class Post:
+    id: strawberry.ID
+    title: str
+    content: str
+    published_at: datetime
+    author: Author
+    tags: List[str]
+
+@strawberry.type
+class Query:
+    @strawberry.field
+    def hello(self) -> str:
+        return "Hello, Strawberry!"
+
+    @strawberry.field
+    def posts(self) -> List[Post]:
+        # In production, this would fetch from your database
+        return [
+            Post(
+                id="1",
+                title="Getting Started with Strawberry",
+                content="Strawberry makes GraphQL in Python delightful...",
+                published_at=datetime.now(),
+                author=Author(id="1", name="Jane Doe", email="jane@example.com"),
+                tags=["graphql", "python"]
+            )
+        ]
+
+schema = strawberry.Schema(query=Query)
 ```
 
-When you need to add filtering arguments, describe your requirements to Claude:
+This schema demonstrates Strawberry's clean type-based approach. Each `@strawberry.type` automatically generates a corresponding GraphQL type. The type hints become the schema definition—no separate SDL needed.
 
-```
-Add a search filter to the users query that filters by username__icontains and email__icontains. Also add an is_active filter.
-```
+## Leveraging Claude Code for Schema Development
 
-Claude will modify your query to include the new parameters:
+When working on more complex schemas, Claude Code becomes invaluable. You can describe your data models and let Claude help generate the appropriate Strawberry types:
+
+> "Create a Strawberry GraphQL schema for an e-commerce system with products, categories, orders, and customers. Include proper relationships and pagination support."
+
+Claude Code will generate the complete schema with proper type annotations:
 
 ```python
-@strawberry.query
-async def users(
-    first: int = 10,
-    offset: int = 0,
-    search: Optional[str] = None,
-    is_active: Optional[bool] = None
-) -> List[User]:
-    query = User.all()
+@strawberry.input
+class ProductInput:
+    name: str
+    price: float
+    category_id: strawberry.ID
+
+@strawberry.input
+class OrderItemInput:
+    product_id: strawberry.ID
+    quantity: int
+
+@strawberry.input
+class CreateOrderInput:
+    customer_id: strawberry.ID
+    items: List[OrderItemInput]
+    shipping_address: str
+
+@strawberry.type
+class Order:
+    id: strawberry.ID
+    customer: Customer
+    items: List[OrderItem]
+    total: float
+    status: str
+    created_at: datetime
     
-    if search:
-        query = query.filter(
-            (User.username.ilike(f"%{search}%")) |
-            (User.email.ilike(f"%{search}%"))
-        )
-    
-    if is_active is not None:
-        query = query.filter(User.is_active == is_active)
-    
-    return await query.limit(first).offset(offset)
+    @strawberry.field
+    def total(self) -> float:
+        return sum(item.price * item.quantity for item in self.items)
 ```
 
-## Implementing Resolvers Efficiently
+Notice how `@strawberry.input` creates input types for mutations, while `@strawberry.type` defines output types. This separation is crucial for building robust APIs.
 
-Strawberry supports multiple resolver patterns. Claude can help you implement complex resolvers, especially those requiring async data fetching or cross-type relationships.
+## Implementing Resolvers and Data Access
 
-For a common scenario like resolving related data:
+Resolvers in Strawberry can be defined as methods on types or as standalone functions. Here's how to implement proper resolver patterns:
 
 ```python
 @strawberry.type
@@ -144,154 +143,167 @@ class Post:
     id: strawberry.ID
     title: str
     content: str
-    author_id: int
+    author: "Author"
     
     @strawberry.field
-    async def author(self) -> Optional[User]:
-        return await User.get(self.author_id)
+    async def author(self, info: strawberry.Info) -> Author:
+        # Access resolver-level data loading here
+        return await info.context["authors"].load(self.id)
 ```
 
-Ask Claude to optimize resolver performance:
-
-```
-Optimize this resolver to use DataLoader pattern to prevent N+1 queries when fetching posts with authors.
-```
-
-Claude will suggest implementing a DataLoader:
+For database integration, Strawberry works seamlessly with ORMs like SQLAlchemy, Django ORM, or Tortoise. Here's an example with SQLAlchemy:
 
 ```python
-from strawberry import Info
-from strawberry.dataloader import DataLoader
+import strawberry
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship, declarative_base
 
-async def load_users(keys: List[int]) -> List[Optional[User]]:
-    users = await User.where(id__in=keys).all()
-    user_map = {user.id: user for user in users}
-    return [user_map.get(key) for key in keys]
+Base = declarative_base()
 
-loader = DataLoader(load_users=load_users)
+class AuthorModel(Base):
+    __tablename__ = "authors"
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    email = Column(String)
+
+@strawberry.type
+class Author:
+    id: strawberry.ID
+    name: str
+    email: str
+    
+    @classmethod
+    def from_model(cls, model: AuthorModel) -> "Author":
+        return cls(id=strawberry.ID(str(model.id)), name=model.name, email=model.email)
+
+@strawberry.type
+class Query:
+    @strawberry.field
+    def authors(self) -> List[Author]:
+        models = session.query(AuthorModel).all()
+        return [Author.from_model(m) for m in models]
+```
+
+The key insight is creating `from_model` class methods that bridge your database models to GraphQL types. This pattern keeps your schema clean and testable.
+
+## Real-Time with Subscriptions
+
+Strawberry supports subscriptions for real-time updates. Here's how to implement a subscription that notifies when new posts are published:
+
+```python
+import asyncio
+import strawberry
+from typing import AsyncIterator
 
 @strawberry.type
 class Post:
     id: strawberry.ID
     title: str
-    
-    @strawberry.field
-    async def author(self, info: Info) -> Optional[User]:
-        return await info.context["user_loader"].load(self.author_id)
+    content: str
+
+@strawberry.type
+class Subscription:
+    @strawberry.subscription
+    async def on_new_post(self, info: strawberry.Info) -> AsyncIterator[Post]:
+        # This would connect to your pub/sub system (Redis, etc.)
+        async for post in pubsub.subscribe("new_posts"):
+            yield post
+
+# In your mutation, publish the event:
+@strawberry.mutation
+async def create_post(self, title: str, content: str, info: strawberry.Info) -> Post:
+    post = await save_post(title, content)
+    await pubsub.publish("new_posts", post)
+    return post
 ```
 
-## Creating Mutations with Claude
+Subscriptions require an ASGI server that supports WebSocket connections, such as uvicorn with the proper configuration.
 
-Mutations in Strawberry follow a similar pattern to queries. Use Claude to generate mutation classes with proper input types and error handling:
+## Production Best Practices
 
-```
-Create a Strawberry mutation for registering a new user. Include input validation, password hashing, and return the created user or error messages.
-```
+When deploying Strawberry GraphQL to production, consider these practices:
 
-Claude generates:
+**Use DataLoaders to Prevent N+1 Queries**
 
 ```python
-import strawberry
-from typing import Optional
-from app.types import User
-from app.inputs import RegisterUserInput
+from strawberry.dataloader import DataLoader
+
+async def load_authors(post_ids: List[int]) -> List[Author]:
+    # Batch fetch all authors for the given post IDs
+    authors = await db.authors.where(post_id__in=post_ids).all()
+    return authors
 
 @strawberry.type
-class RegisterUserSuccess:
-    user: User
+class Query:
+    @strawberry.field
+    async def posts(self, info: strawberry.Info) -> List[Post]:
+        info.context["authors"] = DataLoader(load_authors)
+        # Now posts can safely access author without N+1 queries
+```
 
-@strawberry.type
-class RegisterUserError:
-    message: str
-    field: Optional[str] = None
+**Add Query Cost Analysis**
 
-RegisterUserResult = strawberry.union(
-    "RegisterUserResult",
-    (RegisterUserSuccess, RegisterUserError),
+```python
+from strawberry.extensions import QueryDepthLimiter
+
+schema = strawberry.Schema(
+    query=Query,
+    extensions=[QueryDepthLimiter(max_depth=3)]
+)
+```
+
+**Configure CORS Properly**
+
+```python
+from strawberry import strawberry
+from strawberry.cors import CorsConfig
+
+cors_config = CorsConfig(
+    allow_origins=["https://yourfrontend.com"],
+    allow_methods=["POST", "GET", "OPTIONS"],
 )
 
-@strawberry.mutation
-async def register_user(input: RegisterUserInput) -> RegisterUserResult:
-    # Validate email uniqueness
-    existing = await User.where(email=input.email).first()
-    if existing:
-        return RegisterUserError(
-            message="Email already registered",
-            field="email"
-        )
-    
-    # Hash password and create user
-    hashed_password = hash_password(input.password)
-    user = await User.create(
-        username=input.username,
-        email=input.email,
-        password=hashed_password
-    )
-    
-    return RegisterUserSuccess(user=user)
+app = strawberry.fastapi.router(schema, cors=cors_config)
 ```
 
-## Testing Your GraphQL Schema
+## Testing Your Strawberry API
 
-Claude can help you generate test cases for your Strawberry schema. Request test patterns:
-
-```
-Generate pytest tests for the users query including mocking the database layer.
-```
-
-Claude provides:
+Claude Code can help you write comprehensive tests. Here's a testing pattern using httpx:
 
 ```python
 import pytest
-from app.schema import schema
+from httpx import AsyncClient
+from strawberry import strawberry as Strawberry
 
 @pytest.fixture
-def mock_users():
-    return [
-        User(id=1, username="alice", email="alice@example.com", is_active=True),
-        User(id=2, username="bob", email="bob@example.com", is_active=False),
-    ]
+async def client():
+    from your_schema import schema
+    async with AsyncClient(app=schema, base_url="http://test") as ac:
+        yield ac
 
 @pytest.mark.asyncio
-async def test_users_query(mock_users, mocker):
-    mocker.patch("app.queries.User.all", return_value=mock_users)
-    
+async def test_query_posts(client):
     query = """
         query {
-            users {
+            posts {
                 id
-                username
-                isActive
+                title
+                author {
+                    name
+                }
             }
         }
     """
-    
-    result = await schema.execute(query)
-    
-    assert result.errors is None
-    assert len(result.data["users"]) == 2
-    assert result.data["users"][0]["username"] == "alice"
+    response = await client.post("/graphql", json={"query": query})
+    assert response.status_code == 200
+    data = response.json()["data"]
+    assert len(data["posts"]) > 0
 ```
-
-## Best Practices for Claude-Assisted Strawberry Development
-
-When using Claude Code with Strawberry GraphQL, follow these practices for optimal results:
-
-**Provide Context**: Include your existing schema and model definitions when prompting Claude. This helps generate code that integrates smoothly with your current implementation.
-
-**Iterate on Types**: Start with simple types and use Claude to progressively add fields, relationships, and validation logic.
-
-**Review Generated Code**: Always verify the generated code, especially around async operations and database queries.
-
-**Leverage Strawberry Extensions**: Ask Claude to integrate features like federation, relay, or dataclass integration when your project requires them.
 
 ## Conclusion
 
-Claude Code transforms Strawberry GraphQL development from manual type definitions to AI-assisted rapid prototyping. By using Claude's understanding of Python type hints and Strawberry's decorator patterns, you can scaffold types, queries, mutations, and tests in a fraction of the time it would take manually. Start integrating Claude into your Strawberry workflow today and experience the productivity gains firsthand.
+Strawberry GraphQL combined with Claude Code creates a powerful development workflow for Python developers. The type-safe nature of Strawberry aligns perfectly with Claude Code's ability to understand and generate correct code. By following the patterns in this guide—proper type definitions, async resolvers, data loaders for performance, and comprehensive testing—you'll build production-ready GraphQL APIs efficiently.
 
-## Related Reading
+Remember to leverage Claude Code throughout your development process, from initial schema design to debugging and optimization. The AI assistance lets you focus on business logic while maintaining high code quality standards.
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
+{% endraw %}
