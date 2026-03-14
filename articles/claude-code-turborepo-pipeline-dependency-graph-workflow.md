@@ -163,7 +163,7 @@ The way you organize your workspaces affects your dependency graph. Claude can r
 
 Create Claude-powered automation for recurring monorepo tasks:
 
-### Task 1:批量依赖更新
+### Task 1: Batch Dependency Updates
 
 When you need to update a dependency across multiple packages:
 
@@ -176,7 +176,7 @@ Claude will:
 2. Update each one to the specified version
 3. Run installation and verify the updates
 
-### Task 2:构建性能诊断
+### Task 2: Build Performance Diagnostics
 
 When builds are slower than expected:
 
@@ -190,7 +190,7 @@ Claude will:
 3. Identify packages with the longest build times
 4. Suggest specific optimizations
 
-### Task 3:CI/CD优化
+### Task 3: CI/CD Optimization
 
 In your continuous integration setup:
 
