@@ -4,7 +4,7 @@ title: "Claude Code vs OpenAI Codex CLI: 2026 Comparison"
 description: "Claude Code vs OpenAI Codex CLI for developers in 2026: agentic capabilities, model quality, skills ecosystem, pricing, and which fits your workflow."
 date: 2026-03-13
 categories: [comparisons]
-tags: [claude-code, openai, codex-cli, comparison, ai-coding]
+tags: [claude-code, claude-skills, openai, codex-cli, comparison, ai-coding]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8

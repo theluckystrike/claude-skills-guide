@@ -3,6 +3,8 @@ layout: default
 title: "Claude Skills for Unreal Engine C++ Development"
 description: "Practical guide to using Claude skills for Unreal Engine C++ development workflow. Code generation, testing, documentation, and project management skills."
 date: 2026-03-14
+categories: [tutorials]
+tags: [claude-code, claude-skills, unreal-engine, cpp, game-development]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9

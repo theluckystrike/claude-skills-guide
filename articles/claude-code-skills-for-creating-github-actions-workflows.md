@@ -4,7 +4,7 @@ title: "Claude Code Skills for Creating GitHub Actions Workflows"
 description: "Build Claude skills that generate, validate, and manage GitHub Actions workflows. Practical patterns for CI/CD automation with real code examples."
 date: 2026-03-14
 categories: [workflows]
-tags: [claude-code, github-actions, cicd, automation, devops]
+tags: [claude-code, claude-skills, github-actions, cicd, automation, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8

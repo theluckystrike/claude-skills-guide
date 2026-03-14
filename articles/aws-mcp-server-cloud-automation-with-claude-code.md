@@ -4,7 +4,7 @@ title: "AWS MCP Server Cloud Automation with Claude Code"
 description: "Learn how to automate AWS infrastructure using the Model Context Protocol server and Claude Code. Practical examples, configuration patterns, and workflow automation."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, aws, mcp, cloud-automation, infrastructure, devops]
+tags: [claude-code, claude-skills, aws, mcp, cloud-automation, infrastructure, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7

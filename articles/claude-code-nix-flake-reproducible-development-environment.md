@@ -5,7 +5,7 @@ description: "Learn how to combine Claude Code with Nix Flakes to create fully r
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, nix-flake, reproducible, development-environment, docker-alternatives]
+tags: [claude-code, claude-skills, nix-flake, reproducible, development-environment, docker-alternatives]
 reviewed: true
 score: 9
 ---

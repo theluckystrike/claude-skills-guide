@@ -4,7 +4,7 @@ title: "Claude Code with Docker: Container Setup Guide"
 description: "Run Claude Code with Docker for isolated skill execution. Covers Dockerfile setup, Compose stacks, HTTP API containers, and CI/CD integration."
 date: 2026-03-13
 categories: [guides]
-tags: [claude-code, docker, containers, ci-cd, devops]
+tags: [claude-code, claude-skills, docker, containers, ci-cd, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8

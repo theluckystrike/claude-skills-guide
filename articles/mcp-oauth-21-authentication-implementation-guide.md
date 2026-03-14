@@ -5,14 +5,14 @@ description: "A practical implementation guide for MCP OAuth 2.1 authentication.
 date: 2026-03-14
 categories: [tutorials, security]
 tags: [mcp, oauth, authentication, security, claude-code, developer-tools]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
 
 # MCP OAuth 2.1 Authentication Implementation Guide
 
-The Model Context Protocol (MCP) increasingly requires robust authentication mechanisms for production deployments. [OAuth 2.1 provides a modern, simplified security framework that works exceptionally well with MCP servers](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/). This guide walks through implementing OAuth 2.1 authentication for your MCP integrations with practical code examples.
+The Model Context Protocol (MCP) increasingly requires strong authentication mechanisms for production deployments. [OAuth 2.1 provides a modern, simplified security framework for MCP servers](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/). This guide walks through implementing OAuth 2.1 authentication for your MCP integrations with practical code examples.
 
 ## Understanding OAuth 2.1 for MCP
 
@@ -178,7 +178,7 @@ class MCPClient {
 
 ## Token Refresh Strategy
 
-MCP tools often run in long-lived sessions. Implement robust token refresh to maintain continuity:
+MCP tools often run in long-lived sessions. Implement reliable token refresh to maintain continuity:
 
 ```javascript
 class TokenManager {

@@ -4,7 +4,7 @@ title: "Claude Code WebSocket Implementation: Real-Time Events Guide"
 description: "Learn how to implement WebSocket connections in Claude Code skills for real-time event handling. Practical patterns for streaming data, live updates, and i"
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, websocket, real-time, events, implementation]
+tags: [claude-code, claude-skills, websocket, real-time, events, implementation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8

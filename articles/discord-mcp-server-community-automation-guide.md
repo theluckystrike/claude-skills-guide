@@ -4,7 +4,7 @@ title: "Discord MCP Server Community Automation Guide"
 description: "Learn how to build Discord MCP server automation for community management. Includes practical code examples, Discord bot integration, and workflow patterns for developers."
 date: 2026-03-14
 categories: [guides]
-tags: [discord, mcp, model-context-protocol, community, automation, bots]
+tags: [claude-code, claude-skills, discord, mcp, community-automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7

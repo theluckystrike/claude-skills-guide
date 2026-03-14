@@ -70,25 +70,19 @@ This approach generates consistent marketing materials for each listing. You can
 
 The **docx** skill creates and edits Word documents for listing descriptions, agent contracts, and client communications. For real estate platforms, this skill helps maintain consistent branding across documents.
 
-```python
-from docx import Document
+```
+/docx
+Create a listing description document for this property:
+- Address: 123 Oak Street
+- Type: Single-family home, 3 bed / 2 bath, 1,850 sqft
+- Features: Updated kitchen, hardwood floors, attached garage, private backyard
+- Price: $485,000
 
-def create_listing_description(property_data):
-    doc = Document()
-    doc.add_heading(property_data['address'], 0)
-    
-    doc.add_paragraph(f"Beautiful {property_data['property_type']} "
-                     f"featuring {property_data['bedrooms']} bedrooms and "
-                     f"{property_data['bathrooms']} bathrooms.")
-    
-    doc.add_heading('Features', level=1)
-    for feature in property_data['features']:
-        doc.add_paragraph(feature, style='List Bullet')
-    
-    doc.save(f"descriptions/{property_data['id']}.docx")
+Include a professional description paragraph, feature highlights list,
+and a section with neighborhood amenities.
 ```
 
-Integrate this with your property management system to auto-generate descriptions when listings are created.
+Invoke the docx skill whenever you add a new property to auto-generate listing content from your property data.
 
 ## canvas-design: Property Visualization
 

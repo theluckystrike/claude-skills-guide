@@ -4,7 +4,7 @@ title: "Claude Code Dev Containers: devcontainer.json Setup Guide"
 description: "Configure devcontainer.json for Claude Code development environments. Step-by-step setup for VS Code, Docker, and containerized AI development workflows."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, devcontainers, vs-code, docker, development-environment]
+tags: [claude-code, claude-skills, devcontainers, vs-code, docker, development-environment]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8

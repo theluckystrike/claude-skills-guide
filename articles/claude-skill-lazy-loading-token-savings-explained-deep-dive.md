@@ -3,6 +3,8 @@ layout: default
 title: "Claude Skill Lazy Loading: Token Savings Explained"
 description: "How Claude skill lazy loading works and how it reduces token consumption for developers and power users."
 date: 2026-03-14
+categories: [advanced]
+tags: [claude-code, claude-skills, token-optimization, lazy-loading, performance]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9

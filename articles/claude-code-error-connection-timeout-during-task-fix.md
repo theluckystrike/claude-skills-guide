@@ -4,7 +4,7 @@ title: "Claude Code Error Connection Timeout During Task Fix"
 description: "Practical solutions for fixing connection timeout errors in Claude Code during long-running tasks. Debug network issues, adjust timeouts, and keep your AI sessions productive."
 date: 2026-03-14
 categories: [troubleshooting]
-tags: [claude-code, error-fix, connection-timeout, troubleshooting, network, productivity]
+tags: [claude-code, claude-skills, error-fix, connection-timeout, troubleshooting, network, productivity]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
@@ -118,9 +118,9 @@ Create or modify your Claude Code configuration to include retry settings:
 ```
 
 Location varies by operating system:
-- macOS: `~/.config/claude/settings.json`
-- Linux: `~/.config/claude/settings.json`
-- Windows: `%APPDATA%/Claude/settings.json`
+- macOS: `~/.claude/settings.json`
+- Linux: `~/.claude/settings.json`
+- Windows: `%APPDATA%\Claude\settings.json`
 
 ## Fix 7: Checking Skill-Specific Requirements
 

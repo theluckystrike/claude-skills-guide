@@ -7,7 +7,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 categories: [advanced]
-tags: [claude-code, agent-swarm, multi-agent, coordination, parallel-execution]
+tags: [claude-code, claude-skills, agent-swarm, multi-agent, coordination, parallel-execution]
 ---
 
 # Claude Code Agent Swarm Coordination Strategies

@@ -4,7 +4,7 @@ title: "Claude Code Dockerfile Generation: Multi-Stage Build Guide"
 description: "Learn how to generate optimized multi-stage Dockerfiles using Claude Code skills. Practical examples for Node.js, Python, and Go applications."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, docker, devops, containers, multi-stage-builds]
+tags: [claude-code, claude-skills, docker, devops, containers, multi-stage-builds]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8

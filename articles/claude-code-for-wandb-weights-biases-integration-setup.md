@@ -4,7 +4,7 @@ title: "Claude Code for W&B Weights & Biases Integration Setup"
 description: "A practical guide to integrating Claude Code with Weights & Biases for experiment tracking, model versioning, and ML workflow automation."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, wandb, weights-biases, mlops, experiment-tracking, ai-engineering]
+tags: [claude-code, claude-skills, wandb, weights-biases, mlops, experiment-tracking, ai-engineering]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7

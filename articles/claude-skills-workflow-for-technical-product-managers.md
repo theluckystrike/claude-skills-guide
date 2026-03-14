@@ -7,7 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, product-management, workflow, technical-pm]
 author: "Claude Skills Guide"
 reviewed: true
-score: 0
+score: 8
 ---
 
 # Claude Skills Workflow for Technical Product Managers
