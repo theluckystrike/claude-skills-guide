@@ -3,7 +3,11 @@ layout: default
 title: "Datadog MCP Server Monitoring Automation with Claude"
 description: "Learn how to automate Datadog server monitoring using MCP servers and Claude AI for proactive infrastructure management."
 date: 2026-03-14
-author: theluckystrike
+categories: [integrations]
+tags: [claude-code, claude-skills, datadog, mcp, monitoring, devops]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Datadog MCP Server Monitoring Automation with Claude

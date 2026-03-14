@@ -4,8 +4,10 @@ title: "How to Combine Multiple Claude Skills in One Project"
 description: "A practical guide for developers and power users on combining multiple Claude skills within a single project. Learn skill orchestration patterns, code examples, and real-world workflows."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, claude-skills, workflow]
-author: theluckystrike
+tags: [claude-code, claude-skills, workflow, skill-orchestration]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # How to Combine Multiple Claude Skills in One Project

@@ -4,8 +4,8 @@ title: "How to Use Claude Code with Existing GitHub Repo"
 description: "Connect Claude Code to your existing GitHub repository. Step-by-step guide for developers integrating AI-assisted development with established projects."
 date: 2026-03-14
 categories: [getting-started]
-tags: [claude-code, github, integration, workflow, repository]
-author: theluckystrike
+tags: [claude-code, claude-skills, github, integration, workflow]
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

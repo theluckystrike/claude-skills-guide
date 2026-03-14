@@ -3,7 +3,7 @@ layout: default
 title: "Claude Code Multilingual Codebase Management Guide"
 description: "A practical guide to managing multilingual codebases with Claude Code. Learn how to handle i18n, translation workflows, and localized content using skills like supermemory, pdf, and tdd."
 date: 2026-03-14
-categories: [claude-code, multilingual, i18n]
+categories: [guides]
 tags: [claude-code, claude-skills, multilingual, codebase, i18n, localization, internationalization]
 author: "Claude Skills Guide"
 reviewed: true
@@ -27,8 +27,8 @@ Begin by establishing a consistent directory structure for your translations. Pl
 Once your structure is in place, invoke the [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) to maintain a comprehensive knowledge base of your localization decisions:
 
 ```
-/supermemory store: Our project uses i18next format with nested keys. 
-Translation files live in /locales/{lang}.json. Maximum key depth is 3 levels.
+/supermemory
+Our project uses i18next format with nested keys. Translation files live in /locales/{lang}.json. Maximum key depth is 3 levels.
 ```
 
 This reference becomes invaluable when you or team members need to recall localization patterns months later. The supermemory skill persists this context across Claude Code sessions, ensuring institutional knowledge remains accessible.
@@ -76,8 +76,8 @@ Poorly organized translation keys create maintenance nightmares as projects scal
 
 This structure makes keys discoverable and reduces duplication. When adding new UI elements, first check existing keys to maintain consistency. Use Claude Code to search across all locale files simultaneously:
 
-```
-/search translation files for "password" and list all matching keys
+```bash
+grep -r "password" locales/ --include="*.json"
 ```
 
 ## Handling Pluralization and Gender Rules
@@ -100,7 +100,7 @@ Automate your multilingual checks by integrating Claude Code skills into your bu
 
 ```bash
 # Example CI script snippet
-claude --print "/tdd run translation-validators" 
+npm test -- --testPathPattern=translation
 if [ $? -ne 0 ]; then
   echo "Translation validation failed"
   exit 1
@@ -123,7 +123,7 @@ When working with RTL (right-to-left) languages like Arabic or Hebrew, test layo
 
 ## Conclusion
 
-Claude Code's skill system provides powerful capabilities for managing multilingual codebases at scale. By leveraging skills like supermemory for documentation, tdd for validation, pdf for content extraction, and xlsx for data management, you can establish robust localization workflows that maintain quality across all supported languages. These tools transform what was once a manual coordination nightmare into an automated, reliable process.
+Claude Code's skill system provides powerful capabilities for managing multilingual codebases at scale. By using skills like supermemory for documentation, tdd for validation, pdf for content extraction, and xlsx for data management, you can establish reliable localization workflows that maintain quality across all supported languages. These tools transform what was once a manual coordination nightmare into an automated, reliable process.
 
 Start by structuring your translation files properly, then layer in automation through Claude Code skills. Your translators and end users will thank you for the improved consistency and reduced errors. Explore more automation patterns at the [workflows hub](/claude-skills-guide/workflows-hub/).
 

@@ -191,9 +191,9 @@ class SignedLogger:
 
 ## Integrating with Claude Skills
 
-When developing MCP servers, pair your logging implementation with Claude's diagnostic skills. The [superpower skill](/claude-skills-guide/articles/) provides general debugging guidance, while specific skills like [pdf](/claude-skills-guide/articles/) for document processing or [frontend-design](/claude-skills-guide/articles/) for UI components can help you build better server interfaces.
+When developing MCP servers, pair your logging implementation with Claude's diagnostic skills. The [superpower skill](/claude-skills-guide/) provides general debugging guidance, while specific skills like [pdf](/claude-skills-guide/) for document processing or [frontend-design](/claude-skills-guide/) for UI components can help you build better server interfaces.
 
-For test-driven development of your logging systems, the [tdd skill](/claude-skills-guide/articles/) helps you write tests before implementing log handlers. The [code-review skill](/claude-skills-guide/articles/) can audit your logging code for security issues before deployment.
+For test-driven development of your logging systems, the [tdd skill](/claude-skills-guide/) helps you write tests before implementing log handlers. The [code-review skill](/claude-skills-guide/) can audit your logging code for security issues before deployment.
 
 ## Monitoring and Alerting
 

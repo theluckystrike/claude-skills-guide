@@ -208,8 +208,8 @@ The Slack MCP server enables powerful team notification automation within Claude
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup Complete Guide](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) — Foundation setup for all MCP servers including Slack
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — Skills that complement Slack notifications for infrastructure workflows
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — Building the CI/CD foundation that triggers Slack notifications
+- [Claude Code MCP Server Setup Complete Guide](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — Foundation setup for all MCP servers including Slack
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills that complement Slack notifications for infrastructure workflows
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Building the CI/CD foundation that triggers Slack notifications
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

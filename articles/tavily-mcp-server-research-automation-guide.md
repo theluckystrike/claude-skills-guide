@@ -3,7 +3,11 @@ layout: default
 title: "Tavily MCP Server: Research Automation Guide"
 description: "A practical guide to automating research workflows with Tavily MCP Server for Claude Code. Learn how to integrate web search, content extraction, and data synthesis into your AI workflows."
 date: 2026-03-14
-author: theluckystrike
+categories: [integrations]
+tags: [claude-code, claude-skills, tavily, mcp, research, web-search]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Tavily MCP Server: Research Automation Guide
