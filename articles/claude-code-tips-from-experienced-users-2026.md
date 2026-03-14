@@ -141,10 +141,10 @@ user-friendly error messages, and logging for debugging.
 
 Developers who use Claude Code most effectively have integrated it into their existing workflows rather than changing their habits.
 
-For code review, run Claude Code on staged changes:
+For code review, pipe staged changes to Claude Code:
 
 ```bash
-git diff --staged | claude-code review --focus security,performance
+git diff --staged | claude --print "Review for security and performance issues"
 ```
 
 For debugging, let Claude Code investigate before you read the code:

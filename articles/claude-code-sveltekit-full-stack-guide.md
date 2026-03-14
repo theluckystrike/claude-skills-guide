@@ -32,10 +32,10 @@ npm install
 Select TypeScript during setup for better type safety and improved Claude Code context understanding. Once your project structure exists, you can invoke Claude Code within the project directory:
 
 ```bash
-claude --add-projects .
+claude
 ```
 
-Claude Code will index your project, enabling it to understand imports, routing structure, and configuration files. This indexing phase is essential for accurate code generation and navigation assistance.
+Claude Code will read your project files, enabling it to understand imports, routing structure, and configuration files. Adding a `CLAUDE.md` in the project root with project context helps Claude Code provide more accurate suggestions.
 
 ## Essential Claude Skills for SvelteKit Development
 

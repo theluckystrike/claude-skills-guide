@@ -68,8 +68,8 @@ Consider a common scenario: your application uses a database schema that wasn't 
 4. Create prioritized tickets for your backlog
 
 ```bash
-# Use Claude Code to analyze query patterns
-claude-code skill execute debt-scanner scan --path ./src/models
+# Use Claude Code to analyze query patterns via the debt-scanner skill
+# Invoke with /debt-scanner after placing debt-scanner.md in ~/.claude/skills/
 ```
 
 This command triggers your custom skill to examine model files, identify query inefficiencies, and output a structured report with debt items, locations, and severity scores.

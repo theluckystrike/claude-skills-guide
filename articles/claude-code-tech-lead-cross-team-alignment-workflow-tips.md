@@ -45,10 +45,10 @@ A practical approach is to create a `team-standards` skill that includes your co
 - Performance review required for database queries affecting >10k rows
 ```
 
-Distribute this skill to all team members by hosting it in a shared repository. Each engineer can install it with:
+Distribute this skill to all team members by hosting it in a shared repository. Each engineer can add it by copying the skill file to their `~/.claude/skills/` directory:
 
 ```bash
-claude skill install git@github.com:your-org/team-standards.git
+cp team-standards.md ~/.claude/skills/team-standards.md
 ```
 
 ## Cross-Team Context Sharing Techniques

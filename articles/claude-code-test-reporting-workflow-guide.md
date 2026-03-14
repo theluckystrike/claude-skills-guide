@@ -67,10 +67,8 @@ The integration might look like this in a GitHub Actions workflow:
 
 - name: Generate Test Report
   run: |
-    claude report-generate \
-      --input test-results.json \
-      --format slack \
-      --channel #builds
+    claude --print "Read test-results.json and generate a Slack-formatted \
+      test report summary suitable for posting to the #builds channel"
 ```
 
 This configuration runs tests, saves results to a JSON file, and then invokes Claude Code to generate and distribute a Slack-formatted report. The entire process happens automatically with every code change.

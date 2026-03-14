@@ -33,11 +33,11 @@ Before integrating Claude Code into trunk based development, ensure your environ
 # Install Claude Code if you haven't already
 npm install -g @anthropic-ai/claude-code
 
-# Configure your project to work with Claude Code
-claude init
-
 # Verify the installation
 claude --version
+
+# Run Claude Code from your project root
+claude
 ```
 
 Create a CLAUDE.md file in your project root to establish trunk based development guidelines:

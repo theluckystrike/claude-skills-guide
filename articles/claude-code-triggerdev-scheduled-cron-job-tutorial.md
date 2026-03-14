@@ -36,13 +36,13 @@ Before we begin, ensure you have:
 
 ## Setting Up Your Environment
 
-First, let's configure both tools. Initialize Claude Code if you haven't already:
+First, let's configure both tools. Start Claude Code in your project directory:
 
 ```bash
-claude init
+claude
 ```
 
-This creates a configuration file that Claude Code will use for your projects. Now, authenticate with TriggerDev:
+Claude Code reads your project files from the current directory. You can add a `CLAUDE.md` file to provide project context. Now, authenticate with TriggerDev:
 
 ```bash
 triggerdev auth login

@@ -119,9 +119,8 @@ We will use PostgreSQL 15 as our primary data store.
 Automating documentation updates keeps your docs current without manual effort. Claude Code can run as part of your CI pipeline, generating fresh documentation with each build and flagging any components lacking adequate documentation.
 
 ```bash
-# Example CI integration
-claude-code --prompt "Analyze src/ directory and generate 
-architecture.md in docs/" --output docs/
+# Example CI integration: run claude non-interactively
+claude --print "Analyze src/ directory and generate architecture.md in docs/"
 ```
 
 This approach ensures documentation never falls behind your implementation. The `xlsx` skill can also help by generating documentation matrices tracking coverage across components.
