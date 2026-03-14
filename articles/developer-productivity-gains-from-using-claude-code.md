@@ -23,12 +23,12 @@ Beyond raw speed, the quality improvements matter equally. Claude Code catches e
 
 The real transformation comes from combining Claude Code with specialized skills. The tdd skill, for example, enforces test-driven development discipline automatically. Instead of writing tests after implementation, you get tests generated alongside your code:
 
-```bash
-# Using the tdd skill for new feature development
-/tdd create user authentication module with OAuth2 support
+```
+/tdd
+Create a user authentication module with OAuth2 support. Write failing tests first, then implement to pass them.
 ```
 
-This single command initiates a workflow where Claude generates failing tests first, then implements the feature to pass those tests—all while maintaining coverage goals you specify.
+This workflow initiates a cycle where Claude generates failing tests first, then implements the feature to pass those tests—all while maintaining coverage goals you specify.
 
 ## Skill-Based Workflow Automation
 
@@ -36,18 +36,18 @@ Claude skills extend Claude Code's base capabilities into domain-specific territ
 
 The pdf skill demonstrates this perfectly for documentation workflows:
 
-```bash
-# Generate API documentation from code comments
-/pdf generate api-docs --format markdown --output ./docs/
+```
+/pdf
+Generate API documentation from the code comments in this project. Output as markdown.
 ```
 
-This transforms a tedious manual process into a single command. The skill understands code structures, extracts relevant documentation comments, and formats them according to best practices.
+This transforms a tedious manual process into a focused skill invocation. The skill understands code structures, extracts relevant documentation comments, and formats them according to best practices.
 
 For frontend work, the frontend-design skill accelerates UI development:
 
-```bash
-# Create a responsive component with accessible markup
-/frontend-design create modal-dialog --theme dark --animations true
+```
+/frontend-design
+Create a modal dialog component with a dark theme and entrance animations. Include proper ARIA attributes and responsive breakpoints.
 ```
 
 You receive production-ready code with proper ARIA attributes, responsive breakpoints, and animation states included from the start.
@@ -56,14 +56,17 @@ You receive production-ready code with proper ARIA attributes, responsive breakp
 
 One of the most valuable yet underutilized aspects of Claude Code is its ability to maintain context across sessions. When working on large codebases, this context retention prevents the cognitive overhead of re-explaining project structure repeatedly.
 
-The supermemory skill enhances this further by indexing your project files:
+The supermemory skill enhances this further by storing project-specific context:
 
-```bash
-# Index the current project for enhanced context
-/supermemory index
+```
+/supermemory
+Remember for this project:
+- Stack: Express, Prisma, PostgreSQL
+- Auth: JWT via the /lib/auth module
+- Payments: Stripe integration in /lib/payments
 ```
 
-After indexing, Claude can answer questions about your specific codebase—"Where is the user authentication handled?" or "Which files implement the payment gateway?"—with accurate, project-specific answers rather than generic guidance.
+After storing context, Claude can answer questions about your specific codebase—"Where is the user authentication handled?" or "Which files implement the payment gateway?"—with accurate, project-specific answers rather than generic guidance.
 
 ## Real-World Time Savings
 
@@ -77,7 +80,7 @@ Consider a typical scenario: implementing a new REST API endpoint with validatio
 
 Total: approximately 70-105 minutes.
 
-With Claude Code using appropriate skills, the same task completes in 15-25 minutes. The speed difference comes from eliminating boilerplate,自动 generating tests, and catching issues during implementation rather than after.
+With Claude Code using appropriate skills, the same task completes in 15-25 minutes. The speed difference comes from eliminating boilerplate, generating tests, and catching issues during implementation rather than after.
 
 For teams, these savings compound. A developer who saves one hour daily across a five-day work week gains twenty hours monthly—essentially an extra full work week each month.
 
@@ -85,18 +88,18 @@ For teams, these savings compound. A developer who saves one hour daily across a
 
 Claude Code integrates smoothly with development tools you already use. The webapp-testing skill works with Playwright for frontend verification:
 
-```bash
-# Run a test session on local development server
-/webapp-testing test login-flow --url http://localhost:3000
+```
+/webapp-testing
+Test the login flow at http://localhost:3000 and capture screenshots for each step.
 ```
 
 This opens an interactive testing environment where you can verify UI behavior, capture screenshots, and debug frontend issues without leaving Claude's context.
 
 For documentation-heavy projects, the docx skill enables programmatic document generation:
 
-```bash
-# Generate a technical specification document
-/docx create spec --template technical --project myapp
+```
+/docx
+Create a technical specification document for the myapp project using our standard spec template.
 ```
 
 Replace manual document formatting with reproducible templates that maintain consistency across team deliverables.

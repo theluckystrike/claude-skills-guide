@@ -309,3 +309,4 @@ Start by generating collections from your existing OpenAPI specs, then explore a
 - [OpenAPI Specification Best Practices](/claude-code-openapi-spec-generation-guide/)
 - [Claude Code API Testing Workflows](/best-claude-code-skills-for-qa-engineers-automating-test-suites/)
 - [API Authentication Patterns](/claude-code-api-authentication-patterns-guide/)
+{% endraw %}
