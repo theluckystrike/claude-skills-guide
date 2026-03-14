@@ -7,3 +7,10 @@ theme: minima
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: "articles"
+    values:
+      layout: default
+      permalink: /:title/
