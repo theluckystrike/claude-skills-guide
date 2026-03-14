@@ -248,3 +248,10 @@ claude "Refactor this monolithic fluent-bit.conf into separate files: inputs.con
 ## Conclusion
 
 Claude Code transforms Fluent Bit workflow management from manual configuration editing to an assisted, error-reduced process. By generating configurations, validating syntax, creating deployment skills, and debugging issues, Claude Code becomes an invaluable partner in your log processing infrastructure. Start with simple configurations, progressively add complexity, and use Claude's ability to explain and validate each step along the way.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

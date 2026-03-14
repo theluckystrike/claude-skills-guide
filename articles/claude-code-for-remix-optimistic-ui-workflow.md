@@ -149,3 +149,10 @@ Finally, test your optimistic implementations under various network conditions. 
 ## Conclusion
 
 Optimistic UI transforms your Remix applications from responsive web apps into near-instantaneous experiences that users love. By using Remix's `useFetcher` and `useNavigation` hooks, you can implement sophisticated optimistic patterns with relatively little code. Claude Code makes this workflow even more efficient by helping you identify opportunities for optimistic updates and implementing the patterns correctly on the first attempt. Start incorporating these techniques in your next Remix project and notice the difference in user satisfaction.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
