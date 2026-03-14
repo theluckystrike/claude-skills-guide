@@ -2,7 +2,7 @@
 
 layout: default
 title: "How AI Agents Plan and Execute Tasks Explained"
-description: "Discover how AI agents like Claude Code break down complex tasks into executable steps, use tools effectively, and adapt their approach through feedback loops."
+description: "Discover how AI agents like Claude Code break down complex tasks into executable steps, use tools effectively, and adapt their approach through."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, ai-agents, task-planning, execution, automation, claude-skills]
@@ -165,3 +165,11 @@ To get the most out of AI agents like Claude Code:
 AI agents plan and execute tasks through a sophisticated process of decomposition, context gathering, strategy selection, tool invocation, and adaptive execution. Claude Code embodies these principles through its skill system, extensive tool integration, and robust error handling. By understanding how agents work, you can design better prompts, use skills effectively, and build powerful automated workflows that handle complex development tasks autonomously.
 
 The future of software development increasingly involves collaborating with AI agents that can reason, plan, and execute. Mastering these interactions today prepares you for a more automated tomorrow.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
