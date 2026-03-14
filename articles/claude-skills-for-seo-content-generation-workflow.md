@@ -132,7 +132,7 @@ The **supermemory** skill enhances long-term SEO strategy by maintaining a knowl
 ```
 /supermemory store: "claude skills for seo" article published 2026-03-20, ranked position 8 by April 1, 1,200 organic visits in first month
 /supermemory store: long-form guides (2000+ words) consistently outrank shorter posts for developer-tool keywords
-/supermemory find: which content formats perform best for our site?
+/supermemory Which content formats perform best for our site?
 ```
 
 This pattern builds institutional knowledge that improves future content decisions.

@@ -109,7 +109,7 @@ The **supermemory** skill tracks experiment context across sessions:
 
 ```
 /supermemory store: RandomForest with n_estimators=200, max_depth=10 achieved accuracy=0.92, f1=0.89 on customer_churn dataset 2026-03-13
-/supermemory find: best accuracy on customer_churn dataset
+/supermemory What is the best accuracy achieved on the customer_churn dataset?
 ```
 
 This replaces manual experiment logging in notebooks and makes it easy to recall configurations weeks later.
@@ -158,7 +158,7 @@ Use supermemory to maintain experiment history across notebook sessions:
 
 ```
 /supermemory store: GradientBoosting, lr=0.1, n_estimators=300, accuracy=0.94, f1=0.91, dataset=churn_v2, date=2026-03-13
-/supermemory find: all experiments with accuracy > 0.90 on churn dataset
+/supermemory What experiments on the churn dataset achieved accuracy above 0.90?
 ```
 
 Combine this with the xlsx skill to export your experiment log to a spreadsheet for sharing with colleagues:

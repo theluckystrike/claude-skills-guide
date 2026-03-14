@@ -13,7 +13,7 @@ permalink: /claude-code-actix-web-rust-api-guide/
 
 # Claude Code Actix Web Rust API Guide
 
-[Actix Web remains one of the most performant web frameworks in the Rust ecosystem](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code's AI capabilities, you can rapidly prototype, develop, and test REST APIs while leveraging Rust's memory safety guarantees. This guide covers building practical APIs using Claude Code sessions and relevant skills.
+[Actix Web remains one of the most performant web frameworks in the Rust ecosystem](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code's AI capabilities, you can rapidly prototype, develop, and test REST APIs while using Rust's memory safety guarantees. This guide covers building practical APIs using Claude Code sessions and relevant skills.
 
 ## Setting Up Your Rust API Project
 
@@ -187,14 +187,7 @@ Generate test cases for the create_user endpoint covering: valid input, missing 
 The `/supermemory` skill stores your preferred API patterns across sessions. Store common patterns:
 
 ```
-/supermemory save
-API error response format:
-{
-  "code": "ERROR_CODE",
-  "message": "Human readable message"
-}
-
-Standard pagination params: page, limit
+/supermemory store: API error response format uses { "code": "ERROR_CODE", "message": "Human readable message" }. Standard pagination params are page and limit.
 ```
 
 Claude remembers these patterns in future sessions, applying consistent designs across your API endpoints.

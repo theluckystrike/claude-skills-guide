@@ -211,7 +211,7 @@ Write a summary of the authentication flow to auth-summary.md. Include the main 
 
 ## Conclusion
 
-Claude Code transforms codebase onboarding from a weeks-long process into a matter of hours. By starting with architecture discovery, using targeted questions, leveraging skills like tdd for test exploration and supermemory for note-taking, you can quickly gain the understanding you need to start contributing.
+Claude Code transforms codebase onboarding from a weeks-long process into a matter of hours. By starting with architecture discovery, using targeted questions, using skills like tdd for test exploration and supermemory for note-taking, you can quickly gain the understanding you need to start contributing.
 
 The key is being strategic about what you ask. Focus on your immediate goals, use the specialized skills available, and build your knowledge incrementally. With practice, you'll find yourself productive in new codebases far faster than ever before.
 

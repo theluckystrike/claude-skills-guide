@@ -112,8 +112,8 @@ Store important information during a Claude Code session:
 Retrieve it later:
 
 ```
-/supermemory find: what are the blockers for enterprise deals?
-/supermemory find: pricing feedback from user interviews
+/supermemory What are the blockers for enterprise deals?
+/supermemory What pricing feedback came out of user interviews?
 ```
 
 For solopreneurs managing everything alone, having a reliable memory system prevents important context from falling through the cracks between sessions.

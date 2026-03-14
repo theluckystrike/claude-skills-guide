@@ -124,7 +124,7 @@ Within this skill, define specific prompts that Claude references during code ge
 
 Your style guide skill works alongside domain-specific skills for better results. The frontend-design skill generates component architecture, but your style enforcer ensures the output matches team patterns. Similarly, the pdf skill might handle documentation generation, while your style rules govern documentation formatting. See the [automated code documentation workflow](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) for how to keep documentation in sync with evolving style standards.
 
-This layered approach lets you maintain a single source of truth for style while leveraging specialized skills for their core functionality.
+This layered approach lets you maintain a single source of truth for style while using specialized skills for their core functionality.
 
 ## Inline Context and Conversation Prompts
 

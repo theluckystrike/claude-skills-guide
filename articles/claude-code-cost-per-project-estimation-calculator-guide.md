@@ -121,7 +121,7 @@ Grouping related work into single sessions reduces overhead from repeated contex
 
 Reserve Opus for complex reasoning tasks where you need sophisticated architectural advice. Use Sonnet for most coding tasks. Switch to Haiku for simple queries like explaining error messages or generating boilerplate code.
 
-**Leverage Skills Efficiently**
+**Use Skills Efficiently**
 
 Skills like the template-skill and theme-factory provide specialized capabilities that reduce the tokens needed for specific tasks. The skill-creator skill helps you build custom skills for repetitive workflows, amortizing setup costs across many sessions.
 

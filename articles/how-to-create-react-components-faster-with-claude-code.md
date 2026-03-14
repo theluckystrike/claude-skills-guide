@@ -102,7 +102,7 @@ Create a component documentation page that includes:
 
 This keeps your component library self-documenting without manual effort.
 
-## Leveraging the Frontend-Design Skill
+## Using the Frontend-Design Skill
 
 The **frontend-design** skill brings design-system awareness to component generation. It understands color tokens, spacing scales, typography rules, and accessibility standards:
 

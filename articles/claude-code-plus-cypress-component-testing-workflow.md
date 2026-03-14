@@ -91,7 +91,7 @@ describe('Button Component', () => {
 })
 ```
 
-## Leveraging the TDD Skill
+## Using the TDD Skill
 
 The TDD skill in Claude Code provides structured guidance for test-driven development. When integrated with Cypress, this skill helps maintain a disciplined testing approach:
 

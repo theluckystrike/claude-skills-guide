@@ -191,7 +191,7 @@ For per-user caching, combine with `django.contrib.sessions`:
 cache.set(f'user_{request.user.id}_cart', cart_items, 1800)
 ```
 
-## Leveraging Raw SQL When Needed
+## Using Raw SQL When Needed
 
 Sometimes the ORM can't express what you need efficiently. Raw SQL with parameterized queries is safe and performant:
 

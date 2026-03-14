@@ -134,7 +134,7 @@ The more context you provide about your project conventions, the more useful Cla
 
 ## Conclusion
 
-Integrating Claude Code into your Astro workflow significantly improves productivity. From generating components to managing content collections, optimizing images to setting up tests, Claude handles the repetitive parts so you focus on building unique features. The key is providing adequate context about your project conventions and leveraging specialized skills like **frontend-design** for styling, **tdd** for testing, **pdf** for document generation, and **supermemory** for persistent knowledge.
+Integrating Claude Code into your Astro workflow significantly improves productivity. From generating components to managing content collections, optimizing images to setting up tests, Claude handles the repetitive parts so you focus on building unique features. The key is providing adequate context about your project conventions and using specialized skills like **frontend-design** for styling, **tdd** for testing, **pdf** for document generation, and **supermemory** for persistent knowledge.
 
 Start by adding Claude to your next Astro project and experiment with these workflows. The time savings compound quickly as Claude learns your patterns and preferences.
 

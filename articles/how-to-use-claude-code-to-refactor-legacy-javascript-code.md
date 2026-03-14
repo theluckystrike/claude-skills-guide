@@ -13,7 +13,7 @@ permalink: /how-to-use-claude-code-to-refactor-legacy-javascript-code/
 
 # How to Use Claude Code to Refactor Legacy JavaScript Code
 
-Legacy JavaScript codebases often accumulate technical debt over years of development. Functions become unwieldy, patterns become inconsistent, and testing becomes nearly impossible. Claude Code offers a powerful approach to systematically refactor these codebases, leveraging AI-assisted analysis and specialized skills to transform old code into maintainable, modern JavaScript.
+Legacy JavaScript codebases often accumulate technical debt over years of development. Functions become unwieldy, patterns become inconsistent, and testing becomes nearly impossible. Claude Code offers a powerful approach to systematically refactor these codebases, using AI-assisted analysis and specialized skills to transform old code into maintainable, modern JavaScript.
 
 This guide walks through practical techniques for refactoring legacy JavaScript using Claude Code, focusing on real-world strategies you can apply to your projects immediately.
 

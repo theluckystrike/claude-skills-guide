@@ -179,7 +179,7 @@ Once installed, invoke skills using the slash command syntax within a Claude Cod
 /xlsx create sales-report.xlsx with Q1 data
 /tdd write tests for user authentication
 /frontend-design create login component
-/supermemory find notes about project deadlines
+/supermemory What notes do you have about project deadlines?
 ```
 
 The invocation works identically to native Linux. Ensure you are running Claude Code inside WSL2, not in Windows PowerShell or CMD.

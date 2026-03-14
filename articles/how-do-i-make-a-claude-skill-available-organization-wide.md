@@ -161,7 +161,7 @@ Create a central documentation page explaining available skills and when to use 
 | pdf | Document extraction, form filling | `/pdf extract [filename]` |
 | xlsx | Spreadsheet creation, data analysis | `/xlsx create report from [data]` |
 | frontend-design | UI components, responsive layouts | `/frontend-design create [component]` |
-| supermemory | Knowledge retrieval, context recall | `/supermemory find [topic]` |
+| supermemory | Knowledge storage and recall | `/supermemory store: [info]` or ask a natural question |
 
 Store this documentation in your internal wiki or alongside the skills repository.
 

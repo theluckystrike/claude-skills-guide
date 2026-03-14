@@ -153,7 +153,7 @@ The supermemory skill maintains long-term context about your projects. Use it to
 
 ```
 /supermemory store: 2026-03-12 blocker - waiting on design specs for dashboard, still unresolved
-/supermemory find: unresolved blockers from this week
+/supermemory What unresolved blockers do you have from this week?
 ```
 
 When generating standups, supermemory surfaces blockers that are still open, ensuring nothing falls through the cracks.

@@ -97,7 +97,7 @@ When generating test code with tdd skills, request test methods individually rat
 
 ## Conclusion
 
-Incomplete code blocks in Claude Code are typically caused by response length limitations, complex syntax structures, or conversational interruptions. By requesting continuation, breaking down large implementations, leveraging specialized skills, implementing completion checks, and following best practices for code generation requests, you can significantly reduce this issue.
+Incomplete code blocks in Claude Code are typically caused by response length limitations, complex syntax structures, or conversational interruptions. By requesting continuation, breaking down large implementations, using specialized skills, implementing completion checks, and following best practices for code generation requests, you can significantly reduce this issue.
 
 The key is treating code generation as an iterative process rather than expecting complete files in a single response. With these strategies, you'll achieve more reliable and complete code outputs from Claude Code.
 

@@ -78,7 +78,7 @@ The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimizatio
 Then retrieve it in any future session:
 
 ```
-/supermemory search: Jane Smith contract terms
+/supermemory What do you know about Jane Smith's contract terms?
 ```
 
 ## Browser Testing with Webapp-Testing

@@ -58,7 +58,7 @@ Write a TypeScript function that:
 
 The explicit boundaries—input type, output count, constraints—force the model to generate verifiable code rather than creative interpretations. For the tdd skill, this translates to writing test cases that specify exact expected behavior before implementation.
 
-## Technique 4: Leverage File Context Commands
+## Technique 4: Use File Context Commands
 
 Claude Code's `--file` flag lets you inject specific files into context. Use this strategically to ground responses:
 

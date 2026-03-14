@@ -100,7 +100,7 @@ Beyond basic operations, the Mailchimp MCP server supports sophisticated automat
 
 1. Monitor for specific user actions (purchase, form submission, tag addition)
 2. Use the MCP server to add appropriate merge fields or tags
-3. Leverage Mailchimp's built-in automation or trigger subsequent campaigns
+3. Use Mailchimp's built-in automation or trigger subsequent campaigns
 4. Log interactions for analysis using the **supermemory** skill
 
 You can also build approval workflows where Claude prepares campaign content, generates previews, and waits for confirmation before scheduling. This pattern works well in team environments where marketing managers review creative before launch.
