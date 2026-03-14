@@ -42,30 +42,21 @@ our PostgreSQL database.
 
 The TDD skill generates test cases covering happy paths and edge cases, organizes test data appropriately, and ensures your tests properly clean up after themselves.
 
-### The Testing Skill
+### Integration Test Design Principles
 
-The dedicated `/testing` skill offers guidance specifically for writing effective tests. It provides recommendations for test structure, assertion patterns, and common pitfalls to avoid.
-
-```
-/testing
-```
-
-This skill helps you design integration tests that are:
+Effective integration tests follow consistent design principles. Use these in your prompts to Claude Code to guide test generation:
 
 - **Isolated**: Each test runs independently without depending on other tests
 - **Repeatable**: Tests produce consistent results across multiple runs
 - **Fast**: Integration tests should run quickly enough to execute on every commit
 - **Clear**: Test names and messages clearly describe what they verify
 
-### The Code Review Skill
+### Reviewing Integration Test Quality
 
-After writing integration tests, use the [code review skill](/claude-skills-guide/best-claude-skills-for-code-review-automation/) to analyze your test code:
+After writing integration tests, ask Claude Code to review your test code:
 
 ```
-/review
-```
-
-This skill reviews your integration tests for common issues including missing edge cases, inadequate assertion coverage, improper test data management, and potential flakiness from timing dependencies.
+Review these integration tests for common issues including missing edge cases, inadequate assertion coverage, improper test data management, and potential flakiness from timing dependencies.
 
 ## Practical Example: API Integration Tests
 
@@ -235,7 +226,7 @@ Integration tests require different approaches than unit tests. Keep these princ
 5. **Keep tests fast** — Slow tests get ignored; aim for under one second per test
 6. **Name tests descriptively** — Test names should document the scenario being verified
 
-Claude Code skills provide structured workflows for applying these practices. The TDD skill ensures tests are written first, the testing skill provides best practice guidance, and the review skill catches common mistakes before they become problems.
+Claude Code skills provide structured workflows for applying these practices. The TDD skill ensures tests are written first, and using Claude Code to review generated tests catches common mistakes before they become problems.
 
 ---
 

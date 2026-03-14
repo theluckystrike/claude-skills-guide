@@ -3,7 +3,7 @@ layout: default
 title: "Claude Code Skills for Solidity Smart Contracts"
 description: "Build specialized Claude Code skills for Solidity development. Learn to create skills that audit, test, and write Ethereum smart contracts with precision."
 date: 2026-03-14
-categories: [solidity, smart-contracts, ethereum]
+categories: [guides]
 tags: [claude-code, claude-skills, solidity, ethereum, smart-contracts, blockchain]
 author: "Claude Skills Guide"
 reviewed: true
