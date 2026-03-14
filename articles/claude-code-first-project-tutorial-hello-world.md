@@ -48,13 +48,7 @@ You should see output displaying the version number, confirming the CLI is acces
 
 ## Configuring Your API Key
 
-Claude Code requires authentication via an API key from Anthropic. If you do not have an API key yet, obtain one from the Anthropic console. Once you have your key, configure Claude Code:
-
-```bash
-claude configure
-```
-
-This command prompts you to enter your API key. The key stores locally and does not transmit to any server other than Anthropic's API endpoints. For persistent configuration across sessions, set the environment variable:
+Claude Code requires authentication via an API key from Anthropic. If you do not have an API key yet, obtain one from the Anthropic console. Set the environment variable before running Claude:
 
 ```bash
 export ANTHROPIC_API_KEY="your-api-key-here"
