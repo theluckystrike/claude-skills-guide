@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Claude Code API Security: OWASP Guidelines for AI Agent Development"
+title: "Claude Code API Security: OWASP Guidelines for AI Agent."
 description: "Learn how to secure your Claude Code integrations against OWASP Top 10 vulnerabilities. Practical patterns for building safe AI agent APIs."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-security-owasp-guide/
+categories: [guides]
 ---
 
 # Claude Code API Security: OWASP Guidelines for AI Agent Development
@@ -217,5 +218,12 @@ Securing Claude Code integrations requires adapting OWASP principles to agentic 
 - Monitor agent actions for anomalous behavior
 
 By applying these patterns, you build AI agent systems that are both powerful and secure.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

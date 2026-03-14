@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Webhook Implementation Guide"
-description: "A practical guide to implementing webhooks with Claude Code. Learn how to set up event-driven workflows, handle incoming HTTP requests, and integrate with external services."
+description: "A practical guide to implementing webhooks with Claude Code. Learn how to set up event-driven workflows, handle incoming HTTP requests, and integrate."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, webhooks, integration, api, developer-guide, claude-skills]
@@ -175,5 +175,12 @@ Connect project management webhooks to create tasks, update statuses, or notify 
 Implementing webhooks with Claude Code transforms your AI assistant into an event-driven component of your development workflow. The combination of HTTP callback handlers and Claude Code's natural language processing creates powerful automation possibilities without sacrificing flexibility.
 
 Start with simple webhook handlers and progressively add complexity as your integration needs grow. The key is maintaining clean separation between webhook reception and Claude Code invocation, ensuring your system remains maintainable and testable.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

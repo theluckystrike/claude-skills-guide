@@ -5,6 +5,7 @@ description: "Learn how to configure API gateways for Claude Code with practical
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-gateway-configuration-guide/
+categories: [guides]
 ---
 
 {% raw %}
@@ -236,6 +237,13 @@ These metrics inform scaling decisions and help identify performance bottlenecks
 API gateway configuration for Claude Code involves balancing security, performance, and observability. Start with basic proxy configuration, then layer in authentication, rate limiting, and transformation as your use cases demand. The patterns shown here translate across gateway implementations—whether you use Nginx, Kong, AWS API Gateway, or another platform.
 
 Remember that Claude Code integrates well with specialized skills like the **pdf** skill for document generation, **canvas-design** for visual outputs, and **docx** for structured reporting. Your gateway configuration should accommodate these varied response types while maintaining consistent security and performance characteristics.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
