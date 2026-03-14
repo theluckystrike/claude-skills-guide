@@ -55,51 +55,32 @@ After applying either approach, restart Claude Code to reload the tools.
 
 The tdd skill might require read-write access to your project files, while a supermemory MCP server needs read-only access to the same directory. When permission scopes overlap incorrectly, you receive errors like "Permission denied" or "Access scope exceeded."
 
-Create a scoped configuration that isolates permissions:
+Scope MCP server access using `allowedTools` in your Claude Code settings to restrict which file operations the MCP server can perform:
 
-```yaml
-# claude.code.config.yml
-skills:
-  - name: tdd
-    permissions:
-      - path: "./src"
-        access: read-write
-      - path: "./tests"
-        access: read-write
-
-mcpServers:
-  supermemory:
-    permissions:
-      - path: "./src"
-        access: read-only
+```json
+{
+  "mcpServers": {
+    "supermemory": {
+      "command": "npx",
+      "args": ["-y", "@supermemory/mcp"],
+      "allowedTools": ["memory_read", "memory_search"]
+    }
+  }
+}
 ```
 
-This configuration ensures the tdd skill can modify source and test files while the supermemory server only reads project data.
-
-For remote MCP servers, use environment-based permission isolation:
-
-```bash
-export MCP_PERMISSION_SCOPE="read-only"
-export SKILL_PERMISSION_SCOPE="read-write"
-```
+This configuration restricts the supermemory server to read-only memory operations while your tdd skill retains full access through Claude's built-in Read and Write tools.
 
 ## Fixing Runtime Execution Conflicts
 
 Simultaneous execution of skill actions and MCP server calls can create race conditions. The pdf skill might attempt to read a file while the filesystem MCP server is writing to it.
 
-Implement sequential execution using Claude Code's hooks system:
+Implement sequential execution by structuring your prompts to prevent simultaneous tool calls. In your skill instructions, include ordering constraints:
 
-```yaml
-hooks:
-  pre_skill_execution:
-    - name: mcp_server_cooldown
-      description: Pause MCP servers before skill runs
-      command: "claude-cli pause-mcp --servers filesystem,database"
-
-  post_skill_execution:
-    - name: resume_mcp_servers
-      description: Resume MCP servers after skill completes
-      command: "claude-cli resume-mcp --servers filesystem,database"
+```
+When using both filesystem operations and MCP server tools, always complete
+all filesystem operations first, then invoke MCP server tools. Never interleave
+them within a single response.
 ```
 
 For simpler cases, add explicit delays in your skill prompts:
@@ -147,23 +128,7 @@ This convention prevents accidental collisions and makes troubleshooting easier.
 
 ## Using Skill Isolation for Complex Setups
 
-When conflicts persist despite configuration adjustments, isolate problematic components. The webapp-testing skill can run in an isolated container while MCP servers operate in the host environment:
-
-```yaml
-skills:
-  - name: webapp-testing
-    isolation: container
-    container:
-      image: "claude-test-env:2026"
-      network: none
-
-mcpServers:
-  # Run outside the container
-  filesystem:
-    type: stdio
-```
-
-This approach prevents any direct interaction between skill tools and MCP servers, eliminating conflicts at the infrastructure level.
+When conflicts persist despite configuration adjustments, isolate problematic components. Run Claude Code itself inside a Docker container for webapp testing, with MCP servers configured only outside the container. Use separate Claude Code sessions—one for MCP-heavy operations and one for skill-heavy operations—to keep the tool namespaces fully separated. This approach prevents any direct interaction between skill tools and MCP servers, eliminating conflicts at the process level.
 
 ## Summary
 
