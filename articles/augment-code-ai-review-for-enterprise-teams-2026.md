@@ -4,7 +4,7 @@ layout: default
 title: "Augment Code AI Review for Enterprise Teams 2026"
 description: "Discover how Claude Code transforms enterprise code review workflows with AI-powered analysis, automated quality gates, and collaborative review processes."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /augment-code-ai-review-for-enterprise-teams-2026/
 reviewed: true
 score: 7
