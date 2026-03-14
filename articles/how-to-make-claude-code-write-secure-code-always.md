@@ -1,192 +1,107 @@
 ---
 layout: default
 title: "How to Make Claude Code Write Secure Code Always"
-description: "Practical strategies and Claude skills for ensuring your AI coding assistant produces secure, vulnerability-free code every time. Includes skill recommendations and configuration examples."
+description: "A practical guide to configuring Claude Code for secure coding practices. Learn to leverage security-focused skills, define security constraints, and prevent common vulnerabilities in generated code."
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, claude-skills, security, secure-coding, best-practices]
-author: "Claude Skills Guide"
-reviewed: true
-score: 7
+author: theluckystrike
 permalink: /how-to-make-claude-code-write-secure-code-always/
 ---
 
 # How to Make Claude Code Write Secure Code Always
 
-Getting Claude Code to consistently produce secure code requires more than hoping for the best. By combining the right skills, prompt engineering, and project configuration, you can create an environment where security is the default rather than an afterthought.
+Getting Claude Code to consistently produce secure code requires more than just hoping for the best. You need to actively configure your environment, use the right skills, and establish security constraints that the model follows. This guide shows you practical methods to ensure every piece of code Claude generates meets security standards.
 
-## Why Secure Code Generation Matters
+## Configure Security Constraints in Your System Prompt
 
-When Claude Code writes your code, it follows patterns from its training data—some of which includes vulnerable examples. Without explicit security guidance, your AI assistant might generate code with SQL injection vulnerabilities, exposed secrets, or improper authentication. The good news: you can steer Claude toward secure patterns every time you work together.
+The foundation of secure code generation starts with how you instruct Claude. Add explicit security requirements to your global instructions or create a dedicated security profile that loads with every session. This tells Claude exactly what security standards to maintain regardless of what you're building.
 
-## Using Security-Focused Skills
+Your system prompt should include requirements like validating all inputs, sanitizing data before use, avoiding hardcoded secrets, and following the principle of least privilege. When you explicitly state these requirements, Claude incorporates them into its decision-making process for every code generation task.
 
-Claude Code's skill system lets you load specialized instructions that shape how Claude behaves. Several skills directly improve security outcomes.
+For example, when generating a Python API endpoint, Claude will automatically add input validation, use parameterized queries for database operations, and avoid exposing sensitive data in error messages.
 
-### The tdd Skill for Test-Driven Security
+## Use the TDD Skill for Test-Driven Security
 
-The **tdd** skill prompts Claude to write tests before implementation. Pair this with security-specific test cases:
+The TDD skill (Test-Driven Development) proves invaluable when you need secure code. Writing tests before code forces you to consider security requirements as part of your design. When combined with security-focused test cases, the TDD skill ensures your code passes security validation before implementation begins.
 
-```bash
-/tdd
-Write a user authentication module with tests for:
-- SQL injection prevention
-- Password hashing verification
-- Session timeout handling
-```
+Create tests that verify:
+- Input validation handles malicious payloads
+- Authentication and authorization checks work correctly
+- Sensitive data gets properly encrypted
+- Error handling doesn't leak information
 
-This approach ensures security requirements are embedded from the start, not bolted on later. The tdd skill is particularly effective because it forces Claude to think about edge cases and attack vectors while designing the solution.
+The TDD skill then guides Claude to write code that passes these security tests. This approach catches vulnerabilities early rather than discovering them after deployment.
 
-### The supermemory Skill for Security Context
+## Leverage MCP Skills for Security Validation
 
-The **supermemory** skill allows Claude to maintain context across sessions. Store your security requirements and past vulnerability fixes in supermemory so Claude remembers them:
+Model Context Protocol (MCP) skills extend Claude's capabilities in powerful ways. Several MCP skills directly address security concerns:
 
-```bash
-/supermemory
-Our project requires:
-- All passwords hashed with bcrypt (cost factor 12)
-- Input validation on all API endpoints
-- No raw SQL queries—use parameterized statements only
-```
+- **secret-detection**: Automatically scans generated code for hardcoded API keys, passwords, and tokens
+- **dependency-scanner**: Checks for known vulnerabilities in libraries and frameworks you use
+- **static-analysis**: Performs code quality and security checks on the fly
 
-When you reference this context in future sessions, Claude will consistently apply your security standards.
+Install these MCP skills to add an automated security layer. After Claude generates code, these tools can flag potential issues before you even review the output. This creates a feedback loop where Claude learns from security scans and improves subsequent code generation.
 
-### The code-review Skill for Security Audits
+## Create Custom Security Skills
 
-The **code-review** skill analyzes code for issues. Invoke it specifically for security concerns:
+Build a custom skill specifically for security enforcement. This skill contains your organization's security policies, compliance requirements, and coding standards. When activated, it adds a security lens to every code generation task.
 
-```bash
-/code-review
-Review this code for security vulnerabilities only:
-- Injection risks (SQL, XSS, command)
-- Authentication and authorization gaps
-- Sensitive data exposure
-- Cryptographic weaknesses
-```
+Your custom security skill should include:
 
-This focused review catches issues that might slip past general code reviews.
+1. **Security patterns** - Pre-approved code templates for common secure operations like password hashing, token generation, and encryption
+2. **Forbidden practices** - Clear list of what not to do: eval(), string concatenation for SQL, hardcoded credentials
+3. **Validation rules** - Requirements for input sanitization, output encoding, and error handling
 
-## Project-Level Security Configuration
+Call this skill at the start of any security-sensitive task. Claude will reference it throughout the coding session, producing code that aligns with your requirements.
 
-Beyond skills, configure your project to guide Claude toward secure defaults.
+## Implement Code Review Workflows
 
-### Create a Security-Prompting .claude.md
+Even with all precautions, automated checks won't catch everything. Pair Claude's code generation with systematic review processes. Use skills that facilitate code review:
 
-Add a `.claude.md` file in your project root with security instructions:
+- **pull-request-skill**: Automates the creation of pull requests with security checklists
+- **diff-review**: Helps you examine changes for security implications
+- **documentation-skill**: Ensures security considerations get documented
 
-```markdown
-# Project Security Requirements
+When Claude generates code, run it through this review workflow. The combination of proactive configuration and reactive review creates defense in depth.
 
-## Authentication
-- Always use secure password hashing (bcrypt, argon2)
-- Implement rate limiting on login endpoints
-- Generate cryptographically secure session tokens
+## Use Environment-Specific Security Rules
 
-## Data Handling
-- Never log sensitive data (passwords, tokens, PII)
-- Use environment variables for secrets, never hardcode
-- Validate and sanitize all user inputs
+Different environments require different security approaches. Configure Claude with environment-specific rules that activate based on context:
 
-## Dependencies
-- Check for known vulnerabilities before adding packages
-- Keep dependencies updated
-- Prefer packages with active security maintenance
-```
+- **Development**: Relaxed rules for faster prototyping, but still enforce input validation
+- **Staging**: Full security enforcement matching production standards
+- **Production**: Strictest rules including audit logging, encryption requirements, and compliance checks
 
-Claude reads this file automatically at the start of each session, applying your security requirements to all code it generates.
+Claude detects the environment from your working directory or configuration and applies appropriate security constraints automatically.
 
-### Security Linting in Your Workflow
+## Prevent Common Vulnerabilities
 
-Combine Claude with automated security tools. After Claude writes code, run:
+Focus on preventing the vulnerabilities that plague most projects:
 
-```bash
-# Run security linter
-npm audit
+**SQL Injection**: Always use parameterized queries or ORMs. When using database skills, specify ORM usage explicitly in your prompts.
 
-# Check for vulnerable dependencies
-npx snyk test
+**XSS Attacks**: Ensure output encoding happens at the right layer. Tell Claude to use framework-provided escaping functions.
 
-# Static analysis
-npx eslint --rule 'no-secrets: error'
-```
+**Authentication Flaws**: Specify proper session management, token expiration, and multi-factor authentication in your requirements.
 
-Create a pre-commit hook that blocks commits with critical security issues:
+**Sensitive Data Exposure**: Remind Claude to never log sensitive information, use environment variables for secrets, and implement proper encryption at rest and in transit.
 
-```bash
-#!/bin/bash
-# .git/hooks/pre-commit
-npm audit --audit-level=high
-if [ $? -ne 0 ]; then
-  echo "Security vulnerabilities found. Commit blocked."
-  exit 1
-fi
-```
+The **supermemory** skill helps you track which vulnerabilities you've addressed in past projects, building institutional knowledge about your security requirements.
 
-## Practical Example: Secure API Endpoint
+## Monitor and Iterate
 
-Here's how to get Claude to write a secure API endpoint using these techniques:
+Security isn't a one-time configuration. Review the code Claude produces over time and identify patterns. If you notice repeated security gaps, update your system prompts or custom skills to address them.
 
-**Step 1: Activate security context**
-```
-Activate tdd and apply our security requirements from .claude.md
-```
+Track metrics like:
+- Vulnerabilities caught by automated scanning
+- Security issues found in code review
+- Time spent fixing security bugs versus feature work
 
-**Step 2: Request the endpoint**
-```
-Create a user registration endpoint that:
-- Validates email format and password strength
-- Hashes password with bcrypt before storage
-- Returns appropriate error messages without leaking information
-- Includes rate limiting consideration
-```
+This data helps you refine your configuration and training approach. Claude learns from the corrections, improving its security output over time.
 
-**Step 3: Verify with security review**
-```
-/code-review Check this registration endpoint for OWASP Top 10 vulnerabilities
-```
+## Conclusion
 
-The resulting code will include proper input validation, secure password hashing, and safe error handling—security built into the foundation.
+Making Claude Code write secure code consistently requires deliberate setup. Configure security constraints in your system prompts, use the TDD skill for test-driven validation, leverage MCP skills for automated scanning, and build custom security skills that encode your organization's policies. Combine these approaches with code review workflows and continuous iteration.
 
-## Additional Skills That Enhance Security
-
-Several other Claude skills support secure coding practices:
-
-- **pdf**: Generate security documentation and vulnerability reports
-- **frontend-design**: Produces accessible code that follows security best practices
-- **test-artifacts**: Creates comprehensive test suites including security test cases
-
-## Continuous Security Improvement
-
-Security isn't a one-time setup. Use supermemory to track vulnerabilities Claude encounters and fixes:
-
-```
-/supermemory
-Common vulnerability patterns we fixed this month:
-1. SQL injection in search queries → switched to parameterized queries
-2. Exposed API keys in frontend → moved to environment variables
-3. Weak session tokens → now using 256-bit secure random generation
-```
-
-When Claude sees this context, it will proactively avoid these patterns in new code.
-
-## Final Checklist
-
-Before considering a task complete, verify Claude's output against these security criteria:
-
-- All inputs validated and sanitized
-- Sensitive data properly protected
-- Authentication and authorization correctly implemented
-- Dependencies scanned for vulnerabilities
-- Security tests included in the test suite
-
-By integrating skills like tdd and supermemory, maintaining project-level security prompts, and using automated security tooling, you create a system where Claude Code consistently produces secure code. The combination of AI assistance and human oversight—backed by automated validation—keeps your projects safe without slowing down development.
-
-
-## Related Reading
-
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+The effort pays off in reduced vulnerabilities, faster development cycles, and code that meets security standards from the first line written. Security becomes embedded in your development process rather than an afterthought.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
