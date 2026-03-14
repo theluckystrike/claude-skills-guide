@@ -1,253 +1,179 @@
 ---
-
 layout: default
-title: "Claude Code Cookie Consent Implementation"
-description: "A practical guide to implementing cookie consent banners using Claude Code. Code examples, patterns, and integration with Claude skills for frontend development."
+title: "Claude Code Cookie Consent Implementation: A Practical Guide"
+description: "Learn how to implement GDPR-compliant cookie consent in your web projects using Claude Code and the frontend-design skill. Includes code examples and best practices."
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, cookie-consent, gdpr, frontend, javascript, privacy, claude-skills]
-author: "Claude Skills Guide"
+categories: [implementation]
+tags: [claude-code, cookie-consent, gdpr, frontend, frontend-design]
+author: theluckystrike
 permalink: /claude-code-cookie-consent-implementation/
-reviewed: true
-score: 7
 ---
 
+{% raw %}
+# Claude Code Cookie Consent Implementation: A Practical Guide
 
-# Claude Code Cookie Consent Implementation
+Cookie consent has become a legal requirement across most jurisdictions. Implementing a robust consent system doesn't require starting from scratch—Claude Code combined with the frontend-design skill can generate production-ready consent components tailored to your specific requirements.
 
-Building a cookie consent banner is a common requirement for modern web applications. This guide shows you how to implement a clean, accessible cookie consent system using Claude Code, with practical code examples and integration patterns that work well in production applications.
+## Why Cookie Consent Matters for Developers
 
-## Why Cookie Consent Matters
+Modern web applications typically load scripts from multiple third-party sources: analytics platforms, advertising networks, embedded videos, and API integrations. Each of these may set cookies without explicit user permission. Regulatory frameworks like GDPR, CCPA, and ePrivacy Directive require informed consent before any non-essential cookies are set.
 
-Privacy regulations like GDPR and CCPA require websites to obtain explicit user consent before storing or retrieving cookies. Beyond compliance, a well-implemented consent system builds trust with your users. Claude Code can help you generate the necessary components quickly, whether you're starting from scratch or adding consent to an existing project.
+Building a compliant consent system involves three core components: a UI for presenting consent options, state management for tracking user preferences, and a mechanism for blocking scripts until consent is granted. The frontend-design skill helps generate clean, accessible consent UIs, while your application logic handles preference storage and script blocking.
 
-The implementation involves three core components: a consent banner UI, state management for user preferences, and logic to control which cookies get set based on those preferences.
+## A Minimal Consent Implementation
 
-## Creating the Consent Banner Component
-
-Start by creating a simple, accessible banner that appears when users first visit your site. Place this in your main layout or as a standalone component. Here's a practical implementation using vanilla JavaScript and CSS:
-
-```html
-<div id="cookie-consent-banner" class="cookie-banner" hidden>
-  <div class="cookie-content">
-    <p>We use cookies to enhance your browsing experience and analyze site traffic.</p>
-    <div class="cookie-buttons">
-      <button id="cookie-accept" class="btn btn-primary">Accept All</button>
-      <button id="cookie-reject" class="btn btn-secondary">Reject Non-Essential</button>
-      <button id="cookie-settings" class="btn btn-link">Customize</button>
-    </div>
-  </div>
-</div>
-```
-
-Style the banner with fixed positioning at the bottom of the viewport:
-
-```css
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  border-top: 1px solid #e5e5e5;
-  padding: 1.5rem;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
-}
-
-.cookie-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-
-.cookie-buttons {
-  display: flex;
-  gap: 0.75rem;
-  flex-shrink: 0;
-}
-```
-
-## Managing Consent State
-
-Store user preferences in localStorage so the banner doesn't reappear on subsequent visits:
+The following JavaScript module provides a functional consent manager that stores preferences in localStorage and provides hooks for conditional script loading:
 
 ```javascript
+// consent-manager.js
 const CONSENT_KEY = 'cookie_consent';
 
-function getConsent() {
+const defaultConsent = {
+  necessary: true,
+  analytics: false,
+  marketing: false,
+  timestamp: null
+};
+
+export function getConsent() {
   const stored = localStorage.getItem(CONSENT_KEY);
-  return stored ? JSON.parse(stored) : null;
+  return stored ? { ...defaultConsent, ...JSON.parse(stored) } : defaultConsent;
 }
 
-function setConsent(preferences) {
-  localStorage.setItem(CONSENT_KEY, JSON.stringify({
+export function setConsent(preferences) {
+  const consent = {
+    ...getConsent(),
     ...preferences,
     timestamp: new Date().toISOString()
-  }));
-}
-
-function hasConsented() {
-  return localStorage.getItem(CONSENT_KEY) !== null;
-}
-```
-
-The consent object should track different cookie categories:
-
-```javascript
-function createConsentObject(accepted = false) {
-  return {
-    necessary: true, // Always required
-    analytics: accepted,
-    marketing: accepted,
-    functional: accepted
   };
+  localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+  applyConsent(consent);
+  return consent;
+}
+
+export function applyConsent(consent) {
+  // Example: conditionally load analytics
+  if (consent.analytics) {
+    loadScript('https://analytics.example.com/tracker.js');
+  }
+  
+  if (consent.marketing) {
+    loadScript('https://ads.example.com/pixel.js');
+  }
+}
+
+function loadScript(src) {
+  const script = document.createElement('script');
+  script.src = src;
+  script.async = true;
+  document.head.appendChild(script);
 }
 ```
 
-## Conditional Cookie Loading
+This pattern separates concerns: the consent manager handles storage and preferences, while your application code decides which scripts to load based on those preferences. Integrate this with your existing analytics setup by wrapping initialization calls in consent checks.
 
-The key to a proper implementation is preventing cookies from being set until consent is granted. Create a wrapper that checks consent before setting any non-essential cookies:
+## Building the Consent UI with Claude Code
+
+The frontend-design skill excels at generating component code. When working with Claude Code, describe your requirements precisely:
+
+```
+/frontend-design create a cookie consent banner component with the following requirements: position fixed at bottom, three checkbox options (necessary always disabled, analytics optional, marketing optional), save and reject buttons, matches a clean minimal aesthetic, includes a link to privacy policy
+```
+
+Claude generates semantic HTML with appropriate ARIA attributes for accessibility. The output typically includes:
+
+- Proper form labels and fieldset grouping
+- Keyboard navigation support
+- Focus management when the banner appears
+- Responsive styling that works across breakpoints
+
+After generating the component, integrate it with the consent manager:
 
 ```javascript
-function setCookie(name, value, days) {
+import { getConsent, setConsent } from './consent-manager.js';
+
+function initConsentBanner() {
   const consent = getConsent();
   
-  if (!consent) {
-    console.warn('Cookie blocked: user has not consented');
-    return false;
+  if (!consent.timestamp) {
+    showConsentBanner();
+  } else {
+    applyConsent(consent);
   }
-  
-  const category = getCookieCategory(name);
-  if (category !== 'necessary' && !consent[category]) {
-    console.warn(`Cookie blocked: ${category} cookies not consented`);
-    return false;
-  }
-  
-  // Proceed with setting the cookie
-  const expires = new Date();
-  expires.setDate(expires.getDate() + days);
-  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
-  return true;
 }
 
-function getCookieCategory(name) {
-  const categories = {
-    '_ga': 'analytics',
-    '_gid': 'analytics',
-    'fbp': 'marketing',
-    'session': 'necessary',
-    'preferences': 'functional'
+document.getElementById('consent-save').addEventListener('click', () => {
+  const preferences = {
+    analytics: document.getElementById('consent-analytics').checked,
+    marketing: document.getElementById('consent-marketing').checked
   };
-  return categories[name] || 'necessary';
-}
-```
+  setConsent(preferences);
+  hideConsentBanner();
+});
 
-## Integrating with Claude Code Skills
-
-When building this feature, you can use several Claude skills to improve your workflow. The frontend-design skill helps generate accessible UI components and responsive layouts. Use the tdd skill to create test cases that verify consent logic works correctly across different scenarios.
-
-For managing the consent state and localStorage operations, the pdf skill won't be directly useful, but other skills like the algorithmic-art skill could help if you need custom illustrations for your consent modal.
-
-A practical approach is to use the supermemory skill to document your implementation decisions and remember edge cases you've encountered. When adding this to an existing project, the code-generation skills help you adapt the patterns to match your codebase style.
-
-## Handling Consent Changes
-
-Users should be able to modify their preferences after the initial choice. Create a settings panel:
-
-```javascript
-function showConsentSettings() {
-  const current = getConsent() || createConsentObject(false);
-  
-  const modal = document.createElement('div');
-  modal.className = 'consent-modal';
-  modal.innerHTML = `
-    <div class="consent-settings">
-      <h3>Cookie Preferences</h3>
-      <label>
-        <input type="checkbox" checked disabled> Necessary
-      </label>
-      <label>
-        <input type="checkbox" id="consent-analytics" 
-          ${current.analytics ? 'checked' : ''}> Analytics
-      </label>
-      <label>
-        <input type="checkbox" id="consent-marketing" 
-          ${current.marketing ? 'checked' : ''}> Marketing
-      </label>
-      <label>
-        <input type="checkbox" id="consent-functional" 
-          ${current.functional ? 'checked' : ''}> Functional
-      </label>
-      <button id="save-consent" class="btn btn-primary">Save Preferences</button>
-    </div>
-  `;
-  
-  document.body.appendChild(modal);
-  
-  document.getElementById('save-consent').addEventListener('click', () => {
-    const newConsent = {
-      necessary: true,
-      analytics: document.getElementById('consent-analytics').checked,
-      marketing: document.getElementById('consent-marketing').checked,
-      functional: document.getElementById('consent-functional').checked
-    };
-    
-    setConsent(newConsent);
-    modal.remove();
-    location.reload(); // Reload to apply new settings
-  });
-}
-```
-
-## Initialization Flow
-
-Tie everything together with a clean initialization:
-
-```javascript
-function initCookieConsent() {
-  if (hasConsented()) {
-    return; // User already made a choice
-  }
-  
-  const banner = document.getElementById('cookie-consent-banner');
-  banner.hidden = false;
-  
-  document.getElementById('cookie-accept').addEventListener('click', () => {
-    setConsent(createConsentObject(true));
-    banner.hidden = true;
-  });
-  
-  document.getElementById('cookie-reject').addEventListener('click', () => {
-    setConsent(createConsentObject(false));
-    banner.hidden = true;
-  });
-  
-  document.getElementById('cookie-settings').addEventListener('click', () => {
-    showConsentSettings();
-  });
-}
-
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', initCookieConsent);
+document.getElementById('consent-reject').addEventListener('click', () => {
+  setConsent({ analytics: false, marketing: false });
+  hideConsentBanner();
+});
 ```
 
 ## Testing Your Implementation
 
-Verify the consent system works correctly by testing these scenarios: fresh visitors see the banner, accepting sets all cookies, rejecting prevents non-essential cookies, and returning visitors don't see the banner. The tdd skill can help you generate comprehensive test cases for each scenario.
+The tdd skill helps build confidence in your consent system through automated tests. Write tests that verify:
 
-Check that your implementation properly blocks analytics cookies when consent is denied. Use browser developer tools to verify no unauthorized cookies appear in the Application tab.
+1. Preferences persist across page reloads
+2. Scripts load only after appropriate consent is granted
+3. The consent banner appears for new visitors
+4. Existing preferences are respected on return visits
 
-This implementation gives you a solid foundation for GDPR-compliant cookie consent. From here, you can extend it with cookie categorization UI, consent records for audit trails, or integration with consent management platforms.
+```javascript
+// consent.test.js
+import { getConsent, setConsent } from './consent-manager.js';
 
-## Related Reading
+describe('Cookie Consent', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
 
-- [Claude Code Data Retention Policy Workflow](/claude-skills-guide/claude-code-data-retention-policy-workflow/) — Data retention and cookie consent are related compliance concerns
-- [Claude Skills Compliance SOC2 ISO27001 Guide](/claude-skills-guide/claude-skills-compliance-soc2-iso27001-guide/) — Cookie consent is part of compliance requirements
-- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/) — Cookie banners must meet accessibility standards
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — Getting started with Claude Code for web development
+  test('defaults to no consent given', () => {
+    const consent = getConsent();
+    expect(consent.analytics).toBe(false);
+    expect(consent.marketing).toBe(false);
+    expect(consent.necessary).toBe(true);
+  });
+
+  test('persists consent preferences', () => {
+    setConsent({ analytics: true, marketing: true });
+    const restored = getConsent();
+    expect(restored.analytics).toBe(true);
+    expect(restored.marketing).toBe(true);
+    expect(restored.timestamp).not.toBeNull();
+  });
+});
+```
+
+Run these tests through your existing test runner to ensure the consent system behaves correctly across different scenarios.
+
+## Advanced Considerations
+
+For complex applications, consider implementing consent categories that align with specific functionality. Some teams use separate consent states for:
+
+- Essential session cookies
+- Analytics and performance cookies
+- Functional cookies for user preferences
+- Advertising and targeting cookies
+
+If your application serves users in multiple jurisdictions, the supermemory skill can help document which regulations apply to different user segments. Store jurisdiction information alongside consent preferences to handle cases where GDPR applies but CCPA does not, or vice versa.
+
+When integrating third-party tools, prefer solutions that support consent-aware loading. Google Analytics 4, for example, respects consentMode settings that let you configure baseline consent requirements. This reduces the complexity of manual script blocking while maintaining compliance.
+
+## Documentation and Maintenance
+
+Document your consent implementation in your project's privacy section. The pdf skill can help generate downloadable privacy notices that explain what cookies your application uses, why each category exists, and how users can update their preferences.
+
+Regular maintenance involves reviewing which scripts your application loads and ensuring new integrations respect the consent system. Add a checklist item for consent compliance whenever introducing new third-party services.
+
+Cookie consent implementation doesn't need to be complicated. By building a small, focused consent manager and pairing it with a well-designed UI component, you satisfy regulatory requirements while keeping your codebase maintainable.
+{% endraw %}
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
