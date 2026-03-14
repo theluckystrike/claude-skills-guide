@@ -183,4 +183,11 @@ Version controlling Claude skill files requires the same discipline as your code
 
 Start by backing up your existing skills to a Git repo, then gradually adopt symlinks or submodules as your needs grow. Whether you're using the `tdd` skill for test-driven development, the `pdf` skill for document generation, or custom skills for your team's workflows, proper version control ensures your skills remain reliable and maintainable.
 
+## Related Reading
+
+- [Best Way to Write CLAUDE.md File for Your Project](/claude-skills-guide/best-way-to-write-claudemd-file-for-your-project/) — Write an effective CLAUDE.md before versioning it
+- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — CLAUDE.md content that scales across projects
+- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Git best practices apply to CLAUDE.md versioning
+- [Best Way to Integrate Claude Code into Team Workflow](/claude-skills-guide/best-way-to-integrate-claude-code-into-team-workflow/) — Shared CLAUDE.md supports team integration
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

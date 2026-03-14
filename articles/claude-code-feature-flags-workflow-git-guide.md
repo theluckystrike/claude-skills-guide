@@ -146,4 +146,11 @@ Feature flags combined with a Git-based workflow give you flexibility in how Cla
 
 The real power comes from treating each flag as a temporary experiment—something to be measured, learned from, and either promoted to permanent code or removed entirely.
 
+## Related Reading
+
+- [Claude Code Trunk Based Development Guide](/claude-skills-guide/claude-code-trunk-based-development-guide/) — Feature flags enable trunk-based development
+- [Claude Code Gitflow Workflow Automation Guide](/claude-skills-guide/claude-code-gitflow-workflow-automation-guide/) — Compare feature flags to gitflow branching
+- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Feature flag toggles integrate with CI/CD
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More git and workflow automation guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
