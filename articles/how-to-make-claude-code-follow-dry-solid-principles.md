@@ -1,205 +1,203 @@
 ---
 layout: default
 title: "How to Make Claude Code Follow DRY and SOLID Principles"
-description: "A practical guide for developers to ensure Claude Code generates code that follows DRY and SOLID principles. Includes skill configurations, prompt patterns, and real."
+description: "Learn practical strategies for applying DRY and SOLID design principles when working with Claude Code and AI assistants."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /how-to-make-claude-code-follow-dry-solid-principles/
-reviewed: true
-score: 7
-categories: [guides]
-tags: [claude-code, claude-skills]
 ---
 
+{% raw %}
 # How to Make Claude Code Follow DRY and SOLID Principles
 
-When working with Claude Code, ensuring that generated code adheres to DRY (Don't Repeat Yourself) and SOLID principles requires explicit configuration and strategic prompting. These foundational software design principles keep your codebase maintainable, scalable, and easier to refactor. This guide shows you how to configure Claude Code to naturally produce code that follows these principles without constant manual corrections.
+When you work with Claude Code, the AI doesn't just write code—it generates architectural decisions, file structures, and interaction patterns. Without intentional guidance, this can lead to duplicated logic, fragile abstractions, and code that fights against the very principles that make software maintainable. Applying DRY (Don't Repeat Yourself) and SOLID principles to your AI-assisted workflow transforms Claude from a code generator into a genuine engineering partner.
 
-## Why DRY and SOLID Matter for AI-Generated Code
+## Understanding the AI Coding Challenge
 
-Claude Code excels at generating functional code quickly, but by default it may not prioritize design principles that become critical as your project grows. Repetitive code patterns lead to maintenance nightmares where a single logic change requires updates in multiple places. Violations of SOLID principles create rigid architectures that resist change.
+Traditional coding involves a human making deliberate choices about abstraction and responsibility. With Claude Code, the AI often makes these decisions autonomously based on context. The result can be problematic: copy-pasted utility functions across files, classes that violate single responsibility, and tight coupling that makes refactoring painful.
 
-The good news is that you can train Claude Code to understand and apply these principles consistently through skill configurations and prompt engineering.
+The solution isn't to abandon AI assistance—it's to guide Claude toward better architectural decisions through explicit prompts, consistent conventions, and structural expectations.
 
-## Configuring Claude Code for DRY Compliance
+## Applying DRY in AI-Generated Code
 
-### Single Responsibility Through Explicit Skill Prompts
+DRY states that every piece of knowledge should have a single, unambiguous representation. When Claude generates code, it frequently violates this principle by creating similar functions or data structures in multiple places.
 
-The S in SOLID stands for Single Responsibility Principle—each function, class, and module should do one thing well. Claude Code can follow this principle when you provide clear boundaries in your prompts or skill definitions.
+### Centralize Repeated Patterns
 
-Create a skill that establishes single responsibility expectations:
+Before generating new code, establish shared modules for common operations:
 
-```yaml
-# dry-solid-skill/skill.md
-# Single Responsibility Principle
-- Each function must perform one distinct operation
-- If a function name contains "and", split it into multiple functions
-- Extract repeated logic into shared utilities
-- Prefer composition over utility classes
+```typescript
+// lib/utils.ts - Shared utilities
+export function formatDate(date: Date): string {
+  return date.toISOString().split('T')[0];
+}
+
+export function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 ```
 
-When requesting code generation, be specific about function boundaries. Instead of asking for a "user processing function," break it into separate concerns: `validateUser()`, `formatUserData()`, and `saveUser()`. This granularity signals to Claude Code exactly where responsibility boundaries should exist.
+When working with Claude, explicitly reference existing utilities rather than generating new ones. Use prompts like "Use the existing `formatDate` from `lib/utils.ts` instead of creating a new date formatter."
 
-### Eliminating Code Duplication
+### Extract Shared Types
 
-DRY principle requires that every piece of knowledge in your system has a single, unambiguous representation. When Claude Code generates similar logic in multiple places, you need mechanisms to consolidate.
+Type duplication is common in AI-generated code. Create shared type definitions:
 
-Use the **tdd** skill to ensure tests drive out duplication. Place the tdd skill file in your `.claude/` directory, then invoke it with `/tdd`.
+```typescript
+// types/api.ts
+export interface ApiResponse<T> {
+  data: T;
+  status: number;
+  message?: string;
+}
 
-With tdd enabled, Claude Code will first write tests that expose duplication. When the same logic appears twice, the test failures guide toward extracting shared utilities rather than duplicating code.
-
-### Template-Based Code Generation
-
-For repetitive structures like API endpoints, data models, or component files, provide Claude Code with templates that define the pattern once:
-
-```markdown
-# CLAUDE.md
-
-## Component Template
-All React components follow this structure:
-1. Imports (React, hooks, shared utilities)
-2. Type definitions
-3. Component function with single responsibility
-4. Props validation
-5. Export statement
-
-Use the frontend-design skill patterns for consistent component architecture.
+export interface PaginationParams {
+  page: number;
+  limit: number;
+}
 ```
 
-This approach means Claude Code generates from a template rather than recreating the same boilerplate each time.
+Guide Claude by stating "Define shared types in `types/` directory and import them rather than redefining types inline."
 
-## Applying SOLID Principles Through Skill Configuration
+## Applying SOLID Principles with Claude
 
-### Open/Closed Principle
+### Single Responsibility Principle (SRP)
 
-Code should be open for extension but closed for modification. Configure Claude Code to favor patterns that allow adding behavior without changing existing code.
+Claude tends to create classes or modules that handle too many concerns. When generating code, specify clear boundaries:
 
-```yaml
-# In your project CLAUDE.md
-## Open/Closed Strategy
-- Use strategy pattern for varying behavior
-- Implement feature flags for conditional logic
-- Create extension points using hooks or callbacks
-- Prefer inheritance chains that allow override rather than modification
+```typescript
+// Good: Separate responsibilities
+class UserValidator {
+  validate(user: User): boolean {
+    return Boolean(user.email && user.name);
+  }
+}
+
+class UserRepository {
+  constructor(private db: Database) {}
+  
+  save(user: User): void {
+    this.db.users.insert(user);
+  }
+}
+
+class UserNotifier {
+  notify(user: User, message: string): void {
+    // Send notification
+  }
+}
 ```
 
-This configuration encourages Claude Code to generate polymorphic solutions rather than conditional logic that modifies core functions.
+When working with skills like `pdf` for document generation or `frontend-design` for UI components, explicitly ask Claude to separate business logic from presentation and data access concerns.
 
-### Liskov Substitution Principle
+### Open/Closed Principle (OCP)
 
-Subtypes must be substitutable for their base types without altering program correctness. When generating inheritance hierarchies, specify interface contracts explicitly:
+Design should be open for extension but closed for modification. Guide Claude to use abstractions:
 
-```python
-# Example prompt for interface definitions
-"Create a shape hierarchy where all subclasses implement the same interface.
- Include area() and perimeter() methods. Ensure any Shape subclass can 
- replace another without breaking functionality."
+```typescript
+// Instead of modifying this class for each new format
+interface ReportGenerator {
+  generate(data: ReportData): string;
+}
+
+class PdfReportGenerator implements ReportGenerator {
+  generate(data: ReportData): string {
+    // PDF generation logic
+  }
+}
+
+class HtmlReportGenerator implements ReportGenerator {
+  generate(data: ReportData): string {
+    // HTML generation logic
+  }
+}
 ```
 
-### Interface Segregation Principle
+When using `tdd` for test-driven development, write tests that expect extension points before implementing concrete classes.
 
-Clients should not be forced to depend on interfaces they do not use. Direct Claude Code toward creating focused interfaces rather than catch-all contracts:
+### Dependency Inversion Principle (DIP)
 
-```markdown
-## Interface Design
-- Separate read and write operations into distinct interfaces
-- Use dependency injection to provide only required interfaces
-- Prefer many small, specific interfaces over one large interface
+Depend on abstractions, not concretions. Instruct Claude to use interfaces:
+
+```typescript
+interface StorageService {
+  save(key: string, value: string): Promise<void>;
+  get(key: string): Promise<string | null>;
+}
+
+class AppService {
+  constructor(private storage: StorageService) {}
+  // Now you can swap implementations
+}
 ```
 
-### Dependency Inversion Principle
+This becomes especially valuable when combining Claude skills with external services—your business logic remains independent of specific implementations.
 
-High-level modules should not depend on low-level modules. Both should depend on abstractions. This principle is particularly important when Claude Code generates new modules:
+## Practical Workflow Integration
 
-```yaml
-# Skill configuration for dependency management
-- Depend on abstractions (interfaces, protocols) not concrete classes
-- Use dependency injection containers where appropriate
-- Create factory functions for complex object construction
-- Mock dependencies in tests using the supermemory skill for context
+### Use SuperMemo for Pattern Documentation
+
+When you identify successful patterns through Claude interactions, document them using `supermemory` or similar tools. Record not just the code, but the prompts that produced good results. This creates a knowledge base that guides future AI interactions toward DRY/SOLID compliance.
+
+### Structured Prompting for Architecture
+
+Before generating significant code, provide Claude with architectural context:
+
+```
+Create a TypeScript module for user management. Follow these constraints:
+- Single responsibility: user validation, persistence, and notifications are separate modules
+- Use interfaces for all external dependencies
+- Place shared types in types/user.ts
+- Don't duplicate validation logic already in lib/validation.ts
 ```
 
-## Practical Workflow for Principled Code Generation
+### Review and Refactor Iteratively
 
-### Step 1: Define Principles in CLAUDE.md
+Claude generates functional code first. Treat the initial output as a starting point:
 
-Start every project with a dedicated section in CLAUDE.md:
+1. Identify violations of DRY (duplicated logic, repeated types)
+2. Identify SOLID violations (god classes, tight coupling)
+3. Refactor with explicit instructions to Claude
+4. Test that functionality remains intact
 
-```markdown
-# Design Principles
+When using `pptx` or `docx` for documentation alongside code, ensure your documentation code also follows these principles—duplicated API references across documentation files create maintenance nightmares.
 
-## DRY
-- Extract repeated patterns into utilities
-- Use constants for magic values
-- Create shared validation functions
+## Real-World Example
 
-## SOLID
-- Single Responsibility: max 30 lines per function
-- Open/Closed: use strategy pattern for extensions
-- Liskov Substitution: define interface contracts
-- Interface Segregation: separate read/write concerns
-- Dependency Inversion: depend on abstractions
+Consider a project that generates invoices. Without guidance, Claude might create:
+
+```typescript
+// invoice.ts - Everything in one file
+function calculateItemTotal(price, quantity) { ... }
+function calculateTax(total) { ... }
+function formatCurrency(amount) { ... }
+function generateInvoiceHtml(invoice) { ... }
 ```
 
-### Step 2: Use Complementary Skills
+Instead, guide toward:
 
-Several existing skills reinforce these principles:
+```typescript
+// domain/invoice.ts
+export class InvoiceCalculator {
+  calculate(invoice: Invoice): number { ... }
+}
 
-- **claude-tdd**: Test-driven development naturally surfaces violations
-- **frontend-design**: Enforces component-level responsibility
-- **pdf**: Generate documentation that describes the architecture
-- **supermemory**: Maintains context about design decisions across sessions
+// presentation/invoice-renderer.ts  
+export class InvoiceHtmlRenderer {
+  render(invoice: Invoice): string { ... }
+}
 
-### Step 3: Review and Refactor
-
-After Claude Code generates code, run a review pass:
-
-1. Check for repeated logic that could be extracted
-2. Verify each class has one reason to change
-3. Ensure dependency injection is used appropriately
-4. Look for interface violations
-
-## Common Pitfalls and Solutions
-
-### Over-Abstraction
-
-Sometimes Claude Code applies SOLID too aggressively, creating unnecessary abstractions. Counter this by specifying concrete thresholds:
-
-```yaml
-# Add to CLAUDE.md
-- Don't create interfaces for single implementations
-- Wait until third usage before extracting to utility
-- Keep abstractions shallow (max 2 levels of inheritance)
+// shared/currency.ts
+export function formatCurrency(amount: number): string { ... }
 ```
 
-### Premature Optimization
+This separation allows you to modify tax calculation without touching rendering logic—a classic SOLID benefit that Claude can achieve when given proper direction.
 
-DRY can lead to over-engineering when applied too early. Guide Claude Code toward YAGNI (You Aren't Gonna Need It) by specifying:
+## Conclusion
 
-```markdown
-## When to Apply DRY
-- Apply after seeing repetition three times
-- Extract when the duplicated logic exceeds 10 lines
-- Create utilities only for stable, proven patterns
-```
+Claude Code amplifies your productivity, but it also amplifies your architectural decisions. By applying DRY and SOLID principles intentionally—through explicit prompts, shared module conventions, and iterative refinement—you transform AI-generated code from disposable scripts into maintainable systems.
 
-## Measuring Success
-
-Track these metrics to verify principle adherence:
-
-- **Code duplication percentage**: Should stay below 5%
-- **Function length**: Average under 20 lines
-- **Class responsibilities**: One primary change reason per class
-- **Dependency direction**: All point toward abstractions
-
-When these metrics improve, your codebase becomes more maintainable and Claude Code's generated code integrates more smoothly with existing architecture.
-
-
-## Related Reading
-
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+The key is treating Claude as a junior developer: provide clear requirements, establish conventions upfront, and review output against the same standards you'd apply to human-written code. Your documentation skills (whether using `docx` for specifications or `pdf` for reports), testing practices (through `tdd` workflows), and design capabilities (via `frontend-design`) all benefit from this disciplined approach.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
