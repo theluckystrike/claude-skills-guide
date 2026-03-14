@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code Automated Accessibility Audit Workflow"
 description: "Learn how to build an automated accessibility audit workflow with Claude Code. Practical examples, code snippets, and actionable advice for developers."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-automated-accessibility-audit-workflow/
 categories: [tutorials]
 tags: [claude-code, claude-skills, accessibility, a11y, automated-audit, wcag]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code Automated Accessibility Audit Workflow
 
-Accessibility is no longer optional—it's a legal requirement and a moral imperative. Yet manually auditing applications for WCAG compliance takes hours that most development teams don't have. This guide shows you how to build an automated accessibility audit workflow using Claude Code that catches issues early, integrates seamlessly into your development process, and helps you maintain compliance without slowing down delivery.
+Accessibility is no longer optional—it's a legal requirement and a moral imperative. Yet manually auditing applications for WCAG compliance takes hours that most development teams don't have. This guide shows you how to build an automated accessibility audit workflow using Claude Code that catches issues early, integrates smoothly into your development process, and helps you maintain compliance without slowing down delivery.
 
 ## Why Automate Accessibility Audits?
 

@@ -1,17 +1,23 @@
 ---
+
 layout: default
 title: "Claude Code Semantic HTML Improvement Guide"
 description: "Learn how to use Claude Code to audit, refactor, and improve semantic HTML structure in your projects. Practical patterns for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-semantic-html-improvement-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Semantic HTML Improvement Guide
 
 Semantic HTML forms the backbone of accessible, maintainable web pages. Yet many developers fall into the trap of overusing `<div>` and `<span>` elements, losing the structural meaning that makes HTML powerful. Claude Code offers practical workflows to audit and improve your HTML semantics, whether you're working on a new project or refactoring legacy code.
 
-This guide shows you how to leverage Claude Code and related skills to transform your HTML from generic containers into meaningful structure.
+This guide shows you how to use Claude Code and related skills to transform your HTML from generic containers into meaningful structure.
 
 ## Why Semantic HTML Matters
 

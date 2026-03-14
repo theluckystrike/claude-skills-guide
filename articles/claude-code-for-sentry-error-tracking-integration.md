@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Sentry Error Tracking Integration"
 description: "Learn how to integrate Claude Code with Sentry for powerful error tracking and debugging in your development workflow."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-sentry-error-tracking-integration/
 categories: [Development, Error Tracking, DevOps]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Sentry Error Tracking Integration
@@ -130,7 +134,7 @@ Register this tool in your Claude Code configuration and you can now ask questio
 
 ## Automating Error Response with Claude Code Hooks
 
-Claude Code's hook system integrates seamlessly with Sentry webhooks to create automated responses. When Sentry detects a new error, Claude Code can analyze and respond automatically.
+Claude Code's hook system integrates smoothly with Sentry webhooks to create automated responses. When Sentry detects a new error, Claude Code can analyze and respond automatically.
 
 ### Setting Up the Hook
 

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Using Claude Code for Data Quality Validation Workflow"
 description: "Learn how to leverage Claude Code CLI to build robust data quality validation workflows that ensure your datasets meet the highest standards."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-data-quality-validation-workflow/
 categories: [Development, Data Engineering, Automation]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 ## Introduction
@@ -274,7 +278,7 @@ def validate_in_batches(data: List[Dict], batch_size: int = BATCH_SIZE):
 
 ## Conclusion
 
-Claude Code transforms data quality validation from a manual, error-prone process into an automated, reliable workflow. By defining clear schemas, implementing comprehensive validation logic, and leveraging Claude's capabilities for generating validation code and analyzing results, you can ensure your data meets the highest quality standards.
+Claude Code transforms data quality validation from a manual, error-prone process into an automated, reliable workflow. By defining clear schemas, implementing comprehensive validation logic, and using Claude's capabilities for generating validation code and analyzing results, you can ensure your data meets the highest quality standards.
 
 Start small—validate one dataset with a simple schema—and progressively add complexity as your validation framework matures. The investment in robust data quality validation pays dividends in system reliability and data-driven decision making.
 

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Skip Navigation Implementation Guide"
 description: "Learn how to use Claude Code and Claude Skills to implement accessible skip navigation links that improve keyboard navigation and WCAG compliance."
@@ -7,11 +8,14 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-skip-navigation-implementation-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Skip Navigation Implementation Guide
 
-Skip navigation links are a fundamental accessibility feature that allows keyboard users to bypass repetitive navigation and jump directly to main content. Implementing proper skip links is one of the simplest yet most impactful accessibility improvements you can make to any website. This guide shows you how to leverage Claude Code and Claude Skills to implement skip navigation effectively.
+Skip navigation links are a fundamental accessibility feature that allows keyboard users to bypass repetitive navigation and jump directly to main content. Implementing proper skip links is one of the simplest yet most impactful accessibility improvements you can make to any website. This guide shows you how to use Claude Code and Claude Skills to implement skip navigation effectively.
 
 ## Understanding Skip Navigation Links
 

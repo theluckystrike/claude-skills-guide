@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for CSS Performance Optimization Workflow"
 description: "Learn how to leverage Claude Code for efficient CSS performance optimization. This guide covers automated analysis, best practices, and practical workflows for faster web pages."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-css-performance-optimization-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 CSS performance optimization remains one of the most impactful areas for improving website speed and user experience. While JavaScript performance often receives more attention, CSS affects critical rendering path metrics and can significantly impact First Contentful Paint (FCP) and Largest Contentful Paint (LCP). This guide demonstrates how Claude Code transforms CSS optimization from a manual, tedious process into an automated, systematic workflow.
 
@@ -225,6 +229,6 @@ echo "Audit complete. Review reports/stylelint.json"
 
 ## Conclusion
 
-CSS performance optimization doesn't require sacrificing developer productivity. By leveraging Claude Code's analysis capabilities, you can automate audits, receive actionable recommendations, and integrate performance checks into your development workflow. The key is establishing regular auditing habits and implementing preventive measures through pre-commit validation and performance budgets.
+CSS performance optimization doesn't require sacrificing developer productivity. By using Claude Code's analysis capabilities, you can automate audits, receive actionable recommendations, and integrate performance checks into your development workflow. The key is establishing regular auditing habits and implementing preventive measures through pre-commit validation and performance budgets.
 
 Start with a comprehensive audit using Claude, prioritize high-impact changes, and establish ongoing monitoring. This systematic approach ensures your CSS remains performant as your project evolves, delivering faster experiences to users while maintaining development velocity.

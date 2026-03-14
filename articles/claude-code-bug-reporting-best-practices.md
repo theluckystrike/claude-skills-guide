@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Bug Reporting Best Practices"
 description: "Master bug reporting for Claude Code projects. Learn to write effective issue reports with reproducible examples, logs, and context for faster resolution."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, bug-reporting, debugging, best-practices]
+tags: [claude-code, bug-reporting, debugging, best-practices, claude-skills]
 permalink: /claude-code-bug-reporting-best-practices/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Bug Reporting Best Practices
 

@@ -1,17 +1,21 @@
 ---
+
 layout: default
 title: "Learning Claude Code in 30 Days: A Structured Challenge"
 description: "Master Claude Code skills in 30 days with this practical developer challenge. Build automation workflows, integrate APIs, and become a power user."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, learning, challenge, productivity]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /learning-claude-code-in-30-days-challenge/
+reviewed: true
+score: 7
 ---
+
 
 # Learning Claude Code in 30 Days: A Structured Challenge
 
-Claude Code represents a paradigm shift in developer productivity. Rather than treating AI as a simple chat interface, mastering Claude Code means understanding how to build reusable skills, leverage Model Context Protocol (MCP) servers, and create automation workflows that scale. This 30-day challenge transforms you from a casual user into a power user capable of building sophisticated AI-assisted development pipelines.
+Claude Code represents a paradigm shift in developer productivity. Rather than treating AI as a simple chat interface, mastering Claude Code means understanding how to build reusable skills, use Model Context Protocol (MCP) servers, and create automation workflows that scale. This 30-day challenge transforms you from a casual user into a power user capable of building sophisticated AI-assisted development pipelines.
 
 ## Challenge Overview
 

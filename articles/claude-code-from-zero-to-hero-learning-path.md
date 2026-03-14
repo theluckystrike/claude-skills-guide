@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code from Zero to Hero Learning Path"
 description: "A structured learning path to master Claude Code from basics to advanced skill development. Build professional AI-powered workflows step by step."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, learning-path, claude-skills, beginners]
 permalink: /claude-code-from-zero-to-hero-learning-path/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code from Zero to Hero Learning Path
 
@@ -49,7 +53,7 @@ Notice how skills declare their tool requirements explicitly. This controlled ac
 
 Advanced usage involves composing multiple skills for complex workflows. A typical advanced scenario might chain the **pdf** skill for document extraction, a custom data processing skill, and the **frontend-design** skill to generate visualization components—all within a single session.
 
-At this level, you start building skills tailored to your specific projects and team needs. Document your team's coding conventions, preferred libraries, and architectural patterns. Transform institutional knowledge into reusable skills that new team members can leverage immediately.
+At this level, you start building skills tailored to your specific projects and team needs. Document your team's coding conventions, preferred libraries, and architectural patterns. Transform institutional knowledge into reusable skills that new team members can use immediately.
 
 The **algorithmic-art** skill showcases creative applications beyond traditional coding tasks. Similarly, the **canvas-design** skill handles visual output generation. These specialized capabilities demonstrate how skills adapt Claude for diverse professional contexts beyond developer tooling.
 

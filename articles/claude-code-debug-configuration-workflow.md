@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Debug Configuration Workflow"
 description: "Master the debug configuration workflow in Claude Code. Learn to set breakpoints, inspect variables, and troubleshoot skill behavior effectively."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-debug-configuration-workflow/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 {% raw %}
 
 
@@ -171,7 +177,7 @@ This skill becomes your go-to tool for diagnosing configuration problems across 
 
 Debugging Claude Code skill configurations requires understanding the execution context, carefully reviewing tool permissions, and systematically testing changes. The workflow involves examining raw skill files, analyzing tool call logs, and iteratively improving your configurations.
 
-By following these patterns, you can resolve most configuration issues efficiently. Remember to leverage skills like supermemory for context, pdf for documentation review, and tdd for test-related debugging. Building a personal debug skill tailored to your workflow accelerates future troubleshooting.
+By following these patterns, you can resolve most configuration issues efficiently. Remember to use skills like supermemory for context, pdf for documentation review, and tdd for test-related debugging. Building a personal debug skill tailored to your workflow accelerates future troubleshooting.
 
 The key is patience: configuration problems often have simple causes, and methodical investigation beats guessing every time.
 

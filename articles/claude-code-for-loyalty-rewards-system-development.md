@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Loyalty Rewards System Development"
 description: "Build a production-ready loyalty rewards system using Claude Code. Learn to design point accumulation, tier management, reward redemption, and integrate AI-powered personalization."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-loyalty-rewards-system-development/
 categories: [tutorials, code]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Loyalty Rewards System Development
 

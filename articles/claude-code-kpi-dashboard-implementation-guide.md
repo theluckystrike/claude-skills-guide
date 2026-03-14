@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code KPI Dashboard Implementation Guide"
 description: "Build a KPI dashboard with Claude Code. Step-by-step implementation using data aggregation, visualization skills, and automation for real-time metrics tracking."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-kpi-dashboard-implementation-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code KPI Dashboard Implementation Guide
 
@@ -75,7 +81,7 @@ Run this script from your Claude skill using the Bash tool. Store the results in
 
 ### Integration with the SuperMemory Skill
 
-For persistent metric storage, leverage the supermemory skill to maintain historical data:
+For persistent metric storage, use the supermemory skill to maintain historical data:
 
 ```bash
 # Store metrics using supermemory

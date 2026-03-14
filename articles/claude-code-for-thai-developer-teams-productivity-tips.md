@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code สำหรับทีมนักพัฒนาไทย: เคล็ดลับเพิ่มผลิตภาพ"
 description: "เรียนรู้เคล็ดลับการใช้ Claude Code เพื่อเพิ่มผลิตภาพให้ทีมนักพัฒนาซอฟต์แวร์ไทย พร้อมตัวอย่างการใช้งานจริงและแนวทางปฏิบัติที่นำไปใช้ได้ทันที"
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-thai-developer-teams-productivity-tips/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code สำหรับทีมนักพัฒนาไทย: เคล็ดลับเพิ่มผลิตภาพ

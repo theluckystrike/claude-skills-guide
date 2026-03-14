@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Core Web Vitals Optimization Workflow"
 description: "Learn how to build an AI-powered workflow using Claude Code to measure, analyze, and optimize your website's Core Web Vitals metrics for better user experience and SEO performance."
@@ -7,11 +8,14 @@ author: Claude Skills Guide
 permalink: /claude-code-for-core-web-vitals-optimization-workflow/
 categories: [guides, performance]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Core Web Vitals Optimization Workflow
 
-Core Web Vitals have become a critical factor in both user experience and search engine rankings. Google's Core Web Vitals report directly impacts how your site performs in search results, making optimization a priority for developers. This guide shows you how to leverage Claude Code to build an automated workflow for measuring, analyzing, and improving your Core Web Vitals scores.
+Core Web Vitals have become a critical factor in both user experience and search engine rankings. Google's Core Web Vitals report directly impacts how your site performs in search results, making optimization a priority for developers. This guide shows you how to use Claude Code to build an automated workflow for measuring, analyzing, and improving your Core Web Vitals scores.
 
 ## Understanding Core Web Vitals Metrics
 

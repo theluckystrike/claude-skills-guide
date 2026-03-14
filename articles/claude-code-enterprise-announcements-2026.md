@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Claude Code Enterprise Announcements 2026: What's New for Development Teams"
 description: "Explore the latest Claude Code enterprise features announced in 2026. Learn about new security controls, team collaboration tools, skill ecosystem expansions, and deployment options for large organizations."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-enterprise-announcements-2026/
 categories: [guides]
-tags: [claude-code, enterprise, developer-tools]
+tags: [claude-code, enterprise, developer-tools, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Enterprise Announcements 2026: What's New for Development Teams
 

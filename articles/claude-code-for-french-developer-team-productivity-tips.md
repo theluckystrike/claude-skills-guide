@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for French Developer Team Productivity Tips"
 description: "Guide pratique pour les équipes de développement françaises : optimisez votre productivité avec Claude Code, concentrez-vous sur l'essentiel et automatez les tâches récurrentes."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-french-developer-team-productivity-tips/
 categories: [guides, productivity]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for French Developer Team Productivity Tips

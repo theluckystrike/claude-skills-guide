@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Best Claude Code Courses Online 2026: A Developer Guide"
 description: "Discover the best Claude Code courses and resources for developers in 2026. Learn how to master AI-assisted coding with skills like tdd, pdf, and supermemory."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /best-claude-code-courses-online-2026/
 categories: [guides]
 tags: [claude-code, claude-skills, ai-coding]
+reviewed: true
+score: 7
 ---
+
 
 # Best Claude Code Courses Online 2026: A Developer Guide
 

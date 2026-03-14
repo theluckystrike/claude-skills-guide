@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Git Commit Message Generator Guide"
 description: "Learn how to create and use Claude Code skills to generate semantic git commit messages automatically. Includes setup instructions and practical examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-git-commit-message-generator-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Git Commit Message Generator Guide
 
-Writing clear, consistent commit messages is one of those development habits that pays dividends over time. When you need to debug a regression three months later or review your team's history, well-structured commits make all the difference. This guide shows you how to leverage Claude Code skills to automate and improve your commit message workflow.
+Writing clear, consistent commit messages is one of those development habits that pays dividends over time. When you need to debug a regression three months later or review your team's history, well-structured commits make all the difference. This guide shows you how to use Claude Code skills to automate and improve your commit message workflow.
 
 ## Why Use Claude for Commit Messages
 

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Image Optimization Workflow Guide"
 description: "Learn how to leverage Claude Code to automate and optimize your image processing workflows for faster websites and better user experience."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-image-optimization-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 {% raw %}
 
 Image optimization is a critical yet often tedious task for web developers. Large images slow down your site, hurt SEO rankings, and frustrate users. This guide shows you how to use Claude Code to automate image optimization workflows, saving time while ensuring consistent quality across your project.

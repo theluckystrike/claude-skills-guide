@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Learning System Design Concepts"
 description: "A practical guide to using Claude Code as your learning companion for mastering system design. Includes actionable examples and code snippets."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-learning-system-design-concepts/
 categories: [Development, System Design, Learning]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Learning System Design Concepts
 
-System design is one of the most challenging areas for developers to master. It requires understanding distributed systems, scalability patterns, data management strategies, and the ability to make trade-offs under uncertainty. Fortunately, Claude Code can be an invaluable learning companion on this journey. This guide explores practical ways to leverage Claude Code for learning system design concepts effectively.
+System design is one of the most challenging areas for developers to master. It requires understanding distributed systems, scalability patterns, data management strategies, and the ability to make trade-offs under uncertainty. Fortunately, Claude Code can be an invaluable learning companion on this journey. This guide explores practical ways to use Claude Code for learning system design concepts effectively.
 
 ## Why Use Claude Code for System Design Learning?
 

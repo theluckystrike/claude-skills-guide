@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Claude Code Release Automation GitHub Guide"
 description: "Learn how to automate GitHub releases with Claude Code. This guide covers CI/CD pipelines, release workflows, and practical automation examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-release-automation-github-guide/
 categories: [guides]
-tags: [claude-code, github, automation, release]
+tags: [claude-code, github, automation, release, claude-skills]
+reviewed: true
+score: 7
 ---
+
 {% raw %}
 
 

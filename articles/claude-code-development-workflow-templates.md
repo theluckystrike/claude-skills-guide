@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Development Workflow Templates"
 description: "Practical workflow templates for structuring Claude Code projects, from skill creation to complex multi-agent systems. Includes code examples and real-world patterns."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-development-workflow-templates/
+reviewed: true
+score: 7
+categories: [workflows]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Development Workflow Templates
 
-Building effective Claude Code projects requires structured workflows that leverage skills, tools, and agent patterns. This guide provides practical templates you can adapt for different development scenarios, whether you're automating documentation with the pdf skill, implementing test-driven development with tdd, or managing complex project contexts with supermemory.
+Building effective Claude Code projects requires structured workflows that use skills, tools, and agent patterns. This guide provides practical templates you can adapt for different development scenarios, whether you're automating documentation with the pdf skill, implementing test-driven development with tdd, or managing complex project contexts with supermemory.
 
 ## Core Project Initialization Template
 
@@ -88,7 +94,7 @@ agents:
     context_file: ".claude/docs-context.md"
 ```
 
-Each agent operates within defined boundaries, reporting progress to a central coordinator. The supermemory skill stores coordination state, enabling agents to resume interrupted work seamlessly.
+Each agent operates within defined boundaries, reporting progress to a central coordinator. The supermemory skill stores coordination state, enabling agents to resume interrupted work smoothly.
 
 ## Memory Management Workflow
 

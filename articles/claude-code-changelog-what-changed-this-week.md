@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Changelog: What Changed This Week"
 description: "A weekly roundup of Claude Code updates, new skills, and feature changes. Stay current with the latest Claude Code enhancements and skill additions."
 date: 2026-03-14
 categories: [changelog, updates]
 tags: [claude-code, changelog, updates, claude-skills]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-changelog-what-changed-this-week/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Changelog: What Changed This Week
 

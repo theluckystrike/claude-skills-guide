@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Using Claude Code for SQL Query Optimization Workflow"
 description: "A practical guide to optimizing SQL queries using Claude Code's AI-powered workflow. Learn how to analyze, refactor, and improve database performance with concrete examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-sql-query-optimization-workflow/
+reviewed: true
+score: 7
+categories: [workflows]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Using Claude Code for SQL Query Optimization Workflow

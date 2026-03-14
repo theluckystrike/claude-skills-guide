@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Git Cherry-Pick Workflow Guide"
 description: "Master git cherry-pick workflows with Claude Code CLI. Learn to select specific commits, handle merge conflicts, and automate backporting with practical examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, git, cherry-pick, workflow, version-control]
+tags: [claude-code, git, cherry-pick, workflow, version-control, claude-skills]
 permalink: /claude-code-git-cherry-pick-workflow-guide/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code Git Cherry-Pick Workflow Guide

@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Cookbook: Practical Recipes Collection"
 description: "A practical collection of Claude Code cookbook recipes for developers and power users. Learn how to leverage Claude skills for PDF creation, frontend design, TDD, and memory management."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-cookbook-recipes-collection/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Cookbook: Practical Recipes Collection
 

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for GraphQL to REST Migration Guide"
 description: "A practical guide to migrating from GraphQL to REST APIs using Claude Code. Learn strategies, code examples, and best practices for a smooth transition."
@@ -6,13 +7,16 @@ date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-graphql-to-rest-migration-guide/
 categories: [tutorials, migration]
-tags: [claude-code, graphql, rest-api, migration, backend]
+tags: [claude-code, graphql, rest-api, migration, backend, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for GraphQL to REST Migration Guide
 
-Migrating from GraphQL to REST is a significant architectural decision that many teams face as their applications evolve. Whether you are dealing with over-fetching concerns, client complexity, or simply want to leverage REST's widespread ecosystem, Claude Code can dramatically streamline this migration process. This guide walks you through practical strategies for moving your API from GraphQL to REST while maintaining functionality and minimizing disruptions.
+Migrating from GraphQL to REST is a significant architectural decision that many teams face as their applications evolve. Whether you are dealing with over-fetching concerns, client complexity, or simply want to use REST's widespread ecosystem, Claude Code can dramatically streamline this migration process. This guide walks you through practical strategies for moving your API from GraphQL to REST while maintaining functionality and minimizing disruptions.
 
 ## Understanding Your Migration Scope
 

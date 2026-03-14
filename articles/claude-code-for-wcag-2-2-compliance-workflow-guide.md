@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for WCAG 2.2 Compliance Workflow Guide"
 description: "A practical developer guide to building accessible web applications using Claude Code. Learn workflows, code patterns, and automated testing for WCAG 2.2 compliance."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-wcag-2-2-compliance-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for WCAG 2.2 Compliance Workflow Guide
 
-Web accessibility is no longer optional—it's a legal requirement in many jurisdictions and a fundamental aspect of inclusive design. WCAG 2.2 (Web Content Accessibility Guidelines) introduces several new success criteria that address user experience gaps for people with disabilities. This guide shows you how to leverage Claude Code to build, audit, and maintain WCAG 2.2 compliant applications throughout your development workflow.
+Web accessibility is no longer optional—it's a legal requirement in many jurisdictions and a fundamental aspect of inclusive design. WCAG 2.2 (Web Content Accessibility Guidelines) introduces several new success criteria that address user experience gaps for people with disabilities. This guide shows you how to use Claude Code to build, audit, and maintain WCAG 2.2 compliant applications throughout your development workflow.
 
 ## Understanding WCAG 2.2 Key Changes
 

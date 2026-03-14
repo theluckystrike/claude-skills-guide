@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Responsible AI Checklist: A Developer's Guide"
 description: "Use Claude Code responsibly with this practical checklist for developers. Covers security, testing, code review, and best practices for AI-assisted development."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-responsible-ai-checklist-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Responsible AI Checklist: A Developer's Guide
 

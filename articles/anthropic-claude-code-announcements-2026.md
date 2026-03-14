@@ -1,17 +1,23 @@
 ---
+
 layout: default
 title: "Claude Code Announcements 2026: Complete Developer Overview"
 description: "Comprehensive guide to Claude Code announcements in 2026. Learn about new skills, MCP updates, and developer features rolling out this year."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /anthropic-claude-code-announcements-2026/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 
 # Claude Code Announcements 2026: Complete Developer Overview
 
-The Claude Code ecosystem continues its rapid evolution throughout 2026, bringing significant improvements for developers building AI-powered workflows. This guide covers the major announcements, their practical implications, and how you can leverage these new capabilities in your projects.
+The Claude Code ecosystem continues its rapid evolution throughout 2026, bringing significant improvements for developers building AI-powered workflows. This guide covers the major announcements, their practical implications, and how you can use these new capabilities in your projects.
 
 ## Expanded Skills Ecosystem
 

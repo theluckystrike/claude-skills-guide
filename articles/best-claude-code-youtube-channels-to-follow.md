@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Best Claude Code YouTube Channels to Follow in 2026"
 description: "Discover the most useful YouTube channels for learning Claude Code, AI coding tools, and agentic development workflows. Practical recommendations for developers."
 date: 2026-03-14
 categories: [resources]
-tags: [claude-code, youtube, learning, tutorials, ai-coding]
-author: theluckystrike
+tags: [claude-code, youtube, learning, tutorials, ai-coding, claude-skills]
+author: "Claude Skills Guide"
 permalink: /best-claude-code-youtube-channels-to-follow/
+reviewed: true
+score: 7
 ---
+
 
 # Best Claude Code YouTube Channels to Follow in 2026
 

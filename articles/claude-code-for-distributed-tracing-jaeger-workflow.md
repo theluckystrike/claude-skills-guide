@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Distributed Tracing Jaeger Workflow"
 description: "Learn how to leverage Claude Code to streamline distributed tracing setup with Jaeger, including practical examples and actionable advice for developers."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-distributed-tracing-jaeger-workflow/
 categories: [Development, DevOps, Monitoring]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Distributed Tracing Jaeger Workflow

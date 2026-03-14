@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code March 2026 Update: What's New for Developers"
 description: "A comprehensive guide to the Claude Code March 2026 update, featuring new skills, enhanced capabilities, and practical examples for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-march-2026-update-what-is-new/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 The March 2026 update to Claude Code brings significant improvements that extend beyond basic code assistance. This release focuses on deeper integration with specialized workflows, enhanced skill orchestration, and smarter context management. Here's what developers and power users need to know.
 
@@ -33,7 +39,7 @@ The skill produces output in multiple frameworks including React, Vue, and vanil
 
 ### Skill Chaining Improvements
 
-Skills can now reference each other's outputs seamlessly. For example, the **pdf** skill can accept formatted content from the **docx** skill, creating powerful document generation pipelines:
+Skills can now reference each other's outputs smoothly. For example, the **pdf** skill can accept formatted content from the **docx** skill, creating powerful document generation pipelines:
 
 ```yaml
 # Skill pipeline configuration

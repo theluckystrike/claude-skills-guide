@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code for Senior Engineer Productivity"
 description: "Discover how senior software engineers use Claude Code to accelerate development workflows, automate repetitive tasks, and focus on high-impact architectural decisions."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-for-senior-engineer-productivity/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code for Senior Engineer Productivity
 
@@ -69,7 +75,7 @@ A well-designed skill can enforce anything from naming conventions to architectu
 
 ## Multi-Agent Workflows for Parallel Development
 
-When tackling complex projects, senior engineers can leverage Claude Code's subagent capabilities to run parallel tasks:
+When tackling complex projects, senior engineers can use Claude Code's subagent capabilities to run parallel tasks:
 
 ```bash
 # Execute multiple tasks simultaneously

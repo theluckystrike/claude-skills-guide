@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Caching Strategy Implementation Guide"
 description: "A comprehensive guide to implementing effective caching strategies for Claude Code skills. Learn how to reduce API costs, improve response times, and optimize skill performance with practical examples."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-caching-strategy-implementation-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Caching Strategy Implementation Guide

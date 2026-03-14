@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Prompt Management Workflow Guide"
 description: "Master prompt management with Claude Code. Practical workflow strategies for developers to organize, reuse, and optimize prompts across projects."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-prompt-management-workflow-guide/
 categories: [guides]
-tags: [claude-code, prompt-engineering, workflow]
+tags: [claude-code, prompt-engineering, workflow, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 
 # Claude Code Prompt Management Workflow Guide
@@ -52,7 +56,7 @@ This structure works across different languages and project types. You swap the 
 
 ## Using Skills for Specialized Prompt Collections
 
-Claude Skills provide pre-built prompt collections for specific domains. Rather than writing prompts from scratch, leverage skills that match your workflow.
+Claude Skills provide pre-built prompt collections for specific domains. Rather than writing prompts from scratch, use skills that match your workflow.
 
 For document creation, the **pdf** skill handles complex PDF generation without manual formatting work. The **docx** skill manages Word document workflows with tracked changes and formatting preservation. When building presentations, **pptx** provides structured creation and editing capabilities.
 

@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Accessibility Regression Testing Guide"
 description: "Learn how to leverage Claude Code to implement effective accessibility regression testing workflows that catch issues before they reach production."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-accessibility-regression-testing-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Accessibility Regression Testing Guide

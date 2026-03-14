@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Accessible Modal Dialog Implementation"
 description: "Learn how to implement accessible modal dialogs using Claude Code. This guide covers ARIA attributes, focus management, keyboard navigation, and practical implementation patterns."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-accessible-modal-dialog-implementation/
 categories: [Development, Accessibility, JavaScript]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Accessible Modal Dialog Implementation

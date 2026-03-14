@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code Golden Path Templates & Workflow Tutorial"
 description: "Master Claude Code's golden path templates and workflow patterns. Learn how to leverage pre-built skill templates, automate repetitive tasks, and build efficient development workflows."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-golden-path-templates-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Golden Path Templates & Workflow Tutorial
 
