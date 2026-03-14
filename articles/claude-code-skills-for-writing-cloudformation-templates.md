@@ -3,7 +3,11 @@ layout: default
 title: "Claude Code Skills for Writing CloudFormation Templates"
 description: "Practical guide to using Claude Code skills for writing CloudFormation templates. Code snippets, workflow patterns, and real examples for AWS infrastructure."
 date: 2026-03-14
-author: theluckystrike
+categories: [use-cases]
+tags: [claude-code, claude-skills, cloudformation, aws, infrastructure-as-code]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Skills for Writing CloudFormation Templates

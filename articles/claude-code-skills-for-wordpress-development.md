@@ -3,9 +3,11 @@ layout: default
 title: "Claude Code Skills for WordPress Development"
 description: "Build Claude skills specifically designed for WordPress development. Automate theme creation, plugin scaffolding, custom post types, and debug WordPress issues efficiently."
 date: 2026-03-14
-categories: [wordpress, claude-skills]
-tags: [claude-code, wordpress, development, automation, plugin-development, theme-development]
-author: theluckystrike
+categories: [use-cases]
+tags: [claude-code, claude-skills, wordpress, plugin-development, theme-development]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Skills for WordPress Development
@@ -142,7 +144,7 @@ Individual skills become powerful when chained together. A complete WordPress de
 3. `wp-register-taxonomy` (similar pattern) to add project categories
 4. `wp-create-acf-fields` to set up Advanced Custom Fields
 
-Each skill handles one domain but works seamlessly with others. This separation keeps skills maintainable and reusable.
+Each skill handles one domain but integrates cleanly with others. This separation keeps skills maintainable and reusable.
 
 ## Skill Design Principles for WordPress
 

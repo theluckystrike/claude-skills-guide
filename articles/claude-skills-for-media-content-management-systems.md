@@ -3,9 +3,11 @@ layout: default
 title: "Claude Skills for Media Content Management Systems"
 description: "Learn how to use Claude skills to automate media asset management, generate content reports, and streamline workflows in media CMS platforms."
 date: 2026-03-14
-categories: [workflows, media]
+categories: [workflows]
 tags: [claude-code, claude-skills, media-cms, automation, content-management]
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Skills for Media Content Management Systems
@@ -199,21 +201,13 @@ Combine these skills into cohesive automation pipelines:
 
 ## Getting Started
 
-Start with the skill installation:
+Verify the required built-in skills are accessible by checking your skills directory:
 
 ```bash
-claude --list-installed
+ls ~/.claude/skills/
 ```
 
-Verify the required skills are available. If not, install them:
-
-```bash
-claude skill install pdf
-claude skill install xlsx
-claude skill install pptx
-claude skill install docx
-claude skill install canvas-design
-```
+The skills `/pdf`, `/xlsx`, `/pptx`, `/docx`, and `/canvas-design` ship as built-ins with Claude Code — no separate installation is needed. To use a community skill, copy its `.md` file to `~/.claude/skills/` (global) or `.claude/skills/` (project-scoped).
 
 Test with a small media folder before scaling to production volumes. Most media CMS workflows benefit from incremental automation—start with one repetitive task and expand from there.
 

@@ -3,9 +3,11 @@ layout: default
 title: "Claude Code Skills for Agriculture IoT Monitoring"
 description: "Build Claude Code skills for agriculture IoT monitoring. Practical patterns for sensor data processing, automated alerts, and smart irrigation systems."
 date: 2026-03-14
-categories: [agriculture, iot, monitoring]
-tags: [claude-code, claude-skills, agriculture, iot, monitoring, sensors]
-author: theluckystrike
+categories: [use-cases]
+tags: [claude-code, claude-skills, agriculture, iot, sensors]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Skills for Agriculture IoT Monitoring

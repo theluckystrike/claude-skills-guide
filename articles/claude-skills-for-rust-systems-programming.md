@@ -4,8 +4,10 @@ title: "Claude Skills for Rust Systems Programming"
 description: "Practical guide to using Claude skills for Rust systems programming. Memory management, unsafe code, FFI, and performance optimization examples."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, claude-skills, rust, systems-programming, unsafe-code, ffi, memory-management]
-author: theluckystrike
+tags: [claude-code, claude-skills, rust, systems-programming, ffi, memory-management]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Skills for Rust Systems Programming
@@ -16,11 +18,7 @@ Rust systems programming demands precision with memory safety, zero-cost abstrac
 
 Claude skills are Markdown files that inject specialized instructions into your coding sessions. For Rust development, you can activate built-in skills or create custom ones targeting systems programming patterns.
 
-To check available skills in Claude Code:
-
-```
-/skills list
-```
+To check available skills in Claude Code, run `ls ~/.claude/skills/` in your terminal.
 
 For Rust-specific work, the general coding skills provide solid foundations, but creating custom skills targeting Rust idioms yields better results. Place custom skills in `~/.claude/skills/` with the `.md` extension.
 

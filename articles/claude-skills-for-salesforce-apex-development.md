@@ -1,11 +1,13 @@
 ---
 layout: default
 title: "Claude Skills for Salesforce Apex Development"
-description: "Practical guide to using Claude Code skills for Salesforce Apex development: code generation, testing, debugging, and deployment automation."
+description: "Use Claude Code skills for Salesforce Apex development: code generation, testing, debugging, and deployment automation."
 date: 2026-03-14
-categories: [salesforce, apex, development]
-tags: [claude-code, claude-skills, salesforce, apex, force.com]
-author: theluckystrike
+categories: [use-cases]
+tags: [claude-code, claude-skills, salesforce, apex]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Skills for Salesforce Apex Development

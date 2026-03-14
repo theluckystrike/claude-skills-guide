@@ -3,7 +3,11 @@ layout: default
 title: "Claude Skills Event Driven Architecture Setup"
 description: "A practical guide to setting up event-driven architecture with Claude Skills. Learn to build reactive, scalable automation workflows using event triggers and handlers."
 date: 2026-03-14
-author: theluckystrike
+categories: [workflows]
+tags: [claude-code, claude-skills, event-driven, architecture, automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Skills Event Driven Architecture Setup

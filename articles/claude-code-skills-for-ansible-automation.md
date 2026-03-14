@@ -3,11 +3,11 @@ layout: default
 title: "Claude Code Skills for Ansible Automation"
 description: "Learn how to create Claude Code skills that automate Ansible workflows, manage playbooks, handle inventory, and streamline infrastructure-as-code operations."
 date: 2026-03-14
-categories: [automation]
+categories: [tutorials]
 tags: [claude-code, claude-skills, ansible, automation, devops, infrastructure]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 {% raw %}
 
@@ -29,16 +29,16 @@ A practical Ansible-focused skill needs clear instructions for how Claude should
 # Skill: ansible-assistant
 # Purpose: Help with Ansible playbook creation, debugging, and optimization
 
-When用户提供Ansible相关请求时，遵循以下原则：
-1. 始终生成valid YAML，缩进正确
-2. 使用 Ansible 最佳实践：idempotency、handler 正确使用、变量命名规范
-3. 优先使用官方 modules，避免 shell/command 模块除非必要
-4. 解释你的建议背后的原因
+When the user provides an Ansible-related request, follow these principles:
+1. Always generate valid YAML with correct indentation
+2. Apply Ansible best practices: idempotency, correct handler usage, consistent variable naming
+3. Prefer official modules over shell/command modules unless strictly necessary
+4. Explain the reasoning behind each recommendation
 
 # Available contexts:
-# - 现有 playbook 路径
-# - inventory 文件位置
-# - 环境变量需求
+# - Path to existing playbooks
+# - Location of inventory files
+# - Required environment variables
 ```
 
 The skill prompt should define what information Claude needs to provide useful assistance. When a user asks for a new playbook, Claude needs to understand the target hosts, required modules, and desired configuration state.

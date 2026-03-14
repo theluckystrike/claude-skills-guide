@@ -4,10 +4,10 @@ title: "Claude Code Skills for WebSocket Real-Time App Development"
 description: "Build real-time applications with WebSockets using Claude Code skills. Practical examples, patterns, and implementation guide for developers."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, claude-skills, websocket, real-time, nodejs, javascript, web-development]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [claude-code, claude-skills, websocket, real-time, nodejs, javascript]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Skills for WebSocket Real-Time App Development

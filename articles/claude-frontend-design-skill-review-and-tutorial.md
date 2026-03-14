@@ -28,17 +28,11 @@ Key capabilities include:
 
 ## Setting Up the Skill
 
-Before using the frontend-design skill, ensure your Claude Code environment is configured:
+Before using the frontend-design skill, ensure your Claude Code environment is configured. Skills are plain Markdown files — no installation command is needed. To see available skills, run `ls ~/.claude/skills/`. The frontend-design skill ships as a built-in skill with Claude Code.
 
-```bash
-# Verify skills are available
-claude --list-skills
+To invoke it, type `/frontend-design` in a Claude Code session, or simply describe a UI task and Claude will apply the skill's instructions automatically.
 
-# Load the frontend-design skill
-claude skill load frontend-design
-```
-
-Once loaded, you can invoke it naturally in conversations. The skill activates when you describe UI elements, request component creation, or ask for design implementation guidance.
+Once active, the skill applies naturally in conversations. It activates when you describe UI elements, request component creation, or ask for design implementation guidance.
 
 ## Practical Examples
 

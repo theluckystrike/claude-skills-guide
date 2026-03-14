@@ -1,12 +1,12 @@
 ---
 layout: default
 title: "Claude Skills for Automated Changelog Generation"
-description: "Learn how to build automated changelog generation workflows using Claude skills. Practical examples and code snippets for developers automating release notes."
+description: "Build automated changelog generation workflows using Claude skills. Practical examples and code snippets for developers automating release notes."
 date: 2026-03-14
-author: theluckystrike
-categories: [guides]
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+categories: [workflows]
+reviewed: true
+score: 8
 tags: [claude-code, claude-skills, automation, changelog, devops]
 ---
 {% raw %}
@@ -21,7 +21,7 @@ Modern software projects accumulate changes across multiple channels: git commit
 
 The challenge intensifies with larger teams and more frequent releases. A project with daily deployments produces too many changes for manual documentation. Even with conventional automation tools, extracting meaningful information from commit messages and determining appropriate categorization requires context that simple regex patterns cannot provide.
 
-Claude skills address this problem by leveraging the language model's understanding of your codebase, conventional commit standards, and semantic meaning of changes.
+Claude skills address this problem by applying the language model's understanding of your codebase, conventional commit standards, and semantic meaning of changes.
 
 ## Core Skills for Changelog Automation
 

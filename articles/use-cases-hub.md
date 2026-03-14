@@ -6,6 +6,8 @@ date: 2026-03-14
 categories: [hub]
 tags: [use-cases, examples, applications, developers]
 is_pillar: true
+reviewed: true
+score: 8
 ---
 
 # Claude Code Use Cases: Real-World Applications & Examples

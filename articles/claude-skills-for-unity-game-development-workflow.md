@@ -116,9 +116,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run Claude Build Skill
+      - name: Run Unity Build
         run: |
-          claude --skill unity-build --platform webgl --output ./Builds
+          unity -batchmode -buildTarget WebGL -projectPath . -buildPath ./Builds -quit -logFile -
       - name: Upload Build
         uses: actions/upload-artifact@v4
         with:

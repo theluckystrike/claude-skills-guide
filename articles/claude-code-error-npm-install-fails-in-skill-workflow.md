@@ -3,7 +3,11 @@ layout: default
 title: "Fixing Claude Code npm install Errors in Skill Workflows"
 description: "Troubleshooting and resolving npm install failures when running Claude skills. Practical solutions for developers working with the get_skill function."
 date: 2026-03-14
-author: theluckystrike
+categories: [troubleshooting]
+tags: [claude-code, claude-skills, npm, node, troubleshooting]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Fixing Claude Code npm install Errors in Skill Workflows

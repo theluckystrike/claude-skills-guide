@@ -3,9 +3,11 @@ layout: default
 title: "Claude Code Skills for Travel Booking Platforms"
 description: "Build specialized Claude skills for travel booking platforms. Practical examples for flight search, hotel aggregation, price tracking, and itinerary management."
 date: 2026-03-14
-author: theluckystrike
-categories: [claude-code, travel, booking]
-tags: [claude-code, travel-booking, automation, api-integration]
+author: "Claude Skills Guide"
+categories: [tutorials]
+tags: [claude-code, claude-skills, travel, booking, api-integration]
+reviewed: true
+score: 7
 ---
 
 # Claude Code Skills for Travel Booking Platforms
@@ -18,14 +20,13 @@ A travel booking skill needs clear boundaries between what Claude controls and w
 
 Structure your travel skill around three phases: initialization (loading API credentials and user preferences), execution (processing the booking logic), and cleanup (releasing resources and updating caches).
 
-```yaml
-# Skill structure example
-name: flight-tracker
-description: Monitor flight prices and alert on drops
-tools:
-  - read_file
-  - write_file
-  - bash
+```markdown
+# flight-tracker.md
+<!-- Store in ~/.claude/skills/flight-tracker.md -->
+
+Monitor flight prices and alert on drops.
+
+When the user asks to track a flight, extract the route and date, then check the price using the bash tool.
 ```
 
 ## Flight Search Integration

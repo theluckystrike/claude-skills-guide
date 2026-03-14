@@ -3,9 +3,11 @@ layout: default
 title: "Claude Skills for Legal Document Automation"
 description: "Practical guide to automating legal documents using Claude skills. Code examples, skill setup, and workflow patterns for developers."
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, claude-skills, legal-tech, document-automation, workflow]
-author: theluckystrike
+categories: [use-cases]
+tags: [claude-code, claude-skills, legal-tech, document-automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 {% raw %}
 
