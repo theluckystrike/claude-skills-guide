@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude MD Example for iOS Swift Application Development"
 description: "A practical guide to using Claude Code for building iOS Swift applications. Learn workflow patterns, code generation examples, and skill integration."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-example-for-ios-swift-application/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude MD Example for iOS Swift Application Development
 

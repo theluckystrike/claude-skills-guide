@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Container Environment Variables Management"
 description: "Master environment variable handling in Claude Code containers. Learn how to set, access, and manage environment variables for secure and efficient."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, containers, environment-variables, devops, docker]
-author: theluckystrike
+tags: [claude-code, containers, environment-variables, devops, docker, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-container-environment-variables-management/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code Container Environment Variables Management
@@ -198,7 +202,7 @@ environment:
 
 ### Container Orchestration Integration
 
-When running Claude Code in Kubernetes or other orchestrators, leverage their native environment variable management:
+When running Claude Code in Kubernetes or other orchestrators, use their native environment variable management:
 
 ```yaml
 apiVersion: v1

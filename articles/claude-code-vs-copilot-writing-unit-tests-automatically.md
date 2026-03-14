@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code vs Copilot: Writing Unit Tests Automatically"
 description: "A comprehensive comparison of Claude Code and GitHub Copilot for automatically generating unit tests, with practical examples and code samples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-vs-copilot-writing-unit-tests-automatically/
+reviewed: true
+score: 7
+categories: [comparisons]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Claude Code vs Copilot: Writing Unit Tests Automatically

@@ -1,17 +1,23 @@
 ---
+
 layout: default
 title: "Claude MD for Contractor and Vendor Teams"
 description: "A practical guide for developer teams working with external contractors and vendors using Claude Code skills. Learn how to standardize workflows, maintain quality, and streamline collaboration."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-for-contractor-and-vendor-teams/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude MD for Contractor and Vendor Teams
 
 When you bring external contractors and vendors into your development workflow, communication gaps, inconsistent code quality, and onboarding delays quickly become expensive problems. Claude Code skills written in Markdown (.md) offer a powerful solution: they let you encode your team's standards, processes, and best practices into reusable, executable prompts that external collaborators can run directly in their environment.
 
-This guide shows developer teams how to leverage Claude MD skills to onboard contractors faster, enforce coding standards, and maintain consistent output across multiple external contributors.
+This guide shows developer teams how to use Claude MD skills to onboard contractors faster, enforce coding standards, and maintain consistent output across multiple external contributors.
 
 ## Why Contractor Teams Need Standardized Claude Skills
 

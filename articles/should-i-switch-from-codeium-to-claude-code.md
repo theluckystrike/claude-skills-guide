@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Should I Switch from Codeium to Claude Code? A Comprehensive Guide"
 description: "A practical comparison of Codeium and Claude Code for developers considering switching AI coding assistants. Learn about Claude Code's unique skills, agentic capabilities, and when it makes sense to migrate."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /should-i-switch-from-codeium-to-claude-code/
 categories: [comparison, guides]
-tags: [claude-code, codeium, ai-coding-tools, developer-tools]
+tags: [claude-code, codeium, ai-coding-tools, developer-tools, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 

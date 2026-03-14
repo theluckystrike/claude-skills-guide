@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude md for Internationalization i18n Setup"
 description: "Set up Claude Code for internationalization workflows. Automate translation extraction, manage locale files, and integrate i18n into your development."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, internationalization, i18n, localization, translation]
+tags: [claude-code, internationalization, i18n, localization, translation, claude-skills]
 permalink: /claude-md-for-internationalization-i18n-setup/
+reviewed: true
+score: 7
 ---
+
 
 # Claude md for Internationalization i18n Setup
 

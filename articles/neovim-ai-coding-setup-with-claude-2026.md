@@ -1,18 +1,22 @@
 ---
 
+
 layout: default
 title: "Neovim AI Coding Setup with Claude 2026: Complete Guide"
 description: "Learn how to set up Neovim with Claude Code for AI-powered coding in 2026. Configure plugins, integrate skills, and boost your development workflow."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /neovim-ai-coding-setup-with-claude-2026/
 categories: [guides]
-tags: [neovim, claude-code, ai-coding, setup]
+tags: [neovim, claude-code, ai-coding, setup, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Neovim AI Coding Setup with Claude 2026: Complete Guide for Developers
 
-Setting up Neovim with AI-assisted coding capabilities transforms your editor into a powerful development environment. This guide walks through configuring Neovim to work seamlessly with Claude Code in 2026, leveraging the full potential of AI-powered development workflows.
+Setting up Neovim with AI-assisted coding capabilities transforms your editor into a powerful development environment. This guide walks through configuring Neovim to work smoothly with Claude Code in 2026, using the full potential of AI-powered development workflows.
 
 ## Prerequisites
 
