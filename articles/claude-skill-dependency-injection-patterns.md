@@ -5,9 +5,8 @@ description: "Learn how to structure Claude skills with dependency injection pat
 date: 2026-03-14
 categories: [advanced]
 tags: [claude-skills, dependency-injection, automation, workflows]
-author: "Claude Skills Guide"
+author: theluckystrike
 reviewed: true
-score: 8
 ---
 
 # Claude Skill Dependency Injection Patterns
@@ -18,7 +17,7 @@ Dependency injection isn't just a software engineering concept. When you structu
 
 In traditional software, dependency injection means passing dependencies into a function rather than having the function create them. For Claude skills, the equivalent is designing one skill to invoke another skill as part of its workflow. Instead of building monolithic skills that handle everything, you create focused skills that delegate to specialized skills.
 
-Consider a workflow where you need to extract data from a PDF, transform it into a spreadsheet, and then run analysis. The [tdd skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) fits naturally into this pattern as a testable, injectable component for verification steps. Without dependency injection patterns, you might create one massive skill that tries to handle all three steps. With dependency injection, you compose three focused skills: one using the **pdf** skill for extraction, one using **xlsx** for spreadsheet operations, and a third skill that orchestrates the pipeline.
+Consider a workflow where you need to extract data from a PDF, transform it into a spreadsheet, and then run analysis. Without dependency injection patterns, you might create one massive skill that tries to handle all three steps. With dependency injection, you compose three focused skills: one using the **pdf** skill for extraction, one using **xlsx** for spreadsheet operations, and a third skill that orchestrates the pipeline.
 
 ## The Delegation Pattern
 
@@ -171,12 +170,5 @@ Keep dependency injection patterns clean by following these guidelines:
 Claude skills become significantly more powerful when you compose them rather than building isolated super-skills. The dependency injection patterns shown here—delegation, chaining, configuration, and shared services—give you a framework for building modular, maintainable AI workflows.
 
 Start by identifying repetitive tasks in your Claude workflows. Extract the common operations into focused skills, then build orchestrating skills that compose them. Skills like **pdf**, **xlsx**, **tdd**, **supermemory**, and **frontend-design** become building blocks you can recombine for new use cases without rewriting logic.
-
-## Related Reading
-
-- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/articles/claude-skill-inheritance-and-composition-patterns/) — Build on dependency injection with inheritance patterns that let skills extend and override each other's behavior
-- [What Is the Best File Structure for a Complex Claude Skill](/claude-skills-guide/articles/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Organize injected skill dependencies into a clear directory structure for complex multi-file skills
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) — Apply dependency injection at the agent level for composable multi-agent orchestration workflows
-- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced skill composition, modularity, and dependency management patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

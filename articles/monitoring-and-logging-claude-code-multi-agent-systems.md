@@ -3,11 +3,8 @@ layout: post
 title: "Monitoring and Logging in Claude Code Multi-Agent Systems"
 description: "Implement robust monitoring and logging for Claude Code multi-agent setups. Learn observability patterns, structured logging, and debugging strategies for complex agent workflows."
 date: 2026-03-14
-author: "Claude Skills Guide"
-categories: [advanced]
-tags: [claude-code, claude-skills]
+author: theluckystrike
 reviewed: true
-score: 8
 ---
 
 # Monitoring and Logging in Claude Code Multi-Agent Systems
@@ -141,7 +138,7 @@ def trace_agent_call(trace_id: str, from_agent: str, to_agent: str, payload: dic
     )
 ```
 
-This pattern enables you to reconstruct the full flow when something goes wrong. The [`tdd` skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) complements this by letting you write tests that verify agent communication contracts.
+This pattern enables you to reconstruct the full flow when something goes wrong. The `tdd` skill complements this by letting you write tests that verify agent communication contracts.
 
 ## Error Tracking and Alerting
 
@@ -199,12 +196,5 @@ A minimal dashboard might display:
 The `frontend-design` skill can help you build monitoring interfaces if you need a visual component. The `pdf` skill enables generating automated status reports. For alerting, the `slack-gif-creator` skill offers patterns for notification systems, though you'll primarily work with webhook integrations.
 
 Monitoring multi-agent Claude Code systems requires deliberate architecture. Start with structured logging, add health checks, and progressively build toward comprehensive observability as your system grows.
-
-## Related Reading
-
-- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/) — Coordinate the multi-agent systems that this monitoring guide helps you observe and debug
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) — Understand the communication patterns that generate the log events this monitoring guide captures
-- [Fan-Out Fan-In Pattern with Claude Code Subagents](/claude-skills-guide/articles/fan-out-fan-in-pattern-claude-code-subagents/) — Monitor the fan-out/fan-in pattern specifically with the logging strategies from this guide
-- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced multi-agent architecture, observability, and production deployment patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
