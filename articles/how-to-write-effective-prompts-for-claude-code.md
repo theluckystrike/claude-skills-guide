@@ -223,4 +223,11 @@ For repetitive tasks, create a template you can reuse:
 
 Effective prompts for Claude Code share common characteristics: clear task framing upfront, relevant context, broken-down steps for complex work, explicit output formats, and well-defined constraints. Practice these techniques and refine based on results. The better your prompts, the more precise and useful Claude Code's responses become.
 
+## Related Reading
+
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — understand how skills auto-invoke so you can prompt more effectively
+- [How to Make Claude Code Make Smaller Focused Changes](/claude-skills-guide/articles/how-to-make-claude-code-make-smaller-focused-changes/) — prompt techniques for scoping Claude to precise changes
+- [How to Make Claude Code Not Over Engineer Solutions](/claude-skills-guide/articles/how-to-make-claude-code-not-over-engineer-solutions/) — prompt patterns that keep Claude solutions lean and maintainable
+- [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/articles/how-to-optimize-claude-skill-prompts-for-accuracy/) — advanced prompt optimization to improve skill output quality
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

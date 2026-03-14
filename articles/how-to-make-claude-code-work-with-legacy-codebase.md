@@ -205,4 +205,11 @@ Making Claude Code work with legacy codebases requires explicit context, appropr
 
 With these patterns, Claude Code becomes an effective pair programmer for legacy projects, helping you modernize safely without breaking production systems.
 
+## Related Reading
+
+- [How to Make Claude Code Match Existing Code Patterns](/claude-skills-guide/articles/how-to-make-claude-code-match-existing-code-patterns/) — ensure Claude respects your legacy conventions when generating code
+- [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/articles/how-to-make-claude-code-refactor-without-breaking-tests/) — modernize legacy code while preserving test coverage
+- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/articles/claude-code-mongodb-to-postgresql-migration-workflow/) — migrate legacy data stores as part of modernization
+- [Claude Code Express to Fastify Migration Tutorial](/claude-skills-guide/articles/claude-code-express-to-fastify-migration-tutorial-2026/) — upgrade legacy Node.js frameworks with Claude Code assistance
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

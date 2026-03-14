@@ -154,4 +154,11 @@ Reference these during sessions for consistent test quality across your project.
 
 Getting better unit tests from Claude Code requires clear direction, the right skills activated, and iterative refinement. The tdd skill provides the foundation, while specific prompting for edge cases, error handling, and test structure fills in the gaps. Review each test file critically and iterate—Claude improves with targeted feedback.
 
+## Related Reading
+
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — integrate better unit tests into a complete CI pipeline
+- [How to Make Claude Code Test Before Implementing Feature](/claude-skills-guide/articles/how-to-make-claude-code-test-before-implementing-feature/) — enforce test-first development for even better tests
+- [Claude Code Pytest Fixtures Parametrize Workflow Tutorial](/claude-skills-guide/articles/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — write advanced parametrized tests with pytest and Claude
+- [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) — review generated unit tests for coverage and quality
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

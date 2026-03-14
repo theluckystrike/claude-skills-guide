@@ -16,7 +16,7 @@ Claude Code excels at generating code, automating workflows, and handling comple
 
 When you ask Claude Code to build something, it often produces elegant, scalable architectures with abstraction layers, interfaces, and extensibility points you never requested. A simple script request might become a full-blown project with configuration management, logging, error handling, and testing infrastructure. While these additions seem helpful, they create maintenance burden and cognitive overhead.
 
-The issue stems from Claude's training to be thorough and anticipate future needs. It assumes you want production-grade code even when you need a quick prototype. This behavior wastes time, creates unnecessary complexity, and can actually make your projects harder to work with.
+The issue stems from Claude's training to be thorough and anticipate future needs. It assumes you want production-grade code even when you need a quick prototype. This behavior wastes time, creates unnecessary complexity, and can actually make your projects harder to work with. Learning to [scope tasks for Claude Code](/claude-skills-guide/articles/best-way-to-scope-tasks-for-claude-code-success/) is the first step toward fixing this.
 
 ## Start with the Simplest Implementation
 
@@ -85,7 +85,7 @@ Context:
 - Throw errors instead of handling edge cases
 ```
 
-This approach prevents Claude from adding robustness that you do not need. The `supermemory` skill can help you maintain these constraints across sessions, ensuring Claude remembers your simplicity preferences over time.
+This approach prevents Claude from adding robustness that you do not need. The [`supermemory` skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) can help you maintain these constraints across sessions, ensuring Claude remembers your simplicity preferences over time.
 
 ## Prefer Scripts Over Services
 
@@ -111,7 +111,7 @@ When you need specific functionality, choose skills that solve your exact proble
 
 ## Review and Prune Generated Code
 
-Even when you apply the previous techniques, Claude sometimes produces more code than necessary. Develop a habit of reviewing generated code and removing unused components. Delete abstraction layers that only have one implementation. Remove configuration options you never use. Simplify data structures that have unused fields.
+Even when you apply the previous techniques, Claude sometimes produces more code than necessary. Develop a habit of reviewing generated code and removing unused components. Delete abstraction layers that only have one implementation. Remove configuration options you never use. Simplify data structures that have unused fields. For complex projects, [making Claude produce smaller focused changes](/claude-skills-guide/articles/how-to-make-claude-code-make-smaller-focused-changes/) makes pruning easier.
 
 This pruning step keeps your codebase lean over time. It also signals to Claude that you prefer minimal solutions, influencing future generations.
 
@@ -146,5 +146,11 @@ The key is making these decisions intentionally rather than accepting whatever C
 Preventing over-engineering becomes easier with practice. Start each interaction by asking yourself what the simplest possible solution would look like. State your constraints explicitly. Break complex requests into focused pieces. Review and prune what Claude generates.
 
 These habits shift your relationship with Claude Code from passive recipient to active director. You use its capabilities while maintaining control over complexity. The result is maintainable code that matches your actual needs rather than hypothetical future requirements.
+
+## Related Reading
+
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/articles/best-way-to-scope-tasks-for-claude-code-success/) — define task boundaries upfront so Claude stays focused on what you actually need
+- [How to Make Claude Code Make Smaller Focused Changes](/claude-skills-guide/articles/how-to-make-claude-code-make-smaller-focused-changes/) — constrain Claude to incremental changes rather than sweeping rewrites
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — persist simplicity preferences and constraints across multiple Claude sessions
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

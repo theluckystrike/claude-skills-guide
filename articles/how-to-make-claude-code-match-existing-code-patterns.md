@@ -16,7 +16,7 @@ Getting Claude Code to produce code that fits cleanly into your existing codebas
 
 Claude Code analyzes your project structure, existing files, and any loaded skills to determine code style and patterns. Without explicit guidance, it makes assumptions based on general best practices rather than your specific codebase. This often leads to generated code that functions correctly but doesn't match your project's conventions.
 
-The solution involves providing explicit context about your code patterns and using Claude Code's skills system to encode your conventions permanently.
+The solution involves providing explicit context about your code patterns and using Claude Code's [skills system to encode your conventions](/claude-skills-guide/articles/how-to-make-claude-code-follow-team-style-guide/) permanently.
 
 ## Provide Representative Code Samples
 
@@ -40,7 +40,7 @@ This technique works because Claude Code's training prioritizes consistency with
 
 ## Use Project-Specific Skills to Encode Conventions
 
-Claude Code's skills system provides a powerful way to encode your project's conventions permanently. Rather than repeating pattern instructions in every prompt, create a skill that loads automatically and establishes your standards.
+Claude Code's skills system provides a powerful way to encode your project's conventions permanently. Rather than repeating pattern instructions in every prompt, [create a skill that loads automatically](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) and establishes your standards.
 
 Create a skill file in your project that defines your coding conventions:
 
@@ -117,7 +117,7 @@ Reference these documents in your prompts: "Generate a new endpoint following th
 
 For teams working on shared projects, configure skills at the project level using a claude-settings.json or similar configuration. This ensures all team members benefit from the same conventions without individual setup.
 
-The supermemory skill can also help maintain context across sessions, remembering your project-specific patterns between Claude Code sessions. This is particularly useful for long-running projects where you want Claude Code to accumulate knowledge about your conventions over time.
+The [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) can also help maintain context across sessions, remembering your project-specific patterns between Claude Code sessions. This is particularly useful for long-running projects where you want Claude Code to accumulate knowledge about your conventions over time.
 
 ## Test Generated Code Against Your Standards
 
@@ -133,5 +133,11 @@ If the generated code doesn't match, provide specific feedback: "This function u
 ## Summary
 
 Making Claude Code match your existing code patterns requires providing explicit context, encoding conventions in skills, and giving specific feedback on generated output. The key techniques include showing representative code samples, creating project-specific skills, using specialized skills like frontend-design and tdd, and maintaining pattern documentation in your repository. By implementing these approaches, you'll generate code that integrates directly with your existing codebase, reducing manual editing and maintaining consistency across your project.
+
+## Related Reading
+
+- [How to Make Claude Code Follow Team Style Guide](/claude-skills-guide/articles/how-to-make-claude-code-follow-team-style-guide/) — enforce consistent naming, formatting, and conventions across your entire team
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — create reusable skill files that permanently encode your project's conventions
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — retain project-specific pattern knowledge across sessions
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

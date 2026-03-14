@@ -159,4 +159,11 @@ Making Claude Code write secure code consistently comes down to three practices:
 
 Security isn't a feature you add later. It's a requirement you specify upfront. Claude Code excels at following instructions — make security part of every instruction.
 
+## Related Reading
+
+- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/articles/claude-code-owasp-top-10-security-scanning-workflow/) — scan generated code against OWASP Top 10 vulnerabilities
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) — prevent secrets from ending up in Claude-generated code
+- [Input Validation and Sanitization with Claude Code Guide](/claude-skills-guide/articles/claude-code-input-validation-sanitization-patterns-guide/) — enforce secure input handling patterns in every Claude session
+- [Claude Code Security Code Review Checklist Automation](/claude-skills-guide/articles/claude-code-security-code-review-checklist-automation/) — automate security reviews of all code Claude generates
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

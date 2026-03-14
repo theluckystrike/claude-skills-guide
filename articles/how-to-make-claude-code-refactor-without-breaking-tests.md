@@ -16,7 +16,7 @@ Refactoring is essential for maintaining healthy codebases, but it becomes risky
 
 When you refactor code, you change its internal structure without altering its external behavior. The problem is that even small changes can cascade through your codebase and cause test failures. Without proper safeguards, refactoring sessions can quickly turn into debugging marathons.
 
-Claude Code addresses this through its conversation-based approach. Unlike traditional refactoring tools that make blind changes, Claude understands context and can reason about how modifications affect your test suite. The key is knowing how to use Claude's skills effectively.
+Claude Code addresses this through its conversation-based approach. Unlike traditional refactoring tools that make blind changes, Claude understands context and can reason about how modifications affect your test suite. The key is knowing how to use Claude's skills effectively. For a broader look at [why Claude Code is well-suited for refactoring tasks](/claude-skills-guide/articles/why-is-claude-code-recommended-for-refactoring-tasks/), see the dedicated guide.
 
 ## Using the TDD Skill for Safe Refactoring
 
@@ -118,7 +118,7 @@ Keep these commands running in your terminal while Claude refactors. The immedia
 
 ## Leveraging the Code Analysis Skills
 
-The **supermemory** skill proves valuable during refactoring by maintaining context about your codebase's architecture. When refactoring larger sections, supermemory helps Claude understand how components interact, preventing changes that break hidden dependencies.
+The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) proves valuable during refactoring by maintaining context about your codebase's architecture. When refactoring larger sections, supermemory helps Claude understand how components interact, preventing changes that break hidden dependencies.
 
 Activate supermemory before starting significant refactoring:
 
@@ -219,5 +219,12 @@ This documentation helps future maintainers understand the refactoring decisions
 Refactoring with Claude Code becomes significantly safer when you use the right skills and workflows. The tdd skill provides the foundation by ensuring tests exist before changes begin. The supermemory and frontend-design skills maintain architectural context throughout the process. By making incremental changes, running tests continuously, and documenting your workflow, you can refactor with confidence.
 
 Remember: tests are not obstacles to refactoring—they are the safety net that makes refactoring possible. Claude Code amplifies this safety by providing intelligent context and systematic approaches to code improvement.
+
+## Related Reading
+
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — build a CI pipeline that guards against test failures during refactoring
+- [How to Make Claude Code Make Smaller Focused Changes](/claude-skills-guide/articles/how-to-make-claude-code-make-smaller-focused-changes/) — keep refactoring changes surgical to minimize test breakage
+- [Claude Code Skills for Writing Integration Tests](/claude-skills-guide/articles/claude-code-skills-for-writing-integration-tests/) — complement unit tests with integration tests to catch regressions
+- [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) — review refactored code automatically to catch regressions early
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
