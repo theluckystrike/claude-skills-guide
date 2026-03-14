@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Keeps Breaking Imports When Refactoring"
-description: "Discover why Claude Code breaks imports during refactoring and learn practical solutions using Claude Code skills, configuration, and workflows to maintain import integrity."
+description: "Discover why Claude Code breaks imports during refactoring and learn practical solutions using Claude Code skills, configuration, and workflows to."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-keeps-breaking-imports-when-refactoring/
@@ -113,3 +113,10 @@ By implementing these strategies—custom skills, project configuration, pre-ref
 Remember that Claude Code works best when it has comprehensive context about your project. The more accurately you can describe your module structure, import patterns, and build configuration, the better it will handle import-related tasks during refactoring operations.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+
