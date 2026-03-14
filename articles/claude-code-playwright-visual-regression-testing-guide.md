@@ -8,6 +8,8 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 permalink: /claude-code-playwright-visual-regression-testing-guide/
 ---
+{% raw %}
+
 
 # Claude Code Playwright Visual Regression Testing Guide
 
@@ -182,3 +184,4 @@ Consider running visual tests in a dedicated CI job that runs after functional t
 ## Conclusion
 
 Visual regression testing with Playwright and Claude Code provides a robust safety net for your UI. Playwright's built-in screenshot comparison is powerful yet straightforward, while Claude Code acts as your coding partner—helping you write tests, debug failures, and maintain your test suite over time. Start with your highest-impact pages, follow the best practices outlined here, and you'll catch visual regressions before they frustrate your users.
+{% endraw %}
