@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "How Claude Code Accelerated Onboarding New Devs"
 description: "Discover how Claude Code transforms developer onboarding with AI-powered code reviews, automated documentation, and skill-guided workflows that reduce."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-claude-code-accelerated-onboarding-new-devs/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # How Claude Code Accelerated Onboarding New Devs
 

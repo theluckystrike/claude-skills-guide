@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "How Claude Code Changed My Development Workflow"
 description: "A developer shares practical insights on how Claude Code transformed their daily coding routines, from automated testing with tdd skill to document."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-claude-code-changed-my-development-workflow/
 categories: [troubleshooting]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # How Claude Code Changed My Development Workflow
 
@@ -98,7 +103,7 @@ What makes Claude Code particularly powerful is its skill ecosystem. Beyond the 
 - The `frontend-design` skill for rapid UI development
 - The `supermemory` skill for persistent context
 
-The key insight is that skills aren't just shortcuts—they represent accumulated best practices. When you use the `tdd` skill, you're applying test-driven development patterns that took years to refine. When you use `frontend-design`, you're leveraging design system expertise.
+The key insight is that skills aren't just shortcuts—they represent accumulated best practices. When you use the `tdd` skill, you're applying test-driven development patterns that took years to refine. When you use `frontend-design`, you're using design system expertise.
 
 ## Challenges and Adjustments
 

@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "How Enterprise Teams Adopt Claude Code Workflow: A Practical Guide"
 description: "Learn how enterprise teams implement Claude Code workflows. Real examples, skill integration patterns, and deployment strategies for scaling AI-assisted development."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, enterprise, workflow, ai-development, team-adoption]
-author: theluckystrike
+tags: [claude-code, enterprise, workflow, ai-development, team-adoption, claude-skills]
+author: "Claude Skills Guide"
 permalink: /how-enterprise-teams-adopt-claude-code-workflow/
+reviewed: true
+score: 7
 ---
+
 
 # How Enterprise Teams Adopt Claude Code Workflow
 
