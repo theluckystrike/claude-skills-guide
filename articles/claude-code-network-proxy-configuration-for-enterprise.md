@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Network Proxy Configuration for Enterprise"
-description: "Learn how to configure Claude Code network proxy settings for enterprise environments. This guide covers HTTP/HTTPS proxies, authentication, SSL certificates, and practical deployment scenarios."
+description: "Learn how to configure Claude Code network proxy settings for enterprise environments. This guide covers HTTP/HTTPS proxies, authentication, SSL."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-network-proxy-configuration-for-enterprise/
@@ -176,3 +176,10 @@ When deploying Claude Code across an enterprise, consider these best practices:
 Configuring Claude Code for enterprise proxy environments is straightforward once you understand the standard mechanisms. By setting appropriate environment variables, installing corporate certificates, and following the troubleshooting guidelines in this article, your team can successfully use Claude Code within restrictive network environments. Remember to test configurations thoroughly and document any specific requirements for different teams or use cases within your organization.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

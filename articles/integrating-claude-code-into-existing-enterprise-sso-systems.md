@@ -2,7 +2,7 @@
 
 layout: default
 title: "Integrating Claude Code into Existing Enterprise SSO Systems"
-description: "A practical guide for integrating Claude Code with enterprise SSO systems like Okta, Azure AD, and Google Workspace. Learn authentication flows, skill configuration, and security best practices."
+description: "A practical guide for integrating Claude Code with enterprise SSO systems like Okta, Azure AD, and Google Workspace. Learn authentication flows, skill."
 date: 2026-03-14
 author: theluckystrike
 permalink: /integrating-claude-code-into-existing-enterprise-sso-systems/
@@ -203,3 +203,10 @@ Integrating Claude Code with enterprise SSO systems enables organizations to lev
 The integration approach described here scales from small teams to large enterprises, with configuration that adapts to your specific identity provider and security policies. As your organization evolves, Claude Code's flexible authentication framework accommodates new requirements without significant architectural changes.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

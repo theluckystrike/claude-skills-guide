@@ -160,3 +160,10 @@ Clear release notes build trust and help users make informed upgrade decisions.
 Versioning and maintaining Claude Code skills requires the same discipline as maintaining any software project. By following semantic versioning, documenting changes, testing thoroughly, and communicating clearly with your users, you build skills that are reliable, trustworthy, and sustainable. Users will appreciate the stability and clarity, and they'll be more confident in building their workflows around your skills.
 
 Remember: a well-maintained skill with clear versioning is more valuable than a feature-rich skill that changes without notice. Take the time to establish good versioning practices from the start, and your skills will serve users well for years to come.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

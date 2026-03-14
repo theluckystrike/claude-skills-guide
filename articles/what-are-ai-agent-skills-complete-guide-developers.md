@@ -2,7 +2,7 @@
 
 layout: default
 title: "What Are AI Agent Skills: Complete Guide for Developers"
-description: "A comprehensive guide to AI agent skills, focusing on Claude Code capabilities and how developers can leverage skills for automation, coding, and complex task execution."
+description: "A comprehensive guide to AI agent skills, focusing on Claude Code capabilities and how developers can leverage skills for automation, coding, and."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, ai-agent, skills, developer-guide, automation]
@@ -168,3 +168,10 @@ Remember: The key to getting the most out of Claude Code skills is providing cle
 ---
 
 *This guide covers the fundamentals of AI agent skills with a focus on Claude Code. For more in-depth information about specific skills, explore the individual skill guides available in the Claude Skills documentation.*
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

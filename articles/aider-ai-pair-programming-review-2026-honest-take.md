@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Aider AI Pair Programming Review 2026: An Honest Take"
-description: "A comprehensive review of Aider AI pair programming tool in 2026, comparing it with Claude Code skills and examining real-world usage, strengths, and limitations."
+description: "A comprehensive review of Aider AI pair programming tool in 2026, comparing it with Claude Code skills and examining real-world usage, strengths, and."
 date: 2026-03-14
 author: theluckystrike
 permalink: /aider-ai-pair-programming-review-2026-honest-take/
+categories: [guides]
 ---
 
 # Aider AI Pair Programming Review 2026: An Honest Take
