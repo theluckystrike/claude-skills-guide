@@ -1,232 +1,213 @@
 ---
 layout: default
-title: "Claude Code API Documentation Best Practices (2026)"
-description: "Learn how to create professional API documentation using Claude Code. Practical examples, automation tips, and workflow strategies for developers."
+title: "Claude Code API Documentation Best Practices"
+description: "A practical guide to writing effective API documentation for Claude Code skills. Learn how to structure docs, use code examples, and avoid common pitfalls."
 date: 2026-03-14
+categories: [guides]
+tags: [claude-code, api-documentation, claude-skills, documentation]
 author: theluckystrike
+reviewed: true
+score: 8
 permalink: /claude-code-api-documentation-best-practices/
 ---
 
-API documentation is the backbone of any successful software project. When done right, it enables developers to understand your API quickly, integrate with it confidently, and troubleshoot issues without constant hand-holding. In this guide, we'll explore how Claude Code can transform your API documentation workflow from a tedious chore into an automated, quality-assured process.
+{% raw %}
 
-## Why API Documentation Matters in 2026
+# Claude Code API Documentation Best Practices
 
-The software landscape has evolved dramatically. With microservices architectures, distributed systems, and API-first design patterns, clear documentation is no longer optional—it's essential. Poor documentation leads to:
+When you build a Claude skill that interacts with external APIs, the documentation determines whether developers can actually use it effectively. Poor documentation turns a powerful skill into shelfware. This guide covers the patterns that make API documentation for Claude skills genuinely useful.
 
-- Increased support tickets and developer frustration
-- Longer onboarding time for new team members
-- Misunderstandings that cause integration bugs
-- Wasted engineering hours answering repetitive questions
+## Structure Your Documentation Files
 
-Claude Code addresses these challenges by assisting with every stage of API documentation, from initial specification to ongoing maintenance.
+Organize API documentation as separate files within your skill's structure rather than cramming everything into the skill's main `.md` file. This keeps the skill definition clean while providing comprehensive reference material.
 
-## Getting Started with Claude Code for API Docs
+For a skill that calls an external API, create this structure:
 
-Before diving into best practices, ensure Claude Code is configured with the relevant skills. The **tdd** skill proves invaluable when you need to generate example responses based on test cases, while **pdf** allows you to export polished documentation packages for stakeholders who prefer offline reading.
-
-Initialize documentation in your project:
-
-```bash
-# Create a new documentation structure
-mkdir -p docs/api-reference
-cd docs/api-reference
+```
+skills/
+  my-api-skill/
+    skill.md
+    docs/
+      authentication.md
+      endpoints.md
+      error-handling.md
+      examples.md
 ```
 
-## Best Practice #1: Start with OpenAPI Specifications
+The main `skill.md` file should contain only the skill definition and high-level usage guidance. Detailed API documentation lives in separate files that you can reference from other skills or include in generated documentation.
 
-The foundation of great API documentation is a well-structured OpenAPI (formerly Swagger) specification. Claude Code excels at helping you create and maintain these specifications.
+## Document Authentication Early
 
-```yaml
-paths:
-  /users/{id}:
-    get:
-      summary: Get user by ID
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: integer
-      responses:
-        '200':
-          description: User found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
+Authentication is the first thing developers need to understand. Place authentication requirements in a dedicated section near the top of your documentation, and make it impossible to miss.
+
+For API skills that require keys or tokens:
+
+```
+## Authentication
+
+This skill requires an API key. Set it as an environment variable:
+
+    export MYAPI_API_KEY="your-key-here"
+
+Alternatively, configure it in your project's .env file and the skill will read it automatically.
+
+Do not hardcode API keys in your configuration files or share them in code repositories.
 ```
 
-Claude Code can analyze your existing codebase and generate initial OpenAPI specs automatically. This saves hours of manual writing and ensures your documentation stays synchronized with implementation.
+If your skill uses OAuth or a different authentication method, document the complete flow including any required setup steps. The `supermemory` skill demonstrates this pattern well—it clearly explains how to configure memory storage credentials before any API calls can succeed.
 
-## Best Practice #2: Write Descriptive Endpoint Documentation
+## Provide Complete Request and Response Examples
 
-Each endpoint deserves clear, consistent documentation that answers the essential questions:
+Code examples are the heart of API documentation. Every endpoint should have at least one working example showing the exact request format and the expected response structure.
 
-1. **What does this endpoint do?** A clear summary sentence
-2. **What parameters does it accept?** Detailed parameter descriptions with types and validation rules
-3. **What does it return?** Response schemas with examples
-4. **What errors can occur?** Error response documentation with codes and messages
-5. **How do I authenticate?** Authentication requirements clearly stated
-
-Claude Code can review your endpoint implementations and suggest improvements to documentation clarity:
-
-```javascript
-// Claude Code can analyze this handler and suggest documentation additions
-async function getUserById(req, res) {
-  const { id } = req.params;
-  
-  if (!id || isNaN(parseInt(id))) {
-    return res.status(400).json({
-      error: 'Invalid user ID',
-      message: 'The id parameter must be a valid integer'
-    });
-  }
-  
-  const user = await userService.findById(parseInt(id));
-  
-  if (!user) {
-    return res.status(404).json({
-      error: 'User not found',
-      message: `No user exists with id: ${id}`
-    });
-  }
-  
-  return res.json(user);
-}
-```
-
-## Best Practice #3: Provide Real-World Code Examples
-
-Abstract schemas mean nothing without concrete examples. Claude Code helps you generate realistic example data that matches your actual response structures:
+Show both success and error responses:
 
 ```json
+// Successful response (200 OK)
 {
-  "id": 42,
-  "username": "developer_awesome",
-  "email": "dev@example.com",
-  "created_at": "2026-01-15T08:30:00Z",
-  "profile": {
-    "avatar_url": "https://cdn.example.com/avatars/42.png",
-    "bio": "Full-stack developer passionate about APIs",
-    "settings": {
-      "theme": "dark",
-      "notifications": true
-    }
+  "status": "success",
+  "data": {
+    "id": "evt_123abc",
+    "type": "payment",
+    "amount": 5000,
+    "currency": "USD"
+  }
+}
+
+// Error response (400 Bad Request)
+{
+  "status": "error",
+  "error": {
+    "code": "invalid_request",
+    "message": "The amount field must be a positive integer",
+    "param": "amount"
   }
 }
 ```
 
-The **frontend-design** skill can help you create interactive examples that developers can test directly from the documentation.
-
-## Best Practice #4: Version Your Documentation
-
-API versions should be clearly separated in your documentation structure. Claude Code can automate version-specific documentation generation:
+For Claude skills that build requests dynamically, include templates developers can adapt:
 
 ```
-docs/
-├── v1/
-│   ├── authentication.md
-│   ├── endpoints/
-│   │   ├── users.md
-│   │   └── orders.md
-│   └── errors.md
-└── v2/
-    ├── authentication.md
-    ├── endpoints/
-    │   ├── users.md
-    │   ├── orders.md
-    │   └── webhooks.md
-    └── errors.md
+When creating a payment request, construct the payload as follows:
+
+{
+  "amount": {amount_in_cents},
+  "currency": "{USD|EUR|GBP}",
+  "customer": {customer_id},
+  "metadata": {optional_metadata_object}
+}
+
+Always use integer amounts (5000 = $50.00). The API rejects decimal values.
 ```
 
-Include version deprecation notices directly in the documentation:
+The `pdf` skill shows excellent examples of this pattern—it provides exact input formats for different document types so users know precisely what to pass.
 
-```markdown
-## GET /api/v1/users
+## Use Consistent Formatting Conventions
 
-> ⚠️ Deprecated since 2026-03-01
-> 
-> This endpoint will be removed on 2026-09-01.
-> Please migrate to [GET /api/v2/users](/v2/users).
+Establish and follow naming conventions throughout your documentation. Pick one style and stick with it:
+
+- **Endpoints**: Use lowercase with hyphens `/create-user-profile`
+- **HTTP methods**: Uppercase `GET`, `POST`, `PUT`, `DELETE`
+- **Code references**: Monospace for all technical terms `api_key`, `response_data`
+- **Headers**: Title-case with colon `Content-Type: application/json`
+
+When documenting rate limits, always specify:
+
+```
+Rate Limits:
+- 100 requests per minute per API key
+- 1000 requests per day per API key
+- Burst allowance: 10 requests
+
+Exceeding rate limits returns HTTP 429 with Retry-After header.
 ```
 
-## Best Practice #5: Automate Documentation Testing
+## Document Error Handling Explicitly
 
-Documentation that doesn't match implementation is worse than no documentation. Use Claude Code with the **tdd** skill to create automated tests that verify documentation accuracy:
+API errors are inevitable. Your documentation should cover the full error taxonomy so developers can handle failures gracefully.
 
-```javascript
-describe('API Documentation', () => {
-  it('matches OpenAPI spec for GET /users', async () => {
-    const response = await request(app).get('/api/users');
-    const spec = await loadOpenAPISpec();
-    
-    expect(response.status).to.equal(200);
-    expect(response.body).to.conformToSchema(spec.components.schemas.User);
-  });
-});
+Group errors by type:
+
+```python
+# Authentication errors (401)
+- "Invalid API key" — Check your api_key configuration
+- "API key expired" — Regenerate your key in the dashboard
+
+# Rate limiting (429)
+- "Rate limit exceeded" — Implement exponential backoff
+- Retry using the Retry-After header value
+
+# Server errors (5xx)
+- "Internal server error" — Log the request ID and retry after 30 seconds
+- "Service unavailable" — Retry with longer delay, max 3 attempts
 ```
 
-## Best Practice #6: Generate Multiple Output Formats
+The `tdd` skill handles API errors by implementing automatic retry logic with exponential backoff—documenting this pattern helps users understand how your skill behaves when APIs fail.
 
-Different stakeholders need different formats. Claude Code can help generate:
+## Include Integration Guides
 
-- **HTML** for online documentation
-- **Markdown** for GitHub-based docs
-- **PDF** for formal documentation packages
-- **Interactive API explorers** for testing
+Beyond reference documentation, provide walkthroughs for common integration scenarios. A developer should be able to follow a guide from start to finish and have a working implementation.
 
-Use the **pdf** skill to create downloadable documentation packages:
+For a payment API skill, include guides like:
 
-```bash
-claude pdf generate --input docs/ --output api-docs-2026-03-14.pdf
+```
+## Integration Guide: Subscription Billing
+
+1. Initialize the skill with your API credentials
+2. Create a customer: POST /customers with email and name
+3. Create a subscription: POST /subscriptions with customer_id and price_id
+4. Handle webhooks: Set up webhook endpoint to receive invoice events
+5. Test with sandbox credentials before production
+
+See docs/examples/subscription-billing.sh for a complete script.
 ```
 
-## Best Practice #7: Maintain a Changelog
+## Version Your Documentation
 
-Keep track of API changes systematically:
+APIs evolve. Include version information in every documentation file:
 
-```markdown
-# Changelog
+```
+## API Version
 
-## 2026-03-14
-### Added
-- `POST /api/v2/webhooks` - New webhook management endpoints
-- Rate limiting headers to all responses
+This documentation covers API v2.0. Changes from v1.x:
 
-### Changed
-- `GET /users` now returns pagination metadata
-- Error responses include request ID for debugging
+- Endpoint /v1/users replaced with /v2/users
+- New field: created_at timestamp on all responses
+- Deprecated: legacy_auth field (removed in v2.0)
 
-### Fixed
-- Authentication header case-sensitivity issue
+Previous version docs available at /docs/v1/
 ```
 
-## Best Practice #8: Document Error Codes Thoroughly
+When you update your skill to support a new API version, maintain backward compatibility notes in the documentation. Developers upgrading their integrations need clear migration paths.
 
-Every possible error state deserves documentation:
+## Test Your Documentation
 
-| Code | Message | Cause | Resolution |
-|------|---------|-------|------------|
-| 400 | Invalid parameter: {param} | Parameter validation failed | Check parameter type and constraints |
-| 401 | Authentication required | Missing or invalid token | Include valid Bearer token |
-| 403 | Insufficient permissions | User lacks required scope | Request additional permissions |
-| 429 | Rate limit exceeded | Too many requests | Implement exponential backoff |
-| 500 | Internal server error | Unexpected server issue | Contact support with request ID |
+Documentation has bugs too. Verify every code example works by running it yourself before publishing. Outdated examples erode trust faster than missing documentation.
 
-## Leveraging Claude Skills for Documentation
+For skills that generate documentation automatically, like those using the `docx` skill to produce formatted guides, add a verification step:
 
-The Claude skills ecosystem supercharges your documentation workflow:
+```
+After generating documentation:
+1. Copy each code example into a test environment
+2. Execute the request and verify the response matches
+3. Check that all links resolve correctly
+4. Validate any JSON examples are valid JSON
+```
 
-- **tdd**: Generate test cases that validate your documentation examples
-- **pdf**: Export polished documentation for stakeholders
-- **frontend-design**: Create interactive documentation UIs
-- **supermemory**: Maintain documentation context across sessions
-- **pdf**: Convert Markdown docs to professional PDF packages
+## Keep Documentation Close to Code
 
-## Conclusion
+The best documentation lives alongside the code it describes. When you update the skill implementation, update the documentation in the same commit. This prevents the drift between implementation and documentation that plagues many projects.
 
-Great API documentation requires ongoing effort, but Claude Code makes it manageable. By automating specification generation, maintaining code-example sync, and providing multi-format outputs, you can ensure your documentation remains a valuable resource rather than technical debt.
+Use your skill's repository to host documentation files. Include them in version control so changes are tracked and can be reviewed.
 
-Start implementing these best practices today, and watch your developer experience transform. Remember: documentation is a product—invest in it accordingly.
+---
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+## Summary
+
+Effective API documentation for Claude skills requires the same care as any developer-facing documentation. Focus on authentication first, provide complete working examples, document all error cases, and keep the content synchronized with your implementation.
+
+The skills that developers actually use are the ones with documentation they can trust. Invest the time to document well, and your skill will see real adoption.
+
+{% endraw %}
+
+Built by the luckystrike — More at [zovo.one](https://zovo.one)
