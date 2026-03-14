@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Amplitude Analytics Workflow"
 description: "Learn how to build automated analytics workflows using Claude Code and Amplitude's API. Track user events, analyze behavior patterns, and create."
@@ -6,10 +7,11 @@ date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills, amplitude, analytics, api]
 author: "Claude Skills Guide"
-reviewed: false
-score: 0
+reviewed: true
+score: 7
 permalink: /claude-code-for-amplitude-analytics-workflow/
 ---
+
 
 # Claude Code for Amplitude Analytics Workflow
 

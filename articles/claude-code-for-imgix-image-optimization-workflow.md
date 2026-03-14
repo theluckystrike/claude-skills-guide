@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for imgix Image Optimization Workflow"
 description: "Learn how to leverage Claude Code to streamline your imgix image optimization workflow, from URL parameter generation to responsive image."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-imgix-image-optimization-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 

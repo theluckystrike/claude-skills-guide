@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Chef Cookbook Development Workflow"
 description: "Learn how to leverage Claude Code to streamline your Chef cookbook development, from initial setup to testing and deployment automation."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-chef-cookbook-development-workflow/
 categories: [DevOps, Infrastructure, Automation]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Chef Cookbook Development Workflow
@@ -51,7 +55,7 @@ The generated code follows Chef conventions, including proper resource ordering,
 
 ## Writing Recipes with Claude Code Assistance
 
-Claude Code excels at writing Chef recipes because it understands resource primitives, attribute precedence, and common cookbook patterns. Here's how to leverage this capability effectively.
+Claude Code excels at writing Chef recipes because it understands resource primitives, attribute precedence, and common cookbook patterns. Here's how to use this capability effectively.
 
 ### Recipe Development Best Practices
 

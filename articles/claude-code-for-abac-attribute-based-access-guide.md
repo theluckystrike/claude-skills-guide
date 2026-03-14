@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for ABAC: Attribute-Based Access Control Guide"
 description: "Learn how to implement Attribute-Based Access Control (ABAC) in your applications using Claude Code. This comprehensive guide covers policy design."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-abac-attribute-based-access-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for ABAC: Attribute-Based Access Control Guide

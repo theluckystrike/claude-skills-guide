@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Vault Secrets Management Workflow"
 description: "Learn how to integrate Claude Code with HashiCorp Vault for secure secrets management. Practical examples and workflows for developers."
@@ -7,7 +8,10 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-vault-secrets-management-workflow/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Vault Secrets Management Workflow
@@ -230,7 +234,7 @@ This separation keeps each skill focused and reduces the attack surface.
 
 ## Conclusion
 
-Integrating Claude Code with HashiCorp Vault transforms secrets management from a manual, error-prone process into an automated, secure workflow. By leveraging Claude's natural language understanding, developers can perform complex Vault operations without memorizing every CLI command or API endpoint.
+Integrating Claude Code with HashiCorp Vault transforms secrets management from a manual, error-prone process into an automated, secure workflow. By using Claude's natural language understanding, developers can perform complex Vault operations without memorizing every CLI command or API endpoint.
 
 Start small: set up basic read/write operations, then gradually incorporate dynamic secrets and automation. As your comfort grows, expand into more sophisticated patterns like secret rotation and policy-based access control.
 

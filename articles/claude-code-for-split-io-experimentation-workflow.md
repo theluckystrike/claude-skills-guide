@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Split.io Experimentation Workflow"
 description: "Learn how to leverage Claude Code to streamline your Split.io experimentation workflow, from feature flag management to A/B test implementation and."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-split-io-experimentation-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Split.io Experimentation Workflow
 

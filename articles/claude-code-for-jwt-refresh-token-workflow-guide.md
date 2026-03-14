@@ -1,6 +1,12 @@
-{% raw %}
-categories: [guides]
 ---
+raw %}
+categories: [guides]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
+---
+
 
 layout: default
 title: "Claude Code for JWT Refresh Token Workflow Guide"
@@ -190,7 +196,7 @@ Finally, document your token lifecycle clearly. Understanding when tokens are is
 Implementing secure JWT refresh token workflows requires attention to detail across multiple components: token generation, storage, validation, rotation, and client-side handling. Claude Code serves as an excellent pair programmer for this task, helping you implement these patterns correctly while explaining the security rationale behind each decision.
 
 The key takeaways are straightforward: rotate tokens on refresh, store only hashed tokens, handle expiration gracefully on the client, and test thoroughly. By following these patterns, you'll build authentication systems that balance security with excellent user experience.
-{% endraw %}
+
 
 ## Related Reading
 

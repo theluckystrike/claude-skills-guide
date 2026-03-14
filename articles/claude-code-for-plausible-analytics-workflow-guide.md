@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Plausible Analytics Workflow Guide"
 description: "Learn how to leverage Claude Code to streamline your Plausible Analytics workflow, from setup and configuration to custom event tracking and automated."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 categories: [guides]
 tags: [claude-code, claude-skills]
 permalink: /claude-code-for-plausible-analytics-workflow-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Plausible Analytics Workflow Guide
 

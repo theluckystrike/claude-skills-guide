@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Mailchimp Automation Workflow Guide"
 description: "Learn how to leverage Claude Code to build powerful Mailchimp automation workflows that streamline your email marketing operations."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-mailchimp-automation-workflow-guide/
 categories: [Automation, Email Marketing, Developer Tools]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Mailchimp Automation Workflow Guide

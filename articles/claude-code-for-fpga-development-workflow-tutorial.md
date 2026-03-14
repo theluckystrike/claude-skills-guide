@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for FPGA Development Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline your FPGA development workflow, from project setup to simulation and synthesis."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-fpga-development-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 {% raw %}
 
 
