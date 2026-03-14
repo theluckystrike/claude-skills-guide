@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code REST API Design Best Practices"
 description: "Master REST API design with Claude Code. Learn practical patterns for endpoint design, error handling, versioning, and documentation that works with Claude skills."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, rest-api, api-design, best-practices, development]
+tags: [claude-code, rest-api, api-design, best-practices, development, claude-skills]
 permalink: /claude-code-rest-api-design-best-practices/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code REST API Design Best Practices
 
