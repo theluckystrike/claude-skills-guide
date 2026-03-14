@@ -1,17 +1,23 @@
 ---
+
 layout: default
 title: "Claude Code for jQuery to React Migration Workflow"
 description: "A practical guide to migrating legacy jQuery codebases to React using Claude Code. Learn how to leverage AI-assisted refactoring, component extraction patterns, and automated conversion workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-for-jquery-to-react-migration-workflow/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 
 # Claude Code for jQuery to React Migration Workflow
 
-Migrating a legacy jQuery application to React is one of the most challenging modernization tasks a frontend developer can face. jQuery's imperative DOM manipulation patterns differ fundamentally from React's declarative component architecture. However, Claude Code transforms this daunting migration into a systematic, manageable workflow. This guide explores how to leverage Claude Code's skills and capabilities to migrate jQuery codebases efficiently while maintaining application functionality.
+Migrating a legacy jQuery application to React is one of the most challenging modernization tasks a frontend developer can face. jQuery's imperative DOM manipulation patterns differ fundamentally from React's declarative component architecture. However, Claude Code transforms this daunting migration into a systematic, manageable workflow. This guide explores how to use Claude Code's skills and capabilities to migrate jQuery codebases efficiently while maintaining application functionality.
 
 ## Understanding the Migration Challenge
 
@@ -168,7 +174,7 @@ The AI understands testing patterns and generates comprehensive tests covering u
 
 ## Conclusion
 
-Claude Code transforms jQuery-to-React migration from an overwhelming project into a systematic process. By leveraging AI-assisted analysis, automatic pattern conversion, plugin migration guidance, and progressive migration strategies, you can modernize your codebase with confidence. The key is working iteratively—migrate component by component while maintaining functionality—and using Claude Code's expertise at each step to ensure accurate conversions.
+Claude Code transforms jQuery-to-React migration from an overwhelming project into a systematic process. By using AI-assisted analysis, automatic pattern conversion, plugin migration guidance, and progressive migration strategies, you can modernize your codebase with confidence. The key is working iteratively—migrate component by component while maintaining functionality—and using Claude Code's expertise at each step to ensure accurate conversions.
 
 Start your migration today by having Claude Code analyze your codebase and provide a prioritized migration roadmap. The journey from jQuery to React becomes much more manageable with an AI partner guiding you through each conversion challenge.
 

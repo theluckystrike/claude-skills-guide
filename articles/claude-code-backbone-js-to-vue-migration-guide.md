@@ -1,18 +1,22 @@
 ---
+
 layout: default
 title: "Claude Code Backbone.js to Vue Migration Guide"
 description: "A practical guide to migrating Backbone.js applications to Vue using Claude Code skills. Learn patterns for transforming legacy code with AI-assisted refactoring."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides, vue, migration]
-tags: [claude-code, backbone-js, vue, migration, javascript]
+tags: [claude-code, backbone-js, vue, migration, javascript, claude-skills]
 permalink: /claude-code-backbone-js-to-vue-migration-guide/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code Backbone.js to Vue Migration Guide
 
-Migrating a Backbone.js application to Vue represents one of the most common modernization journeys in frontend development. Backbone.js served as a lightweight MVC framework that dominated single-page applications for years, but Vue's reactive data binding and component-based architecture offer significant improvements in developer experience and application maintainability. This guide demonstrates how to leverage Claude Code skills to streamline your migration workflow, providing practical patterns for transforming Backbone models, views, and collections into their Vue equivalents.
+Migrating a Backbone.js application to Vue represents one of the most common modernization journeys in frontend development. Backbone.js served as a lightweight MVC framework that dominated single-page applications for years, but Vue's reactive data binding and component-based architecture offer significant improvements in developer experience and application maintainability. This guide demonstrates how to use Claude Code skills to streamline your migration workflow, providing practical patterns for transforming Backbone models, views, and collections into their Vue equivalents.
 
 ## Understanding the Migration Challenge
 

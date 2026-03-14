@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Sketch to React Component Workflow Guide"
 description: "Master the workflow of transforming design sketches and wireframes into production-ready React components using Claude Code. Learn practical techniques, skills, and prompting strategies."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-sketch-to-react-component-workflow-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Sketch to React Component Workflow Guide
 
@@ -141,7 +147,7 @@ For components that will receive data from APIs, ask Claude Code to add loading 
 
 ## Workflow Integration Tips
 
-Integrate the sketch-to-component workflow seamlessly into your development process. Keep a template of prompt structures that work well for your project type. Maintain a library of successful prompts that you can adapt for similar components.
+Integrate the sketch-to-component workflow smoothly into your development process. Keep a template of prompt structures that work well for your project type. Maintain a library of successful prompts that you can adapt for similar components.
 
 When working in a team, establish conventions for how sketches should be described in prompts. This ensures consistency across team members and improves the quality of generated components.
 

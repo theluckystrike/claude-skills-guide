@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code for Competitive Programming Practice Workflow"
 description: "Master competitive programming with Claude Code: automated problem solving, template generation, solution testing, and efficient practice workflows."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, competitive-programming, programming, coding, workflow]
-author: theluckystrike
+tags: [claude-code, competitive-programming, programming, coding, workflow, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-for-competitive-programming-practice-workflow/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Competitive Programming Practice Workflow
@@ -241,7 +245,7 @@ Each skill should include:
 
 ## Conclusion
 
-Claude Code transforms competitive programming practice from isolated problem-solving into a structured, efficient workflow. By leveraging template generation, automated testing, and intelligent debugging, you can focus on developing algorithmic thinking while Claude handles repetitive tasks. The key is using Claude as a learning accelerator—not a crutch—while building genuine problem-solving skills that transfer to competitions and real-world engineering challenges.
+Claude Code transforms competitive programming practice from isolated problem-solving into a structured, efficient workflow. By using template generation, automated testing, and intelligent debugging, you can focus on developing algorithmic thinking while Claude handles repetitive tasks. The key is using Claude as a learning accelerator—not a crutch—while building genuine problem-solving skills that transfer to competitions and real-world engineering challenges.
 
 Start implementing these workflows today, and watch your competitive programming efficiency soar.
 {% endraw %}

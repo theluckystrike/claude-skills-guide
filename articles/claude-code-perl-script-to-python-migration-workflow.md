@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Perl Script to Python Migration Workflow"
 description: "A practical guide to migrating Perl scripts to Python using Claude Code skills. Step-by-step workflow with code examples and best practices."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-perl-script-to-python-migration-workflow/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code Perl Script to Python Migration Workflow
@@ -203,7 +209,7 @@ The Python version adds type safety, uses dataclasses for structured data, and f
 
 ## Conclusion
 
-Claude Code transforms the Perl to Python migration from a tedious manual effort into a systematic, assisted process. By leveraging code analysis, automated mapping, test generation, and careful pattern handling, you can migrate legacy Perl scripts with confidence. The key is maintaining functional equivalence while improving code readability and maintainability through Python's modern features.
+Claude Code transforms the Perl to Python migration from a tedious manual effort into a systematic, assisted process. By using code analysis, automated mapping, test generation, and careful pattern handling, you can migrate legacy Perl scripts with confidence. The key is maintaining functional equivalence while improving code readability and maintainability through Python's modern features.
 
 Start with small, isolated scripts to build familiarity with the workflow, then scale to larger applications. Each migration improves your team's expertise and builds a reusable knowledge base for future projects.
 {% endraw %}

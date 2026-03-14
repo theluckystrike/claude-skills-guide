@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Automated Alt Text Generation Workflow"
 description: "Learn how to build automated alt text generation workflows with Claude Code. This guide covers image analysis skills, batch processing patterns, and practical implementations for accessibility."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, accessibility, alt-text, image-analysis, automation, workflows]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [claude-code, accessibility, alt-text, image-analysis, automation, workflows, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /claude-code-automated-alt-text-generation-workflow/
 ---
+
 
 {% raw %}
 
@@ -17,7 +19,7 @@ permalink: /claude-code-automated-alt-text-generation-workflow/
 
 Accessibility matters. Alt text transforms images into meaningful descriptions for people who use screen readers, yet manually writing descriptive alt text for hundreds or thousands of images remains a tedious task. Claude Code offers a powerful solution through its image analysis capabilities and skill system, enabling automated alt text generation workflows that save hours of manual work.
 
-This guide explores how to leverage Claude Code's built-in features and community skills to create efficient alt text generation pipelines for websites, documentation, and digital assets.
+This guide explores how to use Claude Code's built-in features and community skills to create efficient alt text generation pipelines for websites, documentation, and digital assets.
 
 ## Understanding Claude Code's Image Analysis Capabilities
 
@@ -159,7 +161,7 @@ This pipeline can run as a background service, continuously processing new asset
 
 ## Conclusion
 
-Claude Code transforms alt text generation from a manual bottleneck into an automated, scalable workflow. By leveraging image analysis capabilities, creating specialized skills, and implementing batch processing patterns, teams can dramatically improve accessibility compliance while reducing manual effort.
+Claude Code transforms alt text generation from a manual bottleneck into an automated, scalable workflow. By using image analysis capabilities, creating specialized skills, and implementing batch processing patterns, teams can dramatically improve accessibility compliance while reducing manual effort.
 
 Start small with single-image analysis, build reusable skills for consistency, and scale up to batch processing as your workflow matures. The combination of Claude's multimodal understanding and your domain expertise creates alt text that genuinely serves users who depend on it.
 
