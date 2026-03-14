@@ -189,3 +189,11 @@ Ensure your `.claude/settings.json` is in the correct location (project root or 
 Scoping Claude Code to a single directory is straightforward with the right techniques. Whether you prefer command-line flags for quick sessions or persistent configuration for project isolation, there's an approach that fits your workflow. Start with the `--dir` flag for immediate results, then graduate to configuration-based scoping for permanent solutions. Combined with `.claudeignore`, you can create precise boundaries that keep Claude focused and your files protected.
 
 The key is choosing the method that matches your use case: temporary sessions benefit from flags, while team projects benefit from configuration files that can be committed to version control. With these tools at your disposal, you have complete control over where Claude Code can operate.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Keeps Generating Placeholder TODO Comments"
 description: "Why Claude Code keeps adding placeholder TODO comments and how to fix it. Practical solutions for controlling AI-generated code comments."
 date: 2026-03-14
+categories: [troubleshooting]
 author: theluckystrike
 permalink: /claude-code-keeps-generating-placeholder-todo-comments/
 ---
@@ -141,3 +142,11 @@ The issue arises when TODO becomes a default placeholder instead of a deliberate
 Claude Code generating placeholder TODO comments typically indicates a gap between your expectations and the information provided. By improving context, using CLAUDE.md files, and creating custom skills, you can dramatically reduce or eliminate these placeholders. The goal is always production-ready code, and with the right prompting strategies, Claude Code can deliver exactly that.
 
 Remember: TODO comments should be deliberate tracking tools, not AI-generated placeholders for unimplemented features.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Code Not Working After Update: How to Fix](/claude-skills-guide/claude-code-not-working-after-update-how-to-fix/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+

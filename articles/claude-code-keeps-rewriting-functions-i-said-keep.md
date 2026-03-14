@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Keeps Rewriting Functions I Said Keep"
-description: "Understand why Claude Code rewrites functions you've asked to preserve, and learn practical strategies to prevent unwanted refactoring during your coding sessions."
+description: "Understand why Claude Code rewrites functions you've asked to preserve, and learn practical strategies to prevent unwanted refactoring during your."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-keeps-rewriting-functions-i-said-keep/
@@ -115,3 +115,11 @@ Claude Code typically respects these comments when they're prominent and clearly
 Preventing unwanted function rewrites comes down to clear communication and strategic structuring. Use explicit preservation markers in your code, maintain a claude.md with preservation rules, be specific about scope in every prompt, and configure skills appropriately when working with sensitive code. When Claude Code does rewrite something, catch it quickly through git status checks and revert immediately.
 
 The key insight is that Claude Code wants to help by improving your code. Channel that energy by being extremely clear about what should improve and what should stay exactly as it is. With the right prompts and configuration, you can have both—helpful improvements where you want them and perfect preservation where you need it.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Code Not Working After Update: How to Fix](/claude-skills-guide/claude-code-not-working-after-update-how-to-fix/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+

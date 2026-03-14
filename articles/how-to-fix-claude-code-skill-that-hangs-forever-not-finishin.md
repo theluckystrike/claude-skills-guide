@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Fix Claude Code Skill That Hangs Forever Not Finishing"
-description: "A practical troubleshooting guide for developers experiencing Claude Code skills that hang, freeze, or fail to complete. Learn proven solutions to get your skills working again."
+title: "How to Fix Claude Code Skill That Hangs Forever Not."
+description: "A practical troubleshooting guide for developers experiencing Claude Code skills that hang, freeze, or fail to complete. Learn proven solutions to get."
 date: 2026-03-14
 author: theluckystrike
 categories: [troubleshooting]
@@ -175,3 +175,11 @@ If you've tried all these solutions and the skill still hangs:
 Hanging skills in Claude Code are frustrating but usually fixable. By following this guide's troubleshooting steps—starting with the simplest solutions like restarting and progressing through more advanced fixes like checking configuration and clearing caches—you can get your skills working again. Remember to break large tasks into smaller pieces, keep your skills updated, and monitor system resources to prevent future hanging issues.
 
 The key is patience and systematic diagnosis. Most hanging issues resolve with one or two simple fixes, so start with the easiest solutions before moving to more complex troubleshooting.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Code Not Working After Update: How to Fix](/claude-skills-guide/claude-code-not-working-after-update-how-to-fix/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+

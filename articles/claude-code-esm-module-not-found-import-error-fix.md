@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code ESM Module Not Found Import Error Fix"
-description: "Learn how to resolve ESM module not found and import errors in Claude Code. Practical solutions for CommonJS vs ESM conflicts, package.json configuration, and path resolution issues."
+description: "Learn how to resolve ESM module not found and import errors in Claude Code. Practical solutions for CommonJS vs ESM conflicts, package.json."
 date: 2026-03-14
 categories: [troubleshooting, guides]
 tags: [claude-code, esm, module, import-error, javascript, troubleshooting]
@@ -248,3 +248,11 @@ ESM module not found errors in Claude Code typically stem from misconfigured pac
 Remember to check your dependencies first, verify your `package.json` configuration, ensure correct file extensions, and test your imports incrementally. With these practices, you'll spend less time debugging import errors and more time building with Claude Code.
 
 If you continue to experience issues, consider using tools like `npm ls` to inspect your dependency tree or `node --trace-warnings` for detailed resolution debugging.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Code Not Working After Update: How to Fix](/claude-skills-guide/claude-code-not-working-after-update-how-to-fix/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+
