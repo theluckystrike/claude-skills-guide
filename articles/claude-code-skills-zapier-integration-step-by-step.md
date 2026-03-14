@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 9
 ---
+{% raw %}
 
 # Claude Code Skills + Zapier: Step-by-Step Integration
 
@@ -185,3 +186,4 @@ In Zapier, route this to Gmail or SendGrid with the report content in the email 
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

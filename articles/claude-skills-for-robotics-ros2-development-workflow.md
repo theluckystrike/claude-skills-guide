@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Claude Skills for Robotics ROS2 Development Workflow
 
@@ -192,3 +193,4 @@ Claude skills transform ROS2 development from manual scaffolding and scattered d
 - [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Discover more advanced skill patterns for specialized technical development domains.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

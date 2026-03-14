@@ -49,6 +49,7 @@ echo "Execution time: ${ELAPSED}s"
 
 For more detailed metrics, modify your skill's entry point to log timestamps:
 
+{% raw %}
 ```markdown
 # skill: benchmark-example
 ## Tools
@@ -63,6 +64,7 @@ For more detailed metrics, modify your skill's entry point to log timestamps:
     start_time: "${DATE}"
 }}
 ```
+{% endraw %}
 
 ## Measuring Token Usage
 

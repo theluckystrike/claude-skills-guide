@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 # Automated GitHub Issue Triage with Claude Skills
 
@@ -216,3 +217,4 @@ The initial investment pays dividends as your issue queue grows. What once requi
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Practical techniques for keeping triage and automation workflows efficient without exceeding token budgets
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

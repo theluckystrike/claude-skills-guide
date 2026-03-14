@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Claude Code Vercel Deployment Next.js Workflow Guide
 
@@ -199,3 +200,4 @@ Start with the preview deployment workflow, then gradually add production safegu
 - [Claude Skills with Vercel Deployment Automation](/claude-skills-guide/articles/claude-skills-with-vercel-deployment-automation/) — Step-by-step Vercel deployment automation using Claude skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
