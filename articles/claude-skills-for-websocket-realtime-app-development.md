@@ -12,7 +12,7 @@ score: 9
 
 # Claude Skills for WebSocket Realtime App Development
 
-Real-time communication has become essential for modern web applications. Chat systems, live dashboards, collaborative tools, and gaming platforms all rely on WebSocket connections to deliver instant data updates. Building these features from scratch presents unique challenges that Claude skills can help you overcome.
+[Real-time communication has become essential for modern web applications](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Chat systems, live dashboards, collaborative tools, and gaming platforms all rely on WebSocket connections to deliver instant data updates. Building these features from scratch presents unique challenges that Claude skills can help you overcome.
 
 This guide shows you how to use specific Claude skills to accelerate WebSocket development, from initial architecture to production deployment.
 

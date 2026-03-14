@@ -12,7 +12,7 @@ score: 8
 
 # Fan-Out Fan-In Pattern with Claude Code Subagents
 
-The fan-out fan-in pattern is a powerful concurrency strategy that enables parallel processing of multiple independent tasks, then aggregates their results into a unified output. When implemented with Claude Code subagents, this pattern becomes exceptionally useful for developers building complex automation workflows, handling bulk operations, or processing multiple data sources simultaneously.
+[The fan-out fan-in pattern is a powerful concurrency strategy that enables parallel processing of multiple independent tasks](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), then aggregates their results into a unified output. When implemented with Claude Code subagents, this pattern becomes exceptionally useful for developers building complex automation workflows, handling bulk operations, or processing multiple data sources simultaneously.
 
 ## Understanding the Pattern
 

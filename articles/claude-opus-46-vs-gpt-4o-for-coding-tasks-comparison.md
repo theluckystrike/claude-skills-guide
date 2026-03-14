@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills, gpt-4o, comparison, models]
 
 # Claude Opus 4.6 vs GPT-4o for Coding Tasks: 2026 Comparison
 
-Choosing between Claude Opus 4.6 and GPT-4o for coding work is a real decision with real trade-offs. Both are frontier-class models with strong coding capabilities. This comparison focuses on what matters to developers: code quality, reasoning on complex problems, context handling, agentic use, and cost.
+[Choosing between Claude Opus 4.6 and GPT-4o for coding work is a real decision with real trade-offs](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Both are frontier-class models with strong coding capabilities. This comparison focuses on what matters to developers: code quality, reasoning on complex problems, context handling, agentic use, and cost.
 
 ## The Models
 

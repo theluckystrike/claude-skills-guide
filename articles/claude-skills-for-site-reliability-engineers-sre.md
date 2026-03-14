@@ -18,7 +18,7 @@ Site reliability engineers need tools that handle incident response, log analysi
 
 ## Incident Response Automation
 
-When a production incident occurs, speed matters. Claude Code helps you build incident response runbooks that execute directly in your terminal. Describe your alerting setup and Claude generates bash scripts for common remediation steps.
+[When a production incident occurs, speed matters](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Claude Code helps you build incident response runbooks that execute directly in your terminal. Describe your alerting setup and Claude generates bash scripts for common remediation steps.
 
 For example, a high-memory alert response might look like this:
 

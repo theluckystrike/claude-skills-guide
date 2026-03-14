@@ -14,7 +14,7 @@ score: 9
 
 State machine design patterns provide a powerful way to structure Claude skills that need to handle complex, multi-step workflows. Instead of writing linear instruction sets, you can model your skill as a [state machine](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) where each state represents a distinct phase of operation, and transitions define how the skill moves between phases based on user input or completion criteria.
 
-This approach is particularly valuable when building skills that must maintain context across multiple interactions, validate input at different stages, or provide structured guidance through sequential processes.
+[This approach is particularly valuable when building skills that must maintain context across multiple interactions](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), validate input at different stages, or provide structured guidance through sequential processes.
 
 ## Why State Machines Work Well in Claude Skills
 

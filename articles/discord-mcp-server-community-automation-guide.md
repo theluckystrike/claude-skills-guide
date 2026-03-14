@@ -12,7 +12,7 @@ score: 7
 
 # Discord MCP Server Community Automation Guide
 
-Building community automation for Discord with the Model Context Protocol (MCP) opens up powerful workflows for developers managing online communities. This guide covers practical implementation patterns, configuration examples, and real-world automation scenarios using MCP servers with Discord bots.
+[Building community automation for Discord with the Model Context Protocol (MCP) opens up powerful workflows](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) for developers managing online communities. This guide covers practical implementation patterns, configuration examples, and real-world automation scenarios using MCP servers with Discord bots.
 
 ## Understanding the MCP-Discord Connection
 

@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skills Change Management: Rolling Out to Teams
 
-When your team grows beyond a single developer using Claude Code, you'll need a strategy for distributing, updating, and governing skills across the organization. This guide covers the technical and procedural aspects of rolling out Claude skills to teams of any size.
+[When your team grows beyond a single developer using Claude Code, you'll need a strategy for distributing, updating, and governing skills](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) across the organization. This guide covers the technical and procedural aspects of rolling out Claude skills to teams of any size.
 
 ## The Challenge of Distributed Skill Management
 

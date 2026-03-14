@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skills vs OpenAI Assistants API Comparison
 
-Both Claude skills and the OpenAI Assistants API let developers build AI-powered agents and automated workflows. But they represent different philosophies about how agents should be structured, deployed, and composed. This comparison helps you choose the right foundation for your use case.
+[Both Claude skills and the OpenAI Assistants API let developers build AI-powered agents and automated workflows](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) But they represent different philosophies about how agents should be structured, deployed, and composed. This comparison helps you choose the right foundation for your use case.
 
 ## What Are Claude Skills?
 

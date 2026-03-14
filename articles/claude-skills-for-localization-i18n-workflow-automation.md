@@ -12,7 +12,7 @@ score: 7
 
 # Claude Skills for Localization i18n Workflow Automation
 
-Localization and internationalization (i18n) workflows consume significant developer time. Managing translation keys, synchronizing locale files across frameworks, and ensuring consistent terminology across multilingual products demands repetitive manual effort. Claude Code skills transform these workflows through intelligent automation, enabling developers to process translation files, validate i18n implementations, and maintain translation memory with minimal friction.
+[Localization and internationalization (i18n) workflows consume significant developer time](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Managing translation keys, synchronizing locale files across frameworks, and ensuring consistent terminology across multilingual products demands repetitive manual effort. Claude Code skills transform these workflows through intelligent automation, enabling developers to process translation files, validate i18n implementations, and maintain translation memory with minimal friction.
 
 ## Understanding Claude Skills for i18n
 

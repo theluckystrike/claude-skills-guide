@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skills Governance Security Audit Checklist
 
-As Claude Code adoption grows across development teams, establishing a security audit process for skills becomes essential. Whether you are deploying community skills like `pdf` or `tdd` for document processing and test-driven development, or building internal skills that access sensitive APIs, governance gaps can expose your organization to risk. This checklist provides a systematic approach to auditing Claude skills before production deployment.
+[As Claude Code adoption grows across development teams, establishing a security audit process for skills becomes essential](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Whether you are deploying community skills like `pdf` or `tdd` for document processing and test-driven development, or building internal skills that access sensitive APIs, governance gaps can expose your organization to risk. This checklist provides a systematic approach to auditing Claude skills before production deployment.
 
 ## Understanding the Security Surface
 

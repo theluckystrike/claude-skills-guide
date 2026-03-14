@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skills for Solidity Smart Contract Development
 
-Building smart contracts on Ethereum requires a combination of security-first thinking, rigorous testing, and clean code practices. Claude Code, combined with its skill system, offers powerful tools that can accelerate your Solidity development workflow. This guide explores which Claude skills are most valuable for smart contract development and how to integrate them into your projects.
+[Building smart contracts on Ethereum requires a combination of security-first thinking, rigorous testing, and clean code practices](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Claude Code, combined with its skill system, offers powerful tools that can accelerate your Solidity development workflow. This guide explores which Claude skills are most valuable for smart contract development and how to integrate them into your projects.
 
 ## Understanding Claude Skills for Blockchain Development
 

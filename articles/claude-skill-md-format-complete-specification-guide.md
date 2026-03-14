@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skill .md Format: Complete Specification Guide
 
-Every Claude skill is a Markdown file. The format is straightforward, but getting it wrong means your skill either fails silently or never fires. This guide covers every field and edge case.
+[Every Claude skill is a Markdown file](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) The format is straightforward, but getting it wrong means your skill either fails silently or never fires. This guide covers every field and edge case.
 
 ## What Is a Skill File?
 

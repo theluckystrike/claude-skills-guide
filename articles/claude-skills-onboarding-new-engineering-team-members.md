@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skills Onboarding for New Engineering Team Members
 
-Joining a new engineering team means learning new tools, processes, and conventions. Claude skills can accelerate this onboarding by automating documentation reviews, generating test scaffolds, and helping you understand codebase patterns faster. This guide covers the essential skills every new team member should configure during their first week.
+[Joining a new engineering team means learning new tools, processes, and conventions](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Claude skills can accelerate this onboarding by automating documentation reviews, generating test scaffolds, and helping you understand codebase patterns faster. This guide covers the essential skills every new team member should configure during their first week.
 
 ## Setting Up Your Claude Skills Environment
 

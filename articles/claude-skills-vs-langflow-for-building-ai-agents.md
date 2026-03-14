@@ -12,7 +12,7 @@ score: 9
 
 # Claude Skills vs Langflow for Building AI Agents
 
-Claude skills and Langflow both help developers build AI agents, but they take fundamentally different approaches. Langflow is a visual, drag-and-drop workflow builder for LLM pipelines. Claude skills are file-based, code-adjacent agent definitions that live in your repository. This comparison helps you choose the right approach for your needs.
+[Claude skills and Langflow both help developers build AI agents, but they take fundamentally different approaches](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Langflow is a visual, drag-and-drop workflow builder for LLM pipelines. Claude skills are file-based, code-adjacent agent definitions that live in your repository. This comparison helps you choose the right approach for your needs.
 
 ## What Each Tool Is
 

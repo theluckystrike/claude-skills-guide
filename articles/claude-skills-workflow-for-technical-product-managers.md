@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skills Workflow for Technical Product Managers
 
-Technical product managers balance engineering precision with product vision. Claude Code skills provide a structured way to accelerate requirements gathering, technical specification, and cross-team communication. This guide shows you a practical workflow that integrates Claude skills into your daily product management routine.
+[Technical product managers balance engineering precision with product vision](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Claude Code skills provide a structured way to accelerate requirements gathering, technical specification, and cross-team communication. This guide shows you a practical workflow that integrates Claude skills into your daily product management routine.
 
 ## The Role of Skills in Technical Product Management
 

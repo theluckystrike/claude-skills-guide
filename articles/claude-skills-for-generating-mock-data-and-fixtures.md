@@ -16,7 +16,7 @@ Generating realistic [mock data](/claude-skills-guide/automated-testing-pipeline
 
 ## Understanding Mock Data Generation in Claude
 
-Claude Code handles mock data generation through its skill system. When you invoke a skill focused on data generation, Claude uses its understanding of data structures, programming patterns, and domain-specific requirements to produce realistic test data. The key advantage is that Claude generates data that matches your specific data models rather than generic random values.
+[Claude Code handles mock data generation through its skill system](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) When you invoke a skill focused on data generation, Claude uses its understanding of data structures, programming patterns, and domain-specific requirements to produce realistic test data. The key advantage is that Claude generates data that matches your specific data models rather than generic random values.
 
 The primary approach for mock data generation is through custom skills you build for your domain-specific needs, or by describing your requirements directly to Claude Code without a skill. Each skill loads instructions that guide Claude's output to produce structured, type-safe data matching your project requirements.
 

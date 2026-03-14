@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skill Versioning: Semver Best Practices
 
-Semantic Versioning provides a predictable framework for managing Claude skill releases. When you publish skills for others to use—whether through GitHub or direct distribution—version numbers communicate what changed and help users make informed update decisions.
+[Semantic Versioning provides a predictable framework for managing Claude skill releases](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When you publish skills for others to use—whether through GitHub or direct distribution—version numbers communicate what changed and help users make informed update decisions.
 
 ## Understanding Semver Basics
 

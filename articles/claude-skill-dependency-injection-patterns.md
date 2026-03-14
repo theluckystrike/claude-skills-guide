@@ -16,7 +16,7 @@ Dependency injection isn't just a software engineering concept. When you structu
 
 ## What Dependency Injection Means for Claude Skills
 
-In traditional software, dependency injection means passing dependencies into a function rather than having the function create them. For Claude skills, the equivalent is designing one skill to invoke another skill as part of its workflow. Instead of building monolithic skills that handle everything, you create focused skills that delegate to specialized skills.
+[In traditional software, dependency injection means passing dependencies into a function rather than having the function create them](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) For Claude skills, the equivalent is designing one skill to invoke another skill as part of its workflow. Instead of building monolithic skills that handle everything, you create focused skills that delegate to specialized skills.
 
 Consider a workflow where you need to extract data from a PDF, transform it into a spreadsheet, and then run analysis. Without dependency injection patterns, you might create one massive skill that tries to handle all three steps. With dependency injection, you compose three focused skills: one using the **pdf** skill for extraction, one using **xlsx** for spreadsheet operations, and a third skill that orchestrates the pipeline.
 

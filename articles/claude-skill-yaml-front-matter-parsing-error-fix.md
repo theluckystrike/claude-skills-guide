@@ -27,7 +27,7 @@ description: "Run tests before writing implementation code (TDD)"
 # The rest of the skill instructions go here...
 ```
 
-Claude Code skills recognize only `name` and `description` in front matter. If the front matter fails to parse, the skill body may still load but the description will not be available to the skill system.
+[Claude Code skills recognize only name and description in front matter](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) If the front matter fails to parse, the skill body may still load but the description will not be available to the skill system.
 
 ## Error 1: Missing or Mismatched Closing Delimiter
 
