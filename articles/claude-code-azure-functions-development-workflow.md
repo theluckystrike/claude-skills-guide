@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code Azure Functions Development Workflow"
 description: "A practical guide to developing Azure Functions with Claude Code. Learn how to set up, develop, test, and deploy serverless functions efficiently using AI-assisted development."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-azure-functions-development-workflow/
 categories: [workflows]
 tags: [claude-code, claude-skills, azure, serverless, azure-functions]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code Azure Functions Development Workflow
@@ -203,5 +207,5 @@ When troubleshooting, provide Claude Code with specific error messages or log sn
 5. **Configure proper retry policies** for durable functions
 6. **Set up CI/CD** from the start using GitHub Actions or Azure DevOps
 
-Claude Code accelerates each phase of Azure Functions development, from initial setup through production deployment. By providing clear context about your Azure environment and specific requirements, you can leverage AI assistance to build robust serverless applications efficiently.
+Claude Code accelerates each phase of Azure Functions development, from initial setup through production deployment. By providing clear context about your Azure environment and specific requirements, you can use AI assistance to build robust serverless applications efficiently.
 {% endraw %}

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Data Anonymization Workflow Guide"
 description: "Learn how to use Claude Code to build automated data anonymization workflows that protect sensitive information while maintaining data utility."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-data-anonymization-workflow-guide/
 categories: [Development, Security, Privacy]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Data Anonymization Workflow Guide
 
-Data privacy has become a non-negotiable aspect of modern software development. Whether you're preparing datasets for testing, sharing customer data with third-party analytics tools, or complying with GDPR, CCPA, or HIPAA regulations, proper data anonymization is essential. This guide shows you how to leverage Claude Code to build robust, automated data anonymization workflows that protect sensitive information while maintaining data utility for development and analytics purposes.
+Data privacy has become a non-negotiable aspect of modern software development. Whether you're preparing datasets for testing, sharing customer data with third-party analytics tools, or complying with GDPR, CCPA, or HIPAA regulations, proper data anonymization is essential. This guide shows you how to use Claude Code to build robust, automated data anonymization workflows that protect sensitive information while maintaining data utility for development and analytics purposes.
 
 ## Understanding Data Anonymization Fundamentals
 

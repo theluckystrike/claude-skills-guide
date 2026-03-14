@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Golden Path Developer Workflow"
 description: "Learn how to leverage Claude Code to implement golden path developer workflows. Practical guide with examples for building standardized, efficient development processes."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-golden-path-developer-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Golden Path Developer Workflow
@@ -25,7 +29,7 @@ Claude Code enhances golden path workflows by acting as an intelligent guide tha
 
 ## Setting Up Claude Code for Golden Path Workflows
 
-The first step in leveraging Claude Code for golden path development is organizing your project conventions in a way Claude can understand and apply. Create a `.claude` directory in your project root with structured knowledge files that define your standards.
+The first step in using Claude Code for golden path development is organizing your project conventions in a way Claude can understand and apply. Create a `.claude` directory in your project root with structured knowledge files that define your standards.
 
 ```bash
 # Project structure for golden path conventions

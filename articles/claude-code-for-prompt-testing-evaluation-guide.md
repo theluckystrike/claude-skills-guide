@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Prompt Testing Evaluation Guide"
 description: "A comprehensive guide to testing and evaluating AI prompts using Claude Code. Learn practical techniques for building robust prompt testing pipelines."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-prompt-testing-evaluation-guide/
 categories: [Development, AI, Prompt Engineering]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Prompt Testing Evaluation Guide
