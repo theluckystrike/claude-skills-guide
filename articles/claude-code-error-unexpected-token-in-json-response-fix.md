@@ -10,7 +10,6 @@ score: 7
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 ---
-{% raw %}
 
 
 
@@ -39,7 +38,7 @@ Use the `Read` tool to inspect recent tool outputs in your conversation history.
 - Incomplete JSON objects or arrays
 - Non-UTF8 encoded characters
 
-If you're using custom skills, check the skill definition for any `{{` or `{%` Liquid template syntax that might interfere with JSON parsing.
+If you're using custom skills, check the skill definition for any double-curly-brace or percent-curly-brace Liquid template syntax that might interfere with JSON parsing.
 
 ## Practical Solutions
 
@@ -88,7 +87,7 @@ When creating custom skills using tools like the skill-creator, ensure your skil
 ```yaml
 ---
 name: my-skill
-description: Processes data using the {{variable}} pattern
+description: Processes data using the (variable) pattern
 # This causes issues! Use escaped brackets or rephrase
 ---
 ```
@@ -157,4 +156,3 @@ Remember to test your integrations thoroughly, especially when combining multipl
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

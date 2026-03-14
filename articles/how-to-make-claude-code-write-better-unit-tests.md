@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "How to Make Claude Code Write Better Unit Tests"
 description: "Learn practical techniques to improve unit test quality when using Claude Code. Includes prompt strategies, skill recommendations, and code examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, unit-testing, tdd, coding-quality]
+tags: [claude-code, unit-testing, tdd, coding-quality, claude-skills]
 permalink: /how-to-make-claude-code-write-better-unit-tests/
+reviewed: true
+score: 7
 ---
+
 
 # How to Make Claude Code Write Better Unit Tests
 

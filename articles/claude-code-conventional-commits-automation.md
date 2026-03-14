@@ -1,19 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Conventional Commits Automation"
 description: "Learn how to automate conventional commits in Claude Code with practical examples, skill configurations, and workflow integration tips for developers."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, conventional-commits, automation, git, developer-tools]
-author: theluckystrike
+tags: [claude-code, conventional-commits, automation, git, developer-tools, claude-skills]
+author: "Claude Skills Guide"
 reviewed: true
 score: 5
 permalink: /claude-code-conventional-commits-automation/
 ---
 
+
 # Claude Code Conventional Commits Automation
 
-Conventional commits provide a standardized format for commit messages that integrate seamlessly with automated versioning tools, changelog generators, and CI/CD pipelines. When combined with Claude Code's skill system, you can automate the entire process of generating, validating, and applying conventional commits to your projects.
+Conventional commits provide a standardized format for commit messages that integrate smoothly with automated versioning tools, changelog generators, and CI/CD pipelines. When combined with Claude Code's skill system, you can automate the entire process of generating, validating, and applying conventional commits to your projects.
 
 ## How Conventional Commits Work
 
