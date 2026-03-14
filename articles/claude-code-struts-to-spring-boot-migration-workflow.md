@@ -258,3 +258,11 @@ claude skill invoke struts-to-spring-boot-migration \
 ## Conclusion
 
 Claude Code transforms the daunting Struts to Spring Boot migration from months of manual effort into a structured, automated workflow. By leveraging code analysis, pattern recognition, and intelligent transformation skills, you preserve business logic while modernizing your architecture. The key advantages include consistent code generation, comprehensive dependency management, and built-in validation ensuring functional equivalence. Start your migration today by installing the recommended skills and executing the workflow against your legacy Struts applications.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -200,3 +200,11 @@ The key to successful automation lies in treating your MLOps workflows as codeâ€
 
 Start by identifying the most repetitive tasks in your current Model Registry workflow, then work with Claude to create skills that automate those specific processes. Over time, you'll build a comprehensive library of MLOps automation that scales with your team's needs.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

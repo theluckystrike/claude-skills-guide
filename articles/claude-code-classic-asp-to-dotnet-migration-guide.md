@@ -177,3 +177,11 @@ Throughout your migration journey, keep these principles in mind:
 
 Claude Code transforms the Classic ASP to .NET migration from an overwhelming challenge into a manageable process. By using its code analysis capabilities, intelligent code generation, and architectural guidance, development teams can accomplish migrations more quickly while maintaining code quality and preserving business logic. Whether you're migrating a small application or enterprise-scale system, Claude Code provides the expertise and automation needed for a successful transition to modern .NET architecture.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

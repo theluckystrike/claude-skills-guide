@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code: Helping Students Understand Recursion Concepts"
-description: "Discover how Claude Code can serve as an interactive teaching assistant to help students grasp recursion fundamentals through guided practice, visual breakdowns, and hands-on coding exercises."
+description: "Discover how Claude Code can serve as an interactive teaching assistant to help students grasp recursion fundamentals through guided practice, visual."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-helping-students-understand-recursion-concepts/
@@ -100,3 +100,11 @@ This confidence-building aspect addresses a significant barrier in recursion lea
 ## Conclusion
 
 Recursion education benefits enormously from interactive, personalized guidance—the exact strengths that Claude Code provides. Through step-by-step tracing, visual representations, scaffolded problem solving, debugging assistance, real-world analogies, and confidence-building interaction, Claude Code transforms recursion from an intimidating abstract concept into an accessible skill that students can master through practice and exploration. As AI assistants become more integrated into educational settings, they offer a powerful complement to traditional instruction, helping each student develop their understanding at their own pace with support available whenever they need it.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

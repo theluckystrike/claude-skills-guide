@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code React Native Expo Workflow Debugging Guide"
-description: "Master debugging React Native Expo applications with Claude Code. Learn practical workflows for diagnosing runtime errors, native module issues, and build problems efficiently."
+description: "Master debugging React Native Expo applications with Claude Code. Learn practical workflows for diagnosing runtime errors, native module issues, and."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, react-native, expo, debugging, mobile-development, workflow]
@@ -264,3 +264,11 @@ class ErrorBoundary extends React.Component {
 Claude Code significantly enhances debugging productivity in React Native Expo projects. By providing contextual error analysis, suggesting defensive coding patterns, and helping diagnose configuration issues, it transforms debugging from a frustrating chore into a systematic process. Remember to provide complete error context, use diagnostic commands, and follow iterative debugging workflows for the best results.
 
 The key to effective debugging with Claude Code lies in collaboration—provide thorough context, ask specific questions, and implement its suggestions incrementally while verifying each change.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

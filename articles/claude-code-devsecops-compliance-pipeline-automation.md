@@ -152,3 +152,11 @@ Claude Code skills transform compliance from a periodic burden into a continuous
 The key is starting with clear objectives—identify which compliance requirements consume the most time and target those for automation first. As you build confidence in your automated processes, expand coverage to additional controls and frameworks.
 
 Remember that compliance automation augments your security program rather than replacing human oversight. Use Claude Code to handle repetitive verification tasks, freeing your team to focus on complex security challenges that require contextual judgment and creative problem-solving.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code ARIA Label Automation for React Components"
-description: "Learn how to automate ARIA label implementation in React components using Claude Code skills, reducing manual accessibility work while ensuring WCAG compliance."
+description: "Learn how to automate ARIA label implementation in React components using Claude Code skills, reducing manual accessibility work while ensuring WCAG."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-aria-label-automation-for-react-components/
@@ -373,3 +373,10 @@ Automating ARIA label implementation in React components through Claude Code tra
 
 The result is a more inclusive user experience with significantly less manual effort. Start by installing the key skills, defining your accessibility conventions in CLAUDE.md, and gradually automating ARIA label implementation across your React codebase.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

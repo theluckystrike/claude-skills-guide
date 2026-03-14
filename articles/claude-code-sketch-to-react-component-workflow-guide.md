@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Sketch to React Component Workflow Guide"
-description: "Master the workflow of transforming design sketches and wireframes into production-ready React components using Claude Code. Learn practical techniques, skills, and prompting strategies."
+description: "Master the workflow of transforming design sketches and wireframes into production-ready React components using Claude Code. Learn practical."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-sketch-to-react-component-workflow-guide/
@@ -156,3 +156,11 @@ Consider creating a skill specifically for your component generation workflow. A
 ## Conclusion
 
 Claude Code transforms the traditionally manual process of converting design sketches into React components. By providing clear context about your design system, describing visual elements precisely, and specifying interactive behaviors, you can generate production-ready components in minutes rather than hours. The key is structured prompting and maintaining consistent design context across your prompts.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

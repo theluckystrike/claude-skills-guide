@@ -2,7 +2,7 @@
 
 layout: default
 title: "Building Supervisor Worker Agent Architecture Tutorial"
-description: "Learn how to build scalable supervisor worker agent architectures using Claude Code skills, with practical examples for implementing multi-agent coordination patterns."
+description: "Learn how to build scalable supervisor worker agent architectures using Claude Code skills, with practical examples for implementing multi-agent."
 date: 2026-03-14
 author: "theluckystrike"
 permalink: /building-supervisor-worker-agent-architecture-tutorial/
@@ -153,4 +153,12 @@ When building supervisor worker systems with Claude Code, follow these guideline
 
 The supervisor worker architecture provides a robust foundation for building scalable multi-agent systems. By using Claude Code skills throughout the implementation, you can create maintainable, observable, and production-ready systems. Start with simple patterns and evolve your architecture as your requirements grow.
 
-Remember to wrap code examples containing template syntax (double-curly-brace or percent-curly-brace) with raw/endraw tags when writing Jekyll articles to prevent rendering issues.
+Remember to wrap code examples containing template syntax (double-curly or percent-curly patterns) with raw/endraw tags when writing Jekyll articles to prevent rendering issues.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

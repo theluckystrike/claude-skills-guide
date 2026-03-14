@@ -213,3 +213,11 @@ Claude Code transforms the Perl to Python migration from a tedious manual effort
 
 Start with small, isolated scripts to build familiarity with the workflow, then scale to larger applications. Each migration improves your team's expertise and builds a reusable knowledge base for future projects.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

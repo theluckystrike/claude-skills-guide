@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Focus Management Audit Accessibility Guide"
-description: "Master focus management and accessibility auditing with Claude Code skills. Learn practical techniques for keyboard navigation, screen reader support, and WCAG compliance."
+description: "Master focus management and accessibility auditing with Claude Code skills. Learn practical techniques for keyboard navigation, screen reader support."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, focus-management, accessibility, a11y, audit, wcag, keyboard-navigation]
@@ -222,3 +222,11 @@ When auditing focus management, verify compliance with these WCAG 2.1 criteria:
 Focus management is fundamental to web accessibility. By leveraging Claude Code skills and automation tools like axe-core, you can systematically audit and improve focus handling in your applications. Start with the basics—visible focus indicators and logical tab order—then address more complex scenarios like modal focus traps and dynamic content focus management.
 
 Remember: accessible focus management isn't just about compliance; it improves usability for all keyboard users, creating a better experience for everyone.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

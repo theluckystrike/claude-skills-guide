@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Pieces for Developers AI Review Workflow Tool with Claude Code"
+title: "How to Use Pieces for Developers AI Review Workflow Tool."
 description: "Learn how to integrate Pieces for Developers' AI-powered code review capabilities with Claude Code for enhanced development workflows."
 date: 2026-03-14
 author: "Claude Skills Guide"
@@ -210,3 +210,11 @@ app.post('/webhook/pieces-review', (req, res) => {
 Combining Pieces for Developers with Claude Code creates a powerful, AI-driven development workflow. Claude Code handles the intelligent conversation and code generation, while Pieces provides the organizational infrastructure and pattern matching capabilities. Together, they form a comprehensive development assistant that improves code quality while maintaining your personal coding standards and patterns.
 
 Start with simple integrations and gradually build more complex workflows as you become comfortable with the tools' capabilities. The key is to let each tool do what it does best while maintaining seamless communication between them.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

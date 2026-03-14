@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Axolotl QLoRA Training Script Workflow"
-description: "Learn how to use Claude Code skills to streamline Axolotl QLoRA fine-tuning workflows. Practical examples for configuring, running, and monitoring training jobs."
+description: "Learn how to use Claude Code skills to streamline Axolotl QLoRA fine-tuning workflows. Practical examples for configuring, running, and monitoring."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, axolotl, qlora, fine-tuning, machine-learning, training, claude-skills]
@@ -125,3 +125,11 @@ Claude Code transforms Axolotl QLoRA training from a manual, error-prone process
 
 The key is treating Claude Code not just as a chat interface, but as an integrated development partner that understands the specifics of Axolotl configurations, QLoRA parameters, and LLM training best practices. With the right skills loaded, Claude Code becomes invaluable for both newcomers learning fine-tuning and experienced practitioners optimizing their workflows.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

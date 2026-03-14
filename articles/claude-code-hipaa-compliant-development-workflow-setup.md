@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code HIPAA Compliant Development Workflow Setup"
-description: "Set up a HIPAA compliant development workflow with Claude Code. Learn to configure skills for secure coding practices, PHI data handling, audit trails, and compliance automation."
+description: "Set up a HIPAA compliant development workflow with Claude Code. Learn to configure skills for secure coding practices, PHI data handling, audit trails."
 date: 2026-03-14
 categories: [workflows, security, compliance]
 tags: [claude-code, hipaa, healthcare, compliance, security, development-workflow, claude-skills]
@@ -242,4 +242,12 @@ jobs:
 
 5. **Continuous Monitoring**: Implement automated compliance checks that run on every code change, catching violations before they reach production.
 
-By integrating these Claude Code skills into your development workflow, you maintain HIPAA compliance while using AI-assisted development. The key is treating security as code—version controlled, reviewed, and automated like your application code itself.
+By integrating these Claude Code skills into your development workflow, you maintain HIPAA compliance while leveraging AI-assisted development. The key is treating security as code—version controlled, reviewed, and automated like your application code itself.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

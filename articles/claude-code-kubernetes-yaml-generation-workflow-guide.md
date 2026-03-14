@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Kubernetes YAML Generation Workflow Guide"
-description: "Learn how to use Claude Code to generate, validate, and manage Kubernetes YAML manifests efficiently. Includes practical examples for deployments, services, and custom resources."
+description: "Learn how to use Claude Code to generate, validate, and manage Kubernetes YAML manifests efficiently. Includes practical examples for deployments."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-kubernetes-yaml-generation-workflow-guide/
@@ -214,3 +214,11 @@ Here's a complete workflow for using Claude Code with Kubernetes:
 Claude Code transforms Kubernetes manifest management from tedious manual editing to efficient, error-reduced generation. By providing clear context and using custom skills, you can maintain consistent, production-ready configurations across your entire infrastructure.
 
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
