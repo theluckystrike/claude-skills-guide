@@ -1,199 +1,168 @@
 ---
 layout: default
 title: "Claude Code MCP Server Least Privilege Configuration"
-description: "A practical guide to securing your Claude Code MCP servers using the principle of least privilege. Learn configuration best practices for developers."
+description: "Learn how to configure least privilege principles for MCP servers in Claude Code. Practical examples and security best practices for developers."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, claude-skills, mcp, security, least-privilege, configuration]
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
+author: theluckystrike
 permalink: /claude-code-mcp-server-least-privilege-configuration/
 ---
 
-# Claude Code MCP Server Least Privilege Configuration
+The Model Context Protocol (MCP) powers Claude Code's ability to connect with external tools and services. When configuring MCP servers, applying the principle of least privilege significantly reduces your attack surface and prevents unintended data exposure. This guide shows you how to implement least privilege configurations that keep your development environment secure without sacrificing functionality.
 
-[When integrating MCP servers with Claude Code, security should never be an afterthought](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) The principle of least privilege ensures that each server access only what it needs to function, minimizing the attack surface and preventing accidental or malicious data exposure.
+## Understanding Least Privilege in MCP Context
 
-This guide walks through practical configurations for securing your MCP server integrations using least privilege principles.
+Least privilege means granting MCP servers only the permissions they absolutely need to function. Rather than providing broad access to your filesystem, environment variables, or network resources, you restrict capabilities to specific paths, commands, or scopes. This containment strategy protects against compromised servers and prevents accidental modifications to sensitive areas of your project.
 
-## Understanding MCP Server Permissions
+When Claude Code interacts with MCP servers, those servers operate with the permissions you've configured. A misconfigured server with excessive privileges could theoretically access credentials, modify production files, or exfiltrate sensitive data. Implementing least privilege creates defense in depth—even if one component is compromised, the damage remains contained.
 
-[MCP servers extend Claude Code capabilities by providing tools, resources, and prompts](/claude-skills-guide/mcp-server-permission-auditing-best-practices/) Each server can access different parts of your system, which creates potential security boundaries you need to manage carefully.
+## Configuring Server-Scoped Permissions
 
-When you configure an MCP server, you control:
-- File system access scope
-- Network connectivity permissions
-- Environment variable exposure
-- Tool execution capabilities
-- Resource access boundaries
-
-Proper configuration prevents a compromised server from accessing sensitive data beyond its intended function.
-
-## Basic Least Privilege Setup
-
-The foundation of secure MCP configuration starts with explicit allowlists. Instead of granting broad access, specify exactly which paths, commands, and resources each server can touch.
+MCP servers can operate with scoped permissions that limit their operational boundaries. Instead of granting filesystem access across your entire project, specify exact directories where each server can read or write.
 
 ```json
 {
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/workspace/projects"],
-      "env": {}
-    },
-    "super-memory": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-super-memory"],
-      "env": {}
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/workspace/docs"],
+      "description": "Access only the docs directory for documentation tasks"
     }
   }
 }
 ```
 
-This configuration limits the filesystem server to `/workspace/projects` rather than exposing your entire home directory. The super-memory server operates without additional environment variables, preventing credential leakage.
+This configuration restricts the filesystem server to `/workspace/docs` only. The server cannot traverse upward to parent directories or access unrelated project folders. When working with the tdd skill for test-driven development workflows, scoping your filesystem server to test directories prevents accidental modifications to source code during test runs.
 
-## Restricting File System Access
+## Environment Variable Restrictions
 
-The filesystem MCP server is powerful—it can read, write, and navigate your file system. Restrict it to specific working directories.
-
-```json
-{
-  "mcpServers": {
-    "restricted-filesystem": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "./project",
-        "./temp"
-      ]
-    }
-  }
-}
-```
-
-This approach works well when combined with the `pdf` skill for document processing. Keep your source code and output directories separate from sensitive configuration files.
-
-## Environment Variable Management
-
-Environment variables often contain API keys, database credentials, and other secrets. MCP servers inherit the parent process environment by default, which can leak sensitive data.
-
-Create a minimal environment for each server:
+Environment variables often contain API keys, database credentials, and other sensitive values. MCP servers should access only the specific variables they need—not your entire environment.
 
 ```json
 {
   "mcpServers": {
-    "pdf-processor": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-pdf"],
+    "custom-api-server": {
+      "command": "node",
+      "args": ["/path/to/server/index.js"],
       "env": {
-        "NODE_ENV": "production",
-        "PDF_TEMP_DIR": "/tmp/mcp-pdf"
+        "API_KEY": "${CUSTOM_API_KEY}",
+        "ENDPOINT_URL": "${ENDPOINT_URL}"
       }
     }
   }
 }
 ```
 
-This strips away unnecessary variables while providing only what the server requires. The `pdf` skill needs temporary storage but doesn't need your AWS credentials or database connection strings.
+Rather than passing all environment variables to your MCP server, explicitly define only the keys required. Store sensitive values in a `.env` file and load them selectively. The supermemory skill works well with this pattern when managing persistent context across sessions—keep its environment variables isolated from servers that don't need access.
 
-## Network Access Control
+## Command Allowlisting
 
-Some MCP servers make network requests. If your server only processes local data, disable network access entirely.
-
-```json
-{
-  "mcpServers": {
-    "local-ollama": {
-      "command": "ollama",
-      "args": ["serve"],
-      "env": {
-        "OLLAMA_HOST": "127.0.0.1:11434"
-      }
-    }
-  }
-}
-```
-
-Binding to localhost prevents external access. For servers that need network access, use specific IP ranges or hostnames rather than allowing unrestricted access.
-
-## Temporal Permissions with TTD
-
-When working on test-driven development with the `tdd` skill, your MCP servers may need elevated permissions temporarily. Use short-lived access tokens instead of permanent credentials.
+MCP servers that execute shell commands pose particular security risks. Implement command allowlists to restrict which programs your servers can invoke.
 
 ```json
 {
   "mcpServers": {
-    "github-integration": {
+    "git-integration": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": {
-        "GITHUB_TOKEN": "${SHORT_LIVED_TOKEN}"
-      }
+      "args": ["-y", "@modelcontextprotocol/server-git"],
+      "allowedCommands": ["git"],
+      "allowedArgs": ["status", "log", "diff", "commit", "push", "pull"]
     }
   }
 }
 ```
 
-Rotate these tokens regularly and revoke them when the task completes. This prevents long-term exposure if credentials are compromised.
+This configuration permits only specific git operations. The server cannot execute arbitrary commands like `rm -rf` or `curl` to exfiltrate data. When combined with the frontend-design skill for design system management, command allowlisting ensures the skill can run build tools without exposing your system to arbitrary code execution.
 
-## Combining Skills with Minimal Permissions
+## Network Access Controls
 
-The `frontend-design` skill might need access to design tokens and component libraries. Structure your permissions around specific tasks:
+For MCP servers that make external API calls, restrict network access to specific domains and protocols.
 
 ```json
 {
   "mcpServers": {
-    "design-system": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./design-tokens", "./components"],
-      "env": {
-        "DESIGN_TOKEN_PATH": "./design-tokens/tokens.json"
-      }
+    "api-client": {
+      "command": "node",
+      "args": ["/path/to/api-client/index.js"],
+      "allowedDomains": ["api.example.com", "cdn.example.com"],
+      "allowedProtocols": ["https"]
     }
   }
 }
 ```
 
-The server can only access design-related files, not your entire project. This separation protects source code and configuration while enabling the skill to function.
+Restricting network access prevents servers from connecting to command-and-control infrastructure or leaking data to unauthorized endpoints. This approach aligns with SOC 2 compliance requirements for systems handling sensitive data.
 
-## Auditing Your Configuration
+## Temporary File and Cache Management
 
-Regular review of MCP server permissions catches drift and unnecessary access grants.
+MCP servers often create temporary files or cache data during operation. Configure isolated temporary directories to prevent data persistence beyond necessary bounds.
 
-1. List all configured servers in your `claude.json`
-2. Verify each server's access scope matches its current use case
-3. Remove unused servers entirely
-4. Check environment variables for stale credentials
-5. Test that reduced permissions don't break functionality
-
-```bash
-# Review active servers
-grep -A 5 "mcpServers" ~/.claude.json
-
-# Check for environment variables that might contain secrets
-grep -E "(API_KEY|TOKEN|SECRET|PASSWORD)" ~/.claude.json
+```json
+{
+  "mcpServers": {
+    "code-analysis": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-code-analysis"],
+      "tempDir": "/tmp/mcp-code-analysis",
+      "clearOnExit": true
+    }
+  }
+}
 ```
 
-The `super-memory` skill can help track permission changes over time, creating an audit trail of what access was granted and when it changed.
+Setting `clearOnExit: true` ensures temporary files vanish when the server terminates. This pattern proves valuable when using the pdf skill for document processing—temporary extracts and processed files won't persist on disk after tasks complete.
 
-## Best Practices Summary
+## Audit Logging and Monitoring
 
-- Explicitly allowlist paths and resources instead of using wildcards
-- Run each server with minimal environment variables
-- Bind network services to localhost when possible
-- Use short-lived credentials for sensitive operations
-- Regularly audit and remove unused server configurations
-- Test permission changes in development before production
+Even with restrictive configurations, maintaining visibility into MCP server behavior helps detect anomalies. Enable detailed logging for security review.
 
-Applying least privilege to your Claude Code MCP servers significantly reduces risk without sacrificing functionality. Start with restrictive permissions and expand only when specific tasks require additional access.
+```json
+{
+  "mcpServers": {
+    "database": {
+      "command": "node",
+      "args": ["/path/to/db-server/index.js"],
+      "logFile": "/var/log/mcp/database-server.log",
+      "logLevel": "verbose"
+    }
+  }
+}
+```
+
+Regularly review logs for unexpected file access patterns, unusual command executions, or network connections to unknown domains. Rotate logs periodically and store them in a secure location separate from your development environment.
+
+## Practical Implementation Workflow
+
+Start by auditing your current MCP server configurations. Identify each server's minimum required permissions by analyzing its actual usage patterns rather than assuming default access levels works.
+
+1. **Inventory existing servers**: List all configured MCP servers and their current permissions
+2. **Analyze required access**: Observe each server's behavior during normal operations
+3. **Apply restrictive configs**: Update configurations to match observed requirements
+4. **Test functionality**: Verify servers continue functioning with tightened permissions
+5. **Monitor and iterate**: Review logs and adjust configurations as usage patterns evolve
+
+This iterative approach prevents lockout while progressively hardening your environment. The frontend-design skill and similar specialized skills often require fewer permissions than generic servers—tailor configurations to each server's specific purpose.
+
+## Common Configuration Mistakes
+
+Avoid these frequent errors when implementing least privilege:
+
+- **Overly broad filesystem scopes**: Granting access to entire home directories instead of specific project folders
+- **Wildcard command permissions**: Using `*` in allowed commands list defeats the purpose of allowlisting
+- **Inherited environment variables**: Passing entire process environment without filtering
+- **Missing log configurations**: Neglecting audit trails makes anomaly detection impossible
+- **Static configurations**: Failing to update permissions when usage patterns change
+
+## Conclusion
+
+Least privilege configuration for MCP servers requires initial effort but delivers lasting security benefits. By scoping filesystem access, restricting environment variables, allowlisting commands, controlling network access, managing temporary files, and maintaining audit logs, you create a defense-in-depth architecture that protects your development workflow. Start with the most permissive servers and progressively restrict permissions until you find the balance between security and functionality your project requires.
+
 
 ## Related Reading
 
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
-- [Claude Code MCP Tool Allow and Deny Lists](/claude-skills-guide/claude-code-mcp-tool-allow-and-deny-lists/)
-- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
-- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [MCP Servers vs Claude Skills: What's the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/)
+- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/)
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

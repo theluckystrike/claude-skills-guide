@@ -1,156 +1,292 @@
 ---
 layout: default
 title: "Claude Code MCP Server Penetration Testing Guide"
-description: "Learn how to penetration test MCP servers for Claude Code. Discover security testing methodologies, common vulnerabilities, and practical assessment."
+description: "A practical guide to penetration testing your Model Context Protocol servers. Learn to identify vulnerabilities in MCP server implementations using."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, claude-skills, mcp, penetration-testing, security, vulnerability-assessment]
-author: "Claude Skills Guide"
+categories: [tutorials]
+tags: [claude-code, mcp, penetration-testing, security, mcp-server]
+author: theluckystrike
 reviewed: true
-score: 8
+score: 7
 permalink: /claude-code-mcp-server-penetration-testing-guide/
 ---
 
 # Claude Code MCP Server Penetration Testing Guide
 
-When deploying MCP servers in production, security testing becomes essential. This guide covers penetration testing methodologies specifically tailored for Model Context Protocol servers integrated with Claude Code. You'll learn how to identify vulnerabilities before attackers do.
+Model Context Protocol (MCP) servers extend Claude Code's capabilities by connecting to external services, databases, and APIs. Since these servers often handle sensitive data and execute commands on your behalf, testing them for security vulnerabilities is essential. This guide walks you through penetration testing your MCP server implementations using Claude Code skills and practical testing methodologies.
 
-## Why MCP Servers Need Security Testing
+## Understanding Your MCP Server Attack Surface
 
-MCP servers act as bridges between Claude Code and external systems. A misconfigured server can expose sensitive data, allow unauthorized access, or enable privilege escalation. Unlike traditional web applications, MCP servers expose tool-based interfaces that require specialized testing approaches. For an introduction to MCP server setup before testing, see the [Claude Code MCP server setup complete guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/).
+Before testing, map out what your MCP server exposes. MCP servers typically provide tools that Claude Code can invoke—these tools may execute shell commands, query databases, call external APIs, or access file systems. Each tool represents a potential attack vector if input validation is insufficient.
 
-The attack surface differs from typical APIs. Instead of HTTP endpoints, you're testing stdio connections, SSE streams, and the tool invocation patterns that Claude Code uses. Understanding these patterns helps you design effective tests.
+Common vulnerability categories in MCP servers include:
 
-## Testing Authentication Mechanisms
+- **Command injection**: Tools that execute system commands without proper sanitization
+- **Path traversal**: File access tools that allow reading outside intended directories
+- **SQL injection**: Database tools that concatenate user input into queries
+- **Authentication bypass**: Servers that fail to verify credentials properly
+- **Excessive privilege**: Tools that perform operations beyond their stated purpose
 
-Many MCP servers require authentication tokens or API keys. Test how your server handles invalid credentials, expired tokens, and missing authentication headers. Here's a practical approach using curl to test stdio-based servers:
+## Setting Up Your Testing Environment
+
+Isolate your testing from production systems. Create a dedicated test environment that mirrors your production MCP server configuration without connecting to real services or containing sensitive data.
 
 ```bash
-# Test with invalid token
-echo '{"jsonrpc":"2.0","method":"tools/list","params":{},"id":1}' | \
-  MCP_AUTH_TOKEN=invalid_token node server.js
+# Clone your MCP server for testing
+git clone git@github.com:your-org/your-mcp-server.git
+cd your-mcp-server
+
+# Create a test configuration
+cp config/production.json config/test.json
+# Edit test.json to use mock services and test credentials
 ```
 
-Check for information disclosure in error messages. Servers should never reveal internal paths, configuration details, or stack traces in authentication failure responses. The supermemory skill demonstrates proper error handling—it returns generic messages while logging detailed errors server-side.
+The supermemory skill helps you maintain a testing checklist across sessions. Before starting a penetration test, create a comprehensive test plan:
 
-## Input Validation Testing
+```
+/supermemory
+Remember this testing checklist for MCP server penetration testing:
+1. Input validation - test all tool parameters with special characters
+2. Authentication - verify credential handling
+3. Authorization - confirm least-privilege execution
+4. Data exposure - check for sensitive data in responses
+5. Logging - review what gets logged and where
+```
 
-MCP servers receive structured JSON-RPC messages containing parameters that flow to downstream systems. Inject unexpected data types, oversized payloads, and special characters to test reliable. Focus on these areas:
+## Testing Input Validation
 
-- **Tool parameter types**: Send strings where integers expected, arrays where objects required
-- **Array length limits**: Submit arrays with thousands of elements
-- **String content**: Test with null bytes, control characters, and Unicode edge cases
+The most common vulnerability in MCP servers is insufficient input validation. Test each tool parameter with payloads designed to trigger unexpected behavior.
 
-```python
-# Example: Testing parameter validation
-malicious_payload = {
-    "jsonrpc": "2.0",
-    "method": "tools/call",
-    "params": {
-        "name": "database_query",
-        "arguments": {
-            "query": "'; DROP TABLE users; --",
-            "limit": "invalid"  # String instead of integer
-        }
-    },
-    "id": 2
+### Command Injection Testing
+
+If your MCP server includes a tool that runs shell commands, test it with command separators:
+
+```
+# Test input for command injection
+"; ls -la /"
+"| cat /etc/passwd"
+"`whoami`"
+"$(whoami)"
+```
+
+A properly validated server should reject these inputs or sanitize them before passing to shell execution functions. Here's a test case you can run:
+
+```javascript
+// test-command-injection.js
+const testCases = [
+  "; echo injected",
+  "| echo injected",
+  "`echo injected`",
+  "$(echo injected)",
+  "\nwhoami",
+];
+
+for (const payload of testCases) {
+  try {
+    const result = await mcpClient.callTool('run_command', { 
+      command: payload 
+    });
+    console.log(`Payload: ${payload}`);
+    console.log(`Result: ${result}`);
+    // If result contains "injected", vulnerability exists
+  } catch (e) {
+    console.log(`Payload blocked: ${payload}`);
+  }
 }
 ```
 
-If your server passes these inputs directly to database queries or shell commands without sanitization, you have critical vulnerabilities. The [tdd skill emphasizes writing validation tests](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)—apply the same mindset to security testing.
+### Path Traversal Testing
 
-## Authorization and Privilege Escalation
+For file system tools, test whether users can access files outside intended directories:
 
-Test whether users can access tools beyond their intended scope. Create test accounts with limited permissions, then attempt to invoke administrative tools or access restricted resources.
+```
+# Path traversal test payloads
+../../../etc/passwd
+..%2F..%2F..%2Fetc%2Fpasswd
+/etc/../../etc/passwd
+```
 
-Document your server's permission model clearly. Claude Code's permissions system works alongside MCP server authorization, but the server must enforce its own access controls. Check for:
+The frontend-design skill can help you build a test UI that systematically probes these vulnerabilities:
 
-- Missing permission checks on sensitive tools
-- IDOR (Insecure Direct Object Reference) vulnerabilities
-- Privilege escalation through parameter manipulation
+```
+/frontend-design
+Create a simple React form with input fields for each tool parameter.
+Add a "Run Tests" button that iterates through a predefined list of 
+test payloads and displays pass/fail results for each.
+```
 
-## Network Security Assessment
+## Authentication and Authorization Testing
 
-Evaluate how your MCP server handles network-level attacks:
-
-- **TLS configuration**: Verify proper certificate validation
-- **Connection limits**: Test resource exhaustion handling
-- **Timeout behavior**: Ensure connections close properly under stress
-
-For SSE and WebSocket transports, examine how the server handles concurrent connections and message flooding. Use tools like `websocketd` for quick testing:
+Verify that your MCP server properly enforces authentication on all endpoints:
 
 ```bash
-# Test WebSocket resilience
-for i in {1..100}; do
-  wscat -c ws://localhost:8080/mcp &
-done
+# Test unauthenticated access
+curl -X POST http://localhost:3000/mcp/tools \
+  -H "Content-Type: application/json" \
+  -d '{"name": "sensitive_tool"}'
+
+# Should return 401 Unauthorized, not tool results
 ```
 
-## Secure Configuration Review
+Test authorization by creating multiple users with different privilege levels and verifying they can only access permitted tools:
 
-Review your server's configuration for common misconfigurations:
+```javascript
+// test-authorization.js
+async function testAuthorization() {
+  const lowPrivUser = await authenticate('testuser', 'password123');
+  const highPrivUser = await authenticate('admin', 'adminpass');
+  
+  // Low-priv user should be denied
+  const lowPrivResult = await lowPrivUser.callTool('admin_tool', {});
+  console.log('Low priv result:', lowPrivResult);
+  // Expect: { error: 'Unauthorized' }
+  
+  // High-priv user should succeed
+  const highPrivResult = await highPrivUser.callTool('admin_tool', {});
+  console.log('High priv result:', highPrivResult);
+  // Expect: actual tool results
+}
+```
 
-| Setting | Secure Value | Risky Value |
-|---------|--------------|-------------|
-| Debug mode | Disabled | Enabled |
-| Logging level | Error only | Debug |
-| CORS headers | Restricted | Wildcard |
-| File access | Whitelist only | Unrestricted |
+## Integration Testing with the TDD Skill
 
-The security-code-review-checklist-automation skill can help systematize these reviews. It generates comprehensive checklists based on your server's technology stack.
+Use the tdd skill to build a comprehensive test suite for your MCP server:
 
-## Tool Call Pattern Analysis
+```
+/tdd
+Create integration tests for our MCP server that verify:
+1. Each tool rejects invalid input with appropriate error messages
+2. Authentication is enforced on all endpoints
+3. Authorization checks prevent privilege escalation
+4. Rate limiting prevents brute force attacks
+5. Sensitive data is never logged
+```
 
-Claude Code communicates with MCP servers through structured tool calls. Analyze your server's tool definitions for security gaps:
+The skill generates tests covering edge cases you might miss:
 
-- Does each tool document required permissions?
-- Are dangerous tools (file system access, command execution) properly gated?
-- Do tools validate all input parameters before processing?
+```javascript
+// tests/security/input-validation.test.js
+describe('Tool Input Validation', () => {
+  it('rejects SQL injection in database query tool', async () => {
+    const maliciousInput = "'; DROP TABLE users; --";
+    await expect(
+      mcpClient.callTool('query', { sql: maliciousInput })
+    ).rejects.toMatchObject({ 
+      error: /invalid input/i 
+    });
+  });
 
-Review the claude-code-mcp-server-least-privilege-configuration guide for implementing principle-of-least-privilege in your tool definitions.
+  it('rejects XSS payloads in string parameters', async () => {
+    const xssPayload = '<script>alert(1)</script>';
+    await expect(
+      mcpClient.callTool('format_string', { input: xssPayload })
+    ).rejects.toMatchObject({ 
+      error: /invalid input/i 
+    });
+  });
 
-## Incident Response Considerations
+  it('enforces maximum input length', async () => {
+    const longInput = 'a'.repeat(10001);
+    await expect(
+      mcpClient.callTool('process_text', { text: longInput })
+    ).rejects.toMatchObject({ 
+      error: /too long|max length/i 
+    });
+  });
+});
+```
 
-Penetration testing should include testing your detection and response capabilities. Verify that your server:
+## Documenting Findings with the PDF Skill
 
-- Logs authentication attempts with sufficient detail
-- Detects and blocks rapid-fire tool invocations
-- Alerts on suspicious patterns
+After testing, use the pdf skill to generate a professional security report:
 
-The claude-code-mcp-server-incident-response-guide covers building automated responses to detected anomalies.
+```
+/pdf
+Create a penetration test report with sections for:
+1. Executive Summary
+2. Methodology
+3. Findings (Critical, High, Medium, Low)
+4. Proof of Concept Code
+5. Remediation Recommendations
+6. Conclusion
 
-## Automating Security Tests
+Use a clean, professional layout suitable for stakeholders.
+```
 
-Integrate penetration testing into your CI/CD pipeline. Create test suites that run security checks on every deployment:
+The pdf skill generates formatted reports you can share with your team:
+
+```javascript
+// generate-report.js
+import { PDFDocument, rgb } from 'pdf-lib';
+
+async function generateReport(findings) {
+  const pdfDoc = await PDFDocument.create();
+  const page = pdfDoc.addPage([600, 800]);
+  
+  // Add findings to PDF
+  const { height } = page.getSize();
+  let y = height - 50;
+  
+  page.drawText('Penetration Test Report', { 
+    x: 50, y, size: 20, color: rgb(0, 0, 0) 
+  });
+  y -= 40;
+  
+  for (const finding of findings) {
+    page.drawText(`${finding.severity}: ${finding.title}`, {
+      x: 50, y, size: 14, color: getSeverityColor(finding.severity)
+    });
+    y -= 20;
+    page.drawText(finding.description, { x: 50, y, size: 12 });
+    y -= 40;
+  }
+  
+  const pdfBytes = await pdfDoc.save();
+  return pdfBytes;
+}
+```
+
+## Continuous Security Testing
+
+Integrate security tests into your development workflow:
 
 ```yaml
-# Example: Security test workflow
-security_tests:
-  script:
-    - npm run test:auth
-    - npm run test:input-validation
-    - npm run test:authorization
-  stage: security
-  only:
-    - main
-    - release/*
+# .github/workflows/security-test.yml
+name: MCP Server Security Tests
+
+on: [push, pull_request]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run security tests
+        run: |
+          npm install
+          npm run test:security
+      
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-report
+          path: reports/security/
 ```
 
-The github-actions-composite-actions skill helps build reusable security testing workflows that scale across projects.
+Run these tests on every commit to catch regressions early.
 
 ## Conclusion
 
-Regular penetration testing of your MCP servers protects both your infrastructure and users. Start with authentication and input validation—these catch the majority of vulnerabilities. Gradually expand testing to authorization, network security, and configuration review.
-
-Build security testing into your development lifecycle using the skills and workflows available in the Claude Code ecosystem. The automation patterns you create will pay dividends in reduced vulnerabilities and faster remediation.
+Penetration testing your MCP servers protects both your application and your users. Use the tdd skill to build comprehensive test suites, supermemory to maintain testing knowledge across sessions, and pdf to generate professional reports. Regular security testing—combined with input validation, proper authentication, and least-privilege tool design—keeps your MCP server implementations secure.
 
 ---
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — Understand the MCP server architecture you'll be testing before designing your penetration test plan
-- [Claude Code for Dependency Audit Automation](/claude-skills-guide/claude-code-for-dependency-audit-automation/) — Extend your security posture with automated dependency vulnerability scanning alongside MCP testing
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Apply TDD discipline to security test writing for more reliable vulnerability detection
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Diagnose unexpected MCP server behaviors that may indicate security misconfigurations
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Build a complete developer skill stack
+- [Claude Code Integration Testing Strategy Guide](/claude-skills-guide/claude-code-integration-testing-strategy-guide/) — Comprehensive testing approaches
+- [Claude Skills Token Optimization](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Optimize skill usage in your workflows
+- [MCP Server Configuration Management](/claude-skills-guide/ansible-mcp-server-configuration-management/) — Secure deployment practices
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

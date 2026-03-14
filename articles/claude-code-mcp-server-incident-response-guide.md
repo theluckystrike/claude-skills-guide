@@ -1,248 +1,200 @@
 ---
 layout: default
 title: "Claude Code MCP Server Incident Response Guide"
-description: "Learn how to build incident response workflows for Claude Code MCP servers. Detect failures, automate recovery, and maintain reliable AI agent operations."
+description: "A practical guide to troubleshooting and resolving MCP server issues in Claude Code. Includes diagnostic commands, log analysis, and recovery procedures."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, claude-skills, mcp, incident-response, devops, reliability]
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
+author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, mcp-server, troubleshooting, incident-response, debugging]
 permalink: /claude-code-mcp-server-incident-response-guide/
 ---
 
 # Claude Code MCP Server Incident Response Guide
 
-[When your MCP servers fail during a critical workflow](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), the impact ripples through your entire AI-assisted development process. Whether it's a database connection timeout, an API rate limit, or a crashed subprocess, incidents happen. This guide shows you how to build reliable incident detection, alerting, and recovery systems for your MCP server infrastructure.
+When your MCP server stops responding or throws errors during a Claude Code session, productivity comes to a halt. This guide provides a systematic approach to diagnosing, troubleshooting, and recovering from MCP server incidents using practical commands and recovery procedures.
 
-## Identifying Common MCP Server Failure Modes
+## Identifying MCP Server Failures
 
-MCP servers can fail in several distinct ways, and recognizing these patterns helps you design targeted responses.
+MCP (Model Context Protocol) servers extend Claude Code's capabilities by connecting to external tools and services. Common failure indicators include:
 
-**Connection timeouts** occur when your MCP server cannot reach its backend service within the expected window. This often happens with external APIs or database servers under load.
+- Server timeout errors after startup
+- Authentication failures when connecting to services
+- Tool call failures with "server not available" messages
+- Unexpected disconnections during active sessions
 
-**Process crashes** happen when the underlying server executable terminates unexpectedly. [The `tdd` skill or any skill running test suites frequently encounters this](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) when tests consume too much memory.
+Before diving into fixes, verify that the issue is indeed MCP-related. Run this command in your terminal:
 
-**Permission errors** surface when file system access or network permissions change—particularly relevant when using skills like `frontend-design` that generate files across multiple directories.
+```bash
+claude --verbose
+```
 
-**Resource exhaustion** manifests as out-of-memory errors or disk full conditions. The `pdf` skill, for example, can consume significant memory when processing large documents.
+Look for error messages containing "MCP" or the specific server name. The verbose output shows connection attempts and helps narrow down whether the failure occurs at startup or during runtime.
 
-## Setting Up Health Check Endpoints
+## Initial Diagnostic Steps
 
-The first line of defense involves implementing health checks that Claude Code can query. Most MCP servers support stdio communication, but adding a dedicated health endpoint provides better observability.
+### Check Server Status
 
-Create a simple health check using a shell script:
+The first step is verifying which MCP servers are currently registered and their status. Claude Code stores server configurations in your user directory. Check the configuration file:
+
+```bash
+cat ~/.claude/settings.json | grep -A 5 "mcp"
+```
+
+This reveals your active MCP server configurations. If servers appear missing from the output, the configuration may have been corrupted or overwritten.
+
+### Review Server Logs
+
+MCP servers typically write logs to standard error output. When starting Claude Code, capture stderr to a file for analysis:
+
+```bash
+claude 2> mcp-debug.log
+```
+
+Search the log for error patterns:
+
+```bash
+grep -i "error\|exception\|timeout" mcp-debug.log
+```
+
+Most MCP servers follow predictable error patterns. Connection timeouts usually indicate network issues or server unavailability, while authentication errors point to credential problems.
+
+## Common Incident Types and Solutions
+
+### Connection Timeout Issues
+
+If an MCP server fails to connect within the expected timeout window, the server may be unreachable or overloaded. For instance, if you're using the filesystem MCP server and it times out, try restarting it:
+
+```bash
+# Kill existing server process
+pkill -f "mcp-server-filesystem"
+
+# Restart with explicit path
+npx @modelcontextprotocol/server-filesystem /your/project/path
+```
+
+The `tdd` skill and `pdf` skill both rely on MCP servers for file operations. When these fail, your testing and documentation workflows stall.
+
+### Authentication Failures
+
+Many MCP servers require API keys or tokens. If authentication fails, check your environment variables:
+
+```bash
+echo $OPENAI_API_KEY
+echo $ANTHROPIC_API_KEY
+```
+
+For servers requiring OAuth or API tokens, ensure credentials are set before starting Claude Code. Create a startup script that exports necessary variables:
 
 ```bash
 #!/bin/bash
-# mcp-health-check.sh
-
-# Check if MCP server process is running
-if ! pgrep -f "my-mcp-server" > /dev/null; then
-    echo "{\"status\": \"down\", \"reason\": \"process_not_found\"}"
-    exit 1
-fi
-
-# Check memory usage (exit if over 80% of 2GB limit)
-MEMORY_USAGE=$(ps -o rss= -p $(pgrep -f "my-mcp-server") | awk '{print $1/1024}')
-if (( $(echo "$MEMORY_USAGE > 1638" | bc -l) )); then
-    echo "{\"status\": \"degraded\", \"reason\": \"high_memory\", \"usage_mb\": $MEMORY_USAGE}"
-    exit 1
-fi
-
-echo "{\"status\": \"healthy\", \"uptime_seconds\": $(uptime -p)}"
+export GITHUB_TOKEN="your-token-here"
+export NOTION_API_KEY="your-key-here"
+claude "$@"
 ```
 
-Integrate this into your MCP server configuration:
+### Server Process Crashes
 
-```json
-{
-  "mcpServers": {
-    "custom-api": {
-      "command": "node",
-      "args": ["/path/to/server/index.js"],
-      "env": {
-        "PORT": "3000"
-      }
-    }
-  }
-}
-```
-
-## Building Automatic Recovery Mechanisms
-
-Recovery automation reduces manual intervention and keeps your AI workflows running. The key is implementing idempotent restart logic that handles various failure scenarios gracefully.
-
-For process restarts, use a supervisor pattern:
-
-```javascript
-// mcp-supervisor.js
-const { spawn } = require('child_process');
-const MAX_RESTARTS = 3;
-const RESTART_WINDOW = 60000; // 1 minute
-
-class MCPSupervisor {
-  constructor(serverName, command, args) {
-    this.serverName = serverName;
-    this.command = command;
-    this.args = args;
-    this.restarts = [];
-    this.process = null;
-  }
-
-  start() {
-    this.process = spawn(this.command, this.args, {
-      stdio: ['pipe', 'pipe', 'pipe']
-    });
-
-    this.process.on('exit', (code, signal) => {
-      this.handleExit(code, signal);
-    });
-
-    this.process.on('error', (err) => {
-      console.error(`[${this.serverName}] Process error:`, err.message);
-    });
-  }
-
-  handleExit(code, signal) {
-    const now = Date.now();
-    this.restarts.push(now);
-    
-    // Clean old restart records outside the window
-    this.restarts = this.restarts.filter(t => now - t < RESTART_WINDOW);
-
-    if (this.restarts.length > MAX_RESTARTS) {
-      console.error(`[${this.serverName}] Too many restarts, giving up`);
-      this.alertOnCall("MCP server crashing repeatedly");
-      return;
-    }
-
-    console.log(`[${this.serverName}] Restarting (attempt ${this.restarts.length})`);
-    setTimeout(() => this.start(), Math.min(1000 * Math.pow(2, this.restarts.length), 30000));
-  }
-
-  alertOnCall(message) {
-    // Integrate with PagerDuty, Slack, or custom webhook
-    fetch(process.env.ALERT_WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text: `[MCP] ${this.serverName}: ${message}` })
-    });
-  }
-}
-```
-
-This supervisor implements exponential backoff, preventing rapid restart cycles that could mask deeper issues. It also triggers alerts when a server enters a crash loop—useful for the `supermemory` skill or any persistent context server that must remain available.
-
-## Implementing Circuit Breaker Patterns
-
-When downstream services fail, your MCP server should stop hammering them and gracefully degrade. Circuit breakers provide this protection.
-
-```python
-# mcp_circuit_breaker.py
-import time
-from enum import Enum
-
-class CircuitState(Enum):
-    CLOSED = "closed"      # Normal operation
-    OPEN = "open"          # Failing, reject requests
-    HALF_OPEN = "half_open"  # Testing recovery
-
-class CircuitBreaker:
-    def __init__(self, failure_threshold=5, recovery_timeout=30):
-        self.failure_threshold = failure_threshold
-        self.recovery_timeout = recovery_timeout
-        self.failures = 0
-        self.state = CircuitState.CLOSED
-        self.last_failure_time = None
-
-    def call(self, func, *args, **kwargs):
-        if self.state == CircuitState.OPEN:
-            if time.time() - self.last_failure_time > self.recovery_timeout:
-                self.state = CircuitState.HALF_OPEN
-            else:
-                raise Exception("Circuit breaker OPEN")
-
-        try:
-            result = func(*args, **kwargs)
-            self.on_success()
-            return result
-        except Exception as e:
-            self.on_failure()
-            raise e
-
-    def on_success(self):
-        self.failures = 0
-        self.state = CircuitState.CLOSED
-
-    def on_failure(self):
-        self.failures += 1
-        self.last_failure_time = time.time()
-        if self.failures >= self.failure_threshold:
-            self.state = CircuitState.OPEN
-```
-
-This pattern works well with Python-based MCP servers, especially those handling external API calls. When the `xlsx` skill calls external spreadsheet APIs or the `pdf` skill processes documents from cloud storage, circuit breakers prevent cascading failures.
-
-## Creating Incident Response Runbooks
-
-Every good incident response strategy includes runbooks—documented procedures your team (or automated systems) follow when issues arise.
-
-**Runbook: MCP Server Unresponsive**
-
-1. Check process status: `pgrep -f "server-name"`
-2. Review recent logs: `tail -100 /var/log/mcp-server.log`
-3. Verify network connectivity to backend services
-4. If process dead, collect core dump if available
-5. Restart service and monitor for 5 minutes
-6. Document incident in your tracking system
-
-**Runbook: High Memory Usage**
-
-1. Identify process: `ps aux | grep mcp-server | sort -k4 -r`
-2. Capture heap dump if applicable
-3. Check for memory leaks using `memory_profiler`
-4. Restart with reduced concurrent request limit
-5. Consider scaling horizontally if consistent high load
-
-## Monitoring and Alerting Integration
-
-For production MCP server deployments, integrate with your existing monitoring stack. A custom skill can prompt Claude to query your Prometheus metrics endpoint and surface relevant data:
-
-```
-Check the Prometheus metrics endpoint for MCP server cpu, memory, and request_duration histograms. Report any anomalies.
-```
-
-Connect to tools like Datadog, Grafana, or custom dashboards. Set up alerts for:
-
-- Request latency exceeding 5 seconds
-- Error rate above 1% over 5 minutes
-- Memory usage above 80% sustained for 2 minutes
-- Process restarts exceeding 3 per hour
-
-## Testing Your Incident Response
-
-Use chaos engineering principles to validate your response procedures. Simulate failures directly in your terminal:
+When an MCP server process crashes unexpectedly, it often leaves orphaned processes. Clean up before restarting:
 
 ```bash
-# Kill random MCP processes to test supervisor
-pkill -f "mcp-server" --signal=KILL
-# Verify recovery within expected timeframe
+# List all node processes related to MCP
+ps aux | grep mcp
+
+# Kill specific server
+kill -9 $(ps aux | grep "server-name" | grep -v grep | awk '{print $2}')
 ```
 
-Regular testing ensures your incident response playbook remains current and your team stays practiced.
+The `frontend-design` skill and other visual tools depend on stable MCP server processes. Crashes here affect design iteration workflows.
 
-## Conclusion
+## Advanced Recovery Procedures
 
-Building incident response capabilities for MCP servers protects your AI-assisted development workflows from unexpected failures. Start with health checks, implement automatic recovery with supervisors, add circuit breakers for resilience, and maintain tested runbooks. These patterns work whether you're running a single `tdd` skill test server or a complex multi-service infrastructure.
+### Configuration Reset
 
-The investment in thorough incident response pays dividends in reduced downtime and faster recovery when issues inevitably occur.
+If diagnostics reveal configuration corruption, reset the MCP settings:
+
+```bash
+# Backup current config
+cp ~/.claude/settings.json ~/.claude/settings.json.backup
+
+# Remove MCP section (Claude will recreate on next startup)
+# Edit settings.json and remove mcpServers object
+```
+
+After resetting, restart Claude Code with verbose logging to capture the fresh configuration process.
+
+### Skill Dependency Verification
+
+Some skills depend on specific MCP servers. The `supermemory` skill requires memory server connectivity, while database skills need their respective MCP servers running. Verify skill requirements:
+
+```bash
+# List available skills
+ls ~/.claude/skills/
+
+# Check skill dependencies
+cat ~/.claude/skills/skill-name.md | grep -i "requires\|mcp"
+```
+
+When troubleshooting, disable non-essential skills temporarily to isolate the problematic server. Re-enable them one at a time after recovery.
+
+### Port Conflicts
+
+MCP servers bind to specific ports. Port conflicts cause immediate startup failures. Check for existing listeners:
+
+```bash
+lsof -i :port-number
+```
+
+Common MCP ports include 3000, 8080, and 5432. If another process occupies the required port, either terminate that process or reconfigure the MCP server to use a different port.
+
+## Prevention Strategies
+
+### Health Check Scripts
+
+Implement a startup health check that verifies MCP server availability before launching Claude Code:
+
+```bash
+#!/bin/bash
+# mcp-healthcheck.sh
+
+for server in "server-filesystem" "server-github" "server-brave-search"; do
+  if ! pgrep -f "$server" > /dev/null; then
+    echo "Warning: $server not running"
+  fi
+done
+```
+
+Run this script before starting Claude Code sessions that require specific MCP functionality.
+
+### Configuration Versioning
+
+Track MCP configuration changes in git. Add your settings to version control:
+
+```bash
+cd ~/.claude
+git init
+git add settings.json
+git commit -m "MCP configuration baseline"
+```
+
+This enables quick rollback if a configuration change introduces problems.
+
+### Monitoring and Alerts
+
+For teams running MCP servers in production environments, implement monitoring. The `algorithmic-art` skill and similar creative tools benefit from uptime monitoring when integrated into production pipelines.
+
+## Summary
+
+MCP server incidents disrupt Claude Code workflows but follow recognizable patterns. Start with verbose logging to identify the failure type, then apply the appropriate recovery procedure. Connection issues yield to restart and network checks, while authentication problems require credential verification. For complex issues, configuration reset combined with health check scripts provides a reliable recovery path.
+
+Regular maintenance—including configuration versioning, health checks, and monitoring—prevents incidents before they impact productivity. Keep your MCP servers running smoothly and maintain uninterrupted development sessions.
+
 
 ## Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
-- [MCP Server Logging Audit Trail Security Guide](/claude-skills-guide/mcp-server-logging-audit-trail-security-guide/)
-- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
-- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+- [MCP Servers vs Claude Skills: What's the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/)
+- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/)
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

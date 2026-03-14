@@ -206,7 +206,7 @@ Review each file for common issues and output a summary.
 EOF
 ```
 
-### 3. Leverage Claude Skills in CI
+### 3. Use Claude Skills in CI
 
 Several Claude skills work particularly well in automated contexts:
 
@@ -215,11 +215,11 @@ Several Claude skills work particularly well in automated contexts:
 - **frontend-design** — Validate UI component implementations
 - **code-review** — Specialized code review workflows
 
-Load specific skills using the `--skill` flag:
+Invoke skills by name in your prompts:
 
 ```bash
-claude --skill tdd --print << 'EOF'
-Generate unit tests for the new files added in this changeset.
+claude --print << 'EOF'
+Use the tdd skill to generate unit tests for the new files added in this changeset.
 EOF
 ```
 

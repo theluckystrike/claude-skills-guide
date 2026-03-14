@@ -1,194 +1,261 @@
 ---
 layout: default
 title: "Claude Code API Authentication Patterns Guide"
-description: "A practical guide to implementing API authentication patterns in Claude Code skills. Learn OAuth, API keys, token management, and secure credential."
+description: "Learn how to implement secure API authentication patterns with Claude Code: API keys, JWT tokens, OAuth 2.0, and best practices for securing your APIs."
 date: 2026-03-14
-author: "theluckystrike"
 categories: [guides]
-tags: [claude-code, authentication, api, security, claude-skills]
-permalink: /claude-code-api-authentication-patterns-guide/
+tags: [claude-code, api, authentication, security, jwt, oauth]
+author: "theluckystrike"
 reviewed: true
 score: 7
+permalink: /claude-code-api-authentication-patterns-guide/
 ---
 
 # Claude Code API Authentication Patterns Guide
 
-When building Claude skills that interact with external APIs—whether integrating with GitHub, Slack, or custom services—authentication becomes a critical consideration. This guide covers practical patterns for handling API credentials securely within Claude Code skills, with examples you can apply immediately to skills like frontend-design, pdf, tdd, or supermemory.
+Building secure APIs requires implementing robust authentication patterns that protect your data while providing seamless access to legitimate users. Claude Code can help you implement, test, and document various API authentication patterns efficiently. This guide covers the most common authentication methods and how to implement them effectively.
 
-## Understanding Authentication in Skill Context
+## Why API Authentication Matters
 
-Claude skills operate as instruction sets that shape model behavior. When a skill needs to call external APIs, the authentication mechanism must be built into the skill's design. Unlike traditional applications where you might store credentials in environment variables or config files, skills require a more deliberate approach to credential management.
+API authentication verifies the identity of clients accessing your services. Without proper authentication, your APIs are vulnerable to unauthorized access, data breaches, and abuse. Common authentication patterns include API keys, JWT tokens, OAuth 2.0, and mutual TLS. Each pattern has specific use cases, trade-offs, and implementation requirements.
 
-The skill format supports two primary authentication patterns: inline credential definition and external credential referencing. Each serves different use cases depending on whether you're distributing the skill publicly or using it internally.
+Claude Code can assist with implementing these patterns using skills like the tdd skill for test-driven development, the pdf skill for generating authentication documentation, and the xlsx skill for tracking authentication requirements across your API portfolio.
 
-## Pattern 1: API Key Authentication
+## API Key Authentication
 
-The simplest authentication pattern uses API keys passed directly in request headers. This works well for services like many REST APIs that use Bearer token or Basic authentication.
+API keys are the simplest authentication method. They involve generating a unique key that clients include in their requests.
 
-```markdown
----
-name: github-integration
-description: "Interact with GitHub API for repository operations"
-tools: [Bash, Read, Write]
-api_config:
-  base_url: "https://api.github.com"
-  auth_type: "bearer_token"
----
+### Implementing API Key Authentication
 
-# GitHub Integration Skill
-
-Use this skill to interact with GitHub's API. When making API calls, include the token in the Authorization header:
-
-```
-Authorization: Bearer {GITHUB_TOKEN}
-```
-
-Replace {GITHUB_TOKEN} with a personal access token from github.com/settings/tokens.
-```
-
-For skills like this, users must provide their own credentials. Document the required environment variables clearly and instruct users to set them before invoking the skill.
-
-## Pattern 2: Environment Variable Reference
-
-A more secure approach references environment variables that users define externally. This keeps credentials out of the skill definition entirely.
-
-```markdown
----
-name: slack-notify
-description: "Send notifications to Slack channels"
-tools: [Bash]
----
-
-# Slack Notification Skill
-
-This skill posts messages to Slack using either webhook or bot token authentication.
-
-For webhook authentication, set:
-- `SLACK_WEBHOOK_URL` - Your incoming webhook URL
-
-For bot token authentication, set:
-- `SLACK_BOT_TOKEN` - xoxb-... token from your Slack app
-
-Example usage:
-```
-POST to $SLACK_WEBHOOK_URL with JSON body: {"text": "Deployment complete"}
-```
-```
-
-This pattern works excellently for skills distributed to multiple users, as each user supplies their own credentials. Skills like supermemory that require external service integration benefit from this approach.
-
-## Pattern 3: OAuth Token Management
-
-For APIs requiring OAuth flows, you need a more sophisticated setup. OAuth tokens typically include access tokens and refresh tokens that require periodic renewal.
+Create a simple API key middleware:
 
 ```javascript
-// token-manager.js - Helper for OAuth token handling
-const TOKEN_REFRESH_THRESHOLD = 300; // Refresh 5 minutes before expiry
+function apiKeyAuth(req, res, next) {
+  const apiKey = req.headers['x-api-key'];
+  
+  if (!apiKey) {
+    return res.status(401).json({ error: 'API key required' });
+  }
+  
+  const validKey = validateApiKey(apiKey);
+  if (!validKey) {
+    return res.status(403).json({ error: 'Invalid API key' });
+  }
+  
+  req.user = validKey.user;
+  next();
+}
+```
 
-async function getValidToken(tokenStore) {
-  const tokens = await tokenStore.read();
+Store API keys securely using environment variables:
+
+```bash
+export API_KEYS='{"client-a": {"key": "sk-live-xxx", "rateLimit": 1000}}'
+```
+
+The supermemory skill can help you track which API keys have been issued to which clients, making key rotation and revocation straightforward.
+
+## JWT Token Authentication
+
+JSON Web Tokens provide stateless authentication and are ideal for microservices architectures.
+
+### Creating JWT Tokens
+
+Generate tokens on successful login:
+
+```javascript
+const jwt = require('jsonwebtoken');
+
+function generateToken(user) {
+  const payload = {
+    sub: user.id,
+    email: user.email,
+    roles: user.roles
+  };
   
-  if (!tokens.access_token) {
-    throw new Error('No OAuth token configured. Run oauth-setup first.');
+  return jwt.sign(payload, process.env.JWT_SECRET, {
+    expiresIn: '24h',
+    issuer: 'your-api'
+  });
+}
+```
+
+### JWT Verification Middleware
+
+```javascript
+function verifyJwt(req, res, next) {
+  const authHeader = req.headers.authorization;
+  
+  if (!authHeader?.startsWith('Bearer ')) {
+    return res.status(401).json({ error: 'Missing token' });
   }
   
-  const expiresAt = tokens.expires_at || 0;
-  const now = Date.now() / 1000;
+  const token = authHeader.split(' ')[1];
   
-  if (expiresAt - now < TOKEN_REFRESH_THRESHOLD) {
-    // Token expires soon, refresh it
-    const newTokens = await refreshOAuthToken(tokens.refresh_token);
-    await tokenStore.write(newTokens);
-    return newTokens.access_token;
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded;
+    next();
+  } catch (err) {
+    return res.status(403).json({ error: 'Invalid token' });
   }
+}
+```
+
+The frontend-design skill can help you build login forms that handle JWT storage securely, while the webapp-testing skill ensures your authentication flows work correctly.
+
+## OAuth 2.0 Implementation
+
+OAuth 2.0 provides delegated access, allowing users to authorize third-party applications without sharing credentials.
+
+### Authorization Code Flow
+
+```javascript
+// Redirect user to authorization server
+function getAuthUrl() {
+  const params = new URLSearchParams({
+    client_id: process.env.CLIENT_ID,
+    redirect_uri: process.env.REDIRECT_URI,
+    response_type: 'code',
+    scope: 'read:profile write:repos',
+    state: generateRandomState()
+  });
   
-  return tokens.access_token;
+  return `https://auth.example.com/authorize?${params}`;
 }
 
-async function refreshOAuthToken(refreshToken) {
-  const response = await fetch('https://api.example.com/oauth/token', {
+// Exchange authorization code for access token
+async function exchangeCodeForToken(code) {
+  const response = await fetch('https://auth.example.com/token', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: `grant_type=refresh_token&refresh_token=${refreshToken}`
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: new URLSearchParams({
+      grant_type: 'authorization_code',
+      code,
+      client_id: process.env.CLIENT_ID,
+      client_secret: process.env.CLIENT_SECRET,
+      redirect_uri: process.env.REDIRECT_URI
+    })
   });
   
   return response.json();
 }
 ```
 
-Skills that integrate with Google Cloud, Microsoft Graph, or similar services need this pattern. When building skills for tdd workflows that might connect to CI/CD systems, OAuth provides the most strong authentication.
+### Refresh Token Rotation
 
-## Pattern 4: Credential Encryption
+Implement refresh token rotation to maintain security:
 
-For skills that must store some credentials temporarily, encryption adds a security layer. This approach uses a user-provided key to encrypt sensitive data.
-
-```python
-# encrypt-credentials.py - Encrypt credentials before storage
-from cryptography.fernet import Fernet
-import json
-import os
-
-def encrypt_credentials(credentials, master_key):
-    """Encrypt credentials dict using Fernet symmetric encryption."""
-    fernet = Fernet(master_key.encode())
-    json_data = json.dumps(credentials).encode()
-    encrypted = fernet.encrypt(json_data)
-    return encrypted.decode()
-
-def decrypt_credentials(encrypted_data, master_key):
-    """Decrypt credentials using the master key."""
-    fernet = Fernet(master_key.encode())
-    decrypted = fernet.decrypt(encrypted_data.encode())
-    return json.loads(decrypted.decode())
-
-# Usage
-if __name__ == '__main__':
-    master_key = os.environ.get('CRED_KEY')
-    creds = {
-        'api_key': 'sk-xxx',
-        'api_secret': 'secret-xxx'
-    }
-    
-    encrypted = encrypt_credentials(creds, master_key)
-    print(f"Encrypted: {encrypted}")
+```javascript
+async function refreshAccessToken(refreshToken) {
+  // Invalidate old refresh token
+  await revokeToken(refreshToken);
+  
+  // Issue new tokens
+  const newTokens = await issueTokens(userId);
+  
+  // Store new refresh token securely
+  await storeRefreshToken(userId, newTokens.refresh_token);
+  
+  return newTokens;
+}
 ```
 
-While more complex, this pattern becomes valuable when building skills that cache authentication for extended periods. The pdf skill might use this for credentials needed to access protected document repositories.
+The mcp-builder skill can help you create custom MCP servers for OAuth integrations, and the skill-creator skill enables you to build reusable authentication skills.
 
-## Best Practices for Authentication Design
+## Best Practices for API Authentication
 
-When implementing authentication in your skills, follow these practical guidelines:
+### 1. Use HTTPS Always
 
-**Never hardcode credentials.** Always use environment variables or user-provided inputs. Even for testing, use placeholder values that make it obvious credentials are missing.
+Never transmit authentication credentials over plain HTTP. Configure TLS 1.3 minimum:
 
-**Document required credentials explicitly.** List every environment variable or API key the skill needs in the skill's front matter and description. Users should know exactly what to configure before using the skill.
+```nginx
+server {
+    ssl_protocols TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+}
+```
 
-**Use minimal permission scopes.** When APIs support scoped tokens—like GitHub's fine-grained personal access tokens—request only the permissions actually needed. This limits exposure if credentials are compromised.
+### 2. Implement Rate Limiting
 
-**Implement credential validation.** Before making API calls, validate that required credentials exist. Provide clear error messages when authentication is misconfigured.
+Protect against brute-force attacks:
 
-**Consider skill distribution.** If you plan to publish a skill publicly, authentication should be entirely user-supplied. For internal skills, you might use shared credential stores with appropriate access controls.
+```javascript
+const rateLimit = require('express-rate-limit');
 
-## Applying These Patterns
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // 100 requests per window
+  message: { error: 'Too many requests' }
+});
+```
 
-The authentication pattern you choose depends on your specific use case:
+### 3. Log Authentication Events
 
-- For quick integrations and prototypes, API key authentication with environment variables provides the fastest path
-- For production skills requiring long-running sessions, OAuth token management ensures reliable authentication
-- For skills handling sensitive data, encryption adds necessary protection
+The internal-comms skill can help you generate alerts for suspicious authentication patterns:
 
-Skills like frontend-design might authenticate with design tool APIs, tdd skills with CI/CD platforms, and supermemory with memory service backends. Each integration point benefits from thoughtful authentication implementation.
+```javascript
+function logAuthEvent(event) {
+  console.log(JSON.stringify({
+    timestamp: new Date().toISOString(),
+    type: 'auth_event',
+    ...event
+  }));
+}
+```
 
-Building skills that handle authentication well creates more reliable and secure integrations. Start with the simplest pattern that meets your needs, then evolve toward more sophisticated approaches as requirements grow.
+### 4. Token Expiration and Rotation
 
----
+Set appropriate expiration times:
+
+| Token Type | Recommended Expiration |
+|------------|----------------------|
+| Access Token | 15 minutes to 1 hour |
+| Refresh Token | 24 hours to 7 days |
+| API Key | 90 days with rotation |
+
+## Testing Authentication Patterns
+
+Use the tdd skill to write comprehensive authentication tests:
+
+```javascript
+describe('API Authentication', () => {
+  it('rejects invalid API keys', async () => {
+    const response = await request(app)
+      .get('/api/protected')
+      .set('x-api-key', 'invalid-key');
+    
+    expect(response.status).toBe(403);
+  });
+  
+  it('accepts valid JWT tokens', async () => {
+    const token = generateValidToken();
+    const response = await request(app)
+      .get('/api/protected')
+      .set('Authorization', `Bearer ${token}`);
+    
+    expect(response.status).toBe(200);
+  });
+});
+```
+
+The docx skill can help you generate authentication test reports, and the template-skill enables you to create standardized test templates.
+
+## Conclusion
+
+Implementing robust API authentication requires understanding the strengths and limitations of each pattern. API keys work well for server-to-server communication, JWT tokens suit microservices architectures, and OAuth 2.0 is ideal for user-authorized third-party access. Always use HTTPS, implement rate limiting, log authentication events, and follow token expiration best practices.
+
+Claude Code's specialized skills make implementing, testing, and documenting authentication patterns straightforward. Whether you need to build login interfaces with frontend-design, test authentication flows with tdd, or document APIs with pdf, Claude Code has the tools you need.
 
 
 ## Related Reading
 
-- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike — More at zovo.one

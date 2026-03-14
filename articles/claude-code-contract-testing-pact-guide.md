@@ -14,7 +14,7 @@ permalink: /claude-code-contract-testing-pact-guide/
 {% raw %}
 # Claude Code Contract Testing with Pact Guide
 
-Contract testing has become essential for teams building microservices and API-driven architectures. When your frontend, backend, and third-party services need to communicate reliably, ensuring that contracts between these services remain intact prevents integration bugs before they reach production. This guide shows you how to leverage Claude Code alongside Pact to create robust contract testing workflows.
+Contract testing has become essential for teams building microservices and API-driven architectures. When your frontend, backend, and third-party services need to communicate reliably, ensuring that contracts between these services remain intact prevents integration bugs before they reach production. This guide shows you how to use Claude Code alongside Pact to create robust contract testing workflows.
 
 ## Understanding Contract Testing with Pact
 

@@ -46,7 +46,7 @@ Now you're sending 45 lines instead of 2,000.
 
 The **frontend-design** skill benefits especially from this approach. When iterating on components, specify exactly which files need changes rather than sending entire component directories.
 
-## Strategy 2: Leverage Lightweight Skills
+## Strategy 2: Use Lightweight Skills
 
 Not all skills carry the same token overhead. Skills like **pdf**, **xlsx**, and **tdd** are lightweight and focused. They load quickly and don't bloat your context window with unnecessary instructions.
 

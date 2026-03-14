@@ -45,7 +45,7 @@ The **tdd** skill (Test-Driven Development) guides Claude toward writing tests b
 
 ```bash
 # Activate the tdd skill before starting work
-claude --skill tdd
+/tdd
 ```
 
 With the tdd skill active, Claude will ask about test coverage before making changes and use existing tests as a specification for behavior.

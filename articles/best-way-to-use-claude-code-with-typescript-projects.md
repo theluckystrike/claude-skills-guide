@@ -122,7 +122,7 @@ As TypeScript projects grow, context management becomes critical. Claude Code ha
 
 **Use type annotations strategically**. When sharing code with Claude Code, ensure your types are explicit. Generic types like `any` reduce Claude Code's ability to generate accurate code.
 
-**Leverage skill composition for complex tasks**. The tdd skill generates tests while the docx skill produces documentation from the same codebase. Running them sequentially creates comprehensive test coverage and documentation.
+**Use skill composition for complex tasks**. The tdd skill generates tests while the docx skill produces documentation from the same codebase. Running them sequentially creates comprehensive test coverage and documentation.
 
 ## Debugging TypeScript with Claude Code
 

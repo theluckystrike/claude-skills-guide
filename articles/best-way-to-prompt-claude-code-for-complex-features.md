@@ -45,7 +45,7 @@ Using the aggregation function from before, create a line chart component with R
 
 This incremental approach prevents the common problem of receiving a massive code dump that doesn't integrate cleanly with your project. It also lets Claude Code focus on doing one thing well rather than attempting everything simultaneously.
 
-## Leverage Skills for Domain-Specific Tasks
+## Use Skills for Domain-Specific Tasks
 
 Claude Code's skill system provides specialized knowledge for particular domains. Using the right skill dramatically improves output quality for tasks within that domain. The key is invoking the appropriate skill when your request falls into a specific area.
 

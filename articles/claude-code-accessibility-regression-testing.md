@@ -77,7 +77,7 @@ Claude will analyze the component, identify violations, and suggest fixes. The s
 
 ### Running Bulk Regression Tests
 
-For comprehensive regression testing across your application, create a test script that leverages both axe and your baseline:
+For comprehensive regression testing across your application, create a test script that uses both axe and your baseline:
 
 ```javascript
 // tests/accessibility-regression.test.js

@@ -187,7 +187,7 @@ This kind of proactive check prevents coverage debt from accumulating.
 
 ## Final Thoughts
 
-Improving code coverage with Claude Code combines automated assistance with strategic thinking. Focus on business-critical code first. Use generated tests as a starting point, then refine them to verify actual behavior. Leverage skills like tdd and frontend-design to accelerate workflows. Maintain coverage through CI integration and consistent practices.
+Improving code coverage with Claude Code combines automated assistance with strategic thinking. Focus on business-critical code first. Use generated tests as a starting point, then refine them to verify actual behavior. Use skills like tdd and frontend-design to accelerate workflows. Maintain coverage through CI integration and consistent practices.
 
 Coverage metrics serve as a guide, not a scorecard. The real goal is confidence in your code—knowing that changes won't break existing functionality, and that edge cases receive proper handling.
 

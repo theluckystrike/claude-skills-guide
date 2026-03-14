@@ -4,7 +4,7 @@ layout: default
 title: "Claude Code Git Workflow Best Practices Guide"
 description: "Master Git workflows with Claude Code. Practical examples for commit messages, branch management, and integration with skills like supermemory, tdd."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /claude-code-git-workflow-best-practices-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]

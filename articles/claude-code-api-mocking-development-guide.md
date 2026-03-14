@@ -13,7 +13,7 @@ permalink: /claude-code-api-mocking-development-guide/
 
 # Claude Code API Mocking Development Guide
 
-API mocking is a fundamental technique for developers who need to test code without relying on external services. Whether you are building integrations with third-party APIs, testing error handling logic, or working in an environment with limited network access, mocking lets you control exactly how your application responds to HTTP requests. This guide shows you how to incorporate API mocking into your Claude Code workflow using practical patterns and tools that integrate seamlessly with your development process.
+API mocking is a fundamental technique for developers who need to test code without relying on external services. Whether you are building integrations with third-party APIs, testing error handling logic, or working in an environment with limited network access, mocking lets you control exactly how your application responds to HTTP requests. This guide shows you how to incorporate API mocking into your Claude Code workflow using practical patterns and tools that integrate smoothly with your development process.
 
 ## Why API Mocking Matters
 

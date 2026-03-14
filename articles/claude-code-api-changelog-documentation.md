@@ -13,7 +13,7 @@ permalink: /claude-code-api-changelog-documentation/
 
 # Claude Code API Changelog Documentation: A Practical Guide
 
-Understanding the Claude Code API changelog documentation helps developers stay current with new features, deprecated methods, and breaking changes. This guide walks through how to interpret changelogs, leverage version-specific documentation, and integrate these updates into your development workflow.
+Understanding the Claude Code API changelog documentation helps developers stay current with new features, deprecated methods, and breaking changes. This guide walks through how to interpret changelogs, use version-specific documentation, and integrate these updates into your development workflow.
 
 ## Understanding Claude Code API Versioning
 
@@ -174,7 +174,7 @@ skills:
 2. **Review minor releases weekly** - they often include useful new features
 3. **Test upgrades in a staging environment** before production deployment
 4. **Use version pinning** in your production configurations
-5. **Leverage skills like the tdd skill** to automatically test API compatibility
+5. **Use skills like the tdd skill** to automatically test API compatibility
 
 ## Automating Changelog Monitoring
 

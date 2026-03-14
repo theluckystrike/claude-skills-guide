@@ -30,16 +30,16 @@ The most effective approach treats your skills directory as a Git repository its
 Create a dedicated repository for your skills:
 
 ```bash
-mkdir ~/claude-skills && cd ~/claude-skills
+mkdir ~/.claude/skills-repo && cd ~/.claude/skills-repo
 git init
 ```
 
 Add your skill files and commit them:
 
 ```bash
-cp ~/.claude/skills/frontend-design.md ~/claude-skills/
-cp ~/.claude/skills/pdf.md ~/claude-skills/
-cp ~/.claude/skills/tdd.md ~/claude-skills/
+cp ~/.claude/skills/frontend-design.md .claude/
+cp ~/.claude/skills/pdf.md .claude/
+cp ~/.claude/skills/tdd.md .claude/
 git add .
 git commit -m "Initial skills backup"
 ```
@@ -48,7 +48,7 @@ Now whenever you modify a skill, you make changes in the centralized repo and pu
 
 ```bash
 # Edit your skill
-vim ~/claude-skills/frontend-design.md
+vim .claude/frontend-design.md
 git add frontend-design.md
 git commit -m "Add responsive breakpoints to frontend-design skill"
 git push origin main
@@ -109,11 +109,11 @@ Here's a real workflow for managing skills across projects:
 
 ```bash
 # 1. Create centralized skills repo (one-time)
-mkdir -p ~/claude-skills && cd ~/claude-skills
+mkdir -p ~/.claude/skills-repo && cd ~/.claude/skills-repo
 git init
 
 # 2. Add your custom skills
-cp ~/.claude/skills/*.md ~/claude-skills/
+cp ~/.claude/skills/*.md .claude/
 git add .
 git commit -m "Initial import"
 
