@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Parallel Task Execution Workflow"
 description: "Learn how to execute multiple Claude Code tasks simultaneously using parallel workflows, subagents, and batch processing techniques for maximum."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-parallel-task-execution-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Parallel Task Execution Workflow
 
@@ -18,7 +23,7 @@ Sequential execution processes tasks one after another. If you need to review th
 
 Parallel execution launches multiple operations simultaneously, completing independent tasks in the time it takes for the longest single task rather than the sum of all tasks. This approach works best when tasks share no dependencies and can produce results independently.
 
-Claude Code supports parallel execution through several mechanisms. The most straightforward involves spawning multiple subagents that operate concurrently, each handling a different aspect of your project. More complex workflows leverage MCP servers with async capabilities or batch request patterns that queue multiple operations.
+Claude Code supports parallel execution through several mechanisms. The most straightforward involves spawning multiple subagents that operate concurrently, each handling a different aspect of your project. More complex workflows use MCP servers with async capabilities or batch request patterns that queue multiple operations.
 
 ## Launching Parallel Subagents
 

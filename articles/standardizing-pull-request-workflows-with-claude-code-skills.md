@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Standardizing Pull Request Workflows with Claude Code Skills"
 description: "Learn how to use Claude Code skills to create consistent, automated, and efficient pull request workflows across your development team."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /standardizing-pull-request-workflows-with-claude-code-skills/
 categories: [guides]
 tags: [claude-code, claude-skills, pull-requests, workflows]
+reviewed: true
+score: 7
 ---
+
 {% raw %}
 
 Pull requests are the heartbeat of modern software development. They gate code quality, facilitate collaboration, and serve as the primary record of changes flowing into your codebase. Yet too many teams treat PR workflows as an afterthought—relying on inconsistent human judgment, ad-hoc checklists, or tools that don't talk to each other. This is where Claude Code skills come in.

@@ -1,18 +1,22 @@
 ---
+
 layout: default
 title: "Using Claude Code as a Backend Engine for Dev Tools"
 description: "Learn how to leverage Claude Code's CLI, skills system, and MCP integration to build powerful development tools that automate workflows, analyze."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, dev-tools, automation, mcp, backend]
-author: theluckystrike
+tags: [claude-code, dev-tools, automation, mcp, backend, claude-skills]
+author: "Claude Skills Guide"
 permalink: /using-claude-code-as-a-backend-engine-for-dev-tools/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Using Claude Code as a Backend Engine for Dev Tools
 
-Claude Code isn't just an interactive chatbot—it's a powerful CLI tool that can serve as a flexible backend engine for building sophisticated development tools. By leveraging its skills system, MCP (Model Context Protocol) integration, and command-line interface, you can create automated workflows, code analysis tools, and productivity boosters that run entirely from the terminal.
+Claude Code isn't just an interactive chatbot—it's a powerful CLI tool that can serve as a flexible backend engine for building sophisticated development tools. By using its skills system, MCP (Model Context Protocol) integration, and command-line interface, you can create automated workflows, code analysis tools, and productivity boosters that run entirely from the terminal.
 
 ## What Makes Claude Code a Good Backend Engine?
 

@@ -1,16 +1,18 @@
 ---
 
+
 layout: default
 title: "AI Agent Goal Decomposition: How It Works Explained"
 description: "Discover how AI agent goal decomposition works, enabling Claude Code to tackle complex tasks by breaking them into manageable, executable steps."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, ai-agent, goal-decomposition, task-planning, claude-skills]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /ai-agent-goal-decomposition-how-it-works-explained/
 ---
+
 
 # AI Agent Goal Decomposition: How It Works Explained
 

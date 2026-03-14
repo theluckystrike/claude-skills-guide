@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code for Git Hooks Automation Workflow"
 description: "Automate your Git workflow with Claude Code and custom hooks. Run linting, testing, and deployment tasks automatically on every commit or push."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-for-git-hooks-automation-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code for Git Hooks Automation Workflow
 

@@ -1,16 +1,18 @@
 ---
 
+
 layout: default
 title: "How AI Agents Handle Errors and Retries Guide"
 description: "Master error handling and retry strategies for AI agents with Claude Code. Learn practical patterns for building resilient agent workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-ai-agents-handle-errors-and-retries-guide/
 categories: [guides]
-reviewed: false
-score: 0
-tags: [claude-code, error-handling, retries, agent-development]
+reviewed: true
+score: 7
+tags: [claude-code, error-handling, retries, agent-development, claude-skills]
 ---
+
 
 # How AI Agents Handle Errors and Retries Guide
 
