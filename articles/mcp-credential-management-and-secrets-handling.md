@@ -5,7 +5,7 @@ description: "A practical guide to managing credentials and secrets when buildin
 date: 2026-03-14
 categories: [guides]
 tags: [mcp, claude-skills, security, credentials, secrets, claude-code, devops]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 7
 permalink: /mcp-credential-management-and-secrets-handling/
