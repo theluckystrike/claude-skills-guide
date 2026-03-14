@@ -14,7 +14,7 @@ score: 8
 
 A personal AI assistant is useful only if it actually knows how you work — your coding conventions, your preferred tools, your recurring tasks. Generic AI chat gets you halfway there. Claude skills close the gap by letting you encode your personal workflows as reusable, invokable behaviors that persist across every session.
 
-This guide walks through building a personal AI assistant tailored to a developer's daily workflow. You will set up persistent memory, create custom skills for your most common tasks, and wire them into a system that feels genuinely assistive rather than just reactive.
+This guide walks through [building a personal AI assistant](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) tailored to a developer's daily workflow. You will set up persistent memory, create custom skills for your most common tasks, and wire them into a system that feels genuinely assistive rather than just reactive.
 
 ## What Makes Claude Skills Different from Plain Prompting
 

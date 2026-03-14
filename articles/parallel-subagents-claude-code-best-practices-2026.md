@@ -12,7 +12,7 @@ score: 10
 
 # Parallel Subagents in Claude Code: Best Practices for 2026
 
-Claude Code's subagent system lets you spawn multiple independent reasoning threads within a single session. When used correctly, parallel subagents can dramatically accelerate complex workflows—simultaneously researching, coding, and reviewing tasks that would otherwise run sequentially.
+Claude Code's subagent system lets you spawn multiple independent reasoning threads within a single session. When used correctly, [parallel subagents](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/) can dramatically accelerate complex workflows—simultaneously researching, coding, and reviewing tasks that would otherwise run sequentially.
 
 This guide covers practical patterns for using parallel subagents effectively in 2026.
 

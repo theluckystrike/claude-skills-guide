@@ -16,7 +16,7 @@ Technical product managers balance engineering precision with product vision. Cl
 
 ## The Role of Skills in Technical Product Management
 
-Claude skills are Markdown files that define reusable workflows. They work as specialized assistants that understand your domain and apply consistent patterns across different projects. For technical product managers, skills help maintain quality standards while reducing repetitive work.
+Claude skills are Markdown files that define reusable workflows. They work as specialized assistants that understand your domain and apply consistent patterns across different projects. For [technical product managers](/claude-skills-guide/articles/build-personal-ai-assistant-with-claude-skills-guide/), skills help maintain quality standards while reducing repetitive work.
 
 When you invoke a skill in Claude Code, it loads context-specific instructions. This means you get tailored assistance for writing PRDs, reviewing technical specifications, or managing sprint planning without explaining your requirements each time.
 

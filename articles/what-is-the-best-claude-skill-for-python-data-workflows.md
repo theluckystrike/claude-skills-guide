@@ -18,7 +18,7 @@ But with dozens of skills available, which one actually delivers the most value 
 
 ## The Short Answer: xlsx Skill
 
-The **xlsx skill** stands out as the most versatile choice for Python data workflows. It handles spreadsheet operations, data analysis, and visualization tasks with native support for Excel files, CSV processing, and formula management. For most data practitioners, this skill alone covers 80% of daily tasks.
+The **xlsx skill** stands out as the most versatile choice for [Python data workflows](/claude-skills-guide/articles/what-is-the-best-claude-skill-for-automated-code-review/). It handles spreadsheet operations, data analysis, and visualization tasks with native support for Excel files, CSV processing, and formula management. For most data practitioners, this skill alone covers 80% of daily tasks.
 
 However, the "best" skill depends heavily on your specific workflow. Let me break down the options by use case.
 

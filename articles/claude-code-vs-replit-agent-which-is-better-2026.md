@@ -16,7 +16,7 @@ Claude Code and Replit Agent are both pitched as autonomous AI coding tools, but
 
 ## What Each Tool Is
 
-**Claude Code** is Anthropic's terminal-based agentic coding assistant. It runs in your local shell, interacts with your existing codebase, edits files, executes commands, and can work through multi-step development tasks autonomously. It integrates with the Claude skills ecosystem for building repeatable, shareable workflows.
+**Claude Code** is Anthropic's terminal-based agentic coding assistant. It runs in your local shell, interacts with your existing codebase, edits files, executes commands, and can work through multi-step development tasks autonomously. It integrates with the [Claude skills](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) ecosystem for building repeatable, shareable workflows.
 
 **Replit Agent** is an AI-powered coding agent built into the Replit cloud IDE. It can create, run, and deploy applications directly in Replit's hosted environment. You describe what you want to build, and the agent scaffolds the project, writes the code, and can deploy it — all within Replit's browser-based platform.
 

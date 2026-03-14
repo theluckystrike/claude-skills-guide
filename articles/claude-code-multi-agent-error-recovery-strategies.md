@@ -99,7 +99,7 @@ Use the xlsx skill to analyze sales-data.xlsx and generate summary statistics
 —if that also fails, output a plain text summary of what data was found
 ```
 
-This pattern ensures the workflow always produces *some* output rather than failing entirely. The supermemory skill can track which fallback strategies succeeded in previous runs:
+This pattern ensures the workflow always produces *some* output rather than failing entirely. The [supermemory](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) skill can track which fallback strategies succeeded in previous runs:
 
 ```
 /supermemory remember: when xlsx fails on large files (>100MB), 

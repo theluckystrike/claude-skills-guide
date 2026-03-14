@@ -22,7 +22,7 @@ Claude Code accelerates this process significantly. By combining the **tdd** ski
 
 ## Setting Up Sentry with Source Maps
 
-First, ensure your project generates source maps during the build process. In your `package.json`, modify the build script:
+First, ensure your project generates [source maps](/claude-skills-guide/articles/claude-code-websocket-implementation-real-time-events-guide/) during the build process. In your `package.json`, modify the build script:
 
 ```json
 {
@@ -78,7 +78,7 @@ This automation ensures every deployment includes the corresponding source maps 
 
 ## Connecting Claude Code to Sentry
 
-While there's no dedicated Sentry skill for Claude Code, you can use the **tdd** skill to create a debugging workflow. The **tdd** skill provides structured test-driven development patterns that integrate well with error tracking workflows.
+While there's no dedicated Sentry skill for Claude Code, you can use the **tdd** skill to create a debugging workflow. The **tdd** skill provides structured test-driven development patterns that integrate well with error tracking [workflows](/claude-skills-guide/workflows-hub/).
 
 Here's how to use Claude Code with Sentry:
 

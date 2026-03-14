@@ -12,7 +12,7 @@ score: 8
 
 # Structuring Claude Skills for Large Enterprise Codebases
 
-Large enterprise codebases present unique challenges for Claude skills usage. When your project spans thousands of files across multiple languages and frameworks, skill organization becomes critical for maintaining developer productivity. This guide covers practical patterns for structuring Claude skills in enterprise environments.
+Large enterprise codebases present unique challenges for Claude skills usage. When your project spans thousands of files across multiple languages and frameworks, [skill organization](/claude-skills-guide/articles/how-do-i-make-a-claude-skill-available-organization-wide/) becomes critical for maintaining developer productivity. This guide covers practical patterns for structuring Claude skills in enterprise environments.
 
 ## The Enterprise Skill Organization Challenge
 
@@ -93,7 +93,7 @@ This approach lets junior developers execute sophisticated workflows without mem
 
 ## Managing Skill Dependencies
 
-Large codebases often have skill dependencies that must be resolved in order. The **supermemory** skill becomes valuable here for maintaining a knowledge graph of skill capabilities across your organization.
+Large codebases often have skill dependencies that must be resolved in order. The **[supermemory](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/)** skill becomes valuable here for maintaining a knowledge graph of skill capabilities across your organization.
 
 Store skill relationship metadata:
 
@@ -172,7 +172,7 @@ Start implementing structured skills in your enterprise codebase with these step
 
 ## Conclusion
 
-Structuring Claude skills for large enterprise codebases requires intentional organization that mirrors your architectural boundaries. By scoping skills to domains, composing complex workflows, and maintaining centralized distribution, you can scale skill adoption across your organization while keeping operations efficient and maintainable.
+Structuring Claude skills for [large enterprise codebases](/claude-skills-guide/articles/shared-claude-skills-across-monorepo-multiple-packages/) requires intentional organization that mirrors your architectural boundaries. By scoping skills to domains, composing complex workflows, and maintaining centralized distribution, you can scale skill adoption across your organization while keeping operations efficient and maintainable.
 
 The investment in proper skill organization pays dividends through improved developer onboarding, consistent operational patterns, and reduced context-switching overhead as teams work across your enterprise codebase.
 

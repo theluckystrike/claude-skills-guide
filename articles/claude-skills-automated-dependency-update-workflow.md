@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills, automation, dependencies, workflow]
 
 # Automated Dependency Updates with Claude Skills
 
-Keeping dependencies current is essential for security and feature access, yet manually tracking updates across multiple projects quickly becomes overwhelming. An automated dependency update workflow powered by Claude skills transforms this tedious task into a streamlined process that runs with minimal intervention.
+Keeping dependencies current is essential for security and feature access, yet manually tracking updates across multiple projects quickly becomes overwhelming. An automated [dependency update](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) workflow powered by Claude skills transforms this tedious task into a streamlined process that runs with minimal intervention.
 
 ## Why Automate Dependency Updates?
 
@@ -20,7 +20,7 @@ Dependency management involves more than simply running `npm update` or `pip ins
 
 Claude skills provide a structured approach to automation. By chaining together skills like **supermemory** for tracking dependency states, **tdd** for running test suites, and **webapp-testing** for validating functionality, you create a comprehensive workflow that handles the entire update lifecycle.
 
-Each skill is a Markdown file stored in `~/.claude/skills/` and invoked during a Claude Code session by typing `/skill-name`. For example, you invoke the tdd skill with `/tdd`, which prompts Claude to apply test-driven workflows to your current task.
+Each skill is a Markdown file stored in `~/.claude/skills/` and invoked during a Claude Code session by typing `/skill-name`. For example, you invoke the tdd skill with `/tdd`, which prompts Claude to apply test-driven [workflows](/claude-skills-guide/workflows-hub/) to your current task.
 
 ## Building the Core Workflow
 

@@ -16,7 +16,7 @@ The question on every developer's mind is straightforward: can Claude Code skill
 
 ## Understanding the Fundamental Difference
 
-Traditional IDE plugins operate as standalone extensions that modify your editor's behavior through compiled code, language servers, and LSP implementations. You install them once, configure them in settings.json, and they run continuously in the background. They own their state, their rendering, and their interactions with your codebase.
+Traditional [IDE plugins](/claude-skills-guide/articles/can-you-use-claude-skills-inside-vs-code-extensions/) operate as standalone extensions that modify your editor's behavior through compiled code, language servers, and LSP implementations. You install them once, configure them in settings.json, and they run continuously in the background. They own their state, their rendering, and their interactions with your codebase.
 
 Claude skills work differently. They're instruction sets—not compiled binaries—that transform how Claude Code behaves within a conversation. When you invoke `/pdf` or `/tdd`, you're not loading a plugin that runs independently. You're providing Claude with specialized context, examples, and procedural guidance that shapes its responses.
 

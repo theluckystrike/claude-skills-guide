@@ -12,7 +12,7 @@ score: 9
 
 # Claude Code Agent Pipeline: Sequential vs Parallel Execution
 
-When building automated workflows with Claude Code, understanding the difference between sequential and parallel agent pipeline execution directly impacts your productivity and efficiency. This guide breaks down both approaches, shows when each works best, and provides practical implementation patterns you can apply immediately.
+When building automated workflows with Claude Code, [sequential and parallel agent pipeline execution](/claude-skills-guide/articles/claude-code-agent-swarm-coordination-strategies/) agent pipeline execution directly impacts your productivity and efficiency. This guide breaks down both approaches, shows when each works best, and provides practical implementation patterns you can apply immediately.
 
 ## Understanding Pipeline Execution Models
 
@@ -24,7 +24,7 @@ Parallel execution launches multiple steps concurrently, reducing total runtime 
 
 ## When to Use Sequential Pipelines
 
-Sequential pipelines excel in scenarios where each step depends on the output of the previous step. Consider a typical software development workflow using the `tdd` skill:
+[Sequential pipelines excel in scenarios](/claude-skills-guide/articles/claude-code-tmux-session-management-multi-agent-workflow/) on the output of the previous step. Consider a typical software development workflow using the `tdd` skill:
 
 ```bash
 # Sequential TDD workflow
@@ -183,7 +183,7 @@ if [ $failed -gt 0 ]; then
 fi
 ```
 
-The `supermemory` skill can log which parallel tasks succeeded or failed, creating an audit trail that helps diagnose issues in complex pipelines.
+The `[supermemory` skill can log which parallel tasks](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/), creating an audit trail that helps diagnose issues in complex pipelines.
 
 ## Practical Example: Document Generation Pipeline
 

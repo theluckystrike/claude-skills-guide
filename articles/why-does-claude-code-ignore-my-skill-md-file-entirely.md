@@ -18,7 +18,7 @@ You've created a skill file, placed it in the correct directory, but Claude Code
 
 Unlike other errors that produce visible feedback, a completely ignored skill file provides no indication something is wrong. Claude Code processes skill files during startup and when refreshing skills, but it skips files that fail to meet certain requirements without notifying you. This design choice keeps the loading process clean but creates a debugging challenge.
 
-Several factors can cause this silent failure. The issue typically stems from file location, naming conventions, front matter problems, or syntax errors in your skill definition. Each cause requires a different troubleshooting approach.
+Several factors can cause this silent failure. The issue typically stems from file location, naming conventions, front matter problems, or syntax errors in your skill definition. Each cause requires a different [troubleshooting](/claude-skills-guide/troubleshooting-hub/) approach.
 
 ## File Location and Directory Structure
 
@@ -38,7 +38,7 @@ The filename also determines how you invoke the skill. If you name your file `su
 
 ## Front Matter Parsing Issues
 
-The YAML front matter at the top of your skill file must be valid YAML. Even minor formatting errors cause Claude Code to skip the entire file. Common front matter problems include incorrect indentation, missing colons after keys, or invalid characters in values.
+The [YAML front matter](/claude-skills-guide/articles/claude-skill-yaml-front-matter-parsing-error-fix/) at the top of your skill file must be valid YAML. Even minor formatting errors cause Claude Code to skip the entire file. Common front matter problems include incorrect indentation, missing colons after keys, or invalid characters in values.
 
 A proper front matter block looks like this:
 

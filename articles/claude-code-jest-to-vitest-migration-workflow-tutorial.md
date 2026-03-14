@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Jest to Vitest Migration Workflow Tutorial
 
-Migrating test suites from Jest to Vitest is one of the most impactful upgrades you can make to your JavaScript development workflow. This transformation delivers dramatically faster test execution, native Vite integration, and a more intuitive API that aligns with modern frontend tooling. When you use Claude Code as your AI development assistant, the migration becomes a structured, low-friction process that handles the complexities of config translation, import rewrites, and test adaptation.
+Migrating [test suite](/claude-skills-guide/articles/what-is-the-best-claude-skill-for-automated-code-review/)s from Jest to Vitest is one of the most impactful upgrades you can make to your JavaScript development workflow. This transformation delivers dramatically faster test execution, native Vite integration, and a more intuitive API that aligns with modern frontend tooling. When you use Claude Code as your AI development assistant, the migration becomes a structured, low-friction process that handles the complexities of config translation, import rewrites, and test adaptation.
 
 This tutorial walks you through a complete migration workflow using Claude Code, covering everything from initial assessment through final verification.
 
@@ -108,7 +108,7 @@ describe('UserService', () => {
 });
 ```
 
-The primary changes involve importing test utilities explicitly and replacing `jest` global with `vi`. Vitest supports `--globals` flag if you prefer the Jest-style global API, but explicit imports align better with modern ESM workflows.
+The primary changes involve importing test utilities explicitly and replacing `jest` global with `vi`. Vitest supports `--globals` flag if you prefer the Jest-style global API, but explicit imports align better with modern ESM [workflows](/claude-skills-guide/workflows-hub/).
 
 ## Phase 4: Handling Jest-Specific Features
 

@@ -12,7 +12,7 @@ score: 7
 
 # Will Claude Skills Support Voice Interfaces in 2026?
 
-If you have been building workflows around Claude Code skills, you might wonder whether voice interfaces will become a first-class option in 2026. The short answer: native voice input is not built directly into Claude skills themselves, but several practical workarounds let you drive skill-powered workflows with your voice today.
+If you have been building workflows around Claude Code skills, you might wonder whether [voice interfaces](/claude-skills-guide/articles/will-claude-skills-replace-traditional-ide-plugins/) will become a first-class option in 2026. The short answer: native voice input is not built directly into Claude skills themselves, but several practical workarounds let you drive skill-powered workflows with your voice today.
 
 ## How Claude Skills Work Right Now
 

@@ -16,7 +16,7 @@ OpenAI's Codex CLI and Anthropic's Claude Code both occupy the terminal-native A
 
 ## Background
 
-**Claude Code** is Anthropic's agentic coding tool for the terminal. It reads your project, edits files, runs shell commands (with your approval), and can execute multi-step plans autonomously. It is powered by the Claude model family and integrates with the Claude skills ecosystem — a library of packaged, reusable agent behaviors for common developer tasks.
+**Claude Code** is Anthropic's agentic coding tool for the terminal. It reads your project, edits files, runs shell commands (with your approval), and can execute multi-step plans autonomously. It is powered by the Claude model family and integrates with the Claude [skills ecosystem](/claude-skills-guide/articles/how-do-i-share-claude-skills-across-multiple-projects/) — a library of packaged, reusable agent behaviors for common developer tasks.
 
 **OpenAI Codex CLI** is OpenAI's terminal interface for interacting with Codex and GPT-4-class models. It focuses on code generation, explanation, and transformation from the command line. OpenAI has positioned it primarily as a generation and explanation tool rather than a full coding agent.
 

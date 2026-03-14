@@ -12,7 +12,7 @@ score: 9
 
 # Shared Claude Skills Across Monorepo Multiple Packages
 
-Managing Claude skills across a monorepo with multiple packages presents unique challenges. When your project spans dozens of packages—whether TypeScript workspaces, Python modules, or mixed-language environments—you need a strategy that avoids duplication while keeping skills accessible to every package that needs them. This guide covers practical approaches for sharing Claude skills across your entire monorepo.
+Managing Claude skills across a [monorepo](/claude-skills-guide/articles/how-do-i-share-claude-skills-across-multiple-projects/) with multiple packages presents unique challenges. When your project spans dozens of packages—whether TypeScript workspaces, Python modules, or mixed-language environments—you need a strategy that avoids duplication while keeping skills accessible to every package that needs them. This guide covers practical approaches for sharing Claude skills across your entire monorepo.
 
 ## Understanding the Monorepo Challenge
 

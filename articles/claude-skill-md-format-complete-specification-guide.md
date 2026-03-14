@@ -18,7 +18,7 @@ Every Claude skill is a Markdown file. The format is straightforward, but gettin
 
 A skill file is a plain Markdown document placed in `.claude/skills/` in your project (or `~/.claude/skills/` globally). Claude Code scans these directories and registers each `.md` file as a callable skill.
 
-The format has two parts: YAML front matter between `---` delimiters, and a Markdown body that serves as the system prompt.
+The format has two parts: [YAML front matter](/claude-skills-guide/articles/claude-skill-yaml-front-matter-parsing-error-fix/) between `---` delimiters, and a Markdown body that serves as the system prompt.
 
 ```
 ---

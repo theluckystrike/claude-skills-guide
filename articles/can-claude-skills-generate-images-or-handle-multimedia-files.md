@@ -12,7 +12,7 @@ score: 8
 
 # Can Claude Skills Generate Images or Handle Multimedia Files?
 
-Claude skills are fundamentally text-based prompt systems, but they become powerful multimedia workstations when combined with the right tools and skills. The answer is a qualified yes — skills themselves don't generate images or process media directly, but they orchestrate tools that do.
+Claude skills are fundamentally text-based prompt systems, but they become powerful multimedia workstations when combined with the right tools and skills. The answer is a qualified yes — skills themselves don't [generate images](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/) or process media directly, but they orchestrate tools that do.
 
 ## How Multimedia Handling Works in Claude Skills
 

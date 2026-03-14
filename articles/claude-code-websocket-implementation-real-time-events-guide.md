@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code WebSocket Implementation: Real-Time Events Guide
 
-WebSocket connections enable bidirectional, low-latency communication between clients and servers. When building Claude Code skills that require real-time updates—such as live dashboards, notification systems, or streaming data processing—understanding WebSocket implementation patterns becomes essential. This guide covers practical approaches for integrating WebSocket functionality into your Claude skills.
+WebSocket connections enable bidirectional, low-latency communication between clients and servers. When building Claude Code skills that require real-time updates—such as live dashboards, notification systems, or streaming data processing—understanding [WebSocket implementation](/claude-skills-guide/articles/claude-skills-for-websocket-realtime-app-development/) patterns becomes essential. This guide covers practical approaches for integrating WebSocket functionality into your Claude skills.
 
 ## Understanding WebSocket in the Claude Code Context
 
@@ -79,7 +79,7 @@ Your Claude skill communicates with the WebSocket server through the `bash` tool
 ```markdown
 # Real-Time Event Monitor Skill
 
-You help users monitor real-time events via WebSocket connections.
+You help users monitor [real-time events](/claude-skills-guide/articles/claude-code-skills-for-backend-developers-node-and-python/) via WebSocket connections.
 
 ## Instructions
 

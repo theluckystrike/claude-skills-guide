@@ -14,7 +14,7 @@ score: 8
 
 Generating documentation in Portuguese opens your projects to Brazilian and Portuguese-speaking development teams. Claude Code handles this efficiently when you configure the right workflow, whether you need API docs, README files, or inline code comments in Portuguese.
 
-This guide walks through setting up a Portuguese documentation generation workflow using Claude skills, covering language configuration, skill selection, and practical examples you can apply immediately.
+This guide walks through setting up a Portuguese [documentation generation](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) workflow using Claude skills, covering language configuration, skill selection, and practical examples you can apply immediately.
 
 ## Prerequisites
 
@@ -120,7 +120,7 @@ Output as a well-formatted document suitable for sharing with development teams.
 Format headers in Portuguese: "Referência da API", "Autenticação", "Endpoints", etc.
 ```
 
-The pdf skill handles all formatting automatically, producing a document ready for distribution.
+The [pdf skill](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) handles all formatting automatically, producing a document ready for distribution.
 
 ## Documenting Test Cases in Portuguese
 

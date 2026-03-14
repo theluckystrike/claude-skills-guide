@@ -141,7 +141,7 @@ CMD ["python", "main.py"]
 
 ## Go Multi-Stage Builds
 
-Go applications compile to a single binary, making multi-stage builds particularly effective:
+Go applications compile to a single binary, making [multi-stage build](/claude-skills-guide/articles/claude-code-nix-flake-reproducible-development-environment/)s particularly effective:
 
 ```dockerfile
 # Build stage

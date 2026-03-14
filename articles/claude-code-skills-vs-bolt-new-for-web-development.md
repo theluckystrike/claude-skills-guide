@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills, bolt-new, comparison, web-development]
 
 # Claude Code Skills vs Bolt.new for Web Development
 
-Bolt.new and Claude Code with skills are two very different approaches to AI-assisted web development. Bolt.new is designed to get you from idea to deployed web app in minutes. Claude Code with skills is designed to assist professional developers across the full software development lifecycle. Here is how to choose between them.
+Bolt.new and Claude Code with skills are two very different approaches to AI-assisted [web development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/). Bolt.new is designed to get you from idea to deployed web app in minutes. Claude Code with skills is designed to assist professional developers across the full software development lifecycle. Here is how to choose between them.
 
 ## What Each Tool Is
 

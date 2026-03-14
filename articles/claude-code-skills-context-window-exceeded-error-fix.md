@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills Context Window Exceeded Error Fix
 
-The **context window exceeded** error is a hard wall. When the total tokens in your session — conversation history, skill definitions, file contents, and tool outputs — exceed Claude's limit, the model cannot continue. This guide explains why it happens specifically when using Claude Code skills, and gives you practical, tested fixes.
+The **[context window exceeded](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/)** error is a hard wall. When the total tokens in your session — conversation history, skill definitions, file contents, and tool outputs — exceed Claude's limit, the model cannot continue. This guide explains why it happens specifically when using Claude Code skills, and gives you practical, tested fixes.
 
 ## Why Skills Make Context Window Errors More Likely
 

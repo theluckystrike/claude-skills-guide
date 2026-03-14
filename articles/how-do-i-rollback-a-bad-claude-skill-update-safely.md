@@ -12,7 +12,7 @@ score: 8
 
 # How Do I Rollback a Bad Claude Skill Update Safely
 
-Claude Code skills periodically receive updates from their maintainers. Sometimes these updates introduce bugs, break compatibility with your workflow, or simply don't work as expected. When this happens, knowing how to rollback safely is essential for maintaining productivity. This guide walks you through identifying problematic updates, restoring previous versions, and setting up prevention strategies.
+Claude Code skills periodically receive updates from their maintainers. Sometimes these updates introduce bugs, break compatibility with your workflow, or simply don't work as expected. When this happens, knowing how to [rollback safely](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) safely is essential for maintaining productivity. This guide walks you through identifying problematic updates, restoring previous versions, and setting up prevention strategies.
 
 ## Recognizing a Problematic Skill Update
 
@@ -171,7 +171,7 @@ cp -r ~/.claude/skills/SKILL_NAME ~/.claude/skills/backups/SKILL_NAME_$(date +%Y
 **Pin skill versions in your configuration:**
 If using a skill manager or `CLAUDE.md` file, specify version constraints.
 
-**Use version control for custom skills:**
+**Use [version control](/claude-skills-guide/articles/how-do-i-share-claude-skills-across-multiple-projects/) for custom skills:**
 If you've modified a skill, maintain your changes in a separate branch:
 ```
 git checkout -b my-customizations

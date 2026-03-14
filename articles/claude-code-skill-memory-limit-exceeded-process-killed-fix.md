@@ -16,7 +16,7 @@ Memory limit exceeded errors can abruptly terminate your Claude Code sessions, e
 
 ## Understanding the Error
 
-When Claude Code encounters a memory limit exceeded error, you typically see messages like "Process killed" or "Out of memory" in your terminal. This occurs when the operating system terminates the Node.js process that runs Claude Code to prevent a complete system freeze.
+When Claude Code encounters a [memory limit exceeded](/claude-skills-guide/articles/claude-code-skills-context-window-exceeded-error-fix/) error, you typically see messages like "Process killed" or "Out of memory" in your terminal. This occurs when the operating system terminates the Node.js process that runs Claude Code to prevent a complete system freeze.
 
 The error is particularly common when:
 
@@ -196,7 +196,7 @@ Identify which operations consume the most memory:
 
 ### Scenario 1: /pdf Skill Crashes on Large Files
 
-**Problem**: Processing a 500+ page PDF causes a "process killed" error.
+**Problem**: Processing a 500+ page PDF causes a "[process killed](/claude-skills-guide/articles/claude-code-skill-timeout-error-how-to-increase-the-limit/)" error.
 
 **Solution**:
 1. Split the PDF using external tools first: `pdftk large.pdf burst`

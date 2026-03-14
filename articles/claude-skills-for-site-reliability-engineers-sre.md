@@ -14,7 +14,7 @@ score: 8
 
 # Claude Skills for Site Reliability Engineers SRE
 
-Site reliability engineers need tools that handle incident response, log analysis, monitoring, and system debugging. Claude Code provides skills that integrate with common SRE tooling to accelerate these workflows. This guide covers practical applications for SRE teams.
+Site reliability engineers need tools that handle incident response, log analysis, [monitoring](/claude-skills-guide/articles/claude-code-sentry-error-tracking-source-maps-workflow/), and system debugging. Claude Code provides skills that integrate with common SRE tooling to accelerate these workflows. This guide covers practical applications for SRE teams.
 
 ## Incident Response Automation
 

@@ -23,7 +23,7 @@ Before you begin, ensure you have:
 - GitLab Runner configured (or use GitLab's shared runners)
 - Basic familiarity with YAML syntax and command-line operations
 
-If you are new to CI/CD pipelines, consider using the `/tdd` skill in Claude Code to generate test cases for your application before setting up the pipeline. The skill helps ensure your code works correctly before automation takes over.
+If you are new to [CI/CD pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/)s, consider using the `/tdd` skill in Claude Code to generate test cases for your application before setting up the pipeline. The skill helps ensure your code works correctly before automation takes over.
 
 ## Project Structure
 
@@ -189,7 +189,7 @@ After your pipeline runs, use the `/pdf` skill to generate deployment reports. T
 
 ```
 /pdf
-Create a deployment report for our GitLab CI pipeline showing success rate, build times, and Docker image sizes for the past month.
+Create a deployment report for our [GitLab CI pipeline](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) showing success rate, build times, and Docker image sizes for the past month.
 ```
 
 The `/supermemory` skill stores your pipeline configurations and deployment patterns, so Claude remembers your preferred setup across sessions. This accelerates future pipeline configurations.

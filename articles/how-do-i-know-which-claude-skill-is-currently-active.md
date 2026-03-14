@@ -12,7 +12,7 @@ score: 9
 
 # How Do I Know Which Claude Skill Is Currently Active?
 
-When working with Claude Code and its skill system, knowing which skill is currently active helps you understand how Claude will interpret your requests. The skill system transforms Claude's behavior based on the loaded instructions, and recognizing the active context prevents miscommunication and improves workflow efficiency.
+When working with Claude Code and its skill system, knowing which skill is [currently active](/claude-skills-guide/articles/claude-skill-metadata-header-vs-full-body-loading/) helps you understand how Claude will interpret your requests. The skill system transforms Claude's behavior based on the loaded instructions, and recognizing the active context prevents miscommunication and improves workflow efficiency.
 
 This guide covers practical methods to identify the active skill during your Claude Code sessions.
 

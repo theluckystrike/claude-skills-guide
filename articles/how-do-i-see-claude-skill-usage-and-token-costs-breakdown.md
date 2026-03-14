@@ -12,7 +12,7 @@ score: 9
 
 # How Do I See Claude Skill Usage and Token Costs Breakdown
 
-Understanding how Claude Code consumes tokens when you invoke skills helps you optimize workflows, manage costs, and make informed decisions about which skills to use for specific tasks. This guide covers the built-in tools and techniques for tracking skill usage and breaking down token costs.
+Understanding how Claude Code consumes tokens when you invoke skills helps you optimize workflows, manage costs, and make informed decisions about which skills to use for specific tasks. This guide covers the built-in tools and techniques for tracking skill usage and breaking down [token costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/).
 
 ## Token Usage Basics in Claude Code
 

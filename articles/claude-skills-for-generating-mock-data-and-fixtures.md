@@ -12,7 +12,7 @@ score: 7
 
 # Claude Skills for Generating Mock Data and Fixtures
 
-Generating realistic mock data and test fixtures is a common pain point in software development. Whether you are building a new application, writing automated tests, or prototyping features, having access to well-structured fake data accelerates your workflow significantly. Claude Code skills offer a powerful approach to generating this data without external libraries or manual data entry.
+Generating realistic [mock data](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) and test fixtures is a common pain point in software development. Whether you are building a new application, writing automated tests, or prototyping features, having access to well-structured fake data accelerates your workflow significantly. Claude Code skills offer a powerful approach to generating this data without external libraries or manual data entry.
 
 ## Understanding Mock Data Generation in Claude
 

@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skill YAML Front Matter Parsing Error Fix
 
-A malformed YAML front matter block is one of the most common reasons a Claude Code skill silently fails to load. The skill file exists, permissions are correct, but Claude either ignores the invocation or loads the skill without its configured metadata. This guide covers every known cause of YAML front matter parsing errors and gives you the exact fix for each.
+A malformed [YAML front matter](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) block is one of the most common reasons a Claude Code skill silently fails to load. The skill file exists, permissions are correct, but Claude either ignores the invocation or loads the skill without its configured metadata. This guide covers every known cause of YAML front matter parsing errors and gives you the exact fix for each.
 
 ## What YAML Front Matter Does in a Skill File
 

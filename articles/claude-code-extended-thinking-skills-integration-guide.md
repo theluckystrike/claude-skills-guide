@@ -12,7 +12,7 @@ score: 7
 
 # Extended Thinking + Claude Skills: Integration Guide
 
-Claude Code's extended thinking mode lets the model reason through complex, multi-step problems using a longer internal chain of thought. Skills extend that capability by providing domain-specific context and workflows. This guide shows how to combine skills effectively for complex problem-solving.
+Claude Code's [extended thinking](/claude-skills-guide/articles/claude-opus-orchestrator-sonnet-worker-architecture/) mode lets the model reason through complex, multi-step problems using a longer internal chain of thought. Skills extend that capability by providing domain-specific context and workflows. This guide shows how to combine skills effectively for complex problem-solving.
 
 ## What Extended Thinking Adds
 
