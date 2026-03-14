@@ -224,7 +224,7 @@ Invoke jobs from controllers or models:
 
 ## Conclusion
 
-These Claude Code skills transform Ruby on Rails development workflows. From generating scaffolded code to optimizing database queries and managing background jobs, each skill targets specific pain points in Rails development. Integrate these skills into your workflow to reduce boilerplate code, improve test coverage, and build robust Rails applications faster.
+These Claude Code skills transform Ruby on Rails development workflows. From generating scaffolded code to optimizing database queries and managing background jobs, each skill targets specific pain points in Rails development. Integrate these skills into your workflow to reduce boilerplate code, improve test coverage, and build reliable Rails applications faster.
 
 Start by invoking one skill for your next Rails task:
 

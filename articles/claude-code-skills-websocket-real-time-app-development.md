@@ -304,7 +304,7 @@ describe('WebSocket Chat', () => {
 
 ## Conclusion
 
-WebSocket development with Claude Code skills follows established patterns: implement persistent connections, handle lifecycle events robustly, scale with Redis for multi-server deployments, and secure communications through proper authentication. The skills available in Claude Code accelerate development by generating boilerplate, suggesting architectural patterns, and helping you debug connection issues. Combine `/web` for frontend WebSocket handling with `/backend` for server-side implementation to build complete real-time systems efficiently.
+WebSocket development with Claude Code skills follows established patterns: implement persistent connections, handle lifecycle events reliablely, scale with Redis for multi-server deployments, and secure communications through proper authentication. The skills available in Claude Code accelerate development by generating boilerplate, suggesting architectural patterns, and helping you debug connection issues. Combine `/web` for frontend WebSocket handling with `/backend` for server-side implementation to build complete real-time systems efficiently.
 
 ---
 

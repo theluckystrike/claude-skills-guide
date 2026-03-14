@@ -185,7 +185,7 @@ Set up scheduled runs using cron or your preferred scheduler, with the MCP serve
 
 ## Conclusion
 
-The Ansible MCP server transforms how you manage infrastructure configuration. By combining Ansible's robust configuration management with Claude Code's natural language interface, you reduce the learning curve for team members while maintaining consistency across your environments.
+The Ansible MCP server transforms how you manage infrastructure configuration. By combining Ansible's reliable configuration management with Claude Code's natural language interface, you reduce the learning curve for team members while maintaining consistency across your environments.
 
 ## Related Reading
 

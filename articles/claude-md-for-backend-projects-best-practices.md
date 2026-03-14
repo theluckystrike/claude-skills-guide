@@ -12,11 +12,11 @@ score: 7
 
 # Claude MD for Backend Projects Best Practices
 
-[Claude Code's Markdown-based skill system transforms how developers approach backend development](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) Rather than relying on rigid templates or generic prompts, you can create specialized `.md` skill files that encode your team's conventions, coding standards, and preferred workflows. This guide covers practical patterns for leveraging Claude.md in backend projects.
+[Claude Code's Markdown-based skill system transforms how developers approach backend development](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Rather than relying on rigid templates or generic prompts, you can create specialized `.md` skill files that encode your team's conventions, coding standards, and preferred workflows. This guide covers practical patterns for using Claude.md in backend projects.
 
 ## Understanding Claude.md Skills
 
-[A Claude skill is simply a Markdown file placed in `~/.claude/skills/` directory](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) When activated via the `/` command, Claude reads the file and adjusts its behavior accordingly. For backend projects, this means you can define patterns for API responses, database schema management, error handling conventions, and testing strategies.
+[A Claude skill is simply a Markdown file placed in `~/.claude/skills/` directory](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When activated via the `/` command, Claude reads the file and adjusts its behavior accordingly. For backend projects, this means you can define patterns for API responses, database schema management, error handling conventions, and testing strategies.
 
 The power lies in specificity. A well-crafted backend skill captures your team's architectural decisions in a reusable format. Unlike configuration files that require parsing, Markdown skills read like documentation that Claude actually follows.
 
@@ -97,7 +97,7 @@ When generating database migrations:
 
 For PostgreSQL:
 - Use `generated always as` for computed columns
-- Add indexes concurrently for large tables (INCLUDE CONCURRENTLY)
+- Add indexes concurrently for large tables (`CREATE INDEX CONCURRENTLY`)
 - Use `text` over `varchar(n)` unless strict length matters
 ```
 
@@ -232,15 +232,15 @@ The response structure, error handling, and validation rules all come from your 
 
 ## Conclusion
 
-Claude.md skills represent a paradigm shift for backend development. By encoding your team's conventions in Markdown files, you create a scalable knowledge base that Claude applies consistently across every session. Start with a general backend skill, then add specialized skills for APIs, databases, testing, and documentation as your project matures.
+Claude.md skills change how backend development teams encode their conventions. By encoding your team's conventions in Markdown files, you create a scalable knowledge base that Claude applies consistently across every session. Start with a general backend skill, then add specialized skills for APIs, databases, testing, and documentation as your project matures.
 
 The investment in crafting these skills pays dividends in code consistency, faster onboarding, and reduced cognitive overhead. Your skills evolve with your project, capturing institutional knowledge in a format both humans and AI can use.
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [Claude MD Best Practices for Large Codebases](/claude-skills-guide/articles/claude-md-best-practices-for-large-codebases/)
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [Claude MD Best Practices for Large Codebases](/claude-skills-guide/claude-md-best-practices-for-large-codebases/)
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

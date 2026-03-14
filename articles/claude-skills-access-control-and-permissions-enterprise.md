@@ -227,7 +227,7 @@ Skills like the security and audit skills can process these logs automatically, 
 
 ## Conclusion
 
-Implementing access control for Claude skills in enterprise environments requires thinking beyond simple allow/deny lists. A robust permission system combines role-based access control with skill isolation, clear permission boundaries, and comprehensive auditing. By defining roles that match your organizational structure, implementing proper skill isolation for multi-tenant scenarios, and enforcing permissions consistently, you can safely deploy Claude Code capabilities across your enterprise while maintaining security and compliance requirements.
+Implementing access control for Claude skills in enterprise environments requires thinking beyond simple allow/deny lists. A reliable permission system combines role-based access control with skill isolation, clear permission boundaries, and comprehensive auditing. By defining roles that match your organizational structure, implementing proper skill isolation for multi-tenant scenarios, and enforcing permissions consistently, you can safely deploy Claude Code capabilities across your enterprise while maintaining security and compliance requirements.
 
 The key is treating permissions as a first-class concern in your Claude Code deployment, not an afterthought. Define your permission model upfront, implement enforcement at each layer, and maintain audit trails for continuous compliance verification.
 

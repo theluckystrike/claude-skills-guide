@@ -22,7 +22,7 @@ The solution involves mastering Docker's inspection capabilities combined with e
 
 ## Essential Docker Logs Commands
 
-Docker provides robust logging mechanisms that form the foundation of any debugging workflow. The basic command retrieves stdout and stderr from a container:
+Docker provides reliable logging mechanisms that form the foundation of any debugging workflow. The basic command retrieves stdout and stderr from a container:
 
 ```bash
 docker logs container_name

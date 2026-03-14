@@ -18,7 +18,7 @@ When you ask Claude Code to generate code, you may notice a pattern: the resulti
 
 Claude Code generates code based on your instructions, and most prompts emphasize getting something working rather than handling edge cases. When you ask for a function that processes data, Claude interprets this as a request for the core logic—the simplest implementation that fulfills the request.
 
-The model also optimizes for code readability. Error handling adds nesting, complexity, and visual noise that obscures the primary logic. From Claude's perspective, a clean 20-line function beats a 40-line version with comprehensive error handling—especially when you didn't explicitly request robustness.
+The model also optimizes for code readability. Error handling adds nesting, complexity, and visual noise that obscures the primary logic. From Claude's perspective, a clean 20-line function beats a 40-line version with comprehensive error handling—especially when you didn't explicitly request reliableness.
 
 Additionally, Claude often lacks context about your specific environment. It doesn't know if you're building a critical system requiring strict error handling or a quick prototype where simplicity matters more. The safe default is lean code that works when conditions are ideal.
 
@@ -73,7 +73,7 @@ def create_report(data, output_path):
     doc.save(output_path)  # No validation, no error handling
 ```
 
-A robust version checks permissions, validates paths, and handles write failures:
+A reliable version checks permissions, validates paths, and handles write failures:
 
 ```python
 def create_report(data, output_path):
@@ -144,7 +144,7 @@ Claude responds well to specificity. When you enumerate exactly what error handl
 
 [Skills like the `tdd` skill encourage test-driven development](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) encourage test-driven development, which naturally surfaces error handling needs through failing tests. Similarly, the `frontend-design` skill can be configured to include validation patterns.
 
-[Create a custom skill that always includes error handling templates](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). For example, a skill called `robust-code` could provide this guidance:
+[Create a custom skill that always includes error handling templates](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). For example, a skill called `reliable-code` could provide this guidance:
 
 ```
 When generating any function or method:
@@ -208,7 +208,7 @@ There's a genuine tradeoff here. Verbose error handling obscures intent and infl
 
 The key is intentionality. Understanding that Claude defaults to minimal error handling lets you decide when to accept that default and when to explicitly override it. Build error handling into your skill definitions for production work, review generated code before deploying, and use explicit prompting for critical paths.
 
-With practice, you learn to work with Claude's tendencies while ensuring your codebase remains robust. The model is capable of excellent error handling—it simply needs direction.
+With practice, you learn to work with Claude's tendencies while ensuring your codebase remains reliable. The model is capable of excellent error handling—it simply needs direction.
 
 ---
 

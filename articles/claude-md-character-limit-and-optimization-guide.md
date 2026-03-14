@@ -121,7 +121,7 @@ Sometimes the issue is not your input file but Claude's output. When generating 
 
 ## Summary
 
-Claude MD character limits are soft boundaries that become hard limits when they impact your workflow. By keeping front matter concise, writing precise instructions, externalizing examples, and using lazy loading for complex skills, you can build robust Claude skills that perform well within token constraints. These optimization techniques apply whether you are creating a simple utility skill or a comprehensive development workflow using skills like `tdd`, `frontend-design`, or `pdf`.
+Claude MD character limits are soft boundaries that become hard limits when they impact your workflow. By keeping front matter concise, writing precise instructions, externalizing examples, and using lazy loading for complex skills, you can build reliable Claude skills that perform well within token constraints. These optimization techniques apply whether you are creating a simple utility skill or a comprehensive development workflow using skills like `tdd`, `frontend-design`, or `pdf`.
 
 ## Related Reading
 

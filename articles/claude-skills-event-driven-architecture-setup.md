@@ -202,7 +202,7 @@ The debounce parameter prevents rapid-fire invocations during active editing ses
 
 ## Error Handling and Recovery
 
-Event-driven systems require robust error handling. Configure retry logic and fallback behaviors:
+Event-driven systems require reliable error handling. Configure retry logic and fallback behaviors:
 
 ```yaml
 # ~/.claude/skills/resilient-handler/skill.md
@@ -247,7 +247,7 @@ Keep your event-driven architecture manageable with these principles:
 
 ## Conclusion
 
-Event-driven architecture unlocks powerful automation possibilities with Claude Skills. By configuring file watchers, git hooks, and webhook handlers, you create a reactive system that responds to development activities without manual intervention. Start with simple event sources, build routing logic as needs grow, and maintain robust error handling throughout. For patterns that complement event-driven design, see [Building Stateful Agents with Claude Skills Guide](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/).
+Event-driven architecture unlocks powerful automation possibilities with Claude Skills. By configuring file watchers, git hooks, and webhook handlers, you create a reactive system that responds to development activities without manual intervention. Start with simple event sources, build routing logic as needs grow, and maintain reliable error handling throughout. For patterns that complement event-driven design, see [Building Stateful Agents with Claude Skills Guide](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/).
 
 The key is gradual adoption—add event triggers for repetitive manual tasks first, then expand as your confidence grows. Your development workflow becomes more automated while you maintain full control over what events trigger what actions.
 

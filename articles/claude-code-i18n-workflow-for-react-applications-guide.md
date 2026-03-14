@@ -92,7 +92,7 @@ This explicit approach ensures Claude generates translations that match your i18
 
 ## Building Locale Switching into Your Application
 
-A robust i18n workflow includes proper locale detection and user-controlled language switching. Implement locale detection in this order of priority:
+A reliable i18n workflow includes proper locale detection and user-controlled language switching. Implement locale detection in this order of priority:
 
 1. Check URL path (e.g., `/en/products`, `/es/products`)
 2. Check user preference stored in localStorage

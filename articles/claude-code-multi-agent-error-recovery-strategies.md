@@ -23,7 +23,7 @@ Multi-agent setups in Claude Code typically involve orchestration where one agen
 - **Context overflow**: Large contexts cause truncation or processing errors
 - **Agent state corruption**: The conversation context becomes inconsistent
 
-Each failure mode requires a different recovery approach, and the most robust systems handle multiple failure types simultaneously.
+Each failure mode requires a different recovery approach, and the most reliable systems handle multiple failure types simultaneously.
 
 ## Pattern 1: Explicit Error Handling with Try-Catch Blocks
 
@@ -175,7 +175,7 @@ This pattern works particularly well with complex document processing via the pd
 
 ## Implementing Recovery in Practice
 
-Combining these patterns creates robust multi-agent systems. A typical workflow might include:
+Combining these patterns creates reliable multi-agent systems. A typical workflow might include:
 
 1. **Initial attempt** with the primary skill
 2. **Fallback to alternative** if primary fails

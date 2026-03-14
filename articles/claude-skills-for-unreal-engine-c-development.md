@@ -60,7 +60,7 @@ This proves especially useful when documenting complex gameplay systems that inv
 
 ### Test-Driven Development Using the tdd Skill
 
-Unreal's built-in testing framework, although robust, requires specific setup procedures. The `tdd` skill guides you through creating functional tests for your game modules. For instance, testing a damage calculation system:
+Unreal's built-in testing framework, although reliable, requires specific setup procedures. The `tdd` skill guides you through creating functional tests for your game modules. For instance, testing a damage calculation system:
 
 ```cpp
 #include "MyGameplayAbility.h"

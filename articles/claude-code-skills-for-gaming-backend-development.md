@@ -210,7 +210,7 @@ This Redis-based leaderboard handles millions of score updates per minute while 
 
 ## WebSocket Connection Handling
 
-Real-time game communication requires robust [robust WebSocket management](/claude-skills-guide/claude-code-skills-microservices-communication-patterns/). Claude Code guides you through implementing connection pooling, heartbeat mechanisms, and graceful disconnections.
+Real-time game communication requires reliable [reliable WebSocket management](/claude-skills-guide/claude-code-skills-microservices-communication-patterns/). Claude Code guides you through implementing connection pooling, heartbeat mechanisms, and graceful disconnections.
 
 ```go
 // Go WebSocket hub for game clients
