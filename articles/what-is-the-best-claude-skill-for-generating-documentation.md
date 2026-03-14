@@ -5,7 +5,7 @@ description: "A practical guide to Claude skills for documentation generation, c
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, claude-skills]
+tags: [claude-code, claude-skills, documentation, docx, pdf, automation]
 reviewed: true
 score: 7
 ---
@@ -22,40 +22,32 @@ Claude skills are modular capabilities that extend Claude Code's functionality. 
 
 The **docx** skill stands out as the most versatile option for generating documentation. This skill allows you to create, edit, and format Microsoft Word documents programmatically, making it ideal for generating professional technical documentation that requires precise formatting, headers, tables, and embedded code blocks.
 
-Here's a practical example of generating a README file using the docx skill:
+Here's how you invoke the docx skill to generate a README:
 
-```python
-from docx import Document
+```
+/docx
+Create a README document for my Python project. Include sections for:
+- Installation
+- Usage with code examples
+- API Reference with function signatures from src/main.py
 
-def generate_readme(project_name, description, installation_steps):
-    doc = Document()
-    doc.add_heading(project_name, 0)
-    doc.add_paragraph(description)
-    
-    doc.add_heading('Installation', level=1)
-    for step in installation_steps:
-        doc.add_paragraph(step, style='List Bullet')
-    
-    doc.save('README.md')
+Use a professional technical documentation style.
 ```
 
 The docx skill preserves formatting across different platforms and integrates well with existing documentation pipelines. For teams already using Word or needing to share documents with non-technical stakeholders, this skill provides the most professional output.
 
 ## PDF Skill for Static Documentation
 
-If your documentation needs to be distributed as static files, the **pdf** skill offers excellent capabilities. This skill enables programmatic PDF creation and editing, making it suitable for generating downloadable documentation, API references, and user manuals.
+If your documentation needs to be distributed as static files, the **pdf** skill offers excellent capabilities. This skill enables PDF creation and editing, making it suitable for generating downloadable documentation, API references, and user manuals.
 
-```python
-from pypdf import PdfWriter, PdfReader
+```
+/pdf
+Generate API documentation PDF for our REST API. Include:
+- Authentication section
+- All endpoints with request/response examples
+- Error code reference table
 
-def create_api_documentation(pages, output_path):
-    writer = PdfWriter()
-    for page_content in pages:
-        # Add content to PDF
-        writer.add_page(page_content)
-    
-    with open(output_path, 'wb') as f:
-        writer.write(f)
+Source data is in docs/api-spec.yaml
 ```
 
 The pdf skill excels when you need locked-down documentation that cannot be easily modified by end users. Many organizations prefer PDF documentation for compliance and versioning purposes.
