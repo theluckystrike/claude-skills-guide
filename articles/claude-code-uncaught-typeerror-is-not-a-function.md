@@ -232,3 +232,11 @@ The "Uncaught TypeError: is not a function" error is common but fixable. By unde
 With these debugging techniques and Claude Code's assistance, you'll spend less time fixing runtime errors and more time building great applications.
 
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Code Not Working After Update: How to Fix](/claude-skills-guide/claude-code-not-working-after-update-how-to-fix/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+
