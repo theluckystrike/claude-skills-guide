@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
-{% raw %}
 
 # How to Use Claude Skills with n8n Automation Workflows
 
@@ -183,4 +182,3 @@ Connecting Claude to n8n automation uses the Anthropic API directly via HTTP Req
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep n8n workflow API costs under control
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

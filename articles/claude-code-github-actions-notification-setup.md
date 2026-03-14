@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
-{% raw %}
 
 # Claude Code GitHub Actions Notification Setup
 
@@ -243,4 +242,3 @@ Setting up proper GitHub Actions notifications for Claude Code workflows transfo
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

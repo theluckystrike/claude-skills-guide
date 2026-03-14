@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 9
 ---
-{% raw %}
 
 # Claude Code Skills + AWS Lambda: Serverless Integration
 
@@ -269,4 +268,3 @@ def handler(event, context):
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

@@ -10,7 +10,6 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
 
 # Claude Skills for Puppet Chef Configuration Management
 
@@ -173,4 +172,3 @@ Start by describing your infrastructure needs clearly, provide context about you
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

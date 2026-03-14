@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
-{% raw %}
 
 # Claude Code GitHub Actions Matrix Builds Guide
 
@@ -298,4 +297,3 @@ By combining matrix strategies with Claude Code skills like tdd and supermemory,
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

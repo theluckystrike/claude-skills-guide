@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
-{% raw %}
 
 # Claude Skills for Legal Document Automation
 
@@ -242,4 +241,3 @@ The combination of Claude's natural language processing and skill-based instruct
 - [Claude Code for Beginners: Getting Started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — Set up Claude Code before building your first document automation skill
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
-{% raw %}
 
 # Claude Code Container Debugging: Docker Logs Workflow Guide
 
@@ -249,4 +248,3 @@ Claude Code enhances this workflow through skills that maintain context, generat
 - [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Browse more infrastructure and DevOps skill workflows for container-heavy environments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
-{% raw %}
 
 # Claude Code GitHub Actions Approval Workflows
 
@@ -264,4 +263,3 @@ The key is finding the right balance between security controls and developer vel
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

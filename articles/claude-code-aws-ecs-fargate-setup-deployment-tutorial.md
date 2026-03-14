@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
-{% raw %}
 
 # Claude Code AWS ECS Fargate Setup Deployment Tutorial
 
@@ -299,4 +298,3 @@ Claude Code accelerates each phase: generating Terraform and task definitions, w
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills for deployment workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

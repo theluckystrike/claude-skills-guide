@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
-{% raw %}
 
 # Monitoring and Logging in Claude Code Multi-Agent Systems
 
@@ -210,4 +209,3 @@ Monitoring multi-agent Claude Code systems requires deliberate architecture. Sta
 - [Claude Skills Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced observability and coordination patterns for Claude Code agents.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

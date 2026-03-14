@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 tags: [claude-code, claude-skills, automation, changelog, devops]
 ---
-{% raw %}
 
 # Claude Skills for Automated Changelog Generation
 
@@ -231,4 +230,3 @@ Automate the trivial, focus on the meaningful. Use Claude skills to handle parsi
 ---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

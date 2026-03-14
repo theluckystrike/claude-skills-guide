@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
-{% raw %}
 
 # Claude Code GCP Google Cloud Setup and Deployment Guide
 
@@ -223,4 +222,3 @@ The key is treating Claude Code as a local development tool that interfaces with
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep cloud automation sessions cost-effective
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
-{% raw %}
 
 # Claude Skills with GitHub Actions CI/CD Pipeline
 
@@ -272,4 +271,3 @@ Wiring Claude intelligence into GitHub Actions CI/CD [bridges the gap between au
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep CI/CD API costs under control
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

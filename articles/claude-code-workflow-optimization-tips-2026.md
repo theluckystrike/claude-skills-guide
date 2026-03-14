@@ -97,8 +97,7 @@ Global skills serve general purposes, but project-specific configurations optimi
 .claude/
 ├── skills/
 │   └── project-conventions.md
-├── hooks.yml
-└── settings.yml
+└── settings.json
 ```
 
 The project conventions skill eliminates repetitive explanations:
@@ -122,32 +121,13 @@ Track skill performance by paying attention to response times and output quality
 
 ## Multi-Agent Coordination
 
-Complex projects benefit from coordinating multiple Claude instances. The 2026 workflow pattern uses subagents for parallel task execution:
-
-```
-/You are coordinating three subagents:
-- agent-backend: handles API development
-- agent-frontend: builds React components  
-- agent-tests: creates test coverage
-
-Coordinate them to build a complete feature: user authentication with JWT
-```
-
-Each subagent operates independently while the main agent orchestrates their work.
+Complex projects benefit from coordinating multiple Claude Code sessions. Run separate terminal sessions for distinct workstreams — one handling backend API development, another building React components, and a third creating test coverage. Each session focuses on its domain while you coordinate the overall feature work.
 
 ## Error Recovery Strategies
 
-Workflow optimization includes handling failures gracefully. Build retry logic into your skills:
+Workflow optimization includes handling failures gracefully. When a skill produces incorrect output, provide specific corrective instructions rather than restarting the entire task. Tell Claude exactly what went wrong and what you expected instead.
 
-```yaml
-skills:
-  - name: api-caller
-    retry:
-      max_attempts: 3
-      backoff: exponential
-```
-
-When working with the pdf skill on large documents, implement chunked processing:
+When working with the `/pdf` skill on large documents, use chunked processing:
 
 ```
 /pdf extract pages 1-50 from large-manual.pdf and summarize

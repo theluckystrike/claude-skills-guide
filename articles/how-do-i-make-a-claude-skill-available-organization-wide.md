@@ -9,7 +9,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
-{% raw %}
 
 # How Do I Make a Claude Skill Available Organization Wide
 
@@ -202,4 +201,3 @@ Regardless of distribution method, [invest time in documenting skill usage](/cla
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Ensure your team understands skill fundamentals before rolling out organization-wide.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}
