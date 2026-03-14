@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Building Webhook Delivery Workflows with Claude Code and Upstash QStash"
-description: "Learn how to leverage Claude Code's AI capabilities to build robust, reliable webhook delivery systems using Upstash QStash for message queuing and retry logic."
+title: "Building Webhook Delivery Workflows with Claude Code and."
+description: "Learn how to leverage Claude Code's AI capabilities to build robust, reliable webhook delivery systems using Upstash QStash for message queuing and."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-upstash-qstash-webhook-delivery-workflow/
+categories: [guides]
 ---
 
 {% raw %}
@@ -224,3 +225,10 @@ Claude Code helps you not just generate initial code, but also debug issues, opt
 
 Start building your webhook delivery workflow today, and let Claude Code guide you through the implementation details while QStash handles the reliability guarantees.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
