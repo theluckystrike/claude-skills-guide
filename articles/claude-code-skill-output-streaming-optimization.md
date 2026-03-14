@@ -5,7 +5,7 @@ description: "Learn how to optimize output streaming in Claude Code skills for f
 date: 2026-03-14
 categories: [advanced]
 tags: [claude-code, claude-skills, performance, optimization]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
