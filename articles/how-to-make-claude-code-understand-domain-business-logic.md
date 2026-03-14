@@ -79,7 +79,7 @@ subscription_tiers:
 
 Reference this file in your skill prompts or conversation context. Claude will apply these rules when generating code for user management or access control features.
 
-## Method 3: Leverage the SuperMemory Skill for Context Recall
+## Method 3: Use the SuperMemory Skill for Context Recall
 
 The supermemory skill enables Claude to recall previous conversations and domain knowledge across sessions. This proves invaluable when your business logic evolves over time. By storing key decisions and rule updates in supermemory, Claude maintains awareness of domain changes without requiring you to repeat context in every conversation.
 

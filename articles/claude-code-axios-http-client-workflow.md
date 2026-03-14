@@ -107,7 +107,7 @@ This pattern reduces wait time significantly compared to sequential requests.
 
 ## Error Handling Strategies
 
-Robust error handling distinguishes production-ready code from prototypes. Create a utility function that categorizes errors:
+solid error handling distinguishes production-ready code from prototypes. Create a utility function that categorizes errors:
 
 ```javascript
 // src/api/utils/errorHandler.js

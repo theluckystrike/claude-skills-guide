@@ -225,6 +225,6 @@ function logConnectionEvent(event) {
 
 ## Conclusion
 
-Claude Code transforms WebSocket API development from a complex undertaking into a streamlined process. By leveraging skills like tdd for test-driven development, superMemory for persistent context, and pdf for documentation generation, you build robust real-time systems efficiently. The key lies in establishing solid protocols early, implementing proper authentication, and maintaining comprehensive test coverage.
+Claude Code transforms WebSocket API development from a complex undertaking into a streamlined process. By using skills like tdd for test-driven development, superMemory for persistent context, and pdf for documentation generation, you build reliable real-time systems efficiently. The key lies in establishing solid protocols early, implementing proper authentication, and maintaining comprehensive test coverage.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

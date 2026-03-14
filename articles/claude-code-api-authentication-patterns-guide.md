@@ -120,7 +120,7 @@ async function refreshOAuthToken(refreshToken) {
 }
 ```
 
-Skills that integrate with Google Cloud, Microsoft Graph, or similar services need this pattern. When building skills for tdd workflows that might connect to CI/CD systems, OAuth provides the most robust authentication.
+Skills that integrate with Google Cloud, Microsoft Graph, or similar services need this pattern. When building skills for tdd workflows that might connect to CI/CD systems, OAuth provides the most strong authentication.
 
 ## Pattern 4: Credential Encryption
 

@@ -75,7 +75,7 @@ Command-line tools are among the most satisfying projects to build with Claude s
 1. Define the CLI's interface: commands, flags, and expected output format
 2. Use Claude with TDD skill to write integration tests that run the actual binary
 3. Implement the CLI driven by those tests
-4. Use the code review skill to audit the final implementation for robustness
+4. Use the code review skill to audit the final implementation for reliable
 5. Use the documentation skill to generate `--help` text and a README
 
 Claude is particularly good at shell tooling because it understands unix conventions deeply: exit codes, stderr vs stdout separation, pipe compatibility, and POSIX compliance. Explicitly loading skills that reinforce these conventions produces better output than relying on default Claude behavior alone.
@@ -205,7 +205,7 @@ Use this table to estimate what you are getting into before you start a new proj
 |---------|-------------------|
 | [How to Build a SaaS MVP with Claude Code Skills Guide](/claude-skills-guide/how-to-build-saas-mvp-with-claude-code-skills-guide/) | End-to-end SaaS MVP development with Claude skills |
 | [Full Stack Web App with Claude Skills Step-by-Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/) | Complete full-stack app from blank project to deployed |
-| [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-guide/claude-skills-for-startup-founders-and-solopreneurs/) | Leveraging skills to move fast as a solo builder |
+| [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-guide/claude-skills-for-startup-founders-and-solopreneurs/) | Using skills to move fast as a solo builder |
 | [Best Claude Skills for Solo Developers and Freelancers](/claude-skills-guide/best-claude-skills-for-solo-developers-and-freelancers/) | Top skill combinations for independent developers |
 | [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) | Frontend-specific skill stack and workflows |
 | [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) | Detailed guide to the official frontend-design skill |

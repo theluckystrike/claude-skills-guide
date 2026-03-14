@@ -165,7 +165,7 @@ Claude helps identify these issues during code review when you use skills focuse
 
 ## Conclusion
 
-Adding authentication to your application using Claude Code is straightforward when you provide context about your stack and requirements. Leverage specialized skills like tdd for test-driven development, supermemory for persistent context, and frontend-design for secure UI components. Focus on password security, proper session management, and comprehensive testing to build authentication that protects your users.
+Adding authentication to your application using Claude Code is straightforward when you provide context about your stack and requirements. Use specialized skills like tdd for test-driven development, supermemory for persistent context, and frontend-design for secure UI components. Focus on password security, proper session management, and comprehensive testing to build authentication that protects your users.
 
 The initial investment in proper authentication pays dividends in security and user trust. Claude Code accelerates this process while helping you avoid common pitfalls that lead to security vulnerabilities.
 

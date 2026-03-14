@@ -124,7 +124,7 @@ When Claude Code suggests code using external libraries—especially less common
 
 Large, multi-step code generation increases hallucination risk. Generate one component at a time. Validate each piece before moving to the next. This mirrors how you'd normally develop software but becomes even more important with AI assistance.
 
-### Leverage Specialized Skills
+### Use Specialized Skills
 
 Skills are trained or prompted for specific domains. The **slack-gif-creator** skill produces reliable output for its narrow use case. Similarly, using domain-appropriate skills (rather than general prompting) reduces the chance of hallucinations because the skill's context is more focused and controlled.
 
@@ -136,7 +136,7 @@ For prototyping, some hallucination is tolerable—you're trading accuracy for s
 
 ## Building Better AI Development Habits
 
-The relationship between developers and AI coding assistants is evolving. Hallucination isn't a failure of the technology—it's a characteristic to work around. By understanding its causes and applying strategies like explicit context, test-driven workflows, and verification practices, you can harness Claude Code's capabilities while keeping hallucination in check.
+The relationship between developers and AI coding assistants is evolving. Hallucination isn't a failure of the technology—it's a characteristic to work around. By understanding its causes and applying strategies like explicit context, test-driven workflows, and verification practices, you can use Code's capabilities while keeping hallucination in check.
 
 The developers who get the most from Claude Code are those who treat it as a powerful but fallible collaborator—not a perfect oracle. Provide good context, verify the output, and build review into your workflow. This is no different from working with a human colleague, just with different failure modes.
 

@@ -57,7 +57,7 @@ When you reference this file in your prompts, Claude absorbs these conventions:
 /edit implement user-service.ts following conventions in .claude context.md
 ```
 
-## Leverage Claude Skills for Pattern Enforcement
+## Use Claude Skills for Pattern Enforcement
 
 Several community skills can help enforce code patterns during generation:
 

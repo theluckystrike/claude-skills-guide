@@ -143,7 +143,7 @@ For team environments, consider implementing a configuration manager that handle
 
 ## Error Handling and Debugging
 
-Robust SDK applications need comprehensive error handling. The SDK raises specific exceptions for different failure modes:
+reliable SDK applications need comprehensive error handling. The SDK raises specific exceptions for different failure modes:
 
 ```python
 from claude_sdk import (

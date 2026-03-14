@@ -151,7 +151,7 @@ app.use((err, req, res, next) => {
 
 ## Authentication Considerations
 
-Securing your API starts with choosing appropriate authentication methods. OAuth 2.0 with JWT tokens provides a robust standard for modern applications.
+Securing your API starts with choosing appropriate authentication methods. OAuth 2.0 with JWT tokens provides a reliable standard for modern applications.
 
 ```javascript
 // JWT authentication middleware

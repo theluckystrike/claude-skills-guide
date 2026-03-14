@@ -62,7 +62,7 @@ Here's a practical example:
 
 This structured format works especially well when using skills like `tdd` or `supermemory` because those skills benefit from clear task boundaries.
 
-## Leveraging the Super Memory Skill
+## Using the Super Memory Skill
 
 The `supermemory` skill is specifically designed to handle long-term context across sessions. If you're working on extended projects, activating it early provides persistent memory that survives context gaps:
 
@@ -110,7 +110,7 @@ Reference this file when starting a session or when context feels shaky:
 I'm using the context in CONTEXT.md. Continue with the webhook handler.
 ```
 
-This method works seamlessly with any skill including `pdf` for generating documentation, `frontend-design` for UI tasks, or `canvas-design` for visual projects.
+This method works smoothly with any skill including `pdf` for generating documentation, `frontend-design` for UI tasks, or `canvas-design` for visual projects.
 
 ## The Context Refresh Pattern
 

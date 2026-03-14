@@ -19,7 +19,7 @@ When building Claude skills that interact with external APIs, file systems, or l
 
 Claude Code skills often trigger async operations through tool calls. Whether you're generating a PDF with the pdf skill, running tests with tdd, or querying a memory system using supermemory, each external interaction carries the risk of failure. Network timeouts, invalid responses, permission denied errors, and malformed data can all interrupt your workflow.
 
-The key to robust async error handling lies in three principles: anticipate failures, provide meaningful feedback, and implement fallback strategies. When you design your skill with these principles in mind, you create reliable workflows that recover gracefully from unexpected conditions.
+The key to solid async error handling lies in three principles: anticipate failures, provide meaningful feedback, and implement fallback strategies. When you design your skill with these principles in mind, you create reliable workflows that recover gracefully from unexpected conditions.
 
 ## Basic Error Handling Pattern
 

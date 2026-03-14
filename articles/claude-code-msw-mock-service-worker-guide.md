@@ -63,7 +63,7 @@ Claude Code can help you expand these handlers to cover edge cases, error respon
 
 ## Integrating MSW with Test Environments
 
-Testing is where MSW truly shines, and combining it with Claude's testing capabilities creates a robust development workflow. The tdd skill in Claude Code works well with MSW to create test-first development patterns.
+Testing is where MSW truly shines, and combining it with Claude's testing capabilities creates a reliable development workflow. The tdd skill in Claude Code works well with MSW to create test-first development patterns.
 
 Set up MSW in your test file:
 

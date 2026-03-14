@@ -78,7 +78,7 @@ __version__ = "0.1.0"
 
 ## Building the Client Interface
 
-A robust SDK needs a clean client interface. Use type hints throughout and use pydantic for request/response validation. This approach catches errors early and provides excellent IDE support.
+A reliable SDK needs a clean client interface. Use type hints throughout and use pydantic for request/response validation. This approach catches errors early and provides excellent IDE support.
 
 ```python
 # src/mypackage/client.py
@@ -198,7 +198,7 @@ class AsyncClaudeClient:
 
 ## Conclusion
 
-Building a Python SDK for Claude Code follows established patterns. Focus on clean interfaces, thorough testing, and good documentation. Leverage skills like `pdf` for document handling or `tdd` for generating tests automatically. Start simple, iterate based on user feedback, and publish when ready.
+Building a Python SDK for Claude Code follows established patterns. Focus on clean interfaces, thorough testing, and good documentation. Use skills like `pdf` for document handling or `tdd` for generating tests automatically. Start simple, iterate based on user feedback, and publish when ready.
 
 The Python ecosystem benefits from well-designed packages. Your SDK contributes to that ecosystem and enables others to build powerful Claude Code integrations.
 

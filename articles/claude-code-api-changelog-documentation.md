@@ -48,7 +48,7 @@ Consider a scenario where the tool calling API changes its response format. The 
 
 When you encounter such changes, update your parsing logic accordingly. The changelog typically provides backward compatibility notes when available, which can temporarily ease your migration path.
 
-## Leveraging New Features for Better Workflows
+## Using New Features for Better Workflows
 
 New features often appear in changelogs before they're widely adopted. For developers building specialized workflows, these additions can significantly improve productivity. The `tdd` skill, for instance, might have been introduced through a changelog announcement explaining its test-first development capabilities.
 

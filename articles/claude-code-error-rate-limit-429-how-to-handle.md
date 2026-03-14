@@ -113,7 +113,7 @@ Claude skills like the **tdd** skill for test-driven development or the **pdf** 
 
 Similarly, skills like **frontend-design** handle entire component implementations in one pass, making more efficient use of your rate limit budget.
 
-### Leverage Context Effectively
+### Use Context Effectively
 
 The **supermemory** skill enables persistent context across sessions. By maintaining context effectively, you avoid repeating information that Claude already knows, reducing unnecessary requests.
 

@@ -214,7 +214,7 @@ The supermemory skill helps track these decisions across development sessions, m
 
 ## Conclusion
 
-Claude Code skills enhance gRPC development by automating code generation, testing, and documentation. Start with well-defined Protocol Buffers, use the tdd skill for comprehensive test coverage, and leverage the pdf skill for clear API documentation. This workflow produces maintainable, well-tested gRPC services that scale with your architecture.
+Claude Code skills enhance gRPC development by automating code generation, testing, and documentation. Start with well-defined Protocol Buffers, use the tdd skill for comprehensive test coverage, and use the pdf skill for clear API documentation. This workflow produces maintainable, well-tested gRPC services that scale with your architecture.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

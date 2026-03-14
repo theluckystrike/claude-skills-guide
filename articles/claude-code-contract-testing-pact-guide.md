@@ -17,7 +17,7 @@ tags: [claude-code, claude-skills]
 
 Contract testing has become essential for microservices architectures where multiple services need to communicate reliably. When you're building systems with Claude Code, understanding contract testing with Pact helps you verify that your service integrations work correctly without requiring full environment deployments.
 
-This guide walks you through implementing contract testing using Pact, with practical examples you can apply to your Claude Code workflows. Whether you're working with REST APIs, message queues, or GraphQL endpoints, Pact provides a robust framework for ensuring service compatibility.
+This guide walks you through implementing contract testing using Pact, with practical examples you can apply to your Claude Code workflows. Whether you're working with REST APIs, message queues, or GraphQL endpoints, Pact provides a solid framework for ensuring service compatibility.
 
 ## What is Contract Testing?
 

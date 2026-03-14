@@ -19,7 +19,7 @@ Building reliable integrations with Claude Code API requires thoughtful error ha
 
 Claude Code API returns distinct error categories that require different handling strategies. Authentication errors occur when API keys are invalid or expired. Rate limit errors (HTTP 429) happen when you exceed request quotas. Validation errors indicate malformed request payloads. Server errors (5xx) represent temporary service issues. Each category demands a specific response strategy.
 
-When building integrations with skills like the pdf skill for document processing or the frontend-design skill for UI generation, robust error handling prevents workflow interruptions. A single unhandled error can cascade through dependent operations, causing data loss or inconsistent state.
+When building integrations with skills like the pdf skill for document processing or the frontend-design skill for UI generation, solid error handling prevents workflow interruptions. A single unhandled error can cascade through dependent operations, causing data loss or inconsistent state.
 
 ## Basic Error Handling Pattern
 

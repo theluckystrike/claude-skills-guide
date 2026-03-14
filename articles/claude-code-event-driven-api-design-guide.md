@@ -25,7 +25,7 @@ The core patterns include webhooks for receiving external events, message queues
 
 Webhooks represent the foundation of event-driven APIs. When an external service needs to notify your system of something, it sends an HTTP POST to your endpoint. The receiving endpoint must validate the request, acknowledge receipt quickly, and process the payload asynchronously.
 
-A robust webhook handler in Node.js using Express demonstrates the pattern:
+A solid webhook handler in Node.js using Express demonstrates the pattern:
 
 ```javascript
 app.post('/webhooks/payment', async (req, res) => {

@@ -71,7 +71,7 @@ Quality packages require comprehensive tests. The tdd skill transforms how you a
 Write unit tests for a parseDate utility that handles ISO strings, Unix timestamps, and relative dates like "2 days ago"
 ```
 
-Claude will generate the test file first, then guide implementation to satisfy those tests. This workflow produces more robust code with better edge-case coverage.
+Claude will generate the test file first, then guide implementation to satisfy those tests. This workflow produces more reliable code with better edge-case coverage.
 
 For testing configuration, create a vitest.config.ts:
 

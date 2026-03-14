@@ -48,7 +48,7 @@ Include sample data for a user named 'Alex Chen' with roles ['developer', 'admin
 
 When you provide a schema, Claude Code follows it closely. This technique works especially well when combined with the tdd skill for test-driven development workflows, where you define the expected response shape first.
 
-## Technique 2: Leverage Claude Code's Memory Features
+## Technique 2: Use Claude Code's Memory Features
 
 Claude Code has context awareness capabilities that, when used properly, ensure consistency across your entire project. The supermemory skill can help maintain consistent patterns across sessions.
 

@@ -69,7 +69,7 @@ The first prompt establishes a clear sequence—tests first, implementation seco
 
 Include specific test scenarios in your prompts. Rather than leaving test coverage to Claude's discretion, enumerate the cases you want covered. This technique produces more thorough tests and reduces the need for iteration.
 
-## Technique 4: Leverage Skill Combinations
+## Technique 4: Use Skill Combinations
 
 Combining skills produces better test coverage than using a single skill alone. The **tdd** skill handles test generation, while the **code-review** skill analyzes both tests and implementation for gaps.
 

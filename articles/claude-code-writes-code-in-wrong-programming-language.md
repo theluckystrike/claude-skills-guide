@@ -98,7 +98,7 @@ Using TypeScript, write tests for a user authentication module with password has
 
 The tdd skill generates test cases in your specified language first, which then constrains the implementation to match.
 
-### Leverage Project Documentation
+### Use Project Documentation
 
 A `CLAUDE.md` file in your project root sets explicit expectations:
 

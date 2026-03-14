@@ -35,7 +35,7 @@ Check for information disclosure in error messages. Servers should never reveal 
 
 ## Input Validation Testing
 
-MCP servers receive structured JSON-RPC messages containing parameters that flow to downstream systems. Inject unexpected data types, oversized payloads, and special characters to test robustness. Focus on these areas:
+MCP servers receive structured JSON-RPC messages containing parameters that flow to downstream systems. Inject unexpected data types, oversized payloads, and special characters to test reliable. Focus on these areas:
 
 - **Tool parameter types**: Send strings where integers expected, arrays where objects required
 - **Array length limits**: Submit arrays with thousands of elements

@@ -36,7 +36,7 @@ function processUserData(userId, options = {}) {
 
 Simply provide the function and ask Claude Code to add comprehensive documentation. It analyzes the implementation and generates accurate docs that reflect actual behavior.
 
-## Leveraging Claude Skills for Enhanced Documentation
+## Using Claude Skills for Enhanced Documentation
 
 Several Claude skills improve documentation generation. The **frontend-design** skill helps document React components and hooks with proper prop types and usage examples. For Python projects, combine Claude Code with the **pdf** skill to generate formatted documentation PDFs.
 

@@ -13,7 +13,7 @@ permalink: /how-to-make-claude-code-handle-edge-cases-properly/
 
 # How to Make Claude Code Handle Edge Cases Properly
 
-Edge cases are the silent killers of production software. A null pointer, an empty array, an unexpected API response — these seemingly minor scenarios cause more production incidents than any feature bug. Claude Code can generate robust code that handles edge cases, but you need to guide it explicitly. This guide shows you how.
+Edge cases are the silent killers of production software. A null pointer, an empty array, an unexpected API response — these seemingly minor scenarios cause more production incidents than any feature bug. Claude Code can generate reliable code that handles edge cases, but you need to guide it explicitly. This guide shows you how.
 
 ## Why Edge Cases Slip Through
 
@@ -180,7 +180,7 @@ Following the edge case spec in ./docs/edge-cases.md, implement the new checkout
 
 ## Validation and Sanitization Layer
 
-Always include explicit validation and sanitization in your prompts. Claude Code generates more robust code when you specify validation requirements:
+Always include explicit validation and sanitization in your prompts. Claude Code generates more reliable code when you specify validation requirements:
 
 ```
 Implement input validation for a registration form:

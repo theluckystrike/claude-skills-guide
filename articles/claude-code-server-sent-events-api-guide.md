@@ -128,7 +128,7 @@ This approach provides immediate feedback rather than waiting for complete analy
 
 ## Handling Connection Reliability
 
-SSE connections can drop. Implement reconnection logic to maintain robust integrations:
+SSE connections can drop. Implement reconnection logic to maintain reliable integrations:
 
 ```javascript
 class SSEConnection {

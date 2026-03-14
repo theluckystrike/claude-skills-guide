@@ -163,7 +163,7 @@ Version your generated documentation in git. Even though source content lives in
 
 ## Conclusion
 
-The Notion API unlocks powerful documentation workflows when combined with Claude Code. Writers use Notion's familiar interface while developers get automated, version-controlled output. Skills like pdf for PDF generation, tdd for test-driven documentation development, and supermemory for tracking documentation history make this pipeline robust and maintainable.
+The Notion API unlocks powerful documentation workflows when combined with Claude Code. Writers use Notion's familiar interface while developers get automated, version-controlled output. Skills like pdf for PDF generation, tdd for test-driven documentation development, and supermemory for tracking documentation history make this pipeline reliable and maintainable.
 
 Start small—sync a single Notion page to Markdown and expand from there. The pattern scales from quick documentation updates to full-scale API reference systems.
 

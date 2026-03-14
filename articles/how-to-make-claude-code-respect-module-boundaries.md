@@ -188,7 +188,7 @@ Making Claude Code respect module boundaries requires explicit context and inten
 
 1. Create a project-context skill defining your module structure and rules
 2. Use the tdd skill to define interfaces before implementation
-3. Leverage supermemory for persistent architectural recall
+3. Use supermemory for persistent architectural recall
 4. Employ code-review skill to validate boundary compliance
 5. Establish a module-first workflow that names the target explicitly
 

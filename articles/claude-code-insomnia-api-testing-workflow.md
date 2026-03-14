@@ -14,7 +14,7 @@ permalink: /claude-code-insomnia-api-testing-workflow/
 
 # Claude Code Insomnia API Testing Workflow
 
-Building robust APIs requires systematic testing, and combining Claude Code with Insomnia creates a powerful workflow for developers. This guide shows you how to integrate these tools effectively, using Claude skills to enhance your API testing process.
+Building reliable APIs requires systematic testing, and combining Claude Code with Insomnia creates a powerful workflow for developers. This guide shows you how to integrate these tools effectively, using Claude skills to enhance your API testing process.
 
 ## Setting Up Insomnia for API Testing
 
@@ -161,7 +161,7 @@ Key benefits of this approach include:
 - **Traceability**: supermemory maintains historical context for debugging
 - **Speed**: Quick iteration between testing, analysis, and fixes
 
-Start with basic endpoint testing in Insomnia, then layer Claude skills for test generation and documentation. This incremental approach builds a robust testing foundation without overwhelming your workflow.
+Start with basic endpoint testing in Insomnia, then layer Claude skills for test generation and documentation. This incremental approach builds a solid testing foundation without overwhelming your workflow.
 
 {% endraw %}
 

@@ -40,7 +40,7 @@ If instead you provide context including your backend routes, your existing PDF 
 
 The **pdf** skill demonstrates this principle well. When working with PDF generation tasks, Claude Code performs best when it can see your existing document templates, your styling approach, and your server-side rendering logic. The skill works with whatever context you provide, but the results scale dramatically with scope.
 
-## How Claude Skills Leverage Context
+## How Claude Skills Use Context
 
 Claude skills are specialized prompt sets that enhance Claude Code's capabilities in specific domains. Skills like **frontend-design**, **tdd**, and **supermemory** all benefit from broader context windows, though they use that context differently.
 

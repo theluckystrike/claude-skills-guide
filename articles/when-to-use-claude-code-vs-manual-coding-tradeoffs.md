@@ -117,7 +117,7 @@ Create a file upload component using React with drag-and-drop, progress indicati
 Claude generates the complete component including state management, event handlers, and validation logic. You review, test, and deploy within minutes.
 
 **Manual approach:**
-You write the same component but iterate on the implementation, potentially discovering edge cases like concurrent uploads, network interruption handling, or specific browser quirks. The manual approach takes longer but produces more robust code.
+You write the same component but iterate on the implementation, potentially discovering edge cases like concurrent uploads, network interruption handling, or specific browser quirks. The manual approach takes longer but produces more reliable code.
 
 Both approaches are valid. The Claude Code approach suits rapid development cycles. The manual approach suits features requiring high reliability.
 

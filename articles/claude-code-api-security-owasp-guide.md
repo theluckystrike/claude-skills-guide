@@ -41,7 +41,7 @@ The **tdd** skill helps you write test cases that verify authorization boundarie
 
 ### 2. Broken Authentication
 
-Authentication mechanisms that allow attackers to compromise tokens, exploit implementation flaws, or assume other users' identities represent a significant threat. Implement robust authentication with proper token validation and expiration.
+Authentication mechanisms that allow attackers to compromise tokens, exploit implementation flaws, or assume other users' identities represent a significant threat. Implement strong authentication with proper token validation and expiration.
 
 ```javascript
 // Secure token validation in Claude Code skill
@@ -272,7 +272,7 @@ def test_unauthorized_access_blocked():
 
 Securing Claude Code API integrations against OWASP vulnerabilities requires layered defenses spanning input validation, authentication, authorization, and monitoring. By implementing the patterns covered in this guide—authorization checks, rate limiting, input sanitization, and proper secret management—you build resilient applications that protect user data.
 
-Leverage Claude skills like **tdd** for security testing, **supermemory** for documenting security patterns across your projects, and **pdf** for generating audit documentation. Regular security reviews and automated testing ensure your defenses remain effective as your applications evolve.
+Use Claude skills like **tdd** for security testing, **supermemory** for documenting security patterns across your projects, and **pdf** for generating audit documentation. Regular security reviews and automated testing ensure your defenses remain effective as your applications evolve.
 
 
 ## Related Reading

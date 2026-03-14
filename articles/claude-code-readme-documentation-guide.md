@@ -182,7 +182,7 @@ Consider adding a documentation checklist to your development workflow:
 
 ## Conclusion
 
-Effective README documentation transforms how users interact with your Claude Code projects. By including clear installation instructions, practical usage examples, and comprehensive configuration details, you create a foundation for positive user experiences. Leveraging automation skills like `pdf` for format conversion and maintaining documentation as part of your development workflow ensures your files remain accurate and valuable over time.
+Effective README documentation transforms how users interact with your Claude Code projects. By including clear installation instructions, practical usage examples, and comprehensive configuration details, you create a foundation for positive user experiences. Using automation skills like `pdf` for format conversion and maintaining documentation as part of your development workflow ensures your files remain accurate and valuable over time.
 
 
 ## Related Reading

@@ -164,7 +164,7 @@ For PostgreSQL:
 ```
 Write a query using PostgreSQL-specific optimizations:
 - Use DISTINCT ON
-- Leverage window functions
+- Use window functions
 - Include USING for join conditions
 - Use COALESCE appropriately
 ```

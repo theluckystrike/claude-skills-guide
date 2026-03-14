@@ -14,7 +14,7 @@ tags: [claude-code, claude-skills]
 {% raw %}
 # Claude Code SDK Documentation Workflow
 
-Building a robust SDK requires excellent documentation. A well-documented SDK saves developer time, reduces support burden, and accelerates adoption. Claude Code provides a powerful workflow for generating, maintaining, and updating SDK documentation automatically.
+Building a reliable SDK requires excellent documentation. A well-documented SDK saves developer time, reduces support burden, and accelerates adoption. Claude Code provides a powerful workflow for generating, maintaining, and updating SDK documentation automatically.
 
 This guide shows you how to create an efficient SDK documentation workflow using Claude skills. You will learn to automate API reference generation, maintain code examples, and keep documentation synchronized with your codebase.
 

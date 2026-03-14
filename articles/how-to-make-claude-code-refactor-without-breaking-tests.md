@@ -41,7 +41,7 @@ Large refactoring batches increase failure risk. Break changes into smaller, ver
 
 After each step, run the relevant tests. Claude Code can help you identify which tests cover the changed code, allowing targeted verification rather than running the entire suite repeatedly.
 
-## Leverage Claude Code for Test-Aware Changes
+## Use Claude Code for Test-Aware Changes
 
 When Claude Code modifies code, it can simultaneously update tests. Provide test files alongside source files in your context. Request changes that include "updating the corresponding tests to match the new implementation."
 

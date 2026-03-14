@@ -155,7 +155,7 @@ The **mcp-builder** skill provides excellent patterns for creating custom MCP se
 
 ## Error Handling and Retry Logic
 
-Network failures and rate limits require robust error handling. Implement exponential backoff for reliability:
+Network failures and rate limits require solid error handling. Implement exponential backoff for reliability:
 
 ```typescript
 async function withRetry<T>(
@@ -182,7 +182,7 @@ This retry logic handles transient failures gracefully, which is essential when 
 
 ## Type-Safe Skill Definitions
 
-Leverage TypeScript's type system to create type-safe skill definitions:
+Use TypeScript's type system to create type-safe skill definitions:
 
 ```typescript
 interface SkillDefinition<TInput, TOutput> {

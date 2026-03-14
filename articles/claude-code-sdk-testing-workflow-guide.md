@@ -13,7 +13,7 @@ tags: [claude-code, claude-skills]
 
 # Claude Code SDK Testing Workflow Guide
 
-Testing Claude Code skills requires a structured approach that validates both the skill definition and its runtime behavior. This guide walks you through building a robust testing workflow that catches issues before deployment and ensures your skills work reliably across different scenarios.
+Testing Claude Code skills requires a structured approach that validates both the skill definition and its runtime behavior. This guide walks you through building a solid testing workflow that catches issues before deployment and ensures your skills work reliably across different scenarios.
 
 ## Setting Up Your Test Environment
 

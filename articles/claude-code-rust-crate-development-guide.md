@@ -13,7 +13,7 @@ tags: [claude-code, claude-skills]
 
 # Claude Code Rust Crate Development Guide
 
-Rust crate development becomes significantly more productive when paired with Claude Code and its specialized skill ecosystem. This guide covers practical workflows, tooling strategies, and skill integration patterns that will help you build robust Rust libraries and applications efficiently.
+Rust crate development becomes significantly more productive when paired with Claude Code and its specialized skill ecosystem. This guide covers practical workflows, tooling strategies, and skill integration patterns that will help you build reliable Rust libraries and applications efficiently.
 
 ## Setting Up Your Rust Development Environment
 
@@ -204,7 +204,7 @@ The tdd skill can assist in setting up benchmark tests and interpreting results,
 
 Developing Rust crates with Claude Code combines the language's powerful safety guarantees with AI-assisted productivity. The tdd skill enforces test-driven development principles, while integration with documentation tools like pdf and docx streamlines maintenance workflows. Consistent use of formatting, linting, and benchmarking tools ensures your crates meet professional quality standards.
 
-Start with small crates to build familiarity, then apply these patterns to larger projects. The combination of Rust's robust type system and Claude Code's contextual assistance creates an efficient development environment for building reliable, performant software.
+Start with small crates to build familiarity, then apply these patterns to larger projects. The combination of Rust's reliable type system and Claude Code's contextual assistance creates an efficient development environment for building reliable, performant software.
 
 
 ## Related Reading
