@@ -1,11 +1,18 @@
 ---
+
 layout: default
 title: "Claude Code Changelog Generation Workflow"
 description: "Master changelog generation workflows with Claude Code. Practical examples and code snippets for developers automating release documentation."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-changelog-generation-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+{% raw %}
+
 
 # Claude Code Changelog Generation Workflow
 
@@ -205,3 +212,4 @@ The key advantage: what previously required hours of manual compilation now take
 ---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

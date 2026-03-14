@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Merge Conflict Resolution Guide"
 description: "A practical guide to resolving git merge conflicts when working with Claude Code. Learn strategies, commands, and workflows for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-merge-conflict-resolution-guide/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 Merge conflicts are an inevitable part of collaborative software development. When working with Claude Code, understanding how to resolve these conflicts efficiently can significantly boost your productivity. This guide provides practical strategies and commands for handling merge conflicts in any project.
 

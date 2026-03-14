@@ -1,11 +1,18 @@
 ---
+
 layout: default
 title: "Claude Code Semantic Versioning Automation"
 description: "Learn how to automate semantic versioning in Claude Code with practical examples and code snippets for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-semantic-versioning-automation/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+{% raw %}
+
 
 Semantic versioning transforms how you track and communicate project changes. When combined with Claude Code's automation capabilities, you gain a powerful system that handles version bumps, changelog generation, and tag creation without manual intervention. This guide shows you how to build a complete semantic versioning automation pipeline tailored for Claude Code workflows.
 
@@ -67,7 +74,7 @@ def bump_version(current_version, bump_type):
     return current_version
 ```
 
-This skill reads your git history, identifies commits between tags, determines the appropriate bump type, and calculates the new version string. It works seamlessly with other skills like the `pdf` skill for generating versioned documentation or the `tdd` skill for running test suites before releasing.
+This skill reads your git history, identifies commits between tags, determines the appropriate bump type, and calculates the new version string. It works smoothly with other skills like the `pdf` skill for generating versioned documentation or the `tdd` skill for running test suites before releasing.
 
 ## Automating Changelog Generation
 
@@ -165,3 +172,4 @@ Semantic versioning automation through Claude Code eliminates repetitive manual 
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More automation workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

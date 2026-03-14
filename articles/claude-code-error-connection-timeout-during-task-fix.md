@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Error: Connection Timeout During Task Fix"
 description: "Resolve connection timeout errors when using Claude Code for development tasks. Practical troubleshooting steps for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-error-connection-timeout-during-task-fix/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Error: Connection Timeout During Task Fix
 

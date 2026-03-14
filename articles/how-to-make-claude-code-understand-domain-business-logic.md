@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How to Make Claude Code Understand Domain Business Logic"
 description: "Learn practical techniques to train Claude Code on your business domain, custom entities, and domain-specific rules for more accurate and relevant responses."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-understand-domain-business-logic/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # How to Make Claude Code Understand Domain Business Logic
 

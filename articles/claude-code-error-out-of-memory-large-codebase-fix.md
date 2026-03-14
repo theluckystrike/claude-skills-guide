@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Error Out of Memory Large Codebase Fix"
 description: "Resolve out of memory errors when working with large codebases in Claude Code. Practical solutions, configuration tweaks, and memory optimization techniques."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, troubleshooting, memory, large-codebases, performance]
+tags: [claude-code, troubleshooting, memory, large-codebases, performance, claude-skills]
 permalink: /claude-code-error-out-of-memory-large-codebase-fix/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Error Out of Memory Large Codebase Fix
 

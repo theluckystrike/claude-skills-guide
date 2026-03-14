@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Keeps Making Same Mistake: Fix Guide"
 description: "Identify and fix repetitive mistakes Claude Code makes. Practical solutions for developers and power users dealing with AI coding errors."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, troubleshooting, ai-errors, debugging]
+tags: [claude-code, troubleshooting, ai-errors, debugging, claude-skills]
 permalink: /claude-code-keeps-making-same-mistake-fix-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Keeps Making Same Mistake: Fix Guide
 

@@ -168,7 +168,7 @@ def log_error(agent_id: str, error: Exception, context: dict):
         subprocess.run([
             "curl", "-X", "POST",
             os.environ["ALERT_WEBHOOK_URL"],
-            "-d", f'{{"text": f"Agent {agent_id} failed: {error}"}}'
+            "-d", '{"text": "Agent ' + agent_id + ' failed: ' + str(error) + '"}'
         ])
 ```
 
