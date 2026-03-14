@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Should I Switch from Supermaven to Claude Code?"
-description: "A comprehensive comparison of Supermaven vs Claude Code for AI-assisted coding. Learn about Claude Code's skills system, tool use, and whether it justifies making the switch."
+description: "A comprehensive comparison of Supermaven vs Claude Code for AI-assisted coding. Learn about Claude Code's skills system, tool use, and whether it."
 date: 2026-03-14
 author: theluckystrike
 permalink: /should-i-switch-from-supermaven-to-claude-code/
+categories: [guides]
 ---
 
 # Should I Switch from Supermaven to Claude Code?
@@ -106,3 +107,10 @@ The decision between Supermaven and Claude Code ultimately depends on your workf
 Claude Code represents a paradigm shift—from AI that suggests code to AI that actively participates in your development process. For developers seeking to maximize productivity and reduce manual toil, this difference is transformative.
 
 The best approach? Try Claude Code for a week on a real project. Install some skills relevant to your work and experience the difference firsthand. Your coding workflow might never be the same.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

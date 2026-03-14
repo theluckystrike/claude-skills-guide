@@ -5,6 +5,7 @@ description: "A comprehensive review of Codeium, the free AI coding assistant, a
 date: 2026-03-14
 author: theluckystrike
 permalink: /codeium-review-free-ai-coding-assistant-2026/
+categories: [guides]
 ---
 
 {% raw %}
@@ -96,3 +97,10 @@ Claude Code represents a different philosophy—one where AI handles not just co
 
 The optimal choice depends on your development philosophy, workflow requirements, and the level of AI autonomy you wish to incorporate into your daily practice. Both tools represent significant advances in AI-assisted development, and the ecosystem benefits from having diverse approaches available to developers.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
