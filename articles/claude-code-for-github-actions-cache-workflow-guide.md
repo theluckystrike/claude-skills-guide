@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for GitHub Actions Cache Workflow Guide"
-description: "Master GitHub Actions caching strategies with Claude Code. Learn how to set up efficient cache workflows to speed up CI/CD pipelines and reduce build times."
+description: "Master GitHub Actions caching strategies with Claude Code. Learn how to set up efficient cache workflows to speed up CI/CD pipelines and reduce build."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-github-actions-cache-workflow-guide/
@@ -228,3 +228,10 @@ Implementing effective cache workflows transforms your GitHub Actions from slow,
 
 Remember: every second saved on CI builds compounds over time. A minute saved on each of hundreds of workflow runs adds up to significant developer hours reclaimed throughout your project lifecycle.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

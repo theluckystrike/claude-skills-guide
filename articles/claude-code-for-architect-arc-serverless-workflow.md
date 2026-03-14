@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Architect ARC Serverless Workflow"
-description: "Learn how to use Claude Code to architect efficient serverless workflows using ARC patterns. Practical examples, code snippets, and actionable advice for developers."
+description: "Learn how to use Claude Code to architect efficient serverless workflows using ARC patterns. Practical examples, code snippets, and actionable advice."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-architect-arc-serverless-workflow/
@@ -395,3 +395,10 @@ Key takeaways: define clear event triggers, implement idempotent processing, use
 Start by setting up your Claude Code environment with ARC-specific configurations, then iteratively build out your workflow components. The combination of structured architecture patterns and AI-assisted development will significantly accelerate your serverless journey.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

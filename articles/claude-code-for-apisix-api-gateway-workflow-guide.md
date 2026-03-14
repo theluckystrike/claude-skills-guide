@@ -77,3 +77,10 @@ Monitor your APISIX instances using metrics like request rate, latency percentil
 Finally, document your APISIX architecture decisions and configuration patterns. This documentation helps team members understand the setup and enables easier modifications. Use CLAUDE.md files in your repository to capture APISIX-specific guidance that Claude Code can reference in future sessions.
 
 By leveraging Claude Code throughout your APISIX workflow, you can accelerate configuration development, reduce errors, and implement best practices more consistently. The key is providing adequate context about your infrastructure and requirements, then iterating on the generated configurations based on testing and observability data.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

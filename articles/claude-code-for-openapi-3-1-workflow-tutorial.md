@@ -210,3 +210,10 @@ Integrating Claude Code into your OpenAPI 3.1 workflow transforms API developmen
 
 Start with small workflows—specification writing and client generation—then expand to testing and validation as your team becomes comfortable with the process. The investment in setting up these workflows pays dividends in reduced manual work and improved API quality.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

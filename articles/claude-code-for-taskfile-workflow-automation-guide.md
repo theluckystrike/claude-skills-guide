@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Taskfile Workflow Automation Guide"
-description: "Learn how to leverage Claude Code with Taskfile to automate development workflows, streamline repetitive tasks, and build intelligent task runners that adapt to your project needs."
+description: "Learn how to leverage Claude Code with Taskfile to automate development workflows, streamline repetitive tasks, and build intelligent task runners that."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-taskfile-workflow-automation-guide/
@@ -238,3 +238,10 @@ Combining Claude Code with Taskfile creates powerful automation possibilities th
 The key is treating Claude Code not just as a CLI tool but as an intelligent collaborator that understands your codebase and can make informed decisions about which tasks to run and how to handle various development scenarios.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

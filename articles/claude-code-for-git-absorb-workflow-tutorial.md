@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Git Absorb Workflow Tutorial"
-description: "Learn how to use Claude Code with Git Absorb to automatically clean up fixup commits and maintain a clean git history. Practical examples and workflow tips."
+description: "Learn how to use Claude Code with Git Absorb to automatically clean up fixup commits and maintain a clean git history. Practical examples and workflow."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-git-absorb-workflow-tutorial/
@@ -241,3 +241,10 @@ Git Absorb won't run on protected branches by default. If you need to absorb com
 Git Absorb combined with Claude Code provides a powerful workflow for maintaining clean commit histories. By automating the identification and absorption of fixup commits, you spend less time on manual cleanup and more time writing code. Remember to always review changes with `--dry-run` before absorbing, work on feature branches, and let Claude guide you through the process when you're unsure.
 
 Start using Git Absorb today, and you'll wonder how you ever managed without it. Your future self (and your team members) will thank you when reviewing commit history.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

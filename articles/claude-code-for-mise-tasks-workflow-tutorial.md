@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Mise Tasks Workflow Tutorial"
-description: "Master the integration of Claude Code with Mise tasks to automate your development workflow. Learn practical patterns for creating intelligent task runners that adapt to your project context."
+description: "Master the integration of Claude Code with Mise tasks to automate your development workflow. Learn practical patterns for creating intelligent task."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-mise-tasks-workflow-tutorial/
@@ -240,4 +240,10 @@ mise -c path/to/.mise.toml run test
 Combining Claude Code with Mise tasks creates a powerful automation layer for your development workflow. The key is defining clear, focused tasks in your `.mise.toml` and creating Claude Code skills that can intelligently invoke them based on your development context.
 
 Start with simple tasks, create skills for the most common operations, and gradually build more sophisticated workflows as you become comfortable with the pattern. The result is a development environment that understands your intent and executes the right commands automatically.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 

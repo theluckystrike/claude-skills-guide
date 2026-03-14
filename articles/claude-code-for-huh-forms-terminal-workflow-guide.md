@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Huh Forms Terminal Workflow Guide"
-description: "Learn how to integrate Claude Code with huh forms for building powerful interactive CLI workflows. This guide covers terminal form handling, workflow automation, and practical examples."
+description: "Learn how to integrate Claude Code with huh forms for building powerful interactive CLI workflows. This guide covers terminal form handling, workflow."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-huh-forms-terminal-workflow-guide/
@@ -282,3 +282,10 @@ When building integrated CLI workflows, follow these best practices:
 Combining Claude Code with huh forms opens up powerful possibilities for building intelligent CLI tools. Whether you're creating guided wizards, automating configuration tasks, or building interactive development environments, this integration helps you create more helpful and efficient terminal experiences. Start small with basic form assistance, then progressively add more sophisticated AI capabilities as your workflows mature.
 
 The key is to use Claude Code as an intelligent assistant that enhances user productivity without replacing human decision-making. By following the patterns in this guide, you'll build CLI tools that feel both powerful and approachable.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

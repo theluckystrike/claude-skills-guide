@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Act Local GitHub Actions Workflow"
-description: "Learn how to use Act to run GitHub Actions workflows locally on your machine, and how Claude Code can help you debug, test, and optimize your CI/CD pipelines without pushing to remote."
+description: "Learn how to use Act to run GitHub Actions workflows locally on your machine, and how Claude Code can help you debug, test, and optimize your CI/CD."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-act-local-github-actions-workflow/
@@ -13,6 +13,7 @@ categories:
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+categories: [guides]
 ---
 
 
@@ -338,3 +339,10 @@ Act transforms how you develop and test GitHub Actions workflows. By running CI/
 Start integrating Act into your workflow today—your future self will thank you when you're not waiting for CI builds to complete before discovering a configuration error.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Algolia Search Workflow Guide"
-description: "Learn how to integrate Claude Code with Algolia for intelligent search experiences. This guide covers setup, indexing, and querying workflows with practical examples."
+description: "Learn how to integrate Claude Code with Algolia for intelligent search experiences. This guide covers setup, indexing, and querying workflows with."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-algolia-search-workflow-guide/
@@ -201,3 +201,10 @@ Third, implement rate limiting on search requests to control costs and prevent a
 
 Integrating Claude Code with Algolia creates powerful search capabilities that scale with your application. Start with basic indexing and search, then progressively add advanced features like faceting, synonyms, and analytics. The key is structuring your data thoughtfully and continuously iterating based on user behavior metrics. With this workflow foundation, you can build search experiences that feel intuitive and deliver relevant results consistently.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

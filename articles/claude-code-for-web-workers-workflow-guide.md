@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Web Workers Workflow Guide"
-description: "Master web workers development with Claude Code. Learn practical workflows for creating, debugging, and optimizing web workers using Claude's CLI and skill system."
+description: "Master web workers development with Claude Code. Learn practical workflows for creating, debugging, and optimizing web workers using Claude's CLI and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-web-workers-workflow-guide/
@@ -272,3 +272,10 @@ Claude Code transforms web worker development from a painful debugging session i
 
 Start with simple dedicated workers, then graduate to worker pools and SharedArrayBuffer as your needs grow. The patterns and practices you establish early will pay dividends as your application scales.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

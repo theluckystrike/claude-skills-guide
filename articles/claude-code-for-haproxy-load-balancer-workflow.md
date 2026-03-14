@@ -257,3 +257,10 @@ Claude provides recommendations covering:
 Claude Code significantly accelerates HAProxy workflow management by generating accurate configurations, explaining complex settings, and troubleshooting issues. Whether you're new to load balancing or managing complex multi-tier architectures, Claude Code serves as an intelligent assistant that understands HAProxy's intricacies.
 
 Start by describing your load balancing requirements in natural language, and let Claude Code help you build robust, production-ready HAProxy configurations.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

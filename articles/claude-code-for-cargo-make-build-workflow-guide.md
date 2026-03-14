@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Cargo Make Build Workflow Guide"
-description: "Master Cargo Make build automation with Claude Code. Learn to create efficient Rust build workflows, leverage AI-powered skills, and automate your development pipeline."
+description: "Master Cargo Make build automation with Claude Code. Learn to create efficient Rust build workflows, leverage AI-powered skills, and automate your."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, cargo-make, rust, build-automation, workflow, devops, claude-skills]
@@ -245,3 +245,10 @@ Cargo Make combined with Claude Code provides a powerful automation solution for
 
 Remember that the best Cargo Make configuration is one that matches your specific project needs. Don't hesitate to iterate and refine your setup as your project evolves.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

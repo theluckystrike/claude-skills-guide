@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Font Loading Optimization Workflow"
-description: "Learn how to build an automated font loading optimization workflow using Claude Code. Practical examples for analyzing, testing, and optimizing web font delivery."
+description: "Learn how to build an automated font loading optimization workflow using Claude Code. Practical examples for analyzing, testing, and optimizing web."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-font-loading-optimization-workflow/
@@ -124,3 +124,10 @@ You can also extend the workflow to handle more advanced scenarios: variable fon
 
 By automating font optimization through Claude Code, you transform a complex, often-neglected performance task into a reproducible workflow that keeps your fonts fast without manual effort.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Gravitee API Gateway Workflow"
-description: "Learn how to leverage Claude Code to streamline your Gravitee API Gateway workflow. Practical examples for API configuration, policy management, and deployment automation."
+description: "Learn how to leverage Claude Code to streamline your Gravitee API Gateway workflow. Practical examples for API configuration, policy management, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-gravitee-api-gateway-workflow/
@@ -232,3 +232,10 @@ Claude Code transforms how you work with Gravitee API Gateway by automating conf
 Start by integrating Claude Code into your API definition workflow, then expand to policy configuration and GitOps management. The time savings and reduced error rates will quickly justify the initial learning curve.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

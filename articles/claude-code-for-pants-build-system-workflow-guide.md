@@ -197,3 +197,10 @@ To get the most out of Claude Code in your Pants workflow, follow these guidelin
 Integrating Claude Code with Pants creates a powerful development environment where AI assistance amplifies the build system's capabilities. From generating BUILD files to debugging complex issues and optimizing performance, Claude Code serves as an intelligent partner in your Pants workflow. The key is providing adequate context about your project structure and configuration, then using Claude's ability to understand and manipulate build configurations effectively.
 
 Remember that Pants' declarative nature makes it particularly well-suited for AI-assisted development—the build configuration is explicit and structured, allowing Claude to generate accurate and efficient configurations. As you become more comfortable with this combination, you'll find increasingly sophisticated ways to automate and optimize your build processes.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

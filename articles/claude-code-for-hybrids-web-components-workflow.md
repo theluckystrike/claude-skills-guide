@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Hybrids Web Components Workflow"
-description: "Learn how to use Claude Code effectively with Hybrids web components. This guide covers practical workflows, code examples, and best practices for building modern web components."
+description: "Learn how to use Claude Code effectively with Hybrids web components. This guide covers practical workflows, code examples, and best practices for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-hybrids-web-components-workflow/
@@ -219,3 +219,10 @@ Always specify your Hybrids version when asking for code generation, as the API 
 Finally, review generated code carefully, especially around descriptor definitions. While Claude Code understands the Hybrids pattern well, always verify that property types, default values, and custom descriptors match your requirements. Use the examples in this guide as templates for your own component creation workflow, and adapt them to your specific project needs.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

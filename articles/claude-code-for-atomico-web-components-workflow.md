@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Atomico Web Components Workflow"
-description: "Learn how to use Claude Code to streamline your Atomico web components development workflow. Practical examples, code snippets, and actionable advice for building modern web components."
+description: "Learn how to use Claude Code to streamline your Atomico web components development workflow. Practical examples, code snippets, and actionable advice."
 date: 2026-03-15
 categories: [workflows]
 tags: [claude-code, claude-skills]
@@ -208,3 +208,10 @@ Using Claude Code for Atomico web components development significantly accelerat
 
 Remember to be specific in your prompts, specify accessibility requirements upfront, and take advantage of TypeScript for better developer experience. With these practices, Claude Code becomes an invaluable partner in building robust web components with Atomico.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -197,3 +197,10 @@ Claude Code transforms bash scripting from a manual process into a collaborative
 
 Remember that Claude Code is a partner in your development process—it handles the heavy lifting while you maintain control over your scripts' behavior. Experiment with different workflows, find what works best for your projects, and enjoy the efficiency gains of AI-assisted bash scripting.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

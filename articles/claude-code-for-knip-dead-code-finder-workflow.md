@@ -209,3 +209,10 @@ Document your cleanup efforts in a CHANGELOG or dedicated notes. This helps team
 
 Knip combined with Claude Code creates a powerful dead code detection and removal workflow. The integration brings several key advantages: automated scanning during development, intelligent verification before deletion, and systematic cleanup that minimizes risk. By establishing this workflow early in your project and running it consistently, you maintain a cleaner codebase that stays maintainable as it grows. The time invested in setting up this workflow pays dividends through faster builds, smaller bundles, and easier code navigation for your entire team.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

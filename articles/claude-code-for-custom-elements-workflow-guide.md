@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Custom Elements Workflow Guide"
-description: "Learn how to create custom elements in Claude Code, including MCP tools, custom skills, and reusable function-calling patterns for your development workflow."
+description: "Learn how to create custom elements in Claude Code, including MCP tools, custom skills, and reusable function-calling patterns for your development."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-custom-elements-workflow-guide/
@@ -309,3 +309,10 @@ Custom elements transform Claude Code into a powerful, customized development as
 
 Remember to version your elements, document thoroughly, and test regularly. With proper custom elements in place, Claude becomes not just a coding assistant, but an integrated team member familiar with your project's unique requirements and patterns.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Glow Markdown Viewer Workflow"
-description: "Master the Claude Code and Glow markdown viewer workflow to enhance your documentation reading experience. Learn practical examples, automation tips, and expert integration strategies."
+description: "Master the Claude Code and Glow markdown viewer workflow to enhance your documentation reading experience. Learn practical examples, automation tips."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-glow-markdown-viewer-workflow/
@@ -171,3 +171,10 @@ The Claude Code and Glow workflow represents a significant improvement in how de
 
 This workflow isn't just about convenience—it's about making documentation as accessible and readable as possible, which ultimately leads to better-informed developers and more successful projects.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

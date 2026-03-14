@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Slides Terminal Presentation Workflow"
-description: "Learn how to create stunning presentations using terminal-based tools and Claude Code. This guide covers slide generation, markdown-to-slides conversion, and automated presentation workflows for developers."
+description: "Learn how to create stunning presentations using terminal-based tools and Claude Code. This guide covers slide generation, markdown-to-slides."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-slides-terminal-presentation-workflow/
@@ -273,3 +273,10 @@ Terminal-based presentation workflows, supercharged with Claude Code, offer deve
 
 Start small—convert your next presentation to Markdown and see the difference. Once you experience the workflow, you'll never go back to drag-and-drop slide builders.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

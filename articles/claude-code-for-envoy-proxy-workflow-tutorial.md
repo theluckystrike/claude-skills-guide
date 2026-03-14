@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Envoy Proxy Workflow Tutorial"
-description: "A practical guide to using Claude Code for Envoy Proxy configuration, deployment, and management. Learn workflows for service mesh, traffic routing, and observability."
+description: "A practical guide to using Claude Code for Envoy Proxy configuration, deployment, and management. Learn workflows for service mesh, traffic routing."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-envoy-proxy-workflow-tutorial/
@@ -224,3 +224,10 @@ Claude Code transforms Envoy Proxy workflows by automating configuration generat
 Start with simple configurations and progressively adopt more advanced features like circuit breakers, rate limiting, and observability integrations. Each workflow builds on the previous, eventually enabling sophisticated traffic management that would otherwise require significant expertise and time to implement correctly.
 
 The combination of Claude Code's understanding of Envoy's architecture with your specific requirements produces configurations that are both correct and optimized for your use case—turning what was once a specialized skill into an accessible workflow for any developer.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
