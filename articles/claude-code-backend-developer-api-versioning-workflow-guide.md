@@ -5,6 +5,7 @@ description: "A comprehensive guide to implementing API versioning workflows usi
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-backend-developer-api-versioning-workflow-guide/
+categories: [guides]
 ---
 
 {% raw %}
@@ -166,3 +167,10 @@ Claude Code significantly enhances the API versioning workflow for backend devel
 
 Remember to always communicate changes clearly to your API users, maintain backward compatibility within major versions, and use Claude Code's capabilities to automate repetitive tasks in your versioning workflow.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

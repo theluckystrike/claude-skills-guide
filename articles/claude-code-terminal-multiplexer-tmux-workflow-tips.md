@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Terminal Multiplexer Tmux Workflow Tips"
-description: "Practical tips for combining Claude Code with tmux terminal multiplexer. Set up persistent sessions, split panes, and automate workflows for maximum productivity."
+description: "Practical tips for combining Claude Code with tmux terminal multiplexer. Set up persistent sessions, split panes, and automate workflows for maximum."
 date: 2026-03-14
 categories: [workflow]
 tags: [claude-code, tmux, terminal, workflow, productivity]
@@ -170,5 +170,12 @@ For important work, consider using tmux plugins like **tmux-resurrect** to save 
 Combining Claude Code with tmux creates a robust development environment that handles disconnection gracefully, supports parallel task execution, and keeps your workflows organized. The terminal multiplexer adds resilience and flexibility to your Claude Code sessions, making it easier to work on complex projects without losing context.
 
 Start with the basic session management commands, add pane splitting for parallel workflows, and gradually incorporate scripts to automate your setup. The investment in learning these workflows pays dividends in productivity and peace of mind.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

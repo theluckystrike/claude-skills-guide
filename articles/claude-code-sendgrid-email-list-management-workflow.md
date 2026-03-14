@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code SendGrid Email List Management Workflow"
-description: "Build automated email list management workflows using Claude Code and SendGrid. Learn how to create skills for subscriber management, list segmentation, and automated email campaigns."
+description: "Build automated email list management workflows using Claude Code and SendGrid. Learn how to create skills for subscriber management, list."
 date: 2026-03-14
 author: theluckystrike
 categories: [guides]
@@ -193,3 +193,10 @@ Claude Code combined with SendGrid's powerful API enables sophisticated email li
 
 The key is treating each operation as a modular skill that can be combined and reused across different workflows. This approach not only makes your automation more maintainable but also allows Claude Code to handle increasingly complex email marketing tasks with minimal additional configuration.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
