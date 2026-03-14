@@ -3,7 +3,7 @@ layout: default
 title: "Claude Skills for Restaurant POS System Development"
 description: "Practical guide to building restaurant POS systems using Claude Code skills: spreadsheet automation, PDF invoicing, document generation, and testing workflows."
 date: 2026-03-14
-categories: [development, restaurant, pos]
+categories: [use-cases]
 tags: [claude-code, claude-skills, restaurant-pos, automation, development]
 author: "Claude Skills Guide"
 reviewed: true
@@ -153,7 +153,7 @@ Test POS workflows with Claude:
 
 ## Menu Management and Data Pipelines
 
-Restaurant POS systems require dynamic menu management: items, prices, modifiers, availability, and category organization. Combine spreadsheet automation with code generation for robust menu data handling.
+Restaurant POS systems require dynamic menu management: items, prices, modifiers, availability, and category organization. Combine spreadsheet automation with code generation for structured menu data handling.
 
 ```python
 # Example: Menu item with modifiers

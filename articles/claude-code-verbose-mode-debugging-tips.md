@@ -3,9 +3,11 @@ layout: default
 title: "Claude Code Verbose Mode Debugging Tips"
 description: "Master Claude Code verbose mode for troubleshooting skill behavior, tracing tool execution, and diagnosing issues in your AI-assisted development workflow."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, debugging, verbose-mode, troubleshooting]
-author: theluckystrike
+categories: [troubleshooting]
+tags: [claude-code, claude-skills, debugging, verbose-mode, troubleshooting]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code Verbose Mode Debugging Tips

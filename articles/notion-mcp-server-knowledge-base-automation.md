@@ -5,7 +5,7 @@ description: "Learn how to automate your Notion knowledge base using the Notion 
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, notion, mcp, knowledge-base, automation, productivity]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

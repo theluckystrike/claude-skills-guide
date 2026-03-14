@@ -5,7 +5,7 @@ description: "Learn how to integrate Firecrawl with Claude using the Model Conte
 date: 2026-03-14
 categories: [integrations]
 tags: [claude-code, claude-skills, mcp, firecrawl, web-scraping, automation]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

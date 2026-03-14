@@ -186,10 +186,10 @@ Our database CPU averages 70% with 5000 connections. Generate a capacity project
 Claude helps you build the analysis queries:
 
 ```bash
-# Get CPU utilization percentiles
-promql --format=table 'histogram_quantile(0.50, rate(node_cpu_seconds_total{mode="idle"}[5m])) by (instance)'
-promql --format=table 'histogram_quantile(0.95, rate(node_cpu_seconds_total{mode="idle"}[5m])) by (instance)'
-promql --format=table 'histogram_quantile(0.99, rate(node_cpu_seconds_total{mode="idle"}[5m])) by (instance)'
+# Get CPU utilization percentiles via Prometheus HTTP API
+curl -g 'http://localhost:9090/api/v1/query?query=histogram_quantile(0.50,rate(node_cpu_seconds_total{mode="idle"}[5m]))by(instance)'
+curl -g 'http://localhost:9090/api/v1/query?query=histogram_quantile(0.95,rate(node_cpu_seconds_total{mode="idle"}[5m]))by(instance)'
+curl -g 'http://localhost:9090/api/v1/query?query=histogram_quantile(0.99,rate(node_cpu_seconds_total{mode="idle"}[5m]))by(instance)'
 ```
 
 ## Key Takeaways

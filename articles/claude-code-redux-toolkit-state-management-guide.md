@@ -3,7 +3,11 @@ layout: default
 title: "Claude Code Redux Toolkit State Management Guide"
 description: "Learn how to effectively manage state in your React applications using Redux Toolkit with Claude Code. Practical examples and code snippets included."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, redux-toolkit, react, state-management, frontend]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 Redux Toolkit has become the standard for state management in React applications, and using it effectively with Claude Code can dramatically improve your development workflow. This guide covers practical patterns for integrating Redux Toolkit into your projects while leveraging Claude Code's capabilities.
@@ -177,7 +181,7 @@ export const api = createApi({
 export const { useGetUserQuery, useUpdateUserMutation } = api;
 ```
 
-This approach integrates seamlessly with the supermemory skill for caching and persisting API responses across sessions.
+This approach works well with the supermemory skill for caching and persisting API responses across sessions.
 
 ## State Normalization
 

@@ -70,12 +70,11 @@ For developers working on ongoing projects, Claude Code's persistent context sav
 
 Claude Code's skills system lets you package reusable workflows:
 
-```yaml
-# my-skill/skill.md
+```markdown
+<!-- my-skill/run-tests.md -->
 ---
 name: run-tests
 description: Run test suite with coverage
-trigger: /test [suite]
 ---
 
 Run the test suite for the specified suite name.
@@ -151,11 +150,11 @@ Neither tool consistently outperforms the other across all code quality metrics.
 Claude Code integrates directly into your development workflow:
 
 ```bash
-# Run Claude Code as part of your git hooks
-npx claude --hook pre-commit
+# Run Claude Code from your terminal
+claude
 
-# Use in CI/CD
-claude --prompt "Review this PR"
+# Use in CI/CD with non-interactive mode
+claude --print "Review the changes in this PR and flag any issues"
 ```
 
 You can trigger Claude Code from your editor, your shell, or your CI pipeline.
@@ -166,7 +165,7 @@ For developers who spend most of their time in terminals and editors, Claude Cod
 
 ## Pricing Considerations
 
-Claude Code is currently free to use during its development period, with eventual paid tiers expected.
+Claude Code pricing is based on your Anthropic API usage. Check the [Anthropic pricing page](https://www.anthropic.com/pricing) for current rates.
 
 ChatGPT Code Interpreter requires a ChatGPT Plus subscription ($20/month) to access. The Code Interpreter capability is included in Plus but is limited to the chat interface.
 

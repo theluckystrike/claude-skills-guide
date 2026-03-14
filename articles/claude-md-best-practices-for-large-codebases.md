@@ -3,7 +3,11 @@ layout: default
 title: "Claude MD Best Practices for Large Codebases"
 description: "Practical guide to writing effective Claude Code markdown files for large-scale projects. Includes patterns, examples, and skill integration tips."
 date: 2026-03-14
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, claude-md, large-codebases, best-practices]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude MD Best Practices for Large Codebases

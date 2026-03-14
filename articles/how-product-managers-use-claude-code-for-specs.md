@@ -1,9 +1,13 @@
 ---
 layout: default
 title: "How Product Managers Use Claude Code for Specs"
-description: "Learn how product managers leverage Claude Code and specialized skills to write faster, clearer product specifications."
+description: "Practical guide for product managers using Claude Code and specialized skills to write faster, clearer product specifications."
 date: 2026-03-14
-author: theluckystrike
+categories: [use-cases]
+tags: [claude-code, claude-skills, product-management, specifications, workflow]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 Product managers face a constant challenge: translating ambiguous requirements into clear, actionable specifications that developers can execute. Claude Code accelerates this workflow significantly by combining AI assistance with specialized skills tailored for documentation, technical writing, and design collaboration.

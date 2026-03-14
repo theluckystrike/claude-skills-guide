@@ -3,7 +3,11 @@ layout: default
 title: "Heroku MCP Server Application Deployment Guide"
 description: "A comprehensive guide to deploying MCP servers on Heroku for developers building AI-powered applications."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, heroku, mcp, deployment, devops]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Heroku MCP Server Application Deployment Guide
@@ -195,7 +199,7 @@ For more comprehensive monitoring, integrate with services like DataDog or New R
 
 ## Using Claude Skills with Your MCP Server
 
-Your deployed MCP server integrates seamlessly with various Claude skills. The **frontend-design** skill can help generate UI components that consume your MCP tools. If you're building documentation, pair your server with the **pdf** skill to generate reports from MCP-sourced data.
+Your deployed MCP server works well with various Claude skills. The **frontend-design** skill can help generate UI components that consume your MCP tools. If you're building documentation, pair your server with the **pdf** skill to generate reports from MCP-sourced data.
 
 For test-driven development, the **tdd** skill assists in writing comprehensive tests for your MCP server endpoints. The **supermemory** skill can help maintain context across complex conversations about your deployment architecture.
 

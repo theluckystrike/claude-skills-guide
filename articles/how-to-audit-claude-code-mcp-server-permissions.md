@@ -3,11 +3,11 @@ layout: default
 title: "How to Audit Claude Code MCP Server Permissions"
 description: "A practical guide to auditing Model Context Protocol server permissions in Claude Code. Learn to inspect, verify, and manage MCP server access for secure AI-assisted development."
 date: 2026-03-14
-categories: [security, tutorials]
-tags: [claude-code, mcp, permissions, security, auditing]
-author: theluckystrike
-reviewed: false
-score: 0
+categories: [guides]
+tags: [claude-code, claude-skills, mcp, security, permissions, audit]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # How to Audit Claude Code MCP Server Permissions

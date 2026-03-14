@@ -3,7 +3,11 @@ layout: default
 title: "PagerDuty MCP Server Incident Management Guide"
 description: "Learn how to automate PagerDuty incident management using MCP servers with Claude for streamlined DevOps workflows and faster response times."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, pagerduty, mcp, incident-management, devops]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # PagerDuty MCP Server Incident Management Guide
@@ -42,7 +46,7 @@ Replace `your-api-key-here` with your actual PagerDuty API key. For production d
 
 ## Retrieving and Managing Incidents
 
-Once connected, you can query active incidents directly through natural language. The MCP server exposes comprehensive incident management capabilities that integrate seamlessly with Claude's reasoning abilities.
+Once connected, you can query active incidents directly through natural language. The MCP server exposes comprehensive incident management capabilities that integrate with Claude's reasoning abilities.
 
 Query active incidents in your production environment:
 

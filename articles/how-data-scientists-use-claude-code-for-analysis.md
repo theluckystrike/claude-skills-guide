@@ -1,11 +1,13 @@
 ---
 layout: default
 title: "How Data Scientists Use Claude Code for Analysis"
-description: "Learn how data scientists leverage Claude Code with specialized skills for data analysis, automation, and insight generation. Practical examples and workflow tips."
+description: "Practical guide for data scientists using Claude Code with specialized skills for data analysis, automation, and insight generation."
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, claude-skills, data-science, analysis, automation, python]
-author: theluckystrike
+categories: [use-cases]
+tags: [claude-code, claude-skills, data-science, analysis, workflow, python]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # How Data Scientists Use Claude Code for Analysis

@@ -1,9 +1,13 @@
 ---
 layout: default
 title: "GitHub MCP Server Advanced Workflow Automation"
-description: "Learn how to leverage GitHub MCP server for advanced workflow automation, integrating with Claude skills like pdf, tdd, and supermemory."
+description: "Learn how to automate GitHub workflows with the GitHub MCP server, integrating with Claude skills like pdf, tdd, and supermemory."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, github, mcp, workflow-automation, devops]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # GitHub MCP Server Advanced Workflow Automation

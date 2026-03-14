@@ -3,7 +3,11 @@ layout: default
 title: "Apache Kafka MCP Server for Event Streaming Guide"
 description: "A practical guide to building event streaming workflows with Apache Kafka and MCP server integration for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, apache-kafka, mcp, event-streaming, devops]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Apache Kafka MCP Server for Event Streaming Guide
