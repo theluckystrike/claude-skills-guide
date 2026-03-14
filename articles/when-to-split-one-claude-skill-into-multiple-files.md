@@ -1,9 +1,13 @@
 ---
-layout: default
+layout: post
 title: "When to Split One Claude Skill Into Multiple Files"
 description: "Learn when and how to split Claude skills into multiple files for better maintainability, reusability, and organization."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+categories: [guides]
+tags: [claude-code, claude-skills, organization, best-practices]
+reviewed: true
+score: 7
 ---
 
 # When to Split One Claude Skill Into Multiple Files
