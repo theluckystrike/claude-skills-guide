@@ -113,7 +113,8 @@ This demonstrates Claude Code's ability to handle window functions, year-over-ye
 Claude Code offers specialized skills for database work. The **database-skills-for-claude-code** skill provides structured workflows for common database operations:
 
 ```bash
-claude skill install database-skills-for-claude-code
+# Place the skill .md file in your project's .claude/ directory, then invoke:
+/database-skills-for-claude-code
 ```
 
 This skill includes templates for:
