@@ -11,6 +11,7 @@ score: 7
 permalink: /claude-skills-for-legal-document-automation/
 ---
 
+
 # Claude Skills for Legal Document Automation
 
 Legal document automation transforms static legal templates into dynamic documents that populate variables, apply conditional logic, and generate output in multiple formats. [Claude skills](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) enhance this workflow by providing specialized instructions that guide Claude's behavior when processing legal documents.

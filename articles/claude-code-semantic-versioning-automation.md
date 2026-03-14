@@ -14,6 +14,7 @@ score: 7
 
 
 
+
 Semantic versioning transforms how you track and communicate project changes. When combined with Claude Code's automation capabilities, you gain a powerful system that handles version bumps, changelog generation, and tag creation without manual intervention. This guide shows you how to build a complete semantic versioning automation pipeline tailored for Claude Code workflows.
 
 ## Understanding Semantic Versioning Fundamentals

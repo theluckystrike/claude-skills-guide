@@ -144,7 +144,7 @@ This targeted refinement approach builds on the existing work rather than starti
 
 Once you find prompt structures that work well for your team's use cases, document them. Teams using Claude Code effectively often maintain a collection of proven prompts for recurring complex tasks. This accelerates future work and ensures consistency across team members.
 
-The best prompts share common characteristics: they provide context, specify constraints, break large tasks into phases, leverage appropriate skills, and include concrete examples of expected output. Apply these patterns consistently, and Claude Code becomes significantly more reliable for complex feature development.
+The best prompts share common characteristics: they provide context, specify constraints, break large tasks into phases, use appropriate skills, and include concrete examples of expected output. Apply these patterns consistently, and Claude Code becomes significantly more reliable for complex feature development.
 
 ## Related Reading
 

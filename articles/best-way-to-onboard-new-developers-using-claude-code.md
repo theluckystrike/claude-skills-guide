@@ -212,4 +212,11 @@ Claude Code transforms developer onboarding from a resource-intensive process in
 
 Start with the essential skills—supermemory for knowledge, tdd for testing patterns, pdf for documentation, and frontend-design for UI conventions—then build custom skills that capture your specific project needs. The upfront investment pays dividends with every new team member who joins and becomes productive faster.
 
+## Related Reading
+
+- [Best Way to Integrate Claude Code into Team Workflow](/claude-skills-guide/best-way-to-integrate-claude-code-into-team-workflow/) — Team integration is part of onboarding
+- [Best Way to Write CLAUDE.md File for Your Project](/claude-skills-guide/best-way-to-write-claudemd-file-for-your-project/) — Good CLAUDE.md accelerates onboarding
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — The guide new developers read first
+- [Claude Skills Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Complete hub for getting started with Claude
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

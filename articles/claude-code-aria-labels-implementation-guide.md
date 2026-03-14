@@ -205,4 +205,11 @@ Implementing ARIA labels correctly requires understanding both the attributes av
 
 The combination of skills like frontend-design for component patterns, tdd for verification, and pdf for documentation creates a workflow that maintains accessibility as your project grows. Remember: accessible interfaces benefit everyone, not just screen reader users.
 
+## Related Reading
+
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/) — WCAG audits identify missing ARIA labels
+- [Claude Code Keyboard Navigation Testing Guide](/claude-skills-guide/claude-code-keyboard-navigation-testing-guide/) — Keyboard nav and ARIA labels work together
+- [Claude Code Axe Accessibility Testing Guide](/claude-skills-guide/claude-code-axe-accessibility-testing-guide/) — Axe catches ARIA label violations automatically
+- [Best Way to Use Claude Code for Frontend Styling](/claude-skills-guide/best-way-to-use-claude-code-for-frontend-styling/) — Styling and accessibility go together in frontend work
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

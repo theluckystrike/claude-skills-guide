@@ -181,7 +181,7 @@ When combined with well-structured commits, your project becomes truly searchabl
 
 ## Conclusion
 
-Claude Code transforms Git from a version control tool into an intelligent partner in your development workflow. By providing clear context, leveraging specialized skills, and following consistent patterns, you create better commits, maintain cleaner history, and reduce cognitive overhead.
+Claude Code transforms Git from a version control tool into an intelligent partner in your development workflow. By providing clear context, using specialized skills, and following consistent patterns, you create better commits, maintain cleaner history, and reduce cognitive overhead.
 
 Start with these practices: write descriptive commits, use branches intentionally, and let Claude skills like **tdd**, **pdf**, and **super memory** enhance your workflow. The investment in good Git habits pays dividends throughout your project's lifetime.
 

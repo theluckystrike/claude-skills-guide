@@ -14,6 +14,7 @@ score: 7
 
 
 
+
 # Best Way to Use Claude Code with Existing CI/CD Pipelines
 
 Integrating Claude Code into your existing CI/CD pipelines can dramatically improve your development workflow. Instead of treating AI as a separate tool that runs only on your local machine, you can embed it directly into automated processes that run every commit, every pull request, or on a scheduled basis.

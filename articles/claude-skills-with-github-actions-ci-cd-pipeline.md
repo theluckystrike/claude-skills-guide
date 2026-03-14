@@ -11,6 +11,7 @@ score: 8
 permalink: /claude-skills-with-github-actions-ci-cd-pipeline/
 ---
 
+
 # Claude Skills with GitHub Actions CI/CD Pipeline
 
 [Integrating Claude Code with a GitHub Actions CI/CD pipeline](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) gives development teams an automated assistant that participates directly in their build, test, and deployment workflows. This guide covers practical patterns for wiring Claude intelligence into your existing pipelines — from triggering AI-powered code review on pull requests to generating PDF reports from test results.

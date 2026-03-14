@@ -13,7 +13,7 @@ permalink: /claude-code-wcag-accessibility-audit-workflow/
 
 # Claude Code WCAG Accessibility Audit Workflow
 
-Web accessibility ensures that people with disabilities can perceive, understand, navigate, and interact with your digital products. The Web Content Accessibility Guidelines (WCAG) provide a comprehensive framework with success criteria across four principles: Perceivable, Operable, Understandable, and Robust (POUR). This guide shows you how to leverage Claude Code skills to build an automated accessibility audit workflow.
+Web accessibility ensures that people with disabilities can perceive, understand, navigate, and interact with your digital products. The Web Content Accessibility Guidelines (WCAG) provide a comprehensive framework with success criteria across four principles: Perceivable, Operable, Understandable, and Robust (POUR). This guide shows you how to use Claude Code skills to build an automated accessibility audit workflow.
 
 ## Setting Up Your Accessibility Skills
 

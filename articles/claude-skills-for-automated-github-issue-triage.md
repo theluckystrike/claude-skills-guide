@@ -11,6 +11,7 @@ score: 7
 permalink: /claude-skills-for-automated-github-issue-triage/
 ---
 
+
 # Automated GitHub Issue Triage with Claude Skills
 
 Managing GitHub issues at scale quickly becomes overwhelming. When your repository accumulates hundreds of issues, manually triaging each one—categorizing, labeling, assigning priority, and routing to the right maintainers—eats away development time. Claude skills offer a practical solution by automating these workflows while maintaining accuracy.

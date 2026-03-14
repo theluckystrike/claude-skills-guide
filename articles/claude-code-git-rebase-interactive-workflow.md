@@ -55,7 +55,7 @@ Save and close the editor. Git opens another prompt for your new commit message.
 
 ## Claude Code Integration
 
-While Claude Code doesn't have a dedicated `/git-rebase` skill, you can leverage other skills to enhance your rebase workflow. The `/supermemory` skill stores your preferred commit message patterns, and the `/tdd` skill ensures your commits include appropriate test coverage.
+While Claude Code doesn't have a dedicated `/git-rebase` skill, you can use other skills to enhance your rebase workflow. The `/supermemory` skill stores your preferred commit message patterns, and the `/tdd` skill ensures your commits include appropriate test coverage.
 
 ### Using /supermemory for Commit Patterns
 

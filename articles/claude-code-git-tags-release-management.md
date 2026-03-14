@@ -133,4 +133,11 @@ Git tags combined with Claude Code's automation capabilities form the foundation
 
 Start with annotated tags for releases, establish clear naming conventions, and integrate pre-release validation through testing skills. Your deployment pipelines become more predictable, and your team gains confidence in the release process.
 
+## Related Reading
+
+- [Claude Code Semantic Versioning Automation](/claude-skills-guide/claude-code-semantic-versioning-automation/) — Semantic versioning drives git tag naming
+- [Claude Code Changelog Generation Workflow](/claude-skills-guide/claude-code-changelog-generation-workflow/) — Tags trigger changelog generation
+- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Tags are part of git best practices
+- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Tags trigger CI/CD release pipelines
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -11,6 +11,7 @@ score: 9
 permalink: /claude-skills-aws-lambda-serverless-integration/
 ---
 
+
 # Claude Code Skills + AWS Lambda: Serverless Integration
 
 Claude Code skills run locally in your terminal. AWS Lambda runs your code in the cloud. Connecting them means invoking Claude Code — including skill-augmented sessions — from within a Lambda function, then routing the output into your broader AWS infrastructure.

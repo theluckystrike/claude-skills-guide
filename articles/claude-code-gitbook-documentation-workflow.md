@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
+
 # Claude Code GitBook Documentation Workflow
 
 GitBook remains a popular choice for technical documentation, but manually maintaining content across multiple pages, updating screenshots, and keeping examples in sync with your codebase quickly becomes overwhelming. Claude Code transforms this workflow by automating content generation, formatting, and even the publishing pipeline itself.

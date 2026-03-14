@@ -11,6 +11,7 @@ score: 8
 permalink: /claude-code-aws-ecs-fargate-setup-deployment-tutorial/
 ---
 
+
 # Claude Code AWS ECS Fargate Setup Deployment Tutorial
 
 [AWS ECS Fargate provides serverless container orchestration](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/), eliminating the need to manage underlying EC2 instances. This guide walks through setting up and deploying containerized applications to ECS Fargate using Claude Code.

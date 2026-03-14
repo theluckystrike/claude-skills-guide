@@ -202,4 +202,11 @@ A well-maintained CLAUDE.md compounds in value over time, making each subsequent
 
 ---
 
+## Related Reading
+
+- [Claude Code Project Scaffolding Automation](/claude-skills-guide/claude-code-project-scaffolding-automation/) — Scaffold the project structure automatically
+- [Best Way to Write CLAUDE.md File for Your Project](/claude-skills-guide/best-way-to-write-claudemd-file-for-your-project/) — CLAUDE.md setup is a critical first step
+- [Claude Code Environment Setup Automation](/claude-skills-guide/claude-code-environment-setup-automation/) — Automate your dev environment alongside Claude Code
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — The complete beginner's reference
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

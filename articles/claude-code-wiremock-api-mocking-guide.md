@@ -11,6 +11,7 @@ score: 8
 permalink: /claude-code-wiremock-api-mocking-guide/
 ---
 
+
 # Claude Code WireMock API Mocking Guide
 
 API mocking is an essential skill for developers building integrations, testing edge cases, and working in environments where external services are unavailable or rate-limited. WireMock provides a flexible HTTP mock server that works smoothly within Claude Code workflows, enabling you to stub responses, simulate delays, and verify request patterns without relying on live endpoints.

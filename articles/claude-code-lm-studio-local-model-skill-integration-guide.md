@@ -11,6 +11,7 @@ score: 8
 permalink: /claude-code-lm-studio-local-model-skill-integration-guide/
 ---
 
+
 # Claude Code LM Studio Local Model Skill Integration Guide
 
 [Running large language models locally gives you privacy, control, and flexibility](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When you combine Claude Code with LM Studio, you create a powerful local development environment where AI-assisted coding works without sending data to external services. This guide shows you how to integrate these tools and use Claude skills within your local setup.

@@ -186,7 +186,7 @@ Write tests for async error handling:
 4. Function cleanup runs in finally block even on error
 ```
 
-These specific test cases ensure Claude Code generates robust error handling code.
+These specific test cases ensure Claude Code generates solid error handling code.
 
 ## Summary
 

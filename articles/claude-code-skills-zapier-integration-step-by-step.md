@@ -11,6 +11,7 @@ score: 9
 permalink: /claude-code-skills-zapier-integration-step-by-step/
 ---
 
+
 # Claude Code Skills + Zapier: Step-by-Step Integration
 
 Connecting Claude Code skills to Zapier lets you route skill output into thousands of external services — Slack, Google Sheets, Notion, GitHub, and more. The integration works through webhooks: your shell sends data to Zapier, and Zapier acts on it.

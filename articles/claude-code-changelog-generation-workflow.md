@@ -14,6 +14,7 @@ score: 7
 
 
 
+
 # Claude Code Changelog Generation Workflow
 
 Automated changelog generation transforms how development teams document releases. Instead of manually compiling commit messages, pull request descriptions, and issue references, Claude Code can parse your git history and produce well-structured release notes with minimal configuration.

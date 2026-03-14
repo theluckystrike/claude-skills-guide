@@ -11,6 +11,7 @@ score: 7
 permalink: /claude-code-github-actions-approval-workflows/
 ---
 
+
 # Claude Code GitHub Actions Approval Workflows
 
 [Manual approval gates are essential for production deployments](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/), security-sensitive operations, and any workflow requiring human oversight before critical actions execute. GitHub Actions provides native environment protection through required reviewers, and Claude Code skills can enhance these workflows with intelligent decision-making, automated checks, and streamlined approval processes.

@@ -11,7 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-When building applications that interact with external APIs in Claude Code, you often find yourself repeating the same fetch boilerplate across multiple tools and scripts. A well-designed fetch API wrapper saves time, reduces errors, and makes your codebase more maintainable. This guide walks you through creating practical wrapper functions that integrate smoothly with Claude Code's tool-calling paradigm.
+When building applications that interact with external APIs in Claude Code, you often find yourself repeating the same fetch boilerplate across multiple tools and scripts. A well-designed fetch API wrapper saves time, reduces errors, and makes your codebase more maintainable. This guide walks you through creating practical wrapper functions that integrate smoothly with Claude Code's tool-calling approach.
 
 ## Why Wrapper Functions Matter
 

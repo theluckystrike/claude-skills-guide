@@ -242,4 +242,11 @@ Integrating axe accessibility testing with Claude Code transforms accessibility 
 
 The key is starting simple—run an initial audit, fix critical violations, then expand your test coverage incrementally. Claude Code excels at translating technical axe output into specific, actionable fixes that developers can implement immediately.
 
+## Related Reading
+
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/) — WCAG is the standard axe tests against
+- [Claude Code Aria Labels Implementation Guide](/claude-skills-guide/claude-code-aria-labels-implementation-guide/) — Fix the ARIA issues axe discovers
+- [Claude Code Keyboard Navigation Testing Guide](/claude-skills-guide/claude-code-keyboard-navigation-testing-guide/) — Combine axe with keyboard nav testing
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Run axe tests in your TDD workflow
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

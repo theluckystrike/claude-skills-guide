@@ -137,4 +137,11 @@ Handling Claude Code mistakes efficiently comes down to three practices: catch e
 
 Mistakes will happen. The developers who get the most from Claude Code aren't those who avoid mistakes entirely—they're the ones who have systems in place to handle mistakes quickly and learn from them continuously.
 
+## Related Reading
+
+- [Claude Code Keeps Making Same Mistake Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/) — Systematic approach to eliminating recurring mistakes
+- [Why Does Claude Code Occasionally Repeat Same Errors](/claude-skills-guide/why-does-claude-code-occasionally-repeat-same-errors/) — Understanding why repeated errors happen
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/) — Scoping reduces mistake frequency
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — All Claude Code behavioral fix guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
