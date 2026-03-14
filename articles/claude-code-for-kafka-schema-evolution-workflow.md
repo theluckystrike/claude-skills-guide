@@ -45,7 +45,6 @@ Your skill definition should include the necessary tools for schema operations:
 ---
 name: kafka-schema-evolution
 description: Manages Kafka schema evolution, validates compatibility, and generates migration documentation
-tools: [read_file, write_file, bash, grep]
 ---
 
 ## Available Commands
