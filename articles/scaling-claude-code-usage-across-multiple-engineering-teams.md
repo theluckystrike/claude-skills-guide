@@ -115,10 +115,9 @@ Create comprehensive documentation that covers:
 
 ## Day 1 Setup
 1. Install Claude Code CLI
-2. Configure team-specific settings:
+2. Add a team `CLAUDE.md` with standards:
    ```bash
-   claude config set team frontend
-   claude skills load company-standards
+   cp ~/company-standards.md ./CLAUDE.md
    ```
 3. Complete interactive tutorial
 

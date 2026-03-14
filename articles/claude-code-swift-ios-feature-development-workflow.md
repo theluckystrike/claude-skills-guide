@@ -38,13 +38,15 @@ claude config list
 
 Configure your project directory to include common iOS development paths:
 
-```bash
-# Set up project-specific preferences
-claude config set project.paths.source "Sources/**/*.swift"
-claude config set project.paths.tests "Tests/**/*.swift"
+Add a `CLAUDE.md` file in your project root to tell Claude Code about your iOS project structure:
+
+```markdown
+# Project Structure
+- Source files: Sources/**/*.swift
+- Test files: Tests/**/*.swift
 ```
 
-This configuration helps Claude Code understand your project structure and provide more accurate suggestions.
+This helps Claude Code understand your project layout and provide more accurate suggestions.
 
 ## The Feature Development Workflow with Claude Code
 

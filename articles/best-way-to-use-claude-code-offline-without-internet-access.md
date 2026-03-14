@@ -39,9 +39,9 @@ brew install ollama
 # Pull a capable model for offline use
 ollama pull llama3.3
 
-# Configure Claude Code to use Ollama
-claude config set inference.provider ollama
-claude config set inference.ollama.model llama3.3
+# Claude Code uses the ANTHROPIC_BASE_URL and model env vars to point to Ollama
+export ANTHROPIC_BASE_URL=http://localhost:11434
+export ANTHROPIC_MODEL=llama3.3
 ```
 
 Once configured, Claude Code will use your local model instead of Anthropic's API. This means all your coding assistance happens on your machine—no network requests required.
