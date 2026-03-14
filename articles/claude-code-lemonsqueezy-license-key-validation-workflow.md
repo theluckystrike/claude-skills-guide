@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code LemonSqueezy License Key Validation Workflow"
-description: "Learn how to build a robust license key validation workflow using Claude Code and LemonSqueezy's API. This guide covers practical patterns for software licensing."
+description: "Learn how to build a robust license key validation workflow using Claude Code and LemonSqueezy's API. This guide covers practical patterns for software."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-lemonsqueezy-license-key-validation-workflow/
+categories: [guides]
 ---
 
 {% raw %}
@@ -203,3 +204,10 @@ Building a license validation workflow with Claude Code and LemonSqueezy combine
 
 Start by creating the Claude Code skill to handle validation conversations, then implement the API calls in your application code. With proper error handling and caching, you'll have a production-ready system that protects your software while providing a smooth experience for legitimate customers.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Is Claude Code Worth It for Open Source Maintainers? A Practical Guide"
-description: "Discover how Claude Code can transform your open source maintenance workflow. Real examples from managing repositories, handling issues, and automating documentation."
+title: "Is Claude Code Worth It for Open Source Maintainers? A."
+description: "Discover how Claude Code can transform your open source maintenance workflow. Real examples from managing repositories, handling issues, and automating."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, open-source, maintainers, productivity, ai-tools]
@@ -158,3 +158,10 @@ If you're convinced, here's how to begin:
 The open source maintainers who've adopted Claude Code consistently report saving several hours per week on routine tasks—time they can redirect toward features, community building, or simply taking a break.
 
 Is Claude Code worth it? For most active open source projects, the answer is increasingly yes. The key is starting with realistic expectations and iterating until you find the workflows that work best for you.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

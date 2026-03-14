@@ -301,3 +301,10 @@ Setting up NextAuth with database adapters doesn't have to be complex. Claude Co
 
 Start with the adapter that matches your existing stack, and leverage Claude Code's code generation capabilities to accelerate your authentication setup. Remember to always handle sensitive user data according to privacy regulations and security best practices.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
