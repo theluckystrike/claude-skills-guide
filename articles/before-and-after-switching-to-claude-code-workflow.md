@@ -3,7 +3,7 @@
 
 layout: default
 title: "Before and After: Switching to Claude Code Workflow"
-description: "A practical comparison of developer workflows before and after adopting Claude Code. See real productivity gains, workflow transformations, and how AI agents change how you code."
+description: "A practical comparison of developer workflows before and after adopting Claude Code. See real productivity gains, workflow transformations, and how AI."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /before-and-after-switching-to-claude-code-workflow/
@@ -150,5 +150,12 @@ The key adjustment is mental: learning to express intent rather than manually ex
 Start with small tasks—asking Claude Code to explain a piece of code or generate a simple function. Gradually expand to more complex operations as you build trust in the system.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

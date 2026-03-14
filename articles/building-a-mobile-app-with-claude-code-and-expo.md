@@ -2,7 +2,7 @@
 
 layout: default
 title: "Building a Mobile App with Claude Code and Expo"
-description: "A practical guide to building React Native mobile applications using Claude Code AI assistant and Expo. Includes project setup, component development, and deployment workflow."
+description: "A practical guide to building React Native mobile applications using Claude Code AI assistant and Expo. Includes project setup, component development."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, expo, react-native, mobile-development, ai-assisted-development, claude-skills]
@@ -208,5 +208,12 @@ For Android, create a keystore and configure your `app.json` with the appropriat
 Building mobile apps with Claude Code and Expo combines the productivity of AI-assisted development with the cross-platform capabilities of React Native. The workflow involves initializing your project, creating component-based UIs, managing navigation and state, and deploying through Expo's build system.
 
 The key advantages include rapid prototyping through hot reloading, a unified codebase for iOS and Android, and AI assistance throughout the development process. As you advance, explore platform-specific modules through Expo's ecosystem of libraries, and consider integrating additional Claude skills to streamline documentation, testing, and memory management across your project.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
