@@ -5,7 +5,7 @@ description: "Practical strategies for solo developers to ship products faster u
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, workflow, productivity, tdd, pdf, supermemory]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 7
 permalink: /how-a-solo-developer-ships-faster-with-claude-code/
