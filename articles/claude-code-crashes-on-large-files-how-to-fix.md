@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Crashes on Large Files: How to Fix"
 description: "Troubleshooting and solutions for Claude Code (claude.ai) crashes when handling large files. Practical fixes for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-crashes-on-large-files-how-to-fix/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 {% raw %}
 
@@ -87,7 +91,7 @@ services:
       - MAX_CONTEXT=200000
 ```
 
-## Solution 5: Leverage Skill-Specific Optimizations
+## Solution 5: use Skill-Specific Optimizations
 
 Different Claude skills handle large files in unique ways. Understanding these patterns helps prevent crashes:
 
@@ -156,7 +160,7 @@ Before involving Claude, use dedicated tools for heavy lifting:
 - **Code formatting**: Use `prettier` or `eslint` to make code readable
 - **Image optimization**: Use `imagemin` or `sharp` for images
 
-The internal-comms skill can help you document these workflows for team consistency.
+The **docx** skill can help you document these workflows for team consistency.
 
 ## Solution 8: Monitor and Set Alerts
 

@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Stuck in Loop Repeating Same Output Fix"
 description: "Practical solutions for fixing Claude Code stuck in loop issues. Learn how to break repetitive output patterns and get Claude Code unstuck."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-stuck-in-loop-repeating-same-output-fix/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code Stuck in Loop Repeating Same Output Fix
@@ -115,7 +119,7 @@ Do not handle files larger than 10MB.
 Return only the function code, no explanations.
 ```
 
-Negative constraints are particularly useful when working with the `algorithmic-art` skill for generative visual projects. Tell the skill what to avoid (specific colors, patterns, or file sizes) alongside what you want.
+Negative constraints are particularly useful when working on generative visual projects with the **canvas-design** skill. Tell Claude what to avoid (specific colors, patterns, or file sizes) alongside what you want.
 
 ## Sixth Fix: Limit Iteration Attempts
 

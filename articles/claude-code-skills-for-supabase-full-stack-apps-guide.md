@@ -111,7 +111,7 @@ const AuthForm = ({ onLogin }) => {
 };
 ```
 
-For real-time features, the **algorithmic-art** skill can generate visual indicators for live updates, helping users understand when data syncs across devices.
+For real-time features, the **frontend-design** skill can help generate visual indicators for live updates, helping users understand when data syncs across devices.
 
 ## Testing and Quality Assurance
 

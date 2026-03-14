@@ -125,7 +125,7 @@ When working across multiple features or tickets, use Claude to maintain context
 - Request the current state of each active branch
 - Generate status updates from git log analysis
 
-The **algorithmic-art** skill—even though it's designed for visual generation—can help teams visualize sprint progress through burndown charts and velocity graphs when invoked with appropriate data.
+The **xlsx** skill can help teams track and visualize sprint progress through burndown charts and velocity graphs when invoked with appropriate data.
 
 ## Integrating Claude Skills Into Your Sprint Workflow
 
