@@ -120,5 +120,6 @@ Many teams will find value in using both: Copilot Workspace for quick, GitHub-na
 - [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's extensible skills ecosystem is a key differentiator from GitHub Copilot Workspace; this guide maps out what is available
 - [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Understanding when skills outperform raw prompts is central to evaluating Claude Code's depth against Copilot Workspace's simplicity
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Claude Code's automatic skill triggering is one of its most powerful features compared to static GitHub Copilot suggestions
+- [Best AI Code Completion Tools vs Claude Code](/claude-skills-guide/best-ai-code-completion-tools-vs-claude-code/) — See how Claude Code stacks up against Copilot, Cursor, Tabnine, and other completion tools
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
