@@ -199,7 +199,7 @@ A solo developer using Claude Code functions like a small team. The key skills a
 
 **Recommended starting point:** [Best Claude Skills for Solo Developers and Freelancers](/claude-skills-guide/articles/best-claude-skills-for-solo-developers-and-freelancers/)
 
-**High-leverage guides for solo developers:**
+**Top guides for solo developers:**
 - [How to Build a SaaS MVP with Claude Code Skills Guide](/claude-skills-guide/articles/how-to-build-saas-mvp-with-claude-code-skills-guide/) — Ship a functional SaaS product faster by using Claude skills throughout the build.
 - [Full Stack Web App with Claude Skills Step-by-Step](/claude-skills-guide/articles/full-stack-web-app-with-claude-skills-step-by-step/) — Complete walkthrough building a full-stack application with Claude skill coverage at every layer.
 - [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Critical for independent developers covering their own API costs.

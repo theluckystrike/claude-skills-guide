@@ -46,7 +46,7 @@ from pathlib import Path
 
 def generate_asset_inventory(media_dir: str, output_file: str):
     """Scan media directory and generate Excel inventory."""
-    from xlsx import Workbook
+    from openpyxl import Workbook
     
     wb = Workbook()
     ws = wb.active

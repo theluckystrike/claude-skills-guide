@@ -144,7 +144,7 @@ class EnterprisePermissionService:
         })
 ```
 
-This service can integrate with identity providers like Okta, Azure AD, or Auth0 to leverage existing enterprise identity infrastructure.
+This service can integrate with identity providers like Okta, Azure AD, or Auth0 to use your existing enterprise identity infrastructure.
 
 ### Skill-Level Permission Boundaries
 
