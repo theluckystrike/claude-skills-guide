@@ -8,10 +8,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# FLEET NOTE (PM1, PM2, PM3): render_with_liquid: false disables ALL Liquid
-# processing for articles/. This means {{ var }} and {% tag %} appear literally.
-# DO NOT add {% raw %} / {% endraw %} to articles/ — these tags will appear as
-# literal text in the rendered HTML. PM2 strips them on every cycle.
+# FLEET NOTE (PM1, PM2, PM3): render_with_liquid: false is set here but
+# GitHub Pages IGNORES this setting. Articles with {{ or {% syntax MUST be
+# wrapped in {% raw %} / {% endraw %} to prevent Liquid build errors.
+# PM1 adds these tags where needed. PM2 must NOT strip them.
 defaults:
   - scope:
       path: "articles"
