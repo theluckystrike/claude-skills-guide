@@ -5,7 +5,7 @@ description: "A practical guide to auditing and managing Model Context Protocol 
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, mcp, security, permission-auditing]
-author: "Claude Skills Guide"
+author: theluckystrike
 reviewed: true
 score: 8
 permalink: /mcp-server-permission-auditing-best-practices/
