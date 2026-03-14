@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for wasm-bindgen Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline your wasm-bindgen workflow for building high-performance WebAssembly modules that integrate seamlessly with."
@@ -6,14 +7,17 @@ date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-wasm-bindgen-workflow-tutorial/
 categories: [tutorials]
-tags: [claude-code, wasm-bindgen, webassembly, rust, javascript]
+tags: [claude-code, wasm-bindgen, webassembly, rust, javascript, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 
 # Claude Code for wasm-bindgen Workflow Tutorial
 
-WebAssembly (WASM) has become essential for bringing high-performance compute to web applications. When combined with Rust's memory safety and performance, wasm-bindgen provides a powerful toolkit for building fast, interoperable modules. This guide shows you how to leverage Claude Code to automate and accelerate your wasm-bindgen development workflow.
+WebAssembly (WASM) has become essential for bringing high-performance compute to web applications. When combined with Rust's memory safety and performance, wasm-bindgen provides a powerful toolkit for building fast, interoperable modules. This guide shows you how to use Claude Code to automate and accelerate your wasm-bindgen development workflow.
 
 ## Why Use Claude Code with wasm-bindgen?
 

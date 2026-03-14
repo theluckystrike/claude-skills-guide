@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Operator Lifecycle Manager Guide"
 description: "A comprehensive guide to using Claude Code with Kubernetes Operator Lifecycle Manager (OLM). Learn to create, manage, and deploy operators with."
@@ -7,11 +8,14 @@ author: Claude Skills Guide
 permalink: /claude-code-for-operator-lifecycle-manager-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Operator Lifecycle Manager Guide
 
-Operator Lifecycle Manager (OLM) is a fundamental component of the Kubernetes ecosystem that simplifies the deployment and management of operators. When combined with Claude Code, developers can accelerate OLM-related workflows, generate manifests, and maintain operator packages more efficiently. This guide explores practical ways to leverage Claude Code for operator development and OLM management.
+Operator Lifecycle Manager (OLM) is a fundamental component of the Kubernetes ecosystem that simplifies the deployment and management of operators. When combined with Claude Code, developers can accelerate OLM-related workflows, generate manifests, and maintain operator packages more efficiently. This guide explores practical ways to use Claude Code for operator development and OLM management.
 
 ## Understanding OLM and Claude Code Integration
 

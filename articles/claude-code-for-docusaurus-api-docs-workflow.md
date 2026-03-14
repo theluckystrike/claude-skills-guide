@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Docusaurus API Docs Workflow"
 description: "Learn how to automate Docusaurus API documentation generation using Claude Code. Streamline your docs workflow with practical examples and actionable."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-docusaurus-api-docs-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Docusaurus API Docs Workflow

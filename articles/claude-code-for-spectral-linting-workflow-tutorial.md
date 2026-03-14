@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Spectral Linting Workflow Tutorial"
 description: "Learn how to integrate Spectral API linting into your Claude Code workflow for better API quality and consistency. This tutorial covers setup, custom."
@@ -7,9 +8,12 @@ author: Claude Skills Guide
 permalink: /claude-code-for-spectral-linting-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 {% raw %}
-Spectral is a powerful JSON/YAML linting tool that helps teams maintain API quality and consistency. When combined with Claude Code, it becomes an even more potent pair for API development workflows. This tutorial will show you how to integrate Spectral into your Claude Code projects and leverage its capabilities for better API governance.
+Spectral is a powerful JSON/YAML linting tool that helps teams maintain API quality and consistency. When combined with Claude Code, it becomes an even more potent pair for API development workflows. This tutorial will show you how to integrate Spectral into your Claude Code projects and use its capabilities for better API governance.
 
 ## Understanding Spectral and Its Role in API Development
 

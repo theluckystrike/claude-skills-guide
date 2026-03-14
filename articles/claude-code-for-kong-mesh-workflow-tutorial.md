@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Kong Mesh Workflow Tutorial"
 description: "A practical guide to using Claude Code for Kong Mesh configuration, deployment, and management. Learn workflows for service mesh, traffic routing, and."
@@ -8,7 +9,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-kong-mesh-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills, kong, kong-mesh, service-mesh]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Kong Mesh Workflow Tutorial
 
@@ -24,7 +28,7 @@ Create a working directory for your Kong Mesh configurations:
 mkdir kong-mesh-workflow && cd kong-mesh-workflow
 ```
 
-You can now leverage Claude Code to understand your current Kong Mesh deployment. Simply ask:
+You can now use Claude Code to understand your current Kong Mesh deployment. Simply ask:
 
 > "Show me the current Kong Mesh control plane status and list all available services in the mesh."
 

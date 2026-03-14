@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for PostgreSQL JSONB Workflow Tutorial"
 description: "Learn how to use Claude Code to build efficient PostgreSQL JSONB workflows, from schema design to query optimization, with practical code examples."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-postgres-jsonb-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for PostgreSQL JSONB Workflow Tutorial
 
@@ -123,7 +127,7 @@ WHERE settings @> '{"notifications": {"email": true}}';
 
 ## Building Dynamic Queries with Claude Code
 
-One of Claude Code's greatest strengths is translating natural language into complex SQL. For JSONB operations, this is particularly valuable because the syntax can become verbose. Here's how to leverage this capability:
+One of Claude Code's greatest strengths is translating natural language into complex SQL. For JSONB operations, this is particularly valuable because the syntax can become verbose. Here's how to use this capability:
 
 When working with Claude Code, provide clear context about your data structure. Describe the JSONB schema you're working with, and specify exactly what information you need to extract. Claude can then generate optimized queries using PostgreSQL's JSONPath expressions for better performance:
 
@@ -212,7 +216,7 @@ PostgreSQL JSONB provides an excellent middle ground between rigid relational sc
 
 Start with simple use cases like user preferences or configuration storage, then gradually expand to more complex nested structures as your comfort with JSONB grows. Claude Code will help you navigate the learning curve by generating correct SQL and explaining the reasoning behind each approach.
 
-Remember to always consider your access patterns when designing JSONB schemas, create appropriate indexes for your most frequent queries, and leverage PostgreSQL's built-in operators for optimal performance. With these fundamentals in place, you'll be building sophisticated JSONB-powered applications in no time.
+Remember to always consider your access patterns when designing JSONB schemas, create appropriate indexes for your most frequent queries, and use PostgreSQL's built-in operators for optimal performance. With these fundamentals in place, you'll be building sophisticated JSONB-powered applications in no time.
 
 ## Related Reading
 

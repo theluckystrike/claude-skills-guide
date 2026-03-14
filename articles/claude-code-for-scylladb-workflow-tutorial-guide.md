@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for ScyllaDB Workflow Tutorial Guide"
 description: "Learn how to leverage Claude Code to build efficient ScyllaDB workflows, from database setup to advanced query patterns with practical code examples."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-scylladb-workflow-tutorial-guide/
 categories: [tutorials, databases]
 tags: [claude-code, claude-skills, scylladb, database, workflow]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for ScyllaDB Workflow Tutorial Guide
 

@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for OpenFaaS Kubernetes Workflow"
 description: "Learn how to build serverless functions with OpenFaaS on Kubernetes using Claude Code. Automate function deployment, manage workflows, and optimize."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-openfaas-kubernetes-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for OpenFaaS Kubernetes Workflow
@@ -541,7 +545,7 @@ Building OpenFaaS functions on Kubernetes doesn't have to be complicated. Claude
 
 Start with simple functions, establish good practices early, and gradually build more complex workflows as your needs evolve. The combination of OpenFaaS's serverless capabilities and Claude Code's AI-assisted development creates a powerful platform for building scalable, event-driven applications.
 
-Remember to check the OpenFaaS documentation for the latest features and best practices, and leverage Claude Code's understanding of both your application code and Kubernetes primitives to streamline your development workflow.
+Remember to check the OpenFaaS documentation for the latest features and best practices, and use Claude Code's understanding of both your application code and Kubernetes primitives to streamline your development workflow.
 
 {% endraw %}
 

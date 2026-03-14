@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Flink CEP Pattern Workflow Guide"
 description: "Master Complex Event Processing patterns in Apache Flink with Claude Code. Learn to build pattern detection workflows, implement alerting systems, and."
@@ -8,7 +9,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-flink-cep-pattern-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 
@@ -182,7 +186,7 @@ Pattern<UserEvent, ?> behavioralPattern = Pattern
     .within(Time.minutes(5));
 ```
 
-Claude Code excels at explaining how to leverage context conditions effectively, helping you design patterns that make intelligent decisions based on accumulated event data.
+Claude Code excels at explaining how to use context conditions effectively, helping you design patterns that make intelligent decisions based on accumulated event data.
 
 ## Best Practices for CEP Workflows
 

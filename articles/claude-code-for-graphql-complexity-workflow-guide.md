@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for GraphQL Complexity Workflow Guide"
 description: "Learn how to use Claude Code to manage GraphQL complexity in your projects. This guide covers schema design, query optimization, and practical workflows."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-graphql-complexity-workflow-guide/
 categories: [Development, GraphQL, AI Coding Tools]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for GraphQL Complexity Workflow Guide
 
-GraphQL has revolutionized how we build APIs, but as your schema grows, complexity can quickly become unmanageable. From deeply nested queries to intricate resolver chains, maintaining a healthy GraphQL codebase requires deliberate workflows and tooling. This guide shows you how to leverage Claude Code to tame GraphQL complexity effectively.
+GraphQL has revolutionized how we build APIs, but as your schema grows, complexity can quickly become unmanageable. From deeply nested queries to intricate resolver chains, maintaining a healthy GraphQL codebase requires deliberate workflows and tooling. This guide shows you how to use Claude Code to tame GraphQL complexity effectively.
 
 ## Understanding GraphQL Complexity Challenges
 

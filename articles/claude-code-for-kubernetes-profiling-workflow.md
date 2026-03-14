@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Kubernetes Profiling Workflow"
 description: "Learn how to use Claude Code to build efficient Kubernetes profiling workflows. Practical examples and code snippets for developers working with."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-kubernetes-profiling-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Kubernetes Profiling Workflow
 
-Modern cloud-native applications running on Kubernetes demand sophisticated profiling techniques to identify performance bottlenecks, memory leaks, and resource inefficiencies. Claude Code, with its powerful CLI and extensibility through skills, can dramatically streamline your Kubernetes profiling workflow. This guide shows you how to leverage Claude Code to build an efficient, repeatable profiling pipeline for your containerized applications.
+Modern cloud-native applications running on Kubernetes demand sophisticated profiling techniques to identify performance bottlenecks, memory leaks, and resource inefficiencies. Claude Code, with its powerful CLI and extensibility through skills, can dramatically streamline your Kubernetes profiling workflow. This guide shows you how to use Claude Code to build an efficient, repeatable profiling pipeline for your containerized applications.
 
 ## Understanding the Kubernetes Profiling Landscape
 
