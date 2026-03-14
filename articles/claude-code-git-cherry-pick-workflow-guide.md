@@ -1,31 +1,26 @@
 ---
-
 layout: default
 title: "Claude Code Git Cherry-Pick Workflow Guide"
-description: "Master git cherry-pick workflows with Claude Code. Learn to select commits precisely, handle merge conflicts, and automate repetitive cherry-picking."
+description: "Master git cherry-pick workflows with Claude Code CLI. Learn to select specific commits, handle merge conflicts, and automate backporting with practical examples."
 date: 2026-03-14
-author: "Claude Skills Guide"
-permalink: /claude-code-git-cherry-pick-workflow-guide/
+author: theluckystrike
 categories: [guides]
-tags: [claude-code, claude-skills]
-reviewed: true
-score: 7
+tags: [claude-code, git, cherry-pick, workflow, version-control]
+permalink: /claude-code-git-cherry-pick-workflow-guide/
 ---
 
-
+{% raw %}
 # Claude Code Git Cherry-Pick Workflow Guide
 
-Git cherry-pick stands as one of the most underutilized yet powerful commands in a developer's toolkit. When used correctly, it lets you bring specific commits from one branch into another without merging entire branches. This guide shows you how to use Claude Code to make cherry-picking more efficient, safer, and integrated into your daily workflow.
+Git cherry-pick stands as one of the most powerful yet underutilized commands in a developer's toolkit. When you need to bring specific commits from one branch into another without merging entire branches, cherry-pick delivers precision control. Combined with Claude Code CLI, you can streamline these workflows, handle conflicts more efficiently, and automate repetitive backporting tasks.
 
-## Understanding Cherry-Pick Fundamentals
+This guide covers practical cherry-pick workflows that developers and power users can implement immediately.
 
-Cherry-picking in Git applies the changes from specific commits to your current branch. Unlike merging, which brings in the entire commit history, cherry-pick gives you surgical precision. This becomes invaluable when:
+## Understanding Cherry-Pick Basics
 
-- Backporting bug fixes from a main branch to a release branch
-- Applying hotfixes across multiple feature branches
-- Selectively merging changes without pulling in unrelated commits
+Cherry-pick allows you to apply specific commits from one branch onto another. Unlike a full merge or rebase, cherry-pick grabs only the changes from selected commits while leaving your branch history intact.
 
-The basic syntax is straightforward:
+The basic syntax works like this:
 
 ```bash
 git cherry-pick <commit-hash>
@@ -37,207 +32,157 @@ For multiple commits:
 git cherry-pick commit1 commit2 commit3
 ```
 
-Or a range:
+Or pick a range:
 
 ```bash
 git cherry-pick commit1..commit3
 ```
 
-Claude Code can help you identify which commits to cherry-pick by analyzing your git log, understanding branch relationships, and even suggesting appropriate commits based on your described goal.
+Claude Code can help identify which commits to pick by analyzing your git log. Simply ask Claude to review recent commits on a feature branch and suggest which ones should be backported to a release branch.
 
-## Setting Up Your Environment
+## Practical Workflows for Developers
 
-Before diving into advanced workflows, ensure your git environment is properly configured. Create a skill that handles common git operations using the skill-creator approach. This skill can encapsulate your preferred settings and provide context-aware suggestions.
+### Backporting Bug Fixes
 
-Your `.gitconfig` should include aliases that speed up cherry-pick operations:
-
-```bash
-[alias]
-  cp = cherry-pick
-  cpn = cherry-pick --no-commit
-  cpc = cherry-pick --continue
-  cpa = cherry-pick --abort
-```
-
-The `--no-commit` flag (aliased as `cpn`) is particularly useful when you want to review changes before committing them to your current branch. This gives you a chance to make additional modifications or resolve conflicts incrementally.
-
-## Identifying Commits to Cherry-Pick
-
-One of the first challenges in cherry-picking is finding the right commits. Claude Code excels at this through its ability to read and analyze your git history. Use commands like:
+One of the most common use cases involves applying critical bug fixes from main to release branches. Suppose you're maintaining a stable release branch while developing features on main. When a bug fix lands on main, you need that same fix on your release branch.
 
 ```bash
-git log --oneline --all --graph -20
+# First, find the commit
+git log --oneline main --grep="fix"
+
+# Cherry-pick the fix onto release branch
+git checkout release-2.1
+git cherry-pick abc1234
 ```
 
-This shows a compact graph of recent commits across all branches. When working with larger repositories, combine this with search filters:
+Using the **supermemory** skill with Claude Code helps track which commits have already been backported, preventing duplicate work. Document each cherry-picked commit with its purpose and original branch for future reference.
+
+### Applying Hotfixes Across Branches
+
+Production issues demand rapid response. When pushing a hotfix to production, you often need that same fix on development, staging, and release branches simultaneously.
 
 ```bash
-git log --all --grep="fix" --oneline
+# Apply hotfix to all relevant branches
+git checkout production
+git cherry-pick def5678
+
+git checkout staging  
+git cherry-pick def5678
+
+git checkout develop
+git cherry-pick def5678
 ```
 
-For finding commits that modified specific files:
+Claude Code can execute these commands in sequence, handling any conflicts as they arise. Ask Claude to run the cherry-pick and report any issues requiring manual intervention.
+
+### Selective Feature Backporting
+
+Sometimes you want only certain features from a branch, not the entire change set. This frequently occurs when feature branches contain multiple independent improvements.
 
 ```bash
-git log --all --follow --oneline -- path/to/file
+# View commits in the feature branch
+git log feature/new-dashboard --oneline
+
+# Pick specific commits selectively
+git cherry-pick ghi9012 jkl3456
 ```
 
-If you're using supermemory to track your project's history, you can create custom queries that surface commits based on your previous work patterns. This skill becomes particularly valuable in larger teams where commit messages might not immediately reveal the full context.
+The **tdd** skill complements this workflow by helping you verify that cherry-picked commits include their corresponding tests, maintaining code quality during selective backporting.
 
-## The Practical Cherry-Pick Workflow
+## Handling Merge Conflicts
 
-Let me walk through a real-world scenario: backporting a bug fix from main to three different release branches.
+Cherry-pick inevitably produces conflicts when the same lines were modified differently in the source and target branches. Claude Code simplifies conflict resolution.
 
-### Step 1: Identify the Fix Commit
+When conflicts occur, Git pauses and reports:
 
-Start by finding the commit containing your bug fix:
+```
+error: could not apply abc1234... Fix authentication bug
+hint: after resolving the conflicts, mark the corrected paths
+hint: with "git add <paths>" and run "git cherry-pick --continue"
+```
+
+Claude can help by:
+- Analyzing conflicting files and suggesting resolution strategies
+- Running `git diff` to show exactly what conflicts exist
+- Applying auto-merge strategies where possible
+
+Manual resolution follows a clear pattern:
 
 ```bash
-git log main --oneline --grep="bugfix" -10
-```
+# See conflicting files
+git status
 
-Once you locate the commit hash (for example, `a1b2c3d`), verify the changes:
+# Edit files to resolve conflicts
+# Then stage resolved files
+git add conflicted-file.js
 
-```bash
-git show a1b2c3d --stat
-```
-
-### Step 2: Switch to Target Branch
-
-```bash
-git checkout release/2.1
-```
-
-### Step 3: Cherry-Pick the Commit
-
-```bash
-git cherry-pick a1b2c3d
-```
-
-If conflicts arise, you'll see them immediately. Don't panic—Git stops at the conflicting state, allowing you to resolve issues carefully.
-
-### Step 4: Resolve Conflicts
-
-Open the conflicted files. You'll see conflict markers:
-
-```// Incoming changes from cherry-picked commit
-```
-
-Choose the appropriate resolution, then:
-
-```bash
-git add resolved-file.js
+# Continue the cherry-pick
 git cherry-pick --continue
 ```
 
-For abandoning the cherry-pick if things go wrong:
+For complex conflicts, abort and reconsider:
 
 ```bash
 git cherry-pick --abort
 ```
 
-## Automating Repeated Cherry-Picks
+## Automating with Claude Code Skills
 
-When you need to cherry-pick the same commit across multiple branches, automation becomes essential. Here's a bash script pattern that Claude Code can help you generate and customize:
+Creating a Claude skill for cherry-pick workflows standardizes your team's approach. A custom skill can:
 
-```bash
-#!/bin/bash
-COMMIT="$1"
-BRANCHES="release/2.0 release/2.1 release/2.2"
+1. List commits eligible for cherry-pick from a specific branch
+2. Validate that commits include tests before picking
+3. Generate pull requests automatically after cherry-picking
+4. Track cherry-picked commits to prevent duplicates
 
-for branch in $BRANCHES; do
-    echo "Cherry-picking $COMMIT to $branch"
-    git checkout "$branch"
-    git cherry-pick "$COMMIT" || {
-        echo "Conflict on $branch, skipping"
-        git cherry-pick --abort
-        continue
-    }
-    git push origin "$branch"
-done
+Here's a sample skill workflow:
+
+```
+User: Cherry-pick the auth fix from main to release branch
+Claude: Let me find the relevant commit first...
+
+[Claude analyzes git log, identifies commit]
+[Applies cherry-pick to release branch]
+[Reports success or identifies conflicts]
 ```
 
-You can enhance this script with additional checks: verifying the branch exists, confirming no duplicate cherry-picks, and adding automated commit message modifications.
-
-## Handling Complex Scenarios
-
-### Cherry-Picking Merge Commits
-
-Merge commits require the `-m` flag to specify which parent to use:
-
-```bash
-git cherry-pick -m 1 <merge-commit-hash>
-```
-
-The `-m 1` indicates using the first parent (typically the branch you merged into).
-
-### Partial File Cherry-Picking
-
-Sometimes you want changes from a commit but not all files. After running:
-
-```bash
-git cherry-pick -n <commit>
-```
-
-The `-n` (or `--no-commit`) flag stages changes without committing. Then selectively reset unwanted files:
-
-```bash
-git reset HEAD unwanted-file.py
-git checkout -- unwanted-file.py
-```
-
-This leaves only your desired changes staged.
-
-### Preserving Commit Metadata
-
-By default, cherry-pick creates new commits with your current timestamp. To preserve original commit information:
-
-```bash
-git cherry-pick -x <commit>
-```
-
-The `-x` flag adds "(cherry picked from commit ...)" to the message, maintaining the link to the original.
-
-## Integrating with Claude Skills
-
-Several Claude skills enhance cherry-pick workflows. The pdf skill lets you generate changelogs from cherry-picked commits—useful for release notes. If you're practicing test-driven development with the tdd skill, cherry-pick becomes valuable for moving fixed tests between branches.
-
-For design-related work, frontend-design skills can help you cherry-pick CSS commits specifically, reviewing visual changes in isolation before merging them into your main stylesheet branch.
+The **frontend-design** skill can help if cherry-picks involve UI component changes, ensuring design consistency across branches.
 
 ## Best Practices
 
-1. **Always verify before picking**: Run `git show <commit>` to understand exactly what changes you're bringing in.
+### Always Test Before Cherry-Picking to Production
 
-2. **Test in a separate branch first**: Create a temporary branch to validate the cherry-pick works as expected.
-
-3. **Use meaningful commit messages**: When cherry-picking, consider amending the commit message to explain why this change is being applied to this branch.
-
-4. **Keep a cherry-pick log**: Maintain documentation of which commits were cherry-picked and to which branches—this prevents duplicate work and confusion.
-
-5. **Use CI/CD checks**: After cherry-picking, ensure your continuous integration pipeline validates the changes on the target branch.
-
-## Common Pitfalls to Avoid
-
-Cherry-picking the same commit twice to the same branch causes problems. Check first:
+Run your test suite after any cherry-pick:
 
 ```bash
-git log --all --oneline --grep="<commit-hash>"
+npm test  # or your equivalent test command
+git push origin production
 ```
 
-Avoid cherry-picking across unrelated histories without understanding the potential conflicts. Large behavioral changes often cause more problems than they're worth when cherry-picked.
+### Document Cherry-Picked Commits
 
-Remember that cherry-pick doesn't erase the original commit—it creates a new one with the same changes. This means your commit history grows with each pick, which is fine for tracked changes but can become messy if overused.
+Include references in commit messages:
 
-## Wrapping Up
+```
+Cherry-picked from main: abc1234 - Fix login timeout issue
+Backported for release 2.1.3
+```
 
-Git cherry-pick, combined with Claude Code's analysis and automation capabilities, becomes a powerful tool for managing complex release workflows. Whether you're backporting critical fixes, maintaining multiple release branches, or selectively merging features, this workflow saves time and reduces errors.
+### Use Tags for Tracking
 
-Practice these techniques in a test repository first. Once comfortable, integrate the patterns into your daily development routine. The initial investment in learning pays dividends every time you need to precisely apply a change across branches without the complexity of a full merge.
+Tag cherry-picked commits for visibility:
 
-## Related Reading
+```bash
+git tag cherrypick/release-2.1/fix-login abc1234
+```
 
-- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Cherry-pick is an advanced git technique
-- [Claude Code Git Rebase Interactive Workflow](/claude-skills-guide/claude-code-git-rebase-interactive-workflow/) — Rebase and cherry-pick are complementary techniques
-- [Claude Code Merge Conflict Resolution Guide](/claude-skills-guide/claude-code-merge-conflict-resolution-guide/) — Cherry-picks can create merge conflicts
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Git workflow automation guides
+## Summary
+
+Git cherry-pick combined with Claude Code CLI transforms how you handle targeted code changes across branches. Whether backporting hotfixes, applying specific features, or managing complex release workflows, this combination provides precision and automation that scales.
+
+The key is establishing consistent patterns: always verify commits before picking, handle conflicts methodically, and document your changes thoroughly. Claude Code handles the execution and analysis, letting you focus on decision-making rather than manual command execution.
+
+Start with simple cherry-picks, gradually incorporating them into your regular workflow. Soon, you'll wonder how you managed without this capability.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
