@@ -1,12 +1,7 @@
 ---
 layout: default
-<<<<<<< Updated upstream
-title: "Claude Code Worktrees and Skills Isolation Guide"
-description: "How Claude Code uses git worktrees to isolate agent work. Learn what gets isolated, what is shared, and how to design skills for worktree environments."
-=======
 title: "Claude Code Worktrees and Skills Isolation Explained"
 description: "How Claude Code uses git worktrees to isolate skill execution: what gets isolated, what doesn't, and how to design skills for worktree environments."
->>>>>>> Stashed changes
 date: 2026-03-13
 categories: [advanced]
 tags: [claude-code, claude-skills, worktrees, git, isolation, parallel-work]
