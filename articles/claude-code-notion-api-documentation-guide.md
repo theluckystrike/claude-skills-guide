@@ -4,7 +4,7 @@ layout: default
 title: "Claude Code Notion API Documentation Guide"
 description: "A practical guide to using Claude Code with the Notion API for documentation workflows. Learn skill invocation, API integration patterns, and."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /claude-code-notion-api-documentation-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
