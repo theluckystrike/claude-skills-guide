@@ -26,7 +26,7 @@ You will also need a ClickUp API token from your workspace settings.
 
 ## Setting Up the ClickUp MCP Server
 
-The ClickUp MCP server acts as a bridge between Claude and ClickUp's REST API. Install it using npm:
+[The ClickUp MCP server acts as a bridge between Claude and ClickUp](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)'s REST API. Install it using npm:
 
 ```bash
 npm install -g @clickup/mcp-server
@@ -183,5 +183,12 @@ The combination of custom MCP servers with ClickUp's API creates endless automat
 The ClickUp MCP server transforms Claude into a powerful project management assistant. By connecting natural language to API actions, you can automate task creation, status management, and complex workflow orchestration. Start with simple automations and gradually build toward sophisticated multi-step workflows that eliminate repetitive manual work.
 
 For developers looking to extend this further, explore combining the ClickUp MCP server with skills like frontend-design for automatic design task creation, or pdf for generating automated status reports from your ClickUp data.
+
+## Related Reading
+
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/articles/aws-mcp-server-cloud-automation-with-claude-code/)
+- [Discord MCP Server Community Automation Guide](/claude-skills-guide/articles/discord-mcp-server-community-automation-guide/)
+- [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

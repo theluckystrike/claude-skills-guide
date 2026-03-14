@@ -12,7 +12,7 @@ score: 7
 
 # Jira MCP Server Claude Code Integration Guide
 
-Connecting Jira to Claude Code through the Model Context Protocol (MCP) transforms how development teams manage project workflows. This integration allows Claude Code to interact directly with your Jira instance, enabling automated task creation, status updates, and sprint management without leaving your terminal. This guide covers the complete setup process, configuration options, and practical examples for developers looking to streamline their workflow.
+[Connecting Jira to Claude Code through the Model Context Protocol (MCP)](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) transforms how development teams manage project workflows. This integration allows Claude Code to interact directly with your Jira instance, enabling automated task creation, status updates, and sprint management without leaving your terminal. This guide covers the complete setup process, configuration options, and practical examples for developers looking to streamline their workflow.
 
 ## Prerequisites
 
@@ -211,5 +211,12 @@ When integrating Jira with Claude Code, follow these guidelines:
 Integrating Jira with Claude Code through MCP creates a powerful workflow automation system. From automated ticket creation to sprint management queries, this integration reduces context-switching and keeps your development workflow focused in the terminal. Start with simple queries, then expand to complex automation as your team becomes comfortable with the integration.
 
 The combination of Jira's project management capabilities with Claude Code's natural language processing transforms how teams interact with their project tracking system. Experiment with different prompt patterns to find what works best for your workflow.
+
+## Related Reading
+
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [ClickUp MCP Server Workflow Automation Guide](/claude-skills-guide/articles/clickup-mcp-server-workflow-automation-guide/)
+- [Salesforce MCP Server Data Integration Guide](/claude-skills-guide/articles/salesforce-mcp-server-data-integration-guide/)
+- [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

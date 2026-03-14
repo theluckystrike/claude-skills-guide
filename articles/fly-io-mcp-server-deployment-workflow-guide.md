@@ -12,11 +12,11 @@ score: 7
 
 # Fly.io MCP Server Deployment Workflow Guide
 
-Deploying a Model Context Protocol (MCP) server to Fly.io gives you a globally distributed, low-latency endpoint that Claude Code can connect to for enhanced tool-calling capabilities. This guide covers the complete deployment workflow, from containerization to automated deployments using Claude skills.
+[Deploying a Model Context Protocol (MCP) server to Fly.io gives you](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) a globally distributed, low-latency endpoint that Claude Code can connect to for enhanced tool-calling capabilities. This guide covers the complete deployment workflow, from containerization to automated deployments using Claude skills.
 
 ## Why Deploy MCP Servers on Fly.io
 
-Fly.io runs containers close to users, making it ideal for MCP servers that need fast response times. The platform handles TLS certificates automatically, manages edge networking, and supports persistent volumes when your server needs state. Many developers combine their MCP deployment with the frontend-design skill for generating UI components, or the pdf skill for document processing—all without requiring local infrastructure.
+Fly.io runs containers close to users, making it ideal for MCP servers that need fast response times. The platform handles TLS certificates automatically, manages edge networking, and supports persistent volumes when your server needs state. Many developers [combine their MCP deployment with the frontend-design skill](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) for generating UI components, or the pdf skill for document processing—all without requiring local infrastructure.
 
 The workflow described here works with any MCP server implementation, whether you built it in Python, Node.js, or Go.
 
@@ -241,5 +241,12 @@ curl https://your-server.fly.dev/mcp
 ## Next Steps
 
 With your MCP server deployed on Fly.io, explore extending its capabilities. The pdf skill can process documents through your server, while the canvas-design skill might generate visual assets. Each skill you add creates new possibilities for what Claude Code can accomplish through your deployed endpoint.
+
+## Related Reading
+
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/articles/aws-mcp-server-cloud-automation-with-claude-code/)
+- [Claude Code for Fly.io Deployment Automation Workflow](/claude-skills-guide/articles/claude-code-for-fly-io-deployment-automation-workflow/)
+- [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

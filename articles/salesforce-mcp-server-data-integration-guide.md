@@ -12,7 +12,7 @@ score: 7
 
 # Salesforce MCP Server Data Integration Guide
 
-The Model Context Protocol (MCP) provides a standardized way to connect Claude Code with external data sources, and Salesforce integration is one of the most powerful use cases for enterprise workflows. This guide walks you through setting up a Salesforce MCP server, configuring authentication, and building practical data integration pipelines that sync records, automate data entry, and query complex relationships.
+[The Model Context Protocol (MCP) provides a standardized way to connect Claude Code with external data sources](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/), and Salesforce integration is one of the most powerful use cases for enterprise workflows. This guide walks you through setting up a Salesforce MCP server, configuring authentication, and building practical data integration pipelines that sync records, automate data entry, and query complex relationships.
 
 ## Setting Up Your Salesforce MCP Server
 
@@ -153,5 +153,12 @@ When deploying Salesforce MCP integrations to production, consider these recomme
 ## Conclusion
 
 Salesforce MCP server integration opens up powerful automation possibilities for developers building enterprise workflows. From simple query operations to complex multi-system syncs, the MCP approach provides a consistent, AI-friendly interface to your Salesforce data. Start with basic queries, then layer in automation and transformation logic as your integration matures.
+
+## Related Reading
+
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Jira MCP Server Claude Code Integration Guide](/claude-skills-guide/articles/jira-mcp-server-claude-code-integration-guide/)
+- [Claude Code Skills for Salesforce Apex Development](/claude-skills-guide/articles/claude-skills-for-salesforce-apex-development/)
+- [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

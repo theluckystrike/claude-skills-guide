@@ -12,7 +12,7 @@ score: 7
 
 # MCP Tool Description Injection Attack Explained
 
-The Model Context Protocol (MCP) has transformed how Claude Code interacts with external tools and services. However, this powerful extensibility comes with security considerations that developers must understand. One such vulnerability is the **tool description injection attack** — a technique where maliciously crafted tool descriptions can influence Claude's behavior in unexpected ways.
+[The Model Context Protocol (MCP) has transformed how Claude Code interacts with external tools](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) and services. However, this powerful extensibility comes with security considerations that developers must understand. One such vulnerability is the **tool description injection attack** — a technique where maliciously crafted tool descriptions can influence Claude's behavior in unexpected ways.
 
 ## What Is MCP and How Do Tool Descriptions Work?
 
@@ -24,7 +24,7 @@ When Claude decides to use a tool, it reads the tool's description to understand
 
 A tool description injection attack occurs when an adversary manipulates the description field of an MCP tool to cause Claude to perform unintended actions. The attack leverages Claude's reliance on tool descriptions as authoritative guidance.
 
-Consider this scenario: you install an MCP server that provides a tool for processing PDF documents. The skill system might include something like the `pdf` skill for handling PDF operations. However, if the MCP server's tool description contains malicious content, Claude might interpret those instructions as higher-priority guidance than your actual task.
+Consider this scenario: you install an MCP server that provides a tool for processing PDF documents. [the `pdf` skill for handling PDF operations](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/). However, if the MCP server's tool description contains malicious content, Claude might interpret those instructions as higher-priority guidance than your actual task.
 
 ### How the Injection Works
 
@@ -148,5 +148,12 @@ By understanding how these attacks work — through compromised MCP servers, mal
 As AI assistants become more integrated into development workflows, security awareness becomes everyone's responsibility. Stay vigilant, review your integrations, and build safely.
 
 ---
+
+## Related Reading
+
+- [MCP Prompt Injection Attack Prevention Guide](/claude-skills-guide/articles/mcp-prompt-injection-attack-prevention-guide/)
+- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
