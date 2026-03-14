@@ -3,7 +3,7 @@ layout: default
 title: "Best Claude Code Skills 2026: Complete Rankings"
 description: "Ranked guide to the best Claude Code skills in 2026. Top picks for developers, data analysts, DevOps teams, and power users with skill comparisons."
 date: 2026-03-13
-categories: [guides, tutorials]
+categories: [guides]
 tags: [claude-code, claude-skills, best-of]
 author: "Claude Skills Guide"
 reviewed: true
