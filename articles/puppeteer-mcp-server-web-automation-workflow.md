@@ -120,7 +120,7 @@ This pattern proves useful for scenarios requiring reference materials open simu
 
 ## Integrating with Claude Skills
 
-The Puppeteer MCP server works seamlessly with other Claude skills to create comprehensive automation pipelines. Combining browser automation with skills like `pdf` enables automated report generation from web-based dashboards.
+The Puppeteer MCP server connects with other Claude skills to create comprehensive automation pipelines. Combining browser automation with skills like `pdf` enables automated report generation from web-based dashboards.
 
 For example, you can capture dashboard screenshots and generate PDF reports in a single workflow:
 
