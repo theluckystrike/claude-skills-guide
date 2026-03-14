@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Building Your First MCP Tool Integration Guide 2026"
-description: "A practical guide to building your first MCP tool integration with Claude Code in 2026. Learn how to connect external tools, create custom skills, and automate workflows."
+description: "A practical guide to building your first MCP tool integration with Claude Code in 2026. Learn how to connect external tools, create custom skills, and."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, mcp, model-context-protocol, integration, automation]
@@ -268,3 +268,10 @@ Now that you've built your first MCP integration, explore these advanced topics:
 - **Multiple Servers**: Orchestrate multiple MCP servers for complex workflows
 
 The MCP ecosystem continues growing in 2026, with new servers appearing regularly. Check the official MCP registry for community-contributed integrations, or build your own to connect to internal systems specific to your organization.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

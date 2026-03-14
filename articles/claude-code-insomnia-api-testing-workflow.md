@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code Insomnia API Testing Workflow"
-description: "A practical guide to integrating Claude Code with Insomnia for efficient API testing workflows. Learn how to automate endpoints, generate test cases, and streamline your development process."
+description: "A practical guide to integrating Claude Code with Insomnia for efficient API testing workflows. Learn how to automate endpoints, generate test cases."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-insomnia-api-testing-workflow/
+categories: [guides]
 ---
 
 {% raw %}
@@ -75,6 +76,13 @@ Execute the collection to identify any issues. When failures occur, copy the err
 The combination of Claude Code and Insomnia transforms API testing from manual craftsmanship into an automated, maintainable process. By generating requests, creating validations, building test collections, and maintaining documentation, you reduce repetitive work while improving coverage. This workflow scales from individual development to team-wide implementation, supporting projects of varying complexity.
 
 As APIs grow in sophistication, having intelligent assistance becomes increasingly valuable. Claude's understanding of HTTP protocols, authentication patterns, and testing best practices makes it an ideal companion for Insomnia users seeking efficiency.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
