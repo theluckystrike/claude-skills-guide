@@ -10,6 +10,8 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
+
 
 
 # Claude Code GitBook Documentation Workflow
@@ -179,3 +181,4 @@ The key is starting simple: generate your first API docs automatically, validate
 - [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

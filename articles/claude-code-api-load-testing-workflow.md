@@ -6,6 +6,8 @@ date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-load-testing-workflow/
 ---
+{% raw %}
+
 
 # Claude Code API Load Testing Workflow
 
@@ -246,3 +248,4 @@ Build your tests around realistic user patterns, and you'll catch performance is
 - [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Integrate load tests into CI/CD pipelines
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

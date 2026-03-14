@@ -10,6 +10,8 @@ reviewed: true
 score: 8
 permalink: /claude-code-wiremock-api-mocking-guide/
 ---
+{% raw %}
+
 
 
 # Claude Code WireMock API Mocking Guide
@@ -221,3 +223,4 @@ WireMock transforms how you test HTTP-dependent code. By running a local mock se
 - [Claude Code Postman Collection Automation](/claude-skills-guide/claude-code-postman-collection-automation/) — Pair WireMock mocks with automated Postman collections for end-to-end API test coverage
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

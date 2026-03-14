@@ -10,6 +10,8 @@ reviewed: true
 score: 9
 permalink: /claude-code-design-patterns-refactoring-guide/
 ---
+{% raw %}
+
 
 # Claude Code Design Patterns Refactoring Guide
 
@@ -197,3 +199,4 @@ The result is skills that are easier to understand, test, and extend. Your futur
 - [Claude Code Coupling and Cohesion Improvement](/claude-skills-guide/claude-code-coupling-and-cohesion-improvement/) — Design patterns improve coupling/cohesion
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -10,6 +10,8 @@ reviewed: true
 score: 7
 permalink: /how-to-make-claude-code-generate-consistent-api-responses/
 ---
+{% raw %}
+
 
 
 # How to Make Claude Code Generate Consistent API Responses
@@ -184,3 +186,4 @@ Automate these tests in your CI pipeline to catch regressions immediately.
 - [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More Claude Code how-to guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

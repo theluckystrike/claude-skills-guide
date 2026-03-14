@@ -11,6 +11,8 @@ permalink: /claude-code-dependency-injection-refactoring/
 reviewed: true
 score: 7
 ---
+{% raw %}
+
 
 
 # Claude Code Dependency Injection Refactoring
@@ -161,3 +163,4 @@ Start with one skill pair that would benefit from separation, apply the patterns
 - [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — Tightly-coupled code is a common tech debt item
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

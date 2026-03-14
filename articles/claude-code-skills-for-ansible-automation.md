@@ -10,6 +10,8 @@ reviewed: true
 score: 7
 permalink: /claude-code-skills-for-ansible-automation/
 ---
+{% raw %}
+
 
 
 # Claude Code Skills for Ansible Automation
@@ -192,3 +194,4 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 - [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — design Ansible-focused skills with proper structure
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — integrate Ansible validation into automated CI/CD workflows
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for DevOps and infrastructure automation
+{% endraw %}

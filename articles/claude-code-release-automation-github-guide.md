@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
+{% raw %}
+
 
 
 
@@ -244,3 +246,4 @@ Claude Code combined with GitHub Actions creates a powerful release automation s
 - [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — CI/CD is part of the release pipeline
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

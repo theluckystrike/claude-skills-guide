@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
+{% raw %}
+
 
 
 # Claude Code Code Generation Templates Guide
@@ -223,3 +225,4 @@ Code generation templates in Claude Code eliminate repetitive coding tasks while
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More code generation and automation guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

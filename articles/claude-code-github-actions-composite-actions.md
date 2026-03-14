@@ -10,6 +10,8 @@ reviewed: true
 score: 7
 permalink: /claude-code-github-actions-composite-actions/
 ---
+{% raw %}
+
 
 
 # Claude Code GitHub Actions Composite Actions
@@ -215,3 +217,4 @@ Composite actions provide the building blocks for reusable Claude Code automatio
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

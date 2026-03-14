@@ -8,6 +8,8 @@ categories: [guides]
 tags: [claude-code, automation, documentation, readme, productivity]
 permalink: /claude-code-readme-generation-automation/
 ---
+{% raw %}
+
 
 # Claude Code README Generation Automation
 
@@ -200,3 +202,4 @@ The skills mentioned throughout this guide—frontend-design, tdd, supermemory, 
 - [Is Claude Code Worth It for Solo Developers and Freelancers](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/) — Documentation generation is where solo devs see big time savings
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

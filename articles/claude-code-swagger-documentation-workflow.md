@@ -10,6 +10,8 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
+
 
 
 # Claude Code Swagger Documentation Workflow
@@ -153,3 +155,4 @@ The key is treating documentation as code—version-controlled, tested, and auto
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

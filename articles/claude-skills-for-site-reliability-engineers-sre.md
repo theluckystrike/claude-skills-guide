@@ -10,6 +10,8 @@ reviewed: true
 score: 8
 permalink: /claude-skills-for-site-reliability-engineers-sre/
 ---
+{% raw %}
+
 
 
 # Claude Skills for Site Reliability Engineers SRE
@@ -207,3 +209,4 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrate AI-powered analysis into CI/CD pipelines for SRE quality gates
 - [Claude Code Skills for Infrastructure as Code Terraform](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — Manage SRE infrastructure with Terraform using Claude Code skills
 - [Claude Code Best-Of Skills Hub](/claude-skills-guide/best-of-hub/) — Discover the top Claude Code skills for infrastructure and reliability work
+{% endraw %}

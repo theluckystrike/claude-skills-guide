@@ -10,6 +10,8 @@ reviewed: true
 score: 7
 permalink: /datadog-mcp-server-monitoring-automation-claude/
 ---
+{% raw %}
+
 
 
 # Datadog MCP Server Monitoring Automation with Claude
@@ -134,3 +136,4 @@ The combination of Datadog's monitoring platform with MCP server automation crea
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

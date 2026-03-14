@@ -10,6 +10,8 @@ reviewed: true
 score: 7
 permalink: /claude-code-github-actions-approval-workflows/
 ---
+{% raw %}
+
 
 
 # Claude Code GitHub Actions Approval Workflows
@@ -264,3 +266,4 @@ The key is finding the right balance between security controls and developer vel
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
