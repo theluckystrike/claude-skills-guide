@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theluckystrike.github.io/claude-skills-guide/sitemap.xml
