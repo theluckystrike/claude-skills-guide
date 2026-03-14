@@ -18,7 +18,7 @@ iOS development with Swift requires handling complex architectures, extensive te
 
 Before integrating Claude into your iOS workflow, ensure your development environment is properly configured. You'll need Xcode installed along with the command-line tools. Claude Code works best when it can access your project structure, so keep your `.xcodeproj` and `.xcworkspace` files accessible.
 
-Initialize your iOS project using Xcode or the `flutter create` equivalent for Swift via the command line. When working with Swift packages, make sure your `Package.swift` files are visible to Claude for accurate dependency resolution.
+Initialize your iOS project using Xcode or `xcode-select --install` for command-line tools. When working with Swift packages, make sure your `Package.swift` files are visible to Claude for accurate dependency resolution.
 
 ## Available Skills for iOS Development
 
@@ -27,7 +27,6 @@ Claude Code ships with several built-in skills that enhance iOS development:
 - `/tdd` — test-driven development guidance
 - `/pdf` — document generation from code
 - `/docx` — documentation creation
-- `/xlsx` — spreadsheet operations for metrics
 - `/xlsx` — spreadsheet operations for metrics
 - `/pptx` — presentation generation
 - `/frontend-design` — UI component guidance (applies to SwiftUI)
