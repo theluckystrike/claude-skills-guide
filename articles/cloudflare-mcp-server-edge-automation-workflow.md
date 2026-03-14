@@ -5,7 +5,7 @@ description: "Learn how to automate Cloudflare edge deployments using the Model 
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, cloudflare, mcp, edge-computing, serverless, automation]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

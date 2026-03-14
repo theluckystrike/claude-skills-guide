@@ -4,7 +4,7 @@ title: "Fly.io MCP Server Deployment Workflow Guide"
 description: "A practical guide to deploying Model Context Protocol servers on Fly.io. Learn the deployment workflow, configuration, and automation with Claude skills."
 date: 2026-03-14
 categories: [guides]
-tags: [mcp, fly-io, deployment, docker, devops]
+tags: [claude-code, claude-skills, mcp, fly-io, deployment, docker, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7

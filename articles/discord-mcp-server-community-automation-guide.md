@@ -5,7 +5,7 @@ description: "Learn how to build Discord MCP server automation for community man
 date: 2026-03-14
 categories: [guides]
 tags: [discord, mcp, model-context-protocol, community, automation, bots]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
