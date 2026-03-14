@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Fan Out Fan In AI Agent Pattern Explained"
-description: "Learn how the fan-out fan-in pattern works in AI agent architectures, with practical examples using Claude Code skills and subagents for parallel processing."
+description: "Learn how the fan-out fan-in pattern works in AI agent architectures, with practical examples using Claude Code skills and subagents for parallel."
 date: 2026-03-14
 author: theluckystrike
 permalink: /fan-out-fan-in-ai-agent-pattern-explained/
+categories: [guides]
 ---
 
 # Fan Out Fan In AI Agent Pattern Explained
@@ -108,3 +109,10 @@ Implement unique identifiers for each subagent execution. Log start times, compl
 The fan-out fan-in pattern transforms Claude Code from a sequential task executor into a parallel processing powerhouse. By understanding when to decompose tasks, how to orchestrate subagents effectively, and what pitfalls to avoid, you can build automation workflows that handle complex, multi-faceted tasks with dramatically improved performance.
 
 Whether you're analyzing multiple codebases, generating documentation in parallel, or processing large datasets across independent chunks, Claude Code's subagent architecture provides the foundation for scalable, efficient AI agent workflows. Start small with a few parallel agents, measure the performance gains, and scale up as your confidence and infrastructure allow.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

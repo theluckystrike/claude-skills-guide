@@ -5,6 +5,7 @@ description: "A comprehensive review of Aider AI pair programming tool in 2026, 
 date: 2026-03-14
 author: theluckystrike
 permalink: /aider-ai-pair-programming-review-2026-honest-take/
+categories: [guides]
 ---
 
 # Aider AI Pair Programming Review 2026: An Honest Take
@@ -96,3 +97,10 @@ The honest take? Aider is a competent tool for basic AI-assisted coding, but Cla
 ---
 
 **Bottom Line:** If you're already invested in a terminal-based workflow and need simple code editing with git integration, Aider works. If you want a more capable, extensible AI development partner, Claude Code delivers significantly more value.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

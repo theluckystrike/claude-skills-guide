@@ -5,6 +5,7 @@ description: "Discover how Claude Code transforms enterprise code review workflo
 date: 2026-03-14
 author: theluckystrike
 permalink: /augment-code-ai-review-for-enterprise-teams-2026/
+categories: [guides]
 ---
 
 {% raw %}
@@ -220,3 +221,10 @@ As enterprise development continues to scale, AI-augmented review becomes not ju
 
 Start small, measure impact, and iterate. Your teams will thank you for the faster feedback, clearer guidance, and improved code quality.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

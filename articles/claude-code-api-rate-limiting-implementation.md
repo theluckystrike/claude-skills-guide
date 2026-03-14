@@ -200,4 +200,11 @@ Run these tests as part of your skill's continuous integration pipeline.
 
 Rate limiting protects your Claude Code integrations from unexpected costs and ensures reliable performance. Start with token bucket implementation, add per-user isolation for multi-user scenarios, and graduate to distributed limiting only when running multi-server deployments. Handle rate limit errors gracefully with proper retry logic, and always test your implementation under load before production deployment.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
