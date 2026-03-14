@@ -12,11 +12,11 @@ score: 7
 
 # Advanced Claude Skills with Tool Use and Function Calling
 
-[Claude's tool use capabilities transform skills from prompt-only text generators into agents](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) that can read files, execute code, call APIs, and take real actions in your development environment. This guide covers the advanced patterns for designing skills that use tools precisely and reliably.
+[Claude's tool use capabilities transform skills from prompt-only text generators into agents](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) that can read files, execute code, call APIs, and take real actions in your development environment. This guide covers the advanced patterns for designing skills that use tools precisely and reliably.
 
 ## How Tools Work Within Skills
 
-[When a skill is invoked, it operates within a specific tool context](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) That context determines:
+[When a skill is invoked, it operates within a specific tool context](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) That context determines:
 
 1. Which tools are available (from the skill's `tools` front matter field)
 2. How tool calls are logged and intercepted (via hooks)

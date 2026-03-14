@@ -12,11 +12,11 @@ score: 8
 
 # Best Claude Skills for Developers in 2026
 
-[Claude Code ships with a set of specialized skills](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) that cover document processing, testing, UI design, memory management, and frontend verification. Here are the ones worth adding to your workflow in 2026.
+[Claude Code ships with a set of specialized skills](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) that cover document processing, testing, UI design, memory management, and frontend verification. Here are the ones worth adding to your workflow in 2026.
 
 ## Document Processing with the PDF Skill
 
-[The **pdf** skill has become indispensable for developers](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) handling documentation, invoices, and technical specifications. Rather than manually extracting text from PDFs or struggling with formatting issues, you can automate entire document workflows.
+[The **pdf** skill has become indispensable for developers](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) handling documentation, invoices, and technical specifications. Rather than manually extracting text from PDFs or struggling with formatting issues, you can automate entire document workflows.
 
 ```
 /pdf extract the API endpoint table from pages 8-12 of api-spec.pdf

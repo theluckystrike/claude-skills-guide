@@ -12,7 +12,7 @@ score: 7
 
 # Claude Code Actix Web Rust API Guide
 
-[Actix Web remains one of the most performant web frameworks in the Rust ecosystem](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code's AI capabilities, you can rapidly prototype, develop, and test REST APIs while leveraging Rust's memory safety guarantees. This guide covers building practical APIs using Claude Code sessions and relevant skills.
+[Actix Web remains one of the most performant web frameworks in the Rust ecosystem](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code's AI capabilities, you can rapidly prototype, develop, and test REST APIs while leveraging Rust's memory safety guarantees. This guide covers building practical APIs using Claude Code sessions and relevant skills.
 
 ## Setting Up Your Rust API Project
 

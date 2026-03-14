@@ -187,9 +187,9 @@ Start with simple automations like incident acknowledgment and resolution notes,
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [Datadog MCP Server Monitoring Automation with Claude](/claude-skills-guide/articles/datadog-mcp-server-monitoring-automation-claude/)
-- [MCP Server Logging Audit Trail Security Guide](/claude-skills-guide/articles/mcp-server-logging-audit-trail-security-guide/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Datadog MCP Server Monitoring Automation with Claude](/claude-skills-guide/datadog-mcp-server-monitoring-automation-claude/)
+- [MCP Server Logging Audit Trail Security Guide](/claude-skills-guide/mcp-server-logging-audit-trail-security-guide/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

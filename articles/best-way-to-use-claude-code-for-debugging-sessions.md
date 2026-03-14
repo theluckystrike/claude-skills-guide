@@ -12,11 +12,11 @@ score: 8
 
 # Best Way to Use Claude Code for Debugging Sessions
 
-[Debugging remains one of the most time-intensive tasks in software development](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Claude Code offers a powerful alternative to traditional debugging workflows—providing an intelligent partner that can analyze error messages, trace through code paths, and suggest fixes in real time. Here is how to get the most out of Claude Code during debugging sessions.
+[Debugging remains one of the most time-intensive tasks in software development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code offers a powerful alternative to traditional debugging workflows—providing an intelligent partner that can analyze error messages, trace through code paths, and suggest fixes in real time. Here is how to get the most out of Claude Code during debugging sessions.
 
 ## Setting Up Debugging Sessions Effectively
 
-[The key to effective debugging with Claude Code lies in how you structure your initial request](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) Rather than pasting a massive error dump, provide context that helps Claude understand your codebase and environment.
+[The key to effective debugging with Claude Code lies in how you structure your initial request](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) Rather than pasting a massive error dump, provide context that helps Claude understand your codebase and environment.
 
 Start with a structured prompt that includes three components: what you expected to happen, what actually happened, and the relevant code or error context. For example:
 

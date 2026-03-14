@@ -12,11 +12,11 @@ score: 8
 
 # Best Claude Code Skills for Frontend Development
 
-[Claude Code has several skills that cut time on repetitive frontend tasks](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/): generating components, writing tests first, producing documentation, and visualizing data. Invoke each with `/skill-name` directly in Claude Code. Here are the ones worth using.
+[Claude Code has several skills that cut time on repetitive frontend tasks](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/): generating components, writing tests first, producing documentation, and visualizing data. Invoke each with `/skill-name` directly in Claude Code. Here are the ones worth using.
 
 ## frontend-design: Rapid UI Implementation
 
-[The **frontend-design** skill helps you translate design concepts into functional code](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When you have a mockup or a clear visual description, this skill generates component structures, suggests styling approaches, and creates responsive layouts.
+[The **frontend-design** skill helps you translate design concepts into functional code](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you have a mockup or a clear visual description, this skill generates component structures, suggests styling approaches, and creates responsive layouts.
 
 ```bash
 # Example: Generate a card component from a description

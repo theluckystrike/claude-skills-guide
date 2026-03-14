@@ -18,7 +18,7 @@ If you've been exploring Claude Code to automate your development workflows, you
 
 Claude Code skills operate within the Claude Code environment, which has built-in capabilities for making HTTP requests. [When you create a skill that needs to interact](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) with external services—whether it's fetching data from a REST API, sending notifications to Slack, or querying a database—the skill can use tools and commands to execute these calls.
 
-[The key mechanism involves using the `http` or `curl` commands directly within your skill's instructions](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), or by using MCP (Model Context Protocol) servers that provide API connectivity. For example, a skill designed to interact with GitHub's API can automatically create issues, pull requests, or search repositories without requiring manual intervention.
+[The key mechanism involves using the `http` or `curl` commands directly within your skill's instructions](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), or by using MCP (Model Context Protocol) servers that provide API connectivity. For example, a skill designed to interact with GitHub's API can automatically create issues, pull requests, or search repositories without requiring manual intervention.
 
 Here's a basic example of how a skill might call an external API:
 

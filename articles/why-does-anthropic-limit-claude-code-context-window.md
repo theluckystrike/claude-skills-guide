@@ -74,7 +74,7 @@ When working with large codebases, resist the temptation to dump entire director
 "Focus on the authentication module in /src/auth/"
 ```
 
-### Leverage File-Specific Context
+### Use File-Specific Context
 
 Claude Code excels when you provide targeted file context rather than broad project overviews. Use the `@filename` syntax to include specific files directly in your prompts. This approach gives Claude exactly the information it needs without overwhelming the context window.
 

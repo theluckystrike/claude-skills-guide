@@ -12,11 +12,11 @@ score: 8
 
 # Claude Code CSP Content Security Policy Generation Guide
 
-[Content Security Policy (CSP) is one of the most effective defenses](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) against cross-site scripting (XSS) attacks and data injection vulnerabilities. When properly implemented, CSP tells browsers exactly which resources are allowed to load on your page, blocking malicious scripts from executing. This guide shows you how to use Claude Code to generate, validate, and maintain CSP headers for your projects.
+[Content Security Policy (CSP) is one of the most effective defenses](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) against cross-site scripting (XSS) attacks and data injection vulnerabilities. When properly implemented, CSP tells browsers exactly which resources are allowed to load on your page, blocking malicious scripts from executing. This guide shows you how to use Claude Code to generate, validate, and maintain CSP headers for your projects.
 
 ## Why Content Security Policy Matters
 
-[Modern web applications load resources from multiple sources](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/): your own servers, third-party APIs, content delivery networks, analytics tools, and embedded widgets. Each of these represents a potential attack vector. Without a CSP, browsers execute any script that arrives alongside your HTML, leaving users vulnerable to credential theft, session hijacking, and malware distribution.
+[Modern web applications load resources from multiple sources](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/): your own servers, third-party APIs, content delivery networks, analytics tools, and embedded widgets. Each of these represents a potential attack vector. Without a CSP, browsers execute any script that arrives alongside your HTML, leaving users vulnerable to credential theft, session hijacking, and malware distribution.
 
 A well-configured CSP reduces your attack surface significantly. According to the OWASP Foundation, proper CSP implementation can prevent up to 90% of cross-site scripting attacks. The challenge is that CSP can be complex to configure correctly—too restrictive and your application breaks, too permissive and you gain little security benefit.
 

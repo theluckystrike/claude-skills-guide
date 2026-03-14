@@ -12,9 +12,9 @@ score: 8
 
 # Claude Code Express Middleware Error Handling Patterns Guide
 
-[Building reliable Express applications requires solid error handling strategies](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) Whether you're building APIs or full-stack applications with Claude Code, understanding middleware error handling patterns prevents unexpected crashes and provides meaningful feedback to users.
+[Building reliable Express applications requires solid error handling strategies](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) Whether you're building APIs or full-stack applications with Claude Code, understanding middleware error handling patterns prevents unexpected crashes and provides meaningful feedback to users.
 
-This guide covers practical Express middleware error handling patterns that [work cleanly with Claude Code workflows](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/). You'll find code examples compatible with Express 4.x and 5.x, plus tips on integrating these patterns into your development process.
+This guide covers practical Express middleware error handling patterns that [work cleanly with Claude Code workflows](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/). You'll find code examples compatible with Express 4.x and 5.x, plus tips on integrating these patterns into your development process.
 
 ## The Basics: Express Error Handling Middleware
 

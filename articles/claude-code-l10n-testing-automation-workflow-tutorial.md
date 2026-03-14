@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Claude Code L10n Testing Automation Workflow Tutorial
 
@@ -260,3 +261,4 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
+{% endraw %}

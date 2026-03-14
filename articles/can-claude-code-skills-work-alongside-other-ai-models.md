@@ -18,13 +18,13 @@ score: 9
 
 [Claude Code skills live in your `~/claude/skills/` directory as Markdown files with YAML front matter](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Each skill defines a system prompt that shapes Claude's behavior when you invoke it with `/skill-name`. This architecture is intentionally lightweight—no API keys, no server configuration, no vendor lock-in.
 
-[The key insight is that skills operate at the prompt layer](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) They don't compete with other AI models; they collaborate with them. When you invoke a skill, Claude reads your local files, understands your project structure, and executes within your development environment. Other AI tools continue serving their roles in your pipeline.
+[The key insight is that skills operate at the prompt layer](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) They don't compete with other AI models; they collaborate with them. When you invoke a skill, Claude reads your local files, understands your project structure, and executes within your development environment. Other AI tools continue serving their roles in your pipeline.
 
 ## Practical Integration Patterns
 
 ### Parallel AI Usage
 
-[Use Claude skills for tasks where they excel while running other AI models simultaneously](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/):
+[Use Claude skills for tasks where they excel while running other AI models simultaneously](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/):
 
 ```bash
 # Run Claude Code - invoke /pdf skill interactively in a Claude Code session

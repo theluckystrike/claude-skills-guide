@@ -16,13 +16,13 @@ Claude skills excel at specialized tasks, but complex projects often require mul
 
 ## Why Combine Skills in a Single Project
 
-[Each Claude skill brings a focused capability](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)—one might handle test generation, another could manage documentation, and a third might optimize performance. When you combine these skills within one project, you eliminate context switching and create coherent pipelines that handle multi-step processes automatically.
+[Each Claude skill brings a focused capability](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)—one might handle test generation, another could manage documentation, and a third might optimize performance. When you combine these skills within one project, you eliminate context switching and create coherent pipelines that handle multi-step processes automatically.
 
 The benefits extend beyond convenience. A combined skill workflow ensures consistency across different aspects of your project. The documentation skill understands what the test skill just generated, and the performance skill knows the refactoring changes made by the optimization skill. This contextual awareness produces better results than using skills in isolation.
 
 ## Project-Level Skill Architecture
 
-Before combining skills, establish a clear project structure. [Place your skills in the `.claude/skills/` directory at your project root](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), or use a centralized skills folder if multiple projects share them.
+Before combining skills, establish a clear project structure. [Place your skills in the `.claude/skills/` directory at your project root](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), or use a centralized skills folder if multiple projects share them.
 
 ```
 my-project/
@@ -234,9 +234,9 @@ The best results come from skills that complement each other well. A TDD skill p
 
 ## Related Reading
 
-- [How Do I Combine Two Claude Skills in One Workflow](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/)
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [How Do I Combine Two Claude Skills in One Workflow](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

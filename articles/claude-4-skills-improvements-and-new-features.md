@@ -12,7 +12,7 @@ score: 8
 
 # Claude 4 Skills Improvements and New Features
 
-[Claude 4 brought meaningful improvements to the existing skills system](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) If you've been using Claude Code skills for development workflows, here's what changed and how to take advantage of it.
+[Claude 4 brought meaningful improvements to the existing skills system](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) If you've been using Claude Code skills for development workflows, here's what changed and how to take advantage of it.
 
 ## Enhanced PDF Processing
 
@@ -24,7 +24,7 @@ Batch processing capability was added in this version:
 /pdf process all PDFs in invoices/ and extract the total, vendor name, and invoice date from each. Output as a CSV table.
 ```
 
-Previously, you'd handle each document individually. [The skill now handles the iteration internally](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), which reduces session length and token cost for document-heavy workflows.
+Previously, you'd handle each document individually. [The skill now handles the iteration internally](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), which reduces session length and token cost for document-heavy workflows.
 
 For complex layouts that previously produced garbled extraction:
 

@@ -18,7 +18,7 @@ Integrating Brave Search with Claude Code through MCP servers opens up powerful 
 
 Brave Search provides an API that works exceptionally well for programmatic queries. Unlike traditional search APIs that throttle requests or require complex OAuth flows, Brave offers straightforward API key authentication with generous rate limits. This makes it ideal for building research automation pipelines.
 
-The search results include web results, news, and images, all accessible through a clean REST API. When combined with Claude Code's natural language processing, you can query research topics and have Claude summarize, analyze, or synthesize the findings automatically. For a broader look at how MCP servers compare to native Claude skills, see [MCP servers vs. Claude skills explained](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/).
+The search results include web results, news, and images, all accessible through a clean REST API. When combined with Claude Code's natural language processing, you can query research topics and have Claude summarize, analyze, or synthesize the findings automatically. For a broader look at how MCP servers compare to native Claude skills, see [MCP servers vs. Claude skills explained](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/).
 
 ## Setting Up Your Brave Search API Key
 
@@ -28,7 +28,7 @@ Before building the MCP server, obtain your Brave Search API key:
 2. Navigate to the API keys section and generate a new key
 3. Copy the key—you'll need it for configuration
 
-Store this key securely. Never commit it to version control. The [MCP credential management guide](/claude-skills-guide/articles/mcp-credential-management-and-secrets-handling/) covers best practices for handling API keys across environments. Use environment variables or a secrets manager:
+Store this key securely. Never commit it to version control. The [MCP credential management guide](/claude-skills-guide/mcp-credential-management-and-secrets-handling/) covers best practices for handling API keys across environments. Use environment variables or a secrets manager:
 
 ```bash
 export BRAVE_SEARCH_API_KEY="your_api_key_here"
@@ -191,7 +191,7 @@ The workflow queries Brave, retrieves URLs and abstracts, then Claude can either
 
 ### Competitive Analysis Automation
 
-Use the supermemory skill to store research findings persistently, then query Brave Search for competitive intelligence. The [competitive analysis automation workflow](/claude-skills-guide/articles/claude-skills-competitive-analysis-automation-workflow/) shows how to structure multi-source research pipelines:
+Use the supermemory skill to store research findings persistently, then query Brave Search for competitive intelligence. The [competitive analysis automation workflow](/claude-skills-guide/claude-skills-competitive-analysis-automation-workflow/) shows how to structure multi-source research pipelines:
 
 ```plaintext
 Search Brave for competitor news about "AI coding assistants" from the last 30 days. Store the findings in supermemory for the competitive analysis project.
@@ -211,7 +211,7 @@ The search results provide context, while Claude applies that knowledge to your 
 
 ## Advanced: Multi-Step Research Pipelines
 
-For complex research tasks, create a [Claude skill](/claude-skills-guide/articles/advanced-hub/) that orchestrates multiple searches. Here's a pattern for comprehensive research:
+For complex research tasks, create a [Claude skill](/claude-skills-guide/advanced-hub/) that orchestrates multiple searches. Here's a pattern for comprehensive research:
 
 ```javascript
 // research-pipeline.md
@@ -267,9 +267,9 @@ Brave Search MCP server integration enables powerful research automation within 
 
 ## Related Reading
 
-- [MCP Credential Management and Secrets Handling](/claude-skills-guide/articles/mcp-credential-management-and-secrets-handling/) — Secure API keys for your MCP server integrations
-- [MCP Servers vs. Claude Skills: What Is the Difference](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand when to use each approach
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) — Configure MCP servers from scratch
-- [Competitive Analysis Automation Workflow](/claude-skills-guide/articles/claude-skills-competitive-analysis-automation-workflow/) — Build multi-source research pipelines
+- [MCP Credential Management and Secrets Handling](/claude-skills-guide/mcp-credential-management-and-secrets-handling/) — Secure API keys for your MCP server integrations
+- [MCP Servers vs. Claude Skills: What Is the Difference](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand when to use each approach
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — Configure MCP servers from scratch
+- [Competitive Analysis Automation Workflow](/claude-skills-guide/claude-skills-competitive-analysis-automation-workflow/) — Build multi-source research pipelines
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

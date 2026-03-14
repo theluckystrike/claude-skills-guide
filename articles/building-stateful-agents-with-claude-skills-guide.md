@@ -12,11 +12,11 @@ score: 8
 
 # Building Stateful Agents with Claude Skills
 
-[Claude Code is stateless by default. Each session starts fresh](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), and within a session, each tool call is independent. But real-world agents need to track progress, remember past decisions, and resume interrupted work. This guide shows you how to build genuinely stateful agents using Claude skills.
+[Claude Code is stateless by default. Each session starts fresh](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), and within a session, each tool call is independent. But real-world agents need to track progress, remember past decisions, and resume interrupted work. This guide shows you how to build genuinely stateful agents using Claude skills.
 
 ## What Stateful Means for AI Agents
 
-[A stateful agent can answer these questions reliably](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/):
+[A stateful agent can answer these questions reliably](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/):
 - What have I done so far in this task?
 - What do I need to do next?
 - What decisions did I make and why?

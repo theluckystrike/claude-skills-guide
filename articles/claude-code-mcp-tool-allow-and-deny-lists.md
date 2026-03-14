@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code MCP Tool Allow and Deny Lists
 
-[The Model Context Protocol (MCP) serves as the backbone for extending Claude Code's capabilities](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) through external tools and services. When you connect MCP servers to Claude Code, you gain access to a wide array of tools—from file system operations to database queries. However, with great power comes the need for careful access control. This is where tool allow and deny lists become essential for developers and power users who need granular control over their AI assistant's capabilities.
+[The Model Context Protocol (MCP) serves as the backbone for extending Claude Code's capabilities](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) through external tools and services. When you connect MCP servers to Claude Code, you gain access to a wide array of tools—from file system operations to database queries. However, with great power comes the need for careful access control. This is where tool allow and deny lists become essential for developers and power users who need granular control over their AI assistant's capabilities.
 
 ## Understanding MCP Tool Access Control
 
@@ -20,7 +20,7 @@ MCP tool allow and deny lists provide a mechanism to filter which tools are avai
 
 This feature becomes particularly valuable in enterprise environments where security compliance requires limiting tool access, or when working with MCP servers that expose many tools but you only need a subset for your current task.
 
-For example, [when using the `pdf` skill to work with PDF documents](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), you might only need read and extraction capabilities rather than full document generation. Similarly, when using the `xlsx` skill for spreadsheet operations, you might want to restrict access to file deletion operations while allowing read, write, and formula operations.
+For example, [when using the `pdf` skill to work with PDF documents](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), you might only need read and extraction capabilities rather than full document generation. Similarly, when using the `xlsx` skill for spreadsheet operations, you might want to restrict access to file deletion operations while allowing read, write, and formula operations.
 
 ## Configuring Allow Lists
 
@@ -149,9 +149,9 @@ When tools you previously used suddenly become unavailable, you may have acciden
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/)
-- [Claude Code Skill Permission Scope Error Explained](/claude-skills-guide/articles/claude-code-skill-permission-scope-error-explained/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
+- [Claude Code Skill Permission Scope Error Explained](/claude-skills-guide/claude-code-skill-permission-scope-error-explained/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

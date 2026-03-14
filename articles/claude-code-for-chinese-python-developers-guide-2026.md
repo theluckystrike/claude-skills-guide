@@ -12,11 +12,11 @@ score: 7
 
 # Claude Code for Chinese Python Developers Guide (2026)
 
-[Chinese Python developers are increasingly adopting Claude Code as their primary AI coding assistant](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) This guide covers practical setup steps, essential Claude skills, and workflow patterns that work well for Python development in 2026.
+[Chinese Python developers are increasingly adopting Claude Code as their primary AI coding assistant](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This guide covers practical setup steps, essential Claude skills, and workflow patterns that work well for Python development in 2026.
 
 ## Claude Code Setup for Python Projects
 
-[Claude Code runs locally and integrates with your existing development environment](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) First, install it via the official Anthropic channels, then configure it for Python development.
+[Claude Code runs locally and integrates with your existing development environment](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) First, install it via the official Anthropic channels, then configure it for Python development.
 
 The configuration lives in `~/.claude/settings.json`. For Python projects, a practical configuration looks like:
 

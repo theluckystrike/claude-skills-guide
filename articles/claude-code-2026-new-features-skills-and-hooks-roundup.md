@@ -12,9 +12,9 @@ score: 8
 
 # Claude Code 2026 New Features: Skills and Hooks Roundup
 
-Claude Code has expanded significantly in 2026. [The skills ecosystem now covers over fifty specialized capabilities](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), and the hook system gives developers structured control over when and how Claude acts. This roundup covers the most impactful additions.
+Claude Code has expanded significantly in 2026. [The skills ecosystem now covers over fifty specialized capabilities](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), and the hook system gives developers structured control over when and how Claude acts. This roundup covers the most impactful additions.
 
-[Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) Hooks are shell commands configured in `~/.claude/settings.json` that fire before and after Claude's actions.
+[Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Hooks are shell commands configured in `~/.claude/settings.json` that fire before and after Claude's actions.
 
 ## PDF Processing with the pdf Skill
 

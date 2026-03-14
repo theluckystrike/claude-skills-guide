@@ -12,7 +12,7 @@ score: 7
 
 # Fixing Claude Code npm install Errors in Skill Workflows
 
-[When working with Claude Code skills, you may encounter npm install failures](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) that prevent skill execution. This guide covers common causes and practical solutions for resolving these errors in skill workflows.
+[When working with Claude Code skills, you may encounter npm install failures](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) that prevent skill execution. This guide covers common causes and practical solutions for resolving these errors in skill workflows.
 
 ## Understanding the Error
 

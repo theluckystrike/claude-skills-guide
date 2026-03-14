@@ -12,13 +12,13 @@ score: 7
 
 # Kubernetes MCP Server Cluster Management Guide
 
-Managing Kubernetes clusters at scale presents significant challenges for development teams. From monitoring pod health to automating deployments, the operational overhead can quickly become overwhelming. [Model Context Protocol (MCP) servers can bridge Claude and your Kubernetes cluster](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)rotocol (MCP) servers provide a powerful solution for extending Claude's capabilities into your cluster management workflows, enabling intelligent automation and real-time cluster interaction.
+Managing Kubernetes clusters at scale presents significant challenges for development teams. From monitoring pod health to automating deployments, the operational overhead can quickly become overwhelming. [Model Context Protocol (MCP) servers can bridge Claude and your Kubernetes cluster](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)rotocol (MCP) servers provide a powerful solution for extending Claude's capabilities into your cluster management workflows, enabling intelligent automation and real-time cluster interaction.
 
 This guide covers practical approaches to integrating MCP servers with Kubernetes, with code examples you can apply immediately to your own infrastructure.
 
 ## Setting Up Your First Kubernetes MCP Server Connection
 
-[establishing a secure connection between Claude and your Kubernetes cluster](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/) between Claude and your Kubernetes cluster. Most teams use the official Kubernetes MCP server, which authenticates using your existing `~/.kube/config` context.
+[establishing a secure connection between Claude and your Kubernetes cluster](/claude-skills-guide/securing-mcp-servers-in-production-environments/) between Claude and your Kubernetes cluster. Most teams use the official Kubernetes MCP server, which authenticates using your existing `~/.kube/config` context.
 
 ```bash
 # Install the Kubernetes MCP server
@@ -171,9 +171,9 @@ The investment in setting up these connections pays dividends through reduced co
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/articles/aws-mcp-server-cloud-automation-with-claude-code/)
-- [Securing MCP Servers in Production Environments](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

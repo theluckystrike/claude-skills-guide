@@ -12,13 +12,13 @@ score: 8
 
 # Vibe Coding Project Structure Best Practices
 
-[When you are vibe coding—building software with AI assistance at high speed](/claude-skills-guide/articles/vibe-coding-explained-what-it-is-and-how-it-works/)—the project structure you choose directly impacts your velocity. A well-organized codebase helps Claude understand your architecture, enables faster iterations, and reduces the friction that slows down AI-human collaboration. This guide covers the project structure patterns that experienced vibe coders use to ship faster while maintaining code quality.
+[When you are vibe coding—building software with AI assistance at high speed](/claude-skills-guide/vibe-coding-explained-what-it-is-and-how-it-works/)—the project structure you choose directly impacts your velocity. A well-organized codebase helps Claude understand your architecture, enables faster iterations, and reduces the friction that slows down AI-human collaboration. This guide covers the project structure patterns that experienced vibe coders use to ship faster while maintaining code quality.
 
 ## Why Project Structure Matters in Vibe Coding
 
 In traditional development, you might spend time planning your directory hierarchy. In vibe coding, the AI needs clear signals about where files live, what dependencies connect them, and how components relate to each other. When your structure is ambiguous, Claude spends cycles guessing rather than writing code.
 
-[A good vibe coding structure follows three principles: convention over configuration](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/): **convention over configuration**, **explicit over implicit**, and **sensible defaults**. Developers who master these patterns report faster iteration cycles and fewer context-switching errors when collaborating with AI assistants.
+[A good vibe coding structure follows three principles: convention over configuration](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/): **convention over configuration**, **explicit over implicit**, and **sensible defaults**. Developers who master these patterns report faster iteration cycles and fewer context-switching errors when collaborating with AI assistants.
 
 ## Recommended Directory Layouts
 
@@ -171,9 +171,9 @@ The key insight: structure serves communication. Every decision about file organ
 
 ## Related Reading
 
-- [Vibe Coding Explained: What It Is and How It Works](/claude-skills-guide/articles/vibe-coding-explained-what-it-is-and-how-it-works/)
-- [Vibe Coding Productivity Tips and Best Practices](/claude-skills-guide/articles/vibe-coding-productivity-tips-and-best-practices/)
-- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/articles/vibe-coding-with-claude-code-complete-guide-2026/)
+- [Vibe Coding Explained: What It Is and How It Works](/claude-skills-guide/vibe-coding-explained-what-it-is-and-how-it-works/)
+- [Vibe Coding Productivity Tips and Best Practices](/claude-skills-guide/vibe-coding-productivity-tips-and-best-practices/)
+- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/vibe-coding-with-claude-code-complete-guide-2026/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

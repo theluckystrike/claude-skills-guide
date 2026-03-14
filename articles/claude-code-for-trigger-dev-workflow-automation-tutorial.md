@@ -28,7 +28,7 @@ With your project ready, invoke Claude Code and load relevant skills for this wo
 
 ## Automating Workflow Creation
 
-[When building Trigger.dev workflows, you'll often create similar patterns: triggers, jobs, and error handlers](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Claude Code can generate boilerplate faster than manually typing each file.
+[When building Trigger.dev workflows, you'll often create similar patterns: triggers, jobs, and error handlers](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code can generate boilerplate faster than manually typing each file.
 
 ### Example: Generating a GitHub Webhook Workflow
 
@@ -83,7 +83,7 @@ description: Generates Trigger.dev workflow boilerplate
 
 # Trigger.dev Workflow Generator
 
-[You help developers create Trigger.dev workflows quickly](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). When asked to generate a workflow, produce complete, type-safe code that follows these patterns:
+[You help developers create Trigger.dev workflows quickly](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). When asked to generate a workflow, produce complete, type-safe code that follows these patterns:
 
 1. Import from @trigger.dev/react or @trigger.dev/github
 2. Use eventTrigger or webhookTrigger appropriately

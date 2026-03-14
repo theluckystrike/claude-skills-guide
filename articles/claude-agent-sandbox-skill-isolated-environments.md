@@ -12,7 +12,7 @@ score: 9
 
 # Claude Agent Sandbox Skill: Isolated Environments Explained
 
-[When you run AI agents in production workflows, security and isolation become critical](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/) concerns. The `agent` skill in Claude Code includes sandboxing capabilities that create boundaries between the AI's operations and your actual filesystem, network, and credentials.
+[When you run AI agents in production workflows, security and isolation become critical](/claude-skills-guide/securing-mcp-servers-in-production-environments/) concerns. The `agent` skill in Claude Code includes sandboxing capabilities that create boundaries between the AI's operations and your actual filesystem, network, and credentials.
 
 [Skills are `.md` files in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). The `agent` skill is invoked like any other:
 
@@ -20,7 +20,7 @@ score: 9
 /agent refactor the authentication module in src/auth/ — do not touch anything outside that directory
 ```
 
-[The sandbox behavior defines what that agent can and cannot do](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) when Claude executes bash commands or file operations in response to the task.
+[The sandbox behavior defines what that agent can and cannot do](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) when Claude executes bash commands or file operations in response to the task.
 
 ## What Sandbox Isolation Does
 

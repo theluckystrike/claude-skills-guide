@@ -12,13 +12,13 @@ score: 9
 
 # Best Claude Skills for Solo Developers and Freelancers
 
-[Solo developers and freelancers wear every hat](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Claude Code skills let you punch above your weight on documentation, testing, design, and client deliverables without switching tools constantly. These are the most useful ones.
+[Solo developers and freelancers wear every hat](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code skills let you punch above your weight on documentation, testing, design, and client deliverables without switching tools constantly. These are the most useful ones.
 
 ## Streamlined Documentation with the PDF Skill
 
 Handling client deliverables, invoices, and technical documentation is part of every freelance project. The [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) transforms how you process these documents programmatically.
 
-Consider a scenario where [you need to extract data from client-provided specifications](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/):
+Consider a scenario where [you need to extract data from client-provided specifications](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/):
 
 ```python
 # Automating specification extraction with the pdf skill

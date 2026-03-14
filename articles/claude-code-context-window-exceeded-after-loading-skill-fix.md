@@ -16,9 +16,9 @@ When you load multiple Claude skills and suddenly hit the dreaded "context windo
 
 ## Understanding the Context Window Limit
 
-[Claude Code operates within a finite context window](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/)—typically 200K tokens for Claude 3.5 Sonnet and up to 1M tokens for Claude 3 Opus. Every skill you load consumes tokens from this window through its system prompt, metadata, and any loaded documentation. When multiple skills are active, the combined overhead quickly adds up.
+[Claude Code operates within a finite context window](/claude-skills-guide/claude-skills-context-window-management-best-practices/)—typically 200K tokens for Claude 3.5 Sonnet and up to 1M tokens for Claude 3 Opus. Every skill you load consumes tokens from this window through its system prompt, metadata, and any loaded documentation. When multiple skills are active, the combined overhead quickly adds up.
 
-[Each skill contributes roughly 500-3000 tokens depending on its complexity](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) Load five skills simultaneously, and you've already used 15,000 tokens just for skill definitions—before any of your actual code or conversation.
+[Each skill contributes roughly 500-3000 tokens depending on its complexity](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Load five skills simultaneously, and you've already used 15,000 tokens just for skill definitions—before any of your actual code or conversation.
 
 ## Why Skills Push You Over the Limit
 

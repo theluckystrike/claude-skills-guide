@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code for Turso SQLite Edge Database Tutorial
 
-[Turso provides a distributed SQLite database optimized for edge computing](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code, you get an AI-assisted workflow for building applications that need low-latency data access worldwide. This tutorial covers setting up Turso, connecting it to your project, and using Claude's capabilities to accelerate development.
+[Turso provides a distributed SQLite database optimized for edge computing](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code, you get an AI-assisted workflow for building applications that need low-latency data access worldwide. This tutorial covers setting up Turso, connecting it to your project, and using Claude's capabilities to accelerate development.
 
 ## Setting Up Turso SQLite
 
@@ -32,7 +32,7 @@ turso db create my-edge-app
 turso db show my-edge-app --url
 ```
 
-[The connection string follows the libSQL format](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/): `libsql://your-database.turso.io`. Turso offers both HTTP and WebSocket connections, with the latter providing better performance for interactive applications.
+[The connection string follows the libSQL format](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/): `libsql://your-database.turso.io`. Turso offers both HTTP and WebSocket connections, with the latter providing better performance for interactive applications.
 
 ## Connecting to Your Project
 

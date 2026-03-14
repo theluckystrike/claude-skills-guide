@@ -9,14 +9,15 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Best Claude Skills for DevOps and Deployment
 
-[Claude Code has skills that accelerate DevOps work](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/): shell scripting, infrastructure-as-code, container management, CI/CD pipelines, and database migrations. Here are the most useful ones.
+[Claude Code has skills that accelerate DevOps work](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/): shell scripting, infrastructure-as-code, container management, CI/CD pipelines, and database migrations. Here are the most useful ones.
 
 ## Infrastructure Automation
 
-[For DevOps shell scripting tasks, describe your goal directly to Claude Code](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) Claude helps you craft reliable bash scripts, deployment scripts, and pipeline automation.
+[For DevOps shell scripting tasks, describe your goal directly to Claude Code](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) Claude helps you craft reliable bash scripts, deployment scripts, and pipeline automation.
 
 For example, when deploying a Docker container and checking its status, Claude can help you create reliable scripts:
 
@@ -184,3 +185,4 @@ Start with the skills that address your most frequent pain points — shell scri
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep automation costs low as pipelines scale
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

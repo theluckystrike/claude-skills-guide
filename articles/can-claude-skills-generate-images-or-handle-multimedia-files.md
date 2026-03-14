@@ -16,9 +16,9 @@ Claude skills are fundamentally text-based prompt systems, but they become power
 
 ## How Multimedia Handling Works in Claude Skills
 
-[When you invoke a skill, Claude gains access to a standard set of tools](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/): `read_file`, `write_file`, `bash`, and potentially MCP tools or custom functions. Multimedia processing happens through these tools calling external programs, APIs, or specialized skills.
+[When you invoke a skill, Claude gains access to a standard set of tools](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/): `read_file`, `write_file`, `bash`, and potentially MCP tools or custom functions. Multimedia processing happens through these tools calling external programs, APIs, or specialized skills.
 
-[The skill author designs the prompts to guide Claude toward appropriate tool usage](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) For example, a skill might instruct Claude to "use ImageMagick via bash to convert between formats" or "call the canvas-design skill for generating visual output."
+[The skill author designs the prompts to guide Claude toward appropriate tool usage](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) For example, a skill might instruct Claude to "use ImageMagick via bash to convert between formats" or "call the canvas-design skill for generating visual output."
 
 ## Specialized Skills for Visual Output
 

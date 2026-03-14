@@ -12,7 +12,7 @@ score: 7
 
 # Claude Code Django ORM Optimization Guide
 
-[Building performant Django applications requires understanding how the ORM translates Python code](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) into SQL queries. This guide shows you how to use Claude Code to identify bottlenecks, optimize queries, and build efficient data access patterns.
+[Building performant Django applications requires understanding how the ORM translates Python code](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) into SQL queries. This guide shows you how to use Claude Code to identify bottlenecks, optimize queries, and build efficient data access patterns.
 
 ## Understanding the N+1 Query Problem
 
@@ -241,9 +241,9 @@ These patterns, combined with proper monitoring, keep your Django applications r
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/)
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

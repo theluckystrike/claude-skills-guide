@@ -12,7 +12,7 @@ score: 9
 
 # Claude Code for Beginners: Getting Started in 2026
 
-[Claude Code is Anthropic's command-line tool that brings Claude directly into your development workflow](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Instead of switching to a browser to ask Claude questions, you work with Claude in your terminal, and Claude can read your files, write code, and run commands. This guide walks you through getting started from zero.
+[Claude Code is Anthropic's command-line tool that brings Claude directly into your development workflow](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Instead of switching to a browser to ask Claude questions, you work with Claude in your terminal, and Claude can read your files, write code, and run commands. This guide walks you through getting started from zero.
 
 ## What You Need Before Starting
 
@@ -21,7 +21,7 @@ score: 9
 - An Anthropic account at console.anthropic.com
 - Basic comfort using a terminal
 
-[You do not need to be a senior developer or understand how AI models work](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) If you can navigate a terminal and open files, you are ready.
+[You do not need to be a senior developer or understand how AI models work](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) If you can navigate a terminal and open files, you are ready.
 
 ## Step 1: Install Claude Code
 

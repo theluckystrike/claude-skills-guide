@@ -16,9 +16,9 @@ The [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) in
 
 ## Understanding the TDD Skill
 
-[The `/tdd` skill is a plain Markdown file stored in `~/.claude/skills/tdd.md`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When you type `/tdd` in a Claude Code session, Claude loads the skill's instructions and applies TDD principles to your task—generating test cases, structuring your implementation against those tests, and reviewing coverage.
+[The `/tdd` skill is a plain Markdown file stored in `~/.claude/skills/tdd.md`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you type `/tdd` in a Claude Code session, Claude loads the skill's instructions and applies TDD principles to your task—generating test cases, structuring your implementation against those tests, and reviewing coverage.
 
-[The skill does not install packages or modify your project configuration](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) It guides Claude's reasoning process during your session.
+[The skill does not install packages or modify your project configuration](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) It guides Claude's reasoning process during your session.
 
 To activate it, type in Claude Code:
 

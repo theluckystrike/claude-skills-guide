@@ -12,11 +12,11 @@ score: 8
 
 # Claude Code Bundle Size Reduction: Webpack to Vite Workflow
 
-[Reducing bundle size remains one of the most impactful optimizations](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) you can make for web application performance. When migrating from Webpack to Vite, developers often see immediate improvements, but achieving truly optimized bundles requires intentional configuration and workflow adjustments. This guide walks through a practical workflow using Claude Code skills to analyze, migrate, and optimize your build pipeline.
+[Reducing bundle size remains one of the most impactful optimizations](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) you can make for web application performance. When migrating from Webpack to Vite, developers often see immediate improvements, but achieving truly optimized bundles requires intentional configuration and workflow adjustments. This guide walks through a practical workflow using Claude Code skills to analyze, migrate, and optimize your build pipeline.
 
 ## Why Vite Beats Webpack on Bundle Size
 
-[Vite uses native ES modules and uses modern browser capabilities](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), eliminating the need for extensive bundling during development. In production, Vite ships with Rollup under the hood, which generally produces smaller bundles than Webpack due to more aggressive tree-shaking and simpler chunking strategies.
+[Vite uses native ES modules and uses modern browser capabilities](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), eliminating the need for extensive bundling during development. In production, Vite ships with Rollup under the hood, which generally produces smaller bundles than Webpack due to more aggressive tree-shaking and simpler chunking strategies.
 
 The typical reduction ranges from 15% to 40% depending on your existing Webpack configuration and dependencies. However, realizing these gains requires proper setup—simply swapping build tools without configuration adjustments often yields subpar results.
 

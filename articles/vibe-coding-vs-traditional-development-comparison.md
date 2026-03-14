@@ -16,7 +16,7 @@ The software development landscape has shifted with the rise of AI-assisted codi
 
 ## What Is Vibe Coding?
 
-[Vibe coding describes a workflow where you express your intent in natural language](/claude-skills-guide/articles/vibe-coding-explained-what-it-is-and-how-it-works/), and an AI assistant like Claude writes, modifies, and refactors code based on your descriptions. You focus on the "vibe" or overall direction of the application rather than the specific implementation details.
+[Vibe coding describes a workflow where you express your intent in natural language](/claude-skills-guide/vibe-coding-explained-what-it-is-and-how-it-works/), and an AI assistant like Claude writes, modifies, and refactors code based on your descriptions. You focus on the "vibe" or overall direction of the application rather than the specific implementation details.
 
 A typical vibe coding session looks like this:
 
@@ -27,7 +27,7 @@ names, and a follow button. Use a modern card design with subtle shadows.
 Claude: *generates the complete component with props, styling, and interactivity*
 ```
 
-The developer provides high-level guidance and reviews the output, but doesn't write code line-by-line. [This approach works exceptionally well for scaffolding, prototyping, and implementing well-defined patterns](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)ed features quickly.
+The developer provides high-level guidance and reviews the output, but doesn't write code line-by-line. [This approach works exceptionally well for scaffolding, prototyping, and implementing well-defined patterns](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)ed features quickly.
 
 ## Traditional Development: Process and Precision
 
@@ -158,9 +158,9 @@ The future of software development isn't about choosing one approach exclusively
 
 ## Related Reading
 
-- [Vibe Coding Explained: What It Is and How It Works](/claude-skills-guide/articles/vibe-coding-explained-what-it-is-and-how-it-works/)
-- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/articles/vibe-coding-with-claude-code-complete-guide-2026/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Vibe Coding Explained: What It Is and How It Works](/claude-skills-guide/vibe-coding-explained-what-it-is-and-how-it-works/)
+- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/vibe-coding-with-claude-code-complete-guide-2026/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

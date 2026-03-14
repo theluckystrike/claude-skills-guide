@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Azure DevOps Integration Workflow Tutorial
 
-[Connecting Claude Code with Azure DevOps creates a powerful automation pipeline](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) that handles code review, testing, building, and deployment without manual intervention. This tutorial walks you through setting up this integration using Azure Pipelines, the Azure CLI, and Claude skills that enhance your development workflow.
+[Connecting Claude Code with Azure DevOps creates a powerful automation pipeline](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) that handles code review, testing, building, and deployment without manual intervention. This tutorial walks you through setting up this integration using Azure Pipelines, the Azure CLI, and Claude skills that enhance your development workflow.
 
 ## Prerequisites
 

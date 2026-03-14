@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Color Contrast Accessibility Fix Workflow
 
-[Accessibility issues in web applications often slip through development cycles](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), particularly color contrast problems that affect users with visual impairments. Addressing these issues systematically saves time and ensures compliance with WCAG guidelines. This workflow uses Claude Code skills to automate detection, analysis, and remediation of color contrast problems in your projects.
+[Accessibility issues in web applications often slip through development cycles](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), particularly color contrast problems that affect users with visual impairments. Addressing these issues systematically saves time and ensures compliance with WCAG guidelines. This workflow uses Claude Code skills to automate detection, analysis, and remediation of color contrast problems in your projects.
 
 ## Understanding Color Contrast Requirements
 
@@ -24,12 +24,7 @@ The challenge lies not just in detecting issues, but in systematically fixing th
 
 Before starting, ensure you have the necessary Claude Code skills installed. The [**frontend-design** skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) includes accessibility-aware component generation, while [**tdd**](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write tests that validate contrast requirements.
 
-```bash
-# Verify installed skills
-claude code skills list | grep -E "frontend|tdd|accessibility"
-```
-
-If these skills are not installed, download the `.md` files from community GitHub repositories and place them in `~/.claude/skills/`. There is no official marketplace.
+Check your `~/.claude/skills/` directory to verify these skills are present. If they are not installed, download the `.md` files from community GitHub repositories and place them in `~/.claude/skills/`. There is no official marketplace.
 
 ## Step 1: Scan Your Project for Contrast Issues
 

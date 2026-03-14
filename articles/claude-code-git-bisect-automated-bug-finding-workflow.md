@@ -12,11 +12,11 @@ score: 8
 
 # Claude Code Git Bisect: Automated Bug Finding Workflow
 
-[When you discover a regression in your codebase but have no idea which commit introduced it](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), manually checking each historical commit can feel like searching for a needle in a haystack. This is where git bisect becomes invaluable—and when combined with Claude Code, it transforms into a powerful automated bug-finding workflow that saves hours of frustration.
+[When you discover a regression in your codebase but have no idea which commit introduced it](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), manually checking each historical commit can feel like searching for a needle in a haystack. This is where git bisect becomes invaluable—and when combined with Claude Code, it transforms into a powerful automated bug-finding workflow that saves hours of frustration.
 
 ## What is Git Bisect?
 
-[Git bisect is a built-in Git command that uses binary search to find which specific commit introduced a bug](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) Instead of checking hundreds of commits manually, bisect narrows it down in logarithmic time—typically finding the culprit in just 7-10 steps regardless of how many commits separate you from the problem.
+[Git bisect is a built-in Git command that uses binary search to find which specific commit introduced a bug](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) Instead of checking hundreds of commits manually, bisect narrows it down in logarithmic time—typically finding the culprit in just 7-10 steps regardless of how many commits separate you from the problem.
 
 The workflow works by marking known-good and known-bad commits, then letting Git systematically test commits in between. Each test tells bisect which half of the remaining range contains the bug, until it pinpoints the exact problematic commit.
 

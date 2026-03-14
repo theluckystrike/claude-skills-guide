@@ -12,11 +12,11 @@ score: 8
 
 # Claude Code Error Invalid API Key: Troubleshoot Guide
 
-[When Claude Code throws an invalid API key error](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) "invalid API key" error, it means the authentication credentials being used don't match what the API server expects. This guide walks you through the most common causes and their solutions, so you can get back to coding without delay.
+[When Claude Code throws an invalid API key error](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) "invalid API key" error, it means the authentication credentials being used don't match what the API server expects. This guide walks you through the most common causes and their solutions, so you can get back to coding without delay.
 
 ## Understanding the Error
 
-The invalid API key error typically surfaces when Claude Code attempts to make authenticated requests to external services or when [initializing certain skills that require API access](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-claude-code-skills/). The error message usually includes details about which service is rejecting the key.
+The invalid API key error typically surfaces when Claude Code attempts to make authenticated requests to external services or when [initializing certain skills that require API access](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/). The error message usually includes details about which service is rejecting the key.
 
 Common error variations include:
 - `Error: Invalid API key for Anthropic`

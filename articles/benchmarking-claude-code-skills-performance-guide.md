@@ -16,9 +16,9 @@ This guide covers the essential metrics to track, practical measurement techniqu
 
 ## Key Performance Metrics
 
-[Before benchmarking, understand the metrics that matter](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/):
+[Before benchmarking, understand the metrics that matter](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/):
 
-1. **Execution Time** — [Total wall-clock time from skill invocation to completion](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+1. **Execution Time** — [Total wall-clock time from skill invocation to completion](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
 2. **Token Usage** — Input and output tokens consumed per skill run
 3. **Tool Call Count** — Number of file operations, bash commands, or external API calls
 4. **Round-Trip Latency** — Time between each model response and the next tool call

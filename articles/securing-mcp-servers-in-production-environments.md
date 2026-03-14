@@ -43,7 +43,7 @@ Store tokens securely using environment variables, never hardcode them in source
 
 ### OAuth 2.0 Integration
 
-For enterprise deployments, [integrate with your existing identity provider](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/). Many teams use OAuth 2.0 to tie MCP server access to their Google Workspace or Microsoft Entra ID accounts. This approach provides centralized access control and audit logs.
+For enterprise deployments, [integrate with your existing identity provider](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/). Many teams use OAuth 2.0 to tie MCP server access to their Google Workspace or Microsoft Entra ID accounts. This approach provides centralized access control and audit logs.
 
 ### Role-Based Access Control
 
@@ -201,7 +201,7 @@ Keep your MCP server dependencies updated. Vulnerabilities in third-party librar
 
 ## Testing Your Security
 
-Validate your security measures through regular testing. [The tdd skill can help you write security-focused test cases](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) that verify authentication, authorization, and input validation work correctly.
+Validate your security measures through regular testing. [The tdd skill can help you write security-focused test cases](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) that verify authentication, authorization, and input validation work correctly.
 
 Consider penetration testing your MCP server deployment annually. Tools like OWASP ZAP can scan for common vulnerabilities, though manual testing often catches logic flaws that automated tools miss.
 
@@ -213,9 +213,9 @@ The effort invested in securing MCP servers protects both your infrastructure an
 
 ## Related Reading
 
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/)
-- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/)
-- [MCP Server Supply Chain Security Risks 2026](/claude-skills-guide/articles/mcp-server-supply-chain-security-risks-2026/)
+- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
+- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/)
+- [MCP Server Supply Chain Security Risks 2026](/claude-skills-guide/mcp-server-supply-chain-security-risks-2026/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

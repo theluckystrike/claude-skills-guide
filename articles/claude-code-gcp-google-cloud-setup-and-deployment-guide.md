@@ -9,10 +9,11 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Claude Code GCP Google Cloud Setup and Deployment Guide
 
-[Google Cloud Platform provides reliable, scalable infrastructure for deploying applications](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Integrating Claude Code into your GCP workflow enables intelligent automation, from generating deployment configurations to managing multi-service architectures. This guide walks through practical setups for deploying to Cloud Run, Cloud Functions, and using GCP services alongside Claude Code skills.
+[Google Cloud Platform provides reliable, scalable infrastructure for deploying applications](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Integrating Claude Code into your GCP workflow enables intelligent automation, from generating deployment configurations to managing multi-service architectures. This guide walks through practical setups for deploying to Cloud Run, Cloud Functions, and using GCP services alongside Claude Code skills.
 
 ## Prerequisites and Environment Setup
 
@@ -35,7 +36,7 @@ Claude Code should be installed locally. Verify the installation:
 claude --version
 ```
 
-[The integration relies on Claude Code's ability to execute shell commands](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), which means your local environment communicates with GCP through the `gcloud` CLI. This approach keeps sensitive credentials on your local machine while enabling powerful cloud automation.
+[The integration relies on Claude Code's ability to execute shell commands](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), which means your local environment communicates with GCP through the `gcloud` CLI. This approach keeps sensitive credentials on your local machine while enabling powerful cloud automation.
 
 ## Deploying to Cloud Run with Claude Code
 
@@ -222,3 +223,4 @@ The key is treating Claude Code as a local development tool that interfaces with
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep cloud automation sessions cost-effective
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

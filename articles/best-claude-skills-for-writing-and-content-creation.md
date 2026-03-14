@@ -12,11 +12,11 @@ score: 9
 
 # Best Claude Skills for Writing and Content Creation
 
-[Claude Code's skills system extends beyond software development](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Writers, technical communicators, and content teams use skills to automate document creation, maintain consistency across projects, and produce multiple output formats from a single session. Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`.
+[Claude Code's skills system extends beyond software development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Writers, technical communicators, and content teams use skills to automate document creation, maintain consistency across projects, and produce multiple output formats from a single session. Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`.
 
 ## Document Creation and Editing with the docx Skill
 
-[The `docx` skill creates and edits Word documents](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), including tracked changes, comments, and structured formatting.
+[The `docx` skill creates and edits Word documents](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), including tracked changes, comments, and structured formatting.
 
 ```
 /docx create a project proposal document with these sections: Executive Summary, Problem Statement, Proposed Solution, Timeline, Budget. Use H1 for the title, H2 for sections.

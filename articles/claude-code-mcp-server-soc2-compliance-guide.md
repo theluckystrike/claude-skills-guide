@@ -12,13 +12,13 @@ score: 7
 
 # Claude Code MCP Server SOC 2 Compliance Guide
 
-[Building MCP (Model Context Protocol) servers that meet SOC 2 compliance requirements](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) is essential for enterprises deploying AI assistants in regulated environments. This guide walks you through the technical implementation of security controls, audit trails, and access management patterns that satisfy SOC 2 Trust Service Criteria.
+[Building MCP (Model Context Protocol) servers that meet SOC 2 compliance requirements](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) is essential for enterprises deploying AI assistants in regulated environments. This guide walks you through the technical implementation of security controls, audit trails, and access management patterns that satisfy SOC 2 Trust Service Criteria.
 
 ## Understanding SOC 2 Requirements for MCP Servers
 
 SOC 2 compliance centers on five trust service criteria: security, availability, processing integrity, confidentiality, and privacy. When your MCP server handles sensitive data or interacts with protected systems, you need controls addressing all five areas.
 
-The security criterion is your primary concern. [MCP servers must implement authentication, authorization, encryption, and logging](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/) These controls prevent unauthorized access and provide evidence for audits.
+The security criterion is your primary concern. [MCP servers must implement authentication, authorization, encryption, and logging](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/) These controls prevent unauthorized access and provide evidence for audits.
 
 Your MCP server likely processes data that falls under confidentiality requirements. Customer data, business logic, and API credentials demand protection through encryption both in transit and at rest.
 
@@ -232,9 +232,9 @@ Document your implementation clearly. This documentation serves both auditors an
 
 ## Related Reading
 
-- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/)
-- [MCP Server Logging Audit Trail Security Guide](/claude-skills-guide/articles/mcp-server-logging-audit-trail-security-guide/)
-- [Securing MCP Servers in Production Environments](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/)
+- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/)
+- [MCP Server Logging Audit Trail Security Guide](/claude-skills-guide/mcp-server-logging-audit-trail-security-guide/)
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

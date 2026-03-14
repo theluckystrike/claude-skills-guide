@@ -123,7 +123,7 @@ missing @ symbol, missing domain, domain with no TLD,
 email with spaces, email exceeding 254 characters.
 ```
 
-## Leverage Claude's Code Analysis
+## Use Claude's Code Analysis
 
 Use Claude's ability to analyze existing code for untested paths:
 

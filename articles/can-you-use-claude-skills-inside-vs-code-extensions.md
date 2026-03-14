@@ -18,9 +18,9 @@ If you build [VS Code extensions](/claude-skills-guide/claude-code-vs-github-cop
 
 [Claude Code skills are fundamentally different from VS Code extensions](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) in their execution model. Skills are Markdown files that get loaded into Claude's context when invoked through `/skill-name` commands. They're designed to work within Claude Code's chat interface, not as standalone programmatic APIs.
 
-[VS Code extensions run in the extension host process and communicate through the VS Code Extension API](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) and communicate with the editor through the VS Code Extension API. There's no native bridge that automatically loads Claude skills into your extension.
+[VS Code extensions run in the extension host process and communicate through the VS Code Extension API](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) and communicate with the editor through the VS Code Extension API. There's no native bridge that automatically loads Claude skills into your extension.
 
-However, [you have several practical approaches to achieve integration](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+However, [you have several practical approaches to achieve integration](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 
 ## Approach 1: Using Claude Code as a Backend
 

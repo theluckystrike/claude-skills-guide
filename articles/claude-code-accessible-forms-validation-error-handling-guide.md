@@ -12,9 +12,9 @@ score: 8
 
 # Claude Code Accessible Forms: Validation Error Handling Guide
 
-[Building accessible forms requires more than semantic HTML](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Proper validation error handling determines whether users with disabilities can successfully complete your forms. Claude Code provides several skills that streamline accessible form development, from generating compliant markup to implementing thorough validation logic.
+[Building accessible forms requires more than semantic HTML](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Proper validation error handling determines whether users with disabilities can successfully complete your forms. Claude Code provides several skills that streamline accessible form development, from generating compliant markup to implementing thorough validation logic.
 
-[This guide covers practical approaches to accessible form validation using Claude Code skills](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/), with code examples you can apply immediately.
+[This guide covers practical approaches to accessible form validation using Claude Code skills](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/), with code examples you can apply immediately.
 
 ## Understanding WCAG Form Accessibility Requirements
 

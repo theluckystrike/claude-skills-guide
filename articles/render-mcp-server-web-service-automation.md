@@ -16,7 +16,7 @@ The Render platform provides a powerful hosting solution for web applications, a
 
 ## Setting Up the Render MCP Server
 
-Before automating Render web services, you need to configure the MCP server to authenticate with your Render account. The server uses Render API tokens for authentication, which you can generate from your Render dashboard. Store these credentials using the patterns described in the [MCP credential management and secrets handling guide](/claude-skills-guide/articles/mcp-credential-management-and-secrets-handling/).
+Before automating Render web services, you need to configure the MCP server to authenticate with your Render account. The server uses Render API tokens for authentication, which you can generate from your Render dashboard. Store these credentials using the patterns described in the [MCP credential management and secrets handling guide](/claude-skills-guide/mcp-credential-management-and-secrets-handling/).
 
 Install the Render MCP server package using npm:
 
@@ -52,7 +52,7 @@ For example, to deploy a new web service:
 # Tell Claude: "Deploy my Node.js app from this GitHub repo to Render"
 ```
 
-Claude will interact with the Render API to create the service, configure environment variables, and set up the deployment pipeline. This works particularly well when combined with the [Claude TDD skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) for test-driven deployment workflows.
+Claude will interact with the Render API to create the service, configure environment variables, and set up the deployment pipeline. This works particularly well when combined with the [Claude TDD skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) for test-driven deployment workflows.
 
 You can also automate rollbacks when deployments fail. Simply ask Claude to review the latest deployment status and roll back to a previous stable version if needed.
 
@@ -87,7 +87,7 @@ The health check automation extends to downtime detection and notification. You 
 
 ## Continuous Deployment Workflows
 
-Integrating the Render MCP server with your CI/CD pipeline creates powerful automation workflows. When combined with the [Claude supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) for context management, Claude can track deployment history and automatically roll back when issues are detected.
+Integrating the Render MCP server with your CI/CD pipeline creates powerful automation workflows. When combined with the [Claude supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) for context management, Claude can track deployment history and automatically roll back when issues are detected.
 
 Here's a practical deployment workflow:
 
@@ -137,7 +137,7 @@ When automating Render web services in production environments, follow these gui
 
 The Render MCP server works well with other Claude skills for enhanced functionality. The frontend-design skill helps you quickly deploy and test frontend changes, while the docx skill handles automated documentation generation for your deployment processes.
 
-You can also combine it with the AWS MCP server for multi-cloud deployments, managing both Render and AWS infrastructure from a single Claude Code session. If you need a comparable deployment setup on Railway, the [Railway MCP server deployment automation guide](/claude-skills-guide/articles/railway-mcp-server-deployment-automation-guide/) walks through a similar approach with Railway-specific configuration.
+You can also combine it with the AWS MCP server for multi-cloud deployments, managing both Render and AWS infrastructure from a single Claude Code session. If you need a comparable deployment setup on Railway, the [Railway MCP server deployment automation guide](/claude-skills-guide/railway-mcp-server-deployment-automation-guide/) walks through a similar approach with Railway-specific configuration.
 
 ## Conclusion
 
@@ -147,9 +147,9 @@ Start by configuring the MCP server with your Render API credentials, then gradu
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [Railway MCP Server Deployment Automation Guide](/claude-skills-guide/articles/railway-mcp-server-deployment-automation-guide/)
-- [Fly.io MCP Server Deployment Workflow Guide](/claude-skills-guide/articles/fly-io-mcp-server-deployment-workflow-guide/)
-- [Integrations Hub: MCP Servers and Claude Skills](/claude-skills-guide/articles/integrations-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Railway MCP Server Deployment Automation Guide](/claude-skills-guide/railway-mcp-server-deployment-automation-guide/)
+- [Fly.io MCP Server Deployment Workflow Guide](/claude-skills-guide/fly-io-mcp-server-deployment-workflow-guide/)
+- [Integrations Hub: MCP Servers and Claude Skills](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

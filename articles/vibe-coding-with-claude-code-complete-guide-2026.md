@@ -38,13 +38,13 @@ Claude will respond by creating the necessary files, writing the code, and expla
 
 Claude skills are pre-built prompt templates that specialize Claude's behavior for specific workflows. In 2026, dozens of official and community skills exist, each optimized for different development scenarios.
 
-[The **frontend-design** skill helps you create UI components and layouts](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) by describing your visual requirements. When you need to generate a new landing page or dashboard, invoking this skill provides Claude with design-focused prompting that produces cleaner, more polished frontend code.
+[The **frontend-design** skill helps you create UI components and layouts](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) by describing your visual requirements. When you need to generate a new landing page or dashboard, invoking this skill provides Claude with design-focused prompting that produces cleaner, more polished frontend code.
 
 For documentation-heavy workflows, the **pdf** skill enables Claude to generate PDF documents directly from your project. This is useful for reports, invoices, or any generated content that needs to leave your application as a PDF.
 
-When testing matters, [the **tdd** skill guides Claude to practice test-driven development](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). It writes tests before implementation code, helping you build more reliable software from the start.
+When testing matters, [the **tdd** skill guides Claude to practice test-driven development](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). It writes tests before implementation code, helping you build more reliable software from the start.
 
-[The **supermemory** skill connects Claude to your project context](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), allowing it to remember decisions, architecture choices, and code patterns across sessions. This creates a more personalized experience where Claude understands your project's history.
+[The **supermemory** skill connects Claude to your project context](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), allowing it to remember decisions, architecture choices, and code patterns across sessions. This creates a more personalized experience where Claude understands your project's history.
 
 Other valuable skills include **pptx** for presentations, **docx** for generating Word documents, and **xlsx** for spreadsheet operations. Each skill transforms Claude's default behavior into something more targeted.
 
@@ -114,7 +114,7 @@ Several patterns have emerged as particularly effective:
 
 **Use descriptive names and clear requirements.** "A button that saves the form and shows a success message" works better than "make it save."
 
-**Leverage skills for repetitive tasks.** If you're frequently generating the same type of output—a certain test pattern, a documentation format—create or use a skill that encodes that pattern.
+**Use skills for repetitive tasks.** If you're frequently generating the same type of output—a certain test pattern, a documentation format—create or use a skill that encodes that pattern.
 
 **Embrace the iteration.** The first version won't be perfect. Plan for multiple passes where you refine the output through conversation.
 
@@ -134,9 +134,9 @@ The key is treating Claude as a collaborative partner—describing your intent c
 
 ## Related Reading
 
-- [Vibe Coding Explained: What It Is and How It Works](/claude-skills-guide/articles/vibe-coding-explained-what-it-is-and-how-it-works/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Build a Personal AI Assistant with Claude Skills Guide](/claude-skills-guide/articles/build-personal-ai-assistant-with-claude-skills-guide/)
+- [Vibe Coding Explained: What It Is and How It Works](/claude-skills-guide/vibe-coding-explained-what-it-is-and-how-it-works/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Build a Personal AI Assistant with Claude Skills Guide](/claude-skills-guide/build-personal-ai-assistant-with-claude-skills-guide/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

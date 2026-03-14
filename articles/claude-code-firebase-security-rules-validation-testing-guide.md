@@ -16,13 +16,13 @@ Firebase security rules are the gatekeepers of your backend data. Writing rules 
 
 ## Understanding Firebase Rules Validation
 
-[Firebase security rules operate on a declarative language specific to each product](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)—Firestore, Realtime Database, and Storage each have their own syntax. A single misconfiguration can expose user data or lock legitimate users out entirely. Validation isn't optional; it's essential.
+[Firebase security rules operate on a declarative language specific to each product](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)—Firestore, Realtime Database, and Storage each have their own syntax. A single misconfiguration can expose user data or lock legitimate users out entirely. Validation isn't optional; it's essential.
 
 When you write Firebase rules, you need to verify that they allow intended operations while blocking unauthorized access. This requires testing against various scenarios: authenticated vs. anonymous users, different document paths, varied data structures, and edge cases that might slip through initial reviews.
 
 ## Setting Up Claude Code for Firebase Rules Testing
 
-[Claude Code can assist with Firebase rules validation through its file operations and bash execution capabilities](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) The key is structuring your workflow so Claude can analyze your rules and suggest improvements based on Firebase's validation logic.
+[Claude Code can assist with Firebase rules validation through its file operations and bash execution capabilities](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) The key is structuring your workflow so Claude can analyze your rules and suggest improvements based on Firebase's validation logic.
 
 First, ensure your Firebase project has the CLI installed:
 

@@ -16,13 +16,13 @@ Claude Code excels at executing well-scoped tasks, but the difference between me
 
 ## Why Task Scoping Matters
 
-When you [hand Claude Code](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) a vague request like "build me an API," you get generic code that requires extensive revision. When you provide a properly scoped task with clear boundaries, context, and success criteria, Claude Code produces working code that fits your architecture from the first pass.
+When you [hand Claude Code](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) a vague request like "build me an API," you get generic code that requires extensive revision. When you provide a properly scoped task with clear boundaries, context, and success criteria, Claude Code produces working code that fits your architecture from the first pass.
 
 The skill system amplifies this effect. [Skills like **tdd**, **pdf**, **xlsx**, and **frontend-design** become significantly more powerful](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) when paired with well-structured prompts. A poorly scoped task wastes tokens on exploration; a well-scoped task gets straight to production-quality output.
 
 ## The Three-Part Task Structure
 
-Every successful Claude Code task follows a three-part structure: context, scope, and verification. See [best Claude Code skills](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) for practical examples.
+Every successful Claude Code task follows a three-part structure: context, scope, and verification. See [best Claude Code skills](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) for practical examples.
 
 **Context** tells Claude Code what already exists. Include your tech stack, existing patterns, file locations, and any constraints that should shape the output. Without context, Claude Code makes assumptions that may not match your project.
 

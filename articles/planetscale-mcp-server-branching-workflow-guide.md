@@ -9,10 +9,11 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 # Planetscale MCP Server Branching Workflow Guide
 
-Database branching represents one of the most powerful capabilities in modern development workflows. [When combined with the Model Context Protocol (MCP), you can automate schema migrations](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/), validate database states, and synchronize branch environments without manual intervention. This guide walks you through building an efficient Planetscale MCP server branching workflow that fits into your development pipeline.
+Database branching represents one of the most powerful capabilities in modern development workflows. [When combined with the Model Context Protocol (MCP), you can automate schema migrations](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), validate database states, and synchronize branch environments without manual intervention. This guide walks you through building an efficient Planetscale MCP server branching workflow that fits into your development pipeline.
 
 ## Understanding Planetscale Branching
 
@@ -217,9 +218,10 @@ The patterns in this guide work particularly well when combined with other Claud
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/articles/aws-mcp-server-cloud-automation-with-claude-code/)
-- [Securing MCP Servers in Production Environments](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -9,16 +9,17 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 # Claude Code GitHub Actions Approval Workflows
 
-[Manual approval gates are essential for production deployments](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/), security-sensitive operations, and any workflow requiring human oversight before critical actions execute. GitHub Actions provides native environment protection through required reviewers, and Claude Code skills can enhance these workflows with intelligent decision-making, automated checks, and streamlined approval processes.
+[Manual approval gates are essential for production deployments](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/), security-sensitive operations, and any workflow requiring human oversight before critical actions execute. GitHub Actions provides native environment protection through required reviewers, and Claude Code skills can enhance these workflows with intelligent decision-making, automated checks, and streamlined approval processes.
 
 This guide covers practical implementations of approval workflows using GitHub Actions environments and Claude Code skills for developers who need controlled deployment pipelines.
 
 ## Understanding GitHub Actions Environment Protection
 
-[GitHub repository environments provide the foundation for approval workflows](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/) Environments allow you to configure protection rules, including required reviewers who must approve workflow runs before they can proceed.
+[GitHub repository environments provide the foundation for approval workflows](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/) Environments allow you to configure protection rules, including required reviewers who must approve workflow runs before they can proceed.
 
 To enable environment protection, navigate to your repository settings and create an environment:
 
@@ -256,10 +257,11 @@ The key is finding the right balance between security controls and developer vel
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
-- [Claude Code GitHub Actions Matrix Builds Guide](/claude-skills-guide/articles/claude-code-github-actions-matrix-builds-guide/)
-- [Claude Code GitHub Actions Composite Actions](/claude-skills-guide/articles/claude-code-github-actions-composite-actions/)
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Code GitHub Actions Matrix Builds Guide](/claude-skills-guide/claude-code-github-actions-matrix-builds-guide/)
+- [Claude Code GitHub Actions Composite Actions](/claude-skills-guide/claude-code-github-actions-composite-actions/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
+{% endraw %}

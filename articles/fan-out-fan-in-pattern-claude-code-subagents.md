@@ -146,7 +146,7 @@ def hierarchical_fan_out(primary_tasks, max_primary=3, max_secondary=5):
 
 ## Error Handling and Resilience
 
-Robust fan-out fan-in implementations must handle failures gracefully:
+Well-built fan-out fan-in implementations must handle failures gracefully:
 
 ```python
 def resilient_fan_out(tasks, max_workers=5, retries=2):

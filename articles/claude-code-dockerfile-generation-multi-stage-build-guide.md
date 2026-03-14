@@ -16,9 +16,9 @@ score: 8
 
 ## Why Multi-Stage Builds Matter
 
-[Multi-stage builds reduce Docker image size significantly](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) by separating build dependencies from runtime artifacts. A typical Node.js application can shrink from over 1GB to under 150MB using this approach. Smaller images mean faster deployments, reduced attack surface, and lower storage costs.
+[Multi-stage builds reduce Docker image size significantly](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) by separating build dependencies from runtime artifacts. A typical Node.js application can shrink from over 1GB to under 150MB using this approach. Smaller images mean faster deployments, reduced attack surface, and lower storage costs.
 
-[Claude Code can help you generate these Dockerfiles quickly using specialized skills](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) that understand best practices for different language ecosystems.
+[Claude Code can help you generate these Dockerfiles quickly using specialized skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) that understand best practices for different language ecosystems.
 
 ## Generating Dockerfiles with Claude Code
 

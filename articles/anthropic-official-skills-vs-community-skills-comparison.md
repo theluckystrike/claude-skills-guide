@@ -12,7 +12,7 @@ score: 8
 
 # Anthropic Official Skills vs Community Skills
 
-[Claude Code skills come in two categories: official skills maintained by Anthropic and community skills](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) built by developers. Understanding the differences helps you choose reliably for your workflow.
+[Claude Code skills come in two categories: official skills maintained by Anthropic and community skills](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) built by developers. Understanding the differences helps you choose reliably for your workflow.
 
 ## What Are Claude Skills?
 
@@ -20,7 +20,7 @@ Claude skills are `.md` files that extend Claude Code's behavior for specific ta
 
 ## Official Skills: Built by Anthropic
 
-[Anthropic's official skills ship with Claude Code and are maintained alongside the core product](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+[Anthropic's official skills ship with Claude Code and are maintained alongside the core product](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
 
 ### Characteristics of Official Skills
 

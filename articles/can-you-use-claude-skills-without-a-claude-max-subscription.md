@@ -16,9 +16,9 @@ If you're exploring Claude Code as a developer, you've likely encountered skills
 
 ## Understanding Claude Skills and Subscription Tiers
 
-[Claude Code offers a tiered access model](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) The free tier provides substantial functionality, while paid subscriptions unlock higher rate limits and priority access to new features. Skills themselves fall into two categories: native skills and community skills.
+[Claude Code offers a tiered access model](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) The free tier provides substantial functionality, while paid subscriptions unlock higher rate limits and priority access to new features. Skills themselves fall into two categories: native skills and community skills.
 
-[Native skills ship pre-installed with Claude Code](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) These include fundamental capabilities like file editing, git operations, and project management. Community skills—created by developers and contributors—extend Claude into specialized domains such as PDF manipulation, test-driven development, spreadsheet automation, and frontend prototyping.
+[Native skills ship pre-installed with Claude Code](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) These include fundamental capabilities like file editing, git operations, and project management. Community skills—created by developers and contributors—extend Claude into specialized domains such as PDF manipulation, test-driven development, spreadsheet automation, and frontend prototyping.
 
 Here's the key point: **both free and paid users can access native skills and community skills**. The subscription tier primarily affects usage limits, not skill availability. However, the practical experience differs significantly between tiers.
 

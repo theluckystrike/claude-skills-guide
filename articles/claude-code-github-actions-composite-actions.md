@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 # Claude Code GitHub Actions Composite Actions
 
@@ -16,7 +17,7 @@ GitHub Actions composite actions let you package multiple workflow steps into a 
 
 ## Why Composite Actions Matter for Claude Integration
 
-Standard GitHub Actions workflows often repeat the same Claude invocation steps across multiple repositories. You might need to run a `tdd` skill to analyze test coverage on every pull request, [use `pdf` skill to generate formatted reports](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)e reports, or invoke `frontend-design` skill to check accessibility. Composite actions eliminate this duplication by letting you define the Claude invocation once and reuse it anywhere.
+Standard GitHub Actions workflows often repeat the same Claude invocation steps across multiple repositories. You might need to run a `tdd` skill to analyze test coverage on every pull request, [use `pdf` skill to generate formatted reports](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)e reports, or invoke `frontend-design` skill to check accessibility. Composite actions eliminate this duplication by letting you define the Claude invocation once and reuse it anywhere.
 
 Composite actions also solve the parameterization challenge. Different projects may need different Claude models, different skill configurations, or different file filters. A well-designed composite action accepts these as inputs, making your automation portable across teams and repositories.
 
@@ -207,9 +208,10 @@ Composite actions provide the building blocks for reusable Claude Code automatio
 
 ## Related Reading
 
-- [Claude Code GitHub Actions Approval Workflows](/claude-skills-guide/articles/claude-code-github-actions-approval-workflows/)
-- [Claude Code GitHub Actions Matrix Builds Guide](/claude-skills-guide/articles/claude-code-github-actions-matrix-builds-guide/)
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Code GitHub Actions Approval Workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/)
+- [Claude Code GitHub Actions Matrix Builds Guide](/claude-skills-guide/claude-code-github-actions-matrix-builds-guide/)
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

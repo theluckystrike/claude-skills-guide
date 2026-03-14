@@ -18,7 +18,7 @@ When you connect Claude Code to external services through MCP servers, you're ex
 
 MCP servers expose tools that Claude Code can invoke autonomously. A well-configured server allows Claude to read files, query databases, or call APIs within defined boundaries. However, without proper safeguards, Claude might inadvertently send sensitive data to external endpoints, either through prompt injection, tool misuse, or unexpected tool chaining.
 
-The risk is straightforward: your AI agent has access to internal systems, and without controls, it can output that data anywhere. This includes credentials, customer information, proprietary code, or internal documentation. Prevention requires a layered approach combining input validation, output filtering, network controls, and audit logging. See the [MCP server input validation security patterns guide](/claude-skills-guide/articles/mcp-server-input-validation-security-patterns/) for techniques that reinforce this first layer.
+The risk is straightforward: your AI agent has access to internal systems, and without controls, it can output that data anywhere. This includes credentials, customer information, proprietary code, or internal documentation. Prevention requires a layered approach combining input validation, output filtering, network controls, and audit logging. See the [MCP server input validation security patterns guide](/claude-skills-guide/mcp-server-input-validation-security-patterns/) for techniques that reinforce this first layer.
 
 ## Input Validation at the Server Level
 
@@ -102,7 +102,7 @@ Use the pdf skill to process sensitive documents and apply similar redaction log
 
 ## Network-Level Controls
 
-Restrict where your MCP servers can send data. Configure firewall rules that block outbound connections except to approved endpoints. For servers that must make external calls, use a forward proxy that logs and inspects all traffic. Complementing network controls with [MCP transport layer TLS configuration](/claude-skills-guide/articles/mcp-transport-layer-security-tls-configuration/) ensures data is encrypted even on approved connections.
+Restrict where your MCP servers can send data. Configure firewall rules that block outbound connections except to approved endpoints. For servers that must make external calls, use a forward proxy that logs and inspects all traffic. Complementing network controls with [MCP transport layer TLS configuration](/claude-skills-guide/mcp-transport-layer-security-tls-configuration/) ensures data is encrypted even on approved connections.
 
 ```bash
 # iptables example: block outgoing except approved domains
@@ -139,7 +139,7 @@ def log_tool_invocation(tool_name: str, inputs: dict, result_size: int):
     logging.info(json.dumps(entry))
 ```
 
-Review these logs regularly or feed them to a SIEM for automated alerting on unusual patterns. Sudden spikes in data retrieval, access to sensitive tables outside business hours, or repeated queries for the same data all warrant investigation. The [Claude Code security code review checklist](/claude-skills-guide/articles/claude-code-security-code-review-checklist-automation/) offers an automated approach to catching these patterns during code review.
+Review these logs regularly or feed them to a SIEM for automated alerting on unusual patterns. Sudden spikes in data retrieval, access to sensitive tables outside business hours, or repeated queries for the same data all warrant investigation. The [Claude Code security code review checklist](/claude-skills-guide/claude-code-security-code-review-checklist-automation/) offers an automated approach to catching these patterns during code review.
 
 ## Tool Chaining Restrictions
 
@@ -174,16 +174,16 @@ These limits force Claude Code to work within constraints, making large-scale ex
 
 Securing Claude Code MCP servers requires defense in depth. Validate all inputs strictly at the server boundary. Limit how much data can be extracted in any single request or session. Filter sensitive patterns from outputs before they reach Claude Code. Restrict network access to prevent data from leaving your infrastructure. Log everything and monitor for anomalies. Restrict tool chaining to prevent multi-step exfiltration campaigns.
 
-Integrate these patterns into your MCP server development workflow. Use the tdd skill to write tests that verify your security controls are working correctly. Use frontend-design patterns to build admin dashboards for monitoring. Regularly audit your configurations and update them as Claude Code's capabilities evolve. For a comprehensive assessment framework, consult the [Claude skills governance security audit checklist](/claude-skills-guide/articles/claude-skills-governance-security-audit-checklist/).
+Integrate these patterns into your MCP server development workflow. Use the tdd skill to write tests that verify your security controls are working correctly. Use frontend-design patterns to build admin dashboards for monitoring. Regularly audit your configurations and update them as Claude Code's capabilities evolve. For a comprehensive assessment framework, consult the [Claude skills governance security audit checklist](/claude-skills-guide/claude-skills-governance-security-audit-checklist/).
 
 Prevention is far easier than cleanup. A data exfiltration incident can trigger regulatory penalties, customer churn, and reputational damage. The investment in proper MCP server hardening pays dividends in reduced risk and compliance confidence.
 
 ## Related Reading
 
-- [MCP Server Input Validation Security Patterns](/claude-skills-guide/articles/mcp-server-input-validation-security-patterns/) — Harden the server boundary against malicious requests
-- [MCP Transport Layer Security TLS Configuration](/claude-skills-guide/articles/mcp-transport-layer-security-tls-configuration/) — Encrypt data in transit across your MCP infrastructure
-- [Claude Code Secret Scanning: Prevent Credential Leaks](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) — Detect exposed secrets before they reach production
-- [Advanced Claude Skills: Token Optimization & Chaining](/claude-skills-guide/articles/advanced-hub/) — Hub for advanced MCP server and skills patterns
+- [MCP Server Input Validation Security Patterns](/claude-skills-guide/mcp-server-input-validation-security-patterns/) — Harden the server boundary against malicious requests
+- [MCP Transport Layer Security TLS Configuration](/claude-skills-guide/mcp-transport-layer-security-tls-configuration/) — Encrypt data in transit across your MCP infrastructure
+- [Claude Code Secret Scanning: Prevent Credential Leaks](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — Detect exposed secrets before they reach production
+- [Advanced Claude Skills: Token Optimization & Chaining](/claude-skills-guide/advanced-hub/) — Hub for advanced MCP server and skills patterns
 
 ---
 

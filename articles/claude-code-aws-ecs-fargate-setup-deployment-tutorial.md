@@ -9,12 +9,13 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Claude Code AWS ECS Fargate Setup Deployment Tutorial
 
-[AWS ECS Fargate provides serverless container orchestration](/claude-skills-guide/articles/aws-mcp-server-cloud-automation-with-claude-code/), eliminating the need to manage underlying EC2 instances. This guide walks through setting up and deploying containerized applications to ECS Fargate using Claude Code.
+[AWS ECS Fargate provides serverless container orchestration](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/), eliminating the need to manage underlying EC2 instances. This guide walks through setting up and deploying containerized applications to ECS Fargate using Claude Code.
 
-[Skills referenced here are `.md` files in `~/.claude/skills/`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) and invoked with `/skill-name`. There are no `shell-expert`, `docker-expert`, or `terraform-expert` skills — those do not exist. Real built-in skills for this workflow are `/tdd`, `/pdf`, and `/supermemory`.
+[Skills referenced here are `.md` files in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) and invoked with `/skill-name`. There are no `shell-expert`, `docker-expert`, or `terraform-expert` skills — those do not exist. Real built-in skills for this workflow are `/tdd`, `/pdf`, and `/supermemory`.
 
 ## Prerequisites and Environment Setup
 
@@ -298,3 +299,4 @@ Claude Code accelerates each phase: generating Terraform and task definitions, w
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills for deployment workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

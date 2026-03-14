@@ -12,11 +12,11 @@ score: 7
 
 # How to Audit Claude Code MCP Server Permissions
 
-[When you connect MCP servers to Claude Code, you grant external services varying degrees of access](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/) to your development environment. Understanding which servers have access to what resources becomes critical for maintaining security, especially when working with sensitive data or production systems. This guide walks you through practical methods to audit your MCP server permissions.
+[When you connect MCP servers to Claude Code, you grant external services varying degrees of access](/claude-skills-guide/mcp-server-permission-auditing-best-practices/) to your development environment. Understanding which servers have access to what resources becomes critical for maintaining security, especially when working with sensitive data or production systems. This guide walks you through practical methods to audit your MCP server permissions.
 
 ## What Are MCP Server Permissions
 
-[MCP servers extend Claude Code's capabilities by connecting to external tools and services](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) Each server operates with specific permissions that determine what actions it can perform and what data it can access. Some servers read files and run commands, while others modify your filesystem or interact with cloud APIs.
+[MCP servers extend Claude Code's capabilities by connecting to external tools and services](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) Each server operates with specific permissions that determine what actions it can perform and what data it can access. Some servers read files and run commands, while others modify your filesystem or interact with cloud APIs.
 
 The permission model operates on a trust-on-first-use basis. When you first connect an MCP server, Claude Code may request permission to allow the server to perform certain actions. These permissions persist across sessions, which makes periodic auditing essential for security-conscious developers.
 
@@ -112,9 +112,9 @@ Make MCP permission audits part of your routine security checklist, especially b
 
 ## Related Reading
 
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/)
-- [Claude Code MCP Server Least Privilege Configuration](/claude-skills-guide/articles/claude-code-mcp-server-least-privilege-configuration/)
-- [Claude Code MCP Tool Allow and Deny Lists](/claude-skills-guide/articles/claude-code-mcp-tool-allow-and-deny-lists/)
+- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
+- [Claude Code MCP Server Least Privilege Configuration](/claude-skills-guide/claude-code-mcp-server-least-privilege-configuration/)
+- [Claude Code MCP Tool Allow and Deny Lists](/claude-skills-guide/claude-code-mcp-tool-allow-and-deny-lists/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

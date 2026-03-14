@@ -12,13 +12,13 @@ score: 7
 
 # Claude Code for Ant to Maven Gradle Build Migration
 
-[Migrating legacy Java projects from Ant to Maven or Gradle is a common but error-prone task](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) The XML-heavy build files, custom targets, and dependency management differences make manual migration risky. Claude Code, combined with its specialized skills, provides a powerful toolkit for automating this transition while maintaining build parity.
+[Migrating legacy Java projects from Ant to Maven or Gradle is a common but error-prone task](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) The XML-heavy build files, custom targets, and dependency management differences make manual migration risky. Claude Code, combined with its specialized skills, provides a powerful toolkit for automating this transition while maintaining build parity.
 
 ## Understanding the Migration Challenge
 
 Ant builds rely on explicit task definitions in `build.xml`. Each target specifies exact commands, making dependency management manual and builds difficult to reproduce. Maven introduced convention-over-configuration with standardized project layouts and transitive dependencies. Gradle offers flexibility through DSL-based build scripts with Maven-compatible repositories.
 
-[The migration involves several critical steps: analyzing the Ant build structure, mapping dependencies](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/), converting custom tasks to plugins, and validating build outputs. Claude Code can assist at each stage, but using the right skills amplifies productivity.
+[The migration involves several critical steps: analyzing the Ant build structure, mapping dependencies](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/), converting custom tasks to plugins, and validating build outputs. Claude Code can assist at each stage, but using the right skills amplifies productivity.
 
 ## Analyzing Your Ant Build Structure
 

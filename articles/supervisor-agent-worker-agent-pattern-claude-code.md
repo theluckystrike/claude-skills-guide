@@ -109,7 +109,7 @@ This integration happens through the supervisor's routing logic. The supervisor 
 
 ## Error Handling and Recovery
 
-Robust implementations include error handling at multiple levels. Workers should report failures clearly, allowing the supervisor to make informed decisions about retrying, substituting workers, or escalating to the user.
+Good implementations include error handling at multiple levels. Workers should report failures clearly, allowing the supervisor to make informed decisions about retrying, substituting workers, or escalating to the user.
 
 ```javascript
 // Error handling in worker coordination

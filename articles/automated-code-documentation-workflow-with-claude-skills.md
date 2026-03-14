@@ -12,9 +12,9 @@ score: 8
 
 # Automated Code Documentation Workflow with Claude Skills
 
-[Documentation is the part of software development most developers neglect](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) not because they do not care, but because it is tedious and time-consuming to write by hand. Keeping docs in sync with rapidly changing code makes it worse. Claude skills offer a practical solution: an automated code documentation workflow that generates accurate, developer-friendly documentation directly from your codebase.
+[Documentation is the part of software development most developers neglect](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) not because they do not care, but because it is tedious and time-consuming to write by hand. Keeping docs in sync with rapidly changing code makes it worse. Claude skills offer a practical solution: an automated code documentation workflow that generates accurate, developer-friendly documentation directly from your codebase.
 
-[This guide walks through building that workflow from scratch](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), README files, API references, and change-log summaries.
+[This guide walks through building that workflow from scratch](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), README files, API references, and change-log summaries.
 
 ## What You Need
 

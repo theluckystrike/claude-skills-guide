@@ -58,7 +58,7 @@ cat src/**/*.ts
 cat src/components/Button.ts
 ```
 
-### Leverage Skills Efficiently
+### Use Skills Efficiently
 
 Many Claude skills are designed to work with focused inputs. The `pdf` skill can extract specific sections from documents rather than loading entire files. See the [Claude Skills token optimization guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) for a comprehensive cost-reduction strategy. The `docx` skill similarly works best when you target particular content. This focused approach dramatically reduces token usage.
 

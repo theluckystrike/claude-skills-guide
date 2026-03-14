@@ -16,13 +16,13 @@ score: 8
 
 ## Understanding Connection Timeout Errors
 
-[When Claude Code encounters a connection timeout during a task](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), you'll typically see an error message like:
+[When Claude Code encounters a connection timeout during a task](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), you'll typically see an error message like:
 
 ```
 Error: Connection timeout after 30000ms
 ```
 
-This occurs when [the Claude API fails to respond within the expected time window](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/). The timeout applies to individual API calls, not your entire session. Understanding the difference between request timeouts and session timeouts helps you apply the right fix.
+This occurs when [the Claude API fails to respond within the expected time window](/claude-skills-guide/claude-skills-context-window-management-best-practices/). The timeout applies to individual API calls, not your entire session. Understanding the difference between request timeouts and session timeouts helps you apply the right fix.
 
 Common scenarios triggering timeouts include processing large codebases with the /supermemory skill, generating complex documents with the pdf skill, or running extensive code analysis with the tdd skill.
 

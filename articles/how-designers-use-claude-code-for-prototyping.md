@@ -18,11 +18,11 @@ Prototyping sits at the intersection of design intent and technical implementati
 
 Traditional design workflows often involve multiple handoffs between designers and developers. A Figma mockup travels to a developer who interprets the design, writes the code, and returns something that rarely matches the original vision perfectly. This back-and-forth consumes time and often frustrates both parties.
 
-Claude Code addresses this gap differently. Instead of treating code generation as a separate phase, [designers can engage with code directly through natural language conversations](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) The system understands design terminology and translates it into working implementations.
+Claude Code addresses this gap differently. Instead of treating code generation as a separate phase, [designers can engage with code directly through natural language conversations](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) The system understands design terminology and translates it into working implementations.
 
 ## Getting Started with Design Prototyping
 
-Before diving into specific workflows, ensure Claude Code is installed and you have a few essential skills loaded. [The `frontend-design` skill provides specialized guidance for creating responsive layouts](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)outs, component structures, and styling decisions. Install it alongside `pdf` for generating design documentation and `tdd` if you want test coverage alongside your prototype.
+Before diving into specific workflows, ensure Claude Code is installed and you have a few essential skills loaded. [The `frontend-design` skill provides specialized guidance for creating responsive layouts](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)outs, component structures, and styling decisions. Install it alongside `pdf` for generating design documentation and `tdd` if you want test coverage alongside your prototype.
 
 Initialize a new project for your prototype:
 
@@ -180,9 +180,9 @@ Start with the `frontend-design` skill, describe your component needs, and itera
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Claude Skills for SEO Content Generation Workflow](/claude-skills-guide/articles/claude-skills-for-seo-content-generation-workflow/)
-- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/articles/vibe-coding-with-claude-code-complete-guide-2026/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Claude Skills for SEO Content Generation Workflow](/claude-skills-guide/claude-skills-for-seo-content-generation-workflow/)
+- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/vibe-coding-with-claude-code-complete-guide-2026/)
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

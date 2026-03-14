@@ -140,7 +140,7 @@ Constraints are especially useful for avoiding common pitfalls:
 - "Preserve all existing comments in the refactored code"
 - "Do not create new files; modify only the ones I specify"
 
-## Leverage Claude Code's Skill System
+## Using Claude Code's Skill System
 
 [Claude Code's skill system lets you package effective prompts into reusable tools](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). A well-written skill combines all the techniques above into a reusable format.
 

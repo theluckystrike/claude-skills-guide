@@ -9,10 +9,11 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Claude Code GitHub Actions Notification Setup
 
-[Setting up notifications for GitHub Actions when working with Claude Code](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) ensures you stay informed about workflow status, test results, and deployment outcomes. This guide walks you through configuring notifications across multiple channels.
+[Setting up notifications for GitHub Actions when working with Claude Code](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) ensures you stay informed about workflow status, test results, and deployment outcomes. This guide walks you through configuring notifications across multiple channels.
 
 ## Why Configure GitHub Actions Notifications
 
@@ -235,10 +236,11 @@ Setting up proper GitHub Actions notifications for Claude Code workflows transfo
 
 ## Related Reading
 
-- [Claude Code GitHub Actions Matrix Builds Guide](/claude-skills-guide/articles/claude-code-github-actions-matrix-builds-guide/)
-- [Claude Code GitHub Actions Approval Workflows](/claude-skills-guide/articles/claude-code-github-actions-approval-workflows/)
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Code GitHub Actions Matrix Builds Guide](/claude-skills-guide/claude-code-github-actions-matrix-builds-guide/)
+- [Claude Code GitHub Actions Approval Workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/)
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
+{% endraw %}

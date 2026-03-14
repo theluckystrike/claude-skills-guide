@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Express to Fastify Migration Tutorial 2026
 
-[Fastify has become the preferred choice for Node.js developers seeking better performance](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), built-in TypeScript support, and a more modern API. If you're maintaining an Express.js application in 2026, migrating to Fastify can reduce response times by up to 40% while providing better schema validation and plugin architecture. This tutorial shows you how to use Claude Code and its ecosystem of skills to streamline the migration process.
+[Fastify has become the preferred choice for Node.js developers seeking better performance](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), built-in TypeScript support, and a more modern API. If you're maintaining an Express.js application in 2026, migrating to Fastify can reduce response times by up to 40% while providing better schema validation and plugin architecture. This tutorial shows you how to use Claude Code and its ecosystem of skills to streamline the migration process.
 
 ## Why Migrate from Express to Fastify
 
@@ -22,7 +22,7 @@ Before starting your migration, ensure your current Express application has adeq
 
 ## Setting Up Your Migration Environment
 
-[Create a parallel Fastify project alongside your existing Express application](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) This approach lets you migrate route by route without disrupting production traffic.
+[Create a parallel Fastify project alongside your existing Express application](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) This approach lets you migrate route by route without disrupting production traffic.
 
 ```bash
 # Initialize new Fastify project

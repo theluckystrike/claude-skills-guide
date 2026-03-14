@@ -18,7 +18,7 @@ Message queue automation has become essential for building scalable, resilient s
 
 RabbitMQ implements the Advanced Message Queuing Protocol (AMQP), providing reliable message delivery, routing, and queuing semantics. When you integrate RabbitMQ with an MCP server, you create a programmable layer that can respond to queue events, manage message flows, and coordinate distributed systems without manual intervention.
 
-The MCP server acts as a bridge between your message queue and external automation systems. This pattern works exceptionally well when you need Claude Code or other AI assistants to interact with your message infrastructure programmatically. Before building queue automation, review the [MCP server setup complete guide](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) for foundational configuration.
+The MCP server acts as a bridge between your message queue and external automation systems. This pattern works exceptionally well when you need Claude Code or other AI assistants to interact with your message infrastructure programmatically. Before building queue automation, review the [MCP server setup complete guide](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) for foundational configuration.
 
 ## Setting Up Your MCP Server with RabbitMQ
 
@@ -99,7 +99,7 @@ This pattern mirrors capabilities you might find in skills like the pdf skill or
 
 ## Implementing Dead Letter Queues
 
-Production systems require thorough error handling. Dead letter queues capture messages that fail processing, allowing you to inspect failures without losing data. Pairing dead letter handling with [monitoring and logging for multi-agent systems](/claude-skills-guide/articles/monitoring-and-logging-claude-code-multi-agent-systems/) gives full visibility into failures across your distributed pipeline:
+Production systems require thorough error handling. Dead letter queues capture messages that fail processing, allowing you to inspect failures without losing data. Pairing dead letter handling with [monitoring and logging for multi-agent systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/) gives full visibility into failures across your distributed pipeline:
 
 ```javascript
 async function setupQueuesWithDLQ() {
@@ -156,7 +156,7 @@ channel.prefetch(10); // Process 10 messages concurrently per consumer
 
 ## Integrating with Testing Workflows
 
-Automated message queue systems benefit significantly from test-driven development practices. Using the [Claude TDD skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) helps you build confidence in your queue automation logic before deploying to production. Consider writing integration tests that verify message routing, acknowledgment behavior, and failure handling:
+Automated message queue systems benefit significantly from test-driven development practices. Using the [Claude TDD skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps you build confidence in your queue automation logic before deploying to production. Consider writing integration tests that verify message routing, acknowledgment behavior, and failure handling:
 
 ```javascript
 const assert = require('assert');
@@ -208,7 +208,7 @@ class QueueMonitor {
 }
 ```
 
-This monitoring capability becomes valuable when integrating with larger systems, particularly if you're using [Claude's supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) for tracking system state across distributed components.
+This monitoring capability becomes valuable when integrating with larger systems, particularly if you're using [Claude's supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) for tracking system state across distributed components.
 
 ## Conclusion
 
@@ -218,9 +218,9 @@ The key to success lies in treating your message infrastructure as a programmabl
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/articles/monitoring-and-logging-claude-code-multi-agent-systems/)
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/)
-- [Integrations Hub: MCP Servers and Claude Skills](/claude-skills-guide/articles/integrations-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/)
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
+- [Integrations Hub: MCP Servers and Claude Skills](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

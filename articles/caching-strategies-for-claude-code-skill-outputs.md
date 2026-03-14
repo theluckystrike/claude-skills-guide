@@ -12,7 +12,7 @@ score: 8
 
 # Caching Strategies for Claude Code Skill Outputs
 
-[When you use Claude Code skills repeatedly](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), you likely encounter situations where the same computation or generation task runs multiple times. The `pdf` skill regenerates a document from identical source data. The `frontend-design` skill recomputes the same design tokens. The `tdd` skill reruns identical test suites. Caching eliminates this redundancy by storing and reusing previous outputs, significantly reducing execution time and API costs.
+[When you use Claude Code skills repeatedly](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), you likely encounter situations where the same computation or generation task runs multiple times. The `pdf` skill regenerates a document from identical source data. The `frontend-design` skill recomputes the same design tokens. The `tdd` skill reruns identical test suites. Caching eliminates this redundancy by storing and reusing previous outputs, significantly reducing execution time and API costs.
 
 This guide covers practical caching strategies you can implement for Claude Code skills, from simple file-based caches to sophisticated persistent storage systems. For complementary performance gains, see [Claude skills slow performance speed-up guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/).
 

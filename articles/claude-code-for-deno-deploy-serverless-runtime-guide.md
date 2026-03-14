@@ -16,9 +16,9 @@ Deno Deploy is a serverless runtime that lets you run JavaScript, TypeScript, an
 
 ## Why Deno Deploy Works Well with Claude Code
 
-[Deno Deploy uses standard web platform APIs](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Your handlers are just fetch functions that receive a Request and return a Response. This simplicity means Claude Code can generate correct Deno Deploy code without complex configuration files or framework-specific knowledge.
+[Deno Deploy uses standard web platform APIs](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Your handlers are just fetch functions that receive a Request and return a Response. This simplicity means Claude Code can generate correct Deno Deploy code without complex configuration files or framework-specific knowledge.
 
-[The runtime supports TypeScript natively, which aligns well with Claude Code's strengths in type-aware code generation](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When you describe what you want built, Claude understands TypeScript interfaces and can produce type-safe code from the start.
+[The runtime supports TypeScript natively, which aligns well with Claude Code's strengths in type-aware code generation](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you describe what you want built, Claude understands TypeScript interfaces and can produce type-safe code from the start.
 
 ## Setting Up Your Deno Deploy Project
 

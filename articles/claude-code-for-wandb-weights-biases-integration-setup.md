@@ -16,9 +16,9 @@ Integrating Claude Code with Weights & Biases (W&B) transforms how you track mac
 
 ## Why Combine Claude Code with W&B
 
-[Claude Code brings AI-assisted development to your workflow, while W&B provides experiment tracking](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), model registry, and visualization capabilities. Using them together means you can write training scripts, debug model behavior, and log results without leaving your Claude session. The combination appeals to developers building production ML systems and researchers running iterative experiments.
+[Claude Code brings AI-assisted development to your workflow, while W&B provides experiment tracking](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), model registry, and visualization capabilities. Using them together means you can write training scripts, debug model behavior, and log results without leaving your Claude session. The combination appeals to developers building production ML systems and researchers running iterative experiments.
 
-[W&B integration requires minimal setup](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) You need a W&B account, your API key, and the `wandb` Python package. Claude Code then interacts with W&B through shell commands and Python scripts you write during your session.
+[W&B integration requires minimal setup](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) You need a W&B account, your API key, and the `wandb` Python package. Claude Code then interacts with W&B through shell commands and Python scripts you write during your session.
 
 ## Setting Up W&B with Claude Code
 

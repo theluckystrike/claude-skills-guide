@@ -12,11 +12,11 @@ score: 8
 
 # MCP Server Input Validation Security Patterns
 
-[When building MCP servers that interface with Claude Code](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) against malicious requests. Whether your server handles file operations, database queries, or API integrations, properly validating incoming data prevents injection attacks, data breaches, and unexpected behavior. This guide covers practical security patterns you can implement immediately in your MCP server implementations.
+[When building MCP servers that interface with Claude Code](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) against malicious requests. Whether your server handles file operations, database queries, or API integrations, properly validating incoming data prevents injection attacks, data breaches, and unexpected behavior. This guide covers practical security patterns you can implement immediately in your MCP server implementations.
 
 ## Why Input Validation Matters for MCP Servers
 
-[MCP servers act as bridges between Claude Code and external systems](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/) Without proper validation, an attacker could potentially craft requests that execute unintended operations on your systems. The stakes are particularly high when your servers interact with databases, file systems, or third-party APIs.
+[MCP servers act as bridges between Claude Code and external systems](/claude-skills-guide/mcp-server-permission-auditing-best-practices/) Without proper validation, an attacker could potentially craft requests that execute unintended operations on your systems. The stakes are particularly high when your servers interact with databases, file systems, or third-party APIs.
 
 Consider a scenario where your MCP server accepts user queries to search a database. Without validation, someone might inject SQL commands through the query parameters. Similarly, file path inputs could contain directory traversal sequences like `../../etc/passwd`. Input validation closes these attack vectors before they reach your core logic.
 
@@ -276,7 +276,7 @@ def test_rate_limit_enforced():
     assert limiter.check_rate_limit("client1") is False
 ```
 
-Run these tests as part of your CI/CD pipeline to ensure validation remains effective as your server evolves. For a full vulnerability testing strategy, the [MCP server vulnerability scanning and testing guide](/claude-skills-guide/articles/mcp-server-vulnerability-scanning-and-testing/) provides complementary automated scanning approaches.
+Run these tests as part of your CI/CD pipeline to ensure validation remains effective as your server evolves. For a full vulnerability testing strategy, the [MCP server vulnerability scanning and testing guide](/claude-skills-guide/mcp-server-vulnerability-scanning-and-testing/) provides complementary automated scanning approaches.
 
 ## Conclusion
 
@@ -288,9 +288,9 @@ The investment in thorough validation pays dividends in security and reliability
 
 ## Related Reading
 
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/)
-- [MCP Prompt Injection Attack Prevention Guide](/claude-skills-guide/articles/mcp-prompt-injection-attack-prevention-guide/)
-- [Securing MCP Servers in Production Environments](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/)
+- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
+- [MCP Prompt Injection Attack Prevention Guide](/claude-skills-guide/mcp-prompt-injection-attack-prevention-guide/)
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

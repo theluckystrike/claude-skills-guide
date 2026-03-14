@@ -12,7 +12,7 @@ score: 7
 
 # Firecrawl MCP Server: Web Scraping Automation with Claude
 
-[The Firecrawl MCP server brings powerful web scraping capabilities directly into your Claude workflow](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) By combining Firecrawl's scraping engine with Claude's natural language processing, you can extract data from websites, monitor competitors, and build automated data pipelines without writing brittle scraping scripts. This guide covers setup, configuration, and practical automation scenarios for developers and power users.
+[The Firecrawl MCP server brings powerful web scraping capabilities directly into your Claude workflow](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) By combining Firecrawl's scraping engine with Claude's natural language processing, you can extract data from websites, monitor competitors, and build automated data pipelines without writing brittle scraping scripts. This guide covers setup, configuration, and practical automation scenarios for developers and power users.
 
 ## Prerequisites
 
@@ -201,9 +201,9 @@ Start with simple single-page extractions, then expand to crawling operations as
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [Brave Search MCP Server Research Automation](/claude-skills-guide/articles/brave-search-mcp-server-research-automation/)
-- [Tavily MCP Server Research Automation Guide](/claude-skills-guide/articles/tavily-mcp-server-research-automation-guide/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Brave Search MCP Server Research Automation](/claude-skills-guide/brave-search-mcp-server-research-automation/)
+- [Tavily MCP Server Research Automation Guide](/claude-skills-guide/tavily-mcp-server-research-automation-guide/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

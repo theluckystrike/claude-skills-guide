@@ -207,7 +207,7 @@ Use this table to estimate what you are getting into before you start a new proj
 | [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-guide/claude-skills-for-startup-founders-and-solopreneurs/) | Leveraging skills to move fast as a solo builder |
 | [Best Claude Skills for Solo Developers and Freelancers](/claude-skills-guide/best-claude-skills-for-solo-developers-and-freelancers/) | Top skill combinations for independent developers |
 | [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) | Frontend-specific skill stack and workflows |
-| [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) | Deep dive into the official frontend-design skill |
+| [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) | Detailed guide to the official frontend-design skill |
 | [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) | Using the TDD skill effectively for real projects |
 | [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) | Building a full automated testing pipeline |
 | [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) | Skills that automate and improve code review |

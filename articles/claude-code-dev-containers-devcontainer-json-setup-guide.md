@@ -16,9 +16,9 @@ Dev containers provide a standardized, containerized development environment tha
 
 ## Understanding the Dev Container Workflow
 
-[Dev containers let you develop inside a Docker container](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) while using your local IDE. The `.devcontainer/devcontainer.json` file defines the container image, extensions, and settings. When you open a project in VS Code with the Dev Containers extension, it builds the container and reconnects your editor reliably.
+[Dev containers let you develop inside a Docker container](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) while using your local IDE. The `.devcontainer/devcontainer.json` file defines the container image, extensions, and settings. When you open a project in VS Code with the Dev Containers extension, it builds the container and reconnects your editor reliably.
 
-For [Claude Code users, this approach delivers three key benefits](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) First, consistency—every developer and CI pipeline uses the exact same Node.js, Python, and Claude Code versions. Second, isolation—skill installations and dependencies stay contained, preventing conflicts with host system packages. Third, portability—clone the repo anywhere with Docker installed, and your environment works immediately.
+For [Claude Code users, this approach delivers three key benefits](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) First, consistency—every developer and CI pipeline uses the exact same Node.js, Python, and Claude Code versions. Second, isolation—skill installations and dependencies stay contained, preventing conflicts with host system packages. Third, portability—clone the repo anywhere with Docker installed, and your environment works immediately.
 
 ## Creating Your First devcontainer.json
 

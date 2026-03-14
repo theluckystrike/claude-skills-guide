@@ -12,9 +12,9 @@ score: 9
 
 # Best Claude Skills for Code Review Automation
 
-[Code review is one of the most time-intensive activities in software development](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/). Manually checking pull requests for style violations, security vulnerabilities, and architectural inconsistencies drains developer hours each week. Claude Code skills reduce this load by handling repetitive checks while you focus on logic and architecture.
+[Code review is one of the most time-intensive activities in software development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/). Manually checking pull requests for style violations, security vulnerabilities, and architectural inconsistencies drains developer hours each week. Claude Code skills reduce this load by handling repetitive checks while you focus on logic and architecture.
 
-[Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). Here are the skills that deliver the most value in code review workflows.
+[Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Here are the skills that deliver the most value in code review workflows.
 
 ## Test-Driven Review with the tdd Skill
 

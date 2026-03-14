@@ -12,7 +12,7 @@ score: 7
 
 # Vibe Coding Productivity Tips and Best Practices
 
-[Vibe coding transforms software development by letting you describe intent](/claude-skills-guide/articles/vibe-coding-explained-what-it-is-and-how-it-works/) of code. Getting the most from this workflow requires knowing how to communicate effectively with Claude, which skills accelerate your process, and when to let Claude drive versus when to take the wheel yourself.
+[Vibe coding transforms software development by letting you describe intent](/claude-skills-guide/vibe-coding-explained-what-it-is-and-how-it-works/) of code. Getting the most from this workflow requires knowing how to communicate effectively with Claude, which skills accelerate your process, and when to let Claude drive versus when to take the wheel yourself.
 
 This guide covers practical techniques you can implement immediately to boost your vibe coding output.
 
@@ -124,9 +124,9 @@ The best vibe coding productivity comes from treating it as a learned skill, not
 
 ## Related Reading
 
-- [Vibe Coding Explained: What It Is and How It Works](/claude-skills-guide/articles/vibe-coding-explained-what-it-is-and-how-it-works/)
-- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/articles/vibe-coding-with-claude-code-complete-guide-2026/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Vibe Coding Explained: What It Is and How It Works](/claude-skills-guide/vibe-coding-explained-what-it-is-and-how-it-works/)
+- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/vibe-coding-with-claude-code-complete-guide-2026/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

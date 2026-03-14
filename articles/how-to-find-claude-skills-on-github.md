@@ -12,7 +12,7 @@ score: 7
 
 # How to Find Claude Skills on GitHub: A Practical Guide
 
-[Finding high-quality Claude Code skills on GitHub requires knowing where to look](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) and how to evaluate what you find. This guide covers practical methods for discovering skills, evaluating their quality, and installing them into your workflow.
+[Finding high-quality Claude Code skills on GitHub requires knowing where to look](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) and how to evaluate what you find. This guide covers practical methods for discovering skills, evaluating their quality, and installing them into your workflow.
 
 ## Understanding the Claude Skills Repository Structure
 
@@ -22,7 +22,7 @@ Claude Code skills are markdown files with a specific format. When developers sh
 - **Multi-file collections**: A repository with multiple skill files in a `skills/` or `articles/` directory
 - **Integrated projects**: Skills embedded within larger Claude Code projects or templates
 
-[The skill file follows the `skill.md` specification](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), with YAML front matter defining metadata and the body containing instructions that Claude Code uses when the skill is active.
+[The skill file follows the `skill.md` specification](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), with YAML front matter defining metadata and the body containing instructions that Claude Code uses when the skill is active.
 
 ## Using GitHub Search Effectively
 
@@ -229,9 +229,9 @@ Finding Claude skills on GitHub requires combining effective search techniques w
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [How to Combine Multiple Claude Skills in One Project](/claude-skills-guide/articles/how-to-combine-multiple-claude-skills-in-one-project/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [How to Combine Multiple Claude Skills in One Project](/claude-skills-guide/how-to-combine-multiple-claude-skills-in-one-project/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

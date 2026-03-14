@@ -110,7 +110,7 @@ List your skill in community directories or forums. Skills gain adoption when pe
 ## Related Reading
 
 - [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — The technical foundation for building any skill
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — Deep dive into the format your contribution must follow
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — Technical guide to the format your contribution must follow
 - [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Understand the ecosystem you're contributing to
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*

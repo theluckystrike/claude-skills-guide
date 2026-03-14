@@ -10,11 +10,11 @@ reviewed: true
 score: 8
 ---
 
-[Data analysis workflows demand tools that handle diverse file formats](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), automate repetitive tasks, and transform raw information into actionable insights. Claude Code skills extend the AI assistant's capabilities beyond conversational queries, enabling programmatic manipulation of spreadsheets, documents, and datasets. This guide examines the most valuable Claude skills for data analysis workflows, focusing on practical applications developers and power users can implement immediately.
+[Data analysis workflows demand tools that handle diverse file formats](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), automate repetitive tasks, and transform raw information into actionable insights. Claude Code skills extend the AI assistant's capabilities beyond conversational queries, enabling programmatic manipulation of spreadsheets, documents, and datasets. This guide examines the most valuable Claude skills for data analysis workflows, focusing on practical applications developers and power users can implement immediately.
 
 ## Spreadsheet Mastery with xlsx Skill
 
-[The xlsx skill stands as the cornerstone for any data analysis workflow](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) involving tabular data. This skill enables creation, modification, and analysis of Excel files, CSV files, and other spreadsheet formats while preserving formulas and formatting.
+[The xlsx skill stands as the cornerstone for any data analysis workflow](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) involving tabular data. This skill enables creation, modification, and analysis of Excel files, CSV files, and other spreadsheet formats while preserving formulas and formatting.
 
 ```
 /xlsx Create a new spreadsheet in sales-analysis.xlsx with columns: Product, Q1_Sales, Q2_Sales. Add a row for Widget A (15000, 17500), Widget B (22000, 19500), Widget C (18000, 21000). Add a SUM formula row at the bottom.

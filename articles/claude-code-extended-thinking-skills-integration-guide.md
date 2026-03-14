@@ -16,13 +16,13 @@ Claude Code's [extended thinking](/claude-skills-guide/claude-opus-orchestrator-
 
 ## What Extended Thinking Adds
 
-[When you enable extended thinking in Claude Code, Claude spends more tokens reasoning before responding](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) This is most useful for:
+[When you enable extended thinking in Claude Code, Claude spends more tokens reasoning before responding](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This is most useful for:
 
 - Architectural decisions with many trade-offs
 - Debugging complex multi-service issues
 - Analyzing large specifications for inconsistencies
 
-[Skills complement extended thinking by providing the domain context Claude needs to reason well](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)—persistent memory, structured document data, and systematic workflows.
+[Skills complement extended thinking by providing the domain context Claude needs to reason well](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)—persistent memory, structured document data, and systematic workflows.
 
 ## Using /supermemory for Persistent Context
 

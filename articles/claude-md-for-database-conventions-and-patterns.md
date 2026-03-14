@@ -16,9 +16,9 @@ Database consistency remains one of the most challenging aspects of software dev
 
 ## How Claude Skills Work with Database Conventions
 
-[Claude Code loads skills from `~/.claude/skills/` as plain Markdown files](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) Each skill contains instructions that guide Claude's behavior when you activate it. For database conventions, you can create a custom skill that defines your team's standards for naming tables, columns, relationships, and indexes.
+[Claude Code loads skills from `~/.claude/skills/` as plain Markdown files](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Each skill contains instructions that guide Claude's behavior when you activate it. For database conventions, you can create a custom skill that defines your team's standards for naming tables, columns, relationships, and indexes.
 
-[The power of using Claude skills for database work lies in their ability to apply consistent rules](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) across every interaction. Whether you're generating new schemas, reviewing existing code, or refactoring legacy tables, the skill ensures your conventions stay intact throughout the development lifecycle.
+[The power of using Claude skills for database work lies in their ability to apply consistent rules](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) across every interaction. Whether you're generating new schemas, reviewing existing code, or refactoring legacy tables, the skill ensures your conventions stay intact throughout the development lifecycle.
 
 ## Creating a Database Conventions Skill
 
@@ -132,9 +132,9 @@ Claude's markdown skills provide an effective framework for enforcing database c
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [Claude MD for Backend Projects Best Practices](/claude-skills-guide/articles/claude-md-for-backend-projects-best-practices/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [Claude MD for Backend Projects Best Practices](/claude-skills-guide/claude-md-for-backend-projects-best-practices/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

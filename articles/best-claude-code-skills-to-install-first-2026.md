@@ -12,7 +12,7 @@ score: 9
 
 # Best Claude Code Skills to Install First in 2026
 
-[Claude Code's extensibility system works through skills — Markdown files stored in `~/.claude/skills/`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` in a session, Claude loads those instructions and operates as a domain specialist. Here are the skills worth adding first.
+[Claude Code's extensibility system works through skills — Markdown files stored in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` in a session, Claude loads those instructions and operates as a domain specialist. Here are the skills worth adding first.
 
 ## How Skills Work
 
@@ -56,7 +56,7 @@ The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/
 /tdd identify missing edge cases in this test suite: [paste tests]
 ```
 
-[The skill works with pytest, Jest, Vitest, and Bun Test](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) For API developers and service teams, it catches regressions before they reach production by structuring development around failing tests first.
+[The skill works with pytest, Jest, Vitest, and Bun Test](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) For API developers and service teams, it catches regressions before they reach production by structuring development around failing tests first.
 
 ## Spreadsheet Automation with the xlsx Skill
 

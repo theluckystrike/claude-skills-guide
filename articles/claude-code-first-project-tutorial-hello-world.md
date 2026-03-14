@@ -16,13 +16,13 @@ Getting started with Claude Code takes less than ten minutes. This tutorial walk
 
 ## Prerequisites
 
-[Before you begin, ensure you have the prerequisites installed](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+[Before you begin, ensure you have the prerequisites installed](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 
 - **Node.js 18+** installed on your machine
 - **A Claude Code account** with API access
 - **Terminal access** with your preferred shell
 
-[Check your Node.js version before starting](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+[Check your Node.js version before starting](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
 
 ```bash
 node --version

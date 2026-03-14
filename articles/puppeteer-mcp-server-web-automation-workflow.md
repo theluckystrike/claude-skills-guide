@@ -16,7 +16,7 @@ The Puppeteer MCP server brings powerful browser automation capabilities to Clau
 
 ## Setting Up the Puppeteer MCP Server
 
-Before implementing automation workflows, [you need to configure the Puppeteer MCP server in your Claude Code environment](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/). The server requires Node.js 18 or higher and Puppeteer as a dependency.
+Before implementing automation workflows, [you need to configure the Puppeteer MCP server in your Claude Code environment](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/). The server requires Node.js 18 or higher and Puppeteer as a dependency.
 
 Install the Puppeteer MCP server globally:
 
@@ -128,7 +128,7 @@ For example, you can capture dashboard screenshots and generate PDF reports in a
 "Take screenshots of each tab in the analytics dashboard, then compile them into a single PDF report using the pdf skill"
 ```
 
-Similarly, [combining with the `tdd` skill allows you to write browser-based tests](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) that verify UI behavior:
+Similarly, [combining with the `tdd` skill allows you to write browser-based tests](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) that verify UI behavior:
 
 ```
 "Using the tdd skill, create tests that verify the login form shows appropriate error messages for invalid credentials"
@@ -162,9 +162,9 @@ For applications requiring authentication, consider using browser contexts to is
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

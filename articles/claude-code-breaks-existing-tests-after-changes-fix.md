@@ -16,11 +16,11 @@ When Claude Code generates or modifies code, existing test suites sometimes fail
 
 ## Why Claude Code Breaks Existing Tests
 
-[Claude Code makes decisions based on the context you provide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) When you ask it to implement a feature or refactor code, it may modify existing functions to fit the new requirements. These modifications sometimes change behavior in ways that invalidate existing test assertions.
+[Claude Code makes decisions based on the context you provide](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) When you ask it to implement a feature or refactor code, it may modify existing functions to fit the new requirements. These modifications sometimes change behavior in ways that invalidate existing test assertions.
 
 Common scenarios include:
 
-- **[Function signature changes that break existing tests](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)**: Claude renames parameters or changes return types to improve clarity
+- **[Function signature changes that break existing tests](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)**: Claude renames parameters or changes return types to improve clarity
 - **Logic modifications**: Refactored code handles edge cases differently than the original implementation
 - **Dependency updates**: Imports or external service calls get updated during the session
 - **Default value changes**: New default parameters affect test expectations

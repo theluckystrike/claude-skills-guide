@@ -12,9 +12,9 @@ score: 7
 
 # Claude Code German Enterprise Compliance Workflow Tips
 
-[German enterprises face unique compliance challenges](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Between DSGVO requirements, industry-specific regulations like BaFin for financial services, and ISO 27001 certification demands, development teams need tools that accelerate compliance without compromising security. Claude Code offers a practical approach to building compliant workflows, but German enterprises must configure it thoughtfully.
+[German enterprises face unique compliance challenges](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Between DSGVO requirements, industry-specific regulations like BaFin for financial services, and ISO 27001 certification demands, development teams need tools that accelerate compliance without compromising security. Claude Code offers a practical approach to building compliant workflows, but German enterprises must configure it thoughtfully.
 
-[This guide covers actionable strategies for integrating Claude Code into enterprise compliance processes](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) while respecting German regulatory requirements.
+[This guide covers actionable strategies for integrating Claude Code into enterprise compliance processes](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) while respecting German regulatory requirements.
 
 ## Understanding the German Compliance Context
 

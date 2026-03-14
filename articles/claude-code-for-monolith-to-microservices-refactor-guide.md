@@ -12,9 +12,9 @@ score: 8
 
 # Claude Code for Monolith to Microservices Refactor Guide
 
-[Refactoring a monolith into microservices represents one of the most challenging architectural transitions](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) in modern software development. The process demands careful planning, precise execution, and systematic testing. Claude Code transforms this complex migration into a manageable workflow by providing intelligent assistance throughout every phase—from initial analysis to deployment verification.
+[Refactoring a monolith into microservices represents one of the most challenging architectural transitions](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) in modern software development. The process demands careful planning, precise execution, and systematic testing. Claude Code transforms this complex migration into a manageable workflow by providing intelligent assistance throughout every phase—from initial analysis to deployment verification.
 
-[This guide demonstrates how to use Claude Code and its ecosystem of skills to execute a successful monolith-to-microservices transformation](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+[This guide demonstrates how to use Claude Code and its ecosystem of skills to execute a successful monolith-to-microservices transformation](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
 
 ## Understanding Your Starting Point
 

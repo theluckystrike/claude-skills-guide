@@ -12,11 +12,11 @@ score: 9
 
 # Claude Code Dotfiles Management and Skill Sync Workflow
 
-[Managing Claude Code configuration across multiple machines](/claude-skills-guide/articles/shared-claude-skills-across-monorepo-multiple-packages/) requires a deliberate approach to dotfiles and skill synchronization. This guide presents a practical workflow for tracking your Claude settings in git, organizing skills for portability, and keeping everything synchronized between workstations.
+[Managing Claude Code configuration across multiple machines](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/) requires a deliberate approach to dotfiles and skill synchronization. This guide presents a practical workflow for tracking your Claude settings in git, organizing skills for portability, and keeping everything synchronized between workstations.
 
 ## Why Track Claude Config in Dotfiles
 
-[Your Claude Code setup includes several directories that benefit from version control](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/): skill definitions, custom prompts, configuration files, and agent instructions. When you work across multiple machines—perhaps a desktop at home and a laptop on the go—having these tracked in git eliminates the friction of manual replication.
+[Your Claude Code setup includes several directories that benefit from version control](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/): skill definitions, custom prompts, configuration files, and agent instructions. When you work across multiple machines—perhaps a desktop at home and a laptop on the go—having these tracked in git eliminates the friction of manual replication.
 
 The standard Claude Code directories worth tracking include `~/.claude/skills/` for skill definitions, `~/.claude/agents/` for custom agent configurations, and `~/.claude/settings.json` for user preferences. Each of these can become part of a dotfiles repository with appropriate `.gitignore` rules.
 

@@ -12,13 +12,13 @@ score: 8
 
 # Claude Code Creates Files in Wrong Directory Fix
 
-One of the most frustrating issues developers encounter when working with Claude Code skills is the dreaded [file path confusion when using Claude Code skills](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). You ask the AI to create a new component in your src/components directory, and somehow it ends up in the root or an entirely different location. This issue stems from Claude Code's working directory management and how skills handle relative paths. In this guide, we'll examine the root causes and provide concrete solutions.
+One of the most frustrating issues developers encounter when working with Claude Code skills is the dreaded [file path confusion when using Claude Code skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). You ask the AI to create a new component in your src/components directory, and somehow it ends up in the root or an entirely different location. This issue stems from Claude Code's working directory management and how skills handle relative paths. In this guide, we'll examine the root causes and provide concrete solutions.
 
 ## Understanding the Working Directory Problem
 
 When Claude Code executes a skill that writes files, it uses the current [working directory as the baseline](/claude-skills-guide/claude-code-ignores-claude-md-instructions-fix/). However, this working directory can shift depending on how you invoke the skill and what context is active. If you're working within a nested project structure or have multiple terminal sessions, the AI may resolve relative paths differently than expected.
 
-The issue becomes more pronounced when using [community skills like **frontend-design** or **pdf** that generate multiple files](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) across different directories. These skills often assume a specific project structure, and when that assumption doesn't match your actual setup, files get created in the wrong location.
+The issue becomes more pronounced when using [community skills like **frontend-design** or **pdf** that generate multiple files](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) across different directories. These skills often assume a specific project structure, and when that assumption doesn't match your actual setup, files get created in the wrong location.
 
 ## Common Causes of File Path Issues
 

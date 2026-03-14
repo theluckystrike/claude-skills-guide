@@ -12,11 +12,11 @@ score: 8
 
 # How to Write Effective CLAUDE.md for Your Project
 
-When you start a conversation with Claude Code in your project directory, [it automatically looks for a `CLAUDE.md` file](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) This file serves as the instruction manual that shapes how Claude understands and interacts with your codebase. A well-crafted CLAUDE.md can dramatically improve the quality and accuracy of Claude's responses, making your development workflow smoother and more productive.
+When you start a conversation with Claude Code in your project directory, [it automatically looks for a `CLAUDE.md` file](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This file serves as the instruction manual that shapes how Claude understands and interacts with your codebase. A well-crafted CLAUDE.md can dramatically improve the quality and accuracy of Claude's responses, making your development workflow smoother and more productive.
 
 ## What CLAUDE.md Does
 
-[Claude Code reads your CLAUDE.md file at the start of each conversation](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) and uses its contents to inform every decision it makes. Think of it as onboarding documentation for an intelligent assistant. Without explicit guidance, Claude makes assumptions about your tech stack, coding style, and project structure. With a proper CLAUDE.md, you eliminate guesswork and establish clear expectations from the first prompt.
+[Claude Code reads your CLAUDE.md file at the start of each conversation](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) and uses its contents to inform every decision it makes. Think of it as onboarding documentation for an intelligent assistant. Without explicit guidance, Claude makes assumptions about your tech stack, coding style, and project structure. With a proper CLAUDE.md, you eliminate guesswork and establish clear expectations from the first prompt.
 
 The file lives in your project root and persists across sessions. Unlike chat history, which resets, CLAUDE.md provides consistent context that Claude references throughout your working session.
 
@@ -123,7 +123,7 @@ When you then ask Claude to create a new component, it automatically follows the
 
 ## Common Mistakes to Avoid
 
-Avoid making your CLAUDE.md too verbose. Claude works best with concise, scannable instructions. If your file exceeds 200 lines, consider splitting it into focused files like `CLAUDE.md` for high-level context and `.claude/rules/` for detailed patterns. The [CLAUDE.md best practices for large codebases guide](/claude-skills-guide/articles/claude-md-best-practices-for-large-codebases/) explores this multi-file approach in depth.
+Avoid making your CLAUDE.md too verbose. Claude works best with concise, scannable instructions. If your file exceeds 200 lines, consider splitting it into focused files like `CLAUDE.md` for high-level context and `.claude/rules/` for detailed patterns. The [CLAUDE.md best practices for large codebases guide](/claude-skills-guide/claude-md-best-practices-for-large-codebases/) explores this multi-file approach in depth.
 
 Do not include information that Claude can discover by reading your code. Dependencies, file contents, and error messages are already accessible to Claude through its built-in tools.
 
@@ -133,7 +133,7 @@ Avoid conflicting instructions. If your CLAUDE.md says "always write tests first
 
 Update your CLAUDE.md when your project evolves. New team members, changing frameworks, or shifted priorities should all trigger a review of your instructions. Treat it as living documentation that grows with your project.
 
-A good practice is to review your CLAUDE.md during sprint retrospectives or when onboarding new developers. Their fresh perspective often reveals unclear or missing instructions. If Claude ever starts ignoring your file, the [troubleshooting guide for Claude ignoring CLAUDE.md instructions](/claude-skills-guide/articles/claude-code-ignores-claude-md-instructions-fix/) walks through the most common causes.
+A good practice is to review your CLAUDE.md during sprint retrospectives or when onboarding new developers. Their fresh perspective often reveals unclear or missing instructions. If Claude ever starts ignoring your file, the [troubleshooting guide for Claude ignoring CLAUDE.md instructions](/claude-skills-guide/claude-code-ignores-claude-md-instructions-fix/) walks through the most common causes.
 
 ## Conclusion
 
@@ -143,9 +143,9 @@ Start with the basics—project overview, coding conventions, and directory stru
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [Claude MD File Complete Guide: What It Does](/claude-skills-guide/articles/claude-md-file-complete-guide-what-it-does/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [Claude MD File Complete Guide: What It Does](/claude-skills-guide/claude-md-file-complete-guide-what-it-does/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

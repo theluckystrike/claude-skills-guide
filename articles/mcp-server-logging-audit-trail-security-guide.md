@@ -16,14 +16,14 @@ When building Model Context Protocol (MCP) servers, logging and audit trails are
 
 ## Why Logging Matters for MCP Servers
 
-[MCP servers act as bridges between Claude and external services](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) Each request passing through your server represents a potential security boundary crossing. Without proper logging, you lose visibility into:
+[MCP servers act as bridges between Claude and external services](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) Each request passing through your server represents a potential security boundary crossing. Without proper logging, you lose visibility into:
 
 - Who accessed what resources and when
 - Which tools were invoked and with what parameters
 - Failed authentication attempts or permission violations
 - Performance bottlenecks and error patterns
 
-Whether you're building a simple MCP server for personal use or deploying one across an organization, [implementing structured logging from day one saves significant debugging time](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/)
+Whether you're building a simple MCP server for personal use or deploying one across an organization, [implementing structured logging from day one saves significant debugging time](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
 
 ## Structured Logging Implementation
 
@@ -233,9 +233,9 @@ Remember: the best logging system is one that gets reviewed. Build dashboards, s
 
 ## Related Reading
 
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/)
-- [Securing MCP Servers in Production Environments](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/)
-- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/)
+- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
+- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

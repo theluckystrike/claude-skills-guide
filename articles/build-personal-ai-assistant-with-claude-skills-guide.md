@@ -12,13 +12,13 @@ score: 8
 
 # Build Personal AI Assistant with Claude Skills Guide
 
-[A personal AI assistant is useful only if it actually knows how you work](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) — your coding conventions, your preferred tools, your recurring tasks. Generic AI chat gets you halfway there. Claude skills close the gap by letting you encode your personal workflows as reusable, invokable behaviors that persist across every session.
+[A personal AI assistant is useful only if it actually knows how you work](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — your coding conventions, your preferred tools, your recurring tasks. Generic AI chat gets you halfway there. Claude skills close the gap by letting you encode your personal workflows as reusable, invokable behaviors that persist across every session.
 
 This guide walks through [building a personal AI assistant](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) tailored to a developer's daily workflow. You will set up persistent memory, create custom skills for your most common tasks, and wire them into a system that feels genuinely assistive rather than just reactive.
 
 ## What Makes Claude Skills Different from Plain Prompting
 
-Before building, understand what skills actually are. [Claude skills are Markdown files stored in `~/.claude/skills/`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` inside a Claude Code session, Claude reads that file as part of its context and follows the instructions inside it.
+Before building, understand what skills actually are. [Claude skills are Markdown files stored in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` inside a Claude Code session, Claude reads that file as part of its context and follows the instructions inside it.
 
 This means skills are:
 - **Persistent**: they do not disappear when you close a session

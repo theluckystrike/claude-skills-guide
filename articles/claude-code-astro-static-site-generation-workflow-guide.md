@@ -9,14 +9,15 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Claude Code Astro Static Site Generation Workflow Guide
 
-[Building static sites with Claude Code and Astro creates a powerful combination](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) for developers who want AI-assisted development without sacrificing performance. This guide covers practical workflows, skill integration, and automation patterns that work in 2026.
+[Building static sites with Claude Code and Astro creates a powerful combination](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) for developers who want AI-assisted development without sacrificing performance. This guide covers practical workflows, skill integration, and automation patterns that work in 2026.
 
 ## Why Astro with Claude Code
 
-Astro's zero-JavaScript-by-default architecture makes it ideal for content-focused sites, blogs, and documentation. When paired with Claude Code, you get [AI assistance throughout the development process](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)ss—from initial scaffolding to final deployment.
+Astro's zero-JavaScript-by-default architecture makes it ideal for content-focused sites, blogs, and documentation. When paired with Claude Code, you get [AI assistance throughout the development process](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)ss—from initial scaffolding to final deployment.
 
 The workflow uses Claude skills like `/frontend-design` for component creation, `/tdd` for test coverage, and `/supermemory` for context retention across sessions. Each skill adds capabilities without requiring additional infrastructure.
 
@@ -227,3 +228,4 @@ Build incrementally, test consistently, and deploy automatically. Your static si
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

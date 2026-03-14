@@ -12,7 +12,7 @@ score: 8
 
 # Building Production AI Agents with Claude Skills in 2026
 
-[Claude Code skills are `.md` files that extend Claude's behavior for specific tasks](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When building production AI agents that run autonomously, these skills provide specialized context — for document processing, TDD workflows, memory management, and more. This guide covers practical patterns for composing them into agents that handle real workloads.
+[Claude Code skills are `.md` files that extend Claude's behavior for specific tasks](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When building production AI agents that run autonomously, these skills provide specialized context — for document processing, TDD workflows, memory management, and more. This guide covers practical patterns for composing them into agents that handle real workloads.
 
 ## Core Skills for Agent Development
 
@@ -25,7 +25,7 @@ The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/
 claude -p "/tdd analyze the agent modules in ./src and generate missing test cases"
 ```
 
-[This generates test cases based on your agent's actual implementation](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — state management, tool invocation sequences, and response validation.
+[This generates test cases based on your agent's actual implementation](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — state management, tool invocation sequences, and response validation.
 
 ### PDF Skill for Document Processing
 

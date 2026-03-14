@@ -16,9 +16,9 @@ Data science workflows involve repetitive tasks: cleaning datasets, generating r
 
 ## Activating Data Science Skills
 
-[Claude Code skills are Markdown files that define specialized behavior](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) The system loads these skills when you invoke them with a forward slash command. For data science work, several skills prove particularly valuable.
+[Claude Code skills are Markdown files that define specialized behavior](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) The system loads these skills when you invoke them with a forward slash command. For data science work, several skills prove particularly valuable.
 
-[The `/pdf` skill handles PDF document processing](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) or extracting tables from reports. The `/xlsx` skill manages spreadsheet operations, enabling you to read, write, and transform Excel files programmatically. The `/tdd` skill applies test-driven development principles, useful when building reproducible analysis pipelines.
+[The `/pdf` skill handles PDF document processing](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) or extracting tables from reports. The `/xlsx` skill manages spreadsheet operations, enabling you to read, write, and transform Excel files programmatically. The `/tdd` skill applies test-driven development principles, useful when building reproducible analysis pipelines.
 
 To activate a skill in your Claude Code session, simply type:
 
@@ -166,9 +166,9 @@ The skill system continues evolving as the community contributes new capabilitie
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/)
-- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/)
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

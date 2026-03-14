@@ -16,7 +16,7 @@ When you work with large codebases in Claude Code, you may encounter an out of m
 
 ## Why Large Codebases Trigger Memory Errors
 
-[Claude Code loads project files into memory during each session](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/) A monorepo with hundreds of thousands of lines of code can easily overwhelm the available memory allocation. When you invoke skills like `/tdd` or `/frontend-design`, additional overhead gets added on top of that baseline. The memory consumption compounds when you chain multiple skills together or when Claude Code attempts to index entire directory structures for semantic search.
+[Claude Code loads project files into memory during each session](/claude-skills-guide/claude-skills-context-window-management-best-practices/) A monorepo with hundreds of thousands of lines of code can easily overwhelm the available memory allocation. When you invoke skills like `/tdd` or `/frontend-design`, additional overhead gets added on top of that baseline. The memory consumption compounds when you chain multiple skills together or when Claude Code attempts to index entire directory structures for semantic search.
 
 The error typically manifests as a process termination with a message indicating the system ran out of memory. You might see the Claude Code session crash unexpectedly or become unresponsive after loading a large file or directory.
 

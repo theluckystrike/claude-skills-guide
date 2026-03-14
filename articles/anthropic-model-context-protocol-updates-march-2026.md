@@ -12,11 +12,11 @@ score: 7
 
 # MCP Updates March 2026: What Developers Need to Know
 
-[The Model Context Protocol (MCP) March 2026 release brings meaningful improvements](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) for developers building Claude Code workflows. This article covers the key changes, what they mean in practice, and how to migrate existing configurations.
+[The Model Context Protocol (MCP) March 2026 release brings meaningful improvements](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) for developers building Claude Code workflows. This article covers the key changes, what they mean in practice, and how to migrate existing configurations.
 
 ## What Changed in March 2026
 
-The update focuses on three areas: [enhanced tool discovery, improved state management, and streamlined authentication](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/) for enterprise deployments.
+The update focuses on three areas: [enhanced tool discovery, improved state management, and streamlined authentication](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/) for enterprise deployments.
 
 ### Enhanced Tool Discovery
 

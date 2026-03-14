@@ -12,7 +12,7 @@ score: 7
 
 # Tavily MCP Server: Research Automation Guide
 
-[Building research automation into your Claude Code workflow](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) opens up powerful possibilities for gathering, processing, and synthesizing information from across the web. The Tavily MCP Server provides a direct integration between Tavily's search capabilities and Claude's contextual understanding, enabling you to automate research tasks that previously required manual effort.
+[Building research automation into your Claude Code workflow](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) opens up powerful possibilities for gathering, processing, and synthesizing information from across the web. The Tavily MCP Server provides a direct integration between Tavily's search capabilities and Claude's contextual understanding, enabling you to automate research tasks that previously required manual effort.
 
 This guide covers practical implementation patterns for developers and power users looking to incorporate Tavily into their Claude skills workflow.
 
@@ -121,7 +121,7 @@ When building Tavily-powered research workflows, consider these optimization str
 - **Cache frequently accessed results**: Store research findings using supermemory to avoid repeated searches
 - **Limit result sets**: Request only what you need to reduce latency and processing overhead
 - **Chain strategically**: Break complex research into smaller, manageable steps with clear intermediate checkpoints
-- **Use semantic filters**: Leverage Tavily's query refinement to target specific aspects of your research topic
+- **Use semantic filters**: Apply Tavily's query refinement to target specific aspects of your research topic
 
 ## Troubleshooting Common Issues
 
@@ -139,9 +139,9 @@ For teams, consider documenting your research automation patterns as reusable sk
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [Claude Skills for SEO Content Generation Workflow](/claude-skills-guide/articles/claude-skills-for-seo-content-generation-workflow/)
-- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Skills for SEO Content Generation Workflow](/claude-skills-guide/claude-skills-for-seo-content-generation-workflow/)
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -12,7 +12,7 @@ score: 9
 
 # Claude Code Crashes When Loading Skill: Debug Steps
 
-[When Claude Code fails loading a skill, it usually comes down to one of three things](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/): invalid YAML in the skill file, a missing file, or a naming mismatch. Here's a systematic approach to find and fix the problem.
+[When Claude Code fails loading a skill, it usually comes down to one of three things](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/): invalid YAML in the skill file, a missing file, or a naming mismatch. Here's a systematic approach to find and fix the problem.
 
 ## What a Skill File Actually Is
 

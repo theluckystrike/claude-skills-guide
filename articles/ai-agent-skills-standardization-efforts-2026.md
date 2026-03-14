@@ -12,13 +12,13 @@ score: 8
 
 # AI Agent Skills Standardization Efforts 2026
 
-[skills built for one platform rarely work elsewhere](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) Developers invest significant time crafting capabilities for Claude, Cursor, or other AI assistants, only to find those skills incompatible when switching platforms. A growing movement addresses this fragmentation through standardization efforts that promise true skill portability.
+[skills built for one platform rarely work elsewhere](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Developers invest significant time crafting capabilities for Claude, Cursor, or other AI assistants, only to find those skills incompatible when switching platforms. A growing movement addresses this fragmentation through standardization efforts that promise true skill portability.
 
 ## The Portability Problem
 
 [comprehensive frontend-design skill for generating React components](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) with Tailwind CSS. This skill includes detailed prompts for component architecture, accessibility compliance, and responsive design patterns. When that developer switches from Claude to another AI assistant, they face rebuilding everything from scratch.
 
-The same issue affects enterprise teams. [A company standardizing on AI-assisted development needs skills that work consistently](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) across all team members' chosen tools. Without standardization, knowledge stays locked within specific platforms.
+The same issue affects enterprise teams. [A company standardizing on AI-assisted development needs skills that work consistently](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) across all team members' chosen tools. Without standardization, knowledge stays locked within specific platforms.
 
 ## Emerging Standards in 2026
 

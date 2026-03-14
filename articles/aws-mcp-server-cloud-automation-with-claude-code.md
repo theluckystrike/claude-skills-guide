@@ -12,11 +12,11 @@ score: 7
 
 # AWS MCP Server Cloud Automation with Claude Code
 
-[The Model Context Protocol (MCP) server for AWS enables Claude Code to interact directly with your cloud infrastructure](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) This integration transforms how developers manage AWS resources, allowing you to provision, configure, and monitor cloud services through natural language commands. This guide covers practical setup and automation patterns for AWS MCP server cloud automation with Claude Code.
+[The Model Context Protocol (MCP) server for AWS enables Claude Code to interact directly with your cloud infrastructure](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) This integration transforms how developers manage AWS resources, allowing you to provision, configure, and monitor cloud services through natural language commands. This guide covers practical setup and automation patterns for AWS MCP server cloud automation with Claude Code.
 
 ## Setting Up the AWS MCP Server
 
-Before automating AWS resources, [you need to configure the MCP server to authenticate with your AWS account](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/) The server supports multiple authentication methods including AWS credentials file, environment variables, and IAM roles.
+Before automating AWS resources, [you need to configure the MCP server to authenticate with your AWS account](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/) The server supports multiple authentication methods including AWS credentials file, environment variables, and IAM roles.
 
 Install the AWS MCP server package using npm:
 

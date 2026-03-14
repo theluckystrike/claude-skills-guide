@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Claude Code Container Debugging: Docker Logs Workflow Guide
 
@@ -18,7 +19,7 @@ Debugging containerized applications requires a systematic approach to log analy
 
 When your application runs inside a Docker container, traditional debugging tools often behave differently. The isolation that makes containers secure also complicates investigation. You cannot simply attach a debugger to a running process, and filesystem access requires understanding container layers and mounts.
 
-The solution involves mastering Docker's inspection capabilities combined with effective log aggregation. [Modern developers use skills like the `pdf` skill for extracting information from documentation](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)n, `supermemory` skill for maintaining context across debugging sessions, and the `tdd` skill for reproducing issues through tests.
+The solution involves mastering Docker's inspection capabilities combined with effective log aggregation. [Modern developers use skills like the `pdf` skill for extracting information from documentation](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)n, `supermemory` skill for maintaining context across debugging sessions, and the `tdd` skill for reproducing issues through tests.
 
 ## Essential Docker Logs Commands
 
@@ -248,3 +249,4 @@ Claude Code enhances this workflow through skills that maintain context, generat
 - [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Browse more infrastructure and DevOps skill workflows for container-heavy environments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

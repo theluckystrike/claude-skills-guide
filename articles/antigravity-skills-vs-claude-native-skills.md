@@ -12,11 +12,11 @@ score: 9
 
 # Antigravity Skills vs Claude Native Skills: What's the Difference?
 
-When you start using Claude Code, [two categories of skills: native skills that ship with Claude and community-built skills](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) and community-built skills distributed through the Antigravity registry. Understanding the difference helps you build a more productive workflow.
+When you start using Claude Code, [two categories of skills: native skills that ship with Claude and community-built skills](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) and community-built skills distributed through the Antigravity registry. Understanding the difference helps you build a more productive workflow.
 
 ## How Claude Skills Actually Work
 
-[Skills are Markdown files stored in `~/.claude/skills/`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` in a Claude Code session, Claude loads the corresponding file and uses its instructions to guide behavior. There is no package manager, no `claude skills install` CLI command, and no Python import API — skills are plain `.md` files that you place in the skills directory.
+[Skills are Markdown files stored in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` in a Claude Code session, Claude loads the corresponding file and uses its instructions to guide behavior. There is no package manager, no `claude skills install` CLI command, and no Python import API — skills are plain `.md` files that you place in the skills directory.
 
 To use any skill, invoke it by name:
 

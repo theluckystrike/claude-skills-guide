@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 [Sharing Claude skills across multiple projects](/claude-skills-guide/how-do-i-make-a-claude-skill-available-organization-wide/) ways to standardize your development workflow and avoid duplicating effort. Whether you're working on a monorepo with multiple packages or maintaining separate repositories for different applications, having a strategy for skill sharing can significantly boost your productivity.
 
@@ -162,3 +163,4 @@ Start small with your most valuable skills, then expand as you identify more opp
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn the foundational skill concepts before setting up cross-project sharing infrastructure.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

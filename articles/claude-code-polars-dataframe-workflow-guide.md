@@ -12,7 +12,7 @@ score: 7
 
 # Claude Code Polars DataFrame Workflow Guide
 
-[Polars has become the go-to library for data manipulation in Python](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), offering blazing-fast performance through Rust-based execution. When combined with Claude Code's AI assistance, you can build reliable data pipelines that handle millions of rows without breaking a sweat. This guide shows you how to use Claude Code for Polars workflows, whether you're cleaning messy datasets or building complex transformation chains.
+[Polars has become the go-to library for data manipulation in Python](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), offering blazing-fast performance through Rust-based execution. When combined with Claude Code's AI assistance, you can build reliable data pipelines that handle millions of rows without breaking a sweat. This guide shows you how to use Claude Code for Polars workflows, whether you're cleaning messy datasets or building complex transformation chains.
 
 ## Setting Up Your Polars Environment
 
@@ -198,9 +198,9 @@ Remember to profile your pipelines and identify bottlenecks before optimizing. P
 
 ## Related Reading
 
-- [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [How Data Scientists Use Claude Code for Analysis](/claude-skills-guide/articles/how-data-scientists-use-claude-code-for-analysis/)
+- [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [How Data Scientists Use Claude Code for Analysis](/claude-skills-guide/how-data-scientists-use-claude-code-for-analysis/)
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

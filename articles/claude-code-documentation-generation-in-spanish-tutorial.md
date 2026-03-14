@@ -12,9 +12,9 @@ score: 7
 
 # Claude Code Documentation Generation in Spanish Tutorial
 
-[Documentation is essential for any software project, but writing it manually in multiple languages](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) takes significant time. If you work on projects with Spanish-speaking team members or serve Latin American markets, generating documentation directly in Spanish becomes a frequent requirement. Claude Code, combined with specialized skills, offers a practical way to automate this process.
+[Documentation is essential for any software project, but writing it manually in multiple languages](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) takes significant time. If you work on projects with Spanish-speaking team members or serve Latin American markets, generating documentation directly in Spanish becomes a frequent requirement. Claude Code, combined with specialized skills, offers a practical way to automate this process.
 
-This guide shows you how to [set up a documentation generation workflow that produces Spanish-language output](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) that produces Spanish-language output from your codebase. You will learn to configure Claude Code skills, generate different types of documentation, and integrate the workflow into your development process.
+This guide shows you how to [set up a documentation generation workflow that produces Spanish-language output](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) that produces Spanish-language output from your codebase. You will learn to configure Claude Code skills, generate different types of documentation, and integrate the workflow into your development process.
 
 ## Prerequisites
 

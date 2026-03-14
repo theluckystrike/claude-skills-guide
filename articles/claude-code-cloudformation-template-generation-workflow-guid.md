@@ -12,9 +12,9 @@ score: 9
 
 # Claude Code CloudFormation Template Generation Workflow Guide
 
-[Generating AWS CloudFormation templates with Claude Code](/claude-skills-guide/articles/aws-mcp-server-cloud-automation-with-claude-code/) transforms infrastructure-as-code from a manual typing exercise into a collaborative conversation. Instead of memorizing every resource property, you describe what you need in plain language and let Claude translate intent into valid YAML or JSON templates.
+[Generating AWS CloudFormation templates with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/) transforms infrastructure-as-code from a manual typing exercise into a collaborative conversation. Instead of memorizing every resource property, you describe what you need in plain language and let Claude translate intent into valid YAML or JSON templates.
 
-[This guide walks through practical workflows for generating CloudFormation templates](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), integrating with Claude skills, and building reusable patterns for your team.
+[This guide walks through practical workflows for generating CloudFormation templates](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), integrating with Claude skills, and building reusable patterns for your team.
 
 ## Starting a CloudFormation Generation Session
 

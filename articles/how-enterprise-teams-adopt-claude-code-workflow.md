@@ -16,7 +16,7 @@ Enterprise adoption of Claude Code follows a predictable pattern: teams start wi
 
 ## Starting Point: Individual Productivity
 
-Most enterprise deployments begin when developers discover Claude Code independently. [A backend engineer uses the **tdd** skill to accelerate test writing](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) A frontend developer invokes **frontend-design** to generate component mocks. These individual wins create momentum.
+Most enterprise deployments begin when developers discover Claude Code independently. [A backend engineer uses the **tdd** skill to accelerate test writing](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) A frontend developer invokes **frontend-design** to generate component mocks. These individual wins create momentum.
 
 The first organizational step involves documenting which skills deliver the most value. Create a simple internal wiki page tracking:
 
@@ -44,7 +44,7 @@ Once individual adoption reaches critical mass—typically when 30-40% of develo
 - **pptx**: Generate technical presentations for stakeholder meetings
 
 **Knowledge Management:**
-- [**supermemory**](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/): Build team knowledge bases that persist across sessions
+- [**supermemory**](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/): Build team knowledge bases that persist across sessions
 - **canvas-design**: Create visual documentation and diagrams
 
 ### Establishing Invocation Standards
@@ -67,7 +67,7 @@ Create a team convention document specifying:
 
 ## Phase Two: Security and Compliance Integration
 
-Enterprise environments require additional safeguards. Claude Code supports several configuration options that teams should implement before broad rollout. The [Claude skills access control and permissions enterprise guide](/claude-skills-guide/articles/claude-skills-access-control-and-permissions-enterprise/) details how to configure these controls across teams.
+Enterprise environments require additional safeguards. Claude Code supports several configuration options that teams should implement before broad rollout. The [Claude skills access control and permissions enterprise guide](/claude-skills-guide/claude-skills-access-control-and-permissions-enterprise/) details how to configure these controls across teams.
 
 ### Permission Boundaries
 
@@ -146,7 +146,7 @@ Store custom skills in a shared repository:
 git clone git@github.com:your-org/claude-skills.git ~/.claude/skills/custom
 ```
 
-Establish a review process for team skills—treat them like code with pull requests and version tags. The [Claude skill versioning semver best practices guide](/claude-skills-guide/articles/claude-skill-versioning-semver-best-practices/) explains how to manage versions reliably as your skill library grows.
+Establish a review process for team skills—treat them like code with pull requests and version tags. The [Claude skill versioning semver best practices guide](/claude-skills-guide/claude-skill-versioning-semver-best-practices/) explains how to manage versions reliably as your skill library grows.
 
 ## Common Adoption Challenges
 
@@ -180,13 +180,13 @@ Track these metrics to validate your deployment:
 
 Enterprise Claude Code adoption follows a natural progression from individual productivity to organizational standardization. Start with proven skills like **tdd**, **pdf**, and **frontend-design**, establish clear invocation conventions, implement security controls early, and invest in custom skills that address your specific business needs.
 
-The key is starting small—get five developers using Claude Code consistently before expanding. Measure results, share wins, and let the momentum drive broader adoption organically. For a practical checklist as you scale, the [Claude skills governance security audit checklist](/claude-skills-guide/articles/claude-skills-governance-security-audit-checklist/) ensures nothing critical is overlooked.
+The key is starting small—get five developers using Claude Code consistently before expanding. Measure results, share wins, and let the momentum drive broader adoption organically. For a practical checklist as you scale, the [Claude skills governance security audit checklist](/claude-skills-guide/claude-skills-governance-security-audit-checklist/) ensures nothing critical is overlooked.
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [How Agencies Use Claude Code for Client Projects](/claude-skills-guide/articles/how-agencies-use-claude-code-for-client-projects/)
-- [How Startups Use Claude Code to Reduce Engineering Costs](/claude-skills-guide/articles/how-startups-use-claude-code-to-reduce-engineering-costs/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [How Agencies Use Claude Code for Client Projects](/claude-skills-guide/how-agencies-use-claude-code-for-client-projects/)
+- [How Startups Use Claude Code to Reduce Engineering Costs](/claude-skills-guide/how-startups-use-claude-code-to-reduce-engineering-costs/)
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Chaos Engineering Testing Automation Guide
 
-[Chaos engineering pushes systems to their breaking points deliberately](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) When you combine it with Claude Code's automation capabilities, you get a powerful approach to building resilient software. This guide covers practical strategies for implementing chaos engineering testing automation using Claude Code and its skill ecosystem.
+[Chaos engineering pushes systems to their breaking points deliberately](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) When you combine it with Claude Code's automation capabilities, you get a powerful approach to building resilient software. This guide covers practical strategies for implementing chaos engineering testing automation using Claude Code and its skill ecosystem.
 
 ## What Is Chaos Engineering in Practice
 

@@ -12,11 +12,11 @@ score: 7
 
 # Claude Code French Developer Community Resources Guide
 
-[French developers using Claude Code have access to a growing ecosystem of community resources](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), localized documentation, and specialized tools. This guide covers practical ways to connect with other French-speaking developers, find relevant skills, and accelerate your workflow.
+[French developers using Claude Code have access to a growing ecosystem of community resources](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), localized documentation, and specialized tools. This guide covers practical ways to connect with other French-speaking developers, find relevant skills, and accelerate your workflow.
 
 ## Finding French Developer Communities
 
-The French developer scene is active across multiple platforms. [Several Discord servers cater specifically to French-speaking developers working with AI tools](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) These communities often share Claude Code configurations, discuss skill implementations, and troubleshoot issues in French.
+The French developer scene is active across multiple platforms. [Several Discord servers cater specifically to French-speaking developers working with AI tools](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) These communities often share Claude Code configurations, discuss skill implementations, and troubleshoot issues in French.
 
 Reddit's r/frenchdev and r/dev__FR subreddits host discussions about AI-assisted development. Developers share their prompts, skill configurations, and workflows in these spaces. Searching for "Claude Code" within these subreddits reveals real-world usage patterns from French developers.
 

@@ -44,7 +44,7 @@ This triggers component generation with proper `dir="rtl"` attributes and mirror
 
 ## Using Claude Skills for Arabic Development
 
-Several Claude skills accelerate [Arabic interface development workflow with Claude Code](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/):
+Several Claude skills accelerate [Arabic interface development workflow with Claude Code](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/):
 
 ### frontend-design for RTL Components
 

@@ -18,7 +18,7 @@ This guide walks through building a complete Zoom meeting summary automation wor
 
 ## How Zoom MCP Server Integration Works
 
-[The Zoom MCP server connects Claude Code directly to your Zoom account](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/) through the Zoom API. This connection enables Claude to:
+[The Zoom MCP server connects Claude Code directly to your Zoom account](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/) through the Zoom API. This connection enables Claude to:
 
 - Fetch meeting recordings and transcripts
 - Retrieve meeting participant lists
@@ -233,9 +233,9 @@ Start with a simple use case like daily standups, then expand to more complex me
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
-- [Slack MCP Server Team Notification Automation](/claude-skills-guide/articles/slack-mcp-server-team-notification-automation/)
-- [Telegram MCP Server Bot Automation Workflow](/claude-skills-guide/articles/telegram-mcp-server-bot-automation-workflow/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Slack MCP Server Team Notification Automation](/claude-skills-guide/slack-mcp-server-team-notification-automation/)
+- [Telegram MCP Server Bot Automation Workflow](/claude-skills-guide/telegram-mcp-server-bot-automation-workflow/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

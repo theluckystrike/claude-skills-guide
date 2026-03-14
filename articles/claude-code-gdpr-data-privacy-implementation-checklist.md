@@ -12,7 +12,7 @@ score: 8
 
 # GDPR Data Privacy Implementation Checklist for Claude Code
 
-[Implementing GDPR compliance in software projects requires systematic attention to data handling](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), user consent, and privacy controls. Claude Code provides capabilities that help developers build privacy-conscious applications, though ultimate compliance responsibility rests with the development team. This checklist covers practical steps for integrating data privacy protections into your workflow using Claude Code and its ecosystem of skills.
+[Implementing GDPR compliance in software projects requires systematic attention to data handling](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), user consent, and privacy controls. Claude Code provides capabilities that help developers build privacy-conscious applications, though ultimate compliance responsibility rests with the development team. This checklist covers practical steps for integrating data privacy protections into your workflow using Claude Code and its ecosystem of skills.
 
 ## Foundation: Understand Data Flow Before Coding
 
@@ -28,7 +28,7 @@ Create a simple data flow document:
 | IP Address| Server | Logs    | DevOps | 30 days |
 ```
 
-[This inventory becomes your reference point for implementing specific privacy controls](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+[This inventory becomes your reference point for implementing specific privacy controls](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
 
 ## Skill Selection for Privacy-Conscious Development
 
