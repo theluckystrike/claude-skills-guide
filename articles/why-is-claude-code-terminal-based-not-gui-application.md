@@ -95,6 +95,6 @@ This separation of concerns works because the terminal excels at generation and 
 
 Claude Code is terminal-based because the terminal is the most capable interface for what Claude Code does: reading and writing files, running commands, automating workflows, and integrating with the vast ecosystem of developer tools. The design choice reflects a deep understanding of how developers actually work.
 
-The terminal is not a throwback to a simpler era—it is a高效, scriptable, remote-friendly interface that happens to be perfect for AI-assisted development. As you explore Claude skills like **brand-guidelines**, **artifacts-builder**, and the various MCP-related skills, you will find that the terminal enables capabilities that would be difficult or impossible to implement in a GUI application.
+The terminal is not a throwback to a simpler era—it is a highly efficient, scriptable, remote-friendly interface that happens to be perfect for AI-assisted development. As you explore Claude skills like **brand-guidelines**, **artifacts-builder**, and the various MCP-related skills, you will find that the terminal enables capabilities that would be difficult or impossible to implement in a GUI application.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
