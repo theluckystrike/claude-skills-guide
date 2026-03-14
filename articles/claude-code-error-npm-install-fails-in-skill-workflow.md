@@ -1,227 +1,195 @@
 ---
 layout: default
-title: "Claude Code Error: NPM Install Fails in Skill Workflow"
-description: "Fix npm install failures when using Claude Code skills. Practical solutions for skill workflows, dependency errors, and configuration issues."
+title: "Claude Code Error: npm install Fails in Skill Workflow"
+description: "Troubleshooting npm install failures when using Claude Code skills. Practical solutions for dependency issues with pdf, xlsx, tdd, frontend-design and other skills."
 date: 2026-03-14
-author: "Claude Skills Guide"
-permalink: /claude-code-error-npm-install-fails-in-skill-workflow/
-reviewed: true
-score: 7
+author: theluckystrike
 categories: [troubleshooting]
-tags: [claude-code, claude-skills]
+tags: [claude-code, claude-skills, npm, error-fix, troubleshooting]
+permalink: /claude-code-error-npm-install-fails-in-skill-workflow/
 ---
 
-# Claude Code Error: NPM Install Fails in Skill Workflow
+# Claude Code Error: npm install Fails in Skill Workflow
 
-When working with Claude Code skills that require Node.js dependencies, you may encounter npm install failures that interrupt your workflow. This guide covers the most common causes and practical solutions to get your skill-based development back on track.
+When working with Claude Code skills that require Node.js dependencies, you may encounter npm install failures that block your workflow. This guide covers the most common causes and proven solutions for developers encountering this issue.
 
-## Understanding the Error
+## Understanding the Problem
 
-Claude Code skills like `frontend-design`, `pdf`, `pptx`, `docx`, and `xlsx` rely on Python packages rather than npm packages. However, skills such as `webapp-testing`, `mcp-builder`, and skill creation workflows often involve npm dependencies. When npm install fails, you typically see errors like:
+Claude Code skills work by loading Markdown files from your `~/.claude/skills/` directory. Some community skills, particularly those that wrap external tools or libraries, require npm packages to function properly. The **pdf** skill, **xlsx** skill, **frontend-design** skill, and **tdd** skill often fall into this category.
 
-```
-npm ERR! code ERR_PACKAGE_PATH_NOT_EXPORTED
-npm ERR! Cannot find module 'some-package'
-npm ERR! Missing write access to directory
-```
+When these skills attempt to install or use npm packages, you might see errors like:
 
-The root causes usually involve Node version mismatches, permission issues, corrupted lock files, or skill-specific dependency requirements.
+- `npm ERR! code EACCES` (permission denied)
+- `npm ERR! code ENOENT` (package not found)
+- `npm ERR! network socket hang up`
+- `Error: Cannot find module '...'`
 
-## Common Causes and Solutions
+These failures typically stem from four root causes: missing Node.js or npm, incorrect permissions, network issues, or corrupted package caches.
 
-### 1. Node Version Mismatch
+## Solution 1: Verify Node.js and npm Installation
 
-Many Claude skills require specific Node.js versions. Skills like `mcp-builder` and `artifacts-builder` often need Node 18 or newer due to ESM module requirements.
-
-**Solution**: Use a Node version manager:
+Before troubleshooting skill-specific issues, confirm Node.js and npm are properly installed:
 
 ```bash
-# Install nvm if you haven't
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-
-# Install and use Node 20
-nvm install 20
-nvm use 20
+node --version
+npm --version
 ```
 
-Then retry your skill workflow:
+If these commands fail or return outdated versions, install a current LTS version using nvm (Node Version Manager):
 
 ```bash
-cd ~/.claude/skills/your-skill-directory
-npm install
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.zshrc  # or ~/.bashrc
+nvm install --lts
+nvm use --lts
 ```
 
-### 2. Corrupted Package Lock Files
+After installation, restart your terminal and verify the versions again. Many npm install failures disappear once you run a recent Node.js version.
 
-If you previously had a failed install, stale lock files can cause persistent issues.
+## Solution 2: Fix Permission Errors
 
-**Solution**: Clear npm cache and remove lock files:
-
-```bash
-rm -rf node_modules package-lock.json
-npm cache clean --force
-npm install
-```
-
-For skill-specific installations, navigate to the skill directory first:
-
-```bash
-cd ~/.claude/skills/webapp-testing
-rm -rf node_modules package-lock.json
-npm cache clean --force
-npm install
-```
-
-### 3. Permission Issues on macOS
-
-When npm attempts to write to protected directories, install failures occur with permission denied errors.
-
-**Solution**: Avoid using sudo. Instead, configure npm to use a directory you own:
+Permission errors occur when npm attempts to write to directories without proper access. The most reliable fix involves configuring npm to use a directory in your home folder:
 
 ```bash
 mkdir -p ~/.npm-global
 npm config set prefix '~/.npm-global'
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
-source ~/.bashrc
+echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
+source ~/.zshrc
 ```
 
-Alternatively, fix permissions on your npm directory:
+For the **frontend-design** skill and similar tools that create projects, you may also need to fix ownership of your projects directory:
 
 ```bash
-sudo chown -R $(whoami) ~/.npm
+sudo chown -R $(whoami) ~/projects/
 ```
 
-### 4. Skill-Specific Dependency Conflicts
+This prevents permission-denied errors when skills attempt to initialize new project structures.
 
-Some skills like `algorithmic-art` and `slack-gif-creator` have unique dependency requirements that may conflict with global packages.
+## Solution 3: Clear npm Cache
 
-**Solution**: Install dependencies within the skill's local context:
+Corrupted npm caches cause intermittent installation failures that are difficult to diagnose. Clear the cache with:
 
 ```bash
-cd ~/.claude/skills/algorithmic-art
-npm install --legacy-peer-deps
+npm cache clean --force
 ```
 
-The `--legacy-peer-deps` flag resolves conflicts between peer dependencies that some skill packages require.
-
-### 5. Missing Build Tools
-
-Skills involving native modules need build tools installed. Error messages like `gyp: No Xcode or CLT version detected` indicate this issue.
-
-**Solution**: Install Xcode Command Line Tools on macOS:
+If you're still experiencing issues with the **xlsx** skill or **pdf** skill specifically, try removing the node_modules and package-lock files in your skills directory and reinstalling:
 
 ```bash
-xcode-select --install
+cd ~/.claude/skills/your-skill-name
+rm -rf node_modules package-lock.json
+npm install
 ```
 
-On Linux, install build essentials:
+This forces a clean installation of all dependencies.
+
+## Solution 4: Handle Network Issues
+
+Network timeouts manifest as `ETIMEDOUT` or `ECONNRESET` errors. Several approaches can help:
+
+### Use a Different Registry
+
+Switch to a faster mirror or the official npm registry:
 
 ```bash
-# Debian/Ubuntu
-sudo apt-get install build-essential
-
-# Fedora/RHEL
-sudo dnf groupinstall "Development Tools"
+npm config set registry https://registry.npmjs.org/
 ```
 
-### 6. Global vs. Local Installation Confusion
+For users in certain regions, mirrors like taobao's registry can provide faster connections.
 
-When using skills that expect globally installed packages, local installs may not be found.
+### Increase Timeout Values
 
-**Solution**: Check where npm installs global packages:
+Add timeout configurations to your npmrc file:
 
 ```bash
-npm root -g
+npm config set fetch-timeout 120000
+npm config set fetch-retries 5
 ```
 
-Add the global bin directory to your PATH in your shell configuration:
+This helps with slow connections when using skills that download dependencies.
+
+### Use Yarn as an Alternative
+
+Some skills work better with Yarn. Install it alongside npm:
 
 ```bash
-# Add to ~/.bashrc or ~/.zshrc
-export PATH="$(npm root -g)/bin:$PATH"
+npm install -g yarn
 ```
 
-## Preventing Future Failures
-
-### Use a Consistent Node Environment
-
-For skill-based workflows, create a dedicated Node version for Claude activities:
+When npm continues to fail, try using Yarn for specific skill installations:
 
 ```bash
-nvm install 20
-nvm alias claude-skills 20
-nvm use claude-skills
+cd ~/.claude/skills/problematic-skill
+yarn install
 ```
 
-### Pin Skill Dependencies
+## Solution 5: Skill-Specific Fixes
 
-When creating custom skills, specify exact versions in your `package.json`:
+Different skills have unique dependency requirements. Here are targeted solutions for common scenarios.
 
-```json
-{
-  "name": "my-custom-skill",
-  "version": "1.0.0",
-  "dependencies": {
-    "playwright": "1.42.0",
-    "dotenv": "16.4.0"
-  }
-}
-```
+### The tdd Skill
 
-### Automate Skill Setup
-
-Create a setup script for skill environments:
+The **tdd** skill typically requires Jest and related testing packages. If installation fails:
 
 ```bash
-#!/bin/bash
-# setup-skill-env.sh
-
-SKILL_NAME="$1"
-SKILL_PATH="$HOME/.claude/skills/${SKILL_NAME}"
-
-if [ -d "$SKILL_PATH" ]; then
-    cd "$SKILL_PATH"
-    rm -rf node_modules package-lock.json
-    npm cache clean --force
-    npm install --legacy-peer-deps
-    echo "Skill environment ready: $SKILL_NAME"
-else
-    echo "Skill not found: $SKILL_NAME"
-fi
+cd ~/.claude/skills/tdd
+npm install jest @testing-library/react --save-dev
 ```
 
-Run it with:
+### The pdf Skill
+
+The **pdf** skill depends on pdf-lib or similar libraries. Ensure you have the correct dependencies:
 
 ```bash
-chmod +x setup-skill-env.sh
-./setup-skill-env.sh webapp-testing
+cd ~/.claude/skills/pdf
+npm install pdf-lib puppeteer-core
 ```
 
-## Quick Reference: Skill-Specific Requirements
+### The supermemory Skill
 
-| Skill | Package Manager | Notes |
-|-------|-----------------|-------|
-| frontend-design | Python/pip | Uses pnpm internally |
-| pdf | Python/pip | Requires Poppler utils |
-| pptx | Python/pip | System fonts needed |
-| webapp-testing | npm | Needs Playwright browsers |
-| mcp-builder | npm | Requires Node 18+ |
-| artifacts-builder | npm | React dependencies |
-| algorithmic-art | npm | Canvas support needed |
-| slack-gif-creator | npm | ffmpeg required |
+The **supermemory** skill often requires API client libraries. Check for missing peer dependencies:
 
-## Summary
+```bash
+cd ~/.claude/skills/supermemory
+npm install axios dotenv
+```
 
-NPM install failures in Claude skill workflows typically stem from version mismatches, permissions, or missing build tools. The solutions range from simple cache clears to Node version management and skill-specific configurations. By understanding your skill's requirements and maintaining a clean Node environment, you can prevent these interruptions and maintain productive Claude Code sessions.
+## Solution 6: Debug Mode for Complex Issues
 
-For custom skill development, document your dependency requirements and test installations in isolated environments before deploying to your primary workflow.
+When standard solutions fail, enable verbose logging to identify the exact failure point:
 
+```bash
+npm install --verbose
+```
 
-## Related Reading
+This outputs detailed information about each step in the installation process, helping you identify whether a specific package is causing the failure.
 
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Keeps Making the Same Mistake: Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+You can also check npm's debug log:
+
+```bash
+npm config set loglevel verbose
+npm install 2>&1 | tee npm-debug.log
+```
+
+Review the generated log file for specific error messages that point to the root cause.
+
+## Prevention Strategies
+
+Avoid recurring issues by implementing these practices:
+
+1. **Pin dependency versions** in your skill's package.json to prevent incompatible updates
+2. **Use npm ci** instead of npm install in CI environments for reproducible builds
+3. **Keep Node.js updated** through nvm to avoid compatibility issues with newer packages
+4. **Version control your skills** by forking community skills to your own repository
+
+## When All Else Fails
+
+If you've tried all solutions and npm install still fails, consider these final options:
+
+- Check the skill's GitHub repository for open issues or known compatibility problems
+- Try using pnpm instead of npm: `npm install -g pnpm && pnpm install`
+- Manually download and place required packages in your project's node_modules directory
+
+Most npm install failures in Claude Code skill workflows resolve with cache clearing, permission fixes, or network adjustments. The skills ecosystem continues to mature, and community-maintained skills frequently update to address compatibility issues with newer Node.js versions.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
