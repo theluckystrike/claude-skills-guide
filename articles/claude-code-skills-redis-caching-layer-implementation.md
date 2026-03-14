@@ -230,7 +230,7 @@ This wraps your Redis functionality as a composable skill other Claude Code work
 
 ## Summary
 
-Redis provides a robust foundation for caching layer implementation in Claude Code skills. Whether you're reducing API costs through output caching, maintaining session state across workflow steps, or coordinating multiple agents, Redis data structures map directly to common skill patterns.
+Redis provides a reliable foundation for caching layer implementation in Claude Code skills. Whether you're reducing API costs through output caching, maintaining session state across workflow steps, or coordinating multiple agents, Redis data structures map directly to common skill patterns.
 
 Start with simple key-value caching, then expand to hashes for session data and pub/sub for agent coordination. The investment pays dividends in reduced latency, lower API costs, and more sophisticated multi-agent architectures.
 

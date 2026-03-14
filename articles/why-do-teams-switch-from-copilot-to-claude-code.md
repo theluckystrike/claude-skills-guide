@@ -20,7 +20,7 @@ One of the most significant differences between Copilot and Claude Code lies in 
 
 When you need test-driven development assistance, the `/tdd` skill transforms Claude's behavior. Instead of just completing code, Claude actively suggests tests before implementation, reviews test coverage, and ensures your code passes those tests. This is fundamentally different from Copilot's autocomplete approach.
 
-Similarly, the `/super memory` skill enables Claude to maintain context across sessions, remembering your project structure, coding preferences, and previous discussions. Copilot, by contrast, operates primarily within individual files or editor sessions without persistent project memory.
+Similarly, the `/supermemory` skill enables Claude to maintain context across sessions, remembering your project structure, coding preferences, and previous discussions. Copilot, by contrast, operates primarily within individual files or editor sessions without persistent project memory.
 
 ## Context Window and Reasoning
 
@@ -96,7 +96,7 @@ To get started with Claude Code:
 
 1. Install Claude Code on your development machine
 2. Explore built-in skills with `/help`
-3. Add specialized skills like `/tdd` or `/super memory` as needed
+3. Add specialized skills like `/tdd` or `/supermemory` as needed
 4. Gradually incorporate Claude into your daily workflow
 
 The learning curve is minimal for developers already comfortable with AI assistants, and the additional capabilities become valuable quickly.
