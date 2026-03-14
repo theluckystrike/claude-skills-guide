@@ -6,6 +6,7 @@ description: "A comprehensive guide exploring AI agent skills, how Claude Code i
 date: 2026-03-14
 author: theluckystrike
 permalink: /what-are-ai-agent-skills-complete-guide-developers/
+categories: [troubleshooting]
 ---
 
 {% raw %}
@@ -206,3 +207,10 @@ As AI technology continues to evolve, agent skills will become even more sophist
 Start experimenting with Claude Code skills today, and discover how AI agents can transform your development workflow from simple code completion to autonomous problem-solving.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+

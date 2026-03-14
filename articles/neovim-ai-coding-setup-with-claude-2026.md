@@ -223,4 +223,11 @@ A well-configured Neovim setup with Claude Code dramatically improves developmen
 
 Experiment with different skill combinations to find what works best for your specific use case. The modular nature of both Neovim and Claude skills allows for highly personalized setups that match your development style.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
