@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code vs Copilot for TypeScript Refactoring"
-description: "Compare Claude Code and GitHub Copilot for TypeScript refactoring tasks. Learn which AI tool excels at type-safe code transformations, large-scale refactors, and complex TypeScript migrations."
+description: "Compare Claude Code and GitHub Copilot for TypeScript refactoring tasks. Learn which AI tool excels at type-safe code transformations, large-scale."
 date: 2026-03-14
 author: theluckystrike
 categories: [guides]
@@ -179,3 +179,10 @@ GitHub Copilot remains useful for quick inline suggestions and simple refactors 
 
 The key insight is that TypeScript refactoring is fundamentally a multi-step, cross-file task. Claude Code is designed for exactly this kind of complex, iterative work. Copilot's chat and autocomplete model, while useful for other tasks, is not architected to handle the systematic transformations that proper TypeScript refactoring requires.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

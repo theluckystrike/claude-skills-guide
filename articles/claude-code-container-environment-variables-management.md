@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Container Environment Variables Management"
-description: "Master environment variable handling in Claude Code containers. Learn how to set, access, and manage environment variables for secure and efficient containerized development."
+description: "Master environment variable handling in Claude Code containers. Learn how to set, access, and manage environment variables for secure and efficient."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, containers, environment-variables, devops, docker]
@@ -277,3 +277,10 @@ Mastering environment variable management in Claude Code containers is fundament
 
 Remember: treat your environment variables as first-class configuration citizens, and your containerized applications will be easier to deploy, manage, and scale across different environments.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
