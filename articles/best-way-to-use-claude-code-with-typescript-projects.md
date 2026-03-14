@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Best Way to Use Claude Code with TypeScript Projects"
 description: "A practical guide for developers on using Claude Code effectively with TypeScript projects: skill selection, workflow optimization, and real-world examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /best-way-to-use-claude-code-with-typescript-projects/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Best Way to Use Claude Code with TypeScript Projects
 
@@ -140,7 +146,7 @@ A typical session working on a TypeScript feature might flow like this:
 4. **Documentation**: Use docx to generate API documentation
 5. **Verification**: Run TypeScript compiler and tests to confirm correctness
 
-This workflow leverages TypeScript's type system as a collaboration tool between you and Claude Code. The types serve as contracts that guide code generation accurately.
+This workflow uses TypeScript's type system as a collaboration tool between you and Claude Code. The types serve as contracts that guide code generation accurately.
 
 ## Common Pitfalls to Avoid
 

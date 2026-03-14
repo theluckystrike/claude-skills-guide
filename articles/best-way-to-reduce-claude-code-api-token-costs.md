@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Best Way to Reduce Claude Code API Token Costs"
 description: "Practical strategies for developers to cut Claude Code API token usage by 40-60%. Includes prompt optimization, skill selection, caching, and real cost examples."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, token-costs, api-costs, optimization]
-author: theluckystrike
+tags: [claude-code, token-costs, api-costs, optimization, claude-skills]
+author: "Claude Skills Guide"
 permalink: /best-way-to-reduce-claude-code-api-token-costs/
+reviewed: true
+score: 7
 ---
+
 
 # Best Way to Reduce Claude Code API Token Costs
 

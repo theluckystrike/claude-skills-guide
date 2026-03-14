@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How to Make Claude Code Write Secure Code Always"
-description: "A practical guide to configuring Claude Code for secure coding practices. Learn to leverage security-focused skills, define security constraints, and prevent common vulnerabilities in generated code."
+description: "A practical guide to configuring Claude Code for secure coding practices. Learn to use security-focused skills, define security constraints, and prevent common vulnerabilities in generated code."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-write-secure-code-always/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # How to Make Claude Code Write Secure Code Always
 
@@ -100,7 +106,7 @@ This data helps you refine your configuration and training approach. Claude lear
 
 ## Conclusion
 
-Making Claude Code write secure code consistently requires deliberate setup. Configure security constraints in your system prompts, use the TDD skill for test-driven validation, leverage MCP skills for automated scanning, and build custom security skills that encode your organization's policies. Combine these approaches with code review workflows and continuous iteration.
+Making Claude Code write secure code consistently requires deliberate setup. Configure security constraints in your system prompts, use the TDD skill for test-driven validation, use MCP skills for automated scanning, and build custom security skills that encode your organization's policies. Combine these approaches with code review workflows and continuous iteration.
 
 The effort pays off in reduced vulnerabilities, faster development cycles, and code that meets security standards from the first line written. Security becomes embedded in your development process rather than an afterthought.
 

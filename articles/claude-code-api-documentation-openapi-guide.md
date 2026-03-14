@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code API Documentation OpenAPI Guide"
 description: "Learn how to generate, validate, and maintain OpenAPI documentation using Claude Code and specialized skills. Practical examples for developers."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, openapi, api-documentation, swagger, rest-api]
-author: theluckystrike
+tags: [claude-code, openapi, api-documentation, swagger, rest-api, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-api-documentation-openapi-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code API Documentation OpenAPI Guide
 

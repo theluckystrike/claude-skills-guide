@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "How to Make Claude Code Write Performant SQL Queries"
-description: "Learn techniques to guide Claude when writing SQL queries that perform well. Optimize indexes, avoid N+1 queries, and leverage database-specific features."
+description: "Learn techniques to guide Claude when writing SQL queries that perform well. Optimize indexes, avoid N+1 queries, and use database-specific features."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, sql, database-optimization, performance]
+tags: [claude-code, sql, database-optimization, performance, claude-skills]
 permalink: /how-to-make-claude-code-write-performant-sql-queries/
+reviewed: true
+score: 7
 ---
+
 
 # How to Make Claude Code Write Performant SQL Queries
 

@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "How to Make Claude Code Match Existing Code Patterns"
 description: "Practical techniques for guiding Claude Code to adopt your project's coding conventions, style guides, and architectural patterns. Includes real examples and skill recommendations."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, code-patterns, coding-conventions, ai-programming]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-match-existing-code-patterns/
+reviewed: true
+score: 7
 ---
+
 
 # How to Make Claude Code Match Existing Code Patterns
 
@@ -91,7 +95,7 @@ Here's our standard repository pattern from users-repository.js. Apply the same 
 [include the existing repository code]
 ```
 
-This approach works exceptionally well with the tdd skill. When practicing test-driven development, showing Claude your existing test structure, assertion style, and mock patterns ensures new tests integrate seamlessly with your test suite.
+This approach works exceptionally well with the tdd skill. When practicing test-driven development, showing Claude your existing test structure, assertion style, and mock patterns ensures new tests integrate smoothly with your test suite.
 
 ## Using File References and Context Injection
 
@@ -177,7 +181,7 @@ This iterative feedback loop trains Claude to better understand your expectation
 
 Making Claude Code match your existing patterns requires a combination of explicit instructions, concrete examples, and persistent skill configurations. The key is treating your project's conventions as first-class documentation that Claude can access and follow.
 
-Start with a simple `.claude-standards.md` file in your project, create a pattern-enforcement skill for reusable instructions, and always provide reference implementations when introducing new components or modules. These practices integrate seamlessly with skills like frontend-design, tdd, and supermemory to create a comprehensive development workflow that respects your team's standards.
+Start with a simple `.claude-standards.md` file in your project, create a pattern-enforcement skill for reusable instructions, and always provide reference implementations when introducing new components or modules. These practices integrate smoothly with skills like frontend-design, tdd, and supermemory to create a comprehensive development workflow that respects your team's standards.
 
 With consistent application of these techniques, you'll find Claude Code becoming an increasingly effective team member that naturally adopts your project's unique character and conventions.
 

@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How to Make Claude Code Not Over Engineer Solutions"
 description: "Practical strategies to prevent Claude Code from building overly complex solutions. Learn to set boundaries, scope prompts effectively, and use specific skills for focused results."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-not-over-engineer-solutions/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # How to Make Claude Code Not Over Engineer Solutions
 

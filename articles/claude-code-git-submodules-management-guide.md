@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Git Submodules Management Guide"
 description: "Learn how to manage Git submodules effectively with Claude Code. Practical workflows for adding, updating, cloning, and troubleshooting submodules in your projects."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, git-submodules, version-control, dependency-management, claude-skills]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-git-submodules-management-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Git Submodules Management Guide
 

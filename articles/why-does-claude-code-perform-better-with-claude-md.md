@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Why Does Claude Code Perform Better with Claude MD?"
 description: "Learn how Claude MD files dramatically improve Claude Code's output quality through structured context, domain-specific guidance, and persistent project memory."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /why-does-claude-code-perform-better-with-claude-md/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Why Does Claude Code Perform Better with Claude MD?
 
