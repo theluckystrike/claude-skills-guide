@@ -173,4 +173,12 @@ Implementing PII detection and masking in your Claude Code projects involves und
 
 Start with a data audit to map where PII appears in your system, then implement layered detection using regex for structured data and NER for unstructured content. Build reusable masking utilities and integrate them at every layer—databases, APIs, logs, and user interfaces. Automated testing ensures your implementation remains reliable as your system evolves.
 
+
+## Related Reading
+
+- [Claude Code GDPR Compliance Implementation](/claude-skills-guide/claude-code-gdpr-compliance-implementation/)
+- [Claude Code CCPA Privacy Compliance Guide](/claude-skills-guide/claude-code-ccpa-privacy-compliance-guide/)
+- [Claude Code Audit Log Implementation Guide](/claude-skills-guide/claude-code-audit-log-implementation-guide/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

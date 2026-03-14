@@ -206,4 +206,12 @@ Screen reader testing requires human involvement, but Claude Code reduces fricti
 
 The key is consistency—test regularly, document findings, and iterate. Each cycle improves both your product and your team's accessibility expertise.
 
+
+## Related Reading
+
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/)
+- [Claude Code Axe Accessibility Testing Guide](/claude-skills-guide/claude-code-axe-accessibility-testing-guide/)
+- [Claude Code Color Contrast Checking Workflow](/claude-skills-guide/claude-code-color-contrast-checking-workflow/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

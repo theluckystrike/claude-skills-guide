@@ -205,4 +205,12 @@ Cursor-based pagination with the Claude Code API requires a different mindset th
 
 The skills like `pdf`, `tdd`, `frontend-design`, and `supermemory` all work better when you build pagination into your workflows from the start rather than treating it as an afterthought.
 
+
+## Related Reading
+
+- [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/)
+- [Claude Code GraphQL Schema Design Guide](/claude-skills-guide/claude-code-graphql-schema-design-guide/)
+- [Claude Code OpenAPI Spec Generation Guide](/claude-skills-guide/claude-code-openapi-spec-generation-guide/)
+- [Claude Skills Integrations Hub](/claude-skills-guide/integrations-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

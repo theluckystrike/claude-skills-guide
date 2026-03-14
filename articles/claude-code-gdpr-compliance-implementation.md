@@ -197,4 +197,12 @@ Start with these concrete actions to improve your GDPR compliance posture:
 
 GDPR compliance requires ongoing attention rather than one-time implementation. Claude Code assists with generating compliant code patterns, building test coverage, and maintaining documentation, but your team owns the compliance outcome. Focus on privacy-by-design principles, automate where possible, and maintain clear audit trails for all personal data processing.
 
+
+## Related Reading
+
+- [Claude Code CCPA Privacy Compliance Guide](/claude-skills-guide/claude-code-ccpa-privacy-compliance-guide/)
+- [Claude Code PII Detection and Masking Guide](/claude-skills-guide/claude-code-pii-detection-and-masking-guide/)
+- [Claude Code Cookie Consent Implementation](/claude-skills-guide/claude-code-cookie-consent-implementation/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

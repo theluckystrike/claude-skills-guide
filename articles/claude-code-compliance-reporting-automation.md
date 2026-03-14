@@ -160,4 +160,12 @@ Claude Code transforms compliance reporting from a manual, error-prone process i
 
 Start with one automation use case, measure the time savings, and expand gradually. The cumulative effect of automated compliance reporting significantly reduces technical debt and improves overall security posture.
 
+
+## Related Reading
+
+- [Claude Code Audit Log Implementation Guide](/claude-skills-guide/claude-code-audit-log-implementation-guide/)
+- [Claude Code GDPR Compliance Implementation](/claude-skills-guide/claude-code-gdpr-compliance-implementation/)
+- [Claude Code Data Retention Policy Workflow](/claude-skills-guide/claude-code-data-retention-policy-workflow/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -182,5 +182,13 @@ Claude Code client library generation transforms API integration from repetitive
 
 The key is starting simple: generate basic clients, add tests via the `tdd` skill, document with `pdf` or `docx`, then layer in customization as your needs evolve.
 
+
+## Related Reading
+
+- [Claude Code OpenAPI Spec Generation Guide](/claude-skills-guide/claude-code-openapi-spec-generation-guide/)
+- [Claude Code API Backward Compatibility Guide](/claude-skills-guide/claude-code-api-backward-compatibility-guide/)
+- [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

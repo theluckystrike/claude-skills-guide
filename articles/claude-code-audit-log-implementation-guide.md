@@ -221,4 +221,12 @@ Implement these requirements by treating your audit log as an append-only data s
 
 Implementing audit logs in Claude Code skills requires thoughtful design around what to capture, when to log, and how to store the data. Start with basic invocation tracking, add decision context, and layer on security and rotation as your deployment matures. The patterns shown here scale from individual developer workflows to enterprise deployments requiring compliance documentation.
 
+
+## Related Reading
+
+- [Claude Code GDPR Compliance Implementation](/claude-skills-guide/claude-code-gdpr-compliance-implementation/)
+- [Claude Code PII Detection and Masking Guide](/claude-skills-guide/claude-code-pii-detection-and-masking-guide/)
+- [Claude Code Compliance Reporting Automation](/claude-skills-guide/claude-code-compliance-reporting-automation/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

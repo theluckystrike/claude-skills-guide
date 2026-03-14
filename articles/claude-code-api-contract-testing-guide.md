@@ -199,5 +199,13 @@ API contract testing with Claude Code combines clear workflow definitions throug
 Start by creating a contract testing skill, then add Pact or OpenAPI validation to your test suite. Integrate these checks into your CI pipeline to catch breaking changes before they reach production.
 
 
+
+## Related Reading
+
+- [Claude Code API Backward Compatibility Guide](/claude-skills-guide/claude-code-api-backward-compatibility-guide/)
+- [Claude Code Contract Testing Pact Guide](/claude-skills-guide/claude-code-contract-testing-pact-guide/)
+- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-openapi-guide/)
+- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

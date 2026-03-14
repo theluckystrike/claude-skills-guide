@@ -181,4 +181,12 @@ Combining Claude Code with the Notion API creates powerful documentation automat
 
 Start with simple API calls, then layer in automation patterns as your requirements grow. Claude Code's conversational interface makes iterating on these integrations straightforward—you describe what you want, and Claude helps build the implementation.
 
+
+## Related Reading
+
+- [Claude Code Readme Documentation Guide](/claude-skills-guide/claude-code-readme-documentation-guide/)
+- [Claude Code Confluence Documentation Guide](/claude-skills-guide/claude-code-confluence-documentation-guide/)
+- [Claude Code Swagger Documentation Workflow](/claude-skills-guide/claude-code-swagger-documentation-workflow/)
+- [Claude Skills Integrations Hub](/claude-skills-guide/integrations-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -180,4 +180,12 @@ Regular maintenance involves reviewing which scripts your application loads and 
 Cookie consent implementation doesn't need to be complicated. By building a small, focused consent manager and pairing it with a well-designed UI component, you satisfy regulatory requirements while keeping your codebase maintainable.
 {% endraw %}
 
+
+## Related Reading
+
+- [Claude Code GDPR Compliance Implementation](/claude-skills-guide/claude-code-gdpr-compliance-implementation/)
+- [Claude Code CCPA Privacy Compliance Guide](/claude-skills-guide/claude-code-ccpa-privacy-compliance-guide/)
+- [Claude Code Data Retention Policy Workflow](/claude-skills-guide/claude-code-data-retention-policy-workflow/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

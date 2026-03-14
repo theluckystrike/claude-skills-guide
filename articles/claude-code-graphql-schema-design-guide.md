@@ -255,5 +255,13 @@ The **frontend-design** skill pairs well with schema design work, helping you un
 
 For teams adopting these practices, the initial learning curve pays off quickly through reduced integration bugs, clearer API contracts, and faster iteration cycles.
 
+
+## Related Reading
+
+- [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/)
+- [Claude Code OpenAPI Spec Generation Guide](/claude-skills-guide/claude-code-openapi-spec-generation-guide/)
+- [Claude Code API Contract Testing Guide](/claude-skills-guide/claude-code-api-contract-testing-guide/)
+- [Claude Skills Integrations Hub](/claude-skills-guide/integrations-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

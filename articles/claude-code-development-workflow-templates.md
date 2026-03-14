@@ -212,4 +212,12 @@ Version your workflow templates alongside your code. As projects evolve, update 
 
 Review generated output before committing. Skills accelerate development but require human judgment for edge cases and business logic validation.
 
+
+## Related Reading
+
+- [Claude Code Project Scaffolding Automation](/claude-skills-guide/claude-code-project-scaffolding-automation/)
+- [Claude Code Boilerplate Generation Workflow](/claude-skills-guide/claude-code-boilerplate-generation-workflow/)
+- [Claude Code Code Generation Templates Guide](/claude-skills-guide/claude-code-code-generation-templates-guide/)
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

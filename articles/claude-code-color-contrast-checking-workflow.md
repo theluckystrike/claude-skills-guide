@@ -156,4 +156,12 @@ Improvement shows in rising scores, reduced test failures, and faster remediatio
 
 ---
 
+
+## Related Reading
+
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/)
+- [Claude Code Axe Accessibility Testing Guide](/claude-skills-guide/claude-code-axe-accessibility-testing-guide/)
+- [Claude Code Screen Reader Testing Workflow](/claude-skills-guide/claude-code-screen-reader-testing-workflow/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

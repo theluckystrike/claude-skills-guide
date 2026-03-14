@@ -183,4 +183,12 @@ Making Claude Code use specific library versions requires a combination of:
 
 These methods ensure Claude generates code compatible with your production environment, reducing deployment issues and debugging time.
 
+
+## Related Reading
+
+- [How to Make Claude Code Respect Module Boundaries](/claude-skills-guide/how-to-make-claude-code-respect-module-boundaries/)
+- [Claude Code Gives Incorrect Imports How to Fix](/claude-skills-guide/claude-code-gives-incorrect-imports-how-to-fix/)
+- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

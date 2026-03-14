@@ -227,4 +227,12 @@ Make CCPA compliance part of your standard development process:
 
 Building CCPA compliance into your development workflow from the start is far more effective than retrofitting controls later. Claude Code skills like supermemory, tdd, frontend-design, pdf, and docx provide practical tools for implementing and maintaining privacy compliance throughout your project's lifecycle.
 
+
+## Related Reading
+
+- [Claude Code GDPR Compliance Implementation](/claude-skills-guide/claude-code-gdpr-compliance-implementation/)
+- [Claude Code PII Detection and Masking Guide](/claude-skills-guide/claude-code-pii-detection-and-masking-guide/)
+- [Claude Code Cookie Consent Implementation](/claude-skills-guide/claude-code-cookie-consent-implementation/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

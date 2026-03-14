@@ -131,4 +131,12 @@ Combine with the tdd skill to generate tests from your OpenAPI specs, creating a
 
 ---
 
+
+## Related Reading
+
+- [Claude Code Swagger Documentation Workflow](/claude-skills-guide/claude-code-swagger-documentation-workflow/)
+- [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/)
+- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-openapi-guide/)
+- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -185,4 +185,12 @@ This makes review a standard part of your workflow rather than an occasional ste
 
 Building self-review into your Claude Code workflow takes minimal setup but delivers consistent value. Start with prompt-based reviews, add skills for structure, and iterate based on what your projects need. The goal isn't perfect code—it's fewer mistakes reaching your codebase and better understanding of how to improve both AI-assisted and manual development.
 
+
+## Related Reading
+
+- [Claude Code Output Quality How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Keeps Making Same Mistake Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

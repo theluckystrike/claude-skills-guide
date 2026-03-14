@@ -131,4 +131,12 @@ This hybrid model captures the speed advantages of AI assistance while preservin
 
 The choice between Claude Code and manual coding is not binary. Understanding the strengths and limitations of each approach lets you make informed decisions that maximize both productivity and code quality. Start with Claude Code for speed on routine tasks, then apply manual coding where it delivers meaningful improvements.
 
+
+## Related Reading
+
+- [Is Claude Code Worth It for Solo Developers and Freelancers](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/)
+- [Claude Code vs GitHub Copilot Workspace 2026](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/)
+- [Why Is Claude Code Recommended for Refactoring Tasks](/claude-skills-guide/why-is-claude-code-recommended-for-refactoring-tasks/)
+- [Claude Skills Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

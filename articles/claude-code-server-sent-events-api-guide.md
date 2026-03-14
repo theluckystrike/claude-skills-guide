@@ -1,190 +1,204 @@
 ---
 layout: default
-title: "Claude Code Server Sent Events API Guide"
-description: "A practical guide to implementing Server-Sent Events (SSE) with Claude Code. Learn how to build real-time streaming integrations using MCP servers and the Claude API."
+title: "Claude Code Server-Sent Events API Guide"
+description: "A practical guide to implementing Server-Sent Events (SSE) with Claude Code. Learn how to build real-time streaming features using event-driven architecture."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /claude-code-server-sent-events-api-guide/
-reviewed: true
-score: 7
-categories: [guides]
-tags: [claude-code, claude-skills]
 ---
 
-# Claude Code Server Sent Events API Guide
+# Claude Code Server-Sent Events API Guide
 
-Server-Sent Events (SSE) provide a efficient mechanism for streaming real-time updates from servers to clients. When combined with Claude Code and MCP servers, SSE enables powerful streaming workflows for AI-assisted development. This guide covers practical implementation patterns for developers building real-time applications with Claude.
+Server-Sent Events (SSE) provide a simple, standards-based way to push real-time updates from a server to a client over HTTP. Unlike WebSockets, SSE works over a single persistent connection and automatically handles reconnection, making it ideal for streaming logs, live dashboards, and notification systems. This guide shows you how to implement SSE with Claude Code, with practical examples you can apply to your projects.
 
-## Understanding SSE in the Claude Ecosystem
+## How Server-Sent Events Work
 
-Claude Code supports streaming responses through SSE when interacting with MCP servers and external APIs. The streaming capability allows you to receive incremental updates rather than waiting for complete responses—essential for building responsive AI-powered tools.
+SSE relies on the `Content-Type: text/event-stream` header. The server sends events in a specific format:
 
-The foundation lies in how Claude's API handles streaming. When you make API calls with `stream: true`, responses arrive as Server-Sent Events, enabling real-time processing of AI outputs.
+```
+data: {"message": "processing"}
 
-## Setting Up SSE with Claude's API
+data: {"message": "complete"}
+event: done
+```
 
-To begin streaming from Claude's API, configure your HTTP client to handle SSE properly. Here's a practical implementation in JavaScript:
+Each event consists of optional fields: `event`, `data`, `id`, and `retry`. The `data` field contains your payload, and the `event` field lets you name events for routing on the client.
+
+## Basic Server Implementation
+
+Create a simple SSE endpoint using any backend framework. Here's a Python Flask example:
+
+```python
+from flask import Flask, Response, stream_with_context
+
+app = Flask(__name__)
+
+@app.route('/stream')
+def stream():
+    def generate():
+        for i in range(10):
+            yield f"data: {i}\n\n"
+            time.sleep(1)
+    
+    return Response(generate(), mimetype='text/event-stream')
+```
+
+The `yield` pattern streams each message immediately rather than waiting for the full response. For production use with the **pdf** skill or other document processing workflows, you might stream progress updates as files are processed.
+
+## Client-Side Consumption
+
+On the client side, use the native `EventSource` API:
+
+```javascript
+const source = new EventSource('/stream');
+
+source.onmessage = (event) => {
+  console.log('Received:', event.data);
+};
+
+source.addEventListener('progress', (event) => {
+  updateProgressBar(JSON.parse(event.data));
+});
+
+source.onerror = () => {
+  console.log('Connection lost, reconnecting...');
+};
+```
+
+The `EventSource` API automatically handles reconnection and sends the last event ID, allowing your server to resume from where the connection dropped. This makes SSE particularly reliable for long-running operations.
+
+## Combining SSE with Claude Skills
+
+When building AI-powered applications with Claude Code, SSE becomes valuable for streaming responses. Many Claude skills work well with streaming architectures:
+
+- The **webapp-testing** skill can validate SSE endpoints, checking that connections open correctly and events stream as expected
+- The **tdd** skill helps you write integration tests for your streaming endpoints, ensuring events fire in the correct order
+- The **frontend-design** skill can suggest UI patterns for displaying real-time updates from SSE streams
+
+Here's how you might stream Claude Code responses to a client:
 
 ```javascript
 async function streamClaudeResponse(prompt) {
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
+  const response = await fetch('/api/claude/stream', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': process.env.ANTHROPIC_API_KEY,
-      'anthropic-version': '2023-06-01'
-    },
-    body: JSON.stringify({
-      model: 'claude-3-5-sonnet-20241022',
-      max_tokens: 1024,
-      messages: [{ role: 'user', content: prompt }],
-      stream: true
-    })
+    body: JSON.stringify({ prompt })
   });
-
+  
   const reader = response.body.getReader();
   const decoder = new TextDecoder();
-
+  
   while (true) {
     const { done, value } = await reader.read();
     if (done) break;
     
     const chunk = decoder.decode(value);
-    const lines = chunk.split('\n');
-    
-    for (const line of lines) {
-      if (line.startsWith('data: ')) {
-        const data = line.slice(6);
-        if (data !== '[DONE]') {
-          const event = JSON.parse(data);
-          processClaudeEvent(event);
-        }
-      }
-    }
-  }
-}
-
-function processClaudeEvent(event) {
-  if (event.type === 'content_block_delta') {
-    process.stdout.write(event.delta.text);
+    // Parse SSE format and append to UI
+    displayChunk(chunk);
   }
 }
 ```
 
-This basic implementation demonstrates the core concept: reading streaming events and processing them incrementally.
+## Event Routing and Filtering
 
-## Building an MCP Server with SSE
-
-MCP servers can expose SSE endpoints for real-time communication. Using the FastMCP framework, you can create servers that stream results to Claude Code:
+For complex applications, use named events to route messages to different handlers:
 
 ```python
-from fastmcp import FastMCP
-from sse_starlette.sse import EventSourceResponse
-import asyncio
-
-mcp = FastMCP("RealTime Data Server")
-
-@mcp.route("/stream-updates")
-async def stream_updates(request):
-    async def event_generator():
-        for i in range(10):
-            yield {
-                "event": "update",
-                "data": f"Processing step {i + 1}/10"
-            }
-            await asyncio.sleep(1)
+@app.route('/updates')
+def updates():
+    def generate():
+        # Send status updates
+        yield "event: status\ndata: {\"stage\": \"loading\"}\n\n"
+        
+        # Send progress
+        for i in range(100):
+            yield f"event: progress\ndata: {i}\n\n"
+            
+        # Send completion
+        yield "event: complete\ndata: {}\n\n"
     
-    return EventSourceResponse(event_generator())
+    return Response(generate(), mimetype='text/event-stream')
 ```
 
-When Claude Code connects to this MCP server, it can receive real-time progress updates during long-running operations.
-
-## Practical Use Cases
-
-Several Claude skills benefit from SSE integration. The [pdf skill](/claude-skills-guide/best-claude-skills-for-code-review-automation/) can stream parsing progress for large documents. The [tdd skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) can provide live test execution feedback. The [frontend-design skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) might stream design generation updates.
-
-Consider building a code review pipeline where Claude streams analysis results as it processes different files:
+Client-side routing:
 
 ```javascript
-async function streamCodeReview(files) {
-  for (const file of files) {
-    const analysis = await analyzeFile(file);
-    
-    // Stream each file's results as they're completed
-    yield {
-      event: 'file-analysis',
-      data: JSON.stringify({
-        file: file.path,
-        issues: analysis.issues,
-        suggestions: analysis.suggestions
-      })
-    };
-  }
-}
+source.addEventListener('status', (e) => updateStatus(e.data));
+source.addEventListener('progress', (e) => updateProgress(e.data));
+source.addEventListener('complete', (e) => finishTask(e.data));
 ```
 
-This approach provides immediate feedback rather than waiting for complete analysis across all files.
+This pattern keeps your client code organized when multiple event types flow through a single connection.
 
-## Handling Connection Reliability
+## Error Handling and Reconnection
 
-SSE connections can drop. Implement reconnection logic to maintain reliable integrations:
+SSE handles reconnection automatically, but you should implement graceful degradation:
 
 ```javascript
-class SSEConnection {
-  constructor(url, options = {}) {
-    this.url = url;
-    this.options = options;
-    this.retryDelay = options.retryDelay || 1000;
-    this.maxRetries = options.maxRetries || 5;
+source.onerror = (error) => {
+  if (source.readyState === EventSource.CLOSED) {
+    // Manual reconnect after delay
+    setTimeout(() => {
+      source = new EventSource('/stream');
+    }, 5000);
   }
-
-  async connect() {
-    let retries = 0;
-    
-    while (retries < this.maxRetries) {
-      try {
-        const response = await fetch(this.url, this.options);
-        await this.processStream(response.body);
-        break;
-      } catch (error) {
-        retries++;
-        if (retries >= this.maxRetries) {
-          throw new Error(`Max retries (${this.maxRetries}) exceeded`);
-        }
-        await this.sleep(this.retryDelay * retries);
-      }
-    }
-  }
-
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  async processStream(body) {
-    // Stream processing logic
-  }
-}
+};
 ```
 
-## Security Considerations
+For critical applications, the **supermemory** skill can help you track connection health metrics and alert you when streams fail unexpectedly.
 
-When implementing SSE with Claude, apply standard security practices. Validate all incoming event data, implement proper authentication for SSE endpoints, and use HTTPS in production environments. Claude Code respects your API key security—never expose keys in client-side code.
+## Performance Considerations
 
-For MCP servers, configure appropriate access controls. The [supermemory skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) demonstrates secure patterns for handling sensitive data during streaming operations.
+SSE connections consume server resources. For high-traffic applications:
 
-## Performance Optimization
+- Limit concurrent connections per user
+- Implement connection timeouts and periodic heartbeats
+- Use a message queue to decouple event generation from delivery
 
-SSE streaming introduces overhead compared to batch processing. Optimize by:
+```python
+import redis
 
-- Sending only necessary data in each event
-- Using compression for large payloads
-- Implementing event batching for high-frequency updates
-- Setting appropriate timeout values
+@app.route('/stream')
+def stream():
+    pubsub = redis.pubsub()
+    pubsub.subscribe('updates')
+    
+    for message in pubsub.listen():
+        if message['type'] == 'message':
+            yield f"data: {message['data']}\n\n"
+```
 
-For bulk operations, consider whether true streaming provides meaningful benefit or if batch processing offers better performance.
+This Redis-backed approach scales horizontally and handles thousands of simultaneous connections efficiently.
+
+## Testing Your SSE Endpoints
+
+Use the **tdd** skill to write comprehensive tests for your streaming endpoints:
+
+```python
+def test_sse_endpoint():
+    response = client.get('/stream')
+    
+    assert response.status_code == 200
+    assert response.content_type == 'text/event-stream'
+    
+    # Read streamed content
+    lines = response.response
+    assert any(b'data:' in line for line in lines)
+```
+
+The **webapp-testing** skill can also validate SSE behavior in browser environments, checking that events arrive within expected timeframes and that reconnection works after network interruptions.
 
 ## Conclusion
 
-Server-Sent Events unlock real-time capabilities in Claude Code integrations. Whether you're building MCP servers that stream progress updates or consuming Claude's streaming API responses, the patterns covered here provide a foundation for production implementations. Start with simple streaming examples, then extend to more complex scenarios as your requirements grow.
+Server-Sent Events offer a straightforward solution for real-time streaming in web applications. The protocol is simple, works natively in browsers, and handles reconnection automatically. By combining SSE with Claude Code skills like **tdd**, **webapp-testing**, **frontend-design**, and **supermemory**, you can build robust real-time features while maintaining code quality and user experience.
+
+Whether you're streaming AI responses, live logs, or notification updates, SSE provides a reliable foundation that integrates well with modern development workflows.
+
+
+## Related Reading
+
+- [Claude Code WebSocket API Implementation](/claude-skills-guide/claude-code-websocket-api-implementation/)
+- [Claude Code gRPC API Development Guide](/claude-skills-guide/claude-code-grpc-api-development-guide/)
+- [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/)
+- [Claude Skills Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
