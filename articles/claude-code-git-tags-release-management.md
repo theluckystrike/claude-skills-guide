@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Git Tags Release Management: A Practical Guide"
-description: "Learn how to leverage git tags and release management workflows with Claude Code for automated versioning and deployment pipelines."
+description: "Learn how to use git tags and release management workflows with Claude Code for automated versioning and deployment pipelines."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-git-tags-release-management/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 Git tags provide a reliable mechanism for marking specific points in your repository history, making them essential for release management and version tracking. When combined with Claude Code and its powerful skills ecosystem, you can build automated workflows that handle versioning, changelog generation, and deployment triggers without manual intervention.
 
@@ -123,7 +129,7 @@ This pattern, often called "git flow" for hotfixes, maintains a clear audit trai
 
 ## Conclusion
 
-Git tags combined with Claude Code's automation capabilities form the foundation of reliable release management. By leveraging skills like **semantic-versioning-automation**, **conventional-commits-automation**, and **changelog-generation-workflow**, you reduce manual overhead while maintaining consistency.
+Git tags combined with Claude Code's automation capabilities form the foundation of reliable release management. By using skills like **semantic-versioning-automation**, **conventional-commits-automation**, and **changelog-generation-workflow**, you reduce manual overhead while maintaining consistency.
 
 Start with annotated tags for releases, establish clear naming conventions, and integrate pre-release validation through testing skills. Your deployment pipelines become more predictable, and your team gains confidence in the release process.
 

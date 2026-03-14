@@ -1,12 +1,22 @@
 ---
+
 layout: default
 title: "Why Does Claude Code Need So Much Context Window?"
 description: "Understanding why Claude Code consumes significant context window and how to optimize your workflows for better performance."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /why-does-claude-code-need-so-much-context-window/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
 
+<<<<<<< HEAD
+
+{% raw %}
+=======
+>>>>>>> d103d2003802453259ba0638c75428ce7618f4f9
 
 # Why Does Claude Code Need So Much Context Window?
 

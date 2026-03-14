@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Best Way to Use Claude Code for Frontend Styling"
 description: "A practical guide for developers: use Claude Code with specialized skills to generate, refactor, and maintain frontend styles efficiently."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /best-way-to-use-claude-code-for-frontend-styling/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Best Way to Use Claude Code for Frontend Styling
 

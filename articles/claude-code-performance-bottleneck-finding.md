@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Performance Bottleneck Finding"
 description: "A practical guide for developers to identify and resolve performance bottlenecks in Claude Code. Learn to profile skill execution, analyze tool call patterns, and optimize your AI assistant workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-performance-bottleneck-finding/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Performance Bottleneck Finding
 
@@ -118,7 +124,7 @@ Once you identify bottlenecks, apply targeted fixes:
 
 **Limit context scope** — Use explicit scope boundaries to prevent unnecessary context growth. Configure your skills to focus only on relevant project sections.
 
-**Parallelize independent operations** — When skills support concurrent execution, leverage that capability. The pptx skill can often generate multiple slides in parallel when properly configured.
+**Parallelize independent operations** — When skills support concurrent execution, use that capability. The pptx skill can often generate multiple slides in parallel when properly configured.
 
 ## Continuous Monitoring
 

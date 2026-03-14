@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Static Analysis Automation Guide"
 description: "Learn how to automate static code analysis with Claude Code skills. Practical examples for JavaScript, Python, and TypeScript projects."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-static-analysis-automation-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 Static analysis catches bugs before they reach production, but setting up and maintaining analysis pipelines takes time. Claude Code transforms static analysis from a manual chore into an automated workflow that runs continuously without developer intervention. This guide shows you how to build practical static analysis automation using Claude skills.
 

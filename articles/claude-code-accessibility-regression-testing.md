@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code Accessibility Regression Testing Guide"
 description: "Learn how to set up and run accessibility regression testing with Claude Code. Practical workflows, tools integration, and automation examples."
@@ -9,9 +10,14 @@ author: "theluckystrike"
 reviewed: false
 score: 0
 permalink: /claude-code-accessibility-regression-testing/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
 
-# Claude Code Accessibility Regression Testing Guide
+
+Automated accessibility testing has become essential for teams that want to ship inclusive products without sacrificing development velocity. When you modify a component, it's easy to accidentally introduce accessibility regressions—broken keyboard navigation, missing alt text, or color contrast violations. Claude Code provides a powerful workflow for catching these issues through regression testing, especially when combined with specialized skills like frontend-design and testing automation tools.
 
 Accessibility regression testing ensures that changes to your codebase do not reintroduce previously fixed accessibility issues. With Claude Code and its ecosystem of skills, you can build robust automated workflows that catch accessibility regressions before they reach production.
 

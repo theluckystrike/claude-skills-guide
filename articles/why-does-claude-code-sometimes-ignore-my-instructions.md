@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "Why Does Claude Code Sometimes Ignore My Instructions?"
 description: "Debug why Claude Code ignores your instructions. Learn how token limits, system prompts, skill configurations, and instruction clarity affect Claude's behavior."
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, claude-code, instructions, debugging, troubleshooting, skill-configuration]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /why-does-claude-code-sometimes-ignore-my-instructions/
 reviewed: true
 score: 7
 ---
+
 
 # Why Does Claude Code Sometimes Ignore My Instructions?
 

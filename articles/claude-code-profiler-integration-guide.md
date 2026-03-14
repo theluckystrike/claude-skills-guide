@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code Profiler Integration Guide"
 description: "A practical guide to integrating code profilers with Claude Code. Learn to measure execution time, memory usage, and identify performance bottlenecks using Claude Code with popular profiling tools."
@@ -11,6 +12,7 @@ permalink: /claude-code-profiler-integration-guide/
 reviewed: true
 score: 7
 ---
+
 
 
 # Claude Code Profiler Integration Guide

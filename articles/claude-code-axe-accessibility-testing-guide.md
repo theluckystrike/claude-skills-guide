@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Axe Accessibility Testing Guide"
 description: "A practical guide to implementing Axe accessibility testing with Claude Code. Learn how to automate accessibility audits, integrate axe-core, and fix common WCAG violations using Claude skills."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-axe-accessibility-testing-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Axe Accessibility Testing Guide
 
@@ -15,7 +21,7 @@ Automated accessibility testing has become essential for building inclusive web 
 
 Axe is an open-source accessibility testing engine that runs in browsers and CI/CD pipelines. It checks against WCAG 2.1, Section 508, and ARIA accessibility standards. The library offers over 100 accessibility rules covering common issues like missing alt text, improper heading hierarchy, color contrast failures, and keyboard navigation problems.
 
-When combined with Claude Code, you can automate the entire accessibility testing lifecycle—from initial audit through remediation validation. The key is structuring your prompts effectively and leveraging Claude skills designed for testing workflows.
+When combined with Claude Code, you can automate the entire accessibility testing lifecycle—from initial audit through remediation validation. The key is structuring your prompts effectively and using Claude skills designed for testing workflows.
 
 ## Setting Up Your Testing Environment
 
@@ -232,7 +238,7 @@ function openModal(modalElement) {
 
 ## Conclusion
 
-Integrating axe accessibility testing with Claude Code transforms accessibility from a periodic audit into a continuous process. By leveraging skills like `/frontend-design` for accessible component generation and `/tdd` for automated test creation, you build accessibility into your development DNA rather than treating it as an afterthought.
+Integrating axe accessibility testing with Claude Code transforms accessibility from a periodic audit into a continuous process. By using skills like `/frontend-design` for accessible component generation and `/tdd` for automated test creation, you build accessibility into your development DNA rather than treating it as an afterthought.
 
 The key is starting simple—run an initial audit, fix critical violations, then expand your test coverage incrementally. Claude Code excels at translating technical axe output into specific, actionable fixes that developers can implement immediately.
 

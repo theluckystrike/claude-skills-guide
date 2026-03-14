@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Code Coverage Improvement Guide"
 description: "Improve your test coverage using Claude Code. Practical strategies, code examples, and workflow tips for developers who want better testing."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-code-coverage-improvement-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Code Coverage Improvement Guide
 

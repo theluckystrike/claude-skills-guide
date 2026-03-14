@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Feature Flags Workflow with Git Guide"
 description: "Learn how to implement feature flags in your Claude Code workflow using Git branches. Practical examples and code snippets for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [tutorials]
-tags: [claude-code, feature-flags, git, workflow, development]
+tags: [claude-code, feature-flags, git, workflow, development, claude-skills]
 permalink: /claude-code-feature-flags-workflow-git-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Feature Flags Workflow with Git Guide
 

@@ -165,7 +165,7 @@ Test automation thoroughly before relying on it. Run hooks manually first to ver
 
 ## Conclusion
 
-Claude Code environment setup automation transforms repetitive configuration tasks into one-command operations. By leveraging skills like `pdf`, `tdd`, `supermemory`, and `frontend-design` alongside custom hooks, you can build powerful automation pipelines that provision complete development environments automatically.
+Claude Code environment setup automation transforms repetitive configuration tasks into one-command operations. By using skills like `pdf`, `tdd`, `supermemory`, and `frontend-design` alongside custom hooks, you can build powerful automation pipelines that provision complete development environments automatically.
 
 Start with simple automations—virtual environment activation, dependency installation—and progressively add sophistication as your needs grow. The time invested in setup automation pays dividends across every project you create.
 

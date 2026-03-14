@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code Plus Grafana Dashboard Configuration Automation"
 description: "Automate Grafana dashboard creation and configuration using Claude Code skills. Practical examples for generating JSON dashboards, automating provisioning, and integrating with monitoring workflows."
@@ -10,6 +11,7 @@ permalink: /claude-code-plus-grafana-dashboard-configuration-automation/
 reviewed: true
 score: 7
 ---
+
 
 # Claude Code Plus Grafana Dashboard Configuration Automation
 

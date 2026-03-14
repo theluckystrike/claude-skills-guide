@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Best Way to Scope Tasks for Claude Code Success"
 description: "Learn how to break down development tasks for Claude Code AI assistant. Practical frameworks for developers to get better results from Claude Code by structuring prompts effectively."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, task-scoping, ai-assistants, prompt-engineering, productivity]
+tags: [claude-code, task-scoping, ai-assistants, prompt-engineering, productivity, claude-skills]
 permalink: /best-way-to-scope-tasks-for-claude-code-success/
+reviewed: true
+score: 7
 ---
+
 
 # Best Way to Scope Tasks for Claude Code Success
 

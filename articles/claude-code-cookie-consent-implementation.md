@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Cookie Consent Implementation"
 description: "A practical guide to implementing cookie consent banners using Claude Code. Code examples, patterns, and integration with Claude skills for frontend development."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, cookie-consent, gdpr, frontend, javascript, privacy]
-author: theluckystrike
+tags: [claude-code, cookie-consent, gdpr, frontend, javascript, privacy, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-cookie-consent-implementation/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Cookie Consent Implementation
 
@@ -144,7 +148,7 @@ function getCookieCategory(name) {
 
 ## Integrating with Claude Code Skills
 
-When building this feature, you can leverage several Claude skills to improve your workflow. The frontend-design skill helps generate accessible UI components and responsive layouts. Use the tdd skill to create test cases that verify consent logic works correctly across different scenarios.
+When building this feature, you can use several Claude skills to improve your workflow. The frontend-design skill helps generate accessible UI components and responsive layouts. Use the tdd skill to create test cases that verify consent logic works correctly across different scenarios.
 
 For managing the consent state and localStorage operations, the pdf skill won't be directly useful, but other skills like the algorithmic-art skill could help if you need custom illustrations for your consent modal.
 

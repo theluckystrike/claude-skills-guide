@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code TypeScript Strict Mode Workflow"
 description: "A practical guide to setting up and using TypeScript strict mode with Claude Code. Includes configuration examples, workflow patterns, and integration tips."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-typescript-strict-mode-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code TypeScript Strict Mode Workflow
 
@@ -51,7 +57,7 @@ Gradually enable additional checks as you fix type errors. This approach prevent
 
 ## Integrating with Claude Code Workflow
 
-Claude Code works exceptionally well with TypeScript strict mode. When you're working on a project with strict type checking enabled, Claude can leverage type information to provide more accurate suggestions and catch potential issues before you run the code.
+Claude Code works exceptionally well with TypeScript strict mode. When you're working on a project with strict type checking enabled, Claude can use type information to provide more accurate suggestions and catch potential issues before you run the code.
 
 To integrate Claude Code with your strict TypeScript workflow, ensure your project has proper TypeScript configuration and that Claude has access to your project files. In your Claude Code session, reference your `tsconfig.json` to confirm strict mode is active:
 
@@ -73,7 +79,7 @@ The `pdf` skill can help you generate type documentation from your TypeScript de
 
 Here's a practical workflow for developing a new feature with strict TypeScript:
 
-First, define your types and interfaces before writing implementation code. This approach leverages TypeScript's type system as a design tool:
+First, define your types and interfaces before writing implementation code. This approach uses TypeScript's type system as a design tool:
 
 ```typescript
 interface User {

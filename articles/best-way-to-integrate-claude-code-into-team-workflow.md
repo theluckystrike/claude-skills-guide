@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Best Way to Integrate Claude Code into Team Workflow"
 description: "A practical guide for developers and power users looking to integrate Claude Code into their team workflow, with real-world examples and implementation strategies."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /best-way-to-integrate-claude-code-into-team-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Best Way to Integrate Claude Code into Team Workflow
 

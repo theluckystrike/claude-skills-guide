@@ -1,11 +1,18 @@
 ---
+
 layout: default
 title: "Claude Code Code Generation Templates Guide"
 description: "Master code generation templates in Claude Code. Learn to create reusable skill templates, automate repetitive coding patterns, and build consistent project structures with practical examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-code-generation-templates-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+{% raw %}
+
 
 # Claude Code Code Generation Templates Guide
 
@@ -210,3 +217,4 @@ Keep templates focused on a single responsibility. A template that tries to gene
 Code generation templates in Claude Code eliminate repetitive coding tasks while ensuring consistency across your projects. By combining the skill-creator for building generators, tdd for test coverage, and pdf for documentation, you create a fully automated development pipeline. Start with simple component templates, then expand into feature scaffolds and fullstack generators as your needs grow.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

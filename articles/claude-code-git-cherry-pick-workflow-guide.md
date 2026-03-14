@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Git Cherry-Pick Workflow Guide"
 description: "Master git cherry-pick workflows with Claude Code. Learn to select commits precisely, handle merge conflicts, and automate repetitive cherry-picking tasks using Claude skills."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-git-cherry-pick-workflow-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Git Cherry-Pick Workflow Guide
 
-Git cherry-pick stands as one of the most underutilized yet powerful commands in a developer's toolkit. When used correctly, it lets you bring specific commits from one branch into another without merging entire branches. This guide shows you how to leverage Claude Code to make cherry-picking more efficient, safer, and integrated into your daily workflow.
+Git cherry-pick stands as one of the most underutilized yet powerful commands in a developer's toolkit. When used correctly, it lets you bring specific commits from one branch into another without merging entire branches. This guide shows you how to use Claude Code to make cherry-picking more efficient, safer, and integrated into your daily workflow.
 
 ## Understanding Cherry-Pick Fundamentals
 

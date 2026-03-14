@@ -1,13 +1,26 @@
 ---
+
 layout: default
 title: "Claude Code Git Stash Workflow Tips Guide"
 description: "Master git stash workflows with Claude Code. Practical tips for developers to manage stashed changes, recover work, and integrate stash operations into AI-assisted development."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-git-stash-workflow-tips-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+{% raw %}
+=======
+>>>>>>> d103d2003802453259ba0638c75428ce7618f4f9
+=======
+
+>>>>>>> dd79db7f0b32e957dc44591a7c4e07e3bf178669
 # Claude Code Git Stash Workflow Tips Guide
 
 When you're deep in a development session with Claude Code, interruptions happen. Maybe you need to quickly check a different branch, hotfix a production bug, or switch context entirely. Git stash becomes your safety net, but using it effectively with Claude Code requires knowing the right patterns and commands. This guide covers practical git stash workflows specifically tailored for developers working with Claude Code and Claude Skills.
@@ -217,7 +230,7 @@ This creates a permanent reference you can always return to.
 
 ## Conclusion
 
-Git stash is an indispensable tool for Claude Code developers. By mastering these workflows, you can seamlessly switch contexts, protect your AI-assisted work, and maintain productive development sessions even when interruptions arise. The combination of git stash with Claude Skills like supermemory and tdd creates a powerful workflow that handles both the AI-generated code and the human-driven development process.
+Git stash is an indispensable tool for Claude Code developers. By mastering these workflows, you can smoothly switch contexts, protect your AI-assisted work, and maintain productive development sessions even when interruptions arise. The combination of git stash with Claude Skills like supermemory and tdd creates a powerful workflow that handles both the AI-generated code and the human-driven development process.
 
 ## Related Reading
 

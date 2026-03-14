@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code Architecture Decision Records Guide"
 description: "A practical guide to implementing Architecture Decision Records in your Claude Code workflow. Learn how to document design choices, use Claude skills, and maintain project clarity."
@@ -10,6 +11,7 @@ permalink: /claude-code-architecture-decision-records-guide/
 reviewed: true
 score: 7
 ---
+
 
 # Claude Code Architecture Decision Records Guide
 

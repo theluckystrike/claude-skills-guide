@@ -1,17 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Keyboard Navigation Testing Guide"
 description: "A practical guide to testing keyboard navigation in Claude Code projects. Learn automation patterns, test strategies, and tooling for accessibility compliance."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [testing, accessibility]
-tags: [claude-code, keyboard-navigation, testing, accessibility, automation]
+tags: [claude-code, keyboard-navigation, testing, accessibility, automation, claude-skills]
 permalink: /claude-code-keyboard-navigation-testing-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Keyboard Navigation Testing Guide
 
-Keyboard navigation testing ensures your web applications remain accessible to users who rely on keyboards instead of pointing devices. This guide covers practical testing strategies using Claude Code skills, test frameworks, and automation patterns that integrate seamlessly into your development workflow.
+Keyboard navigation testing ensures your web applications remain accessible to users who rely on keyboards instead of pointing devices. This guide covers practical testing strategies using Claude Code skills, test frameworks, and automation patterns that integrate smoothly into your development workflow.
 
 ## Why Keyboard Navigation Testing Matters
 

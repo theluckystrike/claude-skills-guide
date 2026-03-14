@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "How to Generate Unit Tests Automatically with Claude Code"
 description: "Learn to automate unit test generation using Claude Code skills. Practical examples with xlsx, tdd, and other skills for developers and power users."
@@ -10,6 +11,7 @@ permalink: /how-to-generate-unit-tests-automatically-with-claude-code/
 reviewed: true
 score: 7
 ---
+
 
 # How to Generate Unit Tests Automatically with Claude Code
 

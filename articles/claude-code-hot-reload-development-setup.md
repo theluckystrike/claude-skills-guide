@@ -1,12 +1,19 @@
 ---
+
 layout: default
 title: "Claude Code Hot Reload Development Setup"
 description: "A practical guide to configuring hot reload for Claude Code development environments. Learn setup techniques, skill integration, and workflow optimization."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-hot-reload-development-setup/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
 
+
+{% raw %}
 # Claude Code Hot Reload Development Setup
 
 Hot reload has become an essential productivity feature for developers working with Claude Code. When you modify a skill or configuration, seeing those changes reflected immediately accelerates iteration cycles and reduces context-switching overhead. This guide walks you through practical approaches to achieving a responsive Claude Code development environment.

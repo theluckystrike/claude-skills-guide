@@ -1,16 +1,22 @@
 ---
 
+
 layout: default
 title: "Claude Code Code Smell Identification Guide"
 description: "Learn how to identify code smells effectively using Claude Code. Practical techniques and examples for developers looking to improve code quality."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-code-smell-identification-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Code Smell Identification Guide
 
-Code smells are surface indicators that often point to deeper problems in your codebase. Recognizing them early prevents technical debt from accumulating and makes refactoring more manageable. This guide shows you how to leverage Claude Code and its ecosystem to identify code smells systematically.
+Code smells are surface indicators that often point to deeper problems in your codebase. Recognizing them early prevents technical debt from accumulating and makes refactoring more manageable. This guide shows you how to use Claude Code and its ecosystem to identify code smells systematically.
 
 ## What Are Code Smells
 

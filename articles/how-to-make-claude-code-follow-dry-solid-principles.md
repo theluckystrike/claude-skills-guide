@@ -1,12 +1,22 @@
 ---
+
 layout: default
 title: "How to Make Claude Code Follow DRY and SOLID Principles"
 description: "Learn practical strategies for applying DRY and SOLID design principles when working with Claude Code and AI assistants."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-follow-dry-solid-principles/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
 
+<<<<<<< HEAD
+
+{% raw %}
+=======
+>>>>>>> d103d2003802453259ba0638c75428ce7618f4f9
 # How to Make Claude Code Follow DRY and SOLID Principles
 
 When you work with Claude Code, the AI doesn't just write code—it generates architectural decisions, file structures, and interaction patterns. Without intentional guidance, this can lead to duplicated logic, fragile abstractions, and code that fights against the very principles that make software maintainable. Applying DRY (Don't Repeat Yourself) and SOLID principles to your AI-assisted workflow transforms Claude from a code generator into a genuine engineering partner.

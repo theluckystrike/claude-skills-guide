@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "How to Use Claude Code to Write Git Commit Messages Properly"
 description: "Learn how to use Claude Code to write proper git commit messages. Practical examples and techniques for developers using AI-assisted version control."
@@ -10,6 +11,7 @@ permalink: /how-to-use-claude-code-to-write-git-commit-messages-properly/
 reviewed: true
 score: 7
 ---
+
 
 # How to Use Claude Code to Write Git Commit Messages Properly
 

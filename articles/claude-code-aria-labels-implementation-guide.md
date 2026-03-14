@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code ARIA Labels Implementation Guide"
 description: "A practical guide to implementing ARIA labels in your projects using Claude Code and related skills for accessible web development."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-aria-labels-implementation-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code ARIA Labels Implementation Guide
 

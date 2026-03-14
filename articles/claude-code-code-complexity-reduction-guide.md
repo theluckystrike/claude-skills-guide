@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Code Complexity Reduction Guide"
 description: "A practical guide to reducing code complexity using Claude Code skills. Learn actionable techniques, skill recommendations, and real code examples for cleaner software."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-code-complexity-reduction-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Code Complexity Reduction Guide
 
-Code complexity is one of the primary factors that determines how maintainable, testable, and scalable your software remains over time. High complexity leads to bugs that are harder to find, features that take longer to implement, and developer frustration that compounds with each passing sprint. This guide shows you how to leverage Claude Code and its skill system to systematically reduce complexity in your codebase.
+Code complexity is one of the primary factors that determines how maintainable, testable, and scalable your software remains over time. High complexity leads to bugs that are harder to find, features that take longer to implement, and developer frustration that compounds with each passing sprint. This guide shows you how to use Claude Code and its skill system to systematically reduce complexity in your codebase.
 
 ## Understanding Code Complexity
 

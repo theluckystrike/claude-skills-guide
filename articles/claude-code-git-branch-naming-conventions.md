@@ -1,21 +1,23 @@
 ---
+
 layout: default
 title: "Claude Code Git Branch Naming Conventions"
 description: "Master git branch naming conventions that work seamlessly with Claude Code. Learn patterns, prefixes, and workflows to organize your development branches effectively."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, git, branch-naming, development-workflow, version-control]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [claude-code, git, branch-naming, development-workflow, version-control, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /claude-code-git-branch-naming-conventions/
 ---
+
 
 # Claude Code Git Branch Naming Conventions
 
 Git branch naming is one of those topics that seems simple until your repository becomes a chaotic mess of branches named "fix", "update2", or "asdfasdf". When working with Claude Code, well-structured branch names become even more valuable—the AI assistant can parse your branch structure, understand your workflow intent, and provide better assistance throughout the development cycle.
 
-This guide covers practical branch naming conventions that work with Claude Code, helping you maintain a clean repository while leveraging AI-assisted development.
+This guide covers practical branch naming conventions that work with Claude Code, helping you maintain a clean repository while using AI-assisted development.
 
 ## The Case for Structured Branch Names
 

@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Git Blame: Code Archaeology Guide"
 description: "Master git blame in Claude Code for code archaeology. Track down when and why code was written, understand legacy decisions, and trace ownership across your codebase."
 date: 2026-03-14
 categories: [workflows]
 tags: [claude-code, claude-skills, git, blame, debugging, code-analysis]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /claude-code-git-blame-code-archaeology-guide/
 ---
+
 
 # Claude Code Git Blame: Code Archaeology Guide
 

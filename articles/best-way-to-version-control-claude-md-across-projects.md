@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Best Way to Version Control Claude MD Across Projects"
 description: "Learn practical strategies for managing Claude skill .md files across multiple projects using Git workflows, symlinks, and centralized repositories."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /best-way-to-version-control-claude-md-across-projects/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Best Way to Version Control Claude MD Across Projects
 
@@ -79,7 +85,7 @@ This pattern works well when different projects require slightly different skill
 
 ## Git Submodules for Team Skills
 
-If you work on a team and want to share standardized skills, Git submodules provide a robust solution. Each project can include the team skills as a submodule:
+If you work on a team and want to share standardized skills, Git submodules provide a solid solution. Each project can include the team skills as a submodule:
 
 ```bash
 git submodule add git@github.com:yourteam/claude-team-skills.git .claude/team-skills

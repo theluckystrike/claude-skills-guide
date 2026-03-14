@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How to Make Claude Code Refactor Without Breaking Tests"
 description: "A practical guide for developers to use Claude Code for safe refactoring. Learn test preservation techniques, incremental changes, and verification workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-refactor-without-breaking-tests/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # How to Make Claude Code Refactor Without Breaking Tests
 

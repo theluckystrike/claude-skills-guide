@@ -1,11 +1,18 @@
 ---
+
 layout: default
 title: "Claude Code Release Automation with GitHub Guide"
 description: "Automate your software release pipeline using Claude Code and GitHub Actions. Learn to create workflows that handle versioning, changelog generation, and deployment triggers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-release-automation-github-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
+{% raw %}
 
 
 # Claude Code Release Automation with GitHub Guide

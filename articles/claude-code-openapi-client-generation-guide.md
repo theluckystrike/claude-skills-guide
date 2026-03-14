@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code OpenAPI Client Generation Guide"
 description: "Learn how to use Claude Code with OpenAPI specifications to generate type-safe API clients. Practical examples, workflow patterns, and integration tips for developers."
@@ -10,6 +11,7 @@ permalink: /claude-code-openapi-client-generation-guide/
 reviewed: true
 score: 7
 ---
+
 
 # Claude Code OpenAPI Client Generation Guide
 

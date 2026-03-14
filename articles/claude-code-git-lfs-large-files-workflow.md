@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Git LFS + Claude Code: Managing Large Files in Your Repository"
 description: "A practical workflow for handling large binary files with Git LFS while using Claude Code for development. Includes configuration tips and common pitfalls."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-git-lfs-large-files-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Git LFS with Claude Code: Managing Large Files Effectively
 
@@ -45,7 +51,7 @@ Now when you add and commit these files, Git LFS automatically handles them diff
 
 ## Integrating Git LFS with Claude Code Workflows
 
-Claude Code works seamlessly with Git LFS once properly configured. The key is ensuring your LFS hooks are in place before you start development. When Claude Code runs git commands, it will automatically interact with LFS-tracked files correctly.
+Claude Code works smoothly with Git LFS once properly configured. The key is ensuring your LFS hooks are in place before you start development. When Claude Code runs git commands, it will automatically interact with LFS-tracked files correctly.
 
 For projects using the supermemory skill for persistent context, you can maintain LFS tracking patterns in your project notes. Similarly, when using the tdd skill for test-driven development, ensure your test fixtures don't inadvertently bypass LFS handling.
 

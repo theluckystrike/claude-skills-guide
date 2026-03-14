@@ -1,19 +1,23 @@
 ---
+
 layout: default
 title: "Claude Code GitFlow Workflow Automation Guide"
 description: "Learn how to automate GitFlow workflows using Claude Code. Practical examples for branch management, commit conventions, and release automation."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, gitflow, workflow-automation, devops]
+tags: [claude-code, gitflow, workflow-automation, devops, claude-skills]
 permalink: /claude-code-gitflow-workflow-automation-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code GitFlow Workflow Automation Guide
 
 GitFlow remains one of the most effective branching strategies for teams managing release cycles with multiple environment stages. Automating this workflow with Claude Code transforms repetitive git commands into intelligent, context-aware operations that reduce human error and speed up development cycles.
 
-This guide shows you how to leverage Claude Code to automate GitFlow workflows, from branch creation to release tagging, with practical examples you can implement immediately.
+This guide shows you how to use Claude Code to automate GitFlow workflows, from branch creation to release tagging, with practical examples you can implement immediately.
 
 ## Understanding the GitFlow Structure
 
