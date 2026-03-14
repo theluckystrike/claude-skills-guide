@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Coupling and Cohesion Improvement"
 description: "Learn how to reduce coupling and increase cohesion in Claude Code skills for cleaner, more maintainable AI-assisted development workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-coupling-and-cohesion-improvement/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Coupling and Cohesion Improvement
 

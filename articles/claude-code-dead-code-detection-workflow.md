@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Dead Code Detection Workflow"
 description: "A practical guide to detecting and removing dead code using Claude Code skills. Learn automated workflows for identifying unused functions, unreachable code, and stale dependencies in your codebase."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-dead-code-detection-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Dead Code Detection Workflow
 

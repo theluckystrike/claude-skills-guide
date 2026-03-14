@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Local Development Setup Guide"
 description: "A practical guide to setting up Claude Code for local development, including environment configuration, skill integration, and optimization tips."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-local-development-setup-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 Setting up Claude Code for local development transforms your terminal into an intelligent coding assistant. This guide walks through the complete setup process, from installation to advanced configuration that unlocks the full potential of Claude Code for your development workflow.
 

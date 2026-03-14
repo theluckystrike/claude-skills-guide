@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Code Review Checklist Automation"
 description: "Automate code review checklists with Claude Code skills. Create repeatable review workflows, enforce consistency, and reduce manual overhead."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-code-review-checklist-automation/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Code Review Checklist Automation
 

@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code dotenv Configuration Workflow"
 description: "A practical guide to managing environment variables with dotenv in Claude Code projects. Learn workflows for secure configuration handling across development and production environments."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-dotenv-configuration-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 Managing environment variables effectively is a fundamental skill for developers working with Claude Code. Whether you're building a web application, automating documentation with the pdf skill, or running tests through tdd workflows, proper dotenv configuration ensures your sensitive data stays secure while maintaining flexibility across environments.
 
@@ -114,7 +120,7 @@ dotenv -e .env node scripts/migrate.js
 dotenv -e .env sh -c 'echo $API_KEY && node myscript.js'
 ```
 
-This pattern works well with project-specific Claude skills. When the pdf skill generates documents that require API authentication, or when tdd runs test suites against staging databases, environment variables flow seamlessly through the command chain.
+This pattern works well with project-specific Claude skills. When the pdf skill generates documents that require API authentication, or when tdd runs test suites against staging databases, environment variables flow smoothly through the command chain.
 
 ## Type-Safe Environment Configuration
 

@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Development Workflow Templates"
 description: "Practical workflow templates using Claude Code skills for developers and power users. Automate documentation, testing, frontend design, and knowledge management."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-development-workflow-templates/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Development Workflow Templates
 
-Claude Code skills transform how developers approach repetitive tasks. Instead of manually configuring every project, you can leverage pre-built skill workflows that handle documentation, testing, design, and knowledge organization. This guide provides practical templates you can implement immediately.
+Claude Code skills transform how developers approach repetitive tasks. Instead of manually configuring every project, you can use pre-built skill workflows that handle documentation, testing, design, and knowledge organization. This guide provides practical templates you can implement immediately.
 
 ## Core Workflow Concept
 
