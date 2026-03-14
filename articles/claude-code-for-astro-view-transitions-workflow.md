@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Astro View Transitions Workflow"
-description: "Learn how to use Claude Code skills to build seamless page transitions in Astro. Master the View Transitions API with practical examples and actionable workflows."
+description: "Learn how to use Claude Code skills to build seamless page transitions in Astro. Master the View Transitions API with practical examples and actionable."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -306,3 +306,10 @@ Astro's View Transitions API combined with Claude Code's automation capabilities
 
 By following these patterns and workflows, you'll create applications that feel responsive and polished while maintaining Astro's excellent performance characteristics. Claude Code can help you generate components, debug transition issues, and optimize your implementation at every step.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

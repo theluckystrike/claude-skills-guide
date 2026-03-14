@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for ARIA Live Regions Workflow Guide"
-description: "Learn how to use Claude Code to implement accessible ARIA live regions in your web applications. This comprehensive guide covers best practices, code patterns, and practical workflows for developers."
+description: "Learn how to use Claude Code to implement accessible ARIA live regions in your web applications. This comprehensive guide covers best practices, code."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-aria-live-regions-workflow-guide/
@@ -178,3 +178,10 @@ ARIA live regions are essential for building inclusive web applications. By usin
 
 The key to success is treating accessibility as an integral part of your development process rather than an afterthought. With Claude Code as your assistant, implementing and maintaining ARIA live regions becomes a streamlined, efficient workflow that benefits all your users.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

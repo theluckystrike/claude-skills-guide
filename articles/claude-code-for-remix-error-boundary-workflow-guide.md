@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Remix Error Boundary Workflow Guide"
-description: "Learn how to leverage Claude Code to build robust error boundary workflows in Remix. Practical examples and actionable advice for handling errors gracefully."
+description: "Learn how to leverage Claude Code to build robust error boundary workflows in Remix. Practical examples and actionable advice for handling errors."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-remix-error-boundary-workflow-guide/
@@ -199,3 +199,10 @@ Claude Code is a valuable partner in building robust error boundary workflows in
 
 The key is to treat error boundaries as a first-class concern in your application architecture, using Claude Code to maintain consistency and reduce the manual overhead of error handling implementation.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

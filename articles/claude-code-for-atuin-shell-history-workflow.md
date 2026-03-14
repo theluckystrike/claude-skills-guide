@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Atuin Shell History Workflow"
-description: "Master the combination of Claude Code and Atuin for enhanced shell history management. Learn practical workflows to search, analyze, and leverage your command history effectively."
+description: "Master the combination of Claude Code and Atuin for enhanced shell history management. Learn practical workflows to search, analyze, and leverage your."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -172,3 +172,10 @@ Combining Claude Code with Atuin creates a powerful workflow for managing and le
 Start by installing Atuin and letting it collect history for a few days, then begin experimenting with the analysis workflows described in this guide. As your history grows, so does the value you can extract with Claude Code's assistance.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

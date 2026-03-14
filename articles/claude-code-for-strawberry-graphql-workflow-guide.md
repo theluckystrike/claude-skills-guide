@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Strawberry GraphQL Workflow Guide"
-description: "Learn how to use Claude Code with Strawberry GraphQL for efficient Python GraphQL development. This guide covers schema creation, resolvers, subscriptions, and production best practices."
+description: "Learn how to use Claude Code with Strawberry GraphQL for efficient Python GraphQL development. This guide covers schema creation, resolvers."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-strawberry-graphql-workflow-guide/
@@ -307,3 +307,10 @@ Strawberry GraphQL combined with Claude Code creates a powerful development work
 Remember to leverage Claude Code throughout your development process, from initial schema design to debugging and optimization. The AI assistance lets you focus on business logic while maintaining high code quality standards.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

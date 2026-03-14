@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Redwood JS Fullstack Workflow Guide"
-description: "Master the complete workflow of building fullstack applications with RedwoodJS and Claude Code. Learn practical patterns for API development, frontend integration, and deployment."
+description: "Master the complete workflow of building fullstack applications with RedwoodJS and Claude Code. Learn practical patterns for API development, frontend."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-redwood-js-fullstack-workflow-guide/
@@ -234,3 +234,10 @@ Before deploying, have Claude review your configuration:
 
 Building with RedwoodJS and Claude Code combines the best of modern fullstack development: React's component model, GraphQL's data flexibility, and AI-assisted development speed. Start with a clear project structure, use Cells for data fetching, and use Claude to handle the boilerplate while you focus on your unique business logic. The workflow becomes iterative—describe what you need, review what Claude generates, refine, and continue building.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

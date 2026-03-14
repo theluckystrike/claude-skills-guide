@@ -215,3 +215,10 @@ The key is treating Claude as a collaborative tool—describe your intent clearl
 
 Start small: generate one component with Claude's help, review the output, and gradually incorporate more AI-assisted workflows into your development process. The combination of Stencil's powerful component architecture and Claude's code generation capabilities creates a productivity boost that scales with your project complexity.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -267,3 +267,10 @@ function trapFocus(element) {
 While NVDA screen reader testing requires manual interaction, Claude Code can significantly streamline your workflow by generating test scenarios, documenting expected behavior, validating HTML structure, and creating comprehensive testing checklists. By integrating these practices into your development process, you ensure your web applications are accessible to NVDA users without adding excessive overhead to your testing routine.
 
 The key is to combine automated HTML validation with structured manual testing checklists—Claude Code excels at generating and maintaining these resources, freeing you to focus on the actual NVDA testing sessions.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

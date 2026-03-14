@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for gRPC Web Workflow Tutorial"
-description: "Learn how to integrate Claude Code into your gRPC Web development workflow. This tutorial covers setup, code generation, service definition, and practical examples for building modern APIs."
+description: "Learn how to integrate Claude Code into your gRPC Web development workflow. This tutorial covers setup, code generation, service definition, and."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-grpc-web-workflow-tutorial/
@@ -207,3 +207,10 @@ When asked to review code, focus on:
 Integrating Claude Code into your gRPC-Web workflow transforms how you build and maintain web APIs. From generating initial proto definitions to debugging production issues, Claude Code acts as an intelligent partner throughout the development lifecycle. The key is establishing clean proto definitions, maintaining generated code properly, and using Claude's debugging capabilities when issues arise.
 
 Start by setting up your environment, defining your first proto service, and generating client code. As you build more complex gRPC-Web applications, you'll find Claude Code increasingly valuable for maintaining code quality and quickly resolving integration challenges.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

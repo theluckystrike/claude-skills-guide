@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Netcat (nc) Networking Workflow"
-description: "Master Netcat networking with Claude Code. Learn practical workflows for port scanning, file transfer, reverse shells, and network debugging using nc commands."
+description: "Master Netcat networking with Claude Code. Learn practical workflows for port scanning, file transfer, reverse shells, and network debugging using nc."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-netcat-nc-networking-workflow/
@@ -281,3 +281,10 @@ Netcat remains an essential tool for developers working with network operations.
 Start with simple operations like port scanning, then gradually incorporate file transfers and debugging scripts into your daily workflow. As you become more comfortable with Netcat's capabilities, you'll find it invaluable for both development and system administration tasks.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for TypeScript Declaration Merging Guide"
-description: "A practical guide to TypeScript declaration merging with Claude Code. Learn how to extend types, create ambient declarations, and build robust type definitions."
+description: "A practical guide to TypeScript declaration merging with Claude Code. Learn how to extend types, create ambient declarations, and build robust type."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-typescript-declaration-merging-guide/
@@ -246,3 +246,10 @@ namespace ApiClient {
 
 Declaration merging is a sophisticated TypeScript feature that enables flexible type definitions and powerful library extensions. By combining this capability with Claude Code's AI assistance, you can create maintainable, comprehensive type systems that scale with your project.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

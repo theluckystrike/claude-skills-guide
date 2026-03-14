@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Svelte Animations Workflow Tutorial"
-description: "Learn how to create stunning Svelte animations using Claude Code. This comprehensive tutorial covers workflow best practices, practical code examples, and actionable tips for building smooth, performant animations."
+description: "Learn how to create stunning Svelte animations using Claude Code. This comprehensive tutorial covers workflow best practices, practical code examples."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-svelte-animations-workflow-tutorial/
@@ -286,3 +286,10 @@ Svelte's animation system is remarkably powerful yet approachable. By combining 
 
 Remember to respect user preferences, keep animations brief, and use easing functions to create natural-feeling motion. With practice, you'll be building polished, animated interfaces that delight users without sacrificing performance.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

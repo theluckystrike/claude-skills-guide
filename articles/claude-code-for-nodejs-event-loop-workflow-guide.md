@@ -174,3 +174,10 @@ Finally, use Claude Code for code review. Share your async functions and ask Cla
 The Node.js event loop doesn't have to be mysterious. With practical examples and Claude Code assistance, you can build robust async applications that perform well under production load. Start with the simple patterns in this guide, experiment with variations, and gradually incorporate more advanced techniques as your understanding deepens.
 
 Remember: the event loop is your friend, not your enemy. Embrace asynchronous programming, and your Node.js applications will scale beautifully.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for SolidJS Resources Workflow Guide"
-description: "Learn how to use Claude Code CLI to streamline your SolidJS development workflow, manage reactive resources, and build efficient SolidJS applications with AI-assisted development."
+description: "Learn how to use Claude Code CLI to streamline your SolidJS development workflow, manage reactive resources, and build efficient SolidJS applications."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-solidjs-resources-workflow-guide/
@@ -193,3 +193,10 @@ Ask Claude Code to analyze performance bottlenecks by describing your component 
 
 Claude Code paired with SolidJS gives you AI-assisted development while using Solid's excellent reactivity model. By understanding signals, stores, and resources—and how to communicate your intent to Claude Code—you can build reactive applications faster and with fewer bugs. Start with small tasks, gradually tackle more complex patterns, and let Claude Code help you learn SolidJS idioms along the way.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
