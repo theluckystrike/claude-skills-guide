@@ -16,19 +16,24 @@ score: 8
 
 ## Setting Up Claude Code for Game Projects
 
-When starting a new gaming backend project, initialize Claude Code within your project directory. The CLI works exceptionally well with game servers built in Go, Rust, Python, or Node.js. Create a dedicated configuration file that understands your game-specific requirements.
+When starting a new gaming backend project, run Claude Code from your project directory. The CLI works well with game servers built in Go, Rust, Python, or Node.js. Use a `CLAUDE.md` file to define your game-specific conventions:
 
 ```bash
-# Initialize Claude Code for a Go-based game server
 cd my-game-server
-claude init --project-name "game-server" --language go
-
-# For a Node.js multiplayer game backend
-cd multiplayer-backend  
-claude init --project-name "multiplayer-api" --language typescript
+claude
 ```
 
-After initialization, configure project-specific rules in `.claude/settings.json` to define your game server architecture, player data models, and API conventions.
+Create a `CLAUDE.md` in your project root to configure project-specific context:
+
+```markdown
+# Game Server Context
+Language: Go
+Architecture: Microservices with Redis pub/sub for real-time events
+Player data: PostgreSQL with connection pooling
+Follow the Effective Go style guide and prefer table-driven tests.
+```
+
+Claude reads this file automatically at session start and applies the conventions throughout your session.
 
 ## Real-Time Multiplayer Matchmaking Implementation
 

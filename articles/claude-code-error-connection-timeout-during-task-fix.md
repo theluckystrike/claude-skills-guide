@@ -118,9 +118,9 @@ Create or modify your Claude Code configuration to include retry settings:
 ```
 
 Location varies by operating system:
-- macOS: `~/.config/claude/settings.json`
-- Linux: `~/.config/claude/settings.json`
-- Windows: `%APPDATA%/Claude/settings.json`
+- macOS: `~/.claude/settings.json`
+- Linux: `~/.claude/settings.json`
+- Windows: `%APPDATA%\Claude\settings.json`
 
 ## Fix 7: Checking Skill-Specific Requirements
 
