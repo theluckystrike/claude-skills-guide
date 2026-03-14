@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
+{% raw %}
+
 
 
 Semantic versioning transforms how you track and communicate project changes. When combined with Claude Code's automation capabilities, you gain a powerful system that handles version bumps, changelog generation, and tag creation without manual intervention. This guide shows you how to build a complete semantic versioning automation pipeline tailored for Claude Code workflows.
@@ -171,3 +173,4 @@ Semantic versioning automation through Claude Code eliminates repetitive manual 
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More automation workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

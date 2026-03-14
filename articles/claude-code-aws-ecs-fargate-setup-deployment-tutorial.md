@@ -10,6 +10,8 @@ reviewed: true
 score: 8
 permalink: /claude-code-aws-ecs-fargate-setup-deployment-tutorial/
 ---
+{% raw %}
+
 # Claude Code AWS ECS Fargate Setup Deployment Tutorial
 
 [AWS ECS Fargate provides serverless container orchestration](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/), eliminating the need to manage underlying EC2 instances. This guide walks through setting up and deploying containerized applications to ECS Fargate using Claude Code.
@@ -298,3 +300,4 @@ Claude Code accelerates each phase: generating Terraform and task definitions, w
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills for deployment workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

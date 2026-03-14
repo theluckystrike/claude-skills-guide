@@ -10,6 +10,8 @@ score: 8
 tags: [claude-code, claude-skills, automation, changelog, devops]
 permalink: /claude-skills-for-automated-changelog-generation/
 ---
+{% raw %}
+
 # Claude Skills for Automated Changelog Generation
 
 Changelogs are critical for maintaining transparent release processes, yet manually documenting every change across commits, pull requests, and issues consumes valuable development time. Claude skills enable you to automate this process entirely, generating comprehensive, well-formatted changelogs that keep your team and users informed without the manual effort. For an overview of automation workflows, visit the [workflows hub](/claude-skills-guide/workflows-hub/).
@@ -230,3 +232,4 @@ Automate the trivial, focus on the meaningful. Use Claude skills to handle parsi
 ---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

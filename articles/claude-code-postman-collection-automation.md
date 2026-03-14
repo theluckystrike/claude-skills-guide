@@ -10,6 +10,8 @@ permalink: /claude-code-postman-collection-automation/
 reviewed: true
 score: 7
 ---
+{% raw %}
+
 # Claude Code Postman Collection Automation
 
 Postman remains one of the most popular tools for API development and testing. Automating your Postman collections can significantly speed up development workflows, especially when combined with Claude Code's powerful skill system. This guide covers practical approaches to automating Postman collections using Claude Code, with real examples you can apply immediately.
@@ -206,3 +208,4 @@ When using Claude Code for automation, provide clear context about your API stru
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
