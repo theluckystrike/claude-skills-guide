@@ -136,7 +136,7 @@ Run your code with debugging enabled to see detailed error traces:
 claude code debug --verbose
 ```
 
-### 2. Leverage Interactive Breakpoints
+### 2. Use Interactive Breakpoints
 
 Set breakpoints to inspect values at runtime:
 
@@ -227,7 +227,7 @@ Remember these key takeaways:
 - Use optional chaining (?.) for safe property access
 - Provide default values with nullish coalescing (??)
 - Always validate data from external sources
-- Leverage Claude Code's debugging tools to trace issues
+- Use Claude Code's debugging tools to trace issues
 
 By implementing these practices, you'll write more robust code and spend less time chasing undefined errors.
 

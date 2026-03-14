@@ -56,7 +56,7 @@ Check your skill's configuration file for auto-invocation settings:
 ```yaml
 # skill.yaml
 name: my-code-quality-skill
-auto_invoke: false  # Disable automatic triggering
+description: "Code quality skill"
 ```
 
 ### Method 2: Use Explicit Instructions

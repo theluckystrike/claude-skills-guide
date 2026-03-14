@@ -66,7 +66,7 @@ A cluttered context window directly contributes to truncated output. Regularly c
 
 **Trim Unnecessary Context**: Before starting a large code generation task, summarize what Claude Code needs to know rather than loading entire files into the conversation. Focus on the specific patterns, imports, and requirements needed for the current task.
 
-**Leverage claude.md for Project Context**: Instead of explaining your entire codebase in each message, use a claude.md file to establish project conventions once. This file persists context efficiently without consuming your per-message token budget.
+**Use claude.md for Project Context**: Instead of explaining your entire codebase in each message, use a claude.md file to establish project conventions once. This file persists context efficiently without consuming your per-message token budget.
 
 ## Solution 4: Adjust Output Expectations in Prompts
 
@@ -143,7 +143,7 @@ To minimize truncated code output in your Claude Code workflow:
 3. **Reset sessions**: Begin new sessions for major task phases
 4. **Be explicit**: Tell Claude Code exactly what you need and to complete tasks fully
 5. **Monitor context**: Watch for signs of approaching limits
-6. **Use skills**: Leverage optimized skills for specific output types
+6. **Use skills**: Use optimized skills for specific output types
 7. **Plan for continuation**: Know how to gracefully continue truncated work
 
 By implementing these strategies, you'll significantly reduce the frustration of incomplete code output and maintain productive workflows with Claude Code. Remember that the goal is collaboration—helping Claude Code help you by managing the conversation structure effectively.

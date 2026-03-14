@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Best Way to Use Claude Code with a Monorepo Codebase"
 description: "Master Claude Code in a monorepo environment: learn workspace management, targeted skill loading, cross-package analysis, and optimization techniques."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, monorepo, workspaces, skills, optimization]
-author: theluckystrike
+tags: [claude-code, monorepo, workspaces, skills, optimization, claude-skills]
+author: "Claude Skills Guide"
 permalink: /best-way-to-use-claude-code-with-a-monorepo-codebase/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Best Way to Use Claude Code with a Monorepo Codebase
