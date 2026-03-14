@@ -14,7 +14,7 @@ score: 8
 
 Email automation is a fundamental requirement for modern applications. Whether you need to send welcome emails, order confirmations, password resets, or scheduled newsletters, integrating a reliable email service with your development workflow saves hours of manual work. SendGrid is one of the most widely used email delivery services, and when combined with [Claude Code skills](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), it becomes a powerful automation tool that developers can invoke on demand. For a broader view of external integrations, visit the [integrations hub](/claude-skills-guide/integrations-hub/).
 
-This guide walks you through setting up SendGrid email automation using custom Claude skills. You will learn how to create skills that authenticate with SendGrid, send different types of emails, manage templates, and handle common automation scenarios without leaving your Claude Code session.
+This guide walks you through [setting up SendGrid email automation](/claude-skills-guide/articles/can-claude-code-skills-call-external-apis-automatically/) using custom Claude skills. You will learn how to create skills that authenticate with SendGrid, send different types of emails, manage templates, and handle common automation scenarios without leaving your Claude Code session.
 
 ## Prerequisites
 
@@ -249,7 +249,7 @@ Check your inbox and the SendGrid dashboard for delivery status. Once confirmed 
 
 Never commit API keys to version control. Use [environment variables for Claude skills](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-a-claude-skill/) or a secrets management system. For production deployments, restrict the API key to only necessary permissions. Rotate keys periodically and monitor usage for anomalies.
 
-When handling recipient data, comply with relevant regulations including GDPR and CAN-SPAM. Provide unsubscribe mechanisms in commercial emails and honor opt-out requests promptly.
+When handling recipient data, [comply with relevant regulations including GDPR](/claude-skills-guide/articles/claude-code-gdpr-data-privacy-implementation-checklist/) and CAN-SPAM. Provide unsubscribe mechanisms in commercial emails and honor opt-out requests promptly.
 
 ## Related Reading
 

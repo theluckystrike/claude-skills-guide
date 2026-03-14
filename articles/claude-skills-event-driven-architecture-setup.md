@@ -243,7 +243,7 @@ Keep your event-driven architecture manageable with these principles:
 
 **Monitor event flow**. Track which events fire, how skills respond, and where bottlenecks occur. This data informs optimization decisions.
 
-**Decouple handlers**. Each skill should handle one event type effectively. Complex logic belongs in specialized skills, not the router.
+**[Decouple handlers](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/)**. Each skill should handle one event type effectively. Complex logic belongs in specialized skills, not the router.
 
 ## Conclusion
 

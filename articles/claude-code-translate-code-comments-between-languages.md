@@ -36,7 +36,7 @@ This approach works with any programming language since Claude recognizes commen
 
 ## Systematic Translation Workflow for Large Codebases
 
-For projects with hundreds of files, a systematic approach saves time. Create a dedicated translation skill to handle recurring translation tasks.
+[For projects with hundreds of files](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/), a systematic approach saves time. Create a dedicated translation skill to handle recurring translation tasks.
 
 ### Step 1: Create a Translation Skill
 
