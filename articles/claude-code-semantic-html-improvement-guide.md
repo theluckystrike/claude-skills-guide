@@ -1,190 +1,175 @@
 ---
 layout: default
-title: "Semantic HTML Improvement Guide with Claude Code"
-description: "Learn how to use Claude Code to improve semantic HTML in your projects. Practical techniques for developers who want cleaner, more accessible markup."
+title: "Claude Code Semantic HTML Improvement Guide"
+description: "Learn how to use Claude Code to audit, refactor, and improve semantic HTML structure in your projects. Practical patterns for developers and power users."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, claude-skills, semantic-html, html, frontend-development, code-quality]
 author: theluckystrike
-reviewed: true
-score: 8
 permalink: /claude-code-semantic-html-improvement-guide/
 ---
 
 # Claude Code Semantic HTML Improvement Guide
 
-Semantic HTML forms the backbone of quality web development. Using the right elements for the right purpose improves accessibility, SEO, and code maintainability. Claude Code can help you refactor existing markup and establish better patterns for new projects.
+Semantic HTML forms the backbone of accessible, maintainable web pages. Yet many developers fall into the trap of overusing `<div>` and `<span>` elements, losing the structural meaning that makes HTML powerful. Claude Code offers practical workflows to audit and improve your HTML semantics, whether you're working on a new project or refactoring legacy code.
 
-## The Problem with Non-Semantic Markup
+This guide shows you how to leverage Claude Code and related skills to transform your HTML from generic containers into meaningful structure.
 
-Many projects accumulate markup debt over time. Developers often reach for `<div>` and `<span>` because they seem flexible, but this creates problems:
+## Why Semantic HTML Matters
 
-- Screen readers struggle to convey meaning to users
-- Search engines cannot understand content structure
-- CSS becomes dependent on specific markup patterns
-- Future developers waste time deciphering meaningless containers
+Search engines and assistive technologies rely on semantic markup to understand page content. When you use `<article>` instead of `<div>`, you signal that content stands independently. When you use `<nav>` for navigation regions, screen readers can skip directly to menus. Proper semantics reduce the accessibility debt that accumulates when developers default to generic containers.
 
-Claude Code, when paired with the `frontend-design` skill, can analyze your codebase and identify opportunities for semantic improvement. This combination works particularly well for legacy projects where markup has grown inconsistent over time.
+Beyond accessibility, semantic HTML improves maintainability. Code becomes self-documenting when elements communicate their purpose through their tag names rather than relying on class names like "header-section" or "content-wrapper."
 
-## Using Claude Code to Audit Your Markup
+## Using Claude Code to Audit HTML Structure
 
-Start by having Claude Code review your HTML files. A prompt like this works effectively:
+Before improving semantics, you need a clear picture of your current markup. Claude Code can analyze your HTML files and identify areas needing attention.
+
+Create a skill that focuses on HTML auditing, or use Claude Code directly to examine your files:
 
 ```
-Analyze this HTML file for semantic correctness. Identify:
-1. Generic divs that should be semantic elements
-2. Missing landmark regions
-3. Improper heading hierarchy
-4. Links that should be buttons (or vice versa)
-5. Missing label elements on form inputs
+Analyze the semantic HTML structure in this file. Identify:
+1. Divs that could be replaced with semantic elements (article, section, nav, aside, main)
+2. Missing landmark roles
+3. Heading hierarchy issues (skipped levels, multiple h1s)
+4. Lists that should use ul/ol/li
+5. Buttons styled as links or vice versa
 ```
 
-The `frontend-design` skill includes patterns for HTML analysis and can suggest specific element replacements. After the audit, you'll have a clear list of improvements ranked by impact.
+This analysis reveals patterns across your codebase. Many projects show the same recurring issues—developers reaching for `<div>` when more specific elements exist.
 
-## Practical Semantic Improvements
+## Refactoring Patterns for Better Semantics
+
+Once you identify problems, systematic refactoring improves markup quality. Claude Code excels at mechanical transformations that follow consistent rules.
 
 ### Replacing Generic Containers
 
-Non-semantic markup often looks like this:
+The most common issue involves `<div>` elements used for structural purposes. Convert these to semantic equivalents:
+
+- Wrapper divs around page sections become `<section>`
+- Sidebar divs become `<aside>`
+- Navigation divs become `<nav>`
+- Main content wrappers become `<main>`
+
+When refactoring, preserve any existing classes or IDs. Semantic elements accept the same attributes as `<div>`, so the transformation is purely structural:
 
 ```html
-<div class="header">
-  <div class="nav">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-  </div>
+<!-- Before -->
+<div class="sidebar">
+  <div class="widget">...</div>
 </div>
+
+<!-- After -->
+<aside class="sidebar">
+  <div class="widget">...</div>
+</aside>
 ```
 
-Semantic improvement transforms this into:
+### Fixing Heading Hierarchy
+
+Heading levels must follow logical sequence. Skipping from `<h1>` to `<h3>` confuses screen reader users who navigate by headings. Claude Code can renumber headings while preserving visual styling:
 
 ```html
-<header>
-  <nav aria-label="Main navigation">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-  </nav>
-</header>
+<!-- Before -->
+<h1 class="page-title">Main Title</h1>
+<div class="subtitle">Subtitle text</div>
+<h3 class="section-header">Section One</h3>
+
+<!-- After -->
+<h1 class="page-title">Main Title</h1>
+<p class="subtitle">Subtitle text</p>
+<h2 class="section-header">Section One</h2>
 ```
 
-The semantic version provides the same styling hooks while adding meaning. Screen readers can now announce the navigation region, and users can skip directly to it.
+The frontend-design skill provides additional context for heading decisions in component-based architectures where heading levels must reset within sections.
 
-### Form Structure Improvements
+## Integrating HTML Improvements into Development Workflow
 
-Forms frequently suffer from poor semantic markup:
+Semantic improvements work best when integrated into your regular workflow rather than addressed in large refactoring sessions.
+
+### Pre-Commit Analysis
+
+Add HTML semantic audits to your pre-commit checks. Create a Claude skill that validates semantic structure before code reaches the repository. This prevents semantic debt from accumulating in the first place.
+
+### Documentation Generation
+
+When improving semantics, document the changes. The supermemory skill helps maintain a searchable knowledge base of semantic patterns used across your projects. Link semantic decisions to accessibility requirements and browser behavior.
+
+### Testing Accessibility
+
+Combine semantic improvements with automated testing. The tdd skill works well for accessibility test suites that verify:
+
+- Landmark regions exist
+- Heading levels are sequential
+- Interactive elements use semantic tags
+- Form controls have proper labels
+
+## Working with Generated Content
+
+Claude Code frequently generates HTML when building documentation, email templates, or marketing pages. Review this output for semantic quality rather than accepting it blindly.
+
+Generated content often defaults to `<div>` for flexibility, but you can guide Claude toward better choices:
+
+```markdown
+Create a pricing table section. Use semantic table elements (table, caption, th, td, tr) rather than divs. Include proper scope attributes on header cells. Use section for the overall container and h2 for the section title.
+```
+
+This specificity produces cleaner output that requires less manual refinement.
+
+## Advanced Semantic Patterns
+
+Once you master basic semantic elements, consider advanced patterns that further improve structure.
+
+### The Details and Summary Elements
+
+These elements create native accordions without JavaScript:
 
 ```html
-<div class="form-group">
-  <span class="label">Email:</span>
-  <input type="email" class="input">
-</div>
+<details>
+  <summary>Click to expand</summary>
+  <p>Hidden content revealed on interaction.</p>
+</details>
 ```
 
-Better markup uses proper labeling:
+Claude Code can identify JavaScript accordions that could use this simpler approach.
+
+### Figure and Figcaption
+
+Images with captions deserve `<figure>` and `<figcaption>`:
 
 ```html
-<fieldset>
-  <legend>Contact Information</legend>
-  <label for="email">Email address</label>
-  <input type="email" id="email" name="email" required>
-</fieldset>
+<figure>
+  <img src="chart.png" alt="Sales growth chart">
+  <figcaption>Figure 1: Quarterly revenue growth 2024-2025</figcaption>
+</figure>
 ```
 
-The `<fieldset>` groups related controls, and `<legend>` provides context. Labels are explicitly associated with inputs through the `for` attribute, not just visually positioned near them.
+The alt text becomes unnecessary when figcaption provides context, since screen readers announce both.
 
-### Article and Section Usage
+### Time and Data Elements
 
-Content areas often get wrapped in generic containers:
+Machine-readable content benefits from semantic time marking:
 
 ```html
-<div class="main-content">
-  <div class="blog-post">
-    <div class="title">My Post</div>
-    <div class="content">...</div>
-  </div>
-</div>
+<time datetime="2026-03-14">March 14, 2026</time>
+<data value="42">Forty-two</data>
 ```
 
-Semantic markup clarifies structure:
+These elements aid date parsing and localization.
 
-```html
-<main>
-  <article>
-    <header>
-      <h1>My Post</h1>
-    </header>
-    <p>...</p>
-  </article>
-</main>
-```
+## Maintaining Semantic Quality
 
-The `<article>` element indicates self-contained content that could be distributed independently. This helps aggregators, RSS readers, and search engines understand your content boundaries.
+Improvement requires ongoing attention. Establish conventions your team follows:
 
-## Integrating with Your Workflow
+1. Default to semantic elements—divs should be the exception, not the default
+2. Use ARIA roles only when native HTML cannot express the semantics
+3. Validate HTML in code review using automated tools
+4. Document semantic patterns in your component library
 
-### Combining with Testing Skills
-
-Pair semantic improvements with the `tdd` skill to verify accessibility. After refactoring markup, run tests to ensure nothing breaks:
-
-```
-Run accessibility tests on the updated HTML. Check for:
-- Proper heading levels (no skipping from h2 to h4)
-- All images have alt text
-- Form inputs have associated labels
-- Color contrast meets WCAG AA standards
-```
-
-### Documentation with PDF Skills
-
-When documenting your markup standards, the `pdf` skill can generate style guides for your team. Include examples of correct and incorrect usage, plus rationale for each semantic choice.
-
-### Memory with Supermemory
-
-The `supermemory` skill helps maintain consistency over time. Store your team's semantic HTML decisions and patterns so future code follows established conventions. When onboarding new developers, they can reference these patterns directly.
-
-## Measuring Improvement
-
-Track semantic quality through audits. Create a simple checklist:
-
-1. Count of landmark elements (header, nav, main, footer, aside)
-2. Proper heading hierarchy (sequential h1-h6)
-3. Form elements with proper labels
-4. Button vs link usage correctness
-
-Run audits periodically using Claude Code to catch regressions. Each audit produces metrics you can compare over time.
-
-## Common Pitfalls to Avoid
-
-Semantic HTML doesn't mean replacing every div. Use `<div>` when no semantic element fits your purpose—they remain useful for styling hooks and JavaScript targets.
-
-Avoid over-structuring. A simple page doesn't need excessive `<section>` elements. Each semantic element should serve a genuine purpose in your document outline.
-
-Don't forget browser defaults. Many semantic elements come with built-in styling and behavior. Fighting these defaults sometimes indicates incorrect element choice.
-
-## Building Sustainable Patterns
-
-Establish conventions in your `CLAUDE.md` file so Claude Code maintains consistency across your project:
-
-```
-Our HTML conventions:
-- Use <header> once per page, at the top
-- Navigation always uses <nav> with aria-label
-- Forms use <fieldset> and <legend> for grouping
-- Headings follow sequential hierarchy
-- All interactive elements use semantic tags (<a>, <button>)
-```
-
-When Claude Code generates new components, it follows these patterns automatically. Over time, your codebase becomes more consistent without manual enforcement.
+The pdf skill can generate accessibility documentation from your HTML audits, creating reports your team references during development.
 
 ## Conclusion
 
-Semantic HTML improvement is an ongoing process, not a one-time refactor. Claude Code makes auditing and refactoring efficient, helping you maintain quality markup throughout your project's lifecycle. By combining automation with clear conventions, you build a foundation that supports accessibility, SEO, and long-term maintainability.
+Semantic HTML improvement with Claude Code combines systematic analysis with targeted refactoring. Audit your markup regularly, fix heading hierarchies, replace generic containers with semantic elements, and integrate these checks into your development workflow.
 
-## Related Reading
-
-- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/) — Semantic HTML is a WCAG requirement
-- [Claude Code Aria Labels Implementation Guide](/claude-skills-guide/claude-code-aria-labels-implementation-guide/) — ARIA labels complement semantic HTML
-- [Claude Code Keyboard Navigation Testing Guide](/claude-skills-guide/claude-code-keyboard-navigation-testing-guide/) — Semantic HTML enables proper keyboard navigation
-- [Best Way to Use Claude Code for Frontend Styling](/claude-skills-guide/best-way-to-use-claude-code-for-frontend-styling/) — Frontend styling built on semantic HTML
+Good semantics pay dividends in accessibility, SEO, and maintainability. Start with a single file, establish patterns, and expand the practice across your projects.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
