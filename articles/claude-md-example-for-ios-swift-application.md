@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude MD Example for iOS Swift Application Development"
-description: "A practical guide to using Claude Code for building iOS Swift applications. Learn workflow patterns, code generation examples, and skill integration for mobile development."
+description: "A practical guide to using Claude Code for building iOS Swift applications. Learn workflow patterns, code generation examples, and skill integration."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-md-example-for-ios-swift-application/
+categories: [guides]
 ---
 
 # Claude MD Example for iOS Swift Application Development
@@ -317,5 +318,12 @@ When debugging, provide Claude with specific error messages and the relevant cod
 For larger features, break requests into smaller pieces. Generate the data models first, then the network layer, followed by the view layer. This incremental approach produces more maintainable code and helps Claude understand your architecture progressively.
 
 Claude accelerates iOS development by handling boilerplate, suggesting patterns, and helping troubleshoot issues. Combined with skills like **tdd** for test-driven development, **frontend-design** for consistent UI, and **supermemory** for persistent context, you have a comprehensive development workflow that scales with your project complexity.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
