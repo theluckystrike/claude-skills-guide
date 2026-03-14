@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude.md for API Design Standards Guide"
 description: "Learn how to leverage Claude.md and Claude Code to create, maintain, and enforce consistent API design standards across your projects."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-for-api-design-standards-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude.md for API Design Standards Guide
 
@@ -55,7 +60,7 @@ Claude will apply your documented conventions automatically. For more specific g
 "Create a REST endpoint for resetting passwords. Use the error handling patterns from our standards."
 ```
 
-This approach works seamlessly with other Claude skills. When you need to generate documentation alongside your API, combine your standards reference with the docx skill for creating specification documents, or use the pdf skill to export comprehensive API guides.
+This approach works smoothly with other Claude skills. When you need to generate documentation alongside your API, combine your standards reference with the docx skill for creating specification documents, or use the pdf skill to export comprehensive API guides.
 
 ## Automating Standards Validation
 

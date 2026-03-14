@@ -1,16 +1,21 @@
 ---
+
 layout: default
 title: "Claude MD for Onboarding New Team Members: A Practical Guide"
 description: "Learn how to create effective claude-md files that accelerate developer onboarding and establish consistent team workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-for-onboarding-new-team-members/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 When a new developer joins your team, the first week sets the tone for their entire tenure. Traditional onboarding involves hours of documentation reading, scattered wiki pages, and endless Slack threads. However, using claude-md files strategically transforms this process into an automated, self-service experience that benefits both new hires and existing team members.
 
-This guide shows you how to create effective claude-md files specifically designed for onboarding new team members, leveraging Claude Code skills to accelerate productivity from day one.
+This guide shows you how to create effective claude-md files specifically designed for onboarding new team members, using Claude Code skills to accelerate productivity from day one.
 
 ## What Makes Onboarding claude-md Different
 

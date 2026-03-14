@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "How to Test and Debug Multi Agent Workflows"
 description: "A practical guide to testing and debugging multi-agent workflows using Claude Code skills and features, with real-world examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-test-and-debug-multi-agent-workflows/
+reviewed: true
+score: 7
 categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 # How to Test and Debug Multi Agent Workflows
 

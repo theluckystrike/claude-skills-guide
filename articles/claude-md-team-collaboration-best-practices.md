@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude MD Team Collaboration Best Practices"
 description: "Master team collaboration with Claude Code: shared skill libraries, project conventions, context management, and workflow automation for development teams."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-team-collaboration-best-practices/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude MD Team Collaboration Best Practices
 

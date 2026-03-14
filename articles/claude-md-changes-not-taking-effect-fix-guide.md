@@ -1,17 +1,19 @@
 ---
 
+
+
 layout: default
 title: "Claude MD Changes Not Taking Effect Fix Guide"
 description: "Troubleshoot and fix Claude Code MD file changes not taking effect. Practical solutions for developers dealing with markdown rendering issues."
 date: 2026-03-14
 categories: [troubleshooting, guides]
 tags: [claude-code, md, markdown, troubleshooting, claude-skills, fix-guide]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-md-changes-not-taking-effect-fix-guide/
 ---
-
+{% raw %}
 # Claude MD Changes Not Taking Effect Fix Guide
 
 When working with Claude Code and markdown files, you may encounter situations where your .md file changes do not appear to take effect. This guide provides practical solutions for developers and power users debugging markdown rendering issues in Claude Code environments.
@@ -47,12 +49,10 @@ When your markdown content includes Liquid template tags like `{{ variable }}` o
 Wrap affected code blocks with raw tags:
 
 ```liquid
-{% raw %}
 {{ my_variable }}
 {% if user.is_active %}
   Content here
 {% endif %}
-{% endraw %}
 ```
 
 This prevents Liquid processing for specific sections. For inline code containing braces, use HTML entities: `{{` becomes `{{` in some configurations.
@@ -203,3 +203,4 @@ For persistent issues, consult your specific skill documentation or rebuild from
 - [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "How to Pass State Between AI Agents: A Practical Guide"
 description: "Master the techniques for passing state between AI agents with Claude Code. Learn practical patterns for multi-agent workflows, context sharing, and."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-pass-state-between-ai-agents/
 categories: [guides]
-tags: [claude-code, multi-agent, state-management]
+tags: [claude-code, multi-agent, state-management, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # How to Pass State Between AI Agents: A Practical Guide

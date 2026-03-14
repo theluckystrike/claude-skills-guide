@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Kubernetes YAML Generation Workflow Guide"
 description: "Learn how to leverage Claude Code for efficient Kubernetes YAML configuration generation, validation, and management in your development workflow."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-kubernetes-yaml-generation-workflow-guide/
+reviewed: true
+score: 7
 categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Claude Code Kubernetes YAML Generation Workflow Guide
@@ -166,7 +171,7 @@ autoscaling:
 
 ## Integration with GitOps Workflows
 
-Claude Code integrates seamlessly with GitOps tools like ArgoCD and Flux. Generate manifests specifically designed for GitOps deployments:
+Claude Code integrates smoothly with GitOps tools like ArgoCD and Flux. Generate manifests specifically designed for GitOps deployments:
 
 - Separate resources into logical files
 - Add appropriate labels for automated syncing

@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude MD Example for React Native Mobile App Development"
 description: "Practical Claude.md examples for building React Native mobile apps. Learn how to write effective prompts, use Claude skills for mobile development, and."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-example-for-react-native-mobile-app/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude MD Example for React Native Mobile App Development
 
@@ -65,7 +70,7 @@ Requirements:
 First write the failing test, then implement the component.
 ```
 
-This prompt leverages the tdd skill by explicitly requesting test-first development. The component requirements are specific enough for Claude to generate accurate code.
+This prompt uses the tdd skill by explicitly requesting test-first development. The component requirements are specific enough for Claude to generate accurate code.
 
 ## Example Prompt: Integrating Native Modules
 

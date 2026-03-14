@@ -1,17 +1,22 @@
 ---
+
 layout: default
 title: "Human-in-the-Loop Multi-Agent Patterns Guide"
 description: "Learn how to implement human-in-the-loop patterns with Claude Code to create more reliable, controllable, and collaborative AI agent systems."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /human-in-the-loop-multi-agent-patterns-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Human-in-the-Loop Multi-Agent Patterns Guide
 
-Building AI agent systems that work effectively with humans requires more than just powerful language models. Claude Code provides robust mechanisms for implementing human-in-the-loop (HITL) patterns that keep you in control while leveraging AI capabilities. This guide explores practical patterns for creating collaborative, controllable multi-agent systems using Claude Code.
+Building AI agent systems that work effectively with humans requires more than just powerful language models. Claude Code provides robust mechanisms for implementing human-in-the-loop (HITL) patterns that keep you in control while using AI capabilities. This guide explores practical patterns for creating collaborative, controllable multi-agent systems using Claude Code.
 
 ## Understanding Human-in-the-Loop Architecture
 

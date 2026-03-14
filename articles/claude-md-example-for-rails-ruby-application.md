@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude MD Example for Rails Ruby Application"
 description: "A practical guide to using Claude with Markdown for Rails and Ruby development workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-example-for-rails-ruby-application/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 Using Claude with Markdown documentation in Rails and Ruby applications transforms how developers approach documentation, testing, and code generation. This guide provides concrete examples of integrating Claude into your Ruby workflow, showing practical patterns you can implement immediately.
 
@@ -201,7 +206,7 @@ Maintain environment-specific documentation for staging and production configura
 
 ## Conclusion
 
-Integrating Claude into your Rails and Ruby workflow dramatically improves documentation quality, testing coverage, and code consistency. The key lies in providing proper context through settings files and leveraging specialized skills like tdd for testing, pdf for generated documentation, and supermemory for maintaining project knowledge. Start with one area—perhaps model documentation or test generation—and expand from there as your team becomes comfortable with the workflow.
+Integrating Claude into your Rails and Ruby workflow dramatically improves documentation quality, testing coverage, and code consistency. The key lies in providing proper context through settings files and using specialized skills like tdd for testing, pdf for generated documentation, and supermemory for maintaining project knowledge. Start with one area—perhaps model documentation or test generation—and expand from there as your team becomes comfortable with the workflow.
 
 
 ## Related Reading

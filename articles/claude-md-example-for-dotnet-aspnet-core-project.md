@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude MD Example for .NET ASP.NET Core Project"
 description: "Practical guide to creating Claude skill files for .NET ASPNET Core projects. Includes real examples, patterns, and integration tips."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-example-for-dotnet-aspnet-core-project/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 

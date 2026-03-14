@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "Claude MD Secrets and Sensitive Info Handling"
 description: "Learn how to securely handle API keys, credentials, and sensitive data when creating and using Claude Code skills. Practical patterns for developers."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, security, secrets-management, best-practices]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /claude-md-secrets-and-sensitive-info-handling/
 ---
+
 
 # Claude MD Secrets and Sensitive Info Handling
 

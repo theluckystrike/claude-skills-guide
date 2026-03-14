@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "CLAUDE.md Not Being Read by Claude Code Fix"
 description: "Troubleshoot and fix CLAUDE.md files not being read by Claude Code. Practical solutions for developers and power users dealing with ignored project."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-not-being-read-by-claude-code-fix/
 categories: [troubleshooting]
-tags: [claude-code, claude-md, troubleshooting]
+tags: [claude-code, claude-md, troubleshooting, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # CLAUDE.md Not Being Read by Claude Code Fix
 
