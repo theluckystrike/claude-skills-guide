@@ -10,9 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-for-fly-io-deployment-automation-workflow/
 ---
-
-
-
+{% raw %}
 # Claude Code for Fly.io Deployment Automation Workflow
 
 Fly.io offers an elegant platform for deploying applications close to your users with automatic scaling and global distribution. When you combine Fly.io's infrastructure with Claude Code's automation capabilities, you create a deployment pipeline that handles build verification, health validation, and multi-region management without manual intervention. For an overview of deployment automation, visit the [workflows hub](/claude-skills-guide/workflows-hub/). This guide shows you how to build a complete deployment automation workflow using Claude skills like `/tdd`, `/supermemory`, `/pdf`, and `/webapp-testing`.
@@ -274,3 +272,4 @@ The scripts and strategies in this guide provide a foundation you can customize 
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — the essential skill stack for deployment automation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

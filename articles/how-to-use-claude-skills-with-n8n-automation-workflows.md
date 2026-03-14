@@ -10,9 +10,7 @@ reviewed: true
 score: 8
 permalink: /how-to-use-claude-skills-with-n8n-automation-workflows/
 ---
-
-
-
+{% raw %}
 # How to Use Claude Skills with n8n Automation Workflows
 
 n8n is a self-hostable workflow automation tool with a visual node editor. Pairing it with Claude unlocks AI-powered steps inside any automation — from processing incoming webhook data to summarizing documents and triggering downstream actions. This guide covers how to call Claude from n8n using the Anthropic API, with patterns that replicate skill behavior via system prompts.
@@ -185,3 +183,4 @@ Connecting Claude to n8n automation uses the Anthropic API directly via HTTP Req
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep n8n workflow API costs under control
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

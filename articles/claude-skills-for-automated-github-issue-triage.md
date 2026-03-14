@@ -10,9 +10,7 @@ reviewed: true
 score: 7
 permalink: /claude-skills-for-automated-github-issue-triage/
 ---
-
-
-
+{% raw %}
 # Automated GitHub Issue Triage with Claude Skills
 
 Managing GitHub issues at scale quickly becomes overwhelming. When your repository accumulates hundreds of issues, manually triaging each one—categorizing, labeling, assigning priority, and routing to the right maintainers—eats away development time. Claude skills offer a practical solution by automating these workflows while maintaining accuracy.
@@ -219,3 +217,4 @@ The initial investment pays dividends as your issue queue grows. What once requi
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Practical techniques for keeping triage and automation workflows efficient without exceeding token budgets
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

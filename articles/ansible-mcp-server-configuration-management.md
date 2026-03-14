@@ -10,9 +10,7 @@ reviewed: true
 score: 7
 permalink: /ansible-mcp-server-configuration-management/
 ---
-
-
-
+{% raw %}
 # Ansible MCP Server Configuration Management
 
 Managing infrastructure configuration across multiple environments demands precision and consistency. The Ansible MCP server brings Model Context Protocol capabilities to your Ansible workflows, enabling Claude Code to interact with Ansible playbooks, manage inventories, and automate configuration tasks through natural language. This guide provides practical patterns for integrating Ansible MCP server into your configuration management pipeline.
@@ -196,3 +194,4 @@ The Ansible MCP server transforms how you manage infrastructure configuration. B
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

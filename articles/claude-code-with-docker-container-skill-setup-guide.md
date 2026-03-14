@@ -10,9 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-with-docker-container-skill-setup-guide/
 ---
-
-
-
+{% raw %}
 # Claude Code with Docker Container Setup Guide
 
 Running Claude Code with Docker gives you reproducible, isolated execution that works identically across developer machines, CI runners, and production servers. This guide covers the full setup from a basic Dockerfile through multi-container orchestration with Compose, including patterns for the [`tdd`](/claude-skills-guide/best-claude-skills-for-developers-2026/), `pdf`, `supermemory`, and `frontend-design` skills.
@@ -330,3 +328,4 @@ jobs:
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — When running skills in containers at scale, token cost management becomes critical
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

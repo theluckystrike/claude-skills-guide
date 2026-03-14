@@ -10,9 +10,7 @@ score: 7
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 ---
-
-
-
+{% raw %}
 # Claude Code Error: Unexpected Token in JSON Response Fix
 
 The "unexpected token in JSON" error is one of the most common issues developers encounter when working with Claude Code. This error typically occurs when Claude attempts to parse a response that isn't valid JSON, breaking the communication pipeline between the AI and your tools. Understanding the root causes and having a toolkit of solutions ready will save you hours of frustration.
@@ -156,4 +154,4 @@ Remember to test your integrations thoroughly, especially when combining multipl
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-
+{% endraw %}

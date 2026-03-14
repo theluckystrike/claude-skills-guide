@@ -10,9 +10,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-github-actions-composite-actions/
 ---
-
-
-
+{% raw %}
 # Claude Code GitHub Actions Composite Actions
 
 [GitHub Actions composite actions let you package multiple workflow steps into a single, reusable action](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When you combine composite actions with Claude Code, you create reusable automation building blocks that can run AI-powered tasks across different repositories. This guide shows you how to build composite actions that invoke Claude skills for code review, documentation generation, and test automation.
@@ -216,3 +214,4 @@ Composite actions provide the building blocks for reusable Claude Code automatio
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

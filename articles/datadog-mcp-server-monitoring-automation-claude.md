@@ -10,9 +10,7 @@ reviewed: true
 score: 7
 permalink: /datadog-mcp-server-monitoring-automation-claude/
 ---
-
-
-
+{% raw %}
 # Datadog MCP Server Monitoring Automation with Claude
 
 Server monitoring remains one of the most critical yet time-consuming aspects of infrastructure management. As systems grow more complex, the ability to automate monitoring workflows becomes essential. This guide covers how to use Model Context Protocol (MCP) servers to automate Datadog monitoring tasks with Claude, enabling developers to build intelligent, proactive monitoring systems.
@@ -135,3 +133,4 @@ The combination of Datadog's monitoring platform with MCP server automation crea
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

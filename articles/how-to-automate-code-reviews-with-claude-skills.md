@@ -10,9 +10,7 @@ reviewed: true
 score: 9
 permalink: /how-to-automate-code-reviews-with-claude-skills/
 ---
-
-
-
+{% raw %}
 # How to Automate Code Reviews with Claude Skills
 
 Code reviews catch bugs, enforce standards, and spread knowledge — but they also eat time. Claude Code skills let you automate the mechanical parts of code review so human reviewers can focus on architecture and intent. This guide covers how to use the `tdd`, `frontend-design`, and `supermemory` skills as review tools, and how to wire them into a pre-commit and CI workflow.
@@ -234,3 +232,4 @@ The practical workflow is: skills handle the checklist, humans handle the judgme
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

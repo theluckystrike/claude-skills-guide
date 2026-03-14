@@ -10,9 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-skills-for-creating-github-actions-workflows/
 ---
-
-
-
+{% raw %}
 # Claude Code Skills for Creating GitHub Actions Workflows
 
 GitHub Actions has become the backbone of modern CI/CD pipelines, but writing and maintaining workflow files can be repetitive and error-prone. Claude Code skills offer a powerful solution by encapsulating workflow patterns into reusable, AI-assisted templates that generate production-ready workflows on demand. Explore the full range of workflow skills in the [workflows hub](/claude-skills-guide/workflows-hub/).
@@ -178,3 +176,4 @@ Start with one skill focused on your most common workflow type, then expand as y
 - [Open Source Contribution Workflow with Claude Code 2026](/claude-skills-guide/claude-code-open-source-contribution-workflow-guide-2026/) — Apply GitHub Actions skills to streamline your open source contribution pipeline
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

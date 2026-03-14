@@ -10,9 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-astro-static-site-generation-workflow-guide/
 ---
-
-
-
+{% raw %}
 # Claude Code Astro Static Site Generation Workflow Guide
 
 [Building static sites with Claude Code and Astro creates a powerful combination](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) for developers who want AI-assisted development without sacrificing performance. This guide covers practical workflows, skill integration, and automation patterns that work in 2026.
@@ -230,3 +228,4 @@ Build incrementally, test consistently, and deploy automatically. Your static si
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

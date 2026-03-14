@@ -10,9 +10,7 @@ reviewed: true
 score: 7
 permalink: /planetscale-mcp-server-branching-workflow-guide/
 ---
-
-
-
+{% raw %}
 # Planetscale MCP Server Branching Workflow Guide
 
 Database branching represents one of the most powerful capabilities in modern development workflows. [When combined with the Model Context Protocol (MCP), you can automate schema migrations](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), validate database states, and synchronize branch environments without manual intervention. This guide walks you through building an efficient Planetscale MCP server branching workflow that fits into your development pipeline.
@@ -226,3 +224,4 @@ The patterns in this guide work particularly well when combined with other Claud
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

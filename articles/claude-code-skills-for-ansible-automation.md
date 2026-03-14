@@ -10,9 +10,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-skills-for-ansible-automation/
 ---
-
-
-
+{% raw %}
 # Claude Code Skills for Ansible Automation
 
 [Ansible remains one of the most popular tools for configuration management](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) and infrastructure automation. Combining Claude Code with Ansible through custom skills unlocks powerful possibilities for developers who want natural language interfaces to manage their infrastructure code. This guide shows you how to build Claude Code skills specifically designed for Ansible automation workflows.
@@ -193,3 +191,4 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 - [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — design Ansible-focused skills with proper structure
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — integrate Ansible validation into automated CI/CD workflows
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for DevOps and infrastructure automation
+{% endraw %}
