@@ -10,15 +10,15 @@ The most comprehensive collection of Claude Code skills guides on the web. Free,
 
 ## Getting Started
 
-- [What Are Claude Skills and How to Use Them](/claude-skills-guide/what-are-claude-skills-and-how-to-use-them/)
-- [How to Install Claude Code Skills Step by Step](/claude-skills-guide/how-to-install-claude-code-skills-step-by-step/)
+- [What Are Claude Skills and How to Use Them](/claude-skills-guide/claude-skills-explained-simply-for-non-programmers/)
+- [How to Install Claude Code Skills Step by Step](/claude-skills-guide/claude-code-setup-on-mac-step-by-step/)
 - [Best Claude Code Skills to Install First 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 - [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/)
 
 ## Popular Comparisons
 
-- [Claude Code vs Cursor 2026](/claude-skills-guide/claude-code-vs-cursor-2026-detailed-comparison/)
-- [Claude Code vs GitHub Copilot](/claude-skills-guide/claude-code-vs-github-copilot-workspace-features/)
+- [Claude Code vs Cursor 2026](/claude-skills-guide/claude-cowork-vs-cursor-ai-editor-comparison-2026/)
+- [Claude Code vs GitHub Copilot](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/)
 - [Claude Code vs Windsurf](/claude-skills-guide/claude-code-vs-windsurf-for-ai-development/)
 - [Claude Skills vs Custom GPTs](/claude-skills-guide/claude-skills-vs-custom-gpts-comparison-2026/)
 
