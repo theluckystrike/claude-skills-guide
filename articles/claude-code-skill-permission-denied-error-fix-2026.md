@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, permissions]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skill-permission-denied-error-fix-2026/
 ---
 
 # Claude Code Skill Permission Denied Error Fix 2026

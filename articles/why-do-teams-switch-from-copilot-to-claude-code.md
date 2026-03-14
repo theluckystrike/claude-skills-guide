@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github-copilot, comparison, developer-tools]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /why-do-teams-switch-from-copilot-to-claude-code/
 ---
 
 # Why Do Teams Switch from Copilot to Claude Code

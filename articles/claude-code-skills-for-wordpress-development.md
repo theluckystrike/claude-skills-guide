@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, wordpress, plugin-development, theme-developm
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-wordpress-development/
 ---
 
 # Claude Code Skills for WordPress Development

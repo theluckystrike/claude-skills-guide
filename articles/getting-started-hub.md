@@ -9,6 +9,7 @@ is_pillar: true
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /getting-started-hub/
 ---
 
 # Claude Code Getting Started: Complete Beginner Guide

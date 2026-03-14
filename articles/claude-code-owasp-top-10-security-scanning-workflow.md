@@ -8,6 +8,7 @@ categories: [workflows]
 tags: [claude-code, claude-skills, security, owasp, scanning]
 reviewed: true
 score: 8
+permalink: /claude-code-owasp-top-10-security-scanning-workflow/
 ---
 
 # Claude Code OWASP Top 10 Security Scanning Workflow

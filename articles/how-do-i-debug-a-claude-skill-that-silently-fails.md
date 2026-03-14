@@ -8,6 +8,7 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills, debugging, troubleshooting, silent-failures]
 reviewed: true
 score: 8
+permalink: /how-do-i-debug-a-claude-skill-that-silently-fails/
 ---
 
 # How Do I Debug a Claude Skill That Silently Fails

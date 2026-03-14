@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-do-i-combine-two-claude-skills-in-one-workflow/
 ---
 
 # How Do I Combine Two Claude Skills in One Workflow

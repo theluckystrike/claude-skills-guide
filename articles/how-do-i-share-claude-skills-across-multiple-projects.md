@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-do-i-share-claude-skills-across-multiple-projects/
 ---
 {% raw %}
 

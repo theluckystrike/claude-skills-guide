@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, insurance, claims-processing, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-skills-for-insurance-claims-processing/
 ---
 
 # Claude Code Skills for Insurance Claims Processing

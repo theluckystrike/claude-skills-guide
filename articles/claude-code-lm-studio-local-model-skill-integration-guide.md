@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, lm-studio, local-models]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-lm-studio-local-model-skill-integration-guide/
 ---
 {% raw %}
 

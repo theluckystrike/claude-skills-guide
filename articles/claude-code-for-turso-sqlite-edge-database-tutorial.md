@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, turso, sqlite, edge-database]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-for-turso-sqlite-edge-database-tutorial/
 ---
 
 # Claude Code for Turso SQLite Edge Database Tutorial

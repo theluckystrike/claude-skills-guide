@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, sentry, error-tracking, source-maps, debugging]
 reviewed: true
 score: 8
+permalink: /claude-code-sentry-error-tracking-source-maps-workflow/
 ---
 
 # Claude Code Sentry Error Tracking Source Maps Workflow

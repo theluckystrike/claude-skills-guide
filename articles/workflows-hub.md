@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, workflows, automation, open-source]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /workflows-hub/
 ---
 
 # AI Agent Workflow Guide: Claude Skills for Real-World Automation

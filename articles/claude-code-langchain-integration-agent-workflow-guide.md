@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, langchain, agents, automation, integration]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-langchain-integration-agent-workflow-guide/
 ---
 
 # Claude Code LangChain Integration Agent Workflow Guide

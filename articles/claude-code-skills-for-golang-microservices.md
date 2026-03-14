@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, golang, microservices, go, api, backend, dock
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-golang-microservices/
 ---
 
 # Claude Code Skills for Golang Microservices

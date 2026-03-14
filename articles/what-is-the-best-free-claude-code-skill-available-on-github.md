@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /what-is-the-best-free-claude-code-skill-available-on-github/
 ---
 
 # What Is the Best Free Claude Code Skill Available on GitHub

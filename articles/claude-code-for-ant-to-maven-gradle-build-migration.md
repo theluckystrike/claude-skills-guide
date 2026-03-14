@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, build-tools, ant, maven, gradle, migration, a
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-for-ant-to-maven-gradle-build-migration/
 ---
 
 # Claude Code for Ant to Maven Gradle Build Migration

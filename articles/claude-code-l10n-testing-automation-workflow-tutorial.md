@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, l10n, testing, automation, i18n]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-l10n-testing-automation-workflow-tutorial/
 ---
 {% raw %}
 

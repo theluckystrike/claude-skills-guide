@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+permalink: /claude-code-skills-for-qa-engineers-automating-test-suites/
 ---
 
 # Claude Code Skills for QA Engineers Automating Test Suites

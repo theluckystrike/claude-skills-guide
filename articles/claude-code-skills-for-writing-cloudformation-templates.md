@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, cloudformation, aws, infrastructure-as-code]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-writing-cloudformation-templates/
 ---
 
 # Claude Code Skills for Writing CloudFormation Templates

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, planetscale, mcp, database, branching]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /planetscale-mcp-server-branching-workflow-guide/
 ---
 {% raw %}
 

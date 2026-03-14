@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, nextjs, image-optimization, frontend, web-dev
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-nextjs-image-optimization-guide/
 ---
 
 # Claude Code Next.js Image Optimization Guide

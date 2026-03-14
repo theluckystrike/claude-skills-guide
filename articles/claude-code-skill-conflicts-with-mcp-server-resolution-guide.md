@@ -9,6 +9,7 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills, mcp]
 
 score: 9
+permalink: /claude-code-skill-conflicts-with-mcp-server-resolution-guide/
 ---
 
 # Claude Code Skill Conflicts with MCP Server Resolution Guide

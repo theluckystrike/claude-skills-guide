@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, supermemory, state]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skill-not-saving-state-between-sessions-fix/
 ---
 
 # Claude Skill Not Saving State Between Sessions Fix

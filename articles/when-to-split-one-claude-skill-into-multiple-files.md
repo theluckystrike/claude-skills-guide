@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, organization, best-practices]
 reviewed: true
 score: 7
+permalink: /when-to-split-one-claude-skill-into-multiple-files/
 ---
 
 # When to Split One Claude Skill Into Multiple Files

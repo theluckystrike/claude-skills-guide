@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, edtech, lms, education, automation]
 reviewed: true
 score: 7
+permalink: /claude-skills-for-edtech-learning-management-systems/
 ---
 
 # Claude Skills for EdTech Learning Management Systems

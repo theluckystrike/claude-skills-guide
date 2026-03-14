@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, supermemory, memory, context]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-memory-feature-vs-supermemory-skill-comparison/
 ---
 
 # Claude Memory Feature vs SuperMemory Skill Comparison

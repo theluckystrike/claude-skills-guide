@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, react-router, react, routing, frontend]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-react-router-v7-navigation-guide/
 ---
 
 # Claude Code React Router v7 Navigation Guide

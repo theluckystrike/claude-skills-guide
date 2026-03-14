@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, i18n, date-format, internationalization]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-international-date-format-handling-workflow/
 ---
 
 # Claude Code International Date Format Handling Workflow

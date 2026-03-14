@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github, discovery, community]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-to-find-claude-skills-on-github/
 ---
 
 # How to Find Claude Skills on GitHub: A Practical Guide

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, gdpr, data-privacy, compliance, security]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-gdpr-data-privacy-implementation-checklist/
 ---
 
 # GDPR Data Privacy Implementation Checklist for Claude Code

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, enterprise, workflow, team-adoption]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-enterprise-teams-adopt-claude-code-workflow/
 ---
 
 # How Enterprise Teams Adopt Claude Code Workflow

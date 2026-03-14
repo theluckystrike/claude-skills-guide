@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, unit-tests, testing, automation, tdd]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-for-writing-unit-tests-automatically/
 ---
 
 # Claude Skills for Writing Unit Tests Automatically

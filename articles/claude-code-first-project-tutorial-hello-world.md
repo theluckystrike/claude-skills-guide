@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, hello-world, getting-started, tutorial]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-first-project-tutorial-hello-world/
 ---
 
 # Claude Code First Project Tutorial — Hello World

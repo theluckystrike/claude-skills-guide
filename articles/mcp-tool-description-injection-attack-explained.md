@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, injection]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /mcp-tool-description-injection-attack-explained/
 ---
 
 # MCP Tool Description Injection Attack Explained

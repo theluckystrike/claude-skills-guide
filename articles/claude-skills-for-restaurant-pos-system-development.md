@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, restaurant-pos, automation, development]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-for-restaurant-pos-system-development/
 ---
 
 # Claude Skills for Restaurant POS System Development

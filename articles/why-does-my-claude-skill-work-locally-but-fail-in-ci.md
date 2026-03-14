@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /why-does-my-claude-skill-work-locally-but-fail-in-ci/
 ---
 
 # Why Does My Claude Skill Work Locally But Fail in CI?

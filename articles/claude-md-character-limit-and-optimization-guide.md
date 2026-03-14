@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, claude-md, character-limit, optimization]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-md-character-limit-and-optimization-guide/
 ---
 
 # Claude MD Character Limit and Optimization Guide

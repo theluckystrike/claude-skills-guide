@@ -8,6 +8,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills, mcp, comparison, architecture]
 reviewed: true
 score: 8
+permalink: /mcp-servers-vs-claude-skills-what-is-the-difference/
 ---
 
 # MCP Servers vs Claude Skills: What Is the Difference?

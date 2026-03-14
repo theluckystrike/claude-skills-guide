@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, 2026, roadmap, ai-coding, mcp]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-roadmap-2026-what-is-coming/
 ---
 
 # Claude Code Skills Roadmap 2026: What Is Coming

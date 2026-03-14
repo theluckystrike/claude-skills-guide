@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, redis, caching, performance]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-redis-caching-layer-implementation/
 ---
 
 # Claude Code Skills Redis Caching Layer Implementation

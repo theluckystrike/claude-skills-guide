@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, caching, performance]
 reviewed: true
 score: 8
+permalink: /caching-strategies-for-claude-code-skill-outputs/
 ---
 
 # Caching Strategies for Claude Code Skill Outputs

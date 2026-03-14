@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, automation, client-reports, pdf, tdd, superme
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-automate-client-reports-with-claude-skills/
 ---
 
 # Automate Client Reports with Claude Skills

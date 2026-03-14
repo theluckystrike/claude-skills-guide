@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, discord, mcp, community-automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /discord-mcp-server-community-automation-guide/
 ---
 
 # Discord MCP Server Community Automation Guide

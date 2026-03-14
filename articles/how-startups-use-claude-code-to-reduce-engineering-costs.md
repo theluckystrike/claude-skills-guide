@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, startups, productivity, engineering-costs]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-startups-use-claude-code-to-reduce-engineering-costs/
 ---
 
 # How Startups Use Claude Code to Reduce Engineering Costs

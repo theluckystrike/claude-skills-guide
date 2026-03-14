@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-code-soc2-compliance-audit-preparation-guide-2026/
 ---
 
 # Claude Code SOC 2 Compliance Audit Preparation Guide 2026

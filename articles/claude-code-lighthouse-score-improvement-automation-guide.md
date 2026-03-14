@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, lighthouse, performance, automation]
 reviewed: true
 score: 8
+permalink: /claude-code-lighthouse-score-improvement-automation-guide/
 ---
 
 # Claude Code Lighthouse Score Improvement Automation Guide

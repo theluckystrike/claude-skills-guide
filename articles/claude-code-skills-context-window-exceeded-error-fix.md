@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, context-window, tokens]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-context-window-exceeded-error-fix/
 ---
 
 # Claude Code Skills Context Window Exceeded Error Fix

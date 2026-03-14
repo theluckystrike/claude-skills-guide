@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, brave-search, mcp, research-automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /brave-search-mcp-server-research-automation/
 ---
 
 # Brave Search MCP Server for Research Automation

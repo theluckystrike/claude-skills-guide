@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, python, numpy, scipy]
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-scientific-python-numpy-scipy/
 ---
 
 # Claude Code Skills for Scientific Python: NumPy and SciPy

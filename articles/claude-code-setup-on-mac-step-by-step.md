@@ -8,6 +8,7 @@ categories: [getting-started]
 tags: [claude-code, claude-skills, macos, installation, setup]
 reviewed: true
 score: 8
+permalink: /claude-code-setup-on-mac-step-by-step/
 ---
 
 # Claude Code Setup on Mac: Step-by-Step Guide for Developers

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, prompt-injection, security, defense]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /mcp-prompt-injection-attack-prevention-guide/
 ---
 {% raw %}
 

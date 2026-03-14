@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, tdd, testing]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-tdd-skill-test-driven-development-workflow/
 ---
 
 # Claude TDD Skill: Test-Driven Development Workflow

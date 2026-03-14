@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, rate-limits, optimization, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /rate-limit-management-claude-code-skill-intensive-workflows/
 ---
 
 # Rate Limit Management for Skill-Intensive Claude Code Workflows

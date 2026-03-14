@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, multimedia, pdf, canvas-design]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /can-claude-skills-generate-images-or-handle-multimedia-files/
 ---
 
 # Can Claude Skills Generate Images or Handle Multimedia Files?

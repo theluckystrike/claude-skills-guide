@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, puppeteer, web-automation, browser-autom
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /puppeteer-mcp-server-web-automation-workflow/
 ---
 
 # Puppeteer MCP Server Web Automation Workflow

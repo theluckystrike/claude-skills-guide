@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, openai, codex-cli, comparison, ai-coding]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-vs-openai-codex-cli-comparison-2026/
 ---
 
 # Claude Code vs OpenAI Codex CLI Comparison 2026

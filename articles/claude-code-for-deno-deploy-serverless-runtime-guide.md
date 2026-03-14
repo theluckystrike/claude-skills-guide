@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, deno-deploy, serverless, edge-computing, deno
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-for-deno-deploy-serverless-runtime-guide/
 ---
 
 # Claude Code for Deno Deploy Serverless Runtime Guide

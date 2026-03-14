@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, csharp, dotnet, .net, development]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-c-sharp-dotnet-developers/
 ---
 
 # Claude Code Skills for C# .NET Developers

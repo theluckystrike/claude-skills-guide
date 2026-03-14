@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /optimal-skill-file-size-and-complexity-guidelines/
 ---
 
 # Optimal Skill File Size and Complexity Guidelines

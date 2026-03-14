@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, claude-md, skill-format, configuration]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-md-file-complete-guide-what-it-does/
 ---
 
 # Claude MD File Complete Guide — What It Does

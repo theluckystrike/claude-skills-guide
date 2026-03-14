@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, ruby, rails, testing]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-ruby-on-rails-projects/
 ---
 
 # Claude Code Skills for Ruby on Rails Projects

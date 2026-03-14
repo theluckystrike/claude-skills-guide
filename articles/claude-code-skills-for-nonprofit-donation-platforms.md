@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, nonprofit, donations, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-skills-for-nonprofit-donation-platforms/
 ---
 
 # Claude Code Skills for Nonprofit Donation Platforms

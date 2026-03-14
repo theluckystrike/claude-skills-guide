@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, supply-chain, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /mcp-server-supply-chain-security-risks-2026/
 ---
 
 # MCP Server Supply Chain Security Risks: A Practical Guide for 2026

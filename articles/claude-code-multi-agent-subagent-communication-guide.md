@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, multi-agent, automation, agentic]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-multi-agent-subagent-communication-guide/
 ---
 
 # Claude Code Multi-Agent and Subagent Communication Guide

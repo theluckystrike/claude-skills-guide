@@ -8,6 +8,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills, microservices, communication-patterns]
 reviewed: true
 score: 8
+permalink: /claude-code-skills-microservices-communication-patterns/
 ---
 
 # Claude Code Skills Microservices Communication Patterns

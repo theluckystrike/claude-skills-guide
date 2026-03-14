@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, react-native, mobile-ui, frontend]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-react-native-paper-mobile-ui-guide/
 ---
 {% raw %}
 

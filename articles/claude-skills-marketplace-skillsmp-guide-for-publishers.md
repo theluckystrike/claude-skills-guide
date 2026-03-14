@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, publishing, pdf, docx]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-marketplace-skillsmp-guide-for-publishers/
 ---
 
 # Claude Skills for Publishers: A Practical Guide

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, debugging, developer-tools, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /best-way-to-use-claude-code-for-debugging-sessions/
 ---
 
 # Best Way to Use Claude Code for Debugging Sessions

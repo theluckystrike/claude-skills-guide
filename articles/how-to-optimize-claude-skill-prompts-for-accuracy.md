@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, prompting, skill-writing, accuracy]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-optimize-claude-skill-prompts-for-accuracy/
 ---
 
 # How to Optimize Claude Skill Prompts for Accuracy

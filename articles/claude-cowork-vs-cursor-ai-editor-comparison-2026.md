@@ -8,6 +8,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, cursor, comparison]
+permalink: /claude-cowork-vs-cursor-ai-editor-comparison-2026/
 ---
 
 # Claude Code vs Cursor AI Editor Comparison 2026

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, fly-io, deployment, docker, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /fly-io-mcp-server-deployment-workflow-guide/
 ---
 {% raw %}
 

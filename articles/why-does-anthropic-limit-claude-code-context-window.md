@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-skills, claude-code, context-window, limits, performance]
 reviewed: true
 score: 8
+permalink: /why-does-anthropic-limit-claude-code-context-window/
 ---
 
 # Why Does Anthropic Limit Claude Code Context Window?

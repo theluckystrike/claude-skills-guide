@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-code-dart-flutter-cross-platform-development-guide/
 ---
 
 # Claude Code Dart Flutter Cross Platform Development Guide

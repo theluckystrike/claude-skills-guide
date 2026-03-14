@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, full-stack, product-engineering, workflow]
 reviewed: true
 score: 9
+permalink: /claude-code-skills-for-product-engineers-building-full-stack/
 ---
 
 # Claude Code Skills for Product Engineers Building Full Stack

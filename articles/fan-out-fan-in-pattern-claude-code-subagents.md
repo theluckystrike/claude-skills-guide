@@ -8,6 +8,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /fan-out-fan-in-pattern-claude-code-subagents/
 ---
 
 # Fan-Out Fan-In Pattern with Claude Code Subagents

@@ -8,6 +8,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills, openai, comparison, assistants-api]
 reviewed: true
 score: 8
+permalink: /claude-skills-vs-openai-assistants-api-comparison/
 ---
 
 # Claude Skills vs OpenAI Assistants API Comparison

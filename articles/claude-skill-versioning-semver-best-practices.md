@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skill-versioning-semver-best-practices/
 ---
 
 # Claude Skill Versioning: Semver Best Practices

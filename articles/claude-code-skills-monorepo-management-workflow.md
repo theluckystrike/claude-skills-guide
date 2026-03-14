@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, monorepo, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-monorepo-management-workflow/
 ---
 
 # Claude Code Skills Monorepo Management Workflow

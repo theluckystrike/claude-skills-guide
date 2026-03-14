@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/
 ---
 
 # Claude Code Pytest Fixtures Parametrize Workflow Tutorial 2026

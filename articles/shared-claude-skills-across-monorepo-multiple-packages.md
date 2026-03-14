@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, monorepo, multiple-packages, shared-skills]
 reviewed: true
 score: 9
+permalink: /shared-claude-skills-across-monorepo-multiple-packages/
 ---
 
 # Shared Claude Skills Across Monorepo Multiple Packages

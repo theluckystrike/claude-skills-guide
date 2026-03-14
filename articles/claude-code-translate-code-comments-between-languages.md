@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, code-comments, translation, i18n]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-translate-code-comments-between-languages/
 ---
 
 # Claude Code Translate Code Comments Between Languages

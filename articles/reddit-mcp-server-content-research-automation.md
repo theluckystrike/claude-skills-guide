@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, reddit, mcp, research-automation, content]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /reddit-mcp-server-content-research-automation/
 ---
 
 # Reddit MCP Server for Content Research Automation

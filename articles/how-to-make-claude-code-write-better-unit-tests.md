@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, unit-testing, tdd]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-make-claude-code-write-better-unit-tests/
 ---
 
 # How to Make Claude Code Write Better Unit Tests

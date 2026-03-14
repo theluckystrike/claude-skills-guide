@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
+permalink: /claude-skills-for-websocket-realtime-app-development/
 ---
 
 # Claude Skills for WebSocket Realtime App Development

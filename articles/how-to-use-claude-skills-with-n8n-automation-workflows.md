@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, n8n, automation, anthropic-api, workflows]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-use-claude-skills-with-n8n-automation-workflows/
 ---
 {% raw %}
 

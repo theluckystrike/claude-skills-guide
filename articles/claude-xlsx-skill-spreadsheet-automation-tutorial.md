@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, xlsx, spreadsheets, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-xlsx-skill-spreadsheet-automation-tutorial/
 ---
 
 # Claude /xlsx Skill: Spreadsheet Automation Guide

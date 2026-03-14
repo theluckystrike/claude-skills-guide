@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, access-control, permissions, enterprise, security]
 reviewed: true
 score: 8
+permalink: /claude-skills-access-control-and-permissions-enterprise/
 ---
 
 # Claude Skills Access Control and Permissions Enterprise Guide

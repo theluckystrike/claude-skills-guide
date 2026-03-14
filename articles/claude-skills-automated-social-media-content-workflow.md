@@ -8,6 +8,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, automation, social-media, workflow]
+permalink: /claude-skills-automated-social-media-content-workflow/
 ---
 
 # Automate Social Media Content with Claude Skills

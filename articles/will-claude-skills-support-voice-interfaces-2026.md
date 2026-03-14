@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, voice-interfaces, voice-input, 2026, workflow
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /will-claude-skills-support-voice-interfaces-2026/
 ---
 
 # Will Claude Skills Support Voice Interfaces in 2026?

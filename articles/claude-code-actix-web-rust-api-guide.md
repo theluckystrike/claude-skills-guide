@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, actix-web, rust, api, backend, web-developmen
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-actix-web-rust-api-guide/
 ---
 
 # Claude Code Actix Web Rust API Guide

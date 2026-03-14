@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, prototyping, design, frontend-development]
 reviewed: true
 score: 7
+permalink: /how-designers-use-claude-code-for-prototyping/
 ---
 
 # How Designers Use Claude Code for Prototyping

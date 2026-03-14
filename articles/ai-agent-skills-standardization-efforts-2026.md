@@ -8,6 +8,7 @@ tags: [ai-agents, skills-standardization, mcp, claude-code, claude-skills, 2026]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /ai-agent-skills-standardization-efforts-2026/
 ---
 
 # AI Agent Skills Standardization Efforts 2026

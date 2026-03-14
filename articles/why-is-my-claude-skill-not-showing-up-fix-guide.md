@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, debug]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /why-is-my-claude-skill-not-showing-up-fix-guide/
 ---
 
 [When a Claude Code skill fails to appear or respond to its slash command, the issue usually comes from a handful of common causes](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)

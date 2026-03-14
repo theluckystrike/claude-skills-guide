@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 10
+permalink: /why-does-claude-skill-produce-different-output-each-run/
 ---
 
 # Why Does Claude Skill Produce Different Output Each Run

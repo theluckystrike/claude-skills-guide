@@ -8,6 +8,7 @@ tags: [claude-skills, mcp, oauth, authentication, security, claude-code, develop
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /mcp-oauth-21-authentication-implementation-guide/
 ---
 
 # MCP OAuth 2.1 Authentication Implementation Guide

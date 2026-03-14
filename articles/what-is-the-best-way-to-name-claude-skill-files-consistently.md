@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
+permalink: /what-is-the-best-way-to-name-claude-skill-files-consistently/
 ---
 
 # What Is the Best Way to Name Claude Skill Files Consistently

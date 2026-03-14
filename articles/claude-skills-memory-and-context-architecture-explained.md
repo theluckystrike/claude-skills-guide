@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, memory, context, supermemory, state-managemen
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-memory-and-context-architecture-explained/
 ---
 
 # Claude Skills Memory and Context Architecture Explained

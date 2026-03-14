@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, claude-md, starter-template, project-setup]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-md-template-for-new-projects-starter-guide/
 ---
 
 # Claude MD Template for New Projects Starter Guide

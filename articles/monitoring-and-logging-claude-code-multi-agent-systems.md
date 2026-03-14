@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, multi-agent, monitoring, logging, observabili
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /monitoring-and-logging-claude-code-multi-agent-systems/
 ---
 {% raw %}
 

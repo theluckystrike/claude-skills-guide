@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, yaml, front-matter]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skill-yaml-front-matter-parsing-error-fix/
 ---
 
 # Claude Skill YAML Front Matter Parsing Error Fix

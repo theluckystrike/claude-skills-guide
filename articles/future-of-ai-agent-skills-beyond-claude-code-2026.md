@@ -8,6 +8,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills, ai-agents, 2026, future, autonomous-workflows]
 reviewed: true
 score: 8
+permalink: /future-of-ai-agent-skills-beyond-claude-code-2026/
 ---
 
 # The Future of AI Agent Skills Beyond Claude Code in 2026

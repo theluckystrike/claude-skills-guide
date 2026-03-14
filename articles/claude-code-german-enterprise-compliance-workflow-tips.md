@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, german, enterprise, compliance, gdpr]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-german-enterprise-compliance-workflow-tips/
 ---
 
 # Claude Code German Enterprise Compliance Workflow Tips

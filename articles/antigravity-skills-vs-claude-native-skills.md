@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, antigravity, native-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /antigravity-skills-vs-claude-native-skills/
 ---
 
 # Antigravity Skills vs Claude Native Skills: What's the Difference?

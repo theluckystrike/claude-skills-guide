@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, gitlab, ci-cd, docker, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-gitlab-ci-pipeline-docker-registry-tutorial/
 ---
 
 # Claude Code GitLab CI Pipeline Docker Registry Tutorial

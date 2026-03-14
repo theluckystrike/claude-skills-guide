@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, intercom, mcp, customer-data, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /intercom-mcp-server-customer-data-automation/
 ---
 
 # Intercom MCP Server: Automating Customer Data Workflows

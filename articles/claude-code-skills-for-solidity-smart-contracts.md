@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, solidity, ethereum, smart-contracts, blockcha
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-skills-for-solidity-smart-contracts/
 ---
 
 # Claude Code Skills for Solidity Smart Contracts

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-do-i-rollback-a-bad-claude-skill-update-safely/
 ---
 
 # How Do I Rollback a Bad Claude Skill Update Safely

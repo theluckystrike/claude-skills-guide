@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, git, bisect, debugging, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-git-bisect-automated-bug-finding-workflow/
 ---
 
 # Claude Code Git Bisect: Automated Bug Finding Workflow

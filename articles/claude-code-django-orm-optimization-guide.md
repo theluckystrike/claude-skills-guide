@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, django, orm, optimization, python, database]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-django-orm-optimization-guide/
 ---
 
 # Claude Code Django ORM Optimization Guide

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, token-optimization, api-costs]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-token-optimization-reduce-api-costs/
 ---
 
 # Claude Skills Token Optimization: Reduce API Costs

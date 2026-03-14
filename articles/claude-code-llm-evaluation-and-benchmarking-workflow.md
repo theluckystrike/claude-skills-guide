@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, llm-evaluation, benchmarking, ai-testing]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-llm-evaluation-and-benchmarking-workflow/
 ---
 
 # Claude Code LLM Evaluation and Benchmarking Workflow

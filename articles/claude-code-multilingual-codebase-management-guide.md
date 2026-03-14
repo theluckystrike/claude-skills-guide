@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, multilingual, codebase, i18n, localization, i
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-multilingual-codebase-management-guide/
 ---
 
 # Claude Code Multilingual Codebase Management Guide

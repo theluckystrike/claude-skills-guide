@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, sendgrid, email-automation, api-integration]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-sendgrid-email-automation-setup/
 ---
 
 # Claude Code Skills SendGrid Email Automation Setup

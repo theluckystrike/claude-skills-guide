@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, data-science, jupyter, python, machine-learni
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-data-science-and-jupyter-notebooks/
 ---
 
 [Data science workflows involve repetitive tasks that drain productivity](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/): cleaning messy datasets, generating visualizations, building machine learning pipelines, and documenting findings. Claude Code skills transform these workflows by automating common operations and enabling AI-assisted development directly within Jupyter notebooks and Python environments.

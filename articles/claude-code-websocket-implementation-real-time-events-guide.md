@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, websocket, real-time, events, implementation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-websocket-implementation-real-time-events-guide/
 ---
 
 # Claude Code WebSocket Implementation: Real-Time Events Guide

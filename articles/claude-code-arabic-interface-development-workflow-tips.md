@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, arabic, rtl, i18n, frontend]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-arabic-interface-development-workflow-tips/
 ---
 
 # Claude Code Arabic Interface Development Workflow Tips

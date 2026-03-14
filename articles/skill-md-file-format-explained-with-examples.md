@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, skill-md, skill-format, reference]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /skill-md-file-format-explained-with-examples/
 ---
 
 # Skill MD File Format Explained With Examples

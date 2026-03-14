@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, rust, systems-programming, ffi, memory-manage
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-for-rust-systems-programming/
 ---
 
 # Claude Skills for Rust Systems Programming

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, trigger-dev, workflow-automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-for-trigger-dev-workflow-automation-tutorial/
 ---
 
 # Claude Code for Trigger.dev Workflow Automation Tutorial

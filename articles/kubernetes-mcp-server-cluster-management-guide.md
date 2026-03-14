@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, kubernetes, mcp, cluster-management, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /kubernetes-mcp-server-cluster-management-guide/
 ---
 
 # Kubernetes MCP Server Cluster Management Guide

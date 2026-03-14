@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-context-window-exceeded-after-loading-skill-fix/
 ---
 
 # Claude Code Context Window Exceeded After Loading Skill Fix

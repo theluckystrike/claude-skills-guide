@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, backend, best-practices, markdown]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-md-for-backend-projects-best-practices/
 ---
 
 # Claude MD for Backend Projects Best Practices

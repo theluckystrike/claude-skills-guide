@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, frontend-design, react]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-frontend-design-skill-review-and-tutorial/
 ---
 
 # Claude Frontend Design Skill Review and Tutorial

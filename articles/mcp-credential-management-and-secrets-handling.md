@@ -8,6 +8,7 @@ tags: [mcp, claude-skills, security, credentials, secrets, claude-code, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /mcp-credential-management-and-secrets-handling/
 ---
 
 # MCP Credential Management and Secrets Handling

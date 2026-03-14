@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, dependency-injection, automation, workflows]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skill-dependency-injection-patterns/
 ---
 
 # Claude Skill Dependency Injection Patterns

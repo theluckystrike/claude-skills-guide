@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, webpack, vite, bundle-size, performance, java
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-bundle-size-reduction-webpack-vite-workflow/
 ---
 
 # Claude Code Bundle Size Reduction: Webpack to Vite Workflow

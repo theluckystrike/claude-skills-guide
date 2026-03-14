@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, claude-md, version-control, git, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-md-version-control-strategy-best-practices/
 ---
 
 # Claude MD Version Control Strategy Best Practices

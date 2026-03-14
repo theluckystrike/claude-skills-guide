@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, error-handling, code-generation, debugging]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skips-error-handling-in-generated-code/
 ---
 
 # Claude Code Skips Error Handling in Generated Code

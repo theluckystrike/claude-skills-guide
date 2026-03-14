@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, vhdl, hardware-description-language, fpga, di
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-skills-for-hardware-description-language-vhdl/
 ---
 
 # Claude Code Skills for Hardware Description Language VHDL

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, prompting, skill-writing, productivity]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-write-effective-prompts-for-claude-code/
 ---
 
 # How to Write Effective Prompts for Claude Code

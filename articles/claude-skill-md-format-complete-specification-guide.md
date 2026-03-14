@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, skill-format, markdown, reference]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skill-md-format-complete-specification-guide/
 ---
 
 # Claude Skill .md Format: Complete Specification Guide

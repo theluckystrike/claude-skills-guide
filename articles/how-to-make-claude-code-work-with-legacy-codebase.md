@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, legacy-code, migration]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-make-claude-code-work-with-legacy-codebase/
 ---
 
 # How to Make Claude Code Work with Legacy Codebase

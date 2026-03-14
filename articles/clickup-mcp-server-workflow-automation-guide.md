@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, clickup, workflow-automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /clickup-mcp-server-workflow-automation-guide/
 ---
 
 # ClickUp MCP Server: Workflow Automation Guide

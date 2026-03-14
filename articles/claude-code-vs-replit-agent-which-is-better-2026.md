@@ -8,6 +8,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, replit, comparison]
+permalink: /claude-code-vs-replit-agent-which-is-better-2026/
 ---
 
 # Claude Code vs Replit Agent: Which Is Better in 2026?

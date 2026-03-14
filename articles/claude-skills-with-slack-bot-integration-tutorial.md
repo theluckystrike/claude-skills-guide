@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, slack, bot, node-js, integration]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-with-slack-bot-integration-tutorial/
 ---
 author: "Claude Skills Guide"
 reviewed: true

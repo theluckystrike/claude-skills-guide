@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, kubernetes, operator-development, devops, go]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-code-skills-for-kubernetes-operator-development/
 ---
 
 # Claude Code Skills for Kubernetes Operator Development

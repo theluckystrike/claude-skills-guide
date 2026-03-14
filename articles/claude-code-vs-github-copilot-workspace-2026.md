@@ -8,6 +8,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, github-copilot, comparison]
+permalink: /claude-code-vs-github-copilot-workspace-2026/
 ---
 
 # Claude Code vs GitHub Copilot Workspace 2026

@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, travel, booking, api-integration]
 reviewed: true
 score: 7
+permalink: /claude-code-skills-for-travel-booking-platforms/
 ---
 
 # Claude Code Skills for Travel Booking Platforms

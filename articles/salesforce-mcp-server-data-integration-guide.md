@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, salesforce, mcp, data-integration, api, autom
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /salesforce-mcp-server-data-integration-guide/
 ---
 
 # Salesforce MCP Server Data Integration Guide

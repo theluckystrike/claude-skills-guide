@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github-codespaces, cloud-development, devops,
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-github-codespaces-cloud-development-workflow/
 ---
 
 # Claude Code GitHub Codespaces Cloud Development Workflow

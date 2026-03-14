@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, debugging, troubleshooting, infinite-loop]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /how-to-fix-claude-skill-infinite-loop-issue/
 ---
 
 # How to Fix Claude Skill Infinite Loop Issue

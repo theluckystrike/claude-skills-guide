@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, claude-md, large-codebases, best-practices]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-md-best-practices-for-large-codebases/
 ---
 
 # Claude MD Best Practices for Large Codebases

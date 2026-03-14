@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, accessibility, color-contrast, wcag, frontend
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-color-contrast-accessibility-fix-workflow/
 ---
 
 # Claude Code Color Contrast Accessibility Fix Workflow

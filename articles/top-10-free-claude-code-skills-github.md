@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github, tdd, pdf, frontend-design, free-skill
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /top-10-free-claude-code-skills-github/
 ---
 
 # Top 10 Free Claude Code Skills for GitHub Projects

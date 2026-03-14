@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, ios, swift, xcode, mobile-development]
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-ios-swift-development/
 ---
 
 # Claude Code Skills for iOS Swift Development

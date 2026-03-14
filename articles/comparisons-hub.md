@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, comparisons, official-skills, community-skill
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /comparisons-hub/
 ---
 
 # Claude Code vs Everything: The Complete Comparisons Guide

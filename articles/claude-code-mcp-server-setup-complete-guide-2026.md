@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, model-context-protocol]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-mcp-server-setup-complete-guide-2026/
 ---
 
 # Claude Code MCP Server Setup: Complete Guide 2026

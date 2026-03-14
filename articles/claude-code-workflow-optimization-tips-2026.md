@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, workflow, optimization, productivity]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-workflow-optimization-tips-2026/
 ---
 
 # Claude Code Workflow Optimization Tips for 2026

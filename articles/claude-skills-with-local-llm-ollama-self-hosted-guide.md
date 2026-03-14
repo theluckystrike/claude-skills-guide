@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, ollama, local-llm, self-hosted, ai]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-skills-with-local-llm-ollama-self-hosted-guide/
 ---
 
 # Claude Skills with Local LLM Ollama Self-Hosted Guide

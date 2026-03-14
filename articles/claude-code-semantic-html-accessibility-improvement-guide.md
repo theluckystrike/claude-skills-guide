@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, semantic-html, accessibility, wcag, frontend-
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-semantic-html-accessibility-improvement-guide/
 ---
 
 # Claude Code Semantic HTML Accessibility Improvement Guide

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, open-source, contribution, workflow, git]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-open-source-contribution-workflow-guide-2026/
 ---
 
 # Claude Code Open Source Contribution Workflow Guide 2026

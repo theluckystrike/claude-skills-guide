@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github-actions, cicd, automation, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-creating-github-actions-workflows/
 ---
 {% raw %}
 

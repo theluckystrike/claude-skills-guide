@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, langflow, ai-agents, comparison]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-skills-vs-langflow-for-building-ai-agents/
 ---
 
 # Claude Skills vs Langflow for Building AI Agents

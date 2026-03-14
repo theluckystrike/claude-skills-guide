@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github-actions, notifications, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-github-actions-notification-setup/
 ---
 {% raw %}
 

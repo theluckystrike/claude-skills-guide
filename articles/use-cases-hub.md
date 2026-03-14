@@ -9,6 +9,7 @@ is_pillar: true
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /use-cases-hub/
 ---
 
 # Claude Code Use Cases: Real-World Applications & Examples

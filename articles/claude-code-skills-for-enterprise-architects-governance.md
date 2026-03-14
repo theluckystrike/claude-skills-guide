@@ -8,6 +8,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills, enterprise, governance, architecture]
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-enterprise-architects-governance/
 ---
 
 # Claude Code Skills for Enterprise Architects Governance

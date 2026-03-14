@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, migration]
 reviewed: true
 score: 9
+permalink: /how-do-i-migrate-from-cursor-rules-to-claude-skills/
 ---
 
 # How Do I Migrate from Cursor Rules to Claude Skills

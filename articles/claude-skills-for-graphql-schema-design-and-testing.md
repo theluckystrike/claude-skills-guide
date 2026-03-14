@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, graphql, testing]
 reviewed: true
 score: 8
+permalink: /claude-skills-for-graphql-schema-design-and-testing/
 ---
 
 # Claude Skills for GraphQL Schema Design and Testing

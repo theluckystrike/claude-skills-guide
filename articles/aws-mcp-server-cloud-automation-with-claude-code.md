@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, aws, mcp, cloud-automation, infrastructure, d
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /aws-mcp-server-cloud-automation-with-claude-code/
 ---
 
 # AWS MCP Server Cloud Automation with Claude Code

@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, permissions, security, file-access]
 reviewed: true
 score: 9
+permalink: /how-do-i-limit-what-a-claude-skill-can-access-on-disk/
 ---
 
 # How Do I Limit What a Claude Skill Can Access on Disk

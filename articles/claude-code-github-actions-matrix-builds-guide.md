@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github-actions, matrix-builds, cicd, testing]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-github-actions-matrix-builds-guide/
 ---
 {% raw %}
 

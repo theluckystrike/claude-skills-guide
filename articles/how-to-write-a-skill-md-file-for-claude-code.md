@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, skill-md]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-to-write-a-skill-md-file-for-claude-code/
 ---
 
 # How to Write a Skill MD File for Claude Code

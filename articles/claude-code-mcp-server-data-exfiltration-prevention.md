@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, data-exfiltration]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-mcp-server-data-exfiltration-prevention/
 ---
 
 # Claude Code MCP Server Data Exfiltration Prevention

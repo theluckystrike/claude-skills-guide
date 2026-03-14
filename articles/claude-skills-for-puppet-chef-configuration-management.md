@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, puppet, chef, configuration-management, devop
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-puppet-chef-configuration-management/
 ---
 
 

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, metrics, efficiency, tdd, pdf, xlsx, frontend
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /measuring-claude-code-skill-efficiency-metrics/
 ---
 
 # Measuring Claude Code Skill Efficiency Metrics

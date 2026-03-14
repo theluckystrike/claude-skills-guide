@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, refactoring, code-quality, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /why-is-claude-code-recommended-for-refactoring-tasks/
 ---
 
 # Why is Claude Code Recommended for Refactoring Tasks

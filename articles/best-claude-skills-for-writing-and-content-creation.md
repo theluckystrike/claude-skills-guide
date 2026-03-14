@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, writing, content-creation, docx, pdf, pptx]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /best-claude-skills-for-writing-and-content-creation/
 ---
 
 # Best Claude Skills for Writing and Content Creation

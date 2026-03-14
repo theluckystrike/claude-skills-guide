@@ -8,6 +8,7 @@ tags: [mcp, claude-skills, tls, security, claude-code, configuration, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /mcp-transport-layer-security-tls-configuration/
 ---
 
 # MCP Transport Layer Security TLS Configuration Guide

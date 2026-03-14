@@ -8,6 +8,7 @@ categories: [workflows]
 tags: [claude-code, claude-skills, localization, i18n, automation, translation]
 reviewed: true
 score: 7
+permalink: /claude-skills-for-localization-i18n-workflow-automation/
 ---
 
 # Claude Skills for Localization i18n Workflow Automation

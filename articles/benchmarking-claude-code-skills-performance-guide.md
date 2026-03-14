@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, benchmarking, performance]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /benchmarking-claude-code-skills-performance-guide/
 ---
 
 # Benchmarking Claude Code Skills Performance Guide

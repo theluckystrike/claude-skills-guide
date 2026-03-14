@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, input-validation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /mcp-server-input-validation-security-patterns/
 ---
 
 # MCP Server Input Validation Security Patterns

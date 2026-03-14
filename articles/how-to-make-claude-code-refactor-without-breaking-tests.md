@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, refactoring, testing]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-make-claude-code-refactor-without-breaking-tests/
 ---
 
 # How to Make Claude Code Refactor Without Breaking Tests

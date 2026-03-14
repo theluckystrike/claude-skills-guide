@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, skill-registration]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /why-does-claude-code-not-recognize-my-custom-skill-name/
 ---
 
 # Why Does Claude Code Not Recognize My Custom Skill Name?

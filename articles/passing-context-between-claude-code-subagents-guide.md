@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /passing-context-between-claude-code-subagents-guide/
 ---
 
 # Passing Context Between Claude Code Subagents Guide

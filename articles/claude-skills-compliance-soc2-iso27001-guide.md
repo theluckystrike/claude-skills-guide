@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, compliance, soc2, iso27001, security]
 reviewed: true
 score: 9
+permalink: /claude-skills-compliance-soc2-iso27001-guide/
 ---
 
 # Claude Skills Compliance SOC2 ISO27001 Guide

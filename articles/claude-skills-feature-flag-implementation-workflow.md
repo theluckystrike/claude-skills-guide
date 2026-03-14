@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, feature-flags, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-feature-flag-implementation-workflow/
 ---
 
 # Claude Skills Feature Flag Implementation Workflow

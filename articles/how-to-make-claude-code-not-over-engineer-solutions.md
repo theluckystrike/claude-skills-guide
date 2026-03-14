@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, output-quality, simplicity]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-make-claude-code-not-over-engineer-solutions/
 ---
 
 # How to Make Claude Code Not Over Engineer Solutions

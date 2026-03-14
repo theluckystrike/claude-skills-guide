@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, private-skills, local-skills, how-to]
 reviewed: true
 score: 7
+permalink: /how-do-i-create-a-private-claude-skill-not-on-github/
 ---
 
 # How to Create a Private Claude Skill Not on GitHub

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, gcp, google-cloud, cloud-run, deployment, dev
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-gcp-google-cloud-setup-and-deployment-guide/
 ---
 {% raw %}
 

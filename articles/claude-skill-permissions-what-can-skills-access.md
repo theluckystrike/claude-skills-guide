@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, permissions, security, settings]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skill-permissions-what-can-skills-access/
 ---
 
 # Claude Skill Permissions: What Can Skills Access?

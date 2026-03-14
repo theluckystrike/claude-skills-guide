@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, validation, sanitization, security, patterns]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-input-validation-sanitization-patterns-guide/
 ---
 
 # Claude Code Input Validation and Sanitization Patterns Guide

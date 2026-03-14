@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, hooks, pdf, tdd, supermemory, webapp-testing]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-2026-new-features-skills-and-hooks-roundup/
 ---
 
 # Claude Code 2026 New Features: Skills and Hooks Roundup

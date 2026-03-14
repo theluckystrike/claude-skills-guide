@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, fintech, healthcare, compliance]
 reviewed: true
 score: 7
+permalink: /claude-skills-for-regulated-industries-fintech-healthcare/
 ---
 
 # Claude Skills for Regulated Industries: Fintech & Healthcare Development

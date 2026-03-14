@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, devops, deployment, shell]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /best-claude-skills-for-devops-and-deployment/
 ---
 {% raw %}
 

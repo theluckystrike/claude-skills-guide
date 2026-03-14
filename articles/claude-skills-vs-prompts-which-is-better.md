@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, prompts]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-skills-vs-prompts-which-is-better/
 ---
 
 # Claude Skills vs Prompts: Which Is Better?

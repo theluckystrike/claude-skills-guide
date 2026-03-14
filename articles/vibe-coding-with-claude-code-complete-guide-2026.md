@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, vibe-coding, workflow, prototyping]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /vibe-coding-with-claude-code-complete-guide-2026/
 ---
 
 # Vibe Coding with Claude Code: Complete Guide 2026

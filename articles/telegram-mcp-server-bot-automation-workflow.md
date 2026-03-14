@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, telegram, mcp, bot-automation, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /telegram-mcp-server-bot-automation-workflow/
 ---
 
 # Telegram MCP Server Bot Automation Workflow

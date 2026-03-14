@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, enterprise, security, compliance]
 reviewed: true
 score: 8
+permalink: /claude-skills-for-enterprise-security-compliance-guide/
 ---
 
 # Claude Skills for Enterprise Security and Compliance Guide

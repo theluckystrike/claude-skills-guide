@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, database, conventions, patterns, sql, mcp]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-md-for-database-conventions-and-patterns/
 ---
 
 # Claude MD for Database Conventions and Patterns

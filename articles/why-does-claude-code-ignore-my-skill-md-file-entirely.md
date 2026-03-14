@@ -8,6 +8,7 @@ reviewed: true
 score: 8
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+permalink: /why-does-claude-code-ignore-my-skill-md-file-entirely/
 ---
 
 # Why Does Claude Code Ignore My Skill MD File Entirely

@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, token-costs, usage-tracking, monitoring]
 reviewed: true
 score: 9
+permalink: /how-do-i-see-claude-skill-usage-and-token-costs-breakdown/
 ---
 
 # How Do I See Claude Skill Usage and Token Costs Breakdown

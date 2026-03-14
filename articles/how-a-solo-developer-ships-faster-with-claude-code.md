@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, workflow, productivity, tdd, pdf, supermemory
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-a-solo-developer-ships-faster-with-claude-code/
 ---
 
 # How a Solo Developer Ships Faster with Claude Code

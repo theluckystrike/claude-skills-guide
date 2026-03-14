@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, linear, project-management, automation]
 reviewed: true
 score: 8
+permalink: /claude-skills-with-linear-project-management-tutorial/
 ---
 
 # Claude Skills with Linear Project Management Tutorial

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, media-cms, automation, content-management]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-media-content-management-systems/
 ---
 
 # Claude Skills for Media Content Management Systems

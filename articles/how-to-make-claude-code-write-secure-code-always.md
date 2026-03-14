@@ -8,6 +8,7 @@ tags: [claude-code, security, secure-coding, claude-skills, tdd, code-review]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-make-claude-code-write-secure-code-always/
 ---
 
 # How to Make Claude Code Write Secure Code Always

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, sre, site-reliability-engineering, devops, mo
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-for-site-reliability-engineers-sre/
 ---
 {% raw %}
 

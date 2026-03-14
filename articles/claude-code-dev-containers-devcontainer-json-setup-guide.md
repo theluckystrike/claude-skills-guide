@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, devcontainers, vs-code, docker, development-e
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-dev-containers-devcontainer-json-setup-guide/
 ---
 
 # Claude Code Dev Containers: devcontainer.json Setup Guide

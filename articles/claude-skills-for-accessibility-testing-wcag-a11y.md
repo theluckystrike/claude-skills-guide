@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, accessibility, wcag, testing]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-skills-for-accessibility-testing-wcag-a11y/
 ---
 
 # Claude Skills for Accessibility Testing WCAG A11y

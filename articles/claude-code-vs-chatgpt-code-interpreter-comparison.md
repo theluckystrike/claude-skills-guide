@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, chatgpt, code-interpreter, comparison, ai-cod
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-vs-chatgpt-code-interpreter-comparison/
 ---
 
 # Claude Code vs ChatGPT Code Interpreter Comparison

@@ -8,6 +8,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /supervisor-agent-worker-agent-pattern-claude-code/
 ---
 
 # Supervisor Agent Worker Agent Pattern in Claude Code

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, open-source, contribution]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /how-to-contribute-claude-skills-to-open-source/
 ---
 
 # How to Contribute Claude Skills to Open Source

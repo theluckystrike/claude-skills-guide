@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, yaml, debugging, errors]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-code-skill-invalid-yaml-syntax-error-how-to-debug/
 ---
 
 # Claude Code Skill Invalid YAML Syntax Error How to Debug

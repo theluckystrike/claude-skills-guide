@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, students, productivity, learning]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-for-students-homework-and-projects/
 ---
 
 # Claude Code for Students: Homework and Projects

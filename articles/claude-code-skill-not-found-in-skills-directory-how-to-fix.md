@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, error-fix]
 author: "Claude Skills Guide"
 reviewed: true
 score: 10
+permalink: /claude-code-skill-not-found-in-skills-directory-how-to-fix/
 ---
 
 # Claude Code Skill Not Found in Skills Directory — How to Fix

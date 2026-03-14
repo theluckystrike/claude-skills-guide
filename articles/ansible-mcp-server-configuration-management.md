@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, ansible, mcp, configuration-management, devop
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /ansible-mcp-server-configuration-management/
 ---
 {% raw %}
 

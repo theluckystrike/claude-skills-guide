@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, french, community, resources]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-french-developer-community-resources-guide/
 ---
 
 # Claude Code French Developer Community Resources Guide

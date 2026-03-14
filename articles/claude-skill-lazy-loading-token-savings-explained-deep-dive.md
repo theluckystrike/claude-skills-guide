@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, token-optimization, lazy-loading, performance
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-skill-lazy-loading-token-savings-explained-deep-dive/
 ---
 
 # Claude Skill Lazy Loading: Token Savings Explained

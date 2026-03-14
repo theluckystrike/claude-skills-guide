@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, least-privilege, configuration
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-mcp-server-least-privilege-configuration/
 ---
 
 # Claude Code MCP Server Least Privilege Configuration

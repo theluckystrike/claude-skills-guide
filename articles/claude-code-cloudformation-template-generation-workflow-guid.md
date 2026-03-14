@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-code-cloudformation-template-generation-workflow-guid/
 ---
 
 # Claude Code CloudFormation Template Generation Workflow Guide

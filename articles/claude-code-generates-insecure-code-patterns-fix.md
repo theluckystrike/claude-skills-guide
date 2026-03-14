@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, security, code-quality, best-practices]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-generates-insecure-code-patterns-fix/
 ---
 {% raw %}
 

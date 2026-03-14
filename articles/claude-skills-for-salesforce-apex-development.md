@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, salesforce, apex]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-salesforce-apex-development/
 ---
 
 # Claude Skills for Salesforce Apex Development

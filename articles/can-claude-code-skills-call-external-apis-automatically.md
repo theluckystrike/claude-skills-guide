@@ -8,6 +8,7 @@ reviewed: true
 score: 7
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+permalink: /can-claude-code-skills-call-external-apis-automatically/
 ---
 
 # Can Claude Code Skills Call External APIs Automatically?

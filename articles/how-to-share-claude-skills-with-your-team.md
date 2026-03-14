@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, team, collaboration]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /how-to-share-claude-skills-with-your-team/
 ---
 
 # How to Share Claude Skills with Your Team

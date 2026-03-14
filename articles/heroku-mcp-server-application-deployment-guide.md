@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, heroku, mcp, deployment, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /heroku-mcp-server-application-deployment-guide/
 ---
 
 # Heroku MCP Server Application Deployment Guide

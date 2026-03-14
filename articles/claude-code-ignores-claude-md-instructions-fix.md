@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, debugging, skill-md]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-ignores-claude-md-instructions-fix/
 ---
 
 # Claude Code Ignores .md Instructions Fix

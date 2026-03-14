@@ -8,6 +8,7 @@ tags: [claude-skills, claude-code, hooks, settings, devops, security, automation
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /understanding-claude-code-hooks-system-complete-guide/
 ---
 
 # Claude Code Hooks System: Complete Guide

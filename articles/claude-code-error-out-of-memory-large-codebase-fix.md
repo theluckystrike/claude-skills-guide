@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, memory, large-codebase, perf
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-error-out-of-memory-large-codebase-fix/
 ---
 
 # Claude Code Error Out of Memory Large Codebase Fix

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, vercel, deployment, automation, ci-cd]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-with-vercel-deployment-automation/
 ---
 {% raw %}
 

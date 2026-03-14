@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-skills-onboarding-new-engineering-team-members/
 ---
 
 # Claude Skills Onboarding for New Engineering Team Members

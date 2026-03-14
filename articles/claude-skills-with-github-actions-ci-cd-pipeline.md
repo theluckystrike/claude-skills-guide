@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github-actions, cicd, tdd, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-with-github-actions-ci-cd-pipeline/
 ---
 {% raw %}
 

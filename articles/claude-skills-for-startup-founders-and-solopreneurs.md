@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, startup, solopreneur, productivity]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-startup-founders-and-solopreneurs/
 ---
 
 # Claude Skills for Startup Founders and Solopreneurs

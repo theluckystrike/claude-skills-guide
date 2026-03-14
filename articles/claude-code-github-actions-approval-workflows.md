@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github-actions, approval-workflows, cicd, dev
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-github-actions-approval-workflows/
 ---
 {% raw %}
 

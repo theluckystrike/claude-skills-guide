@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, directory, installation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-skills-directory-where-to-find-skills/
 ---
 
 # Claude Skills Directory: Where to Find Skills

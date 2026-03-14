@@ -8,6 +8,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills, multi-agent, orchestration]
 reviewed: true
 score: 9
+permalink: /claude-opus-orchestrator-sonnet-worker-architecture/
 ---
 
 # Claude Opus Orchestrator-Sonnet-Worker Architecture

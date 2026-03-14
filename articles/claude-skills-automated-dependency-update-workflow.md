@@ -8,6 +8,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, automation, dependencies, workflow]
+permalink: /claude-skills-automated-dependency-update-workflow/
 ---
 
 # Automated Dependency Updates with Claude Skills

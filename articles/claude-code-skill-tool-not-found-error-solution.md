@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, tools]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skill-tool-not-found-error-solution/
 ---
 
 # Claude Code Skill Tool Not Found Error Solution

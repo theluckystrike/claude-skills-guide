@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, tdd, testing, development-workflow, best-prac
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-make-claude-code-test-before-implementing-feature/
 ---
 
 # How to Make Claude Code Test Before Implementing Feature

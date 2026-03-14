@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, slack, mcp, notifications, team-communication
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /slack-mcp-server-team-notification-automation/
 ---
 
 # Slack MCP Server Team Notification Automation

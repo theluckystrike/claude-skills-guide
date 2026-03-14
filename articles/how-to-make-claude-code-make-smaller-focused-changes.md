@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, output-quality]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-make-claude-code-make-smaller-focused-changes/
 ---
 
 # How to Make Claude Code Make Smaller Focused Changes

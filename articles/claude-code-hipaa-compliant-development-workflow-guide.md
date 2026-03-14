@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-code-hipaa-compliant-development-workflow-guide/
 ---
 
 # Claude Code HIPAA Compliant Development Workflow Guide

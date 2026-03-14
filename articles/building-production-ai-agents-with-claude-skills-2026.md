@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, ai-agents, production]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /building-production-ai-agents-with-claude-skills-2026/
 ---
 
 # Building Production AI Agents with Claude Skills in 2026

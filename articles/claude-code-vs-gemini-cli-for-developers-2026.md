@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, gemini, developer-tools, comparison, ai-codin
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-vs-gemini-cli-for-developers-2026/
 ---
 
 # Claude Code vs Gemini CLI for Developers 2026

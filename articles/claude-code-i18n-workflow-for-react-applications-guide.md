@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, i18n, react, localization]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-i18n-workflow-for-react-applications-guide/
 ---
 {% raw %}
 

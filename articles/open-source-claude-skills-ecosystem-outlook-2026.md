@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, open-source, ecosystem, community, 2026]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /open-source-claude-skills-ecosystem-outlook-2026/
 ---
 
 # Open Source Claude Skills Ecosystem Outlook 2026

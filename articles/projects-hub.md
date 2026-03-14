@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, projects, saas, build, development]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /projects-hub/
 ---
 
 # Build Real Projects with Claude Skills (2026)

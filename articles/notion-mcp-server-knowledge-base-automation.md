@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, notion, mcp, knowledge-base, automation, prod
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /notion-mcp-server-knowledge-base-automation/
 ---
 
 # Notion MCP Server Knowledge Base Automation

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, datadog, mcp, monitoring, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /datadog-mcp-server-monitoring-automation-claude/
 ---
 {% raw %}
 

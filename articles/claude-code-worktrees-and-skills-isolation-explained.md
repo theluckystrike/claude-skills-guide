@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, worktrees, git, isolation, parallel-work]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-worktrees-and-skills-isolation-explained/
 ---
 
 # Claude Code Worktrees and Skills Isolation

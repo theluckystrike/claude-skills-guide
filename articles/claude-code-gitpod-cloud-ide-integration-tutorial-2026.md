@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, gitpod, cloud-ide, development-environment]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-gitpod-cloud-ide-integration-tutorial-2026/
 ---
 
 # Claude Code Gitpod Cloud IDE Integration Tutorial (2026)

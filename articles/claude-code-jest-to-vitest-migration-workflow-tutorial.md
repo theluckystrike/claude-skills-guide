@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, jest, vitest, migration, testing, javascript]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-jest-to-vitest-migration-workflow-tutorial/
 ---
 
 # Claude Code Jest to Vitest Migration Workflow Tutorial

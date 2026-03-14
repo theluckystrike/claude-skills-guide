@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, selenium, testing, automation]
 reviewed: true
 score: 8
+permalink: /claude-code-selenium-browser-testing-automation-guide/
 ---
 
 # Claude Code Selenium Browser Testing Automation Guide

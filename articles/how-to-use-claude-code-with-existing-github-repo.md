@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github, integration, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-use-claude-code-with-existing-github-repo/
 ---
 
 # How to Use Claude Code with Existing GitHub Repo

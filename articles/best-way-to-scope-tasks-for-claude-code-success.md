@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, workflow, task-management, productivity]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /best-way-to-scope-tasks-for-claude-code-success/
 ---
 
 # Best Way to Scope Tasks for Claude Code Success

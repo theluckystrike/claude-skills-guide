@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, firecrawl, web-scraping, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /firecrawl-mcp-server-web-scraping-automation/
 ---
 
 # Firecrawl MCP Server: Web Scraping Automation with Claude

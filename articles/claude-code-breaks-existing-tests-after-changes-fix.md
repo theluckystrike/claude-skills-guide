@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, debugging, testing, fixes, development]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-breaks-existing-tests-after-changes-fix/
 ---
 
 # Claude Code Breaks Existing Tests After Changes Fix

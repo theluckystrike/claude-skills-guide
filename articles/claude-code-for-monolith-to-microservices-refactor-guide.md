@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, microservices, refactoring, architecture]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-for-monolith-to-microservices-refactor-guide/
 ---
 
 # Claude Code for Monolith to Microservices Refactor Guide

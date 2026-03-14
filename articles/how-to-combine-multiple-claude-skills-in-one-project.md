@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, workflow, skill-orchestration]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-to-combine-multiple-claude-skills-in-one-project/
 ---
 
 # How to Combine Multiple Claude Skills in One Project

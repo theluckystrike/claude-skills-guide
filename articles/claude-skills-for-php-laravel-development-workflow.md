@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, php, laravel, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-for-php-laravel-development-workflow/
 ---
 
 # Claude Skills for PHP Laravel Development Workflow

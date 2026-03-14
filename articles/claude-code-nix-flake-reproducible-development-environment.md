@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, nix-flake, reproducible, development-environment, docker-alternatives]
 reviewed: true
 score: 9
+permalink: /claude-code-nix-flake-reproducible-development-environment/
 ---
 
 # Claude Code with Nix Flakes for Reproducible Development Environments

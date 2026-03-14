@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, skill-authoring, front-matter]
 reviewed: true
 score: 8
+permalink: /claude-skill-metadata-header-vs-full-body-loading/
 ---
 
 # Claude Skill Metadata Header vs Full Body Loading

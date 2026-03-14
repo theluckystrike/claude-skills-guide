@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, vibe-coding, productivity, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /vibe-coding-productivity-tips-and-best-practices/
 ---
 
 # Vibe Coding Productivity Tips and Best Practices

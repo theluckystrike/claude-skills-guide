@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-code-spring-boot-java-microservices-development/
 ---
 
 # Claude Code Spring Boot Java Microservices Development

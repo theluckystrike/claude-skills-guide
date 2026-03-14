@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, claude-4, tdd, pdf, supermemory, webapp-testi
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-4-skills-improvements-and-new-features/
 ---
 
 # Claude 4 Skills Improvements and New Features

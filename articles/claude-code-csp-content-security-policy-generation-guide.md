@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-code-csp-content-security-policy-generation-guide/
 ---
 
 # Claude Code CSP Content Security Policy Generation Guide

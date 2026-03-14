@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, integration-tests, testing, automation, devel
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-skills-for-writing-integration-tests/
 ---
 
 # Claude Code Skills for Writing Integration Tests

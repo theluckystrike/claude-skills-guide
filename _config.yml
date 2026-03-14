@@ -13,4 +13,3 @@ defaults:
       path: "articles"
     values:
       layout: default
-      permalink: /:title/

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, frontend, tdd, canvas-design]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /best-claude-code-skills-for-frontend-development/
 ---
 
 # Best Claude Code Skills for Frontend Development

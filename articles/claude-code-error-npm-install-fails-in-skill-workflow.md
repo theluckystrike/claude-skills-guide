@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, npm, node, troubleshooting]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-error-npm-install-fails-in-skill-workflow/
 ---
 
 # Fixing Claude Code npm install Errors in Skill Workflows

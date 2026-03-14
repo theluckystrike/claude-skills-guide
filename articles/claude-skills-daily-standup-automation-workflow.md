@@ -8,6 +8,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, automation, standup, workflow]
+permalink: /claude-skills-daily-standup-automation-workflow/
 ---
 
 # Daily Standup Automation with Claude Skills

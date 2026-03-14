@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, cloudflare, mcp, edge-computing, serverless, 
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /cloudflare-mcp-server-edge-automation-workflow/
 ---
 
 # Cloudflare MCP Server Edge Automation Workflow

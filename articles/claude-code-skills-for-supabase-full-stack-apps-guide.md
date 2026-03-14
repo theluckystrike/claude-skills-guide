@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, supabase, full-stack, backend]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-supabase-full-stack-apps-guide/
 ---
 
 # Claude Code Skills for Supabase Full Stack Apps Guide

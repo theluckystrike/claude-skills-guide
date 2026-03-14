@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, performance, optimization]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-slow-performance-speed-up-guide/
 ---
 
 # Claude Skills Slow Performance: Speed Up Guide

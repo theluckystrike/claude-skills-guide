@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, documentation, portuguese, localization, pdf,
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-portuguese-documentation-generation-guide/
 ---
 
 # Claude Code Portuguese Documentation Generation Guide

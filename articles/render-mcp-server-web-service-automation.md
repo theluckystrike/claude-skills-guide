@@ -8,6 +8,7 @@ tags: [claude-skills, render, mcp, web-services, deployment, claude-code, automa
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /render-mcp-server-web-service-automation/
 ---
 
 # Render MCP Server Web Service Automation

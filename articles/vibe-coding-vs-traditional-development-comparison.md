@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, vibe-coding, workflow, productivity]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /vibe-coding-vs-traditional-development-comparison/
 ---
 
 # Vibe Coding vs Traditional Development: A Practical Comparison

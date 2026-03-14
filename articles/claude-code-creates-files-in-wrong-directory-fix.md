@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, file-path, debugging, troubleshooting]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-creates-files-in-wrong-directory-fix/
 ---
 
 # Claude Code Creates Files in Wrong Directory Fix

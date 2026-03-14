@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, security, permissions, hooks]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-permissions-model-security-guide-2026/
 ---
 
 # Claude Code Permissions Model and Security Guide 2026

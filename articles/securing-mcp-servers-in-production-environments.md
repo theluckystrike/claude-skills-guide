@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, authentication, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /securing-mcp-servers-in-production-environments/
 ---
 
 # Securing MCP Servers in Production Environments

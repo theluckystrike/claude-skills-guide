@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, testing, deployment, team-workflow]
 reviewed: true
 score: 9
+permalink: /how-do-i-test-a-claude-skill-before-deploying-to-team/
 ---
 
 # How Do I Test a Claude Skill Before Deploying to Team

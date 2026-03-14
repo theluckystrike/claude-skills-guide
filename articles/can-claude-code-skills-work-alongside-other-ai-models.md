@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, ai-models, gpt-4, multi-ai, integration]
 reviewed: true
 score: 9
+permalink: /can-claude-code-skills-work-alongside-other-ai-models/
 ---
 
 # Can Claude Code Skills Work Alongside Other AI Models?

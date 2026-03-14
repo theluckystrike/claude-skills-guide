@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, debug, errors]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /troubleshooting-hub/
 ---
 
 # Claude Code Skills Troubleshooting Guide (2026)

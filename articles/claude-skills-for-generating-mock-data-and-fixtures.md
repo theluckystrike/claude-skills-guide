@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mock-data, fixtures, testing, development]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-generating-mock-data-and-fixtures/
 ---
 
 # Claude Skills for Generating Mock Data and Fixtures

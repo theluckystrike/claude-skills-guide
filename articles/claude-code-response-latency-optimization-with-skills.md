@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
+permalink: /claude-code-response-latency-optimization-with-skills/
 ---
 
 # Claude Code Response Latency Optimization with Skills

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, documentation, automation, pdf, supermemory]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /automated-code-documentation-workflow-with-claude-skills/
 ---
 
 # Automated Code Documentation Workflow with Claude Skills

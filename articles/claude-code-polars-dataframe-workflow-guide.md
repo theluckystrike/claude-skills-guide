@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, polars, dataframe, data-engineering, python]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-polars-dataframe-workflow-guide/
 ---
 
 # Claude Code Polars DataFrame Workflow Guide

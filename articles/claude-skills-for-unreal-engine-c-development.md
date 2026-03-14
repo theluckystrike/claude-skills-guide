@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, unreal-engine, cpp, game-development]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-skills-for-unreal-engine-c-development/
 ---
 
 # Claude Skills for Unreal Engine C++ Development

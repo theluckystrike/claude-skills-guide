@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, supermemory, personal-assistant, custom-skill
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /build-personal-ai-assistant-with-claude-skills-guide/
 ---
 
 # Build Personal AI Assistant with Claude Skills Guide

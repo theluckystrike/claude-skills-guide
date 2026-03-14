@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, firebase, security-rules, testing, firestore]
 reviewed: true
 score: 8
+permalink: /claude-code-firebase-security-rules-validation-testing-guide/
 ---
 
 # Claude Code Firebase Security Rules Validation Testing Guide

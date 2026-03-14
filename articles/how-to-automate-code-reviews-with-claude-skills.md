@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, code-review, tdd, frontend-design, automation
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /how-to-automate-code-reviews-with-claude-skills/
 ---
 {% raw %}
 

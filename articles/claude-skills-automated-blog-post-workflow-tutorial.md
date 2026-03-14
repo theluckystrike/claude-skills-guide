@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, automation, blogging, docx, canvas-design]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-skills-automated-blog-post-workflow-tutorial/
 ---
 
 # Automated Blog Post Workflow with Claude Skills

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, data-science, analysis, workflow, python]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-data-scientists-use-claude-code-for-analysis/
 ---
 
 # How Data Scientists Use Claude Code for Analysis

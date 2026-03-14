@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, monorepo, organization, best-practices]
 categories: [guides]
 reviewed: true
 score: 9
+permalink: /what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/
 ---
 
 # What Is the Best Way to Organize Claude Skills in a Monorepo

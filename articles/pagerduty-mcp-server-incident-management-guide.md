@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, pagerduty, mcp, incident-management, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /pagerduty-mcp-server-incident-management-guide/
 ---
 
 # PagerDuty MCP Server Incident Management Guide

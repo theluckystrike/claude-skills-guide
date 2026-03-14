@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, claude-md, project-setup, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-write-effective-claude-md-for-your-project/
 ---
 
 # How to Write Effective CLAUDE.md for Your Project

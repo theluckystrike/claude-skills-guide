@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, agents, state-management, supermemory]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /building-stateful-agents-with-claude-skills-guide/
 ---
 
 # Building Stateful Agents with Claude Skills

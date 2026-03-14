@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, code-patterns, consistency]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-make-claude-code-match-existing-code-patterns/
 ---
 
 # How to Make Claude Code Match Existing Code Patterns

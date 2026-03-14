@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, tool-use, function-calling, mcp]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /advanced-claude-skills-with-tool-use-and-function-calling/
 ---
 
 # Advanced Claude Skills with Tool Use and Function Calling

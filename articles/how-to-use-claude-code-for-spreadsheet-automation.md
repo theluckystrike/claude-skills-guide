@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, spreadsheet-automation, excel, python, automa
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-use-claude-code-for-spreadsheet-automation/
 ---
 
 # How to Use Claude Code for Spreadsheet Automation

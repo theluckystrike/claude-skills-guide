@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, integrations, automation, github-actions, n8n
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /integrations-hub/
 ---
 
 # Claude Skills Integrations: Complete Platform Guide 2026

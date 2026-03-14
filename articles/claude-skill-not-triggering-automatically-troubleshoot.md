@@ -8,6 +8,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, troubleshooting, invocation]
+permalink: /claude-skill-not-triggering-automatically-troubleshoot/
 ---
 
 # Claude Skill Not Triggering Automatically: Troubleshoot Guide

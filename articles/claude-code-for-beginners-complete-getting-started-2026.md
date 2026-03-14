@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, beginners, tutorial, getting-started]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-code-for-beginners-complete-getting-started-2026/
 ---
 
 # Claude Code for Beginners: Getting Started in 2026

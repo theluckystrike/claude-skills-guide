@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, context-window, token-optimization]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-context-window-management-best-practices/
 ---
 
 # Claude Skills Context Window Management Best Practices

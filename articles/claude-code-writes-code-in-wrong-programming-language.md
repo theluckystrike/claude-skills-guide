@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, code-generation, debugging, troubleshooting]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-writes-code-in-wrong-programming-language/
 ---
 
 # Claude Code Writes Code in Wrong Programming Language

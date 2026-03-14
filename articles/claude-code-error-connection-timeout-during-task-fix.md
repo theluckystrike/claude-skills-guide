@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, error-fix, connection-timeout, troubleshootin
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-error-connection-timeout-during-task-fix/
 ---
 
 # Claude Code Error Connection Timeout During Task Fix

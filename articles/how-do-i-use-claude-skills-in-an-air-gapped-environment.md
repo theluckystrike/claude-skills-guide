@@ -8,6 +8,7 @@ reviewed: true
 score: 7
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+permalink: /how-do-i-use-claude-skills-in-an-air-gapped-environment/
 ---
 
 # How Do I Use Claude Skills in an Air-Gapped Environment

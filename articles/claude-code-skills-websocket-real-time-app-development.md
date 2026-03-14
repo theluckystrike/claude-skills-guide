@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, websocket, real-time, nodejs, javascript]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-websocket-real-time-app-development/
 ---
 
 # Claude Code Skills for WebSocket Real-Time App Development

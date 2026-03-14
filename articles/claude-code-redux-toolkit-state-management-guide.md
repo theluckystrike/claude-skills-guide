@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, redux-toolkit, react, state-management, front
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-redux-toolkit-state-management-guide/
 ---
 
 # Claude Code Redux Toolkit State Management Guide

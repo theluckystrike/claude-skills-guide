@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, railway, mcp, deployment, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /railway-mcp-server-deployment-automation-guide/
 ---
 {% raw %}
 

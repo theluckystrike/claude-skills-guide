@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, notion, api, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-to-integrate-claude-skills-with-notion-api-guide/
 ---
 
 # How to Integrate Claude Skills with Notion API Guide

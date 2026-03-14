@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, permissions, audit]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-to-audit-claude-code-mcp-server-permissions/
 ---
 
 # How to Audit Claude Code MCP Server Permissions

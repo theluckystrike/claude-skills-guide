@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, organization, team, collaboration, deployment
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-do-i-make-a-claude-skill-available-organization-wide/
 ---
 {% raw %}
 

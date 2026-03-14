@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, gaming, backend, real-time]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-gaming-backend-development/
 ---
 
 # Claude Code Skills for Gaming Backend Development

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, seo, content-generation, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-seo-content-generation-workflow/
 ---
 
 # Claude Skills for SEO Content Generation Workflow

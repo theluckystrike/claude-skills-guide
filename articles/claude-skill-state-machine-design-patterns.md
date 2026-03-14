@@ -8,6 +8,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills, state-machine, design-patterns, workflows]
 reviewed: true
 score: 9
+permalink: /claude-skill-state-machine-design-patterns/
 ---
 
 # Claude Skill State Machine Design Patterns

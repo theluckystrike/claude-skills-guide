@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, mcp, security, tool-permissions]
 reviewed: true
 score: 8
+permalink: /claude-code-mcp-tool-allow-and-deny-lists/
 ---
 
 # Claude Code MCP Tool Allow and Deny Lists

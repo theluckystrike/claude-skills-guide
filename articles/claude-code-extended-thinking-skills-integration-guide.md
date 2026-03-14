@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, extended-thinking, supermemory, tdd, workflow
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-extended-thinking-skills-integration-guide/
 ---
 
 # Extended Thinking + Claude Skills: Integration Guide

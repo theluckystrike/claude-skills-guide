@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, best-of]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /best-of-hub/
 ---
 
 # Best Claude Code Skills 2026: Complete Rankings

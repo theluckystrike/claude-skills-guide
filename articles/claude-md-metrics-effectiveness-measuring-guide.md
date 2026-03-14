@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, metrics, measurement, effectiveness, benchmar
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-md-metrics-effectiveness-measuring-guide/
 ---
 
 # Claude MD Metrics Effectiveness: Measuring Guide

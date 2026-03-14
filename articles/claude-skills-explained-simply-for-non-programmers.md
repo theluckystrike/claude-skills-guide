@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, beginner, non-programmer]
 reviewed: true
 score: 8
+permalink: /claude-skills-explained-simply-for-non-programmers/
 ---
 
 # Claude Skills Explained Simply for Non-Programmers

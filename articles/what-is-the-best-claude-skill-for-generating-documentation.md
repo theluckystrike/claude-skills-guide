@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, documentation, docx, pdf, automation]
 reviewed: true
 score: 7
+permalink: /what-is-the-best-claude-skill-for-generating-documentation/
 ---
 
 # What Is the Best Claude Skill for Generating Documentation

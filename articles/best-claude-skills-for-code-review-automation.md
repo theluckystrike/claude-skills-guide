@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, code-review, automation, tdd, supermemory]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /best-claude-skills-for-code-review-automation/
 ---
 
 # Best Claude Skills for Code Review Automation

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, security, disallowedtools, configuration]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-disallowedtools-security-configuration/
 ---
 
 # Claude Code disallowedTools Security Configuration

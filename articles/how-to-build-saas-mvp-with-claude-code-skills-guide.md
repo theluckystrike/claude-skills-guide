@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, saas, mvp, frontend-design, tdd, pdf]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-build-saas-mvp-with-claude-code-skills-guide/
 ---
 
 # Build a SaaS MVP with Claude Code Skills

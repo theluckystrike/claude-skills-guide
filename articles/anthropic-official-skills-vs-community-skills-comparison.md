@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, community-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /anthropic-official-skills-vs-community-skills-comparison/
 ---
 
 # Anthropic Official Skills vs Community Skills

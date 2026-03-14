@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
+permalink: /why-does-claude-code-skill-take-so-long-to-initialize/
 ---
 
 # Why Does Claude Code Skill Take So Long to Initialize?

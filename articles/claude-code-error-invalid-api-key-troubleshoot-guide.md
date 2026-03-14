@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, api-key, authentication, troubleshooting]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-error-invalid-api-key-troubleshoot-guide/
 ---
 
 # Claude Code Error Invalid API Key: Troubleshoot Guide

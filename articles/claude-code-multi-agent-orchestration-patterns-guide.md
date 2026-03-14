@@ -8,6 +8,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills, multi-agent, orchestration]
 reviewed: true
 score: 8
+permalink: /claude-code-multi-agent-orchestration-patterns-guide/
 ---
 
 # Claude Code Multi-Agent Orchestration Patterns Guide

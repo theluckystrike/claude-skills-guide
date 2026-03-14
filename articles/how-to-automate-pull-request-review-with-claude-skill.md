@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, pull-request, automation, code-review, tdd, s
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-to-automate-pull-request-review-with-claude-skill/
 ---
 
 Pull request reviews consume significant developer time. Claude skills provide the building blocks to construct a PR review workflow that catches issues before human reviewers even see the code.

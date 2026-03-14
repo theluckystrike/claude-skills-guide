@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, review, beginner, 2026]
 reviewed: true
 score: 8
+permalink: /is-claude-code-worth-it-honest-beginner-review-2026/
 ---
 
 # Is Claude Code Worth It? An Honest Beginner Review 2026

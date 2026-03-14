@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, unity, game-development]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-unity-game-development-workflow/
 ---
 
 # Claude Skills for Unity Game Development Workflow

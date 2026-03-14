@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, documentation, spanish, i18n]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-documentation-generation-in-spanish-tutorial/
 ---
 
 # Claude Code Documentation Generation in Spanish Tutorial

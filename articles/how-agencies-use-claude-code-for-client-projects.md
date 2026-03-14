@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, agencies, workflow, productivity]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-agencies-use-claude-code-for-client-projects/
 ---
 
 # How Agencies Use Claude Code for Client Projects

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github-actions, composite-actions, cicd]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-github-actions-composite-actions/
 ---
 {% raw %}
 

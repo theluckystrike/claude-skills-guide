@@ -8,6 +8,7 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
+permalink: /claude-code-skill-circular-dependency-detected-error-fix/
 ---
 
 # Claude Code Skill Circular Dependency Detected Error Fix

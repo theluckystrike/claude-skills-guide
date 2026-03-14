@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, vibe-coding, ai-assisted-coding, workflow, pr
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /vibe-coding-explained-what-it-is-and-how-it-works/
 ---
 
 # Vibe Coding Explained: What It Is and How It Works

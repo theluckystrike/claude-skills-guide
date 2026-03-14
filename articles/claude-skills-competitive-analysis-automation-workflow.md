@@ -8,6 +8,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, automation, competitive-analysis, workflow]
+permalink: /claude-skills-competitive-analysis-automation-workflow/
 ---
 
 # Competitive Analysis Automation with Claude Skills

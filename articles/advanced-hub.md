@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, token-optimization, advanced]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /advanced-hub/
 ---
 
 # Advanced Claude Skills Architecture

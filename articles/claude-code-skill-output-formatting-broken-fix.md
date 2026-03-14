@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, output-formatting, debugging, troubleshooting
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skill-output-formatting-broken-fix/
 ---
 
 # Claude Code Skill Output Formatting Broken Fix

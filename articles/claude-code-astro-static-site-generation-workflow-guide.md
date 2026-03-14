@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-code-astro-static-site-generation-workflow-guide/
 ---
 {% raw %}
 

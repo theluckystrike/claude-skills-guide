@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, productivity, workflow-optimization]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /why-does-claude-code-work-better-with-skills-loaded/
 ---
 
 # Why Does Claude Code Work Better With Skills Loaded

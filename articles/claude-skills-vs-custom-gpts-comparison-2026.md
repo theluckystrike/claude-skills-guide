@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, custom-gpts, openai, comparison]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-vs-custom-gpts-comparison-2026/
 ---
 
 # Claude Skills vs Custom GPTs: A 2026 Comparison for Developers

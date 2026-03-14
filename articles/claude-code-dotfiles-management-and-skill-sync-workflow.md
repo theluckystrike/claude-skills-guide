@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, dotfiles, skill-sync, workflow, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-code-dotfiles-management-and-skill-sync-workflow/
 ---
 
 # Claude Code Dotfiles Management and Skill Sync Workflow

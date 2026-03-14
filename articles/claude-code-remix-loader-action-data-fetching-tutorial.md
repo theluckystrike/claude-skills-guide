@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-remix-loader-action-data-fetching-tutorial/
 ---
 
 # Claude Code Remix Loader Action Data Fetching Tutorial

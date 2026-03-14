@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, open-source, maintainers, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /how-open-source-maintainers-use-claude-code-2026/
 ---
 
 # How Open Source Maintainers Use Claude Code in 2026

@@ -8,6 +8,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
+permalink: /claude-code-agent-pipeline-sequential-vs-parallel/
 ---
 
 # Claude Code Agent Pipeline: Sequential vs Parallel Execution

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 10
+permalink: /claude-code-multi-agent-error-recovery-strategies/
 ---
 
 # Claude Code Multi-Agent Error Recovery Strategies

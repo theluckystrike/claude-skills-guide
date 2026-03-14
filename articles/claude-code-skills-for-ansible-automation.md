@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, ansible, automation, devops, infrastructure]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-skills-for-ansible-automation/
 ---
 {% raw %}
 

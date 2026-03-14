@@ -8,6 +8,7 @@ tags: [claude-skills, claude-code, pricing, cost-optimization, comparison, api-c
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /pricing-hub/
 ---
 
 # Claude Code Pricing & Cost Optimization Guide 2026

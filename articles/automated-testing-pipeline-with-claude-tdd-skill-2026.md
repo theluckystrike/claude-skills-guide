@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, tdd, testing, ci-cd, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /automated-testing-pipeline-with-claude-tdd-skill-2026/
 ---
 
 # Automated Testing Pipeline with Claude TDD Skill

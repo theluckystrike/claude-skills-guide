@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, multi-agent, subagents, orchestration, automa
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /multi-agent-orchestration-with-claude-subagents-guide/
 ---
 
 # Multi-Agent Orchestration with Claude Subagents Guide

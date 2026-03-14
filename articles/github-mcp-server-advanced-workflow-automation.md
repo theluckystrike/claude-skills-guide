@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github, mcp, workflow-automation, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /github-mcp-server-advanced-workflow-automation/
 ---
 
 # GitHub MCP Server Advanced Workflow Automation

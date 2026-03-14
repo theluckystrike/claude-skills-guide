@@ -8,6 +8,7 @@ reviewed: true
 score: 8
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+permalink: /how-do-i-set-environment-variables-for-a-claude-skill/
 ---
 {% raw %}
 

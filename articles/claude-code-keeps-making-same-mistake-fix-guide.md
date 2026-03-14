@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, error-fixing, debugging]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-keeps-making-same-mistake-fix-guide/
 ---
 
 # Claude Code Keeps Making Same Mistake Fix Guide

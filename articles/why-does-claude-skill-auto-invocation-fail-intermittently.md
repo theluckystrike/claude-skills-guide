@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /why-does-claude-skill-auto-invocation-fail-intermittently/
 ---
 
 # Why Does Claude Skill Auto Invocation Fail Intermittently?

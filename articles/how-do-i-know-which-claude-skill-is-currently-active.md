@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, workflow, productivity]
 reviewed: true
 score: 9
+permalink: /how-do-i-know-which-claude-skill-is-currently-active/
 ---
 
 # How Do I Know Which Claude Skill Is Currently Active?

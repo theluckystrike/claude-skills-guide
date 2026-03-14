@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-code-secret-scanning-prevent-credential-leaks-guide/
 ---
 
 # Claude Code Secret Scanning: Prevent Credential Leaks Guide

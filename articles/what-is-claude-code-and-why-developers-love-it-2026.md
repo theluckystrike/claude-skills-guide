@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, ai-coding]
 reviewed: true
 score: 8
+permalink: /what-is-claude-code-and-why-developers-love-it-2026/
 ---
 
 # What Is Claude Code and Why Developers Love It in 2026

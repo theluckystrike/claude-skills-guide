@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, express, middleware, nodejs, error-handling]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-express-middleware-error-handling-patterns-guide/
 ---
 
 # Claude Code Express Middleware Error Handling Patterns Guide

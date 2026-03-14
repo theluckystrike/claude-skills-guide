@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, energy, smart-grid, iot]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-energy-smart-grid-applications/
 ---
 
 # Claude Skills for Energy Smart Grid Applications

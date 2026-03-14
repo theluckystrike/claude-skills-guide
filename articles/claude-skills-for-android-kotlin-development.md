@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, android, kotlin, mobile-development]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-for-android-kotlin-development/
 ---
 
 # Claude Skills for Android Kotlin Development

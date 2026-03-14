@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, full-stack, web-app, react, express]
 reviewed: true
 score: 8
+permalink: /full-stack-web-app-with-claude-skills-step-by-step/
 ---
 
 # Full Stack Web App with Claude Skills Step by Step

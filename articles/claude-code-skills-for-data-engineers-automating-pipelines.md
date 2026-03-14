@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-data-engineers-automating-pipelines/
 ---
 
 # Claude Code Skills for Data Engineers Automating Pipelines

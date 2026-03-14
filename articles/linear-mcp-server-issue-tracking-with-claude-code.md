@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, linear, issue-tracking, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /linear-mcp-server-issue-tracking-with-claude-code/
 ---
 
 # Linear MCP Server Issue Tracking with Claude Code

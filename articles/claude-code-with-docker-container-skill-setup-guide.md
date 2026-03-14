@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, docker, containers, ci-cd, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-with-docker-container-skill-setup-guide/
 ---
 {% raw %}
 

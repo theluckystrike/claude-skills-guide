@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, project-initialization, best-practices, setup
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-code-project-initialization-best-practices/
 ---
 
 # Claude Code Project Initialization Best Practices

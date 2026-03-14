@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, express, fastify, migration, nodejs, javascri
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-express-to-fastify-migration-tutorial-2026/
 ---
 
 # Claude Code Express to Fastify Migration Tutorial 2026

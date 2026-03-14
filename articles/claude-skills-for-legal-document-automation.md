@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, legal-tech, document-automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-legal-document-automation/
 ---
 {% raw %}
 

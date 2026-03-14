@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-ecosystem-predictions-next-12-months/
 ---
 
 # Claude Skills Ecosystem: Predictions for the Next 12 Months

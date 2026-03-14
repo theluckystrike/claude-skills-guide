@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, scala, functional-programming]
 reviewed: true
 score: 8
+permalink: /claude-code-scala-functional-programming-workflow-tips/
 ---
 
 # Claude Code Scala Functional Programming Workflow Tips

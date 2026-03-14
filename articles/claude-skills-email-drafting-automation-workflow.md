@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, email, automation, productivity]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+permalink: /claude-skills-email-drafting-automation-workflow/
 ---
 
 # Claude Skills Email Drafting Automation Workflow

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, troubleshooting, error-fix, imports]
 author: "Claude Skills Guide"
 reviewed: true
 score: 10
+permalink: /claude-code-gives-incorrect-imports-how-to-fix/
 ---
 
 # Claude Code Gives Incorrect Imports — How to Fix

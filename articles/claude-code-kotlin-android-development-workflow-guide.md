@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, kotlin, android, tdd, mobile-development]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-kotlin-android-development-workflow-guide/
 ---
 
 # Claude Code Kotlin Android Development Workflow Guide

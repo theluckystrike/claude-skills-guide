@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, zero-trust]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /mcp-zero-trust-architecture-implementation/
 ---
 
 # MCP Zero Trust Architecture Implementation: Practical Guide

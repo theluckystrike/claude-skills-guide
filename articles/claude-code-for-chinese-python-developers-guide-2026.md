@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, python, chinese-developers]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-for-chinese-python-developers-guide-2026/
 ---
 
 # Claude Code for Chinese Python Developers Guide (2026)

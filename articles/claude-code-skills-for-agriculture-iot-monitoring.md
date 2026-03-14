@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, agriculture, iot, sensors]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-agriculture-iot-monitoring/
 ---
 
 # Claude Code Skills for Agriculture IoT Monitoring

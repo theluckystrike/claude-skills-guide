@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, developers, tdd, pdf]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /best-claude-skills-for-developers-2026/
 ---
 
 # Best Claude Skills for Developers in 2026

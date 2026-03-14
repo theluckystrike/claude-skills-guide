@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, database, migrations, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-for-creating-database-migration-scripts/
 ---
 
 # Claude Skills for Creating Database Migration Scripts

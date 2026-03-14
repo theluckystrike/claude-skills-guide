@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, style-guide, team-workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-make-claude-code-follow-team-style-guide/
 ---
 
 # How to Make Claude Code Follow Team Style Guide

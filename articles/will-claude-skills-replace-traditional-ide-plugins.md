@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, ide-plugins, developer-tools]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /will-claude-skills-replace-traditional-ide-plugins/
 ---
 
 # Will Claude Skills Replace Traditional IDE Plugins?

@@ -8,6 +8,7 @@ tags: [claude-skills, rabbitmq, mcp, message-queues, automation, claude-code, de
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /rabbitmq-mcp-server-message-queue-automation/
 ---
 
 # RabbitMQ MCP Server for Message Queue Automation

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, github, issue-triage, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-for-automated-github-issue-triage/
 ---
 {% raw %}
 

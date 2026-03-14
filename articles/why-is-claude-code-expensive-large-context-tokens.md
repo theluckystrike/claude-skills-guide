@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, context-window, tokens, pricing, cost-optimiz
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /why-is-claude-code-expensive-large-context-tokens/
 ---
 
 # Why Claude Code Is Expensive: Understanding Large Context Token Costs

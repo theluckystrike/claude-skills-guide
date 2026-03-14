@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, terraform, infrastructure-as-code]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-skills-for-infrastructure-as-code-terraform/
 ---
 
 # Claude Code Skills for Infrastructure as Code with Terraform

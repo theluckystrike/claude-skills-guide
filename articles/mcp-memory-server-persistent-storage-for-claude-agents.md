@@ -8,6 +8,7 @@ tags: [claude-skills, claude-code, mcp, memory, persistent-storage, agents, serv
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /mcp-memory-server-persistent-storage-for-claude-agents/
 ---
 
 # MCP Memory Server: Persistent Storage for Claude Agents

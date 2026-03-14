@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, japanese-developers, workflow, tdd, pdf, supe
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-japanese-developers-workflow-guide/
 ---
 
 # Claude Code Skills for Japanese Developers Workflow Guide

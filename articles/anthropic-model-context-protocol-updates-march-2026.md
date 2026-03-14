@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, model-context-protocol, integrations, de
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /anthropic-model-context-protocol-updates-march-2026/
 ---
 
 # MCP Updates March 2026: What Developers Need to Know

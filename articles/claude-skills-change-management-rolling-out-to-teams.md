@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-change-management-rolling-out-to-teams/
 ---
 
 # Claude Skills Change Management: Rolling Out to Teams

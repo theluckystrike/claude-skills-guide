@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, batch-processing, automation, workflow]
 reviewed: true
 score: 9
+permalink: /claude-code-batch-processing-with-skills-guide/
 ---
 
 # Claude Code Batch Processing with Skills Guide

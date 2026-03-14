@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, jira, project-management]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /jira-mcp-server-claude-code-integration-guide/
 ---
 
 # Jira MCP Server Claude Code Integration Guide

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, fly-io, deployment, devops, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-for-fly-io-deployment-automation-workflow/
 ---
 {% raw %}
 

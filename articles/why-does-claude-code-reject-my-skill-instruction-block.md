@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 10
+permalink: /why-does-claude-code-reject-my-skill-instruction-block/
 ---
 
 # Why Does Claude Code Reject My Skill Instruction Block

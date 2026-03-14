@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, ghost, blogging, automation, workflow]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /ghost-mcp-server-blogging-automation-workflow/
 ---
 
 # Ghost MCP Server: Blogging Automation Workflow

@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
+permalink: /what-is-the-best-claude-skill-for-rest-api-development/
 ---
 
 # What Is the Best Claude Skill for REST API Development

@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /what-is-the-best-claude-skill-for-python-data-workflows/
 ---
 
 # What Is the Best Claude Skill for Python Data Workflows

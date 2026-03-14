@@ -8,6 +8,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, gpt-4o, comparison, models]
+permalink: /claude-opus-46-vs-gpt-4o-for-coding-tasks-comparison/
 ---
 
 # Claude Opus 4.6 vs GPT-4o for Coding Tasks: 2026 Comparison

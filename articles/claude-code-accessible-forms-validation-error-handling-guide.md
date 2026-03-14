@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, accessibility, forms, validation, wcag]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-accessible-forms-validation-error-handling-guide/
 ---
 
 # Claude Code Accessible Forms: Validation Error Handling Guide

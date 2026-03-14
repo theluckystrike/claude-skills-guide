@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, enterprise, architecture, skill-organization]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /structuring-claude-skills-for-large-enterprise-codebases/
 ---
 
 # Structuring Claude Skills for Large Enterprise Codebases

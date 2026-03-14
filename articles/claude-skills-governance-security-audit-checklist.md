@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, security, governance]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-governance-security-audit-checklist/
 ---
 
 # Claude Skills Governance Security Audit Checklist

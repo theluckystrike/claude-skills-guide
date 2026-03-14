@@ -8,6 +8,7 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-code-skill-timeout-error-how-to-increase-the-limit/
 ---
 
 # Claude Code Skill Timeout Error: How to Increase the Limit

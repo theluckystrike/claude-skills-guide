@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, permission-auditing]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /mcp-server-permission-auditing-best-practices/
 ---
 
 # MCP Server Permission Auditing Best Practices

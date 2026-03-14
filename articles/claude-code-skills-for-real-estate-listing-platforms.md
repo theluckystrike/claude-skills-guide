@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, real-estate, listing-platforms]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-skills-for-real-estate-listing-platforms/
 ---
 
 # Claude Code Skills for Real Estate Listing Platforms

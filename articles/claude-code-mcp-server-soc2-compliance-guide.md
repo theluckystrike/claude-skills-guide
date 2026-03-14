@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, soc2, compliance, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-mcp-server-soc2-compliance-guide/
 ---
 
 # Claude Code MCP Server SOC 2 Compliance Guide

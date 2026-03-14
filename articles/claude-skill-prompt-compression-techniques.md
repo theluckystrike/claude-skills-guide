@@ -8,6 +8,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills, prompt-compression, token-optimization, performance]
 reviewed: true
 score: 9
+permalink: /claude-skill-prompt-compression-techniques/
 ---
 
 # Claude Skill Prompt Compression Techniques

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /what-is-the-best-file-structure-for-a-complex-claude-skill/
 ---
 
 # What Is the Best File Structure for a Complex Claude Skill

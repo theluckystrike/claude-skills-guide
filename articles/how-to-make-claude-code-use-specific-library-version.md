@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, dependencies, libraries]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-make-claude-code-use-specific-library-version/
 ---
 
 # How to Make Claude Code Use Specific Library Version

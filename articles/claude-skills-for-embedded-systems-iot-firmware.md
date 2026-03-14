@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, embedded-systems, iot]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-for-embedded-systems-iot-firmware/
 ---
 
 Embedded systems development presents unique challenges: resource constraints, real-time requirements, hardware-software interaction, and the need for rigorous testing. Claude Code skills provide specialized automation for firmware development, hardware abstraction, RTOS configuration, and embedded debugging workflows. These skills work alongside your existing toolchain—gcc, CMake, PlatformIO, FreeRTOS—to accelerate common operations without replacing your core development environment. If you are new to the Claude skills system, [the beginner guide to Claude Code](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) provides the foundational setup steps before applying domain-specific workflows.

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, event-driven, architecture, automation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-event-driven-architecture-setup/
 ---
 
 # Claude Skills Event Driven Architecture Setup

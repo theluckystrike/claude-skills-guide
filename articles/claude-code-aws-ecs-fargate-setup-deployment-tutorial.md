@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, aws, ecs, fargate, deployment, containers]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-aws-ecs-fargate-setup-deployment-tutorial/
 ---
 {% raw %}
 

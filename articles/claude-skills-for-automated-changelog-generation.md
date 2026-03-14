@@ -8,6 +8,7 @@ categories: [workflows]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, automation, changelog, devops]
+permalink: /claude-skills-for-automated-changelog-generation/
 ---
 {% raw %}
 

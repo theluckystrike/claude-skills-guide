@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, supabase, database, backend]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-skills-with-supabase-database-integration/
 ---
 
 # Claude Skills with Supabase: Practical Workflows

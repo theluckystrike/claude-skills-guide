@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, chaos-engineering, testing, automation, resil
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-chaos-engineering-testing-automation-guide/
 ---
 
 # Claude Code Chaos Engineering Testing Automation Guide

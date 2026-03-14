@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, apache-kafka, mcp, event-streaming, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /apache-kafka-mcp-server-event-streaming-guide/
 ---
 
 # Apache Kafka MCP Server for Event Streaming Guide

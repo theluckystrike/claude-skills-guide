@@ -8,6 +8,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills, devin, ai-coding, comparison]
 reviewed: true
 score: 8
+permalink: /claude-code-vs-devin-ai-agent-comparison-2026/
 ---
 
 # Claude Code vs Devin AI Agent Comparison 2026

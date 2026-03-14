@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, api-integration, authentication, tool-use]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /how-to-connect-claude-skills-to-external-apis-guide/
 ---
 
 # How to Connect Claude Skills to External APIs Guide

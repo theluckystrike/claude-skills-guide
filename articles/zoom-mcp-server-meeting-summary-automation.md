@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, zoom, automation, meeting-summary]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /zoom-mcp-server-meeting-summary-automation/
 ---
 
 # Zoom MCP Server Meeting Summary Automation

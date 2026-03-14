@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, skill-composition, skill-inheritance, automat
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skill-inheritance-and-composition-patterns/
 ---
 
 # Claude Skill Inheritance and Composition Patterns

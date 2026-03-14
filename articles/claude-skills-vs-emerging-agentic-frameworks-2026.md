@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-skills-vs-emerging-agentic-frameworks-2026/
 ---
 
 # Claude Skills vs Emerging Agentic Frameworks 2026

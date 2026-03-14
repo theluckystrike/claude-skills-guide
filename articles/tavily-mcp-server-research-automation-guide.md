@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, tavily, mcp, research, web-search]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /tavily-mcp-server-research-automation-guide/
 ---
 
 # Tavily MCP Server: Research Automation Guide

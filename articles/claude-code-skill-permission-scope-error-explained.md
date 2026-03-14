@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, permissions, security, settings]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-skill-permission-scope-error-explained/
 ---
 
 # Claude Code Skill Permission Scope Error Explained

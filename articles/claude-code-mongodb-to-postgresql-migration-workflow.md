@@ -8,6 +8,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+permalink: /claude-code-mongodb-to-postgresql-migration-workflow/
 ---
 
 # MongoDB to PostgreSQL Migration Workflow with Claude Code

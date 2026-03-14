@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, wandb, weights-biases, mlops, experiment-trac
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+permalink: /claude-code-for-wandb-weights-biases-integration-setup/
 ---
 
 # Claude Code for W&B Weights & Biases Integration Setup

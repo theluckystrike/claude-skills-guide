@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-qwik-resumability-lazy-loading-workflow-guide/
 ---
 
 # Claude Code Qwik Resumability Lazy Loading Workflow Guide

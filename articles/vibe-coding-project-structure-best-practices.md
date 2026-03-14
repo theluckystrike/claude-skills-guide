@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, vibe-coding, project-structure, developer-wor
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /vibe-coding-project-structure-best-practices/
 ---
 
 # Vibe Coding Project Structure Best Practices

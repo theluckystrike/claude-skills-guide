@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, data-analysis, xlsx, pdf]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /best-claude-skills-for-data-analysis/
 ---
 
 [Data analysis workflows demand tools that handle diverse file formats](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), automate repetitive tasks, and transform raw information into actionable insights. Claude Code skills extend the AI assistant's capabilities beyond conversational queries, enabling programmatic manipulation of spreadsheets, documents, and datasets. This guide examines the most valuable Claude skills for data analysis workflows, focusing on practical applications developers and power users can implement immediately.

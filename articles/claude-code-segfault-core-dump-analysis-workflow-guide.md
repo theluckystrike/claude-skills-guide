@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, segfault, core-dump, gdb, debugging, troubles
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-segfault-core-dump-analysis-workflow-guide/
 ---
 
 # Claude Code Segfault Core Dump Analysis Workflow Guide

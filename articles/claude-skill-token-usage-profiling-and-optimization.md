@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, token-optimization, performance]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skill-token-usage-profiling-and-optimization/
 ---
 
 # Claude Skill Token Usage Profiling and Optimization

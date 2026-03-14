@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, security, sandbox, isolation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /mcp-server-sandbox-isolation-security-guide/
 ---
 
 # MCP Server Sandbox Isolation Security Guide

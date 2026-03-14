@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mcp, incident-response, devops, reliability]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-code-mcp-server-incident-response-guide/
 ---
 
 # Claude Code MCP Server Incident Response Guide

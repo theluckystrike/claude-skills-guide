@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, auto-invocation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+permalink: /claude-skills-auto-invocation-how-it-works/
 ---
 
 # Claude Skills Auto Invocation: How It Works
