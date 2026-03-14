@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Claude Skills Guide — 928+ Free Guides for Claude Code"
-description: "928+ free guides for Claude Code skills, workflows, and AI agent productivity. Open source, updated daily."
+title: "Claude Skills Guide — 1009+ Free Guides for Claude Code"
+description: "1009+ free guides for Claude Code skills, workflows, and AI agent productivity. Open source, updated daily."
 permalink: /
 ---
 
 # Claude Skills Guide
 
-**928+ free guides** for Claude Code skills, workflows, troubleshooting, and integrations.
+**1009+ free guides** for Claude Code skills, workflows, troubleshooting, and integrations.
 
 Open source. Updated daily. Built by [theluckystrike](https://github.com/theluckystrike).
 
@@ -25,18 +25,35 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [How to Write Effective Prompts for Claude Code](/how-to-write-effective-prompts-for-claude-code/)
 - [MCP Integration Guide for Claude Code Beginners](/mcp-integration-guide-for-claude-code-beginners/)
 
-## 📚 Guides (479 articles)
+## 📚 Guides (528 articles)
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Advanced Claude Skills: Token Optimization & Chaining](/advanced-hub/)
+- [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
 - [AI Agent Skills Standardization Efforts 2026](/ai-agent-skills-standardization-efforts-2026/)
 - [AI Agent State Management Fundamentals for Developers](/ai-agent-state-management-fundamentals-for-developers/)
 - [AI Agent Task Decomposition for Complex Projects Guide](/ai-agent-task-decomposition-for-complex-projects-guide/)
+- [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
+- [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
+- [AI Coding Tool Evaluation Framework for Teams](/ai-coding-tool-evaluation-framework-for-teams/)
+- [AI Coding Tools for Accessibility Improvements](/ai-coding-tools-for-accessibility-improvements/)
+- [AI Coding Tools for Code Documentation Workflow](/ai-coding-tools-for-code-documentation-workflow/)
+- [AI Coding Tools for Code Migration Projects](/ai-coding-tools-for-code-migration-projects/)
+- [AI Coding Tools for Open Source Contributions](/ai-coding-tools-for-open-source-contributions/)
+- [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)
+- [AI Coding Tools Governance Policy for Enterprises](/ai-coding-tools-governance-policy-for-enterprises/)
+- [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-tools-security-concerns-enterprise-guide/)
+- [AI Pair Programming Workflow Guide 2026](/ai-pair-programming-workflow-guide-2026/)
+- [Amazon Q Developer vs Claude Code: A Practical.](/amazon-q-developer-vs-claude-code-comparison/)
 - [MCP Updates March 2026: What Developers Need to Know](/anthropic-model-context-protocol-updates-march-2026/)
 - [Benchmarking Claude Code Skills Performance Guide](/benchmarking-claude-code-skills-performance-guide/)
 - [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)
-- [Best MCP Tools for Developer Productivity in 2026](/best-mcp-tools-for-developer-productivity-2026/)
+- [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+- [Best AI Tools for Code Refactoring in 2026](/best-ai-tools-for-code-refactoring-2026/)
+- [Best AI Tools for Frontend Development in 2026](/best-ai-tools-for-frontend-development-2026/)
+- [Best AI Tools for Full Stack Developers in 2026](/best-ai-tools-for-full-stack-developers-2026/)
+- [Best MCP Tools for Developer Productivity 2026](/best-mcp-tools-for-developer-productivity-2026/)
 - [Best Claude Code Skills 2026: Complete Rankings](/best-of-hub/)
 - [Best Tools for Vibe Coding Developers in 2026](/best-tools-for-vibe-coding-developers-2026/)
 - [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
@@ -65,14 +82,16 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Best Way to Write CLAUDE.md File for Your Project](/best-way-to-write-claudemd-file-for-your-project/)
 - [Brave Search MCP Server for Research Automation](/brave-search-mcp-server-research-automation/)
 - [Build a Personal AI Assistant with Claude Skills Guide](/build-personal-ai-assistant-with-claude-skills-guide/)
+- [Building a CLI DevTool with Claude Code: A Practical.](/building-a-cli-devtool-with-claude-code-walkthrough/)
 - [Building a Serverless API with Claude Code: A Practical.](/building-a-serverless-api-with-claude-code-guide/)
-- [Building Supervisor Worker Agent Architecture Tutorial](/building-supervisor-worker-agent-architecture-tutorial/)
+- [Building AI Coding Culture in Engineering Teams](/building-ai-coding-culture-in-engineering-teams/)
 - [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [Caching Strategies for Claude Code Skill Outputs](/caching-strategies-for-claude-code-skill-outputs/)
 - [Can Claude Code Skills Work Alongside Other AI Models?](/can-claude-code-skills-work-alongside-other-ai-models/)
 - [Can Claude Skills Generate Images or Multimedia Files?](/can-claude-skills-generate-images-or-handle-multimedia-files/)
 - [Can You Use Claude Skills Inside VS Code Extensions?](/can-you-use-claude-skills-inside-vs-code-extensions/)
 - [Chain of Agents Pattern for Sequential Task Processing](/chain-of-agents-pattern-for-sequential-task-processing/)
+- [ChatGPT Plus vs Claude Pro for Developers in 2026](/chatgpt-plus-vs-claude-pro-for-developers-2026/)
 - [Claude 4 Skills: New Features and Improvements Guide](/claude-4-skills-improvements-and-new-features/)
 - [Claude Agent Sandbox Skill: Complete Guide (2026)](/claude-agent-sandbox-skill-isolated-environments/)
 - [Claude Code 2026: Skills and Hooks Feature Roundup](/claude-code-2026-new-features-skills-and-hooks-roundup/)
@@ -125,6 +144,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Color Contrast Checking Workflow with Claude Code](/claude-code-color-contrast-checking-workflow/)
 - [Claude Code Compliance Reporting Automation](/claude-code-compliance-reporting-automation/)
 - [Claude Code Container Environment Variables Management](/claude-code-container-environment-variables-management/)
+- [Claude Code Container Security Scanning Workflow Guide](/claude-code-container-security-scanning-workflow-guide/)
 - [Claude Code Contract Testing with Pact Guide](/claude-code-contract-testing-pact-guide/)
 - [Claude Code Conventional Commits Automation](/claude-code-conventional-commits-automation/)
 - [Claude Code Cost for Agencies and Consultancies: A.](/claude-code-cost-for-agencies-and-consultancies/)
@@ -174,6 +194,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Code for PyTorch LoRA Fine-Tuning Workflow](/claude-code-for-pytorch-lora-fine-tuning-workflow/)
 - [Claude Code for Russian Developer Backend Workflow](/claude-code-for-russian-developer-backend-workflow/)
 - [Claude Code for Self-Taught Developer Learning Workflow](/claude-code-for-self-taught-developer-learning-workflow/)
+- [Claude Code for Self-Taught Developer Upskilling](/claude-code-for-self-taught-developer-upskilling/)
 - [Claude Code for Sprint Start: Workflow Tips and Best.](/claude-code-for-sprint-start-workflow-tips/)
 - [Claude Code for Students: Homework and Projects](/claude-code-for-students-homework-and-projects/)
 - [Claude Code for T3 Stack tRPC Next.js Workflow](/claude-code-for-t3-stack-trpc-nextjs-workflow/)
@@ -307,7 +328,10 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/)
 - [Claude Code vLLM Inference Server Deployment Workflow](/claude-code-vllm-inference-server-deployment-workflow/)
 - [Claude Code vs Amazon Q Developer Comparison 2026](/claude-code-vs-amazon-q-developer-comparison-2026/)
+- [Claude Code vs Copilot: Code Documentation Generation.](/claude-code-vs-copilot-code-documentation-generation/)
+- [Claude Code vs Copilot for TypeScript Refactoring](/claude-code-vs-copilot-for-typescript-refactoring/)
 - [Claude Code vs GitHub Copilot Workspace 2026](/claude-code-vs-github-copilot-workspace-2026/)
+- [Claude Code vs Hiring a Developer: A Real Cost.](/claude-code-vs-hiring-developer-cost-comparison/)
 - [Claude Code vs Replit Agent: Which Is Better in 2026?](/claude-code-vs-replit-agent-which-is-better-2026/)
 - [Claude Code WCAG 2.1 Compliance Checker Workflow Guide](/claude-code-wcag-21-compliance-checker-workflow-guide/)
 - [Claude Code Webhook Implementation Guide](/claude-code-webhook-implementation-guide/)
@@ -320,15 +344,30 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Code with Supabase Backend Integration Guide](/claude-code-with-supabase-backend-integration-guide/)
 - [Claude Code with Terraform Infrastructure as Code Setup](/claude-code-with-terraform-infrastructure-as-code-setup/)
 - [Claude Code with Turborepo Monorepo Setup Guide](/claude-code-with-turborepo-monorepo-setup-guide/)
-- [Writing Helm Charts with Claude Code: A Comprehensive.](/claude-code-writing-helm-charts-kubernetes-tutorial/)
+- [Writing Helm Charts for Kubernetes with Claude Code: A.](/claude-code-writing-helm-charts-kubernetes-tutorial/)
 - [Claude Code Xata Serverless Database Branching Guide](/claude-code-xata-serverless-database-branching-guide/)
 - [Claude Code vs Cursor AI Editor Comparison 2026](/claude-cowork-vs-cursor-ai-editor-comparison-2026/)
 - [Claude MD Best Practices for Large Codebases](/claude-md-best-practices-for-large-codebases/)
 - [Claude MD Character Limit and Optimization Guide](/claude-md-character-limit-and-optimization-guide/)
 - [Claude MD Conflicting Instructions Resolution Guide](/claude-md-conflicting-instructions-resolution-guide/)
+- [Claude MD Example for Android Kotlin Project](/claude-md-example-for-android-kotlin-project/)
+- [Claude MD Example for .NET ASP.NET Core Project](/claude-md-example-for-dotnet-aspnet-core-project/)
+- [Claude MD Example for iOS Swift Application Development](/claude-md-example-for-ios-swift-application/)
+- [Claude MD Example for Next.js TypeScript Project](/claude-md-example-for-nextjs-typescript-project/)
+- [Claude MD Example for Rails Ruby Application](/claude-md-example-for-rails-ruby-application/)
+- [Claude MD Example for React Native Mobile App Development](/claude-md-example-for-react-native-mobile-app/)
 - [Claude MD File Complete Guide — What It Does](/claude-md-file-complete-guide-what-it-does/)
+- [Claude MD for Accessibility Requirements: A Practical.](/claude-md-for-accessibility-requirements-a11y/)
+- [Claude.md for API Design Standards Guide](/claude-md-for-api-design-standards-guide/)
 - [Claude MD for Database Conventions and Patterns](/claude-md-for-database-conventions-and-patterns/)
+- [Claude MD for Dependency Management Rules](/claude-md-for-dependency-management-rules/)
+- [Claude MD for Enforcing Architecture Patterns](/claude-md-for-enforcing-architecture-patterns/)
+- [Claude MD for Fullstack Projects Complete Guide](/claude-md-for-fullstack-projects-complete-guide/)
+- [Claude md for Internationalization i18n Setup](/claude-md-for-internationalization-i18n-setup/)
+- [Claude MD for Onboarding New Team Members: A Practical Guide](/claude-md-for-onboarding-new-team-members/)
+- [Using Claude Code for Polyglot Multi-Language Projects](/claude-md-for-polyglot-multi-language-projects/)
 - [Claude MD Metrics Effectiveness: Measuring Guide](/claude-md-metrics-effectiveness-measuring-guide/)
+- [Claude MD Team Collaboration Best Practices](/claude-md-team-collaboration-best-practices/)
 - [Claude MD Template for New Projects Starter Guide](/claude-md-template-for-new-projects-starter-guide/)
 - [Claude MD Version Control Strategy Best Practices](/claude-md-version-control-strategy-best-practices/)
 - [Claude Opus 4.6 vs GPT-4o for Coding Tasks: 2026 Comparison](/claude-opus-46-vs-gpt-4o-for-coding-tasks-comparison/)
@@ -364,14 +403,15 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Skills vs Emerging Agentic Frameworks 2026](/claude-skills-vs-emerging-agentic-frameworks-2026/)
 - [Claude Skills with Supabase: Practical Workflows](/claude-skills-with-supabase-database-integration/)
 - [Claude SuperMemory Skill: Persistent Context Guide 2026](/claude-supermemory-skill-persistent-context-explained/)
-- [Cline AI Code Assistant Review 2026](/cline-ai-code-assistant-review-2026/)
-- [Cline AI Coding Assistant Review vs Claude Code](/cline-ai-coding-assistant-review-vs-claude-code/)
+- [Cline AI Code Assistant Review 2026: A Developer's.](/cline-ai-code-assistant-review-2026/)
+- [Codium AI vs Claude Code Comparison 2026](/codium-ai-vs-claude-code-comparison-2026/)
 - [Developer Productivity Gains from Using Claude Code](/developer-productivity-gains-from-using-claude-code/)
 - [Difference Between AI Agent and AI Assistant Explained](/difference-between-ai-agent-and-ai-assistant-explained/)
 - [Discord MCP Server Community Automation Guide](/discord-mcp-server-community-automation-guide/)
 - [Fan Out Fan In AI Agent Pattern Explained](/fan-out-fan-in-ai-agent-pattern-explained/)
 - [Fly.io MCP Server Deployment Workflow Guide](/fly-io-mcp-server-deployment-workflow-guide/)
-- [GitHub Copilot vs Claude Code Deep Comparison 2026](/github-copilot-vs-claude-code-deep-comparison-2026/)
+- [GitHub Copilot vs Claude Code: Deep Comparison 2026](/github-copilot-vs-claude-code-deep-comparison-2026/)
+- [Gitpod Cloud IDE with Claude Code Guide](/gitpod-cloud-ide-with-claude-code-guide/)
 - [Grounding AI Agents in Real World Data Explained](/grounding-ai-agents-in-real-world-data-explained/)
 - [Claude Code Guides: Complete Reference Library (2026)](/guides-hub/)
 - [How a Solo Developer Ships Faster with Claude Code](/how-a-solo-developer-ships-faster-with-claude-code/)
@@ -392,6 +432,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [How MCP Servers Extend Claude Code Capabilities Explained](/how-mcp-servers-extend-claude-code-capabilities-explained/)
 - [How Open Source Maintainers Use Claude Code in 2026](/how-open-source-maintainers-use-claude-code-2026/)
 - [How QA Engineers Use Claude Code for Test Automation](/how-qa-engineers-use-claude-code-for-test-automation/)
+- [How Startups Use Claude Code to Reduce Engineering Costs](/how-startups-use-claude-code-to-reduce-engineering-costs/)
 - [How to Add Authentication to Your App Using Claude Code](/how-to-add-authentication-to-your-app-using-claude-code/)
 - [How to Audit Claude Code MCP Server Permissions](/how-to-audit-claude-code-mcp-server-permissions/)
 - [How to Build a SaaS MVP with Claude Code Skills Guide](/how-to-build-saas-mvp-with-claude-code-skills-guide/)
@@ -401,6 +442,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [How to Create React Components Faster with Claude Code](/how-to-create-react-components-faster-with-claude-code/)
 - [How to Find Claude Skills on GitHub: A Practical Guide](/how-to-find-claude-skills-on-github/)
 - [How to Generate Unit Tests Automatically with Claude Code](/how-to-generate-unit-tests-automatically-with-claude-code/)
+- [How to Handle Failures in Multi-Agent Pipelines](/how-to-handle-failures-in-multi-agent-pipelines/)
 - [How to Make Claude Code Document Functions.](/how-to-make-claude-code-document-functions-automatically/)
 - [How to Make Claude Code Explain Its Reasoning Steps](/how-to-make-claude-code-explain-its-reasoning-steps/)
 - [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/)
@@ -425,12 +467,14 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [How to Make Claude Code Write Performant SQL Queries](/how-to-make-claude-code-write-performant-sql-queries/)
 - [How to Make Claude Code Write Secure Code Always](/how-to-make-claude-code-write-secure-code-always/)
 - [How to Minimize Claude Code Context Window Waste Tokens](/how-to-minimize-claude-code-context-window-waste-tokens/)
+- [How to Pass State Between AI Agents: A Practical Guide](/how-to-pass-state-between-ai-agents/)
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/)
 - [How to Stop Claude Code from Using Snake Case in TypeScript](/how-to-stop-claude-code-from-using-snake-case-in-typescript/)
 - [How to Use Claude Code to Understand Unfamiliar Codebase.](/how-to-use-claude-code-to-understand-unfamiliar-codebase-qui/)
 - [How to Use Claude Code to Write Database Queries from.](/how-to-use-claude-code-to-write-database-queries-from-scratc/)
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
 - [How to Write Your First Custom Prompt with Claude Code](/how-to-write-your-first-custom-prompt-with-claude-code/)
+- [Human-in-the-Loop Multi-Agent Patterns Guide](/human-in-the-loop-multi-agent-patterns-guide/)
 - [Claude Skills Integrations: Every Platform & API (2026)](/integrations-hub/)
 - [Is Claude Code Good Enough for Senior Developer Workflows?](/is-claude-code-good-enough-for-senior-developer-workflows/)
 - [Is Claude Code Worth It for Solo Developers and Freelancers?](/is-claude-code-worth-it-for-solo-developers-freelancers/)
@@ -450,7 +494,10 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [MCP Transport Layer Security TLS Configuration Guide](/mcp-transport-layer-security-tls-configuration/)
 - [MCP Zero Trust Architecture Implementation: Practical Guide](/mcp-zero-trust-architecture-implementation/)
 - [Measuring Claude Code Skill Efficiency Metrics](/measuring-claude-code-skill-efficiency-metrics/)
+- [Measuring ROI of AI Coding Tools for Teams](/measuring-roi-of-ai-coding-tools-for-teams/)
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/)
+- [Multi Agent Workflow Design Patterns for Developers](/multi-agent-workflow-design-patterns-for-developers/)
+- [Neovim AI Coding Setup with Claude 2026: Complete Guide](/neovim-ai-coding-setup-with-claude-2026/)
 - [Open Source Claude Skills Ecosystem Outlook 2026](/open-source-claude-skills-ecosystem-outlook-2026/)
 - [OpenCLAW Security Review — Is It Safe in 2026?](/openclaw-security-review-is-it-safe-2026/)
 - [Opencode AI Terminal Editor Review 2026: Claude Code.](/opencode-ai-terminal-editor-review-2026/)
@@ -461,19 +508,21 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Reduce Claude Code API Costs Without Losing Quality.](/reduce-claude-code-api-costs-without-losing-quality-tips/)
 - [Reduce Claude Code Hallucinations: Save Tokens and Boost.](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/)
 - [Render MCP Server Web Service Automation](/render-mcp-server-web-service-automation/)
+- [Replit AI Agent vs Claude Code: A Developer Comparison](/replit-ai-agent-vs-claude-code-comparison/)
 - [Should I Use Claude Code for Production Database Migrations?](/should-i-use-claude-code-for-production-database-migrations/)
 - [Should I Use Claude Code for Writing Infrastructure Scripts?](/should-i-use-claude-code-for-writing-infrastructure-scripts/)
 - [Should I Use Claude Code or Copilot for Large Refactors?](/should-i-use-claude-code-or-copilot-for-large-refactors/)
 - [Structuring Claude Skills for Large Enterprise Codebases](/structuring-claude-skills-for-large-enterprise-codebases/)
 - [SuperMaven Review: Fast AI Code Completion in 2026](/supermaven-review-fast-ai-code-completion-2026/)
 - [Tabnine Review: Enterprise AI Code Completion in 2026](/tabnine-review-enterprise-ai-code-completion-2026/)
-- [Tabnine vs Claude Code for Team Development](/tabnine-vs-claude-code-for-team-development/)
 - [Claude Code Skills Troubleshooting: Fix Common Errors](/troubleshooting-hub/)
 - [Types of LLM Agents Explained for Developers 2026](/types-of-llm-agents-explained-for-developers-2026/)
 - [Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/)
+- [Using AI for Technical Debt Reduction Workflow](/using-ai-for-technical-debt-reduction-workflow/)
 - [Using Claude Code Inside Docker Container Tutorial](/using-claude-code-inside-docker-container-tutorial/)
 - [Using Claude Code to Learn Algorithms and Data Structures](/using-claude-code-to-learn-algorithms-and-structures/)
 - [Using Claude Code to Learn New Programming Languages](/using-claude-code-to-learn-new-programming-languages/)
+- [Using Claude Code to Prepare for Coding Interviews](/using-claude-code-to-prepare-for-coding-interviews/)
 - [Using Claude Code with Astro Static Site Generation](/using-claude-code-with-astro-static-site-generation/)
 - [Using Claude Code with Bun Runtime for JavaScript Projects](/using-claude-code-with-bun-runtime-javascript-projects/)
 - [Using Claude Code with Drizzle ORM Schema Management](/using-claude-code-with-drizzle-orm-schema-management/)
@@ -507,7 +556,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Why Is Claude Code Recommended for Refactoring Tasks](/why-is-claude-code-recommended-for-refactoring-tasks/)
 - [Why Is Claude Code Terminal-Based, Not a GUI Application?](/why-is-claude-code-terminal-based-not-gui-application/)
 
-## 📖 Tutorials (169 articles)
+## 📖 Tutorials (176 articles)
 
 - [Ansible MCP Server Configuration Management](/ansible-mcp-server-configuration-management/)
 - [Apache Kafka MCP Server for Event Streaming Guide](/apache-kafka-mcp-server-event-streaming-guide/)
@@ -517,7 +566,9 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Best Way to Feed Claude Code a Large SQL Schema](/best-way-to-feed-claude-code-a-large-sql-schema/)
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
 - [Building a Mobile App with Claude Code and Expo](/building-a-mobile-app-with-claude-code-and-expo/)
+- [Building a Monitoring System with Claude Code](/building-a-monitoring-system-with-claude-code/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+- [Building Supervisor Worker Agent Architecture Tutorial](/building-supervisor-worker-agent-architecture-tutorial/)
 - [Can Claude Code Skills Call External APIs Automatically?](/can-claude-code-skills-call-external-apis-automatically/)
 - [Can You Use Claude Skills Without a Claude Max Subscription?](/can-you-use-claude-skills-without-a-claude-max-subscription/)
 - [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)
@@ -600,7 +651,11 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Frontend Design Skill Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/)
 - [Claude MD Example for Elixir Phoenix Application](/claude-md-example-for-elixir-phoenix-application/)
 - [Claude MD Example for Go Fiber API Project](/claude-md-example-for-go-fiber-api-project/)
+- [Claude MD Example for Laravel PHP Application](/claude-md-example-for-laravel-php-application/)
+- [Claude MD Example for Remix Fullstack Application](/claude-md-example-for-remix-fullstack-application/)
 - [Claude MD for Backend Projects Best Practices](/claude-md-for-backend-projects-best-practices/)
+- [Claude MD for Frontend Projects Best Practices](/claude-md-for-frontend-projects-best-practices/)
+- [Claude MD Secrets and Sensitive Info Handling](/claude-md-secrets-and-sensitive-info-handling/)
 - [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/)
 - [Claude Skill Versioning: Semver Best Practices](/claude-skill-versioning-semver-best-practices/)
 - [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-change-management-rolling-out-to-teams/)
@@ -642,6 +697,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/)
 - [How to Make Claude Code Match Existing Code Patterns](/how-to-make-claude-code-match-existing-code-patterns/)
 - [How to Make Claude Code Use My Preferred Test Framework](/how-to-make-claude-code-use-my-preferred-test-framework/)
+- [How to Use AI Coding Tools Effectively in 2026](/how-to-use-ai-coding-tools-effectively-2026/)
 - [How to Use Claude Code for Spreadsheet Automation](/how-to-use-claude-code-for-spreadsheet-automation/)
 - [How to Use Claude Code to Refactor Legacy JavaScript Code](/how-to-use-claude-code-to-refactor-legacy-javascript-code/)
 - [How to Use Claude Code to Write Git Commit Messages Properly](/how-to-use-claude-code-to-write-git-commit-messages-properly/)
@@ -679,8 +735,9 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Why Is Claude Code Better Than ChatGPT for Developers](/why-is-claude-code-better-than-chatgpt-for-developers/)
 - [Will Claude Skills Support Voice Interfaces in 2026?](/will-claude-skills-support-voice-interfaces-2026/)
 
-## 🐛 Troubleshooting (109 articles)
+## 🐛 Troubleshooting (115 articles)
 
+- [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)
 - [Best Way to Handle Claude Code Mistakes Efficiently](/best-way-to-handle-claude-code-mistakes-efficiently/)
 - [Claude Code Bash Command Not Found in Skill.](/claude-code-bash-command-not-found-in-skill/)
 - [Claude Code Breaks Existing Tests After Changes Fix](/claude-code-breaks-existing-tests-after-changes-fix/)
@@ -691,7 +748,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Code Crashes When Loading Skill: Debug Guide](/claude-code-crashes-when-loading-skill-debug-steps/)
 - [Claude Code Creates Files in Wrong Directory Fix](/claude-code-creates-files-in-wrong-directory-fix/)
 - [Claude Code CS50 Project Help and Debugging Guide](/claude-code-cs50-project-help-and-debugging-guide/)
-- [Mastering Docker Container Log Analysis with Claude.](/claude-code-docker-debugging-container-logs-guide/)
+- [Claude Code Docker Debugging Container Logs Guide](/claude-code-docker-debugging-container-logs-guide/)
 - [Claude Code Docker Permission Denied Bind Mount Error](/claude-code-docker-permission-denied-bind-mount-error/)
 - [Claude Code ENOENT No Such File or Directory Error.](/claude-code-enoent-no-such-file-directory-skill/)
 - [Claude Code Error Connection Refused Localhost Fix](/claude-code-error-connection-refused-localhost-fix/)
@@ -760,10 +817,13 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Code Verbose Mode Debugging Tips](/claude-code-verbose-mode-debugging-tips/)
 - [Fixing Claude Code Writing Code in Wrong Programming.](/claude-code-writes-code-in-wrong-programming-language/)
 - [Claude MD Changes Not Taking Effect Fix Guide](/claude-md-changes-not-taking-effect-fix-guide/)
+- [Claude MD for Error Handling Patterns Guide](/claude-md-for-error-handling-patterns-guide/)
+- [CLAUDE.md Not Being Read by Claude Code Fix](/claude-md-not-being-read-by-claude-code-fix/)
 - [Claude MD Too Long Context Window Optimization](/claude-md-too-long-context-window-optimization/)
 - [Claude Skill Not Saving State Between Sessions Fix](/claude-skill-not-saving-state-between-sessions-fix/)
 - [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skill-yaml-front-matter-parsing-error-fix/)
 - [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/)
+- [How AI Agents Handle Errors and Retries: A Complete Guide](/how-ai-agents-handle-errors-and-retries-guide/)
 - [How AI Agents Use Tools and Skills Explained](/how-ai-agents-use-tools-and-skills-explained/)
 - [How Claude Code Changed My Development Workflow](/how-claude-code-changed-my-development-workflow/)
 - [How Do I Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/)
@@ -774,8 +834,10 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [How to Make Claude Code Refactor Without Breaking Tests](/how-to-make-claude-code-refactor-without-breaking-tests/)
 - [How to Make Claude Code Stop Adding Markdown to Code.](/how-to-make-claude-code-stop-adding-markdown-to-code/)
 - [How to Stop Claude Code from Modifying Unrelated Files](/how-to-stop-claude-code-from-modifying-unrelated-files/)
+- [How to Test and Debug Multi Agent Workflows](/how-to-test-and-debug-multi-agent-workflows/)
 - [Securing Claude Code in Enterprise Environments](/securing-claude-code-in-enterprise-environments/)
 - [Securing MCP Servers in Production Environments](/securing-mcp-servers-in-production-environments/)
+- [What Are AI Agent Skills: Complete Guide for Developers](/what-are-ai-agent-skills-complete-guide-developers/)
 - [Why Does Claude Code Break My Existing Tests Unexpectedly](/why-does-claude-code-break-my-existing-tests-unexpectedly/)
 - [Why Does Claude Code Hallucinate Code Sometimes?](/why-does-claude-code-hallucinate-code-sometimes/)
 - [Why Does Claude Code Keep Asking for Permission Repeatedly?](/why-does-claude-code-keep-asking-for-permission-repeatedly/)
@@ -791,8 +853,9 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Why Is Claude Code Suddenly Worse Than It Was Before?](/why-is-claude-code-suddenly-worse-than-it-was-before/)
 - [Claude Skill Not Showing Up? Fix Guide](/why-is-my-claude-skill-not-showing-up-fix-guide/)
 
-## 🔧 Workflows (52 articles)
+## 🔧 Workflows (53 articles)
 
+- [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
 - [Before and After: Switching to Claude Code Workflow](/before-and-after-switching-to-claude-code-workflow/)
 - [Best Way to Onboard New Developers Using Claude Code](/best-way-to-onboard-new-developers-using-claude-code/)
@@ -846,15 +909,21 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Rate Limit Management for Claude Code Workflows](/rate-limit-management-claude-code-skill-intensive-workflows/)
 - [Claude Skills Workflow Guide: Build, Chain & Contribute](/workflows-hub/)
 
-## 🆚 Comparisons (29 articles)
+## 🆚 Comparisons (39 articles)
 
 - [Aider AI Pair Programming Review 2026: An Honest Take](/aider-ai-pair-programming-review-2026-honest-take/)
 - [Official vs Community Claude Skills Guide (2026)](/anthropic-official-skills-vs-community-skills-comparison/)
 - [Antigravity vs Claude Native Skills: Complete Guide (2026)](/antigravity-skills-vs-claude-native-skills/)
 - [Augment Code AI Review for Enterprise Teams 2026](/augment-code-ai-review-for-enterprise-teams-2026/)
 - [Best AI Code Completion Tools vs Claude Code](/best-ai-code-completion-tools-vs-claude-code/)
+- [Best AI Code Review Tools 2026 Guide](/best-ai-code-review-tools-2026-guide/)
+- [Best AI Pair Programming Tools 2026 Review](/best-ai-pair-programming-tools-2026-review/)
+- [Best Free AI Coding Assistants 2026 Comparison](/best-free-ai-coding-assistants-2026-comparison/)
+- [Bolt.new vs Claude Code for Web Apps in 2026](/bolt-new-vs-claude-code-for-web-apps-2026/)
 - [Claude Code Subscription Worth It? An Honest Review for.](/claude-code-subscription-worth-it-honest-review/)
 - [Claude Code vs ChatGPT Code Interpreter Comparison](/claude-code-vs-chatgpt-code-interpreter-comparison/)
+- [Claude Code vs Cursor: Debugging Runtime Errors](/claude-code-vs-cursor-debugging-runtime-errors/)
+- [Claude Code vs Cursor for React Development](/claude-code-vs-cursor-for-react-development/)
 - [Claude Code vs Devin AI Agent: 2026 Comparison](/claude-code-vs-devin-ai-agent-comparison-2026/)
 - [Claude Code vs Gemini CLI for Developers 2026](/claude-code-vs-gemini-cli-for-developers-2026/)
 - [Claude Code vs OpenAI Codex CLI: 2026 Comparison](/claude-code-vs-openai-codex-cli-comparison-2026/)
@@ -864,12 +933,15 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Skills vs Langflow for AI Agents (2026)](/claude-skills-vs-langflow-for-building-ai-agents/)
 - [Claude Skills vs OpenAI Assistants API Comparison](/claude-skills-vs-openai-assistants-api-comparison/)
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/)
+- [Cline AI Coding Assistant Review vs Claude Code](/cline-ai-coding-assistant-review-vs-claude-code/)
 - [Claude Skills vs Prompts: The Complete Comparisons Guide](/comparisons-hub/)
 - [Continue Dev Review: Open Source AI Coding in 2026](/continue-dev-review-open-source-ai-coding-2026/)
 - [Cursor vs Claude Code: Which Is Better in 2026?](/cursor-vs-claude-code-which-is-better-2026/)
-- [Devin AI Software Engineer Review: An Honest Look at 2026](/devin-ai-software-engineer-review-honest-2026/)
+- [Devin AI Software Engineer Review 2026: A Practical Look.](/devin-ai-software-engineer-review-2026/)
+- [Kilo Code Review: Is It Worth Using in 2026?](/kilo-code-review-is-it-worth-using-2026/)
 - [MCP Servers vs Claude Skills: What Is the Difference?](/mcp-servers-vs-claude-skills-what-is-the-difference/)
 - [Replit Agent Review for Solo Developers 2026](/replit-agent-review-for-solo-developers-2026/)
+- [Tabnine vs Claude Code for Team Development](/tabnine-vs-claude-code-for-team-development/)
 - [Vibe Coding vs Traditional Development: A Practical.](/vibe-coding-vs-traditional-development-comparison/)
 - [Claude Code vs Manual Coding: Tradeoffs for Developers](/when-to-use-claude-code-vs-manual-coding-tradeoffs/)
 - [Why Does Anthropic Limit Claude Code Context Window?](/why-does-anthropic-limit-claude-code-context-window/)
@@ -877,6 +949,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Will Claude Skills Replace Traditional IDE Plugins?](/will-claude-skills-replace-traditional-ide-plugins/)
 - [Windsurf Editor Review for Professional Developers 2026](/windsurf-editor-review-for-professional-developers-2026/)
 - [Zed Editor AI Features Review for Developers 2026](/zed-editor-ai-features-review-for-developers-2026/)
+- [Zed Editor with AI Features Review 2026](/zed-editor-with-ai-features-review-2026/)
 
 ## ⚡ Advanced (25 articles)
 
@@ -906,7 +979,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Monitoring and Logging in Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/)
 - [Supervisor Agent Worker Agent Pattern in Claude Code](/supervisor-agent-worker-agent-pattern-claude-code/)
 
-## 🏗️ Use-Cases (18 articles)
+## 🏗️ Use-Cases (17 articles)
 
 - [Claude Code Skills for Agriculture IoT Monitoring](/claude-code-skills-for-agriculture-iot-monitoring/)
 - [Claude Code Skills for Gaming Backend Development](/claude-code-skills-for-gaming-backend-development/)
@@ -923,7 +996,6 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [How Claude Code Helped Ship Product 3x Faster](/how-claude-code-helped-ship-product-3x-faster/)
 - [How Data Scientists Use Claude Code for Analysis](/how-data-scientists-use-claude-code-for-analysis/)
 - [How Product Managers Use Claude Code for Specs](/how-product-managers-use-claude-code-for-specs/)
-- [How Startups Use Claude Code to Reduce Engineering Costs](/how-startups-use-claude-code-to-reduce-engineering-costs/)
 - [How Technical Writers Use Claude Code for Docs](/how-technical-writers-use-claude-code-for-docs/)
 - [Claude Code Use Cases: Real-World Applications & Examples](/use-cases-hub/)
 
@@ -955,6 +1027,21 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Skills for Site Reliability Engineers SRE](/claude-skills-for-site-reliability-engineers-sre/)
 - [Top 10 Free Claude Code Skills for GitHub Projects](/top-10-free-claude-code-skills-github/)
 
+## 📁 Reviews (5 articles)
+
+- [Bolt.new Review: AI Web App Builder 2026](/bolt-new-review-ai-web-app-builder-2026/)
+- [Codeium Review: Free AI Coding Assistant 2026](/codeium-review-free-ai-coding-assistant-2026/)
+- [Lovable AI App Builder Review for Developers 2026](/lovable-ai-app-builder-review-for-developers-2026/)
+- [Manus AI Agent Review for Developers 2026](/manus-ai-agent-review-for-developers-2026/)
+- [Same Dev AI Coding Tool Honest Review 2026](/same-dev-ai-coding-tool-honest-review-2026/)
+
+## 📁 Other (4 articles)
+
+- [Claude Code vs Copilot: Writing Unit Tests Automatically](/claude-code-vs-copilot-writing-unit-tests-automatically/)
+- [Claude Code vs Windsurf: Python Backend Development Comparison](/claude-code-vs-windsurf-python-backend-development/)
+- [Claude Code vs Windsurf: Tailwind CSS Frontend Development Comparison](/claude-code-vs-windsurf-tailwind-css-frontend/)
+- [Claude MD for Contractor and Vendor Teams](/claude-md-for-contractor-and-vendor-teams/)
+
 ## 📁 Security (3 articles)
 
 - [Claude Code CIS Benchmark Hardening Script Automation](/claude-code-cis-benchmark-hardening-script-automation/)
@@ -971,19 +1058,15 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Code Keyboard Navigation Testing Guide](/claude-code-keyboard-navigation-testing-guide/)
 - [Vibe Coding Testing Strategy: How to Test AI-Generated Code](/vibe-coding-testing-strategy-how-to-test-ai-code/)
 
+## 🆚 Comparison (2 articles)
+
+- [Claude Code vs Tabnine Enterprise for Python Monorepo.](/claude-code-vs-tabnine-enterprise-python-monorepo/)
+- [Should I Switch from Codeium to Claude Code? A Comprehensive Guide](/should-i-switch-from-codeium-to-claude-code/)
+
 ## 📁 Claude-Code (2 articles)
 
 - [Claude Code with Turso Embedded SQLite Edge Database](/claude-code-with-turso-embedded-sqlite-edge-database/)
 - [Parallel AI Agent Execution Patterns and Trade-offs](/parallel-ai-agent-execution-patterns-and-trade-offs/)
-
-## 📁 Reviews (2 articles)
-
-- [Codeium Review: Free AI Coding Assistant 2026](/codeium-review-free-ai-coding-assistant-2026/)
-- [Same Dev AI Coding Tool Honest Review 2026](/same-dev-ai-coding-tool-honest-review-2026/)
-
-## 📁 Ai-Web-App-Builders (1 articles)
-
-- [Bolt.new Review: AI Web App Builder in 2026](/bolt-new-review-ai-web-app-builder-2026/)
 
 ## 📁 Implementation (1 articles)
 
@@ -993,9 +1076,13 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 
 - [Claude Code Test Environment Management Guide](/claude-code-test-environment-management-guide/)
 
-## 📁 Ai-Agents (1 articles)
+## 📁 Ai-Coding-Assistants (1 articles)
 
-- [Manus AI Agent Review for Developers 2026](/manus-ai-agent-review-for-developers-2026/)
+- [Cursor vs GitHub Copilot vs Claude Code 2026: Which AI.](/cursor-vs-github-copilot-vs-claude-code-2026/)
+
+## 📁 Ai-Tools (1 articles)
+
+- [Devin AI Software Engineer Review 2026: An Honest Assessment](/devin-ai-software-engineer-review-honest-2026/)
 
 ## 📁 Hub (1 articles)
 
@@ -1003,6 +1090,6 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 
 ---
 
-**928 articles** across 20 categories.
+**1009 articles** across 22 categories.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
