@@ -3,9 +3,11 @@ layout: default
 title: "Claude MD for Database Conventions and Patterns"
 description: "Learn how to use Claude's markdown-based skills to implement consistent database conventions and design patterns across your projects."
 date: 2026-03-14
-categories: [tutorials]
+categories: [guides]
 tags: [claude-code, claude-skills, database, conventions, patterns, sql, mcp]
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude MD for Database Conventions and Patterns
@@ -81,7 +83,7 @@ Beyond simple naming conventions, your skill can encode architectural patterns. 
 
 ## Using MCP Servers with Database Skills
 
-The AWS MCP server and other database-related MCP tools work seamlessly with your conventions skill. When you connect to a database through an MCP server, activate your conventions skill first to ensure all generated queries follow your standards.
+The AWS MCP server and other database-related MCP tools work directly with your conventions skill. When you connect to a database through an MCP server, activate your conventions skill first to ensure all generated queries follow your standards.
 
 For teams using PostgreSQL, the conventions skill can include rules specific to that database, such as array column usage, JSONB best practices, or specific index types like GIN and BRIN for different use cases.
 

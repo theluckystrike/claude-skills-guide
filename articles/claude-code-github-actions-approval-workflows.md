@@ -181,7 +181,7 @@ The workflow runs automated checks before requiring human approval, ensuring tha
 
 ## Slack Integration for Approval Notifications
 
-Real-world teams need timely approval notifications. The **slack-gif-creator** skill can generate context-aware notification visuals, but for actual integrations, use GitHub's official Slack actions:
+Real-world teams need timely approval notifications. Use GitHub's official Slack actions to send alerts when a workflow enters a waiting state:
 
 ```yaml
 # .github/workflows/approval-notification.yml

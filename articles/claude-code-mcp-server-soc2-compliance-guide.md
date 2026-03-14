@@ -24,7 +24,7 @@ Your MCP server likely processes data that falls under confidentiality requireme
 
 ## Implementing Authentication and Authorization
 
-Every MCP server needs robust authentication. For production deployments, implement token-based authentication using JWTs or API keys with appropriate expiration policies.
+Every MCP server needs strong authentication. For production deployments, implement token-based authentication using JWTs or API keys with appropriate expiration policies.
 
 ```python
 # Example: Token validation for MCP server endpoints

@@ -73,7 +73,7 @@ Slack remains popular for team notifications. Create an incoming webhook in your
     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 ```
 
-For more detailed notifications using the slack skill, you can customize message formatting:
+For more detailed notifications, customize message formatting with a raw curl call:
 
 ```yaml
 - name: Custom Slack Message
@@ -84,7 +84,7 @@ For more detailed notifications using the slack skill, you can customize message
     ${{ secrets.SLACK_WEBHOOK_URL }}
 ```
 
-The slack-mcp-server skill can further automate response handling when notifications arrive, enabling you to trigger Claude Code actions directly from Slack messages.
+If you use the Slack MCP server with Claude Code, you can further automate response handling when notifications arrive, enabling you to trigger Claude Code actions directly from Slack messages.
 
 ## Discord Webhook Notifications
 

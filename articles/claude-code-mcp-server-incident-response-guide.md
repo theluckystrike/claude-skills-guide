@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code MCP Server Incident Response Guide
 
-When your MCP servers fail during a critical workflow, the impact ripples through your entire AI-assisted development process. Whether it's a database connection timeout, an API rate limit, or a crashed subprocess, incidents happen. This guide shows you how to build robust incident detection, alerting, and recovery systems for your MCP server infrastructure.
+When your MCP servers fail during a critical workflow, the impact ripples through your entire AI-assisted development process. Whether it's a database connection timeout, an API rate limit, or a crashed subprocess, incidents happen. This guide shows you how to build reliable incident detection, alerting, and recovery systems for your MCP server infrastructure.
 
 ## Identifying Common MCP Server Failure Modes
 
@@ -244,6 +244,6 @@ Regular testing ensures your incident response playbook remains current and your
 
 Building incident response capabilities for MCP servers protects your AI-assisted development workflows from unexpected failures. Start with health checks, implement automatic recovery with supervisors, add circuit breakers for resilience, and maintain tested runbooks. These patterns work whether you're running a single `tdd` skill test server or a complex multi-service infrastructure.
 
-The investment in robust incident response pays dividends in reduced downtime and faster recovery when issues inevitably occur.
+The investment in thorough incident response pays dividends in reduced downtime and faster recovery when issues inevitably occur.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
