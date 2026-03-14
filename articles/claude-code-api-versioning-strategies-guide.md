@@ -1,182 +1,181 @@
 ---
 layout: default
 title: "Claude Code API Versioning Strategies Guide"
-description: "Learn practical API versioning strategies for Claude Code projects. Explore URL path, header, query string, and content type versioning with code examples."
+description: "Learn effective API versioning strategies for Claude Code skills: URL path versioning, header-based versioning, and query parameter approaches with practical code examples."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-versioning-strategies-guide/
 ---
 
-{% raw %}
 # Claude Code API Versioning Strategies Guide
 
-Building APIs that evolve without breaking existing clients is one of the most challenging aspects of backend development. When you're working with Claude Code to generate API code, understanding versioning strategies helps you create services that can adapt over time while maintaining backward compatibility. This guide walks through practical approaches to API versioning that you can implement immediately.
+API versioning is critical when building skills that expose endpoints or integrate with external services. As your skill evolves, breaking changes become inevitable—new fields, altered response structures, or deprecated functionality. Without a solid versioning strategy, you risk breaking existing integrations and frustrating your users. This guide walks through practical versioning approaches you can implement directly in your Claude Code skills.
 
-## Why API Versioning Matters
+## Why Versioning Matters for Claude Skills
 
-Your API is a contract with your clients. When you release new features or fix bugs, you need a way to introduce changes without disrupting existing integrations. Without a clear versioning strategy, you risk breaking production systems every time you deploy an update.
+When you build a skill that interacts with APIs—whether fetching data from a backend, processing documents through external services, or exposing endpoints via MCP—you're committing to maintaining backward compatibility. Users who built integrations around your skill's v1 behavior expect things to continue working.
 
-Consider a scenario where you've built an e-commerce API using Claude Code's code generation capabilities. Your initial version returns product data with a simple structure:
+Consider a skill that uses the `pdf` skill to generate reports. If you later change the response format from returning a file path to returning a buffer object, any automation relying on the old format breaks. Versioning gives users a migration path rather than an abrupt breaking change.
 
-```json
-{
-  "id": "123",
-  "name": "Wireless Headphones",
-  "price": 79.99
+## Versioning Strategy Options
+
+There are three primary approaches to API versioning, each with distinct trade-offs.
+
+### URL Path Versioning
+
+The most explicit approach involves including the version in the URL path:
+
+```javascript
+// v1 endpoint
+async function getUserProfile(userId) {
+  return await fetch(`/api/v1/users/${userId}`);
+}
+
+// v2 endpoint with expanded response
+async function getUserProfileV2(userId) {
+  const response = await fetch(`/api/v2/users/${userId}`);
+  return {
+    ...response,
+    // v2 includes additional metadata
+    lastActive: response.lastLogin,
+    preferences: response.settings
+  };
 }
 ```
 
-Six months later, you need to add product images and inventory status. If you simply add these fields to the response, existing clients might break if they have strict parsing logic. Versioning lets you introduce these changes gracefully.
+URL path versioning works well for Claude skills because it's immediately visible—you always know which version you're calling. The `frontend-design` skill might generate API client code where developers can clearly see which version they're using. This clarity reduces confusion and makes documentation straightforward.
 
-## URL Path Versioning
+The downside is that maintaining multiple versions requires careful code organization. You'll likely end up with parallel implementations or conditional logic handling differences between versions.
 
-The most common approach is including the version in the URL path:
+### Header-Based Versioning
 
-```
-GET /api/v1/products
-GET /api/v2/products
-```
-
-This method is explicit and easy to understand. Clients always know which version they're using. Here's how you might implement this with a Node.js Express route handler that Claude Code could help generate:
+A more flexible approach uses HTTP headers to specify the version:
 
 ```javascript
-// routes/products.js
-const express = require('express');
-const router = express.Router();
+async function fetchWithVersion(endpoint, version = 'v1') {
+  const headers = {
+    'Accept-Version': version,
+    'Accept': 'application/json'
+  };
+  
+  const response = await fetch(endpoint, { headers });
+  
+  // Handle version-specific parsing
+  if (version === 'v1') {
+    return transformV1Response(response);
+  }
+  
+  return response;
+}
 
-// Version 1: Simple product response
-router.get('/v1/products', (req, res) => {
-  const products = db.products.map(p => ({
-    id: p.id,
-    name: p.name,
-    price: p.price
-  }));
-  res.json(products);
-});
-
-// Version 2: Enhanced with images and inventory
-router.get('/v2/products', (req, res) => {
-  const products = db.products.map(p => ({
-    id: p.id,
-    name: p.name,
-    price: p.price,
-    images: p.images,
-    inStock: p.inventory > 0
-  }));
-  res.json(products);
-});
-
-module.exports = router;
+// Usage
+const userV1 = await fetchWithVersion('/api/users/123', 'v1');
+const userV2 = await fetchWithVersion('/api/users/123', 'v2');
 ```
 
-The advantage here is clarity—developers can see the version at a glance. However, this approach leads to code duplication if your business logic shares most of the implementation.
+Header versioning keeps URLs clean and allows clients to specify preferences without changing endpoints. The `tdd` skill can help you write tests that verify your code handles both header formats correctly. You might test that missing headers default to the latest stable version or explicitly reject unknown versions.
 
-## Header-Based Versioning
+This approach requires more documentation—clients need to know which headers to set—but offers flexibility when endpoints don't change dramatically between versions.
 
-Another approach uses HTTP headers to specify the version:
+### Query Parameter Versioning
 
-```
-GET /api/products
-Accept-Version: v1
-```
-
-This keeps your URLs cleaner. Your routes stay simpler, but you need to parse headers in each handler. Here's a practical implementation:
+The simplest approach adds version as a query parameter:
 
 ```javascript
-// middleware/version.js
-const versionHandler = (req, res, next) => {
-  const version = req.headers['accept-version'] || 'v1';
-  req.apiVersion = version;
-  next();
-};
-
-// routes/products.js
-router.get('/products', versionHandler, (req, res) => {
-  const products = db.products.map(p => {
-    const base = { id: p.id, name: p.name, price: p.price };
-    
-    if (req.apiVersion === 'v2') {
-      return { ...base, images: p.images, inStock: p.inventory > 0 };
-    }
-    return base;
+async function getItems(filters, version = 'v1') {
+  const params = new URLSearchParams({
+    ...filters,
+    api_version: version
   });
   
-  res.json(products);
-});
+  return await fetch(`/api/items?${params}`);
+}
 ```
 
-This approach works well when you want to keep URLs stable. It's particularly useful for public APIs where you want to avoid cluttering URLs with version numbers.
+Query parameter versioning is easy to implement and debug. Developers can manually construct URLs in browsers to test different versions. However, this method can lead to cluttered URLs, and some caching systems handle query parameters differently than path segments.
 
-## Query String Versioning
+## Implementing Versioning in Your Skill
 
-For less formal versioning or when you want optional versioning:
+When building a Claude skill that exposes functionality through MCP tools, consider versioning the tool definitions themselves:
 
+```yaml
+---
+name: data-export
+description: Export data in various formats
+version: v2
+tools:
+  - Bash
+  - Read
+---
+
+# Data Export Skill v2
+
+This skill exports data to files. Use the appropriate format for your needs.
+
+## Available Formats
+
+- `csv`: Legacy CSV format (v1 compatibility)
+- `json`: Structured JSON output
+- `xlsx`: Excel spreadsheet (v2 only)
+
+## Usage
+
+For v1 behavior (CSV only):
 ```
-GET /api/products?version=2
+Export the user data to /exports/users.csv
 ```
 
-This is the simplest to implement but can cause issues if version becomes a reserved parameter in your business logic:
+For v2 behavior (supports multiple formats):
+```
+Export the user data to /exports/users.xlsx as xlsx format
+```
+
+The skill automatically detects which version behavior to apply based on the format specified.
+```
+
+This pattern lets users migrate gradually. The `supermemory` skill can help you track which versions your users are calling, making it easier to deprecate old versions responsibly.
+
+## Deprecation Strategy
+
+Versioning without a deprecation plan creates technical debt. Here's a practical approach:
 
 ```javascript
-router.get('/products', (req, res) => {
-  const version = parseInt(req.query.version) || 1;
-  
-  if (version >= 2) {
-    return res.json(enhancedProducts);
+const VERSION_SUPPORT = {
+  v1: {
+    supportedUntil: '2026-06-01',
+    default: false,
+    sunsetHeaders: true
+  },
+  v2: {
+    supportedUntil: null, // current
+    default: true
   }
-  return res.json(legacyProducts);
-});
-```
-
-## Content Negotiation Versioning
-
-The most sophisticated approach uses MIME types:
-
-```
-GET /api/products
-Accept: application/vnd.yourapi.v2+json
-```
-
-This follows REST conventions strictly but requires clients to understand MIME types. Implementation looks like this:
-
-```javascript
-const versionMiddleware = (req, res, next) => {
-  const acceptHeader = req.headers.accept;
-  const versionMatch = acceptHeader?.match(/vnd\.yourapi\.v(\d+)/);
-  
-  req.apiVersion = versionMatch ? parseInt(versionMatch[1]) : 1;
-  next();
 };
+
+function checkVersion(version) {
+  const config = VERSION_SUPPORT[version];
+  
+  if (!config) {
+    throw new Error(`Unsupported API version: ${version}`);
+  }
+  
+  if (config.sunsetHeaders) {
+    console.warn(
+      `Warning: v1 will be deprecated on ${config.supportedUntil}. ` +
+      `Please migrate to v2.`
+    );
+  }
+  
+  return config;
+}
 ```
+
+The `docs` skill can generate deprecation notices automatically when building documentation. Communicate deprecation timelines clearly—give users at least 3-6 months to migrate after announcing sunset dates.
 
 ## Choosing Your Strategy
 
-Each approach has trade-offs. URL path versioning is the most visible and easiest to debug. Header-based versioning keeps URLs cleaner but requires additional documentation. Query string versioning is informal but simple. Content negotiation is the most RESTful but adds complexity.
+For most Claude skills, URL path versioning provides the best balance of clarity and maintainability. It's explicit, cache-friendly, and easy to document. Header-based versioning suits skills with complex client requirements or when you want to keep URLs clean. Query parameter versioning works for rapid prototyping but can become unwieldy at scale.
 
-For most projects built with Claude Code, URL path versioning strikes the best balance between clarity and maintainability. You can start simple and evolve as needed.
-
-## Working with Claude Code Skills
-
-When generating API code with Claude Code, you can leverage several skills to improve your workflow:
-
-- The **tdd** skill helps you write tests first, ensuring your versioning logic works correctly across different scenarios
-- The **pdf** skill lets you generate API documentation as PDF files for external stakeholders
-- The **supermemory** skill helps you remember API design decisions and maintain consistency across versions
-- The **frontend-design** skill can generate frontend code that handles multiple API versions gracefully
-
-Using these skills together creates a cohesive development experience where your backend versioning strategy integrates smoothly with documentation and client code generation.
-
-## Best Practices
-
-1. **Document every version**: Each version needs clear documentation of what changed and when to migrate
-2. **Support at least two versions**: Always maintain the current stable version and the previous version during transitions
-3. **Set deprecation timelines**: Tell clients when older versions will be removed—typically 6-12 months
-4. **Version your error responses**: Error payloads should also respect versioning to help clients handle failures consistently
-5. **Use semantic versioning**: V1, V2, V3 is fine, but consider semantic versioning for larger ecosystems
-
-## Conclusion
-
-API versioning doesn't have to be complicated. By choosing a clear strategy early and implementing it consistently, you can evolve your API without breaking client integrations. Whether you prefer the explicitness of URL paths or the cleanliness of headers, the key is consistency and clear communication with your API consumers.
+Regardless of which approach you choose, document your versioning policy upfront. Specify which versions are supported, how to request specific versions, and what the migration path looks like. Your users—whether they're developers using the `mcp-builder` skill to create integrations or power users automating workflows—will appreciate the clarity.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}
