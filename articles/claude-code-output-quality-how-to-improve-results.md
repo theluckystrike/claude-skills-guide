@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Output Quality: How to Improve Results"
-description: "Practical techniques for developers and power users to get better results from Claude Code through prompt engineering, context management, and workflow optimization."
+description: Practical techniques for developers and power users to get better results from Claude Code through prompt engineering, context management, and workflow.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, prompt-engineering, output-quality, workflow]

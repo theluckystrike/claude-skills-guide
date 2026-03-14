@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Make Claude Code Write Secure Code Always"
-description: "A practical guide for developers to ensure Claude Code generates secure code consistently. Includes skill recommendations, configuration tips, and real-world examples."
+description: A practical guide for developers to ensure Claude Code generates secure code consistently. Includes skill recommendations, configuration tips, and.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, security, secure-coding, claude-skills, tdd, code-review]

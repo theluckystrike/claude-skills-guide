@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Vibe Coding Project Structure Best Practices"
-description: "Master vibe coding project structure with proven patterns. Practical directory layouts, file organization strategies, and Claude skill workflows for developers."
+description: Master vibe coding project structure with proven patterns. Practical directory layouts, file organization strategies, and Claude skill workflows for.
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, vibe-coding, project-structure, developer-workflow, best-practices]

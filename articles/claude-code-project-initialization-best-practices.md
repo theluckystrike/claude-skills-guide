@@ -105,7 +105,7 @@ When you enter a subdirectory, Claude picks up the local CLAUDE.md automatically
 
 ## Environment Variables and Secrets
 
-[Never include sensitive values in CLAUDE.md or any configuration file](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/) that might be committed to version control. Instead, establish environment variable patterns during initialization.
+[Never include sensitive values in CLAUDE.md or any configuration file](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) that might be committed to version control. Instead, establish environment variable patterns during initialization.
 
 Create a .env.example file that documents required environment variables:
 

@@ -203,7 +203,7 @@ Migrating from Webpack to Vite provides a strong foundation for bundle size redu
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend skills for building optimized, lean production applications
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills for building optimized, lean production applications
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills including supermemory for tracking bundle optimization sessions
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Apply token efficiency patterns to keep build optimization sessions affordable
 

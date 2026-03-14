@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude MD Template for New Projects Starter Guide"
-description: "A practical guide to using Claude MD templates for new projects. Learn how to structure prompts and use Claude skills like tdd, pdf, frontend-design, and supermemory for faster development."
+description: A practical guide to using Claude MD templates for new projects. Learn how to structure prompts and use Claude skills like tdd, pdf, frontend-design, and.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, claude-md, starter-template, project-setup]

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Ansible MCP Server Configuration Management"
-description: "Master Ansible MCP server configuration management with Claude Code. Practical examples, automation patterns, and workflow integration for DevOps engineers."
+description: Master Ansible MCP server configuration management with Claude Code. Practical examples, automation patterns, and workflow integration for DevOps.
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, ansible, mcp, configuration-management, devops, infrastructure]

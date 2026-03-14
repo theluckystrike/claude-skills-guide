@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Why Does Anthropic Limit Claude Code Context Window?"
-description: "Understanding why Anthropic imposes context window limits on Claude Code, and practical strategies for developers to work effectively within these constraints."
+description: Understanding why Anthropic imposes context window limits on Claude Code, and practical strategies for developers to work effectively within these.
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]

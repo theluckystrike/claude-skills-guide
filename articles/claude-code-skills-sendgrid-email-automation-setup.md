@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills SendGrid Email Automation Setup"
-description: "Set up SendGrid email automation using Claude Code skills. Build skills that connect to SendGrid API, send transactional emails, and manage email templates programmatically."
+description: Set up SendGrid email automation using Claude Code skills. Build skills that connect to SendGrid API, send transactional emails, and manage email.
 date: 2026-03-14
 categories: [integrations]
 tags: [claude-code, claude-skills, sendgrid, email-automation, api-integration]

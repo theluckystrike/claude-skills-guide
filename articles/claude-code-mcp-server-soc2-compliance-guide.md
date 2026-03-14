@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code MCP Server SOC 2 Compliance Guide"
-description: "A practical guide to building and securing MCP servers for SOC 2 compliance. Learn about security controls, audit logging, and best practices for Claude Code integrations."
+description: A practical guide to building and securing MCP servers for SOC 2 compliance. Learn about security controls, audit logging, and best practices for Claude.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, mcp, security, soc2, compliance, devops]

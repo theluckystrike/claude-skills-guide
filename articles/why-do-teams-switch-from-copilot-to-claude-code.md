@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Why Do Teams Switch from Copilot to Claude Code"
-description: "Discover the technical reasons development teams are migrating from GitHub Copilot to Claude Code. Learn about skill-based workflows, better context handling, and specialized capabilities."
+description: Discover the technical reasons development teams are migrating from GitHub Copilot to Claude Code. Learn about skill-based workflows, better context.
 date: 2026-03-14
 categories: [comparisons]
 tags: [claude-code, claude-skills, github-copilot, comparison, developer-tools]

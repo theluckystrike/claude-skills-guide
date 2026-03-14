@@ -161,7 +161,7 @@ Accessibility isn't a destination but an ongoing commitment. With Claude Code as
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend skills for building accessible, semantic HTML structures
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills for building accessible, semantic HTML structures
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills including tdd for writing accessibility tests
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-trigger frontend and accessibility skills when working on HTML files
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AWS MCP Server Cloud Automation with Claude Code"
-description: "Learn how to automate AWS infrastructure using the Model Context Protocol server and Claude Code. Practical examples, configuration patterns, and workflow automation."
+description: Learn how to automate AWS infrastructure using the Model Context Protocol server and Claude Code. Practical examples, configuration patterns, and workflow.
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, aws, mcp, cloud-automation, infrastructure, devops]
@@ -109,7 +109,7 @@ Upload the files from ./dist/ to s3://my-app-assets-2026/
 List all objects in s3://my-app-assets-2026/ older than 90 days
 ```
 
-For content-heavy workflows, combine this with the [pdf skill](/claude-skills-guide/best-claude-code-skills-for-document-automation-2026/) to generate reports about your S3 usage and automatically archive them.
+For content-heavy workflows, combine this with the [pdf skill](/claude-skills-guide/claude-skills-for-legal-document-automation/) to generate reports about your S3 usage and automatically archive them.
 
 ## Security and Access Control
 
@@ -136,7 +136,7 @@ Create an IAM user with specific permissions for the tasks you want to automate:
 }
 ```
 
-Use the [supermemory skill](/claude-skills-guide/claude-code-super-memory-skill-practical-guide-2026/) to document your IAM configurations and track changes over time.
+Use the [supermemory skill](/claude-skills-guide/claude-code-2026-new-features-skills-and-hooks-roundup/) to document your IAM configurations and track changes over time.
 
 ## Monitoring and Operations
 
@@ -155,7 +155,7 @@ This conversational interface reduces the learning curve for developers new to A
 
 The real power emerges when combining AWS automation with other Claude skills. Use the [tdd skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) to validate infrastructure changes before applying them. Apply the [frontend-design skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) to deploy complete applications with cloud backends.
 
-For documentation, the [pdf skill](/claude-skills-guide/best-claude-code-skills-for-document-automation-2026/) generates architecture diagrams and deployment guides. The [supermemory skill](/claude-skills-guide/claude-code-super-memory-skill-practical-guide-2026/) maintains institutional knowledge about your AWS setup.
+For documentation, the [pdf skill](/claude-skills-guide/claude-skills-for-legal-document-automation/) generates architecture diagrams and deployment guides. The [supermemory skill](/claude-skills-guide/claude-code-2026-new-features-skills-and-hooks-roundup/) maintains institutional knowledge about your AWS setup.
 
 ## Best Practices
 

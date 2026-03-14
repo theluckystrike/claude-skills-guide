@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "MCP OAuth 2.1 Authentication Implementation Guide"
-description: "A practical implementation guide for MCP OAuth 2.1 authentication. Learn authorization code flow, token management, and security best practices for Model Context Protocol integrations."
+description: A practical implementation guide for MCP OAuth 2.1 authentication. Learn authorization code flow, token management, and security best practices for Model.
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-skills, mcp, oauth, authentication, security, claude-code, developer-tools]
@@ -19,7 +19,7 @@ The Model Context Protocol (MCP) increasingly requires strong authentication mec
 
 OAuth 2.1 consolidates best practices from OAuth 2.0 and its extensions into a unified specification. For MCP implementations, it provides secure delegated access without sharing credentials between clients and servers. The protocol handles token lifecycle management, scope definitions, and secure communication patterns essential for AI tool integrations.
 
-[MCP servers often expose sensitive capabilities](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/)—file system access, database queries, API calls. OAuth 2.1 ensures that clients receive limited, time-bound access to these resources through standardized authorization grants.
+[MCP servers often expose sensitive capabilities](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/)—file system access, database queries, API calls. OAuth 2.1 ensures that clients receive limited, time-bound access to these resources through standardized authorization grants.
 
 ## Authorization Code Flow Implementation
 

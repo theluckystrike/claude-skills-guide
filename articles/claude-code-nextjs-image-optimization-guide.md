@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Next.js Image Optimization Guide"
-description: "Learn how to use Claude Code CLI with Next.js image optimization. Practical examples for developers using the frontend-design skill and modern image techniques."
+description: Learn how to use Claude Code CLI with Next.js image optimization. Practical examples for developers using the frontend-design skill and modern image.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, nextjs, image-optimization, frontend, web-development]

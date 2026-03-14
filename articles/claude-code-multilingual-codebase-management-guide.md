@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Multilingual Codebase Management Guide"
-description: "A practical guide to managing multilingual codebases with Claude Code. Learn how to handle i18n, translation workflows, and localized content using skills like supermemory, pdf, and tdd."
+description: A practical guide to managing multilingual codebases with Claude Code. Learn how to handle i18n, translation workflows, and localized content using skills.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, multilingual, codebase, i18n, localization, internationalization]

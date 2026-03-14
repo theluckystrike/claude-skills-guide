@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills for SEO Content Generation: 2026 Guide"
-description: "Build an SEO content workflow using Claude Code skills. Practical examples with xlsx, pdf, docx, and supermemory for keyword research, briefs, and tracking."
+description: Build an SEO content workflow using Claude Code skills. Practical examples with xlsx, pdf, docx, and supermemory for keyword research, briefs, and.
 date: 2026-03-13
 categories: [guides]
 tags: [claude-code, claude-skills, seo, content-generation, automation]

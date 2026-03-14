@@ -223,6 +223,6 @@ The combination of Claude Code's assistance and understanding of multi-stage pat
 
 - [Best Claude Code Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate your deployment pipeline
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Maximize skill effectiveness
-- [Understanding Claude Code Hooks System](/claude-skills-guide/claude-code-hooks-system-explained/) — Trigger actions automatically
+- [Understanding Claude Code Hooks System](/claude-skills-guide/understanding-claude-code-hooks-system-complete-guide/) — Trigger actions automatically
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

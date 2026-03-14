@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills for EdTech Learning Management Systems"
-description: "A practical guide for developers building AI-powered educational tools with Claude. Learn how to integrate skills for grading, feedback, content generation, and student support."
+description: A practical guide for developers building AI-powered educational tools with Claude. Learn how to integrate skills for grading, feedback, content.
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]

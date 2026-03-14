@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code GitLab CI Pipeline Docker Registry Tutorial"
-description: "A practical guide to building CI/CD pipelines with GitLab and Docker Registry. Includes .gitlab-ci.yml examples, Docker configuration, and automation patterns."
+description: A practical guide to building CI/CD pipelines with GitLab and Docker Registry. Includes .gitlab-ci.yml examples, Docker configuration, and automation.
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, gitlab, ci-cd, docker, devops]
@@ -252,7 +252,7 @@ Combining this setup with Claude Code skills like `/tdd` for test generation, `/
 ## Related Reading
 
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate infrastructure with Claude skills
-- [Claude Code Skills for Testing](/claude-skills-guide/best-claude-skills-for-testing-2026/) — Improve test coverage with AI assistance
+- [Claude Code Skills for Testing](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Improve test coverage with AI assistance
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Build testing workflows with Claude
 
 

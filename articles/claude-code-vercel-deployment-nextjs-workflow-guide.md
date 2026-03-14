@@ -197,7 +197,7 @@ Start with the preview deployment workflow, then gradually add production safegu
 ## Related Reading
 
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — DevOps skills for managing preview and production deployments
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend skills that pair with Vercel and Next.js workflows
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills that pair with Vercel and Next.js workflows
 - [Claude Skills with Vercel Deployment Automation](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) — Step-by-step Vercel deployment automation using Claude skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

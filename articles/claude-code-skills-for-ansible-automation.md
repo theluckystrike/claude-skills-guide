@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills for Ansible Automation"
-description: "Learn how to create Claude Code skills that automate Ansible workflows, manage playbooks, handle inventory, and streamline infrastructure-as-code operations."
+description: Learn how to create Claude Code skills that automate Ansible workflows, manage playbooks, handle inventory, and streamline infrastructure-as-code.
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, ansible, automation, devops, infrastructure]

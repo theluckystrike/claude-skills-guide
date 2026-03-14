@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Rate Limit Management for Skill-Intensive Claude Code Workflows"
+title: Rate Limit Management for Claude Code Workflows
 description: "Practical strategies for managing API rate limits when running multiple Claude Code skills. Tips for pacing /pdf, /tdd, /frontend-design workflows."
 date: 2026-03-14
 categories: [workflows]

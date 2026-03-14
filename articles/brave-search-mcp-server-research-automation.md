@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Brave Search MCP Server for Research Automation"
-description: "Learn how to integrate Brave Search with Claude Code using MCP servers. Build automated research workflows that query Brave's search API and process results efficiently."
+description: Learn how to integrate Brave Search with Claude Code using MCP servers. Build automated research workflows that query Brave's search API and process.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, brave-search, mcp, research-automation]

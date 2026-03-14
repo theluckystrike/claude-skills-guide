@@ -219,6 +219,6 @@ This workflow produces consistent, high-quality Portuguese documentation that se
 
 - [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — Core documentation workflow patterns
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
-- [Claude Code Skills for Technical Writing](/claude-skills-guide/claude-code-skills-for-technical-writing/) — Technical writing with Claude skills
+- [Claude Code Skills for Technical Writing](/claude-skills-guide/what-is-the-best-claude-skill-for-generating-documentation/) — Technical writing with Claude skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

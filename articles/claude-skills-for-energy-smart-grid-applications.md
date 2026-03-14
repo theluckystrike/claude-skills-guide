@@ -34,7 +34,7 @@ The xlsx skill also enables you to create interactive demand response dashboards
 
 ## mcp-builder: Custom Grid Integration APIs
 
-[The **mcp-builder** skill creates Model Context Protocol servers](/claude-skills-guide/mcp-server-creation-with-claude-code-guide/) that connect Claude to your grid infrastructure. Build custom MCP servers to interface with SCADA systems, AMI (Advanced Metering Infrastructure) platforms, and DER (Distributed Energy Resources) management systems.
+[The **mcp-builder** skill creates Model Context Protocol servers](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) that connect Claude to your grid infrastructure. Build custom MCP servers to interface with SCADA systems, AMI (Advanced Metering Infrastructure) platforms, and DER (Distributed Energy Resources) management systems.
 
 ```typescript
 // Example MCP server for grid device management

@@ -312,8 +312,8 @@ WebSocket development with Claude Code skills follows established patterns: impl
 ## Related Reading
 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Complete skill stack for web developers
-- [Claude Skills for Backend Development](/claude-skills-guide/best-claude-code-skills-for-backend-development/) — Server architecture patterns
-- [Real-Time Collaboration Patterns with Claude](/claude-skills-guide/claude-code-skills-for-collaborative-applications/) — Building multi-user features
+- [Claude Skills for Backend Development](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) — Server architecture patterns
+- [Real-Time Collaboration Patterns with Claude](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) — Building multi-user features
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

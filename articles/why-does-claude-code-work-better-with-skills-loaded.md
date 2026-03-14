@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Why Does Claude Code Work Better With Skills Loaded"
-description: "Discover how loading specialized skills transforms Claude Code from a general-purpose assistant into a domain expert for PDF generation, frontend development, testing, and more."
+description: Discover how loading specialized skills transforms Claude Code from a general-purpose assistant into a domain expert for PDF generation, frontend.
 date: 2026-03-14
 categories: [getting-started]
 tags: [claude-code, claude-skills, productivity, workflow-optimization]

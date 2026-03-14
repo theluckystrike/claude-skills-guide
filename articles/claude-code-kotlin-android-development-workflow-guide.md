@@ -207,7 +207,7 @@ Experiment with different skill combinations to find what works best for your sp
 ## Related Reading
 
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd skill drives the test-first mobile development pattern
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — UI skills for building polished Android interfaces with Claude Code
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — UI skills for building polished Android interfaces with Claude Code
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-invoke skills for Kotlin testing and UI generation automatically
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

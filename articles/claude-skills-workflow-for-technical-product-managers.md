@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills Workflow for Technical Product Managers"
-description: "A practical workflow guide for technical product managers using Claude Code skills. Learn how to bridge technical implementation with product strategy using AI-assisted workflows."
+description: A practical workflow guide for technical product managers using Claude Code skills. Learn how to bridge technical implementation with product strategy.
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, product-management, workflow, technical-pm]

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills for Restaurant POS System Development"
-description: "Practical guide to building restaurant POS systems using Claude Code skills: spreadsheet automation, PDF invoicing, document generation, and testing workflows."
+description: Practical guide to building restaurant POS systems using Claude Code skills: spreadsheet automation, PDF invoicing, document generation, and testing.
 date: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, restaurant-pos, automation, development]

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "MCP Credential Management and Secrets Handling"
-description: "A practical guide to managing credentials and secrets when building MCP servers, covering environment variables, OAuth flows, secret scanning, and secure patterns for Claude Code integrations."
+description: A practical guide to managing credentials and secrets when building MCP servers, covering environment variables, OAuth flows, secret scanning, and secure.
 date: 2026-03-14
 categories: [guides]
 tags: [mcp, claude-skills, security, credentials, secrets, claude-code, devops]

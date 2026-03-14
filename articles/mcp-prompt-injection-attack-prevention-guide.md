@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "MCP Prompt Injection Attack Prevention Guide"
-description: "Learn how to prevent prompt injection attacks in Model Context Protocol (MCP) implementations. Practical examples, code snippets, and security patterns for developers."
+description: Learn how to prevent prompt injection attacks in Model Context Protocol (MCP) implementations. Practical examples, code snippets, and security patterns.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, mcp, prompt-injection, security, defense]

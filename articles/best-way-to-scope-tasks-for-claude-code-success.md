@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Best Way to Scope Tasks for Claude Code Success"
-description: "Learn how to break down complex development tasks for Claude Code. Practical examples with invocation patterns, skill selection strategies, and real code snippets for developers."
+description: Learn how to break down complex development tasks for Claude Code. Practical examples with invocation patterns, skill selection strategies, and real code.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, workflow, task-management, productivity]

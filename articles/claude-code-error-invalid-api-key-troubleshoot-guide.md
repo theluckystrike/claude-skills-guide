@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Error Invalid API Key: Troubleshoot Guide"
-description: "Fix Claude Code invalid API key errors with this systematic troubleshooting guide. Covers environment variables, config files, key rotation, and skill-specific configurations."
+description: Fix Claude Code invalid API key errors with this systematic troubleshooting guide. Covers environment variables, config files, key rotation, and.
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, api-key, authentication, troubleshooting]
@@ -17,7 +17,7 @@ permalink: /claude-code-error-invalid-api-key-troubleshoot-guide/
 
 ## Understanding the Error
 
-The invalid API key error typically surfaces when Claude Code attempts to make authenticated requests to external services or when [initializing certain skills that require API access](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/). The error message usually includes details about which service is rejecting the key.
+The invalid API key error typically surfaces when Claude Code attempts to make authenticated requests to external services or when [initializing certain skills that require API access](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/). The error message usually includes details about which service is rejecting the key.
 
 Common error variations include:
 - `Error: Invalid API key for Anthropic`
@@ -26,7 +26,7 @@ Common error variations include:
 
 ## Step 1: Verify Your Environment Variables
 
-The most common cause of API key errors is incorrect or missing environment variables. [Claude Code reads API keys from environment variables](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/), and the naming must match exactly what the service expects.
+The most common cause of API key errors is incorrect or missing environment variables. [Claude Code reads API keys from environment variables](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/), and the naming must match exactly what the service expects.
 
 Check your current environment variables:
 
@@ -177,7 +177,7 @@ For skills like `tdd` that automate testing workflows, or `supermemory` that han
 
 ## Related Reading
 
-- [How Do I Set Environment Variables for Claude Code Skills](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/) — correctly configure API keys and environment variables
+- [How Do I Set Environment Variables for Claude Code Skills](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) — correctly configure API keys and environment variables
 - [Can Claude Code Skills Call External APIs Automatically](/claude-skills-guide/can-claude-code-skills-call-external-apis-automatically/) — understand skill API key requirements
 - [Claude Code Error Connection Timeout During Task Fix](/claude-skills-guide/claude-code-error-connection-timeout-during-task-fix/) — resolve network and connectivity issues
 - [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — solutions to common Claude Code authentication errors

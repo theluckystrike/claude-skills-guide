@@ -237,7 +237,7 @@ Start with automated audits, then layer in optimization scripts for the highest-
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend skills for performance optimization and building high-scoring production UIs
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills for performance optimization and building high-scoring production UIs
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd and pdf skills power automated performance testing and reporting workflows
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep automated Lighthouse audit sessions economical
 

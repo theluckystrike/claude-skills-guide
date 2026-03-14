@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Make Claude Code Refactor Without Breaking Tests"
-description: "A practical guide to refactoring code with Claude Code while maintaining test coverage. Learn strategies, commands, and workflows that keep your test suite passing."
+description: A practical guide to refactoring code with Claude Code while maintaining test coverage. Learn strategies, commands, and workflows that keep your test.
 date: 2026-03-14
 categories: [workflows]
 tags: [claude-code, claude-skills, refactoring, testing]

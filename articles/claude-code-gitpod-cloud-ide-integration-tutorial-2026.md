@@ -220,7 +220,7 @@ Configure your repository with the appropriate `.gitpod.yml`, sync your skills d
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-to-install-first-2026/) — Essential skills to add to your setup
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Essential skills to add to your setup
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Full walkthrough of test-driven development workflows
 - [Claude Skills Token Optimization Guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Reduce API costs while using skills effectively
 

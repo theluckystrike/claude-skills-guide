@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Breaks Existing Tests After Changes Fix"
-description: "Practical solutions for developers when Claude Code modifications break existing tests. Includes debugging strategies, skill-based workflows, and prevention techniques."
+description: Practical solutions for developers when Claude Code modifications break existing tests. Includes debugging strategies, skill-based workflows, and.
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, debugging, testing, fixes, development]

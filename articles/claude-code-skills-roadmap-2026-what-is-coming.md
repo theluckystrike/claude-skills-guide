@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills Roadmap 2026: What Is Coming"
-description: "A practical roadmap for Claude Code skills in 2026. Discover upcoming skills, integration patterns, and how to prepare your workflow for the next generation of AI-assisted development."
+description: A practical roadmap for Claude Code skills in 2026. Discover upcoming skills, integration patterns, and how to prepare your workflow for the next.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, 2026, roadmap, ai-coding, mcp]

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code MCP Server Data Exfiltration Prevention"
-description: "A practical guide to securing Claude Code MCP servers against data exfiltration. Learn input validation, network controls, and monitoring patterns for AI agents."
+description: A practical guide to securing Claude Code MCP servers against data exfiltration. Learn input validation, network controls, and monitoring patterns for AI.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, mcp, security, data-exfiltration]

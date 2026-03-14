@@ -113,7 +113,7 @@ This skill generates:
 - Authentication handlers
 - Response formatting logic
 
-[Many .NET developers use this to build custom integrations](/claude-skills-guide/mcp-server-creation-with-claude-code-guide/) between Claude Code and internal systems.
+[Many .NET developers use this to build custom integrations](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) between Claude Code and internal systems.
 
 ## theme-factory: Consistent Styling for Applications
 
@@ -196,7 +196,7 @@ Claude Code skills for .NET development focus on automation, documentation, and 
 
 ## Related Reading
 
-- [MCP Server Creation with Claude Code Guide](/claude-skills-guide/mcp-server-creation-with-claude-code-guide/) — build custom MCP servers for .NET service integrations
+- [MCP Server Creation with Claude Code Guide](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) — build custom MCP servers for .NET service integrations
 - [What Is the Best Claude Skill for Automated Code Review](/claude-skills-guide/what-is-the-best-claude-skill-for-automated-code-review/) — add automated code review to your .NET development workflow
 - [Claude Code Skills for Golang Microservices](/claude-skills-guide/claude-code-skills-for-golang-microservices/) — compare microservice patterns across languages
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for backend and enterprise development

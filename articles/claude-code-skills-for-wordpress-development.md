@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills for WordPress Development"
-description: "Build Claude skills specifically designed for WordPress development. Automate theme creation, plugin scaffolding, custom post types, and debug WordPress issues efficiently."
+description: Build Claude skills specifically designed for WordPress development. Automate theme creation, plugin scaffolding, custom post types, and debug WordPress.
 date: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, wordpress, plugin-development, theme-development]

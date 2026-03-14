@@ -162,7 +162,7 @@ Implement this workflow in your next project sprint, and you will see measurable
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend skills including accessibility and design system automation
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills including accessibility and design system automation
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills that pair with accessibility workflows
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep automated accessibility audit sessions cost-efficient
 

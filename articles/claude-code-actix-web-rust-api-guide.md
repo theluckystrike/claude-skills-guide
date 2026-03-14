@@ -233,7 +233,7 @@ The key is invoking the right skill at the appropriate time: `/tdd` for test gen
 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — CI/CD integration
-- [Frontend Design Skills for React Development](/claude-skills-guide/best-claude-skills-for-frontend-development/) — Building UI layers
+- [Frontend Design Skills for React Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Building UI layers
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

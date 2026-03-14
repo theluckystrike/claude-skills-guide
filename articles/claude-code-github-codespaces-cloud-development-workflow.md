@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code GitHub Codespaces Cloud Development Workflow"
-description: "A practical guide to building a cloud development workflow with Claude Code and GitHub Codespaces. Set up ephemeral development environments, integrate AI-assisted coding, and deploy from anywhere."
+description: A practical guide to building a cloud development workflow with Claude Code and GitHub Codespaces. Set up ephemeral development environments, integrate.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, github-codespaces, cloud-development, devops, tdd, supermemory]

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Why Claude Code Beats ChatGPT for Software Developers"
-description: "A practical comparison of Claude Code vs ChatGPT for developers. Learn why Claude Code's skills system, tool use, and autonomous agents differ from chat-based AI assistants."
+description: A practical comparison of Claude Code vs ChatGPT for developers. Learn why Claude Code's skills system, tool use, and autonomous agents differ from.
 date: 2026-03-14
 categories: [comparisons]
 tags: [claude-code, claude-skills, chatgpt, comparison, developer-tools]

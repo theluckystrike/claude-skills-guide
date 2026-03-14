@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skill Token Usage Profiling and Optimization"
-description: "Measure and reduce token consumption in your Claude skills. Practical techniques for profiling skill prompts, optimizing context windows, and building efficient skill workflows."
+description: Measure and reduce token consumption in your Claude skills. Practical techniques for profiling skill prompts, optimizing context windows, and building.
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, token-optimization, performance]

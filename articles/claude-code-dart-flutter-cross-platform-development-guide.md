@@ -263,7 +263,7 @@ Start with a clean architecture, write tests first using the tdd workflow, and l
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-skills-for-frontend-ui-development/) — Frontend-focused skills for building polished interfaces
+- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend-focused skills for building polished interfaces
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills for any stack including Flutter
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Automatically trigger the right skill for frontend or test tasks
 

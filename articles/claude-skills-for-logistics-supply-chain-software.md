@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills for Logistics Supply Chain Software"
-description: "Learn how Claude skills automate logistics workflows, inventory management, and supply chain operations. Practical examples and code snippets for developers."
+description: Learn how Claude skills automate logistics workflows, inventory management, and supply chain operations. Practical examples and code snippets for.
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]
@@ -71,7 +71,7 @@ shipment = {
 # save as /shipments/outbound/BOL-2026-00142.pdf
 ```
 
-[The pdf skill also handles reverse workflows](/claude-skills-guide/automated-documentation-workflow-with-claude-skills/)—extracting data from carrier-provided PDFs into your internal systems. This proves essential when processing hundreds of shipping confirmations or customs clearance documents daily.
+[The pdf skill also handles reverse workflows](/claude-skills-guide/what-is-the-best-claude-skill-for-generating-documentation/)—extracting data from carrier-provided PDFs into your internal systems. This proves essential when processing hundreds of shipping confirmations or customs clearance documents daily.
 
 ```yaml
 # Extract tracking data from carrier PDFs

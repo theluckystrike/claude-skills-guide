@@ -123,7 +123,7 @@ This segmented approach prevents context overflow for large codebases.
 
 ## API Documentation in Spanish
 
-API documentation requires consistent terminology and structure. [The **pdf** skill works well for generating formatted API docs](/claude-skills-guide/automated-documentation-workflow-with-claude-skills/):
+API documentation requires consistent terminology and structure. [The **pdf** skill works well for generating formatted API docs](/claude-skills-guide/what-is-the-best-claude-skill-for-generating-documentation/):
 
 ```bash
 # Generate PDF API documentation in Spanish

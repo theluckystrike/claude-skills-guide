@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Vibe Coding vs Traditional Development: A Practical Comparison"
-description: "A developer-focused comparison of vibe coding and traditional development approaches, including when to use each, practical code examples, and hybrid workflows."
+title: Vibe Coding vs Traditional Development: Comparison
+description: A developer-focused comparison of vibe coding and traditional development approaches, including when to use each, practical code examples, and hybrid.
 date: 2026-03-14
 categories: [comparisons]
 tags: [claude-code, claude-skills, vibe-coding, workflow, productivity]

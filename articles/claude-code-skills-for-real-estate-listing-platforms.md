@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills for Real Estate Listing Platforms"
-description: "Practical Claude Code skills for building real estate listing platforms: property data management, map integrations, search filtering, and automated documentation."
+description: Practical Claude Code skills for building real estate listing platforms: property data management, map integrations, search filtering, and automated.
 date: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, real-estate, listing-platforms]
@@ -46,7 +46,7 @@ Use this skill to import bulk property data, generate CSV exports for listing fe
 
 ## pdf: Property Document Generation
 
-Real estate transactions require documents—listing agreements, disclosure forms, and marketing flyers. [The **pdf** skill automates PDF creation from property data](/claude-skills-guide/automated-documentation-workflow-with-claude-skills/).
+Real estate transactions require documents—listing agreements, disclosure forms, and marketing flyers. [The **pdf** skill automates PDF creation from property data](/claude-skills-guide/what-is-the-best-claude-skill-for-generating-documentation/).
 
 ```python
 from reportlab.lib.pagesizes import letter

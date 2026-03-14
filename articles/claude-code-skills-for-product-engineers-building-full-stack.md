@@ -145,7 +145,7 @@ Invoke these skills directly in Claude Code with `/skill-name` to integrate spec
 ## Related Reading
 
 - [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — UI generation, design, and component workflows
-- [Claude Code Skills for Backend Developers](/claude-skills-guide/best-claude-code-skills-for-backend-developers-node-and-python/) — API development and server-side patterns
+- [Claude Code Skills for Backend Developers](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) — API development and server-side patterns
 - [Claude Code TDD Workflow Guide](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Test-driven development with Claude
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*
