@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Daily Workflow for Frontend Developers Guide"
-description: "A practical guide to integrating Claude Code into your daily frontend development workflow. Learn skills, workflows, and tips for building better web applications faster."
+description: "A practical guide to integrating Claude Code into your daily frontend development workflow. Learn skills, workflows, and tips for building better web."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, frontend, workflow, daily-development, react, vue, skills, web-development]
