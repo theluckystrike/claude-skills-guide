@@ -5,7 +5,7 @@ description: "Discover how Claude Code skills improve AI assistance through spec
 date: 2026-03-14
 categories: [comparisons]
 tags: [claude-code, claude-skills, ai-productivity, claude-code-tips]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /why-does-claude-code-work-better-with-skills-loaded/
 reviewed: true
 score: 7
