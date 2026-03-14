@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Agent Task Queue Architecture Deep Dive"
-description: "Explore how Claude Code's agent task queue works under the hood. Learn about task scheduling, skill-based routing, parallel execution, and practical patterns for building sophisticated AI-assisted workflows."
+description: "Explore how Claude Code's agent task queue works under the hood. Learn about task scheduling, skill-based routing, parallel execution, and practical."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, agent, task-queue, architecture, skills]
@@ -209,3 +209,10 @@ Claude Code's task queue architecture provides the foundation for sophisticated 
 
 The key takeaways: tasks flow through a priority-based queue with dependency awareness, skills act as specialized handlers that can schedule subtasks, and parallel execution maximizes throughput while preventing conflicts. Master these patterns, and you'll unlock the full potential of Claude Code's agent capabilities.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
