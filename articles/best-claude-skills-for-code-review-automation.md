@@ -147,6 +147,7 @@ Each stage produces specific, actionable findings. The result is faster reviews 
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
+**Related guides:** [Best Way to Use Claude Code for Code Review Prep](https://theluckystrike.github.io/claude-skills-guide/best-way-to-use-claude-code-for-code-review-prep/)
 
 ---
 

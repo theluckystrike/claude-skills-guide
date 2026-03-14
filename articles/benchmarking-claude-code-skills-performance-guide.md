@@ -239,4 +239,6 @@ Regular benchmarking catches performance regressions early and validates optimiz
 - [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/)
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/)
 
+**Related guides:** [Best Way to Reduce Claude Code API Token Costs](https://theluckystrike.github.io/claude-skills-guide/best-way-to-reduce-claude-code-api-token-costs/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

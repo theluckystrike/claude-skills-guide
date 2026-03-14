@@ -187,4 +187,6 @@ Consider reviewing your CLAUDE.md monthly. Remove outdated information, add newl
 - [How to Make Claude Code Understand Domain Business Logic](/claude-skills-guide/how-to-make-claude-code-understand-domain-business-logic/) — Use CLAUDE.md to encode domain rules
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — CLAUDE.md basics for new users
 
+**Related guides:** [Best Way to Version Control Claude MD Across Projects](https://theluckystrike.github.io/claude-skills-guide/best-way-to-version-control-claude-md-across-projects/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -182,4 +182,6 @@ Start with simple queries to verify your setup, then gradually introduce more co
 - [Claude Code Skills for Writing CloudFormation Templates](/claude-skills-guide/claude-code-skills-for-writing-cloudformation-templates/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
+**Related guides:** [Claude Code API Authentication Patterns Guide](https://theluckystrike.github.io/claude-skills-guide/claude-code-api-authentication-patterns-guide/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -252,4 +252,6 @@ You can also ask Claude directly in the session: "What tool calls did you make i
 - [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — A step-by-step guide covering how to write skill bodies that orchestrate tool calls effectively
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Tool-heavy skills accumulate context quickly from tool outputs; this article explains how to keep that cost manageable
 
+**Related guides:** [Best Way to Handle Claude Code Mistakes Efficiently](https://theluckystrike.github.io/claude-skills-guide/best-way-to-handle-claude-code-mistakes-efficiently/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

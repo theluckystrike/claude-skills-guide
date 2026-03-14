@@ -177,4 +177,6 @@ The most successful team integrations emerge organically from solving real probl
 - [How to Make Claude Code Write Better Unit Tests](/claude-skills-guide/how-to-make-claude-code-write-better-unit-tests/) — Shared test standards matter for team workflows
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Team and workflow automation guides
 
+**Related guides:** [Best Way to Onboard New Developers Using Claude Code](https://theluckystrike.github.io/claude-skills-guide/best-way-to-onboard-new-developers-using-claude-code/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

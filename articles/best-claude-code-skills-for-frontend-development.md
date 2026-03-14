@@ -140,4 +140,6 @@ Invoke `/frontend-design` to scaffold components, `/tdd` to write tests before i
 - [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Data processing and reporting workflows
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
 
+**Related guides:** [Claude Code Accessibility Regression Testing Guide](https://theluckystrike.github.io/claude-skills-guide/claude-code-accessibility-regression-testing/)
+
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)*

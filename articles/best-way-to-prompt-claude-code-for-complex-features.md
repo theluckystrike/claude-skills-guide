@@ -153,4 +153,6 @@ The best prompts share common characteristics: they provide context, specify con
 - [How to Make Claude Code Understand Domain Business Logic](/claude-skills-guide/how-to-make-claude-code-understand-domain-business-logic/) — Domain context improves complex feature prompts
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — Start here before tackling complex prompting
 
+**Related guides:** [Best Way to Customize Claude Code Output Format Style](https://theluckystrike.github.io/claude-skills-guide/best-way-to-customize-claude-code-output-format-style/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

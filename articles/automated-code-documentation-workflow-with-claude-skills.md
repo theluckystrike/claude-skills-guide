@@ -248,4 +248,6 @@ This workflow turns documentation from a quarterly cleanup task into a continuou
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
 - [Claude Code Architecture Decision Records Guide](/claude-skills-guide/claude-code-architecture-decision-records-guide/) — Extend your documentation workflow to capture architectural decisions with Claude Code
 
+**Related guides:** [Best Way to Use Claude Code for Database Migrations](https://theluckystrike.github.io/claude-skills-guide/best-way-to-use-claude-code-for-database-migrations/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

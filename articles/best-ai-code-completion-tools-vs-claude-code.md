@@ -182,4 +182,6 @@ The key is matching the tool to the task—inline completions for quick typing, 
 - [Claude Code Setup on Mac: Step by Step](/claude-skills-guide/claude-code-setup-on-mac-step-by-step/)
 - [Comparisons Hub](/claude-skills-guide/comparisons-hub/)
 
+**Related guides:** [Best Way to Use Claude Code for Large File Refactoring](https://theluckystrike.github.io/claude-skills-guide/best-way-to-use-claude-code-for-large-file-refactoring/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
