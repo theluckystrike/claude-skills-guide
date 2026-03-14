@@ -1,5 +1,4 @@
 ---
-
 layout: default
 title: "Claude Code SonarQube Code Quality Workflow Guide"
 description: "Learn how to integrate Claude Code with SonarQube for automated code quality analysis, continuous improvement, and maintainable codebases."
