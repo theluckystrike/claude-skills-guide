@@ -174,6 +174,7 @@ Start with one skill focused on your most common workflow type, then expand as y
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — integrate Claude skills into automated CI/CD pipelines
 - [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — pair workflow generation with automated code review
 - [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — keep secrets out of your GitHub Actions workflows
+- [Open Source Contribution Workflow with Claude Code 2026](/claude-skills-guide/claude-code-open-source-contribution-workflow-guide-2026/) — Apply GitHub Actions skills to streamline your open source contribution pipeline
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
