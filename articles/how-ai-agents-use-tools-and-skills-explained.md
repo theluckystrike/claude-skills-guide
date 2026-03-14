@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "How AI Agents Use Tools and Skills Explained"
 description: "A comprehensive guide to understanding how AI agents like Claude Code leverage tools and skills to accomplish complex tasks autonomously."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-ai-agents-use-tools-and-skills-explained/
+reviewed: true
 categories: [troubleshooting]
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # How AI Agents Use Tools and Skills Explained
 
@@ -76,7 +81,7 @@ The skill defines the "what to do" and "how to approach it," while tools handle 
 
 ### Example 1: Automated Documentation Generation
 
-A documentation skill can leverage multiple tools to generate comprehensive docs:
+A documentation skill can use multiple tools to generate comprehensive docs:
 
 - **Read** source files to extract docstrings and comments
 - **Bash** run documentation generators like Sphinx or JSDoc

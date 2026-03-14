@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "How MCP Servers Extend Claude Code Capabilities Explained"
 description: "Learn how Model Context Protocol (MCP) servers dramatically expand Claude Code's abilities with practical examples for file systems, databases, APIs."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, mcp, model-context-protocol, servers, extensions]
-author: theluckystrike
+tags: [claude-code, mcp, model-context-protocol, servers, extensions, claude-skills]
+author: "Claude Skills Guide"
 permalink: /how-mcp-servers-extend-claude-code-capabilities-explained/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # How MCP Servers Extend Claude Code Capabilities Explained

@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "How AI Agents Reason Before Taking Actions: A Complete Guide"
 description: "Discover how Claude Code and AI agents think through decisions, plan execution paths, and reason through complex tasks before acting."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-ai-agents-reason-before-taking-actions-guide/
+reviewed: true
 categories: [guides]
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # How AI Agents Reason Before Taking Actions: A Complete Guide
 

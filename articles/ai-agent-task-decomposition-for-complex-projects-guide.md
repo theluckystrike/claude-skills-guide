@@ -1,19 +1,21 @@
 ---
+
 layout: default
 title: "AI Agent Task Decomposition for Complex Projects Guide"
 description: "Master task decomposition strategies for AI agents in complex software projects. Learn how Claude Code breaks down intricate problems into manageable."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, ai-agent, task-decomposition, project-management, complex-projects]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [claude-code, ai-agent, task-decomposition, project-management, complex-projects, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /ai-agent-task-decomposition-for-complex-projects-guide/
 ---
 
+
 # AI Agent Task Decomposition for Complex Projects Guide
 
-Task decomposition is the art of breaking down complex, ambiguous problems into smaller, actionable steps that an AI agent can execute reliably. When working with Claude Code on sophisticated software projects, understanding how to leverage task decomposition strategies dramatically improves your success rate and makes your workflows more predictable and debuggable.
+Task decomposition is the art of breaking down complex, ambiguous problems into smaller, actionable steps that an AI agent can execute reliably. When working with Claude Code on sophisticated software projects, understanding how to use task decomposition strategies dramatically improves your success rate and makes your workflows more predictable and debuggable.
 
 ## Why Task Decomposition Matters for AI Agents
 

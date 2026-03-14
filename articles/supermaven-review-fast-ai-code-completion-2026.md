@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "SuperMaven Review: Fast AI Code Completion in 2026"
 description: "A comprehensive review of SuperMaven AI code completion tool. Learn about its features, performance, and how it compares to Claude Code for your."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /supermaven-review-fast-ai-code-completion-2026/
+reviewed: true
 categories: [guides]
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # SuperMaven Review: Fast AI Code Completion in 2026
 

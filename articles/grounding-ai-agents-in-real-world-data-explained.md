@@ -143,7 +143,7 @@ To maximize grounding benefits with Claude Code:
 Grounding transforms AI agents from abstract text generators into practical tools connected to your real-world environment. Claude Code achieves this through file operations, bash execution, and specialized skills—each mechanism connecting the AI to your actual data, systems, and workflows. By leveraging these grounding capabilities, you unlock accurate, actionable, and verifiable AI assistance tailored to your specific needs.
 
 Whether you're debugging code, analyzing data, or generating documents, Claude Code's grounding in real-world data ensures the assistance you receive is precisely calibrated to your actual context.
-{% endraw %}
+
 
 ## Related Reading
 

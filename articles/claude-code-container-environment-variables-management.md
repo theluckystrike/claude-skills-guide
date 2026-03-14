@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Container Environment Variables Management"
 description: "A comprehensive guide to managing environment variables in Claude Code container environments for secure and efficient AI development."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-container-environment-variables-management/
+reviewed: true
 categories: [guides]
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Claude Code Container Environment Variables Management
