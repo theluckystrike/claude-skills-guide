@@ -4,7 +4,7 @@ title: "MCP Transport Layer Security TLS Configuration Guide"
 description: "Learn how to configure TLS for Model Context Protocol servers with practical examples and security best practices."
 date: 2026-03-14
 categories: [guides]
-tags: [mcp, tls, security, claude-code, configuration, devops]
+tags: [mcp, claude-skills, tls, security, claude-code, configuration, devops]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
