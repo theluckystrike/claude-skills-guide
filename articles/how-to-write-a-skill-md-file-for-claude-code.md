@@ -78,13 +78,10 @@ Many skills require external tools or APIs. Skills like `pdf`, `xlsx`, and `pptx
 ---
 name: spreadsheet-analyzer
 description: "Analyze and visualize spreadsheet data"
-category: data-processing
-tags: [excel, csv, data-analysis]
-dependencies: [pandas, openpyxl, matplotlib]
 ---
 ```
 
-Listing dependencies helps Claude set up the correct environment before attempting to use the skill. This applies equally to skills working with the pdf or xlsx tools covered in [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/).
+Describe in the skill body any environment requirements or setup steps Claude should know about. This applies equally to skills working with the pdf or xlsx tools covered in [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/).
 
 ## Advanced Skill Patterns
 

@@ -26,11 +26,6 @@ Every Claude skill begins with YAML front matter that defines its capabilities. 
 name: github-api-integration
 description: "Interact with GitHub REST API for repository management"
 tools: [Bash, Read, Write]
-api_endpoints:
-  - https://api.github.com/repos/{owner}/{repo}
-  - https://api.github.com/repos/{owner}/{repo}/issues
-authentication: bearer_token
-rate_limit: 5000
 ---
 ```
 
@@ -191,9 +186,7 @@ When your API documentation is ready, integrate it into a Claude skill using the
 ---
 name: weather-api-client
 description: "Fetch weather data from OpenWeather API"
-tools: [bash]
-requires_api_key: true
-api_docs_included: true
+tools: [Bash]
 ---
 
 # Weather API Client

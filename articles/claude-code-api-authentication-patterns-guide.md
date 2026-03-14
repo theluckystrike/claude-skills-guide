@@ -56,10 +56,7 @@ A more secure approach references environment variables that users define extern
 ---
 name: slack-notify
 description: "Send notifications to Slack channels"
-tools: [bash]
-env_vars:
-  - SLACK_WEBHOOK_URL
-  - SLACK_BOT_TOKEN
+tools: [Bash]
 ---
 
 # Slack Notification Skill

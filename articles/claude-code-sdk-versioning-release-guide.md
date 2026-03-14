@@ -22,9 +22,7 @@ Every skill you create can carry version information through its front matter. T
 ```yaml
 ---
 name: my-custom-skill
-version: 1.2.3
 description: "A skill for processing data"
-author: your-username
 ---
 ```
 
@@ -39,12 +37,7 @@ Modern skill development often involves combinations of skills working together.
 ```yaml
 ---
 name: enterprise-pdf-processor
-version: 2.0.0
-depends_on:
-  - skill: pdf
-    min_version: 1.5.0
-  - skill: tdd
-    min_version: 2.1.0
+description: "Enterprise PDF processing with TDD workflows"
 ---
 ```
 
