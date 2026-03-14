@@ -69,7 +69,6 @@ Consider a skill that intercepts requests to a payment gateway:
 name: payment-mock
 description: "Mocks payment gateway responses for testing"
 tools: [Bash, Read, Write]
-version: 1.0.0
 ---
 
 # Payment Mock Skill

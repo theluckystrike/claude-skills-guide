@@ -32,7 +32,6 @@ Create a skill that handles Notion API interactions. The skill definition should
 name: notion-docs
 description: "Sync and process Notion documentation with Claude Code"
 tools: [Bash, Read, Write]
-version: 1.0.0
 ---
 
 # Notion Documentation Sync

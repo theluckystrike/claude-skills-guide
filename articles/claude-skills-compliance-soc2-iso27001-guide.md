@@ -17,7 +17,7 @@ Security compliance isn't optional in regulated industries. When your organizati
 
 This guide shows how to use Claude skills to support SOC2 and ISO27001 compliance workflows without turning your development environment into a bureaucracy.
 
-## Understanding the Compliance Landscape
+## Understanding Compliance Requirements
 
 SOC2 focuses on trust service criteria: security, availability, processing integrity, confidentiality, and privacy. ISO27001 is more broader, requiring an Information Security Management System (ISMS) with defined controls, risk assessments, and continuous improvement cycles.
 
