@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AI Agent Task Decomposition for Complex Projects Guide"
-description: "Master task decomposition strategies for AI agents in complex software projects. Learn how Claude Code breaks down intricate problems into manageable steps."
+description: "Master task decomposition strategies for AI agents in complex software projects. Learn how Claude Code breaks down intricate problems into manageable."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, ai-agent, task-decomposition, project-management, complex-projects]
@@ -205,3 +205,11 @@ Task decomposition transforms overwhelming projects into manageable sequences of
 Start with the simplest possible decomposition—just two or three steps—and expand as you learn what granularity works for your project. The investment in planning pays dividends in code quality, reduced debugging time, and more predictable project timelines.
 
 Remember: the goal isn't just to complete tasks, but to complete them in a way that builds toward a coherent, maintainable system. Claude Code is your partner in execution; your job is to provide the architectural vision that guides each step.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
