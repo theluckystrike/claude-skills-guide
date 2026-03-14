@@ -200,5 +200,12 @@ Only keep skills you actively use. A lean skill library performs better and redu
 
 These tips represent patterns that working developers use daily. Start with one or two that match your current workflow, then gradually incorporate more as they become natural. The goal is not to use every feature, but to identify which capabilities genuinely improve your productivity.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
