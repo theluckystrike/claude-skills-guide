@@ -36,7 +36,7 @@ Vibe coding works exceptionally well for several scenarios:
 
 **Learning New Technologies**: If you're exploring a new framework or language, vibe coding lets you describe what you want to build while learning the syntax and patterns from the generated code.
 
-**Boilerplate and Repetitive Tasks**: Generating similar components, utility functions, or configuration files becomes effortless when you can describe the pattern once.
+**Boilerplate and Repetitive Tasks**: Generating similar components, utility functions, or configuration files is fast when you can describe the pattern once and let Claude handle the repetition.
 
 **Proof of Concepts**: Validating technical approaches without investing hours in implementation code.
 

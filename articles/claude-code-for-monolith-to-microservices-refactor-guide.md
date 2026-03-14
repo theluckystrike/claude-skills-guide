@@ -131,7 +131,7 @@ Then implement the service to pass these tests."
 
 ## Implementing Inter-Service Communication
 
-Once multiple services exist, they need to communicate. Claude Code helps implement robust communication patterns.
+Once multiple services exist, they need to communicate. Claude Code helps implement reliable communication patterns.
 
 ### Synchronous Communication (REST/gRPC)
 

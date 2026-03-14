@@ -78,7 +78,7 @@ model = nn.Sequential(
 )
 
 optimizer = torch.optim.Adam(model.parameters(), lr=wandb.config.learning_rate)
-loss_fn = nn.cross_entropy_loss()
+loss_fn = nn.CrossEntropyLoss()
 
 # Training loop
 for epoch in range(wandb.config.epochs):
@@ -202,11 +202,11 @@ Developers frequently use these patterns when combining Claude Code with W&B:
 3. **Collaboration**: Share W&B run links in Claude Code session notes, enabling team members to reproduce experiments
 4. **CI/CD integration**: Trigger W&B runs from deployment scripts, tracking performance in production environments — the [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) guide covers the automation patterns
 
-The **internal-comms** skill helps when documenting these workflows for team distribution, generating status updates that reference specific W&B run IDs.
+The **docx** skill helps when documenting these workflows for team distribution, generating status reports that reference specific W&B run IDs.
 
 ## Summary
 
-Setting up Claude Code with Weights & Biases requires only a few configuration steps—install the package, authenticate, and start logging. The real value emerges in how you structure experiments, version models, and collaborate. Claude skills like tdd, pdf, supermemory, and internal-comms enhance this workflow by adding testing rigor, documentation generation, context persistence, and team communication.
+Setting up Claude Code with Weights & Biases requires only a few configuration steps—install the package, authenticate, and start logging. The real value emerges in how you structure experiments, version models, and collaborate. Claude skills like tdd, pdf, supermemory, and docx enhance this workflow by adding testing rigor, documentation generation, context persistence, and team communication.
 
 By combining AI-assisted coding from Claude Code with experiment tracking from W&B, you build a development environment where every model iteration connects to its source code, hyperparameters, and results.
 
