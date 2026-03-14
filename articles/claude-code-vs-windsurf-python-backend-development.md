@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Claude Code vs Windsurf: Python Backend Development Comparison"
+title: "Claude Code vs Windsurf: Python Backend Development."
 description: "A comprehensive comparison of Claude Code and Windsurf for Python backend development, with practical examples and best practices."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-vs-windsurf-python-backend-development/
+categories: [guides]
 ---
 
 {% raw %}
@@ -213,3 +214,10 @@ Many teams find value in using both: Claude Code for initial scaffolding and aut
 
 The AI coding assistant landscape continues evolving rapidly. Both Claude Code and Windsurf represent significant advancements in developer productivity—choosing between them ultimately depends on your preferred development style and specific project needs.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

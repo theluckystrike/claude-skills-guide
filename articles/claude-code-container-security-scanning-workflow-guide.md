@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Container Security Scanning Workflow Guide"
-description: "Master container security scanning workflows with Claude Code skills. Learn to integrate security tools, automate vulnerability detection, and build secure CI/CD pipelines."
+description: "Master container security scanning workflows with Claude Code skills. Learn to integrate security tools, automate vulnerability detection, and build."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, container-security, security-scanning, docker, cicd, trivy, trivy-Operator]
@@ -236,3 +236,10 @@ Container security scanning is critical for modern applications. Claude Code ski
 
 By implementing the workflows outlined in this guide, you'll catch vulnerabilities before they reach production and maintain a strong security posture throughout your containerized applications.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
