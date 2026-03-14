@@ -78,7 +78,7 @@ Before accepting any changes, you can use git's capabilities to review what woul
 
 You can also create a skill that automatically shows a diff summary before applying changes, helping you catch unintended modifications early.
 
-## Technique 4: Leverage Claude Code's Permission System
+## Technique 4: Use Claude Code's Permission System
 
 Claude Code requests permission before modifying files. Pay attention to these permission prompts and:
 
