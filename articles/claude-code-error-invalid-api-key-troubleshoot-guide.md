@@ -5,7 +5,9 @@ description: "Fix Claude Code invalid API key errors with this systematic troubl
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, api-key, authentication, troubleshooting]
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Error Invalid API Key: Troubleshoot Guide

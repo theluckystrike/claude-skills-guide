@@ -4,10 +4,10 @@ title: "Claude Code Translate Code Comments Between Languages"
 description: "Learn how to use Claude Code to translate code comments between programming languages. Practical examples, workflow patterns, and skill recommendations."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, claude-skills, code-comments, translation, internationalization, i18n, documentation]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [claude-code, claude-skills, code-comments, translation, i18n]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code Translate Code Comments Between Languages

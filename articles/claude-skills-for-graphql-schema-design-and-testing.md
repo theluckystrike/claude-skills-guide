@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills for GraphQL Schema Design and Testing"
-description: "Practical guide using Claude skills for GraphQL schema design, testing, and validation. Learn how to leverage AI-assisted workflows for building robust GraphQL APIs."
+description: "Practical guide using Claude skills for GraphQL schema design, testing, and validation. AI-assisted workflows for building reliable GraphQL APIs."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]
@@ -111,7 +111,7 @@ type Query {
 }
 ```
 
-Implement custom scalars for robust input validation:
+Implement custom scalars for strict input validation:
 
 ```javascript
 const { GraphQLScalarType, Kind } = require('graphql');
@@ -313,7 +313,7 @@ const context = ({ req }) => ({
 
 ## Conclusion
 
-Claude skills like `tdd`, `supermemory`, and `frontend-design` provide practical assistance throughout the GraphQL development lifecycle. The `tdd` skill ensures testable schema design from the start, while `supermemory` maintains institutional knowledge across team members. By combining these tools with GraphQL's type system and proper testing patterns, you build APIs that are both robust and maintainable.
+Claude skills like `tdd`, `supermemory`, and `frontend-design` provide practical assistance throughout the GraphQL development lifecycle. The `tdd` skill ensures testable schema design from the start, while `supermemory` maintains institutional knowledge across team members. By combining these tools with GraphQL's type system and proper testing patterns, you build APIs that are both reliable and maintainable.
 
 Start with clear type definitions, validate inputs rigorously, test resolver behavior comprehensively, and document thoroughly. These practices, augmented by Claude's skill system, create a sustainable GraphQL development workflow.
 

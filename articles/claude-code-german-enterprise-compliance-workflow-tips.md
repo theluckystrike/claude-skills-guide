@@ -3,7 +3,11 @@ layout: default
 title: "Claude Code German Enterprise Compliance Workflow Tips"
 description: "Practical strategies for implementing Claude Code in German enterprise compliance workflows. Includes code examples, skill recommendations, and DSGVO-aware automation patterns."
 date: 2026-03-14
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, german, enterprise, compliance, gdpr]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code German Enterprise Compliance Workflow Tips

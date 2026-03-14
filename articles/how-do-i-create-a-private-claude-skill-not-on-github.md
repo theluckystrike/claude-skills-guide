@@ -165,11 +165,11 @@ If Claude Code doesn't discover your private skill, check these common issues:
 
 **Character encoding**: Use UTF-8 encoding. Special characters in descriptions sometimes cause issues.
 
-Run `claude skill list` to see all installed skills and verify yours appears.
+Run `ls ~/.claude/skills/` to see all installed skills and verify yours appears.
 
 ## Using Private Skills with Official Skills
 
-Private skills integrate reliably with public skills from the registry. You might combine:
+Private skills integrate reliably with built-in Claude Code skills. You might combine:
 
 - A private `company-auth` skill for your organization's authentication flows
 - The public `pdf` skill for generating invoices

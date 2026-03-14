@@ -20,14 +20,7 @@ This guide shows you how to integrate Claude Code skills into your development w
 
 Before implementing workflows, ensure your Claude Code environment includes the essential skills for Japanese development work:
 
-```bash
-# Install core skills for Japanese development workflows
-claude skill install tdd
-claude skill install pdf
-claude skill install supermemory
-claude skill install frontend-design
-claude skill install docx
-```
+Skills ship as built-in `.md` files with Claude Code — no installation command is needed. The core skills for Japanese development workflows are `/tdd`, `/pdf`, `/supermemory`, `/frontend-design`, and `/docx`. To see available skills, run `ls ~/.claude/skills/`. To use a skill, type `/skill-name` in a Claude Code session.
 
 The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) proves particularly valuable for Japanese developers managing long-term projects. It maintains context across sessions, remembering client preferences, project-specific terminology, and design decisions that recur throughout a project's lifecycle.
 

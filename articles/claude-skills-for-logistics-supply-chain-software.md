@@ -3,7 +3,11 @@ layout: default
 title: "Claude Skills for Logistics Supply Chain Software"
 description: "Learn how Claude skills automate logistics workflows, inventory management, and supply chain operations. Practical examples and code snippets for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+categories: [tutorials]
+tags: [claude-code, claude-skills, logistics, supply-chain, automation]
+reviewed: true
+score: 7
 ---
 
 Logistics and supply chain operations involve complex orchestration of vendors, warehouses, transportation, and inventory systems. Developers building logistics software face unique challenges: processing shipping manifests, managing real-time inventory updates, optimizing routes, and generating compliance documentation. Claude skills provide programmatic capabilities that transform these manual workflows into automated pipelines, reducing errors and freeing teams to focus on strategic improvements.
@@ -33,10 +37,9 @@ def check_reorder_need(current_stock, reorder_point, order_quantity):
 
 For bulk inventory processing, combine the xlsx skill with batch operations to process thousands of SKUs simultaneously. Many logistics teams maintain master inventory spreadsheets with multiple tabs—one for raw materials, another for WIP (work-in-progress), and a third for finished goods. The xlsx skill navigates between tabs and applies consistent logic across all three.
 
-```yaml
-# Example: Inventory reconciliation workflow
-skill: inventory-reconciliation
-trigger: "daily at 6:00 AM
+To run a daily reconciliation, invoke the xlsx skill with a clear prompt:
+
+```
 /xlsx Compare warehouse-inventory.xlsx (column: SKU, Qty_On_Hand)
 with erp-export.csv (column: SKU, System_Qty)
 flag discrepancies where difference > 5 units

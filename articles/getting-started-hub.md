@@ -6,6 +6,8 @@ date: 2026-03-14
 categories: [hub]
 tags: [getting-started, claude-code, beginners, installation]
 is_pillar: true
+reviewed: true
+score: 8
 ---
 
 # Claude Code Getting Started: Complete Beginner Guide

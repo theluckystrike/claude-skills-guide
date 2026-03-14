@@ -144,7 +144,7 @@ As you develop more skills and understand your patterns, you'll naturally gravit
 
 ## Related Reading
 
-- [How Claude Skills Auto-Invocation Actually Works: Deep Dive](/claude-skills-guide/articles/how-claude-skills-auto-invocation-actually-works-deep-dive/) — Technical deep dive into the auto-invocation mechanism, including how trigger matching is evaluated at runtime
+- [How Claude Skills Auto-Invocation Actually Works](/claude-skills-guide/articles/how-claude-skills-auto-invocation-actually-works-deep-dive/) — Technical explanation of the auto-invocation mechanism, including how trigger matching is evaluated at runtime
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understand the trigger system and configuration options that control when skills auto-invoke
 - [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/articles/why-is-my-claude-skill-not-showing-up-fix-guide/) — If auto-invocation fails because the skill isn't loading at all, this guide diagnoses registration issues
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore skill configuration patterns that make auto-invocation more reliable across different workflows

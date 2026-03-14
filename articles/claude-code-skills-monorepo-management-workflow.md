@@ -1,13 +1,13 @@
 ---
 layout: default
 title: "Claude Code Skills Monorepo Management Workflow"
-description: "Master monorepo management with Claude Code skills. Learn practical workflows for organizing, building, and maintaining multi-package repositories with skill-based automation."
+description: "Monorepo management with Claude Code skills. Practical workflows for organizing, building, and maintaining multi-package repositories."
 date: 2026-03-14
-author: theluckystrike
 categories: [workflows]
-tags: [claude-code, claude-skills, monorepo, workflows, automation]
-reviewed: false
-score: 0
+tags: [claude-code, claude-skills, monorepo, automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Skills Monorepo Management Workflow
