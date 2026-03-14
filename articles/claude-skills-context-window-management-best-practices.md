@@ -41,17 +41,7 @@ This approach works exceptionally well with skills like **tdd** where you need f
 
 When using skills such as **pdf** or document processing capabilities, reference specific sections rather than loading entire documents:
 
-```python
-# Using the pdf skill effectively
-from pdf import extract_sections
-
-# Extract only the relevant chapter
-chapter_3 = extract_sections("technical-spec.pdf", pages=[20, 35])
-# Process just the API reference section
-api_ref = extract_sections("technical-spec.pdf", pages=[40, 55])
-```
-
-This targeted approach keeps your context lean while maintaining precision.
+When invoking the `/pdf` skill, ask Claude to extract specific sections rather than summarizing the entire document. For example: "Use the pdf skill to extract pages 20–35 from technical-spec.pdf." This targeted approach keeps your context lean while maintaining precision.
 
 ### 3. Implement Context Chunking
 
