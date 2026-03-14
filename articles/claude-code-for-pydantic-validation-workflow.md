@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Pydantic Validation Workflow"
 description: "Learn how to leverage Claude Code to build robust Pydantic validation workflows. Practical examples for data validation, custom validators, and error handling with Python's most popular data validation library."
@@ -6,8 +7,11 @@ date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pydantic-validation-workflow/
 categories: [workflows, python]
-tags: [claude-code, pydantic, validation, python, data-validation]
+tags: [claude-code, pydantic, validation, python, data-validation, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Pydantic Validation Workflow

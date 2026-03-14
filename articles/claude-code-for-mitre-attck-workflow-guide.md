@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for MITRE ATT&CK Workflow Guide"
 description: "Learn how to leverage Claude Code to streamline your MITRE ATT&CK workflow—from technique mapping to detection rule creation and security automation."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-mitre-attck-workflow-guide/
 categories: [security, guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for MITRE ATT&CK Workflow Guide
@@ -70,7 +74,7 @@ This skill provides Claude with context about the ATT&CK framework and establish
 
 ## Practical Workflow: Incident Response to Detection
 
-When a new incident arrives, you can leverage this workflow:
+When a new incident arrives, you can use this workflow:
 
 ### Step 1: Technique Extraction
 

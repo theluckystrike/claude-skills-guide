@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Flamegraph Visualization Workflow"
 description: "Learn how to integrate Claude Code into your flamegraph visualization workflow for efficient performance profiling and optimization."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-flamegraph-visualization-workflow/
 categories: [workflows, profiling]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 

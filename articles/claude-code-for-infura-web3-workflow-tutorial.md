@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Infura Web3 Workflow Tutorial"
 description: "Learn how to integrate Claude Code with Infura for efficient Web3 development workflows. This guide covers setup, practical examples, and expert tips for blockchain developers."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-infura-web3-workflow-tutorial/
 categories: [Tutorial, Web3, Blockchain]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Infura Web3 Workflow Tutorial

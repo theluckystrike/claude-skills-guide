@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Soda Core Data Quality Workflow"
 description: "Learn how to integrate Claude Code with Soda Core to build automated data quality monitoring pipelines that catch issues before they reach production."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-soda-core-data-quality-workflow/
 categories: [data-quality, guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Soda Core Data Quality Workflow

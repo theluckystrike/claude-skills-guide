@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Pixie K8s Observability Workflow"
 description: "Learn how to leverage Claude Code with Pixie for powerful Kubernetes observability. This guide covers practical workflows, code examples, and actionable advice for developers."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-pixie-k8s-observability-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 
@@ -150,7 +154,7 @@ Create a PxL script that:
 
 3. **Establish baselines**: Work with Claude Code to define what "normal" looks like for your services
 
-4. **Correlate metrics with traces**: Use Pixie's unified data model to move seamlessly between high-level metrics and detailed traces
+4. **Correlate metrics with traces**: Use Pixie's unified data model to move smoothly between high-level metrics and detailed traces
 
 5. **Automate routine checks**: Generate scripts for daily health checks and have Claude Code help schedule their execution
 
@@ -164,6 +168,6 @@ Create a PxL script that:
 
 Claude Code transforms Kubernetes observability workflows by generating precise PxL scripts, guiding debugging sessions, and helping establish effective monitoring practices. Combined with Pixie's automatic instrumentation, you gain a powerful toolkit for maintaining healthy, performant Kubernetes applications.
 
-Start by deploying Pixie in your cluster, then leverage Claude Code to build custom observability scripts tailored to your specific needs. The integration accelerates troubleshooting, improves understanding of system behavior, and ultimately leads to more reliable services.
+Start by deploying Pixie in your cluster, then use Claude Code to build custom observability scripts tailored to your specific needs. The integration accelerates troubleshooting, improves understanding of system behavior, and ultimately leads to more reliable services.
 
 {% endraw %}

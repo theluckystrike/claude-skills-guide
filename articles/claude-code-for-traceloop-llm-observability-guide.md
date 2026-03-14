@@ -1,5 +1,7 @@
 ---
 
+
+
 layout: default
 title: "Claude Code for Traceloop LLM Observability Guide"
 description: "Learn how to integrate Claude Code with Traceloop for comprehensive LLM observability, monitoring, and debugging of AI applications with practical examples."
@@ -8,9 +10,9 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-traceloop-llm-observability-guide/
 categories: [llm-observability, traceloop, ai-monitoring]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
-
-{% raw %}
 # Claude Code for Traceloop LLM Observability Guide
 
 Building production-grade LLM applications requires robust observability to understand how your AI models behave, identify performance bottlenecks, and debug issues when they arise. Traceloop provides a powerful platform for tracing and monitoring LLM applications, and when combined with Claude Code, you can automate observability setup, create custom monitoring skills, and streamline debugging workflows. This guide walks you through integrating Claude Code with Traceloop for comprehensive LLM observability.
@@ -99,8 +101,8 @@ pip install traceloop-sdk python-dotenv
 I'll create a `.env` file with your Traceloop credentials:
 
 ```
-TRACELOOP_API_KEY={{ api_key }}
-TRACELOOP_APP_NAME={{ project_name }}
+{% raw %}TRACELOOP_API_KEY={{ api_key }}
+TRACELOOP_APP_NAME={{ project_name }}{% endraw %}
 ```
 
 ## Initialization Code
@@ -323,4 +325,3 @@ Schedule weekly reviews of your Traceloop metrics to identify trends and optimiz
 Integrating Claude Code with Traceloop creates a powerful observability stack for your LLM applications. By automating setup, monitoring, and debugging workflows, you can maintain production-grade reliability while moving quickly. Start with the skills outlined in this guide and customize them to your specific use cases.
 
 For more information, visit the Traceloop documentation at docs.traceloop.com.
-{% endraw %}

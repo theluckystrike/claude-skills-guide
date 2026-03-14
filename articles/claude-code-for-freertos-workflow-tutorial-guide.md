@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for FreeRTOS Workflow Tutorial Guide"
 description: "Learn how to integrate Claude Code into your FreeRTOS development workflow for smarter firmware development, task management, and real-time system debugging."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-freertos-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for FreeRTOS Workflow Tutorial Guide
 
@@ -68,7 +72,7 @@ Read FreeRTOSConfig.h to understand the task scheduling model and memory constra
 
 ## Creating FreeRTOS Tasks with Claude Code
 
-One of the most common FreeRTOS patterns is creating tasks. Claude Code can generate robust task implementations that follow best practices. Here's how to leverage it:
+One of the most common FreeRTOS patterns is creating tasks. Claude Code can generate robust task implementations that follow best practices. Here's how to use it:
 
 ```c
 // Example: Request Claude Code to create a sensor reading task
@@ -222,4 +226,4 @@ This ensures consistent code quality across your entire embedded team.
 
 ## Conclusion
 
-Integrating Claude Code into your FreeRTOS workflow transforms how you develop embedded systems. By providing structured context about your RTOS configuration, establishing clear communication patterns, and leveraging Claude Code's ability to analyze complex synchronization scenarios, you can build more robust firmware faster. Start with a project-specific skill, maintain organized file structures, and use Claude Code as a debugging partner for those tricky concurrency issues that plague embedded development.
+Integrating Claude Code into your FreeRTOS workflow transforms how you develop embedded systems. By providing structured context about your RTOS configuration, establishing clear communication patterns, and using Claude Code's ability to analyze complex synchronization scenarios, you can build more robust firmware faster. Start with a project-specific skill, maintain organized file structures, and use Claude Code as a debugging partner for those tricky concurrency issues that plague embedded development.

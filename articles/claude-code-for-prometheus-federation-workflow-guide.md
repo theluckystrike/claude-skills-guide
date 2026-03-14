@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Prometheus Federation Workflow Guide"
 description: "Learn how to use Claude Code to automate and streamline Prometheus federation workflows. Practical examples, configuration patterns, and actionable advice for developers."
@@ -7,14 +8,17 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-prometheus-federation-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Prometheus Federation Workflow Guide
 
 Prometheus federation enables you to aggregate metrics across multiple Prometheus servers, creating a hierarchical monitoring architecture that scales with your infrastructure. While setting up federation manually involves understanding Prometheus configuration, scrape targets, and metric relabeling, Claude Code can dramatically accelerate your workflow by automating configuration generation, debugging federation issues, and maintaining your monitoring infrastructure as code.
 
-This guide shows you how to leverage Claude Code to build robust Prometheus federation workflows that are maintainable, documented, and reproducible.
+This guide shows you how to use Claude Code to build robust Prometheus federation workflows that are maintainable, documented, and reproducible.
 
 ## Understanding Prometheus Federation Architecture
 

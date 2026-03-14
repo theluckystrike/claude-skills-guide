@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Wake Smart Contract Workflow"
 description: "Learn how to integrate Claude Code with Wake, a powerful Python smart contract development framework. Set up automated workflows, write tests, and deploy contracts efficiently."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-wake-smart-contract-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Wake Smart Contract Workflow
