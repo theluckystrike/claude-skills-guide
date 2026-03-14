@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code OpenAPI Spec Generation Guide"
 description: "Learn how to generate OpenAPI specifications using Claude Code. Practical examples for developers building API documentation workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-openapi-spec-generation-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code OpenAPI Spec Generation Guide

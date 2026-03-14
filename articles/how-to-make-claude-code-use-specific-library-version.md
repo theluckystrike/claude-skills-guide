@@ -3,8 +3,12 @@ layout: default
 title: "How to Make Claude Code Use Specific Library Version"
 description: "Learn precise techniques to control which library versions Claude Code uses in your projects, from package.json constraints to virtual environment management."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-use-specific-library-version/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # How to Make Claude Code Use Specific Library Version

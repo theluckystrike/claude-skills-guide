@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code API Changelog Documentation: A Practical Guide for Developers"
 description: "Learn how to effectively use Claude Code API changelog documentation to stay updated with the latest features, breaking changes, and best practices."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-api-changelog-documentation/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
@@ -95,8 +99,8 @@ permissions:
 permissions:
   allowed_tools:
     - bash
-    - read_file
-    - write_file
+    - Read
+    - Write
 ```
 
 Update your skill configuration to use the more restrictive, explicit permission list. Test thoroughly after making these changes to ensure your workflow continues functioning correctly.

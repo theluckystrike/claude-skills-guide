@@ -4,9 +4,11 @@ title: "Claude Code MkDocs Documentation Workflow"
 description: "Build a Claude Code MkDocs documentation workflow that auto-generates and maintains developer docs from your codebase. Step-by-step guide with practical examples."
 date: 2026-03-14
 categories: [workflows]
-tags: [claude-code, mkdocs, documentation, workflow, pdf, supermemory]
-author: theluckystrike
+tags: [claude-code, claude-skills, claude-code, mkdocs, documentation, workflow, pdf, supermemory]
+author: "Claude Skills Guide"
 permalink: /claude-code-mkdocs-documentation-workflow/
+reviewed: true
+score: 7
 ---
 
 # Claude Code MkDocs Documentation Workflow

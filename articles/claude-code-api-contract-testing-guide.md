@@ -3,10 +3,12 @@ layout: default
 title: "Claude Code API Contract Testing Guide"
 description: "A practical guide to API contract testing with Claude Code. Learn how to integrate contract testing into your workflow using Claude skills and MCP servers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [tutorials]
-tags: [claude-code, api-testing, contract-testing, development, mcp]
+tags: [claude-code, claude-skills, claude-code, api-testing, contract-testing, development, mcp]
 permalink: /claude-code-api-contract-testing-guide/
+reviewed: true
+score: 7
 ---
 
 {% raw %}

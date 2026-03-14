@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code API Idempotency Implementation: A Practical Guide"
 description: "Learn how to implement idempotency in Claude Code API integrations to build resilient, retry-safe applications with practical code examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-api-idempotency-implementation/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}

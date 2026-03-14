@@ -3,8 +3,12 @@ layout: default
 title: "How to Make Claude Code Review Its Own Output"
 description: "Learn practical techniques to set up Claude to review, debug, and improve its own code output using structured prompts and self-reflection workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-review-its-own-output/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}

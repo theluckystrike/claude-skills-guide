@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code SDK Testing Workflow Guide"
 description: "Master SDK testing for Claude Code skills. Set up test environments, write effective tests, and integrate testing into your development workflow."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-sdk-testing-workflow-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code SDK Testing Workflow Guide

@@ -3,8 +3,12 @@ layout: default
 title: "Should I Use Claude Code for Production Database Migrations?"
 description: "A practical guide for developers exploring Claude Code AI assistance for database migration workflows in production environments."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /should-i-use-claude-code-for-production-database-migrations/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 Database migrations are one of the most sensitive operations in software development. A poorly executed migration can lock users out, corrupt data, or bring your entire application down. So it's reasonable to ask: can an AI coding assistant like Claude Code help with something this critical?

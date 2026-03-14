@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Contract Testing with Pact Guide"
 description: "Learn how to implement contract testing using Pact with Claude Code. Practical examples and code snippets for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-contract-testing-pact-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}

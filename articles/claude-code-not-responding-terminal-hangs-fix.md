@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Not Responding Terminal Hangs Fix"
 description: "Practical solutions for fixing Claude Code when it stops responding or your terminal hangs. Developer-focused troubleshooting guide with code examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-not-responding-terminal-hangs-fix/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code Not Responding Terminal Hangs Fix
@@ -79,7 +83,7 @@ Skills that call external APIs—such as those integrating with MCP servers or c
 ```yaml
 ---
 name: api-integration-skill
-tools: [bash, read_file]
+tools: [Bash, Read]
 timeout: 30
 ---
 ```

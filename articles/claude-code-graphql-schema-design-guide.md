@@ -4,10 +4,10 @@ title: "Claude Code GraphQL Schema Design Guide"
 description: "A practical guide to designing GraphQL schemas with Claude Code. Learn schema-first development, type design patterns, and how Claude skills accelerate your API workflow."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, graphql, api-design, schema, backend]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [claude-code, claude-skills, claude-code, graphql, api-design, schema, backend]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /claude-code-graphql-schema-design-guide/
 ---
 

@@ -5,8 +5,10 @@ description: "Practical solutions for when Claude Code generates code in the wro
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, programming-languages, context-management, debugging]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-writes-code-in-wrong-programming-language/
+reviewed: true
+score: 7
 ---
 
 # Fixing Claude Code Writing Code in Wrong Programming Language

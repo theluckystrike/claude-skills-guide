@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code API Load Testing Workflow"
 description: "A practical guide to load testing Claude Code API workflows for developers and power users building production applications."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-api-load-testing-workflow/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}

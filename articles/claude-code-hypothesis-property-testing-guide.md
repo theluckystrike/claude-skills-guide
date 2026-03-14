@@ -55,8 +55,8 @@ name: hypothesis-testing
 description: Property-based testing integration for Claude Code
 tools:
   - bash
-  - read_file
-  - write_file
+  - Read
+  - Write
 ```
 
 Install Hypothesis in your project:

@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Error Rate Limit 429: How to Handle"
 description: "Learn how to handle HTTP 429 rate limit errors when using Claude Code. Practical solutions for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-error-rate-limit-429-how-to-handle/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}

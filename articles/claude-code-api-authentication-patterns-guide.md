@@ -3,10 +3,12 @@ layout: default
 title: "Claude Code API Authentication Patterns Guide"
 description: "A practical guide to implementing API authentication patterns in Claude Code skills. Learn OAuth, API keys, token management, and secure credential handling."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, authentication, api, security, claude-skills]
 permalink: /claude-code-api-authentication-patterns-guide/
+reviewed: true
+score: 7
 ---
 
 {% raw %}

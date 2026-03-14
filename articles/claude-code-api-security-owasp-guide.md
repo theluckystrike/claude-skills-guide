@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code API Security OWASP Guide (2026)"
 description: "Learn how to secure Claude Code API integrations against OWASP Top 10 vulnerabilities. Practical patterns for developers building AI-powered applications."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-api-security-owasp-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 Building secure API integrations requires understanding the most common vulnerability patterns. The OWASP API Security Top 10 provides a framework for identifying and mitigating risks in your Claude Code skills and applications. This guide covers practical implementations that protect your API integrations from the most prevalent security threats.

@@ -3,8 +3,12 @@ layout: default
 title: "How to Make Claude Code Not Over-Engineer Solutions"
 description: "Practical strategies to prevent Claude Code from building overly complex solutions. Learn scope control, iterative prompts, and skill patterns that keep AI-assisted development focused."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-not-over-engineer-solutions/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # How to Make Claude Code Not Over-Engineer Solutions

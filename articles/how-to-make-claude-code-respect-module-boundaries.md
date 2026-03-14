@@ -3,8 +3,12 @@ layout: default
 title: "How to Make Claude Code Respect Module Boundaries"
 description: "A practical guide for developers to configure Claude Code to respect module boundaries and avoid cross-module dependencies. Includes skill configurations and code examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-respect-module-boundaries/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # How to Make Claude Code Respect Module Boundaries

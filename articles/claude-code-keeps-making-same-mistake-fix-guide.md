@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Keeps Making the Same Mistake: Fix Guide"
 description: "A practical guide to fixing repetitive mistakes in Claude Code. Learn how to correct recurring errors, configure better prompts, and get more accurate AI assistance."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-keeps-making-same-mistake-fix-guide/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 
 When you use Claude Code extensively, you might notice it keeps making the same mistake over and over. This is frustrating, but there are several ways to fix this pattern and get better results.

@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Stuck in Infinite Loop: How to Interrupt"
 description: "Learn practical methods to stop Claude Code when it gets stuck in infinite loops. Expert techniques for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-stuck-infinite-loop-how-to-interrupt/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 
 When Claude Code runs for extended periods, especially when processing complex tasks or working with large codebases, you may encounter situations where the tool appears stuck or trapped in an infinite loop. This guide provides practical methods to regain control and interrupt these processes safely.

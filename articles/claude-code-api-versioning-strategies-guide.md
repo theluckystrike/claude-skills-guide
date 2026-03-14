@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code API Versioning Strategies Guide"
 description: "Master API versioning for Claude Skills: URL path, header, and query string strategies with practical code examples for skill developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-api-versioning-strategies-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code API Versioning Strategies Guide

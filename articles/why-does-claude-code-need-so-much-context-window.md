@@ -3,8 +3,12 @@ layout: default
 title: "Why Does Claude Code Need So Much Context Window?"
 description: "Understanding why Claude Code requires large context windows for effective code generation, debugging, and complex development tasks."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /why-does-claude-code-need-so-much-context-window/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}

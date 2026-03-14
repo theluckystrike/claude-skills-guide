@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Breaks Existing Tests After Changes Fix"
 description: "When Claude Code modifies your codebase, existing tests may fail. Learn the root causes and practical solutions to prevent and fix test breaks during AI-assisted development."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-breaks-existing-tests-after-changes-fix/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code Breaks Existing Tests After Changes Fix

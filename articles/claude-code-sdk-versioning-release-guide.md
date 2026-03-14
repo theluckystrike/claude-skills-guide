@@ -3,10 +3,12 @@ layout: default
 title: "Claude Code SDK Versioning and Release Guide"
 description: "A practical guide to versioning your custom Claude skills, managing releases, and maintaining backward compatibility for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, sdk, versioning, releases, skill-development]
+tags: [claude-code, claude-skills, claude-code, sdk, versioning, releases, skill-development]
 permalink: /claude-code-sdk-versioning-release-guide/
+reviewed: true
+score: 7
 ---
 
 # Claude Code SDK Versioning and Release Guide
@@ -154,15 +156,9 @@ This approach, used by the **xlsx** skill for spreadsheet operations, automatica
 
 When sharing skills with others, provide clear installation instructions that specify versions:
 
-```bash
-# Install specific version
-claude skill install username/skill-name@1.2.3
+Provide versioned releases by tagging your repository commits with semantic version numbers (e.g., `v1.2.3`). Users can then clone or download specific tagged releases, placing the skill markdown file in their `.claude/` directory.
 
-# Install latest compatible version
-claude skill install username/skill-name@^1.2.0
-```
-
-The caret (`^`) notation ensures users receive backward-compatible updates automatically—a practice borrowed from npm's semver handling.
+Track skill versions in your changelog so users know which version to use.
 
 ## Monitoring and Rollback
 

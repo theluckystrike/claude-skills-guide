@@ -4,9 +4,11 @@ title: "Claude Code GraphQL Client Codegen Guide (2026)"
 description: "Learn how to automate GraphQL client code generation using Claude Code skills. Practical examples for TypeScript, React, and Apollo setups."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, graphql, codegen, typescript]
-author: theluckystrike
+tags: [claude-code, claude-skills, claude-code, graphql, codegen, typescript]
+author: "Claude Skills Guide"
 permalink: /claude-code-graphql-client-codegen-guide/
+reviewed: true
+score: 7
 ---
 
 # Claude Code GraphQL Client Codegen Guide
@@ -173,7 +175,7 @@ Finally, document your GraphQL conventions in the skill instructions. If you pre
 
 ## Conclusion
 
-Claude Code skills transform GraphQL client codegen from a manual, error-prone process into an automated workflow that maintains type safety automatically. By configuring a graphql-codegen skill that understands your project structure, you eliminate the tedious work of keeping frontend types synchronized with backend schemas. Combined with skills like frontend-design and tdd, you build a comprehensive development environment where GraphQL types flow seamlessly from schema to component.
+Claude Code skills transform GraphQL client codegen from a manual, error-prone process into an automated workflow that maintains type safety automatically. By configuring a graphql-codegen skill that understands your project structure, you eliminate the tedious work of keeping frontend types synchronized with backend schemas. Combined with skills like frontend-design and tdd, you build a comprehensive development environment where GraphQL types flow smoothly from schema to component.
 
 The key lies in proper skill configuration and consistent project organization. Once established, this workflow scales with your project and reduces the friction that often makes developers hesitate with GraphQL adoption.
 

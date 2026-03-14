@@ -4,10 +4,10 @@ title: "Claude Code VCR Test Recording Workflow"
 description: "Learn how to implement VCR-style test recording in Claude Code for reproducible AI interactions. Capture, replay, and verify AI-driven test scenarios."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, testing, vcr, test-automation, reproducibility]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [claude-code, claude-skills, claude-code, testing, vcr, test-automation, reproducibility]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /claude-code-vcr-test-recording-workflow/
 ---
 
@@ -182,7 +182,7 @@ class SmartVCR(ClaudeVCR):
             return {"mode": "live", "data": interaction}
 ```
 
-This approach integrates seamlessly with CI/CD pipelines. You can record new tests in development, switch to playback mode in CI, and use live mode for integration testing.
+This approach integrates smoothly with CI/CD pipelines. You can record new tests in development, switch to playback mode in CI, and use live mode for integration testing.
 
 ## Integrating with Claude Skills
 

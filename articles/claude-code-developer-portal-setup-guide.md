@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Developer Portal Setup Guide"
 description: "A practical guide to building a developer portal for Claude Code skills, with Jekyll setup, skill documentation structure, and automation tips."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-developer-portal-setup-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
@@ -55,7 +59,7 @@ Consistent documentation structure helps users quickly understand each skill's p
 ---
 name: frontend-design
 description: "Generate frontend code with modern frameworks and responsive layouts"
-tools: [read_file, write_file, bash]
+tools: [Read, Write, Bash]
 version: 1.2.0
 author: your-team
 tags: [frontend, ui, code-generation]

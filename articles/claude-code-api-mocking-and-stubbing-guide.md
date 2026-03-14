@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code API Mocking and Stubbing Guide"
 description: "Master API mocking and stubbing in Claude Code workflows. Learn to build reliable test doubles, intercept HTTP calls, and develop offline with practical examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-api-mocking-and-stubbing-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code API Mocking and Stubbing Guide
@@ -64,7 +68,7 @@ Consider a skill that intercepts requests to a payment gateway:
 ---
 name: payment-mock
 description: "Mocks payment gateway responses for testing"
-tools: [bash, read_file, write_file]
+tools: [Bash, Read, Write]
 version: 1.0.0
 ---
 
@@ -159,7 +163,7 @@ Log mock invocations during testing. Knowing which endpoints were called helps d
 
 API mocking and stubbing within Claude Code workflows gives you reliable, repeatable testing without external dependencies. Whether you use local servers, proxy interceptors, or library-based request hijacking, the goal remains the same: predictable responses that let you develop and test with confidence.
 
-Build mocks that mirror production contracts, version them with your code, and integrate them seamlessly into your skill workflows. Your tests will run faster, fail more predictably, and free you from waiting on third-party services.
+Build mocks that mirror production contracts, version them with your code, and integrate them smoothly into your skill workflows. Your tests will run faster, fail more predictably, and free you from waiting on third-party services.
 
 
 ## Related Reading

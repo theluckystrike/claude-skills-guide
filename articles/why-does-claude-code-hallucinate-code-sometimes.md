@@ -3,8 +3,12 @@ layout: default
 title: "Why Does Claude Code Hallucinate Code Sometimes?"
 description: "Understanding why Claude Code sometimes generates incorrect code, with practical examples and strategies to minimize hallucinations in your AI-assisted development workflow."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /why-does-claude-code-hallucinate-code-sometimes/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # Why Does Claude Code Hallucinate Code Sometimes?

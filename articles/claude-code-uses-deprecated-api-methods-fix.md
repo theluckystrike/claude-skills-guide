@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Uses Deprecated API Methods Fix"
 description: "Practical solutions for developers when Claude Code generates code using deprecated API methods. Learn how to fix and prevent deprecated API usage in your projects."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-uses-deprecated-api-methods-fix/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 {% raw %}
 

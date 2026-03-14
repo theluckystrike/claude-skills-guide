@@ -3,13 +3,17 @@ layout: default
 title: "When to Use Claude Code vs Manual Coding: Tradeoffs for Developers"
 description: "A practical guide comparing Claude Code automation with manual coding. Learn when AI-assisted development speeds up your workflow and when hands-on coding delivers better results."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /when-to-use-claude-code-vs-manual-coding-tradeoffs/
+reviewed: true
+score: 7
+categories: [comparisons]
+tags: [claude-code, claude-skills]
 ---
 
 # When to Use Claude Code vs Manual Coding: Tradeoffs for Developers
 
-Understanding when to leverage Claude Code versus writing code manually helps you make better decisions about where to invest your time and energy. Both approaches have distinct strengths, and the right choice depends on your specific context, project requirements, and goals.
+Understanding when to use Claude Code versus writing code manually helps you make better decisions about where to invest your time and energy. Both approaches have distinct strengths, and the right choice depends on your specific context, project requirements, and goals.
 
 ## What Claude Code Brings to Your Workflow
 

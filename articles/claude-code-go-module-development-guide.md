@@ -3,13 +3,17 @@ layout: default
 title: "Claude Code Go Module Development Guide"
 description: "Learn how to build production-ready Go modules with Claude Code. Covers module initialization, dependency management, testing patterns, and workflow automation with Claude skills."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-go-module-development-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code Go Module Development Guide
 
-Go modules have become the standard for dependency management in Go projects. When paired with Claude Code's AI capabilities, you can accelerate module development while maintaining code quality through automated testing and documentation workflows. This guide walks you through building Go modules with Claude Code, leveraging specialized skills for testing, documentation, and project management.
+Go modules have become the standard for dependency management in Go projects. When paired with Claude Code's AI capabilities, you can accelerate module development while maintaining code quality through automated testing and documentation workflows. This guide walks you through building Go modules with Claude Code, using specialized skills for testing, documentation, and project management.
 
 ## Initializing Your Go Module
 

@@ -4,9 +4,11 @@ title: "Claude Code Confluence Documentation Guide"
 description: "Learn how to use Claude Code skills for Confluence documentation. Practical examples for developers and power users."
 date: 2026-03-14
 categories: [integrations]
-tags: [claude-code, confluence, documentation, automation, pdf, docx, supermemory]
-author: theluckystrike
+tags: [claude-code, claude-skills, claude-code, confluence, documentation, automation, pdf, docx, supermemory]
+author: "Claude Skills Guide"
 permalink: /claude-code-confluence-documentation-guide/
+reviewed: true
+score: 7
 ---
 
 # Claude Code Confluence Documentation Guide

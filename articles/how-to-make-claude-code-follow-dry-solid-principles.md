@@ -3,8 +3,12 @@ layout: default
 title: "How to Make Claude Code Follow DRY and SOLID Principles"
 description: A practical guide for developers to ensure Claude Code generates code that follows DRY and SOLID principles. Includes skill configurations, prompt patterns, and real.
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-follow-dry-solid-principles/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # How to Make Claude Code Follow DRY and SOLID Principles
@@ -40,12 +44,7 @@ When requesting code generation, be specific about function boundaries. Instead 
 
 DRY principle requires that every piece of knowledge in your system has a single, unambiguous representation. When Claude Code generates similar logic in multiple places, you need mechanisms to consolidate.
 
-Use the claude-tdd skill to ensure tests drive out duplication:
-
-```bash
-# Install the tdd skill for test-driven workflows
-claude skill install claude-tdd
-```
+Use the **tdd** skill to ensure tests drive out duplication. Place the tdd skill file in your `.claude/` directory, then invoke it with `/tdd`.
 
 With tdd enabled, Claude Code will first write tests that expose duplication. When the same logic appears twice, the test failures guide toward extracting shared utilities rather than duplicating code.
 

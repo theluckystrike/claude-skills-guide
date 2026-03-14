@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Server Sent Events API Guide"
 description: "A practical guide to implementing Server-Sent Events (SSE) with Claude Code. Learn how to build real-time streaming integrations using MCP servers and the Claude API."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-server-sent-events-api-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}

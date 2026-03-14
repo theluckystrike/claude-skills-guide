@@ -5,8 +5,10 @@ description: "A practical guide to implementing rate limiting for Claude Code AP
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, api-development, rate-limiting, backend]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-api-rate-limiting-implementation/
+reviewed: true
+score: 7
 ---
 
 # Claude Code API Rate Limiting Implementation

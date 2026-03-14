@@ -4,9 +4,11 @@ title: "Claude Code Postman Collection Automation"
 description: "Learn how to automate Postman collections using Claude Code skills. Practical examples, API testing workflows, and CI/CD integration patterns for developers."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, postman, api-testing, automation, cli]
-author: theluckystrike
+tags: [claude-code, claude-skills, claude-code, postman, api-testing, automation, cli]
+author: "Claude Skills Guide"
 permalink: /claude-code-postman-collection-automation/
+reviewed: true
+score: 7
 ---
 
 {% raw %}

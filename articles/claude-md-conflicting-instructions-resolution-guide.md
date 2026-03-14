@@ -37,7 +37,7 @@ The most reliable approach is declaring instruction priority directly in your sk
 ---
 name: pdf-extraction
 priority: 10
-tools: [read_file, write_file]
+tools: [Read, Write]
 instructions: |
   Extract table data from PDF files.
   When conflicting with tdd skill, this takes precedence for extraction phase.

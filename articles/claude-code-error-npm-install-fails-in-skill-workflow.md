@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Error: NPM Install Fails in Skill Workflow"
 description: "Fix npm install failures when using Claude Code skills. Practical solutions for skill workflows, dependency errors, and configuration issues."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-error-npm-install-fails-in-skill-workflow/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code Error: NPM Install Fails in Skill Workflow

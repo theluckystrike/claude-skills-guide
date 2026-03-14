@@ -3,10 +3,12 @@ layout: default
 title: "Claude Code Runbook Documentation Guide"
 description: "A practical guide to creating and maintaining runbooks with Claude Code. Learn how to document operational procedures, troubleshooting steps, and system workflows."
 date: 2026-03-14
-categories: [workflows, documentation]
+categories: [workflows]
 tags: [claude-code, claude-skills, runbook, documentation, automation, pdf, supermemory, tdd]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-runbook-documentation-guide/
+reviewed: true
+score: 7
 ---
 
 # Claude Code Runbook Documentation Guide

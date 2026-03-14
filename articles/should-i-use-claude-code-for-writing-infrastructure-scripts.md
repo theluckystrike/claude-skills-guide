@@ -3,8 +3,12 @@ layout: default
 title: "Should I Use Claude Code for Writing Infrastructure Scripts?"
 description: "A practical guide for developers deciding whether Claude Code is right for your infrastructure automation scripts."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /should-i-use-claude-code-for-writing-infrastructure-scripts/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 Writing infrastructure scripts has always been a mix of repetition and creativity. You find yourself writing the same Terraform configurations, Dockerfiles, or CI/CD pipelines over and over. Claude Code offers a different approach—it can generate, review, and maintain these scripts alongside you. But is it the right tool for your workflow?
@@ -115,7 +119,7 @@ The real answer is that Claude Code works best as a collaborator, not a replacem
 
 If you decide to try Claude Code for infrastructure scripting, start small. Generate a single Terraform module or one CI/CD pipeline. Review the output carefully. Learn what Claude Code does well and where you need to add your own expertise.
 
-Over time, you'll develop a mental model of when to leverage AI assistance and when to write things manually. That's the real benefit—not the code itself, but the enhanced decision-making process it enables.
+Over time, you'll develop a mental model of when to use AI assistance and when to write things manually. That's the real benefit—not the code itself, but the enhanced decision-making process it enables.
 
 
 ## Related Reading

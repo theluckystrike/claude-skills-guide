@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code NPM Package Development Guide"
 description: "A practical guide to developing NPM packages with Claude Code. Learn workflows, skill usage, and tooling for creating publishable JavaScript libraries."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-npm-package-development-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}

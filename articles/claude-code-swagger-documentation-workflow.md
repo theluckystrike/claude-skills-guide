@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Swagger Documentation Workflow"
 description: "A comprehensive guide to automating Swagger and OpenAPI documentation with Claude Code. Learn practical workflows, skill integrations, and code generation strategies for API documentation."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-swagger-documentation-workflow/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}

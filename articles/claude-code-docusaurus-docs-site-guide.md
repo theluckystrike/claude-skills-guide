@@ -3,11 +3,15 @@ layout: default
 title: "Claude Code Docusaurus Docs Site Guide"
 description: "A comprehensive guide to building documentation sites with Docusaurus using Claude Code and specialized skills."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-docusaurus-docs-site-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
-Building a documentation site doesn't need to be painful. Docusaurus provides an excellent framework for creating modern documentation websites, and Claude Code can accelerate every step of the process. This guide shows you how to leverage Claude Code skills to set up, customize, and maintain a Docusaurus docs site efficiently.
+Building a documentation site doesn't need to be painful. Docusaurus provides an excellent framework for creating modern documentation websites, and Claude Code can accelerate every step of the process. This guide shows you how to use Claude Code skills to set up, customize, and maintain a Docusaurus docs site efficiently.
 
 ## Why Docusaurus for Documentation
 
@@ -206,9 +210,9 @@ The **frontend-design** skill provides design consistency checks, ensuring your 
 
 ## Conclusion
 
-Docusaurus combined with Claude Code skills creates a documentation workflow that saves time and produces better results. From initial setup through ongoing maintenance, each phase benefits from automation and specialized tools. The **pdf**, **tdd**, **supermemory**, and **frontend-design** skills work together seamlessly with Docusaurus to build docs that developers actually want to read.
+Docusaurus combined with Claude Code skills creates a documentation workflow that saves time and produces better results. From initial setup through ongoing maintenance, each phase benefits from automation and specialized tools. The **pdf**, **tdd**, **supermemory**, and **frontend-design** skills work together smoothly with Docusaurus to build docs that developers actually want to read.
 
-Start with a minimal viable setup, add customization incrementally, and leverage Claude Code's capabilities to handle the repetitive work. Your future self—and your users—will thank you.
+Start with a minimal viable setup, add customization incrementally, and use Claude Code's capabilities to handle the repetitive work. Your future self—and your users—will thank you.
 
 
 ## Related Reading

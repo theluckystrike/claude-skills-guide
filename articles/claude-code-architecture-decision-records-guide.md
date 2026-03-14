@@ -4,9 +4,11 @@ title: "Claude Code Architecture Decision Records Guide"
 description: "A practical guide to implementing Architecture Decision Records in your Claude Code workflow. Learn how to document design choices, leverage Claude skills, and maintain project clarity."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, architecture, adr, documentation, decision-records]
-author: theluckystrike
+tags: [claude-code, claude-skills, claude-code, architecture, adr, documentation, decision-records]
+author: "Claude Skills Guide"
 permalink: /claude-code-architecture-decision-records-guide/
+reviewed: true
+score: 7
 ---
 
 # Claude Code Architecture Decision Records Guide

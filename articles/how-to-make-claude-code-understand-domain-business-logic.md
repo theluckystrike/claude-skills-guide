@@ -3,8 +3,12 @@ layout: default
 title: "How to Make Claude Code Understand Domain Business Logic"
 description: "Learn practical techniques to teach Claude Code your business domain logic through custom skills, context management, and structured prompts."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-understand-domain-business-logic/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # How to Make Claude Code Understand Domain Business Logic
@@ -25,7 +29,7 @@ Consider a skill for an order processing system:
 ---
 name: order-processing
 description: "Handle order processing with business rules"
-tools: [bash, read_file, write_file]
+tools: [Bash, Read, Write]
 ---
 
 # Order Processing Domain Rules

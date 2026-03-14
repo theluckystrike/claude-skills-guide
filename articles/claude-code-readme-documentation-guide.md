@@ -36,9 +36,7 @@ Brief description of what this skill or project accomplishes.
 
 ## Installation
 
-```bash
-claude skill install owner/repo-name
-```
+Copy this skill file to your `.claude/` directory to enable it in Claude Code.
 
 ## Usage
 

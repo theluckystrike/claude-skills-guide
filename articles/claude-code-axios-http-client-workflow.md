@@ -3,12 +3,16 @@ layout: default
 title: "Claude Code Axios HTTP Client Workflow"
 description: "Learn how to build efficient HTTP client workflows using Axios with Claude Code for streamlined API interactions."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-axios-http-client-workflow/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-When building modern applications, HTTP requests are the backbone of data exchange. Whether you're fetching from a REST API, sending form data, or handling authentication tokens, having a solid HTTP client workflow saves hours of debugging. This guide walks you through creating a practical Axios workflow that integrates seamlessly with Claude Code.
+When building modern applications, HTTP requests are the backbone of data exchange. Whether you're fetching from a REST API, sending form data, or handling authentication tokens, having a solid HTTP client workflow saves hours of debugging. This guide walks you through creating a practical Axios workflow that integrates smoothly with Claude Code.
 
 ## Setting Up Your Axios Instance
 

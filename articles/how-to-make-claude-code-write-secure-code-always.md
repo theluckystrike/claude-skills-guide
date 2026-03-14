@@ -5,9 +5,9 @@ description: "Practical strategies and Claude skills for ensuring your AI coding
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, security, secure-coding, best-practices]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /how-to-make-claude-code-write-secure-code-always/
 ---
 

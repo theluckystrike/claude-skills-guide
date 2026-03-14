@@ -5,9 +5,12 @@ description: "Troubleshooting guide for when Claude Code ignores skill instructi
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, troubleshooting, skill-md, claude-code-issues]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-ignores-claude-md-instructions-fix/
+reviewed: true
+score: 7
 ---
+{% raw %}
 
 # Claude Code Ignores .md Instructions Fix
 
@@ -158,3 +161,4 @@ For developers working with specific domains, skills like **pdf**, **tdd**, **xl
 - [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

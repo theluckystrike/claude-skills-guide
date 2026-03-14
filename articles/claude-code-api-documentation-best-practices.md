@@ -3,17 +3,19 @@ layout: default
 title: "Claude Code API Documentation Best Practices"
 description: "Learn how to write API documentation that Claude Code can effectively use. Covers skill metadata, Markdown formatting, code examples, and practical patterns."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, api-documentation, claude-skills, best-practices]
 permalink: /claude-code-api-documentation-best-practices/
+reviewed: true
+score: 7
 ---
 
 # Claude Code API Documentation Best Practices
 
 When building Claude skills that interact with APIs, the quality of your documentation determines how effectively Claude can understand and use those APIs. Unlike traditional human-readable docs, API documentation for Claude Code must balance clarity for developers with structural patterns that Claude's language model can parse and follow reliably.
 
-This guide covers practical strategies for writing API documentation that works seamlessly with Claude skills, whether you're documenting internal services, third-party integrations, or MCP server endpoints.
+This guide covers practical strategies for writing API documentation that works smoothly with Claude skills, whether you're documenting internal services, third-party integrations, or MCP server endpoints.
 
 ## Structured Skill Metadata
 
@@ -201,7 +203,7 @@ This skill provides access to OpenWeather API endpoints...
 [Your documented endpoints here]
 ```
 
-Skills like `tdd` can then leverage this documentation to automatically generate test cases for API interactions, while `frontend-design` skills might use weather API data to create dynamic UI components.
+Skills like `tdd` can then use this documentation to automatically generate test cases for API interactions, while `frontend-design` skills might use weather API data to create dynamic UI components.
 
 ## Summary
 
