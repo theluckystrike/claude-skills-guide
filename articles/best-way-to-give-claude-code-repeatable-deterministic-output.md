@@ -1,8 +1,9 @@
 ---
 layout: default
-title: "Best Way to Give Claude Code Repeatable, Deterministic Output"
+title: "Best Way to Give Claude Code Repeatable, Deterministic."
 description: "Learn how to get consistent, reproducible results from Claude Code using seeds, prompts, and best practices."
 date: 2026-03-14
+categories: [guides]
 author: theluckystrike
 permalink: /best-way-to-give-claude-code-repeatable-deterministic-output/
 ---
@@ -202,3 +203,11 @@ Achieving repeatable, deterministic output from Claude Code requires a combinati
 
 By implementing these techniques, you can build reliable, reproducible workflows with Claude Code for testing, automation, and consistent code generation. Remember that while perfect determinism isn't always possible with LLMs, these methods significantly increase reproducibility for practical use cases.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
