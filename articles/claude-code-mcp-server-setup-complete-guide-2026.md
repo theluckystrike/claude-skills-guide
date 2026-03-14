@@ -74,14 +74,14 @@ const transport = new StdioServerTransport();
 server.connect(transport);
 ```
 
-Register this server in your Claude Code configuration. The config file typically lives at `~/.claude/settings.json` or `~/.claude/mcp.json`:
+Register this server in your Claude Code configuration at `~/.claude/settings.json`:
 
 ```json
 {
   "mcpServers": {
     "hello": {
       "command": "node",
-      "args": ["/Users/youruser/claude-mcp/servers/hello-server.js"]
+      "args": ["~/claude-mcp/servers/hello-server.js"]
     }
   }
 }
