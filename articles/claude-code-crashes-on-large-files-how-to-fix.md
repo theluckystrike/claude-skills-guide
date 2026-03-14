@@ -113,7 +113,7 @@ for row in ws.iter_rows(min_row=1, max_row=1000, values_only=True):
 
 ### Using tdd for Code Analysis
 
-When analyzing large codebases with the tdd skill, focus on specific modules rather than entire repositories. Break your analysis into targeted sessions:
+When analyzing large codebases with the [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), focus on specific modules rather than entire repositories. Break your analysis into targeted sessions:
 
 ```bash
 # Analyze specific directories
@@ -202,6 +202,13 @@ If Claude continues crashing on large files:
 For teams, document your file handling patterns so everyone understands the limitations and best practices.
 
 ---
+
+## Related Reading
+
+- [Claude Code Slow Response: How to Fix Latency Issues](/claude-skills-guide/claude-code-slow-response-how-to-fix-latency-issues/) — Companion guide covering latency and performance problems beyond just file-size crashes
+- [Claude MD Too Long: Context Window Optimization](/claude-skills-guide/claude-md-too-long-context-window-optimization/) — Reduce the context footprint that causes file processing to fail
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Track insights across chunked file sessions without losing context between runs
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — All troubleshooting guides for Claude Code performance and stability issues
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

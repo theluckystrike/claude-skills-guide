@@ -19,7 +19,7 @@ When Claude Code gets stuck in a loop repeating the same output, it disrupts you
 
 Claude Code enters repetition loops when its output becomes trapped in a pattern. Instead of progressing toward a solution, it generates the same text, similar variations, or cycles through identical approaches repeatedly. The root causes typically stem from prompt ambiguity, missing context, overly broad requests, or unintended skill conflicts.
 
-When using specialized skills like `pdf` for document generation or `frontend-design` for UI work, loops often appear when the skill receives unclear constraints. Similarly, when working with the `tdd` skill for test-driven development, repetition can occur when test requirements are contradictory or incomplete.
+When using specialized skills like `pdf` for document generation or `frontend-design` for UI work, loops often appear when the skill receives unclear constraints. Similarly, when working with the [`tdd` skill for test-driven development](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), repetition can occur when test requirements are contradictory or incomplete.
 
 ## Primary Fix: Interrupt and Reframe
 
@@ -53,7 +53,7 @@ Provide exactly one solution. Format your response as:
 Do not suggest alternative approaches.
 ```
 
-This technique works well with the `supermemory` skill when managing persistent context. By constraining output format, you prevent the model from cycling through multiple explanations it considers but cannot settle on.
+This technique works well with the [`supermemory` skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) when managing persistent context. By constraining output format, you prevent the model from cycling through multiple explanations it considers but cannot settle on.
 
 ## Third Fix: Reset Conversation Context
 
@@ -148,7 +148,7 @@ Beyond fixing active loops, implement these practices to prevent repetition:
 
 ## Advanced: Debugging Persistent Loops
 
-If loops persist despite these fixes, examine your project's configuration:
+If loops persist despite these fixes, examine your project's configuration. Conflicting skill instructions are a common hidden cause—see the guide on [scoping tasks for Claude Code success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/) for structured approaches.
 
 - Check for conflicting instructions in `CLAUDE.md` files
 - Review skill definitions for contradictory requirements

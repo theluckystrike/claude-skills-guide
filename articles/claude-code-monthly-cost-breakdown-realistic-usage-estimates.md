@@ -151,4 +151,12 @@ Heavy users and teams should monitor usage patterns closely and leverage the Tea
 
 The key insight: your monthly cost correlates directly with how you use the tool. Understanding your usage pattern helps you budget accurately and optimize for your specific needs.
 
+
+## Related Reading
+
+- [Why Is Claude Code Expensive: Large Context Tokens](/claude-skills-guide/why-is-claude-code-expensive-large-context-tokens/)
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
+- [Claude Code Free Tier vs Pro Plan: Feature Comparison 2026](/claude-skills-guide/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/)
+- [Is Claude Code Worth It for Solo Developers?](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

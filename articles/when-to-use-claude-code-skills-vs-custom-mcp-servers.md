@@ -146,4 +146,12 @@ Both Claude Code skills and custom MCP servers have their place in a well-design
 
 The key is matching your choice to your actual need. Start with skills for their simplicity, add MCP servers when external access becomes necessary.
 
+
+## Related Reading
+
+- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/)
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/)
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

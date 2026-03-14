@@ -21,10 +21,10 @@ This guide walks through practical techniques for refactoring legacy JavaScript 
 
 Before diving into refactoring, ensure Claude Code is configured with the right skills. The most useful skills for JavaScript refactoring include:
 
-- **tdd** — Helps write tests before making changes, ensuring your refactoring doesn't break functionality
+- **[tdd](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)** — Helps write tests before making changes, ensuring your refactoring doesn't break functionality
 - **frontend-design** — Assists with component-based refactoring and modern UI patterns
 - **xlsx** — Useful when analyzing code metrics or generating refactoring reports
-- **supermemory** — Remembers context across sessions, helpful for large refactoring projects
+- **[supermemory](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)** — Remembers context across sessions, helpful for large refactoring projects
 
 Initialize your session by activating the TDD skill:
 
@@ -139,7 +139,7 @@ Ask Claude to help with this transformation:
 
 ## Adding Tests with TDD Skill
 
-The tdd skill becomes essential when refactoring code that lacks test coverage. Before changing any function, use the skill to generate tests that verify current behavior:
+The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) becomes essential when refactoring code that lacks test coverage. Before changing any function, use the skill to generate tests that verify current behavior:
 
 ```
 /tdd
