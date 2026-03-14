@@ -5,7 +5,7 @@ description: Resolve out of memory errors when using Claude Code with large code
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, troubleshooting, memory, large-codebase, performance]
-author: "Claude Skills Guide"
+author: theluckystrike
 reviewed: true
 score: 8
 permalink: /claude-code-error-out-of-memory-large-codebase-fix/
