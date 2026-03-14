@@ -95,13 +95,7 @@ This principle applies to other skills as well. The `/frontend-design` skill run
 
 ### Implement Context Budgeting
 
-Track your session's memory usage by periodically running:
-
-```
-/memory-stats
-```
-
-This command, available in recent Claude Code versions, shows current token usage and estimated memory consumption. When you approach safe limits, save your progress and start a fresh session.
+Track your session's memory usage by monitoring how many files and how much conversation history you have loaded. When a session grows long with many loaded files, save your progress and start a fresh session with a narrower scope. This prevents accumulated context from causing memory pressure during extended work.
 
 ## Preventing Memory Errors in Long-Running Sessions
 

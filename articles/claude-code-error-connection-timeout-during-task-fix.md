@@ -24,7 +24,7 @@ Error: Connection timeout after 30000ms
 
 This occurs when the Claude API fails to respond within the expected time window. The timeout applies to individual API calls, not your entire session. Understanding the difference between request timeouts and session timeouts helps you apply the right fix.
 
-Common scenarios triggering timeouts include processing large codebases with the /super memory skill, generating complex documents with the pdf skill, or running extensive code analysis with the tdd skill.
+Common scenarios triggering timeouts include processing large codebases with the /supermemory skill, generating complex documents with the pdf skill, or running extensive code analysis with the tdd skill.
 
 ## Fix 1: Adjusting API Timeout Configuration
 
@@ -107,13 +107,11 @@ When using the supermemory skill for large knowledge bases, this approach ensure
 
 ## Fix 6: Claude Code Configuration File
 
-Create or modify your Claude Code configuration to include retry settings:
+Create or modify your Claude Code configuration to include timeout settings:
 
 ```json
 {
-  "timeout": 90000,
-  "max_retries": 3,
-  "retry_delay": 2000
+  "timeout": 90000
 }
 ```
 
@@ -142,8 +140,7 @@ Implement these practices to minimize timeout disruptions:
 
 1. **Monitor task complexity** before starting—very large operations should be chunked
 2. **Use session persistence** features to save work progress
-3. **Keep skills updated** by running periodic updates
-4. **Maintain network stability**—wired connections typically perform better than wireless
+3. **Maintain network stability**—wired connections typically perform better than wireless
 
 ## When to Seek Additional Help
 

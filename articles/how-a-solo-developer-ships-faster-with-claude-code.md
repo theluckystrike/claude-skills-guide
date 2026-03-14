@@ -3,7 +3,11 @@ layout: default
 title: "How a Solo Developer Ships Faster with Claude Code"
 description: "Practical strategies for solo developers to ship products faster using Claude Code skills. Learn about automation, testing, and workflow optimization."
 date: 2026-03-14
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, workflow, productivity, tdd, pdf, supermemory]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # How a Solo Developer Ships Faster with Claude Code
@@ -22,12 +26,7 @@ Claude Code addresses this through skills—specialized prompt packages that ext
 
 Test-driven development improves code quality but feels like overkill when you're moving fast. The **tdd** skill reverses this equation by generating tests automatically while you focus on implementation.
 
-Here's how it works in practice:
-
-```bash
-# Activate the tdd skill for your current session
-claude -s tdd
-```
+Here's how it works in practice: type `/tdd` in your Claude Code session to invoke the skill. From that point forward in the session, Claude applies test-driven development discipline to your requests.
 
 The skill generates test cases based on your function signatures and requirements. For a typical API endpoint handling user authentication, the tdd skill produces:
 
@@ -56,21 +55,14 @@ Running tests becomes a single command, and the skill suggests edge cases you mi
 
 Client deliverables, invoices, and technical specifications often arrive as PDFs. The **pdf** skill processes these documents programmatically, extracting the information you need without manual copying.
 
-Consider processing a client project brief:
+Consider processing a client project brief. Invoke the pdf skill with `/pdf` in your Claude Code session, then describe what you need:
 
-```python
-# Extract requirements from client PDF brief
-from pdf_processor import extract_requirements
-
-brief_path = "./client-brief-2026.pdf"
-requirements = extract_requirements(brief_path)
-
-# Output structured data for your project tracker
-for section in requirements.sections:
-    print(f"{section.title}: {section.action_items}")
+```
+/pdf
+Read client-brief-2026.pdf and extract all action items. Group them by section and list the key deliverables.
 ```
 
-This automation converts unstructured client input into actionable tasks, saving hours of manual extraction.
+Claude reads the document, extracts the structured information, and presents it in a format you can copy directly into your project tracker. This approach converts unstructured client input into actionable tasks without manual copying.
 
 ## Knowledge Management with Supermemory
 
@@ -110,24 +102,14 @@ The skill generates responsive, accessible markup using Tailwind CSS patterns, e
 
 ## Spreadsheet Automation with the XLSX Skill
 
-Client reporting, project tracking, and financial summaries often require spreadsheet work. The **xlsx** skill automates data processing and report generation:
+Client reporting, project tracking, and financial summaries often require spreadsheet work. The **xlsx** skill automates data processing and report generation. Invoke it with `/xlsx` in your Claude Code session:
 
-```python
-# Generate client invoice spreadsheet automatically
-from xlsx_generator import create_invoice
-
-invoice_data = {
-    "client": "Acme Corp",
-    "items": [
-        {"description": "API Development", "hours": 24, "rate": 150},
-        {"description": "Integration Testing", "hours": 8, "rate": 150}
-    ]
-}
-
-create_invoice(invoice_data, output_path="./invoices/acme-march-2026.xlsx")
+```
+/xlsx
+Create an invoice spreadsheet for Acme Corp. Line items: API Development (24 hours at $150/hr) and Integration Testing (8 hours at $150/hr). Save to ./invoices/acme-march-2026.xlsx
 ```
 
-This approach transforms hours of spreadsheet work into seconds of automation.
+Claude generates the spreadsheet with proper formatting, formulas, and totals. What used to take 20–30 minutes of manual spreadsheet work completes in seconds.
 
 ## CI/CD Pipeline Generation
 

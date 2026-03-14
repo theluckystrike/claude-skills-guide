@@ -3,7 +3,11 @@ layout: default
 title: "How Agencies Use Claude Code for Client Projects"
 description: "Practical strategies for agencies integrating Claude Code into client workflows, with real examples and skill recommendations for deliverable-focused teams."
 date: 2026-03-14
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, agencies, workflow, productivity]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # How Agencies Use Claude Code for Client Projects
@@ -20,9 +24,15 @@ Create a project-specific setup:
 # Clone or initialize client project
 git clone git@github.com:agency/client-project-alpha.git
 cd client-project-alpha
+```
 
-# Initialize Claude Code with project-specific skills
-claude init --project-name "client-alpha-dashboard"
+Create a `CLAUDE.md` file to define project-specific context for Claude:
+
+```markdown
+# Project: client-alpha-dashboard
+Client: Alpha Corp
+Tech stack: React + TypeScript, Node.js API, PostgreSQL
+Follow the agency's component naming convention and use the shared design system.
 ```
 
 Agencies typically maintain a skill library optimized for their service offerings. The most commonly deployed skills across agency workflows include **frontend-design** for rapid UI prototyping, **pdf** for generating client deliverables, **tdd** for maintaining test coverage, and **supermemory** for capturing institutional knowledge.

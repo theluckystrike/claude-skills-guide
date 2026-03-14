@@ -3,9 +3,11 @@ layout: default
 title: "How Startups Use Claude Code to Reduce Engineering Costs"
 description: "Practical strategies for startups to cut engineering costs using Claude Code. Real examples with the pdf, tdd, frontend-design, and supermemory skills."
 date: 2026-03-14
-author: theluckystrike
-categories: [guides]
-tags: [claude-code, engineering-costs, startups, productivity, ai-development]
+categories: [use-cases]
+tags: [claude-code, claude-skills, startups, productivity, engineering-costs]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # How Startups Use Claude Code to Reduce Engineering Costs

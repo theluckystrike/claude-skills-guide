@@ -4,8 +4,8 @@ title: "MCP Tool Description Injection Attack Explained"
 description: "Understanding how malicious tool descriptions in Claude's Model Context Protocol can manipulate AI behavior. Practical examples and security guidance for developers."
 date: 2026-03-14
 categories: [security, mcp, claude-skills]
-tags: [mcp, security, claude-code, injection, tool-description]
-author: theluckystrike
+tags: [claude-code, claude-skills, mcp, security, injection]
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
