@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "OpenCLAW Skill Security Risks and Mitigations"
-description: "A practical guide to identifying and mitigating security vulnerabilities in OpenCLAW skills. Learn about prompt injection, code execution risks, and defense strategies for developers."
+description: "Identify and mitigate security vulnerabilities in OpenCLAW skills. Covers prompt injection, code execution risks, and defense strategies."
 date: 2026-03-14
 categories: [security, guides]
 tags: [openclaw, claude-skills, security, prompt-injection, code-execution]
@@ -233,5 +233,14 @@ Security in OpenCLAW skills requires defense in depth. No single mitigation elim
 When installing skills from the community, review the source code carefully. Skills like frontend-design and canvas-design generally pose lower risks since they primarily generate artifacts. However, any skill that processes external input or executes commands deserves scrutiny.
 
 The OpenCLAW ecosystem continues evolving, and new attack patterns will emerge. Stay informed about security advisories from the Claude community and regularly audit your deployed skills for vulnerabilities.
+
+
+## Related Reading
+
+- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
+- [How to Audit Claude Code MCP Server Permissions](/claude-skills-guide/how-to-audit-claude-code-mcp-server-permissions/)
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

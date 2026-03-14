@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Best Way to Customize Claude Code Output Format Style"
-description: "Learn how to customize Claude Code's output format and style for consistent, professional responses. Includes practical examples for configuring CLAUDE.md, skill metadata, and prompt patterns."
+description: "Customize Claude Code output format for consistent, professional responses. Configure CLAUDE.md, skill metadata, and prompt patterns."
 date: 2026-03-14
 author: theluckystrike
 permalink: /best-way-to-customize-claude-code-output-format-style/
@@ -205,3 +205,13 @@ Customizing Claude Code's output format and style is essential for productive hu
 
 The best approach combines project-level configuration with skill-specific templates, allowing you to maintain consistent standards while retaining flexibility for specialized tasks. Start with basic formatting rules and gradually refine based on your team's specific needs.
 {% endraw %}
+
+
+## Related Reading
+
+- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
