@@ -137,7 +137,7 @@ Integrate Claude Code into your pre-commit workflow to catch BUILD file issues b
 
 ```bash
 # In your pre-commit hook
-claude check --scope buck2 --files $(git diff --name-only --diff-filter=M | grep -E '\.md$|BUILD$|\.buckconfig$')
+claude --print "Check these Buck2-related files for issues: $(git diff --name-only --diff-filter=M | grep -E '\.md$|BUILD$|\.buckconfig$')"
 ```
 
 This validates Buck2-related changes without blocking commits.
@@ -148,7 +148,7 @@ In your CI pipeline, use Claude Code to analyze build health:
 
 ```bash
 # After build completion
-claude analyze-build --build-log=ci_build.log --output=build_report.md
+claude --print "Analyze the Buck2 build log in ci_build.log. Explain why certain targets took long to build, which dependencies contributed most to build times, and what changes could improve performance. Save the report to build_report.md"
 ```
 
 Claude Code can generate human-readable build reports that explain why certain targets take long to build, which dependencies contribute to build times, and what changes could improve performance.
