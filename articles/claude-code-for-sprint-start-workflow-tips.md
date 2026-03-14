@@ -15,7 +15,7 @@ score: 8
 
 Starting a new sprint with the right workflow can set the tone for your entire development cycle. Claude Code brings AI-assisted productivity to every phase of sprint planning and initiation, helping developers move from backlog refinement to code-ready status faster than traditional methods allow. For the companion end-of-sprint workflow, see [Claude Code for end-of-day commit workflow](/claude-skills-guide/claude-code-for-end-of-day-commit-workflow/).
 
-This guide covers practical patterns for using Claude Code at sprint start—backlog grooming, estimation sessions, test scaffolding, and standup preparation—while leveraging specific Claude skills to streamline each workflow step.
+This guide covers practical patterns for using Claude Code at sprint start—backlog grooming, estimation sessions, test scaffolding, and standup preparation—while using specific Claude skills to streamline each workflow step.
 
 ## Preparing Your Backlog Before the Sprint Begins
 

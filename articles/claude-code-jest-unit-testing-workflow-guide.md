@@ -13,7 +13,7 @@ permalink: /claude-code-jest-unit-testing-workflow-guide/
 
 # Claude Code Jest Unit Testing Workflow Guide
 
-Integrating Claude Code into your Jest testing workflow transforms how you write, maintain, and debug unit tests. This guide walks you through practical strategies for leveraging Claude's capabilities alongside Jest, whether you're working with JavaScript, TypeScript, or Node.js projects. For a broader look at test-driven development with Claude Code, see the [Claude TDD skill guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/).
+Integrating Claude Code into your Jest testing workflow transforms how you write, maintain, and debug unit tests. This guide walks you through practical strategies for using Claude's capabilities alongside Jest, whether you're working with JavaScript, TypeScript, or Node.js projects. For a broader look at test-driven development with Claude Code, see the [Claude TDD skill guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/).
 
 ## Setting Up Jest with Claude Code
 
@@ -234,7 +234,7 @@ Claude Code can help you set up automated test runs on pull requests by generati
 
 ## Key Takeaways
 
-Integrating Claude Code with Jest creates a powerful testing workflow. Write clear, specific requests when asking Claude to generate tests. Use the tdd skill for test-first development. Leverage Jest's mocking capabilities for isolated unit tests. Organize tests using describe blocks that mirror your code structure. Run tests in CI to catch regressions early.
+Integrating Claude Code with Jest creates a powerful testing workflow. Write clear, specific requests when asking Claude to generate tests. Use the tdd skill for test-first development. use Jest's mocking capabilities for isolated unit tests. Organize tests using describe blocks that mirror your code structure. Run tests in CI to catch regressions early.
 
 ## Related Reading
 

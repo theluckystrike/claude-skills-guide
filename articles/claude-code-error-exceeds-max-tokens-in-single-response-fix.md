@@ -98,7 +98,7 @@ Each request produces a focused response well within token limits. The developer
 
 ## Conclusion
 
-The "exceeds max tokens in single response" error in Claude Code is a manageable limitation rather than a fundamental blocker. By chunking requests, using context files strategically, adjusting response expectations, and leveraging Claude skills effectively, you can handle substantial development tasks without interruption. Remember that incremental development often produces better results anyway—smaller, focused requests typically yield more accurate and maintainable code.
+The "exceeds max tokens in single response" error in Claude Code is a manageable limitation rather than a fundamental blocker. By chunking requests, using context files strategically, adjusting response expectations, and using Claude skills effectively, you can handle substantial development tasks without interruption. Remember that incremental development often produces better results anyway—smaller, focused requests typically yield more accurate and maintainable code.
 
 
 ## Related Reading

@@ -62,7 +62,7 @@ Consider a feature like "add user authentication." Instead of one massive task, 
 
 Each task builds on the previous output but remains independently testable. [The **tdd** skill shines in this workflow](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)—invoke it after each task to ensure your tests pass before proceeding.
 
-## Leveraging Skills for Better Output
+## Using Skills for Better Output
 
 The skill system dramatically improves Claude Code's domain-specific output. Scoping your tasks to invoke relevant skills creates focused, expert-level results.
 

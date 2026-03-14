@@ -71,7 +71,7 @@ For extended sessions, Claude Code accumulates conversation history, which grows
 "Summarize our progress on the API integration, then clear the conversation history above this message."
 ```
 
-**Leverage the supermemory skill.** This skill helps maintain context across sessions without carrying forward unnecessary history, making it valuable for multi-day projects.
+**Use the supermemory skill.** This skill helps maintain context across sessions without carrying forward unnecessary history, making it valuable for multi-day projects.
 
 ## File Reading Optimization
 

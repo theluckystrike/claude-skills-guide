@@ -119,7 +119,7 @@ Consider creating package-specific prompts for common tasks. For instance, store
 
 Integrating Claude Code with Turborepo creates a powerful development environment where AI assistance understands your entire project ecosystem. The monorepo structure becomes an advantage rather than a complexity, as Claude Code navigates your packages intelligently.
 
-By setting up proper configuration files and leveraging Claude skills appropriately, your team gains an AI partner that comprehends your architecture, respects your package boundaries, and helps maintain consistency across your entire codebase.
+By setting up proper configuration files and using Claude skills appropriately, your team gains an AI partner that comprehends your architecture, respects your package boundaries, and helps maintain consistency across your entire codebase.
 
 
 ## Related Reading

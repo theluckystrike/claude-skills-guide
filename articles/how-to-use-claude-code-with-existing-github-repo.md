@@ -238,7 +238,7 @@ credentials.json
 
 ## Summary
 
-Using Claude Code with an existing GitHub repository involves cloning the project, initializing Claude Code within it, and leveraging your established git workflow. The key to success is starting with small, focused tasks and providing context about your project's conventions.
+Using Claude Code with an existing GitHub repository involves cloning the project, initializing Claude Code within it, and using your established git workflow. The key to success is starting with small, focused tasks and providing context about your project's conventions.
 
 Connect Claude Code to your repository, respect existing patterns, and gradually expand your AI-assisted workflow. The combination of your project's history and AI assistance unlocks productivity gains without disrupting established development processes.
 

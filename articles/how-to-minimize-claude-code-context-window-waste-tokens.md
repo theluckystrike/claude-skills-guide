@@ -75,7 +75,7 @@ The supermemory skill can store and retrieve context across sessions, reducing t
 /supermemory recall the API specification we discussed last week
 ```
 
-## Strategy 3: Leverage Summarization for Long Contexts
+## Strategy 3: Use Summarization for Long Contexts
 
 When you need to review extended conversation history or large documents, ask Claude to summarize rather than retain everything:
 

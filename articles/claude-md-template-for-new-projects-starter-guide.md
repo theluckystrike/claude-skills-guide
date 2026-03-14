@@ -201,7 +201,7 @@ Here is how a typical session might flow using templates and skills:
    /pdf generate API documentation from OpenAPI spec
 
 5. Remember context:
-   /supermemory save project architecture decisions
+   /supermemory store: [paste key architecture decisions here]
 ```
 
 ## Conclusion

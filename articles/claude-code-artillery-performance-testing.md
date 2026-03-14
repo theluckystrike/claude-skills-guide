@@ -158,7 +158,7 @@ Testing against localhost often masks real-world issues. Always test against sta
 
 Another mistake is ignoring think times. Users don't hammer APIs continuously—include realistic delays between requests to get accurate latency measurements.
 
-## Leveraging Claude Skills for Enhanced Testing
+## Using Claude Skills for Enhanced Testing
 
 Several Claude Code skills complement performance testing workflows:
 

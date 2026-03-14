@@ -44,7 +44,7 @@ Long-running agents need persistent context between sessions. The [**supermemory
 
 ```
 /supermemory store: Order #12345 processed for customer acme-corp, result: approved
-/supermemory search: previous orders for acme-corp
+/supermemory What are the previous orders for acme-corp?
 ```
 
 This lets agents maintain decision history and reference previous outputs without re-loading full context on every run.
@@ -64,7 +64,7 @@ CUSTOMER_ID="$2"
 EXTRACTED=$(claude -p "/pdf Extract order details (items, quantities, totals) from $PDF_FILE")
 
 # Step 2: Retrieve customer history
-HISTORY=$(claude -p "/supermemory search: previous orders for $CUSTOMER_ID")
+HISTORY=$(claude -p "/supermemory What are the previous orders for $CUSTOMER_ID?")
 
 # Step 3: Process with full context
 RESULT=$(claude -p "
@@ -93,7 +93,7 @@ Each step is discrete and testable. The tdd skill can generate tests for each st
 ```bash
 # Run pdf extraction and memory retrieval in parallel
 claude -p "/pdf Extract order details from $PDF_FILE" > /tmp/pdf-result.txt &
-claude -p "/supermemory search: customer history for $CUSTOMER_ID" > /tmp/mem-result.txt &
+claude -p "/supermemory What is the order history for $CUSTOMER_ID?" > /tmp/mem-result.txt &
 wait
 
 # Then process both results together
@@ -108,7 +108,7 @@ Approve or hold this order?")
 if [[ "$REQUEST_TYPE" == "document" ]]; then
     claude -p "/pdf Process $FILE"
 elif [[ "$REQUEST_TYPE" == "query" ]]; then
-    claude -p "/supermemory search: $QUERY"
+    claude -p "/supermemory $QUERY"
 else
     claude -p "Handle this general request: $REQUEST"
 fi

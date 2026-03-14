@@ -182,7 +182,7 @@ Audit automation actions through PagerDuty's integration logs. All MCP-triggered
 
 ## Conclusion
 
-The PagerDuty MCP server transforms incident management from reactive firefighting into proactive automation. By leveraging Claude's natural language understanding and reasoning capabilities, teams can respond faster, document more thoroughly, and build institutional knowledge that improves over time.
+The PagerDuty MCP server transforms incident management from reactive firefighting into proactive automation. By using Claude's natural language understanding and reasoning capabilities, teams can respond faster, document more thoroughly, and build institutional knowledge that improves over time.
 
 Start with simple automations like incident acknowledgment and resolution notes, then expand into more complex workflows as your confidence grows. The combination of PagerDuty's incident management with Claude's AI capabilities creates a powerful foundation for modern DevOps practices.
 

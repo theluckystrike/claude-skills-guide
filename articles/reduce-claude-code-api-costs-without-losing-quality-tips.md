@@ -71,7 +71,7 @@ const relevantFiles = [
 
 The **xlsx** skill exemplifies efficient context usage—it focuses on spreadsheet-specific logic without pulling in unrelated backend code. Apply this principle by organizing your skills to handle discrete, focused responsibilities.
 
-## Leverage Caching Strategies
+## Caching Strategies
 
 Claude Code supports caching for frequently accessed content. By caching common prompts, skill definitions, and frequently used code patterns, you reduce redundant API calls.
 

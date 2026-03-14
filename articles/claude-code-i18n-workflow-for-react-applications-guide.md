@@ -38,7 +38,7 @@ Create an `i18n.js` configuration file that defines your supported locales and l
 
 This file-based approach works well with Claude Code because you can easily share the entire `/locales` directory when prompting the AI, allowing it to understand your complete translation context.
 
-## Leveraging Claude Code for Translation Management
+## Using Claude Code for Translation Management
 
 Claude Code excels at generating consistent translation keys and managing the repetitive nature of i18n work. When working with Claude, provide it with your existing translation files and ask it to generate new keys following your naming conventions.
 

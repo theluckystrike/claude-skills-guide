@@ -78,7 +78,7 @@ For ISO27001, you'll need Statement of Applicability (SoA) documents. Use the sk
 
 The skill preserves formatting, making it easier to maintain consistent documentation across your compliance artifacts.
 
-## Leveraging supermemory for Audit Trails
+## Using supermemory for Audit Trails
 
 The **supermemory** skill provides persistent context across Claude sessions. For compliance, this becomes invaluable for maintaining audit trails without manual note-taking.
 

@@ -119,7 +119,7 @@ pytest -v --tb=short
 
 Keep these commands running in your terminal while Claude refactors. The immediate feedback loop is crucial for safe refactoring.
 
-## Leveraging the Code Analysis Skills
+## Using the Code Analysis Skills
 
 The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) proves valuable during refactoring by maintaining context about your codebase's architecture. When refactoring larger sections, supermemory helps Claude understand how components interact, preventing changes that break hidden dependencies.
 

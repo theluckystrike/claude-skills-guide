@@ -36,7 +36,7 @@ This replaces what would otherwise require multiple tools: a PDF parser, a sprea
 The **supermemory** skill demonstrates another advantage: persistent context across sessions. Traditional plugins maintain state in local storage or configuration files. SuperMemory skill surfaces relevant information from your previous conversations, pull requests, and notes—context that a static plugin cannot access.
 
 ```
-/supermemory find what we decided about the authentication flow in last week's code review
+/supermemory What did we decide about the authentication flow in last week's code review?
 ```
 
 For frontend development, the **frontend-design** skill provides component-level guidance that traditional syntax highlighting or snippet plugins cannot match. It understands design systems holistically:

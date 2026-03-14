@@ -67,7 +67,7 @@ Document your project organization. A clear directory map helps Claude navigate 
   /integration    # Integration tests
 ```
 
-## Leveraging Claude Skills in Your CLAUDE.md
+## Using Claude Skills in Your CLAUDE.md
 
 Claude Code works best when you integrate its specialized skills. The **tdd** skill enforces test-driven development workflows, generating comprehensive test coverage before any implementation begins. Reference this skill when you want Claude to follow TDD principles.
 

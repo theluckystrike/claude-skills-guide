@@ -120,7 +120,7 @@ Experienced developers often combine both tools strategically:
 1. **Start with ChatGPT** for initial concept exploration and quick questions
 2. **Switch to Claude Code** when implementing, refactoring, or debugging
 3. **Use skills** like `tdd` for structured workflows in Claude Code
-4. **Leverage MCP servers** for database queries, deployment, and CI/CD integration
+4. **Use MCP servers** for database queries, deployment, and CI/CD integration
 
 Example workflow for building a new feature:
 

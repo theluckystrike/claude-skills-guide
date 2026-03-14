@@ -124,7 +124,7 @@ For ongoing development, create a workflow where Claude generates tests for new 
 
 ## Conclusion
 
-Claude Code transforms unit test generation from a tedious task into an automated workflow. By leveraging skills like **tdd**, **xlsx**, **pdf**, **frontend-design**, and **supermemory**, you can generate comprehensive test suites that protect your code and document its behavior. The key is providing clear requirements, reviewing generated tests for quality, and integrating test generation into your development process.
+Claude Code transforms unit test generation from a tedious task into an automated workflow. By using skills like **tdd**, **xlsx**, **pdf**, **frontend-design**, and **supermemory**, you can generate comprehensive test suites that protect your code and document its behavior. The key is providing clear requirements, reviewing generated tests for quality, and integrating test generation into your development process.
 
 Start with small modules, refine your prompts based on results, and gradually expand to cover your entire codebase. Your future self will thank you when those tests catch a regression before it reaches production.
 

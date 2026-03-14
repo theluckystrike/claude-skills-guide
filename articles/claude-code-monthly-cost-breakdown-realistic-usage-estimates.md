@@ -137,7 +137,7 @@ Practical strategies for managing Claude Code costs include:
 
 Use **Sonnet by default**, reserving Opus for tasks that genuinely require its advanced reasoning. Most code generation and debugging works well with Sonnet at a fraction of the cost.
 
-Leverage **skill scoping** to load only relevant skills. Loading `/tdd` for a database migration adds unnecessary tokens. Invoke skills only when needed rather than loading them persistently.
+Use **skill scoping** to load only relevant skills. Loading `/tdd` for a database migration adds unnecessary tokens. Invoke skills only when needed rather than loading them persistently.
 
 Implement **session boundaries** for distinct tasks. Starting fresh sessions for unrelated projects avoids carrying unnecessary context between tasks, keeping each session lean.
 
@@ -147,7 +147,7 @@ Configure **usage caps** in the Claude Code settings. Setting a monthly spending
 
 For individual developers, the $30–60 monthly range delivers substantial value. You get full access to the skills ecosystem, generous context windows, and practical productivity gains that typically outweigh the cost. If you're building skills or automating workflows, the investment pays dividends through reusable knowledge.
 
-Heavy users and teams should monitor usage patterns closely and leverage the Teams tier's management features. The cost becomes negligible compared to development velocity gains when Claude Code handles routine tasks and accelerates complex ones.
+Heavy users and teams should monitor usage patterns closely and use the Teams tier's management features. The cost becomes negligible compared to development velocity gains when Claude Code handles routine tasks and accelerates complex ones.
 
 The key insight: your monthly cost correlates directly with how you use the tool. Understanding your usage pattern helps you budget accurately and optimize for your specific needs.
 
