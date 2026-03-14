@@ -33,7 +33,7 @@ The key issue is that Claude Code treats each invocation as potentially independ
 
 Several factors contribute to the repeated permission requests:
 
-**Tool-specific boundaries**: Different tools have separate permission scopes. The `read_file` tool might have permission to access your project, but `bash` commands require their own authorization. This separation ensures Claude can't automatically escalate from reading files to executing commands without explicit approval.
+**Tool-specific boundaries**: Different tools have separate permission scopes. The `Read` tool might have permission to access your project, but `Bash` commands require their own authorization. This separation ensures Claude can't automatically escalate from reading files to executing commands without explicit approval.
 
 **MCP server interactions**: When using skills like `pdf` to manipulate documents or `supermemory` for knowledge retrieval, each MCP server call triggers its own permission check. The more specialized skills you integrate, the more permission boundaries exist.
 

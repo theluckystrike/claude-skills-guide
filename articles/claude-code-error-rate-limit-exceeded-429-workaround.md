@@ -34,9 +34,6 @@ When you encounter the rate limit error, these solutions restore your workflow i
 The simplest solution is often the most effective. Rate limits in Claude Code are typically time-based, meaning they reset after a short period. A 30-second to 2-minute wait usually clears the restriction:
 
 ```bash
-# Check current rate limit status
-claude --status
-
 # After waiting, retry your last operation
 claude "continue where we left off"
 ```
@@ -81,14 +78,13 @@ def load_checkpoint(task_id):
 
 Review your skill configurations and reduce unnecessary tool calls:
 
+In the front matter of your skill file (`~/.claude/skills/your-skill.md`), only list tools the skill actually needs:
+
 ```yaml
-# In your skill configuration
-tools:
-  - Read
-  - write_file
-  - bash
-# Remove unused tools to reduce request volume
+tools: [Read, Write]
 ```
+
+Omitting unused tools like `Bash` reduces the number of potential tool calls the skill can make.
 
 ## Preventing Future Rate Limit Issues
 
@@ -96,18 +92,14 @@ tools:
 
 When creating or using skills, design them with rate limits in mind:
 
-```yaml
+```markdown
 ---
 name: batch-processor
-description: Process files in rate-limited batches
-tools: [Read, write_file]
-rate_limit:
-  max_requests_per_minute: 20
-  batch_size: 5
-  cooldown_seconds: 10
+description: Process files in batches. Always pause between batches and confirm before proceeding to the next group to avoid hitting rate limits.
+tools: [Read, Write]
 ---
 
-# This skill automatically paces its operations
+Process files in groups of 5. After each group, pause and report results before continuing.
 ```
 
 ### Use Caching Strategies
@@ -126,10 +118,7 @@ claude "show me the cached TODO results"
 
 Keep track of your request patterns to identify when you're approaching limits:
 
-```bash
-# Add to your workflow
-alias claude-stats='claude --metrics | grep -E "requests|rate|limit"'
-```
+Track your session length and number of operations manually, or check your usage through the Anthropic console at console.anthropic.com.
 
 ## Alternative Approaches for Heavy Workloads
 
@@ -137,7 +126,7 @@ When your project requires sustained high-volume interactions, consider these al
 
 **Use offline-capable skills** that don't require constant API calls. The pdf skill and docx skill can process documents locally once the initial context is loaded, reducing your rate-limited requests.
 
-**use local processing** where possible. Skills like tdd skill that generate test files can work in bursts followed by local compilation and verification.
+**Use local processing** where possible. Skills like tdd skill that generate test files can work in bursts followed by local compilation and verification.
 
 **Batch your requests** into larger, less frequent operations. Instead of 100 small requests, consolidate into 10 larger ones:
 
@@ -151,27 +140,9 @@ claude "and this one"
 claude "fix these three functions: [list them all at once]"
 ```
 
-## Configuring Claude Code for Better Rate Management
+## Designing Workflows for Better Rate Management
 
-Several configuration options help manage rate limits:
-
-```json
-// claude-config.json
-{
-  "rateLimits": {
-    "maxRetries": 3,
-    "retryDelay": 60,
-    "backoffMultiplier": 2,
-    "enableRateLimitWarnings": true
-  },
-  "session": {
-    "checkpointInterval": 50,
-    "autoSave": true
-  }
-}
-```
-
-Apply this configuration to enable automatic retry with exponential backoff and session checkpointing.
+Structure your sessions to minimize unnecessary requests. Start with a clear plan before opening Claude Code, batch related questions into single messages, and avoid running multiple Claude Code sessions simultaneously. These habits reduce your overall request volume without requiring any configuration changes.
 
 ## Summary
 

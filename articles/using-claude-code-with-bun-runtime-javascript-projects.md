@@ -13,7 +13,7 @@ permalink: /using-claude-code-with-bun-runtime-javascript-projects/
 
 # Using Claude Code with Bun Runtime for JavaScript Projects
 
-Bun has emerged as a compelling alternative to Node.js, offering a unified JavaScript runtime that handles scripts, servers, and testing with remarkable speed. When paired with Claude Code, you get an AI-assisted development environment that leverages Bun's fast startup times and native TypeScript support. This combination streamlines everything from quick prototypes to production applications.
+Bun has emerged as a compelling alternative to Node.js, offering a unified JavaScript runtime that handles scripts, servers, and testing with remarkable speed. When paired with Claude Code, you get an AI-assisted development environment that uses Bun's fast startup times and native TypeScript support. This combination streamlines everything from quick prototypes to production applications.
 
 ## Why Bun and Claude Code Work Well Together
 
@@ -71,7 +71,7 @@ This code runs without configuration, transpilation, or type declarations. Claud
 
 ### Building REST APIs
 
-Bun serves HTTP requests with its built-in `Bun.serve()` function. Claude Code can generate complete API implementations that leverage this capability:
+Bun serves HTTP requests with its built-in `Bun.serve()` function. Claude Code can generate complete API implementations that use this capability:
 
 ```typescript
 const server = Bun.serve({

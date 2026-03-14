@@ -138,7 +138,7 @@ Certain scenarios call for complete isolation:
 
 - **Always redact** secrets, API keys, and credentials before sharing code
 - **Use local-only mode** when available to keep code on your machine
-- **Leverage skills** like tdd and supermemory for security-focused workflows
+- **Use skills** like tdd and supermemory for security-focused workflows
 - **Keep secrets local** — Claude is a tool for guidance, not secret storage
 - **Review before sharing** — develop a habit of checking what you're pasting
 - **Document your boundaries** — establish clear rules for your team

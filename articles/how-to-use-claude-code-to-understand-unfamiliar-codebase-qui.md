@@ -48,7 +48,7 @@ If you need to understand how authentication works, ask:
 Find and explain the authentication module in this codebase. Show me the main files involved, the flow from login to session management, and any security considerations.
 ```
 
-Claude will locate the relevant files and explain them in context. You can then use the `read_file` tool to examine specific files it mentions.
+Claude will locate the relevant files and explain them in context. You can then use the `Read` tool to examine specific files it mentions.
 
 ### Identifying Dependencies and Relationships
 
@@ -192,7 +192,7 @@ This reveals both the code structure and common pitfalls.
 The file operations tools become powerful when combined with Claude's analysis:
 
 1. **Search for patterns**: Ask Claude to find all files matching a criteria
-2. **Examine specific files**: Use read_file on the most relevant ones
+2. **Examine specific files**: Use `Read` on the most relevant ones
 3. **Create summaries**: Have Claude write a summary of key files to a document
 
 For example:

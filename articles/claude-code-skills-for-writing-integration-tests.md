@@ -13,7 +13,7 @@ permalink: /claude-code-skills-for-writing-integration-tests/
 
 # Claude Code Skills for Writing Integration Tests
 
-Integration tests verify that different components of your application work together correctly. Unlike unit tests that isolate individual functions, integration tests exercise real workflows across modules, databases, APIs, and external services. Claude Code offers several skills that accelerate writing and maintaining integration tests, making your test suite more reliable and easier to maintain. For an overview of the broader testing landscape, visit the [tutorials hub](/claude-skills-guide/getting-started-hub/).
+Integration tests verify that different components of your application work together correctly. Unlike unit tests that isolate individual functions, integration tests exercise real workflows across modules, databases, APIs, and external services. Claude Code offers several skills that accelerate writing and maintaining integration tests, making your test suite more reliable and easier to maintain. For an overview of the testing ecosystem, visit the [tutorials hub](/claude-skills-guide/getting-started-hub/).
 
 ## Why Integration Tests Matter
 

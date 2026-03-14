@@ -75,15 +75,7 @@ The **canvas-design** skill helps create visual assets and presentations without
 
 The **canvas-design** skill serves developers building creative applications or needing unique visual assets. Meanwhile, the **pptx** skill streamlines client presentations—something freelancers do frequently.
 
-Installing skills is straightforward:
-
-```
-# Install a skill from the registry
-claude skill install frontend-design
-
-# Or from a specific source
-claude skill install github:username/skill-name
-```
+Adding skills is straightforward—place the skill's markdown file in your `.claude/` directory and Claude Code picks it up automatically on the next session.
 
 ## When Claude Code Might Not Be Worth It
 

@@ -159,7 +159,7 @@ Generate a report detailing your API structure, request/response schemas, and us
 
 - **Use `asyncpg` instead of `psycopg2`** for database connections to maintain async flow
 - **Implement connection pooling** with `asyncpg.create_pool`
-- **Leverage `lru_cache` from functools** for expensive computations
+- **Use `lru_cache` from functools** for expensive computations
 - **Use Pydantic models** for automatic request validation and serialization
 - **Enable compression** with `from fastapi.middleware.gzip import GZipMiddleware`
 
