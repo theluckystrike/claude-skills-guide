@@ -6,7 +6,7 @@ description: "Discover how Model Context Protocol (MCP) servers dramatically exp
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, mcp, mcp-servers, model-context-protocol, integrations, claude-skills]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /how-mcp-servers-extend-claude-code-capabilities-explained/
 reviewed: true
 score: 7

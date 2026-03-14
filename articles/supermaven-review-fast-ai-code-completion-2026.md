@@ -2,9 +2,9 @@
 
 layout: default
 title: "SuperMaven Review: Fast AI Code Completion in 2026"
-description: "A comprehensive review of SuperMaven AI code completion tool. Learn about its features, performance, and how it compares to Claude Code for your."
+description: "A comprehensive review of SuperMaven AI code completion tool. Learn about its features, performance, and how it compares to Claude Code for your development workflow."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /supermaven-review-fast-ai-code-completion-2026/
 reviewed: true
 categories: [guides]
@@ -166,6 +166,63 @@ def generate_docs(file_path):
         capture_output=True, text=True
     )
     return result.stdout
+```
+
+### Test Generation Skill
+
+Create a skill that automatically generates tests for code completed with SuperMaven:
+
+```python
+# claude-skills/auto-test/main.py
+import subprocess
+import json
+import os
+
+def generate_tests(file_path):
+    """Generate unit tests using pytest and AI analysis"""
+    filename = os.path.basename(file_path)
+    module_name = os.path.splitext(filename)[0]
+    
+    # Use Claude Code to generate tests
+    result = subprocess.run(
+        ["claude", "-p", f"Generate pytest tests for {file_path}"],
+        capture_output=True, text=True
+    )
+    
+    test_filename = f"test_{module_name}.py"
+    with open(test_filename, 'w') as f:
+        f.write(result.stdout)
+    
+    return f"Generated tests in {test_filename}"
+```
+
+### Completion Context Skill
+
+Create a skill that analyzes what SuperMaven completes and maintains context:
+
+```bash
+#!/bin/bash
+# claude-skills/completion-tracker/main.sh
+
+# Track completion patterns across the codebase
+COMPLETION_LOG="$HOME/.claude/completion-history.json"
+
+log_completion() {
+    local file="$1"
+    local completion_type="$2"
+    local timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+    
+    jq --arg file "$file" \
+       --arg type "$completion_type" \
+       --arg ts "$timestamp" \
+       '.completions += [{"file": $file, "type": $type, "timestamp": $ts}]' \
+       "$COMPLETION_LOG" > tmp.json && mv tmp.json "$COMPLETION_LOG"
+}
+
+analyze_patterns() {
+    jq '[.completions[].type] | group_by(.) | map({type: .[0], count: length}) | sort_by(.count) | reverse' \
+       "$COMPLETION_LOG"
+}
 ```
 
 ## Performance Considerations
