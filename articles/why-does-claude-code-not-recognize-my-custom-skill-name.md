@@ -59,7 +59,7 @@ Claude expects a flat directory structure or a specific organizational pattern. 
 
 ## Skill Name Conflicts
 
-Sometimes your skill exists but gets overshadowed by a built-in skill or another custom skill with the same name. Built-in skills like `pdf`, `pptx`, `docx`, `xlsx`, `tdd`, and `supermemory` take precedence. If you create a skill named `pdf` expecting it to override the built-in, you may encounter unexpected behavior.
+Sometimes your skill exists but gets overshadowed by a built-in skill or another custom skill with the same name. Built-in skills like `pdf`, `pptx`, `docx`, `xlsx`, [`tdd`](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/), and `supermemory` take precedence. If you create a skill named `pdf` expecting it to override the built-in, you may encounter unexpected behavior.
 
 To check for conflicts, list all available skills in your directory:
 
@@ -127,5 +127,12 @@ If Claude Code doesn't recognize your custom skill name, systematically check: f
 With your skill properly configured, you can invoke it with `/skill-name` and Claude will respond with your custom guidance. Skills like `frontend-design`, `pdf`, `tdd`, and `supermemory` demonstrate how powerful well-registered skills can be for specialized tasks.
 
 ---
+
+## Related Reading
+
+- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/articles/why-is-my-claude-skill-not-showing-up-fix-guide/) — If the skill isn't recognized even after registration, this guide addresses the skill list display issues
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Ensure your skill name and metadata follow the correct format to guarantee recognition by Claude Code
+- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/articles/how-do-i-debug-a-claude-skill-that-silently-fails/) — Use these debugging techniques when your skill is recognized but not behaving as expected
+- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore skill registration, naming conventions, and troubleshooting patterns across the Claude ecosystem
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

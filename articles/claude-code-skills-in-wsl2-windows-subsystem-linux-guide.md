@@ -114,7 +114,7 @@ EOF
 
 ### The TDD Skill
 
-For test-driven development, create the **tdd** skill:
+For test-driven development, create the [**tdd** skill](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/):
 
 ```bash
 mkdir -p ~/.claude/skills/tdd
@@ -259,5 +259,12 @@ iostat -x 1
 Running Claude Code skills in WSL2 combines the best of both worlds: Windows as your host OS with a full Linux development environment. Skills like **pdf**, **xlsx**, **tdd**, **frontend-design**, and **supermemory** function identically to their native Linux counterparts once properly installed.
 
 The key steps are installing Claude Code within WSL2, creating the skills directory structure, adding skill files, and invoking them with slash commands. With this setup, you have a seamless development experience that leverages WSL2's capabilities while maintaining access to Claude Code's powerful skill ecosystem.
+
+## Related Reading
+
+- [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/articles/claude-code-dotfiles-management-and-skill-sync-workflow/) — Sync your Claude Code skills and dotfiles from WSL2 to other environments consistently
+- [Claude Code GitHub Codespaces Cloud Development Workflow](/claude-skills-guide/articles/claude-code-github-codespaces-cloud-development-workflow/) — Compare the WSL2 local setup with GitHub Codespaces cloud development for different project needs
+- [Claude Code With Docker Container Skill Setup Guide](/claude-skills-guide/articles/claude-code-with-docker-container-skill-setup-guide/) — Extend your WSL2 environment with Docker container skills for isolated development workflows
+- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational Claude Code installation and skill setup patterns across all platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
