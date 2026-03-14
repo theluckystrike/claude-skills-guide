@@ -3,7 +3,11 @@ layout: default
 title: "Claude Code Stuck in Infinite Loop: How to Interrupt"
 description: "Learn how to break out of infinite loops in Claude Code when your AI assistant gets stuck. Practical solutions for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+categories: [troubleshooting]
+tags: [claude-code, claude-skills, troubleshooting, debugging]
+reviewed: true
+score: 7
 permalink: /claude-code-stuck-infinite-loop-how-to-interrupt/
 ---
 
