@@ -2,10 +2,11 @@
 
 layout: default
 title: "How Open Source Maintainers Use Claude Code in 2026"
-description: "Discover practical workflows and strategies open source maintainers use to leverage Claude Code for issue triaging, documentation, code reviews, and community management."
+description: "Discover practical workflows and strategies open source maintainers use to leverage Claude Code for issue triaging, documentation, code reviews, and."
 date: 2026-03-14
 author: theluckystrike
 permalink: /how-open-source-maintainers-use-claude-code-2026/
+categories: [guides]
 ---
 
 # How Open Source Maintainers Use Claude Code in 2026
@@ -154,5 +155,12 @@ Context limitations mean Claude Code may miss historical decisions not documente
 Claude Code has transformed open source maintenance from an overwhelming task into something sustainable. By automating routine work—issue triage, documentation updates, style checking—maintainers focus their limited time on what matters: architectural decisions, community building, and writing code. The key is combining skills strategically: supermemory for knowledge management, tdd for test quality, docx for documentation, and chaining them into complete workflows.
 
 The maintainers who thrive in 2026 are not those who work hardest, but those who delegate effectively to AI assistants while maintaining human connection with their communities.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

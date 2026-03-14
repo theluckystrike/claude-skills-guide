@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Opencode AI Terminal Editor Review 2026: Claude Code Dominates"
+title: "Opencode AI Terminal Editor Review 2026: Claude Code."
 description: "A comprehensive review of opencode AI terminal editors in 2026, focusing on Claude Code's skills and features with practical examples for developers."
 date: 2026-03-14
 author: theluckystrike
 permalink: /opencode-ai-terminal-editor-review-2026/
+categories: [guides]
 ---
 
 {% raw %}
@@ -98,3 +99,10 @@ Claude Code has established itself as the premier opencode AI terminal editor in
 
 For developers seeking the most capable AI terminal editor, Claude Code's combination of extensible skills, robust context management, and practical functionality makes it the clear choice in 2026.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

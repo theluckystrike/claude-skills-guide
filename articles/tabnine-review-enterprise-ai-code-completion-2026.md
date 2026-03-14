@@ -5,6 +5,7 @@ description: "A comprehensive review of Tabnine's enterprise AI code completion 
 date: 2026-03-14
 author: theluckystrike
 permalink: /tabnine-review-enterprise-ai-code-completion-2026/
+categories: [guides]
 ---
 {% raw %}
 # Tabnine Review: Enterprise AI Code Completion in 2026
@@ -216,3 +217,10 @@ Tabnine has come a long way since its early days as a simple autocomplete plugin
 
 When used alongside Claude Code's agentic AI capabilities, teams can achieve unprecedented productivity gains—Tabnine handles the micro-level completions while Claude Code tackles larger architectural and implementation challenges. Together, these tools represent the cutting edge of AI-enhanced software development.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
