@@ -110,7 +110,7 @@ async def make_user_request(user_id: str, endpoint: str):
     return await call_api(endpoint, access_token)
 ```
 
-This approach is essential when building integrations that access user data from services like GitHub, Google Workspace, or Slack. The `slack-gif-creator` skill demonstrates this pattern when creating animations that require workspace authentication.
+This approach is essential when building integrations that access user data from services like GitHub, Google Workspace, or Slack. Custom skills that integrate with Slack or Google Workspace demonstrate this pattern when they require OAuth tokens for API access.
 
 ## Secret Scanning and Prevention
 

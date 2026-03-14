@@ -12,9 +12,9 @@ score: 7
 
 # Claude Code Next.js Image Optimization Guide
 
-Image optimization in Next.js combines the framework's built-in Image component with modern formats like WebP and AVIF. [When you pair Next.js image handling with Claude Code's CLI capabilities](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), you can automate optimization workflows, validate image implementations, and maintain consistent performance across your application.
+Image optimization in Next.js combines the framework's built-in Image component with modern formats like WebP and AVIF. [When you pair Next.js image handling with Claude Code's CLI capabilities](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), you can automate optimization workflows, validate image implementations, and maintain consistent performance across your application.
 
-[practical approaches for developers using Claude Code to work with Next.js](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) to work with Next.js image optimization.
+This guide covers practical approaches for developers using Claude Code to work with Next.js image optimization.
 
 ## Next.js Image Component Basics
 
@@ -236,9 +236,9 @@ Next.js image optimization works best when you understand the component's key fe
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Claude Code React Router v7 Navigation Guide](/claude-skills-guide/articles/claude-code-react-router-v7-navigation-guide/)
-- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/articles/vibe-coding-with-claude-code-complete-guide-2026/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code React Router v7 Navigation Guide](/claude-skills-guide/claude-code-react-router-v7-navigation-guide/)
+- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/vibe-coding-with-claude-code-complete-guide-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
