@@ -24,19 +24,19 @@
 ## Quick links
 
 **New to Claude Code?** Start here:
-- [What Are Claude Skills and How to Use Them](https://theluckystrike.github.io/claude-skills-guide/what-are-claude-skills-and-how-to-use-them/)
-- [How to Install Claude Code Skills Step by Step](https://theluckystrike.github.io/claude-skills-guide/how-to-install-claude-code-skills-step-by-step/)
+- [What Is Claude Code and Why Developers Love It in 2026](https://theluckystrike.github.io/claude-skills-guide/what-is-claude-code-and-why-developers-love-it-2026/)
+- [Claude Code for Beginners: Getting Started 2026](https://theluckystrike.github.io/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Code Skills to Install First 2026](https://theluckystrike.github.io/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
 
 **Looking for comparisons?**
-- [Claude Code vs Cursor 2026 Detailed Comparison](https://theluckystrike.github.io/claude-skills-guide/claude-code-vs-cursor-2026-detailed-comparison/)
-- [Claude Code vs GitHub Copilot Workspace Features](https://theluckystrike.github.io/claude-skills-guide/claude-code-vs-github-copilot-workspace-features/)
-- [Claude Code Pricing vs Cursor Pricing Breakdown](https://theluckystrike.github.io/claude-skills-guide/claude-code-pricing-vs-cursor-pricing-breakdown/)
+- [Claude Code vs Cursor AI Editor Comparison 2026](https://theluckystrike.github.io/claude-skills-guide/claude-cowork-vs-cursor-ai-editor-comparison-2026/)
+- [Claude Code vs GitHub Copilot Workspace 2026](https://theluckystrike.github.io/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/)
+- [Claude Code vs Windsurf for AI Development](https://theluckystrike.github.io/claude-skills-guide/claude-code-vs-windsurf-for-ai-development/)
 
 **Need to fix something?**
-- [How to Debug Claude Code Skill Not Working](https://theluckystrike.github.io/claude-skills-guide/how-to-debug-claude-code-skill-not-working/)
-- [Claude Code Timeout Errors How to Handle Fix](https://theluckystrike.github.io/claude-skills-guide/claude-code-timeout-errors-how-to-handle-fix/)
-- [Claude Code Connection Drops Troubleshooting Guide](https://theluckystrike.github.io/claude-skills-guide/claude-code-connection-drops-troubleshooting-guide/)
+- [Claude Code Crashes When Loading Skill: Debug Guide](https://theluckystrike.github.io/claude-skills-guide/claude-code-crashes-when-loading-skill-debug-steps/)
+- [Claude Code Skill Timeout Error: How to Increase the Limit](https://theluckystrike.github.io/claude-skills-guide/claude-code-skill-timeout-error-how-to-increase-the-limit/)
+- [Claude Code Error Connection Timeout During Task Fix](https://theluckystrike.github.io/claude-skills-guide/claude-code-error-connection-timeout-during-task-fix/)
 
 ## How to use this guide
 
