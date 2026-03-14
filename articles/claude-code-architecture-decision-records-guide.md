@@ -6,7 +6,7 @@ description: "A practical guide to implementing Architecture Decision Records in
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, claude-code, architecture, adr, documentation, decision-records]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /claude-code-architecture-decision-records-guide/
 reviewed: true
 score: 7
