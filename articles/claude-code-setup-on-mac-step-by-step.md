@@ -19,16 +19,22 @@ Getting Claude Code running on your Mac unlocks a powerful AI assistant directly
 Before you begin, ensure you have:
 
 - **macOS 12.0 or later** — Claude Code requires a relatively recent macOS version
-- **Homebrew** — for easy package management
+- **Node.js 18+** — required for the Claude Code CLI
 - **An Anthropic account** — sign up at anthropic.com if you haven't already
 - **API key** — obtain from your Anthropic console
 
-## Installing Claude Code
-
-The recommended installation method uses Homebrew. Open your terminal and run:
+Check Node.js is available:
 
 ```bash
-brew install anthropic-cli
+node --version
+```
+
+## Installing Claude Code
+
+Install Claude Code globally using npm:
+
+```bash
+npm install -g @anthropic-ai/claude-code
 ```
 
 This installs the `claude` command globally. Verify the installation:
@@ -56,27 +62,18 @@ source ~/.zshrc
 
 For better security, consider using a `.env` file with a tool like `direnv`, or use macOS Keychain to store your API key securely.
 
-## Initial Configuration
+## Project-Level Configuration
 
-Create a configuration file to customize Claude's behavior:
+Claude Code supports project-specific instructions via a `CLAUDE.md` file in your project root. This file describes your project to Claude at the start of each session:
 
-```bash
-mkdir -p ~/.config/claude
-touch ~/.config/claude/config.json
+```markdown
+# Project Context
+This is a TypeScript React application using Vite.
+- Prefer functional components with hooks
+- Use async/await over promise chains
 ```
 
-Add your preferred settings to `config.json`:
-
-```json
-{
-  "model": "claude-sonnet-4-20250514",
-  "max_tokens": 4096,
-  "temperature": 0.7,
-  "system_prompt": "You are a helpful coding assistant."
-}
-```
-
-The `model` setting controls which Claude model handles your requests. The `system_prompt` defines Claude's baseline behavior in your sessions.
+When you start Claude from that directory, it reads `CLAUDE.md` automatically and applies those conventions throughout your session.
 
 ## Your First Conversation
 
@@ -106,16 +103,6 @@ This outputs the result without entering interactive mode—useful for scripts a
 
 ## Integrating with Your Development Workflow
 
-### Running Claude on Specific Files
-
-Pass file paths as arguments for context-aware assistance:
-
-```bash
-claude --file src/app.py "Refactor this function to use list comprehension"
-```
-
-Claude reads the file and provides targeted suggestions.
-
 ### Using Claude with Git
 
 Combine Claude with git for intelligent code reviews:
@@ -132,7 +119,6 @@ Speed up your workflow with shell aliases in `~/.zshrc`:
 
 ```bash
 alias claude-review="git diff | claude"
-alias claude-explain="claude --file"
 ```
 
 Reload your shell, then use `claude-review` to instantly get code review feedback.
