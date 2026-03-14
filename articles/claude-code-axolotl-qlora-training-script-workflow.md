@@ -34,12 +34,13 @@ Each of these steps presents opportunities for Claude Code skills to reduce fric
 
 ## Setting Up Your Claude Code Environment
 
-The first step is ensuring Claude Code is installed and configured with relevant skills. You can verify your installation and check available skills:
+The first step is ensuring Claude Code is installed and configured with relevant skills. You can verify your installation:
 
 ```bash
 claude --version
-claude skills list
 ```
+
+To see which skills are available, check your `.claude/skills/` directory where skill Markdown files are stored.
 
 For Axolotl workflows, you'll want skills that provide expertise in YAML configuration, shell scripting, and Python training scripts. If you don't have an Axolotl-specific skill, you can create one or use the general-purpose coding skills that already ship with Claude Code.
 

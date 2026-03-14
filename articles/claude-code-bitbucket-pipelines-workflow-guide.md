@@ -69,21 +69,13 @@ Consider a frontend project using React. You might want Claude Code to generate 
           COMPONENT_NAME: "UserCard"
 ```
 
-The **frontend-design** skill enhances this workflow by providing specialized templates for common UI patterns. Install it within your pipeline using:
-
-```bash
-claude skill install frontend-design
-```
+The **frontend-design** skill enhances this workflow by providing specialized templates for common UI patterns. Skills are Markdown files placed in your `.claude/skills/` directory — commit a `frontend-design.md` skill file to your repository so it is available in the pipeline.
 
 This skill understands modern design systems and can generate components that follow established patterns.
 
 ## Running Automated Tests with Claude Code
 
-Testing represents another area where Claude Code adds significant value. The **tdd** skill provides test-driven development workflows that integrate smoothly with Bitbucket Pipelines. Install it with:
-
-```bash
-claude skill install tdd
-```
+Testing represents another area where Claude Code adds significant value. The **tdd** skill provides test-driven development workflows that integrate smoothly with Bitbucket Pipelines. Add a `tdd.md` skill file to your `.claude/skills/` directory and commit it to your repository.
 
 Configure a pipeline step to generate and run tests:
 
@@ -108,7 +100,6 @@ Documentation often falls behind code changes in fast-moving projects. Integrate
     - step:
         name: Generate API Documentation
         script:
-          - claude skill install pdf
           - claude doc generate --format pdf --output docs/api.pdf
         artifacts:
           - docs/api.pdf
@@ -118,11 +109,7 @@ This step runs after your build completes, generating a PDF documentation file f
 
 ## Memory and Context Management
 
-For teams working across multiple repositories or long-lived projects, maintaining context becomes challenging. The **supermemory** skill addresses this by enabling persistent memory across Claude Code sessions:
-
-```bash
-claude skill install supermemory
-```
+For teams working across multiple repositories or long-lived projects, maintaining context becomes challenging. The **supermemory** skill addresses this by enabling persistent memory across Claude Code sessions. Place a `supermemory.md` skill file in your `.claude/skills/` directory and commit it to your repository.
 
 Configure your pipeline to load project context before running tasks:
 
@@ -149,8 +136,6 @@ pipelines:
         name: Install Dependencies
         script:
           - npm install
-          - claude skill install tdd
-          - claude skill install frontend-design
         caches:
           - npm
     
@@ -174,7 +159,6 @@ pipelines:
     - step:
         name: Generate Documentation
         script:
-          - claude skill install pdf
           - claude doc generate --format pdf
 
   branches:

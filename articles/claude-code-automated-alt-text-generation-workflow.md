@@ -113,13 +113,9 @@ The hook script can invoke Claude Code to analyze new images and automatically p
 
 The Claude Code skills ecosystem includes several vision-focused tools worth exploring. Skills like `describe-image` or `vision-assistant` provide specialized prompts optimized for different description scenarios.
 
-Installing a vision skill typically works like this:
+Skills in Claude Code are added by placing a Markdown skill file in your `.claude/skills/` directory. A `vision-assistant.md` skill file defines the prompts and behavior for image description tasks.
 
-```bash
-claude skill install vision-assistant
-```
-
-After installation, invoke the skill with specific guidance:
+After creating your skill file, invoke the skill with specific guidance:
 
 ```
 /vision-assistant --alt-text --compact --context:blog-post
