@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Handle Failures in Multi-Agent Pipelines"
-description: "Learn robust error handling strategies for multi-agent pipelines with Claude Code. Discover retry patterns, fallback mechanisms, and best practices for building resilient agentic workflows."
+description: "Learn robust error handling strategies for multi-agent pipelines with Claude Code. Discover retry patterns, fallback mechanisms, and best practices for."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, multi-agent, error-handling, pipelines, resilience]
@@ -152,3 +152,10 @@ Building resilient multi-agent pipelines with Claude Code requires thinking abou
 By incorporating these patterns into your Claude Code skills and pipeline designs, you'll create automation that handles the inevitable challenges of production environments with resilience and grace.
 
 Remember: the goal isn't to eliminate failures—that's impossible in complex systems—but to handle them in ways that minimize disruption and maximize recoverability.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

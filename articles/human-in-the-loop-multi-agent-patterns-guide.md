@@ -5,6 +5,7 @@ description: "Learn how to implement human-in-the-loop patterns with Claude Code
 date: 2026-03-14
 author: theluckystrike
 permalink: /human-in-the-loop-multi-agent-patterns-guide/
+categories: [guides]
 ---
 
 {% raw %}
@@ -217,3 +218,10 @@ The patterns in this guide provide foundations you can adapt to your specific us
 
 Remember: the goal isn't to minimize human involvement, but to optimize it. The best HITL systems make human oversight feel natural rather than obstructive—empowering both AI capabilities and human expertise to shine.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
