@@ -1,279 +1,225 @@
 ---
 layout: default
 title: "Claude Code Event Driven API Design Guide"
-description: "Master event-driven API architecture with Claude Code. Learn pub/sub patterns, webhook integration, message queues, and practical implementation with Claude skills."
+description: "Build event-driven APIs with Claude Code: patterns for webhooks, message queues, real-time updates, and asynchronous workflows."
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, event-driven, api-design, webhooks, message-queues, architecture]
+categories: [guides]
+tags: [claude-code, event-driven, api-design, webhooks, message-queues]
 author: theluckystrike
-reviewed: true
-score: 7
 permalink: /claude-code-event-driven-api-design-guide/
 ---
 
 # Claude Code Event Driven API Design Guide
 
-Event-driven architecture transforms how APIs handle asynchronous operations, real-time updates, and distributed systems. When paired with Claude Code and its specialized skills, you can design, implement, and test event-driven APIs with remarkable efficiency. This guide walks through practical patterns and skill integration for building robust event-driven systems.
+Event-driven architecture has become essential for building responsive, scalable APIs. Whether you're handling webhooks from external services, processing background jobs, or streaming real-time updates to clients, Claude Code provides powerful patterns for implementing these systems effectively. This guide shows you how to design event-driven APIs that remain maintainable as complexity grows.
 
-## Understanding Event-Driven API Patterns
+## Understanding Event-Driven Patterns in APIs
 
-Event-driven APIs decouple producers from consumers, enabling systems to scale independently and handle unpredictable workloads. The core patterns include webhooks for HTTP-based push notifications, message queues for reliable delivery, and server-sent events for real-time client updates.
+Traditional request-response APIs block while waiting for operations to complete. Event-driven APIs invert this model by returning immediately and processing work asynchronously. This approach shines when dealing with slow operations, third-party integrations, or systems that need to notify multiple consumers.
 
-Consider an e-commerce platform where inventory changes trigger multiple downstream actions. Instead of synchronous API calls that block until each service responds, an event-driven approach publishes an `inventory.updated` event that interested services consume independently.
+The core patterns include webhooks for receiving external events, message queues for internal event processing, Server-Sent Events (SSE) for pushing updates to clients, and WebSockets for bidirectional real-time communication. Each pattern serves different use cases, and Claude Code skills can help you implement all of them.
 
-Claude Code helps you implement these patterns by generating boilerplate, explaining patterns, and integrating with skills like `/tdd` for comprehensive test coverage.
+## Webhook Implementation Patterns
 
-## Implementing Webhook-Based Event APIs
+Webhooks represent the foundation of event-driven APIs. When an external service needs to notify your system of something, it sends an HTTP POST to your endpoint. The receiving endpoint must validate the request, acknowledge receipt quickly, and process the payload asynchronously.
 
-Webhooks provide the simplest entry point for event-driven APIs. Your API sends HTTP POST requests to registered endpoints when specific events occur. Here's a practical implementation:
+A robust webhook handler in Node.js using Express demonstrates the pattern:
 
-```python
-# webhooks.py
-from typing import Dict, List, Callable
-import hmac
-import hashlib
-import requests
-import json
-
-class WebhookManager:
-    def __init__(self, secret: str):
-        self.secret = secret
-        self.subscribers: Dict[str, List[str]] = {}
-    
-    def register(self, event_type: str, url: str):
-        if event_type not in self.subscribers:
-            self.subscribers[event_type] = []
-        self.subscribers[event_type].append(url)
-    
-    def _sign_payload(self, payload: str) -> str:
-        return hmac.new(
-            self.secret.encode(),
-            payload.encode(),
-            hashlib.sha256
-        ).hexdigest()
-    
-    async def emit(self, event_type: str, data: dict):
-        payload = json.dumps(data)
-        signature = self._sign_payload(payload)
-        
-        for url in self.subscribers.get(event_type, []):
-            response = requests.post(
-                url,
-                data=payload,
-                headers={
-                    "Content-Type": "application/json",
-                    "X-Webhook-Signature": signature,
-                    "X-Event-Type": event_type
-                }
-            )
-            yield {"url": url, "status": response.status_code}
+```javascript
+app.post('/webhooks/payment', async (req, res) => {
+  // Acknowledge immediately - don't wait for processing
+  res.status(200).send('Received');
+  
+  // Process asynchronously
+  const { eventType, payload } = req.body;
+  
+  if (!verifyWebhookSignature(req.headers['x-signature'], req.body)) {
+    console.error('Invalid webhook signature');
+    return;
+  }
+  
+  // Queue for background processing
+  await messageQueue.publish('payment.events', {
+    type: eventType,
+    data: payload,
+    receivedAt: new Date().toISOString()
+  });
+});
 ```
 
-Use the `/tdd` skill to generate tests for your webhook delivery logic:
+The key principle here is responding within milliseconds while delegating actual processing to a background worker. This prevents webhook providers from timing out and retrying, which creates duplicate processing.
 
-```
-/tdd
-Write tests for the WebhookManager class covering: successful delivery, failed delivery with retry, signature verification failure, and event routing to multiple subscribers
-```
+Claude Code works exceptionally well with the tdd skill for building webhook handlers. You can describe your expected behavior and let the skill generate comprehensive test cases that verify signature validation, proper acknowledgment timing, and error handling under various failure scenarios.
 
-## Message Queue Integration with Claude Code
+## Message Queue Architecture
 
-For more reliable event delivery, integrate with message queues like RabbitMQ or Redis. This pattern survives service restarts and handles burst traffic gracefully.
+For internal event processing, message queues decouple producers from consumers. Your API publishes events, and independent workers process them. This isolation means one slow consumer doesn't block the entire system.
 
-```python
-# event_bus.py
-import json
-import aio_pika
-from datetime import datetime
+Consider a notification system where multiple events can trigger alerts:
 
-class EventBus:
-    def __init__(self, connection_url: str):
-        self.connection_url = connection_url
-        self.exchange_name = "api_events"
-    
-    async def publish(self, event_type: str, payload: dict):
-        connection = await aio_pika.connect_robust(self.connection_url)
-        channel = await connection.channel()
-        
-        exchange = await channel.declare_exchange(
-            self.exchange_name,
-            aio_pika.ExchangeType.TOPIC,
-            durable=True
-        )
-        
-        message = aio_pika.Message(
-            body=json.dumps({
-                "type": event_type,
-                "payload": payload,
-                "timestamp": datetime.utcnow().isoformat()
-            }).encode(),
-            content_type="application/json",
-            delivery_mode=aio_pika.DeliveryMode.PERSISTENT
-        )
-        
-        await exchange.publish(message, routing_key=event_type)
-        await connection.close()
-    
-    async def subscribe(self, event_type: str, handler: Callable):
-        connection = await aio_pika.connect_robust(self.connection_url)
-        channel = await connection.channel()
-        
-        queue = await channel.declare_queue(event_type, durable=True)
-        exchange = await channel.get_exchange(self.exchange_name)
-        
-        await queue.bind(exchange, routing_key=event_type)
-        
-        async with queue.iterator() as queue_iter:
-            async for message in queue_iter:
-                async with message.process():
-                    event = json.loads(message.body.decode())
-                    await handler(event["payload"])
-```
+```javascript
+// Publishing events
+async function publishEvent(queue, event) {
+  await queue.send({
+    id: crypto.randomUUID(),
+    type: event.type,
+    payload: event.data,
+    timestamp: Date.now(),
+    retryCount: 0
+  });
+}
 
-The `/supermemory` skill stores your event schemas across sessions:
-
-```
-/supermemory store: Event schema for order.created includes { orderId, customerEmail, items[], total, timestamp }. Always include correlationId for distributed tracing.
-```
-
-## Server-Sent Events for Real-Time Updates
-
-When clients need real-time updates without maintaining WebSocket connections, Server-Sent Events provide a simpler alternative. Here's a FastAPI implementation:
-
-```python
-# sse_endpoint.py
-from fastapi import FastAPI, Request
-from fastapi.responses import StreamingResponse
-import asyncio
-import json
-from typing import Dict, Set
-
-app = FastAPI()
-clients: Dict[str, Set[asyncio.Queue]] = {}
-
-@app.get("/events/{channel}")
-async def event_stream(request: Request, channel: str):
-    queue = asyncio.Queue()
-    
-    if channel not in clients:
-        clients[channel] = set()
-    clients[channel].add(queue)
-    
-    async def event_generator():
-        try:
-            while True:
-                message = await queue.get()
-                yield f"data: {json.dumps(message)}\n\n"
-        finally:
-            clients[channel].discard(queue)
-    
-    return StreamingResponse(
-        event_generator(),
-        media_type="text/event-stream",
-        headers={
-            "Cache-Control": "no-cache",
-            "Connection": "keep-alive"
-        }
-    )
-
-async def broadcast(channel: str, event: dict):
-    for queue in clients.get(channel, set()):
-        await queue.put(event)
-```
-
-## Designing Event Schema Contracts
-
-Well-designed event schemas prevent consumer confusion and enable schema evolution. Apply these principles:
-
-1. **Version events explicitly**: `order.created.v1`, `order.created.v2`
-2. **Include context fields**: `correlationId`, `causationId`, `timestamp`
-3. **Provide nested payloads**: Keep the structure flat and predictable
-
-```json
-{
-  "eventType": "payment.processed.v1",
-  "correlationId": "req-abc123",
-  "timestamp": "2026-03-14T10:30:00Z",
-  "payload": {
-    "orderId": "ord-456",
-    "amount": 99.99,
-    "currency": "USD",
-    "status": "completed"
+// Consuming events with retry logic
+async function processEvent(event) {
+  try {
+    switch (event.type) {
+      case 'user.created':
+        await sendWelcomeEmail(event.payload.email);
+        break;
+      case 'order.completed':
+        await updateInventory(event.payload.items);
+        await notifyCustomer(event.payload.customerId);
+        break;
+    }
+  } catch (error) {
+    if (event.retryCount < 3) {
+      await queue.scheduleRetry(event, event.retryCount + 1);
+    } else {
+      await queue.sendToDeadLetter(event, error.message);
+    }
   }
 }
 ```
 
-The `/pdf` skill generates documentation from your event schemas:
+The supermemory skill proves valuable here for maintaining event schema documentation. As your system evolves, keeping track of all event types and their payloads prevents confusion between teams and services.
 
+## Server-Sent Events for Real-Time Updates
+
+When clients need live updates but don't require bidirectional communication, Server-Sent Events provide a simpler alternative to WebSockets. The browser maintains a persistent connection, and your server pushes updates when available.
+
+```javascript
+app.get('/events/orders/:userId', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  
+  const userId = req.params.userId;
+  
+  // Subscribe user to order updates
+  const channel = eventBus.subscribe(`orders.${userId}`, (order) => {
+    res.write(`data: ${JSON.stringify(order)}\n\n`);
+  });
+  
+  req.on('close', () => {
+    eventBus.unsubscribe(channel);
+  });
+});
 ```
-/pdf
-Create an event catalog document from the event schemas in ./events/
+
+This pattern works particularly well for dashboards, notification centers, and live feeds. Clients reconnect automatically if disconnected, and the protocol handles reconnection gracefully.
+
+The frontend-design skill helps when building the client-side code to consume these events, especially when combined with framework-specific patterns for managing connection state and displaying real-time data.
+
+## Handling Event Ordering and Idempotency
+
+One of the hardest aspects of event-driven systems is dealing with out-of-order events and duplicate delivery. Network issues cause retries, and events can arrive in unexpected sequences.
+
+Always include sequencing information in your events:
+
+```javascript
+{
+  "eventId": "evt_12345",
+  "sequenceNumber": 42,
+  "aggregateId": "order_67890",
+  "type": "order.shipped",
+  "payload": { "trackingNumber": "1Z999..." },
+  "timestamp": "2026-03-14T10:30:00Z"
+}
 ```
+
+Consumers should track the highest sequence number they've processed per aggregate and ignore events that arrive with lower numbers. For duplicate handling, check event IDs against a processed store before taking action:
+
+```javascript
+async function handleOrderEvent(event) {
+  const processed = await redis.setnx(`processed:${event.eventId}`, '1');
+  if (!processed) {
+    console.log(`Duplicate event ${event.eventId}, skipping`);
+    return;
+  }
+  
+  await redis.expire(`processed:${event.eventId}`, 86400);
+  // Process the event...
+}
+```
+
+The pdf skill can generate documentation for your event schemas, making it easy to share contract details with internal teams or external partners who need to integrate with your system.
 
 ## Testing Event-Driven Systems
 
-Event-driven architectures require different testing approaches than synchronous APIs. Use the `/tdd` skill to generate comprehensive test scenarios:
+Testing asynchronous systems requires different strategies than synchronous code. You need to verify event publication, message queue behavior, and consumer side effects in isolation and together.
 
-```
-/tdd
-Write integration tests for the order fulfillment flow: verify that order.created triggers inventory reservation, payment.processed triggers shipping request, and order.cancelled triggers inventory release
-```
-
-Mock event sources in your tests to verify handler behavior without external dependencies:
-
-```python
-# test_handlers.py
-import pytest
-from unittest.mock import AsyncMock
-
-@pytest.mark.asyncio
-async def test_inventory_reservation_on_order_created():
-    mock_inventory = AsyncMock()
-    handler = OrderCreatedHandler(inventory_service=mock_inventory)
+```javascript
+describe('Order processing', () => {
+  it('publishes order.created event on order placement', async () => {
+    const mockQueue = { publish: jest.fn() };
     
-    event = {
-        "eventType": "order.created.v1",
-        "payload": {
-            "orderId": "ord-123",
-            "items": [{"sku": "SKU-001", "quantity": 2}]
-        }
-    }
+    await createOrder({ items: [{ productId: 'p1', quantity: 1 }] }, mockQueue);
     
-    await handler.handle(event)
+    expect(mockQueue.publish).toHaveBeenCalledWith(
+      'orders',
+      expect.objectContaining({ type: 'order.created' })
+    );
+  });
+  
+  it('processes shipped event and updates inventory', async () => {
+    const event = { 
+      type: 'order.shipped', 
+      payload: { items: [{ productId: 'p1', quantity: 2 }] } 
+    };
     
-    mock_inventory.reserve.assert_called_once_with(
-        "SKU-001", 2, "ord-123"
-    )
+    await processOrderEvent(event, inventoryService);
+    
+    expect(inventoryService.decrement).toHaveBeenCalledWith('p1', 2);
+  });
+});
 ```
 
-## Production Considerations
+The tdd skill excels at generating these test patterns, helping you think through edge cases before implementation begins.
 
-When deploying event-driven APIs to production, implement these practices:
+## Monitoring Event Systems
 
-- **Idempotency**: Consumers must handle duplicate events gracefully
-- **Dead letter queues**: Capture events that fail processing after retries
-- **Monitoring**: Track event lag, failure rates, and processing latency
+Event-driven architectures introduce new failure modes that traditional monitoring doesn't catch. You need visibility into message flow, processing latency, and dead letter queues.
 
-The `/frontend-design` skill helps build dashboards that visualize event flows and system health:
+Key metrics to track:
+- **Queue depth**: Shows backlog and capacity issues
+- **Processing latency**: Time from event creation to completion
+- **Dead letter count**: Events that failed processing
+- **Consumer lag**: How far behind consumers are from producers
 
+```javascript
+// Health check endpoint for monitoring
+app.get('/health/events', async (req, res) => {
+  const metrics = await Promise.all([
+    redis.llen('queue:orders'),
+    redis.llen('queue:orders:dead'),
+    eventProcessor.getAverageLatency(),
+    eventProcessor.getConsumerLag()
+  ]);
+  
+  const health = {
+    queueDepth: metrics[0],
+    deadLetterCount: metrics[1],
+    avgLatencyMs: metrics[2],
+    consumerLag: metrics[3],
+    status: metrics[0] > 1000 ? 'degraded' : 'healthy'
+  };
+  
+  res.status(health.status === 'healthy' ? 200 : 503).json(health);
+});
 ```
-/frontend-design
-Create a React dashboard component that displays event throughput charts, recent event log with filtering, and alert indicators for failed events
-```
 
-## Conclusion
+## Summary
 
-Event-driven API design with Claude Code combines architectural best practices with AI-assisted development. The key is selecting the right pattern for your use case: webhooks for simple integrations, message queues for reliability, and SSE for real-time updates.
-
-Invoke `/tdd` to generate comprehensive tests, `/pdf` to document your event schemas, and `/supermemory` to maintain consistent patterns across your event-driven systems. Your APIs gain resilience, scalability, and maintainability through these patterns and tools.
-
----
-
-## Related Reading
-
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
-- [Claude Code TDD Skill Integration](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Testing strategies
-- [Frontend Design Skills for Real-Time Dashboards](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Building monitoring interfaces
-
+Event-driven API design requires careful attention to acknowledgment patterns, idempotency, ordering, and monitoring. Webhooks handle external events, message queues process internal ones, and SSE or WebSockets push updates to clients. Each pattern serves specific use cases, and Claude Code skills like tdd, supermemory, frontend-design, and pdf help you implement them systematically while maintaining documentation and test coverage.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

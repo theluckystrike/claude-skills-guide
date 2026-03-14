@@ -1,302 +1,169 @@
 ---
 layout: default
 title: "Claude Code Notion API Documentation Guide"
-description: "Master Claude Code Notion API integration for automated documentation. Build pipelines with pdf, tdd, supermemory skills to generate, organize, and maintain API docs."
+description: "Learn how to use Claude Code with the Notion API to automate documentation workflows, sync content, and build documentation systems."
 date: 2026-03-14
-categories: [workflows]
-tags: [claude-code, claude-skills, notion, api, documentation, automation]
+categories: [guides]
+tags: [claude-code, notion-api, documentation, automation, mcp]
 author: theluckystrike
 permalink: /claude-code-notion-api-documentation-guide/
 ---
 
 # Claude Code Notion API Documentation Guide
 
-The Notion API provides a powerful foundation for managing technical documentation, and when combined with Claude Code's specialized skills, you can build automated pipelines that generate, organize, and maintain API documentation at scale. This guide walks through practical patterns for integrating Claude Code skills with the Notion API to streamline your documentation workflow.
+Documentation drives software projects, yet maintaining it remains one of the most tedious tasks developers face. The Notion API combined with Claude Code transforms how teams create, update, and synchronize documentation across their projects. This guide shows you how to build a documentation pipeline that leverages Notion as a content source and Claude Code as the processing engine.
 
-## Why Automate Notion Documentation with Claude Code
+## Understanding the Notion API Integration
 
-Manual documentation maintenance creates significant overhead. Teams struggle with keeping API docs synchronized with code changes, and version drift between implementation and documentation becomes common. By leveraging Claude Code skills within your development workflow, you can generate documentation automatically and push updates directly to Notion databases.
+The Notion API exposes your workspaces through REST endpoints that let you read pages, databases, and blocks programmatically. When paired with Claude Code, you can extract content from Notion, process it through skills like the pdf skill for PDF generation, or transform it into formats suitable for static site generators.
 
-The integration works particularly well with skills designed for content extraction and code analysis. The `pdf` skill extracts information from existing documents, the `tdd` skill generates test-driven documentation from code, and the `supermemory` skill maintains context across documentation updates.
+First, obtain your Notion integration token from [notion.so/my-integrations](https://www.notion.so/my-integrations). Create a new integration and copy the internal integration token. Then, share the relevant pages or databases with your integration within Notion itself.
 
-## Setting Up Your Notion Integration
+Your integration needs proper permissions to read content. For documentation workflows, read access suffices. Share each documentation page with your integration by opening the page in Notion, clicking the three-dot menu, selecting "Connections," and adding your integration.
 
-Before building automation pipelines, configure your Notion workspace for API access:
+## Setting Up Claude Code for Notion
 
-1. Navigate to [notion.so/my-integrations](https://www.notion.so/my-integrations) and create a new integration
-2. Grant capabilities for reading, updating, and inserting content
-3. Copy your Internal Integration Token
-4. Share target pages or databases with the integration connection
+Create a skill that handles Notion API interactions. The skill definition should include the necessary tools for HTTP requests and file operations:
 
-Install the official Notion client library:
+```yaml
+---
+name: notion-docs
+description: "Sync and process Notion documentation with Claude Code"
+tools: [bash, read_file, write_file]
+version: 1.0.0
+---
+
+# Notion Documentation Sync
+
+This skill helps extract content from Notion and convert it for various output formats.
+```
+
+The bash tool lets you make API calls directly. Use curl or a simple HTTP client:
 
 ```bash
-npm install @notionhq/client dotenv
+NOTION_TOKEN="secret_your_integration_token"
+PAGE_ID="your_page_id"
+
+curl -s https://api.notion.com/v1/blocks/$PAGE_ID/children \
+  -H "Authorization: Bearer $NOTION_TOKEN" \
+  -H "Notion-Version: 2022-06-28"
 ```
 
-Configure your environment with the necessary credentials:
+## Extracting Documentation Content
 
-```javascript
-require('dotenv').config();
-const { Client } = require('@notionhq/client');
+Notion pages contain blocks arranged in a tree structure. Each block has a type (paragraph, heading, code, image, etc.) and content. Your Claude skill needs to traverse this block tree recursively to extract all content.
 
-const notion = new Client({ 
-  auth: process.env.NOTION_TOKEN 
-});
+Here's a practical approach using a bash script that fetches page content:
 
-const DATABASE_ID = process.env.NOTION_DATABASE_ID;
+```bash
+#!/bin/bash
+# fetch-notion-page.sh
+
+fetch_blocks() {
+  local block_id=$1
+  local token=$2
+  
+  curl -s "https://api.notion.com/v1/blocks/$block_id/children" \
+    -H "Authorization: Bearer $token" \
+    -H "Notion-Version: 2022-06-28" | jq '.results[] | 
+    select(.type == "paragraph") | .paragraph.rich_text[].plain_text'
+}
+
+PAGE_ID="$1"
+NOTION_TOKEN="$2"
+fetch_blocks "$PAGE_ID" "$NOTION_TOKEN"
 ```
 
-## Automating API Documentation Generation
+This script extracts paragraph text from a Notion page. For more complex documentation, expand it to handle headings, code blocks, and nested content. The tdd skill can help you write tests for your extraction logic to ensure reliability.
 
-The most effective pattern combines Claude Code skills that analyze code with Notion API calls that create or update documentation pages. Consider a workflow where the `tdd` skill generates test specifications, then stores the results in Notion for team reference.
+## Converting Notion Content to Documentation Formats
 
-### Generating Documentation from Code Analysis
+Once extracted, your content needs transformation for target output. The frontend-design skill provides patterns for structuring technical documentation with proper hierarchy and readability. Combine Notion extraction with formatting skills to produce clean output.
 
-Use the `tdd` skill to analyze your codebase and extract documentation-worthy content:
+Consider this workflow:
 
-```javascript
-const { execSync } = require('child_process');
-const fs = require('fs');
+1. Fetch page blocks from Notion API
+2. Parse block structure (headings, paragraphs, code blocks)
+3. Convert to Markdown or HTML
+4. Apply formatting using relevant skills
+5. Generate final output (PDF via pdf skill, HTML via frontend-design)
 
-function generateApiDocumentation(sourceFiles) {
-  const prompt = `/tdd Analyze these API endpoint files and generate documentation with:
-- Endpoint paths
-- Request parameters
-- Response schemas
-- Error codes
-Output as structured JSON.`;
+The supermemory skill proves valuable here if you want to track documentation versions and changes over time. Store metadata about sync operations, last updated timestamps, and content hashes to detect drift between Notion and your published docs.
 
-  // Write source files to temp location
-  const inputFile = '/tmp/api-sources.json';
-  fs.writeFileSync(inputFile, JSON.stringify(sourceFiles));
+## Practical Example: API Reference Documentation
 
-  // Run tdd skill and capture output
-  const documentation = execSync(
-    `claude -p "/tdd Generate API documentation from ${inputFile}. Return JSON with endpoints array."`,
-    { encoding: 'utf8' }
-  );
+Imagine maintaining your API reference in Notion. Each endpoint gets a page with description, request parameters, response examples, and code samples. Using Claude Code, you can automatically generate client libraries, Postman collections, or static HTML documentation.
 
-  return JSON.parse(documentation);
-}
+Create a Notion database to track endpoints:
+
+- Endpoint name (title)
+- Method (select: GET, POST, PUT, DELETE)
+- Path (text)
+- Description (rich text)
+- Response example (code block)
+
+Then sync with Claude Code:
+
+```bash
+# Get all endpoints from database
+DATABASE_ID="your_database_id"
+
+curl -s "https://api.notion.com/v1/databases/$DATABASE_ID/query" \
+  -H "Authorization: Bearer $NOTION_TOKEN" \
+  -H "Notion-Version: 2022-06-28" \
+  -X POST -d '{}' | jq '.results[] | 
+  { 
+    name: .properties.Name.title[].plain_text,
+    method: .properties.Method.select.name,
+    path: .properties.Path.rich_text[].plain_text
+  }'
 ```
 
-### Pushing Documentation to Notion
+Parse the JSON output and generate documentation in your preferred format. This approach keeps documentation single-sourced in Notion while publishing to multiple formats automatically.
 
-Once you have generated documentation from Claude skills, transform the output into Notion blocks:
+## Handling Code Blocks and Syntax Highlighting
 
-```javascript
-async function createApiDocPage(databaseId, endpointData) {
-  const blocks = transformToNotionBlocks(endpointData);
+Notion code blocks include language metadata. Extract this along with the code content:
 
-  await notion.pages.create({
-    parent: { database_id: databaseId },
-    properties: {
-      Name: {
-        title: [{ text: { content: endpointData.title } }],
-      },
-      Endpoint: {
-        rich_text: [{ text: { content: endpointData.path } }],
-      },
-      Method: {
-        select: { name: endpointData.method },
-      },
-      Status: {
-        select: { name: 'Current' },
-      },
-      LastUpdated: {
-        date: { start: new Date().toISOString() },
-      },
-    },
-    children: blocks,
-  });
-}
-
-function transformToNotionBlocks(data) {
-  const blocks = [];
-
-  // Description section
-  blocks.push({
-    object: 'block',
-    type: 'heading_2',
-    heading_2: { rich_text: [{ text: { content: 'Description' } }] },
-  });
-  blocks.push({
-    object: 'block',
-    type: 'paragraph',
-    paragraph: { rich_text: [{ text: { content: data.description } }] },
-  });
-
-  // Parameters section
-  if (data.parameters?.length > 0) {
-    blocks.push({
-      object: 'block',
-      type: 'heading_2',
-      heading_2: { rich_text: [{ text: { content: 'Parameters' } }] },
-    });
-    data.parameters.forEach(param => {
-      blocks.push({
-        object: 'block',
-        type: 'bulleted_list_item',
-        bulleted_list_item: {
-          rich_text: [
-            { text: { content: `${param.name} (${param.type})` } },
-            { text: { content: ` — ${param.description}`, bold: false } },
-          ],
-        },
-      });
-    });
-  }
-
-  // Response schema section
-  if (data.responseSchema) {
-    blocks.push({
-      object: 'block',
-      type: 'heading_2',
-      heading_2: { rich_text: [{ text: { content: 'Response Schema' } }] },
-    });
-    blocks.push({
-      object: 'block',
-      type: 'code',
-      code: {
-        rich_text: [{ text: { content: JSON.stringify(data.responseSchema, null, 2) } }],
-        language: 'json',
-      },
-    });
-  }
-
-  return blocks;
-}
+```bash
+curl -s "https://api.notion.com/v1/blocks/$PAGE_ID/children" \
+  -H "Authorization: Bearer $NOTION_TOKEN" \
+  -H "Notion-Version: 2022-06-28" | jq '.results[] | 
+  select(.type == "code") | 
+  {
+    language: .code.language,
+    content: .code.rich_text[].plain_text
+  }'
 ```
 
-## Building a Documentation Sync Pipeline
+Preserve language information when converting to Markdown or HTML. Many static site generators support syntax highlighting through plugins. Pass language metadata to these tools for proper highlighting.
 
-Create a continuous documentation workflow that keeps your Notion pages synchronized with code changes:
+## Automating Documentation Sync
 
-```javascript
-const chokidar = require('chokidar');
+Set up a cron job or webhook to trigger synchronization. For continuous deployment workflows, invoke your Claude skill during the build process. The skill fetches latest content from Notion, transforms it, and outputs ready-to-publish files.
 
-async function syncDocumentation(sourceDir, notionDatabaseId) {
-  const files = fs.readdirSync(sourceDir).filter(f => f.endsWith('.js'));
+A simple CI pipeline might look like:
 
-  for (const file of files) {
-    const content = fs.readFileSync(`${sourceDir}/${file}`, 'utf8');
-    const docs = await generateApiDocumentation([{ file, content }]);
+1. Checkout repository
+2. Run Notion sync script
+3. Commit generated documentation
+4. Trigger static site build
 
-    for (const endpoint of docs.endpoints || []) {
-      await createApiDocPage(notionDatabaseId, { ...endpoint, sourceFile: file });
-    }
-  }
+This approach works well with platforms like GitHub Pages, Netlify, or Vercel. Your documentation lives in Notion where non-technical team members can edit it, while Claude Code handles the technical publishing pipeline.
 
-  console.log(`Synced ${files.length} files to Notion`);
-}
+## Best Practices for Notion-Driven Documentation
 
-// Watch for file changes and auto-sync
-chokidar.watch('./api').on('change', async (path) => {
-  console.log(`Detected change: ${path}`);
-  await syncDocumentation('./api', process.env.NOTION_DATABASE_ID);
-});
-```
+Keep your Notion content structured consistently. Establish templates for different documentation types (API reference, tutorials, guides). Use properties in databases to track metadata like last reviewed date, author, and documentation status.
 
-## Maintaining Documentation Context with Supermemory
+Separate content from presentation. Notion handles the writing experience; Claude Code handles format conversion. This separation lets each tool do what it does best.
 
-The `supermemory` skill becomes valuable when tracking documentation history and maintaining consistency across updates. Before updating existing Notion documentation, retrieve related context:
-
-```javascript
-async function getDocumentationHistory(databaseId, endpointPath) {
-  const response = await notion.databases.query({
-    database_id: databaseId,
-    filter: {
-      property: 'Endpoint',
-      rich_text: { contains: endpointPath },
-    },
-    sorts: [{ property: 'LastUpdated', direction: 'descending' }],
-    page_size: 3,
-  });
-
-  return response.results.map(page => ({
-    id: page.id,
-    updated: page.properties.LastUpdated.date.start,
-    status: page.properties.Status.select.name,
-  }));
-}
-
-async function updateWithContext(databaseId, endpointData) {
-  const history = await getDocumentationHistory(databaseId, endpointData.path);
-
-  // Use supermemory to analyze change impact
-  const contextPrompt = `/supermemory Analyze this API change and summarize what documentation sections need updating: ${JSON.stringify(endpointData)} Previous versions: ${JSON.stringify(history)}`;
-
-  const analysis = execSync(`claude -p "${contextPrompt}"`, { encoding: 'utf8' });
-
-  if (history.length > 0 && history[0].status === 'Current') {
-    // Update existing page
-    await updateExistingPage(history[0].id, endpointData, analysis);
-  } else {
-    // Create new page
-    await createApiDocPage(databaseId, endpointData);
-  }
-}
-```
-
-## Advanced Pattern: Frontend Design Documentation
-
-For teams building user interfaces alongside APIs, the `frontend-design` skill can generate component documentation that syncs to Notion. Store component specs, prop definitions, and usage examples:
-
-```javascript
-async function syncComponentDocs(componentsDir, notionDatabaseId) {
-  const componentFiles = fs.readdirSync(componentsDir);
-
-  for (const component of componentFiles) {
-    const content = fs.readFileSync(`${componentsDir}/${component}`, 'utf8');
-
-    const prompt = `/frontend-design Analyze this component and generate documentation with: component purpose, props interface, usage examples, accessibility notes. Output JSON.`;
-
-    const docs = execSync(
-      `claude -p "/frontend-design Document component ${content.substring(0, 5000)}"`,
-      { encoding: 'utf8' }
-    );
-
-    const parsed = JSON.parse(docs);
-    await createNotionPage(notionDatabaseId, component, parsed);
-  }
-}
-```
-
-## Best Practices for Documentation Automation
-
-Maintain quality and avoid common pitfalls with these guidelines:
-
-**Version control your source documentation.** Keep OpenAPI specs or JSDoc comments as the source of truth, then generate Notion pages from these canonical sources.
-
-**Implement selective updates.** Query Notion for existing pages before creating duplicates. Use unique identifiers in Notion properties to match source files to pages.
-
-**Handle rate limits gracefully.** The Notion API enforces rate limits. Implement exponential backoff in your automation:
-
-```javascript
-async function withRetry(fn, maxRetries = 3) {
-  for (let attempt = 0; attempt < maxRetries; attempt++) {
-    try {
-      return await fn();
-    } catch (error) {
-      if (error.code === 429) {
-        const delay = Math.pow(2, attempt) * 1000;
-        await new Promise(r => setTimeout(r, delay));
-      } else {
-        throw error;
-      }
-    }
-  }
-}
-```
-
-**Validate before publishing.** Run content through the `pdf` skill to verify readability scores and structure before pushing to team databases.
+Version your generated documentation in git. Even though source content lives in Notion, the rendered output belongs in version control. This provides rollback capability and clear diffs when content changes.
 
 ## Conclusion
 
-Building a Claude Code Notion API documentation pipeline transforms manual documentation into an automated workflow. The `tdd` skill generates test-backed API docs, `supermemory` maintains consistency across updates, and `frontend-design` captures component specifications. Start with a single endpoint, validate the pipeline, then expand to cover your entire API surface. The initial setup time pays dividends in documentation accuracy and team productivity.
+The Notion API unlocks powerful documentation workflows when combined with Claude Code. Writers use Notion's familiar interface while developers get automated, version-controlled output. Skills like pdf for PDF generation, tdd for test-driven documentation development, and supermemory for tracking documentation history make this pipeline robust and maintainable.
 
----
+Start small—sync a single Notion page to Markdown and expand from there. The pattern scales from quick documentation updates to full-scale API reference systems.
 
 
 ## Related Reading
