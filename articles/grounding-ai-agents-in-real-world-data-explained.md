@@ -6,7 +6,7 @@ description: "Learn how Claude Code grounds AI agents in real-world data through
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, ai-agents, grounding, rag, vector-database, data, claude-skills]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /grounding-ai-agents-in-real-world-data-explained/
 reviewed: true
 score: 7
