@@ -3,7 +3,11 @@ layout: default
 title: "Claude MD Version Control Strategy Best Practices"
 description: "A practical guide to managing Claude Code markdown files with version control. Learn strategies for skill versioning, branching, and team collaboration."
 date: 2026-03-14
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, claude-md, version-control, git, workflow]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude MD Version Control Strategy Best Practices

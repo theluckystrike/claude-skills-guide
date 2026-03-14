@@ -5,7 +5,9 @@ description: "Maximize your vibe coding productivity with practical tips, Claude
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, vibe-coding, productivity, workflow]
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Vibe Coding Productivity Tips and Best Practices
@@ -84,7 +86,7 @@ Don't hesitate to iterate. A second prompt that refines the output often produce
 Good start. Now add rate limiting to prevent brute force attacks on the login endpoint.
 ```
 
-## Leverage MCP Servers for External Integrations
+## Use MCP Servers for External Integrations
 
 Model Context Protocol servers connect Claude to external services. For productivity, configure servers that automate tasks you'd otherwise handle manually.
 

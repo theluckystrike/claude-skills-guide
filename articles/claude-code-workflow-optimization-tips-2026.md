@@ -4,8 +4,10 @@ title: "Claude Code Workflow Optimization Tips for 2026"
 description: "Practical strategies to optimize your Claude Code workflow in 2026. Learn skill composition, context management, and automation patterns for developers."
 date: 2026-03-14
 categories: [workflows]
-tags: [claude-code, workflow, optimization, productivity, skills]
-author: theluckystrike
+tags: [claude-code, claude-skills, workflow, optimization, productivity]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code Workflow Optimization Tips for 2026

@@ -5,9 +5,9 @@ description: "Learn to build reusable GitHub Actions composite actions that inte
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, github-actions, composite-actions, cicd]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 {% raw %}
 

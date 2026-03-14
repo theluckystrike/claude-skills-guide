@@ -1,9 +1,13 @@
 ---
 layout: default
 title: "Claude Code React Native Paper Mobile UI Guide"
-description: "A practical guide to building mobile UIs with React Native and Paper using Claude Code. Learn how to leverage skills for component generation, testing, and documentation."
+description: "A practical guide to building mobile UIs with React Native and Paper using Claude Code. Learn how to use skills for component generation, testing, and documentation."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, react-native, mobile-ui, frontend]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code React Native Paper Mobile UI Guide
@@ -174,7 +178,7 @@ export function LoginForm({ onSubmit }) {
 
 ## Navigation and Screen Management
 
-Combine React Native Paper with React Navigation for complete screen management. The Appbar component integrates seamlessly with navigation headers:
+Combine React Native Paper with React Navigation for complete screen management. The Appbar component works well with navigation headers:
 
 ```javascript
 import { Appbar } from 'react-native-paper';
@@ -269,7 +273,7 @@ React Native Paper components are optimized for performance, but you can enhance
 
 - Use `React.memo` for components that render frequently with the same props
 - Implement `useCallback` for event handlers passed to Paper components
-- Leverage the `pagination` prop on DataTable for large datasets
+- Use the `pagination` prop on DataTable for large datasets
 
 The **frontend-design** skill can analyze your component tree and suggest performance improvements specific to your implementation.
 

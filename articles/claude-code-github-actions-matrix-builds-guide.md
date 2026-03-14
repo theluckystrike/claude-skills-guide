@@ -3,12 +3,16 @@ layout: default
 title: "Claude Code GitHub Actions Matrix Builds Guide"
 description: "Learn how to build efficient CI/CD pipelines using GitHub Actions matrix strategies with Claude Code. Practical examples for multi-version testing across Node, Python, and deployment environments."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, github-actions, matrix-builds, cicd, testing]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code GitHub Actions Matrix Builds Guide
 
-GitHub Actions matrix builds let you execute the same workflow across multiple configuration combinations simultaneously. When paired with Claude Code, you can automate the creation of complex matrix workflows, generate dynamic configurations, and build intelligent testing pipelines that adapt to your project requirements. This guide provides practical patterns for leveraging matrix builds effectively.
+GitHub Actions matrix builds let you execute the same workflow across multiple configuration combinations simultaneously. When paired with Claude Code, you can automate the creation of complex matrix workflows, generate dynamic configurations, and build intelligent testing pipelines that adapt to your project requirements. This guide provides practical patterns for using matrix builds effectively.
 
 ## Why Matrix Builds Matter
 

@@ -3,7 +3,11 @@ layout: default
 title: "Claude Code GitHub Actions Approval Workflows"
 description: "Learn how to implement manual approval gates in GitHub Actions workflows with Claude Code. Practical examples for production deployments, environment protection, and security-conscious automation."
 date: 2026-03-14
-author: theluckystrike
+categories: [workflows]
+tags: [claude-code, claude-skills, github-actions, approval-workflows, cicd, devops]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code GitHub Actions Approval Workflows

@@ -3,11 +3,11 @@ layout: default
 title: "Claude Code React Router v7 Navigation Guide"
 description: "Master React Router v7 navigation patterns with Claude Code. Learn file-based routing, data loading, and navigation hooks for modern React applications."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, react-router, react, routing, navigation, frontend]
-author: theluckystrike
-reviewed: false
-score: 0
+categories: [tutorials]
+tags: [claude-code, claude-skills, react-router, react, routing, frontend]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code React Router v7 Navigation Guide
@@ -18,7 +18,7 @@ React Router v7 represents a significant evolution in how we handle navigation i
 
 React Router v7 consolidates the best features from Remix into the React Router package. The most notable change is the shift toward file-based routing combined with a data-layer approach that handles loading and mutation states directly within your route components.
 
-If you're building a React application and need help structuring your navigation, Claude Code can assist with the **frontend-design** skill to create layouts and components that integrate seamlessly with React Router's patterns.
+If you're building a React application and need help structuring your navigation, Claude Code can assist with the **frontend-design** skill to create layouts and components that work well with React Router's patterns.
 
 ## Setting Up React Router v7
 
@@ -240,7 +240,7 @@ For testing your routes and components, the **tdd** skill from Claude Code can h
 ## Best Practices for Navigation
 
 1. **Use Link instead of anchor tags** for internal navigation to preserve client-side routing
-2. **Leverage loaders for data fetching** rather than useEffect to avoid waterfalls
+2. **Use loaders for data fetching** rather than useEffect to avoid waterfalls
 3. **Handle pending states** with useNavigation to show loading indicators
 4. **Implement error boundaries** with ErrorBoundary components to handle failures gracefully
 
