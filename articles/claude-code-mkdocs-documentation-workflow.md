@@ -1,207 +1,214 @@
 ---
 layout: default
 title: "Claude Code MkDocs Documentation Workflow"
-description: "Learn how to create and maintain technical documentation using MkDocs with Claude Code. Automate your documentation workflow with practical examples and code snippets."
+description: "Build a Claude Code MkDocs documentation workflow that auto-generates and maintains developer docs from your codebase. Step-by-step guide with practical examples."
 date: 2026-03-14
+categories: [workflows]
+tags: [claude-code, mkdocs, documentation, workflow, pdf, supermemory]
 author: theluckystrike
 permalink: /claude-code-mkdocs-documentation-workflow/
 ---
 
-{% raw %}
 # Claude Code MkDocs Documentation Workflow
 
-Documentation is the backbone of any successful software project. When you pair **MkDocs** with **Claude Code**, you get a powerful documentation workflow that writes, formats, and maintains your docs automatically. This guide walks you through setting up a complete documentation pipeline using MkDocs and Claude's AI capabilities.
+Documentation that lives alongside your code instead of drifting away from it is one of the most practical improvements you can make to a development project. MkDocs combined with Claude Code creates a workflow where your documentation updates happen as part of your development process rather than as a separate, often-neglected task. This guide shows you how to set up that workflow from scratch.
 
-## Why MkDocs for Technical Documentation
+## What Makes This Workflow Work
 
-MkDocs is a static site generator designed specifically for project documentation. It uses Python and YAML configuration, making it approachable for developers who want clean, version-controllable documentation without the complexity of heavier systems. The `mkdocs-material` theme provides a polished, readable output that works well for API docs, tutorials, and developer guides.
+MkDocs builds static documentation sites from Markdown files. Claude Code reads your codebase, understands structure and purpose, and generates the Markdown content you need. The connection between them is simple: Claude writes or updates `.md` files in your `docs/` folder, and MkDocs builds those into a browsable site.
 
-Key advantages include:
-- **Fast setup**: A single YAML file configures your entire site
-- **Markdown-first**: Write docs in familiar Markdown syntax
-- **Version control friendly**: All docs live as files in your repository
-- **Search built-in**: The material theme includes full-text search
-- **Customizable**: Themes, plugins, and extensions extend functionality
+You need three things to get started:
 
-## Setting Up MkDocs with Claude Code
+- Claude Code installed and accessible from your terminal
+- MkDocs installed (`pip install mkdocs` or via your package manager)
+- A project you want to document
 
-Before integrating with Claude, get your MkDocs project running. Install the necessary packages:
+Optional but recommended skills accelerate specific parts: the `pdf` skill generates downloadable documentation exports, the `supermemory` skill remembers documentation decisions across sessions, and the `tdd` skill helps keep your docs in sync with test coverage.
 
-```bash
-pip install mkdocs mkdocs-material
-```
+## Setting Up Your MkDocs Foundation
 
-Create your documentation structure:
+Create your documentation directory structure first. In your project root:
 
 ```bash
-mkdocs new my-project-docs
-cd my-project-docs
+mkdir docs
+cd docs
+mkdocs new .
 ```
 
-Edit `mkdocs.yml` to configure your site:
+This creates a basic `mkdocs.yml` configuration and an `index.md` file. Edit `mkdocs.yml` to match your project:
 
 ```yaml
-site_name: Project Documentation
-site_description: Comprehensive guides and API references
-theme:
-  name: material
-  palette: 
-    primary: indigo
-    accent: blue
+site_name: Your Project Name
+site_description: Documentation for Your Project
+docs_dir: .
+markdown_extensions:
+  - toc:
+      permalink: true
+  - codehilite
 nav:
   - Home: index.md
-  - Guides:
-    - Getting Started: guides/getting-started.md
-    - API Reference: guides/api-reference.md
+  - API: api.md
+  - Guides: guides/index.md
 ```
 
-Run the development server to preview:
+Run `mkdocs serve` to preview locally. The site builds at `http://127.0.0.1:8000` and updates as you modify files.
+
+## Generating API Documentation with Claude
+
+The most valuable documentation is accurate API reference. Claude reads your source files and generates this automatically. Create a prompt file or session instruction:
+
+```
+Read all source files in src/ and generate API documentation.
+For each function, include:
+- Function name and signature
+- Parameters with types
+- Return value type
+- One-sentence description of purpose
+- Example usage if non-obvious
+
+Output to docs/api.md with proper Markdown headers.
+```
+
+Run this in your Claude Code session:
 
 ```bash
-mkdocs serve
+claude -p "$(cat prompt.txt)" .
 ```
 
-## Using Claude Code for Documentation
+For a Python project, this produces output like:
 
-Claude Code accelerates your documentation workflow in several ways. The `pdf` skill can convert your MkDocs output to PDF for distribution. The `tdd` skill helps you write documentation alongside test-driven development, ensuring your docs stay current with your code.
+```markdown
+## authenticate_user(username: str, password: str) -> bool
 
-### Generating API Documentation
+Authenticates credentials against the user database.
 
-When you have an API, Claude can analyze your code and generate reference documentation. Ask Claude to document your endpoints, parameters, and response formats:
+**Parameters:**
+- `username` (str): The user's login name
+- `password` (str): The plain-text password to verify
 
+**Returns:** `bool` — True if authentication succeeds
+
+**Example:**
+```python
+if authenticate_user("dev", "password123"):
+    print("Access granted")
 ```
-Document this API endpoint with OpenAPI-style format. Include the HTTP method, URL path, request parameters, authentication requirements, and example responses.
-```
-
-Claude reads your route handlers or API definitions and produces clean Markdown documentation that fits into your MkDocs structure.
-
-### Writing Tutorial Content
-
-For guides and tutorials, Claude helps you explain complex concepts in plain language. Share your code with Claude and ask:
-
-```
-Write a step-by-step tutorial explaining how to use this authentication module. Start with prerequisites, then walk through configuration, implementation, and testing.
 ```
 
-The resulting tutorial integrates directly into your `docs/guides/` folder, maintaining consistent formatting with your existing MkDocs structure.
+## Automating Documentation Updates
 
-### Keeping Documentation Updated
+Manual updates still require remembering to run them. Connect documentation generation to your development workflow using git hooks or Claude's native prompt system.
 
-A common challenge is keeping docs synchronized with code changes. Use Claude as part of your review process:
-
-1. After code changes, ask Claude to review modified functions
-2. Request documentation updates for any changed APIs
-3. Have Claude verify cross-references between doc pages
-4. Generate a changelog entry from your commit messages
-
-This workflow reduces documentation debt significantly.
-
-## Advanced MkDocs Configuration
-
-For larger projects, extend MkDocs with plugins and Python Markdown extensions:
-
-```yaml
-plugins:
-  - search:
-      separator: '[\s\-\.]+'
-  - mdx_truly_sane_lists  # Better nested list handling
-  - mkdocstrings  # Auto-generate API docs from docstrings
-```
-
-The `mkdocstrings` plugin is particularly powerful—it reads Python docstrings and generates reference documentation automatically. Combine this with Claude's ability to write comprehensive docstrings, and your API docs practically maintain themselves.
-
-## Building and Deploying
-
-When your docs are ready, build the static site:
+Create a pre-commit hook at `.git/hooks/pre-commit`:
 
 ```bash
-mkdocs build
+#!/bin/bash
+# Run documentation update
+claude -p "Update docs/api.md from current src/ files" .
 ```
 
-This creates a `site/` directory with HTML, CSS, and JavaScript files ready for deployment. Deploy to GitHub Pages directly:
+Make it executable with `chmod +x .git/hooks/pre-commit`.
+
+Alternatively, add a Makefile target:
+
+```makefile
+.PHONY: docs
+
+docs:
+	claude -p "Review all source files and update docs/api.md" .
+	mkdocs build
+```
+
+Run `make docs` whenever you want a full documentation refresh.
+
+## Adding Guided Content
+
+API reference is mechanical. Guides and tutorials are where you add context that code alone cannot convey. Use Claude to draft these, then refine them yourself.
+
+Start with a prompt:
+
+```
+Create a getting-started guide at docs/guides/getting-started.md.
+Assume new users have basic Python knowledge but are unfamiliar
+with this project's architecture. Cover:
+1. Installation steps
+2. Basic configuration
+3. Your first API call
+4. Common error messages and fixes
+
+Write in a friendly, tutorial style with code blocks for every step.
+```
+
+Claude generates a first draft. Review it, add your project-specific details, and save. The `frontend-design` skill helps if you want to add visual elements or structured layouts to your guides.
+
+## Preserving Context Across Sessions
+
+Documentation projects span multiple sessions. The `supermemory` skill stores decisions, style preferences, and architectural notes so you do not repeat yourself.
+
+Configure it once:
 
 ```bash
-mkdocs gh-deploy
+claude -m supermemory --init
 ```
 
-For continuous documentation updates, integrate the build into your CI pipeline. Many teams run `mkdocs build` on every pull request to catch documentation issues early.
-
-## Automating Documentation with Claude Code Skills
-
-Claude Code skills enhance your documentation workflow beyond basic content generation. The `pdf` skill converts Markdown directly to formatted PDF documents, useful for offline distribution or client-facing deliverables. If you need to generate diagrams or flowcharts for your docs, the `canvas-design` skill creates visuals that integrate into your documentation.
-
-### Creating Multi-Language Documentation
-
-For projects serving international users, MkDocs supports multiple languages through the `i18n` plugin. Configure additional languages in your `mkdocs.yml`:
-
-```yaml
-plugins:
-  - i18n:
-      default_language: en
-      languages:
-        en: English
-        es: Español
-        zh: 中文
-```
-
-Ask Claude to translate your existing documentation:
+Then store documentation decisions:
 
 ```
-Translate this documentation page to Spanish, maintaining the technical accuracy and code examples.
+claude -m supermemory --store "API docs use Google style, guides use present tense"
 ```
 
-### Documentation Testing and Validation
-
-A robust documentation workflow includes validation. MkDocs can integrate with tools that check links, verify code syntax, and ensure consistency:
-
-- **Link checking**: Validate internal and external URLs
-- **Spell checking**: Catch typos before publication
-- **Code validation**: Ensure code examples compile
-- **Accessibility checks**: Verify readability standards
-
-Claude helps you set up these checks and responds to validation errors by suggesting fixes.
-
-## Organizing Large Documentation Projects
-
-As projects grow, organizing documentation becomes critical. MkDocs handles large doc sets through its navigation configuration and file structure. Group related content into logical sections:
+When starting new sessions, retrieve stored context:
 
 ```
-docs/
-├── index.md
-├── getting-started/
-│   ├── installation.md
-│   ├── configuration.md
-│   └── quick-start.md
-├── guides/
-│   ├── basic-usage.md
-│   ├── advanced-features.md
-│   └── best-practices.md
-├── api/
-│   ├── overview.md
-│   ├── authentication.md
-│   └── endpoints/
-│       ├── users.md
-│       └── resources.md
-└── reference/
-    ├── cli-commands.md
-    └── configuration-options.md
+claude -m supermemory --retrieve
 ```
 
-This structure works well with Claude—ask it to generate documentation for specific sections while you focus on high-level organization.
+This keeps your documentation consistent without re-explaining your conventions every time.
 
-## Best Practices for AI-Assisted Documentation
+## Exporting to PDF
 
-While Claude accelerates documentation creation, human review remains essential:
+Some audiences need downloadable documentation. The `pdf` skill converts your MkDocs site to PDF:
 
-- **Verify accuracy**: AI can misinterpret edge cases
-- **Check examples**: Test code snippets before publishing
-- **Maintain voice**: Ensure consistency with your team's writing style
-- **Update regularly**: Set reminders to review docs for stale content
-- **Version docs**: Keep historical versions accessible for users on older releases
+```bash
+claude -m pdf --input docs/ --output docs/project-docs.pdf
+```
 
-The `frontend-design` skill pairs well with MkDocs projects when you need custom styling or responsive layouts. The `supermemory` skill helps Claude reference previous documentation decisions, maintaining consistency across large doc sets.
+This is useful for offline distribution, client deliverables, or archived versions of your documentation.
 
----
+## Workflow Summary
+
+The complete workflow looks like this:
+
+1. **Write code** in your source files
+2. **Commit changes** — pre-commit hook triggers doc generation
+3. **Claude updates** `docs/api.md` and related files
+4. **Review** the generated content
+5. **Run** `mkdocs serve` to preview
+6. **Deploy** with `mkdocs gh-deploy` or your preferred hosting
+
+This keeps documentation current without requiring you to write it manually after every code change. The gap between code and docs shrinks to minutes rather than months.
+
+## Troubleshooting Common Issues
+
+**Claude misses some functions:** Add more specific prompts that enumerate the files you want scanned. Use glob patterns explicitly.
+
+**MkDocs build fails:** Run `mkdocs build --verbose` to see detailed errors. Most issues are missing files or YAML syntax in `mkdocs.yml`.
+
+**Navigation does not update:** MkDocs requires explicit `nav` configuration. Update your `mkdocs.yml` nav section when adding new documentation files.
+
+**Documentation is inaccurate:** Claude generates from code but cannot always infer intent. Always review generated docs before committing, especially for public APIs.
+
+## Extending the Workflow
+
+Once the basics work, layer in additional capabilities:
+
+- Use the `tdd` skill to verify documentation matches test coverage
+- Add the `docx` skill to export documentation in Word format for stakeholders
+- Integrate with GitHub Actions to build and deploy on every push to main
+- Use MkDocs plugins like `mkdocs-material` for better visuals
+
+Each extension adds a small piece of functionality without disrupting the core workflow.
+
+This approach scales from small personal projects to larger team documentation. The key insight is that documentation generation and code development happen in the same environment, using the same tools, driven by Claude's understanding of your codebase.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}
