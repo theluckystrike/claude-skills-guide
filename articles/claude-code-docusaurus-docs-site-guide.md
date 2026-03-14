@@ -1,202 +1,213 @@
 ---
 layout: default
 title: "Claude Code Docusaurus Docs Site Guide"
-description: "Build and maintain Docusaurus documentation sites using Claude Code with specialized skills for writing, editing, and automated testing."
+description: "A comprehensive guide to building documentation sites with Docusaurus using Claude Code and specialized skills."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-docusaurus-docs-site-guide/
 ---
 
-# Claude Code Docusaurus Docs Site Guide
+Building a documentation site doesn't need to be painful. Docusaurus provides an excellent framework for creating modern documentation websites, and Claude Code can accelerate every step of the process. This guide shows you how to leverage Claude Code skills to set up, customize, and maintain a Docusaurus docs site efficiently.
 
-Docusaurus has become the standard for building modern documentation websites, powering everything from open-source projects to enterprise knowledge bases. When combined with Claude Code and its specialized skill ecosystem, you can automate documentation workflows, maintain consistency across pages, and catch issues before they reach production.
+## Why Docusaurus for Documentation
 
-This guide covers practical approaches for using Claude Code with Docusaurus projects, focusing on skills that handle documentation writing, testing, and site management efficiently.
+Docusaurus powers documentation for React, Meta, and thousands of open-source projects. It offers markdown-based content management, versioned docs, search functionality, and customizable themes out of the box. When you pair Docusaurus with Claude Code's specialized skills, you get a documentation workflow that feels almost magical.
 
 ## Setting Up Your Docusaurus Project
 
-Before integrating Claude Code, ensure your Docusaurus project follows the standard structure:
-
-```
-my-docs-site/
-├── docs/
-│   ├── intro.md
-│   └── api/
-├── src/
-│   └── pages/
-├── docusaurus.config.js
-└── sidebars.js
-```
-
-The `docs` folder contains your markdown content, and `docusaurus.config.js` controls site metadata, navigation, and plugin configuration. Claude Code can interact with all these files directly through its file operation tools.
-
-## Using Claude Skills for Documentation
-
-Several Claude skills enhance Docusaurus workflow. The **docx** skill handles Word document conversions when you need to import existing documentation. For PDF-based technical specs, the **pdf** skill extracts content that you can then convert to Docusaurus markdown format.
-
-### Writing Documentation with Claude
-
-When creating new documentation pages, structure your markdown files consistently:
-
-```markdown
----
-id: my-feature
-title: My Feature
-sidebar_label: My Feature
----
-
-# My Feature
-
-## Overview
-
-Brief description of the feature.
-
-## Installation
+The fastest way to start uses the Docusaurus CLI. Here's the basic setup:
 
 ```bash
-npm install my-package
+npx create-docusaurus@latest my-docs-site classic
+cd my-docsaurus-site
+npm start
 ```
 
-## Usage
+But Claude Code can handle much more than just initial scaffolding. With the **frontend-design** skill, you can generate custom theme configurations, color schemes, and component layouts without deep CSS knowledge.
 
-Example code block.
-```
+## Integrating Claude Skills for Documentation Workflow
 
-Claude Code can generate these templates automatically. Provide context about your feature, and Claude writes the initial draft with appropriate sections, code examples, and formatting.
+Several Claude skills accelerate documentation development:
 
-The **frontend-design** skill proves valuable when you need to add custom UI components to your Docusaurus site. It understands component patterns and can generate React code that integrates with Docusaurus's swizzling system for customizations.
-
-## Automating Documentation Testing
-
-Documentation quality matters as much as code quality. The **tdd** (test-driven development) skill applies here—you can write tests that verify documentation correctness before deployment.
-
-Consider these testing approaches:
-
-1. **Link validation**: Ensure all internal links point to existing pages
-2. **Code snippet testing**: Verify code examples actually work
-3. **Metadata consistency**: Confirm all pages have required front matter
-
-Create a test file in your project:
+The **pdf** skill enables automatic generation of PDF exports from your documentation. This is valuable for offline reading or client deliverables. You can convert entire doc sections or selected pages:
 
 ```javascript
-// tests/docs.test.js
-const { glob } = require('glob');
+const pdf = require('pdfkit');
 const fs = require('fs');
 
-describe('Documentation', () => {
-  const docsDir = './docs';
+function generateDocPDF(sourceDir, outputPath) {
+  const doc = new pdf();
+  const stream = fs.createWriteStream(outputPath);
+  doc.pipe(stream);
   
-  it('all docs have required front matter', async () => {
-    const files = await glob(`${docsDir}/**/*.md`);
-    
-    for (const file of files) {
-      const content = fs.readFileSync(file, 'utf-8');
-      const hasId = content.includes('id:');
-      const hasTitle = content.includes('title:');
-      
-      expect(hasId || hasTitle, `${file} missing required front matter`).toBe(true);
+  const files = fs.readdirSync(sourceDir);
+  files.forEach(file => {
+    if (file.endsWith('.md')) {
+      const content = fs.readFileSync(`${sourceDir}/${file}`, 'utf8');
+      doc.text(content, { align: 'left' });
+      doc.addPage();
     }
   });
-
-  it('no broken internal links', async () => {
-    // Implementation checks for [link](./other-page) references
-    // that don't have corresponding files
-  });
-});
+  
+  doc.end();
+}
 ```
 
-Run these tests using Claude Code's bash execution capabilities. The **webapp-testing** skill can also validate that your built Docusaurus site renders correctly, checking for console errors and verifying page loads.
+The **tdd** skill proves invaluable when you need to validate code examples in your documentation. Running test suites against code snippets ensures your docs remain accurate as your project evolves.
 
-## Managing Versioned Documentation
+## Structuring Your Documentation
 
-Docusaurus supports versioned documentation, which becomes complex to maintain manually. Claude Code helps manage versions by:
+A well-organized docs site follows consistent patterns. Here's a recommended structure:
 
-- Creating versioned documentation branches
-- Syncing changes across versions
-- Generating version dropdown navigation
+```
+docs/
+├── intro.md
+├── getting-started/
+│   ├── installation.md
+│   ├── configuration.md
+│   └── first-page.md
+├── guides/
+│   ├── basic-usage.md
+│   └── advanced-features.md
+├── api-reference/
+│   ├── components.md
+│   └── hooks.md
+└── changelog.md
+```
 
-To create a new version:
+The **supermemory** skill helps maintain context across documentation updates. It stores your project-specific conventions, terminology preferences, and structural decisions, making subsequent edits faster and more consistent.
+
+## Customizing the Docusaurus Theme
+
+Docusaurus supports extensive customization through its configuration file. Here's a practical example adding search, versioning, and custom branding:
+
+```javascript
+// docusaurus.config.js
+module.exports = {
+  title: 'Your Project Docs',
+  tagline: 'Documentation that developers love',
+  url: 'https://yourproject.com',
+  baseUrl: '/',
+  favicon: 'img/favicon.ico',
+  
+  themeConfig: {
+    navbar: {
+      title: 'Your Project',
+      logo: {
+        alt: 'Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'doc',
+          docId: 'intro',
+          position: 'left',
+          label: 'Documentation',
+        },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      copyright: `Copyright © ${new Date().getFullYear()} Your Company`,
+    },
+  },
+  
+  presets: [
+    [
+      'classic',
+      {
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          versions: {
+            current: {
+              label: 'v2.0 (beta)',
+            },
+          },
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
+    ],
+  ],
+};
+```
+
+## Adding Interactive Code Examples
+
+Documentation improves dramatically with runnable code examples. Docusaurus supports Prism for syntax highlighting and interactive playgrounds for React components.
+
+For TypeScript documentation, the TypeScript configuration matters:
+
+```javascript
+// docusaurus.config.js
+module.exports = {
+  presets: [
+    [
+      'classic',
+      {
+        docs: {
+          remarkPlugins: [require('mdx-mermaid')],
+          rehypePlugins: [require('rehype-katex')],
+        },
+      },
+    ],
+  ],
+  themes: ['@docusaurus/theme-live-codeblock'],
+};
+```
+
+## Automating Documentation Tasks
+
+Claude Code excels at repetitive documentation tasks. You can create custom scripts that:
+
+- Auto-generate API documentation from TypeScript interfaces
+- Update changelogs based on git commits
+- Validate internal links across your docs
+- Extract and organize code comments into reference pages
+
+The **artifacts-builder** skill helps create interactive documentation components, while **docx** skill enables generating formatted Word documents for stakeholders who prefer traditional formats.
+
+## Versioning Your Documentation
+
+As projects evolve, maintaining documentation for multiple versions becomes essential. Docusaurus provides built-in versioning:
 
 ```bash
 npm run docusaurus docs:version 1.0.0
 ```
 
-This creates a `versioned_docs/version-1.0.0` folder. Claude Code can compare differences between versions and help backport documentation updates.
+This creates a snapshot of your docs at that point in time, allowing you to update current docs while keeping historical versions accessible.
 
-## Content Organization Strategies
+## Deploying Your Docs Site
 
-Effective Docusaurus sites require thoughtful content organization. The **supermemory** skill helps maintain a mental model of your documentation structure, tracking which topics have been covered and identifying gaps.
+Deployment options include GitHub Pages, Vercel, Netlify, or any static hosting service. For GitHub Pages:
 
-Use `sidebars.js` to control navigation:
-
-```javascript
-// sidebars.js
-module.exports = {
-  tutorialSidebar: [
-    'intro',
-    {
-      type: 'category',
-      label: 'Getting Started',
-      items: ['installation', 'configuration'],
-    },
-    {
-      type: 'category',
-      label: 'API Reference',
-      items: ['api/overview', 'api/endpoints'],
-    },
-  ],
-};
+```bash
+npm run build
+npm run deploy
 ```
 
-Claude Code can analyze your documentation and recommend sidebar structure improvements based on content frequency and cross-reference patterns.
+CI/CD pipelines can automate builds on every push to your repository, ensuring your documentation stays current with your codebase.
 
-## Building Search Functionality
+## Maintaining Documentation Quality
 
-Docusaurus includes local search via Algolia DocSearch or local plugins. Configure search in `docusaurus.config.js`:
+Documentation rot happens when docs diverge from implementation. Combat this by:
 
-```javascript
-themeConfig: {
-  algolia: {
-    appId: 'YOUR_APP_ID',
-    apiKey: 'YOUR_SEARCH_API_KEY',
-    indexName: 'YOUR_INDEX_NAME',
-  },
-}
-```
+- Including code examples in your test suite
+- Using the **tdd** skill to validate snippet accuracy
+- Setting up automated link checking
+- Reviewing docs as part of pull requests
 
-For offline-capable search, the `docusaurus-lunr-search` plugin provides local search without external dependencies. Claude Code can help configure and test search indexing to ensure all content is discoverable.
-
-## Deployment and CI Integration
-
-Automate documentation deployments using GitHub Actions. Claude Code assists by generating appropriate CI configuration:
-
-```yaml
-# .github/workflows/deploy.yml
-name: Deploy Documentation
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm ci
-      - run: npm run build
-      - run: npm run deploy
-```
-
-The **skill-creator** skill helps build custom skills for your specific documentation needs, such as automated API documentation generation from code comments or validation rules specific to your project's style guide.
+The **frontend-design** skill provides design consistency checks, ensuring your docs maintain visual coherence across pages.
 
 ## Conclusion
 
-Claude Code transforms Docusaurus documentation from manual maintenance into an automated workflow. By leveraging skills like **pdf** for content extraction, **tdd** for documentation testing, and **frontend-design** for custom components, you maintain high-quality documentation without the overhead.
+Docusaurus combined with Claude Code skills creates a documentation workflow that saves time and produces better results. From initial setup through ongoing maintenance, each phase benefits from automation and specialized tools. The **pdf**, **tdd**, **supermemory**, and **frontend-design** skills work together seamlessly with Docusaurus to build docs that developers actually want to read.
 
-Start with one automation—perhaps automated link checking or test-driven documentation—and expand as you identify more opportunities for improvement.
+Start with a minimal viable setup, add customization incrementally, and leverage Claude Code's capabilities to handle the repetitive work. Your future self—and your users—will thank you.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
