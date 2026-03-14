@@ -1,13 +1,18 @@
 ---
 
+
 layout: default
 title: "AI Coding Tools for Accessibility Improvements"
 description: "Discover how AI coding tools can help developers build more accessible web applications, with practical examples and real-world techniques."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-coding-tools-for-accessibility-improvements/
+reviewed: true
+score: 7
 categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Coding Tools for Accessibility Improvements
 

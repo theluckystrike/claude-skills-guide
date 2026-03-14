@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "AI Pair Programming Workflow Guide 2026"
 description: "Master AI pair programming workflows with practical strategies, real-world examples, and essential tools for developers in 2026."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-pair-programming-workflow-guide-2026/
+reviewed: true
+score: 7
 categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 AI pair programming has transformed from an experimental concept into a production-ready workflow that developers use daily. This guide provides practical strategies for integrating AI assistants into your development process, covering setup, execution, and optimization for maximum productivity.
 

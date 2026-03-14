@@ -1,18 +1,23 @@
 ---
+
 layout: default
 title: "AI-Assisted Database Schema Design Workflow"
 description: "A practical workflow for designing database schemas with AI assistance. Learn how to leverage Claude Code skills to accelerate schema design."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-assisted-database-schema-design-workflow/
-categories: [guides]
+reviewed: true
+score: 7
+categories: [workflows]
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI-Assisted Database Schema Design Workflow
 
 Database schema design remains one of the most critical and time-consuming aspects of application development. A well-designed schema can save weeks of refactoring work, while a poor one can haunt your project for years. The good news: AI-assisted workflows now make schema design faster, more consistent, and less prone to common pitfalls.
 
-This guide shows you a practical workflow for designing database schemas using Claude Code and its ecosystem of skills. You'll learn how to leverage AI for initial design, validation, migration planning, and documentation—without sacrificing control over your data model.
+This guide shows you a practical workflow for designing database schemas using Claude Code and its ecosystem of skills. You'll learn how to use AI for initial design, validation, migration planning, and documentation—without sacrificing control over your data model.
 
 ## Starting Your Schema Design
 
@@ -25,7 +30,7 @@ Consider a practical example: building an e-commerce platform. Your core entitie
 - Products have many OrderItems
 - Payments belong to Orders
 
-This minimal domain model gives Claude a foundation to work from. Now you're ready to leverage AI assistance.
+This minimal domain model gives Claude a foundation to work from. Now you're ready to use AI assistance.
 
 ## Using Claude Code Skills for Schema Design
 
