@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Indie Developer Side Project Workflow Guide"
 description: "Learn how indie developers can leverage Claude Code to streamline their side project workflow, from ideation to deployment."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-indie-developer-side-project-workflow-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Indie Developer Side Project Workflow Guide
 
@@ -69,7 +74,7 @@ When you're ready to share your project or accept contributions, good version co
 
 ## Conclusion
 
-Claude Code transforms side project development from a solitary marathon into an efficient, structured workflow. By establishing solid foundations, leveraging rapid prototyping capabilities, managing complexity proactively, integrating testing, automating deployment, and maintaining clean version control, indie developers can ship better software in less time. Start with these patterns, adapt them to your specific needs, and watch your side project productivity soar.
+Claude Code transforms side project development from a solitary marathon into an efficient, structured workflow. By establishing solid foundations, using rapid prototyping capabilities, managing complexity proactively, integrating testing, automating deployment, and maintaining clean version control, indie developers can ship better software in less time. Start with these patterns, adapt them to your specific needs, and watch your side project productivity soar.
 
 ## Related Reading
 

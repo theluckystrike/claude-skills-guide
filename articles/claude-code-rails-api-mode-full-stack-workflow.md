@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Rails API Mode Full Stack Workflow"
 description: "A comprehensive guide to building full stack Rails applications with API mode using Claude Code. Includes practical examples, skill recommendations, and workflow automation tips for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-rails-api-mode-full-stack-workflow/
+reviewed: true
+score: 7
+categories: [workflows]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Rails API Mode Full Stack Workflow
 
-Building a full stack Rails application with API mode has never been more efficient when you combine Rails 7's API capabilities with Claude Code's AI-assisted development workflow. This guide walks you through setting up a complete development pipeline that leverages Claude Code's skills for testing, frontend generation, and documentation.
+Building a full stack Rails application with API mode has never been more efficient when you combine Rails 7's API capabilities with Claude Code's AI-assisted development workflow. This guide walks you through setting up a complete development pipeline that uses Claude Code's skills for testing, frontend generation, and documentation.
 
 ## Why Rails API Mode for Full Stack Development
 
@@ -196,6 +202,6 @@ Your frontend deployment (Vercel, Netlify, or similar) needs to point to your Ra
 
 ---
 
-This workflow combines Rails' backend strength with Claude Code's AI capabilities, creating a development experience that handles the entire full stack development cycle. The key is maintaining clear API contracts and leveraging Claude Code's skills for testing and documentation generation at each layer of your application.
+This workflow combines Rails' backend strength with Claude Code's AI capabilities, creating a development experience that handles the entire full stack development cycle. The key is maintaining clear API contracts and using Claude Code's skills for testing and documentation generation at each layer of your application.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

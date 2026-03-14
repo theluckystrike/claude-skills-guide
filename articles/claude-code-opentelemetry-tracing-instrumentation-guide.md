@@ -1,13 +1,18 @@
 ---
 
+
 layout: default
 title: "Claude Code OpenTelemetry Tracing Instrumentation Guide"
 description: "Learn how to implement OpenTelemetry tracing instrumentation in your applications using Claude Code. Practical examples for Python, Node.js, and Go."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-opentelemetry-tracing-instrumentation-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code OpenTelemetry Tracing Instrumentation Guide
 

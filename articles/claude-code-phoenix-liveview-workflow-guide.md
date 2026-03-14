@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Phoenix LiveView Workflow Guide"
 description: "Master Phoenix LiveView development with Claude Code: efficient workflows, real-time UI patterns, and state management strategies for Elixir developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-phoenix-liveview-workflow-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Phoenix LiveView Workflow Guide
 
-Building real-time web applications with Phoenix LiveView becomes significantly more productive when you leverage Claude Code effectively. This guide provides practical workflows for developing Phoenix LiveView applications with Claude Code, covering project setup, component development, state management, and testing patterns that work well with AI-assisted development.
+Building real-time web applications with Phoenix LiveView becomes significantly more productive when you use Claude Code effectively. This guide provides practical workflows for developing Phoenix LiveView applications with Claude Code, covering project setup, component development, state management, and testing patterns that work well with AI-assisted development.
 
 ## Setting Up Your Phoenix LiveView Project
 

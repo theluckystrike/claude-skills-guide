@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Solo SaaS Builder Launch Checklist Workflow"
 description: "A comprehensive checklist workflow for solo developers building and launching SaaS products using Claude Code. Covers project setup, feature."
 date: 2026-03-14
 categories: [guides, workflows]
-tags: [claude-code, saas, solo-developer, launch-checklist, deployment]
-author: theluckystrike
+tags: [claude-code, saas, solo-developer, launch-checklist, deployment, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-solo-saas-builder-launch-checklist-workflow/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Solo SaaS Builder Launch Checklist Workflow
 

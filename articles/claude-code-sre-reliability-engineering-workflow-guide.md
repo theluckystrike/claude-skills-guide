@@ -1,25 +1,27 @@
 ---
 
+
 layout: default
 title: "Claude Code SRE Reliability Engineering Workflow Guide"
 description: "Master Site Reliability Engineering workflows with Claude Code. Learn practical skills for incident response, monitoring automation, and building."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-sre-reliability-engineering-workflow-guide/
 categories: [guides]
-reviewed: false
-score: 0
-tags: [claude-code, sre, reliability-engineering]
+reviewed: true
+score: 7
+tags: [claude-code, sre, reliability-engineering, claude-skills]
 ---
+
 {% raw %}
 
-Site Reliability Engineering (SRE) bridges the gap between development and operations, focusing on building and maintaining reliable systems at scale. Claude Code, with its powerful CLI tools and extensible skills framework, offers a robust toolkit for SRE practitioners. This guide walks through practical workflows that leverage Claude Code to enhance reliability engineering practices.
+Site Reliability Engineering (SRE) bridges the gap between development and operations, focusing on building and maintaining reliable systems at scale. Claude Code, with its powerful CLI tools and extensible skills framework, offers a robust toolkit for SRE practitioners. This guide walks through practical workflows that use Claude Code to enhance reliability engineering practices.
 
 ## Understanding Claude Code for SRE
 
 Claude Code provides a terminal-based AI assistant that can execute commands, manage files, and integrate with your existing toolchain. For SRE work, this translates to rapid incident response, automated monitoring checks, and intelligent runbook generation. The key advantage is having an AI partner that understands your infrastructure context and can take actions based on your specifications.
 
-The foundation begins with understanding how Claude Code skills work. Skills are packaged workflows that extend Claude's capabilities for specific domains. For SRE work, you'll want to leverage skills that understand your monitoring stack, deployment pipelines, and incident management processes.
+The foundation begins with understanding how Claude Code skills work. Skills are packaged workflows that extend Claude's capabilities for specific domains. For SRE work, you'll want to use skills that understand your monitoring stack, deployment pipelines, and incident management processes.
 
 ## Core Skills for SRE Workflows
 

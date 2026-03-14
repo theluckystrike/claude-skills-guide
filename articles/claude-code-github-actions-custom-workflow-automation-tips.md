@@ -1,21 +1,26 @@
 ---
+
 layout: default
 title: "Claude Code GitHub Actions Custom Workflow Automation Tips"
 description: "Master Claude Code GitHub Actions integration with practical tips for custom workflow automation. Learn to build AI-powered CI/CD pipelines."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, github-actions, workflow-automation, ci-cd, devops]
-author: theluckystrike
+tags: [claude-code, github-actions, workflow-automation, ci-cd, devops, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-github-actions-custom-workflow-automation-tips/
+reviewed: true
+score: 7
 ---
+{% raw %}
+
 
 # Claude Code GitHub Actions Custom Workflow Automation Tips
 
-Integrating Claude Code with GitHub Actions unlocks powerful automation possibilities for development teams. This guide provides practical strategies for building custom workflows that leverage Claude's capabilities within your CI/CD pipeline.
+Integrating Claude Code with GitHub Actions unlocks powerful automation possibilities for development teams. This guide provides practical strategies for building custom workflows that use Claude's capabilities within your CI/CD pipeline.
 
 ## Setting Up Claude Code in GitHub Actions
 
-The foundation of any Claude-powered workflow starts with proper environment setup. You'll need to configure authentication and ensure Claude CLI is available in your runner environment. Most teams use a dedicated action to install Claude Code, then leverage it across subsequent steps.
+The foundation of any Claude-powered workflow starts with proper environment setup. You'll need to configure authentication and ensure Claude CLI is available in your runner environment. Most teams use a dedicated action to install Claude Code, then use it across subsequent steps.
 
 ```yaml
 - name: Setup Claude Code
@@ -147,3 +152,4 @@ Claude Code integration with GitHub Actions transforms repetitive development ta
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

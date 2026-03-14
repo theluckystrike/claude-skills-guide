@@ -1,13 +1,18 @@
 ---
+
 layout: default
 title: "Claude Code Nuxt Vue Full Stack Workflow"
 description: "A practical guide to building full stack applications with Claude Code, Nuxt, and Vue. Covers project setup, component generation, testing, and."
 date: 2026-03-14
 categories: [workflows]
-tags: [claude-code, nuxt, vue, full-stack, workflow]
-author: theluckystrike
+tags: [claude-code, nuxt, vue, full-stack, workflow, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-nuxt-vue-full-stack-workflow/
+reviewed: true
+score: 7
 ---
+{% raw %}
+
 
 # Claude Code Nuxt Vue Full Stack Workflow
 
@@ -273,3 +278,4 @@ Build smaller, focused components. Test incrementally. Maintain documentation as
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Flask Blueprint Architecture Guide"
 description: "A practical guide to structuring Flask applications with blueprints in Claude Code. Learn scalable architecture patterns, organization strategies, and."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-flask-blueprint-architecture-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Flask Blueprint Architecture Guide
 
@@ -189,7 +194,7 @@ api_v1_bp = Blueprint('api_v1', __name__, url_prefix='/api/v1')
 api_v2_bp = Blueprint('api_v2', __name__, url_prefix='/api/v2')
 ```
 
-Third, leverage blueprint-specific request processing with `before_request` handlers. This allows different validation logic for different parts of your application.
+Third, use blueprint-specific request processing with `before_request` handlers. This allows different validation logic for different parts of your application.
 
 ## Conclusion
 

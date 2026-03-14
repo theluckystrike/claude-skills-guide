@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Algolia GeoSearch Filtering Workflow Tutorial"
 description: "Learn how to build powerful location-based search filtering workflows using Claude Code and Algolia's GeoSearch capabilities. Step-by-step guide with."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [tutorials]
-tags: [claude-code, algolia, geosearch, filtering, workflow, tutorial]
+tags: [claude-code, algolia, geosearch, filtering, workflow, tutorial, claude-skills]
 permalink: /claude-code-algolia-geosearch-filtering-workflow-tutorial/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Algolia GeoSearch Filtering Workflow Tutorial
 

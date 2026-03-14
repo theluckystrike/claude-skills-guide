@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code REST API Versioning Strategy Workflow Tips"
 description: "Master REST API versioning strategies with Claude Code. Learn practical workflows for URL path, header, and query parameter versioning in your projects."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-rest-api-versioning-strategy-workflow-tips/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code REST API Versioning Strategy Workflow Tips
 
@@ -52,7 +57,7 @@ For most projects, URL path versioning strikes the best balance between clarity 
 
 ## Setting Up Versioned Endpoints with Claude Code
 
-When building APIs with Claude Code, you can leverage skills like **tdd** to ensure each version maintains its contract correctly. Here's a practical workflow:
+When building APIs with Claude Code, you can use skills like **tdd** to ensure each version maintains its contract correctly. Here's a practical workflow:
 
 First, define your API specification. Create a dedicated directory for each version:
 

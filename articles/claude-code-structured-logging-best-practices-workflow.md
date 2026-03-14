@@ -1,14 +1,19 @@
 ---
+
 layout: default
 title: "Claude Code Structured Logging Best Practices Workflow"
 description: "Learn how to implement structured logging in your Claude Code workflow for better debugging, observability, and developer productivity."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-structured-logging-best-practices-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
 
-Structured logging transforms how developers debug and monitor applications. When combined with Claude Code's capabilities, you gain powerful insights into your development workflow. This guide covers practical patterns for implementing structured logging that integrate seamlessly with Claude Code and various skills like supermemory for knowledge management and tdd for test-driven development workflows.
+
+Structured logging transforms how developers debug and monitor applications. When combined with Claude Code's capabilities, you gain powerful insights into your development workflow. This guide covers practical patterns for implementing structured logging that integrate smoothly with Claude Code and various skills like supermemory for knowledge management and tdd for test-driven development workflows.
 
 ## Why Structured Logging Matters
 

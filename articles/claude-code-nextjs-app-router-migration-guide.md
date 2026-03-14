@@ -1,16 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Next.js App Router Migration Guide"
 description: "A practical guide for developers migrating from Next.js Pages Router to App Router using Claude Code. Includes code examples, common pitfalls, and."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-nextjs-app-router-migration-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Next.js App Router Migration Guide
 
-Migrating from Next.js Pages Router to App Router represents one of the most significant architectural shifts in the framework's history. This transition involves moving from a directory-based routing system to a file-system based approach with React Server Components, new data fetching patterns, and fundamentally different caching mechanisms. For developers working with Claude Code, this migration becomes considerably smoother when you leverage the right skills and workflows.
+Migrating from Next.js Pages Router to App Router represents one of the most significant architectural shifts in the framework's history. This transition involves moving from a directory-based routing system to a file-system based approach with React Server Components, new data fetching patterns, and fundamentally different caching mechanisms. For developers working with Claude Code, this migration becomes considerably smoother when you use the right skills and workflows.
 
 This guide walks you through the practical aspects of migrating your Next.js application to the App Router while maximizing your productivity with Claude Code and related skills.
 

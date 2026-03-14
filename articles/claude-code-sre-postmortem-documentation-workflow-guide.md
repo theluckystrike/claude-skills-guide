@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code SRE Postmortem Documentation Workflow Guide"
 description: "Learn how to use Claude Code and skills to streamline SRE postmortem documentation. Practical examples for incident analysis, root cause analysis, and."
@@ -7,8 +8,11 @@ date: 2026-03-14
 author: "theluckystrike"
 permalink: /claude-code-sre-postmortem-documentation-workflow-guide/
 categories: [workflows, sre]
-tags: [claude-code, postmortem, documentation, sre]
+tags: [claude-code, postmortem, documentation, sre, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 

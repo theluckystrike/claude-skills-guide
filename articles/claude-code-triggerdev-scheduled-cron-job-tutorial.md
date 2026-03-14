@@ -1,16 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code TriggerDev Scheduled Cron Job Tutorial"
 description: "Learn how to automate recurring tasks using Claude Code and TriggerDev cron jobs. A practical guide with real-world examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-triggerdev-scheduled-cron-job-tutorial/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code TriggerDev Scheduled Cron Job Tutorial
 
-Automation is the backbone of modern software development, and scheduled tasks are essential for maintaining reliable systems. In this tutorial, we'll explore how to leverage **Claude Code** alongside **TriggerDev** to create powerful scheduled cron jobs that streamline your development workflow and automate repetitive tasks.
+Automation is the backbone of modern software development, and scheduled tasks are essential for maintaining reliable systems. In this tutorial, we'll explore how to use **Claude Code** alongside **TriggerDev** to create powerful scheduled cron jobs that streamline your development workflow and automate repetitive tasks.
 
 ## What is Claude Code?
 

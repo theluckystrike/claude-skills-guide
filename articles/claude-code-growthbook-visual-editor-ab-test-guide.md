@@ -1,17 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code GrowthBook Visual Editor A/B Test Guide"
 description: "Learn how to use Claude Code to create, manage, and analyze A/B tests using GrowthBook's visual editor. Practical examples for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, growthbook, ab-testing, visual-editor, experimentation]
+tags: [claude-code, growthbook, ab-testing, visual-editor, experimentation, claude-skills]
 permalink: /claude-code-growthbook-visual-editor-ab-test-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code GrowthBook Visual Editor A/B Test Guide
 
-The combination of Claude Code and GrowthBook's visual editor transforms how developers approach A/B testing. Rather than manually coding experiment variations or wrestling with complex configuration files, you can leverage Claude Code's natural language capabilities to interact with GrowthBook and create experiments through an intuitive visual interface. This guide walks you through practical workflows for integrating Claude Code with GrowthBook's visual editor to run effective A/B tests.
+The combination of Claude Code and GrowthBook's visual editor transforms how developers approach A/B testing. Rather than manually coding experiment variations or wrestling with complex configuration files, you can use Claude Code's natural language capabilities to interact with GrowthBook and create experiments through an intuitive visual interface. This guide walks you through practical workflows for integrating Claude Code with GrowthBook's visual editor to run effective A/B tests.
 
 ## Setting Up Claude Code with GrowthBook
 

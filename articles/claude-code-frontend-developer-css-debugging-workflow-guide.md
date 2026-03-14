@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Frontend Developer CSS Debugging Workflow Guide"
 description: "Master CSS debugging with Claude Code: learn systematic approaches, practical techniques, and real-world examples for frontend developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-frontend-developer-css-debugging-workflow-guide/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Frontend Developer CSS Debugging Workflow Guide
 
