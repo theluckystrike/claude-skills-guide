@@ -1,295 +1,236 @@
 ---
 layout: default
 title: "Claude Code API Client TypeScript Guide"
-description: "A practical guide to building type-safe API clients for Claude Code using TypeScript, with real examples and best practices for developers."
+description: "A practical guide to building TypeScript API clients that integrate with Claude Code, covering authentication, skill composition, and real-world patterns."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-client-typescript-guide/
 ---
 
-When integrating Claude Code into your development workflow, having a robust TypeScript API client foundation becomes essential. Whether you're building automation tools, creating custom skills, or connecting Claude to external services, a well-typed API client reduces errors and improves maintainability throughout your project.
+{% raw %}
+# Claude Code API Client TypeScript Guide
 
-This guide covers practical patterns for building API clients that work seamlessly with Claude Code, with concrete examples you can adapt to your specific use cases.
+Building a TypeScript client for interacting with Claude Code opens up powerful automation possibilities. Whether you're integrating Claude into your CI/CD pipeline, building a custom dashboard, or composing multiple skills programmatically, understanding the API client patterns in TypeScript will accelerate your development workflow.
 
-## Setting Up Your TypeScript API Client
+## Setting Up Your TypeScript Project
 
-Start by initializing a TypeScript project if you haven't already:
+Before diving into API interactions, set up a TypeScript project with proper dependencies. You'll need the Anthropic SDK and type definitions:
 
 ```bash
 npm init -y
-npm install typescript @types/node --save-dev
+npm install @anthropic-ai/sdk typescript @types/node
 npx tsc --init
 ```
 
-Create a dedicated client file for your API interactions. The following example demonstrates a base client with proper TypeScript typing:
+Create a client configuration file that handles authentication and base settings:
 
 ```typescript
-interface ApiClientConfig {
-  baseUrl: string;
-  apiKey: string;
-  timeout?: number;
-}
+import Anthropic from '@anthropic-ai/sdk';
 
-interface ApiResponse<T> {
-  data: T;
-  status: number;
-  message?: string;
-}
+const client = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+  maxRetries: 3,
+  timeout: 60000,
+});
 
-class BaseApiClient {
-  private baseUrl: string;
-  private apiKey: string;
-  private timeout: number;
+export default client;
+```
 
-  constructor(config: ApiClientConfig) {
-    this.baseUrl = config.baseUrl;
-    this.apiKey = config.apiKey;
-    this.timeout = config.timeout ?? 30000;
-  }
+This basic setup gives you access to the Claude Messages API, which serves as the foundation for all skill interactions.
 
-  protected async request<T>(
-    endpoint: string,
-    options: RequestInit = {}
-  ): Promise<ApiResponse<T>> {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), this.timeout);
+## Working with Claude Skills in TypeScript
 
-    try {
-      const response = await fetch(`${this.baseUrl}${endpoint}`, {
-        ...options,
-        signal: controller.signal,
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.apiKey}`,
-          ...options.headers,
-        },
-      });
+Claude skills extend the base API with specialized prompts and tool configurations. When building a TypeScript client, you can invoke skills directly or compose multiple skills for complex workflows.
 
-      const data = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(data.message || `HTTP error ${response.status}`);
-      }
+### Invoking a Single Skill
 
-      return { data, status: response.status };
-    } finally {
-      clearTimeout(timeoutId);
-    }
-  }
+The Messages API accepts a `system` parameter where you can inject skill content:
+
+```typescript
+async function invokeSkill(skillContent: string, userMessage: string) {
+  const response = await client.messages.create({
+    model: 'claude-sonnet-4-20250514',
+    max_tokens: 4096,
+    system: skillContent,
+    messages: [{ role: 'user', content: userMessage }],
+  });
+
+  return response.content[0].type === 'text' 
+    ? response.content[0].text 
+    : null;
 }
 ```
 
-## Integrating with Claude Code Skills
+This pattern works well for skills like the **pdf** skill when you need to process documents programmatically, or the **tdd** skill for generating test suites from your TypeScript code.
 
-When building custom skills that interact with APIs, structure your code to leverage Claude Code's tool-calling capabilities. The skill-md file instructs Claude on how to use your client:
+### Composing Multiple Skills
 
-```markdown
-# Skill: Project Management API Client
-
-## Description
-Provides project management functionality through a TypeScript API client.
-
-## Tools
-- createProject(name: string, description: string): Promise<Project>
-- getProject(id: string): Promise<Project>
-- updateProject(id: string, updates: Partial<Project>): Promise<Project>
-- deleteProject(id: string): Promise<void>
-
-## Usage
-Use these tools to manage projects in your connected project management system.
-```
-
-Here's how the TypeScript implementation works with this skill:
+For more complex workflows, chain multiple skill invocations:
 
 ```typescript
-interface Project {
+async function composeWorkflow(skills: string[], input: string) {
+  let currentInput = input;
+  
+  for (const skill of skills) {
+    const result = await invokeSkill(skill, currentInput);
+    currentInput = result || currentInput;
+  }
+  
+  return currentInput;
+}
+```
+
+This approach shines when combining the **frontend-design** skill for UI generation with the **pdf** skill for documentation, or using **supermemory** to retrieve context before processing.
+
+## Authentication and Environment Configuration
+
+Production implementations require secure authentication handling. Never hardcode API keys in your source code. Instead, use environment variables with validation:
+
+```typescript
+import { z } from 'zod';
+
+const envSchema = z.object({
+  ANTHROPIC_API_KEY: z.string().min(1),
+  CLAUDE_MODEL: z.enum(['claude-sonnet-4-20250514', 'claude-opus-4-20250514']).default('claude-sonnet-4-20250514'),
+  MAX_TOKENS: z.number().default(4096),
+});
+
+function loadConfig() {
+  const result = envSchema.safeParse(process.env);
+  
+  if (!result.success) {
+    throw new Error(`Environment validation failed: ${result.error.format()}`);
+  }
+  
+  return result.data;
+}
+
+export const config = loadConfig();
+```
+
+This validation prevents runtime errors from missing configuration and provides clear error messages during development.
+
+## Handling Tool Calls and Responses
+
+Claude skills often involve tool use. Your TypeScript client needs to handle the message deltas that include tool invocations:
+
+```typescript
+interface ToolResult {
+  type: 'tool_use';
   id: string;
   name: string;
-  description: string;
-  status: 'active' | 'completed' | 'archived';
-  createdAt: string;
+  input: Record<string, unknown>;
 }
 
-class ProjectApiClient extends BaseApiClient {
-  async createProject(name: string, description: string): Promise<Project> {
-    const response = await this.request<Project>('/projects', {
-      method: 'POST',
-      body: JSON.stringify({ name, description }),
-    });
-    return response.data;
+async function executeWithTools(
+  systemPrompt: string,
+  userMessage: string,
+  availableTools: any[]
+) {
+  const stream = await client.messages.stream({
+    model: config.CLAUDE_MODEL,
+    max_tokens: config.MAX_TOKENS,
+    system: systemPrompt,
+    messages: [{ role: 'user', content: userMessage }],
+    tools: availableTools,
+  });
+
+  let fullResponse = '';
+  
+  for await (const chunk of stream) {
+    if (chunk.type === 'content_block_delta') {
+      fullResponse += chunk.delta.text;
+    }
   }
 
-  async getProject(id: string): Promise<Project> {
-    const response = await this.request<Project>(`/projects/${id}`);
-    return response.data;
-  }
-
-  async updateProject(id: string, updates: Partial<Project>): Promise<Project> {
-    const response = await this.request<Project>(`/projects/${id}`, {
-      method: 'PATCH',
-      body: JSON.stringify(updates),
-    });
-    return response.data;
-  }
-
-  async deleteProject(id: string): Promise<void> {
-    await this.request<void>(`/projects/${id}`, {
-      method: 'DELETE',
-    });
-  }
+  return fullResponse;
 }
 ```
+
+The **mcp-builder** skill provides excellent patterns for creating custom MCP servers that your TypeScript client can interact with, extending Claude's capabilities beyond built-in tools.
 
 ## Error Handling and Retry Logic
 
-Production API clients need robust error handling. Implement retry logic for transient failures:
+Network failures and rate limits require robust error handling. Implement exponential backoff for reliability:
 
 ```typescript
-class ResilientApiClient extends BaseApiClient {
-  private maxRetries: number;
-  private retryDelay: number;
-
-  constructor(config: ApiClientConfig & { maxRetries?: number; retryDelay?: number }) {
-    super(config);
-    this.maxRetries = config.maxRetries ?? 3;
-    this.retryDelay = config.retryDelay ?? 1000;
-  }
-
-  async requestWithRetry<T>(
-    endpoint: string,
-    options: RequestInit = {}
-  ): Promise<ApiResponse<T>> {
-    let lastError: Error | null = null;
-
-    for (let attempt = 0; attempt < this.maxRetries; attempt++) {
-      try {
-        return await this.request<T>(endpoint, options);
-      } catch (error) {
-        lastError = error as Error;
-        
-        // Don't retry on client errors (4xx)
-        if (error instanceof Error && error.message.includes('4')) {
-          throw error;
-        }
-        
-        // Wait before retrying
-        if (attempt < this.maxRetries - 1) {
-          await new Promise(resolve => 
-            setTimeout(resolve, this.retryDelay * Math.pow(2, attempt))
-          );
-        }
-      }
+async function withRetry<T>(
+  fn: () => Promise<T>,
+  maxRetries: number = 3
+): Promise<T> {
+  let lastError: Error | null = null;
+  
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      lastError = error as Error;
+      const delay = Math.pow(2, attempt) * 1000;
+      await new Promise(resolve => setTimeout(resolve, delay));
     }
-
-    throw lastError;
   }
+  
+  throw lastError;
 }
 ```
 
-## Combining with Claude Code Skills
+This retry logic handles transient failures gracefully, which is essential when integrating with Claude's API in production environments.
 
-The real power emerges when you combine well-typed API clients with Claude Code skills. For example, pair your client with the **pdf** skill to generate reports from API data, or use it alongside the **tdd** skill to automatically create test fixtures from your API responses.
+## Type-Safe Skill Definitions
 
-When working with the **supermemory** skill, you can persist API responses for future reference:
+Leverage TypeScript's type system to create type-safe skill definitions:
 
 ```typescript
-interface CachedApiResponse<T> {
-  data: T;
-  timestamp: number;
-  expiresAt: number;
+interface SkillDefinition<TInput, TOutput> {
+  name: string;
+  systemPrompt: string;
+  parseOutput: (raw: string) => TOutput;
+  transformInput: (input: TInput) => string;
 }
 
-class CachingApiClient extends ResilientApiClient {
-  private cache: Map<string, CachedApiResponse<unknown>> = new Map();
+const tddSkill: SkillDefinition<string, string[]> = {
+  name: 'tdd',
+  systemPrompt: 'Generate unit tests following TDD principles...',
+  parseOutput: (raw) => raw.split('\n').filter(line => line.includes('describe(')),
+  transformInput: (code) => `Generate tests for:\n${code}`,
+};
 
-  async getWithCache<T>(key: string, fetchFn: () => Promise<T>, ttl: number = 300000): Promise<T> {
-    const cached = this.cache.get(key) as CachedApiResponse<T> | undefined;
-    
-    if (cached && cached.expiresAt > Date.now()) {
-      return cached.data;
-    }
-
-    const data = await this.requestWithRetry<T>('/' + key);
-    
-    this.cache.set(key, {
-      data: data.data,
-      timestamp: Date.now(),
-      expiresAt: Date.now() + ttl,
-    });
-    
-    return data.data;
-  }
+async function runTdd(input: string): Promise<string[]> {
+  const prompt = tddSkill.transformInput(input);
+  const raw = await invokeSkill(tddSkill.systemPrompt, prompt);
+  return tddSkill.parseOutput(raw || '');
 }
 ```
 
-## Testing Your API Client
+This pattern ensures type safety across your skill invocations and makes refactoring straightforward when skill prompts change.
 
-Proper typing enables effective testing. Use the **tdd** skill to generate comprehensive test cases:
+## Real-World Integration Example
+
+Putting it all together, here's a practical workflow that uses multiple skills:
 
 ```typescript
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-
-// Mock fetch for testing
-global.fetch = vi.fn();
-
-describe('ProjectApiClient', () => {
-  let client: ProjectApiClient;
-
-  beforeEach(() => {
-    vi.clearAllMocks();
-    client = new ProjectApiClient({
-      baseUrl: 'https://api.example.com',
-      apiKey: 'test-key',
-    });
-  });
-
-  it('should create a project successfully', async () => {
-    const mockProject: Project = {
-      id: '123',
-      name: 'Test Project',
-      description: 'A test project',
-      status: 'active',
-      createdAt: '2026-03-14T00:00:00Z',
-    };
-
-    (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValueOnce({
-      ok: true,
-      status: 201,
-      json: () => Promise.resolve(mockProject),
-    });
-
-    const result = await client.createProject('Test Project', 'A test project');
-    expect(result).toEqual(mockProject);
-  });
-
-  it('should throw error on failed request', async () => {
-    (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValueOnce({
-      ok: false,
-      status: 404,
-      json: () => Promise.resolve({ message: 'Not found' }),
-    });
-
-    await expect(client.getProject('nonexistent')).rejects.toThrow('Not found');
-  });
-});
+async function processProjectDocumentation(projectPath: string) {
+  const fs = await import('fs/promises');
+  const code = await fs.readFile(projectPath, 'utf-8');
+  
+  // Use tdd skill to generate tests
+  const tests = await invokeSkill(tddSkillPrompt, code);
+  
+  // Use pdf skill to generate documentation
+  const docs = await invokeSkill(pdfSkillPrompt, tests);
+  
+  // Use supermemory to store results
+  await storeInMemory('project-docs', { tests, docs });
+  
+  return { tests, docs };
+}
 ```
 
-## Best Practices Summary
+This workflow demonstrates how TypeScript clients can orchestrate multiple Claude skills for comprehensive project automation.
 
-When building API clients for Claude Code, keep these principles in mind:
+Building a TypeScript API client for Claude Code gives you programmatic control over AI-powered workflows. The patterns covered here—authentication, skill composition, tool handling, and error recovery—provide a solid foundation for both simple integrations and complex production systems.
 
-**Type Everything**: Define interfaces for all request and response payloads. This helps Claude understand your API structure and generate appropriate tool definitions.
-
-**Centralize Configuration**: Store API keys and base URLs in environment variables. Never hardcode credentials in your client code.
-
-**Handle Errors Gracefully**: Implement proper error handling with typed error classes. This allows Claude Code to provide meaningful feedback when API calls fail.
-
-**Add Retry Logic**: Network issues happen. Implement exponential backoff for transient failures.
-
-**Cache Strategically**: For frequently accessed data, implement caching to reduce API calls and improve response times.
-
-**Test Thoroughly**: Use TypeScript's type system to catch errors at compile time, then add runtime tests for edge cases.
-
-By following these patterns, you create API clients that integrate smoothly with Claude Code's workflow, enabling you to build more sophisticated automation and tooling. The type safety ensures Claude understands your API structure, while the robust implementation handles real-world scenarios gracefully.
+---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
