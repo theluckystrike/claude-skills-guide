@@ -4,6 +4,7 @@ title: "Claude Code Hooks Chaining: Multiple Hooks Together Guide"
 description: "Learn how to chain multiple Claude Code hooks together — run sequential hook pipelines, create hook dependencies, and coordinate complex automation workflows."
 date: 2026-03-13
 author: theluckystrike
+permalink: /claude-code-hooks-chaining-multiple-hooks-together-guide/
 ---
 
 # Claude Code Hooks Chaining: Multiple Hooks Together Guide
