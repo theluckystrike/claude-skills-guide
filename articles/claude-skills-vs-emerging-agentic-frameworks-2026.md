@@ -24,19 +24,17 @@ Skills live in your project directory, making them version-controllable and port
 
 ```markdown
 ---
-skill: api-tester
-description: Automated REST API testing and validation
-trigger: when user mentions testing APIs
-tools:
-  - http_request
-  - json_parser
-  - assert
-steps:
-  - Parse OpenAPI spec or user-defined endpoints
-  - Execute test requests
-  - Validate responses against expected schemas
-  - Report pass/fail status with timing metrics
+name: api-tester
+description: Test REST API endpoints against expected schemas
 ---
+
+# API Testing Workflow
+
+When given an API endpoint to test:
+1. Parse the OpenAPI spec or user-defined endpoints
+2. Execute test requests using the Bash tool with curl
+3. Validate responses against expected schemas
+4. Report pass/fail status with timing metrics
 ```
 
 This simplicity means skills require no additional servers, no Python dependencies beyond Claude Code, and no complex configuration files.

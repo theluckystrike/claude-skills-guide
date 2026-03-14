@@ -159,32 +159,27 @@ When running tests, use summary output only. Run: `npm test --silent`
 For build errors, show only the first 20 lines: `npm run build 2>&1 | head -20`
 ```
 
-## Fix 7: Disable Unused Tools in the Skill Declaration
+## Fix 7: Scope Skill Instructions Precisely
 
-If your skill declares `WebSearch` but never uses it, that capability is still checked and allocated at session start. Remove unused tool declarations from the skill front matter:
+The more specific your skill instructions, the faster Claude produces focused output. Remove unnecessary guidance from skill files that covers cases your use case never triggers:
 
-```yaml
-# Before — unnecessary tools declared
+```markdown
+# Before — overly broad instructions
 ---
-description: "TDD workflow"
-tools:
-  - Bash
-  - Read
-  - Write
-  - WebSearch
-  - Glob
-  - Grep
+name: tdd
+description: TDD workflow
 ---
+Handle all types of testing: unit, integration, E2E, performance, security...
 
-# After — only what is actually needed
+# After — focused instructions
 ---
-description: "TDD workflow"
-tools:
-  - Bash
-  - Read
-  - Write
+name: tdd
+description: TDD workflow
 ---
+Write unit tests for the code I provide. Use the testing framework I specify.
 ```
+
+Skills are plain Markdown files with only `name:` and `description:` in the front matter — there is no `tools:` field.
 
 ## Fix 8: Use the `pdf` Skill With Page Ranges
 

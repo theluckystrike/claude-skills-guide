@@ -24,20 +24,16 @@ The key distinction is between two components: the skill definitions themselves 
 
 ## Setting Up Claude Skills for Offline Use
 
-The first step involves exporting or copying all necessary skill files into your air-gapped environment. Claude skills are typically distributed as YAML or JSON files containing prompts, tool definitions, and configuration. You'll need to transfer these files using physical media such as USB drives or secure file transfers approved by your organization.
+The first step involves exporting or copying all necessary skill files into your air-gapped environment. Claude skills are plain Markdown files containing instructions for Claude. Each skill is a single `.md` file. You'll need to transfer these files using physical media such as USB drives or secure file transfers approved by your organization.
 
 Here's a typical skill structure you might transfer:
 
 ```yaml
-# Example skill structure
+# Example skill structure (front matter only)
+---
 name: pdf
 description: "Comprehensive PDF manipulation capabilities"
-tools:
-  - extract_text
-  - create_pdf
-  - merge_documents
-prompts:
-  extraction: "Extract all text from the provided PDF..."
+---
 ```
 
 After transferring the skill files, place them in your Claude skills directory. The exact path depends on your installation, but commonly it's `~/.claude/skills/` or a directory specified in your configuration. Verify the directory structure matches what your Claude instance expects.

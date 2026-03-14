@@ -113,16 +113,13 @@ Complex skills often need configurable behavior. Use YAML or JSON in your `confi
 
 ```yaml
 # config/defaults.yml
+# Custom configuration for the skill
 output_format: markdown
-max_tokens: 4000
-temperature: 0.7
-tools:
-  - python
-  - bash
-  - read_file
-  - write_file
-auto_save: true
+default_language: python
+max_lines_per_file: 500
 ```
+
+Note: `tools`, `auto_save`, `temperature`, and `max_tokens` are not recognized by Claude Code. Configuration for Claude's behavior belongs in the skill body as instructions, not in YAML config files.
 
 ### State Management
 
