@@ -27,7 +27,7 @@ names, and a follow button. Use a modern card design with subtle shadows.
 Claude: *generates the complete component with props, styling, and interactivity*
 ```
 
-The developer provides high-level guidance and reviews the output, but doesn't write code line-by-line. [This approach works exceptionally well for scaffolding, prototyping, and implementing well-defined patterns](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)ed features quickly.
+The developer provides high-level guidance and reviews the output, but doesn't write code line-by-line. [This approach works exceptionally well for scaffolding, prototyping, and implementing well-defined patterns](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) for features quickly.
 
 ## Traditional Development: Process and Precision
 

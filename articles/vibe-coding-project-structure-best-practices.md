@@ -18,7 +18,7 @@ score: 8
 
 In traditional development, you might spend time planning your directory hierarchy. In vibe coding, the AI needs clear signals about where files live, what dependencies connect them, and how components relate to each other. When your structure is ambiguous, Claude spends cycles guessing rather than writing code.
 
-[A good vibe coding structure follows three principles: convention over configuration](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/): **convention over configuration**, **explicit over implicit**, and **sensible defaults**. Developers who master these patterns report faster iteration cycles and fewer context-switching errors when collaborating with AI assistants.
+[A good vibe coding structure follows three principles](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/): **convention over configuration**, **explicit over implicit**, and **sensible defaults**. Developers who master these patterns report faster iteration cycles and fewer context-switching errors when collaborating with AI assistants.
 
 ## Recommended Directory Layouts
 
