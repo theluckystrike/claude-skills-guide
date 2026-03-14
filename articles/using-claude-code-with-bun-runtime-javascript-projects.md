@@ -174,4 +174,12 @@ Combining Claude Code with Bun runtime creates an efficient development environm
 
 Experiment with this combination in your next project. The tight feedback loop between asking Claude for code and executing it changes how you approach development—faster iterations, more experiments, and ultimately better software.
 
+
+## Related Reading
+
+- [Claude Code for Deno Deploy Serverless Runtime Guide](/claude-skills-guide/claude-code-for-deno-deploy-serverless-runtime-guide/) — See also
+- [Claude Code Nix Flake Reproducible Development Environment](/claude-skills-guide/claude-code-nix-flake-reproducible-development-environment/) — See also
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

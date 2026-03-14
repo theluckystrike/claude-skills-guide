@@ -190,4 +190,12 @@ Creating a REST API from scratch using Claude Code involves defining your specif
 
 The combination of FastAPI for the backend, Test-Driven Development practices, and Claude Code's tool use capabilities produces production-ready APIs efficiently. As your API grows, use skills like supermemory for configuration management and pdf for documentation generation.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/) — See also
+- [Claude Code FastAPI Async Python Guide](/claude-skills-guide/claude-code-fastapi-async-python-guide/) — See also
+- [Claude Code Express Middleware Error Handling Patterns Guide](/claude-skills-guide/claude-code-express-middleware-error-handling-patterns-guide/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

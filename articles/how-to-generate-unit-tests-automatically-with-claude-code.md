@@ -128,4 +128,12 @@ Claude Code transforms unit test generation from a tedious task into an automate
 
 Start with small modules, refine your prompts based on results, and gradually expand to cover your entire codebase. Your future self will thank you when those tests catch a regression before it reaches production.
 
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — See also
+- [Claude Code Skills for Writing Unit Tests Automatically](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/) — See also
+- [How to Make Claude Code Write Better Unit Tests](/claude-skills-guide/how-to-make-claude-code-write-better-unit-tests/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

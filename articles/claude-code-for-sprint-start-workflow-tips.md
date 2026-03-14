@@ -13,7 +13,7 @@ score: 8
 
 # Claude Code for Sprint Start: Workflow Tips and Best Practices
 
-Starting a new sprint with the right workflow can set the tone for your entire development cycle. Claude Code brings AI-assisted productivity to every phase of sprint planning and initiation, helping developers move from backlog refinement to code-ready status faster than traditional methods allow.
+Starting a new sprint with the right workflow can set the tone for your entire development cycle. Claude Code brings AI-assisted productivity to every phase of sprint planning and initiation, helping developers move from backlog refinement to code-ready status faster than traditional methods allow. For the companion end-of-sprint workflow, see [Claude Code for end-of-day commit workflow](/claude-skills-guide/claude-code-for-end-of-day-commit-workflow/).
 
 This guide covers practical patterns for using Claude Code at sprint start—backlog grooming, estimation sessions, test scaffolding, and standup preparation—while using specific Claude skills to streamline each workflow step.
 
@@ -58,7 +58,7 @@ Before committing to a technical approach during planning, use Claude to surface
 - Ask for edge case identification
 - Request security considerations for new features
 
-The **tdd** skill is particularly valuable here. Invoke it during planning to generate test cases alongside your story breakdown:
+The [tdd skill is particularly valuable here](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/). Invoke it during planning to generate test cases alongside your story breakdown:
 
 ```bash
 claude "Using the tdd skill, generate test scenarios for this login 
@@ -94,7 +94,7 @@ This generates reusable patterns that developers can immediately implement, redu
 
 ### Test Data Preparation
 
-The **supermemory** skill becomes valuable when your sprint involves data-dependent features. If you've documented previous sprint data patterns, Claude can:
+The [supermemory skill becomes valuable](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) when your sprint involves data-dependent features. If you've documented previous sprint data patterns, Claude can:
 
 - Generate realistic test datasets
 - Identify data edge cases from historical issues
@@ -166,5 +166,12 @@ Claude Code transforms sprint start from a chaotic meeting into a structured, AI
 The key is consistency—establish patterns once using **skill-creator**, apply them every sprint, and refine based on outcomes. As your team develops muscle memory with these workflows, you'll find sprint planning becoming a strategic session rather than a tactical scramble.
 
 Start with one workflow element this sprint—perhaps test scaffolding or standup preparation—and expand from there. The cumulative effect of these small improvements compounds into substantial velocity gains over time.
+
+## Related Reading
+
+- [Claude Code for End-of-Day Commit Workflow](/claude-skills-guide/claude-code-for-end-of-day-commit-workflow/) — Close the loop on each sprint day with an automated, consistent commit workflow
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Generate sprint test scaffolding during planning so estimates include verification effort
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Carry sprint context and backlog knowledge across multiple Claude Code sessions
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Explore more Claude Code workflow patterns for agile and sprint-based development
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

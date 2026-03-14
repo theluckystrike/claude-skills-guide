@@ -13,7 +13,7 @@ permalink: /claude-code-slow-response-how-to-fix-latency-issues/
 
 # Claude Code Slow Response: How to Fix Latency Issues
 
-When Claude Code responds slowly, it disrupts your development workflow and kills productivity. This guide covers practical solutions for diagnosing and fixing latency issues in Claude Code, from skill configuration to context management.
+When Claude Code responds slowly, it disrupts your development workflow and kills productivity. This guide covers practical solutions for diagnosing and fixing latency issues in Claude Code, from skill configuration to context management. For related optimization strategies at the skill file level, see [Claude MD too long: context window optimization](/claude-skills-guide/claude-md-too-long-context-window-optimization/).
 
 ## Common Causes of Slow Responses
 
@@ -70,7 +70,7 @@ For projects requiring extensive history, consider splitting work across multipl
 /new-session
 ```
 
-Starting fresh sessions prevents context bloat. You can reference previous work through the **supermemory** skill, which maintains searchable project memory without bloating active context:
+Starting fresh sessions prevents context bloat. You can reference previous work through the [supermemory skill, which maintains searchable project memory](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) without bloating active context:
 
 ```
 /supermemory search previous-implementation-details
@@ -154,7 +154,7 @@ Reducing `maxContextTokens` forces more aggressive context management but speeds
 
 Certain skills require special consideration for performance.
 
-The **tdd** skill generates comprehensive test coverage, which naturally takes longer. Expect slightly slower initial responses as Claude produces thorough test suites. This trade-off often proves worthwhile for code quality.
+The [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) generates comprehensive test coverage, which naturally takes longer. Expect slightly slower initial responses as Claude produces thorough test suites. This trade-off often proves worthwhile for code quality.
 
 The **pdf** skill processes document content during extraction. Large PDFs take time to parse. Use specific page ranges when possible:
 
@@ -171,5 +171,12 @@ If latency persists after applying these solutions, consider these additional st
 1. Check Claude Code status pages for service disruptions
 2. Review your system's available resources (CPU, memory)
 3. Test with a minimal skill configuration to isolate the issue
+
+## Related Reading
+
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Cut token usage alongside latency for more efficient sessions
+- [Claude Code Context Window Exceeded After Loading Skill: Fix](/claude-skills-guide/claude-code-context-window-exceeded-after-loading-skill-fix/) — Resolve context overload that compounds slow responses
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Start lean with only the skills that justify their overhead
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — All performance and troubleshooting guides indexed
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

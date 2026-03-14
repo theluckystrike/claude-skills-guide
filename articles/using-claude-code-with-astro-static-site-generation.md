@@ -138,4 +138,12 @@ Integrating Claude Code into your Astro workflow significantly improves producti
 
 Start by adding Claude to your next Astro project and experiment with these workflows. The time savings compound quickly as Claude learns your patterns and preferences.
 
+
+## Related Reading
+
+- [Claude Code Astro Static Site Generation Workflow Guide](/claude-skills-guide/claude-code-astro-static-site-generation-workflow-guide/) — See also
+- [Claude Code Qwik Resumability Lazy Loading Workflow Guide](/claude-skills-guide/claude-code-qwik-resumability-lazy-loading-workflow-guide/) — See also
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -116,4 +116,12 @@ Claude Code transforms Prisma ORM migration management from a manual process int
 For more development tips and AI-assisted workflows, explore additional resources on using Claude Code throughout your project lifecycle.
 {% endraw %}
 
+
+## Related Reading
+
+- [Claude Code Django ORM Optimization Guide](/claude-skills-guide/claude-code-django-orm-optimization-guide/) — See also
+- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/claude-code-mongodb-to-postgresql-migration-workflow/) — See also
+- [Claude Skills for Creating Database Migration Scripts](/claude-skills-guide/claude-skills-for-creating-database-migration-scripts/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

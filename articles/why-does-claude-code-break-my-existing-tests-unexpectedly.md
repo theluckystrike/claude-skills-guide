@@ -174,4 +174,12 @@ Claude Code breaking your tests isn't a flaw in the tool—it's a consequence of
 
 The key is treating Claude as a collaborator that needs clear, specific guidance about your testing expectations. With these strategies in place, you can enjoy rapid code generation without sacrificing test reliability.
 
+
+## Related Reading
+
+- [Claude Code Breaks Existing Tests After Changes Fix](/claude-skills-guide/claude-code-breaks-existing-tests-after-changes-fix/) — See also
+- [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/how-to-make-claude-code-refactor-without-breaking-tests/) — See also
+- [How to Make Claude Code Test Before Implementing Feature](/claude-skills-guide/how-to-make-claude-code-test-before-implementing-feature/) — See also
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

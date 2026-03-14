@@ -142,4 +142,12 @@ Claude Code cost estimation becomes intuitive once you understand the token dyna
 
 Remember that skills like the pdf skill, xlsx skill, and other specialized tools can significantly improve efficiency for domain-specific tasks, often reducing overall token consumption compared to general-purpose interactions. Track your actual spending in the first few projects, adjust your multipliers accordingly, and build a reliable estimation system that works for your specific development patterns.
 
+
+## Related Reading
+
+- [Why Is Claude Code Expensive: Large Context Tokens](/claude-skills-guide/why-is-claude-code-expensive-large-context-tokens/)
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
+- [Claude Code Free Tier vs Pro Plan: Feature Comparison 2026](/claude-skills-guide/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/)
+- [Is Claude Code Worth It for Solo Developers?](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

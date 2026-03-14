@@ -151,4 +151,12 @@ The decision ultimately depends on your threat model and compliance requirements
 
 Evaluate your specific needs, implement the strategies that work for your context, and enjoy the productivity benefits Claude offers—without compromising your security posture.
 
+
+## Related Reading
+
+- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — See also
+- [Claude Code MCP Server Data Exfiltration Prevention](/claude-skills-guide/claude-code-mcp-server-data-exfiltration-prevention/) — See also
+- [Claude Code Generates Insecure Code Patterns Fix](/claude-skills-guide/claude-code-generates-insecure-code-patterns-fix/) — See also
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

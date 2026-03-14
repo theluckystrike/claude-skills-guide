@@ -21,10 +21,10 @@ This guide walks through practical techniques for refactoring legacy JavaScript 
 
 Before diving into refactoring, ensure Claude Code is configured with the right skills. The most useful skills for JavaScript refactoring include:
 
-- **tdd** — Helps write tests before making changes, ensuring your refactoring doesn't break functionality
+- **[tdd](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)** — Helps write tests before making changes, ensuring your refactoring doesn't break functionality
 - **frontend-design** — Assists with component-based refactoring and modern UI patterns
 - **xlsx** — Useful when analyzing code metrics or generating refactoring reports
-- **supermemory** — Remembers context across sessions, helpful for large refactoring projects
+- **[supermemory](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)** — Remembers context across sessions, helpful for large refactoring projects
 
 Initialize your session by activating the TDD skill:
 
@@ -139,7 +139,7 @@ Ask Claude to help with this transformation:
 
 ## Adding Tests with TDD Skill
 
-The tdd skill becomes essential when refactoring code that lacks test coverage. Before changing any function, use the skill to generate tests that verify current behavior:
+The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) becomes essential when refactoring code that lacks test coverage. Before changing any function, use the skill to generate tests that verify current behavior:
 
 ```
 /tdd
@@ -192,5 +192,13 @@ Claude Code accelerates each of these steps by generating tests, suggesting targ
 Refactoring legacy JavaScript doesn't have to be a painful manual process. Claude Code, especially when combined with skills like tdd and frontend-design, provides intelligent assistance throughout the journey—from analyzing code and planning changes to writing tests and documenting modifications.
 
 Start small with low-risk functions, build test coverage using the tdd skill, and progressively tackle more complex refactoring challenges. Your codebase will become more maintainable, easier to test, and better suited for modern JavaScript development practices.
+
+
+## Related Reading
+
+- [How to Make Claude Code Work with Legacy Codebase](/claude-skills-guide/how-to-make-claude-code-work-with-legacy-codebase/) — See also
+- [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/how-to-make-claude-code-refactor-without-breaking-tests/) — See also
+- [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-skills-guide/claude-code-jest-to-vitest-migration-workflow-tutorial/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

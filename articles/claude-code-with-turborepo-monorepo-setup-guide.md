@@ -121,4 +121,12 @@ Integrating Claude Code with Turborepo creates a powerful development environmen
 
 By setting up proper configuration files and using Claude skills appropriately, your team gains an AI partner that comprehends your architecture, respects your package boundaries, and helps maintain consistency across your entire codebase.
 
+
+## Related Reading
+
+- [Claude Code Skills Monorepo Management Workflow](/claude-skills-guide/claude-code-skills-monorepo-management-workflow/) — See also
+- [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/) — See also
+- [What Is the Best Way to Organize Claude Skills in a Monorepo?](/claude-skills-guide/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

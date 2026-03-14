@@ -123,4 +123,12 @@ For power users running automated tasks, the combination of `--allow` flag and p
 
 Remember: the permission system exists to protect you. The goal isn't to eliminate all prompts but to reduce friction for legitimate operations while blocking accidental or malicious actions.
 
+
+## Related Reading
+
+- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — See also
+- [Claude Code DisallowedTools Security Configuration](/claude-skills-guide/claude-code-disallowedtools-security-configuration/) — See also
+- [Claude Code MCP Tool Allow and Deny Lists](/claude-skills-guide/claude-code-mcp-tool-allow-and-deny-lists/) — See also
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

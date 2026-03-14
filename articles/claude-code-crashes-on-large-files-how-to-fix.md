@@ -40,7 +40,7 @@ head -1 large_dataset.csv > header.csv
 tail -n +2 large_dataset.csv | split -l 5000 - dataset_part_
 ```
 
-After splitting, process each chunk separately. This approach works well when analyzing logs with the supermemory skill, which helps track insights across multiple file segments.
+After splitting, process each chunk separately. This approach works well when analyzing logs with the [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), which helps track insights across multiple file segments.
 
 ## Solution 2: Adjust Context Settings
 
@@ -70,7 +70,7 @@ def read_first_n_lines(filepath, n=100):
             yield line
 ```
 
-When working with PDF files using the pdf skill, request specific page ranges rather than the entire document. Similarly, when generating presentations with pptx, process slides individually for large decks.
+When working with PDF files using the pdf skill, request specific page ranges rather than the entire document. If you regularly hit size limits, review [context window optimization strategies](/claude-skills-guide/claude-md-too-long-context-window-optimization/) to keep file processing lean. Similarly, when generating presentations with pptx, process slides individually for large decks.
 
 ## Solution 4: Increase System Resources
 
@@ -113,7 +113,7 @@ for row in ws.iter_rows(min_row=1, max_row=1000, values_only=True):
 
 ### Using tdd for Code Analysis
 
-When analyzing large codebases with the tdd skill, focus on specific modules rather than entire repositories. Break your analysis into targeted sessions:
+When analyzing large codebases with the [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), focus on specific modules rather than entire repositories. Break your analysis into targeted sessions:
 
 ```bash
 # Analyze specific directories
@@ -202,6 +202,13 @@ If Claude continues crashing on large files:
 For teams, document your file handling patterns so everyone understands the limitations and best practices.
 
 ---
+
+## Related Reading
+
+- [Claude Code Slow Response: How to Fix Latency Issues](/claude-skills-guide/claude-code-slow-response-how-to-fix-latency-issues/) — Companion guide covering latency and performance problems beyond just file-size crashes
+- [Claude MD Too Long: Context Window Optimization](/claude-skills-guide/claude-md-too-long-context-window-optimization/) — Reduce the context footprint that causes file processing to fail
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Track insights across chunked file sessions without losing context between runs
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — All troubleshooting guides for Claude Code performance and stability issues
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

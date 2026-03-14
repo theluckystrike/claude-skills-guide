@@ -223,4 +223,12 @@ Use the **pdf** skill if you need to generate reports from your Convex data for 
 
 Convex simplifies backend development by handling real-time synchronization automatically. Combined with Claude Code, you have a powerful setup for building reactive applications. Define your schema, write backend functions, and connect your frontend with minimal boilerplate. The real-time updates work across all connected clients without additional configuration.
 
+
+## Related Reading
+
+- [Claude Code WebSocket Implementation Real-Time Events Guide](/claude-skills-guide/claude-code-websocket-implementation-real-time-events-guide/) — See also
+- [Claude Skills WebSocket Real-Time App Development](/claude-skills-guide/claude-skills-for-websocket-realtime-app-development/) — See also
+- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-skills-guide/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

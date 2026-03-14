@@ -225,4 +225,12 @@ Combining Claude Code with Cypress creates a productive component testing workfl
 Start with simple components, establish consistent patterns, and gradually expand coverage. The initial investment in testing infrastructure pays dividends through faster iteration and confident refactoring.
 {% endraw %}
 
+
+## Related Reading
+
+- [Claude Code Cypress Component Testing Guide](/claude-skills-guide/claude-code-cypress-component-testing-guide/) — See also
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — See also
+- [Claude Code Skills for QA Engineers: Automating Test Suites](/claude-skills-guide/claude-code-skills-for-qa-engineers-automating-test-suites/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

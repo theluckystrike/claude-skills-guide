@@ -225,4 +225,12 @@ This helps teams understand the financial impact of infrastructure changes befor
 
 Combining Claude Code with Terraform accelerates infrastructure development while reducing errors and improving consistency. The AI assistance proves particularly valuable for code review, troubleshooting complex errors, and translating business requirements into properly structured IaC. Start with small projects, establish good practices early, and expand your usage as your confidence grows. The key to success lies in maintaining clean, modular configurations and using Claude's skills like **pdf**, **tdd**, and **supermemory** to enhance your workflow at every stage.
 
+
+## Related Reading
+
+- [Claude Code Skills for Infrastructure as Code: Terraform](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — See also
+- [Claude Code CloudFormation Template Generation Workflow Guide](/claude-skills-guide/claude-code-cloudformation-template-generation-workflow-guid/) — See also
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

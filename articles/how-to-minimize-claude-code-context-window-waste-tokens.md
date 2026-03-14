@@ -175,4 +175,12 @@ The skills system exists precisely to solve this problem. Rather than explaining
 
 Start applying these strategies in your next session. You'll notice faster responses, more accurate outputs, and better utilization of your token budget.
 
+
+## Related Reading
+
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
+- [Claude MD Too Long: Context Window Optimization](/claude-skills-guide/claude-md-too-long-context-window-optimization/)
+- [Claude Code Slow Response: How to Fix Latency Issues](/claude-skills-guide/claude-code-slow-response-how-to-fix-latency-issues/)
+- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skills-guide/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

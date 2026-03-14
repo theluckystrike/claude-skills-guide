@@ -17,7 +17,7 @@ Claude Code transforms how developers interact with AI assistants through its sk
 
 ## Understanding the Prompt System
 
-Claude Code reads instructions from special Markdown files called skills. These files contain both metadata and actual instructions that shape Claude's behavior when working on your projects. Unlike generic conversations, custom prompts give you precise control over how Claude approaches different types of tasks.
+Claude Code reads instructions from special Markdown files called skills. These files contain both metadata and actual instructions For a comprehensive approach to scoping, see [skill MD file format](/claude-skills-guide/skill-md-file-format-explained-with-examples/). that shape Claude's behavior when working on your projects. Unlike generic conversations, custom prompts give you precise control over how Claude approaches different types of tasks.
 
 The skill system works by loading these instructions into Claude's context before processing your requests. This means Claude already understands your preferences, coding standards, and workflow patterns when you start a session. The result is more consistent, context-aware assistance that improves over time as you refine your prompts.
 
@@ -164,5 +164,13 @@ Review and update prompts regularly. As your projects evolve, your requirements 
 ## Next Steps
 
 Now that you understand the basics, explore skills that match your technology stack. The `pdf` skill handles document processing, `xlsx` manages spreadsheet automation, and various MCP servers provide integrations with external services. Building a personalized skill library transforms Claude Code from a general assistant into a specialized teammate that understands your unique workflow.
+
+
+## Related Reading
+
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — See also
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — See also
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — See also
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -174,4 +174,12 @@ Claude Code transforms Drizzle ORM schema management from a manual, error-prone 
 
 ---
 
+
+## Related Reading
+
+- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-skills-guide/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
+- [Claude Skills With Supabase Database Integration](/claude-skills-guide/claude-skills-with-supabase-database-integration/) — See also
+- [Claude Code Turso SQLite Edge Database Tutorial](/claude-skills-guide/claude-code-for-turso-sqlite-edge-database-tutorial/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

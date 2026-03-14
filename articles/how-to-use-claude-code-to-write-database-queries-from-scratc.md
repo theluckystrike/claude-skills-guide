@@ -121,5 +121,13 @@ Claude Code significantly reduces the time and expertise required to write datab
 
 Start with simple queries to build trust in the outputs, then gradually tackle more complex scenarios. Over time, you will find that Claude Code not only generates correct queries but also teaches you new techniques and patterns you can apply independently.
 
+
+## Related Reading
+
+- [Claude Code Django ORM Optimization Guide](/claude-skills-guide/claude-code-django-orm-optimization-guide/) — See also
+- [Claude Code Skills for Creating Database Migration Scripts](/claude-skills-guide/claude-skills-for-creating-database-migration-scripts/) — See also
+- [Claude Code Polars DataFrame Workflow Guide](/claude-skills-guide/claude-code-polars-dataframe-workflow-guide/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

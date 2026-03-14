@@ -13,13 +13,13 @@ permalink: /claude-code-react-router-v7-navigation-guide/
 
 # Claude Code React Router v7 Navigation Guide
 
-[React Router v7 represents a significant evolution in how we handle navigation in React applications](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This guide walks you through the core navigation concepts using practical patterns that work well when developing with Claude Code assistance.
+React Router v7 represents a significant evolution in how we handle navigation in React applications. This guide walks you through the core navigation concepts using practical patterns that work well when developing with Claude Code assistance. If you're coming from Remix, see the [Remix loader and action data fetching tutorial](/claude-skills-guide/claude-code-remix-loader-action-data-fetching-tutorial/) for a comparison of the API.
 
 ## Understanding React Router v7 Architecture
 
 React Router v7 consolidates the best features from Remix into the React Router package. The most notable change is the shift toward file-based routing combined with a data-layer approach that handles loading and mutation states directly within your route components.
 
-If you're building a React application and need help structuring your navigation, [Claude Code can assist with the **frontend-design** skill to create layouts and components](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) that work well with React Router's patterns.
+If you're building a React application and need help structuring your navigation, Claude Code can assist with the **frontend-design** skill to create layouts and components. Ensure your navigation components meet [semantic HTML accessibility standards](/claude-skills-guide/claude-code-semantic-html-accessibility-improvement-guide/) from the start.
 
 ## Setting Up React Router v7
 
@@ -249,7 +249,7 @@ For testing your routes and components, the **tdd** skill from Claude Code can h
 
 When building React Router v7 applications, Claude Code becomes a powerful ally. Use the **pdf** skill to generate documentation for your routing structure. The **supermemory** skill helps maintain context about your route hierarchy across sessions.
 
-For styling your navigation components, the **frontend-design** skill provides guidance on creating accessible menus and breadcrumbs. When documenting your API routes, the **mcp-builder** skill can help structure your route handlers as reusable components.
+For styling your navigation components, the **frontend-design** skill provides guidance on creating accessible menus and breadcrumbs. When documenting your API routes, see the [best frontend development skills guide](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) for structuring complete React application workflows.
 
 ---
 

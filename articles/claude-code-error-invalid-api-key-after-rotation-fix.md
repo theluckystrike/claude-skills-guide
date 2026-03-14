@@ -200,4 +200,12 @@ After applying fixes, verify that Claude Code recognizes your new API key:
 
 If errors persist, systematically check each credential location again—it's easy to miss a configuration file storing the old key.
 
+
+## Related Reading
+
+- [Claude Code Error: Invalid API Key Troubleshoot Guide](/claude-skills-guide/claude-code-error-invalid-api-key-troubleshoot-guide/) — See also
+- [How Do I Set Environment Variables for a Claude Skill?](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) — See also
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — See also
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

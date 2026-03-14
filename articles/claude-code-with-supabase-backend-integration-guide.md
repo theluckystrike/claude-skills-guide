@@ -235,4 +235,12 @@ For testing, the **tdd** skill generates comprehensive test suites for your Supa
 The **frontend-design** skill complements backend work by generating UI components that connect smoothly to your Supabase data layer.
 {% endraw %}
 
+
+## Related Reading
+
+- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-skills-guide/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
+- [Claude Skills With Supabase Database Integration](/claude-skills-guide/claude-skills-with-supabase-database-integration/) — See also
+- [Full Stack Web App with Claude Skills: Step by Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

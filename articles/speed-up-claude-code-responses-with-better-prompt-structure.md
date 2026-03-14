@@ -177,4 +177,12 @@ Better prompt structure doesn't just speed up responses—it makes them more acc
 
 For developers using specialized skills like tdd for test-driven development or pdf for document processing, these structural principles amplify effectiveness. The time invested in writing better prompts pays back multiplied through faster, more precise responses.
 
+
+## Related Reading
+
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
+- [Claude MD Too Long: Context Window Optimization](/claude-skills-guide/claude-md-too-long-context-window-optimization/)
+- [Claude Code Slow Response: How to Fix Latency Issues](/claude-skills-guide/claude-code-slow-response-how-to-fix-latency-issues/)
+- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skills-guide/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

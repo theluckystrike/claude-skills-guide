@@ -146,5 +146,13 @@ The "unexpected token in JSON response" error is manageable once you understand 
 
 Remember to test your integrations thoroughly, especially when combining multiple skills like supermemory with custom API calls. Most importantly, always implement error handling that catches JSON parsing failures early—before they reach Claude Code's processing layer.
 
+
+## Related Reading
+
+- [Claude Skill Invalid YAML Syntax Error: How to Debug](/claude-skills-guide/claude-code-skill-invalid-yaml-syntax-error-how-to-debug/) — See also
+- [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) — See also
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/) — See also
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

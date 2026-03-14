@@ -159,5 +159,13 @@ Evaluate your current needs, try the free tier first, and upgrade when your work
 
 ---
 
+
+## Related Reading
+
+- [Can You Use Claude Skills Without a Claude Max Subscription?](/claude-skills-guide/can-you-use-claude-skills-without-a-claude-max-subscription/) — See also
+- [Is Claude Code Worth It? Honest Beginner Review 2026](/claude-skills-guide/is-claude-code-worth-it-honest-beginner-review-2026/) — See also
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — See also
+- [Why Is Claude Code Expensive: Large Context Tokens](/claude-skills-guide/why-is-claude-code-expensive-large-context-tokens/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

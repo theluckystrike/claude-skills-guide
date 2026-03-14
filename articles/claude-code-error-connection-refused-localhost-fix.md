@@ -171,4 +171,12 @@ Connection refused errors stem from services not running, incorrect ports, firew
 
 For complex multi-service projects, consider using docker-compose to manage dependencies and ensure all required services start together. The container skill provides detailed guidance for containerized development workflows.
 
+
+## Related Reading
+
+- [Claude Code With Docker Container Skill Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) — See also
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — See also
+- [Claude Code Error: Rate Limit Exceeded 429 Workaround](/claude-skills-guide/claude-code-error-rate-limit-exceeded-429-workaround/) — See also
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

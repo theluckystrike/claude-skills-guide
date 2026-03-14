@@ -157,4 +157,12 @@ Automating Grafana dashboard configuration with Claude Code transforms monitorin
 
 The workflow works particularly well with GitOps practices, where dashboard changes flow through the same review and deployment pipelines as your application code. Combined with Claude Code's ability to understand context and generate appropriate code, this approach makes sophisticated monitoring accessible to teams of any size.
 
+
+## Related Reading
+
+- [Datadog MCP Server Monitoring Automation Claude](/claude-skills-guide/datadog-mcp-server-monitoring-automation-claude/) — See also
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — See also
+- [Claude Code Skills for Site Reliability Engineers (SRE)](/claude-skills-guide/claude-code-skills-for-site-reliability-engineers-sre/) — See also
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

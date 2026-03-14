@@ -216,5 +216,13 @@ While updates to Claude Code can temporarily disrupt your workflow, most issues 
 
 Keeping your skills modular, well-documented, and using environment-aware path handling will make future updates much smoother. The investment in making your skills resilient to change pays off in reduced downtime and more reliable automation.
 
+
+## Related Reading
+
+- [How Do I Rollback a Bad Claude Skill Update Safely?](/claude-skills-guide/how-do-i-rollback-a-bad-claude-skill-update-safely/) — See also
+- [Claude Skill Not Found in Skills Directory: How to Fix](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — See also
+- [Claude Code Skill Permission Denied: Fix 2026](/claude-skills-guide/claude-code-skill-permission-denied-error-fix-2026/) — See also
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
