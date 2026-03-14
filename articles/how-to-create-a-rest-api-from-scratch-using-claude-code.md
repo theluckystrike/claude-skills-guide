@@ -17,7 +17,7 @@ Building a REST API from scratch doesn't require starting with a blank canvas. C
 
 ## Setting Up Your Project Foundation
 
-Every robust API starts with proper project structure. Before writing any code, initialize a new project directory and set up your dependencies. For a Python-based REST API, you'll want FastAPI or Flask. For Node.js, Express remains the standard choice.
+Every well-structured API starts with proper project structure. Before writing any code, initialize a new project directory and set up your dependencies. For a Python-based REST API, you'll want FastAPI or Flask. For Node.js, Express remains the standard choice.
 
 Use Claude Code to scaffold the project:
 

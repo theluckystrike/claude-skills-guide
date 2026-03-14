@@ -4,9 +4,11 @@ title: "Claude Code Cost Per Project Estimation Calculator Guide"
 description: "Learn how to estimate Claude Code costs for your development projects with practical examples, cost factors breakdown, and optimization strategies."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, cost-estimation, project-planning, ai-development]
-author: theluckystrike
+tags: [claude-code, claude-skills, claude-code, cost-estimation, project-planning, ai-development]
+author: "Claude Skills Guide"
 permalink: /claude-code-cost-per-project-estimation-calculator-guide/
+reviewed: true
+score: 7
 ---
 
 # Claude Code Cost Per Project Estimation Calculator Guide

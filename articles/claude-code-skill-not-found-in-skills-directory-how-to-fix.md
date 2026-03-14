@@ -58,7 +58,7 @@ Skill invocation depends on the filename without its extension. If your skill fi
 /pdf extract tables from report.pdf
 /tdd generate unit tests for auth.py
 /frontend-design create landing page mockup
-/supermemory search meeting notes about Q4
+/supermemory What do you have in the meeting notes about Q4?
 ```
 
 ### Cause 3: Missing Skill File Extension

@@ -73,7 +73,7 @@ For projects requiring extensive history, consider splitting work across multipl
 Starting fresh sessions prevents context bloat. You can reference previous work through the [supermemory skill, which maintains searchable project memory](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) without bloating active context:
 
 ```
-/supermemory search previous-implementation-details
+/supermemory What do you know about the previous implementation details?
 ```
 
 ## File Processing Optimizations

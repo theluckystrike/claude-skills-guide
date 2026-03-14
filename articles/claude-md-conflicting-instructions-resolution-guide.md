@@ -171,7 +171,7 @@ These outcomes reduce workflow reliability and increase cognitive load on users.
 
 ## Conclusion
 
-Resolving conflicting instructions in Claude MD requires explicit strategy rather than hoping for implicit correctness. By declaring priority, using phase-based execution, implementing fallback chains, and using conflict detection hooks, you build robust systems that handle ambiguity gracefully.
+Resolving conflicting instructions in Claude MD requires explicit strategy rather than hoping for implicit correctness. By declaring priority, using phase-based execution, implementing fallback chains, and using conflict detection hooks, you build reliable systems that handle ambiguity gracefully.
 
 Whether you're combining `pdf` extraction with `tdd` validation, integrating `frontend-design` with testing frameworks, or orchestrating multiple skills through `supermemory` memory management, explicit conflict resolution transforms potential chaos into reliable automation.
 

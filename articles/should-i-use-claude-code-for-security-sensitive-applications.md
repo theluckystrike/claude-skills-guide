@@ -19,7 +19,7 @@ Security-sensitive applications—financial systems, healthcare platforms, authe
 
 When you work with Claude Code, you're sending your code and files to Anthropic's servers for processing. This is the fundamental consideration for security-sensitive work. Before pasting any credentials, API keys, or proprietary algorithms into a Claude session, recognize that the content traverses external infrastructure.
 
-That said, Claude Code offers robust controls that make it viable for many security-conscious workflows when used appropriately. The key is understanding what to share and what to protect.
+That said, Claude Code offers strong controls that make it viable for many security-conscious workflows when used appropriately. The key is understanding what to share and what to protect.
 
 ## Practical Strategies for Security-Conscious Claude Usage
 

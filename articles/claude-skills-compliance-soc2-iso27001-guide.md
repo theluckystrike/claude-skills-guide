@@ -90,7 +90,7 @@ The **supermemory** skill provides persistent context across Claude sessions. Fo
 When auditors request evidence of change approval processes, query your memory:
 
 ```bash
-/supermemory search "IAM role changes March 2026"
+/supermemory What IAM role changes were approved in March 2026?
 ```
 
 This creates a searchable, timestamped record of security decisions that satisfies SOC2's audit trail requirements.

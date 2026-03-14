@@ -6,8 +6,8 @@ date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, claude-code, drizzle-orm, database, schema, orm, postgresql]
 author: "Claude Skills Guide"
-reviewed: false
-score: 0
+reviewed: true
+score: 7
 permalink: /using-claude-code-with-drizzle-orm-schema-management/
 ---
 

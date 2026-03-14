@@ -159,7 +159,7 @@ The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimizatio
 ```
 /supermemory store: issues mentioning "authentication" are usually assigned to @sarah - she owns the auth module
 /supermemory store: "export fails" issues are almost always the CSV encoder - label them bug + csv-export
-/supermemory find: which labels does the payments module use?
+/supermemory Which labels does the payments module use?
 ```
 
 Over time, supermemory builds a reference that makes triage faster and more consistent.

@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-Modern frontend development demands robust testing strategies, and combining Claude Code with Cypress creates a powerful workflow for component testing. This guide explores practical integration patterns that help developers write, maintain, and scale component tests efficiently.
+Modern frontend development demands solid testing strategies, and combining Claude Code with Cypress creates a powerful workflow for component testing. This guide explores practical integration patterns that help developers write, maintain, and scale component tests efficiently.
 
 ## Setting Up the Foundation
 

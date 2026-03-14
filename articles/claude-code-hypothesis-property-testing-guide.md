@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Hypothesis Property Testing Guide"
-description: "Learn how to integrate Hypothesis property-based testing into your Claude Code workflow for robust, automated test generation."
+description: "Learn how to integrate Hypothesis property-based testing into your Claude Code workflow for reliable, automated test generation."
 date: 2026-03-14
 author: "Claude Skills Guide"
 reviewed: true

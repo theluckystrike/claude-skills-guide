@@ -170,7 +170,7 @@ Different Claude skills can help in different scenarios:
 
 ## Conclusion
 
-Claude Code breaking your tests isn't a flaw in the tool—it's a consequence of the context limitations and assumption-based nature of AI code generation. By providing comprehensive context, running tests frequently, and giving specific feedback when issues arise, you can harness Claude's capabilities while maintaining test integrity.
+Claude Code breaking your tests isn't a flaw in the tool—it's a consequence of the context limitations and assumption-based nature of AI code generation. By providing comprehensive context, running tests frequently, and giving specific feedback when issues arise, you can use Claude effectively while maintaining test integrity.
 
 The key is treating Claude as a collaborator that needs clear, specific guidance about your testing expectations. With these strategies in place, you can enjoy rapid code generation without sacrificing test reliability.
 

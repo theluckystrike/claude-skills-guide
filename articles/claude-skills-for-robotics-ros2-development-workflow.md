@@ -42,13 +42,13 @@ The skill guides you through writing tests first, then implementing the node fun
 For documentation generation, the **pdf** skill helps create comprehensive technical documentation. Robotics projects often require detailed API documentation and hardware interface specifications. Generate clean PDFs directly from your markdown notes:
 
 ```
-/pdf generate --input docs/robot-arm-api.md --output docs/robot-arm-api.pdf
+/pdf Convert docs/robot-arm-api.md to a formatted PDF and save it as docs/robot-arm-api.pdf
 ```
 
 The **supermemory** skill serves as a project-specific knowledge base. Store hardware specifications, calibration parameters, and wiring diagrams within it for quick retrieval during development:
 
 ```
-/smem add "Dynamixel MX-64 servo configuration: ID 1, Baud 57600, Protocol 2.0"
+/supermemory store: Dynamixel MX-64 servo configuration: ID 1, Baud 57600, Protocol 2.0
 ```
 
 When designing robot user interfaces or visualization dashboards, the **frontend-design** skill generates clean, functional interfaces for monitoring robot state and sending commands.
@@ -122,7 +122,7 @@ The **tdd** skill encourages comprehensive documentation during development, red
 Robotics projects often involve multiple hardware components with specific configurations. The **supermemory** skill stores and retrieves these configurations efficiently. Before starting development sessions, query your stored knowledge:
 
 ```
-/smem query "camera calibration"
+/supermemory What do you know about the camera calibration settings?
 ```
 
 This returns previously stored calibration data, wiring notes, and driver configurations—information that typically lives scattered across README files and personal notes.
@@ -174,7 +174,7 @@ Consider a robot arm control project. Start your session by activating relevant 
 
 ```
 /tdd
-/smem query "arm servo"
+/supermemory What do you know about the arm servo configuration?
 ```
 
 Write tests defining your arm's expected motion profiles. Implement the control node to satisfy those tests. Use **frontend-design** to create an operator interface for manual control. Document everything with **pdf** skill exports.

@@ -230,7 +230,7 @@ Claude Code can help generate migration scripts by analyzing your existing schem
 
 The **supermemory** skill helps maintain context across sessions when working on complex Supabase projects. Document your database schema, API endpoints, and edge function configurations.
 
-For testing, the **tdd** skill generates comprehensive test suites for your Supabase operations. Combined with proper RLS policies, you get a robust backend that passes security audits.
+For testing, the **tdd** skill generates comprehensive test suites for your Supabase operations. Combined with proper RLS policies, you get a reliable backend that passes security audits.
 
 The **frontend-design** skill complements backend work by generating UI components that connect smoothly to your Supabase data layer.
 {% endraw %}

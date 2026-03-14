@@ -69,8 +69,8 @@ Recent: added AI features v3.2 Feb 2026, raised prices 20% Jan 2026
 Query it later to recall specific details without re-reading all your notes:
 
 ```
-/supermemory find: Acme Corp pricing history
-/supermemory find: competitors offering on-premise deployment
+/supermemory What is Acme Corp's pricing history?
+/supermemory Which competitors offer on-premise deployment?
 ```
 
 ## Stage 4: Data Analysis and Visualization

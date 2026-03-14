@@ -4,9 +4,11 @@ title: "Reduce Claude Code API Costs Without Losing Quality: Practical Tips"
 description: "Discover proven strategies to optimize Claude Code API usage and cut costs while maintaining high-quality code generation and analysis results."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, api-costs, optimization, cost-reduction]
-author: theluckystrike
+tags: [claude-code, claude-skills, claude-code, api-costs, optimization, cost-reduction]
+author: "Claude Skills Guide"
 permalink: /reduce-claude-code-api-costs-without-losing-quality-tips/
+reviewed: true
+score: 7
 ---
 
 # Reduce Claude Code API Costs Without Losing Quality: Practical Tips

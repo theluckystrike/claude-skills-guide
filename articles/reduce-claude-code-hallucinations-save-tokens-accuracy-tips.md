@@ -3,8 +3,12 @@ layout: default
 title: "Reduce Claude Code Hallucinations: Save Tokens and Boost Accuracy"
 description: "Practical techniques to minimize Claude Code hallucinations, reduce token usage, and improve code accuracy. Real examples and actionable strategies for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /reduce-claude-code-hallucinations-save-tokens-accuracy-tips/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # Reduce Claude Code Hallucinations: Save Tokens and Boost Accuracy

@@ -6,8 +6,8 @@ date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, error-fix, connection-refused, localhost, network, troubleshooting, productivity]
 author: "Claude Skills Guide"
-reviewed: false
-score: 0
+reviewed: true
+score: 7
 permalink: /claude-code-error-connection-refused-localhost-fix/
 ---
 

@@ -6,8 +6,8 @@ date: 2026-03-14
 categories: [integrations]
 tags: [claude-code, claude-skills, claude-code, convex, backend, real-time-data, database, tutorial]
 author: "Claude Skills Guide"
-reviewed: false
-score: 0
+reviewed: true
+score: 7
 permalink: /claude-code-with-convex-backend-real-time-data-setup/
 ---
 

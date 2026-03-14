@@ -50,7 +50,7 @@ You run contracts through a review pipeline.
 
 Pipeline steps:
 1. /pdf extract all text from {contract_file}
-2. /supermemory search for similar contracts in the knowledge base
+2. /supermemory Are there similar contracts in the knowledge base?
 3. Compare extracted clauses against known risky patterns
 4. Generate a risk assessment summary
 

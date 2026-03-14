@@ -33,7 +33,7 @@ Find all ant targets in build.xml and summarize what each one does, including de
 Identify all jar dependencies referenced in build.xml, both from local paths and external URLs
 ```
 
-This analysis reveals custom tasks, external tool integrations, and build lifecycle requirements. The goal is understanding what your build actually does before converting to a different paradigm.
+This analysis reveals custom tasks, external tool integrations, and build lifecycle requirements. The goal is understanding what your build actually does before converting to a different build system.
 
 For large projects with multiple Ant files, ask Claude Code to create a dependency graph:
 

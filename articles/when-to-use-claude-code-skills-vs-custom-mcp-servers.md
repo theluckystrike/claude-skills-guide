@@ -3,8 +3,12 @@ layout: default
 title: "When to Use Claude Code Skills vs Custom MCP Servers"
 description: "A practical guide for developers choosing between Claude Code skills and custom MCP servers. Learn when to use each approach with real-world examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /when-to-use-claude-code-skills-vs-custom-mcp-servers/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # When to Use Claude Code Skills vs Custom MCP Servers

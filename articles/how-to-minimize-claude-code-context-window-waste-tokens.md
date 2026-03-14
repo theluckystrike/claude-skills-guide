@@ -4,9 +4,11 @@ title: "How to Minimize Claude Code Context Window Waste Tokens"
 description: "Practical strategies to reduce token usage in Claude Code sessions. Learn context management techniques, skill selection, and workflow optimization."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, optimization, tokens, context-window, productivity]
-author: theluckystrike
+tags: [claude-code, claude-skills, claude-code, optimization, tokens, context-window, productivity]
+author: "Claude Skills Guide"
 permalink: /how-to-minimize-claude-code-context-window-waste-tokens/
+reviewed: true
+score: 7
 ---
 
 # How to Minimize Claude Code Context Window Waste Tokens
@@ -29,24 +31,20 @@ Each of these wastes tokens from your session budget and can reduce Claude's abi
 
 When reading files, avoid loading entire repositories when you only need specific sections. Instead of reading all files in a project:
 
+Tell Claude to read only the specific file you need:
+
 ```
-Read only the specific file or function you are working on:
-
-/read_file path: /src/auth/login.js
-
-Not:
-
-Read all files in the src/ directory
+Read /src/auth/login.js and show me the login function.
 ```
+
+Not: "Read all files in the src/ directory."
 
 The frontend-design skill demonstrates this well. When working on UI components, load just the component file you are modifying rather than importing the entire design system. This keeps context focused on the immediate task.
 
-For large codebases, use line-specific reads:
+For large codebases, ask Claude to read a specific range of lines:
 
 ```
-/read_file limit: 50
-offset: 100
-path: /src/utils/parser.ts
+Read lines 100-150 of /src/utils/parser.ts and explain the parsing logic.
 ```
 
 This approach retrieves only the relevant section, leaving room for meaningful conversation about that specific code.
@@ -72,7 +70,7 @@ The tdd skill understands testing patterns without requiring you to paste test f
 The supermemory skill can store and retrieve context across sessions, reducing the need to re-explain project background in every new conversation. Instead of pasting the same context into each session, retrieve it from your memory store:
 
 ```
-/supermemory recall the API specification we discussed last week
+/supermemory What was the API specification we discussed last week?
 ```
 
 ## Strategy 3: Use Summarization for Long Contexts
