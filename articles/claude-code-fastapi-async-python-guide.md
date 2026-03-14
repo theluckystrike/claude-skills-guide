@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code FastAPI Async Python Guide"
-description: "A practical guide to building async Python APIs with FastAPI using Claude Code. Learn how to leverage Claude skills for development, testing, and documentation."
+description: "A practical guide to building async Python APIs with FastAPI using Claude Code. Learn how to leverage Claude skills for development, testing, and."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-fastapi-async-python-guide/
+categories: [guides]
 ---
 
 # Claude Code FastAPI Async Python Guide
@@ -273,5 +274,12 @@ def expensive_computation(x: int) -> int:
 FastAPI provides excellent async support for Python developers, and Claude Code accelerates your workflow through skills like tdd for test-driven development and pdf for documentation generation. By combining proper async patterns with Claude's intelligent assistance, you can build production-ready APIs efficiently.
 
 Remember to use connection pooling for databases, implement proper error handling, and test thoroughly with async test clients. Your async Python APIs will be performant, maintainable, and well-documented.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

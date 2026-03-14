@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Remix Full Stack Workflow Guide"
-description: "Master the complete full stack development workflow with Claude Code. Learn to integrate frontend, backend, and deployment using Claude skills for maximum productivity."
+description: "Master the complete full stack development workflow with Claude Code. Learn to integrate frontend, backend, and deployment using Claude skills for."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-remix-full-stack-workflow-guide/
@@ -152,6 +152,13 @@ Consider integrating the **algorithmic-art** skill if your application benefits 
 A solid Claude Code full stack workflow combines Remix's server-first architecture with Claude's assistance at every development stage. From initial setup through deployment and monitoring, Claude skills like frontend-design, tdd, supermemory, and webapp-testing accelerate your workflow while maintaining code quality.
 
 The key is starting simple and adding complexity only when needed. Let the framework handle the heavy lifting, use Claude to accelerate repetitive tasks, and focus your energy on the unique business logic that differentiates your application.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code Flask Blueprint Architecture Guide"
-description: "A practical guide to structuring Flask applications with blueprints in Claude Code. Learn scalable architecture patterns, organization strategies, and real-world examples."
+description: "A practical guide to structuring Flask applications with blueprints in Claude Code. Learn scalable architecture patterns, organization strategies, and."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-flask-blueprint-architecture-guide/
+categories: [guides]
 ---
 
 # Claude Code Flask Blueprint Architecture Guide
@@ -195,5 +196,12 @@ Third, leverage blueprint-specific request processing with `before_request` hand
 Flask blueprints provide essential structure for maintainable applications. By organizing code into logical, reusable modules, you create a codebase that scales gracefully. Claude Code accelerates this process through rapid scaffolding, test-driven development workflows, and intelligent code generation.
 
 The key lies in establishing clear conventions early—consistent naming, directory structure, and error handling patterns. Once established, these patterns compound: each new feature fits naturally into the existing architecture.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

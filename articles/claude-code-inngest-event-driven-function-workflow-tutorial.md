@@ -281,3 +281,10 @@ Deploy with `vercel deploy --prod` and configure your Inngest event key in the V
 Building event-driven function workflows with Claude Code and Inngest combines the best of both worlds: reliable event handling and AI-powered processing. Start with simple single-function workflows, then expand to multi-step processes as your application grows. The key is identifying events in your system that could benefit from AI analysis or generation, then wiring them up with Inngest's declarative function definitions.
 
 Remember to monitor your functions in the Inngest dashboard, implement proper error handling, and test thoroughly before production deployment. With this foundation, you can build sophisticated event-driven applications that leverage Claude Code's capabilities seamlessly.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

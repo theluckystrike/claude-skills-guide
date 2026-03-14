@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Tech Lead Cross-Team Alignment Workflow Tips"
-description: "Practical strategies for using Claude Code to coordinate alignment across multiple engineering teams, manage shared conventions, and streamline cross-functional collaboration."
+description: "Practical strategies for using Claude Code to coordinate alignment across multiple engineering teams, manage shared conventions, and streamline."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-tech-lead-cross-team-alignment-workflow-tips/
@@ -200,3 +200,10 @@ Claude Code transforms cross-team coordination from a constant struggle into a s
 Start small by creating one team standards skill and gradually expand your automation coverage. Your teams will thank you for the time saved and the clarity gained.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

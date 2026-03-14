@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Nuxt Vue Full Stack Workflow"
-description: "A practical guide to building full stack applications with Claude Code, Nuxt, and Vue. Covers project setup, component generation, testing, and deployment workflows."
+description: "A practical guide to building full stack applications with Claude Code, Nuxt, and Vue. Covers project setup, component generation, testing, and."
 date: 2026-03-14
 categories: [workflows]
 tags: [claude-code, nuxt, vue, full-stack, workflow]
@@ -264,5 +264,12 @@ describe('UserCard', () => {
 Claude Code transforms Nuxt and Vue development through intelligent code generation, context preservation, and workflow automation. Key skills like frontend-design for components, tdd for test-first development, pdf for documentation, and supermemory for session continuity make full stack development faster and more consistent.
 
 Build smaller, focused components. Test incrementally. Maintain documentation as you build rather than after. This workflow scales from small projects to larger team applications.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
