@@ -1,247 +1,200 @@
 ---
 layout: default
 title: "Claude Code API Gateway Configuration Guide"
-description: "A practical guide to configuring API gateways using Claude Code skills. Learn to set up routes, authentication, rate limiting, and monitoring with real code examples."
+description: "A practical guide to configuring API gateways with Claude Code. Learn skill setup, configuration patterns, and real-world examples for developers."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, api-gateway, configuration, backend, devops]
+tags: [claude-code, api-gateway, configuration, development, skill-setup]
 author: theluckystrike
 permalink: /claude-code-api-gateway-configuration-guide/
 ---
 
 # Claude Code API Gateway Configuration Guide
 
-API gateways serve as the single entry point for your backend services, handling request routing, authentication, rate limiting, and monitoring. Configuring these gateways efficiently can significantly impact your application's performance and security. This guide shows you how to leverage Claude Code skills to streamline API gateway configuration for popular solutions like Kong, AWS API Gateway, and NGINX.
+API gateways serve as the single entry point for distributed systems, handling request routing, authentication, rate limiting, and protocol translation. Configuring these gateways effectively requires understanding both infrastructure patterns and Claude Code's skill system. This guide walks through practical API gateway configuration using Claude Code skills and workflows.
+
+## Understanding API Gateway Configuration in Claude Code
+
+Claude Code doesn't include a built-in API gateway skill, but you can leverage other skills to configure and manage gateway deployments. The key is combining skills like `frontend-design` for API documentation, `pdf` for generating configuration guides, and `tdd` for testing gateway rules.
+
+The most common approach involves defining gateway configurations as code—typically YAML or JSON files that describe routes, middleware, and policies. Claude Code excels at reading, generating, and modifying these configuration files when you provide context about your infrastructure.
 
 ## Setting Up Your Gateway Configuration Workflow
 
-Before diving into configuration files, establish a structured workflow using Claude's capabilities. The supermemory skill helps maintain documentation of your gateway configurations across different environments. Store your configuration templates and version them properly.
+Start by creating a dedicated skill for API gateway configuration. While the official skill marketplace doesn't offer a dedicated API gateway skill, you can create a custom skill that describes your gateway's behavior:
 
-Create a dedicated directory for your gateway configs:
+```markdown
+# API Gateway Configuration Skill
 
-```
-api-gateway/
-├── kong/
-│   ├── docker-compose.yml
-│   ├── kong.yml
-│   └── services.yaml
-├── aws/
-│   ├── api-config.json
-│   └── lambda-integration.yaml
-└── nginx/
-    ├── nginx.conf
-    └── conf.d/
+You help configure and maintain API gateway rules. When asked about gateway configuration:
+- Suggest appropriate routing patterns for REST and GraphQL APIs
+- Recommend security policies including OAuth, JWT validation, and rate limiting
+- Provide example configurations for common gateways (Kong, AWS API Gateway, NGINX)
+- Help troubleshoot routing issues and performance problems
 ```
 
-## Kong Gateway Configuration
+Save this to `~/.claude/skills/gateway.md` and Claude will load it when you mention gateway-related tasks.
 
-Kong is a popular open-source API gateway. The tdd skill helps you write configuration tests before deploying. Here's a practical Kong configuration:
+## Practical Configuration Examples
+
+### Basic Route Configuration
+
+For a simple microservice architecture, your gateway routes might look like:
 
 ```yaml
-_format_version: "3.0"
-_services:
+services:
   - name: user-service
     url: http://localhost:3001
     routes:
-      - name: user-routes
-        paths:
-          - /api/users
-        methods:
-          - GET
-          - POST
-          - PUT
-        strip_path: true
-    plugins:
-      - name: rate-limiting
-        config:
-          minute: 100
-          hour: 1000
-          policy: local
-      - name: jwt
-        config:
-          key_claim_name: kid
-      - name: cors
-        config:
-          origins:
-            - https://yourapp.com
-          methods:
-            - GET
-            - POST
-            - PUT
-            - DELETE
-          headers:
-            - Authorization
-            - Content-Type
+      - path: /api/users
+        methods: [GET, POST, PUT, DELETE]
+  - name: order-service
+    url: http://localhost:3002
+    routes:
+      - path: /api/orders
+        methods: [GET, POST]
 ```
 
-Use Claude Code to validate this configuration before deployment. The tdd skill can generate test cases that verify your routes respond correctly and plugins function as expected.
+Claude Code can generate these configurations when you describe your service topology. Simply explain what services you have and their purposes, and Claude will draft the routing configuration.
 
-## AWS API Gateway Configuration
+### Authentication Middleware
 
-For AWS API Gateway, you can use Infrastructure as Code with CloudFormation or Terraform. The terraform skill assists in writing infrastructure definitions:
-
-```hcl
-resource "aws_api_gateway_rest_api" "main" {
-  name        = "my-api-gateway"
-  description = "Main API Gateway for microservices"
-}
-
-resource "aws_api_gateway_resource" "proxy" {
-  rest_api_id = aws_api_gateway_rest_api.main.id
-  parent_id   = aws_api_gateway_rest_api.main.root_resource_id
-  path_part   = "{proxy+}"
-}
-
-resource "aws_api_gateway_method" "any" {
-  rest_api_id   = aws_api_gateway_rest_api.main.id
-  resource_id   = aws_api_gateway_resource.proxy.id
-  http_method   = "ANY"
-  authorization = "NONE"
-}
-
-resource "aws_api_gateway_integration" "lambda" {
-  rest_api_id = aws_api_gateway_rest_api.main.id
-  resource_id = aws_api_gateway_resource.proxy.id
-  http_method = aws_api_gateway_method.any.http_method
-
-  integration_http_method = "POST"
-  type                    = "AWS_PROXY"
-  uri                     = aws_lambda_function.main.invoke_arn
-}
-```
-
-The frontend-design skill helps if you're building a custom gateway dashboard or documentation portal alongside your API. For generating API documentation, combine the pdf skill with your gateway outputs to produce polished reference materials.
-
-## NGINX Configuration for API Routing
-
-NGINX serves as a lightweight reverse proxy and API gateway. Here's a production-ready configuration:
-
-```nginx
-upstream backend_api {
-    server api1.example.com:8080;
-    server api2.example.com:8080;
-    keepalive 32;
-}
-
-server {
-    listen 443 ssl http2;
-    server_name api.example.com;
-
-    ssl_certificate /etc/ssl/certs/api.crt;
-    ssl_certificate_key /etc/ssl/private/api.key;
-
-    # Rate limiting zone
-    limit_req_zone $binary_remote_addr zone=api_limit:10m rate=10r/s;
-
-    # Request logging
-    access_log /var/log/nginx/api_access.log;
-    error_log /var/log/nginx/api_error.log;
-
-    location /api/v1/ {
-        limit_req zone=api_limit burst=20 nodelay;
-
-        proxy_pass http://backend_api;
-        proxy_http_version 1.1;
-        proxy_set_header Connection "";
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-
-        # Timeout settings
-        proxy_connect_timeout 30s;
-        proxy_send_timeout 30s;
-        proxy_read_timeout 30s;
-
-        # Circuit breaker simulation
-        proxy_next_upstream error timeout http_502 http_503;
-    }
-
-    # Health check endpoint
-    location /health {
-        access_log off;
-        return 200 "healthy\n";
-        add_header Content-Type text/plain;
-    }
-}
-```
-
-## Authentication and Security Configurations
-
-Securing your API gateway requires careful configuration of authentication mechanisms. For JWT validation:
+Gateway authentication typically involves JWT validation or OAuth token exchange:
 
 ```yaml
 plugins:
   - name: jwt
     config:
-      key_claim_name: kid
+      key_claim: kid
       claims_to_verify:
         - exp
+        - iat
       run_on_preflight: true
+  - name: rate-limiting
+    config:
+      minute: 100
+      hour: 1000
+      policy: local
 ```
 
-For OAuth2 introspection with an external authorization server:
+When configuring authentication, use the `supermemory` skill to document which services require which authentication methods. This creates a reference that helps Claude suggest appropriate gateway policies for each endpoint.
+
+### Request Transformation
+
+Gateways often transform requests before forwarding to backend services:
 
 ```yaml
 plugins:
-  - name: oauth2-introspection
+  - name: request-transformer
     config:
-      introspection_url: https://auth.example.com/oauth2/introspect
-      authorization_value: "Bearer your-service-token"
-      token_type_hint: access_token
-      ttl: 300
+      add:
+        headers:
+          - X-Gateway-Version: "2.0"
+          - X-Request-ID: $(uuid)
+      remove:
+        headers:
+          - X-Internal-Debug
 ```
 
-Claude Code can help you audit these security configurations. The tdd skill generates test cases that verify authentication flows work correctly and that unauthorized requests are properly rejected.
+## Integrating Claude Skills with Gateway Development
 
-## Monitoring and Observability
+Several Claude skills accelerate gateway configuration:
 
-Configure logging and metrics collection for your gateway:
+- **tdd**: Use test-driven development to validate gateway rules before deployment
+- **frontend-design**: Generate OpenAPI specifications and API documentation
+- **pdf**: Export gateway configuration guides for team reference
+
+The workflow typically involves describing your API surface to Claude, which then generates draft configurations. Use `/tdd` to validate the configuration handles edge cases correctly.
+
+## Troubleshooting Common Gateway Issues
+
+### Routing Failures
+
+When requests fail to route correctly, verify your path matching patterns. Claude Code can help analyze logs and suggest fixes:
+
+```yaml
+routes:
+  - name: api-routes
+    paths:
+      - /api/v1/
+    strip_path: true
+```
+
+### Authentication Errors
+
+JWT validation failures often stem from clock skew or incorrect key configuration. Document your auth setup using the `supermemory` skill:
+
+```
+Auth Flow:
+- Client obtains token from /auth/login
+- Token includes exp, iat, sub claims
+- Gateway validates signature using JWKS endpoint
+- Failed validations return 401 with error details
+```
+
+This documentation helps Claude quickly identify configuration mismatches.
+
+### Performance Bottlenecks
+
+Rate limiting and caching configurations impact gateway performance significantly:
 
 ```yaml
 plugins:
-  - name: prometheus
+  - name: proxy-cache
     config:
-      per_consumer: true
-  - name: syslog
-    config:
-      log_level: info
-      facility: LOCAL0
-      server: logs.example.com
-      port: 514
+      response_code:
+        - 200
+      request_method:
+        - GET
+      cache_ttl: 300
 ```
 
-For distributed tracing, add OpenTelemetry configuration:
+## Deployment Best Practices
+
+1. **Version control all configurations**: Store gateway configs in your repository alongside application code
+2. **Use environment-specific configs**: Separate development, staging, and production configurations
+3. **Test before deployment**: Use the `tdd` skill to validate routing and security rules
+4. **Document everything**: Use `pdf` to generate configuration documentation for stakeholders
+
+## Advanced Patterns
+
+For complex architectures, consider these advanced configurations:
+
+### Service Mesh Integration
+
+When using a service mesh, the gateway handles external traffic while the mesh manages internal service communication:
 
 ```yaml
-plugins:
-  - name: opentelemetry
-    config:
-      service_name: api-gateway
-      exporter_endpoint: http://otel-collector:4318/v1/traces
-      sample_rate: 0.5
+gateway:
+  external:
+    tls:
+      mode: PASSTHROUGH
+  internal:
+    mesh_enabled: true
+    service_discovery: consul
 ```
 
-Use the supermemory skill to track metrics across different gateway deployments and create runbooks for common issues.
+### GraphQL Federation
 
-## Deploying and Testing Your Configuration
+Gateway configuration for federated GraphQL requires specific routing:
 
-After writing your configuration, validate it before deployment. For Kong:
-
-```bash
-kong config parse kong.yml
+```yaml
+services:
+  - name: federated-gateway
+    url: http://localhost:4000
+    routes:
+      - path: /graphql
+        methods: [POST, GET]
+        plugins:
+          - name: graphql-introspection
+            config:
+              allow: true
 ```
 
-For NGINX:
+## Conclusion
 
-```bash
-nginx -t
-```
+Configuring API gateways with Claude Code involves combining clear documentation practices with the skill system's flexibility. By creating custom gateway skills, leveraging existing skills like `tdd` and `supermemory`, and treating gateway configurations as code, you can build reliable, secure API infrastructures.
 
-The tdd skill helps create integration tests that verify your gateway routes requests correctly, applies rate limits, and enforces authentication. Run these tests in a staging environment before production deployment.
-
-## Summary
-
-API gateway configuration requires attention to routing, security, performance, and observability. Claude Code skills like tdd, supermemory, and frontend-design streamline this process by helping you write configurations, test them thoroughly, maintain documentation, and build supporting tools. Start with simple configurations, validate each component, then gradually add advanced features like rate limiting, authentication, and monitoring.
+The key is starting simple—define basic routes, add authentication incrementally, and expand to advanced features like caching and transformation as your system matures. Claude Code's ability to read, generate, and modify configuration files makes it an invaluable tool for this iterative process.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
