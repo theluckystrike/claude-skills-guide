@@ -10,6 +10,7 @@ reviewed: true
 score: 7
 ---
 {% raw %}
+
 # Claude Code React Native Paper Mobile UI Guide
 
 React Native Paper provides a comprehensive set of Material Design components for cross-platform mobile applications. [Combined with Claude Code and its specialized skills, you can accelerate development significantly](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) This guide covers practical workflows for building mobile UIs efficiently.

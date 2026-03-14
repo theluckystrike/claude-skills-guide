@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 ---
 {% raw %}
+
 # Claude Code GitHub Actions Notification Setup
 
 [Setting up notifications for GitHub Actions when working with Claude Code](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) ensures you stay informed about workflow status, test results, and deployment outcomes. This guide walks you through configuring notifications across multiple channels.

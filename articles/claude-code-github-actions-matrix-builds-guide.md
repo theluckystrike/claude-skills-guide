@@ -10,6 +10,7 @@ reviewed: true
 score: 7
 ---
 {% raw %}
+
 # Claude Code GitHub Actions Matrix Builds Guide
 
 [GitHub Actions matrix builds let you execute the same workflow across multiple configuration combinations](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) simultaneously. When paired with Claude Code, you can automate the creation of complex matrix workflows, generate dynamic configurations, and build intelligent testing pipelines that adapt to your project requirements. This guide provides practical patterns for using matrix builds effectively.
