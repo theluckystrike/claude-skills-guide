@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 
 # Claude Code Contract Testing with Pact Guide
 
@@ -192,4 +191,3 @@ Claude Code's ecosystem complements contract testing well. Skills like tdd gener
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

@@ -11,7 +11,6 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 # Claude Code Not Working After Update: How to Fix
 
 Updates to Claude Code can sometimes introduce breaking changes that affect your installed skills, custom configurations, or workflow integrations. This guide covers the most common issues developers encounter after updating Claude Code and provides practical solutions to get you back up and running quickly.
@@ -225,4 +224,3 @@ Keeping your skills modular, well-documented, and using environment-aware path h
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

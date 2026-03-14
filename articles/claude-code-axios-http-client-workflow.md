@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 When building modern applications, HTTP requests are the backbone of data exchange. Whether you're fetching from a REST API, sending form data, or handling authentication tokens, having a solid HTTP client workflow saves hours of debugging. This guide walks you through creating a practical Axios workflow that integrates smoothly with Claude Code.
 
 ## Setting Up Your Axios Instance
@@ -232,4 +231,3 @@ Pair this workflow with Claude Code skills like **pdf** for documentation, **fro
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

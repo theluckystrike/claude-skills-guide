@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 
 # Claude Code NPM Package Development Guide
 
@@ -235,4 +234,3 @@ Building NPM packages with Claude Code combines AI assistance with solid enginee
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

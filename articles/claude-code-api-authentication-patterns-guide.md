@@ -11,7 +11,6 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
 # Claude Code API Authentication Patterns Guide
 
 When building Claude skills that interact with external APIs—whether integrating with GitHub, Slack, or custom services—authentication becomes a critical consideration. This guide covers practical patterns for handling API credentials securely within Claude Code skills, with examples you can apply immediately to skills like frontend-design, pdf, tdd, or supermemory.
@@ -196,4 +195,3 @@ Building skills that handle authentication well creates more reliable and secure
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

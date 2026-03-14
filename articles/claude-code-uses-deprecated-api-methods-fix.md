@@ -10,7 +10,6 @@ score: 7
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 ---
-{% raw %}
 
 # Claude Code Uses Deprecated API Methods Fix
 
@@ -179,4 +178,3 @@ Deprecated API methods in generated code are a manageable challenge. By configur
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

@@ -11,7 +11,6 @@ score: 7
 permalink: /mailchimp-mcp-server-marketing-automation-guide/
 ---
 
-{% raw %}
 
 # Mailchimp MCP Server Marketing Automation Guide
 
@@ -132,4 +131,3 @@ Experiment with the examples in this guide, then explore combining the Mailchimp
 - [Claude Skills Integrations Hub](/claude-skills-guide/integrations-hub/) — Explore more Claude Code integrations with third-party APIs and marketing platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

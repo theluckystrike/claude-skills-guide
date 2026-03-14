@@ -10,7 +10,6 @@ reviewed: true
 score: 8
 permalink: /claude-code-skills-for-creating-github-actions-workflows/
 ---
-{% raw %}
 
 # Claude Code Skills for Creating GitHub Actions Workflows
 
@@ -176,4 +175,3 @@ Start with one skill focused on your most common workflow type, then expand as y
 - [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — keep secrets out of your GitHub Actions workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

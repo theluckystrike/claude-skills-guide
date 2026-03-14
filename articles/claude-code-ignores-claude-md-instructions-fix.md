@@ -10,7 +10,6 @@ permalink: /claude-code-ignores-claude-md-instructions-fix/
 reviewed: true
 score: 7
 ---
-{% raw %}
 
 
 # Claude Code Ignores .md Instructions Fix
@@ -162,4 +161,3 @@ For developers working with specific domains, skills like **pdf**, **tdd**, **xl
 - [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

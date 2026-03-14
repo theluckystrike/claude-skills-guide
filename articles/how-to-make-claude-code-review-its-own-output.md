@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 # How to Make Claude Code Review Its Own Output
 
 As a developer working with AI coding assistants, you have probably encountered situations where Claude generates code that almost works—but needs refinement. Rather than manually catching bugs or style issues, you can train Claude to review its own output systematically. This creates a powerful feedback loop that improves code quality without requiring constant human intervention.
@@ -187,4 +186,3 @@ The key is treating review as a separate, deliberate step rather than hoping the
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

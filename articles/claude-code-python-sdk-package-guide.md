@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 
 # Claude Code Python SDK Package Guide
 
@@ -212,4 +211,3 @@ The Python ecosystem benefits from well-designed packages. Your SDK contributes 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

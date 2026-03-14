@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 
 If you have used Claude Code for substantial development work, you have likely noticed that it performs significantly better when given access to your entire codebase rather than just a single file. This is not arbitrary—it reflects how modern AI coding assistants process and generate code. Understanding why Claude Code needs so much context window will help you structure your projects and interact with the tool more effectively.
 
@@ -92,4 +91,3 @@ Rather than viewing this as a limitation, recognize it as a reflection of how sk
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

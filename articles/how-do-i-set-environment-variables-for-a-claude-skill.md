@@ -10,7 +10,6 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 permalink: /how-do-i-set-environment-variables-for-a-claude-skill/
 ---
-{% raw %}
 
 # How Do I Set Environment Variables for a Claude Skill
 
@@ -223,4 +222,3 @@ With proper configuration, your Claude skills will have access to the APIs, path
 - [Claude Skills Hub](/claude-skills-guide/getting-started-hub/) — Explore essential skill configuration and setup patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

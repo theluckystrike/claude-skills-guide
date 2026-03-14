@@ -11,7 +11,6 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 
 # How to Make Claude Code Write Better Unit Tests
 
@@ -166,6 +165,5 @@ Getting better unit tests from Claude Code requires clear direction, the right s
 - [Claude Code Pytest Fixtures Parametrize Workflow Tutorial](/claude-skills-guide/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — write advanced parametrized tests with pytest and Claude
 - [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — review generated unit tests for coverage and quality
 
-{% endraw %}
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

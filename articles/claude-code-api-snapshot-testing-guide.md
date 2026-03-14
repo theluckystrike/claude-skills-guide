@@ -11,7 +11,6 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
 # Claude Code API Snapshot Testing Guide
 
 API snapshot testing captures response payloads at a point in time and compares future responses against that baseline. This approach catches unintended changes before they reach production. When combined with Claude Code, you gain an intelligent agent that can generate tests, detect meaningful differences, and maintain your test suite with minimal manual intervention.
@@ -203,4 +202,3 @@ Start with critical endpoints that return complex payloads, expand to cover edge
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

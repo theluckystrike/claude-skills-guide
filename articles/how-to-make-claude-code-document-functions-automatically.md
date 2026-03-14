@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 Maintaining up-to-date function documentation is a persistent challenge in software development. Claude Code can automatically generate comprehensive documentation for your functions, saving hours of manual work while keeping your codebase accessible. This guide shows you practical methods to make Claude Code document functions automatically.
 
 ## Why Automated Function Documentation Matters
@@ -170,4 +169,3 @@ The initial setup requires some effort, but the time savings compound quickly. Y
 - [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

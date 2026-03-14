@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 
 # Claude Code API Changelog Documentation: A Practical Guide for Developers
 
@@ -131,4 +130,3 @@ The Claude Code API changelog documentation is more than a list of updates—it'
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

@@ -11,7 +11,6 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
 
 # Claude Code API Contract Testing Guide
 
@@ -197,6 +196,5 @@ API contract testing with Claude Code combines clear workflow definitions throug
 
 Start by creating a contract testing skill, then add Pact or OpenAPI validation to your test suite. Integrate these checks into your CI pipeline to catch breaking changes before they reach production.
 
-{% endraw %}
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

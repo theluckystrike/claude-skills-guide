@@ -10,7 +10,6 @@ reviewed: true
 score: 8
 permalink: /claude-code-with-docker-container-skill-setup-guide/
 ---
-{% raw %}
 
 # Claude Code with Docker Container Setup Guide
 
@@ -329,4 +328,3 @@ jobs:
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — When running skills in containers at scale, token cost management becomes critical
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 # Claude Code Code Example Generation Workflow
 
 Modern development often requires quickly generating code examples that match your project's specific patterns and requirements. Claude Code provides a powerful workflow for creating accurate, context-aware code examples that integrate smoothly with your existing codebase. This guide walks you through an effective methodology for generating high-quality code examples using Claude Code.
@@ -187,4 +186,3 @@ The key is treating Claude Code as a collaborative partner rather than a simple 
 - [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

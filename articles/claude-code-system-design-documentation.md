@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 Creating clear system design documentation is essential for maintaining complex software projects. Claude Code provides powerful capabilities to generate, maintain, and evolve system design documentation that keeps pace with your architecture.
 
 ## Understanding System Design Documentation Requirements
@@ -146,4 +145,3 @@ Review documentation during code reviews. Treat inadequate documentation the sam
 - [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

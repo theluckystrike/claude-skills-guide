@@ -10,7 +10,6 @@ reviewed: true
 score: 8
 permalink: /claude-code-wiremock-api-mocking-guide/
 ---
-{% raw %}
 
 
 # Claude Code WireMock API Mocking Guide
@@ -221,4 +220,3 @@ WireMock transforms how you test HTTP-dependent code. By running a local mock se
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

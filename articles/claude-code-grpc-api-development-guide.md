@@ -10,7 +10,6 @@ reviewed: true
 score: 7
 permalink: /claude-code-grpc-api-development-guide/
 ---
-{% raw %}
 
 # Claude Code gRPC API Development Guide
 
@@ -218,4 +217,3 @@ Claude Code skills enhance gRPC development by automating code generation, testi
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

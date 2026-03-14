@@ -11,7 +11,6 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 # Claude Code Over Engineers: Simple Solution Fix for Common Problems
 
 When developers encounter issues with Claude Code, the instinct is often to dig through documentation, file support tickets, or worse—consider hiring external help. But many problems have straightforward fixes that don't require engineering expertise or expensive consultant hours. This guide covers practical solutions for the most common Claude Code frustrations, focusing on speed and simplicity.
@@ -184,4 +183,3 @@ Remember: the simplest solution is often correct. Most Claude Code problems stem
 - [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

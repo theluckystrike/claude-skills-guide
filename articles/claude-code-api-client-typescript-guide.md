@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 # Claude Code API Client TypeScript Guide
 
 Building a TypeScript client for interacting with Claude Code opens up powerful automation possibilities. Whether you're integrating Claude into your CI/CD pipeline, building a custom dashboard, or composing multiple skills programmatically, understanding the API client patterns in TypeScript will accelerate your development workflow.
@@ -245,4 +244,3 @@ Building a TypeScript API client for Claude Code gives you programmatic control 
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

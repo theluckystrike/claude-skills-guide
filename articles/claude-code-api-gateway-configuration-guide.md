@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 # Claude Code API Gateway Configuration Guide
 
 API gateways serve as the entry point for external services interacting with your Claude Code skills. Proper configuration ensures secure, efficient communication between your skills and the outside world. This guide walks through practical setup scenarios for developers building production-ready Claude skills.
@@ -228,4 +227,3 @@ The gateway is your first line of defense and your primary interface. Invest tim
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

@@ -11,7 +11,6 @@ score: 7
 permalink: /claude-code-webhook-implementation-guide/
 ---
 
-{% raw %}
 
 # Claude Code Webhook Implementation Guide
 
@@ -222,4 +221,3 @@ Remember to use the webhook skill (`/webhook`) whenever processing incoming payl
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

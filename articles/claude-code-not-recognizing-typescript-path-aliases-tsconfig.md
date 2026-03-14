@@ -11,7 +11,6 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
 # Claude Code Not Recognizing TypeScript Path Aliases in tsconfig: Fix Guide
 
 When working with TypeScript projects that use path aliases (like `@components/*` or `@lib/*`), you may encounter a situation where Claude Code generates incorrect import paths or fails to recognize your configured aliases. This creates friction during development, especially in larger codebases where path aliases improve code organization and maintainability.
@@ -226,4 +225,3 @@ By ensuring consistency across your TypeScript and build configurations, Claude 
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

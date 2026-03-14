@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 Building database queries from scratch can feel intimidating, especially when working with complex joins, subqueries, or unfamiliar database systems. Claude Code transforms this process by acting as an intelligent coding partner that understands SQL dialects, schema relationships, and query optimization strategies. This guide shows you how to use Claude Code effectively for writing database queries, whether you are debugging existing code or generating new queries from your schema.
 
 ## Getting Started with Claude Code
@@ -130,4 +129,3 @@ Start with simple queries to build trust in the outputs, then gradually tackle m
 - [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

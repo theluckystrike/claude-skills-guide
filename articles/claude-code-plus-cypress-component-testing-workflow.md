@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 Modern frontend development demands solid testing strategies, and combining Claude Code with Cypress creates a powerful workflow for component testing. This guide explores practical integration patterns that help developers write, maintain, and scale component tests efficiently.
 
 ## Setting Up the Foundation
@@ -223,7 +222,6 @@ Cypress automatically parallelizes test execution when integrated with Cypress C
 Combining Claude Code with Cypress creates a productive component testing workflow. Claude handles test generation, debugging assistance, and pattern suggestions, while Cypress provides reliable component mounting and assertion capabilities. This synergy accelerates development without sacrificing test quality.
 
 Start with simple components, establish consistent patterns, and gradually expand coverage. The initial investment in testing infrastructure pays dividends through faster iteration and confident refactoring.
-{% endraw %}
 
 
 ## Related Reading

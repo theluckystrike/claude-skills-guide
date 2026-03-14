@@ -10,7 +10,6 @@ reviewed: true
 score: 9
 permalink: /claude-skills-aws-lambda-serverless-integration/
 ---
-{% raw %}
 
 # Claude Code Skills + AWS Lambda: Serverless Integration
 
@@ -270,4 +269,3 @@ def handler(event, context):
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

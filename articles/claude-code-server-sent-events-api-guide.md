@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 # Claude Code Server Sent Events API Guide
 
 Server-Sent Events (SSE) provide a efficient mechanism for streaming real-time updates from servers to clients. When combined with Claude Code and MCP servers, SSE enables powerful streaming workflows for AI-assisted development. This guide covers practical implementation patterns for developers building real-time applications with Claude.
@@ -188,5 +187,4 @@ For bulk operations, consider whether true streaming provides meaningful benefit
 
 Server-Sent Events unlock real-time capabilities in Claude Code integrations. Whether you're building MCP servers that stream progress updates or consuming Claude's streaming API responses, the patterns covered here provide a foundation for production implementations. Start with simple streaming examples, then extend to more complex scenarios as your requirements grow.
 
-{% endraw %}
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

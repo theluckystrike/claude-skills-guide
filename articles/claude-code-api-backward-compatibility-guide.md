@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 # Claude Code API Backward Compatibility Guide
 
 When building custom Claude skills or integrating with the Claude Code API, understanding backward compatibility becomes essential for maintaining stable workflows. This guide covers practical strategies for writing code that works across different versions of Claude's toolchain while using skills like frontend-design, pdf, tdd, and supermemory effectively.
@@ -127,4 +126,3 @@ Backward compatibility with Claude Code API comes down to three principles: dete
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

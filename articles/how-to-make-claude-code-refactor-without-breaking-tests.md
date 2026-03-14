@@ -11,7 +11,6 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 Refactoring code is a necessary part of software development, but it becomes risky when tests start failing. Claude Code offers powerful capabilities that can help you refactor with confidence, provided you use the right approach. This guide covers practical strategies for refactoring your codebase without breaking existing tests.
 
 ## Start with a Comprehensive Test Suite
@@ -95,7 +94,6 @@ Maintain versioned releases so you can quickly revert to a known-good state. Cla
 Refactoring with Claude Code becomes significantly safer when you combine comprehensive testing, incremental changes, and automated verification. The key is treating tests as partners in the refactoring process rather than obstacles to work around. By providing context, requesting test updates alongside code changes, and verifying incrementally, you can confidently improve your codebase while maintaining reliability.
 
 Start with solid test coverage, make small incremental changes, and always verify before moving forward. These practices transform refactoring from a risky operation into a routine part of development.
-{% endraw %}
 
 
 ## Related Reading

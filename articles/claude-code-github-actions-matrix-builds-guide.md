@@ -10,7 +10,6 @@ reviewed: true
 score: 7
 permalink: /claude-code-github-actions-matrix-builds-guide/
 ---
-{% raw %}
 
 # Claude Code GitHub Actions Matrix Builds Guide
 
@@ -299,4 +298,3 @@ By combining matrix strategies with Claude Code skills like tdd and supermemory,
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

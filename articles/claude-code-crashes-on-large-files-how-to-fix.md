@@ -10,7 +10,6 @@ score: 7
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 ---
-{% raw %}
 
 # Claude Code Crashes on Large Files: How to Fix
 
@@ -212,4 +211,3 @@ For teams, document your file handling patterns so everyone understands the limi
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

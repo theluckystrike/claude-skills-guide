@@ -10,7 +10,6 @@ reviewed: true
 score: 8
 permalink: /claude-code-astro-static-site-generation-workflow-guide/
 ---
-{% raw %}
 
 # Claude Code Astro Static Site Generation Workflow Guide
 
@@ -229,4 +228,3 @@ Build incrementally, test consistently, and deploy automatically. Your static si
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

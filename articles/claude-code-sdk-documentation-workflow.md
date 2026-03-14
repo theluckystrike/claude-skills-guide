@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 # Claude Code SDK Documentation Workflow
 
 Building a reliable SDK requires excellent documentation. A well-documented SDK saves developer time, reduces support burden, and accelerates adoption. Claude Code provides a powerful workflow for generating, maintaining, and updating SDK documentation automatically.
@@ -226,4 +225,3 @@ Start with the structure, automate generation, and add tracking. Your SDK users 
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

@@ -10,7 +10,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 # Claude Code Error: Exceeds Max Tokens in Single Response Fix
 
 If you're working with Claude Code and encounter the error "exceeds max tokens in single response," this guide will help you understand the issue and implement effective solutions.
@@ -135,4 +134,3 @@ Remember: Smaller, focused requests lead to better results and fewer errors.
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

@@ -11,7 +11,6 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 
 When you're deep in a coding session with Claude Code and suddenly encounter a "429 Too Many Requests" error, it can disrupt your workflow. This error occurs when the API rate limit is exceeded, meaning you've sent too many requests within a given time window. Understanding how to handle these rate limits effectively is essential for maintaining productivity.
 
@@ -189,4 +188,3 @@ HTTP 429 errors don't have to halt your productivity. By implementing exponentia
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

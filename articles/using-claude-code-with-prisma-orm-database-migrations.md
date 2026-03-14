@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 Managing database schemas with Prisma ORM becomes significantly more efficient when paired with Claude Code, an AI assistant that understands your codebase and can generate migrations, explain schema changes, and help troubleshoot issues. This guide covers practical workflows for integrating Claude Code into your Prisma development process.
 
 ## Setting Up Prisma for Claude Code Collaboration
@@ -114,7 +113,6 @@ For team projects, coordinate schema changes through pull requests where Claude 
 Claude Code transforms Prisma ORM migration management from a manual process into a collaborative workflow. By describing your schema needs and letting Claude Code assist with generation, explanation, and debugging, you move faster while maintaining schema quality. The key lies in clear communication about your data requirements and reviewing generated migrations before deployment.
 
 For more development tips and AI-assisted workflows, explore additional resources on using Claude Code throughout your project lifecycle.
-{% endraw %}
 
 
 ## Related Reading

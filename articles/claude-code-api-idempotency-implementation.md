@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 Idempotency is a fundamental concept in API design that ensures the same operation can be executed multiple times without changing the result beyond the initial application. When building applications that interact with Claude Code API, implementing idempotency becomes essential for handling network failures, timeout scenarios, and retry logic gracefully. This guide provides practical implementation strategies for developers building reliable integrations.
 
 ## Why Idempotency Matters for Claude Code API
@@ -201,4 +200,3 @@ The pattern requires minimal overhead—a small investment that pays significant
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

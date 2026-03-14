@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 
 Choosing between Claude Code and ChatGPT for coding tasks requires understanding their fundamental differences. While both use large language models, Claude Code operates as a local CLI agent with deep system access, while ChatGPT functions primarily as a conversational assistant. This guide helps developers make informed decisions based on task type, complexity, and workflow integration.
 
@@ -148,7 +147,6 @@ Both tools have legitimate use cases in a developer's toolkit. Claude Code trans
 
 Build your workflow around both tools, using each for what it does best.
 
-{% endraw %}
 
 
 ## Related Reading

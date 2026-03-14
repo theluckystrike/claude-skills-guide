@@ -11,7 +11,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
 Claude Code offers two primary subscription tiers that cater to different user needs. Whether you're a solo developer building side projects or part of a team shipping production software, understanding the differences between these plans helps you make informed decisions about your AI-assisted development workflow. This guide breaks down the free tier versus the Pro plan with practical examples and recommendations for 2026.
 
 ## Understanding the Free Tier
@@ -168,4 +167,3 @@ Evaluate your current needs, try the free tier first, and upgrade when your work
 - [Why Is Claude Code Expensive: Large Context Tokens](/claude-skills-guide/why-is-claude-code-expensive-large-context-tokens/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}
