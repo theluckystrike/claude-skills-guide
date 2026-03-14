@@ -167,4 +167,11 @@ Claude Code transforms GitFlow from a manual branching strategy into an intellig
 
 The key benefits include: consistent branch management, automatic cleanup of merged branches, intelligent merge handling, and integration with other Claude skills for comprehensive automation. Start with one workflow element—feature branches, for instance—and expand as you recognize patterns worth automating.
 
+## Related Reading
+
+- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Git best practices that gitflow builds on
+- [Claude Code Trunk Based Development Guide](/claude-skills-guide/claude-code-trunk-based-development-guide/) — Trunk-based development is the alternative to gitflow
+- [Claude Code Git Branch Naming Conventions](/claude-skills-guide/claude-code-git-branch-naming-conventions/) — Branch naming is central to gitflow
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Git automation and workflow guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

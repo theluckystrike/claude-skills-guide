@@ -164,4 +164,11 @@ Begin with one high-value, low-risk use case. Document your findings, share succ
 
 The most successful team integrations emerge organically from solving real problems. Start small, measure outcomes, and expand gradually as your team develops confidence in Claude Code's capabilities.
 
+## Related Reading
+
+- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — CI/CD is central to team workflow integration
+- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Git workflow is the team's shared foundation
+- [How to Make Claude Code Write Better Unit Tests](/claude-skills-guide/how-to-make-claude-code-write-better-unit-tests/) — Shared test standards matter for team workflows
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Team and workflow automation guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

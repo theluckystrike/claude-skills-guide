@@ -126,4 +126,11 @@ For existing projects, use Claude Code to gradually improve styling quality. Ref
 
 The combination of clear context, appropriate skills, and specific prompts transforms frontend styling from a chore into one of the most efficient parts of your development process.
 
+## Related Reading
+
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Top frontend skills including styling tools
+- [Best Way to Use Claude Code with TypeScript Projects](/claude-skills-guide/best-way-to-use-claude-code-with-typescript-projects/) — TypeScript is the natural pair for frontend work
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/) — Accessibility auditing goes alongside styling
+- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More Claude Code frontend how-to guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

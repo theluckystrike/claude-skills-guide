@@ -212,4 +212,11 @@ Create a test checklist covering these keyboard scenarios:
 
 Keyboard navigation testing protects accessibility while improving usability for all users. Automate regression tests with Playwright, integrate with Claude Code skills like tdd and frontend-design, and maintain coverage through CI pipelines. Regular testing catches issues early and ensures your applications remain navigable by keyboard.
 
+## Related Reading
+
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/) — WCAG auditing covers keyboard navigation requirements
+- [Best Way to Use Claude Code for Frontend Styling](/claude-skills-guide/best-way-to-use-claude-code-for-frontend-styling/) — Styling affects keyboard navigation visual indicators
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Write keyboard navigation tests with TDD
+- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More testing and quality workflow guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
