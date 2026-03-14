@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude MD Example for React Native Mobile App Development"
-description: "Practical Claude.md examples for building React Native mobile apps. Learn how to write effective prompts, use Claude skills for mobile development, and accelerate your workflow."
+description: "Practical Claude.md examples for building React Native mobile apps. Learn how to write effective prompts, use Claude skills for mobile development, and."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-md-example-for-react-native-mobile-app/
+categories: [guides]
 ---
 
 # Claude MD Example for React Native Mobile App Development
@@ -175,5 +176,12 @@ Fifth, ask for TypeScript types. Strong typing catches errors early in mobile de
 Claude.md examples for React Native development require mobile-specific context and clear technology specifications. The prompts above demonstrate patterns you can adapt for your own projects, whether you are building fitness apps, e-commerce applications, or productivity tools.
 
 Effective prompts combine clear requirements with appropriate scope. Start small, iterate quickly, and build up to complex features systematically.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

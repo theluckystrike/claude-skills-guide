@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "CLAUDE.md Not Being Read by Claude Code Fix"
-description: "Troubleshoot and fix CLAUDE.md files not being read by Claude Code. Practical solutions for developers and power users dealing with ignored project instructions."
+description: "Troubleshoot and fix CLAUDE.md files not being read by Claude Code. Practical solutions for developers and power users dealing with ignored project."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-md-not-being-read-by-claude-code-fix/
@@ -198,5 +198,12 @@ If you've tried all these solutions and CLAUDE.md still isn't loading, the issue
 Check the Claude Code documentation for your version, and review any recent changes to the tool that might affect file loading behavior.
 
 Building effective CLAUDE.md files takes iteration. Start with the basics, verify loading works, then progressively add complexity. The investment pays off in more productive Claude Code sessions where your project context is properly understood from the first prompt.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

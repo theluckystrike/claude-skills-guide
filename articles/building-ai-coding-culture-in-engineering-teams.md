@@ -2,10 +2,11 @@
 
 layout: default
 title: "Building AI Coding Culture in Engineering Teams"
-description: "A practical guide for developers and engineering leaders on creating a sustainable AI coding culture. Learn how to integrate AI tools like Claude Code into daily workflows, establish best practices, and measure adoption success."
+description: "A practical guide for developers and engineering leaders on creating a sustainable AI coding culture. Learn how to integrate AI tools like Claude Code."
 date: 2026-03-14
 author: theluckystrike
 permalink: /building-ai-coding-culture-in-engineering-teams/
+categories: [guides]
 ---
 
 # Building AI Coding Culture in Engineering Teams
@@ -171,5 +172,12 @@ The key is balance: leverage AI for productivity gains while maintaining human j
 Start small, measure results, and expand what works. Within six months, your team will have developed instincts for effective AI collaboration that compound into significant productivity improvements.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

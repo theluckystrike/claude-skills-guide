@@ -2,7 +2,7 @@
 
 layout: default
 title: "Building Supervisor Worker Agent Architecture Tutorial"
-description: "Learn how to build a supervisor-worker agent architecture using Claude Code. This comprehensive tutorial covers orchestrating multiple AI agents, task delegation patterns, and building scalable AI-powered development workflows."
+description: "Learn how to build a supervisor-worker agent architecture using Claude Code. This comprehensive tutorial covers orchestrating multiple AI agents, task."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, ai-agent, supervisor-worker, architecture, agent-orchestration, tutorial, claude-skills]
@@ -164,3 +164,10 @@ The supervisor-worker agent architecture transforms Claude Code from a single AI
 
 This pattern isn't just about efficiency; it's about building maintainable, auditable AI-assisted development processes that you can trust with real production code.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
