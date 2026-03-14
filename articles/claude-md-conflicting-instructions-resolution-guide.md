@@ -5,7 +5,7 @@ description: "Learn how to resolve conflicting instructions when working with Cl
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, instruction-resolution, conflict-resolution, ai-agents]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 8
 permalink: /claude-md-conflicting-instructions-resolution-guide/
