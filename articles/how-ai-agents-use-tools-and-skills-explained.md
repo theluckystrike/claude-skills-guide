@@ -5,6 +5,7 @@ description: "A comprehensive guide to understanding how AI agents like Claude C
 date: 2026-03-14
 author: theluckystrike
 permalink: /how-ai-agents-use-tools-and-skills-explained/
+categories: [troubleshooting]
 ---
 
 # How AI Agents Use Tools and Skills Explained
@@ -127,3 +128,10 @@ As AI agents become more sophisticated, their tool-use capabilities expand. Clau
 The combination of well-designed skills and appropriate tool access enables AI agents to handle increasingly complex tasks autonomously—transforming how developers work and automating repetitive tasks that previously required constant human oversight.
 
 Understanding this tool-skill architecture is your foundation for building powerful AI-driven workflows that can read, reason, execute, and deliver results autonomously.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+

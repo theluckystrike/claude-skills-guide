@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Chain of Agents Pattern for Sequential Task Processing"
-description: "Learn how to implement the chain of agents pattern in Claude Code for processing complex, multi-step workflows with specialized AI agents working in sequence."
+description: "Learn how to implement the chain of agents pattern in Claude Code for processing complex, multi-step workflows with specialized AI agents working in."
 date: 2026-03-14
 author: theluckystrike
 permalink: /chain-of-agents-pattern-for-sequential-task-processing/
+categories: [guides]
 ---
 
 {% raw %}
@@ -78,3 +79,10 @@ The chain of agents pattern transforms Claude Code into a flexible workflow orch
 
 The key is treating each agent as a focused specialist, passing clear outputs between stages, and using Claude Code's conversational context to maintain workflow state. This pattern unlocks automation scenarios that go far beyond what any single AI assistant could achieve alone.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

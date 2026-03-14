@@ -223,3 +223,10 @@ When designing workflows that leverage MCP tools, consider these guidelines:
 MCP tool categories provide a structured approach to extending Claude Code's capabilities. By understanding the strengths of each category—file operations, development tools, data processing, and web APIs—you can build sophisticated automation workflows that transform how you develop software. Start with simple workflows and progressively add complexity as you become more comfortable with the patterns.
 
 The key to success lies in combining tools thoughtfully rather than relying on any single category. Most powerful workflows emerge from the interaction between multiple tool types, enabling automation that would be impossible with isolated tools alone.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

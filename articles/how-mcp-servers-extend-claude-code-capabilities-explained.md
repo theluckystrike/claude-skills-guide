@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How MCP Servers Extend Claude Code Capabilities Explained"
-description: "Learn how Model Context Protocol (MCP) servers dramatically expand Claude Code's abilities with practical examples for file systems, databases, APIs, and more."
+description: "Learn how Model Context Protocol (MCP) servers dramatically expand Claude Code's abilities with practical examples for file systems, databases, APIs."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, mcp, model-context-protocol, servers, extensions]
@@ -137,3 +137,10 @@ The Model Context Protocol represents a significant step forward in making AI as
 
 *Ready to get started? Check out our guide on setting up your first MCP server, or browse our collection of recommended servers for different development workflows.*
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
