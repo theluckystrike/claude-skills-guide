@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Web App Manifest Configuration Guide"
 description: "A comprehensive guide to configuring web app manifests for Claude Code projects, with practical examples and actionable advice for developers."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-web-app-manifest-configuration-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Web App Manifest Configuration Guide
@@ -211,6 +215,6 @@ Claude Code can help you interpret these test results and suggest fixes for any 
 - Test on real devices, not just emulators
 - Keep your manifest in version control
 
-By following these guidelines and leveraging Claude Code's assistance, you can create web app manifests that provide excellent user experiences and ensure your applications are installable across all major platforms.
+By following these guidelines and using Claude Code's assistance, you can create web app manifests that provide excellent user experiences and ensure your applications are installable across all major platforms.
 
 {% endraw %}

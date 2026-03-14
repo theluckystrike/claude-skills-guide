@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Code Review Checklist Automation"
 description: "Learn how to leverage Claude Code to automate code review checklists, reduce manual overhead, and ensure consistent quality across your team's pull requests."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-code-review-checklist-automation/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 {% raw %}
 
 Code review checklists are essential for maintaining code quality, but manually creating, tracking, and enforcing them is time-consuming. This is where Claude Code shines—it can automate your entire checklist workflow, from generating review criteria based on file changes to tracking completion and generating reports. In this guide, you'll learn practical strategies for automating code review checklists using Claude Code.
@@ -20,7 +24,7 @@ Claude Code solves these issues by providing an intelligent layer that can:
 - Generate context-aware checklist items based on the code changes
 - Enforce consistent criteria across all reviews
 - Track review progress automatically
-- Integrate seamlessly with your existing workflow
+- Integrate smoothly with your existing workflow
 
 The key advantage is that Claude Code understands your codebase's context, so it can suggest relevant checklist items instead of generic ones.
 

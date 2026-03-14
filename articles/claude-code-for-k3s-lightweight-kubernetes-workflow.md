@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for K3s Lightweight Kubernetes Workflow"
 description: "Learn how to use Claude Code to streamline K3s Kubernetes management. This guide covers practical workflows for deploying, managing, and monitoring lightweight Kubernetes clusters using AI-assisted commands."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-k3s-lightweight-kubernetes-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for K3s Lightweight Kubernetes Workflow
 
@@ -48,7 +52,7 @@ Claude Code will execute the appropriate kubectl commands and interpret the resu
 
 ## Core Workflows for K3s Management
 
-Once Claude Code can communicate with your cluster, you can leverage it for various Kubernetes operations. Here are the most practical workflows you should master.
+Once Claude Code can communicate with your cluster, you can use it for various Kubernetes operations. Here are the most practical workflows you should master.
 
 ### Deploying Applications
 
@@ -126,7 +130,7 @@ Claude Code will generate the appropriate kubectl command or manifest, execute i
 
 ## Advanced Patterns
 
-As you become comfortable with basic workflows, you can leverage more advanced Claude Code patterns for complex Kubernetes operations.
+As you become comfortable with basic workflows, you can use more advanced Claude Code patterns for complex Kubernetes operations.
 
 ### Multi-Resource Deployments
 

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Flaky Test Detection and Fix Guide"
 description: "Learn how to use Claude Code to identify, diagnose, and fix flaky tests in your codebase. Practical strategies and code examples for reliable test suites."
@@ -7,11 +8,14 @@ author: Claude Skills Guide
 permalink: /claude-code-for-flaky-test-detection-and-fix-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Flaky Test Detection and Fix Guide
 
-Flaky tests are one of the most frustrating problems in software development. They pass and fail intermittently, eroding trust in your test suite and wasting developer time. This guide shows you how to leverage Claude Code to detect, diagnose, and fix flaky tests effectively.
+Flaky tests are one of the most frustrating problems in software development. They pass and fail intermittently, eroding trust in your test suite and wasting developer time. This guide shows you how to use Claude Code to detect, diagnose, and fix flaky tests effectively.
 
 ## Understanding Flaky Tests
 

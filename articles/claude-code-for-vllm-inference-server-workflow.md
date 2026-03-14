@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for vLLM Inference Server Workflow"
 description: "Learn how to integrate Claude Code into your vLLM inference server workflow for efficient LLM deployment and management."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-vllm-inference-server-workflow/
 categories: [Development, AI, Machine Learning]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for vLLM Inference Server Workflow
@@ -18,7 +22,7 @@ This guide walks you through integrating Claude Code into your vLLM inference se
 
 ## Understanding vLLM and Claude Code
 
-vLLM is an open-source inference server that leverages PagedAttention technology to achieve state-of-the-art serving throughput. It supports popular models like Llama, Mistral, and Qwen, making it a versatile choice for production deployments.
+vLLM is an open-source inference server that uses PagedAttention technology to achieve state-of-the-art serving throughput. It supports popular models like Llama, Mistral, and Qwen, making it a versatile choice for production deployments.
 
 Claude Code extends your development environment with AI-assisted capabilities. It can help you:
 - Generate server configurations

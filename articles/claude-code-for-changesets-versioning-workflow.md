@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Changesets Versioning Workflow"
 description: "Learn how to set up and use Claude Code with Changesets for automated semantic versioning, changelog generation, and streamlined package publishing workflows."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-changesets-versioning-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Changesets Versioning Workflow
@@ -119,7 +123,7 @@ This workflow runs on every push to main, automatically versions your packages b
 
 ## Using Claude Code to Manage the Versioning Workflow
 
-Claude Code can assist you at every stage of the Changesets workflow. Here's how to leverage it effectively:
+Claude Code can assist you at every stage of the Changesets workflow. Here's how to use it effectively:
 
 ### 1. Reviewing Pending Changes
 

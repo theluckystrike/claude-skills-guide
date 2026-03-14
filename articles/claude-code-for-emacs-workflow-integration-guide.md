@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Emacs Workflow Integration Guide"
 description: "Learn how to integrate Claude Code into your Emacs workflow for enhanced coding assistance, automated refactoring, and intelligent code completion."
@@ -6,8 +7,11 @@ date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-emacs-workflow-integration-guide/
 categories: [guides]
-tags: [claude-code, emacs, workflow, integration, editor]
+tags: [claude-code, emacs, workflow, integration, editor, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Emacs Workflow Integration Guide
 
@@ -130,7 +134,7 @@ REFACTORING-TYPE can be 'extract-function, 'rename, 'optimize, etc."
 
 ## Advanced Integration Patterns
 
-For power users, consider these advanced patterns that leverage Emacs's extensibility:
+For power users, consider these advanced patterns that use Emacs's extensibility:
 
 ### Project-Aware Context
 

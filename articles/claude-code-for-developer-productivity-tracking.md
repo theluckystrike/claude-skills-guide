@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Developer Productivity Tracking"
 description: "Learn how to leverage Claude Code to track and improve your developer productivity with practical examples, code snippets, and actionable strategies."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-developer-productivity-tracking/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Developer Productivity Tracking
@@ -125,7 +129,7 @@ Review recent git commits and generate a standup update:
 
 ## Analyzing Your Productivity Data
 
-Raw data only becomes useful when transformed into insights. Here's how to leverage Claude Code for productivity analysis:
+Raw data only becomes useful when transformed into insights. Here's how to use Claude Code for productivity analysis:
 
 ### Weekly Review Automation
 

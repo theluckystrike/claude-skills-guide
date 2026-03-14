@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Bitbucket Pipelines Advanced Guide"
 description: "Master the integration of Claude Code with Bitbucket Pipelines for automated code review, intelligent deployments, and enhanced CI/CD workflows."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-bitbucket-pipelines-advanced-guide/
 categories: [guides]
 tags: [claude-code, claude-skills, bitbucket-pipelines, cicd, automation]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Bitbucket Pipelines Advanced Guide
 
-Integrating Claude Code with Bitbucket Pipelines transforms your CI/CD workflow from a simple automation tool into an intelligent partner that can review code, suggest improvements, and handle complex deployment scenarios. This advanced guide explores practical patterns for leveraging Claude Code within your Bitbucket Pipelines environment.
+Integrating Claude Code with Bitbucket Pipelines transforms your CI/CD workflow from a simple automation tool into an intelligent partner that can review code, suggest improvements, and handle complex deployment scenarios. This advanced guide explores practical patterns for using Claude Code within your Bitbucket Pipelines environment.
 
 ## Understanding Claude Code in CI/CD Context
 
@@ -49,7 +53,7 @@ This foundation enables Claude to analyze your codebase during every pipeline ru
 
 ### Intelligent Code Review Workflow
 
-Create a comprehensive code review step that leverages Claude's understanding of your codebase:
+Create a comprehensive code review step that uses Claude's understanding of your codebase:
 
 ```yaml
   - step:

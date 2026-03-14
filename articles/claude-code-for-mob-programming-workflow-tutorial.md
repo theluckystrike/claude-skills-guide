@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Mob Programming Workflow Tutorial"
 description: "Learn how to integrate Claude Code into mob programming sessions for enhanced collaboration, knowledge sharing, and productivity. Practical examples and actionable tips for development teams."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-mob-programming-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 
@@ -134,7 +138,7 @@ When Claude Code provides code, treat it as a starting point for discussion rath
 3. Modify as needed for your specific context
 4. Run tests to verify correctness
 
-This collaborative approach ensures code quality while leveraging AI efficiency.
+This collaborative approach ensures code quality while using AI efficiency.
 
 ## Best Practices for Mob Programming with Claude Code
 

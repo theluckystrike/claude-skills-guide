@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for PWA Install Prompt Workflow Guide"
 description: "Learn how to implement Progressive Web App install prompts using Claude Code. A practical guide with code examples and best practices for web developers."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-pwa-install-prompt-workflow-guide/
 categories: [Web Development, PWA, JavaScript]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 Progressive Web Apps (PWAs) have become an essential part of modern web development, offering an app-like experience directly from the browser. One of the most powerful features of PWAs is the ability to prompt users to install your app on their device. In this guide, we'll explore how to use Claude Code to implement a complete PWA install prompt workflow, complete with service worker setup, custom UI, and best practices.

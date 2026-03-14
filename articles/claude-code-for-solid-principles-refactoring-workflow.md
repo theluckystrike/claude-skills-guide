@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for SOLID Principles Refactoring Workflow"
 description: "A practical workflow for using Claude Code to refactor codebases to follow SOLID principles. Learn how to leverage AI-assisted refactoring for cleaner, more maintainable software design."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-solid-principles-refactoring-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for SOLID Principles Refactoring Workflow
 

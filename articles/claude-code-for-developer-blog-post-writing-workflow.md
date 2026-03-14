@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Developer Blog Post Writing Workflow"
 description: "A comprehensive guide to using Claude Code for writing developer blog posts. Includes practical examples, workflow templates, and actionable advice for technical content creation."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-developer-blog-post-writing-workflow/
 categories: [claude-code, productivity, content-creation]
 tags: [claude-code, claude-skills, blog-posting, technical-writing]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Developer Blog Post Writing Workflow

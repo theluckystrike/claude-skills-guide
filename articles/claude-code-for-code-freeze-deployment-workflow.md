@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Code Freeze Deployment Workflow"
 description: "Learn how to use Claude Code effectively during code freeze periods to maintain stability, reduce deployment risks, and keep your team productive."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-code-freeze-deployment-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 {% raw %}
 
 Code freeze periods are critical moments in software development where teams halt new feature development to focus on stability, bug fixes, and release preparation. While code freeze is essential for ensuring reliable releases, it can also create bottlenecks if not managed properly. Claude Code offers powerful capabilities to streamline your code freeze deployment workflow, helping your team maintain productivity while ensuring only safe, vetted changes reach production.

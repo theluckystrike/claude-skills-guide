@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Rome Biome Linting Workflow"
 description: "Learn how to create a Claude Code skill that automates Rome and Biome linting workflows for your JavaScript and TypeScript projects."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-rome-biome-linting-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Rome Biome Linting Workflow
 

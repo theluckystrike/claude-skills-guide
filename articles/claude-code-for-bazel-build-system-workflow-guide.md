@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Bazel Build System Workflow Guide"
 description: "A comprehensive guide to integrating Claude Code into your Bazel build system workflow for efficient C++ and multi-language project development."
@@ -8,7 +9,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-bazel-build-system-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Bazel Build System Workflow Guide
 
@@ -146,7 +150,7 @@ To get the most out of Claude Code in your Bazel workflow, follow these practica
 
 **Use Version Constraints**: When adding external dependencies, consult with Claude Code about appropriate version constraints. Bazel's lockfile-like behavior means version mismatches can cause subtle build issues.
 
-**Document Your Patterns**: If your project uses custom Bazel rules or macros, document these patterns where Claude Code can reference them. This ensures generated configurations leverage your established abstractions.
+**Document Your Patterns**: If your project uses custom Bazel rules or macros, document these patterns where Claude Code can reference them. This ensures generated configurations use your established abstractions.
 
 ## Conclusion
 

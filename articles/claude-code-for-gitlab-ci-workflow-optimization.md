@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for GitLab CI Workflow Optimization"
 description: "Master GitLab CI workflow optimization with Claude Code. Learn practical strategies to speed up pipelines, reduce costs, and improve deployment reliability."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-gitlab-ci-workflow-optimization/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 
@@ -167,6 +171,6 @@ Start optimizing your GitLab CI workflows today with these concrete steps:
 4. **Add intelligent retry logic** to prevent flaky test failures from blocking deployments
 5. **Set up pipeline metrics** tracking to measure improvement over time
 
-Claude Code transforms pipeline optimization from a manual, time-consuming process into an automated, continuous improvement cycle. By leveraging its understanding of GitLab CI internals and your specific project context, you can achieve significant pipeline speedups without sacrificing reliability or test coverage.
+Claude Code transforms pipeline optimization from a manual, time-consuming process into an automated, continuous improvement cycle. By using its understanding of GitLab CI internals and your specific project context, you can achieve significant pipeline speedups without sacrificing reliability or test coverage.
 
 {% endraw %}

@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Temporal Workflow Orchestration"
 description: "Learn how to orchestrate complex workflows using Claude Code with Temporal. Practical examples, code patterns, and actionable advice for developers building durable applications."
@@ -8,12 +9,15 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-temporal-workflow-orchestration/
 categories: [claude-code, workflow-automation, temporal]
 tags: [claude-code, claude-skills, temporal, workflow-orchestration, durable-execution]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Temporal Workflow Orchestration
 
-Temporal has emerged as one of the most powerful platforms for building durable, reliable workflows that can survive failures, retries, and long-running processes. When combined with Claude Code's AI-assisted development capabilities, developers can dramatically accelerate the creation of complex workflow orchestrations. This guide explores how to leverage Claude Code effectively for Temporal workflow development.
+Temporal has emerged as one of the most powerful platforms for building durable, reliable workflows that can survive failures, retries, and long-running processes. When combined with Claude Code's AI-assisted development capabilities, developers can dramatically accelerate the creation of complex workflow orchestrations. This guide explores how to use Claude Code effectively for Temporal workflow development.
 
 ## Understanding Temporal's Programming Model
 
@@ -219,7 +223,7 @@ To get the most out of Claude Code when working with Temporal, follow these prac
 
 **Iterative Development**: Start with simple workflows and gradually add complexity. Claude Code excels at helping you understand each component before combining them.
 
-**Use Type Hints**: Python users should leverage type hints extensively. Claude Code uses these to provide better suggestions and catch potential errors before runtime.
+**Use Type Hints**: Python users should use type hints extensively. Claude Code uses these to provide better suggestions and catch potential errors before runtime.
 
 **Test Activities Independently**: Before testing full workflows, ensure each activity works correctly in isolation. Claude Code can help you write unit tests for individual activities.
 
@@ -227,5 +231,5 @@ To get the most out of Claude Code when working with Temporal, follow these prac
 
 Claude Code significantly accelerates Temporal workflow development by handling boilerplate generation, explaining complex patterns, and assisting with debugging. The combination of AI-assisted development with Temporal's durable execution model enables developers to build more reliable, maintainable workflow applications faster than ever.
 
-Whether you're implementing simple task queues or complex distributed transaction patterns, Claude Code serves as an intelligent partner throughout the development lifecycle. Start small, iterate frequently, and leverage Claude Code's capabilities to handle the complexity that comes with sophisticated workflow orchestration.
+Whether you're implementing simple task queues or complex distributed transaction patterns, Claude Code serves as an intelligent partner throughout the development lifecycle. Start small, iterate frequently, and use Claude Code's capabilities to handle the complexity that comes with sophisticated workflow orchestration.
 {% endraw %}

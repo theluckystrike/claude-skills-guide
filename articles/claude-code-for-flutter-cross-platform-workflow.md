@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Flutter Cross-Platform Workflow"
 description: "Master the art of using Claude Code to streamline your Flutter cross-platform development workflow. Learn practical patterns, code generation techniques, and automation strategies."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-flutter-cross-platform-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Flutter Cross-Platform Workflow
@@ -36,7 +40,7 @@ This skill gives Claude context about your Flutter expertise level and makes it 
 
 ## Automating Platform-Specific Code Generation
 
-One of Claude Code's strongest capabilities is generating code based on your specifications. For Flutter cross-platform development, you can leverage this to reduce boilerplate significantly.
+One of Claude Code's strongest capabilities is generating code based on your specifications. For Flutter cross-platform development, you can use this to reduce boilerplate significantly.
 
 ### Generating Platform Channels
 
