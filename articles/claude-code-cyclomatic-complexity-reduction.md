@@ -146,7 +146,7 @@ def save_user(user):
     return 'Saved'
 ```
 
-## Leveraging Claude Skills for Complexity Reduction
+## Using Claude Skills for Complexity Reduction
 
 Claude's ecosystem includes skills designed to help with code quality and refactoring. The **tdd skill** guides you through test-driven development, ensuring you write tests before refactoring—this safety net catches regressions when you simplify complex functions.
 

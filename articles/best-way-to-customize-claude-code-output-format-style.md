@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Best Way to Customize Claude Code Output Format Style"
 description: "Customize Claude Code output format for consistent, professional responses. Configure CLAUDE.md, skill metadata, and prompt patterns."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /best-way-to-customize-claude-code-output-format-style/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Best Way to Customize Claude Code Output Format Style

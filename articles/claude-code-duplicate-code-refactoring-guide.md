@@ -13,7 +13,7 @@ permalink: /claude-code-duplicate-code-refactoring-guide/
 
 # Claude Code Duplicate Code Refactoring Guide
 
-Duplicate code is one of the most common code smells that quietly undermines software maintainability. When the same logic appears in multiple places, you create maintenance nightmares: bug fixes require identical changes in several locations, and developers spend time understanding which version is the "correct" one. This guide shows you how to leverage Claude Code and its skill ecosystem to identify, analyze, and eliminate duplicate code systematically.
+Duplicate code is one of the most common code smells that quietly undermines software maintainability. When the same logic appears in multiple places, you create maintenance nightmares: bug fixes require identical changes in several locations, and developers spend time understanding which version is the "correct" one. This guide shows you how to use Claude Code and its skill ecosystem to identify, analyze, and eliminate duplicate code systematically.
 
 ## Understanding Duplicate Code Patterns
 
@@ -177,7 +177,7 @@ The **xlsx** skill can generate tracking spreadsheets:
 
 ## Conclusion
 
-Duplicate code doesn't have to be a maintenance burden. By leveraging Claude Code's skill ecosystem—combining detection capabilities with systematic refactoring—you can progressively improve code quality. The key is building detection into your workflow, refactoring systematically, and documenting decisions for future maintainers.
+Duplicate code doesn't have to be a maintenance burden. By using Claude Code's skill ecosystem—combining detection capabilities with systematic refactoring—you can progressively improve code quality. The key is building detection into your workflow, refactoring systematically, and documenting decisions for future maintainers.
 
 Start with one duplicated function today. Extract it, test it, and notice how much easier subsequent changes become. That's the compounding benefit of eliminating duplicate code: each refactoring makes the next one simpler.
 

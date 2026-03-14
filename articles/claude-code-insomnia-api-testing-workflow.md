@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Insomnia API Testing Workflow"
 description: "Learn how to integrate Claude Code with Insomnia for efficient API testing workflows. Build automated testing pipelines using Claude skills and the."
 date: 2026-03-14
 categories: [tutorials]
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-insomnia-api-testing-workflow/
+reviewed: true
+score: 7
 categories: [guides]
-tags: [claude-code, insomnia, api-testing, workflow, automation]
+tags: [claude-code, insomnia, api-testing, workflow, automation, claude-skills]
 permalink: /claude-code-insomnia-api-testing-workflow/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Insomnia API Testing Workflow
 
@@ -70,7 +76,7 @@ This skill uses `WebFetch` to retrieve endpoints directly when needed, `Bash` to
 
 ## Building the Testing Workflow
 
-The workflow consists of three phases: setup, execution, and validation. Each phase leverages Claude's strengths alongside Insomnia's capabilities.
+The workflow consists of three phases: setup, execution, and validation. Each phase uses Claude's strengths alongside Insomnia's capabilities.
 
 ### Phase 1: Test Case Generation
 

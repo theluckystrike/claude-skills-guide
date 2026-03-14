@@ -79,10 +79,10 @@ Pro users gain access to premium Claude skills that dramatically boost productiv
 - **artifacts-builder** — Complex multi-component UI development
 
 ```bash
-# Pro users can invoke premium skills directly
-claude --skill tdd generate --coverage 90%
-claude --skill pdf create-invoice --template monthly
-claude --skill frontend-design build-dashboard --framework react
+# Pro users can invoke skills directly in a session
+/tdd generate tests with 90% coverage target
+/pdf create-invoice --template monthly
+/frontend-design build-dashboard --framework react
 ```
 
 ### Team Collaboration Features
@@ -117,9 +117,9 @@ When coding becomes your primary work, the Pro plan pays for itself through time
 
 ```bash
 # Pro tier workflow - deeper analysis
-claude --pro analyze full-stack-vulnerability
-claude --pro suggest architectural-changes --scope entire-backend
-claude --pro generate integration-tests --coverage 95%
+claude "analyze full-stack-vulnerability"
+claude "suggest architectural changes for the entire backend"
+claude "generate integration tests with 95% coverage"
 ```
 
 ### Scenario 3: Team Lead or Engineering Manager

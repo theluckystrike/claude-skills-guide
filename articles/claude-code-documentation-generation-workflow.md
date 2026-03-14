@@ -29,17 +29,17 @@ Before starting the workflow, you need Claude Code installed and a few skills lo
 - **supermemory**: Maintains context across sessions so documentation decisions persist
 - **frontend-design**: Useful when generating UI component documentation
 
-You can install these skills through the Claude Skills marketplace or load them directly in your project. Once installed, they activate automatically when documentation tasks are detected.
+Skills are `.md` files in `~/.claude/skills/`. Built-in skills like `pdf`, `docx`, and `supermemory` are pre-installed. To add a community skill, copy its `.md` file to that directory.
 
-A typical skill installation looks like this:
+A typical skill setup looks like this:
 
+```bash
+cp pdf.md ~/.claude/skills/pdf.md
+cp docx.md ~/.claude/skills/docx.md
+cp supermemory.md ~/.claude/skills/supermemory.md
 ```
-claude skill install pdf
-claude skill install docx
-claude skill install supermemory
-```
 
-After installation, verify each skill loads correctly by running `claude skill list` in your terminal.
+After adding skills, start a new session and invoke them with `/skill-name`.
 
 ## Step 1: Define Documentation Scope
 

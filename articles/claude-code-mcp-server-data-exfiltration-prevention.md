@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code MCP Server Data Exfiltration Prevention"
 description: "Secure your Claude Code MCP servers against data exfiltration. Practical patterns for developers building skills with external tool integrations."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-mcp-server-data-exfiltration-prevention/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code MCP Server Data Exfiltration Prevention
 

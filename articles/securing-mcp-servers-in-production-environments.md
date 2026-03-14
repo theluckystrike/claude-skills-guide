@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Securing MCP Servers in Production Environments"
 description: "A practical guide to hardening your Model Context Protocol servers against common vulnerabilities and attack vectors."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /securing-mcp-servers-in-production-environments/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 Model Context Protocol (MCP) servers have become essential infrastructure for AI-powered workflows, enabling Claude and similar assistants to interact with external tools, databases, and services. However, exposing these servers in production environments introduces security considerations that many developers overlook. This guide covers practical strategies for securing your MCP servers against common threats.
 

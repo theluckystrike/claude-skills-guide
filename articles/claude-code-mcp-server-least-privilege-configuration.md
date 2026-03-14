@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code MCP Server Least Privilege Configuration"
 description: "Learn how to configure least privilege principles for MCP servers in Claude Code. Practical examples and security best practices for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-mcp-server-least-privilege-configuration/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 The Model Context Protocol (MCP) powers Claude Code's ability to connect with external tools and services. When configuring MCP servers, applying the principle of least privilege significantly reduces your attack surface and prevents unintended data exposure. This guide shows you how to implement least privilege configurations that keep your development environment secure without sacrificing functionality.
 

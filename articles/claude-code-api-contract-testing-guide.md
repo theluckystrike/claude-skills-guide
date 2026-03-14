@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code API Contract Testing Guide"
 description: "Learn how to implement API contract testing using Claude Code skills. Practical examples for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-api-contract-testing-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 API contract testing ensures that services communicate reliably without integration failures. When working with microservices or external API integrations, contract testing validates that the interface between providers and consumers remains consistent. Claude Code offers several skills that streamline this workflow, making it accessible for developers across different experience levels.
