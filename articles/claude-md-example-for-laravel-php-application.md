@@ -297,4 +297,11 @@ This project-specific file works alongside the general Laravel skill, giving you
 
 Creating a Claude MD file for your Laravel PHP application significantly improves your development workflow. By defining your conventions, preferred packages, and architectural patterns, Claude generates code that matches your team's standards from the start. Combine this with skills like **tdd** for testing and **supermemory** for context retention, and you have a powerful development setup for Laravel projects.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

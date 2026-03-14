@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude md for Internationalization i18n Setup"
-description: "Set up Claude Code for internationalization workflows. Automate translation extraction, manage locale files, and integrate i18n into your development pipeline."
+description: "Set up Claude Code for internationalization workflows. Automate translation extraction, manage locale files, and integrate i18n into your development."
 date: 2026-03-14
 author: theluckystrike
 categories: [guides]
@@ -197,5 +197,12 @@ As your project grows, consider these advanced patterns:
 Start with a minimal i18n skill and expand it as your needs grow. The key is automation—every task you perform manually on translations is a candidate for skill-ification.
 
 Explore related skills that complement internationalization: `frontend-design` for UI localization, `pdf` for translation documentation, and `supermemory` to remember translation context across sessions.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

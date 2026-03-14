@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Using Claude Code for Polyglot Multi-Language Projects"
-description: "A practical guide to managing polyglot multi-language codebases with Claude Code and Claude.md files. Learn how to configure Claude for Python, JavaScript, Rust, Go, and more."
+description: "A practical guide to managing polyglot multi-language codebases with Claude Code and Claude.md files. Learn how to configure Claude for Python."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-md-for-polyglot-multi-language-projects/
+categories: [guides]
 ---
 
 Working across multiple programming languages in a single project can feel overwhelming. Whether you're maintaining a monorepo with services in Python, JavaScript, Go, and Rust, or integrating third-party APIs written in different languages, Claude Code can handle this complexity through well-structured Claude.md files.
@@ -156,5 +157,12 @@ Keep your Claude.md focused and practical. Update it when you add new languages 
 The configuration should reduce context-switching friction. When developers move between Python backend work and TypeScript frontend tasks, Claude should adapt seamlessly. Your Claude.md makes this possible through explicit language context and convention definitions.
 
 Effective polyglot configuration means Claude spends less time guessing your tooling preferences and more time writing code that fits your project standards.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
