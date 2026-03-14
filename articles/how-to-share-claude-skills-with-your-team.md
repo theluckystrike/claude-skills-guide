@@ -56,7 +56,6 @@ Every skill in the shared repo should have consistent front matter:
 ---
 name: api-docs
 description: "Generate API documentation following our OpenAPI 3.1 conventions"
-author: "backend-team"
 ---
 
 # API Docs Skill
@@ -64,7 +63,7 @@ author: "backend-team"
 This skill generates API documentation in our standard format...
 ```
 
-The `version` field matters — when you update a skill, bump the version so developers know they have an outdated copy.
+Keep your skill descriptions accurate — when you update a skill, update the description so developers know what the skill does and what changed.
 
 ## Automating Distribution
 

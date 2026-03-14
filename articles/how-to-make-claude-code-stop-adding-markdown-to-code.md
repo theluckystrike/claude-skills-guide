@@ -62,9 +62,8 @@ Create a skill file (e.g., `skills/plain-code.md`) with the following structure:
 
 ```markdown
 ---
-name: Plain Code Output
+name: plain-code-output
 description: Output code without markdown formatting
-trigger: code
 ---
 
 # Plain Code Output Skill

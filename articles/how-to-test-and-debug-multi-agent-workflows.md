@@ -65,7 +65,7 @@ Before testing the full workflow, verify each agent works correctly in isolation
 
 ```bash
 # Test a single agent's behavior
-claude -p "Test the code-review agent with this PR: [PR_URL]"
+claude --print "Test the code-review agent with this PR: [PR_URL]"
 ```
 
 Compare the isolated behavior against expected outputs. If an agent fails in isolation, you know the issue is within that agent rather than in the inter-agent communication.

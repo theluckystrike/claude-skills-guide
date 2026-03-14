@@ -87,31 +87,22 @@ def process_with_context(context):
 Claude Code's skill system provides another powerful mechanism for state sharing. Skills can encapsulate shared logic and maintain state across invocations.
 
 ```yaml
-# Skill definition with state management
+---
 name: multi-agent-coordinator
 description: Coordinates state between AI agents
-state:
-  workflow_status: {}
-  shared_variables: {}
-handlers:
-  - name: initialize_workflow
-    action: |
-      # Initialize shared state
-      workflow_id = generate_id()
-      state["workflow_status"][workflow_id] = "initialized"
-      return {"workflow_id": workflow_id}
-  
-  - name: pass_to_agent
-    inputs: [workflow_id, agent_name, task]
-    action: |
-      # Prepare state for next agent
-      task_context = {
-        "workflow_id": workflow_id,
-        "previous_agents": state["workflow_status"].get(workflow_id, []),
-        "task": task
-      }
-      state["workflow_status"][workflow_id].append(agent_name)
-      return task_context
+---
+```
+
+In the skill body (the markdown content after the front matter), describe how the coordinator should manage state:
+
+```markdown
+# Multi-Agent Coordinator
+
+When coordinating agents:
+1. Generate a unique workflow_id for each run
+2. Track which agents have processed each workflow
+3. Pass context objects to each agent that include: workflow_id, previous agent outputs, and current task
+4. Write intermediate state to a shared JSON file so agents can resume from checkpoints
 ```
 
 ### 4. Environment Variables for Configuration State

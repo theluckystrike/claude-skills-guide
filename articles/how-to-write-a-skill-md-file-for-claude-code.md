@@ -29,8 +29,6 @@ Every skill file needs front matter at the top. This section uses YAML syntax to
 ---
 name: pdf-helper
 description: "Extract text and tables from PDF documents"
-category: document-processing
-tags: [pdf, extraction, document]
 ---
 ```
 
@@ -46,8 +44,6 @@ Consider a practical example. Suppose you want a skill that converts Markdown to
 ---
 name: markdown-formatter
 description: "Convert Markdown to clean HTML or plain text"
-category: text-processing
-tags: [markdown, formatting, conversion]
 ---
 
 # Markdown Formatter Skill
@@ -120,7 +116,7 @@ Honest documentation builds trust with users and helps them use your skill effec
 
 ## Sharing and Maintaining Skills
 
-Once your skill works reliably, share it with the community or keep it in your personal skill library. Version control matters for skills, just like for code. Update the version number when making changes, and maintain a changelog for significant updates.
+Once your skill works reliably, share it with the community or keep it in your personal skill library. Version control matters for skills, just like for code. Use git to track changes and maintain a changelog for significant updates.
 
 Skills like `docx` and `pptx` demonstrate active maintenance. They receive updates to support new file formats and features. Your skills benefit from the same attention and care. When you're ready to contribute, [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) walks through the full submission process.
 

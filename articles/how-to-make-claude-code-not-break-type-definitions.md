@@ -42,14 +42,13 @@ This encourages Claude Code to consider type implications across files.
 
 ### 2. Leverage Claude Code's Edit Modes
 
-Claude Code offers different edit modes through its skills. When working with typed code, prefer the `Edit` skill over `Bash` operations for type-sensitive changes:
+Claude Code offers different capabilities through its skills. When working with typed code, prefer using the `Edit` tool directly over `Bash` operations for type-sensitive changes. Instruct Claude to:
 
-```bash
-claude edit --types-only    # Preview type changes without applying
-claude edit --check        # Verify type consistency after changes
-```
+- Preview proposed changes in a diff before applying them
+- Verify that type definitions remain consistent after edits
+- Describe what types will be affected before making changes
 
-These modes let you review proposed modifications before they affect your type definitions.
+These approaches let you review proposed modifications before they affect your type definitions.
 
 ### 3. Implement Pre-Change Type Snapshots
 
@@ -83,14 +82,13 @@ This prevents Claude Code from inventing new types or loosening existing constra
 
 ### 5. Leverage Skills for Type-Safe Refactoring
 
-Claude Code's skill system includes specialized handlers for different languages. For TypeScript and typed JavaScript:
+Claude Code's skill system includes specialized behaviors for different languages. For TypeScript and typed JavaScript, create a skill in `.claude/` that instructs Claude to:
 
-```bash
-# Use the typescript skill for type-aware operations
-claude /skill typescript
-```
+- Always check TypeScript interfaces before modifying dependent code
+- Run `tsc --noEmit` after making changes to verify type safety
+- Prefer extending types over modifying existing interfaces
 
-This activates type-checking awareness during the editing session.
+Invoke the skill by placing the `.md` file in `.claude/` and referencing it with `/skill-name` in your session.
 
 ## Practical Examples
 
@@ -157,7 +155,7 @@ Keep all library types untouched.
 
 Claude Code includes features that help prevent unintended type breaks:
 
-- **Preview mode**: Review changes before applying with `claude edit --preview`
+- **Preview mode**: Ask Claude to describe all changes before applying them, so you can review the impact on type definitions
 - **Targeted edits**: Focus on specific files to avoid cascade effects
 - **Context awareness**: Provide full context including type files when making changes
 

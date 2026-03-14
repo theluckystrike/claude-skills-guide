@@ -122,9 +122,19 @@ This skill preserves formulas and formatting, so your existing spreadsheets rema
 Claude Code integrates with your development environment through CLI commands and shell scripts. Senior developers can chain operations across skills:
 
 ```
-# Generate API docs, run tests, create deployment bundle
-/pdf generate api-docs.yaml && /tdd run full-suite && \
-/terraform plan -out=tfplan
+/pdf
+```
+
+Then in a follow-up prompt, generate tests:
+
+```
+/tdd
+```
+
+And review infrastructure changes:
+
+```
+/terraform
 ```
 
 For continuous integration, you can invoke Claude Code from GitHub Actions or GitLab CI to automate code review, generate documentation, or run specialized checks during pull request validation.

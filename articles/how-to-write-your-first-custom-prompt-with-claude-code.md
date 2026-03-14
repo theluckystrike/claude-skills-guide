@@ -31,8 +31,6 @@ A skill file lives in your project's `.claude` directory or a central skills fol
 ---
 name: python-developer
 description: "Guidelines for Python development with focus on clean code and testing"
-category: development
-tags: [python, coding-standards, best-practices]
 ---
 
 # Python Development Guidelines
@@ -60,14 +58,6 @@ Consider adding triggers to your prompts. Triggers are keywords or phrases that 
 ---
 name: frontend-design
 description: "Frontend development guidelines for React and modern CSS"
-category: development
-tags: [frontend, react, css, design]
-trigger:
-  - react
-  - component
-  - css
-  - styling
-  - tailwind
 ---
 
 # Frontend Development Guidelines
@@ -93,13 +83,6 @@ Here's a more sophisticated prompt that combines multiple techniques:
 ---
 name: tdd-workflow
 description: "Test-driven development workflow with pytest"
-category: development
-tags: [testing, tdd, pytest, quality]
-trigger:
-  - test
-  - testing
-  - tdd
-  - unittest
 ---
 
 # Test-Driven Development Workflow
@@ -132,11 +115,6 @@ You can also create meta-skills that describe how to combine other skills. This 
 ---
 name: project-starter
 description: "Standard setup for new Python web projects"
-category: workflow
-trigger:
-  - new project
-  - initialize
-  - setup
 ---
 
 # New Project Setup Workflow

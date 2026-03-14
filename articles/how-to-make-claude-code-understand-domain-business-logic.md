@@ -35,7 +35,6 @@ A domain skill typically includes:
 ---
 name: ecommerce-orders
 description: "Handle e-commerce order processing with business rules"
-tools: [bash, read_file, write_file]
 ---
 
 # Order Processing Domain

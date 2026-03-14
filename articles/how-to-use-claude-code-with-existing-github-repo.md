@@ -61,13 +61,13 @@ cd your-repo
 
 ## Initializing Claude Code in an Existing Project
 
-Initialize Claude Code within your existing repository:
+Start Claude Code within your existing repository by running it from the project directory:
 
 ```bash
-claude --init
+claude
 ```
 
-Claude Code will scan your project structure, detect the language and framework, and create a local configuration. This initialization process reads your existing files to understand the project context, including:
+Claude Code will read your project structure from the current directory. It uses your existing files to understand the project context, including:
 
 - Package managers and dependencies (npm, pip, cargo, etc.)
 - Framework configuration (React, Next.js, Django, Express, etc.)

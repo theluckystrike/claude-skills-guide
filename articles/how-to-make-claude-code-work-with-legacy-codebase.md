@@ -64,14 +64,23 @@ Create a dedicated Claude skill for your legacy project that captures its unique
 A well-structured legacy codebase skill might include:
 
 ```yaml
+---
 name: legacy-project-assistant
 description: Assists with the Acme Corp legacy Rails application
-patterns:
-  - "Never use React components - this is server-side rendered only"
-  - "Follow the service-object pattern for business logic"
-  - "Database queries must use raw SQL, not ORMs"
-  - "Use Paperclip for file attachments, not Active Storage"
-  - "All controllers must inherit from ApplicationController"
+---
+```
+
+Place this in `.claude/legacy-project-assistant.md` and add conventions in the skill body:
+
+```markdown
+# Legacy Project Assistant
+
+When working in this codebase:
+- Never use React components - this is server-side rendered only
+- Follow the service-object pattern for business logic
+- Database queries must use raw SQL, not ORMs
+- Use Paperclip for file attachments, not Active Storage
+- All controllers must inherit from ApplicationController
 ```
 
 The supermemory skill proves particularly valuable for legacy projects. It helps Claude maintain context about the codebase's history, known issues, and architectural decisions across different sessions. This prevents repeated questions about why certain patterns exist.

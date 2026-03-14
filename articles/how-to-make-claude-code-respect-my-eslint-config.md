@@ -64,11 +64,6 @@ Claude Code's skill system lets you define custom behaviors that include linting
 ---
 name: eslint-aware-code
 description: Write code that respects project ESLint configuration
-tools:
-  - Read
-  - Write
-  - Bash
-  - Edit
 ---
 
 You are a code generator that always respects the project's ESLint configuration.

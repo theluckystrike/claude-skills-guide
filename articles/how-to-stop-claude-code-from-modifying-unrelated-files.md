@@ -109,15 +109,19 @@ If you're using Claude Code skills for specific workflows, you can configure the
 ---
 name: api-refactor
 description: Safely refactor API endpoints
-allowed_directories:
-  - src/api
-  - src/controllers
-  - tests/api
-restricted: true
 ---
+
+# API Refactor Skill
+
+Only make changes within these directories:
+- src/api
+- src/controllers
+- tests/api
+
+Do not modify any files outside these paths.
 ```
 
-This ensures the skill can only make changes within the specified paths, preventing drift into unrelated areas of your codebase.
+This ensures the skill instructs Claude to only make changes within the specified paths, preventing drift into unrelated areas of your codebase.
 
 ## Technique 7: Break Down Complex Tasks
 

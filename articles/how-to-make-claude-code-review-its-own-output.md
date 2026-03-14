@@ -93,8 +93,8 @@ MAX_ITERATIONS=3
 
 for i in $(seq 1 $MAX_ITERATIONS); do
   echo "=== Iteration $i ==="
-  RESPONSE=$(claude -p "$PROMPT")
-  REVIEW=$(claude -p "Review this code for bugs, security issues, 
+  RESPONSE=$(claude --print "$PROMPT")
+  REVIEW=$(claude --print "Review this code for bugs, security issues, 
     and code quality. If issues exist, provide specific fixes.
     Code to review:
     $RESPONSE")
