@@ -5,6 +5,7 @@ description: "Automate your Git workflow with Claude Code and custom hooks. Run 
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-for-git-hooks-automation-workflow/
+categories: [guides]
 ---
 
 # Claude Code for Git Hooks Automation Workflow
@@ -192,5 +193,12 @@ $(git log -1 --format=%B)"
 Git hooks combined with Claude Code create a powerful automation layer that catches issues before they reach your team, maintains consistent code quality, and accelerates your development workflow. Start with a simple pre-commit hook and progressively add more sophisticated automation as your needs grow.
 
 The key is to keep hooks fast and reliable—CI systems handle the comprehensive checks, while local hooks provide quick feedback loops that make developers more productive.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

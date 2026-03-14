@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Using Claude Code as a Backend Engine for Dev Tools"
-description: "Learn how to leverage Claude Code's CLI, skills system, and MCP integration to build powerful development tools that automate workflows, analyze codebases, and enhance productivity."
+description: "Learn how to leverage Claude Code's CLI, skills system, and MCP integration to build powerful development tools that automate workflows, analyze."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, dev-tools, automation, mcp, backend]
@@ -183,3 +183,10 @@ Claude Code's combination of AI reasoning, tool execution, and extensibility mak
 
 Start small—create a simple skill for one specific task—and gradually expand as you learn what Claude Code can do. The possibilities are vast, and the productivity gains can be significant.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

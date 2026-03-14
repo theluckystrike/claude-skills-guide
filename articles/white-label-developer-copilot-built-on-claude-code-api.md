@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Building a White Label Developer Copilot with Claude Code API"
+title: "Building a White Label Developer Copilot with Claude."
 description: "Learn how to build a customizable developer copilot using Claude Code API, with practical examples and implementation guidance."
 date: 2026-03-14
 author: theluckystrike
 permalink: /white-label-developer-copilot-built-on-claude-code-api/
+categories: [guides]
 ---
 
 {% raw %}
@@ -142,3 +143,10 @@ Building a white-label developer copilot with Claude Code API offers organizatio
 
 The key to success lies in thoughtful implementation that considers your team's specific workflows, investing in prompt engineering to capture your organization's best practices, and building proper integrations with your existing toolchain. With these elements in place, a Claude-powered copilot becomes an invaluable asset for any development organization.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
