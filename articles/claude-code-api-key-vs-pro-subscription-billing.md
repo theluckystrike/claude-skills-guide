@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code API Key vs Pro Subscription: Understanding Your Billing Options"
-description: "A practical guide to understanding Claude Code billing: API key pay-per-use vs Pro subscription. Learn which option fits your workflow with real cost examples."
+title: "Claude Code API Key vs Pro Subscription: Understanding."
+description: "A practical guide to understanding Claude Code billing: API key pay-per-use vs Pro subscription. Learn which option fits your workflow with real cost."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-key-vs-pro-subscription-billing/
@@ -107,3 +107,10 @@ Many developers start with API key billing to understand their usage, then switc
 The good news is that Claude Code's skill system works identically regardless of your billing model. Whether you pay per token or subscribe monthly, you can create custom skills, use community skills from GitHub, and access the full range of Claude Code features. Your billing choice affects your wallet, not your capabilities.
 
 Start with what makes sense for your current usage, and reassess as your workflow evolves. The most important thing is getting Claude Code into your development process—the billing details can be sorted out as you discover how invaluable AI-assisted coding becomes.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
