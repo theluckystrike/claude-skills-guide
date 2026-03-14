@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code GitHub Actions Secrets Management"
-description: "Learn how to securely manage secrets, API keys, and credentials in GitHub Actions workflows with Claude Code. Practical patterns for environment variables and protected secrets."
+description: "Learn how to securely manage secrets, API keys, and credentials in GitHub Actions workflows with Claude Code. Practical patterns for environment."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, github-actions, security]
@@ -181,6 +181,13 @@ For Claude Code specifically, ensure your CLAUDE.md or skill configurations don'
 ## Conclusion
 
 Proper secrets management in GitHub Actions workflows enables secure automation without sacrificing the productivity benefits Claude Code provides. By leveraging GitHub's built-in encryption, environment-specific secrets, and organizational secret management, you can build robust CI/CD pipelines that keep credentials protected. Remember to rotate secrets regularly, audit access patterns, and follow the principle of least privilege when granting secret access to workflows.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

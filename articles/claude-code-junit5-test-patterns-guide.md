@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code JUnit5 Test Patterns Guide"
-description: "Master JUnit 5 test patterns with Claude Code. Learn practical testing strategies, parameterized tests, and advanced assertions for robust Java applications."
+description: "Master JUnit 5 test patterns with Claude Code. Learn practical testing strategies, parameterized tests, and advanced assertions for robust Java."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, junit5, testing, java, tdd, test-patterns]
@@ -203,5 +203,12 @@ When using Claude Code for test-driven development, combine these patterns with 
 For frontend testing scenarios, the frontend-design skill complements JUnit 5 by helping you understand how backend services interact with user interfaces. The key is treating tests as first-class citizens in your codebase, not an afterthought.
 
 Writing solid tests takes practice, but JUnit 5's modern features make the process more enjoyable than ever. These patterns provide a foundation you can build upon as your testing skills mature.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

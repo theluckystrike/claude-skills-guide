@@ -2,10 +2,11 @@
 
 layout: default
 title: "Claude Code Pact Contract Testing Guide"
-description: "Learn how to integrate Pact contract testing into your Claude Code workflow. A practical guide for developers building reliable microservices with AI assistance."
+description: "Learn how to integrate Pact contract testing into your Claude Code workflow. A practical guide for developers building reliable microservices with AI."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-pact-contract-testing-guide/
+categories: [guides]
 ---
 
 # Claude Code Pact Contract Testing Guide
@@ -204,5 +205,12 @@ jobs:
 Contract testing with Pact and Claude Code creates a robust safety net for microservices development. By defining expectations upfront, verifying continuously, and tracking dependencies across services, you can evolve your system with confidence. The combination of AI-assisted development and contract testing ensures that as your services grow more complex, their integrations remain reliable and maintainable.
 
 Claude Code, paired with skills like tdd and supermemory, becomes an intelligent partner in managing these contracts across your architecture. Start with consumer contracts, verify your providers, and build from there.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

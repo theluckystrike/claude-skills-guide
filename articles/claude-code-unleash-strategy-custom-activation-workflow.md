@@ -5,6 +5,7 @@ description: "Master the art of creating custom activation workflows in Claude C
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-unleash-strategy-custom-activation-workflow/
+categories: [guides]
 ---
 
 # Claude Code Unleash Strategy: Custom Activation Workflow
@@ -191,3 +192,10 @@ Custom activation workflows transform Claude Code from a reactive assistant into
 Start with simple workflows and gradually add complexity as you become more comfortable with the system. The key is to identify repetitive patterns in your development process and teach Claude Code to handle them automatically. Your future self will thank you for the time saved and the consistency gained.
 
 Remember: the most powerful activation workflows are those that fade into the background—quietly ensuring your project maintains high standards without requiring constant manual intervention.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -2,10 +2,11 @@
 
 layout: default
 title: "Claude Code Consultant Codebase Context Switching Workflow"
-description: "Master the art of efficient codebase context switching as a Claude Code consultant. Learn workflows, skills, and techniques for seamless transitions between projects."
+description: "Master the art of efficient codebase context switching as a Claude Code consultant. Learn workflows, skills, and techniques for seamless transitions."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-consultant-codebase-context-switching-workflow/
+categories: [guides]
 ---
 
 # Claude Code Consultant Codebase Context Switching Workflow
@@ -232,3 +233,10 @@ Effective codebase context switching as a Claude Code consultant relies on three
 3. **Ritualized transitions** with entry and exit protocols that preserve context between sessions
 
 Implement this workflow, and you'll find client transitions become seamless—letting you maintain multiple engagements without the mental overhead of constantly recalibrating your approach. Claude Code becomes not just a coding assistant but a context-aware partner that understands exactly which project you're working on and how that project expects to be handled.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
