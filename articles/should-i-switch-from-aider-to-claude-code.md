@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Should I Switch from Aider to Claude Code? A Practical Guide"
 description: "Thinking about switching from Aider to Claude Code? This comprehensive guide covers the key differences, Claude Code's unique skills system, and."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /should-i-switch-from-aider-to-claude-code/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Should I Switch from Aider to Claude Code? A Practical Guide
 
