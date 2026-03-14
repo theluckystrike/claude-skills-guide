@@ -150,7 +150,7 @@ Expand to all teams:
 
 - Integrate with existing code review workflows
 - Use supermemory to maintain project knowledge
-- Leverage documentation skills for bilingual requirements
+- Use documentation skills for bilingual requirements
 
 ## Common Challenges and Solutions
 
@@ -208,7 +208,7 @@ for complex concepts."
 
 ## Conclusion
 
-Successfully integrating Claude Code into Japanese developer teams requires respecting established workflows while leveraging automation where it adds value. The key is starting with documentation and quality assurance skills, then expanding to other areas as teams become comfortable with the technology. By following these integration tips, your team can achieve the productivity benefits of AI-assisted development while maintaining the quality standards and collaborative culture that define Japanese software development.
+Successfully integrating Claude Code into Japanese developer teams requires respecting established workflows while using automation where it adds value. The key is starting with documentation and quality assurance skills, then expanding to other areas as teams become comfortable with the technology. By following these integration tips, your team can achieve the productivity benefits of AI-assisted development while maintaining the quality standards and collaborative culture that define Japanese software development.
 
 {% endraw %}
 

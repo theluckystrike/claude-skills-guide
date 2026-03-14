@@ -83,10 +83,10 @@ Vous êtes un expert en React qui applique les standards de codage de notre équ
 
 ### Skill Sharing Methods
 
-Share team skills through version control by committing skill files to a shared repository. Team members can then install these skills locally:
+Share team skills through version control by committing skill files to a shared repository. Team members can then add these skills locally by copying the file:
 
 ```bash
-claude skill install ./equipe-react-standards
+cp equipe-react-standards.md ~/.claude/skills/equipe-react-standards.md
 ```
 
 This approach ensures all team members work with the same guidelines and reduces onboarding time for new developers.

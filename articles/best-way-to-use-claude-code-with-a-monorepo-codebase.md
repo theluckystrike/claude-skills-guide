@@ -37,7 +37,7 @@ For a typical monorepo workflow, you'll want a core set of skills always availab
 
 If you're working with multiple languages (common in monorepos), load language-specific skills selectively. Don't load Python skills when you're entirely in a Node.js package.
 
-## Leverage Workspace Context
+## Use Workspace Context
 
 Claude Code automatically detects your working directory, but in a monorepo, you need to be explicit about context. When starting a session, navigate to the specific package directory rather than the repo root. This ensures Claude Code analyzes only the relevant portion of your codebase.
 
@@ -118,7 +118,7 @@ This approach keeps each operation focused while maintaining awareness of the br
 - **Load skills selectively**: Only activate skills relevant to your current task
 - **Create custom skills**: Build monorepo-specific skills that encode your conventions
 - **Scope requests narrowly**: Smaller, targeted requests outperform broad analyses
-- **Leverage cross-package awareness**: Use Claude Code to understand dependencies before making changes
+- **Use cross-package awareness**: Use Claude Code to understand dependencies before making changes
 - **Exclude build artifacts**: Keep analysis focused on source code for speed and relevance
 
 Claude Code transforms monorepo development from overwhelming to manageable. By treating it as a targeted tool rather than a monolithic analyzer, you get the best of both worlds: comprehensive understanding when you need it, focused execution when you don't.
