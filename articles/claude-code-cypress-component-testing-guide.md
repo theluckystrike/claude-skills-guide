@@ -5,7 +5,7 @@ description: "Learn how to use Claude Code for Cypress component testing. Build 
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, cypress, component-testing, testing, tdd, frontend-development]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 8
 permalink: /claude-code-cypress-component-testing-guide/
