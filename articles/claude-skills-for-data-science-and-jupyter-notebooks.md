@@ -3,7 +3,7 @@ layout: default
 title: "Claude Skills for Data Science and Jupyter: 2026 Guide"
 description: "Claude skills for data science and Jupyter: automate data cleaning, generate visualizations, build ML pipelines, and accelerate research workflows."
 date: 2026-03-13
-categories: [skills, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, data-science, jupyter, python, machine-learning]
 author: "Claude Skills Guide"
 reviewed: true
