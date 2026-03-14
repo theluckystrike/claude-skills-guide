@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "AI Assisted Architecture Design Workflow Guide"
 description: "Learn how to use AI tools for architecture design workflows. Practical guide for developers leveraging Claude skills to design scalable systems."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-assisted-architecture-design-workflow-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Assisted Architecture Design Workflow Guide
 
@@ -16,7 +21,7 @@ Software architecture decisions shape the long-term maintainability, scalability
 
 Before touching any diagram or code, gather your requirements in a structured format. AI tools excel at helping you organize and refine requirements into actionable specifications. Create a simple requirements document that captures functional requirements, non-functional requirements, and constraints.
 
-When working with Claude Code, you can leverage the **supermemory** skill to maintain a persistent knowledge base of your project requirements. This becomes invaluable when architecture decisions need to be traced back to specific business needs months later.
+When working with Claude Code, you can use the **supermemory** skill to maintain a persistent knowledge base of your project requirements. This becomes invaluable when architecture decisions need to be traced back to specific business needs months later.
 
 ```markdown
 ## Project Requirements
@@ -134,7 +139,7 @@ The **docx** skill can help generate implementation playbooks and technical spec
 
 ## Conclusion
 
-AI-assisted architecture design combines human judgment with AI's ability to process patterns, validate decisions, and maintain documentation. By following a structured workflow—from requirements analysis through implementation planning—you leverage AI as a thinking partner rather than a passive tool.
+AI-assisted architecture design combines human judgment with AI's ability to process patterns, validate decisions, and maintain documentation. By following a structured workflow—from requirements analysis through implementation planning—you use AI as a thinking partner rather than a passive tool.
 
 The key is maintaining human oversight while using AI for exploration, documentation, and validation. Claude skills like supermemory for knowledge management, tdd for test-first design, and pdf for documentation generation form a toolkit that supports each phase of the architecture workflow.
 

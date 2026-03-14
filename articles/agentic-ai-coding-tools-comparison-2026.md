@@ -1,13 +1,18 @@
 ---
 
+
 layout: default
 title: "Agentic AI Coding Tools Comparison 2026: A Practical."
 description: "Compare the best agentic AI coding tools of 2026 including Claude Code, Cursor, and others. Learn which tools excel at autonomous code generation."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /agentic-ai-coding-tools-comparison-2026/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Agentic AI Coding Tools Comparison 2026: A Practical Guide for Developers
 

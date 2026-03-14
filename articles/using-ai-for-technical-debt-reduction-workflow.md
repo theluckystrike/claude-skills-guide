@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Using AI for Technical Debt Reduction Workflow"
 description: "A practical workflow for reducing technical debt using AI tools and Claude Code skills. Includes code examples and automation strategies for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /using-ai-for-technical-debt-reduction-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Using AI for Technical Debt Reduction Workflow
 

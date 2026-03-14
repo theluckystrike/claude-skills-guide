@@ -1,16 +1,21 @@
 ---
+
 layout: default
 title: "Using Claude Code to Prepare for Coding Interviews"
 description: "A practical guide for developers using Claude Code and its skill system to prepare for technical coding interviews. Includes examples, workflows, and."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /using-claude-code-to-prepare-for-coding-interviews/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Using Claude Code to Prepare for Coding Interviews
 
-Preparing for coding interviews requires deliberate practice, structured review, and efficient feedback loops. Claude Code offers a powerful skill system that can accelerate your preparation by simulating interview scenarios, generating practice problems, reviewing your solutions, and helping you understand core concepts. This guide shows how to leverage Claude Code effectively for technical interview prep.
+Preparing for coding interviews requires deliberate practice, structured review, and efficient feedback loops. Claude Code offers a powerful skill system that can accelerate your preparation by simulating interview scenarios, generating practice problems, reviewing your solutions, and helping you understand core concepts. This guide shows how to use Claude Code effectively for technical interview prep.
 
 ## Setting Up Your Interview Practice Environment
 

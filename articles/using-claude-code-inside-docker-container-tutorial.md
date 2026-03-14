@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Using Claude Code Inside Docker Container Tutorial"
 description: "A comprehensive guide to running Claude Code within Docker containers for AI-assisted development, CI/CD pipelines, and automated coding workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /using-claude-code-inside-docker-container-tutorial/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Using Claude Code Inside Docker Container Tutorial
@@ -145,7 +150,7 @@ This configuration allows your application container to access Claude Code's out
 
 ## Using Claude Code Skills in Docker
 
-Claude Code's skill system works seamlessly within Docker containers. Skills extend Claude Code's capabilities with specialized knowledge and commands. Install skills inside your container:
+Claude Code's skill system works smoothly within Docker containers. Skills extend Claude Code's capabilities with specialized knowledge and commands. Install skills inside your container:
 
 ```bash
 claude install @claude-skill/github

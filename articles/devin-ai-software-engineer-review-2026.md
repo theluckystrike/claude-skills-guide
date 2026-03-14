@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Devin AI Software Engineer Review 2026: A Practical Look at Autonomous Coding"
 description: "A developer-focused review of Devin AI in 2026. Real examples, limitations, workflow integration, and how it compares to Claude Code and other AI coding assistants."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /devin-ai-software-engineer-review-2026/
+reviewed: true
+score: 7
+categories: [comparisons]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Devin AI Software Engineer Review 2026: A Practical Look at Autonomous Coding
 
