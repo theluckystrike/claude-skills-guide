@@ -16,7 +16,7 @@ GraphQL API development requires careful schema planning, type safety, and thoro
 
 ## Setting Up Your GraphQL Workflow
 
-Before diving into schema design, ensure your Claude environment is configured for API development. The `tdd` skill proves invaluable for test-driven GraphQL development, while the `supermemory` skill helps maintain context across complex schema iterations.
+Before diving into schema design, ensure your Claude environment is configured for API development. The [tdd skill proves invaluable for test-driven GraphQL development](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/), while the `supermemory` skill helps maintain context across complex schema iterations.
 
 Initialize your project structure:
 
@@ -96,7 +96,7 @@ input CreateProjectInput {
 
 ## Schema Validation and Type Checking
 
-GraphQL's type system catches many errors at compile time, but additional validation improves schema quality. The `frontend-design` skill includes accessibility and semantic validation patterns that translate well to API response validation.
+GraphQL's type system catches many errors at compile time, but additional validation improves schema quality. The `frontend-design` skill includes accessibility and semantic validation patterns that translate well to API response validation. For teams focused on [automated testing pipelines with Claude](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/), these validation layers slot naturally into CI workflows.
 
 Create a validation layer using GraphQL schema directives:
 
@@ -147,7 +147,7 @@ const DateTimeScalar = new GraphQLScalarType({
 
 ## Testing GraphQL Resolvers
 
-The `tdd` skill excels at generating comprehensive test coverage. When testing GraphQL resolvers, structure your tests around query paths and edge cases:
+The `tdd` skill excels at generating comprehensive test coverage. When testing GraphQL resolvers, structure your tests around query paths and edge cases. [Best practices for code review automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) apply equally here—systematic resolver testing keeps bugs from slipping into production:
 
 ```javascript
 const { ApolloServer } = require('@apollo/server');
@@ -203,7 +203,7 @@ testResolvers().catch(console.error);
 
 ## Integration Testing with Mock Data
 
-For comprehensive testing, use mock data to simulate various scenarios. The `pdf` skill can generate test documentation, while the `supermemory` skill tracks test coverage across your schema:
+For comprehensive testing, use mock data to simulate various scenarios. The `pdf` skill can generate test documentation, while the `supermemory` skill tracks test coverage across your schema. Developers working with data-heavy schemas may also benefit from [Claude skills for data science and Jupyter notebooks](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/), which offer complementary patterns for structured data validation:
 
 ```javascript
 const { mockUsers, mockProjects, mockTasks } = require('./mocks');
@@ -250,7 +250,7 @@ const resolvers = {
 
 ## Schema Documentation and Evolution
 
-Document your schema using GraphQL's built-in description system. Good documentation prevents miscommunication in team environments:
+Document your schema using GraphQL's built-in description system. Good documentation prevents miscommunication in team environments. The [automated code documentation workflow with Claude skills](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) complements schema documentation by keeping your API references in sync as the codebase evolves:
 
 ```graphql
 """
@@ -316,5 +316,12 @@ const context = ({ req }) => ({
 Claude skills like `tdd`, `supermemory`, and `frontend-design` provide practical assistance throughout the GraphQL development lifecycle. The `tdd` skill ensures testable schema design from the start, while `supermemory` maintains institutional knowledge across team members. By combining these tools with GraphQL's type system and proper testing patterns, you build APIs that are both robust and maintainable.
 
 Start with clear type definitions, validate inputs rigorously, test resolver behavior comprehensively, and document thoroughly. These practices, augmented by Claude's skill system, create a sustainable GraphQL development workflow.
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/)
+- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

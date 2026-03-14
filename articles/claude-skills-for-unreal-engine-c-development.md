@@ -14,9 +14,9 @@ Unreal Engine remains one of the most powerful game development frameworks, and 
 
 ## Why Claude Skills Fit Unreal Development
 
-Unreal Engine projects follow strict naming conventions and module structures. The framework relies heavily on macros like `UFUNCTION()`, `UPROPERTY()`, and `UCLASS()`, creating a learning curve that even experienced C++ developers find challenging. Claude skills can encode these conventions into reusable prompts, ensuring every piece of code follows Epic's coding standards without manual repetition.
+Unreal Engine projects follow strict naming conventions and module structures. The framework relies heavily on macros like `UFUNCTION()`, `UPROPERTY()`, and `UCLASS()`, creating a learning curve that even experienced C++ developers find challenging. Claude skills can encode these conventions into reusable prompts, ensuring every piece of code follows Epic's coding standards without manual repetition. If you are new to creating these reusable definitions, [the skill .md file format specification](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) explains every field and option in detail.
 
-When you invoke a skill like the `tdd` (test-driven development) skill, you can generate test cases for your Actor components before writing implementation code. This approach reduces debugging time significantly since Unreal's hot-reload system, while powerful, still requires careful module management.
+When you invoke a skill like the `tdd` (test-driven development) skill, you can generate test cases for your Actor components before writing implementation code. The [automated testing pipeline guide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) shows how to extend these individual skill invocations into a full CI/CD loop. This approach reduces debugging time significantly since Unreal's hot-reload system, while powerful, still requires careful module management.
 
 ## Core Skills for Unreal C++ Workflows
 
@@ -88,13 +88,13 @@ This skill ensures you follow Unreal's testing conventions, including the correc
 
 ### Project Organization with supermemory
 
-Managing complex Unreal projects requires tracking numerous interdependencies. The `supermemory` skill helps maintain a knowledge base of your project's architecture, module dependencies, and design decisions. You can store references to custom GameplayAbility classes, their interaction patterns, and any custom gameplay tags your team has defined.
+Managing complex Unreal projects requires tracking numerous interdependencies. The `supermemory` skill helps maintain a knowledge base of your project's architecture, module dependencies, and design decisions. For a deeper look at how persistent memory works inside Claude Code, [the SuperMemory skill guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) covers storage mechanisms and cross-session recall. You can store references to custom GameplayAbility classes, their interaction patterns, and any custom gameplay tags your team has defined.
 
 When working across multiple Unreal projects or maintaining a plugin ecosystem, this organizational skill prevents the common problem of forgetting why certain architectural choices were made.
 
 ### Code Review and Refactoring
 
-Unreal's codebase evolves continuously, and refactoring legacy code requires careful attention to breaking changes. Skills focused on code review can analyze your C++ files for common issues:
+Unreal's codebase evolves continuously, and refactoring legacy code requires careful attention to breaking changes. Skills focused on code review can analyze your C++ files for common issues. The [best Claude skills for code review automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) article lists the most effective review patterns that translate well to Unreal's strict coding conventions:
 
 - Missing `virtual` keywords on destructors in base classes
 - Incorrect `BlueprintCallable` function signatures
@@ -128,6 +128,13 @@ Start with skills that address your most frequent pain points. If you frequently
 Maintain your skills as living documents. Unreal Engine updates may introduce new coding standards or deprecate existing APIs. Regularly review and update your skill definitions to reflect current best practices.
 
 Avoid over-automation. Some tasks, like debugging complex replication issues or tuning gameplay feel, require human judgment. Use skills as productivity enhancers rather than replacements for thoughtful development.
+
+## Related Reading
+
+- [Claude Skill .md File Format: Full Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/)
 
 ---
 

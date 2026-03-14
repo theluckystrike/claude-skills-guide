@@ -10,7 +10,7 @@ score: 9
 
 # Claude Skills for Accessibility Testing WCAG A11y
 
-Web accessibility isn't optional—it's a requirement for many organizations and a moral imperative for all. The Web Content Accessibility Guidelines (WCAG) provide a framework for creating inclusive digital experiences, but manually checking compliance across every page, component, and interaction takes time you probably don't have. Claude skills can automate significant portions of your accessibility testing workflow, catching issues before they reach production.
+Web accessibility isn't optional—it's a requirement for many organizations and a moral imperative for all. The Web Content Accessibility Guidelines (WCAG) provide a framework for creating inclusive digital experiences, but manually checking compliance across every page, component, and interaction takes time you probably don't have. Claude skills can automate significant portions of your accessibility testing workflow, catching issues before they reach production. For a focused workflow on fixing color contrast failures specifically, the [Claude Code color contrast and accessibility fix guide](/claude-skills-guide/articles/claude-code-color-contrast-accessibility-fix-workflow/) provides step-by-step remediation patterns.
 
 ## Why Automate Accessibility Testing
 
@@ -62,7 +62,7 @@ function checkContrast(foreground, background) {
 }
 ```
 
-The `tdd` skill pairs well with contrast checking—you can write tests that verify design tokens meet contrast requirements before they're ever deployed to a staging environment. This shifts accessibility left, catching issues at the design system level rather than the component level.
+The `tdd` skill pairs well with contrast checking—you can write tests that verify design tokens meet contrast requirements before they're ever deployed to a staging environment. This shifts accessibility left, catching issues at the design system level rather than the component level. The [Claude Code accessible forms and validation error handling guide](/claude-skills-guide/articles/claude-code-accessible-forms-validation-error-handling-guide/) extends this principle to form inputs, a common source of WCAG failures.
 
 ## Document Accessibility with the PDF Skill
 
@@ -99,7 +99,7 @@ test('All interactive elements keyboard accessible', async ({ page }) => {
 });
 ```
 
-The `supermemory` skill can track keyboard navigation test results across your project history, helping you identify patterns where accessibility regressions occur repeatedly.
+The `supermemory` skill can track keyboard navigation test results across your project history, helping you identify patterns where accessibility regressions occur repeatedly. For improving the HTML foundation that accessibility depends on, the [semantic HTML accessibility improvement guide](/claude-skills-guide/articles/claude-code-semantic-html-accessibility-improvement-guide/) covers structural markup best practices.
 
 ## ARIA and Screen Reader Considerations
 
@@ -129,5 +129,12 @@ This workflow catches the majority of accessibility issues automatically while p
 Accessibility testing doesn't need to slow down your development process. Claude skills like `frontend-design`, `tdd`, `pdf`, and `supermemory` provide practical tools for automating checks, tracking progress, and building accessibility into your workflow from day one. The key is starting with automated checks that catch common issues, then layering in manual testing for nuanced accessibility concerns that require human judgment.
 
 By making accessibility testing a consistent part of your development process, you build more inclusive applications while actually reducing the time spent on compliance audits.
+
+## Related Reading
+
+- [Fix Color Contrast and Accessibility with Claude Code](/claude-skills-guide/articles/claude-code-color-contrast-accessibility-fix-workflow/)
+- [Accessible Forms with Claude Code: Error Handling Guide](/claude-skills-guide/articles/claude-code-accessible-forms-validation-error-handling-guide/)
+- [Semantic HTML Accessibility with Claude Code Guide](/claude-skills-guide/articles/claude-code-semantic-html-accessibility-improvement-guide/)
+- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
