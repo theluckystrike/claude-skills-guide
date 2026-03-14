@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Make Claude Code Stop Overwriting Your Edits"
-description: "A practical guide to preventing Claude Code from accidentally overwriting your edits. Learn the Read-before-edit pattern, safe editing techniques, and best practices for preserving your code changes."
+description: "A practical guide to preventing Claude Code from accidentally overwriting your edits. Learn the Read-before-edit pattern, safe editing techniques, and."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, editing, best-practices, troubleshooting]
@@ -167,3 +167,11 @@ Claude Code is a powerful tool, but like any powerful tool, it requires thoughtf
 Remember: the key is ensuring Claude Code always has visibility into the current state of your files before it makes modifications. With these practices in place, you'll maintain full control over your codebase while still benefiting from Claude Code's assistance.
 
 Start applying these techniques today, and you'll never have to recover overwritten edits again.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

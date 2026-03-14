@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code French Developer Team Collaboration Guide"
-description: "A comprehensive guide for French development teams to collaborate effectively using Claude Code, covering workflows, best practices, and practical examples."
+description: "A comprehensive guide for French development teams to collaborate effectively using Claude Code, covering workflows, best practices, and practical."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, collaboration, french-developers, team-workflow, best-practices]
@@ -157,3 +157,11 @@ French developer teams have unique opportunities to leverage Claude Code effecti
 Remember that Claude Code is a collaborative tool—its value comes from augmenting human expertise, not replacing it. The most successful teams treat AI as a skilled colleague who happens to be available around the clock, while ensuring human judgment remains central to all decisions.
 
 Start small with one or two workflows, measure the results, and expand gradually. Your team will find the patterns that work best for your specific context and culture.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

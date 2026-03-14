@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "Best Way to Use Claude Code with a Monorepo Codebase"
-description: "Master Claude Code in a monorepo environment: learn workspace management, targeted skill loading, cross-package analysis, and optimization techniques for large-scale projects."
+description: "Master Claude Code in a monorepo environment: learn workspace management, targeted skill loading, cross-package analysis, and optimization techniques."
 date: 2026-03-14
-categories: [claude-code, workflows]
+categories: [guides]
 tags: [claude-code, monorepo, workspaces, skills, optimization]
 author: theluckystrike
 permalink: /best-way-to-use-claude-code-with-a-monorepo-codebase/
@@ -119,3 +119,11 @@ This approach keeps each operation focused while maintaining awareness of the br
 
 Claude Code transforms monorepo development from overwhelming to manageable. By treating it as a targeted tool rather than a monolithic analyzer, you get the best of both worlds: comprehensive understanding when you need it, focused execution when you don't.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
