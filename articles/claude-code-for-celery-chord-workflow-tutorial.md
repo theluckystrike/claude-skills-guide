@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Celery Chord Workflow Tutorial"
-description: "Learn how to use Claude Code to build, debug, and optimize Celery chord workflows. A practical guide for Python developers working with asynchronous task queues."
+description: "Learn how to use Claude Code to build, debug, and optimize Celery chord workflows. A practical guide for Python developers working with asynchronous."
 date: 2026-03-15
 categories: [tutorials, python]
 tags: [claude-code, claude-skills, celery, python, async-tasks, workflow-automation]
@@ -183,3 +183,10 @@ When deploying chord workflows to production, consider these recommendations:
 Celery chord workflows enable powerful parallel processing patterns in Python applications. By combining Celery's built-in coordination with Claude Code's ability to generate, explain, and debug code, you can build robust asynchronous workflows more efficiently. Start with simple chords, add error handling incrementally, and leverage Claude Code as your pair programmer for complex implementations.
 
 The key to success is understanding that chords are just groups with callbacks—once you grasp this fundamental concept, building complex pipelines becomes straightforward. Claude Code can help you at every step, from initial scaffolding to production debugging.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

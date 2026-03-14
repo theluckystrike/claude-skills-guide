@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Domain Events Workflow Guide"
-description: "Learn how to use Claude Code to build robust domain event workflows, implement event sourcing patterns, and create scalable event-driven architectures in your applications."
+description: "Learn how to use Claude Code to build robust domain event workflows, implement event sourcing patterns, and create scalable event-driven architectures."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-domain-events-workflow-guide/
@@ -266,3 +266,10 @@ Domain events provide a foundation for building scalable, maintainable systems t
 Remember that domain events are a tool for expressing business behavior—not just a technical implementation detail. Let your business domain guide your event design, and Claude Code will help you translate those concepts into clean, maintainable code.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Wormhole Bridge Workflow Guide"
-description: "Learn how to create efficient Wormhole bridge workflows using Claude Code. This guide covers cross-chain transfer automation, skill creation, and practical examples for developers."
+description: "Learn how to create efficient Wormhole bridge workflows using Claude Code. This guide covers cross-chain transfer automation, skill creation, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-wormhole-bridge-workflow-guide/
@@ -239,3 +239,10 @@ Finally, consider adding manual approval steps for large transfers. While automa
 
 Claude Code transforms bridge operations from manual, error-prone processes into reliable, automated workflows. By structuring your skills around these patterns, you can handle cross-chain transfers confidently while maintaining the flexibility to adapt to evolving bridge protocols and chain configurations.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

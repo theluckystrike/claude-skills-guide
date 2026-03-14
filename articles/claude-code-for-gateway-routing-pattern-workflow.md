@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Gateway Routing Pattern Workflow"
-description: "Learn how to implement gateway routing patterns using Claude Code. Discover practical workflows for routing requests across microservices, API versioning, and service discovery."
+description: "Learn how to implement gateway routing patterns using Claude Code. Discover practical workflows for routing requests across microservices, API."
 date: 2026-03-15
 categories: [workflows, tutorials]
 tags: [claude-code, claude-skills]
@@ -273,3 +273,10 @@ Gateway routing patterns are essential for building scalable, maintainable micro
 
 Remember that gateway routing is not a set-it-and-forget-it configuration. Continuously monitor your routing behavior, use Claude Code to analyze performance data, and iteratively improve your routing strategy as your services evolve.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

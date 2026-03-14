@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for DDoS Mitigation Workflow Guide"
-description: "Learn how to leverage Claude Code to build automated DDoS mitigation workflows, analyze traffic patterns, and create responsive protection scripts for your infrastructure."
+description: "Learn how to leverage Claude Code to build automated DDoS mitigation workflows, analyze traffic patterns, and create responsive protection scripts for."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-ddos-mitigation-workflow-guide/
@@ -240,3 +240,10 @@ When building DDoS mitigation workflows with Claude Code, follow these practical
 Claude Code empowers developers to build sophisticated DDoS mitigation workflows rapidly. From analyzing traffic patterns to automating IP blocking and integrating cloud defenses, you can create comprehensive protection systems tailored to your infrastructure. The key is starting simple—traffic analysis scripts and basic alerting—then progressively adding automation as you understand your traffic patterns better.
 
 Remember that DDoS mitigation is an ongoing process. Continuously refine your thresholds, add new detection patterns, and test your responses. With Claude Code assisting your development workflow, you can respond to threats faster and more effectively than ever before.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

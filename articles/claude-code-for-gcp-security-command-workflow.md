@@ -259,3 +259,10 @@ Claude Code transforms GCP security command workflows from complex CLI navigatio
 
 Start by identifying your most frequent security operations, then create Claude Code workflows to automate them. The time invested in setting up these workflows pays dividends in reduced errors, improved compliance, and faster incident response.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -257,3 +257,10 @@ Integrating Claude Code with Elastic SIEM opens powerful possibilities for secur
 
 Start with simple query automation and progressively add more sophisticated detection and response capabilities. The key is building a foundation that you can trust and extend as your security needs evolve.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Hot Config Reload Workflow Guide"
-description: "Learn how to implement hot config reload workflows with Claude Code for faster development iterations. Practical examples and actionable advice for developers."
+description: "Learn how to implement hot config reload workflows with Claude Code for faster development iterations. Practical examples and actionable advice for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-hot-config-reload-workflow-guide/
@@ -164,3 +164,10 @@ Finally, separate concerns between development and production configurations. Us
 ## Actionable Summary
 
 Implementing hot config reload with Claude Code involves three core components: file watching to detect changes, reload handlers to apply new configurations, and skill interfaces to manage the process naturally. Start by setting up a simple file watcher, then build a Claude Code skill to handle reload commands, and finally integrate automatic detection for seamless operation. With these pieces in place, you'll dramatically improve your development velocity while maintaining full control over how configurations are managed and applied.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

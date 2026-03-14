@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for BFF API Pattern Workflow Guide"
-description: "Learn how to leverage Claude Code to streamline BFF (Backend-for-Frontend) API pattern development with practical examples, code snippets, and actionable workflows."
+description: "Learn how to leverage Claude Code to streamline BFF (Backend-for-Frontend) API pattern development with practical examples, code snippets, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-bff-api-pattern-workflow-guide/
@@ -280,3 +280,10 @@ To get started with Claude Code for BFF development:
 
 The BFF pattern combined with Claude Code's capabilities allows you to rapidly create optimized API layers that deliver exceptional experiences to each of your frontend clients. Start small, iterate quickly, and let Claude Code handle the boilerplate while you focus on the unique business logic that makes your BFF valuable.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

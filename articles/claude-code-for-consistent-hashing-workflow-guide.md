@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Consistent Hashing Workflow Guide"
-description: "A practical guide to implementing consistent hashing workflows using Claude Code. Learn how to build scalable distributed systems with code examples and actionable advice."
+description: "A practical guide to implementing consistent hashing workflows using Claude Code. Learn how to build scalable distributed systems with code examples."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-consistent-hashing-workflow-guide/
@@ -236,3 +236,10 @@ Consistent hashing is an essential tool for building resilient distributed syste
 
 The key to success is starting simple, measuring continuously, and iterating based on real-world traffic patterns. With Claude Code assisting your workflow, you have a powerful partner for implementing these distributed systems patterns correctly from the start.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Terraform Compliance Workflow"
-description: "Learn how to use Claude Code to automate Terraform compliance workflows. This guide covers policy-as-code, real-time compliance checking, CI/CD integration, and practical examples for developers."
+description: "Learn how to use Claude Code to automate Terraform compliance workflows. This guide covers policy-as-code, real-time compliance checking, CI/CD."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-terraform-compliance-workflow/
@@ -272,3 +272,10 @@ Maintain audit trails. Keep historical records of compliance checks, policy deci
 Claude Code transforms Terraform compliance from a bottleneck into a seamless part of your infrastructure development workflow. By bringing compliance awareness directly into the development process, you can catch issues early, maintain consistent policy enforcement, and generate the documentation needed for audits.
 
 The key is starting simple: set up a compliance context, add basic checks to your workflow, and gradually expand coverage as your team builds confidence. With Claude Code as your compliance partner, maintaining secure, compliant infrastructure becomes sustainable even at scale.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

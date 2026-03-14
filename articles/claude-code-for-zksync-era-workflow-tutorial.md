@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for zkSync Era Workflow Tutorial"
-description: "Learn how to use Claude Code for zkSync Era development. A comprehensive tutorial covering smart contract deployment, Layer 2 optimization, and workflow automation."
+description: "Learn how to use Claude Code for zkSync Era development. A comprehensive tutorial covering smart contract deployment, Layer 2 optimization, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-zksync-era-workflow-tutorial/
@@ -260,3 +260,10 @@ async function monitorEvents(contractAddress, abi) {
 Building on zkSync Era offers significant advantages in terms of transaction costs and speed. By leveraging Claude Code throughout your development workflow, you can accelerate smart contract development, improve code quality, and streamline deployment processes. Remember to always test thoroughly on testnet before deploying to mainnet, and stay updated with zkSync Era's evolving documentation and best practices.
 
 Start building on zkSync Era today with Claude Code as your development partner!
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

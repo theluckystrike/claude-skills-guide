@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Spring WebFlux Workflow Tutorial"
-description: "Learn how to use Claude Code to build reactive Spring WebFlux applications. This tutorial covers practical examples, code snippets, and actionable advice for developers."
+description: "Learn how to use Claude Code to build reactive Spring WebFlux applications. This tutorial covers practical examples, code snippets, and actionable."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-spring-webflux-workflow-tutorial/
@@ -273,3 +273,10 @@ Spring WebFlux opens up powerful possibilities for building responsive, high-con
 Start with simple endpoints, practice error handling patterns, and gradually incorporate more advanced reactive patterns as you become comfortable with the paradigm. With these fundamentals, you're well-equipped to build production-ready reactive applications using Spring WebFlux and Claude Code.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

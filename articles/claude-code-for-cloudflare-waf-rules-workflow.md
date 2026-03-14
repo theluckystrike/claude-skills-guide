@@ -167,3 +167,10 @@ Claude Code transforms Cloudflare WAF rule management from a specialized skill i
 
 The key is treating your WAF rules as code: version-controlled, tested, and collaboratively maintained. With Claude Code as your assistant, achieving this standard becomes significantly easier.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

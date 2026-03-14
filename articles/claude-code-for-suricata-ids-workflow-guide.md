@@ -10,6 +10,7 @@ categories:
 - Network Monitoring
 - DevOps
 tags: [claude-code, claude-skills]
+categories: [guides]
 ---
 
 {% raw %}
@@ -196,3 +197,10 @@ Claude Code significantly enhances Suricata IDS workflow efficiency by accelerat
 
 Start by setting up a structured project with proper context, then progressively incorporate Claude Code assistance for rule writing, testing, and maintenance. The investment in establishing good practices will pay dividends in detection reliability and operational efficiency.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

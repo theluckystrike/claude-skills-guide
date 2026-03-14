@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for ScoutSuite Audit Workflow Guide"
-description: "Learn how to integrate Claude Code with ScoutSuite to automate cloud security audits across AWS, Azure, and GCP with practical examples and actionable workflows."
+description: "Learn how to integrate Claude Code with ScoutSuite to automate cloud security audits across AWS, Azure, and GCP with practical examples and actionable."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-scoutsuite-audit-workflow-guide/
@@ -195,3 +195,10 @@ Combining Claude Code with ScoutSuite transforms cloud security auditing from a 
 
 Start small by running manual audits, then gradually automate the workflow to establish a robust cloud security posture. Remember that automated tools are supplements to—not replacements for—comprehensive security expertise and manual review.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

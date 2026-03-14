@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Blue-Green Switch Workflow Guide"
-description: "Master the critical switch phase of blue-green deployments using Claude Code. Learn practical strategies for traffic routing, health verification, and instant rollback."
+description: "Master the critical switch phase of blue-green deployments using Claude Code. Learn practical strategies for traffic routing, health verification, and."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, blue-green-switch, devops, deployment, claude-skills]
@@ -258,3 +258,10 @@ Third, ensure your rollback procedure is tested regularly. A rollback that hasn'
 The switch phase is where blue-green deployment delivers its value—enabling zero-downtime releases with instant rollback capability. Claude Code can help you implement robust switch workflows that verify environment health, execute safe traffic routing, and automatically rollback when issues are detected. By automating these processes and testing them regularly, you can achieve confident, low-risk production deployments.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

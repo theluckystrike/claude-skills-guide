@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Prowler Compliance Workflow"
-description: "Learn how to leverage Claude Code to automate Prowler security compliance workflows. This guide covers practical techniques for integrating Prowler scans with Claude Code, interpreting findings, and building automated remediation pipelines."
+description: "Learn how to leverage Claude Code to automate Prowler security compliance workflows. This guide covers practical techniques for integrating Prowler."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-prowler-compliance-workflow/
@@ -222,3 +222,10 @@ Integrating Claude Code with Prowler transforms security compliance from a perio
 
 The key is treating Claude Code not just as a reporting tool, but as an active participant in your security compliance workflow—asking it to generate specific commands, compare findings across scans, and develop long-term remediation strategies.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

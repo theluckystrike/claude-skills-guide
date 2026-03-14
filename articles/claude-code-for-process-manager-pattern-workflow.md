@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Process Manager Pattern Workflow"
-description: "Learn how to implement the Process Manager pattern using Claude Code. Master workflow orchestration, state management, and compensation strategies for distributed systems."
+description: "Learn how to implement the Process Manager pattern using Claude Code. Master workflow orchestration, state management, and compensation strategies for."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-process-manager-pattern-workflow/
@@ -268,3 +268,10 @@ The Process Manager pattern provides a robust foundation for building reliable d
 Start with simple workflows and progressively add complexity as your understanding of failure modes improves. The investment in proper Process Manager implementation pays dividends in system reliability and maintainability.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

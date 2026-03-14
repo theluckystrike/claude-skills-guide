@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Cloud Security Posture Workflow"
-description: "Learn how to automate cloud security posture management using Claude Code. Practical examples for developers implementing CSPM workflows across AWS, GCP, and Azure environments."
+description: "Learn how to automate cloud security posture management using Claude Code. Practical examples for developers implementing CSPM workflows across AWS."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cloud-security-posture-workflow/
@@ -223,3 +223,10 @@ The key is starting simple—implement basic scanning first, then gradually add 
 
 Remember that automation amplifies both good and bad practices. Invest time in properly configuring your scanning rules and remediation logic. The initial effort pays dividends in reduced security incidents and compliance violations.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

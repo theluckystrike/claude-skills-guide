@@ -170,3 +170,10 @@ Claude Code examines the failing test, reads the contract implementation, and id
 Integrating Claude Code with Brownie transforms your smart contract development workflow. From initial contract design through testing and deployment, Claude Code acts as an intelligent partner—generating code, running tests, debugging issues, and suggesting improvements. The key is providing clear, specific prompts and reviewing all generated code before deployment.
 
 Start with small tasks, gradually incorporating more complex workflows as you become comfortable with the collaboration pattern. Your Brownie projects will benefit from faster development cycles, improved code quality, and more comprehensive testing— all while maintaining the security vigilance essential for smart contract development.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

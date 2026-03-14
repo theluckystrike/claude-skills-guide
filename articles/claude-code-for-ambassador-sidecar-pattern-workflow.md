@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Ambassador Sidecar Pattern Workflow"
-description: "Learn how to implement the Ambassador sidecar pattern using Claude Code. This guide covers practical workflows for deploying Envoy-powered sidecars alongside your microservices."
+description: "Learn how to implement the Ambassador sidecar pattern using Claude Code. This guide covers practical workflows for deploying Envoy-powered sidecars."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-ambassador-sidecar-pattern-workflow/
@@ -240,3 +240,10 @@ Start by deploying simple sidecar configurations and gradually incorporate advan
 
 Remember: the key to successful sidecar deployments is treating the sidecar as an integral part of your service deployment, not an afterthought. Use the automation capabilities of Claude Code to ensure consistency across all your services.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

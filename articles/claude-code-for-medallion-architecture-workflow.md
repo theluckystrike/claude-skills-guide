@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Medallion Architecture Workflow"
-description: "Master medallion architecture workflows with Claude Code. Learn practical techniques for implementing Bronze-Silver-Gold data pipelines, managing data quality, and automating ETL processes."
+description: "Master medallion architecture workflows with Claude Code. Learn practical techniques for implementing Bronze-Silver-Gold data pipelines, managing data."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-medallion-architecture-workflow/
@@ -241,3 +241,10 @@ When implementing medallion architecture with Claude Code, several practices wil
 
 Claude Code accelerates medallion architecture implementation by handling repetitive boilerplate while you focus on business logic. The key is establishing clear separation between layers, implementing robust quality checks, and maintaining comprehensive metadata for observability.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
