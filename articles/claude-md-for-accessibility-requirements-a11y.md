@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code skills to generate, audit, and m
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, accessibility, a11y, wcag, aria, keyboard-navigation, claude-skills]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /claude-md-for-accessibility-requirements-a11y/
 reviewed: true
 score: 7
