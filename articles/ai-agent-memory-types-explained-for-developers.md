@@ -6,7 +6,7 @@ description: "Understand the different memory types in AI agents and how Claude 
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, ai-agent, memory, context, developer-guide, claude-skills]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 7
 permalink: /ai-agent-memory-types-explained-for-developers/
