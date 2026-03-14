@@ -40,7 +40,7 @@ Before generating a PDF:
 
 The `bash` tool executes commands in the CI environment, which may have a different PATH than your local shell. Tools installed via Homebrew on macOS (`/opt/homebrew/bin`) or in custom locations may not exist in the CI container's PATH.
 
-The `canvas-design` skill and `algorithmic-art` skill both require Python with specific packages. Your local Python environment has everything installed, but the CI runner uses a different Python or lacks the required packages.
+The `canvas-design` skill may require specific packages. Your local Python environment has everything installed, but the CI runner uses a different Python or lacks the required packages.
 
 ### Working Directory Assumptions
 
@@ -48,7 +48,7 @@ Skills often assume a specific working directory. The `tdd` skill might expect t
 
 ### Environment Variables
 
-Skills using the `mcp-builder` skill or interacting with external APIs often check for environment variables. Locally, you might have `ANTHROPIC_API_KEY` set in your shell profile. CI systems provide these differently—through secrets management or GitHub Actions inputs—and the skill may not find them.
+Skills interacting with external APIs often check for environment variables. Locally, you might have `ANTHROPIC_API_KEY` set in your shell profile. CI systems provide these differently—through secrets management or GitHub Actions inputs—and the skill may not find them.
 
 ## Diagnosing CI Failures
 

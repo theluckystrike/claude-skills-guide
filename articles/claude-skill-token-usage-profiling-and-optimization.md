@@ -206,7 +206,7 @@ As you create new skills, keep token efficiency in mind from the start:
 3. **Reference over repeat**: Point to external docs rather than copying content
 4. **Test during development**: Measure tokens as you iterate
 
-Skills like [supermemory for knowledge management](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) or `mcp-builder` for creating MCP servers benefit from this approach from day one.
+Skills like [supermemory for knowledge management](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) benefit from this approach from day one.
 
 ## Conclusion
 

@@ -68,7 +68,7 @@ If you're just getting started with skills, these five deliver the highest value
 **Data analysts:** xlsx, pdf, tdd, docx, pptx
 → [Full data analysis guide](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/)
 
-**DevOps engineers:** shell-expert, devops, webapp-testing, tdd
+**DevOps engineers:** webapp-testing, tdd, supermemory
 → [Full DevOps guide](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/)
 
 **Full-stack developers:** All of the above, plus skill-creator for custom integrations

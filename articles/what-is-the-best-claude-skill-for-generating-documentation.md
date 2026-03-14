@@ -64,16 +64,15 @@ The pdf skill excels when you need locked-down documentation that cannot be easi
 
 For most development workflows, the best approach combines multiple skills. Using the **xlsx** skill alongside docx allows you to generate documentation that includes data tables and metrics. The **pptx** skill enables you to create documentation presentations for stakeholder reviews.
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) proves invaluable for maintaining documentation context across sessions. It allows Claude to remember previous documentation decisions, ensuring consistency across large documentation projects:
+The [**supermemory** skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) proves invaluable for maintaining documentation context across sessions. Invoke it with `/supermemory` and ask Claude to remember previous documentation decisions, ensuring consistency across large documentation projects:
 
-```python
-# Using supermemory to maintain documentation context
-from supermemory import Memory
-
-doc_memory = Memory(namespace="project-docs")
-doc_memory.add("API version 2.0 requires authentication header")
-# Later sessions can reference this context
 ```
+/supermemory
+Remember that our API v2.0 requires an Authorization header on all endpoints.
+This applies to all documentation we generate for this project.
+```
+
+Note: There is no `from supermemory import Memory` Python package. The `/supermemory` skill is a Markdown file invoked conversationally, not a Python library.
 
 ## Automation with TDD and Code Documentation
 

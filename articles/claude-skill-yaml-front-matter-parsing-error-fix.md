@@ -20,17 +20,14 @@ Skill `.md` files begin with a YAML front matter block delimited by triple dashe
 
 ```yaml
 ---
+name: tdd
 description: "Run tests before writing implementation code (TDD)"
-tools:
-  - Bash
-  - Read
-  - Write
 ---
 
 # The rest of the skill instructions go here...
 ```
 
-Claude Code parses this block to get the skill's metadata, declared tools, and configuration. If parsing fails, the skill body may still load — but tool declarations, descriptions, and any configuration keys are lost.
+Claude Code skills recognize only `name` and `description` in front matter. If the front matter fails to parse, the skill body may still load but the description will not be available to the skill system.
 
 ## Error 1: Missing or Mismatched Closing Delimiter
 
@@ -40,8 +37,6 @@ The most common mistake. YAML front matter requires exactly three dashes on the 
 # Broken — closing delimiter is missing
 ---
 description: "My skill"
-tools:
-  - Bash
 
 # Skill body starts here but YAML never closed...
 ```
@@ -50,8 +45,6 @@ tools:
 # Fixed
 ---
 description: "My skill"
-tools:
-  - Bash
 ---
 ```
 
@@ -70,18 +63,16 @@ YAML does not allow tabs for indentation. This is the single most common source 
 ```yaml
 # Broken — tab characters used for indentation
 ---
-tools:
-	- Bash
-	- Read
+description: "My skill"
+name:	sql-formatter
 ---
 ```
 
 ```yaml
-# Fixed — two spaces per level
+# Fixed — no tabs, use spaces
 ---
-tools:
-  - Bash
-  - Read
+name: sql-formatter
+description: "My skill"
 ---
 ```
 
@@ -145,9 +136,8 @@ If the same key appears twice in the front matter block, most YAML parsers use t
 ```yaml
 # Broken — description appears twice
 ---
+name: my-skill
 description: "My skill v1"
-tools:
-  - Bash
 description: "My skill v2"
 ---
 ```
@@ -161,27 +151,6 @@ import yaml
 data = yaml.safe_load(front)
 print('Keys:', list(data.keys()))
 "
-```
-
-## Error 6: Incorrect `tools` List Syntax
-
-The `tools` key is a list. Incorrectly formatting it as a string or using the wrong list syntax causes the declared tools to be ignored.
-
-```yaml
-# Broken — tools as a string
-tools: Bash, Read, Write
-
-# Also broken — inline list with wrong quoting
-tools: ["Bash" "Read" "Write"]
-
-# Fixed — block list
-tools:
-  - Bash
-  - Read
-  - Write
-
-# Also valid — inline list with commas
-tools: [Bash, Read, Write]
 ```
 
 ## Validating Your Skill Files
@@ -242,41 +211,16 @@ yamllint /tmp/skill-front.yaml
 
 ## Minimum Valid Front Matter
 
-If you are unsure what is required, this is the minimum that will parse without errors:
+Claude Code skills recognize two front matter fields: `name` and `description`. This is the complete valid front matter for a skill:
 
 ```yaml
 ---
+name: my-skill
 description: "One sentence description of what this skill does"
 ---
 ```
 
-Add `tools` only if you need to declare tool access. A missing `tools` key does not cause a parse error — Claude uses its default tool access instead.
-
-## Nested Keys: Get Indentation Right
-
-If you add nested keys to your skill front matter, indentation must be consistent. The `tools` key is the most common nested field:
-
-```yaml
-# Broken — list items not indented under parent key
----
-description: "Test-driven development workflow"
-tools:
-- Bash
-- Read
----
-
-# Fixed — list items indented under parent key
----
-description: "Test-driven development workflow"
-tools:
-  - Bash
-  - Read
----
-```
-
-Two spaces before list items under a key are required.
-
-The valid front matter fields for skill files are `description` and `tools`. Fields like `context_files` are not recognized by Claude Code and should not be added to skill files.
+Fields like `tools`, `version`, `tags`, `permissions`, `auto_invoke`, and `context_files` are not recognized by Claude Code. Do not add them to skill files.
 
 ---
 

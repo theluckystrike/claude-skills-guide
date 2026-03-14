@@ -74,12 +74,10 @@ Skills can restrict their own tool access in front matter:
 ---
 name: pdf
 description: Converts documents to PDF
-tools:
-  - Read
-  - Write
-  - Bash
 ---
 ```
+
+Skills do not declare tools in front matter. The `tools` field is not recognized by Claude Code — it has no effect. Claude Code itself controls which tools are available based on session permissions.
 
 When this skill is active, Claude can only use `Read`, `Write`, and `Bash` — even if the session has other tools enabled. This is a skill-level restriction, not an expansion.
 

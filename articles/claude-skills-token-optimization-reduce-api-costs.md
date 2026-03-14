@@ -20,7 +20,7 @@ This guide covers practical techniques developers and power users can implement 
 
 Before diving into optimization strategies, it's helpful to understand where tokens are consumed. When you invoke a Claude Skill—whether it's the **pdf** skill for document processing, the **tdd** skill for test-driven development, or the **frontend-design** skill for UI creation—the skill definition, system prompts, and your conversation context all contribute to token usage.
 
-The key insight is that every skill loads its own set of instructions, examples, and context. A skill like **algorithmic-art** that generates creative visuals will have different token requirements than a skill like **xlsx** for spreadsheet manipulation. Understanding these differences allows you to choose the right tool for the job and avoid overloading your context window.
+The key insight is that every skill loads its own set of instructions, examples, and context. A skill like **canvas-design** that generates visual assets will have different token requirements than a skill like **xlsx** for spreadsheet manipulation. Understanding these differences allows you to choose the right tool for the job and avoid overloading your context window.
 
 ## Strategy 1: Craft Concise, Specific Prompts
 
@@ -61,7 +61,7 @@ When using the **pdf** skill for document processing, specify the exact pages or
 
 ## Strategy 4: Optimize Skill Chains
 
-Many workflows require multiple skills working together. The **mcp-builder** skill, for instance, might need to coordinate with **docx** for documentation and **xlsx** for test data. Plan these interactions to minimize redundant context loading.
+Many workflows require multiple skills working together. The **tdd** skill, for instance, might need to coordinate with **docx** for documentation and **xlsx** for test data. Plan these interactions to minimize redundant context loading.
 
 A practical approach is to complete work in stages with explicit boundaries. Process your documentation with **docx** first, then close that context before starting your spreadsheet work with **xlsx**. This prevents all the documentation context from carrying over into unrelated tasks.
 

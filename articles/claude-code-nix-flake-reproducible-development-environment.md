@@ -204,7 +204,7 @@ The **xlsx** skill can track version history and dependencies in a spreadsheet. 
 
 If you're new to Nix, start small. Create a flake for a single project, add one tool you're currently installing manually, and test the result. The initial learning curve pays dividends quickly as you extend your flake to cover more of your development stack.
 
-Claude Code accelerates this process by understanding your project's structure and helping you write and maintain your flake definitions. Combined with skills like **algorithmic-art** for visualizations or **mcp-builder** for custom integrations, you have a powerful toolkit for reproducible development.
+Claude Code accelerates this process by understanding your project's structure and helping you write and maintain your flake definitions. Combined with skills like **canvas-design** for visual assets, you have a powerful toolkit for reproducible development.
 
 The goal isn't perfection—it's consistency. A flake that covers 80% of your environment beats hand-crafted setup every time, because that 80% works identically everywhere.
 

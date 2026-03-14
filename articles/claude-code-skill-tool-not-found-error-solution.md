@@ -12,25 +12,18 @@ score: 8
 
 # Claude Code Skill Tool Not Found Error Solution
 
-The **tool not found** error in Claude Code skills appears in two distinct scenarios: Claude cannot find the skill file itself, or a tool declared inside the skill definition is unavailable in the current session. Both produce similar error messages but require different fixes. This guide covers both cases.
+The **tool not found** error in Claude Code skills typically means Claude cannot find the skill file itself. Skills are plain Markdown files — they do not declare tools in front matter, and there is no `tools:` configuration field. This guide covers how to fix skill file loading errors.
 
-## Understanding the Two Types of "Not Found"
+## Understanding "Not Found" Errors
 
-**Type 1 — Skill file not found:**
+**Skill file not found:**
 ```
 Error: Skill 'tdd' not found
 Unknown skill: /tdd
 ```
-Claude looked for `tdd.md` in the skills directories and did not find it.
+Claude looked for `tdd.md` in the skills directories and did not find it. The fix is to ensure the file exists in `~/.claude/skills/`.
 
-**Type 2 — Tool not found (within a skill):**
-```
-ToolNotFoundError: Tool 'Bash' is not available in this session
-SkillError: declared tool 'WebSearch' not found
-```
-The skill file loaded, but a tool it declared in its YAML front matter is not available.
-
-Each type has a separate fix.
+If Claude mentions a tool is unavailable during a skill session, that is a session-level permissions issue, not a skill configuration issue. Skills cannot declare or restrict which tools Claude uses.
 
 ## Fixing Type 1: Skill File Not Found
 
@@ -73,76 +66,15 @@ cat ~/.claude/settings.json | python3 -m json.tool | grep -A2 skill
 
 If `skillsDir` is set, skills must live in that path, not `~/.claude/skills/`.
 
-## Fixing Type 2: Tool Not Found Within a Skill
+## Tool Access Issues During Skill Sessions
 
-### Step 1: Check what tools the skill declares
+Skills do not configure which tools Claude can use. If Claude cannot use a specific tool (like `WebSearch` or `Bash`) during a skill session, check:
 
-Open the skill file and look at the `tools` field in the YAML front matter:
+1. **Session permissions** — In your Claude Code session, type `What tools do you have available?` to see the current tool list
+2. **Network access** — `WebSearch` requires network access. If your environment is offline, this tool is unavailable regardless of which skill is active
+3. **Claude Code settings** — Tool availability is controlled by `~/.claude/settings.json`, not skill files
 
-```bash
-python3 -c "
-import yaml, os
-path = os.path.expanduser('~/.claude/skills/pdf.md')
-content = open(path).read()
-parts = content.split('---')
-if len(parts) >= 3:
-    data = yaml.safe_load(parts[1])
-    print('Declared tools:', data.get('tools', 'none declared'))
-"
-```
-
-### Step 2: Check which tools are available in your session
-
-In a Claude Code session, run:
-```
-What tools do you have available in this session? List them.
-```
-
-Claude will enumerate its available tools. Compare this list against what the skill declares.
-
-### Step 3: Tool name case matters
-
-Built-in Claude Code tools use Title Case. Common mismatches:
-
-| Wrong | Correct |
-|---|---|
-| `bash` | `Bash` |
-| `read` | `Read` |
-| `write` | `Write` |
-| `websearch` | `WebSearch` |
-| `glob` | `Glob` |
-| `grep` | `Grep` |
-
-Fix the skill's front matter to use the correct tool names:
-
-```yaml
----
-description: "Run TDD workflows with test-first development"
-tools:
-  - Bash
-  - Read
-  - Write
-  - Glob
----
-```
-
-### Step 4: Some tools are not available in all contexts
-
-The `WebSearch` tool is only available when Claude Code is connected to a network-enabled session. If you are running in an offline or restricted environment, skills that declare `WebSearch` will fail.
-
-**Fix — make the skill tool-declaration optional:**
-```yaml
----
-description: "Research and implement feature"
-tools:
-  - Bash
-  - Read
-  - Write
-  # Remove WebSearch if not available in your environment
----
-```
-
-### Step 5: External tool dependencies (pdf, docx skills)
+### External tool dependencies (pdf, docx skills)
 
 The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/), `docx` skill, and similar document-processing skills require external binaries. These are separate from Claude Code's built-in tools.
 
@@ -190,7 +122,7 @@ npm install -g eslint prettier
 
 ## Diagnostic Command
 
-Run this to check all skills and their declared tools at once:
+Run this to check all skills and verify their front matter parses correctly:
 
 ```bash
 python3 << 'EOF'
@@ -204,9 +136,9 @@ for path in glob.glob(os.path.expanduser('~/.claude/skills/*.md')):
         continue
     try:
         data = yaml.safe_load(parts[1])
-        tools = data.get('tools', [])
         name = os.path.basename(path)
-        print(f'{name}: tools={tools}')
+        desc = data.get('description', '(no description)')
+        print(f'{name}: description={desc!r}')
     except Exception as e:
         print(f'PARSE ERROR {os.path.basename(path)}: {e}')
 EOF
@@ -240,6 +172,6 @@ If the stripped skill works but the original does not, a tool declaration in the
 
 - [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The authoritative reference for the `tools` field and all other YAML front matter fields in skill files
 - [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — A hands-on walkthrough for writing skill files that correctly declare their tool dependencies
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Minimizing declared tools is also a token optimization strategy; this article explains the full picture
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — How skill design affects token consumption and API costs
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

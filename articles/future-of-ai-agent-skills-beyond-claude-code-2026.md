@@ -51,7 +51,7 @@ This persistent context extends to team environments as well. The **supermemory*
 
 ## The Rise of Composable Workflows
 
-Developers in 2026 increasingly build custom workflows by composing existing skills. Rather than waiting for a single skill to handle everything, you chain together specialized tools for each step of a process. The **mcp-builder** skill helps you create new integrations when existing skills don't cover your specific needs, extending the ecosystem to support proprietary tools or internal systems.
+Developers in 2026 increasingly build custom workflows by composing existing skills. Rather than waiting for a single skill to handle everything, you chain together specialized tools for each step of a process. The **skill-creator** built-in skill helps you scaffold new skills when existing ones don't cover your specific needs, extending the ecosystem to support proprietary tools or internal systems.
 
 This composability has made AI agents accessible to organizations with unique requirements. You aren't limited to what the skill developers imagined—you can assemble custom pipelines that match your exact processes.
 
@@ -59,7 +59,7 @@ This composability has made AI agents accessible to organizations with unique re
 
 The trajectory is clear: AI agents will continue gaining autonomy, depth of expertise, and ability to coordinate with each other. The boundary between "using a tool" and "delegating a task" continues to blur. For developers and power users, this means focusing less on implementation details and more on articulating outcomes.
 
-The skills that succeed in this environment share common characteristics: they handle complexity gracefully, maintain context across sessions, and integrate well with other tools. Whether you're generating PDFs with the **pdf** skill, running tests with **tdd**, designing interfaces with **frontend-design**, or building new integrations with **mcp-builder**, the pattern is the same—describe what you want, and let the agent figure out how to get there.
+The skills that succeed in this environment share common characteristics: they handle complexity gracefully, maintain context across sessions, and integrate well with other tools. Whether you're generating PDFs with the **pdf** skill, running tests with **tdd**, designing interfaces with **frontend-design**, or scaffolding new skill files with **skill-creator**, the pattern is the same—describe what you want, and let the agent figure out how to get there.
 
 ## Related Reading
 

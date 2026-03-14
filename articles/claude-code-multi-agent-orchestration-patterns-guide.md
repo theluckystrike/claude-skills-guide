@@ -48,7 +48,7 @@ For independent tasks that don't depend on each other's output, you can run skil
 Common parallel scenarios include:
 - Running /tdd in one session while /frontend-design works in another
 - Using /supermemory to search historical context while /skill-creator generates new skills
-- Combining /mcp-builder with /webapp-testing to develop and validate APIs simultaneously
+- Combining /tdd with /webapp-testing to develop and validate APIs simultaneously
 
 ### Context Passing Between Sessions
 

@@ -34,18 +34,14 @@ The detection process happens at multiple levels. First, Claude analyzes the lan
 Here's how different triggers activate skills:
 
 ```
-User: "Can you help me extract text from this PDF?"
-→ System detects: "PDF" + "extract"
-→ Auto loads: pdf skill
+/pdf Can you help me extract text from this PDF?
 
-User: "Create a flow field visualization"
-→ System detects: "visualization" + artistic context
-→ Auto loads: algorithmic-art skill
+/canvas-design Create a flow field visualization
 
-User: "Write tests for my authentication module"
-→ System detects: "tests" + "write"
-→ Auto loads: tdd skill
+/tdd Write tests for my authentication module
 ```
+
+Skills are explicitly invoked with the `/skill-name` slash command prefix. They are not auto-loaded from context detection — you invoke them directly.
 
 The skill definitions themselves are what Claude reads to understand when to activate. To understand how those definitions are structured, see [Skill MD File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/).
 
@@ -76,7 +72,7 @@ While auto invocation handles most cases, explicit invocation provides precision
 ```
 Use the pdf skill to merge these documents.
 Load the supermemory skill to search my notes.
-Activate the mcp-builder skill for server development.
+Use the skill-creator skill to scaffold a new skill file.
 ```
 
 Explicit invocation proves useful when working across multiple skill domains in a single session or when automatic detection doesn't match your intent. For a side-by-side look at when explicit skill invocation beats plain prompting, see [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/).

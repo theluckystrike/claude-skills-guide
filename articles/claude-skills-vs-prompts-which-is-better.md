@@ -50,7 +50,7 @@ In practice, the choice often comes down to context management. Prompts must inc
 
 For instance, working with the **docx** skill means Claude understands document manipulation patterns without you explaining them repeatedly. You get consistent results faster because the skill has already learned your preferences.
 
-Code quality often improves with skills too. A well-designed skill enforces best practices automatically. The **algorithmic-art** skill, for example, understands generative art patterns and can produce high-quality output without extensive prompting.
+Code quality often improves with skills too. A well-designed skill enforces best practices automatically. The **canvas-design** skill, for example, understands visual design patterns and can produce high-quality output without extensive prompting.
 
 ## Practical Examples
 

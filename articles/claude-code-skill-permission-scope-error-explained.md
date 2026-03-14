@@ -90,12 +90,8 @@ The `tools` key in a skill's YAML front matter is a **declaration**, not a permi
 
 ```yaml
 ---
+name: tdd
 description: "TDD workflow with test and implementation cycle"
-tools:
-  - Bash
-  - Read
-  - Write
-  - Glob
 ---
 ```
 

@@ -18,13 +18,15 @@ Joining a new engineering team means learning new tools, processes, and conventi
 
 Before diving into team-specific workflows, ensure your Claude Code installation includes the core skills. The base installation provides document processing and code execution, but specialized skills unlock faster onboarding.
 
-Check your installed skills with:
+To see what skills you have available, list the files in your skills directory:
 
-```
-/skills list
+```bash
+ls ~/.claude/skills/
 ```
 
-If you're starting fresh, install these foundational skills first:
+Note: There is no `/skills list` command in Claude Code. Skills are plain Markdown files and are discovered by filename.
+
+If you're starting fresh, add these foundational skills first:
 
 - [**supermemory**](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — captures and retrieves institutional knowledge
 - **tdd** — generates test cases aligned with your team's testing conventions

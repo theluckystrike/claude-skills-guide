@@ -131,7 +131,7 @@ async function storeLargeOutput(content, filename) {
 }
 ```
 
-The `mcp-builder` skill can create integrations with cloud storage services that handle these transfers reliably.
+Custom skill files can include instructions to use external storage services that handle these transfers reliably.
 
 ## Prevention Best Practices
 
@@ -141,7 +141,7 @@ The most reliable fix is preventing the error before it occurs:
 
 2. **Set explicit limits** in your skill's output expectations. Tell users what to expect and what triggers the error.
 
-3. **Use streaming patterns** for real-time feedback during long operations. Skills built with the `algorithmic-art` skill often benefit from this approach.
+3. **Use streaming patterns** for real-time feedback during long operations. Skills like `/pdf` that generate long documents often benefit from this approach.
 
 4. **Test with boundary cases** by deliberately creating scenarios that approach your output limits during skill development.
 

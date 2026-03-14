@@ -39,7 +39,7 @@ For Python code: apply rules from /skills-internal/python-analysis.md
 
 This approach keeps the base prompt lean while preserving access to specialized knowledge. Skills like **tdd** benefit significantly from this pattern since test generation requirements vary by framework and language.
 
-### Leverage Skill Chaining
+### Use Skill Chaining
 
 Rather than building comprehensive skills that handle everything, create smaller focused skills that chain together:
 
@@ -81,7 +81,7 @@ When building for production: npm run build && npm run export
 Use exactly these commands. Do not add flags or change arguments.
 ```
 
-The **mcp-builder** skill benefits from this approach since MCP server construction involves predictable command sequences.
+Skills like **tdd** benefit from this approach since test generation involves predictable command sequences.
 
 ## Caching Frequently Used Data
 
@@ -115,7 +115,7 @@ if [ $cache_age -lt $cache_ttl ]; then
 fi
 ```
 
-This pattern works well for skills like **algorithmic-art** that reference external style guides or color palettes.
+This pattern works well for skills like **frontend-design** that reference external style guides or color palettes.
 
 ## Optimizing File Read Operations
 
@@ -204,7 +204,7 @@ This structure keeps base invocation under 100ms while still providing detailed 
 
 Skill latency optimization focuses on three areas: prompt length reduction, explicit tool guidance, and efficient data access. Apply conditional loading for optional instructions, specify exact tools and commands, and cache frequently accessed data. Measure results and iterate—small optimizations compound into noticeable improvements across your skill library.
 
-For skills like **pdf**, **frontend-design**, **tdd**, **supermemory**, **webapp-testing**, **mcp-builder**, **docx**, **pptx**, **xlsx**, and **algorithmic-art**, these patterns reduce response times while preserving the detailed guidance that makes skills powerful.
+For skills like **pdf**, **frontend-design**, **tdd**, **supermemory**, **webapp-testing**, **docx**, **pptx**, **xlsx**, and **canvas-design**, these patterns reduce response times while preserving the detailed guidance that makes skills powerful.
 
 ## Related Reading
 
