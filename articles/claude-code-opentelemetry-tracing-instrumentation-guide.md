@@ -1,296 +1,430 @@
 ---
-
-
 layout: default
 title: "Claude Code OpenTelemetry Tracing Instrumentation Guide"
-description: "Learn how to implement OpenTelemetry tracing instrumentation in your applications using Claude Code. Practical examples for Python, Node.js, and Go."
+description: "Master OpenTelemetry tracing instrumentation with Claude Code. Learn how to set up distributed tracing, create custom spans, and monitor your applications effectively."
 date: 2026-03-14
-author: "Claude Skills Guide"
-permalink: /claude-code-opentelemetry-tracing-instrumentation-guide/
 categories: [guides]
-reviewed: true
-score: 7
-tags: [claude-code, claude-skills]
+tags: [claude-code, opentelemetry, tracing, instrumentation, observability, monitoring]
+author: theluckystrike
+reviewed: false
+score: 0
+permalink: /claude-code-opentelemetry-tracing-instrumentation-guide/
 ---
-
 
 # Claude Code OpenTelemetry Tracing Instrumentation Guide
 
-Distributed tracing has become essential for understanding how requests flow through modern microservices architectures. OpenTelemetry provides vendor-neutral instrumentation that works with various backends. This guide shows you how to implement OpenTelemetry tracing in your applications using Claude Code, with practical examples you can apply immediately.
+OpenTelemetry has become the industry standard for observability, providing vendor-neutral APIs, SDKs, and tools for collecting distributed traces, metrics, and logs. When combined with Claude Code's AI assistance, you can rapidly implement comprehensive tracing in your applications without deep prior knowledge of OpenTelemetry internals.
 
-## Understanding OpenTelemetry Tracing Fundamentals
+This guide walks you through setting up OpenTelemetry tracing instrumentation using Claude Code as your coding partner.
 
-OpenTelemetry traces follow a hierarchical model where each operation becomes a span. A trace represents an end-to-end request, while spans represent individual operations within that request. Spans contain timing information, attributes, events, and optionally links to other spans.
+## Why OpenTelemetry Matters for Modern Applications
 
-The key components you need to understand are:
+Modern applications often consist of multiple microservices communicating across networks. When something goes wrong, pinpointing the exact location of a failure can feel like finding a needle in a haystack. OpenTelemetry solves this by providing distributed tracing—a way to follow a request as it travels through your entire system.
 
-- **Tracer**: Creates spans and manages trace context
-- **Span**: Represents a single operation with timing and metadata
-- **SpanContext**: Contains trace and span IDs for propagation
-- **Attributes**: Key-value pairs providing context about operations
+Traditional debugging often involves adding log statements, restarting services, and hoping you captured enough information. With OpenTelemetry, every request gets a unique trace ID that follows it through all services, making it trivial to see exactly where time is being spent and where errors occur.
 
-Claude Code can help you scaffold OpenTelemetry instrumentation across multiple services. The tdd skill proves particularly useful when building instrumentation layers, as you can write tests that verify spans contain the expected attributes before implementing the actual tracing code.
+Claude Code accelerates your OpenTelemetry journey by generating boilerplate code, explaining complex concepts, and helping you debug tracing issues when they arise.
 
-## Setting Up OpenTelemetry in Python
+## Setting Up OpenTelemetry with Claude Code
 
-Install the required packages first:
+### Initial Project Configuration
+
+Start by describing your tracing needs to Claude. Be specific about your language, framework, and what you want to achieve:
+
+```
+/opentelemetry Set up OpenTelemetry tracing for a Node.js Express API. I want to trace HTTP requests, database queries, and external API calls.
+```
+
+Claude will generate the initial setup, typically including package installation and basic configuration. For Node.js, this might look like:
 
 ```bash
-pip install opentelemetry-api opentelemetry-sdk opentelemetry-exporter-otlp
+npm install @opentelemetry/api @opentelemetry/sdk-node @opentelemetry/auto-instrumentations-node @opentelemetry/exporter-trace-otlp-http
 ```
 
-Create a tracing initialization module that your entire application can import:
+### Creating the Tracing Setup File
 
-```python
-# tracing.py
-from opentelemetry import trace
-from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchSpanProcessor
-from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
-from opentelemetry.sdk.resources import Resource, SERVICE_NAME
-
-def setup_tracing(service_name: str, otlp_endpoint: str = "http://localhost:4317"):
-    """Initialize OpenTelemetry tracing for a service."""
-    resource = Resource.create({SERVICE_NAME: service_name})
-    provider = TracerProvider(resource=resource)
-    
-    otlp_exporter = OTLPSpanExporter(endpoint=otlp_endpoint)
-    processor = BatchSpanProcessor(otlp_exporter)
-    provider.add_span_processor(processor)
-    
-    trace.set_tracer_provider(provider)
-    return trace.get_tracer(__name__)
-```
-
-Ask Claude Code to generate decorator functions that automatically trace your functions:
-
-```python
-from functools import wraps
-from typing import Callable, Any
-
-def traced_function(tracer: Any, attributes: dict = None):
-    """Decorator to automatically instrument functions."""
-    def decorator(func: Callable) -> Callable:
-        @wraps(func)
-        def wrapper(*args, **kwargs) -> Any:
-            with tracer.start_as_current_span(
-                f"{func.__module__}.{func.__name__}",
-                attributes=attributes or {}
-            ) as span:
-                try:
-                    result = func(*args, **kwargs)
-                    span.set_attribute("result", "success")
-                    return result
-                except Exception as e:
-                    span.set_attribute("error", str(e))
-                    span.record_exception(e)
-                    raise
-        return wrapper
-    return decorator
-```
-
-Apply this decorator to your service functions:
-
-```python
-# Order service example
-tracer = setup_tracing("order-service")
-
-@traced_function(tracer, {"service": "order", "layer": "business"})
-def process_order(order_id: str, user_id: str):
-    # Your business logic here
-    pass
-
-@traced_function(tracer, {"service": "order", "layer": "data"})
-def get_order_from_db(order_id: str):
-    # Database access here
-    pass
-```
-
-## Instrumenting Node.js Services
-
-For JavaScript and TypeScript applications, initialize tracing differently:
+Claude can generate a proper tracing initialization file tailored to your needs:
 
 ```javascript
-// tracing.js
 const { NodeSDK } = require('@opentelemetry/sdk-node');
 const { getNodeAutoInstrumentations } = require('@opentelemetry/auto-instrumentations-node');
-const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-grpc');
+const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-http');
+const { Resource } = require('@opentelemetry/resources');
+const { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } = require('@opentelemetry/semantic-conventions');
 
 const sdk = new NodeSDK({
-  serviceName: 'user-service',
-  traceExporter: new OTLPTraceExporter({
-    url: 'http://localhost:4317',
+  resource: new Resource({
+    [ATTR_SERVICE_NAME]: 'your-service-name',
+    [ATTR_SERVICE_VERSION]: '1.0.0',
   }),
+  traceExporter: new OTLPTraceExporter(),
   instrumentations: [getNodeAutoInstrumentations()],
 });
 
-sdk.start();
-```
+sdk.start()
+  .then(() => console.log('Tracing initialized'))
+  .catch((error) => console.error('Error initializing tracing', error));
 
-Create wrapper functions for Express middleware that automatically captures request context:
-
-```javascript
-// middleware/tracing.js
-const { trace } = require('@opentelemetry/api');
-
-function tracingMiddleware(req, res, next) {
-  const tracer = trace.getTracer('express-server');
-  
-  const span = tracer.startSpan(`${req.method} ${req.route?.path || req.path}`, {
-    kind: 1, // SpanKind.SERVER
-    attributes: {
-      'http.method': req.method,
-      'http.url': req.url,
-      'http.target': req.route?.path || req.path,
-      'http.host': req.headers.host,
-      'user-agent': req.headers['user-agent'],
-    },
-  });
-  
-  res.on('finish', () => {
-    span.setAttribute('http.status_code', res.statusCode);
-    span.end();
-  });
-  
-  next();
-}
-
-module.exports = { tracingMiddleware };
-```
-
-Apply the middleware in your Express app:
-
-```javascript
-const express = require('express');
-const { tracingMiddleware } = require('./middleware/tracing');
-
-const app = express();
-
-app.use(tracingMiddleware);
-app.get('/api/users/:id', (req, res) => {
-  // Your route handler
+process.on('SIGTERM', () => {
+  sdk.shutdown()
+    .then(() => console.log('Tracing terminated'))
+    .catch((error) => console.error('Error terminating tracing', error));
 });
 ```
 
-## Propagating Trace Context Across Services
+Notice that this code uses standard JavaScript, not Liquid template syntax, so no raw tag is needed.
 
-When requests flow between microservices, trace context must propagate so you get a complete view. OpenTelemetry provides several propagation formats including W3C Trace Context, B3, and Jaeger.
+## Manual Instrumentation with Custom Spans
 
-For Python services using HTTP calls:
+While auto-instrumentation covers many common frameworks, you'll often need to create custom spans for business logic that frameworks don't automatically capture.
 
-```python
-from opentelemetry import context
-from opentelemetry.propagate import inject, extract
-from opentelemetry.trace.propagation.tracecontext import TraceContextTextMapPropagator
+### Creating Spans for Business Logic
 
-propagator = TraceContextTextMapPropagator()
+Describe your business operations to Claude and ask for custom span creation:
 
-def call_downstream_service(url: str, headers: dict):
-    """Call another service while propagating trace context."""
-    # Extract context from incoming request headers
-    ctx = extract(headers)
+```
+/opentelemetry Create spans for our order processing workflow that includes validation, inventory check, payment processing, and notification sending.
+```
+
+Claude will generate code like this:
+
+```javascript
+const { trace, SpanKind, StatusCode } = require('@opentelemetry/api');
+const { meter } = require('@opentelemetry/api');
+
+const tracer = trace.getTracer('order-service');
+const orderMeter = meter.getMeter('order-service');
+
+async function processOrder(orderData) {
+  return tracer.startActiveSpan('processOrder', async (span) => {
+    try {
+      // Add order ID to trace for correlation
+      span.setAttribute('order.id', orderData.id);
+      span.setAttribute('order.total', orderData.total);
+
+      // Validation span
+      const validationSpan = tracer.startSpan('validateOrder', {
+        kind: SpanKind.INTERNAL,
+        parent: span,
+      });
+      const isValid = await validateOrder(orderData);
+      validationSpan.setAttribute('validation.result', isValid);
+      validationSpan.end();
+      
+      if (!isValid) {
+        span.setStatus({ code: StatusCode.ERROR, message: 'Order validation failed' });
+        span.end();
+        return { success: false, error: 'Validation failed' };
+      }
+
+      // Inventory check span
+      const inventorySpan = tracer.startSpan('checkInventory', {
+        kind: SpanKind.CLIENT,
+        parent: span,
+      });
+      const inventoryResult = await checkInventory(orderData.items);
+      inventorySpan.setAttribute('inventory.available', inventoryResult.available);
+      inventorySpan.end();
+
+      if (!inventoryResult.available) {
+        span.setStatus({ code: StatusCode.ERROR, message: 'Insufficient inventory' });
+        span.end();
+        return { success: false, error: 'Insufficient inventory' };
+      }
+
+      // Payment processing span
+      const paymentSpan = tracer.startSpan('processPayment', {
+        kind: SpanKind.CLIENT,
+        parent: span,
+      });
+      const paymentResult = await processPayment(orderData.payment);
+      paymentSpan.setAttribute('payment.id', paymentResult.transactionId);
+      paymentSpan.setAttribute('payment.status', paymentResult.status);
+      paymentSpan.end();
+
+      // Notification span
+      const notificationSpan = tracer.startSpan('sendNotification', {
+        kind: SpanKind.PRODUCER,
+        parent: span,
+      });
+      await sendNotification(orderData.customerId, 'order_confirmed');
+      notificationSpan.end();
+
+      span.setAttribute('order.status', 'completed');
+      span.end();
+      return { success: true, orderId: orderData.id };
+      
+    } catch (error) {
+      span.setStatus({ 
+        code: StatusCode.ERROR, 
+        message: error.message 
+      });
+      span.recordException(error);
+      span.end();
+      throw error;
+    }
+  });
+}
+```
+
+### Adding Custom Attributes
+
+Make your traces more useful by adding relevant attributes:
+
+```javascript
+function addUserContext(span, user) {
+  span.setAttribute('user.id', user.id);
+  span.setAttribute('user.email', user.email);
+  span.setAttribute('user.tier', user.subscriptionTier);
+}
+
+function addRequestContext(span, request) {
+  span.setAttribute('http.method', request.method);
+  span.setAttribute('http.url', request.url);
+  span.setAttribute('http.route', request.route?.path || 'unknown');
+  span.setAttribute('http.status_code', response.statusCode);
+}
+```
+
+## Tracing Database Operations
+
+Database queries are often the biggest source of latency. OpenTelemetry auto-instrumentation captures many queries automatically, but custom spans provide more context.
+
+### Tracing with Detailed Query Information
+
+```
+/opentelemetry Add detailed tracing for PostgreSQL queries including query text, execution time, and row counts.
+```
+
+```javascript
+const { trace, SpanKind } = require('@opentelemetry/api');
+
+const dbTracer = trace.getTracer('database');
+
+async function tracedQuery(pool, text, params) {
+  const span = dbTracer.startSpan('database.query', {
+    kind: SpanKind.CLIENT,
+    attributes: {
+      'db.system': 'postgresql',
+      'db.statement': text,
+      'db.operation': text.split(' ')[0].toUpperCase(),
+    },
+  });
+
+  const startTime = Date.now();
+  try {
+    const result = await pool.query(text, params);
+    span.setAttribute('db.row_count', result.rowCount);
+    span.setAttribute('db.execution_time_ms', Date.now() - startTime);
+    return result;
+  } catch (error) {
+    span.setStatus({
+      code: StatusCode.ERROR,
+      message: error.message,
+    });
+    span.recordException(error);
+    throw error;
+  } finally {
+    span.end();
+  }
+}
+```
+
+## Context Propagation
+
+When requests span multiple services, trace context must propagate through headers.
+
+### W3C Trace Context
+
+The W3C Trace Context standard is now the default:
+
+```javascript
+const { propagation, ROOT_CONTEXT } = require('@opentelemetry/api');
+
+// Extract trace context from incoming request
+function extractTraceContext(req) {
+  const carrier = {
+    traceparent: req.headers['traceparent'],
+    tracestate: req.headers['tracestate'],
+  };
+  return propagation.extract(ROOT_CONTEXT, carrier);
+}
+
+// Add trace context to outgoing requests
+function injectTraceContext(outgoingOptions) {
+  propagation.inject(
+    trace.getActiveSpan().spanContext(),
+    outgoingOptions.headers || (outgoingOptions.headers = {})
+  );
+  return outgoingOptions;
+}
+
+// Usage with HTTP client
+async function callDownstreamService(url, data) {
+  const span = trace.getActiveSpan();
+  const outgoing = injectTraceContext({
+    method: 'POST',
+    url,
+    headers: {},
+  });
+  
+  return fetch(url, {
+    ...outgoing,
+    body: JSON.stringify(data),
+  });
+}
+```
+
+### Custom Propagators
+
+For systems using custom headers:
+
+```javascript
+const { TextMapPropagator, W3C_TRACE_CONTEXT_PARENT_HEADER } = require('@opentelemetry/api');
+
+class CustomTracePropagator extends TextMapPropagator {
+  inject(context, carrier) {
+    const spanContext = context.getValue(SPAN_KEY);
+    if (!spanContext) return;
     
-    with tracer.start_as_current_span("http.client", context=ctx) as span:
-        # Inject context into outgoing request headers
-        outgoing_headers = {}
-        inject(outgoing_headers)
-        
-        # Make the HTTP call with propagated context
-        response = requests.get(url, headers=outgoing_headers)
-        
-        span.set_attribute("http.status_code", response.status_code)
-        return response.json()
+    carrier['x-trace-id'] = spanContext.traceId;
+    carrier['x-span-id'] = spanContext.spanId;
+  }
+
+  extract(context, carrier) {
+    const traceId = carrier['x-trace-id'];
+    const spanId = carrier['x-span-id'];
+    
+    if (!traceId || !spanId) return context;
+    
+    const spanContext = new SpanContext({
+      traceId: TraceId.fromHex(traceId),
+      spanId: SpanId.fromHex(spanId),
+      traceFlags: TraceFlags.SAMPLED,
+    });
+    
+    return context.setValue(SPAN_KEY, spanContext);
+  }
+}
 ```
 
-## Instrumenting Database Operations
+## Sampling Strategies
 
-Database calls often represent the largest portion of request latency. Instrument your database layer to see query performance:
+High-throughput applications may need sampling to control trace volume.
 
-```python
-# database/tracing.py
-import opentelemetry.instrumentation.sqlite3 as otel_sqlite3
+### Common Sampling Strategies
 
-# After creating your SQLite connection
-conn = sqlite3.connect("app.db")
-otel_sqlite3.instrument_connection(conn, "app-database")
+```javascript
+const { AlwaysSample, AlwaysOffSampler, ParentBasedSampler } = require('@opentelemetry/sdk-trace-base');
 
-# For SQLAlchemy with PostgreSQL
-from opentelemetry.instrumentation.sqlalchemy import SQLAlchemyInstrumentor
+// Always sample for development
+const devSampler = AlwaysSample;
 
-engine = create_engine("postgresql://localhost/mydb")
-SQLAlchemyInstrumentor().instrument_engine(engine)
+// Production: only sample 10% of traces
+const prodSampler = new ParentBasedSampler({
+  root: new TraceIdRatioBased(0.1),
+});
+
+// Sample based on specific criteria
+const customSampler = new ParentBasedSampler({
+  root: new TraceIdRatioBased(0.1),
+  onRootSpanStart: (rootSpan) => {
+    // Always sample API requests
+    if (rootSpan.attributes['http.url']?.includes('/api/')) {
+      return AlwaysSample;
+    }
+    // Skip health checks
+    if (rootSpan.attributes['http.url']?.includes('/health')) {
+      return AlwaysOffSampler;
+    }
+    return new TraceIdRatioBased(0.1);
+  },
+});
 ```
 
-These auto-instrumentation packages automatically create spans for each query, capturing query text, duration, and connection pool statistics.
+## Integration with Claude Code for Debugging
 
-## Adding Custom Attributes for Better Insights
+When traces reveal performance issues, Claude can help analyze and resolve them.
 
-Custom attributes transform generic spans into meaningful business metrics. Add user, tenant, and feature context:
+### Analyzing Trace Data
 
-```python
-def enrich_span_with_user_context(span, user_id: str, tenant_id: str):
-    """Add business context to the current span."""
-    span.set_attribute("user.id", user_id)
-    span.set_attribute("user.tenant_id", tenant_id)
-    span.set_attribute("user.authenticated", True)
+Share your trace data with Claude for analysis:
 
-def enrich_span_with_business_context(span, order_value: float, currency: str):
-    """Add transaction-specific attributes."""
-    span.set_attribute("transaction.value", order_value)
-    span.set_attribute("transaction.currency", currency)
-    span.set_attribute("transaction.type", "purchase")
+```
+/opentelemetry Analyze this trace data showing 3 second latency in our checkout flow. The spans show: validateOrder (50ms), checkInventory (2800ms), processPayment (100ms), sendNotification (50ms). What's causing the bottleneck?
 ```
 
-Call these functions within your traced operations to add meaningful context for debugging and analysis.
+Claude will identify that checkInventory is the bottleneck and suggest optimizations like caching inventory data or using asynchronous processing.
 
-## Using Claude Code Skills for Tracing Implementation
+### Troubleshooting Common Issues
 
-Several Claude skills accelerate OpenTelemetry adoption. The frontend-design skill helps when building observability dashboards. The pdf skill assists in generating documentation for your tracing implementation. The supermemory skill maintains context about your instrumentation decisions across Claude sessions.
+Common problems Claude can help debug:
 
-For teams implementing tracing at scale, create a custom skill that encapsulates your organization's tracing patterns. Define standard attributes, span naming conventions, and export configurations that all services should follow.
+- **Missing traces**: Check if sampling is too aggressive or if span export is failing
+- **Incomplete context**: Verify propagator configuration across services
+- **Performance overhead**: Reduce attribute cardinality, adjust sampling rate
+- **Export failures**: Verify OTLP endpoint connectivity and authentication
 
-## Verifying Your Instrumentation
+## Best Practices
 
-Before deploying, verify spans appear correctly in your backend. Use the OTLP collector with Jaeger for local testing:
+### Naming Conventions
 
-```yaml
-# docker-compose.yml
-otel-collector:
-  image: otel/opentelemetry-collector-contrib
-  ports:
-    - "4317:4317"
-    - "16686:16686"
-  config: |
-    receivers:
-      otlp:
-        protocols:
-          grpc:
-            endpoint: 0.0.0.0:4317
-    exporters:
-      jaeger:
-        endpoint: jaeger:14250
-      logging:
-        loglevel: debug
-    service:
-      pipelines:
-        traces:
-          receivers: [otlp]
-          exporters: [jaeger, logging]
+Use consistent, meaningful span names:
+
+```javascript
+// Good: descriptive, consistent naming
+'processOrder'
+'database.query'
+'http.post:/api/checkout'
+
+// Bad: dynamic values in span names
+`processOrder-${orderId}`  // Creates too many unique span names
+`query-${Math.random()}`    // Absolutely forbidden
 ```
 
-Run your application and trigger some requests. Access the Jaeger UI at localhost:16686 to visualize traces and verify attributes appear correctly.
+### Attribute Guidelines
+
+```javascript
+// Use semantic conventions for standard attributes
+const { SemanticAttributes } = require('@opentelemetry/semantic-conventions');
+
+span.setAttribute(SemanticAttributes.DB_SYSTEM, 'redis');
+span.setAttribute(SemanticAttributes.DB_STATEMENT, 'GET user:123');
+span.setAttribute(SemanticAttributes.HTTP_METHOD, 'GET');
+span.setAttribute(SemanticAttributes.HTTP_URL, 'https://api.example.com/users');
+
+// Avoid high-cardinality values as attributes
+// Bad: span.setAttribute('user.email', user.email); // Too many unique values
+// Good: span.setAttribute('user.id', user.id);
+```
+
+### Performance Considerations
+
+```javascript
+// Don't create spans in tight loops
+// Instead, batch operations
+
+async function processItems(items) {
+  const span = tracer.startSpan('processItems');
+  try {
+    const batchSpan = tracer.startSpan('batchProcessing', { parent: span });
+    // Process all items in batch
+    await processBatch(items);
+    batchSpan.end();
+  } finally {
+    span.end();
+  }
+}
+
+// Use span.addEvent for logging-like information
+span.addEvent('Processing item', {
+  'item.id': itemId,
+  'item.status': 'started',
+});
+```
 
 ## Conclusion
 
-OpenTelemetry tracing instrumentation provides visibility into how your applications operate in production. Start with basic span creation, add custom attributes relevant to your business domain, and propagate context across service boundaries. Claude Code accelerates this process by generating boilerplate code and helping you structure instrumentation that scales.
+OpenTelemetry tracing provides visibility into your application's behavior across service boundaries. With Claude Code as your partner, you can rapidly implement comprehensive instrumentation without becoming an OpenTelemetry expert. The key is starting simple with auto-instrumentation, then adding custom spans for your specific business logic.
 
-The investment in proper tracing pays dividends when debugging production issues or optimizing performance. You'll immediately see which operations contribute to latency and where errors occur across distributed systems.
-
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Remember to iterate: start with basic setup, add meaningful attributes, implement proper context propagation, and refine with sampling strategies as your observability needs grow.
