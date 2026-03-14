@@ -210,4 +210,11 @@ This approach scales well as your domain grows more complex. When combined with 
 
 The key is treating domain knowledge as code: version-controlled, documented, and tested. As your business evolves, your domain definitions evolve with it.
 
+## Related Reading
+
+- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — CLAUDE.md is the primary place to encode domain rules for Claude
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Supermemory persists domain knowledge across sessions
+- [How to Write Your First Custom Prompt with Claude Code](/claude-skills-guide/how-to-write-your-first-custom-prompt-with-claude-code/) — Custom prompts encode domain-specific behavior
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — Foundation for building domain-aware Claude workflows
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
