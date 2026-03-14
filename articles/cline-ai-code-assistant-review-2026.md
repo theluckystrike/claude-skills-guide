@@ -36,7 +36,7 @@ This autonomous execution model saves considerable time on tasks that would othe
 
 Cline runs primarily through the command line, making it particularly attractive for developers who prefer terminal-centric workflows. The CLI offers granular control over agent behavior, including options for auto-approval of certain task types, file change limits, and sandbox configurations.
 
-For developers using Claude Code alongside Cline, the distinction becomes clear: Claude Code excels at interactive, conversational problem-solving while Cline focuses on autonomous execution of defined tasks. Many power users employ both tools for their respective strengths—Claude Code for exploration and debugging, Cline for implementation and refactoring.
+For developers using Claude Code alongside Cline, the distinction becomes clear: Claude Code excels at interactive, conversational problem-solving while Cline focuses on autonomous execution of defined tasks. Many power users employ both tools for their respective strengths—Claude Code for exploration and debugging, Cline for implementation and refactoring. If you are new to Claude Code, [getting started with Claude Code 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) provides the foundational context.
 
 The skill ecosystem surrounding Cline has matured significantly. While Cline uses its own skill format, developers have created adapters that translate Claude skills for Cline use. The frontend-design skill, for instance, generates React components with Tailwind CSS—functionality that transfers to Cline through community adapters, though with some capability limitations.
 
@@ -62,7 +62,7 @@ However, several strategies enable cross-pollination:
 
 2. **Skill-inspired prompts**: Translate Claude skill patterns into Cline prompts. The prompting style that makes the frontend-design skill effective translates to similar instructions for Cline.
 
-3. **MCP server compatibility**: Both tools increasingly support Model Context Protocol servers, enabling shared tool access. An MCP server configured for database operations works with either assistant.
+3. **MCP server compatibility**: Both tools increasingly support Model Context Protocol servers, enabling shared tool access. An MCP server configured for database operations works with either assistant. The [Claude Code MCP server setup guide](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) covers how to configure these shared servers.
 
 For developers invested in the Claude skills ecosystem, this interoperability matters. The algorithmic-art skill for generative visuals and canvas-design skill for visual outputs remain Claude Code-exclusive, but infrastructure-focused skills increasingly work across platforms.
 
@@ -92,5 +92,12 @@ Many developers in 2026 use both tools complementarily. Claude Code handles reas
 Cline provides genuine value for developers seeking autonomous code assistance. Its CLI-centered approach, autonomous execution model, and improving skill interoperability make it a worthwhile addition to a developer toolkit. The key is understanding its role alongside other AI assistants rather than viewing it as a complete replacement.
 
 For teams evaluating AI code assistants in 2026, Cline merits consideration alongside Claude Code. The combination of both tools—with appropriate skill configurations for Claude Code—offers comprehensive coverage from exploration through implementation.
+
+## Related Reading
+
+- [Tabnine vs Claude Code for Team Development](/claude-skills-guide/tabnine-vs-claude-code-for-team-development/) — Compare another major AI assistant against Claude Code to inform your toolchain decisions
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Maximize the Claude Code side of a Cline + Claude Code dual-tool setup with the right skills
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — Configure MCP servers so both Cline and Claude Code can share tool access
+- [Claude Skills Comparisons Hub](/claude-skills-guide/comparisons-hub/) — Read more head-to-head comparisons of Claude Code against other AI coding assistants
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -19,7 +19,7 @@ Marketing automation has become essential for businesses managing email campaign
 
 ## Understanding Mailchimp MCP Server Integration
 
-The Mailchimp MCP server acts as a bridge between Claude Code and Mailchimp's REST API. By configuring this server, you gain access to a set of tools that can manage lists, segments, campaigns, and automation workflows without leaving your Claude conversation. The server handles authentication through API keys and supports both development and production environments.
+The Mailchimp MCP server acts as a bridge between Claude Code and Mailchimp's REST API. By configuring this server, you gain access to a set of tools that can manage lists, segments, campaigns, and automation workflows without leaving your Claude conversation. The server handles authentication through API keys and supports both development and production environments. For a primer on MCP server setup in general, see the [Claude Code MCP server setup complete guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/).
 
 Unlike traditional API integrations that require writing boilerplate code for each request, the MCP server exposes semantic tools that map directly to Mailchimp operations. You can ask Claude to "create a segment for users who opened the last three campaigns" and the server translates this into the appropriate API calls, handles pagination, and returns structured data you can immediately use.
 
@@ -80,7 +80,7 @@ Create a regular campaign for the "Newsletter" audience with subject line "Your 
 
 The server handles the complexity of Mailchimp's campaign creation API, including setting the correct content type, scheduling the send time in the appropriate time zone, and validating that your audience has sufficient subscribers.
 
-For developers building more complex workflows, you can chain this with other tools. Using the **supermemory** skill, you might maintain a knowledge base of campaign performance metrics that inform future send times. The **xlsx** skill enables you to import subscriber data from spreadsheets before campaign creation.
+For developers building more complex workflows, you can chain this with other tools. Using the [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), you might maintain a knowledge base of campaign performance metrics that inform future send times. The **xlsx** skill enables you to import subscriber data from spreadsheets before campaign creation.
 
 ## Analytics and Reporting Automation
 
@@ -114,7 +114,7 @@ When automating email marketing through MCP, follow these guidelines:
 - **Error handling**: Build retry logic for failed operations, especially during audience syncs
 - **Audit logging**: Track all automation actions for compliance and troubleshooting
 
-For testing, consider using Mailchimp's sandbox mode or creating a test list with dummy data. The **tdd** skill can help you write automated tests for your automation logic before deploying to production.
+For testing, consider using Mailchimp's sandbox mode or creating a test list with dummy data. The [tdd skill can help you write automated tests](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) for your automation logic before deploying to production.
 
 ## Conclusion
 
@@ -123,6 +123,13 @@ The Mailchimp MCP server transforms how developers approach email marketing auto
 Experiment with the examples in this guide, then explore combining the Mailchimp MCP server with other Claude skills to build comprehensive marketing automation pipelines tailored to your specific needs.
 
 ---
+
+## Related Reading
+
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — Understand MCP server configuration fundamentals before wiring up the Mailchimp integration
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Maintain campaign performance knowledge bases across Claude Code sessions
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Write automated tests for your marketing automation logic before deploying to production
+- [Claude Skills Integrations Hub](/claude-skills-guide/integrations-hub/) — Explore more Claude Code integrations with third-party APIs and marketing platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -81,7 +81,7 @@ The second example includes Redux integration, analytics tracking, and error han
 
 Tabnine offers team settings that allow administrators to configure which patterns and libraries the team uses. This ensures consistency across team members using team-trained models. However, its collaboration features remain limited to code completion preferences.
 
-Claude Code transforms team collaboration through its skill system. Teams can create shared skills that encapsulate best practices, coding standards, and domain-specific knowledge. A team might create a skill for their specific tech stack:
+Claude Code transforms team collaboration through its skill system. Teams can create shared skills that encapsulate best practices, coding standards, and domain-specific knowledge. For a guide to writing your own team skills, see [how to write a skill .md file for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/). A team might create a skill for their specific tech stack:
 
 ```yaml
 # Example: team-code-standards skill manifest
@@ -111,7 +111,7 @@ Claude Code integrates differently—it often serves as a companion process rath
 - Managing database migrations with `database-migration` skills
 - Running automated tests with `tdd` workflow skills
 
-The `supermemory` skill proves particularly valuable for teams, enabling Claude Code to maintain context across sessions and remember team-specific preferences, architectural decisions, and coding conventions.
+The [supermemory skill proves particularly valuable for teams](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), enabling Claude Code to maintain context across sessions and remember team-specific preferences, architectural decisions, and coding conventions.
 
 ## Cost Considerations for Teams
 
@@ -142,5 +142,12 @@ For example, a team might configure Claude Code to use Tabnine-suggested pattern
 The choice ultimately depends on your team's specific needs, existing workflows, and the complexity of your projects. Evaluate your daily development tasks honestly, and consider starting with a trial period of both tools before committing.
 
 ---
+
+## Related Reading
+
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Identify which Claude Code skills deliver the most team value to complement or replace Tabnine's capabilities
+- [Cline AI Code Assistant Review 2026](/claude-skills-guide/cline-ai-code-assistant-review-2026/) — Evaluate another autonomous AI coding agent in the same competitive landscape
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Learn how the supermemory skill gives Claude Code a persistent team knowledge advantage
+- [Claude Skills Comparisons Hub](/claude-skills-guide/comparisons-hub/) — Read more comparisons of Claude Code against other AI development tools
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

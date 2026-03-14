@@ -13,7 +13,7 @@ permalink: /claude-code-pytest-fixtures-patterns-guide/
 
 # Claude Code Pytest Fixtures Patterns Guide
 
-Pytest fixtures are one of the most powerful features in Python testing, and when combined with Claude Code workflows, they become even more productive. This guide covers practical pytest fixtures patterns that work well with Claude Code sessions, whether you are using the tdd skill for test-driven development or integrating with other automation skills.
+Pytest fixtures are one of the most powerful features in Python testing, and when combined with Claude Code workflows, they become even more productive. This guide covers practical pytest fixtures patterns that work well with Claude Code sessions, whether you are using the [tdd skill for test-driven development](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) or integrating with other automation skills.
 
 ## Understanding Pytest Fixtures in Claude Code Contexts
 
@@ -167,11 +167,11 @@ def test_pdf_generation(sample_pdf_template):
     assert pdf.page_count == len(sample_pdf_template["sections"])
 ```
 
-The supermemory skill can help you remember complex fixture configurations across projects by storing fixture patterns as searchable knowledge.
+The [supermemory skill can help you remember complex fixture configurations](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) across projects by storing fixture patterns as searchable knowledge.
 
 ## Advanced Patterns: Fixture Factories and Dynamic Fixtures
 
-Fixture factories create fixtures that return callable objects for generating test data on demand:
+Fixture factories create fixtures that return callable objects for generating test data on demand. For property-based test data generation that pairs well with factories, see the [Claude Code hypothesis property testing guide](/claude-skills-guide/claude-code-hypothesis-property-testing-guide/):
 
 ```python
 @pytest.fixture
@@ -199,5 +199,12 @@ def dynamic_client(request):
 ## Conclusion
 
 Pytest fixtures provide a robust foundation for organizing test setup and teardown in your Claude Code workflows. By mastering fixture scopes, parametrization, autouse patterns, and proper teardown techniques, you create maintainable and efficient test suites. Whether you are working with the tdd skill for test-driven development or combining testing with skills like pdf for document validation, these fixture patterns scale with your project's complexity.
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to drive pytest fixture design from a test-first perspective
+- [Claude Code Hypothesis Property Testing Guide](/claude-skills-guide/claude-code-hypothesis-property-testing-guide/) — Combine hypothesis-based testing with pytest fixtures for thorough edge case coverage
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Store and recall fixture patterns across Claude Code sessions for consistent test setups
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Explore more testing and automation workflows supported by Claude Code skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

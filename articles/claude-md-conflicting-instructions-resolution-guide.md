@@ -15,7 +15,7 @@ permalink: /claude-md-conflicting-instructions-resolution-guide/
 
 When working with Claude Code or Claude desktop skills, you will inevitably encounter situations where multiple instructions conflict. This happens when different skills, system prompts, or user requests send mixed signals about what action to take. Understanding how to resolve these conflicts is essential for building reliable AI-assisted workflows.
 
-This guide provides practical patterns for developers and power users dealing with conflicting instructions in Claude MD environments.
+This guide provides practical patterns for developers and power users dealing with conflicting instructions in Claude MD environments. For a deeper look at the skill format itself, see the [Claude skill .md format complete specification guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/).
 
 ## Understanding Instruction Conflicts
 
@@ -31,7 +31,7 @@ For example, a `pdf` skill might instruct Claude to extract all table data, whil
 
 ### 1. Explicit Priority Declaration
 
-The most reliable approach is declaring instruction priority directly in your skill definition. Front matter allows you to specify precedence:
+The most reliable approach is declaring instruction priority directly in your skill definition. [How to write a skill .md file for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) covers the front matter fields available for precedence control. Front matter allows you to specify precedence:
 
 ```yaml
 ---
@@ -157,7 +157,7 @@ supermemory:
 
 **Prefer explicit over implicit resolution**. When conflicts arise, add front matter declarations rather than relying on Claude's default resolution.
 
-**Test conflict scenarios** during skill development. Load multiple skills together and verify the resolution matches your expectations.
+**Test conflict scenarios** during skill development. Load multiple skills together and verify the resolution matches your expectations. The [Claude MD changes not taking effect fix guide](/claude-skills-guide/claude-md-changes-not-taking-effect-fix-guide/) can help when resolution rules are not applying as expected.
 
 ## Common Pitfalls
 
@@ -174,5 +174,12 @@ These outcomes reduce workflow reliability and increase cognitive load on users.
 Resolving conflicting instructions in Claude MD requires explicit strategy rather than hoping for implicit correctness. By declaring priority, using phase-based execution, implementing fallback chains, and leveraging conflict detection hooks, you build robust systems that handle ambiguity gracefully.
 
 Whether you're combining `pdf` extraction with `tdd` validation, integrating `frontend-design` with testing frameworks, or orchestrating multiple skills through `supermemory` memory management, explicit conflict resolution transforms potential chaos into reliable automation.
+
+## Related Reading
+
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Reference the full front matter schema including priority and conflict-related fields
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Build skills from scratch with clear instruction boundaries that reduce conflict likelihood
+- [Claude MD Changes Not Taking Effect: Fix Guide](/claude-skills-guide/claude-md-changes-not-taking-effect-fix-guide/) — Troubleshoot why conflict resolution rules may not be applying as expected
+- [Claude Skills Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced skill orchestration patterns beyond basic conflict resolution
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

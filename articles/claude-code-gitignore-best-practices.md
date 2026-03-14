@@ -144,7 +144,7 @@ git check-ignore -v filename
 
 ## Integrating with Claude Skills Workflow
 
-When using skills like `docx` for documentation or `xlsx` for data analysis, ensure your workflow generates to excluded directories. Configure skill output paths in your project structure:
+When using skills like `docx` for documentation or `xlsx` for data analysis, ensure your workflow generates to excluded directories. The [Claude xlsx skill spreadsheet automation tutorial](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/) shows how to configure output paths to keep generated files out of source control. Configure skill output paths in your project structure:
 
 ```
 project/
@@ -167,4 +167,11 @@ Proper gitignore configuration is foundational to maintain clean repositories wh
 
 ---
 
-Built by theluckystrike — More at zovo.one
+## Related Reading
+
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Know which skills generate the most filesystem output so you can plan your gitignore patterns ahead of time
+- [Claude MD Best Practices for Large Codebases](/claude-skills-guide/claude-md-best-practices-for-large-codebases/) — Learn how CLAUDE.md and project configuration files relate to what should and should not be committed
+- [Claude Code for End-of-Day Commit Workflow](/claude-skills-guide/claude-code-for-end-of-day-commit-workflow/) — Build a daily commit habit that works cleanly with the gitignore patterns described here
+- [Claude Skills Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Start with foundational Claude Code setup including version control hygiene
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
