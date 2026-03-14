@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Hooks System: Complete Guide
 
-[Claude Code's hooks system gives you programmatic control over Claude's behavior at defined points in its execution lifecycle](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Hooks let you log tool calls for auditing, block dangerous commands, inject context at session start, and enforce project rules without modifying skill files or prompts.
+[Claude Code's hooks system gives you programmatic control over Claude's behavior at defined points in its execution lifecycle](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Hooks let you log tool calls for auditing, block dangerous commands, inject context at session start, and enforce project rules without modifying skill files or prompts.
 
 ## What Are Hooks?
 

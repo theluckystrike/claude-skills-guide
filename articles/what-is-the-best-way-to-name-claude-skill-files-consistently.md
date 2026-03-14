@@ -12,7 +12,7 @@ score: 9
 
 # What Is the Best Way to Name Claude Skill Files Consistently
 
-[Naming your Claude skill files consistently is one of those details that seems minor until your skill library grows beyond a handful](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When you have five skills, anything works. When you have fifty, inconsistent naming creates friction every time you invoke a skill. This guide provides concrete patterns you can adopt immediately.
+[Naming your Claude skill files consistently is one of those details that seems minor until your skill library grows beyond a handful](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you have five skills, anything works. When you have fifty, inconsistent naming creates friction every time you invoke a skill. This guide provides concrete patterns you can adopt immediately.
 
 ## Why Naming Conventions Matter
 

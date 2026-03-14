@@ -17,7 +17,7 @@ Database branching represents one of the most powerful capabilities in modern de
 
 ## Understanding Planetscale Branching
 
-[Planetscale offers database branching similar to git branches](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)—each branch is an isolated development environment with its own schema and data. This approach enables teams to:
+[Planetscale offers database branching similar to git branches](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)—each branch is an isolated development environment with its own schema and data. This approach enables teams to:
 
 - Create isolated environments for each feature branch
 - Test schema changes safely before production deployment

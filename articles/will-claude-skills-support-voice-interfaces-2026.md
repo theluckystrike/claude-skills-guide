@@ -16,7 +16,7 @@ If you have been building workflows around Claude Code skills, you might wonder 
 
 ## How Claude Skills Work Right Now
 
-[Claude skills are Markdown files stored in ~/.claude/skills/ that define instructions Claude follows during your session](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When you type `/skillname`, Claude loads those instructions and applies them to your conversation. This design works entirely with text input and output.
+[Claude skills are Markdown files stored in ~/.claude/skills/ that define instructions Claude follows during your session](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you type `/skillname`, Claude loads those instructions and applies them to your conversation. This design works entirely with text input and output.
 
 The skill system does not include built-in voice recognition, text-to-speech generation, or audio processing. Skills are essentially prompt templates that shape Claude's behavior based on what you type. This makes them lightweight and easy to customize, but also means voice is not a native feature.
 

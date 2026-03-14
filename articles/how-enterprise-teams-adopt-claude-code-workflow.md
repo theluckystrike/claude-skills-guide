@@ -52,12 +52,12 @@ Once individual adoption reaches critical mass—typically when 30-40% of develo
 Consistent invocation patterns reduce cognitive load. Enterprise teams typically adopt this format:
 
 ```
-/skill-name [specific task] --context [optional context file or previous session]
+/skill-name [specific task description]
 ```
 
 Example:
 ```
-/tdd write integration tests for user-auth-service --context ../specs/auth-flow.md
+/tdd write integration tests for user-auth-service based on the requirements in ../specs/auth-flow.md
 ```
 
 Create a team convention document specifying:

@@ -18,7 +18,7 @@ This guide covers practical techniques you can implement immediately to boost yo
 
 ## Master the Art of Clear Intent
 
-[The foundation of productive vibe coding lies in how you communicate with Claude](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Vague prompts produce unpredictable results; specific, structured prompts produce working code on the first try.
+[The foundation of productive vibe coding lies in how you communicate with Claude](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Vague prompts produce unpredictable results; specific, structured prompts produce working code on the first try.
 
 Break complex features into discrete steps. Instead of asking Claude to build an entire authentication system in one go, break it into stages:
 

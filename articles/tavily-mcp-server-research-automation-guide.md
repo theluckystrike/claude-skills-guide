@@ -18,7 +18,7 @@ This guide covers practical implementation patterns for developers and power use
 
 ## What Is the Tavily MCP Server?
 
-[The Tavily MCP Server exposes Tavily's search and content extraction APIs through the Model Context Protocol](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/), making them available as tools within Claude Code. Unlike basic web search, Tavily specializes in AI-optimized search results with semantic understanding, making it particularly effective for research tasks that require nuanced information retrieval.
+[The Tavily MCP Server exposes Tavily's search and content extraction APIs through the Model Context Protocol](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), making them available as tools within Claude Code. Unlike basic web search, Tavily specializes in AI-optimized search results with semantic understanding, making it particularly effective for research tasks that require nuanced information retrieval.
 
 The MCP server architecture allows you to maintain persistent connections and use Claude's native tool-calling capabilities, which means you can build multi-step research workflows that combine search results with other skills like PDF processing, document generation, and memory management.
 

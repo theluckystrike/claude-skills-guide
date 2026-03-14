@@ -12,7 +12,7 @@ score: 7
 
 # What Is the Best Claude Skill for Generating Documentation
 
-[Documentation remains one of the most time-consuming aspects of software development](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Whether you are maintaining API reference docs, writing README files, or creating internal knowledge bases, the repetitive nature of documentation work makes it an ideal candidate for automation. Claude Code offers several skills designed specifically for this purpose, each with distinct strengths depending on your workflow.
+[Documentation remains one of the most time-consuming aspects of software development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Whether you are maintaining API reference docs, writing README files, or creating internal knowledge bases, the repetitive nature of documentation work makes it an ideal candidate for automation. Claude Code offers several skills designed specifically for this purpose, each with distinct strengths depending on your workflow.
 
 ## Understanding Claude Skills for Documentation
 

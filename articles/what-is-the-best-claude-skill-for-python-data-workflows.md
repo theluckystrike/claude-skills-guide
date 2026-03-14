@@ -12,7 +12,7 @@ score: 8
 
 # What Is the Best Claude Skill for Python Data Workflows
 
-[Python powers the modern data stack](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) From pandas transformations to scikit-learn pipelines, developers rely on Python for everything from quick data exploration to production-grade machine learning systems. When working with Claude Code, the right skill can dramatically accelerate your data workflows.
+[Python powers the modern data stack](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) From pandas transformations to scikit-learn pipelines, developers rely on Python for everything from quick data exploration to production-grade machine learning systems. When working with Claude Code, the right skill can dramatically accelerate your data workflows.
 
 But with dozens of skills available, which one actually delivers the most value for Python data work?
 

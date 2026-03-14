@@ -12,7 +12,7 @@ score: 9
 
 # What Is the Best Way to Organize Claude Skills in a Monorepo
 
-[Managing multiple Claude skills across several projects becomes unwieldy without a clear organizational strategy](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) A monorepo approach centralizes your skill library, enables shared dependencies, and simplifies version control. This guide covers practical approaches for developers and power users who want to maintain a scalable skill architecture.
+[Managing multiple Claude skills across several projects becomes unwieldy without a clear organizational strategy](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) A monorepo approach centralizes your skill library, enables shared dependencies, and simplifies version control. This guide covers practical approaches for developers and power users who want to maintain a scalable skill architecture.
 
 ## Understanding Skill Structure
 

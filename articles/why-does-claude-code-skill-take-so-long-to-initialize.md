@@ -12,7 +12,7 @@ score: 9
 
 # Why Does Claude Code Skill Take So Long to Initialize?
 
-[If you've ever typed /pdf and waited several seconds before Claude responded, you've experienced skill initialization](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) This delay puzzles many developers and power users. Understanding what happens during those seconds helps you optimize your workflow and choose skills that load faster.
+[If you've ever typed /pdf and waited several seconds before Claude responded, you've experienced skill initialization](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) This delay puzzles many developers and power users. Understanding what happens during those seconds helps you optimize your workflow and choose skills that load faster.
 
 ## What Happens When a Skill Initializes
 

@@ -12,7 +12,7 @@ score: 8
 
 # Rate Limit Management for Skill-Intensive Claude Code Workflows
 
-[When running skill-intensive workflows with Claude Code, hitting rate limits is a real concern](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Batch-processing documents with `/pdf`, generating test suites with `/tdd`, or building multiple frontend components with `/frontend-design` all consume API resources. This guide covers practical strategies for staying within rate limits.
+[When running skill-intensive workflows with Claude Code, hitting rate limits is a real concern](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Batch-processing documents with `/pdf`, generating test suites with `/tdd`, or building multiple frontend components with `/frontend-design` all consume API resources. This guide covers practical strategies for staying within rate limits.
 
 ## Understanding Rate Limits in Claude Code
 

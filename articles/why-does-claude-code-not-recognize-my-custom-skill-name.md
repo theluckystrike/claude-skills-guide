@@ -12,7 +12,7 @@ score: 9
 
 # Why Does Claude Code Not Recognize My Custom Skill Name?
 
-[You've created a custom skill, placed it in the right directory, but when you try to invoke it with /skill-name, Claude Code gives you a confused response](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). Your skill isn't loading. This is a common issue with several potential causes. Let's walk through why this happens and how to fix it.
+[You've created a custom skill, placed it in the right directory, but when you try to invoke it with /skill-name, Claude Code gives you a confused response](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Your skill isn't loading. This is a common issue with several potential causes. Let's walk through why this happens and how to fix it.
 
 ## Where Claude Looks for Skills
 

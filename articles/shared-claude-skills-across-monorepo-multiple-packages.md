@@ -16,7 +16,7 @@ Managing Claude skills across a [monorepo](/claude-skills-guide/how-do-i-share-c
 
 ## Understanding the Monorepo Challenge
 
-[Monorepos offer undeniable benefits: unified dependency management, shared tooling, and atomic commits across packages](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) However, they also create specific challenges for Claude skills. Each package may require different skill sets—a backend API package needs different workflows than a frontend UI package. Yet certain skills should be universal: code quality checks, testing patterns, and documentation generation should work consistently everywhere.
+[Monorepos offer undeniable benefits: unified dependency management, shared tooling, and atomic commits across packages](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) However, they also create specific challenges for Claude skills. Each package may require different skill sets—a backend API package needs different workflows than a frontend UI package. Yet certain skills should be universal: code quality checks, testing patterns, and documentation generation should work consistently everywhere.
 
 The key is separating package-specific skills from shared skills, then making both accessible through a clear hierarchy.
 
