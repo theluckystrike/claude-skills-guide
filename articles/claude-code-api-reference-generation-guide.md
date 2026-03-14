@@ -1,201 +1,192 @@
 ---
 layout: default
 title: "Claude Code API Reference Generation Guide"
-description: "Learn how to generate comprehensive API references automatically using Claude Code skills and workflows. Practical examples for developers."
+description: "Learn how to generate API references automatically using Claude Code skills. Practical examples with frontend-design, pdf, and documentation workflows."
 date: 2026-03-14
+categories: [tutorials]
+tags: [claude-code, claude-skills, api-reference, documentation, automation, pdf, frontend-design, supermemory]
 author: theluckystrike
+reviewed: true
+score: 8
 permalink: /claude-code-api-reference-generation-guide/
 ---
 
 # Claude Code API Reference Generation Guide
 
-API documentation serves as the contract between your service and its consumers. When documentation drifts from implementation, integration problems follow. Generating API references automatically keeps your docs aligned with your code, saving hours of manual maintenance while reducing integration bugs.
-
-This guide covers practical workflows for generating API references using Claude Code and its skill ecosystem.
+API reference documentation is critical for any library or service, yet manually maintaining it drains developer time. Claude Code skills provide a practical solution for generating accurate, up-to-date API references directly from your codebase. This guide walks through building an automated API reference generation workflow.
 
 ## What You Need
 
-- Claude Code installed on your machine
-- A codebase with API endpoints (REST, GraphQL, or RPC)
-- Optional: the `pdf` skill for formatted output
-- Optional: the `supermemory` skill for storing documentation context across sessions
-- Optional: the `tdd` skill for generating tests alongside documentation
+Before starting, ensure you have:
 
-Claude Code reads your codebase directly and produces structured documentation without requiring additional CI pipelines or external services.
+- Claude Code installed and configured
+- A project with documented functions, classes, or endpoints
+- The `pdf` skill for generating formatted output
+- The `supermemory` skill for tracking documentation changes
+- Optional: the `frontend-design` skill for styling generated docs
 
-## Understanding API Reference Generation
+You do not need additional tooling or paid services. The workflow uses skills that load directly into Claude Code.
 
-API reference generation extracts information from your source code and produces machine-readable documentation. This includes endpoint paths, HTTP methods, request/response schemas, parameter types, authentication requirements, and error codes.
+## Step 1: Set Up Your Documentation Structure
 
-Traditional approaches require developers to write documentation manually in tools like Swagger UI or OpenAPI. The maintenance burden increases with codebase complexity. Claude Code automates this by reading your route definitions, controller files, and type annotations to produce documentation that stays in sync with your implementation.
-
-The workflow works best with projects using TypeScript, Python with type hints, or languages with strong type systems. The documentation quality depends on how well your code is annotated, so adding proper types and comments improves output.
-
-## Step 1: Identify Your API Surface
-
-Before generating documentation, understand what your API exposes. Start a Claude Code session and ask:
+Create a dedicated folder for API documentation in your project:
 
 ```
-List all API endpoints in this project. Include:
-- Route files and their paths
-- HTTP methods used
-- Any middleware or authentication layers
-- Request/response type definitions
+project/
+├── src/
+│   └── api/
+│       ├── users.js
+│       └── orders.js
+├── docs/
+│   └── api-reference/
+└── package.json
 ```
 
-Claude scans your project structure and returns a summary of all API-related files. For a typical Node.js Express project, the output looks like:
+Initialize the folder structure first. Then add documentation comments to your source files using JSDoc or similar formats. Claude reads these comments when generating references.
 
-```
-API Surface Summary:
-- src/routes/auth.ts: POST /auth/login, POST /auth/register
-- src/routes/users.ts: GET /users, GET /users/:id, PUT /users/:id
-- src/routes/products.ts: GET /products, POST /products, DELETE /products/:id
-- src/middleware/auth.ts: JWT validation middleware
-- src/types/api.ts: Shared request/response types
-```
+For example, a documented function in `src/api/users.js`:
 
-Save this summary to supermemory for future reference:
-
-```
-/supermemory
-Store API surface summary:
-- 3 main route files
-- 8 total endpoints
-- JWT authentication on protected routes
-- Shared types in src/types/api.ts
-```
-
-## Step 2: Generate Endpoint Documentation
-
-With your API surface mapped, generate documentation for each endpoint. Ask Claude:
-
-```
-Generate API documentation for each endpoint in src/routes/.
-For each endpoint include:
-- Full path and HTTP method
-- Request parameters and body schema
-- Response status codes and body schema
-- Authentication requirements
-- Example request/response pairs
-Format as Markdown suitable for a README or API docs.
-```
-
-Claude reads your route handlers, extracts type information, and produces structured documentation. A typical output section looks like:
-
-### GET /users/:id
-
-Retrieves a user by their unique identifier.
-
-**Authentication:** Required (Bearer token)
-
-**Path Parameters:**
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| id | string | User's unique UUID |
-
-**Response (200):**
-```json
-{
-  "id": "550e8400-e29b-41d4-a716-446655440000",
-  "email": "user@example.com",
-  "createdAt": "2026-01-15T10:30:00Z"
+```javascript
+/**
+ * Fetch a user by their unique identifier.
+ * @param {string} userId - The user's unique ID
+ * @param {Object} options - Fetch options
+ * @param {boolean} options.includeProfile - Include full profile data
+ * @returns {Promise<User>} The user object
+ * @throws {NotFoundError} When user does not exist
+ */
+async function getUser(userId, options = {}) {
+  // implementation
 }
 ```
 
-**Response (404):**
-```json
-{
-  "error": "User not found"
-}
-```
+## Step 2: Configure Claude for API Documentation
 
-This documentation reflects your actual implementation, not hand-written specs that may have drifted.
+Create a skill configuration for API reference generation. The `pdf` skill handles output formatting, while `supermemory` tracks which endpoints have been documented.
 
-## Step 3: Generate OpenAPI/Swagger Definitions
-
-For teams using OpenAPI specifications, Claude can generate a complete `openapi.yaml` or `swagger.json` file. Ask:
+Load both skills in your Claude session:
 
 ```
-Generate an OpenAPI 3.0 specification for all endpoints in this project.
-Include:
-- All paths, methods, and parameters
-- RequestBody schemas with examples
-- Response schemas for each status code
-- Security schemes (Bearer Auth)
-- Operation IDs and tags for organization
-Output as valid YAML.
+/load pdf
+/load supermemory
 ```
 
-The generated specification works directly with tools like Swagger UI, Postman, and API gateways. You can commit this file to your repository and automate regeneration on each release.
-
-## Step 4: Add Examples with TDD Integration
-
-Strong API documentation includes practical examples. The `tdd` skill helps by generating test cases that serve as living examples. Ask:
+Define the documentation scope:
 
 ```
-Using the tdd skill, generate test cases for all user-facing API endpoints.
-Include:
-- Happy path tests for each endpoint
-- Error case tests (invalid input, unauthorized access)
-- Edge cases (empty results, large payloads)
-Output tests that can run with your existing test framework.
+I am building API reference documentation for my project.
+Scan src/api/ for all exported functions and classes.
+Generate reference entries with: function signature, parameters, return type, 
+examples, and any thrown errors.
+Output to docs/api-reference/
 ```
 
-These tests validate your documentation assumptions while providing copy-paste examples for API consumers.
+## Step 3: Generate the Initial Reference
 
-## Step 5: Export Formatted Documentation
+Claude scans your source files and extracts documentation comments. The output depends on your comment quality.
 
-The `pdf` skill converts your Markdown documentation into professional PDF output. Ask:
+A typical generation output:
 
 ```
-Use the pdf skill to generate a formatted API reference document.
-Include:
-- Table of contents
-- Grouped endpoints by resource
-- Syntax-highlighted code examples
-- Version number and generation date
-Output to docs/api-reference.pdf
+Processing: src/api/users.js
+- getUser(userId, options) ✓
+- createUser(data) ✓
+- updateUser(userId, data) - MISSING return docs
+
+Processing: src/api/orders.js
+- getOrder(orderId) ✓
+- listOrders(filters) - MISSING examples
 ```
 
-This produces a distributable document suitable for external stakeholders or offline reading.
+Review the output and fill gaps in your source comments. The `tdd` skill helps here—it ensures your documentation matches actual behavior by cross-referencing tests with implementation.
 
-## Automating the Workflow
+## Step 4: Format and Style the Output
 
-To keep documentation current, integrate generation into your development workflow:
+The `frontend-design` skill improves visual presentation. Apply consistent styling:
 
-1. **Pre-commit hook**: Run documentation generation before each commit to catch drift early
-2. **CI pipeline**: Generate docs as part of your build process and publish to your docs site
-3. **Release process**: Regenerate documentation on each version bump and include changelog
-
-Example pre-commit script:
-
-```bash
-#!/bin/bash
-# Generate API docs before commit
-claude "Generate API documentation for src/routes/ and save to docs/api-reference.md"
-git add docs/api-reference.md
+```
+Apply documentation styling to docs/api-reference/
+Use: grouped by module, alphabetical within groups,
+code blocks with syntax highlighting, clear parameter tables
 ```
 
-## Common Pitfalls
+This skill generates CSS and templates for readable output. It works alongside the `pdf` skill to produce both HTML and PDF versions of your API reference.
 
-Documentation generation works best when your code is well-structured. Watch for these issues:
+For PDF output specifically:
 
-- **Missing types**: Routes without type annotations produce incomplete docs
-- **Inconsistent naming**: Mixed naming conventions confuse both humans and generated output
-- **Complex nested objects**: Deeply nested types may not render clearly without flattening
-- **Authentication complexity**: APIs with multiple auth methods need explicit documentation of each flow
+```
+Using the pdf skill, compile docs/api-reference/ into a single
+API-Reference.pdf file with table of contents, page numbers,
+and consistent formatting.
+```
 
-Addressing these in your codebase improves both code quality and documentation accuracy.
+## Step 5: Automate Updates
 
-## What Comes Next
+Keep references in sync with code changes using a simple update workflow:
 
-With generated API references, you can explore complementary workflows:
+1. After any API change, run the generation command
+2. Compare output with previous version using git diff
+3. Commit updated documentation alongside code
 
-- Generate SDKs automatically from your OpenAPI spec using tools like openapi-generator
-- Create interactive API explorers using Swagger UI or Redoc
-- Build contract tests that validate your implementation matches documentation
-- Use supermemory to track API versions and deprecation schedules
+Store documentation decisions in `supermemory`:
 
-API reference generation transforms documentation from a chore into a byproduct of good coding practices. Your documentation stays current because it derives directly from your implementation.
+```
+Remember: our API reference uses the following conventions:
+- Parameters marked optional are wrapped in [] 
+- Return types use TypeScript-style notation
+- Examples show both success and error cases
+- Every endpoint includes a curl command
+```
+
+This ensures consistency across regeneration cycles.
+
+## Example: Complete Workflow
+
+A practical session with Claude Code:
+
+```
+> /load pdf
+> /load supermemory
+> /load tdd
+
+> Generate API reference for src/api/ v2.0
+  Include: authentication, users, orders, webhooks modules
+  Output format: Markdown with YAML front matter
+  Add: version badge, changelog link, rate limit notes
+
+Claude processes each module:
+- authentication.md: 4 endpoints documented
+- users.md: 7 endpoints, 2 need examples added
+- orders.md: 5 endpoints complete
+- webhooks.md: NEW - 3 events documented
+
+> Apply frontend-design styling
+  Theme: clean, developer-focused, dark-mode compatible
+
+> Compile to PDF using pdf skill
+  Output: docs/api-reference-v2.0.pdf
+```
+
+## Troubleshooting Common Issues
+
+**Missing parameter documentation**: Add JSDoc comments directly in source. Claude cannot document what is not there.
+
+**Outdated return types**: Run the `tdd` skill alongside generation—it compares documented types with actual implementation.
+
+**Formatting inconsistencies**: Define a documentation style guide in `supermemory` and reference it during each generation.
+
+**Large APIs timeout**: Process modules individually, then merge. The `pdf` skill combines multiple files into a single document at the end.
+
+## Extending the Workflow
+
+Once the basic workflow is solid, extend it with additional skills:
+
+- Add `supermemory` for cross-session documentation memory
+- Use `frontend-design` for branded, custom-styled docs
+- Integrate with CI/CD using the `tdd` skill for pre-deployment validation
+
+The `pdf` skill handles final output, while source comments remain the single source of truth for your API surface.
+
+---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
