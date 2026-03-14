@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Make Claude Code Test Before Implementing Feature"
-description: A practical guide for developers to ensure Claude Code writes tests before implementing new features. Includes skill recommendations and configuration.
+description: "A practical guide for developers to ensure Claude Code writes tests before implementing new features. Includes skill recommendations and configuration."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, testing, tdd, claude-skills, code-quality]

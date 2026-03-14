@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills for Travel Booking Platforms"
-description: Build specialized Claude skills for travel booking platforms. Practical examples for flight search, hotel aggregation, price tracking, and itinerary.
+description: "Build specialized Claude skills for travel booking platforms. Practical examples for flight search, hotel aggregation, price tracking, and itinerary."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]

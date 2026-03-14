@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Make Claude Code Make Smaller Focused Changes"
-description: A practical guide for developers to get Claude Code to generate smaller, targeted code changes instead of large rewrites.
+description: "A practical guide for developers to get Claude Code to generate smaller, targeted code changes instead of large rewrites."
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, output-quality]

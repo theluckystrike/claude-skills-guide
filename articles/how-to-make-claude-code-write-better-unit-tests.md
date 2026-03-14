@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Make Claude Code Write Better Unit Tests"
-description: Practical strategies to improve unit test quality when working with Claude Code. Learn prompt engineering techniques, skill selection, and workflow patterns.
+description: "Practical strategies to improve unit test quality when working with Claude Code. Learn prompt engineering techniques, skill selection, and workflow patterns."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-write-better-unit-tests/

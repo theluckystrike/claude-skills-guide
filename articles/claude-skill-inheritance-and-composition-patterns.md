@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skill Inheritance and Composition Patterns"
-description: Master Claude skill inheritance and composition patterns. Learn how to build modular, reusable skills that combine multiple capabilities for complex.
+description: "Master Claude skill inheritance and composition patterns. Learn how to build modular, reusable skills that combine multiple capabilities for complex."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, skill-composition, skill-inheritance, automation, workflows]

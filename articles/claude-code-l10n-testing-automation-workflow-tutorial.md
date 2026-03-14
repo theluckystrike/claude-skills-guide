@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code L10n Testing Automation Workflow Tutorial"
-description: Build automated localization testing pipelines with Claude Code skills. Learn to integrate tdd, pdf, and supermemory skills for comprehensive l10n.
+description: "Build automated localization testing pipelines with Claude Code skills. Learn to integrate tdd, pdf, and supermemory skills for comprehensive l10n."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, l10n, testing, automation, i18n]

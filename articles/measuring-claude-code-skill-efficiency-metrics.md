@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Measuring Claude Code Skill Efficiency Metrics"
-description: A practical guide to measuring and optimizing Claude Code skill efficiency. Learn which metrics matter, how to track them, and which skills deliver the.
+description: "A practical guide to measuring and optimizing Claude Code skill efficiency. Learn which metrics matter, how to track them, and which skills deliver the."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, metrics, efficiency, tdd, pdf, xlsx, frontend-design, supermemory, skill-optimization]

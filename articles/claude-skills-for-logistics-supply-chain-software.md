@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills for Logistics Supply Chain Software"
-description: Learn how Claude skills automate logistics workflows, inventory management, and supply chain operations. Practical examples and code snippets for.
+description: "Learn how Claude skills automate logistics workflows, inventory management, and supply chain operations. Practical examples and code snippets for."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]

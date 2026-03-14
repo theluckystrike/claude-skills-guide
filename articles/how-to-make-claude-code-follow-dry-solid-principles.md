@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Make Claude Code Follow DRY and SOLID Principles"
-description: A practical guide for developers to ensure Claude Code generates code that follows DRY and SOLID principles. Includes skill configurations, prompt patterns, and real.
+description: "A practical guide for developers to ensure Claude Code generates code that follows DRY and SOLID principles. Includes skill configurations, prompt patterns, and real."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-follow-dry-solid-principles/

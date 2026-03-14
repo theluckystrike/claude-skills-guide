@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Multi-Agent Orchestration Patterns Guide"
-description: A practical guide to building multi-agent orchestration systems with Claude Code. Learn patterns, code examples, and skill integration for developer.
+description: "A practical guide to building multi-agent orchestration systems with Claude Code. Learn patterns, code examples, and skill integration for developer."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [advanced]

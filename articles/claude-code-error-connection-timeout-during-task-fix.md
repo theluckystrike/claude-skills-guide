@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Error Connection Timeout During Task Fix"
-description: Practical solutions for fixing connection timeout errors in Claude Code during long-running tasks. Debug network issues, adjust timeouts, and keep your AI.
+description: "Practical solutions for fixing connection timeout errors in Claude Code during long-running tasks. Debug network issues, adjust timeouts, and keep your AI."
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, error-fix, connection-timeout, troubleshooting, network, productivity]

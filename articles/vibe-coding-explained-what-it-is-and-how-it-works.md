@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Vibe Coding Explained: What It Is and How It Works"
-description: A practical guide to vibe coding with Claude Code. Learn how AI-assisted coding works, when to use it, and how to integrate skills like frontend-design.
+description: "A practical guide to vibe coding with Claude Code. Learn how AI-assisted coding works, when to use it, and how to integrate skills like frontend-design."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, vibe-coding, ai-assisted-coding, workflow, productivity]

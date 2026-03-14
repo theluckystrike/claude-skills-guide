@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AWS MCP Server Cloud Automation with Claude Code"
-description: Learn how to automate AWS infrastructure using the Model Context Protocol server and Claude Code. Practical examples, configuration patterns, and workflow.
+description: "Learn how to automate AWS infrastructure using the Model Context Protocol server and Claude Code. Practical examples, configuration patterns, and workflow."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, aws, mcp, cloud-automation, infrastructure, devops]

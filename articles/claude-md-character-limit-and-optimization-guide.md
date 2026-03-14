@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude MD Character Limit and Optimization Guide"
-description: A practical guide to understanding and working within Claude MD file character limits. Learn optimization techniques for skills, prompts, and context.
+description: "A practical guide to understanding and working within Claude MD file character limits. Learn optimization techniques for skills, prompts, and context."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, claude-md, character-limit, optimization]

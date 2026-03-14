@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills for Insurance Claims Processing"
-description: Build Claude Code skills that automate insurance claims processing workflows. Practical patterns for document extraction, validation, fraud detection, and.
+description: "Build Claude Code skills that automate insurance claims processing workflows. Practical patterns for document extraction, validation, fraud detection, and."
 date: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, insurance, claims-processing, automation]

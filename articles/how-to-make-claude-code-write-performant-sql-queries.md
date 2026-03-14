@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Make Claude Code Write Performant SQL Queries"
-description: A practical guide to getting Claude Code to generate efficient, optimized SQL queries. Learn prompt engineering techniques and skill combinations.
+description: "A practical guide to getting Claude Code to generate efficient, optimized SQL queries. Learn prompt engineering techniques and skill combinations."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, sql, performance, database, claude-skills, tdd, code-review]

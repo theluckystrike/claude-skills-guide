@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Students: Homework and Projects"
-description: A practical guide for students using Claude Code to accelerate homework completion and project development. Includes code examples, workflow patterns, and.
+description: "A practical guide for students using Claude Code to accelerate homework completion and project development. Includes code examples, workflow patterns, and."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, students, productivity, learning]

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills Feature Flag Implementation Workflow"
-description: Learn how to implement feature flags in Claude skills for controlled rollouts, A/B testing, and safe deployments. Practical code examples and workflow.
+description: "Learn how to implement feature flags in Claude skills for controlled rollouts, A/B testing, and safe deployments. Practical code examples and workflow."
 date: 2026-03-14
 categories: [workflows]
 tags: [claude-code, claude-skills, feature-flags, devops]

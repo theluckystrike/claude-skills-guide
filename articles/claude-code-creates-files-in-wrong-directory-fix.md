@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Creates Files in Wrong Directory Fix"
-description: A practical guide to fixing file path issues when Claude Code skills create files in unexpected directories. Includes troubleshooting steps and code.
+description: "A practical guide to fixing file path issues when Claude Code skills create files in unexpected directories. Includes troubleshooting steps and code."
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, file-path, debugging, troubleshooting]

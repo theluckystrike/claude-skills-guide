@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Cloudflare MCP Server Edge Automation Workflow"
-description: Learn how to automate Cloudflare edge deployments using the Model Context Protocol server. Practical configuration, Workers automation, and DNS management.
+description: "Learn how to automate Cloudflare edge deployments using the Model Context Protocol server. Practical configuration, Workers automation, and DNS management."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, cloudflare, mcp, edge-computing, serverless, automation]

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Will Claude Skills Support Voice Interfaces in 2026?"
-description: A practical look at voice interface support for Claude Code skills in 2026. Current capabilities, workarounds, and what to expect for voice-driven.
+description: "A practical look at voice interface support for Claude Code skills in 2026. Current capabilities, workarounds, and what to expect for voice-driven."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, voice-interfaces, voice-input, 2026, workflow-automation]

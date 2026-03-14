@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Agent Pipeline: Sequential vs Parallel Execution"
-description: Understand when to use sequential vs parallel [agent pipeline design with Claude Code](/claude-skills-guide/best-claude-code-skills-to-install-first-202...
+description: "Understand when to use sequential vs parallel [agent pipeline design with Claude Code](/claude-skills-guide/best-claude-code-skills-to-install-first-202..."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [advanced]

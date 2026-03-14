@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code GitHub Actions Matrix Builds Guide"
-description: Learn how to build efficient CI/CD pipelines using GitHub Actions matrix strategies with Claude Code. Practical examples for multi-version testing across.
+description: "Learn how to build efficient CI/CD pipelines using GitHub Actions matrix strategies with Claude Code. Practical examples for multi-version testing across."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, github-actions, matrix-builds, cicd, testing]

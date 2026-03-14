@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Agent Swarm Coordination Strategies"
-description: Practical strategies for coordinating multiple Claude Code agents in parallel. Learn about fan-out/fan-in patterns, message routing, and state.
+description: "Practical strategies for coordinating multiple Claude Code agents in parallel. Learn about fan-out/fan-in patterns, message routing, and state."
 date: 2026-03-14
 author: "Claude Skills Guide"
 reviewed: true

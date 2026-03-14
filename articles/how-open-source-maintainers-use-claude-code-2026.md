@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How Open Source Maintainers Use Claude Code in 2026"
-description: A practical guide for developers on how open source maintainers are using Claude Code CLI to manage repositories, automate documentation, write tests, and.
+description: "A practical guide for developers on how open source maintainers are using Claude Code CLI to manage repositories, automate documentation, write tests, and."
 date: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, open-source, maintainers, workflow]

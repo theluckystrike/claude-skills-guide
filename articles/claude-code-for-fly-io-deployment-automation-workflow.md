@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Fly.io Deployment Automation Workflow"
-description: Learn how to automate Fly.io deployments using Claude Code. Streamline your container workflow, manage multi-region deployments, and automate health.
+description: "Learn how to automate Fly.io deployments using Claude Code. Streamline your container workflow, manage multi-region deployments, and automate health."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, fly-io, deployment, devops, automation]

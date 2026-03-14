@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Puppeteer MCP Server Web Automation Workflow"
-description: Master web automation using Puppeteer MCP server with Claude Code. Learn practical workflows for browser testing, data extraction, and automated.
+description: "Master web automation using Puppeteer MCP server with Claude Code. Learn practical workflows for browser testing, data extraction, and automated."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, mcp, puppeteer, web-automation, browser-automation]

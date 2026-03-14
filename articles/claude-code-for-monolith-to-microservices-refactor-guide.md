@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Monolith to Microservices Refactor Guide"
-description: Use Claude Code to refactor monolithic applications into microservices. Strategies, code patterns, and skill recommendations for successful architecture.
+description: "Use Claude Code to refactor monolithic applications into microservices. Strategies, code patterns, and skill recommendations for successful architecture."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, microservices, refactoring, architecture]

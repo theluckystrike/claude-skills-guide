@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Claude Skills Integrations: Every Platform & API (2026)
+title: "Claude Skills Integrations: Every Platform & API (2026)"
 description: "Connect Claude skills to any platform: GitHub Actions, n8n, Zapier, Supabase, Notion, Slack, and every major developer tool."
 date: 2026-03-14
 categories: [guides]

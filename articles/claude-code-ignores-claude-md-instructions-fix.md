@@ -12,6 +12,7 @@ score: 7
 ---
 {% raw %}
 
+
 # Claude Code Ignores .md Instructions Fix
 
 Your Claude skill `.md` file sits in `~/.claude/skills/`, but Claude Code seems to ignore your carefully written instructions. This is a common issue that most developers encounter when building custom skills. Here is a practical guide to diagnosing and fixing the problem.
@@ -142,7 +143,7 @@ Claude Code has built-in priority for native skills over custom skills with the 
 
 ## Common Pitfalls to Avoid
 
-Do not include Liquid template syntax like `{{ }}` or `{% %}` in skill instructions unless properly escaped. These can interfere with Jekyll processing if your skills repository uses static site generation. If you need to reference template syntax, write it as literal text without the delimiters.
+Do not include Liquid template syntax like double braces or percent tags in skill instructions unless properly escaped. These can interfere with Jekyll processing if your skills repository uses static site generation. If you need to reference template syntax, write it as literal text without the delimiters.
 
 Avoid excessive instruction length. Skills with more than 500 words of instructions often see reduced accuracy. Break complex workflows into multiple skills rather than cramming everything into one file.
 

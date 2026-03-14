@@ -1,7 +1,7 @@
 ---
 layout: default
-title: MCP Server Supply Chain Security Risks (2026)
-description: Understand the supply chain security risks when using MCP servers with Claude Code. Learn how to audit, secure, and mitigate vulnerabilities in your MCP.
+title: "MCP Server Supply Chain Security Risks (2026)"
+description: "Understand the supply chain security risks when using MCP servers with Claude Code. Learn how to audit, secure, and mitigate vulnerabilities in your MCP."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, mcp, security, supply-chain, devops]

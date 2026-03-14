@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "MCP Server Logging, Audit Trail, and Security Guide"
-description: A practical guide to implementing secure logging and audit trails for MCP servers. Includes code examples, security best practices, and integration.
+description: "A practical guide to implementing secure logging and audit trails for MCP servers. Includes code examples, security best practices, and integration."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, mcp, security, logging, audit-trail]
