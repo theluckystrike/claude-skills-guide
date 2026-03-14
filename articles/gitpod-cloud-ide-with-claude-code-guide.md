@@ -45,15 +45,15 @@ tasks:
   - init: |
       curl -s https://raw.githubusercontent.com/anthropics/claude-code/main/install.sh | sh
       export PATH="$HOME/.local/bin:$PATH"
-      claude skill install pdf
-      claude skill install frontend-design
-      claude skill install tdd
+      # Copy skill .md files into .claude/ directory to make them available
+      mkdir -p .claude
+      # Add your skill files here (pdf.md, frontend-design.md, tdd.md, etc.)
     command: |
       export PATH="$HOME/.local/bin:$PATH"
       claude
 ```
 
-This approach pre-installs skills like the **pdf** skill for document generation, **frontend-design** for UI development, and **tdd** for test-driven development workflows.
+This approach pre-loads skills like the **pdf** skill for document generation, **frontend-design** for UI development, and **tdd** for test-driven development workflows. Skills are `.md` files in your `.claude/` directory — invoke them with `/pdf`, `/frontend-design`, or `/tdd` during a session.
 
 ## Connecting Claude Code to Your Gitpod Workspace
 
@@ -94,9 +94,10 @@ Claude skills extend Claude Code's capabilities for specific tasks. In a Gitpod 
 Install additional skills as needed:
 
 ```bash
-claude skill install docx
-claude skill install xlsx
-claude skill install pptx
+# Place skill .md files in .claude/ directory, then invoke during a session:
+/docx
+/xlsx
+/pptx
 ```
 
 These skills enable Claude Code to work with various file formats directly in your Gitpod workspace, useful for generating documentation, reports, or presentations without leaving your cloud environment.

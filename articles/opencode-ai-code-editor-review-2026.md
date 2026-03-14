@@ -39,9 +39,10 @@ This single command returns accurate answers because Claude Code has loaded your
 The skill system in Claude Code deserves specific attention. Unlike competitors with fixed feature sets, skills let you install specialized capabilities:
 
 ```bash
-claude skill install tdd
-claude skill install frontend-design
-claude skill install supermemory
+# Skills are .md files placed in .claude/ directory; invoke them with slash commands:
+/tdd
+/frontend-design
+/supermemory
 ```
 
 Each skill transforms Claude Code for specific workflows. The tdd skill structures test-driven development, frontend-design handles component creation, and supermemory maintains persistent context across sessions.
