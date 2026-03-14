@@ -10,6 +10,8 @@ tags: [claude-code, code-generation, templates]
 reviewed: true
 score: 8
 ---
+{% raw %}
+
 
 # Claude Code Code Generation Templates Guide
 
@@ -248,3 +250,4 @@ Code generation templates in Claude Code eliminate repetitive coding tasks while
 Start with simple templates for components and API handlers, then expand to more complex patterns as your needs grow. The investment in creating quality templates pays dividends in development speed and code consistency.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

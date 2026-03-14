@@ -9,6 +9,8 @@ permalink: /claude-code-release-automation-github-guide/
 categories: [guides]
 tags: [claude-code, github, automation, release]
 ---
+{% raw %}
+
 
 # Claude Code Release Automation GitHub Guide
 
@@ -329,3 +331,4 @@ Keep release automation maintainable and secure:
 Combining Claude Code with GitHub's automation capabilities creates powerful release pipelines. Start with simple tag-based workflows and progressively add changelog generation, artifact publishing, and multi-environment support. Each automation layer reduces manual effort and decreases the chance of human error during releases.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

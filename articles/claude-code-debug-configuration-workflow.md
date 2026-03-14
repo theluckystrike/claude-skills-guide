@@ -6,6 +6,8 @@ date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-debug-configuration-workflow/
 ---
+{% raw %}
+
 
 # Claude Code Debug Configuration Workflow
 
@@ -174,3 +176,4 @@ By following these patterns, you can resolve most configuration issues efficient
 The key is patience: configuration problems often have simple causes, and methodical investigation beats guessing every time.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
