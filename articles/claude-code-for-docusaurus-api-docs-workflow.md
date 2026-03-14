@@ -40,8 +40,6 @@ The first step is creating a dedicated Claude Skill for API documentation. This 
 
 ```markdown
 ---
-tools: [read_file, write_file, bash]
----
 
 # API Documentation Generator
 
@@ -124,7 +122,7 @@ For teams using continuous integration, you can automate documentation generatio
 
 ```bash
 # Generate API documentation
-claude --skill api-docs generate
+claude --print "Generate API documentation following the api-docs skill instructions"
 
 # Check for documentation changes
 git diff --name-only | grep docs/
