@@ -83,7 +83,7 @@ Client projects involve context spread across documentation, code, and previous 
 ```
 /supermemory store: Project Alpha uses JWT auth, Postgres 15, deployed on Fly.io. Client prefers Tailwind over CSS modules. Contact: sarah@client.com
 
-/supermemory search: Project Alpha deployment setup
+/supermemory What do you know about Project Alpha's deployment setup?
 ```
 
 When you return to a project after weeks away, supermemory means you don't re-explain the architecture from scratch. For freelancers juggling multiple clients, this compounds into significant time savings.
