@@ -2,7 +2,7 @@
 
 layout: default
 title: "How to Stop Claude Code from Modifying Unrelated Files"
-description: A practical guide for developers to prevent Claude Code from accidentally modifying files outside the intended scope of your tasks.
+description: "A practical guide for developers to prevent Claude Code from accidentally modifying files outside the intended scope of your tasks."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-stop-claude-code-from-modifying-unrelated-files/
