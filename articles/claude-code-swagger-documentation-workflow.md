@@ -48,165 +48,97 @@ The most reliable approach starts from your actual code. Claude Code can analyze
 
 For a FastAPI application, ask Claude Code to generate the documentation:
 
-```python
-from fastapi import FastAPI, Query
-from pydantic import BaseModel
-
-app = FastAPI()
-
-class Product(BaseModel):
-    id: int
-    name: str
-    price: float
-    category: str
-
-@app.get("/products", response_model=list[Product])
-async def list_products(
-    category: str = Query(None, description="Filter by category"),
-    min_price: float = Query(None, description="Minimum price"),
-    max_price: float = Query(None, description="Maximum price")
-):
-    # Implementation here
-    pass
-```
-
-Claude Code recognizes FastAPI's type annotations and decorator patterns, generating accurate parameter descriptions and response schemas automatically.
-
-## Integrating with CI/CD
-
-Automate documentation validation in your build pipeline. Create a script that validates your OpenAPI spec before deployment:
-
 ```bash
-#!/bin/bash
-# validate-spec.sh
-
-npx @redocly/cli lint api-specs/openapi.yaml --config .redocly.yaml
-
-npx @redocly/cli build-docs api-specs/openapi.yaml -o docs/index.html
-
-echo "Documentation built successfully"
+claude "Analyze this FastAPI application and generate an OpenAPI 3.0 spec for all routes in the /api directory. Save to api-specs/openapi.json"
 ```
 
-Add this to your GitHub Actions workflow:
+Claude Code reads your route decorators, Pydantic models, and response types to construct accurate specifications. This code-first approach eliminates the common problem of documentation diverging from implementation.
 
-```yaml
-name: API Documentation
-on: [push, pull_request]
+## Integrating with Testing Workflows
 
-jobs:
-  docs:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Validate OpenAPI Spec
-        run: ./validate-spec.sh
-      - name: Deploy Documentation
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+Pair your documentation workflow with the `tdd` skill to ensure specs and tests stay synchronized. When you generate documentation, automatically run contract tests to verify the API matches the specification.
+
+```python
+# test_contract.py - Auto-generated from OpenAPI spec
+import pytest
+from openapi_spec_validator import validate_spec
+
+def test_api_matches_spec():
+    with open("api-specs/openapi.json") as f:
+        spec = json.load(f)
+    validate_spec(spec)
 ```
+
+The `supermemory` skill helps track documentation changes across versions, making it easier to maintain historical records of API evolution.
 
 ## Generating Client SDKs
 
-Once your Swagger spec exists, generate client libraries automatically. The `xlsx` skill proves useful here—you can generate SDK comparison matrices documenting which languages and HTTP clients your team supports.
+Once you have a valid OpenAPI spec, Claude Code can generate client libraries in multiple languages. Use the specification to create type-safe SDKs for your consumers:
 
-Request SDK generation from Claude Code with specific requirements:
-
-```
-Generate a TypeScript axios client from our OpenAPI spec.
-Include:
-- Strict typing for all request/response models
-- Request interception for auth tokens
-- Error handling with custom exceptions
-- Unit tests for each endpoint method
+```bash
+claude "Generate a TypeScript client library from api-specs/openapi.json. Output to /sdk/typescript/"
 ```
 
-## Maintaining Documentation Quality
+This automation transforms your documentation into actionable client code, reducing the burden on consumers who would otherwise manually implement API integrations.
 
-Use Claude Code to audit your documentation completeness. Create a checklist skill that verifies:
+## Publishing Documentation
 
-- Every endpoint has request/response examples
-- All error codes are documented
-- Rate limiting details are present
-- Version compatibility is clear
-- Security schemes are properly defined
-
-This automated review catches gaps before consumers do.
-
-## Publishing Multi-Format Documentation
-
-Different audiences need different formats. Generate several versions from a single source:
-
-- **Interactive UI**: Redoc or Swagger UI for developers
-- **PDF Manuals**: Using the `pdf` skill for offline reference
-- **Markdown Guides**: Using `docx` skill for internal wikis
-
-```
-Generate a PDF API reference from openapi.yaml.
-Include:
-- Cover page with version and date
-- Table of contents
-- Grouped by resource type
-- Include code examples in each section
-```
-
-## Common Pitfalls and Solutions
-
-**Problem**: Generated specs miss custom validation logic.
-
-**Solution**: Add JSDoc comments or Python docstrings that Claude Code can parse:
-
-```python
-@app.get("/users/{user_id}")
-async def get_user(
-    user_id: int = Path(..., ge=1, description="The user's unique identifier")
-):
-    """Retrieve a user by ID.
-    
-    Returns 404 if user not found.
-    Raises 403 if user lacks permission to view.
-    """
-    pass
-```
-
-**Problem**: Documentation falls out of sync after refactoring.
-
-**Solution**: Implement pre-commit hooks that validate specs:
-
-```json
-{
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run validate:spec"
-    }
-  }
-}
-```
-
-## Advanced: Versioned Documentation
-
-For APIs with multiple versions, automate version-specific specs:
+The `frontend-design` skill assists with creating beautiful API documentation sites. Combine it with tools like Swagger UI or Redoc to render your specs as interactive documentation:
 
 ```yaml
-# openapi.v1.yaml
-openapi: 3.0.3
-info:
-  version: 1.0.0
-  title: API v1
-
-# openapi.v2.yaml  
-openapi: 3.0.3
-info:
-  version: 2.0.0
-  title: API v2
+# docker-compose.yml for documentation hosting
+services:
+  docs:
+    image: swaggerapi/swagger-ui
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./api-specs/openapi.json:/openapi.json
+    environment:
+      SWAGGER_JSON: /openapi.json
 ```
 
-Claude Code can compare versions and generate changelogs automatically, highlighting breaking changes between versions.
+Deploy this container alongside your API to provide always-current documentation that updates with each deployment.
+
+## Continuous Documentation Updates
+
+Integrate documentation generation into your CI/CD pipeline. Add a step that runs Claude Code to regenerate specs on every push:
+
+```yaml
+# .github/workflows/docs.yml
+name: API Documentation
+on: [push]
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate OpenAPI Spec
+        run: |
+          claude "Regenerate OpenAPI spec from current codebase"
+      - name: Update API Docs
+        run: |
+          docker build -t api-docs .
+          docker push ${{ secrets.REGISTRY }}/api-docs:latest
+```
+
+This automation ensures your documentation never falls out of sync with your codebase.
+
+## Handling Multi-Service Architectures
+
+For microservices, maintain a central specification repository. Claude Code can aggregate specs from multiple services into a unified API gateway documentation:
+
+```bash
+claude "Merge all OpenAPI specs in /services/*/openapi.json into a single gateway spec. Resolve any conflicting paths by prefixing with service name."
+```
+
+The `pdf` skill then generates a comprehensive PDF documentation package for offline reference, useful for teams that need consistent documentation across different environments.
 
 ## Conclusion
 
-Automating your Swagger documentation workflow with Claude Code eliminates manual drudgery and ensures accuracy. Start with code-first generation, integrate validation into your CI/CD pipeline, and publish multiple formats for different audiences. The initial setup time pays dividends in consistent, always-current API documentation.
+Claude Code transforms Swagger documentation from a manual burden into an automated pipeline. By generating specs from code, maintaining synchronization through CI/CD, and using skills like `pdf` and `docx` for output generation, you create a documentation system that scales with your API.
+
+The key is treating documentation as code—version-controlled, tested, and automatically generated from your implementation. This approach eliminates drift, saves time, and ensures your API consumers always have accurate information.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
