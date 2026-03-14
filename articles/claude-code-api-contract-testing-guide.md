@@ -1,9 +1,11 @@
 ---
 layout: default
 title: "Claude Code API Contract Testing Guide"
-description: "A practical guide to implementing API contract testing using Claude Code. Learn how to define contracts, validate responses, and integrate testing into your workflow with real code examples."
+description: "A practical guide to API contract testing with Claude Code. Learn how to integrate contract testing into your workflow using Claude skills and MCP servers."
 date: 2026-03-14
 author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, api-testing, contract-testing, development, mcp]
 permalink: /claude-code-api-contract-testing-guide/
 ---
 
@@ -11,175 +13,187 @@ permalink: /claude-code-api-contract-testing-guide/
 
 # Claude Code API Contract Testing Guide
 
-API contract testing ensures that services communicate correctly by validating requests and responses against a defined contract. This guide shows you how to implement contract testing using Claude Code, with practical examples and integration patterns for your development workflow.
+API contract testing ensures that services communicate correctly by verifying that both the provider and consumer adhere to a shared agreement. This guide shows you how to implement contract testing workflows using Claude Code, with practical examples and integration patterns.
 
-## What is API Contract Testing
+## What is API Contract Testing?
 
-Contract testing focuses on the interface between services rather than their internal behavior. You define what a service expects from another service—what fields are required, what types are allowed, and what responses to expect. Each service is then validated against this contract.
+Contract testing validates the interface between two services. Instead of running full integration tests across multiple services, you verify that each service conforms to a contract—a documented specification of request and response formats.
 
-There are two main approaches: consumer-driven contracts where the consuming service defines its expectations, and provider-driven contracts where the API publisher defines the specification. Claude Code can assist with both approaches using its skills system.
+When working with microservices or third-party APIs, contract testing catches breaking changes early. The [MCP protocol](https://modelcontextprotocol.io/) makes it straightforward to integrate these checks into Claude Code sessions.
 
-## Setting Up Contract Testing with Claude
+## Setting Up Contract Testing in Claude Code
 
-The `/tdd` skill helps structure your testing approach, but for contract testing specifically, you need to define contracts explicitly. Create a contract file in your project that specifies the expected request and response shapes.
+Before testing contracts, create a skill file to standardize your contract testing workflow. Save this as `~/.claude/skills/contract-testing.md`:
 
-A typical contract definition looks like this:
+```
+# Contract Testing Skill
 
-```json
-{
-  "consumer": "payment-service",
-  "provider": "user-api",
-  "interactions": [
-    {
-      "description": "Get user by ID",
-      "request": {
-        "method": "GET",
-        "path": "/api/users/{userId}"
+You help me test API contracts using Pact or OpenAPI validation.
+
+When I provide an API endpoint:
+1. Generate contract test cases covering happy paths and edge cases
+2. Verify response schemas match the expected format
+3. Test error conditions and status codes
+4. Document any assumptions about default values
+
+Use the pact-mock-service for consumer-driven contracts.
+```
+
+To activate this workflow, type `/contract` in your Claude Code session, then describe the endpoint you want to test.
+
+## Using Pact for Consumer-Driven Contracts
+
+Pact enables consumer-driven contracts where the client defines what it expects from the provider. Here's a practical example using JavaScript:
+
+```javascript
+const pact = require('@pact-foundation/pact');
+const axios = require('axios');
+
+const mockProvider = pact({
+  consumer: 'mobile-app',
+  provider: 'user-service',
+  port: 8080
+});
+
+describe('User API Contract', () => {
+  beforeAll(() => mockProvider.setup());
+  afterAll(() => mockProvider.finalize());
+
+  it('returns user profile with correct schema', async () => {
+    mockProvider.addInteraction({
+      state: 'a user exists',
+      uponReceiving: 'a request for user profile',
+      withRequest: {
+        method: 'GET',
+        path: '/api/users/123'
       },
-      "response": {
-        "status": 200,
-        "body": {
-          "userId": "string",
-          "email": "string",
-          "createdAt": "datetime"
+      willRespondWith: {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+        body: {
+          id: 123,
+          email: 'user@example.com',
+          name: 'Test User'
         }
       }
-    }
-  ]
-}
-```
+    });
 
-Use Claude Code to generate these contracts by describing your API endpoints. For example, ask Claude to create a contract specification for your user service, and it will generate the JSON structure with field types and constraints.
-
-## Validating Contracts in Your Workflow
-
-Once you have contracts defined, integrate validation into your development process. The validation checks that your implementation matches the contract specifications.
-
-For JavaScript projects, use a library like Pact or JSON Schema validator:
-
-```javascript
-const Ajv = require('ajv');
-const ajv = new Ajv({ allErrors: true });
-
-const userResponseSchema = {
-  type: 'object',
-  required: ['userId', 'email', 'createdAt'],
-  properties: {
-    userId: { type: 'string' },
-    email: { type: 'string', format: 'email' },
-    createdAt: { type: 'string', format: 'date-time' }
-  }
-};
-
-function validateUserResponse(response) {
-  const validate = ajv.compile(userResponseSchema);
-  if (!validate(response)) {
-    throw new Error(`Contract violation: ${validate.errors}`);
-  }
-  return true;
-}
-```
-
-Ask Claude Code to generate validation schemas from your contract definitions. Use the `/tdd` skill to structure these validations alongside your unit tests.
-
-## Consumer-Driven Contract Testing
-
-With consumer-driven contracts, each client defines what it needs from the provider. This approach gives you flexibility and catches breaking changes early.
-
-Generate a consumer contract by describing what your service expects:
-
-```
-Generate a consumer contract for my checkout service that calls the user API.
-The checkout service needs: user ID, email for receipt, and membership tier level.
-```
-
-Claude will produce a contract file that you can use to verify the provider still meets your requirements. Store these contracts in a central location or use a tool like Pact Broker to share them between services.
-
-Run consumer contract tests in your CI pipeline:
-
-```bash
-npx pact-broker can-i-deploy \
-  --pacticipant payment-service \
-  --version 1.0.0 \
-  --environment production
-```
-
-The `/supermemory` skill helps you track which contracts exist across your services and which versions are currently compatible.
-
-## Provider Contract Validation
-
-On the provider side, validate that your API implementation matches the published contract. Generate mock responses from your contract and test against your actual implementation.
-
-Use the `/frontend-design` skill when building APIs that serve frontend clients—the skill emphasizes ensuring the API contract matches what the frontend expects.
-
-Here's a validation script pattern:
-
-```javascript
-const request = require('supertest');
-const app = require('../src/app');
-
-describe('User API Contract Tests', () => {
-  const contract = require('./contracts/user-api.json');
-  
-  contract.interactions.forEach(interaction => {
-    it(interaction.description, async () => {
-      const response = await request(app)
-        .get(interaction.request.path.replace('{userId}', '123'));
-      
-      expect(response.status).toBe(interaction.response.status);
-      
-      if (interaction.response.body) {
-        Object.keys(interaction.response.body).forEach(field => {
-          expect(response.body).toHaveProperty(field);
-        });
-      }
+    const response = await axios.get('http://localhost:8080/api/users/123');
+    expect(response.data).toMatchObject({
+      id: 123,
+      email: 'user@example.com'
     });
   });
 });
 ```
 
-## Documenting Contracts with Claude
+Run the tests with `npx pact-tests` to verify the contract. The generated pact file can be shared with the provider team to ensure compatibility.
 
-The `/pdf` skill can generate contract documentation for stakeholders who need to understand API agreements without reading JSON files directly. Create a PDF that outlines each endpoint, its expected inputs, and response shapes.
+## Validating OpenAPI Specifications
 
-For internal documentation, ask Claude to convert your contract files into readable markdown:
+If your API uses OpenAPI (formerly Swagger), validate contracts directly against the specification. The [pdf skill](/claude-skills-guide/working-with-pdfs-using-claude-pdf-skill/) helps generate documentation from these specs:
 
+```javascript
+const Ajv = require('ajv');
+const openapiSchema = require('./openapi.json');
+
+const ajv = new Ajv({ strict: false });
+
+function validateApiResponse(endpoint, method, response, statusCode) {
+  const path = openapiSchema.paths[endpoint]?.[method];
+  const schema = path.responses[statusCode]?.content['application/json']?.schema;
+  
+  if (!schema) {
+    throw new Error(`No schema found for ${method} ${endpoint} (${statusCode})`);
+  }
+  
+  const validate = ajv.compile(schema);
+  const valid = validate(response);
+  
+  if (!valid) {
+    console.error('Contract violation:', validate.errors);
+    return false;
+  }
+  return true;
+}
+
+// Example validation
+const isValid = validateApiResponse('/api/users', 'get', 
+  { id: 1, name: 'John' }, 200);
+console.log('Contract valid:', isValid);
 ```
-Convert this JSON contract into markdown documentation with tables
-showing each field, its type, whether it's required, and a description.
+
+Integrate this validation into your test suite to fail builds when responses deviate from the OpenAPI specification.
+
+## MCP Servers for Contract Testing
+
+Several MCP servers enhance contract testing capabilities within Claude Code:
+
+The **HTTP MCP server** lets Claude make actual API calls during testing sessions. Configure it to point at your staging environment:
+
+```json
+{
+  "mcpServers": {
+    "http": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-http", ":3000"]
+    }
+  }
+}
 ```
+
+The **PostgreSQL MCP server** helps verify contract compliance when storing API responses in a database, ensuring data integrity across your system.
+
+## Automating Contract Tests in CI/CD
+
+Add contract tests to your pipeline to catch breaking changes before deployment:
+
+```yaml
+# .github/workflows/contract-tests.yml
+name: Contract Tests
+
+on: [push, pull_request]
+
+jobs:
+  contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run Pact tests
+        run: |
+          npm install
+          npm run test:pact
+      
+      - name: Publish contracts
+        if: github.ref == 'refs/heads/main'
+        run: |
+          npx pact-broker publish \
+            --pact-files ./pacts \
+            --broker-base-url ${{ secrets.PACT_BROKER_URL }}
+```
+
+This workflow publishes contracts to a broker where provider teams can verify they still meet consumer expectations.
+
+## Combining Contract Testing with TDD
+
+The [tdd skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) complements contract testing by ensuring your implementation matches both the contract and the business requirements. Start with contract tests to define the API interface, then use TDD for the implementation details.
+
+This dual approach catches two types of issues: contract violations (does the API work as promised?) and implementation bugs (does the code solve the actual problem?).
 
 ## Best Practices for Contract Testing
 
-Keep your contracts versioned. Each breaking change should result in a new contract version, allowing consumers to migrate gradually.
+Keep contracts small and focused. Test one logical unit per contract rather than combining multiple concerns. Version your contracts explicitly—when the API changes, create a new contract version rather than modifying the existing one.
 
-Use semantic versioning for contracts—major version changes indicate breaking changes, minor versions add optional fields, and patch versions fix documentation.
+Document contract assumptions. If your API returns timestamps in ISO 8601 format, note this in the contract. Use the [supermemory skill](/claude-skills-guide/using-claude-supermemory-skill-for-knowledge-management/) to maintain a living document of these decisions.
 
-Run contract tests in multiple environments. Validate contracts against staging before deploying to production to catch issues early.
+Run contract tests in parallel with unit tests. Contract tests are typically slower because they may involve network calls or file I/O, so separate them from fast unit tests that run on every commit.
 
-Maintain contracts close to the code that uses them. Include contract files in the same repository as your service, or use a dedicated contracts repository if you have many services sharing contracts.
+## Summary
 
-## Automating Contract Validation
+API contract testing with Claude Code combines clear workflow definitions through skills, robust validation through Pact and OpenAPI, and automated enforcement through CI/CD. The MCP protocol enables Claude to interact directly with your testing infrastructure, making it straightforward to validate contracts during development sessions.
 
-Integrate contract testing into your CI/CD pipeline. Add a step that runs contract validation before deployment:
-
-```yaml
-- name: Run Contract Tests
-  run: |
-    npm run test:contracts
-  env:
-    CONTRACT_VERSION: ${{ github.sha }}
-```
-
-The `/tdd` skill naturally encourages writing tests first, and you can extend this to contract tests by describing your API expectations before implementation.
-
-## Conclusion
-
-API contract testing with Claude Code combines AI-assisted workflow with rigorous validation. Define contracts explicitly, use consumer-driven approaches for flexibility, and integrate validation into your CI pipeline. Skills like `/tdd` for test structuring, `/supermemory` for tracking dependencies, `/frontend-design` for ensuring client-provider alignment, and `/pdf` for documentation generation create a comprehensive contract testing workflow.
-
-Start by documenting your existing APIs as contracts, then gradually add contract tests to your development process. The upfront investment prevents integration bugs and makes refactoring safer across service boundaries.
-
----
+Start by creating a contract testing skill, then add Pact or OpenAPI validation to your test suite. Integrate these checks into your CI pipeline to catch breaking changes before they reach production.
 
 {% endraw %}
 
