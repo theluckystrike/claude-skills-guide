@@ -5,6 +5,7 @@ description: "A practical guide to implementing internationalization workflows i
 date: 2026-03-14
 author: theluckystrike
 ---
+{% raw %}
 
 # Claude Code i18n Workflow for React Applications Guide
 
@@ -155,3 +156,4 @@ Claude Code transforms React i18n from a tedious manual process into an automate
 The investment in establishing this workflow pays dividends as your application grows to serve users in more languages and regions. Start with a solid foundation using react-i18next or i18next, then layer in Claude Code automation to handle the repetitive aspects of translation management.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

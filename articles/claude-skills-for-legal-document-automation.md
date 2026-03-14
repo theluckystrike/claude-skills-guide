@@ -7,6 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, legal-tech, document-automation, workflow]
 author: theluckystrike
 ---
+{% raw %}
 
 # Claude Skills for Legal Document Automation
 
@@ -233,3 +234,4 @@ Claude skills provide a flexible framework for legal document automation. By def
 The combination of Claude's natural language processing and skill-based instruction sets offers a powerful approach to legal technology automation that scales with your practice needs.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -9,6 +9,7 @@ author: theluckystrike
 reviewed: false
 score: 0
 ---
+{% raw %}
 
 # Claude Code Skills for Ansible Automation
 
@@ -183,3 +184,4 @@ Claude Code skills transform Ansible automation from manual YAML editing into an
 Start with a simple skill that generates basic playbooks, then expand to handle debugging, role generation, and CI/CD integration. As your skill grows, so does your ability to manage infrastructure through natural language commands.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

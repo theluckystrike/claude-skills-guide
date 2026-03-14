@@ -7,6 +7,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, l10n, testing, automation, workflow, i18n]
 author: theluckystrike
 ---
+{% raw %}
 
 # Claude Code L10n Testing Automation Workflow Tutorial
 
@@ -251,3 +252,4 @@ Building a Claude Code L10n testing automation workflow reduces manual validatio
 Start with the string consistency checks, add placeholder validation, then layer in encoding and documentation testing. Each component addresses a specific failure mode in localization workflows, and together they form a robust defense against translation bugs.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
