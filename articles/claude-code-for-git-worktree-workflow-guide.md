@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Git Worktree Workflow Guide"
-description: "A comprehensive guide to using Claude Code with Git worktrees for efficient parallel development, multi-branch workflows, and streamlined context switching."
+description: "A comprehensive guide to using Claude Code with Git worktrees for efficient parallel development, multi-branch workflows, and streamlined context."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-git-worktree-workflow-guide/
@@ -203,3 +203,10 @@ Git worktrees combined with Claude Code create a powerful workflow for developer
 
 The key is to establish consistent conventions, automate routine operations, and use Claude Code's abilities to work within each isolated context. As you become more comfortable with worktrees, you'll find yourself reaching for this pattern more frequently to manage the complexity of modern software development.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

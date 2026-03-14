@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Statuspage Workflow Tutorial"
-description: "Learn how to automate statuspage workflows using Claude Code. Create automated incident reporting, component monitoring, and status page integrations for your applications."
+description: "Learn how to automate statuspage workflows using Claude Code. Create automated incident reporting, component monitoring, and status page integrations."
 date: 2026-03-15
 categories: [tutorials]
 tags: [claude-code, claude-skills, statuspage, incident-management, monitoring, automation]
@@ -298,3 +298,10 @@ Automating your statuspage workflow with Claude Code transforms how you communic
 Start with basic incident creation, then gradually add component monitoring and maintenance automation as your workflow matures. The key is to maintain a balance between automation and human oversight—your users will thank you for fast, accurate updates during critical moments.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
