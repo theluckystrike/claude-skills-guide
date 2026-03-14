@@ -32,13 +32,14 @@ One of the most frequent issues after an update is that custom skills suddenly s
 
 ### Diagnosis
 
-First, verify that Claude Code can see your skills at all:
+First, verify that Claude Code can access your skills by checking your CLAUDE.md file:
 
 ```bash
-claude --list-skills
+# Check your CLAUDE.md is in the project root and properly formatted
+cat CLAUDE.md
 ```
 
-If your skills appear in the list but fail when invoked, the problem likely lies in the skill implementation itself rather than the loading mechanism.
+If your skills appear in CLAUDE.md but fail when invoked, the problem likely lies in the skill implementation itself rather than the loading mechanism.
 
 ### Solution
 

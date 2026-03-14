@@ -2,7 +2,7 @@
 
 layout: default
 title: "Securing Claude Code in Enterprise Environments"
-description: "A practical guide to implementing security best practices for Claude Code in enterprise environments. Learn about permission controls, skill isolation, audit logging, and network restrictions."
+description: "Security best practices for Claude Code in enterprise environments. Permission controls, skill isolation, audit logging, and network restrictions."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /securing-claude-code-in-enterprise-environments/
@@ -118,5 +118,14 @@ Securing Claude Code in enterprise environments requires layered defenses spanni
 Start with restrictive defaults, expand deliberately, and maintain comprehensive logging. By treating Claude Code security as an ongoing process rather than a one-time configuration, enterprises can confidently use AI-assisted development while protecting their assets.
 
 Remember that security configurations require regular review as your organization and the AI platform evolve. The patterns outlined here provide a foundation, but your specific implementation should reflect your unique risk profile and compliance requirements.
+
+
+## Related Reading
+
+- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
+- [How to Audit Claude Code MCP Server Permissions](/claude-skills-guide/how-to-audit-claude-code-mcp-server-permissions/)
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

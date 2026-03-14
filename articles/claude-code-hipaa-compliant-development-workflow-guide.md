@@ -31,8 +31,9 @@ mkdir -p ~/projects/healthcare-app/{src,tests,config}
 cd ~/projects/healthcare-app
 
 # Configure Claude Code with restricted permissions
-claude config set allowed_tools "Read,Edit,Bash"
-claude config set permissions_mode "read-only"
+# Add to CLAUDE.md to scope Claude to safe tools only:
+# allowed_tools: [Read, Edit, Bash]
+# See: https://docs.anthropic.com/en/docs/claude-code/settings
 ```
 
 This configuration ensures Claude Code operates with minimal permissions during initial exploration phases. As you build out functionality, gradually expand permissions to include necessary development tools.
