@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "What Is an AI Agent Loop Explained Simply"
-description: "An AI agent loop is the continuous cycle where an AI thinks, acts, observes results, and adjusts—repeating until a goal is reached. Learn how it works with practical Claude Code examples."
+description: "An AI agent loop is the continuous cycle where an AI thinks, acts, observes results, and adjusts—repeating until a goal is reached. Learn how it works."
 date: 2026-03-14
 author: theluckystrike
 permalink: /what-is-an-ai-agent-loop-explained-simply/
@@ -138,3 +138,11 @@ At key moments, the AI pauses and asks for confirmation or clarification. Claude
 - Claude Code executes these loops rapidly, often completing dozens of iterations in seconds
 
 The next time you use Claude Code, watch for the agent loop in action. You'll see a powerful, iterative process working to solve your problems—one small step at a time.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

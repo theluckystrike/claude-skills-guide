@@ -172,3 +172,11 @@ Grounding AI agents in real-world data transforms them from generic text generat
 The key is to start simple: identify your most valuable data sources, implement basic RAG, and iterate based on real usage patterns. As your grounding system matures, you can add sophistication through hybrid search, agentic retrieval, and structured data integration.
 
 Remember that grounding is not a one-time setup—it's an ongoing process of expanding and improving your data pipeline to serve your agents' evolving needs.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
