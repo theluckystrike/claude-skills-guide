@@ -1,262 +1,219 @@
 ---
 layout: default
-title: "Claude Code JSDoc TypeScript Documentation: A Practical Guide"
-description: "Learn how to generate JSDoc comments and TypeScript documentation using Claude Code skills. Includes practical examples for documenting APIs, classes, and complex types."
+title: "Claude Code JSDoc TypeScript Documentation Guide"
+description: "Master JSDoc and TypeScript documentation workflows with Claude Code. Practical examples for generating type-safe docs, automating API references, and integrating documentation into your development process."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-jsdoc-typescript-documentation/
 ---
 
-# Claude Code JSDoc TypeScript Documentation: A Practical Guide
+# Claude Code JSDoc TypeScript Documentation Guide
 
-Generating consistent documentation for TypeScript projects often feels like a chore. You write interfaces, define types, and export functions—but then you need JSDoc comments that explain parameters, return types, and edge cases. Claude Code offers skills that automate this process, making documentation generation straightforward rather than painful.
+TypeScript projects benefit enormously from well-structured JSDoc comments. When combined with Claude Code, you can build documentation workflows that are accurate, maintainable, and require minimal manual effort. This guide shows you how to document TypeScript code effectively using JSDoc annotations that work with your existing development tools.
 
-This guide covers how to use Claude Code skills for JSDoc and TypeScript documentation, with practical examples you can apply immediately to your projects.
+## Why JSDoc Matters for TypeScript Projects
 
-## Understanding the Documentation Challenge
+TypeScript's type system handles much of what JSDoc once did for JavaScript. However, JSDoc remains valuable for several reasons. External libraries without TypeScript definitions rely on JSDoc for type information. Many teams use JSDoc to document behavior that types alone cannot express: parameter constraints, return value semantics, code examples, and deprecation notices.
 
-TypeScript provides type safety at compile time, but documentation lives in JSDoc comments that describe behavior, examples, and constraints that types alone cannot express. A well-documented TypeScript project requires:
+Claude Code reads and processes JSDoc comments naturally, making it an ideal tool for generating documentation, answering questions about your codebase, and maintaining consistent documentation standards across a project.
 
-- JSDoc comments on functions, classes, and interfaces
-- Parameter descriptions with `@param` tags
-- Return value documentation with `@returns`
-- Type constraints and limitations
-- Usage examples where helpful
+## Setting Up JSDoc in Your TypeScript Project
 
-Writing this manually takes time. Claude Code skills can generate these comments based on your type definitions and code structure, saving hours on large codebases.
+Begin by ensuring your tsconfig.json includes the necessary configuration for JSDoc support:
 
-## Using Claude Code Skills for Documentation
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "strict": true,
+    "jsDocPreference": "closure"
+  }
+}
+```
 
-Claude Code's skill system works through simple invocation commands. For documentation tasks, several skills prove particularly useful:
+Install JSDoc as a development dependency if you plan to generate static documentation:
 
-- **tdd** — For generating tests alongside documentation
-- **pdf** — For exporting documentation to PDF format
-- **docx** — For creating formatted documentation documents
-- **frontend-design** — For documenting component APIs
+```bash
+npm install --save-dev jsdoc
+```
 
-The tdd skill pairs well with documentation because well-tested code naturally reveals the edge cases that documentation should cover.
+Create a JSDoc configuration file (jsdoc.json) to customize output:
 
-## Generating JSDoc Comments for Functions
+```json
+{
+  "source": {
+    "include": ["src"],
+    "includePattern": ".+\\.js(doc)?$"
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
+  }
+}
+```
 
-Consider a TypeScript function that processes user data:
+## Writing Effective JSDoc Comments
+
+The most useful JSDoc comments answer three questions: what does this function do, what does each parameter mean, and what does the function return? Here is a well-documented function:
 
 ```typescript
-interface UserData {
-  id: string;
-  name: string;
-  email: string;
-  createdAt: Date;
+/**
+ * Calculates the total price including applicable discounts.
+ * 
+ * @param basePrice - The original price before any discounts
+ * @param discountPercentage - A value between 0 and 100 representing the discount
+ * @returns The final price after applying the discount, rounded to 2 decimal places
+ * @throws {Error} Throws when discountPercentage is outside the valid range
+ * 
+ * @example
+ * const price = calculateTotal(100, 20); // returns 80
+ */
+function calculateTotal(basePrice: number, discountPercentage: number): number {
+  if (discountPercentage < 0 || discountPercentage > 100) {
+    throw new Error('Discount percentage must be between 0 and 100');
+  }
+  return Math.round(basePrice * (1 - discountPercentage / 100) * 100) / 100;
 }
+```
 
-function processUserData(
-  users: UserData[],
-  filterByName?: string
-): Promise<UserData[]> {
+Notice the use of the @example tag. Claude Code recognizes these examples and can use them in generated documentation or when answering questions about your code.
+
+## Documenting Complex Types
+
+When working with union types, generics, or complex objects, clarity becomes essential. Use the @typedef feature to define custom types that appear throughout your codebase:
+
+```typescript
+/**
+ * Represents a user in the authentication system.
+ * @typedef {Object} User
+ * @property {string} id - Unique identifier for the user
+ * @property {string} email - User's email address
+ * @property {'admin' | 'user' | 'guest'} role - Permission level
+ * @property {string[]} [permissions] - Optional array of specific permissions
+ */
+
+/**
+ * Retrieves a user by their unique identifier.
+ * @param {string} userId - The user's unique ID
+ * @returns {Promise<User>} The user object if found
+ */
+async function getUserById(userId: string): Promise<User> {
   // Implementation here
 }
 ```
 
-When you invoke a documentation skill with this code, Claude can generate comprehensive JSDoc:
+## Using Claude Code to Generate Documentation
 
-```typescript
-/**
- * Processes user data by applying optional filters.
- * 
- * @param users - Array of user objects to process
- * @param filterByName - Optional name substring to filter users
- * @returns Promise resolving to filtered user array
- * @throws Error if users array is empty
- * 
- * @example
- * const users = await processUserData(allUsers, 'john');
- */
-async function processUserData(
-  users: UserData[],
-  filterByName?: string
-): Promise<UserData[]> {
-  // Implementation here
-}
+Claude Code can read your JSDoc comments and generate various documentation outputs. The `pdf` skill is particularly useful for creating formatted documentation packages:
+
+```
+Generate a PDF documentation package for this TypeScript project.
+Include all public functions with their JSDoc comments,
+type definitions, and code examples. Output to docs/api-reference.pdf
 ```
 
-The skill analyzes parameter types, return types, and function names to produce appropriate JSDoc. It identifies optional parameters from the `?` modifier and recognizes async functions for `@returns` instead of `@return`.
+For teams using `supermemory`, you can store documentation metadata across sessions:
 
-## Documenting TypeScript Classes and Interfaces
-
-Classes require documentation that explains their purpose, initialization requirements, and key methods:
-
-```typescript
-class DataProcessor {
-  private apiKey: string;
-  private timeout: number;
-  
-  constructor(apiKey: string, timeout?: number);
-  process(data: string): Promise<ProcessResult>;
-}
+```
+Remember that the User typedef was updated on 2026-03-14.
+The permissions array is now optional. Update documentation accordingly.
 ```
 
-With proper documentation generation:
+## Automating Documentation Updates
 
-```typescript
-/**
- * Handles data processing operations with configurable timeout.
- * 
- * @remarks
- * Requires valid API key for authentication.
- * Supports batch processing for improved performance.
- */
-class DataProcessor {
-  private apiKey: string;
-  private timeout: number;
-  
-  /**
-   * Creates a new DataProcessor instance.
-   * 
-   * @param apiKey - Authentication key for the processing service
-   * @param timeout - Request timeout in milliseconds (default: 5000)
-   */
-  constructor(apiKey: string, timeout: number = 5000) {
-    this.apiKey = apiKey;
-    this.timeout = timeout;
-  }
-  
-  /**
-   * Processes the provided data string.
-   * 
-   * @param data - Raw data string to process
-   * @returns Promise resolving to processed result
-   * @throws {ProcessingError} When processing fails
-   */
-  async process(data: string): Promise<ProcessResult> {
-    // Implementation
+Integrate documentation generation into your build process using package.json scripts:
+
+```json
+{
+  "scripts": {
+    "docs:generate": "jsdoc -c jsdoc.json",
+    "docs:serve": "npm run docs:generate && npx serve out",
+    "typecheck": "tsc --noEmit"
   }
 }
 ```
 
-The documentation skill recognizes constructor parameters, class properties with access modifiers, and method signatures. It applies `@remarks` for additional context and `@throws` for documented error conditions.
+The `tdd` skill pairs well with documentation workflows. You can run tests and generate docs in sequence:
 
-## Handling Complex Generic Types
-
-Generic types present documentation challenges because their behavior depends on type parameters:
-
-```typescript
-function transformData<T, K extends keyof T>(
-  data: T[],
-  key: K
-): T[K][] {
-  return data.map(item => item[key]);
-}
+```
+Run the test suite, then regenerate API documentation
+from any updated JSDoc comments.
 ```
 
-Documentation for generic functions should explain type parameters:
+## Documenting React and Component Libraries
+
+For frontend projects, combining JSDoc with component documentation creates a complete reference. The `frontend-design` skill understands React patterns and can help structure component documentation:
 
 ```typescript
 /**
- * Extracts values for a specific key from an array of objects.
+ * A button component with customizable styling and behavior.
  * 
- * @typeParam T - The object type in the input array
- * @typeParam K - Key of T to extract (must exist on T)
- * 
- * @param data - Array of objects to extract values from
- * @param key - Property key to extract from each object
- * @returns Array of extracted values
- * 
+ * @component
  * @example
- * const names = transformData(users, 'name');
- * // Returns: string[]
+ * import { Button } from './Button';
+ * 
+ * <Button 
+ *   variant="primary" 
+ *   onClick={() => console.log('clicked')}
+ *   disabled={false}
+ * >
+ *   Submit Form
+ * </Button>
  */
-function transformData<T, K extends keyof T>(
-  data: T[],
-  key: K
-): T[K][] {
-  return data.map(item => item[key]);
+interface ButtonProps {
+  /** The visual style variant of the button */
+  variant: 'primary' | 'secondary' | 'danger';
+  /** Click handler for the button */
+  onClick: () => void;
+  /** Whether the button is disabled */
+  disabled?: boolean;
+  /** Button content (children) */
+  children: React.ReactNode;
 }
 ```
 
-The `@typeParam` tag documents generic type parameters, helping future maintainers understand what T and K represent.
+## Best Practices for TypeScript JSDoc
 
-## Exporting Documentation with the PDF Skill
+Keep these principles in mind when documenting your TypeScript code:
 
-Once your JSDoc comments are in place, the pdf skill helps export documentation for sharing or archiving:
+Write JSDoc for public APIs and exported functions. Internal functions typically do not need documentation unless their behavior is non-obvious. Update JSDoc comments when function signatures change. Stale documentation is worse than no documentation because it misleads developers.
 
-```
-/pdf Generate API documentation from this TypeScript project
-```
-
-This exports your JSDoc comments as a formatted PDF document, useful for team reviews or external stakeholders who need documentation without navigating code.
-
-The docx skill serves similarly, creating Word documents with formatted output. Both skills preserve code formatting and syntax highlighting.
-
-## Integrating with Test-Driven Development
-
-The tdd skill works alongside documentation by generating tests that reveal undocumented edge cases. When you write tests first:
-
-1. Tests document expected behavior
-2. Running tests reveals edge cases
-3. Those edge cases become JSDoc comments
-
-This workflow ensures documentation reflects actual behavior rather than assumptions:
+Use the @deprecated tag when removing functionality:
 
 ```typescript
 /**
- * Calculates discount based on order total.
- * 
- * @param total - Order total in cents
- * @param discountPercent - Discount percentage (0-100)
- * @returns Discounted total in cents
- * 
- * @example
- * calculateDiscount(10000, 20); // Returns 8000
- * 
- * @throws Error if discountPercent exceeds 100
+ * @deprecated Use calculateTotalV2 instead. This function
+ * will be removed in version 3.0.
  */
-function calculateDiscount(total: number, discountPercent: number): number {
-  if (discountPercent > 100) {
-    throw new Error('Discount cannot exceed 100%');
-  }
-  return total * (1 - discountPercent / 100);
+function calculateTotal(basePrice: number, discount: number): number {
+  // Legacy implementation
 }
 ```
 
-The test reveals the error case, which becomes part of the documented behavior.
+Include practical examples in @example tags whenever possible. These examples serve as both documentation and regression tests.
 
-## Best Practices for JSDoc with Claude Code Skills
+## Generating HTML Documentation
 
-Effective documentation generated by Claude Code skills follows these principles:
+Run JSDoc to produce searchable HTML documentation:
 
-**Be specific about types.** Claude skills read TypeScript types accurately, but they cannot infer runtime behavior. Document what values represent (dollars in cents, dates in ISO format) and any validation rules.
-
-**Add usage examples.** The `@example` tag proves invaluable. A single example often clarifies what paragraphs of description cannot:
-
-```typescript
-/**
- * @example
- * // Basic usage
- * const result = fetchUser('user-123');
- * 
- * // With error handling
- * fetchUser('invalid').catch(err => console.error(err.message));
- */
+```bash
+npx jsdoc -c jsdoc.json -d out src/
 ```
 
-**Document error conditions.** Use `@throws` to document exceptions callers should handle. This transforms documentation from helpful to actionable.
+The output includes an index.html file with full-text search, navigation by module, and properly formatted type signatures. Serve the output locally to review before publishing:
 
-**Keep comments synchronized.** Claude skills generate accurate initial documentation, but you must update JSDoc when behavior changes. Treat documentation as code—review it during code review.
+```bash
+npx serve out
+```
 
-## Automating Documentation Workflows
+## Connecting Documentation to Development Workflow
 
-For ongoing projects, consider combining skills into workflows:
+The `pdf` skill can package documentation for distribution. The `supermemory` skill helps maintain documentation context across Claude sessions. The `tdd` skill ensures your documentation remains accurate as tests pass or fail.
 
-1. Use tdd to write tests for new functions
-2. Invoke documentation skill to generate JSDoc
-3. Add @example tags based on test cases
-4. Use pdf to export documentation for stakeholders
+Build a documentation habit by generating docs after each feature merge. Use version control to track documentation changes alongside code changes. Review documentation output as part of your pull request process.
 
-This automation reduces documentation debt while ensuring comments stay current with code changes.
-
-## Conclusion
-
-Claude Code skills transform TypeScript documentation from manual labor to automated assistance. By generating accurate JSDoc comments, handling complex generic types, and exporting formatted documentation, these skills let developers focus on writing code rather than maintaining comments.
-
-The key is treating documentation as integral to development—something skills can help with but cannot replace entirely. Your expertise guides what gets documented; Claude Code handles the mechanical parts.
+Accurate, well-maintained documentation accelerates onboarding, reduces support questions, and serves as a reliable reference for your entire team.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
