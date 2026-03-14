@@ -51,7 +51,7 @@ Requirements:
 - Responsive layout for mobile"
 ```
 
-This skill understands component composition and generates accessible, semantic HTML with appropriate class names. It works seamlessly with popular frameworks like Next.js, Nuxt, and Remix.
+This skill understands component composition and generates accessible, semantic HTML with appropriate class names. It works well with popular frameworks like Next.js, Nuxt, and Remix.
 
 ## Documentation Workflow for Japanese Projects
 

@@ -3,7 +3,9 @@ layout: default
 title: "How to Make Claude Code Not Over Engineer Solutions"
 description: "Practical strategies to prevent over-engineering when using Claude Code. Learn to balance automation with simplicity and build maintainable solutions."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # How to Make Claude Code Not Over Engineer Solutions

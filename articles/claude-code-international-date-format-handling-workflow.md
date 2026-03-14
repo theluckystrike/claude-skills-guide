@@ -3,7 +3,11 @@ layout: default
 title: "Claude Code International Date Format Handling Workflow"
 description: "A practical guide for developers handling international date formats with Claude Code skills and automation workflows."
 date: 2026-03-14
-author: theluckystrike
+categories: [workflows]
+tags: [claude-code, claude-skills, i18n, date-format, internationalization]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Claude Code International Date Format Handling Workflow
@@ -192,7 +196,7 @@ For teams processing large volumes of date-related data, combine multiple skills
 
 1. Use the tdd skill to validate date utility functions
 2. Apply the frontend-design skill for user interface components
-3. Leverage the pdf skill for generating localized date reports
+3. Use the pdf skill for generating localized date reports
 4. Store locale preferences using the supermemory skill
 
 This combination ensures consistent date handling across your entire application stack.

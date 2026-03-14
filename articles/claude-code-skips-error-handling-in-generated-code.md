@@ -3,11 +3,11 @@ layout: default
 title: "Claude Code Skips Error Handling in Generated Code"
 description: "Understand why Claude Code often generates code without error handling, and learn strategies to ensure robust, production-ready code output."
 date: 2026-03-14
-categories: [claude-code, best-practices]
-tags: [claude-code, error-handling, code-generation, debugging]
-author: theluckystrike
-reviewed: false
-score: 0
+categories: [troubleshooting]
+tags: [claude-code, claude-skills, error-handling, code-generation, debugging]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Skips Error Handling in Generated Code

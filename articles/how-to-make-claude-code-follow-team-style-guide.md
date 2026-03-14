@@ -3,7 +3,9 @@ layout: default
 title: "How to Make Claude Code Follow Team Style Guide"
 description: "Learn practical techniques to ensure Claude Code generates code that matches your team's style guide. Includes configuration tips, skill patterns, and automation strategies."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # How to Make Claude Code Follow Team Style Guide

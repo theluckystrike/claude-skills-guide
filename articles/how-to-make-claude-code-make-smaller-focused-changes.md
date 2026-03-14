@@ -3,7 +3,9 @@ layout: default
 title: "How to Make Claude Code Make Smaller Focused Changes"
 description: "A practical guide for developers to get Claude Code to generate smaller, targeted code changes instead of large rewrites. Learn prompt engineering techniques and skill configurations."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # How to Make Claude Code Make Smaller Focused Changes

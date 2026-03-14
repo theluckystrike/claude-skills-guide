@@ -3,7 +3,11 @@ layout: default
 title: "Claude Code for Turso SQLite Edge Database Tutorial"
 description: "A practical guide to using Turso SQLite edge database with Claude Code. Setup, integration patterns, and real-world examples for developers."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, turso, sqlite, edge-database]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code for Turso SQLite Edge Database Tutorial
@@ -57,7 +61,7 @@ Claude Code can help you generate proper type definitions for your tables. Descr
 
 ## Schema Design with Claude
 
-When designing your database schema, leverage Claude's skills for structured thinking. The `/tdd` skill proves particularly useful here—you can define your data requirements first, then generate migrations that satisfy those requirements.
+When designing your database schema, use Claude's skills for structured thinking. The `/tdd` skill proves particularly useful here—you can define your data requirements first, then generate migrations that satisfy those requirements.
 
 Suppose you need a user authentication system:
 
@@ -141,7 +145,7 @@ npx drizzle-kit push:sqlite
 
 ## Edge Function Integration
 
-Deploying to edge runtimes like Cloudflare Workers or Vercel Edge requires specific handling. Turso's HTTP endpoint works seamlessly with these environments:
+Deploying to edge runtimes like Cloudflare Workers or Vercel Edge requires specific handling. Turso's HTTP endpoint works with these environments:
 
 ```typescript
 // workers/my-worker.ts

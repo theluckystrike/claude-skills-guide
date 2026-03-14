@@ -79,103 +79,36 @@ claude /path/to/media -- uv run asset_inventory.py /media /output/inventory.xlsx
 
 ## Generating Media Reports with Docx
 
-Media teams frequently need formatted reports: asset summaries for stakeholders, content audit results, or metadata documentation. The `docx` skill handles this efficiently.
+Media teams frequently need formatted reports: asset summaries for stakeholders, content audit results, or metadata documentation. Invoke the `docx` skill to generate these:
 
-```python
-from docx import Document
-
-def generate_media_report(assets: list, output_path: str):
-    """Generate a formatted media asset report."""
-    doc = Document()
-    doc.add_heading('Media Asset Report', 0)
-    
-    doc.add_paragraph(f"Total Assets: {len(assets)}")
-    doc.add_paragraph(f"Generated: 2026-03-14")
-    doc.add_paragraph("")
-    
-    doc.add_heading('Asset Summary', level=1)
-    
-    for asset in assets[:20]:  # First 20 for brevity
-        doc.add_paragraph(
-            f"• {asset['name']} ({asset['type']}) - {asset['size']} MB",
-            style='List Bullet'
-        )
-    
-    if len(assets) > 20:
-        doc.add_paragraph(f"... and {len(assets) - 20} more assets")
-    
-    doc.save(output_path)
-    return f"Report saved to {output_path}"
+```
+/docx
+Create a media asset report document. Include a title page, summary table with total assets by type, and a bulleted list of the 20 largest files with their sizes in MB. Source data is in inventory.xlsx.
 ```
 
-This generates a clean, professional document suitable for sharing with non-technical stakeholders. The `docx` skill preserves formatting across saves, so repeated report generation maintains consistent styling.
+Claude writes the Word document directly from your data, ready to share with non-technical stakeholders.
 
 ## Creating Presentation Content with Pptx
 
-Media content reviews often happen in meeting settings. The `pptx` skill generates presentation content directly from your media catalog:
+Media content reviews often happen in meeting settings. The `pptx` skill generates presentation content from your media catalog:
 
-```python
-from pptx import Presentation
-
-def create_asset_presentation(media_dir: str, output: str):
-    """Generate a slide deck summarizing media assets."""
-    prs = Presentation()
-    
-    # Title slide
-    slide = prs.slides.add_slide(prs.slide_layouts[0])
-    title = slide.shapes.title
-    subtitle = slide.placeholders[1]
-    title.text = "Media Asset Overview"
-    subtitle.text = f"Source: {media_dir}"
-    
-    # Content slides
-    media_types = {"images": 0, "videos": 0, "documents": 0}
-    # ... count media types ...
-    
-    slide = prs.slides.add_slide(prs.slide_layouts[1])
-    slide.shapes.title.text = "Asset Distribution"
-    content = slide.placeholders[1]
-    content.text = f"Images: {media_types['images']}\n"
-    content.text += f"Videos: {media_types['videos']}\n"
-    content.text += f"Documents: {media_types['documents']}"
-    
-    prs.save(output)
-    return f"Presentation created: {output}"
 ```
+/pptx
+Build a media asset overview presentation. Slide 1: title slide with "Media Asset Overview" and today's date. Slide 2: asset distribution breakdown showing images vs videos vs documents. Slide 3: table of the 10 most recently added assets. Use a minimal dark theme.
+```
+
+Claude generates the PowerPoint file, ready to present without manual formatting.
 
 ## Canvas Design for Asset Thumbnails
 
-The `canvas-design` skill generates visual content programmatically. For media CMS workflows, this proves useful for creating consistent thumbnails, watermark overlays, or metadata badges:
+The `canvas-design` skill generates visual content. For media CMS workflows, this is useful for creating consistent thumbnails, watermark overlays, or metadata badges:
 
-```javascript
-// canvas-design skill pattern for thumbnail generation
-const { createCanvas, loadImage } = require('canvas');
-
-async function generateThumbnail(imagePath, outputPath, size = 200) {
-  const img = await loadImage(imagePath);
-  const canvas = createCanvas(size, size);
-  const ctx = canvas.getContext('2d');
-  
-  // Calculate dimensions to cover square
-  const aspect = img.width / img.height;
-  let sx = 0, sy = 0, sw = img.width, sh = img.height;
-  
-  if (aspect > 1) {
-    sw = img.height;
-    sx = (img.width - sw) / 2;
-  } else {
-    sh = img.width;
-    sy = (img.height - sh) / 2;
-  }
-  
-  ctx.drawImage(img, sx, sy, sw, sh, 0, 0, size, size);
-  
-  const buffer = canvas.toBuffer('image/jpeg');
-  require('fs').writeFileSync(outputPath, buffer);
-  
-  return outputPath;
-}
 ```
+/canvas-design
+Create a thumbnail template: 200x200px square with a centered icon indicating file type (camera icon for images, film strip for video, document icon for PDFs). Add a semi-transparent overlay bar at the bottom showing the filename. Output as SVG.
+```
+
+Claude generates the visual template as code you can render with a library like `sharp` or `Pillow` in your workflow pipeline.
 
 ## Workflow Integration Patterns
 

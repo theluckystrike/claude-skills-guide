@@ -3,7 +3,9 @@ layout: default
 title: "How to Make Claude Code Use Specific Library Version"
 description: "Control which library versions Claude Code uses when writing code. Techniques for specifying version constraints in prompts, project files, and skill configurations."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # How to Make Claude Code Use Specific Library Version

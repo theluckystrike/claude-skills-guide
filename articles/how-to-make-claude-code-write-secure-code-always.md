@@ -3,14 +3,16 @@ layout: default
 title: "How to Make Claude Code Write Secure Code Always"
 description: "A practical guide for developers to ensure Claude Code generates secure code consistently. Includes skill recommendations, configuration tips, and real-world examples."
 date: 2026-03-14
-categories: [security, best-practices]
+categories: [guides]
 tags: [claude-code, security, secure-coding, claude-skills, tdd, code-review]
-author: theluckystrike
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # How to Make Claude Code Write Secure Code Always
 
-Getting Claude Code to consistently produce secure code requires more than just hoping for the best. You need to establish patterns, leverage specific skills, and configure your environment to prioritize security at every step. This guide covers practical techniques that work.
+Getting Claude Code to consistently produce secure code requires more than just hoping for the best. You need to establish patterns, use specific skills, and configure your environment to prioritize security at every step. This guide covers practical techniques that work.
 
 ## Start with Security-First Skill Configuration
 
@@ -51,7 +53,7 @@ Write a user registration function that:
 
 The second prompt gives Claude clear security requirements to follow. Include explicit security constraints in every code generation request when handling sensitive operations.
 
-## Leverage the Super Memory Skill for Security Context
+## Use the Super Memory Skill for Security Context
 
 The **supermemory** skill stores and retrieves context across sessions. Use it to maintain a security knowledge base that Claude references:
 

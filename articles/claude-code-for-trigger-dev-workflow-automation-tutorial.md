@@ -3,11 +3,11 @@ layout: default
 title: "Claude Code for Trigger.dev Workflow Automation Tutorial"
 description: "A practical guide to automating Trigger.dev workflows with Claude Code skills. Learn to integrate skills like tdd, pdf, and supermemory for streamlined development."
 date: 2026-03-14
-categories: [tutorials, integrations]
-tags: [claude-code, trigger-dev, workflow-automation, tdd, pdf, supermemory]
-author: theluckystrike
-reviewed: false
-score: 0
+categories: [integrations]
+tags: [claude-code, claude-skills, trigger-dev, workflow-automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code for Trigger.dev Workflow Automation Tutorial
@@ -264,7 +264,7 @@ When combining these tools, keep these recommendations in mind:
 - **Use type-safe schemas**: Always define Zod schemas for event payloads—Claude Code respects these types
 - **Test in isolation**: Use the tdd skill to write tests for each workflow component before deployment
 - **Document incrementally**: Generate docs with pdf or docx skills after completing each workflow
-- **Leverage supermemory early**: Initialize persistent context at project start for maximum benefit
+- **Initialize supermemory early**: Initialize persistent context at project start for maximum benefit
 
 ## Conclusion
 

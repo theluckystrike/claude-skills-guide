@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills for Golang Microservices: Practical Development Guide"
-description: "Learn how to leverage Claude Code skills for Golang microservices development. Includes practical examples for API handlers, service layer patterns, and Docker container workflows."
+description: "Use Claude Code skills for Golang microservices development. Practical examples for API handlers, service layer patterns, and Docker container workflows."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, golang, microservices, go, api, backend, docker]

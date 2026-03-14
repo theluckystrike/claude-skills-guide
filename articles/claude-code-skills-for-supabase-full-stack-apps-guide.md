@@ -4,8 +4,10 @@ title: "Claude Code Skills for Supabase Full Stack Apps Guide"
 description: "A practical guide to using Claude Code skills for building Supabase full-stack applications — from database design to deployment."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, supabase, full-stack, backend, frontend]
-author: theluckystrike
+tags: [claude-code, claude-skills, supabase, full-stack, backend]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Skills for Supabase Full Stack Apps Guide

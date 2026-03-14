@@ -1,11 +1,13 @@
 ---
 layout: default
 title: "Claude Skills for Android Kotlin Development"
-description: "Practical guide to using Claude skills for Android Kotlin development. Learn how to leverage AI-powered skills for faster Android app development."
+description: "Practical guide to using Claude skills for Android Kotlin development. Learn how to use AI-powered skills for faster Android app development."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-skills, android, kotlin, mobile-development, ai-assistance]
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, android, kotlin, mobile-development]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Skills for Android Kotlin Development

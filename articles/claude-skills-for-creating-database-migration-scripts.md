@@ -3,7 +3,11 @@ layout: default
 title: "Claude Skills for Creating Database Migration Scripts"
 description: "Learn how to create and use Claude skills that automate database migration script generation, schema versioning, and data transformation tasks."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, database, migrations, automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Skills for Creating Database Migration Scripts

@@ -43,7 +43,7 @@ Every skill invocation costs tokens. The skill definition itself, your system pr
 
 ## Skill Chaining Strategies
 
-Skill chains—where one skill's output feeds another—are where Claude skills show their highest leverage. A well-designed chain eliminates entire categories of manual work.
+Skill chains—where one skill's output feeds another—are where Claude skills deliver the most value. A well-designed chain eliminates entire categories of manual work.
 
 **Example: monthly analytics chain**
 ```

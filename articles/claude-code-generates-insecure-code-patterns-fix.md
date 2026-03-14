@@ -3,11 +3,11 @@ layout: default
 title: "Claude Code Generates Insecure Code Patterns Fix"
 description: "Practical guide to identifying and fixing security vulnerabilities in AI-generated code. Learn patterns, tools, and workflows for secure development with Claude Code."
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, claude-skills, security, code-quality, best-practices, development]
-author: theluckystrike
-reviewed: false
-score: 0
+categories: [troubleshooting]
+tags: [claude-code, claude-skills, security, code-quality, best-practices]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 {% raw %}
 

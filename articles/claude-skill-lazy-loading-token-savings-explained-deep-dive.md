@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skill Lazy Loading: Token Savings Explained"
-description: "A deep dive into how Claude skill lazy loading works and how it reduces token consumption for developers and power users."
+description: "How Claude skill lazy loading works and how it reduces token consumption for developers and power users."
 date: 2026-03-14
 author: "Claude Skills Guide"
 reviewed: true
@@ -10,7 +10,7 @@ score: 9
 
 # Claude Skill Lazy Loading: Token Savings Explained
 
-When working with Claude Code and its extensible skill system, understanding lazy loading can significantly impact your token budget and response quality. This guide explains how skill lazy loading works, why it matters, and how you can leverage it effectively. If you are already looking to cut costs more broadly, the [token optimization guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) covers complementary strategies worth pairing with lazy loading.
+When working with Claude Code and its extensible skill system, understanding lazy loading can significantly impact your token budget and response quality. This guide explains how skill lazy loading works, why it matters, and how you can apply it effectively. If you are already looking to cut costs more broadly, the [token optimization guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) covers complementary strategies worth pairing with lazy loading.
 
 ## What Is Lazy Loading in Claude Skills?
 

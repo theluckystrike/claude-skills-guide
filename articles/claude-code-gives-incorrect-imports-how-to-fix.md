@@ -176,7 +176,7 @@ Certain Claude skills excel at handling import-related tasks:
 
 ## Summary
 
-Incorrect imports from Claude Code usually stem from missing context about your project's specific configuration. By providing clear path alias information, showing concrete examples, configuring skill instructions, and verifying generated code, you can significantly reduce these issues. Remember to leverage skills like **tdd**, **frontend-design**, and **supermemory** to maintain consistent import patterns across your project.
+Incorrect imports from Claude Code usually stem from missing context about your project's specific configuration. By providing clear path alias information, showing concrete examples, configuring skill instructions, and verifying generated code, you can significantly reduce these issues. Remember to use skills like **tdd**, **frontend-design**, and **supermemory** to maintain consistent import patterns across your project.
 
 ## Related Reading
 

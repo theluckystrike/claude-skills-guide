@@ -3,7 +3,11 @@ layout: default
 title: "Claude Code Writes Code in Wrong Programming Language"
 description: "Diagnose and fix when Claude generates Python instead of JavaScript, or TypeScript instead of Go. Practical solutions for developers."
 date: 2026-03-14
-author: theluckystrike
+categories: [troubleshooting]
+tags: [claude-code, claude-skills, code-generation, debugging, troubleshooting]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude Code Writes Code in Wrong Programming Language
@@ -114,6 +118,6 @@ Claude Code is excellent at following explicit instructions. The challenge is us
 
 ## Summary
 
-Language mismatches with Claude Code typically stem from ambiguous requests, project context confusion, or skill-specific defaults. Fix them by being explicit about your language, framework, and project structure in every request. Use Claude Skills to enforce language constraints for recurring tasks, and leverage supermemory to maintain context across sessions. When mismatches occur, correct them immediately — Claude learns from your feedback within the session.
+Language mismatches with Claude Code typically stem from ambiguous requests, project context confusion, or skill-specific defaults. Fix them by being explicit about your language, framework, and project structure in every request. Use Claude Skills to enforce language constraints for recurring tasks, and use /supermemory to maintain context across sessions. When mismatches occur, correct them immediately — Claude learns from your feedback within the session.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

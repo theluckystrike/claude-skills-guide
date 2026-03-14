@@ -4,8 +4,10 @@ title: "Best Way to Use Claude Code for Debugging Sessions"
 description: "A practical guide for developers on using Claude Code effectively during debugging sessions. Learn prompt patterns, skill combinations, and real-world workflows."
 date: 2026-03-14
 categories: [workflows]
-tags: [claude-code, debugging, developer-tools, workflow]
-author: theluckystrike
+tags: [claude-code, claude-skills, debugging, developer-tools, workflow]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Best Way to Use Claude Code for Debugging Sessions

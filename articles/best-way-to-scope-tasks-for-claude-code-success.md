@@ -3,9 +3,11 @@ layout: default
 title: "Best Way to Scope Tasks for Claude Code Success"
 description: "Learn how to break down complex development tasks for Claude Code. Practical examples with invocation patterns, skill selection strategies, and real code snippets for developers."
 date: 2026-03-14
-categories: [workflows]
-tags: [claude-code, task-scoping, ai-coding, prompt-engineering, workflows]
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, workflow, task-management, productivity]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Best Way to Scope Tasks for Claude Code Success

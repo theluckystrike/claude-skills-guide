@@ -3,13 +3,17 @@ layout: default
 title: "Claude Code i18n Workflow for React Applications Guide"
 description: "A practical guide to implementing internationalization workflows in React using Claude Code, covering translation management, locale switching, and automation."
 date: 2026-03-14
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, i18n, react, localization]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 {% raw %}
 
 # Claude Code i18n Workflow for React Applications Guide
 
-Internationalization (i18n) remains one of the most challenging aspects of building React applications that serve global audiences. Managing translation keys, coordinating with localization teams, and maintaining consistency across locales can quickly become overwhelming. This guide shows you how to leverage Claude Code to streamline your i18n workflow, reducing manual effort and preventing common mistakes.
+Internationalization (i18n) remains one of the most challenging aspects of building React applications that serve global audiences. Managing translation keys, coordinating with localization teams, and maintaining consistency across locales can quickly become overwhelming. This guide shows you how to use Claude Code to streamline your i18n workflow, reducing manual effort and preventing common mistakes.
 
 ## Setting Up Your React i18n Foundation
 
