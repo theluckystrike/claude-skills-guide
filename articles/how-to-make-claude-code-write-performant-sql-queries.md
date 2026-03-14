@@ -1,212 +1,169 @@
 ---
 layout: default
 title: "How to Make Claude Code Write Performant SQL Queries"
-description: "A practical guide to getting Claude Code to generate efficient, optimized SQL queries. Learn prompt engineering techniques and skill combinations."
+description: "Learn techniques to guide Claude when writing SQL queries that perform well. Optimize indexes, avoid N+1 queries, and leverage database-specific features."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, sql, performance, database, claude-skills, tdd, code-review]
 author: theluckystrike
-reviewed: true
-score: 8
+categories: [guides]
+tags: [claude-code, sql, database-optimization, performance]
 permalink: /how-to-make-claude-code-write-performant-sql-queries/
 ---
 
 # How to Make Claude Code Write Performant SQL Queries
 
-Getting Claude Code to generate efficient SQL queries requires understanding how LLMs approach database operations and applying specific techniques to guide output toward performance-conscious solutions. If you want **how to make claude code write performant sql queries** effectively, this guide covers practical methods to improve query performance when working with Claude Code.
+Getting Claude to generate efficient SQL requires understanding how to communicate performance requirements effectively. This guide shows you concrete patterns for prompting Claude to write queries that scale.
 
-## Understanding the Performance Problem
+## The Foundation: Express Performance Intent
 
-Claude Code often generates functional SQL that works correctly but may not perform optimally. The model tends toward straightforward solutions that prioritize readability over efficiency. Common issues include missing indexes, N+1 query patterns, unnecessary full table scans, and suboptimal JOIN structures.
+Claude responds to clear performance signals. When you need performant queries, state your requirements explicitly rather than hoping Claude guesses.
 
-When generating database code, Claude follows patterns it has seen in training data, which may not align with your specific database schema, data volume, or performance requirements. The solution involves combining specific prompting techniques with the right skill stack.
+Instead of asking "Write a query to get user orders," try: "Write a query to get all orders for a user, using an indexed column, that completes in under 50ms on a table with 10 million rows."
 
-## Start with the Right Skill Configuration
+This approach works because Claude's training included countless Stack Overflow threads where developers complained about slow queries. The model recognizes performance-oriented language and adjusts its output accordingly.
 
-Claude Code skills extend the model's capabilities in targeted areas. For SQL performance, several skills work together effectively.
+## Indexing Strategies That Claude Understands
 
-The **tdd** skill helps create performance tests that validate query execution time. By specifying performance requirements in test cases, you establish benchmarks that guide query design:
+Effective SQL performance starts with proper indexing. When working with Claude, explicitly mention which columns need indexing and why.
 
-```
-/tdd create performance tests for this user query, verify response time under 100ms with 10000 records
-```
+Consider this scenario: you need a query finding all orders placed after a certain date. If you tell Claude "This query runs on a table with 5 million rows and needs to filter by order_date," Claude will typically suggest an index on that column. However, you get better results by being specific:
 
-The **code-review** skill analyzes generated SQL for common performance anti-patterns. Running it after query generation adds a review layer:
+```sql
+-- Claude will often generate something like this with minimal guidance
+SELECT * FROM orders WHERE order_date > '2026-01-01';
 
-```
-/code-review analyze this SQL query for performance issues, missing indexes, and N+1 patterns
-```
-
-For projects using ORMs, the **orm** skill can generate query patterns optimized for your specific framework, whether you use SQLAlchemy, Prisma, or another ORM.
-
-## Prompt Engineering for SQL Performance
-
-Your prompts determine the quality of generated SQL. Include performance requirements explicitly in your requests.
-
-### Specify Performance Constraints
-
-Instead of generic requests, embed performance requirements directly:
-
-```
-Generate a query to fetch user orders with:
-- Total order value aggregated per user
-- Filter for orders from the last 30 days
-- Use indexed columns for filtering (user_id, created_at)
-- Avoid subqueries in WHERE clauses
-- Target execution time under 50ms
+-- Better: specify the index requirement explicitly
+-- The orders table has ~5M rows, ordered_date is indexed
+SELECT id, customer_id, total, status 
+FROM orders 
+WHERE order_date >= '2026-01-01' 
+AND status != 'cancelled';
 ```
 
-### Request EXPLAIN Analysis
+The second version specifies columns explicitly, avoiding SELECT *, and includes a status filter that could use a composite index.
 
-Ask Claude to include query execution plans in its output:
+## Avoiding the N+1 Query Problem
 
-```
-Write a query to calculate user engagement metrics and explain which indexes would improve performance
-```
+The N+1 query pattern trips up many AI-generated queries. When retrieving related data, Claude might write separate queries for each related record instead of joining efficiently.
 
-Claude will often include analysis of the query plan and suggest index strategies.
+Here's how to prevent it:
 
-### Define Schema Context
+**Bad prompt:** "Get all users and their posts"
 
-Provide schema information in your prompts:
+**Good prompt:** "Get all users and their posts using a single query with a JOIN, not separate queries"
 
-```
-Given this schema:
-users (id, email, created_at, status)
-orders (id, user_id, total, created_at)
-order_items (id, order_id, product_id, quantity, price)
+```sql
+-- What Claude might write with vague instructions
+-- SELECT * FROM users; then loop: SELECT * FROM posts WHERE user_id = ?
 
-Write a query that:
-- Joins efficiently using indexed foreign keys
-- Uses WHERE clauses on indexed columns
-- Avoids SELECT * and only fetches needed columns
+-- What you want instead
+SELECT u.id, u.email, u.created_at, p.id AS post_id, p.title, p.created_at AS post_created
+FROM users u
+LEFT JOIN posts p ON u.id = p.user_id
+WHERE u.active = true
+ORDER BY u.created_at DESC;
 ```
 
-## Optimizing Common Query Patterns
+The LEFT JOIN retrieves all related posts in one query. If you need aggregation, use GROUP BY with aggregate functions:
 
-### Avoid N+1 Queries
-
-Claude often generates queries that work but trigger multiple database calls. Specify batch loading:
-
-```
-Generate an API endpoint that fetches users with their order counts.
-Use a single query with JOIN, not separate queries per user.
-```
-
-### Optimize JOIN Order and Type
-
-Guide Claude toward efficient JOIN strategies:
-
-```
-Write a query joining users, orders, and products.
-- Lead with the smallest table in FROM clause
-- Use INNER JOIN when possible
-- Put filtering conditions on the right table in LEFT JOINs
-- Use EXISTS instead of IN for correlated subqueries
+```sql
+SELECT 
+    u.id,
+    u.username,
+    COUNT(p.id) AS post_count,
+    MAX(p.created_at) AS latest_post
+FROM users u
+LEFT JOIN posts p ON u.id = p.user_id
+WHERE u.active = true
+GROUP BY u.id, u.username
+HAVING COUNT(p.id) > 0
+ORDER BY post_count DESC;
 ```
 
-### Request Proper Index Usage
+## Leveraging Claude Skills for SQL Tasks
 
-Make index awareness explicit:
+Several Claude skills enhance SQL query writing and optimization. The tdd skill helps you write tests first, then implement queries that pass those tests. This approach catches performance regressions before deployment.
 
-```
-Write a query to find active users who placed orders in Q1 2024.
-Use indexed columns: users.status, orders.user_id, orders.created_at.
-Explain which indexes would optimize this query.
-```
+For generating documentation, the pdf skill can create formatted schema documentation. The docx skill works well for internal design documents explaining your database architecture.
 
-## Using Code Review for Performance Validation
+When working with frontend-design projects that connect to databases, combining with supermemory helps maintain context about your existing schema across sessions.
 
-The **code-review** skill serves as a final checkpoint. Configure it to flag performance issues:
+## Query Patterns That Scale
 
-```
-Review this SQL for:
-- Missing WHERE clause on large tables
-- SELECT * usage that pulls unnecessary data
-- Implicit conversions that prevent index usage
-- Missing LIMIT on large result sets
-- Subqueries that could be JOINs
-```
+Certain patterns consistently produce faster queries. Here are techniques to request from Claude:
 
-Claude Code with the code-review skill will analyze generated SQL and suggest specific improvements.
+**Use covering indexes:** "Write a query that can be satisfied entirely from the index without touching the table."
 
-## Performance Testing with TDD
-
-The **tdd** skill extends to performance validation. Create tests that enforce query performance:
-
-```
-Write integration tests that:
-- Verify query executes under 200ms
-- Test with production-scale data volumes
-- Validate index usage via EXPLAIN
-- Measure query plan efficiency
+```sql
+-- Index: (status, created_at) INCLUDE (user_id, total)
+SELECT user_id, COUNT(*) AS order_count, SUM(total) AS revenue
+FROM orders
+WHERE status = 'completed'
+AND created_at >= NOW() - INTERVAL '30 days'
+GROUP BY user_id;
 ```
 
-These tests become regression guards that ensure future changes don't degrade performance.
+**Prefer WHERE over HAVING:** "Filter data in WHERE clause, not HAVING, since HAVING filters after aggregation."
 
-## Handling Large Result Sets
+**Batch operations instead of loops:** "Insert 1000 records in a single INSERT statement, not 1000 individual inserts."
 
-For queries returning many rows, specify pagination and streaming:
-
+```sql
+-- Single bulk insert
+INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
+(1, 101, 2, 29.99),
+(1, 102, 1, 14.99),
+(2, 101, 1, 29.99);
 ```
-Write a paginated query for the orders table:
-- Use cursor-based pagination (ORDER BY id LIMIT N)
-- Avoid OFFSET for large tables
-- Include total count query separately
-- Suggest proper indexing for pagination
+
+**Use EXISTS for presence checks:** When you only need to know if related records exist, EXISTS outperforms COUNT:
+
+```sql
+-- Instead of: SELECT COUNT(*) FROM orders WHERE user_id = 1 HAVING COUNT(*) > 0
+-- Use:
+SELECT EXISTS(SELECT 1 FROM orders WHERE user_id = 1) AS has_orders;
 ```
 
 ## Database-Specific Optimizations
 
-Different databases have unique performance characteristics. Specify your database in prompts:
+Different databases have unique performance features. Specify your database when prompting Claude:
 
-For PostgreSQL:
+For PostgreSQL: mention using EXPLAIN ANALYZE, array_agg, json_agg, or window functions.
+
+For MySQL: specify using EXPLAIN, STRAIGHT_JOIN hints, or partitioned tables.
+
+For SQLite: note the limitations around concurrency and recommend appropriate indexing strategies.
+
+```sql
+-- PostgreSQL example with window function
+SELECT 
+    department,
+    employee_name,
+    salary,
+    AVG(salary) OVER (PARTITION BY department) AS dept_avg,
+    salary - AVG(salary) OVER (PARTITION BY department) AS diff_from_avg
+FROM employees
+ORDER BY department, salary DESC;
 ```
-Write a query using PostgreSQL-specific optimizations:
-- Use DISTINCT ON
-- Use window functions
-- Include USING for join conditions
-- Use COALESCE appropriately
+
+## Testing Query Performance
+
+Always verify that generated queries perform as expected. Ask Claude to include EXPLAIN plans in comments, then run them against realistic data volumes.
+
+When using the tdd skill, write performance assertions:
+
+```sql
+-- Performance test expectation
+-- This query should return in < 100ms on production data volume
+SELECT * FROM analytics_events 
+WHERE event_type = 'purchase' 
+AND created_at > NOW() - INTERVAL '7 days';
 ```
 
-For MySQL:
-```
-Write a query optimized for MySQL:
-- Use STRAIGHT_JOIN when appropriate
-- Consider FORCE INDEX hints
-- Optimize for InnoDB patterns
-```
+If tests fail, use Claude's supermemory to log the slow queries and their EXPLAIN outputs for future reference.
 
-## Best Practices Summary
+## Summary
 
-1. **Include schema context** in every SQL generation prompt
-2. **Specify performance requirements** explicitly (execution time, result set size)
-3. **Request EXPLAIN plans** and index recommendations
-4. **Use code-review skill** as a performance gate
-5. **Create performance tests** with the tdd skill
-6. **Specify your database** for dialect-specific optimizations
-7. **Guide JOIN strategies** explicitly rather than accepting defaults
+Making Claude write performant SQL comes down to clear communication. State your performance requirements explicitly, specify indexing needs, avoid N+1 patterns through JOINs, and test with EXPLAIN. Leverage skills like tdd for regression testing and supermemory for tracking query performance over time.
 
-## Advanced: Combining Skills for Full Lifecycle
-
-For comprehensive SQL performance management, combine multiple skills:
-
-1. Use **tdd** to create performance test specifications
-2. Generate SQL with explicit performance constraints
-3. Run **code-review** to catch anti-patterns
-4. Use **db-design** skill (if available) to plan proper indexes
-5. Deploy with monitoring to validate real-world performance
-
-This workflow ensures generated SQL meets performance requirements from creation through deployment.
-
----
-
-
-## Related Reading
-
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+With these patterns, you can confidently delegate SQL writing to Claude while maintaining the performance standards your applications require.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

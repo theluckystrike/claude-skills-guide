@@ -1,103 +1,157 @@
 ---
 layout: default
-title: "How to Make Claude Code Not Over-Engineer Solutions"
-description: "Practical strategies to prevent Claude Code from building overly complex solutions. Learn scope control, iterative prompts, and skill patterns that keep AI-assisted development focused."
+title: "How to Make Claude Code Not Over Engineer Solutions"
+description: "Practical strategies to prevent Claude Code from building overly complex solutions. Learn to set boundaries, scope prompts effectively, and use specific skills for focused results."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /how-to-make-claude-code-not-over-engineer-solutions/
-reviewed: true
-score: 7
-categories: [guides]
-tags: [claude-code, claude-skills]
 ---
 
-# How to Make Claude Code Not Over-Engineer Solutions
+# How to Make Claude Code Not Over Engineer Solutions
 
-One of the most common frustrations developers face when working with Claude Code is watching the AI build an elaborate solution when a simple one would suffice. You ask for a small utility script, and suddenly you're staring at a full project with configuration files, error handling, logging, and test suites you never requested. This tendency toward over-engineering can slow down development and create maintenance burdens. The good news is that you can guide Claude Code toward simpler, more appropriate solutions by understanding how to communicate scope effectively.
+Claude Code excels at writing code, but sometimes it builds castles when you need cottages. The AI naturally gravitates toward comprehensive solutions—adding abstractions, future-proofing, and features you never requested. This tendency creates technical debt instead of delivering value. Here's how to keep Claude Code focused on practical, appropriately scoped solutions.
 
-## Why Claude Code Over-Engineers
+## The Root Cause of Over-Engineering
 
-Claude Code defaults to comprehensive solutions because it's trained to be helpful and anticipate potential needs. The model interprets requests through a lens of "what would a thorough developer do?" This creates a gap between what you want—a quick solution—and what Claude delivers—a production-ready system.
+Claude Code was trained on millions of repositories containing production-grade systems. When you ask for a simple login form, it draws from patterns designed for enterprise authentication with OAuth, MFA, and session management. The model interprets "build me a login" through the lens of best practices it has absorbed.
 
-Understanding this behavior is the first step toward correcting it. When you ask Claude Code to build something, it considers edge cases, scalability, error handling, and future extensibility by default. While these qualities matter for critical systems, they become unnecessary complexity when you need a rapid prototype or a simple automation script.
+The solution involves explicitly constraining the scope of each request and reinforcing simplicity through specific prompts.
 
-## Scope Control Through Explicit Constraints
+## Set Explicit Complexity Limits in Your First Message
 
-The most effective technique for preventing over-engineering is providing explicit scope constraints in your prompts. Instead of asking "write me a function to process this data," try "write me a simple function—no error handling needed, just the core logic." This signals that you want minimal viable code rather than comprehensive coverage.
+The most effective technique involves stating your constraints upfront. Claude Code respects explicit boundaries when you establish them clearly.
 
-Consider the difference between these two prompts:
-
+Instead of writing:
 ```
-# Over-engineered result likely
-"Create a data processing module"
-
-# Constrained result likely
-"Create a simple data processing module—just one function that takes a CSV string and returns an array of objects. No validation or error handling needed for now."
+Build me a user authentication system
 ```
 
-The second prompt specifies exactly what you want, eliminating the model's need to fill in gaps with assumptions about what you might need later.
-
-## Using the Right Skill for the Job
-
-Claude Code's skill system provides another layer of control over solution complexity. Skills like tdd or frontend-design come with specific expectations built into their prompts that influence how Claude approaches problems. When you invoke the tdd skill, Claude builds comprehensive test coverage. When you use frontend-design, it generates styled components with responsive layouts.
-
-For simpler tasks, you can either avoid invoking specialized skills or create your own minimal skills. A custom skill with a narrow focus naturally produces simpler outputs. For example, a "quick-script" skill that includes instructions like "provide minimal code, skip documentation, no error handling unless specifically requested" will consistently produce lighter solutions.
-
-## Iterative Development Over Big Bang Prompts
-
-Another powerful strategy is breaking complex requests into smaller, sequential prompts. Instead of asking Claude Code to build an entire feature in one go, start with the core functionality and add complexity incrementally. This gives you checkpoints to evaluate whether the current solution meets your needs before adding more layers.
-
-Here's an effective pattern:
-
-1. Request only the essential logic first
-2. Evaluate the output for simplicity and correctness
-3. Add validation, error handling, or tests only if you actually need them
-4. Continue iterating until the solution is complete
-
-This approach prevents the model from building comprehensive solutions that may contain unnecessary complexity. You maintain control over the solution's evolution rather than receiving a fully formed but potentially over-engineered result.
-
-## Code Snippets and Minimal Examples
-
-When you need a specific implementation, providing a minimal code snippet as a template helps Claude Code understand the level of complexity you want. If you show a five-line function as your example, Claude will likely produce similar five-line solutions rather than fifty-line comprehensive modules.
-
-```javascript
-// Example of setting expectations with a minimal snippet
-// Use this pattern in your prompt:
-// "I want something similar to this—just the core logic":
-// 
-// function processData(input) {
-//   return input.map(x => x * 2);
-// }
+Write:
+```
+Build me a simple email/password login form with server-side validation. No OAuth, no session tokens, no database—use an in-memory array for demo purposes. Keep it in a single file.
 ```
 
-This technique works across languages and problem types. A brief example signals your desired complexity level more precisely than words alone.
+The second prompt delivers a working solution in minutes rather than hours. You've communicated the entire scope: single file, in-memory storage, no external integrations.
 
-## Using supermemory for Context Management
+## Use Skills That Enforce Focus
 
-The supermemory skill can help maintain context across interactions while keeping Claude focused on your current scope. By providing relevant background without overwhelming context, you help Claude stay on track with your preferred complexity level. When Claude has too much context, it tends to connect dots that don't need connecting, resulting in solutions that address hypothetical future needs rather than present requirements.
+Claude Code skills are specialized prompt libraries that constrain AI behavior. Several skills naturally prevent over-engineering by guiding Claude toward specific workflows.
 
-## When Over-Engineered Solutions Are Appropriate
+The **tdd** skill keeps implementation focused on passing tests rather than adding unnecessary features. When you activate `/tdd`, Claude generates tests first, then builds only what those tests require:
 
-There are legitimate cases where comprehensive solutions make sense. Production systems, shared libraries, and code that others will maintain often benefit from the thoroughness Claude Code provides. The goal isn't to eliminate good engineering practices but to match the solution scope to your actual needs.
+```
+/tdd
+Write a function that validates email addresses. Use the tdd workflow.
+```
 
-For these cases, you can explicitly request comprehensive solutions: "I need production-ready code with proper error handling, validation, and documentation." This flips the default behavior intentionally rather than accidentally receiving complexity you don't want.
+The **frontend-design** skill generates UI code appropriate to the component scope you specify. It prevents the AI from building full application frameworks when you only need a single React component.
 
-## Practical Application
+For documentation tasks, the **pdf** skill produces focused output without generating entire content management systems.
 
-Next time you work with Claude Code, try these three techniques:
+## Break Tasks Into Minimal Units
 
-First, add explicit constraints to your prompts: "simple," "minimal," "no error handling," or "just the core logic." Second, provide minimal code examples when available to set complexity expectations. Third, use iterative prompting—build complexity in small steps rather than receiving everything at once.
+Large, ambiguous prompts produce large, ambiguous solutions. Breaking your request into discrete steps forces simplicity at each stage.
 
-These practices take some adjustment but become natural quickly. You'll find that Claude Code becomes a more effective development partner when you guide it toward the appropriate level of complexity for each task.
+Consider a project tracker application. Instead of:
+```
+Build a project management app with boards, cards, tags, due dates, comments, and user assignments
+```
 
-The key insight is that Claude Code responds well to clear signals about what you actually want. Its tendency toward over-engineering stems from helpfulness, not from an inability to simplify. By communicating scope explicitly through constraints, examples, and iterative prompts, you unlock faster development without sacrificing quality where it matters.
+Request it as sequential deliverables:
+```
+Step 1: Create a simple HTML page with a form to add project names
+Step 2: Add the ability to delete projects
+Step 3: Add basic due dates using native HTML date inputs
+```
 
+Each step produces focused code. You maintain control over the final scope, and you can stop after any step without unused code accumulating.
 
-## Related Reading
+## Specify Technology Constraints
 
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+Claude Code defaults to modern frameworks and best practices—which often means more dependencies and complexity than you need. State your technology constraints explicitly.
+
+```
+Use vanilla JavaScript and CSS only. No React, no build tools.
+```
+
+```
+Use Python's built-in http.server. No Flask, no Django.
+```
+
+```
+Use a single HTML file with inline styles and scripts.
+```
+
+These constraints dramatically reduce the solution complexity. You're not fighting against Claude's tendency toward complexity—you're channeling it toward simplicity by narrowing the available paths.
+
+## Request Delete Operations Proactively
+
+One underutilized technique involves asking Claude Code to delete code it just wrote. After generating a feature:
+
+```
+Now delete any code we didn't use from the previous implementation
+```
+
+This cleanup step removes placeholder functions, unused imports, and skeleton files that accumulated during development. It treats the initial generation as a brainstorming session followed by curation.
+
+## Use the supermemory Skill for Context
+
+The **supermemory** skill helps maintain project constraints across sessions. By storing simplicity requirements in memory:
+
+```
+/supermemory
+Remember these project constraints:
+- Maximum 3 files per feature
+- No external API dependencies for prototypes
+- Use built-in browser APIs only
+```
+
+When starting new tasks, Claude references these constraints and produces appropriately scoped solutions without repeated explanations.
+
+## Example: Constrained Prompt vs. Default Prompt
+
+Here's a practical comparison showing the difference between constrained and unconstrained requests:
+
+**Default prompt:**
+```
+Create a data visualization dashboard
+```
+
+This produces a full application with multiple components, state management, responsive layouts, and often React or Vue integration.
+
+**Constrained prompt:**
+```
+Create a single HTML page with one bar chart showing monthly sales data. Use Chart.js from CDN. No interactivity needed—just static bars with labels. Keep everything in one file under 100 lines.
+```
+
+The constrained version delivers exactly what you need. You can always expand later, but starting simple avoids removing accumulated complexity.
+
+## Practical Guidelines Summary
+
+Apply these principles consistently:
+
+1. **State file limits**: "Keep it in one file" or "Maximum three files"
+2. **Specify storage**: "Use localStorage" or "Use an in-memory array"
+3. **Declare dependencies**: "Use only CDN libraries" or "No external dependencies"
+4. **Define scope**: "Just the form, no backend" or "Read-only, no editing"
+5. **Set length constraints**: "Under 100 lines" or "A simple 50-line function"
+
+These constraints work because Claude Code responds to explicit specifications. The model has learned that certain prompts correlate with certain solution sizes—and your constraints change those correlations.
+
+## When Over-Engineering Actually Helps
+
+Some situations warrant comprehensive solutions. Enterprise applications, libraries intended for reuse, and code that will be maintained by teams benefit from proper abstractions. In these cases, communicate the extended scope directly:
+
+```
+Build this as a production-ready library we'll maintain long-term. Include error handling, TypeScript types, unit tests, and documentation.
+```
+
+The distinction matters: you're choosing complexity when it provides value, not accepting it by default.
+
+## Conclusion
+
+Controlling Claude Code's tendency toward over-engineering requires explicit scope management. State constraints upfront, break requests into small deliverables, use focused skills like tdd and frontend-design, and clean up unused code after generation. Your projects stay lean, development accelerates, and you maintain architectural control.
+
+The goal isn't to limit Claude Code's capabilities—it's to direct them toward your actual needs. Start simple, expand when necessary, and never accept complexity you haven't explicitly requested.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

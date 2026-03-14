@@ -1,163 +1,148 @@
 ---
 layout: default
-title: "How to Make Claude Code Make Smaller Focused Changes"
-description: "A practical guide for developers to get Claude Code to generate smaller, targeted code changes instead of large rewrites."
+title: "How to Make Claude Code Make Smaller, Focused Changes"
+description: "Learn techniques to guide Claude Code toward incremental, focused code changes instead of large refactors. Practical strategies with skill examples."
 date: 2026-03-14
-categories: [troubleshooting]
-tags: [claude-code, claude-skills, output-quality]
-author: "theluckystrike"
-reviewed: true
-score: 8
+author: theluckystrike
 permalink: /how-to-make-claude-code-make-smaller-focused-changes/
 ---
 
-# How to Make Claude Code Make Smaller Focused Changes
+# How to Make Claude Code Make Smaller, Focused Changes
 
-Claude Code excels at generating comprehensive solutions, but sometimes you need surgical precision rather than sweeping changes. When working on production codebases, large rewrites introduce risk and make code reviews difficult. This guide shows you how to guide Claude Code toward [smaller, focused changes](/claude-skills-guide/how-to-make-claude-code-not-over-engineer-solutions/) that integrate cleanly with your existing code.
+Claude Code excels at understanding context and executing complex tasks, but sometimes it produces larger changes than you need. When working on large codebases or collaborating with teams, smaller, incremental changes are easier to review, test, and maintain. This guide shows you how to guide Claude Code toward surgical, focused modifications.
 
-## The Problem with Large-Scale Changes
+## The Problem with Broad Requests
 
-By default, Claude Code analyzes your request and often generates comprehensive solutions that touch multiple files or rewrite entire sections. While this is useful for initial implementation or prototyping, it becomes problematic when you need to make targeted fixes, add incremental features, or modify specific functions without affecting surrounding code.
+When you ask Claude Code to "refactor this module" or "improve this function," it often generates comprehensive changes across multiple files. While thorough, this approach creates several challenges:
 
-Consider a scenario where you ask Claude Code to "add authentication to the API." Without proper guidance, it might restructure your entire backend, add new files, and modify routing—all when you only needed middleware for token validation. This approach increases the chance of introducing bugs and makes it harder to track what actually changed.
+- Pull request reviews become overwhelming
+- Regression risk increases with change scope
+- Team members struggle to understand what actually changed
+- Testing becomes more complex
 
-## Technique 1: Scope Your Prompts Explicitly
+The solution lies in how you communicate with Claude Code.
 
-The most straightforward method for getting smaller changes is explicitly defining scope in your prompts. Instead of describing the outcome you want, describe the specific area that needs modification and constraint the scope of changes.
+## Technique 1: Specify Exact Boundaries
 
-Instead of:
-> "Add user authentication to the API"
+Instead of vague directives, define precise boundaries for your changes. Tell Claude Code exactly which files, functions, or lines to modify.
 
-Use:
-> "Add JWT validation middleware to the existing auth.js file. Only modify the middleware function—do not change routing or database code."
+```bash
+# Instead of:
+"Refactor the authentication module"
 
-This explicit scoping tells Claude Code exactly where to focus and signals that other parts of your codebase should remain untouched.
-
-## Technique 2: Use File-Level and Function-Level References
-
-Claude Code respects file boundaries when you explicitly reference them. When making changes, always specify the exact file or function that needs modification. This prevents the model from propagating changes across multiple files.
-
-```javascript
-// Effective prompt for a targeted change:
-// "Update the calculateTotal function in src/cart/pricing.js to accept a discount parameter.
-// Only modify this function—do not touch other functions in the file."
+# Use:
+"Add a single new parameter 'sessionTimeout' to the login() function in auth.js, lines 45-67"
 ```
 
-For even more precision, reference specific line numbers or code sections:
-> "Replace lines 45-52 in utils/date.js with a new implementation that handles timezone offsets."
+This precision works especially well when using the **pdf** skill for documentation updates—specify exactly which section to modify rather than asking for comprehensive rewrites.
 
-## Technique 3: Use Claude Skills for Change Management
+## Technique 2: Use File-Level Targeting
 
-Claude Code's skills system allows you to configure default behaviors for how changes are generated. Creating a focused-change skill can automate smaller modifications across your workflow.
+When invoking skills or making requests, include specific file paths rather than directory references. This forces Claude Code to limit its scope.
 
-Create a skill file called `focused-changes.md`:
+```bash
+# Limited scope
+/defect-fix Fix the null pointer exception in user-service/models/User.ts only
 
-```markdown
-# Focused Changes Skill
-
-## Change Philosophy
-- Prefer incremental modifications over rewrites
-- Always maintain existing function signatures unless explicitly asked to refactor
-- Preserve comments and documentation unless specifically requested to update
-- Make the smallest change that satisfies the requirement
-
-## Output Guidelines
-- When adding new code, add it beside existing code rather than replacing
-- When modifying, change only what's necessary
-- Ask for clarification before making changes across multiple files
-- Provide diff-style output showing exact changes
+# Broad scope (avoid)
+/defect-fix Fix null pointer exceptions across the user service
 ```
 
-Load this skill using Claude Code's skill loading mechanism to automatically receive more focused outputs.
+This approach pairs well with the **tdd** skill when you're adding specific test cases—request tests for one function at a time rather than entire test suites.
 
-## Technique 4: Use the TDD Skill for Incremental Development
+## Technique 3: Chain Small Requests
 
-The tdd skill enforces a test-driven development workflow that naturally produces smaller, focused changes. By requiring tests to pass before implementation, it encourages working in small increments rather than large overhauls.
+Rather than one large task, break your work into a sequence of small, independent changes. Each invocation produces a focused output, and you maintain control throughout.
 
-When you use the tdd skill with specific test cases, Claude Code implements only what's needed to make those tests pass:
-
-```
-# Activate tdd skill for a specific module
-/tdd
-
-# Then specify exact requirements
-Write a test for a validateEmail function that returns true for valid emails
-and false for invalid formats. After the test passes, the function should only
-handle email validation—do not add other validation logic.
+```bash
+# Sequence of small changes
+/defact-add Add validation for email field in User.ts
+/defact-add Add validation for password field in User.ts
+/defact-add Add validation for username field in User.ts
 ```
 
-This approach guarantees minimal changes because implementation stops once tests pass. For a deeper look at TDD-driven refactoring, see [how to refactor without breaking tests](/claude-skills-guide/how-to-make-claude-code-refactor-without-breaking-tests/).
+This chaining technique works beautifully with the **xlsx** skill when generating reports—build complex spreadsheets through incremental additions rather than generating everything at once.
 
-## Technique 5: Combine Skills for Precision
+## Technique 4: Constraint Your Changes
 
-Using multiple skills together creates compound effects for generating focused changes. The frontend-design skill, for example, can be combined with a custom scoped-change skill to ensure design modifications stay within specific components.
+Explicitly state what Claude Code should NOT do. Constraints help focus the model's attention on your actual goal.
 
-```markdown
-# Example skill combination request:
-"Using the frontend-design skill, update only the Button component's hover state.
-Do not modify other components or the theme file."
+```bash
+# With constraints
+"Add error handling to the API endpoint in server.js. Do NOT modify the database schema or add new dependencies. Only change the try-catch block around line 23."
+
+# Without constraints
+"Add error handling to the API endpoint"
 ```
 
-Similarly, the supermemory skill can maintain context about what you've previously changed, helping Claude Code avoid redundant or overlapping modifications.
+The **frontend-design** skill benefits enormously from constraints. When requesting UI components, specify exact dimensions, color schemes, and which elements to include—avoiding the temptation to generate comprehensive design systems in one pass.
 
-## Technique 6: Use Diff Preview and Iteration
+## Technique 5: Reference Specific Commits or Versions
 
-Request diff-style output from Claude Code before applying changes. This gives you control to approve or refine the scope before any modifications occur:
+When working with version control, anchor your requests to specific commits or diffs. This naturally limits change scope.
 
-> "Show me the exact diff of what you would change. I want to review the scope before you make any edits."
+```bash
+# Anchored request
+"Apply the same caching logic from commit a1b2c3d to this new function"
 
-This technique works because it forces Claude Code to think about minimal changes—you get visibility into the proposed scope and can provide feedback to narrow it further.
-
-## Technique 7: Define Change Boundaries in System Prompts
-
-Configure your Claude Code settings or project-specific skills to establish default boundaries for changes:
-
-```markdown
-# .claude/settings.md
-## Change Boundaries
-- Maximum files touched per request: 3
-- Maximum lines changed per file: 50
-- Always prefer modification over creation
-- Preserve all existing tests unless explicitly asked to update
+# This is especially useful with skills like supermemory for recalling
+# previous implementation patterns
 ```
 
-This configuration creates a framework that naturally produces smaller changes without requiring you to repeat constraints in every prompt.
+## Technique 6: Use Before-After Specifications
 
-## Practical Example: Refactoring a Single Function
+Describe the exact state you want in "before" and "after" terms. This removes ambiguity and prevents scope creep.
+
+```
+Before: validateEmail() returns true for any string
+After: validateEmail() returns true only for valid email formats matching RFC 5322
+```
+
+This technique ensures Claude Code produces minimal, targeted changes that achieve your exact specification.
+
+## Practical Example: Incremental Bug Fix
 
 Here's how these techniques combine in practice:
 
-**Initial request (produces large changes):**
-> "Improve the error handling in the user service"
+```
+Task: Fix a bug where user avatars fail to load in production
 
-**Optimized request (produces focused changes):**
-> "In src/services/userService.js, modify only the getUserById function to add try-catch error handling. Do not modify other functions in the file. Keep the existing return type."
+Step 1 - Define the boundary:
+"Look only at avatar rendering in src/components/UserAvatar.tsx"
 
-The optimized request specifies:
-- Exact file path
-- Exact function name
-- Specific change type (add try-catch)
-- Scope limitation (only this function)
-- Constraint (preserve return type)
+Step 2 - Add constraints:
+"Do NOT modify any API calls or change the image upload functionality. Only fix the display logic."
 
-## Measuring Success
+Step 3 - Specify the change:
+"Add a null check before calling img.src, and add a fallback to the default avatar URL"
+```
 
-To verify you're getting smaller changes, track these metrics:
+This produces a small, reviewable diff instead of a sprawling set of changes.
 
-1. **Files modified per task**: Aim for 1-2 files for most changes
-2. **Lines changed**: Use git diff to measure actual changes—target under 50 lines for most modifications
-3. **Review complexity**: If your code review requires understanding multiple interconnected changes, the scope is too large
+## Working with Specific Skills
+
+Several Claude Code skills benefit particularly from focused change requests:
+
+- **tdd**: Request one test case at a time rather than full test suite generation
+- **pdf**: Specify exact pages or sections to modify in documents
+- **xlsx**: Build spreadsheets cell-by-cell or formula-by-formula
+- **frontend-design**: Request individual components instead of complete page designs
+- **supermemory**: Use it to recall your previous patterns and apply them incrementally
+
+## When You Need Larger Changes
+
+Sometimes you genuinely need comprehensive changes. In those cases, ask Claude Code to output its plan first, then approve sections incrementally:
+
+```
+"First, show me the plan for refactoring user-auth.js. Then apply the changes in three separate batches: authentication logic, session management, and error handling."
+```
+
+This approach gives you the comprehensive result you need while maintaining reviewable, manageable chunks.
 
 ## Summary
 
-Getting Claude Code to make smaller, focused changes requires explicit scoping, strategic skill configuration, and deliberate prompt engineering. By using file-level references, creating focused-change skills, and requesting diff previews, you can maintain surgical precision in your codebase with AI assistance.
+Getting Claude Code to produce smaller, focused changes comes down to specificity in your requests. Define exact boundaries, use file-level targeting, chain small requests together, add explicit constraints, reference specific versions, and describe before-after states precisely. These techniques work regardless of which skills you're using and help you maintain clean, reviewable, incremental progress in your projects.
 
-The key principle: tell Claude Code exactly what to change, where to change it, and explicitly what to leave untouched. This clarity produces the targeted modifications that production codebases require.
-
-## Related Reading
-
-- [How to Make Claude Code Not Over Engineer Solutions](/claude-skills-guide/how-to-make-claude-code-not-over-engineer-solutions/) — Complementary techniques for keeping AI-generated code lean and maintainable
-- [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/how-to-make-claude-code-refactor-without-breaking-tests/) — Combine focused changes with TDD to refactor safely
-- [How to Make Claude Code Match Existing Code Patterns](/claude-skills-guide/how-to-make-claude-code-match-existing-code-patterns/) — Ensure scoped changes fit naturally into your codebase conventions
+---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
