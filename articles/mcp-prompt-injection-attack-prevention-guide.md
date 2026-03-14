@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # MCP Prompt Injection Attack Prevention Guide
 
@@ -186,3 +187,4 @@ Prompt injection prevention requires defense in depth. By sanitizing inputs, est
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

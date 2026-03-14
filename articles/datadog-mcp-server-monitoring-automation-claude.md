@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 # Datadog MCP Server Monitoring Automation with Claude
 
@@ -132,3 +133,4 @@ The combination of Datadog's robust monitoring platform with MCP server automati
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

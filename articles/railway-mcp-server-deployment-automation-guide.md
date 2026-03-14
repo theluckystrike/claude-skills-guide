@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 # Railway MCP Server Deployment Automation Guide
 
@@ -208,3 +209,4 @@ Railway provides a production-ready deployment target for MCP servers. The workf
 For developers building Claude Code integrations, combining Railway deployment with skills like the tdd skill for test-driven development or the frontend-design skill for UI components creates a powerful development workflow. The pdf skill can generate deployment documentation automatically.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

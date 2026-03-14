@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 # Fly.io MCP Server Deployment Workflow Guide
 
@@ -250,3 +251,4 @@ With your MCP server deployed on Fly.io, explore extending its capabilities. The
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

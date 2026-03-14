@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 # Claude Code for Fly.io Deployment Automation Workflow
 
@@ -271,3 +272,4 @@ The scripts and strategies in this guide provide a foundation you can customize 
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — the essential skill stack for deployment automation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

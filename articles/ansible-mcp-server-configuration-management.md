@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 # Ansible MCP Server Configuration Management
 
@@ -193,3 +194,4 @@ The Ansible MCP server transforms how you manage infrastructure configuration. B
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
