@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "How to Fix Claude Code Ignoring My claude.md File"
 description: "Is Claude Code ignoring your custom claude.md skill file? Learn the common reasons why skills aren't loading and how to fix them with practical solutions."
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, troubleshooting, claude-md]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: false
-score: 0
+score: 7
 permalink: /how-to-fix-claude-code-ignoring-my-claude-md-file/
 ---
+
 
 # How to Fix Claude Code Ignoring My claude.md File
 

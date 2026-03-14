@@ -1,17 +1,22 @@
 ---
+
 layout: default
 title: "How to Make Claude Code Not Break Type Definitions"
 description: "Learn practical strategies and best practices for working with Claude Code without accidentally breaking your TypeScript or type definition files."
 date: 2026-03-14
 categories: [guides]
-author: theluckystrike
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-not-break-type-definitions/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # How to Make Claude Code Not Break Type Definitions
 
-When working with Claude Code for code generation and editing, maintaining type safety is crucial. Type definitions serve as the contract between your codebase components, and accidentally modifying them can introduce subtle bugs that are hard to track down. This guide covers practical strategies to leverage Claude Code's capabilities while preserving type definition integrity.
+When working with Claude Code for code generation and editing, maintaining type safety is crucial. Type definitions serve as the contract between your codebase components, and accidentally modifying them can introduce subtle bugs that are hard to track down. This guide covers practical strategies to use Claude Code's capabilities while preserving type definition integrity.
 
 ## Understanding the Challenge
 
@@ -160,7 +165,7 @@ When making significant refactors, always include your type definition files in 
 
 ## Conclusion
 
-Claude Code is a powerful tool for accelerating development, but type definitions require special care. By using explicit targeting, leveraging edit modes, creating type snapshots, and following the practices outlined in this guide, you can harness AI-assisted development while maintaining a robust type system.
+Claude Code is a powerful tool for accelerating development, but type definitions require special care. By using explicit targeting, using edit modes, creating type snapshots, and following the practices outlined in this guide, you can harness AI-assisted development while maintaining a robust type system.
 
 Remember: Type definitions are the contract of your codebase. Protect them, and they'll protect you from runtime errors.
 

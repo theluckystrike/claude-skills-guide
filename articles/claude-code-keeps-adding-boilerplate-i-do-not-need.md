@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Keeps Adding Boilerplate I Do Not Need"
 description: "Practical solutions to prevent Claude Code from generating unnecessary boilerplate code in your projects."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-keeps-adding-boilerplate-i-do-not-need/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code Keeps Adding Boilerplate I Do Not Need
@@ -63,7 +69,7 @@ The skill can be configured to output function-level code without surrounding co
 
 ## Strategy 4: Chain-of-Thought Refinement
 
-When Claude Code generates too much boilerplate, use iterative refinement rather than starting over. This approach leverages the conversation context:
+When Claude Code generates too much boilerplate, use iterative refinement rather than starting over. This approach uses the conversation context:
 
 1. **Initial request:** "Create a function to read a file"
 2. **Result:** Full function with error handling, type hints, docstring, and context manager
