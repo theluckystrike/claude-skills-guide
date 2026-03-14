@@ -1,153 +1,110 @@
 ---
 layout: default
 title: "Claude Code Architecture Decision Records Guide"
-description: "Learn how to implement Architecture Decision Records (ADRs) in your Claude Code projects for better documentation and team collaboration."
+description: "A practical guide to implementing Architecture Decision Records in your Claude Code workflow. Learn how to document design choices, leverage Claude skills, and maintain project clarity."
 date: 2026-03-14
+categories: [tutorials]
+tags: [claude-code, architecture, adr, documentation, decision-records]
 author: theluckystrike
 permalink: /claude-code-architecture-decision-records-guide/
 ---
 
-Architecture Decision Records (ADRs) provide a structured approach to documenting significant technical choices within your Claude Code projects. When working with skills, MCP servers, and multi-agent workflows, maintaining a clear record of why certain architectural decisions were made becomes essential for long-term project maintainability.
+# Claude Code Architecture Decision Records Guide
 
-This guide covers practical strategies for implementing ADRs in Claude Code workflows, with concrete examples you can apply immediately to your projects.
+Architecture Decision Records (ADRs) provide a structured way to capture important design choices in your software projects. When combined with Claude Code and its skill system, you can create a powerful documentation workflow that maintains project clarity while accelerating development. This guide shows you how to implement ADR workflows using Claude Code skills effectively.
 
-## Why ADRs Matter for Claude Code Projects
+## What Are Architecture Decision Records
 
-Claude Code projects often evolve rapidly, with skills being added, modified, or deprecated as requirements change. Without proper documentation, teams lose context about why specific approaches were chosen, leading to repeated debates and inconsistent implementations.
+An Architecture Decision Record is a document that captures an important architectural decision made along with its context and consequences. ADRs typically include a title, status (proposed, accepted, deprecated, orsuperseded), the specific decision, the context that led to this decision, and the expected consequences—both positive and negative.
 
-ADRs capture the "why" behind technical decisions in a format that remains useful over time. For Claude Code specifically, ADRs help document skill composition patterns, MCP server configurations, and workflow orchestration strategies.
+Rather than letting design decisions live only in Slack messages, meeting notes, or worse, undocumented in team members' heads, ADRs create a searchable, version-controlled history of why your system looks the way it does. This becomes invaluable when onboarding new team members, auditing technical choices, or understanding why a particular approach was taken years later.
 
-## Creating Your First ADR
+For Claude Code users, the documentation skill can help generate ADR templates, while the supermemory skill enables contextual retrieval of past decisions during development sessions.
 
-An ADR follows a standardized format that includes the title, status, context, decision, and consequences. Here's a practical template you can use in your Claude Code projects:
+## Setting Up ADR Documentation in Your Project
+
+The simplest way to start using ADRs is to create an `adr/` directory in your project root. Each decision gets its own numbered file, typically named `001-choose-database-technology.md`, `002-implement-event-sourcing.md`, and so on.
+
+Your ADR directory structure might look like this:
+
+```
+project/
+├── adr/
+│   ├── 001-choose-postgres-for-primary-database.md
+│   ├── 002-adopt-event-sourcing-for-audit-trail.md
+│   └── 003-migrate-auth-to-oauth2-provider.md
+├── src/
+├── tests/
+└── docs/
+```
+
+The markdown skill works exceptionally well for creating and maintaining these documents. You can ask Claude to draft new ADRs, update existing ones when decisions change, or search through your ADR collection to understand historical context.
+
+## Writing Effective ADRs with Claude Code
+
+When writing an ADR, clarity and completeness matter more than length. The record should answer four key questions: what was the decision, why was this choice made over alternatives, what other options were considered, and what are the expected outcomes.
+
+Claude Code can assist throughout this process. Use the writing skill to draft your ADR content, ensuring consistent formatting across all records. The skill automatically applies best practices for technical documentation, including clear section headers, concrete examples, and actionable consequences.
+
+Here's a practical example of what an ADR looks like in practice:
 
 ```markdown
-# ADR-001: Use skill composition for API testing workflows
+# ADR-002: Implement Event Sourcing for Order Processing
 
 ## Status
 Accepted
 
 ## Context
-Our team needs to implement comprehensive API testing across multiple endpoints. We must decide between creating a monolithic skill or composing smaller, focused skills.
+Our order processing system needs a complete audit trail for compliance reasons. The current relational model stores current state only, making it impossible to reconstruct how any order reached its current state without relying on incomplete database logs.
 
 ## Decision
-We will use skill composition, creating separate skills for authentication, request execution, and response validation. The supermemory skill will persist test results between sessions.
+We will implement event sourcing for the order processing domain. Each state change becomes an immutable event stored in an event store. The current order state is reconstructed by replaying all relevant events.
 
 ## Consequences
-- Skills remain focused and reusable
-- Easier to test individual components
-- Requires coordination between multiple skill files
+- Positive: Complete audit trail available for every order
+- Positive: Ability to implement temporal queries (what was order state at time X)
+- Negative: Increased complexity in event schema evolution
+- Negative: Eventual consistency considerations for read models
 ```
 
-## Documenting Skill Dependencies
+## Integrating ADRs into Your Claude Workflow
 
-When building complex Claude Code workflows, understanding skill dependencies becomes critical. Create ADRs that document the relationship between skills and their interaction patterns.
+The real power emerges when you integrate ADRs directly into your Claude Code sessions. Create a custom skill that reminds you to consult existing ADRs before making significant technical decisions.
 
-Consider this example for a frontend development workflow:
+For example, you might create a skill that searches your ADR directory when you mention architectural concerns:
 
 ```markdown
-# ADR-005: Frontend skill hierarchy for component generation
+# Skill: ADR Consultant
 
-## Context
-We need to generate React components with consistent styling and accessibility patterns.
-
-## Decision
-Use a three-tier skill structure:
-1. **frontend-design** skill for design token extraction
-2. **component-generator** skill for code generation
-3. **tdd** skill for generating test files
-
-The frontend-design skill runs first to establish design context, then passes context to component-generator.
+When the user discusses architectural decisions, technical choices, or system design:
+1. First, search the project's adr/ directory for relevant past decisions
+2. Summarize any applicable ADRs found
+3. If no relevant ADR exists, suggest creating one for significant decisions
+4. Reference the supermemory skill for additional context from past discussions
 ```
 
-This approach allows you to swap individual skills without restructuring the entire workflow. The tdd skill can generate tests for any component, independent of how it was created.
+This workflow ensures that design decisions get documented at the moment they're made—when context is freshest—rather than as an afterthought that never happens.
 
-## ADR Workflow with Claude Code
+The tdd skill pairs well with ADRs when you're implementing features. After accepting an ADR, use tdd to drive implementation against the requirements that emerged from your decision record. This creates a traceable link between why something was built a certain way and how it was actually constructed.
 
-Integrate ADR creation into your development workflow using Claude Code skills. The pdf skill can generate formatted ADR documents, while version control maintains the history of decisions.
+## Maintaining Your ADR Collection
 
-A practical workflow:
+ADRs only remain useful if they stay current. Establish a practice of reviewing your ADR collection during project milestones. When an ADR's status changes—from proposed to accepted, or when a decision gets deprecated—update the record immediately.
 
-1. Create a new branch for architectural changes
-2. Draft the ADR using Claude Code
-3. Use version control to track the ADR alongside code changes
-4. Review ADRs during pull request reviews
-5. Update ADR status as decisions evolve
+The pdf skill can help generate summary reports of your architecture decisions, useful for stakeholder presentations or onboarding documentation. Export key ADRs to PDF for formal review processes or external compliance requirements.
 
-## Organizing ADRs in Your Project
+Deprecate rather than delete old ADRs. When a decision gets superseded, update its status and create a link to the new ADR that supersedes it. This preserves the historical record while guiding future readers to the current thinking.
 
-Structure your ADRs for easy discovery and navigation. A common pattern uses sequential numbering:
+## Practical Example: Database Selection Decision
 
-```
-docs/
-  adr/
-    adr-001-skill-composition-pattern.md
-    adr-002-mcp-server-authentication.md
-    adr-003-workflow-orchestration-strategy.md
-```
+Consider a real scenario where ADR documentation proves its worth. Your team needs to choose between PostgreSQL, MongoDB, and DynamoDB for a new microservices backend.
 
-Include an index file that provides an overview of all ADRs and their current status:
+Using Claude Code, you could run a focused session to compare options. Document the decision in an ADR that captures the evaluation criteria: query patterns, scaling requirements, team expertise, and operational overhead. List the alternatives considered with reasoning for why they were chosen or rejected.
 
-```markdown
-# Architecture Decision Records Index
-
-| ID | Title | Status | Date |
-|----|-------|--------|------|
-| ADR-001 | Skill composition pattern | Accepted | 2026-01-15 |
-| ADR-002 | MCP server authentication | Proposed | 2026-03-10 |
-| ADR-003 | Workflow orchestration | Accepted | 2026-02-20 |
-```
-
-## Integrating with Existing Skills
-
-Many existing Claude Code skills can enhance your ADR workflow. The docx skill helps export ADRs to Word documents for stakeholders who prefer traditional formats. The internal-comms skill can draft ADR review announcements for team communication.
-
-For teams using the supermemory skill, ADRs can be stored as persistent context, making historical decisions searchable during Claude Code sessions.
-
-## When to Create New ADRs
-
-Not every technical choice requires an ADR. Create ADRs for decisions that:
-
-- Affect multiple team members or projects
-- Introduce significant complexity or constraints
-- May be difficult to reverse in the future
-- Establish patterns that other decisions will follow
-
-Avoid creating ADRs for routine implementation details or easily reversible choices. The goal is documentation that provides lasting value, not administrative overhead.
-
-## Maintaining ADRs Over Time
-
-ADRs require ongoing attention to remain useful. Schedule periodic reviews to:
-
-- Verify that decisions remain relevant
-- Update status when decisions are superseded
-- Add context about what worked well or failed
-
-When a new ADR supersedes an existing one, clearly reference the previous decision and explain the rationale for change. This creates a complete trail of architectural evolution.
-
-## Example: Documenting MCP Server Selection
-
-Here's how an ADR might look for choosing MCP servers:
-
-```markdown
-# ADR-008: MCP server stack for cloud infrastructure management
-
-## Context
-We need to manage AWS resources through Claude Code. Multiple MCP servers provide AWS functionality.
-
-## Decision
-Use aws-mcp-server for primary infrastructure operations. Use the memory server for persisting state between sessions. Reject serverless-mcp due to limited IAM support.
-
-## Consequences
-- Full AWS service coverage available
-- State persistence enables complex multi-step operations
-- Requires careful IAM role configuration
-```
+Six months later, when performance issues emerge with the chosen solution, your ADR provides the context needed to evaluate whether to optimize, migrate, or supplement with another database. Without the ADR, you'd spend hours reconstructing why the original choice was made.
 
 ## Conclusion
 
-Architecture Decision Records provide a lightweight yet powerful framework for documenting technical choices in Claude Code projects. By capturing the context, rationale, and consequences of decisions, you create institutional knowledge that improves team collaboration and project maintainability.
-
-Start by creating ADRs for your most significant architectural choices, then gradually build documentation habits that keep your project records current and useful.
+Architecture Decision Records transform implicit knowledge into explicit, searchable documentation. By integrating ADRs into your Claude Code workflow using skills like writing, tdd, supermemory, and markdown, you create a living archive of your project's architectural evolution. Start with your next significant technical decision—document it properly and future your team will thank you.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
