@@ -89,27 +89,18 @@ Claude Code maintains conversation context within sessions. You can use this to 
 
 ### Session-Level Caching Pattern
 
-When running multiple skills that share context, maintain a single session rather than starting fresh each time:
+When running multiple skills that share context, work within a single Claude Code session rather than starting fresh each time. Within one session, invoke the skills sequentially:
 
-```bash
-# Instead of separate invocations:
-claude -p "@skill:pdf" "generate report.md"
-claude -p "@skill:pdf" "generate report.md"  # Repeats work
-
-# Use a single session with context retention:
-claude -i <<EOF
-@skill:pdf
-Generate report.md
+```
+/pdf Generate report.md
 
 [Claude processes and caches internal representations]
 
-@skill:pdf
-Generate updated report.md  
-[Claude may reuse parsed structures from previous invocation]
-EOF
+/pdf Generate updated report.md
+[Claude may reuse parsed structures from the previous invocation]
 ```
 
-The `supermemory` skill demonstrates this effectively. It maintains an indexed memory across interactions, so repeated queries about the same content retrieve cached embeddings rather than recomputing them.
+The `supermemory` skill demonstrates this effectively. It maintains an indexed memory across interactions, so repeated queries about the same content retrieve cached context rather than recomputing it.
 
 ## MCP-Based Persistent Caching
 
