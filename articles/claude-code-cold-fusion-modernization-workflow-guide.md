@@ -34,8 +34,8 @@ Claude Code excels at this transformation because it understands both the source
 Begin by installing Claude Code and configuring a dedicated skill for ColdFusion analysis:
 
 ```bash
-claude install skill cold-fusion-analyzer
-claude install skill cfml-to-modern-cfml
+# Place cold-fusion-analyzer.md in .claude/ then invoke: /cold-fusion-analyzer
+# Place cfml-to-modern-cfml.md in .claude/ then invoke: /cfml-to-modern-cfml
 ```
 
 Create a project-specific configuration that defines your modernization targets:

@@ -20,9 +20,9 @@ The OWASP Top 10 remains the definitive guide to web application security risks,
 Before building a scanning workflow, you need the right skills installed. The foundation starts with understanding which skills support security analysis:
 
 ```bash
-claude install skill tdd
-claude install skill pdf
-claude install skill supermemory
+# Place tdd.md in .claude/ then invoke: /tdd
+# Place pdf.md in .claude/ then invoke: /pdf
+# Place supermemory.md in .claude/ then invoke: /supermemory
 ```
 
 The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write security-focused tests, while [**supermemory**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) maintains a persistent vulnerability database across sessions. If you're building PDF reports of findings, the **pdf** skill generates professional documentation.

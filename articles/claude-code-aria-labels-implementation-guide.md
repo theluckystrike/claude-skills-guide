@@ -36,13 +36,13 @@ ARIA labels provide accessible names for interactive elements that lack visible 
 Before implementing ARIA labels, configure Claude Code with skills that support accessible development. The **frontend-design** skill provides templates and patterns for accessible components. Install it first:
 
 ```bash
-claude install frontend-design
+# Place frontend-design.md in .claude/ then invoke: /frontend-design
 ```
 
 For testing your implementation, the **tdd** skill helps create automated accessibility tests:
 
 ```bash
-claude install tdd
+# Place tdd.md in .claude/ then invoke: /tdd
 ```
 
 These skills work together—the frontend-design skill generates markup with proper ARIA attributes, while tdd skill tests verify they function correctly.

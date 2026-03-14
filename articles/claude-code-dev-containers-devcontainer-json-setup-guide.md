@@ -97,21 +97,21 @@ Never commit actual secrets to your `devcontainer.json`. Instead, set them in yo
 
 ## Installing Claude Skills in Dev Containers
 
-One powerful pattern is pre-installing Claude skills during container creation. Add a `postCreateCommand` that runs skill installations. For large teams, understanding [how to share Claude skills across multiple projects](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) ensures everyone works from the same skill versions:
+One powerful pattern is pre-provisioning Claude skills during container creation. Since skills are `.md` files in `.claude/`, you can copy them in `postCreateCommand`. For large teams, understanding [how to share Claude skills across multiple projects](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) ensures everyone works from the same skill versions:
 
 ```json
 {
-  "postCreateCommand": "claude install tdd supermemory pdf frontend-design"
+  "postCreateCommand": "mkdir -p .claude && cp /workspace/.claude-skills/*.md .claude/"
 }
 ```
 
-This approach ensures every team member has the same skill versions. The `tdd` skill provides test-driven development automation, `supermemory` enables persistent context across sessions, `pdf` handles document manipulation, and `frontend-design` assists with UI implementation.
+This approach ensures every team member has the same skill files. Check your `tdd.md`, `supermemory.md`, `pdf.md`, and `frontend-design.md` into a `.claude-skills/` directory at the repo root, and they'll be available to all container instances.
 
-For skills requiring additional dependencies, chain commands:
+For skills requiring additional dependencies, chain with package installs:
 
 ```json
 {
-  "postCreateCommand": "claude install tdd && npm install -D vitest jest"
+  "postCreateCommand": "mkdir -p .claude && cp /workspace/.claude-skills/*.md .claude/ && npm install -D vitest jest"
 }
 ```
 

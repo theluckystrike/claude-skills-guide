@@ -169,8 +169,8 @@ Several Claude Skills enhance validation workflows:
 Install these skills to create a robust validation infrastructure:
 
 ```bash
-claude install static-analysis-automation
-claude install claude-code-code-review-checklist-automation
+# Place static-analysis-automation.md in .claude/ then invoke: /static-analysis-automation
+# Place claude-code-code-review-checklist-automation.md in .claude/ then invoke: /claude-code-code-review-checklist-automation
 ```
 
 ## Best Practices for Effective Validation

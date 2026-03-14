@@ -71,10 +71,10 @@ Several Claude skills are particularly valuable for Turkish development teams:
 Install these skills using:
 
 ```bash
-claude install turkish-docs
-claude install code-review
-claude install git-workflow
-claude install testing-expert
+# Place turkish-docs.md in .claude/ then invoke: /turkish-docs
+# Place code-review.md in .claude/ then invoke: /code-review
+# Place git-workflow.md in .claude/ then invoke: /git-workflow
+# Place testing-expert.md in .claude/ then invoke: /testing-expert
 ```
 
 ## Collaborative Workflow Patterns

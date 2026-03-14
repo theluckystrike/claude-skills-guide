@@ -159,8 +159,6 @@ Remember: quality of context matters more than quantity. Strategic, targeted pro
 
 ---
 
----
-
 ## Related Reading
 
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Complete token optimization guide

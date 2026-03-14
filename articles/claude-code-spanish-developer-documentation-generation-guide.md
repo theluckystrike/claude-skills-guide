@@ -33,7 +33,7 @@ Claude Code ofrece un ecosistema de habilidades diseñadas específicamente para
 La habilidad `docx` permite crear documentos de Word profesionales con formato avanzado. Es ideal para documentación que requiere plantillas corporativas o distribución formal.
 
 ```bash
-claude install docx
+# Place docx.md in .claude/ then invoke: /docx
 ```
 
 Para generar documentación en español, puedes usar un prompt como:
@@ -51,7 +51,7 @@ Crea una guía de API en español para mi proyecto de biblioteca JavaScript. Inc
 La habilidad `pdf` convierte tus documentos markdown a formato PDF profesional, perfecto para manuales de usuario o documentación离线.
 
 ```bash
-claude install pdf
+# Place pdf.md in .claude/ then invoke: /pdf
 ```
 
 Ejemplo de uso para documentación en español:
@@ -68,7 +68,7 @@ Ejemplo de uso para documentación en español:
 Cuando necesitas documentar APIs, matrices de características o comparativas, la habilidad `xlsx` crea hojas de cálculo estructuradas.
 
 ```bash
-claude install xlsx
+# Place xlsx.md in .claude/ then invoke: /xlsx
 ```
 
 ## Configuración para Documentación en Español
