@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Spawn Unknown Error Node Skill Fix"
-description: "Troubleshoot and fix spawn unknown error in Claude Code Node.js skills. Practical solutions for child_process spawn failures, path issues, and environment configuration."
+description: "Troubleshoot and fix spawn unknown error in Claude Code Node.js skills. Practical solutions for child_process spawn failures, path issues, and."
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, node.js, spawn, error-fix]
@@ -298,3 +298,11 @@ The "spawn unknown error" in Claude Code Node.js skills is usually caused by one
 By following this troubleshooting guide, you can diagnose and fix spawn errors in your Claude Code skills. The key is to test components individually - verify Node.js works, check dependencies are installed, confirm file permissions are correct, and use explicit paths rather than relying on environment variables.
 
 With these fixes, your Node.js-powered Claude Code skills should run smoothly without mysterious spawn errors.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+
