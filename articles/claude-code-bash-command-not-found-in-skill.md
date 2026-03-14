@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code Bash Command Not Found in Skill: Troubleshooting Guide"
 description: "Fix 'command not found' errors when using bash in Claude Code skills. Learn why skills fail to execute shell commands and how to resolve path, environment, and tool access issues."
@@ -7,10 +8,11 @@ date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, bash, troubleshooting, errors]
 author: "Claude Skills Guide"
-reviewed: false
+reviewed: true
 score: 7
 permalink: /claude-code-bash-command-not-found-in-skill/
 ---
+
 
 {% raw %}
 

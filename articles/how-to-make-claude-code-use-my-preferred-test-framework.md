@@ -1,6 +1,7 @@
 ---
 
 
+
 layout: default
 title: "How to Make Claude Code Use My Preferred Test Framework"
 description: "Learn how to configure Claude Code to use your preferred testing framework with practical examples and custom skill configurations."
@@ -8,10 +9,11 @@ date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, testing, test-frameworks, configuration, skills, claude-skills]
 author: "Claude Skills Guide"
-reviewed: false
+reviewed: true
 score: 7
 permalink: /how-to-make-claude-code-use-my-preferred-test-framework/
 ---
+
 
 
 
