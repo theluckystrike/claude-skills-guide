@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Career Changers into Software Development"
-description: "A practical guide for professionals transitioning into software development using Claude Code. Learn how to leverage AI-assisted coding to accelerate your career change journey."
+description: "A practical guide for professionals transitioning into software development using Claude Code. Learn how to leverage AI-assisted coding to accelerate."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills]
@@ -184,3 +184,10 @@ Claude Code represents a transformative opportunity for career changers entering
 Remember that becoming a software developer is a marathon, not a sprint. Use Claude Code as your learning companion, but also invest time in understanding the "why" behind the code it generates. This combination of practical skills and foundational knowledge will serve you throughout your new career.
 
 Start small, build consistently, and leverage Claude Code's capabilities to accelerate your journey into software development.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

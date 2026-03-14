@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code SvelteKit Hooks Handle Load Workflow Tutorial"
-description: "Learn how to leverage Claude Code for SvelteKit development with hooks.handle and the load workflow. Practical examples and actionable advice for developers."
+description: "Learn how to leverage Claude Code for SvelteKit development with hooks.handle and the load workflow. Practical examples and actionable advice for."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-sveltekit-hooks-handle-load-workflow-tutorial/
@@ -216,3 +216,10 @@ SvelteKit's hooks system and load workflow form the backbone of server-side requ
 
 By understanding how these pieces work together—and using Claude Code to help implement them—you can build robust, secure, and performant SvelteKit applications with minimal boilerplate code.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

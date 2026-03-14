@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code NestJS Guards Interceptors Pipes Deep Dive"
-description: "Master NestJS guards, interceptors, and pipes with Claude Code. Learn to build secure, efficient, and well-structured Node.js applications with practical examples."
+description: "Master NestJS guards, interceptors, and pipes with Claude Code. Learn to build secure, efficient, and well-structured Node.js applications with."
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-nestjs-guards-interceptors-pipes-deep-dive/
@@ -187,3 +187,10 @@ This separation of concerns keeps your code modular and testable. Each component
 
 By mastering guards, interceptors, and pipes, you'll build NestJS applications that are secure, well-structured, and production-ready. Claude Code can accelerate your learning by generating these patterns while you focus on your business logic.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Mobile App Accessibility Testing Workflow"
-description: "A comprehensive guide to implementing accessibility testing workflows for mobile apps using Claude Code. Learn practical techniques for automated testing, manual audits, and continuous integration."
+description: "A comprehensive guide to implementing accessibility testing workflows for mobile apps using Claude Code. Learn practical techniques for automated."
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-mobile-app-accessibility-testing-workflow/
@@ -186,3 +186,10 @@ The best accessibility workflow is one that becomes second nature to your team. 
 
 Remember that accessibility is an ongoing commitment, not a one-time effort. As you add new features and update existing ones, continue to apply these testing practices to maintain the accessibility standards you've established.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

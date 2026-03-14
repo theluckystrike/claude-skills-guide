@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude API Batch Processing Large Datasets Workflow Guide"
-description: "Learn how to efficiently batch process large datasets using Claude API. This guide covers async patterns, parallel processing, token optimization, and production-ready workflows."
+description: "Learn how to efficiently batch process large datasets using Claude API. This guide covers async patterns, parallel processing, token optimization, and."
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-api-batch-processing-large-datasets-workflow-guide/
@@ -285,3 +285,10 @@ Claude API batch processing enables powerful dataset analysis at scale. By imple
 Start with simpler sequential processing, then add parallelization as you validate your prompts and error handling. The **slack-gif-creator** skill can help create visual progress indicators for team dashboards. With proper design, batch processing becomes a reliable component of your data infrastructure.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

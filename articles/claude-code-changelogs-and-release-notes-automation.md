@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Changelogs and Release Notes Automation"
-description: "Learn how to automate changelogs and release notes generation using Claude Code skills, git history analysis, and practical workflows for development teams."
+description: "Learn how to automate changelogs and release notes generation using Claude Code skills, git history analysis, and practical workflows for development."
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-changelogs-and-release-notes-automation/
@@ -228,3 +228,10 @@ Start simple—generate a basic changelog from your last few releases—and prog
 
 Remember: the goal isn't to eliminate human involvement entirely, but to handle the mechanical parts so your team can focus on writing code and providing the strategic context that makes release notes truly valuable.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -244,3 +244,10 @@ Claude Code transforms how PhD students approach coding tasks. By handling boile
 Start by integrating Claude Code into one project, establish good habits, and gradually expand to other areas of your research workflow. The productivity gains compound over time, allowing you to accomplish more research in less time while maintaining code quality.
 
 Remember: Claude Code amplifies your capabilities. Your research insights, domain expertise, and critical thinking remain irreplaceable. Use AI as a tool to enhance your work, not as a shortcut around the hard thinking that drives academic progress.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

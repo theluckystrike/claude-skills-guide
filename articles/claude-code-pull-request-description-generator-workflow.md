@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Pull Request Description Generator Workflow"
-description: "Learn how to build an automated workflow that generates comprehensive pull request descriptions using Claude Code, saving time and ensuring consistent documentation."
+description: "Learn how to build an automated workflow that generates comprehensive pull request descriptions using Claude Code, saving time and ensuring consistent."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-pull-request-description-generator-workflow/
@@ -256,3 +256,10 @@ Automating pull request descriptions with Claude Code improves consistency, save
 
 The key is to balance automation with human oversight—let Claude handle the mechanical aspects of description writing while you focus on adding the nuanced context that only a human developer can provide.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

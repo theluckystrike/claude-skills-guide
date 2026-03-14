@@ -207,3 +207,10 @@ An efficient issue triage workflow is crucial for healthy open source projects. 
 
 Remember: the goal isn't to replace human judgment, but to handle repetitive tasks so maintainers can focus on building and shipping great software.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

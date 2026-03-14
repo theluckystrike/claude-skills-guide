@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Community Health Metrics Documentation Workflow"
-description: "Learn how to track, document, and maintain community health metrics for Claude Code skills. Includes practical workflows, code examples, and actionable advice for developers."
+description: "Learn how to track, document, and maintain community health metrics for Claude Code skills. Includes practical workflows, code examples, and actionable."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -253,3 +253,10 @@ Start building your community health metrics documentation today:
 
 By establishing a solid community health metrics documentation workflow, you create the foundation for a sustainable, thriving community around your Claude Code skills. The investment pays dividends in better decision-making, increased contributor engagement, and a clearer picture of your project's impact.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

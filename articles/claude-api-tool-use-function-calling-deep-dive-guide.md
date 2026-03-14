@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude API Tool Use and Function Calling Deep Dive Guide"
-description: "Master Claude's API tool use and function calling capabilities. Learn how to integrate external tools, build reliable function-calling workflows, and create powerful AI agents."
+description: "Master Claude's API tool use and function calling capabilities. Learn how to integrate external tools, build reliable function-calling workflows, and."
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-api-tool-use-function-calling-deep-dive-guide/
@@ -229,3 +229,10 @@ Tool use and function calling transform Claude from a conversational AI into a p
 
 Start with simple tool definitions, test thoroughly, and gradually add complexity as you become comfortable with the patterns. The key to success lies in well-structured tool descriptions and robust error handling in your implementation.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

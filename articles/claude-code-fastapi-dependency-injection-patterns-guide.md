@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code FastAPI Dependency Injection Patterns Guide"
-description: "A comprehensive guide to implementing dependency injection in FastAPI using Claude Code. Learn practical patterns, code examples, and best practices for building maintainable Python APIs."
+description: "A comprehensive guide to implementing dependency injection in FastAPI using Claude Code. Learn practical patterns, code examples, and best practices."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-fastapi-dependency-injection-patterns-guide/
@@ -241,3 +241,10 @@ FastAPI's dependency injection system provides a robust foundation for building 
 
 Remember that the key to successful dependency injection is maintaining clear boundaries between components while keeping your code flexible for testing and future modifications.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

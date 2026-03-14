@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Error Tracking Sentry Integration Workflow"
-description: "Learn how to integrate Sentry error tracking with Claude Code for comprehensive application monitoring. This guide covers setup, configuration, and best practices."
+description: "Learn how to integrate Sentry error tracking with Claude Code for comprehensive application monitoring. This guide covers setup, configuration, and."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-error-tracking-sentry-integration-workflow/
@@ -234,5 +234,12 @@ When error context is incomplete:
 Integrating Sentry with Claude Code creates a powerful error tracking and resolution workflow. By following the setup steps and best practices in this guide, you'll be able to capture, analyze, and resolve errors more effectively. The combination of Sentry's detailed error data and Claude Code's AI-assisted analysis helps teams maintain more reliable applications.
 
 Start with basic error capture, then gradually add custom context, alerts, and integration points to build a comprehensive error monitoring system tailored to your needs.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

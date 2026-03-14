@@ -213,3 +213,10 @@ Claude Code transforms paper implementation from a tedious translation exercise 
 
 Start with well-structured prompts, verify mathematical correctness at each step, and test thoroughly. With practice, you'll find implementing ArXiv papers becomes a reproducible workflow rather than a one-off challenge.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How Students Use Claude Code for Learning Programming"
-description: "Discover how students leverage Claude Code as a programming tutor, debugger, and project mentor. Practical examples and actionable advice for maximizing your learning."
+description: "Discover how students leverage Claude Code as a programming tutor, debugger, and project mentor. Practical examples and actionable advice for."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-students-use-claude-code-for-learning-programming/
@@ -110,3 +110,10 @@ Claude Code represents a paradigm shift in programming education. It provides pe
 The key is to use Claude Code as a learning partner, not a crutch. Ask questions to understand, not just to get answers. Treat debugging sessions as learning opportunities. Build projects incrementally with guidance. And always strive to understand the "why" behind the code.
 
 With these approaches, Claude Code becomes more than a tool—it becomes an interactive learning companion that grows alongside you, adapting to your increasing skill level and helping you tackle ever-more-complex programming challenges.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

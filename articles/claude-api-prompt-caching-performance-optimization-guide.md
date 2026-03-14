@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude API Prompt Caching Performance Optimization Guide"
-description: "A comprehensive guide to optimizing Claude API performance through prompt caching strategies, reducing costs and improving response times for production applications."
+description: "A comprehensive guide to optimizing Claude API performance through prompt caching strategies, reducing costs and improving response times for."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-api-prompt-caching-performance-optimization-guide/
@@ -229,3 +229,10 @@ Prompt caching is a powerful optimization that can reduce API costs by 30-70% wh
 
 Start with simple caching of your system prompts, then expand to knowledge base and conversation history caching as you become more comfortable with the patterns. Your users will appreciate the faster responses, and your infrastructure costs will thank you.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

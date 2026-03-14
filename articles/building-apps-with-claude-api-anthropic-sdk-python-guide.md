@@ -2,7 +2,7 @@
 
 layout: default
 title: "Building Apps with Claude API: Anthropic SDK Python Guide"
-description: "A comprehensive guide to building powerful applications using Claude API and the Anthropic SDK for Python. Includes practical examples, code snippets, and actionable advice."
+description: "A comprehensive guide to building powerful applications using Claude API and the Anthropic SDK for Python. Includes practical examples, code snippets."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /building-apps-with-claude-api-anthropic-sdk-python-guide/
@@ -254,3 +254,10 @@ Start with simple integrations and gradually add complexity as you become comfor
 Remember to monitor your token usage, implement proper error handling, and take advantage of function calling to create truly interactive applications that can take action in the real world.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

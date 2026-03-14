@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Enterprise Seat Management and Usage Monitoring"
-description: "Learn how to manage Claude Code enterprise seats, track usage across teams, implement seat allocation strategies, and optimize your organization's AI coding tool investment."
+description: "Learn how to manage Claude Code enterprise seats, track usage across teams, implement seat allocation strategies, and optimize your organization's AI."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-enterprise-seat-management-and-usage-monitoring/
@@ -230,3 +230,10 @@ Effective enterprise seat management requires the right combination of policy, t
 
 Start with basic usage tracking, then progressively implement more sophisticated policies as your team's needs evolve. The key is establishing visibility into usage patterns early, then using that data to make informed decisions about seat allocation and policy adjustments.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

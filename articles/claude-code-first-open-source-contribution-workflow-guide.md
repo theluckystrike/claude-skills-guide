@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code First Open Source Contribution Workflow Guide"
-description: "A comprehensive guide to contributing to open source projects using Claude Code, covering fork-based workflows, best practices, and actionable tips for developers."
+description: "A comprehensive guide to contributing to open source projects using Claude Code, covering fork-based workflows, best practices, and actionable tips for."
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-first-open-source-contribution-workflow-guide/
@@ -170,3 +170,10 @@ Claude Code transforms open source contribution from an intimidating process int
 
 The key is to start small, learn continuously, and engage respectfully with the community. Your first PR might take longer than expected, but each contribution builds your skills and reputation in the open source ecosystem.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Setting Up Claude Code Approved Tools List for Enterprise"
-description: "A comprehensive guide for enterprise developers on configuring approved tools, skills, and MCP servers in Claude Code. Learn how to implement governance policies, security controls, and team-specific tool restrictions."
+description: "A comprehensive guide for enterprise developers on configuring approved tools, skills, and MCP servers in Claude Code. Learn how to implement."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /setting-up-claude-code-approved-tools-list-for-enterprise/
@@ -258,3 +258,10 @@ Setting up an approved tools list for Claude Code is essential for enterprise se
 
 Start with basic tool whitelisting, gradually add team-specific policies, and continuously refine your approach based on audit findings and developer feedback.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

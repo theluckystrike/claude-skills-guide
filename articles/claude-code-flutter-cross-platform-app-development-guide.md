@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Flutter Cross Platform App Development Guide"
-description: "A comprehensive guide to building cross-platform Flutter applications using Claude Code, with practical examples, code snippets, and actionable development workflows."
+description: "A comprehensive guide to building cross-platform Flutter applications using Claude Code, with practical examples, code snippets, and actionable."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-flutter-cross-platform-app-development-guide/
@@ -287,3 +287,10 @@ Claude Code transforms Flutter development by automating boilerplate generation,
 
 Start by integrating Claude Code into your next Flutter project, and you'll quickly see improvements in productivity, code quality, and maintainability. The key is to be specific about your requirements and leverage Claude's understanding of Flutter patterns to generate high-quality, production-ready code.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

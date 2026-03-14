@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Writing CONTRIBUTING.md Files Guide"
-description: "Learn how to use Claude Code to create comprehensive CONTRIBUTING.md files that guide contributors through your project's workflow, coding standards, and submission process."
+description: "Learn how to use Claude Code to create comprehensive CONTRIBUTING.md files that guide contributors through your project's workflow, coding standards."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-for-writing-contributingmd-files-guide/
@@ -194,3 +194,10 @@ A well-written CONTRIBUTING.md transforms your project from an opaque codebase i
 
 Start building your CONTRIBUTING.md today, and watch your contributor community grow.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

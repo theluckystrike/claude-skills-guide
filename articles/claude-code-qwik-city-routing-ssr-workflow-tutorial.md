@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Qwik City Routing SSR Workflow Tutorial"
-description: "Learn how to use Claude Code to build Qwik City applications with server-side rendering. Practical guide covering routing, SSR data loading, and development workflow."
+description: "Learn how to use Claude Code to build Qwik City applications with server-side rendering. Practical guide covering routing, SSR data loading, and."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-qwik-city-routing-ssr-workflow-tutorial/
@@ -269,3 +269,10 @@ Start with simple routes, add `routeLoader$` for server data, and progressively 
 
 Remember: the goal isn't to use every feature, but to leverage Qwik City's strengths where they matter most—typically in content-heavy pages where SEO and initial load performance are critical.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

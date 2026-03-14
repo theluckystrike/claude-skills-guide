@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code with Netlify Functions Workflow Tutorial"
-description: "A comprehensive tutorial on building and deploying Netlify functions using Claude Code. Learn workflows, best practices, and practical examples for serverless development."
+description: "A comprehensive tutorial on building and deploying Netlify functions using Claude Code. Learn workflows, best practices, and practical examples for."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-with-netlify-functions-workflow-tutorial/
@@ -324,3 +324,10 @@ Consider cold start times when designing your functions. Netlify Functions can e
 ## Conclusion
 
 Combining Claude Code with Netlify Functions creates an efficient workflow for building serverless APIs. Claude handles the boilerplate code generation while Netlify manages deployment and infrastructure. Start with simple endpoints, then expand to more complex operations as your application grows. The patterns demonstrated here scale well from prototypes to production applications.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

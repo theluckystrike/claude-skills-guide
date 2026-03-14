@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code with Redis Caching Implementation Guide"
-description: "Learn how to implement Redis caching in your Claude Code projects. This comprehensive guide covers setup, configuration, and practical patterns for optimizing AI-assisted development workflows."
+description: "Learn how to implement Redis caching in your Claude Code projects. This comprehensive guide covers setup, configuration, and practical patterns for."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-with-redis-caching-implementation-guide/
@@ -181,3 +181,10 @@ Use meaningful cache keys. Establish a consistent naming convention that include
 Implementing Redis caching in your Claude Code projects can significantly enhance performance and reduce redundant operations. By following the patterns and practices outlined in this guide, you'll be well-equipped to build robust caching layers that scale with your development needs.
 
 Start with basic cache-aside patterns, then evolve your implementation to include distributed caching for team environments. Remember to monitor your cache performance and adjust strategies as your project grows. With Redis as your caching backbone, you'll unlock new levels of efficiency in your AI-assisted development workflow.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

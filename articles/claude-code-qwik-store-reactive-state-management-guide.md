@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Qwik Store Reactive State Management Guide"
-description: "Master Qwik's reactive state management with useStore and useSignal. Learn patterns for building performant, resumable applications with proper state reactivity."
+description: "Master Qwik's reactive state management with useStore and useSignal. Learn patterns for building performant, resumable applications with proper state."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-qwik-store-reactive-state-management-guide/
@@ -275,3 +275,10 @@ const fullName = useComputed$(() =>
 Qwik's reactive state management offers a fresh perspective on building web applications. By understanding when to use `useSignal` versus `useStore`, leveraging context for global state, and following best practices for reactivity, you can build applications that are both highly performant and easy to maintain.
 
 The key insight is that Qwik's fine-grained reactivity means you don't need to think about memoization or optimization strategies that plague other frameworks—Qwik handles this automatically at the framework level.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

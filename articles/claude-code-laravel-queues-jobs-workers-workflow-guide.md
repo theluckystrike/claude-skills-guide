@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Laravel Queues, Jobs, Workers & Workflow Guide"
-description: "Master Laravel queues, jobs, and workers with Claude Code. Learn to build asynchronous workflows, process background tasks, and handle job dispatching effectively."
+description: "Master Laravel queues, jobs, and workers with Claude Code. Learn to build asynchronous workflows, process background tasks, and handle job dispatching."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-laravel-queues-jobs-workers-workflow-guide/
@@ -256,3 +256,10 @@ When building queue-based systems with Claude Code, follow these practical guide
 Laravel's queue system provides a powerful foundation for building asynchronous workflows. With Claude Code's assistance, you can rapidly implement robust job classes, configure worker supervision, and build complex chained workflows that scale with your application needs. Remember to monitor your queues in production and implement proper error handling to ensure reliable background task processing.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

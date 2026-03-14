@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude API System Prompt Engineering for Production Apps"
-description: "Master system prompt engineering for production Claude API applications. Learn patterns, best practices, and code examples for building reliable AI-powered apps."
+description: "Master system prompt engineering for production Claude API applications. Learn patterns, best practices, and code examples for building reliable."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-api-system-prompt-engineering-for-production-apps/
@@ -246,3 +246,10 @@ The investment in well-engineered system prompts pays dividends through improved
 
 Remember: your system prompt is the foundation of every conversation. Build it carefully, test it thoroughly, and maintain it proactively.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

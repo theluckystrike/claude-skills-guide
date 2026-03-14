@@ -255,3 +255,10 @@ export function ErrorBoundary() {
 
 Remix's error boundaries combined with nested routes give you precise control over error handling at every level of your application. By strategically placing boundaries in your route hierarchy, you create resilient applications where failures are contained, user experience remains positive, and debugging information is captured. Start with parent-level boundaries for navigation stability, then add granular boundaries for feature-specific error handling as your application grows.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

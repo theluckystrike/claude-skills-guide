@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code iOS Swift Development Workflow Tutorial"
-description: "A comprehensive tutorial on using Claude Code for iOS and Swift development workflows. Learn practical techniques, code examples, and actionable strategies."
+description: "A comprehensive tutorial on using Claude Code for iOS and Swift development workflows. Learn practical techniques, code examples, and actionable."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-ios-swift-development-workflow-tutorial/
@@ -255,3 +255,10 @@ Include accessibility labels for all interactive elements
 ## Conclusion
 
 Claude Code transforms iOS development by providing intelligent assistance throughout the development lifecycle. From project initialization to testing and debugging, its understanding of Swift and iOS frameworks makes it an invaluable workflow companion. Start integrating these techniques into your projects to accelerate development while maintaining high code quality.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code FastAPI OpenAPI Schema Generation Workflow"
-description: "A practical guide to generating OpenAPI schemas from FastAPI applications using Claude Code. Includes code examples, workflow patterns, and actionable tips for API development."
+description: "A practical guide to generating OpenAPI schemas from FastAPI applications using Claude Code. Includes code examples, workflow patterns, and actionable."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-fastapi-openapi-schema-generation-workflow/
@@ -295,3 +295,10 @@ Ensure your FastAPI and Pydantic versions are compatible. FastAPI 0.100+ require
 By following this workflow with Claude Code, you can rapidly develop well-documented FastAPI applications with accurate OpenAPI schemas that serve as a single source of truth for your entire API ecosystem.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Expo React Native Debugging Workflow"
-description: "Learn how to efficiently debug Expo React Native applications using Claude Code. A comprehensive workflow guide with practical examples and actionable advice."
+description: "Learn how to efficiently debug Expo React Native applications using Claude Code. A comprehensive workflow guide with practical examples and actionable."
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-expo-react-native-debugging-workflow/
@@ -231,3 +231,10 @@ const App = () => {
 
 Debugging Expo React Native applications becomes significantly more efficient with Claude Code's assistance. By following this workflow—establishing proper debugging environments, implementing defensive coding patterns, and using structured logging—you can identify and resolve issues quickly. Remember to provide Claude Code with complete error information, including stack traces and relevant code context, for the most accurate debugging assistance.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

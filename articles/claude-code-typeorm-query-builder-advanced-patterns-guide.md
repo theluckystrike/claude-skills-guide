@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code TypeORM Query Builder Advanced Patterns Guide"
-description: "Master advanced TypeORM Query Builder patterns including subqueries, joins, conditional filtering, and dynamic query construction for complex database operations."
+description: "Master advanced TypeORM Query Builder patterns including subqueries, joins, conditional filtering, and dynamic query construction for complex database."
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-typeorm-query-builder-advanced-patterns-guide/
@@ -247,3 +247,10 @@ Enable query caching in your DataSource configuration for significant performanc
 
 The TypeORM Query Builder transforms database operations from rigid SQL strings into flexible, type-safe, and maintainable code. By mastering these advanced patterns—subqueries, complex joins, dynamic construction, transactions, and optimization techniques—you'll build data access layers that are both powerful and elegant. Start implementing these patterns in your projects today, and experience the difference enterprise-grade database code makes in application reliability and maintainability.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

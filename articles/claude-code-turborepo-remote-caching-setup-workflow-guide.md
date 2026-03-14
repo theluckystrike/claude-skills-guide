@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Turborepo Remote Caching Setup Workflow Guide"
-description: "Learn how to set up Turborepo remote caching with Claude Code. A practical guide covering Vercel integration, GitHub Actions caching, and workflow optimization."
+description: "Learn how to set up Turborepo remote caching with Claude Code. A practical guide covering Vercel integration, GitHub Actions caching, and workflow."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-turborepo-remote-caching-setup-workflow-guide/
@@ -169,3 +169,10 @@ Setting up Turborepo remote caching transforms monorepo build performance from a
 
 Start with the basic Vercel integration for the quickest wins, then explore GitHub Actions if you need more control. With remote caching properly configured, your team will wonder how they ever managed without it.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

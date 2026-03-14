@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Playwright Visual Regression Testing Guide"
-description: "Learn how to set up visual regression testing with Claude Code and Playwright. Practical examples, code snippets, and actionable advice for maintaining UI quality."
+description: "Learn how to set up visual regression testing with Claude Code and Playwright. Practical examples, code snippets, and actionable advice for maintaining."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]
@@ -185,3 +185,10 @@ Consider running visual tests in a dedicated CI job that runs after functional t
 
 Visual regression testing with Playwright and Claude Code provides a robust safety net for your UI. Playwright's built-in screenshot comparison is powerful yet straightforward, while Claude Code acts as your coding partner—helping you write tests, debug failures, and maintain your test suite over time. Start with your highest-impact pages, follow the best practices outlined here, and you'll catch visual regressions before they frustrate your users.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

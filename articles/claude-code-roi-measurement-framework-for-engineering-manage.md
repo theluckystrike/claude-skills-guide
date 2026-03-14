@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code ROI Measurement Framework for Engineering Managers"
-description: "A practical framework for engineering managers to measure and track the return on investment of Claude Code in their teams. Includes metrics, formulas, code examples, and actionable implementation steps."
+title: "Claude Code ROI Measurement Framework for Engineering."
+description: "A practical framework for engineering managers to measure and track the return on investment of Claude Code in their teams. Includes metrics, formulas."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-roi-measurement-framework-for-engineering-manage/
@@ -218,3 +218,10 @@ Even with aggressive discounting of these numbers, ROI typically exceeds 500% in
 5. **Iterate your measurement:** Your initial metrics won't be perfect. Treat your framework as a living document that improves over time.
 
 Measuring Claude Code ROI isn't about justifying the cost—it's about optimizing value. The best engineering managers use this framework not to defend their tool choices but to understand how to extract maximum value from their AI investments. Start small, track consistently, and let the data guide your decisions.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

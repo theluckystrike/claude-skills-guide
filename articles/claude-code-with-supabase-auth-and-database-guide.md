@@ -254,3 +254,10 @@ Supabase provides a powerful backend-as-a-service platform that pairs excellentl
 Start with a small proof-of-concept, validate your auth flow, then expand to full CRUD operations. The combination of Supabase's developer experience and Claude Code's assistance makes building data-driven applications more accessible than ever.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
