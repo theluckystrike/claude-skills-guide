@@ -1,156 +1,193 @@
 ---
 layout: default
 title: "Claude Code Skills for C# .NET Developers"
-description: "Learn how to build custom Claude Code skills tailored for C# and .NET development. Practical patterns for code review, debugging, testing, and automation workflows."
+description: "Practical guide to Claude Code skills that accelerate C# and .NET development: code generation, testing, documentation, and automation workflows."
 date: 2026-03-14
+categories: [development, csharp, dotnet]
+tags: [claude-code, claude-skills, csharp, dotnet, .net, development]
 author: theluckystrike
 ---
 
 # Claude Code Skills for C# .NET Developers
 
-If you work with C# and .NET, you can extend Claude Code with custom skills that understand your codebase, run dotnet commands, analyze your projects, and accelerate your development workflow. This guide shows you practical ways to create and use skills designed specifically for .NET development.
+C# and .NET development involves repetitive patterns that Claude Code skills can automate. From scaffolding projects to generating unit tests and API documentation, these skills integrate directly into your development workflow. This guide covers practical skills for .NET developers who want to speed up common tasks.
 
-## What Claude Code Skills Bring to .NET Development
+## xlsx: Spreadsheet Automation for Data-Driven Development
 
-Claude Code skills are markdown files with a special format that define how Claude behaves when you invoke them. For .NET developers, skills can encapsulate knowledge about your project structure, testing frameworks, coding conventions, and common development tasks.
+The **xlsx** skill handles spreadsheet operations essential for .NET projects tracking metrics, test coverage, or sprint data.
 
-The key advantage is that a well-crafted skill gives Claude context about your specific environment. Instead of explaining your project structure every time, you create a skill once and invoke it with a single command.
-
-## Building a Skill for .NET Project Analysis
-
-A common use case is analyzing your .NET solution structure. Here's a skill that helps Claude understand your project layout and provide meaningful insights:
-
-```markdown
----
-name: dotnet-analyze
-description: Analyze .NET solution structure and provide insights
----
-
-You are a .NET architecture expert. When analyzing code:
-
-1. First, run `dotnet sln list` to understand the solution structure
-2. Check for common issues: missing null checks, IDisposable patterns, async/await misuse
-3. Identify project dependencies using `dotnet list reference`
-4. Look for code duplication in the src/ and tests/ directories
-
-Provide specific, actionable feedback with file paths and line numbers.
+```csharp
+// Generate a bug tracking spreadsheet programmatically
+// The skill creates formulas, charts, and formatted tables
+"Bug report spreadsheet with columns: ID, Severity, Status, Assignee, Created Date"
 ```
 
-To use this skill, you would invoke it with `/dotnet-analyze` after adding it to your skills directory.
+This skill proves valuable when importing/exporting data between your .NET application and Excel. Generate reports with pivot tables, conditional formatting based on severity levels, and automated calculations.
 
-## Creating a C# Code Review Skill
+## docx: Technical Documentation Generation
 
-Code review is another area where Claude skills shine. This skill focuses on common C# patterns and best practices:
+The **docx** skill creates professional Word documents from your .NET project documentation.
 
-```markdown
----
-name: csharp-review
-description: Review C# code for common patterns and best practices
----
-
-When reviewing C# code:
-
-- Check for proper exception handling (avoid empty catch blocks)
-- Verify async/await usage matches method signatures
-- Look for proper IDisposable implementation with using statements
-- Check null-conditional operators (?.) vs explicit null checks
-- Verify dependency injection follows constructor injection pattern
-- Look for performance issues: N+1 queries, unnecessary allocations
-
-Provide specific file paths and suggest improvements with code examples.
+```csharp
+// Generate API documentation or technical specs
+"Create a specification document for the UserAuthentication service"
 ```
 
-## Integrating Unit Testing Workflows
+This skill supports:
+- Technical design documents
+- API documentation with code samples
+- Conversion from markdown to formatted Word files
+- Preservation of formatting across documents
 
-Testing is essential in .NET development. A dedicated testing skill can streamline your workflow:
+For .NET projects with extensive XML documentation comments, docx can transform those into polished documentation.
 
-```markdown
----
-name: dotnet-test
-description: Run and manage .NET tests with focused output
----
+## pdf: PDF Generation and Manipulation
 
-When running tests:
-1. First identify the test project: look for .csproj files ending in .Tests
-2. Run tests with `dotnet test --verbosity normal` for clear output
-3. For specific test classes: `dotnet test --filter "FullyQualifiedName~TestClassName"`
-4. Generate coverage reports: `dotnet test --collect:"XPlat Code Coverage"`
+The **pdf** skill handles PDF operations for reports, invoices, and documentation in .NET applications.
 
-After test runs, summarize:
-- Total tests run
-- Pass/fail count
-- Failed test names and error messages
-- Suggested fixes for common failures
+```csharp
+// Generate PDF reports from structured data
+"Create a quarterly performance report PDF with charts and tables"
 ```
 
-This skill helps you quickly run targeted tests without remembering all the dotnet CLI options.
+This skill works well for:
+- Invoice generation systems
+- Report exports
+- Converting documentation to PDF format
+- Merging multiple documents into single PDFs
 
-## Automating Documentation Generation
+## pptx: Presentation Creation
 
-Documentation often lags behind code. Create a skill that helps generate and maintain docs:
+The **pptx** skill builds presentations for architecture reviews, sprint demos, and technical training.
 
-```markdown
----
-name: dotnet-docs
-description: Generate and update XML documentation for .NET projects
----
-
-For documentation tasks:
-
-1. First verify XML documentation is enabled in your .csproj:
-   Check for <GenerateDocumentationFile>true</GenerateDocumentationFile>
-
-2. Run `dotnet build` to see missing XML doc warnings
-
-3. For public APIs, generate skeleton documentation:
-   - Summary: "Gets or sets the [thing]"
-   - Param: "[parameterName] - [description]"
-   - Returns: "A [return type] that [description]"
-
-4. Update README.md with new public methods using:
-   `git diff --name-only HEAD~1 | grep .cs$` to find changed files
+```csharp
+// Create architecture diagrams or demo slides
+"Generate a slide deck explaining the microservices architecture"
 ```
 
-## Managing Entity Framework Workflows
+Presentations generated by this skill include proper formatting, speaker notes, and can incorporate data visualizations from your .NET application.
 
-Database work is central to many .NET applications. Here's a skill for EF Core operations:
+## webapp-testing: Automated Testing for .NET Applications
 
-```markdown
----
-name: ef-core
-description: Assist with Entity Framework Core migrations and queries
----
+The **webapp-testing** skill helps verify frontend functionality in ASP.NET Core applications.
 
-For EF Core tasks:
-
-1. Identify the DbContext: search for classes inheriting from DbContext
-2. Check migration history: `dotnet ef migrations list`
-3. For new migrations: `dotnet ef migrations add [Name]`
-4. For complex queries, verify:
-   - Include() calls for navigation properties
-   - AsNoTracking() for read-only queries
-   - Proper async/await usage
-
-When writing LINQ queries, prefer:
-- IQueryable for composable queries
-- ToListAsync() for execution
-- cancellationToken support for long-running operations
+```bash
+# Test API endpoints and UI components
+"Verify the user login endpoint returns 200 OK with valid credentials"
 ```
 
-## Best Practices for .NET Skill Development
+This skill supports:
+- API endpoint testing
+- Form submission validation
+- UI behavior verification
+- Browser automation for integration tests
 
-When building skills for .NET development, keep these principles in mind:
+```csharp
+// Example test case generated by the skill
+[Fact]
+public async Task Login_WithValidCredentials_ReturnsSuccess()
+{
+    var client = _factory.CreateClient();
+    var response = await client.PostAsJsonAsync("/api/auth/login", 
+        new { Email = "test@example.com", Password = "validpassword" });
+    
+    Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+}
+```
 
-**Be Specific About Tool Usage**: Clearly instruct Claude which dotnet commands to use. Without guidance, Claude might not know to run `dotnet build` before `dotnet test`, or might use incorrect verbosity levels.
+## mcp-builder: Building Model Context Protocol Servers
 
-**Leverage Project Structure Knowledge**: Include patterns for common .NET layouts (src/, tests/, solutions). The more context you provide, the better Claude understands your environment.
+The **mcp-builder** skill helps create MCP servers that extend Claude Code capabilities for .NET services.
 
-**Template Common Operations**: Instead of describing complex workflows repeatedly, template the commands. This reduces errors and speeds up your workflow.
+```csharp
+// Scaffold an MCP server for your .NET API
+"Create an MCP server that exposes database query capabilities"
+```
 
-**Include Error Interpretation**: .NET error messages can be verbose. Help Claude provide clear, actionable summaries of build errors, test failures, and runtime exceptions.
+This skill generates:
+- Server infrastructure code
+- Tool definitions for Claude Code
+- Authentication handlers
+- Response formatting logic
 
-## Conclusion
+Many .NET developers use this to build custom integrations between Claude Code and internal systems.
 
-Claude Code skills transform how you work with .NET projects. By defining clear patterns for code review, testing, analysis, and documentation, you create a personalized development assistant that understands your codebase and coding standards. Start with one skill that addresses your most frequent task, then expand as you identify more opportunities for automation.
+## theme-factory: Consistent Styling for Applications
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+The **theme-factory** skill applies consistent visual themes across your documentation, presentations, and generated artifacts.
+
+```bash
+# Apply a theme to match your application
+"Apply a dark theme with blue accents to these slides"
+```
+
+For .NET developers building enterprise applications, this skill ensures consistency between documentation, presentations, and UI mockups.
+
+## Internal Comms: Project Documentation and Updates
+
+The **internal-comms** skill helps generate status reports, sprint updates, and technical documentation.
+
+```bash
+# Generate a status report from task data
+"Sprint 12 status report: completed user auth, started payment integration"
+```
+
+This skill produces:
+- Sprint summaries
+- Technical decision records
+- Incident reports
+- Project updates for stakeholders
+
+## Combining Skills in .NET Workflows
+
+The real productivity gains appear when chaining skills together. Here is a practical workflow:
+
+1. Use **mcp-builder** to create a custom MCP server for your domain
+2. Apply **webapp-testing** to verify new API endpoints
+3. Generate documentation with **docx** and **pdf**
+4. Create presentation slides with **pptx** for sprint reviews
+5. Track metrics in spreadsheets using **xlsx**
+
+```csharp
+// This workflow reduces context switching between tools
+// All within Claude Code, no IDE switching required
+```
+
+## Practical Example: Building a Feature End-to-End
+
+Consider adding a new payment processing module to your .NET application:
+
+```bash
+# Step 1: Scaffold the domain models
+"Create C# record types for Payment, PaymentMethod, and Transaction"
+
+# Step 2: Write unit tests first
+"Generate xUnit tests for the PaymentService with mock dependencies"
+
+# Step 3: Document the API
+"Create API documentation for the payment endpoints in Word format"
+
+# Step 4: Generate test reports
+"Spreadsheet tracking payment test coverage by feature"
+```
+
+Each step stays within Claude Code, maintaining your development flow without jumping between tools.
+
+## Choosing Skills Based on Your .NET Role
+
+Different developer roles benefit from different skill combinations:
+
+- **Backend developers**: xlsx, docx, pdf, mcp-builder
+- **Full-stack developers**: Add webapp-testing for frontend verification
+- **Tech leads**: internal-comms, pptx for presentations
+- **Architects**: theme-factory for consistent design artifacts
+
+Start with skills matching your most frequent tasks. As your workflow matures, add skills that address new pain points.
+
+## Summary
+
+Claude Code skills for .NET development focus on automation, documentation, and testing. The **xlsx** skill handles spreadsheet operations, **docx** and **pdf** generate documentation, **webapp-testing** verifies application behavior, and **mcp-builder** creates custom integrations. Combine these skills to reduce repetitive tasks and maintain focus on solving domain problems.
+
+---
+
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
