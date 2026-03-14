@@ -1,222 +1,218 @@
 ---
 layout: default
 title: "Claude Code Server Sent Events API Guide"
-description: "A practical guide to building and consuming Server-Sent Events APIs with Claude Code. Includes code examples, real-world patterns, and integration tips."
+description: "Learn how to implement Server-Sent Events (SSE) with Claude Code. Practical examples for real-time data streaming, event handling, and building responsive AI-powered applications."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-server-sent-events-api-guide/
 ---
 
+{% raw %}
 # Claude Code Server Sent Events API Guide
 
-Server-Sent Events (SSE) provide a simple way to push real-time updates from a server to a client over HTTP. Unlike WebSockets, SSE works over a single bidirectional connection and automatically handles reconnection. This guide shows you how to build and consume SSE endpoints using Claude Code, with practical examples and patterns you can apply to your projects.
+Server-Sent Events (SSE) provide a powerful mechanism for streaming real-time updates from server to client over HTTP. When combined with Claude Code, you can build responsive applications that push AI-generated content, streaming responses, and live notifications to users without polling. This guide covers practical implementation patterns for SSE with Claude Code.
 
-## What Are Server-Sent Events
+## Understanding Server-Sent Events
 
-Server-Sent Events allow a server to send data to a client automatically. The client establishes a connection once, and the server pushes updates as they occur. The browser automatically reconnects if the connection drops, making SSE ideal for live dashboards, notifications, and streaming data feeds.
+Server-Sent Events are a server push technology enabling browsers to receive automatic updates from a server via HTTP connection. Unlike WebSockets, SSE is unidirectional—server to client only—and works seamlessly with standard HTTP infrastructure. This simplicity makes SSE ideal for streaming AI responses, progress updates, and real-time notifications.
 
-The key advantages of SSE over WebSockets include simpler implementation, built-in reconnection, and compatibility with HTTP/2. The tradeoff is that SSE is one-way—data flows only from server to client.
+SSE offers several advantages over other streaming approaches. The connection reconnection is automatic, there's no need for custom protocols, and it works naturally with HTTP/2. For Claude Code integrations, SSE enables you to stream model responses as they're generated, providing a better user experience for long-form content generation.
 
-## Building an SSE Endpoint
+## Basic SSE Implementation
 
-Creating an SSE endpoint requires setting the correct content type and formatting messages according to the SSE specification. Here is a basic Express.js endpoint:
+Here's a minimal server implementation using Python's Flask framework:
 
-```javascript
-app.get('/events', (req, res) => {
-  res.setHeader('Content-Type', 'text/event-stream');
-  res.setHeader('Cache-Control', 'no-cache');
-  res.setHeader('Connection', 'keep-alive');
+```python
+from flask import Flask, Response, stream_with_context
+import time
 
-  const sendEvent = (data) => {
-    res.write(`data: ${JSON.stringify(data)}\n\n`);
-  };
+app = Flask(__name__)
 
-  // Send initial data
-  sendEvent({ type: 'connected', timestamp: Date.now() });
-
-  // Simulate periodic updates
-  const interval = setInterval(() => {
-    sendEvent({ 
-      type: 'update', 
-      message: 'New data available',
-      timestamp: Date.now() 
-    });
-  }, 5000);
-
-  req.on('close', () => {
-    clearInterval(interval);
-    res.end();
-  });
-});
+@app.route('/stream')
+def stream():
+    def generate():
+        for i in range(10):
+            yield f"data: Message {i}\n\n"
+            time.sleep(1)
+    
+    return Response(
+        stream_with_context(generate()),
+        mimetype='text/event-stream',
+        headers={
+            'Cache-Control': 'no-cache',
+            'Connection': 'keep-alive',
+            'X-Accel-Buffering': 'no'
+        }
+    )
 ```
 
-This endpoint sends a connection confirmation followed by updates every five seconds. The double newline after each message is critical—it signals the end of an event to the browser.
+The server streams events using the `text/event-stream` MIME type. Each message follows the `data: <content>\n\n` format. The `stream_with_context` generator function ensures proper context handling throughout the streaming lifecycle.
 
-## Consuming SSE in the Browser
+## Integrating Claude Code with SSE
 
-On the client side, the EventSource API provides a straightforward way to receive SSE:
+To stream Claude Code responses to clients, you need to capture the model's output in chunks. Here's a practical integration pattern:
+
+```python
+from anthropic import Anthropic
+from flask import Flask, Response, stream_with_context
+
+app = Flask(__name__)
+client = Anthropic()
+
+@app.route('/claude-stream')
+def claude_stream():
+    def generate():
+        stream = client.messages.stream(
+            model="claude-3-5-sonnet-20241022",
+            max_tokens=1024,
+            messages=[{"role": "user", "content": "Explain SSE in detail"}]
+        )
+        
+        for chunk in stream:
+            if chunk.type == "content_block_delta":
+                yield f"data: {chunk.delta.text}\n\n"
+        
+        yield "data: [DONE]\n\n"
+    
+    return Response(
+        stream_with_context(generate()),
+        mimetype='text/event-stream'
+    )
+```
+
+This pattern streams each token from Claude as it becomes available, creating a smooth reading experience for users.
+
+## Client-Side Event Handling
+
+The JavaScript EventSource API provides straightforward SSE consumption:
 
 ```javascript
-const eventSource = new EventSource('/events');
+const eventSource = new EventSource('/claude-stream');
+
+let accumulatedContent = '';
 
 eventSource.onmessage = (event) => {
-  const data = JSON.parse(event.data);
-  console.log('Received:', data);
-  
-  if (data.type === 'update') {
-    updateDashboard(data);
-  }
+    const data = event.data;
+    
+    if (data === '[DONE]') {
+        eventSource.close();
+        console.log('Stream complete:', accumulatedContent);
+        return;
+    }
+    
+    accumulatedContent += data;
+    document.getElementById('output').textContent = accumulatedContent;
 };
 
 eventSource.onerror = (error) => {
-  console.error('SSE connection error:', error);
-  eventSource.close();
+    console.error('SSE Error:', error);
+    eventSource.close();
 };
 ```
 
-The EventSource automatically handles reconnection. If the server returns a custom event, you can listen for it specifically using `eventSource.addEventListener('eventName', handler)`.
+The client listens for messages and updates the UI in real-time. When the server sends `[DONE]`, the stream is complete and the connection closes.
 
-## Using Claude Code with SSE Projects
+## Advanced Patterns
 
-When working on SSE implementations, Claude Code accelerates development through several approaches. The `/tdd` skill helps you write tests before implementing endpoints:
+### Event Types and Retry Logic
 
-```
-/tdd
-Create tests for an SSE endpoint that streams log updates. Test connection handling, message formatting, and cleanup on disconnect.
-```
-
-The tests will verify that your endpoint sends properly formatted events and cleans up resources when clients disconnect.
-
-For frontend components that display streaming data, the `/frontend-design` skill generates appropriate UI patterns:
-
-```
-/frontend-design
-Create a dashboard component that displays live updates from an EventSource. Include a connection status indicator and a scrolling log viewer.
-```
-
-The skill produces clean, responsive code following current best practices.
-
-## Handling Authentication
-
-SSE endpoints often need authentication. Pass tokens via query parameters or headers:
+SSE supports custom event types for better organization:
 
 ```javascript
-app.get('/events', (req, res) => {
-  const token = req.headers.authorization?.replace('Bearer ', '');
-  
-  if (!token || !validateToken(token)) {
-    return res.status(401).end();
-  }
+// Server: Send named events
+yield "event: progress\n"
+yield "data: {\"percent\": 25}\n\n"
 
-  res.setHeader('Content-Type', 'text/event-stream');
-  // ... rest of handler
+yield "event: progress\n"  
+yield "data: {\"percent\": 50}\n\n"
+
+// Client: Listen for specific events
+eventSource.addEventListener('progress', (event) => {
+    const data = JSON.parse(event.data);
+    updateProgressBar(data.percent);
 });
 ```
 
-For the client, include credentials in the EventSource initialization:
+You can also control reconnection behavior:
 
 ```javascript
-const eventSource = new EventSource('/events?token=your-jwt-token');
-```
-
-Be cautious with tokens in URLs. For production, consider using cookies with the `withCredentials` flag:
-
-```javascript
-const eventSource = new EventSource('/events', {
-  withCredentials: true
+const eventSource = new EventSource('/stream', {
+    lastEventId: lastReceivedId  // Resume from last position
 });
+
+// Server respects Last-Event-ID header for recovery
 ```
 
-## Error Handling and Retry Logic
+### Connection Management
 
-The SSE specification supports custom retry intervals. Set a retry timeout on the server:
+For production environments, implement proper connection handling:
 
-```javascript
-res.write(`retry: 3000\n\n`);
+```python
+import asyncio
+from flask import Flask, Response
+
+app = Flask(__name__)
+
+@app.route('/stream')
+def stream():
+    def generate():
+        connection_id = str(uuid.uuid4())
+        connections.add(connection_id)
+        
+        try:
+            for chunk in generate_content():
+                yield f"data: {chunk}\n\n"
+        finally:
+            connections.remove(connection_id)
+    
+    return Response(
+        generate(),
+        mimetype='text/event-stream',
+        headers={
+            'X-Accel-Buffering': 'no',
+            'Connection': 'keep-alive'
+        }
+    )
 ```
 
-This tells the client to wait three seconds before attempting to reconnect after a disconnect. You can dynamically adjust this based on server load:
+## Using Claude Skills with SSE
 
-```javascript
-const retryMs = serverBusy ? 10000 : 3000;
-res.write(`retry: ${retryMs}\n\n`);
+When building SSE-powered applications, Claude skills like **pdf** can generate streaming reports, **tdd** can stream test results as they're written, and **supermemory** can provide context-aware suggestions in real-time. The **frontend-design** skill helps create responsive Urities that handle streaming content gracefully.
+
+For testing SSE endpoints, the **webapp-testing** skill provides utilities to verify event streams, validate connection handling, and check proper header configuration. This ensures your SSE implementation works reliably across different browsers and network conditions.
+
+## Best Practices
+
+When implementing SSE with Claude Code, follow these guidelines:
+
+1. **Set appropriate headers**: `Content-Type: text/event-stream`, `Cache-Control: no-cache`, `Connection: keep-alive`
+2. **Handle reconnection**: The browser automatically reconnects, but include `id` fields in events for resume capability
+3. **Close connections properly**: Send a terminating event like `[DONE]` to signal completion
+4. **Implement timeouts**: Set reasonable connection timeouts to prevent resource exhaustion
+5. **Monitor connections**: Track active connections and implement cleanup for stale sessions
+
+## Security Considerations
+
+SSE connections inherit HTTP security models. Implement authentication via cookies or tokens passed in headers:
+
+```python
+@app.route('/stream')
+def secure_stream():
+    token = request.headers.get('Authorization')
+    if not validate_token(token):
+        return Response(status=401)
+    
+    # Stream content...
 ```
 
-On the client, listen for error events to implement custom recovery logic:
+For CORS-enabled SSE (accessing from different domains), configure appropriate headers:
 
-```javascript
-eventSource.addEventListener('error', (event) => {
-  if (event.readyState === EventSource.CLOSED) {
-    console.log('Connection closed, attempting reconnect...');
-  }
-});
-```
-
-## Integrating with Claude Skills Workflow
-
-Combine multiple skills for a complete SSE development workflow. Use `/tdd` for test-driven endpoint development, `/frontend-design` for streaming UI components, and `/pdf` to generate API documentation:
-
-```
-/pdf
-Generate API documentation for our SSE endpoints including connection setup, event types, and error handling.
-```
-
-Store connection patterns and troubleshooting notes in `/supermemory` for team reference:
-
-```
-/supermemory
-Remember that our production SSE endpoint requires a valid JWT token and sends retry: 5000 on server errors.
-```
-
-This creates a searchable knowledge base of your SSE implementation details.
-
-## Common Pitfalls
-
-Several issues frequently arise with SSE implementations. First, always include the double newline (`\n\n`) after each message—without it, the browser waits indefinitely for more data. Second, remember that EventSource only works over HTTP/1.1 by default; HTTP/2 support varies by browser. Third, server proxies such as Nginx require configuration to support long-lived connections:
-
-```nginx
-location /events {
-  proxy_pass http://backend;
-  proxy_http_version 1.1;
-  proxy_set_header Connection '';
-  proxy_cache off;
+```python
+headers = {
+    'Access-Control-Allow-Origin': 'https://yourdomain.com',
+    'Access-Control-Allow-Credentials': 'true'
 }
 ```
 
-Fourth, avoid sending large amounts of data in each event. Chunk data into manageable pieces for smoother streaming.
-
-## Testing SSE Endpoints
-
-Automated testing of SSE requires checking both the initial connection and the event stream. Here is a Node.js test example:
-
-```javascript
-const http = require('http');
-
-test('SSE endpoint sends events', (done) => {
-  const req = http.get('/events', (res) => {
-    expect(res.statusCode).toBe(200);
-    expect(res.headers['content-type']).toContain('text/event-stream');
-    
-    let data = '';
-    res.on('data', (chunk) => {
-      data += chunk;
-      if (data.includes('data:')) {
-        const event = JSON.parse(data.match(/data: (.+)/)[1]);
-        expect(event.type).toBe('connected');
-        req.destroy();
-        done();
-      }
-    });
-  });
-});
-```
-
-Use the `/tdd` skill to generate comprehensive test suites covering connection handling, event formatting, authentication, and cleanup.
-
-## Conclusion
-
-Server-Sent Events provide a lightweight solution for server-to-client streaming. The pattern works especially well when you need reliable, automatic reconnection without the complexity of WebSockets. Claude Code streamlines SSE development through the `/tdd`, `/frontend-design`, `/pdf`, and `/supermemory` skills, helping you build, test, document, and maintain streaming functionality efficiently.
-
----
-
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
