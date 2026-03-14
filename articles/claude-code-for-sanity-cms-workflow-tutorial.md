@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Sanity CMS Workflow Tutorial"
-description: "Learn how to automate Sanity CMS workflows using Claude Code. This tutorial covers content migration, schema validation, batch operations, and publishing workflows with practical code examples."
+description: "Learn how to automate Sanity CMS workflows using Claude Code. This tutorial covers content migration, schema validation, batch operations, and."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-sanity-cms-workflow-tutorial/
@@ -331,3 +331,10 @@ Claude Code transforms Sanity CMS management from manual drudgery into efficient
 
 The key is treating your CMS operations as code: version-controlled, tested, and reproducible. With these patterns, you'll spend less time on maintenance and more time building great content experiences.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Diagramming: Mermaid Workflow Guide"
-description: "Learn how to use Claude Code with Mermaid diagrams for visualizing workflows, architecture, and complex processes. Practical examples and actionable advice included."
+description: "Learn how to use Claude Code with Mermaid diagrams for visualizing workflows, architecture, and complex processes. Practical examples and actionable."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-diagramming-mermaid-workflow/
@@ -206,3 +206,10 @@ Now that you understand the workflow, try these exercises:
 Claude Code makes this iterative process natural—describe what you want to change, and let Claude handle the syntax updates.
 
 For more guidance on creating effective Claude Skills that incorporate diagramming workflows, explore the [Claude Skills Guide](/claude-skills-guide/) collection.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

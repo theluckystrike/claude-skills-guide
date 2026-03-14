@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Dependabot Configuration Workflow"
-description: "Learn how to automate and streamline your Dependabot configuration using Claude Code. Practical examples for setting up dependency updates, security alerts, and automated pull requests."
+description: "Learn how to automate and streamline your Dependabot configuration using Claude Code. Practical examples for setting up dependency updates, security."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-dependabot-configuration-workflow/
@@ -240,3 +240,10 @@ When updates conflict with each other:
 Claude Code transforms Dependabot configuration from a manual, error-prone process into an automated, scalable workflow. By generating configurations, validating settings, and helping manage multiple repositories, you can maintain healthy dependencies across your entire organization.
 
 Start with simple configurations, gradually adopt advanced features, and use Claude Code's capabilities to handle complexity as your dependency ecosystem grows.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

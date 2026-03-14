@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Meilisearch Integration Workflow"
-description: "Learn how to integrate Meilisearch with Claude Code for building fast, relevant search experiences. This guide covers setup, indexing, querying, and practical workflows."
+description: "Learn how to integrate Meilisearch with Claude Code for building fast, relevant search experiences. This guide covers setup, indexing, querying, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-meilisearch-integration-workflow/
@@ -252,3 +252,10 @@ console.log({
 Integrating Meilisearch with Claude Code streamlines the development of powerful search functionality. Claude Code helps you design optimal schemas, generates boilerplate code, handles complex filtering logic, and implements synchronization workflows. The combination delivers fast, relevant search results while reducing development time significantly.
 
 Start with a simple implementation and iterate—add faceted filtering, configure synonym rules, and tune ranking as your requirements evolve. Meilisearch's flexibility combined with Claude Code's automation capabilities makes this incremental approach particularly effective.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

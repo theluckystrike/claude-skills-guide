@@ -238,3 +238,10 @@ def test_notification_workflow():
 Start building your courier notification skill by first identifying the specific events that require customer communication in your existing system. Map these to the functions outlined above, then gradually implement each component.
 
 Remember to prioritize customer preferences from the beginning—retrofitting notification controls is significantly more complex than building them into the initial design. With Claude Code handling the orchestration logic, you can focus on crafting the perfect customer experience at each delivery stage.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

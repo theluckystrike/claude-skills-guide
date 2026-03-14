@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Zola Rust Static Site Workflow"
-description: "Learn how to use Claude Code to streamline your Zola static site development workflow. Practical examples and actionable advice for developers building fast, modern static sites."
+description: "Learn how to use Claude Code to streamline your Zola static site development workflow. Practical examples and actionable advice for developers building."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-zola-rust-static-site-workflow/
@@ -160,3 +160,10 @@ For example, if your site fails to build, share the error message and relevant c
 Combining Zola's speed and simplicity with Claude Code's AI capabilities creates a powerful static site development workflow. From initial project setup through content creation, theme development, and deployment, Claude Code serves as an intelligent assistant that accelerates each phase of your workflow. Start incorporating these practices into your Zola projects and experience the productivity gains firsthand.
 
 The key is to maintain clear communication with Claude Code about your project structure, content requirements, and design preferences. The more context you provide, the better Claude Code assists you in building a polished, professional static site.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

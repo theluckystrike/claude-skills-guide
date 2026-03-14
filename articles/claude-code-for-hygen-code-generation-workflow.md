@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Hygen Code Generation Workflow"
-description: "Learn how to leverage Claude Code with Hygen to automate and accelerate your code generation workflows. Practical examples and actionable advice for developers."
+description: "Learn how to leverage Claude Code with Hygen to automate and accelerate your code generation workflows. Practical examples and actionable advice for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-hygen-code-generation-workflow/
@@ -239,3 +239,10 @@ Combining Claude Code with Hygen creates a powerful code generation workflow tha
 
 The key is treating code generation as a collaborative process between you and Claude—describe what you need, let Claude handle the template execution, and focus on the unique business logic that only you can write.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Dutch Developer Team Workflow Guide"
-description: "A comprehensive guide for Dutch developer teams to integrate Claude Code into their workflow. Practical examples, team collaboration patterns, and actionable advice for maximizing productivity."
+description: "A comprehensive guide for Dutch developer teams to integrate Claude Code into their workflow. Practical examples, team collaboration patterns, and."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-dutch-developer-team-workflow-guide/
@@ -228,3 +228,10 @@ Claude Code offers Dutch developer teams a powerful tool for enhancing productiv
 
 Start with small experiments, gather team feedback, and iteratively improve your workflows. The key is finding the right balance between automation and human oversight that works for your specific team dynamics.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

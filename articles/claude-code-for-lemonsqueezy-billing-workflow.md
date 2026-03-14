@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for LemonSqueezy Billing Workflow: Complete Developer's Guide"
+title: "Claude Code for LemonSqueezy Billing Workflow: Complete."
 description: "Learn how to use Claude Code to build, automate, and optimize LemonSqueezy billing workflows. Includes practical examples, code snippets, and actionable."
 date: 2026-03-15
 author: Claude Skills Guide
@@ -229,3 +229,10 @@ Integrating LemonSqueezy billing into your application doesn't have to be comple
 
 The key is to start with a solid foundation, implement proper webhook handling, and build comprehensive test coverage. With these elements in place, your billing system will be reliable, secure, and ready to handle your growing customer base.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

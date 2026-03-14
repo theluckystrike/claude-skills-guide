@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for React Reasoning Agent Workflow"
-description: "Learn how to build intelligent React applications with Claude Code reasoning agent workflows. This guide covers agent architectures, tool calling patterns, and practical implementation strategies for developers."
+description: "Learn how to build intelligent React applications with Claude Code reasoning agent workflows. This guide covers agent architectures, tool calling."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-react-reasoning-agent-workflow/
@@ -331,3 +331,10 @@ Several mistakes frequently cause issues in React agent implementations. Don't p
 Reasoning agent workflows represent a powerful pattern for building intelligent React applications. By combining Claude's reasoning capabilities with well-structured tool execution, you can create experiences that feel both intelligent and controllable. Start with simple workflows, validate the patterns, then expand to more complex use cases as your confidence grows.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

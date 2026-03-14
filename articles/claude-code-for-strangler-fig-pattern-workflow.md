@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Strangler Fig Pattern Workflow"
-description: "Learn how to use Claude Code to implement the strangler fig pattern for seamless legacy system migration. Practical workflows, code examples, and actionable strategies."
+description: "Learn how to use Claude Code to implement the strangler fig pattern for seamless legacy system migration. Practical workflows, code examples, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-strangler-fig-pattern-workflow/
@@ -205,3 +205,10 @@ The incremental nature of the strangler fig pattern means you deliver value cont
 
 Start small, verify frequently, and let the strangler fig pattern gradually transform your system one feature at a time.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

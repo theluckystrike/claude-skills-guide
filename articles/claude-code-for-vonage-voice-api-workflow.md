@@ -274,3 +274,9 @@ Claude Code transforms Vonage Voice API development from manual JSON crafting to
 
 The key is providing clear context about your Vonage setup and being specific about the call flows you need. With that foundation, Claude becomes an invaluable partner in building robust, scalable voice applications.
 
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
