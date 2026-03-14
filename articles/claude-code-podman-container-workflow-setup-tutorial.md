@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code Podman Container Workflow Setup Tutorial"
-description: "Learn how to set up and automate Podman container workflows using Claude Code skills. This tutorial covers skill creation, container management commands, and practical automation examples."
+description: "Learn how to set up and automate Podman container workflows using Claude Code skills. This tutorial covers skill creation, container management."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-podman-container-workflow-setup-tutorial/
+categories: [guides]
 ---
 
 {% raw %}
@@ -282,3 +283,10 @@ Start with the basic container management skill, then expand into specialized sk
 
 Remember to regularly update your skills as Podman introduces new features, and consider contributing your skills to the community to help others streamline their container workflows.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

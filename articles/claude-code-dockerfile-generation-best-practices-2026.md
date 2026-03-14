@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Dockerfile Generation Best Practices 2026"
-description: "Master Dockerfile generation with Claude Code: learn how to leverage AI-powered skills, write production-ready Dockerfiles, and automate container workflows in 2026."
+description: "Master Dockerfile generation with Claude Code: learn how to leverage AI-powered skills, write production-ready Dockerfiles, and automate container."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, docker, dockerfile, devops, containerization, automation]
@@ -177,3 +177,10 @@ Claude Code's ability to understand these trends and adapt its output makes it i
 
 Claude Code transforms Dockerfile generation from a tedious task into a collaborative, intelligent process. By leveraging its understanding of security, optimization, and modern deployment patterns, you can generate production-ready Dockerfiles that follow best practices automatically. Start with the essential skills, iterate on the output, and build confidence in your containerized deployments.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

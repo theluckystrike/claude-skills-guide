@@ -204,3 +204,10 @@ This separation of concerns with shared context produces more thorough reviews t
 Shared memory patterns transform isolated AI agents into collaborative teams. Claude Code skills provide the foundation through file operations, structured schemas, and coordination mechanisms. Start with simple file-based patterns and evolve toward more sophisticated event-driven architectures as your multi-agent systems grow. The key principle remains constant: establish clear contracts for what information gets shared, how it's structured, and how agents discover and build upon each other's work.
 
 By implementing these patterns, you can create AI agent systems that scale collaboration effectively, avoid redundant work, and produce higher quality outcomes through coordinated effort.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
