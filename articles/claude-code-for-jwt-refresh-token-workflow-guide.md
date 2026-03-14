@@ -5,6 +5,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
+permalink: /claude-code-for-jwt-refresh-token-workflow-guide/
 ---
 
 
