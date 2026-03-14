@@ -178,7 +178,7 @@ claude --print "Analyze our npm dependency tree and identify which files and dir
    script:
      - |
        export CLAUDE_SECRETS="$SECRETS_JSON"
-       claude execute --task deploy
+       claude --print "Execute the deployment task using the secrets provided in CLAUDE_SECRETS"
    ```
 
 3. **Implement Retry Logic**: AI operations may occasionally fail. Configure retries:
@@ -194,7 +194,7 @@ claude --print "Analyze our npm dependency tree and identify which files and dir
 4. **Monitor Usage and Costs**: Track Claude API usage within your pipeline:
 
    ```bash
-   claude usage --period monthly --output usage.json
+   # Track API usage via the Anthropic console or your billing dashboard
    ```
 
 5. **Version Pinning**: Ensure reproducible builds by pinning Claude Code versions:

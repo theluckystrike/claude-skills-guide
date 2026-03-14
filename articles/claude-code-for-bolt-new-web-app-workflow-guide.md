@@ -37,10 +37,10 @@ Before integrating Claude Code with your Bolt.new projects, ensure your environm
 npm install -g @anthropic-ai/claude-code
 ```
 
-Next, authenticate with your Anthropic account:
+Next, set your Anthropic API key as an environment variable:
 
 ```bash
-claude auth
+export ANTHROPIC_API_KEY="your-key-here"
 ```
 
 For Bolt.new projects, you'll want to work locally rather than entirely in the browser-based IDE. The recommended approach is to:
