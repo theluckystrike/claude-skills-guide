@@ -60,9 +60,6 @@ Consistent documentation structure helps users quickly understand each skill's p
 name: frontend-design
 description: "Generate frontend code with modern frameworks and responsive layouts"
 tools: [Read, Write, Bash]
-version: 1.2.0
-author: your-team
-tags: [frontend, ui, code-generation]
 ---
 
 # Frontend Design Skill
@@ -185,9 +182,9 @@ Skill versions matter as your team updates capabilities and fixes bugs. Implemen
 ---
 name: pdf
 description: "Create and manipulate PDF documents"
-version: 2.1.0
+
 changelog:
-  - version: 2.1.0
+  - 
     date: 2026-03-10
     changes: ["Added form filling support", "Improved table extraction"]
   - version: 2.0.0
