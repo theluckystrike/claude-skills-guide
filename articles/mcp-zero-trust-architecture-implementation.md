@@ -151,7 +151,7 @@ networks:
 
 Setting `internal: true` creates a completely isolated network—outside connections are impossible. Your MCP server can only communicate with explicitly defined services.
 
-For additional isolation, consider running untrusted MCP servers in firecracker microVMs or using gVisor for container sandboxing. The **agent-sandbox** skill provides pre-configured templates for these isolation patterns.
+For additional isolation, consider running untrusted MCP servers in firecracker microVMs or using gVisor for container sandboxing. Your MCP server configuration can reference pre-built Docker images with isolation pre-configured for these patterns.
 
 ## Input Validation and Sanitization
 

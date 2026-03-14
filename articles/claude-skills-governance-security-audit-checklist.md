@@ -54,11 +54,11 @@ Skills that wrap shell commands require extra scrutiny. The `tdd` skill, for ins
 After installing a skill, verify it actually uses only the permissions you approved. Claude Code provides audit logs for tool invocations. Compare logged tool calls against the skill's documented behavior.
 
 ```bash
-# Check recent tool invocations for a specific skill
-claude --audit-log --skill-name=secure-doc-processor --last=50
+# Check recent tool invocations by reviewing Claude Code session logs
+ls -lt ~/.claude/logs/ | head -50
 ```
 
-Look for unexpected tool calls, particularly `bash`, `npm`, or network tools that were not part of the original review.
+Look for unexpected tool calls, particularly `Bash`, `npm`, or network tools that were not part of the original review.
 
 ### 5. Data Flow Analysis
 

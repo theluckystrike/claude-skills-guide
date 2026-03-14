@@ -23,60 +23,31 @@ The token consumption comes from three main sources: the skill definition itself
 
 ## Viewing Session Token Usage
 
-The primary command for checking token usage is `claude -t` or `claude --token-stats`. Run this in your terminal after a session to see a breakdown:
-
-```bash
-claude --token-stats
-```
-
-This outputs something like:
+Claude Code does not expose a standalone CLI command for token stats. Token usage and costs are tracked at the API level and visible in the [Anthropic Console](https://console.anthropic.com) under Usage. During a session, you can ask Claude directly:
 
 ```
-Session Token Usage:
-  Input:  12,450 tokens
-  Output:  3,280 tokens
-  Total:  15,730 tokens
-
-Estimated Cost: $0.047 (at $3/1M input, $15/1M output)
+How many tokens have we used in this conversation so far?
 ```
 
-For ongoing monitoring during a session, use the `/stats` command directly in your conversation:
-
-```
-/stats
-```
-
-Claude responds with current session statistics. This is particularly useful when you're running long operations with skills like `xlsx` that process large spreadsheets.
+Claude will report its context window usage. This is particularly useful when you're running long operations with skills like `xlsx` that process large spreadsheets.
 
 ## Skill-Specific Usage Tracking
 
-To see which skills consumed the most tokens in a session, use the extended stats flag:
-
-```bash
-claude --token-stats --breakdown
-```
-
-This reveals per-skill attribution:
+There is no built-in per-skill token attribution command. To estimate which skills consume the most tokens in a session, track session lengths manually. Invoke a skill in a fresh session, note the reported context usage, then compare across skills:
 
 ```
-Skill Usage Breakdown:
-  pdf:       4,200 tokens (26.7%)
-  tdd:       3,100 tokens (19.7%)
-  xlsx:      2,800 tokens (17.8%)
-  default:   5,630 tokens (35.8%)
+Rough skill context estimates:
+  pdf (10-page doc): ~4,200 tokens
+  tdd (module):      ~3,100 tokens
+  xlsx (spreadsheet): ~2,800 tokens
+  conversation:      varies
 ```
 
-The `default` category represents conversation tokens outside specific skill invocations. This breakdown helps you identify which skills are most resource-intensive for your use cases.
+This breakdown helps you identify which skills are most resource-intensive for your use cases.
 
 ## Tracking Usage Over Time
 
-For projects where you want historical tracking, use the `-L` flag to log to a file:
-
-```bash
-claude --token-log ~/.claude/token-logs/project-2026.md
-```
-
-Each session appends to this file with timestamps and totals. Over time, you can analyze these logs to identify trends:
+For projects where you want historical tracking, maintain a manual log file and append entries after each session:
 
 ```markdown
 # Token Log - Project Alpha
@@ -182,15 +153,15 @@ claude "/tdd write tests for this authenticate_user function only"
 
 **Use streaming for long outputs.** When skills generate large amounts of content, stream responses to avoid timeout-related retries that consume additional tokens.
 
-**Set token budgets.** For predictable cost management, use the `--max-tokens` flag to cap output:
+**Set token budgets.** For predictable cost management, specify scope in your prompt to cap output length:
 
 ```bash
-claude --max-tokens 4000 "/pdf summarize this document"
+claude -p "/pdf summarize this document in 500 words or fewer"
 ```
 
 ## Conclusion
 
-Tracking Claude skill usage requires understanding the built-in token stats commands, logging over time for historical analysis, and being intentional about what you load into context. The `pdf`, `tdd`, `xlsx`, `supermemory`, and `frontend-design` skills each have distinct usage patterns based on their function. Use `--token-stats --breakdown` for detailed per-skill attribution, and log sessions for long-term trend analysis. With these tools, you can monitor costs, optimize workflows, and get maximum value from Claude Code skills.
+Tracking Claude skill usage requires monitoring via the Anthropic Console for session-level costs, maintaining manual logs for historical analysis, and being intentional about what you load into context. The `pdf`, `tdd`, `xlsx`, `supermemory`, and `frontend-design` skills each have distinct usage patterns based on their function. Track context usage by asking Claude directly during sessions, and log sessions manually for long-term trend analysis. With these approaches, you can monitor costs, optimize workflows, and get maximum value from Claude Code skills.
 
 ## Related Reading
 

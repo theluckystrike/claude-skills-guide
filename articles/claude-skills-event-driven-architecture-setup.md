@@ -88,7 +88,7 @@ Set up the git hook to invoke Claude:
 #!/bin/bash
 # .git/hooks/commit-msg
 CLAUDE_MSG=$(cat "$1")
-echo "$CLAUDE_MSG" | claude --trigger commit-validator
+claude -p "Validate this commit message: $CLAUDE_MSG"
 ```
 
 ## Building an Event Router

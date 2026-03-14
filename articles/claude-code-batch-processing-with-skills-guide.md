@@ -37,7 +37,6 @@ Initialize your Claude session with the skills you need. For example, if process
 
 ```
 /frontend-design
-/process-images
 ```
 
 ## Processing Multiple Files with Skill Chains
@@ -54,18 +53,18 @@ OUTPUT_DIR="./processed"
 for file in "$INPUT_DIR"/*.md; do
   filename=$(basename "$file")
   echo "Processing: $filename"
-  
+
   # Use claude to process each file with skill guidance
-  claude --print "$file" > "$OUTPUT_DIR/$filename" << 'EOF'
-Apply the documentation skill to improve this markdown file.
+  claude -p "Apply the documentation skill to improve this markdown file.
 - Fix heading hierarchy
 - Add appropriate code block language tags
 - Ensure links are properly formatted
-EOF
+
+$(cat "$file")" > "$OUTPUT_DIR/$filename"
 done
 ```
 
-This script uses Claude in print mode to process each file. The documentation improvement happens through skill guidance, not manual editing.
+This script uses Claude in headless mode to process each file. The documentation improvement happens through skill guidance, not manual editing.
 
 ## PDF Batch Processing Example
 
@@ -80,12 +79,10 @@ OUTPUT_DIR="./extracted"
 
 for pdf in "$PDF_DIR"/*.pdf; do
   filename=$(basename "$pdf" .pdf)
-  
-  claude --print "$pdf" << 'EOF'
-Using the pdf skill, extract all text content from this invoice.
-Return the data as JSON with keys: invoice_number, date, total, line_items.
-EOF
-  
+
+  claude -p "Using the pdf skill, extract all text content from this invoice: $pdf
+Return the data as JSON with keys: invoice_number, date, total, line_items."
+
 done > "$OUTPUT_DIR/all_invoices.json"
 ```
 
@@ -93,7 +90,7 @@ This extracts structured data from multiple invoices in one run. The pdf skill u
 
 ## Code Transformation with Multiple Skills
 
-Combine skills for complex batch transformations. This example uses tdd and code-refactor skills together:
+Combine skills for complex batch transformations. This example uses the tdd skill together with a refactoring prompt:
 
 ```bash
 #!/bin/bash
@@ -103,16 +100,16 @@ SRC_DIR="./src"
 
 for file in "$SRC_DIR"/*.js; do
   echo "Adding tests to: $file"
-  
-  claude --print "$file" << 'EOF'
-First, apply the tdd skill to generate unit tests for this file.
-Then use code-refactor to ensure the implementation passes all tests
-and follows clean code principles.
-EOF
+
+  claude -p "Apply the tdd skill to generate unit tests for this file, then
+ensure the implementation passes all tests and follows clean code principles.
+File: $file
+
+$(cat "$file")"
 done
 ```
 
-The tdd skill generates appropriate test cases, while code-refactor ensures the implementation meets quality standards. Running both skills in sequence produces tested, clean code.
+The tdd skill generates appropriate test cases while the refactoring guidance ensures the implementation meets quality standards. Running both in the prompt produces tested, clean code.
 
 ## Automating Documentation Generation
 
@@ -130,10 +127,10 @@ COMPONENTS=(
 )
 
 for component in "${COMPONENTS[@]}"; do
-  claude --print "./components/$component.js" << 'EOF'
-Use the docs skill to generate component documentation.
+  claude -p "Generate component documentation for this file.
 Include: props table, usage examples, and type signatures.
-EOF
+
+$(cat "./components/$component.js")"
 done > "./docs/components.md"
 ```
 
@@ -144,8 +141,7 @@ This processes multiple component files and aggregates the documentation into a 
 The [supermemory skill enhances batch processing](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) by maintaining context across iterations. When processing related files, this prevents redundant work:
 
 ```
-/supermemory
-/process-all-api-endpoints
+/supermemory Remember: processing all API endpoint files in ./src/api/ for documentation generation
 ```
 
 The skill tracks what has been processed and what still needs attention, making large batch jobs more efficient.
@@ -176,7 +172,7 @@ Always implement proper error handling:
 #!/bin/bash
 
 for file in ./*.md; do
-  if claude --print "$file" > "processed/$file" 2>&1; then
+  if claude -p "Process this file: $(cat "$file")" > "processed/$file" 2>&1; then
     echo "Success: $file"
   else
     echo "Failed: $file" >> errors.log
@@ -190,7 +186,7 @@ Review errors.log after completion to identify files requiring manual attention.
 
 Batch processing with skills excels in several scenarios:
 
-- **Legacy code modernization**: Process hundreds of files to add TypeScript types using the typescript skill
+- **Legacy code modernization**: Process hundreds of files to add TypeScript types using the tdd skill with type-checking prompts
 - **Content migration**: Transform CMS exports using docs and formatting skills
 - **Test coverage expansion**: Apply tdd skill across entire codebases
 - **Design system updates**: Batch update component props with frontend-design guidance
