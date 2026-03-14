@@ -7,7 +7,7 @@ author: theluckystrike
 permalink: /claude-code-nextjs-performance-optimization/
 categories: [guides]
 ---
-
+{% raw %}
 # Claude Code Next.js Performance Optimization
 
 Next.js performance optimization requires a systematic approach covering bundle analysis, runtime efficiency, and runtime performance. Claude Code combined with specialized skills can accelerate this process significantly.
@@ -237,3 +237,4 @@ Start with bundle analysis, implement route-based and component-based code split
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
