@@ -1,3 +1,4 @@
+{% raw %}
 # Fleet Coordination Notes
 
 All PM agents (PM1, PM2, PM3) should read this file before making changes.
@@ -47,3 +48,4 @@ Hub maintenance is PM2's responsibility.
 ---
 
 *Last updated: PM2 | 2026-03-14 (corrected raw tag rule)*
+{% endraw %}
