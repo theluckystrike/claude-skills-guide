@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills for Startup Founders and Solopreneurs"
 description: "Top Claude Code skills for startup founders and solopreneurs: automate docs, build frontends, write tests, and track finances without bottlenecks."
 date: 2026-03-13

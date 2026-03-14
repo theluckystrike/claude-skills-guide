@@ -18,18 +18,18 @@ Migrating legacy Java projects from Ant to Maven or Gradle is a common but error
 
 Ant builds rely on explicit task definitions in `build.xml`. Each target specifies exact commands, making dependency management manual and builds difficult to reproduce. Maven introduced convention-over-configuration with standardized project layouts and transitive dependencies. Gradle offers flexibility through DSL-based build scripts with Maven-compatible repositories.
 
-The migration involves several critical steps: analyzing the Ant build structure, mapping dependencies, converting custom tasks to plugins, and validating build outputs. Claude Code can assist at each stage, but leveraging the right skills amplifies productivity.
+The migration involves several critical steps: analyzing the Ant build structure, mapping dependencies, converting custom tasks to plugins, and validating build outputs. Claude Code can assist at each stage, but using the right skills amplifies productivity.
 
 ## Analyzing Your Ant Build Structure
 
 Before writing any Maven or Gradle configuration, you need a complete inventory of your Ant build. Use Claude Code with file system access to examine the build.xml and any imported XML files.
 
 ```
-/analyze Find all ant targets in build.xml and summarize what each one does, including dependencies between targets
+Find all ant targets in build.xml and summarize what each one does, including dependencies between targets
 ```
 
 ```
-/analyze Identify all jar dependencies referenced in build.xml, both from local paths and external URLs
+Identify all jar dependencies referenced in build.xml, both from local paths and external URLs
 ```
 
 This analysis reveals custom tasks, external tool integrations, and build lifecycle requirements. The goal is understanding what your build actually does before converting to a different paradigm.
@@ -37,7 +37,7 @@ This analysis reveals custom tasks, external tool integrations, and build lifecy
 For large projects with multiple Ant files, ask Claude Code to create a dependency graph:
 
 ```
-/generate Map all build.xml files in this project showing which files call which targets, output as markdown
+Map all build.xml files in this project showing which files call which targets, output as markdown
 ```
 
 ## Converting Dependencies to Maven or Gradle Format
@@ -45,7 +45,7 @@ For large projects with multiple Ant files, ask Claude Code to create a dependen
 The dependency section in Ant often uses explicit JAR paths or customlib folders. Maven and Gradle use centralized dependency coordinates. Claude Code can parse these and suggest replacements.
 
 ```
-/convert Translate these Ant dependency declarations to Maven pom.xml format:
+Translate these Ant dependency declarations to Maven pom.xml format:
 - commons-lang-2.6.jar from lib/
 - junit-4.12.jar from https://repo1.maven.org/maven2/
 - custom-utils.jar from ../common/lib/custom-utils.jar
@@ -54,7 +54,7 @@ The dependency section in Ant often uses explicit JAR paths or customlib folders
 For Gradle conversions, specify the output format:
 
 ```
-/convert Convert the above to Gradle dependencies with implementation and testImplementation configurations
+Convert the above to Gradle dependencies with implementation and testImplementation configurations
 ```
 
 When dealing with dependencies not in public repositories, you have two options: publish to your internal repository or use file dependencies during the transition period. [The supermemory skill helps track these custom dependencies across migration phases](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/).
@@ -78,11 +78,11 @@ For common tasks, here are typical mappings:
 Ask Claude Code to generate initial plugin configurations:
 
 ```
-/generate Create a maven-compiler-plugin configuration for Java 17 with source and target compatibility, output as XML
+Create a maven-compiler-plugin configuration for Java 17 with source and target compatibility, output as XML
 ```
 
 ```
-/generate Create equivalent Gradle tasks for Java 17 with test using JUnit 5, output as Groovy DSL
+Create equivalent Gradle tasks for Java 17 with test using JUnit 5, output as Groovy DSL
 ```
 
 ## Handling Custom Ant Tasks
@@ -92,13 +92,13 @@ Legacy builds often include custom Java tasks or scripts. Claude Code can help r
 First, identify custom tasks:
 
 ```
-/analyze Find all custom <taskdef> declarations in build.xml and show the Java classes or script files they reference
+Find all custom <taskdef> declarations in build.xml and show the Java classes or script files they reference
 ```
 
 For simple custom tasks, conversion to a Maven plugin or Gradle task may be straightforward. For complex ones, consider wrapping the existing Ant target in an exec goal during transition.
 
 ```
-/generate Create a maven-antrun-plugin configuration that executes the 'dist' target from the original build.xml
+Create a maven-antrun-plugin configuration that executes the 'dist' target from the original build.xml
 ```
 
 ## Preserving Build Properties
@@ -106,13 +106,13 @@ For simple custom tasks, conversion to a Maven plugin or Gradle task may be stra
 Ant builds often use property files for environment-specific configuration. Maven and Gradle handle this through profiles and property injection.
 
 ```
-/extract Extract all <property> declarations from build.xml, categorizing them by whether they're environment-specific, paths, or version numbers
+Extract all <property> declarations from build.xml, categorizing them by whether they're environment-specific, paths, or version numbers
 ```
 
 Claude Code can then generate appropriate Maven profiles or Gradle task configurations:
 
 ```
-/generate Create three Maven profiles for dev, staging, and production environments with the extracted properties
+Create three Maven profiles for dev, staging, and production environments with the extracted properties
 ```
 
 ## Validating Build Parity
@@ -122,13 +122,13 @@ After migration, you must verify that Maven or Gradle produces identical outputs
 Build the same artifact with both systems during transition:
 
 ```
-/execute Run `ant dist` and capture the output, then run `./gradlew build` and compare the resulting JAR files
+Run `ant dist` and capture the output, then run `./gradlew build` and compare the resulting JAR files
 ```
 
 For comprehensive validation, compare directory structures:
 
 ```
-/execute Show differences between ant's target/dist directory and gradle's build/libs directory
+Show differences between ant's target/dist directory and gradle's build/libs directory
 ```
 
 ## Automation Workflow for Large Projects
@@ -163,11 +163,11 @@ Load this as a custom skill to maintain consistency across team members working 
 Large projects often use Ant's subprojects with separate build files. Maven and Gradle handle multi-module builds natively.
 
 ```
-/generate Create a Maven parent pom.xml with modules: api, core, webapp, based on these build.xml locations
+Create a Maven parent pom.xml with modules: api, core, webapp, based on these build.xml locations
 ```
 
 ```
-/generate Create equivalent Gradle settings.gradle with subprojects api, core, webapp
+Create equivalent Gradle settings.gradle with subprojects api, core, webapp
 ```
 
 The frontend-design skill proves useful if your project includes web resources requiring processing during the build.
@@ -191,7 +191,7 @@ The choice between Maven and Gradle affects long-term maintainability. Consider 
 Ask Claude Code for a recommendation based on your project characteristics:
 
 ```
-/recommend Should I migrate to Maven or Gradle given: 50+ modules, Kotlin and Java, complex CI/CD with conditions, team familiar with both
+Should I migrate to Maven or Gradle given: 50+ modules, Kotlin and Java, complex CI/CD with conditions, team familiar with both
 ```
 
 ## Common Migration Pitfalls
