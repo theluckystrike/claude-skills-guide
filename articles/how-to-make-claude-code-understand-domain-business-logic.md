@@ -141,4 +141,12 @@ If Claude misses a rule, update your skill prompts or context files to make the 
 
 Making Claude Code understand your domain business logic requires deliberate setup through custom skills, reference data files, memory systems, and explicit entity definitions. The investment pays off in consistently relevant code generation that aligns with your specific requirements. Start with one domain area, refine your approach, then expand to cover more of your business complexity.
 
+
+## Related Reading
+
+- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

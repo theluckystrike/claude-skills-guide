@@ -210,4 +210,12 @@ Or press `Ctrl+C` in the terminal where it runs.
 
 WireMock transforms how you test HTTP-dependent code. By running a local mock server, you gain control over external dependencies, test edge cases including errors and timeouts, and verify that your application sends the right requests. Combined with Claude Code's bash execution and file handling capabilities, you can automate stub creation, integrate mocks into your test suite, and build reliable, maintainable integrations.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

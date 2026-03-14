@@ -196,4 +196,12 @@ Git push rejections during Claude skill fixes are common but solvable. The key i
 
 For power users managing multiple skills like `mcp-builder`, `skill-creator`, and domain-specific skills, establishing a consistent Git workflow prevents these interruptions. Remember to document skill dependencies when multiple skills share templates or configurations.
 
+
+## Related Reading
+
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Keeps Making the Same Mistake: Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

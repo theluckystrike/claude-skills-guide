@@ -13,11 +13,11 @@ permalink: /claude-code-redux-toolkit-state-management-guide/
 
 # Claude Code Redux Toolkit State Management Guide
 
-[Redux Toolkit has become the standard for state management in React applications](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), and using it effectively with Claude Code can improve your development workflow. This guide covers practical patterns for integrating Redux Toolkit into your projects.
+Redux Toolkit has become the standard for state management in React applications, and using it effectively with Claude Code can improve your development workflow. This guide covers practical patterns for integrating Redux Toolkit into your projects. For navigation patterns that work alongside your state layer, see the [React Router v7 navigation guide](/claude-skills-guide/claude-code-react-router-v7-navigation-guide/).
 
 ## Setting Up Redux Toolkit with Claude Code
 
-When starting a new React project with Redux Toolkit, [Claude Code can help scaffold the entire state management layer](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) The key is providing clear context about your application structure. Begin by specifying your state shape and which components need access to which data.
+When starting a new React project with Redux Toolkit, Claude Code can help scaffold the entire state management layer. The key is providing clear context about your application structure. If your project involves internationalized content, consider the [i18n workflow for React applications](/claude-skills-guide/claude-code-i18n-workflow-for-react-applications-guide/) before defining your state shape. Begin by specifying your state shape and which components need access to which data.
 
 Install Redux Toolkit and React-Redux in your project:
 
@@ -207,7 +207,7 @@ This pattern makes updates more predictable and improves performance when dealin
 
 ## Best Practices Summary
 
-Organize your Redux code following these principles. Keep slices focused on single domains of state. Use createSelector for all derived data. Prefer RTK Query over manual async handling when possible. Normalize nested data structures. Write tests alongside your slices using the tdd skill workflow.
+Organize your Redux code following these principles. Keep slices focused on single domains of state. Use createSelector for all derived data. Prefer RTK Query over manual async handling when possible. Normalize nested data structures. Write tests alongside your slices using an [automated testing pipeline with the tdd skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/).
 
 Claude Code can assist with all aspects of Redux Toolkit implementation, from initial setup to complex middleware configuration. By providing clear context about your application architecture, you can generate precise code that fits your specific needs.
 

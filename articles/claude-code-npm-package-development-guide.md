@@ -221,6 +221,14 @@ Before publishing your first NPM package, verify:
 
 Building NPM packages with Claude Code combines AI assistance with solid engineering practices. The tdd skill ensures testability, the pdf skill handles documentation generation, and consistent workflows produce professional results your users will appreciate.
 
+
+## Related Reading
+
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 {% endraw %}

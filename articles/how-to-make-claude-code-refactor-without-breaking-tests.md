@@ -93,4 +93,12 @@ Refactoring with Claude Code becomes significantly safer when you combine compre
 Start with solid test coverage, make small incremental changes, and always verify before moving forward. These practices transform refactoring from a risky operation into a routine part of development.
 {% endraw %}
 
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Code Skills for Writing Unit Tests Automatically](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

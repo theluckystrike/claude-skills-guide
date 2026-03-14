@@ -114,4 +114,12 @@ Claude Code works better with skills loaded because skills solve the fundamental
 
 The skills system transforms Claude Code from a useful generalist into a specialized expert for whatever domain you need — and that expertise compounds over time as you build a personal library of skills tailored to your exact needs.
 
+
+## Related Reading
+
+- [What Is Claude Code and Why Developers Love It 2026](/claude-skills-guide/what-is-claude-code-and-why-developers-love-it-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

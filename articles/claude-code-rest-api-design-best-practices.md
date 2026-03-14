@@ -235,4 +235,12 @@ Effective REST API design requires balancing simplicity, performance, and long-t
 
 Claude Code accelerates these practices by generating boilerplate code, suggesting improvements, and helping you maintain consistency across your API ecosystem. Combined with specialized skills for testing, documentation, and frontend integration, you can build professional-grade APIs that serve your applications well into the future.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

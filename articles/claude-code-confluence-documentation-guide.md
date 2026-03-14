@@ -152,4 +152,12 @@ The `tdd` skill pairs well with this workflow if you want to test your documenta
 
 With the foundation in place, your Confluence documentation becomes a natural byproduct of development rather than a separate maintenance burden. Developers write docs because the process fits naturally into their existing workflow — no browser tabs required.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for Generating Documentation?](/claude-skills-guide/what-is-the-best-claude-skill-for-generating-documentation/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

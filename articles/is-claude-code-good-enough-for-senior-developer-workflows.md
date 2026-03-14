@@ -144,4 +144,12 @@ The key insight is that Claude Code doesn't try to replace your IDE, debugger, o
 
 Start with skills matching your immediate needs—tdd for testing, terraform for infrastructure, pdf for documentation—and expand as your workflow demands. For senior developers seeking to reduce friction while maintaining code quality, Claude Code delivers practical value without architectural compromises.
 
+
+## Related Reading
+
+- [What Is Claude Code and Why Developers Love It 2026](/claude-skills-guide/what-is-claude-code-and-why-developers-love-it-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

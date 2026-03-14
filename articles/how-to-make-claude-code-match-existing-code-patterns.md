@@ -172,4 +172,12 @@ Making Claude Code match your existing patterns requires providing context, leve
 
 With practice, you'll spend less time adjusting generated code and more time building features. The investment in setting up proper context pays dividends in code consistency and developer velocity.
 
+
+## Related Reading
+
+- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

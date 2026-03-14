@@ -117,6 +117,14 @@ Developers who effectively consume changelog documentation typically follow a fe
 
 The Claude Code API changelog documentation is more than a list of updates—it's a resource for informed development decisions. By understanding its structure, prioritizing breaking changes, monitoring for updates, and applying deprecation notices proactively, you maintain stable integrations while benefiting from new capabilities. Whether you're working with skills like `tdd` for test-driven development, `supermemory` for persistent context, or building custom integrations, staying current with changelog documentation ensures your Claude Code experience remains productive and reliable.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 {% endraw %}

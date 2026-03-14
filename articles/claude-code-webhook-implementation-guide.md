@@ -213,6 +213,13 @@ Remember to use the webhook skill (`/webhook`) whenever processing incoming payl
 
 ---
 
+
+## Related Reading
+
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 {% endraw %}
