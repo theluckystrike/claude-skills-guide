@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Runbook Documentation Guide"
 description: "Learn how to create effective runbooks for Claude Code that automate documentation workflows for developers and power users."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-runbook-documentation-guide/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 
@@ -46,7 +52,7 @@ Deploy the current main branch to the staging environment.
 
 ## Integrating Claude Skills
 
-Claude Code's power comes from its skill ecosystem. Runbooks can leverage skills like `pdf` for generating reports, `frontend-design` for UI documentation, and `tdd` for test-driven development workflows.
+Claude Code's power comes from its skill ecosystem. Runbooks can use skills like `pdf` for generating reports, `frontend-design` for UI documentation, and `tdd` for test-driven development workflows.
 
 For instance, a runbook documenting database migrations might invoke the `tdd` skill to ensure migration scripts pass tests before execution:
 

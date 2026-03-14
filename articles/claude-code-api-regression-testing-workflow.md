@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code API Regression Testing Workflow"
 description: "Learn how to build a regression testing workflow using Claude Code API. Practical examples, automation patterns, and CI/CD integration for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-api-regression-testing-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code API Regression Testing Workflow
 
