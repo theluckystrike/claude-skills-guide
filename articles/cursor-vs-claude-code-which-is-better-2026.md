@@ -31,7 +31,7 @@ Claude Code's skill system distinguishes it from every other AI coding tool. Ski
 
 ```bash
 # Install a skill from the marketplace
-claude skill install claude-code/kubernetes-yaml-generation
+# Place kubernetes-yaml-generation.md in .claude/ then invoke: /kubernetes-yaml-generation
 
 # Use the skill for a specific task
 claude kubernetes generate deployment --name myapp --replicas 3 --port 8080
@@ -144,14 +144,14 @@ Ready to explore Claude Code's skill system? Start with these commands:
 
 ```bash
 # List available skills
-claude skill list
+# List skills: check your .claude/ directory or run /help
 
 # Search for specific skills
 claude skill search kubernetes
 
 # Install popular skills
-claude skill install claude-code/dockerfile-generation
-claude skill install claude-code/aws-ecs-deployment
+# Place dockerfile-generation.md in .claude/ then invoke: /dockerfile-generation
+# Place aws-ecs-deployment.md in .claude/ then invoke: /aws-ecs-deployment
 ```
 
 In 2026, Claude Code's extensibility through skills makes it the more powerful choice for developers building scalable, repeatable AI-assisted workflows.

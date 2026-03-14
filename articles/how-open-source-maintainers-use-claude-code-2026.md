@@ -102,7 +102,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run Claude Code review
         run: |
-          claude-code --skill tdd --verify-tests
+          # Invoke skill: /tdd --verify-tests
           claude-code --security-scan
 ```
 

@@ -63,13 +63,13 @@ Claude Code's skill system powers specialized tasks through modules like `fronte
 
 ```bash
 # List available skills
-claude skills list
+# List skills: check your .claude/ directory or run /help
 
 # Verify a specific skill is installed
 claude skills verify frontend-design
 
 # Reinstall a problematic skill
-claude skills install tdd
+# Place tdd.md in .claude/ then invoke: /tdd
 ```
 
 If a skill like `pdf` isn't generating documents correctly, check for conflicting dependencies in your project:
@@ -80,7 +80,7 @@ npm ls | grep -i pdf
 
 # Clear skill cache and reinstall
 claude skills cache clear
-claude skills install pdf --force
+# Place pdf.md in .claude/ then invoke: /pdf --force
 ```
 
 ## Handling Rate Limits and API Errors

@@ -193,7 +193,7 @@ Integra la generación de documentación en tu pipeline de CI/CD:
 #!/bin/bash
 # Genera documentación automáticamente
 
-claude --skill docx << EOF
+# Invoke skill: /docx << EOF
 Genera la documentación técnica completa en español 
 para la versión $VERSION del proyecto.
 EOF

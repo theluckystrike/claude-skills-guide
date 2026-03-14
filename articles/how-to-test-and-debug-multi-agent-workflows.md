@@ -76,7 +76,7 @@ Claude Code's agent-sandbox skill provides isolated execution environments for t
 
 ```bash
 # Install the agent-sandbox skill
-claude skill install agent-sandbox
+# Place agent-sandbox.md in .claude/ then invoke: /agent-sandbox
 ```
 
 The sandbox allows you to:

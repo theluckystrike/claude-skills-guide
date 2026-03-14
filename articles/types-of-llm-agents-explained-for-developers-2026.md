@@ -130,7 +130,7 @@ For more sophisticated agents, compose multiple skills:
 
 ```bash
 # Combine skills for a comprehensive agent
-claude --skill code-reviewer --skill security-scanner --skill performance-analyzer
+# Invoke skill: /code-reviewer --skill security-scanner --skill performance-analyzer
 ```
 
 This creates an agent that can perform security scans, performance analysis, and traditional code review in a single session.

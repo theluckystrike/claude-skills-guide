@@ -62,22 +62,22 @@ The skills system is where Claude Code distinguishes itself. Skills are speciali
 
 **The xlsx skill** handles spreadsheet operations:
 ```bash
-claude --skill xlsx "Generate a sales report from our JSON data with charts"
+# Invoke skill: /xlsx "Generate a sales report from our JSON data with charts"
 ```
 
 **The pdf skill** creates and manipulates PDF documents:
 ```bash
-claude --skill pdf "Create an invoice template based on our client data"
+# Invoke skill: /pdf "Create an invoice template based on our client data"
 ```
 
 **The pptx skill** builds presentations:
 ```bash
-claude --skill pptx "Create a technical presentation about our API architecture"
+# Invoke skill: /pptx "Create a technical presentation about our API architecture"
 ```
 
 **The docx skill** generates Word documents:
 ```bash
-claude --skill docx "Generate technical documentation from our code comments"
+# Invoke skill: /docx "Generate technical documentation from our code comments"
 ```
 
 These skills eliminate the need for separate tools. Instead of switching between your IDE and specialized applications, you describe what you need and Claude Code delivers.
@@ -88,17 +88,17 @@ For software development specifically, several skills enhance productivity:
 
 **The webapp-testing skill** uses Playwright for frontend testing:
 ```bash
-claude --skill webapp-testing "Verify the login form handles invalid credentials correctly"
+# Invoke skill: /webapp-testing "Verify the login form handles invalid credentials correctly"
 ```
 
 **The mcp-builder skill** helps create Model Context Protocol servers:
 ```bash
-claude --skill mcp-builder "Create an MCP server for our internal API"
+# Invoke skill: /mcp-builder "Create an MCP server for our internal API"
 ```
 
 **The artifacts-builder skill** generates complex React-based web artifacts:
 ```bash
-claude --skill artifacts-builder "Build a dashboard with interactive charts"
+# Invoke skill: /artifacts-builder "Build a dashboard with interactive charts"
 ```
 
 ## Practical Migration Examples
@@ -133,7 +133,7 @@ claude "Write comprehensive tests for the payment processing module including ed
 
 **With Claude Code:**
 ```bash
-claude --skill docx "Generate API documentation for the user service with examples"
+# Invoke skill: /docx "Generate API documentation for the user service with examples"
 # Creates formatted Word document
 # Includes code examples
 # Adds usage notes automatically

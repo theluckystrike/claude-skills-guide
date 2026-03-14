@@ -75,7 +75,7 @@ Deploying a microservices application requires coordinating multiple componentsâ
 
 ```bash
 # Orchestrating deployment with Claude Code skills
-claude --skill aws-deploy --skill database-provision --skill health-check
+# Invoke skill: /aws-deploy --skill database-provision --skill health-check
 ```
 
 The explicit skill declaration makes the deployment process predictable and repeatable. Manus would approach this by analyzing the deployment goal and determining the sequence autonomously, which can be advantageous when the exact steps aren't known in advance.

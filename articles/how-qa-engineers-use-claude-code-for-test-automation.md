@@ -24,7 +24,7 @@ This shift represents more than faster test creation. It fundamentally changes h
 
 The first step involves configuring Claude Code with skills tailored to testing needs. The **tdd** skill proves particularly valuable because it enforces test-driven development principles automatically. When you describe a feature requirement, this skill generates the corresponding test cases before implementation code, ensuring comprehensive coverage from the start.
 
-Install skills through the Claude CLI using the `claude skill install` command. For QA purposes, consider these essential skills:
+Skills are `.md` files placed in your `.claude/` directory and invoked with `/skill-name` during a session. For QA purposes, consider these essential skills:
 
 - **tdd** for test-first development workflows
 - **pdf** for validating PDF generation outputs

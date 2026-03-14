@@ -60,7 +60,7 @@ Claude Code with specialized skills can handle remarkable tasks:
 
 ```bash
 # Initialize a full-stack project with tdd skill
-claude --skill tdd init user-auth-service
+# Invoke skill: /tdd init user-auth-service
 
 # Generate a complete REST API with tests
 claude "Create a user authentication API with JWT tokens,
@@ -68,7 +68,7 @@ claude "Create a user authentication API with JWT tokens,
         Include unit tests and integration tests."
 
 # Build a PDF reporting system
-claude --skill pdf generate-sales-report --format monthly
+# Invoke skill: /pdf generate-sales-report --format monthly
 ```
 
 **Best Claude Code Use Cases:**

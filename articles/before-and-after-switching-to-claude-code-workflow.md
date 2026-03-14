@@ -76,7 +76,7 @@ Claude Code becomes dramatically more powerful when combined with specialized sk
 **For document creation**, the docx skill generates professional documentation directly from your code comments. Instead of manually formatting API docs, you describe what you need:
 
 ```bash
-claude --skill docx "Generate API documentation for the user service"
+# Invoke skill: /docx "Generate API documentation for the user service"
 ```
 
 **For PDF generation**, the pdf skill handles report creation, invoice generation, and documentation export without leaving your workflow.
@@ -84,19 +84,19 @@ claude --skill docx "Generate API documentation for the user service"
 **For test-driven development**, the tdd skill transforms how you write code. Instead of writing tests after implementation, you describe the behavior you want, and Claude Code generates tests alongside the implementation:
 
 ```bash
-claude --skill tdd "Create a user authentication module with login, logout, and password reset"
+# Invoke skill: /tdd "Create a user authentication module with login, logout, and password reset"
 ```
 
 **For frontend development**, the frontend-design skill helps generate UI components, layouts, and responsive designs based on your specifications:
 
 ```bash
-claude --skill frontend-design "Create a dashboard with user stats, recent activity, and settings panel"
+# Invoke skill: /frontend-design "Create a dashboard with user stats, recent activity, and settings panel"
 ```
 
 **For knowledge management**, the supermemory skill turns your conversations and code decisions into searchable knowledge:
 
 ```bash
-claude --skill supermemory "Remember that we chose JWT over sessions for API authentication"
+# Invoke skill: /supermemory "Remember that we chose JWT over sessions for API authentication"
 ```
 
 ### Practical Example: Adding a New Feature

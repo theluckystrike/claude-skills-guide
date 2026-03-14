@@ -21,7 +21,7 @@ The real power for documentation work comes from Claude's skill system. Skills a
 - **pptx**: Build presentation materials for documentation walkthroughs
 - **canvas-design**: Design visual assets for technical documentation
 
-Installing skills is simple with the `claude skill install` command, though specific skill names vary based on what you need for your documentation toolkit.
+Skills are `.md` files placed in `.claude/` and invoked via `/skill-name` in your session. Pick the skills relevant to your documentation toolkit.
 
 ## Automating Documentation Generation
 

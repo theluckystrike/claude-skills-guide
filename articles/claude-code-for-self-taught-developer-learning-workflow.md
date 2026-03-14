@@ -43,13 +43,13 @@ Claude Code's skills system extends its capabilities with specialized knowledge 
 
 ```bash
 # Install the tdd skill for test-driven development learning
-claude skill install tdd
+# Place tdd.md in .claude/ then invoke: /tdd
 
 # Install documentation generation skill
-claude skill install doc-generator
+# Place doc-generator.md in .claude/ then invoke: /doc-generator
 
 # Install code review skill for feedback
-claude skill install code-reviewer
+# Place code-reviewer.md in .claude/ then invoke: /code-reviewer
 ```
 
 These skills transform Claude into a domain expert in areas where you want to improve.

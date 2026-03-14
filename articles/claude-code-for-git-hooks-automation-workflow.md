@@ -121,7 +121,7 @@ Several Claude skills enhance hook automation:
 To use a skill in your hook, invoke Claude Code with the skill flag:
 
 ```bash
-claude --skill tdd "Generate tests for these changed files:
+# Invoke skill: /tdd "Generate tests for these changed files:
 $(git diff --cached --name-only)"
 ```
 

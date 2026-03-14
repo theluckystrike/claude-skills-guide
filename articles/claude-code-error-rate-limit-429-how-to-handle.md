@@ -119,7 +119,7 @@ When **tdd** runs multiple test cycles, build pauses into your workflow:
 ```bash
 # Run tdd with controlled pacing
 for test_file in test_files; do
-    claude-code --skill tdd run-tests $test_file
+    # Invoke skill: /tdd run-tests $test_file
     # Wait 3 seconds between test cycles
     sleep 3
 done

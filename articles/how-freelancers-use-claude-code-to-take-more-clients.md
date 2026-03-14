@@ -25,7 +25,7 @@ Every freelance project starts with a proposal. Writing detailed estimates takes
 
 ```bash
 # Initialize a new project proposal structure
-claude --skill pdf << 'EOF'
+# Invoke skill: /pdf << 'EOF'
 Create a two-page project proposal for a client website redesign.
 Include: project scope, timeline estimates, deliverables, and pricing tiers.
 Use a clean, professional layout.
@@ -44,7 +44,7 @@ The `frontend-design` skill generates UI components from descriptions:
 
 ```bash
 # Generate a responsive navigation component
-claude --skill frontend-design << 'EOF'
+# Invoke skill: /frontend-design << 'EOF'
 Create a mobile-responsive navbar with:
 - Logo on left
 - Navigation links centered
@@ -57,7 +57,7 @@ EOF
 For test-driven development, the `tdd` skill writes test suites alongside your code. You describe the function behavior, and it generates both the implementation and the tests:
 
 ```bash
-claude --skill tdd << 'EOF'
+# Invoke skill: /tdd << 'EOF'
 Write a JavaScript function that validates email addresses
 and returns an object with isValid boolean and error message.
 Include unit tests using Jest.
@@ -73,7 +73,7 @@ Clients stick with freelancers who deliver reliable work. Code quality becomes a
 The `tdd` skill ensures every function ships with tests, reducing bug reports and revision requests. The `pdf` skill generates professional documentation alongside code delivery:
 
 ```bash
-claude --skill pdf << 'EOF'
+# Invoke skill: /pdf << 'EOF'
 Create API documentation for a user authentication module.
 Include: endpoint definitions, request/response schemas,
 authentication requirements, and example curl commands.
@@ -95,7 +95,7 @@ With supermemory, you store:
 
 ```bash
 # Query past projects for similar scope estimates
-claude --skill supermemory "What was the average timeline for
+# Invoke skill: /supermemory "What was the average timeline for
 CMS implementations in Q4 2025?"
 ```
 
@@ -106,7 +106,7 @@ This compounding knowledge lets you bid more accurately and onboard new clients 
 Clear communication maintains client trust. The `pdf` skill generates status reports, invoices, and project summaries:
 
 ```bash
-claude --skill pdf << 'EOF'
+# Invoke skill: /pdf << 'EOF'
 Create a weekly status report for the client.
 Include: completed items, blockers, next steps,
 and updated timeline. Use a clean table format.
@@ -131,10 +131,10 @@ The key insight is that Claude Code handles the overhead that traditionally capp
 Pick one workflow to automate first. Most freelancers start with proposal generation since it has the clearest time savings. Install relevant skills:
 
 ```bash
-claude skills install pdf
-claude skills install frontend-design
-claude skills install tdd
-claude skills install supermemory
+# Place pdf.md in .claude/ then invoke: /pdf
+# Place frontend-design.md in .claude/ then invoke: /frontend-design
+# Place tdd.md in .claude/ then invoke: /tdd
+# Place supermemory.md in .claude/ then invoke: /supermemory
 ```
 
 Test each skill on a small project. Refine your prompts to match your style. Build templates for your most common project types.

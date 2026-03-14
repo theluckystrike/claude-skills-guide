@@ -153,7 +153,7 @@ Combine your Remix skill with other Claude skills for comprehensive coverage. Th
 
 ```bash
 # Activate multiple skills for a Remix project
-claude --skill remix-fullstack --skill frontend-design --skill tdd
+# Invoke skill: /remix-fullstack --skill frontend-design --skill tdd
 ```
 
 The `pdf` skill proves useful when generating reports from your Remix application data. The `supermemory` skill helps maintain context across complex feature development.

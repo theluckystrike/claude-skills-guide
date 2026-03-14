@@ -34,7 +34,7 @@ Claude Code's skill system allows you to define reusable workflows for common re
 
 ```bash
 # Example: Using Claude Code with a refactoring skill
-claude --skill refactor "extract-component Button from src/components/"
+# Invoke skill: /refactor "extract-component Button from src/components/"
 ```
 
 The skill system becomes particularly powerful when you need to apply consistent patterns across many files. You can create custom skills that understand your codebase's conventions and apply them uniformly.
@@ -105,7 +105,7 @@ Claude Code can tackle this systematically:
 
 ```bash
 # Claude Code can execute this sequence
-claude --skill component-extract "extract Button from src/features/userProfile/"
+# Invoke skill: /component-extract "extract Button from src/features/userProfile/"
 ```
 
 The skill can be saved and reused for similar extractions. Once you've refined the workflow, applying it to other components takes seconds.

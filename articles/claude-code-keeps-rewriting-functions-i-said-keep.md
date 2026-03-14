@@ -101,7 +101,7 @@ instructions: |
   - Ask for confirmation before any refactoring
 ```
 
-Load this skill when working on sensitive code: `claude --skill conservative-editor`
+Save this as `.claude/conservative-editor.md` and invoke it with `/conservative-editor` when working on sensitive code.
 
 ## Handling Rewrites When They Happen
 

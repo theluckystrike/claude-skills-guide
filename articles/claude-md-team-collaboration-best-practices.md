@@ -113,8 +113,8 @@ The **doc-writer** skill pairs well with **pdf** generation for creating team ha
 
 ```bash
 # Generate updated documentation
-claude --skill doc-writer --context docs/
-claude --skill pdf --input docs/ --output team-handbook.pdf
+# Invoke skill: /doc-writer --context docs/
+# Invoke skill: /pdf --input docs/ --output team-handbook.pdf
 ```
 
 ### API Documentation Workflow
@@ -140,7 +140,7 @@ Complex team workflows often require multiple skills working together. Chain ski
 
 ```bash
 # Example: Complete feature workflow
-claude --skill tdd --skill frontend-design --skill code-review
+# Invoke skill: /tdd --skill frontend-design --skill code-review
 ```
 
 The **mcp-builder** skill helps teams create custom tool chains for their specific needs. Build specialized skills for repetitive tasks like:

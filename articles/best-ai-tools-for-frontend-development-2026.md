@@ -116,7 +116,7 @@ Tools like the pdf skill can generate comprehensive API documentation from your 
 
 ```bash
 # Generate component documentation
-claude --skill pdf --prompt "Create a PDF document listing all React components in /src/components with:
+# Invoke skill: /pdf --prompt "Create a PDF document listing all React components in /src/components with:
 - Component name and description
 - Props table with types and defaults
 - Usage examples

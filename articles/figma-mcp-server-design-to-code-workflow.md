@@ -101,8 +101,8 @@ For organizations with established design systems, the Figma MCP server becomes 
 design-to-code:
   script:
     - npx @modelcontextprotocol/server-figma --file $FIGMA_FILE --output design-tokens.json
-    - claude-code --skill frontend-design --prompt "Generate design token CSS from design-tokens.json"
-    - claude-code --skill tdd --prompt "Write component tests for the generated buttons"
+    - claude -p "Using the frontend-design skill: Generate design token CSS from design-tokens.json"
+    - claude -p "Using the tdd skill: Write component tests for the generated buttons"
 ```
 
 The [supermemory skill](/figma-mcp-server-design-to-code-workflow/) can help maintain a searchable archive of generated components, making it easy to find and reuse previously generated code.

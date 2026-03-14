@@ -73,16 +73,20 @@ Skills Claude Code की एक powerful feature हैं जो specialized c
 3. **Tool Skills** - Docker, Git, AWS जैसे tools के लिए integration
 4. **Workflow Skills** - Testing, debugging, deployment के लिए automated workflows
 
-Skills install करने के लिए यह command use करें:
+Skills use करने के लिए, skill `.md` file को `.claude/` directory में रखें और slash command से invoke करें:
 
 ```bash
-claude skill install <skill-name>
+# Skill file को project में copy करें
+cp my-skill.md .claude/
+
+# फिर Claude Code session में invoke करें:
+# /my-skill
 ```
 
 उदाहरण के लिए, यदि आप Python development के लिए skill install करना चाहते हैं:
 
 ```bash
-claude skill install python
+# Place python.md in .claude/ then invoke: /python
 ```
 
 ## Hindi Developers के लिए सबसे Useful Skills
@@ -92,7 +96,7 @@ claude skill install python
 Shell scripting skill बहुत useful है। यह आपको complex bash scripts बनाने में मदद करता है। Install करने के लिए:
 
 ```bash
-claude skill install shell
+# Place shell.md in .claude/ then invoke: /shell
 ```
 
 इसके बाद आप Hindi में shell scripts बनवा सकते हैं। जैसे:
@@ -106,7 +110,7 @@ claude skill install shell
 Git skill से आप version control आसानी से manage कर सकते हैं। Install करें:
 
 ```bash
-claude skill install git
+# Place git.md in .claude/ then invoke: /git
 ```
 
 अब आप Hindi में git commands समझा सकते हैं:
@@ -120,7 +124,7 @@ claude skill install git
 Containerization के लिए Docker skill बहुत helpful है:
 
 ```bash
-claude skill install docker
+# Place docker.md in .claude/ then invoke: /docker
 ```
 
 इससे आप Hindi में Dockerfiles और docker-compose files बना सकते हैं।

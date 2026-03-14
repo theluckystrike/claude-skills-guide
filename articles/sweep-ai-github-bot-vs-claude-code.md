@@ -55,7 +55,7 @@ Claude Code shines through its extensible skill system. Developers can use speci
 claude --print "Create a new React component for user authentication"
 
 # Using a specific skill
-claude --skill frontend-design "Design a login page with dark mode support"
+# Invoke skill: /frontend-design "Design a login page with dark mode support"
 
 # Interactive mode for complex tasks
 claude
