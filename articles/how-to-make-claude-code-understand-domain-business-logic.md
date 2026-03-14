@@ -1,156 +1,213 @@
 ---
 layout: default
 title: "How to Make Claude Code Understand Domain Business Logic"
-description: "Learn practical techniques to teach Claude Code your business domain logic through custom skills, context management, and structured prompts."
+description: "Learn practical techniques to train Claude Code on your business domain, custom entities, and domain-specific rules for more accurate and relevant responses."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /how-to-make-claude-code-understand-domain-business-logic/
-reviewed: true
-score: 7
-categories: [guides]
-tags: [claude-code, claude-skills]
 ---
 
 # How to Make Claude Code Understand Domain Business Logic
 
-Claude Code excels at following instructions and executing tasks, but it starts without knowledge of your specific business domain. Whether you're building an e-commerce platform, a healthcare application, or a financial trading system, you need a strategy to embed your domain logic directly into Claude's workflow. This guide shows you practical methods to make Claude understand and apply your business rules consistently.
+Claude Code comes equipped with broad general knowledge, but getting it to understand your specific business domain requires deliberate setup. Whether you're building skills for healthcare compliance, financial services, or e-commerce, teaching Claude about your domain logic unlocks more accurate, context-aware responses.
+
+This guide covers practical methods to inject domain knowledge into Claude Code, from crafting domain-specific skills to configuring knowledge retrieval systems.
 
 ## Why Domain Context Matters
 
-When Claude generates code or analyzes requirements, it relies on general programming knowledge and whatever context you provide in the conversation. Without explicit domain knowledge, Claude might suggest generic solutions that don't align with your industry regulations, naming conventions, or business rules. A healthcare skill needs to understand patient privacy requirements. A fintech skill must know about transaction limits and compliance rules. Your domain logic becomes the difference between generic code and production-ready implementations that match your existing systems.
+General-purpose AI models excel at reasoning but lack awareness of your specific terminology, business rules, and data structures. When you ask Claude to help with a complex order processing workflow, it doesn't know that "pending" means something different in your system than in a typical REST API, or that certain field combinations trigger compliance checks.
 
-## Method 1: Create Domain-Specific Skills
+By providing structured domain context, you transform Claude from a capable generalist into a specialist that understands your business logic.
 
-The most powerful approach involves writing custom skills that encode your business rules in their prompt structure. A skill acts as a persistent instruction set that Claude loads whenever activated. You can create skills for different aspects of your domain.
+## Method 1: Domain-Specific Skill Creation
 
-Consider a skill for an order processing system:
+The most direct approach involves creating custom skills that encode your business rules. Skills act as persistent instruction sets that Claude loads when working on specific tasks.
+
+A domain skill typically includes:
 
 ```markdown
 ---
-name: order-processing
-description: "Handle order processing with business rules"
-tools: [Bash, Read, Write]
+name: ecommerce-orders
+description: "Handle e-commerce order processing with business rules"
+tools: [bash, read_file, write_file]
 ---
 
-# Order Processing Domain Rules
+# Order Processing Domain
 
 When processing orders, apply these rules:
 
-1. All orders require a unique order_id in format ORD-YYYYMMDD-XXXX
-2. Orders over $10,000 require manager approval (check approval_service)
-3. International orders must validate customs documentation
-4. Priority shipping only available for orders placed before 2PM local time
-5. Apply tax based on shipping destination using tax_rates.json
+1. All orders require a valid customer_id from the customers table
+2. Orders over $10,000 require manager approval (check the approvals table)
+3. International orders must include VAT number validation
+4. Discount codes expire after the date specified in the promotions table
 
-Before creating any order code, verify the requirements against these rules.
+## Status Transitions
+
+Valid order status transitions:
+- draft → pending → confirmed → shipped → delivered
+- Any status → cancelled (only if within 24 hours of creation)
+- Any status → refunded (requires reason code from the refund_reasons table)
 ```
 
-This skill ensures Claude always considers your specific business rules when working on order-related tasks. Load this skill using the `order-processing` keyword in your conversations.
+When you invoke this skill using `/ecommerce-orders`, Claude loads these rules and applies them consistently across conversations.
 
-## Method 2: Use Context Files for Reference Data
+## Method 2: Entity Definition Files
 
-Claude can reference domain data files during conversations. Create structured JSON or YAML files containing your business rules, then instruct Claude to consult them for specific tasks. This approach works well for frequently changing data like pricing tiers, region-specific rules, or user role permissions.
+For complex domains with many specific terms, create dedicated entity definition files that Claude can reference. Store these as markdown files in a consistent location and reference them in your skills.
 
-For a subscription business, maintain a roles.yaml file:
+Create a file like `domain/finance-entities.md`:
 
-```yaml
-roles:
-  admin:
-    permissions: [all]
-    max_api_calls: unlimited
-  developer:
-    permissions: [read, write, deploy]
-    max_api_calls: 10000
-  viewer:
-    permissions: [read]
-    max_api_calls: 1000
+```markdown
+# Finance Domain Entities
 
-subscription_tiers:
-  free:
-    max_projects: 3
-    support_level: community
-  pro:
-    max_projects: 25
-    support_level: email
-  enterprise:
-    max_projects: unlimited
-    support_level: dedicated
+## Account Types
+- CHECKING: Standard transactional account, no interest
+- SAVINGS: Interest-bearing account, max 6 withdrawals/month
+- INVESTMENT: Holds securities, requires risk assessment on file
+
+## Transaction Categories
+- ACH_TRANSFER: Bank-to-bank transfer, 2-3 day settlement
+- WIRE: Same-day transfer, $25 fee applies
+- INTERNAL: Movement between accounts, instant
+
+## Compliance Flags
+- CTR_REQUIRED: Cash transactions over $10,000
+- SAR_REQUIRED: Suspicious activity patterns
+- OFAC_HIT: Match on sanctions list
 ```
 
-Reference this file in your skill prompts or conversation context. Claude will apply these rules when generating code for user management or access control features.
+Reference this in your skill:
 
-## Method 3: Use the SuperMemory Skill for Context Recall
+```markdown
+---
+name: finance-support
+description: "Handle finance domain queries"
+---
 
-The supermemory skill enables Claude to recall previous conversations and domain knowledge across sessions. This proves invaluable when your business logic evolves over time. By storing key decisions and rule updates in supermemory, Claude maintains awareness of domain changes without requiring you to repeat context in every conversation.
-
-Use supermemory to store:
-- API contract changes and versioning decisions
-- Database schema evolution notes
-- Business rule modifications and their rationale
-- Team-specific coding standards and preferences
-
-When you ask Claude to implement a new feature, it can retrieve relevant context from previous discussions, ensuring consistency with your existing codebase and business logic.
-
-## Method 4: Chain Skills for Complex Domain Workflows
-
-Complex domains often require multiple specialized skills working together. The tdd skill helps you write tests first, while the frontend-design skill ensures consistent UI patterns. Combine these with your domain-specific skills for comprehensive coverage.
-
-A typical workflow for a billing feature might involve:
-1. Use the tdd skill to define test cases based on your pricing rules
-2. Apply domain skills for billing logic validation
-3. Use frontend-design skill for user-facing components
-4. Consult pdf skill documentation for invoice generation requirements
-
-This layered approach ensures Claude considers testing, domain rules, design consistency, and output requirements together.
-
-## Method 5: Define Business Entities Explicitly
-
-When explaining your domain to Claude, use explicit entity definitions rather than assuming general knowledge. Define your core business objects with their relationships and constraints.
-
-For a logistics application, explicitly define:
-
-```
-Entity: Shipment
-- id: unique identifier (format: SHP-XXXXXX)
-- status: pending | picked_up | in_transit | delivered | failed
-- weight: in kilograms (max 30kg for standard shipping)
-- insurance: optional, required for value > $5000
-
-Entity: DeliveryWindow
-- start_time: 24-hour format
-- end_time: must be at least 2 hours after start
-- timezone: must match destination timezone
+Load the domain entities from ../domain/finance-entities.md
+and use these definitions when validating transactions or answering customer questions.
 ```
 
-This explicit approach eliminates ambiguity and helps Claude generate code that matches your actual domain model rather than generic patterns.
+## Method 3: Database Schema Integration
 
-## Method 6: Use Code Templates and Patterns
+For applications with structured data, provide Claude with schema context. This helps it understand relationships and constraints:
 
-Provide Claude with template files that embody your domain patterns. When generating new features, instruct Claude to extend these templates rather than creating from scratch. Templates can include:
+```markdown
+## Database Schema Context
 
-- Base entity classes with your validation logic
-- Repository interfaces matching your data access patterns
-- Service layer stubs with method signatures reflecting your domain operations
-- Error handling that aligns with your existing architecture
+### Orders Table
+- id: UUID, primary key
+- customer_id: FK to customers.id
+- status: enum (draft, pending, confirmed, shipped, delivered, cancelled, refunded)
+- total_amount: decimal(10,2)
+- created_at: timestamp
+- updated_at: timestamp
 
-Store these templates in a well-documented directory and reference them in your skill prompts. Claude will adapt its code generation to match your established patterns.
+### Order Items Table  
+- id: UUID, primary key
+- order_id: FK to orders.id
+- product_id: FK to products.id
+- quantity: integer
+- unit_price: decimal(10,2)
 
-## Testing Your Domain Integration
+### Relationships
+- One customer has many orders
+- One order has many order items
+- One product appears in many order items
+```
 
-After implementing these methods, verify Claude correctly applies your business logic. Ask Claude to explain its understanding of a specific rule before generating code. Request examples that demonstrate rule application. Use the tdd skill to write test cases that validate business rule implementation.
+This approach pairs well with the tdd skill for generating tests that respect your actual data model.
 
-If Claude misses a rule, update your skill prompts or context files to make the requirement more explicit. Iteration is normal—refine your domain knowledge representation until Claude consistently applies your business logic.
+## Method 4: Business Rule Documentation
 
-## Summary
+Document your business logic in a format Claude can parse and apply. Use clear conditional structures:
 
-Making Claude Code understand your domain business logic requires deliberate setup through custom skills, reference data files, memory systems, and explicit entity definitions. The investment pays off in consistently relevant code generation that aligns with your specific requirements. Start with one domain area, refine your approach, then expand to cover more of your business complexity.
+```markdown
+# Pricing Rules
 
+## Discount Eligibility
+IF customer.tier == "premium" THEN discount_rate = 0.15
+ELSE IF customer.tier == "standard" THEN discount_rate = 0.05
+ELSE discount_rate = 0
 
-## Related Reading
+## Bulk Discounts
+quantity >= 10 AND quantity < 50: additional 5% off
+quantity >= 50: additional 10% off (stack with tier discount)
 
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+## Shipping Calculation
+- Under $50: $7.99 flat rate
+- $50-$100: $4.99 flat rate
+- Over $100: free shipping
+- International: add $15 surcharge
+```
+
+When working with skills like frontend-design or pdf generation, having these rules documented ensures the output reflects your actual business logic rather than generic implementations.
+
+## Method 5: Using supermemory for Context
+
+The supermemory skill provides persistent memory across sessions. Use it to maintain domain context that persists beyond individual conversations:
+
+```bash
+# Store domain context
+sm add "Our platform uses a 3-tier subscription model: 
+Basic ($9/mo), Professional ($29/mo), Enterprise (custom pricing).
+Basic limits: 1000 API calls/day, 5 team members.
+Professional: 10000 calls/day, 25 team members, email support.
+Enterprise: unlimited calls, unlimited members, 24/7 support + SLA."
+```
+
+This creates a retrievable knowledge base that Claude queries when working on support-related tasks.
+
+## Method 6: Example-Based Learning
+
+Provide Claude with concrete examples of correct domain behavior:
+
+```markdown
+## Example: Correct Order Creation
+
+Input:
+{
+  "customer_id": "cust_abc123",
+  "items": [
+    {"product_id": "prod_xyz", "quantity": 2}
+  ]
+}
+
+Correct processing:
+1. Validate customer exists and is active
+2. Check product availability for each item
+3. Calculate: (2 × product_price) + shipping = total
+4. Apply customer tier discount
+5. Create order with status "pending"
+6. Return order_id for confirmation
+
+## Example: Invalid Order (missing required field)
+
+Input:
+{
+  "customer_id": "cust_abc123",
+  "items": [{"product_id": "prod_xyz", "quantity": 1}]
+  // missing shipping_address
+}
+
+Expected error:
+"Shipping address required for all orders. Add shipping_address field."
+```
+
+These examples train Claude on your expected inputs and outputs, reducing hallucinations around domain-specific edge cases.
+
+## Combining Methods for Best Results
+
+The most effective domain understanding comes from layering multiple approaches:
+
+1. Create a base skill with your core terminology and entities
+2. Add reference files for complex rules and schemas
+3. Use supermemory for session-persistent context
+4. Include examples for ambiguous scenarios
+5. Update documentation as business rules evolve
+
+This approach scales well as your domain grows more complex. When combined with skills like mcp-builder for API integration or canvas-design for domain-specific visualizations, you build a comprehensive Claude-powered system that understands your business inside and out.
+
+The key is treating domain knowledge as code: version-controlled, documented, and tested. As your business evolves, your domain definitions evolve with it.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
