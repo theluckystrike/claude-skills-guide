@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for tRPC React Query Workflow"
 description: "Learn how to leverage Claude Code to streamline your tRPC and React Query development workflow. Practical examples and actionable advice for modern full-stack developers."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-trpc-react-query-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for tRPC React Query Workflow
@@ -207,7 +211,7 @@ Before generating components, ensure your tRPC router is well-structured. Descri
 
 **2. Use the context parameter for dependent queries**
 
-When you have queries that depend on other data, leverage tRPC's context:
+When you have queries that depend on other data, use tRPC's context:
 
 ```typescript
 // In your router

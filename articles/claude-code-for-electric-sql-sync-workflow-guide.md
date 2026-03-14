@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Electric SQL Sync Workflow Guide"
 description: "A comprehensive guide for developers on using Claude Code to streamline Electric SQL sync workflows, manage local-first databases, and build reactive applications with seamless data synchronization."
@@ -7,11 +8,14 @@ author: Claude Skills Guide
 permalink: /claude-code-for-electric-sql-sync-workflow-guide/
 categories: [tutorials]
 tags: [claude-code, claude-skills, electric-sql, database, sync, local-first]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Electric SQL Sync Workflow Guide
 
-Electric SQL is a powerful toolkit for building local-first applications with SQLite that automatically syncs with your backend database. When combined with Claude Code, you can dramatically accelerate the development of reactive applications that work seamlessly offline and online. This guide walks you through practical strategies for integrating Claude Code into your Electric SQL workflow.
+Electric SQL is a powerful toolkit for building local-first applications with SQLite that automatically syncs with your backend database. When combined with Claude Code, you can dramatically accelerate the development of reactive applications that work smoothly offline and online. This guide walks you through practical strategies for integrating Claude Code into your Electric SQL workflow.
 
 ## Understanding Electric SQL Architecture
 
@@ -266,7 +270,7 @@ describe('Post operations', () => {
 
 ## Conclusion
 
-Electric SQL combined with Claude Code provides a powerful toolkit for building responsive, offline-first applications. By leveraging Claude Code's ability to generate code, explain complex concepts, and help debug issues, you can significantly accelerate your development workflow. Remember to:
+Electric SQL combined with Claude Code provides a powerful toolkit for building responsive, offline-first applications. By using Claude Code's ability to generate code, explain complex concepts, and help debug issues, you can significantly accelerate your development workflow. Remember to:
 
 - Set up proper project context for accurate code generation
 - Implement appropriate conflict resolution for your use case
@@ -274,4 +278,4 @@ Electric SQL combined with Claude Code provides a powerful toolkit for building 
 - Optimize queries with selective sync and proper indexing
 - Test thoroughly for both online and offline scenarios
 
-With these practices, you'll be well-equipped to build robust local-first applications that work seamlessly whether your users are online or offline.
+With these practices, you'll be well-equipped to build robust local-first applications that work smoothly whether your users are online or offline.

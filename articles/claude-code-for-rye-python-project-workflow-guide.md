@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Rye Python Project Workflow Guide"
 description: "A comprehensive guide to using Claude Code with Rye for efficient Python project management, including setup, workflows, and practical examples."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-rye-python-project-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Rye Python Project Workflow Guide
@@ -133,7 +137,7 @@ Share the error output with Claude and ask for debugging help. Claude will analy
 
 ## Automated Testing Workflow
 
-Testing is essential for maintainable code. Here's how to leverage Claude Code with Rye's testing tools.
+Testing is essential for maintainable code. Here's how to use Claude Code with Rye's testing tools.
 
 ### Setting Up Tests
 

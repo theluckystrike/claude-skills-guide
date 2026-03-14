@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Tabnine AI Autocomplete Workflow"
 description: "Learn how to integrate Claude Code with TabNine to create a powerful AI autocomplete workflow that enhances your coding productivity."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-tabnine-ai-autocomplete-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Tabnine AI Autocomplete Workflow
 
@@ -47,7 +51,7 @@ After installation, create a Claude skill specifically for TabNine coordination.
 
 ## Creating a TabNine Coordination Skill
 
-The real power of combining these tools comes from creating a Claude skill that understands when to leverage TabNine's suggestions versus when to take over entirely. Here's a practical skill you can create:
+The real power of combining these tools comes from creating a Claude skill that understands when to use TabNine's suggestions versus when to take over entirely. Here's a practical skill you can create:
 
 ```markdown
 ---
@@ -56,7 +60,7 @@ description: Coordinates between Claude Code and TabNine for optimal coding work
 tools: [read_file, bash]
 ---
 
-You are a TabNine coordinator. Your role is to work seamlessly with TabNine's autocomplete suggestions.
+You are a TabNine coordinator. Your role is to work smoothly with TabNine's autocomplete suggestions.
 
 When the user is actively typing and receiving TabNine suggestions:
 - Acknowledge the suggestion if useful
@@ -152,6 +156,6 @@ Many developers struggle with tool integration. Here's what to avoid:
 
 ## Conclusion
 
-Combining Claude Code with TabNine creates a powerful autocomplete workflow that leverages the best of both tools. TabNine handles rapid, context-aware completions for straightforward coding tasks, while Claude Code provides deep reasoning and comprehensive code generation for complex challenges. By understanding when to use each tool and creating proper integration skills, you can significantly accelerate your development workflow.
+Combining Claude Code with TabNine creates a powerful autocomplete workflow that uses the best of both tools. TabNine handles rapid, context-aware completions for straightforward coding tasks, while Claude Code provides deep reasoning and comprehensive code generation for complex challenges. By understanding when to use each tool and creating proper integration skills, you can significantly accelerate your development workflow.
 
 Start with the basic setup, create the coordination skill, and gradually develop your personal workflow. The investment in setting up this integrated environment pays dividends in daily productivity.

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Cheerio HTML Parsing Workflow"
 description: "Master HTML parsing with Cheerio and Claude Code. Learn practical workflows for extracting data from web pages, handling dynamic content, and building reliable scraping pipelines."
@@ -7,9 +8,12 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-cheerio-html-parsing-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
 
-When you need to extract structured data from HTML documents, Cheerio provides a fast, jQuery-like API that pairs perfectly with Claude Code. Whether you're building a web scraper, monitoring competitor prices, or aggregating content from multiple sources, this guide shows you how to create efficient HTML parsing workflows that leverage Claude Code's automation capabilities.
+
+When you need to extract structured data from HTML documents, Cheerio provides a fast, jQuery-like API that pairs perfectly with Claude Code. Whether you're building a web scraper, monitoring competitor prices, or aggregating content from multiple sources, this guide shows you how to create efficient HTML parsing workflows that use Claude Code's automation capabilities.
 
 ## Setting Up Cheerio in Your Project
 

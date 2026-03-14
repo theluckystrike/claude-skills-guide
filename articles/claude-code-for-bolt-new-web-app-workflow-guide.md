@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Bolt.new Web App Workflow Guide"
 description: "Learn how to integrate Claude Code into your Bolt.new web app development workflow. Practical examples, code snippets, and actionable advice for developers."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-bolt-new-web-app-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Bolt.new Web App Workflow Guide
@@ -208,7 +212,7 @@ claude --print "Debug the build error showing in the terminal. The error is: [pa
 
 Integrating Claude Code with your Bolt.new workflow transforms it from a rapid prototyping tool into a full-fledged development environment. Bolt.new handles the initial heavy lifting of scaffolding and boilerplate code, while Claude Code provides the intelligence and precision needed for customization, optimization, and complex feature implementation.
 
-Start with small enhancements, maintain clean separation between generated and custom code, and leverage Claude Code's analysis and refactoring capabilities. This workflow gives you the best of both worlds: speed from AI-assisted generation and precision from intelligent customization.
+Start with small enhancements, maintain clean separation between generated and custom code, and use Claude Code's analysis and refactoring capabilities. This workflow gives you the best of both worlds: speed from AI-assisted generation and precision from intelligent customization.
 
 The key is treating Bolt.new as a starting point rather than a final destination, and using Claude Code as your development partner to shape the generated code into production-ready applications that meet your exact specifications.
 {% endraw %}

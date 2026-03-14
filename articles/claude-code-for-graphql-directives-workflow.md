@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for GraphQL Directives Workflow"
 description: "Learn how to create a Claude Code skill for generating, validating, and managing GraphQL directives with practical examples and actionable workflows."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-graphql-directives-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for GraphQL Directives Workflow
@@ -162,7 +166,7 @@ Keep a central registry of all directives with their purposes, versions, and own
 
 ## Integrating with Your Development Workflow
 
-Your GraphQL directives skill should integrate seamlessly with other development tools. Consider these integration points:
+Your GraphQL directives skill should integrate smoothly with other development tools. Consider these integration points:
 
 - **IDE extensions**: Generate VS Code or JetBrains snippets for common directives
 - **Pre-commit hooks**: Validate directive usage before code lands in version control

@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for tRPC WebSocket Workflow Guide"
 description: "Learn how to use Claude Code to build real-time applications with tRPC and WebSockets. This guide covers setup, subscription patterns, and production-ready workflows."
@@ -8,11 +9,14 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-trpc-websocket-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 {% raw %}
 
 
-Real-time applications demand robust communication channels, and tRPC with WebSocket subscriptions offers a type-safe solution for building interactive features. This guide shows you how to leverage Claude Code to streamline the entire tRPC WebSocket workflow—from initial setup to production deployment.
+Real-time applications demand robust communication channels, and tRPC with WebSocket subscriptions offers a type-safe solution for building interactive features. This guide shows you how to use Claude Code to streamline the entire tRPC WebSocket workflow—from initial setup to production deployment.
 
 ## Understanding tRPC WebSocket Subscriptions
 

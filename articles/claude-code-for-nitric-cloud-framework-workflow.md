@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Nitric Cloud Framework Workflow"
 description: "Learn how to integrate Claude Code into your Nitric cloud framework workflow for faster serverless development, intelligent API generation, and seamless multi-cloud deployments."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-nitric-cloud-framework-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills, nitric, serverless, cloud-development]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Nitric Cloud Framework Workflow
@@ -251,7 +255,7 @@ Claude understands Nitric's stack system and can guide you through:
 
 ## Conclusion
 
-Claude Code and Nitric form a powerful combination for modern cloud development. Nitric's declarative approach to infrastructure pairs naturally with Claude Code's ability to understand and generate contextual code. By setting up proper project context, leveraging Claude for route generation and testing, and maintaining cloud-agnostic patterns, you'll accelerate your serverless development significantly.
+Claude Code and Nitric form a powerful combination for modern cloud development. Nitric's declarative approach to infrastructure pairs naturally with Claude Code's ability to understand and generate contextual code. By setting up proper project context, using Claude for route generation and testing, and maintaining cloud-agnostic patterns, you'll accelerate your serverless development significantly.
 
 The key is treating Claude not just as a code generator, but as a development partner that understands your framework choices. With the right context and patterns, your Nitric workflow becomes significantly more productive.
 {% endraw %}

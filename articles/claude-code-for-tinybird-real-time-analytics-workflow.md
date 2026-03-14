@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Tinybird Real-Time Analytics Workflow"
 description: "Learn how to leverage Claude Code to build powerful real-time analytics pipelines with Tinybird, from data ingestion to visualization."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-tinybird-real-time-analytics-workflow/
 categories: [Development, Data Engineering, AI]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 Real-time analytics has become essential for modern applications, from monitoring user behavior to detecting anomalies in production systems. Tinybird provides a powerful streaming analytics platform that enables developers to build data pipelines with sub-second latency. When combined with Claude Code, you can automate the entire workflow—from schema design to query optimization—making real-time analytics more accessible than ever.

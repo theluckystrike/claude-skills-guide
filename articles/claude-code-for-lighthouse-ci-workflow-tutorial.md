@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Lighthouse CI Workflow Tutorial"
 description: "Learn how to integrate Claude Code with Lighthouse CI to automate performance testing in your development workflow. Step-by-step guide with practical examples."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-lighthouse-ci-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Lighthouse CI Workflow Tutorial
@@ -139,7 +143,7 @@ The first-contentful-paint is 3.2s and largest-contentful-paint is 4.8s.
 Can you analyze this and suggest fixes?
 ```
 
-Claude will leverage the lighthouse-ci skill to explain what's causing the delays and recommend specific optimizations:
+Claude will use the lighthouse-ci skill to explain what's causing the delays and recommend specific optimizations:
 
 1. **Optimize images**: Use modern formats like WebP, add explicit dimensions
 2. **Reduce JavaScript blocking**: Defer non-critical scripts, code-split bundles

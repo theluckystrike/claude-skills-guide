@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Tonic gRPC Rust Workflow Guide"
 description: "Master building gRPC services with Tonic and Rust using Claude Code. Learn workflow patterns, code generation, and best practices for high-performance microservices."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-tonic-grpc-rust-workflow-guide/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Tonic gRPC Rust Workflow Guide
@@ -16,7 +20,7 @@ Building gRPC services with Tonic and Rust offers exceptional performance and ty
 
 ## Why Combine Claude Code with Tonic?
 
-Tonic is Rust's most popular gRPC framework, leveraging the language's memory safety guarantees while providing async/await patterns. However, gRPC development involves multiple moving parts: protobuf definitions, code generation, service implementation, and client stubs. Claude Code helps navigate these complexities by understanding your project structure and generating boilerplate efficiently.
+Tonic is Rust's most popular gRPC framework, using the language's memory safety guarantees while providing async/await patterns. However, gRPC development involves multiple moving parts: protobuf definitions, code generation, service implementation, and client stubs. Claude Code helps navigate these complexities by understanding your project structure and generating boilerplate efficiently.
 
 The combination excels when you need to rapidly iterate on service definitions or maintain consistency across microservice architectures. Claude Code can explain generated code, suggest improvements, and help debug gRPC-specific issues.
 
@@ -186,7 +190,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
-Consider adding interceptors for authentication, logging, or metrics collection. Tonic supports both unary and streaming RPCs, so design your services to leverage streaming where appropriate for better performance.
+Consider adding interceptors for authentication, logging, or metrics collection. Tonic supports both unary and streaming RPCs, so design your services to use streaming where appropriate for better performance.
 
 ## Generating Clients
 
@@ -243,7 +247,7 @@ Claude Code helps troubleshoot common Tonic problems:
 
 ## Conclusion
 
-Claude Code significantly accelerates Tonic gRPC development by understanding your project context and generating appropriate boilerplate. The workflow involves defining proto files, generating code, implementing services, and creating clients—each step where Claude Code provides valuable assistance. Start with well-designed proto definitions, implement services incrementally, and leverage Claude Code for debugging and optimization.
+Claude Code significantly accelerates Tonic gRPC development by understanding your project context and generating appropriate boilerplate. The workflow involves defining proto files, generating code, implementing services, and creating clients—each step where Claude Code provides valuable assistance. Start with well-designed proto definitions, implement services incrementally, and use Claude Code for debugging and optimization.
 
 For more advanced topics, explore bidirectional streaming, custom interceptors, and integration with service meshes like Linkerd or Istio.
 {% endraw %}
