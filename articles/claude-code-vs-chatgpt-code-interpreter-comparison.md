@@ -12,11 +12,11 @@ score: 8
 
 # Claude Code vs ChatGPT Code Interpreter Comparison
 
-When choosing between Claude Code and ChatGPT's Code Interpreter for development tasks, developers need to understand the fundamental differences in how each tool approaches code execution, agentic behavior, and terminal integration. This comparison breaks down the practical differences developers actually care about.
+When choosing between Claude Code and ChatGPT's Code Interpreter for development tasks, developers need to understand the fundamental differences in how each tool approaches code execution, agentic behavior, and terminal integration. This comparison breaks down the practical differences developers actually care about. For more AI coding tool comparisons, see the [comparisons hub](/claude-skills-guide/comparisons-hub/).
 
 ## What Each Tool Offers
 
-**Claude Code** is Anthropic's terminal-native AI coding assistant that operates as a full agent. It reads your codebase, edits files, runs shell commands, and executes multi-step plans autonomously. Claude Code integrates with a skills ecosystem — reusable, packaged agent behaviors for repetitive developer tasks.
+**Claude Code** is Anthropic's terminal-native AI coding assistant that operates as a full agent. It reads your codebase, edits files, runs shell commands, and executes multi-step plans autonomously. Claude Code integrates with a [skills ecosystem](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — reusable, packaged agent behaviors for repetitive developer tasks.
 
 **ChatGPT Code Interpreter** is OpenAI's solution for running code within ChatGPT conversations. It provides an ephemeral sandboxed environment where Python (primarily) code executes in real-time. The Code Interpreter activates within the chat interface when you request data analysis, file processing, or code execution.
 

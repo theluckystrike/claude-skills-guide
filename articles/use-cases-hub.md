@@ -195,7 +195,7 @@ Debugging with Claude Code means more than asking for help—it means systematic
 
 ### Solo Developer
 
-A solo developer using Claude Code functions like a small team. The key skills are: `/frontend-design` for UI work, `/tdd` for test coverage that catches regressions, `/pdf` and `/docx` for client deliverables, `/supermemory` for context retention across sessions, and `/xlsx` for any reporting needs.
+A solo developer using Claude Code functions like a small team. The key skills are: `/frontend-design` for UI work, `/tdd` for test coverage that catches regressions, `/pdf` and `/docx` for client deliverables, [`/supermemory` for context retention across sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), and `/xlsx` for any reporting needs.
 
 **Recommended starting point:** [Best Claude Skills for Solo Developers and Freelancers](/claude-skills-guide/articles/best-claude-skills-for-solo-developers-and-freelancers/)
 
