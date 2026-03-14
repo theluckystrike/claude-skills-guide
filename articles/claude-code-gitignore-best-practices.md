@@ -8,6 +8,7 @@ tags: [claude-code, gitignore, best-practices, version-control, claude-skills]
 author: "theluckystrike"
 reviewed: true
 score: 8
+permalink: /claude-code-gitignore-best-practices/
 ---
 
 # Claude Code Gitignore Best Practices

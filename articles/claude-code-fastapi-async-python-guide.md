@@ -6,6 +6,7 @@ date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, fastapi, async, python, api-development]
 author: theluckystrike
+permalink: /claude-code-fastapi-async-python-guide/
 ---
 
 # Claude Code FastAPI Async Python Guide

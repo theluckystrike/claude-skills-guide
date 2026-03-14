@@ -4,6 +4,7 @@ title: "Claude Code for Dependency Audit Automation"
 description: "Learn how to automate dependency security audits using Claude Code skills. Practical examples for scanning vulnerabilities, generating reports, and integrating with CI/CD pipelines."
 date: 2026-03-14
 author: theluckystrike
+permalink: /claude-code-for-dependency-audit-automation/
 ---
 
 # Claude Code for Dependency Audit Automation

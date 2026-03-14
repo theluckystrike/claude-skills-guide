@@ -8,6 +8,7 @@ categories: [tutorials]
 tags: [claude-code, pytest, fixtures, testing, python, automation]
 reviewed: true
 score: 7
+permalink: /claude-code-pytest-fixtures-patterns-guide/
 ---
 
 # Claude Code Pytest Fixtures Patterns Guide

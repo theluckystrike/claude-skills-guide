@@ -8,6 +8,7 @@ tags: [claude-code, jest, unit-testing, testing, workflow]
 author: theluckystrike
 reviewed: false
 score: 0
+permalink: /claude-code-jest-unit-testing-workflow-guide/
 ---
 
 # Claude Code Jest Unit Testing Workflow Guide

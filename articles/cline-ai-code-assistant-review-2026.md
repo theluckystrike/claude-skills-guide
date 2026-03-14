@@ -8,6 +8,7 @@ tags: [cline, ai-code-assistant, autonomous-coding, claude-code, developer-tools
 author: theluckystrike
 reviewed: true
 score: 8
+permalink: /cline-ai-code-assistant-review-2026/
 ---
 
 # Cline AI Code Assistant Review 2026

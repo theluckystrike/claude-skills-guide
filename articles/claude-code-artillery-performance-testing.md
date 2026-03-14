@@ -4,7 +4,10 @@ title: "Claude Code Artillery Performance Testing: A Practical Guide"
 description: "Learn how to use Claude Code with Artillery for load testing and performance analysis. Real-world examples, code snippets, and integration strategies."
 date: 2026-03-14
 author: theluckystrike
+permalink: /claude-code-artillery-performance-testing/
 ---
+{% raw %}
+
 
 # Claude Code Artillery Performance Testing: A Practical Guide
 
@@ -167,3 +170,4 @@ By combining these tools, you build a comprehensive testing pipeline that catche
 Claude Code and Artillery together form a practical combination for modern performance testing. Automate test generation, run scalable load scenarios, and analyze results systematically. Start with simple configurations, gradually add complexity, and integrate testing into your development workflow. Your users will thank you when the application handles production traffic without breaking a sweat.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

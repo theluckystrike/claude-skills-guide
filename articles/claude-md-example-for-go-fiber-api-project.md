@@ -6,6 +6,7 @@ date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, go-fiber, go, api-development, markdown]
 author: theluckystrike
+permalink: /claude-md-example-for-go-fiber-api-project/
 ---
 
 # Claude MD Example for Go Fiber API Project

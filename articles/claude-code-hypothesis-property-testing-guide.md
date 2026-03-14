@@ -4,6 +4,7 @@ title: "Claude Code Hypothesis Property Testing Guide"
 description: "Learn how to integrate Hypothesis property-based testing into your Claude Code workflow for robust, automated test generation."
 date: 2026-03-14
 author: theluckystrike
+permalink: /claude-code-hypothesis-property-testing-guide/
 ---
 
 # Claude Code Hypothesis Property Testing Guide

@@ -8,7 +8,10 @@ tags: [claude-code, cypress, component-testing, testing, tdd, frontend-developme
 author: theluckystrike
 reviewed: true
 score: 8
+permalink: /claude-code-cypress-component-testing-guide/
 ---
+{% raw %}
+
 
 # Claude Code Cypress Component Testing Guide
 
@@ -191,3 +194,4 @@ For persistent flakiness, consider increasing timeouts for slow renders or using
 ---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

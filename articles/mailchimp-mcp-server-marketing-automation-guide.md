@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, mailchimp, mcp, marketing-automation, email-m
 author: theluckystrike
 reviewed: true
 score: 7
+permalink: /mailchimp-mcp-server-marketing-automation-guide/
 ---
 
 {% raw %}

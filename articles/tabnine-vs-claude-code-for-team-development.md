@@ -8,6 +8,7 @@ tags: [tabnine, claude-code, ai-code-assistant, team-development, productivity]
 author: theluckystrike
 reviewed: true
 score: 8
+permalink: /tabnine-vs-claude-code-for-team-development/
 ---
 
 # Tabnine vs Claude Code for Team Development

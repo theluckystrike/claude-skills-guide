@@ -8,6 +8,7 @@ tags: [claude-code, mcp, penetration-testing, security, vulnerability-assessment
 author: theluckystrike
 reviewed: false
 score: 0
+permalink: /claude-code-mcp-server-penetration-testing-guide/
 ---
 
 # Claude Code MCP Server Penetration Testing Guide

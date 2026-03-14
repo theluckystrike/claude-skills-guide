@@ -6,6 +6,7 @@ date: 2026-03-14
 categories: [case-studies]
 tags: [claude-code, productivity, development-workflow, ai-coding]
 author: theluckystrike
+permalink: /how-claude-code-helped-ship-product-3x-faster/
 ---
 
 # How Claude Code Helped Ship Product 3x Faster

@@ -8,6 +8,7 @@ tags: [claude-code, claude-skills, instruction-resolution, conflict-resolution, 
 author: theluckystrike
 reviewed: true
 score: 8
+permalink: /claude-md-conflicting-instructions-resolution-guide/
 ---
 
 # Claude MD Conflicting Instructions Resolution Guide

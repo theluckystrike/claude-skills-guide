@@ -6,6 +6,7 @@ date: 2026-03-14
 author: theluckystrike
 categories: [resources]
 tags: [claude-code, claude-skills, weekly-digest, resources, developer-tools]
+permalink: /claude-code-weekly-digest-resources/
 ---
 
 # Claude Code Weekly Digest Resources for Developers

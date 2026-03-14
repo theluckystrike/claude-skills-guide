@@ -6,6 +6,7 @@ date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, elixir, phoenix, markdown, skill]
 author: theluckystrike
+permalink: /claude-md-example-for-elixir-phoenix-application/
 ---
 
 # Claude MD Example for Elixir Phoenix Application
