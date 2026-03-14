@@ -100,11 +100,12 @@ For Python monorepo development, you can install skills that provide:
 - Documentation generation workflows
 - Testing strategy guidance
 
-Example skill installation:
+Example skill setup — place `.md` files in `~/.claude/`:
 
 ```bash
-claude code skill install python-monorepo-expert
-claude code skill install pytest-master
+# Create skill files in your Claude config directory
+# e.g., ~/.claude/python-monorepo-expert.md
+# e.g., ~/.claude/pytest-master.md
 ```
 
 These skills enhance Claude Code's responses with specialized knowledge tailored to your monorepo's technology stack.

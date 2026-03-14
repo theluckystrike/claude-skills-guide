@@ -25,7 +25,9 @@ When starting a new Vue project, initialize Claude Code with your project contex
 
 ```bash
 # Provide Claude Code with your Vue project structure
-claude --project-dir ./my-vue-app --context "Vue 3 + Composition API + TypeScript + Pinia"
+# Navigate to your project and start Claude Code
+cd ./my-vue-app && claude
+# Then share context: "This is a Vue 3 + Composition API + TypeScript + Pinia project"
 ```
 
 This context helps Claude understand your stack and generate code that aligns with your existing patterns. For Vue projects using Vuex or Pinia, specify your state management choice. For TypeScript users, indicate your preference for `script setup` syntax.

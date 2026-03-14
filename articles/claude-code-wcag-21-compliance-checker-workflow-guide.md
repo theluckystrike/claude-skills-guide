@@ -39,8 +39,8 @@ npm install -g @anthropic-ai/claude-code
 # Verify installation
 claude --version
 
-# Initialize a new project with accessibility focus
-claude init --template accessibility
+# Start Claude Code in your project directory
+cd your-project && claude
 ```
 
 ## Practical Workflow for WCAG 2.1 Checking with Claude Code

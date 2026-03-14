@@ -66,11 +66,11 @@ Claude Code shines with its **Model Context Protocol (MCP)**, which provides a s
 - API calling capabilities
 - Custom tool creation
 
-When you install Claude Code, you gain access to a rich ecosystem of pre-built skills and tools. For instance, you can install skills for specific workflows:
+When you install Claude Code, you gain access to a rich ecosystem of pre-built skills and tools. For instance, you can add skills for specific workflows by placing `.md` files in your `~/.claude/` directory:
 
 ```bash
-claude skill install anthropic/pdf
-claude skill install anthropic/pptx
+# Place skill files in ~/.claude/
+# e.g., ~/.claude/pdf.md, ~/.claude/pptx.md
 ```
 
 Jan AI provides tool integration through its extensible framework, but the setup typically requires more manual configuration. The trade-off is greater flexibility for advanced users who want fine-grained control.

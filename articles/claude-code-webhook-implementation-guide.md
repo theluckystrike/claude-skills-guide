@@ -78,7 +78,6 @@ function invokeClaudeWithContext(eventType, payload) {
   const prompt = buildPromptForEvent(eventType, payload);
   
   const claude = spawn('claude', [
-    'code',
     '--print',
     prompt
   ]);

@@ -68,8 +68,9 @@ This skill ensures Claude Code follows security best practices automatically.
 Claude Code allows precise control over which files are included in context:
 
 ```bash
-# Limit Claude Code to specific directories
-claude --path ./src/auth ./src/payment "Implement JWT authentication"
+# Limit Claude Code to specific directories by starting Claude in that directory
+cd ./src/auth && claude
+# Then describe your task: "Implement JWT authentication"
 ```
 
 This scoping prevents accidentally exposing unrelated sensitive code to the AI.

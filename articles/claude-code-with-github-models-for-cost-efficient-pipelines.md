@@ -115,9 +115,7 @@ jobs:
       - name: Deep Architectural Review
         if: github.event_name == 'pull_request'
         run: |
-          claude-code --skill cost-efficient-review \
-            --task architectural-review \
-            --context pr:${{ github.event.pull_request.number }}
+          claude --print "Using the cost-efficient-review skill, perform an architectural review of PR #${{ github.event.pull_request.number }}"
 ```
 
 This workflow demonstrates the tiered approach: GitHub models handle the bulk of analysis work efficiently, while Claude Code focuses on more sophisticated architectural reviews that require deeper understanding.
