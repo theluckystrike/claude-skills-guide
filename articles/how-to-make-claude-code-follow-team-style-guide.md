@@ -5,7 +5,7 @@ description: Learn practical techniques to ensure Claude Code generates code tha
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, style-guide, team-workflow]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 8
 permalink: /how-to-make-claude-code-follow-team-style-guide/
