@@ -139,4 +139,11 @@ For frontend work, integrate **frontend-design** skill considerations into your 
 
 Claude Code integration with GitHub Actions transforms repetitive development tasks into automated processes. Start with simple workflows like PR descriptions, then expand to code review, documentation generation, and safety checks as your team gains confidence. The combination of Claude's analysis capabilities with GitHub Actions automation creates efficiencies that compound over time.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

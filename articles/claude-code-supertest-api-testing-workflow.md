@@ -2,10 +2,11 @@
 
 layout: default
 title: "Claude Code Supertest API Testing Workflow"
-description: "Learn how to build automated API testing workflows using Claude Code with Supertest. Practical examples, testing patterns, and integration strategies for developers."
+description: "Learn how to build automated API testing workflows using Claude Code with Supertest. Practical examples, testing patterns, and integration strategies."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-supertest-api-testing-workflow/
+categories: [guides]
 ---
 
 # Claude Code Supertest API Testing Workflow
@@ -189,5 +190,12 @@ For documentation, use the pdf skill to generate test reports that can be shared
 ## Conclusion
 
 Combining Claude Code with Supertest creates a powerful API testing workflow. Use Supertest's expressive API to write clear, maintainable tests. Leverage Claude Code for test generation, maintenance suggestions, and CI/CD integration. The result is a reliable testing strategy that catches bugs early and gives confidence in your API's correctness.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

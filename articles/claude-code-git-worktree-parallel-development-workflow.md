@@ -133,5 +133,12 @@ Git worktrees combined with Claude Code create a powerful parallel development e
 
 Whether you're managing feature development alongside bug fixes, conducting code reviews, or experimenting with refactoring, this workflow scales from simple two-branch scenarios to complex multi-context projects. The key advantage is eliminating the mental overhead of state management: each worktree simply *is* its branch, requiring no careful stashing or complex git operations to preserve.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

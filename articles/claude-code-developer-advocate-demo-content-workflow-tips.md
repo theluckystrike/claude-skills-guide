@@ -5,6 +5,7 @@ description: "Master the art of creating compelling demos and content using Clau
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-developer-advocate-demo-content-workflow-tips/
+categories: [guides]
 ---
 
 # Claude Code Developer Advocate Demo Content Workflow Tips
@@ -120,3 +121,10 @@ Claude Code transforms demo preparation from a solitary scramble into a collabor
 Start with one of these tips in your next demo preparation. Once you see the time savings and quality improvements, you'll find even more ways to integrate Claude Code into your developer advocate workflow.
 
 Remember: great demos aren't born—they're built, tested, and refined. Let Claude Code help you build better ones.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

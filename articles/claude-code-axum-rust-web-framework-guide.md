@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Axum Rust Web Framework Guide"
-description: "Build modern web APIs with Axum and Rust using Claude Code. Practical examples, skill integration, and workflow tips for developers building high-performance backend services."
+description: "Build modern web APIs with Axum and Rust using Claude Code. Practical examples, skill integration, and workflow tips for developers building."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, axum, rust, web-framework, api, backend]
@@ -239,5 +239,12 @@ let app = Router::new()
 With your Axum foundation in place, explore adding database integration with sqlx or your preferred ORM, implementing JWT authentication using tower-http's middleware capabilities, and setting up graceful shutdown handling for production deployments. Claude Code can guide you through each of these enhancements, generating working code based on your specific requirements.
 
 The combination of Axum's ergonomic design and Claude Code's AI assistance makes Rust web development accessible without sacrificing the language's performance and safety guarantees. Start with simple endpoints, iterate rapidly, and scale confidently.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
