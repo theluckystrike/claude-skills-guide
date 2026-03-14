@@ -1,203 +1,214 @@
 ---
 layout: default
 title: "Claude Code API Error Handling Standards"
-description: "A practical guide to implementing robust error handling in Claude skills. Learn standard patterns for retry logic, fallback strategies, and graceful degradation."
+description: "A practical guide to implementing robust error handling standards for Claude Code API integrations. Includes code examples, best practices, and patterns for developers."
 date: 2026-03-14
+categories: [guides]
+tags: [claude-code, api, error-handling, development, standards]
 author: theluckystrike
 permalink: /claude-code-api-error-handling-standards/
 ---
 
-{% raw %}
-
 # Claude Code API Error Handling Standards
 
-Building reliable Claude skills requires anticipating failures and handling them gracefully. Whether you're working with file operations, API calls, or external tool integrations, proper error handling prevents unexpected interruptions and maintains a consistent user experience. This guide covers the standard patterns for error handling that experienced developers apply to their Claude skills.
+Building reliable integrations with Claude Code API requires thoughtful error handling. This guide covers practical patterns and standards that developers and power users can implement to create resilient API interactions.
 
-## Understanding Error Sources in Claude Skills
+## Understanding Error Types
 
-Claude skills interact with multiple systems that can fail. Recognizing these error sources helps you design appropriate responses:
+Claude Code API returns distinct error categories that require different handling strategies. Authentication errors occur when API keys are invalid or expired. Rate limit errors (HTTP 429) happen when you exceed request quotas. Validation errors indicate malformed request payloads. Server errors (5xx) represent temporary service issues. Each category demands a specific response strategy.
 
-**Tool Execution Errors**: The Read, Write, and Bash tools may fail due to permission issues, missing files, or command timeouts. Skills like `pdf` and `docx` frequently encounter file system errors when processing documents.
+When building integrations with skills like the pdf skill for document processing or the frontend-design skill for UI generation, robust error handling prevents workflow interruptions. A single unhandled error can cascade through dependent operations, causing data loss or inconsistent state.
 
-**API and Network Errors**: Skills that call external services (through MCP or direct HTTP requests) face network timeouts, rate limits, and service unavailability. The `webapp-testing` skill must handle Playwright connection failures gracefully.
+## Basic Error Handling Pattern
 
-**Token and Resource Limits**: Long-running operations may hit context window limits or exceed allowed processing time. The `tdd` skill needs to handle test execution failures without leaving the project in an inconsistent state.
+Implement a structured approach to catching and responding to API errors:
 
-**Schema and Format Errors**: Invalid skill definitions or malformed front matter prevent skills from loading correctly. Proper validation helps catch these issues early.
+```javascript
+async function callClaudeAPI(messages, options = {}) {
+  const maxRetries = 3;
+  const baseDelay = 1000;
 
-## Standard Error Handling Patterns
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      const response = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': process.env.ANTHROPIC_API_KEY,
+          'anthropic-version': '2023-06-01'
+        },
+        body: JSON.stringify({
+          model: options.model || 'claude-3-5-sonnet-20241022',
+          max_tokens: options.maxTokens || 4096,
+          messages
+        })
+      });
 
-### Try-Catch Implementation
+      if (!response.ok) {
+        const error = await response.json();
+        throw new APIError(response.status, error);
+      }
 
-Wrap operations that can fail in explicit error handlers:
+      return await response.json();
+    } catch (error) {
+      if (attempt === maxRetries - 1) throw error;
+      if (error.statusCode === 429) {
+        await sleep(baseDelay * Math.pow(2, attempt));
+      }
+    }
+  }
+}
 
+class APIError extends Error {
+  constructor(statusCode, data) {
+    super(data.error?.message || 'API request failed');
+    this.statusCode = statusCode;
+    this.type = data.error?.type;
+  }
+}
 ```
-Error handling approach:
-- Wrap file operations in validation blocks
-- Check file existence before read operations
-- Validate tool outputs for expected structure
-- Log errors with sufficient context for debugging
+
+This pattern implements exponential backoff for rate limits, which is essential when running intensive workflows with the tdd skill or running multiple parallel tasks.
+
+## Validation Error Handling
+
+Input validation prevents errors before they reach the API. Create validation schemas that catch issues early:
+
+```typescript
+interface ClaudeMessage {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
+interface ClaudeRequest {
+  model: string;
+  messages: ClaudeMessage[];
+  max_tokens?: number;
+  temperature?: number;
+}
+
+function validateRequest(req: ClaudeRequest): void {
+  if (!req.model) {
+    throw new ValidationError('model is required');
+  }
+
+  if (!Array.isArray(req.messages) || req.messages.length === 0) {
+    throw new ValidationError('messages must be a non-empty array');
+  }
+
+  for (const msg of req.messages) {
+    if (!['user', 'assistant'].includes(msg.role)) {
+      throw new ValidationError(`Invalid role: ${msg.role}`);
+    }
+    if (typeof msg.content !== 'string') {
+      throw new ValidationError('Message content must be a string');
+    }
+  }
+
+  if (req.max_tokens && req.max_tokens > 200000) {
+    throw new ValidationError('max_tokens exceeds model limit');
+  }
+}
 ```
 
-For skills that process multiple files, implement batch-level error handling:
+The supermemory skill benefits significantly from validation since it handles persistent context that could become corrupted with invalid data. Proper validation ensures your long-running conversations remain stable.
 
+## Graceful Degradation Strategies
+
+When API errors occur, implement fallback behaviors that maintain user experience. Rather than failing completely, provide sensible defaults:
+
+```javascript
+async function generateWithFallback(prompt, context) {
+  try {
+    return await callClaudeAPI(buildMessages(prompt, context));
+  } catch (error) {
+    if (error.statusCode === 429) {
+      console.warn('Rate limited, using cached response');
+      return getCachedResponse(prompt) || generateSimpleResponse(prompt);
+    }
+
+    if (error.statusCode >= 500) {
+      console.warn('Server error, attempting retry with simpler prompt');
+      return await callClaudeAPI(simplifyPrompt(prompt), { maxRetries: 1 });
+    }
+
+    throw error;
+  }
+}
 ```
-Processing workflow:
-1. Validate all input files exist before starting
-2. Process files sequentially with individual try-catch blocks
-3. If any single file fails, log the error and continue with remaining files
-4. Report all failures at the end with specific file paths and error messages
-5. Never leave partial output—clean up on failure or mark output as incomplete
-```
 
-### Retry Logic with Exponential Backoff
+This approach works well with the algorithmic-art skill where generating a placeholder or cached result is preferable to complete failure during high-load periods.
 
-Network operations and external API calls benefit from retry strategies:
+## Error Recovery Patterns
+
+For long-running operations, implement checkpoint systems that preserve progress:
 
 ```python
-import time
+class ClaudeWorkflow:
+    def __init__(self, checkpoint_file):
+        self.checkpoint_file = checkpoint_file
+        self.state = self.load_checkpoint()
 
-def retry_with_backoff(func, max_retries=3, base_delay=1):
-    """Retry a function with exponential backoff."""
-    for attempt in range(max_retries):
-        try:
-            return func()
-        except (ConnectionError, TimeoutError) as e:
-            if attempt == max_retries - 1:
-                raise
-            delay = base_delay * (2 ** attempt)
-            time.sleep(delay)
-    return None
+    def load_checkpoint(self):
+        if os.path.exists(self.checkpoint_file):
+            with open(self.checkpoint_file) as f:
+                return json.load(f)
+        return {"completed_steps": [], "last_result": None}
+
+    def save_checkpoint(self, step, result):
+        self.state["completed_steps"].append(step)
+        self.state["last_result"] = result
+        with open(self.checkpoint_file, 'w') as f:
+            json.dump(self.state, f)
+
+    async def execute_with_recovery(self, steps):
+        for step in steps:
+            if step in self.state["completed_steps"]:
+                continue
+
+            try:
+                result = await self.execute_step(step)
+                self.save_checkpoint(step, result)
+            except APIError as e:
+                if e.statusCode == 429:
+                    await self.handle_rate_limit(e)
+                else:
+                    raise
 ```
 
-The `supermemory` skill uses this pattern when interacting with storage backends, allowing temporary network hiccups to resolve without failing the entire operation.
+This pattern is valuable when using the canvas-design skill for generating multiple assets, where losing progress due to an API error would be costly.
 
-### Graceful Degradation
+## Monitoring and Logging
 
-When primary functionality fails, provide fallback behavior:
+Track error patterns to identify systemic issues:
 
-```
-Fallback strategy:
-- If primary API is unavailable, attempt cached data
-- If file format conversion fails, return raw text
-- If image generation fails, provide descriptive text instead
-- Always provide meaningful output rather than abandoning the task
-```
+```javascript
+function logAPICall(params, response, error, duration) {
+  const logEntry = {
+    timestamp: new Date().toISOString(),
+    model: params.model,
+    success: !error,
+    statusCode: response?.status,
+    errorType: error?.type,
+    duration_ms: duration,
+    tokenCount: response?.usage?.total_tokens
+  };
 
-Skills like `frontend-design` should attempt alternative approaches when a specific component library is unavailable, falling back to standard HTML/CSS when needed.
-
-## Structured Error Responses
-
-Error messages should follow a consistent structure that helps debugging and user understanding:
-
-```
-Error format:
-[SKILL_NAME] Operation failed: {specific_error}
-Context: {what was attempted, file paths, inputs}
-Recovery: {suggested next steps or manual intervention required}
+  console.log(JSON.stringify(logEntry));
+  // Send to monitoring service
+}
 ```
 
-For example, when the `pdf` skill encounters a corrupt input file:
+Integrate with your existing monitoring stack. The xlsx skill can generate error reports from logged data, helping teams analyze failure patterns over time.
 
-```
-[pdf] Processing failed: Unable to parse PDF structure
-Context: Attempted to read ./documents/report-2026.pdf
-Recovery: Verify the PDF file is not corrupted. Try re-exporting from the source application.
-```
+## Best Practices Summary
 
-## Validation Before Execution
+Implement these core principles across your Claude Code integrations. First, always validate inputs before sending to the API. Second, use exponential backoff for transient errors like rate limits. Third, implement graceful degradation rather than complete failure. Fourth, use checkpoint systems for long-running workflows. Fifth, log errors comprehensively for debugging and analysis.
 
-Prevent errors by validating inputs before attempting operations:
+These standards apply whether you're building a simple script using the claude-md skill or a complex multi-agent system with the mcp-servers integration. Error handling is not optional—it determines whether your integration is production-ready.
 
-```
-Validation checklist:
-- Check file existence before Read operations
-- Verify directory exists before Write operations
-- Validate input formats match expected schemas
-- Confirm required environment variables are set
-- Check available disk space for file operations
-```
+The key is anticipating failure modes and building systems that recover gracefully. As you scale your Claude Code usage across more workflows, these patterns become essential for maintaining reliability.
 
-This approach reduces runtime errors and provides clearer feedback to users about what's needed before starting a task.
-
-## Error Handling in Skill Chaining
-
-When multiple skills work together, error handling at integration points becomes critical:
-
-```
-Skill chaining error strategy:
-1. Each skill should validate inputs before passing to next skill
-2. Intermediate outputs should be checkpointed for recovery
-3. If downstream skill fails, upstream skill can re-run with corrected inputs
-4. Clear error propagation—don't hide failures from the user
-```
-
-The `automated-testing-pipeline-with-claude-tdd-skill` demonstrates this by checkpointing test files before running, allowing re-execution if the test runner encounters issues.
-
-## Timeout and Resource Management
-
-Long-running operations need explicit timeout handling:
-
-```yaml
 ---
-name: long-running-skill
-timeout: 300
-max_turns: 15
----
-
-For operations exceeding timeout:
-1. Save partial progress to checkpoint file
-2. Report current status and remaining work
-3. Provide command to resume from checkpoint
-4. Never leave resources in locked state
-```
-
-The `algorithmic-art` skill handles long rendering operations this way, checkpointing intermediate results so users can resume if the process is interrupted.
-
-## Logging and Debugging Support
-
-Effective error handling includes structured logging:
-
-```
-Logging requirements:
-- Timestamp each error with UTC format
-- Include skill name and operation type
-- Log relevant context (file paths, API endpoints, inputs)
-- Distinguish between recoverable and fatal errors
-- Use appropriate log levels: ERROR for failures, WARN for degraded operation
-```
-
-Debug mode should provide additional detail:
-
-```
-When debugging is enabled:
-- Log full stack traces for exceptions
-- Include intermediate variable values
-- Show tool call sequences leading to error
-- Output raw API responses when available
-```
-
-## Testing Error Handling
-
-Verify error handling works correctly through intentional failure testing:
-
-```
-Test scenarios:
-1. Missing input files—verify graceful error message
-2. Invalid input formats—confirm validation catches issues
-3. Network timeouts—ensure retry logic activates
-4. Permission errors—check for clear remediation guidance
-5. Resource exhaustion—validate cleanup and recovery paths
-```
-
-The `tdd` skill benefits from comprehensive error testing since it operates across multiple files and tools where various failure modes can occur.
-
-## Summary
-
-Effective error handling in Claude skills follows consistent patterns: validate early, handle gracefully, recover intelligently, and communicate clearly. Skills like `pdf`, `tdd`, `frontend-design`, `webapp-testing`, and `supermemory` demonstrate these principles by anticipating failures and providing meaningful responses rather than abandoning tasks unexpectedly.
-
-Apply these standards when building your own skills to create reliable automations that serve users even when things go wrong. The initial investment in robust error handling pays dividends in reduced support burden and improved user trust.
-
-{% endraw %}
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
