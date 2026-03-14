@@ -2,7 +2,7 @@
 
 layout: default
 title: "Types of LLM Agents Explained for Developers 2026"
-description: "A comprehensive guide understanding the different types of LLM agents, from simple reflex agents to autonomous systems, with practical examples for developers using Claude Code."
+description: "A comprehensive guide understanding the different types of LLM agents, from simple reflex agents to autonomous systems, with practical examples for."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, llm-agents, ai-agents, developer-tools, autonomous-agents, claude-skills]
@@ -202,3 +202,10 @@ As AI continues to evolve, the lines between agent types will blur, and we'll se
 
 The future of software development increasingly involves collaboration between human developers and AI agents. By understanding how these agents work, you're better positioned to build AI-powered applications and work effectively with AI assistants like Claude Code.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

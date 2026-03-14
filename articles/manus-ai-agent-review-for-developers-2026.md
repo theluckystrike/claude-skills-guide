@@ -2,7 +2,7 @@
 
 layout: default
 title: "Manus AI Agent Review for Developers 2026"
-description: "A comprehensive review of Manus AI agent for developers in 2026, focusing on Claude Code skills integration, practical examples, and how it compares to existing AI coding assistants."
+description: "A comprehensive review of Manus AI agent for developers in 2026, focusing on Claude Code skills integration, practical examples, and how it compares to."
 date: 2026-03-14
 categories: [ai-agents]
 tags: [manus, ai-agent, claude-code, review, 2026, claude-skills]
@@ -152,3 +152,10 @@ Manus AI agent represents a capable option in the 2026 AI development assistant 
 For teams invested in Claude Code skills and the extensible skill ecosystem, Manus works best as a complementary tool rather than a replacement. The ability to use Claude Code's specialized skills—including document processing, testing, accessibility verification, and domain-specific workflows—combined with Manus's autonomous implementation capabilities creates a powerful development toolkit.
 
 The key is understanding that AI agent selection depends on your team's specific needs: autonomous execution or collaborative refinement, quick iterations or fine-grained control. Both approaches have merit, and the best developer workflows often combine multiple tools strategically.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

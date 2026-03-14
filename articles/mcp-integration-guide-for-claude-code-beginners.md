@@ -105,3 +105,10 @@ MCP integration transforms Claude Code from a capable coding assistant into a po
 Start with a simple integration like the filesystem server to get comfortable with the configuration process, then gradually add more servers as your needs grow. The initial setup time is minimal, and the productivity gains are substantial.
 
 To explore more MCP servers and integrations, check the official Claude Code documentation and the growing ecosystem of community-contributed MCP servers. With MCP, you can tailor Claude Code to match your specific development workflow and tools.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

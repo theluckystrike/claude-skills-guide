@@ -2,7 +2,7 @@
 
 layout: default
 title: "AI Agent State Management Fundamentals for Developers"
-description: "Master the fundamentals of AI agent state management with Claude Code. Learn how to manage context, sessions, and persistent state for building reliable agentic applications."
+description: "Master the fundamentals of AI agent state management with Claude Code. Learn how to manage context, sessions, and persistent state for building."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, ai-agent, state-management, developer-guide, fundamentals, claude-skills]
@@ -191,4 +191,11 @@ When agent behavior seems inconsistent, state management issues are often the cu
 
 Mastering state management fundamentals transforms your Claude Code experience from reactive assistance to proactive partnership. By understanding how context, session, and persistent state work together, you can design workflows that maintain coherence across complex tasks, build cumulative knowledge that improves over time, and debug issues more effectively when things go wrong.
 
-Remember these core principles: structure your context intentionally, use session awareness for related tasks, document persistent knowledge explicitly, and implement checkpointing for long-running operations. With these fundamentals in place, you'll build more reliable and capable agentic applications.
+Remember these core principles: structure your context intentionally, leverage session awareness for related tasks, document persistent knowledge explicitly, and implement checkpointing for long-running operations. With these fundamentals in place, you'll build more reliable and capable agentic applications.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

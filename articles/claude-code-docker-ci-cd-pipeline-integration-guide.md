@@ -166,3 +166,10 @@ Integrating Claude Code with Docker and CI/CD pipelines transforms your developm
 
 The combination of Claude Code's intelligent assistance with Docker's containerization capabilities creates a foundation for efficient, automated, and reliable software delivery—empowering developers to focus on building features while AI handles routine DevOps tasks.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
