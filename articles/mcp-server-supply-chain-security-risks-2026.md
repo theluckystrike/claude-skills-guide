@@ -12,7 +12,7 @@ score: 7
 
 # MCP Server Supply Chain Security Risks: A Practical Guide for 2026
 
-The Model Context Protocol (MCP) has become the backbone of how Claude Code connects to external services, databases, and APIs. As we move through 2026, the ecosystem of MCP servers continues to expand rapidly, with community-contributed servers now outnumbering official offerings by a significant margin. This growth brings genuine security concerns that every developer and power user needs to understand.
+The Model Context Protocol (MCP) has become the backbone of how Claude Code connects to external services, databases, and APIs. As we move through 2026, the ecosystem of MCP servers continues to expand rapidly, with community-contributed servers now outnumbering official offerings by a significant margin. This growth brings genuine security concerns that every developer and power user needs to understand. For an overview of MCP server patterns, see the [MCP server setup guide](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/).
 
 Supply chain attacks targeting developer tools have increased substantially over the past year. MCP servers, which operate with elevated permissions to access files, run commands, and interact with your development environment, represent a high-value target for attackers. Understanding these risks and implementing proper mitigations is no longer optional—it's a fundamental part of secure Claude Code usage.
 

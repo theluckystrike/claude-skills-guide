@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Dockerfile Generation: Multi-Stage Build Guide
 
-Multi-stage builds are essential for creating lean, production-ready container images. This guide shows you how to use Claude Code skills to generate optimized Dockerfiles with multi-stage patterns for various programming languages and frameworks.
+[Multi-stage builds are essential for creating lean, production-ready container images](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). This guide shows you how to use Claude Code skills to generate optimized Dockerfiles with multi-stage patterns for various programming languages and frameworks.
 
 ## Why Multi-Stage Builds Matter
 
@@ -181,7 +181,7 @@ ENTRYPOINT ["/appbinary"]
 
 ## Using Skills for Dockerfile Generation
 
-The claude-skills ecosystem includes skills that can assist with containerization tasks. The `/frontend-design` skill understands build optimization patterns that translate well to Dockerfiles. The `/tdd` skill helps you write tests that run inside your containers during development.
+[The `/frontend-design` skill understands build optimization patterns](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) understands build optimization patterns that translate well to Dockerfiles. The `/tdd` skill helps you write tests that run inside your containers during development.
 
 For more complex setups, combine multiple skills in a single Claude session:
 

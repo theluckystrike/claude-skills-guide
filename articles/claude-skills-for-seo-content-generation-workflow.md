@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills for SEO Content Generation: 2026 Guide"
-description: "Build an SEO content workflow with Claude Code skills. Use xlsx, pdf, docx, and supermemory for keyword research, content briefs, and tracking."
+description: "Build an SEO content workflow using Claude Code skills. Practical examples with xlsx, pdf, docx, and supermemory for keyword research, briefs, and tracking."
 date: 2026-03-13
-categories: [workflows]
+categories: [workflows, guides]
 tags: [claude-code, claude-skills, seo, content-generation, automation]
 author: "Claude Skills Guide"
 reviewed: true
@@ -12,7 +12,7 @@ score: 7
 
 # Claude Skills for SEO Content Generation Workflow
 
-Creating SEO-optimized content at scale requires a systematic approach. Developers and power users can use Claude skills to automate research, generate outlines, optimize content, and track performance. This guide walks through a practical workflow using Claude Code skills for each stage of the content generation pipeline.
+Creating SEO-optimized content at scale requires a systematic approach. Developers and power users can leverage Claude skills to automate research, generate outlines, optimize content, and track performance. This guide walks through a practical workflow using Claude Code skills for each stage of the content generation pipeline.
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session.
 
@@ -68,7 +68,7 @@ Claude generates a properly formatted `.docx` file with SEO requirements built i
 
 ### Document Processing for Research
 
-The [**pdf** skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) is essential when researching competitor content or extracting data from industry reports:
+The **pdf** skill is essential when researching competitor content or extracting data from industry reports:
 
 ```
 /pdf
@@ -126,7 +126,7 @@ Claude writes the openpyxl code to open the file and append the row correctly.
 
 ### Memory and Knowledge Management
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) enhances long-term SEO strategy by maintaining a knowledge base of what content performs well:
+The **supermemory** skill enhances long-term SEO strategy by maintaining a knowledge base of what content performs well:
 
 ```
 /supermemory store: "claude skills for seo" article published 2026-03-20, ranked position 8 by April 1, 1,200 organic visits in first month

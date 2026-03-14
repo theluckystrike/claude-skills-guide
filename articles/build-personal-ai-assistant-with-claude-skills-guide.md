@@ -26,7 +26,7 @@ This means skills are:
 - **Version-controlled**: they are plain text files you can commit to a dotfiles repo
 - **Shareable**: you can publish them to a skills hub or share with teammates
 
-The `supermemory` skill extends this further by storing structured information about you, your projects, and your preferences. The `tdd` skill gives you test-driven development guidance on demand. The `pdf` skill handles document generation. The `frontend-design` skill accelerates UI work. These are your building blocks.
+[The `supermemory` skill extends this further by storing structured information](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) about you, your projects, and your preferences. The `tdd` skill gives you test-driven development guidance on demand. The `pdf` skill handles document generation. The `frontend-design` skill accelerates UI work. These are your building blocks.
 
 ## Step 1: Set Up Your Personal Memory Layer
 

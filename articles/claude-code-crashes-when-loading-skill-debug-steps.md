@@ -33,11 +33,11 @@ Verify the skill file is where Claude Code expects it:
 ls -la ~/.claude/skills/
 ```
 
-If the file is missing or misnamed, Claude can't load it. Skill names are case-sensitive — `TDD.md` and `tdd.md` are different.
+If the file is missing or misnamed, Claude can't load it. [Skill names are case-sensitive — `TDD.md` and `tdd.md` are different](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/).
 
 ## Step 2: Validate YAML Front Matter
 
-The most common crash cause is malformed YAML at the top of the skill file. The front matter must be valid YAML between `---` delimiters:
+[The most common crash cause is malformed YAML at the top of the skill file](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/). The front matter must be valid YAML between `---` delimiters:
 
 ```yaml
 ---

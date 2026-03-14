@@ -59,7 +59,7 @@ Organizing skills effectively improves discoverability and reduces duplication. 
 └── docx-export.md
 ```
 
-Each skill file should be self-contained. If you find yourself referencing the same prompts across multiple skills, extract common instructions into a shared file and reference it using relative includes where supported.
+[Each skill file should be self-contained](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). If you find yourself referencing the same prompts across multiple skills, extract common instructions into a shared file and reference it using relative includes where supported.
 
 For skills you use frequently, create symlinks to shorter aliases:
 
@@ -106,7 +106,7 @@ Run this manually after establishing new skills, or schedule it daily with cron.
 
 Within an active Claude session, you can refresh skills without restarting. The exact mechanism depends on your Claude Code version, but typically creating or modifying a skill file triggers automatic reloading.
 
-For manual refresh, you can invoke a built-in command if available, or simply start a new session. When you modify a skill like `tdd-workflow.md`, test it immediately:
+For manual refresh, you can invoke a built-in command if available, or simply start a new session. [When you modify a skill like `tdd-workflow.md`](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)iately:
 
 ```
 /tdd create user service

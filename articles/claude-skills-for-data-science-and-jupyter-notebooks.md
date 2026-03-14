@@ -1,13 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Claude Skills for Data Science and Jupyter: 2026 Guide"
 description: "Claude skills for data science and Jupyter: automate data cleaning, generate visualizations, build ML pipelines, and accelerate research workflows."
 date: 2026-03-13
-categories: [guides]
+categories: [skills, guides]
 tags: [claude-code, claude-skills, data-science, jupyter, python, machine-learning]
 author: "Claude Skills Guide"
 reviewed: true
-score: 9
+score: 6
 ---
 
 Data science workflows involve repetitive tasks that drain productivity: cleaning messy datasets, generating visualizations, building machine learning pipelines, and documenting findings. Claude Code skills transform these workflows by automating common operations and enabling AI-assisted development directly within Jupyter notebooks and Python environments.
@@ -45,7 +45,7 @@ The skill knows how to handle merged cells, multiple sheets, and type inference 
 
 ### pdf Skill for Research Paper Extraction
 
-Extracting data from academic papers, financial reports, and industry studies is straightforward with the [pdf skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/):
+Extracting data from academic papers, financial reports, and industry studies is straightforward with the pdf skill:
 
 ```
 /pdf
@@ -58,7 +58,7 @@ Claude uses available tools to parse the PDF and output the tables as structured
 
 ### Code Generation and Refactoring with tdd
 
-The [tdd skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) promotes test-driven development practices even in notebook environments, ensuring reproducible results:
+The tdd skill promotes test-driven development practices even in notebook environments, ensuring reproducible results:
 
 ```
 /tdd
@@ -104,7 +104,7 @@ Generate a PDF report containing: title page, summary statistics table, and the 
 Create a presentation from today's model evaluation results. Include the confusion matrix, ROC curve, and a feature importance bar chart. Use a clean, minimal theme.
 ```
 
-The [**supermemory** skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) tracks experiment context across sessions:
+The **supermemory** skill tracks experiment context across sessions:
 
 ```
 /supermemory store: RandomForest with n_estimators=200, max_depth=10 achieved accuracy=0.92, f1=0.89 on customer_churn dataset 2026-03-13

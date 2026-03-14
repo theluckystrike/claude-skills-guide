@@ -16,7 +16,7 @@ If you build [VS Code extensions](/claude-skills-guide/articles/claude-code-vs-g
 
 ## Understanding the Architecture
 
-Claude Code skills are fundamentally different from VS Code extensions in their execution model. Skills are Markdown files that get loaded into Claude's context when invoked through `/skill-name` commands. They're designed to work within Claude Code's chat interface, not as standalone programmatic APIs.
+[Claude Code skills are fundamentally different from VS Code extensions](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) in their execution model. Skills are Markdown files that get loaded into Claude's context when invoked through `/skill-name` commands. They're designed to work within Claude Code's chat interface, not as standalone programmatic APIs.
 
 VS Code extensions, on the other hand, run in the extension host process and communicate with the editor through the VS Code Extension API. There's no native bridge that automatically loads Claude skills into your extension.
 
@@ -54,7 +54,7 @@ function invokeClaudeWithSkill(skillName: string, userPrompt: string): Promise<s
 }
 ```
 
-This approach lets you use any skill from your `~/.claude/skills/` directory. For example, you could invoke the **tdd** skill to generate tests for code selected in the editor:
+This approach lets you use any skill from your `~/.claude/skills/` directory. For example, [you could invoke the **tdd** skill to generate tests](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) in the editor:
 
 ```typescript
 vscode.commands.registerCommand('extension.generateTests', async () => {

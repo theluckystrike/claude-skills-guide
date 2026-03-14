@@ -16,7 +16,7 @@ The AI agent ecosystem in 2026 faces a fundamental challenge: skills built for o
 
 ## The Portability Problem
 
-Consider a developer who builds a comprehensive frontend-design skill for generating React components with Tailwind CSS. This skill includes detailed prompts for component architecture, accessibility compliance, and responsive design patterns. When that developer switches from Claude to another AI assistant, they face rebuilding everything from scratch.
+[comprehensive frontend-design skill for generating React components](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) with Tailwind CSS. This skill includes detailed prompts for component architecture, accessibility compliance, and responsive design patterns. When that developer switches from Claude to another AI assistant, they face rebuilding everything from scratch.
 
 The same issue affects enterprise teams. A company standardizing on AI-assisted development needs skills that work consistently across all team members' chosen tools. Without standardization, knowledge stays locked within specific platforms.
 
@@ -93,7 +93,7 @@ Distribution channels now accept standardized skill packages. A single package c
 - Configuration schemas
 - Example invocations
 
-When you publish a skill, platforms parse the manifest and adapt the core prompts to their environment. The `docx` skill for document processing demonstrates this—publish once, use everywhere.
+When you publish a skill, platforms parse the manifest and adapt the core prompts to their environment. [The `docx` skill for document processing demonstrates this](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)—publish once, use everywhere.
 
 ### Version Management
 

@@ -16,7 +16,7 @@ If you've been exploring Claude Code to automate your development workflows, you
 
 ## How API Calls Work in Claude Code Skills
 
-Claude Code skills operate within the Claude Code environment, which has built-in capabilities for making HTTP requests. When you create a skill that needs to interact with external services—whether it's fetching data from a REST API, sending notifications to Slack, or querying a database—the skill can use tools and commands to execute these calls.
+Claude Code skills operate within the Claude Code environment, which has built-in capabilities for making HTTP requests. [When you create a skill that needs to interact](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) with external services—whether it's fetching data from a REST API, sending notifications to Slack, or querying a database—the skill can use tools and commands to execute these calls.
 
 The key mechanism involves using the `http` or `curl` commands directly within your skill's instructions, or by using MCP (Model Context Protocol) servers that provide API connectivity. For example, a skill designed to interact with GitHub's API can automatically create issues, pull requests, or search repositories without requiring manual intervention.
 
@@ -46,7 +46,7 @@ One of the most powerful features of Claude Code skills is auto-invocation. When
 - Format and transform incoming data
 - Trigger follow-up actions based on API results
 
-This automation works particularly well with skills like the `tdd` skill for test-driven development, where API responses can automatically generate unit tests, or with the `supermemory` skill for maintaining context across sessions.
+[skills like the `tdd` skill for test-driven development](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) for test-driven development, where API responses can automatically generate unit tests, or with the `supermemory` skill for maintaining context across sessions.
 
 ## Practical Use Cases
 

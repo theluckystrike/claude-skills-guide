@@ -14,7 +14,7 @@ score: 9
 
 When you run AI agents in production workflows, security and isolation become critical concerns. The `agent` skill in Claude Code includes sandboxing capabilities that create boundaries between the AI's operations and your actual filesystem, network, and credentials.
 
-Skills are `.md` files in `~/.claude/skills/`. The `agent` skill is invoked like any other:
+[Skills are `.md` files in `~/.claude/skills/`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). The `agent` skill is invoked like any other:
 
 ```
 /agent refactor the authentication module in src/auth/ — do not touch anything outside that directory
@@ -49,7 +49,7 @@ In your Claude Code settings (`~/.claude/settings.json`):
 
 With this in place, a `/agent` invocation that tries to modify `./config/secrets.yml` will be blocked. The agent sees the restriction and should report it rather than proceeding.
 
-For testing new community skills without risking your production code, set up an isolated directory structure:
+[For testing new community skills without risking your production code](/claude-skills-guide/articles/how-do-i-test-a-claude-skill-before-deploying-to-team/), set up an isolated directory structure:
 
 ```
 /project/

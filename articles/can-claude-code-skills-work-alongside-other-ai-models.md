@@ -12,11 +12,11 @@ score: 9
 
 # Can Claude Code Skills Work Alongside Other AI Models?
 
-The answer is a resounding yes. Claude Code skills are designed to be composable, context-aware, and compatible with broader AI development ecosystems. Whether you're using GPT-4 for code generation, Gemini for multimodal tasks, or Cursor for IDE integration, Claude skills can enhance rather than replace your existing AI workflow.
+[Claude Code skills are designed to be composable](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/), context-aware, and compatible with broader AI development ecosystems. Whether you're using GPT-4 for code generation, Gemini for multimodal tasks, or Cursor for IDE integration, Claude skills can enhance rather than replace your existing AI workflow.
 
 ## Understanding Skill Architecture
 
-Claude Code skills live in your `~/claude/skills/` directory as Markdown files with YAML front matter. Each skill defines a system prompt that shapes Claude's behavior when you invoke it with `/skill-name`. This architecture is intentionally lightweight—no API keys, no server configuration, no vendor lock-in.
+[Claude Code skills live in your `~/claude/skills/` directory as Markdown files with YAML front matter](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). Each skill defines a system prompt that shapes Claude's behavior when you invoke it with `/skill-name`. This architecture is intentionally lightweight—no API keys, no server configuration, no vendor lock-in.
 
 The key insight is that skills operate at the prompt layer. They don't compete with other AI models; they collaborate with them. When you invoke a skill, Claude reads your local files, understands your project structure, and executes within your development environment. Other AI tools continue serving their roles in your pipeline.
 

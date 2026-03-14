@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Daily Standup Automation Workflow"
+title: "Claude Skills: Daily Standup Automation Guide (2026)"
 description: "Automate daily standup reports using Claude Code skills. Pull git activity, format updates, and deliver to Slack or Teams with minimal manual effort."
 date: 2026-03-13
 author: "Claude Skills Guide"

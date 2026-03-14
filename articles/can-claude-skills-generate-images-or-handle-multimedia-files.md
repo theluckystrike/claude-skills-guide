@@ -24,9 +24,9 @@ The skill author designs the prompts to guide Claude toward appropriate tool usa
 
 Several community skills extend Claude's multimedia capabilities:
 
-**canvas-design** creates static visual art in PNG and PDF formats using design principles. This skill generates posters, artwork, and visual designs programmatically. It operates through seeded randomness, ensuring reproducible results.
+[**canvas-design** creates static visual art in PNG and PDF formats](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/). This skill generates posters, artwork, and visual designs programmatically. It operates through seeded randomness, ensuring reproducible results.
 
-**frontend-design** can generate CSS and HTML for visual layouts, though it produces code rather than rendered images.
+[**frontend-design** can generate CSS and HTML for visual layouts](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), though it produces code rather than rendered images.
 
 ### Example: Generating an Image with canvas-design
 

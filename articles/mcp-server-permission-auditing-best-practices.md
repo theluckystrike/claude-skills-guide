@@ -157,4 +157,11 @@ MCP server permission auditing is an ongoing process, not a one-time configurati
 
 Build audit frequency into your workflow—weekly checks take minutes but prevent major security incidents. Your future self will thank you.
 
+## Related Reading
+
+- [MCP Prompt Injection Attack Prevention Guide](/claude-skills-guide/articles/mcp-prompt-injection-attack-prevention-guide/)
+- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
