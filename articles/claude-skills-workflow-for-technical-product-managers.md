@@ -5,7 +5,7 @@ description: "A practical workflow guide for technical product managers using Cl
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, product-management, workflow, technical-pm]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 0
 ---

@@ -5,7 +5,7 @@ description: "A practical guide to implementing test-first development workflows
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, tdd, testing, development-workflow, best-practices]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

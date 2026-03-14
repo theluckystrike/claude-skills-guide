@@ -5,7 +5,7 @@ description: "A practical comparison of Claude Code and ChatGPT Code Interpreter
 date: 2026-03-14
 categories: [comparisons]
 tags: [claude-code, chatgpt, code-interpreter, comparison, ai-coding]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

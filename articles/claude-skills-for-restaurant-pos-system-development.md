@@ -5,7 +5,7 @@ description: "Practical guide to building restaurant POS systems using Claude Co
 date: 2026-03-14
 categories: [development, restaurant, pos]
 tags: [claude-code, claude-skills, restaurant-pos, automation, development]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

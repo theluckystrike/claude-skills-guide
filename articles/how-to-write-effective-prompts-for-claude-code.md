@@ -5,7 +5,7 @@ description: "Master the art of prompting Claude Code with concrete techniques: 
 date: 2026-03-14
 categories: [getting-started]
 tags: [claude-code, prompting, skill-writing, productivity]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

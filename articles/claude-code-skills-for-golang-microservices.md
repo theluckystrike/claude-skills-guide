@@ -5,7 +5,7 @@ description: "Use Claude Code skills for Golang microservices development. Pract
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, golang, microservices, go, api, backend, docker]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

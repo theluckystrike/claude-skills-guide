@@ -5,7 +5,7 @@ description: "Generate Portuguese documentation for your codebase using Claude C
 date: 2026-03-14
 categories: [workflows]
 tags: [claude-code, documentation, portuguese, localization, pdf, supermemory]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

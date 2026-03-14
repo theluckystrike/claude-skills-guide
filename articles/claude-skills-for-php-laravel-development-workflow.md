@@ -5,7 +5,7 @@ description: "Learn how to create Claude skills that accelerate your PHP Laravel
 date: 2026-03-14
 categories: [development, laravel, php]
 tags: [claude-skills, php, laravel, workflow, automation]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

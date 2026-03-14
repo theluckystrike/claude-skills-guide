@@ -5,7 +5,7 @@ description: "A practical guide to managing multilingual codebases with Claude C
 date: 2026-03-14
 categories: [claude-code, multilingual, i18n]
 tags: [claude-code, multilingual, codebase, i18n, localization, internationalization]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

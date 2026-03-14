@@ -5,7 +5,7 @@ description: "Discover Claude skills that automatically generate unit tests for 
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, unit-tests, testing, automation, tdd]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

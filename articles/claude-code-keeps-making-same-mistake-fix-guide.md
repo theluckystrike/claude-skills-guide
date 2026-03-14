@@ -5,7 +5,7 @@ description: "Practical solutions for recurring mistakes in Claude Code. Learn h
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, troubleshooting, error-fixing, debugging]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 5
 ---

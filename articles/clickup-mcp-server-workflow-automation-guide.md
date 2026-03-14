@@ -173,7 +173,7 @@ The combination of custom MCP servers with ClickUp's API creates endless automat
 ## Best Practices
 
 - **Use descriptive task names**: Makes searching and reporting easier
-- **Leverage templates**: Create task templates for recurring work types
+- **Use templates**: Create task templates for recurring work types
 - **Implement audit trails**: Use comments to track automation actions
 - **Monitor API usage**: ClickUp has rate limits; batch operations when possible
 - **Test in staging**: Verify workflows with a test workspace before production

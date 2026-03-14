@@ -5,7 +5,7 @@ description: "A practical guide to initializing Claude Code projects with proper
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, project-initialization, best-practices, setup]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 9
 ---

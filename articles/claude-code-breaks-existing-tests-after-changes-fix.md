@@ -5,7 +5,7 @@ description: "Practical solutions for developers when Claude Code modifications 
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, debugging, testing, fixes, development]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 0
 ---

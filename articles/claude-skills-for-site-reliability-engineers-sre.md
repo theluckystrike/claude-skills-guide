@@ -5,7 +5,7 @@ description: "Practical guide to Claude Code skills that help SREs automate inci
 date: 2026-03-14
 categories: [best-of]
 tags: [claude-code, claude-skills, sre, site-reliability-engineering, devops, monitoring]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

@@ -5,7 +5,7 @@ description: "Learn how to use Claude Code and its skills to automate migration 
 date: 2026-03-14
 categories: [workflows]
 tags: [claude-code, build-tools, ant, maven, gradle, migration, automation]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

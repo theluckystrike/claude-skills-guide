@@ -5,7 +5,7 @@ description: "A practical guide to using Claude Code skills for generating mock 
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, mock-data, fixtures, testing, development]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

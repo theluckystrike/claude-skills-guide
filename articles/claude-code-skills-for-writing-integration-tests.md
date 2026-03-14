@@ -5,7 +5,7 @@ description: "A practical guide to using Claude Code skills for writing integrat
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, integration-tests, testing, automation, development]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

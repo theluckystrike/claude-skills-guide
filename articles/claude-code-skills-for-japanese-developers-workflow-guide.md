@@ -5,7 +5,7 @@ description: "A practical workflow guide for Japanese developers using Claude Co
 date: 2026-03-14
 categories: [workflow, guides]
 tags: [claude-code, claude-skills, japanese-developers, workflow, tdd, pdf, supermemory]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

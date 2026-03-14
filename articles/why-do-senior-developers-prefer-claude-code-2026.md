@@ -5,7 +5,7 @@ description: "Senior developers increasingly choose Claude Code over other AI co
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, ai-coding, developer-tools, productivity, senior-developers]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

@@ -5,7 +5,7 @@ description: "Learn why large context windows cost more in Claude Code, how toke
 date: 2026-03-14
 categories: [cost-optimization, claude-code-basics]
 tags: [claude-code, context-window, tokens, pricing, cost-optimization]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

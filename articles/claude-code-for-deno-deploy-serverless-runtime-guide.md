@@ -5,7 +5,7 @@ description: "A practical guide to building serverless applications with Deno De
 date: 2026-03-14
 categories: [deno, serverless, claude-code]
 tags: [claude-code, deno-deploy, serverless, edge-computing, deno]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

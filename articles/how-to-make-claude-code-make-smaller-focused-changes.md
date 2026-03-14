@@ -43,7 +43,7 @@ Claude Code respects file boundaries when you explicitly reference them. When ma
 For even more precision, reference specific line numbers or code sections:
 > "Replace lines 45-52 in utils/date.js with a new implementation that handles timezone offsets."
 
-## Technique 3: Leverage Claude Skills for Change Management
+## Technique 3: Use Claude Skills for Change Management
 
 Claude Code's skills system allows you to configure default behaviors for how changes are generated. Creating a focused-change skill can automate smaller modifications across your workflow.
 
@@ -147,7 +147,7 @@ To verify you're getting smaller changes, track these metrics:
 
 ## Summary
 
-Getting Claude Code to make smaller, focused changes requires explicit scoping, strategic skill configuration, and deliberate prompt engineering. By using file-level references, creating focused-change skills, and requesting diff previews, you can maintain surgical precision in your codebase while leveraging AI assistance.
+Getting Claude Code to make smaller, focused changes requires explicit scoping, strategic skill configuration, and deliberate prompt engineering. By using file-level references, creating focused-change skills, and requesting diff previews, you can maintain surgical precision in your codebase with AI assistance.
 
 The key principle: tell Claude Code exactly what to change, where to change it, and explicitly what to leave untouched. This clarity produces the targeted modifications that production codebases require.
 

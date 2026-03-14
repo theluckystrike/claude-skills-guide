@@ -5,7 +5,7 @@ description: "Struggling with Claude Code generating wrong import statements? Th
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, troubleshooting, error-fix, imports]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 10
 ---

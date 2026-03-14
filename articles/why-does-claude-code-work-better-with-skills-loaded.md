@@ -5,7 +5,7 @@ description: "Discover how loading specialized skills transforms Claude Code fro
 date: 2026-03-14
 categories: [fundamentals]
 tags: [claude-code, claude-skills, productivity, workflow-optimization]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

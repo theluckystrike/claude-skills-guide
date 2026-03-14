@@ -202,7 +202,7 @@ export HTTPS_PROXY="http://proxy.company.com:8080"
 When integrating Jira with Claude Code, follow these guidelines:
 
 - **Use descriptive issue types**: Help Claude Code understand the context by specifying ticket types clearly
-- **Leverage JQL for complex queries**: The MCP server excels at translating natural language to JQL
+- **Use JQL for complex queries**: The MCP server excels at translating natural language to JQL
 - **Set up webhook integrations**: For real-time updates, configure Jira webhooks to trigger Claude Code actions
 - **Maintain audit trails**: Use Jira's comment feature to track automation actions taken by Claude Code
 

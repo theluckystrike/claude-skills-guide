@@ -5,7 +5,7 @@ description: "Learn how to automate Fly.io deployments using Claude Code. Stream
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, fly-io, deployment, devops, automation]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

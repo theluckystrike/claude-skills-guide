@@ -5,7 +5,7 @@ description: "Resolve when Claude Code ignores skill.md instructions: front matt
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, debugging, skill-md]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

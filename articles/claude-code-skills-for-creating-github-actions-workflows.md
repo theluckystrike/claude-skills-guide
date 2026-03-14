@@ -5,7 +5,7 @@ description: "Build Claude skills that generate, validate, and manage GitHub Act
 date: 2026-03-14
 categories: [workflows]
 tags: [claude-code, github-actions, cicd, automation, devops]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

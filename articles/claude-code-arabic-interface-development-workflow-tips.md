@@ -5,7 +5,7 @@ description: "Practical workflow tips for building Arabic RTL interfaces with Cl
 date: 2026-03-14
 categories: [workflows, internationalization]
 tags: [claude-code, claude-skills, arabic, rtl, i18n, frontend]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

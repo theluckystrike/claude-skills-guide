@@ -5,7 +5,7 @@ description: "Build specialized Claude Code skills for Solidity development. Lea
 date: 2026-03-14
 categories: [solidity, smart-contracts, ethereum]
 tags: [claude-code, solidity, ethereum, smart-contracts, blockchain]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---
