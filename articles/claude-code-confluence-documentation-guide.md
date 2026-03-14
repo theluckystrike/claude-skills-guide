@@ -1,165 +1,185 @@
 ---
 layout: default
 title: "Claude Code Confluence Documentation Guide"
-description: "Learn how to use Claude Code skills for Confluence documentation. Practical examples for developers and power users."
+description: "Learn how to integrate Claude Code with Confluence for automated documentation workflows. Practical examples for developers and power users."
 date: 2026-03-14
-categories: [integrations]
-tags: [claude-code, claude-skills, claude-code, confluence, documentation, automation, pdf, docx, supermemory]
-author: "Claude Skills Guide"
+categories: [integrations, workflows]
+tags: [claude-code, confluence, documentation, automation, pdf, docx, mcp]
+author: theluckystrike
 permalink: /claude-code-confluence-documentation-guide/
-reviewed: true
-score: 7
 ---
 
 # Claude Code Confluence Documentation Guide
 
-Confluence remains one of the most widely used enterprise documentation platforms, yet many developers struggle with maintaining up-to-date documentation there. The disconnect between code changes and Confluence updates creates drift that erodes trust in documentation over time. This guide shows how Claude Code skills bridge that gap, enabling developers to push documentation directly to Confluence from their development workflow without leaving the terminal.
-
-## The Problem with Manual Confluence Updates
-
-Traditional Confluence documentation workflows suffer from three recurring issues. First, context switching breaks momentum — developers write code in their editor, then must open a browser, navigate Confluence, find the right page, and manually copy-paste updates. Second, version control and documentation live in separate systems, making it impossible to track when specific changes were documented. Third, technical writers and developers work in silos, with no automated way to sync code-level changes toConfluence pages.
-
-Claude Code skills solve this by treating Confluence as a publish target rather than a separate workflow. You write documentation in Markdown, use skills to transform it into Confluence storage format, and push updates directly through the Confluence REST API. The entire process happens from your terminal.
+Confluence remains a cornerstone for team documentation in enterprise environments. Integrating Claude Code with your Confluence workspace transforms static wiki pages into dynamic, code-generated content that stays current with your codebase. This guide shows developers and power users how to build that integration from the ground up.
 
 ## Prerequisites
 
-Before setting up the workflow, ensure you have the following:
+Before you begin, ensure you have the following:
 
-- Claude Code installed and configured
-- A Confluence Cloud or Server instance with API access
-- Your Confluence credentials stored securely (use environment variables)
-- The `docx` skill for working with Word-compatible formats
-- The `pdf` skill if you need to attach PDF versions to pages
+- Claude Code installed on your local machine
+- Confluence Cloud or Server access with API token
+- The `pdf` skill for generating formatted documentation
+- The `docx` skill for Word document exports
+- Basic familiarity with REST APIs and environment variables
 
-You will also need a Personal Access Token from Confluence. Generate this in your Confluence settings under "API Tokens" — this replaces your password for API calls.
+You do not need administrator-level Confluence access to get started. A user account with page creation permissions suffices for the workflows described here.
 
-## Setting Up the Confluence Connection
+## Setting Up the Confluence API Connection
 
-Create a Claude skill that handles the Confluence API communication. First, set up your environment variables:
+The first step involves configuring Claude Code to communicate with your Confluence instance. You need your Confluence domain, email, and an API token.
+
+Create a local configuration file to store these credentials securely:
 
 ```bash
+# Store these in your shell environment or a .env file
 export CONFLUENCE_DOMAIN="your-company.atlassian.net"
-export CONFLUENCE_EMAIL="your-email@company.com"
-export CONFLUENCE_API_TOKEN="your-personal-access-token"
+export CONFLUENCE_EMAIL="your.email@company.com"
+export CONFLUENCE_API_TOKEN="your-api-token-here"
 ```
 
-The skill then uses these variables to authenticate against the Confluence REST API. The core function handles three operations: retrieving page content, updating existing pages, and creating new pages.
+Never commit API tokens to version control. Use environment variables or a secrets manager instead.
 
-## Converting Markdown to Confluence Storage Format
+## Using the MCP Protocol for Confluence Integration
 
-Confluence does not accept raw Markdown — it uses a proprietary XML-based storage format. The conversion step is critical. Claude Code can handle this through a dedicated skill or inline prompt.
+Model Context Protocol (MCP) servers extend Claude Code capabilities. While Atlassian does not provide an official MCP server for Confluence, you can build a custom integration using the `mcp-builder` skill or connect via existing HTTP-based tools.
 
-A typical conversion prompt in Claude looks like this:
+For teams using the Atlassian REST API directly, a simple Node.js wrapper handles authentication and page operations:
 
-```
-Convert the following Markdown to Confluence storage format.
-Preserve all heading levels, code blocks, tables, and links.
-Use proper Confluence macros where applicable:
+```javascript
+const axios = require('axios');
 
-[Your Markdown content here]
-```
+class ConfluenceClient {
+  constructor(domain, email, token) {
+    this.client = axios.create({
+      baseURL: `https://${domain}/wiki/rest/api`,
+      auth: { username: email, password: token },
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
 
-For code blocks specifically, wrap them in the Confluence `code` macro:
+  async createPage(space, title, content) {
+    return this.client.post('/content', {
+      type: 'page',
+      title,
+      space: { key: space },
+      body: { storage: { value: content, representation: 'storage' } }
+    });
+  }
 
-```xml
-<ac:code>
-    <ac:plain-text-body>%your-code-here%</ac:plain-text-body>
-</ac:code>
-```
-
-Tables require similar transformation, converting Markdown table syntax to Confluence's `table`, `row`, and `cell` macros.
-
-## Automating Documentation Sync
-
-The real power emerges when you automate the sync process. Set up a Claude skill that runs as part of your development workflow. When you commit code changes, the skill can:
-
-1. Parse the diff to identify what changed
-2. Generate relevant documentation updates based on the changes
-3. Convert the updates to Confluence format
-4. Push the updates to the appropriate Confluence pages
-
-Here is a simplified example of what the skill command looks like:
-
-```
-Sync documentation to Confluence for the files changed in this commit.
-Use the docx skill to generate a changelog, then push to Confluence.
-```
-
-The skill reads your commit history, identifies files with corresponding documentation pages, and updates those pages automatically.
-
-## Practical Example: API Documentation Sync
-
-Consider a scenario where your team maintains API documentation in Confluence. When you update an endpoint in your codebase, the documentation should reflect that change without manual intervention.
-
-Set up a convention: each API endpoint file has a corresponding Confluence page ID stored in a mapping file. When Claude Code processes your code changes, it reads the mapping, generates updated documentation, and pushes to Confluence.
-
-The mapping file (`docs/confluence-mapping.json`) might look like:
-
-```json
-{
-  "src/api/users.js": {
-    "confluence_page_id": "123456789",
-    "section": "User Management"
-  },
-  "src/api/orders.js": {
-    "confluence_page_id": "987654321",
-    "section": "Order Processing"
+  async updatePage(pageId, content, version) {
+    return this.client.put(`/content/${pageId}`, {
+      id: pageId,
+      type: 'page',
+      body: { storage: { value: content, representation: 'storage' } },
+      version: { number: version + 1 }
+    });
   }
 }
 ```
 
-Your Claude skill then reads this mapping, generates appropriate documentation for each changed file, and calls the Confluence API to update the corresponding pages.
+This client forms the foundation for automated documentation pushes from Claude Code.
 
-## Handling Page Hierarchies
+## Generating Technical Documentation with Claude Skills
 
-Confluence pages exist in hierarchies, and your documentation likely mirrors this structure. The `supermemory` skill proves valuable here — it maintains context across Claude Code sessions, remembering your Confluence space structure and page relationships.
+With the connection established, leverage Claude skills to generate the actual documentation content. The `pdf` skill excels at creating formatted technical documents from code analysis. The `docx` skill generates Microsoft Word-compatible output that Confluence imports cleanly.
 
-When creating new documentation, prompt Claude to check the existing hierarchy first:
+For API documentation specifically, ask Claude Code to analyze your codebase:
 
 ```
-Check the Confluence space structure under 'Project Documentation'.
-Find the appropriate parent page for new API documentation about /billing.
-Create the new page under the correct parent if it does not exist.
+Analyze the /src/api directory and generate:
+- Endpoint summaries with HTTP methods
+- Request/response parameter tables
+- Authentication requirements
+- Example cURL commands for each endpoint
 ```
 
-This prevents documentation from ending up in the wrong location and keeps your Confluence organized.
+Claude Code scans your code, extracts docstrings and type annotations, and produces structured output you can pipe directly to Confluence.
 
-## PDF Generation for Attachments
+## Automating the Documentation Pipeline
 
-Sometimes stakeholders need offline documentation. The `pdf` skill works alongside your Confluence workflow to generate PDF versions of documentation. You can then attach these PDFs to Confluence pages automatically.
+Manual documentation updates fail because they require deliberate action. Automate the pipeline so documentation regenerates when your code changes.
 
-The workflow becomes: generate Markdown documentation, convert to Confluence format, push to Confluence, then generate PDF and attach it as a versioned artifact. This ensures the PDF always matches the online version.
+A practical approach uses a Git hook or CI trigger:
 
-## Error Handling and Validation
+```bash
+# In your project's .git/hooks/post-commit
+#!/bin/bash
+cd /path/to/your/project
+claude --print "Generate API documentation for the /src/api directory in markdown format" > /tmp/api-docs.md
+node /path/to/confluence-push.js --title "API Documentation" --file /tmp/api-docs.md
+```
 
-API calls to Confluence can fail — network issues, permission problems, or conflicts with concurrent edits. Build retry logic into your skill:
+This script runs after every commit, analyzing your API code and pushing fresh documentation to Confluence. The `supermemory` skill complements this workflow by remembering your documentation preferences across sessions—output format, Confluence space, and page IDs.
 
-- Check the `ETag` header on page retrieval
-- Use conditional updates that fail gracefully if the page changed since you last read it
-- Log all API responses for debugging
+## Handling Different Content Types
 
-Claude Code skills handle this through standard error handling in whatever language you write the skill in, typically JavaScript or Python.
+Technical documentation varies widely. Adapt your approach based on content type:
 
-## Security Considerations
+**Architecture Decision Records (ADRs):** Use Claude Code to draft ADRs from discussion summaries. Provide context about the decision, alternatives considered, and consequences. The `docx` skill formats these for Confluence storage format.
 
-Never commit API tokens to your repository. Use environment variables or a secrets manager. If multiple team members need Confluence access, create service accounts rather than using personal credentials — this maintains audit trails and prevents access issues when team members leave.
+**Runbooks and Incident Response:** The `tdd` skill helps structure runbook content with clear step sequences. For on-call documentation, include exact commands and expected outputs.
 
-The Confluence API also supports OAuth 2.0 if your Atlassian instance has SSO configured. This is the preferred approach for production deployments.
+**Release Notes:** After each deployment, prompt Claude Code with git log output:
 
-## Next Steps
+```
+Generate release notes from this git log:
+[insert git log output here]
 
-Start small: pick one Confluence page that documents a frequently-changed part of your codebase. Set up the manual workflow first — write Markdown, convert it, push it to Confluence. Once that works reliably, layer in automation incrementally.
+Format as Confluence-compatible HTML with:
+- New features (green highlight)
+- Bug fixes (yellow highlight)  
+- Breaking changes (red highlight)
+```
 
-The `tdd` skill pairs well with this workflow if you want to test your documentation generation. Write tests that verify the Confluence storage format output matches expected templates before pushing updates.
+## Managing Page Versions and Conflicts
 
-With the foundation in place, your Confluence documentation becomes a natural byproduct of development rather than a separate maintenance burden. Developers write docs because the process fits naturally into their existing workflow — no browser tabs required.
+Confluence tracks page versions. When automating documentation updates, increment the version number correctly or your updates fail.
 
+The API client shown earlier handles this by fetching the current version, adding one, and sending it with the update request. Implement conflict detection for teams editing documentation manually:
 
-## Related Reading
+```javascript
+async function safeUpdate(client, pageId, newContent) {
+  const current = await client.getPage(pageId);
+  const currentVersion = current.version.number;
+  
+  // Add a check: has content changed significantly?
+  if (current.body.storage.value === newContent) {
+    console.log("No changes detected, skipping update");
+    return;
+  }
+  
+  return client.updatePage(pageId, newContent, currentVersion);
+}
+```
 
-- [What Is the Best Claude Skill for Generating Documentation?](/claude-skills-guide/what-is-the-best-claude-skill-for-generating-documentation/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
+This prevents overwriting manual edits made between your automated pushes.
+
+## Best Practices for Claude-Confluence Workflows
+
+Keep your documentation maintainable by following these principles:
+
+**Use a dedicated Confluence space** for automated documentation. This isolates machine-generated content from human-edited pages and simplifies permissions.
+
+**Include source code references.** Every documented endpoint should link back to the actual source file. Confluence's macro system supports this with relative links.
+
+**Version control your documentation source.** Store the markdown or code that generates documentation in your repo. This gives you rollback capability and an audit trail.
+
+**Test output before pushing.** Run the documentation generator locally first. Review the output in a text editor, then push to Confluence only after verification.
+
+## Extending the Integration
+
+Once the basic pipeline works, expand capabilities:
+
+- Use the `slack-gif-creator` skill to generate visual aids for documentation
+- Integrate with the `canvas-design` skill for architecture diagrams
+- Pull user manuals from `pdf` exports of your application's help system
+- Use `webapp-testing` to verify documentation links work before pushing
+
+The `algorithmic-art` skill even generates custom diagrams for technical content when existing tools fall short.
+
+---
+
+Claude Code paired with Confluence closes the documentation gap that plagues most development teams. Start with a single automated page, measure the time saved, and expand the pipeline incrementally. Your future self debugging production issues at 2 AM will thank you for documentation that actually matches the code.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
