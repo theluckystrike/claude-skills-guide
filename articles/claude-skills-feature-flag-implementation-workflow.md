@@ -12,7 +12,7 @@ score: 7
 
 # Claude Skills Feature Flag Implementation Workflow
 
-Feature flags provide a powerful mechanism for controlling feature availability in Claude skills without deploying new code. This guide shows you how to implement a feature flag system that enables gradual rollouts, A/B testing, and kill switches for your custom skills.
+Feature flags provide a powerful mechanism for controlling feature availability in Claude skills without deploying new code. This guide shows you how to implement a feature flag system that enables gradual rollouts, A/B testing, and kill switches for your [custom skills](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/).
 
 ## Why Feature Flags Matter in Claude Skills
 
@@ -115,7 +115,7 @@ Always mention in your response which engine was used and the flag evaluation re
 
 ## Controlled Rollout Workflow
 
-Executing a controlled rollout follows a predictable pattern. Start by enabling the flag for your internal team through the whitelist:
+Executing a controlled rollout follows a predictable pattern. For version control and safe deployment of skills, see [Claude Skill Versioning: Semver Best Practices](/claude-skills-guide/articles/claude-skill-versioning-semver-best-practices/). Start by enabling the flag for your internal team through the whitelist:
 
 ```json
 "new-analysis-engine": {
@@ -207,6 +207,13 @@ Your skill code should check for emergency disable and log prominently when trig
 
 Feature flags transform how you develop and ship Claude skills. By implementing this workflow, you gain fine-grained control over feature availability, reduce deployment risk, and enable rapid iteration. Start with simple kill switches, gradually adopt percentage rollouts, and build toward sophisticated A/B testing as your skill portfolio matures.
 
-The key is consistency: check flags consistently, log evaluations thoroughly, and maintain your configuration as version-controlled infrastructure. This discipline pays dividends as your skill ecosystem grows.
+The key is consistency: check flags consistently, log evaluations thoroughly, and maintain your configuration as version-controlled infrastructure. This discipline pays dividends as your skill ecosystem grows. Explore related workflows at the [workflows hub](/claude-skills-guide/workflows-hub/).
+
+## Related Reading
+
+- [Claude Skill Versioning: Semver Best Practices](/claude-skills-guide/articles/claude-skill-versioning-semver-best-practices/) — version control strategies for skill releases
+- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — create the custom skills that feature flags control
+- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-guide/articles/claude-skills-change-management-rolling-out-to-teams/) — gradual rollout strategies for team-wide skill adoption
+- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) — production considerations for skill deployment
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

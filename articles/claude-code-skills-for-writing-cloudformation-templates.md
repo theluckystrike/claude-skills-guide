@@ -12,11 +12,11 @@ score: 8
 
 # Claude Code Skills for Writing CloudFormation Templates
 
-Writing AWS CloudFormation templates manually requires deep knowledge of AWS resource properties, intrinsic functions, and template anatomy. Claude Code skills transform this process by providing specialized prompts, validation rules, and generation workflows that accelerate infrastructure-as-code development. This guide covers practical approaches for using Claude Code skills to write, validate, and optimize CloudFormation templates.
+Writing AWS CloudFormation templates manually requires deep knowledge of AWS resource properties, intrinsic functions, and template anatomy. Claude Code skills transform this process by providing specialized prompts, validation rules, and generation workflows that accelerate infrastructure-as-code development. This guide covers practical approaches for using Claude Code skills to write, validate, and optimize CloudFormation templates. For broader IaC approaches, see [Claude Code Skills for Terraform IaC](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/).
 
 ## Setting Up CloudFormation Skills
 
-Before writing templates, ensure Claude Code can access CloudFormation documentation. Create a skill that loads AWS CloudFormation resource reference material:
+Before writing templates, ensure Claude Code can access CloudFormation documentation. Create a [skill using the standard .md format](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) that loads AWS CloudFormation resource reference material:
 
 ```yaml
 # cloudformation-base.skill.md
@@ -209,7 +209,7 @@ Claude Code generates these CloudFormation primitives accurately, ensuring condi
 
 ## Generating IAM Roles and Policies
 
-IAM resources require precise policy documents. Prompt Claude Code with the required permissions:
+IAM resources require precise policy documents. This connects naturally to [Claude Code permissions model best practices](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/). Prompt Claude Code with the required permissions:
 
 > "Create an IAM role for an ECS task that can read from S3 buckets starting with 'app-data-' and write to CloudWatch Logs"
 
@@ -265,7 +265,7 @@ The generated policies follow least-privilege principles by specifying exact act
 
 ## Practical Workflow Integration
 
-Integrate CloudFormation skills into your daily development workflow:
+Integrate CloudFormation skills into your daily development workflow using the [use-cases hub](/claude-skills-guide/use-cases-hub/) for related patterns:
 
 1. **Describe requirements**: Start with natural language describing your infrastructure needs
 2. **Iterate refinement**: Ask Claude Code to add parameters, conditions, or nested stacks
@@ -276,5 +276,12 @@ Integrate CloudFormation skills into your daily development workflow:
 This workflow reduces template writing time significantly while maintaining correctness through automated validation.
 
 Claude Code skills for CloudFormation provide substantial value for teams managing AWS infrastructure. By loading documentation context, generating accurate resource definitions, and validating templates automatically, these skills transform CloudFormation development from a error-prone manual process into an efficient collaborative workflow.
+
+## Related Reading
+
+- [Claude Code Skills for Terraform IaC](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) — extend your IaC skills beyond CloudFormation to Terraform
+- [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/articles/claude-code-gcp-google-cloud-setup-and-deployment-guide/) — apply similar approaches to multi-cloud infrastructure
+- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) — automate CloudFormation deployments via CI/CD pipelines
+- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-skills-guide/articles/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — deploy containerized apps on top of your CloudFormation stacks
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

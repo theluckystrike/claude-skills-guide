@@ -12,7 +12,7 @@ score: 7
 
 # Claude Code Translate Code Comments Between Languages
 
-When you inherit a codebase written in a language you don't fully understand, code comments become your lifeline. But what happens when those comments are in a language you cannot read? This is a common scenario in global development teams, open-source projects with international contributors, and legacy systems maintained across generations of developers.
+When you inherit a codebase written in a language you don't fully understand, code comments become your lifeline. But what happens when those comments are in a language you cannot read? This is a common scenario in global development teams, open-source projects with international contributors, and legacy systems maintained across generations of developers. For localization automation workflows, see [Claude Skills for Localization i18n Workflow Automation](/claude-skills-guide/articles/claude-skills-for-localization-i18n-workflow-automation/).
 
 Claude Code provides several approaches to translate code comments between languages. This guide covers practical methods ranging from simple one-off translations to systematic translation workflows.
 
@@ -111,7 +111,7 @@ def calculate_metrics(data: list[float]) -> dict:
 
 ## Combining with Other Claude Skills
 
-The translation workflow becomes more powerful when combined with other Claude skills.
+The translation workflow becomes more powerful when combined with [other Claude skills](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/).
 
 ### Pair with the `docx` Skill for Documentation
 
@@ -237,5 +237,12 @@ Translating code comments with Claude Code transforms unreadable code into maint
 For quick translations, direct interaction works best. For ongoing projects, create dedicated skills and consider hook automation. Combine with other skills like `docx`, `pdf`, and `frontend-design` for comprehensive documentation workflows.
 
 Start with a single file to establish your translation pattern, then scale to entire codebases. The key is consistency—establish conventions for technical terms, maintain comment positions, and flag ambiguous translations for human review.
+
+## Related Reading
+
+- [Claude Skills for Localization i18n Workflow Automation](/claude-skills-guide/articles/claude-skills-for-localization-i18n-workflow-automation/) — automate i18n workflows across your codebase
+- [How Do I Combine Two Claude Skills in One Workflow](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/) — chain translation with documentation and design skills
+- [Claude Code Multilingual Codebase Management Guide](/claude-skills-guide/articles/claude-code-multilingual-codebase-management-guide/) — broader strategies for managing multilingual projects
+- [Claude Code Hooks System: Complete Guide](/claude-skills-guide/articles/understanding-claude-code-hooks-system-complete-guide/) — automate comment translation using pre-commit hooks
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

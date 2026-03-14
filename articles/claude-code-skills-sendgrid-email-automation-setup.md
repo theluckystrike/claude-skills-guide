@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills SendGrid Email Automation Setup
 
-Email automation is a fundamental requirement for modern applications. Whether you need to send welcome emails, order confirmations, password resets, or scheduled newsletters, integrating a reliable email service with your development workflow saves hours of manual work. SendGrid is one of the most widely used email delivery services, and when combined with Claude Code skills, it becomes a powerful automation tool that developers can invoke on demand.
+Email automation is a fundamental requirement for modern applications. Whether you need to send welcome emails, order confirmations, password resets, or scheduled newsletters, integrating a reliable email service with your development workflow saves hours of manual work. SendGrid is one of the most widely used email delivery services, and when combined with [Claude Code skills](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), it becomes a powerful automation tool that developers can invoke on demand. For a broader view of external integrations, visit the [integrations hub](/claude-skills-guide/integrations-hub/).
 
 This guide walks you through setting up SendGrid email automation using custom Claude skills. You will learn how to create skills that authenticate with SendGrid, send different types of emails, manage templates, and handle common automation scenarios without leaving your Claude Code session.
 
@@ -228,7 +228,7 @@ With the skill in place, you can now handle several common automation scenarios.
 
 For order confirmations, build a workflow that receives order details and sends a formatted confirmation email with order number, items, and estimated delivery date. The skill can format this data into HTML and send via SendGrid.
 
-For scheduled digests, consider combining this skill with a cron job or another Claude skill that handles scheduling. The email skill handles the sending portion while the scheduler triggers it at appropriate intervals.
+For scheduled digests, consider combining this skill with a cron job or another Claude skill that handles scheduling — learn more in the [Claude Skills automated social media content workflow](/claude-skills-guide/articles/claude-skills-automated-social-media-content-workflow/) guide for similar scheduled automation patterns. The email skill handles the sending portion while the scheduler triggers it at appropriate intervals.
 
 ## Testing Your Setup
 
@@ -247,8 +247,15 @@ Check your inbox and the SendGrid dashboard for delivery status. Once confirmed 
 
 ## Security Considerations
 
-Never commit API keys to version control. Use environment variables or a secrets management system. For production deployments, restrict the API key to only necessary permissions. Rotate keys periodically and monitor usage for anomalies.
+Never commit API keys to version control. Use [environment variables for Claude skills](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-a-claude-skill/) or a secrets management system. For production deployments, restrict the API key to only necessary permissions. Rotate keys periodically and monitor usage for anomalies.
 
 When handling recipient data, comply with relevant regulations including GDPR and CAN-SPAM. Provide unsubscribe mechanisms in commercial emails and honor opt-out requests promptly.
+
+## Related Reading
+
+- [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/articles/how-to-connect-claude-skills-to-external-apis-guide/) — core patterns for authenticating and calling third-party services from skills
+- [Claude Code Skills + Zapier: Step-by-Step](/claude-skills-guide/articles/claude-code-skills-zapier-integration-step-by-step/) — connect email workflows to hundreds of other services via Zapier
+- [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-guide/articles/claude-skills-with-slack-bot-integration-tutorial/) — complement email notifications with Slack messaging
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) — protect your SendGrid API keys from accidental exposure
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
