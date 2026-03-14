@@ -1,206 +1,233 @@
 ---
 layout: default
 title: "Claude Code Developer Portal Setup Guide"
-description: "A practical guide to setting up Claude Code developer portals. Learn to configure skills, build internal documentation, and optimize your AI-assisted workflow."
+description: "A practical guide to building a developer portal for Claude Code skills, with Jekyll setup, skill documentation structure, and automation tips."
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, developer-portal, setup-guide, ai-coding, workflow]
 author: theluckystrike
 permalink: /claude-code-developer-portal-setup-guide/
 ---
 
+{% raw %}
 # Claude Code Developer Portal Setup Guide
 
-Setting up a developer portal for Claude Code helps teams standardize AI-assisted workflows, share custom skills, and maintain consistent coding practices across projects. This guide walks through the essential steps to build a functional developer portal that your team can actually use.
+Developer portals serve as the central hub for organizing, documenting, and distributing Claude skills across teams. This guide walks you through building a functional developer portal from scratch using Jekyll, with practical patterns for skill documentation, search optimization, and maintenance workflows.
 
-## What Is a Claude Code Developer Portal
+## Why Build a Developer Portal for Claude Skills
 
-A developer portal in this context serves as a centralized hub where your team stores, documents, and shares custom Claude skills, workflow patterns, and coding conventions. Rather than each developer maintaining their own skill configurations, a portal ensures everyone works from the same foundation.
+As your collection of Claude skills grows, finding the right skill for a specific task becomes increasingly difficult. A dedicated developer portal solves this problem by providing a searchable, organized interface for your skill library. Beyond discovery, a portal enables version tracking, usage analytics, and team collaboration around skill development.
 
-The portal typically includes your custom skill files, usage documentation, examples, and best practices specific to your organization's codebase. Many teams also integrate their portal with existing documentation tools or wikis.
+Many teams start with simple markdown files scattered across repositories. This approach works initially but becomes unwieldy as the skill count increases. A structured portal with consistent metadata, search capabilities, and categorization transforms your skill library into a professional knowledge base.
 
-## Directory Structure and Initial Setup
+## Setting Up Your Jekyll Foundation
 
-The first step involves creating a proper directory structure for your portal. Claude Code reads skills from `~/.claude/skills/` by default, but for a team portal you'll want a separate repository that can be cloned to each developer's machine.
+Jekyll remains a popular choice for developer portals due to its simplicity, GitHub Pages integration, and flexible templating system. Start by initializing a new Jekyll site:
 
-Create this structure:
-
-```
-claude-developer-portal/
-├── skills/
-│   ├── frontend-design.md
-│   ├── backend-api.md
-│   ├── tdd.md
-│   ├── pdf.md
-│   └── supermemory.md
-├── docs/
-│   ├── getting-started.md
-│   ├── skill-usage.md
-│   └── examples/
-├── templates/
-│   └── project-conventions.md
-└── README.md
+```bash
+gem install jekyll bundler
+jekyll new claude-skills-portal
+cd claude-skills-portal
 ```
 
-The `skills/` directory contains your skill definition files in the Markdown format Claude Code expects. Each skill is a plain Markdown file with structured sections that Claude reads when you invoke the skill.
+Configure your `_config.yml` with the necessary collections for skills:
 
-## Creating Your First Skill File
+```yaml
+collections:
+  skills:
+    output: true
+    permalink: /skills/:name/
 
-A basic skill file follows a specific format that Claude Code recognizes. Here's a working example:
+defaults:
+  - scope:
+      path: "_skills"
+      type: skills
+    values:
+      layout: skill
+      published: true
+```
+
+Create the skills collection directory and add your first skill document. Each skill file lives in `_skills/` with front matter that describes its capabilities, usage patterns, and dependencies.
+
+## Structuring Skill Documentation
+
+Consistent documentation structure helps users quickly understand each skill's purpose and implementation. Define a standard template that every skill follows:
 
 ```markdown
 ---
 name: frontend-design
-description: Guidelines for building consistent frontend components
+description: "Generate frontend code with modern frameworks and responsive layouts"
+tools: [read_file, write_file, bash]
+version: 1.2.0
+author: your-team
+tags: [frontend, ui, code-generation]
 ---
 
 # Frontend Design Skill
 
-You help developers create consistent, accessible frontend components following our design system.
+## Overview
+This skill accelerates frontend development by generating component code based on descriptions.
 
-## Guidelines
+## Prerequisites
+- Node.js 18 or higher
+- Access to project directory structure
 
-- Use semantic HTML elements
-- Follow BEM naming convention for CSS classes
-- Implement responsive layouts using our grid system
+## Usage Example
 
-## Component Structure
+Provide a clear example showing how to invoke the skill:
 
-When creating components, use this template:
+```
+Claude, use the frontend-design skill to create a responsive navigation component
+```
 
-```jsx
-function ComponentName({ props }) {
-  return (
-    <div className="component-name">
-      {/* component content */}
-    </div>
+## Configuration Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| framework | string | "react" | Target framework |
+| styling | string | "tailwind" | CSS approach |
+| typescript | boolean | true | Enable TypeScript |
+```
+
+This structure ensures every skill document contains the same essential information, making your portal consistent and navigable.
+
+## Implementing Search Functionality
+
+Search is critical for portals with many skills. Jekyll offers several approaches, from simple client-side solutions to full-text search engines. For most use cases, a lightweight JavaScript-based search suffices:
+
+```javascript
+// assets/js/search.js
+const skills = [
+  {% for skill in site.skills %}
+  {
+    title: "{{ skill.name }}",
+    description: "{{ skill.description }}",
+    tags: {{ skill.tags | jsonify }},
+    url: "{{ skill.url }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
+
+function searchSkills(query) {
+  const results = skills.filter(skill => 
+    skill.title.toLowerCase().includes(query.toLowerCase()) ||
+    skill.description.toLowerCase().includes(query.toLowerCase())
   );
+  displayResults(results);
 }
 ```
 
-## Code Review Checks
+Integrate this script into your search page and results display. The approach iterates through your skills collection and filters based on the search query, providing instant results without server-side processing.
 
-After writing component code, verify:
-1. Accessibility attributes are present
-2. Props are properly typed
-3. Styles follow our naming conventions
+## Automating Skill Discovery with MCP
+
+Model Context Protocol (MCP) servers extend your portal's capabilities by enabling dynamic skill discovery. Configure an MCP server that indexes your skills and exposes them to Claude Code:
+
+```python
+# mcp-skill-registry/server.py
+from mcp.server import Server
+from mcp.types import Tool, TextContent
+import json
+
+server = Server("skill-registry")
+
+@server.list_tools()
+async def list_skills():
+    with open('_skills/*.md') as files:
+        skills = []
+        for f in files:
+            frontmatter = parse_frontmatter(f.read())
+            skills.append(Tool(
+                name=f"skill_{frontmatter['name']}",
+                description=frontmatter['description'],
+                inputSchema={}
+            ))
+    return skills
+
+@server.call_tool()
+async def call_tool(name: str, arguments: dict):
+    skill_name = name.replace('skill_', '')
+    return [TextContent(type="text", text=f"Redirecting to skill: {skill_name}")]
 ```
 
-Save this file to `skills/frontend-design.md`. The front matter provides metadata, and the content defines the instructions Claude follows when using the skill.
+This MCP server reads your skill files and exposes them as callable tools within Claude Code, creating a seamless bridge between your portal and the AI assistant.
 
-## Installing and Using Skills
+## Organizing Skills by Domain
 
-Once your portal structure is in place, developers install skills by copying them to their local Claude skills directory. The simplest approach uses a symlink or direct copy:
+Grouping skills by functional domain improves discoverability and helps users find relevant tools quickly. Common categories include:
 
-```bash
-# Option 1: Symlink from portal to Claude skills directory
-ln -s ~/projects/claude-developer-portal/skills/frontend-design.md \
-  ~/.claude/skills/frontend-design.md
+- **Code Generation**: Skills like `frontend-design`, `backend-scaffold`, and `api-client` that generate code from specifications
+- **Testing**: The `tdd` skill and similar testing-focused tools that create test suites
+- **Documentation**: Skills such as `pdf` for generating documentation, `docx` for technical specs
+- **Data Processing**: Skills for working with `xlsx`, CSV, and database operations
+- **Memory and Context**: Skills like `supermemory` for maintaining conversation context
 
-# Option 2: Copy all skills
-cp -r ~/projects/claude-developer-portal/skills/* ~/.claude/skills/
+Create category pages that aggregate skills by domain:
+
+```liquid
+{% for tag in site.tags %}
+## {{ tag[0] }}
+<ul>
+{% for post in tag[1] %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+{% endfor %}
 ```
 
-After installation, invoke skills in Claude Code using the `/` prefix:
+## Adding Version Tracking
 
-```
-/frontend-design
-```
+Skill versions matter as your team updates capabilities and fixes bugs. Implement version tracking in your front matter and display it prominently:
 
-The skill activates and applies its guidelines to your current conversation context. Developers can combine multiple skills by invoking them sequentially.
-
-## Integrating Additional Claude Skills
-
-Your portal can leverage community-built skills alongside custom ones. The [supermemory](/) skill, for example, helps maintain context across long conversations and projects. Integrate it by adding it to your skills directory:
-
-```bash
-curl -o ~/.claude/skills/supermemory.md \
-  https://raw.githubusercontent.com/your-org/claude-skills/main/supermemory.md
-```
-
-Similarly, the [tdd](/) skill provides test-driven development workflows, and the [pdf](/) skill handles PDF generation and manipulation tasks. Document which skills your team uses in your portal's main README.
-
-## Building Documentation Pages
-
-Your portal should include practical documentation beyond just skill files. Create a `docs/` section with usage guides:
-
-```markdown
-# Getting Started with Our Claude Setup
-
-## Prerequisites
-
-- Claude Code installed (version 1.0 or later)
-- Access to this portal repository
-- Git configured with your team credentials
-
-## Initial Setup
-
-1. Clone this repository to your local machine
-2. Run the setup script: `./scripts/install-skills.sh`
-3. Verify installation by typing `/help` in Claude Code
-
-## Available Skills
-
-| Skill | Purpose | Use Case |
-|-------|---------|----------|
-| frontend-design | Frontend component guidelines | Building UI components |
-| tdd | Test-driven development | Writing tests first |
-| pdf | PDF manipulation | Generating reports |
-| backend-api | API design patterns | Creating REST endpoints |
-```
-
-This documentation helps new team members get started quickly and serves as a reference for existing developers.
-
-## Maintaining and Updating Skills
-
-A developer portal only works when it stays current. Establish a review process for skill updates:
-
-1. **Version control**: Track changes to skill files in git
-2. **Changelog**: Maintain a change log for each skill
-3. **Testing**: Verify skill behavior after updates
-4. **Notifications**: Alert team members when skills change
-
-When updating a skill, increment the version in the front matter and document what changed:
-
-```markdown
+```yaml
 ---
-name: frontend-design
-version: 1.2.0
-description: Guidelines for building consistent frontend components
-last_updated: 2026-03-14
+name: pdf
+description: "Create and manipulate PDF documents"
+version: 2.1.0
+changelog:
+  - version: 2.1.0
+    date: 2026-03-10
+    changes: ["Added form filling support", "Improved table extraction"]
+  - version: 2.0.0
+    date: 2026-02-15
+    changes: ["Complete rewrite", "New MCP integration"]
 ---
 ```
 
-## Automating Portal Sync
+Display the changelog on each skill page so users understand what changed and whether they should upgrade.
 
-For larger teams, automate skill synchronization using a simple script:
+## Deployment and Maintenance
+
+Deploy your portal to GitHub Pages for free hosting with automatic SSL:
 
 ```bash
-#!/bin/bash
-# sync-skills.sh - Sync portal skills to local Claude installation
-
-PORTAL_DIR="$HOME/projects/claude-developer-portal/skills"
-SKILLS_DIR="$HOME/.claude/skills"
-
-echo "Syncing skills from $PORTAL_DIR..."
-
-for skill_file in "$PORTAL_DIR"/*.md; do
-  if [ -f "$skill_file" ]; then
-    filename=$(basename "$skill_file")
-    cp "$skill_file" "$SKILLS_DIR/$filename"
-    echo "  Updated: $filename"
-  fi
-done
-
-echo "Sync complete. Run /help in Claude Code to verify."
+git add .
+git commit -m "Add developer portal"
+git push origin gh-pages
 ```
 
-Add this script to your portal repository and run it whenever skills are updated.
+Set up a GitHub Actions workflow to validate skill documents automatically:
+
+```yaml
+name: Validate Skills
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check front matter
+        run: |
+          for f in _skills/*.md; do
+            grep -q "^---$" "$f" || { echo "Missing front matter: $f"; exit 1; }
+          done
+```
+
+This workflow catches missing front matter, broken links, and other issues before they reach production.
 
 ## Conclusion
 
-A well-structured developer portal transforms how your team uses Claude Code. By organizing skills, documenting usage patterns, and establishing update processes, you create a scalable foundation for AI-assisted development. Start with a few core skills, gather feedback from your team, and expand as your workflows mature.
+A well-structured developer portal transforms your Claude skills from an ad-hoc collection into a professional, searchable knowledge base. Start with Jekyll for simplicity, implement search early, and establish consistent documentation patterns from the beginning. As your skill library grows, these foundational decisions pay dividends in discoverability and team productivity.
 
-The key is keeping the portal practical—every skill should solve a real problem, and every document should help someone get work done faster.
+Extend your portal with MCP integration for dynamic skill discovery, version tracking for changelog visibility, and automated validation for quality assurance. The investment in building a proper portal pays returns through improved skill reuse and reduced duplication across your development workflow.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
