@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Nix Flakes Development Workflow"
-description: "Master the art of combining Claude Code with Nix Flakes for reproducible, efficient development workflows. Learn practical patterns for managing complex projects."
+description: "Master the art of combining Claude Code with Nix Flakes for reproducible, efficient development workflows. Learn practical patterns for managing."
 date: 2026-03-15
 author: "Claude Skills Guide"
 categories: [guides]
@@ -332,5 +332,12 @@ Remember to pin your inputs, document your setup, and use the full power of Flak
 - [Claude Code Developer Environment Reproducibility with Nix](/claude-code-developer-environment-reproducibility-nix-workflow/)
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
 - [Claude Skills Guides Hub](/guides-hub/)
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

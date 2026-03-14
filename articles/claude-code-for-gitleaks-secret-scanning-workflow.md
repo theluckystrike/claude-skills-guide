@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Gitleaks Secret Scanning Workflow"
-description: "Learn how to integrate Claude Code with Gitleaks for automated secret scanning in your development workflow. Practical examples and actionable advice for developers."
+description: "Learn how to integrate Claude Code with Gitleaks for automated secret scanning in your development workflow. Practical examples and actionable advice."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-gitleaks-secret-scanning-workflow/
@@ -189,3 +189,10 @@ Integrating Claude Code with Gitleaks creates a robust secret scanning workflow 
 The key is to make secret scanning automatic and routine, so your team catches issues before they become security incidents.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

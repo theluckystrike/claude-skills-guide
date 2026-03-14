@@ -197,3 +197,10 @@ A standard version workflow is essential for maintaining professional software r
 The key is to start simple and add complexity as your project grows. With Claude Code's assistance, implementing a robust version workflow becomes much more manageable, allowing you to focus on writing code rather than managing release logistics.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

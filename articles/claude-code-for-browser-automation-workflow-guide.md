@@ -220,3 +220,10 @@ try {
 Browser automation with Claude Code combines natural language processing with powerful browser control, enabling developers to automate complex web interactions through descriptive commands. By setting up the Playwright MCP server, creating reusable skills, implementing robust workflows, and following production best practices, you can build reliable automation that handles real-world web scenarios effectively.
 
 Start with simple workflows, validate their reliability, then gradually add complexity. The key is treating browser automation as a skill-building practice: each automation task teaches you something about both the target application and the automation framework itself.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

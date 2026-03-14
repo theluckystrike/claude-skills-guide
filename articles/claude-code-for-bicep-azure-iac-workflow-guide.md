@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Bicep Azure IaC Workflow Guide"
-description: "A comprehensive guide to building efficient Azure Infrastructure as Code workflows using Bicep and Claude Code. Learn practical patterns for automating Azure resource deployment."
+description: "A comprehensive guide to building efficient Azure Infrastructure as Code workflows using Bicep and Claude Code. Learn practical patterns for automating."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-bicep-azure-iac-workflow-guide/
@@ -242,3 +242,10 @@ Integrating Claude Code with Bicep transforms Azure infrastructure management fr
 Start by establishing clear guidelines in your CLAUDE.md, create reusable modules for common infrastructure patterns, and always validate before deployment. With these practices in place, your team can confidently manage Azure resources at any scale.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Devenv Nix Development Shell Workflow"
-description: "A practical guide to using Claude Code with devenv for streamlined Nix-based development shell workflows. Learn how to configure, automate, and optimize your development environment."
+description: "A practical guide to using Claude Code with devenv for streamlined Nix-based development shell workflows. Learn how to configure, automate, and."
 date: 2026-03-15
 author: Claude Skills Guide
 categories: [guides]
@@ -182,3 +182,10 @@ This pulls the latest configurations and rebuilds your environment with any chan
 ## Conclusion
 
 Combining Claude Code with devenv creates a powerful workflow for development environment management. Devenv provides reproducible, declarative environments that eliminate "works on my machine" problems, while Claude Code acts as an intelligent assistant that understands your setup and helps you work more efficiently. Start with a basic configuration, add your tools incrementally, and let Claude Code help you manage and extend your environment as your project grows.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

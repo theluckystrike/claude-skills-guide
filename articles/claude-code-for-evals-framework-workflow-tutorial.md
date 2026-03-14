@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Evals Framework Workflow Tutorial"
-description: "Learn how to build evaluation workflows with Claude Code. This tutorial covers setting up evals frameworks, creating test cases, running evaluations, and interpreting results."
+description: "Learn how to build evaluation workflows with Claude Code. This tutorial covers setting up evals frameworks, creating test cases, running evaluations."
 date: 2026-03-15
 categories: [tutorials]
 tags: [claude-code, claude-skills, evals, testing, framework]
@@ -216,3 +216,10 @@ Fourth, **automate everything**. Manual evals don't scale. Fifth, **track trends
 Building an evals framework with Claude Code transforms ad-hoc testing into systematic quality assurance. By defining clear test cases, creating an evaluation runner skill, and integrating with CI/CD, you establish reliable benchmarks for your AI systems. Start with simple exact-match tests, then gradually incorporate more sophisticated evaluation types as your needs evolve.
 
 The investment in a robust evals workflow pays dividends through faster iteration, clearer feedback on changes, and confidence in your AI's behavior. Implement the patterns from this tutorial to establish evaluation practices that scale with your project.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

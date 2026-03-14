@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Streaming LLM Response Workflow"
-description: "Learn how to implement streaming LLM responses with Claude Code. This guide covers practical patterns, code examples, and actionable advice for developers building real-time AI applications."
+description: "Learn how to implement streaming LLM responses with Claude Code. This guide covers practical patterns, code examples, and actionable advice for."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-streaming-llm-response-workflow/
@@ -284,3 +284,10 @@ Streaming LLM responses transforms user experience from waiting for complete res
 Start with basic streaming, then layer on complexity as your requirements demand. The patterns shown here—chat interfaces, code generation, real-time analysis—provide starting points for most use cases. Remember to handle errors specifically for streaming scenarios, and always consider resource management when building long-running streaming applications.
 
 With these techniques, you can build responsive AI applications that feel natural and handle the realities of network-based LLM interactions.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

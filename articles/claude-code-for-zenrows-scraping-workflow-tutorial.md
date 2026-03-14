@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for ZenRows Scraping Workflow Tutorial"
-description: "Learn how to integrate Claude Code with ZenRows for efficient web scraping. This tutorial covers API setup, dynamic content handling, and building scalable scraping workflows."
+description: "Learn how to integrate Claude Code with ZenRows for efficient web scraping. This tutorial covers API setup, dynamic content handling, and building."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-zenrows-scraping-workflow-tutorial/
@@ -260,3 +260,10 @@ Combining Claude Code with ZenRows creates a powerful scraping solution that bal
 Start with the basic scraper class, then progressively add features like retry logic, extraction utilities, and workflow orchestration. As your needs grow, Claude Code can help you refactor and scale your scraping infrastructure.
 
 Remember to always scrape responsibly and respect the websites you target. With the right approach, you'll have a reliable, AI-assisted scraping system that serves your data needs while maintaining ethical standards.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

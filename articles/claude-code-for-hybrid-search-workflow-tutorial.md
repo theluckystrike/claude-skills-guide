@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Hybrid Search Workflow Tutorial"
-description: "A comprehensive guide to building hybrid search workflows using Claude Code. Learn how to combine semantic and keyword search, integrate vector databases, and create powerful search experiences."
+description: "A comprehensive guide to building hybrid search workflows using Claude Code. Learn how to combine semantic and keyword search, integrate vector."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-hybrid-search-workflow-tutorial/
@@ -241,3 +241,10 @@ Hybrid search combines the precision of keyword search with the semantic underst
 
 Start with the basic implementation shown here, then iterate based on your specific use case and user feedback. The combination of BM25 and semantic embeddings provides a strong foundation for virtually any search application.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

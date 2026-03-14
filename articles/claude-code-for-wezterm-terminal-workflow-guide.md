@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for WezTerm Terminal Workflow Guide"
-description: "Master the integration between Claude Code and WezTerm terminal emulator. Learn practical workflows for enhanced productivity, custom keybindings, and automation patterns."
+description: "Master the integration between Claude Code and WezTerm terminal emulator. Learn practical workflows for enhanced productivity, custom keybindings, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-wezterm-terminal-workflow-guide/
@@ -177,3 +177,10 @@ config.animation_fps = 30
 WezTerm and Claude Code together form a highly productive development environment. By leveraging WezTerm's performance, multiplexing, and configuration flexibility, you can create workflows that make Claude Code interactions more seamless and effective. Start with the basic configurations in this guide, then customize based on your specific needs and workflow patterns.
 
 The key is experimentation—tailor your setup to match how you actually work, and both tools will become indispensable parts of your development toolkit.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

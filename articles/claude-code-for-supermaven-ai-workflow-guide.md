@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Supermaven AI Workflow Guide"
-description: "Learn how to integrate Claude Code with Supermaven AI for enhanced code completion. Set up workflows, configure settings, and maximize your AI-assisted coding productivity."
+description: "Learn how to integrate Claude Code with Supermaven AI for enhanced code completion. Set up workflows, configure settings, and maximize your AI-assisted."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -225,3 +225,10 @@ The combination of Supermaven's instant code completions with Claude Code's adva
 
 Start with the basic setup outlined in this guide, then customize your configuration and skills to match your specific needs and coding style.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

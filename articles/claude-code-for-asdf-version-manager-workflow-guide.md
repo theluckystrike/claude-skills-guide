@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for asdf Version Manager Workflow Guide"
-description: "Learn how to integrate Claude Code with asdf version manager for streamlined multi-language development. Practical examples, automation tips, and workflow optimization."
+description: "Learn how to integrate Claude Code with asdf version manager for streamlined multi-language development. Practical examples, automation tips, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-asdf-version-manager-workflow-guide/
@@ -217,3 +217,10 @@ Integrating Claude Code with asdf transforms version management from a tedious m
 The combination of asdf's unified version management and Claude Code's AI assistance creates a development environment that's both powerful and approachable, especially for teams working with multiple languages and frameworks.
 
 Start by creating the asdf workflow skill, define your project's versions in `.tool-versions`, and let Claude Code handle the rest. Your future self will thank you when version conflicts become a thing of the past.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

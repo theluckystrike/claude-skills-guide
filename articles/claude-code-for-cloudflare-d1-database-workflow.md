@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Cloudflare D1 Database Workflow"
-description: "Master the workflow of building and managing Cloudflare D1 databases with Claude Code. This guide covers practical examples, code patterns, and actionable strategies for developers."
+description: "Master the workflow of building and managing Cloudflare D1 databases with Claude Code. This guide covers practical examples, code patterns, and."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-cloudflare-d1-database-workflow/
@@ -304,3 +304,10 @@ Claude Code combined with Cloudflare D1 gives you a powerful development workflo
 
 The edge database pattern works exceptionally well for content sites, user-facing dashboards, and API backends where low latency matters. By following the patterns in this guide and leveraging Claude Code's capabilities, you can build production-ready applications with confidence.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

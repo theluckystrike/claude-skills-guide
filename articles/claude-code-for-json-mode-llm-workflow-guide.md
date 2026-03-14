@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for JSON Mode LLM Workflow Guide"
-description: "Master JSON mode in LLM workflows with Claude Code. Learn practical patterns for structured output generation, validation, and integration with your applications."
+description: "Master JSON mode in LLM workflows with Claude Code. Learn practical patterns for structured output generation, validation, and integration with your."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-json-mode-llm-workflow-guide/
@@ -265,3 +265,10 @@ JSON mode transforms LLM interactions from unpredictable text generation into re
 
 Start with simple schemas and gradually add complexity as your confidence grows. The patterns in this guide provide a foundation that scales from quick prototypes to enterprise-grade systems processing thousands of daily requests.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
