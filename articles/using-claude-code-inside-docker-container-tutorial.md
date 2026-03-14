@@ -1,307 +1,208 @@
 ---
-
-
 layout: default
 title: "Using Claude Code Inside Docker Container Tutorial"
-description: "A comprehensive tutorial on running Claude Code inside Docker containers. Learn how to set up containerized development environments with Claude Code."
+description: "A comprehensive guide to running Claude Code within Docker containers for AI-assisted development, CI/CD pipelines, and automated coding workflows."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /using-claude-code-inside-docker-container-tutorial/
-categories: [guides]
-tags: [claude-code, claude-skills]
-reviewed: true
-score: 7
 ---
 
-
+{% raw %}
 # Using Claude Code Inside Docker Container Tutorial
 
-Docker containers have become an essential part of modern software development, providing consistent environments across different machines and teams. Combining Docker with Claude Code creates a powerful development workflow where you can use AI assistance in a controlled, reproducible setting. This tutorial walks you through setting up and using Claude Code inside Docker containers, focusing on practical examples and the skills system.
+Docker containers have revolutionized how developers build, test, and deploy applications. Combining Docker with Claude Code creates a powerful development environment where AI-assisted coding meets containerized workflows. This tutorial explores practical approaches to running Claude Code inside Docker containers, enabling consistent AI-powered development experiences across different machines and CI/CD pipelines.
 
-## Prerequisites
+## Why Run Claude Code in Docker?
 
-Before starting this tutorial, make sure you have the following installed on your system:
+Running Claude Code inside Docker containers offers several compelling advantages. First, consistency ensures that your AI coding assistant runs in a standardized environment regardless of the host machine's configuration. Second, isolation prevents Claude Code's dependencies from conflicting with other projects on your system. Third, reproducibility allows teams to share identical development environments with AI capabilities built-in. Finally, CI/CD integration enables automated code review, refactoring, and documentation generation as part of your build pipelines.
 
-- Docker Desktop or Docker Engine
-- Git
-- An Anthropic API key for Claude Code
+## Setting Up Your Docker Environment for Claude Code
 
-You should also have basic familiarity with Docker concepts like images, containers, and volumes.
+Before running Claude Code in Docker, ensure you have Docker installed on your system. The official Claude Code application runs on macOS, Linux, and Windows (via WSL2). For Docker-based usage, we'll create a container that provides Claude Code capabilities through its CLI interface.
 
-## Why Use Claude Code in Docker?
-
-Running Claude Code inside Docker containers offers several compelling benefits for developers and teams:
-
-**Environment Consistency**: Your Claude Code setup becomes completely reproducible. Everyone on your team gets the exact same environment, eliminating "it works on my machine" issues.
-
-**Isolation**: Containerized Claude Code operates in its own space, preventing conflicts with host system dependencies or configurations.
-
-**Portability**: Move your AI-assisted development environment between machines or share it with team members effortlessly.
-
-**Security Control**: Docker lets you precisely control what resources and files Claude Code can access within the container boundaries.
-
-## Setting Up Your Docker Environment
-
-Let's create a practical Docker setup for Claude Code. First, create a project directory and Dockerfile:
+Create a Dockerfile that sets up the necessary environment:
 
 ```dockerfile
 FROM ubuntu:22.04
-
-# Prevent interactive prompts during package installation
-ENV DEBIAN_FRONTEND=noninteractive
 
 # Install required dependencies
 RUN apt-get update && apt-get install -y \
     curl \
     git \
-    wget \
-    vim \
-    unzip \
-    ca-certificates \
+    nodejs \
+    npm \
+    python3 \
+    python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Node.js (required for some Claude Code features)
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-    && apt-get install -y nodejs \
-    && rm -rf /var/lib/apt/lists/*
+# Install Claude Code CLI
+RUN npm install -g @anthropic-ai/claude-code
 
-# Create a non-root user for security
-RUN useradd -m -s /bin/bash developer \
-    && mkdir -p /home/developer \
-    && chown -R developer:developer /home/developer
-
-# Set working directory
+# Create working directory
 WORKDIR /workspace
 
-# Switch to non-root user
-USER developer
+# Set default command
+CMD ["claude"]
 ```
 
-Build the Docker image:
+Build and run your container:
 
 ```bash
-docker build -t claude-code-dev:latest .
+docker build -t claude-code-env .
+docker run -it --rm -v $(pwd):/workspace claude-code-env
 ```
 
-## Installing Claude Code in the Container
+## Configuring Claude Code for Containerized Use
 
-Now let's run the container and install Claude Code:
+Once inside the container, you need to configure Claude Code properly. The first step involves authenticating with Anthropic's API. In a containerized environment, consider using environment variables to pass your API key securely:
 
 ```bash
-docker run -it --rm \
-    -v $(pwd):/workspace \
-    -v ~/.claude:/home/developer/.claude \
-    -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
-    claude-code-dev:latest \
-    /bin/bash
+export ANTHROPIC_API_KEY="your-api-key-here"
+claude configure
 ```
 
-Inside the container, install Claude Code:
+Claude Code respects standard environment variables for configuration. Create a `.claude/settings.json` file in your workspace to customize behavior:
+
+```json
+{
+  "model": "claude-sonnet-4-20250514",
+  "maxTokens": 4096,
+  "temperature": 0.7
+}
+```
+
+## Practical Examples: Using Claude Code in Docker
+
+### Example 1: Code Review Automation
+
+Create a script that uses Claude Code to review code changes in your repository:
 
 ```bash
-# Download and install Claude Code
-curl -fsSL https://raw.githubusercontent.com/anthropics/claude-code/main/install.sh | sh
+#!/bin/bash
+# review-code.sh
 
-# Verify installation
-claude --version
+# Set API key from environment
+export ANTHROPIC_API_KEY
+
+# Get git diff of changes
+git diff --unified=5 > /tmp/changes.diff
+
+# Send to Claude Code for review
+claude "Review the following code changes and provide feedback:" < /tmp/changes.diff
 ```
 
-## Using Claude Code Skills in Docker
+Run this in your Docker container as part of your CI/CD pipeline to automate code reviews.
 
-Claude Code's skills system works perfectly within Docker containers. Skills are declarative workflows that define how Claude should approach specific tasks. Let's explore how to use and create skills in your containerized environment.
+### Example 2: Auto-Documentation Generation
 
-### Loading Existing Skills
-
-Claude Code comes with built-in skills you can use. Inside your container, try these commands:
+Use Claude Code to generate documentation from your codebase:
 
 ```bash
-# List available skills
-claude skill list
+#!/bin/bash
+# generate-docs.sh
 
-# Use a specific skill for a task
-claude "Write a Python function that calculates fibonacci numbers" --skill python
+export ANTHROPIC_API_KEY
+
+# Analyze source files and generate docs
+claude "Generate API documentation for all functions in ./src directory. Output in Markdown format." --output /workspace/docs/
 ```
 
-### Creating Custom Skills for Docker
+### Example 3: Test Generation
 
-Create a skill specifically for Docker development workflows. First, create the skills directory:
+Generate unit tests automatically:
 
 ```bash
-mkdir -p ~/.claude/skills
+claude "Generate Jest unit tests for all exported functions in ./lib/*.js. Cover edge cases and error conditions."
 ```
 
-Create a skill file for containerized development:
+## Integrating Claude Code with Docker Compose
 
-```yaml
----
-name: docker-dev
-description: "Optimized workflow for Docker-based development with Claude Code"
-version: 1.0.0
----
-
-# Docker Development Skill
-
-This skill optimizes Claude Code's behavior when working in Docker-based development environments.
-
-## Guidelines
-
-When working in Docker environments:
-1. Always consider container resource constraints
-2. Prefer multi-stage builds to reduce image size
-3. Use .dockerignore to exclude unnecessary files
-4. Suggest docker-compose for multi-service applications
-5. Consider security best practices (non-root users, minimal base images)
-
-## Common Tasks
-
-For Dockerfile creation:
-- Start with minimal base images (alpine, distroless)
-- Use multi-stage builds for compilation
-- Combine RUN commands to reduce layers
-- Copy only necessary files
-
-For docker-compose:
-- Define health checks for services
-- Use environment variables for configuration
-- Set up proper networking between services
-- Include volume mounts for development
-```
-
-Save this as `~/.claude/skills/docker-dev.skill.md`.
-
-### Using Your Custom Skill
-
-Now use the skill in your Docker workflow:
-
-```bash
-claude "Create a multi-stage Dockerfile for a Node.js application" --skill docker-dev
-```
-
-## Integrating MCP Servers in Docker
-
-Model Context Protocol (MCP) servers extend Claude Code's capabilities. You can run MCP servers inside Docker to provide additional functionality.
-
-### Setting Up an MCP Server in Docker
-
-Create a docker-compose.yml for a complete development environment:
+For more complex setups, Docker Compose provides a cleaner way to manage Claude Code alongside your application services:
 
 ```yaml
 version: '3.8'
 
 services:
-  claude-code:
-    image: claude-code-dev:latest
+  claude:
+    build: .
     volumes:
       - ./workspace:/workspace
-      - ~/.claude:/home/developer/.claude
     environment:
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
     stdin_open: true
     tty: true
 
-  # Example: Filesystem MCP server
-  mcp-filesystem:
-    image: alpine:latest
-    command: ["sleep", "infinity"]
+  app:
+    build: ./app
     volumes:
-      - ./workspace:/data:ro
+      - ./workspace:/workspace
+    depends_on:
+      - claude
 ```
 
-### Configuring MCP Servers with Claude
+This configuration allows your application container to access Claude Code's outputs while maintaining separation of concerns.
 
-In your Claude Code configuration, add MCP server support:
+## Using Claude Code Skills in Docker
 
-```json
-{
-  "mcpServers": {
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/workspace"]
-    }
-  }
-}
-```
-
-## Practical Examples
-
-Let's walk through some practical examples of using Claude Code in Docker.
-
-### Example 1: Building a Web Application
+Claude Code's skill system works seamlessly within Docker containers. Skills extend Claude Code's capabilities with specialized knowledge and commands. Install skills inside your container:
 
 ```bash
-# Start your Docker container
-docker run -it --rm \
-    -v $(pwd):/workspace \
-    -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
-    claude-code-dev:latest \
-    claude
-
-# Ask Claude to help build an application
-# "Create a React application with a Node.js backend"
+claude install @claude-skill/github
+claude install @claude-skill/bash-expert
 ```
 
-Claude Code will analyze your requirements and create appropriate files. The Docker environment ensures consistent tool availability.
-
-### Example 2: Debugging Container Issues
-
-When you encounter issues in your containers:
+Skills persist in the container's configuration. For reproducible setups, create a bootstrap script that installs all required skills:
 
 ```bash
-# Get help debugging
-claude "My Docker container keeps crashing with exit code 1. Help me debug."
+#!/bin/bash
+# bootstrap-skills.sh
+
+SKILLS=(
+  "@claude-skill/github"
+  "@claude-skill/git-expert"
+  "@claude-skill/code-review"
+)
+
+for skill in "${SKILLS[@]}"; do
+  claude install "$skill"
+done
 ```
 
-Claude can analyze logs, suggest fixes, and help you modify your Dockerfile or application code.
+## Best Practices for Containerized Claude Code
 
-### Example 3: Creating Development Workflows
+When running Claude Code in Docker, follow these best practices for optimal results. First, always use environment variables for sensitive credentials rather than hardcoding them in Dockerfiles. Second, mount your workspace as a volume to persist work between container sessions. Third, consider using named volumes for Claude Code's cache to improve performance across runs. Fourth, pin specific Claude Code versions in your Dockerfile for reproducible behavior:
 
-Define a comprehensive development workflow:
-
-```bash
-# Create a skill for your team's workflow
-claude "Create a skill for our React TypeScript development workflow"
+```dockerfile
+RUN npm install -g @anthropic-ai/claude-code@1.0.5
 ```
 
-The skill will capture your team's conventions and preferences, ensuring consistent code quality across projects.
+## CI/CD Pipeline Integration
 
-## Best Practices
+GitHub Actions provides an excellent example of integrating Claude Code in containers:
 
-Follow these best practices for the best experience:
+```yaml
+name: Claude Code Analysis
 
-**Volume Mounting Strategy**: Mount your project directory as a volume so Claude Code can access and modify your files. Use read-only mounts when appropriate for security.
+on: [pull_request]
 
-**API Key Management**: Never hardcode API keys in Dockerfiles. Use environment variables or Docker secrets for sensitive information.
-
-**Resource Limits**: Set appropriate memory and CPU limits for your containers to prevent resource exhaustion.
-
-**Image Size**: Keep your Docker images small by using minimal base images and cleaning up after installations.
-
-**Non-Running User**: Always run Claude Code as a non-root user for security.
+jobs:
+  claude-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Claude Code Review
+        run: |
+          docker run -e ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }} \
+            -v ${{ github.workspace }}:/workspace \
+            claude-code-env \
+            claude "Review this pull request for code quality and potential issues"
+```
 
 ## Troubleshooting Common Issues
 
-Here are solutions to common problems you might encounter:
-
-**Permission Denied**: If Claude Code can't access files, check volume mount permissions and ensure the container user has appropriate access.
-
-**API Key Issues**: Verify your ANTHROPIC_API_KEY is correctly set in the environment.
-
-**Tool Not Found**: Some tools may not be available in your container. Add them to your Dockerfile or use apt-get to install them as needed.
-
-**Slow Performance**: Consider increasing container resources or using Docker volumes for better I/O performance.
+When running Claude Code in containers, you may encounter some common issues. If you experience API connection problems, verify your container has network access and the ANTHROPIC_API_KEY is correctly set. For permission errors with the Claude Code data directory, ensure proper ownership with `chown -R $(id -u):$(id -g) ~/.claude`. If Claude Code seems slow inside Docker, consider increasing container memory allocation.
 
 ## Conclusion
 
-Running Claude Code inside Docker containers provides a powerful, reproducible way to use AI-assisted development. By combining Docker's isolation and portability with Claude Code's intelligent capabilities, you can create consistent development environments that work smoothly across teams.
-
-The skills system allows you to customize Claude Code's behavior for your specific workflows, while MCP servers extend functionality as needed. Start with the basic setup outlined in this tutorial, then customize it to match your team's requirements.
-
-Experiment with different configurations, create custom skills for your development workflows, and enjoy consistent AI-assisted development wherever Docker runs.
-
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
+Running Claude Code inside Docker containers unlocks powerful possibilities for AI-assisted development. Whether you're building consistent developer environments, automating code reviews, or integrating AI capabilities into CI/CD pipelines, Docker provides the isolation and reproducibility you need. Start with the basic setup shown in this tutorial, then customize according to your team's specific requirements. Claude Code's flexibility combined with Docker's portability creates a development experience that's both powerful and predictable.
+{% endraw %}
