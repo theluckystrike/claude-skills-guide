@@ -78,14 +78,13 @@ def load_checkpoint(task_id):
 
 Review your skill configurations and reduce unnecessary tool calls:
 
+In the front matter of your skill file (`~/.claude/skills/your-skill.md`), only list tools the skill actually needs:
+
 ```yaml
-# In your skill configuration
-tools:
-  - Read
-  - Write
-  - Bash
-# Remove unused tools to reduce request volume
+tools: [Read, Write]
 ```
+
+Omitting unused tools like `Bash` reduces the number of potential tool calls the skill can make.
 
 ## Preventing Future Rate Limit Issues
 
@@ -93,18 +92,14 @@ tools:
 
 When creating or using skills, design them with rate limits in mind:
 
-```yaml
+```markdown
 ---
 name: batch-processor
-description: Process files in rate-limited batches
+description: Process files in batches. Always pause between batches and confirm before proceeding to the next group to avoid hitting rate limits.
 tools: [Read, Write]
-rate_limit:
-  max_requests_per_minute: 20
-  batch_size: 5
-  cooldown_seconds: 10
 ---
 
-# This skill automatically paces its operations
+Process files in groups of 5. After each group, pause and report results before continuing.
 ```
 
 ### Use Caching Strategies
@@ -131,7 +126,7 @@ When your project requires sustained high-volume interactions, consider these al
 
 **Use offline-capable skills** that don't require constant API calls. The pdf skill and docx skill can process documents locally once the initial context is loaded, reducing your rate-limited requests.
 
-**use local processing** where possible. Skills like tdd skill that generate test files can work in bursts followed by local compilation and verification.
+**Use local processing** where possible. Skills like tdd skill that generate test files can work in bursts followed by local compilation and verification.
 
 **Batch your requests** into larger, less frequent operations. Instead of 100 small requests, consolidate into 10 larger ones:
 
