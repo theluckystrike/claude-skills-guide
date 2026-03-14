@@ -229,3 +229,11 @@ jobs:
 Claude Code становится незаменимым инструментом для российских backend-разработчиков. Правильная настройка и использование навыков значительно ускоряет разработку, улучшает качество кода и упрощает поддержку проектов. Начните с базовой настройки, постепенно добавляйте новые навыки и адаптируйте рабочий процесс под свои нужды.
 
 Для получения дополнительной информации о навыках Claude Code обратитесь к официальной документации и Hub сообщества.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
