@@ -1,18 +1,22 @@
 ---
+
 layout: default
 title: "Claude Code Design System Tokens: A Frontend Developer Guide"
 description: "Learn how to leverage Claude Code's design system tokens for building consistent, professional user interfaces with the canvas-design skill."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, design-system, frontend, canvas-design, tokens]
+tags: [claude-code, design-system, frontend, canvas-design, tokens, claude-skills]
 permalink: /claude-code-design-system-tokens-frontend-developer-guide/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code Design System Tokens: A Frontend Developer Guide
 
-Design system tokens are the foundation of consistent, scalable user interfaces. When working with Claude Code's canvas-design skill, understanding how to leverage these tokens can dramatically improve your workflow and output quality. This guide walks you through practical patterns for integrating design system tokens into your frontend development process.
+Design system tokens are the foundation of consistent, scalable user interfaces. When working with Claude Code's canvas-design skill, understanding how to use these tokens can dramatically improve your workflow and output quality. This guide walks you through practical patterns for integrating design system tokens into your frontend development process.
 
 ## What Are Design System Tokens?
 
@@ -233,7 +237,7 @@ const customTheme = {
 
 ## Conclusion
 
-Design system tokens transform how you build user interfaces. By leveraging Claude Code's canvas-design skill token system, you create applications that are consistent, maintainable, and themable. Start with the basic color, typography, and spacing tokens, then build up to more complex component patterns as your familiarity grows.
+Design system tokens transform how you build user interfaces. By using Claude Code's canvas-design skill token system, you create applications that are consistent, maintainable, and themable. Start with the basic color, typography, and spacing tokens, then build up to more complex component patterns as your familiarity grows.
 
 The investment in learning token-based design pays dividends in reduced design debt, faster iteration, and more cohesive user experiences.
 {% endraw %}

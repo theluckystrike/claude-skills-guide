@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code GitHub Actions Monorepo Workflow"
 description: "Build automated CI/CD pipelines for monorepos using Claude Code and GitHub Actions. Includes practical examples for package management, testing, and."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, github-actions, monorepo, ci-cd, automation]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [claude-code, github-actions, monorepo, ci-cd, automation, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /claude-code-github-actions-monorepo-workflow/
 ---
+
 
 {% raw %}
 # Claude Code GitHub Actions Monorepo Workflow

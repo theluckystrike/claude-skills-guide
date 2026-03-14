@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Frontend Developer Storybook Driven Workflow."
 description: "Master Storybook-driven development workflows with Claude Code. Learn practical tips for building, testing, and documenting UI components efficiently."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-frontend-developer-storybook-driven-workflow-tip/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 Storybook has become an essential tool for frontend developers building component-driven applications. When combined with Claude Code, you get a powerful development workflow that accelerates UI development while maintaining quality. This guide provides practical tips for integrating Claude Code into your Storybook-driven workflow.

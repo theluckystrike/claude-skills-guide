@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code K6 Load Testing Workflow Guide"
 description: "Learn how to integrate K6 load testing into your Claude Code workflow. This guide covers practical strategies for building performance testing into."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-k6-load-testing-workflow-guide/
 categories: [guides]
-tags: [claude-code, k6, load-testing, performance]
+tags: [claude-code, k6, load-testing, performance, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code K6 Load Testing Workflow Guide
 

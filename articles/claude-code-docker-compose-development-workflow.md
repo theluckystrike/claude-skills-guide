@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Docker Compose Development Workflow"
 description: "A practical guide to integrating Claude Code with Docker Compose for streamlined local development, testing, and deployment workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-docker-compose-development-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Docker Compose Development Workflow
 

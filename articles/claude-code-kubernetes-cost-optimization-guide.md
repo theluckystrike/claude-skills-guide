@@ -1,17 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Kubernetes Cost Optimization Guide"
 description: "A practical guide for developers to reduce Kubernetes costs using Claude Code automation, right-sizing strategies, and smart resource management."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, kubernetes, cost-optimization, devops, cloud-costs]
+tags: [claude-code, kubernetes, cost-optimization, devops, cloud-costs, claude-skills]
 permalink: /claude-code-kubernetes-cost-optimization-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Kubernetes Cost Optimization Guide
 
-Managing Kubernetes costs at scale remains one of the most challenging aspects of cloud infrastructure. Development teams often struggle with runaway compute costs, inefficient resource allocation, and lack of visibility into spending patterns. This guide shows you how to leverage Claude Code automation to systematically reduce your Kubernetes spend while maintaining performance and reliability.
+Managing Kubernetes costs at scale remains one of the most challenging aspects of cloud infrastructure. Development teams often struggle with runaway compute costs, inefficient resource allocation, and lack of visibility into spending patterns. This guide shows you how to use Claude Code automation to systematically reduce your Kubernetes spend while maintaining performance and reliability.
 
 ## Understanding Your Kubernetes Cost Landscape
 

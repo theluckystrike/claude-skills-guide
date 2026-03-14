@@ -1,16 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Drone CI Workflow Automation"
 description: "Automate your Drone CI pipelines using Claude Code skills. Learn practical patterns for pipeline generation, testing, and maintenance with code examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-drone-ci-workflow-automation/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Drone CI Workflow Automation
 
-Drone CI provides a powerful container-native continuous integration platform, and Claude Code elevates your pipeline development by bringing intelligent automation to every stage. This guide shows you how to leverage Claude skills for generating, testing, and maintaining Drone CI workflows efficiently.
+Drone CI provides a powerful container-native continuous integration platform, and Claude Code elevates your pipeline development by bringing intelligent automation to every stage. This guide shows you how to use Claude skills for generating, testing, and maintaining Drone CI workflows efficiently.
 
 ## Why Automate Drone CI with Claude Code
 

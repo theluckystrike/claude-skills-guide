@@ -1,16 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Azure DevOps Pipeline Automation"
 description: "Master Azure DevOps pipeline automation with Claude Code. Learn to build intelligent CI/CD workflows that leverage AI-powered code generation, testing."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-azure-devops-pipeline-automation/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Azure DevOps Pipeline Automation
 
-Azure DevOps pipeline automation combined with Claude Code transforms how developers ship software. Instead of manually configuring builds, tests, and deployments, you create self-healing pipelines that adapt to your codebase. This guide shows you practical approaches to building Azure DevOps pipelines that leverage Claude Code's capabilities.
+Azure DevOps pipeline automation combined with Claude Code transforms how developers ship software. Instead of manually configuring builds, tests, and deployments, you create self-healing pipelines that adapt to your codebase. This guide shows you practical approaches to building Azure DevOps pipelines that use Claude Code's capabilities.
 
 ## Why Automate Azure DevOps Pipelines with Claude Code
 

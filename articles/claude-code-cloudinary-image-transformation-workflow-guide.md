@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Cloudinary Image Transformation Workflow Guide"
 description: "Master Cloudinary image transformations with Claude Code. Learn to build skills that upload, transform, optimize, and deliver images programmatically."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-cloudinary-image-transformation-workflow-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Claude Code Cloudinary Image Transformation Workflow Guide
