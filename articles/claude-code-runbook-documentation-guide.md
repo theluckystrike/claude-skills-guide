@@ -1,179 +1,113 @@
 ---
 layout: default
 title: "Claude Code Runbook Documentation Guide"
-description: "A practical guide to creating and maintaining runbook documentation with Claude Code. Automate incident response docs, operational procedures, and system maintenance guides using Claude skills."
+description: "A practical guide to creating runbook documentation for Claude Code skills. Learn how to write clear, actionable documentation that helps developers and power users get the most out of your Claude skills."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-runbook-documentation-guide/
 ---
 
-{% raw %}
 # Claude Code Runbook Documentation Guide
 
-Runbooks are operational documents that contain procedures for responding to incidents, performing routine maintenance, and troubleshooting system issues. Effective runbook documentation reduces MTTR (Mean Time To Resolution), empowers on-call engineers, and ensures consistent responses across your team. This guide demonstrates how to create, maintain, and automate runbook documentation using Claude Code.
+Documentation separates a useful skill from a frustrating one. When you publish a Claude skill, the runbook is what determines whether users succeed or abandon your work after the first failed attempt. This guide covers how to write documentation that developers and power users actually find helpful.
 
-## Why Runbook Documentation Matters
+## What Makes Runbook Documentation Effective
 
-Every engineering team encounters recurring operational challenges: database slowdowns, deployment failures, API timeouts, memory leaks, and service degradations. Without documented procedures, each incident becomes a learning experience repeated from scratch. Engineers waste valuable time during incidents reinventing solutions rather than executing proven remediation steps.
+Runbook documentation serves a different purpose than README files. While READMEs provide an overview, runbooks walk users through specific workflows with concrete steps. The best runbooks anticipate failure modes, explain configuration requirements, and provide copy-paste examples.
 
-Runbook documentation addresses this by capturing institutional knowledge in actionable, step-by-step procedures. The challenge is keeping these documents current as systems evolve. Claude Code transforms runbook maintenance from a manual burden into an automated workflow that stays synchronized with your infrastructure.
+A Claude skill's documentation should answer three questions: What can this skill do? How do I use it correctly? What goes wrong, and how do I fix it?
 
-## Setting Up Claude Code for Runbook Management
+The documentation lives inside the skill file itself using the `description` and `long_description` front matter fields. For complex skills, creating a separate runbook article (like this one) provides more space for detailed examples.
 
-Before creating runbooks, configure Claude Code with skills suited for documentation tasks. The **pdf** skill generates polished runbook PDFs for offline access during incidents. The **supermemory** skill maintains context across sessions, allowing Claude to reference previous incident analyses and build comprehensive documentation over time.
+## Essential Documentation Structure
 
-Initialize a runbook repository structure:
+Every Claude skill runbook should contain these sections:
 
-```bash
-mkdir -p runbooks/{incidents,maintenance,troubleshooting}
-cd runbooks
-```
+**Skill Overview**: One or two sentences describing the primary use case. Avoid marketing language—state what the skill actually does.
 
-## Creating Incident Response Runbooks
+**Prerequisites**: What tools, API keys, or configurations must exist before invoking the skill? Many users fail because they skip this section. For example, the `pdf` skill requires Python with specific packages installed. The `supermemory` skill needs an API key configured in your environment.
 
-Effective incident runbooks follow a consistent structure that enables quick navigation under pressure. Each runbook should contain:
+**Usage Examples**: Show the skill in action with realistic prompts. Include both the input users provide and what they can expect as output. Code snippets help developers understand the exact format expected.
 
-- **Title and severity level** - Clear identification of the incident type
-- **Symptoms** - Observable indicators that trigger the runbook
-- **Impact assessment** - Scope of the problem and affected services
-- **Verification steps** - How to confirm the issue exists
-- **Remediation procedure** - Step-by-step resolution actions
-- **Post-incident notes** - Areas for improvement
+**Configuration Options**: Document every front matter field that affects behavior. If the `temperature` parameter changes output quality, explain when to adjust it.
 
-Here's a runbook template Claude Code can generate:
+**Troubleshooting**: Document common error messages and their solutions. This section alone determines whether users can recover from mistakes independently.
+
+## Practical Examples
+
+Consider a skill that helps with test-driven development. Rather than simply stating "this skill helps with TDD," provide a concrete workflow:
 
 ```markdown
-# Incident Runbook: Database Connection Pool Exhaustion
+## Usage Example
 
-## Severity: SEV-1
+Invoke the tdd skill with a feature description:
 
-### Symptoms
-- API requests timing out with 503 responses
-- Application logs showing "Too many connections" errors
-- Database CPU at 100% utilization
+> Create a function that validates email addresses and returns true for valid formats, false otherwise.
 
-### Impact
-- All write operations failing
-- Read operations experiencing 5+ second latency
-- Affecting 100% of production traffic
+The skill will:
+1. Generate failing tests first
+2. Implement the minimum code to pass tests
+3. Refactor for clarity
 
-### Diagnosis
-1. Check current connection count:
-   ```bash
-   psql -h db.internal -c "SELECT count(*) FROM pg_stat_activity;"
-   ```
-
-2. Identify long-running queries:
-   ```sql
-   SELECT pid, now() - pg_stat_activity.query_start AS duration, query
-   FROM pg_stat_activity
-   WHERE state = 'active' AND query NOT ILIKE '%pg_stat_activity%'
-   ORDER BY duration DESC;
-   ```
-
-### Resolution
-1. Terminate blocking processes: `SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE...`
-2. Increase connection pool size in application config
-3. Restart application pods to reset connections
-4. Verify resolution with load testing
+Expected output includes test files in `tests/` and implementation in `src/`.
 ```
 
-## Automating Runbook Generation
+This example shows users exactly what to expect at each step.
 
-Claude Code can analyze your monitoring data, incident history, and system architecture to automatically generate relevant runbooks. Load the **tdd** skill to create test scenarios that validate runbook procedures work correctly.
+For skills that interact with external services, document the environment variables required:
 
-Use Claude to scan recent incidents and identify patterns:
-
-```
-Analyze our incident log from the past quarter. Identify the top 5 most frequent issues that required manual intervention. For each issue, suggest a runbook structure that would help engineers resolve it faster.
-```
-
-Claude processes your incident data and produces tailored runbook outlines based on actual historical problems rather than theoretical scenarios.
-
-## Maintenance Procedure Documentation
-
-Beyond incidents, runbooks cover routine maintenance tasks: database migrations, certificate rotations, capacity scaling, and log rotation. These procedures benefit from detailed command sequences and expected outcomes at each step.
-
-Document a certificate rotation procedure:
-
-```bash
-# Generate new certificate
-openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
-  -subj "/CN=api.internal" \
-  -keyout private.key -out certificate.crt
-
-# Verify certificate validity
-openssl x509 -in certificate.crt -noout -dates
-
-# Deploy to secrets manager
-aws secretsmanager put-secret-value \
-  --secret-id prod/tls/certificate \
-  --secret-value file://(cat certificate.crt private.key)
+```yaml
+---
+name: github-automation
+description: Automates common GitHub workflows
+env:
+  GITHUB_TOKEN: Required for API authentication
+  GITHUB_REPO: Target repository in format "owner/repo"
+---
 ```
 
-Claude can verify each command succeeds before proceeding to the next, ensuring maintenance procedures complete without silent failures.
+## Integrating Claude Skills Into Documentation
 
-## Integrating Runbooks with Monitoring
-
-The most effective runbooks connect directly to your alerting system. When an alert fires, the corresponding runbook should be immediately accessible. Document the relationship between alerts and runbooks:
-
-| Alert Name | Runbook | On-Call Team |
-|------------|---------|--------------|
-| HighCPUUtilization | scaling-policy.md | Platform Team |
-| DatabaseDeadlock | db-deadlock-resolution.md | Database Team |
-| SSLExpiryWarning | certificate-rotation.md | Security Team |
-| APELatencyP99 | api-performance-investigation.md | API Team |
-
-Claude Code can generate this mapping automatically by analyzing your Prometheus rules, Datadog monitors, or PagerDuty configurations and cross-referencing them with your runbook directory.
-
-## Testing Runbook Accuracy
-
-Stale runbooks are worse than no runbooks because they create false confidence. Implement validation workflows using the **tdd** skill to periodically test runbook procedures in staging environments.
-
-Create a test scenario that validates your database runbook:
-
-```python
-def test_database_connection_runbook():
-    # Simulate connection pool exhaustion
-    simulate_high_connection_count()
-    
-    # Execute runbook steps
-    result = runbook.execute("diagnose_connections")
-    assert "blocking_processes" in result.output
-    
-    result = runbook.execute("terminate_blocking")
-    assert result.exit_code == 0
-    
-    # Verify resolution
-    connection_count = get_connection_count()
-    assert connection_count < 100
-```
-
-## Maintaining Runbooks Over Time
-
-System changes frequently render runbooks obsolete. Establish a workflow where Claude reviews runbooks during code reviews. When infrastructure changes occur, prompt Claude to update affected runbooks:
+Claude skills can generate their own documentation. The `skill-creator` skill produces formatted documentation from skill definitions, ensuring your runbooks stay synchronized with skill updates. Run the skill on your existing skill file to generate a starting point:
 
 ```
-Our team migrated from PostgreSQL 14 to 16 last week. Review all runbooks that reference PostgreSQL commands and update them for version 16 compatibility. Note any new features or deprecated commands.
+Use skill-creator to generate documentation for my-skill.md
 ```
 
-The **supermemory** skill helps Claude track which runbooks were last reviewed and flag ones that haven't been updated in your specified review周期 (review cycle).
+The output includes front matter validation, tool availability checks, and suggested usage patterns based on the skill's implementation.
 
-## Advanced: Generating Visual Runbooks
+For skills that output code, document the expected file structure. The `frontend-design` skill generates component files with specific naming conventions. Users need to know where files will be created and how to integrate them into their projects.
 
-For complex procedures, visual aids accelerate comprehension. Use the **frontend-design** skill to generate diagrams showing decision trees, flowcharts, and architecture diagrams that accompany text-based runbooks. These visuals are particularly valuable for incident commanders who need to understand system relationships quickly during active incidents.
+## Documentation for Different Skill Types
 
-Export visual runbooks as PNG or PDF using the **pdf** skill for inclusion in incident response playbooks:
+Documentation requirements vary by skill category:
 
-```
-Create a flowchart showing the decision process for handling a service degradation incident. Include branches for severity determination, communication steps, and escalation paths. Export as PDF for offline reference.
-```
+**File processing skills** (pdf, docx, xlsx): Document supported file formats, size limits, and output locations. The `pdf` skill handles extraction differently than creation—explain both workflows.
+
+**Code generation skills** (algorithmic-art, canvas-design): Show example outputs and explain customization parameters. Users benefit from seeing rendered results alongside the prompts that produced them.
+
+**API integration skills** (supermemory, mcp-builder): Emphasize authentication setup. Missing credentials are the most common failure point for these skills.
+
+**Workflow skills** (internal-comms, brand-guidelines): Provide templates and examples for common use cases. Show users how to adapt the skill output to their specific needs.
+
+## Maintaining Documentation
+
+Documentation becomes outdated without maintenance. Add a `version` field to your skill front matter and update it with each release. Include a `changelog` section documenting breaking changes.
+
+When users report issues, check whether documentation could have prevented the problem. Each confusing error message is an opportunity to improve your troubleshooting section.
+
+Consider adding a section on advanced usage for power users who want to customize behavior. Document edge cases and performance considerations. If your skill processes large files, warn users about memory usage.
+
+## Measuring Documentation Quality
+
+Effective documentation reduces support burden. Track how often users successfully complete workflows without asking questions. Review skill usage patterns to identify steps where users commonly fail or abandon the workflow.
+
+Solicit feedback from early users. Ask specifically which sections were unclear and what additional examples would help.
 
 ## Conclusion
 
-Claude Code transforms runbook documentation from a neglected chore into a living, automated system. By generating runbooks from incident history, validating procedures through testing, and maintaining documentation during code reviews, you ensure your team has reliable operational guidance when it matters most.
+Well-written runbook documentation transforms a functional skill into a reliable tool. Invest time in clear prerequisites, practical examples, and comprehensive troubleshooting. Your users—whether developers integrating skills into production pipelines or power users automating complex workflows—will thank you.
 
-Effective runbooks reduce incident resolution time, empower on-call engineers, and capture institutional knowledge that would otherwise be lost. Start by documenting your most frequent incidents, then expand to cover maintenance procedures and edge cases. Claude Code handles the heavy lifting of keeping this documentation current as your systems evolve.
+The effort pays dividends in reduced support requests, positive reviews, and skill adoption. Start with the essential sections, then expand based on user feedback and real-world usage patterns.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}
