@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "When to Use Claude Code vs Manual Coding: Tradeoffs for Developers"
-description: "A practical guide comparing Claude Code automation with manual coding. Learn when AI-assisted development speeds up your workflow and when hands-on coding delivers better results."
+title: "Claude Code vs Manual Coding: Tradeoffs for Developers"
+description: "Compare Claude Code automation with manual coding. When AI-assisted development speeds up your workflow vs hands-on coding."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /when-to-use-claude-code-vs-manual-coding-tradeoffs/

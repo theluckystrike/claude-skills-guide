@@ -2,7 +2,7 @@
 
 layout: default
 title: "Best Way to Scope Tasks for Claude Code Success"
-description: "Learn how to break down development tasks for Claude Code AI assistant. Practical frameworks for developers to get better results from Claude Code by structuring prompts effectively."
+description: "Frameworks for scoping development tasks with Claude Code. Get better results by structuring prompts effectively."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
