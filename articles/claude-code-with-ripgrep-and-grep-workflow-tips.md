@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code with Ripgrep and Grep Workflow Tips"
-description: "Master grep and ripgrep workflows with Claude Code. Learn practical patterns for searching codebases, automating repetitive searches, and integrating search into your development workflow."
+description: "Master grep and ripgrep workflows with Claude Code. Learn practical patterns for searching codebases, automating repetitive searches, and integrating."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-with-ripgrep-and-grep-workflow-tips/
@@ -137,5 +137,12 @@ The frontend-design skill includes patterns for searching component usage and pr
 Efficient search workflows combine fast tools with smart strategies. Ripgrep provides the speed, while Claude Code adds intelligent interpretation and automation. Start with simple searches, build aliases for repetition, and gradually incorporate more advanced patterns as your needs grow.
 
 The investment in mastering these tools pays dividends daily. Every minute spent learning efficient search patterns saves multiple minutes across every future search task.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
