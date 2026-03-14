@@ -73,7 +73,7 @@ By working iteratively, Claude Code helps you refactor with confidence, verifyin
 
 ## Test-Driven Refactoring Support
 
-[The **tdd** skill demonstrates particularly valuable for refactoring tasks](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). Before modifying code, you need tests that verify current behavior. Claude Code can assist by:
+[The **tdd** skill proves particularly valuable for refactoring tasks](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). Before modifying code, you need tests that verify current behavior. Claude Code can assist by:
 
 1. Analyzing your existing functions and generating comprehensive test cases
 2. Running tests to establish a baseline

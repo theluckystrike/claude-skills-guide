@@ -89,9 +89,12 @@ Combine the `tdd` skill with local model execution for secure test generation:
 # Configure local endpoint
 export CLAUDE_API_BASE=http://localhost:1234/v1
 export CLAUDE_MODEL=your-model-name
+```
 
-# Run TDD skill with local model
-claude tdd generate-tests src/auth.ts
+Then invoke the tdd skill inside Claude Code:
+
+```
+/tdd generate tests for src/auth.ts
 ```
 
 The local model analyzes your code and generates tests without transmitting implementation details to external services. This approach suits projects with strict data policies or IP concerns.
