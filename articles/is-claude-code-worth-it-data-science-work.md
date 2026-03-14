@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Is Claude Code Worth It for Data Science Work? A Practical Analysis"
+title: "Is Claude Code Worth It for Data Science Work? A."
 description: "An honest assessment of whether Claude Code is worth using for data science projects, with real-world examples and practical insights."
 date: 2026-03-14
 categories: [guides]
@@ -116,3 +116,10 @@ If you're primarily doing ad-hoc analysis in notebooks with limited coding, the 
 ---
 
 *Claude Code represents a shift in how data scientists approach their work. It's not about replacing the data scientist—it's about removing friction so you can focus on what matters: extracting insights from data.*
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

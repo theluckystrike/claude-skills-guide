@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Interview Preparation Workflow"
-description: "A practical workflow guide for developers using Claude Code to prepare for technical interviews. Learn to structure your practice, generate problems, and simulate interview scenarios."
+description: "A practical workflow guide for developers using Claude Code to prepare for technical interviews. Learn to structure your practice, generate problems."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-for-interview-preparation-workflow/
@@ -186,5 +186,12 @@ This take-home requires building a REST API with authentication. Help me plan th
 Build your workflow around the specific format you'll encounter, and practice under those conditions.
 
 A well-structured Claude Code workflow transforms interview preparation from passive studying into active, feedback-driven practice. By integrating problem generation, test-driven implementation, concept storage, and progress tracking into a single workflow, you maximize both efficiency and effectiveness.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

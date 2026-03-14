@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Docker Debugging Container Logs Guide"
-description: "Master container log debugging with Claude Code. Learn to analyze logs, troubleshoot Docker issues, and resolve container runtime problems efficiently using Claude's CLI tools."
+description: "Master container log debugging with Claude Code. Learn to analyze logs, troubleshoot Docker issues, and resolve container runtime problems efficiently."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, docker, debugging, container-logs, devops]
@@ -161,3 +161,10 @@ Claude Code transforms Docker container log debugging from a tedious manual proc
 
 The key is approaching debugging as a conversation: describe the symptoms to Claude, let it execute diagnostic commands, and work together to interpret the results. This collaborative approach leverages both human domain knowledge and Claude's pattern recognition capabilities, resulting in faster resolution times and deeper understanding of your containerized applications.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
