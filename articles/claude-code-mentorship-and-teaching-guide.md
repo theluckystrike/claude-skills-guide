@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code Mentorship and Teaching Guide"
-description: "Master Claude Code mentorship and teaching strategies. Learn how to guide developers through AI-assisted coding, skill development, and building production applications."
+description: "Master Claude Code mentorship and teaching strategies. Learn how to guide developers through AI-assisted coding, skill development, and building."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-mentorship-and-teaching-guide/
+categories: [guides]
 ---
 
 {% raw %}
@@ -82,6 +83,13 @@ Encourage learners to maintain portfolios showcasing projects built with AI assi
 Claude Code transforms traditional mentorship by providing personalized, patient, and ever-available guidance. When combined with human mentorship, it creates a powerful learning ecosystem that accelerates skill development while maintaining quality. The key lies in structuring learning experiences that balance AI assistance with human insight, preparing developers for the realities of modern software engineering.
 
 Start integrating Claude Code into your teaching practice today. Begin with simple projects, progressively increase complexity, and always encourage learners to question and understand rather than simply accept AI suggestions.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
