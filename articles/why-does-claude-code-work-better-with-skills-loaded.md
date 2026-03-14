@@ -99,7 +99,7 @@ The `pdf` skill and `docx` skill transform Claude from a text generator into a d
 
 [The `tdd` skill encodes test-first development philosophy](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). When you describe a feature, Claude with this skill loaded will:
 
-1. write_file failing tests that define expected behavior
+1. Write failing tests that define expected behavior
 2. Implement the minimum code to pass those tests
 3. Verify test passing before considering the task complete
 
