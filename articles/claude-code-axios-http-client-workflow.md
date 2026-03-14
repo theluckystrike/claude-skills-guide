@@ -219,5 +219,13 @@ A well-structured Axios HTTP client workflow transforms raw API calls into maint
 
 Pair this workflow with Claude Code skills like **pdf** for documentation, **frontend-design** for UI components, and **tdd** for comprehensive test coverage. Your API integration becomes not just functional, but professional-grade.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

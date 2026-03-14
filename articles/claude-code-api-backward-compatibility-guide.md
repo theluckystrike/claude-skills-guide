@@ -114,5 +114,13 @@ The webapp-testing skill includes built-in version detection that helps automate
 
 Backward compatibility with Claude Code API comes down to three principles: detect capabilities at runtime, provide sensible defaults for new parameters, and version your skill manifests explicitly. By following these patterns, you can build skills using frontend-design, pdf, tdd, supermemory, and other tools while ensuring they remain functional as Claude evolves. The key is writing defensive code that gracefuly handles both current and legacy API patterns without requiring users to upgrade immediately.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

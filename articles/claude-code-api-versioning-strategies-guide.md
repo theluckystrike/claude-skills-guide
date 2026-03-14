@@ -184,4 +184,12 @@ API versioning directly impacts how maintainable and extensible your Claude Skil
 
 Choose based on your specific use case: external APIs you consume may mandate certain approaches, while your own skill endpoints benefit from thoughtful selection. The **pdf** skill for document generation and **supermemory** for persistent storage both demonstrate how version-aware design prevents integration rot as services evolve.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -181,4 +181,12 @@ Before considering a task complete, verify Claude's output against these securit
 
 By integrating skills like tdd and supermemory, maintaining project-level security prompts, and using automated security tooling, you create a system where Claude Code consistently produces secure code. The combination of AI assistance and human oversight—backed by automated validation—keeps your projects safe without slowing down development.
 
+
+## Related Reading
+
+- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

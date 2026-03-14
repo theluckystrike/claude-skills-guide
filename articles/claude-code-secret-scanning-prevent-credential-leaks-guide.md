@@ -21,7 +21,7 @@ Developers frequently work with multiple API keys, database credentials, and aut
 
 The [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) and other automation skills often generate code templates that could accidentally contain placeholder patterns resembling real credentials. Without proper scanning, these secrets can slip into version control, CI/CD pipelines, or deployed applications.
 
-A solid secret scanning strategy addresses three distinct scenarios: scanning your codebase for existing leaked secrets, preventing new secrets from being committed, and ensuring Claude Code interactions don't expose sensitive information.
+A solid secret scanning strategy addresses three distinct scenarios: scanning your codebase for existing leaked secrets, preventing new secrets from being committed, and ensuring Claude Code interactions don't expose sensitive information. This complements the [Claude Code permissions model](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) which controls what the AI itself can access.
 
 ## Implementing Secret Scanning in Your Workflow
 
@@ -166,7 +166,7 @@ Static scanning catches issues at commit time, but active monitoring provides de
 
 The supermemory skill can maintain a database of known secrets (encrypted, of course) to detect reintroduction of previously fixed leaks. When combined with CI/CD integration, you create a comprehensive security posture that evolves with your project.
 
-For teams using GitHub Actions or similar CI platforms, integrating secret scanning into your pipeline ensures every pull request passes security checks before merging. The claude-xlsx-skill can generate compliance reports documenting your scanning coverage.
+For teams using [GitHub Actions with approval workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/), integrating secret scanning ensures every pull request passes security checks before merging. The claude-xlsx-skill can generate compliance reports documenting your scanning coverage.
 
 ## Conclusion
 

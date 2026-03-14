@@ -154,4 +154,12 @@ Run the test suite. If tests fail, have Claude fix the implementation rather tha
 
 Getting Claude Code to test before implementing requires explicit prompting, appropriate skill selection, and consistent expectation-setting. The **tdd** skill provides the core test-first workflow, while the **code-review** skill adds a safety net for coverage verification. Configure your prompts to always specify test requirements, and your AI assistant becomes a reliable partner in test-driven development.
 
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Code Skills for Writing Unit Tests Automatically](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -228,4 +228,12 @@ The VCR test recording workflow transforms Claude Code development from unpredic
 
 The pattern works particularly well for regression testing, CI/CD pipelines, and debugging complex multi-step workflows. Combine it with skills like `tdd` for structured test development, `supermemory` for knowledge management, and `pdf` for generating comprehensive test reports.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

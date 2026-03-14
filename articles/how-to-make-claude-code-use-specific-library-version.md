@@ -201,4 +201,12 @@ The key is being explicit in every prompt about version constraints. Claude Code
 
 Controlling library versions with Claude Code requires proactive communication and proper configuration. By using lock files, version specification files, and explicit prompts, you can ensure Claude Code generates code that works with your exact environment. Remember to document your version requirements in CLAUDE.md for persistent instructions across sessions, and always verify generated code against your requirements before deploying.
 
-Built by the luckystrike — More at [zovo.one](https://zovo.one)
+
+## Related Reading
+
+- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

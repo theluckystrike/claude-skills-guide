@@ -247,4 +247,12 @@ Start with token bucket for most use cases—it handles burst traffic gracefully
 
 Rate limiting protects your Claude Code integration from quota exhaustion and ensures consistent performance. Test your implementation thoroughly using the `/tdd` skill, document configurations with the `/pdf` skill, and maintain configurations across sessions with `/supermemory`.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

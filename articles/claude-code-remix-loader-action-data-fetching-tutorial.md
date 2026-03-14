@@ -17,7 +17,7 @@ Remix changes how developers approach data fetching in React applications. Using
 
 ## Understanding Remix Data Flow
 
-Remix introduces a mental model where the server and client work together cleanly. The framework handles the bridge between your backend logic and frontend components, eliminating the need for manual API endpoints in many scenarios.
+Remix introduces a mental model where the server and client work together cleanly. The framework handles the bridge between your backend logic and frontend components, eliminating the need for manual API endpoints in many scenarios. If you're comparing with [React Router v7's approach to loaders and actions](/claude-skills-guide/claude-code-react-router-v7-navigation-guide/), the API is nearly identical since v7 merged Remix concepts.
 
 **Loaders** run on the server before your component renders. They fetch data needed for the page and pass it directly to your component as props. This approach eliminates loading states, race conditions, and the complexity of client-side data fetching.
 
@@ -264,7 +264,7 @@ export async function action({ request }: ActionFunctionArgs) {
 
 ## Best Practices for Remix Data Fetching
 
-Keep your loaders focused on returning data, not rendering UI. Move complex data transformation to utility functions that both loaders and components can import. This separation keeps your code testable and maintainable.
+Keep your loaders focused on returning data, not rendering UI. Move complex data transformation to utility functions that both loaders and components can import. This separation keeps your code testable and maintainable. For production deployment, follow the [Vercel deployment workflow for Next.js/Remix projects](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/).
 
 Use TypeScript generics with useLoaderData and useActionData to maintain type safety throughout your application. Claude Code helps generate these types automatically when you describe your data structures.
 

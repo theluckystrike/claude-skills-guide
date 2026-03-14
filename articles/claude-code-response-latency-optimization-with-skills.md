@@ -13,7 +13,7 @@ permalink: /claude-code-response-latency-optimization-with-skills/
 
 # Claude Code Response Latency Optimization with Skills
 
-[When you invoke a skill in Claude Code, every millisecond counts](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) The time between typing `/skill-name` and receiving the first useful response depends on several factors you can control. This guide covers practical techniques for building skills that respond faster while maintaining quality output.
+When you invoke a skill in Claude Code, every millisecond counts. The time between typing `/skill-name` and receiving the first useful response depends on several factors you can control. This guide covers practical techniques for building skills that respond faster while maintaining quality output. Pair these techniques with [token optimization strategies to reduce API costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) simultaneously.
 
 ## Understanding Skill Invocation Latency
 
@@ -152,7 +152,7 @@ The **xlsx** skill benefits from this approach when working with spreadsheet pro
 
 ## Measuring and Iterating
 
-Latency optimization requires measurement. Track skill response times and identify bottlenecks.
+Latency optimization requires measurement. [Use benchmarking techniques to track skill response times](/claude-skills-guide/benchmarking-claude-code-skills-performance-guide/) and identify bottlenecks.
 
 ### Add Timestamps to Skill Output
 

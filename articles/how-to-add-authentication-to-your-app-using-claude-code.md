@@ -165,4 +165,12 @@ Adding authentication to your application using Claude Code is straightforward w
 
 The initial investment in proper authentication pays dividends in security and user trust. Claude Code accelerates this process while helping you avoid common pitfalls that lead to security vulnerabilities.
 
+
+## Related Reading
+
+- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

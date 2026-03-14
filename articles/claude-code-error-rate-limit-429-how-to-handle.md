@@ -175,6 +175,14 @@ If you consistently hit rate limits despite optimization:
 
 HTTP 429 errors don't have to halt your productivity. By implementing exponential backoff, batching requests, and using Claude skills strategically, you can minimize disruptions. The **tdd**, **pdf**, **frontend-design**, **supermemory**, and other specialized skills help accomplish more per request, naturally reducing your rate limit exposure. With these techniques, you can work around rate limits effectively and maintain a smooth development workflow.
 
+
+## Related Reading
+
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Keeps Making the Same Mistake: Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 {% endraw %}

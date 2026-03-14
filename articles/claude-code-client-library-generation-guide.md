@@ -182,4 +182,12 @@ Claude Code transforms client library generation from a manual, error-prone proc
 
 Start with a well-documented OpenAPI specification, apply generation and customization skills, and maintain your clients through automated regeneration pipelines. Your developers—and your API consumers—benefit from reliable, consistent client libraries that stay current with your API's evolution.
 
+
+## Related Reading
+
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

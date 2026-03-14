@@ -223,4 +223,12 @@ The tdd skill can suggest improvements to your test coverage. For documentation 
 
 Building Go modules with Claude Code combines Go's simplicity with AI-assisted development. Focus on clean package design, comprehensive testing, and clear documentation from the start. The skills ecosystem, including tdd, pdf, and supermemory, provides targeted assistance for different aspects of module development. Start with a solid foundation and iterate based on actual usage patterns.
 
+
+## Related Reading
+
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

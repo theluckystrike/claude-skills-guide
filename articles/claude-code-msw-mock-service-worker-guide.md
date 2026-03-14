@@ -209,4 +209,12 @@ Claude Code can analyze your handler code and suggest corrections based on the e
 
 MSW combined with Claude Code creates a powerful development workflow for frontend applications. Whether you're prototyping new features, writing tests with the tdd skill, or designing components with frontend-design, mock APIs provide the consistency and control you need. Start with simple handlers and gradually adopt advanced patterns as your project complexity grows.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

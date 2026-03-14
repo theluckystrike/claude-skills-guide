@@ -273,4 +273,12 @@ Request periodic progress reports:
 
 ---
 
+
+## Related Reading
+
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Keeps Making the Same Mistake: Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

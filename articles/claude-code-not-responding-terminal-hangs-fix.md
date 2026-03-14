@@ -171,4 +171,12 @@ When all else fails, perform these steps in order:
 
 Claude Code freezes stem from process management issues, skill execution problems, resource exhaustion, network timeouts, and corrupted state. By understanding these causes and applying the corresponding fixes, you can restore productivity quickly. Regular maintenance and careful skill configuration minimize future occurrences.
 
+
+## Related Reading
+
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Keeps Making the Same Mistake: Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

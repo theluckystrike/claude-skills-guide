@@ -146,4 +146,12 @@ The `supermemory` skill provides a useful pattern here—store test results and 
 
 Integration testing for Claude Code skills combines input-output validation, tool mocking, and state persistence checks into a comprehensive quality assurance strategy. Build tests around skill boundaries, automate execution in CI pipelines, and continuously expand coverage based on production failures. This approach ensures your skills work reliably across the diverse scenarios they'll encounter in real-world use.
 
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Code Skills for Writing Unit Tests Automatically](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

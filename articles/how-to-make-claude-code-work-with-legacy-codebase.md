@@ -147,4 +147,12 @@ Making Claude Code work with legacy codebases requires upfront investment in con
 
 The key is treating your legacy codebase as a system with established patterns that deserve respect. By providing clear guidance and working in small steps, you can safely modernize portions of your codebase without introducing regressions or losing institutional knowledge.
 
+
+## Related Reading
+
+- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

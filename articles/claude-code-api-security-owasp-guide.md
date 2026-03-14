@@ -270,4 +270,12 @@ Securing Claude Code API integrations against OWASP vulnerabilities requires lay
 
 Leverage Claude skills like **tdd** for security testing, **supermemory** for documenting security patterns across your projects, and **pdf** for generating audit documentation. Regular security reviews and automated testing ensure your defenses remain effective as your applications evolve.
 
+
+## Related Reading
+
+- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

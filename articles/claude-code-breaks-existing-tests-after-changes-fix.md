@@ -170,4 +170,12 @@ Claude Code breaking existing tests is a common experience, not a failure of the
 
 Use explicit constraints in your prompts, activate the **tdd** skill for test-first workflows, and run tests immediately after changes. With these practices, you'll spend less time debugging AI-generated code and more time building.
 
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Code Skills for Writing Unit Tests Automatically](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
