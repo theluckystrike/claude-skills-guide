@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "How AI Agents Decide When to Use Tools"
 description: "Discover how Claude Code intelligently decides when to use tools, including the decision-making process, practical examples, and how to optimize tool."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-ai-agents-decide-when-to-use-tools/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # How AI Agents Decide When to Use Tools
 

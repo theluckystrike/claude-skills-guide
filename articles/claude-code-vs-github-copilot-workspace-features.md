@@ -1,11 +1,17 @@
 ---
+
 layout: article
 title: "Claude Code vs GitHub Copilot Workspace Features"
 permalink: /claude-code-vs-github-copilot-workspace-features/
 redirect_to: /claude-code-vs-github-copilot-workspace-2026/
 sitemap: false
 categories: [guides]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 ## Related Reading
 

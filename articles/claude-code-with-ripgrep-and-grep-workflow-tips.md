@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code with Ripgrep and Grep Workflow Tips"
 description: "Master grep and ripgrep workflows with Claude Code. Learn practical patterns for searching codebases, automating repetitive searches, and integrating."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-with-ripgrep-and-grep-workflow-tips/
 categories: [guides]
-tags: [claude-code, ripgrep, grep, workflow]
+tags: [claude-code, ripgrep, grep, workflow, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code with Ripgrep and Grep Workflow Tips
 

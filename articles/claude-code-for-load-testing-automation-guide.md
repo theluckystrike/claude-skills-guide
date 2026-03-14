@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Claude Code for Load Testing Automation Guide"
 description: "Learn how to automate load testing workflows using Claude Code. Practical examples, code snippets, and integration strategies for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-for-load-testing-automation-guide/
 categories: [guides]
-tags: [claude-code, load-testing, automation]
+tags: [claude-code, load-testing, automation, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Load Testing Automation Guide
 
@@ -148,7 +152,7 @@ export default function () {
 
 ## Conclusion
 
-Claude Code transforms load testing from a manual, sporadic activity into an automated, continuous process. Generate scripts quickly, integrate with CI/CD pipelines, and leverage AI for result analysis. The combination accelerates feedback loops and catches performance issues before they impact users.
+Claude Code transforms load testing from a manual, sporadic activity into an automated, continuous process. Generate scripts quickly, integrate with CI/CD pipelines, and use AI for result analysis. The combination accelerates feedback loops and catches performance issues before they impact users.
 
 
 ## Related Reading
