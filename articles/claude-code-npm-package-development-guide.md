@@ -1,195 +1,226 @@
 ---
 layout: default
 title: "Claude Code NPM Package Development Guide"
-description: "A practical guide to developing NPM packages with Claude Code. Learn skill workflows, automation patterns, and tooling integration for efficient package development."
+description: "A practical guide to developing NPM packages with Claude Code. Learn workflows, skill usage, and tooling for creating publishable JavaScript libraries."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-npm-package-development-guide/
 ---
 
+{% raw %}
+
 # Claude Code NPM Package Development Guide
 
-Developing NPM packages requires careful attention to project structure, testing, documentation, and publish workflows. Claude Code accelerates every phase of this process through its skill system, enabling automated testing, documentation generation, and quality checks without manual intervention.
+Creating a professional NPM package requires more than just writing functional JavaScript. You need proper testing, documentation, TypeScript definitions, and CI/CD pipelines. Claude Code accelerates this entire workflow through specialized skills and intelligent automation.
 
-This guide covers practical workflows for building production-ready NPM packages using Claude Code skills.
+## Setting Up Your Package Foundation
 
-## Setting Up Your Package Structure
-
-Every robust NPM package starts with a well-organized directory structure. Create your package with the essential files first:
+Before writing any code, initialize your project with the proper structure. Use npm init with scoped naming if you plan to publish organizationally:
 
 ```bash
-mkdir my-package && cd my-package
+mkdir my-utils && cd my-utils
 npm init -y
+npm pkg set name="@yourorg/utils" type="module"
 ```
 
-Edit your `package.json` with proper metadata:
+For TypeScript-based packages, install the necessary dev dependencies:
 
-```json
-{
-  "name": "your-package-name",
-  "version": "1.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "test": "jest",
-    "lint": "eslint src --ext .ts"
-  },
-  "keywords": ["utility", "helper"],
-  "license": "MIT"
-}
+```bash
+npm install -D typescript @types/node vitest tsup
 ```
 
-For TypeScript packages, include a `tsconfig.json` and consider adding type definitions from the start. The **tdd** skill helps establish test files alongside your source code, enforcing test-driven development from the first commit.
+The tsup skill in Claude Code helps you configure TypeScript compilation and bundling. Invoke it by typing `/tsup` in your Claude session, then describe your output targets—ESM, CJS, or both.
 
-## Automating Tests with Claude Code
+## Structuring for Reusability
 
-Quality packages require comprehensive test coverage. The **tdd** skill generates unit tests, integration tests, and edge case coverage for your package:
+Well-structured packages follow consistent patterns. Organize your source files to separate concerns:
 
 ```
-/tdd generate jest tests for src/calculator.ts covering add, subtract, multiply, divide operations
+src/
+├── index.ts          # Main entry point
+├── utils/
+│   ├── string.ts
+│   └── array.ts
+├── types/
+│   └── index.ts      # TypeScript interfaces
+└── internal/
+    └── helpers.ts    # Private utilities
 ```
 
-This creates test files that cover happy paths and error conditions:
+When importing in your entry file, use explicit paths:
 
 ```typescript
-import { Calculator } from '../src/calculator';
+// src/index.ts
+export { capitalize, truncate } from './utils/string';
+export { unique, chunk } from './utils/array';
+export type { UserConfig, ApiResponse } from './types';
+```
 
-describe('Calculator', () => {
-  let calc: Calculator;
+The frontend-design skill assists when your package includes UI components, helping you structure props and theme interfaces properly.
 
-  beforeEach(() => {
-    calc = new Calculator();
-  });
+## Writing Tests with the TDD Skill
 
-  it('should add two numbers correctly', () => {
-    expect(calc.add(2, 3)).toBe(5);
-  });
+Quality packages require comprehensive tests. The tdd skill transforms how you approach testing by enforcing test-first development. Activate it in your Claude session:
 
-  it('should throw on division by zero', () => {
-    expect(() => calc.divide(10, 0)).toThrow();
-  });
+```
+/tdd
+Write unit tests for a parseDate utility that handles ISO strings, Unix timestamps, and relative dates like "2 days ago"
+```
+
+Claude will generate the test file first, then guide implementation to satisfy those tests. This workflow produces more robust code with better edge-case coverage.
+
+For testing configuration, create a vitest.config.ts:
+
+```typescript
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+  test: {
+    environment: 'node',
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json', 'html'],
+    },
+  },
 });
 ```
 
-Run tests with `npm test` or integrate with CI pipelines using GitHub Actions. The **automated-testing-pipeline-with-claude-tdd-skill-2026** workflow demonstrates continuous testing integration.
+Run tests during development with watch mode:
 
-## Documentation Generation
-
-Well-documented packages attract users and contributors. Use the **docx** skill to generate README files and API documentation:
-
-```
-/docx create package README with: installation instructions, usage examples for each export, API reference table, contributing guidelines
+```bash
+npm test -- --watch
 ```
 
-For API documentation specifically, consider combining the **docx** skill with JSDoc comments in your source:
+## Documentation with the PDF Skill
+
+Package documentation often needs PDF generation for formal specs or client deliverables. The pdf skill enables programmatic PDF creation from your Claude sessions. After implementing your package functions, generate documentation:
+
+```bash
+-load_skill pdf
+Generate a PDF API reference document for this package with usage examples for each exported function
+```
+
+For inline documentation, follow JSDoc conventions consistently:
 
 ```typescript
 /**
- * Calculates the sum of two numbers
- * @param a - First number
- * @param b - Second number
- * @returns Sum of a and b
+ * Safely parses and normalizes date input into a Date object.
+ * @param input - ISO string, Unix timestamp, or relative date
+ * @returns Normalized Date object or null if invalid
+ * @example
+ * parseDate('2024-01-15') // => Date object
+ * parseDate(1705276800)   // => Date object
+ * parseDate('2 days ago') // => Date object
  */
-export function add(a: number, b: number): number {
-  return a + b;
+export function parseDate(input: string | number): Date | null {
+  // Implementation
 }
 ```
 
-Generate TypeScript declarations automatically with `npm run build`, then publish to npm with `npm publish`.
+## Managing Dependencies with SuperMemory
 
-## Linting and Code Quality
+As packages grow, dependency management becomes critical. The supermemory skill helps track which versions you're using and alerts you to conflicts:
 
-Maintain consistent code style across your package using ESLint and Prettier. Configure your `.eslintrc.json`:
+```
+/supermemory
+Check for outdated dependencies in this project and suggest safe upgrade paths
+```
+
+For production packages, minimize external dependencies. Bundle utilities internally rather than pulling in heavy libraries:
+
+```typescript
+// Instead of lodash, implement what you need:
+export function deepClone<T>(obj: T): T {
+  if (obj === null || typeof obj !== 'object') return obj;
+  if (Array.isArray(obj)) return obj.map(item => deepClone(item)) as T;
+  
+  const cloned = {} as T;
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      cloned[key] = deepClone(obj[key]);
+    }
+  }
+  return cloned;
+}
+```
+
+## Version Control and Publishing
+
+Configure your package.json for publishing:
 
 ```json
 {
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    "no-unused-vars": "error"
+  "name": "@yourorg/utils",
+  "version": "1.0.0",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest",
+    "prepublishOnly": "npm run test && npm run build"
   }
 }
 ```
 
-The **code-review-automation** skill reviews pull requests and code changes:
-
-```
-/code-review check this PR for common bugs, memory leaks, and TypeScript issues
-```
-
-## Version Management and Publishing
-
-Semantic versioning is critical for package users. Use standard-version or changesets for automated version bumps:
+Use semantic versioning strictly—patch for bug fixes, minor for features, major for breaking changes. Before publishing, test your package locally:
 
 ```bash
-npm install --save-dev standard-version
-npx standard-version --release-as minor
+npm pack
+npm install ./yourorg-utils-1.0.0.tgz
 ```
 
-Before publishing, verify your package works correctly:
+## Automation with CI/CD
 
-```bash
-npm pack --dry-run
-npm publish --access public
-```
-
-The **supermemory** skill helps track versioning decisions and changelog entries across your project's history, making it easier to maintain clear release notes.
-
-## CI/CD Integration
-
-Automate your release pipeline with GitHub Actions:
+Set up GitHub Actions for automated testing and publishing:
 
 ```yaml
-name: CI
-on: [push, pull_request]
+name: Publish
+on:
+  release:
+    types: [created]
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - run: npm run build
       - run: npm test
+      - run: npm run build
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 ```
 
-For releases, use the **github-actions** skill to set up automated publishing to npm when you push version tags.
+The skills system continues evolving. New community skills like the mcp-builder skill help create Model Context Protocol servers that extend Claude's capabilities, which can enhance your development workflow.
 
-## Publishing Platform-Specific Packages
+## Final Checklist
 
-If your package includes platform-specific native modules, you may need to publish builds for multiple architectures. Use the **frontend-design** skill to create documentation showing users how to import the correct build:
+Before publishing your first NPM package, verify:
 
-```typescript
-// Auto-detect platform
-import { platform } from 'os';
-import { nativeModule } from './native';
+- TypeScript definitions are complete and accurate
+- Every exported function has JSDoc comments
+- Test coverage exceeds 80%
+- README includes installation, usage examples, and API reference
+- LICENSE file is present
+- Repository URL in package.json points to your source
 
-// Conditional exports in package.json
-"exports": {
-  ".": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
-  }
-}
-```
-
-## Best Practices Summary
-
-Follow these core practices for professional NPM packages:
-
-1. **Start with TypeScript** — Type definitions are expected in 2026
-2. **Write tests first** — Use the tdd skill to enforce test coverage
-3. **Document everything** — Generate README and API docs automatically
-4. **Use semantic versioning** — Automate version bumps with standard-version
-5. **Automate CI/CD** — Run tests on every PR and publish on version tags
-6. **Track decisions** — Use supermemory to maintain project context
-
-Claude Code skills like tdd, docx, supermemory, and frontend-design transform package development from manual effort into streamlined automation. Each skill handles specific aspects of the development lifecycle, letting you focus on writing the code that matters.
-
-Start your next package with these workflows and ship faster with confidence.
+Building NPM packages with Claude Code combines AI assistance with solid engineering practices. The tdd skill ensures testability, the pdf skill handles documentation generation, and consistent workflows produce professional results your users will appreciate.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+{% endraw %}
