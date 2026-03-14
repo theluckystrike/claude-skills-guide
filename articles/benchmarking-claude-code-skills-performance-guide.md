@@ -65,7 +65,7 @@ Invoked: [record start time manually or via wrapper script]
 
 Claude Code does not expose token counts directly in the CLI output, but you can estimate usage through the API or by examining response headers. For skills that call external APIs, track tokens through the provider's dashboard.
 
-The **xlsx** skill demonstrates this well. When processing spreadsheets, it reads cell data, applies transformations, and writes results. Each read_file call loads data into context. A 10,000-row spreadsheet might consume 15,000+ tokens just for the initial read.
+The **xlsx** skill demonstrates this well. When processing spreadsheets, it reads cell data, applies transformations, and writes results. Each Read call loads data into context. A 10,000-row spreadsheet might consume 15,000+ tokens just for the initial read.
 
 To optimize, break large files into chunks:
 

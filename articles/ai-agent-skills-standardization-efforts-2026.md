@@ -78,7 +78,7 @@ skill:
     - system: "You analyze code for bugs, security issues, and improvements..."
     - user_templates: ["Review this {language} code: {code}"]
   platform_overrides:
-    claude: "Use read_file to access code before analysis"
+    claude: "Use Read to access code before analysis"
     cursor: "Request file path from user before reviewing"
 ```
 

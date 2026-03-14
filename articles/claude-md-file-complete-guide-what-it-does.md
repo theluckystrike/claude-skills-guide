@@ -29,7 +29,7 @@ name: my-skill
 description: A skill that does something useful
 tools:
   - Bash
-  - ReadFile
+  - Read
 ---
 
 # My Skill
@@ -45,7 +45,7 @@ The **`name`** field identifies the skill for invocation. When you call a skill,
 
 The **`description`** field provides a brief explanation of what the skill does. This appears in skill listings and helps Claude determine when a skill might be relevant to your request.
 
-The **`tools`** field declares which tools the skill can use. This is critical for security and scope control. A skill tagged with `["Bash", "WriteFile"]` cannot access tools outside that list, even if the skill's instructions ask for them. The [Claude Code permissions model security guide](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) explains how these boundaries are enforced at runtime.
+The **`tools`** field declares which tools the skill can use. This is critical for security and scope control. A skill tagged with `["Bash", "Write"]` cannot access tools outside that list, even if the skill's instructions ask for them. The [Claude Code permissions model security guide](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) explains how these boundaries are enforced at runtime.
 
 
 
@@ -97,7 +97,7 @@ name: pdf
 description: Creates PDF documents from markdown content
 tools:
   - Bash
-  - WriteFile
+  - Write
   - Glob
 ---
 
@@ -119,7 +119,7 @@ tools:
   - Bash
   - Read
   - Write
-  - EditFile
+  - Edit
 ---
 
 # SuperMemory Skill
@@ -141,7 +141,7 @@ tools:
   - Read
   - Write
   - Glob
-  - EditFile
+  - Edit
 ---
 
 # Frontend Design Skill

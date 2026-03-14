@@ -101,12 +101,12 @@ The skill needs to read and write the state file as part of its execution. Templ
 
 ```
 State management procedure:
-1. At start: read_file(".claude/state/{task_id}.json")
+1. At start: Read(".claude/state/{task_id}.json")
    - If file not found: initialize with {status: "starting", completed_files: [], ...}
-2. After each unit of work: write_file(".claude/state/{task_id}.json", updated_state)
+2. After each unit of work: Write(".claude/state/{task_id}.json", updated_state)
 3. At completion: update status to "complete" and write final state
 
-State writes must happen via write_file, not via bash echo or Python scripts.
+State writes must happen via Write, not via Bash echo or Python scripts.
 ```
 
 ## Resumable Task Design
@@ -252,7 +252,7 @@ When a task reaches "complete" or "cancelled" status:
 
 **Storing state in conversation history**: Conversation history is ephemeral and grows unbounded. Do not use it as your primary state store.
 
-**State writes inside bash scripts**: Writing state via `bash("echo '{}' > state.json")` bypasses the `write_file` tool's logging and hook system. Always use `write_file` for state updates.
+**State writes inside bash scripts**: Writing state via `Bash("echo '{}' > state.json")` bypasses the `Write` tool's logging and hook system. Always use `Write` for state updates.
 
 **Unbounded task size**: Do not design a skill that tries to complete an entire codebase in one invocation. Break work into chunks and use state to track progress between invocations.
 

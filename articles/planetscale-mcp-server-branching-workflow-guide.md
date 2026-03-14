@@ -35,15 +35,15 @@ First, ensure you have a skill that can interact with the Planetscale API. You'l
 name: planetscale-branching
 description: Automate Planetscale database branching workflows
 tools:
-  - read_file
-  - write_file
-  - bash
+  - Read
+  - Write
+  - Bash
 ---
 
 # Planetscale Branching Workflow Skill
 ```
 
-The skill uses `read_file` to inspect migration files, `write_file` to generate schema snapshots, and `bash` to execute CLI commands for Planetscale operations.
+The skill uses `Read` to inspect migration files, `Write` to generate schema snapshots, and `Bash` to execute CLI commands for Planetscale operations.
 
 ## Automating Branch Creation
 

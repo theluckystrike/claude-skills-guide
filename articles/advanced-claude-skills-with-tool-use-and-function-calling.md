@@ -185,14 +185,14 @@ For the `frontend-design` skill:
 
 ```
 To add a new component:
-1. read_file: src/components/index.ts (check if component name is taken)
-2. read_file: docs/design-tokens.md (get current design tokens)
+1. Read: src/components/index.ts (check if component name is taken)
+2. Read: docs/design-tokens.md (get current design tokens)
 3. [generate component code in context]
-4. write_file: src/components/{ComponentName}/{ComponentName}.tsx
-5. write_file: src/components/{ComponentName}/index.ts (barrel export)
-6. read_file: src/components/index.ts (get current barrel file content)
-7. write_file: src/components/index.ts (add new export)
-8. bash: npx tsc --noEmit (verify no TypeScript errors)
+4. Write: src/components/{ComponentName}/{ComponentName}.tsx
+5. Write: src/components/{ComponentName}/index.ts (barrel export)
+6. Read: src/components/index.ts (get current barrel file content)
+7. Write: src/components/index.ts (add new export)
+8. Bash: npx tsc --noEmit (verify no TypeScript errors)
 
 If step 8 produces errors, fix them and re-run before completing.
 ```
@@ -203,10 +203,10 @@ For the `tdd` skill:
 
 ```
 For any implementation task:
-1. write_file: {test_file} (write failing tests first)
-2. bash: npx jest {test_file} --no-coverage (verify tests fail as expected)
-3. write_file: {implementation_file} (write implementation)
-4. bash: npx jest {test_file} --no-coverage (verify tests pass)
+1. Write: {test_file} (write failing tests first)
+2. Bash: npx jest {test_file} --no-coverage (verify tests fail as expected)
+3. Write: {implementation_file} (write implementation)
+4. Bash: npx jest {test_file} --no-coverage (verify tests pass)
 5. If tests don't pass, debug and fix before completing
 
 Never report success unless step 4 produces all passing tests.
@@ -218,13 +218,13 @@ Claude needs explicit guidance on how to handle tool failures. Without it, it ma
 
 ```
 Error handling:
-- If read_file fails because the file doesn't exist: create a minimal file with 
+- If Read fails because the file doesn't exist: create a minimal file with
   appropriate boilerplate, then proceed
-- If bash returns a non-zero exit code: include the error output in your analysis
+- If Bash returns a non-zero exit code: include the error output in your analysis
   and suggest a fix, do not silently ignore it
-- If write_file fails: report the failure and the attempted path, do not retry 
+- If Write fails: report the failure and the attempted path, do not retry
   silently more than once
-- If TypeScript compilation fails after your changes: fix the errors before 
+- If TypeScript compilation fails after your changes: fix the errors before
   completing the task, even if the user didn't ask you to
 ```
 

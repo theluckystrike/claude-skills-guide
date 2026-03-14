@@ -32,8 +32,8 @@ The YAML front matter at the top of your Claude MD file is loaded first, so keep
 name: pdf
 description: Work with PDF documents
 tools:
-  - read_file
-  - write_file
+  - Read
+  - Write
 ---
 ```
 
