@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Shared Memory Patterns for Collaborating AI Agents"
 description: "Learn how to build effective shared memory patterns that enable AI agents to collaborate seamlessly using Claude Code skills and features."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, ai-agents, collaboration, shared-memory, multi-agent]
+tags: [claude-code, ai-agents, collaboration, shared-memory, multi-agent, claude-skills]
 permalink: /shared-memory-patterns-for-collaborating-ai-agents/
+reviewed: true
+score: 7
 ---
+
 
 # Shared Memory Patterns for Collaborating AI Agents
 
