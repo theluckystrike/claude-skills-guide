@@ -52,11 +52,7 @@ The skill recognizes common patterns like icon buttons, form inputs, and modal d
 
 ### 2. The TDD Skill for Accessibility Testing
 
-Pair the frontend-design skill with the **tdd** (Test-Driven Development) skill to verify accessibility compliance:
-
-```bash
-claude install tdd
-```
+Pair the frontend-design skill with the **tdd** (Test-Driven Development) skill to verify accessibility compliance. In Claude Code, skills are invoked in conversation—reference the tdd skill by name when describing your task.
 
 The tdd skill generates Jest tests that check for proper ARIA attributes:
 
@@ -79,11 +75,7 @@ describe('SearchButton accessibility', () => {
 
 ### 3. The Accessibility Testing Skill
 
-For comprehensive testing, install the **axe-accessibility-testing** skill:
-
-```bash
-claude install axe-accessibility-testing
-```
+For comprehensive testing, use the **axe-accessibility-testing** skill by referencing it in Claude Code conversation.
 
 This skill integrates axe-core testing into your test suite, automatically detecting ARIA violations:
 
@@ -371,7 +363,7 @@ Automating ARIA label implementation in React components through Claude Code tra
 - Audit and fix existing accessibility issues
 - Maintain consistency across your component library
 
-The result is a more inclusive user experience with significantly less manual effort. Start by installing the key skills, defining your accessibility conventions in CLAUDE.md, and gradually automating ARIA label implementation across your React codebase.
+The result is a more inclusive user experience with significantly less manual effort. Start by using the key skills in Claude Code, defining your accessibility conventions in CLAUDE.md, and gradually automating ARIA label implementation across your React codebase.
 {% endraw %}
 
 ## Related Reading

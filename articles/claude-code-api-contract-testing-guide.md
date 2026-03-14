@@ -28,15 +28,9 @@ Claude Code skills like the **tdd** skill help structure your testing workflow, 
 
 ## Setting Up Contract Testing with Claude Code
 
-Begin by installing the essential skills for contract testing workflows:
+Begin by using the essential skills for contract testing workflows. In Claude Code, skills are invoked directly in conversation—reference the **tdd** skill, **pdf** skill, or **api-testing** skill by name when describing your task to Claude Code.
 
-```bash
-claude install tdd
-claude install pdf
-claude install api-testing
-```
-
-The **tdd** skill provides test scaffolding and organization patterns. The **api-testing** skill (if available in your registry) offers HTTP request utilities. For documentation, the **pdf** skill helps generate contract specification documents.
+The **tdd** skill provides test scaffolding and organization patterns. The **api-testing** skill offers HTTP request utilities. For documentation, the **pdf** skill helps generate contract specification documents.
 
 Create a dedicated test directory structure:
 
