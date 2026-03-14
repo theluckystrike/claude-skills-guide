@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How to Test and Debug Multi-Agent Workflows with Claude Code"
 description: "A comprehensive guide to testing and debugging multi-agent workflows using Claude Code's powerful features and skills."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-test-and-debug-multi-agent-workflows/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 # How to Test and Debug Multi-Agent Workflows with Claude Code
 
@@ -155,7 +161,7 @@ This skill becomes part of your development workflow, making testing as natural 
 
 ## Conclusion
 
-Testing and debugging multi-agent workflows requires a systematic approach, but Claude Code provides the tools to make this manageable. By setting up proper test environments, debugging agent communication, leveraging built-in features, and following proven strategies, you can build reliable multi-agent systems that scale.
+Testing and debugging multi-agent workflows requires a systematic approach, but Claude Code provides the tools to make this manageable. By setting up proper test environments, debugging agent communication, using built-in features, and following proven strategies, you can build reliable multi-agent systems that scale.
 
 Remember: the complexity of multi-agent workflows makes thorough testing not just nice to have, but essential. Invest in your testing infrastructure early, and you'll save countless hours of debugging later.
 

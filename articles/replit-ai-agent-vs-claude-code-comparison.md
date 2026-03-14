@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Replit AI Agent vs Claude Code: A Developer Comparison"
 description: "A practical comparison of Replit AI Agent and Claude Code for developers. Learn which tool fits your workflow and when to use each."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /replit-ai-agent-vs-claude-code-comparison/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 If you're a developer exploring AI-powered coding assistants, you've likely encountered both Replit AI Agent and Claude Code. These tools represent two different approaches to AI-assisted development—one integrated into a cloud IDE, the other a standalone CLI tool. This comparison breaks down their strengths, workflows, and practical use cases to help you choose the right fit.

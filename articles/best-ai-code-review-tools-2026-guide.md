@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Best AI Code Review Tools 2026 Guide"
 description: "Discover the most effective AI-powered code review tools for developers in 2026. Learn about automated code analysis, security scanning, and best practices."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /best-ai-code-review-tools-2026-guide/
+reviewed: true
+score: 7
+categories: [comparisons]
+tags: [claude-code, claude-skills]
 ---
+
 {% raw %}
 
 

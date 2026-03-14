@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Codium AI vs Claude Code Comparison 2026"
 description: "A practical comparison of Codium AI and Claude Code for developers in 2026. Includes code examples, use cases, and recommendations for choosing the."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /codium-ai-vs-claude-code-comparison-2026/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Codium AI vs Claude Code Comparison 2026: A Developer Guide
 

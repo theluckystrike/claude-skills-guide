@@ -1,13 +1,18 @@
 ---
 
+
 layout: default
 title: "AI Coding Tools for Open Source Contributions"
 description: "Discover how AI coding tools streamline open source contributions. Learn practical workflows for finding issues, writing patches, and maintaining OSS."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-coding-tools-for-open-source-contributions/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Coding Tools for Open Source Contributions
 

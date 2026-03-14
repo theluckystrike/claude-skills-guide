@@ -1,13 +1,18 @@
 ---
 
+
 layout: default
 title: "Building a CLI DevTool with Claude Code: A Practical."
 description: "Learn how to build a powerful command-line development tool using Claude Code. This guide covers project setup, skill integration, automation, and."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /building-a-cli-devtool-with-claude-code-walkthrough/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Building a CLI DevTool with Claude Code: A Practical Walkthrough
 

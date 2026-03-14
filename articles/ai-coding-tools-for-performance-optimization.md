@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "AI Coding Tools for Performance Optimization: A."
 description: "Discover how AI coding tools can help you identify bottlenecks, optimize algorithms, and write faster code. Real examples using Claude skills and other."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-coding-tools-for-performance-optimization/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Coding Tools for Performance Optimization
 

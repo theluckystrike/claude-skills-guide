@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "ChatGPT Plus vs Claude Pro for Developers in 2026"
 description: "A comprehensive comparison of ChatGPT Plus and Claude Pro for developers in 2026, focusing on Claude Code capabilities, coding features, and practical."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chatgpt-plus-vs-claude-pro-for-developers-2026/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # ChatGPT Plus vs Claude Pro for Developers in 2026
 

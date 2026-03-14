@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "AI Coding Tools Security Concerns Enterprise Guide"
 description: "A practical security guide for developers using AI coding tools in enterprise environments. Covers data exposure risks, prompt injection, API security."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-coding-tools-security-concerns-enterprise-guide/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Coding Tools Security Concerns Enterprise Guide
 
@@ -204,7 +209,7 @@ class AIInteractionLogger:
 Combining these strategies creates a defense-in-depth approach to AI coding tool security:
 
 1. **Start with the tdd skill** — write security tests before implementing features
-2. **Use local context** — leverage skills like `supermemory` that don't require cloud storage
+2. **Use local context** — use skills like `supermemory` that don't require cloud storage
 3. **Validate everything** — implement input sanitization at multiple layers
 4. **Audit regularly** — review logs, skill lists, and access controls weekly
 5. **Train your team** — ensure developers understand these risks and mitigation strategies

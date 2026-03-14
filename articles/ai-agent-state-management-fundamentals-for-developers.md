@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "AI Agent State Management Fundamentals for Developers"
 description: "Learn the essential concepts of state management in AI agents, with practical examples using Claude Code for building robust autonomous applications."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-agent-state-management-fundamentals-for-developers/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # AI Agent State Management Fundamentals for Developers

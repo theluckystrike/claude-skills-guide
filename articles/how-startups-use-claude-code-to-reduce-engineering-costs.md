@@ -1,13 +1,18 @@
 ---
 
+
 layout: default
 title: "How Startups Use Claude Code to Reduce Engineering Costs"
 description: "Discover how startups leverage Claude Code and specialized skills to dramatically reduce engineering costs through automation, faster development."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-startups-use-claude-code-to-reduce-engineering-costs/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # How Startups Use Claude Code to Reduce Engineering Costs
 
