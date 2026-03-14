@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Parallel AI Agent Execution Patterns and Trade-offs"
-description: "Explore parallel execution patterns for AI agents using Claude Code, including supervisor-worker architectures, concurrent tool use, and the trade-offs between speed, cost, and complexity."
+description: "Explore parallel execution patterns for AI agents using Claude Code, including supervisor-worker architectures, concurrent tool use, and the trade-offs."
 date: 2026-03-14
 categories: [claude-code, architecture, patterns]
 tags: [claude-code, parallel-execution, multi-agent, concurrency, performance]
@@ -134,3 +134,11 @@ For example, a code review skill might spawn parallel analysis agents for differ
 Parallel AI agent execution offers significant benefits for latency-sensitive applications but requires thoughtful implementation. Start with simple patterns like independent tool execution, then add complexity only when the trade-offs justify it. Monitor your actual speedup, cost implications, and error rates to guide optimization decisions.
 
 The supervisor-worker pattern and fan-out, fan-in provide the most flexibility for Claude Code workflows, but always measure whether the performance gains outweigh the added complexity. In practice, hybrid approaches—combining sequential execution for dependent tasks with parallel execution for independent ones—often yield the best results.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Using Claude Code Inside Docker Container Tutorial"
-description: "A comprehensive tutorial on running Claude Code inside Docker containers. Learn how to set up containerized development environments with Claude Code skills and MCP servers."
+description: "A comprehensive tutorial on running Claude Code inside Docker containers. Learn how to set up containerized development environments with Claude Code."
 date: 2026-03-14
 author: theluckystrike
 permalink: /using-claude-code-inside-docker-container-tutorial/
@@ -291,3 +291,11 @@ Running Claude Code inside Docker containers provides a powerful, reproducible w
 The skills system allows you to customize Claude Code's behavior for your specific workflows, while MCP servers extend functionality as needed. Start with the basic setup outlined in this tutorial, then customize it to match your team's requirements.
 
 Experiment with different configurations, create custom skills for your development workflows, and enjoy consistent AI-assisted development wherever Docker runs.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
