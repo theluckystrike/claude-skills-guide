@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Docker Compose Test Setup Guide"
 description: "Set up Docker Compose environments for testing Claude Code skills. Includes containerized skill execution, test databases, mock services, and CI integration patterns."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, docker, docker-compose, testing, devops]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /claude-code-docker-compose-test-setup-guide/
 ---
+
 
 {% raw %}
 

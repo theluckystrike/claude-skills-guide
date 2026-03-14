@@ -1,12 +1,23 @@
 ---
+
 layout: default
 title: "Claude Code Insomnia API Testing Workflow"
 description: "Master API testing with Claude Code and Insomnia. Practical workflow examples, automation tips, and integration patterns for developers."
 date: 2026-03-14
+<<<<<<< HEAD
+author: "Claude Skills Guide"
+=======
 categories: [tutorials]
 author: theluckystrike
+>>>>>>> b364fbd862828af183249c80524194c773b06a03
 permalink: /claude-code-insomnia-api-testing-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+{% raw %}
+
 
 # Claude Code Insomnia API Testing Workflow
 
@@ -163,3 +174,4 @@ The Claude Code and Insomnia combination creates a productive API testing workfl
 - [Claude Skills Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
