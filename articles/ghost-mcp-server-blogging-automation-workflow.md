@@ -5,7 +5,7 @@ description: "Connect Claude to Ghost using the Model Context Protocol. Automate
 date: 2026-03-14
 categories: [integrations]
 tags: [claude-code, claude-skills, mcp, ghost, blogging, automation, workflow]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 ---

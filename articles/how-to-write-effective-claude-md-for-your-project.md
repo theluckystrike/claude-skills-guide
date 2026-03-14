@@ -3,7 +3,11 @@ layout: default
 title: "How to Write Effective CLAUDE.md for Your Project"
 description: "A practical guide to creating CLAUDE.md files that help Claude Code understand your project context, conventions, and workflows. Includes examples and best practices."
 date: 2026-03-14
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, claude-md, project-setup, workflow]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # How to Write Effective CLAUDE.md for Your Project

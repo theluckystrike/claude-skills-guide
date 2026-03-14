@@ -58,7 +58,7 @@ Run the tdd skill on src/auth/login.ts to ensure all edge cases are covered
 
 The skill suggests test cases based on the function signature and recent bug fixes in similar modules. Maintainers appreciate this because it shifts quality assurance earlier in the development cycle.
 
-For legacy codebases, the **code-review** skill identifies untested paths:
+For legacy codebases, Claude Code can identify untested paths:
 
 ```
 Find functions in lib/parser.js with less than 60% branch coverage
@@ -76,7 +76,7 @@ Summarize the changes in PR #432 and identify potential breaking changes
 
 Claude Code analyzes the diff, checks for backward-incompatible API modifications, and flags areas that need extra scrutiny. This doesn't replace human review—it makes it more efficient.
 
-The **git** skill helps maintainers clean up contributor branches:
+Claude Code's git integration helps maintainers clean up contributor branches:
 
 ```
 Squash commits and rebase onto main, ensuring the commit message follows conventional commits
@@ -132,7 +132,7 @@ The key is starting with one repetitive task and automating it. Most maintainers
 
 ## Conclusion
 
-Claude Code isn't about replacing maintainers—it's about giving them leverage. By automating documentation generation, test coverage checks, issue triage, and pull request summaries, maintainers reclaim time for the work that actually requires human judgment: mentoring contributors, designing new features, and building community.
+Claude Code isn't about replacing maintainers—it's about amplifying what they can do. By automating documentation generation, test coverage checks, issue triage, and pull request summaries, maintainers reclaim time for the work that actually requires human judgment: mentoring contributors, designing new features, and building community.
 
 The tools are available. The workflows are proven. The only question is which task you'll automate first.
 

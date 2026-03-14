@@ -22,7 +22,7 @@ Claude Code provides several skills that work well with Golang projects:
 - `/webapp-testing` — API endpoint testing and validation
 - `/pdf` — Documentation generation from code
 - `/mcp` — Model Context Protocol server integration
-- `/docker` — Container configuration and multi-stage builds
+- Docker — Container configuration and multi-stage builds (describe requirements directly)
 
 For Golang-specific work, you often describe your intent directly since no built-in `/golang` skill exists. The combination of these skills covers most microservice development needs.
 
@@ -188,13 +188,13 @@ go test ./internal/service/... -v -cover
 
 ## Docker Container Setup for Go Microservices
 
-The `/docker` skill generates [production-ready Dockerfiles](/claude-skills-guide/claude-code-dockerfile-generation-multi-stage-build-guide/) for Go applications. Request a multi-stage build configuration:
+For Docker configuration, describe your requirements directly to Claude Code and it will generate optimized configurations:
 
 ```
-/docker Create a multi-stage Dockerfile for a Go API service. Use alpine base, build with CGO disabled, run as non-root user.
+Create a multi-stage Dockerfile for a Go API service. Use alpine base, build with CGO disabled, run as non-root user.
 ```
 
-The skill produces optimized configurations:
+Claude produces optimized configurations:
 
 ```dockerfile
 # Build stage
@@ -344,7 +344,7 @@ This pattern ensures your microservice handles errors consistently and validates
 
 ## Summary
 
-Claude Code skills enhance Golang microservices development by automating handler generation, test creation, Docker configuration, and API testing. The `/tdd`, `/webapp-testing`, and `/docker` skills work together to cover the full development lifecycle. For Go-specific patterns, describing your requirements directly to Claude Code produces idiomatic code that follows established conventions. Explore more backend patterns in the [use cases hub](/claude-skills-guide/use-cases-hub/).
+Claude Code skills enhance Golang microservices development by automating handler generation, test creation, Docker configuration, and API testing. The `/tdd` and `/webapp-testing` skills, combined with direct prompting for Docker configuration, cover the full development lifecycle. For Go-specific patterns, describing your requirements directly to Claude Code produces idiomatic code that follows established conventions. Explore more backend patterns in the [use cases hub](/claude-skills-guide/use-cases-hub/).
 
 ## Related Reading
 

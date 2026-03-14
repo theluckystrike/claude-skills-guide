@@ -44,7 +44,7 @@ claude "Create a new endpoint for user registration that validates email format 
 
 This two-step approach ensures Claude understands your tech stack, coding conventions, and project structure before generating code.
 
-## Leveraging Claude's Reasoning Capabilities
+## Using Claude's Reasoning Capabilities
 
 Claude Code has strong reasoning abilities that shine when you ask for step-by-step thinking. For complex problems, explicitly request the reasoning process:
 
@@ -127,7 +127,7 @@ This phased approach gives Claude clear milestones and allows you to course-corr
 
 ## Working with Codebase Context
 
-For the best results with existing codebases, leverage Claude's ability to understand your project's context:
+For the best results with existing codebases, use Claude's ability to understand your project's context:
 
 1. **Reference specific files**: Include file paths in your requests
 2. **Mention dependencies**: Note how the code interacts with other parts of the system

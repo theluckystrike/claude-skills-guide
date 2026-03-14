@@ -20,7 +20,7 @@ This guide covers practical implementation patterns for developers and power use
 
 The Tavily MCP Server exposes Tavily's search and content extraction APIs through the Model Context Protocol, making them available as tools within Claude Code. Unlike basic web search, Tavily specializes in AI-optimized search results with semantic understanding, making it particularly effective for research tasks that require nuanced information retrieval.
 
-The MCP server architecture allows you to maintain persistent connections and leverage Claude's native tool-calling capabilities, which means you can build multi-step research workflows that combine search results with other skills like PDF processing, document generation, and memory management.
+The MCP server architecture allows you to maintain persistent connections and use Claude's native tool-calling capabilities, which means you can build multi-step research workflows that combine search results with other skills like PDF processing, document generation, and memory management.
 
 ## Installation and Configuration
 
@@ -61,7 +61,7 @@ Research the current state of Model Context Protocol adoption in enterprise soft
 Claude will query Tavily, analyze the results, and present synthesized findings. You can then use supermemory to store this research for future reference:
 
 ```
-Remember that MCP enterprise adoption research: key findings are 1) financial services leading, 2) average implementation time 3-6 months, 3) common use cases are data integration and客服 automation.
+Remember that MCP enterprise adoption research: key findings are 1) financial services leading, 2) average implementation time 3-6 months, 3) common use cases are data integration and customer service automation.
 ```
 
 ### Competitive Analysis Automation
@@ -72,7 +72,7 @@ For product research and competitive analysis, chain Tavily searches with the PD
 Search for recent developments in Claude Code skills ecosystem, then extract key trends from the top 5 articles. Create a summary comparing the approaches each source recommends.
 ```
 
-The workflow leverages Tavily's semantic search to identify relevant content, then uses Claude's analysis capabilities to synthesize patterns across sources.
+The workflow uses Tavily's semantic search to identify relevant content, then uses Claude's analysis capabilities to synthesize patterns across sources.
 
 ### Technical Documentation Gathering
 
@@ -96,7 +96,7 @@ Then search for "OAuth 2.0 MCP server implementation Python"
 Synthesize findings into recommendations for a new server project
 ```
 
-This pattern leverages Claude's function calling to execute sequential searches while maintaining context across steps.
+This pattern uses Claude's function calling to execute sequential searches while maintaining context across steps.
 
 ### Content Extraction and Summarization
 

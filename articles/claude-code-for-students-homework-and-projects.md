@@ -26,12 +26,7 @@ claude --version
 claude --help
 ```
 
-The CLI responds to prompts directly, making it ideal for quick questions, code generation, and debugging. For student workflows, the `-p` flag (project mode) provides persistent context across multiple commands:
-
-```bash
-# Start a persistent session for a coding assignment
-claude -p "Help me with my data structures assignment"
-```
+The CLI responds to prompts directly, making it ideal for quick questions, code generation, and debugging. For student workflows, simply start Claude Code and describe what you need in natural language:
 
 ## Homework Workflow Patterns
 
@@ -39,10 +34,7 @@ claude -p "Help me with my data structures assignment"
 
 Before submitting assignments, run your code through Claude Code for instant feedback:
 
-```bash
-# Review a specific file
-claude -p "Review my Python implementation" < assignment.py
-```
+Start Claude Code and ask: "Review my Python implementation" — then paste or reference the file.
 
 This catches syntax errors, logical mistakes, and style issues before your TA sees the code. The review is immediate and identifies problems that might cost points.
 
@@ -50,9 +42,7 @@ This catches syntax errors, logical mistakes, and style issues before your TA se
 
 Assignment requirements often include test cases. Use Claude Code to generate comprehensive tests:
 
-```bash
-claude -p "Generate unit tests for this sorting algorithm implementation"
-```
+Start Claude Code and ask: "Generate unit tests for this sorting algorithm implementation"
 
 For a bubble sort assignment, you'd get:
 
@@ -85,9 +75,7 @@ if __name__ == '__main__':
 
 When textbooks or lectures leave gaps, ask Claude Code to explain:
 
-```bash
-claude -p "Explain how recursion works with the fibonacci sequence, include a diagram in ASCII"
-```
+Start Claude Code and ask: "Explain how recursion works with the fibonacci sequence, include a diagram in ASCII"
 
 This produces immediate, tailored explanations without the overhead of searching through tutorials.
 
@@ -97,10 +85,7 @@ This produces immediate, tailored explanations without the overhead of searching
 
 For semester-long projects, establish a structured workflow from day one:
 
-```bash
-# Initialize project with proper structure
-claude -p "Create a Flask web app with user authentication"
-```
+Start Claude Code and ask: "Create a Flask web app with user authentication"
 
 Claude Code generates the directory structure, configuration files, and boilerplate code:
 
@@ -120,10 +105,7 @@ project/
 
 Track homework and project tasks directly in your development workflow:
 
-```bash
-# Create a task list for your capstone project
-claude -p "Create a TODO.md with tasks for: database setup, user auth, API endpoints, testing"
-```
+Start Claude Code and ask: "Create a TODO.md with tasks for: database setup, user auth, API endpoints, testing"
 
 Output includes actionable items with realistic estimates:
 
@@ -150,9 +132,7 @@ Output includes actionable items with realistic estimates:
 
 When code breaks, paste the error directly:
 
-```bash
-claude -p "Fix this Django error: FieldError at /users/ 'User' object has no attribute 'get_full_name'"
-```
+Start Claude Code and paste the error: "Fix this Django error: FieldError at /users/ 'User' object has no attribute 'get_full_name'"
 
 The response includes the likely cause and a code fix:
 
@@ -169,9 +149,7 @@ class User(AbstractUser):
 
 Claude Code helps with technical documentation and reports:
 
-```bash
-claude -p "Write a README for my distributed systems project that includes setup instructions, API documentation, and examples"
-```
+Start Claude Code and ask: "Write a README for my distributed systems project that includes setup instructions, API documentation, and examples"
 
 This produces polished documentation matching professional standards:
 
@@ -214,17 +192,13 @@ cache.set('key', 'value', ttl=3600)
 
 Generate study materials from your notes:
 
-```bash
-claude -p "Create flashcards from these OOP notes about inheritance, polymorphism, and encapsulation"
-```
+Start Claude Code and ask: "Create flashcards from these OOP notes about inheritance, polymorphism, and encapsulation"
 
 ### Practice Problems
 
 Generate additional practice problems:
 
-```bash
-claude -p "Create 5 Python practice problems about file I/O, from easy to hard, with solutions"
-```
+Start Claude Code and ask: "Create 5 Python practice problems about file I/O, from easy to hard, with solutions"
 
 This supplements textbook exercises with fresh challenges.
 
@@ -236,9 +210,8 @@ Add shortcuts to your shell configuration:
 
 ```bash
 # ~/.zshrc or ~/.bashrc
-alias cc="claude -p"
-alias rev="claude -p 'review my code for bugs'"
-alias testgen="claude -p 'generate unit tests for'"
+# Create a function to quickly open Claude Code with a prompt
+claudeask() { claude "$@"; }
 ```
 
 ### Combine with Version Control

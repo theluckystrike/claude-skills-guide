@@ -69,7 +69,7 @@ This pattern works well with skills like `supermemory` that persist data to exte
 
 ## OAuth 2.0 for User-Authenticated Requests
 
-Many MCP servers need to act on behalf of users, requiring OAuth flows rather than service-level credentials. The `mcp-oauth-21-authentication-implementation-guide` skill provides detailed patterns for implementing OAuth in MCP contexts.
+Many MCP servers need to act on behalf of users, requiring OAuth flows rather than service-level credentials. For detailed patterns on implementing OAuth in MCP contexts, see the related guides on MCP authentication flows.
 
 For web-based OAuth, your MCP server acts as a callback endpoint:
 
@@ -114,7 +114,7 @@ This approach is essential when building integrations that access user data from
 
 ## Secret Scanning and Prevention
 
-The `claude-code-secret-scanning-prevent-credential-leaks-guide` skill covers automated detection of leaked secrets, but implementing prevention at the MCP server level adds defense in depth.
+Automated detection of leaked secrets complements MCP-level prevention for defense in depth.
 
 Never log or return credentials in tool responses:
 
@@ -160,22 +160,16 @@ async def handle_tool_call(tool_name: str, arguments: dict) -> CallToolResult:
 
 The `pdf` skill can process sensitive documents through your MCP server, while the `tdd` skill might run tests against APIs requiring authentication. Here's how to connect skills securely:
 
-```yaml
-# In your skill.md or claude.md
-skill:
-  name: secure-api-tester
-  tools:
-    - name: run_tests
-      description: Run API integration tests
-      inputSchema:
-        type: object
-        properties:
-          endpoint:
-            type: string
-            description: API endpoint to test
-          auth_token:
-            type: string
-            description: "Authentication token (passed via env var MCP_AUTH_TOKEN in production)"
+```markdown
+<!-- In your skill .md file -->
+# Secure API Tester
+
+Run API integration tests using the MCP server.
+
+When running tests:
+- Use the API endpoint provided by the user
+- Load the auth token from MCP_AUTH_TOKEN environment variable — never accept tokens as user input
+- Report pass/fail status and any authentication errors clearly
 ```
 
 The `frontend-design` skill can integrate with design APIs that require authentication, while `xlsx` might connect to spreadsheets containing sensitive data. In each case, ensure credentials flow through environment variables rather than appearing in skill prompts or tool arguments.

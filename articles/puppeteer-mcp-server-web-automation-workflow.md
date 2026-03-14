@@ -5,7 +5,7 @@ description: "Master web automation using Puppeteer MCP server with Claude Code.
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, mcp, puppeteer, web-automation, browser-automation]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

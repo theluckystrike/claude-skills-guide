@@ -5,7 +5,7 @@ description: "Master Ansible MCP server configuration management with Claude Cod
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, ansible, mcp, configuration-management, devops, infrastructure]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

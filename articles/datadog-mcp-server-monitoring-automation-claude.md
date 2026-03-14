@@ -12,7 +12,7 @@ score: 7
 
 # Datadog MCP Server Monitoring Automation with Claude
 
-Server monitoring remains one of the most critical yet time-consuming aspects of infrastructure management. As systems grow more complex, the ability to automate monitoring workflows becomes essential. This guide explores how to leverage Model Context Protocol (MCP) servers to automate Datadog monitoring tasks using Claude, enabling developers to build intelligent, proactive monitoring systems.
+Server monitoring remains one of the most critical yet time-consuming aspects of infrastructure management. As systems grow more complex, the ability to automate monitoring workflows becomes essential. This guide covers how to use Model Context Protocol (MCP) servers to automate Datadog monitoring tasks with Claude, enabling developers to build intelligent, proactive monitoring systems.
 
 ## Understanding MCP Servers for Monitoring
 
@@ -90,7 +90,7 @@ You can automate the incident lifecycle:
 3. **Notification**: Triggering on-call alerts and creating incident tickets
 4. **Resolution tracking**: Documenting steps taken and monitoring for recurrence
 
-This automation works seamlessly with documentation skills to generate post-incident reports automatically.
+This automation works well with documentation skills to generate post-incident reports automatically.
 
 ## Practical Example: Automated Capacity Planning
 
@@ -120,7 +120,7 @@ Always maintain human oversight for critical operations. Use Claude automation t
 
 ## Conclusion
 
-Automating Datadog monitoring through MCP servers transforms infrastructure management from manual oversight to intelligent, proactive control. By leveraging Claude's natural language capabilities, developers can focus on building and optimizing rather than constantly monitoring dashboards.
+Automating Datadog monitoring through MCP servers transforms infrastructure management from manual oversight to intelligent, proactive control. By using Claude's natural language capabilities, developers can focus on building and optimizing rather than constantly monitoring dashboards.
 
 The combination of Datadog's robust monitoring platform with MCP server automation creates a powerful foundation for modern infrastructure management. Start small, measure results, and expand automation as your confidence grows.
 

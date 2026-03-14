@@ -50,17 +50,17 @@ This configuration works because it provides exactly the information Claude need
 
 Initialize with a focused skill set and expand only when specific needs arise. For a React frontend project, you might load the xlsx skill only during spreadsheet export work. For backend API development, you load testing skills during development sprints and remove them afterward.
 
-Check your available skills before starting:
+Check your available skills by listing the skills directory:
 
 ```bash
-claude skills list
+ls ~/.claude/skills/
 ```
 
-Load skills selectively for each project context:
+Invoke skills selectively during each session by typing the skill name with a `/` prefix in Claude Code:
 
-```bash
-claude skills load xlsx
-claude skills load pdf
+```
+/xlsx
+/pdf
 ```
 
 Many developers maintain project-specific skill profiles by keeping a skills.md file in each project that lists which skills that particular project requires:
@@ -72,9 +72,9 @@ Required skills for this project:
 - pdf: Invoice generation
 - docx: Contract templating
 
-Load these at session start:
-/skills load pdf
-/skills load docx
+Invoke these at session start:
+/pdf
+/docx
 ```
 
 This approach keeps your token usage efficient while ensuring skills are available when needed.

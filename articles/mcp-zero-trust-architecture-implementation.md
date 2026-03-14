@@ -4,8 +4,8 @@ title: "MCP Zero Trust Architecture Implementation: Practical Guide"
 description: "Implement zero trust security for Model Context Protocol servers. Learn authentication, authorization, and isolation strategies for Claude Code MCP deployments."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, mcp, security, zero-trust, model-context-protocol]
-author: theluckystrike
+tags: [claude-code, claude-skills, mcp, security, zero-trust]
+author: "Claude Skills Guide"
 reviewed: true
 score: 7
 ---

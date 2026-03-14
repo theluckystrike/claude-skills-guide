@@ -52,7 +52,7 @@ For example, to deploy a new web service:
 # Tell Claude: "Deploy my Node.js app from this GitHub repo to Render"
 ```
 
-Claude will interact with the Render API to create the service, configure environment variables, and set up the deployment pipeline. This works particularly well when combined with the [tdd skill](https://github.com/anthropics/claude-code-skills) for test-driven deployment workflows.
+Claude will interact with the Render API to create the service, configure environment variables, and set up the deployment pipeline. This works particularly well when combined with the tdd skill for test-driven deployment workflows.
 
 You can also automate rollbacks when deployments fail. Simply ask Claude to review the latest deployment status and roll back to a previous stable version if needed.
 
@@ -87,7 +87,7 @@ The health check automation extends to downtime detection and notification. You 
 
 ## Continuous Deployment Workflows
 
-Integrating the Render MCP server with your CI/CD pipeline creates powerful automation workflows. When combined with the [supermemory skill](https://github.com/anthropics/claude-code-skills) for context management, Claude can track deployment history and automatically roll back when issues are detected.
+Integrating the Render MCP server with your CI/CD pipeline creates powerful automation workflows. When combined with the supermemory skill for context management, Claude can track deployment history and automatically roll back when issues are detected.
 
 Here's a practical deployment workflow:
 
@@ -104,7 +104,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Deploy via Claude Code
         run: |
-          claude --print "Deploy the latest commit to Render production"
+          # Use Claude Code in your dev environment to trigger Render deployments
 ```
 
 The MCP server handles the actual Render API calls while Claude Code provides the intelligence layer for decision-making.
@@ -117,7 +117,7 @@ Debugging web services becomes significantly easier with Claude Code and the Ren
 # Tell Claude: "Show me the error logs from my web service for the last hour"
 ```
 
-Claude parses the log output, identifies patterns, and suggests potential fixes. This is particularly valuable when combined with the [pdf skill](https://github.com/anthropics/claude-code-skills) for generating automated incident reports that you can share with your team.
+Claude parses the log output, identifies patterns, and suggests potential fixes. This is particularly valuable when combined with the pdf skill for generating automated incident reports that you can share with your team.
 
 For ongoing monitoring, set up scheduled checks that query your service health endpoints and generate daily summaries. This proactive approach helps catch issues before they impact users.
 
@@ -135,9 +135,9 @@ When automating Render web services in production environments, follow these gui
 
 ## Extending with Additional Skills
 
-The Render MCP server works well with other Claude skills for enhanced functionality. The [frontend-design skill](https://github.com/anthropics/claude-code-skills) helps you quickly deploy and test frontend changes, while the [docx skill](https://github.com/anthropics/claude-code-skills) enables automated documentation generation for your deployment processes.
+The Render MCP server works well with other Claude skills for enhanced functionality. The frontend-design skill helps you quickly deploy and test frontend changes, while the docx skill handles automated documentation generation for your deployment processes.
 
-You can also combine it with cloud-specific skills like the [AWS MCP server](https://github.com/anthropics/claude-code-skills) for multi-cloud deployments, managing both Render and AWS infrastructure from a single Claude Code session.
+You can also combine it with the AWS MCP server for multi-cloud deployments, managing both Render and AWS infrastructure from a single Claude Code session.
 
 ## Conclusion
 
