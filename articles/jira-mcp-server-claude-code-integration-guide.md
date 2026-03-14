@@ -1,9 +1,13 @@
 ---
 layout: default
 title: "Jira MCP Server Claude Code Integration Guide"
-description: "Learn how to integrate Jira with Claude Code using the Model Context Protocol. Step-by-step setup, configuration examples, and practical use cases for developers."
+description: "Integrate Jira with Claude Code using the Model Context Protocol. Step-by-step setup, configuration examples, and practical use cases for developers."
 date: 2026-03-14
-author: theluckystrike
+categories: [integrations]
+tags: [claude-code, claude-skills, mcp, jira, project-management]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Jira MCP Server Claude Code Integration Guide
@@ -118,7 +122,7 @@ User: Move JIRA-123 to code review
 
 ## Combining with Other Claude Skills
 
-The Jira MCP server works seamlessly with other Claude skills. Pair it with the **tdd** skill for automated test creation when moving issues to ready for QA. Use the **frontend-design** skill to generate UI mockups linked to design tickets.
+The Jira MCP server integrates well with other Claude skills. Pair it with the **tdd** skill for automated test creation when moving issues to ready for QA. Use the **frontend-design** skill to generate UI mockups linked to design tickets.
 
 The **supermemory** skill provides persistent context across sessions, remembering your sprint velocity and team capacity. This enables smarter estimation when Claude Code creates or updates tickets.
 

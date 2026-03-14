@@ -3,14 +3,16 @@ layout: default
 title: "ClickUp MCP Server: Workflow Automation Guide"
 description: "Connect Claude to ClickUp using the Model Context Protocol. Automate task creation, status updates, and project workflows with MCP servers."
 date: 2026-03-14
-author: theluckystrike
-categories: [mcp, automation, clickup]
-tags: [mcp, clickup, workflow-automation, claude-code]
+categories: [integrations]
+tags: [claude-code, claude-skills, mcp, clickup, workflow-automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # ClickUp MCP Server: Workflow Automation Guide
 
-The ClickUp MCP server enables Claude to interact directly with your ClickUp workspace, automating task management, status updates, and project workflows through natural language commands. This guide shows developers and power users how to set up, configure, and leverage this integration for高效工作流 automation.
+The ClickUp MCP server enables Claude to interact directly with your ClickUp workspace, automating task management, status updates, and project workflows through natural language commands. This guide shows developers and power users how to set up, configure, and use this integration for efficient workflow automation.
 
 ## Prerequisites
 
@@ -153,7 +155,7 @@ When automating ClickUp workflows, implement validation to prevent failures:
 - **Validate date formats** (ISO 8601 required)
 - **Handle rate limits** with exponential backoff
 
-Claude can help you build error handling into your automation scripts, making them more robust for production use.
+Claude can help you build error handling into your automation scripts, making them more reliable for production use.
 
 ## Advanced: Custom MCP Server Development
 

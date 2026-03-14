@@ -1,13 +1,13 @@
 ---
 layout: default
 title: "Salesforce MCP Server Data Integration Guide"
-description: "A practical guide to integrating Salesforce with MCP servers for seamless data integration. Code examples, best practices, and workflow patterns for developers."
+description: "Integrate Salesforce with MCP servers for automated data sync. Code examples, best practices, and workflow patterns for developers."
 date: 2026-03-14
 categories: [tutorials]
 tags: [salesforce, mcp, data-integration, api, automation]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Salesforce MCP Server Data Integration Guide
@@ -70,25 +70,31 @@ This approach works well for reporting and data analysis tasks. If you're buildi
 One of the most common integration patterns involves bidirectional sync between Salesforce and other systems. Here's a practical workflow for keeping a custom PostgreSQL database in sync with Salesforce contacts:
 
 ```python
-# sync_contacts.py
-import requests
-from salesforce_mcp_client import SalesforceClient
+# sync_contacts.py - called by Claude Code via Bash tool
+import psycopg2
+from simple_salesforce import Salesforce
+import os
 
-sf = SalesforceClient()
-postgres_client = connect_to_postgres()
+sf = Salesforce(
+    username=os.environ['SF_USERNAME'],
+    password=os.environ['SF_PASSWORD'],
+    security_token=os.environ['SF_SECURITY_TOKEN']
+)
+postgres_client = psycopg2.connect(os.environ['DATABASE_URL'])
 
-def sync_contacts():
+def sync_contacts(last_sync_time):
     # Fetch modified contacts from Salesforce
-    sf_contacts = sf.query("""
-        SELECT Id, FirstName, LastName, Email, Phone, 
-               LastModifiedDate FROM Contact 
-        WHERE LastModifiedDate > :last_sync_time
-    """)
-    
+    soql = f"""
+        SELECT Id, FirstName, LastName, Email, Phone,
+               LastModifiedDate FROM Contact
+        WHERE LastModifiedDate > {last_sync_time}
+    """
+    sf_contacts = sf.query(soql)['records']
+
     # Upsert into local database
     for contact in sf_contacts:
         upsert_contact(postgres_client, contact)
-    
+
     # Update sync checkpoint
     update_sync_time(postgres_client, get_current_time())
 ```
