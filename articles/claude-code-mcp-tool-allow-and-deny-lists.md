@@ -137,7 +137,7 @@ Second, review your MCP server configurations regularly. As your workflows evolv
 
 Third, use environment-specific configurations. Your development environment might need more permissive access than production, so maintain separate configuration files for different contexts.
 
-Fourth, when using the `slack-gif-creator` skill or similar community skills that interact with external services, restrict their MCP tool access to only what's necessary for the intended functionality.
+Fourth, when using custom skills that interact with external services, restrict their MCP tool access to only what is necessary for the intended functionality.
 
 ## Troubleshooting Tool Access Issues
 

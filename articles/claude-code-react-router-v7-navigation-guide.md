@@ -18,7 +18,7 @@ React Router v7 represents a significant evolution in how we handle navigation i
 
 React Router v7 consolidates the best features from Remix into the React Router package. The most notable change is the shift toward file-based routing combined with a data-layer approach that handles loading and mutation states directly within your route components.
 
-If you're building a React application and need help structuring your navigation, [Claude Code can assist with the **frontend-design** skill to create layouts and components](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) that work well with React Router's patterns.
+If you're building a React application and need help structuring your navigation, [Claude Code can assist with the **frontend-design** skill to create layouts and components](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) that work well with React Router's patterns.
 
 ## Setting Up React Router v7
 
@@ -31,7 +31,7 @@ npm install react-router-dom@7
 Create your router configuration in `app/routes.ts` (or `.js`):
 
 ```typescript
-import { createRoutes } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
 export const routes = [
   {
@@ -256,9 +256,9 @@ React Router v7 transforms navigation from a routing concern into a full data la
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Claude Code Next.js Image Optimization Guide](/claude-skills-guide/articles/claude-code-nextjs-image-optimization-guide/)
-- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/articles/vibe-coding-with-claude-code-complete-guide-2026/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code Next.js Image Optimization Guide](/claude-skills-guide/claude-code-nextjs-image-optimization-guide/)
+- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/vibe-coding-with-claude-code-complete-guide-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

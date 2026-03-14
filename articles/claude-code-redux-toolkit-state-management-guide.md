@@ -10,11 +10,13 @@ reviewed: true
 score: 7
 ---
 
-[Redux Toolkit has become the standard for state management in React applications](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), and using it effectively with Claude Code can dramatically improve your development workflow. This guide covers practical patterns for integrating Redux Toolkit into your projects while leveraging Claude Code's capabilities.
+# Claude Code Redux Toolkit State Management Guide
+
+Redux Toolkit has become the standard for state management in React applications, and using it effectively with Claude Code can improve your development workflow. This guide covers practical patterns for integrating Redux Toolkit into your projects.
 
 ## Setting Up Redux Toolkit with Claude Code
 
-When starting a new React project with Redux Toolkit, [Claude Code can help scaffold the entire state management layer](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) The key is providing clear context about your application structure. Begin by specifying your state shape and which components need access to which data.
+When starting a new React project with Redux Toolkit, [Claude Code can help scaffold the entire state management layer](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) The key is providing clear context about your application structure. Begin by specifying your state shape and which components need access to which data.
 
 Install Redux Toolkit and React-Redux in your project:
 
@@ -22,7 +24,7 @@ Install Redux Toolkit and React-Redux in your project:
 npm install @reduxjs/toolkit react-redux
 ```
 
-Claude Code works well alongside skills like frontend-design to ensure your Redux implementation follows consistent patterns across your codebase.
+Claude Code works well alongside the `frontend-design` skill to ensure your Redux implementation follows consistent patterns across your codebase.
 
 ## Creating Slices: The Foundation of Redux Toolkit
 
@@ -156,7 +158,7 @@ export default connect(mapStateToProps, { increment, decrement })(Counter);
 
 ## Handling Async Operations
 
-Beyond createAsyncThunk, you can use RTK Query for data fetching. This built-in solution eliminates the need for manual thunk编写:
+Beyond createAsyncThunk, you can use RTK Query for data fetching. This built-in solution eliminates the need for manual thunk boilerplate:
 
 ```javascript
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
@@ -210,9 +212,9 @@ Claude Code can assist with all aspects of Redux Toolkit implementation, from in
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Claude Code React Router v7 Navigation Guide](/claude-skills-guide/articles/claude-code-react-router-v7-navigation-guide/)
-- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/articles/vibe-coding-with-claude-code-complete-guide-2026/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code React Router v7 Navigation Guide](/claude-skills-guide/claude-code-react-router-v7-navigation-guide/)
+- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/vibe-coding-with-claude-code-complete-guide-2026/)
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

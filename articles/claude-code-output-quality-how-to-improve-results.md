@@ -12,7 +12,7 @@ score: 7
 
 # Claude Code Output Quality: How to Improve Results
 
-[Getting high-quality output from Claude Code requires understanding how the model processes context](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/), interprets instructions, and generates responses. This guide provides actionable techniques that developers and power users can apply immediately to improve their results.
+[Getting high-quality output from Claude Code requires understanding how the model processes context](/claude-skills-guide/claude-skills-context-window-management-best-practices/), interprets instructions, and generates responses. This guide provides actionable techniques that developers and power users can apply immediately to improve their results.
 
 ## Crafting Effective Prompts
 
@@ -32,7 +32,7 @@ The second prompt includes the specific file, line number, error type, context, 
 
 ## Using System Context Effectively
 
-[Claude Code responds better when you provide clear context about your project environment](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Before starting complex tasks, establish the workspace context:
+[Claude Code responds better when you provide clear context about your project environment](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Before starting complex tasks, establish the workspace context:
 
 ```bash
 # Set project context first
@@ -187,9 +187,9 @@ These techniques transform generic interactions into productive partnerships. Th
 
 ## Related Reading
 
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
-- [Claude Code First Project Tutorial: Hello World](/claude-skills-guide/articles/claude-code-first-project-tutorial-hello-world/)
+- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-skills-context-window-management-best-practices/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code First Project Tutorial: Hello World](/claude-skills-guide/claude-code-first-project-tutorial-hello-world/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

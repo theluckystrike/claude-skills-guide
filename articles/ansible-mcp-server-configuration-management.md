@@ -100,6 +100,7 @@ Configuration management often involves manipulating variables across environmen
 
 Here's how you might update a configuration value across multiple environments:
 
+{% raw %}
 ```yaml
 # playbook: update-config.yml
 ---
@@ -126,6 +127,7 @@ Here's how you might update a configuration value across multiple environments:
         name: myapp
         state: restarted
 ```
+{% endraw %}
 
 ## Integrating with Other Claude Skills
 
