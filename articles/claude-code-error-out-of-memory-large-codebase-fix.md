@@ -1,144 +1,195 @@
 ---
 layout: default
 title: "Claude Code Error Out of Memory Large Codebase Fix"
-description: "Resolve out of memory errors when using Claude Code with large codebases. Memory management strategies, skill optimization, and practical fixes for."
+description: "Resolve out of memory errors when working with large codebases in Claude Code. Practical solutions, configuration tweaks, and memory optimization techniques."
 date: 2026-03-14
-categories: [troubleshooting]
-tags: [claude-code, claude-skills, troubleshooting, memory, large-codebase, performance]
 author: theluckystrike
-reviewed: true
-score: 8
+categories: [guides]
+tags: [claude-code, troubleshooting, memory, large-codebases, performance]
 permalink: /claude-code-error-out-of-memory-large-codebase-fix/
 ---
 
 # Claude Code Error Out of Memory Large Codebase Fix
 
-When you work with large codebases in Claude Code, you may encounter an out of memory error that halts your session abruptly. This problem occurs when the [combined memory footprint of your project files](/claude-skills-guide/claude-skills-context-window-management-best-practices/), skill definitions, and conversation context exceeds what Claude Code can handle efficiently. The fix requires understanding the underlying causes and applying targeted strategies to reduce memory pressure.
+Working with large codebases in Claude Code can trigger memory exhaustion errors that halt your workflow. When your project grows beyond a certain size, you may encounter the dreaded out-of-memory (OOM) error. This guide provides practical solutions to fix and prevent these issues.
 
-## Why Large Codebases Trigger Memory Errors
+## Understanding the OOM Error
 
-[Claude Code loads project files into memory during each session](/claude-skills-guide/claude-skills-context-window-management-best-practices/) A monorepo with hundreds of thousands of lines of code can easily overwhelm the available memory allocation. When you invoke skills like `/tdd` or `/frontend-design`, additional overhead gets added on top of that baseline. The memory consumption compounds when you chain multiple skills together or when Claude Code attempts to index entire directory structures for semantic search.
+When Claude Code attempts to analyze or process files in a large repository, it loads file contents into memory. Projects with thousands of files, deep directory structures, or massive individual files can exceed available RAM. The error typically appears as:
 
-The error typically manifests as a process termination with a message indicating the system ran out of memory. You might see the Claude Code session crash unexpectedly or become unresponsive after loading a large file or directory.
-
-## Immediate Solutions for Memory Errors
-
-### 1. Limit File Scope with Targeted Prompts
-
-Instead of asking Claude Code to analyze your entire codebase, narrow the scope explicitly:
-
-```bash
-# Instead of: "Review all files in this project"
-# Use: "Review only the files in src/auth/ directory"
+```
+Error: JavaScript heap out of memory
 ```
 
-When using skills like `/pdf` for documentation processing, load one document at a time rather than batching multiple large files in a single prompt.
+Or in some cases:
 
-### 2. Exclude Large Directories from Context
-
-Create or update your `.claude/settings.json` to exclude unnecessary directories:
-
-```json
-{
-  "projectRoots": ["./src", "./lib"],
-  "ignorePatterns": [
-    "node_modules/**",
-    "dist/**",
-    "build/**",
-    "*.log",
-    ".git/**",
-    "vendor/**",
-    "coverage/**"
-  ]
-}
+```
+RangeError: Array buffer allocation failed
 ```
 
-This prevents Claude Code from scanning and loading metadata from folders that consume memory without adding value to your current task.
+The root cause is that Claude Code's underlying Node.js process hits the default memory limit of approximately 1.4 GB.
 
-### 3. Split Large Files Before Processing
+## Quick Fix: Increase Node.js Memory Limit
 
-When you need to work with oversized files, break them into smaller chunks:
+The fastest solution is to allocate more memory to the Node.js process running Claude Code. You can do this by setting the `NODE_OPTIONS` environment variable before launching Claude Code.
 
 ```bash
-# Split a large JSON file into manageable pieces
-split -l 1000 large-dataset.json chunk_
+export NODE_OPTIONS="--max-old-space-size=4096"
+claude
 ```
 
-Process each chunk separately with Claude Code, then combine the results. This approach works well when using `/xlsx` skills on large spreadsheets or when analyzing log files with the `bash` skill.
-
-### 4. Use Session Management Skills Strategically
-
-Skills like `/supermemory` can help persist important context between sessions without keeping everything in active memory. By offloading long-term context to the skill's storage mechanism, you reduce the memory footprint of your current session.
-
-## Advanced Memory Optimization Techniques
-
-### Configure Claude Code Memory Limits
-
-If you have access to environment variables, adjust the memory allocation:
+This command increases the memory limit to 4 GB. For most large codebases, 4-8 GB provides sufficient headroom. If you need more:
 
 ```bash
-export CLAUDE_CODE_MEMORY_LIMIT=4096
+export NODE_OPTIONS="--max-old-space-size=8192"
+claude
+```
+
+For permanent configuration, add this to your shell profile (`~/.zshrc` or `~/.bashrc`):
+
+```bash
 export NODE_OPTIONS="--max-old-space-size=4096"
 ```
 
-These settings increase the available heap space for Node.js-based Claude Code operations.
+## Optimizing Context Window Usage
 
-### Use Lazy Loading with Skill Composition
+Large codebases strain Claude Code's context window. The model processes your entire project context, but you can optimize how much gets loaded.
 
-Instead of loading a monolithic skill, break it into smaller, composable pieces. The `tdd` skill works efficiently when you invoke only the specific phase you need:
+### Use the `maxTokens` Parameter
 
-```markdown
-# skill-tdd-unit.md - Focus only on unit test generation
-# Don't load integration test patterns unnecessarily
+When starting a session, constrain token usage to prevent excessive memory consumption:
+
+```
+/max-tokens 8000
 ```
 
-This principle applies to other skills as well. The `/frontend-design` skill runs lighter when you specify exactly what you need rather than loading all design system capabilities.
+This prevents Claude from attempting to load your entire codebase into context.
 
-### Implement Context Budgeting
+### Selective File Watching
 
-Track your session's memory usage by monitoring how many files and how much conversation history you have loaded. When a session grows long with many loaded files, save your progress and start a fresh session with a narrower scope. This prevents accumulated context from causing memory pressure during extended work.
+Configure Claude Code to ignore unnecessary directories. Create a `.claudeignore` file in your project root:
 
-## Preventing Memory Errors in Long-Running Sessions
+```
+# Dependencies
+node_modules/
+vendor/
+dist/
+build/
 
-Continuous sessions that span hours accumulate memory as Claude Code caches file contents and conversation history. Apply these preventive measures:
+# Generated files
+*.log
+*.lock
 
-1. **Restart sessions periodically**: After completing major milestones, start a new session to clear accumulated memory.
+# Large media
+*.mp4
+*.zip
+*.tar.gz
+```
 
-2. **Use explicit context boundaries**: When working with `/docx` or `/pdf` skills on documentation, complete one document before loading the next.
+This reduces the files Claude Code monitors and loads into memory.
 
-3. **Avoid glob patterns on large directories**: Commands like `find . -name "*.ts"` can flood the context with file paths. Use more specific paths instead.
+## Project-Specific Configuration
 
-4. **Clear skill contexts when not in use**: If you invoked `/supermemory` for a specific task, complete that task before moving to unrelated work.
+Create a `claude.json` configuration file in your project root to customize behavior:
 
-## When to Consider Infrastructure Changes
+```json
+{
+  "maxFileCount": 100,
+  "maxFileSize": 1048576,
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/.git/**",
+    "**/dist/**"
+  ],
+  "env": {
+    "NODE_OPTIONS": "--max-old-space-size=4096"
+  }
+}
+```
 
-If memory errors persist despite optimization efforts, your development environment may need upgrading:
+This configuration limits file processing to 100 files and excludes directories that consume memory without providing relevant code context.
 
-- **Increase system RAM**: Claude Code performs better with at least 16GB available, especially when working with projects exceeding 100,000 lines of code.
+## Working with Specific Language Codebases
 
-- **Use faster storage**: SSDs reduce file loading time and memory pressure during index operations.
+Different languages and frameworks have unique considerations.
 
-- **Run Claude Code in a container with dedicated resources**: Using Docker with memory limits set to 4GB or higher provides consistent performance.
+### Node.js and JavaScript Projects
 
-## Practical Workflow Example
+For JavaScript projects, exclude test files and configuration when not needed:
 
-Here is a practical workflow that minimizes memory errors when refactoring a large codebase using multiple skills:
+```
+/focus src/
+```
 
-1. Start a fresh session and invoke only the specific skill needed for your immediate task.
+This tells Claude Code to prioritize the `src` directory, reducing memory load from test files, configs, and build outputs.
 
-2. If using `/tdd`, load only the test files relevant to the component you are modifying.
+### Python Projects
 
-3. Complete one refactoring pass, then save your changes and start fresh for the next component.
+For Python codebases, exclude virtual environments and cache directories:
 
-4. Use `/supermemory` to persist architectural decisions across sessions rather than keeping everything in active context.
+```
+/exclude .venv/
+/exclude __pycache__/
+/exclude .pytest_cache/
+```
 
-This approach keeps memory consumption predictable and prevents crashes during extended work sessions.
+### Monorepos
 
-## Related Reading
+Monorepos present particular challenges. Use the `super记忆` skill to maintain persistent context across sessions, breaking your work into smaller chunks:
 
-- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/) — Handle context window overflow errors alongside out-of-memory crashes
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-skills-context-window-management-best-practices/) — Proactively manage memory and context to prevent out-of-memory errors
-- [Claude Code Skill Timeout Error: How to Increase the Limit](/claude-skills-guide/claude-code-skill-timeout-error-how-to-increase-the-limit/) — Address timeouts that co-occur with memory pressure on large codebases
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Solutions for memory, context, and performance issues
+```
+/use super记忆
+/context load
+```
+
+This lets you maintain project awareness without loading everything at once.
+
+## Using Claude Skills for Memory Management
+
+Several Claude skills help manage large codebase interactions efficiently:
+
+- **super记忆** maintains persistent memory across sessions, reducing the need to reload context
+- **frontend-design** provides optimized patterns for frontend projects with built-in file size awareness
+- **pdf** handles large documentation files without loading them into the main context
+- **tdd** focuses on specific files during test-driven development, minimizing memory usage
+
+When working with large documentation, the `pdf` skill extracts text without loading the entire file into Claude's context window.
+
+## Monitoring Memory Usage
+
+Track memory consumption to identify when problems occur:
+
+```bash
+# On macOS
+top -l 1 | grep -E "^PID|node|claude"
+
+# On Linux
+ps aux --sort=-%mem | head -5
+```
+
+If memory consistently approaches your limit, increase the allocation or optimize your project structure.
+
+## Best Practices for Large Codebase Workflows
+
+1. **Break work into focused sessions** — instead of asking Claude to refactor your entire codebase, work on specific modules
+2. **Use git branches** — create separate branches for major changes to keep sessions focused
+3. **Close unused sessions** — multiple Claude Code sessions compete for memory
+4. **Restart periodically** — clear memory by ending and restarting sessions
+5. **Index strategically** — use tools like `grep` or `ripgrep` to locate code before asking Claude to read files
+
+## When Memory Limits Aren't Enough
+
+If you consistently hit memory limits despite optimizations, consider architectural changes:
+
+- Split large repositories into separate packages
+- Use a monorepo toolchain with workspace isolation
+- Implement module-level boundaries that let you work on individual components
+- Consider upgrading your hardware or using a machine with more RAM
+
+The `tdd` skill can help you work incrementally on large codebases by focusing on one test and one implementation at a time, keeping memory usage minimal.
+
+## Summary
+
+Claude Code out of memory errors with large codebases are solvable. Start with the quick fix of increasing Node.js memory via `NODE_OPTIONS`, then optimize your project configuration with `.claudeignore` and `claude.json`. Use targeted skills like `super记忆` and `tdd` to maintain efficiency, and break large tasks into focused sessions. These strategies keep your workflow productive regardless of codebase size.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
