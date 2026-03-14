@@ -3,7 +3,11 @@ layout: default
 title: "Telegram MCP Server Bot Automation Workflow"
 description: "Master Telegram bot automation using the Model Context Protocol server with Claude Code. This guide covers setup, message handling, workflow automation, and practical examples for developers."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, telegram, mcp, bot-automation, workflow]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Telegram MCP Server Bot Automation Workflow
@@ -98,7 +102,7 @@ This workflow demonstrates the power of combining MCP server capabilities with s
 
 ## Managing Conversations and State
 
-Effective bot automation requires maintaining conversation context across multiple messages. The supermemory skill provides persistent memory that your Telegram bot can leverage:
+Effective bot automation requires maintaining conversation context across multiple messages. The supermemory skill provides persistent memory that your Telegram bot can use:
 
 ```javascript
 // Skill: telegram-support-bot

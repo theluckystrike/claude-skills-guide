@@ -126,7 +126,7 @@ This configuration ensures messages don't disappear when processing fails. You c
 
 ## Scaling with Consumer Groups
 
-For high-throughput scenarios, distribute message processing across multiple consumers. This horizontal scaling approach works seamlessly with MCP server architecture:
+For high-throughput scenarios, distribute message processing across multiple consumers. This horizontal scaling approach works well with MCP server architecture:
 
 ```javascript
 async function createConsumerGroup(queueName, consumerCount) {
@@ -214,6 +214,6 @@ This monitoring capability becomes valuable when integrating with larger systems
 
 RabbitMQ MCP server implementations provide a flexible foundation for message queue automation. From basic publish-subscribe patterns to complex routing with dead letter handling, the combination enables sophisticated workflows without sacrificing reliability. Start with simple implementations, add error handling incrementally, and scale your consumer base as needed.
 
-The key to success lies in treating your message infrastructure as a programmable system rather than a simple transport layer. With proper automation in place, your queues become intelligent pipelines that handle failure gracefully, scale automatically, and integrate seamlessly with broader system architectures.
+The key to success lies in treating your message infrastructure as a programmable system rather than a simple transport layer. With proper automation in place, your queues become intelligent pipelines that handle failure gracefully, scale automatically, and connect reliably with broader system architectures.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

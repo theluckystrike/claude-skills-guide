@@ -1,13 +1,13 @@
 ---
 layout: default
 title: "MCP Server Input Validation Security Patterns"
-description: "Implement robust input validation and security patterns for MCP servers. Learn defensive coding techniques, sanitization strategies, and threat mitigation for Model Context Protocol implementations."
+description: "Implement input validation and security patterns for MCP servers. Learn defensive coding techniques, sanitization strategies, and threat mitigation for Model Context Protocol implementations."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, mcp, security, input-validation, model-context-protocol]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [claude-code, claude-skills, mcp, security, input-validation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # MCP Server Input Validation Security Patterns

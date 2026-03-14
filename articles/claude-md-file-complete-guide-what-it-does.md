@@ -3,12 +3,16 @@ layout: default
 title: "Claude MD File Complete Guide — What It Does"
 description: "A comprehensive guide to .md files in Claude Code: how they power skills, contain configuration via front matter, and structure AI interactions."
 date: 2026-03-14
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, claude-md, skill-format, configuration]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Claude MD File Complete Guide — What It Does
 
-If you have used Claude Code or explored the Claude skills ecosystem, you have encountered `.md` files. These are not ordinary markdown files — they are the fundamental building blocks that define how Claude behaves when performing specific tasks. This guide explains what a Claude MD file does, how it works, and how you can leverage it to create powerful automations.
+If you have used Claude Code or explored the Claude skills ecosystem, you have encountered `.md` files. These are not ordinary markdown files — they are the fundamental building blocks that define how Claude behaves when performing specific tasks. This guide explains what a Claude MD file does, how it works, and how you can use it to create powerful automations.
 
 ## What Is a Claude MD File
 

@@ -3,7 +3,11 @@ layout: default
 title: "Railway MCP Server Deployment Automation Guide"
 description: "A practical guide to automating MCP server deployments on Railway. Learn deployment patterns, configuration management, and CI/CD integration for production-ready MCP servers."
 date: 2026-03-14
-author: theluckystrike
+categories: [tutorials]
+tags: [claude-code, claude-skills, railway, mcp, deployment, devops]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Railway MCP Server Deployment Automation Guide
