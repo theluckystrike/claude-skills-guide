@@ -1,44 +1,45 @@
 ---
 layout: default
 title: "Claude Code Axios HTTP Client Workflow"
-description: "Master the Axios HTTP client workflow in Claude Code. Practical patterns for API requests, interceptors, error handling, and integrating with Claude skills."
+description: "Learn how to build efficient HTTP client workflows using Axios with Claude Code for streamlined API interactions."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-axios-http-client-workflow/
 ---
 
-When you need to make HTTP requests from within Claude Code, Axios remains one of the most reliable choices for JavaScript environments. This guide covers practical workflows for integrating Axios into your Claude Code projects, from basic requests to advanced patterns like interceptors, retry logic, and coordinating with other Claude skills.
+{% raw %}
+When building modern applications, HTTP requests are the backbone of data exchange. Whether you're fetching from a REST API, sending form data, or handling authentication tokens, having a solid HTTP client workflow saves hours of debugging. This guide walks you through creating a practical Axios workflow that integrates seamlessly with Claude Code.
 
-## Setting Up Axios in Your Project
+## Setting Up Your Axios Instance
 
-Before using Axios in your Claude Code workflow, ensure it's installed in your project:
-
-```bash
-npm install axios
-```
-
-If you're working in a Node.js environment within Claude Code, create a dedicated HTTP client module that can be imported across your tools and scripts. This approach keeps your request logic centralized and easier to maintain.
-
-## Building a Reusable HTTP Client
-
-A well-structured Axios instance serves as the foundation for consistent API interactions. Create a client module that handles base configuration, authentication, and common error scenarios:
+The first step involves configuring a centralized Axios instance with sensible defaults. Rather than making ad-hoc requests throughout your codebase, create a dedicated HTTP client module:
 
 ```javascript
-// http-client.js
+// src/api/client.js
 import axios from 'axios';
 
 const apiClient = axios.create({
   baseURL: process.env.API_BASE_URL || 'https://api.example.com',
   timeout: 10000,
   headers: {
-    'Content-Type': 'application/json'
-  }
+    'Content-Type': 'application/json',
+  },
 });
 
-// Request interceptor for auth tokens
+export default apiClient;
+```
+
+This approach allows you to modify global settings—such as base URL or default headers—in one place rather than hunting through dozens of files.
+
+## Request and Response Interceptors
+
+Interceptors are powerful tools for handling cross-cutting concerns like authentication tokens and error logging. Add these to your client configuration:
+
+```javascript
+// src/api/client.js (continued)
 apiClient.interceptors.request.use(
   (config) => {
-    const token = process.env.API_TOKEN;
+    const token = localStorage.getItem('authToken');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -47,224 +48,176 @@ apiClient.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Response interceptor for global error handling
 apiClient.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      console.error('Authentication failed - check your API token');
+      // Handle token refresh or logout
+      window.location.href = '/login';
     }
     return Promise.reject(error);
   }
 );
-
-export default apiClient;
 ```
 
-This client handles authentication automatically on every request and provides centralized error handling. Import it into any Claude Code tool or script that needs to make API calls.
+This pattern ensures every request includes authentication automatically, while responses are normalized before reaching your components.
 
-## Practical Request Patterns
+## Building Service Modules
 
-### GET Requests with Query Parameters
-
-For fetching data with filters or pagination, use Axios params option:
+Organize your API calls into service modules grouped by feature or domain. For instance, a user service might look like:
 
 ```javascript
-import apiClient from './http-client';
+// src/api/services/userService.js
+import apiClient from '../client';
 
-async function searchUsers(query, page = 1, limit = 20) {
-  try {
-    const response = await apiClient.get('/users', {
-      params: { q: query, page, limit }
-    });
-    return response.data;
-  } catch (error) {
-    console.error('Search failed:', error.message);
-    throw error;
-  }
+export const userService = {
+  getProfile: () => apiClient.get('/users/me'),
+  
+  updateProfile: (data) => apiClient.put('/users/me', data),
+  
+  getOrders: (params) => apiClient.get('/users/me/orders', { params }),
+  
+  deleteAccount: () => apiClient.delete('/users/me'),
+};
+```
+
+Service modules keep your components clean and make testing straightforward. When you need to swap the underlying HTTP library, only these service files require updates.
+
+## Handling Concurrent Requests
+
+Modern applications often need to fetch multiple resources simultaneously. Axios provides `Promise.all` for parallel requests:
+
+```javascript
+async function loadDashboardData() {
+  const [user, orders, notifications] = await Promise.all([
+    userService.getProfile(),
+    userService.getOrders({ limit: 5 }),
+    notificationService.getUnread(),
+  ]);
+  
+  return { user: user.data, orders: orders.data, notifications: notifications.data };
 }
 ```
 
-### POST Requests with Error Handling
+This pattern reduces wait time significantly compared to sequential requests.
 
-Create robust POST handlers that provide meaningful feedback:
+## Error Handling Strategies
+
+Robust error handling distinguishes production-ready code from prototypes. Create a utility function that categorizes errors:
 
 ```javascript
-async function createResource(resourceData) {
-  try {
-    const response = await apiClient.post('/resources', resourceData);
-    return { success: true, data: response.data };
-  } catch (error) {
-    if (error.response) {
-      // Server responded with error status
-      return { 
-        success: false, 
-        error: error.response.data.message || 'Server error',
-        status: error.response.status
-      };
-    } else if (error.request) {
-      // Request made but no response
-      return { success: false, error: 'No response from server' };
+// src/api/utils/errorHandler.js
+export function handleApiError(error) {
+  if (error.response) {
+    // Server responded with error status
+    const { status, data } = error.response;
+    switch (status) {
+      case 400:
+        return 'Invalid request data';
+      case 403:
+        return 'Access denied';
+      case 404:
+        return 'Resource not found';
+      case 500:
+        return 'Server error';
+      default:
+        return data.message || 'An error occurred';
     }
-    return { success: false, error: error.message };
+  } else if (error.request) {
+    return 'Network error - please check your connection';
   }
+  return 'Unexpected error';
 }
 ```
 
-This pattern returns structured results that Claude Code can easily process and act upon.
+Displaying user-friendly messages while logging detailed errors for debugging is essential for maintainability.
 
-## Advanced Patterns
+## Integrating with Claude Code Skills
 
-### Retry Logic for Transient Failures
+Your Axios workflow pairs excellently with Claude Code skills for enhanced productivity. When generating API documentation, the **pdf** skill helps create downloadable API guides. For frontend integration, the **frontend-design** skill provides component patterns that consume your service modules elegantly.
 
-Network requests sometimes fail temporarily. Implement retry logic for resilience:
+If you're practicing test-driven development, the **tdd** skill assists in writing unit tests for your service functions before implementation. The **supermemory** skill stores API schemas and endpoint documentation, making future refactoring faster.
+
+For example, when documenting your API contract:
 
 ```javascript
-async function requestWithRetry(fn, maxRetries = 3, delay = 1000) {
-  for (let attempt = 1; attempt <= maxRetries; attempt++) {
-    try {
-      return await fn();
-    } catch (error) {
-      if (attempt === maxRetries) throw error;
-      if (error.response?.status >= 500) {
-        await new Promise(r => setTimeout(r, delay * attempt));
-      } else {
-        throw error;
-      }
-    }
-  }
-}
+/**
+ * @typedef {Object} User
+ * @property {string} id
+ * @property {string} email
+ * @property {string} name
+ */
 
-// Usage
-const data = await requestWithRetry(() => apiClient.get('/users'));
+/**
+ * Fetches current user profile
+ * @returns {Promise<User>}
+ */
+export const getProfile = () => apiClient.get('/users/me');
 ```
 
-### Request/Response Logging
+This JSDoc format works well with documentation generation tools.
 
-For debugging and monitoring, add logging interceptors:
+## Testing Your HTTP Client
+
+Writing tests for your Axios setup prevents regressions:
 
 ```javascript
-apiClient.interceptors.request.use((config) => {
-  console.log(`[REQUEST] ${config.method.toUpperCase()} ${config.url}`);
-  return config;
+import axios from 'axios';
+import MockAdapter from 'axios-mock-adapter';
+
+describe('userService', () => {
+  let mock;
+  
+  beforeEach(() => {
+    mock = new MockAdapter(axios);
+  });
+  
+  afterEach(() => {
+    mock.restore();
+  });
+  
+  it('fetches user profile successfully', async () => {
+    const mockUser = { id: '1', email: 'test@example.com', name: 'Test User' };
+    mock.onGet('/users/me').reply(200, mockUser);
+    
+    const response = await userService.getProfile();
+    expect(response.data).toEqual(mockUser);
+  });
 });
+```
+
+## Performance Optimization Tips
+
+Consider implementing request caching for frequently accessed data:
+
+```javascript
+const cache = new Map();
 
 apiClient.interceptors.response.use((response) => {
-  console.log(`[RESPONSE] ${response.status} ${response.config.url}`);
+  const cacheKey = response.config.url + JSON.stringify(response.config.params);
+  if (response.config.method === 'get') {
+    cache.set(cacheKey, { data: response.data, timestamp: Date.now() });
+  }
   return response;
 });
 ```
 
-## Integrating with Claude Skills
-
-The Axios HTTP client workflow becomes powerful when combined with Claude's specialized skills. Here are natural integration points:
-
-### Documentation with supermemory
-
-After fetching API data, store the results for future reference:
+For large file downloads or uploads, Axios supports progress events:
 
 ```javascript
-async function fetchAndStoreDocs() {
-  const docs = await apiClient.get('/documentation');
-  // Store in supermemory for context in future sessions
-  return docs.data;
-}
-```
-
-### PDF Generation with pdf Skill
-
-Fetch data and pass it to the pdf skill for report generation:
-
-```javascript
-async function generateReport(reportId) {
-  const reportData = await apiClient.get(`/reports/${reportId}`);
-  // Pass data to pdf skill for rendering
-  return reportData;
-}
-```
-
-### Testing with tdd Skill
-
-When building HTTP clients, use the tdd skill to generate test cases:
-
-```
-/tdd
-Write tests for an API client that handles authentication, retries, and error responses.
-```
-
-### Frontend Integration with frontend-design
-
-Coordinate API responses with frontend-design workflows by structuring your data consistently:
-
-```javascript
-async function fetchFrontendData(componentId) {
-  const [component, styles, variants] = await Promise.all([
-    apiClient.get(`/components/${componentId}`),
-    apiClient.get(`/components/${componentId}/styles`),
-    apiClient.get(`/components/${componentId}/variants`)
-  ]);
-  
-  return { component: component.data, styles: styles.data, variants: variants.data };
-}
-```
-
-## Error Handling Strategies
-
-Implement comprehensive error handling that works well in Claude Code's interactive environment:
-
-```javascript
-class HttpError extends Error {
-  constructor(message, status, data) {
-    super(message);
-    this.name = 'HttpError';
-    this.status = status;
-    this.data = data;
-  }
-}
-
-async function safeRequest(requestFn) {
-  try {
-    const response = await requestFn();
-    return { success: true, data: response.data };
-  } catch (error) {
-    if (error.response) {
-      throw new HttpError(
-        error.response.data.message || 'Request failed',
-        error.response.status,
-        error.response.data
-      );
-    } else if (error.request) {
-      throw new HttpError('Network error - server unreachable', 0, null);
-    }
-    throw new HttpError(error.message, -1, null);
-  }
-}
-```
-
-This approach gives you consistent error objects that Claude Code can parse and respond to intelligently.
-
-## Environment Configuration
-
-Manage different environments effectively with environment-specific configuration:
-
-```javascript
-const configs = {
-  development: { baseURL: 'http://localhost:3000/api' },
-  staging: { baseURL: 'https://staging-api.example.com' },
-  production: { baseURL: 'https://api.example.com' }
-};
-
-const env = process.env.NODE_ENV || 'development';
-export const apiClient = axios.create({
-  ...configs[env],
-  timeout: 15000
+apiClient.post('/upload', formData, {
+  onUploadProgress: (progressEvent) => {
+    const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+    console.log(`Upload progress: ${percentCompleted}%`);
+  },
 });
 ```
 
-This pattern lets you switch between development, staging, and production APIs without changing your code logic.
+## Summary
 
-## Conclusion
+A well-structured Axios HTTP client workflow transforms raw API calls into maintainable, testable code. Centralize your configuration, use interceptors wisely, organize services by domain, and implement thorough error handling. This foundation scales with your application while keeping development velocity high.
 
-Axios provides a solid foundation for HTTP client workflows in Claude Code. By building reusable clients with interceptors, implementing proper error handling, and integrating with Claude skills like supermemory, pdf, tdd, and frontend-design, you create maintainable and powerful API interactions. The key is centralizing configuration, handling errors consistently, and structuring your code so that Claude Code can effectively work with the results.
+Pair this workflow with Claude Code skills like **pdf** for documentation, **frontend-design** for UI components, and **tdd** for comprehensive test coverage. Your API integration becomes not just functional, but professional-grade.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
