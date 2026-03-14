@@ -70,7 +70,7 @@ chmod 644 ~/.claude/skills/your-skill.md
 
 ## Final Checklist
 
-1. Skill file exists in `~/.claude/skills/` (not `~/claude-skills/`)
+1. Skill file exists in `~/.claude/skills/` (not a custom directory like `~/my-skills/`)
 2. File has `.md` extension with valid YAML front matter
 3. The `name` field matches what you type after `/`
 4. No duplicate skill names

@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code for Russian Developer Backend Workflow"
 description: "Практическое руководство по использованию Claude Code для русскоязычных backend-разработчиков. Настройка, ключевые навыки и рабочие процессы."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-for-russian-developer-backend-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Russian Developer Backend Workflow
 

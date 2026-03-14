@@ -123,7 +123,7 @@ Instead of saying "that doesn't work," provide specific feedback:
    - Return type should be Promise<UserProfile>
 ```
 
-### Leverage Skills for Domain-Specific Accuracy
+### Use Skills for Domain-Specific Accuracy
 
 Claude skills can help maintain accuracy in specialized areas. For example:
 
