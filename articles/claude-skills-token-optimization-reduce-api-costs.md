@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Claude Skills Token Optimization: Reduce API Costs (2026)"
 description: "Practical strategies to optimize token usage in Claude Skills and reduce API costs without sacrificing productivity or code quality."
 date: 2026-03-13
