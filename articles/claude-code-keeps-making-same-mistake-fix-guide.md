@@ -81,7 +81,7 @@ Remember these constraints as we continue.
 
 This works better than hoping Claude remembers everything. The explicit summary gets processed as current context.
 
-## Solution 4: Leverage the Right Skills for the Job
+## Solution 4: Use the Right Skills for the Job
 
 Using inappropriate skills contributes to mistakes. If you're using a general-purpose skill for specialized tasks, Claude makes errors due to missing domain context. Claude Code's skill system includes specialized skills designed for specific workflows.
 

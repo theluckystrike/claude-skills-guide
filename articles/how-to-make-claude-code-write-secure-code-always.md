@@ -37,7 +37,7 @@ Create tests that verify:
 
 The TDD skill then guides Claude to write code that passes these security tests. This approach catches vulnerabilities early rather than discovering them after deployment.
 
-## Leverage MCP Skills for Security Validation
+## Use MCP Skills for Security Validation
 
 Model Context Protocol (MCP) skills extend Claude's capabilities in powerful ways. Several MCP skills directly address security concerns:
 

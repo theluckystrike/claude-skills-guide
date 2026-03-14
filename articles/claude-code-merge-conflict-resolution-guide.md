@@ -221,7 +221,7 @@ git config merge.tool 'code --wait'
 
 The mergetool provides a visual interface for resolving conflicts, showing three panes: yours, theirs, and the result.
 
-## Leveraging Claude Skills
+## Using Claude Skills
 
 Several Claude skills can assist with merge conflict workflows. The `tdd` skill helps verify that resolved conflicts don't break existing tests. After resolving conflicts, run tests to ensure everything works correctly:
 

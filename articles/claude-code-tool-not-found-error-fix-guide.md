@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Tool Not Found Error Fix Guide"
 description: "Fix 'tool not found' errors in Claude Code skill execution. Step-by-step diagnosis and solutions for missing tool configurations."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-tool-not-found-error-fix-guide/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Tool Not Found Error Fix Guide
 

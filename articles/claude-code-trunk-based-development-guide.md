@@ -174,7 +174,7 @@ Keep your trunk based development workflow healthy while using Claude Code:
 - **Write explicit tests**: The tdd skill works best when you provide clear test cases
 - **Use small, focused requests**: Instead of "implement user authentication", ask for "implement password hashing function"
 - **Review AI suggestions carefully**: Claude Code produces high-quality code, but always understand what it generates
-- **Leverage skills for consistency**: The frontend-design, pdf, and other skills maintain project standards
+- **Use skills for consistency**: The frontend-design, pdf, and other skills maintain project standards
 - **Maintain context with supermemory**: Project knowledge persists across sessions and branches
 
 ## Common Pitfalls to Avoid

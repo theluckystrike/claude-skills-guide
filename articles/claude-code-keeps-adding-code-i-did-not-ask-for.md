@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Keeps Adding Code I Did Not Ask For"
 description: "Why Claude Code sometimes generates extra code you didn't request, and how to prevent it with better prompting techniques and skill configurations."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-keeps-adding-code-i-did-not-ask-for/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Keeps Adding Code I Did Not Ask For
 

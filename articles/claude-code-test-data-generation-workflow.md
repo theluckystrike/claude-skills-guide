@@ -24,11 +24,11 @@ The solution involves using Claude Code with specialized skills designed for dat
 
 ## Setting Up Your Data Generation Pipeline
 
-Before generating test data, ensure you have the necessary skills installed. The **xlsx skill** provides spreadsheet capabilities for organizing and exporting your test data, while the **tdd skill** helps structure your testing workflow. Install these skills through Claude Code's skill management system:
+Before generating test data, ensure you have the necessary skills available. The **xlsx skill** provides spreadsheet capabilities for organizing and exporting your test data, while the **tdd skill** helps structure your testing workflow. Skills are `.md` files in `~/.claude/skills/` — copy the skill file there to add it:
 
 ```bash
-claude skill install xlsx
-claude skill install tdd
+cp xlsx.md ~/.claude/skills/xlsx.md
+cp tdd.md ~/.claude/skills/tdd.md
 ```
 
 For more complex scenarios involving document generation, the **pdf skill** can create test documents with specific formatting requirements. If you're working with JSON-based APIs, the built-in JSON handling capabilities combined with the **supermemory skill** for context management will streamline your workflow.

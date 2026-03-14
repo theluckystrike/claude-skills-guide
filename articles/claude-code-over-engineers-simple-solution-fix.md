@@ -118,30 +118,30 @@ claude "fix the null pointer exception in src/utils/parser.ts line 42"
 
 For code review tasks, combine the `tdd` skill with specific instructions:
 
-```bash
+```
 # Using tdd skill for focused review
-claude --skill tdd "add unit tests for src/auth/login.ts"
+/tdd add unit tests for src/auth/login.ts
 ```
 
 ## Automating Repetitive Tasks with Skills
 
 The `frontend-design` skill streamlines UI development without requiring designer collaboration:
 
-```bash
+```
 # Generate a component with specific requirements
-claude --skill frontend-design "create a responsive navbar with dark mode toggle"
+/frontend-design create a responsive navbar with dark mode toggle
 ```
 
 For documentation workflows, the `pdf` skill converts markdown to formatted documents:
 
-```bash
-claude --skill pdf "convert README.md to professional API documentation"
+```
+/pdf convert README.md to professional API documentation
 ```
 
 The `supermemory` skill helps maintain context across sessions:
 
-```bash
-claude --skill supermemory "remember that we use PostgreSQL and Prisma"
+```
+/supermemory remember that we use PostgreSQL and Prisma
 ```
 
 ## Troubleshooting Network and Proxy Issues

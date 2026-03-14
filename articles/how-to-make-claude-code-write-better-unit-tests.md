@@ -98,7 +98,7 @@ Production bugs often appear at boundary conditions. Explicitly request edge cas
 
 Claude Code will then systematically work through these cases rather than stopping after happy-path tests.
 
-## Leverage Super Memory for Test Context
+## Use Super Memory for Test Context
 
 The **supermemory** skill can help maintain consistency across test files. When working on a larger codebase, activate supermemory to let Claude Code reference existing test patterns, avoiding duplicate test logic and ensuring consistent naming conventions throughout your test suite.
 

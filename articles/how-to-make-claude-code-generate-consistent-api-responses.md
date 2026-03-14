@@ -73,7 +73,7 @@ function normalizeApiResponse(rawOutput) {
 
 The supermemory skill can store these formatter configurations, allowing you to maintain consistent response patterns across different skills without duplicating logic.
 
-## Pattern 3: Leverage Prompt Engineering for Deterministic Output
+## Pattern 3: Use Prompt Engineering for Deterministic Output
 
 Structure your skill prompts to minimize ambiguity. Use explicit instructions about formatting, ordering, and required elements.
 

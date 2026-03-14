@@ -213,7 +213,7 @@ For design-related work, frontend-design skills can help you cherry-pick CSS com
 
 4. **Keep a cherry-pick log**: Maintain documentation of which commits were cherry-picked and to which branches—this prevents duplicate work and confusion.
 
-5. **Leverage CI/CD checks**: After cherry-picking, ensure your continuous integration pipeline validates the changes on the target branch.
+5. **Use CI/CD checks**: After cherry-picking, ensure your continuous integration pipeline validates the changes on the target branch.
 
 ## Common Pitfalls to Avoid
 

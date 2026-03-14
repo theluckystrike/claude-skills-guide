@@ -116,7 +116,7 @@ When combining Claude Code with Git LFS, consider these workflow optimizations.
 
 **Document LFS Requirements in CLAUDE.md**: If your project requires specific LFS setup, document it clearly. Claude Code respects the instructions in CLAUDE.md and will follow your LFS guidance.
 
-**Leverage Skills for Specialized Tasks**: When working with PDF documentation using the pdf skill, ensure any generated or processed large PDF files are handled appropriately. Similarly, the frontend-design skill works well with image assets that should use LFS.
+**Use Skills for Specialized Tasks**: When working with PDF documentation using the pdf skill, ensure any generated or processed large PDF files are handled appropriately. Similarly, the frontend-design skill works well with image assets that should use LFS.
 
 **Automate LFS File Detection**: Create git aliases or shell functions that warn when you're about to commit potentially large files:
 

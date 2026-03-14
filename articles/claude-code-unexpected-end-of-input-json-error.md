@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Fixing Claude Code's 'Unexpected End of Input' JSON Error"
 description: "A comprehensive guide to understanding and resolving the 'unexpected end of input' JSON error in Claude Code CLI."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-unexpected-end-of-input-json-error/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Fixing Claude Code's "Unexpected End of Input" JSON Error

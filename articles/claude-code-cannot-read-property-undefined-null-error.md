@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code: Cannot Read Property Undefined Fix"
 description: "Fix 'Cannot read property of undefined/null' errors in Claude Code skill execution. Diagnosis steps and solutions for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-cannot-read-property-undefined-null-error/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # How to Fix "Cannot Read Property of Undefined" Error in Claude Code
 
@@ -101,7 +107,7 @@ function getUserName(user) {
 
 ### Solution 4: Defensive Programming with Claude Code
 
-When working with Claude Code, you can leverage its debugging capabilities:
+When working with Claude Code, you can use its debugging capabilities:
 
 ```javascript
 // Use console.log strategically to trace values

@@ -98,7 +98,7 @@ type Query {
 }
 ```
 
-## Leveraging Abstract Types
+## Using Abstract Types
 
 Union and interface types let you return multiple object types from a single field. This is powerful for modeling polymorphic relationships.
 

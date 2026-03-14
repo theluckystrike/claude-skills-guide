@@ -39,7 +39,7 @@ what I'll create:
 
 This conversational approach works well for common project types, but the real power emerges when you use Claude's skill system for specialized scaffolding tasks.
 
-## Leveraging Claude Skills for Scaffolding
+## Using Claude Skills for Scaffolding
 
 Claude Code's skill system provides domain-specific expertise that dramatically improves scaffolding quality. Several skills prove particularly valuable for project initialization:
 

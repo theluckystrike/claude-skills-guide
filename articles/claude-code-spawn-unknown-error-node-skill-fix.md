@@ -5,7 +5,7 @@ description: "Troubleshoot and fix spawn unknown error in Claude Code Node.js sk
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, node.js, spawn, error-fix]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-code-spawn-unknown-error-node-skill-fix/

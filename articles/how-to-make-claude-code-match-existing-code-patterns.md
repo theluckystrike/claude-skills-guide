@@ -56,7 +56,7 @@ When you start a Claude session, reference this file early:
 Read our coding standards from .claude-standards.md and follow these conventions in all code you write today.
 ```
 
-## Leveraging Claude Skills for Pattern Enforcement
+## Using Claude Skills for Pattern Enforcement
 
 Claude skills provide a powerful mechanism for injecting persistent instructions into your sessions. The skill system allows you to define reusable behaviors that Claude applies automatically.
 

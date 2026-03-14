@@ -83,7 +83,7 @@ HAVING COUNT(p.id) > 0
 ORDER BY post_count DESC;
 ```
 
-## Leveraging Claude Skills for SQL Tasks
+## Using Claude Skills for SQL Tasks
 
 Several Claude skills enhance SQL query writing and optimization. The tdd skill helps you write tests first, then implement queries that pass those tests. This approach catches performance regressions before deployment.
 
@@ -166,7 +166,7 @@ If tests fail, use Claude's supermemory to log the slow queries and their EXPLAI
 
 ## Summary
 
-Making Claude write performant SQL comes down to clear communication. State your performance requirements explicitly, specify indexing needs, avoid N+1 patterns through JOINs, and test with EXPLAIN. Leverage skills like tdd for regression testing and supermemory for tracking query performance over time.
+Making Claude write performant SQL comes down to clear communication. State your performance requirements explicitly, specify indexing needs, avoid N+1 patterns through JOINs, and test with EXPLAIN. Use skills like tdd for regression testing and supermemory for tracking query performance over time.
 
 With these patterns, you can confidently delegate SQL writing to Claude while maintaining the performance standards your applications require.
 

@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Maximum Call Stack Exceeded: Skill Debug Guide"
 description: "Diagnose and fix 'Maximum call stack size exceeded' errors in Claude Code skills. Learn common causes, debugging strategies, and prevention techniques."
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, debugging, error-handling, troubleshooting]
-author: theluckystrike
-reviewed: false
-score: 0
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 permalink: /claude-code-maximum-call-stack-exceeded-skill-debug/
 ---
+
 
 # Claude Code Maximum Call Stack Exceeded: Skill Debug Guide
 

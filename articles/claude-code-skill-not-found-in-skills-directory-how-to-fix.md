@@ -172,6 +172,6 @@ The "skill not found" error is almost always a path or naming issue that takes m
 - [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Address skill visibility issues beyond directory placement problems
 - [Why Does Claude Code Ignore My Skill MD File Entirely](/claude-skills-guide/why-does-claude-code-ignore-my-skill-md-file-entirely/) — Diagnose cases where skills are found but silently ignored by Claude Code
 - [Claude Code Skill Permission Denied Error Fix 2026](/claude-skills-guide/claude-code-skill-permission-denied-error-fix-2026/) — Resolve file permission issues that prevent skill files from loading
-- [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions for common Claude skill installation and discovery problems
+- [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions for common Claude skill setup and discovery problems
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

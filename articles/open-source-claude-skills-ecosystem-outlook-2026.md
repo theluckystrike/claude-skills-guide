@@ -90,7 +90,7 @@ Red flags:
 - Developer blogs and tutorials
 - Team internal repositories
 
-There is no official skills marketplace at skills.anthropic.com. Any site claiming to be an official Anthropic skills store is not affiliated with Anthropic.
+There is no official skills marketplace on the claude-skills-guide site or elsewhere. Any site claiming to be an official Anthropic skills store is not affiliated with Anthropic.
 
 ## Contributing Your Own Skills
 
