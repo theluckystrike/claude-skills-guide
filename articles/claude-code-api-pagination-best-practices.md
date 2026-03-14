@@ -1,310 +1,202 @@
 ---
 layout: default
-title: "Claude Code API Pagination Best Practices"
-description: "Learn practical pagination patterns for Claude Code API integration. Offset, cursor-based, and keyset pagination with code examples for developers."
+title: "Claude Code API Pagination Best Practices for Developers"
+description: "Learn how to implement efficient pagination with the Claude Code API. Practical examples for handling large datasets, cursor-based pagination, and optimizing API calls."
 date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, claude-skills, api, pagination, best-practices, development]
 author: theluckystrike
-reviewed: true
-score: 7
 permalink: /claude-code-api-pagination-best-practices/
 ---
 
-# Claude Code API Pagination Best Practices
+When building applications that interact with the Claude Code API, handling large datasets efficiently becomes crucial. Pagination isn't just about splitting data into chunks—it's about creating a smooth, performant experience for your users while respecting API rate limits and response times.
 
-When building integrations with the Claude Code API, handling large datasets efficiently requires thoughtful pagination implementation. This guide covers practical pagination patterns that developers and power users can apply immediately.
+This guide covers practical pagination strategies you can implement today, with code examples that work with real-world scenarios.
 
-## Why Pagination Matters
+## Understanding Cursor-Based Pagination
 
-Working with Claude Code's API—whether you're building a custom frontend using the frontend-design skill, generating documents with the pdf skill, or processing test results from the tdd skill—you'll eventually encounter endpoints that return large collections. Without proper pagination, you risk memory issues, slow response times, and potential rate limiting.
+The Claude Code API uses cursor-based pagination rather than offset-based approaches. This means each response includes a cursor token that points to the next set of results. Unlike traditional offset pagination (skip 10, take 10), cursor-based pagination is more stable when data changes between requests.
 
-## Understanding Pagination Strategies
+Here's how to implement basic cursor pagination:
 
-### Offset-Based Pagination
+```python
+import anthropic
 
-The most common approach uses `limit` and `offset` parameters:
+client = anthropic.Anthropic(api_key="your-api-key")
+
+def fetch_all_messages(thread_id, max_results=100):
+    """Fetch all messages from a thread with pagination."""
+    messages = []
+    cursor = None
+    
+    while len(messages) < max_results:
+        response = client.messages.list(
+            thread_id=thread_id,
+            cursor=cursor,
+            limit=50
+        )
+        
+        messages.extend(response.data)
+        
+        if not response.has_more:
+            break
+            
+        cursor = response.cursor
+        
+    return messages[:max_results]
+```
+
+The key insight is that you always check `has_more` before attempting to fetch the next page. This prevents unnecessary API calls and helps you handle edge cases where the dataset is smaller than expected.
+
+## Setting Appropriate Page Sizes
+
+The `limit` parameter controls how many items return per request. The Claude Code API typically allows limits between 1 and 100, but choosing the right value depends on your use case.
+
+For interactive applications where users scroll through results, a limit of 20-30 provides a good balance:
 
 ```javascript
-async function listConversations(offset = 0, limit = 50) {
-  const response = await fetch(
-    `https://api.claude.ai/v1/conversations?offset=${offset}&limit=${limit}`,
-    {
-      headers: {
-        'Authorization': `Bearer ${API_KEY}`
-      }
-    }
-  );
+async function fetchConversations(limit = 25) {
+  const response = await fetch('/api/conversations', {
+    method: 'POST',
+    body: JSON.stringify({ limit })
+  });
   
   const data = await response.json();
   return {
-    items: data.conversations,
-    hasMore: data.conversations.length === limit,
-    nextOffset: offset + limit
+    conversations: data.conversations,
+    nextCursor: data.cursor
   };
 }
 ```
 
-This pattern works well for random access but becomes inefficient with large offsets. If you're processing conversation history for the supermemory skill, consider fetching in descending order with a starting timestamp instead.
+For background jobs or data exports where throughput matters, you might push toward the maximum limit. However, larger page sizes increase memory usage and response latency, so profile your application to find the sweet spot.
 
-### Cursor-Based Pagination
+## Handling Rate Limits Gracefully
 
-For better performance with large datasets, use cursor-based pagination:
+When paginating through large datasets, you'll inevitably encounter rate limits. The Claude Code API returns a 429 status code when you've exceeded your quota. Implement exponential backoff to handle this gracefully:
 
 ```python
+import time
 import requests
 
-def list_messages(cursor=None, limit=100):
-    url = "https://api.claude.ai/v1/messages"
-    params = {"limit": limit}
+def fetch_with_retry(url, max_retries=3):
+    """Fetch with exponential backoff on rate limits."""
+    for attempt in range(max_retries):
+        response = requests.get(url)
+        
+        if response.status_code == 200:
+            return response.json()
+            
+        if response.status_code == 429:
+            wait_time = 2 ** attempt
+            print(f"Rate limited. Waiting {wait_time}s...")
+            time.sleep(wait_time)
+            
+        response.raise_for_status()
     
-    if cursor:
-        params["cursor"] = cursor
-    
-    response = requests.get(
-        url,
-        headers={"Authorization": f"Bearer {API_KEY}"},
-        params=params
-    )
-    
-    data = response.json()
-    return {
-        "messages": data["messages"],
-        "next_cursor": data.get("pagination", {}).get("next_cursor")
-    }
+    raise Exception("Max retries exceeded")
+```
 
-# Iterate through all pages
-def fetch_all_messages():
-    all_messages = []
+This pattern works especially well when combining pagination with other API operations. If you're building a tool that uses the `pdf` skill to process documents while also fetching conversation history, rate limit handling ensures your entire workflow doesn't fail on a temporary throttling event.
+
+## Parallel Page Fetching for Independent Data
+
+Sometimes you need to fetch multiple paginated resources simultaneously. Rather than sequentially waiting for each page, you can use concurrent requests:
+
+```typescript
+async function fetchMultipleThreads(threadIds: string[]) {
+  const fetchThread = async (id: string) => {
+    const response = await fetch(`/api/threads/${id}/messages`);
+    return response.json();
+  };
+  
+  // Fetch all threads in parallel
+  const results = await Promise.all(
+    threadIds.map(fetchThread)
+  );
+  
+  return results;
+}
+```
+
+This approach works well when you know the thread IDs upfront. However, be mindful of total concurrent connections—too many simultaneous requests can trigger rate limits regardless of individual request patterns.
+
+## Combining Claude Skills with Pagination
+
+The real power of pagination emerges when you combine it with Claude's specialized skills. For instance, when using the `frontend-design` skill to generate UI components, you might paginate through a library of design tokens:
+
+```python
+def process_design_tokens(token_library_id, token_handler):
+    """Process design tokens across multiple pages."""
     cursor = None
     
     while True:
-        result = list_messages(cursor)
-        all_messages.extend(result["messages"])
+        page = client.design_tokens.list(
+            library_id=token_library_id,
+            cursor=cursor,
+            limit=50
+        )
         
-        if not result["next_cursor"]:
+        for token in page.data:
+            token_handler(token)
+        
+        if not page.has_more:
             break
             
-        cursor = result["next_cursor"]
-    
-    return all_messages
+        cursor = page.cursor
 ```
 
-Cursor-based pagination is ideal when sequential access is acceptable and provides consistent performance regardless of dataset size.
-
-### Keyset Pagination
-
-For time-series data like conversation history, keyset pagination outperforms offset pagination:
-
-```typescript
-interface ListParams {
-  limit: number;
-  before?: string;  // ISO timestamp
-  messageId?: string;
-}
-
-async function listConversationsKeyset(params: ListParams) {
-  const queryParams = new URLSearchParams({
-    limit: params.limit.toString()
-  });
-  
-  if (params.before) {
-    queryParams.append('before', params.before);
-  }
-  
-  if (params.messageId) {
-    queryParams.append('message_id', params.messageId);
-  }
-  
-  const response = await fetch(
-    `https://api.claude.ai/v1/conversations?${queryParams}`,
-    {
-      headers: {
-        'Authorization': `Bearer ${API_KEY}`,
-        'Content-Type': 'application/json'
-      }
-    }
-  );
-  
-  return response.json();
-}
-
-// Fetch last 30 days of conversations
-async function fetchRecentConversations() {
-  const thirtyDaysAgo = new Date();
-  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-  
-  const conversations = [];
-  let params: ListParams = { 
-    limit: 100,
-    before: thirtyDaysAgo.toISOString()
-  };
-  
-  while (true) {
-    const result = await listConversationsKeyset(params);
-    conversations.push(...result.conversations);
-    
-    if (!result.has_more || !result.pagination?.next_cursor) {
-      break;
-    }
-    
-    params = {
-      limit: 100,
-      before: result.pagination.next_cursor
-    };
-  }
-  
-  return conversations;
-}
-```
-
-## Rate Limiting Considerations
-
-The pdf skill and document processing workflows often involve bulk operations. Implement exponential backoff when you hit rate limits:
+Similarly, when using the `tdd` skill to generate tests across multiple files, pagination helps you manage large codebases without overwhelming memory:
 
 ```javascript
-async function fetchWithRetry(fn, maxRetries = 3) {
-  for (let attempt = 0; attempt < maxRetries; attempt++) {
-    try {
-      return await fn();
-    } catch (error) {
-      if (error.status === 429 && attempt < maxRetries - 1) {
-        const delay = Math.pow(2, attempt) * 1000;
-        console.log(`Rate limited. Retrying in ${delay}ms...`);
-        await new Promise(resolve => setTimeout(resolve, delay));
-      } else {
-        throw error;
-      }
-    }
-  }
-}
-```
-
-## Choosing the Right Strategy
-
-Selecting the appropriate pagination method depends on your specific use case. Offset-based pagination remains the simplest implementation for applications requiring random access to data, such as a dashboard displaying conversation lists in arbitrary order. However, as your dataset grows beyond a few thousand items, performance degrades noticeably.
-
-Cursor-based pagination solves the performance issue by using an opaque identifier that marks the last item seen. This approach ensures consistent query times regardless of position in the dataset. The trade-off is that you cannot jump to a specific page—you must traverse sequentially.
-
-Keyset pagination using timestamps or IDs provides the best of both worlds for time-series data. You get O(1) query performance while maintaining the ability to filter by date ranges. This makes it particularly valuable for analytics applications built with the canvas-design skill that display activity over specific periods.
-
-## Real-World Example: Building a Conversation Archive
-
-Consider a practical scenario where you're building an archive system for Claude Code conversations. This might support the supermemory skill for长期 memory retention or enable search functionality across historical data.
-
-```javascript
-class ConversationArchiver {
-  constructor(apiKey, storage) {
-    this.apiKey = apiKey;
-    this.storage = storage;
-    this.batchSize = 100;
-  }
-
-  async archiveAllConversations() {
-    let cursor = null;
-    let pageCount = 0;
-    const totalArchived = 0;
-
-    do {
-      const page = await this.fetchPage(cursor);
-      
-      await this.storage.insertBatch(page.conversations);
-      totalArchived += page.conversations.length;
-      pageCount++;
-      
-      console.log(
-        `Archived page ${pageCount}: ${totalArchived} total conversations`
-      );
-      
-      cursor = page.nextCursor;
-      
-      // Respect rate limits between pages
-      await this.sleep(100);
-      
-    } while (cursor);
-
-    return { pages: pageCount, total: totalArchived };
-  }
-
-  async fetchPage(cursor) {
-    const url = new URL('https://api.claude.ai/v1/conversations');
-    url.searchParams.set('limit', this.batchSize.toString());
+async function generateTestsForFiles(fileIds, testGenerator) {
+  let cursor = null;
+  
+  do {
+    const page = await fetchFilePage(fileIds, cursor);
     
-    if (cursor) {
-      url.searchParams.set('cursor', cursor);
+    for (const file of page.files) {
+      await testGenerator(file.path, file.content);
     }
-
-    const response = await fetch(url, {
-      headers: {
-        'Authorization': `Bearer ${this.apiKey}`
-      }
-    });
-
-    if (!response.ok) {
-      throw new Error(
-        `API error: ${response.status} ${response.statusText}`
-      );
-    }
-
-    return response.json();
-  }
-
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+    
+    cursor = page.has_more ? page.cursor : null;
+  } while (cursor);
 }
 ```
 
-This archiver class demonstrates several best practices: consistent batch sizing, progress logging, rate limit awareness, and graceful handling of pagination cursors.
+The `supermemory` skill can also benefit from pagination when retrieving historical context—fetching memories in chunks prevents single-request timeouts while still building a complete context window.
 
-## Advanced Techniques
+## Tracking Pagination State
 
-For complex integrations involving multiple API endpoints, consider implementing a unified pagination interface that abstracts the underlying strategy. This approach allows you to switch between methods without changing consuming code.
+For long-running operations or user-resumable flows, persist pagination state:
 
-The canvas-design skill can help visualize pagination performance across different strategies, making it easier to communicate trade-offs to stakeholders. Similarly, when documenting your API client for other developers, use the docx skill to generate clear documentation.
+```python
+import json
 
-## Common Pitfalls
+def save_progress(cursor, page_number, filename="pagination_state.json"):
+    """Save pagination progress for resumability."""
+    state = {
+        "cursor": cursor,
+        "page": page_number,
+        "timestamp": time.time()
+    }
+    
+    with open(filename, "w") as f:
+        json.dump(state, f)
 
-**Missing pagination**: Always check for pagination metadata in API responses. The tdd skill will help you write tests that verify pagination logic handles edge cases correctly.
-
-**Ignoring sort order**: Ensure your queries match the expected sort order. When fetching conversation history for the supermemory skill, most use cases need reverse chronological order.
-
-**Not handling empty pages**: A response with zero items but a valid cursor still indicates more data exists in some APIs.
-
-**Ignoring error responses**: Network failures can occur between pages. Always wrap pagination loops in try-catch blocks and implement proper error handling.
-
-## Testing Pagination Logic
-
-Use the tdd skill to write comprehensive pagination tests:
-
-```
-/tdd
-Write tests for a paginated API client that handles:
-- Normal pagination with multiple pages
-- Empty result sets
-- Rate limiting with exponential backoff
-- Cursor invalidation errors
-- Network failures mid-iteration
+def load_progress(filename="pagination_state.json"):
+    """Load saved pagination state."""
+    try:
+        with open(filename, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return None
 ```
 
-## Production Recommendations
+This becomes valuable when building tools that run as background jobs or need to survive application restarts. Your users will appreciate not losing progress when processing thousands of items.
 
-1. **Cache pagination state**: Store cursors in your database for interrupted fetch operations
-2. **Implement parallel fetching**: For independent collections, fetch multiple pages concurrently
-3. **Monitor pagination latency**: Track how long paginated requests take to identify performance issues early
-4. **Use streaming when available**: For very large datasets, consider streaming approaches instead of pagination
-5. **Add health checks**: Monitor for pagination that takes unusually long, indicating potential issues
+## Key Takeaways
 
-## Conclusion
+Cursor-based pagination with the Claude Code API requires a different mindset than traditional offset pagination, but it offers significant advantages for data consistency and performance. Set appropriate page sizes based on your use case, implement proper rate limit handling, and consider parallel fetching when you need to gather data from multiple independent sources.
 
-Proper pagination implementation ensures your Claude Code integrations remain performant and reliable. Start with cursor-based pagination for most use cases, switch to keyset pagination for time-series data, and always implement retry logic for production systems.
-
-
-## Related Reading
-
-- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+The skills like `pdf`, `tdd`, `frontend-design`, and `supermemory` all work better when you build pagination into your workflows from the start rather than treating it as an afterthought.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
