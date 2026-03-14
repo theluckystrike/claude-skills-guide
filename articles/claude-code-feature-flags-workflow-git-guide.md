@@ -1,160 +1,204 @@
 ---
-
 layout: default
-title: "Claude Code Feature Flags Workflow with Git Guide"
-description: "Learn how to implement feature flags in your Claude Code workflow using Git branches. Practical examples and code snippets for developers."
+title: "Claude Code Feature Flags Workflow Git Guide"
+description: "Learn how to use Claude Code CLI with feature flags. Practical examples for implementing feature flag workflows with Git branching, environment configuration, and deployment strategies."
 date: 2026-03-14
-author: "Claude Skills Guide"
-categories: [tutorials]
-tags: [claude-code, feature-flags, git, workflow, development, claude-skills]
+author: theluckystrike
 permalink: /claude-code-feature-flags-workflow-git-guide/
-reviewed: true
-score: 7
 ---
 
+{% raw %}
+Feature flags have become an essential tool in modern software development, enabling teams to decouple deployments from releases. When combined with Claude Code and Git workflows, feature flags provide powerful control over how and when features reach users. This guide explores practical strategies for integrating feature flags into your development process using Claude Code CLI.
 
-# Claude Code Feature Flags Workflow with Git Guide
+## Understanding Feature Flags in Git-Based Workflows
 
-Feature flags have become an essential tool for modern software development, enabling teams to ship code safely and control feature releases independently of deployments. When combined with Claude Code and a structured Git workflow, feature flags become even more powerful for experimentation and incremental rollouts.
+Feature flags (also known as feature toggles) are conditional statements that allow you to enable or disable functionality without deploying new code. By leveraging Git branches alongside feature flags, you can create a powerful workflow where code lives in feature branches while flags control their exposure to end users.
 
-This guide shows you how to integrate feature flags into your Claude Code development workflow using Git branches, with practical examples you can apply immediately.
+The key insight is that feature flags act as a safety net, letting developers merge code early while controlling its activation. This approach reduces long-lived branches and enables continuous integration. Claude Code can help you implement this pattern efficiently by generating flag configurations, writing toggle code, and maintaining consistent flag naming conventions across your codebase.
 
-## Why Feature Flags Matter in Claude Development
+When you work with Claude Code on feature flag workflows, you'll find it excels at generating consistent flag implementations, creating automated tests for flag behavior, and documenting flag states across environments.
 
-When working with Claude Code—whether you're using the frontend-design skill for UI implementation, the pdf skill for document generation, or building APIs with the tdd skill—feature flags provide a safety net for experimental features. They let you merge incomplete features into main without breaking existing functionality.
+## Setting Up Feature Flag Infrastructure
 
-The key insight is that feature flags work best when they're tied to your Git workflow. Each flag becomes a small experiment living in its own branch, with clear on/off conditions and cleanup procedures.
+Before implementing feature flags, establish a clean infrastructure. Claude Code can help you scaffold the initial setup. Create a dedicated configuration file or module for your flags:
 
-## Setting Up Your Git Branch Strategy
+```typescript
+// config/feature-flags.ts
+export interface FeatureFlag {
+  name: string;
+  enabled: boolean;
+  rolloutPercentage?: number;
+  description?: string;
+}
 
-The foundation of a good feature flag workflow starts with branch naming and organization. Create a branch for each feature flag:
-
-```bash
-# Create a feature branch with a flag prefix
-git checkout -b feature/dark-mode-toggle
-
-# Or use a flags/ namespace for clarity
-git checkout -b flags/experimental-search-ranking
+export const featureFlags: Record<string, FeatureFlag> = {
+  newDashboard: {
+    name: 'new_dashboard',
+    enabled: false,
+    rolloutPercentage: 0,
+    description: 'New analytics dashboard redesign'
+  },
+  apiV2: {
+    name: 'api_v2',
+    enabled: true,
+    rolloutPercentage: 100,
+    description: 'New API v2 endpoints'
+  },
+  darkMode: {
+    name: 'dark_mode',
+    enabled: true,
+    rolloutPercentage: 50,
+    description: 'Dark mode theme support'
+  }
+};
 ```
 
-This naming convention makes it easy to identify which branches contain experimental features. When you collaborate with Claude using the supermemory skill, it can track these branches and their associated flags automatically.
+Notice the structured approach to flag definitions. Each flag includes metadata useful for documentation and management. Claude Code can generate similar configurations automatically when you describe your feature requirements.
 
-## Implementing Feature Flags in Your Code
+## Git Branching Strategy with Feature Flags
 
-A basic feature flag implementation requires three components: the flag definition, a check mechanism, and cleanup logic. Here's a practical example using environment variables:
+A robust Git workflow complements feature flags effectively. The recommended approach involves creating feature branches for both code and corresponding flag configurations:
 
-```javascript
-// config/flags.js
-export const featureFlags = {
-  darkMode: process.env.FLAG_DARK_MODE === 'true',
-  newSearch: process.env.FLAG_NEW_SEARCH === 'true',
-  betaDashboard: process.env.FLAG_BETA_DASHBOARD === 'true',
-};
+```bash
+# Create a new feature branch with flag
+git checkout -b feature/new-payment-flow
 
-// Usage in components
-import { featureFlags } from './config/flags';
+# Your flag configuration evolves alongside code
+# Commit flag changes with code changes
+git add src/features/payment/ config/flags.json
+git commit -m "feat: Add new payment flow with feature flag"
+```
 
-function ThemeToggle() {
-  if (!featureFlags.darkMode) {
-    return null; // Feature disabled
+This pattern ensures flag configuration travels with the code that uses it. When you use Claude Code, you can generate these commit messages automatically and ensure consistent flag naming across your repository.
+
+### Flag Naming Conventions
+
+Consistency matters for maintainability. Use descriptive, hierarchical names:
+
+- `feature_name` - Standard feature flags
+- `experiment_name` - A/B test flags
+- `bugfix_name` - Temporary flags for hotfixes
+- `infra_name` - Infrastructure changes
+
+Claude Code can audit your existing flags and suggest improvements to align with these conventions.
+
+## Implementing Flags in Your Codebase
+
+The implementation pattern varies by language, but the core concept remains consistent. Here's how you might implement a flag in a TypeScript application:
+
+```typescript
+import { featureFlags } from '../config/feature-flags';
+
+function isFeatureEnabled(flagName: string): boolean {
+  const flag = featureFlags[flagName];
+  if (!flag) return false;
+  
+  if (flag.rolloutPercentage === undefined) {
+    return flag.enabled;
   }
   
-  return <DarkModeButton />;
+  // Simple percentage-based rollout
+  const random = Math.random() * 100;
+  return random < flag.rolloutPercentage && flag.enabled;
+}
+
+// Usage in component
+export function PaymentFlow() {
+  const showNewFlow = isFeatureEnabled('new_payment_flow');
+  
+  return (
+    <div>
+      {showNewFlow ? <NewPaymentForm /> : <LegacyPaymentForm />}
+    </div>
+  );
 }
 ```
 
-For more complex scenarios, consider using a dedicated feature flag service like LaunchDarkly or Split.io. These integrate with Claude Code through environment variables and provide percentage rollouts.
+Claude Code can generate these patterns automatically and ensure consistent implementation across your codebase. Simply describe the feature you want to wrap with a flag, and Claude Code produces the appropriate conditional logic.
 
-## Claude Code Integration Patterns
+## Environment-Specific Flag Management
 
-When Claude Code works on a feature-flagged feature, consistency in how you communicate with Claude matters. Here's a pattern that works well:
+Different environments require different flag configurations. A common pattern uses environment-specific configuration files:
 
-```bash
-# When starting work on a new feature flag
-git checkout -b feature/my-new-feature
-# Tell Claude: "This feature is gated behind FLAG_NEW_FEATURE
-# Only show the UI when that env var is true"
+```typescript
+// config/flags.development.ts
+export const envFlags = {
+  newDashboard: true,        // Always on for testing
+  apiV2: true,
+  darkMode: true
+};
+
+// config/flags.production.ts  
+export const envFlags = {
+  newDashboard: false,       // Off by default
+  apiV2: true,
+  darkMode: false            // Gradually rolling out
+};
 ```
 
-The tdd skill pairs excellently with feature flags because you can write tests for both the enabled and disabled states:
+This separation allows developers to test with flags enabled locally while maintaining conservative defaults in production. Claude Code can help generate these environment configurations and ensure they're properly integrated into your build process.
 
-```python
-def test_feature_enabled():
-    with mock_env('FLAG_NEW_FEATURE', 'true'):
-        result = render_component()
-        assert 'New Feature UI' in result
+### Integrating with Deployment Pipelines
 
-def test_feature_disabled():
-    with mock_env('FLAG_NEW_FEATURE', 'false'):
-        result = render_component()
-        assert result == ''  # Component renders nothing
-```
-
-## Managing Flags Across Environments
-
-One common challenge is keeping track of which flags are active where. Use a configuration file that maps environments to flag states:
+Your CI/CD pipeline should handle flag state changes. When deploying to production, flags typically remain in their current state unless explicitly changed. This behavior prevents accidental releases:
 
 ```yaml
-# config/feature-flags.yaml
-development:
-  darkMode: true
-  newSearch: true
-staging:
-  darkMode: true
-  newSearch: false
-production:
-  darkMode: false
-  newSearch: false
+# Example: Deploy only code, flags stay controlled
+deploy-production:
+  script:
+    - npm run build
+    - npm run migrate
+    # Note: We don't modify flag states here
+    # Flags are managed separately via config or external service
+  environment: production
 ```
 
-Load this configuration in your deployment pipeline:
+When you need to change flag states (enable a feature, adjust rollout percentage), do so through your feature flag management service or by updating environment-specific configuration files in a separate commit.
 
-```bash
-# Deploy to staging with specific flags
-export $(cat config/feature-flags.yaml | grep -v '^#' | xargs) && \
-  kubectl set env deployment/app FLAG_DARK_MODE=$darkMode
+## Testing Feature Flags
+
+Comprehensive testing ensures flags work correctly in all states. Write tests that verify behavior with flags both enabled and disabled:
+
+```typescript
+describe('PaymentFlow', () => {
+  it('renders new payment form when flag is enabled', () => {
+    // Mock flag state
+    const mockFlags = { new_payment_flow: true };
+    
+    render(<PaymentFlow featureFlags={mockFlags} />);
+    
+    expect(screen.getByText('New Payment')).toBeInTheDocument();
+  });
+  
+  it('renders legacy form when flag is disabled', () => {
+    const mockFlags = { new_payment_flow: false };
+    
+    render(<PaymentFlow featureFlags={mockFlags} />);
+    
+    expect(screen.getByText('Legacy Payment')).toBeInTheDocument();
+  });
+});
 ```
 
-## Cleanup Strategy
+Claude Code can generate these test patterns automatically and ensure comprehensive coverage of flag states.
 
-Feature flags accumulate technical debt if not removed promptly. Establish a cleanup routine:
+## Best Practices and Common Pitfalls
 
-1. **After full rollout**: Remove the flag within one sprint of 100% rollout
-2. **On rollback**: If a flag causes issues, disable it and create a follow-up ticket
-3. **Use a removal checklist**: Include flag removal in your Definition of Done
+When implementing feature flags with Git workflows, keep these principles in mind:
 
-When using the pdf skill to generate release notes, document which flags were removed in each release. This creates a historical record that's valuable for debugging issues that surface later.
+**Do keep flags temporary.** Feature flags should be short-lived. Plan to remove flag-related code once the feature reaches full rollout. Use a flag cleanup sprint or include removal in your original plan.
 
-## Advanced: Gradual Rollouts with Git
+**Do use descriptive names.** Flags should clearly indicate their purpose. Avoid cryptic abbreviations that require explanation.
 
-For high-risk features, combine Git branches with percentage-based rollouts:
+**Don't overuse flags.** Too many flags create complexity. Consider if alternative approaches (branching, modular deployment) might serve better for large features.
 
-```javascript
-// Determine rollout percentage from user ID
-function getRolloutPercentage(userId, flagName) {
-  const hash = hashString(`${userId}-${flagName}`);
-  return (hash % 100) + 1; // 1-100
-}
+**Do document flag intent.** Each flag should have a clear purpose and expected lifetime. Include this in code comments or your flag management system.
 
-function shouldShowFeature(userId, flagName, minimumRollout = 10) {
-  if (!featureFlags[flagName]) return false;
-  return getRolloutPercentage(userId, flagName) <= minimumRollout;
-}
-```
+**Don't commit secrets in flag configs.** If using external flag services, don't commit API keys or sensitive configuration to version control.
 
-This approach lets you test in production with real traffic while limiting exposure. The Git branch still holds the code, but the rollout is controlled independently.
+## Conclusion
 
-## Key Takeaways
+Feature flags combined with Git workflows and Claude Code create a powerful development pipeline. By following these patterns, you can deploy with confidence, test incrementally, and release features gradually. Claude Code accelerates implementation by generating consistent flag code, tests, and configurations across your codebase.
 
-Feature flags combined with a Git-based workflow give you flexibility in how Claude Code develops features. Use descriptive branch names, implement clean flag checks, and establish a removal cadence to prevent technical debt from accumulating.
-
-The real power comes from treating each flag as a temporary experiment—something to be measured, learned from, and either promoted to permanent code or removed entirely.
-
-## Related Reading
-
-- [Claude Code Trunk Based Development Guide](/claude-skills-guide/claude-code-trunk-based-development-guide/) — Feature flags enable trunk-based development
-- [Claude Code Gitflow Workflow Automation Guide](/claude-skills-guide/claude-code-gitflow-workflow-automation-guide/) — Compare feature flags to gitflow branching
-- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Feature flag toggles integrate with CI/CD
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More git and workflow automation guides
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Start small with feature flags in your next project. Use Claude Code to generate the infrastructure, then gradually adopt more sophisticated patterns as your team grows comfortable with the workflow.
+{% endraw %}
