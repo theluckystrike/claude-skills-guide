@@ -68,18 +68,9 @@ Restart Claude Code after editing `settings.json`. The sandbox re-reads this fil
 
 ## Cause 3: Skill YAML Referencing a Tool With Insufficient Scope
 
-Some skills explicitly declare required tools. If the declared tool name does not match what Claude Code exposes in the current session, the runtime falls back to a restricted execution path that can produce permission errors.
+Skills do not declare tools in front matter — the `tools:` field is not a recognized skill configuration option. Claude Code skills are plain Markdown files with only `name` and `description` in front matter. If you see a `tools:` key in a skill file, it has no effect and can be removed.
 
-Check your skill's front matter:
-
-```yaml
-tools:
-  - Bash
-  - Read
-  - Write
-```
-
-Make sure every tool listed is spelled exactly as Claude Code exports it (capital first letter for built-ins). A mismatch like `bash` instead of `Bash` causes the skill to run with a degraded tool set, which can look like a permission issue.
+If a permission error suggests certain tools are unavailable, the issue is in your Claude Code session configuration or OS-level permissions, not in the skill file itself. Check that your Claude Code session has the necessary permissions enabled in `~/.claude/settings.json`.
 
 ## Cause 4: Skill Files With Wrong Ownership
 

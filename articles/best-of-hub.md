@@ -39,14 +39,12 @@ There are dozens of Claude skills. Not all of them are worth your time. This hub
 | `tdd` | Enforces test-first development with smart test generation and fixture management |
 | `frontend-design` | Translates mockups and descriptions to component code across React/Vue/Svelte |
 | `webapp-testing` | Playwright-powered E2E and visual regression testing |
-| `skill-creator` | Builds custom MCP servers and skills tailored to your exact workflow |
+| `skill-creator` | Scaffolds new skill `.md` files — describe what you need and it generates the file |
 
 ### Infrastructure & Intelligence
 | Skill | Why It's Top-Tier |
 |-------|-------------------|
 | `supermemory` | Persistent knowledge base across sessions—eliminates re-explaining context |
-| `shell-expert` | Reliable bash scripting for deployment and system automation |
-| `mcp-builder` | Creates Model Context Protocol servers for custom API integrations |
 
 ---
 

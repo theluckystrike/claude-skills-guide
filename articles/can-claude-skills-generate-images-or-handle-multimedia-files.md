@@ -26,8 +26,6 @@ Several community skills extend Claude's multimedia capabilities:
 
 **canvas-design** creates static visual art in PNG and PDF formats using design principles. This skill generates posters, artwork, and visual designs programmatically. It operates through seeded randomness, ensuring reproducible results.
 
-**algorithmic-art** builds on p5.js to create generative art, flow fields, and particle systems. This skill excels at procedural image generation where you want mathematical or algorithmic visual output.
-
 **frontend-design** can generate CSS and HTML for visual layouts, though it produces code rather than rendered images.
 
 ### Example: Generating an Image with canvas-design
@@ -151,7 +149,7 @@ Claude skills have inherent limitations with multimedia:
 
 For best results with multimedia in Claude skills:
 
-1. **Start with specialized skills** — Use canvas-design, algorithmic-art, or document skills when they match your needs.
+1. **Start with specialized skills** — Use canvas-design or document skills when they match your needs.
 
 2. **Add bash utilities** — Include ImageMagick, ffmpeg, or other CLI tools in your skill prompts for common operations.
 

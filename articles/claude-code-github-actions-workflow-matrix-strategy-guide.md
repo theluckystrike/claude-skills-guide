@@ -7,7 +7,8 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
-score: 8---
+score: 8
+---
 
 # Claude Code GitHub Actions Workflow Matrix Strategy Guide
 

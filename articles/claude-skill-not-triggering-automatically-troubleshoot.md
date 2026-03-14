@@ -78,19 +78,16 @@ chmod 755 ~/.claude/skills/
 
 ## Step 4: Validate the YAML Front Matter
 
-A malformed YAML block at the top of the skill file causes the runtime to skip the file. Verify the front matter parses correctly:
+A malformed YAML block at the top of the skill file can cause issues. Verify the front matter is valid YAML with only supported fields. Claude Code skills recognize `name` and `description` in front matter:
 
 ```yaml
 ---
+name: tdd
 description: "Run tests before implementation using TDD principles"
-tools:
-  - Bash
-  - Read
-  - Write
 ---
 ```
 
-Common mistakes:
+Note: `tools:` is not a recognized front matter field and has no effect. Common YAML mistakes:
 - Missing closing `---`
 - Tabs instead of spaces in the YAML block
 - Unquoted string values containing colons (e.g., `title: Fix: the bug` breaks YAML)

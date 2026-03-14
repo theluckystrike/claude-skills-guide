@@ -100,9 +100,7 @@ The [supermemory skill proves particularly valuable on the free tier](/claude-sk
 
 ## Skills That Require Special Attention
 
-Some skills have unique considerations. The `algorithmic-art` skill produces creative visualizations but may require significant processing time for complex outputs. The `canvas-design` skill generates visual assets and follows the same access model—available to all users but potentially slower on free tier during intensive renders.
-
-The `mcp-builder` skill, useful for creating Model Context Protocol servers, works fully on free tier. Building integrations for external services remains accessible regardless of subscription status.
+Some skills have unique considerations. The `canvas-design` skill generates visual assets and follows the same access model—available to all users but potentially slower on free tier during intensive renders.
 
 ## Making the Decision
 

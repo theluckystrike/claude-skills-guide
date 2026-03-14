@@ -7,6 +7,7 @@ categories: [advanced]
 tags: [claude-skills, dependency-injection, automation, workflows]
 author: theluckystrike
 reviewed: true
+score: 7
 ---
 
 # Claude Skill Dependency Injection Patterns

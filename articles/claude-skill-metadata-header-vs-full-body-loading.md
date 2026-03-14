@@ -5,37 +5,31 @@ description: "Understand how Claude skills load metadata versus the full body, a
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, claude-skills]
+tags: [claude-code, claude-skills, skill-authoring, front-matter]
 reviewed: true
 score: 8
 ---
 
 # Claude Skill Metadata Header vs Full Body Loading
 
-When you invoke a Claude skill with `/skill-name`, the system loads different components at different times. Understanding the distinction between skill metadata (the header/front matter) and the full skill body directly impacts how you design, organize, and optimize your custom skills. This guide breaks down what gets loaded when, and why it matters for your workflow.
+When you invoke a Claude skill with `/skill-name`, Claude reads the entire `.md` file from `~/.claude/skills/`. There is no separate metadata-only loading phase — the front matter and the skill body load together. This guide explains what belongs in each section and how to structure skills for clarity.
 
 ## What Is Skill Metadata?
 
-Skill metadata lives in the YAML front matter at the top of your skill file. This is the section between the `---` delimiters that contains structured information about the skill:
+Skill metadata lives in the YAML front matter at the top of your skill file. The only recognized front matter fields for Claude Code skills are `name` and `description`:
 
 ```yaml
 ---
 name: pdf-editor
 description: Edit and manipulate PDF documents
-version: 1.2.0
-tags: [documents, pdf, manipulation]
-author: yourname
-permissions: [file-read, file-write]
 ---
 ```
 
-This metadata serves several purposes. First, it provides search and discovery capabilities when browsing available skills. Second, it defines configuration parameters like version, author, and required permissions. Third, it enables skill management operations such as listing, filtering, and updating skills programmatically.
-
-The metadata loads immediately when Claude initializes your skill session. This means essential information like the skill name, description, and permissions are available before the full skill body executes.
+These two fields identify the skill. Fields like `version`, `tags`, `author`, `permissions`, `tools`, and `auto_invoke` are not recognized by Claude Code. Do not add them — they have no effect and can mislead readers.
 
 ## What Is the Skill Body?
 
-The skill body is everything after the closing `---` in your markdown file. This is the actual content that becomes the system prompt when the skill runs:
+The skill body is everything after the closing `---` in your Markdown file. This content becomes part of the context when the skill runs:
 
 ```markdown
 ---
@@ -54,90 +48,79 @@ You are a test-driven development assistant. When the user shares code:
 Always ask clarifying questions before writing tests.
 ```
 
-The body contains the actual instructions, prompts, examples, and guidance that Claude follows during the skill session. This is where you define the skill's behavior, persona, and specific workflows.
+The body contains the instructions, examples, and guidance that shape Claude's behavior during the skill session. This is where you define what the skill does and how it operates.
 
-## When Each Component Loads
+## When the Skill Loads
 
-The loading sequence matters for performance and behavior:
+When you type `/skill-name` in a Claude Code session, Claude reads the complete file — front matter and body together. There is no separate initialization phase that parses metadata before the body.
 
-1. **Metadata loads first** — When you invoke `/skill-name`, Claude's skill system parses the front matter immediately. This happens during session initialization and is fast because it's just YAML parsing.
+Skills are discovered by filename. Typing `/my-skill` looks for `~/.claude/skills/my-skill.md`. There is no search registry and no CLI command to list or filter skills. To see what skills are available, list the files in your skills directory:
 
-2. **Body loads on execution** — The full skill body loads when the skill actually executes. This involves reading the markdown file, processing any includes or references, and constructing the system prompt.
-
-For built-in skills like `frontend-design`, `pdf`, or `pptx`, the system optimizes this process. The metadata helps quickly determine if the skill is applicable to your request before loading the full body.
+```bash
+ls ~/.claude/skills/
+```
 
 ## Why the Distinction Matters
 
-### Performance Optimization
+### Keeping Skills Focused
 
-Large skills with extensive documentation, examples, or reference material benefit from separating metadata from body content. The system can quickly filter skills by metadata before committing to loading heavy content.
+The front matter should be minimal — just `name` and `description`. The body should contain everything Claude needs to perform the task. A common mistake is trying to configure behavior through front matter fields that Claude Code does not recognize.
 
-Consider a skill like `supermemory` that includes hundreds of example queries and response patterns. By keeping the core instructions lean and placing extensive examples in a separate file referenced by the body, you maintain fast initialization while still providing rich context when needed.
+For example, a skill like `/supermemory` that maintains project context should put all guidance about how to store and retrieve memories in the body:
 
-### Skill Discovery and Filtering
+```markdown
+---
+name: supermemory
+description: Maintain persistent context and memory across Claude Code sessions
+---
 
-Metadata enables powerful skill management:
+# Supermemory Skill
 
-```bash
-# List skills by author
-/skills list --author theluckystrike
+You help maintain project context across sessions. When invoked:
 
-# Find skills with specific tags
-/skills list --tags "pdf,documents"
+1. Ask what the user wants to remember or retrieve
+2. Store important decisions, architectural choices, and conventions
+3. Reference stored context when answering questions about the project
 
-# Check skill permissions before invocation
-/skills info pdf-editor
+Keep memories concise and organized by topic.
 ```
 
-This metadata-driven approach means you can find the right skill without loading every skill's full body content.
+### Body Length and Performance
 
-### Permission and Security Boundaries
+Large skill bodies consume more context tokens at each turn. To keep skills manageable:
 
-The metadata section declares required permissions explicitly:
+- Put only the instructions Claude needs in the skill body
+- Move reference material to separate files and instruct Claude to read them when needed using the `read_file` tool
+- Break very large workflows into smaller, focused skills
 
-```yaml
----
-name: file-operations
-permissions: [file-read, file-write, bash-execute]
----
-```
+### Practical Examples
 
-This allows Claude to validate permission boundaries before executing potentially destructive operations. The body might contain additional guidance, but the permissions are checked against metadata first.
+A minimal skill with a clear, focused body:
 
-## Practical Examples
-
-### Example 1: Minimal Skill with Clear Metadata
-
-```yaml
+```markdown
 ---
 name: sql-formatter
 description: Format and validate SQL queries
-version: 1.0.0
-tags: [sql, database, formatting]
 ---
 
 Format SQL queries according to these rules:
 - UPPERCASE keywords
 - Indent joins and subqueries
-- Use trailing commas for columns
-- Add comments for complex logic
+- Use trailing commas in column lists
+- Add inline comments for complex logic
 ```
 
-The metadata tells you exactly what the skill does. The body contains only the essential instructions.
+A skill with extended body content for a richer workflow:
 
-### Example 2: Rich Skill with Extended Body
-
-```yaml
+```markdown
 ---
 name: api-documentation
 description: Generate API documentation from code
-version: 2.1.0
-tags: [api, documentation, openapi, swagger]
 ---
 
 # API Documentation Generator
 
-You generate OpenAPI 3.0 documentation from code.
+Generate OpenAPI 3.0 documentation from code.
 
 ## Supported Frameworks
 - Express.js
@@ -150,68 +133,34 @@ Always produce valid OpenAPI YAML with:
 - Operation summaries from route names
 - Request/response schemas
 - Example payloads
-
-[Extended examples and patterns follow...]
 ```
-
-Here, the metadata provides quick filtering capability while the body contains the detailed guidance.
-
-### Example 3: Conditional Loading with Includes
-
-Some skills reference external files for extended content:
-
-```yaml
----
-name: tdd-guide
-description: Comprehensive TDD methodology guide
----
-
-# Test-Driven Development Guide
-
-Follow the principles in /reference/tdd-principles.md
-
-For JavaScript projects, use the patterns in /examples/js-tdd.js
-```
-
-This pattern keeps the core skill file manageable while allowing access to extensive reference material when needed.
 
 ## Best Practices for Skill Authors
 
-### Keep Metadata Accurate
+**Keep front matter minimal.** Use only `name` and `description`. Any additional fields are ignored.
 
-Ensure your metadata reflects what the skill actually does. Misleading descriptions frustrate users and break trust in skill discovery.
+**Put all behavior in the body.** Instructions, examples, rules, and context all belong in the Markdown body, not in front matter.
 
-### Separate Core Instructions from Examples
+**Separate core instructions from reference material.** Put essential instructions directly in the body. Reference external files for examples and templates by instructing Claude to read them with `read_file`.
 
-Put essential instructions directly in the body. Move extensive examples, templates, and reference material to separate files or use the skill's include mechanism if available.
-
-### Use Descriptive Tags
-
-Tags like `pdf`, `pptx`, `xlsx`, `tdd`, `frontend-design` help users find your skill. Use consistent naming across your skill library.
-
-### Version Your Skills
-
-Increment the version in metadata when you update behavior. This helps users track changes and allows the system to identify outdated skills.
+**Keep the body focused.** A skill that does one thing well is easier to invoke correctly than one that handles every possible case. If a skill covers too many scenarios, split it into multiple focused skills.
 
 ## Common Mistakes to Avoid
 
-**Putting critical instructions only in metadata.** Metadata is for discovery and configuration, not behavior. Always include core instructions in the body.
+**Adding unsupported front matter fields.** Fields like `version`, `tags`, `permissions`, `auto_invoke`, and `tools` are not recognized. They do nothing.
 
-**Ignoring the permissions field.** Explicit permissions protect users and prevent unexpected behavior.
+**Putting behavior in front matter.** The body defines what Claude does. Front matter is for identification only.
 
-**Overloading the body with everything.** If your skill body exceeds a few hundred lines, consider splitting into a core skill and reference files.
+**Making skills too large.** Skills that load hundreds of lines of examples for every invocation consume context unnecessarily. Use external file references for non-essential content.
 
 ## Conclusion
 
-Understanding the distinction between skill metadata and the full skill body helps you build better, more maintainable Claude skills. Metadata drives discovery and configuration while the body defines actual behavior. Design each component with its purpose in mind, and your skills will be more discoverable, performant, and maintainable.
-
-For skills like `pdf` that handle complex document operations, or `tdd` that guide development workflows, this separation allows the system to quickly determine skill applicability while providing rich, detailed guidance when executing. Understanding this system is key to [optimizing skill response latency](/claude-skills-guide/articles/claude-code-response-latency-optimization-with-skills/).
+Claude Code skills have a simple structure: minimal front matter with `name` and `description`, followed by a Markdown body with all instructions. The entire file loads when you invoke the skill. There is no complex metadata system, no permission declarations, and no separate loading phases. Design each section with this in mind, and your skills will be clear, correct, and maintainable.
 
 ## Related Reading
 
-- [Claude Code Response Latency Optimization with Skills](/claude-skills-guide/articles/claude-code-response-latency-optimization-with-skills/) — Apply the metadata vs body loading knowledge from this guide to optimize skill invocation speed
-- [Optimal Skill File Size and Complexity Guidelines](/claude-skills-guide/articles/optimal-skill-file-size-and-complexity-guidelines/) — Right-size your skill body to balance loading overhead with guidance completeness
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — Master the full metadata header specification that determines how skills are indexed and loaded
-- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational skill authoring patterns and loading behavior across the Claude ecosystem
+- [How Do I Test a Claude Skill Before Deploying to Team](/claude-skills-guide/articles/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate skill structure and behavior before sharing with teammates
+- [Open Source Claude Skills Ecosystem Outlook 2026](/claude-skills-guide/articles/open-source-claude-skills-ecosystem-outlook-2026/) — How community skills are structured and shared
+- [Claude Skills Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Start with the basics of skill authoring and invocation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

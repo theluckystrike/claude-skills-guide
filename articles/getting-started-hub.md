@@ -31,7 +31,7 @@ A Claude skill is a Markdown file that packages instructions, metadata, and guid
 
 Skills exist across two categories:
 - **Official skills** — maintained by Anthropic, shipping with Claude Code (pdf, tdd, xlsx, pptx, docx, frontend-design, etc.)
-- **Community skills** — built by developers, often covering niche or experimental use cases (supermemory, algorithmic-art, mcp-builder, etc.)
+- **Community skills** — built by developers, covering domain-specific use cases (custom code review workflows, stack-specific helpers, etc.)
 
 Skills are defined in `.md` files using a combination of YAML front matter and Markdown body. Claude reads both sections to understand when to activate the skill and how to behave within it.
 

@@ -184,19 +184,19 @@ Use this for README diagrams, architecture documentation, and technical blog pos
 
 ---
 
-## 10. Algorithmic Art Skill — Generative Visualizations
+## 10. Canvas Design Skill — Visual Asset Generation
 
-The `algorithmic-art` skill creates generative art and data visualizations, primarily using p5.js.
+The built-in `canvas-design` skill generates visual assets directly from prompts.
 
 ```
-/algorithmic-art
-Create a flow field visualization.
-Seed: "project-v1" (for reproducibility)
-Color palette: cool blues (#1a3a5c, #2e6da4, #4a9fd4)
-Output: p5.js sketch as JavaScript
+/canvas-design
+Create a banner image for our product launch.
+Size: 1200x630px (Open Graph)
+Style: modern, dark background, gradient accent
+Text: "Launch Day — March 2026"
 ```
 
-Seeded randomness ensures you get the same output on every render — useful for branded assets that need to be reproducible.
+Useful for generating social media assets, marketing banners, and UI mockups without leaving your development workflow.
 
 ---
 

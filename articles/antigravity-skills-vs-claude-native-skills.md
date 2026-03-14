@@ -61,7 +61,7 @@ Once in place, invoke it like any other skill:
 /pptx create a slide deck from this outline: [paste outline]
 ```
 
-Community skills fill gaps in the native offering. Popular Antigravity skills handle presentation generation (`pptx`), Word document creation (`docx`), web app testing (`webapp-testing`), and algorithmic art (`algorithmic-art`).
+Community skills fill gaps in the native offering. Popular Antigravity skills handle presentation generation (`pptx`), Word document creation (`docx`), web app testing (`webapp-testing`).
 
 ## Key Differences
 

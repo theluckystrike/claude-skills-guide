@@ -126,19 +126,6 @@ The **webapp-testing** skill automates browser interactions via Playwright.
 
 This skill replaces manual regression testing. Frontend developers and QA engineers point it at a local dev server and get a structured test run with screenshots.
 
-## Algorithmic Art with the algorithmic-art Skill
-
-The **algorithmic-art** skill generates visual art using p5.js with seeded randomness — useful for generative backgrounds, unique avatars, or creative coding projects.
-
-```
-/algorithmic-art create a flow field with 1000 particles, seed 12345, ocean color palette, export as PNG at 2400x2400
-```
-
-```
-/algorithmic-art generate a Voronoi diagram with 80 cells, pastel colors, SVG output
-```
-
-Designers building creative projects or needing programmatic image generation for high-volume content find this saves significant manual work.
 
 ## Choosing Your First Skills
 

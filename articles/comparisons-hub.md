@@ -49,7 +49,7 @@ The performance gap between skills and prompts widens as your workflow matures. 
 
 Anthropic ships a curated set of official skills with Claude Code: pdf, tdd, xlsx, pptx, docx, frontend-design, canvas-design, and others. These are security-audited, well-documented, and maintained across Claude versions.
 
-Community skills fill the gaps. They're often faster to innovate ([supermemory](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), mcp-builder, algorithmic-art appeared in the community before Anthropic addressed those use cases officially), more specialized, and more flexible—but they come without the same stability guarantees.
+Community skills fill the gaps. They're often faster to innovate ([supermemory](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) appeared in the community before Anthropic addressed those use cases officially), more specialized, and more flexible—but they come without the same stability guarantees.
 
 **The hybrid approach** most teams land on: official skills for core, production-critical tasks; community skills for niche integrations and experimental workflows.
 
