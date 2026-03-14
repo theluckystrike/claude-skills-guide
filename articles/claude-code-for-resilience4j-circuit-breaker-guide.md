@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Resilience4j Circuit Breaker Guide"
 description: "Learn how to use Claude Code to build resilient Java applications with Resilience4j circuit breakers. Practical examples and code snippets for."
@@ -7,7 +8,10 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-resilience4j-circuit-breaker-guide/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Resilience4j Circuit Breaker Guide

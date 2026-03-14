@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Next.js Middleware Workflow Tutorial"
 description: "Learn how to build efficient Next.js middleware workflows using Claude Code. This tutorial covers practical examples for authentication, redirects, and."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-nextjs-middleware-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills, nextjs, middleware, workflow]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Next.js Middleware Workflow Tutorial

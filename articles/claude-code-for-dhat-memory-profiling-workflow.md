@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Dhat Memory Profiling Workflow"
 description: "A practical guide to using Claude Code with Dhat for Python memory profiling. Learn how to identify memory allocation patterns and optimize your Python."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-dhat-memory-profiling-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 Dhat (Dynamic Heap Analysis Tool) is a powerful memory profiling tool for Python that helps developers understand memory allocation patterns and identify potential memory issues. When combined with Claude Code, you have an intelligent assistant that can guide you through setting up Dhat, interpreting its output, and implementing fixes. This guide walks you through a complete memory profiling workflow using Claude Code and Dhat.
 

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Seldon Core Model Serving Guide"
 description: "Learn how to use Claude Code to streamline Seldon Core deployment workflows, create ML model serving configurations, and automate Kubernetes-based."
@@ -7,14 +8,17 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-seldon-core-model-serving-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Seldon Core Model Serving Guide
 
 Seldon Core transforms machine learning models into production-ready inference services running on Kubernetes. While powerful, setting up Seldon deployments involves multiple configuration files, understanding Kubernetes resources, and managing complex ML pipelines. Claude Code can significantly accelerate this workflow by automating repetitive tasks, generating configuration templates, and helping you debug deployment issues.
 
-This guide shows how to leverage Claude Code effectively for Seldon Core model serving projects.
+This guide shows how to use Claude Code effectively for Seldon Core model serving projects.
 
 ## Understanding the Seldon Core Ecosystem
 

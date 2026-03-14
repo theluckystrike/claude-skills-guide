@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for TypeScript Conditional Types Guide"
 description: "Master TypeScript conditional types with Claude Code. Learn to write, debug, and refactor complex generic conditional types with practical examples."
@@ -7,12 +8,15 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-typescript-conditional-types-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for TypeScript Conditional Types Guide
 
-TypeScript conditional types are one of the most powerful yet underutilized features in the type system. They enable you to create type-level logic that adapts based on other types, making your generics more expressive and your APIs more type-safe. This guide shows you how to leverage Claude Code to understand, write, and debug conditional types effectively.
+TypeScript conditional types are one of the most powerful yet underutilized features in the type system. They enable you to create type-level logic that adapts based on other types, making your generics more expressive and your APIs more type-safe. This guide shows you how to use Claude Code to understand, write, and debug conditional types effectively.
 
 ## Understanding Conditional Types Basics
 

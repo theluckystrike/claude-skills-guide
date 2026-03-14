@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Timeout & Budget Workflow Tutorial"
 description: "Learn how to effectively manage execution time and resource budgets in Claude Code with practical examples and actionable advice."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-timeout-budget-workflow-tutorial/
 categories: [Tutorial, Claude Code, Developer Tools]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Timeout & Budget Workflow Tutorial

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Azure Cost Management Workflow"
 description: "Learn how to build Claude skills that automate Azure cost management, monitor spending, and optimize cloud expenses with practical code examples."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-azure-cost-management-workflow/
 categories: [azure, cloud-cost-management]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Azure Cost Management Workflow
@@ -260,7 +264,7 @@ When building Claude skills for Azure cost management, follow these practices:
 
 ## Conclusion
 
-Claude Code skills for Azure cost management transform manual monitoring into automated, actionable workflows. By leveraging Azure's APIs directly through Claude skills, you can build solutions that alert on budget overruns, detect anomalies, surface optimization recommendations, and integrate with broader monitoring infrastructure.
+Claude Code skills for Azure cost management transform manual monitoring into automated, actionable workflows. By using Azure's APIs directly through Claude skills, you can build solutions that alert on budget overruns, detect anomalies, surface optimization recommendations, and integrate with broader monitoring infrastructure.
 
 Start with the basic cost query skill, then progressively add budget alerts, anomaly detection, and optimization recommendations as your cost management mature.
 {% endraw %}

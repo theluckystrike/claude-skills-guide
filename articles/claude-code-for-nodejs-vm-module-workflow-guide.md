@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Node.js VM Module Workflow Guide"
 description: "Master Node.js vm module for code compilation and sandboxing with Claude Code. Learn practical workflows for secure code execution, template rendering."
@@ -7,9 +8,12 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-nodejs-vm-module-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 {% raw %}
-The Node.js `vm` module is a powerful built-in module that provides APIs for compiling and executing code in isolated contexts. Whether you need to run user-provided scripts, create sandboxed environments, or implement template rendering engines, the vm module offers essential capabilities for secure code execution. This guide shows you how to leverage Claude Code to work effectively with the Node.js vm module, from basic script compilation to advanced sandboxing patterns.
+The Node.js `vm` module is a powerful built-in module that provides APIs for compiling and executing code in isolated contexts. Whether you need to run user-provided scripts, create sandboxed environments, or implement template rendering engines, the vm module offers essential capabilities for secure code execution. This guide shows you how to use Claude Code to work effectively with the Node.js vm module, from basic script compilation to advanced sandboxing patterns.
 
 ## Understanding the VM Module Fundamentals
 
@@ -245,7 +249,7 @@ Third, prefer `vm.runInNewContext()` over modifying the global object directly w
 
 ## Conclusion
 
-The Node.js vm module is an essential tool for scenarios requiring code compilation, sandboxing, or dynamic execution. By combining Claude Code's assistance with these patterns, you can build secure, performant systems for template rendering, plugin systems, and user code execution. Remember to always prioritize security when executing untrusted code, and leverage Claude Code to explore edge cases and advanced patterns as your requirements evolve.
+The Node.js vm module is an essential tool for scenarios requiring code compilation, sandboxing, or dynamic execution. By combining Claude Code's assistance with these patterns, you can build secure, performant systems for template rendering, plugin systems, and user code execution. Remember to always prioritize security when executing untrusted code, and use Claude Code to explore edge cases and advanced patterns as your requirements evolve.
 {% endraw %}
 
 ## Related Reading

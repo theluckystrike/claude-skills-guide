@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for TypeScript Template Literal Types Guide"
 description: "Learn how to use Claude Code CLI to write, debug, and master TypeScript template literal types with practical examples and actionable advice."
@@ -7,11 +8,14 @@ author: Claude Skills Guide
 permalink: /claude-code-for-typescript-template-literal-types-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for TypeScript Template Literal Types Guide
 
-TypeScript's template literal types represent one of the most powerful type-system features introduced in recent years. They allow you to create precise, composable string types that can dramatically improve type safety in your applications. This guide shows you how to leverage Claude Code CLI to work with template literal types effectively, from basic usage to advanced patterns.
+TypeScript's template literal types represent one of the most powerful type-system features introduced in recent years. They allow you to create precise, composable string types that can dramatically improve type safety in your applications. This guide shows you how to use Claude Code CLI to work with template literal types effectively, from basic usage to advanced patterns.
 
 ## Understanding Template Literal Types
 

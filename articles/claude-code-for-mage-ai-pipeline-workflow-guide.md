@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Mage AI Pipeline Workflow Guide"
 description: "Learn how to leverage Claude Code to build, debug, and optimize Mage AI data pipelines. Practical examples and actionable workflows for data engineers."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-mage-ai-pipeline-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for Mage AI Pipeline Workflow Guide
@@ -168,7 +172,7 @@ Maintain comments and documentation in your pipeline code. Claude can help you g
 
 ## Conclusion
 
-Claude Code transforms Mage AI pipeline development from a manual process into a collaborative workflow. By leveraging Claude for scaffolding, debugging, optimization, testing, and documentation, you can significantly accelerate your data engineering productivity. Start with one workflow—such as generating pipeline scaffolding—and gradually incorporate more advanced use cases as you become comfortable with the collaboration pattern.
+Claude Code transforms Mage AI pipeline development from a manual process into a collaborative workflow. By using Claude for scaffolding, debugging, optimization, testing, and documentation, you can significantly accelerate your data engineering productivity. Start with one workflow—such as generating pipeline scaffolding—and gradually incorporate more advanced use cases as you become comfortable with the collaboration pattern.
 
 The key is treating Claude as a pair programmer who understands data engineering concepts and Mage AI specifics. Provide clear requirements, review suggestions critically, and iterate toward robust, production-ready pipelines.
 {% endraw %}

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Model Card Documentation Workflow"
 description: "Learn how to leverage Claude Code and specialized skills to create comprehensive model cards for ML models. Practical workflow guide with examples."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-model-card-documentation-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code for Model Card Documentation Workflow
 
@@ -195,7 +199,7 @@ Claude Code can analyze your model's failure cases from evaluation logs and help
 
 ## Conclusion
 
-Claude Code transforms model card documentation from a tedious chore into an automated, reliable process. By leveraging its code analysis capabilities and integrating documentation generation into your ML workflows, you can ensure comprehensive, up-to-date model documentation with minimal manual effort.
+Claude Code transforms model card documentation from a tedious chore into an automated, reliable process. By using its code analysis capabilities and integrating documentation generation into your ML workflows, you can ensure comprehensive, up-to-date model documentation with minimal manual effort.
 
 The key is treating model cards as integral parts of your development process—artifacts that evolve alongside your models. With Claude Code handling the heavy lifting, maintaining thorough documentation becomes sustainable even for large-scale ML projects.
 

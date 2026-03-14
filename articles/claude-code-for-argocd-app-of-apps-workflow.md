@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for ArgoCD App of Apps Workflow"
 description: "Learn how to use Claude Code to streamline your ArgoCD App of Apps pattern implementation. Practical examples, YAML configurations, and automation tips."
@@ -7,7 +8,10 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-argocd-app-of-apps-workflow/
+reviewed: true
+score: 7
 ---
+
 {% raw %}
 
 
