@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Building a REST API with Claude Code Tutorial"
 description: "A practical guide to building REST APIs using Claude Code. Learn to scaffold, test, and document your API with Claude skills and MCP servers."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, rest-api, backend, web-development, mcp]
-author: theluckystrike
+tags: [claude-code, rest-api, backend, web-development, mcp, claude-skills]
+author: "Claude Skills Guide"
 permalink: /building-a-rest-api-with-claude-code-tutorial/
+reviewed: true
+score: 7
 ---
+
 
 # Building a REST API with Claude Code Tutorial
 

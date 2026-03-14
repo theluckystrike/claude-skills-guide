@@ -1,13 +1,18 @@
 ---
 
+
 layout: default
 title: "Before and After: Switching to Claude Code Workflow"
 description: "A practical comparison of developer workflows before and after adopting Claude Code. See real productivity gains, workflow transformations, and how AI."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /before-and-after-switching-to-claude-code-workflow/
-categories: [guides]
+reviewed: true
+score: 7
+categories: [workflows]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Before and After: Switching to Claude Code Workflow
 

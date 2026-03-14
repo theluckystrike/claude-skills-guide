@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Vibe Coding Workflow for Solo Developers Guide"
 description: "A practical guide to building an efficient vibe coding workflow as a solo developer. Learn how to leverage Claude Code, AI skills, and automation tools."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [vibe-coding, ai-coding, solo-developer, workflow, claude-code, productivity]
+tags: [vibe-coding, ai-coding, solo-developer, workflow, claude-code, productivity, claude-skills]
 permalink: /vibe-coding-workflow-for-solo-developers-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Vibe Coding Workflow for Solo Developers Guide
 
@@ -198,7 +202,7 @@ The **xlsx** skill helps track time spent, feature completion, or sprint plannin
 
 ## Conclusion
 
-Vibe coding amplifies solo developer productivity by handling routine code generation while you focus on creative architecture and problem-solving. The key lies in clear requirement definition, iterative development with testing, and leveraging skills like tdd, supermemory, and pdf to maintain quality and context.
+Vibe coding amplifies solo developer productivity by handling routine code generation while you focus on creative architecture and problem-solving. The key lies in clear requirement definition, iterative development with testing, and using skills like tdd, supermemory, and pdf to maintain quality and context.
 
 Start with small projects, establish your patterns, and gradually expand your workflow. The combination of AI assistance and intentional development practices creates a powerful system for solo developers shipping quality software.
 
