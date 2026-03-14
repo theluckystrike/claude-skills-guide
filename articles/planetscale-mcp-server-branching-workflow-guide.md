@@ -32,20 +32,18 @@ The Planetscale MCP server extends these capabilities by exposing database opera
 
 First, ensure you have a skill that can interact with the Planetscale API. You'll need to configure the MCP server with your Planetscale credentials:
 
-```yaml
+```markdown
 ---
 name: planetscale-branching
 description: Automate Planetscale database branching workflows
-tools:
-  - Read
-  - Write
-  - Bash
 ---
 
 # Planetscale Branching Workflow Skill
+
+Use available tools to inspect migration files, generate schema snapshots, and execute CLI commands for Planetscale operations.
 ```
 
-The skill uses `Read` to inspect migration files, `Write` to generate schema snapshots, and `Bash` to execute CLI commands for Planetscale operations.
+The skill body instructs Claude to use Read to inspect migration files, Write to generate schema snapshots, and Bash to execute CLI commands for Planetscale operations.
 
 ## Automating Branch Creation
 

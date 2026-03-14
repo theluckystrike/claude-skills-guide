@@ -30,26 +30,36 @@ Claude Code represents a paradigm shift in AI terminal editors. Rather than prov
 
 ### Installing and Managing Skills
 
-The skill system in Claude Code is remarkably accessible. Developers can browse and install skills from the community registry using simple commands:
+The skill system in Claude Code is remarkably accessible. Skills are Markdown files (`.md`) that you place in your `.claude/` directory at the project level or `~/.claude/` for global access. Once a skill file is in place, invoke it with a slash command during a session:
 
 ```bash
-claude skill install pdf
-claude skill install pptx
-claude skill install xlsx
+# Place skill files in your .claude/ directory:
+# .claude/pdf.md
+# .claude/pptx.md
+# .claude/xlsx.md
+
+# Then invoke during a Claude Code session:
+/pdf
+/pptx
+/xlsx
 ```
 
-This command-based approach enables rapid deployment of specialized capabilities without extensive configuration. Each skill packages specific functionality—PDF manipulation, presentation creation, spreadsheet operations—into reusable components that Claude Code can use when needed.
+This file-based approach enables rapid deployment of specialized capabilities without extensive configuration. Each skill packages specific functionality—PDF manipulation, presentation creation, spreadsheet operations—into reusable components that Claude Code can use when needed.
 
 ### Creating Custom Skills
 
 Beyond using pre-built skills, Claude Code empowers developers to create their own specialized workflows. The skill creation process involves defining the skill's metadata, available tools, and behavioral patterns. Here's a basic example of skill structure:
 
-```json
-{
-  "name": "security-audit",
-  "description": "Performs security analysis on code",
-  "capabilities": ["vulnerability-scan", "dependency-check", "secret-detection"]
-}
+```markdown
+---
+name: security-audit
+description: Performs security analysis on code, checking for vulnerabilities, dependency issues, and secret detection
+---
+
+You are a security analysis specialist. When invoked, scan the codebase for:
+- Known vulnerability patterns
+- Dependency issues
+- Exposed secrets or credentials
 ```
 
 This extensibility means that as your project evolves, you can build custom skills that address your specific requirements, whether that's enforcing coding standards, generating documentation, or automating testing workflows.

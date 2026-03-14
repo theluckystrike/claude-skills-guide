@@ -8,6 +8,8 @@ permalink: /claude-code-for-grafana-plugin-development-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
+
 
 # Claude Code for Grafana Plugin Development Workflow
 
@@ -253,3 +255,4 @@ try {
 ## Conclusion
 
 Claude Code transforms Grafana plugin development from a complex, multi-step process into a guided workflow. By creating a dedicated skill for plugin development, you get instant access to scaffolding, code generation, and debugging assistance—all tailored to the Grafana plugin SDK. Start with a simple skill definition and expand it as you encounter new plugin patterns. The result is faster development cycles and more reliable plugins.
+{% endraw %}

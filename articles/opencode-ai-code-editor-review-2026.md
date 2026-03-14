@@ -52,11 +52,11 @@ Each skill transforms Claude Code for specific workflows. The tdd skill structur
 For developers who prefer terminal-based workflows, integration quality varies significantly. Claude Code operates entirely in the terminal, maintaining your existing workflow without requiring GUI adoption:
 
 ```bash
-# Inline editing with Claude Code
-claude --edit "Convert this class component to a functional component with hooks"
+# Run Claude Code and describe what you need
+claude "Convert this class component to a functional component with hooks"
 ```
 
-This command mode works alongside interactive sessions, giving you flexibility in how you interact with the AI.
+This approach works alongside interactive sessions, giving you flexibility in how you interact with the AI.
 
 ## Performance in Real Scenarios
 

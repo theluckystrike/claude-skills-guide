@@ -29,13 +29,14 @@ To begin building your AI review workflow, you'll need to configure Claude Code 
 
 First, ensure you have both Pieces for Developers and Claude Code installed on your system. Pieces provides a desktop application with an API that Claude Code can interact with through custom skills. The connection is established using environment variables and API endpoints that both applications expose.
 
-Create a new skill file for the Pieces integration:
+Create a new skill file for the Pieces integration by placing a `.md` file in your `.claude/` directory:
 
 ```bash
-mkdir -p ~/.claude/skills/pieces-review
+# Place the skill file in your project's .claude/ directory
+# .claude/pieces-review.md
 ```
 
-This skill will define how Claude Code communicates with Pieces and handles code review requests. The skill configuration includes tool permissions and response formatting that determines how review results are presented.
+This skill will define how Claude Code handles code review requests using Pieces context. The skill's Markdown body contains the instructions and response formatting.
 
 ## Building the Review Skill
 
@@ -43,21 +44,14 @@ The core of your AI review workflow is a Claude Code skill that orchestrates the
 
 Here's a practical skill configuration for code review:
 
-```yaml
+```markdown
 ---
 name: pieces-code-review
 description: AI-powered code review using Pieces for Developers context
-tools:
-  - bash
-  - read_file
-  - write_file
-  - MCP-pieces
-context:
-  max_snippets: 10
-  review_depth: comprehensive
 ---
 
-This skill retrieves relevant code snippets from Pieces and performs thorough analysis.
+Retrieve relevant code snippets from Pieces via the MCP tool and perform thorough analysis.
+Review the code for correctness, style, security vulnerabilities, and alignment with team patterns.
 ```
 
 The skill uses MCP (Model Context Protocol) to communicate with Pieces, enabling bidirectional data flow. When you request a review, Claude Code first queries Pieces for related snippets, then performs its own analysis before presenting comprehensive feedback.
@@ -66,34 +60,36 @@ The skill uses MCP (Model Context Protocol) to communicate with Pieces, enabling
 
 ### Example 1: Pre-Commit Review
 
-The most common use case for this integration is performing AI reviews before committing code. This workflow catches issues early and maintains code quality standards:
+The most common use case for this integration is performing AI reviews before committing code. This workflow catches issues early and maintains code quality standards. Start a Claude Code session and invoke the review skill:
 
-```bash
-claude review --file src/authentication.js --context previous-commits
+```
+/pieces-code-review
+Review src/authentication.js against our team coding standards and any relevant Pieces snippets
 ```
 
 Claude Code analyzes the file, compares it against patterns in Pieces, and provides feedback on potential issues, style violations, and improvements. The review includes suggestions based on your team's coding standards and best practices stored in Pieces.
 
 ### Example 2: Pull Request Automation
 
-For teams using GitHub or GitLab, you can automate reviews on pull requests using Claude Code's hook system. The integration triggers automatically when new code is pushed:
+For teams using GitHub or GitLab, you can integrate Claude Code reviews into your CI/CD workflow by running Claude Code non-interactively as part of your pipeline:
 
 ```bash
-# Configure webhook to trigger Claude review
-claude hook register pr-opened pieces-review
+# Run Claude Code non-interactively to review changed files
+claude --print "Review the files changed in this PR and report issues using the pieces-review skill"
 ```
 
-This automation ensures every pull request receives consistent, thorough review without manual intervention. The review results are posted as comments on the pull request, providing immediate feedback to developers.
+This approach ensures every pull request receives consistent, thorough review. The review results can be captured and posted as comments on the pull request, providing immediate feedback to developers.
 
 ### Example 3: Batch Review Sessions
 
-When working on large features or refactoring projects, you might need comprehensive reviews across multiple files. The workflow handles this efficiently:
+When working on large features or refactoring projects, you might need comprehensive reviews across multiple files. Start an interactive Claude Code session and describe the scope:
 
-```bash
-claude review --directory refactor/ --output review-report.md
+```
+/pieces-code-review
+Review all files in the refactor/ directory for consistency and correctness, referencing Pieces context for our established patterns
 ```
 
-This command triggers a deep review of all files in the specified directory. Claude Code uses Pieces to understand the relationships between files and provides contextual recommendations that consider the entire refactoring effort.
+Claude Code uses Pieces to understand the relationships between files and provides contextual recommendations that consider the entire refactoring effort.
 
 ## Advanced Configuration Options
 
@@ -103,21 +99,14 @@ The review depth setting controls how thoroughly Claude Code analyzes code. Sett
 
 You can also configure focus areas that prioritize certain aspects of code quality:
 
-```yaml
+```markdown
 ---
 name: pieces-security-review
-description: Security-focused code review
-tools:
-  - bash
-  - read_file
-  - MCP-pieces
-context:
-  focus:
-    - security
-    - vulnerabilities
-    - best_practices
-  max_snippets: 20
+description: Security-focused code review checking for vulnerabilities and comparing against security patterns stored in Pieces
 ---
+
+You are a security-focused code reviewer. Retrieve relevant security patterns from Pieces via MCP.
+Focus on: security vulnerabilities, best practices, and common security anti-patterns.
 ```
 
 This configuration emphasizes security analysis, checking for common vulnerabilities and comparing code against security patterns stored in Pieces.
