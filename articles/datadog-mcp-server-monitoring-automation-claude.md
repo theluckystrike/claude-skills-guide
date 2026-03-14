@@ -16,9 +16,9 @@ Server monitoring remains one of the most critical yet time-consuming aspects of
 
 ## Understanding MCP Servers for Monitoring
 
-MCP servers act as bridges between Claude and external services, allowing the AI to interact with APIs, databases, and monitoring platforms. When combined with Datadog's extensive API, MCP servers enable automated alerting, metric analysis, and incident response without manual intervention.
+[MCP servers act as bridges between Claude and external services](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/), allowing the AI to interact with APIs, databases, and monitoring platforms. When combined with Datadog's extensive API, MCP servers enable automated alerting, metric analysis, and incident response without manual intervention.
 
-The key advantage lies in natural language interaction. Instead of writing custom scripts for every monitoring scenario, you can describe what you want in plain English, and Claude will handle the API calls, data processing, and alert configuration through the MCP connection.
+[The key advantage lies in natural language interaction](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Instead of writing custom scripts for every monitoring scenario, you can describe what you want in plain English, and Claude will handle the API calls, data processing, and alert configuration through the MCP connection.
 
 ## Setting Up Your Datadog MCP Integration
 
@@ -123,5 +123,12 @@ Always maintain human oversight for critical operations. Use Claude automation t
 Automating Datadog monitoring through MCP servers transforms infrastructure management from manual oversight to intelligent, proactive control. By leveraging Claude's natural language capabilities, developers can focus on building and optimizing rather than constantly monitoring dashboards.
 
 The combination of Datadog's robust monitoring platform with MCP server automation creates a powerful foundation for modern infrastructure management. Start small, measure results, and expand automation as your confidence grows.
+
+## Related Reading
+
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [MCP Server Logging Audit Trail Security Guide](/claude-skills-guide/articles/mcp-server-logging-audit-trail-security-guide/)
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/)
+- [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

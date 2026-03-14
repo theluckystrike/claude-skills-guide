@@ -12,7 +12,7 @@ score: 8
 
 # Ghost MCP Server: Blogging Automation Workflow
 
-The Ghost MCP server enables Claude to interact directly with your Ghost blog, automating post creation, content updates, tag management, and publishing workflows through natural language commands. This guide shows developers and power users how to set up, configure, and leverage this integration for efficient content management.
+[The Ghost MCP server enables Claude to interact directly with your Ghost blog](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/), automating post creation, content updates, tag management, and publishing workflows through natural language commands. This guide shows developers and power users how to set up, configure, and leverage this integration for efficient content management.
 
 ## Prerequisites
 
@@ -207,5 +207,12 @@ When automating Ghost content creation, keep these considerations in mind:
 The Ghost MCP server transforms how you manage blog content with Claude. By connecting natural language commands to Ghost's Admin API, you can automate drafting, scheduling, tag management, and publishing workflows. Combined with other Claude skills like `pdf`, `tdd`, `frontend-design`, and `supermemory`, you have a powerful content management system that handles everything from technical tutorials to marketing posts.
 
 For teams managing regular content schedules, this automation significantly reduces manual effort while maintaining quality control through human review of generated drafts.
+
+## Related Reading
+
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Skills for SEO Content Generation Workflow](/claude-skills-guide/articles/claude-skills-for-seo-content-generation-workflow/)
+- [ClickUp MCP Server Workflow Automation Guide](/claude-skills-guide/articles/clickup-mcp-server-workflow-automation-guide/)
+- [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

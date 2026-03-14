@@ -16,7 +16,7 @@ Open source maintainers in 2026 face a familiar challenge: the gap between proje
 
 ## Automating Issue Triage and Responses
 
-One of the most time-consuming tasks for maintainers is issue management. Claude Code integrations like **supermemory** allow maintainers to search through years of issue history instantly. Instead of scrolling through hundreds of closed issues to find a similar bug report, maintainers query their project knowledge base:
+One of the most time-consuming tasks for maintainers is issue management. [integrations like **supermemory** allow maintainers to search through years of issue history](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) instantly. Instead of scrolling through hundreds of closed issues to find a similar bug report, maintainers query their project knowledge base:
 
 ```
 Find all issues related to memory leaks in the v2 release
@@ -32,7 +32,7 @@ The issue template mentions the error occurs on line 42, but I don't see the ful
 
 ## Streamlining Documentation Generation
 
-Documentation often falls behind code in open source projects. Maintainers are using the **pdf** skill to generate updated documentation automatically. When a new release ships, they run:
+Documentation often falls behind code in open source projects. [Maintainers are using the **pdf** skill to generate updated documentation automatically](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) When a new release ships, they run:
 
 ```
 Generate a changelog PDF for version 2.5.0 using the git commits since last tag
@@ -135,5 +135,12 @@ The key is starting with one repetitive task and automating it. Most maintainers
 Claude Code isn't about replacing maintainers—it's about giving them leverage. By automating documentation generation, test coverage checks, issue triage, and pull request summaries, maintainers reclaim time for the work that actually requires human judgment: mentoring contributors, designing new features, and building community.
 
 The tools are available. The workflows are proven. The only question is which task you'll automate first.
+
+## Related Reading
+
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [How Agencies Use Claude Code for Client Projects](/claude-skills-guide/articles/how-agencies-use-claude-code-for-client-projects/)
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

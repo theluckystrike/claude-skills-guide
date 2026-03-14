@@ -12,7 +12,7 @@ score: 7
 
 # Tavily MCP Server: Research Automation Guide
 
-Building research automation into your Claude Code workflow opens up powerful possibilities for gathering, processing, and synthesizing information from across the web. The Tavily MCP Server provides a robust integration between Tavily's search capabilities and Claude's contextual understanding, enabling you to automate research tasks that previously required manual effort.
+[Building research automation into your Claude Code workflow](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) opens up powerful possibilities for gathering, processing, and synthesizing information from across the web. The Tavily MCP Server provides a robust integration between Tavily's search capabilities and Claude's contextual understanding, enabling you to automate research tasks that previously required manual effort.
 
 This guide covers practical implementation patterns for developers and power users looking to incorporate Tavily into their Claude skills workflow.
 
@@ -20,7 +20,7 @@ This guide covers practical implementation patterns for developers and power use
 
 The Tavily MCP Server exposes Tavily's search and content extraction APIs through the Model Context Protocol, making them available as tools within Claude Code. Unlike basic web search, Tavily specializes in AI-optimized search results with semantic understanding, making it particularly effective for research tasks that require nuanced information retrieval.
 
-The MCP server architecture allows you to maintain persistent connections and leverage Claude's native tool-calling capabilities, which means you can build multi-step research workflows that combine search results with other skills like PDF processing, document generation, and memory management.
+The MCP server architecture allows you to maintain persistent connections and leverage Claude's native tool-calling capabilities, which means [you can build multi-step research workflows that combine search, synthesis, and output](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/)earch results with other skills like PDF processing, document generation, and memory management.
 
 ## Installation and Configuration
 
@@ -136,5 +136,12 @@ When results seem irrelevant, refine your search queries using more specific ter
 With the Tavily MCP Server integrated into your workflow, you have a foundation for sophisticated research automation. Combine these capabilities with skills like tdd for research-driven testing, or canvas-design for visual research summaries. The key is starting with specific, repeatable research tasks and gradually building more complex chains as you identify patterns in your workflow.
 
 For teams, consider documenting your research automation patterns as reusable skills that can be shared across projects. This approach transforms one-off research sessions into reproducible knowledge-building processes.
+
+## Related Reading
+
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Skills for SEO Content Generation Workflow](/claude-skills-guide/articles/claude-skills-for-seo-content-generation-workflow/)
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

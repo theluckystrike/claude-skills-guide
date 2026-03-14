@@ -12,7 +12,7 @@ score: 7
 
 # MCP Zero Trust Architecture Implementation: Practical Guide
 
-Zero trust security has become the standard for modern AI tool integrations. When implementing Model Context Protocol (MCP) servers, applying zero trust principles ensures that every request is authenticated, every resource is validated, and no implicit trust exists between components. This guide shows you how to implement zero trust architecture for your MCP deployments.
+Zero trust security has become the standard for modern AI tool integrations. [implementing Model Context Protocol (MCP) servers](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) ensures that every request is authenticated, every resource is validated, and no implicit trust exists between components. This guide shows you how to implement zero trust architecture for your MCP deployments.
 
 ## What Zero Trust Means for MCP
 
@@ -22,7 +22,7 @@ MCP servers expose tools that Claude Code invokes during conversations. Without 
 
 ## Implementing Authentication Layers
 
-The foundation of zero trust MCP implementation starts with authentication. MCP supports multiple authentication mechanisms, but for production deployments, you should implement token-based authentication with short expiration windows.
+The foundation of zero trust MCP implementation starts with authentication. [MCP supports multiple authentication mechanisms](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/), but for production deployments, you should implement token-based authentication with short expiration windows.
 
 Create a custom MCP authentication wrapper that intercepts all tool invocations:
 
@@ -234,5 +234,12 @@ Before deploying your zero trust MCP architecture to production, verify these co
 - Regular security assessments validate the implementation
 
 Zero trust implementation requires upfront investment, but the security posture it provides protects your MCP infrastructure against both external attacks and internal misuse. Start with authentication, layer in authorization controls, and progressively strengthen your isolation as your deployment matures.
+
+## Related Reading
+
+- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/articles/mcp-oauth-21-authentication-implementation-guide/)
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/)
+- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/)
+- [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

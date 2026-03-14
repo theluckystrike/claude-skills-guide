@@ -12,13 +12,13 @@ score: 8
 
 # MCP Server Sandbox Isolation Security Guide
 
-Security remains one of the most critical considerations when deploying MCP servers in production environments. As developers integrate more AI capabilities into their workflows, understanding how to properly isolate MCP servers becomes essential for protecting sensitive data and maintaining system integrity.
+[deploying MCP servers in production environments](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/) As developers integrate more AI capabilities into their workflows, understanding how to properly isolate MCP servers becomes essential for protecting sensitive data and maintaining system integrity.
 
 This guide covers practical approaches to sandbox isolation for MCP servers, with concrete examples you can implement today.
 
 ## Understanding MCP Server Security Boundaries
 
-MCP servers extend Claude Code's capabilities by connecting to external services, databases, and APIs. Each server potentially has access to credentials, filesystem paths, and network resources. Without proper isolation, a compromised or misconfigured server could expose your entire development environment.
+[MCP servers extend Claude Code's capabilities by connecting to external services, databases, and APIs](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) Each server potentially has access to credentials, filesystem paths, and network resources. Without proper isolation, a compromised or misconfigured server could expose your entire development environment.
 
 The core principle is simple: limit what each MCP server can access to the minimum required for its function. This follows the security principle of least privilege, reducing the blast radius if something goes wrong.
 
@@ -192,5 +192,12 @@ Securing MCP servers requires attention to multiple layers: process isolation, n
 Implement logging and monitoring to detect issues early. Test your isolation configuration regularly to ensure it continues to work as expected.
 
 For developers working on complex projects, combining proper MCP server isolation with skills like the **tdd** skill for test-driven development creates a robust development environment that keeps security considerations front and center throughout your workflow.
+
+## Related Reading
+
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/)
+- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/)
+- [MCP Zero Trust Architecture Implementation](/claude-skills-guide/articles/mcp-zero-trust-architecture-implementation/)
+- [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
