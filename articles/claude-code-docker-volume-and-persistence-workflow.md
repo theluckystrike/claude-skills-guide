@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code Docker Volume and Persistence Workflow"
 description: "Master Docker volume management and data persistence when using Claude Code. Learn practical workflows for development environments, database."
@@ -7,7 +8,10 @@ categories: [workflows, docker]
 tags: [claude-code, docker, volumes, persistence, development-workflow, claude-skills]
 author: "theluckystrike"
 permalink: /claude-code-docker-volume-and-persistence-workflow/
+reviewed: true
+score: 7
 ---
+
 
 # Mastering Docker Volume and Persistence Workflow with Claude Code
 
@@ -116,7 +120,7 @@ volumes:
   shared_uploads:
 ```
 
-Both containers reference the same named volume but may mount it at different paths (`/uploads` vs `/data`). This pattern works seamlessly with Claude Code when you're architecting multi-container solutions:
+Both containers reference the same named volume but may mount it at different paths (`/uploads` vs `/data`). This pattern works smoothly with Claude Code when you're architecting multi-container solutions:
 
 ```
 /docker-compose design a file processing pipeline with an uploader service and a separate processor service that shares uploaded files
