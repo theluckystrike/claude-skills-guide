@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Zed Editor AI Features Review for Developers 2026"
-description: "A comprehensive review of Zed Editor's AI capabilities for developers in 2026, focusing on Claude Code integration, practical examples, and advanced features."
+description: "A comprehensive review of Zed Editor's AI capabilities for developers in 2026, focusing on Claude Code integration, practical examples, and advanced."
 date: 2026-03-14
 author: theluckystrike
 categories: [reviews]
@@ -158,3 +158,10 @@ The key to maximizing these benefits is understanding how to effectively collabo
 
 *This review covers Zed Editor's AI features as of March 2026. Capabilities may vary based on your subscription tier and configuration.*
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
