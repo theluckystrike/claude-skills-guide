@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code Parallel Task Execution Workflow"
-description: "Learn how to execute multiple Claude Code tasks simultaneously using parallel workflows, subagents, and batch processing techniques for maximum productivity."
+description: "Learn how to execute multiple Claude Code tasks simultaneously using parallel workflows, subagents, and batch processing techniques for maximum."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-parallel-task-execution-workflow/
+categories: [guides]
 ---
 
 # Claude Code Parallel Task Execution Workflow
@@ -132,5 +133,12 @@ For simple, independent operations like checking multiple files or generating si
 Claude Code's parallel task execution capabilities enable powerful workflows for developers handling multiple independent operations. Subagents provide the core mechanism, while skills like **tdd**, **pdf**, and **supermemory** extend parallel capabilities across different domains. The key is identifying truly independent tasks, structuring clear boundaries for each parallel worker, and implementing appropriate error handling for partial failures.
 
 Experiment with different parallelization levels to find the sweet spot for your specific use case. The time savings from parallel execution often outweigh the additional complexity, especially for repetitive tasks across large codebases.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

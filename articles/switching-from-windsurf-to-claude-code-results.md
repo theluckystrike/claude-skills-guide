@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Switching from Windurf to Claude Code: A Practical Guide"
-description: "A comprehensive guide to transitioning from Windurf to Claude Code, covering key differences, essential skills, and practical examples to help you get started."
+description: "A comprehensive guide to transitioning from Windurf to Claude Code, covering key differences, essential skills, and practical examples to help you get."
 date: 2026-03-14
 author: theluckystrike
 permalink: /switching-from-windsurf-to-claude-code-results/
+categories: [guides]
 ---
 
 {% raw %}
@@ -157,3 +158,10 @@ Switching from Windurf to Claude Code represents a shift from AI-assisted typing
 Take time to explore Claude Code's capabilities gradually. Start with simple tasks, then progressively tackle more complex projects as you become comfortable with the workflow. The investment pays off in increased productivity and a more collaborative development experience.
 
 Remember, Claude Code is designed to be your development partner. The more you engage with it, the better it understands your preferences and coding style. Embrace the conversational paradigm, and you'll discover a powerful ally in your development workflow.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
