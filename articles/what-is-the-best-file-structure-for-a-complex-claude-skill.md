@@ -12,7 +12,7 @@ score: 8
 
 # What Is the Best File Structure for a Complex Claude Skill
 
-As Claude Code skills grow in sophistication, developers quickly discover that a single Markdown file no longer suffices. Complex skills handling multi-step workflows, multiple tools, or extensive state management benefit from a well-organized file structure. This guide examines proven patterns for structuring complex Claude skills that scale.
+[As Claude Code skills grow in sophistication, developers quickly discover that a single Markdown file no longer suffices](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) Complex skills handling multi-step workflows, multiple tools, or extensive state management benefit from a well-organized file structure. This guide examines proven patterns for structuring complex Claude skills that scale.
 
 ## The Baseline: Single File Structure
 

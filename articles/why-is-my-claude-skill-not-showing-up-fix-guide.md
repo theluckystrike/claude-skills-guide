@@ -10,7 +10,7 @@ reviewed: true
 score: 8
 ---
 
-When a Claude Code skill fails to appear or respond to its slash command, the issue usually comes from a handful of common causes.
+[When a Claude Code skill fails to appear or respond to its slash command, the issue usually comes from a handful of common causes](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
 
 ## 1. Verify the Skill Is in the Right Directory
 

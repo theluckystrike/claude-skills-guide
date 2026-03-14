@@ -12,7 +12,7 @@ score: 7
 
 # Zoom MCP Server Meeting Summary Automation
 
-Meeting documentation consumes significant developer time. Recording decisions, tracking action items, and distributing summaries often become manual processes that interrupt deep work. Combining Zoom's meeting capabilities with Claude Code through the Model Context Protocol creates a powerful automation pipeline that transforms raw meeting data into actionable documentation.
+[Meeting documentation consumes significant developer time](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) Recording decisions, tracking action items, and distributing summaries often become manual processes that interrupt deep work. Combining Zoom's meeting capabilities with Claude Code through the Model Context Protocol creates a powerful automation pipeline that transforms raw meeting data into actionable documentation.
 
 This guide walks through building a complete Zoom meeting summary automation workflow using MCP servers, with practical code examples you can adapt for your team.
 

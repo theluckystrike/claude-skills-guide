@@ -16,7 +16,7 @@ If you are using Claude Code (claude.ai/code) as part of your daily development 
 
 ## Understanding Claude Skills
 
-Claude skills are modular extensions that add specialized capabilities to Claude Code. They work by providing additional context, tools, and workflows that Claude can invoke when needed. Most skills are open source and hosted on GitHub, making them freely available for anyone to install and use.
+[Claude skills are modular extensions that add specialized capabilities to Claude Code](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) They work by providing additional context, tools, and workflows that Claude can invoke when needed. Most skills are open source and hosted on GitHub, making them freely available for anyone to install and use.
 
 The best skill for you depends on what you build. A frontend developer will benefit most from skills focused on UI implementation, while a backend engineer might prefer skills that handle testing, database schema design, or API integration. Below is a practical breakdown of the top free skills across different categories.
 

@@ -12,7 +12,7 @@ score: 8
 
 # Will Claude Skills Replace Traditional IDE Plugins?
 
-The question on every developer's mind is straightforward: can Claude Code skills actually replace the plugins I've installed in VS Code, JetBrains, and Neovim? After months of using skills across different workflows, the answer is nuanced but compelling.
+[The question on every developer's mind is straightforward: can Claude Code skills actually replace the plugins I've installed](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) in VS Code, JetBrains, and Neovim? After months of using skills across different workflows, the answer is nuanced but compelling.
 
 ## Understanding the Fundamental Difference
 

@@ -88,7 +88,7 @@ async fn main() -> std::io::Result<()> {
 }
 ```
 
-Run the server with `cargo run` and test with curl:
+[Run the server with cargo run and test with curl](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/):
 
 ```bash
 curl http://127.0.0.1:8080/users

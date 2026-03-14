@@ -12,7 +12,7 @@ score: 8
 
 # Supervisor Agent Worker Agent Pattern in Claude Code
 
-The supervisor agent worker pattern represents one of the most powerful architectural approaches for building sophisticated AI agent systems. When implemented correctly in Claude Code, this pattern enables you to create modular, maintainable, and scalable agent workflows that can handle complex multi-step tasks with ease.
+[The supervisor agent worker pattern represents one of the most powerful architectural approaches](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) for building sophisticated AI agent systems. When implemented correctly in Claude Code, this pattern enables you to create modular, maintainable, and scalable agent workflows that can handle complex multi-step tasks with ease.
 
 ## Understanding the Pattern Architecture
 
