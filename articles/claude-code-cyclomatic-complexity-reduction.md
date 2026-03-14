@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "Claude Code Cyclomatic Complexity Reduction: A Practical Guide"
 description: "Learn how to reduce cyclomatic complexity in your code using Claude Code skills and techniques. Practical examples and actionable strategies for developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-cyclomatic-complexity-reduction/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Cyclomatic Complexity Reduction
 
-Cyclomatic complexity measures the number of linearly independent paths through your code's control flow. High complexity makes code harder to test, maintain, and debug. This guide shows you how to leverage Claude Code and its ecosystem of skills to systematically reduce complexity in your projects.
+Cyclomatic complexity measures the number of linearly independent paths through your code's control flow. High complexity makes code harder to test, maintain, and debug. This guide shows you how to use Claude Code and its ecosystem of skills to systematically reduce complexity in your projects.
 
 ## Understanding Cyclomatic Complexity
 
