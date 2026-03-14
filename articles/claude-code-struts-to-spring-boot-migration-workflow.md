@@ -28,15 +28,7 @@ Claude Code excels at analyzing existing codebases, identifying patterns, and ge
 
 ## Setting Up Claude Code for Migration
 
-Begin by ensuring Claude Code has the necessary skills installed for comprehensive migration support:
-
-{% raw %}
-```bash
-claude skill install code-analysis
-claude skill install java-expert
-claude skill install spring-framework
-```
-{% endraw %}
+Begin by ensuring Claude Code has the necessary skills set up for comprehensive migration support. Place `code-analysis.md`, `java-expert.md`, and `spring-framework.md` skill files in your `.claude/` directory and invoke them with `/code-analysis`, `/java-expert`, and `/spring-framework`.
 
 These skills provide the foundation for analyzing Java code structures, understanding Spring patterns, and generating migration-aware transformations.
 
@@ -247,12 +239,12 @@ tools:
 ```
 {% endraw %}
 
-Execute the complete migration with a single command:
+Execute the complete migration by invoking the skill in a Claude Code session:
 
-```bash
-claude skill invoke struts-to-spring-boot-migration \
-  --source-path ./src/main/java \
-  --target-path ./src/main/java
+```
+/struts-to-spring-boot-migration
+Source path: ./src/main/java
+Target path: ./src/main/java
 ```
 
 ## Conclusion

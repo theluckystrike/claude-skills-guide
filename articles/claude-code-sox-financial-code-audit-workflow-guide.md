@@ -35,14 +35,7 @@ Claude Code helps address each of these areas through targeted skills and system
 
 ## Setting Up Your SOX Audit Skill Stack
 
-Start by installing the skills that provide the most value for financial code audits. The following skills form the foundation of your audit workflow:
-
-```
-/skill install tdd
-/skill install security
-/skill install doc-writer
-/skill install code-review
-```
+Start by setting up the skills that provide the most value for financial code audits. The following skills form the foundation of your audit workflow. Place the corresponding `.md` skill files in your `.claude/` directory and invoke them with `/tdd`, `/security`, `/doc-writer`, and `/code-review`.
 
 The **tdd** skill ensures your financial code has comprehensive test coverage, catching logic errors before they reach production. The **security** skill performs vulnerability scanning essential for systems handling financial data. The **doc-writer** skill generates the documentation auditors require, while **code-review** skill provides systematic analysis of your codebase.
 

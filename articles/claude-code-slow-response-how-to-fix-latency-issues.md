@@ -36,21 +36,11 @@ The most impactful fix involves managing your installed skills. Start by auditin
 ls ~/.claude/skills/
 ```
 
-Identify skills you rarely use. Disable or remove them using Claude Code's built-in skill management:
-
-```
-/skills disable rarely-used-skill-name
-```
+Identify skills you rarely use. Remove them from your `.claude/` directory or keep them in a separate archive folder when not in use.
 
 Keep your core skills lean. The **pdf**, **tdd**, and **xlsx** skills add minimal overhead while providing substantial value. The **frontend-design** skill works well for UI tasks without bloating response times.
 
-For power users managing many skills, create skill profiles:
-
-```
-/skills profile load development
-```
-
-This loads only skills relevant to your current task, reducing processing overhead.
+For power users managing many skills, organize skills into subdirectories by project type and copy only the relevant ones into `.claude/` before starting a session. This loads only skills relevant to your current task, reducing processing overhead.
 
 ## Context Management Strategies
 

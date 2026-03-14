@@ -29,42 +29,39 @@ The foundation begins with understanding how Claude Code skills work. Skills are
 
 When outages occur, speed matters. Claude Code can help orchestrate incident response workflows that reduce MTTR (Mean Time To Recovery). The **incident-response-automation** skill provides templates for common failure scenarios.
 
-Here's a practical example of using Claude Code during an incident:
+Here's a practical example of using Claude Code during an incident by invoking the skill and describing the situation:
 
-```bash
-# Start an incident response session
-claude incident start --severity=critical --service=api-gateway
-
-# Claude analyzes recent deployments and correlates with alerts
-# Then generates initial assessment and notifications
+```
+/incident-response-automation
+Severity: critical
+Service: api-gateway
+Start a structured incident response session and analyze recent deployments.
 ```
 
-This command triggers a structured response that notifies on-call teams, gathers relevant context from your monitoring systems, and creates an incident timeline. The skill integrates with PagerDuty, Slack, and other communication tools you've configured.
+This prompt triggers a structured response that notifies on-call teams, gathers relevant context from your monitoring systems, and creates an incident timeline. The skill integrates with PagerDuty, Slack, and other communication tools you've configured.
 
 ### Monitoring and Observability Checks
 
 Claude Code excels at aggregating data from multiple monitoring sources. The **observability-dashboard** skill helps you create consolidated views of system health:
 
-```bash
-# Query multiple monitoring systems
-claude health check --services=api,database,cache --output=json
-
-# Generate a system status report
-claude status report --timeframe=1h --include-metrics=true
+```
+/observability-dashboard
+Check health of services: api, database, cache — output JSON summary.
+Generate a system status report for the past hour including metrics.
 ```
 
-These commands pull data from Prometheus, Datadog, CloudWatch, or your preferred monitoring solution. Claude then synthesizes this information into actionable insights, highlighting anomalies and trends that require attention.
+These prompts pull data from Prometheus, Datadog, CloudWatch, or your preferred monitoring solution. Claude then synthesizes this information into actionable insights, highlighting anomalies and trends that require attention.
 
 ### Runbook Generation and Maintenance
 
 One of the most time-consuming SRE tasks is maintaining runbooks. Claude Code can generate and update runbooks based on incident patterns. The **runbook-generator** skill analyzes your historical incident data:
 
-```bash
-# Generate a runbook from recent incidents
-claude runbook generate --source=incidents --service=payment-api
+```
+/runbook-generator
+Generate a runbook for payment-api from recent incidents in incidents/.
 
-# Update existing runbook with new resolution steps
-claude runbook update --file=runbooks/payment-api.md --from-latest-incidents
+/runbook-generator
+Update runbooks/payment-api.md with resolution steps from the latest incidents.
 ```
 
 This automation ensures your documentation stays current without manual effort. Claude learns from how your team resolves issues and incorporates those learnings into executable documentation.
@@ -75,12 +72,10 @@ This automation ensures your documentation stays current without manual effort. 
 
 Before shipping code to production, use Claude Code to run comprehensive checks:
 
-```bash
-# Run canary analysis
-claude deploy check --environment=staging --service=user-service
-
-# Validate configuration changes
-claude config validate --diff=pending-changes.yaml --dry-run
+```
+/observability-dashboard
+Run canary analysis for user-service in staging environment.
+Validate pending-changes.yaml for configuration issues — dry run only.
 ```
 
 These checks catch potential issues before they reach production. Claude understands your deployment pipelines and can flag configurations that might cause problems based on historical data.
@@ -89,12 +84,10 @@ These checks catch potential issues before they reach production. Claude underst
 
 After resolving an incident, conduct thorough blameless post-mortems:
 
-```bash
-# Generate post-mortem from incident data
-claude incident postmortem --incident-id=INC-1234 --template=standard
-
-# Identify patterns across similar incidents
-claude analyze patterns --service=api-gateway --timeframe=30d
+```
+/incident-response-automation
+Generate a post-mortem for incident INC-1234 using the standard template.
+Identify patterns across similar api-gateway incidents from the past 30 days.
 ```
 
 Claude correlates data from logs, metrics, and incident management systems to build comprehensive post-mortems. This accelerates your learning cycle and helps prevent similar issues.
@@ -103,12 +96,10 @@ Claude correlates data from logs, metrics, and incident management systems to bu
 
 SRE teams must plan for growth. Claude Code can analyze trends and recommend scaling strategies:
 
-```bash
-# Analyze traffic patterns
-claude capacity analyze --service=checkout-api --project=6months
-
-# Generate scaling recommendations
-claude capacity recommend --based-on=historical-growth
+```
+/observability-dashboard
+Analyze traffic patterns for checkout-api and project growth over 6 months.
+Generate scaling recommendations based on historical growth data.
 ```
 
 This helps you make data-driven decisions about infrastructure investments and avoid capacity-related outages.
@@ -140,7 +131,7 @@ Claude Code transforms SRE workflows by automating routine tasks, accelerating i
 
 The skills framework means you can customize workflows for your specific infrastructure. Whether you're managing a small service or a complex microservices architecture, Claude Code provides the foundation for building more reliable systems.
 
-Start by installing the core SRE skills, configure your monitoring integrations, and run your first automated check. Your future self—handling a 3 AM incident—will thank you.
+Start by placing the core SRE skill files in your `.claude/` directory, configure your monitoring integrations, and run your first automated check. Your future self—handling a 3 AM incident—will thank you.
 
 ---
 
