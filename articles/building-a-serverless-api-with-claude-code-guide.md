@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Building a Serverless API with Claude Code: A Practical Guide"
+title: "Building a Serverless API with Claude Code: A Practical."
 description: "Learn how to build a production-ready serverless API using Claude Code and essential Claude skills. Step-by-step tutorial with code examples."
 date: 2026-03-14
 author: theluckystrike
 permalink: /building-a-serverless-api-with-claude-code-guide/
+categories: [guides]
 ---
 
 Building a serverless API with Claude Code transforms how developers approach backend development. By combining Claude Code's AI capabilities with specialized skills, you can scaffold, test, and deploy APIs faster than traditional workflows. This guide walks through the complete process, from project initialization to deployment.
@@ -203,5 +204,12 @@ Use cloud monitoring services to track performance metrics, error rates, and col
 Building a serverless API with Claude Code combines AI-assisted development with proven serverless patterns. By leveraging specialized skills like tdd for testing, pdf for documentation, and supermemory for context retention, you create a streamlined development workflow. The key is treating Claude Code as an intelligent partner that amplifies your existing development skills rather than replacing them.
 
 Start with a simple endpoint, add authentication, write tests using the tdd skill, and deploy incrementally. Your production-ready serverless API will be live in hours rather than days.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
