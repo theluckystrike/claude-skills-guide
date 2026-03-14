@@ -130,7 +130,7 @@ This pattern is especially valuable when combining the **webapp-testing** skill 
 
 ## Output Compression for Large Results
 
-Skills that generate substantial output, such as the **pptx** skill creating presentations or the **algorithmic-art** skill generating visualizations, benefit from output compression. While Claude Code handles internal compression, your skill's output handlers can apply additional optimizations:
+Skills that generate substantial output, such as the **pptx** skill creating presentations or the **pdf** skill processing large documents, benefit from output compression. While Claude Code handles internal compression, your skill's output handlers can apply additional optimizations:
 
 ```javascript
 const zlib = require('zlib');

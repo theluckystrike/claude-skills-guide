@@ -196,7 +196,7 @@ A minimal dashboard might display:
 5. **Aggregate logs centrally** for unified searching and analysis
 6. **Build observability into agent prompts** — include logging instructions in skill definitions
 
-The `frontend-design` skill can help you build monitoring interfaces if you need a visual component. The `pdf` skill enables generating automated status reports. For alerting, the `slack-gif-creator` skill offers patterns for notification systems, though you'll primarily work with webhook integrations.
+The `frontend-design` skill can help you build monitoring interfaces if you need a visual component. The `pdf` skill enables generating automated status reports. For alerting, you'll primarily work with webhook integrations and custom shell scripts.
 
 Monitoring multi-agent Claude Code systems requires deliberate architecture. Start with structured logging, add health checks, and progressively build toward comprehensive observability as your system grows.
 

@@ -27,8 +27,8 @@ The primary culprit is cumulative skill loading. When you invoke `/skill-name`, 
 Common scenarios that trigger the error:
 
 - Loading the `pdf` skill alongside the `tdd` skill for a document-heavy testing project
-- Using `frontend-design` with `algorithmic-art` for a creative coding task
-- Combining `supermemory` with `mcp-builder` for knowledge-intensive development
+- Using `frontend-design` with `tdd` for frontend component development
+- Combining `supermemory` with `tdd` for knowledge-intensive development
 
 Each skill brings its own instructions, prompting patterns, and tool-use guidelines. The more skills, the more Claude must track in context.
 
@@ -60,7 +60,7 @@ For example, the `tdd` skill might include twelve test examples. Trim to two or 
 
 ## Fix 3: Use Skill Aliases for Common Tasks
 
-Create lightweight skill aliases that combine only the necessary elements from larger skills. Instead of loading the full `mcp-builder` skill for every API task, create a minimal alias:
+Create lightweight skill aliases that combine only the necessary elements from larger skills. Instead of loading a full skill for every API task, create a minimal alias:
 
 ```
 ---
@@ -130,7 +130,7 @@ Match the skill to the phase:
 - **`tdd`**: Writing tests before or after implementation
 - **`pdf`**: Generating or parsing documentation
 - **`supermemory`**: Retrieving project context at session start
-- **`mcp-builder`**: Creating custom tools, then close the skill
+- **`skill-creator`**: Creating custom skills, then close the skill
 
 Loading skills sequentially rather than simultaneously keeps your context manageable.
 

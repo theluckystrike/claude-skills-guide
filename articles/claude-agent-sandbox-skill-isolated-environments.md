@@ -170,7 +170,7 @@ Start with the strictest isolation level that still allows your workflow to func
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Where mcp-builder fits in the developer stack
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Overview of essential Claude Code skills for developers
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
 
