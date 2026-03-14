@@ -16,7 +16,7 @@ Building community automation for Discord with the Model Context Protocol (MCP) 
 
 ## Understanding the MCP-Discord Connection
 
-MCP servers extend Claude Code's capabilities by exposing tools that interact with external services. When you combine MCP with Discord's API, you create a bridge between Claude's reasoning capabilities and your community management tasks. This means Claude can read messages, manage roles, moderate content, and respond to community events without manual intervention.
+[MCP servers extend Claude Code](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)'s capabilities by exposing tools that interact with external services. When you combine MCP with Discord's API, you create a bridge between Claude's reasoning capabilities and your community management tasks. This means Claude can read messages, manage roles, moderate content, and respond to community events without manual intervention.
 
 The key components involve setting up a Discord bot, configuring an MCP server to communicate with Discord's API, and defining the automation rules that Claude follows.
 
@@ -244,9 +244,9 @@ The combination of MCP's tool framework with Discord's API creates endless possi
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Comprehensive skill recommendations
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understanding skill loading
-- [MCP Updates March 2026](/claude-skills-guide/articles/anthropic-model-context-protocol-updates-march-2026/) — Latest protocol improvements
-
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/articles/aws-mcp-server-cloud-automation-with-claude-code/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

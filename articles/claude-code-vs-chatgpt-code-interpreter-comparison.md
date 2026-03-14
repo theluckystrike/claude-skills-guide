@@ -20,7 +20,7 @@ When choosing between Claude Code and ChatGPT's Code Interpreter for development
 
 **ChatGPT Code Interpreter** is OpenAI's solution for running code within ChatGPT conversations. It provides an ephemeral sandboxed environment where Python (primarily) code executes in real-time. The Code Interpreter activates within the chat interface when you request data analysis, file processing, or code execution.
 
-The distinction matters: Claude Code lives in your terminal and maintains project context across sessions, while ChatGPT Code Interpreter lives in the chat interface and treats each conversation as a fresh start.
+[Claude Code lives in your terminal and maintains project context](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) across sessions, while ChatGPT Code Interpreter lives in the chat interface and treats each conversation as a fresh start.
 
 ## Code Execution Environment
 

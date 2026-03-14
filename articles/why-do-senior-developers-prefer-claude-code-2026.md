@@ -16,7 +16,7 @@ Senior developers in 2026 have gravitated toward Claude Code for one reason: it 
 
 ## The Skill System Changes Everything
 
-The defining feature that sets Claude Code apart is its skill system. Skills are plain Markdown files that live in your local `~/.claude/skills/` directory. When you invoke a skill using a slash command like `/tdd` or `/frontend-design`, Claude loads those instructions and applies them to your current task.
+[The defining feature that sets Claude Code apart is its skill system](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). Skills are plain Markdown files that live in your local `~/.claude/skills/` directory. When you invoke a skill using a slash command like `/tdd` or `/frontend-design`, Claude loads those instructions and applies them to your current task.
 
 This matters for senior developers because skills represent accumulated expertise. Instead of explaining your preferred patterns every session, you load a skill once and Claude remembers:
 
@@ -46,7 +46,7 @@ The local execution model also means Claude Code integrates with your existing t
 
 ### Test-Driven Development with /tdd
 
-A senior developer working on a payment processing module can invoke the tdd skill:
+[a senior developer working on a payment processing module can invoke the tdd skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/):
 
 ```
 /tdd
@@ -113,7 +113,7 @@ The skill generates an Excel file with formulas preserved—not just static valu
 
 ### Knowledge Management with /supermemory
 
-The supermemory skill stores your patterns and preferences across sessions:
+[The supermemory skill stores your patterns and preferences across sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/):
 
 ```
 /supermemory
@@ -175,9 +175,9 @@ If you have been frustrated by AI assistants that talk down to you or force new 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Complete skill stack for productive development
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Understanding automatic skill activation
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Maximize efficiency in every session
-
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
+- [Why Teams Switch from Copilot to Claude Code](/claude-skills-guide/articles/why-do-teams-switch-from-copilot-to-claude-code/)
+- [Comparisons Hub](/claude-skills-guide/comparisons-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

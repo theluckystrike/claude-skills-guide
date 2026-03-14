@@ -155,7 +155,7 @@ Haiku responds faster for straightforward tasks.
 
 ## Advanced: Using MCP Servers
 
-For expanded capabilities, configure Model Context Protocol servers. Create or edit `~/.claude/mcp.json`:
+For expanded capabilities, [configure Model Context Protocol servers](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/). Create or edit `~/.claude/mcp.json`:
 
 ```json
 {

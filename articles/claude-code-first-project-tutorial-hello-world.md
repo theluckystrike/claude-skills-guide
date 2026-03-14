@@ -58,7 +58,7 @@ Add this line to your shell profile (`~/.bashrc`, `~/.zshrc`, or equivalent) to 
 
 ## Creating Your First Project
 
-Create a new directory for your hello world project:
+[Create a new directory for your hello world project](/claude-skills-guide/articles/claude-code-project-initialization-best-practices/):
 
 ```bash
 mkdir claude-hello-world && cd claude-hello-world
@@ -102,7 +102,7 @@ Claude Code operates within interactive sessions. Each session maintains context
 claude
 ```
 
-Within a session, you can issue follow-up requests:
+[Within a session, you can issue follow-up requests](/claude-skills-guide/articles/how-to-write-effective-prompts-for-claude-code/):
 
 ```
 Add a function that takes a name parameter and returns a personalized greeting
