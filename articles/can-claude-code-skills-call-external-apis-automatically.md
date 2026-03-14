@@ -106,5 +106,6 @@ With skills like the `tdd` skill for generating tests, the `supermemory` skill f
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate API calls and deployments with Claude skills in CI pipelines
 - [Claude Code Batch Processing with Skills Guide](/claude-skills-guide/claude-code-batch-processing-with-skills-guide/) — Scale external API calls across multiple files and workflows automatically
 - [Claude Skills Hub](/claude-skills-guide/integrations-hub/) — Explore all integration patterns for connecting Claude skills to external services
+- [Claude Code API Error Handling Standards](/claude-skills-guide/claude-code-api-error-handling-standards/) — Implement consistent error handling when your skills call external APIs
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
