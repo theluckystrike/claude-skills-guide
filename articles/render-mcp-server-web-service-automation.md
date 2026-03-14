@@ -3,7 +3,11 @@ layout: default
 title: "Render MCP Server Web Service Automation"
 description: "Learn how to automate Render web service management using the Model Context Protocol server with Claude Code. Practical configuration, deployment patterns, and workflow automation examples."
 date: 2026-03-14
-author: theluckystrike
+categories: [guides]
+tags: [render, mcp, web-services, deployment, claude-code, automation]
+author: "Claude Skills Guide"
+reviewed: true
+score: 7
 ---
 
 # Render MCP Server Web Service Automation
