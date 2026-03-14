@@ -367,6 +367,10 @@ Connecting Claude skills to external APIs transforms static prompts into dynamic
 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Profiles the skills most commonly wired to external APIs (tdd, pdf, supermemory) with practical invocation patterns
 - [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Understanding the `tools` field in skill YAML is essential for giving skills access to the custom API tools you define
+<<<<<<< Updated upstream
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — API response caching and sanitization are also key token cost reduction strategies worth pairing with external API integrations
+=======
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — API response caching and sanitization (covered in this guide) are also key token cost reduction strategies worth pairing
+>>>>>>> Stashed changes
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

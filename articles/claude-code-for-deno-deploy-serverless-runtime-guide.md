@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code for Deno Deploy Serverless Runtime Guide
 
-Deno Deploy is a serverless runtime that lets you run JavaScript, TypeScript, and WebAssembly at the edge. When combined with Claude Code, you get a powerful workflow for building, deploying, and maintaining serverless applications. This guide shows you how to use Claude Code effectively with Deno Deploy.
+Deno Deploy is a serverless runtime that lets you run JavaScript, TypeScript, and WebAssembly at the edge. When combined with Claude Code, you get a powerful workflow for building, deploying, and maintaining serverless applications. For related serverless patterns, see the [workflows hub](/claude-skills-guide/workflows-hub/). This guide shows you how to use Claude Code effectively with Deno Deploy.
 
 ## Why Deno Deploy Works Well with Claude Code
 
@@ -95,7 +95,7 @@ export const handler: Handlers = {
 
 ## Integrating Claude Skills for Deno Deploy Development
 
-Several Claude skills enhance Deno Deploy development. The **tdd** skill helps you write tests alongside your code. Since Deno includes a built-in test runner, pairing Claude with test-driven development produces reliable serverless functions:
+Several Claude skills enhance Deno Deploy development. The **tdd** skill helps you write tests alongside your code — for a full breakdown see the [automated testing pipeline guide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). Since Deno includes a built-in test runner, pairing Claude with test-driven development produces reliable serverless functions:
 
 ```typescript
 // Test file: routes/api/hello_test.ts
@@ -195,7 +195,7 @@ Run with: `deno run --allow-all deploy.ts my-project`
 
 ## Debugging Deno Deploy Functions
 
-When your deployed function isn't working, use Deno Deploy's logs. The **supermemory** skill helps you track issues across sessions—paste error messages and symptoms, and Claude remembers patterns that helped solve similar problems.
+When your deployed function isn't working, use Deno Deploy's logs. The **supermemory** skill helps you track issues across sessions — similar debugging patterns are covered in the [Claude Code skill timeout error guide](/claude-skills-guide/articles/claude-code-skill-timeout-error-how-to-increase-the-limit/).
 
 For local development, Deno's built-in debugger works well:
 
@@ -247,5 +247,12 @@ export async function withCache(key: string, fetchFn: () => Promise<Response>) {
 Claude Code and Deno Deploy form a productive combination for serverless development. The runtime's simplicity enables accurate code generation, while Claude's understanding of TypeScript and web APIs produces working implementations quickly. Use the **tdd** skill for test-driven development, the **pdf** skill for generating documentation, and the **supermemory** skill to remember solutions to recurring problems.
 
 Build your serverless functions with confidence—describe what you need, let Claude generate the code, test locally with Deno's test runner, then deploy to the edge.
+
+## Related Reading
+
+- [Claude Skills Serverless Function Development Workflow](/claude-skills-guide/articles/claude-skills-serverless-function-development-workflow/) — general serverless patterns applicable across runtimes
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — test-first workflows for serverless functions
+- [Claude Code Response Latency Optimization with Skills](/claude-skills-guide/articles/claude-code-response-latency-optimization-with-skills/) — optimize edge function response times
+- [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/articles/claude-code-gcp-google-cloud-setup-and-deployment-guide/) — compare cloud deployment options alongside Deno Deploy
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

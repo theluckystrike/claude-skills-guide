@@ -12,7 +12,7 @@ score: 8
 
 # Claude Skills for Creating Database Migration Scripts
 
-Database migrations are one of the most error-prone parts of application development. A single typo in a migration script can corrupt data or bring production down. Claude skills can help you generate reliable migration scripts, validate schema changes, and handle complex data transformations with confidence.
+Database migrations are one of the most error-prone parts of application development. A single typo in a migration script can corrupt data or bring production down. [Claude skills](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) can help you generate reliable migration scripts, validate schema changes, and handle complex data transformations with confidence.
 
 This guide shows you how to build Claude skills specifically designed for database migration workflows.
 

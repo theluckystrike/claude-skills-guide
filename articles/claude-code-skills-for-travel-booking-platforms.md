@@ -103,7 +103,7 @@ Handle edge cases gracefully: when a provider API fails, continue with available
 
 ## Price Tracking and Alerts
 
-Frequent travelers benefit from price monitoring. Build a skill that checks prices periodically and notifies users when fares drop. This requires persistent storage for user preferences and tracked routes.
+Frequent travelers benefit from price monitoring. Build a skill that checks prices periodically and notifies users when fares drop. This requires persistent storage for user preferences and tracked routes — [the supermemory skill provides a ready-made pattern for this persistent context](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/).
 
 ```python
 # price_monitor.py - Track prices and detect drops
@@ -179,7 +179,7 @@ Keep these principles in mind when building travel booking skills:
 
 ## Extending Your Skills
 
-These foundational patterns scale into more sophisticated implementations. Add machine learning models to predict price trends, integrate loyalty program APIs for point redemptions, or build multi-city trip optimizers. Each extension follows the same architecture: clear input specification, reliable API orchestration, and structured output presentation.
+These foundational patterns scale into more sophisticated implementations. Add machine learning models to predict price trends, integrate loyalty program APIs for point redemptions, or build multi-city trip optimizers. Each extension follows the same architecture: clear input specification, reliable API orchestration, and structured output presentation. For complex booking pipelines that coordinate multiple skills, see [how to combine two Claude skills in one workflow](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/).
 
 The travel booking domain benefits significantly from Claude's ability to handle multi-step reasoning. Complex itineraries with dozens of segments become manageable when Claude can programmatically coordinate each step while maintaining coherent user communication.
 

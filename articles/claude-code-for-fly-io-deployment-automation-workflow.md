@@ -14,7 +14,7 @@ score: 8
 
 # Claude Code for Fly.io Deployment Automation Workflow
 
-Fly.io offers an elegant platform for deploying applications close to your users with automatic scaling and global distribution. When you combine Fly.io's infrastructure with Claude Code's automation capabilities, you create a deployment pipeline that handles build verification, health validation, and multi-region management without manual intervention. This guide shows you how to build a complete deployment automation workflow using Claude skills like `/tdd`, `/supermemory`, `/pdf`, and `/webapp-testing`.
+Fly.io offers an elegant platform for deploying applications close to your users with automatic scaling and global distribution. When you combine Fly.io's infrastructure with Claude Code's automation capabilities, you create a deployment pipeline that handles build verification, health validation, and multi-region management without manual intervention. For an overview of deployment automation, visit the [workflows hub](/claude-skills-guide/workflows-hub/). This guide shows you how to build a complete deployment automation workflow using Claude skills like `/tdd`, `/supermemory`, `/pdf`, and `/webapp-testing`.
 
 ## Why Fly.io Works Well with Claude Code Automation
 
@@ -109,7 +109,7 @@ fi
 
 ## Using Claude Skills for Enhanced Deployment Validation
 
-The `/tdd` skill becomes invaluable when integrated into your deployment pipeline. It ensures code quality before any deployment proceeds:
+The `/tdd` skill becomes invaluable when integrated into your deployment pipeline. It ensures code quality before any deployment proceeds — a workflow covered in detail in the [automated testing pipeline guide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/):
 
 ```bash
 # Run TDD skill to validate code changes
@@ -232,7 +232,7 @@ deploy_with_retry
 
 ## Continuous Deployment with GitHub Actions
 
-Integrate your Fly.io deployment with GitHub Actions for automated CI/CD:
+Integrate your Fly.io deployment with GitHub Actions for automated CI/CD — see the [Claude Code GitHub Actions workflow guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) for advanced pipeline patterns:
 
 ```yaml
 name: Deploy to Fly.io

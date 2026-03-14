@@ -14,7 +14,7 @@ score: 8
 
 Managing a monorepo presents unique challenges: coordinating builds across packages, handling shared dependencies, running targeted tests, and maintaining consistent tooling. Claude Code skills transform these complex workflows into repeatable, [skill-driven processes](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) that reduce cognitive load and accelerate development. For workspace best practices visit the [workflows hub](/claude-skills-guide/workflows-hub/).
 
-This guide shows you how to build a monorepo management system using Claude Code skills, with practical examples you can adapt to your own repository structure.
+[This guide shows you how to build a monorepo management system](/claude-skills-guide/articles/shared-claude-skills-across-monorepo-multiple-packages/) using Claude Code skills, with practical examples you can adapt to your own repository structure.
 
 ## Setting Up Your Monorepo Skills Foundation
 
@@ -73,7 +73,7 @@ Claude now understands your monorepo structure and will:
 
 ### Cross-Package Refactoring
 
-When you need to update a shared component used across multiple packages, the monorepo skill ensures you don't miss any consumers:
+[When you need to update a shared component used across multiple packages](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/), the monorepo skill ensures you don't miss any consumers:
 
 ```
 /monorepo
@@ -87,7 +87,7 @@ The skill instructs Claude to:
 3. Update each consumer to handle the new prop
 4. Run tests in each affected package
 
-This prevents the common monorepo problem where a shared component change breaks downstream packages.
+[This prevents the common monorepo problem](/claude-skills-guide/articles/claude-code-skills-for-golang-microservices/) breaks downstream packages.
 
 ### Managing Workspace Dependencies
 
