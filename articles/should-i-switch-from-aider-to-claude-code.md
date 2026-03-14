@@ -29,20 +29,17 @@ One of Claude Code's most powerful features is its skill system. Skills are esse
 
 ### Installing and Using Skills
 
-Claude Code comes with a variety of pre-built skills you can install immediately. Here's how to get started:
+Claude Code comes with a variety of pre-built skills you can use immediately. Skills are `.md` files placed in your project's `.claude/` directory (or user-level `~/.claude/` for global skills). Once a skill file is in place, you invoke it with a slash command:
 
 ```bash
-# List available skills
-claude skills list
+# Invoke a skill named "code-review" during a Claude Code session
+/code-review
 
-# Install a skill from the registry
-claude skills install code-review
-
-# Create your own custom skill
-claude skills init my-custom-skill
+# List skills available in the current session
+/help
 ```
 
-Skills can be tailored for specific tasks like code reviews, refactoring, testing, or even domain-specific workflows. When you activate a skill, Claude Code adapts its responses to follow the patterns and guidelines you've defined.
+Skills can be tailored for specific tasks like code reviews, refactoring, testing, or even domain-specific workflows. When you invoke a skill, Claude Code adapts its responses to follow the patterns and guidelines you've defined.
 
 ### Example: A Custom Code Review Skill
 
@@ -90,11 +87,11 @@ claude
 # Ask Claude to implement a feature
 > Implement a user authentication module with JWT tokens
 
-# Use a specific skill for the task
-@skill code-review /path/to/changes
+# Invoke a specific skill for the task
+> /code-review
 ```
 
-The `@skill` syntax lets you explicitly invoke particular skills, giving you fine-grained control over Claude's behavior without leaving your terminal workflow.
+The `/skill-name` syntax lets you explicitly invoke particular skills, giving you fine-grained control over Claude's behavior without leaving your terminal workflow.
 
 ## When Aider Might Still Be the Right Choice
 

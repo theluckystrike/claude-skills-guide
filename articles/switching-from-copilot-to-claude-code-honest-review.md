@@ -29,16 +29,16 @@ What truly sets Claude Code apart is its skill system. Skills are essentially pr
 
 Here's a practical example of using a skill for code reviews:
 
-```python
+```
 # Using Claude Code with a code review skill
-# Instead of just asking "review this", you can load a skill that:
+# Instead of just asking "review this", you can invoke a skill that:
 # 1. Checks for security vulnerabilities
-# 2. Looks for performance issues  
+# 2. Looks for performance issues
 # 3. Verifies test coverage
 # 4. Ensures adherence to your coding standards
 
-# Example: Loading and using a code review skill
-claude-code --skill code-review --focus security ./src/
+# Example: invoke the code-review skill during a Claude Code session
+/code-review
 ```
 
 The skill system means Claude Code doesn't just help you write code—it helps you write code following specific methodologies. Want test-driven development? There's a skill for that. Need to generate documentation? There's a skill for that too.
@@ -91,11 +91,14 @@ What surprised me most was how much the skill ecosystem has grown. Looking at av
 Here's an example of installing and using a specialized skill:
 
 ```bash
-# Install a skill from GitHub
-claude-skill install https://github.com/anthropic/claude-tdd-skill
+# Add a skill by placing its .md file in your project's .claude/ directory
+# or globally in ~/.claude/
 
-# Use the skill for a specific workflow
-claude-code --skill tdd "Add user authentication to the login endpoint"
+# Then invoke the tdd skill during a Claude Code session
+/tdd
+
+# Describe the task to Claude as usual
+> Add user authentication to the login endpoint
 ```
 
 Copilot has no equivalent. You're stuck with whatever built-in capabilities GitHub provides, and those capabilities are relatively limited compared to what's available through Claude Code skills.
