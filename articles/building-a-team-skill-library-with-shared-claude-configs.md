@@ -5,6 +5,7 @@ description: "Learn how to create, share, and manage Claude Code skills across y
 date: 2026-03-14
 author: theluckystrike
 permalink: /building-a-team-skill-library-with-shared-claude-configs/
+categories: [troubleshooting]
 ---
 
 {% raw %}
@@ -129,3 +130,10 @@ Building a team skill library with shared Claude configs is an investment that p
 
 The key is to treat your skill library as a living document—one that grows and improves alongside your team. With proper management, your skill library becomes a valuable knowledge asset that helps maintain quality and consistency across all your development work.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+
