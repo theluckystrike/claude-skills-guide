@@ -5,6 +5,7 @@ description: "A comprehensive guide to implementing efficient Jest unit testing 
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-jest-unit-testing-workflow-guide/
+categories: [guides]
 ---
 
 {% raw %}
@@ -213,6 +214,13 @@ Building a solid Jest unit testing workflow with Claude Code combines powerful a
 Remember that testing is a skill that improves with practice. Use Claude Code as a learning partner—ask questions, request explanations, and let it help you develop comprehensive test strategies tailored to your project's unique needs.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

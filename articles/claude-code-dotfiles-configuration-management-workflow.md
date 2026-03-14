@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code Dotfiles Configuration Management Workflow"
-description: "Learn how to use Claude Code for efficient dotfiles management. Track configuration files across machines, automate symlinking, and maintain reproducible development environments."
+description: "Learn how to use Claude Code for efficient dotfiles management. Track configuration files across machines, automate symlinking, and maintain."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-dotfiles-configuration-management-workflow/
+categories: [guides]
 ---
 
 # Claude Code Dotfiles Configuration Management Workflow
@@ -156,5 +157,12 @@ The **mcp-builder** skill lets you create custom MCP servers that integrate with
 Begin with one configuration file that changes frequently—your shell aliases or git configuration. Move it to a dotfiles repository, set up the symlink, and verify everything works. Once that single file flows smoothly, expand to additional configurations incrementally.
 
 Claude Code transforms dotfiles management from a manual, error-prone process into a conversational workflow. You describe what you want, Claude handles the implementation details across your configuration ecosystem. Your development environment becomes reproducible, portable, and queryable—exactly what modern developer productivity demands.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

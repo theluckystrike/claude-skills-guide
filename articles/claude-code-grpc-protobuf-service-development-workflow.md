@@ -5,6 +5,7 @@ description: "A practical guide to building gRPC services with Protocol Buffers 
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-grpc-protobuf-service-development-workflow/
+categories: [guides]
 ---
 
 {% raw %}
@@ -218,6 +219,13 @@ service Health {
 Add interceptors for logging, authentication, and metrics collection. Claude Code can generate interceptor templates that integrate with your observability stack.
 
 Build your gRPC services with proper error handling, comprehensive testing, and thoughtful API versioning. The combination of Protocol Buffers for interface definition and Claude Code for code generation creates a productive development experience that scales with your service architecture.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

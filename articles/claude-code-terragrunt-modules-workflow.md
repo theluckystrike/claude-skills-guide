@@ -5,6 +5,7 @@ description: "Learn how to streamline your Terragrunt infrastructure workflow us
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-terragrunt-modules-workflow/
+categories: [guides]
 ---
 
 {% raw %}
@@ -162,6 +163,13 @@ Keep your Terragrunt configurations lean by following these principles that Clau
 Integrating Claude Code into your Terragrunt modules workflow transforms how you manage infrastructure as code. By leveraging Claude's ability to understand context, generate configurations, and analyze dependencies, you reduce manual overhead and minimize configuration errors. The key lies in establishing clear patterns in your module repositories and letting Claude Code help enforce those patterns consistently across your environments.
 
 Whether you're managing a handful of services or hundreds of infrastructure components, this workflow integration scales with your organization. Start by identifying repetitive configuration patterns in your existing setup, then use Claude Code to automate those patterns systematically.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

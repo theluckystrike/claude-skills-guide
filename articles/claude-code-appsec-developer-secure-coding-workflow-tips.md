@@ -164,3 +164,10 @@ Integrating Claude Code into your secure coding workflow isn't about replacing s
 Remember that Claude Code is a tool to assist your security efforts, not a replacement for dedicated security review, penetration testing, and adherence to established security frameworks. Use these tips as part of a comprehensive security strategy that includes regular security audits, dependency scanning, and team training.
 
 Start implementing these workflow tips today, and you'll see improvements in your code's security posture while also building a culture of security awareness within your development team.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

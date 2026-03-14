@@ -5,6 +5,7 @@ description: "Learn how to set up and use Claude Code in a monorepo with Turbore
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-monorepo-turborepo-workspace-workflow-guide/
+categories: [guides]
 ---
 
 {% raw %}
@@ -132,6 +133,13 @@ When using Claude in monorepo environments, watch out for:
 Claude Code and Turborepo together create a powerful development environment. The combination of intelligent code understanding with fast task orchestration helps teams ship features faster with fewer integration issues. By leveraging Claude skills like **frontend-design**, **tdd**, and **supermemory**, you can automate repetitive tasks and maintain consistency across your entire monorepo.
 
 The key is to let Claude understand your workspace structure once, then trust its awareness of package relationships when implementing features. With proper setup, your monorepo becomes not just manageable but genuinely pleasant to work in.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

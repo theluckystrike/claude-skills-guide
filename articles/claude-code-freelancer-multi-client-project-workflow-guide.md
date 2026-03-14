@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Freelancer Multi-Client Project Workflow Guide"
-description: "Master managing multiple client projects simultaneously with Claude Code. Learn workflow strategies, context isolation, and productivity tips for freelance developers."
+description: "Master managing multiple client projects simultaneously with Claude Code. Learn workflow strategies, context isolation, and productivity tips for."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-freelancer-multi-client-project-workflow-guide/
@@ -238,3 +238,10 @@ Claude Code's flexibility makes it an excellent tool for freelancers managing mu
 
 Start with one client, refine your `CLAUDE.md` and skill templates, then replicate the pattern for each new client. Within a few weeks, you'll have a streamlined system that handles the complexity of multi-client freelance work effortlessly.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

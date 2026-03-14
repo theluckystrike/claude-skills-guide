@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code Supabase Backend Development Workflow Tips"
-description: "Practical workflow tips for building Supabase backends with Claude Code. Learn how to structure projects, write database migrations, and leverage Claude skills for efficient backend development."
+description: "Practical workflow tips for building Supabase backends with Claude Code. Learn how to structure projects, write database migrations, and leverage."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-supabase-backend-development-workflow-tips/
+categories: [guides]
 ---
 
 {% raw %}
@@ -185,6 +186,13 @@ jobs:
 This workflow ensures your production database stays in sync with your codebase.
 
 Building efficient Supabase backends with Claude Code comes down to organized project structure, well-written RLS policies, and automated workflows. Apply these patterns to speed up development and maintain reliable backend infrastructure.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

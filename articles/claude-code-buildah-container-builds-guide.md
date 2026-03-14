@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Buildah Container Builds Guide"
-description: "Learn how to use Claude Code with Buildah for efficient container image creation. A practical guide for developers building lightweight, secure container images."
+description: "Learn how to use Claude Code with Buildah for efficient container image creation. A practical guide for developers building lightweight, secure."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-buildah-container-builds-guide/
@@ -162,5 +162,12 @@ These debugging capabilities make troubleshooting container builds more efficien
 Buildah combined with Claude Code provides a powerful workflow for container image creation. The approach gives you daemonless builds, fine-grained control over image layers, and AI-assisted script generation. Whether you're optimizing for image size, security, or build speed, this combination adapts to your requirements.
 
 Experiment with the patterns in this guide, customize scripts for your specific needs, and leverage Claude Code's skills to enhance your container development workflow.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

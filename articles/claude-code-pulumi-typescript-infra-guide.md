@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code Pulumi TypeScript Infra Guide"
-description: "Use Claude Code with Pulumi and TypeScript to automate infrastructure provisioning. Practical patterns for building, testing, and managing cloud resources with AI assistance."
+description: "Use Claude Code with Pulumi and TypeScript to automate infrastructure provisioning. Practical patterns for building, testing, and managing cloud."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-pulumi-typescript-infra-guide/
+categories: [guides]
 ---
 
 # Claude Code Pulumi TypeScript Infra Guide
@@ -192,5 +193,12 @@ Each skill complements your Pulumi workflow differently. The supermemory skill p
 5. **Test before applying**: Always run `pulumi preview` before `pulumi up`
 
 Claude Code accelerates each of these practices through code generation, error analysis, and documentation assistance. The combination of intelligent AI assistance with Pulumi's infrastructure as code platform creates a productive workflow for teams managing cloud resources.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
