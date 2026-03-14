@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Cost Allocation and Chargebacks for Enterprise Claude Code"
-description: "A practical guide to implementing cost allocation and chargeback strategies for Claude Code in enterprise environments. Learn how to track usage, allocate costs, and optimize spending."
+description: "A practical guide to implementing cost allocation and chargeback strategies for Claude Code in enterprise environments. Learn how to track usage."
 date: 2026-03-14
 author: theluckystrike
 permalink: /cost-allocation-and-chargebacks-for-enterprise-claude-code/

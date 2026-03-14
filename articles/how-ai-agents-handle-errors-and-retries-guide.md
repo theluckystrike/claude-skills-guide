@@ -183,3 +183,10 @@ Don't just test the happy path. Build test cases that simulate network failures,
 Error handling and retry strategies are essential for building production-ready AI agents. Claude Code provides the tools and flexibility to implement sophisticated error recovery patterns, from simple retry loops to circuit breakers and graceful degradation. By anticipating failures and designing appropriate responses, you can create agents that handle real-world complexity reliably.
 
 The key is to combine technical patterns (exponential backoff, circuit breakers) with intelligent agent behavior that can evaluate errors and choose appropriate responses. With these techniques, your Claude Code skills will be robust enough to handle the unpredictability of production environments.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

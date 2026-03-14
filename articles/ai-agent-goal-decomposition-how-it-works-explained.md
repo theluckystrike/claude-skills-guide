@@ -75,3 +75,10 @@ Claude Code responds well to prompts that include context about your project str
 Goal decomposition is fundamental to how Claude Code transforms high-level requests into actionable results. By breaking complex objectives into smaller, manageable sub-goals, AI agents can execute sophisticated tasks with greater accuracy, transparency, and adaptability. Understanding this process helps you write better prompts, design more effective AI workflows, and achieve better outcomes when collaborating with Claude Code on complex software projects.
 
 The next time you work with Claude Code on a substantial task, try explicitly discussing the decomposition approach. Ask the agent how it plans to break down the work, review the proposed sub-tasks, and guide the process. This collaboration between human intent and AI execution is where goal decomposition truly shines.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
