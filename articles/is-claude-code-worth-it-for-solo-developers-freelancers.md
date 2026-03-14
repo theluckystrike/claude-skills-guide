@@ -69,7 +69,7 @@ Not all skills provide equal value for solo developers. Based on practical use c
 
 The **canvas-design** skill helps create visual assets and presentations without leaving your development environment. The **mcp-builder** skill enables you to create custom integrations with APIs your clients use. For documentation-heavy projects, the **docx** skill automates report generation.
 
-The **algorithmic-art** skill serves developers building creative applications or needing unique visual assets. Meanwhile, the **pptx** skill streamlines client presentations—something freelancers do frequently.
+The **canvas-design** skill serves developers building creative applications or needing unique visual assets. Meanwhile, the **pptx** skill streamlines client presentations—something freelancers do frequently.
 
 Installing skills is straightforward:
 

@@ -115,16 +115,16 @@ This skill generates:
 
 [Many .NET developers use this to build custom integrations](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) between Claude Code and internal systems.
 
-## theme-factory: Consistent Styling for Applications
+## Consistent Styling for Applications
 
-The **theme-factory** skill applies consistent visual themes across your documentation, presentations, and generated artifacts.
+Claude Code helps apply consistent visual themes across your documentation and presentations. Describe your brand requirements and Claude will apply them to generated artifacts.
 
 ```bash
 # Apply a theme to match your application
 "Apply a dark theme with blue accents to these slides"
 ```
 
-For .NET developers building enterprise applications, this skill ensures consistency between documentation, presentations, and UI mockups.
+For .NET developers building enterprise applications, this approach ensures consistency between documentation, presentations, and UI mockups.
 
 ## Project Documentation and Updates
 

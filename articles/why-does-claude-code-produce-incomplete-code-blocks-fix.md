@@ -85,7 +85,7 @@ When working with Claude Code, follow these practices to minimize incomplete cod
 
 ## Handling Edge Cases
 
-Some scenarios require additional attention. When generating code for particularly complex frameworks like those involving canvas-design or algorithmic-art, where code often includes extensive configuration or animation loops, break the generation into even smaller chunks than usual.
+Some scenarios require additional attention. When generating code for particularly complex frameworks like those involving canvas-design, where code often includes extensive configuration or animation loops, break the generation into even smaller chunks than usual.
 
 For database-related code generation using supermemory or similar skills, ensure you request complete transaction handling and connection management explicitly, as these are common areas where truncation occurs.
 
