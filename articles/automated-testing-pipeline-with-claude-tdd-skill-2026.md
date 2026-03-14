@@ -247,6 +247,6 @@ The `/tdd` skill guides Claude Code to generate meaningful test suites and struc
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
-
+- [Claude Code Integration Testing Strategy Guide](/claude-skills-guide/claude-code-integration-testing-strategy-guide/) — Take your TDD pipeline further with a full integration testing strategy
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

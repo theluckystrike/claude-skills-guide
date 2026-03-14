@@ -165,5 +165,6 @@ Evaluate your current needs, try the free tier first, and upgrade when your work
 - [Is Claude Code Worth It? Honest Beginner Review 2026](/claude-skills-guide/is-claude-code-worth-it-honest-beginner-review-2026/) — See also
 - [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — See also
 - [Why Is Claude Code Expensive: Large Context Tokens](/claude-skills-guide/why-is-claude-code-expensive-large-context-tokens/) — See also
+- [Best AI Code Completion Tools vs Claude Code](/claude-skills-guide/best-ai-code-completion-tools-vs-claude-code/) — Compare Claude Code against other AI completion tools before choosing a plan
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

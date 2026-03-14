@@ -192,5 +192,6 @@ Effective README documentation transforms how users interact with your Claude Co
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
+- [Claude Code Architecture Decision Records Guide](/claude-skills-guide/claude-code-architecture-decision-records-guide/) — Document the design decisions behind your project alongside your README
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

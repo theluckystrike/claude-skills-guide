@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 ---
 {% raw %}
 
+
 # Claude Code Developer Portal Setup Guide
 
 Developer portals serve as the central hub for organizing, documenting, and distributing Claude skills across teams. This guide walks you through building a functional developer portal from scratch using Jekyll, with practical patterns for skill documentation, search optimization, and maintenance workflows.

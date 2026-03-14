@@ -246,5 +246,6 @@ This workflow turns documentation from a quarterly cleanup task into a continuou
 - [Full Stack Web App with Claude Skills Step by Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/) — Skills applied across the full development lifecycle
 - [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-guide/claude-skills-automated-blog-post-workflow-tutorial/) — Automate content creation with Claude skills
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
+- [Claude Code Architecture Decision Records Guide](/claude-skills-guide/claude-code-architecture-decision-records-guide/) — Extend your documentation workflow to capture architectural decisions with Claude Code
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

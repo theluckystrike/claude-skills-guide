@@ -202,5 +202,6 @@ By implementing these strategies, you can achieve 30-50% cost reductions without
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
 - [Claude Code Free Tier vs Pro Plan: Feature Comparison 2026](/claude-skills-guide/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/)
 - [Is Claude Code Worth It for Solo Developers?](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/)
+- [Claude Code Cost Per Project Estimation Calculator Guide](/claude-skills-guide/claude-code-cost-per-project-estimation-calculator-guide/) — Calculate per-project costs before committing to optimization strategies
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

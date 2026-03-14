@@ -304,5 +304,6 @@ Remember to use FastAPI's automatic documentation, implement proper error handli
 - [Claude Code Pytest Fixtures Patterns Guide](/claude-skills-guide/claude-code-pytest-fixtures-patterns-guide/) — Build async-compatible fixtures for your FastAPI test suite
 - [Claude Code Hypothesis Property Testing Guide](/claude-skills-guide/claude-code-hypothesis-property-testing-guide/) — Apply property-based testing to validate FastAPI request/response contracts
 - [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more Claude Code use cases for backend API development
+- [Claude Code API Rate Limiting Implementation Guide](/claude-skills-guide/claude-code-api-rate-limiting-implementation/) — Add rate limiting to your FastAPI routes to prevent abuse and control traffic
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

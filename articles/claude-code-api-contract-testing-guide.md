@@ -13,6 +13,7 @@ score: 7
 {% raw %}
 
 
+
 # Claude Code API Contract Testing Guide
 
 API contract testing ensures that services communicate correctly by verifying that both the provider and consumer adhere to a shared agreement. This guide shows you how to implement contract testing workflows using Claude Code, with practical examples and integration patterns.

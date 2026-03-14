@@ -234,5 +234,6 @@ Start with the checklist items that affect your project most, build incrementall
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise security patterns including SIEM audit logging and ACL enforcement
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills that complement automated security review workflows
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep automated code review sessions affordable at scale
+- [Claude Code API Security OWASP Guide](/claude-skills-guide/claude-code-api-security-owasp-guide/) — Secure your Claude Code API integrations against the OWASP Top 10
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

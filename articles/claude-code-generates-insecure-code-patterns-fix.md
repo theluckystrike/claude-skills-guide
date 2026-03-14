@@ -12,6 +12,7 @@ permalink: /claude-code-generates-insecure-code-patterns-fix/
 ---
 {% raw %}
 
+
 # Claude Code Generates Insecure Code Patterns Fix
 
 [When working with Claude Code, you might occasionally receive code that contains security vulnerabilities](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This happens because AI models generate code based on patterns in their training data, which can include legacy or insecure practices. Understanding how to identify and fix these patterns is essential for building secure applications.

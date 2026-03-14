@@ -152,5 +152,6 @@ Next time you encounter a mysterious bug, remember: git bisect with Claude Code 
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills for debugging and test-driven bug isolation
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understand how skills activate automatically during debug sessions
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Optimize multi-step bisect sessions to keep costs under control
+- [Open Source Contribution Workflow with Claude Code 2026](/claude-skills-guide/claude-code-open-source-contribution-workflow-guide-2026/) — Use git bisect skills to find and fix bugs before submitting open source PRs
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -242,5 +242,6 @@ Integrating Claude Code with Jest creates a powerful testing workflow. Write cle
 - [Claude Code Cypress Component Testing Guide](/claude-skills-guide/claude-code-cypress-component-testing-guide/) — Extend your Jest unit tests with Cypress component tests for integration-level coverage
 - [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-skills-guide/claude-code-jest-to-vitest-migration-workflow-tutorial/) — Migrate your Jest test suite to Vitest with Claude Code assistance
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Browse more Claude Code workflows for testing, automation, and CI integration
+- [Claude Code Integration Testing Strategy Guide](/claude-skills-guide/claude-code-integration-testing-strategy-guide/) — Complement Jest unit tests with a structured integration testing strategy
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

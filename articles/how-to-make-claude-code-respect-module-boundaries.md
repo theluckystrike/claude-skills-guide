@@ -1,205 +1,193 @@
 ---
 layout: default
 title: "How to Make Claude Code Respect Module Boundaries"
-description: "A practical guide for developers to configure Claude Code to respect module boundaries and avoid cross-module dependencies. Includes skill configurations and code examples."
+description: "Practical techniques for controlling Claude Code's context awareness across module boundaries in multi-file projects. Learn to scope Claude's knowledge to specific components."
 date: 2026-03-14
-author: "Claude Skills Guide"
-permalink: /how-to-make-claude-code-respect-module-boundaries/
-reviewed: true
-score: 7
+author: theluckystrike
 categories: [guides]
-tags: [claude-code, claude-skills]
+tags: [claude-code, claude-skills, module-boundaries, context-management, project-structure]
+permalink: /how-to-make-claude-code-respect-module-boundaries/
 ---
 
 # How to Make Claude Code Respect Module Boundaries
 
-When working with Claude Code on modular projects, you may notice that the AI sometimes crosses architectural boundaries—importing from wrong layers, modifying files in other modules, or creating unintended dependencies. This behavior typically stems from Claude's goal-oriented approach: it seeks the most direct path to complete your request, which can conflict with strict module isolation.
+When working on large codebases, Claude Code often pulls context from across your entire project. This behavior works well for small projects but becomes problematic when you need focused analysis within specific module boundaries. Here's how to control Claude's scope effectively.
 
-In this guide, you'll learn practical techniques to make Claude Code respect module boundaries, keeping your codebase clean and maintainable.
+## The Module Boundary Problem
 
-## Understanding the Problem
+Claude Code excels at understanding project-wide relationships, but sometimes you need it to stay within a specific module. For example, when using the **tdd** skill to write tests for a single service, you don't want Claude pulling in unrelated code from other modules. Similarly, when the **pdf** skill generates documentation, it should reference only the relevant component.
 
-Modern applications often use layered architectures—domain models, services, repositories, and presentation layers. Each layer should only know about the layers beneath it. When Claude Code operates without boundary awareness, it might:
+The solution involves combining project-specific configuration files with targeted prompts.
 
-- Import repository classes directly into controller code
-- Mix domain logic with infrastructure code
-- Create circular dependencies between modules
-- Modify files in modules unrelated to the current task
+## Using CLAUDE.md for Module Scoping
 
-For example, if you're working in a frontend component and ask Claude to "add user authentication," it might modify your authentication module, user service, and API client simultaneously—breaking your intended separation of concerns.
+Create a `CLAUDE.md` file in your module's root directory. This file instructs Claude Code to treat that directory as an isolated context:
 
-## Using the Project Context Skill
+```
+cd /your-project/backend-api
+```
 
-The most effective approach is creating a custom skill that defines your project's module structure. Skills in Claude Code are Markdown files that provide context and behavioral guidelines for each session.
-
-Create a skill file at `~/.claude/skills/project-context.md`:
+Create `CLAUDE.md` in the module directory:
 
 ```markdown
-# Project Context Skill
+# Module: backend-api
 
-This project uses a layered architecture with strict module boundaries:
+This directory contains the authentication service.
+- API endpoints in `src/routes/`
+- Database models in `src/models/`
+- Business logic in `src/services/`
 
-## Module Structure
-
-- `src/domain/` - Business entities and value objects
-- `src/services/` - Business logic and use cases
-- `src/repositories/` - Data access abstraction
-- `src/api/` - External API integrations
-- `src/components/` - React UI components
-
-## Boundary Rules
-
-1. Services may import from domain and repositories
-2. Repositories may import from domain and api
-3. Components may only import from services
-4. Never modify files outside the current working module unless explicitly requested
-
-## Current Focus
-
-When working in a module, complete only that module's tasks. If a task requires changes in another module, ask for confirmation before proceeding.
+IMPORTANT: Do not reference code outside this directory unless explicitly asked.
 ```
 
-To activate this skill, type:
+When you start a session with `claude` from this directory, Claude reads the local `CLAUDE.md` and limits its context accordingly.
 
-```
-/project-context
-```
+## Project-Wide Boundaries with .claude/settings.json
 
-This loads your architectural constraints into Claude's context for the current session.
+For more granular control across multiple modules, create a `.claude/settings.json` in your project root:
 
-## Implementing Boundary Checks with the TDD Skill
-
-You can combine the tdd skill with boundary enforcement. The tdd skill encourages test-driven development, which naturally promotes modular thinking. When you write tests that define module interfaces, Claude is more likely to respect those boundaries.
-
-Activate the tdd skill alongside your project context:
-
-```
-/tdd
-/project-context
-```
-
-Then describe your task with explicit boundary constraints:
-
-```
-Write a user service that fetches user data. Only modify files in src/services/. 
-If you need to modify other modules, describe what changes would be needed without making them.
-```
-
-## Using the Super Memory Skill for Architecture Recall
-
-The supermemory skill helps Claude remember your project's architectural decisions across sessions. By maintaining a persistent record of your module structure and boundaries, you don't need to reload context each time.
-
-Configure supermemory to track your architecture:
-
-```
-/supermemory
-Remember this project structure: src/domain (entities), src/services (business logic), 
-src/repositories (data access). Services can only import from domain and repositories.
-Never allow cross-boundary imports in generated code.
-```
-
-The skill stores this information and references it when generating code, creating consistent boundary enforcement across all your Claude Code sessions.
-
-## Creating a Module-First Workflow
-
-Establish a workflow that naturally enforces boundaries. When starting a task, explicitly identify the target module before making changes:
-
-1. **State the module explicitly**: "I'm working in src/services/user-service/"
-2. **Define the interface first**: Specify what the module should expose
-3. **Use the code-review skill**: After generation, use the code-review skill to check for boundary violations
-
-The code-review skill can be configured to flag cross-module imports:
-
-```
-/code-review
-Check for boundary violations: ensure no imports from repositories in service layer,
-no direct domain access in components, and no circular dependencies.
-```
-
-## Practical Example: Enforcing Boundaries in a React Project
-
-Consider a React application with this structure:
-
-```
-src/
-├── domain/
-│   └── User.js
-├── services/
-│   └── UserService.js
-├── repositories/
-│   └── UserRepository.js
-└── components/
-    └── UserProfile.js
-```
-
-When you want to add a new feature to UserProfile, activate your boundary rules:
-
-```
-/project-context
-/project-boundaries
-I'm working in src/components/UserProfile.js. Add a feature to display user preferences.
-Only modify UserProfile.js - do not modify UserService or other files.
-```
-
-Claude will generate the component code while respecting the boundary constraint. If the feature requires service changes, it will describe them without implementing.
-
-## Using the Frontend Design Skill with Boundary Awareness
-
-The frontend-design skill helps create components while maintaining architectural integrity. When combined with boundary rules, it generates code that follows both design principles and module constraints.
-
-```
-/frontend-design
-Create a settings panel component. Keep it in src/components/SettingsPanel/.
-The component should call services, not access data directly.
-```
-
-The skill understands component-level boundaries and generates appropriate code patterns.
-
-## Automating Boundary Enforcement
-
-For projects requiring strict boundary enforcement, create a pre-commit hook that validates module imports:
-
-```javascript
-// scripts/validate-boundaries.js
-const allowedImports = {
-  'services': ['domain', 'repositories'],
-  'repositories': ['domain', 'api'],
-  'components': ['services', 'domain']
-};
-
-function validateImports(filePath, imports) {
-  const module = filePath.split('/')[1];
-  const allowed = allowedImports[module] || [];
-  
-  for (const imp of imports) {
-    const impModule = imp.split('/')[0];
-    if (!allowed.includes(impModule)) {
-      throw new Error(`Boundary violation: ${module} cannot import from ${impModule}`);
-    }
+```json
+{
+  "projectBounds": {
+    "enabled": true,
+    "modules": [
+      {
+        "name": "frontend",
+        "path": "./frontend",
+        "description": "React components and state management"
+      },
+      {
+        "name": "backend",
+        "path": "./backend",
+        "description": "Node.js API and database layer"
+      },
+      {
+        "name": "shared",
+        "path": "./shared",
+        "description": "Types and utilities used by both"
+      }
+    ]
   }
 }
 ```
 
-Run this validation as part of your development workflow to catch boundary violations early.
+This configuration helps Claude understand which modules exist and their relationships, enabling more accurate context selection.
+
+## Skill-Specific Boundary Techniques
+
+Different skills benefit from different scoping approaches.
+
+### For Testing with tdd
+
+When using the **tdd** skill, explicitly scope your requests:
+
+```
+/tdd Write unit tests for the auth module only. Located at src/auth/
+```
+
+This prevents the skill from analyzing unrelated modules and generates more focused test coverage.
+
+### For Documentation with pdf
+
+The **pdf** skill works similarly. Scope documentation requests:
+
+```
+/pdf Generate API documentation for the payment module at src/payment/
+```
+
+The skill will reference only the specified module's code.
+
+### For Frontend Work with frontend-design
+
+When the **frontend-design** skill analyzes your UI, specify component boundaries:
+
+```
+/frontend-design Review components in src/components/auth/ only
+```
+
+## Using Directory-Specific Prompts
+
+For persistent module awareness, add a prompt file to each module:
+
+```
+/your-project
+├── frontend/
+│   ├── .claude/
+│   │   └── prompt.md      # Frontend-specific instructions
+│   └── src/
+├── backend/
+│   ├── .claude/
+│   │   └── prompt.md      # Backend-specific instructions
+│   └── src/
+└── shared/
+```
+
+The `.claude/prompt.md` file within each module contains:
+
+```markdown
+You are working in the frontend module. Focus only on:
+- React components in src/components/
+- State management in src/store/
+- Styling in src/styles/
+
+Do not analyze backend code unless the user explicitly requests it.
+```
+
+Claude reads this file when you change into that directory, maintaining module isolation throughout your session.
+
+## Context Switching Techniques
+
+When you need to switch modules mid-session, explicitly tell Claude to change scope:
+
+```
+Let's switch to the backend module. Focus on src/services/user.ts
+```
+
+Claude will release the previous context and load only the new module's files. This works because Claude Code tracks your current working directory and any explicit scope directives.
+
+## Best Practices for Module Boundaries
+
+Keep your module structure explicit in documentation. If you use the **supermemory** skill to store project context, create separate memories for each module:
+
+```
+/supermemory Remember: payment module handles all billing logic in src/payment/
+/supermemory Remember: user module manages authentication in src/auth/
+```
+
+This approach creates persistent, scoped references that Claude can access without pulling in unrelated context.
+
+## Debugging Boundary Issues
+
+If Claude isn't respecting boundaries, check three things:
+
+1. **Working directory**: Confirm you're in the correct module directory when starting sessions
+2. **CLAUDE.md existence**: Verify the file exists in your current directory
+3. **Explicit prompts**: Include module paths in your requests
+
+When troubleshooting, try starting a fresh session with:
+
+```
+cd /your-project/backend && claude
+```
+
+This forces a clean context load tied to that specific module.
 
 ## Summary
 
-Making Claude Code respect module boundaries requires explicit context and intentional workflow design. The key strategies are:
+Making Claude Code respect module boundaries requires a combination of configuration files, explicit prompts, and session management. The key techniques are:
 
-1. Create a project-context skill defining your module structure and rules
-2. Use the tdd skill to define interfaces before implementation
-3. Use supermemory for persistent architectural recall
-4. Employ code-review skill to validate boundary compliance
-5. Establish a module-first workflow that names the target explicitly
+- Place `CLAUDE.md` files in module directories
+- Use `.claude/settings.json` for project-wide module definitions
+- Include explicit module paths in skill invocations
+- Create directory-specific prompt files for persistent awareness
 
-By combining these approaches, you maintain clean architectural boundaries while benefiting from Claude Code's powerful code generation capabilities.
-
+These approaches work together to give you precise control over Claude's context, regardless of whether you're using **xlsx** for data processing, **canvas-design** for UI prototyping, or any other skill in your workflow.
 
 ## Related Reading
 
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-skills-context-window-management-best-practices/) — Context management across module boundaries
+- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — CLAUDE.md is the primary tool for constraining Claude's scope
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — Module isolation patterns in multi-agent setups
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced patterns for controlling Claude's behavior
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

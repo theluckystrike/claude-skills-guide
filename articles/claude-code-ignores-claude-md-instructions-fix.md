@@ -5,7 +5,7 @@ description: "Troubleshooting guide for when Claude Code ignores skill instructi
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, troubleshooting, skill-md, claude-code-issues]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /claude-code-ignores-claude-md-instructions-fix/
 reviewed: true
 score: 7

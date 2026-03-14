@@ -242,5 +242,6 @@ Start with the ten categories above, customize the scanning rules to your tech s
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Integrate OWASP scanning into enterprise-grade access control and audit pipelines
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills that pair with security scanning in the CI/CD pipeline
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Run regular security scans without runaway API costs
+- [Claude Code API Security OWASP Guide](/claude-skills-guide/claude-code-api-security-owasp-guide/) — Apply OWASP Top 10 protections specifically to Claude Code API integrations
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

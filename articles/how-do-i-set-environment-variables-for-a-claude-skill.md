@@ -12,6 +12,7 @@ permalink: /how-do-i-set-environment-variables-for-a-claude-skill/
 ---
 {% raw %}
 
+
 # How Do I Set Environment Variables for a Claude Skill
 
 [Claude Code skills are powerful extensions](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) in your AI sessions. Whether you're using the pdf skill for document processing, the tdd skill for test-driven development, or the supermemory skill for knowledge management, understanding how to configure environment variables is essential for getting the most out of these tools.

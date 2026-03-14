@@ -12,6 +12,7 @@ permalink: /how-do-i-share-claude-skills-across-multiple-projects/
 ---
 {% raw %}
 
+
 [Sharing Claude skills across multiple projects](/claude-skills-guide/how-do-i-make-a-claude-skill-available-organization-wide/) ways to standardize your development workflow and avoid duplicating effort. Whether you're working on a monorepo with multiple packages or maintaining separate repositories for different applications, having a strategy for skill sharing can significantly boost your productivity.
 
 ## Understanding Claude Skill Sharing

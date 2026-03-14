@@ -157,4 +157,11 @@ After force quitting, restart Claude Code in a new session. Your conversation hi
 
 Getting stuck in an infinite loop happens to every developer working with AI assistants. By knowing these interruption techniques, you can maintain control of your development environment and minimize disruption to your workflow.
 
+## Related Reading
+
+- [Claude Code Slow Response How to Fix Latency Issues](/claude-skills-guide/claude-code-slow-response-how-to-fix-latency-issues/) — Related: performance and responsiveness issues
+- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/) — Better scoping prevents runaway loops
+- [Claude Code Keeps Making the Same Mistake Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/) — Another "stuck" behavior pattern and how to fix it
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Central hub for Claude Code behavioral issues
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
