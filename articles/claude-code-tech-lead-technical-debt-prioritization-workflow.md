@@ -6,6 +6,7 @@ description: "A practical workflow for tech leads to identify, categorize, and p
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-tech-lead-technical-debt-prioritization-workflow/
+categories: [guides]
 ---
 
 {% raw %}
@@ -145,3 +146,10 @@ Finally, connect debt management to your team's definition of done. Require debt
 
 Claude Code transforms technical debt management from a reactive, manual process into a proactive, automated workflow. By leveraging its skill system, file operations, and bash execution capabilities, tech leads can build comprehensive debt discovery, categorization, and prioritization pipelines. The key is starting simple, iterating on your categorization criteria, and integrating debt awareness into daily development activities. With Claude Code handling the mechanical aspects of debt tracking, tech leads can focus on strategic decisions about what to address and when.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
