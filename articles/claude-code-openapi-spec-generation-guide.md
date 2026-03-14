@@ -185,5 +185,6 @@ Combine OpenAPI generation with skills like **pdf** for documentation, **tdd** f
 - [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code API Versioning Strategies Guide](/claude-skills-guide/claude-code-api-versioning-strategies-guide/) — Choose the right versioning strategy before generating your OpenAPI spec
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
