@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code SendGrid Email List Management Workflow"
 description: "Build automated email list management workflows using Claude Code and SendGrid. Learn how to create skills for subscriber management, list."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, sendgrid, email-marketing, automation, workflow]
+tags: [claude-code, sendgrid, email-marketing, automation, workflow, claude-skills]
 permalink: /claude-code-sendgrid-email-list-management-workflow/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code SendGrid Email List Management Workflow

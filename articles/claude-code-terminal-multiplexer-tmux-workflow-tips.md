@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Terminal Multiplexer Tmux Workflow Tips"
 description: "Practical tips for combining Claude Code with tmux terminal multiplexer. Set up persistent sessions, split panes, and automate workflows for maximum."
 date: 2026-03-14
 categories: [workflow]
-tags: [claude-code, tmux, terminal, workflow, productivity]
-author: theluckystrike
+tags: [claude-code, tmux, terminal, workflow, productivity, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-terminal-multiplexer-tmux-workflow-tips/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Terminal Multiplexer Tmux Workflow Tips
 

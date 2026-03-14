@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Building Webhook Delivery Workflows with Claude Code and."
 description: "Learn how to leverage Claude Code's AI capabilities to build robust, reliable webhook delivery systems using Upstash QStash for message queuing and."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-upstash-qstash-webhook-delivery-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Building Webhook Delivery Workflows with Claude Code and Upstash QStash
@@ -15,7 +20,7 @@ Webhooks are the backbone of modern event-driven architectures, but reliably del
 
 ## Why QStash for Webhook Delivery?
 
-Upstash QStash is a serverless message queue designed specifically for the cloud-native era. It integrates seamlessly with Next.js, Cloudflare Workers, and other edge runtimes, making it an excellent choice for webhook infrastructure. QStash provides:
+Upstash QStash is a serverless message queue designed specifically for the cloud-native era. It integrates smoothly with Next.js, Cloudflare Workers, and other edge runtimes, making it an excellent choice for webhook infrastructure. QStash provides:
 
 - **Automatic retries** with exponential backoff
 - **Dead letter queue** for failed messages
