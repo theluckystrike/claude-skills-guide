@@ -49,7 +49,6 @@ Create a file called `correction-helper.md` in your skills directory:
 ---
 name: correction-helper
 description: "Persistent correction memory for recurring mistakes"
-tools: [read_file, write_file, bash]
 ---
 
 When correcting an error:

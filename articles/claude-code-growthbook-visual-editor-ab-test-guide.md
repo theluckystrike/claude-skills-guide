@@ -33,7 +33,6 @@ Next, configure your GrowthBook connection within Claude Code. Create a skill th
 ---
 name: growthbook-experiment
 description: Create and manage GrowthBook A/B experiments
-tools: [bash, read_file, write_file]
 ---
 
 You help manage GrowthBook A/B experiments. Use the GrowthBook CLI commands to:

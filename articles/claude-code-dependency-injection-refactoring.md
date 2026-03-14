@@ -50,7 +50,6 @@ When multiple skills need similar tool capabilities, create abstraction skills t
 ---
 name: document-storage
 description: "Abstraction layer for document persistence"
-tools: [write_file, read_file, bash]
 ---
 
 # Document Storage Interface
@@ -75,7 +74,6 @@ The skill front matter itself serves as an injection mechanism. Use it to config
 ```yaml
 ---
 name: api-client
-tools: [bash, read_file]
 config:
   base_url: "{{env.API_BASE_URL}}"
   timeout: "{{env.API_TIMEOUT}}"

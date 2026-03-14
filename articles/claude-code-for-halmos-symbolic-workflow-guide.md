@@ -77,7 +77,6 @@ Create a file `halmos-workflow-skill.md`:
 ---
 name: Halmos Symbolic Testing Workflow
 description: Assists with Halmos symbolic testing setup, execution, and result analysis
-tools: [bash, read_file, edit_file, glob]
 ---
 
 # Halmos Symbolic Testing Workflow

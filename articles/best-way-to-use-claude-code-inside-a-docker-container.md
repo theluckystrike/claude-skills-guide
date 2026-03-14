@@ -123,7 +123,6 @@ Here's a skill that helps Claude Code work effectively within a Docker developme
 ---
 name: docker-dev-assistant
 description: Assists with Docker-based development workflows
-tools: [Read, Write, Bash, Glob]
 ---
 
 # Docker Development Assistant

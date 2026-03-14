@@ -55,7 +55,6 @@ Claude Code can act as an intelligent wrapper around your Turborepo workflows. B
 ---
 name: Monorepo Manager
 description: Manage Turborepo pipelines, analyze dependency graphs, and optimize build workflows
-tools: [read_file, write_file, bash]
 ---
 
 You are a Turborepo expert. When the user asks about pipeline tasks:

@@ -52,7 +52,6 @@ Here's a basic browser automation skill structure:
 ---
 name: web-scraper
 description: "Extract data from web pages using Playwright automation"
-tools: [playwright_navigate, playwright_screenshot, playwright_evaluate, read_file, write_file]
 ---
 
 # Web Scraper Skill
@@ -144,7 +143,6 @@ Browser automation excels at testing complex user flows. Create skills that enca
 ---
 name: e2e-tester
 description: "Run end-to-end tests on web applications"
-tools: [playwright_navigate, playwright_screenshot, playwright_evaluate, bash]
 ---
 
 # E2E Tester Skill

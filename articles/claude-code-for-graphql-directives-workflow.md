@@ -44,7 +44,6 @@ Start by creating a skill file that defines its capabilities clearly. The front 
 ---
 name: graphql-directives
 description: Workflow for creating, validating, and managing GraphQL directives
-tools: [read_file, write_file, bash, glob]
 ---
 ```
 

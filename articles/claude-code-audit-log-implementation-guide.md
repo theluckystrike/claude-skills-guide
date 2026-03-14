@@ -82,7 +82,6 @@ Claude Code skills support lifecycle hooks that let you inject logging at key mo
 ---
 name: tdd
 description: "Test-driven development assistant"
-tools: [read_file, write_file, bash]
 hooks:
   beforeinvoke: "audit/start-invocation.js"
   afterinvoke: "audit/complete-invocation.js"
@@ -136,7 +135,6 @@ name: "api-builder"
 description: "Build REST APIs with Express"
 mcp_servers:
   - audit-collector
-tools: [read_file, write_file, bash]
 ---
 
 # MCP server receives structured events
@@ -191,7 +189,6 @@ Here's a practical wrapper skill that adds audit logging to any skill it wraps:
 ---
 name: audited-skill
 description: "Wrapper that adds audit logging to any skill"
-tools: [read_file, write_file, bash]
 variables:
   audit_log_path: "./logs/audit.jsonl"
   audit_enabled: true

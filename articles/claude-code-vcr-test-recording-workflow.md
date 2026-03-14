@@ -77,7 +77,6 @@ You can encapsulate the recording logic in a Claude skill for easier access. The
 ---
 name: vcr-test-helper
 description: "Helper skill for recording and replaying Claude Code test interactions"
-tools: [Read, Write, Bash, Glob]
 ---
 
 # VCR Test Helper Skill

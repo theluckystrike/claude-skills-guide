@@ -59,8 +59,6 @@ claude --offline
 ---
 name: Code Review
 description: Perform thorough code reviews
-model: ollama/llama3.3
-tools: [Read, Bash, Grep]
 ---
 
 You are an expert code reviewer. Analyze the provided code for:
@@ -82,7 +80,6 @@ When writing skills for offline use, avoid referencing external URLs or APIs tha
 ---
 name: Docker Commands
 description: Common Docker commands for offline reference
-tools: [Bash]
 ---
 
 # Docker Commands Reference
@@ -177,7 +174,6 @@ mkdir -p .claude/mcp
 echo '---
 name: Project Helper
 description: Project-specific assistance
-tools: [Read, Write, Bash, Grep]
 ---
 
 # Project Help

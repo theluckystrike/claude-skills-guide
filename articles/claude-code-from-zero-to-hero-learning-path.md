@@ -38,7 +38,6 @@ Example skill structure:
 ---
 name: code-review
 description: "Performs thorough code reviews"
-tools: [read_file, bash, grep]
 ---
 
 You are an experienced code reviewer. Analyze the provided files for:

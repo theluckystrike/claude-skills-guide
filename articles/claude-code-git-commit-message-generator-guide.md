@@ -31,7 +31,6 @@ Creating a dedicated skill for commit message generation gives you a reusable to
 ---
 name: commit-msg-generator
 description: Generate semantic git commit messages from staged changes
-tools: [read_file, bash]
 ---
 
 Analyze the staged git changes and generate a semantic commit message following conventional commits format. 
@@ -88,7 +87,6 @@ Every team has preferences. Modify your skill to enforce them:
 ---
 name: commit-msg-generator
 description: Generate commit messages matching team conventions
-tools: [read_file, bash]
 ---
 
 Generate commit messages following our team conventions:

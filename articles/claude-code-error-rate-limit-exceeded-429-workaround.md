@@ -96,7 +96,6 @@ When creating or using skills, design them with rate limits in mind:
 ---
 name: batch-processor
 description: Process files in batches. Always pause between batches and confirm before proceeding to the next group to avoid hitting rate limits.
-tools: [Read, Write]
 ---
 
 Process files in groups of 5. After each group, pause and report results before continuing.

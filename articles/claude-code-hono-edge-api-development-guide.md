@@ -56,7 +56,6 @@ A well-crafted Claude skill accelerates your API development workflow. Create `h
 ---
 name: hono-api
 description: Generate Hono edge API routes, middleware, and handlers
-tools: [read_file, write_file, bash]
 ---
 
 You are a Hono edge API expert. Generate clean, type-safe code following these patterns:
@@ -183,7 +182,6 @@ The skill ecosystem enhances Hono development. Use `supermemory` to track API pa
 ---
 name: supermemory
 description: Store and retrieve project memories
-tools: [bash]
 ---
 
 Store this Hono middleware pattern:

@@ -43,7 +43,6 @@ Creating a dedicated skill for alt text generation ensures consistent, high-qual
 ---
 name: Alt Text Generator
 description: Generate accessible alt text descriptions for images
-tools: [Read, Bash]
 ---
 
 You specialize in creating clear, concise alt text for images. Follow these guidelines:

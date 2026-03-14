@@ -87,8 +87,6 @@ Building a Claude Code skill that helps generate Conventional Commits improves d
 ---
 name: conventional-commit
 description: Generate Conventional Commits formatted messages with interactive prompts
-tools: [read_file, bash]
-version: 1.0.0
 ---
 
 # Conventional Commit Generator

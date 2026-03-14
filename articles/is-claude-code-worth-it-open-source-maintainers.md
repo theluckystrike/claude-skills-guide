@@ -42,7 +42,6 @@ Create a skill for issue responses:
 ---
 name: Issue Triage
 description: Help triage incoming GitHub issues
-tools: [read_file, bash]
 ---
 
 You are helping triage GitHub issues for an open source project. For each issue:
@@ -116,7 +115,6 @@ For a Node.js project, you might create a skill specifically for dependency main
 ---
 name: Dependency Check
 description: Check and report on project dependencies
-tools: [bash, read_file]
 ---
 
 Run the following commands and summarize the results:

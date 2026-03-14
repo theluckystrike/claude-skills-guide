@@ -41,9 +41,7 @@ Add a `version` field to your skill's front matter to make the version explicitl
 ---
 name: "Unit Test Generator"
 description: "Generates comprehensive unit tests for JavaScript functions"
-version: "2.1.0"
 author: "your-username"
-tools: [Read, Edit, Bash]
 tags: [testing, javascript, development]
 ---
 ```
@@ -84,7 +82,6 @@ For example, if you're changing your skill from generating Jest tests to Vitest,
 ---
 name: "Unit Test Generator (Legacy)"
 description: "Generates Jest unit tests - DEPRECATED, use Unit Test Generator v2.x instead"
-version: "1.5.0"
 deprecated: true
 migration_guide: "See migration guide at https://your-repo.com/upgrade-to-v2"
 ---

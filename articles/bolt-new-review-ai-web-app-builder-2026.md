@@ -53,7 +53,6 @@ Here's a practical example of a Claude Code skill designed to work with Bolt.new
 ---
 name: bolt-review
 description: "Review and improve Bolt.new generated code"
-tools: [read_file, bash, write_file]
 ---
 
 # Bolt.new Code Review Skill

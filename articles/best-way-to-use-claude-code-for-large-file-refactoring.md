@@ -77,7 +77,6 @@ Consider creating a refactoring skill that encapsulates your standard practices:
 ---
 name: refactoring-assistant
 description: "Helps with systematic code refactoring"
-tools: [read_file, write_file, bash]
 ---
 
 # Refactoring Assistant

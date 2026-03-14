@@ -31,7 +31,6 @@ The orchestrator pattern uses a central agent that breaks down complex tasks and
 ---
 name: project-orchestrator
 description: Coordinates complex project tasks across specialized agents
-tools: [read_file, write_file, bash, glob]
 agents:
   - code-agent
   - review-agent
@@ -49,7 +48,6 @@ The handoff pattern enables smooth context transfer between agents as work progr
 ---
 name: code-to-review-handoff
 description: Transfers code context to review specialist
-tools: [read_file, bash]
 handoff:
   to: code-reviewer
   include_context: [recent_changes, test_results, code_author]

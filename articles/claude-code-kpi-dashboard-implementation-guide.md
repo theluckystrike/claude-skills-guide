@@ -31,7 +31,6 @@ Create a new skill file at `~/.claude/skills/user/kpi-dashboard.md`. This skill 
 ---
 name: KPI Dashboard
 description: Generate real-time KPI dashboards with automated data aggregation and visualization
-tools: [Read, Bash, Glob, Grep]
 patterns:
   - "show me project metrics"
   - "generate KPI dashboard"

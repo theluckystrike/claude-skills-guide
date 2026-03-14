@@ -154,7 +154,6 @@ When existing skills don't meet requirements, build custom skills following this
 ---
 name: project-scaffolder
 description: "Generates project structure from specifications"
-tools: [read_file, write_file, bash]
 triggers:
   - "generate project"
   - "create new project"

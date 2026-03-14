@@ -33,7 +33,6 @@ The first skill every vendor team should create is an onboarding checker. This s
 ---
 name: vendor-onboarding
 description: Validates contractor environment setup and baseline requirements
-tools: [bash, read_file]
 ---
 
 # Vendor Onboarding Check
@@ -59,7 +58,6 @@ Contractor code reviews consume significant time when reviewers must catch style
 ---
 name: pre-submit-quality
 description: Run comprehensive quality checks before code submission
-tools: [bash, read_file, glob]
 ---
 
 # Pre-Submission Quality Gate
@@ -105,7 +103,6 @@ If you're working with a UI/UX vendor, the `frontend-design` skill helps maintai
 ---
 name: frontend-design-validator
 description: Validates frontend implementation against design system
-tools: [read_file, glob]
 ---
 
 # Design System Compliance Check
@@ -129,7 +126,6 @@ When contractors handle documentation, the `pdf` skill becomes valuable for gene
 ---
 name: docs-pdf-generator
 description: Generate PDF documentation following company standards
-tools: [pdf]
 ---
 
 # Documentation PDF Generator
@@ -153,7 +149,6 @@ Vendor QA teams benefit from skills that encode your testing requirements:
 ---
 name: tdd-check
 description: Validates test-driven development compliance
-tools: [glob, read_file, bash]
 ---
 
 # TDD Compliance Check
@@ -177,7 +172,6 @@ Long-term contractors often struggle with institutional knowledge that full-time
 ---
 name: project-memory
 description: Capture and recall project-specific knowledge
-tools: [read_file, write_file]
 ---
 
 # Project Memory Manager

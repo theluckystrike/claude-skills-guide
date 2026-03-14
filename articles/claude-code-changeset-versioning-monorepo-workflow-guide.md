@@ -234,7 +234,6 @@ Create skills for common monorepo operations:
 ---
 name: monorepo-version
 description: Handles version bumps and publishes in monorepo
-tools: [Bash]
 ---
 
 Run the following commands in sequence:

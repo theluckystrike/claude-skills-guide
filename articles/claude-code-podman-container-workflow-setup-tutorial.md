@@ -69,8 +69,6 @@ A Claude Code skill is a Markdown file with YAML front matter. Create a file nam
 ---
 name: podman-manager
 description: "Manage Podman containers with Claude Code - start, stop, inspect, and monitor containers"
-version: 1.0.0
-tools: [bash, read_file]
 ---
 
 # Podman Container Manager
@@ -115,8 +113,6 @@ Create a skill that sets up development containers for different project types:
 ---
 name: dev-container
 description: "Create and manage development containers for various programming languages"
-version: 1.0.0
-tools: [bash, read_file]
 ---
 
 # Development Container Helper
@@ -173,8 +169,6 @@ Create a skill specifically for database containers:
 ---
 name: db-containers
 description: "Quickly start and manage database containers for development"
-version: 1.0.0
-tools: [bash]
 ---
 
 # Database Container Manager
@@ -206,8 +200,6 @@ Create a monitoring skill that tracks container health and resource usage:
 ---
 name: container-monitor
 description: "Monitor container health, resource usage, and performance metrics"
-version: 1.0.0
-tools: [bash]
 ---
 
 # Container Health Monitor

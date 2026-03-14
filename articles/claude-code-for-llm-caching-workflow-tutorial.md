@@ -36,7 +36,6 @@ Create a new skill file `llm-cache-skill.md` in your skills directory:
 ---
 name: llm-cache
 description: "Cache and retrieve LLM responses with intelligent key generation"
-tools: [read_file, write_file, bash]
 ---
 
 # LLM Response Cache Skill

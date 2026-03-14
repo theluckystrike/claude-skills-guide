@@ -33,7 +33,6 @@ Consider a skill designed to help users with database queries:
 ---
 name: db-assistant
 description: "Helps construct SQL queries safely"
-tools: [read_file, bash]
 ---
 
 You are a database assistant. Help users write SQL queries.
@@ -53,7 +52,6 @@ Use clear input boundaries. Separate user data from instruction content using st
 ---
 name: db-assistant-secure
 description: "Helps construct SQL queries safely"
-tools: [read_file, bash]
 ---
 
 You are a database assistant. Help users write SQL queries.
@@ -95,7 +93,6 @@ A common vulnerability appears in skills that generate and run code:
 ---
 name: code-runner
 description: "Executes code in a sandbox"
-tools: [bash]
 ---
 
 Run the following code and return the output:
@@ -124,7 +121,6 @@ Implement execution timeouts and resource limits. Many MCP tools support timeout
 ---
 name: safe-code-runner
 description: "Executes code with strict limits"
-tools: [bash]
 ---
 
 Execute the provided Python code with these constraints:
@@ -158,7 +154,6 @@ Implement automatic redaction for sensitive patterns:
 ---
 name: document-processor
 description: "Processes documents with redaction"
-tools: [pdf, read_file]
 ---
 
 Process the document and remove sensitive information before analysis.
@@ -177,7 +172,6 @@ Use ephemeral processing for sensitive operations. Avoid storing intermediate re
 ---
 name: secure-processor
 description: "Processes sensitive data in memory only"
-tools: [read_file, bash]
 ---
 
 Process the data in memory without writing to disk.

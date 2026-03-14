@@ -43,7 +43,6 @@ Create a new skill file at `~/.claude/skills/zSkill.md`:
 ---
 name: zuora-billing
 description: Automate Zuora billing operations including subscriptions, invoices, and payments
-tools: [bash, read_file, write_file]
 ---
 
 You are an expert in Zuora billing operations. Help users manage subscriptions, generate invoices, process payments, and handle common billing workflows via the Zuora REST API.

@@ -27,7 +27,6 @@ The **supermemory** skill excels at organizing team knowledge. Configure it to i
 ---
 name: supermemory
 description: Team knowledge base and context manager
-tools: [read_file, bash]
 ---
 
 Use this skill to:
@@ -48,7 +47,6 @@ A **tdd** (test-driven development) skill might enforce your testing workflow:
 ---
 name: tdd
 description: Test-driven development workflow
-tools: [read_file, write_file, bash]
 ---
 
 ## Workflow Rules
@@ -89,7 +87,6 @@ Combine the **code-review** pattern with team conventions:
 ---
 name: team-code-review
 description: Standardized code review process
-tools: [read_file, bash]
 ---
 
 ## Review Checklist
@@ -125,7 +122,6 @@ For backend teams, combine **api-design** with your API framework:
 ---
 name: api-documentation
 description: Maintain API docs from code
-tools: [read_file, write_file, bash]
 ---
 
 1. Parse route files for endpoints
@@ -166,7 +162,6 @@ Create a skill for managing skill versions:
 ---
 name: skill-version-manager
 description: Track and update team skills
-tools: [bash, read_file]
 ---
 
 ## Commands
@@ -200,7 +195,6 @@ The **security** skill provides team-specific security scanning:
 ---
 name: security-scan
 description: Basic security checks for team code
-tools: [read_file, bash]
 ---
 
 ## Checks

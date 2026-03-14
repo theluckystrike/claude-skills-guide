@@ -32,7 +32,6 @@ Before creating your skill, ensure you have the necessary tools configured. Your
 ---
 name: nomad-scheduler
 description: "Manage Nomad container scheduling workflows"
-tools: [bash, read_file, write_file]
 ---
 
 # Nomad Container Scheduler Skill

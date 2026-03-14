@@ -68,7 +68,6 @@ Save this as `neon-db-skill.md` in your skills directory:
 ---
 name: Neon DB
 description: Manage Neon serverless PostgreSQL databases with connection handling and query execution
-tools: [bash, read_file, write_file]
 env:
   - NEON_PROJECT_ID
   - NEON_BRANCH
@@ -170,7 +169,6 @@ Chain multiple database operations using Claude Code's skill chaining. Create a 
 ---
 name: DB Workflow
 description: Execute multi-step database workflows with transaction support
-tools: [bash]
 env:
   - NEON_PROJECT_ID
 ---

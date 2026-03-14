@@ -99,7 +99,6 @@ For recurring workflows, create custom Claude skills that automate branch operat
 ---
 name: git-branch-cleanup
 description: Clean up merged local branches
-tools: [bash]
 ---
 
 This skill helps clean up local branches that have been merged into main.
@@ -164,7 +163,6 @@ Build a reusable skill for common git tasks:
 ---
 name: git-assist
 description: "AI-powered git assistance for LazyGit workflows"
-tools: [bash, read_file]
 ---
 
 This skill provides intelligent assistance for git operations.

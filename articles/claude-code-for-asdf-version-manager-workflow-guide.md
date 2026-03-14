@@ -59,8 +59,6 @@ The most powerful way to integrate Claude Code with asdf is through a custom ski
 ---
 name: asdf-workflow
 description: Manage asdf version manager operations and project runtime configuration
-version: 1.0.0
-tools: [bash, read_file, write_file, edit_file]
 ---
 
 # asdf Workflow Assistant

@@ -49,7 +49,6 @@ Imagine you want consistent code reviews that follow your team's standards. You 
 ---
 name: code-review
 description: "Performs thorough code reviews following team standards"
-tools: [Read, Bash, grep]
 ---
 
 You are a senior developer performing a code review. For each file:

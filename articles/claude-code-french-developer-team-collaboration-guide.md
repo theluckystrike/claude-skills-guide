@@ -75,7 +75,6 @@ Here's an example skill structure for a French team:
 ---
 name: equipe-react-standards
 description: Standards de codage React pour l'équipe de développement
-tools: [read_file, write_file, bash]
 ---
 
 Vous êtes un expert en React qui applique les standards de codage de notre équipe.

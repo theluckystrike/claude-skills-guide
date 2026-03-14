@@ -105,7 +105,6 @@ For recurring project needs, create custom skills in your project repository:
 ---
 name: api-test
 description: Generate integration tests for API endpoints
-tools: [bash, read_file, write_file]
 ---
 
 When asked to create API tests:

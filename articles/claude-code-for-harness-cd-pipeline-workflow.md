@@ -46,8 +46,6 @@ Claude Code can then use these credentials to authenticate with Harness. Here's 
 ---
 name: harness-pipeline-assistant
 description: "AI-powered assistant for Harness CD pipeline management"
-version: "1.0.0"
-tools: [bash, read_file, write_file]
 env:
   - HARNESS_ACCOUNT_ID
   - HARNESS_API_TOKEN
@@ -100,7 +98,6 @@ Create a monitoring skill that watches deployment progress:
 ---
 name: harness-deployment-monitor
 description: "Monitor Harness deployments and provide intelligent alerts"
-tools: [bash]
 ---
 # Deployment Monitor
 

@@ -46,8 +46,6 @@ Create a skill that performs comprehensive container security scans. Save this a
 ---
 name: container-security-scan
 description: Scan container images for vulnerabilities and security issues
-tools: [bash, read_file, write_file]
-version: 1.0.0
 ---
 
 # Container Security Scan
@@ -174,8 +172,6 @@ Create a master skill that coordinates these stages:
 ---
 name: security-pipeline-orchestrator
 description: Orchestrate multi-stage container security pipeline
-tools: [bash, read_file, write_file, todo]
-version: 1.0.0
 ---
 
 # Security Pipeline Orchestrator

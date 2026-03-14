@@ -166,7 +166,6 @@ Create a Claude skill for your team that encapsulates your fuzzing workflow:
 ---
 name: echidna-fuzz
 description: "Run Echidna fuzzing campaigns on Solidity contracts"
-tools: [Bash, Read, Write]
 ---
 # Echidna Fuzzing Skill
 

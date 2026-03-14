@@ -41,7 +41,6 @@ The foundation of your workflow automation is a Claude skill specifically design
 ---
 name: mitre-attck-helper
 description: "Assists with MITRE ATT&CK technique analysis, detection rule generation, and coverage mapping"
-tools: [read_file, write_file, bash]
 tactics:
   - initial-access
   - execution

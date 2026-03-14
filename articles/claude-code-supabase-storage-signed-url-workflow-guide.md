@@ -47,7 +47,6 @@ For Claude Code skills, you might prefer using the Supabase CLI or API directly 
 ---
 name: supabase-storage-manager
 description: Manage Supabase Storage with signed URLs
-tools: [bash, read_file, write_file]
 ---
 
 You are a storage manager that helps users upload, download, and manage files in Supabase Storage using signed URLs.
@@ -112,7 +111,6 @@ Claude Code can orchestrate complex file workflows by combining signed URLs with
 ---
 name: document-processor
 description: Process uploaded documents with AI analysis
-tools: [bash, read_file, http]
 ---
 
 You help users process documents by downloading them via signed URLs, analyzing content, and storing results.

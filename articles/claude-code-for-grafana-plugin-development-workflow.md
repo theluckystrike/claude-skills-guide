@@ -39,7 +39,6 @@ The first step is creating a skill file that captures the plugin development wor
 ---
 name: Grafana Plugin Developer
 description: Expert assistant for Grafana plugin development, including data sources, panels, and apps
-tools: [read_file, write_file, bash, glob]
 category: development
 ---
 

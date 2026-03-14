@@ -33,7 +33,6 @@ The most efficient approach involves creating a dedicated skill for your batch o
 ---
 name: batch-logger
 description: Adds consistent logging to code files
-tools: [read_file, write_file, glob, bash]
 ---
 
 You help add logging statements to code files. For each file:

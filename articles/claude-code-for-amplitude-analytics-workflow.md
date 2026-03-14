@@ -45,7 +45,6 @@ Here's a skill that tracks custom events to Amplitude:
 ---
 name: track-event
 description: "Track a custom event to Amplitude analytics"
-tools: [bash, read_file, write_file]
 ---
 
 # Track Event to Amplitude
@@ -114,7 +113,6 @@ Beyond tracking events, you can query Amplitude to retrieve analytics insights. 
 ---
 name: amplitude-query
 description: "Query Amplitude analytics data"
-tools: [bash]
 requires_permission: true
 ---
 
@@ -190,7 +188,6 @@ Combine multiple skills to build comprehensive reporting workflows. Here's how t
 ---
 name: daily-analytics-summary
 description: "Generate daily Amplitude analytics summary"
-tools: [bash, amplitude-query]
 ---
 
 # Daily Analytics Summary

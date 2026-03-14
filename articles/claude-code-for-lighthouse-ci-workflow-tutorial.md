@@ -68,8 +68,6 @@ Now let's create a Claude Skill that helps you work with Lighthouse CI results. 
 ---
 name: lighthouse-ci
 description: Analyze Lighthouse CI results and suggest performance improvements
-tools: [bash, read_file]
-version: 1.0.0
 ---
 
 # Lighthouse CI Analysis Skill

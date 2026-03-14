@@ -151,7 +151,6 @@ To make this workflow seamless, create a Claude skill specifically for Hygen ope
 ---
 name: hygen-generator
 description: Generate code using Hygen templates
-tools: [bash, read_file, write_file]
 ---
 
 You are an expert in Hygen code generation. When asked to generate code:

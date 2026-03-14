@@ -45,7 +45,6 @@ A Claude Code skill for Regula policy validation should capture the essential co
 ---
 name: regula-policy-assistant
 description: Assists with Regula policy validation and remediation
-tools: [bash, read_file, write_file]
 ---
 
 # Regula Policy Assistant

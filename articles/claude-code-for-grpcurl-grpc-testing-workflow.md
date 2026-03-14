@@ -40,15 +40,7 @@ Claude Code can orchestrate complex grpcurl commands, handle response validation
 ---
 name: grpc-test
 description: "Execute gRPC test calls with grpcurl"
-tools: [bash, read_file]
-parameters:
-  - name: method
-    description: "The gRPC method to call (e.g., /mypackage.Service/Method)"
-  - name: data
-    description: "JSON payload to send"
-  - name: host
-    description: "Target gRPC server host:port"
-```
+---
 
 With this foundation, Claude Code can execute gRPC calls and analyze responses intelligently.
 

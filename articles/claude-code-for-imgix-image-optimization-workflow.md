@@ -43,8 +43,6 @@ Create a skill that generates Imgix URLs based on specifications. Save this as `
 ---
 name: imgix-url-generator
 description: Generate Imgix URLs with optimal parameters for image transformation
-tools: [read_file, write_file, bash]
-parameters:
   source: Your Imgix source domain (e.g., your-site.imgix.net)
   image_path: Path to image in your source
   width: Target width in pixels
@@ -77,7 +75,6 @@ One of the most practical Imgix workflows is generating responsive image srcsets
 ---
 name: responsive-imgix-images
 description: Generate responsive img tags with Imgix srcset for multiple breakpoints
-tools: [read_file, write_file]
 ---
 
 Generate responsive image HTML using Imgix for the following specifications:
@@ -122,8 +119,6 @@ For large-scale image optimization, create a skill that processes multiple image
 ---
 name: imgix-batch-processor
 description: Process multiple images through Imgix with consistent optimization settings
-tools: [read_file, write_file, bash]
-parameters:
   images: Array of image paths to process
   base_url: Your Imgix source base URL
   optimization_profile: "fast" | "balanced" | "quality"

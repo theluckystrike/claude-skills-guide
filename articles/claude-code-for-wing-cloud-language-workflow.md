@@ -54,7 +54,6 @@ Build a skill that understands Wing syntax and cloud patterns:
 ---
 name: wing-cloud-developer
 description: Expert in Wing cloud language development, infrastructure patterns, and cloud architecture
-tools: [read_file, write_file, bash]
 ---
 
 You are a Wing cloud language expert. Generate correct Wing code following these rules:

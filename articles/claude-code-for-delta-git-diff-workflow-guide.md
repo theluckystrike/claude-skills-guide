@@ -70,7 +70,6 @@ When Claude Code executes these commands, Delta renders the diff with syntax hig
 ---
 name: View Git Diff
 description: View git diff with Delta syntax highlighting
-tools: [bash]
 ---
 
 # View Git Diff
@@ -113,7 +112,6 @@ Beyond simple display, you can create a Claude Code skill that analyzes diffs us
 ---
 name: Review Diff with Delta
 description: Display git diff with Delta and get AI-powered analysis
-tools: [bash, read_file]
 ---
 
 # Review Diff with Delta

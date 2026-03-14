@@ -36,7 +36,6 @@ The most practical starting point is a skill that generates components with prop
 ---
 name: nextjs-component
 description: Generate TypeScript React components for Next.js with App Router
-tools: [Write, Read, Bash]
 ---
 
 # Next.js Component Generator
@@ -78,7 +77,6 @@ Next.js API routes benefit significantly from TypeScript. Create a skill focused
 ---
 name: nextjs-api-route
 description: Create Next.js 14 API routes with Zod validation and proper typing
-tools: [Write, Read, Bash]
 ---
 
 # API Route Generator
@@ -128,7 +126,6 @@ The frontend-design skill complements Next.js development by providing guidance 
 ---
 name: nextjs-page-layout
 description: Create Next.js page layouts with proper metadata and responsive design
-tools: [Write, Read, Glob]
 ---
 
 # Page Layout Generator

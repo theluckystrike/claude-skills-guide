@@ -37,8 +37,6 @@ Here's a practical example of a standards skill structure:
 ---
 name: team-standards-enforcer
 description: Enforces team coding standards and best practices
-version: 1.0.0
-tools: [read_file, write_file, bash]
 ---
 
 # Team Coding Standards Enforcer

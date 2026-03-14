@@ -185,7 +185,6 @@ You can create custom Claude Code skills specifically optimized for gRPC-Web dev
 ---
 name: gRPC Web Developer
 description: Specialized assistance for gRPC-Web development workflow
-tools: [read_file, write_file, bash, web_fetch]
 ---
 
 You are a gRPC-Web development expert. Help users with:

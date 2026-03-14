@@ -29,7 +29,6 @@ Here's a skill configuration focused on accessibility:
 ---
 name: a11y-audit
 description: "Audit code for accessibility compliance"
-tools: [read_file, bash, write_file]
 focus: wcag-compliance, aria-best-practices, keyboard-navigation
 ---
 ```

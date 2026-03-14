@@ -50,7 +50,6 @@ Create a Claude skill that handles Prisma Cloud authentication and common operat
 ---
 name: prisma-cloud-helper
 description: "Helper for interacting with Prisma Cloud APIs and managing security workflows"
-tools: [bash, read_file]
 ---
 
 You are a Prisma Cloud workflow assistant. When users ask about security findings or compliance status:
@@ -77,7 +76,6 @@ Integrate this into Claude Code by creating a skill that understands when you wa
 ---
 name: cloud-security-scanner
 description: "Automate Prisma Cloud security scans and analyze results"
-tools: [bash]
 ---
 
 When asked to scan or check security status:
@@ -115,7 +113,6 @@ Create a Claude skill that specializes in vulnerability management:
 ---
 name: vuln-manager
 description: "Track and manage vulnerabilities across your cloud environment"
-tools: [bash, read_file]
 ---
 
 For vulnerability management tasks:
@@ -141,7 +138,6 @@ Build a skill that understands compliance frameworks and can explain findings in
 ---
 name: compliance-checker
 description: "Monitor and report on cloud security compliance status"
-tools: [bash]
 ---
 
 For compliance inquiries:

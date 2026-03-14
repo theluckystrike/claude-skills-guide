@@ -55,7 +55,6 @@ Every skill consists of three main components: front matter metadata, system ins
 ---
 name: my-first-skill
 description: "A simple skill for generating boilerplate code"
-tools: [Read, Write, Bash]
 ---
 
 # Skill Instructions
@@ -160,7 +159,6 @@ Build a personal workflow skill that orchestrates multiple skills:
 ---
 name: dev-workflow
 description: "Daily development workflow automation"
-tools: [Bash, Grep, Edit]
 ---
 
 # Workflow: Code → Test → Document
@@ -185,7 +183,6 @@ Implement advanced patterns like conditional tool usage and context-aware respon
 ---
 name: adaptive-coder
 description: "Smart coding assistant that adapts to project context"
-tools: [Read, Write, Bash, Grep]
 ---
 
 # Context Detection

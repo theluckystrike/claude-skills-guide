@@ -76,7 +76,6 @@ Create a Claude skill that analyzes your monorepo structure:
 ---
 name: monorepo-analyzer
 description: "Analyze monorepo changes and determine affected packages"
-tools: [bash, read_file]
 ---
 
 ## Task
@@ -195,7 +194,6 @@ A practical pattern is creating a Claude skill that reviews your workflows:
 ---
 name: workflow-reviewer
 description: "Review GitHub Actions workflows for optimization opportunities"
-tools: [read_file, bash]
 ---
 
 ## Review Criteria

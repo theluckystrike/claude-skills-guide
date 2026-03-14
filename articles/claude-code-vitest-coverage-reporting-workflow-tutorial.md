@@ -94,7 +94,6 @@ Claude Code can help you maintain coverage standards by running tests and analyz
 ---
 name: Run Coverage Check
 description: Execute Vitest coverage report and analyze results
-tools: [bash, read_file]
 ---
 
 Run the Vitest coverage report using:

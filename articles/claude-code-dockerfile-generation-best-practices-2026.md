@@ -150,7 +150,6 @@ If your team has specific Dockerfile standards, create a custom skill:
 ---
 name: corporate-dockerfile
 description: Generate Dockerfiles following company standards
-tools: [read_file, bash]
 ---
 
 # Corporate Dockerfile Generator

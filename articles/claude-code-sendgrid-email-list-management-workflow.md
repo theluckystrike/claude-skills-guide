@@ -36,7 +36,6 @@ Create a foundational skill that handles the authentication and core API communi
 ---
 name: sendgrid-base
 description: "Base skill for SendGrid API operations"
-tools: [http, env]
 ---
 
 This skill provides core SendGrid API communication capabilities.
@@ -52,7 +51,6 @@ One of the most common tasks is managing email subscribers. Create a skill for a
 ---
 name: add-subscriber
 description: "Add a new subscriber to a SendGrid contact list"
-tools: [http, env]
 ---
 
 # Add Subscriber
@@ -74,7 +72,6 @@ For bulk operations, create another skill that reads from a CSV file and adds mu
 ---
 name: bulk-import-subscribers
 description: "Import subscribers from a CSV file"
-tools: [http, read_file, env]
 ---
 
 # Bulk Import Subscribers
@@ -99,7 +96,6 @@ The segmentation skill should construct complex filter queries that SendGrid's A
 ---
 name: create-segment
 description: "Create a new SendGrid contact segment"
-tools: [http, env]
 ---
 
 # Create Segment
@@ -129,7 +125,6 @@ Here's a practical example of a campaign creation skill:
 ---
 name: create-email-campaign
 description: "Create and schedule a SendGrid email campaign"
-tools: [http, env]
 ---
 
 # Create Email Campaign
@@ -152,7 +147,6 @@ Email compliance is crucial. Build skills that automatically handle unsubscribe 
 ---
 name: process-unsubscribes
 description: "Process unsubscribe requests and update lists"
-tools: [http, env]
 ---
 
 # Process Unsubscribes

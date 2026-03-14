@@ -30,7 +30,6 @@ Create a Claude skill specifically for Flutter development that understands your
 ---
 name: Flutter Developer
 description: Expert Flutter development assistant for cross-platform apps
-tools: [bash, read_file, write_file, edit_file]
 ---
 
 You are a Flutter development expert specializing in cross-platform workflows.

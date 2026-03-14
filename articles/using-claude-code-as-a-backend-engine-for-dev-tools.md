@@ -35,7 +35,6 @@ One practical application is creating a dedicated code review skill. Here's how 
 ---
 name: code-reviewer
 description: "Analyzes code changes and provides constructive review feedback"
-tools: [read_file, bash, glob]
 ---
 
 You are a code review assistant. Analyze the provided files for:

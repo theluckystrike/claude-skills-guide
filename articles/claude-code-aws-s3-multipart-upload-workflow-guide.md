@@ -47,8 +47,6 @@ Here's a practical skill that handles multipart uploads efficiently:
 ---
 name: s3-multipart-upload
 description: Upload large files to AWS S3 using multipart upload with automatic retry and resume capability
-tools: [bash, read_file, write_file]
-version: 1.0.0
 ---
 
 # S3 Multipart Upload Skill

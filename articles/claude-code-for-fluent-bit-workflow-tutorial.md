@@ -165,7 +165,6 @@ For repeated deployments, create a Claude Code skill that encapsulates your Flue
 ---
 name: fluent-bit-deploy
 description: Deploy Fluent Bit as a Docker container with validation
-tools: [Bash, Read, Write]
 ---
 
 # Fluent Bit Deployment Skill
