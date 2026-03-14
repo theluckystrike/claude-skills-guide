@@ -18,26 +18,30 @@ tags: [claude-code, claude-skills, agent-swarm, multi-agent, coordination, paral
 
 [Single-agent workflows handle individual tasks well](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), but production scenarios often require parallel execution. Processing hundreds of PDF documents, running test suites across multiple modules, or generating documentation for a large codebase benefits from concurrent agent execution. The **tdd** skill demonstrates this naturally—when you run test generation across twenty files, coordinating multiple agents reduces completion time from minutes to seconds.
 
-[Claude Code supports spawning multiple agents within a single session](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/) through the `/spawn` command or via structured tool calls. Understanding how to coordinate these agents effectively separates basic usage from professional-grade automation.
+Claude Code supports spawning multiple subagents within a single session via structured tool calls. Understanding how to coordinate these agents effectively separates basic usage from professional-grade automation.
 
 ## Strategy One: Fan-Out/Fan-In Pattern
 
 [The fan-out/fan-in pattern spawns multiple agents](/claude-skills-guide/fan-out-fan-in-pattern-claude-code-subagents/) to handle independent tasks, then aggregates results. This works when tasks share no dependencies and can execute in any order.
 
-```bash
-# Fan-out: Spawn agents for parallel PDF processing
-/spawn agent-1: /pdf extract text from contract-part1.pdf
-/spawn agent-2: /pdf extract text from contract-part2.pdf
-/spawn agent-3: /pdf extract text from contract-part3.pdf
+In a Claude Code orchestrator session, you can instruct Claude to spawn subagents that each handle one file using the `/pdf` skill:
 
-# Fan-in: Aggregate results after all complete
+```
+Spawn 3 subagents:
+- Subagent 1: Use /pdf to extract text from contract-part1.pdf
+- Subagent 2: Use /pdf to extract text from contract-part2.pdf  
+- Subagent 3: Use /pdf to extract text from contract-part3.pdf
+Then aggregate all results into a single summary.
 ```
 
 The key is identifying truly independent work units. If you're processing a directory of invoices with the **pdf** skill, each invoice processes independently. Spawn an agent per file, then combine outputs using a final aggregation agent.
 
-```bash
-/spawn parser-1: Process invoices/invoice-001.pdf through invoice-010.pdf
-/spawn parser-2: Process invoices/invoice-011.pdf through invoice-020.pdf
+Instruct the orchestrator to split the work across two subagents, each handling a batch of invoices:
+
+```
+Spawn two subagents:
+- Subagent 1: Process invoices/invoice-001.pdf through invoice-010.pdf using /pdf
+- Subagent 2: Process invoices/invoice-011.pdf through invoice-020.pdf using /pdf
 ```
 
 ## Strategy Two: Hierarchical Agent Trees
@@ -84,11 +88,11 @@ Each agent reads and writes to this file. The **[supermemory** skill can track t
 
 Trigger agent spawns based on file system events or message queue updates. This pattern works well for watch folders or continuous integration pipelines.
 
-```bash
-# Monitor directory for new files
-# When new PDF arrives, spawn processing agent
+When a new PDF arrives in the watched directory, the orchestrator spawns a subagent:
 
-/spawn document-agent: /pdf extract metadata from {new_file} and update index.json
+```
+A new file has arrived: {new_file}
+Spawn a subagent to use /pdf to extract metadata from {new_file} and update index.json.
 ```
 
 The **pdf** skill integrates cleanly here since it handles single-file and batch operations equally well. Combine with a file watcher, and you have an automated document processing pipeline.
@@ -107,10 +111,11 @@ The **pdf** skill integrates cleanly here since it handles single-file and batch
 }
 ```
 
-When agent-3 fails, read the checkpoint, identify it as failed, and spawn a replacement:
+When an agent fails, read the checkpoint, identify the failed agent, and spawn a replacement:
 
-```bash
-/spawn agent-3-retry: Resume processing from failed-step in document-003.pdf
+```
+Subagent 3 failed on document-003.pdf at step 2.
+Spawn a replacement subagent to resume processing document-003.pdf starting from step 2.
 ```
 
 ## Practical Example: Documentation Pipeline
@@ -121,14 +126,13 @@ Consider generating documentation for a monorepo with multiple packages. Each pa
 2. **Backend packages** use the **tdd** skill for API documentation  
 3. **Data packages** use the **xlsx** skill for schema exports
 
-```bash
-# Hierarchical spawn with role assignment
-/spawn coordinator: Coordinate documentation generation across 5 packages
+The orchestrator coordinates the work and spawns specialized subagents:
 
-# Coordinator then spawns:
-/spawn fe-docs: /frontend-design generate docs for ./packages/ui/
-/spawn be-docs: /generate api docs for ./packages/api/
-/spawn data-docs: /xlsx export schemas from ./packages/data/
+```
+Coordinate documentation generation across 5 packages:
+- Spawn a frontend docs subagent: use /frontend-design to generate docs for ./packages/ui/
+- Spawn a backend docs subagent: generate API documentation for ./packages/api/
+- Spawn a data docs subagent: use /xlsx to export schemas from ./packages/data/
 ```
 
 Each specialized agent operates independently, then the coordinator aggregates outputs into a unified documentation site.
@@ -141,8 +145,10 @@ Each specialized agent operates independently, then the coordinator aggregates o
 
 **No timeout strategy** leaves hung agents blocking progress. Set explicit timeout expectations:
 
-```bash
-/spawn agent-with-timeout: Process this file, fail if not complete in 60 seconds
+Include explicit timeout instructions in your subagent prompts:
+
+```
+Process this file. If you cannot complete within 60 seconds, report failure and stop.
 ```
 
 ## Skill Recommendations for Coordination

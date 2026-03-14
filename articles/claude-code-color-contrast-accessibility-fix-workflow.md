@@ -24,12 +24,7 @@ The challenge lies not just in detecting issues, but in systematically fixing th
 
 Before starting, ensure you have the necessary Claude Code skills installed. The [**frontend-design** skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) includes accessibility-aware component generation, while [**tdd**](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write tests that validate contrast requirements.
 
-```bash
-# Verify installed skills
-claude code skills list | grep -E "frontend|tdd|accessibility"
-```
-
-If these skills are not installed, download the `.md` files from community GitHub repositories and place them in `~/.claude/skills/`. There is no official marketplace.
+Check your `~/.claude/skills/` directory to verify these skills are present. If they are not installed, download the `.md` files from community GitHub repositories and place them in `~/.claude/skills/`. There is no official marketplace.
 
 ## Step 1: Scan Your Project for Contrast Issues
 
