@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Vibe Coding Testing Strategy: How to Test AI-Generated Code"
-description: "A practical testing strategy for vibe coding workflows. Learn how to validate AI-generated code with unit tests, integration tests, and Claude skills like tdd and supermemory."
+description: "A practical testing strategy for vibe coding workflows. Learn how to validate AI-generated code with unit tests, integration tests, and Claude skills."
 date: 2026-03-14
 categories: [testing, vibe-coding, ai-development]
 tags: [vibe-coding, testing-strategy, ai-code, claude-code, unit-testing, tdd]
@@ -162,5 +162,12 @@ This approach lets you move fast while maintaining confidence in critical functi
 Testing AI-generated code requires infrastructure rather than manual review. Build your test pyramid early, use property-based testing for edge cases, and automate regression detection. Leverage Claude skills like **tdd** and **supermemory** to structure your testing workflow. Focus verification effort on high-risk areas while maintaining lightweight checks across your entire codebase.
 
 The goal is confidence at speed—verifying AI code works without slowing down the vibe coding flow that makes AI-assisted development powerful.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -2,10 +2,11 @@
 
 layout: default
 title: "Using Claude Code to Learn New Programming Languages"
-description: "Discover how Claude Code can accelerate your programming language learning through interactive coding assistance, real-time feedback, and skill-guided workflows."
+description: "Discover how Claude Code can accelerate your programming language learning through interactive coding assistance, real-time feedback, and skill-guided."
 date: 2026-03-14
 author: theluckystrike
 permalink: /using-claude-code-to-learn-new-programming-languages/
+categories: [guides]
 ---
 
 # Using Claude Code to Learn New Programming Languages
@@ -99,5 +100,12 @@ Set clear learning milestones: basic syntax within the first week, simple projec
 The ultimate goal is fluency—the ability to think in the language, not just translate from your native tongue. Claude accelerates this by constantly exposing you to idiomatic patterns, helping you internalize how experienced developers in that language approach problems. Over time, you'll find yourself writing code that looks less like translated Python and more like natural Go, Rust, or whatever language you've chosen.
 
 Start with a small project in your target language, invite Claude to work alongside you, and treat every line of code as a learning opportunity. The combination of practical application and instant feedback makes language acquisition faster and more enjoyable than traditional study methods.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
