@@ -86,7 +86,7 @@ When this skill is active, Claude can only use `Read`, `Write`, and `Bash` — e
 
 By default, Claude Code enforces a **project root boundary**. The `Read` and `Write` tools resolve paths relative to the project root, and path traversal outside it (`../../../etc/passwd`) is blocked at the tool level.
 
-The `Bash` tool has no such restriction by default — a bash command can access any file the current user can access. This is the most common source of unintended data access.
+The `Bash` tool has no such restriction by default — a bash command can access any file the current user can access. This is the most common source of unintended data access. For a practical guide to [limiting what a skill can access on disk](/claude-skills-guide/how-do-i-limit-what-a-claude-skill-can-access-on-disk/), see the dedicated article.
 
 ### Hardening Bash Tool Access
 
@@ -155,6 +155,8 @@ Best practices:
 - Use separate AWS IAM roles with minimal permissions for AI-assisted sessions
 - Never set production API keys in your development shell; use short-lived credential providers
 - Add `.env` files to your project's `.gitignore` — Claude's `Write` tool will not exclude them by default
+
+You can also configure [disallowed tools to block entire categories of risky operations](/claude-skills-guide/claude-code-disallowedtools-security-configuration/) at the session level.
 
 ## Skill-Based Access Control
 
