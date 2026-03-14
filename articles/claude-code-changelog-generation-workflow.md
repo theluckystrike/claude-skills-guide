@@ -141,6 +141,65 @@ Review generated changelogs before publishing. Claude Code excels at parsing and
 
 Beyond basic generation, customize your workflow to match team preferences. Add emoji prefixes for visual scanning, include commit author credits, or prepend a summary paragraph explaining the release's main focus.
 
+## Customizing Output Formats
+
+Different teams require different changelog formats. Your skill can output markdown, plain text, JSON, or HTML depending on your distribution channel:
+
+```yaml
+output_formats:
+  markdown:
+    template: "changelog-template.md"
+    include_toc: true
+  html:
+    styling: "github-style"
+    include_anchors: true
+  json:
+    schema: "keepachangelog"
+    pretty_print: true
+```
+
+The `docx` skill becomes valuable when generating polished Microsoft Word documents for stakeholders who need formatted release notes with corporate branding.
+
+## Version Tag Strategies
+
+Effective changelog generation relies on proper version tagging. Adopt a consistent tagging strategy that Claude Code can parse reliably:
+
+```bash
+# Create annotated tags for releases
+git tag -a v1.3.0 -m "Release version 1.3.0"
+
+# Lightweight tags for beta releases
+git tag v1.3.0-beta.1
+```
+
+Annotated tags carry metadata that enriches your changelog, including the tagger, date, and message. Configure your skill to prefer annotated tags when available.
+
+## Automating Pre-release Validation
+
+Before publishing, validate your changelog for completeness. Add checks that ensure:
+
+- No empty sections (features without entries)
+- All referenced issues and PRs are closed
+- Breaking changes include migration notes
+- Minimum change threshold is met
+
+```yaml
+validation:
+  require_migration_for_breaking: true
+  min_changes_for_release: 1
+  check_issue_status: true
+```
+
+The `tdd` skill integrates here by running your test suite and including pass/fail status in release notes, providing confidence that shipped code works as expected.
+
+## Measuring Workflow Success
+
+Track changelog automation effectiveness through metrics:
+
+- Time saved per release cycle
+- Consistency scores across releases
+- User feedback on changelog readability
+
 The key advantage: what previously required hours of manual compilation now takes seconds. Your changelog accuracy improves because Claude Code consistently applies your team's conventions across every release.
 
 ---
