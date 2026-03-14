@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "How to Coordinate Multiple AI Agents in Pipeline"
 description: "Learn how to coordinate multiple AI agents in pipeline workflows using Claude Code. Discover practical techniques, best practices, and real-world examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-coordinate-multiple-ai-agents-in-pipeline/
 categories: [guides]
-tags: [claude-code, multi-agent, pipeline, coordination]
+tags: [claude-code, multi-agent, pipeline, coordination, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # How to Coordinate Multiple AI Agents in Pipeline
 
@@ -174,7 +178,7 @@ Integrate logging at each stage to track pipeline health. Claude Code can write 
 
 ## Conclusion
 
-Coordinating multiple AI agents in pipeline workflows unlocks powerful automation capabilities. By leveraging Claude Code's context management, tool usage, and checkpoint features, you can build robust pipelines that handle complex multi-stage workflows reliably. Start with simple sequential patterns and gradually incorporate parallel execution and advanced coordination as your needs evolve.
+Coordinating multiple AI agents in pipeline workflows unlocks powerful automation capabilities. By using Claude Code's context management, tool usage, and checkpoint features, you can build robust pipelines that handle complex multi-stage workflows reliably. Start with simple sequential patterns and gradually incorporate parallel execution and advanced coordination as your needs evolve.
 
 The key is treating each pipeline stage as a focused, specialized agent that does one thing well, with clear interfaces for communication between stages. This separation of concerns makes pipelines easier to debug, maintain, and extend over time.
 

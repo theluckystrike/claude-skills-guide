@@ -1,18 +1,22 @@
 ---
+
 layout: default
 title: "Claude Code with GitHub Models for Cost-Efficient Pipelines"
 description: "Learn how to combine Claude Code with GitHub's cost-efficient AI models to build powerful yet affordable development automation pipelines."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, github-models, cost-efficiency, pipelines, automation, ai-coding]
-author: theluckystrike
+tags: [claude-code, github-models, cost-efficiency, pipelines, automation, ai-coding, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-with-github-models-for-cost-efficient-pipelines/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code with GitHub Models for Cost-Efficient Pipelines
 
-Building AI-powered development pipelines doesn't have to break the bank. By combining Claude Code's sophisticated agentic capabilities with GitHub's cost-efficient models, you can create powerful automation workflows that handle complex coding tasks while keeping your API spend predictable and manageable. This hybrid approach leverages Claude Code's superior reasoning and tool-use for high-value tasks while delegating simpler operations to more economical alternatives.
+Building AI-powered development pipelines doesn't have to break the bank. By combining Claude Code's sophisticated agentic capabilities with GitHub's cost-efficient models, you can create powerful automation workflows that handle complex coding tasks while keeping your API spend predictable and manageable. This hybrid approach uses Claude Code's superior reasoning and tool-use for high-value tasks while delegating simpler operations to more economical alternatives.
 
 ## Understanding the Cost Efficiency Proposition
 

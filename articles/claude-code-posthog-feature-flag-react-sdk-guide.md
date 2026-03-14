@@ -1,17 +1,22 @@
 ---
+
 layout: default
 title: "Claude Code PostHog Feature Flag React SDK Guide"
 description: "Learn how to use Claude Code to build, test, and integrate PostHog feature flags in React applications. Practical examples for modern feature management."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
-tags: [claude-code, posthog, feature-flags, react, sdk]
+tags: [claude-code, posthog, feature-flags, react, sdk, claude-skills]
 permalink: /claude-code-posthog-feature-flag-react-sdk-guide/
+reviewed: true
+score: 7
 ---
+{% raw %}
+
 
 # Claude Code PostHog Feature Flag React SDK Guide
 
-Feature flags have become an essential part of modern software development, enabling teams to ship features incrementally, run A/B tests, and control feature rollouts without deploying new code. PostHog provides a powerful feature flag system, and when combined with React applications, it offers seamless user experience control. This guide shows you how to leverage Claude Code to work efficiently with PostHog feature flags in your React projects.
+Feature flags have become an essential part of modern software development, enabling teams to ship features incrementally, run A/B tests, and control feature rollouts without deploying new code. PostHog provides a powerful feature flag system, and when combined with React applications, it offers seamless user experience control. This guide shows you how to use Claude Code to work efficiently with PostHog feature flags in your React projects.
 
 ## Setting Up PostHog in Your React Project
 
@@ -180,7 +185,7 @@ test('shows fallback when flag is disabled', () => {
 
 ## Integrating with Claude Code Workflows
 
-Claude Code can significantly accelerate your feature flag workflows. Here are some practical ways to leverage it:
+Claude Code can significantly accelerate your feature flag workflows. Here are some practical ways to use it:
 
 **1. Generate Flag Configurations**
 Describe your desired rollout strategy, and Claude will create the appropriate PostHog API payload or dashboard configuration.
@@ -233,4 +238,4 @@ The key is to keep your implementation clean, test thoroughly, and remove flags 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
+{% endraw %}

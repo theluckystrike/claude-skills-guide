@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code OpenAPI Specification Generation Workflow"
 description: "A practical workflow for generating OpenAPI specifications using Claude Code. Step-by-step guide with code examples for API developers."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-openapi-specification-generation-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code OpenAPI Specification Generation Workflow
 
@@ -185,7 +190,7 @@ Run this script during your build process to keep specifications synchronized wi
 
 ## Best Practices
 
-Keep your generated specs maintainable by organizing endpoints logically, using consistent naming conventions, and leveraging components/schemas for repeated definitions. Review generated specs manually—Claude Code produces accurate output, but domain-specific knowledge sometimes requires fine-tuning.
+Keep your generated specs maintainable by organizing endpoints logically, using consistent naming conventions, and using components/schemas for repeated definitions. Review generated specs manually—Claude Code produces accurate output, but domain-specific knowledge sometimes requires fine-tuning.
 
 For teams adopting API-first development, consider using the frontend-design skill alongside OpenAPI generation. Generate your specification first, then use it to scaffold frontend API clients, ensuring type safety across your entire application.
 

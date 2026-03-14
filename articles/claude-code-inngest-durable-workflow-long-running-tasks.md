@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Inngest Durable Workflow for Long Running Tasks"
 description: "Learn how to combine Claude Code with Inngest to build robust durable workflows for long-running tasks. Practical examples and best practices for."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-inngest-durable-workflow-long-running-tasks/
 categories: [guides]
-tags: [claude-code, inngest, durable-workflow, long-running-tasks]
+tags: [claude-code, inngest, durable-workflow, long-running-tasks, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Inngest Durable Workflow for Long Running Tasks
 
@@ -22,7 +26,7 @@ Traditional request-response HTTP patterns work well for quick operations, but m
 - **Automatic retries**: Failed steps can be automatically retried with configurable policies
 - **Visibility**: You can track workflow status and debug issues
 
-Inngest is a developer-friendly durable workflow platform that integrates seamlessly with your existing codebase. It handles the complexity of state management, allowing you to write business logic without worrying about infrastructure.
+Inngest is a developer-friendly durable workflow platform that integrates smoothly with your existing codebase. It handles the complexity of state management, allowing you to write business logic without worrying about infrastructure.
 
 ## Why Combine Claude Code with Inngest?
 
@@ -239,7 +243,7 @@ Inngest provides a dashboard to monitor workflow execution. Combine this with Cl
 
 Combining Claude Code with Inngest gives you a powerful toolkit for building reliable long-running task systems. Inngest handles the complexity of durable execution, while Claude Code assists with design, implementation, and debugging. Start with simple workflows and progressively adopt more advanced patterns as your needs grow.
 
-The key is to leverage Claude Code's strengths—understanding intent, generating code, and explaining patterns—while letting Inngest handle the heavy lifting of workflow state management. Together, they make building robust, long-running task systems accessible to developers at any level.
+The key is to use Claude Code's strengths—understanding intent, generating code, and explaining patterns—while letting Inngest handle the heavy lifting of workflow state management. Together, they make building robust, long-running task systems accessible to developers at any level.
 
 ## Related Reading
 

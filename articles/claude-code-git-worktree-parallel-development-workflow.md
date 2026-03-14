@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Git Worktree Parallel Development Workflow"
 description: "Learn how to leverage Git worktree for parallel development with Claude Code. Manage multiple features, hotfixes, and experiments simultaneously."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-git-worktree-parallel-development-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code Git Worktree Parallel Development Workflow
 
@@ -149,7 +154,7 @@ git worktree remove --force ../project-abandoned-feature
 
 ## Integrating with Claude Skills
 
-Different worktrees can leverage specialized Claude skills for domain-specific tasks. The frontend-design skill shines when working on UI components:
+Different worktrees can use specialized Claude skills for domain-specific tasks. The frontend-design skill shines when working on UI components:
 
 ```bash
 git worktree add ../project-new-ui feature/redesign

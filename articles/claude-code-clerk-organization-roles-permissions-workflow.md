@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Clerk: Organization Roles, Permissions, and Workflow"
 description: "Master the clerk workflow in Claude Code. Learn how to manage organization roles, configure permissions, and build efficient approval workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-clerk-organization-roles-permissions-workflow/
+reviewed: true
+score: 7
+categories: [workflows]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Claude Code Clerk: Organization Roles, Permissions, and Workflow
