@@ -49,7 +49,7 @@ Run the server with `uvicorn main:app --reload` and access the interactive docs 
 
 ## Using Claude Code for FastAPI Development
 
-When working on FastAPI projects, you can enhance your workflow using Claude skills designed for development tasks. The **pdf** skill helps generate API documentation, while **tdd** assists in building testable async endpoints.
+When working on FastAPI projects, you can enhance your workflow using Claude skills designed for development tasks. The **pdf** skill helps generate API documentation, while the [tdd skill assists in building testable async endpoints](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/).
 
 Invoke the tdd skill before writing new endpoint logic:
 
@@ -123,7 +123,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
 ## Testing Async Endpoints
 
-The **tdd** skill proves invaluable when building async test suites. Structure your tests using pytest with pytest-asyncio:
+The **tdd** skill proves invaluable when building async test suites. For a deeper look at pytest patterns that complement this, see the [Claude Code pytest fixtures patterns guide](/claude-skills-guide/claude-code-pytest-fixtures-patterns-guide/). Structure your tests using pytest with pytest-asyncio:
 
 ```python
 import pytest
@@ -195,7 +195,7 @@ project/
 └── requirements.txt
 ```
 
-The **frontend-design** skill can help you build complementary frontend interfaces that consume your FastAPI backend, creating a complete full-stack solution.
+The [frontend-design skill can help you build complementary frontend interfaces](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) that consume your FastAPI backend, creating a complete full-stack solution.
 
 ## Error Handling and Exception Management
 
@@ -297,5 +297,12 @@ async def log_requests(request: Request, call_next):
 FastAPI provides excellent support for async Python development, and Claude Code accelerates your workflow through intelligent skill assistance. By combining proper async patterns with Claude skills like tdd for test-driven development and pdf for documentation, you can build production-ready APIs efficiently.
 
 Remember to use FastAPI's automatic documentation, implement proper error handling, and test thoroughly with async test clients. Your async Python APIs will be performant, maintainable, and well-documented.
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to write async endpoint tests before implementing FastAPI routes
+- [Claude Code Pytest Fixtures Patterns Guide](/claude-skills-guide/claude-code-pytest-fixtures-patterns-guide/) — Build async-compatible fixtures for your FastAPI test suite
+- [Claude Code Hypothesis Property Testing Guide](/claude-skills-guide/claude-code-hypothesis-property-testing-guide/) — Apply property-based testing to validate FastAPI request/response contracts
+- [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more Claude Code use cases for backend API development
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

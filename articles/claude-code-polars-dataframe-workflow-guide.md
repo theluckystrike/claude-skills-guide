@@ -13,7 +13,7 @@ permalink: /claude-code-polars-dataframe-workflow-guide/
 
 # Claude Code Polars DataFrame Workflow Guide
 
-[Polars has become the go-to library for data manipulation in Python](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), offering blazing-fast performance through Rust-based execution. When combined with Claude Code's AI assistance, you can build reliable data pipelines that handle millions of rows without breaking a sweat. This guide shows you how to use Claude Code for Polars workflows, whether you're cleaning messy datasets or building complex transformation chains.
+Polars has become the go-to library for data manipulation in Python, offering blazing-fast performance through Rust-based execution. When combined with [Claude Code's data science skills](/claude-skills-guide/best-claude-skills-for-data-analysis/), you can build reliable data pipelines that handle millions of rows without breaking a sweat. This guide shows you how to use Claude Code for Polars workflows, whether you're cleaning messy datasets or building complex transformation chains.
 
 ## Setting Up Your Polars Environment
 
@@ -23,7 +23,7 @@ Before diving into workflows, ensure your environment is ready. Claude Code work
 uv pip install polars pandas pyarrow
 ```
 
-[The pyarrow dependency enables direct interoperability between Polars and other data formats](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) you might encounter. Once installed, you can import Polars and start working with DataFrames immediately.
+The pyarrow dependency enables direct interoperability between Polars and other data formats you might encounter. Once installed, you can import Polars and start working with DataFrames immediately. For a broader overview of how [data scientists use Claude Code for analysis workflows](/claude-skills-guide/how-data-scientists-use-claude-code-for-analysis/), see the dedicated guide.
 
 Claude can help you troubleshoot installation issues or optimize your environment. Simply describe your setup and any errors you're encountering, and Claude will guide you through resolution.
 
@@ -148,7 +148,7 @@ for batch in result.iter_slices(n_rows=1000):
 
 ## Integrating Claude Skills into Your Workflow
 
-Several Claude skills enhance Polars workflows. The **xlsx skill** helps when you need to read or write Excel files as part of your pipeline. The **pdf skill** assists when extracting tabular data from PDF reports. For testing, the **tdd skill** provides guidance on writing unit tests for your transformation functions.
+Several Claude skills enhance Polars workflows. The **xlsx skill** helps when you need to read or write Excel files as part of your pipeline. The **pdf skill** assists when extracting tabular data from PDF reports. For testing, the **tdd skill** provides guidance on writing unit tests for your transformation functions. Pair Polars with [Jupyter notebook workflows for interactive data exploration](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/).
 
 If you're working with documentation, the **docx skill** can parse Word documents containing data specifications. The **supermemory skill** helps you recall previous pipeline configurations and troubleshooting steps across projects.
 

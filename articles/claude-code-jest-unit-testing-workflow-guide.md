@@ -13,7 +13,7 @@ permalink: /claude-code-jest-unit-testing-workflow-guide/
 
 # Claude Code Jest Unit Testing Workflow Guide
 
-Integrating Claude Code into your Jest testing workflow transforms how you write, maintain, and debug unit tests. This guide walks you through practical strategies for leveraging Claude's capabilities alongside Jest, whether you're working with JavaScript, TypeScript, or Node.js projects.
+Integrating Claude Code into your Jest testing workflow transforms how you write, maintain, and debug unit tests. This guide walks you through practical strategies for leveraging Claude's capabilities alongside Jest, whether you're working with JavaScript, TypeScript, or Node.js projects. For a broader look at test-driven development with Claude Code, see the [Claude TDD skill guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/).
 
 ## Setting Up Jest with Claude Code
 
@@ -126,7 +126,7 @@ describe('formatUserDisplay', () => {
 
 ## Using the TDD Skill for Test-First Development
 
-The **tdd** skill enhances your test-first workflow by guiding you through the red-green-refactor cycle. Activate it in your Claude Code session when you want to practice test-driven development:
+The **tdd** skill enhances your test-first workflow by guiding you through the red-green-refactor cycle. For component-level testing to complement your Jest unit tests, see the [Claude Code Cypress component testing guide](/claude-skills-guide/claude-code-cypress-component-testing-guide/). Activate it in your Claude Code session when you want to practice test-driven development:
 
 ```
 /tdd
@@ -235,5 +235,12 @@ Claude Code can help you set up automated test runs on pull requests by generati
 ## Key Takeaways
 
 Integrating Claude Code with Jest creates a powerful testing workflow. Write clear, specific requests when asking Claude to generate tests. Use the tdd skill for test-first development. Leverage Jest's mocking capabilities for isolated unit tests. Organize tests using describe blocks that mirror your code structure. Run tests in CI to catch regressions early.
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to enforce red-green-refactor discipline when generating Jest tests
+- [Claude Code Cypress Component Testing Guide](/claude-skills-guide/claude-code-cypress-component-testing-guide/) — Extend your Jest unit tests with Cypress component tests for integration-level coverage
+- [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-skills-guide/claude-code-jest-to-vitest-migration-workflow-tutorial/) — Migrate your Jest test suite to Vitest with Claude Code assistance
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Browse more Claude Code workflows for testing, automation, and CI integration
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

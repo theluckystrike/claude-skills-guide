@@ -17,7 +17,7 @@ When deploying MCP servers in production, security testing becomes essential. Th
 
 ## Why MCP Servers Need Security Testing
 
-MCP servers act as bridges between Claude Code and external systems. A misconfigured server can expose sensitive data, allow unauthorized access, or enable privilege escalation. Unlike traditional web applications, MCP servers expose tool-based interfaces that require specialized testing approaches.
+MCP servers act as bridges between Claude Code and external systems. A misconfigured server can expose sensitive data, allow unauthorized access, or enable privilege escalation. Unlike traditional web applications, MCP servers expose tool-based interfaces that require specialized testing approaches. For an introduction to MCP server setup before testing, see the [Claude Code MCP server setup complete guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/).
 
 The attack surface differs from typical APIs. Instead of HTTP endpoints, you're testing stdio connections, SSE streams, and the tool invocation patterns that Claude Code uses. Understanding these patterns helps you design effective tests.
 
@@ -57,7 +57,7 @@ malicious_payload = {
 }
 ```
 
-If your server passes these inputs directly to database queries or shell commands without sanitization, you have critical vulnerabilities. The tdd skill emphasizes writing validation tests—apply the same mindset to security testing.
+If your server passes these inputs directly to database queries or shell commands without sanitization, you have critical vulnerabilities. The [tdd skill emphasizes writing validation tests](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)—apply the same mindset to security testing.
 
 ## Authorization and Privilege Escalation
 
@@ -145,5 +145,12 @@ Regular penetration testing of your MCP servers protects both your infrastructur
 Build security testing into your development lifecycle using the skills and workflows available in the Claude Code ecosystem. The automation patterns you create will pay dividends in reduced vulnerabilities and faster remediation.
 
 ---
+
+## Related Reading
+
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — Understand the MCP server architecture you'll be testing before designing your penetration test plan
+- [Claude Code for Dependency Audit Automation](/claude-skills-guide/claude-code-for-dependency-audit-automation/) — Extend your security posture with automated dependency vulnerability scanning alongside MCP testing
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Apply TDD discipline to security test writing for more reliable vulnerability detection
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Diagnose unexpected MCP server behaviors that may indicate security misconfigurations
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

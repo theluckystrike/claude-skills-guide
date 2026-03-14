@@ -65,7 +65,7 @@ Install Hypothesis in your project:
 pip install hypothesis pytest
 ```
 
-The claude-tdd skill works well alongside Hypothesis for generating both traditional unit tests and property-based tests. Load both skills when working on test coverage:
+The [claude-tdd skill works well alongside Hypothesis](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) for generating both traditional unit tests and property-based tests. Load both skills when working on test coverage:
 
 ```bash
 claude skills load claude-tdd hypothesis-testing
@@ -120,7 +120,7 @@ The idempotence test catches bugs where repeated conversions produce incorrect o
 
 ## Testing API Contracts with Hypothesis
 
-When working with external APIs, you can use Hypothesis to generate valid request payloads and verify responses meet expected contracts. This is particularly useful when the supermemory skill stores API response patterns for regression testing:
+When working with external APIs, you can use Hypothesis to generate valid request payloads and verify responses meet expected contracts. This is particularly useful when the [supermemory skill stores API response patterns](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) for regression testing:
 
 ```python
 from hypothesis import given, settings, st
@@ -230,5 +230,12 @@ def test_performance_invariant(items):
 Use the pdf skill to generate test documentation automatically, or combine with the tdd skill for comprehensive test suites. When you refactor code, Hypothesis tests catch regressions that traditional tests miss because they exercise far more input combinations.
 
 Property-based testing adds a layer of confidence that your code works not just for the cases you thought of, but for the infinite possibilities real users will encounter. Combined with Claude Code's ability to generate these tests automatically, you have a powerful defensive coding strategy that scales with your project complexity.
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Combine property-based testing with the tdd skill for comprehensive test-first coverage
+- [Claude Code Pytest Fixtures Patterns Guide](/claude-skills-guide/claude-code-pytest-fixtures-patterns-guide/) — Build efficient fixture infrastructure to support Hypothesis test strategies
+- [Claude Code Cypress Component Testing Guide](/claude-skills-guide/claude-code-cypress-component-testing-guide/) — Extend your testing strategy to frontend components alongside Python property tests
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Discover more Claude Code automation workflows for testing and quality assurance
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

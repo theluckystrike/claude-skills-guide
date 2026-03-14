@@ -26,7 +26,8 @@ This hub maps every common Claude Code skill error to its cause and fix, then po
 5. [Performance Issues](#performance-issues)
 6. [Context Window Errors](#context-window-errors)
 7. [Output and State Issues](#output-and-state-issues)
-8. [Full Troubleshooting Article Index](#full-troubleshooting-article-index)
+8. [General Code Quality and Behavioral Issues](#general-code-quality-and-behavioral-issues)
+9. [Full Troubleshooting Article Index](#full-troubleshooting-article-index)
 
 ---
 
@@ -155,6 +156,34 @@ The most effective prevention strategies:
 
 ---
 
+## General Code Quality and Behavioral Issues
+
+A second category of troubleshooting covers cases where Claude Code runs fine from a technical standpoint but produces incorrect or problematic output: wrong imports, insecure code, files in the wrong directory, missed error handling, or output in the wrong programming language.
+
+These issues are usually caused by insufficient context in the skill body or CLAUDE.md, or by sessions where Claude has lost track of project conventions due to context overflow. The fixes involve tightening skill instructions, adding explicit constraints in CLAUDE.md, and keeping sessions short enough to maintain context coherence.
+
+**Environment and connection errors:**
+- [Claude Code Error: Connection Timeout During Task Fix](/claude-skills-guide/claude-code-error-connection-timeout-during-task-fix/) — Handling connection timeouts in long-running skill sessions
+- [Claude Code Error: Invalid API Key Troubleshoot Guide](/claude-skills-guide/claude-code-error-invalid-api-key-troubleshoot-guide/) — Resolving invalid API key errors in Claude Code
+- [Claude Code Error: npm install Fails in Skill Workflow](/claude-skills-guide/claude-code-error-npm-install-fails-in-skill-workflow/) — Diagnosing and fixing npm install failures in Claude skill execution
+- [Claude Code Error: Out of Memory for Large Codebase Fix](/claude-skills-guide/claude-code-error-out-of-memory-large-codebase-fix/) — Fixing OOM errors when working with very large codebases
+- [Claude Code Verbose Mode Debugging Tips](/claude-skills-guide/claude-code-verbose-mode-debugging-tips/) — Using verbose mode to surface hidden problems in skill sessions
+
+**Output correctness issues:**
+- [Claude Code Creates Files in Wrong Directory Fix](/claude-skills-guide/claude-code-creates-files-in-wrong-directory-fix/) — Specifying output directories explicitly to prevent misplaced files
+- [Claude Code Generates Insecure Code Patterns Fix](/claude-skills-guide/claude-code-generates-insecure-code-patterns-fix/) — Preventing Claude from generating insecure code patterns
+- [Claude Code Gives Incorrect Imports: How to Fix](/claude-skills-guide/claude-code-gives-incorrect-imports-how-to-fix/) — Correcting wrong import statements in Claude Code output
+- [Claude Code Ignores CLAUDE.md Instructions Fix](/claude-skills-guide/claude-code-ignores-claude-md-instructions-fix/) — Why Claude Code sometimes ignores CLAUDE.md and how to fix it
+- [Claude Code Skips Error Handling in Generated Code](/claude-skills-guide/claude-code-skips-error-handling-in-generated-code/) — Enforcing error handling in every Claude Code output
+- [Claude Code Writes Code in Wrong Programming Language](/claude-skills-guide/claude-code-writes-code-in-wrong-programming-language/) — Preventing language confusion in multi-language projects
+- [How to Make Claude Code Make Smaller Focused Changes](/claude-skills-guide/how-to-make-claude-code-make-smaller-focused-changes/) — Constraining Claude Code to produce scoped, reviewable diffs
+
+**Advanced diagnostics:**
+- [Segfault and Core Dump Analysis with Claude Code Guide](/claude-skills-guide/claude-code-segfault-core-dump-analysis-workflow-guide/) — Diagnosing native crashes and memory corruption with Claude
+- [Claude Code Skill Conflicts with MCP Server Resolution Guide](/claude-skills-guide/claude-code-skill-conflicts-with-mcp-server-resolution-guide/) — Resolving conflicts between skills and MCP server tool definitions
+
+---
+
 ## Full Troubleshooting Article Index
 
 | Article | What You'll Learn |
@@ -195,6 +224,20 @@ The most effective prevention strategies:
 | [Why Does Claude Skill Auto Invocation Fail Intermittently?](/claude-skills-guide/why-does-claude-skill-auto-invocation-fail-intermittently/) | Fix intermittent auto-invocation failures in Claude skills |
 | [Why Does Claude Skill Produce Different Output Each Run](/claude-skills-guide/why-does-claude-skill-produce-different-output-each-run/) | Understand output variance and how to enforce determinism |
 | [Why Does My Claude Skill Work Locally But Fail in CI?](/claude-skills-guide/why-does-my-claude-skill-work-locally-but-fail-in-ci/) | Environment differences that cause local-to-CI skill failures |
+| [Claude Code Creates Files in Wrong Directory Fix](/claude-skills-guide/claude-code-creates-files-in-wrong-directory-fix/) | Specifying output directories to prevent misplaced file generation |
+| [Claude Code Error: Connection Timeout During Task Fix](/claude-skills-guide/claude-code-error-connection-timeout-during-task-fix/) | Handling connection timeouts in long-running skill sessions |
+| [Claude Code Error: Invalid API Key Troubleshoot Guide](/claude-skills-guide/claude-code-error-invalid-api-key-troubleshoot-guide/) | Resolving invalid API key authentication errors |
+| [Fixing Claude Code npm install Errors in Skill Workflows](/claude-skills-guide/claude-code-error-npm-install-fails-in-skill-workflow/) | Diagnosing npm install failures inside Claude skill execution |
+| [Claude Code Error: Out of Memory for Large Codebase Fix](/claude-skills-guide/claude-code-error-out-of-memory-large-codebase-fix/) | Fixing OOM errors when working with very large codebases |
+| [Claude Code Generates Insecure Code Patterns Fix](/claude-skills-guide/claude-code-generates-insecure-code-patterns-fix/) | Preventing Claude from generating insecure code patterns |
+| [Claude Code Gives Incorrect Imports: How to Fix](/claude-skills-guide/claude-code-gives-incorrect-imports-how-to-fix/) | Correcting wrong import statements in generated code |
+| [Claude Code Ignores CLAUDE.md Instructions Fix](/claude-skills-guide/claude-code-ignores-claude-md-instructions-fix/) | Why Claude Code sometimes skips CLAUDE.md and how to fix it |
+| [Segfault and Core Dump Analysis with Claude Code Guide](/claude-skills-guide/claude-code-segfault-core-dump-analysis-workflow-guide/) | Diagnosing native crashes and memory corruption with Claude |
+| [Claude Code Skill Conflicts with MCP Server Resolution Guide](/claude-skills-guide/claude-code-skill-conflicts-with-mcp-server-resolution-guide/) | Resolving conflicts between skill definitions and MCP server tools |
+| [Claude Code Skips Error Handling in Generated Code](/claude-skills-guide/claude-code-skips-error-handling-in-generated-code/) | Enforcing error handling in every Claude Code output |
+| [Claude Code Verbose Mode Debugging Tips](/claude-skills-guide/claude-code-verbose-mode-debugging-tips/) | Using verbose mode to surface hidden problems in skill sessions |
+| [Claude Code Writes Code in Wrong Programming Language](/claude-skills-guide/claude-code-writes-code-in-wrong-programming-language/) | Preventing language confusion in multi-language projects |
+| [How to Make Claude Code Make Smaller Focused Changes](/claude-skills-guide/how-to-make-claude-code-make-smaller-focused-changes/) | Constraining Claude Code to produce scoped, reviewable diffs |
 
 ---
 

@@ -21,12 +21,15 @@ This hub covers every major integration category, with a practical breakdown of 
 
 1. [CI/CD and Version Control](#cicd-and-version-control)
 2. [Automation Platforms](#automation-platforms)
-3. [Project Management](#project-management)
+3. [Project Management and CRM](#project-management-and-crm)
 4. [Backend and Databases](#backend-and-databases)
-5. [Communication](#communication)
+5. [Communication and Email](#communication-and-email)
 6. [Cloud Platforms](#cloud-platforms)
-7. [Integration Quick-Reference Table](#integration-quick-reference-table)
-8. [Full Article Index](#full-article-index)
+7. [Monitoring and Observability](#monitoring-and-observability)
+8. [Web Automation and Research](#web-automation-and-research)
+9. [Content and Publishing](#content-and-publishing)
+10. [Integration Quick-Reference Table](#integration-quick-reference-table)
+11. [Full Article Index](#full-article-index)
 
 ---
 
@@ -73,9 +76,9 @@ Because n8n is self-hosted, you can inject full skill context without worrying a
 
 ---
 
-## Project Management
+## Project Management and CRM
 
-Connecting Claude skills to project management tools closes the loop between where work is tracked and where AI assistance is most useful. The two primary integration targets in the developer ecosystem are Notion and Linear.
+Connecting Claude skills to project management and CRM tools closes the loop between where work is tracked and where AI assistance is most useful. The primary integration targets in the developer ecosystem are Notion, Linear, Jira, and ClickUp.
 
 **Notion** has a rich API that allows Claude skills to read and write pages, databases, and blocks. Practical use cases:
 
@@ -85,8 +88,14 @@ Connecting Claude skills to project management tools closes the loop between whe
 
 **Linear** is where engineering teams track issues and sprints. Claude skills can connect to the Linear API to triage new issues, generate ticket descriptions from Slack messages, estimate complexity, and keep sprint boards updated based on code activity. The combination of GitHub Actions + Linear + Claude creates a nearly automated issue lifecycle for active projects.
 
+**Jira** remains the dominant issue tracker in enterprise environments. The Jira MCP server gives Claude read and write access to Jira projects, enabling ticket creation, status updates, and sprint management from within Claude Code sessions.
+
+**ClickUp** offers a flexible project management API. Claude skills can create tasks, update statuses, generate summaries of in-progress work, and connect sprint data to code activity through the ClickUp MCP server.
+
 - [How to Integrate Claude Skills with Notion API Guide](/claude-skills-guide/how-to-integrate-claude-skills-with-notion-api-guide/)
 - [Claude Skills with Linear Project Management Tutorial](/claude-skills-guide/claude-skills-with-linear-project-management-tutorial/)
+- [Jira MCP Server Claude Code Integration Guide](/claude-skills-guide/jira-mcp-server-claude-code-integration-guide/)
+- [ClickUp MCP Server: Workflow Automation Guide](/claude-skills-guide/clickup-mcp-server-workflow-automation-guide/)
 - [Claude Skills Daily Standup Automation Workflow](/claude-skills-guide/claude-skills-daily-standup-automation-workflow/)
 - [How to Automate Client Reports with Claude Skills](/claude-skills-guide/how-to-automate-client-reports-with-claude-skills/)
 
@@ -109,7 +118,7 @@ Claude skills become significantly more powerful when they can read from and wri
 
 ---
 
-## Communication
+## Communication and Email
 
 Slack is the primary communication integration for Claude skills in team environments. The pattern is bidirectional: Slack events (messages, reactions, mentions) can trigger Claude skill execution, and skill output can be posted back to Slack channels or DMs.
 
@@ -122,7 +131,16 @@ Useful Slack + Claude skill applications:
 
 The Slack integration requires a Slack app with the appropriate OAuth scopes. Claude Code communicates with Slack through the Events API or incoming webhooks, depending on whether the integration needs to read messages or only post them.
 
+**Email** is another high-value integration target. SendGrid connects Claude to transactional email infrastructure — Claude can generate email content, draft sequences, and trigger sends based on workflow events. The SendGrid MCP server makes this connection programmatic and auditable.
+
+**Customer communication platforms** like Intercom give Claude access to conversation history, user data, and support ticket context. Claude can classify incoming messages, draft responses, escalate issues, and maintain consistency across support interactions.
+
+**Video conferencing** integration via Zoom MCP server allows Claude to process meeting data: summarizing transcripts, extracting action items, and distributing meeting notes automatically after calls conclude.
+
 - [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-guide/claude-skills-with-slack-bot-integration-tutorial/)
+- [Claude Code Skills SendGrid Email Automation Setup](/claude-skills-guide/claude-code-skills-sendgrid-email-automation-setup/)
+- [Intercom MCP Server: Automating Customer Data Workflows](/claude-skills-guide/intercom-mcp-server-customer-data-automation/)
+- [Zoom MCP Server Meeting Summary Automation](/claude-skills-guide/zoom-mcp-server-meeting-summary-automation/)
 - [Claude Skills Email Drafting Automation Workflow](/claude-skills-guide/claude-skills-email-drafting-automation-workflow/)
 - [Claude Skills Competitive Analysis Automation Guide](/claude-skills-guide/claude-skills-competitive-analysis-automation-workflow/)
 
@@ -146,22 +164,74 @@ Major cloud platforms are integration targets for skills that manage infrastruct
 
 ---
 
+## Monitoring and Observability
+
+Monitoring integrations give Claude real-time visibility into production system health. Datadog is the most common observability platform in Claude Code integrations — its MCP server allows Claude to query metrics, read dashboards, and correlate error spikes with recent deployments.
+
+**Datadog** integration via MCP server enables Claude to:
+- Query metrics and alerts programmatically
+- Correlate error events with deployment timelines
+- Draft incident summaries with recommended next steps
+- Generate on-call runbooks from observed failure patterns
+
+**Trigger.dev** is a developer-first workflow automation platform that runs background jobs and event-driven workflows. Claude Code integrates with Trigger.dev to orchestrate multi-step automation pipelines that can spawn Claude skill invocations as job steps.
+
+- [Datadog MCP Server Monitoring Automation with Claude](/claude-skills-guide/datadog-mcp-server-monitoring-automation-claude/)
+- [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-skills-guide/claude-code-for-trigger-dev-workflow-automation-tutorial/)
+
+---
+
+## Web Automation and Research
+
+Web automation integrations give Claude the ability to browse, extract, and process web content at scale.
+
+**Firecrawl** is a web scraping and crawling API that returns clean Markdown from any URL. The Firecrawl MCP server connects Claude to this capability, enabling research automation where Claude requests pages, processes the extracted content, and synthesizes findings—without any browser automation code.
+
+**Tavily** provides a research-grade search API optimized for AI applications. Claude skills connected to Tavily can perform factual research, gather competitive intelligence, and retrieve up-to-date information without the hallucination risk of relying on training data alone.
+
+- [Firecrawl MCP Server: Web Scraping Automation with Claude](/claude-skills-guide/firecrawl-mcp-server-web-scraping-automation/)
+- [Tavily MCP Server: Research Automation Guide](/claude-skills-guide/tavily-mcp-server-research-automation-guide/)
+
+---
+
+## Content and Publishing
+
+Publishing platform integrations let Claude participate directly in the content creation and publishing workflow.
+
+**Ghost** is a popular open-source publishing platform with a well-documented API. The Ghost MCP server allows Claude to create posts, update content, manage tags, and trigger publish actions from within Claude Code workflows. Combined with a content generation skill, this creates an end-to-end automated blog pipeline: Claude generates the post, formats it for Ghost, and publishes it on a schedule.
+
+- [Ghost MCP Server: Blogging Automation Workflow](/claude-skills-guide/ghost-mcp-server-blogging-automation-workflow/)
+- [Automated Blog Workflow with Claude Skills](/claude-skills-guide/claude-skills-automated-blog-post-workflow-tutorial/)
+- [Claude Skills for SEO Content Generation: 2026 Guide](/claude-skills-guide/claude-skills-for-seo-content-generation-workflow/)
+
+---
+
 ## Integration Quick-Reference Table
 
 | Platform | What Claude Skills Can Do | Guide |
 |----------|--------------------------|-------|
 | GitHub Actions | PR review, issue triage, doc generation, test analysis | [Guide](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) |
-| GitLab CI | Code review jobs, pipeline analysis, deployment validation | [Guide](/claude-skills-guide/claude-code-azure-devops-integration-workflow-tutorial/) |
+| GitLab CI | Code review jobs, pipeline analysis, deployment validation | [Guide](/claude-skills-guide/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/) |
 | n8n | Multi-step automations with AI classification and generation | [Guide](/claude-skills-guide/how-to-use-claude-skills-with-n8n-automation-workflows/) |
 | Zapier | High-volume routing with AI summarization and classification | [Guide](/claude-skills-guide/claude-code-skills-zapier-integration-step-by-step/) |
 | Notion | Page generation, database updates, documentation automation | [Guide](/claude-skills-guide/how-to-integrate-claude-skills-with-notion-api-guide/) |
 | Linear | Issue triage, sprint planning, ticket generation | [Guide](/claude-skills-guide/claude-skills-with-linear-project-management-tutorial/) |
+| Jira | Ticket creation, status updates, sprint management | [Guide](/claude-skills-guide/jira-mcp-server-claude-code-integration-guide/) |
+| ClickUp | Task automation, sprint summaries, workflow management | [Guide](/claude-skills-guide/clickup-mcp-server-workflow-automation-guide/) |
 | Supabase | Read/write database records, trigger edge functions | [Guide](/claude-skills-guide/claude-skills-with-supabase-database-integration/) |
 | AWS Lambda | Invoke serverless compute, process results in context | [Guide](/claude-skills-guide/claude-skills-aws-lambda-serverless-integration/) |
 | Slack | Standup bots, PR summaries, support triage, alert summaries | [Guide](/claude-skills-guide/claude-skills-with-slack-bot-integration-tutorial/) |
+| SendGrid | Email generation, sequence automation, transactional sends | [Guide](/claude-skills-guide/claude-code-skills-sendgrid-email-automation-setup/) |
+| Intercom | Customer message classification, response drafting, escalation | [Guide](/claude-skills-guide/intercom-mcp-server-customer-data-automation/) |
+| Zoom | Meeting transcript summarization, action item extraction | [Guide](/claude-skills-guide/zoom-mcp-server-meeting-summary-automation/) |
 | Vercel | Deployment monitoring, build failure diagnosis, redeployments | [Guide](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) |
 | GCP | Log analysis, Cloud Run config, IAM policy review | [Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/) |
 | Docker | Container setup, Dockerfile generation, image optimization | [Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) |
+| Datadog | Metrics queries, alert correlation, incident summaries | [Guide](/claude-skills-guide/datadog-mcp-server-monitoring-automation-claude/) |
+| Trigger.dev | Background job orchestration, event-driven Claude workflows | [Guide](/claude-skills-guide/claude-code-for-trigger-dev-workflow-automation-tutorial/) |
+| Firecrawl | Web scraping, content extraction, research automation | [Guide](/claude-skills-guide/firecrawl-mcp-server-web-scraping-automation/) |
+| Tavily | Research-grade search, competitive intelligence, fact retrieval | [Guide](/claude-skills-guide/tavily-mcp-server-research-automation-guide/) |
+| Ghost | Blog post creation, content management, publish automation | [Guide](/claude-skills-guide/ghost-mcp-server-blogging-automation-workflow/) |
 
 ---
 
@@ -192,6 +262,16 @@ Major cloud platforms are integration targets for skills that manage infrastruct
 | [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) | Build matrix strategies in GitHub Actions workflows with Claude |
 | [Claude Code GitHub Codespaces Cloud Development Workflow](/claude-skills-guide/claude-code-github-codespaces-cloud-development-workflow/) | Running Claude Code skills inside GitHub Codespaces environments |
 | [Claude Code GitLab CI Pipeline Docker Registry Tutorial](/claude-skills-guide/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/) | Set up GitLab CI pipelines with Docker registry using Claude Code |
+| [Jira MCP Server Claude Code Integration Guide](/claude-skills-guide/jira-mcp-server-claude-code-integration-guide/) | Connecting Claude Code to Jira for issue creation and sprint management |
+| [ClickUp MCP Server: Workflow Automation Guide](/claude-skills-guide/clickup-mcp-server-workflow-automation-guide/) | ClickUp project management automation with Claude via MCP |
+| [Claude Code Skills SendGrid Email Automation Setup](/claude-skills-guide/claude-code-skills-sendgrid-email-automation-setup/) | Transactional email automation using SendGrid and Claude Code |
+| [Intercom MCP Server: Automating Customer Data Workflows](/claude-skills-guide/intercom-mcp-server-customer-data-automation/) | Automating customer support and data workflows via Intercom MCP |
+| [Zoom MCP Server Meeting Summary Automation](/claude-skills-guide/zoom-mcp-server-meeting-summary-automation/) | Meeting transcript summarization and action item extraction via Zoom |
+| [Datadog MCP Server Monitoring Automation with Claude](/claude-skills-guide/datadog-mcp-server-monitoring-automation-claude/) | Production monitoring queries and incident correlation with Datadog MCP |
+| [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-skills-guide/claude-code-for-trigger-dev-workflow-automation-tutorial/) | Orchestrating background job workflows with Trigger.dev and Claude Code |
+| [Firecrawl MCP Server: Web Scraping Automation with Claude](/claude-skills-guide/firecrawl-mcp-server-web-scraping-automation/) | Web scraping and content extraction at scale using Firecrawl MCP |
+| [Tavily MCP Server: Research Automation Guide](/claude-skills-guide/tavily-mcp-server-research-automation-guide/) | AI-optimized research and search automation via Tavily MCP server |
+| [Ghost MCP Server: Blogging Automation Workflow](/claude-skills-guide/ghost-mcp-server-blogging-automation-workflow/) | End-to-end blog content creation and publishing automation with Ghost |
 
 ---
 

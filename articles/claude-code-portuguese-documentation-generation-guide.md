@@ -15,7 +15,7 @@ permalink: /claude-code-portuguese-documentation-generation-guide/
 
 Generating documentation in Portuguese opens your projects to Brazilian and Portuguese-speaking development teams. Claude Code handles this efficiently when you configure the right workflow, whether you need API docs, README files, or inline code comments in Portuguese.
 
-This guide walks through setting up a Portuguese [documentation generation](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) workflow using Claude skills, covering language configuration, skill selection, and practical examples you can apply immediately.
+This guide walks through setting up a Portuguese [documentation generation workflow](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) using Claude skills, covering language configuration, skill selection, and practical examples you can apply immediately. If you need to handle multiple languages, see the [i18n localization workflow automation guide](/claude-skills-guide/claude-skills-for-localization-i18n-workflow-automation/).
 
 ## Prerequisites
 
@@ -121,7 +121,7 @@ Output as a well-formatted document suitable for sharing with development teams.
 Format headers in Portuguese: "Referência da API", "Autenticação", "Endpoints", etc.
 ```
 
-The [pdf skill](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) handles all formatting automatically, producing a document ready for distribution.
+The [pdf skill](/claude-skills-guide/what-is-the-best-claude-skill-for-generating-documentation/) handles all formatting automatically, producing a document ready for distribution.
 
 ## Documenting Test Cases in Portuguese
 
@@ -138,7 +138,7 @@ Write the tests in Portuguese:
 Include tests for happy path and error cases.
 ```
 
-This produces tests that serve as executable documentation, useful for onboarding Brazilian developers to your codebase.
+This produces tests that serve as executable documentation, useful for onboarding Brazilian developers to your codebase. For multilingual projects, also consider the [translate code comments between languages guide](/claude-skills-guide/claude-code-translate-code-comments-between-languages/).
 
 ## Automating Documentation Updates
 

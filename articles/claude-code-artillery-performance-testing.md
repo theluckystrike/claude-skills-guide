@@ -88,7 +88,7 @@ npx artillery run login-load-test.yml
 
 ## Generating Tests with Claude Code
 
-This is where Claude Code shines. Instead of manually writing complex test scenarios, you can describe your API endpoints and expected behaviors, and Claude Code will generate the Artillery configuration. Using the **tdd** skill, you can create comprehensive test suites that cover authentication, error handling, and edge cases.
+This is where Claude Code shines. Instead of manually writing complex test scenarios, you can describe your API endpoints and expected behaviors, and Claude Code will generate the Artillery configuration. Using the [tdd skill, you can create comprehensive test suites](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) that cover authentication, error handling, and edge cases.
 
 For example, tell Claude Code:
 
@@ -104,7 +104,7 @@ Artillery outputs detailed metrics after each run. Look for these key indicators
 - **Error rates**: A spike in 5xx errors under load indicates capacity issues
 - **Throughput**: Requests per second shows if your system scales as expected
 
-For deeper analysis, export results to JSON and process them with custom scripts. If you're using the **xlsx** skill to create performance dashboards, you can parse Artillery's JSON output and generate visual reports showing trends over time.
+For deeper analysis, export results to JSON and process them with custom scripts. If you're using the [xlsx skill to create performance dashboards](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/), you can parse Artillery's JSON output and generate visual reports showing trends over time.
 
 ```bash
 npx artillery run login-load-test.yml --output results.json --format json
@@ -144,7 +144,7 @@ artillery run --config cloud-config.yml login-load-test.yml
 
 ### Integration with CI/CD
 
-Automate performance testing in your pipeline. Add a basic threshold check:
+Automate performance testing in your pipeline. For broader CI patterns, see [Claude Code GitHub Actions approval workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/). Add a basic threshold check:
 
 ```bash
 npx artillery run api-test.yml --threshold "p95.responseTime:500"
@@ -172,6 +172,13 @@ By combining these tools, you build a comprehensive testing pipeline that catche
 ## Conclusion
 
 Claude Code and Artillery together form a practical combination for modern performance testing. Automate test generation, run scalable load scenarios, and analyze results systematically. Start with simple configurations, gradually add complexity, and integrate testing into your development workflow. Your users will thank you when the application handles production traffic without breaking a sweat.
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Combine TDD practices with load testing to ensure new features ship with both functional and performance coverage
+- [Claude Code GitHub Actions Approval Workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/) — Gate deployments with Artillery performance thresholds in your CI/CD pipeline
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Track load test baselines and regressions across multiple Artillery runs with persistent memory
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Explore more Claude Code automation workflows for testing and deployment
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

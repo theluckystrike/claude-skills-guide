@@ -23,7 +23,7 @@ The real problem emerges when you need to track audit results over time, correla
 
 ## Automating Audits with Claude Skills
 
-Claude Code skills transform dependency auditing from a reactive process into a continuous, automated workflow. By combining specialized skills, you can build an audit pipeline that scans your dependencies, contextualizes findings, generates actionable reports, and integrates with your existing development workflow.
+Claude Code skills transform dependency auditing from a reactive process into a continuous, automated workflow. By combining specialized skills, you can build an audit pipeline that scans your dependencies, contextualizes findings, generates actionable reports, and integrates seamlessly with your existing development workflow. For a broader look at Claude Code security patterns, see the [Claude Code MCP server penetration testing guide](/claude-skills-guide/claude-code-mcp-server-penetration-testing-guide/).
 
 ### Skill 1: The Audit Scanner
 
@@ -52,7 +52,7 @@ Save this as `~/.claude/skills/dep-audit-scanner.md` and invoke it with `/dep-au
 
 ### Skill 2: The Contextual Reporter
 
-Raw vulnerability data needs context to be actionable. The reporter skill takes scan results and enriches them with information about affected code paths, remediation options, and business impact. For projects using the **supermemory** skill, you can maintain a historical record of audit findings:
+Raw vulnerability data needs context to be actionable. The reporter skill takes scan results and enriches them with information about affected code paths, remediation options, and business impact. For projects using the [supermemory skill, you can maintain a historical record of audit findings](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/):
 
 ```markdown
 # Vulnerability Context Reporter
@@ -158,5 +158,12 @@ You can also combine this with the **webapp-testing** skill to validate that you
 Start with the three core skills described above, then customize based on your project's specific needs. Monorepos might require a skill that coordinates audits across multiple packages. Teams with strict compliance requirements might add a skill that generates SOC2 or HIPAA audit trails. Whatever your constraints, Claude Code provides the flexibility to build an audit workflow that fits your process rather than forcing your process to fit generic tooling.
 
 The key insight is that dependency auditing shouldn't be a periodic panic when a major CVE makes headlines. With proper automation, it becomes a continuous, background process that keeps your project secure while you focus on building features.
+
+## Related Reading
+
+- [Claude Code MCP Server Penetration Testing Guide](/claude-skills-guide/claude-code-mcp-server-penetration-testing-guide/) — Extend your security automation beyond dependencies to test the MCP infrastructure itself
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Use supermemory to maintain audit history and track vulnerability trends across sprints
+- [Claude Code GitHub Actions Approval Workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/) — Gate pull requests on successful dependency audit results in your CI pipeline
+- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Diagnose issues with skill-based automation pipelines including audit workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
