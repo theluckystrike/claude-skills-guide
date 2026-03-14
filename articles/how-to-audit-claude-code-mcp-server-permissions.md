@@ -1,121 +1,189 @@
 ---
 layout: default
 title: "How to Audit Claude Code MCP Server Permissions"
-description: "A practical guide to auditing Model Context Protocol server permissions in Claude Code. Learn to inspect, verify, and manage MCP server access for secure."
+description: "A practical guide for developers and power users to audit, review, and maintain secure MCP server permissions in Claude Code. Includes CLI commands and code examples."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, claude-skills, mcp, security, permissions, audit]
-author: "Claude Skills Guide"
+tags: [claude-code, claude-skills, mcp, security, auditing, permissions]
+author: theluckystrike
 reviewed: true
-score: 7
+score: 8
 permalink: /how-to-audit-claude-code-mcp-server-permissions/
 ---
 
 # How to Audit Claude Code MCP Server Permissions
 
-[When you connect MCP servers to Claude Code, you grant external services varying degrees of access](/claude-skills-guide/mcp-server-permission-auditing-best-practices/) to your development environment. Understanding which servers have access to what resources becomes critical for maintaining security, especially when working with sensitive data or production systems. This guide walks you through practical methods to audit your MCP server permissions.
+Regularly auditing your MCP server permissions ensures that Claude Code maintains a secure configuration as your toolset evolves. New servers get added, existing ones get updated, and permission scopes can drift over time. A systematic audit catches these changes before they become security issues.
 
-## What Are MCP Server Permissions
+This guide covers practical methods for reviewing MCP server permissions using built-in Claude Code commands, manual configuration inspection, and automated checking workflows.
 
-[MCP servers extend Claude Code's capabilities by connecting to external tools and services](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) Each server operates with specific permissions that determine what actions it can perform and what data it can access. Some servers read files and run commands, while others modify your filesystem or interact with cloud APIs.
+## Finding Your MCP Server Configuration
 
-The permission model operates on a trust-on-first-use basis. When you first connect an MCP server, Claude Code may request permission to allow the server to perform certain actions. These permissions persist across sessions, which makes periodic auditing essential for security-conscious developers.
+Claude Code stores MCP server configurations in your global settings file. The location depends on your operating system:
 
-## Inspecting Current MCP Configuration
+- **macOS**: `~/Library/Application Support/Claude/settings.json`
+- **Linux**: `~/.config/Claude/settings.json`
+- **Windows**: `%APPDATA%/Claude/settings.json`
 
-The most direct way to audit your MCP permissions is by examining your Claude Code configuration file. This file lives at `~/.claude.json` on Linux and macOS systems, or `%APPDATA%\Claude\claude.json` on Windows.
-
-Open your configuration file and look for the `mcpServers` section:
+Open this file and look for the `mcpServers` section. This is your permission inventory.
 
 ```json
 {
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/user/projects"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/workspace/projects"],
+      "env": {}
     },
     "brave-search": {
-      "command": "uvx",
-      "args": ["-y", "mcp-server-brave-search"],
-      "env": {
-        "BRAVE_API_KEY": "your-api-key-here"
-      }
-    },
-    "supermemory": {
       "command": "npx",
-      "args": ["-y", "@supermemory/mcp-server"]
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": { "BRAVE_API_KEY": "your-key-here" }
+    },
+    "super-memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-super-memory"],
+      "env": {}
     }
   }
 }
 ```
 
-Each entry in the `mcpServers` object represents an active MCP server. The `command` and `args` fields tell you which server is running, while the configuration reveals what resources it can access. For example, the `filesystem` server above has access to `/home/user/projects` directory.
+Each entry represents a server with specific access capabilities. Understanding what each server can do is the first step in auditing.
 
-## Analyzing Server Capabilities
+## Using the Built-in /mcp Command
 
-Not all MCP servers expose their capabilities transparently in the configuration. Some servers infer permissions from environment variables or command-line arguments. To fully understand what each server can do, you need to examine both the configuration and the server's documentation.
+Claude Code provides a native command for reviewing MCP server status. Type `/mcp` in the chat interface to see a list of all configured servers, their running status, and available tools.
 
-When auditing, categorize each MCP server by its risk profile:
+For power users, the same information is accessible via the `--printMcpServers` flag when launching Claude Code from the terminal:
 
-**High-risk servers** include those with filesystem access, shell command execution, or API credentials. Examples include the filesystem server, docker server, and cloud service integrations.
+```bash
+claude --printMcpServers
+```
 
-**Medium-risk servers** include read-only APIs and search services. The brave-search MCP server falls into this category since it only makes outbound requests.
+This outputs a structured list of servers and the tools each provides. Use this output to verify that only intended servers are running.
 
-**Low-risk servers** include visualization tools and read-only data connectors. The frontend-design skill, for instance, primarily generates static output without external data access.
+## Auditing File System Access
 
-## Practical Audit Workflow
+The filesystem MCP server grants Claude Code the ability to read and write files. This is one of the most sensitive permissions to audit.
 
-Start your audit by listing all configured MCP servers in your `~/.claude.json` file. For each server, gather the following information:
-
-First, identify the server's purpose. Ask yourself whether you still actively use each MCP server. Remove any servers you no longer need, as inactive servers represent unnecessary attack surface.
-
-Second, review the access scope. For filesystem servers, verify the allowed directories are minimal and appropriate. For API-connected servers, ensure you're using environment variables rather than hardcoded credentials.
-
-Third, check for credential exposure. Examine whether API keys or tokens appear in your configuration file. Ideally, sensitive credentials should come from environment variables, not plaintext values:
+When configuring the filesystem server, you specify allowed directories:
 
 ```json
-"env": {
-  "API_KEY": "${ANNOTATED_ENV_VAR}"
+"filesystem": {
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-filesystem", 
+    "/workspace/projects",
+    "/tmp/claude-cache"
+  ],
+  "env": {}
 }
 ```
 
-This pattern allows Claude Code to reference environment variables without exposing their values in the configuration file.
+Audit this configuration by asking: should this server really access all these directories? Consider creating separate filesystem server instances with different scopes instead of granting broad access.
 
-## Using Claude Skills for Permission Management
+For example, a frontend-design workflow might need access to a specific project directory only:
 
-Several Claude skills can assist with permission management workflows. The tdd skill, while focused on test-driven development, encourages you to think about permission boundaries when structuring your projects. When developing new MCP integrations, using the tdd skill helps you define expected behaviors and test that permissions work as intended.
+```json
+"filesystem-frontend": {
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-filesystem", 
+    "/workspace/frontend-project"
+  ],
+  "env": {}
+}
+```
 
-The pdf skill proves useful when documenting your audit results. You can generate permission audit reports in PDF format for compliance purposes or team sharing.
+This approach, known as permission compartmentalization, limits the blast radius if a server gets compromised.
 
-For developers working with multiple MCP servers across different projects, the supermemory skill helps maintain institutional knowledge about which servers have been approved for different use cases.
+## Checking Network-Bound Servers
 
-## Verifying Server Behavior
+Servers like brave-search, aws-mcp-server, or custom API integrations make network requests on your behalf. Audit these by reviewing environment variables and understanding what data they transmit.
 
-After configuring an MCP server, verify its actual behavior matches your expectations. Claude Code provides feedback when servers attempt to access resources outside their defined scope.
+In your settings.json, examine the `env` field for each server:
 
-When a server tries to perform an action outside its permissions, you'll see a warning or error message. Pay attention to these notifications—they indicate either a misconfigured server or an attempted security boundary violation.
+```json
+"brave-search": {
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+  "env": { "BRAVE_API_KEY": "***" }
+}
+```
 
-For filesystem servers, test that they correctly respect directory restrictions. Create a test file outside the allowed directory and attempt to access it through the MCP server. The operation should fail if permissions are correctly configured.
+Ask these questions during audit:
+- Does this server need API keys, or can I use read-only credentials?
+- What data leaves my system through this server?
+- Are the servers still actively used, or should they be removed?
 
-## Security Best Practices
+Unused servers create unnecessary attack surface. Remove servers you no longer need.
 
-Apply the principle of least privilege to all MCP server configurations. Only grant filesystem access to specific project directories rather than entire home folders. Avoid running servers with root or administrator privileges unless absolutely necessary.
+## Verifying Skill-Specific MCP Configurations
 
-Rotate API credentials periodically, especially for MCP servers that authenticate with external services. If a server uses a service account with broad permissions, consider creating a dedicated account with limited scope for MCP operations.
+Certain Claude skills bundle their own MCP server configurations. Skills like the tdd skill, pdf skill, or xlsx skill may automatically configure servers when installed.
 
-Keep your MCP server packages updated. Server maintainers regularly patch security vulnerabilities, and running outdated versions exposes you to known risks.
+To audit these, check your settings.json after installing new skills. Look for servers with names matching the skill:
+
+```json
+"tdd": {
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-tdd"],
+  "env": {}
+}
+```
+
+Each skill documents which MCP servers it requires. Cross-reference your active configuration against skill documentation to ensure only necessary servers are enabled.
+
+## Creating an Audit Checklist
+
+Develop a personal audit routine. A simple checklist keeps your configuration secure:
+
+1. **List all configured servers** using `/mcp` or the CLI flag
+2. **Review each server's purpose** — can you explain what it does?
+3. **Check file system scopes** — are directory permissions minimal?
+4. **Verify environment variables** — are API keys necessary and rotated periodically?
+5. **Remove unused servers** — delete entries you no longer use
+6. **Document exceptions** — note any intentionally broad permissions and why they exist
+
+Run this audit monthly or after installing new skills.
+
+## Automating Permission Reviews
+
+For teams managing Claude Code across multiple machines, automate the audit process. Create a script that extracts and validates MCP configurations:
+
+```bash
+#!/bin/bash
+# audit-mcp.sh - Extract MCP server configuration for review
+
+CONFIG_PATH="$HOME/Library/Application Support/Claude/settings.json"
+
+echo "=== MCP Server Audit ==="
+echo "Configuration: $CONFIG_PATH"
+echo ""
+
+if [ -f "$CONFIG_PATH" ]; then
+  echo "Active servers:"
+  grep -A2 '"mcpServers"' "$CONFIG_PATH" | grep -v '^{' | grep -v '^}$' | grep '"command"\|"args"' | head -20
+else
+  echo "No settings.json found"
+fi
+```
+
+Run this script during security reviews or before deploying new Claude Code installations.
+
+## Responding to Permission Issues
+
+If you discover unexpected servers or overly broad permissions, take immediate action:
+
+1. **Disable the server** by removing it from settings.json
+2. **Restart Claude Code** to apply changes
+3. **Re-enable with corrected permissions** after reviewing the configuration
+
+For servers requiring API keys, rotate credentials after removing unexpected access.
 
 ## Conclusion
 
-Regularly auditing your Claude Code MCP server permissions keeps your development environment secure. By inspecting your configuration file, understanding each server's capabilities, and following security best practices, you maintain control over what external services can access.
+Auditing MCP server permissions is a straightforward process that significantly improves your Claude Code security posture. By regularly reviewing your configuration, practicing permission compartmentalization, and removing unused servers, you maintain control over what data and capabilities Claude Code can access.
 
-Make MCP permission audits part of your routine security checklist, especially before starting work on sensitive projects or sharing your configuration with team members.
-
-## Related Reading
-
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
-- [Claude Code MCP Server Least Privilege Configuration](/claude-skills-guide/claude-code-mcp-server-least-privilege-configuration/)
-- [Claude Code MCP Tool Allow and Deny Lists](/claude-skills-guide/claude-code-mcp-tool-allow-and-deny-lists/)
-- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+The built-in `/mcp` command and settings.json inspection give you full visibility into your MCP landscape. Combine these tools with a simple audit checklist to keep your configuration aligned with your actual workflow needs.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
