@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code with OpenAPI specifications to genera
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, claude-code, openapi, api-client, code-generation, typescript, python]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /claude-code-openapi-client-generation-guide/
 reviewed: true
 score: 7
