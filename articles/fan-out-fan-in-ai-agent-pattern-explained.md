@@ -4,7 +4,7 @@ layout: default
 title: "Fan Out Fan In AI Agent Pattern Explained"
 description: "Learn how the fan-out fan-in pattern works in AI agent architectures, with practical examples using Claude Code skills and subagents for parallel."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /fan-out-fan-in-ai-agent-pattern-explained/
 reviewed: true
 score: 7
