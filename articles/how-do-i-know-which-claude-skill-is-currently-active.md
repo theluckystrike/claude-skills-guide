@@ -42,25 +42,25 @@ Loaded skills: tdd, frontend-design
 
 If you see skill names listed after "Loaded skills," those are currently active.
 
-### Use the /skills Command
+### Ask Claude About Active Skills
 
-Claude Code provides a built-in `/skills` command that lists all available skills and indicates which ones are currently active. Type this in your conversation:
-
-```
-/skills
-```
-
-The output shows a list of skills with indicators marking the active ones. This is the most reliable method for confirming your current context.
-
-### Inspect the System Prompt
-
-You can ask Claude directly about its current context:
+You can ask Claude directly about its current context and which skills are active:
 
 ```
-What skill are you currently using?
+Which skill are you currently using?
 ```
 
-Claude will respond with the name of the active skill and a brief description of how it affects the conversation. This method works well when you want a quick confirmation without navigating away from your task.
+Claude will respond with the name of the active skill if one was invoked in the session. You can also verify what skills are installed by checking the skills directory.
+
+### Inspect the Current Context
+
+You can ask Claude to confirm its current instructions:
+
+```
+What instructions are currently guiding your behavior?
+```
+
+Claude will describe the active skill context if one is loaded. This method works well when you want a quick confirmation without navigating away from your task.
 
 ### Check Skill File Presence
 
@@ -121,13 +121,13 @@ This skill changes Claude's memory management approach.
 
 ### Confirming Skill Before Complex Tasks
 
-Before refactoring critical code, verify your active skill:
+Before refactoring critical code, verify your active skill by asking Claude:
 
 ```
-/skills
+Which skill are you currently using?
 ```
 
-If you're about to write tests but see `frontend-design` active, switch to `/tdd` first:
+If you're about to write tests but haven't invoked the tdd skill yet, switch to `/tdd` first:
 
 ```
 /tdd
@@ -170,7 +170,7 @@ The transition preserves context from the previous skill's work.
 
 If Claude's responses seem misaligned with your expectations:
 
-1. **Run `/skills`** to verify the active skill
+1. **Ask Claude** "Which skill are you using?" to verify the active skill
 2. **Check recent commands** — you may have accidentally activated a different skill
 3. **Re-invoke the correct skill** explicitly with `/skillname`
 4. **Start a new session** if context becomes confused
@@ -179,7 +179,7 @@ Remember that skills only affect Claude's behavior within your current session. 
 
 ## Best Practices
 
-- **Verify before critical operations**: Check `/skills` before major code changes
+- **Verify before critical operations**: Ask Claude which skill is active before major code changes
 - **Use explicit skill commands**: Rather than assuming a skill is active, invoke it directly
 - **Note skill transitions**: When switching skills, briefly describe what you're doing to maintain context
 - **Keep skill files organized**: Regular maintenance of `~/.claude/skills/` prevents confusion

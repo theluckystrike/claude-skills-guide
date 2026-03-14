@@ -22,7 +22,7 @@ Claude Code provides several skills that work well with Golang projects:
 - `/tdd` — Test-driven development with Go testing patterns
 - `/webapp-testing` — API endpoint testing and validation
 - `/pdf` — Documentation generation from code
-- `/mcp` — Model Context Protocol server integration
+- `/mcp-builder` — Model Context Protocol server integration
 - Docker — Container configuration and multi-stage builds (describe requirements directly)
 
 For Golang-specific work, you often describe your intent directly since no built-in `/golang` skill exists. The combination of these skills covers most microservice development needs.

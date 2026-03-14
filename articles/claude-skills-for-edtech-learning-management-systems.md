@@ -47,10 +47,9 @@ One of the highest-value applications of Claude in EdTech is automated assessmen
 Here's how to structure a grading skill:
 
 ```yaml
-# grading-skill.yaml
+# grading-rubric.yaml (custom rubric file sent to Claude as context)
 name: code-grader
 description: Evaluates programming submissions against rubrics
-version: 1.0.0
 
 rubrics:
   - criterion: "Code correctness"
