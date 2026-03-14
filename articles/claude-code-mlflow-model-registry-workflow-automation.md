@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code for MLflow Model Registry Workflow Automation"
 description: "Learn how to leverage Claude Code to automate MLflow Model Registry workflows with practical examples for streamlining your MLOps pipeline."
 date: 2026-03-14
 categories: [guides]
-author: theluckystrike
+tags: [claude-code, claude-skills]
+author: "Claude Skills Guide"
 permalink: /claude-code-mlflow-model-registry-workflow-automation/
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for MLflow Model Registry Workflow Automation
@@ -17,7 +22,7 @@ MLflow Model Registry is a powerful component of the MLflow ecosystem that enabl
 
 Before diving into automation, it's essential to understand the typical model registry workflow that teams encounter. A standard journey involves training a model, logging it to MLflow, registering the model in the registry, transitioning it through stages (None → Staging → Production → Archived), and finally deploying to production endpoints.
 
-Claude Code can assist at every stage of this journey. The key is creating reusable skills that encapsulate your organization's specific workflows and best practices. Rather than writing boilerplate code repeatedly or manually tracking model versions, you can leverage Claude to generate these workflows automatically based on your requirements.
+Claude Code can assist at every stage of this journey. The key is creating reusable skills that encapsulate your organization's specific workflows and best practices. Rather than writing boilerplate code repeatedly or manually tracking model versions, you can use Claude to generate these workflows automatically based on your requirements.
 
 ## Setting Up Claude Code for MLflow
 

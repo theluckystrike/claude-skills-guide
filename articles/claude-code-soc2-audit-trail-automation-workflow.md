@@ -1,20 +1,22 @@
 ---
+
 layout: default
 title: "Claude Code SOC2 Audit Trail Automation Workflow"
 description: "Learn how to build an automated audit trail system for SOC2 compliance using Claude Code skills. Practical examples for tracking changes, generating."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [tutorials]
-tags: [claude-code, soc2, compliance, audit-trail, automation]
-reviewed: false
-score: 0
+tags: [claude-code, soc2, compliance, audit-trail, automation, claude-skills]
+reviewed: true
+score: 7
 permalink: /claude-code-soc2-audit-trail-automation-workflow/
 ---
+
 
 {% raw %}
 # Claude Code SOC2 Audit Trail Automation Workflow
 
-Audit trails are the backbone of SOC 2 compliance. They provide a chronological record of system activities that helps auditors verify that controls are operating effectively. In this guide, you'll learn how to leverage Claude Code skills to build an automated audit trail workflow that captures, organizes, and reports on compliance-relevant events without manual effort.
+Audit trails are the backbone of SOC 2 compliance. They provide a chronological record of system activities that helps auditors verify that controls are operating effectively. In this guide, you'll learn how to use Claude Code skills to build an automated audit trail workflow that captures, organizes, and reports on compliance-relevant events without manual effort.
 
 ## Why Audit Trails Matter for SOC 2
 
@@ -252,7 +254,7 @@ Track these metrics to ensure your automation is working:
 
 ## Conclusion
 
-Building an automated audit trail workflow with Claude Code transforms SOC 2 compliance from a periodic burden into a continuous, automated process. By leveraging custom skills, GitHub Actions, and structured evidence generation, you create tamper-evident records that satisfy auditors while reducing manual effort.
+Building an automated audit trail workflow with Claude Code transforms SOC 2 compliance from a periodic burden into a continuous, automated process. By using custom skills, GitHub Actions, and structured evidence generation, you create tamper-evident records that satisfy auditors while reducing manual effort.
 
 Start with the skills and workflows outlined here, then customize them to your organization's specific controls and requirements. The key is consistency—every compliance-relevant activity should flow through your automated pipeline.
 

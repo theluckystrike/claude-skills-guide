@@ -1,16 +1,22 @@
 ---
+
 layout: default
 title: "Claude Code for LlamaIndex RAG Pipeline Debugging"
 description: "Master the art of debugging LlamaIndex RAG pipelines using Claude Code's powerful skills and features. Learn practical techniques to identify and fix."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-for-llamaindex-rag-pipeline-debugging/
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for LlamaIndex RAG Pipeline Debugging
 
-Debugging Retrieval-Augmented Generation (RAG) pipelines built with LlamaIndex can be challenging, especially when dealing with complex document processing, embedding generation, and query understanding. Claude Code provides a powerful toolkit that makes debugging these pipelines significantly more manageable. This guide explores how to leverage Claude Code's skills and features to effectively debug LlamaIndex RAG pipelines.
+Debugging Retrieval-Augmented Generation (RAG) pipelines built with LlamaIndex can be challenging, especially when dealing with complex document processing, embedding generation, and query understanding. Claude Code provides a powerful toolkit that makes debugging these pipelines significantly more manageable. This guide explores how to use Claude Code's skills and features to effectively debug LlamaIndex RAG pipelines.
 
 ## Understanding RAG Pipeline Components
 
@@ -201,7 +207,7 @@ service_context = ServiceContext.from_defaults(
 
 ## Advanced Debugging with Claude Code
 
-For complex RAG issues, leverage Claude Code's ability to analyze your entire codebase:
+For complex RAG issues, use Claude Code's ability to analyze your entire codebase:
 
 - Request comprehensive analysis of your RAG pipeline architecture
 - Get recommendations for optimization based on your specific setup

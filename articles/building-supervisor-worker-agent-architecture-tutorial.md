@@ -1,13 +1,16 @@
 ---
+
 layout: default
 title: "Building Supervisor Worker Agent Architecture Tutorial"
 description: "Learn how to build scalable supervisor worker agent architectures using Claude Code skills, with practical examples for implementing multi-agent."
 date: 2026-03-14
 author: "theluckystrike"
 permalink: /building-supervisor-worker-agent-architecture-tutorial/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
-
-{% raw %}
 # Building Supervisor Worker Agent Architecture Tutorial
 
 The supervisor worker pattern is a fundamental architectural approach in multi-agent systems that enables scalable, maintainable, and robust AI agent deployments. This tutorial explores how to implement this pattern effectively using Claude Code skills, providing you with practical knowledge to build production-ready agent systems.
@@ -29,7 +32,7 @@ Before implementing the supervisor worker pattern, ensure your Claude Code envir
 claude skills list
 ```
 
-This shows all installed skills that can assist in building your architecture. For supervisor worker systems, you'll want to leverage skills related to:
+This shows all installed skills that can assist in building your architecture. For supervisor worker systems, you'll want to use skills related to:
 
 - Bash scripting for process management
 - File operations for configuration
@@ -148,10 +151,9 @@ When building supervisor worker systems with Claude Code, follow these guideline
 
 ## Conclusion
 
-The supervisor worker architecture provides a robust foundation for building scalable multi-agent systems. By leveraging Claude Code skills throughout the implementation, you can create maintainable, observable, and production-ready systems. Start with simple patterns and evolve your architecture as your requirements grow.
+The supervisor worker architecture provides a robust foundation for building scalable multi-agent systems. By using Claude Code skills throughout the implementation, you can create maintainable, observable, and production-ready systems. Start with simple patterns and evolve your architecture as your requirements grow.
 
-Remember to wrap code examples containing template syntax ({{ or {% ) with {% raw %} tags when writing Jekyll articles to prevent rendering issues.
-{% endraw %}
+Remember to wrap code examples containing template syntax (double-curly or percent-curly patterns) with raw/endraw tags when writing Jekyll articles to prevent rendering issues.
 
 
 ## Related Reading

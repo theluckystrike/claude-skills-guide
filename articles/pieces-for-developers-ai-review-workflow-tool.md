@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How to Use Pieces for Developers AI Review Workflow Tool."
 description: "Learn how to integrate Pieces for Developers' AI-powered code review capabilities with Claude Code for enhanced development workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /pieces-for-developers-ai-review-workflow-tool/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 Pieces for Developers has emerged as a powerful tool in the developer ecosystem, offering AI-powered code review and workflow automation capabilities that can significantly enhance your Claude Code experience. This guide explores how to effectively combine these two tools to create a seamless development and code review pipeline.
 

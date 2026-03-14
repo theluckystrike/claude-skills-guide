@@ -1,19 +1,23 @@
 ---
+
 layout: default
 title: "Claude Code SOX Financial Code Audit Workflow Guide"
 description: "A comprehensive guide to using Claude Code for SOX compliance code audits, featuring practical workflows, essential skills, and automation strategies."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [workflows]
-tags: [claude-code, sox, compliance, financial, audit, security]
+tags: [claude-code, sox, compliance, financial, audit, security, claude-skills]
 permalink: /claude-code-sox-financial-code-audit-workflow-guide/
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code SOX Financial Code Audit Workflow Guide
 
 Financial software development demands rigorous compliance with the Sarbanes-Oxley Act (SOX), requiring organizations to implement strict controls over financial reporting systems. Code audits for SOX compliance involve verifying access controls, data integrity, change management, and audit trail capabilities. Claude Code transforms this traditionally labor-intensive process into an efficient, automated workflow that catches issues early and maintains continuous compliance.
 
-This guide shows you how to leverage Claude Code's skills and capabilities to build a practical SOX financial code audit workflow.
+This guide shows you how to use Claude Code's skills and capabilities to build a practical SOX financial code audit workflow.
 
 ## Understanding SOX Requirements for Code
 
@@ -153,7 +157,7 @@ This automation ensures every code change receives compliance review before depl
 
 ## Conclusion
 
-Claude Code transforms SOX financial code audits from a painful periodic exercise into a continuous, automated process. By leveraging skills like tdd, security, code-review, and doc-writer, development teams maintain consistent compliance without sacrificing velocity. The key is integrating these capabilities into your daily workflow rather than treating audit preparation as a separate activity.
+Claude Code transforms SOX financial code audits from a painful periodic exercise into a continuous, automated process. By using skills like tdd, security, code-review, and doc-writer, development teams maintain consistent compliance without sacrificing velocity. The key is integrating these capabilities into your daily workflow rather than treating audit preparation as a separate activity.
 
 Start with the skills and workflows outlined in this guide, adapt them to your organization's specific requirements, and build a SOX compliance process that strengthens your financial software while reducing audit stress.
 

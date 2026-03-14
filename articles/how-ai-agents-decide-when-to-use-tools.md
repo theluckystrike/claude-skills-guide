@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How AI Agents Decide When to Use Tools"
 description: "Explore the decision-making process behind AI agent tool usage, with practical examples using Claude Code skills and the Model Context Protocol."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-ai-agents-decide-when-to-use-tools/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # How AI Agents Decide When to Use Tools

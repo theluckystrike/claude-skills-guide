@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Cline AI Coding Assistant Review vs Claude Code"
 description: "A comprehensive comparison of Cline AI coding assistant and Claude Code, exploring their features, workflows, and how Claude Code skills enhance."
 date: 2026-03-14
 author: "theluckystrike"
 permalink: /cline-ai-coding-assistant-review-vs-claude-code/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 
@@ -70,7 +76,7 @@ The context window capabilities allow Claude Code to understand entire files or 
 
 ### Claude Code Skills for Enterprise
 
-Organizations can leverage Claude Code skills for:
+Organizations can use Claude Code skills for:
 
 - **Standardized Code Reviews**: Automating compliance checks across pull requests
 - **Documentation Generation**: Maintaining up-to-date technical documentation
@@ -129,7 +135,7 @@ Cline would handle individual file editing and code completion tasks effectively
 
 ## Maximizing Productivity with Claude Code Skills
 
-The true power of Claude Code lies in its extensibility. Here are practical approaches to leveraging skills effectively:
+The true power of Claude Code lies in its extensibility. Here are practical approaches to using skills effectively:
 
 ### Skill Development Best Practices
 

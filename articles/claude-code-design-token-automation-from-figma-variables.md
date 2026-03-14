@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Design Token Automation from Figma Variables"
 description: "Learn how to automate design token workflows using Claude Code with Figma variables for seamless design-to-code pipelines."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-design-token-automation-from-figma-variables/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code Design Token Automation from Figma Variables
@@ -205,7 +211,7 @@ writeFileSync('output/tokens.ts', typeDefs);
 
 ## Conclusion
 
-By combining Claude Code's automation capabilities with Figma Variables, you create a powerful design-to-code pipeline that reduces manual work and ensures consistency. The key is establishing clear workflows and leveraging tools that bridge the design-development gap effectively.
+By combining Claude Code's automation capabilities with Figma Variables, you create a powerful design-to-code pipeline that reduces manual work and ensures consistency. The key is establishing clear workflows and using tools that bridge the design-development gap effectively.
 
 Start small with basic color and typography tokens, then expand to spacing, shadows, and more complex token structures as your design system matures.
 {% endraw %}

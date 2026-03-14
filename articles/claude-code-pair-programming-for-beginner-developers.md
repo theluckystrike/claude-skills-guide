@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Pair Programming for Beginner Developers"
 description: "Learn how to use Claude Code as your programming partner. A beginner-friendly guide to pair programming with AI, covering setup, workflows, and."
 date: 2026-03-14
 categories: [tutorials]
-tags: [claude-code, pair-programming, beginners, tutorial, ai-assistance]
+tags: [claude-code, pair-programming, beginners, tutorial, ai-assistance, claude-skills]
 author: "theluckystrike"
-reviewed: false
-score: 0
+reviewed: true
+score: 7
 permalink: /claude-code-pair-programming-for-beginner-developers/
 ---
+
 
 {% raw %}
 # Claude Code Pair Programming for Beginner Developers

@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Generating CSS Variables from Design System"
 description: "Learn how to use Claude Code skills to automatically generate CSS variables from design systems. Practical examples for extracting colors, typography."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-generating-css-variables-from-design-system/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Generating CSS Variables from Design System
 
@@ -48,7 +54,7 @@ For example, a design system with primary, secondary, and neutral color scales p
 
 ## Working with Typography Tokens
 
-Typography systems often contain font families, sizes, weights, and line heights. Claude Code can transform these specifications into CSS custom properties that work seamlessly with modern CSS features like `clamp()` for fluid typography.
+Typography systems often contain font families, sizes, weights, and line heights. Claude Code can transform these specifications into CSS custom properties that work smoothly with modern CSS features like `clamp()` for fluid typography.
 
 ```
 /generate-typography-variables from typography-spec.json include font-family, font-size, font-weight, and line-height with rem units

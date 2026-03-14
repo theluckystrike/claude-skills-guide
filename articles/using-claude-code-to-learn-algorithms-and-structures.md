@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Using Claude Code to Learn Algorithms and Data Structures"
 description: "Discover how Claude Code can serve as your personal algorithms tutor - from understanding Big O notation to implementing trees, graphs, and sorting."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, algorithms, data-structures, learning, programming-education]
-author: theluckystrike
+tags: [claude-code, algorithms, data-structures, learning, programming-education, claude-skills]
+author: "Claude Skills Guide"
 permalink: /using-claude-code-to-learn-algorithms-and-structures/
+reviewed: true
+score: 7
 ---
+
 
 # Using Claude Code to Learn Algorithms and Data Structures
 
