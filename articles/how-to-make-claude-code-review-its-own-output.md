@@ -1,188 +1,184 @@
 ---
 layout: default
 title: "How to Make Claude Code Review Its Own Output"
-description: "Learn practical techniques to set up Claude to review, debug, and improve its own code output using structured prompts and self-reflection workflows."
+description: "A practical guide for developers and power users to set up self-review workflows in Claude Code using skills, prompts, and automation patterns."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /how-to-make-claude-code-review-its-own-output/
-reviewed: true
-score: 7
-categories: [guides]
-tags: [claude-code, claude-skills]
 ---
 
 # How to Make Claude Code Review Its Own Output
 
-As a developer working with AI coding assistants, you have probably encountered situations where Claude generates code that almost works—but needs refinement. Rather than manually catching bugs or style issues, you can train Claude to review its own output systematically. This creates a powerful feedback loop that improves code quality without requiring constant human intervention.
+Getting Claude Code to review its own output transforms your AI workflow from a one-way interaction into a continuous improvement cycle. This approach catches bugs, enforces coding standards, and helps you learn by seeing where your AI assistant identifies issues. Here's how to set up effective self-review workflows.
 
-This guide shows you practical techniques to make Claude code review its own output, including prompt patterns, workflow setups, and specific skill integrations that enhance the review process.
+## The Self-Review Concept
 
-## The Self-Review Prompt Pattern
+When you ask Claude Code to generate code, the response passes through Claude's language model without any additional scrutiny. By introducing a deliberate review step, you create a second pass that catches mistakes the first pass might have missed. This mirrors how human developers use code review—but the reviewer is also AI.
 
-The core technique involves adding a review step after Claude generates code. Instead of accepting the first output, you redirect Claude's attention back to what it just produced. This works because Claude can analyze its own text when prompted correctly.
+The key is structuring your prompts to trigger review behavior, or using Claude skills that encode review workflows. The difference between raw generation and reviewed output can be substantial.
 
-A simple self-review prompt looks like this:
+## Method 1: Prompt-Based Review Chains
 
-```
-After writing the code above, review it for:
-1. Syntax errors and potential runtime exceptions
-2. Memory leaks or resource management issues
-3. Edge cases not handled
-4. Code style inconsistencies
-5. Missing error handling
-
-Provide a corrected version if issues are found.
-```
-
-This pattern works because Claude treats the review as a separate task. The model examines the generated code from a critical perspective rather than a generative one.
-
-## Implementing Structured Review Workflows
-
-For more thorough self-review, create a structured workflow that breaks down the review process into specific phases. This approach mirrors how professional code review tools operate.
-
-### Phase 1: Syntax and Logic Check
-
-Ask Claude to verify the code compiles and the logic makes sense:
+The simplest approach involves asking Claude to review its own output before finishing a task. Add a review request to your prompt:
 
 ```
-Review the following code for compilation errors, type mismatches, 
-and logical inconsistencies. List each issue with line numbers 
-and provide fixes.
-
-{{CODE}}
+Write a function that parses CSV data and returns an array of objects. 
+After writing the code, review it for:
+- Edge cases (empty lines, quoted fields, escaped characters)
+- Error handling
+- Type safety
+- Potential bugs
 ```
 
-### Phase 2: Edge Case Analysis
+This works because Claude will generate the code, then apply critical analysis to it. The review happens before the response reaches you.
 
-Challenge the code to think about boundary conditions:
+For more structured reviews, create a custom skill in `~/.claude/skills/review.md`:
 
-```
-Identify at least five edge cases this code does not handle. 
-For each edge case, explain why it fails and provide a 
-solution that addresses it.
-```
+```markdown
+# Review Skill
 
-### Phase 3: Security and Performance Review
+When asked to review code, examine:
 
-Examine the code for common vulnerabilities:
+1. **Correctness**: Does the code do what it claims?
+2. **Edge cases**: What happens with empty input, null values, boundary conditions?
+3. **Security**: Any injection risks, exposed secrets, or permission issues?
+4. **Performance**: O(n) vs O(n²), unnecessary iterations, memory leaks?
+5. **Readability**: Clear variable names, appropriate comments, logical structure?
 
-```
-Analyze this code for security vulnerabilities including:
-- SQL injection risks
-- Input validation gaps
-- Authentication bypasses
-- Data exposure issues
-
-Suggest improvements for each finding.
+For each issue found, provide:
+- Line number or section
+- Problem description
+- Suggested fix
 ```
 
-## Integrating Claude Skills into the Review Process
+After creating this skill, invoke it with `/review` whenever you want Claude to analyze generated code.
 
-Claude's specialized skills can enhance different aspects of self-review. The **tdd** skill proves particularly valuable when you want Claude to write tests before fixing code—a practice that naturally leads to self-review as the tests reveal gaps in the generated code.
+## Method 2: Using Claude Skills for Automated Review
 
-When working with the **frontend-design** skill, include review prompts that check for accessibility compliance, responsive design issues, and CSS consistency. The skill understands component hierarchies and can identify where styling might break across different viewport sizes.
+Several community skills include review components. The [tdd skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) enforces test-driven development, which naturally creates a review cycle—you write tests, then implementation, then verify the tests pass. This catches issues early.
 
-For documentation-heavy projects, the **pdf** skill can generate review reports of generated code. After Claude writes code, ask it to create a PDF summary of what the code does, then compare that summary against the actual implementation—this catches misalignment between intention and execution.
+The [frontend-design skill](https://claude.ai/skills/frontend-design) includes accessibility and performance checks that review generated UI code against web standards. When you generate a component using this skill, it will flag accessibility violations like missing ARIA labels or improper heading hierarchy.
 
-The **supermemory** skill enables Claude to remember patterns that worked (or failed) in previous review cycles. By storing review feedback in supermemory, Claude becomes progressively better at catching specific issues that commonly appear in your codebase.
+For documentation workflows, the [pdf skill](https://claude.ai/skills/pdf) reviews generated PDFs for formatting consistency and content completeness. This matters when you automate report generation.
 
-## Practical Example: Python Function Review
+## Method 3: Multi-Pass Generation Patterns
 
-Consider this Python function that processes user data:
+Advanced users implement multi-pass workflows where Claude generates, reviews, and revises in sequence. Here's a practical pattern:
 
-```python
-def process_user(user_data):
-    name = user_data.get('name')
-    email = user_data.get('email')
-    
-    # Save to database
-    db.save(name, email)
-    return True
-```
+```bash
+# First pass: Generate initial implementation
+claude "Write a Python function that connects to a PostgreSQL database 
+and executes a parameterized query. Return results as JSON."
 
-A self-review would catch these issues:
-
-```
-Issues identified:
-1. No validation for missing required fields (name, email)
-2. No error handling for database connection failures
-3. No input sanitization (SQL injection risk)
-4. Function returns True unconditionally
-5. No logging for debugging purposes
-
-Corrected version:
-```
-
-```python
-import logging
-
-def process_user(user_data, db):
-    if not user_data:
-        raise ValueError("user_data cannot be empty")
-    
-    name = user_data.get('name', '').strip()
-    email = user_data.get('email', '').strip()
-    
-    if not name or not email:
-        raise ValueError("name and email are required")
-    
-    if '@' not in email:
-        raise ValueError("invalid email format")
-    
-    try:
-        db.save(name, email)
-        logging.info(f"User {email} saved successfully")
-        return True
-    except Exception as e:
-        logging.error(f"Failed to save user: {e}")
-        return False
-```
-
-The review process transformed a fragile function into production-ready code.
-
-## Automating Review with System Prompts
-
-For recurring projects, configure Claude with a system prompt that includes automatic self-review:
-
-```
-You are a code generation assistant. After producing any code, 
-automatically review it for:
-- Syntax errors
+# Second pass: Review with specific criteria  
+claude "Review the code above for:
+- SQL injection vulnerabilities
+- Connection leak risks
 - Missing error handling
-- Security vulnerabilities
-- Performance issues
-- Inconsistent naming conventions
-
-If issues exist, provide a corrected version. If the code is 
-clean, state "Review complete: no issues found."
+- Inefficient query patterns"
 ```
 
-This approach ensures every piece of code gets reviewed without requiring you to ask each time.
+For automation, chain these in a script:
 
-## Measuring Review Effectiveness
+```bash
+#!/bin/bash
+# review-loop.sh - runs Claude in review loop until clean
 
-Track what types of issues Claude catches most frequently in your projects. Common categories include:
+PROMPT="$1"
+MAX_ITERATIONS=3
 
-- **Type errors** — missing null checks, incorrect type conversions
-- **Resource management** — unclosed files, database connections
-- **Error handling** — generic exception catches, missing fallbacks
-- **Security gaps** — unsanitized inputs, hardcoded credentials
-- **Performance** — unnecessary loops, missing indexes in queries
+for i in $(seq 1 $MAX_ITERATIONS); do
+  echo "=== Iteration $i ==="
+  RESPONSE=$(claude -p "$PROMPT")
+  REVIEW=$(claude -p "Review this code for bugs, security issues, 
+    and code quality. If issues exist, provide specific fixes.
+    Code to review:
+    $RESPONSE")
+  
+  if echo "$REVIEW" | grep -q "No issues found\|Looks good\|Clean"; then
+    echo "$RESPONSE"
+    break
+  fi
+  
+  # Update prompt with review feedback
+  PROMPT="Fix the following issues in the previous code:
+  $REVIEW"
+done
+```
 
-Over time, you will notice patterns specific to your codebase and can refine the review prompts to target your most common issues.
+This isn't production-grade (parsing LLM output reliably is complex), but it demonstrates the multi-pass concept.
 
-## Conclusion
+## Method 4: Supermemory for Pattern Learning
 
-Making Claude code review its own output requires structured prompts, clear evaluation criteria, and consistent application of the self-review pattern. By integrating skills like tdd, frontend-design, and supermemory, you create a powerful review system that improves with use.
+The [supermemory skill](https://claude.ai/skills/super-memory) enables Claude to recall past mistakes and corrections. When you provide feedback on generated code—"This approach won't scale"—Supermemory stores that context. Future generations in similar situations will reference that learning.
 
-The key is treating review as a separate, deliberate step rather than hoping the first output is perfect. Claude excels at this recursive analysis when given specific criteria—use that capability to build reliable, maintainable code faster.
+To use this effectively:
 
+1. Load the supermemory skill when starting a project
+2. Provide feedback on each generation: "Good handling of nulls" or "The error messages are too vague"
+3. Ask Claude to reference past issues: "Before generating, check if we've encountered similar problems"
 
-## Related Reading
+Over time, Claude's output improves based on your specific preferences and project requirements.
 
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+## Practical Review Checklist
+
+Whether using skills or prompts, run through these areas when reviewing Claude's output:
+
+| Category | What to Check |
+|----------|---------------|
+| **Logic** | Algorithm correctness, off-by-one errors, incorrect conditionals |
+| **Security** | Input sanitization, authentication, secret handling |
+| **Dependencies** | Version compatibility, deprecated APIs, unnecessary imports |
+| **Testing** | Edge cases covered, mocking appropriate, assertions meaningful |
+| **Documentation** | Comments explain why, not just what; README updated |
+
+## Built-in Review Tools
+
+Claude Code includes some review capabilities out of the box. The `/test` command generates tests alongside code, which serves as a form of review by forcing the implementation to be testable. Similarly, `/edit` lets you reference specific code sections for targeted improvements.
+
+For linting integration, you can pipe Claude's output through tools like ESLint or Pylint:
+
+```bash
+claude "Write a React component" | eslint --stdin
+```
+
+This catches style issues and common bugs automatically.
+
+## When Self-Review Works Best
+
+Self-review shines for:
+
+- **Learning**: Watching Claude critique its own code teaches you patterns to apply manually
+- **Consistency**: Enforces your team's standards across all generated code
+- **Debugging**: Catches obvious mistakes before you run the code
+- **Documentation**: Ensures generated docs match the actual implementation
+
+It has limits—Claude cannot catch logical errors that depend on domain knowledge it lacks, or security issues in code that interacts with systems it doesn't understand. Use self-review as a first pass, not a replacement for human review.
+
+## Making It Automatic
+
+To automate review in your workflow:
+
+1. Create a review skill in `~/.claude/skills/review.md`
+2. Add it to your project-specific skills folder
+3. Include review steps in your system prompts
+4. Use hooks to trigger review after generation
+
+For example, in a `CLAUDE.md` project file:
+
+```markdown
+# Code Review Requirements
+
+After generating any function:
+1. Run `/review` on the output
+2. Fix critical issues before presenting
+3. Note any intentional tradeoffs in comments
+```
+
+This makes review a standard part of your workflow rather than an occasional step.
+
+---
+
+Building self-review into your Claude Code workflow takes minimal setup but delivers consistent value. Start with prompt-based reviews, add skills for structure, and iterate based on what your projects need. The goal isn't perfect code—it's fewer mistakes reaching your codebase and better understanding of how to improve both AI-assisted and manual development.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
