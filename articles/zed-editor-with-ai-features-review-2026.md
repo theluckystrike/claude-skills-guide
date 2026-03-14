@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Zed Editor with AI Features Review 2026"
 description: "A practical review of Zed editor's AI capabilities in 2026. Learn about the AI assistant integration, context-aware completions, and how it compares for modern development workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /zed-editor-with-ai-features-review-2026/
+reviewed: true
+score: 7
+categories: [comparisons]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Zed Editor with AI Features Review 2026
@@ -16,7 +22,7 @@ Zed has emerged as a serious contender in the code editor space, and its AI inte
 
 Zed ships with an integrated AI assistant that activates through the command palette or keyboard shortcuts. The default configuration connects to OpenAI's API, though you can swap in Anthropic, Google, or local models through the settings panel.
 
-To enable AI assistance, open Zed's settings with `Cmd+,` (Mac) or `Ctrl+,` (Linux/Windows), then navigate to the AI section. You'll need to provide an API key from your preferred provider. For Claude users, the `ANTHROPIC_API_KEY` environment variable works seamlessly once configured.
+To enable AI assistance, open Zed's settings with `Cmd+,` (Mac) or `Ctrl+,` (Linux/Windows), then navigate to the AI section. You'll need to provide an API key from your preferred provider. For Claude users, the `ANTHROPIC_API_KEY` environment variable works smoothly once configured.
 
 ```json
 {

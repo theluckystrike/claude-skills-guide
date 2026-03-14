@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Claude MD for Enforcing Architecture Patterns"
 description: "Learn how to use Claude Code with custom skills to enforce architectural patterns consistently across your codebase. Practical examples and."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, architecture-patterns, code-standards, software-design]
 permalink: /claude-md-for-enforcing-architecture-patterns/
+reviewed: true
+score: 7
 ---
+
 
 # Claude MD for Enforcing Architecture Patterns
 

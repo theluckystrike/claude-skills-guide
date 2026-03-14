@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "AI Tools for Incident Debugging and Postmortems"
 description: "Practical AI tools and techniques for debugging production incidents and writing effective postmortems. Learn how Claude skills accelerate root cause."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-tools-for-incident-debugging-and-postmortems/
 categories: [troubleshooting]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Tools for Incident Debugging and Postmortems
 
@@ -107,7 +112,7 @@ Feed postmortem insights back into your Claude skills. If you identify a common 
 
 ## Conclusion
 
-AI tools transform incident debugging from a frantic guessing game into a systematic, reproducible process. By leveraging Claude skills designed for debugging, documentation, and analysis, teams respond to incidents more effectively and learn from each occurrence more thoroughly.
+AI tools transform incident debugging from a frantic guessing game into a systematic, reproducible process. By using Claude skills designed for debugging, documentation, and analysis, teams respond to incidents more effectively and learn from each occurrence more thoroughly.
 
 The key is integrating these tools into your existing workflows rather than treating them as replacements for human judgment. Used correctly, AI assistance means faster recovery times, better postmortems, and ultimately more resilient systems.
 

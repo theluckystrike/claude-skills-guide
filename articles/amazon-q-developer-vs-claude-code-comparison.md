@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Amazon Q Developer vs Claude Code: A Practical."
 description: "Compare Amazon Q Developer and Claude Code for coding tasks. Real examples, skill ecosystems, pricing, and which tool fits different developer workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /amazon-q-developer-vs-claude-code-comparison/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Amazon Q Developer vs Claude Code: A Practical Comparison for Developers
 
