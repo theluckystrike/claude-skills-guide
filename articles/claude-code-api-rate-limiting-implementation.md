@@ -1,221 +1,227 @@
 ---
 layout: default
-title: "Claude Code API Rate Limiting Implementation Guide"
-description: "Learn how to implement API rate limiting with Claude Code. Practical solutions for developers and power users working with Claude Code for API integration."
+title: "Claude Code API Rate Limiting Implementation"
+description: "A practical guide to implementing API rate limiting in your Claude Code projects. Learn token bucket algorithms, middleware patterns, and real-world examples for production systems."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-rate-limiting-implementation/
 ---
 
-# Claude Code API Rate Limiting Implementation Guide
+# Claude Code API Rate Limiting Implementation
 
-Rate limiting protects your APIs from abuse, ensures fair usage among clients, and prevents service degradation during traffic spikes. When building applications with Claude Code, implementing proper rate limiting patterns becomes essential for creating robust integrations that respect API quotas while maintaining reliable performance.
+API rate limiting protects your services from abuse, ensures fair resource allocation, and maintains stable performance for all users. When building applications that integrate with Claude Code or creating custom skills that make API calls, implementing proper rate limiting becomes essential for production-ready systems.
 
-This guide covers practical approaches to implementing API rate limiting when working with Claude Code, covering both client-side handling and server-side enforcement strategies.
+This guide covers practical rate limiting implementations using token bucket and sliding window algorithms, with code examples you can adapt directly into your projects.
 
-## Understanding Rate Limiting Basics
+## Understanding Rate Limiting Fundamentals
 
-Most modern APIs implement rate limiting using standardized HTTP headers that communicate quota information to clients. When you interact with APIs through Claude Code, understanding these headers helps you build more resilient applications.
+Rate limiting controls how many requests a client can make within a time window. The most common approaches include:
 
-The standard approach involves checking response headers like `X-RateLimit-Remaining`, `X-RateLimit-Limit`, and `Retry-After`. These headers tell you how many requests remain in the current window and when you can retry if you've exceeded the limit.
+**Token Bucket** — Tokens fill a bucket at a fixed rate. Each request consumes a token. When the bucket empties, requests wait or fail.
 
-Consider this example of checking rate limit headers in a simple API client:
+**Sliding Window** — Tracks requests in a rolling time frame. More accurate than fixed windows but requires more memory.
 
-```javascript
-async function makeApiRequest(url, options = {}) {
-  const response = await fetch(url, options);
-  
-  const remaining = response.headers.get('X-RateLimit-Remaining');
-  const limit = response.headers.get('X-RateLimit-Limit');
-  const resetTime = response.headers.get('X-RateLimit-Reset');
-  
-  if (remaining !== null && parseInt(remaining) < 5) {
-    console.log(`Warning: Only ${remaining} requests remaining (limit: ${limit})`);
-  }
-  
-  return response;
-}
-```
+**Leaky Bucket** — Processes requests at a constant rate regardless of incoming speed. Ideal for smoothing traffic bursts.
 
-This pattern works well when Claude Code generates code for your projects, but implementing intelligent rate limiting requires more sophisticated handling.
+For most Claude Code integrations, token bucket provides the right balance of simplicity and effectiveness.
 
-## Client-Side Rate Limiting with Claude Code
+## Implementing Token Bucket Rate Limiter
 
-When Claude Code helps you build API clients, you can implement intelligent client-side rate limiting that automatically respects API quotas. This approach prevents hitting rate limits altogether by tracking your own request frequency.
-
-The token bucket algorithm provides an elegant solution for client-side rate limiting:
+Here's a production-ready implementation in JavaScript:
 
 ```javascript
-class RateLimiter {
-  constructor(maxRequests, windowMs) {
-    this.maxRequests = maxRequests;
-    this.windowMs = windowMs;
-    this.requests = [];
+class TokenBucket {
+  constructor(capacity, refillRate) {
+    this.capacity = capacity;
+    this.tokens = capacity;
+    this.refillRate = refillRate; // tokens per second
+    this.lastRefill = Date.now();
   }
-  
-  async acquire() {
-    const now = Date.now();
-    this.requests = this.requests.filter(t => now - t < this.windowMs);
+
+  async consume(tokensNeeded = 1) {
+    this.refill();
     
-    if (this.requests.length >= this.maxRequests) {
-      const oldestRequest = this.requests[0];
-      const waitTime = this.windowMs - (now - oldestRequest);
-      await new Promise(r => setTimeout(r, waitTime));
-      return this.acquire();
+    if (this.tokens >= tokensNeeded) {
+      this.tokens -= tokensNeeded;
+      return { allowed: true, remaining: this.tokens };
     }
     
-    this.requests.push(now);
-    return true;
+    return { 
+      allowed: false, 
+      remaining: this.tokens,
+      retryAfter: Math.ceil((tokensNeeded - this.tokens) / this.refillRate)
+    };
+  }
+
+  refill() {
+    const now = Date.now();
+    const elapsed = (now - this.lastRefill) / 1000;
+    const newTokens = elapsed * this.refillRate;
+    this.tokens = Math.min(this.capacity, this.tokens + newTokens);
+    this.lastRefill = now;
   }
 }
 ```
 
-You can integrate this pattern into applications that Claude Code helps you build. When combined with proper error handling, this creates a self-regulating API client that gracefully manages request flow.
+This implementation supports multiple independent buckets per client, which works well when integrating with skills like the `frontend-design` skill that might make concurrent API calls.
 
-## Server-Side Rate Limiting Implementation
+## Rate Limiting Middleware for Express
 
-If you're building APIs that Claude Code interacts with, implementing server-side rate limiting protects your services. Several strategies work well depending on your infrastructure:
-
-### Token Bucket Implementation
-
-The token bucket algorithm allows burst traffic while maintaining an average rate:
-
-```python
-import time
-from collections import defaultdict
-
-class TokenBucket:
-    def __init__(self, capacity, refill_rate):
-        self.capacity = capacity
-        self.refill_rate = refill_rate
-        self.buckets = defaultdict(lambda: {'tokens': capacity, 'last_refill': time.time()})
-    
-    def consume(self, key, tokens=1):
-        bucket = self.buckets[key]
-        self._refill(bucket)
-        
-        if bucket['tokens'] >= tokens:
-            bucket['tokens'] -= tokens
-            return True
-        
-        return False
-    
-    def _refill(self, bucket):
-        now = time.time()
-        elapsed = now - bucket['last_refill']
-        bucket['tokens'] = min(
-            self.capacity,
-            bucket['tokens'] + elapsed * self.refill_rate
-        )
-        bucket['last_refill'] = now
-```
-
-### Sliding Window Counter
-
-For more precise limiting, the sliding window algorithm provides smoother rate distribution:
-
-```python
-from collections import deque
-import time
-
-class SlidingWindowRateLimiter:
-    def __init__(self, max_requests, window_seconds):
-        self.max_requests = max_requests
-        self.window_seconds = window_seconds
-        self.requests = deque()
-    
-    def is_allowed(self):
-        now = time.time()
-        cutoff = now - self.window_seconds
-        
-        while self.requests and self.requests[0] < cutoff:
-            self.requests.popleft()
-        
-        if len(self.requests) < self.max_requests:
-            self.requests.append(now)
-            return True
-        
-        return False
-```
-
-These implementations work well whether you're building APIs directly or using Claude Code with frameworks like Express.js, FastAPI, or Flask.
-
-## Handling Rate Limit Errors Gracefully
-
-When rate limits are exceeded, proper error handling ensures your application recovers smoothly. Claude Code can help you implement retry logic with exponential backoff:
+If you're building a web service that wraps Claude Code calls, integrate rate limiting as middleware:
 
 ```javascript
-async function fetchWithRetry(url, options, maxRetries = 3) {
+const rateLimit = new Map();
+
+function rateLimiter(options = {}) {
+  const { 
+    windowMs = 60000, 
+    maxRequests = 100,
+    keyFn = (req) => req.ip 
+  } = options;
+
+  return async (req, res, next) => {
+    const key = keyFn(req);
+    const now = Date.now();
+    
+    if (!rateLimit.has(key)) {
+      rateLimit.set(key, { count: 1, resetTime: now + windowMs });
+      return next();
+    }
+    
+    const client = rateLimit.get(key);
+    
+    if (now > client.resetTime) {
+      client.count = 1;
+      client.resetTime = now + windowMs;
+      return next();
+    }
+    
+    if (client.count >= maxRequests) {
+      return res.status(429).json({
+        error: 'Rate limit exceeded',
+        retryAfter: Math.ceil((client.resetTime - now) / 1000)
+      });
+    }
+    
+    client.count++;
+    next();
+  };
+}
+```
+
+Apply this middleware to routes handled by skills like `pdf` or `docx` that process multiple documents:
+
+```javascript
+app.post('/api/process-document', 
+  rateLimiter({ windowMs: 60000, maxRequests: 20 }),
+  async (req, res) => {
+    // Your document processing logic
+  }
+);
+```
+
+## Distributed Rate Limiting with Redis
+
+For multi-server deployments, centralize rate limiting state using Redis:
+
+```javascript
+const Redis = require('ioredis');
+const redis = new Redis(process.env.REDIS_URL);
+
+async function distributedRateLimit(key, limit, windowSeconds) {
+  const current = await redis.incr(key);
+  
+  if (current === 1) {
+    await redis.expire(key, windowSeconds);
+  }
+  
+  const ttl = await redis.ttl(key);
+  
+  if (current > limit) {
+    return { allowed: false, remaining: 0, retryAfter: ttl };
+  }
+  
+  return { allowed: true, remaining: limit - current };
+}
+```
+
+This pattern works seamlessly with Claude Code skills that coordinate across instances, such as the `supermemory` skill for distributed note synchronization.
+
+## Handling Rate Limit Responses
+
+When your application hits a rate limit, implement exponential backoff:
+
+```javascript
+async function callWithRetry(fn, maxRetries = 3) {
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     try {
-      const response = await fetch(url, options);
-      
-      if (response.status === 429) {
-        const retryAfter = response.headers.get('Retry-After');
-        const waitTime = retryAfter ? parseInt(retryAfter) * 1000 : Math.pow(2, attempt) * 1000;
-        
-        console.log(`Rate limited. Waiting ${waitTime}ms before retry...`);
-        await new Promise(r => setTimeout(r, waitTime));
+      return await fn();
+    } catch (error) {
+      if (error.status === 429 && attempt < maxRetries - 1) {
+        const delay = Math.pow(2, attempt) * 1000;
+        await new Promise(r => setTimeout(r, delay));
         continue;
       }
-      
-      return response;
-    } catch (error) {
-      if (attempt === maxRetries - 1) throw error;
-      await new Promise(r => setTimeout(r, Math.pow(2, attempt) * 1000));
+      throw error;
     }
   }
 }
 ```
 
-This pattern integrates well with applications built using the tdd skill for test-driven development, ensuring your rate limiting code has proper test coverage.
+The `tdd` skill pairs well with rate limiting development — write tests that verify your limiter correctly blocks excess requests and allows legitimate traffic.
 
-## Rate Limiting in Production Systems
+## Monitoring and Observability
 
-When deploying rate-limited APIs, consider these production considerations:
-
-Distributed rate limiting requires shared state across multiple instances. Redis provides an excellent backend for implementing centralized rate limiting that works across clustered deployments. The sliding window log algorithm works particularly well for distributed systems:
+Track rate limiter performance with custom metrics:
 
 ```javascript
-const redis = require('redis');
-const client = redis.createClient();
-
-async function isRateLimited(key, limit, windowSeconds) {
-  const now = Date.now();
-  const windowStart = now - (windowSeconds * 1000);
-  
-  await client.zremrangebyscore(key, 0, windowStart);
-  const count = await client.zcard(key);
-  
-  if (count >= limit) {
-    return true;
-  }
-  
-  await client.zadd(key, now, `${now}-${Math.random()}`);
-  await client.expire(key, windowSeconds);
-  
-  return false;
+function createInstrumentedLimiter(bucket, metrics) {
+  return {
+    async consume(tokens) {
+      const result = await bucket.consume(tokens);
+      
+      metrics.record('rate_limit_attempt', 1, {
+        outcome: result.allowed ? 'allowed' : 'denied'
+      });
+      
+      if (!result.allowed) {
+        metrics.record('rate_limit_retry', result.retryAfter, {
+          endpoint: metrics.endpointName
+        });
+      }
+      
+      return result;
+    }
+  };
 }
 ```
 
-Combine server-side limiting with client-side awareness. When your API returns rate limit information in headers, clients like those built with Claude Code can automatically throttle requests before hitting limits.
+This data helps you adjust limits based on actual usage patterns and identify potential issues before they impact users.
 
-## Testing Rate Limiting Implementations
+## Configuration Best Practices
 
-Proper testing ensures your rate limiting works correctly. Use the tdd skill to create comprehensive test suites that verify:
+Set rate limits based on your API tier and user requirements:
 
-1. Requests below the limit succeed
-2. Requests above the limit are rejected
-3. Rate limits reset after the window expires
-4. Concurrent requests are handled correctly
-5. Distributed rate limiting works across instances
+| Tier | Requests/Minute | Burst Allowance |
+|------|-----------------|-----------------|
+| Free | 10 | 5 |
+| Pro | 60 | 20 |
+| Enterprise | 300 | 100 |
 
-The supermemory skill helps track which endpoints need rate limiting as your API grows, ensuring consistent protection across your entire service.
+Document your rate limit headers consistently:
 
-## Summary
+```javascript
+function setRateLimitHeaders(res, result, limit) {
+  res.set('X-RateLimit-Limit', limit);
+  res.set('X-RateLimit-Remaining', result.remaining);
+  res.set('X-RateLimit-Reset', Math.floor(Date.now() / 1000) + (result.retryAfter || 60));
+}
+```
 
-Implementing API rate limiting with Claude Code involves both understanding server-side enforcement mechanisms and building client-side awareness into your applications. The token bucket and sliding window algorithms provide flexible approaches for different use cases.
+## Conclusion
 
-Key takeaways: always check rate limit headers in API responses, implement exponential backoff for retry logic, and use distributed solutions like Redis for production systems. Proper rate limiting protects your services while providing a good experience for legitimate users.
+Rate limiting protects your Claude Code integrations from abuse while ensuring reliable performance. The token bucket algorithm provides flexibility for burst handling, Redis enables distributed rate limiting across multiple servers, and proper observability helps you fine-tune limits over time.
+
+Start with simple in-memory limiting for single-server deployments, then scale to Redis-backed limiting as your usage grows. The `tdd` skill helps you test these implementations thoroughly before production deployment.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
