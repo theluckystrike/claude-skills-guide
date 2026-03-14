@@ -17,7 +17,7 @@ Building real-time applications requires reliable WebSocket implementations, and
 
 ## Setting Up Your WebSocket Project
 
-Before diving into implementation, ensure your development environment is properly configured. The [superMemory skill](https://theluckystrike.github.io/claude-skills-guide/super-memory-claude-code-skill/) pairs excellently with WebSocket projects since it helps maintain context across complex sessions—particularly useful when debugging connection states or managing multiple socket rooms.
+Before diving into implementation, ensure your development environment is properly configured. The [superMemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) pairs excellently with WebSocket projects since it helps maintain context across complex sessions—particularly useful when debugging connection states or managing multiple socket rooms.
 
 Initialize your project with the necessary dependencies:
 
