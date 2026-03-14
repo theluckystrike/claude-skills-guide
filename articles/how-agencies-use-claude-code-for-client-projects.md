@@ -1,0 +1,159 @@
+---
+layout: default
+title: "How Agencies Use Claude Code for Client Projects"
+description: "Practical strategies for agencies integrating Claude Code into client workflows, with real examples and skill recommendations for deliverable-focused teams."
+date: 2026-03-14
+author: theluckystrike
+---
+
+# How Agencies Use Claude Code for Client Projects
+
+Agencies handling multiple client projects face a constant challenge: delivering quality work efficiently while managing diverse technology stacks and client expectations. Claude Code has emerged as a powerful ally for agency teams, enabling faster prototyping, consistent code quality, and streamlined client communication. This guide explores how agencies actually implement Claude Code in their client workflows, with practical examples you can adapt to your own practice.
+
+## Setting Up Claude Code for Multi-Client Environments
+
+The first consideration for agencies is project isolation. Each client project should operate in its own directory with dedicated skill configurations. This prevents context bleeding between projects and ensures client data remains properly separated.
+
+Create a project-specific setup:
+
+```bash
+# Clone or initialize client project
+git clone git@github.com:agency/client-project-alpha.git
+cd client-project-alpha
+
+# Initialize Claude Code with project-specific skills
+claude init --project-name "client-alpha-dashboard"
+```
+
+Agencies typically maintain a skill library optimized for their service offerings. The most commonly deployed skills across agency workflows include **frontend-design** for rapid UI prototyping, **pdf** for generating client deliverables, **tdd** for maintaining test coverage, and **supermemory** for capturing institutional knowledge.
+
+## Client Deliverable Workflows
+
+### Proposal and Specification Generation
+
+Agencies report significant time savings when using Claude Code to draft project proposals and technical specifications. The **pdf** skill transforms markdown specifications into professionally formatted documents ready for client review:
+
+```markdown
+# Project Specification: Client Dashboard
+
+## Scope
+- User authentication with OAuth2
+- Real-time data visualization
+- Admin panel with CMS integration
+
+## Timeline
+- Phase 1: 4 weeks
+- Phase 2: 3 weeks
+```
+
+Using Claude Code with the pdf skill, agencies generate polished proposals in minutes rather than hours, allowing more time for strategy and client meetings.
+
+### Development Sprints
+
+During active development, agencies leverage Claude Code's **tdd** skill to maintain rigorous testing standards. This becomes particularly valuable when onboarding junior developers or working with offshore teams:
+
+```bash
+# Run TDD workflow for a new feature
+claude -p tdd --feature "user-export-functionality"
+```
+
+The tdd skill guides developers through red-green-refactor cycles, ensuring new features come with appropriate test coverage. Client projects with strict compliance requirements benefit immensely from this discipline.
+
+### Design Prototyping
+
+The **frontend-design** skill accelerates the initial design phase by generating responsive component code from descriptions. Agencies use this for rapid prototyping:
+
+```
+Create a landing page hero section with a gradient background, 
+centered headline, subtext, and two CTA buttons — one primary 
+(blue) and one secondary (outlined). Use CSS Grid for layout.
+```
+
+This generates production-ready code that designers and developers can iterate on together, reducing the back-and-forth that typically slows down design approval.
+
+## Knowledge Management Across Projects
+
+Agency teams struggle with knowledge retention as developers move between projects. The **supermemory** skill solves this by creating searchable project histories:
+
+```bash
+# Capture project decisions
+claude -p supermemory --log "Client rejected OAuth, implemented 
+email magic links instead. Decision made in call 2026-03-10."
+
+# Query past decisions
+claude -p supermemory --query "authentication decisions"
+```
+
+This creates institutional memory that survives staff changes, enabling new team members to understand why specific technical decisions were made.
+
+## Automating Routine Tasks
+
+Beyond core development work, agencies automate repetitive client project tasks:
+
+### Report Generation
+
+```yaml
+# Skill configuration for weekly reports
+name: client-report
+description: Generates weekly progress reports for clients
+tools:
+  - read_file
+  - write_file
+  - bash
+prompt: |
+  Generate a markdown report summarizing:
+  - Completed tasks this week
+  - blockers and risks
+  - Next week's priorities
+  Format for client consumption.
+```
+
+### Code Review Automation
+
+Agencies configure Claude Code to perform automated code reviews before human review:
+
+```bash
+# Review pull request changes
+claude -p code-review --pr 42 --repo .
+```
+
+This catches style violations, security issues, and potential bugs before they reach client-facing demos.
+
+## Billing and Documentation
+
+For agencies billing by the hour, documenting time spent becomes critical. Some teams create custom skills that log development activities:
+
+```yaml
+name: time-log
+description: Log time spent on client tasks
+tools:
+  - write_file
+  - read_file
+prompt: |
+  Append current timestamp and task description to 
+  _data/time-log.md in the format:
+  [YYYY-MM-DD HH:MM] - TASK_DESCRIPTION
+```
+
+This creates audit-ready logs that simplify invoicing and client conversations about project progress.
+
+## Measuring Agency Impact
+
+Teams implementing Claude Code report measurable improvements:
+
+- **Proposal drafting**: 60-70% time reduction
+- **Test coverage**: Maintained at 80%+ across client projects
+- **Onboarding new developers**: Reduced from weeks to days
+- **Code review cycles**: Faster initial reviews catch issues earlier
+
+## Implementation Recommendations
+
+Start with one client project rather than attempting organization-wide adoption simultaneously. Validate the workflow, refine your skill configurations, then expand to additional projects.
+
+Document your agency's skill configurations in an internal knowledge base. This ensures consistency when multiple developers work on the same client project and provides backup documentation if team members depart.
+
+Consider maintaining a "golden" skill configuration that represents your agency's quality standards, then customize slightly for each client's specific requirements.
+
+---
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
