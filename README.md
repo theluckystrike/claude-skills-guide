@@ -80,9 +80,9 @@ keyword: "error" OR "fix" OR "troubleshooting"
 ```
 claude-skills-guide/
 ├── articles/              # All guides in Markdown
-│   ├── what-are-claude-skills-and-how-to-use-them.md
-│   ├── claude-code-vs-cursor-2026-detailed-comparison.md
-│   ├── how-to-debug-claude-code-skill-not-working.md
+│   ├── what-is-claude-code-and-why-developers-love-it-2026.md
+│   ├── claude-cowork-vs-cursor-ai-editor-comparison-2026.md
+│   ├── claude-code-crashes-when-loading-skill-debug-steps.md
 │   └── ...
 ├── _layouts/
 │   └── post.html          # Article layout with Schema.org markup
