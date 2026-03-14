@@ -3,7 +3,11 @@ layout: default
 title: "Securing MCP Servers in Production Environments"
 description: "A practical guide to hardening Model Context Protocol servers for production workloads. Learn authentication patterns, network security, and deployment strategies."
 date: 2026-03-14
-author: theluckystrike
+categories: [guides]
+tags: [claude-code, claude-skills, mcp, security, authentication, devops]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 ---
 
 # Securing MCP Servers in Production Environments
