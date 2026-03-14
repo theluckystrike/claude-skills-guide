@@ -10,7 +10,7 @@ score: 9
 
 # Benchmarking Claude Code Skills Performance Guide
 
-Performance benchmarking for Claude Code skills helps you identify bottlenecks, optimize execution time, and reduce token consumption. Whether you are running simple skills or complex multi-step workflows, measuring key metrics lets you make data-driven decisions about skill selection and configuration.
+Performance benchmarking for Claude Code skills helps you identify bottlenecks, optimize execution time, and reduce token consumption. Whether you are running simple skills or complex multi-step workflows, measuring key metrics lets you make data-driven decisions about skill selection and configuration. If your first priority is cutting API spend rather than raw speed, the [token optimization guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) is the right companion to this one.
 
 This guide covers the essential metrics to track, practical measurement techniques, and real-world optimization strategies using specific skill examples.
 
@@ -107,7 +107,7 @@ Total execution: 45-90 seconds
 Token usage: 8000-15000 tokens
 ```
 
-The **supermemory** skill introduces persistent context, which can reduce initialization time in long sessions but adds memory overhead. Benchmark both approaches to see which fits your workflow.
+The **supermemory** skill introduces persistent context, which can reduce initialization time in long sessions but adds memory overhead. Benchmark both approaches to see which fits your workflow. For a deeper look at how Claude evaluates model outputs and measures quality, see the [LLM evaluation and benchmarking workflow](/claude-skills-guide/articles/claude-code-llm-evaluation-and-benchmarking-workflow/).
 
 ## Benchmarking Real-World Scenarios
 
@@ -149,7 +149,7 @@ Run benchmarks across different scenarios:
 
 ## Identifying Performance Bottlenecks
 
-After collecting baseline metrics, analyze results to find bottlenecks:
+After collecting baseline metrics, analyze results to find bottlenecks. If slow initialization keeps showing up, the [skill slow performance speed-up guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/) covers targeted fixes for each symptom type:
 
 | Symptom | Likely Cause | Solution |
 |---------|--------------|----------|
@@ -208,7 +208,7 @@ wait
 
 ## Continuous Benchmarking
 
-Integrate performance testing into your CI pipeline. Run skill benchmarks on every commit to catch regressions:
+Integrate performance testing into your CI pipeline. Run skill benchmarks on every commit to catch regressions. The [Claude Skills with GitHub Actions CI/CD Pipeline guide](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) explains how to wire these benchmarks into your existing workflow automation:
 
 ```yaml
 # .github/workflows/skill-benchmark.yml
@@ -234,5 +234,12 @@ Benchmarking Claude Code skills requires measuring execution time, token usage, 
 Focus on the metrics that impact your specific workflow. A solo developer optimizing for speed has different priorities than an enterprise team managing costs across hundreds of skill invocations daily.
 
 Regular benchmarking catches performance regressions early and validates optimization efforts. The **tdd**, **frontend-design**, **pdf**, **xlsx**, and **supermemory** skills each have distinct performance profiles — understanding these helps you choose and configure skills for maximum efficiency.
+
+## Related Reading
+
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/)
+- [LLM Evaluation and Benchmarking with Claude Code 2026](/claude-skills-guide/articles/claude-code-llm-evaluation-and-benchmarking-workflow/)
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/articles/claude-skills-slow-performance-speed-up-guide/)
+- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

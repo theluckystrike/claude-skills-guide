@@ -14,7 +14,7 @@ Running large language models locally gives you privacy, control, and flexibilit
 
 ## Understanding the Integration Architecture
 
-Claude Code communicates with local models through LM Studio's OpenAI-compatible API. This means you can use Claude Code's skill system while routing requests through your locally hosted model instead of Anthropic's API. The integration requires two main components: LM Studio running a compatible model, and Claude Code configured to use LM Studio as its inference endpoint.
+Claude Code communicates with local models through LM Studio's OpenAI-compatible API. This means you can use Claude Code's skill system while routing requests through your locally hosted model instead of Anthropic's API. The integration requires two main components: LM Studio running a compatible model, and Claude Code configured to use LM Studio as its inference endpoint. If you are also considering Ollama as a local inference backend, the [Ollama self-hosted guide](/claude-skills-guide/articles/claude-skills-with-local-llm-ollama-self-hosted-guide/) covers that setup in detail.
 
 LM Studio serves as a local server that exposes an API matching OpenAI's format. Claude Code can connect to this endpoint, treating your local model as if it were communicating with any other AI provider. This architectural approach lets you maintain full control over your development environment while using Claude's skill framework.
 
@@ -46,7 +46,7 @@ Claude Code reads connection settings from configuration files. Create or modify
 
 Replace `your-model-name` with the exact model identifier shown in your LM Studio models list. The api_key field is not required for local connections, but some configurations expect a placeholder value.
 
-For project-specific configuration, create a `.claude.json` file in your project root. This approach lets different projects use different local models or API endpoints.
+For project-specific configuration, create a `.claude.json` file in your project root. This approach lets different projects use different local models or API endpoints. Understanding Claude Code's built-in permission model is also worth reviewing—the [Claude Code permissions and security guide](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/) explains what the runtime enforces even when pointing at a local endpoint.
 
 ## Creating Custom Skills for Local Model Execution
 
@@ -115,12 +115,19 @@ If skill responses seem inconsistent, your local model may need different prompt
 
 For advanced use cases, consider running multiple LM Studio instances on different ports, each with specialized models. A coding-focused model handles skill execution while a general-purpose model handles conversation. Configure separate Claude Code projects for each endpoint.
 
-The `supermemory` skill can integrate with local vector databases, keeping all your project context and documentation searchable without external services. This creates a completely offline development assistant that understands your codebase intimately.
+The `supermemory` skill can integrate with local vector databases, keeping all your project context and documentation searchable without external services. This creates a completely offline development assistant that understands your codebase intimately. For teams that need complete isolation from the internet, the [air-gapped Claude skills environment guide](/claude-skills-guide/articles/how-do-i-use-claude-skills-in-an-air-gapped-environment/) covers network restrictions and additional considerations.
 
 ## Conclusion
 
 Integrating Claude Code with LM Studio creates a private, controllable AI-assisted development environment. Skills like `pdf`, `frontend-design`, `tdd`, and `supermemory` work seamlessly with local models once you configure the connection properly. This setup suits developers with privacy requirements, teams working with sensitive codebases, or anyone wanting full control over their AI tooling.
 
 The integration requires initial configuration but pays dividends in flexibility and data control. Your development workflow stays entirely local while benefiting from Claude's skill ecosystem.
+
+## Related Reading
+
+- [Claude Skills with Local LLM Ollama Self-Hosted Guide](/claude-skills-guide/articles/claude-skills-with-local-llm-ollama-self-hosted-guide/)
+- [Claude Code Permissions Model and Security Guide](/claude-skills-guide/articles/claude-code-permissions-model-security-guide-2026/)
+- [How to Use Claude Skills in an Air-Gapped Environment](/claude-skills-guide/articles/how-do-i-use-claude-skills-in-an-air-gapped-environment/)
+- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

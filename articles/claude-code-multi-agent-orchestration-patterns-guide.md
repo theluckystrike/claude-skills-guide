@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Multi-Agent Orchestration Patterns Guide
 
-Building complex software systems often requires coordinating multiple specialized agents, each handling different aspects of a task. Claude Code provides a flexible foundation for multi-agent orchestration through its skill system, allowing you to define and coordinate agents that work together on sophisticated workflows.
+Building complex software systems often requires coordinating multiple specialized agents, each handling different aspects of a task. Claude Code provides a flexible foundation for multi-agent orchestration through its skill system, allowing you to define and coordinate agents that work together on sophisticated workflows. For a broader overview of how Claude agents communicate and share context, the [multi-agent orchestration with Claude subagents guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/) is a helpful companion.
 
 This guide explores practical patterns for orchestrating multiple agents using Claude Code skills, with real code examples you can adapt to your projects.
 
@@ -81,7 +81,7 @@ agents:
 
 Each agent operates independently on its assigned subtask. You then coordinate results through a merge step that combines outputs into a unified deliverable.
 
-The tdd skill pairs well in parallel scenarios—one agent can write tests while another implements features, then you synchronize for integration testing.
+The tdd skill pairs well in parallel scenarios—one agent can write tests while another implements features, then you synchronize for integration testing. The [Claude Code multi-agent subagent communication guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/) digs into the mechanics of how results are passed between agents in these setups.
 
 ## Pattern 3: Hierarchical Agent Structure
 
@@ -148,7 +148,7 @@ class EventDrivenAgents:
                 self.emit(result["next_event"])
 ```
 
-Using the pdf skill for document events, the documentation skill for content updates, or security-audit for code changes creates a responsive system that adapts to your workflow events.
+Using the pdf skill for document events, the documentation skill for content updates, or security-audit for code changes creates a responsive system that adapts to your workflow events. A supervisor/worker pattern is often used for these event-driven setups—the [supervisor agent and worker agent pattern guide](/claude-skills-guide/articles/supervisor-agent-worker-agent-pattern-claude-code/) covers that architecture in detail.
 
 ## Skill Composition Techniques
 
@@ -194,5 +194,12 @@ Each skill focuses on its domain while receiving context from previous agents, p
 Keep agent workflows maintainable by documenting the orchestration logic separately from skill definitions. Use version control for your skill configurations. Test your agent pipelines with representative tasks before deploying to production.
 
 Start with sequential pipelines for straightforward tasks, then evolve toward hierarchical or event-driven patterns as your needs grow more complex.
+
+## Related Reading
+
+- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/articles/multi-agent-orchestration-with-claude-subagents-guide/)
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/articles/claude-code-multi-agent-subagent-communication-guide/)
+- [Supervisor Agent and Worker Agent Pattern with Claude Code](/claude-skills-guide/articles/supervisor-agent-worker-agent-pattern-claude-code/)
+- [Claude Opus Orchestrator and Sonnet Worker Architecture](/claude-skills-guide/articles/claude-opus-orchestrator-sonnet-worker-architecture/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
