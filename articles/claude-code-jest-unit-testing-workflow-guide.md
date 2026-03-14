@@ -128,8 +128,8 @@ describe('formatUserDisplay', () => {
 
 The **tdd** skill enhances your test-first workflow by guiding you through the red-green-refactor cycle. Activate it in your Claude Code session when you want to practice test-driven development:
 
-```markdown
-[system: Use the tdd skill for this session]
+```
+/tdd
 ```
 
 The tdd skill helps you write failing tests before implementation, ensuring your code evolves with test coverage from the start.
@@ -181,7 +181,7 @@ describe('UserService', () => {
 });
 ```
 
-The **superagent** skill can help when testing HTTP requests, while **nock** is useful for intercepting actual network calls during testing.
+For HTTP request testing, **nock** is useful for intercepting actual network calls during testing.
 
 ## Test Organization Patterns
 
@@ -230,7 +230,7 @@ When running Jest in CI environments alongside Claude Code, ensure your test com
 }
 ```
 
-The **github-actions** skill can help you set up automated test runs on pull requests, ensuring tests pass before merging code.
+Claude Code can help you set up automated test runs on pull requests by generating GitHub Actions workflow configurations, ensuring tests pass before merging code.
 
 ## Key Takeaways
 

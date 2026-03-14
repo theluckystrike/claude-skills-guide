@@ -42,51 +42,36 @@ Avoid including lengthy lists of capabilities or detailed usage examples in the 
 
 When quick fixes are insufficient, splitting your skill into multiple focused files becomes necessary. The composition pattern allows you to reference other files from a main skill file, distributing content across several smaller documents.
 
-Create a main skill file that serves as an entry point:
+Create separate focused skill files for each concern rather than one monolithic file:
 
-```yaml
----
-name: "project-assistant"
-description: "Main project coordination skill"
----
-
-# Project Assistant
-
-You are a technical lead helping with software development.
-
-@include: skills/architecture.md
-@include: skills/testing.md  
-@include: skills/deployment.md
+```
+~/.claude/skills/project-assistant.md      (entry-point overview)
+~/.claude/skills/project-architecture.md   (code structure guidelines)
+~/.claude/skills/project-testing.md        (test patterns)
+~/.claude/skills/project-deployment.md     (release procedures)
 ```
 
-Then create separate files for each concern. The `architecture.md` file contains only code structure guidelines, `testing.md` covers test patterns, and `deployment.md` handles release procedures. Claude loads each referenced file only when needed, reducing the initial context burden.
+Invoke only the skill relevant to your current task. When working on architecture decisions, use `/project-architecture`. When writing tests, switch to `/project-testing`. This keeps the active context lean.
 
-This approach mirrors how the `supermemory` skill manages persistent context across sessions. By externalizing large content blocks and loading them selectively, you maintain comprehensive instructions without overwhelming the context window.
+This approach mirrors how the `supermemory` skill manages persistent context across sessions. By splitting concerns across files and loading them selectively, you maintain comprehensive instructions without overwhelming the context window.
 
 ## Lazy Loading for Large Projects
 
 For projects with extensive codebases, lazy loading provides the most elegant solution. Structure your skill to load detailed information only when specific topics arise during conversation.
 
-The `frontend-design` skill demonstrates this pattern effectively. Rather than embedding complete component libraries and design systems in the main file, it references external documentation files that Claude reads only when you ask about specific components:
+A well-designed skill file achieves lazy loading by instructing Claude to ask you for more details before generating, rather than embedding all reference material upfront. For example, a frontend skill might say:
 
-```yaml
----
-name: "frontend-design"
-description: "Frontend development assistant"
----
-
+```markdown
 # Frontend Design Assistant
 
 You help build user interfaces using modern frameworks.
 
-When asked about buttons or UI components, refer to:
-@load: docs/components/buttons.md
+When asked about buttons or UI components, ask which design system the project uses before generating code.
 
-When asked about forms, refer to:
-@load: docs/components/forms.md
+When asked about forms, ask for validation requirements and the form library in use.
 ```
 
-The `@load` directive tells Claude to read that file when needed, rather than processing all component documentation simultaneously. This pattern scales to any skill with large amounts of reference material.
+This pattern scales to any skill with large amounts of reference material—Claude gathers context on demand rather than processing all possible documentation upfront.
 
 ## Token Budgeting Techniques
 
@@ -145,7 +130,7 @@ wc -c skills/*.md
 
 Files exceeding 20KB (approximately 5,000 tokens) warrant review. Set up a pre-commit hook if your team uses shared skills to catch oversized files before they enter your workflow.
 
-Building skills with optimization in mind from the start prevents context window issues later. The `claude-skill-lazy-loading-token-savings-explained-deep-dive` skill provides detailed guidance on designing skills that scale efficiently as your project grows.
+Building skills with optimization in mind from the start prevents context window issues later. Apply the principles in this guide when writing new skills to keep them lean and focused from day one.
 
 ## Conclusion
 

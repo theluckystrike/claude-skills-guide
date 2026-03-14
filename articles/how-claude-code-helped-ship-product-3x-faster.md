@@ -37,7 +37,7 @@ Consider adding a new button component to a React project. Without automation, y
 With the `frontend-design` skill, you provide the component requirements and Claude executes the entire chain:
 
 ```
-/skill frontend-design
+/frontend-design
 Create a PrimaryButton component with:
 - Variants: primary, secondary, ghost
 - Sizes: sm, md, lg
@@ -83,11 +83,9 @@ Shipping product faster means nothing if documentation lags behind. The `pdf` an
 
 For API documentation, the `pdf` skill can read your OpenAPI spec and generate formatted documentation:
 
-```bash
-/skil pdf
-Generate API documentation from openapi.yaml
-Output: ./docs/api-reference.pdf
-Include: endpoints, request/response schemas, authentication requirements
+```
+/pdf
+Generate API documentation from openapi.yaml. Include all endpoints, request/response schemas, and authentication requirements. Output to ./docs/api-reference.pdf.
 ```
 
 The `docx` skill follows similar patterns for Word documents, which many enterprises require for formal documentation. Both skills accept markdown input and convert it with proper formatting, headers, and layout.
@@ -101,9 +99,7 @@ Projects accumulate knowledge over time—architecture decisions, debugging disc
 When debugging an issue, you can invoke supermemory to search past conversations:
 
 ```
-/skill supermemory
-Find all discussions about the payment gateway integration
-and any workarounds discovered
+/supermemory What do you know about the payment gateway integration and any workarounds we discovered?
 ```
 
 This prevents teams from rediscovering solutions. A bug that took two days to solve stays solved because the next developer can find the resolution through supermemory instead of repeating the investigation.
@@ -127,20 +123,16 @@ Start with one skill that matches your most repetitive task. If your team spends
 
 Skills are defined in `.md` files in your project's `.claude/skills/` directory. You can customize existing skills or create new ones for your team's specific patterns.
 
-```yaml
+```markdown
 ---
 name: code-review
 description: Standardized code review workflow
-tools:
-  - read_file
-  - bash
-max_turns: 15
 ---
 
 When reviewing code:
-1. read_file the implementation
-2. Check for TypeScript errors: npx tsc --noEmit
-3. Run the linter: npx eslint --fix
+1. Read the implementation files shared in the conversation
+2. Check for TypeScript errors: run `npx tsc --noEmit`
+3. Run the linter: `npx eslint --fix`
 4. Provide feedback on: logic issues, test coverage, performance concerns
 ```
 

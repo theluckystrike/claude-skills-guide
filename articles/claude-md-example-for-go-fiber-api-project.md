@@ -264,8 +264,7 @@ Generate tests for all CRUD endpoints in my task API, including edge cases like 
 For complex projects spanning multiple sessions, consider using the supermemory skill to maintain context:
 
 ```
-/super-memory
-Save the current task API project structure and the authentication middleware decisions we made.
+/supermemory Remember: the current task API project structure and the authentication middleware decisions we made.
 ```
 
 This ensures Claude remembers project-specific decisions across sessions.

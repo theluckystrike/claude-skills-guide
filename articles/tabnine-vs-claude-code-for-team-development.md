@@ -83,19 +83,17 @@ Tabnine offers team settings that allow administrators to configure which patter
 
 Claude Code transforms team collaboration through its skill system. Teams can create shared skills that encapsulate best practices, coding standards, and domain-specific knowledge. For a guide to writing your own team skills, see [how to write a skill .md file for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/). A team might create a skill for their specific tech stack:
 
-```yaml
-# Example: team-code-standards skill manifest
+```markdown
+---
 name: team-code-standards
-version: 1.0.0
 description: Enforces team coding standards and patterns
-capabilities:
-  - code_review
-  - refactoring
-  - test_generation
-config:
-  linting_rules: .eslintrc.team.js
-  testing_framework: vitest
-  component_structure: atomic-design
+---
+
+When generating or reviewing code, follow these team standards:
+- Use Vitest for all unit tests
+- Follow atomic design for component structure
+- Lint with .eslintrc.team.js rules before suggesting code
+- Prefer composition over inheritance
 ```
 
 Skills like `frontend-design` help maintain consistency in UI code, while `tdd` skills ensure test-driven development practices are followed across the team.
@@ -106,10 +104,10 @@ Tabnine integrates seamlessly with most IDEs through plugins, requiring minimal 
 
 Claude Code integrates differently—it often serves as a companion process rather than a direct IDE plugin. Teams use it for:
 
-- Generating comprehensive documentation with `docs-generation` skills
-- Creating API clients and schemas with `api-design` skills
-- Managing database migrations with `database-migration` skills
-- Running automated tests with `tdd` workflow skills
+- Generating comprehensive documentation with the `pdf` and `docx` skills
+- Creating API clients and schemas through direct prompting
+- Managing database migrations with `tdd`-driven workflows
+- Running automated tests with `tdd` and `webapp-testing` skills
 
 The [supermemory skill proves particularly valuable for teams](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), enabling Claude Code to maintain context across sessions and remember team-specific preferences, architectural decisions, and coding conventions.
 

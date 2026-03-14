@@ -33,21 +33,11 @@ Claude prioritizes project-level configuration over global settings. Understandi
 
 ## Common Causes and Solutions
 
-### 1. YAML or Markdown Syntax Errors
+### 1. Markdown Formatting Errors
 
-The most frequent culprit is syntax errors in your configuration file. Even small mistakes prevent parsing.
+The most frequent culprit is formatting errors in your CLAUDE.md file. CLAUDE.md is a plain Markdown file—not a YAML config file. Claude reads it as instructions.
 
-**Problematic configuration:**
-```markdown
-# CLAUDE.md
----
-system:
-  rules: 
-    - "Use const instead of var"
-    - "Prefer arrow functions"
-```
-
-**Fixed configuration:**
+**Problematic configuration (CLAUDE.md misused as YAML):**
 ```markdown
 # CLAUDE.md
 ---
@@ -55,9 +45,20 @@ system:
   rules:
     - "Use const instead of var"
     - "Prefer arrow functions"
+---
 ```
 
-Notice the incorrect indentation and missing colon after `rules`. YAML is strict about whitespace and syntax.
+**Fixed configuration (plain Markdown instructions):**
+```markdown
+# CLAUDE.md
+
+## Coding Standards
+
+- Use const instead of var
+- Prefer arrow functions
+```
+
+CLAUDE.md works best as clear, direct instructions written in Markdown prose or bullet lists. Avoid YAML front matter blocks in the body—Claude treats the file as instructions, not structured config.
 
 ### 2. Cache Issues Requiring Restart
 
@@ -105,43 +106,19 @@ When both project and global configs exist, project settings override global one
 claude --debug 2>&1 | grep -i config
 ```
 
-**Merge settings properly** by explicitly referencing global config in your project:
-```markdown
-# CLAUDE.md
----
-extends: ~/.claude/CLAUDE.md
-
-additional_rules:
-  - "Always prefix database queries with comments"
-```
+**Structure settings properly** by placing project-specific instructions in your project `CLAUDE.md` and global defaults in `~/.claude/CLAUDE.md`. Since project-level takes precedence, copy or reference any global conventions you need into your project file.
 
 ### 5. Skill Loading Failures
 
-If you're loading Claude skills like `frontend-design`, `pdf`, `ttd`, or `supermemory` through configuration, failures often go unnoticed.
+If you're using Claude skills like `frontend-design`, `pdf`, `tdd`, or `supermemory`, failures to activate them are usually because the skill file is missing or misnamed. Skills are not loaded through CLAUDE.md configuration—they are invoked during a session with `/skill-name`.
 
-**Proper skill loading syntax:**
-```markdown
-# CLAUDE.md
----
-skills:
-  - name: frontend-design
-    enabled: true
-  - name: pdf
-    enabled: true
-  - name: tdd
-    enabled: true
-  - name: supermemory
-    enabled: true
-```
-
-Verify skills are actually installed:
+Verify skills are actually installed by checking the skills directory:
 ```bash
 # List available skills
-claude skill list
-
-# Install a missing skill
-claude skill install frontend-design
+ls ~/.claude/skills/
 ```
+
+If a skill file is missing, place the correct `.md` file in `~/.claude/skills/` and restart your session.
 
 ### 6. JSON Configuration Errors
 
@@ -198,13 +175,11 @@ When facing configuration issues, follow this diagnostic sequence:
 **Minimal test configuration:**
 ```markdown
 # CLAUDE.md
----
-test_mode: true
-system:
-  prompt: "Reply with 'Config working' to confirm loading"
+
+Reply with 'Config working' to confirm this file is loading correctly.
 ```
 
-If this minimal config works, progressively add your full configuration to identify the problematic section.
+If Claude acknowledges this instruction at the start of a session, your CLAUDE.md is loading correctly. Progressively add your full instructions to identify which section causes problems.
 
 ## Advanced: Environment Variable Interference
 
@@ -215,14 +190,12 @@ Environment variables can override file-based settings. Check for conflicting va
 env | grep -i CLAUDE
 ```
 
-Common overrides include:
-- `CLAUDE_CONFIG_PATH`
-- `CLAUDE_SETTINGS_FILE`
-- `ANTHROPIC_API_KEY`
+The main environment variable Claude Code uses is:
+- `ANTHROPIC_API_KEY` — authentication for the API
 
-Temporarily unset these to test:
+Temporarily unset it to test if it is causing unexpected behavior:
 ```bash
-unset CLAUDE_CONFIG_PATH
+unset ANTHROPIC_API_KEY
 claude --verbose
 ```
 
@@ -236,7 +209,7 @@ claude --verbose
 
 ## Summary
 
-Claude.md configuration issues typically stem from syntax errors, caching, or file placement. By validating your configuration, ensuring correct naming and location, and restarting Claude after changes, you can resolve most problems. When skills like `frontend-design`, `pdf`, `tdd`, or `supermemory` fail to load, verify both the configuration syntax and the skill installation status.
+Claude.md configuration issues typically stem from syntax errors, caching, or file placement. By validating your configuration, ensuring correct naming and location, and restarting Claude after changes, you can resolve most problems. When skills like `frontend-design`, `pdf`, `tdd`, or `supermemory` fail to activate, verify the skill file exists in `~/.claude/skills/` and invoke them correctly with `/skill-name` during your session.
 
 For persistent issues, the debug and verbose flags provide detailed information about what Claude reads and ignores. Systematic debugging, combined with version-controlled configuration, prevents these issues from recurring.
 

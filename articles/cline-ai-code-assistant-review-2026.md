@@ -64,7 +64,7 @@ However, several strategies enable cross-pollination:
 
 3. **MCP server compatibility**: Both tools increasingly support Model Context Protocol servers, enabling shared tool access. An MCP server configured for database operations works with either assistant. The [Claude Code MCP server setup guide](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) covers how to configure these shared servers.
 
-For developers invested in the Claude skills ecosystem, this interoperability matters. The algorithmic-art skill for generative visuals and canvas-design skill for visual outputs remain Claude Code-exclusive, but infrastructure-focused skills increasingly work across platforms.
+For developers invested in the Claude skills ecosystem, this interoperability matters. The canvas-design skill for visual outputs remains Claude Code-exclusive, but infrastructure-focused skills increasingly work across platforms.
 
 ## Limitations and Considerations
 

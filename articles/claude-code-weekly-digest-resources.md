@@ -31,7 +31,7 @@ This uniform interface means you can chain skills together in a single session. 
 
 Several community-maintained collections track the best new skills, prompts, and workflows. These digests typically surface new skills, highlight underutilized features, and provide real-world usage examples that documentation alone cannot offer.
 
-The **supermemory** skill deserves special attention for developers who want to build personal knowledge bases from their Claude interactions. When you invoke `/supermemory save this code pattern for React useEffect cleanup`, it indexes the context and makes it retrievable later. This creates a growing library of solutions you've discovered through Claude sessions.
+The **supermemory** skill deserves special attention for developers who want to build personal knowledge bases from their Claude interactions. When you invoke `/supermemory Remember: this React useEffect cleanup pattern`, it indexes the context and makes it retrievable later. This creates a growing library of solutions you've discovered through Claude sessions.
 
 For frontend developers, the **frontend-design** skill provides a bridge between design systems and code. Weekly digests covering this skill often include new component patterns, accessibility improvements, and responsive layout techniques that work across frameworks.
 
@@ -97,9 +97,9 @@ These visuals integrate directly into documentation or presentation materials.
 
 Rather than relying solely on weekly digests, consider building a personal collection using the **supermemory** skill. The workflow involves:
 
-1. When Claude solves a problem especially well, invoke `/supermemory save this pattern`
-2. Tag solutions by language, framework, or problem type
-3. Retrieve later with `/supermemory find patterns related to React hooks`
+1. When Claude solves a problem especially well, invoke `/supermemory Remember: this pattern for [problem type]`
+2. Tag solutions by language, framework, or problem type in the description
+3. Retrieve later by asking `/supermemory What patterns do you know related to React hooks?`
 
 This creates a compound knowledge base that improves over time. Unlike static documentation, your personal collection adapts to your specific needs.
 
@@ -112,7 +112,7 @@ Claude Code skills receive updates through community contribution. Check the off
 - Deprecated skill notices
 - Breaking changes in skill behavior
 
-The **algorithmic-art** skill, for example, received significant updates in early 2026 with new seeded randomness controls. Following the digest ensures you catch improvements like these rather than continuing to use outdated patterns.
+The **canvas-design** skill, for example, continues to expand its visual output capabilities. Following the digest ensures you catch improvements like these rather than continuing to use outdated patterns.
 
 ## Community Resources Worth Bookmarking
 
@@ -132,7 +132,7 @@ Once you've established a baseline workflow, optimize for speed:
 2. **Use skill aliases** — Create shortcuts for complex invocations you run frequently
 3. **Combine with shell commands** — Skills integrate with bash, allowing pipelines like `/xlsx process data.csv` then pipe to custom scripts
 
-The **internal-comms** skill proves valuable for team communication, generating status updates and project reports that incorporate data from other skills.
+The **docx** skill proves valuable for team communication, generating status updates and project reports that incorporate data from other skills.
 
 ## Moving Forward
 
