@@ -54,7 +54,7 @@ This spreadsheet becomes your central source of truth. The skill understands for
 
 ```
 /supermemory store: video posts on Tuesday and Thursday drive 3x more clicks than Monday
-/supermemory find: best days for video content
+/supermemory What are the best days for video content?
 ```
 
 This creates institutional knowledge that improves over time.
