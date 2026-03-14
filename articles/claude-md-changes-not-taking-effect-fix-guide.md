@@ -1,223 +1,198 @@
 ---
+
 layout: default
 title: "Claude MD Changes Not Taking Effect Fix Guide"
-description: "A practical troubleshooting guide for developers experiencing issues with Claude CLI configuration changes not applying."
+description: "Troubleshoot and fix Claude Code MD file changes not taking effect. Practical solutions for developers dealing with markdown rendering issues."
 date: 2026-03-14
-author: "Claude Skills Guide"
+categories: [troubleshooting, guides]
+tags: [claude-code, md, markdown, troubleshooting, claude-skills, fix-guide]
+author: theluckystrike
 reviewed: true
-score: 7
+score: 8
 permalink: /claude-md-changes-not-taking-effect-fix-guide/
-categories: [troubleshooting]
-tags: [claude-code, claude-skills, troubleshooting, claude-md, configuration]
 ---
 
 # Claude MD Changes Not Taking Effect Fix Guide
 
-When you modify your Claude CLI configuration and the changes fail to apply, debugging can be frustrating. This guide covers the most common causes and proven solutions for developers and power users who need their Claude.md settings to work correctly. For guidance on structuring your CLAUDE.md in the first place, see [Claude MD best practices for large codebases](/claude-skills-guide/claude-md-best-practices-for-large-codebases/).
+When working with Claude Code and markdown files, you may encounter situations where your .md file changes do not appear to take effect. This guide provides practical solutions for developers and power users debugging markdown rendering issues in Claude Code environments.
 
-## Understanding Claude.md Configuration
+## Understanding the Problem
 
-Claude CLI reads configuration from a `CLAUDE.md` file in your project root or home directory. This file controls behavior like custom commands, system prompts, and skill loading. When changes appear to have no effect, the issue usually stems from one of several identifiable causes.
-
-Before troubleshooting, verify your configuration file location:
-
-```bash
-# Check for project-level config
-ls -la CLAUDE.md
-
-# Check for global config
-ls -la ~/.claude/CLAUDE.md
-```
-
-Claude prioritizes project-level configuration over global settings. Understanding this hierarchy helps diagnose conflicting settings.
+Markdown files processed through Claude Code may fail to render correctly due to several factors: caching mechanisms, front matter parsing issues, Liquid template conflicts, or configuration problems in your skill definitions. Identifying the root cause is essential for applying the right fix.
 
 ## Common Causes and Solutions
 
-### 1. Markdown Formatting Errors
+### 1. Front Matter Parsing Conflicts
 
-The most frequent culprit is formatting errors in your CLAUDE.md file. CLAUDE.md is a plain Markdown file—not a YAML config file. Claude reads it as instructions.
+One frequent issue involves Jekyll front matter interfering with markdown processing. If your .md file contains front matter with special characters or incorrect formatting, Claude Code may fail to parse it correctly.
 
-**Problematic configuration (CLAUDE.md misused as YAML):**
-```markdown
-# CLAUDE.md
+Check your file header:
+
+```yaml
 ---
-system:
-  rules:
-    - "Use const instead of var"
-    - "Prefer arrow functions"
+layout: default
+title: "My Article"
+description: Helpful description here
+date: 2026-03-14
+permalink: /my-article-slug/
 ---
 ```
 
-**Fixed configuration (plain Markdown instructions):**
-```markdown
-# CLAUDE.md
+Ensure colons have spaces after them and use quotes for values containing special characters. Avoid using unclosed quotes or missing required fields.
 
-## Coding Standards
+### 2. Liquid Template Tag Conflicts
 
-- Use const instead of var
-- Prefer arrow functions
+When your markdown content includes Liquid template tags like `{{ variable }}` or `{% if condition %}`, Jekyll attempts to process them as template directives. This causes rendering failures or displays raw tags instead of content.
+
+Wrap affected code blocks with raw tags:
+
+```liquid
+{% raw %}
+{{ my_variable }}
+{% if user.is_active %}
+  Content here
+{% endif %}
+{% endraw %}
 ```
 
-CLAUDE.md works best as clear, direct instructions written in Markdown prose or bullet lists. Avoid YAML front matter blocks in the body—Claude treats the file as instructions, not structured config.
+This prevents Liquid processing for specific sections. For inline code containing braces, use HTML entities: `{{` becomes `{{` in some configurations.
 
-### 2. Cache Issues Requiring Restart
+### 3. Caching Issues
 
-Claude CLI caches configuration on startup. Simple edits won't register until you restart the session.
-
-**Force a fresh start:**
-```bash
-# Kill existing Claude processes
-pkill -f claude
-
-# Or on Windows
-taskkill /F /IM claude.exe
-
-# Restart with verbose output to confirm reload
-claude --verbose
-```
-
-The `--verbose` flag helps confirm whether configuration loads successfully.
-
-### 3. Incorrect File Location or Naming
-
-Claude expects exact naming and placement:
+Claude Code and Jekyll both implement caching that may prevent your changes from appearing. Clear caches to force regeneration:
 
 ```bash
-# Correct names
-CLAUDE.md
-.claude.md
-~/.claude/settings.json
+# Clear Jekyll cache
+rm -rf _site/
+rm -rf .jekyll-cache/
 
-# Incorrect (will be ignored)
-Claude.md
-claude.md
-Claude.md.txt
+# Rebuild the site
+jekyll build --force
 ```
 
-The case-sensitive `.md` extension matters. Some users accidentally create `Claude.md` (capital C) which Claude ignores.
+If using Claude Code with specific skills like frontend-design or pdf, check the skill documentation for cache clearing procedures, as some skills maintain their own cache directories.
 
-### 4. Conflicting Global and Project Settings
+### 4. Syntax Errors in Configuration
 
-When both project and global configs exist, project settings override global ones. This causes confusion when global changes appear ineffective.
+Your _config.yml or skill-specific configuration may contain errors preventing proper markdown processing. Common issues include:
 
-**Check which config is active:**
+- Invalid YAML indentation
+- Missing required fields
+- Duplicate keys
+- Incorrect boolean values
+
+Validate your configuration using a YAML linter or run:
+
 ```bash
-# Claude will show which files it loads
-claude --debug 2>&1 | grep -i config
+jekyll doctor
 ```
 
-**Structure settings properly** by placing project-specific instructions in your project `CLAUDE.md` and global defaults in `~/.claude/CLAUDE.md`. Since project-level takes precedence, copy or reference any global conventions you need into your project file.
+This command identifies configuration problems affecting your build.
 
-### 5. Skill Loading Failures
+### 5. File Encoding and Line Endings
 
-If you're using Claude skills like `frontend-design`, `pdf`, `tdd`, or `supermemory`, failures to activate them are usually because the skill file is missing or misnamed. Skills are not loaded through CLAUDE.md configuration—they are invoked during a session with `/skill-name`. The [Claude skill .md format specification guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) shows the correct file format for skills to be recognized.
+Non-UTF8 encoding or Windows-style line endings (CRLF) sometimes cause parsing failures. Convert your files:
 
-Verify skills are actually installed by checking the skills directory:
 ```bash
-# List available skills
-ls ~/.claude/skills/
+# Convert to UTF-8 Unix line endings
+dos2unix your-file.md
+
+# Or using sed
+sed -i 's/\r$//' your-file.md
 ```
 
-If a skill file is missing, place the correct `.md` file in `~/.claude/skills/` and restart your session.
+Verify encoding with:
 
-### 6. JSON Configuration Errors
+```bash
+file your-file.md
+```
 
-For JSON-based settings (`~/.claude/settings.json`), trailing commas cause complete parse failures.
+### 6. Skill-Specific Rendering Problems
 
-**Broken:**
+When using specialized skills like pdf or docx skills to generate documents from markdown, ensure your skill version supports the markdown features you are using. Different skill versions handle heading levels, code blocks, and tables differently.
+
+Check skill configuration files for rendering options:
+
 ```json
 {
-  "preferences": {
-    "theme": "dark",
-    "maxTokens": 4096,
+  "markdown": {
+    "gfm": true,
+    "breaks": true,
+    "pedantic": false
   }
 }
 ```
 
-**Fixed:**
-```json
-{
-  "preferences": {
-    "theme": "dark",
-    "maxTokens": 4096
-  }
-}
-```
+Adjust these settings based on your skill requirements.
 
-Validate JSON before saving:
+### 7. Build Command Issues
+
+Your build process may be targeting the wrong directory or using outdated parameters. Verify your build command includes necessary flags:
+
 ```bash
-# Validate JSON syntax
-cat ~/.claude/settings.json | python3 -m json.tool > /dev/null && echo "Valid JSON"
+jekyll serve --watch --force_polling
 ```
 
-### 7. Permissions and File Ownership
+The `--watch` flag enables auto-regeneration when files change, while `--force_polling` helps in environments where file watching fails.
 
-On shared systems or when copying configuration files, incorrect permissions block reading.
+## Debugging Steps
 
-**Fix permissions:**
-```bash
-# Set appropriate ownership
-chown $USER:$USER ~/.claude/CLAUDE.md
-chmod 644 ~/.claude/CLAUDE.md
-```
+When changes still do not take effect after trying the solutions above, follow this systematic debugging approach:
 
-## Systematic Troubleshooting Process
+**Step 1: Verify file saved correctly**
+Open the file in a text editor and confirm your changes are present and saved.
 
-When facing configuration issues, follow this diagnostic sequence:
+**Step 2: Check for hidden characters**
+Use `cat -A your-file.md` to reveal hidden characters that may cause parsing issues.
 
-1. **Validate syntax** using YAML or JSON linters
-2. **Check file location** and exact naming
-3. **Restart Claude completely** (kill all processes)
-4. **Use debug flags** to confirm loading
-5. **Test with minimal config** to isolate the problem
-6. **Check for conflicts** between global and project settings
+**Step 3: Test in isolation**
+Create a minimal test file with basic markdown to confirm the rendering pipeline works:
 
-**Minimal test configuration:**
 ```markdown
-# CLAUDE.md
+---
+layout: default
+title: Test
+---
 
-Reply with 'Config working' to confirm this file is loading correctly.
+# Heading
+
+This is a test paragraph.
 ```
 
-If Claude acknowledges this instruction at the start of a session, your CLAUDE.md is loading correctly. Progressively add your full instructions to identify which section causes problems.
-
-## Advanced: Environment Variable Interference
-
-Environment variables can override file-based settings. Check for conflicting variables:
+**Step 4: Examine build output**
+Run the build with verbose output to identify specific errors:
 
 ```bash
-# List Claude-related environment variables
-env | grep -i CLAUDE
+jekyll build --verbose 2>&1 | tee build.log
 ```
 
-The main environment variable Claude Code uses is:
-- `ANTHROPIC_API_KEY` — authentication for the API
+**Step 5: Check permissions**
+Ensure file permissions allow reading and writing:
 
-Temporarily unset it to test if it is causing unexpected behavior:
 ```bash
-unset ANTHROPIC_API_KEY
-claude --verbose
+chmod 644 your-file.md
 ```
 
 ## Prevention Best Practices
 
-- **Version control your config** — Track changes to CLAUDE.md in git
-- **Use configuration validators** — Add pre-commit hooks to validate YAML/JSON
-- **Test incrementally** — Add one change at a time
-- **Maintain backups** — Keep working configurations in a dotfiles repository
-- **Document your setup** — Comment your CLAUDE.md for future reference
+Adopt these practices to minimize future issues:
+
+1. **Validate front matter** before saving using YAML validators
+2. **Use consistent line endings** (LF) across your project
+3. **Version control your configurations** to track changes causing issues
+4. **Test incremental changes** rather than large rewrites
+5. **Document skill-specific requirements** for your team
+
+## Related Skills and Tools
+
+Several Claude skills can assist with markdown and documentation workflows. The docx skill helps generate Word documents from markdown sources. For PDF generation, the pdf skill provides conversion capabilities. When building documentation sites, frontend-design skills assist with layout and styling. The tdd skill can help write tests verifying your markdown renders correctly across different outputs.
 
 ## Summary
 
-Claude.md configuration issues typically stem from syntax errors, caching, or file placement. By validating your configuration, ensuring correct naming and location, and restarting Claude after changes, you can resolve most problems. When skills like `frontend-design`, `pdf`, `tdd`, or `supermemory` fail to activate, verify the skill file exists in `~/.claude/skills/` and invoke them correctly with `/skill-name` during your session.
+Markdown rendering issues in Claude Code typically stem from front matter problems, Liquid conflicts, caching, or configuration errors. By systematically checking each potential cause and applying the corresponding fix, you can resolve most issues quickly. Remember to clear caches after making configuration changes, validate YAML syntax, and use raw tags when including template syntax in your content.
 
-For persistent issues, the debug and verbose flags provide detailed information about what Claude reads and ignores. Systematic debugging, combined with version-controlled configuration, prevents these issues from recurring.
+For persistent issues, consult your specific skill documentation or rebuild from a known-good configuration template.
 
-## Related Reading
-
-- [Claude MD Best Practices for Large Codebases](/claude-skills-guide/claude-md-best-practices-for-large-codebases/) — Structure your CLAUDE.md to avoid common configuration pitfalls from the start
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Understand the correct skill file format to prevent skill loading failures
-- [Claude MD Too Long: Context Window Optimization](/claude-skills-guide/claude-md-too-long-context-window-optimization/) — Optimize oversized CLAUDE.md files that may cause parsing slowdowns or truncation
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions to other common Claude Code configuration and skill issues
+---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
