@@ -54,7 +54,6 @@ Claude Code skills use a markdown-based format with YAML front matter to define 
 ---
 name: tdd-workflow
 description: Enforce test-driven development workflow
-trigger: Always active for test-related tasks
 ---
 
 # Test-Driven Development Skill

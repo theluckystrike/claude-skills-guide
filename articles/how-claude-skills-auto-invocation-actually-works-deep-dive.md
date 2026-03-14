@@ -33,13 +33,10 @@ The `triggers` block in a skill's front matter defines auto-invocation behavior:
 ---
 name: pdf
 description: Extract text and tables from PDF files
-triggers:
-  - phrase: user uploads or references a PDF file
-  - phrase: extract text or tables from a document
 ---
 ```
 
-Each phrase describes the kind of message that should trigger the skill. Matching is semantic.
+Each phrase in the description or body content describes the kind of message that should trigger the skill. Matching is semantic.
 
 ## How Semantic Pattern Matching Works
 
@@ -49,17 +46,16 @@ When you ask "run tests on this function," the system understands you are reques
 
 ### Specific Trigger Phrases Work Better Than Generic Ones
 
-```yaml
-triggers:
-  - phrase: write tests for a function
-  - phrase: add test coverage
+Describe specific trigger scenarios in the skill's body content:
+
+```
+When the user asks to write tests for a function, or requests added test coverage, apply this skill.
 ```
 
-A trigger phrase that is too generic creates noise:
+A trigger description that is too generic creates noise:
 
-```yaml
-triggers:
-  - phrase: help me with code  # fires on almost any development request
+```
+When the user asks for help with code  # fires on almost any development request
 ```
 
 ## Skill Loading and Context Merge
@@ -70,17 +66,16 @@ Once trigger conditions match, the skill instructions are injected into Claude's
 
 **State Management**: Skills like [`/supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) maintain persistent state across conversations. When auto-invoked, they load accumulated context from previous sessions.
 
-Example `/supermemory` trigger definition:
+Example `/supermemory` skill with trigger descriptions in the body:
 
 ```yaml
 ---
 name: supermemory
 description: Persistent context across sessions
-triggers:
-  - phrase: recall previous context
-  - phrase: what have we decided about
 ---
 ```
+
+The skill body can describe trigger scenarios: "Activate when the user asks to recall previous context or asks what has been decided about a topic."
 
 ## Debugging Auto-Invocation Issues
 
@@ -100,11 +95,10 @@ triggers:
 
 ## Practical Example: Tuning the TDD Skill
 
-```yaml
-triggers:
-  - phrase: write tests for
-  - phrase: test-driven development
-  - phrase: test coverage analysis
+Describe trigger scenarios in the skill's description or body to tune when it activates:
+
+```
+Activate this skill when the user asks to write tests, apply test-driven development, or perform test coverage analysis.
 ```
 
 This activates for test creation requests but stays dormant during general code discussion.

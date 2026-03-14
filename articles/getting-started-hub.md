@@ -102,8 +102,6 @@ Here is a minimal skill file:
 ---
 name: my-skill
 description: "What this skill does in one sentence"
-triggers:
-  - phrase: do the example task
 ---
 
 You are a specialist for this type of work.
@@ -114,7 +112,7 @@ When invoked, always:
 3. Report results clearly
 ```
 
-The `name` field is how you invoke the skill manually: `/my-skill`. The `description` field is used by Claude to understand when a skill is relevant. The `triggers` list defines phrases that activate the skill automatically, without you typing the slash command.
+The `name` field is how you invoke the skill manually: `/my-skill`. The `description` field is used by Claude to understand when a skill is relevant and when to activate it automatically.
 
 Claude Code ships with a set of official built-in skills covering the most common workflows: `pdf` for document processing, `tdd` for test-driven development, `xlsx` for spreadsheet automation, `docx` for Word documents, `pptx` for presentations, `frontend-design` for UI components, and `supermemory` for persistent context across sessions.
 
@@ -288,15 +286,7 @@ Claude Code skills can be invoked in two ways: explicitly with a slash command (
 
 Auto-invocation is controlled by the `triggers` block in a skill's front matter. When you send a message, Claude checks whether any installed skill has a trigger phrase that matches what you are asking. If there is a match, Claude loads that skill's body and applies its instructions without you typing anything extra.
 
-For example, a skill with this trigger:
-
-```yaml
-triggers:
-  - phrase: extract data from a PDF
-  - phrase: read this PDF file
-```
-
-...will activate automatically when you ask "can you read this PDF file and pull out the invoice totals?" You never type `/pdf`. Claude detects the match and loads the skill.
+For example, a skill whose description mentions PDF extraction will activate automatically when you ask "can you read this PDF file and pull out the invoice totals?" You never type `/pdf`. Claude detects the match and loads the skill.
 
 Auto-invocation keeps sessions fast for common tasks. For less common skills, or when you want precision control over which skill is active, explicit invocation with the slash command is more reliable.
 

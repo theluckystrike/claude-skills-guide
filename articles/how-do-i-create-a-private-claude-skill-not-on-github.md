@@ -54,7 +54,6 @@ Place this content in `~/.claude/skills/api-formatter.md`:
 ---
 name: api-formatter
 description: "Format and validate JSON API responses with consistent indentation and structure"
-author: your-username
 ---
 
 # API Response Formatter Skill

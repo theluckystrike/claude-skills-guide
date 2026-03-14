@@ -67,13 +67,15 @@ For projects where you want historical tracking, maintain a manual log file and 
 
 When processing documents with the `pdf` skill, token usage scales with document complexity:
 
-```bash
+```
 # Process a 10-page document
-claude "/pdf summarize the key points from contract.pdf"
+/pdf
+Summarize the key points from contract.pdf
 # Typical usage: 3,000-5,000 tokens
 
 # Process a 100-page document with table extraction
-claude "/pdf extract all tables and create markdown"
+/pdf
+Extract all tables and create markdown
 # Typical usage: 15,000-25,000 tokens
 ```
 
@@ -83,13 +85,15 @@ The `pdf` skill loads document content into context, so larger documents signifi
 
 The `tdd` skill generates test code based on your source files:
 
-```bash
+```
 # Generate tests for a single function
-claude "/tdd write pytest tests for this authentication function"
+/tdd
+Write pytest tests for this authentication function
 # Typical usage: 2,000-4,000 tokens
 
 # Generate comprehensive test suite for a module
-claude "/tdd create full test suite with unit tests, integration tests, and edge cases"
+/tdd
+Create full test suite with unit tests, integration tests, and edge cases
 # Typical usage: 8,000-15,000 tokens
 ```
 
@@ -99,20 +103,23 @@ The skill consumes tokens both from reading your source code and generating test
 
 The `xlsx` skill processes spreadsheet data:
 
-```bash
+```
 # Analyze a small spreadsheet
-claude "/xlsx calculate total revenue from sales.xlsx"
+/xlsx
+Calculate total revenue from sales.xlsx
 # Typical usage: 1,500-3,000 tokens
 
 # Process large datasets with complex formulas
-claude "/xlsx build financial model with projections and sensitivity analysis"
+/xlsx
+Build financial model with projections and sensitivity analysis
 # Typical usage: 10,000-30,000 tokens
 ```
 
-For large spreadsheets, consider using the `--sheet` flag to target specific sheets, reducing the context loaded:
+For large spreadsheets, target specific sheets to reduce the context loaded:
 
-```bash
-claude "/xlsx analyze Q1 sheet only - calculate growth metrics"
+```
+/xlsx
+Analyze Q1 sheet only - calculate growth metrics
 ```
 
 ### Supermemory and Frontend-Design Skills
@@ -127,13 +134,15 @@ claude "continue working on the API integration"
 
 The `frontend-design` skill generates UI components and layouts:
 
-```bash
+```
 # Generate a component based on description
-claude "/frontend-design create a responsive card component"
+/frontend-design
+Create a responsive card component
 # Typical usage: 3,000-6,000 tokens
 
 # Generate full page layouts
-claude "/frontend-design design a dashboard with charts and data tables"
+/frontend-design
+Design a dashboard with charts and data tables
 # Typical usage: 10,000-20,000 tokens
 ```
 
@@ -143,20 +152,23 @@ Once you understand your usage patterns, apply these optimization techniques:
 
 **Load only necessary context.** Before invoking a skill, specify exactly what Claude should focus on:
 
-```bash
+```
 # Instead of loading entire file
-claude "/tdd write tests for auth.py"
+/tdd
+Write tests for auth.py
 
 # Load specific function only
-claude "/tdd write tests for this authenticate_user function only"
+/tdd
+Write tests for this authenticate_user function only
 ```
 
 **Use streaming for long outputs.** When skills generate large amounts of content, stream responses to avoid timeout-related retries that consume additional tokens.
 
 **Set token budgets.** For predictable cost management, specify scope in your prompt to cap output length:
 
-```bash
-claude -p "/pdf summarize this document in 500 words or fewer"
+```
+/pdf
+Summarize this document in 500 words or fewer
 ```
 
 ## Conclusion

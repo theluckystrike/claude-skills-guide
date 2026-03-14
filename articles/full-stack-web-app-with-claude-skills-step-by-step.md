@@ -125,9 +125,9 @@ The tdd skill provides guidance on test structure, assertions, and helps interpr
 
 The [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) helps you create comprehensive API documentation. After implementing your endpoints, generate documentation:
 
-```bash
-# Use pdf skill to extract and format API docs
-/Generate API documentation in PDF format with endpoint descriptions, request/response schemas, and authentication requirements
+```
+/pdf
+Generate API documentation in PDF format with endpoint descriptions, request/response schemas, and authentication requirements
 ```
 
 Your documentation file becomes valuable for future reference and for frontend developers who need to integrate with your API.

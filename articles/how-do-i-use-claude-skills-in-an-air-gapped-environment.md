@@ -75,10 +75,10 @@ The skill handles PDF parsing, text extraction, and even form filling without ex
 
 The **tdd** skill provides structured workflows for writing tests before implementation. Even without internet access, this skill guides you through red-green-refactor cycles:
 
-```bash
-# Initialize a TDD session for a new module
-/skill-name tdd --init crypto-utils
-# This creates the test structure and prompts you for implementation
+```
+/tdd
+Initialize a TDD session for a new module: crypto-utils
+Create the test structure and prompt me for implementation
 ```
 
 The skill includes predefined test templates and assertion patterns you can customize for your codebase. All prompts and guidance are local, making this workflow fully compatible with air-gapped development.

@@ -80,10 +80,7 @@ Individual skills can define their own file access constraints through metadata 
 ```markdown
 ---
 name: secure-pdf-processor
-allowed_extensions: [".pdf", ".txt"]
-max_file_size: 52428800
-read_only: true
-workspace_root: "./input"
+description: Process PDF files in the input directory without modifying source files
 ---
 
 # Secure PDF Processor

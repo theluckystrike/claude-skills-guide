@@ -112,10 +112,6 @@ Create a custom skill for weekly progress reports:
 ---
 name: client-report
 description: Generates weekly progress reports for clients
-tools:
-  - Read
-  - Write
-  - Bash
 ---
 
 Generate a markdown report summarizing:
@@ -144,9 +140,6 @@ For agencies billing by the hour, documenting time spent becomes critical. Some 
 ---
 name: time-log
 description: Log time spent on client tasks
-tools:
-  - Write
-  - Read
 ---
 
 Append the current timestamp and task description to _data/time-log.md in the format:

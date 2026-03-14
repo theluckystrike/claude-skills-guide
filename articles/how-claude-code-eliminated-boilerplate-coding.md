@@ -135,11 +135,6 @@ Custom skills capture institutional knowledge that would otherwise reside in doc
 # Example: Custom skill definition for company boilerplate
 name: company-api
 description: Generate API endpoints following company conventions
-patterns:
-  - route: "/api/{{resource}}"
-  - response: "standard-company-response"
-  - error-handling: "company-error-format"
-  - auth: "company-jwt-pattern"
 ```
 
 ## The Shift in Developer Focus

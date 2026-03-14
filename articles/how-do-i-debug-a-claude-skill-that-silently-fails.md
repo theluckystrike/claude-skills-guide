@@ -70,9 +70,6 @@ A broken front matter often causes the skill to load but ignore all instructions
 ---
 name: my-custom-skill
 description: "A skill for processing data"
-triggers:
-  - "process data"
-  - "analyze this"
 ---
 ```
 
@@ -104,14 +101,15 @@ Try starting a fresh session and invoking the skill again. If it works in a new 
 
 ### 5. Regex Trigger Misconfiguration
 
-Skills auto-invoke based on trigger patterns. If your trigger regex is too broad or too narrow, the skill may never activate—or activate with the wrong context.
+Skills auto-invoke based on trigger descriptions in the skill body. If the skill description is too broad or too narrow, the skill may never activate—or activate with the wrong context.
 
-Review your skill's `triggers` field in the YAML front matter. Test your patterns against actual user queries:
+Review your skill's `description` and body content. Include specific scenario descriptions that match your typical usage patterns:
 
 ```yaml
-triggers:
-  - "^build a.*frontend"  # Only matches at session start
-  - "design.*page"       # More flexible matching
+---
+name: my-custom-skill
+description: "A skill for building frontend components and designing pages"
+---
 ```
 
 ## Debugging Techniques
