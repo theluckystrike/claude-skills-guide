@@ -206,7 +206,14 @@ Railway's pricing scales with usage. Review the platform's resource allocation t
 
 Railway provides a production-ready deployment target for MCP servers. The workflow involves configuring environment variables, optionally using Docker for complex runtimes, and setting up CI/CD automation for continuous delivery. Health checks ensure reliability, while Railway's scaling options handle growth.
 
-For developers building Claude Code integrations, combining Railway deployment with skills like the tdd skill for test-driven development or the frontend-design skill for UI components creates a powerful development workflow. The pdf skill can generate deployment documentation automatically.
+For developers building Claude Code integrations, combining Railway deployment with skills like the TDD skill for test-driven development or the frontend-design skill for UI components creates a powerful development workflow.
+
+## Related Reading
+
+- [MCP Credential Management and Secrets Handling](/claude-skills-guide/articles/mcp-credential-management-and-secrets-handling/)
+- [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-skills-guide/articles/claude-code-dockerfile-generation-multi-stage-build-guide/)
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/)
+- [Integrations Hub: MCP Servers and Claude Skills](/claude-skills-guide/articles/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

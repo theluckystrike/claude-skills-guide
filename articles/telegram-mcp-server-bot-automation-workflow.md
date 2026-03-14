@@ -12,11 +12,11 @@ score: 7
 
 # Telegram MCP Server Bot Automation Workflow
 
-[The Telegram Model Context Protocol server enables Claude Code to interact with Telegram bots](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) through natural language. This integration opens powerful possibilities for building responsive automation workflows, from handling customer support queries to managing team notifications. This guide walks through setting up the Telegram MCP server and creating practical automation workflows.
+The Telegram Model Context Protocol server enables Claude Code to interact with Telegram bots through natural language. This integration opens powerful possibilities for building responsive automation workflows, from handling customer support queries to managing team notifications. This guide walks through setting up the Telegram MCP server and creating practical automation workflows.
 
 ## Prerequisites and Initial Setup
 
-Before building Telegram bot automations, you need a Telegram bot token and the MCP server configured. Create a new bot through @BotFather on Telegram if you do not already have one. The BotFather will provide an API token that authenticates your bot.
+Before building Telegram bot automations, you need a Telegram bot token and the MCP server configured. Create a new bot through @BotFather on Telegram if you do not already have one. The BotFather will provide an API token that authenticates your bot. For guidance on storing bot tokens safely, see the [MCP credential management and secrets handling guide](/claude-skills-guide/articles/mcp-credential-management-and-secrets-handling/).
 
 Install the Telegram MCP server package:
 
@@ -99,7 +99,7 @@ This workflow demonstrates the power of combining MCP server capabilities with s
 
 ## Managing Conversations and State
 
-Effective bot automation requires maintaining conversation context across multiple messages. The supermemory skill provides persistent memory that your Telegram bot can use:
+Effective bot automation requires maintaining conversation context across multiple messages. The [Claude supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) provides persistent memory that your Telegram bot can use:
 
 ```javascript
 // Skill: telegram-support-bot
@@ -112,7 +112,7 @@ When handling support requests:
 4. If the issue requires escalation, gather context from supermemory first
 ```
 
-For more complex state management, use an MCP server connected to an external store like Redis or a database to maintain shared conversation state across sessions.
+For more complex state management, use the [MCP memory server for persistent agent storage](/claude-skills-guide/articles/mcp-memory-server-persistent-storage-for-claude-agents/) to maintain shared conversation state across sessions.
 
 ## Broadcasting and Scheduled Notifications
 
@@ -165,6 +165,6 @@ The Telegram MCP server transforms Claude Code into a powerful bot development p
 - [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
 - [Discord MCP Server Community Automation Guide](/claude-skills-guide/articles/discord-mcp-server-community-automation-guide/)
 - [Slack MCP Server Team Notification Automation](/claude-skills-guide/articles/slack-mcp-server-team-notification-automation/)
-- [Integrations Hub](/claude-skills-guide/integrations-hub/)
+- [Integrations Hub: MCP Servers and Claude Skills](/claude-skills-guide/articles/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
