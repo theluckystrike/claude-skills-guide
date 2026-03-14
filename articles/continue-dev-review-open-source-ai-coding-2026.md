@@ -179,3 +179,11 @@ The combination of Continue.dev and Claude Code skills represents the future of 
 By understanding how to leverage both tools effectively, developers can maintain high code quality in open source projects while reducing the manual effort required for thorough reviews. The key is knowing when to use inline suggestions versus invoking specialized skills for deeper analysis.
 
 As the ecosystem continues to evolve, expect even tighter integration between these tools, making AI-assisted development more accessible and powerful for open source maintainers and contributors alike.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
