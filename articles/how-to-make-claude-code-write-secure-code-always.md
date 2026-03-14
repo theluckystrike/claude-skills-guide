@@ -1,170 +1,184 @@
 ---
 layout: default
 title: "How to Make Claude Code Write Secure Code Always"
-description: A practical guide for developers to ensure Claude Code generates secure code consistently. Includes skill recommendations, configuration tips, and.
+description: "Practical strategies and Claude skills for ensuring your AI coding assistant produces secure, vulnerability-free code every time. Includes skill recommendations and configuration examples."
 date: 2026-03-14
-categories: [guides]
-tags: [claude-code, security, secure-coding, claude-skills, tdd, code-review]
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
+categories: [tutorials]
+tags: [claude-code, claude-skills, security, secure-coding, best-practices]
+author: theluckystrike
+reviewed: false
+score: 0
 permalink: /how-to-make-claude-code-write-secure-code-always/
 ---
 
 # How to Make Claude Code Write Secure Code Always
 
-Getting Claude Code to consistently produce secure code requires more than just hoping for the best. Explore the [workflows hub](/claude-skills-guide/workflows-hub/) for related security automation patterns. You need to establish patterns, use specific skills like [OWASP security scanning](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/), and configure your environment to prioritize security at every step. This guide covers practical techniques that work — including how to pair Claude with [secret scanning to prevent credential leaks](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/).
+Getting Claude Code to consistently produce secure code requires more than hoping for the best. By combining the right skills, prompt engineering, and project configuration, you can create an environment where security is the default rather than an afterthought.
 
-## Start with Security-First Skill Configuration
+## Why Secure Code Generation Matters
 
-The foundation of secure code generation begins with which skills you load and how you configure them. Claude Code skills extend Claude's capabilities in specific domains, and several skills directly address security concerns.
+When Claude Code writes your code, it follows patterns from its training data—some of which includes vulnerable examples. Without explicit security guidance, your AI assistant might generate code with SQL injection vulnerabilities, exposed secrets, or improper authentication. The good news: you can steer Claude toward secure patterns every time you work together.
 
-[The **tdd** skill excels at generating tests, but you can direct it to prioritize security test cases](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). When you invoke it, specify security-focused test patterns:
+## Using Security-Focused Skills
 
-```
-/tdd write tests for this authentication module, include test cases for SQL injection, XSS, and CSRF vulnerabilities
-```
+Claude Code's skill system lets you load specialized instructions that shape how Claude behaves. Several skills directly improve security outcomes.
 
-The **code-review** skill analyzes existing code for security issues. Running it before committing any code adds a security checkpoint:
+### The tdd Skill for Test-Driven Security
 
-```
-/code-review scan this authentication handler for common vulnerabilities
-```
+The **tdd** skill prompts Claude to write tests before implementation. Pair this with security-specific test cases:
 
-For frontend work, the **frontend-design** skill can generate code with built-in security considerations like proper input sanitization and secure component patterns.
-
-## Prompt Engineering for Security
-
-Your prompts determine what Claude generates. Specific, security-focused prompts produce better results than generic requests.
-
-Instead of:
-```
-Write a user registration function
+```bash
+/tdd
+Write a user authentication module with tests for:
+- SQL injection prevention
+- Password hashing verification
+- Session timeout handling
 ```
 
-Use:
-```
-Write a user registration function that:
-- Uses parameterized queries to prevent SQL injection
-- Validates and sanitizes all inputs
-- Enforces password complexity requirements
-- Implements rate limiting on failed attempts
-- Hashes passwords with bcrypt (cost factor 12)
-```
+This approach ensures security requirements are embedded from the start, not bolted on later. The tdd skill is particularly effective because it forces Claude to think about edge cases and attack vectors while designing the solution.
 
-The second prompt gives Claude clear security requirements to follow. Include explicit security constraints in every code generation request when handling sensitive operations.
+### The supermemory Skill for Security Context
 
-## Use the Super Memory Skill for Security Context
+The **supermemory** skill allows Claude to maintain context across sessions. Store your security requirements and past vulnerability fixes in supermemory so Claude remembers them:
 
-[The **supermemory** skill stores and retrieves context across sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/). Use it to maintain a security knowledge base that Claude references:
-
-```
-/supermemory Remember: our company's security standards: no eval(), always use parameterized queries, strict Content Security Policy headers required
+```bash
+/supermemory
+Our project requires:
+- All passwords hashed with bcrypt (cost factor 12)
+- Input validation on all API endpoints
+- No raw SQL queries—use parameterized statements only
 ```
 
-When starting new projects or files, invoke this context:
+When you reference this context in future sessions, Claude will consistently apply your security standards.
 
-```
-/supermemory What are our security standards? Apply them to this new API endpoint.
-```
+### The code-review Skill for Security Audits
 
-This ensures Claude remembers your organization's security requirements without repeating yourself in every session.
+The **code-review** skill analyzes code for issues. Invoke it specifically for security concerns:
 
-## Practical Code Examples
-
-Here are real patterns that produce secure output consistently.
-
-### Secure Database Queries
-
-Request parameterized queries explicitly:
-
-```
-Generate a Node.js function that queries users by email. Use the pg library with parameterized queries. No string concatenation for SQL. Include proper error handling.
+```bash
+/code-review
+Review this code for security vulnerabilities only:
+- Injection risks (SQL, XSS, command)
+- Authentication and authorization gaps
+- Sensitive data exposure
+- Cryptographic weaknesses
 ```
 
-The resulting code will use `$1` placeholders instead of string interpolation.
+This focused review catches issues that might slip past general code reviews.
 
-### Authentication Tokens
+## Project-Level Security Configuration
 
-When generating authentication logic, be specific about algorithms:
+Beyond skills, configure your project to guide Claude toward secure defaults.
 
-```
-Write a JWT token generation function using the jsonwebtoken library. Use RS256 algorithm, set 15-minute expiration, include user_id and email claims. Never use HS256 for this.
-```
+### Create a Security-Prompting .claude.md
 
-### Input Validation
+Add a `.claude.md` file in your project root with security instructions:
 
-Force input sanitization:
+```markdown
+# Project Security Requirements
 
-```
-Create a form handler that:
-- Validates email format with regex
-- Sanitizes all user inputs to prevent XSS
-- Uses DOMPurify for any HTML content
-- Implements CSRF protection
-```
+## Authentication
+- Always use secure password hashing (bcrypt, argon2)
+- Implement rate limiting on login endpoints
+- Generate cryptographically secure session tokens
 
-## Build Security Into Your Workflow
+## Data Handling
+- Never log sensitive data (passwords, tokens, PII)
+- Use environment variables for secrets, never hardcode
+- Validate and sanitize all user inputs
 
-Consistent secure code requires habits and checkpoints.
-
-**Add a pre-commit security check**. Before any commit, run:
-
-```
-/code-review check for: hardcoded secrets, SQL injection risks, XSS vulnerabilities, insecure random usage
+## Dependencies
+- Check for known vulnerabilities before adding packages
+- Keep dependencies updated
+- Prefer packages with active security maintenance
 ```
 
-**Use the tdd skill for vulnerability tests**. Generate specific security tests:
+Claude reads this file automatically at the start of each session, applying your security requirements to all code it generates.
+
+### Security Linting in Your Workflow
+
+Combine Claude with automated security tools. After Claude writes code, run:
+
+```bash
+# Run security linter
+npm audit
+
+# Check for vulnerable dependencies
+npx snyk test
+
+# Static analysis
+npx eslint --rule 'no-secrets: error'
+```
+
+Create a pre-commit hook that blocks commits with critical security issues:
+
+```bash
+#!/bin/bash
+# .git/hooks/pre-commit
+npm audit --audit-level=high
+if [ $? -ne 0 ]; then
+  echo "Security vulnerabilities found. Commit blocked."
+  exit 1
+fi
+```
+
+## Practical Example: Secure API Endpoint
+
+Here's how to get Claude to write a secure API endpoint using these techniques:
+
+**Step 1: Activate security context**
+```
+Activate tdd and apply our security requirements from .claude.md
+```
+
+**Step 2: Request the endpoint**
+```
+Create a user registration endpoint that:
+- Validates email format and password strength
+- Hashes password with bcrypt before storage
+- Returns appropriate error messages without leaking information
+- Includes rate limiting consideration
+```
+
+**Step 3: Verify with security review**
+```
+/code-review Check this registration endpoint for OWASP Top 10 vulnerabilities
+```
+
+The resulting code will include proper input validation, secure password hashing, and safe error handling—security built into the foundation.
+
+## Additional Skills That Enhance Security
+
+Several other Claude skills support secure coding practices:
+
+- **pdf**: Generate security documentation and vulnerability reports
+- **frontend-design**: Produces accessible code that follows security best practices
+- **test-artifacts**: Creates comprehensive test suites including security test cases
+
+## Continuous Security Improvement
+
+Security isn't a one-time setup. Use supermemory to track vulnerabilities Claude encounters and fixes:
 
 ```
-/tdd write integration tests for this login endpoint covering: brute force protection, session fixation prevention, secure cookie attributes
+/supermemory
+Common vulnerability patterns we fixed this month:
+1. SQL injection in search queries → switched to parameterized queries
+2. Exposed API keys in frontend → moved to environment variables
+3. Weak session tokens → now using 256-bit secure random generation
 ```
 
-**Document security patterns**. Store your security requirements in supermemory and reference them in every session.
+When Claude sees this context, it will proactively avoid these patterns in new code.
 
-## Configuration Tips
+## Final Checklist
 
-Claude Code respects your project's configuration. Several settings improve security output:
+Before considering a task complete, verify Claude's output against these security criteria:
 
-- **ESLint with security plugins**: When Claude knows you use eslint-plugin-security, it generates code that passes those rules
-- **Prettier with security-aware defaults**: Certain formatting choices affect security; align your config with best practices
-- **TypeScript strict mode**: Enable strict type checking to catch more issues at compile time
+- All inputs validated and sanitized
+- Sensitive data properly protected
+- Authentication and authorization correctly implemented
+- Dependencies scanned for vulnerabilities
+- Security tests included in the test suite
 
-Make these tools visible in your project so Claude incorporates them into generated code.
-
-## What to Avoid
-
-Some approaches undermine your security goals.
-
-Avoid vague prompts like "make this secure" — they produce inconsistent results. [Writing effective prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/) directly improves security outcomes.
-
-Don't skip the code review step. Even good AI-generated code benefits from verification.
-
-Avoid assuming Claude knows your specific security requirements. Unless you provide context through supermemory or explicit prompts, Claude defaults to general best practices rather than your organization's standards.
-
-## Quick Reference
-
-Here's a summary of skills that improve security outcomes:
-
-- **tdd**: Generate security-focused test cases
-- **code-review**: Scan for vulnerabilities
-- **supermemory**: Maintain security context across sessions
-- **frontend-design**: Secure component patterns
-- **pdf**: Extract security requirements from documentation
-
-Invoke each with specific security tasks rather than generic requests.
-
-## Final Thoughts
-
-Making Claude Code write secure code consistently comes down to three practices: be specific in your prompts, use skills that enforce security patterns, and maintain context across sessions. These techniques work because they give Claude clear requirements rather than leaving security to chance.
-
-Security isn't a feature you add later. It's a requirement you specify upfront. Claude Code excels at following instructions — make security part of every instruction.
-
-## Related Reading
-
-- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/) — scan generated code against OWASP Top 10 vulnerabilities
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — prevent secrets from ending up in Claude-generated code
-- [Input Validation and Sanitization with Claude Code Guide](/claude-skills-guide/claude-code-input-validation-sanitization-patterns-guide/) — enforce secure input handling patterns in every Claude session
-- [Claude Code Security Code Review Checklist Automation](/claude-skills-guide/claude-code-security-code-review-checklist-automation/) — automate security reviews of all code Claude generates
+By integrating skills like tdd and supermemory, maintaining project-level security prompts, and using automated security tooling, you create a system where Claude Code consistently produces secure code. The combination of AI assistance and human oversight—backed by automated validation—keeps your projects safe without slowing down development.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
