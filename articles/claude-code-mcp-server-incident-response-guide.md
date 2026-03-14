@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code MCP Server Incident Response Guide
 
-When your MCP servers fail during a critical workflow, the impact ripples through your entire AI-assisted development process. Whether it's a database connection timeout, an API rate limit, or a crashed subprocess, incidents happen. This guide shows you how to build reliable incident detection, alerting, and recovery systems for your MCP server infrastructure.
+[When your MCP servers fail during a critical workflow](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/), the impact ripples through your entire AI-assisted development process. Whether it's a database connection timeout, an API rate limit, or a crashed subprocess, incidents happen. This guide shows you how to build reliable incident detection, alerting, and recovery systems for your MCP server infrastructure.
 
 ## Identifying Common MCP Server Failure Modes
 
@@ -20,7 +20,7 @@ MCP servers can fail in several distinct ways, and recognizing these patterns he
 
 **Connection timeouts** occur when your MCP server cannot reach its backend service within the expected window. This often happens with external APIs or database servers under load.
 
-**Process crashes** happen when the underlying server executable terminates unexpectedly. The `tdd` skill or any skill running test suites frequently encounters this when tests consume too much memory.
+**Process crashes** happen when the underlying server executable terminates unexpectedly. [The `tdd` skill or any skill running test suites frequently encounters this](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) when tests consume too much memory.
 
 **Permission errors** surface when file system access or network permissions change—particularly relevant when using skills like `frontend-design` that generate files across multiple directories.
 
@@ -245,5 +245,12 @@ Regular testing ensures your incident response playbook remains current and your
 Building incident response capabilities for MCP servers protects your AI-assisted development workflows from unexpected failures. Start with health checks, implement automatic recovery with supervisors, add circuit breakers for resilience, and maintain tested runbooks. These patterns work whether you're running a single `tdd` skill test server or a complex multi-service infrastructure.
 
 The investment in thorough incident response pays dividends in reduced downtime and faster recovery when issues inevitably occur.
+
+## Related Reading
+
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/)
+- [MCP Server Logging Audit Trail Security Guide](/claude-skills-guide/articles/mcp-server-logging-audit-trail-security-guide/)
+- [Securing MCP Servers in Production Environments](/claude-skills-guide/articles/securing-mcp-servers-in-production-environments/)
+- [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
