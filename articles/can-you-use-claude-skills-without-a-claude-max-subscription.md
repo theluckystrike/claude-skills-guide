@@ -119,11 +119,4 @@ Only consider Max when your usage patterns exceed free tier capacity. By then, y
 - [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Explore one of the most useful free skills — the tdd skill for test generation.
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn how to install and use Claude skills regardless of your subscription tier.
 
-## Related Reading
-
-- [Best Claude Code Skills to Install First 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Start with the highest-value free skills before considering a paid plan
-- [Claude Skills Directory: Where to Find Skills](/claude-skills-guide/claude-skills-directory-where-to-find-skills/) — Find free community skills available regardless of subscription tier
-- [What Is the Best Free Claude Code Skill Available on GitHub](/claude-skills-guide/what-is-the-best-free-claude-code-skill-available-on-github/) — Discover the top free skills for immediate productivity gains
-- [Claude Skills Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational Claude skills for developers at every level
-
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

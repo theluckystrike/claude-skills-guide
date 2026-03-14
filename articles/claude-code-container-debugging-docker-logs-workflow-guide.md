@@ -242,12 +242,5 @@ Claude Code enhances this workflow through skills that maintain context, generat
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/) — Extend container logging to multi-agent orchestration scenarios
 - [Claude Code Segfault and Core Dump Analysis Workflow](/claude-skills-guide/claude-code-segfault-core-dump-analysis-workflow-guide/) — Debug deeper container crashes with core dump analysis
 
-## Related Reading
-
-- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-skills-guide/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — Extend container debugging skills to ECS Fargate: understand deployment patterns that affect how containers behave
-- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) — Automate container testing across environments with GitHub Actions matrix strategies
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to write reproducible test cases for container-related bugs you discover during debugging
-- [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Browse more infrastructure and DevOps skill workflows for container-heavy environments
-
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
