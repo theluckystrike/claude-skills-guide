@@ -3,7 +3,7 @@ layout: default
 title: "Claude Code Skills for Japanese Developers Workflow Guide"
 description: "A practical workflow guide for Japanese developers using Claude Code skills. Learn how to integrate skills like tdd, pdf, supermemory, and frontend-design into your daily development routine."
 date: 2026-03-14
-categories: [workflow, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, japanese-developers, workflow, tdd, pdf, supermemory]
 author: "Claude Skills Guide"
 reviewed: true
@@ -32,7 +32,7 @@ The **tdd** skill transforms how you write code by enforcing test-first developm
 
 ```bash
 # Activate tdd skill and start a new feature
-/skill tdd
+/tdd
 "Create a user authentication module with email and password login"
 ```
 
@@ -43,7 +43,7 @@ The skill generates test cases in your preferred framework (Jest, Vitest, or pyt
 The [**frontend-design** skill](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) accelerates UI development by converting design specifications into functional code. When working on projects for Japanese clients, you can specify design requirements in both Japanese and English:
 
 ```bash
-/skill frontend-design
+/frontend-design
 "Create a product listing page with Japanese localization. 
 Requirements:
 - Header with ログアウト button
@@ -60,7 +60,7 @@ This skill understands component composition and generates accessible, semantic 
 Japanese projects typically require extensive documentation. The **pdf** skill converts Markdown and other formats into professionally formatted PDF documents—essential for client deliverables and regulatory compliance.
 
 ```bash
-/skill pdf
+/pdf
 "Generate a technical specification document from the /docs directory.
 Include:
 - API documentation
@@ -76,7 +76,7 @@ The skill maintains Japanese character encoding correctly and supports custom st
 For collaborative documents requiring tracked changes or comments, the **docx** skill handles Microsoft Word file creation and editing:
 
 ```bash
-/skill docx
+/docx
 "Create a project proposal document in Japanese with English technical terms preserved.
 Include sections for:
 - プロジェクト概要
@@ -91,7 +91,7 @@ This skill preserves formatting, handles mixed-language content gracefully, and 
 Long-running Japanese development projects often involve complex stakeholder relationships and evolving requirements. The **supermemory** skill provides persistent context that survives between sessions:
 
 ```bash
-/skill supermemory
+/supermemory
 "Remember that client prefers:
 - Slack for daily communication
 - Weekly demos on Thursday 2pm JST
@@ -107,18 +107,18 @@ The real power emerges when you chain skills together for complex workflows. Her
 
 ```bash
 # Combined workflow for feature development
-/skill tdd
+/tdd
 "Generate tests for user profile management feature"
 
 # After tests are created, implement the feature
-/skill frontend-design
+/frontend-design
 "Build the user profile page with Japanese form labels:
 - ユーザー名
 - メールアドレス
 - 電話番号"
 
 # Document the implementation
-/skill pdf
+/pdf
 "Create API documentation for the user profile endpoints"
 ```
 
@@ -154,7 +154,7 @@ When reviewing code for Japanese projects:
 
 Claude Code skills significantly enhance productivity for Japanese developers by automating documentation, enforcing test-driven development, and maintaining project context across sessions. The combination of **tdd**, **frontend-design**, **pdf**, **docx**, and **supermemory** skills creates a comprehensive toolkit for enterprise development work.
 
-Start by installing the skills relevant to your current project, then gradually incorporate them into your daily workflow. The initial setup time pays dividends through consistent code quality, comprehensive documentation, and reduced context-switching overhead. See the [workflows hub](/claude-skills-guide/workflows-hub/) for more developer workflow guides.
+Start by invoking the skills relevant to your current project, then gradually incorporate them into your daily workflow. The initial setup time pays dividends through consistent code quality, comprehensive documentation, and reduced context-switching overhead. See the [workflows hub](/claude-skills-guide/workflows-hub/) for more developer workflow guides.
 
 ## Related Reading
 
