@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Fortran Scientific Code Modernization Guide"
-description: "A comprehensive guide to using Claude Code for modernizing legacy Fortran scientific codebases, including refactoring patterns, testing strategies, and best practices."
+description: "A comprehensive guide to using Claude Code for modernizing legacy Fortran scientific codebases, including refactoring patterns, testing strategies, and."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
@@ -192,3 +192,11 @@ c = a + b
 Claude Code transforms Fortran modernization from a daunting task into a manageable process. Its ability to read, analyze, edit, and validate code makes it an invaluable tool for scientific computing teams. By following the patterns and strategies in this guide, you can systematically modernize legacy Fortran code while maintaining correctness and improving long-term maintainability.
 
 The key is starting small, testing thoroughly, and gradually adopting modern Fortran features. With Claude Code as your assistant, you have a powerful partner in preserving and improving your scientific computing infrastructure.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

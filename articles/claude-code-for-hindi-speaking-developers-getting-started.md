@@ -12,8 +12,6 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
-
 # Claude Code for Hindi Speaking Developers - Getting Started
 
 क्या आप एक Hindi-बोलने वाले developer हैं जो Claude Code सीखना चाहते हैं? यह गाइड आपको शुरू से अंत तक ले जाएगा। Claude Code एक powerful AI coding assistant है जो आपकी development workflow को बदल सकता है।

@@ -4,7 +4,8 @@ layout: article
 title: "Claude Code Factory Bot Test Data Guide"
 description: "Learn how to use Factory Bot with Claude Code to generate test data, create factories, and streamline your Ruby on Rails testing workflow."
 date: 2026-03-14
-author: "Claude Skills Guide"
+categories: [guides]
+author: theluckystrike
 category: testing
 permalink: /claude-code-factory-bot-test-data-guide/
 categories: [guides]
@@ -359,3 +360,11 @@ end
 
 Factory Bot combined with Claude Code creates a powerful testing workflow. Use Claude Code to generate factories from your models, create test data scenarios, and maintain clean, reusable factory definitions. This approach ensures your test suite remains fast, maintainable, and expressive.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

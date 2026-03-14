@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Release Automation GitHub Guide"
-description: "A comprehensive guide to automating software releases using Claude Code and GitHub. Learn workflows, best practices, and practical examples for streamlined deployment."
+description: "A comprehensive guide to automating software releases using Claude Code and GitHub. Learn workflows, best practices, and practical examples for."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, github, release-automation, devops, ci-cd]
@@ -175,3 +175,11 @@ The deploy-manager skill can include safeguards:
 Claude Code transforms release automation from simple script execution into intelligent process management. By creating specialized skills for validation, changelog generation, and deployment, you build a release system that learns from context and applies best practices consistently. Start with basic workflow automation and progressively add Claude Code integration as your needs evolve.
 
 The combination of GitHub's robust infrastructure and Claude Code's contextual intelligence creates release pipelines that are reliable, traceable, and maintainable—giving your team confidence in every shipment.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

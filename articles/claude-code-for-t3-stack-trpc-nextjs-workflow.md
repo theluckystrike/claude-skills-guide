@@ -277,3 +277,11 @@ Claude Code combined with the T3 stack creates a powerful development environmen
 
 The key is leveraging Claude Code not just for code generation, but as a pair programmer that understands the T3 stack's conventions and can help you navigate the nuances of type-safe API development.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -10,10 +10,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-keeps-wrapping-code-in-markdown-backticks-wrong/
 reviewed: true
 score: 7
----
+---{% raw %}
 
 
-{% raw %}
+
 # Claude Code Keeps Wrapping Code in Markdown Backticks Wrong
 
 If you've ever asked Claude Code to generate code examples, documentation, or technical content, you may have encountered a frustrating issue: the AI sometimes wraps code in markdown backticks incorrectly, creating nested or malformed code blocks that break your documentation or cause build failures. This behavior is particularly problematic when working with Jekyll sites, GitHub Pages, or any markdown-based documentation system.
@@ -138,21 +138,19 @@ def hello():
 
 If you're working with Jekyll sites or any content containing `{{` or `{%` patterns, you need to be especially careful. These characters trigger Liquid template processing in Jekyll, so the content inside gets interpreted as template code.
 
-For Jekyll sites, wrap your entire code-containing content in `{% raw %}` and `{% endraw %}` tags. This tells Jekyll to treat the content literally:
+For Jekyll sites, wrap your entire code-containing content in raw and endraw tags. This tells Jekyll to treat the content literally:
 
 ```markdown
-{% raw %}
 ```python
 def calculate_tax(amount, rate):
     return amount * rate
 ```
-{% endraw %}
 ```
 
 Claude Code should automatically detect this situation, but if it doesn't, you can remind it explicitly:
 
 ```
-This content is for a Jekyll site. Wrap any code blocks containing {{ or {% in {% raw %} tags to prevent template processing.
+This content is for a Jekyll site. Wrap any code blocks containing double-curly-brace or percent-curly-brace patterns in raw/endraw tags to prevent template processing.
 ```
 
 ### 4. Review and Edit Generated Output
@@ -183,7 +181,7 @@ You can also configure your Claude Code environment to produce better results. I
 - Always use exactly three backticks for code blocks
 - Include language identifiers when applicable
 - Never nest code blocks or escape backticks
-- For Jekyll sites, wrap code containing {{ or {% in {% raw %} tags
+- For Jekyll sites, wrap code containing {{ or {% in raw/endraw tags
 ```
 
 This proactive approach trains Claude Code to produce cleaner output from the start.
@@ -193,7 +191,7 @@ This proactive approach trains Claude Code to produce cleaner output from the st
 While Claude Code's tendency to wrap code incorrectly in markdown backticks can be frustrating, it's a solvable problem. By understanding why it happens, being explicit in your prompts, handling Jekyll and template syntax carefully, and implementing post-processing checks, you can minimize this issue and produce clean, properly formatted code documentation every time.
 
 Remember: the key is communication. The more precisely you describe what you want, the better Claude Code can deliver it. With these techniques, you'll spend less time fixing formatting issues and more time building great software.
-{% endraw %}
+raw/endraw
 
 
 ## Related Reading
@@ -201,4 +199,4 @@ Remember: the key is communication. The more precisely you describe what you wan
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code Not Working After Update: How to Fix](/claude-skills-guide/claude-code-not-working-after-update-how-to-fix/)
 - [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
-
+{% endraw %}
