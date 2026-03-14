@@ -10,6 +10,8 @@ reviewed: true
 score: 8
 permalink: /openclaw-skill-security-risks-and-mitigations/
 ---
+{% raw %}
+
 
 # OpenCLAW Skill Security Risks and Mitigations
 
@@ -244,3 +246,4 @@ The OpenCLAW ecosystem continues evolving, and new attack patterns will emerge. 
 - [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
