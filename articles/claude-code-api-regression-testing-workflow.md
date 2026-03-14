@@ -10,6 +10,8 @@ reviewed: true
 score: 7
 permalink: /claude-code-api-regression-testing-workflow/
 ---
+{% raw %}
+
 
 API regression testing is a critical practice for maintaining reliable integrations. When your application depends on internal or external APIs, any breaking change can cascade through your system. Claude Code provides powerful capabilities for building comprehensive API regression testing workflows that catch issues early and keep your integrations healthy.
 
@@ -196,3 +198,4 @@ API regression testing is essential for maintaining reliable integrations in mod
 Start with the foundational configuration and test cases, then expand coverage as your API surface grows. Regular maintenance of your test suite ensures it remains effective as your application evolves.
 
 Built by theluckystrike — More at zovo.one
+{% endraw %}

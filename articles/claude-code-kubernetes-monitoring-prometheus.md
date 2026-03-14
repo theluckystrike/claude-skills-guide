@@ -8,6 +8,8 @@ tags: [claude-code, kubernetes, prometheus, monitoring, devops, observability]
 author: theluckystrike
 permalink: /claude-code-kubernetes-monitoring-prometheus/
 ---
+{% raw %}
+
 
 # Claude Code Kubernetes Monitoring with Prometheus
 
@@ -162,3 +164,4 @@ Effective Kubernetes monitoring with Prometheus requires thoughtful configuratio
 Start with solid scrape configurations, write targeted alerts that reduce noise, and ensure notifications reach the right people. Claude skills like pdf for reporting, xlsx for data analysis, and tdd for testing alert logic create a comprehensive monitoring toolkit that scales with your cluster.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
