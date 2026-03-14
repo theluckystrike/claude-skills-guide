@@ -116,12 +116,7 @@ Claude Code works with several skills that enhance CloudFormation development:
 - **tdd**: Helps create integration tests for CloudFormation templates using AWS CloudFormation Guard rules
 - **frontend-design**: Useful when generating CloudFront distributions with S3 origins for static site deployments
 
-Install skills through the Claude Code CLI:
-
-```bash
-claude skill install aws-mcp-server
-claude skill install tdd
-```
+Skills for Claude Code are Markdown files in your `.claude/skills/` directory. Add an `aws-mcp-server.md` skill file for AWS integration and a `tdd.md` skill file for test-driven workflows.
 
 The aws-mcp-server skill enables queries like "list all CloudFormation stacks in us-east-1" or "get the status of the production-vpc stack" directly in your conversation.
 
