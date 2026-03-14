@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude MD for Contractor and Vendor Teams"
-description: "A practical guide for developer teams working with external contractors and vendors using Claude Code skills. Learn how to standardize workflows, maintain quality, and streamline collaboration."
+description: "A practical guide for developer teams working with external contractors and vendors using Claude Code skills. Learn how to standardize workflows."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-md-for-contractor-and-vendor-teams/
+categories: [guides]
 ---
 
 # Claude MD for Contractor and Vendor Teams
@@ -221,5 +222,12 @@ Keep skills version-controlled alongside your code. Update them when standards c
 The goal isn't to micromanage external developers—it's to give them clear, automated guidance that helps them deliver work meeting your standards the first time.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

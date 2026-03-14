@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AI Coding Tools Governance Policy for Enterprises"
-description: "A practical guide to establishing governance policies for AI coding tools in enterprise environments. Covers security controls, skill management, compliance requirements, and team adoption frameworks."
+description: "A practical guide to establishing governance policies for AI coding tools in enterprise environments. Covers security controls, skill management."
 date: 2026-03-14
 author: theluckystrike
 permalink: /ai-coding-tools-governance-policy-for-enterprises/
@@ -186,5 +186,12 @@ Track these metrics to assess governance policy effectiveness:
 Effective AI coding tools governance requires balancing developer productivity with security, compliance, and quality requirements. Start with data classification, implement technical controls through configuration and skills, and create clear documentation that enables adoption.
 
 The most successful governance policies are those that developers actually follow. Make policies clear, provide tools that enforce them automatically, and ensure the friction is proportional to the actual risks. With the right framework in place, your organization can confidently embrace AI coding tools while maintaining the security and compliance standards your stakeholders expect.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
