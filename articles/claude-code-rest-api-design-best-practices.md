@@ -1,235 +1,238 @@
 ---
 layout: default
 title: "Claude Code REST API Design Best Practices"
-description: "A practical guide to designing REST APIs that work seamlessly with Claude Code skills. Learn resource naming, HTTP methods, error handling, and versioning strategies."
+description: "Learn how to build robust, scalable REST APIs with Claude Code. Covers naming conventions, versioning, error handling, and practical examples for developers."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-rest-api-design-best-practices/
 ---
 
-{% raw %}
-
-# Claude Code REST API Design Best Practices
-
-When you build APIs that Claude Code skills will interact with, the design decisions you make directly impact how effectively Claude can work with your services. A well-designed REST API reduces friction, minimizes errors, and allows Claude skills to handle complex workflows without constant manual intervention.
-
-This guide covers practical patterns for building APIs that Claude Code skills can consume reliably.
+Building well-designed REST APIs requires attention to detail, consistency, and understanding of industry standards. Claude Code serves as an excellent companion for developers working on API projects, offering real-time guidance, code generation, and best practice recommendations throughout the development lifecycle.
 
 ## Resource Naming Conventions
 
-The foundation of any REST API starts with how you name your resources. Use plural nouns for collections and keep URLs hierarchical and intuitive.
+The foundation of REST API design lies in how you name your resources. Use nouns to represent resources rather than verbs, and employ plural forms consistently throughout your API.
 
-```
-GET    /api/v1/users
-GET    /api/v1/users/{userId}
-GET    /api/v1/users/{userId}/orders
-POST   /api/v1/users/{userId}/orders
-```
+```bash
+# Good resource examples
+GET /users
+GET /orders
+GET /products/:id
 
-Avoid verbs in URLs—HTTP methods already convey the action. Bad API design forces Claude to parse complex URL structures or guess endpoint patterns. When your API follows consistent naming, Claude can generate correct requests without explicit endpoint documentation for every operation.
-
-For nested resources, keep the depth reasonable. Deeply nested paths like `/api/v1/organizations/{orgId}/teams/{teamId}/members/{memberId}/preferences` become error-prone. Consider flattening your API structure or using query parameters for filtering:
-
-```
-GET /api/v1/members?teamId={teamId}&organizationId={orgId}
+# Avoid verb-based endpoints
+GET /getUsers    # Not recommended
+POST /createUser # Not recommended
 ```
 
-## HTTP Method Selection
+When working with nested resources, maintain a logical hierarchy. For instance, if orders belong to users, structure your endpoints as `/users/:userId/orders`. Claude Code can help generate these patterns automatically when you describe your data model.
 
-Each HTTP method has specific semantics that Claude skills must respect. Using methods correctly enables predictable behavior and proper caching.
+## HTTP Methods and Their Proper Usage
 
-| Method | Idempotent | Use For |
-|--------|------------|---------|
-| GET | Yes | Retrieval, no side effects |
-| POST | No | Creating resources, actions |
-| PUT | Yes | Full resource replacement |
-| PATCH | No | Partial updates |
-| DELETE | Yes | Resource removal |
+Each HTTP method serves a specific purpose in RESTful design. Understanding these distinctions prevents common mistakes that plague many APIs.
 
-For actions that don't map naturally to CRUD operations, use POST with a verb in the URL:
+**GET** retrieves resources without modifying them. These requests should be safe and idempotent.
 
-```
-POST /api/v1/orders/{orderId}/cancel
-POST /api/v1/documents/{documentId}/publish
+```javascript
+// Fetching a single user
+app.get('/api/users/:id', async (req, res) => {
+  const user = await User.findById(req.params.id);
+  res.json(user);
+});
 ```
 
-Claude skills handling idempotent operations can safely retry failed requests. For POST and PATCH, implement idempotency keys to prevent duplicate operations when retries occur.
+**POST** creates new resources. These are not idempotent—calling the same POST multiple times creates multiple resources.
 
-## Consistent Response Patterns
+```javascript
+// Creating a new order
+app.post('/api/orders', async (req, res) => {
+  const order = await Order.create(req.body);
+  res.status(201).json(order);
+});
+```
 
-Standardize your response structure across all endpoints. This allows Claude to parse responses uniformly and reduces the complexity of error handling logic.
+**PUT** completely replaces a resource, while **PATCH** performs partial updates. Choose based on your use case.
+
+**DELETE** removes resources. Return appropriate status codes to indicate the result.
+
+Claude Code excels at generating these route handlers with proper validation. When paired with skills like **tdd**, you can automatically generate test cases alongside your routes.
+
+## Status Codes Communicate Meaning
+
+Your API communicates results through HTTP status codes. Using them correctly helps clients understand what happened with their requests.
+
+| Code | Meaning |
+|------|---------|
+| 200 | Success |
+| 201 | Created |
+| 204 | No Content |
+| 400 | Bad Request |
+| 401 | Unauthorized |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 500 | Server Error |
+
+```javascript
+// Proper status code usage
+app.get('/api/products/:id', async (req, res) => {
+  const product = await Product.findById(req.params.id);
+  
+  if (!product) {
+    return res.status(404).json({ error: 'Product not found' });
+  }
+  
+  res.json(product);
+});
+```
+
+Avoid the temptation to return 200 for everything. Status codes exist to help developers debug and handle edge cases gracefully.
+
+## API Versioning Strategies
+
+APIs evolve over time. Without versioning, changes can break existing client integrations. There are three common approaches to consider.
+
+**URL path versioning** remains the most straightforward method:
 
 ```
+GET /api/v1/users
+GET /api/v2/users
+```
+
+**Header versioning** keeps URLs clean but adds complexity:
+
+```
+Accept: application/vnd.api.v1+json
+```
+
+**Query parameter versioning** offers flexibility:
+
+```
+GET /api/users?version=1
+```
+
+For most projects, URL path versioning provides the best balance of clarity and ease of implementation. Claude Code can generate versioned route structures that keep your code organized as your API grows.
+
+## Error Handling Patterns
+
+Comprehensive error responses help developers integrate with your API successfully. Include enough context for debugging without exposing sensitive information.
+
+```javascript
+// Structured error response
 {
-  "data": { ... },
-  "meta": {
-    "requestId": "req_abc123",
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Invalid email format",
+    "field": "email",
     "timestamp": "2026-03-14T10:30:00Z"
   }
 }
 ```
 
-For paginated collections:
+Implement error-handling middleware that catches unhandled exceptions and returns consistent responses:
 
+```javascript
+// Express error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  
+  res.status(err.status || 500).json({
+    error: {
+      code: err.code || 'INTERNAL_ERROR',
+      message: process.env.NODE_ENV === 'production' 
+        ? 'An unexpected error occurred' 
+        : err.message
+    }
+  });
+});
 ```
-{
-  "data": [...],
-  "pagination": {
-    "page": 1,
-    "perPage": 20,
-    "total": 150,
-    "hasMore": true
+
+## Authentication Considerations
+
+Securing your API starts with choosing appropriate authentication methods. OAuth 2.0 with JWT tokens provides a robust standard for modern applications.
+
+```javascript
+// JWT authentication middleware
+const authenticate = async (req, res, next) => {
+  const token = req.headers.authorization?.split(' ')[1];
+  
+  if (!token) {
+    return res.status(401).json({ error: 'Authentication required' });
   }
-}
-```
-
-Error responses should follow a consistent schema:
-
-```
-{
-  "error": {
-    "code": "VALIDATION_ERROR",
-    "message": "Invalid email format",
-    "details": [
-      { "field": "email", "issue": "must contain @" }
-    ]
+  
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded;
+    next();
+  } catch (err) {
+    res.status(401).json({ error: 'Invalid token' });
   }
-}
+};
 ```
 
-By maintaining response consistency, Claude skills can implement generic response handlers that work across your entire API.
+Implement rate limiting to prevent abuse. Skills like **supermemory** can help you track authentication patterns across your projects.
 
-## Versioning Strategy
+## Pagination for Large Collections
 
-API versioning prevents breaking changes from disrupting existing Claude skill integrations. Choose a versioning approach early and apply it consistently.
+Endpoints returning collections must implement pagination to maintain performance. Offset-based and cursor-based pagination each have distinct use cases.
 
-URL versioning works well for public APIs:
-
-```
-/api/v1/users
-/api/v2/users
-```
-
-When introducing breaking changes, increment the version rather than modifying existing responses. Keep old versions available for a deprecation period—typically 6-12 months—giving Claude skill developers time to migrate.
-
-Include version information in response headers for debugging:
-
-```
-Accept-Version: v1
-X-API-Version: 2026.03.14
-```
-
-## Error Handling Standards
-
-Robust error handling enables Claude skills to make informed decisions about retry logic, user notifications, and fallback behavior.
-
-Use appropriate HTTP status codes:
-
-- **200 OK** — Successful GET, PUT, or DELETE
-- **201 Created** — Successful POST that created a resource
-- **400 Bad Request** — Client sent invalid data
-- **401 Unauthorized** — Authentication required or failed
-- **403 Forbidden** — Authenticated but not authorized
-- **404 Not Found** — Resource doesn't exist
-- **429 Too Many Requests** — Rate limit exceeded
-- **500 Internal Server Error** — Something failed on your end
-
-For rate limiting, include retry-after information:
-
-```
-429 Too Many Requests
-Retry-After: 3600
-X-RateLimit-Remaining: 0
+```javascript
+// Offset-based pagination
+app.get('/api/users', async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 20;
+  const offset = (page - 1) * limit;
+  
+  const users = await User.findAll({ limit, offset });
+  const total = await User.count();
+  
+  res.json({
+    data: users,
+    pagination: {
+      page,
+      limit,
+      total,
+      pages: Math.ceil(total / limit)
+    }
+  });
+});
 ```
 
-Claude skills using the tdd skill can generate test cases that verify your error responses match these standards.
+For large datasets or real-time requirements, cursor-based pagination offers better performance by avoiding offset calculations.
 
-## Field Selection and Filtering
+## Documentation and Client Generation
 
-APIs that return excessive data force Claude to process unnecessary information. Implement field selection to let clients request only what they need:
+Well-documented APIs reduce integration time significantly. Combine OpenAPI specifications with tools that generate client libraries automatically.
 
-```
-GET /api/v1/users?fields=id,name,email
-GET /api/v1/orders?fields=id,status,total&status=pending
-```
+Claude Code works effectively with **pdf** skill to generate API documentation, and **frontend-design** patterns help create consistent request/response schemas. Consider maintaining your API specification in YAML format:
 
-Combine filtering with pagination for efficient large dataset handling:
-
-```
-GET /api/v1/products?category=electronics&minPrice=100&page=1&perPage=50
-```
-
-This approach reduces bandwidth, speeds up response times, and helps Claude skills handle rate limits more effectively.
-
-## Authentication Patterns
-
-For APIs that Claude skills will call, choose authentication that balances security with ease of implementation:
-
-**API Keys** work well for server-to-server communication:
-
-```
-Authorization: Bearer {api_key}
-```
-
-**OAuth 2.0** suits APIs accessed on behalf of users. Implement token refresh handling so Claude skills can automatically obtain new access tokens without manual intervention.
-
-**JWT tokens** should include expiration times and be refreshable:
-
-```
-{
-  "token": "eyJhbGciOiJIUzI1NiIs...",
-  "expiresIn": 3600,
-  "refreshToken": "dGhpcyBpcyBhIHJlZnJlc2..."
-}
+```yaml
+paths:
+  /users:
+    get:
+      summary: List all users
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/User'
 ```
 
-The supermemory skill can help persist authentication tokens across Claude sessions, maintaining long-running integrations.
+## Summary
 
-## Practical Example
+Effective REST API design requires balancing simplicity, performance, and long-term maintainability. Focus on consistent naming conventions, proper HTTP method usage, meaningful status codes, and comprehensive error handling. Version your APIs from the start, implement solid authentication, and always paginate collection endpoints.
 
-Here's how a well-designed API looks in practice, suitable for Claude skill integration:
-
-```
-# Create a new order
-POST /api/v1/orders
-Content-Type: application/json
-Authorization: Bearer {api_key}
-
-{
-  "items": [
-    { "productId": "prod_123", "quantity": 2 }
-  ],
-  "shippingAddress": {
-    "street": "123 Main St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94102"
-  }
-}
-
-# Response
-201 Created
-{
-  "data": {
-    "id": "ord_abc123",
-    "status": "pending",
-    "total": 79.98,
-    "createdAt": "2026-03-14T10:30:00Z"
-  },
-  "meta": {
-    "requestId": "req_xyz789"
-  }
-}
-```
-
-Claude skills can parse this response consistently, extract the order ID for follow-up operations, and handle the 201 status code appropriately.
-
-## Testing Your API with Claude Skills
-
-The pdf skill can generate API documentation from OpenAPI specs, while the frontend-design skill helps prototype API consumers. Use the tdd skill to write integration tests that verify your API behaves correctly under various conditions.
-
-Build APIs that Claude Code skills can work with reliably, and you'll create integrations that scale without constant debugging or special-case handling.
+Claude Code accelerates these practices by generating boilerplate code, suggesting improvements, and helping you maintain consistency across your API ecosystem. Combined with specialized skills for testing, documentation, and frontend integration, you can build professional-grade APIs that serve your applications well into the future.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-
-{% endraw %}
