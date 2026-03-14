@@ -264,4 +264,11 @@ Combining Claude Code with Fly.io creates a powerful deployment automation syste
 
 The scripts and strategies in this guide provide a foundation you can customize for your specific application requirements. Start with the basic deployment script, then add complexity as your needs evolve.
 
+## Related Reading
+
+- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) — extend your Fly.io CI with matrix testing strategies
+- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-skills-guide/articles/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — compare container deployment approaches across cloud providers
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — integrate test-driven quality gates into your deployment pipeline
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/articles/best-claude-skills-for-devops-and-deployment/) — the essential skill stack for deployment automation
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

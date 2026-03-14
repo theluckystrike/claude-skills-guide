@@ -143,7 +143,7 @@ COMMIT;
 
 ## Integration with Frameworks
 
-If you use Rails, Django, Laravel, or similar frameworks, your migration skill should align with the framework's conventions. The skill generates migrations in the correct format and follows framework best practices.
+If you use Rails, Django, Laravel, or similar frameworks, your migration skill should align with the framework's conventions. The skill generates migrations in the correct format and follows framework best practices. For backend-specific patterns including database integration, see the [Claude Code skills guide for backend developers](/claude-skills-guide/articles/claude-code-skills-for-backend-developers-node-and-python/).
 
 For example, a Rails migration skill should generate Ruby-based migrations:
 
@@ -161,7 +161,7 @@ The skill understands Rails conventions—using `change` for reversible migratio
 
 ## Testing Migrations
 
-A comprehensive migration skill includes testing guidance. Before applying migrations to production, test them against staging data. Your skill should remind you to:
+A comprehensive migration skill includes testing guidance. Before applying migrations to production, test them against staging data. Pair your migration tests with an [automated testing pipeline](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) to catch regressions continuously. Your skill should remind you to:
 
 1. Run migrations on a staging environment first
 2. Verify application functionality post-migration
@@ -179,5 +179,11 @@ Store your migration skill in your project's `.claude/skills` directory or share
 ---
 
 Building effective migration skills takes iteration. Start with a basic version, use it for real migrations, and refine the skill based on what worked and what needed adjustment. Over time, you'll have a specialized tool that handles your database changes reliably and follows your project's conventions precisely.
+
+## Related Reading
+
+- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-skills-guide/articles/claude-code-skills-for-backend-developers-node-and-python/) — Database integration patterns for backend development workflows
+- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Wire migration tests into CI to catch regressions before they reach production
+- [Claude Skills with Supabase: Practical Workflows](/claude-skills-guide/articles/claude-skills-with-supabase-database-integration/) — Apply these migration patterns in a Supabase + PostgreSQL project
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

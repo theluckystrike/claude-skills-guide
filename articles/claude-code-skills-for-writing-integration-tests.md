@@ -24,7 +24,7 @@ However, integration tests present unique challenges. They require realistic tes
 
 ### The TDD Skill
 
-The `/tdd` skill provides a test-driven development workflow that works well for integration tests. When you activate this skill, Claude guides you through writing tests before implementation, ensuring your code meets requirements from the start.
+The [TDD skill provides a test-driven development workflow](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) that works well for integration tests. When you activate this skill, Claude guides you through writing tests before implementation, ensuring your code meets requirements from the start.
 
 Activate the skill in your Claude Code session:
 
@@ -59,7 +59,7 @@ This skill helps you design integration tests that are:
 
 ### The Code Review Skill
 
-After writing integration tests, use the `/review` skill to analyze your test code:
+After writing integration tests, use the [code review skill](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) to analyze your test code:
 
 ```
 /review
@@ -162,7 +162,7 @@ class TestCreateUser:
 
 ## Managing Test Data Effectively
 
-One of the biggest challenges in integration testing is managing test data. Claude Code skills provide strategies for creating realistic, isolated test data.
+One of the biggest challenges in integration testing is managing test data. Claude Code skills provide strategies for creating realistic, isolated test data. For a complete automated testing pipeline, see the [automated testing pipeline guide](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/).
 
 ### Use Factories Instead of Fixtures
 
@@ -238,5 +238,12 @@ Integration tests require different approaches than unit tests. Keep these princ
 Claude Code skills provide structured workflows for applying these practices. The TDD skill ensures tests are written first, the testing skill provides best practice guidance, and the review skill catches common mistakes before they become problems.
 
 ---
+
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — use test-first techniques to write integration tests that stay reliable
+- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — wire integration tests into a full CI pipeline
+- [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) — review integration test quality and coverage gaps automatically
+- [Claude Code Skills for QA Engineers: Automating Test Suites](/claude-skills-guide/articles/claude-code-skills-for-qa-engineers-automating-test-suites/) — broader test suite automation patterns for QA workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
