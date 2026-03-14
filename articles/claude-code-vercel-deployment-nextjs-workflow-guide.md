@@ -10,6 +10,8 @@ reviewed: true
 score: 8
 permalink: /claude-code-vercel-deployment-nextjs-workflow-guide/
 ---
+{% raw %}
+
 # Claude Code Vercel Deployment Next.js Workflow Guide
 
 Deploying Next.js applications to Vercel becomes remarkably powerful when combined with Claude Code's automation capabilities. This guide walks you through setting up a streamlined deployment workflow that handles everything from preview deployments to production releases, with intelligent checks at each stage using Claude skills like `/tdd`, `/frontend-design`, `/pdf`, and `/supermemory`.
@@ -199,3 +201,4 @@ Start with the preview deployment workflow, then gradually add production safegu
 - [Claude Skills with Vercel Deployment Automation](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) — Step-by-step Vercel deployment automation using Claude skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -10,6 +10,8 @@ reviewed: true
 score: 8
 permalink: /claude-code-cypress-component-testing-guide/
 ---
+{% raw %}
+
 # Claude Code Cypress Component Testing Guide
 
 Cypress component testing has become essential for modern frontend development, enabling developers to test individual React, Vue, or Angular components in isolation. When combined with Claude Code's AI capabilities, you can accelerate test creation, improve coverage, and maintain solid testing workflows. This guide shows you how to integrate Claude Code into your Cypress component testing practice.
@@ -199,3 +201,4 @@ For persistent flakiness, consider increasing timeouts for slow renders or using
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Explore more Claude Code skill workflows for testing and frontend development
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

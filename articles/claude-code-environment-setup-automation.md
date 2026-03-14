@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Environment Setup Automation"
 description: "Learn how to automate your Claude Code environment setup with skills, hooks, and custom scripts for streamlined development workflows."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-environment-setup-automation/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 # Claude Code Environment Setup Automation
 

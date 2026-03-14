@@ -10,6 +10,8 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
+
 # Claude Code Developer Portal Setup Guide
 
 Developer portals serve as the central hub for organizing, documenting, and distributing Claude skills across teams. This guide walks you through building a functional developer portal from scratch using Jekyll, with practical patterns for skill documentation, search optimization, and maintenance workflows.
@@ -237,3 +239,4 @@ Extend your portal with MCP integration for dynamic skill discovery, version tra
 - [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

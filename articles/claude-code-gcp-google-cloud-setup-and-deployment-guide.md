@@ -10,6 +10,8 @@ reviewed: true
 score: 8
 permalink: /claude-code-gcp-google-cloud-setup-and-deployment-guide/
 ---
+{% raw %}
+
 # Claude Code GCP Google Cloud Setup and Deployment Guide
 
 [Google Cloud Platform provides reliable, scalable infrastructure for deploying applications](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Integrating Claude Code into your GCP workflow enables intelligent automation, from generating deployment configurations to managing multi-service architectures. This guide walks through practical setups for deploying to Cloud Run, Cloud Functions, and using GCP services alongside Claude Code skills.
@@ -222,3 +224,4 @@ The key is treating Claude Code as a local development tool that interfaces with
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep cloud automation sessions cost-effective
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

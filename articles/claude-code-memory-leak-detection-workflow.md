@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code Memory Leak Detection Workflow"
 description: "A practical guide to identifying and resolving memory leaks in Claude Code sessions. Learn the detection workflow with real examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-memory-leak-detection-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 Memory leaks in Claude Code sessions can silently degrade performance, cause unexpected crashes, and waste computational resources. For developers working on extended coding sessions or power users running complex agent workflows, understanding how to detect and address these issues is essential. This guide provides a practical detection workflow with concrete examples you can apply immediately.
 
