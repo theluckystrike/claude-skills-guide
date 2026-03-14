@@ -5,6 +5,7 @@ description: "A practical guide to reducing Docker image sizes for Claude Code w
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-docker-image-size-reduction-guide/
+categories: [guides]
 ---
 
 {% raw %}
@@ -182,6 +183,13 @@ Docker image size reduction requires a combination of strategies: multi-stage bu
 For Claude Code workflows specifically, evaluate which skills your container actually needs. The pdf skill, frontend-design skill, and tdd skill each have different dependencies. Building separate minimal images per skill often proves more efficient than one large image containing everything.
 
 Implement these techniques incrementally, measure results, and automate checks to maintain gains over time.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

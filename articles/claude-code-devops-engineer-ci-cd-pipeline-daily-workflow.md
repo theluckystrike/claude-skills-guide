@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for DevOps Engineers: CI/CD Pipeline Daily Workflow"
-description: "Learn how Claude Code transforms DevOps daily workflows with practical examples for CI/CD pipeline management, incident response, and infrastructure automation."
+title: "Claude Code for DevOps Engineers: CI/CD Pipeline Daily."
+description: "Learn how Claude Code transforms DevOps daily workflows with practical examples for CI/CD pipeline management, incident response, and infrastructure."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-devops-engineer-ci-cd-pipeline-daily-workflow/
@@ -161,3 +161,10 @@ Claude Code transforms DevOps workflows from reactive firefighting to proactive 
 
 The key is treating Claude not as a search engine, but as a senior teammate who understands your entire infrastructure and can take informed actions based on that understanding.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

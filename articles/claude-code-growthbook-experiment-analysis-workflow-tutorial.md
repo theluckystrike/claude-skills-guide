@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code GrowthBook Experiment Analysis Workflow Tutorial"
-description: "Learn how to use Claude Code for GrowthBook experiment analysis. This tutorial covers practical workflows for analyzing A/B test results, interpreting experiment data, and making data-driven decisions with Claude Code skills."
+description: "Learn how to use Claude Code for GrowthBook experiment analysis. This tutorial covers practical workflows for analyzing A/B test results, interpreting."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-growthbook-experiment-analysis-workflow-tutorial/
@@ -167,3 +167,10 @@ Claude Code transforms GrowthBook experiment analysis from a manual, error-prone
 The key is establishing clear processes around your experiment analysis, using Claude Code as a knowledgeable assistant that helps maintain statistical rigor while accelerating your workflow. Start with simple analyses and gradually build toward more sophisticated automated reporting as your experimentation program matures.
 
 Remember: the goal isn't just to run experiments, but to learn from them effectively. Claude Code helps you extract meaningful insights from your GrowthBook data, turning raw numbers into product decisions that drive real business value.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

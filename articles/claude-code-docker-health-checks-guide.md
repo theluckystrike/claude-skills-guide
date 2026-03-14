@@ -5,6 +5,7 @@ description: "Learn how to implement Docker health checks for your containerized
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-docker-health-checks-guide/
+categories: [guides]
 ---
 
 {% raw %}
@@ -181,4 +182,11 @@ Document your health check endpoints. If your API exposes a `/health` endpoint, 
 When building Docker-based applications with Claude Code, you can automate health check generation. The supermemory skill stores your project patterns, so health checks for similar services follow consistent patterns. The pdf skill helps generate documentation for your health check configurations. The frontend-design skill ensures any health dashboard you build follows consistent UI patterns.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

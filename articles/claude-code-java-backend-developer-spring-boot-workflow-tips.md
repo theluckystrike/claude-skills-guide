@@ -5,6 +5,7 @@ description: "Master Claude Code for Java Spring Boot development with practical
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-java-backend-developer-spring-boot-workflow-tips/
+categories: [guides]
 ---
 
 # Claude Code Java Backend Developer Spring Boot Workflow Tips
@@ -177,3 +178,10 @@ The generated configuration follows the twelve-factor app methodology and includ
 Integrating Claude Code into your Spring Boot development workflow significantly improves productivity. From project initialization to debugging, AI assistance handles repetitive tasks, suggests best practices, and helps resolve issues quickly. Start incorporating these tips into your daily workflow and experience the transformation in your Java backend development process.
 
 The key is treating Claude Code as a collaborative partner rather than just a code generator. Describe your requirements clearly, review generated code for accuracy, and leverage its expertise in Spring Boot patterns. Your development speed and code quality will thank you.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

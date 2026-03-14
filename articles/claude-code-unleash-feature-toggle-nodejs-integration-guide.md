@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Unleash Feature Toggle Node.js Integration Guide"
-description: "Learn how to integrate Unleash feature toggles with Node.js using Claude Code. Master feature flag workflows, environment configuration, and best practices."
+description: "Learn how to integrate Unleash feature toggles with Node.js using Claude Code. Master feature flag workflows, environment configuration, and best."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-unleash-feature-toggle-nodejs-integration-guide/
@@ -224,3 +224,10 @@ Integrating Unleash feature toggles with Node.js using Claude Code provides a po
 
 Start with simple boolean flags and gradually adopt more sophisticated strategies like gradual rollouts and user targeting. Remember to establish clear lifecycle management practices and clean up flags once features are fully released. With these techniques, you'll have the confidence to ship faster while maintaining full control over your user experience.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

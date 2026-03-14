@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Frontend Developer Cross Browser Testing Guide"
-description: "A comprehensive guide to using Claude Code for cross-browser testing in frontend development. Learn how to set up, write, and automate browser compatibility tests with AI assistance."
+description: "A comprehensive guide to using Claude Code for cross-browser testing in frontend development. Learn how to set up, write, and automate browser."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-frontend-developer-cross-browser-testing-guide/
@@ -214,3 +214,10 @@ jobs:
 ## Conclusion
 
 Claude Code dramatically reduces the effort required for cross-browser testing. By automating test generation, identifying compatibility issues, and helping you build robust testing workflows, it lets frontend developers focus on building features rather than debugging browser-specific quirks. Start integrating Claude Code into your cross-browser testing strategy today, and ship more reliable web applications across all browsers.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
