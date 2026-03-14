@@ -227,7 +227,7 @@ Deny rules take precedence over allow rules when both match.
 ## Related Reading
 
 - [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [How to Set Environment Variables for Claude Code Skills](/claude-skills-guide/how-do-i-set-environment-variables-for-claude-code-skills/)
+- [How to Set Environment Variables for Claude Code Skills](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/)
 - [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
 - [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
