@@ -10,7 +10,6 @@ reviewed: true
 score: 8
 permalink: /claude-code-skills-for-creating-github-actions-workflows/
 ---
-{% raw %}
 
 # Claude Code Skills for Creating GitHub Actions Workflows
 
@@ -177,4 +176,3 @@ Start with one skill focused on your most common workflow type, then expand as y
 - [Open Source Contribution Workflow with Claude Code 2026](/claude-skills-guide/claude-code-open-source-contribution-workflow-guide-2026/) — Apply GitHub Actions skills to streamline your open source contribution pipeline
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

@@ -10,7 +10,6 @@ permalink: /claude-code-api-contract-testing-guide/
 reviewed: true
 score: 7
 ---
-{% raw %}
 
 # Claude Code API Contract Testing Guide
 
@@ -198,4 +197,3 @@ Start by creating a contract testing skill, then add Pact or OpenAPI validation 
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

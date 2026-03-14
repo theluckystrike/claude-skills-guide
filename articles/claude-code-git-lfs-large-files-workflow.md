@@ -144,4 +144,11 @@ Git LFS combined with Claude Code creates a robust workflow for managing large f
 
 The key is establishing LFS configuration early in your project and ensuring all team members understand the workflow. With these patterns in place, large files no longer become a bottleneck in your development process.
 
+## Related Reading
+
+- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — LFS is part of git best practices for large repos
+- [Claude Code Git Submodules Management Guide](/claude-skills-guide/claude-code-git-submodules-management-guide/) — Another large-repo management technique
+- [Claude Code Error Out of Memory Large Codebase Fix](/claude-skills-guide/claude-code-error-out-of-memory-large-codebase-fix/) — Large files often cause OOM issues
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Git workflow automation guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

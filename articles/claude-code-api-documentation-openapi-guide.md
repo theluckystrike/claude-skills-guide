@@ -197,4 +197,11 @@ Claude Code transforms OpenAPI documentation from manual maintenance into an aut
 
 Start with a single endpoint, add annotations, generate your first spec, and expand from there. The automation pays dividends as your API grows.
 
+## Related Reading
+
+- [Claude Code API Contract Testing Guide](/claude-skills-guide/claude-code-api-contract-testing-guide/) — Contract testing validates your OpenAPI spec
+- [Claude Code API Changelog Documentation](/claude-skills-guide/claude-code-api-changelog-documentation/) — Keep docs current with changelog tracking
+- [Claude Code API Backward Compatibility Guide](/claude-skills-guide/claude-code-api-backward-compatibility-guide/) — Backward compatibility is documented in OpenAPI
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — API documentation workflow guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

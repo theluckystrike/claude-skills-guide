@@ -10,7 +10,6 @@ permalink: /claude-code-artillery-performance-testing/
 categories: [tutorials]
 tags: [claude-code, claude-skills, artillery, performance-testing, load-testing]
 ---
-{% raw %}
 
 # Claude Code Artillery Performance Testing: A Practical Guide
 
@@ -180,4 +179,3 @@ Claude Code and Artillery together form a practical combination for modern perfo
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Explore more Claude Code automation workflows for testing and deployment
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

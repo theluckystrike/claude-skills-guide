@@ -11,7 +11,6 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
-{% raw %}
 
 
 
@@ -272,4 +271,3 @@ The investment in proper setup—authentication, permission controls, and checkp
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — All CI/CD and automation workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

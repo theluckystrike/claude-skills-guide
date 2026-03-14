@@ -11,7 +11,6 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
-{% raw %}
 
 
 
@@ -220,4 +219,3 @@ The key advantage: what previously required hours of manual compilation now take
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More automation workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

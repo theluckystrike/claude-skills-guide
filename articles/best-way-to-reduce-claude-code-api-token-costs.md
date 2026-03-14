@@ -156,4 +156,11 @@ Start with these high-impact changes:
 
 Reducing Claude Code API token costs comes down to being intentional about what you send to the model. Small changes in prompt structure and workflow design compound into significant savings over time.
 
+## Related Reading
+
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Dedicated token optimization guide
+- [Why Is Claude Code Expensive: Large Context Tokens](/claude-skills-guide/why-is-claude-code-expensive-large-context-tokens/) — Understanding where token costs come from
+- [Claude Code Free Tier vs Pro Plan Feature Comparison 2026](/claude-skills-guide/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/) — Plan comparison for cost management
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced token optimization strategies
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

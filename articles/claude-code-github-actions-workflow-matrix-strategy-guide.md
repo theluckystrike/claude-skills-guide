@@ -10,7 +10,6 @@ reviewed: true
 score: 8
 permalink: /claude-code-github-actions-workflow-matrix-strategy-guide/
 ---
-{% raw %}
 
 # Claude Code GitHub Actions Workflow Matrix Strategy Guide
 
@@ -240,4 +239,3 @@ For more advanced patterns, explore the `supermemory` skill for tracking matrix 
 - [Claude Skills Workflow Guide](/claude-skills-guide/workflows-hub/) — See how matrix workflows fit into larger multi-skill automation patterns.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

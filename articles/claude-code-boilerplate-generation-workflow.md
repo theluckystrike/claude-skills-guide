@@ -185,4 +185,11 @@ Review the output of each skill invocation before committing. Skills generate se
 
 The boilerplate generation workflow scales from individual developers to enterprise teams. The same skills that scaffold a personal project also enforce organizational standards when invoked with specific parameters.
 
+## Related Reading
+
+- [Claude Code Project Scaffolding Automation](/claude-skills-guide/claude-code-project-scaffolding-automation/) — Scaffolding includes boilerplate generation
+- [Claude Code Environment Setup Automation](/claude-skills-guide/claude-code-environment-setup-automation/) — Boilerplate + environment setup for new projects
+- [Is Claude Code Worth It for Solo Developers and Freelancers](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/) — Boilerplate savings justify the subscription
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More project initialization workflow guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -11,7 +11,6 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
-{% raw %}
 
 
 
@@ -173,4 +172,3 @@ Semantic versioning automation through Claude Code eliminates repetitive manual 
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More automation workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}
