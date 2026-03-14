@@ -16,7 +16,7 @@ Measuring the effectiveness of your Claude Code skills requires a structured app
 
 ## Why Metrics Matter for Claude Skills
 
-[building custom Claude skills—whether it's a pdf skill for document processing](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), a tdd skill for test-driven development, or a frontend-design skill for UI generation—you need evidence that these skills actually improve your productivity. Raw intuition isn't enough. Quantitative metrics help you compare different approaches, justify time investments, and continuously improve your skill library.
+When [building custom Claude skills—whether it's a pdf skill for document processing](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), a tdd skill for test-driven development, or a frontend-design skill for UI generation—you need evidence that these skills actually improve your productivity. Raw intuition isn't enough. Quantitative metrics help you compare different approaches, justify time investments, and continuously improve your skill library.
 
 ## Core Metrics to Track
 
@@ -26,7 +26,7 @@ The most straightforward metric measures how long a skill takes to complete a ta
 
 ```bash
 # Example: Timing a Claude skill execution
-time claude "Create a README for my project using the docs skill"
+time claude "Create a README for my project"
 ```
 
 Compare this against the time it takes to complete the same task manually. A well-optimized skill should show meaningful time savings, typically 30-70% reduction for repetitive tasks.
@@ -165,7 +165,7 @@ Skills like xlsx and pptx benefit from:
 
 ### Balancing Speed and Quality
 
-The algorithmic-art skill demonstrates balancing execution time against output quality by offering multiple quality tiers—quick drafts versus polished outputs.
+Custom skills can balance execution time against output quality by offering multiple quality tiers—quick drafts versus polished outputs—based on the level of context and instructions provided.
 
 ## Continuous Improvement Workflow
 
