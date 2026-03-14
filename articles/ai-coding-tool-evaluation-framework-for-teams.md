@@ -180,6 +180,8 @@ The right AI coding tool accelerates your team's productivity without introducin
 Start with a pilot project, measure results against your baseline metrics, and expand usage only after validating value. This approach minimizes risk while ensuring your team adopts a tool that genuinely improves your development workflow.
 
 
+**Related guides:** [Claude Code Total Cost of Ownership for Enterprise Teams](https://theluckystrike.github.io/claude-skills-guide/claude-code-total-cost-of-ownership-enterprise/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

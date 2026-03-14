@@ -235,6 +235,8 @@ Understanding AI agent memory types helps you work more effectively with Claude 
 
 By structuring your interactions to work with these memory systems—keeping requests focused, providing clear context, and maintaining consistent project patterns—you can build more reliable and sophisticated AI-powered workflows. Claude Code's memory management is designed to be largely invisible, but knowing how it works helps you become a more effective developer working with AI agents.
 
+**Related guides:** [Claude Code Agent Task Queue Architecture Deep Dive](https://theluckystrike.github.io/claude-skills-guide/claude-code-agent-task-queue-architecture-deep-dive/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

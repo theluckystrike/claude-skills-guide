@@ -78,6 +78,8 @@ Goal decomposition is fundamental to how Claude Code transforms high-level reque
 
 The next time you work with Claude Code on a substantial task, try explicitly discussing the decomposition approach. Ask the agent how it plans to break down the work, review the proposed sub-tasks, and guide the process. This collaboration between human intent and AI execution is where goal decomposition truly shines.
 
+**Related guides:** [Chain of Agents Pattern for Sequential Task Processing](https://theluckystrike.github.io/claude-skills-guide/chain-of-agents-pattern-for-sequential-task-processing/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

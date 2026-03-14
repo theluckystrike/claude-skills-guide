@@ -237,6 +237,8 @@ The key is treating long tasks as series of verified handoffs rather than one co
 
 Start applying these strategies on your next extended workflow, and you'll find that even the most ambitious projects become manageable when broken into proper handoff-enabled phases.
 
+**Related guides:** [Building Supervisor Worker Agent Architecture Tutorial](https://theluckystrike.github.io/claude-skills-guide/building-supervisor-worker-agent-architecture-tutorial/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

@@ -181,6 +181,8 @@ AI-assisted schema design workflow transforms database development from a solita
 Start small: use AI to generate your first schema draft, then iterate. You'll find the learning curve is gentle, and the productivity gains are immediate. As your comfort grows, layer in more skills and automation.
 
 
+**Related guides:** [Best Way to Use Claude Code for Database Migrations](https://theluckystrike.github.io/claude-skills-guide/best-way-to-use-claude-code-for-database-migrations/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

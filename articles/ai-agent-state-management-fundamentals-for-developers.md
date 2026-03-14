@@ -244,6 +244,8 @@ Remember: the complexity of your state management should match your application'
 *This article was written to help developers understand and implement effective state management in AI agent applications.*
 {% endraw %}
 
+**Related guides:** [Fan Out Fan In AI Agent Pattern Explained](https://theluckystrike.github.io/claude-skills-guide/fan-out-fan-in-ai-agent-pattern-explained/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

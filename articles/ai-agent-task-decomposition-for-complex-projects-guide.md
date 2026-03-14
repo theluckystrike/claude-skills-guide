@@ -209,6 +209,8 @@ Start with the simplest possible decomposition—just two or three steps—and e
 Remember: the goal isn't just to complete tasks, but to complete them in a way that builds toward a coherent, maintainable system. Claude Code is your partner in execution; your job is to provide the architectural vision that guides each step.
 
 
+**Related guides:** [Claude Code Parallel Task Execution Workflow](https://theluckystrike.github.io/claude-skills-guide/claude-code-parallel-task-execution-workflow/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

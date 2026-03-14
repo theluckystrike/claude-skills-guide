@@ -116,6 +116,8 @@ Remember that AI tools excel at generating starting points and handling repetiti
 Start with thorough assessment, maintain rigorous testing, and use AI assistance to handle the mechanical aspects of translation. Your migrated codebase will benefit from both modern infrastructure and the accumulated wisdom of your existing implementation.
 
 
+**Related guides:** [Best AI Tools for Code Refactoring in 2026](https://theluckystrike.github.io/claude-skills-guide/best-ai-tools-for-code-refactoring-2026/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

@@ -137,6 +137,8 @@ AI coding tools have transformed open source contributions from an intimidating 
 The key is starting small, following project conventions, and using AI assistance strategically. With practice, you'll produce contributions that maintainers appreciate and that make meaningful impacts on the projects you support.
 
 
+**Related guides:** [Open Source Contribution Workflow with Claude Code 2026](https://theluckystrike.github.io/claude-skills-guide/claude-code-open-source-contribution-workflow-guide-2026/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

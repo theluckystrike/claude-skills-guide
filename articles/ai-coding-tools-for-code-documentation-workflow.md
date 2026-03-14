@@ -129,6 +129,8 @@ AI coding tools transform documentation from a neglected chore into an integrate
 The initial setup requires some investment, but the payoff comes in reduced support burden, improved developer onboarding, and codebases where documentation actually matches the implementation. Start small, automate incrementally, and watch your documentation quality improve without requiring manual effort for every code change.
 
 
+**Related guides:** [Claude Code API Documentation Best Practices](https://theluckystrike.github.io/claude-skills-guide/claude-code-api-documentation-best-practices/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

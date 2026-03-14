@@ -186,6 +186,8 @@ Start with AI for initial analysis and suggestion generation, then validate with
 Performance optimization is iterative. Use AI to identify opportunities, measure the impact, and track improvements over time. The tools handle the heavy lifting of pattern recognition and code generation, while you provide context and validate results.
 
 
+**Related guides:** [Claude Code Performance Bottleneck Finding](https://theluckystrike.github.io/claude-skills-guide/claude-code-performance-bottleneck-finding/)
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

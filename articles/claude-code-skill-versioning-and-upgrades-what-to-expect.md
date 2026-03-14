@@ -23,11 +23,11 @@ Claude Code skills follow semantic versioning principles, though the implementat
 
 The first number (major version) indicates breaking changes that could affect how the skill behaves or its compatibility with your existing workflows. The second number (minor version) signals new features or significant improvements that maintain backward compatibility. The third number (patch version) covers bug fixes and small refinements that don't alter functionality.
 
-When browsing skills in the registry, you can often specify version constraints. For example, you might install a specific version using a command like `claude skill install author/skill-name@1.2.0` or request the latest minor version with `@^1.2.0`. This flexibility lets you balance between getting new features and maintaining stability.
+Since skills are plain `.md` files, versioning them is straightforward: include a version in the file's front matter, and track the file in your project's version control. When an author releases an updated skill, you get the new version by copying the updated file into your `.claude/` directory and reviewing what changed in the file's content.
 
 ## Understanding the Upgrade Process
 
-Upgrading skills in Claude Code is designed to be straightforward, but the process varies depending on how you initially installed the skill. If you used the global installation method, running `claude skill update` checks all your installed skills for newer versions and prompts you through the upgrade process. For skills installed in a specific project, you'll use the project-specific update command.
+Upgrading skills in Claude Code means replacing the `.md` file in your `.claude/` directory with a newer version. Because skills are plain text files, you can diff old and new versions side-by-side before swapping. For project-level skills (`.claude/` in the repo), track them in git so your whole team gets updates when you commit the new version.
 
 During an upgrade, Claude Code compares the current installed version with the available version from the registry. If there are breaking changes, the system warns you before proceeding, listing what will change and potentially affected functionality. This gives you the opportunity to review the changes and decide whether to upgrade immediately or wait until you've adapted your workflows.
 
@@ -54,7 +54,7 @@ Breaking changes arrive with major version increments and require attention. The
 
 When you have multiple skills installed, version conflicts can occasionally arise. This typically happens when two skills depend on different versions of shared functionality or when a skill you developed locally conflicts with a registry version. Claude Code handles this gracefully in most cases, but understanding the resolution process helps you troubleshoot when issues appear.
 
-If you encounter conflicts, start by checking which skills have dependencies that might conflict. The `claude skill list` command with verbose output shows installed skills and their versions. From there, you can identify which skills need updates or whether you need to adjust your skill selection.
+If you encounter conflicts, start by auditing your `.claude/` directory directly — list the skill files and check the `version:` field in each one's front matter. From there, you can identify which skills need updates or whether you need to adjust your skill selection.
 
 For custom skills you're developing, version management becomes your responsibility. Include a version field in your skill's front matter and increment it following semantic versioning conventions. This practice ensures that when you share your skill with others or install it in new environments, the version accurately reflects the scope of changes.
 
