@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code OpenTelemetry Tracing Instrumentation Guide"
-description: "Master OpenTelemetry tracing instrumentation with Claude Code. Learn how to set up distributed tracing, create custom spans, and monitor your applications effectively."
+description: "Master OpenTelemetry tracing instrumentation with Claude Code. Learn how to set up distributed tracing, create custom spans, and monitor your."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, opentelemetry, tracing, instrumentation, observability, monitoring]
@@ -428,3 +428,10 @@ span.addEvent('Processing item', {
 OpenTelemetry tracing provides visibility into your application's behavior across service boundaries. With Claude Code as your partner, you can rapidly implement comprehensive instrumentation without becoming an OpenTelemetry expert. The key is starting simple with auto-instrumentation, then adding custom spans for your specific business logic.
 
 Remember to iterate: start with basic setup, add meaningful attributes, implement proper context propagation, and refine with sampling strategies as your observability needs grow.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
