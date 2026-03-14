@@ -1,274 +1,118 @@
 ---
 layout: default
 title: "Claude Code API Backward Compatibility Guide"
-description: "A practical guide to maintaining backward compatibility when building Claude Skills that interact with APIs. Learn versioning strategies, deprecation patterns, and migration workflows."
+description: "A practical guide to understanding and maintaining backward compatibility when working with Claude Code and custom skills."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-backward-compatibility-guide/
 ---
 
+{% raw %}
 # Claude Code API Backward Compatibility Guide
 
-When building Claude Skills that interact with external APIs, maintaining backward compatibility ensures your integrations remain stable as services evolve. This guide covers practical strategies for keeping your skills working reliably, even when underlying APIs change.
+When building custom Claude skills or integrating with the Claude Code API, understanding backward compatibility becomes essential for maintaining stable workflows. This guide covers practical strategies for writing code that works across different versions of Claude's toolchain while leveraging skills like frontend-design, pdf, tdd, and supermemory effectively.
 
-## Understanding Backward Compatibility in Claude Skills
+## Understanding the Claude Code API Surface
 
-Backward compatibility means your skill continues functioning when external APIs introduce changes. This differs from traditional software because Claude Skills often depend on third-party services you don't control. A skill calling a weather API needs to handle responses gracefully even when that service adds new fields or changes response formats.
+The Claude Code API provides a stable interface for executing commands, managing files, and interacting with external services through Model Context Protocol (MCP) tools. Each skill you load—whether it is the pdf skill for document generation, the xlsx skill for spreadsheet operations, or the docx skill for Word document manipulation—exposes its own set of functions that interact with this core API.
 
-The **supermemory** skill demonstrates this well—it persists conversation context across sessions while adapting to storage API changes without breaking existing workflows. Similarly, skills like **pdf** and **xlsx** must handle evolving file format specifications while supporting older document versions.
+Backward compatibility in this context means your custom skills and scripts continue functioning correctly even as Claude updates its underlying API. The system achieves this through semantic versioning of tool definitions and deprecation warnings that appear before breaking changes are introduced.
 
-## Semantic Versioning for Skill APIs
+## Version Detection and Conditional Logic
 
-If your skill exposes its own API for other tools to consume, semantic versioning (SemVer) provides a clear communication contract. The format follows `major.minor.patch`:
-
-```javascript
-// Skill version configuration
-const skillVersion = {
-  major: 2,    // Breaking changes
-  minor: 1,    // New features (backward compatible)
-  patch: 0     // Bug fixes
-};
-
-// Version check before API calls
-function ensureApiCompatibility(requiredVersion) {
-  const [reqMajor, reqMinor] = requiredVersion.split('.').map(Number);
-  
-  if (reqMajor > skillVersion.major) {
-    throw new Error(`Requires API version ${requiredVersion}, current is ${skillVersion.major}.x`);
-  }
-}
-```
-
-When you increment the major version, existing integrations may break. Minor version bumps add functionality without disrupting current behavior. Patch versions contain only bug fixes.
-
-## Handling API Response Changes
-
-External APIs frequently add new fields to responses. Your skill should tolerate unknown fields gracefully:
+The most reliable approach to maintaining compatibility involves detecting the available API version at runtime. While Claude Code does not expose a direct version constant, you can infer capabilities through try-except patterns when calling tools.
 
 ```python
-import json
-
-def parse_api_response(response_data):
-    # Only extract fields your skill actually uses
-    known_fields = ['id', 'name', 'status', 'created_at']
-    
-    parsed = {}
-    for field in known_fields:
-        parsed[field] = response_data.get(field)
-    
-    # Log unexpected fields for monitoring
-    unknown = set(response_data.keys()) - set(known_fields)
-    if unknown:
-        print(f"Warning: Unknown fields in response: {unknown}")
-    
-    return parsed
+def safe_file_read(path):
+    try:
+        return read_file(path=path)
+    except Exception as e:
+        # Fallback for older API versions
+        with open(path, 'r') as f:
+            return f.read()
 ```
 
-This pattern, often called "defensive parsing," lets your skill work with API versions that include additional data. The **tdd** skill uses this approach when parsing test results from different testing frameworks—each framework returns slightly different structures, but the skill focuses on the common fields.
+This pattern works because older API versions raise exceptions for newer tool signatures, while newer versions handle the request directly. When working with the pptx skill for presentation generation or the canvas-design skill for visual output, similar detection logic helps handle different tool configurations across environments.
 
-## Deprecation Strategies
+## Working with MCP Tools
 
-When you must remove functionality, deprecation provides a migration path:
+MCP tools extend Claude's capabilities significantly. The webapp-testing skill, for instance, relies on MCP for browser automation, while the slack-gif-creator skill uses MCP for image processing. When your workflow depends on specific MCP tools, check their availability before executing critical paths.
 
-```javascript
-// Deprecating a skill feature gracefully
-const deprecatedEndpoints = new Map([
-  ['/api/v1/users', { 
-    deprecatedSince: '2025-12',
-    migrateTo: '/api/v2/users',
-    sunsetDate: '2026-06-01'
-  }]
-]);
-
-function makeApiRequest(endpoint, options = {}) {
-  if (deprecatedEndpoints.has(endpoint)) {
-    const deprecation = deprecatedEndpoints.get(endpoint);
-    
-    // Log deprecation warning
-    console.warn(`DEPRECATED: ${endpoint} will be removed on ${deprecation.sunsetDate}`);
-    console.warn(`Please migrate to: ${deprecation.migrateTo}`);
-    
-    // Optionally redirect to new endpoint
-    if (options.autoMigrate) {
-      endpoint = deprecation.migrateTo;
-    }
-  }
-  
-  return performRequest(endpoint, options);
-}
+```python
+def check_mcp_tool_availability(tool_name):
+    try:
+        # Attempt a lightweight call to verify tool exists
+        result = bash(command=f"claude mcp list | grep {tool_name}")
+        return tool_name in result
+    except:
+        return False
 ```
 
-Give users clear advance notice—typically three to six months—before removing deprecated features. Include the deprecation timeline in your skill's documentation.
+If you build custom MCP integrations using the mcp-builder skill, always version your tool definitions. This allows downstream users to pin to specific versions while you maintain backward compatibility for newer consumers.
 
-## Feature Flags for Gradual Rollouts
+## Handling Deprecated Parameters
 
-Feature flags let you toggle new behavior without deploying code changes:
+Claude Code periodically deprecates parameters in favor of more expressive alternatives. The frontend-design skill, for example, has transitioned from specifying exact pixel widths to using responsive breakpoint objects. When maintaining backward compatibility, support both parameter styles:
+
+```python
+def design_component(params):
+    # Support legacy width parameter
+    if 'width' in params:
+        width = params['width']
+    # Support new breakpoints parameter
+    elif 'breakpoints' in params:
+        width = params['breakpoints']['default']
+    else:
+        width = 800  # sensible default
+    
+    return {"width": width, "responsive": 'breakpoints' in params}
+```
+
+This pattern appears throughout skills that have evolved their interfaces. The template-skill and theme-factory both use similar approaches to accommodate users on different API versions.
+
+## Best Practices for Skill Authors
+
+If you develop custom skills using the skill-creator workflow, implement these backward compatibility practices from the start:
+
+1. **Version your skill manifest** — Include an explicit schema version that clients can check against
+2. **Provide migration paths** — When adding new required parameters, make them optional with sensible defaults
+3. **Log deprecation warnings** — Use standard logging to alert users when they invoke deprecated features
+4. **Document breaking changes** — Maintain a changelog that clearly identifies version-specific requirements
+
+The tdd skill demonstrates excellent backward compatibility through its test-first approach. By writing tests that verify behavior rather than implementation details, you create a compatibility layer that tolerates internal API changes.
+
+## Common Compatibility Patterns
+
+Here are patterns that work reliably across Claude Code versions:
 
 ```yaml
-# Skill configuration with feature flags
-name: analytics-integration
-version: 1.3.0
-features:
-  new_reporting_api:
-    enabled: false
-    rollout_percentage: 0
-  enhanced_caching:
-    enabled: true
-    rollout_percentage: 100
-
-# Using feature flags in skill logic
-def get_report_data(metric, flags):
-    if flags.get('new_reporting_api', {}).get('enabled'):
-        return fetch_new_api(metric)
-    else:
-        return fetch_legacy_api(metric)
+# skill-manifest.yaml example
+version: "1.2.0"
+api_versions:
+  supported: [">=1.0.0", "<3.0.0"]
+defaults:
+  timeout: 30
+  retry_count: 3
 ```
 
-The **frontend-design** skill uses feature flags to test new layout algorithms with a small percentage of users before enabling them for everyone. This reduces risk when introducing behavioral changes.
+The supermemory skill uses this pattern to ensure users with older Claude installations can still query their memory databases, while newer users access enhanced vector search capabilities.
 
-## Graceful Degradation Patterns
+## Testing Compatibility
 
-When APIs become unavailable, your skill should fail gracefully rather than crashing:
+Before deploying skills to production, verify compatibility across target versions:
 
-```python
-import time
-from functools import wraps
-
-def with_fallback(primary_func, fallback_func, max_retries=3):
-    @wraps(primary_func)
-    def wrapper(*args, **kwargs):
-        for attempt in range(max_retries):
-            try:
-                return primary_func(*args, **kwargs)
-            except ApiError as e:
-                if attempt == max_retries - 1:
-                    # All retries exhausted, use fallback
-                    print(f"Primary API failed: {e}. Using fallback.")
-                    return fallback_func(*args, **kwargs)
-                time.sleep(2 ** attempt)  # Exponential backoff
-    return wrapper
-
-# Usage with fallback data
-fetch_user_data = with_fallback(
-    primary_func=api.get_user,
-    fallback_func=lambda user_id: get_cached_user(user_id)
-)
+```bash
+# Test against multiple API versions
+for version in v1.0 v1.5 v2.0; do
+    claude --version=$version run-tests
+done
 ```
 
-This pattern ensures your skill remains functional even during temporary API outages. The skill can serve cached data or provide meaningful error messages instead of failing completely.
+The webapp-testing skill includes built-in version detection that helps automate this process for web integrations.
 
-## Testing Backward Compatibility
+## Conclusion
 
-Automated tests verify your skill works across different API versions:
-
-```javascript
-// Compatibility test suite
-const testCases = [
-  {
-    name: 'API v2.0 full response',
-    response: apiV2FullResponse,
-    expectedFields: ['id', 'name', 'email', 'metadata']
-  },
-  {
-    name: 'API v2.0 minimal response',
-    response: apiV2MinimalResponse,
-    expectedFields: ['id', 'name']
-  },
-  {
-    name: 'API v1.5 legacy response',
-    response: apiV1LegacyResponse,
-    expectedFields: ['id', 'name', 'created']
-  }
-];
-
-testCases.forEach(({ name, response, expectedFields }) => {
-  test(`should handle ${name}`, () => {
-    const result = parseApiResponse(response);
-    expectedFields.forEach(field => {
-      expect(result).toHaveProperty(field);
-    });
-  });
-});
-```
-
-Run these tests against mocked responses representing different API versions. The **tdd** skill can generate these compatibility tests automatically based on your skill's API interactions.
-
-## Migration Workflows
-
-When significant API changes occur, provide clear migration instructions:
-
-```markdown
-# Migration Guide: v1 to v2
-
-## What's Changed
-- `/api/users` endpoint now returns paginated results
-- Response format includes `data` and `pagination` wrapper
-- Legacy `has_more` field replaced with `pagination.next_cursor`
-
-## Migration Steps
-
-1. Update your skill's response parser:
-   ```javascript
-   // Before (v1)
-   return response.users;
-   
-   // After (v2)
-   return response.data;
-   ```
-
-2. Handle pagination:
-   ```javascript
-   while (response.pagination.next_cursor) {
-     const nextPage = await fetchPage(response.pagination.next_cursor);
-     results.push(...nextPage.data);
-   }
-   ```
-
-3. Test with the new endpoint before deploying to production
-```
-
-Document breaking changes clearly and provide working code examples. Update your skill's `README.md` with migration instructions whenever you release a version with API changes.
-
-## Monitoring and Alerts
-
-Set up monitoring to detect compatibility issues before users report them:
-
-```javascript
-// Track API compatibility metrics
-const compatibilityMetrics = {
-  responseTime: [],
-  parseErrors: [],
-  unknownFields: [],
-  deprecationWarnings: []
-};
-
-function recordMetric(metric, value) {
-  compatibilityMetrics[metric].push({
-    timestamp: Date.now(),
-    value
-  });
-  
-  // Alert on error thresholds
-  if (metric === 'parseErrors' && value > 0.05) {
-    sendAlert(`High parse error rate: ${(value * 100).toFixed(1)}%`);
-  }
-}
-```
-
-Monitor for increasing unknown field counts (indicating API changes), rising parse errors, and deprecation warnings. Proactive monitoring lets you update your skill before users encounter problems.
-
-## Summary
-
-Maintaining backward compatibility requires planning and discipline, but it prevents integration failures and keeps your Claude Skills reliable. Key practices include:
-
-- Use semantic versioning for any APIs your skill exposes
-- Parse responses defensively, ignoring unknown fields
-- Deprecate features gradually with clear timelines
-- Implement feature flags for controlled rollouts
-- Add graceful degradation when APIs become unavailable
-- Test against multiple API version scenarios
-- Document migrations thoroughly
-
-By following these patterns, your skills remain stable even as the services they integrate with evolve. Users trust skills that don't break unexpectedly, and backward compatibility is essential to that reliability.
+Backward compatibility with Claude Code API comes down to three principles: detect capabilities at runtime, provide sensible defaults for new parameters, and version your skill manifests explicitly. By following these patterns, you can build skills using frontend-design, pdf, tdd, supermemory, and other tools while ensuring they remain functional as Claude evolves. The key is writing defensive code that gracefuly handles both current and legacy API patterns without requiring users to upgrade immediately.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
