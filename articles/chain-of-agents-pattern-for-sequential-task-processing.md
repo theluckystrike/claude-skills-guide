@@ -4,7 +4,7 @@ layout: default
 title: "Chain of Agents Pattern for Sequential Task Processing"
 description: "Learn how to implement the chain of agents pattern in Claude Code for processing complex, multi-step workflows with specialized AI agents working in."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chain-of-agents-pattern-for-sequential-task-processing/
 reviewed: true
 categories: [guides]
