@@ -27,7 +27,7 @@ Claude Code is not a generic AI chat tool—it is a programmable coding assistan
 
 ## By Role
 
-Different developers extract different value from Claude Code. A DevOps engineer wants automated Dockerfile generation and CI/CD script precision. A data scientist wants reliable pipeline code and notebook-native workflows. A freelancer wants high output per hour with minimal overhead. This section maps the skill system to the people using it.
+Different developers extract different value from Claude Code. A DevOps engineer wants automated Dockerfile generation and CI/CD script precision. A data scientist wants reliable pipeline code and notebook-native workflows. A freelancer wants [high output per hour with minimal overhead](/claude-skills-guide/articles/best-claude-skills-for-solo-developers-and-freelancers/). This section maps the skill system to the people using it.
 
 ### Software Developers (Frontend & Full-Stack)
 
@@ -45,7 +45,7 @@ Key use-case guides for software developers:
 
 ### Backend Developers
 
-Backend developers using Claude Code focus on schema design, API patterns, service reliability, and performance profiling. Claude's `/tdd` skill enforces test-first habits at the unit and integration level, while the shell and tooling access enables real interaction with running services.
+Backend developers using Claude Code focus on schema design, API patterns, service reliability, and performance profiling. Claude's `/tdd` skill enforces [test-first habits](/claude-skills-guide/articles/how-to-make-claude-code-test-before-implementing-feature/) at the unit and integration level, while the shell and tooling access enables real interaction with running services.
 
 - [Claude Code Skills for Backend Developers: Node.js and Python](/claude-skills-guide/articles/claude-code-skills-for-backend-developers-node-and-python/) — Practical skill configurations for Node.js and Python API development.
 - [Claude Code Express Middleware Error Handling Patterns Guide](/claude-skills-guide/articles/claude-code-express-middleware-error-handling-patterns-guide/) — Systematic middleware design and error propagation patterns.

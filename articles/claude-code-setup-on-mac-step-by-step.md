@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Setup on Mac: Step-by-Step Guide for Developers
 
-Getting Claude Code running on your Mac unlocks a powerful AI assistant directly in your terminal. This guide walks you through every step, from installation to your first commands, with practical examples developers can use immediately.
+Getting Claude Code running on your Mac unlocks a powerful AI assistant directly in your terminal. This guide walks you through every step, from installation to your first commands, with practical examples developers can use immediately. For broader onboarding resources, see the [getting started hub](/claude-skills-guide/getting-started-hub/).
 
 ## Prerequisites
 
@@ -64,7 +64,7 @@ For better security, consider using a `.env` file with a tool like `direnv`, or 
 
 ## Project-Level Configuration
 
-Claude Code supports project-specific instructions via a `CLAUDE.md` file in your project root. This file describes your project to Claude at the start of each session:
+Claude Code supports project-specific instructions via a `CLAUDE.md` file in your project root. This file describes your project to Claude at the start of each session. You can also load [Claude Code skills](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) to bring in reusable specialized workflows:
 
 ```markdown
 # Project Context
