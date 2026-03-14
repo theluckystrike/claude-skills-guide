@@ -67,8 +67,8 @@ Long-running projects require careful context management. Claude's context windo
 Use the **context7** skill to maintain project awareness:
 
 ```bash
-# Initialize project context
-/context7 init --project myapp --team conventions
+# Load project context
+/context7
 ```
 
 For larger teams, create session summaries that document:
@@ -113,8 +113,8 @@ The **doc-writer** skill pairs well with **pdf** generation for creating team ha
 
 ```bash
 # Generate updated documentation
-# Invoke skill: /doc-writer --context docs/
-# Invoke skill: /pdf --input docs/ --output team-handbook.pdf
+# Step 1: /doc-writer
+# Step 2: /pdf
 ```
 
 ### API Documentation Workflow
@@ -140,7 +140,9 @@ Complex team workflows often require multiple skills working together. Chain ski
 
 ```bash
 # Example: Complete feature workflow
-# Invoke skill: /tdd --skill frontend-design --skill code-review
+# Step 1: /tdd
+# Step 2: /frontend-design
+# Step 3: /code-review
 ```
 
 The **mcp-builder** skill helps teams create custom tool chains for their specific needs. Build specialized skills for repetitive tasks like:
