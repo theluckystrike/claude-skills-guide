@@ -1,216 +1,180 @@
 ---
 layout: default
 title: "How to Make Claude Code Use Specific Library Version"
-description: "Learn precise techniques to control which library versions Claude Code uses in your projects, from package.json constraints to virtual environment management."
+description: "Control which library versions Claude Code uses in your projects. Practical techniques for specifying package versions in requirements.txt, package.json, and more."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /how-to-make-claude-code-use-specific-library-version/
-reviewed: true
-score: 7
-categories: [guides]
-tags: [claude-code, claude-skills]
 ---
 
 # How to Make Claude Code Use Specific Library Version
 
-Getting Claude Code to work with exactly the library versions you need is essential for maintaining project stability and avoiding unexpected breaking changes. Whether you're managing a React project with specific npm dependencies or a Python project requiring exact package versions, these techniques will help you maintain precise control over your development environment.
+When Claude Code generates code for your project, it sometimes selects library versions that conflict with your existing dependencies or fail on your environment. Getting Claude to use specific library versions requires explicit configuration and clear communication. This guide shows you practical methods to ensure Claude Code respects your version requirements.
 
 ## Why Library Version Control Matters
 
-When Claude Code generates code or modifies existing projects, it typically uses the latest available versions of libraries unless you explicitly constrain them. This can lead to unexpected behavior when:
+Mismatched library versions cause deployment failures, runtime errors, and hours of debugging. A common scenario: Claude generates code using the latest `pandas 2.2.0` features, but your production environment runs `pandas 1.5.3`. The code works perfectly on Claude's suggested setup and fails completely in production.
 
-- Newer library versions introduce breaking API changes
-- Your production environment runs different versions than what Claude generated
-- Team members have inconsistent development environments
+Controlling library versions becomes especially important when working with specialized skills. The [frontend-design skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) might suggest React 19, but your codebase requires React 18. Similarly, the [pdf skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) could reference a newer version of a PDF library than what your project supports. Version control prevents these mismatches.
 
-The solution is to establish clear version constraints before and during your Claude Code sessions.
+## Specifying Versions in Your Project Files
 
-## Controlling npm Package Versions
+The most reliable method is adding version constraints directly to your dependency files before asking Claude to generate code.
 
-For JavaScript and TypeScript projects, the most reliable approach is to use precise version specifications in your `package.json` file. Rather than using caret (`^`) or tilde (`~`) version ranges that allow automatic updates, lock to specific versions:
+### Python Projects
+
+In your `requirements.txt`, use exact versions or version ranges:
+
+```
+# Exact version pinning
+requests==2.31.0
+numpy==1.26.3
+pandas==2.1.4
+
+# Minimum version (Claude will use at least this version)
+flask>=2.3.0
+
+# Compatible release operator (~= allows patch updates within the same minor)
+pydantic~=2.5.0
+
+# Exclude specific versions
+django!=4.1.0
+```
+
+Create a `requirements.txt` file before starting your Claude Code session. When you explain your project, mention: "Our project uses `pandas==2.1.4` and `numpy==1.26.3`. Please ensure any generated code is compatible with these versions."
+
+For more complex Python projects, use `pyproject.toml`:
+
+```toml
+[project]
+dependencies = [
+    "requests>=2.31.0,<3.0.0",
+    "numpy==1.26.3",
+    "pandas==2.1.4",
+]
+```
+
+The [tdd skill](/claude-skills-guide/how-to-make-claude-code-write-better-unit-tests/) often generates test code that imports your existing dependencies—version pinning ensures compatibility.
+
+### Node.js Projects
+
+In `package.json`, specify exact versions or ranges:
 
 ```json
 {
   "dependencies": {
+    "express": "4.18.2",
     "lodash": "4.17.21",
-    "axios": "1.6.0",
-    "express": "4.18.2"
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "jest": "29.7.0",
+    "typescript": "5.3.3"
   }
 }
 ```
 
-When you start a Claude Code session, explicitly mention your version constraints in your initial prompt. For example: "Work with lodash 4.17.21 and axios 1.6.0 — do not upgrade these packages."
+The caret (`^`) allows minor and patch updates. For strict control, use exact versions like `"express": "4.18.2"`.
 
-The frontend-design skill works particularly well with React projects and can help you maintain version consistency across components.
+### Using Claude Code's Custom Instructions
 
-## Python Virtual Environment Management
+Add version requirements to your project's `CLAUDE.md` file. This file sits in your project root and gets loaded automatically at the start of each Claude Code session.
 
-Python projects benefit from virtual environment isolation. Before starting a Claude Code session, create and activate your environment with specific package versions:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install requests==2.31.0
-pip install django==4.2.7
-```
-
-When prompting Claude Code, reference your locked requirements file:
-
-```bash
-# Create a requirements.txt with pinned versions
-pip freeze > requirements.txt
-```
-
-Then tell Claude Code: "Use the packages specified in requirements.txt — do not install or update any packages."
-
-The tdd skill is excellent for Python projects and respects version constraints when running test suites.
-
-## Using .nvmrc and Runtime Version Files
-
-For runtime versions (Node.js, Python), create version specification files that Claude Code can detect:
-
-```bash
-# .nvmrc for Node.js
-echo "18.17.0" > .nvmrc
-
-# .python-version for Python
-echo "3.11.5" > .python-version
-```
-
-Claude Code often respects these files when initializing new files or configuring build tools. Make them part of your project structure and mention them in your prompts.
-
-## The Claude.md Configuration File
-
-Create a `CLAUDE.md` file in your project root to establish persistent instructions:
-
-```markdown
-# Project Instructions
-
-## Library Versions
-- Use Node.js 18.17.0 (see .nvmrc)
-- Use React 18.2.0 specifically
-- Do not upgrade dependencies beyond current versions
-
-## Package Manager
-- Always use npm, not yarn or pnpm
-- Run npm install with --save-exact flag
-```
-
-The supermemory skill can help you maintain context about version requirements across sessions.
-
-## Constraining Version Upgrades
-
-When you need to upgrade libraries, be explicit about the target version:
-
-Instead of: "Update the dependencies"
-Say: "Upgrade lodash to exactly 4.17.21, no other changes"
-
-For the pdf skill, specify exact versions when generating documents to ensure compatibility with your existing tooling.
-
-## Best Practices for Version Control
-
-1. **Lock everything in version control** — Commit your lock files (package-lock.json, Pipfile.lock, requirements.txt)
-
-2. **Document version requirements** — Add a VERSIONS.md file listing critical dependencies
-
-3. **Test generated code** — Run your test suite (using the tdd skill) after Claude Code creates new files
-
-4. **Review before installing** — Have Claude Code show you the proposed changes before running npm install or pip install
-
-5. **Use Docker** — For critical projects, define your environment in a Dockerfile that Claude Code can reference
-
-## Troubleshooting Version Mismatches
-
-If Claude Code accidentally upgrades packages, revert the changes:
-
-```bash
-git checkout package-lock.json
-npm install
-```
-
-For Python:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Common Version Control Scenarios
-
-### React 18 Project Setup
-
-When working on a React 18 project, explicitly state your requirements:
+Create or update `CLAUDE.md` in your project root:
 
 ```
-Create a new component using React 18.2.0 and react-dom 18.2.0.
-Use functional components with hooks. Do not use React 19 features.
+# Project Configuration
+
+## Library Version Requirements
+- Python 3.11
+- Django 4.2.x (not Django 5.x)
+- PostgreSQL 14.x
+- All dependencies must be pinned in requirements.txt
+
+## Important Notes
+When generating code, use only the library versions specified in requirements.txt.
+Do not suggest upgrading library versions without explicit approval.
 ```
 
-The frontend-design skill is particularly useful here as it understands component lifecycle and React version compatibility.
+The [supermemory skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) can help you track which versions work across different projects.
 
-### Django REST Framework Projects
+## Communicating Version Requirements to Claude
 
-For Django projects, specify both Django and DRF versions:
+Beyond configuration files, verbal communication works. When starting a session, explicitly state your version constraints:
+
+> "I'm working with a Python 3.11 project using Django 4.2.8 and PostgreSQL 14. Please generate code compatible with these versions."
+
+> "Our Node.js project runs on Express 4.18 and Node 18. Use only those versions when suggesting dependencies."
+
+This approach works well when combined with the [webapp-testing skill](/claude-skills-guide/best-claude-skills-for-developers-2026/), which validates generated code against your specific environment.
+
+## Handling Version Conflicts in Generated Code
+
+Sometimes Claude generates code using a library version you don't have. When this happens:
+
+1. **Check the import statements** - Look for version-specific APIs
+2. **Search for version announcements** - `__version__` attributes or changelogs
+3. **Downgrade or upgrade** - Update your dependencies to match
+
+A practical example: Claude generates code using `pandas 2.0+` features like the new nullable integer dtype:
 
 ```python
-# requirements.txt
-Django==4.2.7
-djangorestframework==3.14.0
-psycopg2-binary==2.9.9
+import pandas as pd
+
+# This requires pandas 2.0+
+series = pd.array([1, 2, None], dtype="Int64")
 ```
 
-When prompting Claude Code, reference these exact versions for any database-related code generation.
+Your project uses `pandas 1.5.3`. Replace with:
 
-### TypeScript Configuration
+```python
+import pandas as pd
 
-TypeScript projects often have specific version requirements:
-
-```json
-{
-  "devDependencies": {
-    "typescript": "5.2.2",
-    "@types/node": "18.18.0"
-  }
-}
+# Compatible with pandas 1.5.3
+series = pd.Series([1, 2, None], dtype="float64")
 ```
 
-### Working with Monorepos
+## Using Virtual Environments
 
-Monorepo setups using tools like Turborepo require extra attention to version consistency across packages. Create a central versions.ts file that all packages reference:
+Create a virtual environment with your specific versions before running Claude-generated code:
 
-```typescript
-// packages/versions.ts
-export const VERSIONS = {
-  react: '18.2.0',
-  reactDOM: '18.2.0',
-  typescript: '5.2.2',
-  eslint: '8.49.0',
-} as const;
+```bash
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install pinned versions
+pip install -r requirements.txt
+
+# Verify versions
+pip list | grep -E "(requests|numpy|pandas)"
 ```
 
-When using the frontend-design skill in a monorepo context, specify the exact package paths and versions to avoid cross-package version conflicts.
+This isolates your project's dependencies and prevents Claude's suggestions from affecting your global Python installation.
 
-## Final Checklist
+## Pro Tips for Version Control
 
-Before starting a Claude Code session, verify:
+- **Lock files matter**: Python projects benefit from `pip-tools` or `poetry.lock`. Node projects should have `package-lock.json` committed.
+- **Check skill-specific requirements**: Skills like [mcp-builder](/claude-skills-guide/best-claude-skills-for-developers-2026/) might require specific Node versions or package versions.
+- **Test generated code locally**: Always run `pip install -r requirements.txt` or `npm install` after Claude generates significant code.
+- **Version pins in code comments**: When showing Claude code snippets from your project, include version comments:
 
-- [ ] Lock files are committed to version control
-- [ ] CLAUDE.md contains version instructions
-- [ ] Runtime version files (.nvmrc, .python-version) exist
-- [ ] Requirements.txt or package-lock.json reflects exact versions
-- [ ] Dockerfiles specify precise base image versions
+```python
+# Tested with: pandas==2.1.4, numpy==1.26.3
+import pandas as pd
+```
 
-The key is being explicit in every prompt about version constraints. Claude Code is helpful but cannot guess your version requirements without clear communication.
+This signals to Claude which versions your code works with.
 
 ## Summary
 
-Controlling library versions with Claude Code requires proactive communication and proper configuration. By using lock files, version specification files, and explicit prompts, you can ensure Claude Code generates code that works with your exact environment. Remember to document your version requirements in CLAUDE.md for persistent instructions across sessions, and always verify generated code against your requirements before deploying.
+Making Claude Code use specific library versions requires a combination of:
 
+1. **Pinning versions** in `requirements.txt`, `package.json`, or `pyproject.toml`
+2. **Adding version requirements** to your `CLAUDE.md` file
+3. **Communicating verbally** about version constraints at session start
+4. **Using virtual environments** to isolate and test versions
 
-## Related Reading
-
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+These methods ensure Claude generates code compatible with your production environment, reducing deployment issues and debugging time.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

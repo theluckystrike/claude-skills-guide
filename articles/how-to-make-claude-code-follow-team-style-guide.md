@@ -116,7 +116,7 @@ Within this skill, define specific prompts that Claude references during code ge
 
 ### Integrating Domain-Specific Skills
 
-Your style guide skill works alongside domain-specific skills for better results. The frontend-design skill generates component architecture, but your style enforcer ensures the output matches team patterns. Similarly, the pdf skill might handle documentation generation, while your style rules govern documentation formatting. See the [automated code documentation workflow](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) for how to keep documentation in sync with evolving style standards.
+Your style guide skill works alongside domain-specific skills for better results. The frontend-design skill generates component architecture, but your style enforcer ensures the output matches team patterns. Similarly, the pdf skill might handle documentation generation, while your style rules govern documentation formatting. When implementing tests, the tdd skill can drive your test-first workflow, but your style guide should specify exact assertion patterns and test structure conventions. For teams using the supermemory skill to maintain persistent context across sessions, your style guide rules can be stored there for immediate retrieval on every project. See the [automated code documentation workflow](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) for how to keep documentation in sync with evolving style standards.
 
 This layered approach lets you maintain a single source of truth for style while using specialized skills for their core functionality.
 
