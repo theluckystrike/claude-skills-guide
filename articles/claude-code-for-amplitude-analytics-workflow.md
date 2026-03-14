@@ -1,303 +1,329 @@
 ---
-
 layout: default
 title: "Claude Code for Amplitude Analytics Workflow"
-description: "Learn how to build automated analytics workflows using Claude Code and Amplitude's API. Track user events, analyze behavior patterns, and create."
+description: "Learn how to build Claude Code skills that integrate with Amplitude analytics for tracking events, analyzing user behavior, and generating insights."
 date: 2026-03-15
-categories: [guides]
-tags: [claude-code, claude-skills, amplitude, analytics, api]
 author: "Claude Skills Guide"
-reviewed: true
-score: 7
 permalink: /claude-code-for-amplitude-analytics-workflow/
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
-
+{% raw %}
 # Claude Code for Amplitude Analytics Workflow
 
-Building robust analytics workflows doesn't have to mean manual data exports or repetitive dashboard clicks. By combining Claude Code with Amplitude's API, you can automate event tracking, generate custom reports, and trigger actions based on user behavior patterns. This guide shows you how to create a practical workflow that integrates Claude Code with Amplitude for analytics automation.
+Integrating Claude Code with Amplitude analytics empowers developers to track events, analyze user behavior, and derive actionable insights directly from their development workflow. This guide walks you through building Claude skills that interact with Amplitude's API, enabling automated analytics operations without leaving your coding environment.
 
-## Why Automate Amplitude with Claude Code
+## Why Integrate Claude Code with Amplitude?
 
-Manual analytics work is time-consuming and error-prone. Every time you need to answer a question about user behavior, you either dig through dashboards or write SQL queries against your data warehouse. With Claude Code acting as your analytics assistant, you can:
+Amplitude is a product analytics platform that helps teams understand how users interact with applications. By combining Claude Code's natural language processing with Amplitude's analytics capabilities, you can:
 
-- Query Amplitude data using natural language
-- Build recurring report generation workflows
-- Set up alerts for unusual metric changes
-- Export specific segments for further analysis
-- Create custom dashboards tailored to your needs
+- Track custom events programmatically through conversational commands
+- Query analytics data using natural language
+- Generate reports and dashboards on demand
+- Set up automated alerts for key metrics
+- Debug analytics implementation issues
 
-The key is treating Claude Code as a programmable interface to your analytics data, not just a chatbot.
+This integration bridges the gap between development and product analytics, enabling developers to work more efficiently with data.
 
-## Setting Up the Amplitude Integration
+## Setting Up Amplitude API Access
 
-Before building workflows, you need to configure Claude Code to communicate with Amplitude's API. This requires an Amplitude project and API key.
+Before building Claude skills for Amplitude, ensure you have proper API credentials. Amplitude provides two types of API keys:
 
-### Finding Your API Credentials
+1. **Analytics API Key** - For sending events (use in your mobile/web apps)
+2. **Management API Key** - For administrative operations via the Management API
 
-In your Amplitude dashboard, navigate to Settings → Keys and copy your API key. For server-side operations, you'll also need your secret key. Never expose these in client-side code.
+### Creating a Claude Skill for Amplitude Event Tracking
 
-### Creating a Skill for Amplitude Queries
-
-Build a dedicated skill that handles Amplitude API interactions:
-
-```yaml
----
-name: amplitude
-description: Query and analyze Amplitude analytics data
-tools:
-  - Bash
-  - Write
-  - Read
----
-```
-
-The skill should include helper functions for common operations:
-
-```bash
-# Query Amplitude API for event data
-query_amplitude() {
-  local endpoint="$1"
-  local query="$2"
-  
-  curl -s -X POST "https://api.amplitude.com/2/api/$endpoint" \
-    -d "api_key=$AMPLITUDE_API_KEY" \
-    -d "query=$query"
-}
-```
-
-## Building Core Analytics Workflows
-
-With the integration in place, you can now build practical workflows. Here are the most useful patterns.
-
-### Event Trend Analysis
-
-Understanding how events trend over time helps you spot issues early. Create a workflow that fetches daily event counts and identifies anomalies:
-
-```bash
-# Get event counts for the last 30 days
-fetch_event_trends() {
-  local event_name="$1"
-  local start_date="$2"
-  
-  curl -s -X POST "https://api.amplitude.com/2/events/series" \
-    -H "Content-Type: application/json" \
-    -d "{
-      \"api_key\": \"$AMPLITUDE_API_KEY\",
-      \"events\": [{
-        \"event_type\": \"$event_name\"
-      }],
-      \"start\": \"$start_date\",
-      \"resolution\": \"day\"
-    }"
-}
-```
-
-You can wrap this in a Claude Code skill that interprets results and provides natural language summaries. When you ask "What's the trend for signups this month?", Claude can run the query, analyze the data, and explain findings in context.
-
-### User Segmentation Queries
-
-Identify user segments based on behavior patterns. For example, finding users who performed a specific action but not a follow-up:
-
-```bash
-# Find users who signed up but never completed onboarding
-segment_users() {
-  local performed_event="$1"
-  local missing_event="$2"
-  
-  curl -s -X POST "https://api.amplitude.com/2/users/find" \
-    -d "api_key=$AMPLITUDE_API_KEY" \
-    -d "search_group_id=$performed_event" \
-    -d "where=\"\$executed != '$missing_event'\""
-}
-```
-
-This enables workflows like: "Get me all users who used the trial but didn't upgrade to paid."
-
-### Cohort Retention Analysis
-
-Retention is a critical metric. Automate cohort analysis to track how user groups behave over time:
-
-```bash
-# Calculate retention for a specific cohort
-cohort_retention() {
-  local cohort_event="$1"
-  local retention_event="$2"
-  
-  curl -s -X POST "https://api.amplitude.com/2/cohorts" \
-    -d "api_key=$AMPLITUDE_API_KEY" \
-    -d "name=Cohort from $cohort_event" \
-    -d "cohort_type=retroactive" \
-    -d "criteria={
-      \"event_type\": \"$cohort_event\",
-      \"retention_event\": \"$retention_event\"
-    }"
-}
-```
-
-## Automating Report Generation
-
-Rather than logging into Amplitude daily, create Claude Code workflows that generate and email reports automatically.
-
-### Weekly Metrics Summary
-
-Build a skill that compiles key metrics into a markdown report:
+Here's a skill that tracks custom events to Amplitude:
 
 ```yaml
 ---
-name: analytics-weekly
-description: Generate weekly analytics summary report
-tools:
-  - Bash
-  - Write
+name: track-event
+description: "Track a custom event to Amplitude analytics"
+tools: [bash, read_file, write_file]
 ---
+
+# Track Event to Amplitude
+
+Track a custom analytics event to Amplitude. Provide:
+- Event name (required)
+- User ID or device ID (required)  
+- Event properties (optional)
+- Timestamp (optional, defaults to now)
+
+## Usage
+
+Simply describe the event you want to track:
+- "Track a 'button_click' event for user 'user123'"
+- "Log 'purchase_complete' with properties {plan: 'pro', amount: 99}"
+
+I'll send the event to Amplitude using the Analytics API.
 ```
 
-The skill logic pulls key events, calculates trends, and writes a formatted report:
+The skill implementation uses a Python script to send events:
 
-```bash
-generate_weekly_summary() {
-  local week_start="$1"
-  local week_end="$2"
-  
-  # Fetch key metrics
-  signup_count=$(query_amplitude "events" "signup" "$week_start" "$week_end")
-  active_users=$(query_amplitude "active" "any" "$week_start" "$week_end")
-  conversion_rate=$(calculate_conversion "$signup_count" "$active_users")
-  
-  # Write report
-  cat > weekly-report.md << EOF
-# Weekly Analytics Summary
+```python
+#!/usr/bin/env python3
+import requests
+import json
+import sys
 
-**Period:** $week_start to $week_end
+AMPLITUDE_API_KEY = "your-analytics-api-key"
+AMPLITUDE_URL = "https://api.amplitude.com/2/httpapi"
 
-## Key Metrics
-- Signups: $signup_count
-- Active Users: $active_users
-- Conversion Rate: $conversion_rate%
+def track_event(event_name, user_id, properties=None, timestamp=None):
+    """Send an event to Amplitude."""
+    
+    event = {
+        "event_type": event_name,
+        "user_id": user_id,
+        "time": timestamp or "",
+        "event_properties": properties or {}
+    }
+    
+    payload = {
+        "api_key": AMPLITUDE_API_KEY,
+        "events": [event]
+    }
+    
+    response = requests.post(AMPLITUDE_URL, json=payload)
+    return response.status_code == 200
 
-## Notable Trends
-$(analyze_trends "$week_start" "$week_end")
-EOF
+if __name__ == "__main__":
+    # Parse arguments from Claude
+    event_name = sys.argv[1]
+    user_id = sys.argv[2]
+    properties = json.loads(sys.argv[3]) if len(sys.argv) > 3 else {}
+    
+    success = track_event(event_name, user_id, properties)
+    print(f"Event tracked: {success}")
+```
+
+## Querying Amplitude Data with Claude Skills
+
+Beyond tracking events, you can query Amplitude to retrieve analytics insights. The Management API allows you to run queries and fetch results.
+
+### Building an Analytics Query Skill
+
+```yaml
+---
+name: amplitude-query
+description: "Query Amplitude analytics data"
+tools: [bash]
+requires_permission: true
+---
+
+# Query Amplitude Analytics
+
+Run queries against your Amplitude data. Supported query types:
+- **Active Users** - Count of unique users in a time range
+- **Event Counts** - Number of times specific events occurred
+- **User Segments** - Breakdown of users by property
+- **Funnels** - Conversion rates between event sequences
+- **Retention** - User return rates over time
+
+## Examples
+
+- "How many users active in the last 7 days?"
+- "Show purchase event counts for last month"
+- "What's our signup to activation funnel conversion?"
+
+Provide the metric you want and the time range, and I'll query Amplitude and present the results.
+```
+
+### Python Query Implementation
+
+```python
+#!/usr/bin/env python3
+import requests
+import os
+from datetime import datetime, timedelta
+
+AMPLITUDE_SECRET_KEY = os.environ.get("AMPLITUDE_SECRET_KEY")
+
+def query_active_users(start_date, end_date):
+    """Query active users from Amplitude."""
+    
+    url = "https://api.amplitude.com/2/query"
+    
+    payload = {
+        "api_key": AMPLITUDE_SECRET_KEY,
+        "application": "claude-code-skill",
+        "requests": [{
+            "metrics": [{"active_users": {}}],
+            "filters": [],
+            "groups": [],
+            "date_range": {
+                "start": start_date,
+                "end": end_date
+            }
+        }]
+    }
+    
+    response = requests.post(url, json=payload)
+    
+    if response.status_code == 200:
+        data = response.json()
+        return data.get("results", [{}])[0].get("series", [[]])[0][0]
+    return None
+
+# Calculate date range
+end_date = datetime.now().strftime("%Y-%m-%d")
+start_date = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+
+active_users = query_active_users(start_date, end_date)
+print(f"Active users: {active_users}")
+```
+
+## Creating Automated Reporting Workflows
+
+Combine multiple skills to build comprehensive reporting workflows. Here's how to create a daily analytics summary skill.
+
+### Daily Summary Skill Structure
+
+```yaml
+---
+name: daily-analytics-summary
+description: "Generate daily Amplitude analytics summary"
+tools: [bash, amplitude-query]
+---
+
+# Daily Analytics Summary
+
+Generate a comprehensive daily analytics report including:
+- Daily active users (DAU)
+- Key event counts
+- Top user segments
+- Anomaly alerts
+
+The skill runs queries against Amplitude and formats the results into a readable markdown report.
+```
+
+### Automated Report Generation Script
+
+```python
+#!/usr/bin/env python3
+"""Generate daily analytics summary from Amplitude."""
+
+import requests
+from datetime import datetime, timedelta
+
+def generate_summary():
+    yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+    
+    metrics = {
+        "dau": query_metric("active_users", yesterday, yesterday),
+        "events": query_events(yesterday),
+        "revenue": query_revenue(yesterday)
+    }
+    
+    report = f"""# Analytics Summary - {yesterday}
+
+## Daily Active Users
+{metrics['dau']:,}
+
+## Top Events
+{format_events(metrics['events'])}
+
+## Revenue
+${metrics['revenue']:,.2f}
+
+---
+Generated at {datetime.now().isoformat()}
+"""
+    
+    return report
+
+def query_metric(metric, start, end):
+    # Implementation details...
+    pass
+
+print(generate_summary())
+```
+
+## Best Practices for Amplitude Integration
+
+When building Claude skills for Amplitude, follow these best practices:
+
+### 1. Secure Your API Keys
+
+Never hardcode API keys in skill files. Use environment variables or a secure credential manager:
+
+```python
+import os
+AMPLITUDE_KEY = os.environ.get("AMPLITUDE_API_KEY")
+if not AMPLITUDE_KEY:
+    raise ValueError("AMPLITUDE_API_KEY environment variable not set")
+```
+
+### 2. Handle Rate Limits
+
+Amplitude enforces rate limits. Implement exponential backoff for retries:
+
+```python
+import time
+
+def send_with_retry(event_data, max_retries=3):
+    for attempt in range(max_retries):
+        response = send_event(event_data)
+        if response.status_code == 200:
+            return True
+        if response.status_code == 429:  # Rate limited
+            time.sleep(2 ** attempt)  # Exponential backoff
+    return False
+```
+
+### 3. Validate Event Schemas
+
+Define expected event properties in your skill to catch errors early:
+
+```python
+VALID_EVENTS = {
+    "button_click": ["button_id", "page"],
+    "purchase": ["amount", "currency", "item_id"],
+    "signup": ["method", "source"]
 }
+
+def validate_event(event_name, properties):
+    required = VALID_EVENTS.get(event_name, [])
+    missing = [k for k in required if k not in properties]
+    if missing:
+        raise ValueError(f"Missing properties: {missing}")
 ```
 
-Schedule this to run automatically using cron or a CI/CD pipeline, then have Claude email or post the results.
+## Troubleshooting Common Issues
 
-### Dashboard Sync Workflows
+### Events Not Appearing
 
-Keep external systems in sync with Amplitude data. For instance, updating a Notion database with current user counts:
+If events aren't showing in Amplitude:
 
-```bash
-sync_to_notion() {
-  local metric="$1"
-  local value="$2"
-  local database_id="$3"
-  
-  curl -s -X PATCH "https://api.notion.com/v1/databases/$database_id" \
-    -H "Authorization: Bearer $NOTION_KEY" \
-    -H "Content-Type: application/json" \
-    -d "{
-      \"properties\": {
-        \"metric\": { \"number\": $value }
-      }
-    }"
-}
-```
+1. Verify API key is correct
+2. Check timestamp format (ISO 8601 required)
+3. Ensure user_id or device_id is provided
+4. Confirm project ID matches
 
-## Handling Authentication Securely
+### Query Timeouts
 
-When building these workflows, security matters. Never hardcode API keys in skill files.
+Large queries may timeout. Optimize by:
 
-### Using Environment Variables
+- Narrowing date ranges
+- Using sampling for historical data
+- Breaking complex queries into smaller parts
 
-Store credentials in environment variables that Claude Code can access:
+### Authentication Errors
 
-```bash
-export AMPLITUDE_API_KEY="your_key_here"
-export AMPLITUDE_SECRET_KEY="your_secret_here"
-```
+Management API failures usually indicate:
 
-For production, use a secrets manager and inject variables at runtime rather than storing them in configuration files.
+- Expired or invalid API key
+- Insufficient permissions
+- Wrong API endpoint (check region)
 
-### Implementing Request Signing
+## Conclusion
 
-For sensitive operations, Amplitude supports HMAC signature verification. Add this to your workflows:
+Building Claude skills for Amplitude analytics transforms how developers interact with product data. By automating event tracking, enabling natural language queries, and generating reports on demand, you integrate analytics directly into your development workflow.
 
-```bash
-sign_request() {
-  local payload="$1"
-  local timestamp=$(date +%s)
-  local signature=$(echo -n "${payload}${timestamp}" | openssl dgst -sha256 -hmac "$AMPLITUDE_SECRET_KEY")
-  
-  echo "timestamp=$timestamp&signature=$signature"
-}
-```
+Start with simple event tracking, then expand to querying and reporting as you become comfortable with the API. The combination of Claude Code's conversational interface and Amplitude's powerful analytics creates a productivity boost for data-driven development teams.
 
-## Best Practices for Analytics Workflows
-
-### Batch Requests When Possible
-
-Amplitude's API has rate limits. Combine multiple queries into single requests where you can:
-
-```bash
-# Instead of multiple calls, batch them
-batch_query() {
-  local queries=("$@")
-  
-  curl -s -X POST "https://api.amplitude.com/2/batch" \
-    -d "api_key=$AMPLITUDE_API_KEY" \
-    -d "queries=$(echo "${queries[@]}" | jq -s '.')"
-}
-```
-
-### Cache Frequently Accessed Data
-
-For dashboard-style queries, cache results and refresh on intervals rather than querying every time:
-
-```bash
-cache_metric() {
-  local metric_name="$1"
-  local value="$2"
-  
-  # Store in local cache with timestamp
-  echo "{\"metric\": \"$metric_name\", \"value\": $value, \"cached_at\": $(date +%s)}" > ".cache/$metric_name.json"
-}
-```
-
-### Validate Data Before Acting
-
-Automated workflows should include validation steps to prevent bad data from causing issues:
-
-```bash
-validate_metric() {
-  local value="$1"
-  
-  if [[ ! "$value" =~ ^-?[0-9]+$ ]]; then
-    echo "Error: Invalid numeric value"
-    return 1
-  fi
-  
-  return 0
-}
-```
-
-## Next Steps
-
-Start with simple queries and gradually build more complex workflows. The combination of Claude Code's natural language understanding and Amplitude's powerful analytics API enables workflows that would otherwise require significant manual effort.
-
-Consider adding these enhancements as you mature your setup:
-
-- Integration with Slack for real-time alerts
-- Anomaly detection that triggers notifications
-- Automated A/B test analysis pipelines
-- Custom attribution modeling for marketing campaigns
-
-The key is treating your analytics infrastructure as programmable, with Claude Code as the bridge between your questions and the data that answers them.
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
+Remember to secure your credentials, handle rate limits gracefully, and validate event schemas to ensure reliable analytics integration.
+{% endraw %}
