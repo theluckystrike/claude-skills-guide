@@ -46,7 +46,7 @@ However, vibe coding has limitations. Complex business logic, performance-critic
 
 Claude Code provides several features that enhance the vibe coding experience. Skills are one of the most powerful aspects—they're Markdown files that provide specialized instructions for different tasks.
 
-For frontend work, the **frontend-design** skill helps generate UI components with proper structure and styling. When activated, it understands component patterns, responsive design principles, and accessibility requirements:
+[the **frontend-design** skill helps generate UI components](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) with proper structure and styling. When activated, it understands component patterns, responsive design principles, and accessibility requirements:
 
 ```
 /frontend-design
@@ -60,14 +60,14 @@ The **pdf** skill enables generating documents programmatically. If your applica
 Generate an invoice template with company logo placeholder, line items table, and total calculation
 ```
 
-For backend development requiring test coverage, the **tdd** skill guides the testing workflow. It helps you write tests first, then implement the code to pass those tests:
+For backend development requiring test coverage, [the **tdd** skill guides the testing workflow](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) It helps you write tests first, then implement the code to pass those tests:
 
 ```
 /tdd
 Build a user authentication module with login, logout, and password reset functionality
 ```
 
-The **supermemory** skill allows you to persist context across sessions. This is particularly useful when working on larger projects where you want Claude to remember previous decisions, architectural choices, or coding standards.
+[The **supermemory** skill allows you to persist context across sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) This is particularly useful when working on larger projects where you want Claude to remember previous decisions, architectural choices, or coding standards.
 
 ## Code Snippet Example
 
@@ -155,5 +155,12 @@ The key is knowing when to use it and when traditional coding is more appropriat
 Try it in your next project. Describe what you want to build, watch Claude generate the implementation, and iterate from there. That's vibe coding in action.
 
 ---
+
+## Related Reading
+
+- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/articles/vibe-coding-with-claude-code-complete-guide-2026/)
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -106,7 +106,7 @@ If the skill declares `Bash` but the sandbox policy does not allow it, the skill
 
 ## The `tdd` Skill and Bash Scope
 
-The `tdd` skill needs to run test commands. If your `.claude/settings.json` does not include a `Bash` allow rule for your test runner, the skill will fail with a scope error when trying to run tests:
+[The `tdd` skill needs to run test commands](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) If your `.claude/settings.json` does not include a `Bash` allow rule for your test runner, the skill will fail with a scope error when trying to run tests:
 
 ```json
 {
@@ -123,7 +123,7 @@ The `tdd` skill needs to run test commands. If your `.claude/settings.json` does
 
 ## The `pdf` and `docx` Skills and Path Scope
 
-The `pdf` and `docx` skills read files from your filesystem. If the files you want to process are outside the current project directory, you need to add allow rules:
+[The `pdf` and `docx` skills read files from your filesystem](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) If the files you want to process are outside the current project directory, you need to add allow rules:
 
 ```json
 {
@@ -141,7 +141,7 @@ Without these rules, the `pdf` skill will produce a scope error when trying to r
 
 ## The `supermemory` Skill and Write Scope
 
-The `supermemory` skill writes session state to a storage path outside the current project directory. If the skill is configured to store data in a path that is not covered by your default project-scoped permissions, you will need an explicit write scope rule for that path:
+[The `supermemory` skill writes session state to a storage path](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) outside the current project directory. If the skill is configured to store data in a path that is not covered by your default project-scoped permissions, you will need an explicit write scope rule for that path:
 
 ```json
 {
@@ -222,5 +222,12 @@ The permission scope system is not just an obstacle — it is a security layer. 
 Deny rules take precedence over allow rules when both match.
 
 ---
+
+## Related Reading
+
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [How to Set Environment Variables for Claude Code Skills](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-claude-code-skills/)
+- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/articles/mcp-server-permission-auditing-best-practices/)
+- [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

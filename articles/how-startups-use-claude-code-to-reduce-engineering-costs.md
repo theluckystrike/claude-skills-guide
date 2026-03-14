@@ -29,7 +29,7 @@ Claude Code addresses each of these through its skills system and persistent con
 
 The most immediate cost savings come from automating tasks that developers do repeatedly but that don't require deep domain knowledge. Consider test writing—it's necessary, time-consuming, and often tedious.
 
-The **tdd** skill exemplifies this approach. Instead of manually writing test cases, developers describe the function behavior and let Claude generate the tests:
+[The **tdd** skill exemplifies this approach](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) Instead of manually writing test cases, developers describe the function behavior and let Claude generate the tests:
 
 ```
 /tdd write test cases for a user authentication module with password reset flow
@@ -37,7 +37,7 @@ The **tdd** skill exemplifies this approach. Instead of manually writing test ca
 
 A two-person startup reported reducing their test-writing time by 60% after integrating the tdd skill into their workflow. That's not theoretical—it's developer-hours that can be redirected to feature work.
 
-Similarly, the **pdf** skill handles document processing without requiring custom code:
+[the **pdf** skill handles document processing without requiring custom code](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/):
 
 ```
 /pdf extract all API endpoints from our architecture documentation and generate a markdown summary
@@ -70,7 +70,7 @@ Startups using Claude Code report faster onboarding because new team members can
 /supermemory explain our authentication flow
 ```
 
-The **supermemory** skill serves as an institutional knowledge base. Instead of interrupting senior developers, new hires query the documented patterns directly. One startup measured a 40% reduction in "how does this work?" interruptions during the first two weeks of a new engineer's tenure.
+[The **supermemory** skill serves as an institutional knowledge base](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) Instead of interrupting senior developers, new hires query the documented patterns directly. One startup measured a 40% reduction in "how does this work?" interruptions during the first two weeks of a new engineer's tenure.
 
 ## Practical Examples from Startup Workflows
 
@@ -147,5 +147,12 @@ The skills system makes this practical because it's additive—you use what help
 The real question isn't whether Claude Code saves money—it's whether your team can afford not to explore what it can do.
 
 ---
+
+## Related Reading
+
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [How Agencies Use Claude Code for Client Projects](/claude-skills-guide/articles/how-agencies-use-claude-code-for-client-projects/)
+- [How a Solo Developer Ships Faster with Claude Code](/claude-skills-guide/articles/how-a-solo-developer-ships-faster-with-claude-code/)
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

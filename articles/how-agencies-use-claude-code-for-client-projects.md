@@ -41,7 +41,7 @@ Agencies typically maintain a skill library optimized for their service offering
 
 ### Proposal and Specification Generation
 
-Agencies report significant time savings when using Claude Code to draft project proposals and technical specifications. The **pdf** skill transforms markdown specifications into professionally formatted documents ready for client review:
+Agencies report significant time savings when using Claude Code to draft project proposals and technical specifications. [The **pdf** skill transforms markdown specifications into professionally formatted documents](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) ready for client review:
 
 ```markdown
 # Project Specification: Client Dashboard
@@ -60,7 +60,7 @@ Using Claude Code with the pdf skill, agencies generate polished proposals in mi
 
 ### Development Sprints
 
-During active development, agencies leverage Claude Code's **tdd** skill to maintain rigorous testing standards. This becomes particularly valuable when onboarding junior developers or working with offshore teams:
+During active development, [the **tdd** skill to maintain rigorous testing standards](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). This becomes particularly valuable when onboarding junior developers or working with offshore teams:
 
 ```bash
 # Run TDD workflow for a new feature
@@ -83,7 +83,7 @@ This generates production-ready code that designers and developers can iterate o
 
 ## Knowledge Management Across Projects
 
-Agency teams struggle with knowledge retention as developers move between projects. The **supermemory** skill solves this by creating searchable project histories:
+Agency teams struggle with knowledge retention as developers move between projects. [The **supermemory** skill solves this by creating searchable project histories](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/):
 
 ```bash
 # Capture project decisions
@@ -165,5 +165,12 @@ Document your agency's skill configurations in an internal knowledge base. This 
 Consider maintaining a "golden" skill configuration that represents your agency's quality standards, then customize slightly for each client's specific requirements.
 
 ---
+
+## Related Reading
+
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [How Startups Use Claude Code to Reduce Engineering Costs](/claude-skills-guide/articles/how-startups-use-claude-code-to-reduce-engineering-costs/)
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

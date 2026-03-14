@@ -24,7 +24,7 @@ Claude Code addresses this through skills—specialized prompt packages that ext
 
 ## Automate Testing with the TDD Skill
 
-Test-driven development improves code quality but feels like overkill when you're moving fast. The **tdd** skill reverses this equation by generating tests automatically while you focus on implementation.
+Test-driven development improves code quality but feels like overkill when you're moving fast. [The **tdd** skill reverses this equation by generating tests automatically](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) while you focus on implementation.
 
 Here's how it works in practice: type `/tdd` in your Claude Code session to invoke the skill. From that point forward in the session, Claude applies test-driven development discipline to your requests.
 
@@ -53,7 +53,7 @@ Running tests becomes a single command, and the skill suggests edge cases you mi
 
 ## Streamline Documentation with the PDF Skill
 
-Client deliverables, invoices, and technical specifications often arrive as PDFs. The **pdf** skill processes these documents programmatically, extracting the information you need without manual copying.
+Client deliverables, invoices, and technical specifications often arrive as PDFs. [The **pdf** skill processes these documents programmatically](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), extracting the information you need without manual copying.
 
 Consider processing a client project brief. Invoke the pdf skill with `/pdf` in your Claude Code session, then describe what you need:
 
@@ -66,7 +66,7 @@ Claude reads the document, extracts the structured information, and presents it 
 
 ## Knowledge Management with Supermemory
 
-Working alone means you're both architect and historian. The **supermemory** skill maintains persistent context across sessions, tracking decisions, API contracts, and project history.
+Working alone means you're both architect and historian. [The **supermemory** skill maintains persistent context across sessions](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), tracking decisions, API contracts, and project history.
 
 Instead of re-explaining your codebase each session:
 
@@ -182,5 +182,12 @@ Master one skill before adding others. Each skill has its own learning curve, an
 The goal isn't to use every skill—it's to identify where your time actually goes and apply automation strategically.
 
 ---
+
+## Related Reading
+
+- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/)
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

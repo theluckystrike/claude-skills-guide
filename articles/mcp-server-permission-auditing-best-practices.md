@@ -33,7 +33,7 @@ This reveals every MCP server active in your environment. Common servers include
 
 Every MCP server should have the minimum access required for its function. If a server only needs to read files, it should not have write permissions. Review each server's documented capabilities and disable unnecessary ones.
 
-For example, when using the `pdf` skill to process documents, you only need read access to input files and write access to output directories. Restrict the server to those specific paths rather than granting broad filesystem access.
+For example, [when using the `pdf` skill to process documents](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/), you only need read access to input files and write access to output directories. Restrict the server to those specific paths rather than granting broad filesystem access.
 
 ### 2. Credential Management
 
@@ -62,7 +62,7 @@ Some MCP servers run as local processes, while others connect to remote services
 - Remote servers should use TLS encryption and valid certificates
 - Consider whether a server needs to be accessible from network contexts at all
 
-If you're running local development with the `tdd` skill for test-driven development, ensure your test databases aren't exposed to network interfaces unnecessarily.
+If you're running local development with the [`tdd` skill for test-driven development](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/), ensure your test databases aren't exposed to network interfaces unnecessarily.
 
 ### 4. Audit Logging
 
@@ -121,7 +121,7 @@ Run this script as part of your deployment pipeline or CI/CD process to catch co
 
 ## Real-World Scenario: Multi-User Environment
 
-In shared environments where multiple developers use Claude, permission boundaries become critical. Suppose your team uses the `supermemory` skill for knowledge management. The skill needs write access to the memory database but should never modify system files or execute shell commands.
+In shared environments where multiple developers use Claude, permission boundaries become critical. Suppose your team uses the [`supermemory` skill for knowledge management](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/). The skill needs write access to the memory database but should never modify system files or execute shell commands.
 
 Configure the server with explicit path restrictions:
 
