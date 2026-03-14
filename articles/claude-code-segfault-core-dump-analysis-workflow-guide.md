@@ -90,7 +90,7 @@ Several Claude skills accelerate core dump analysis workflows. The **pdf** skill
 The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) stores patterns from your previous debugging sessions. If you've encountered similar crashes before, query your memory:
 
 ```
-/supermemory recall segfault in linked list delete operations
+/supermemory search: segfault in linked list delete operations
 ```
 
 This is particularly useful when debugging recurring issues across a codebase.

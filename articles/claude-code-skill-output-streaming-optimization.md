@@ -66,7 +66,7 @@ Repeated context-setting at the start of each session adds latency before useful
 In future sessions, retrieve it with a short query:
 
 ```
-/supermemory recall project stack
+/supermemory What is the project stack?
 ```
 
 Claude has the relevant context immediately without you re-explaining it, so skill output starts sooner.
@@ -92,7 +92,7 @@ Each invocation streams a manageable chunk rather than generating a single massi
 
 When your workflow requires multiple skills, ordering them efficiently reduces total wait time. Start with lightweight retrieval before heavy generation:
 
-1. `/supermemory recall` — retrieve stored context (fast)
+1. `/supermemory` — retrieve stored context (fast)
 2. `/pdf` — process documents (heavy, generates substantial output)
 3. `/tdd` — generate tests based on requirements (heavy)
 4. `/xlsx` — export results (moderate)

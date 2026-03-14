@@ -80,7 +80,7 @@ The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-
 In a future review session:
 
 ```
-/supermemory recall code-review-standards
+/supermemory What are our code review standards?
 ```
 
 Then apply them:
@@ -113,7 +113,7 @@ Combining these skills into a structured review workflow produces consistent res
 
 **Step 1 — Recall team standards:**
 ```
-/supermemory recall code-review-standards
+/supermemory What are our code review standards?
 ```
 
 **Step 2 — Check coverage:**

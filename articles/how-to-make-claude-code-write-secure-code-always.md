@@ -59,13 +59,13 @@ The second prompt gives Claude clear security requirements to follow. Include ex
 [The **supermemory** skill stores and retrieves context across sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/). Use it to maintain a security knowledge base that Claude references:
 
 ```
-/supermemory add our company's security standards: no eval(), always use parameterized queries, strict Content Security Policy headers required
+/supermemory Remember: our company's security standards: no eval(), always use parameterized queries, strict Content Security Policy headers required
 ```
 
 When starting new projects or files, invoke this context:
 
 ```
-/supermemory recall our security standards and apply them to this new API endpoint
+/supermemory What are our security standards? Apply them to this new API endpoint.
 ```
 
 This ensures Claude remembers your organization's security requirements without repeating yourself in every session.

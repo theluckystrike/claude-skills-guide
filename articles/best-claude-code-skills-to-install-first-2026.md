@@ -90,7 +90,7 @@ The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimizatio
 ```
 
 ```
-/supermemory recall project-architecture
+/supermemory What is the project architecture?
 ```
 
 Power users managing multiple long-running projects benefit most. Instead of re-explaining your stack at the start of every session, you recall it in one line.

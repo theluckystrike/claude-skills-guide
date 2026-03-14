@@ -81,8 +81,8 @@ Each agent reads and writes to this file. The **[supermemory** skill can track t
 # Agent 1 updates status
 /supermemory store agent-1-status: completed processing 50 files
 
-# Agent 2 queries progress  
-/supermemory query all agent statuses
+# Agent 2 retrieves progress
+/supermemory search: all agent statuses
 ```
 
 ## Strategy Four: Event-Driven Coordination

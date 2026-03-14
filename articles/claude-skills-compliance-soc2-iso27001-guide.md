@@ -84,9 +84,7 @@ The **supermemory** skill provides persistent context across Claude sessions. Fo
 
 ```bash
 # Store security decisions with full context
-/supermemory add "2026-03-14: Approved AWS IAM role changes for production. 
-Reviewer: security-team@company.com. Ticket: SEC-1234. 
-Changes comply with ISO27001 A.9.2.3 (Privileged access rights)"
+/supermemory Remember: 2026-03-14: Approved AWS IAM role changes for production. Reviewer: security-team@company.com. Ticket: SEC-1234. Changes comply with ISO27001 A.9.2.3 (Privileged access rights)
 ```
 
 When auditors request evidence of change approval processes, query your memory:
@@ -122,11 +120,11 @@ For ISO27001 A.14.1 (Requirements for information systems), these patterns demon
 
 Beyond individual skills, combine them into compliance automation:
 
-```bash
+```
 # Daily compliance check workflow
-1. /tdd run security-tests --scope authentication,authorization
-2. /pdf extract vulnerabilities from scan-results.pdf
-3. /supermemory add "Security test results: X passed, Y failed"
+1. /tdd Generate and run security tests for authentication and authorization modules
+2. /pdf Extract vulnerabilities from scan-results.pdf
+3. /supermemory Remember: Security test results: X passed, Y failed
 4. Generate compliance report
 ```
 

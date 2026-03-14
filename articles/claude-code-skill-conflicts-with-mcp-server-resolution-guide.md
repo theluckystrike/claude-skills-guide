@@ -126,11 +126,11 @@ pip install pypdf openpyxl reportlab
 
 Organize your setup to minimize conflicts from the start. Skills are `.md` files in `~/.claude/skills/` and do not have `tools:` configuration — they don't expose tool definitions at all. Conflicts arise only when an MCP server has a tool with the same name as a built-in Claude Code tool.
 
-For MCP servers, configure prefixes during initialization:
+For MCP servers, use consistent naming in your server's tool definitions to avoid collisions. Register each server with a clear name:
 
 ```bash
-claude mcp add filesystem --tool-prefix mcp_fs
-claude mcp add database --tool-prefix mcp_db
+claude mcp add mcp-filesystem -- npx -y @modelcontextprotocol/server-filesystem /your/project
+claude mcp add mcp-database -- npx -y @modelcontextprotocol/server-sqlite ./app.db
 ```
 
 Document your tool namespace in a central location:

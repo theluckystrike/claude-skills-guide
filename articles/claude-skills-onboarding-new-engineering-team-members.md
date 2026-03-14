@@ -80,25 +80,25 @@ Team knowledge lives in Slack threads, Google Docs, Notion pages, and engineerin
 During your first two weeks, build your memory index:
 
 ```
-/supermemory add "Our code review requires at least one approval from a senior engineer"
+/supermemory Remember: Our code review requires at least one approval from a senior engineer
 ```
 
 ```
-/supermemory add "We useconventional commits with types: feat, fix, docs, refactor, test"
+/supermemory Remember: We use conventional commits with types: feat, fix, docs, refactor, test
 ```
 
 ```
-/supermemory add "Deployments happen on Tuesdays and Thursdays after 2pm PT"
+/supermemory Remember: Deployments happen on Tuesdays and Thursdays after 2pm PT
 ```
 
 Later, when you're in a PR review or debugging session, retrieve this information instantly:
 
 ```
-/supermemory recall commit message format
+/supermemory What is the commit message format?
 ```
 
 ```
-/supermemory recall deployment process
+/supermemory What is the deployment process?
 ```
 
 This skill reduces the number of Slack messages you need to send asking "how do we..." questions.

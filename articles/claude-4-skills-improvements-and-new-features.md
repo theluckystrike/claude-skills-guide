@@ -59,14 +59,14 @@ Fixture cleanup also improved. The skill now includes teardown logic in generate
 
 ## Supermemory Semantic Search
 
-The most significant [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) improvement in Claude 4 is natural language recall. Previously, recall required exact key names. Now you can query by description:
+The most significant [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) improvement in Claude 4 is natural language retrieval. Previously, retrieval required exact key names. Now you can query by description:
 
 ```
-/supermemory recall why we chose Redis over Memcached
+/supermemory Why did we choose Redis over Memcached?
 ```
 
 ```
-/supermemory recall any decisions we made about the authentication flow
+/supermemory What decisions did we make about the authentication flow?
 ```
 
 The skill searches stored context semantically and surfaces relevant entries. For projects with months of accumulated decisions, this is substantially faster than remembering exact key names.

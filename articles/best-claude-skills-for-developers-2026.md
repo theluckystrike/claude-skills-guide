@@ -80,10 +80,10 @@ The **supermemory** skill addresses a common developer pain point: organizing an
 In future sessions:
 
 ```
-/supermemory recall project-stack
+/supermemory What is the project stack?
 ```
 
-Instead of re-explaining your stack at the start of every session, you recall it in one line. The skill maintains context across sessions, learning from your interactions.
+Instead of re-explaining your stack at the start of every session, you retrieve it in one line. The skill maintains context across sessions, learning from your interactions.
 
 ## Web Application Testing with Webapp-Testing
 

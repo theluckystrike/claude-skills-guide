@@ -70,7 +70,7 @@ If you need results from a large `/pdf` operation across multiple sessions, stor
 Future sessions retrieve this without re-processing the document:
 
 ```
-/supermemory recall Q4 report
+/supermemory What were the Q4 report key findings?
 ```
 
 ### Split /pptx and /docx Requests

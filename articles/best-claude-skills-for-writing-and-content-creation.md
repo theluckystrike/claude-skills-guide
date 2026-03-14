@@ -102,7 +102,7 @@ The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-
 In any future session:
 
 ```
-/supermemory recall acme-brand-voice
+/supermemory What is the Acme brand voice?
 ```
 
 Then apply it:
@@ -134,7 +134,7 @@ These skills work together in sequence. A typical long-form content workflow:
 
 **Step 1 — Recall client guidelines:**
 ```
-/supermemory recall acme-brand-voice
+/supermemory What is the Acme brand voice?
 ```
 
 **Step 2 — Draft the document:**

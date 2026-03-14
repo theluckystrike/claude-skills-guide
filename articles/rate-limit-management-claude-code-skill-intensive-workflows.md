@@ -89,7 +89,7 @@ Use `/supermemory` to store results from heavy skill operations so you don't rep
 
 In future sessions, retrieve with:
 ```
-/supermemory recall project requirements
+/supermemory What are the project requirements?
 ```
 
 This avoids re-running expensive `/pdf` operations when the underlying document hasn't changed. For deeper caching strategies, see [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/caching-strategies-for-claude-code-skill-outputs/).
@@ -110,7 +110,7 @@ Shell script orchestration:
 # Code review workflow with rate limit management
 
 # Step 1: Lightweight context
-claude -p "/supermemory recall project coding standards"
+claude -p "/supermemory What are the project coding standards?"
 sleep 1
 
 # Step 2: Heavy document processing

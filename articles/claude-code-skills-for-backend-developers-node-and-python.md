@@ -63,7 +63,7 @@ Backend projects span many sessions. Use `/supermemory` to preserve architectura
 
 In future sessions:
 ```
-/supermemory recall database schema
+/supermemory What is the database schema setup?
 ```
 
 Store API contracts, configuration choices, and design decisions. This prevents repeating context across long projects.

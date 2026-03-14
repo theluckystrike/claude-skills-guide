@@ -105,7 +105,7 @@ A French developer building a web application might use this workflow:
 First, document requirements in French using **supermemory**:
 
 ```
-/supermemory add Create authentication system with French labels
+/supermemory Remember: Create authentication system with French labels for this project
 ```
 
 Next, generate code with French documentation:

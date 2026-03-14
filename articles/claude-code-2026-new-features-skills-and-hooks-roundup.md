@@ -84,13 +84,13 @@ The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-
 ```
 
 ```
-/supermemory recall project-stack
+/supermemory What is the project stack?
 ```
 
-The semantic search capability added in 2026 makes recall more flexible:
+The semantic search capability added in 2026 makes retrieval more flexible:
 
 ```
-/supermemory recall any decisions about the database setup
+/supermemory What decisions did we make about the database setup?
 ```
 
 Previously this required remembering exact key names. Now the skill searches stored context by meaning.
