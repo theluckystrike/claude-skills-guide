@@ -12,7 +12,7 @@ score: 7
 
 # Claude MD Version Control Strategy Best Practices
 
-[Managing Claude Code skills effectively requires more than just writing good markdown instructions](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) When you treat your `~/.claude/skills/` directory as a proper version-controlled project, you gain traceability, collaboration capabilities, and the ability to roll back problematic changes. This guide covers practical strategies for developers and power users who want to manage their Claude skills with the same rigor as their codebase.
+[Managing Claude Code skills effectively requires more than just writing good markdown instructions](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you treat your `~/.claude/skills/` directory as a proper version-controlled project, you gain traceability, collaboration capabilities, and the ability to roll back problematic changes. This guide covers practical strategies for developers and power users who want to manage their Claude skills with the same rigor as their codebase.
 
 ## Why Version Control Matters for Claude Skills
 
@@ -69,11 +69,12 @@ skills/tdd/skill.md
 # 1.0.0 - Initial release
 ```
 
-When using the tdd skill in automated pipelines, specifying version requirements ensures consistent behavior:
+When you need a specific version of a skill, check out that version from your skills repository and copy it to `~/.claude/skills/`:
 
 ```bash
 # Pin to exact version in CI
-claude --skill-version "tdd@1.2.0" --prompt "Write tests for auth module"
+git checkout v1.2.0 -- skills/tdd/skill.md
+cp skills/tdd/skill.md ~/.claude/skills/tdd.md
 ```
 
 ## Branching Strategies for Skill Development
@@ -130,19 +131,20 @@ ERRORS=0
 
 for skill in $SKILLS_DIR/**/skill.md; do
     echo "Validating $skill..."
-    
+
     # Check for required sections
     if ! grep -q "## Instructions" "$skill"; then
         echo "ERROR: $skill missing ## Instructions section"
         ERRORS=$((ERRORS + 1))
     fi
-    
-    # Check YAML front matter validity
-    if ! python3 -c "import yaml; yaml.safe_load(open('$skill').read())" 2>/dev/null; then
-        echo "ERROR: $skill has invalid YAML"
+
+    # Check YAML front matter validity (extract only the front matter block)
+    FRONTMATTER=$(awk '/^---/{found++; if(found==2) exit} found==1 && !/^---/{print}' "$skill")
+    if ! echo "$FRONTMATTER" | python3 -c "import sys, yaml; yaml.safe_load(sys.stdin)" 2>/dev/null; then
+        echo "ERROR: $skill has invalid YAML front matter"
         ERRORS=$((ERRORS + 1))
     fi
-    
+
     # Check instruction length
     INSTRUCTION_COUNT=$(grep -c "^## Instructions" "$skill")
     if [ "$INSTRUCTION_COUNT" -gt 1 ]; then
@@ -232,9 +234,9 @@ Start by initializing your skills directory as a Git repository today. The initi
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/articles/shared-claude-skills-across-monorepo-multiple-packages/)
-- [Claude MD Best Practices for Large Codebases](/claude-skills-guide/articles/claude-md-best-practices-for-large-codebases/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/)
+- [Claude MD Best Practices for Large Codebases](/claude-skills-guide/claude-md-best-practices-for-large-codebases/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

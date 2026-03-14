@@ -12,7 +12,7 @@ score: 7
 
 # Claude MD Template for New Projects Starter Guide
 
-When you start a new project, having a solid prompt template saves time and ensures consistent results. [Claude MD templates are structured Markdown files that define how Claude should approach](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) different types of project tasks. This guide walks you through creating and using these templates effectively.
+When you start a new project, having a solid prompt template saves time and ensures consistent results. [Claude MD templates are structured Markdown files that define how Claude should approach](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) different types of project tasks. This guide walks you through creating and using these templates effectively.
 
 ## What Is a Claude MD Template
 
@@ -167,7 +167,7 @@ Chain multiple skills within templates:
 
 ```
 ## Deployment
-Use the [DEPLOY_SKILL] to set up CI/CD pipeline, then use [MONITOR_SKILL] to configure alerting.
+Use /tdd to verify all tests pass before deploying, then use /pdf to generate release notes.
 ```
 
 ## Best Practices
@@ -211,9 +211,9 @@ Start with one simple template, test it in your next project, and iterate. The b
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/)
-- [Claude MD File Complete Guide: What It Does](/claude-skills-guide/articles/claude-md-file-complete-guide-what-it-does/)
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/articles/how-to-write-effective-claude-md-for-your-project/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+- [Claude MD File Complete Guide: What It Does](/claude-skills-guide/claude-md-file-complete-guide-what-it-does/)
+- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

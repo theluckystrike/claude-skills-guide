@@ -33,14 +33,7 @@ If these skills are not installed, download the `.md` files from community GitHu
 
 ## Step 1: Scan Your Project for Contrast Issues
 
-Start by analyzing your codebase for potential color contrast violations. The **frontend-design** skill can evaluate your existing styles and identify problematic color combinations.
-
-```bash
-# Invoke frontend-design skill to analyze styles
-/analyze-styles --contrast-check --wcag-level AA
-```
-
-This command examines your CSS files, component styles, and inline styles to identify color pairs that fail WCAG requirements. The output includes specific hex color codes, affected elements, and calculated contrast ratios.
+Start by analyzing your codebase for potential color contrast violations. Ask Claude to examine your CSS files, component styles, and inline styles to identify color pairs that fail WCAG requirements. Provide the relevant style files as context and request a review of color combinations for WCAG AA compliance. Claude will identify specific hex color codes, affected elements, and calculated contrast ratios.
 
 For projects using Tailwind CSS, you can also use dedicated tools to scan your configuration:
 
