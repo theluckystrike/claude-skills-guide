@@ -71,33 +71,39 @@ Enterprise environments require additional safeguards. Claude Code supports seve
 
 ### Permission Boundaries
 
-Configure `CLAUDE_PERMISSIONS` to restrict sensitive operations:
+Configure Claude Code's permission settings in `.claude/settings.json` to restrict sensitive operations. Use the `deny` list to block destructive commands and restrict write access to specific paths. This ensures Claude cannot execute certain shell commands without explicit approval—a requirement in many compliance frameworks.
 
-```bash
-export CLAUDE_PERMISSIONS="read:all,write:confirmed,execute:approved-only"
+```json
+{
+  "permissions": {
+    "deny": ["Bash(rm -rf *)", "Bash(sudo *)"],
+    "allow": ["Bash(npm *)", "Bash(git *)"]
+  }
+}
 ```
-
-This ensures Claude cannot execute shell commands without explicit approval—a requirement in many compliance frameworks.
 
 ### Network Isolation
 
-For teams handling sensitive data, run Claude Code with network restrictions:
+For teams handling sensitive data, configure path restrictions in `.claude/settings.json` to limit file access:
 
-```bash
-claude --offline-mode --allowed-paths /project/root,/shared/docs
+```json
+{
+  "permissions": {
+    "allow": [
+      "Read(/project/root/**)",
+      "Read(/shared/docs/**)",
+      "Write(/project/root/**)",
+      "Bash(npm *)", "Bash(git *)"
+    ]
+  }
+}
 ```
 
-This limits file access to specific directories and prevents external API calls when working with proprietary code.
+This limits Claude to the specified directories when working with proprietary code.
 
 ### Audit Trails
 
-Enterprise deployments need activity logging. Enable structured logging:
-
-```bash
-export CLAUDE_AUDIT_LOG="/var/log/claude/audit-$(date +%Y%m%d).json"
-```
-
-Each interaction records timestamp, user, skill invoked, and files accessed—essential for compliance reporting.
+Enterprise deployments need activity logging. You can add Claude Code audit hooks or use your existing SIEM tooling to capture session logs. Each interaction should record timestamp, user, skill invoked, and files accessed—essential for compliance reporting.
 
 ## Phase Three: Custom Skill Development
 
@@ -150,9 +156,7 @@ Solution: Provide more context in invocations. Instead of `/tdd test this`, use 
 **Challenge: Skill Discovery**
 Solution: Create a team command that lists all available skills with descriptions:
 
-```
-/supermemory search "skill" --collection team-wiki
-```
+Ask Claude directly: "search the team wiki for available skills and their descriptions"
 
 **Challenge: Onboarding New Team Members**
 Solution: Build a **onboarding** skill that walks new developers through setup:

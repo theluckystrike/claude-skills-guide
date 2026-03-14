@@ -37,18 +37,22 @@ You'll also need Reddit API credentials. Create a developer application at https
 The most common use case involves fetching posts from specific subreddits based on keywords or trending topics. Here's a practical implementation:
 
 ```python
-from mcp import RedditClient
+# This example uses PRAW (Python Reddit API Wrapper)
+# pip install praw
+import praw
 
-client = RedditClient(
+client = praw.Reddit(
     client_id="your_client_id",
     client_secret="your_client_secret",
     user_agent="content-research-bot/1.0"
 )
 
+def get_subreddit(name):
+    return client.subreddit(name)
+
 def research_topic(subreddit: str, keyword: str, limit: int = 50):
-    posts = client.get_submission_search(
-        subreddit=subreddit,
-        query=keyword,
+    posts = client.subreddit(subreddit).search(
+        keyword,
         limit=limit,
         sort="relevance"
     )
@@ -139,7 +143,7 @@ This analysis can feed into content calendars, helping you time your publication
 
 ## Practical Workflow Integration
 
-For a complete research workflow, chain multiple MCP tools together. Use the **ttd** skill to test your automation scripts, the **pdf** skill to generate research summaries, and **docx** for formatted deliverables.
+For a complete research workflow, chain multiple MCP tools together. Use the **tdd** skill to test your automation scripts, the **pdf** skill to generate research summaries, and **docx** for formatted deliverables.
 
 A typical pipeline might:
 

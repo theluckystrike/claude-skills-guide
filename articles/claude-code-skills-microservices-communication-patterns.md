@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills Microservices Communication Patterns
 
-Building microservices architectures requires careful consideration of how services communicate, handle failures, and maintain consistency across distributed systems. Claude Code skills provide a powerful way to automate, document, and generate communication patterns between microservices, helping developers implement robust inter-service communication without starting from scratch. See the [advanced hub](/claude-skills-guide/advanced-hub/) for related architectural patterns.
+Building microservices architectures requires careful consideration of how services communicate, handle failures, and maintain consistency across distributed systems. Claude Code skills provide a powerful way to automate, document, and generate communication patterns between microservices, helping developers implement reliable inter-service communication without starting from scratch. See the [advanced hub](/claude-skills-guide/advanced-hub/) for related architectural patterns.
 
 This guide covers practical patterns for implementing microservices communication using Claude Code skills, with real code examples you can apply to your architecture.
 
@@ -136,6 +136,7 @@ A practical implementation:
 # message_publisher.py
 import json
 import time
+import uuid
 import hashlib
 from typing import Any, Callable
 from dataclasses import dataclass
@@ -195,7 +196,7 @@ class ResilientPublisher:
             return False
             
         message = Message(
-            id=hashlib.uuid4().hex,
+            id=uuid.uuid4().hex,
             payload=payload,
             timestamp=time.time(),
             idempotency_key=idempotency_key or hashlib.md5(

@@ -46,7 +46,7 @@ The **`description`** field provides a brief explanation of what the skill does.
 
 The **`tools`** field declares which tools the skill can use. This is critical for security and scope control. A skill tagged with `["Bash", "WriteFile"]` cannot access tools outside that list, even if the skill's instructions ask for them.
 
-The **`required_agent_state`** field — used by more advanced skills — specifies what context the skill needs from previous interactions.
+
 
 Here is a more complete example showing a skill with tool restrictions:
 
@@ -119,9 +119,6 @@ tools:
   - ReadFile
   - WriteFile
   - EditFile
-required_agent_state:
-  - conversation_history
-  - user_preferences
 ---
 
 # SuperMemory Skill

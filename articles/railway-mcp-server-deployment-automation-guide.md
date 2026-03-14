@@ -191,7 +191,7 @@ https://your-project-name.up.railway.app
 
 Configure Claude Code to use this server by adding it to your MCP settings. The exact configuration depends on your Claude Code version, but typically involves specifying the server URL and any required authentication headers.
 
-For teams using multiple MCP servers, the [supermemory skill](https://zovo.one) can help track which services are deployed where and maintain documentation about each server's purpose and configuration.
+For teams using multiple MCP servers, the supermemory skill can help track which services are deployed where and maintain documentation about each server's purpose and configuration.
 
 ## Scaling Considerations
 
@@ -205,6 +205,6 @@ Railway's pricing scales with usage. Review the platform's resource allocation t
 
 Railway provides a production-ready deployment target for MCP servers. The workflow involves configuring environment variables, optionally using Docker for complex runtimes, and setting up CI/CD automation for continuous delivery. Health checks ensure reliability, while Railway's scaling options handle growth.
 
-For developers building Claude Code integrations, combining Railway deployment with skills like the [tdd skill](https://zovo.one) for test-driven development or the [frontend-design skill](https://zovo.one) for UI components creates a powerful development workflow. The [pdf skill](https://zovo.one) can generate deployment documentation automatically, and the [mcp-builder skill](https://zovo.one) helps construct new servers ready for Railway deployment.
+For developers building Claude Code integrations, combining Railway deployment with skills like the tdd skill for test-driven development or the frontend-design skill for UI components creates a powerful development workflow. The pdf skill can generate deployment documentation automatically.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

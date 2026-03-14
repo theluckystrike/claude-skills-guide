@@ -86,27 +86,11 @@ Use the send_message tool:
 - attachments: Add deployment duration and any rollback instructions
 ```
 
-This skill integrates with the `tdd` skill to report test results alongside deployment status:
+This skill integrates with the `tdd` skill to report test results alongside deployment status. In your Claude Code session, after running the tdd skill, instruct Claude to send the results to Slack:
 
-```javascript
-// After deployment, run tests and notify
-const testResult = await claude.runSkill('tdd', {
-  testCommand: 'npm test -- --coverage',
-  notifyOnComplete: true
-});
-
-// Send combined notification
-await slack.send_message({
-  channel: '#deployments',
-  text: `Deployment v${version} ${testResult.passed ? '✅ passed' : '❌ failed'} all tests`,
-  attachments: [{
-    color: testResult.passed ? '#36a64f' : '#ff0000',
-    fields: [
-      { title: 'Environment', value: 'production', short: true },
-      { title: 'Test Coverage', value: `${testResult.coverage}%`, short: true }
-    ]
-  }]
-});
+```
+/tdd run all tests and generate coverage summary
+then use the slack MCP tool to post the results to #deployments with status and coverage percentage
 ```
 
 ### Multi-Service Monitoring Workflows

@@ -50,7 +50,6 @@ For instance, integrate the pdf skill to automatically generate and send documen
 
 ```javascript
 // Skill: auto-invoice-generator
-// Auto-invoke: when user sends message containing "invoice" or "receipt"
 
 When the user requests an invoice or receipt, generate a PDF using the pdf skill
 and send it to their Telegram chat. Extract the relevant details from their message
@@ -67,7 +66,6 @@ Text messages work well for command-based interactions:
 
 ```javascript
 // Skill: telegram-command-handler
-// Auto-invoke: on every incoming Telegram message
 
 Process incoming Telegram messages with these rules:
 - Messages starting with "/status" - respond with system health check
@@ -86,7 +84,6 @@ Consider a bug reporting workflow:
 
 ```javascript
 // Skill: telegram-bug-reporter
-// Auto-invoke: when user sends message containing "bug" or "issue"
 
 1. Parse the bug report from the user's message
 2. Use the tdd skill to generate a minimal reproduction test case
@@ -106,7 +103,6 @@ Effective bot automation requires maintaining conversation context across multip
 
 ```javascript
 // Skill: telegram-support-bot
-// Auto-invoke: on every incoming message from known users
 
 Use supermemory to maintain conversation history with this user.
 When handling support requests:
@@ -116,7 +112,7 @@ When handling support requests:
 4. If the issue requires escalation, gather context from supermemory first
 ```
 
-For more complex state management, consider using the mcp-memory-server skill to create dedicated storage for bot conversations.
+For more complex state management, use an MCP server connected to an external store like Redis or a database to maintain shared conversation state across sessions.
 
 ## Broadcasting and Scheduled Notifications
 
@@ -124,10 +120,9 @@ Automate team communications by setting up scheduled broadcasts. Create a skill 
 
 ```javascript
 // Skill: daily-team-standup
-// Auto-invoke: on schedule (every weekday at 9am)
 
 1. Query your project management system for today's tasks
-2. Use the claude-tdd skill to identify tests that ran overnight
+2. Use the tdd skill to identify tests that ran overnight
 3. Compile a summary message with:
    - Today's priorities
    - Yesterday's completed items
@@ -144,7 +139,6 @@ Robust automation requires proper error handling. Configure fallback responses f
 
 ```javascript
 // Skill: telegram-fallback-handler
-// Auto-invoke: when no other skill matches the incoming message
 
 When a message doesn't match any automation pattern:
 1. Acknowledge receipt of the message
