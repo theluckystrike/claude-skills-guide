@@ -3,8 +3,12 @@ layout: default
 title: "Using Claude Code with Astro Static Site Generation"
 description: "Learn how to integrate Claude Code into your Astro static site workflow. Automate component generation, optimize images, run tests, and enhance content creation with specialized Claude skills."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /using-claude-code-with-astro-static-site-generation/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # Using Claude Code with Astro Static Site Generation
@@ -95,7 +99,7 @@ Claude understands that static sites have unique testing requirements. It can he
 
 ## PDF Generation for Static Content
 
-Many Astro sites need to generate PDFs—whitepapers, resumes, reports, or downloadable guides. The **pdf** skill integrates seamlessly with Astro's static generation. You can create pages that output as PDFs during build time, or generate them on-demand using server endpoints.
+Many Astro sites need to generate PDFs—whitepapers, resumes, reports, or downloadable guides. The **pdf** skill integrates smoothly with Astro's static generation. You can create pages that output as PDFs during build time, or generate them on-demand using server endpoints.
 
 Common use cases include:
 

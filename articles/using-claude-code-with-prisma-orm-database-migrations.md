@@ -3,8 +3,12 @@ layout: default
 title: "Using Claude Code with Prisma ORM Database Migrations"
 description: "Learn how to leverage Claude Code AI assistant to streamline your Prisma ORM database migration workflow with practical examples and code snippets."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /using-claude-code-with-prisma-orm-database-migrations/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
@@ -95,7 +99,7 @@ For instance, if you encounter "Foreign key constraint failed," Claude Code migh
 
 ## Integrating with Claude Skills
 
-Claude Code works seamlessly with other skills to enhance your development workflow. The **tdd** skill helps you write tests alongside your migrations, ensuring data integrity. The **pdf** skill can generate database documentation from your schema. For organizing migration notes and schema versions, the **supermemory** skill maintains a searchable knowledge base of your database evolution.
+Claude Code works smoothly with other skills to enhance your development workflow. The **tdd** skill helps you write tests alongside your migrations, ensuring data integrity. The **pdf** skill can generate database documentation from your schema. For organizing migration notes and schema versions, the **supermemory** skill maintains a searchable knowledge base of your database evolution.
 
 When working on frontend features that consume your Prisma data, the **frontend-design** skill helps you align your UI components with your data model, ensuring type safety from database to user interface.
 

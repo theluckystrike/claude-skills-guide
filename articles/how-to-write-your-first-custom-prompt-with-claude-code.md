@@ -3,8 +3,12 @@ layout: default
 title: "How to Write Your First Custom Prompt with Claude Code"
 description: "A practical guide for developers and power users to create custom prompts and skills in Claude Code. Learn the fundamentals with real code examples."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /how-to-write-your-first-custom-prompt-with-claude-code/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # How to Write Your First Custom Prompt with Claude Code

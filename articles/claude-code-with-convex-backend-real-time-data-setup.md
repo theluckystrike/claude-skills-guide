@@ -4,8 +4,8 @@ title: "Claude Code With Convex Backend Real-Time Data Setup"
 description: "Learn how to set up Convex as a backend for real-time data in your Claude Code projects. Practical code examples and integration patterns for developers."
 date: 2026-03-14
 categories: [integrations]
-tags: [claude-code, convex, backend, real-time-data, database, tutorial]
-author: theluckystrike
+tags: [claude-code, claude-skills, claude-code, convex, backend, real-time-data, database, tutorial]
+author: "Claude Skills Guide"
 reviewed: false
 score: 0
 permalink: /claude-code-with-convex-backend-real-time-data-setup/

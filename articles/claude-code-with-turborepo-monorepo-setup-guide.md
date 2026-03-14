@@ -3,11 +3,15 @@ layout: default
 title: "Claude Code with Turborepo Monorepo Setup Guide"
 description: "Learn how to integrate Claude Code with Turborepo monorepo projects for efficient development workflows and AI-assisted coding."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-with-turborepo-monorepo-setup-guide/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
-Setting up Claude Code within a Turborepo monorepo transforms how development teams manage complex projects. This guide walks you through configuring your monorepo environment to leverage Claude Code's AI capabilities across multiple packages while maintaining the performance benefits that make Turborepo popular.
+Setting up Claude Code within a Turborepo monorepo transforms how development teams manage complex projects. This guide walks you through configuring your monorepo environment to use Claude Code's AI capabilities across multiple packages while maintaining the performance benefits that make Turborepo popular.
 
 ## Understanding the Monorepo Architecture
 
@@ -90,7 +94,7 @@ The key is that Claude Code understands your dependency graph, so it won't sugge
 
 ## Running Claude Code Commands Across Workspaces
 
-Turborepo's task running works seamlessly with Claude Code. When you need to run tasks across multiple packages, structure your commands appropriately:
+Turborepo's task running works smoothly with Claude Code. When you need to run tasks across multiple packages, structure your commands appropriately:
 
 ```bash
 # Run a command in a specific workspace

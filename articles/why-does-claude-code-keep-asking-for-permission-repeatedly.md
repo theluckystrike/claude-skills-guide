@@ -3,8 +3,12 @@ layout: default
 title: "Why Does Claude Code Keep Asking for Permission Repeatedly?"
 description: "Understanding Claude Code's permission prompts and how to configure permission modes for a smoother development workflow."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /why-does-claude-code-keep-asking-for-permission-repeatedly/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 
 # Why Does Claude Code Keep Asking for Permission Repeatedly?
@@ -101,7 +105,7 @@ Instead of separate requests, one comprehensive task allows Claude to handle mul
 
 **Use skill-specific configurations**: Skills like `pdf` and `docx` for document generation often need file system access. Configure their permissions once in your project settings rather than approving each operation individually.
 
-**Leverage the MCP builder skill**: If you're building custom MCP servers, design them with clear permission boundaries. A well-structured MCP server declares its required permissions upfront, reducing runtime prompts.
+**use the MCP builder skill**: If you're building custom MCP servers, design them with clear permission boundaries. A well-structured MCP server declares its required permissions upfront, reducing runtime prompts.
 
 ## When Repeated Prompts Indicate a Problem
 

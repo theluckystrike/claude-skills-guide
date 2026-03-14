@@ -3,8 +3,12 @@ layout: default
 title: "Why Does Claude Code Break My Existing Tests Unexpectedly"
 description: "Discover why Claude Code sometimes breaks your existing tests and learn practical strategies to prevent and resolve these conflicts."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /why-does-claude-code-break-my-existing-tests-unexpectedly/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 
 If you've used Claude Code to generate or modify code, you may have encountered a frustrating situation: your existing tests suddenly fail after Claude Code made changes. This is a common experience, and understanding why it happens can help you prevent and resolve these issues.

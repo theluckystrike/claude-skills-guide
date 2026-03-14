@@ -4,9 +4,11 @@ title: "How to Generate Unit Tests Automatically with Claude Code"
 description: "Learn to automate unit test generation using Claude Code skills. Practical examples with xlsx, tdd, and other skills for developers and power users."
 date: 2026-03-14
 categories: [guides]
-tags: [claude-code, unit-testing, automated-testing, tdd, code-generation]
-author: theluckystrike
+tags: [claude-code, claude-skills, claude-code, unit-testing, automated-testing, tdd, code-generation]
+author: "Claude Skills Guide"
 permalink: /how-to-generate-unit-tests-automatically-with-claude-code/
+reviewed: true
+score: 7
 ---
 
 # How to Generate Unit Tests Automatically with Claude Code
@@ -17,7 +19,7 @@ Automated unit testing is a cornerstone of reliable software development, yet wr
 
 Before diving into automation, recognize what makes unit tests valuable: they verify behavior, catch regressions, and serve as documentation. The goal is not just coverage numbers, but tests that actually protect your code from breaking changes.
 
-When you work with Claude Code, you can leverage skills that understand your codebase structure and generate tests that follow your project's testing conventions. The process involves analyzing your source files, identifying functions and methods, and producing test cases that cover edge cases and expected behavior.
+When you work with Claude Code, you can use skills that understand your codebase structure and generate tests that follow your project's testing conventions. The process involves analyzing your source files, identifying functions and methods, and producing test cases that cover edge cases and expected behavior.
 
 ## Using Claude Skills for Test Generation
 

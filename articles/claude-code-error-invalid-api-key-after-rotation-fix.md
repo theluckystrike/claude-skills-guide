@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Error Invalid API Key After Rotation Fix"
 description: Fix the invalid API key error that occurs after rotating your Anthropic API key. Step-by-step solutions for environment variables, config files, and skill updates.
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-error-invalid-api-key-after-rotation-fix/
+reviewed: true
+score: 7
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code Error Invalid API Key After Rotation Fix

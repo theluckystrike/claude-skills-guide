@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code with Terraform Infrastructure as Code Setup"
 description: "A practical guide to setting up Claude Code with Terraform for infrastructure as code workflows. Learn how to integrate these tools for automated DevOps."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-with-terraform-infrastructure-as-code-setup/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 # Claude Code with Terraform Infrastructure as Code Setup
@@ -102,7 +106,7 @@ resource "aws_security_group" "web_sg" {
 
 ## Using Claude Code with Terraform
 
-When working with Terraform in Claude Code sessions, you can leverage several skills to enhance productivity. The **pdf** skill helps generate infrastructure documentation automatically, while the **tdd** skill assists in writing tests for your infrastructure modules. These specialized skills extend Claude's capabilities and streamline common DevOps workflows.
+When working with Terraform in Claude Code sessions, you can use several skills to enhance productivity. The **pdf** skill helps generate infrastructure documentation automatically, while the **tdd** skill assists in writing tests for your infrastructure modules. These specialized skills extend Claude's capabilities and streamline common DevOps workflows.
 
 ### Practical Workflows
 

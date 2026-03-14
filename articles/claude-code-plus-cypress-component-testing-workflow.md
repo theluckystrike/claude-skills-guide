@@ -3,8 +3,12 @@ layout: default
 title: "Claude Code Plus Cypress Component Testing Workflow"
 description: "Learn how to integrate Claude Code with Cypress for efficient component testing workflows that accelerate development."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-plus-cypress-component-testing-workflow/
+reviewed: true
+score: 7
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
@@ -42,7 +46,7 @@ export default defineConfig({
 
 ## Claude Code Integration Patterns
 
-Claude Code excels at generating test boilerplate, explaining component behavior, and identifying edge cases. When working with Cypress component tests, leverage Claude's understanding of your codebase to accelerate test writing.
+Claude Code excels at generating test boilerplate, explaining component behavior, and identifying edge cases. When working with Cypress component tests, use Claude's understanding of your codebase to accelerate test writing.
 
 ### Generating Test Scaffolding
 

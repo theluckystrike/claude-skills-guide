@@ -5,7 +5,7 @@ description: Practical solutions for fixing connection refused errors when Claud
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, error-fix, connection-refused, localhost, network, troubleshooting, productivity]
-author: theluckystrike
+author: "Claude Skills Guide"
 reviewed: false
 score: 0
 permalink: /claude-code-error-connection-refused-localhost-fix/
