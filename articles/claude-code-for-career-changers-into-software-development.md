@@ -43,13 +43,13 @@ Next, install Claude Code globally:
 npm install -g @anthropic-ai/claude-code
 ```
 
-After installation, authenticate with your Anthropic account:
+After installation, set your Anthropic API key:
 
 ```bash
-claude auth login
+export ANTHROPIC_API_KEY="your-key-here"
 ```
 
-Once authenticated, you're ready to start your first project. For career changers, we recommend starting with a simple web application rather than diving into complex backend systems.
+Add this to your shell profile (`~/.zshrc` or `~/.bashrc`) so it persists. You're now ready to start your first project. For career changers, we recommend starting with a simple web application rather than diving into complex backend systems.
 
 ## Building Your First Project as a Career Changer
 
@@ -139,11 +139,7 @@ Claude Code skills extend its capabilities for specific use cases. For career ch
 - **Code Review Skill**: Get feedback on your code quality
 - **Documentation Skill**: Learn to write clear documentation
 
-Install skills that match your learning goals:
-
-```bash
-claude skill install claude-code/test-driven-development
-```
+To use a skill, place the skill's `.md` file in `~/.claude/skills/` and invoke it with `/skill-name` in the Claude Code REPL. For example, to use the tdd skill: `/tdd Write tests for my task manager`.
 
 ## Building Your Portfolio
 

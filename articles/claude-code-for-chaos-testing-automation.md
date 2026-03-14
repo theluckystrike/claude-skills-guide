@@ -32,7 +32,6 @@ A chaos testing skill needs three core capabilities: selecting target services, 
 ---
 name: chaos-inject-latency
 description: Inject network latency into specified services
-tools: [bash, read_file]
 ---
 
 # Chaos Injection: Network Latency
