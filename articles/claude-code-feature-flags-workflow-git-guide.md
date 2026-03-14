@@ -1,8 +1,9 @@
 ---
 layout: default
 title: "Claude Code Feature Flags Workflow Git Guide"
-description: "Learn how to use Claude Code CLI with feature flags. Practical examples for implementing feature flag workflows with Git branching, environment configuration, and deployment strategies."
+description: "Learn how to use Claude Code CLI with feature flags. Practical examples for implementing feature flag workflows with Git branching, environment."
 date: 2026-03-14
+categories: [guides]
 author: theluckystrike
 permalink: /claude-code-feature-flags-workflow-git-guide/
 ---
@@ -202,3 +203,11 @@ Feature flags combined with Git workflows and Claude Code create a powerful deve
 
 Start small with feature flags in your next project. Use Claude Code to generate the infrastructure, then gradually adopt more sophisticated patterns as your team grows comfortable with the workflow.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
