@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Sweep AI GitHub Bot vs Claude Code: Which One Should You Use?"
+title: "Sweep AI GitHub Bot vs Claude Code: Which One Should You."
 description: "A practical comparison of Sweep AI and Claude Code for developers. Learn when to use each tool and how they can work together."
 date: 2026-03-14
 author: theluckystrike
 permalink: /sweep-ai-github-bot-vs-claude-code/
+categories: [guides]
 ---
 
 # Sweep AI GitHub Bot vs Claude Code: A Developer's Practical Guide
@@ -113,5 +114,12 @@ If your team struggles with issue backlog management and has many small, well-de
 For teams with the bandwidth to implement both, the combination often proves most powerful. Sweep handles the mechanical busywork while Claude Code amplifies your ability to build and ship features.
 
 The best approach is to start with your current pain points. If you're drowning in simple issues, try Sweep first. If you need help tackling complex development tasks, begin with Claude Code. Many developers ultimately use both, creating a hybrid workflow that maximizes the strengths of each tool.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude MD Example for Go Fiber API Project"
-description: "A practical guide to using Claude Code with Go Fiber API projects. Learn how to leverage Claude's capabilities for building, testing, and documenting your Go Fiber applications."
+description: "A practical guide to using Claude Code with Go Fiber API projects. Learn how to leverage Claude's capabilities for building, testing, and documenting."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-md-example-for-go-fiber-api-project/
+categories: [guides]
 ---
 
 {% raw %}
@@ -152,6 +153,13 @@ Describe your deployment target, whether Kubernetes, Docker, or traditional serv
 ## Conclusion
 
 Integrating Claude Code into your Go Fiber workflow accelerates development across the entire project lifecycle. From initial scaffolding through testing, documentation, and deployment, Claude's capabilities complement Fiber's performance with developer productivity. The combination enables you to build production-ready APIs faster while maintaining code quality through intelligent assistance and established patterns.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
