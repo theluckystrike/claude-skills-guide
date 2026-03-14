@@ -180,6 +180,6 @@ Start with the skills that match your biggest pain point—testbench creation, d
 - [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/articles/claude-skill-inheritance-and-composition-patterns/) — Build modular, reusable skills that chain together for complex hardware workflows
 - [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) — Persist design decisions and naming conventions across VHDL project sessions
 - [Claude Skills for Kubernetes Operator Development](/claude-skills-guide/articles/claude-code-skills-for-kubernetes-operator-development/) — Another specialized domain guide showing how Claude skills handle complex technical workflows
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Deep dive into the TDD skill used for testbench generation
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Complete guide to the TDD skill used for testbench generation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

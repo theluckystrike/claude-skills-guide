@@ -82,7 +82,7 @@ export NODE_OPTIONS="--max-old-space-size=4096"
 
 These settings increase the available heap space for Node.js-based Claude Code operations.
 
-### Leverage Lazy Loading with Skill Composition
+### Use Lazy Loading with Skill Composition
 
 Instead of loading a monolithic skill, break it into smaller, composable pieces. The `tdd` skill works efficiently when you invoke only the specific phase you need:
 

@@ -107,7 +107,7 @@ When building custom skills, the path is: understand the [skill.md format](/clau
 
 ## Related Reading
 
-- [Official vs Community Claude Skills Guide (2026)](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — Deep dive into when to trust official skills vs community alternatives, with reliability and security trade-offs explained.
+- [Official vs Community Claude Skills Guide (2026)](/claude-skills-guide/articles/anthropic-official-skills-vs-community-skills-comparison/) — When to trust official skills vs community alternatives, with reliability and security trade-offs explained.
 - [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/articles/mcp-servers-vs-claude-skills-what-is-the-difference/) — Clarifies the structural differences so you can choose the right integration layer for your stack.
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) — Practical framework for deciding when a skill beats a one-off prompt for your workflow.
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn the foundations before diving into comparisons between tools and platforms.

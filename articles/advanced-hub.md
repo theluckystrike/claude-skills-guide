@@ -78,7 +78,7 @@ Advanced optimization isn't just about prompts. It's about workflow design:
 | [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) | 5 strategies to cut token usage without sacrificing quality |
 | [Claude Skills Context Window Management Best Practices](/claude-skills-guide/articles/claude-skills-context-window-management-best-practices/) | Managing context window limits across long skill sessions |
 | [Claude Code Skills: Context Window Exceeded Error Fix](/claude-skills-guide/articles/claude-code-skills-context-window-exceeded-error-fix/) | Fixing and preventing context overflow errors in skill use |
-| [Claude Skills Memory and Context Architecture Explained](/claude-skills-guide/articles/claude-skills-memory-and-context-architecture-explained/) | Deep dive into how Claude manages memory and context in skills |
+| [Claude Skills Memory and Context Architecture Explained](/claude-skills-guide/articles/claude-skills-memory-and-context-architecture-explained/) | How Claude manages memory and context in skills |
 | [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) | How the supermemory skill stores and retrieves session knowledge |
 | [Claude Memory Feature vs SuperMemory Skill Comparison](/claude-skills-guide/articles/claude-memory-feature-vs-supermemory-skill-comparison/) | Native memory feature vs the supermemory skill — differences and tradeoffs |
 | [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/articles/claude-code-mcp-server-setup-complete-guide-2026/) | Setting up Model Context Protocol servers for advanced integrations |

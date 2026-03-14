@@ -129,7 +129,7 @@ git diff --name-only
 git diff package.json
 ```
 
-### Leverage the Supermemory Skill for Context
+### Use the Supermemory Skill for Context
 
 The [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) helps maintain context across sessions. If you frequently work with Claude on the same codebase, use it to remember:
 - Which functions have known behavioral quirks

@@ -244,7 +244,7 @@ Claude Code skills provide specialized context for data engineering tasks. The c
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Deep dive into the tdd skill used throughout this data engineering pipeline guide
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Full coverage of the tdd skill used throughout this data engineering pipeline guide
 - [Best Claude Skills for Data Analysis](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) — Explore the full suite of data analysis skills that complement pipeline automation workflows
 - [Claude Code Batch Processing with Skills Guide](/claude-skills-guide/articles/claude-code-batch-processing-with-skills-guide/) — Implement batch processing patterns for large-scale pipeline data using the same skills covered here
 - [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Discover more data engineering and infrastructure automation use case skill guides

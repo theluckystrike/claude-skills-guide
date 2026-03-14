@@ -180,7 +180,7 @@ Later sessions can pull specific dataset versions, ensuring reproducibility acro
 
 ## Project Structure Recommendations
 
-Organize your ML projects to leverage both Claude Code and W&B effectively:
+Organize your ML projects to use both Claude Code and W&B effectively:
 
 - **Config files**: Store W&B configurations in `configs/` with version control
 - **Scripts**: Keep training and evaluation scripts in `scripts/` or `src/`

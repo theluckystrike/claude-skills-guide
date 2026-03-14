@@ -82,7 +82,7 @@ export default defineConfig({
 
 The `manualChunks` configuration splits your bundle into logical pieces, enabling browsers to cache vendor code separately from application code. This reduces re-downloads when your application code changes.
 
-## Tree-Shaking Deep Dives
+## Tree-Shaking: Advanced Techniques
 
 Vite's Rollup backend performs tree-shaking by default, but it only removes unused code if that code is written in a tree-shakeable way. Common pitfalls include importing entire libraries instead of specific functions:
 

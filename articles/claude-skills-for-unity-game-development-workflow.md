@@ -144,7 +144,7 @@ The Unity development ecosystem benefits from Claude's skill system in several a
 
 - Use `pptx` to generate progress reports and feature presentations for stakeholders
 - Apply `docx` skills to maintain design documents in Microsoft Word format
-- Leverage `xlsx` for tracking sprint progress, bug counts, and build metrics
+- Use `xlsx` for tracking sprint progress, bug counts, and build metrics
 - The `canvas-design` skill helps mock up game UI before implementing in Unity
 
 ## Conclusion

@@ -127,7 +127,7 @@ Claude Code reads `CLAUDE.md` automatically at the start of every session. No sk
 
 ## Related Reading
 
-- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) - Deep dive on the supermemory skill
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/) - Complete reference on the supermemory skill
 - [Building Stateful Agents with Claude Skills](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) - File-based state for long-running tasks
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/articles/claude-skills-vs-prompts-which-is-better/) - Skills vs plain prompts decision guide
 

@@ -140,7 +140,7 @@ The bioinformatics community benefits from reproducible, well-documented analysi
 
 - [Claude Skills for Financial Modeling: Excel Alternative](/claude-skills-guide/articles/claude-skills-for-financial-modeling-excel-alternative/) — Apply similar data-processing skill workflows to financial modeling and quantitative analysis.
 - [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/articles/claude-skills-for-data-science-and-jupyter-notebooks/) — Extend bioinformatics data workflows with Jupyter notebook integration for interactive analysis.
-- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Deep dive into the tdd skill used for building reliable, tested bioinformatics pipelines.
+- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/articles/claude-tdd-skill-test-driven-development-workflow/) — Full guide to the tdd skill used for building reliable, tested bioinformatics pipelines.
 - [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Discover more advanced skill patterns for specialized scientific computing domains.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

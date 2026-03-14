@@ -191,7 +191,7 @@ Arabic text rendering can impact performance due to complex glyph shaping. Optim
 ## Workflow Summary
 
 1. Use **frontend-design** for RTL component generation
-2. Leverage **docx** and **pdf** skills for Arabic documentation
+2. Use **docx** and **pdf** skills for Arabic documentation
 3. Implement proper text processing utilities for Arabic
 4. Structure bilingual content with dedicated i18n files
 5. Write comprehensive Arabic tests with **tdd**
