@@ -106,7 +106,8 @@ A Claude skill for interacting with the Example API.
 ## Quick Start
 
 ```bash
-claude skill load api-client
+# Add to your CLAUDE.md to activate this skill
+# /path/to/api-client-skill/SKILL.md
 ```
 
 ## Available Commands
