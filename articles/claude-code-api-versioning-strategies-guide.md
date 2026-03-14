@@ -1,256 +1,182 @@
 ---
 layout: default
 title: "Claude Code API Versioning Strategies Guide"
-description: "Master API versioning for Claude Code skills. Learn URL-based, header, and query parameter strategies with practical code examples for building robust, versioned skills."
+description: "Learn practical API versioning strategies for Claude Code projects. Explore URL path, header, query string, and content type versioning with code examples."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-versioning-strategies-guide/
 ---
 
+{% raw %}
 # Claude Code API Versioning Strategies Guide
 
-Building skills that integrate with external APIs requires careful consideration of how those APIs evolve over time. API versioning strategies prevent breaking changes from disrupting your Claude Code workflows, whether you're pulling data from a simple REST endpoint or orchestrating complex multi-service integrations using skills like `supermemory` for context management or `tdd` for test-driven development workflows.
+Building APIs that evolve without breaking existing clients is one of the most challenging aspects of backend development. When you're working with Claude Code to generate API code, understanding versioning strategies helps you create services that can adapt over time while maintaining backward compatibility. This guide walks through practical approaches to API versioning that you can implement immediately.
 
-This guide covers the three most effective API versioning strategies, when to use each, and how to implement them within your Claude Code skills.
+## Why API Versioning Matters
 
-## Why API Versioning Matters for Skills
+Your API is a contract with your clients. When you release new features or fix bugs, you need a way to introduce changes without disrupting existing integrations. Without a clear versioning strategy, you risk breaking production systems every time you deploy an update.
 
-When you build a skill that calls an external API, you're establishing a dependency. That API will change—new fields get added, old fields get deprecated, response shapes get restructured. Without a versioning strategy, your skill breaks silently or produces unexpected results.
+Consider a scenario where you've built an e-commerce API using Claude Code's code generation capabilities. Your initial version returns product data with a simple structure:
 
-Consider a skill that generates PDF reports using the `pdf` skill and fetches data from a third-party analytics API. If that API migrates from v1 to v2 without versioning, your PDF output might contain malformed data or fail entirely. Versioning gives you control over when to adopt changes.
-
-## Strategy 1: URL Path Versioning
-
-URL path versioning embeds the version identifier directly in the endpoint URL. This is the most common approach and the easiest to implement.
-
-```
-https://api.example.com/v1/users
-https://api.example.com/v2/users
+```json
+{
+  "id": "123",
+  "name": "Wireless Headphones",
+  "price": 79.99
+}
 ```
 
-### Implementation Example
+Six months later, you need to add product images and inventory status. If you simply add these fields to the response, existing clients might break if they have strict parsing logic. Versioning lets you introduce these changes gracefully.
 
-```yaml
----
-name: analytics-reporter
-description: Generates analytics reports from external API
-version: 1.0.0
-tools:
-  - Read
-  - Write
-  - Bash
----
+## URL Path Versioning
 
-# Analytics Reporter Skill
+The most common approach is including the version in the URL path:
 
-This skill fetches analytics data and generates PDF reports.
-
-## API Configuration
-
-The skill uses URL path versioning to ensure consistent responses:
-
-```python
-API_BASE_URL = "https://api.analytics.example.com/v1"
+```
+GET /api/v1/products
+GET /api/v2/products
 ```
 
-When calling endpoints, always include the version:
+This method is explicit and easy to understand. Clients always know which version they're using. Here's how you might implement this with a Node.js Express route handler that Claude Code could help generate:
 
-```python
-def fetch_report_data(report_id: str) -> dict:
-    response = requests.get(
-        f"{API_BASE_URL}/reports/{report_id}",
-        headers={"Authorization": f"Bearer {API_TOKEN}"}
-    )
-    return response.json()
+```javascript
+// routes/products.js
+const express = require('express');
+const router = express.Router();
+
+// Version 1: Simple product response
+router.get('/v1/products', (req, res) => {
+  const products = db.products.map(p => ({
+    id: p.id,
+    name: p.name,
+    price: p.price
+  }));
+  res.json(products);
+});
+
+// Version 2: Enhanced with images and inventory
+router.get('/v2/products', (req, res) => {
+  const products = db.products.map(p => ({
+    id: p.id,
+    name: p.name,
+    price: p.price,
+    images: p.images,
+    inStock: p.inventory > 0
+  }));
+  res.json(products);
+});
+
+module.exports = router;
 ```
 
-The `pdf` skill then renders this data into a formatted report.
+The advantage here is clarity—developers can see the version at a glance. However, this approach leads to code duplication if your business logic shares most of the implementation.
 
-### When to Use URL Path Versioning
+## Header-Based Versioning
 
-- Public APIs with many consumers
-- When you need clear, visible version tracking in logs
-- When different versions require significantly different response handling
+Another approach uses HTTP headers to specify the version:
 
-## Strategy 2: Header-Based Versioning
+```
+GET /api/products
+Accept-Version: v1
+```
 
-Header versioning sends the version information in an HTTP header rather than the URL. This keeps URLs cleaner and allows the same endpoint to serve multiple versions based on the header value.
+This keeps your URLs cleaner. Your routes stay simpler, but you need to parse headers in each handler. Here's a practical implementation:
 
-Common header approaches:
-- `Accept-Version: v1`
-- `API-Version: 2024-01-01`
-- `X-API-Version: 2`
+```javascript
+// middleware/version.js
+const versionHandler = (req, res, next) => {
+  const version = req.headers['accept-version'] || 'v1';
+  req.apiVersion = version;
+  next();
+};
 
-### Implementation Example
-
-```yaml
----
-name: crm-connector
-description: Connects to CRM API for customer data retrieval
-version: 1.0.0
-tools:
-  - Read
-  - Write
-  - Bash
----
-
-# CRM Connector Skill
-
-This skill integrates with your CRM system using header-based versioning.
-
-## Configuration
-
-```python
-import requests
-
-CRM_API_URL = "https://api.crm.example.com/customers"
-
-def get_customer(customer_id: str, api_version: str = "v2") -> dict:
-    headers = {
-        "Authorization": f"Bearer {CRM_TOKEN}",
-        "Accept-Version": api_version,
-        "Content-Type": "application/json"
+// routes/products.js
+router.get('/products', versionHandler, (req, res) => {
+  const products = db.products.map(p => {
+    const base = { id: p.id, name: p.name, price: p.price };
+    
+    if (req.apiVersion === 'v2') {
+      return { ...base, images: p.images, inStock: p.inventory > 0 };
     }
-    
-    response = requests.get(
-        f"{CRM_API_URL}/{customer_id}",
-        headers=headers
-    )
-    
-    return response.json()
+    return base;
+  });
+  
+  res.json(products);
+});
 ```
 
-The skill can switch versions dynamically:
+This approach works well when you want to keep URLs stable. It's particularly useful for public APIs where you want to avoid cluttering URLs with version numbers.
 
-```python
-# Use v1 for legacy integrations
-legacy_data = get_customer("cust_123", api_version="v1")
+## Query String Versioning
 
-# Use v2 for new features
-current_data = get_customer("cust_123", api_version="v2")
-```
-
-### When to Use Header-Based Versioning
-
-- When you want cleaner URLs
-- When version changes should not alter endpoint structure
-- When supporting multiple versions simultaneously for different use cases
-
-## Strategy 3: Query Parameter Versioning
-
-Query parameter versioning specifies the version as a URL parameter. This approach offers flexibility but can lead to caching issues if not handled carefully.
+For less formal versioning or when you want optional versioning:
 
 ```
-https://api.example.com/users?version=1
-https://api.example.com/users?version=2
+GET /api/products?version=2
 ```
 
-### Implementation Example
+This is the simplest to implement but can cause issues if version becomes a reserved parameter in your business logic:
 
-```yaml
----
-name: inventory-tracker
-description: Tracks inventory across multiple suppliers
-version: 1.0.0
-tools:
-  - Read
-  - Write
-  - Bash
----
-
-# Inventory Tracker Skill
-
-This skill uses query parameter versioning for supplier API calls.
-
-## Implementation
-
-```python
-SUPPLIERS_API = "https://api.suppliers.example.com/products"
-
-def fetch_inventory(product_id: str, version: str = "v1") -> dict:
-    params = {
-        "product_id": product_id,
-        "version": version,
-        "include_warehouse": "true"
-    }
-    
-    headers = {
-        "Authorization": f"Bearer {SUPPLIER_TOKEN}"
-    }
-    
-    response = requests.get(
-        SUPPLIERS_API,
-        params=params,
-        headers=headers
-    )
-    
-    return response.json()
+```javascript
+router.get('/products', (req, res) => {
+  const version = parseInt(req.query.version) || 1;
+  
+  if (version >= 2) {
+    return res.json(enhancedProducts);
+  }
+  return res.json(legacyProducts);
+});
 ```
 
-You can then compose this with other skills:
+## Content Negotiation Versioning
 
-```python
-# Fetch inventory data
-inventory = fetch_inventory("prod_456", version="v2")
+The most sophisticated approach uses MIME types:
 
-# Pass to PDF skill for report generation
-generate_inventory_report(inventory)
+```
+GET /api/products
+Accept: application/vnd.yourapi.v2+json
 ```
 
-### When to Use Query Parameter Versioning
+This follows REST conventions strictly but requires clients to understand MIME types. Implementation looks like this:
 
-- For internal APIs with limited consumers
-- When you need quick version switching without code changes
-- When debugging and testing different versions
-
-## Choosing the Right Strategy
-
-Each strategy has trade-offs:
-
-| Strategy | Pros | Cons |
-|----------|------|------|
-| URL Path | Explicit, easy to test, cache-friendly | URL pollution, requires new endpoints |
-| Header | Clean URLs, flexible | Less visible, requires header management |
-| Query Parameter | Easy to change, no URL restructuring | Caching issues, can become messy |
-
-For Claude Code skills specifically, URL path versioning tends to work best because it makes version selection explicit in logs and can be easily parameterized using environment variables or skill configuration.
-
-## Best Practices for Version Management
-
-1. **Default to the oldest stable version** your skill supports. This prevents unexpected breaks when APIs push new versions.
-
-2. **Log version usage** in your skill output so you know which API version was called:
-
-```python
-def log_api_call(endpoint: str, version: str, status: int):
-    print(f"[API] {endpoint} (version={version}) -> {status}")
+```javascript
+const versionMiddleware = (req, res, next) => {
+  const acceptHeader = req.headers.accept;
+  const versionMatch = acceptHeader?.match(/vnd\.yourapi\.v(\d+)/);
+  
+  req.apiVersion = versionMatch ? parseInt(versionMatch[1]) : 1;
+  next();
+};
 ```
 
-3. **Handle version-specific responses** with explicit parsing:
+## Choosing Your Strategy
 
-```python
-def parse_response(response: dict, version: str):
-    if version.startswith("v1"):
-        return {"name": response["full_name"], "id": response["user_id"]}
-    else:
-        return {"name": response["display_name"], "id": response["id"]}
-```
+Each approach has trade-offs. URL path versioning is the most visible and easiest to debug. Header-based versioning keeps URLs cleaner but requires additional documentation. Query string versioning is informal but simple. Content negotiation is the most RESTful but adds complexity.
 
-4. **Use skill configuration** to store version preferences so they're easy to update:
+For most projects built with Claude Code, URL path versioning strikes the best balance between clarity and maintainability. You can start simple and evolve as needed.
 
-```yaml
----
-name: my-api-skill
-config:
-  api_version: "v2"
-  api_base_url: "https://api.example.com"
----
-```
+## Working with Claude Code Skills
+
+When generating API code with Claude Code, you can leverage several skills to improve your workflow:
+
+- The **tdd** skill helps you write tests first, ensuring your versioning logic works correctly across different scenarios
+- The **pdf** skill lets you generate API documentation as PDF files for external stakeholders
+- The **supermemory** skill helps you remember API design decisions and maintain consistency across versions
+- The **frontend-design** skill can generate frontend code that handles multiple API versions gracefully
+
+Using these skills together creates a cohesive development experience where your backend versioning strategy integrates smoothly with documentation and client code generation.
+
+## Best Practices
+
+1. **Document every version**: Each version needs clear documentation of what changed and when to migrate
+2. **Support at least two versions**: Always maintain the current stable version and the previous version during transitions
+3. **Set deprecation timelines**: Tell clients when older versions will be removed—typically 6-12 months
+4. **Version your error responses**: Error payloads should also respect versioning to help clients handle failures consistently
+5. **Use semantic versioning**: V1, V2, V3 is fine, but consider semantic versioning for larger ecosystems
 
 ## Conclusion
 
-API versioning is essential for building reliable Claude Code skills that depend on external services. URL path versioning provides the best visibility and testability, while header-based and query parameter approaches offer flexibility for specific use cases. By implementing a clear versioning strategy and logging version usage, you create skills that are maintainable and resilient to API changes.
-
-For skills that generate reports, consider pairing your versioning strategy with the `pdf` skill for output, or use `tdd` to validate your API integrations with automated tests. Proper versioning ensures your integrations continue working as APIs evolve.
+API versioning doesn't have to be complicated. By choosing a clear strategy early and implementing it consistently, you can evolve your API without breaking client integrations. Whether you prefer the explicitness of URL paths or the cleanliness of headers, the key is consistency and clear communication with your API consumers.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
