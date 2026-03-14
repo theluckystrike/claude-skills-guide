@@ -149,4 +149,11 @@ Combining Claude Code with SonarQube creates a comprehensive code quality workfl
 
 The key is establishing the workflow early in project setup, running analysis consistently, and treating quality gates as non-negotiable checkpoints. Over weeks and months, you'll see measurable improvements in code quality metrics.
 
+## Related Reading
+
+- [Claude Code Static Analysis Automation Guide](/claude-skills-guide/claude-code-static-analysis-automation-guide/) — SonarQube is a static analysis platform
+- [Claude Code Dead Code Detection Workflow](/claude-skills-guide/claude-code-dead-code-detection-workflow/) — SonarQube detects dead code among other issues
+- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — SonarQube quantifies technical debt
+- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Integrate SonarQube into CI/CD pipelines
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

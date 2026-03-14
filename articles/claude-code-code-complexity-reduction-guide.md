@@ -157,4 +157,11 @@ Reducing code complexity is not about making everything simple—it's about maki
 
 Start small: pick one complex function this week and refactor it using these patterns. The compounding benefits will become obvious quickly.
 
+## Related Reading
+
+- [Claude Code Cyclomatic Complexity Reduction](/claude-skills-guide/claude-code-cyclomatic-complexity-reduction/) — Cyclomatic complexity is a key complexity metric
+- [Claude Code Coupling and Cohesion Improvement](/claude-skills-guide/claude-code-coupling-and-cohesion-improvement/) — Coupling and cohesion metrics indicate complexity
+- [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — DRY/SOLID principles reduce complexity
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced code quality strategies
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

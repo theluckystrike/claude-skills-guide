@@ -174,4 +174,11 @@ Claude Code becomes genuinely powerful when properly configured. Project-specifi
 
 The investment in proper configuration pays dividends through faster development cycles, consistent code quality, and reduced context-switching between documentation and implementation.
 
+## Related Reading
+
+- [Best Way to Set Up Claude Code for a New Project](/claude-skills-guide/best-way-to-set-up-claude-code-for-new-project/) — Setting up Claude Code as part of local dev
+- [Claude Code Environment Setup Automation](/claude-skills-guide/claude-code-environment-setup-automation/) — Automate your local development environment
+- [Claude Code Dotenv Configuration Workflow](/claude-skills-guide/claude-code-dotenv-configuration-workflow/) — .env files are essential for local dev
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — Start here for first-time setup
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

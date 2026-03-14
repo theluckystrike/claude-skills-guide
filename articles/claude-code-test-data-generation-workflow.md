@@ -7,7 +7,6 @@ author: theluckystrike
 permalink: /claude-code-test-data-generation-workflow/
 ---
 
-{% raw %}
 
 Generating realistic test data is one of the most time-consuming aspects of software development. Whether you're building a new feature, running automated tests, or populating a development database, creating meaningful test datasets requires significant effort. Claude Code offers a powerful workflow for test data generation that integrates seamlessly with your existing development pipeline.
 
@@ -152,6 +151,12 @@ The Claude Code test data generation workflow transforms what was once a manual,
 
 Whether you're working on a small project or enterprise application, integrating automated test data generation into your workflow pays dividends in developer productivity and code quality. Start small—generate your first dataset today and expand from there as your testing needs grow.
 
+## Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Test data generation supports TDD workflows
+- [Claude Code Mutation Testing Workflow Guide](/claude-skills-guide/claude-code-mutation-testing-workflow-guide/) — Good test data improves mutation testing quality
+- [Best Way to Combine Claude Code with Unit Testing](/claude-skills-guide/best-way-to-combine-claude-code-with-unit-testing/) — Test data is fundamental to unit testing
+- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More testing workflow guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
-{% endraw %}

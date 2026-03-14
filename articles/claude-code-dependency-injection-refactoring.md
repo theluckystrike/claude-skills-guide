@@ -9,7 +9,6 @@ author: theluckystrike
 permalink: /claude-code-dependency-injection-refactoring/
 ---
 
-{% raw %}
 # Claude Code Dependency Injection Refactoring
 
 Dependency injection isn't just for traditional software development—it transforms how you build and maintain Claude skills. When your skills grow beyond simple prompts into complex workflows, applying dependency injection principles makes them testable, reusable, and easier to evolve.
@@ -150,5 +149,11 @@ Skills like supermemory benefit from clear separation between memory operations 
 
 Start with one skill pair that would benefit from separation, apply the patterns shown here, and expand from there. Your skill suite will become more maintainable with each refactoring iteration.
 
+## Related Reading
+
+- [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — Dependency injection implements the Dependency Inversion principle
+- [Claude Code Coupling and Cohesion Improvement](/claude-skills-guide/claude-code-coupling-and-cohesion-improvement/) — DI reduces coupling between components
+- [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/how-to-make-claude-code-refactor-without-breaking-tests/) — DI refactoring needs test coverage
+- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — Tightly-coupled code is a common tech debt item
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

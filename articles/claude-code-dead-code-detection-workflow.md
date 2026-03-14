@@ -112,4 +112,11 @@ Track your dead code detection efforts with concrete metrics. Measure the number
 
 Over time, you'll notice patterns in what types of code become dead most frequently. This insight helps prevent future accumulation through better coding practices, clearer module boundaries, and more intentional feature deprecation processes.
 
+## Related Reading
+
+- [Claude Code Static Analysis Automation Guide](/claude-skills-guide/claude-code-static-analysis-automation-guide/) — Static analysis detects dead code automatically
+- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — Dead code is a technical debt accumulator
+- [Claude Code Cyclomatic Complexity Reduction](/claude-skills-guide/claude-code-cyclomatic-complexity-reduction/) — Removing dead code reduces complexity
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Code quality and cleanup strategies
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

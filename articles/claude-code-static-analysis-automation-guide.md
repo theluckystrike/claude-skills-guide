@@ -138,4 +138,11 @@ For teams adopting vibe-coding practices, static analysis becomes even more crit
 
 Start small: pick one language in your project, add basic linting, and run it automatically. Measure the results, adjust thresholds, then expand to additional languages and checks. Within a few iterations, you'll have a robust analysis pipeline that improves code quality without adding manual burden.
 
+## Related Reading
+
+- [Claude Code SonarQube Code Quality Workflow](/claude-skills-guide/claude-code-sonarqube-code-quality-workflow/) — SonarQube is a leading static analysis platform
+- [Claude Code Dead Code Detection Workflow](/claude-skills-guide/claude-code-dead-code-detection-workflow/) — Static analysis is the primary dead code detection method
+- [Claude Code Cyclomatic Complexity Reduction](/claude-skills-guide/claude-code-cyclomatic-complexity-reduction/) — Static analysis tools measure cyclomatic complexity
+- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced code quality automation strategies
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

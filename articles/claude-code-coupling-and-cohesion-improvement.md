@@ -177,4 +177,11 @@ Start by auditing your existing skill set. Identify tightly coupled pairs and in
 
 The goal is a skill ecosystem where individual skills remain maintainable, interchangeable, and testable—mirroring the best practices you'd apply to any software project.
 
+## Related Reading
+
+- [Claude Code Code Complexity Reduction Guide](/claude-skills-guide/claude-code-code-complexity-reduction-guide/) — Complexity and coupling/cohesion are related metrics
+- [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — SOLID principles directly address coupling
+- [Claude Code Cyclomatic Complexity Reduction](/claude-skills-guide/claude-code-cyclomatic-complexity-reduction/) — Cyclomatic complexity reduction often improves cohesion
+- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — High coupling is a technical debt indicator
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

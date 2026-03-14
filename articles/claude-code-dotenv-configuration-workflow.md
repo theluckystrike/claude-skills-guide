@@ -7,7 +7,6 @@ author: theluckystrike
 permalink: /claude-code-dotenv-configuration-workflow/
 ---
 
-{% raw %}
 Managing environment variables effectively is a fundamental skill for developers working with Claude Code. Whether you're building a web application, automating documentation with the pdf skill, or running tests through tdd workflows, proper dotenv configuration ensures your sensitive data stays secure while maintaining flexibility across environments.
 
 ## Why dotenv Matters in Claude Code Projects
@@ -186,5 +185,11 @@ Implementing a solid dotenv configuration workflow protects your credentials whi
 
 The investment in setting up this workflow pays dividends as projects scale. Teams can confidently share configuration requirements through `.env.example`, developers can work locally without affecting production systems, and automated pipelines can inject environment-specific values at deployment time.
 
+## Related Reading
+
+- [Claude Code Environment Setup Automation](/claude-skills-guide/claude-code-environment-setup-automation/) — .env files are part of environment setup
+- [Claude Code Not Detecting My Virtual Environment Python Fix](/claude-skills-guide/claude-code-not-detecting-my-virtual-environment-python-fix/) — Environment variables and venv often interact
+- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — Document your env configuration in CLAUDE.md
+- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Configuration and environment workflow guides
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}

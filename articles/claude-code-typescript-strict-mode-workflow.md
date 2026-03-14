@@ -181,4 +181,11 @@ Adopting TypeScript strict mode is a journey, not a destination. Start new proje
 
 Combine strict mode with Claude Code's AI capabilities for a powerful development experience. Claude understands type constraints and can suggest fixes, generate properly typed code, and help you navigate complex type systems. The combination makes TypeScript's type safety accessible without sacrificing development speed.
 
+## Related Reading
+
+- [Best Way to Use Claude Code with TypeScript Projects](/claude-skills-guide/best-way-to-use-claude-code-with-typescript-projects/) — TypeScript project setup guide
+- [Claude Code Static Analysis Automation Guide](/claude-skills-guide/claude-code-static-analysis-automation-guide/) — TypeScript strict mode is a form of static analysis
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Strict TypeScript + TDD for maximum quality
+- [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — Strict mode enforces solid design principles
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
