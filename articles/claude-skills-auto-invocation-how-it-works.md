@@ -91,7 +91,7 @@ Understanding which triggers activate which skills helps you work more effective
 
 **Integration**: webapp-testing—triggered by browser automation or testing requests
 
-## Best Practices for Leveraging Auto Invocation
+## Best Practices for Using Auto Invocation
 
 To maximize the benefit of auto invocation, use natural language that clearly describes your goal. Specific, action-oriented requests produce better skill matching than vague descriptions. When working on complex projects spanning multiple domains, consider explicitly invoking skills to maintain context clarity.
 

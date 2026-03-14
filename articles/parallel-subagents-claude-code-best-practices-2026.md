@@ -98,7 +98,7 @@ Each subagent performs best with narrow, well-defined objectives. Vague instruct
 "Identify all uses of eval() and suggest safe alternatives"
 ```
 
-### 3. Leverage Specialized Skills
+### 3. Use Specialized Skills
 
 Combine subagents with domain-specific skills for enhanced results. The tdd skill helps subagents follow test-driven development principles. The frontend-design skill assists with UI implementation tasks. The supermemory skill can track context across subagent sessions.
 

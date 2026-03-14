@@ -32,19 +32,9 @@ Before auditing individual skills, establish baseline assumptions about skill be
 
 Review the skill's defined permissions before installation. Skills should declare minimal required permissions. If a skill requests filesystem access beyond its documented purpose, that is a red flag.
 
-```yaml
-# Example skill.yaml with explicit permission declaration
-name: secure-doc-processor
-permissions:
-  allowed_tools:
-    - read_file
-    - write_file
-  allowed_directories:
-    - /project/docs
-  network_access: false
-```
+Skills are plain Markdown files (`name:` and `description:` only in front matter) — they do not have `permissions:`, `allowed_tools:`, or `network_access:` fields. Access control happens at the Claude Code level, not within individual skill files.
 
-A skill like the `pdf` skill for document processing should only need file read/write access to specific directories, not unrestricted filesystem or shell execution permissions.
+A skill like the `/pdf` skill for document processing should only need file read/write access to specific directories, not unrestricted filesystem or shell execution permissions. Review skill instructions for any text that tries to override safety behaviors.
 
 ### 3. Tool Invocation Patterns
 
@@ -109,18 +99,7 @@ Suppose your team built a custom skill for CI/CD pipeline management. Here is ho
 
 **Step 2**: Check the skill.yaml restricts `bash` tool to specific pipeline commands, not arbitrary shell access.
 
-```yaml
-permissions:
-  allowed_tools:
-    - read_file
-    - write_file
-    - bash
-  bash_restrictions:
-    allowed_commands:
-      - npm
-      - docker
-      - git
-```
+Note: Skills do not have `permissions:` blocks in their YAML front matter — this is not a valid skill field. When auditing a community skill file, verify its Markdown body does not contain instructions that attempt to override Claude's safety behaviors or escalate privileges.
 
 **Step 3**: After installation, run the skill with a test project and verify it only invokes the approved commands.
 

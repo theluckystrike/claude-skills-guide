@@ -66,6 +66,6 @@ The skills that succeed in this environment share common characteristics: they h
 - [Claude Code Skills Roadmap 2026: What Is Coming](/claude-skills-guide/articles/claude-code-skills-roadmap-2026-what-is-coming/) — The concrete near-term roadmap that maps to the future trends described in this article.
 - [AI Agent Skills Standardization Efforts 2026](/claude-skills-guide/articles/ai-agent-skills-standardization-efforts-2026/) — How cross-platform standardization is enabling the future of composable AI agent skills.
 - [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/articles/building-production-ai-agents-with-claude-skills-2026/) — Architecture patterns for building the kind of autonomous agents this article envisions.
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The skills that define the current state of the art and point toward future directions.
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — The skills that define the current advanced and point toward future directions.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

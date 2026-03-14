@@ -132,7 +132,7 @@ async with pool.acquire() as conn:
 
 Claude Code assists with these refactoring tasks by identifying MongoDB-specific patterns in your codebase and suggesting equivalent PostgreSQL implementations. Focus on replacing aggregation pipelines with SQL queries, document lookups with JOIN operations, and `$set` updates with standard UPDATE statements.
 
-## Leveraging Claude Skills for Testing
+## Using Claude Skills for Testing
 
 Use the **pdf** skill to generate migration reports documenting the schema mapping decisions, data transformation rules, and any manual cleanup steps required. Create comprehensive documentation that future developers can reference.
 

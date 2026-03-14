@@ -33,17 +33,7 @@ This outputs all available tools, making it easier to spot duplicates.
 
 When the frontend-design skill defines a tool called `generate_html` and your MCP server exposes the same tool, Claude Code cannot load both simultaneously. The resolution requires renaming one of the conflicting tools.
 
-For skills, edit the skill's metadata file and specify an alternative tool name:
-
-```yaml
----
-name: frontend-design
-tools:
-  - name: design_generate_html
-    description: Generate HTML markup from design specifications
-    prompt: |
-      You generate semantic HTML...
-```
+Skills are plain Markdown files and don't have tool configuration fields. To resolve naming conflicts between a skill and an MCP server, the conflict is resolved at the Claude Code level by prefixing MCP tool calls — rename the conflicting MCP server tool or contact the MCP server maintainer to adjust its tool namespace.
 
 Alternatively, you can configure the MCP server to use a different tool prefix. Most MCP server configurations accept a `toolPrefix` option:
 
@@ -134,14 +124,7 @@ pip install pypdf openpyxl reportlab
 
 ## Best Practices for Coexistence
 
-Organize your setup to minimize conflicts from the start. Use naming conventions that differentiate skill tools from MCP tools. Prefix all skill tools with `skill_` and all MCP tools with `mcp_`:
-
-```yaml
-# In your skill definition
-tools:
-  - name: skill_create_pdf
-  - name: skill_analyze_tdd
-```
+Organize your setup to minimize conflicts from the start. Skills are `.md` files in `~/.claude/skills/` and do not have `tools:` configuration — they don't expose tool definitions at all. Conflicts arise only when an MCP server has a tool with the same name as a built-in Claude Code tool.
 
 For MCP servers, configure prefixes during initialization:
 

@@ -161,7 +161,7 @@ Implementing effective localization automation requires establishing patterns fr
 
 1. **Centralize translation keys** - Use a single source of truth for all strings
 2. **Version control locales** - Treat translation files like code with proper reviews
-3. **Use translation memory** - Leverage the supermemory skill to maintain consistency
+3. **Use translation memory** - Use the supermemory skill to maintain consistency
 4. **Automate validation** - Run i18n checks in every pull request
 5. **Process iteratively** - Start with simple file processing before adding complex transforms
 

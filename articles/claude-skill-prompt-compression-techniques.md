@@ -85,7 +85,7 @@ Extract req from user input. Generate ui spec. Use ctx to resolve ambiguities.
 
 For the [supermemory skill](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/), which processes large amounts of context, abbreviations can reduce a 500-word body to under 300 tokens without losing functionality.
 
-## Technique 4: Leverage Conditional Blocks
+## Technique 4: Use Conditional Blocks
 
 If your skill has multiple modes or conditional behaviors, compress them into single-line conditionals rather than separate paragraphs.
 
