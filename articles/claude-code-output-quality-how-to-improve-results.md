@@ -124,7 +124,7 @@ claude "Create the database schema and migration files based on the design above
 claude "Write the service layer functions for creating, updating, and deleting tasks. Include validation."
 ```
 
-This phased approach gives Claude clear milestones and allows you to course-correct at each step.
+This phased approach gives Claude clear milestones and allows you to course-correct at each step. For token-efficient multi-step tasks, see the guide on [reducing API costs while maintaining output quality](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/).
 
 ## Working with Codebase Context
 
@@ -169,7 +169,7 @@ Use only the following Node.js modules: fs, path, crypto. Do not use external pa
 
 ## Measuring and Validating Output Quality
 
-Develop systematic approaches to verify Claude's output:
+Develop systematic approaches to verify Claude's output. You can also use [benchmarking techniques to compare output quality across different prompting strategies](/claude-skills-guide/benchmarking-claude-code-skills-performance-guide/):
 
 - **Compile and test**: Always run generated code to verify correctness
 - **Check against requirements**: Compare output against your explicit specifications

@@ -50,7 +50,7 @@ Here's a basic flake for a Python project:
 }
 ```
 
-This single file replaces environment-specific setup scripts, Dockerfiles, and "install these packages" README sections.
+This single file replaces environment-specific setup scripts, Dockerfiles, and "install these packages" README sections. Unlike [dev container setups](/claude-skills-guide/claude-code-dev-containers-devcontainer-json-setup-guide/), Nix runs directly on the host without a container runtime.
 
 ## Combining Claude Code with Nix Flakes
 
@@ -174,7 +174,7 @@ The **docx** skill can help generate documentation about these configurations. T
 
 ## When to Choose Nix Flakes Over Docker
 
-Docker containers excel at full-system isolation and deployment. Nix Flakes excel at development environment consistency without container overhead. For local development, Nix typically provides faster iteration—changes to your environment apply instantly without container rebuilds.
+Docker containers excel at full-system isolation and deployment. Nix Flakes excel at development environment consistency without container overhead. For local development, Nix typically provides faster iteration—changes to your environment apply instantly without container rebuilds. See the [full Docker vs Nix comparison for Claude Code projects](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) for a detailed breakdown.
 
 A practical approach uses both: Nix Flakes for development, Docker for production deployment. Your `flake.nix` can even specify a Docker image as an output:
 

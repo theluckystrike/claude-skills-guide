@@ -157,7 +157,7 @@ docker run --cap-add=SYS_ADMIN --security-opt seccomp=unconfined \
 
 ### 5. Skill Installation Directory Issues
 
-Installing skills in non-standard locations can lead to permission problems, especially on systems with multiple users or strict directory permissions.
+Installing skills in non-standard locations can lead to permission problems, especially on systems with multiple users or strict directory permissions. Understanding [what skills can and cannot access on disk](/claude-skills-guide/claude-skill-permissions-what-can-skills-access/) helps you configure installation paths correctly from the start.
 
 **Diagnosis:**
 Verify the skill installation directory exists and is accessible:

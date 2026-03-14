@@ -23,6 +23,8 @@ In a multi-agent Claude Code setup:
 - **Subagents**: Claude Code instances run in print mode (`claude -p "..."`) to handle specific tasks
 - **Shared state**: Files, directories, or JSON that agents use to communicate
 
+Each subagent runs in [its own isolated environment](/claude-skills-guide/claude-agent-sandbox-skill-isolated-environments/) with a fresh context window, which means inter-agent communication must be explicit.
+
 The orchestrator writes task specifications, subagents execute them and write results, and the orchestrator aggregates and reports.
 
 ## Spawning Subagents
@@ -173,7 +175,7 @@ for result_file in result_files:
 
 ## Parallel Execution
 
-The power of multi-agent workflows is parallelism. Running 10 subagents in background processes is much faster than sequential runs:
+The power of multi-agent workflows is parallelism. Running 10 subagents in background processes is much faster than sequential runs. Be aware that [response latency and throughput scale differently](/claude-skills-guide/claude-code-response-latency-optimization-with-skills/) in parallel vs sequential architectures:
 
 ```bash
 #!/bin/bash

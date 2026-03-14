@@ -115,7 +115,7 @@ add_header Content-Security-Policy "default-src 'self'" always;
 
 ### 6. A06:2021 – Vulnerable and Outdated Components
 
-Dependency scanning has become critical as supply chain attacks increase. Claude can:
+Dependency scanning has become critical as supply chain attacks increase. Pair this with [secret scanning to prevent credential leaks](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) in your repositories. Claude can:
 
 - Parse package.json, requirements.txt, or Cargo.toml
 - Cross-reference with known vulnerability databases
@@ -210,7 +210,7 @@ The most effective approach embeds security scanning into your existing developm
 claude scan-owasp --severity critical
 ```
 
-For teams using CI/CD, integrate scanning into GitHub Actions:
+For teams using CI/CD, [integrate scanning into GitHub Actions with approval workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/) so security findings require human sign-off before merging:
 
 ```yaml
 name: OWASP Security Scan
@@ -232,7 +232,7 @@ jobs:
 
 ## Conclusion
 
-Building a Claude Code OWASP Top 10 security scanning workflow transforms security from a periodic audit into continuous protection. The key lies in combining Claude's code analysis capabilities with specialized skills like **tdd** for security testing, **supermemory** for tracking findings, and **pdf** for compliance reporting.
+Building a Claude Code OWASP Top 10 security scanning workflow transforms security from a periodic audit into continuous protection. The key lies in combining Claude's code analysis capabilities with specialized skills like **tdd** for security testing, **supermemory** for tracking findings, and **pdf** for compliance reporting. Pair this workflow with the [security code review checklist automation](/claude-skills-guide/claude-code-security-code-review-checklist-automation/) to cover both OWASP categories and project-specific security standards.
 
 Start with the ten categories above, customize the scanning rules to your tech stack, and integrate checks into your development workflow. Security improves dramatically when scanning happens at every code change rather than waiting for dedicated audit phases.
 ---

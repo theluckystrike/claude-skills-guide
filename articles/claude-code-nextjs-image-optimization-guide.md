@@ -15,7 +15,7 @@ permalink: /claude-code-nextjs-image-optimization-guide/
 
 Image optimization in Next.js combines the framework's built-in Image component with modern formats like WebP and AVIF. [When you pair Next.js image handling with Claude Code's CLI capabilities](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), you can automate optimization workflows, validate image implementations, and maintain consistent performance across your application.
 
-[This guide covers practical approaches for developers using Claude Code to work with Next.js image optimization](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+This guide covers practical approaches for [developers using Claude Code for frontend work](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) with Next.js image optimization.
 
 ## Next.js Image Component Basics
 
@@ -146,7 +146,7 @@ This configuration allows Next.js to fetch and optimize images from these domain
 
 ## Testing Image Implementations
 
-The `tdd` skill helps you write tests for image components. Describe your testing requirements:
+The `tdd` skill helps you [write tests for image components through a test-driven pipeline](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/). Describe your testing requirements:
 
 ```
 Write tests for the ProductGallery component.
@@ -233,7 +233,7 @@ Output the results to a JSON file for use in components.
 
 ## Summary
 
-Next.js image optimization works best when you understand the component's key features: the `priority` prop for above-the-fold content, the `sizes` prop for responsive images, and proper remote domain configuration. Using Claude Code with skills like `frontend-design` and `tdd` accelerates development while maintaining quality through tested implementations.
+Next.js image optimization works best when you understand the component's key features: the `priority` prop for above-the-fold content, the `sizes` prop for responsive images, and proper remote domain configuration. After optimizing images, you can deploy your Next.js app with confidence using [Claude Code's Vercel deployment workflow](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/). Using Claude Code with skills like `frontend-design` and `tdd` accelerates development while maintaining quality through tested implementations.
 
 ## Related Reading
 

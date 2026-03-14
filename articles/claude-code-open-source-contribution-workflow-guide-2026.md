@@ -117,7 +117,7 @@ git rebase upstream/main
 git push origin fix/issue-description
 ```
 
-When creating the PR, provide a clear description explaining what you changed and why. Reference any related issues using keywords like "Closes #456" or "Fixes #789".
+When creating the PR, provide a clear description explaining what you changed and why. Reference any related issues using keywords like "Closes #456" or "Fixes #789". You can also use [Claude Code's automated code review skill](/claude-skills-guide/best-claude-skills-for-code-review-automation/) to self-review your changes before submitting.
 
 ## Claude Skills That Help With Contributions
 
@@ -128,7 +128,7 @@ Several skills enhance the open source contribution experience:
 - **frontend-design**: Useful when contributing to UI components in web projects
 - **pdf**: Helps review PDF-based documentation or specifications
 
-The skill-creator skill is worth mentioning if you eventually want to create your own skills for automating repetitive contribution tasks.
+The skill-creator skill is worth mentioning if you eventually want to [create and contribute your own skills to the community](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) for automating repetitive contribution tasks.
 
 ## Best Practices for Quality Contributions
 

@@ -21,7 +21,7 @@ SOC 2 compliance centers on five trust service criteria: security, availability,
 
 The security criterion is your primary concern. [MCP servers must implement authentication, authorization, encryption, and logging](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/) These controls prevent unauthorized access and provide evidence for audits.
 
-Your MCP server likely processes data that falls under confidentiality requirements. Customer data, business logic, and API credentials demand protection through encryption both in transit and at rest.
+Your MCP server likely processes data that falls under confidentiality requirements. Customer data, business logic, and API credentials demand protection through [proper secrets management](/claude-skills-guide/mcp-credential-management-and-secrets-handling/) both in transit and at rest.
 
 ## Implementing Authentication and Authorization
 
@@ -185,7 +185,7 @@ class SecureConfig:
 # Store key in secure vault (HashiCorp Vault, AWS Secrets Manager, etc.)
 ```
 
-Never hardcode secrets. Use environment variables or secrets management services. Your MCP server configuration should load credentials at runtime from secure storage.
+Never hardcode secrets. Use environment variables or secrets management services. Your MCP server configuration should load credentials at runtime from secure storage, following [least privilege configuration principles](/claude-skills-guide/claude-code-mcp-server-least-privilege-configuration/).
 
 ## Integrating with Claude Code Skills
 
@@ -195,7 +195,7 @@ For knowledge management, the supermemory skill can index your compliance docume
 
 ## Monitoring and Incident Response
 
-SOC 2 requires monitoring for security events and documented incident response procedures. Implement health checks that verify:
+SOC 2 requires monitoring for security events and documented [incident response procedures](/claude-skills-guide/claude-code-mcp-server-incident-response-guide/). Implement health checks that verify:
 
 - Authentication service availability
 - Audit log write success

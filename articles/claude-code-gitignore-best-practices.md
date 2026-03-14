@@ -13,7 +13,7 @@ permalink: /claude-code-gitignore-best-practices/
 
 # Claude Code Gitignore Best Practices
 
-When working with Claude Code and its skills ecosystem, proper `.gitignore` configuration prevents accidentally committing sensitive data, skill cache files, and project artifacts that should stay local. This guide covers essential gitignore patterns for Claude Code projects.
+When working with Claude Code and its skills ecosystem, proper `.gitignore` configuration prevents accidentally committing sensitive data, skill cache files, and project artifacts that should stay local. This guide covers essential gitignore patterns for Claude Code projects. For a broader introduction to project setup, see [Claude Code for beginners: getting started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/).
 
 ## Why Gitignore Matters for Claude Code
 
@@ -74,7 +74,7 @@ Thumbs.db
 
 ### For Projects Using the pdf Skill
 
-If you're processing documents with the `pdf` skill, exclude output directories:
+If you're processing documents with the `pdf` skill, exclude output directories. The [best Claude Code skills to install first in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) guide covers which skills generate the most filesystem output worth excluding:
 
 ```
 # PDF processing outputs
