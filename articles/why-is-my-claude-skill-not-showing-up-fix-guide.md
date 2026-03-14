@@ -68,13 +68,48 @@ claude --verbose
 chmod 644 ~/.claude/skills/your-skill.md
 ```
 
+## 8. Validate the YAML Front Matter
+
+Invalid YAML in the front matter prevents the skill from loading entirely. Common YAML mistakes that are hard to spot:
+
+```yaml
+# WRONG — unquoted colon in description
+description: Generates components: buttons, forms, modals
+
+# CORRECT — quote descriptions containing colons
+description: "Generates components: buttons, forms, modals"
+```
+
+Tabs in YAML indentation also cause silent failures. Use spaces only.
+
+## 9. Check for Non-UTF-8 Characters
+
+If you copied skill content from a PDF or a rich text editor, invisible non-UTF-8 characters (smart quotes, em-dashes, zero-width spaces) can silently break YAML parsing. Open the file in a plain text editor and verify there are no unusual characters in the front matter block.
+
+## When Nothing Works
+
+If all the above checks pass and the skill still won't appear, try creating a minimal skill from scratch to isolate the issue:
+
+```markdown
+---
+name: test-skill
+description: A minimal test skill
+---
+
+You are a test assistant. When invoked, reply: "test skill is working."
+```
+
+Save this as `~/.claude/skills/test-skill.md`, start a fresh Claude Code session, and type `/test-skill`. If this works, the issue is in your original skill file's content or formatting. If this doesn't work either, the issue is with the directory setup or Claude Code installation itself.
+
 ## Final Checklist
 
 1. Skill file exists in `~/.claude/skills/` (not a custom directory like `~/my-skills/`)
 2. File has `.md` extension with valid YAML front matter
 3. The `name` field matches what you type after `/`
 4. No duplicate skill names
-5. Fresh session started after adding the skill
+5. No YAML syntax errors (colons, tabs, invalid characters)
+6. Fresh session started after adding the skill
+7. Test with a minimal skill if all else fails
 
 ---
 

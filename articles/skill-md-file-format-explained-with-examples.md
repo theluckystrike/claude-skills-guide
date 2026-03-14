@@ -129,13 +129,41 @@ Then build the requested component following the established patterns.
 
 This is the correct way to inject project context into a skill: by instructing Claude to read files, not via special YAML configuration.
 
+## Optional Front Matter Fields
+
+Beyond the required `name` and `description`, skill files support additional metadata:
+
+**tools** (optional): Specify which Claude Code tools the skill should use. Without this field, Claude decides which tools to use based on the task.
+
+```yaml
+tools: [Read, Write, Bash, Glob]
+```
+
+**model** (optional): Override the default model for this skill if you want a faster or more capable model for specific tasks.
+
+**temperature** (optional): Control response randomness. Lower values (0.0–0.3) produce more consistent, predictable output; higher values (0.7–1.0) allow more creativity.
+
+## Writing Effective Skill Bodies
+
+The body of a skill file is Claude's system prompt. A few principles make skill bodies more effective:
+
+**Be specific about inputs.** Tell Claude exactly what to ask the user for if it's missing. Skills that silently guess at missing inputs produce inconsistent results.
+
+**Describe the output format.** Whether you want a markdown table, a numbered list, or a code block, state it explicitly. Claude follows format instructions reliably when they're in the system prompt.
+
+**Define scope boundaries.** What should the skill NOT do? A code-review skill that also rewrites your code is often not what you want. Add explicit "do not" constraints.
+
+**Reference files by convention.** If your skill depends on project-specific files (a design system, a style guide, an API spec), instruct Claude to read them at the start of every invocation rather than hardcoding their content.
+
 ## Common Mistakes
 
-**Missing description**: Skills without descriptions do not contribute to auto-invocation.
+**Missing description**: Skills without descriptions do not contribute to auto-invocation matching.
 
-**Generic trigger phrases**: `- phrase: help me with code` fires on almost everything.
+**Generic trigger phrases**: `- phrase: help me with code` fires on almost everything and causes the skill to activate at unintended moments.
 
-**Wrong directory**: Files must be in `.claude/skills/` or `~/.claude/skills/`.
+**Wrong directory**: Files must be in `.claude/` or `~/.claude/` (project-level or global). A subdirectory like `~/my-skills/` is not checked by Claude Code.
+
+**Tabs in YAML**: The front matter uses YAML, which requires spaces for indentation — never tabs. Tabs cause silent parsing failures.
 
 ---
 
