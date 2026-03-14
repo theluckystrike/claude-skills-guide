@@ -1,172 +1,197 @@
 ---
 layout: default
 title: "How to Make Claude Code Handle Async Errors Properly"
-description: "Learn to handle async errors in Claude Code skills with proper error handling patterns, try-catch blocks, and fallback strategies for reliable AI workflows."
+description: "Practical techniques for developers to get Claude Code to handle asynchronous errors effectively. Learn prompt patterns, skill usage, and workflow strategies."
 date: 2026-03-14
-author: "Claude Skills Guide"
-categories: [guides]
-tags: [claude-code, async-errors, error-handling, claude-skills]
+author: theluckystrike
 permalink: /how-to-make-claude-code-handle-async-errors-properly/
-reviewed: true
-score: 7
 ---
 
 # How to Make Claude Code Handle Async Errors Properly
 
-When building Claude skills that interact with external APIs, file systems, or long-running processes, async error handling becomes critical. Without proper error management, your skill can fail silently, produce confusing outputs, or leave users stuck without understanding what went wrong. This guide shows you practical patterns for handling async errors in Claude Code skills.
+When working with Claude Code on JavaScript or TypeScript projects, asynchronous error handling often gets overlooked. The AI assistant may generate code that looks correct but fails silently in production when promises reject or async operations throw. This guide shows you how to structure your interactions to get Claude Code to handle async errors properly from the start.
 
-## Understanding Async Error Flow in Skills
+## Why Async Error Handling Gets Missed
 
-Claude Code skills often trigger async operations through tool calls. Whether you're generating a PDF with the pdf skill, running tests with tdd, or querying a memory system using supermemory, each external interaction carries the risk of failure. Network timeouts, invalid responses, permission denied errors, and malformed data can all interrupt your workflow.
+Claude Code generates code quickly based on patterns it has seen in training data. The most common async error patterns it misses include:
 
-The key to solid async error handling lies in three principles: anticipate failures, provide meaningful feedback, and implement fallback strategies. When you design your skill with these principles in mind, you create reliable workflows that recover gracefully from unexpected conditions.
+- Unhandled promise rejections that crash Node.js processes
+- Missing `try-catch` blocks around async/await operations
+- Errors swallowed without logging or propagation
+- Race conditions where error states aren't properly managed
+- Missing cleanup in finally blocks
 
-## Basic Error Handling Pattern
+These issues stem from Claude Code optimizing for the happy path—the code that works when everything goes right. Without explicit guidance, it assumes operations succeed.
 
-The simplest approach uses explicit error checking after async operations. When your skill calls a tool, examine the result for error indicators before proceeding. Here's a practical pattern:
+## Start with the TDD Skill
 
-```python
-async def process_user_request(user_input):
-    try:
-        result = await call_external_service(user_input)
-        if "error" in result:
-            return handle_error(result["error"])
-        return process_success(result)
-    except TimeoutError:
-        return "The request timed out. Please try again."
-    except PermissionError:
-        return "Access denied. Check your credentials."
-    except Exception as e:
-        return f"An unexpected error occurred: {str(e)}"
+The tdd skill fundamentally changes how Claude Code approaches error handling. When you activate test-driven development practices, Claude writes tests for failure cases before implementing functionality.
+
+Activate the skill at the start of your session:
+
+```
+/tdd
 ```
 
-This pattern catches specific error types and provides user-friendly messages. For Claude skills, you can embed similar logic within your skill's response generation, allowing the model to reference error states and respond appropriately.
+This loads instructions that tell Claude to:
+- Write tests for error conditions first
+- Expect async operations to fail and handle those failures
+- Include negative test cases alongside positive ones
 
-## Implementing Retry Logic with Exponential Backoff
+The tdd skill pushes Claude toward defensive coding. Instead of assuming `await fetchData()` succeeds, it will generate code that handles network failures, timeouts, and invalid responses.
 
-Network failures often resolve themselves with a simple retry. Implementing exponential backoff prevents overwhelming failing services while giving them time to recover:
+## Specify Error Handling Requirements Explicitly
 
-```python
-import asyncio
-import random
+After loading skills, state your error handling expectations directly in your prompt. Be specific about what should happen when async operations fail:
 
-async def retry_with_backoff(func, max_retries=3, base_delay=1):
-    for attempt in range(max_retries):
-        try:
-            return await func()
-        except (ConnectionError, TimeoutError) as e:
-            if attempt == max_retries - 1:
-                raise e
-            delay = base_delay * (2 ** attempt) + random.uniform(0, 0.5)
-            await asyncio.sleep(delay)
-    return None
+```
+Write a function that fetches user data from the API. 
+Handle these error cases explicitly:
+- Network timeout (show fallback data after 5 seconds)
+- 4xx/5xx HTTP errors (log and return null)
+- JSON parse failure (log the raw response)
+- Complete with a finally block that closes any open connections
 ```
 
-You can integrate this retry logic into skills that call external APIs. For example, when using the frontend-design skill to generate UI components, network issues might cause the API call to fail. A retry mechanism ensures the skill recovers without requiring user intervention.
+This level of specificity works better than vague requests like "handle errors properly." Claude Code responds well to enumerated error cases.
 
-## Graceful Degradation with Fallback Strategies
+## Use the PDF Skill for Error Flow Documentation
 
-Sometimes an external service is completely unavailable. Rather than failing entirely, implement fallback strategies that provide partial functionality:
+When building complex async workflows, document your error handling strategy using the pdf skill. This skill helps you generate diagrams and documentation that clarify the error paths Claude Code should handle.
 
-```python
-async def get_user_data(user_id):
-    try:
-        # Primary: Try external API
-        return await fetch_from_api(f"/users/{user_id}")
-    except APIError:
-        pass
-    
-    try:
-        # Fallback 1: Check local cache
-        cached = await read_cache(f"user_{user_id}")
-        if cached:
-            return cached
-    except CacheError:
-        pass
-    
-    # Fallback 2: Return minimal default structure
-    return {"id": user_id, "name": "Unknown", "status": "offline"}
+```
+Use the pdf skill to create an error flow diagram showing:
+- API call failure → retry logic
+- Retry exhaustion → fallback to cached data
+- Cache miss → return default values
+- All paths logged appropriately
 ```
 
-This pattern appears frequently in production skills. When building a skill that uses supermemory for context management, if the memory service becomes unreachable, the skill can fall back to in-memory storage or basic conversation history.
+Visual documentation serves as a reference for Claude Code throughout your session. When you reference the diagram in subsequent prompts, Claude maintains consistency in its error handling approach.
 
-## Error Handling in Claude Skill Definitions
+## Pattern: Explicit Error Handling Template
 
-Within the skill markdown itself, you can document expected error conditions and provide guidance for the model. Include error handling instructions in your skill's description:
+Provide Claude Code with a template for how you want async errors handled. This removes ambiguity:
 
-```markdown
----
-name: generate-report
-description: "Generate PDF reports from data. Handles network errors gracefully with 3 retries."
-tools: [pdf, Read, Write]
----
-
-This skill generates PDF reports. If the pdf tool fails, 
-inform the user and offer to save the data as CSV instead.
 ```
+Use this error handling pattern for all async functions:
 
-This explicit guidance helps Claude understand how to respond when errors occur. The model can reference these documented behaviors and choose appropriate recovery actions.
-
-## Logging Errors for Debugging
-
-When async errors occur, capturing details helps with debugging later. Implement structured logging that captures the error context:
-
-```python
-import json
-from datetime import datetime
-
-async def log_error(error, context):
-    log_entry = {
-        "timestamp": datetime.utcnow().isoformat(),
-        "error_type": type(error).__name__,
-        "message": str(error),
-        "context": context
+async function fetchData(url: string): Promise<Data> {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new ApiError(response.status, response.statusText);
     }
-    await write_file("error_logs.json", json.dumps(log_entry, indent=2))
+    return response.json();
+  } catch (error) {
+    if (error instanceof ApiError) {
+      logger.error(`API error: ${error.status}`, error);
+    } else {
+      logger.error('Unexpected error', error);
+    }
+    throw error; // Re-throw to let caller handle
+  } finally {
+    // Cleanup here
+  }
+}
 ```
 
-For skills using the tdd skill for test-driven development, proper error logging helps identify flaky tests or API mocking issues. Review these logs periodically to identify patterns that indicate systemic problems.
+Claude Code will apply this pattern consistently across your codebase when you reference "the error handling pattern we established."
 
-## Combining Multiple Error Handling Techniques
+## Handle Promise.all Errors Properly
 
-Real-world applications often combine several error handling approaches. Here's a comprehensive example that ties together retry logic, fallback strategies, and user feedback:
+A common pitfall is using `Promise.all` without handling individual rejections. Claude Code often generates:
 
-```python
-async def robust_file_operation(file_path, operation):
-    # Define the operation
-    async def do_operation():
-        if operation == "read":
-            return await read_file(file_path)
-        elif operation == "write":
-            return await write_file(file_path, "data")
-        raise ValueError(f"Unknown operation: {operation}")
-    
-    # Try with retry
-    try:
-        result = await retry_with_backoff(do_operation, max_retries=3)
-    except Exception as e:
-        # Final fallback
-        return {"status": "error", "message": str(e), "recovered": False}
-    
-    return {"status": "success", "data": result, "recovered": False}
+```javascript
+const results = await Promise.all(tasks.map(task => task.execute()));
 ```
 
-This pattern ensures your skills continue functioning even when individual operations fail. Users appreciate workflows that handle errors transparently rather than crashing unexpectedly.
+This fails entirely if any single task rejects. Instead, teach Claude Code to use `Promise.allSettled`:
 
-## Best Practices for Async Error Handling
+```javascript
+const results = await Promise.allSettled(tasks.map(task => task.execute()));
 
-When implementing async error handling in your Claude skills, keep these guidelines in mind:
+const fulfilled = results
+  .filter((r): r is PromiseFulfilledResult<any> => r.status === 'fulfilled')
+  .map(r => r.value);
 
-Always catch specific exceptions rather than using bare except clauses. Specific error handling allows different recovery strategies for different failure modes. Provide meaningful error messages that help users understand what happened and what they can do about it. Implement retry logic with appropriate delays for transient failures like network timeouts. Design fallback strategies that maintain partial functionality when primary services are unavailable. Document expected error conditions within your skill definitions so Claude knows how to respond.
+const rejected = results
+  .filter((r): r is PromiseRejectedResult => r.status === 'rejected')
+  .map(r => r.reason);
 
-By following these patterns, you create Claude skills that handle the unpredictable nature of async operations gracefully. Your users experience fewer interruptions, and you spend less time debugging unexpected failures.
+if (rejected.length > 0) {
+  logger.warn(`${rejected.length} tasks failed`, rejected);
+}
 
+// Continue with fulfilled results
+```
 
-## Related Reading
+This pattern ensures partial failures don't crash your application.
 
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Keeps Making the Same Mistake: Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
+## Timeout and Cancellation Patterns
+
+Async operations need timeout handling. Show Claude Code how to implement timeouts properly:
+
+```javascript
+async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+  let timeoutId: NodeJS.Timeout;
+  
+  const timeout = new Promise<never>((_, reject) => {
+    timeoutId = setTimeout(() => {
+      reject(new Error(`Operation timed out after ${ms}ms`));
+    }, ms);
+  });
+  
+  try {
+    return await Promise.race([promise, timeout]);
+  } finally {
+    clearTimeout(timeoutId!);
+  }
+}
+```
+
+This prevents infinite hangs and ensures cleanup happens.
+
+## Frontend Design Considerations
+
+When building frontend applications with Claude Code, async error handling affects user experience significantly. The frontend-design skill includes patterns for:
+
+- Loading states that persist through async operations
+- Error boundaries that catch and display failures gracefully
+- Retry buttons for failed network requests
+- Optimistic updates that rollback on failure
+
+```
+Use the frontend-design skill to create error handling UI:
+- Show inline error messages for form submission failures
+- Display toast notifications for background sync errors
+- Provide clear recovery actions for each error type
+```
+
+## Testing Async Error Handling
+
+The tdd skill excels here, but be explicit about what you're testing:
+
+```
+Write tests for async error handling:
+1. Function throws when API returns 500
+2. Function returns fallback data on timeout
+3. Function logs all errors before throwing
+4. Function cleanup runs in finally block even on error
+```
+
+These specific test cases ensure Claude Code generates robust error handling code.
+
+## Summary
+
+Getting Claude Code to handle async errors properly requires three strategies:
+
+1. **Load the tdd skill** to enable test-driven development from the start
+2. **Be explicit** about error cases and expected handling behavior
+3. **Provide templates** that Claude Code can apply consistently
+
+Without guidance, Claude Code optimizes for simplicity and assumes success. By establishing error handling patterns early in your session and referencing them throughout, you get code that handles failures gracefully instead of crashing silently.
+
+The investment in teaching Claude Code proper async error handling pays dividends in production reliability. Your applications will handle network failures, timeouts, and unexpected errors without bringing down entire processes.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
