@@ -1,285 +1,229 @@
 ---
 layout: default
-title: "Claude Code API Security OWASP Guide (2026)"
-description: "Learn how to secure Claude Code API integrations against OWASP Top 10 vulnerabilities. Practical patterns for developers building AI-powered applications."
+title: "Claude Code API Security: OWASP Guidelines for AI Agent."
+description: "Learn how to secure your Claude Code integrations against OWASP Top 10 vulnerabilities. Practical patterns for building safe AI agent APIs."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-security-owasp-guide/
-reviewed: true
-score: 7
 categories: [guides]
-tags: [claude-code, claude-skills]
 ---
 
-Building secure API integrations requires understanding the most common vulnerability patterns. The OWASP API Security Top 10 provides a framework for identifying and mitigating risks in your Claude Code skills and applications. This guide covers practical implementations that protect your API integrations from the most prevalent security threats.
+# Claude Code API Security: OWASP Guidelines for AI Agent Development
 
-## Understanding OWASP API Security Risks
+Building secure APIs for Claude Code integrations requires understanding both traditional web security and the unique risks that AI agents introduce. The OWASP Top 10 remains the standard framework for identifying critical vulnerabilities, but AI agent workflows add new attack surfaces that deserve attention.
 
-The OWASP API Security Top 10 outlines critical vulnerabilities that affect API-driven applications. When building Claude Code skills that interact with external APIs, you must address these vulnerabilities proactively.
+This guide covers practical security patterns for developers building Claude Code integrations, whether you're using the CLI, creating custom skills, or building agentic workflows that interact with external services.
 
-### 1. Broken Object Level Authorization (BOLA)
+## Authentication and Authorization in Agentic Systems
 
-BOLA occurs when APIs fail to verify that a user can access specific resources. This vulnerability allows attackers to access unauthorized data by manipulating object identifiers.
+Traditional API authentication often assumes a single request-response cycle. Claude Code agents operate differently—they maintain context across multiple turns, potentially escalating privileges as they complete complex tasks.
+
+### Pattern: Scoped Token Execution
+
+Rather than granting broad API access, create tokens with minimal required scopes for each agent task:
 
 ```python
-# Vulnerable implementation
-def get_user_data(user_id):
-    return db.query(f"SELECT * FROM users WHERE id = {user_id}")
-
-# Secure implementation with authorization check
-def get_user_data(user_id, current_user):
-    if not current_user.can_access(user_id):
-        raise AuthorizationError("Access denied")
+# Create scoped tokens for specific agent operations
+def create_agent_token(task_scope: list[str], expires_in: int = 3600):
+    scopes = {
+        "read_users": ["GET /users", "GET /users/*"],
+        "write_orders": ["POST /orders", "PUT /orders/*"],
+        "admin": ["*"]  # Never grant to agents by default
+    }
     
-    return db.query(
-        "SELECT * FROM users WHERE id = ?",
-        [user_id]
+    requested = [s for s in task_scope if s in scopes]
+    token = generate_jwt(
+        scopes=requested,
+        expires=datetime.utcnow() + timedelta(seconds=expires_in),
+        max_uses=50  # Limit total requests per token
     )
+    return token
 ```
 
-The **tdd** skill helps you write test cases that verify authorization boundaries before deploying your skills to production.
+This pattern prevents a compromised agent from accessing resources outside its assigned scope. Combine this with the tdd skill when building authentication systems to ensure proper test coverage.
 
-### 2. Broken Authentication
+## Input Validation: The First Line of Defense
 
-Authentication mechanisms that allow attackers to compromise tokens, exploit implementation flaws, or assume other users' identities represent a significant threat. Implement strong authentication with proper token validation and expiration.
+LLM outputs can contain unexpected content that downstream systems must handle safely. Claude Code agents often construct queries, generate file paths, or build shell commands—each requiring rigorous validation.
 
-```javascript
-// Secure token validation in Claude Code skill
-async function authenticateRequest(token) {
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET, {
-      algorithms: ['HS256'],
-      issuer: 'your-api',
-      audience: 'claude-skills'
-    });
+### Validating Agent-Generated Content
+
+```python
+import re
+from urllib.parse import urlparse
+
+def validate_agent_output(output: str, context: str) -> bool:
+    """Validate outputs based on expected context."""
     
-    // Verify token hasn't been revoked
-    const isRevoked = await redis.get(`revoked:${token.id}`);
-    if (isRevoked) {
-      throw new Error('Token has been revoked');
-    }
+    if context == "file_path":
+        # Prevent path traversal
+        unsafe_patterns = ["../", "..\\", "/etc/", "C:\\Windows"]
+        return not any(p in output for p in unsafe_patterns)
     
-    return decoded;
-  } catch (error) {
-    throw new AuthenticationError('Invalid token');
-  }
-}
+    if context == "sql_query":
+        # Basic SQL injection prevention
+        dangerous = ["DROP", "DELETE FROM", ";--", "UNION SELECT"]
+        return not any(d in output.upper() for d in dangerous)
+    
+    if context == "url":
+        # Validate URL safety
+        parsed = urlparse(output)
+        return parsed.scheme in ("http", "https") and parsed.netloc
+    
+    return True
 ```
 
-### 3. Excessive Data Exposure
+The frontend-design skill demonstrates safe patterns when generating UI components—always validate that generated HTML doesn't contain injection payloads.
 
-APIs often return more data than necessary, exposing sensitive information to clients. Always filter response data and return only what the client explicitly needs.
+## Rate Limiting for Stateful Agents
+
+Agents can consume resources faster than traditional users because they make multiple API calls in seconds. Implement rate limiting that accounts for agent behavior:
 
 ```python
-from pydantic import BaseModel
+from collections import defaultdict
+import time
 
-class UserPublic(BaseModel):
-    id: int
-    username: str
-    # Explicitly exclude: email, password_hash, ip_address
-
-def get_user_public(user_id):
-    user = db.users.find_by_id(user_id)
-    return UserPublic.model_validate(user)
+class AgentRateLimiter:
+    def __init__(self, requests_per_minute: int = 60):
+        self.rpm = requests_per_minute
+        self.window = 60
+        self.requests = defaultdict(list)
+    
+    def check(self, agent_id: str) -> bool:
+        now = time.time()
+        # Clean old entries
+        self.requests[agent_id] = [
+            t for t in self.requests[agent_id] 
+            if now - t < self.window
+        ]
+        
+        if len(self.requests[agent_id]) >= self.rpm:
+            return False
+        
+        self.requests[agent_id].append(now)
+        return True
 ```
 
-The **supermemory** skill helps you document which API endpoints return sensitive data, ensuring your team implements proper filtering consistently across all skills.
+This becomes critical when using the supermemory skill for long-running research tasks that generate many API calls.
 
-### 4. Lack of Rate Limiting
+## Handling Sensitive Data in Context
 
-Unrestricted API access enables automated attacks and denial of service. Implement rate limiting at multiple levels.
+Claude Code maintains conversation context across turns. Sensitive data in context windows creates exposure risk:
+
+1. **Explicit filtering**: Strip sensitive patterns before sending to Claude
+2. **Context segmentation**: Use separate conversations for different trust levels
+3. **Auto-expiration**: Implement context truncation policies
 
 ```python
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
-
-limiter = Limiter(
-    key_func=get_remote_address,
-    app=app,
-    default_limits=["200 per day", "50 per hour"]
-)
-
-@app.route('/api/data')
-@limiter.limit("10 per minute")
-def get_data():
-    # Your API logic here
-    pass
-```
-
-### 5. Mass Assignment
-
-Allowing clients to modify internal object properties that should remain read-only creates security vulnerabilities. Use explicit allowlists for input validation.
-
-```javascript
-// Vulnerable: accepting all client input
-function updateUser(userId, clientData) {
-  return db.users.update(userId, clientData);
-}
-
-// Secure: explicit allowlist
-const ALLOWED_UPDATES = ['displayName', 'bio', 'avatarUrl'];
-
-function updateUser(userId, clientData) {
-  const sanitized = {};
-  for (const key of ALLOWED_UPDATES) {
-    if (clientData[key] !== undefined) {
-      sanitized[key] = clientData[key];
-    }
-  }
-  return db.users.update(userId, sanitized);
-}
-```
-
-## Input Validation and Sanitization
-
-Proper input validation prevents injection attacks and malformed data from reaching your backend systems.
-
-```python
-from pydantic import BaseModel, validator
 import re
 
-class ApiSearchRequest(BaseModel):
-    query: str
-    limit: int = 10
-    
-    @validator('query')
-    def validate_query(cls, v):
-        if len(v) > 200:
-            raise ValueError('Query too long')
-        # Remove potential SQL injection patterns
-        if re.search(r'(union|select|insert|delete)', v, re.I):
-            raise ValueError('Invalid characters in query')
-        return v.strip()
-    
-    @validator('limit')
-    def validate_limit(cls, v):
-        if v < 1 or v > 100:
-            raise ValueError('Limit must be between 1 and 100')
-        return v
+SENSITIVE_PATTERNS = [
+    r'\b\d{3}-\d{2}-\d{4}\b',  # SSN
+    r'\b[A-Z0-9]{20,}\b',       # API keys
+    r'Bearer\s+[A-Za-z0-9\-._~+/]+=*',  # Auth tokens
+]
+
+def sanitize_context(messages: list[dict]) -> list[dict]:
+    """Remove sensitive data from context before sending to Claude."""
+    sanitized = []
+    for msg in messages:
+        content = msg.get("content", "")
+        for pattern in SENSITIVE_PATTERNS:
+            content = re.sub(pattern, "[REDACTED]", content)
+        sanitized.append({**msg, "content": content})
+    return sanitized
 ```
 
-The **pdf** skill can generate security audit reports documenting your input validation patterns, while the **xlsx** skill helps track vulnerability assessments across multiple API endpoints.
+## Output Encoding and Injection Prevention
 
-## Security Headers and CORS Configuration
+AI-generated outputs can contain malicious content designed to exploit downstream systems. The pdf skill and docx skill both handle file generation—ensure outputs are properly sanitized before writing:
 
-Proper headers protect against cross-site scripting, clickjacking, and other client-side attacks.
+```python
+from html import escape
 
-```javascript
-// Express.js security middleware
-const helmet = require('helmet');
+def sanitize_for_html(content: str) -> str:
+    """Prevent XSS when displaying agent outputs."""
+    return escape(content)
 
-app.use(helmet());
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-    defaultSrc: ["'self'"],
-    scriptSrc: ["'self'", 'trusted-cdn.com'],
-    styleSrc: ["'self'", "'unsafe-inline'"],
-    imgSrc: ["'self'", 'data:', 'trusted-images.com'],
-  }
-}));
-
-// CORS configuration
-const corsOptions = {
-  origin: process.env.ALLOWED_ORIGINS.split(','),
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  exposedHeaders: ['X-RateLimit-Remaining', 'X-RateLimit-Reset'],
-  credentials: true,
-  maxAge: 86400
-};
-
-app.use(cors(corsOptions));
+def sanitize_for_markdown(content: str) -> str:
+    """Remove potentially dangerous markdown."""
+    dangerous = [
+        r'<script[^>]*>.*?</script>',
+        r'javascript:',
+        r'on\w+\s*=',
+    ]
+    sanitized = content
+    for pattern in dangerous:
+        sanitized = re.sub(pattern, '', sanitized, flags=re.IGNORECASE)
+    return sanitized
 ```
 
-## API Logging and Monitoring
+## Dependency and Supply Chain Security
 
-Comprehensive logging enables detection of suspicious activity and forensic investigation.
+Claude Code often installs packages, runs npm install, or uses pip. Protect your agent environment:
+
+- **Pin dependencies**: Use exact versions in requirements.txt or package-lock.json
+- **Audit regularly**: Run security scans in CI before allowing agent merges
+- **Isolate environments**: Use containers for agent-executed code
+
+```bash
+# Use pip-audit in your project
+uv pip install pip-audit
+uv run pip-audit -r requirements.txt
+```
+
+## Secure Skill Development
+
+When building custom skills for Claude Code, follow security best practices:
+
+1. **Validate all tool inputs** within the skill, not just at API boundaries
+2. **Log security-relevant events** for audit trails
+3. **Implement timeouts** to prevent runaway agent loops
+4. **Test injection scenarios** using the tdd skill with adversarial inputs
+
+The mcp-builder skill provides templates for secure MCP server implementation, including proper error handling that doesn't leak sensitive information.
+
+## Monitoring and Incident Response
+
+Deploy monitoring that tracks agent behavior patterns:
 
 ```python
 import logging
-from datetime import datetime
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger('api-security')
+security_logger = logging.getLogger("security")
 
-def log_api_access(user_id, endpoint, status_code, ip_address):
-    logger.info({
-        'timestamp': datetime.utcnow().isoformat(),
-        'user_id': user_id,
-        'endpoint': endpoint,
-        'status': status_code,
-        'ip': ip_address,
-        # Exclude sensitive data from logs
-    })
+def log_agent_action(agent_id: str, action: str, resource: str, status: str):
+    security_logger.info(
+        f"agent_id={agent_id} action={action} resource={resource} status={status}"
+    )
 
-def log_security_event(event_type, details):
-    logger.warning({
-        'event': event_type,
-        'timestamp': datetime.utcnow().isoformat(),
-        **details
-    })
+# Watch for anomalies
+def detect_anomalous_behavior(agent_id: str, actions: list) -> bool:
+    # Sudden spike in activity
+    if len(actions) > 100 in 60 seconds:
+        return True
+    # Accessing unusual resources
+    unusual = ["system", "admin", "config"]
+    return any(u in str(actions).lower() for u in unusual)
 ```
 
-For monitoring dashboards, the **frontend-design** skill helps create visual interfaces that display security metrics effectively.
+## Summary
 
-## Implementing API Keys and Secrets Management
+Securing Claude Code integrations requires adapting OWASP principles to agentic workflows. Key takeaways:
 
-Never hardcode API keys or secrets in your source code. Use environment variables and secret management services.
+- Implement scoped, short-lived tokens rather than broad API access
+- Validate all agent-generated outputs before processing
+- Rate limit based on agent behavior patterns, not just user patterns
+- Sanitize context windows to prevent sensitive data exposure
+- Monitor agent actions for anomalous behavior
 
-```python
-import os
-from functools import wraps
-
-def get_api_credentials(service_name):
-    """Retrieve credentials from environment or secret manager"""
-    return {
-        'api_key': os.environ.get(f'{service_name}_API_KEY'),
-        'api_secret': os.environ.get(f'{service_name}_API_SECRET'),
-    }
-
-# Usage in Claude Code skill
-def call_external_api(endpoint, params):
-    creds = get_api_credentials('payment_gateway')
-    headers = {
-        'Authorization': f"Bearer {creds['api_key']}",
-        'X-API-Version': '2026-01'
-    }
-    return requests.get(endpoint, params=params, headers=headers)
-```
-
-## Regular Security Audits
-
-Schedule periodic reviews of your API integrations using automated tools and manual testing. The **tdd** skill supports writing security-focused test cases that verify your defenses work correctly.
-
-```python
-# Security test example
-def test_sql_injection_prevention():
-    """Verify SQL injection attempts are blocked"""
-    malicious_input = "'; DROP TABLE users; --"
-    
-    with pytest.raises(ValidationError):
-        ApiSearchRequest(query=malicious_input)
-
-def test_unauthorized_access_blocked():
-    """Verify users cannot access other users' data"""
-    user_a_client = create_authenticated_client(user_id='user_a')
-    
-    with pytest.raises(AuthorizationError):
-        user_a_client.get('/api/users/user_b/profile')
-```
-
-## Conclusion
-
-Securing Claude Code API integrations against OWASP vulnerabilities requires layered defenses spanning input validation, authentication, authorization, and monitoring. By implementing the patterns covered in this guide—authorization checks, rate limiting, input sanitization, and proper secret management—you build resilient applications that protect user data.
-
-Use Claude skills like **tdd** for security testing, **supermemory** for documenting security patterns across your projects, and **pdf** for generating audit documentation. Regular security reviews and automated testing ensure your defenses remain effective as your applications evolve.
+By applying these patterns, you build AI agent systems that are both powerful and secure.
 
 
 ## Related Reading
 
-- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -1,229 +1,249 @@
 ---
 layout: default
 title: "Claude Code API Gateway Configuration Guide"
-description: "A practical guide to configuring API gateways for Claude Code skills. Learn to set up routing, authentication, rate limiting, and integrate with MCP."
+description: "Learn how to configure API gateways for Claude Code with practical examples and best practices for developers."
 date: 2026-03-14
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /claude-code-api-gateway-configuration-guide/
-reviewed: true
-score: 7
 categories: [guides]
-tags: [claude-code, claude-skills]
 ---
 
+{% raw %}
 # Claude Code API Gateway Configuration Guide
 
-API gateways serve as the entry point for external services interacting with your Claude Code skills. Proper configuration ensures secure, efficient communication between your skills and the outside world. This guide walks through practical setup scenarios for developers building production-ready Claude skills.
+API gateways serve as the critical entry point for securing, managing, and routing requests to your Claude Code integrations. Whether you're building a multi-tenant SaaS platform or integrating Claude Code into an enterprise workflow, proper gateway configuration ensures reliable performance, security, and observability. This guide covers practical configuration patterns for developers and power users working with Claude Code behind API gateways.
 
-## Understanding Gateway Architecture
+## Understanding the Gateway Role with Claude Code
 
-When you expose Claude skills through an API gateway, you're creating a bridge between HTTP requests and the skill execution environment. The gateway handles authentication, request validation, rate limiting, and routing before passing requests to your skill handlers.
+When you expose Claude Code capabilities through an API gateway, you gain several advantages: centralized authentication, rate limiting, request transformation, and detailed analytics. The gateway sits between your clients and the Claude Code execution environment, handling cross-cutting concerns so your core application logic remains clean.
 
-A typical configuration involves three main components: the gateway service (such as Kong, AWS API Gateway, or nginx), your skill definitions, and the MCP server that coordinates tool access. Understanding how these pieces communicate helps you debug issues and optimize performance.
+Claude Code operates through a command-line interface that processes prompts and returns responses. When wrapping this capability behind a gateway, you essentially create a RESTful or GraphQL facade that translates HTTP requests into Claude Code invocations. This pattern works well whether you're using the **supermemory** skill for contextual memory management or integrating with external services.
 
-## Basic Gateway Setup
+## Basic Gateway Configuration Patterns
 
-The simplest way to expose a skill is through a RESTful endpoint. Here's a minimal configuration using a self-hosted gateway:
+### Nginx Configuration
 
-```yaml
-# gateway-config.yaml
-services:
-  - name: claude-skill-handler
-    url: http://localhost:8080
-    routes:
-      - name: pdf-generation
-        path: /api/v1/generate-pdf
-        methods: [POST]
-    plugins:
-      - name: rate-limiting
-        config:
-          minute: 60
-          policy: local
-      - name: jwt
-        config:
-          secret: your-secret-key
+Nginx provides a straightforward reverse proxy setup for Claude Code endpoints. Here's a practical configuration:
+
+```nginx
+server {
+    listen 443 ssl http2;
+    server_name api.yourdomain.com;
+
+    ssl_certificate /etc/ssl/certs/yourcert.pem;
+    ssl_certificate_key /etc/ssl/private/yourkey.key;
+
+    location /claude/ {
+        proxy_pass http://localhost:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Timeout configuration for long-running Claude invocations
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+    }
+
+    # Rate limiting zone
+    limit_req_zone $binary_remote_addr zone=claude_api:10m rate=10r/s;
+    
+    location /claude/invoke {
+        limit_req zone=claude_api burst=20 nodelay;
+        proxy_pass http://localhost:8080;
+    }
+}
 ```
 
-This configuration creates a protected endpoint for PDF generation. The rate limiting plugin prevents abuse, while JWT authentication ensures only authorized users can trigger skill executions. The skill itself would use the `pdf` skill to handle the actual document generation.
+This configuration handles SSL termination, preserves client identity through headers, and implements rate limiting to prevent abuse. Adjust the `rate` and `burst` values based on your expected traffic patterns.
 
-## Authentication Strategies
+### Kong Gateway Integration
 
-Choosing the right authentication method depends on your use case. For internal tools, API keys provide simplicity. For multi-user environments, OAuth 2.0 or JWT tokens offer better security and audit trails.
+For more advanced requirements, Kong Gateway offers plugin-based extensibility. Install the Claude Code service and route:
 
-API key authentication works well for server-to-server communication:
+```bash
+# Register Claude Code service
+curl -X POST http://localhost:8001/services \
+  -d "name=claude-code-service" \
+  -d "url=http://localhost:8080"
 
-```yaml
-plugins:
-  - name: api-key
-    config:
-      header_name: X-API-Key
-      hide_credentials: false
+# Add route
+curl -X POST http://localhost:8001/services/claude-code-service/routes \
+  -d "name=claude-code-route" \
+  -d "paths[]=/claude" \
+  -d "methods[]=POST"
 ```
 
-For user-facing applications, implement JWT with expiration:
+Kong's plugin ecosystem allows you to add authentication, rate limiting, request transformation, and analytics without modifying your Claude Code implementation. The **pdf** skill, for instance, can generate reports from gateway analytics data.
 
-```yaml
-plugins:
-  - name: jwt
-    config:
-      claims_to_verify:
-        - exp
-        - iat
-      maximum_expiration: 3600
+## Authentication and Security
+
+### JWT Validation
+
+Secure your Claude Code endpoint by validating JWT tokens at the gateway:
+
+```nginx
+# Nginx with jwt validation module
+location /claude/ {
+    auth_jwt "Claude API" token=$http_authorization;
+    auth_jwt_key_file /etc/nginx/jwt-keys.json;
+    
+    proxy_pass http://localhost:8080;
+}
 ```
 
-When integrating with the `supermemory` skill for context management, ensure your authentication layer passes user identity to maintain proper memory segregation between users.
+The JWT should contain claims relevant to your authorization model. Include user ID, roles, and permissions to implement fine-grained access control.
+
+### OAuth 2.0 Proxy Integration
+
+For organizations using OAuth 2.0, integrate an authorization proxy:
+
+```yaml
+# oauth2-proxy configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: oauth2-proxy-config
+data:
+  config.yaml: |
+    provider: "azure"
+    client_id: "your-client-id"
+    client_secret: "your-client-secret"
+    cookie_secret: "your-cookie-secret"
+    email_domains: ["yourcompany.com"]
+    upstreams: ["http://localhost:8080"]
+    pass_basic_auth: false
+    pass_host_header: true
+```
+
+This setup works particularly well when combining Claude Code with the **tdd** skill for test-driven development workflows, where developers need authenticated access to AI-assisted coding assistance.
 
 ## Rate Limiting and Throttling
 
-Rate limiting protects your skills from overload and prevents resource exhaustion. Configure limits based on the skill's computational cost rather than using uniform defaults.
+Claude Code operations vary significantly in execution time. A simple prompt might complete in seconds, while complex code generation or analysis tasks can take minutes. Implement tiered rate limiting to accommodate this variance:
 
-A compute-intensive skill like `tdd` (test-driven development) requires stricter limits than a simple lookup skill:
-
-```yaml
-plugins:
-  - name: rate-limiting
-    config:
-      minute: 10
-      hour: 100
-      policy: redis
-      redis_host: localhost
-      redis_port: 6379
+```javascript
+// Kong rate limiting plugin configuration
+{
+  "name": "rate-limiting",
+  "config": {
+    "minute": 60,
+    "hour": 500,
+    "policy": "redis",
+    "redis_host": "localhost",
+    "redis_port": 6379,
+    "hide_client_headers": false
+  }
+}
 ```
 
-For simpler skills that primarily read files or perform quick transformations, you can allow higher throughput. The key is matching limits to actual resource consumption.
+Consider implementing a queue system for long-running operations rather than holding open HTTP connections. This approach, combined with the **frontend-design** skill for building status dashboards, provides better user experience for intensive Claude Code workloads.
 
-## Routing to Multiple Skills
+## Request and Response Transformation
 
-A well-designed gateway routes requests to appropriate skills based on URL patterns or request headers. This enables a single gateway to serve multiple skills:
+### Input Formatting
 
-```yaml
-routes:
-  - name: frontend-routes
-    path: /api/v1/frontend/*
-    methods: [POST]
-    service: frontend-skill-service
-  - name: document-routes
-    path: /api/v1/documents/*
-    methods: [POST]
-    service: document-skill-service
-  - name: analysis-routes
-    path: /api/v1/analyze/*
-    methods: [POST]
-    service: analysis-skill-service
+Gateway-level transformation allows you to standardize input before reaching Claude Code:
+
+```lua
+-- Kong request transformer plugin
+local function transform_request(plugin, configuration, api)
+    local method = ngx.req.get_method()
+    
+    if method == "POST" then
+        local body = ngx.req.get_body_data()
+        local json = require("cjson").decode(body)
+        
+        -- Wrap user prompt with system context
+        json.system = "You are a code review assistant. " .. (json.system or "")
+        json.context = {
+            repository = ngx.var.http_x_repo,
+            branch = ngx.var.http_x_branch
+        }
+        
+        ngx.req.set_body_data(json.encode(json))
+        ngx.req.set_header("Content-Type", "application/json")
+    end
+end
 ```
 
-The `frontend-design` skill handles frontend generation requests, while document processing goes to skills using the `pdf` and `docx` capabilities. This separation keeps each skill's resources isolated and easier to monitor.
+This pattern enables sophisticated prompt engineering at the gateway layer, injecting context based on HTTP headers or path parameters.
 
-## Request Transformation
+### Response Handling
 
-Sometimes your gateway needs to transform incoming requests to match your skill's expected format. Use request transformation plugins to add context:
+Transform Claude Code responses for your specific client needs:
 
-```yaml
-plugins:
-  - name: request-transformer
-    config:
-      add:
-        headers:
-          - X-Skill-Context:production
-          - X-Request-ID:$(uuid)
-        json:
-          user_id: "$(jwt.claims.sub)"
-          timestamp: "$(timestamp)"
+```nginx
+# Nginx response transformation
+location /claude/ {
+    proxy_pass http://localhost:8080;
+    
+    # Add metadata headers
+    add_header X-Response-Time $upstream_response_time;
+    add_header X-CLAUDE-Model $upstream_http_x_claude_model;
+    
+    # Compress responses
+    gzip on;
+    gzip_types application/json text/plain;
+}
 ```
 
-This injects the user ID from the JWT token into the request body, allowing your skill to identify the requester without requiring them to include it manually. The timestamp helps with auditing and debugging.
+## Monitoring and Observability
 
-## Response Handling
+### Logging Configuration
 
-Configure response transformations to return consistent formats to clients:
+Detailed logging supports debugging and performance analysis:
 
-```yaml
-plugins:
-  - name: response-transformer
-    config:
-      add:
-        headers:
-          - X-Response-Time:$(latency)
-      json:
-        status: "success"
-        version: "1.0"
+```nginx
+# Structured JSON logging
+log_format json_combined escape=json
+    '{'
+    '"time_local":"$time_local",'
+    '"remote_addr":"$remote_addr",'
+    '"request":"$request",'
+    '"status": "$status",'
+    '"body_bytes_sent":"$body_bytes_sent",'
+    '"request_time":"$request_time",'
+    '"http_referer":"$http_referer",'
+    '"http_user_agent":"$http_user_agent",'
+    '"request_id":"$request_id"'
+    '}';
+
+access_log /var/log/nginx/claude_access.log json_combined;
+error_log /var/log/nginx/claude_error.log warn;
 ```
 
-Skills that generate artifacts (images, PDFs, code) should return signed URLs or direct downloads rather than embedding large payloads in JSON responses.
+Integrate these logs with your observability stack. The **supermemory** skill can help maintain historical context across gateway logs for pattern recognition.
 
-## Monitoring and Logging
+### Metrics Collection
 
-Effective monitoring helps you understand skill performance and identify issues. Configure your gateway to emit metrics:
-
-```yaml
-plugins:
-  - name: prometheus
-    config:
-      per_consumer: true
-      latency_buckets: [5, 10, 25, 50, 100, 250, 500, 1000]
-```
-
-Track these key metrics: request latency, error rates per skill, rate limit hits, and authentication failures. The `mcp-builder` skill often generates diagnostic information that's useful for troubleshooting integration issues.
-
-## Security Best Practices
-
-Always use TLS for gateway communication. Configure CORS properly to restrict which domains can invoke your skills:
+Export Prometheus metrics from your gateway:
 
 ```yaml
-plugins:
-  - name: cors
-    config:
-      origins:
-        - https://yourapp.com
-      methods:
-        - GET
-        - POST
-      headers:
-        - Authorization
-        - Content-Type
-      exposed_headers:
-        - X-Request-ID
-      credentials: true
-      max_age: 3600
+# Prometheus metrics export
+- name: prometheus-metrics
+  config:
+    metrics: |
+      claude_requests_total{status,method,route} counter
+      claude_request_duration_seconds{status,method,route} histogram
+      claude_active_connections gauge
 ```
 
-For skills that handle sensitive data, implement additional verification steps within the skill itself using tool access controls.
+These metrics inform scaling decisions and help identify performance bottlenecks in your Claude Code integration.
 
-## Integration with MCP Servers
+## Conclusion
 
-The Model Context Protocol (MCP) server coordinates tool access for your skills. Configure your gateway to communicate with MCP over its native protocol:
+API gateway configuration for Claude Code involves balancing security, performance, and observability. Start with basic proxy configuration, then layer in authentication, rate limiting, and transformation as your use cases demand. The patterns shown here translate across gateway implementations—whether you use Nginx, Kong, AWS API Gateway, or another platform.
 
-```yaml
-upstream:
-  url: http://mcp-server:3000
-  health_checks:
-    active:
-      healthy: 200
-      interval: 10
-      unhealthy: 5
-```
-
-This ensures requests fail fast if the MCP server becomes unavailable, allowing your gateway to return appropriate error messages rather than timing out.
-
-## Common Configuration Issues
-
-Gateway configuration errors often manifest as confusing error messages. A few common pitfalls: mismatched content types between gateway and skill, missing authentication headers for protected routes, and incorrect path matching patterns. When debugging, check gateway logs first—they typically indicate whether the request reached your skill at all.
-
-For skills using the `algorithmic-art` or `canvas-design` capabilities, ensure your gateway timeout settings accommodate longer generation times.
-
-## Next Steps
-
-Start with basic authentication and rate limiting, then add complexity as needed. Monitor your metrics and adjust limits based on actual usage patterns. As your skill suite grows, consider implementing a service mesh for better traffic management between skills.
-
-The gateway is your first line of defense and your primary interface. Invest time in getting the configuration right, and your skills will be more secure, performant, and maintainable.
+Remember that Claude Code integrates well with specialized skills like the **pdf** skill for document generation, **canvas-design** for visual outputs, and **docx** for structured reporting. Your gateway configuration should accommodate these varied response types while maintaining consistent security and performance characteristics.
 
 
 ## Related Reading
 
-- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
