@@ -1,13 +1,18 @@
 ---
 
+
 layout: default
 title: "Claude MD Too Long Context Window Optimization"
 description: "Learn practical techniques to optimize long context windows in Claude Code for better performance, reduced costs, and improved response quality."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-too-long-context-window-optimization/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude MD Too Long Context Window Optimization
 

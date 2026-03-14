@@ -1,13 +1,18 @@
 ---
 
+
 layout: default
 title: "Claude Code vs Aider: Open Source Contribution Workflow."
 description: "Compare Claude Code and Aider for open source contributions. Learn practical workflows, skill advantages, and which tool best suits your OSS."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-code-vs-aider-open-source-contribution-workflow/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude Code vs Aider: Open Source Contribution Workflow Comparison
 
@@ -15,7 +20,7 @@ Open source contribution has evolved significantly with AI assistance. Two popul
 
 ## Understanding Both Tools
 
-**Claude Code** is Anthropic's CLI coding assistant that excels at understanding context, maintaining conversation history, and working with extensible skills. It leverages the Model Context Protocol (MCP) for integrations and provides a terminal-based interface with powerful file operations.
+**Claude Code** is Anthropic's CLI coding assistant that excels at understanding context, maintaining conversation history, and working with extensible skills. It uses the Model Context Protocol (MCP) for integrations and provides a terminal-based interface with powerful file operations.
 
 **Aider** is an open source AI pair programming tool that works directly in your terminal. It specializes in git-aware code editing, making it particularly suited for tracking changes and managing commits within existing projects.
 

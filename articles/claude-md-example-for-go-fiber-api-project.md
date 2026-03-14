@@ -1,12 +1,17 @@
 ---
+
 layout: default
 title: "Claude MD Example for Go Fiber API Project"
 description: "A practical guide to using Claude Code with Go Fiber API projects. Learn how to leverage Claude's capabilities for building, testing, and documenting."
 date: 2026-03-14
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-md-example-for-go-fiber-api-project/
 categories: [guides]
+reviewed: true
+score: 7
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 Building a Go Fiber API project becomes significantly more productive when you integrate Claude Code into your workflow. This guide provides concrete examples of how to use Claude's capabilities to accelerate development, testing, and documentation for your Fiber applications.
