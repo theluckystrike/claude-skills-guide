@@ -13,7 +13,7 @@ tags: [claude-code, claude-skills, automation, changelog, devops]
 
 # Claude Skills for Automated Changelog Generation
 
-Changelogs are critical for maintaining transparent release processes, yet manually documenting every change across commits, pull requests, and issues consumes valuable development time. Claude skills enable you to automate this process entirely, generating comprehensive, well-formatted changelogs that keep your team and users informed without the manual effort.
+Changelogs are critical for maintaining transparent release processes, yet manually documenting every change across commits, pull requests, and issues consumes valuable development time. Claude skills enable you to automate this process entirely, generating comprehensive, well-formatted changelogs that keep your team and users informed without the manual effort. For an overview of automation workflows, visit the [workflows hub](/claude-skills-guide/workflows-hub/).
 
 ## Understanding the Changelog Generation Challenge
 
@@ -25,7 +25,7 @@ Claude skills address this problem by applying the language model's understandin
 
 ## Core Skills for Changelog Automation
 
-Several Claude skills work together to create a complete changelog generation system. Understanding each component helps you build a customized workflow that matches your project's conventions.
+Several Claude skills work together to create a complete changelog generation system. Understanding each component helps you build a customized workflow that matches your project's conventions. The [skill .md file format guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) explains how to structure each skill file correctly.
 
 The foundation skill is a custom **changelog-generator** skill that orchestrates the entire process. Create this file at `~/.claude/skills/changelog-generator.md`:
 
@@ -128,7 +128,7 @@ Running changes through this formatter before output ensures consistency across 
 
 ## Practical Example: Complete Workflow
 
-Combine these skills into a cohesive workflow. Here's how to generate a release changelog:
+[Combine these skills into a cohesive workflow](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/). Here's how to generate a release changelog:
 
 ```bash
 # First, invoke changelog-generator
@@ -185,7 +185,7 @@ This skill transforms the raw changelog into communication-ready content.
 
 ## Automating Changelog Generation in CI/CD
 
-Continuous integration pipelines benefit from automated changelog creation. Add a GitHub Actions workflow:
+Continuous integration pipelines benefit from automated changelog creation. The [Claude Code GitHub Actions workflow guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) covers the CI/CD integration in depth. Add a GitHub Actions workflow:
 
 ```yaml
 name: Generate Changelog
@@ -220,6 +220,13 @@ Review generated changelogs before publication. Automation handles 90% of the wo
 Version your changelogs alongside code. Store them in version control and maintain a CHANGELOG.md file that grows with each release.
 
 Automate the trivial, focus on the meaningful. Use Claude skills to handle parsing and formatting while reserving human effort for strategic communication.
+
+## Related Reading
+
+- [Claude Skills Automated Dependency Update Workflow](/claude-skills-guide/articles/claude-skills-automated-dependency-update-workflow/) — automate version bumps alongside your changelog generation
+- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/articles/claude-code-github-actions-workflow-matrix-strategy-guide/) — wire changelog generation into your CI/CD pipeline
+- [Claude Skill Versioning: Semver Best Practices](/claude-skills-guide/articles/claude-skill-versioning-semver-best-practices/) — version your skills using the same conventions as your changelogs
+- [Best Claude Skills for Code Review Automation](/claude-skills-guide/articles/best-claude-skills-for-code-review-automation/) — combine code review with automated release notes
 
 ---
 

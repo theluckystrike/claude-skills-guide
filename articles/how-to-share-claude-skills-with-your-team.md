@@ -12,7 +12,7 @@ score: 9
 
 # How to Share Claude Skills with Your Team
 
-Claude Code skills are `.md` files in `~/.claude/skills/`. Sharing them across a team means distributing those files consistently. Here are practical approaches that work.
+[Claude Code skills are `.md` files in `~/.claude/skills/`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). Sharing them across a team means distributing those files consistently. Here are practical approaches that work.
 
 ## The Git Repository Approach
 
@@ -67,7 +67,7 @@ The `version` field matters — when you update a skill, bump the version so dev
 
 ## Automating Distribution
 
-A GitHub Actions workflow can notify the team when skills are updated:
+[A GitHub Actions workflow can notify the team when skills are updated](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/):
 
 ```yaml
 # .github/workflows/skill-sync.yml

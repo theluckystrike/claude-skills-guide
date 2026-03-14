@@ -18,7 +18,7 @@ Claude Code streams its responses token by token by default. When working with s
 
 Claude Code connects to the Claude API using streaming mode. As the model generates tokens, they appear in your terminal immediately rather than waiting for the full response. This is handled automatically — you do not need to configure streaming or modify skill files to enable it.
 
-Skills are Markdown files stored in `~/.claude/skills/`. When you invoke `/pdf` or `/tdd`, Claude reads the skill instructions and generates output that streams to your terminal. There is no separate streaming API or buffer configuration for skills.
+[Skills are Markdown files stored in `~/.claude/skills/`](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). When you invoke `/pdf` or `/tdd`, Claude reads the skill instructions and generates output that streams to your terminal. There is no separate streaming API or buffer configuration for skills.
 
 ## Structuring Skill Invocations for Faster Results
 

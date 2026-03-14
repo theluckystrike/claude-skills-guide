@@ -12,7 +12,7 @@ score: 9
 
 # Claude Code with Nix Flakes for Reproducible Development Environments
 
-Development environment reproducibility remains one of the hardest problems in software engineering. You ship code that works on your machine, only to watch it fail on a colleague's workstation or in CI. The traditional solutions—Docker containers, virtual machines, or extensive README instructions—each bring tradeoffs around weight, speed, and flexibility. Nix Flakes offer a compelling alternative, and when combined with Claude Code, they create a powerful workflow for declarative, reproducible environments.
+Development environment reproducibility remains one of the hardest problems in software engineering. You ship code that works on your machine, only to watch it fail on a colleague's workstation or in CI. The traditional solutions—Docker containers, virtual machines, or extensive README instructions—each bring tradeoffs around weight, speed, and flexibility. Nix Flakes offer a compelling alternative, and when combined with Claude Code, they create a powerful workflow for declarative, [reproducible environment](/claude-skills-guide/articles/claude-code-dockerfile-generation-multi-stage-build-guide/) environments.
 
 ## What Nix Flakes Bring to Development
 

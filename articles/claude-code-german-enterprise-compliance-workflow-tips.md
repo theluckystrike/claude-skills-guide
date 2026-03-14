@@ -55,7 +55,7 @@ Several Claude skills enhance compliance productivity without introducing unnece
 
 ### The tdd Skill for Test-Driven Compliance
 
-The **tdd** skill helps generate compliant test cases automatically. When building features that must meet specific regulatory requirements, express those requirements as test cases:
+[The **tdd** skill helps generate compliant test cases automatically](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). When building features that must meet specific regulatory requirements, express those requirements as test cases:
 
 ```
 /tdd generate test cases for user data retention policy that deletes records after 90 days of inactivity, ensuring DSGVO right to erasure is honored
@@ -85,7 +85,7 @@ This produces exportable documentation for external auditors.
 
 ### The supermemory Skill for Knowledge Management
 
-The **supermemory** skill stores compliance knowledge persistently:
+[The **supermemory** skill stores compliance knowledge persistently](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/):
 
 ```
 /supermemory store DSGVO article 17 requirements for right to erasure and link to our implementation guide
@@ -133,7 +133,7 @@ German compliance audits often require detailed documentation. Structure your Cl
 - **Log AI assistance**: Maintain records of which files Claude Code modified
 - **Review AI-generated code**: Establish manual review processes for compliance-critical sections
 
-Create a `CLAUDE.md` file in each project explaining how AI assistance was used:
+[Create a `CLAUDE.md` file in each project](/claude-skills-guide/articles/claude-code-ignores-claude-md-instructions-fix/) explaining how AI assistance was used:
 
 ```markdown
 # AI Assistance Documentation
@@ -201,5 +201,13 @@ These metrics help justify continued AI tool usage in regulated environments.
 ## Summary
 
 Claude Code fits well into German enterprise compliance workflows when configured appropriately. Focus on local processing, audit trails, and data minimization. The tdd, pdf, xlsx, and supermemory skills accelerate common compliance tasks without introducing excessive risk. Establish clear policies for AI tool usage, document all interactions, and maintain human oversight for compliance-critical decisions.
+
+
+## Related Reading
+
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — generate compliance test cases with the TDD skill
+- [Building Stateful Agents with Claude Skills Guide](/claude-skills-guide/articles/building-stateful-agents-with-claude-skills-guide/) — build a persistent compliance knowledge base with supermemory
+- [Claude Code GDPR Data Privacy Implementation Checklist](/claude-skills-guide/articles/claude-code-gdpr-data-privacy-implementation-checklist/) — implement DSGVO-compliant data handling in your workflows
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code use cases for enterprise and regulated environments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

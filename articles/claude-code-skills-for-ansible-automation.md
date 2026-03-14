@@ -13,7 +13,7 @@ score: 7
 
 # Claude Code Skills for Ansible Automation
 
-Ansible remains one of the most popular tools for configuration management and infrastructure automation. Combining Claude Code with Ansible through custom skills unlocks powerful possibilities for developers who want natural language interfaces to manage their infrastructure code. This guide shows you how to build Claude Code skills specifically designed for Ansible automation workflows.
+[Ansible remains one of the most popular tools for configuration management](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) and infrastructure automation. Combining Claude Code with Ansible through custom skills unlocks powerful possibilities for developers who want natural language interfaces to manage their infrastructure code. This guide shows you how to build Claude Code skills specifically designed for Ansible automation workflows.
 
 ## Why Combine Claude Code with Ansible
 
@@ -184,4 +184,12 @@ Claude Code skills transform Ansible automation from manual YAML editing into an
 Start with a simple skill that generates basic playbooks, then expand to handle debugging, role generation, and CI/CD integration. As your skill grows, so does your ability to manage infrastructure through natural language commands.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Related Reading
+
+- [Claude Code Skills for Infrastructure as Code (Terraform)](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) — compare Ansible skill patterns with Terraform IaC approaches
+- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — design Ansible-focused skills with proper structure
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — integrate Ansible validation into automated CI/CD workflows
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for DevOps and infrastructure automation
+
 {% endraw %}

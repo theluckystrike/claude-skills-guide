@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Permissions Model and Security Guide 2026
 
-Claude Code is a powerful agentic tool. With agentic tools come real security considerations: Claude can read files, execute shell commands, write code, and call external APIs. Understanding the [permissions model](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-a-claude-skill/) is not optional if you're using Claude Code on anything beyond a toy project.
+Claude Code is a powerful agentic tool. With agentic tools come real [security scanning](/claude-skills-guide/articles/claude-code-secret-scanning-prevent-credential-leaks-guide/) considerations: Claude can read files, execute shell commands, write code, and call external APIs. Understanding the [permissions model](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-a-claude-skill/) is not optional if you're using Claude Code on anything beyond a toy project.
 
 This guide covers how permissions are scoped, what the defaults are, how to tighten them, and where the current model's limitations are.
 

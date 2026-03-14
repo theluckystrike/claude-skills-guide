@@ -12,7 +12,7 @@ score: 7
 
 # Claude Skills for Salesforce Apex Development
 
-Salesforce Apex development presents unique challenges that differ from traditional object-oriented programming. The platform's governor limits, trigger patterns, and declarative customization options require specific workflows. Claude Code skills can help you navigate these requirements efficiently, reducing boilerplate code and improving test coverage.
+[Salesforce Apex development presents unique challenges](/claude-skills-guide/articles/claude-code-skills-for-c-sharp-dotnet-developers/) that differ from traditional object-oriented programming. The platform's governor limits, trigger patterns, and declarative customization options require specific workflows. Claude Code skills can help you navigate these requirements efficiently, reducing boilerplate code and improving test coverage.
 
 ## apex-generator: Scaffold Classes and Triggers Quickly
 
@@ -50,7 +50,7 @@ The generated code includes proper null checks and bulkification patterns from t
 
 ## test-generator: Create Comprehensive Test Classes
 
-Testing in Salesforce is mandatory for deployment. The **test-generator** skill builds test classes with realistic test data, assert statements, and proper coverage targets.
+[Testing in Salesforce is mandatory for deployment](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/). The **test-generator** skill builds test classes with realistic test data, assert statements, and proper coverage targets.
 
 ```bash
 # Generate test class for OpportunityTriggerHandler
@@ -160,7 +160,7 @@ for (Task t : [SELECT Id, WhatId FROM Task
 
 ## deployment-helper: Package and Deploy Metadata
 
-The **deployment-helper** skill generates deployment scripts using Salesforce CLI or Ant migration tools. It creates package.xml files and validates components before deployment.
+[The **deployment-helper** skill generates deployment scripts](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) using Salesforce CLI or Ant migration tools. It creates package.xml files and validates components before deployment.
 
 ```bash
 # Generate deployment package
@@ -234,5 +234,13 @@ if (Schema.sObjectType.Opportunity.fields.Amount.isUpdateable()) {
 ```
 
 Add these security checks before deploying to production environments.
+
+
+## Related Reading
+
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — achieve Salesforce code coverage requirements with TDD patterns
+- [Claude Code Skills for C# .NET Developers](/claude-skills-guide/articles/claude-code-skills-for-c-sharp-dotnet-developers/) — compare enterprise development skill patterns across platforms
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/articles/claude-skills-with-github-actions-ci-cd-pipeline/) — automate Salesforce metadata deployment in CI/CD
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for enterprise CRM development
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

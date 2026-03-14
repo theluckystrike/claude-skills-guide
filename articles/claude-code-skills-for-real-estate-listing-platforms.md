@@ -16,7 +16,7 @@ Building a real estate listing platform involves managing property data, integra
 
 ## xlsx: Property Data Management
 
-Real estate platforms rely heavily on structured data—property listings, agent information, pricing history, and neighborhood statistics. The **xlsx** skill handles spreadsheet operations that power your backend data pipeline.
+[Real estate platforms rely heavily on structured data](/claude-skills-guide/articles/claude-code-skills-for-travel-booking-platforms/)—property listings, agent information, pricing history, and neighborhood statistics. The **xlsx** skill handles spreadsheet operations that power your backend data pipeline.
 
 ```python
 # Generate property listings from spreadsheet data
@@ -45,7 +45,7 @@ Use this skill to import bulk property data, generate CSV exports for listing fe
 
 ## pdf: Property Document Generation
 
-Real estate transactions require documents—listing agreements, disclosure forms, and marketing flyers. The **pdf** skill automates PDF creation from property data.
+Real estate transactions require documents—listing agreements, disclosure forms, and marketing flyers. [The **pdf** skill automates PDF creation from property data](/claude-skills-guide/articles/automated-documentation-workflow-with-claude-skills/).
 
 ```python
 from reportlab.lib.pagesizes import letter
@@ -181,7 +181,7 @@ Add geospatial filtering for proximity to schools, transit, or amenities. Storea
 
 ## Automated Testing with TDD
 
-Quality real estate platforms require rigorous testing. Use the TDD skill to write tests first:
+Quality real estate platforms require rigorous testing. [Use the TDD skill to write tests first](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/):
 
 ```
 "Write tests for property search filtering function covering
@@ -204,5 +204,13 @@ A production real estate platform combines these skills:
 Each skill handles a specific domain, reducing context switching and maintaining consistency across your codebase.
 
 ---
+
+
+## Related Reading
+
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/) — write tests for property search filtering and pricing logic
+- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) — generate property listing documentation automatically
+- [Claude Code Skills for Travel Booking Platforms](/claude-skills-guide/articles/claude-code-skills-for-travel-booking-platforms/) — similar patterns for booking and availability management
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for property and booking platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

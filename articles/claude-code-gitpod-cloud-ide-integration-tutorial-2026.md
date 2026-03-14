@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Gitpod Cloud IDE Integration Tutorial (2026)
 
-Gitpod provides cloud-based development environments that spin up in seconds. Combining Gitpod with Claude Code gives you AI-powered development sessions that run entirely in your browser or connect to local Claude CLI. This tutorial walks through integrating Claude Code with Gitpod for a powerful remote development setup.
+Gitpod provides cloud-based [development environment configuration](/claude-skills-guide/articles/how-do-i-set-environment-variables-for-a-claude-skill/)s that spin up in seconds. Combining Gitpod with Claude Code gives you AI-powered development sessions that run entirely in your browser or connect to local Claude CLI. This tutorial walks through integrating Claude Code with Gitpod for a powerful remote development setup.
 
 ## Prerequisites
 
@@ -211,7 +211,7 @@ Gitpod supports secure environment variable storage through its settings interfa
 
 ## Conclusion
 
-Integrating Claude Code with Gitpod combines cloud IDE flexibility with AI-assisted development. Whether you run Claude directly in Gitpod's terminal or tunnel to your local installation, the workflow remains productive. Skills like `/tdd`, `/frontend-design`, `/pdf`, and `/supermemory` extend Claude's capabilities within your cloud workspace, enabling test-driven development, UI scaffolding, documentation generation, and context awareness.
+Integrating Claude Code with Gitpod combines [cloud IDE integration](/claude-skills-guide/articles/claude-code-nix-flake-reproducible-development-environment/) flexibility with AI-assisted development. Whether you run Claude directly in Gitpod's terminal or tunnel to your local installation, the workflow remains productive. Skills like `/tdd`, `/frontend-design`, `/pdf`, and `/supermemory` extend Claude's capabilities within your cloud workspace, enabling test-driven development, UI scaffolding, documentation generation, and context awareness.
 
 Configure your repository with the appropriate `.gitpod.yml`, sync your skills directory, and you have a reproducible development environment that teammates can launch instantly—with AI assistance ready from the first command.
 

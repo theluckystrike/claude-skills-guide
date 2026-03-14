@@ -16,7 +16,7 @@ WordPress development involves repetitive tasks that drain productivity: scaffol
 
 ## Why WordPress Needs Custom Skills
 
-WordPress follows conventions that Claude cannot guess. The file structure for themes and plugins is predictable, but the boilerplate code required differs from project to project. A well-crafted skill understands these conventions and generates correct code the first time.
+[WordPress follows conventions that Claude cannot guess](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). The file structure for themes and plugins is predictable, but the boilerplate code required differs from project to project. A well-crafted skill understands these conventions and generates correct code the first time.
 
 Consider what happens without a skill: you create a new plugin folder, write the header comment, create the main PHP file, add activation hooks, register scripts, and set up custom post types. Each step requires referencing documentation or copying from previous projects. A WordPress-specific skill handles this entire sequence in one interaction.
 
@@ -137,7 +137,7 @@ This skill transforms debugging from guesswork into a systematic process. It als
 
 ## Combining Skills for Complex Workflows
 
-Individual skills become powerful when chained together. A complete WordPress development workflow might use:
+[Individual skills become powerful when chained together](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/). A complete WordPress development workflow might use:
 
 1. `wp-plugin-create` to scaffold a new custom plugin
 2. `wp-register-cpt` to add a portfolio post type
@@ -152,7 +152,7 @@ The most effective WordPress skills share common characteristics:
 
 **Be specific about WordPress conventions.** Don't assume Claude knows WordPress coding standards. Include explicit instructions about escaping functions, naming conventions, and hook priorities.
 
-**Generate complete, working code.** Partial code snippets frustrate users. Skills should output code ready to copy and paste without modification.
+**Generate complete, working code.** Partial code snippets frustrate users. [Skills should output code ready to copy and paste](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) without modification.
 
 **Include best practices automatically.** Security considerations like nonces, capability checks, and input sanitization should be part of every generated file, not afterthoughts.
 
@@ -186,5 +186,13 @@ Claude Code skills transform WordPress development from repetitive manual work i
 The key is specificity—tell Claude exactly what WordPress conventions to follow, and it will generate code that works the first time. Build skills around your specific workflow, combine them for complex projects, and watch your development speed increase dramatically.
 
 ---
+
+
+## Related Reading
+
+- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — create proper skill file structure for WordPress development
+- [How Do I Combine Two Claude Skills in One Workflow](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/) — chain plugin, theme, and debug skills into complete workflows
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) — overview of skills most useful for WordPress developers
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — discover Claude Code skills for CMS and web development
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

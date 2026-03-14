@@ -22,7 +22,7 @@ The implementation involves three core components: a flag configuration system, 
 
 ## Implementing the Flag Configuration System
 
-The foundation of any feature flag system is a configuration source. For Claude skills, you have several options: environment variables, JSON configuration files, or external services. Here's a practical approach using a local configuration file:
+[The foundation of any feature flag system is a configuration source](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/). For Claude skills, you have several options: environment variables, JSON configuration files, or external services. Here's a practical approach using a local configuration file:
 
 ```json
 // ~/.claude/feature-flags.json

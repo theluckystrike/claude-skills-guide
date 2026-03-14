@@ -49,7 +49,7 @@ Resources:
               SSEAlgorithm: AES256
 ```
 
-The `!Sub '${AWS::StackName}'` pattern demonstrates CloudFormation intrinsic functions. Claude Code understands AWS naming conventions and automatically applies best practices like using `AWS::StackName` for dynamic resource naming.
+The `!Sub '${AWS::StackName}'` pattern demonstrates CloudFormation intrinsic functions. [Claude Code understands AWS naming conventions](/claude-skills-guide/articles/claude-code-skills-for-infrastructure-as-code-terraform/) and automatically applies best practices like using `AWS::StackName` for dynamic resource naming.
 
 ## Building Complex Multi-Resource Templates
 
@@ -150,7 +150,7 @@ Integrating this validation into your workflow prevents failed stack deployments
 
 ## Working with Nested Stacks
 
-Large CloudFormation templates benefit from nested stack patterns. Claude Code helps organize resources into logical components:
+[Large CloudFormation templates benefit from nested stack patterns](/claude-skills-guide/articles/claude-code-skills-for-ansible-automation/). Claude Code helps organize resources into logical components:
 
 ```yaml
 # Parent stack

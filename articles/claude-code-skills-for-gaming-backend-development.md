@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills for Gaming Backend Development
 
-Building a gaming backend requires handling real-time communications, player data management, matchmaking systems, and server-side game logic. Claude Code provides powerful capabilities that accelerate gaming backend development across multiple programming languages and frameworks. This guide covers practical skills for game developers working on server infrastructure.
+[Building a gaming backend requires handling real-time communications](/claude-skills-guide/articles/claude-code-skills-websocket-real-time-app-development/), player data management, matchmaking systems, and server-side game logic. Claude Code provides powerful capabilities that accelerate gaming backend development across multiple programming languages and frameworks. This guide covers practical skills for game developers working on server infrastructure.
 
 ## Setting Up Claude Code for Game Projects
 
@@ -205,7 +205,7 @@ This Redis-based leaderboard handles millions of score updates per minute while 
 
 ## WebSocket Connection Handling
 
-Real-time game communication requires robust WebSocket management. Claude Code guides you through implementing connection pooling, heartbeat mechanisms, and graceful disconnections.
+Real-time game communication requires robust [robust WebSocket management](/claude-skills-guide/articles/claude-code-skills-microservices-communication-patterns/). Claude Code guides you through implementing connection pooling, heartbeat mechanisms, and graceful disconnections.
 
 ```go
 // Go WebSocket hub for game clients
@@ -260,7 +260,7 @@ The hub pattern enables broadcasting game state updates to all connected players
 
 ## Database Schema Design for Game Data
 
-Proper schema design prevents performance issues as your player base grows. Model your data according to access patterns rather than normalized relationships.
+[Proper schema design prevents performance issues](/claude-skills-guide/articles/claude-code-skills-for-golang-microservices/) as your player base grows. Model your data according to access patterns rather than normalized relationships.
 
 For a player inventory system:
 
@@ -295,5 +295,13 @@ Claude Code helps you identify when to denormalize, when to use JSON columns, an
 Claude Code transforms gaming backend development by providing intelligent assistance across the entire stack. From matchmaking algorithms to WebSocket infrastructure, from session management to leaderboard optimization, the CLI accelerates development while helping you implement battle-tested patterns used in production games.
 
 The skills demonstrated here form the foundation of scalable multiplayer game infrastructure. Build upon these patterns to handle larger player counts, more complex game modes, and stricter latency requirements as your game grows.
+
+
+## Related Reading
+
+- [Claude Code Skills for WebSocket Real-Time App Development](/claude-skills-guide/articles/claude-code-skills-websocket-real-time-app-development/) — implement WebSocket connections for multiplayer game communication
+- [Claude Code Skills Microservices Communication Patterns](/claude-skills-guide/articles/claude-code-skills-microservices-communication-patterns/) — inter-service communication for distributed game backends
+- [Claude Code Skills for Golang Microservices](/claude-skills-guide/articles/claude-code-skills-for-golang-microservices/) — Go patterns for high-performance game server development
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — discover Claude Code applications for gaming and real-time systems
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

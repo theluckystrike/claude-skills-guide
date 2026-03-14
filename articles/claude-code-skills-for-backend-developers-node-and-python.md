@@ -18,7 +18,7 @@ Backend development involves repetitive tasks that consume development time. Cla
 
 Claude Code ships with these built-in skills:
 
-- `/tdd` — test-driven development guidance
+- `/[tdd skill](/claude-skills-guide/articles/automated-testing-pipeline-with-claude-tdd-skill-2026/)` — test-driven development guidance
 - `/pdf` — document processing
 - `/docx` — Word document generation
 - `/xlsx` — spreadsheet operations

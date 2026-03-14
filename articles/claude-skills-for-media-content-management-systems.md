@@ -18,7 +18,7 @@ This guide covers how to integrate Claude skills into media CMS workflows, with 
 
 ## Core Skills for Media CMS Operations
 
-Several Claude skills directly address media content management needs:
+[Several Claude skills directly address media content management needs](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/):
 
 - **pdf** — Extract metadata from PDF assets, generate asset reports, create formatted documentation
 - **pptx** — Generate presentation content from media catalogs, create visual asset summaries
@@ -26,7 +26,7 @@ Several Claude skills directly address media content management needs:
 - **xlsx** — Maintain asset inventories, track content status, calculate storage metrics
 - **canvas-design** — Create promotional graphics, generate thumbnails, design asset metadata overlays
 
-These skills work locally on your machine without external API dependencies, making them suitable for workflows involving sensitive media assets.
+[These skills work locally on your machine without external API dependencies](/claude-skills-guide/articles/claude-code-skills-for-real-estate-listing-platforms/), making them suitable for workflows involving sensitive media assets.
 
 ## Practical Example: Automated Asset Inventory
 
@@ -144,6 +144,14 @@ The skills `/pdf`, `/xlsx`, `/pptx`, `/docx`, and `/canvas-design` ship as built
 
 Test with a small media folder before scaling to production volumes. Most media CMS workflows benefit from incremental automation—start with one repetitive task and expand from there.
 
-The skills handle the formatting and file operations, while your Claude session manages the workflow logic and decision-making. This separation keeps your automation maintainable and adaptable as media management needs evolve.
+[The skills handle the formatting and file operations](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/), while your Claude session manages the workflow logic and decision-making. This separation keeps your automation maintainable and adaptable as media management needs evolve.
+
+
+## Related Reading
+
+- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/articles/best-claude-code-skills-to-install-first-2026/) — identify the most valuable skills for media and content workflows
+- [How Do I Combine Two Claude Skills in One Workflow](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/) — chain pdf, xlsx, and canvas-design skills into media pipelines
+- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/articles/automated-code-documentation-workflow-with-claude-skills/) — apply documentation patterns to media asset management
+- [Workflows Hub](/claude-skills-guide/workflows-hub/) — explore Claude Code automation workflows for content teams
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

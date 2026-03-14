@@ -12,7 +12,7 @@ score: 8
 
 # Claude Memory Feature vs SuperMemory Skill Comparison
 
-When working with Claude Code, there are two distinct ways to manage context: the built-in session memory that Claude maintains automatically, and the `/supermemory` skill that provides persistent storage across sessions. Understanding the difference helps you choose the right approach for each situation.
+When working with Claude Code, there are two distinct ways to manage context: the built-in session memory that Claude maintains automatically, and the `/[supermemory](/claude-skills-guide/articles/claude-supermemory-skill-persistent-context-explained/)` skill that provides persistent storage across sessions. Understanding the difference helps you choose the right approach for each situation.
 
 ## Built-in Session Memory
 

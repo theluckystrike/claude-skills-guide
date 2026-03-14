@@ -12,11 +12,11 @@ score: 7
 
 # Claude Code Skills for Travel Booking Platforms
 
-Travel booking platforms require complex integrations with multiple APIs, real-time data processing, and dynamic pricing logic. Claude Code skills provide an elegant way to encapsulate domain knowledge and automate repetitive workflows in travel applications. This guide walks through practical skill designs for common travel booking scenarios.
+Travel booking platforms require complex integrations with multiple APIs, real-time data processing, and dynamic pricing logic. Claude Code skills provide an elegant way to encapsulate domain knowledge and automate repetitive workflows in travel applications. This guide walks through practical skill designs for common travel booking scenarios. Explore more domain-specific patterns in the [use cases hub](/claude-skills-guide/use-cases-hub/).
 
 ## Core Architecture for Travel Skills
 
-A travel booking skill needs clear boundaries between what Claude controls and what external systems handle. The skill orchestrates API calls, formats data for users, and maintains state across interactions. Your primary tools are `bash` for executing scripts, `read_file` for accessing configuration, and `write_file` for generating outputs.
+A travel booking skill needs clear boundaries between what Claude controls and what external systems handle. The skill orchestrates API calls, formats data for users, and maintains state across interactions. [Your primary tools are `bash` for executing scripts](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/), `read_file` for accessing configuration, and `write_file` for generating outputs.
 
 Structure your travel skill around three phases: initialization (loading API credentials and user preferences), execution (processing the booking logic), and cleanup (releasing resources and updating caches).
 
@@ -163,7 +163,7 @@ On invocation, display upcoming trips sorted by departure date.
 Allow users to add, modify, or cancel bookings through natural language commands.
 ```
 
-Integrate calendar APIs to automatically detect scheduling conflicts. When a user adds a flight, check against existing calendar events and warn about overlaps.
+[Integrate calendar APIs to automatically detect scheduling conflicts](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/). When a user adds a flight, check against existing calendar events and warn about overlaps.
 
 ## Best Practices for Travel Skills
 
@@ -184,5 +184,13 @@ These foundational patterns scale into more sophisticated implementations. Add m
 The travel booking domain benefits significantly from Claude's ability to handle multi-step reasoning. Complex itineraries with dozens of segments become manageable when Claude can programmatically coordinate each step while maintaining coherent user communication.
 
 ---
+
+
+## Related Reading
+
+- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/articles/claude-skill-md-format-complete-specification-guide/) — structure travel booking skills with proper configuration
+- [How Do I Combine Two Claude Skills in One Workflow](/claude-skills-guide/articles/how-do-i-combine-two-claude-skills-in-one-workflow/) — combine search, booking, and notification skills into a complete pipeline
+- [Claude Code Skills for Real Estate Listing Platforms](/claude-skills-guide/articles/claude-code-skills-for-real-estate-listing-platforms/) — similar patterns for booking and availability management
+- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for booking and marketplace platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

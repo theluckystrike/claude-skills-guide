@@ -12,7 +12,7 @@ score: 8
 
 # Claude Code Skills for WebSocket Real-Time App Development
 
-Real-time functionality has become essential for modern web applications. Whether you're building chat systems, live dashboards, collaborative tools, or gaming platforms, WebSockets provide the bidirectional communication channels that make instant data exchange possible. Claude Code offers skills that help you architect, implement, and debug WebSocket-based real-time applications efficiently.
+Real-time functionality has become essential for modern web applications. Whether you're building chat systems, live dashboards, collaborative tools, or gaming platforms, [WebSockets provide the bidirectional communication channels](/claude-skills-guide/articles/claude-code-skills-for-gaming-backend-development/) that make instant data exchange possible. Claude Code offers skills that help you architect, implement, and debug WebSocket-based real-time applications efficiently.
 
 ## Understanding WebSocket Architecture
 
@@ -197,7 +197,7 @@ function ConnectionStatus({ connected }) {
 
 Single-server WebSocket implementations work for small applications. As your user base grows, you need to consider horizontal scaling and message distribution across multiple server instances.
 
-Redis pub/sub enables cross-server message broadcasting:
+[Redis pub/sub enables cross-server message broadcasting](/claude-skills-guide/articles/claude-code-skills-microservices-communication-patterns/):
 
 ```javascript
 const Redis = require('ioredis');
@@ -231,7 +231,7 @@ This pattern ensures messages reach all connected clients regardless of which se
 
 ## Security Considerations
 
-Secure your WebSocket connections with proper authentication and authorization:
+[Secure your WebSocket connections with proper authentication](/claude-skills-guide/articles/claude-code-csp-content-security-policy-generation-guide/) and authorization:
 
 ```javascript
 wss.on('connection', (ws, req) => {
