@@ -5,7 +5,7 @@ description: Practical guide to identifying and fixing security vulnerabilities 
 date: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, security, code-quality, best-practices]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 8
 permalink: /claude-code-generates-insecure-code-patterns-fix/
