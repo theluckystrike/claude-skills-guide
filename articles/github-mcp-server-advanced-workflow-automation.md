@@ -5,7 +5,7 @@ description: "Learn how to automate GitHub workflows with the GitHub MCP server,
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, github, mcp, workflow-automation, devops]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 7
 permalink: /github-mcp-server-advanced-workflow-automation/
