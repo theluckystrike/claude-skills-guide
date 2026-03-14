@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Structured Logging Best Practices Workflow"
-description: "Master structured logging workflows with Claude Code. Learn practical patterns for JSON logging, log aggregation, and implementing observability in your applications."
+description: "Master structured logging workflows with Claude Code. Learn practical patterns for JSON logging, log aggregation, and implementing observability in."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, logging, structured-logging, observability, devops]
@@ -187,3 +187,10 @@ def test_structured_logger_output():
 The tdd skill drives this test-first approach, ensuring logging doesn't become an afterthought.
 
 ## Building by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

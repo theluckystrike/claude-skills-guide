@@ -5,6 +5,7 @@ description: "Learn how to integrate Claude Code with Typesense for powerful ful
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-typesense-full-text-search-setup-tutorial/
+categories: [guides]
 ---
 
 {% raw %}
@@ -231,3 +232,10 @@ Integrating Claude Code with Typesense opens up possibilities for building sophi
 
 The combination of Claude Code's AI capabilities and Typesense's performance makes for a powerful search solution suitable for applications of any scale. As you continue exploring, you'll discover even more ways to enhance your search functionality with features like dynamic ranking, personalization, and analytics.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

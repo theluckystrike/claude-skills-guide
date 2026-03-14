@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Datadog Log Management Workflow Tutorial"
-description: "Learn how to leverage Claude Code skills for efficient Datadog log management. This tutorial covers practical workflows for searching, filtering, analyzing, and automating log processing."
+description: "Learn how to leverage Claude Code skills for efficient Datadog log management. This tutorial covers practical workflows for searching, filtering."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-datadog-log-management-workflow-tutorial/
@@ -186,3 +186,10 @@ Claude Code transforms Datadog log management from a manual, time-consuming proc
 Start with the basic search workflows, then gradually adopt more sophisticated automation as you become comfortable with Claude Code's capabilities. The time invested in setting up these workflows pays dividends through faster incident response and deeper operational insights.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

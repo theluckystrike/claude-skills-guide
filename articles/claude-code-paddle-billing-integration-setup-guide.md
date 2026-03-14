@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Claude Code Paddle Billing Integration Setup Guide"
-description: "Learn how to integrate Paddle billing into your applications using Claude Code. A comprehensive guide covering webhook handlers, subscription management, and best practices."
+description: "Learn how to integrate Paddle billing into your applications using Claude Code. A comprehensive guide covering webhook handlers, subscription."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-paddle-billing-integration-setup-guide/
+categories: [guides]
 ---
 
 {% raw %}
@@ -265,3 +266,10 @@ Building a Paddle billing integration with Claude Code significantly accelerates
 
 Remember to thoroughly test your integration in Paddle's sandbox environment before deploying to production. With proper error handling and webhook processing, your billing system will be robust and reliable.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

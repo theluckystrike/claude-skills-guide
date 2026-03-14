@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code PostHog Feature Flags Analytics Workflow"
-description: "Learn how to build a powerful analytics workflow with Claude Code and PostHog. Integrate feature flags, track user events, and analyze metrics programmatically."
+description: "Learn how to build a powerful analytics workflow with Claude Code and PostHog. Integrate feature flags, track user events, and analyze metrics."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, posthog, feature-flags, analytics, workflow, mcp]
@@ -257,3 +257,10 @@ When building PostHog workflows with Claude Code, keep these recommendations in 
 ## Conclusion
 
 Claude Code combined with PostHog creates a powerful automation layer for feature management and product analytics. By wrapping PostHog's API in custom skills, you can manage feature flags through natural language commands, build automated experiment analysis pipelines, and set up real-time monitoring that keeps your team informed of important metric changes. The key is starting simple—perhaps just flag toggling—and gradually expanding to more sophisticated analytics workflows as your needs grow.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

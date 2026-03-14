@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How DevOps Engineers Use Claude Code for Automation"
-description: "Discover how DevOps engineers leverage Claude Code to automate infrastructure, CI/CD pipelines, monitoring, and deployment workflows. Practical patterns and real-world examples."
+description: "Discover how DevOps engineers leverage Claude Code to automate infrastructure, CI/CD pipelines, monitoring, and deployment workflows. Practical."
 date: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, devops, automation, ci-cd, infrastructure, kubernetes, docker]

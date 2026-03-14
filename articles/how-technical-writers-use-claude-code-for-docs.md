@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "How Technical Writers Use Claude Code for Docs: A Practical Guide"
-description: "Discover how technical writers leverage Claude Code and its skill system to streamline documentation workflows, automate repetitive tasks, and create better developer content."
+title: "How Technical Writers Use Claude Code for Docs: A."
+description: "Discover how technical writers leverage Claude Code and its skill system to streamline documentation workflows, automate repetitive tasks, and create."
 date: 2026-03-14
 author: theluckystrike
 permalink: /how-technical-writers-use-claude-code-for-docs/
+categories: [guides]
 ---
 
 Technical writing has evolved significantly with the emergence of AI-assisted development tools. Claude Code, with its powerful skill system and CLI capabilities, offers technical writers an unprecedented ability to streamline documentation workflows, maintain consistency across large documentation sets, and focus on high-value content creation rather than repetitive formatting tasks.
@@ -67,5 +68,12 @@ These custom skills become valuable team assets—shared across your organizatio
 Claude Code represents a significant advancement for technical writers seeking to improve their productivity and documentation quality. By automating repetitive tasks, providing intelligent feedback, and integrating seamlessly with modern documentation workflows, it allows writers to focus on what matters most: creating clear, accurate, and helpful content for developers.
 
 The key to success lies in treating Claude Code as a collaborative tool rather than a replacement for human expertise. Use it to handle mechanical tasks and generate initial drafts, then apply your domain knowledge and writing skills to refine the final output.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
