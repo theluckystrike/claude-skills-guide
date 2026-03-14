@@ -10,8 +10,6 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
-
 # Claude Code for Fly.io Deployment Automation Workflow
 
 Fly.io offers an elegant platform for deploying applications close to your users with automatic scaling and global distribution. When you combine Fly.io's infrastructure with Claude Code's automation capabilities, you create a deployment pipeline that handles build verification, health validation, and multi-region management without manual intervention. For an overview of deployment automation, visit the [workflows hub](/claude-skills-guide/workflows-hub/). This guide shows you how to build a complete deployment automation workflow using Claude skills like `/tdd`, `/supermemory`, `/pdf`, and `/webapp-testing`.
@@ -111,9 +109,9 @@ fi
 
 The `/tdd` skill becomes invaluable when integrated into your deployment pipeline. It ensures code quality before any deployment proceeds — a workflow covered in detail in the [automated testing pipeline guide](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/):
 
-```bash
-# Run TDD skill to validate code changes
-claude tdd --scope modified --test-pattern "**/*.test.ts"
+```
+Invoke the /tdd skill in your Claude Code session, then describe the changed files.
+Claude will generate or run tests focused on the modified code.
 ```
 
 For frontend applications deployed to Fly.io, the `/frontend-design` skill can validate that your UI components render correctly in the deployed environment:
@@ -124,9 +122,9 @@ Use the frontend-design skill to verify the deployed application matches your de
 
 The `/webapp-testing` skill complements this by performing end-to-end tests that simulate real user interactions:
 
-```bash
-# Run webapp-testing against production deployment
-claude webapp-testing --url https://your-app-name.fly.dev --test-suite smoke
+```
+/webapp-testing
+Run smoke tests against https://your-app-name.fly.dev to verify the deployed application.
 ```
 
 ## Automating Multi-Region Deployments
@@ -176,25 +174,26 @@ Store this in DEPLOYMENT_LOG.md in your project root.
 
 Reference this skill in your deployment script:
 
-```bash
-# Log deployment using supermemory
-claude supermemory --action log --data "deploy $(git rev-parse --short HEAD) to production"
+```
+/supermemory
+Remember: deployed commit $(git rev-parse --short HEAD) to production at $(date -u +%Y-%m-%dT%H:%M:%SZ), status: success.
 ```
 
 ## Generating Deployment Reports with /pdf
 
 After each deployment, use the `/pdf` skill to generate a deployment report:
 
-```bash
-# Generate deployment report
-claude pdf --template deployment-report --data "app=your-app-name,region=iad,status=success"
+```
+/pdf
+Generate a deployment report PDF for app=your-app-name, region=iad, status=success.
+Include deployment time, commit hash, health check results, and rollback status.
 ```
 
 This creates documentation useful for audit trails and team communication.
 
 ## Error Handling and Rollback Strategies
 
-Robust deployment automation requires comprehensive error handling:
+Reliable deployment automation requires comprehensive error handling:
 
 ```bash
 #!/bin/bash
