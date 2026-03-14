@@ -1,18 +1,14 @@
 ---
 layout: default
 title: "How to Connect Claude Skills to External APIs Guide"
-description: "Connect Claude Code skills to external APIs: tool use patterns, authentication, rate limiting, and building reliable AI-powered integrations."
+description: "A practical guide to connecting Claude Code skills to external APIs, covering tool use patterns, authentication, rate limiting, and building reliable AI-powered API integrations."
 date: 2026-03-13
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
-categories: [guides]
-tags: [claude-code, claude-skills, api, integration]
+author: theluckystrike
 ---
 
 # How to Connect Claude Skills to External APIs Guide
 
-Claude Code skills become significantly more powerful when they can call external APIs to fetch real data, trigger actions, or store results. Whether you are extending the [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) to pull test results from a CI API, using [`supermemory`](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) to store context in an external memory service, or having [`pdf`](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) push extracted data to a CRM — the pattern for connecting Claude skills to external APIs follows consistent principles. This guide covers how to connect Claude skills to external APIs with practical code and production-ready patterns.
+Claude Code skills become significantly more powerful when they can call external APIs to fetch real data, trigger actions, or store results. Whether you are extending the `tdd` skill to pull test results from a CI API, using `supermemory` to store context in an external memory service, or having `pdf` push extracted data to a CRM — the pattern for connecting Claude skills to external APIs follows consistent principles. This guide covers how to connect Claude skills to external APIs with practical code and production-ready patterns.
 
 ## The Core Pattern: Tool Use
 
@@ -367,6 +363,6 @@ Connecting Claude skills to external APIs transforms static prompts into dynamic
 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) — Profiles the skills most commonly wired to external APIs (tdd, pdf, supermemory) with practical invocation patterns
 - [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Understanding the `tools` field in skill YAML is essential for giving skills access to the custom API tools you define
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — API response caching and sanitization are also key token cost reduction strategies worth pairing with external API integrations
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — API response caching and sanitization (covered in this guide) are also key token cost reduction strategies worth pairing
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

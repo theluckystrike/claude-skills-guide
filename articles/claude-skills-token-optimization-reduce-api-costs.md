@@ -1,9 +1,9 @@
 ---
-layout: default
-title: "Claude Skills Token Optimization: Reduce API Costs Guide"
+layout: post
+title: "Claude Skills Token Optimization: Reduce API Costs (2026)"
 description: "Practical strategies to optimize token usage in Claude Skills and reduce API costs without sacrificing productivity or code quality."
 date: 2026-03-13
-categories: [guides]
+categories: [guides, tutorials]
 tags: [claude-code, claude-skills, token-optimization, api-costs]
 author: "Claude Skills Guide"
 reviewed: true
@@ -20,7 +20,7 @@ This guide covers practical techniques developers and power users can implement 
 
 Before diving into optimization strategies, it's helpful to understand where tokens are consumed. When you invoke a Claude Skill—whether it's the **pdf** skill for document processing, the **tdd** skill for test-driven development, or the **frontend-design** skill for UI creation—the skill definition, system prompts, and your conversation context all contribute to token usage.
 
-The key insight is that every skill loads its own set of instructions, examples, and context. A skill like **canvas-design** that generates visual assets will have different token requirements than a skill like **xlsx** for spreadsheet manipulation. Understanding these differences allows you to choose the right tool for the job and avoid overloading your context window.
+The key insight is that every skill loads its own set of instructions, examples, and context. A skill like **algorithmic-art** that generates creative visuals will have different token requirements than a skill like **xlsx** for spreadsheet manipulation. Understanding these differences allows you to choose the right tool for the job and avoid overloading your context window.
 
 ## Strategy 1: Craft Concise, Specific Prompts
 
@@ -36,7 +36,7 @@ One of the most effective ways to reduce token consumption is writing focused pr
 
 When using skills like **docx** for document creation or **pptx** for presentations, provide concrete requirements upfront rather than iterating through multiple rounds of feedback. This approach reduces the number of exchange cycles and keeps your context lean.
 
-## Strategy 2: Use Skill-Specific Optimizations
+## Strategy 2: Leverage Skill-Specific Optimizations
 
 Many Claude Skills are designed with efficiency in mind. The **supermemory** skill, for example, helps you organize and retrieve information without re-explaining context every session. By maintaining structured notes and references, you reduce redundant explanations in subsequent conversations. If you're using supermemory in frontend projects, pair this approach with the workflow tips in [Best Claude Code Skills for Frontend Development](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/).
 
@@ -61,7 +61,7 @@ When using the **pdf** skill for document processing, specify the exact pages or
 
 ## Strategy 4: Optimize Skill Chains
 
-Many workflows require multiple skills working together. The **tdd** skill, for instance, might need to coordinate with **docx** for documentation and **xlsx** for test data. Plan these interactions to minimize redundant context loading.
+Many workflows require multiple skills working together. The **mcp-builder** skill, for instance, might need to coordinate with **docx** for documentation and **xlsx** for test data. Plan these interactions to minimize redundant context loading.
 
 A practical approach is to complete work in stages with explicit boundaries. Process your documentation with **docx** first, then close that context before starting your spreadsheet work with **xlsx**. This prevents all the documentation context from carrying over into unrelated tasks.
 
@@ -82,7 +82,7 @@ They applied similar optimizations to their **tdd** workflow. By narrowing test 
 
 ## Summary
 
-Token optimization in Claude Skills comes down to three principles: specificity, efficiency, and awareness. Write focused prompts, use each skill's optimized workflows, and monitor your consumption patterns. Skills like **supermemory**, **pdf**, **xlsx**, and **tdd** all offer unique opportunities to reduce waste when used thoughtfully.
+Token optimization in Claude Skills comes down to three principles: specificity, efficiency, and awareness. Write focused prompts, leverage each skill's optimized workflows, and monitor your consumption patterns. Skills like **supermemory**, **pdf**, **xlsx**, and **tdd** all offer unique opportunities to reduce waste when used thoughtfully.
 
 The goal isn't to limit what Claude can do—it's to ensure every token delivers maximum value. Start with one or two of these strategies, measure the impact, and iterate from there.
 

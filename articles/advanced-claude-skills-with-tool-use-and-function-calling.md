@@ -1,30 +1,55 @@
 ---
 layout: default
-title: "Advanced Claude Skills: Tool Use Patterns 2026"
-description: "Design Claude skills that use tools precisely. Patterns for reading files, running bash commands, MCP custom tools, and reliable tool chaining."
+title: "Advanced Claude Skills with Tool Use and Function Calling"
+description: "How to design Claude skills that use tools precisely — restricting tool access per skill, creating custom MCP tools, and building reliable tool-calling workflows."
 date: 2026-03-13
-categories: [advanced]
-tags: [claude-code, claude-skills, tool-use, mcp, advanced]
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
+author: theluckystrike
 ---
 
-# Advanced Claude Skills: Tool Use and Function Calling Patterns
+# Advanced Claude Skills with Tool Use and Function Calling
 
 Claude's tool use capabilities transform skills from prompt-only text generators into agents that can read files, execute code, call APIs, and take real actions in your development environment. This guide covers the advanced patterns for designing skills that use tools precisely and reliably.
 
 ## How Tools Work Within Skills
 
-When you invoke a skill with `/skill-name`, Claude runs with access to a set of tools — `read_file`, `write_file`, `bash`, and others depending on your session configuration. Claude decides autonomously when to call a tool based on the task requirements and the guidance in the skill body. Your job as a skill author is to shape that decision-making through the skill's system prompt.
+When a skill is invoked, it operates within a specific tool context. That context determines:
 
-The skill body (everything after the front matter in your `.md` file) is the system prompt Claude receives at invocation time. This is where you tell Claude when and how to use each tool.
+1. Which tools are available (from the skill's `tools` front matter field)
+2. How tool calls are logged and intercepted (via hooks)
+3. What the model sees as the result of each tool call
+
+Claude decides autonomously when to call a tool based on the task requirements and the guidance in the skill body. Your job as a skill author is to shape that decision-making.
+
+## Declaring Tool Requirements
+
+The `tools` field in a skill's front matter limits tool availability for that skill:
+
+```yaml
+---
+name: pdf
+description: Converts markdown documents to PDF files
+tools:
+  - read_file
+  - write_file
+  - bash
+---
+```
+
+This skill can only use `read_file`, `write_file`, and `bash`. Even if the session has `web_fetch` enabled, the `pdf` skill cannot call it. This is useful for:
+
+- **Security**: Preventing skills from making unintended network calls
+- **Auditability**: A skill with a narrow tool set is easier to reason about
+- **Performance**: Skills that don't need certain tools shouldn't try to use them
+
+If you omit `tools` entirely, the skill inherits all session-level tools.
 
 ## Guiding Tool Use in the Skill Body
 
+Restricting which tools are available is not enough for reliable behavior. You also need to tell the skill when and how to use each tool.
+
 ### Specify When to Read Files
 
-Without explicit guidance, Claude may or may not read relevant files before acting. Be explicit:
+Without guidance, Claude may or may not read relevant files before acting. Make it explicit:
 
 ```
 Before writing any code:
@@ -49,7 +74,7 @@ Always run the formatter on any file you write before completing the task.
 
 ### Specify Output File Handling
 
-For skills like `docx` and the [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) that create files, be precise about file naming and location:
+For skills like `docx` and `pdf` that create files, be precise about file naming and location:
 
 ```
 Write output files to the ./output/ directory.
@@ -72,6 +97,7 @@ from mcp.server import Server
 from mcp.server.stdio import stdio_server
 from mcp.types import Tool, TextContent
 import subprocess
+import json
 
 server = Server("linting-tools")
 
@@ -126,9 +152,17 @@ Register the MCP server in `.claude/settings.json`:
 }
 ```
 
-Now any skill invocation in Claude Code can use `run_eslint` as a tool. For a code review skill, write a `code-review.md` skill body like:
+Now any skill can use `run_eslint` as a tool. For a code review skill:
 
-```
+```yaml
+---
+name: code-review
+tools:
+  - read_file
+  - run_eslint
+  - bash
+---
+
 When reviewing code:
 1. Read the file with read_file
 2. Run ESLint with run_eslint and note any violations
@@ -142,7 +176,7 @@ Some tasks require chaining multiple tool calls in a specific sequence. Guide th
 
 ### Read-Modify-Write Pattern
 
-For the [`frontend-design` skill](/claude-skills-guide/articles/best-claude-code-skills-for-frontend-development/):
+For the `frontend-design` skill:
 
 ```
 To add a new component:
@@ -160,7 +194,7 @@ If step 8 produces errors, fix them and re-run before completing.
 
 ### Test-Execute-Verify Pattern
 
-For the [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/):
+For the `tdd` skill:
 
 ```
 For any implementation task:
@@ -189,25 +223,34 @@ Error handling:
   completing the task, even if the user didn't ask you to
 ```
 
+## Tool Use Limits
+
+The `max_turns` field in skill front matter limits the total number of tool calls plus model turns the skill can take:
+
+```yaml
+max_turns: 10
+```
+
+For skills that need to read many files, this can be a bottleneck. Size appropriately: a `tdd` skill that might read 3 files, write 2 files, and run tests 3 times needs at least 8 turns plus model turns.
+
 ## Debugging Tool-Heavy Skills
 
-To see exactly what tool calls a skill is making during development, run Claude Code with verbose output or check the session transcript after the session. Claude Code logs tool calls to the terminal during interactive sessions — you can watch them appear in real time as the skill runs.
-
-When a skill behaves unexpectedly, start a fresh session and add explicit output instructions to the skill body:
+To see exactly what tool calls a skill is making, enable tool logging in your session:
 
 ```
-After each tool call, briefly state: "Called [tool_name] on [target], result: [summary]"
-This helps trace the tool call sequence.
+/tools log on
 ```
 
-Remove this debugging instruction once the skill is working correctly.
+This prints each tool call and its result inline as the skill runs. Use this during skill development to verify the tool call sequence matches your design.
+
+Use `/session log` to see a complete tool call history for the current session, which you can analyze after the fact.
 
 ---
 
 ## Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — Annotated examples of well-structured skill `.md` files, covering how to write the body sections that guide tool use
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — A step-by-step guide for writing skill bodies that orchestrate tool calls effectively
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Tool-heavy skills accumulate context quickly from tool outputs; this article explains how to keep per-session costs manageable
+- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The `tools` and `max_turns` fields that control tool access are fully documented here with annotated examples
+- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — A step-by-step guide covering how to write skill bodies that orchestrate tool calls effectively
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) — Tool-heavy skills accumulate context quickly from tool outputs; this article explains how to keep that cost manageable
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -1,13 +1,9 @@
 ---
 layout: default
-title: "Claude Code Skill Permission Scope Error: Fix Guide"
-description: "Understand and fix permission scope errors in Claude Code skills. Covers sandbox model, settings.json allow/deny rules, and skill-specific patterns."
+title: "Claude Code Skill Permission Scope Error Explained"
+description: "Fix the permission scope error in Claude Code skills. Covers sandbox model, settings.json allow/deny rules, tool-level scope, and skill permissions."
 date: 2026-03-13
-author: "Claude Skills Guide"
-categories: [troubleshooting]
-tags: [claude-code, claude-skills, permissions, troubleshooting]
-reviewed: true
-score: 7
+author: theluckystrike
 ---
 
 # Claude Code Skill Permission Scope Error Explained
@@ -90,8 +86,12 @@ The `tools` key in a skill's YAML front matter is a **declaration**, not a permi
 
 ```yaml
 ---
-name: tdd
 description: "TDD workflow with test and implementation cycle"
+tools:
+  - Bash
+  - Read
+  - Write
+  - Glob
 ---
 ```
 
@@ -101,7 +101,7 @@ If the skill declares `Bash` but the sandbox policy does not allow it, the skill
 
 ## The `tdd` Skill and Bash Scope
 
-The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developers-2026/) needs to run test commands. If your `.claude/settings.json` does not include a `Bash` allow rule for your test runner, the skill will fail with a scope error when trying to run tests:
+The `tdd` skill needs to run test commands. If your `.claude/settings.json` does not include a `Bash` allow rule for your test runner, the skill will fail with a scope error when trying to run tests:
 
 ```json
 {
@@ -118,7 +118,7 @@ The [`tdd` skill](/claude-skills-guide/articles/best-claude-skills-for-developer
 
 ## The `pdf` and `docx` Skills and Path Scope
 
-The [`pdf` skill](/claude-skills-guide/articles/best-claude-skills-for-data-analysis/) and `docx` skills read files from your filesystem. If the files you want to process are outside the current project directory, you need to add allow rules:
+The `pdf` and `docx` skills read files from your filesystem. If the files you want to process are outside the current project directory, you need to add allow rules:
 
 ```json
 {
@@ -136,14 +136,14 @@ Without these rules, the `pdf` skill will produce a scope error when trying to r
 
 ## The `supermemory` Skill and Write Scope
 
-The [`supermemory` skill](/claude-skills-guide/articles/claude-skills-token-optimization-reduce-api-costs/) writes session state to a storage path. The default storage path is outside most project directories, so it requires a write scope rule:
+The `supermemory` skill writes session state to a storage path. The default storage path is outside most project directories, so it requires a write scope rule:
 
 ```json
 {
   "permissions": {
     "allow": [
-      "Write(~/.claude/memory/**)",
-      "Read(~/.claude/memory/**)"
+      "Write(~/.claude-memory/**)",
+      "Read(~/.claude-memory/**)"
     ]
   }
 }
@@ -226,11 +226,5 @@ The permission scope system is not just an obstacle — it is a security layer. 
 Deny rules take precedence over allow rules when both match.
 
 ---
-
-## Related Reading
-
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/articles/skill-md-file-format-explained-with-examples/) — The `tools` field in skill YAML directly affects which permissions are required; this guide covers the full format
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/articles/how-to-write-a-skill-md-file-for-claude-code/) — Writing minimal, precise tool declarations in your skill files is the first step to avoiding scope errors
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/articles/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can activate skills with broader scope than intended; understanding the mechanism helps diagnose unexpected permission errors
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
