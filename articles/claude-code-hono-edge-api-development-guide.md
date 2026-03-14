@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Hono Edge API Development Guide"
-description: "Build lightning-fast edge APIs with Hono and Claude Code. Learn skill patterns, middleware optimization, and deployment strategies for serverless environments."
+description: "Build lightning-fast edge APIs with Hono and Claude Code. Learn skill patterns, middleware optimization, and deployment strategies for serverless."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, hono, edge-computing, api-development, serverless]
@@ -264,5 +264,12 @@ app.use('*', async (c, next) => {
 ## Next Steps
 
 Your edge API foundation is ready. Expand with authentication using Auth.js, add real-time capabilities with WebSockets, or integrate database connections with Prisma and D1. The combination of Hono's efficiency and Claude Code's development assistance makes edge API development straightforward and maintainable.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

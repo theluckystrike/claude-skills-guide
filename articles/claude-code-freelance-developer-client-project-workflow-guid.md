@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Claude Code Freelance Developer Client Project Workflow Guide"
-description: "Master the art of managing client projects as a freelance developer with Claude Code. Learn essential workflows, skills, and best practices for delivering high-quality work."
+title: "Claude Code Freelance Developer Client Project Workflow."
+description: "Master the art of managing client projects as a freelance developer with Claude Code. Learn essential workflows, skills, and best practices for."
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-freelance-developer-client-project-workflow-guid/
+categories: [guides]
 ---
 
 # Claude Code Freelance Developer Client Project Workflow Guide
@@ -175,3 +176,10 @@ After delivery, establish a maintenance workflow:
 Claude Code transforms freelance development from isolated coding sessions into systematic, professional workflows. By establishing clear processes, leveraging appropriate skills, and maintaining strong client communication, you can deliver exceptional results while building a sustainable freelance practice. The key is treating each client project as a structured engagement with clear expectations, regular communication, and rigorous quality standards.
 
 Start implementing these workflows today, and you'll notice improved client satisfaction, reduced scope creep, and more predictable project timelines. Claude Code isn't just a coding assistant—it's your partner in building a successful freelance development business.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -5,6 +5,7 @@ description: "Master Laravel Eloquent ORM with Claude Code. Learn relationship h
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-laravel-eloquent-orm-guide/
+categories: [guides]
 ---
 
 # Claude Code Laravel Eloquent ORM Guide
@@ -248,5 +249,12 @@ Product::chunk(100, function ($products) {
 Claude Code transforms Laravel Eloquent ORM development by generating correct relationship definitions, identifying performance bottlenecks, and suggesting best practices. The key is providing clear context about your Laravel version, database type, and specific use cases in your prompts.
 
 Combine Claude Code with Laravel's built-in features like scopes, accessors, and eager loading to build performant applications. Remember to test your Eloquent models thoroughly using the TDD skill to ensure your data layer remains reliable as your application grows.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
