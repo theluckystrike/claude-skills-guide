@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for University Software Engineering Projects"
-description: "A comprehensive guide for university students using Claude Code to excel in software engineering projects. Learn skills, workflows, and practical examples for academic success."
+description: "A comprehensive guide for university students using Claude Code to excel in software engineering projects. Learn skills, workflows, and practical."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, university, software-engineering, students, projects, learning]
@@ -177,3 +177,11 @@ Claude Code transforms university software engineering projects from challenging
 Remember that Claude Code works best as a collaborative tool—use it to learn, to question, and to improve. The skills you develop working with AI-assisted development will serve you well throughout your career as a software engineer.
 
 Start with small projects, build consistent habits, and watch your productivity and code quality improve semester after semester.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

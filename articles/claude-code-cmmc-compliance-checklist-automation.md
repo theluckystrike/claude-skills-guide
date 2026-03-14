@@ -1,8 +1,9 @@
 ---
 layout: default
 title: "Claude Code CMMC Compliance Checklist Automation"
-description: "Learn how to automate CMMC compliance checklist tasks using Claude Code skills. Practical examples for defense contractors managing cybersecurity requirements."
+description: "Learn how to automate CMMC compliance checklist tasks using Claude Code skills. Practical examples for defense contractors managing cybersecurity."
 date: 2026-03-14
+categories: [guides]
 author: theluckystrike
 permalink: /claude-code-cmmc-compliance-checklist-automation/
 ---
@@ -160,3 +161,11 @@ When implementing Claude Code for CMMC compliance, consider these recommendation
 Claude Code transforms CMMC compliance from a daunting manual effort into a streamlined, automated process. By creating specialized skills that understand both your environment and CMMC requirements, you can significantly reduce the time spent on documentation, improve consistency across your compliance program, and focus your team's energy on actual security improvements rather than checkbox exercises.
 
 The investment in building and refining your compliance skills pays dividends through every assessment cycle. As your skills evolve, so does your organization's compliance capability—turning what was once a painful annual exercise into a continuous, manageable process.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
