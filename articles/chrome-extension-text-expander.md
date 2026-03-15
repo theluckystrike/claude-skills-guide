@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Building a Chrome Extension Text Expander from Scratch"
-description: "A practical guide to building a Chrome extension text expander for developers and power users. Learn the architecture, implementation, and real-world use cases."
+description: "A practical guide to building a Chrome extension text expander for developers and power users. Learn the architecture, implementation, and real-world."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-text-expander/
@@ -248,6 +248,13 @@ As you extend your implementation, consider adding:
 Building your own text expander gives you full control over triggers, expansions, and storage. You can tailor it exactly to your workflow without relying on third-party services.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

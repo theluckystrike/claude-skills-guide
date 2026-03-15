@@ -2,7 +2,7 @@
 
 layout: default
 title: "Zotero Chrome Extension Setup Guide"
-description: "A practical guide for developers and power users setting up Zotero Chrome connector. Configure metadata capture, troubleshoot common issues, and integrate with your research workflow."
+description: "A practical guide for developers and power users setting up Zotero Chrome connector. Configure metadata capture, troubleshoot common issues, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /zotero-chrome-extension-setup-guide/
@@ -150,5 +150,12 @@ For developers interested in extending functionality, several options exist:
 - **Zotero API**: Programmatic access to your library for custom tooling
 
 This enables automated literature reviews, research notifications, and custom citation generation pipelines.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
