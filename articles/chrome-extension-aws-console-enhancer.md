@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension AWS Console Enhancer"
-description: "Discover Chrome extensions that enhance the AWS Console experience for developers and power users. Practical examples, configuration tips, and productivity workflows."
+description: "Discover Chrome extensions that enhance the AWS Console experience for developers and power users. Practical examples, configuration tips, and."
 date: 2026-03-15
 categories: [tutorials]
 tags: [chrome-extension, aws, developer-tools, productivity, aws-console]
@@ -187,6 +187,13 @@ Chrome extensions transform the AWS Console from a basic management interface in
 Start with one or two extensions that address your most frequent workflows. As you become comfortable with the enhanced console, explore additional extensions that match evolving needs. The combination of native AWS capabilities and targeted extensions creates an efficient environment for managing cloud infrastructure.
 
 Remember to review extensions periodically and maintain security awareness. When commercial extensions don't meet specific requirements, custom development provides a path to tailored solutions that integrate directly with your team's workflows.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

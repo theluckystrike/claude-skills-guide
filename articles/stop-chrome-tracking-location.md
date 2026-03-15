@@ -139,4 +139,11 @@ Controlling Chrome's location tracking involves multiple layers: browser setting
 
 Start with Chrome's built-in settings to block site-level location requests. Add OS-level restrictions for defense in depth. Use command-line flags and DevTools for development and testing scenarios.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

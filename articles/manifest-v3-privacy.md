@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Manifest V3 Privacy: What Developers and Power Users Need to Know"
-description: "A practical guide to Chrome extension privacy in Manifest V3. Learn about permission changes, host permissions, declarative Net Request, and how to build privacy-conscious extensions."
+title: "Manifest V3 Privacy: What Developers and Power Users."
+description: "A practical guide to Chrome extension privacy in Manifest V3. Learn about permission changes, host permissions, declarative Net Request, and how to."
 date: 2026-03-15
 author: theluckystrike
 permalink: /manifest-v3-privacy/
@@ -148,6 +148,13 @@ Manifest V3 represents a shift toward more controlled extension behavior, but pr
 For developers, building privacy-respecting extensions isn't just about compliance—it's about user trust. Extensions that demonstrate responsible data handling earn positive reviews and sustained user bases. For power users, understanding these changes helps make better decisions about which extensions to trust with their browsing data.
 
 The Manifest V3 privacy model isn't perfect, but it represents meaningful progress toward a browser extension ecosystem where user privacy is the default rather than the exception.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
