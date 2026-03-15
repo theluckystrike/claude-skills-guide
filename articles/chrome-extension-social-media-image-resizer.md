@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Social Media Image Resizer: A Developer Guide"
+title: "Chrome Extension Social Media Image Resizer: A Developer."
 description: "Learn how to build a Chrome extension for resizing images for social media platforms. Includes code examples and best practices for developers."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -258,5 +258,12 @@ Update your extension by incrementing the version number in manifest.json and up
 Building a social media image resizer as a Chrome extension gives users a convenient tool without requiring server infrastructure. The Canvas API handles all processing client-side, keeping the extension lightweight and privacy-friendly.
 
 Start with the basic resize functionality, then add features like context menus, platform presets, and quality controls based on user feedback. The architecture demonstrated here provides a solid foundation for more advanced image manipulation tools.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

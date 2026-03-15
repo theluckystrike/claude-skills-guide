@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Browser MSI Deployment via SCCM: A Practical Guide"
-description: "Learn how to deploy Google Chrome using MSI packages through Microsoft SCCM/Configuration Manager. Includes command-line parameters, distribution points, and deployment strategies."
+description: "Learn how to deploy Google Chrome using MSI packages through Microsoft SCCM/Configuration Manager. Includes command-line parameters, distribution."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-browser-msi-deployment-sccm/
@@ -198,5 +198,12 @@ This approach provides flexibility for organizations with varied machine configu
 ## Conclusion
 
 Deploying Chrome via SCCM using MSI packages gives enterprise administrators control over browser deployment and configuration. The combination of silent installation, detection rules, and Group Policy integration creates a robust deployment framework. Remember to disable automatic updates if managing updates through SCCM, and establish a process for testing and deploying Chrome browser updates regularly.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

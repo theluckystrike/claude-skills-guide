@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Confluence Workflow Tutorial Guide"
-description: "Learn how to build Claude skills that integrate with Confluence to automate documentation workflows, create pages from templates, and streamline team collaboration."
+description: "Learn how to build Claude skills that integrate with Confluence to automate documentation workflows, create pages from templates, and streamline team."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -267,3 +267,10 @@ This enables scenarios like notifying Slack when critical docs change, automatic
 Claude Code skills for Confluence transform static documentation into dynamic, automated workflows. Start with simple page creation, then expand to templates, automated updates, and webhook-driven automation. Your team will save hours each week while maintaining consistent, well-structured documentation that actually stays current.
 
 The key is treating Confluence as an API-first platform rather than a web application. By abstracting away the browser interface through Claude skills, you enable developers to focus on writing content while automation handles the administrative overhead.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
