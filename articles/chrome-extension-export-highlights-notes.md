@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Export Highlights Notes: A Developer Guide"
-description: "Learn how to build highlight and note export functionality in Chrome extensions. Practical code examples, storage patterns, and export format options for developers."
+description: "Learn how to build highlight and note export functionality in Chrome extensions. Practical code examples, storage patterns, and export format options."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-export-highlights-notes/
@@ -248,6 +248,13 @@ async function runExportTests() {
 Implementing highlight and note export functionality in your Chrome extension requires careful consideration of storage mechanisms, export formats, and user experience. The patterns covered here—using chrome.storage for persistence, creating modular export functions, and building intuitive download interfaces—provide a solid foundation for any highlights-and-notes extension.
 
 Remember to consider your users' workflows when choosing default export formats and providing options. Power users often prefer Markdown for integration with their note-taking systems, while casual users may appreciate the simplicity of JSON for backup purposes.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -2,8 +2,8 @@
 
 
 layout: default
-title: "Chrome Extension Google SERP Preview: Build a Search Result Preview Tool"
-description: "Learn how to build a Chrome extension that previews how your pages appear in Google search results. Includes code examples, SERP element parsing, and real-time preview generation."
+title: "Chrome Extension Google SERP Preview: Build a Search."
+description: "Learn how to build a Chrome extension that previews how your pages appear in Google search results. Includes code examples, SERP element parsing, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-google-serp-preview/
@@ -248,6 +248,13 @@ Adding a feature to edit title and description fields in the popup lets users ex
 Building a SERP preview extension teaches you about Chrome extension development, DOM manipulation, and the structure of search engine results—skills that transfer to many other extension projects.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

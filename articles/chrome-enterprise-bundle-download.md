@@ -180,5 +180,12 @@ Chrome Enterprise releases follow a predictable cadence. Major versions arrive r
 
 The Chrome Enterprise bundle download process itself is straightforward, but effective enterprise browser management requires attention to update policies, configuration templates, and your deployment tooling. Start with the policy templates and MSI installer, then layer in automation and management controls as your deployment scales.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

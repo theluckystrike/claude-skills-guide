@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Flash Sale Notification — Build Your Own Real-Time Deal Alert System"
-description: "Learn how to build a Chrome extension that monitors web pages for flash sales and notifies users in real-time. Includes code examples, architecture patterns, and implementation guide."
+title: "Chrome Extension Flash Sale Notification — Build Your."
+description: "Learn how to build a Chrome extension that monitors web pages for flash sales and notifies users in real-time. Includes code examples, architecture."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-flash-sale-notification/
@@ -302,5 +302,12 @@ For distribution through the Chrome Web Store, you'll need to prepare screenshot
 ## Conclusion
 
 Building a flash sale notification extension combines DOM manipulation, Chrome's extension APIs, and user preference management. Start with basic detection and gradually add features like price tracking, scheduled monitoring, and configurable alerts. The extension you build can save hours of manual browsing and help you never miss a deal again.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

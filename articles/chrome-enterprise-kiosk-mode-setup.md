@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Enterprise Kiosk Mode Setup: Complete Implementation Guide"
-description: "A comprehensive guide to setting up Chrome Enterprise Kiosk Mode for enterprise deployments. Covers Google Admin Console configuration, PowerShell deployment, and programmatic setup."
+title: "Chrome Enterprise Kiosk Mode Setup: Complete."
+description: "A comprehensive guide to setting up Chrome Enterprise Kiosk Mode for enterprise deployments. Covers Google Admin Console configuration, PowerShell."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-kiosk-mode-setup/
@@ -239,5 +239,12 @@ Configure static IP addresses and trusted network settings for production kiosk 
 Chrome Enterprise Kiosk Mode provides a secure, manageable foundation for deploying purpose-built browser experiences across your organization. With proper configuration and monitoring, kiosk deployments can operate reliably for years with minimal maintenance.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -3,7 +3,7 @@
 
 layout: default
 title: "Chrome Extension Periodic Table Reference: Developer Guide"
-description: "A comprehensive reference guide to Chrome extension APIs and components. Practical patterns, code examples, and best practices for developers building powerful browser extensions."
+description: "A comprehensive reference guide to Chrome extension APIs and components. Practical patterns, code examples, and best practices for developers building."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-periodic-table-reference/
@@ -239,6 +239,13 @@ Before publishing to Chrome Web Store:
 5. Test with Chrome's Lighthouse audit for extensions
 
 The Chrome extension ecosystem offers tremendous flexibility for enhancing browser functionality. By understanding these core patterns and APIs, developers can build extensions that are performant, secure, and provide genuine value to users.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

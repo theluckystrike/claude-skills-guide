@@ -3,7 +3,7 @@
 
 layout: default
 title: "Chrome Extension Price Match Finder: A Developer's Guide"
-description: "Build or use Chrome extensions to automatically find price matches across retailers. Technical implementation details and practical examples for developers."
+description: "Build or use Chrome extensions to automatically find price matches across retailers. Technical implementation details and practical examples for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-price-match-finder/
@@ -278,5 +278,12 @@ Price match extensions handle sensitive shopping data. Store only essential info
 Building a Chrome extension for price matching requires careful attention to product identification, price extraction, and cross-retailer comparison. The patterns shown here provide a foundation for creating robust extensions that respect both user privacy and retailer terms of service.
 
 For developers looking to extend this functionality, consider integrating machine learning models for product matching accuracy, implementing browser storage sync for cross-device price alerts, or adding support for price history visualization.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Language Learning Immersion: A Developer's Guide"
+title: "Chrome Extension Language Learning Immersion: A."
 description: "Learn how to build and use Chrome extensions for language learning immersion. Practical code examples and architecture patterns for developers."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -214,5 +214,12 @@ Beyond basic vocabulary highlighting, immersion extensions can provide:
 Chrome extensions offer a unique opportunity to transform your web browsing into a continuous language learning session. The key is building tools that provide support without breaking immersion—offering assistance that fades into the background until needed.
 
 Start with simple vocabulary highlighting, then progressively add features based on your learning needs. The most effective immersion tools are those you'll actually use, so prioritize reliability and minimal disruption to your browsing flow.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

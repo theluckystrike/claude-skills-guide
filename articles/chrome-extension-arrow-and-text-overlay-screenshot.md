@@ -2,7 +2,7 @@
 
 
 layout: default
-title: "Chrome Extension Arrow and Text Overlay Screenshot: A Developer Guide"
+title: "Chrome Extension Arrow and Text Overlay Screenshot: A."
 description: "Learn how to build a Chrome extension that adds arrows and text overlays to screenshots. Complete implementation guide with code examples for developers."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -242,5 +242,12 @@ For extensions that will be published, ensure you declare all permissions explic
 Building a Chrome extension for screenshot annotation requires understanding how capture, canvas rendering, and state management work together. The core pattern involves capturing the visible tab, rendering annotations on a canvas layer, maintaining an annotation array for undo support, and exporting the final result through the downloads API.
 
 With these fundamentals, you can extend the extension to support shapes, freehand drawing, blur regions for privacy, and team collaboration features. The architecture scales well because each annotation type is independent—adding new drawing tools requires only new render functions and state entries.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

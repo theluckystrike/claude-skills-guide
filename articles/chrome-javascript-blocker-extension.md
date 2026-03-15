@@ -3,7 +3,7 @@
 
 layout: default
 title: "Chrome JavaScript Blocker Extension: A Developer's Guide"
-description: "Learn how to use JavaScript blockers in Chrome for privacy, performance, and development testing. Compare extensions, understand tradeoffs, and implement selective blocking."
+description: "Learn how to use JavaScript blockers in Chrome for privacy, performance, and development testing. Compare extensions, understand tradeoffs, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-javascript-blocker-extension/
@@ -187,5 +187,12 @@ Choose your approach based on your primary goal:
 | Balanced approach | Combine ad blocker with selective JS blocking |
 
 For most developers, a combination approach works best: enable automatic blocking for known trackers while maintaining a curated whitelist of domains where you need full functionality.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

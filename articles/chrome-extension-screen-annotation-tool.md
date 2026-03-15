@@ -275,4 +275,11 @@ Building a Chrome extension for screen annotation combines web platform APIs wit
 
 The implementation patterns shown here provide a foundation you can extend with features like cloud sync, team sharing, or integration with documentation systems. Start with the core capture-and-annotate flow, then layer in advanced features based on your users' workflows.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

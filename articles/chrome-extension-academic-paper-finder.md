@@ -2,7 +2,7 @@
 
 
 layout: default
-title: "Chrome Extension Academic Paper Finder: Tools and Implementation Guide"
+title: "Chrome Extension Academic Paper Finder: Tools and."
 description: "Explore chrome extensions for finding academic papers, including implementation patterns for developers building research tools."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -159,6 +159,13 @@ When building academic paper finder extensions, consider API rate limits and aut
 Privacy matters when handling research queries. Some users prefer extensions that don't track search history. Building with clear data handling policies and minimizing external data collection helps maintain user trust.
 
 The extension should handle network errors gracefully and provide useful error messages when APIs are unavailable. Research sessions often depend on these tools working reliably.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

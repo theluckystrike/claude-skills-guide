@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Enterprise Split Tunnel Browsing: A Practical Guide"
-description: "Learn how to configure split tunnel browsing in Chrome Enterprise for optimal performance and security. Includes policy settings, examples, and troubleshooting tips."
+description: "Learn how to configure split tunnel browsing in Chrome Enterprise for optimal performance and security. Includes policy settings, examples, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-split-tunnel-browsing/
@@ -185,5 +185,12 @@ While split tunnel browsing improves performance, consider these security implic
 Chrome Enterprise split tunnel browsing provides a powerful mechanism to optimize network performance while maintaining security boundaries. By carefully configuring PAC scripts and monitoring the implementation, organizations can reduce VPN load, improve user experience, and support modern development workflows.
 
 The key is starting with a conservative configuration—routing only clearly public traffic directly—and expanding based on observed patterns and requirements. Regular review of network telemetry helps identify opportunities for optimization while maintaining the security posture your organization requires.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

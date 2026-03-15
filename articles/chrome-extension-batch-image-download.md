@@ -251,5 +251,12 @@ To test your extension in Chrome:
 
 Building a batch image downloader extension requires careful attention to user experience, performance, and edge cases. The implementation above provides a solid foundation that you can customize for specific use cases. Consider adding features like custom download directories, filename templates, or integration with cloud storage services to differentiate your extension.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
