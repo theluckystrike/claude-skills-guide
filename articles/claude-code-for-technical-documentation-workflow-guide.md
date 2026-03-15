@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Technical Documentation Workflow Guide"
-description: "A comprehensive guide to building efficient technical documentation workflows using Claude Code. Learn practical strategies, code examples, and best practices."
+description: "A comprehensive guide to building efficient technical documentation workflows using Claude Code. Learn practical strategies, code examples, and best."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-technical-documentation-workflow-guide/
@@ -239,4 +239,11 @@ Claude Code transforms technical documentation from a tedious chore into an effi
 
 The key is consistency: regular updates, automated reviews, and treating documentation as a first-class citizen in your development process. With Claude Code handling the heavy lifting, your team can focus on writing great code—and having that code document itself.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

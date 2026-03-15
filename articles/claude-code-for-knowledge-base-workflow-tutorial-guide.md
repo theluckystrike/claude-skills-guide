@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Knowledge Base Workflow: A Complete Tutorial Guide"
-description: "Learn how to leverage Claude Code to build, manage, and automate knowledge base workflows. This comprehensive guide covers practical examples and actionable advice for developers."
+title: "Claude Code for Knowledge Base Workflow: A Complete."
+description: "Learn how to leverage Claude Code to build, manage, and automate knowledge base workflows. This comprehensive guide covers practical examples and."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-knowledge-base-workflow-tutorial-guide/
@@ -318,4 +318,11 @@ Start small—automate one repetitive task this week. As you see results, expand
 
 Remember: The best knowledge base is one that's actively maintained and consistently improved. Claude Code gives you the tools to make that possible.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

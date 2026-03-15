@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Runbook Review Process Workflow"
-description: "A comprehensive guide to using Claude Code for reviewing, validating, and improving runbook quality. Includes practical examples and actionable workflows for DevOps and SRE teams."
+description: "A comprehensive guide to using Claude Code for reviewing, validating, and improving runbook quality. Includes practical examples and actionable."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-runbook-review-process-workflow/
@@ -232,4 +232,11 @@ Claude Code transforms runbook reviews from a painful manual process into a syst
 Start small: pick your most critical runbook and apply these patterns. Iterate based on what you learn. Your future on-call self will thank you.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

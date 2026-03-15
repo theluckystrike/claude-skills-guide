@@ -3,7 +3,7 @@
 
 layout: default
 title: "Chrome Extension Daily Standup Automation: A Practical Guide"
-description: "Learn how to build a Chrome extension that automates your daily standup workflow. Practical code examples, APIs, and implementation patterns for developers."
+description: "Learn how to build a Chrome extension that automates your daily standup workflow. Practical code examples, APIs, and implementation patterns for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-daily-standup-automation/
@@ -303,6 +303,13 @@ Start with one integration—GitHub or Linear—and expand from there. Power use
 The time invested in building this tool pays back quickly when you eliminate the manual effort of composing daily standups while ensuring accurate, data-driven updates.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

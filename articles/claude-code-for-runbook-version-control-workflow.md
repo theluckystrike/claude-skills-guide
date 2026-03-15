@@ -220,4 +220,11 @@ Version control transforms runbooks from static documents into living, collabora
 
 Start by initializing a repository, creating a few core runbooks, and establishing review practices. Over time, you'll develop a culture where runbook maintenance is as natural as code maintenance—and your future self (or the person on-call at 3 AM) will thank you.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

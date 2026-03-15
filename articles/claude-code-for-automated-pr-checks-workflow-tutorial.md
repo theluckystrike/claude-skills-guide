@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Automated PR Checks Workflow Tutorial"
-description: "Learn how to build automated pull request check workflows with Claude Code. This tutorial covers CI/CD integration, custom validation rules, and practical examples."
+description: "Learn how to build automated pull request check workflows with Claude Code. This tutorial covers CI/CD integration, custom validation rules, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-automated-pr-checks-workflow-tutorial/
@@ -210,4 +210,11 @@ Automated PR checks with Claude Code transform code review from a bottleneck int
 
 The investment in setting up these automated checks pays dividends in reduced bugs, improved code consistency, and more efficient human reviews. Your team focuses on creative problem-solving while Claude handles the systematic analysis—exactly the division of labor that modern development requires.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

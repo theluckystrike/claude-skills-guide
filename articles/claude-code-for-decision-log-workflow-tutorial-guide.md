@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Decision Log Workflow: A Complete Tutorial Guide"
-description: "Learn how to create, manage, and automate decision logs using Claude Code. This guide covers practical workflows, code examples, and best practices for tracking project decisions."
+title: "Claude Code for Decision Log Workflow: A Complete."
+description: "Learn how to create, manage, and automate decision logs using Claude Code. This guide covers practical workflows, code examples, and best practices for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-decision-log-workflow-tutorial-guide/
@@ -242,4 +242,11 @@ Start small: create your first decision log entry today, and you'll immediately 
 - Create a decision log template
 - Add decision logging to your project instructions
 - Next time you make a technical choice, ask Claude Code to document it
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

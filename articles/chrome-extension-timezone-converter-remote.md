@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building a Chrome Extension for Timezone Conversion in Remote Teams"
+title: "Building a Chrome Extension for Timezone Conversion in."
 description: "Learn how to build a Chrome extension that handles timezone conversion for remote teams. Includes practical code examples and implementation patterns."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -327,5 +327,12 @@ Consider adding these features based on your team's needs:
 ## Conclusion
 
 Building a timezone converter Chrome extension combines web development skills with practical utility for remote teams. The extension uses JavaScript's native `Intl` API for accurate conversions without heavy dependencies. Start with the core conversion functionality, then add features like saved timezones and page-level detection as your users request them.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
