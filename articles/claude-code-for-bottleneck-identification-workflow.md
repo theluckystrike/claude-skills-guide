@@ -3,10 +3,12 @@ layout: default
 title: "Claude Code for Bottleneck Identification Workflow"
 description: "Master the art of identifying performance bottlenecks using Claude Code. Learn systematic workflows, profiling techniques, and practical strategies to find and fix code performance issues."
 date: 2026-03-15
-author: Claude Skills Guide
+author: "Claude Skills Guide"
 permalink: /claude-code-for-bottleneck-identification-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Claude Code for Bottleneck Identification Workflow
@@ -133,7 +135,7 @@ For CPU-bound code, focus on algorithmic improvements:
 
 1. **Replace O(n²) algorithms with O(n) alternatives** when possible
 2. **Use built-in functions** that are optimized at the runtime level
-3. **Leverage caching** for repeated computations
+3. **use caching** for repeated computations
 4. **Consider compiled extensions** for computationally intensive code
 
 ### I/O Bottlenecks
