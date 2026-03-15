@@ -5,7 +5,7 @@ description: "Discover the best MozBar alternatives for Chrome in 2026. Develope
 date: 2026-03-15
 author: theluckystrike
 permalink: /mozbar-alternative-chrome-extension-2026/
-categories: [tools]
+categories: [guides]
 tags: [chrome-extension, seo, developer-tools, mozbar]
 reviewed: true
 score: 7
