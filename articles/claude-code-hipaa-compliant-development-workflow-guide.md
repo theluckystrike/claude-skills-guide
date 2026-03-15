@@ -196,9 +196,127 @@ npx snyk test
 
 Conduct penetration testing quarterly and maintain documentation of all security assessments. Use automated tools in your CI/CD pipeline to catch vulnerabilities early.
 
+## Configuring Claude Code Skills for HIPAA Workflows
+
+Beyond writing application code, you can configure Claude Code skills that enforce HIPAA patterns throughout your development sessions.
+
+### Secure Skill Permissions
+
+Create a dedicated HIPAA development skill with restricted tool access to ensure Claude Code operates with minimal necessary permissions:
+
+```yaml
+---
+name: hipaa-dev
+description: HIPAA-compliant development workflow with PHI handling
+---
+```
+
+This skill configuration restricts file access to source code only, explicitly denying access to secrets, credentials, and production environments.
+
+### Synthetic PHI Generator
+
+Developers often need realistic-looking test data. Create a skill that generates synthetic PHI that mimics real patient data without containing actual protected information:
+
+```yaml
+---
+name: phi-generator
+description: Generate HIPAA-safe synthetic PHI for testing
+---
+# Guidelines for generating safe test data
+
+When generating test data that represents PHI:
+
+1. Use obviously fake identifiers: names like "Test Patient One", "Jane Doe (Test)"
+2. Generate dates using patterns like 2020-01-01, 2021-06-15 (not real dates)
+3. Use HIPAA-compliant test email domains: testhealth.com, example-health.org
+4. Generate random MRNs (Medical Record Numbers) in your system's format
+5. Never use real Social Security Numbers, even partial - use generated 9-digit sequences
+6. Ensure all synthetic data is clearly marked as test data in comments
+```
+
+### Encryption Validation Skill
+
+Create a skill that validates encryption implementation across your codebase:
+
+```yaml
+---
+name: encrypt-validator
+description: Validate encryption implementation for HIPAA compliance
+---
+# Encryption Validation Guidelines
+
+When reviewing code for HIPAA encryption compliance:
+
+1. **Data at Rest**: Verify database fields containing PHI use column-level encryption or transparent data encryption (TDE)
+2. **Data in Transit**: Ensure all connections use TLS 1.2 or higher
+3. **Application Secrets**: Confirm API keys, tokens, and credentials are stored in secure vaults (AWS Secrets Manager, HashiCorp Vault)
+4. **Encryption Algorithms**: Reject weak algorithms (MD5, SHA1 for security purposes) - require AES-256, RSA-2048+
+5. **Key Management**: Validate that encryption keys are rotated periodically and stored separately from encrypted data
+
+Flag any of the following as violations:
+- Hardcoded passwords or API keys
+- Passwords transmitted over HTTP
+- Database connections without SSL/TLS
+- Encryption using deprecated algorithms
+```
+
+## Automating Compliance Checks
+
+### Pre-Commit Compliance Validation
+
+Integrate compliance checks into your development workflow using a pre-commit hook:
+
+```bash
+#!/bin/bash
+# .git/hooks/pre-commit - Run HIPAA compliance checks before commit
+
+echo "Running HIPAA compliance checks..."
+
+# Check for hardcoded secrets
+if grep -r "password\s*=\s*[\"']" --include="*.js" --include="*.py" .; then
+    echo "ERROR: Hardcoded password detected"
+    exit 1
+fi
+
+# Verify encryption is used for PHI fields
+if ! grep -r "encrypt\|AES\|TLS" --include="*.py" --include="*.js" .; then
+    echo "WARNING: No encryption detected in codebase"
+fi
+
+echo "HIPAA compliance checks passed"
+```
+
+### CI/CD Pipeline Integration
+
+Add HIPAA compliance stages to your CI/CD pipeline:
+
+```yaml
+# .github/workflows/hipaa-compliance.yml
+name: HIPAA Compliance Check
+
+on: [push, pull_request]
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run security scanner
+        run: |
+          npm install -g security-scanner
+          security-scan --hipaa
+
+      - name: Check for PHI in commits
+        run: |
+          git diff --cached --name-only | xargs grep -l "ssn\|social security\|diagnosis\|medication" || echo "No PHI keywords detected"
+```
+
 ## Best Practices Summary
 
 Building HIPAA-compliant applications with Claude Code requires attention to detail and systematic approaches. Key practices include implementing strict access controls, maintaining comprehensive audit logs, encrypting data at rest and in transit, and regularly testing your security measures.
+
+Treat security as code: version control your compliance skills, review them alongside application code, and update them quarterly as HIPAA guidance evolves. Never connect development environments to real PHI — use the synthetic data generator for all development work.
 
 Remember that HIPAA compliance is an ongoing process, not a one-time achievement. Stay updated with the latest security recommendations and regularly review your application's compliance status.
 ---

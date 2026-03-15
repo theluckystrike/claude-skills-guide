@@ -139,6 +139,49 @@ cat > reviews/$(date +%Y%m%d)-${PR_NUMBER}.md << 'EOF'
 EOF
 ```
 
+## Creating Dynamic Checklist Templates
+
+Static checklists don't work well for diverse codebases. Claude Code excels at generating dynamic checklists tailored to each PR's specific changes:
+
+```bash
+claude "/review: Generate a code review checklist for this PR. Include:
+- Security checks relevant to the changed files
+- Performance considerations
+- Code style consistency with the codebase
+- Test coverage requirements
+- Documentation updates needed
+- Error handling completeness"
+```
+
+Claude Code analyzes the diff and produces a structured checklist:
+
+```
+## Code Review Checklist
+
+### Security (Critical)
+- [ ] No hardcoded credentials or API keys
+- [ ] Input validation on all user-facing functions
+- [ ] SQL injection prevention (parameterized queries)
+- [ ] XSS prevention (proper escaping)
+
+### Code Quality
+- [ ] No console.log statements in production code
+- [ ] Error handling for all async operations
+- [ ] Proper TypeScript types where applicable
+
+### Testing
+- [ ] Unit tests for new functions
+- [ ] Integration tests for API endpoints
+- [ ] E2E tests for user-facing changes
+
+### Documentation
+- [ ] API documentation updated
+- [ ] README changes if needed
+- [ ] Breaking changes documented
+```
+
+This dynamic approach ensures every review covers what's actually relevant to each PR.
+
 ## Integrating with Pull Request Workflows
 
 For maximum automation, trigger your checklist skill from CI/CD pipelines or git hooks. Create a pre-push hook:
@@ -150,6 +193,50 @@ echo "Running pre-push code review checklist..."
 claude --print "Using the code-review skill, run the full code review checklist against changes targeting main"
 ```
 
+For teams using GitHub, integrate checklist automation directly into your PR workflow with GitHub Actions:
+
+```bash
+#!/bin/bash
+# .github/scripts/review-checklist.sh
+
+# Get the PR diff
+PR_DIFF=$(git diff origin/main...HEAD)
+
+# Generate checklist using Claude Code
+claude -p "Analyze this PR diff and generate a code review checklist" << EOF
+$PR_DIFF
+EOF
+
+# Post checklist as a PR comment
+gh pr comment $PR_NUMBER --body-file checklist.md
+```
+
+Add this to your GitHub Actions workflow:
+
+```yaml
+name: Code Review Checklist
+on: [pull_request]
+
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Review Checklist
+        run: .github/scripts/review-checklist.sh
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+```
+
+For stricter enforcement, integrate with branch protection rules:
+
+```yaml
+# Require checklist completion in PR
+required_checks:
+  - name: "Code Review Checklist Complete"
+    description: "All critical checklist items must be resolved"
+```
+
 This ensures reviews happen before code merges, catching issues early.
 
 ## Extending the Skill
@@ -159,6 +246,29 @@ Your checklist skill can grow with your team. Common extensions include:
 - **Language-specific modules**: Add checks for Python security (`bandit`), JavaScript security (`eslint-plugin-security`), or Go (`gosec`)
 - **Framework templates**: Use the `template-skill` to generate review templates for different project types (API services, CLI tools, frontend apps)
 - **Supermemory integration**: Store review results using the `supermemory` skill for historical analysis and team metrics
+
+## Context-Aware Checklist Generation
+
+For mature teams, Claude Code can incorporate your codebase's history and standards into checklist generation:
+
+```bash
+claude "/review: Generate checklist considering:
+- Past issues in similar files (check issue tracker)
+- Team's coding standards (check .claude/standards.md)
+- Project-specific requirements (check SPEC.md)"
+```
+
+This approach tailors checklists to your project's unique needs, catching issues specific to your codebase rather than generic patterns.
+
+You can also customize by language to ensure relevant checks:
+
+```bash
+claude "/review: Generate a Python-specific code review checklist"
+# Returns: PEP 8 compliance, type hints, docstrings, bandit security checks, etc.
+
+claude "/review: Generate a JavaScript-specific code review checklist"
+# Returns: ESLint compliance, React best practices, bundle size impact, etc.
+```
 
 ## Best Practices
 
