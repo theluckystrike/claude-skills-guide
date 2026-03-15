@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Privacy Audit: A Developer's Guide"
 description: "Learn how to audit Chrome extensions for privacy risks. Practical techniques for developers and power users to analyze permissions, data collection, and security vulnerabilities."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-privacy-audit/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension Privacy Audit: A Developer's Guide
 

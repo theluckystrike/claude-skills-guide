@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for PyPI Package Publishing Workflow Guide"
 description: "A comprehensive guide to publishing Python packages to PyPI using Claude Code. Learn the complete workflow from setup to distribution."
@@ -7,13 +8,16 @@ author: Claude Skills Guide
 permalink: /claude-code-for-pypi-package-publishing-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
 # Claude Code for PyPI Package Publishing Workflow Guide
 
-Publishing Python packages to PyPI (Python Package Index) is a fundamental skill for any Python developer. Whether you're sharing a utility library, a framework, or a tool with the community, having a streamlined workflow saves time and reduces errors. This guide shows you how to leverage Claude Code to automate and simplify your PyPI publishing workflow.
+Publishing Python packages to PyPI (Python Package Index) is a fundamental skill for any Python developer. Whether you're sharing a utility library, a framework, or a tool with the community, having a streamlined workflow saves time and reduces errors. This guide shows you how to use Claude Code to automate and simplify your PyPI publishing workflow.
 
 ## Setting Up Your Project Structure
 

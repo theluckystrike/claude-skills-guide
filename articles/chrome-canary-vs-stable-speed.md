@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Canary vs Stable Speed: A Developer's Performance Guide"
 description: "Compare Chrome Canary and Stable channel performance. Learn real-world speed differences, when to use each build, and practical tips for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-canary-vs-stable-speed/
+reviewed: true
+score: 8
+categories: [comparisons]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Canary vs Stable Speed: A Developer's Performance Guide
 
