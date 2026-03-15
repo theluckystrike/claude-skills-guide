@@ -152,8 +152,21 @@ Skills like supermemory benefit from clear separation between memory operations 
 
 Start with one skill pair that would benefit from separation, apply the patterns shown here, and expand from there. Your skill suite will become more maintainable with each refactoring iteration.
 
+## Dependency Injection vs. Dependency Inversion: Know the Difference
+
+These terms are related but not interchangeable. Understanding the distinction helps you apply each correctly.
+
+**Dependency Injection (DI)** is a technique: you pass a dependency into a component rather than having the component create it. This is what this guide covers—structuring Claude skills so they receive their dependencies from outside rather than building them internally.
+
+**Dependency Inversion Principle (DIP)** is a design principle from SOLID: high-level modules should not depend on low-level modules; both should depend on abstractions. DIP addresses your application's architecture—how you separate business logic from concrete implementations in your own code.
+
+DI is one common way to achieve DIP, but they are not the same thing. You can use DI without following DIP (injecting concrete classes instead of interfaces), and you can follow DIP without using DI (using abstract factory patterns, for example).
+
+If you are working on refactoring real TypeScript or application-level code to follow the Dependency Inversion Principle using Claude Code, see the dedicated guide: [Claude Code for Dependency Inversion Refactoring Guide](/claude-code-for-dependency-inversion-refactoring-guide/).
+
 ## Related Reading
 
+- [Claude Code for Dependency Inversion Refactoring Guide](/claude-code-for-dependency-inversion-refactoring-guide/) — Using Claude Code to apply the Dependency Inversion Principle in real application codebases
 - [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — Dependency injection implements the Dependency Inversion principle
 - [Claude Code Coupling and Cohesion Improvement](/claude-skills-guide/claude-code-coupling-and-cohesion-improvement/) — DI reduces coupling between components
 - [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/how-to-make-claude-code-refactor-without-breaking-tests/) — DI refactoring needs test coverage

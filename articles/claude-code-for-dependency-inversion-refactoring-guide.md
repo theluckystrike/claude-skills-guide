@@ -16,6 +16,16 @@ score: 8
 
 Dependency Inversion is one of the most transformative principles in software design, yet applying it to existing codebases can feel overwhelming. Fortunately, Claude Code transforms this refactoring from a manual, error-prone process into an assisted, systematic approach. This guide shows you how to use Claude Code effectively for dependency inversion refactoring.
 
+## Dependency Inversion vs. Dependency Injection: Know the Difference
+
+These two terms are closely related but address different concerns.
+
+**Dependency Inversion Principle (DIP)** is a design principle—one of the five SOLID principles. It states that high-level modules should not depend on low-level modules; both should depend on abstractions. This is an architectural rule about how you structure your codebase.
+
+**Dependency Injection (DI)** is a technique for satisfying dependencies from outside a class rather than having the class instantiate them itself. DI is a common implementation mechanism for achieving DIP, but the two are not the same thing.
+
+This guide is about using Claude Code to apply DIP when refactoring application-level code—TypeScript services, repositories, and business logic. If you are instead looking for how to apply DI patterns within Claude skills themselves (skill composition, parameterized skill invocation, tool abstraction layers), see the dedicated guide: [Claude Code Dependency Injection Refactoring](/claude-code-dependency-injection-refactoring/).
+
 ## Understanding Dependency Inversion
 
 Before diving into the refactoring process, let's clarify what Dependency Inversion means:
@@ -237,4 +247,11 @@ Claude Code transforms dependency inversion refactoring from a daunting manual t
 Start with the most critical business logic classes, apply the workflow systematically, and enjoy the improved flexibility and testability that dependency inversion brings.
 
 Remember: the goal isn't abstraction for its own sake—it's about decoupling your business logic from implementation details so changes don't cascade through your system.
+
+## Related Reading
+
+- [Claude Code Dependency Injection Refactoring](/claude-code-dependency-injection-refactoring/) — Applying DI patterns within Claude skills themselves (skill composition and tool abstraction)
+- [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — Dependency Inversion is one of the five SOLID principles
+- [Claude Code Coupling and Cohesion Improvement](/claude-skills-guide/claude-code-coupling-and-cohesion-improvement/) — DIP reduces coupling between high-level and low-level modules
+- [How to Make Claude Code Refactor Without Breaking Tests](/claude-skills-guide/how-to-make-claude-code-refactor-without-breaking-tests/) — Test coverage is essential before refactoring to DIP
 {% endraw %}
