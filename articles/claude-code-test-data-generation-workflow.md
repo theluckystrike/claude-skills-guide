@@ -132,9 +132,9 @@ Integrate test data generation into your CI/CD pipeline using Claude Code's comm
 ```bash
 #!/bin/bash
 # Generate fresh test data for each run
-claude code "Generate 100 test users in JSON format, save to test-data/users.json"
-claude code "Generate 500 test orders linked to users in test-data/users.json"
-claude code "Export to SQL format, save to test-data/seed.sql"
+claude "Generate 100 test users in JSON format, save to test-data/users.json"
+claude "Generate 500 test orders linked to users in test-data/users.json"
+claude "Export to SQL format, save to test-data/seed.sql"
 ```
 
 The **supermemory skill** maintains context across multiple generation commands, remembering your schema definitions and preferences between sessions. This makes iterative refinement of your test data straightforward.

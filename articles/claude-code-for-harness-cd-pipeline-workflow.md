@@ -150,7 +150,7 @@ Beyond active deployment management, Claude Code can analyze your existing pipel
 Run an analysis on your pipeline:
 
 ```bash
-claude analyze-pipeline \
+claude --print "analyze pipeline \"
   --pipeline-id production-deploy \
   --recommendations true
 ```

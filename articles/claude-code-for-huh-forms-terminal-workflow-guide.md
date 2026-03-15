@@ -224,7 +224,7 @@ One of the most powerful use cases is using Claude Code to automate repetitive f
 
 ```bash
 # Example: Using Claude Code to generate form input
-claude code --prompt "Generate a JSON array of 5 user objects with name, email, and role fields" --format json
+claude --print "Generate a JSON array of 5 user objects with name, email, and role fields. Output as JSON."
 ```
 
 You can capture this output and feed it into your huh forms programmatically:

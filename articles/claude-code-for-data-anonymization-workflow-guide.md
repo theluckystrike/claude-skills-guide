@@ -36,7 +36,7 @@ Let's create a practical anonymization workflow using Claude Code. We'll build a
 First, create a new skill for data anonymization:
 
 ```bash
-claude code create skill data-anonymization
+# Create the skill: touch ~/.claude/skills/data-anonymization.md
 ```
 
 Configure your skill with the necessary capabilities in `CLAUDE.md`:

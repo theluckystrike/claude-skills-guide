@@ -133,7 +133,7 @@ Claude Code provides excellent debugging tools to help identify these errors:
 Run your code with debugging enabled to see detailed error traces:
 
 ```bash
-claude code debug --verbose
+claude --print "debug this error with verbose output"
 ```
 
 ### 2. Use Interactive Breakpoints

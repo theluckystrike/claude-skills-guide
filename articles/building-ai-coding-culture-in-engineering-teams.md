@@ -59,7 +59,7 @@ Pair AI code review with human oversight:
 
 ```bash
 # Use claude code to pre-review changes
-claude code --review --diff main..feature-branch
+claude --print "review the diff between main and feature-branch"
 
 # Review output, then add human insights
 # Focus on business logic, edge cases, and architectural fit
@@ -73,7 +73,7 @@ AI coding culture thrives on accurate documentation. Use AI to generate initial 
 
 ```python
 # Generate API documentation
-claude code --docs generate --format openapi
+claude --print "generate OpenAPI documentation for this codebase"
 
 # The output serves as a first draft
 # Developers add context, edge cases, and business rules
