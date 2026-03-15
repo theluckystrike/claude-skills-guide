@@ -4,7 +4,7 @@ layout: default
 title: "AI Answer Engine Chrome Extension: A Developer Guide"
 description: "Learn how to build and integrate AI answer engine chrome extensions for enhanced productivity and intelligent web interactions."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /ai-answer-engine-chrome-extension/
 reviewed: true
 score: 8
