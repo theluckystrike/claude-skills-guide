@@ -61,16 +61,28 @@ The `fetchpriority="high"` attribute tells the browser to prioritize this image 
 
 ### Implement Effective Caching
 
-Server-side caching dramatically improves repeat visits:
+Server-side caching dramatically improves repeat visits. Enable compression and set cache headers in Express.js:
 
 ```javascript
-// Express.js example with cache headers
-app.use((req, res, next) => {
-  if (req.method === 'GET' && req.staticFiles) {
-    res.set('Cache-Control', 'public, max-age=31536000, immutable');
-  }
-  next();
-});
+const express = require('express');
+const compression = require('compression');
+const helmet = require('helmet');
+
+const app = express();
+
+app.use(compression());
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'"],
+    styleSrc: ["'self'", "'unsafe-inline'"],
+  },
+}));
+
+app.use(express.static('public', {
+  maxAge: '1d',
+  etag: false
+}));
 ```
 
 For dynamic content, use stale-while-revalidate patterns:
@@ -212,6 +224,25 @@ When loading dynamic content like ads or lazy-loaded components, allocate fixed 
 
 Alternatively, use skeleton loaders that match expected content dimensions.
 
+### Avoid Inserting Content Above Existing Content
+
+Do not insert new content above existing content unless triggered by user interaction. If you must insert content dynamically, use placeholders with fixed dimensions so the layout does not shift:
+
+```javascript
+function insertBanner() {
+  const banner = document.createElement('div');
+  banner.style.height = '60px';
+  banner.style.width = '100%';
+  banner.style.background = '#007bff';
+  banner.textContent = 'New feature available!';
+
+  const container = document.getElementById('main-content');
+  container.insertBefore(banner, container.firstChild);
+}
+```
+
+Reserving the 60px height before content loads prevents a sudden layout shift when the banner appears.
+
 ### Use Font Display Strategies
 
 Web fonts can cause layout shifts when they swap. Use `font-display: optional` or preload fonts:
@@ -255,6 +286,10 @@ onCLS((metric) => {
   console.log('CLS:', metric.value);
 });
 ```
+
+## Continuous Monitoring
+
+Fixing Core Web Vitals is not a one-time task. Run Lighthouse audits during development and monitor real-user metrics in production using the `web-vitals` library or the PageSpeed Insights API to catch regressions early. Set up alerts when scores drop below your target thresholds so problems are caught before they affect search rankings or user experience.
 
 ## Quick Wins Checklist
 

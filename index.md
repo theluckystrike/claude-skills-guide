@@ -2398,7 +2398,6 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 ## 📁 Other (9 articles)
 
 - [Browser Speed Benchmark 2026 – Performance Comparison for Developers](/claude-skills-guide/browser-speed-benchmark-2026/)
-- [Chrome Core Web Vitals Fix: A Practical Guide for Developers](/claude-skills-guide/chrome-core-web-vitals-fix/)
 - [Chrome Developer Tools Running Slow? Here is How to Fix It](/claude-skills-guide/chrome-developer-tools-slow/)
 - [Why Your Chrome Extension Is Slowing Down Your Browser](/claude-skills-guide/chrome-extension-slowing-browser/)
 - [Chrome Flags for Faster Browsing: A Developer's Guide](/claude-skills-guide/chrome-flags-faster-browsing/)
