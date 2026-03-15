@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Lighthouse Chrome Extension Guide: Master Browser Performance Auditing"
-description: A practical guide to using the Lighthouse Chrome extension for performance auditing, accessibility testing, and web optimization.
+description: "A practical guide to using the Lighthouse Chrome extension for performance auditing, accessibility testing, and web optimization."
 date: 2026-03-15
 author: theluckystrike
 permalink: /lighthouse-chrome-extension-guide/
