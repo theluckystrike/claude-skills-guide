@@ -7,6 +7,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-incident-management-workflow-tutorial/
 categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
