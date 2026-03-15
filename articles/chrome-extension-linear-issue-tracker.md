@@ -2,280 +2,316 @@
 
 layout: default
 title: "Chrome Extension Linear Issue Tracker: A Developer's Guide"
-description: "Learn how to build a Chrome extension that integrates with Linear for issue tracking. Complete implementation guide with code examples."
+description: "Learn how to build and use Chrome extensions for Linear issue tracking. Practical code examples, API integration patterns, and best practices for developers."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-extension-linear-issue-tracker/
-reviewed: true
-score: 8
-categories: [guides]
-tags: [chrome-extension, claude-skills]
+categories: [development, tools, chrome-extension]
+tags: [chrome-extension, linear, issue-tracker, productivity]
 ---
 
-
-{% raw %}
 # Chrome Extension Linear Issue Tracker: A Developer's Guide
 
-Linear has become a popular choice for engineering teams managing projects and issues. Building a Chrome extension that integrates with Linear's API opens up powerful workflow possibilities—from quick issue creation directly from your browser to real-time notifications and streamlined task management. This guide walks you through building a functional Chrome extension for Linear issue tracking.
+Linear is a popular issue tracking tool among development teams. Integrating Linear directly into your Chrome browser through a custom extension can significantly streamline your workflow. This guide covers everything you need to know about building and using Chrome extensions for Linear issue tracking.
 
-## Understanding the Linear API
+## Why Build a Linear Chrome Extension?
 
-Linear provides a GraphQL API that gives you programmatic access to issues, projects, teams, and workflows. Before building your extension, you need to understand how authentication works and what data you can access.
+Linear's web interface works well, but a dedicated Chrome extension provides faster access to common actions without switching tabs. You can create quick shortcuts for:
 
-Linear uses API keys for authentication. You generate these from your Linear workspace settings. Keep your API key secure—never expose it in client-side code. For a Chrome extension, you'll store the key in `chrome.storage.sync` or use the Identity API for OAuth authentication.
+- Creating issues from any webpage
+- Viewing assigned issues without opening Linear
+- Logging time on issues instantly
+- Checking issue status at a glance
 
-The core GraphQL operations you'll need are:
+For developers who frequently reference Linear throughout the day, these small time savings accumulate quickly.
 
-- `issues` - Query and create issues
-- `issueLabels` - Access labels for categorization
-- `users` - Get team member information
-- `workflowStates` - Understand issue states (backlog, todo, in progress, done)
+## Core Components of a Linear Chrome Extension
 
-## Setting Up Your Extension Project
+A functional Linear Chrome extension requires several key components:
 
-Create a new directory for your extension and set up the basic files:
+### Manifest File (manifest.json)
 
-```bash
-mkdir linear-issue-tracker-extension
-cd linear-issue-tracker-extension
-mkdir -p popup icons background
-```
-
-Your `manifest.json` defines the extension's capabilities:
+Every Chrome extension starts with a manifest file that defines permissions and capabilities:
 
 ```json
 {
   "manifest_version": 3,
-  "name": "Linear Issue Tracker",
-  "version": "1.0",
-  "description": "Track and create Linear issues from your browser",
-  "permissions": ["storage", "activeTab"],
-  "host_permissions": ["https://api.linear.app/*"],
+  "name": "Linear Quick Tracker",
+  "version": "1.0.0",
+  "description": "Quick issue creation and tracking for Linear",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
   "action": {
-    "default_popup": "popup/popup.html",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
   },
-  "background": {
-    "service_worker": "background/background.js"
+  "host_permissions": [
+    "https://linear.app/*"
+  ],
+  "oauth2": {
+    "client_id": "YOUR_CLIENT_ID",
+    "scopes": ["read", "write"]
   }
 }
 ```
 
-## Building the Popup Interface
+The OAuth2 configuration allows users to authenticate with their Linear account securely.
 
-The popup provides the main user interface for quick issue creation and viewing. Here's a practical implementation using vanilla JavaScript:
+### Popup Interface (popup.html)
+
+The popup provides the main user interface when clicking the extension icon:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 320px; padding: 16px; font-family: system-ui; }
+    input, textarea, select { width: 100%; margin-bottom: 12px; padding: 8px; }
+    button { width: 100%; padding: 10px; background: #5E6AD2; color: white; border: none; cursor: pointer; }
+    button:hover { background: #4a55b0; }
+    .issue-list { margin-top: 16px; border-top: 1px solid #eee; }
+    .issue-item { padding: 8px 0; border-bottom: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <h3>Linear Quick Tracker</h3>
+  <select id="teamSelect">
+    <option value="">Select Team</option>
+  </select>
+  <input type="text" id="issueTitle" placeholder="Issue title">
+  <textarea id="issueDescription" rows="3" placeholder="Description (optional)"></textarea>
+  <select id="prioritySelect">
+    <option value="0">No priority</option>
+    <option value="1">Urgent</option>
+    <option value="2">High</option>
+    <option value="3">Medium</option>
+    <option value="4">Low</option>
+  </select>
+  <button id="createIssue">Create Issue</button>
+  <div class="issue-list" id="recentIssues"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
+```
+
+## Linear API Integration
+
+The Linear API uses GraphQL, which gives you precise control over what data you fetch and modify. You'll need an API key from Linear's developer settings.
+
+### Authentication
+
+Store your API key securely using Chrome's storage API:
 
 ```javascript
-// popup/popup.js
-document.addEventListener('DOMContentLoaded', async () => {
-  const apiKey = await getApiKey();
-  if (!apiKey) {
-    showSetupPrompt();
-    return;
-  }
-  loadRecentIssues();
-});
+// popup.js - Authentication setup
+const LINEAR_API_KEY_STORAGE_KEY = 'linear_api_key';
+const LINEAR_API_URL = 'https://api.linear.app/graphql';
 
-async function createIssue(title, description, labels) {
-  const query = `
-    mutation CreateIssue($input: IssueCreateInput!) {
+async function getApiKey() {
+  const result = await chrome.storage.local.get(LINEAR_API_KEY_STORAGE_KEY);
+  return result[LINEAR_API_KEY_STORAGE_KEY];
+}
+
+async function setApiKey(apiKey) {
+  await chrome.storage.local.set({ [LINEAR_API_KEY_STORAGE_KEY]: apiKey });
+}
+```
+
+### Creating Issues via GraphQL
+
+The core functionality involves creating issues through Linear's GraphQL API:
+
+```javascript
+async function createLinearIssue(title, description, teamId, priority) {
+  const apiKey = await getApiKey();
+  
+  const mutation = `
+    mutation IssueCreate($input: IssueCreateInput!) {
       issueCreate(input: $input) {
         success
         issue {
           id
           identifier
           title
+          url
         }
       }
     }
   `;
 
-  const response = await fetch('https://api.linear.app/graphql', {
+  const variables = {
+    input: {
+      teamId: teamId,
+      title: title,
+      description: description || null,
+      priority: priority
+    }
+  };
+
+  const response = await fetch(LINEAR_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': apiKey
+      'Authorization': apiKey,
     },
-    body: JSON.stringify({
-      query,
-      variables: {
-        input: {
-          title,
-          description,
-          labelIds: labels
-        }
-      }
-    })
+    body: JSON.stringify({ query: mutation, variables })
   });
 
-  return response.json();
+  const data = await response.json();
+  
+  if (data.data?.issueCreate?.success) {
+    return data.data.issueCreate.issue;
+  } else {
+    throw new Error(data.errors?.[0]?.message || 'Failed to create issue');
+  }
 }
 ```
 
-## Implementing Background Sync
+### Fetching Assigned Issues
 
-Background scripts handle periodic sync operations and keep your local cache updated:
+Retrieve issues assigned to the current user:
 
 ```javascript
-// background/background.js
-const LINEAR_API = 'https://api.linear.app/graphql';
-
-async function fetchIssues(apiKey, cursor = null) {
+async function getAssignedIssues() {
+  const apiKey = await getApiKey();
+  
   const query = `
-    query GetIssues($first: Int, $after: String) {
-      issues(first: $first, after: $after) {
+    query {
+      issues(filter: { assignee: { isMe: { eq: true } } }) {
         nodes {
           id
           identifier
           title
-          description
+          priority
           state {
             name
           }
-          labels {
-            nodes {
-              name
-              color
-            }
-          }
-        }
-        pageInfo {
-          hasNextPage
-          endCursor
+          createdAt
+          url
         }
       }
     }
   `;
 
-  const response = await fetch(LINEAR_API, {
+  const response = await fetch(LINEAR_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': apiKey
+      'Authorization': apiKey,
     },
-    body: JSON.stringify({
-      query,
-      variables: { first: 50, after: cursor }
-    })
+    body: JSON.stringify({ query })
   });
 
-  return response.json();
+  const data = await response.json();
+  return data.data?.issues?.nodes || [];
 }
-
-// Periodic sync every 5 minutes
-chrome.alarms.create('syncIssues', { periodInMinutes: 5 });
-
-chrome.alarms.onAlarm.addListener(async (alarm) => {
-  if (alarm.name === 'syncIssues') {
-    const { apiKey } = await chrome.storage.sync.get('apiKey');
-    if (apiKey) {
-      const data = await fetchIssues(apiKey);
-      await chrome.storage.local.set({ cachedIssues: data.data.issues.nodes });
-    }
-  }
-});
 ```
 
-## Handling Authentication Securely
+## Building the Popup Logic
 
-Security matters when dealing with API keys. Implement a settings page where users can store their Linear API key:
+Connect the UI components with your API functions:
 
 ```javascript
-// popup/settings.js
-async function saveApiKey(apiKey) {
-  // Validate the key works before saving
-  const testResponse = await fetch('https://api.linear.app/graphql', {
+document.addEventListener('DOMContentLoaded', async () => {
+  const apiKey = await getApiKey();
+  
+  if (!apiKey) {
+    showSetupPrompt();
+    return;
+  }
+
+  await loadTeams();
+  await loadAssignedIssues();
+  
+  document.getElementById('createIssue').addEventListener('click', async () => {
+    const title = document.getElementById('issueTitle').value;
+    const description = document.getElementById('issueDescription').value;
+    const teamId = document.getElementById('teamSelect').value;
+    const priority = parseInt(document.getElementById('prioritySelect').value);
+
+    if (!title || !teamId) {
+      alert('Please provide a title and select a team');
+      return;
+    }
+
+    try {
+      const issue = await createLinearIssue(title, description, teamId, priority);
+      alert(`Issue created: ${issue.identifier}`);
+      document.getElementById('issueTitle').value = '';
+      document.getElementById('issueDescription').value = '';
+    } catch (error) {
+      alert(`Error: ${error.message}`);
+    }
+  });
+});
+
+async function loadTeams() {
+  const apiKey = await getApiKey();
+  const query = `{ teams { nodes { id name } } }`;
+  
+  const response = await fetch(LINEAR_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': apiKey
+      'Authorization': apiKey,
     },
-    body: JSON.stringify({
-      query: `query { viewer { id } }`
-    })
+    body: JSON.stringify({ query })
   });
 
-  if (testResponse.ok) {
-    await chrome.storage.sync.set({ apiKey });
-    return true;
-  }
-  return false;
+  const teams = (await response.json()).data?.teams?.nodes || [];
+  const select = document.getElementById('teamSelect');
+  
+  teams.forEach(team => {
+    const option = document.createElement('option');
+    option.value = team.id;
+    option.textContent = team.name;
+    select.appendChild(option);
+  });
 }
 ```
 
-## Adding Context Menu Integration
+## Advanced Features to Consider
 
-A powerful feature for developers is creating issues from selected text anywhere in Chrome:
+Once you have the basics working, consider adding these enhancements:
 
-```javascript
-// background/background.js
-chrome.contextMenus.create({
-  id: 'createLinearIssue',
-  title: 'Create Linear Issue',
-  contexts: ['selection']
-});
+**Keyboard Shortcuts**: Define commands in your manifest for quick actions without opening the popup.
 
-chrome.contextMenus.onClicked.addListener(async (info, tab) => {
-  if (info.menuItemId === 'createLinearIssue') {
-    const { apiKey } = await chrome.storage.sync.get('apiKey');
-    if (apiKey) {
-      // Open a small modal or redirect to popup with pre-filled data
-      chrome.storage.local.set({
-        pendingIssue: {
-          title: `Issue from: ${tab.title}`,
-          description: info.selectionText
-        }
-      });
-      chrome.action.openPopup();
-    }
-  }
-});
-```
+**Context Menus**: Add items to the right-click menu to create issues from selected text on any webpage.
 
-## Practical Use Cases for Developers
+**Desktop Notifications**: Use the Chrome Notifications API to alert users when they're assigned new issues.
 
-This extension becomes valuable in real workflows. Here are practical scenarios:
+**Background Sync**: Periodically check for new assigned issues and display badge counts on the extension icon.
 
-**Code Review Feedback**: Select problematic code in GitHub or your codebase, right-click, and create a Linear issue immediately. The issue captures the code context and links back to its source.
+## Security Best Practices
 
-**Meeting Notes to Tasks**: During meetings, select action items and quickly create issues without switching context. The extension can pre-populate team and project fields based on your working context.
+When building extensions that handle API keys and sensitive data:
 
-**Bug Reporting**: When you encounter a bug in production, select the error message and create an issue in one click. Your cached list of labels helps categorize bugs appropriately.
+- Never hardcode API keys in your source code
+- Use `chrome.storage.local` with encryption for sensitive credentials
+- Request minimum necessary permissions in your manifest
+- Implement proper error handling for API failures
+- Consider using Linear's OAuth flow instead of API keys for production extensions
 
-## Performance Considerations
+## Testing Your Extension
 
-Chrome extensions run in a constrained environment. Optimize your implementation:
+Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Select your extension's directory.
 
-- Cache frequently accessed data in `chrome.storage.local` to reduce API calls
-- Use pagination when fetching large issue lists
-- Implement debouncing for search functionality
-- Lazy-load issue details on demand rather than fetching everything upfront
+Test thoroughly:
+- Create issues across different teams
+- Verify priority settings work correctly
+- Check that error states display appropriately
+- Test with invalid and expired API keys
 
-## Extending the Functionality
+## Conclusion
 
-Once the core features work, consider adding:
+Building a Chrome extension for Linear issue tracking gives you instant access to your workflow without browser tab switching. The GraphQL API provides flexible data access, and Chrome's extension APIs enable rich integration with the browser itself.
 
-- Keyboard shortcuts for quick issue creation
-- Desktop notifications for issue updates
-- Integration with other developer tools (GitHub, Slack)
-- Search across your Linear issues directly from the extension
-
-The Linear GraphQL API offers extensive capabilities. Explore the schema to add features like sprint management, team workload visualization, or custom dashboards.
+Start with the basic issue creation flow, then add features like assigned issue viewing and quick actions based on your team's specific needs. The investment in building this extension pays dividends in time saved throughout your development workday.
 
 ---
 
-This guide provides a foundation for building a Chrome extension that integrates Linear issue tracking into your daily workflow. The combination of a browser extension with Linear's API creates efficient workflows for developers who spend significant time in their browsers.
-
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}
