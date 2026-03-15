@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Load Testing with K6 Workflow Guide"
 description: "Learn how to integrate Claude Code with K6 for efficient load testing workflows. This guide covers script generation, test execution, and result analysis using AI-powered automation."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-load-testing-with-k6-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills, k6, load-testing, performance]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Load Testing with K6 Workflow Guide
 
-Load testing is critical for building resilient applications, but creating comprehensive test scenarios and analyzing results can be time-consuming. This guide shows you how to leverage Claude Code to streamline your K6 load testing workflow—from generating test scripts to interpreting results and optimizing performance.
+Load testing is critical for building resilient applications, but creating comprehensive test scenarios and analyzing results can be time-consuming. This guide shows you how to use Claude Code to streamline your K6 load testing workflow—from generating test scripts to interpreting results and optimizing performance.
 
 ## Why Combine Claude Code with K6?
 
@@ -45,7 +49,7 @@ mkdir k6-load-tests && cd k6-load-tests
 
 ## Creating K6 Test Scripts with Claude Code
 
-One of Claude Code's most valuable contributions is generating K6 test scripts from natural language descriptions. Here's how to leverage this capability effectively.
+One of Claude Code's most valuable contributions is generating K6 test scripts from natural language descriptions. Here's how to use this capability effectively.
 
 ### Example: API Endpoint Testing
 

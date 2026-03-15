@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Using Too Much RAM Fix: A Developer's Guide to Reclaiming Memory"
 description: "practical solutions to fix Chrome using too much RAM. Learn memory profiling, extension management, and command-line optimizations for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-using-too-much-ram-fix/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Using Too Much RAM Fix: A Developer's Guide to Reclaiming Memory
 

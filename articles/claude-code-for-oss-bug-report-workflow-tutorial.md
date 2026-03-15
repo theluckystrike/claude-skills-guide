@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for OSS Bug Report Workflow Tutorial"
 description: "Learn how to build an automated bug report workflow using Claude Code to efficiently process, validate, and manage OSS bug reports with AI-powered automation."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-bug-report-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Benchmark Regression Workflow Tutorial"
 description: "Learn how to set up automated benchmark regression testing with Claude Code to catch performance degradation before it reaches production."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-benchmark-regression-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Benchmark Regression Workflow Tutorial
