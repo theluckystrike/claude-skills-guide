@@ -4,7 +4,7 @@ layout: default
 title: "Wave Chrome Extension Accessibility: A Complete Guide for Developers"
 description: "Learn how to build accessible Chrome extensions using Wave accessibility testing principles. Practical code examples and best practices for developers."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /wave-chrome-extension-accessibility/
 reviewed: true
 score: 8
