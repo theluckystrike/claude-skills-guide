@@ -126,7 +126,7 @@ Users upgrading from earlier versions should note these breaking changes:
 - Custom skill configurations require updating to the new schema
 - Legacy integration endpoints are deprecated (removal scheduled for Q4 2026)
 
-Migration scripts handle most adjustments automatically. Run `claude migrate` after installation to detect and fix compatibility issues.
+Migration scripts handle most adjustments automatically. Review the migration guide after installation to detect and fix compatibility issues.
 
 ## Looking Forward
 

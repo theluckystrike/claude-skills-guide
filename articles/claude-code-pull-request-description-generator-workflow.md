@@ -194,7 +194,7 @@ Integrate the generator into your development workflow by adding it to your pre-
 while read local_ref local_sha remote_ref remote_sha; do
   if [ "$remote_ref" = "refs/heads/main" ]; then
     echo "Generating PR description..."
-    claude skill invoke pr-description-generator > .github/PR_DESCRIPTION.md
+    claude /pr-description-generator > .github/PR_DESCRIPTION.md
   fi
 done
 ```
@@ -217,7 +217,7 @@ jobs:
       
       - name: Generate Description
         run: |
-          claude skill invoke pr-description-generator > pr_description.md
+          claude /pr-description-generator > pr_description.md
       
       - name: Comment PR
         uses: actions/github-script@v7

@@ -222,7 +222,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run Claude Security Scan
         run: |
-          claude scan-owasp --output results.json
+          claude --print "Run OWASP top 10 security scan on this codebase" > results.json
       - name: Upload Results
         uses: actions/upload-artifact@v4
         with:

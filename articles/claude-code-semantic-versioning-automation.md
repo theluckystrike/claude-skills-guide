@@ -144,7 +144,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Semantic Version Skill
-        run: claude run semantic-version --last-tag ${{ github.event.release.tag_name }}
+        run: claude /semantic-version
       - name: Create GitHub Release
         if: steps.semantic-version.outputs.new-version
         uses: actions/create-release@v1

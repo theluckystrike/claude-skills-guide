@@ -129,7 +129,7 @@ The **supermemory** skill proves invaluable for maintaining build documentation 
 
 docs:build:
 	npm run docs:build
-	claude invoke supermemory save-build-config "Build: $(BUILD_VERSION)"
+	claude --print "Save build config for version $(BUILD_VERSION)"
 ```
 
 ## Cross-Platform Makefile Development

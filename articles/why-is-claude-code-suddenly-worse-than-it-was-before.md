@@ -29,7 +29,7 @@ To check which model version Claude Code is currently using, you can run:
 claude --version
 ```
 
-Staying updated with the latest Claude Code version ensures you have the most recent improvements. Run `claude update` periodically to get the latest releases.
+Staying updated with the latest Claude Code version ensures you have the most recent improvements. Run `npm update -g @anthropic-ai/claude-code` periodically to get the latest releases.
 
 ## Context Window and Memory Issues
 
