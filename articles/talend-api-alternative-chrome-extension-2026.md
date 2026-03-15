@@ -6,7 +6,7 @@ description: "Discover the best Talend API alternatives as Chrome extensions in 
 date: 2026-03-15
 categories: [guides]
 tags: [talend, api, chrome-extension, developer-tools, api-testing, integration, claude-skills]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 reviewed: true
 score: 7
 permalink: /talend-api-alternative-chrome-extension-2026/
