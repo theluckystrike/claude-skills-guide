@@ -16,7 +16,7 @@ score: 7
 {% raw %}
 # Claude Code for Changesets Monorepo Release Workflow
 
-Monorepo architectures have become the standard for managing multiple related packages within a single repository. When combined with Changesets, developers can automate versioning and changelog generation with minimal friction. This guide explores how Claude Code can enhance your Changesets-based release workflow, making it more efficient and developer-friendly.
+Once your monorepo is set up with Changesets, the next challenge is the release workflow itself: generating meaningful change descriptions, coordinating version bumps across dependent packages, wiring up CI pipelines, and avoiding common pitfalls. This guide focuses on that release layer — how Claude Code integrates with Changesets at publish time to make the entire process faster and less error-prone.
 
 ## Understanding the Changesets Workflow
 
