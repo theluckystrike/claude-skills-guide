@@ -3,7 +3,7 @@
 
 layout: default
 title: "Axe DevTools Chrome Extension Guide"
-description: "Master accessibility testing with axe DevTools Chrome extension. Learn installation, configuration, and advanced usage for identifying and fixing WCAG violations in your web projects."
+description: "Master accessibility testing with axe DevTools Chrome extension. Learn installation, configuration, and advanced usage for identifying and fixing WCAG."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /axe-devtools-chrome-extension-guide/
@@ -171,5 +171,12 @@ Run a quick scan before committing code to catch obvious issues. Integrate axe i
 Remember that automated testing catches only about 30-40% of accessibility issues. Combine axe with manual testing, keyboard navigation testing, and screen reader testing for comprehensive coverage.
 
 The axe DevTools Chrome extension provides a powerful, developer-friendly way to build accessible web applications. By making accessibility testing a natural part of your development process, you create better experiences for all users while avoiding the costly remediation work that comes from ignoring accessibility until launch.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

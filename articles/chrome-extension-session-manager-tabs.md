@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Session Manager Tabs: A Complete Guide for Developers"
+title: "Chrome Extension Session Manager Tabs: A Complete Guide."
 description: "Learn how to build Chrome extensions that manage browser sessions, save and restore tab groups, and automate tab organization for efficient workflows."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -263,5 +263,12 @@ async function loadSessionSafe(sessionName) {
 Chrome extension session management transforms chaotic tab collections into organized, recoverable workflows. The Sessions API combined with storage APIs gives you complete control over saving and restoring browser state. Start with basic save and restore functionality, then incrementally add features like tab groups, scheduled backups, and keyboard shortcuts as your extension matures.
 
 The key is understanding your users' workflows and designing session management around those patterns. Developers working on multiple projects benefit from quick session switching. Researchers need reliable long-term storage. Power users want automation and keyboard-driven interfaces. Build for your specific audience and iterate based on feedback.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

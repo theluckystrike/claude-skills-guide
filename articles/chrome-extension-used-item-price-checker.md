@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Used Item Price Checker: A Developer's Guide"
-description: "Learn how to build and use Chrome extensions for checking used item prices across multiple marketplaces. Practical implementation patterns, API integrations, and code examples for developers."
+title: "Chrome Extension Used Item Price Checker: A Developer's."
+description: "Learn how to build and use Chrome extensions for checking used item prices across multiple marketplaces. Practical implementation patterns, API."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-used-item-price-checker/
@@ -239,5 +239,12 @@ Privacy-conscious implementations avoid sending listing data to external servers
 Building a used item price checker Chrome extension combines web scraping, data normalization, and UI development into a practical project with real utility. The patterns demonstrated here—content script injection, message passing between components, and storage-backed caching—transfer directly to other comparison tools.
 
 Start by supporting a single marketplace thoroughly before expanding to additional sources. Focus on accurate price extraction and condition detection first, then add comparison features. The resulting extension provides genuine value for anyone buying or selling used items regularly.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

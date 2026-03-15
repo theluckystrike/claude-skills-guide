@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Shadow DOM Viewer: Inspect and Debug Shadow DOM Elements"
+title: "Chrome Extension Shadow DOM Viewer: Inspect and Debug."
 description: "Learn how to use Chrome extensions to inspect, debug, and visualize Shadow DOM in your web applications. Practical examples for developers."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -202,6 +202,13 @@ Ignoring the impact on accessibility. Screen readers traverse Shadow DOM correct
 Chrome extensions and DevTools provide robust capabilities for inspecting Shadow DOM, but understanding the underlying mechanics makes debugging more effective. Master the relationship between shadow hosts and their roots, use console utilities for quick identification, and use breakpoints for complex debugging scenarios.
 
 As web components and Shadow DOM adoption grows, these inspection skills become increasingly valuable. The tools and techniques covered here will help you build more reliable component-based applications while maintaining clean encapsulation boundaries.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

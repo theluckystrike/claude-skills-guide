@@ -2,7 +2,7 @@
 
 layout: default
 title: "Project Management Chrome Extension Development Guide"
-description: "Build a project management Chrome extension from scratch. Learn manifest V3, task synchronization, cross-tab communication, and practical implementation patterns for developers."
+description: "Build a project management Chrome extension from scratch. Learn manifest V3, task synchronization, cross-tab communication, and practical."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /project-management-chrome-extension/
@@ -312,5 +312,12 @@ Avoid common pitfalls in chrome extension development:
 Building a project management chrome extension combines web development skills with Chrome's unique APIs. Start with a solid manifest, design flexible data models, implement robust cross-tab communication, and progressively add features that integrate with your development workflow. The extension ecosystem rewards thoughtful, incremental development.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
