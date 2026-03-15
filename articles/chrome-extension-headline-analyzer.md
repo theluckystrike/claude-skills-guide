@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Headline Analyzer: A Practical Guide for Developers"
+title: "Chrome Extension Headline Analyzer: A Practical Guide."
 description: "Learn how to build and use a Chrome extension headline analyzer to evaluate headline effectiveness with real-time scoring and optimization suggestions."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -160,5 +160,12 @@ Track the actual performance of headlines against their analyzer scores. Create 
 After collecting data across 50-100 headlines, you'll see whether correlation exists between analyzer scores and your specific audience. Some audiences respond to different headline patterns than others. Your historical data becomes more valuable than generic scoring algorithms.
 
 A Chrome extension headline analyzer transforms headline creation from guesswork into a data-informed process. Start with basic metrics, add ML predictions as you build confidence, and always validate against actual performance data.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

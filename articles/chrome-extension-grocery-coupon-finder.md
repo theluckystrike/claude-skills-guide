@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Build a Chrome Extension for Finding Grocery Coupons"
-description: "A practical guide for developers building Chrome extensions that help users find and manage grocery coupons. Includes architecture patterns, code examples, and API integration strategies."
+description: "A practical guide for developers building Chrome extensions that help users find and manage grocery coupons. Includes architecture patterns, code."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-grocery-coupon-finder/
@@ -226,5 +226,12 @@ When ready to distribute:
 4. Track usage with anonymous analytics
 
 Building a grocery coupon finder requires balancing functionality with performance. Focus on supporting major grocery store websites first, then expand to regional chains. The key is providing genuine value without overwhelming users with irrelevant offers.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
