@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension TypeScript Playground: A Developer Guide"
 description: "Learn how to set up a TypeScript playground for Chrome extension development. Practical examples, build configuration, and debugging tips for developers."
 date: 2026-03-15
 categories: [guides]
-tags: [chrome-extension, typescript, development, debugging]
-author: theluckystrike
+tags: [chrome-extension, typescript, development, debugging, claude-skills]
+author: "Claude Skills Guide"
 permalink: /chrome-extension-typescript-playground/
+reviewed: true
+score: 8
 ---
+
 
 # Chrome Extension TypeScript Playground: A Developer Guide
 

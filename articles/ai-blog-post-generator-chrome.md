@@ -1,13 +1,19 @@
 ---
+
 layout: default
 title: "AI Blog Post Generator Chrome Extensions: A Practical Guide for Developers"
 description: "Discover how AI-powered Chrome extensions can streamline your content creation workflow. Learn about key features, use cases, and how to integrate these tools into your development process."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-blog-post-generator-chrome/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
-AI-powered Chrome extensions have become valuable tools for developers and content creators looking to streamline their writing workflow. This guide explores how these extensions work, their practical applications, and how you can leverage them effectively in your projects.
+
+AI-powered Chrome extensions have become valuable tools for developers and content creators looking to streamline their writing workflow. This guide explores how these extensions work, their practical applications, and how you can use them effectively in your projects.
 
 ## Understanding AI Blog Post Generators in Chrome
 

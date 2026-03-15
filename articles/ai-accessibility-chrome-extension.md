@@ -1,16 +1,22 @@
 ---
+
 layout: default
 title: "AI Accessibility Chrome Extension: A Developer Guide"
 description: "Learn how to build AI-powered accessibility extensions for Chrome. Practical code examples, APIs, and techniques for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-accessibility-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # AI Accessibility Chrome Extension: A Developer Guide
 
-Building an accessibility-focused Chrome extension that leverages artificial intelligence opens up powerful possibilities for making the web more inclusive. This guide walks you through the core concepts, APIs, and practical implementation patterns for creating an AI-powered accessibility tool.
+Building an accessibility-focused Chrome extension that uses artificial intelligence opens up powerful possibilities for making the web more inclusive. This guide walks you through the core concepts, APIs, and practical implementation patterns for creating an AI-powered accessibility tool.
 
 ## Understanding the Architecture
 

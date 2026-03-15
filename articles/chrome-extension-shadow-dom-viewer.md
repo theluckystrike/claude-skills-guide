@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Shadow DOM Viewer: Inspect Hidden DOM Structures"
 description: "Discover Chrome extensions and developer tools for viewing and inspecting Shadow DOM. Learn how to debug encapsulated web components in your browser."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-shadow-dom-viewer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 

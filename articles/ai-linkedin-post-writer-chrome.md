@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "AI LinkedIn Post Writer Chrome: Tools and Techniques for Developers"
 description: "Explore approaches to building and using AI-powered tools for writing LinkedIn posts directly in Chrome. Practical implementation patterns, code examples, and workflow strategies for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-linkedin-post-writer-chrome/
 categories: [guides]
-tags: [chrome-extension, ai-writing, linkedin]
+tags: [chrome-extension, ai-writing, linkedin, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 # AI LinkedIn Post Writer Chrome: Tools and Techniques for Developers
 

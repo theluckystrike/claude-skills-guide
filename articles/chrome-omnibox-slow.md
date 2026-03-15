@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Omnibox Slow: Causes and Fixes for Better Address Bar Performance"
 description: "A practical guide for developers and power users to diagnose and fix Chrome omnibox slow performance. Covers extension conflicts, URL prediction, hardware acceleration, and profile troubleshooting."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-omnibox-slow/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Omnibox Slow: Causes and Fixes for Better Address Bar Performance
 

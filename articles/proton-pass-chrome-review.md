@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Proton Pass Chrome Extension: A Developer Review"
 description: "A practical review of Proton Pass Chrome extension for developers and power users. Explore features, CLI tools, security architecture, and integration."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /proton-pass-chrome-review/
 categories: [security, password-manager]
-tags: [chrome, proton-pass, developer-tools]
+tags: [chrome, proton-pass, developer-tools, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 # Proton Pass Chrome Extension: A Developer Review
 

@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Diff Checker: Compare Code and Text in Your Browser"
 description: "A comprehensive guide to diff checker Chrome extensions for developers. Compare code, track changes, and streamline your development workflow."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-diff-checker/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 A diff checker is an essential tool for any developer or power user working with code, configuration files, or text documents. While command-line tools like `diff` and `git diff` serve their purpose, a Chrome extension diff checker brings visual comparison capabilities directly into your browser—eliminating the need to switch between terminals and editors.

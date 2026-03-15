@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Block WebRTC Leak in Chrome: A Developer's Guide"
 description: "Learn how to block WebRTC leaks in Chrome. Practical methods for developers and power users to prevent IP address exposure through WebRTC."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /block-webrtc-leak-chrome/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Block WebRTC Leak in Chrome: A Developer's Guide
 

@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Release Rollback Workflow Tutorial"
 description: "Learn how to implement automated release rollback workflows using Claude Code. Practical examples, code snippets, and actionable advice for developers."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-release-rollback-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 {% raw %}
 
 Release rollbacks are critical operations in modern software deployment. When a production deployment goes wrong, the difference between a five-minute recovery and a five-hour outage can depend on having the right automation in place. This tutorial shows you how to build a robust release rollback workflow using Claude Code, enabling your team to detect issues quickly and recover safely.

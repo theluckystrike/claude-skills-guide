@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension HTTP Header Viewer: A Developer's Guide"
 description: "Learn how to inspect, analyze, and debug HTTP headers using Chrome extensions. Practical examples for developers and power users debugging APIs and web applications."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-http-header-viewer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension HTTP Header Viewer: A Developer's Guide
 

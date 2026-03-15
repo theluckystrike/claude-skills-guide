@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Headline Writer Chrome Extension: A Developer's Guide"
 description: "Learn how to build and use AI-powered headline writing tools as a Chrome extension for improved productivity."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-headline-writer-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 AI headline writer Chrome extensions have become essential tools for developers, content creators, and marketers who need to generate compelling titles at scale. These browser extensions integrate large language models directly into your workflow, allowing you to craft headlines without switching between applications. This guide covers the technical implementation, practical use cases, and customization strategies for building your own AI headline writer extension.
 

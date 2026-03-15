@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Dependency License Audit Workflow"
 description: "Learn how to automate dependency license auditing with Claude Code. Build skills that scan, analyze, and report on third-party package licenses across your projects."
@@ -7,7 +8,10 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 author: Claude Skills Guide
 permalink: /claude-code-for-dependency-license-audit-workflow/
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Dependency License Audit Workflow

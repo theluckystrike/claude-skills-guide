@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Release Pipeline Workflow Tutorial"
 description: "Learn how to use Claude Code to automate and streamline your release pipeline workflows. This tutorial covers practical examples for building, testing, and deploying applications with AI assistance."
@@ -8,13 +9,16 @@ author: Claude Skills Guide
 permalink: /claude-code-for-release-pipeline-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills, devops, release-automation, ci-cd]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
 # Claude Code for Release Pipeline Workflow Tutorial
 
-Release pipelines are the backbone of modern software delivery, automating the journey from code commit to production deployment. Claude Code can serve as an intelligent assistant throughout this entire process, helping you design workflows, debug failures, and optimize your delivery pipeline. This tutorial shows you how to leverage Claude Code effectively for release pipeline management.
+Release pipelines are the backbone of modern software delivery, automating the journey from code commit to production deployment. Claude Code can serve as an intelligent assistant throughout this entire process, helping you design workflows, debug failures, and optimize your delivery pipeline. This tutorial shows you how to use Claude Code effectively for release pipeline management.
 
 ## Understanding Release Pipeline Basics
 
