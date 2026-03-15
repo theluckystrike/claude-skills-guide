@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Extension Color Contrast Checker: Essential Tools for Accessible Design"
-description: "Discover the best Chrome extensions for checking color contrast ratios. Learn how to build custom contrast checkers and integrate accessibility testing into your workflow."
+title: "Chrome Extension Color Contrast Checker: Essential Tools."
+description: "Discover the best Chrome extensions for checking color contrast ratios. Learn how to build custom contrast checkers and integrate accessibility testing."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-color-contrast-checker/
@@ -143,6 +143,13 @@ Even experienced developers make mistakes with color contrast. Watch for these c
 Select a color contrast checker based on your specific needs. For quick checks during design work, lightweight extensions like WhatContrast offer speed and simplicity. For comprehensive audits, axe DevTools or WAVE provide detailed reports. For custom integration, building your own extension using the examples above gives you full control over features and workflow.
 
 The best tool is one you'll actually use consistently. Start with a simple extension, establish a habit of checking contrast during development, and gradually adopt more comprehensive testing as accessibility becomes ingrained in your process.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -224,4 +224,11 @@ Chrome extensions for GitHub issue management provide tangible productivity impr
 
 For teams with unique requirements, building custom extensions using the GitHub API offers flexibility beyond pre-built solutions. The key is identifying repetitive tasks in your issue management process and selecting tools that address those pain points directly.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

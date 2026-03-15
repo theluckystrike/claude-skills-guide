@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Refined GitHub Chrome Extension: Features, Setup, and Practical Usage"
+title: "Refined GitHub Chrome Extension: Features, Setup, and."
 description: "A comprehensive guide to the Refined GitHub Chrome extension for developers—installation, key features, configuration options, and practical examples."
 date: 2026-03-15
 categories: [tools, chrome-extensions, github]
@@ -100,5 +100,12 @@ The extension runs entirely client-side. All processing happens in your browser,
 Refined GitHub delivers practical improvements for developers who use GitHub daily. The installation takes seconds, configuration is straightforward, and the feature set addresses real workflow friction. The open-source nature means transparency in what the extension does, and the active maintenance keeps it functional as GitHub evolves.
 
 For developers toggling between dozens of repositories, managing multiple issues, or reviewing pull requests regularly, these enhancements compound into meaningful time savings. Start with default settings and disable features that don't match your workflow—the modular approach ensures you get only what you need.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

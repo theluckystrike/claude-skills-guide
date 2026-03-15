@@ -153,5 +153,12 @@ Developers building these tools should monitor W3C accessibility standards and C
 
 For power users, combining AI screen readers with traditional tools like NVDA, JAWS, or VoiceOver often provides the best experience. AI handles visual interpretation while established screen readers manage focus management and text navigation.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

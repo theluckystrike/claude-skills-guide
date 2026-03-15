@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Perplexity Chrome Extension Review: A Developer's Perspective"
+title: "Perplexity Chrome Extension Review: A Developer's."
 description: "A practical review of the Perplexity AI Chrome extension for developers and power users. Explore features, integration patterns, and real-world use cases."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -95,5 +95,12 @@ The extension's strength lies in its ability to bridge the gap between search an
 The Perplexity Chrome extension proves valuable for developers who need efficient research capabilities without leaving their browser. Its context-aware responses, source attribution, and quick access features make it a solid addition to a developer's toolkit. While it won't replace dedicated documentation or a well-structured bookmarks system, it significantly accelerates the research phase of development work.
 
 For teams evaluating AI-powered research tools, the extension offers a low-friction starting point that integrates directly into the browser workflow you already use daily. The key is understanding its role as a research accelerator rather than an authoritative source, and using it in conjunction with official documentation and community resources.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

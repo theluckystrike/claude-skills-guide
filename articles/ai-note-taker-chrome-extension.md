@@ -179,4 +179,11 @@ AI note taker Chrome extensions represent a powerful category of productivity to
 
 The key lies in selecting tools that fit your specific needs: the right balance between convenience and control, cloud versus local processing, and free versus paid features. For developers, building a custom extension provides maximum flexibility while learning how these systems work internally.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

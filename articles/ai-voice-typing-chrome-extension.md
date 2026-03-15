@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Building an AI Voice Typing Chrome Extension: A Developer's Guide"
-description: "A practical guide to building an AI voice typing Chrome extension using the Web Speech API. Code examples, architecture patterns, and implementation details for developers."
+title: "Building an AI Voice Typing Chrome Extension: A."
+description: "A practical guide to building an AI voice typing Chrome extension using the Web Speech API. Code examples, architecture patterns, and implementation."
 date: 2026-03-15
 author: theluckystrike
 permalink: /ai-voice-typing-chrome-extension/
@@ -360,6 +360,13 @@ When ready to distribute, create a ZIP file of your extension directory and subm
 The Web Store review process typically takes 24-72 hours.
 
 Building an AI voice typing Chrome extension combines browser APIs with extension architecture to create a genuinely useful productivity tool. The Web Speech API provides robust recognition without requiring server-side processing, making your extension fast and privacy-friendly. With the foundation in place, you can expand features like multiple language support, custom vocabulary, punctuation commands, and integration with clipboard history.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

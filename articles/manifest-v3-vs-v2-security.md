@@ -2,7 +2,7 @@
 
 layout: default
 title: "Manifest V3 vs V2 Security: What Developers Need to Know"
-description: "A practical comparison of Chrome extension security between Manifest V2 and V3. Learn about the key security changes, breaking differences, and migration strategies."
+description: "A practical comparison of Chrome extension security between Manifest V2 and V3. Learn about the key security changes, breaking differences, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /manifest-v3-vs-v2-security/
@@ -202,5 +202,12 @@ These cumulative changes create a defense-in-depth strategy that protects users 
 Manifest V3's security model shifts the burden from runtime trust to build-time verification. By requiring bundled code, explicit permissions, and event-driven architecture, Google created a more defensive extension platform. Users benefit from reduced attack surface, while developers gain a clearer permission model and improved extension performance.
 
 For developers, the migration requires upfront investment but delivers lasting security improvements. The Chrome Web Store no longer accepts new Manifest V2 extensions, making the transition mandatory for any active extension project.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

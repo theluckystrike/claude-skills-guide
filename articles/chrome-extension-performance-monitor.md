@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Performance Monitor: A Developer's Guide"
-description: "Learn how to monitor and optimize your Chrome extension performance using built-in tools, DevTools, and practical code patterns for developers and power users."
+description: "Learn how to monitor and optimize your Chrome extension performance using built-in tools, DevTools, and practical code patterns for developers and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-performance-monitor/
@@ -205,5 +205,12 @@ chrome.metrics.onRecordHistogram.addListener((metric) => {
 Monitoring Chrome extension performance requires understanding the unique execution contexts where your code runs. Use Chrome's built-in tools—Task Manager, DevTools, and extension-specific pages—to identify bottlenecks in content scripts, service workers, and network requests.
 
 Apply the memory management patterns and performance best practices outlined here to create extensions that enhance rather than hinder the browsing experience. Regular profiling during development catches issues before they reach your users.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Have I Been Pwned Chrome: A Developer and Power User Guide"
-description: "Learn how to check if your credentials have been exposed in data breaches using Have I Been Pwned. Explore browser extensions, API integration, and automated monitoring strategies."
+description: "Learn how to check if your credentials have been exposed in data breaches using Have I Been Pwned. Explore browser extensions, API integration, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /have-i-been-pwned-chrome/
@@ -156,5 +156,12 @@ Beyond checking whether you've been pwned, establish habits that minimize your e
 - Consider using email forwarding aliases to identify which services leak or sell your data
 
 The HIBP API and Chrome extensions provide robust tools for staying informed about credential exposure. By integrating these checks into your development workflow and personal security practices, you reduce the risk of account compromise through credential stuffing and targeted attacks that rely on reused passwords.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
