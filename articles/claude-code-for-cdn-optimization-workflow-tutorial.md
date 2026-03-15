@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for CDN Optimization Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline your CDN optimization workflow. This comprehensive tutorial covers asset optimization, caching strategies, and automation techniques."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-cdn-optimization-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for CDN Optimization Workflow Tutorial
 
-Content Delivery Networks (CDNs) are essential for delivering fast, reliable web experiences. However, optimizing CDN configurations manually can be time-consuming and error-prone. In this tutorial, you'll learn how to leverage Claude Code to automate and streamline your CDN optimization workflow, saving hours of manual work while ensuring optimal performance.
+Content Delivery Networks (CDNs) are essential for delivering fast, reliable web experiences. However, optimizing CDN configurations manually can be time-consuming and error-prone. In this tutorial, you'll learn how to use Claude Code to automate and streamline your CDN optimization workflow, saving hours of manual work while ensuring optimal performance.
 
 ## Understanding CDN Optimization Basics
 

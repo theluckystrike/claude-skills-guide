@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for OSS Maintainer Burnout Workflow"
 description: "A practical guide to building a burnout prevention workflow with Claude Code. Learn how to automate repetitive tasks, set healthy boundaries, and reclaim your passion for open source."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-maintainer-burnout-workflow/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
