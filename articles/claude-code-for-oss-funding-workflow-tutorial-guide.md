@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for OSS Funding Workflow Tutorial Guide"
-description: "Learn how to leverage Claude Code to streamline and automate your open source project funding workflows, from setting up sponsorships to managing donor relations."
+description: "Learn how to leverage Claude Code to streamline and automate your open source project funding workflows, from setting up sponsorships to managing donor."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-oss-funding-workflow-tutorial-guide/
@@ -199,3 +199,10 @@ Start small: create your FUNDING.yml today, then gradually add more sophisticate
 
 Remember, sustainable open source isn't just about getting funded—it's about building relationships with people who believe in your work. Let Claude Code handle the logistics while you nurture those connections.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

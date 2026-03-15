@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Open Source Contribution Workflow Guide"
-description: "Master the workflow of contributing to open source projects using Claude Code. Learn to navigate repositories, understand codebases, make meaningful contributions, and collaborate effectively with maintainers."
+description: "Master the workflow of contributing to open source projects using Claude Code. Learn to navigate repositories, understand codebases, make meaningful."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-open-source-contribution-workflow-guide/
@@ -219,3 +219,10 @@ Remember: every open source contributor started somewhere. The community welcome
 
 Happy contributing!
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

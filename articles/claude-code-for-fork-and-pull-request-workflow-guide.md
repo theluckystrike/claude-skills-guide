@@ -126,3 +126,10 @@ Mastering fork and pull request workflows with Claude Code significantly reduces
 
 Start by implementing one or two of these practices in your next contribution. As you become comfortable with the workflow, add more automation to handle increasingly complex scenarios. Your future self—and the maintainers reviewing your PRs—will appreciate the effort.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
