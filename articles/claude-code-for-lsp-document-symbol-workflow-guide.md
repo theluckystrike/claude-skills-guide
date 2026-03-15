@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code with Language Server Protocol (L
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-lsp-document-symbol-workflow-guide/
-categories: [Development, Claude Code, LSP]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 ---
 
@@ -210,3 +210,4 @@ Mastering LSP document symbol workflows with Claude Code unlocks powerful capabi
 
 Remember: The key to effective symbol-based workflows is maintaining clean, well-organized code structures that your language server can accurately parse and present.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
