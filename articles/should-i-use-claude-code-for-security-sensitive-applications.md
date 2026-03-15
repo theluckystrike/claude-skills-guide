@@ -28,11 +28,11 @@ That said, Claude Code offers strong controls that make it viable for many secur
 For truly sensitive code sections, consider using Claude's skills that keep processing local. The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), for example, maintains context locally on your machine between sessions without necessarily sending every detail to external servers.
 
 ```bash
-# Initialize a local-only session
-claude --local-only
+# Start Claude Code — use CLAUDE.md to restrict scope and tools
+claude
 ```
 
-This approach keeps your code and conversation history on your local machine, reducing exposure while still benefiting from Claude's assistance.
+This approach, combined with careful CLAUDE.md configuration, keeps sensitive operations scoped and auditable.
 
 ### Strategy 2: Redact Sensitive Data Before Sharing
 

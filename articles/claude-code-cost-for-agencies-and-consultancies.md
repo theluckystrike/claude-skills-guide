@@ -81,7 +81,7 @@ Load only relevant files into context. For agencies working with diverse tech st
 
 ```bash
 # Example: Only load relevant directories
-cd client-project && claude --load src/api --load src/components
+cd client-project && claude --add-dir src/api --add-dir src/components
 ```
 
 ### 3. Leverage Specialized Skills

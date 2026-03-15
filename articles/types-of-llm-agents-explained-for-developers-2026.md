@@ -70,8 +70,7 @@ Claude Code's autonomous capabilities shine in scenarios like:
 
 ```bash
 # Autonomous bug fixing
-claude --on-fix "Run the test suite, identify failing tests, 
-fix the bugs, and verify all tests pass"
+claude --print "Run the test suite, identify failing tests, fix the bugs, and verify all tests pass"
 ```
 
 Autonomous agents in Claude Code can:

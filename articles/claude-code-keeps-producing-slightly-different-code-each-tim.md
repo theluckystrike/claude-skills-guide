@@ -39,15 +39,15 @@ This variability can cause several practical issues:
 
 ## Practical Strategies for Consistent Output
 
-### Strategy 1: Use the --quiet Flag with Consistent Prompts
+### Strategy 1: Use --print Mode with Consistent Prompts
 
-The `--quiet` flag reduces verbose output and can help produce more consistent results by minimizing additional context that might influence generation:
+Using `--print` (non-interactive mode) with a fixed, precise prompt helps produce more consistent results by removing interactive session variables:
 
 ```bash
-claude --quiet "Create a function that validates email addresses using regex"
+claude --print "Create a function that validates email addresses using regex"
 ```
 
-By using the quiet flag consistently, you reduce variables that could affect output.
+By using `--print` with the same prompt consistently, you reduce variables that could affect output.
 
 ### Strategy 2: Provide Explicit Examples in Your Prompt
 

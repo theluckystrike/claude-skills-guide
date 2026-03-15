@@ -121,8 +121,8 @@ Experienced developers use Claude Code's clipboard integration and session manag
 # Resume a previous session
 claude --resume session-id
 
-# Export conversation for documentation
-claude --export conversation.json
+# Copy session transcript for documentation
+# (use --continue to resume, or save terminal output manually)
 ```
 
 This feature becomes essential when:
