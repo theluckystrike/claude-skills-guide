@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Network Request Blocker: A Developer Guide"
 description: "Learn how to build and implement network request blocking in Chrome extensions using Manifest V3. Practical examples for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-network-request-blocker/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 Network request blocking is one of the most powerful capabilities available to Chrome extension developers. Whether you need to block ads, tracker's analytics scripts, or debug API calls during development, understanding how to intercept and block network requests from a Chrome extension opens up a wide range of possibilities.

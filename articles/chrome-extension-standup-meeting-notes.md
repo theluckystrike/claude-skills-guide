@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Building a Chrome Extension for Standup Meeting Notes"
 description: "Learn how to create a Chrome extension to capture, organize, and export your daily standup meeting notes efficiently."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-standup-meeting-notes/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 

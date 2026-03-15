@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Sprint Planning Poker: Build Your Own Agile Estimation Tool"
 description: "Learn how to build a Chrome extension for sprint planning poker. Practical code examples, architecture patterns, and implementation strategies for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-sprint-planning-poker/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # Chrome Extension Sprint Planning Poker: Build Your Own Agile Estimation Tool
 
@@ -18,7 +24,7 @@ Browser-based planning poker tools require internet connectivity and often come 
 
 First, you gain offline functionality. Teams working in locations with unreliable internet or those who prefer local-first tools can continue estimating stories without disruption. Second, you can integrate directly with your existing project management system—whether Jira, Linear, or a custom solution—by reading page content and injecting estimates automatically. Third, you own the data. No third-party servers store your estimation history, making compliance with data residency requirements straightforward.
 
-The extension architecture also allows you to leverage Chrome's native capabilities, including storage synchronization across devices, native notifications, and the ability to interact with any webpage your team uses.
+The extension architecture also allows you to use Chrome's native capabilities, including storage synchronization across devices, native notifications, and the ability to interact with any webpage your team uses.
 
 ## Project Structure and Manifest Configuration
 

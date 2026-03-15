@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Package Tracker for All Carriers: A Developer's Guide"
 description: "Learn how to build or use a Chrome extension that tracks packages across all carriers. Practical code examples and architecture for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-package-tracker-all-carriers/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 Tracking packages across multiple carriers in a single Chrome extension is a common challenge for developers building logistics tools. Whether you're creating a personal productivity extension or a full-featured shipment management tool, understanding the underlying architecture and APIs makes the difference between a fragile implementation and a robust solution.
 

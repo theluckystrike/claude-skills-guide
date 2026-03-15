@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Textbook Deal Finder: A Developer Guide"
 description: "Build a Chrome extension to find the best textbook prices across multiple retailers. Technical implementation guide with code examples for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-textbook-deal-finder/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # Chrome Extension Textbook Deal Finder: A Developer Guide
 

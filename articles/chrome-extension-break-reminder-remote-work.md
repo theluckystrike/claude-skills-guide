@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Building a Chrome Extension for Break Reminders in Remote Work"
 description: "Learn how to build a Chrome extension that helps remote workers take regular breaks. Complete with code examples and practical implementation guide."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-break-reminder-remote-work/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 Remote work offers flexibility and freedom, but it also blurs the boundaries between focused work and rest. Without the natural interruptions of an office environment—colleagues stopping by, meetings, or simply walking to a different room—developers and power users often find themselves staring at screens for hours without taking breaks. This habit leads to eye strain, decreased productivity, and burnout.

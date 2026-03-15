@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Employee Recognition Tool: Build Your Own"
 description: "Learn how to build a custom Chrome extension for employee recognition. Practical code examples, architecture patterns, and implementation strategies for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-employee-recognition-tool/
 categories: [guides]
-tags: [chrome-extension, employee-recognition, productivity-tools]
+tags: [chrome-extension, employee-recognition, productivity-tools, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 # Chrome Extension Employee Recognition Tool: Build Your Own
 
@@ -15,7 +19,7 @@ Employee recognition plays a critical role in maintaining workplace morale and p
 
 ## Why Build a Chrome Extension for Recognition?
 
-Browser-based tools integrate seamlessly with daily workflows. Developers, designers, and knowledge workers spend most of their time in Chrome, making it the ideal platform for recognition tools. A custom extension can:
+Browser-based tools integrate smoothly with daily workflows. Developers, designers, and knowledge workers spend most of their time in Chrome, making it the ideal platform for recognition tools. A custom extension can:
 
 - Capture achievements directly from any web application
 - Send recognition to team communication platforms automatically

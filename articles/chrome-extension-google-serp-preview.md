@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Google SERP Preview: A Developer Guide"
 description: "Learn how to build and use chrome extensions that provide Google SERP previews for enhanced search analysis and SEO research."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-google-serp-preview/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 Google Search Engine Results Pages (SERPs) contain rich data that developers and SEO professionals frequently need to analyze. Chrome extensions that provide SERP previews offer a way to capture, preview, and analyze search results directly within the browser without leaving the search page.
