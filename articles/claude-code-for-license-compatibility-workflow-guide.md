@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for License Compatibility Workflow Guide"
-description: "A practical guide to using Claude Code for managing software license compatibility in your projects. Learn how to automate license checks, resolve conflicts, and maintain compliance."
+description: "A practical guide to using Claude Code for managing software license compatibility in your projects. Learn how to automate license checks, resolve."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-license-compatibility-workflow-guide/
@@ -229,4 +229,11 @@ To maintain good license hygiene in your projects:
 License compatibility doesn't have to be a painful part of software development. By integrating Claude Code into your workflow, you can automate much of the analysis, get expert guidance on complex license interactions, and maintain confidence that your project remains compliant. The key is establishing good habits early—regular checks, clear documentation, and using AI assistance for the heavy lifting of research.
 
 Start implementing this workflow in your next project, and you'll find that license management becomes a straightforward part of your development process rather than an afterthought that causes headaches during audits or releases.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
