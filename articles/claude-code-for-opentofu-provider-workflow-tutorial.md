@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for OpenTofu Provider Workflow Tutorial"
 description: "Learn how to use Claude Code to automate OpenTofu provider workflows. Practical examples for managing infrastructure providers, credentials, and configurations with AI assistance."
@@ -8,14 +9,17 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-opentofu-provider-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills, opentofu, terraform, infrastructure-as-code, DevOps]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for OpenTofu Provider Workflow Tutorial
 
 OpenTofu providers are plugins that enable OpenTofu to interact with cloud platforms, SaaS services, and other APIs. Managing provider configurations, credentials, and version constraints manually can become tedious, especially when working with multiple cloud environments. Claude Code can automate much of this workflow, from initializing providers to configuring authentication and managing provider versions across your infrastructure.
 
-This tutorial shows you how to leverage Claude Code to streamline OpenTofu provider management with practical examples you can apply immediately.
+This tutorial shows you how to use Claude Code to streamline OpenTofu provider management with practical examples you can apply immediately.
 
 ## Understanding OpenTofu Provider Architecture
 

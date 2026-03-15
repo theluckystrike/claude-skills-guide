@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for IBC Cosmos Workflow"
 description: "A practical guide to using Claude Code for developing Inter-Blockchain Communication workflows in the Cosmos ecosystem. Learn how to automate IBC relayer configuration, packet handling, and cross-chain state synchronization."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-ibc-cosmos-workflow/
 categories: [tutorials, blockchain, cosmos]
 tags: [claude-code, ibc, cosmos, blockchain, relayer, cross-chain, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for IBC Cosmos Workflow
@@ -69,7 +73,7 @@ This context helps Claude Code understand your specific IBC topology and provide
 
 ## Generating Relayer Configurations
 
-One of Claude Code's strongest capabilities is generating complex configuration files. IBC relayer configurations can be tedious to write manually. Here's how to leverage Claude Code for this task.
+One of Claude Code's strongest capabilities is generating complex configuration files. IBC relayer configurations can be tedious to write manually. Here's how to use Claude Code for this task.
 
 ```yaml
 # Example: Hermes relayer configuration generation

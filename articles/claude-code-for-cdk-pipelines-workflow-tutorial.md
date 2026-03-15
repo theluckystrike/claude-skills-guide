@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for CDK Pipelines Workflow Tutorial"
 description: "Learn how to use Claude Code with AWS CDK Pipelines for automated infrastructure deployment. Practical examples and code snippets for building robust CI/CD workflows."
@@ -7,13 +8,16 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-cdk-pipelines-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
 # Claude Code for CDK Pipelines Workflow Tutorial
 
-AWS CDK Pipelines provides a powerful infrastructure-as-code approach to continuous delivery. When combined with Claude Code, you can automate the creation, testing, and deployment of your CDK applications with intelligent assistance throughout the workflow. This tutorial demonstrates how to leverage Claude Code to enhance your CDK pipeline development experience.
+AWS CDK Pipelines provides a powerful infrastructure-as-code approach to continuous delivery. When combined with Claude Code, you can automate the creation, testing, and deployment of your CDK applications with intelligent assistance throughout the workflow. This tutorial demonstrates how to use Claude Code to enhance your CDK pipeline development experience.
 
 ## Understanding CDK Pipelines Architecture
 

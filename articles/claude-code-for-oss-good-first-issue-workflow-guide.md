@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for OSS Good First Issue Workflow Guide"
 description: "Learn how to use Claude Code to efficiently find, understand, and resolve good first issues in open source projects. A practical guide for new contributors."
@@ -8,7 +9,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-oss-good-first-issue-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills, open-source, github, beginners]
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for OSS Good First Issue Workflow Guide
 

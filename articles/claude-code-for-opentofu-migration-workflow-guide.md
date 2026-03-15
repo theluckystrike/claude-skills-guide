@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for OpenTofu Migration Workflow Guide"
 description: "A comprehensive guide to using Claude Code for migrating from Terraform to OpenTofu. Learn workflow strategies, automation patterns, and best practices for a smooth transition."
@@ -7,14 +8,17 @@ author: Claude Skills Guide
 permalink: /claude-code-for-opentofu-migration-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for OpenTofu Migration Workflow Guide
 
 Migrating from Terraform to OpenTofu doesn't have to be a painful process. With Claude Code's assistance, you can automate much of the heavy lifting, ensure consistency across your infrastructure code, and maintain confidence throughout the transition. This guide walks you through a practical workflow for executing a successful Terraform to OpenTofu migration.
 
-## Understanding the Migration Landscape
+## Understanding the Migration ecosystem
 
 OpenTofu is an open-source infrastructure as code tool that originated as a fork of Terraform after HashiCorp's license change. The good news for teams currently using Terraform is that OpenTofu maintains strong compatibility—most Terraform configurations will work with minimal or no modifications. However, a systematic approach ensures you catch edge cases and maintain infrastructure reliability throughout the switch.
 

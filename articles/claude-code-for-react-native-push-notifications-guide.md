@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for React Native Push Notifications Guide"
 description: "Learn how to implement push notifications in React Native apps using Claude Code. Step-by-step guide covering Expo, native modules, FCM, APNs, and best practices."
@@ -8,7 +9,10 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-react-native-push-notifications-guide/
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for React Native Push Notifications Guide
 

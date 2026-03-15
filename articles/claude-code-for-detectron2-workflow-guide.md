@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Detectron2 Workflow Guide"
 description: "A comprehensive guide to using Claude Code for Detectron2 object detection projects. Learn how to set up, train, and deploy Detectron2 models efficiently with AI-assisted development."
@@ -7,13 +8,16 @@ author: Claude Skills Guide
 permalink: /claude-code-for-detectron2-workflow-guide/
 categories: [AI, Computer Vision, PyTorch, Object Detection]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
 # Claude Code for Detectron2 Workflow Guide
 
-Detectron2, Facebook AI Research's next-generation object detection and segmentation library, is a powerful tool for computer vision projects. However, working with its complex APIs, custom dataset configurations, and model architectures can be challenging. This guide shows you how to leverage Claude Code to streamline your Detectron2 development workflow, from project setup to model deployment.
+Detectron2, Facebook AI Research's next-generation object detection and segmentation library, is a powerful tool for computer vision projects. However, working with its complex APIs, custom dataset configurations, and model architectures can be challenging. This guide shows you how to use Claude Code to streamline your Detectron2 development workflow, from project setup to model deployment.
 
 ## Setting Up Your Detectron2 Environment
 

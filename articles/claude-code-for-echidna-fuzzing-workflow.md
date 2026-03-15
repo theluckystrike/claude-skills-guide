@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Echidna Fuzzing Workflow"
 description: "Master smart contract security testing with Claude Code and Echidna. Learn to create automated fuzzing workflows, write property-based tests, and integrate fuzzing into your development pipeline."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-echidna-fuzzing-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Echidna Fuzzing Workflow
