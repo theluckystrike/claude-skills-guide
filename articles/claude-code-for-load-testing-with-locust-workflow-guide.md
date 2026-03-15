@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Load Testing with Locust Workflow Guide"
 description: "Learn how to leverage Claude Code for load testing with Locust. This comprehensive guide covers setting up Locust test scripts, integrating with Claude Code, and automating your load testing workflow for scalable applications."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-load-testing-with-locust-workflow-guide/
 categories: [development, testing, devops]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Load Testing with Locust Workflow Guide
@@ -18,7 +22,7 @@ This guide walks you through setting up Locust for load testing, integrating it 
 
 ## Understanding Locust and Claude Code Integration
 
-Locust allows you to define user behavior using Python code, making it accessible to developers familiar with the language. Unlike traditional point-and-click load testing tools, Locust uses a code-first approach that version controls well and integrates seamlessly with CI/CD pipelines. You can simulate millions of concurrent users if needed, though realistic testing usually focuses on carefully modeled user journeys.
+Locust allows you to define user behavior using Python code, making it accessible to developers familiar with the language. Unlike traditional point-and-click load testing tools, Locust uses a code-first approach that version controls well and integrates smoothly with CI/CD pipelines. You can simulate millions of concurrent users if needed, though realistic testing usually focuses on carefully modeled user journeys.
 
 Claude Code enhances this workflow by helping you write test scripts faster, debug issues, and generate test scenarios from your API specifications. Whether you're testing a REST API, GraphQL endpoint, or web application, Claude Code can assist in building comprehensive test coverage.
 
