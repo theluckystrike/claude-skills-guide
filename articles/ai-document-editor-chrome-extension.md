@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "AI Document Editor Chrome Extension: A Practical Guide for Developers"
 description: "Learn how AI document editor Chrome extensions can streamline your workflow. Practical examples, code snippets, and integration tips for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-document-editor-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 
@@ -182,7 +188,7 @@ For general content creation, choose extensions with strong formatting preservat
 
 For teams, consider extensions offering shared configuration and usage analytics. These help standardize quality across collaborative documents.
 
-The ideal extension integrates seamlessly without disrupting your existing workflow while providing enough power to handle diverse text transformation tasks efficiently.
+The ideal extension integrates smoothly without disrupting your existing workflow while providing enough power to handle diverse text transformation tasks efficiently.
 
 ---
 

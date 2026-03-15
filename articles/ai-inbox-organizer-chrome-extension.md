@@ -1,5 +1,15 @@
-{% raw %}
 ---
+layout: default
+raw %}
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
+date: 2026-03-15
+categories: [guides]
+tags: [claude-code, claude-skills]
+permalink: /ai-inbox-organizer-chrome-extension/
+---
+
 
 layout: default
 title: "AI Inbox Organizer Chrome Extension: A Developer's Guide to Intelligent Email Management"
@@ -251,4 +261,4 @@ The Chrome extension platform provides powerful APIs for building sophisticated 
 ---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}
+

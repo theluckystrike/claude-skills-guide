@@ -1,5 +1,15 @@
-{% raw %}
 ---
+layout: default
+raw %}
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
+date: 2026-03-15
+categories: [guides]
+tags: [claude-code, claude-skills]
+permalink: /chatgpt-for-google-chrome-extension/
+---
+
 layout: default
 title: "ChatGPT for Google Chrome Extension: A Developer Guide"
 description: "Learn how to integrate ChatGPT into Chrome extensions, build AI-powered features, and create custom implementations for enhanced productivity."
@@ -258,4 +268,4 @@ Building ChatGPT-powered Chrome extensions requires understanding Chrome's exten
 Start with the basics, test thoroughly, and iterate based on your specific use case. The combination of Chrome extensions and ChatGPT creates powerful possibilities for enhancing productivity and building AI-assisted workflows.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}
+
