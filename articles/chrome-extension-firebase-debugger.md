@@ -2,13 +2,19 @@
 
 
 
+
 layout: default
 title: "Chrome Extension Firebase Debugger: Complete Guide for Developers"
 description: "Learn how to use Chrome extensions for Firebase debugging. Set up Firebase Debugger, inspect Firestore, Authentication, and Cloud Functions directly in Chrome DevTools."
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-firebase-debugger/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension Firebase Debugger: Complete Guide for Developers
 
