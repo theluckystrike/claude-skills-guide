@@ -4,8 +4,11 @@ layout: default
 title: "Chrome Extension Study Schedule Planner: A Developer Guide"
 description: "Learn how to build and customize chrome extension study schedule planners for effective learning management and productivity optimization."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-study-schedule-planner/
+reviewed: true
+score: 8
+categories: [guides]
 ---
 
 {% raw %}
