@@ -1,10 +1,10 @@
 ---
 
 layout: default
-title: "Chrome Extension Markdown Editor: A Developer's Guide to."
-description: "Discover how chrome extension markdown editors can transform your writing workflow. Learn about key features, practical examples, and how to build your."
+title: "Chrome Extension Markdown Editor: A Developer's Guide"
+description: "Discover how chrome extension markdown editors can transform your writing workflow. Learn about key features, practical examples, and how to build your own markdown editing system."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-extension-markdown-editor/
 reviewed: true
 score: 8
