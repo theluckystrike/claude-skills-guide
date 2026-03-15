@@ -5,7 +5,7 @@ layout: default
 title: "GraphQL Chrome Extension Playground: Test APIs Directly."
 description: "Discover how to use Chrome extensions to test GraphQL APIs directly in your browser. A practical guide for developers and power users."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /graphql-chrome-extension-playground/
 reviewed: true
 score: 8
