@@ -63,7 +63,7 @@ To verify your setup works correctly, run:
 
 ```bash
 claude --version
-claude status
+claude --version
 ```
 
 If you encounter PATH issues, modify your `.bashrc` or `.zshrc` in the Gitpod workspace:

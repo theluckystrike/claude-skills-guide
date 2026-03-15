@@ -87,10 +87,10 @@ This workflow automatically triggers AI analysis on every pull request, posting 
 
 ```bash
 # Review specific files with Claude
-claude code review src/auth/login.js --verbose
+claude --print "review src/auth/login.js for issues"
 
 # Review entire PR
-claude code review --pr-url=https://github.com/org/repo/pull/123
+claude --print "review the PR changes at https://github.com/org/repo/pull/123"
 ```
 
 The CLI integration allows for ad-hoc reviews and deeper analysis when needed. You can also use the supermemory skill to maintain a searchable knowledge base of past review decisions and team coding standards.

@@ -195,7 +195,7 @@ When building Eloquent models and relationships, the TDD skill helps you write t
 
 ```bash
 # Install the tdd skill
-claude code install tdd
+# Place tdd skill in ~/.claude/skills/tdd.md
 ```
 
 With TDD, you define expected behavior before implementation:
@@ -225,7 +225,7 @@ public function getDiscountedPriceAttribute()
 For team documentation, use the pdf skill to generate comprehensive API documentation:
 
 ```
-claude code install pdf
+# Place pdf skill in ~/.claude/skills/pdf.md
 ```
 
 This helps you create printable documentation of your Eloquent models and their relationships, useful for onboarding new team members.

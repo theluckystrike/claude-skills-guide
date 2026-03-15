@@ -76,7 +76,7 @@ During code freeze, every change requires thorough validation before deployment.
 
 ```bash
 # Run comprehensive pre-deployment validation
-claude code-freeze:validate --file=path/to/changed/file.py
+claude --print "code freeze validate --file=path/to/changed/file.py"
 ```
 
 This command triggers a multi-stage validation:
@@ -122,7 +122,7 @@ Code freeze deployments require additional approval checkpoints. Claude Code can
 
 ```bash
 # Generate a deployment request
-claude code-freeze:request-deploy --env=staging --changes=fixes.json
+claude --print "code freeze request-deploy --env=staging --changes=fixes.json"
 ```
 
 This creates a structured request that includes:
@@ -156,7 +156,7 @@ Despite the freeze, production issues sometimes demand immediate attention. Clau
 
 ```bash
 # Create an emergency hotfix branch
-claude code-freeze:hotfix --issue="PROD-123" --severity=critical
+claude --print "code freeze hotfix --issue="PROD-123" --severity=critical"
 
 # This command:
 # 1. Creates a dedicated hotfix branch
@@ -178,7 +178,7 @@ After deploying during code freeze, monitoring becomes even more critical. Claud
 
 ```bash
 # Analyze deployment health
-claude code-freeze:health-check --environment=production --duration=1h
+claude --print "code freeze health-check --environment=production --duration=1h"
 ```
 
 This integration with your monitoring stack provides:

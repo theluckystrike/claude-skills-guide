@@ -61,7 +61,7 @@ Configure your `.git/hooks/pre-commit` to run:
 ```bash
 #!/bin/bash
 # Run AI code review on staged files
-claude code-review --files $(git diff --cached --name-only --diff-filter=ACM)
+claude --print "review these changed files for issues: $(git diff --cached --name-only --diff-filter=ACM)"
 ```
 
 This approach gives feedback before you push, when fixing issues costs less time. The feedback loop stays tight—you make a change, you see the result immediately.
