@@ -1,42 +1,46 @@
 ---
-
 layout: default
 title: "Chrome Block Phishing Extension: A Developer Guide to Building Browser-Based Threat Detection"
-description: "Learn how to build a Chrome extension that detects and blocks phishing attempts. Covers URL analysis, domain verification, and practical implementation patterns for developers."
+description: "Learn how Chrome block phishing extension technology works under the hood. This guide covers the Chrome Web Store, extension APIs, phishing detection techniques, and implementation patterns for developers building custom browser security tools."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-block-phishing-extension/
-reviewed: true
-score: 8
-categories: [troubleshooting]
-tags: [claude-code, claude-skills]
+categories: [security, chrome-extension]
+tags: [chrome-extension, phishing, browser-security, web-security]
 ---
-
 
 # Chrome Block Phishing Extension: A Developer Guide to Building Browser-Based Threat Detection
 
-Phishing attacks remain one of the most effective vectors for credential theft and financial fraud. As a developer, building a Chrome extension that actively blocks phishing attempts gives you granular control over threat detection that browser defaults cannot match. This guide walks through the architecture, detection strategies, and implementation patterns for creating a production-ready phishing blocker.
+Phishing attacks remain one of the most effective vectors for credential theft and account compromise. For developers and power users, understanding how Chrome block phishing extension technology works provides both practical defensive knowledge and a foundation for building custom security tools. This guide examines the architecture, APIs, and implementation patterns behind browser-based phishing detection.
 
-## Extension Architecture Overview
+## How Chrome Phishing Protection Works
 
-A Chrome phishing blocker operates at multiple points in the browser request lifecycle. The most effective extensions combine several detection mechanisms:
+Chrome's built-in phishing protection uses Safe Browsing, a Google service that maintains databases of known malicious URLs. When you navigate to a page, Chrome checks the URL against these databases and displays warnings for suspicious sites. Third-party Chrome block phishing extension products extend this functionality with additional detection methods.
 
-1. **URL pattern matching** - Heuristic analysis of suspicious URL structures
-2. **Domain reputation checking** - Cross-referencing against known phishing databases
-3. **Visual deception detection** - Identifying look-alike domains and typosquatting
-4. **Content-based analysis** - Examining page content for credential harvesting patterns
+The core detection approaches include:
 
-The manifest file defines these capabilities:
+- **URL-based analysis**: Checking domains against blocklists and analyzing URL patterns for obfuscation techniques
+- **Content inspection**: Scanning page content for login forms, credential harvest patterns, and brand impersonation
+- **Behavioral analysis**: Monitoring for suspicious behaviors like domain spoofing or homograph attacks
+- **Machine learning models**: Using trained classifiers to identify phishing characteristics
+
+## Extension Architecture Patterns
+
+A Chrome block phishing extension typically implements several components working together:
+
+### Manifest Configuration
+
+Your extension needs declarative permissions in the manifest:
 
 ```json
 {
   "manifest_version": 3,
   "name": "PhishGuard",
-  "version": "1.0.0",
+  "version": "1.0",
   "permissions": [
     "activeTab",
-    "scripting",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -44,303 +48,218 @@ The manifest file defines these capabilities:
   "background": {
     "service_worker": "background.js"
   },
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
-  }
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }]
 }
 ```
 
-## Core Detection Components
+### Content Script Detection
 
-### URL Analysis Engine
-
-The foundation of any phishing blocker is URL analysis. Focus on detecting these common attack patterns:
+The content script analyzes page content for phishing indicators:
 
 ```javascript
-// URL analysis utilities
-const suspiciousPatterns = {
-  // IP addresses used as hostname
-  ipAddress: /^https?:\/\/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/,
+// content.js - runs in the context of each page
+function detectPhishingIndicators() {
+  const indicators = {
+    loginForms: document.querySelectorAll('form input[type="password"]').length,
+    externalFormActions: 0,
+    suspiciousDomains: 0,
+    iframeCount: document.querySelectorAll('iframe').length
+  };
   
-  // Excessive subdomains (common in phishing)
-  excessiveSubdomains: /^https?:\/\/([a-z0-9-]+\.){4,}/i,
-  
-  // Homograph attacks (look-alike characters)
-  homograph: /[аеоресху]/i,
-  
-  // Common typosquatting targets
-  typosquatting: /(g00gle|paypa1|amaz0n|faceb00k)/i,
-  
-  // URL shortener services (hides destination)
-  urlShortener: /(bit\.ly|tinyurl\.com|t\.co|goo\.gl)\//
-};
-
-function analyzeURL(url) {
-  const warnings = [];
-  const parsed = new URL(url);
-  
-  // Check for IP address hostname
-  if (suspiciousPatterns.ipAddress.test(url)) {
-    warnings.push('IP address used as hostname');
-  }
-  
-  // Check subdomain count
-  if (suspiciousPatterns.excessiveSubdomains.test(url)) {
-    warnings.push('Excessive subdomain depth');
-  }
-  
-  // Check for suspicious TLDs
-  const suspiciousTLDs = ['.xyz', '.top', '.work', '.click', '.gq', '.tk'];
-  if (suspiciousTLDs.some(tld => parsed.hostname.endsWith(tld))) {
-    warnings.push('Suspicious top-level domain');
-  }
-  
-  // Check for login keywords in non-expected domains
-  const loginKeywords = ['login', 'signin', 'account', 'verify', 'secure'];
-  const isLoginPage = loginKeywords.some(kw => 
-    url.toLowerCase().includes(kw)
-  );
-  
-  if (isLoginPage && !isKnownBankingSite(parsed.hostname)) {
-    warnings.push('Login page on unrecognized domain');
-  }
-  
-  return warnings;
-}
-
-function isKnownBankingSite(hostname) {
-  const trustedDomains = [
-    'chase.com', 'bankofamerica.com', 'wellsfargo.com',
-    'paypal.com', 'amazon.com', 'apple.com', 'google.com'
-  ];
-  return trustedDomains.some(domain => hostname.endsWith(domain));
-}
-```
-
-### Domain Reputation Service
-
-For production extensions, integrate with reputation APIs. A practical approach uses multiple data sources:
-
-```javascript
-class ReputationChecker {
-  constructor() {
-    this.cache = new Map();
-    this.cacheTTL = 3600000; // 1 hour
-  }
-
-  async checkDomain(domain) {
-    // Check cache first
-    const cached = this.cache.get(domain);
-    if (cached && Date.now() - cached.timestamp < this.cacheTTL) {
-      return cached.result;
-    }
-
-    // Query multiple sources in parallel
-    const [googleResult, phishTankResult] = await Promise.all([
-      this.checkGoogleSafeBrowsing(domain),
-      this.checkPhishTank(domain)
-    ]);
-
-    const result = {
-      isPhishing: googleResult || phishTankResult,
-      sources: {
-        google: googleResult,
-        phishtank: phishTankResult
-      },
-      timestamp: Date.now()
-    };
-
-    this.cache.set(domain, result);
-    return result;
-  }
-
-  async checkGoogleSafeBrowsing(domain) {
-    // Requires API key - use environment variable
-    const apiKey = process.env.GOOGLE_SAFE_BROWSING_KEY;
-    const url = `https://safebrowsing.googleapis.com/v4/threatMatches:find?key=${apiKey}`;
-    
-    // Implementation would POST to Google API
-    // This is a simplified example
-    return false;
-  }
-
-  async checkPhishTank(domain) {
-    // PhishTank provides a free API for lookup
-    // Implementation would query their endpoint
-    return false;
-  }
-}
-```
-
-## Integrating with Chrome APIs
-
-The background service worker handles the core logic:
-
-```javascript
-// background.js
-chrome.runtime.onInstalled.addListener(() => {
-  console.log('PhishGuard extension installed');
-});
-
-// Listen for navigation events
-chrome.webNavigation.onCompleted.addListener(async (details) => {
-  if (details.frameId !== 0) return; // Only main frame
-  
-  const url = details.url;
-  const analysis = analyzeURL(url);
-  
-  if (analysis.warnings.length > 0) {
-    // Query reputation service
-    const reputation = await reputationChecker.checkDomain(
-      new URL(url).hostname
-    );
-    
-    if (analysis.warnings.length >= 2 || reputation.isPhishing) {
-      // Block the page
-      chrome.tabs.update(details.tabId, {
-        url: `data:blocked.html?url=${encodeURIComponent(url)}&reasons=${encodeURIComponent(
-          JSON.stringify(analysis.warnings)
-        )}`
-      });
-      
-      // Show warning icon
-      chrome.action.setBadgeText({ text: '!', tabId: details.tabId });
-      chrome.action.setBadgeBackgroundColor({ color: '#FF0000' });
-    }
-  }
-});
-```
-
-## Content-Based Detection
-
-Beyond URL analysis, examine page content for phishing indicators:
-
-```javascript
-// Inject script to analyze page content
-async function analyzePageContent(tabId) {
-  const results = await chrome.scripting.executeScript({
-    target: { tabId },
-    func: () => {
-      const indicators = [];
-      
-      // Check for password fields in suspicious contexts
-      const passwordFields = document.querySelectorAll('input[type="password"]');
-      if (passwordFields.length > 0) {
-        // Check if form action points to external domain
-        passwordFields.forEach(field => {
-          const form = field.closest('form');
-          if (form && form.action) {
-            try {
-              const formDomain = new URL(form.action).hostname;
-              const pageDomain = window.location.hostname;
-              if (formDomain !== pageDomain) {
-                indicators.push('Password field submits to different domain');
-              }
-            } catch (e) {}
-          }
-        });
-      }
-      
-      // Check for common phishing page patterns
-      const title = document.title.toLowerCase();
-      if (title.includes('verify your account') || 
-          title.includes('confirm your identity')) {
-        indicators.push('Common phishing title pattern');
-      }
-      
-      // Check for hidden iframes (credential harvesting)
-      const hiddenIframes = document.querySelectorAll('iframe[style*="display: none"]');
-      if (hiddenIframes.length > 0) {
-        indicators.push('Hidden iframe detected');
-      }
-      
-      return indicators;
+  // Check for password fields outside of known login pages
+  const forms = document.querySelectorAll('form');
+  forms.forEach(form => {
+    const action = form.getAttribute('action');
+    if (action && !action.startsWith(window.location.origin)) {
+      indicators.externalFormActions++;
     }
   });
   
-  return results[0].result;
+  // Report findings to background script
+  chrome.runtime.sendMessage({
+    type: 'PHISHING_ANALYSIS',
+    url: window.location.href,
+    indicators: indicators
+  });
+}
+
+// Run detection after page loads
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', detectPhishingIndicators);
+} else {
+  detectPhishingIndicators();
 }
 ```
 
-## Performance and Privacy Considerations
+### Background Service Worker
 
-When building a phishing blocker, consider these implementation details:
-
-**Local Processing First**: Perform URL analysis entirely in the browser. Only query external reputation services when local heuristics flag something suspicious. This reduces API calls and protects user privacy.
-
-**Rate Limiting**: Implement request throttling to prevent abuse:
+The background script manages the extension's core logic:
 
 ```javascript
-class RateLimiter {
-  constructor(maxRequests, windowMs) {
-    this.maxRequests = maxRequests;
-    this.windowMs = windowMs;
-    this.requests = [];
-  }
+// background.js
+const PHISHING_DATABASE_URL = 'https://your-api.com/phishing-list';
 
-  canProceed() {
-    const now = Date.now();
-    this.requests = this.requests.filter(r => now - r < this.windowMs);
-    return this.requests.length < this.maxRequests;
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === 'PHISHING_ANALYSIS') {
+    const score = calculatePhishingScore(message.indicators, message.url);
+    
+    if (score > 0.7) {
+      chrome.tabs.sendMessage(sender.tab.id, {
+        type: 'BLOCK_WARNING',
+        score: score,
+        url: message.url
+      });
+    }
+    sendResponse({ score: score });
   }
+  return true;
+});
 
-  recordRequest() {
-    this.requests.push(Date.now());
-  }
+function calculatePhishingScore(indicators, url) {
+  let score = 0;
+  
+  // Weight different indicators
+  if (indicators.loginForms > 0) score += 0.3;
+  if (indicators.externalFormActions > 0) score += 0.4;
+  if (indicators.iframeCount > 2) score += 0.2;
+  
+  // Check for suspicious URL patterns
+  if (url.includes('@')) score += 0.3; // URL with credentials
+  if (/[\u0600-\u06FF\u0400-\u04FF]/.test(url)) score += 0.2; // Cyrillic/Arabic
+  
+  return Math.min(score, 1.0);
 }
 ```
 
-**Storage Optimization**: Use Chrome's storage API efficiently:
+## Practical Detection Techniques
+
+### Domain Reputation Checking
+
+Query external APIs for domain reputation data:
 
 ```javascript
-// Prefer sync storage for small, frequently accessed data
-// Use storage.session for temporary data
-// Reserve storage.local for large datasets
-
-chrome.storage.local.get(['blocklist', 'settings'], (result) => {
-  // Load blocklist on startup, cache in memory
-  blocklist = result.blocklist || [];
-});
+async function checkDomainReputation(domain) {
+  // Using a hypothetical reputation API
+  const response = await fetch(`https://api.example.com/reputation/${domain}`, {
+    headers: { 'X-API-Key': 'your-key' }
+  });
+  
+  if (!response.ok) return { suspicious: false };
+  
+  const data = await response.json();
+  return {
+    suspicious: data.threat_level > 0.7,
+    reasons: data.flags,
+    age: data.domain_age_days
+  };
+}
 ```
 
-## Testing Your Extension
+### Visual Similarity Detection
 
-Before distribution, test thoroughly:
-
-1. **Unit test detection logic** with known phishing URLs
-2. **Integration test** with Chrome APIs using Puppeteer
-3. **Performance test** with 1000+ URL evaluations
-4. **False positive testing** against common legitimate sites
+Detect look-alike domains using visual comparison:
 
 ```javascript
-// Example test case
-const testCases = [
-  { url: 'https://paypal.com/login', expected: false },
-  { url: 'https://paypa1.com/login', expected: true },
-  { url: 'https://192.168.1.1/login', expected: true },
-  { url: 'https://login.secure-chase.phishing.xyz/', expected: true }
-];
-
-testCases.forEach(tc => {
-  const result = analyzeURL(tc.url);
-  console.assert(
-    (result.warnings.length > 0) === tc.expected,
-    `Failed: ${tc.url}`
-  );
-});
+function detectHomographAttack(url) {
+  const urlObj = new URL(url);
+  const hostname = urlObj.hostname;
+  
+  // Check for mixed scripts (Cyrillic looking like Latin)
+  const suspiciousChars = /[\u0430-\u044f\u0410-\u042f]/; // Cyrillic
+  const latinChars = /[a-zA-Z]/;
+  
+  let hasMixedScripts = false;
+  let char;
+  for (let i = 0; i < hostname.length; i++) {
+    char = hostname[i];
+    if (suspiciousChars.test(char) && latinChars.test(hostname)) {
+      hasMixedScripts = true;
+      break;
+    }
+  }
+  
+  return hasMixedScripts;
+}
 ```
 
-Building a Chrome extension to block phishing requires balancing detection accuracy with performance. Start with robust URL analysis, add reputation checking for borderline cases, and continuously refine based on user feedback and emerging threat patterns.
+## Building Custom Detection Rules
 
-## Related Reading
+For power users, creating custom detection rules involves defining patterns in a rules configuration:
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+```javascript
+// Custom rules configuration
+const customRules = {
+  blockedPatterns: [
+    /.*-login\..*/i,
+    /.*-secure\..*/i,
+    /.*-account\..*/i
+  ],
+  suspiciousTLDs: ['.xyz', '.top', '.click', '.link'],
+  brandImpersonation: {
+    'google': ['g00gle', 'google-login', 'googIe'],
+    'microsoft': ['microsft', 'microsoft-login', 'rnicrosoft'],
+    'paypal': ['paypa1', 'paypal-secure', 'paypaI']
+  }
+};
+
+function evaluateCustomRules(url) {
+  const urlObj = new URL(url);
+  const findings = [];
+  
+  // Check blocked patterns
+  customRules.blockedPatterns.forEach(pattern => {
+    if (pattern.test(url)) {
+      findings.push(`URL matches blocked pattern: ${pattern}`);
+    }
+  });
+  
+  // Check suspicious TLDs
+  if (customRules.suspiciousTLDs.some(tld => urlObj.hostname.endsWith(tld))) {
+    findings.push('Domain uses suspicious TLD');
+  }
+  
+  // Check brand impersonation
+  const hostnameLower = urlObj.hostname.toLowerCase();
+  Object.entries(customRules.brandImpersonation).forEach(([brand, variants]) => {
+    variants.forEach(variant => {
+      if (hostnameLower.includes(variant)) {
+        findings.push(`Possible ${brand} impersonation detected`);
+      }
+    });
+  });
+  
+  return findings;
+}
+```
+
+## Deployment Considerations
+
+When deploying a Chrome block phishing extension, consider these factors:
+
+**Performance impact**: Content scripts run on every page load. Optimize detection logic to complete within 100ms to avoid perceived latency.
+
+**Privacy implications**: If your extension monitors all URLs, be transparent about data handling. Users increasingly scrutinize extensions with broad permissions.
+
+**False positive management**: Provide clear user interfaces for reporting false positives. This feedback loop improves detection accuracy over time.
+
+**Update frequency**: Phishing sites have short lifespans. Your blocklists need regular updates—daily at minimum for high-value targets.
+
+## Extension APIs for Advanced Users
+
+Chrome provides several APIs relevant to phishing protection:
+
+- `chrome.safeBrowsing` - Direct access to Safe Browsing API
+- `chrome.webNavigation` - Track navigation events
+- `chrome.webRequest` - Intercept and analyze network requests
+- `chrome.tabs` - Access tab information and trigger warnings
+
+## Conclusion
+
+Building a Chrome block phishing extension requires understanding browser security APIs, implementing efficient detection algorithms, and balancing protection with user experience. The patterns shown here provide a foundation for creating custom extensions tailored to specific threat models or organizational needs.
+
+For developers, the extension architecture offers a flexible platform for experimenting with detection techniques. For power users, understanding these mechanisms helps evaluate and configure browser security tools effectively.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
