@@ -2,7 +2,7 @@
 
 layout: default
 title: "AI Research Assistant Chrome Extension: A Developer's Guide"
-description: "Learn how AI research assistant Chrome extensions can streamline your research workflow. Practical examples and code snippets for developers and power users."
+description: "Learn how AI research assistant Chrome extensions can streamline your research workflow. Practical examples and code snippets for developers and power."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-research-assistant-chrome-extension/
@@ -248,6 +248,13 @@ const providers = {
 AI research assistant Chrome extensions bridge the gap between passive browsing and active knowledge building. By understanding how to extract web content, process it with AI services, and organize results for later retrieval, developers can create powerful tools tailored to their specific research workflows.
 
 The patterns covered here—content script injection, background service worker architecture, and AI provider integration—form the foundation for building extensions that scale from personal projects to production releases used by thousands of researchers.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
