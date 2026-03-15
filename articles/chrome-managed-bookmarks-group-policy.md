@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Managed Bookmarks via Group Policy: A Practical Guide"
-description: "Learn how to configure Chrome managed bookmarks using Windows Group Policy for enterprise environments. Includes JSON configuration examples and troubleshooting tips."
+description: "Learn how to configure Chrome managed bookmarks using Windows Group Policy for enterprise environments. Includes JSON configuration examples and."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-managed-bookmarks-group-policy/
@@ -115,5 +115,12 @@ Chrome's managed bookmarks feature integrates with Chrome Browser Cloud Manageme
 ## Summary
 
 Chrome managed bookmarks through Group Policy provide a reliable way to ensure all users in your organization have access to essential resources. The JSON-based configuration is straightforward once you understand the structure, and the separation between managed and user bookmarks protects critical corporate resources from accidental deletion.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
