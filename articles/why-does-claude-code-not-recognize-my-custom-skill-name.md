@@ -120,6 +120,57 @@ Always consider performance and browser compatibility.
 
 Avoid special characters in skill names. Stick to alphanumeric characters and hyphens. Characters like underscores, ampersands, or parentheses can cause recognition issues in certain environments.
 
+## How Claude Loads Skills: Progressive Disclosure
+
+Understanding the loading model helps explain why a skill that "exists" still won't work. Claude Code uses a three-level progressive disclosure approach:
+
+1. **Level 1 (Metadata)**: At startup, Claude Code loads only skill names and descriptions.
+2. **Level 2 (Full Content)**: The complete skill guidance loads only when you explicitly request it using `get_skill(skill_name)`.
+3. **Level 3 (Resources)**: Additional files and scripts referenced by the skill are loaded as needed.
+
+This design keeps startup fast while allowing complex, resource-heavy skills to load on demand.
+
+## Not Explicitly Calling the Skill
+
+A common misunderstanding: having a skill file in the right place does not automatically activate it for relevant tasks. You must explicitly invoke it:
+
+```
+get_skill("your-skill-name")
+```
+
+Without that call, Claude Code only has access to Level 1 metadata—the name and description—not the full skill guidance. If your skill isn't running its instructions, this is the most likely cause.
+
+Here's what an explicit skill invocation looks like in practice:
+
+```
+I need help processing a large CSV file. Let me load the data processing skill first.
+get_skill("data-processing")
+
+Now can you help me clean this dataset?
+```
+
+## Best Practices for Reliable Skills
+
+**Write specific descriptions.** The Level 1 description is what Claude Code uses to decide whether a skill is relevant. "Helps with programming" is too broad. "Creates and edits Python scripts for data analysis, including pandas operations and matplotlib visualizations" is specific enough to be useful.
+
+**Keep skills focused.** Rather than one broad skill, consider breaking it into smaller, focused skills. Focused skills are more discoverable and more reliably invoked.
+
+**Document required resources.** If your skill depends on external files, scripts, or tools, document these in the skill file with setup instructions and prerequisites.
+
+**Test after creating.** After writing a skill:
+
+1. Call `get_skill("your-skill-name")`
+2. Ask a question relevant to the skill
+3. Verify you get the expected guidance
+
+## Additional Debugging Checks
+
+If the steps above haven't resolved the issue, also check:
+
+- **File permissions**: Ensure the skill file is readable by the process running Claude Code.
+- **Logs**: Some loading failures are logged with helpful error messages—check your terminal output or the extension's output panel.
+- **Typos in the skill name**: Skill names are case-sensitive when passed to `get_skill()`.
+
 ## Conclusion
 
 If Claude Code doesn't recognize your custom skill name, systematically check: file location, filename format, front matter validity, directory structure, and potential name conflicts. Most issues stem from these common pitfalls rather than complex configuration problems.
