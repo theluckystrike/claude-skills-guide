@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Bookmark Manager for Chrome: A Developer's Guide"
 description: "Learn how AI-powered bookmark managers for Chrome can transform your workflow. Practical examples, code snippets, and tips for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-bookmark-manager-chrome/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 As developers and power users, we accumulate hundreds—sometimes thousands—of bookmarks over time. Traditional bookmark managers rely on manual organization, but AI bookmark managers for Chrome bring intelligent automation to the process. This guide explores practical approaches to managing bookmarks with AI assistance.
 
@@ -112,7 +118,7 @@ Even with AI assistance, establishing a naming convention helps. Prefix technica
 - `Python: asyncio Documentation`
 - `Git: Interactive Rebase Guide`
 
-### Leverage Auto-Tagging
+### use Auto-Tagging
 
 When your bookmark manager suggests tags, review them. This feedback loop improves future suggestions. The more you engage with AI-generated tags, the better the system becomes at understanding your preferences.
 

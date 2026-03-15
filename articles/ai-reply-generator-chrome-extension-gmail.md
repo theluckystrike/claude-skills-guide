@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Reply Generator Chrome Extension for Gmail: Build Your Own"
 description: "A developer guide to building an AI reply generator as a Chrome extension for Gmail. Covers architecture, APIs, and practical implementation patterns."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-reply-generator-chrome-extension-gmail/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 
