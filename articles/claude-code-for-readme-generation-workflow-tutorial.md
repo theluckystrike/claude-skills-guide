@@ -6,7 +6,7 @@ description: "Learn how to automate your README generation workflow using Claude
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-readme-generation-workflow-tutorial/
-categories: [Tutorials, Claude Code]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -239,3 +239,4 @@ Claude Code transforms README generation from a tedious manual task into an auto
 
 Start with simple templates and gradually expand your README generation capabilities. The investment in setting up this workflow pays dividends through improved project documentation and reduced maintenance overhead. With Claude Code handling the heavy lifting, you can focus on writing code while maintaining excellent project documentation.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
