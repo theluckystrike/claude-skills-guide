@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Citation Generator Chrome Extension Free: Build Your Own"
 description: "Create a free citation generator Chrome extension for automatic bibliography creation. Complete developer guide with code examples and practical implementation."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /citation-generator-chrome-extension-free/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Citation Generator Chrome Extension Free: Build Your Own
 

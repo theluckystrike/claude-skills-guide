@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How to Compare Sources Side by Side in Chrome Extensions"
 description: "Learn how to build or use Chrome extensions that compare sources side by side for code review, diff checking, and content comparison."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-compare-sources-side-by-side/
+reviewed: true
+score: 8
+categories: [comparisons]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # How to Compare Sources Side by Side in Chrome Extensions

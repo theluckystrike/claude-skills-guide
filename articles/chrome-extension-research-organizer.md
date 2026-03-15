@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Research Organizer: Complete Guide for Developers"
 description: "Learn how to build and use Chrome extension research organizers to efficiently manage research workflows. Practical code examples, architecture patterns, and implementation tips for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-research-organizer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension Research Organizer: Complete Guide for Developers
 

@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How to Disable Chrome Developer Tools Using Group Policy"
 description: "A practical guide for IT administrators and developers on disabling Chrome DevTools via Windows Group Policy. Includes registry methods and enterprise deployment strategies."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-disable-developer-tools-group-policy/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 

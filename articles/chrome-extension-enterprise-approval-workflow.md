@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Enterprise Approval Workflow: A Practical Guide"
 description: "Learn how to implement enterprise approval workflows for Chrome extensions. Code examples, security considerations, and deployment strategies for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-enterprise-approval-workflow/
+reviewed: true
+score: 8
+categories: [workflows]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Chrome Extension Enterprise Approval Workflow: A Practical Guide

@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Time Tracking Chrome Extension Free: A Practical Guide for Developers"
 description: "Discover free time tracking Chrome extensions that work well for developers and power users. Learn about key features, API integrations, and how to track time without spending money."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /time-tracking-chrome-extension-free/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Time Tracking Chrome Extension Free: A Practical Guide for Developers
 

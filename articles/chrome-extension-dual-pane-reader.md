@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Dual Pane Reader: Building Split-Screen Reading Tools"
 description: "Learn how to build a Chrome extension dual pane reader for comparing content side-by-side. Practical implementation guide with code examples for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-dual-pane-reader/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Chrome Extension Dual Pane Reader: Building Split-Screen Reading Tools

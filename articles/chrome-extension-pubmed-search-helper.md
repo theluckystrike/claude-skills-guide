@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension PubMed Search Helper: Build Your Own Research Tool"
 description: "Learn how to build a Chrome extension that enhances PubMed search with custom filters, quick access to saved searches, and automated citation formatting for researchers and developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [development, chrome-extension]
-tags: [chrome-extension, pubmed, research-tools, browser-extension]
+tags: [chrome-extension, pubmed, research-tools, browser-extension, claude-skills]
 permalink: /chrome-extension-pubmed-search-helper/
+reviewed: true
+score: 8
 ---
+
 
 # Chrome Extension PubMed Search Helper: Build Your Own Research Tool
 

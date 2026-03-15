@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Speed Reader Tool: A Developer's Guide"
 description: "Learn how chrome extension speed reader tools work, how to build one, and how they improve reading efficiency for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-speed-reader-tool/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 Speed reading tools have become essential for developers and power users who process large amounts of technical documentation, code reviews, and articles daily. A chrome extension speed reader tool can transform how you consume text-heavy content by presenting information in optimized formats that reduce eye movement and increase reading speed.
 
