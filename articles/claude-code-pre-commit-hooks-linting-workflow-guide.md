@@ -21,7 +21,7 @@ Pre-commit hooks and linting form the backbone of consistent code quality in any
 
 Every developer knows the frustration of code review comments about formatting, unused imports, or simple syntax errors. These issues distract from substantive code review and slow down the development cycle. Pre-commit hooks solve this by automating code quality checks before changes ever reach version control.
 
-Claude Code enhances this workflow in several ways. The agent understands your project's linting configuration and canfix issues automatically during development. When working with complex linting rules, Claude Code's reasoning capabilities help explain why certain rules exist and how to address them appropriately.
+Claude Code enhances this workflow in several ways. The agent understands your project's linting configuration and can fix issues automatically during development. When working with complex linting rules, Claude Code's reasoning capabilities help explain why certain rules exist and how to address them appropriately.
 
 ## Setting Up Your Pre-Commit Framework
 
