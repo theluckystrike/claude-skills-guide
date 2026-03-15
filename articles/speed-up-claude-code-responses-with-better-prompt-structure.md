@@ -17,6 +17,8 @@ When you first start using Claude Code, you might notice that sometimes response
 
 This guide covers practical techniques for structuring prompts that produce faster, more precise responses from Claude Code. These methods work whether you're debugging with the tdd skill, generating documentation with pdf skills, or building frontends with frontend-design.
 
+**Scope note:** This article focuses specifically on response speed and token efficiency — how to phrase and structure prompts so Claude executes faster, uses fewer tokens, and requires fewer correction cycles. If you are trying to improve the correctness and quality of Claude's output rather than its speed, see [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/how-to-optimize-claude-skill-prompts-for-accuracy/).
+
 ## Why Prompt Structure Matters for Response Speed
 
 Claude Code processes your entire conversation context with each turn. When your prompts are vague, ambiguous, or missing context, Claude spends cycles guessing your intent rather than executing. Clear structure eliminates this overhead.
@@ -180,6 +182,7 @@ For developers using specialized skills like tdd for test-driven development or 
 
 ## Related Reading
 
+- [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/how-to-optimize-claude-skill-prompts-for-accuracy/) — Companion guide: improving output correctness and quality rather than speed
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
 - [Claude MD Too Long: Context Window Optimization](/claude-skills-guide/claude-md-too-long-context-window-optimization/)
 - [Claude Code Slow Response: How to Fix Latency Issues](/claude-skills-guide/claude-code-slow-response-how-to-fix-latency-issues/)

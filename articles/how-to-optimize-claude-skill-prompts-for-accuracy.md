@@ -17,6 +17,8 @@ permalink: /how-to-optimize-claude-skill-prompts-for-accuracy/
 
 This guide covers the techniques that make the difference.
 
+**Scope note:** This article focuses specifically on output accuracy and quality — how to write skill bodies that produce correct, consistent, and well-formed results. If you are looking to reduce response latency or token usage rather than improve correctness, see [Speed Up Claude Code Responses with Better Prompt Structure](/claude-skills-guide/speed-up-claude-code-responses-with-better-prompt-structure/).
+
 ## Start with a Clear Role Statement
 
 The first sentence of your skill body should tell Claude exactly what role it is playing. Role framing affects output style, vocabulary, and decision-making throughout the response.
@@ -156,6 +158,7 @@ Keep a test cases file alongside each skill:
 
 ## Related Reading
 
+- [Speed Up Claude Code Responses with Better Prompt Structure](/claude-skills-guide/speed-up-claude-code-responses-with-better-prompt-structure/) — Companion guide: reducing response latency and token usage rather than improving accuracy
 - [Claude Skill .md File Format: Full Specification](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Format reference for skill files
 - [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How trigger phrases interact with skill bodies
