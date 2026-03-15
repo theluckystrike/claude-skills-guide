@@ -1,17 +1,21 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Microphone Test Tool: Developer Guide"
 description: "Learn how to build and implement microphone test tools for Chrome extensions. Complete guide covering getUserMedia API, permission handling, and audio testing patterns."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-microphone-test-tool/
 categories: [guides]
-tags: [chrome-extension, microphone, web-audio, testing]
+tags: [chrome-extension, microphone, web-audio, testing, claude-skills]
+reviewed: true
+score: 8
 ---
 
+
 {% raw %}
-Chrome extensions that leverage microphone input require careful testing to ensure reliable functionality across different browsers, devices, and permission scenarios. A chrome extension microphone test tool helps developers verify that audio capture works correctly before deploying production features.
+Chrome extensions that use microphone input require careful testing to ensure reliable functionality across different browsers, devices, and permission scenarios. A chrome extension microphone test tool helps developers verify that audio capture works correctly before deploying production features.
 
 ## Understanding Microphone Access in Chrome Extensions
 

@@ -1,16 +1,22 @@
 ---
+
 layout: default
 title: "AI Screen Reader Chrome Extension: A Developer's Guide"
 description: "Learn how AI-powered screen readers transform web accessibility and how to build custom Chrome extensions for enhanced visual accessibility."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-screen-reader-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 # AI Screen Reader Chrome Extension: A Developer's Guide
 
-Web accessibility remains one of the most overlooked aspects of software development. Traditional screen readers have served blind and visually impaired users for decades, but AI-powered solutions now offer unprecedented capabilities for interpreting visual content, generating natural descriptions, and providing context-aware assistance. This guide explores how developers can leverage AI screen reader Chrome extensions to create more accessible web experiences.
+Web accessibility remains one of the most overlooked aspects of software development. Traditional screen readers have served blind and visually impaired users for decades, but AI-powered solutions now offer unprecedented capabilities for interpreting visual content, generating natural descriptions, and providing context-aware assistance. This guide explores how developers can use AI screen reader Chrome extensions to create more accessible web experiences.
 
 ## Understanding the Technology
 

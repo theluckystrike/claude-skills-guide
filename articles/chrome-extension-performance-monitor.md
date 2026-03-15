@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Performance Monitor: A Developer's Guide"
 description: "Learn how to monitor and optimize your Chrome extension performance using built-in tools, DevTools, and practical code patterns for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-performance-monitor/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # Chrome Extension Performance Monitor: A Developer's Guide
 

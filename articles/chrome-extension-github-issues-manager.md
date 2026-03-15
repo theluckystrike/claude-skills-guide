@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension GitHub Issues Manager Guide"
 description: "A practical guide to Chrome extensions for managing GitHub issues. Learn how to efficiently track, organize, and handle issues directly from your browser."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-github-issues-manager/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # Chrome Extension GitHub Issues Manager Guide
 
@@ -15,7 +21,7 @@ This guide explores practical Chrome extensions designed for GitHub issue manage
 
 ## Why Use Chrome Extensions for GitHub Issues
 
-The default GitHub Issues interface works well for basic task tracking, but you often need to perform repetitive actions: checking issue status across multiple repositories, adding labels in bulk, or quickly accessing specific issues without navigating through multiple pages. Chrome extensions bridge these gaps by providing shortcuts and additional functionality that integrate seamlessly with GitHub's web interface.
+The default GitHub Issues interface works well for basic task tracking, but you often need to perform repetitive actions: checking issue status across multiple repositories, adding labels in bulk, or quickly accessing specific issues without navigating through multiple pages. Chrome extensions bridge these gaps by providing shortcuts and additional functionality that integrate smoothly with GitHub's web interface.
 
 Extensions can help you:
 

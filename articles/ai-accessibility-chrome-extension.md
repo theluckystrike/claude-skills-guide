@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Accessibility Chrome Extension: A Developer's Guide"
 description: "Build and use AI-powered Chrome extensions that enhance web accessibility. Practical examples, code patterns, and implementation strategies for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-accessibility-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # AI Accessibility Chrome Extension: A Developer's Guide
 
@@ -13,7 +19,7 @@ Web accessibility remains one of the most significant challenges in modern softw
 
 ## Understanding AI-Powered Accessibility Extensions
 
-Unlike conventional accessibility checkers that follow predefined rules, AI accessibility extensions leverage machine learning to understand context, recognize patterns, and suggest human-readable solutions. These extensions can analyze complex interfaces that rule-based tools struggle with, including dynamic content, single-page applications, and custom web components.
+Unlike conventional accessibility checkers that follow predefined rules, AI accessibility extensions use machine learning to understand context, recognize patterns, and suggest human-readable solutions. These extensions can analyze complex interfaces that rule-based tools struggle with, including dynamic content, single-page applications, and custom web components.
 
 The core advantage lies in natural language understanding. An AI extension doesn't just report "missing alt text" — it can analyze the image, understand its content, and generate descriptive alternative text that matches the surrounding context.
 
