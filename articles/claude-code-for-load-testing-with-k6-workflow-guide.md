@@ -47,6 +47,21 @@ Create a project directory for your load tests:
 mkdir k6-load-tests && cd k6-load-tests
 ```
 
+A common pattern is to keep load tests alongside your other test types using a dedicated `tests/load` directory:
+
+```
+your-project/
+├── src/
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── load/          # K6 load tests here
+├── k6/                # Alternative location
+└── scripts/
+```
+
+This separation keeps load tests organized and easy to run independently from unit and integration test suites.
+
 ## Creating K6 Test Scripts with Claude Code
 
 One of Claude Code's most valuable contributions is generating K6 test scripts from natural language descriptions. Here's how to use this capability effectively.
@@ -209,6 +224,25 @@ For CI/CD integration with environment variables:
 k6 run --env BASE_URL=https://staging.example.com script.js
 ```
 
+For repeatable runs across environments, create a wrapper script that handles environment setup and output routing:
+
+```bash
+#!/bin/bash
+# scripts/run-load-test.sh
+
+export K6_CLOUD_TOKEN="${K6_CLOUD_TOKEN}"
+export ENVIRONMENT="${1:-staging}"
+
+echo "Running load tests against $ENVIRONMENT"
+
+k6 run \
+  --out cloud \
+  --env BASE_URL="https://$ENVIRONMENT.example.com" \
+  tests/load/api-tests.js
+```
+
+This script accepts an environment parameter, making it easy to test against staging, production-mirror, or local environments. The `--out cloud` option sends results to k6.io for visualization and historical tracking.
+
 ### Analyzing Results with Claude Code
 
 After running tests, feed the results to Claude Code for analysis:
@@ -239,6 +273,21 @@ Create a custom Claude Code skill for consistent K6 workflows. Add to your skill
 name: k6-load-test
 description: Run K6 load tests and analyze results
 ```
+
+## Automating Performance Gates in CI/CD
+
+For teams that need strict performance requirements, integrate K6 into your CI/CD pipeline and fail builds when thresholds are exceeded. This prevents performance regressions from reaching production:
+
+```yaml
+# Example GitHub Actions step
+- name: Run Load Tests
+  run: |
+    k6 run tests/load/api-tests.js \
+      --threshold 'http_req_duration=p(95)<1000' \
+      --fail-on-threshold
+```
+
+Start with lenient thresholds and tighten them as you establish baseline performance. Overly aggressive thresholds can cause false positives during CI congestion or temporary external service issues.
 
 ## Best Practices
 
