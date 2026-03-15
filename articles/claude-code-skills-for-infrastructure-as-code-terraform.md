@@ -15,6 +15,23 @@ permalink: /claude-code-skills-for-infrastructure-as-code-terraform/
 
 Infrastructure as code has become essential for managing cloud resources reproducibly. When combined with Claude Code skills, Terraform workflows become significantly more efficient. This guide covers the most useful Claude skills for infrastructure-as-code projects and shows how to apply them in real-world scenarios.
 
+## Prerequisites
+
+Before integrating Claude Code with Terraform, ensure you have:
+
+- Claude Code installed and configured on your system
+- Terraform CLI (version 1.6 or later) downloaded from hashicorp.com
+- Access to your cloud provider credentials (AWS, GCP, or Azure)
+- Basic familiarity with Terraform configuration files and HCL syntax
+- A code editor like VS Code with Terraform extensions installed
+
+Verify your Terraform installation by running:
+
+```bash
+terraform version
+terraform -help
+```
+
 ## Setting Up Your Terraform Workflow
 
 Before diving into specific skills, ensure your Claude Code environment is properly configured. The skill system works best when you have a clear project structure:
@@ -109,7 +126,64 @@ This becomes invaluable when returning to a project after several weeks or when 
 
 ### Generating Terraform Configuration
 
-When starting a new module, describe your requirements to Claude and use the combination of skills to generate appropriate configuration. For example, an S3 bucket module:
+When starting a new module, describe your requirements to Claude and it generates appropriate configuration. For a basic AWS web server setup:
+
+```hcl
+provider "aws" {
+  region = "us-east-1"
+
+  default_tags {
+    tags = {
+      Project     = "DemoProject"
+      ManagedBy   = "Terraform"
+      Environment = "development"
+    }
+  }
+}
+
+resource "aws_instance" "web_server" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  root_block_device {
+    volume_size = 20
+    volume_type = "gp3"
+  }
+
+  tags = {
+    Name        = "WebServer"
+    Environment = "production"
+  }
+}
+
+resource "aws_security_group" "web_sg" {
+  name        = "web-server-sg"
+  description = "Security group for web server"
+
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+```
+
+For an S3 static site module:
 
 ```hcl
 # modules/s3-static-site/main.tf
@@ -165,6 +239,20 @@ These checks catch issues before they reach your shared infrastructure.
 
 ### State Management
 
+Store your state files remotely using S3 with DynamoDB locking to enable team collaboration and prevent concurrent modifications:
+
+```hcl
+terraform {
+  backend "s3" {
+    bucket         = "your-terraform-state"
+    key            = "prod/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-locks"
+    encrypt        = true
+  }
+}
+```
+
 The **pdf** skill occasionally helps when you need to read AWS or Terraform documentation directly. While primarily for PDF handling, you can extract critical information from whitepapers or architecture guides that inform your infrastructure decisions.
 
 For state management, consider these practices:
@@ -175,7 +263,20 @@ For state management, consider these practices:
 
 ### Documentation Generation
 
-[Infrastructure documentation often lags behind implementation](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/). Use Claude skills to generate and maintain documentation:
+[Infrastructure documentation often lags behind implementation](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/). Use a `.terraform-docs.yml` configuration to auto-generate documentation from your modules:
+
+```yaml
+settings:
+  header-from: "main.tf"
+  footer-from: ""
+  html: true
+  show: ["all"]
+plugins:
+  find:
+    enabled: true
+```
+
+Run `terraform-docs ./modules` to generate comprehensive documentation automatically. Use Claude skills to maintain documentation:
 
 ```hcl
 # outputs.tf
@@ -191,6 +292,19 @@ output "bucket_arn" {
 ```
 
 With proper outputs defined, you can generate comprehensive documentation automatically using Claude's text generation capabilities.
+
+## Advanced Integration Patterns
+
+For production environments, implement GitOps workflows using Terraform Cloud or AWS CodePipeline. Store your Terraform configurations in version control and trigger plan/apply operations automatically on pull request merges.
+
+Consider implementing cost estimation by integrating Infracost before applying changes:
+
+```bash
+terraform plan -out=tfplan
+infracost diff --tfplan tfplan
+```
+
+This helps teams understand the financial impact of infrastructure changes before applying them.
 
 ## Common Pitfalls to Avoid
 
