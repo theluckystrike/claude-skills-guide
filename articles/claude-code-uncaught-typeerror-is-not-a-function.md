@@ -18,7 +18,7 @@ score: 8
 
 If you've been working with Claude Code skills, you've likely encountered the frustrating "Uncaught TypeError: X is not a function" error. This is one of the most common JavaScript runtime errors that can interrupt your development workflow. Understanding what causes this error and how to fix it will make you a more effective Claude Code developer.
 
-## Understanding the Error
+## Understanding the Is Not a Function Error
 
 The "X is not a function" error occurs when your code attempts to call something as a function, but that something is not actually a function. In JavaScript, functions are first-class objects, which means they can be assigned to variables, passed as arguments, and returned from other functions. However, when you try to invoke a non-function value, JavaScript throws a TypeError.
 
@@ -31,7 +31,7 @@ greeting(); // TypeError: greeting is not a function
 
 In this case, we're trying to call a string as if it were a function, which fails because strings don't have an executable behavior.
 
-## Common Causes in Claude Code Projects
+## Common Causes of Is Not a Function Errors
 
 ### 1. Method Name Typos
 
@@ -163,7 +163,7 @@ Claude Code can review your code before execution to catch potential issues:
 // "Can you check this code for potential TypeError issues?"
 ```
 
-## Practical Solutions
+## Practical Solutions for Function Call TypeErrors
 
 ### Solution 1: Verify Function Existence
 

@@ -17,7 +17,7 @@ score: 7
 
 If you're developing with Claude Code and encounter the dreaded "Cannot read property 'X' of undefined" or "Cannot read property 'X' of null" error, you're not alone. This is one of the most common JavaScript errors you'll face when building applications, and understanding how to debug it effectively is crucial for productive development.
 
-## Understanding the Error
+## Understanding the Cannot Read Property Error
 
 The "Cannot read property of undefined" error occurs when your code attempts to access a property or method on a value that is either `undefined` or `null`. In JavaScript:
 
@@ -31,7 +31,7 @@ const user = undefined;
 console.log(user.name); // TypeError: Cannot read property 'name' of undefined
 ```
 
-## Common Causes in Claude Code Projects
+## Common Causes of Cannot Read Property Errors
 
 ### 1. Asynchronous Data Not Loaded
 
@@ -69,7 +69,7 @@ const items = [];
 console.log(items[0].name); // TypeError: Cannot read property 'name' of undefined
 ```
 
-## Practical Solutions
+## Practical Solutions for Undefined and Null Property Access
 
 ### Solution 1: Optional Chaining (?.) 
 
