@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Speed Reader Tool: A Developer's Guide"
 description: "Learn how to build and use Chrome extension speed reader tools for rapid content consumption. Includes code examples, implementation patterns, and practical use cases."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-speed-reader-tool/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Chrome Extension Speed Reader Tool: A Developer's Guide
@@ -196,3 +202,4 @@ Chrome extension speed reader tools offer a powerful way to dramatically increas
 The key to effective speed reading is practice. Start with slower speeds (200-250 WPM) and gradually increase as your comprehension improves. Most users find they can comfortably read at 400-500 WPM after consistent practice, saving hours of time on content consumption.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

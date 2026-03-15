@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Color Palette Extractor"
 description: "Learn how to use Chrome extensions for extracting color palettes from any website. Discover the best tools for designers and developers to capture, analyze, and export color schemes."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-color-palette-extractor/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension Color Palette Extractor
 
@@ -153,7 +159,7 @@ Once you've extracted a palette, proper export formats make the colors immediate
 }
 ```
 
-**SCSS variables** integrate seamlessly with Sass-based projects:
+**SCSS variables** integrate smoothly with Sass-based projects:
 
 ```scss
 $color-primary: #2d3748;
