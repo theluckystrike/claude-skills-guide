@@ -1,220 +1,200 @@
 ---
-
 layout: default
 title: "Claude Code for Dead Code Elimination Workflow Guide"
-description: "A practical guide to using Claude Code for identifying, analyzing, and safely removing dead code from your codebase. Includes workflow strategies and."
+description: "Learn how to use Claude Code to identify and eliminate dead code from your projects. A practical workflow guide with examples and actionable advice."
 date: 2026-03-15
-author: Claude Skills Guide
+author: "Claude Skills Guide"
 permalink: /claude-code-for-dead-code-elimination-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
-
+{% raw %}
 # Claude Code for Dead Code Elimination Workflow Guide
 
-Dead code—unused functions, unreachable branches, obsolete variables, and deprecated modules—silently accumulates in software projects over time. It increases maintenance costs, slows down builds, confuses developers, and can even introduce security vulnerabilities. Removing dead code is essential for maintaining a healthy codebase, but identifying it accurately and removing it safely requires a systematic approach.
+Dead code—functions never called, variables never used, classes never instantiated—silently accumulates in software projects over time. This guide shows you how to leverage Claude Code to systematically identify and eliminate dead code, improving code quality and reducing maintenance burden.
 
-Claude Code provides powerful capabilities that make dead code elimination more efficient, accurate, and safe. This guide walks you through a practical workflow for using Claude Code to identify, analyze, and remove dead code from your projects.
+## Understanding Dead Code in Modern Projects
 
-## Understanding Dead Code in Modern Codebases
+Dead code comes in several forms that Claude Code can help you detect:
 
-Before diving into the workflow, it's important to recognize the different forms dead code can take:
+- **Unused functions**: Functions defined but never invoked anywhere in your codebase
+- **Unreachable code**: Code paths that cannot be executed due to unconditional returns or throws
+- **Unused imports/variables**: Dependencies or variables imported or declared but never used
+- **Deprecated APIs**: Code using outdated APIs that no longer serve a purpose
 
-- **Unused functions and methods** - Code that is never called anywhere in the codebase
-- **Unreachable code** - Branches that cannot be executed due to invariant conditions
-- **Unused variables and imports** - Declarations that serve no purpose
-- **Dead files** - Modules that are no longer imported or referenced
-- **Obsolete feature flags** - Conditional code for features that have been retired
-- **Commented-out code** - Historical code left in place but never executed
+Before diving into the workflow, ensure Claude Code is installed and your project is accessible.
 
-Each type requires a different detection strategy, and Claude Code can assist with all of them.
+## The Dead Code Elimination Workflow
 
-## Setting Up Your Dead Code Detection Workflow
+### Step 1: Analyze Your Project Structure
 
-The foundation of effective dead code elimination is a reliable detection workflow. Here's how to structure it with Claude Code:
+Start by having Claude Code scan your project to understand its structure and identify potential dead code zones:
 
-### Step 1: Create a Skill for Dead Code Analysis
-
-Create a Claude skill focused on dead code detection that uses multiple tools:
-
-```yaml
----
-name: dead-code-analyzer
-description: Analyzes codebase for dead code and generates elimination reports
----
+```
+claude -p "Analyze this project's directory structure and identify the main source directories, programming languages used, and any existing dead code patterns you notice. Focus on finding unused functions, imports, and variables."
 ```
 
-This skill should be able to:
-- Search for unused function definitions
-- Find unreachable code patterns
-- Identify unused imports and variables
-- Generate comprehensive reports
+This initial analysis helps you understand the scope and guides subsequent detailed investigation.
 
-### Step 2: Establish a Baseline
+### Step 2: Identify Unused Functions
 
-Before removing any code, establish a baseline of your codebase:
+Ask Claude Code to find functions that are defined but never called:
+
+```
+claude -p "Find all functions in the src/ directory that are defined but never called or referenced elsewhere in the codebase. List each function, its file location, and explain why it appears unused."
+```
+
+Claude Code will analyze your codebase and provide a list of potentially unused functions. Review each suggestion carefully—some functions may be called dynamically or used as callbacks.
+
+### Step 3: Detect Unused Imports and Variables
+
+Unused imports bloat your codebase and slow down builds. Have Claude Code identify them:
+
+```
+claude -p "Scan all TypeScript/JavaScript files in src/ and list all imports that are imported but never used in the file. Also identify any declared variables that are never read."
+```
+
+For Python projects, modify the prompt accordingly:
+
+```
+claude -p "Find all imported modules and variables in Python files under the lib/ directory that are imported but never used. Also identify any undefined names or unused function parameters."
+```
+
+### Step 4: Find Unreachable Code
+
+Unreachable code—code that can never execute—often results from refactoring or conditional logic that always evaluates the same way:
+
+```
+claude -p "Identify unreachable code in the codebase. Look for: 1) code after unconditional return/throw statements, 2) if statements with conditions that are always true or false, 3) case statements in switch statements that can never be matched. List each instance with file and line number."
+```
+
+### Step 5: Identify Deprecated API Usage
+
+Code using deprecated APIs should be updated or removed:
+
+```
+claude -p "Search for usage of deprecated APIs in the codebase. Look for: 1) functions/classes marked as @deprecated or similar annotations, 2) imports from deprecated modules, 3) usage of deprecated language features. List each instance with recommended replacements."
+```
+
+## Practical Example: Eliminating Dead Code in a Node.js Project
+
+Consider a typical Node.js project with dead code. Here's how Claude Code helps clean it up:
+
+### Before (sample code with dead code):
+
+```javascript
+// utils/helpers.js
+export function formatDate(date) {
+  return new Date(date).toISOString();
+}
+
+export function formatDateShort(date) {
+  return new Date(date).toLocaleDateString();
+}
+
+export function oldFormat(date) {
+  // This function was used in v1.0 but is no longer needed
+  return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+}
+
+export function calculateSum(numbers) {
+  return numbers.reduce((a, b) => a + b, 0);
+}
+
+// main.js
+import { formatDate } from './utils/helpers.js';
+
+const data = { timestamp: new Date() };
+console.log(formatDate(data.timestamp));
+```
+
+### Claude Code Analysis:
+
+Running the analysis reveals:
+
+1. **Unused functions**: `formatDateShort`, `oldFormat`, `calculateSum` are never imported
+2. **Unused variables**: `data` object properties beyond `timestamp` are never accessed
+
+### After (dead code removed):
+
+```javascript
+// utils/helpers.js
+export function formatDate(date) {
+  return new Date(date).toISOString();
+}
+
+// main.js
+import { formatDate } from './utils/helpers.js';
+
+console.log(formatDate(new Date()));
+```
+
+## Actionable Advice for Ongoing Dead Code Management
+
+### Integrate Dead Code Checks into Your CI/CD Pipeline
+
+Add automated dead code detection to your build process:
 
 ```bash
-# Run your test suite to ensure all tests pass
-npm test  # or your equivalent test command
+# For JavaScript/TypeScript projects
+npx depcruise --validate . | grep "unused"
 
-# Create a git branch for dead code removal
-git checkout -b cleanup/remove-dead-code
+# For Python projects
+pip install vulture && vulture path/to/code/
 ```
 
-Running tests first ensures you have a safety net. If something breaks after dead code removal, your tests will catch it.
+### Create a Claude Code Skill for Dead Code Detection
 
-## Identifying Dead Code with Claude Code
+Build a reusable skill that automates your dead code workflow:
 
-Claude Code excels at pattern recognition across your entire codebase. Here's how to use its capabilities:
+```markdown
+---
+name: dead-code-detector
+description: Analyzes codebase for dead code patterns
+tools: [read_file, bash]
+---
 
-### Finding Unused Functions
+You are a dead code detector. Analyze the provided codebase for:
+1. Unused functions and methods
+2. Unused imports and variables
+3. Unreachable code paths
+4. Deprecated API usage
 
-Use Claude Code to search for function definitions that are never called:
-
-```
-Find all function definitions in the codebase that have no other references outside their definition. List each function with its file path and line number.
-```
-
-Claude will analyze your code and identify functions that appear to be unused. However, be cautious—some functions may be called dynamically or used externally.
-
-### Detecting Unreachable Code
-
-Search for code paths that can never execute:
-
-```
-Find code blocks that are unreachable because they follow return statements, throw statements, or infinite loops. Look for else branches after conditionals that always evaluate to true.
+Provide a detailed report with file paths and line numbers.
 ```
 
-### Identifying Dead Files
+### Schedule Regular Dead Code Reviews
 
-Find files that are no longer imported or referenced:
+Make dead code elimination a regular practice:
 
-```
-Search for .js, .ts, .py, or other source files in the project that are not imported or required anywhere in the codebase. Exclude test files and configuration files.
-```
+- **Weekly**: Quick scan for obvious unused code after feature development
+- **Monthly**: Comprehensive analysis across all modules
+- **Pre-release**: Final check before major releases
 
-## Analyzing and Prioritizing Dead Code
+### Use TypeScript/ESLint for Automatic Detection
 
-Not all dead code should be removed immediately. Claude Code can help you analyze the impact and prioritize:
+Configure your tooling to catch dead code early:
 
-### Assess Dependencies
-
-For each piece of dead code identified, use Claude to trace its dependencies:
-
-```
-Check if [function_name] is exported and used in any external packages, tests, or configuration files. Look for dynamic imports, eval() calls, or reflection-based usage.
-```
-
-### Evaluate Risk
-
-Use Claude to assess the risk of removing each piece of dead code:
-
-```
-For the unused function 'processLegacyData' in src/utils/data.js, analyze:
-1. When was it last modified?
-2. Is it mentioned in any documentation or comments?
-3. Could it be part of an API that external consumers depend on?
+```json
+{
+  "rules": {
+    "no-unused-vars": "error",
+    "no-unused-imports": "error",
+    "no-dead-code": "error"
+  }
+}
 ```
 
-### Create a Prioritization Matrix
-
-Based on Claude's analysis, categorize dead code into:
-
-| Priority | Criteria | Action |
-|----------|----------|--------|
-| High | No tests, no exports, no external references | Safe to remove |
-| Medium | Has tests or exports but no actual usage | Review and monitor |
-| Low | Part of deprecated feature flags | Plan removal in next release |
-
-## Safe Removal Strategies
-
-When you're ready to remove dead code, follow these safety-first strategies:
-
-### Remove Code Incrementally
-
-Never remove all dead code at once. Remove one category at a time:
-
-```bash
-# First pass: remove unused imports
-# Run tests after each removal
-npm test
-
-# Second pass: remove unused functions
-# Run tests again
-npm test
-
-# Third pass: remove dead files
-# Final test run
-npm test
-```
-
-### Use Feature Flags for Large Changes
-
-For larger dead code removal involving deprecated features:
+Claude Code can help you set up and configure these rules:
 
 ```
-Help me identify all code related to the 'v1-api' feature flag. I want to understand the full scope before creating a feature flag removal plan.
+claude -p "Help me set up ESLint configuration to detect unused variables and imports in my TypeScript project. Provide the necessary dependencies and eslint.config.js setup."
 ```
-
-### Document Your Changes
-
-Use Claude to generate commit messages that explain what was removed:
-
-```
-Generate a detailed commit message explaining that we removed the unused 'processLegacyData' function and its three helper functions, as confirmed by static analysis and test coverage.
-```
-
-## Automating Dead Code Detection
-
-You can create recurring workflows for ongoing dead code detection:
-
-### Pre-commit Hook Integration
-
-Work with Claude to set up pre-commit checks:
-
-```
-Help me create a pre-commit hook that runs a basic dead code check using Claude Code's analysis capabilities.
-```
-
-### Periodic Analysis
-
-Schedule regular dead code reviews:
-
-```
-Create a monthly workflow that:
-1. Identifies new dead code since the last review
-2. Analyzes the impact of each piece
-3. Generates a report for the development team
-```
-
-## Common Pitfalls to Avoid
-
-When using Claude Code for dead code elimination, watch out for these common mistakes:
-
-**Removing code that's called dynamically** - Some code uses `eval()`, reflection, or dynamic imports. Claude can't always detect these patterns. Always verify with thorough testing.
-
-**Ignoring exported functions** - Even if a function isn't used internally, external packages might depend on it. Check your package's public API.
-
-**Removing commented code too aggressively** - Sometimes commented code provides valuable historical context. Keep comments that explain why something was changed or deprecated.
-
-**Skipping the test suite** - Always run your full test suite after dead code removal. Dead code might have been "protection" against edge cases you didn't know existed.
 
 ## Conclusion
 
-Dead code elimination is an ongoing maintenance task that keeps your codebase healthy and maintainable. Claude Code transforms this tedious process into an efficient workflow by providing comprehensive analysis, pattern detection, and risk assessment capabilities.
+Dead code elimination is essential for maintaining healthy codebases. Claude Code transforms this tedious task into an efficient workflow by providing intelligent analysis, contextual understanding, and actionable recommendations. Start implementing this workflow today, and you'll see improvements in code maintainability, faster build times, and reduced cognitive load when navigating your codebase.
 
-Start with small, low-risk removals and gradually tackle more complex dead code as you build confidence in your detection and removal process. The key is establishing a systematic workflow: identify, analyze, prioritize, remove incrementally, and verify with tests.
-
-By integrating dead code elimination into your regular development routine—with Claude Code as your analysis partner—you'll keep your codebase lean, reduce technical debt, and improve developer productivity.
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Remember: the key to effective dead code management is consistency. Regular scans and incremental cleanup prevent dead code accumulation and keep your project healthy long-term.
+{% endraw %}
