@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Code Smell Detection Workflow Guide"
 description: "Learn how to leverage Claude Code for effective code smell detection. This comprehensive guide covers practical workflows, automated analysis techniques, and actionable strategies to improve your codebase quality."
@@ -8,13 +9,16 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-code-smell-detection-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
 # Claude Code for Code Smell Detection Workflow Guide
 
-Code smells are subtle indicators of deeper problems in your codebase that can lead to maintenance nightmares, bugs, and technical debt if left unchecked. While traditional static analysis tools can catch certain issues, Claude Code offers a powerful, context-aware approach to detecting and addressing code smells. This guide walks you through practical workflows for leveraging Claude Code in your code smell detection process.
+Code smells are subtle indicators of deeper problems in your codebase that can lead to maintenance nightmares, bugs, and technical debt if left unchecked. While traditional static analysis tools can catch certain issues, Claude Code offers a powerful, context-aware approach to detecting and addressing code smells. This guide walks you through practical workflows for using Claude Code in your code smell detection process.
 
 ## Understanding Code Smells and Why They Matter
 
