@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Document Editor Chrome Extension: A Developer Guide"
 description: "Discover how AI document editor Chrome extensions can transform your writing workflow. Learn about key features, integration methods, and practical use cases for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-document-editor-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Document Editor Chrome Extension: A Developer Guide
 

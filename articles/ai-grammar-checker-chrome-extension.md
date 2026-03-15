@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "AI Grammar Checker Chrome Extension: A Developer's Guide"
 description: "Learn how AI grammar checker Chrome extensions work under the hood, how to build one, and which APIs power real-time writing assistance."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-grammar-checker-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Grammar Checker Chrome Extension: A Developer's Guide
 
-Chrome extensions that leverage AI for grammar checking have transformed how developers, writers, and power users handle written content. Unlike traditional spell-checkers that rely on static dictionaries, AI-powered grammar checkers analyze context, sentence structure, and writing style to provide intelligent suggestions.
+Chrome extensions that use AI for grammar checking have transformed how developers, writers, and power users handle written content. Unlike traditional spell-checkers that rely on static dictionaries, AI-powered grammar checkers analyze context, sentence structure, and writing style to provide intelligent suggestions.
 
 This guide explores how these extensions work technically, what APIs power them, and how you can integrate grammar checking into your own Chrome extension projects.
 

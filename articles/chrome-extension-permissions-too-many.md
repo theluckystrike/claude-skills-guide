@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Permissions Too Many: A Developer's Guide to Minimal Access"
 description: "Learn how to audit, reduce, and properly request Chrome extension permissions to protect user privacy and build trust."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-permissions-too-many/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 Chrome extensions enhance browser functionality, but permission overreach remains a persistent problem. When extensions request too many permissions, users face privacy risks, and developers risk losing trust or triggering Chrome Web Store rejections. This guide covers how to audit permissions, implement the principle of least privilege, and communicate transparency to users.
 
@@ -77,7 +83,7 @@ function enableFeature() {
 }
 ```
 
-### Leverage the activeTab Permission
+### use the activeTab Permission
 
 The `activeTab` permission grants temporary access to the current tab only when the user explicitly invokes your extension. This is ideal for features like page analyzers, highlighters, or one-click tools:
 
@@ -109,7 +115,7 @@ function analyzePage() {
 
 This approach dramatically reduces the permissions your extension needs while maintaining functionality.
 
-### Leverage Declarative Net Request for Network Filtering
+### use Declarative Net Request for Network Filtering
 
 Instead of using host permissions to read and modify network requests, use the declarativeNetRequest API:
 

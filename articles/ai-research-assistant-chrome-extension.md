@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "AI Research Assistant Chrome Extension: A Developer's Guide"
 description: "Discover how AI research assistant Chrome extensions can streamline your research workflow. Practical examples, API integrations, and implementation tips for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-research-assistant-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Research Assistant Chrome Extension: A Developer's Guide
 

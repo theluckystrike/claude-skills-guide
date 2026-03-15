@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "AI Citation Generator Chrome: A Developer and Power User Guide"
 description: "Discover how to build and use AI-powered citation generators as Chrome extensions. Practical implementation guide with code examples for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-citation-generator-chrome/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Citation Generator Chrome: A Developer and Power User Guide
 

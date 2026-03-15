@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Bookmark Manager for Chrome: A Developer Guide"
 description: "Discover how AI-powered bookmark managers for Chrome can transform your workflow. Compare top solutions, explore programmatic access, and learn to build custom integrations."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-bookmark-manager-chrome/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # AI Bookmark Manager for Chrome: A Developer Guide
 

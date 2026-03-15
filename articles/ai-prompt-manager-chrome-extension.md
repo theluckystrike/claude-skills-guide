@@ -1,11 +1,18 @@
 ---
+
 layout: default
 title: "AI Prompt Manager Chrome Extension: Organize and Optimize Your AI Workflows"
 description: "Learn how to use an AI prompt manager Chrome extension to organize, categorize, and quickly access your best prompts across different AI tools and workflows."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-prompt-manager-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+{% raw %}
+
 
 # AI Prompt Manager Chrome Extension: Organize and Optimize Your AI Workflows
 
@@ -135,3 +142,4 @@ An AI prompt manager Chrome extension transforms scattered prompts into a organi
 The key is starting simple—organize your most-used prompts first, then expand as your library grows. With proper structure and regular maintenance, your prompt library becomes a genuine productivity asset rather than another tool to manage.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

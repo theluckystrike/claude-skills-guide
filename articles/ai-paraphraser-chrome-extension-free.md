@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Paraphraser Chrome Extension Free: A Developer Guide"
 description: "Discover how to build and use free AI-powered paraphraser Chrome extensions for developers and power users. Includes code examples and practical implementation guides."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-paraphraser-chrome-extension-free/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 

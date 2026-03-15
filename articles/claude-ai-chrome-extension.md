@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Claude AI Chrome Extension: Use Cases, Setup, and Practical Examples"
 description: "A practical guide to using Claude AI through Chrome extensions. Learn about available options, setup methods, and real-world use cases for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /claude-ai-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Claude AI Chrome Extension: Use Cases, Setup, and Practical Examples
 

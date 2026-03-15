@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Building an AI Speech to Text Chrome Extension"
 description: "Learn how to build a speech-to-text Chrome extension using the Web Speech API. Practical code examples, architecture patterns, and implementation guide for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-speech-to-text-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Building an AI Speech to Text Chrome Extension
 
