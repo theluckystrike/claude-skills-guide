@@ -2,7 +2,7 @@
 
 layout: default
 title: "How to Block Cryptomining in Chrome: A Developer's Guide"
-description: "Learn multiple methods to block cryptomining scripts in Chrome. Includes built-in settings, extensions, network-level filtering, and developer tools for protecting your browser."
+description: "Learn multiple methods to block cryptomining scripts in Chrome. Includes built-in settings, extensions, network-level filtering, and developer tools."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-block-cryptomining/
@@ -164,5 +164,12 @@ Combining multiple protection layers provides the most robust defense against cr
 Regularly review your browser's resource usage. If you notice unexplained high CPU consumption, check the Task Manager (Shift+Esc) to identify which tabs are consuming resources. Unload suspicious tabs immediately and run a malware scan if necessary.
 
 For developers working with blockchain technologies, maintain a whitelist of trusted domains where mining is expected. This prevents interference with legitimate development work while maintaining protection elsewhere.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
