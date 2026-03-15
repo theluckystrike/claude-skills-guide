@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for OSS Governance Workflow Tutorial Guide"
-description: "Learn how to use Claude Code to streamline open source software governance. Practical workflow automation for license compliance, dependency management, and security policies."
+description: "Learn how to use Claude Code to streamline open source software governance. Practical workflow automation for license compliance, dependency."
 date: 2026-03-15
 categories: [tutorials]
 tags: [claude-code, claude-skills]
@@ -283,3 +283,10 @@ Start by implementing one or two of the workflows described in this guide—lice
 With Claude Code as part of your governance toolkit, you can confidently manage open source dependencies while keeping your team focused on building great software.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

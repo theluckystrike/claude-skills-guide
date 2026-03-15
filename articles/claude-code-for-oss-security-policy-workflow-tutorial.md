@@ -211,3 +211,10 @@ Follow these recommendations to maximize the effectiveness of your security work
 Claude Code transforms OSS security management from a manual, error-prone process into an automated, consistent workflow. By defining clear security policies, automating vulnerability detection, and integrating checks into your development process, you can significantly reduce security risks without sacrificing development speed.
 
 Start by implementing basic dependency audits, then progressively add more sophisticated policies as your team's security practices mature. Claude Code's contextual understanding of your project makes it an invaluable partner in maintaining robust open source security.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
