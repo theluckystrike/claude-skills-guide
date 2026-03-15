@@ -9,7 +9,7 @@ author: "Claude Skills Guide"
 permalink: /chrome-extension-stockx-price-tracker/
 reviewed: true
 score: 8
-categories: [chrome-extensions, shopping]
+categories: [guides]
 tags: [stockx, price tracking, chrome, claude-skills]
 ---
 
