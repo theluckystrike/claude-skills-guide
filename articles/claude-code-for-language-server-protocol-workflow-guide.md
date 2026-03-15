@@ -8,6 +8,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-language-server-protocol-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
@@ -20,7 +22,7 @@ LSP operates on a client-server model where your editor acts as the client and l
 
 Claude Code complements LSP by providing natural language understanding, code generation, and contextual awareness that goes beyond what traditional language servers offer. While LSP excels at understanding code structure and providing precise references, Claude Code brings semantic understanding of your project's purpose and can generate entire functions or files based on your intent. Together, they form a powerful combination for modern development workflows.
 
-The integration typically works in two directions: Claude Code can leverage LSP responses to gain deeper code understanding, and you can use Claude to configure, debug, or enhance your LSP setup. This bidirectional relationship creates a seamless development experience where AI assistance and language intelligence work in harmony.
+The integration typically works in two directions: Claude Code can use LSP responses to gain deeper code understanding, and you can use Claude to configure, debug, or enhance your LSP setup. This bidirectional relationship creates a seamless development experience where AI assistance and language intelligence work in harmony.
 
 ## Setting Up Your LSP Environment
 
@@ -110,7 +112,7 @@ For projects with multiple languages or complex build systems, LSP configuration
 
 ## Optimizing Your Combined Workflow
 
-To get the most from Claude Code and LSP working together, establish habits that leverage both technologies effectively. Use LSP for tasks requiring precision: accurate autocomplete, exact symbol references, and reliable error detection. Use Claude Code for tasks requiring creativity: generating new code, explaining complex logic, and handling ambiguous requirements.
+To get the most from Claude Code and LSP working together, establish habits that use both technologies effectively. Use LSP for tasks requiring precision: accurate autocomplete, exact symbol references, and reliable error detection. Use Claude Code for tasks requiring creativity: generating new code, explaining complex logic, and handling ambiguous requirements.
 
 Consider creating a Claude skill that summarizes LSP workspace symbols, giving you a quick overview of your project's structure. This is particularly valuable in large codebases where understanding the architecture manually would take significantly longer.
 

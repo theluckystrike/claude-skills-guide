@@ -3,10 +3,12 @@ layout: default
 title: "Claude Code for Multi-Language Navigation Workflow"
 description: "Learn how to leverage Claude Code CLI to navigate and manage multi-language projects efficiently with practical examples and actionable workflows."
 date: 2026-03-15
-author: Claude Skills Guide
+author: "Claude Skills Guide"
 permalink: /claude-code-for-multi-language-navigation-workflow/
 categories: [Development, Claude Code, Workflow Automation]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
@@ -148,7 +150,7 @@ Periodically ask Claude Code to map your project:
 
 This generates a mental model of how your languages interact, which is invaluable for navigation.
 
-### 4. Leverage Context Preservation
+### 4. use Context Preservation
 
 When switching between language contexts, be explicit about preserving important context:
 

@@ -8,6 +8,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-code-complexity-analysis-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 {% raw %}
 
