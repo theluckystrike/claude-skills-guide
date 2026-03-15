@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Chrome iOS Slow Fix – Practical Solutions for Developers and Power Users
-description: A comprehensive guide to fixing Chrome performance issues on iOS devices. Learn practical solutions, browser settings, and developer techniques to restore speed.
+title: "Chrome iOS Slow Fix – Practical Solutions for Developers and Power Users"
+description: "A comprehensive guide to fixing Chrome performance issues on iOS devices. Learn practical solutions, browser settings, and developer techniques to restore speed."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-ios-slow-fix/
