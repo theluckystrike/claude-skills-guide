@@ -24,6 +24,8 @@ Svelte stands out from other frameworks because it compiles your components to e
 
 When you pair Svelte's animation capabilities with Claude Code's ability to understand context, generate code, and iterate rapidly, you can create sophisticated motion designs without the typical trial-and-error cycle.
 
+> **Scope of this article:** This tutorial covers all three of Svelte's animation primitives — `svelte/transition` (enter/leave effects), `svelte/motion` (spring and tweened stores), and `svelte/animate` (list reordering with `flip`). If you want a focused deep-dive on `svelte/transition` alone — including custom transition functions and SvelteKit page transitions — see the companion guide [Claude Code for Svelte Transitions Workflow Guide](/claude-code-for-svelte-transitions-workflow-guide/).
+
 ## Setting Up Your Svelte Animation Project
 
 Before diving into animations, ensure you have a Svelte project ready. If you're starting fresh, create one using the standard tooling:
@@ -289,6 +291,7 @@ Remember to respect user preferences, keep animations brief, and use easing func
 
 ## Related Reading
 
+- [Claude Code for Svelte Transitions Workflow Guide](/claude-code-for-svelte-transitions-workflow-guide/) — Deep dive on `svelte/transition`: custom transitions, SvelteKit page routing, and Motion One integration
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
