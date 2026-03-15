@@ -20,6 +20,46 @@ Integrating billing into your application doesn't have to be a nightmare. Paddle
 
 This guide walks you through integrating Paddle billing using Claude Code, covering everything from initial setup to handling webhooks and managing subscriptions.
 
+## Defining a Paddle Billing Skill
+
+Before writing integration code, you can define a Claude skill that encapsulates the entire billing workflow. Skills give Claude a focused persona and explicit instructions for handling events:
+
+```markdown
+---
+name: paddle-billing
+description: Handles Paddle billing events and manages subscription workflows
+---
+
+# Paddle Billing Workflow Handler
+
+You handle incoming Paddle webhook events and execute appropriate billing workflows. When you receive an event:
+
+1. Parse the event payload to identify the event type
+2. Log the event for audit purposes
+3. Execute the appropriate workflow based on event type
+4. Update local records if needed
+
+## Event Types
+
+Handle these Paddle event types:
+- subscription_created: New subscription activated
+- subscription_updated: Subscription modified
+- subscription_cancelled: Subscription terminated
+- subscription_payment_succeeded: Payment received
+- subscription_payment_failed: Payment declined
+- invoice_created: New invoice generated
+
+## Processing Events
+
+When processing an event:
+1. Extract the subscription_id and customer_id
+2. Look up the customer in your database
+3. Execute business logic based on event type
+4. Return a summary of actions taken
+```
+
+With the skill in place, Claude Code uses it as context when you ask billing-related questions, keeping generated code consistent with your workflow design.
+
 ## Why Paddle + Claude Code?
 
 Paddle handles the complexity of global tax compliance, invoice generation, and subscription management. When you pair it with Claude Code, you get AI assistance that understands your codebase and can generate boilerplate code, debug issues, and suggest improvements.
@@ -124,6 +164,27 @@ async function handleSubscriptionCreated(event: any) {
 }
 ```
 
+If your backend uses Python, Claude Code can generate an equivalent signature verification function using the standard `hmac` library:
+
+```python
+# process_subscription_event.py
+import os
+import hmac
+import hashlib
+
+def verify_webhook_signature(payload: str, signature: str) -> bool:
+    """Verify that the webhook came from Paddle"""
+    secret = os.environ.get('PADDLE_WEBHOOK_SECRET')
+    expected = hmac.new(
+        secret.encode(),
+        payload.encode(),
+        hashlib.sha256
+    ).hexdigest()
+    return hmac.compare_digest(signature, expected)
+```
+
+The Python and TypeScript implementations follow the same HMAC-SHA256 pattern — always use `compare_digest` (or its equivalent) to prevent timing attacks.
+
 ## Step 4: Create Subscription Management APIs
 
 Claude Code can generate the RESTful endpoints for subscription management:
@@ -207,6 +268,53 @@ async function handlePaymentFailed(event: any) {
 }
 ```
 
+For more nuanced retry scheduling, Claude Code can generate a strategy function that adjusts timing based on the reason for failure:
+
+```python
+def get_retry_schedule(failure_reason: str) -> list:
+    """Determine retry schedule based on failure type"""
+    if failure_reason == 'insufficient_balance':
+        # Gentle retry for temporary issues
+        return ['3 days', '7 days', '14 days']
+    elif failure_reason == 'card_expired':
+        # Urgent - card needs immediate update
+        return ['immediate']
+    else:
+        return ['1 day', '3 days', '7 days']
+```
+
+This failure-aware retry schedule prevents unnecessary retries on cards that clearly need updating while giving customers with temporary balance issues enough time to resolve them.
+
+### Invoice Lifecycle Handling
+
+Invoices flow through several statuses (`due` → `paid` or `overdue`). Each status requires a different action. Ask Claude Code to generate a complete invoice event handler:
+
+```python
+def process_invoice_webhook(event: dict) -> dict:
+    """Process invoice events from Paddle"""
+    invoice = event['data']
+    invoice_id = invoice['id']
+    status = invoice['status']
+
+    if status == 'paid':
+        # Payment succeeded - fulfill the order
+        fulfill_order(invoice)
+        send_receipt(invoice)
+        return {'action': 'order_fulfilled'}
+
+    elif status == 'due':
+        # Invoice generated but not yet paid
+        send_payment_reminder(invoice)
+        return {'action': 'reminder_sent'}
+
+    elif status == 'overdue':
+        # Handle overdue invoice
+        handle_overdue_invoice(invoice)
+        return {'action': 'overdue_handled'}
+
+    return {'action': 'no_action_needed'}
+```
+
 ## Step 6: Testing Your Integration
 
 Claude Code excels at generating test fixtures. Ask for help:
@@ -235,6 +343,25 @@ export const subscriptionCanceledEvent = {
   }
 };
 ```
+
+### Testing Webhooks Locally with ngrok and paddle-cli
+
+Unit tests cover logic, but you also need to validate that Paddle can actually reach your local server. Use ngrok to expose your local port and `paddle-cli` to fire real sandbox events:
+
+```bash
+# Expose your local server to the internet
+ngrok http 3000
+
+# Configure Paddle sandbox to send webhooks to your ngrok URL, then trigger test events:
+paddle-cli test-event subscription_created
+paddle-cli test-event subscription_payment_failed
+```
+
+Make sure your webhook handler gracefully survives these edge cases during local testing:
+- Duplicate webhook deliveries (Paddle may send the same event more than once)
+- Webhook delivery during maintenance windows
+- Partial refunds and credits
+- Currency conversions for international customers
 
 Use these fixtures to test your webhook handlers:
 
