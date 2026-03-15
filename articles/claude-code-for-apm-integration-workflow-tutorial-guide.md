@@ -7,7 +7,7 @@ description: "Learn how to integrate Claude Code into your Application Performan
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-apm-integration-workflow-tutorial-guide/
-categories: [tutorials, devops]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
