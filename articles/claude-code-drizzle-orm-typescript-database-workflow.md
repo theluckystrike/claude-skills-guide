@@ -473,7 +473,7 @@ Keep your schema definitions in dedicated files and import them consistently. Us
 
 ## Related Reading
 
-- [Using Claude Code with Drizzle ORM Schema Management](/claude-skills-guide/using-claude-code-with-drizzle-orm-schema-management/) — See also
+- [Using Claude Code with Drizzle ORM Schema Management](/claude-skills-guide/using-claude-code-with-drizzle-orm-schema-management/) — Schema management workflow, common pitfalls, and documentation automation
 - [Claude Code for Turso SQLite Edge Database Tutorial](/claude-skills-guide/claude-code-for-turso-sqlite-edge-database-tutorial/) — See also
 - [Claude Skills With Supabase Database Integration](/claude-skills-guide/claude-skills-with-supabase-database-integration/) — See also
 
