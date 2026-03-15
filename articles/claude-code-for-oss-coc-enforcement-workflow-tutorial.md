@@ -1,221 +1,218 @@
 ---
-
 layout: default
 title: "Claude Code for OSS CoC Enforcement Workflow Tutorial"
-description: "Learn how to build automated Code of Conduct enforcement workflows for open source projects using Claude Code skills. Practical examples and actionable."
+description: "Learn how to build automated Code of Conduct enforcement workflows using Claude Code skills. Practical examples for handling reports, notifications, and escalation."
 date: 2026-03-15
-author: Claude Skills Guide
+author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-coc-enforcement-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
-
 
 {% raw %}
 # Claude Code for OSS CoC Enforcement Workflow Tutorial
 
-Open source communities thrive on respectful collaboration, but maintaining a healthy environment requires consistent enforcement of your Code of Conduct (CoC). As projects grow, manually handling CoC reports becomes overwhelming. This tutorial shows you how to use Claude Code to automate and streamline your CoC enforcement workflow, making it consistent, documented, and less emotionally taxing for maintainers.
+Open source communities thrive when contributors feel safe and respected. A well-enforced Code of Conduct (CoC) is essential for healthy projects, but manually managing violations can be time-consuming and emotionally draining. This tutorial shows you how to build automated CoC enforcement workflows using Claude Code skills, helping maintainers handle reports consistently while reducing administrative burden.
 
 ## Understanding CoC Enforcement Challenges
 
-Before diving into automation, recognize the common pain points in CoC enforcement:
+Every open source project maintainer knows this scenario: a community member files a CoC violation report, and you're uncertain about the proper response sequence. Should you notify the accused first? How long should you wait for responses? When does an issue require escalation to the CoC committee?
 
-- **Inconsistent responses**: Different maintainers may handle similar incidents differently
-- **Documentation gaps**: Important context gets lost in scattered issue comments
-- **Time pressure**: Responders often need to make quick decisions under stress
-- **Burnout**: Volunteer maintainers get drained by repetitive moderation tasks
+These questions have no universal answers, but establishing clear workflows ensures consistent handling. The goal isn't automation for its own sake—it's creating repeatable processes that protect both reporters and the accused while documenting every step for accountability.
 
-Claude Code skills can help address all these challenges by providing structured workflows, templates, and automated record-keeping.
+## Building Your CoC Enforcement Skill
 
-## Setting Up Your CoC Enforcement Skill
+A Claude Code skill for CoC enforcement should guide maintainers through a structured response workflow. Let's build one step by step.
 
-Create a new skill dedicated to CoC enforcement. This skill will guide you through the entire process from report intake to resolution.
+### Skill Structure and Front Matter
 
-### Skill Structure and Configuration
-
-Your CoC enforcement skill needs clear front matter defining its scope and available tools:
+Every skill begins with front matter that defines its scope and available tools:
 
 ```yaml
 ---
-name: coc-enforcer
+name: coc-enforcement
 description: Guided workflow for handling Code of Conduct violation reports
+tools: [read_file, write_file, bash]
+version: 1.0.0
 ---
 ```
 
-The skill operates in a controlled environment where every step is logged, creating an audit trail for future reference.
+The `tools` field is intentionally limited. CoC enforcement primarily requires document management and communication, not system operations. Restricting tools follows the principle of least privilege.
 
-## Building the Enforcement Workflow
+### Defining the Workflow Stages
 
-A robust CoC enforcement workflow consists of several phases. Let's build each phase as part of your Claude Code skill.
+Your skill should guide maintainers through distinct stages:
 
-### Phase 1: Report Intake and Triage
+1. **Report Intake** - Documenting the initial complaint
+2. **Triage** - Assessing severity and determining urgency
+3. **Investigation** - Gathering information from involved parties
+4. **Decision** - Determining appropriate response
+5. **Action** - Implementing the consequences
+6. **Follow-up** - Ensuring resolution and documenting the case
 
-When a CoC report arrives, your skill should immediately capture essential information:
-
-1. **Identify the reporter and respondent** - Collect GitHub usernames
-2. **Categorize the incident** - Harassment, discrimination, harassment, or other
-3. **Assess severity** - One-time vs. pattern, public vs. private, tone, intent
-4. **Gather context** - Link to relevant issues, PRs, or discussion threads
-
-Create a standardized intake template that your skill populates:
+Let's create prompts for each stage:
 
 ```markdown
-## CoC Incident Report
+# Code of Conduct Enforcement Workflow
 
-**Report ID**: {{incident_id}}
-**Date Received**: {{date}}
-**Reporter**: @{{reporter}}
-**Respondent**: @{{respondent}}
-**Category**: {{category}}
-**Severity**: {{severity}}
-**Status**: {{status}}
-**Assigned To**: {{assigned_reviewer}}
+This workflow guides you through handling a CoC violation report. Follow each stage sequentially, documenting your decisions at each step.
 
-### Incident Summary
-{{summary}}
+## Stage 1: Report Intake
 
-### Evidence
-- Link 1: {{evidence_1}}
-- Link 2: {{evidence_2}}
+First, gather essential information. Create or update a case file in your project's CoC records directory (typically `.coc/cases/`).
 
-### Previous Incidents
-{{previous_violations}}
+Document the following:
+- Reporter's name and contact information (or "anonymous" if preferred)
+- Date and time of the incident
+- Description of the reported behavior
+- Names of individuals involved
+- Any witnesses or supporting evidence
+
+Ask clarifying questions if the report is vague. A good report should answer: Who, What, When, Where, and Why does this violate our CoC?
+
+## Stage 2: Triage
+
+Assess the report using these criteria:
+
+**Severity Levels:**
+- **Critical**: Threats, harassment targeting protected groups, illegal behavior
+- **High**: Repeated minor violations, escalation attempts, power imbalance abuse
+- **Medium**: Single incident of disruptive behavior
+- **Low**: Minor disagreements, tone issues, first-time minor violations
+
+Determine urgency: Critical and High severity cases require response within 24 hours. Medium severity requires response within 72 hours.
 ```
 
-This structured format ensures nothing falls through the cracks and makes later review straightforward.
+### Creating Response Templates
 
-### Phase 2: Response Templates
+Consistency matters in CoC enforcement. Create templates for common communications:
 
-One of the biggest challenges is drafting consistent, compassionate responses. Your skill should provide templates for common scenarios:
-
-**Acknowledgment Template:**
 ```markdown
-Thank you for bringing this to our attention. We've received your report and are actively reviewing it. Our CoC committee will reach out within 48 hours with next steps. We take these matters seriously and appreciate your patience as we work through this properly.
+## Communication Templates
+
+Use these templates, customizing bracketed content:
+
+### Initial Acknowledgment
+
+> Dear [Reporter Name],
+> 
+> Thank you for bringing this concern to our attention. We take all reports seriously and are committed to addressing this matter thoughtfully.
+> 
+> Your report has been assigned case number [CASE-ID]. We will keep you informed of significant developments while respecting privacy considerations.
+> 
+> Our estimated timeline for initial assessment is [TIMEFRAME].
+> 
+> [Your Name], CoC Committee
+
+### Accused Party Notification
+
+> Dear [Accused Name],
+> 
+> A report has been filed regarding behavior that may violate our Code of Conduct. We are reaching out to gather your perspective before determining next steps.
+> 
+> This is an informational outreach, not a determination of wrongdoing. Your response will be valued and considered fairly.
+> 
+> Please respond within [TIMEFRAME] so we can include your perspective in our review.
+> 
+> [Your Name], CoC Committee
 ```
 
-**Investigation Request:**
-```markdown
-We're reaching out regarding a CoC report that mentions you. We'd like to understand your perspective. Could you please share your version of events by [date]? You can respond here or email [private contact] if you prefer.
-```
+## Automating Documentation
 
-**Resolution Notification:**
-```markdown
-After review, the CoC committee has determined that [finding]. The following action will be taken: [consequence]. This decision is final per our enforcement guidelines.
-```
-
-Your skill should guide you through selecting the appropriate template and customizing it for the specific situation.
-
-### Phase 3: Tracking and Escalation
-
-Maintain a living document that tracks all CoC incidents:
+One of Claude Code's strengths is systematic file operations. Use this to maintain audit trails:
 
 ```bash
-# Create incident tracking file if it doesn't exist
-if [ ! -f ".coc/incidents.yml" ]; then
-    mkdir -p .coc
-    echo "# CoC Incident Tracking" > .coc/incidents.yml
-fi
-
-# Append new incident
-echo -e "\n- id: {{incident_id}}\n  date: {{date}}\n  respondent: @{{respondent}}\n  status: {{status}}" >> .coc/incidents.yml
+# Create case directory structure
+mkdir -p .coc/cases/$(date +%Y-%m)-${CASE_ID}
+touch .coc/cases/$(date +%Y-%m)-${CASE_ID}/{intake.md,investigation.md,decision.md,actions.md}
 ```
 
-This creates accountability and helps identify repeat offenders. Your skill should automatically check for prior incidents before recommending consequences.
+Your skill can guide maintainers to populate each file sequentially, creating an immutable record of the entire process.
 
-### Phase 4: Escalation Paths
-
-Not every incident can be handled at the project level. Define clear escalation criteria:
-
-- **Project-level**: First-time minor violations, misunderstandings
-- **Organizational**: Repeat offenses, serious harassment, maintainer involvement
-- **External**: Legal threats, cross-project patterns, media involvement
-
-Your skill should prompt you to consider escalation when the severity exceeds project-level handling capacity.
-
-## Practical Example: Complete Incident Workflow
-
-Here's how the complete workflow looks in practice:
+### Decision Documentation Template
 
 ```markdown
-## CoC Enforcement Session
+# Case Decision - [CASE-ID]
 
-*Claude Code is now guiding you through the incident response*
+## Summary
+[Brief description of the violation]
 
-**Step 1: Validate the Report**
-- Does the report contain sufficient detail?
-- Is the reporter willing to be identified?
-- Are there immediate safety concerns?
+## Findings
+- Evidence reviewed: [list]
+- Parties interviewed: [list]
+- Previous incidents: [list]
 
-**Step 2: Create Incident File**
-- File location: .coc/incidents/2026-03-15-incident-001.md
-- Template populated with provided information
+## Determination
+- Severity: [level]
+- Violation substantiated: [yes/no/partially]
 
-**Step 3: Check Prior History**
-- Query: respondent has X prior incidents
-- If X > 0, flag for elevated response
+## Response
+- Action taken: [specific consequence]
+- Duration: [if applicable]
+- Conditions for reinstatement: [if applicable]
 
-**Step 4: Select Response Path**
-- Acknowledge receipt (immediate)
-- Request additional context (within 24h)
-- Notify respondent (within 48h)
-- Resolve (within 7 days)
+## Reasoning
+[Explain the factors considered and how the response was determined]
 
-**Step 5: Document Outcome**
-- Update incident file with resolution
-- Add to summary statistics
-- Trigger follow-up reminders if needed
+## Sign-off
+- Reviewer: [name]
+- Date: [date]
 ```
 
-## Best Practices for CoC Automation
+## Escalation Workflows
 
-### Do: Maintain Human Oversight
+Not every case can be resolved at the maintainer level. Build escalation paths into your skill:
 
-Never fully automate CoC decisions. Use Claude Code to structure the process, generate drafts, and ensure consistency—but always have human reviewers make final calls.
+```markdown
+## Escalation Triggers
 
-### Do: Regular Review Cycles
+The following situations require immediate escalation to the full CoC committee:
 
-Schedule monthly reviews of your CoC enforcement patterns. Your skill can generate statistics:
+1. **Threats of violence** - Any credible threat to physical safety
+2. **Legal concerns** - Potential illegal activity or regulatory issues  
+3. **Repeat offender** - Same individual accumulating multiple substantiated reports
+4. **Committee member involved** - Conflict of interest requiring external review
+5. **Complex testimony** - Conflicting accounts requiring detailed investigation
 
-```bash
-# Generate monthly report
-echo "## $(date +%B) CoC Report" > .coc/monthly-report.md
-echo "Total incidents: $(grep -c '^- id:' .coc/incidents.yml)" >> .coc/monthly-report.md
-echo "Resolved: $(grep -c 'status: resolved' .coc/incidents.yml)" >> .coc/monthly-report.md
+When escalating, prepare a summary document containing:
+- Original report
+- All investigation materials
+- Preliminary assessment
+- Recommended response range
 ```
 
-### Don't: Public Shaming
+## Best Practices for CoC Workflow Skills
 
-Keep enforcement details private. Your skill should include reminders about confidentiality. Public discussion of enforcement actions can escalate conflicts and deter future reporting.
+### Maintain Confidentiality
 
-### Don't: Ignore Appeals
+Your skill should remind users never to share identifiable details in public channels. Use private repositories or encrypted storage for case files.
 
-Build appeal pathways into your workflow. Even automated systems make mistakes. Include a clear process for contested decisions.
+### Establish Clear Timelines
 
-## Actionable Advice for Implementation
+Document expected response windows and hold yourself accountable. Inaction erodes trust faster than imperfect action.
 
-Start small and iterate:
+### Record Everything
 
-1. **Week 1**: Document your current CoC enforcement process
-2. **Week 2**: Create basic intake and response templates
-3. **Week 3**: Build a simple skill that walks through the workflow
-4. **Week 4**: Test with a hypothetical incident, refine templates
-5. **Ongoing**: Review and improve based on real experiences
+Every conversation, decision, and action should be documented. This protects both the project and individuals involved.
 
-Remember that your CoC enforcement skill is a living tool. As your community grows and patterns emerge, you'll discover new needs. Claude Code makes it easy to update your workflow—just edit the skill and every future incident benefits from your learnings.
+### Seek Training
+
+CoC enforcement often involves sensitive situations. Consider training from organizations like [Linux Foundation's TODO Group](https://todogroup.org/) or [Community Lights](https://communitylights.com/).
+
+## Extending Your Workflow
+
+Once the basic workflow is working, consider enhancements:
+
+- **Automated reminders** - Use cron jobs to prompt follow-ups
+- **Anonymized statistics** - Track patterns without identifying individuals  
+- **Integration with GitHub** - Link CoC cases to issue tracking
+- **Multi-language support** - Serve diverse communities in their preferred language
 
 ## Conclusion
 
-Automating your CoC enforcement with Claude Code doesn't replace human judgment—it structures it. By providing consistent templates, clear workflows, and comprehensive documentation, you protect both your community members and your maintainers. The investment in setting up this workflow pays dividends in community health and maintainer sustainability.
+Automating your CoC enforcement workflow with Claude Code doesn't replace human judgment—it enhances consistency and documentation. By structuring your responses, creating templates, and maintaining thorough records, you build a system that protects your community while respecting everyone's privacy.
 
-Start building your CoC enforcement skill today, and transform how your open source project handles conflict resolution.
+The key is starting simple: document your current process, identify repetitive tasks, and let Claude Code handle the scaffolding. Over time, refine your workflow based on real experiences. Your contributors will appreciate knowing there's a fair, transparent system in place.
+
+Remember: enforcement isn't about punishment. It's about creating an environment where everyone can contribute confidently. A well-designed workflow makes that possible.
 {% endraw %}
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
