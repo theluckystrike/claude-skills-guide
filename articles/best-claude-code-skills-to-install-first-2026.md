@@ -50,11 +50,11 @@ The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/
 ```
 
 ```
-/tdd given this Jest test, implement the UserService.authenticate() method to make it pass
+/tdd scaffold a full test file for this new Python module with setup, teardown, and at least three happy-path cases: [paste module]
 ```
 
 ```
-/tdd identify missing edge cases in this test suite: [paste tests]
+/tdd suggest what to test next given this partially covered class — I have tests for __init__ and save() but nothing else: [paste class]
 ```
 
 [The skill works with pytest, Jest, Vitest, and Bun Test](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) For API developers and service teams, it catches regressions before they reach production by structuring development around failing tests first.
@@ -68,11 +68,11 @@ The **xlsx** skill creates, edits, and analyzes `.xlsx`, `.xlsm`, `.csv`, and `.
 ```
 
 ```
-/xlsx read metrics.csv and generate a column chart showing monthly active users by quarter
+/xlsx summarize the data in sales-2025.csv: show total revenue per region and flag any month where revenue dropped more than 15% from the prior month
 ```
 
 ```
-/xlsx add conditional formatting to budget.xlsx: highlight cells in column C where value exceeds column B by more than 10%
+/xlsx add a new sheet named "Summary" to quarterly-report.xlsx with AVERAGEIF formulas pulling from the raw data sheet
 ```
 
 Business analysts processing financial data or generating weekly reports find this skill eliminates repetitive formula work and manual chart creation.

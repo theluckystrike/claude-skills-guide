@@ -42,11 +42,11 @@ The **tdd** skill changes how developers approach testing. Instead of writing te
 ```
 
 ```
-/tdd given this failing test, implement the UserService.authenticate() method to make it pass: [paste test]
+/tdd this integration test is flaky — diagnose why it fails intermittently and rewrite it to be deterministic: [paste test]
 ```
 
 ```
-/tdd identify missing edge cases in this test suite: [paste tests]
+/tdd generate a property-based test suite for this pure function using fast-check: [paste function]
 ```
 
 The skill works with pytest, Jest, Vitest, and Bun Test. It analyzes your existing code and suggests meaningful test cases you might have overlooked, ensuring better coverage without the boilerplate overhead.
@@ -108,11 +108,11 @@ The **xlsx** skill creates, edits, and analyzes `.xlsx`, `.xlsm`, `.csv`, and `.
 ```
 
 ```
-/xlsx read metrics.csv and generate a column chart showing monthly active users by quarter
+/xlsx pivot the data in sprint-velocity.csv by team and week, then output a heatmap showing delivery consistency
 ```
 
 ```
-/xlsx add conditional formatting to budget.xlsx: highlight cells in column C where value exceeds column B by more than 10%
+/xlsx compare headcount.xlsx against last-quarter.xlsx and produce a diff sheet showing new hires, departures, and role changes
 ```
 
 The skill preserves formulas during edits, making it safe for maintaining calculation-heavy spreadsheets.
