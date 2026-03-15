@@ -178,6 +178,91 @@ class ColorAnalyzer {
 
 This analyzer provides core functionality that power users need: contrast checking, palette generation, and accessibility validation.
 
+## Color Format Conversion Utilities
+
+Supporting multiple color formats requires conversion utilities. Here's a comprehensive set covering HEX, RGB, and HSL:
+
+```javascript
+// color-utils.js - Color Conversion Functions
+const ColorUtils = {
+  hexToRgb(hex) {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : null;
+  },
+
+  rgbToHsl(r, g, b) {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+
+    if (max === min) {
+      h = s = 0;
+    } else {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+        case g: h = ((b - r) / d + 2) / 6; break;
+        case b: h = ((r - g) / d + 4) / 6; break;
+      }
+    }
+    return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l * 100) };
+  },
+
+  generatePalette(baseColor, count = 5) {
+    const rgb = this.hexToRgb(baseColor);
+    if (!rgb) return [];
+
+    const hsl = this.rgbToHsl(rgb.r, rgb.g, rgb.b);
+    const palette = [];
+
+    for (let i = 0; i < count; i++) {
+      const newL = Math.max(10, Math.min(90, hsl.l + (i - 2) * 15));
+      palette.push(`hsl(${hsl.h}, ${hsl.s}%, ${newL}%)`);
+    }
+    return palette;
+  }
+};
+```
+
+## Storing Color History
+
+Persisting color history improves workflow efficiency. The Chrome Storage API handles this cleanly:
+
+```javascript
+// storage.js - Color History Management
+const ColorHistory = {
+  STORAGE_KEY: 'color_picker_history',
+  MAX_HISTORY: 20,
+
+  async addColor(color) {
+    const history = await this.getHistory();
+    const filtered = history.filter(c => c !== color);
+    filtered.unshift(color);
+
+    const trimmed = filtered.slice(0, this.MAX_HISTORY);
+
+    return new Promise((resolve) => {
+      chrome.storage.local.set({ [this.STORAGE_KEY]: trimmed }, resolve);
+    });
+  },
+
+  async getHistory() {
+    return new Promise((resolve) => {
+      chrome.storage.local.get(this.STORAGE_KEY, (result) => {
+        resolve(result[this.STORAGE_KEY] || []);
+      });
+    });
+  }
+};
+```
+
+The implementation limits history to 20 colors to prevent unbounded storage growth while maintaining useful recent selections.
+
 ## Creating the User Interface
 
 The popup interface should provide quick access to captured colors and AI suggestions:
@@ -324,6 +409,128 @@ function exportPalette(colors, format) {
 }
 ```
 
+## Popup UI Styles and Input Handling
+
+A polished popup requires thoughtful CSS and a clean input handler. Here's a practical baseline:
+
+```css
+/* popup.css - Color Picker Styles */
+.color-picker-container {
+  width: 280px;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.color-preview {
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.color-input-wrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.color-input-wrapper input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 14px;
+}
+
+.copy-button {
+  padding: 8px 16px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.copy-button:hover {
+  background: #0052a3;
+}
+```
+
+Pair the styles with a `ColorPicker` class for real-time preview updates:
+
+```javascript
+// popup.js - Color Picker Logic
+class ColorPicker {
+  constructor(inputElement, previewElement) {
+    this.input = inputElement;
+    this.preview = previewElement;
+    this.init();
+  }
+
+  init() {
+    this.input.addEventListener('input', (e) => this.updatePreview(e.target.value));
+    this.updatePreview(this.input.value);
+  }
+
+  updatePreview(color) {
+    this.preview.style.backgroundColor = color;
+    this.input.value = color.toUpperCase();
+  }
+
+  getColor() {
+    return this.input.value;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const picker = new ColorPicker(
+    document.getElementById('color-input'),
+    document.getElementById('color-preview')
+  );
+});
+```
+
+## Content Script Integration
+
+For extensions that pick colors directly from web pages, a content script enables click-to-capture:
+
+```javascript
+// content-script.js - Page Color Picker
+document.addEventListener('click', (e) => {
+  if (e.target.dataset.colorPickerActive === 'true') {
+    const computedStyle = window.getComputedStyle(e.target);
+    const bgColor = computedStyle.backgroundColor;
+
+    chrome.runtime.sendMessage({
+      type: 'COLOR_PICKED',
+      color: bgColor
+    });
+  }
+});
+```
+
+This pattern enables users to click elements on any webpage and capture their colors directly into the extension's color picker interface.
+
+## Accessibility Considerations
+
+Accessible color picker design ensures usability across different abilities. Implement keyboard navigation throughout the picker interface, provide sufficient color contrast in your own UI, and offer non-visual color information through ARIA labels:
+
+```html
+<input
+  type="color"
+  id="color-input"
+  aria-label="Select color"
+  aria-describedby="color-description"
+>
+<span id="color-description" class="sr-only">
+  Current color value in hex format
+</span>
+```
+
 ## Testing and Deployment
 
 Load your extension in Chrome through `chrome://extensions/` with Developer mode enabled. Test the color picker across different websites, including:
@@ -339,7 +546,7 @@ Use Chrome's devtools to debug content scripts and monitor API calls. Check the 
 
 Building an AI color picker Chrome extension combines traditional color extraction with intelligent analysis. The most useful features for developers and power users include accessibility contrast checking, palette generation, and export in multiple formats. Start with solid color extraction, add accessibility validation, then layer on AI-powered suggestions.
 
-Focus on performance—color analysis should feel instant. Cache results when possible and use Web Workers for heavy computation. Users will appreciate having instant access to color information without waiting for network requests.
+Focus on performance—color analysis should feel instant. Cache results when possible and use Web Workers for heavy computation. Lazy-load color conversion utilities, use event delegation instead of individual listeners, and cache computed colors to avoid redundant calculations. The popup interface loads synchronously, so minimizing initial JavaScript payload improves perceived performance. Users will appreciate having instant access to color information without waiting for network requests.
 
 The extension ecosystem rewards focused tools that solve specific problems well. A color picker that excels at accessibility checking and palette generation will find a dedicated audience among developers who care about design consistency and WCAG compliance.
 
