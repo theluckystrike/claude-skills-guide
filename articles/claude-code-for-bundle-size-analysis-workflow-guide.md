@@ -124,7 +124,7 @@ Prevent bundle bloat from accumulating by checking size before every commit. Add
 {
   "husky": {
     "hooks": {
-      "pre-commit": "claude-code run /check-bundle-size --threshold 50kb"
+      "pre-commit": "claude /check-bundle-size"
     }
   }
 }
@@ -225,7 +225,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Run bundle analysis
-        run: npx claude-code run /analyze-bundle
+        run: npx -y @anthropic-ai/claude-code --print "Analyze bundle size and report changes"
       - name: Comment on PR
         uses: actions/github-script@v6
         with:

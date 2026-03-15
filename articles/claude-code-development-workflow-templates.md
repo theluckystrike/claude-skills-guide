@@ -120,7 +120,7 @@ When starting new work, first query supermemory for relevant past solutions befo
 Automated code review using Claude skills catches issues before human review:
 
 ```
-Developer submits PR → [claude-code review-skill] → Analysis Report
+Developer submits PR → [Claude Code: /review-skill] → Analysis Report
                                                     ↓
                               Issues Found → Assign to Developer
                                                     ↓

@@ -186,7 +186,7 @@ Set up a workflow where Claude Code watches for changes in your data models and 
 
 ```bash
 # In your package.json
-"precommit": "claude-code generate:graphql --watch"
+"precommit": "claude /generate-graphql"
 ```
 
 ## Handling Complex Scenarios
