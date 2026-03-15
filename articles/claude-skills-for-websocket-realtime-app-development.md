@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Claude Skills for WebSocket Realtime App Development"
-description: "Build real-time WebSocket applications faster using Claude skills. Practical patterns for connection handling, state management, and production-ready im..."
+description: "Build real-time WebSocket applications faster using Claude skills. Practical patterns for connection handling, state management, scaling with Redis, Python asyncio servers, and production-ready implementation."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]
-tags: [claude-code, claude-skills]
+tags: [claude-code, claude-skills, websocket, real-time, nodejs, javascript, python, events]
 reviewed: true
 score: 9
 permalink: /claude-skills-for-websocket-realtime-app-development/
@@ -85,16 +85,16 @@ class WebSocketManager {
 
   connect() {
     this.socket = new WebSocket(this.url);
-    
+
     this.socket.onopen = () => {
       this.reconnectAttempts = 0;
       this.emit('connected');
     };
-    
+
     this.socket.onclose = (event) => {
       this.handleReconnect();
     };
-    
+
     this.socket.onmessage = (event) => {
       const data = JSON.parse(event.data);
       this.emit(data.type, data.payload);
@@ -115,6 +115,61 @@ class WebSocketManager {
 ```
 
 The tdd skill would have guided you to write tests covering connection success, connection failure, message routing, and exponential backoff before writing this implementation.
+
+### React Hook for WebSocket State
+
+The custom hook pattern keeps your WebSocket logic reusable across components. Use the frontend-design skill to scaffold this:
+
+```javascript
+// useWebSocket.js
+import { useState, useEffect, useCallback, useRef } from 'react';
+
+export function useWebSocket(url) {
+  const [messages, setMessages] = useState([]);
+  const [connected, setConnected] = useState(false);
+  const wsRef = useRef(null);
+
+  const connect = useCallback(() => {
+    wsRef.current = new WebSocket(url);
+
+    wsRef.current.onopen = () => {
+      setConnected(true);
+    };
+
+    wsRef.current.onmessage = (event) => {
+      const message = JSON.parse(event.data);
+      setMessages((prev) => [...prev, message]);
+    };
+
+    wsRef.current.onclose = () => {
+      setConnected(false);
+      // Attempt reconnection after 3 seconds
+      setTimeout(connect, 3000);
+    };
+
+    wsRef.current.onerror = (error) => {
+      console.error('WebSocket error:', error);
+    };
+  }, [url]);
+
+  const sendMessage = useCallback((message) => {
+    if (wsRef.current?.readyState === WebSocket.OPEN) {
+      wsRef.current.send(JSON.stringify(message));
+    }
+  }, []);
+
+  useEffect(() => {
+    connect();
+    return () => {
+      wsRef.current?.close();
+    };
+  }, [connect]);
+
+  return { messages, connected, sendMessage };
+}
+```
+
+This hook handles connection lifecycle, automatic reconnection, and message state—patterns you'll reuse across real-time features.
 
 ### Building Real-Time UI Components
 
@@ -172,6 +227,183 @@ All messages use JSON with the following structure:
 
 The pdf skill converts this markdown into a formatted PDF your team can reference.
 
+## Heartbeat Detection for Stale Connections
+
+Production WebSocket servers must detect and close stale connections. Implement ping/pong heartbeats on the server:
+
+```javascript
+// server.js
+const { WebSocketServer } = require('ws');
+
+const wss = new WebSocketServer({ port: 8080 });
+
+wss.on('connection', (ws) => {
+  ws.isAlive = true;
+
+  ws.on('pong', () => {
+    ws.isAlive = true;
+  });
+
+  // Send ping every 30 seconds
+  const interval = setInterval(() => {
+    if (ws.isAlive === false) {
+      clearInterval(interval);
+      return ws.terminate();
+    }
+    ws.isAlive = false;
+    ws.ping();
+  }, 30000);
+
+  ws.on('close', () => {
+    clearInterval(interval);
+  });
+});
+```
+
+Pair this with a client-side connection status indicator:
+
+```javascript
+function ConnectionStatus({ connected }) {
+  const statusStyles = {
+    connected: 'bg-green-500',
+    disconnected: 'bg-red-500'
+  };
+
+  return (
+    <div className={`w-3 h-3 rounded-full ${statusStyles[connected ? 'connected' : 'disconnected']}`} />
+  );
+}
+```
+
+## Python Asyncio WebSocket Server
+
+If your backend stack is Python, Claude skills work equally well for asyncio-based implementations. Here is a subscription-based event server:
+
+```python
+# websocket-server.py
+import asyncio
+import websockets
+import json
+from datetime import datetime
+
+async def handle_client(websocket, path):
+    try:
+        async for message in websocket:
+            data = json.loads(message)
+
+            if data.get('type') == 'subscribe':
+                channel = data.get('channel')
+                await websocket.send(json.dumps({
+                    'type': 'subscribed',
+                    'channel': channel,
+                    'timestamp': datetime.now().isoformat()
+                }))
+
+            elif data.get('type') == 'event':
+                event_type = data.get('event_type')
+                payload = data.get('payload')
+                print(f"Received event: {event_type}")
+                await broadcast_event(event_type, payload)
+
+    except websockets.exceptions.ConnectionClosed:
+        print("Client disconnected")
+
+async def broadcast_event(event_type, payload):
+    # Broadcast to all connected subscribers
+    pass
+
+async def main():
+    async with websockets.serve(handle_client, "localhost", 8765):
+        print("WebSocket server running on ws://localhost:8765")
+        await asyncio.Future()  # Run forever
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+For Python clients with robust reconnection, use an exponential backoff class:
+
+```python
+import websocket
+import time
+import json
+
+class ReconnectingClient:
+    def __init__(self, url, max_retries=5):
+        self.url = url
+        self.max_retries = max_retries
+        self.ws = None
+
+    def connect(self):
+        retries = 0
+        while retries < self.max_retries:
+            try:
+                self.ws = websocket.WebSocketApp(
+                    self.url,
+                    on_message=self.on_message,
+                    on_error=self.on_error,
+                    on_close=self.on_close
+                )
+                self.ws.on_open = self.on_open
+                self.ws.run_forever()
+            except Exception as e:
+                retries += 1
+                wait_time = min(2 ** retries, 30)
+                print(f"Reconnecting in {wait_time}s (attempt {retries})")
+                time.sleep(wait_time)
+
+        print("Max retries exceeded")
+
+    def on_message(self, ws, message):
+        data = json.loads(message)
+        # Process message
+
+    def on_open(self, ws):
+        ws.send(json.dumps({'type': 'subscribe', 'channel': 'events'}))
+
+    def on_error(self, ws, error):
+        print(f"Error: {error}")
+
+    def on_close(self, ws, close_status_code, close_msg):
+        print("Connection closed, attempting reconnect...")
+```
+
+## Live Dashboard Pattern
+
+For skills that drive visual dashboards, Claude skills can generate a bridge between your WebSocket stream and a file-polled frontend:
+
+```python
+# dashboard-updater.py
+import websocket
+import json
+
+def on_message(ws, message):
+    data = json.loads(message)
+
+    if data['type'] == 'update':
+        with open('./public/live-data.json', 'w') as f:
+            json.dump(data['payload'], f)
+        print(f"Updated dashboard at {data['timestamp']}")
+
+def on_open(ws):
+    ws.send(json.dumps({
+        'type': 'subscribe',
+        'channel': 'metrics'
+    }))
+
+if __name__ == "__main__":
+    ws = websocket.WebSocketApp(
+        "ws://localhost:8765",
+        on_open=on_open,
+        on_message=on_message,
+        on_error=lambda ws, e: print(f"Error: {e}"),
+        on_close=lambda ws, c, m: print("Connection closed")
+    )
+    ws.run_forever()
+```
+
+The frontend-design skill can then generate a dashboard that polls this file for updates, creating a near-real-time experience without a persistent browser WebSocket connection.
+
 ## Advanced Considerations
 
 ### Handling High-Frequency Updates
@@ -184,13 +416,43 @@ When your application sends many messages per second, consider implementing:
 
 The tdd skill helps you test these optimizations without introducing bugs.
 
-### Scaling WebSocket Connections
+### Scaling WebSocket Connections with Redis
 
-At scale, a single server cannot maintain all connections. Implement:
+At scale, a single server cannot maintain all connections. Redis pub/sub enables cross-server message broadcasting:
 
-- A pub/sub message broker (Redis, RabbitMQ)
-- Connection state stored in Redis or similar
-- Horizontal scaling with multiple WebSocket servers
+```javascript
+const Redis = require('ioredis');
+const redis = new Redis();
+
+const wss = new WebSocketServer({ port: 8080 });
+
+// Subscribe to Redis channel
+redis.subscribe('chat-messages', (err) => {
+  if (err) console.error('Redis subscribe error:', err);
+});
+
+redis.on('message', (channel, message) => {
+  // Broadcast Redis messages to all connected WebSocket clients
+  wss.clients.forEach((client) => {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(message);
+    }
+  });
+});
+
+wss.on('connection', (ws) => {
+  ws.on('message', (message) => {
+    // Publish to Redis for other servers to receive
+    redis.publish('chat-messages', message);
+  });
+});
+```
+
+This pattern ensures messages reach all connected clients regardless of which server instance handles the original request. Pair it with:
+
+- Connection state stored in Redis or a similar shared store
+- A pub/sub message broker (Redis, RabbitMQ) for event routing
+- Horizontal scaling with multiple WebSocket server instances
 
 Document your architecture using pdf so operations teams can maintain the system.
 
@@ -198,12 +460,79 @@ Document your architecture using pdf so operations teams can maintain the system
 
 Always implement:
 
-- WSS (WebSocket Secure) connections
+- WSS (WebSocket Secure) connections in production
+- Authentication tokens in the connection handshake
 - Origin validation on the server
 - Message validation and sanitization
 - Rate limiting per connection
 
-The tdd skill can guide you to write security tests covering these concerns.
+The tdd skill can guide you to write security tests covering these concerns. A basic token-based authentication pattern:
+
+```javascript
+wss.on('connection', (ws, req) => {
+  const url = new URL(req.url, `http://${req.headers.host}`);
+  const token = url.searchParams.get('token');
+
+  try {
+    const user = verifyToken(token);
+    ws.user = user;
+  } catch (error) {
+    ws.close(4001, 'Authentication required');
+    return;
+  }
+
+  ws.on('message', (message) => {
+    const data = JSON.parse(message);
+    if (!canUserAccessChannel(ws.user, data.channel)) {
+      ws.send(JSON.stringify({ error: 'Access denied' }));
+      return;
+    }
+    // Process message...
+  });
+});
+```
+
+## Testing WebSocket Applications
+
+Write integration tests that verify message flow end-to-end. The tdd skill helps you structure these:
+
+```javascript
+// tests/websocket.test.js
+const { WebSocket } = require('ws');
+
+describe('WebSocket Chat', () => {
+  let server;
+
+  beforeAll(() => {
+    server = require('../server');
+  });
+
+  afterAll(() => {
+    server.close();
+  });
+
+  it('broadcasts messages to all clients', (done) => {
+    const client1 = new WebSocket('ws://localhost:8080');
+    const client2 = new WebSocket('ws://localhost:8080');
+
+    client1.on('open', () => {
+      client2.on('open', () => {
+        client1.send(JSON.stringify({ text: 'Hello' }));
+      });
+
+      client2.on('message', (data) => {
+        const message = JSON.parse(data);
+        expect(message.text).toBe('Hello');
+        client1.close();
+        client2.close();
+        done();
+      });
+    });
+  });
+});
+```
+
+The `supermemory` skill benefits from WebSocket connections when syncing memories across devices in real-time. The tdd skill can stream test results as they execute, providing immediate feedback. For documentation generation with the `docx` skill, WebSocket connections enable progress updates during lengthy document assembly.
 
 ## Bringing It Together
 
@@ -221,6 +550,7 @@ The combination of test-driven development, thoughtful UI implementation, and li
 - [Claude Skills for GraphQL Schema Design and Testing](/claude-skills-guide/claude-skills-for-graphql-schema-design-and-testing/) — Combine WebSocket real-time subscriptions with GraphQL schema design for full-stack real-time APIs.
 - [Claude Code Skills for Kubernetes Operator Development](/claude-skills-guide/claude-code-skills-for-kubernetes-operator-development/) — Scale your WebSocket application infrastructure using Kubernetes operator patterns.
 - [Rate Limit Management for Claude Code Skill Intensive Workflows](/claude-skills-guide/rate-limit-management-claude-code-skill-intensive-workflows/) — Manage API rate limits when skill-generating high-frequency WebSocket message handlers.
+- [Can Claude Code Skills Call External APIs Automatically](/claude-skills-guide/can-claude-code-skills-call-external-apis-automatically/) — Extend WebSocket patterns to REST and streaming API integrations.
 - [Claude Skills Use Cases](/claude-skills-guide/use-cases-hub/) — Explore more specialized use cases for Claude skills in real-time and event-driven architectures.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
