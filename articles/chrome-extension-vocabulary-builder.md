@@ -1,269 +1,230 @@
 ---
 
 layout: default
-title: "Chrome Extension Vocabulary Builder: A Practical Guide."
-description: "Learn how to build, customize, and leverage chrome extension vocabulary builder tools for efficient language learning and terminology management."
+title: "Chrome Extension Vocabulary Builder: A Developer Guide"
+description: "Learn how to build a vocabulary builder Chrome extension from scratch. Practical code examples, storage patterns, and APIs for developers and power users."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-extension-vocabulary-builder/
-reviewed: true
-score: 8
-categories: [guides]
-tags: [chrome-extension, claude-skills]
 ---
 
-
 {% raw %}
-Chrome extension vocabulary builder tools have become essential for developers, researchers, and language learners who need to capture and organize terminology from their daily web browsing. These extensions transform how you interact with text on the web, enabling automatic collection of new words, context-aware definitions, and structured review systems.
+# Chrome Extension Vocabulary Builder: A Developer Guide
 
-## Understanding Vocabulary Builder Extensions
+Building a vocabulary builder Chrome extension is one of the most practical projects you can undertake as a developer. These extensions help users learn new words while browsing, capture unfamiliar terms from web content, and review them using spaced repetition systems. This guide covers the architecture, implementation patterns, and key APIs you'll need to create a fully functional vocabulary builder.
 
-A chrome extension vocabulary builder operates by intercepting text selections, analyzing the selected content, and storing meaningful terms for later review. Unlike basic dictionary tools, modern vocabulary builders integrate with AI services, spaced repetition systems, and cross-platform synchronization.
+## Core Architecture Overview
 
-The core functionality revolves around three operations: capturing text through user selection or page scanning, enriching the captured text with definitions and context, and organizing the vocabulary for effective learning. This workflow creates a seamless bridge between passive reading and active vocabulary acquisition.
+A vocabulary builder extension operates across three main components: a content script that captures selected text, a background service worker for managing storage and sync, and a popup interface for reviewing saved words. Understanding how data flows between these components is essential before writing any code.
 
-For developers, understanding the underlying architecture enables customization beyond what off-the-shelf extensions offer. The Chrome Extension Manifest V3 architecture provides the foundation for building robust vocabulary tools that integrate with your existing development workflow.
+The most critical design decision is your storage strategy. Chrome provides three primary options: chrome.storage.local for local data, chrome.storage.sync for cross-device synchronization, and IndexedDB for large datasets with complex querying needs. For a vocabulary builder, chrome.storage.sync strikes the right balance between simplicity and functionality.
 
-## Core Implementation Patterns
+## Setting Up the Manifest
 
-Building a vocabulary builder extension requires careful handling of browser APIs and user interactions. The following patterns represent the most effective approaches for capturing and processing vocabulary.
+Every extension begins with the manifest.json file. Here's a minimal configuration for a vocabulary builder:
 
-### Text Selection Capture
+```json
+{
+  "manifest_version": 3,
+  "name": "Vocabulary Builder",
+  "version": "1.0",
+  "description": "Capture and learn new words while browsing",
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
+```
 
-The most intuitive interaction model involves capturing text when users select it. This requires a content script that listens for the `mouseup` event and extracts the current selection:
+The contextMenus permission enables right-click integration, allowing users to save words directly from the context menu. The activeTab permission lets your content script access the currently selected text without requiring host permissions for every website.
+
+## Capturing Text with Content Scripts
+
+The content script runs on every page and handles text selection. Here's a practical implementation:
 
 ```javascript
 // content.js
-document.addEventListener('mouseup', async (event) => {
-  const selection = window.getSelection();
-  const selectedText = selection.toString().trim();
+document.addEventListener('mouseup', function(event) {
+  const selection = window.getSelection().toString().trim();
   
-  // Filter for single words or short phrases
-  if (selectedText.length > 2 && selectedText.length < 50) {
-    // Extract surrounding context for better definitions
-    const range = selection.getRangeAt(0);
-    const container = range.startContainer.parentElement;
-    const context = container ? container.textContent.slice(
-      Math.max(0, range.startOffset - 50),
-      range.endOffset + 50
-    ) : '';
-    
-    // Send to background script for processing
+  if (selection.length > 0 && selection.length < 100) {
+    // Store temporarily for the background script
     chrome.runtime.sendMessage({
-      action: 'capture_vocabulary',
-      word: selectedText,
-      context: context,
-      sourceUrl: window.location.href,
-      sourceTitle: document.title
+      type: 'TEXT_SELECTED',
+      text: selection,
+      url: window.location.href,
+      title: document.title
     });
   }
 });
 ```
 
-This approach balances responsiveness with selectivity, capturing meaningful selections while avoiding accidental triggers on short text snippets.
+This script listens for mouseup events and captures selections between 0 and 100 characters. The length constraint prevents accidentally saving entire paragraphs while filtering out single characters.
 
-### Storage Architecture
+## Managing Data in the Background
 
-Chrome provides two primary storage mechanisms suitable for vocabulary data. Local storage offers unlimited capacity on a single device, while sync storage enables cross-device synchronization through the user's Google account:
+The background service worker acts as the central hub for data management. It receives messages from content scripts and handles storage operations:
 
 ```javascript
-// background.js - Storage handler
-const VOCABULARY_KEY = 'user_vocabulary';
-
-async function storeVocabulary(wordData) {
-  const result = await chrome.storage.local.get(VOCABULARY_KEY);
-  const vocabulary = result[VOCABULARY_KEY] || [];
-  
-  // Prevent duplicates
-  const exists = vocabulary.some(entry => entry.word === wordData.word);
-  if (exists) {
-    return { success: false, reason: 'duplicate' };
+// background.js
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === 'TEXT_SELECTED') {
+    saveWord(message.text, message.url, message.title);
   }
+});
+
+async function saveWord(word, sourceUrl, sourceTitle) {
+  const result = await chrome.storage.sync.get('vocabulary');
+  const vocabulary = result.vocabulary || [];
   
-  // Add metadata for spaced repetition
-  const newEntry = {
-    ...wordData,
-    id: crypto.randomUUID(),
-    addedAt: Date.now(),
-    reviewCount: 0,
-    nextReview: Date.now(),
-    easeFactor: 2.5, // For SM-2 algorithm
-    interval: 1 // Days until next review
-  };
+  // Check for duplicates
+  const exists = vocabulary.some(entry => entry.word.toLowerCase() === word.toLowerCase());
   
-  vocabulary.push(newEntry);
-  await chrome.storage.local.set({ [VOCABULARY_KEY]: vocabulary });
-  
-  return { success: true, entry: newEntry };
-}
-```
-
-This storage pattern supports future expansion into spaced repetition systems by including the necessary metadata fields from the start.
-
-### Integration with Definition APIs
-
-Rather than building your own dictionary, integrate with existing definition services. Free APIs like Free Dictionary API provide comprehensive data without authentication requirements:
-
-```javascript
-// background.js - Definition fetcher
-async function fetchDefinition(word) {
-  try {
-    const response = await fetch(
-      `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`
-    );
+  if (!exists) {
+    vocabulary.push({
+      word: word,
+      sourceUrl: sourceUrl,
+      sourceTitle: sourceTitle,
+      timestamp: Date.now(),
+      reviewCount: 0,
+      mastery: 0
+    });
     
-    if (!response.ok) {
-      throw new Error('Definition not found');
-    }
+    await chrome.storage.sync.set({ vocabulary });
     
-    const data = await response.json();
-    const entry = data[0];
-    
-    return {
-      word: entry.word,
-      phonetic: entry.phonetic || '',
-      definitions: entry.meanings.map(meaning => ({
-        partOfSpeech: meaning.partOfSpeech,
-        definitions: meaning.definitions.map(d => d.definition)
-      })),
-      examples: entry.meanings.flatMap(m => 
-        m.definitions.filter(d => d.example).map(d => d.example)
-      ).slice(0, 3)
-    };
-  } catch (error) {
-    console.error('Definition fetch failed:', error);
-    return null;
+    // Show notification
+    chrome.runtime.sendMessage({
+      type: 'WORD_SAVED',
+      word: word
+    });
   }
 }
 ```
 
-For more sophisticated definitions, consider integrating with AI services that can provide context-aware explanations based on the surrounding text.
+This implementation prevents duplicate entries by checking existing words case-insensitively. Each entry stores metadata including the source URL, page title, timestamp, and learning progress metrics.
 
-## Advanced Features for Power Users
+## Building the Popup Interface
 
-Once the basic capture and storage functionality works, consider implementing features that distinguish powerful vocabulary tools from simple collectors.
+The popup provides the primary interface for reviewing saved words. Here's a functional implementation:
 
-### Contextual Learning
-
-Vocabulary retention improves dramatically when you learn words in context. Capture the sentence where the word appeared rather than just the isolated term:
-
-```javascript
-// content.js - Enhanced context capture
-function extractContext(selection, range) {
-  const container = range.startContainer.parentElement;
-  if (!container) return null;
-  
-  const fullText = container.textContent;
-  const startIdx = Math.max(0, fullText.indexOf(selection) - 60);
-  const endIdx = Math.min(fullText.length, 
-    fullText.indexOf(selection) + selection.length + 60);
-  
-  let context = fullText.slice(startIdx, endIdx);
-  
-  // Clean up the context string
-  if (startIdx > 0) context = '...' + context;
-  if (endIdx < fullText.length) context = context + '...';
-  
-  return context.replace(/\s+/g, ' ').trim();
-}
+```html
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 320px; padding: 16px; font-family: system-ui; }
+    .word-list { max-height: 400px; overflow-y: auto; }
+    .word-item {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+    .word-item:hover { background: #f5f5f5; }
+    .word { font-weight: bold; font-size: 16px; }
+    .source { font-size: 12px; color: #666; }
+    .stats { font-size: 11px; color: #999; margin-top: 4px; }
+    .empty { text-align: center; color: #666; padding: 40px; }
+  </style>
+</head>
+<body>
+  <h2>Vocabulary Builder</h2>
+  <div id="wordList" class="word-list"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
 ```
 
-This approach preserves enough surrounding text for meaningful context while avoiding excessive length.
-
-### Spaced Repetition System
-
-Implement the SuperMemo-2 algorithm to optimize review schedules:
-
 ```javascript
-// background.js - SM-2 implementation
-function calculateNextReview(entry, quality) {
-  // Quality: 0-5 (0=blackout, 5=perfect)
-  let { easeFactor, interval, reviewCount } = entry;
+// popup.js
+document.addEventListener('DOMContentLoaded', async () => {
+  const result = await chrome.storage.sync.get('vocabulary');
+  const vocabulary = result.vocabulary || [];
+  const wordList = document.getElementById('wordList');
   
-  if (quality >= 3) {
-    if (reviewCount === 0) {
-      interval = 1;
-    } else if (reviewCount === 1) {
-      interval = 6;
-    } else {
-      interval = Math.round(interval * easeFactor);
-    }
-    reviewCount++;
-  } else {
-    reviewCount = 0;
-    interval = 1;
+  if (vocabulary.length === 0) {
+    wordList.innerHTML = '<div class="empty">No words saved yet. Select text on any page to save new words.</div>';
+    return;
   }
   
-  easeFactor = easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
-  easeFactor = Math.max(1.3, easeFactor);
-  
-  return {
-    easeFactor,
-    interval,
-    reviewCount,
-    nextReview: Date.now() + (interval * 24 * 60 * 60 * 1000)
-  };
-}
-```
-
-This algorithm adjusts review intervals based on performance, presenting difficult words more frequently while spacing out mastered vocabulary.
-
-### Export and Backup
-
-Ensure users can export their vocabulary data in portable formats:
-
-```javascript
-// popup.js - Export functionality
-function exportVocabulary(format = 'json') {
-  chrome.storage.local.get(VOCABULARY_KEY, (result) => {
-    const vocabulary = result[VOCABULARY_KEY] || [];
+  vocabulary.forEach((entry, index) => {
+    const item = document.createElement('div');
+    item.className = 'word-item';
+    item.innerHTML = `
+      <div class="word">${entry.word}</div>
+      <div class="source">${entry.sourceTitle}</div>
+      <div class="stats">Reviewed ${entry.reviewCount} times • Mastery: ${entry.mastery}%</div>
+    `;
     
-    if (format === 'json') {
-      const blob = new Blob([JSON.stringify(vocabulary, null, 2)], 
-        { type: 'application/json' });
-      downloadBlob(blob, 'vocabulary-backup.json');
-    } else if (format === 'csv') {
-      const headers = ['word', 'definition', 'sourceUrl', 'addedAt'];
-      const rows = vocabulary.map(v => 
-        headers.map(h => `"${v[h] || ''}"`).join(',')
-      );
-      const csv = [headers.join(','), ...rows].join('\n');
-      const blob = new Blob([csv], { type: 'text/csv' });
-      downloadBlob(blob, 'vocabulary-backup.csv');
-    }
+    item.addEventListener('click', () => markAsReviewed(index));
+    wordList.appendChild(item);
   });
-}
+});
 
-function downloadBlob(blob, filename) {
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
+async function markAsReviewed(index) {
+  const result = await chrome.storage.sync.get('vocabulary');
+  const vocabulary = result.vocabulary || [];
+  
+  vocabulary[index].reviewCount++;
+  vocabulary[index].mastery = Math.min(100, vocabulary[index].mastery + 20);
+  
+  await chrome.storage.sync.set({ vocabulary });
+  location.reload();
 }
 ```
 
-Export functionality protects user data and enables migration between different vocabulary tools or backup strategies.
+This popup displays all saved words with their review statistics. Clicking a word increments its review count and mastery level, implementing a simple spaced repetition mechanic.
 
-## Privacy Considerations
+## Adding Context Menu Integration
 
-Vocabulary extensions process potentially sensitive user data, making privacy implementation critical. Store vocabulary locally by default, avoid sending unnecessary context to external APIs, and provide clear documentation about what data your extension collects and how it uses that data.
+Context menus provide an alternative save method that's especially useful for mobile users and those who prefer keyboard-driven workflows:
 
-For applications requiring strict privacy, consider implementing on-device AI models using TensorFlow.js or WebLLM. These approaches enable intelligent vocabulary analysis without transmitting user data externally.
+```javascript
+// background.js - add to existing code
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({
+    id: 'saveWord',
+    title: 'Save to Vocabulary',
+    contexts: ['selection']
+  });
+});
 
-## Conclusion
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === 'saveWord') {
+    saveWord(info.selectionText, tab.url, tab.title);
+  }
+});
+```
 
-Chrome extension vocabulary builder tools offer substantial value for developers and power users who engage with technical content regularly. The implementation patterns covered here provide a foundation for building extensions that capture vocabulary efficiently, store data reliably, and support advanced learning techniques like spaced repetition.
+This creates a right-click menu option that appears whenever text is selected, giving users a clear path to save words without relying on automatic detection.
 
-Focus on creating a smooth capture workflow first, then layer in advanced features as needed. The best vocabulary builder is one you'll actually use, so prioritize reliability and minimal friction in the core user experience.
+## Advanced Features to Consider
 
+Once you have the basics working, several enhancements can significantly improve user experience. Dictionary integration via the Dictionary API allows automatic definitions when words are saved. Text-to-speech using the Web Speech API enables pronunciation practice. Export functionality lets users download their vocabulary as CSV or JSON for backup or analysis.
 
-## Related Reading
+For production extensions, consider adding sync conflict resolution, offline support using the Cache API, and analytics to understand how users interact with your extension.
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+## Testing and Debugging
+
+Chrome provides excellent developer tools for extension development. Load your unpacked extension via chrome://extensions, enable developer mode, and use the service worker console for logging. The content script console appears in the DevTools of each page where the extension runs.
+
+Always test with real-world content—news articles, academic papers, and technical documentation each present unique challenges for text selection and capture.
+
+---
+
+Building a vocabulary builder extension teaches you fundamental Chrome extension patterns while creating something genuinely useful. The modular architecture separates concerns cleanly, making it easy to add features incrementally. Start with the basics outlined here, then expand based on user feedback and your own learning goals.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
