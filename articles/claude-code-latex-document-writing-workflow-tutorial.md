@@ -6,7 +6,7 @@ description: "Learn how to create professional LaTeX documents efficiently using
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-latex-document-writing-workflow-tutorial/
-categories: [tutorials, latex, development-tools]
+categories: [tutorials, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

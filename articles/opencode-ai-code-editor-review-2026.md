@@ -6,7 +6,7 @@ description: "A practical review of opencode AI code editors in 2026, comparing 
 date: 2026-03-14
 author: theluckystrike
 permalink: /opencode-ai-code-editor-review-2026/
-categories: [reviews]
+categories: [comparisons]
 reviewed: true
 score: 7
 tags: [ai-code-editor, opencode, claude-code]

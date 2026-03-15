@@ -6,7 +6,7 @@ description: "Discover how PhD students can leverage Claude Code to accelerate r
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-for-phd-student-coding-productivity/
-categories: [guides, productivity]
+categories: [guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

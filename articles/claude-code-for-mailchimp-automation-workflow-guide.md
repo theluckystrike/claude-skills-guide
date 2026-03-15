@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to build powerful Mailchimp auto
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-mailchimp-automation-workflow-guide/
-categories: [Automation, Email Marketing, Developer Tools]
+categories: [workflows, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

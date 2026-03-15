@@ -5,7 +5,7 @@ description: "Learn how to use Claude Code to build Qwik City applications with 
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-qwik-city-routing-ssr-workflow-tutorial/
-categories: [web-development, qwik, javascript-frameworks]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills, qwik, qwik-city, ssr, routing, tutorial]
 reviewed: true
 score: 8

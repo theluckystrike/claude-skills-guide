@@ -161,7 +161,7 @@ const typeDefs = `#graphql
   
   type MobileHomeData {
     featured: [ProductSummary!]!
-    categories: [Category!]!
+    categories: [guides]!
     personalized: [ProductRecommendation!]!
   }
 `;

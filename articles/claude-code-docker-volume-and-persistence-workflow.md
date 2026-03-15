@@ -4,7 +4,7 @@ layout: default
 title: "Claude Code Docker Volume and Persistence Workflow"
 description: "Master Docker volume management and data persistence when using Claude Code. Learn practical workflows for development environments, database."
 date: 2026-03-14
-categories: [workflows, docker]
+categories: [workflows, guides]
 tags: [claude-code, docker, volumes, persistence, development-workflow, claude-skills]
 author: "theluckystrike"
 permalink: /claude-code-docker-volume-and-persistence-workflow/

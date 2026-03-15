@@ -6,7 +6,7 @@ description: "A practical guide to integrating Claude Code with Wazuh SIEM for a
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-wazuh-siem-workflow-tutorial/
-categories: [tutorials, security]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills, wazuh, siem, security, automation]
 reviewed: true
 score: 7

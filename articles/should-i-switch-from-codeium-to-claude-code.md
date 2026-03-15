@@ -7,7 +7,7 @@ description: "A practical comparison of Codeium and Claude Code for developers c
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /should-i-switch-from-codeium-to-claude-code/
-categories: [comparison, guides]
+categories: [guides, guides]
 tags: [claude-code, codeium, ai-coding-tools, developer-tools, claude-skills]
 reviewed: true
 score: 7

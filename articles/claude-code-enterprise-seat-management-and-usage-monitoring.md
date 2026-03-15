@@ -6,7 +6,7 @@ description: "Learn how to manage Claude Code enterprise seats, track usage acro
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-enterprise-seat-management-and-usage-monitoring/
-categories: [guides, enterprise]
+categories: [guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

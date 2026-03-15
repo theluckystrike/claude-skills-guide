@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your Go microservi
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-go-golang-microservices-workflow/
-categories: [Development, Go, AI]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

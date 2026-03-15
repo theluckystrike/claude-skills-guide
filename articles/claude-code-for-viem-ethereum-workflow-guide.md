@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your Viem Ethereum
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-viem-ethereum-workflow-guide/
-categories: [Development, Ethereum, Web3]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

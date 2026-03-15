@@ -7,7 +7,7 @@ description: "Learn how to use Claude Code and skills to streamline SRE postmort
 date: 2026-03-14
 author: "theluckystrike"
 permalink: /claude-code-sre-postmortem-documentation-workflow-guide/
-categories: [workflows, sre]
+categories: [workflows, guides]
 tags: [claude-code, postmortem, documentation, sre, claude-skills]
 reviewed: true
 score: 7

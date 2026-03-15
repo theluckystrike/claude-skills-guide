@@ -6,7 +6,7 @@ description: "A comprehensive review of Codeium, the free AI coding assistant in
 date: 2026-03-14
 author: theluckystrike
 permalink: /codeium-review-free-ai-coding-assistant-2026/
-categories: [ai-coding-assistant, codeium, tools]
+categories: [guides, guides, guides]
 tags: [codeium, ai-coding, free-tools, 2026]
 reviewed: true
 score: 8

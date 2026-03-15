@@ -6,7 +6,7 @@ description: "Discover how students leverage Claude Code as a programming tutor,
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-students-use-claude-code-for-learning-programming/
-categories: [learning, programming, claude-code, education]
+categories: [guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

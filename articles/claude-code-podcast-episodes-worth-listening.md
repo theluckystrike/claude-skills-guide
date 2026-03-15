@@ -5,7 +5,7 @@ title: "Claude Code Podcast Episodes Worth Listening"
 description: "A curated list of podcast episodes for developers and power users exploring Claude Code, AI-assisted development, and skill-based workflows."
 date: 2026-03-14
 author: "Claude Skills Guide"
-categories: [resources]
+categories: [guides]
 tags: [claude-code, podcasts, ai-coding, developer-tools, claude-skills]
 permalink: /claude-code-podcast-episodes-worth-listening/
 reviewed: true

@@ -4,7 +4,7 @@ layout: default
 title: "Claude Code Docker Permission Denied Bind Mount Error"
 description: "Learn how to diagnose and fix Docker permission denied errors when using bind mounts with Claude Code. Practical solutions for development environments."
 date: 2026-03-14
-categories: [troubleshooting, docker]
+categories: [troubleshooting, guides]
 tags: [claude-code, docker, bind-mount, permissions, troubleshooting, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-docker-permission-denied-bind-mount-error/

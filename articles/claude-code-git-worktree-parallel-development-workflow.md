@@ -6,7 +6,7 @@ description: "Master parallel development with Git worktrees and Claude Code. Ru
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-git-worktree-parallel-development-workflow/
-categories: [workflow, git]
+categories: [workflows, guides]
 tags: [claude-code, git-worktree, parallel-development]
 reviewed: true
 score: 8

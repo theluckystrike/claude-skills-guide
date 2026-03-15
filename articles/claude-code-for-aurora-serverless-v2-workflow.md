@@ -7,7 +7,7 @@ description: "A practical guide to using Claude Code skills for Aurora Serverles
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-aurora-serverless-v2-workflow/
-categories: [workflows, databases]
+categories: [workflows, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code with MongoDB Atlas Search to bu
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-mongodb-atlas-search-workflow/
-categories: [Development, MongoDB, AI]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

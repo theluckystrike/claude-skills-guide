@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to streamline your Zola static site d
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-zola-rust-static-site-workflow/
-categories: [guides, web-development]
+categories: [guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

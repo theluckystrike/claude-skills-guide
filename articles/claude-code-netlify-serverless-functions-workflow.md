@@ -6,7 +6,7 @@ description: "Learn how to build and deploy serverless APIs using Claude Code an
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-netlify-serverless-functions-workflow/
-categories: [development, serverless, netlify]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

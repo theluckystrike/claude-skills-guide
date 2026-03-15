@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code CLI to build Vue 3 Suspense workflows
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-vue-3-suspense-workflow-tutorial/
-categories: [tutorials, vue]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills, vue-3, suspense, async-components]
 reviewed: true
 score: 7

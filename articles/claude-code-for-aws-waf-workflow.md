@@ -5,7 +5,7 @@ description: "Learn how to use Claude Code to streamline AWS WAF configuration, 
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-aws-waf-workflow/
-categories: [aws, security, cloud-security, waf, claude-code]
+categories: [guides, guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

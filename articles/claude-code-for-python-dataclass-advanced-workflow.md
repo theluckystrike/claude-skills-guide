@@ -6,7 +6,7 @@ description: "Master advanced Python dataclass patterns with Claude Code. Learn 
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-python-dataclass-advanced-workflow/
-categories: [python, workflows]
+categories: [guides, workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

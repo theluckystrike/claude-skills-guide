@@ -6,7 +6,7 @@ description: "Learn how to configure an approved tools list for Claude Code in e
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /setting-up-claude-code-approved-tools-list-for-enterprise/
-categories: [guides, enterprise]
+categories: [guides, guides]
 tags: [claude-code, claude-skills, enterprise, security, tool-restrictions]
 reviewed: true
 score: 7

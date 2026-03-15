@@ -6,7 +6,7 @@ description: "Learn how to build an AI-powered workflow using Claude Code to mea
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-core-web-vitals-optimization-workflow/
-categories: [guides, performance]
+categories: [guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

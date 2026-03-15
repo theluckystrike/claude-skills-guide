@@ -6,7 +6,7 @@ description: "A practical guide to migrating from GraphQL to REST APIs using Cla
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-graphql-to-rest-migration-guide/
-categories: [tutorials, migration]
+categories: [tutorials, guides]
 tags: [claude-code, graphql, rest-api, migration, backend, claude-skills]
 reviewed: true
 score: 7

@@ -7,7 +7,7 @@ description: "Learn how to leverage Claude Code to streamline your Kotlin delega
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-kotlin-delegation-pattern-workflow/
-categories: [Development, Kotlin, Design Patterns, AI]
+categories: [guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

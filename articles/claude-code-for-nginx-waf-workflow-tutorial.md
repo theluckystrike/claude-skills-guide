@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to streamline your NGINX WAF configur
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-nginx-waf-workflow-tutorial/
-categories: [Tutorial, DevOps, Security]
+categories: [tutorials, guides, security]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

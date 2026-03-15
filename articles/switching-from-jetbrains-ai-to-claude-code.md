@@ -7,7 +7,7 @@ description: "A comprehensive guide for developers moving from JetBrains AI Assi
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /switching-from-jetbrains-ai-to-claude-code/
-categories: [workflows, migration]
+categories: [workflows, guides]
 tags: [claude-code, jetbrains, migration, ai-assistant, claude-skills]
 reviewed: true
 score: 7

@@ -7,7 +7,7 @@ description: "Learn how to leverage Claude Code CLI to streamline MQTT IoT messa
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-mqtt-iot-messaging-workflow/
-categories: [Development, IoT, Messaging, DevOps]
+categories: [guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

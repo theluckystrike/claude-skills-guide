@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code CLI to develop, test, and deploy LitS
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-litserve-lightning-workflow-guide/
-categories: [guides, ai-serving]
+categories: [guides, guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills]

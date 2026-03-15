@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code CLI for building efficient Graph
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-graphql-mutation-workflow-tutorial/
-categories: [Tutorial, GraphQL, Claude Code]
+categories: [tutorials, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

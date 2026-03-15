@@ -4,7 +4,7 @@ layout: default
 title: "Vibe Coding Testing Strategy: How to Test AI-Generated Code"
 description: "A practical testing strategy for vibe coding workflows. Learn how to validate AI-generated code with unit tests, integration tests, and Claude skills."
 date: 2026-03-14
-categories: [testing, vibe-coding, ai-development]
+categories: [guides, guides, guides]
 tags: [vibe-coding, testing-strategy, ai-code, claude-code, unit-testing, tdd, claude-skills]
 author: "Claude Skills Guide"
 permalink: /vibe-coding-testing-strategy-how-to-test-ai-code/

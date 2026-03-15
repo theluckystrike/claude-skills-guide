@@ -6,7 +6,7 @@ description: "Master the art of using Claude Code with Workbox to build powerful
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-workbox-service-worker-workflow-guide/
-categories: [Development, PWA, JavaScript]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

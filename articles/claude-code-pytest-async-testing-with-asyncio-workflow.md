@@ -6,7 +6,7 @@ description: "A comprehensive guide to writing async tests using pytest and asyn
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-pytest-async-testing-with-asyncio-workflow/
-categories: [Development, Python, Testing]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

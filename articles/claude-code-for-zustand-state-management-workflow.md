@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code into your Zustand state managem
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-zustand-state-management-workflow/
-categories: [Development, React, State Management]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

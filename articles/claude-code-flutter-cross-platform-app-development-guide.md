@@ -6,7 +6,7 @@ description: "A comprehensive guide to building cross-platform Flutter applicati
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-flutter-cross-platform-app-development-guide/
-categories: [guides, mobile-development, flutter]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

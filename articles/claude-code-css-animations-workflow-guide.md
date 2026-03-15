@@ -8,7 +8,7 @@ permalink: /claude-code-css-animations-workflow-guide/
 categories: [guides]
 tags: [claude-code, css, animations, frontend]
 reviewed: true
-score: 0
+score: 7
 ---
 
 # Claude Code CSS Animations Workflow Guide

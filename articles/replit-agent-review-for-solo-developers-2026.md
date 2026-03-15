@@ -5,7 +5,7 @@ description: "A comprehensive review of Replit Agent for solo developers in 2026
 date: 2026-03-14
 author: theluckystrike
 permalink: /replit-agent-review-for-solo-developers-2026/
-categories: [reviews]
+categories: [comparisons]
 reviewed: true
 score: 7
 tags: [claude-code, replit, ai-coding-tools, solo-developers]

@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your MITRE ATT&CK 
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-mitre-attck-workflow-guide/
-categories: [security, guides]
+categories: [guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

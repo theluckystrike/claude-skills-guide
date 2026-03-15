@@ -6,7 +6,7 @@ description: "Learn how to set up automated Vitest coverage reporting with Claud
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vitest-coverage-reporting-workflow-tutorial/
-categories: [tutorials, testing]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills, vitest, coverage, testing]
 reviewed: true
 score: 7

@@ -3,7 +3,7 @@ layout: default
 title: "Claude Code Trigger.dev Background Job Workflow Guide"
 description: "A comprehensive guide to building background job workflows with Trigger.dev using Claude Code skills. Learn practical patterns for task queues."
 date: 2026-03-14
-categories: [integrations, workflow-automation]
+categories: [integrations, guides]
 tags: [claude-code, claude-skills, trigger-dev, background-jobs, task-queues]
 author: theluckystrike
 reviewed: true

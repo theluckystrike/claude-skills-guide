@@ -5,7 +5,7 @@ description: "Understanding Claude Code pricing for small startup teams. Compare
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-cost-for-small-startup-team/
-categories: [pricing]
+categories: [guides]
 tags: [claude-code, startup, pricing, costs]
 reviewed: true
 score: 8

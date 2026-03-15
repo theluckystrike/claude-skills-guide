@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to create efficient Apache Drill work
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-apache-drill-workflow-tutorial/
-categories: [tutorials, data-engineering]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

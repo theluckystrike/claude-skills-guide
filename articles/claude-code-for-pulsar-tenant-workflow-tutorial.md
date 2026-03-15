@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline Apache Pulsar tena
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-pulsar-tenant-workflow-tutorial/
-categories: [Tutorial, Apache Pulsar, Claude Code]
+categories: [tutorials, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

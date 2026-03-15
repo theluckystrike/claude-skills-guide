@@ -5,7 +5,7 @@ layout: default
 title: "Claude Code for Roving Tabindex Pattern Workflow"
 description: "Learn how to use Claude Code to implement the roving tabindex pattern for accessible keyboard navigation in web components. Practical examples and."
 date: 2026-03-15
-categories: [frontend-development]
+categories: [guides]
 tags: [claude-code, claude-skills, accessibility, keyboard-navigation, roving-tabindex, frontend]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-roving-tabindex-pattern-workflow/

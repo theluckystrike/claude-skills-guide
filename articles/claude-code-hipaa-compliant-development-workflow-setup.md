@@ -4,7 +4,7 @@ layout: default
 title: "Claude Code HIPAA Compliant Development Workflow Setup"
 description: "Set up a HIPAA compliant development workflow with Claude Code. Learn to configure skills for secure coding practices, PHI data handling, audit trails."
 date: 2026-03-14
-categories: [workflows, security, compliance]
+categories: [workflows, guides, guides]
 tags: [claude-code, hipaa, healthcare, compliance, security, development-workflow, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true

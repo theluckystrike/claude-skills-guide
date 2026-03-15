@@ -6,7 +6,7 @@ description: "A comprehensive comparison of AI-powered SQL query generation capa
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-vs-codeium-sql-query-generation/
-categories: [comparison, guides]
+categories: [guides, guides]
 reviewed: true
 score: 8
 tags: [claude-code, codeium, sql, database, ai-coding-tools]

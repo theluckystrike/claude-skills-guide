@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to build robust domain event workflow
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-domain-events-workflow-guide/
-categories: [Development, Architecture, Event-Driven]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "An in-depth review of Lovable AI app builder for developers in 202
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /lovable-ai-app-builder-review-for-developers-2026/
-categories: [reviews]
+categories: [comparisons]
 reviewed: true
 score: 7
 tags: [claude-code, claude-skills]

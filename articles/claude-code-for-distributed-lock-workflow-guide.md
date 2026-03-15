@@ -7,7 +7,7 @@ description: "Learn how to leverage Claude Code to implement distributed locking
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-distributed-lock-workflow-guide/
-categories: [Development, Distributed Systems, Backend]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

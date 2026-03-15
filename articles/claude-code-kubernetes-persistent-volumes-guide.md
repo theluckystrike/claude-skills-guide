@@ -5,7 +5,7 @@ description: "Learn how to manage Kubernetes persistent volumes effectively with
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-kubernetes-persistent-volumes-guide/
-categories: [kubernetes, devops]
+categories: [guides, guides]
 tags: [claude-code, kubernetes, persistent-volumes, storage]
 reviewed: true
 score: 8

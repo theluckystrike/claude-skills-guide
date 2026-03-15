@@ -6,7 +6,7 @@ description: "Master TypeScript const enums with Claude Code. Learn workflows, b
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-typescript-const-enums-workflow-guide/
-categories: [guides, typescript, development-tools]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills, typescript, const-enums, type-safety]
 reviewed: true
 score: 7

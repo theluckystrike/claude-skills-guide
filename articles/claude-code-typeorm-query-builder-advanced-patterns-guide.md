@@ -6,7 +6,7 @@ description: "Master advanced TypeORM Query Builder patterns including subquerie
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-typeorm-query-builder-advanced-patterns-guide/
-categories: [TypeORM, Database, Development, Tutorials]
+categories: [guides, guides, guides, tutorials]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

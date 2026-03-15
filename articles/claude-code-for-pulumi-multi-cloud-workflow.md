@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to accelerate your Pulumi infras
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-pulumi-multi-cloud-workflow/
-categories: [DevOps, Infrastructure, Cloud]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

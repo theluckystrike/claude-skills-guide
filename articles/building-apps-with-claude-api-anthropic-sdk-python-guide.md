@@ -7,7 +7,7 @@ description: "A comprehensive guide to building powerful applications using Clau
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /building-apps-with-claude-api-anthropic-sdk-python-guide/
-categories: [claude-api, python, ai-development]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

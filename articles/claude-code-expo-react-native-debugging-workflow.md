@@ -6,7 +6,7 @@ description: "Learn how to efficiently debug Expo React Native applications usin
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-expo-react-native-debugging-workflow/
-categories: [tutorials, mobile-development]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

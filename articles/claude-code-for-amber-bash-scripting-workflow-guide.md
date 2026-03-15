@@ -6,7 +6,7 @@ description: "Master bash scripting workflows with Claude Code. Learn practical 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-amber-bash-scripting-workflow-guide/
-categories: [Development, Bash, Claude Code]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

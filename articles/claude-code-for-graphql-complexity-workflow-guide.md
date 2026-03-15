@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to manage GraphQL complexity in your 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-graphql-complexity-workflow-guide/
-categories: [Development, GraphQL, AI Coding Tools]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

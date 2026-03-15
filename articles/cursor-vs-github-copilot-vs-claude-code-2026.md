@@ -4,7 +4,7 @@ layout: default
 title: "Cursor vs GitHub Copilot vs Claude Code 2026: Which AI."
 description: "A practical comparison of Cursor, GitHub Copilot, and Claude Code for developers in 2026. Understand the strengths, workflows, and real-world use cases."
 date: 2026-03-14
-categories: [ai-coding-assistants]
+categories: [guides]
 tags: [cursor, github-copilot, claude-code, ai-programming, developer-tools, claude-skills]
 author: "Claude Skills Guide"
 permalink: /cursor-vs-github-copilot-vs-claude-code-2026/

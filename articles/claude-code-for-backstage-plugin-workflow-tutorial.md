@@ -6,7 +6,7 @@ description: "A comprehensive tutorial on building Backstage plugins using Claud
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-backstage-plugin-workflow-tutorial/
-categories: [guides, backstage, plugins]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

@@ -7,7 +7,7 @@ description: "Learn how to leverage Claude Code as a technical co-founder to acc
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-technical-cofounder-workflow-productivity/
-categories: [workflows, productivity]
+categories: [workflows, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

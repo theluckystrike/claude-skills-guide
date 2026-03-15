@@ -6,7 +6,7 @@ description: "Learn what Claude Code is, what it can do, and how it can transfor
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /what-can-claude-code-do-a-plain-english-explanation/
-categories: [Development, AI Tools, Programming]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

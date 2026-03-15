@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline distributed tracin
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-distributed-tracing-jaeger-workflow/
-categories: [Development, DevOps, Monitoring]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

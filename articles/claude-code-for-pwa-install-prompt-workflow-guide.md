@@ -6,7 +6,7 @@ description: "Learn how to implement Progressive Web App install prompts using C
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-pwa-install-prompt-workflow-guide/
-categories: [Web Development, PWA, JavaScript]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -129,7 +129,7 @@ async function addDefaultCategory() {
     batch.forEach(post => {
       transaction.patch(post._id, {
         set: {
-          categories: [{ _type: 'reference', _ref: 'default-category-id' }]
+          categories: [guides, guides]
         }
       })
     })

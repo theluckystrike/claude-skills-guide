@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to implement Chainlink VRF workflows 
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-chainlink-vrf-workflow-guide/
-categories: [guides, blockchain, web3]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to streamline your OpenLineage workfl
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-openlineage-workflow-tutorial-guide/
-categories: [Development, Data Engineering, OpenLineage]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

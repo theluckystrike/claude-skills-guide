@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to build robust Pydantic validat
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pydantic-validation-workflow/
-categories: [workflows, python]
+categories: [workflows, guides]
 tags: [claude-code, pydantic, validation, python, data-validation, claude-skills]
 reviewed: true
 score: 7

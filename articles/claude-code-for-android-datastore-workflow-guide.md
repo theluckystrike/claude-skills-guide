@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your Android DataS
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-android-datastore-workflow-guide/
-categories: [Development, Android, DataStore, AI]
+categories: [guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

@@ -6,7 +6,7 @@ description: "An honest review of Claude Code as an AI coding tool in 2026. Prac
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /same-dev-ai-coding-tool-honest-review-2026/
-categories: [review]
+categories: [comparisons]
 tags: [claude-code, ai-coding-tool, review, 2026, claude-skills]
 reviewed: true
 score: 7

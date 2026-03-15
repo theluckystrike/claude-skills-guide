@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your Spark Delta L
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-spark-delta-lake-workflow-tutorial/
-categories: [Data Engineering, Apache Spark, Delta Lake, AI Assistants]
+categories: [guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "A comprehensive guide to using Claude Code for developing JetBrain
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-jetbrains-plugin-workflow-tutorial/
-categories: [guides, jetbrains, plugin-development, intellij-sdk]
+categories: [guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

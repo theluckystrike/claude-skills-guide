@@ -6,7 +6,7 @@ description: "Learn how to implement accessible modal dialogs using Claude Code.
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-accessible-modal-dialog-implementation/
-categories: [Development, Accessibility, JavaScript]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code with Elastic SIEM for automated secur
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-elastic-siem-workflow-guide/
-categories: [Development, DevOps, Security]
+categories: [guides, guides, security]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

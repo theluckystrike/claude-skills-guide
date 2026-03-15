@@ -6,7 +6,7 @@ description: "Master Kubernetes resource limits configuration with Claude Code. 
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-kubernetes-resource-limits-guide/
-categories: [kubernetes, devops]
+categories: [guides, guides]
 tags: [claude-code, kubernetes, resource-management]
 reviewed: true
 score: 8

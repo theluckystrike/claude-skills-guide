@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to automate and streamline your 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-eks-karpenter-workflow/
-categories: [DevOps, Kubernetes, AWS, Cloud Computing]
+categories: [guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

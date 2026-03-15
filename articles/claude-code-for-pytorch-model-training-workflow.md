@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code CLI to streamline your PyTorch m
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-pytorch-model-training-workflow/
-categories: [Development, Machine Learning, PyTorch]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your Plotly Dash P
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-plotly-dash-python-workflow/
-categories: [Python, Data Visualization, Dash]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

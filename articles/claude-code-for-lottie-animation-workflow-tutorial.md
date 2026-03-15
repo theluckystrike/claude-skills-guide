@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code into your Lottie animation work
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-lottie-animation-workflow-tutorial/
-categories: [Development, Tutorials, Animation]
+categories: [guides, tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

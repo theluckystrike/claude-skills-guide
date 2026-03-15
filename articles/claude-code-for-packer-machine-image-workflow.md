@@ -7,7 +7,7 @@ description: "Learn how to use Claude Code to streamline Packer machine image cr
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-packer-machine-image-workflow/
-categories: [tutorials, infrastructure]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

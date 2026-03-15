@@ -7,7 +7,7 @@ description: "Learn how to leverage Claude Code to streamline your Configure8 de
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-configure8-portal-workflow-guide/
-categories: [workflows, developer-portals]
+categories: [workflows, guides]
 tags: [claude-code, configure8, developer-portal, automation, claude-skills]
 reviewed: true
 score: 7

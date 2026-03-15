@@ -6,7 +6,7 @@ description: "Learn how to leverage SharedArrayBuffer for high-performance paral
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-shared-array-buffer-workflow/
-categories: [Development, JavaScript, Web Workers]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

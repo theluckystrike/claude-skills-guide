@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code with Snyk for automated contain
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-snyk-container-workflow-guide/
-categories: [workflows, security]
+categories: [workflows, guides]
 tags: [claude-code, claude-skills, snyk, container-security, devsecops]
 reviewed: true
 score: 7

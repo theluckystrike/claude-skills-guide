@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to build efficient ScyllaDB work
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-scylladb-workflow-tutorial-guide/
-categories: [tutorials, databases]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills, scylladb, database, workflow]
 reviewed: true
 score: 7

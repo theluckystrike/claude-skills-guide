@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code with VHS for creating professio
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-vhs-terminal-recorder-workflow/
-categories: [Development Tools, Terminal, Documentation]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

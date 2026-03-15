@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code CLI to streamline your ZenML MLO
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-zenml-pipeline-workflow-guide/
-categories: [MLOps, ZenML, Claude Code, DevOps]
+categories: [guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

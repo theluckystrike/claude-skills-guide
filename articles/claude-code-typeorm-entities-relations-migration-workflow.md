@@ -6,7 +6,7 @@ description: "A comprehensive guide to building TypeORM entities, defining relat
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-typeorm-entities-relations-migration-workflow/
-categories: [workflows, databases]
+categories: [workflows, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

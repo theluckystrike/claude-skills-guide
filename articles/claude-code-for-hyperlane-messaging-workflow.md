@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code CLI to streamline Hyperlane cros
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-hyperlane-messaging-workflow/
-categories: [Development, Blockchain, Cross-Chain, DeFi]
+categories: [guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

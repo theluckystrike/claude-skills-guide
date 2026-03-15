@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code into your Retool internal tools
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-retool-internal-tools-workflow/
-categories: [Development Tools, AI Integration, Retool, Internal Tools]
+categories: [guides, guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

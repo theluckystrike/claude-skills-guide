@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /devin-ai-software-engineer-review-honest-2026/
 reviewed: true
 score: 6
-categories: [ai-tools, comparisons]
+categories: [guides, comparisons]
 tags: [claude-code, devin, ai-engineer]
 ---
 

@@ -6,7 +6,7 @@ description: "Build a production-ready loyalty rewards system using Claude Code.
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-loyalty-rewards-system-development/
-categories: [tutorials, code]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

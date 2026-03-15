@@ -7,7 +7,7 @@ description: "Master the React Native Fabric renderer workflow with Claude Code.
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-react-native-fabric-renderer-workflow/
-categories: [react-native, mobile-development, claude-code]
+categories: [guides, guides, guides]
 tags: [claude-code, react-native, fabric, mobile-development, claude-skills]
 reviewed: true
 score: 7

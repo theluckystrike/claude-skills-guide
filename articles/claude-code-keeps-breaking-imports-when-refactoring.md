@@ -6,7 +6,7 @@ description: "Discover why Claude Code breaks imports during refactoring and lea
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-keeps-breaking-imports-when-refactoring/
-categories: [troubleshooting, refactoring]
+categories: [troubleshooting, guides]
 tags: [claude-code, claude-skills, imports, refactoring]
 reviewed: true
 score: 8

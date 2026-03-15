@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code with Infura for efficient Web3 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-infura-web3-workflow-tutorial/
-categories: [Tutorial, Web3, Blockchain]
+categories: [tutorials, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

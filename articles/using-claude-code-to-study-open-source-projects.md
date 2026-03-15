@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code and its skill system to efficien
 date: 2026-03-14
 author: theluckystrike
 permalink: /using-claude-code-to-study-open-source-projects/
-categories: [tutorials, claude-code]
+categories: [tutorials, guides]
 tags: [claude-code, open-source, learning]
 reviewed: true
 score: 8

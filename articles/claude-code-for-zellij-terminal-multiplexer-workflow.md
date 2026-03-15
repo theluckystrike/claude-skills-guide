@@ -6,7 +6,7 @@ description: "A comprehensive guide to integrating Claude Code with Zellij for p
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-zellij-terminal-multiplexer-workflow/
-categories: [workflow]
+categories: [workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

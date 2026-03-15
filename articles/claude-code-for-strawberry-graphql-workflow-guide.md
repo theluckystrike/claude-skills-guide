@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code with Strawberry GraphQL for efficient
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-strawberry-graphql-workflow-guide/
-categories: [Development, GraphQL, Python]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

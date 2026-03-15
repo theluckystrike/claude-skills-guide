@@ -7,7 +7,7 @@ categories: [tutorials]
 tags: [claude-code, sonarqube, code-quality, devops, automation]
 author: theluckystrike
 reviewed: true
-score: 0
+score: 7
 permalink: /claude-code-sonarqube-code-quality-workflow/
 ---
 

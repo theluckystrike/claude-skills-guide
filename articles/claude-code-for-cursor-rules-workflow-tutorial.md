@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to create powerful Cursor Rules 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-cursor-rules-workflow-tutorial/
-categories: [Development Tools, AI Programming, Cursor]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

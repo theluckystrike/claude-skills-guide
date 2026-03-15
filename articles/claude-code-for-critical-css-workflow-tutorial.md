@@ -6,7 +6,7 @@ description: "Learn how to automate and optimize your critical CSS workflow usin
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-critical-css-workflow-tutorial/
-categories: [Development, CSS, Performance, Automation]
+categories: [guides, guides, guides, workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code with Sentry for powerful error 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-sentry-error-tracking-integration/
-categories: [Development, Error Tracking, DevOps]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "Master system prompt engineering for production Claude API applica
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-api-system-prompt-engineering-for-production-apps/
-categories: [development, ai]
+categories: [guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

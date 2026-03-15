@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to automate and optimize your co
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-code-splitting-workflow-tutorial/
-categories: [Development, Tutorial]
+categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code with Falco for automated runtim
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-falco-runtime-security-workflow/
-categories: [security, devops, kubernetes]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills, falco, runtime-security, containers]
 reviewed: true
 score: 7

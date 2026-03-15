@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code and Claude Skills to automate sp
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-spot-instance-cost-savings-workflow/
-categories: [Cloud Infrastructure, DevOps, Cost Optimization]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

@@ -4,7 +4,7 @@ layout: default
 title: "Claude Code Dark Mode Implementation Guide"
 description: "A practical guide to implementing dark mode in web applications using Claude Code. Learn patterns for CSS variables, theme toggles, system preference."
 date: 2026-03-14
-categories: [implementation]
+categories: [guides]
 tags: [claude-code, dark-mode, css, frontend, frontend-design, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-dark-mode-implementation-guide/

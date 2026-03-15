@@ -6,7 +6,7 @@ description: "Learn how to calculate the return on investment (ROI) for implemen
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-roi-calculation-for-development-teams/
-categories: [guides, productivity]
+categories: [guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
