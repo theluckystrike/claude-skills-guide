@@ -1,275 +1,251 @@
 ---
-
-
 layout: default
-title: "Claude Code for Tree-sitter Syntax Highlighting Guide"
-description: "Learn how to use Claude Code with Tree-sitter for powerful syntax highlighting in your projects. Practical examples, code patterns, and implementation."
+title: "Claude Code for Tree-Sitter Syntax Highlighting Guide"
+description: "Master Tree-sitter syntax highlighting with Claude Code. Learn to create custom grammars, build highlighting rules, and integrate with your editor for powerful code visualization."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: Claude Skills Guide
 permalink: /claude-code-for-tree-sitter-syntax-highlighting-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
+{% raw %}
+# Claude Code for Tree-Sitter Syntax Highlighting Guide
 
-# Claude Code for Tree-sitter Syntax Highlighting Guide
+Tree-sitter has revolutionized how developers visualize and navigate code. As a robust parsing library, Tree-sitter generates precise syntax trees that power everything from editor highlighting to code intelligence tools. This guide shows you how to leverage Claude Code to work with Tree-sitter for syntax highlighting in your projects.
 
-Syntax highlighting is fundamental to developer productivity, yet achieving high-quality, consistent highlighting across different languages and editors remains challenging. Tree-sitter, a parser generator tool and incremental parsing library, has emerged as the gold standard for syntax analysis in modern developer tools. This guide explores how to use Claude Code effectively with Tree-sitter to create robust syntax highlighting solutions.
+## Understanding Tree-Sitter Fundamentals
 
-## Understanding Tree-sitter Basics
+Tree-sitter is a parser generator tool and an incremental parsing library. Unlike traditional regex-based approaches, Tree-sitter builds accurate parse trees by analyzing the grammatical structure of your code. This precision translates directly to superior syntax highlighting that understands code context.
 
-Tree-sitter is a parser generator that builds parse trees from source code. Unlike traditional regex-based highlighting, Tree-sitter understands code structure semantically. It generates parsers from context-free grammars, enabling accurate identification of functions, variables, strings, comments, and other syntactic elements regardless of formatting variations.
+The core concepts you need to grasp are:
 
-The core advantages of Tree-sitter include:
+1. **Grammars**: Define the lexical and syntactic rules for a language
+2. **Parse Trees**: Hierarchical representations of code structure
+3. **Nodes**: Individual elements within the parse tree (functions, variables, keywords)
+4. **Captures**: Pattern matching rules that associate tree nodes with semantic names
 
-- **Incremental parsing**: Updates only changed portions of the parse tree, making it extremely fast for real-time editing
-- **Language agnostic**: Supports over 100 programming languages with a unified API
-- **Error recovery**: Continues parsing even with syntax errors, maintaining useful results
-- **Deterministic output**: Same input always produces identical parse trees
+Claude Code can help you generate grammars, write capture rules, and debug parsing issues efficiently.
 
-## Setting Up Tree-sitter with Claude Code
+## Setting Up Tree-Sitter with Claude Code
 
-To work effectively with Tree-sitter and Claude Code, you need the right environment setup. Begin by installing the Tree-sitter CLI:
+Before diving into syntax highlighting, ensure you have the necessary tools installed. Tree-sitter requires a few dependencies:
 
 ```bash
+# Install Tree-sitter CLI
 npm install -g tree-sitter-cli
+
+# Verify installation
 tree-sitter --version
 ```
 
-Next, ensure your Claude Code environment can access Tree-sitter through system calls or by integrating with existing tools. Create a `CLAUDE.md` file in your project to guide Claude Code on Tree-sitter usage:
+Once installed, you can use Claude Code to bootstrap new language grammars. Tell Claude about the language you want to support, and it can help generate the initial grammar structure:
 
-```markdown
-# Tree-sitter Syntax Highlighting Project
-
-## Goals
-- Implement Tree-sitter based syntax highlighting
-- Support multiple language parsers
-- Generate accurate highlight queries
-
-## Available Tools
-- tree-sitter CLI for parsing
-- tree-sitter-highlight for generating highlight queries
-- Custom scripts in ./scripts/ for automation
+```javascript
+// Example: A minimal JavaScript grammar snippet
+module.exports = grammar({
+  name: 'javascript',
+  
+  rules: {
+    program: $ => repeat($._statement),
+    
+    _statement: $ => choice(
+      $.expression_statement,
+      $.variable_declaration,
+      $.function_declaration
+    ),
+    
+    expression_statement: $ => $.expression,
+    
+    variable_declaration: $ => seq(
+      'const',
+      $.identifier,
+      '=',
+      $.expression
+    ),
+    
+    // Additional rules...
+  }
+});
 ```
 
-## Creating Custom Syntax Highlighting
+## Creating Effective Highlighting Rules
 
-Tree-sitter's highlighting system uses **queries** to define which node types should receive which highlight classes. These queries live in `.scm` files within language repositories. Here's how to create effective highlight queries:
+The real power of Tree-sitter lies in its capture system. By defining patterns that match specific node types, you can create sophisticated highlighting that responds to code semantics rather than just patterns.
 
-### Understanding Node Types
+### Understanding Capture Groups
 
-First, generate a parse tree to understand your language's node structure:
+Captures associate node patterns with names that your highlighting theme can style:
 
-```bash
-tree-sitter parse example.py
+```javascript
+// tree-sitter queries syntax
+(function_declaration
+  name: (identifier) @function.name)
+
+(method_declaration
+  name: (property_identifier) @method)
+
+(call_expression
+  function: (identifier) @function.call)
 ```
 
-This output reveals the node hierarchy. For Python, you'll see nodes like `function_definition`, `call`, `string`, `comment`, and `identifier`. Each node type can be mapped to a highlight class.
+Each `@capture` name maps to a highlight group in your editor. This separation means you can update highlighting themes without touching the query logic.
 
-### Writing Highlight Queries
+### Highlighting Different Code Elements
 
-Create a `highlights.scm` file with your query patterns:
+Here's a practical query file for comprehensive JavaScript highlighting:
 
-```scheme
-; Function definitions get function highlight
-(function_definition name: (identifier) @function)
+```scm
+; Keywords
+["const" "let" "var" "function" "return" "if" "else" "for" "while"] @keyword
 
-; Strings get string highlight
+; Functions
+(function_declaration name: @function)
+(arrow_function expression: (function_expression))
+
+; Types
+(identifier) @type
+(type_annotation type: (primitive_type) @type.builtin)
+
+; Strings
 (string) @string
+(template_string) @string
 
-; Comments get comment highlight
+; Numbers
+(number) @number
+
+; Comments
 (comment) @comment
 
-; Keywords get keyword highlight
-(_ [(def) (class) (if) (elif) (else) (for) (while) (return)]) @keyword
+; Variables and properties
+(property_identifier) @property
+(identifier) @variable
 
-; Numbers get number highlight
-(integer) @number
-(floating_point) @number
+; Operators
+(binary_expression operator: @operator)
+(unary_expression operator: @operator)
 ```
 
-### Generating Queries Automatically
+## Practical Examples with Claude Code
 
-Rather than writing queries manually, use Tree-sitter's query generation:
+Claude Code excels at helping you write and debug Tree-sitter queries. Here's how to approach common scenarios:
+
+### Example 1: Highlighting Decorators
+
+Modern frameworks use decorators extensively. Here's how to create queries that catch them:
+
+```scm
+(decorator
+  name: (identifier) @decorator
+  arguments: (call_expression arguments: (_) @decorator.args))
+```
+
+This captures both simple decorators like `@decorator` and those with arguments like `@decorator(arg)`.
+
+### Example 2: Context-Aware String Highlighting
+
+Different string types often warrant different visual treatment:
+
+```scm
+(string 
+  (template_string) @string.special)
+
+(string 
+  (string_fragment) @string)
+```
+
+### Example 3: Function Call vs. Definition
+
+Distinguishing between function calls and definitions helps readers understand code flow:
+
+```scm
+(function_declaration name: @function.definition)
+(call_expression function: (identifier) @function.call)
+(call_expression function: (member_expression property: (property_identifier) @method.call))
+```
+
+## Debugging Your Queries
+
+When queries don't match as expected, Tree-sitter provides debugging tools. Use the `tree-sitter parse` command to see the actual parse tree structure:
 
 ```bash
-tree-sitter highlight --help
-tree-sitter generate --help
+tree-sitter parse your-file.js
 ```
 
-Claude Code can assist by generating comprehensive query files based on language grammars. Provide the language grammar source and ask Claude Code to create initial highlight queries:
+This output shows node types and their hierarchy. Compare this against your queries to identify mismatches. Claude Code can help interpret parse output and suggest corrections to your queries.
 
-```prompt
-"Create a tree-sitter highlights.scm file for JavaScript based on the tree-sitter-javascript grammar. Include queries for functions, classes, async/await, decorators, strings, comments, template literals, JSX elements, and operators."
-```
+## Integrating with Popular Editors
 
-## Advanced Highlighting Patterns
+Most modern editors support Tree-sitter highlighting:
 
-### Context-Aware Highlighting
+### Neovim
 
-Tree-sitter enables context-aware highlighting by understanding scope and nesting. You can highlight variables differently based on their declaration context:
-
-```scheme
-; Highlight parameters differently from regular variables
-(parameter (identifier) @variable.parameter)
-
-; Highlight class member variables
-(field_expression (identifier) @variable.member)
-
-; Highlight local variables
-(lexical_variable (identifier) @variable)
-```
-
-### Injection Queries for Embedded Languages
-
-Many files contain embedded languages—JavaScript inside HTML, CSS in styled components, or SQL in strings. Tree-sitter's injection system handles these cases:
-
-```scheme
-; Inject JavaScript into JSX
-((jsx_element (jsx_tag_name) @tag)
- (#match? @tag "^(script|style)$")
- (#set! injection.language "javascript"))
-
-; Highlight SQL in tagged template literals
-(call_expression
-  (identifier) @sql.tag
-  (#eq? @sql.tag "sql"))
-```
-
-## Integrating with Editor Infrastructure
-
-### Neovim Integration
-
-Tree-sitter powers Neovim's built-in syntax highlighting. Configure it in your Neovim config:
+Neovim has built-in Tree-sitter support:
 
 ```lua
+-- Configuration in init.lua
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { 'python', 'javascript', 'typescript', 'rust', 'go' },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
   },
-  indent = {
-    enable = true
+})
+```
+
+### VS Code
+
+Install the Tree-sitter extension and add your queries to the extension's query directory.
+
+## Actionable Tips for Better Highlighting
+
+1. **Start Simple**: Begin with keywords and basic types before adding complexity
+2. **Use Semantic Names**: Choose capture names that convey meaning (`@function`, `@variable`, `@type`)
+3. **Test Incrementally**: Add queries one category at a time and verify they work
+4. **Leverage Claude Code**: Describe what you want to highlight, and let Claude suggest queries
+5. **Consider Performance**: Complex queries across large files can slow parsing; optimize patterns
+
+## Advanced: Custom Grammars for Domain-Specific Languages
+
+If you're working with a DSL or custom configuration format, building a dedicated grammar provides the best highlighting experience. Define your language rules in a `grammar.js` file:
+
+```javascript
+module.exports = grammar({
+  name: 'my_config',
+  
+  extras: $ => [/\s/, $.comment],
+  
+  rules: {
+    config: $ => seq(
+      '{',
+      repeat($.property),
+      '}'
+    ),
+    
+    property: $ => seq(
+      $.key,
+      ':',
+      $.value
+    ),
+    
+    key: $ => /[a-z_]+/,
+    
+    value: $ => choice(
+      $.string,
+      $.number,
+      $.boolean,
+      $.array
+    ),
+    
+    // Define other node types...
   }
 })
 ```
 
-### Custom Highlighter with Claude Code
-
-Build a custom highlighter using Tree-sitter's C library:
-
-```c
-#include <tree_sitter/api.h>
-#include <tree_sitter/highlight.h>
-
-void highlight_code(const char *source, const char *language) {
-  TSParser *parser = ts_parser_new();
-  TSLanguage *lang = tree_sitter_javascript(); // or dynamically load
-  ts_parser_set_language(parser, lang);
-  
-  TSTree *tree = ts_parser_parse_string(parser, NULL, source, strlen(source));
-  TSNode root = ts_tree_root_node(tree);
-  
-  // Walk the tree and apply highlights
-  // ... highlight logic here
-  
-  ts_tree_delete(tree);
-  ts_parser_delete(parser);
-}
-```
-
-## Performance Optimization
-
-Tree-sitter's incremental parsing is highly efficient, but you can optimize further:
-
-**Lazy Loading**: Only parse visible portions of large files:
-
-```scheme
-; In your editor integration
-function parse_visible_range(start, end) {
-  const tree = parser.parseWithOffset(source, start, end);
-  return tree.rootNode;
-}
-```
-
-**Parser Caching**: Reuse parser instances:
-
-```javascript
-const parserCache = new Map();
-
-function getParser(language) {
-  if (!parserCache.has(language)) {
-    const parser = new Parser();
-    parser.setLanguage(language);
-    parserCache.set(language, parser);
-  }
-  return parserCache.get(language);
-}
-```
-
-## Practical Workflow with Claude Code
-
-When building Tree-sitter highlighting solutions, use Claude Code effectively:
-
-1. **Define your language requirements** - List languages and their variants (e.g., JavaScript, TypeScript, JSX, TSX)
-
-2. **Generate initial queries** - Ask Claude Code to create highlight queries from language grammars
-
-3. **Test with real code** - Parse sample files and review node types
-
-4. **Refine queries iteratively** - Adjust to match your aesthetic preferences and edge cases
-
-5. **Document patterns** - Maintain a reference of successful query patterns
-
-## Common Pitfalls and Solutions
-
-### Overly Broad Queries
-
-Avoid catching too many nodes with single patterns. Instead of:
-
-```scheme
-(identifier) @variable  ; Too broad
-```
-
-Use context-specific queries:
-
-```scheme
-(call (identifier) @function)  ; Function calls
-(variable_declarator (identifier) @variable)  ; Variable declarations
-```
-
-### Performance with Large Files
-
-For files exceeding 10,000 lines, implement virtualized parsing that focuses on visible regions while maintaining accurate context detection.
-
-### Cross-Language Consistency
-
-Maintain consistent highlight classes across languages by defining a standard theme:
-
-```scheme
-; Define mappings in each language file
-@function - functions and methods
-@keyword - control flow and declarations  
-@string - string literals
-@comment - comments
-@number - numeric literals
-@type - type names and annotations
-@variable - general variables
-```
+Generate the parser with `tree-sitter generate`, then write queries following the patterns shown earlier.
 
 ## Conclusion
 
-Tree-sitter provides the foundation for robust, performant syntax highlighting. By combining Tree-sitter's parsing capabilities with Claude Code's assistance in generating and refining highlight queries, you can create sophisticated highlighting systems that understand code semantically rather than relying on fragile pattern matching.
+Tree-sitter syntax highlighting transforms code visualization from simple pattern matching to semantic understanding. By leveraging Claude Code's assistance, you can efficiently create and maintain highlighting rules that make your codebase more navigable and readable. Start with basic queries, iterate based on what you see in your editor, and gradually build comprehensive coverage for all the languages you work with.
 
-The key is starting with well-structured queries, testing against real codebases, and iteratively refining based on actual usage patterns. Claude Code can accelerate this process by generating initial query files, explaining node types, and suggesting improvements based on common patterns across languages.
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+The investment in well-crafted Tree-sitter queries pays dividends every time you open your editor and instantly recognize code structure at a glance.
+{% endraw %}
