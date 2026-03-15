@@ -5,6 +5,10 @@ description: "Learn how to configure Chrome managed bookmarks using Windows Grou
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-managed-bookmarks-group-policy/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 Chrome managed bookmarks allow system administrators to push a predefined set of bookmarks to all browsers in their organization. This feature works through Windows Group Policy, making it particularly useful for enterprises that need consistent bookmark configurations across hundreds or thousands of workstations.
