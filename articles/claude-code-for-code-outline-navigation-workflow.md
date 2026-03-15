@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Code Outline Navigation Workflow"
 description: "Master code outline navigation in Claude Code to quickly understand codebase structure, jump to definitions, and traverse complex codebases efficiently."
@@ -7,7 +8,10 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-code-outline-navigation-workflow/
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for Code Outline Navigation Workflow
 
