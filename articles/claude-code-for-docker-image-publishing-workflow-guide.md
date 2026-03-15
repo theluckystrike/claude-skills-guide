@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Docker Image Publishing Workflow Guide"
 description: "A comprehensive guide to using Claude Code for automating Docker image building, tagging, and publishing workflows. Learn practical techniques for CI/CD integration and multi-registry deployments."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-docker-image-publishing-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Docker Image Publishing Workflow Guide
@@ -340,7 +344,7 @@ Here are practical tips to improve your Docker publishing workflow:
 1. **Use Git tags as image versions**: Automate version extraction from git tags
 2. **Implement build caching**: Use GitHub Actions cache or Docker layer caching
 3. **Scan before pushing**: Add vulnerability scanning to catch issues early
-4. **Use manifest lists**: Support multiple architectures seamlessly
+4. **Use manifest lists**: Support multiple architectures smoothly
 5. **Automate cleanup**: Set up retention policies to manage image storage costs
 6. **Document your workflow**: Use Claude Code to generate README documentation for your Docker setup
 

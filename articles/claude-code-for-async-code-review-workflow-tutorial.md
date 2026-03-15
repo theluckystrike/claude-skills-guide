@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Async Code Review Workflow Tutorial"
 description: "Learn how to set up and use Claude Code for asynchronous code review workflows that improve code quality while fitting seamlessly into distributed team environments."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-async-code-review-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 {% raw %}
 
 Asynchronous code review has become essential for distributed teams working across time zones. Unlike synchronous reviews that require immediate attention, async reviews allow developers to submit feedback on their own schedule while maintaining high code quality standards. Claude Code brings powerful AI capabilities to this workflow, enabling teams to automate initial reviews, catch common issues, and focus human reviewers on complex architectural decisions.
