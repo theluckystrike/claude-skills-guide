@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "AI Podcast Summary Chrome Extension: A Developer's Guide to Building and Using"
-description: "Learn how AI podcast summary Chrome extensions work, their technical architecture, and how to build one from scratch. Perfect for developers and power users."
+title: "AI Podcast Summary Chrome Extension: A Developer's Guide."
+description: "Learn how AI podcast summary Chrome extensions work, their technical architecture, and how to build one from scratch. Perfect for developers and power."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-podcast-summary-chrome-extension/
@@ -152,6 +152,13 @@ const summaryPresets = {
 If you're ready to build, start with a minimal viable product: detect audio, send to a single API, display the result. Iterate based on user feedback. The Chrome Extension documentation provides excellent starting points for understanding the platform capabilities.
 
 For users seeking existing solutions, evaluate based on supported platforms, summary quality, pricing model, and privacy policies. Many offer free tiers sufficient for occasional use.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
