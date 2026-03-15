@@ -4,7 +4,7 @@ layout: default
 title: "Chrome Extension Anki Web Integration: A Developer Guide"
 description: "Learn how to build Chrome extensions that integrate with Anki for automatic flashcard creation from web content. Practical code examples and."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /chrome-extension-anki-web-integration/
 reviewed: true
 score: 8
