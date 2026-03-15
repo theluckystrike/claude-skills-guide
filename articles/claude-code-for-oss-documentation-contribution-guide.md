@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for OSS Documentation Contribution Guide"
 description: "Learn how to use Claude Code CLI to contribute to open source documentation. Practical examples, skill setups, and workflows for developers."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-oss-documentation-contribution-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for OSS Documentation Contribution Guide
@@ -282,7 +286,7 @@ Once your documentation is ready:
 - **Test your changes** - Verify links and rendering
 - **Write clearly** - Simplicity beats cleverness
 
-Claude Code transforms documentation contribution from a tedious task into an efficient workflow. By leveraging its understanding capabilities and tool access, you can explore unfamiliar codebases quickly, generate accurate documentation, and produce contributions that maintain high quality standards.
+Claude Code transforms documentation contribution from a tedious task into an efficient workflow. By using its understanding capabilities and tool access, you can explore unfamiliar codebases quickly, generate accurate documentation, and produce contributions that maintain high quality standards.
 
 Start with small contributions—fixing typos or improving clarity—and gradually tackle larger documentation tasks. Your efforts make open source more accessible to developers worldwide.
 {% endraw %}
