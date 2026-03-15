@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for jsPolicy Workflow Tutorial Guide"
 description: "Learn how to use Claude Code to streamline jsPolicy workflow development, from writing policies to debugging and testing in Kubernetes environments."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-jsolicy-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for jsPolicy Workflow Tutorial Guide
 
@@ -15,7 +19,7 @@ jsPolicy is a powerful Kubernetes policy engine that allows you to write admissi
 
 ## Understanding jsPolicy Fundamentals
 
-Before diving into the workflow, let's establish what jsPolicy brings to Kubernetes security. Unlike traditional policy engines that require learning domain-specific languages, jsPolicy lets you write policies using familiar JavaScript. This means you can leverage your existing JS knowledge while enforcing security guardrails across your clusters.
+Before diving into the workflow, let's establish what jsPolicy brings to Kubernetes security. Unlike traditional policy engines that require learning domain-specific languages, jsPolicy lets you write policies using familiar JavaScript. This means you can use your existing JS knowledge while enforcing security guardrails across your clusters.
 
 jsPolicy operates at the admission controller level, intercepting requests to create, update, or delete Kubernetes resources. Your policies evaluate these requests and can either allow or deny them based on custom logic. This makes it ideal for enforcing labeling standards, restricting container capabilities, securing pod specifications, and much more.
 

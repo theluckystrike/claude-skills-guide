@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Fork and Pull Request Workflow Guide"
 description: "Learn how to use Claude Code effectively in a fork-based Git workflow. This guide covers forking repositories, creating branches, writing commits, and submitting pull requests with practical examples."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-fork-and-pull-request-workflow-guide/
 categories: [Development Workflow, Git, Open Source]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Fork and Pull Request Workflow Guide
 
-The fork and pull request workflow is the foundation of open source collaboration. Whether you're contributing to a major project or working with a team that uses GitHub's forking model, understanding how to leverage Claude Code throughout this workflow can dramatically improve your productivity. This guide walks you through each step of the fork-based development process while showing you how Claude Code can assist at every stage.
+The fork and pull request workflow is the foundation of open source collaboration. Whether you're contributing to a major project or working with a team that uses GitHub's forking model, understanding how to use Claude Code throughout this workflow can dramatically improve your productivity. This guide walks you through each step of the fork-based development process while showing you how Claude Code can assist at every stage.
 
 ## Understanding the Fork and Pull Request Model
 

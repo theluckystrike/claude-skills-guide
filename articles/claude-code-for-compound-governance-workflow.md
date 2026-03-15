@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Compound Governance Workflow"
 description: "Learn how to build automated governance workflows for Compound-like DeFi protocols using Claude Code. Includes practical examples for proposal creation, voting, and execution automation."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-compound-governance-workflow/
 categories: [guides, governance, defi]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Compound Governance Workflow

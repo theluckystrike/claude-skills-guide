@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for License Compatibility Workflow Guide"
 description: "A comprehensive guide to managing open source license compatibility using Claude Code workflows for developers."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-license-compatibility-workflow-guide/
 categories: [Development, Open Source, Compliance]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 ## Understanding License Compatibility in Modern Development
 
@@ -181,7 +185,7 @@ if __name__ == "__main__":
 
 ## Automating License Checks in Your Workflow
 
-Once you have your license compatibility skill set up, integrate it seamlessly into your development workflow.
+Once you have your license compatibility skill set up, integrate it smoothly into your development workflow.
 
 ### Pre-Commit Integration
 

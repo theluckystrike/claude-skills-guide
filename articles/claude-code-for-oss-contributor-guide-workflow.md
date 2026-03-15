@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for OSS Contributor Guide Workflow"
 description: "Learn how to use Claude Code effectively for open source contributions. Discover practical workflows for finding issues, exploring codebases, and submitting quality pull requests."
@@ -8,7 +9,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-oss-contributor-guide-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for OSS Contributor Guide Workflow
 
@@ -182,7 +186,7 @@ Contribute consistently to the same projects. Familiarity with your work leads t
 
 ## Conclusion
 
-Claude Code transforms open source contribution from an intimidating process into an accessible workflow. By leveraging its capabilities for codebase exploration, implementation assistance, and quality assurance, you can make meaningful contributions to projects you care about.
+Claude Code transforms open source contribution from an intimidating process into an accessible workflow. By using its capabilities for codebase exploration, implementation assistance, and quality assurance, you can make meaningful contributions to projects you care about.
 
 Start with small contributions, learn from each experience, and gradually take on more complex challenges. The open source community welcomes new contributors, and Claude Code is here to help you succeed.
 

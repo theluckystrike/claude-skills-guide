@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Maven Artifact Publishing Workflow"
 description: "Learn how to automate Maven artifact publishing workflows using Claude Code. This guide covers POM configuration, CI/CD integration, and best practices for publishing to Maven Central and private repositories."
@@ -10,7 +11,10 @@ categories:
   - Java
   - DevOps
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Maven Artifact Publishing Workflow

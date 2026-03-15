@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Axolotl Fine-Tuning Workflow Guide"
 description: "Learn how to leverage Claude Code to streamline your Axolotl fine-tuning workflow, from dataset preparation to model training and evaluation."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-axolotl-fine-tuning-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Axolotl Fine-Tuning Workflow Guide

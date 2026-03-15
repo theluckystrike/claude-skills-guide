@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for License Scanning Workflow Tutorial"
 description: "Learn how to automate software license compliance using Claude Code. This tutorial covers setting up license scanning workflows, integrating tools like scancode and fossa, and handling license violations in your CI/CD pipeline."
@@ -8,11 +9,15 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-license-scanning-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+{% raw %}
+
 
 # Claude Code for License Scanning Workflow Tutorial
 
-Software license compliance is a critical aspect of modern software development. As projects grow and incorporate open-source dependencies, tracking licensing information becomes increasingly complex. This tutorial demonstrates how to leverage Claude Code to automate license scanning workflows, identify compliance risks, and maintain a healthy dependency ecosystem.
+Software license compliance is a critical aspect of modern software development. As projects grow and incorporate open-source dependencies, tracking licensing information becomes increasingly complex. This tutorial demonstrates how to use Claude Code to automate license scanning workflows, identify compliance risks, and maintain a healthy dependency ecosystem.
 
 ## Why License Scanning Matters
 
@@ -245,6 +250,7 @@ Successfully implementing license scanning requires more than just running tools
 
 ## Conclusion
 
-License scanning doesn't have to be a manual, error-prone process. By leveraging Claude Code's capabilities to orchestrate scanning tools, analyze results, and guide remediation, you can establish a robust compliance workflow that scales with your project. The key lies in automation, clear policies, and consistent enforcement.
+License scanning doesn't have to be a manual, error-prone process. By using Claude Code's capabilities to orchestrate scanning tools, analyze results, and guide remediation, you can establish a robust compliance workflow that scales with your project. The key lies in automation, clear policies, and consistent enforcement.
 
 Start with simple scans, gradually add automation, and build a culture of license awareness in your development team. Claude Code is well-equipped to help you every step of the way—from initial setup to ongoing maintenance.
+{% endraw %}

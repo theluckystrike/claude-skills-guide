@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Polars DataFrame Workflow Guide"
 description: "Learn how to use Claude Code CLI to streamline Polars DataFrame operations, automate data transformations, and build efficient data processing pipelines."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-polars-dataframe-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for Polars DataFrame Workflow Guide
 
@@ -23,7 +27,7 @@ First, verify that Polars is installed in your project:
 pip install polars
 ```
 
-When working with Claude Code, you can leverage its ability to read your project files and execute Python code directly. This means you can describe what you want to accomplish in natural language, and Claude can generate and run the appropriate Polars code.
+When working with Claude Code, you can use its ability to read your project files and execute Python code directly. This means you can describe what you want to accomplish in natural language, and Claude can generate and run the appropriate Polars code.
 
 For optimal Claude Code integration, maintain a clean project structure with your data files in predictable locations. Create a dedicated directory for your Polars workflows:
 
@@ -226,7 +230,7 @@ To get the most out of combining Claude Code with Polars:
 
 2. **Use method chaining**: Polars shines with method chains. Structure your transformations as a series of piped operations for readability and performance.
 
-3. **Leverage Polars expressions**: Expressions like `pl.col()`, `pl.when()`, and `pl.approx_unique()` are optimized and should replace custom Python logic.
+3. **use Polars expressions**: Expressions like `pl.col()`, `pl.when()`, and `pl.approx_unique()` are optimized and should replace custom Python logic.
 
 4. **Test with small data first**: Use `head()` to verify transformations on a small subset before applying to the full dataset.
 

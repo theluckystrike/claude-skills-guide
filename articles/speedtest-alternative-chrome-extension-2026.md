@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Speedtest Alternative Chrome Extension 2026: Developer Options for Network Performance Testing"
 description: "Explore Chrome extensions that serve as speedtest alternatives in 2026. Compare features, APIs, and implementation approaches for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /speedtest-alternative-chrome-extension-2026/
+reviewed: true
+score: 8
+categories: [comparisons]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Speedtest Alternative Chrome Extension 2026: Developer Options for Network Performance Testing
 

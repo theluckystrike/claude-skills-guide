@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Conventional Commits Workflow Guide"
 description: "Learn how to use Claude Code to automate and streamline your conventional commits workflow. Practical examples, code snippets, and actionable advice for developers."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-conventional-commits-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Conventional Commits Workflow Guide
@@ -188,7 +192,7 @@ Claude suggests commits—always review the suggestion. Understand what each par
 
 Establish project-wide scope conventions early. Document allowed scopes in your project's README or a CONTRIBUTING file.
 
-### 5. Leverage Claude for Complex Changes
+### 5. use Claude for Complex Changes
 
 When refactoring spans multiple files or involves both features and fixes, Claude can help untangle logical units into appropriate commits.
 

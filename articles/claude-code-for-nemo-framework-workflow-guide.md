@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for NeMo Framework Workflow Guide"
 description: "Master NeMo Framework development with Claude Code. Learn practical workflows for building, training, and deploying generative AI models using NVIDIA NeMo."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-nemo-framework-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for NeMo Framework Workflow Guide
@@ -239,5 +243,5 @@ Claude Code can help you set up experiment tracking or generate training reports
 
 Integrating Claude Code into your NeMo Framework workflow accelerates development through faster prototyping, intelligent debugging, and automated code generation. Whether you're building LLMs, speech models, or multimodal systems, Claude Code serves as an intelligent development partner throughout the AI development lifecycle.
 
-Start with simple tasks—configuration explanation and code generation—then progressively leverage its capabilities for complex debugging and optimization challenges. The combination of Claude Code's contextual understanding and NeMo's powerful abstractions enables rapid iteration from prototype to production.
+Start with simple tasks—configuration explanation and code generation—then progressively use its capabilities for complex debugging and optimization challenges. The combination of Claude Code's contextual understanding and NeMo's powerful abstractions enables rapid iteration from prototype to production.
 {% endraw %}

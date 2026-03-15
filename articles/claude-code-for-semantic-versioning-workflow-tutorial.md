@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Semantic Versioning Workflow Tutorial"
 description: "Learn how to implement semantic versioning workflows in your projects using Claude Code. Practical examples, automation tips, and CI/CD integration guide."
@@ -7,11 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-semantic-versioning-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+{% raw %}
+
 
 # Claude Code for Semantic Versioning Workflow Tutorial
 
-Semantic versioning (SemVer) is the backbone of modern software release management. When implemented correctly, it communicates breaking changes, new features, and bug fixes through your version numbers alone. This tutorial shows you how to leverage Claude Code to implement robust semantic versioning workflows that scale with your project.
+Semantic versioning (SemVer) is the backbone of modern software release management. When implemented correctly, it communicates breaking changes, new features, and bug fixes through your version numbers alone. This tutorial shows you how to use Claude Code to implement robust semantic versioning workflows that scale with your project.
 
 ## Understanding Semantic Versioning Basics
 
@@ -244,3 +249,4 @@ Add deprecation notices to all code using the old auth module, planning removal 
 Claude Code transforms semantic versioning from a manual, error-prone process into an automated, informed workflow. By analyzing your commits, understanding conventional formats, and providing actionable recommendations, Claude Code helps maintain consistent versioning that communicates changes effectively to your users and team.
 
 Start implementing these workflows today, and your release process will become more reliable and predictable.
+{% endraw %}

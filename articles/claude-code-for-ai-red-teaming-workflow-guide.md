@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for AI Red Teaming Workflow Guide"
 description: "A comprehensive guide to building AI red teaming workflows with Claude Code, featuring practical examples, testing patterns, and production-ready implementations."
@@ -8,7 +9,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-ai-red-teaming-workflow-guide/
 categories: [guides, security]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for AI Red Teaming Workflow Guide
