@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Hotfix Release Workflow Tutorial Guide"
 description: "Learn how to create a Claude Code skill that automates your hotfix release workflow. This tutorial covers branching, testing, and deployment patterns for rapid production fixes."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-hotfix-release-workflow-tutorial-guide/
 categories: [guides, tutorials]
 tags: [claude-code, claude-skills, hotfix, release, workflow, devops]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Hotfix Release Workflow Tutorial Guide

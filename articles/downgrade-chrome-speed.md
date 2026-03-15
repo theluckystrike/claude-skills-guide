@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Downgrade Chrome Speed: Complete Guide for Developers"
 description: "Learn how to throttle Chrome network and CPU speeds for testing, plus how to downgrade Chrome to an older version for compatibility or debugging."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /downgrade-chrome-speed/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Downgrade Chrome Speed: Complete Guide for Developers
 
