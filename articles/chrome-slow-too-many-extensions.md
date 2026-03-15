@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Slow Too Many Extensions: A Practical Guide for Developers"
-description: "Diagnose and fix Chrome performance issues caused by excessive extensions. Learn to identify resource-heavy extensions, profile memory usage, and optimize your browser for development workflows."
+title: "Chrome Slow Too Many Extensions: A Practical Guide for."
+description: "Diagnose and fix Chrome performance issues caused by excessive extensions. Learn to identify resource-heavy extensions, profile memory usage, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-slow-too-many-extensions/
@@ -144,5 +144,12 @@ The goal isn't to use zero extensions—many are genuinely valuable for developm
 Audit your extensions monthly. Ask whether each one directly improves your development workflow. Remove anything that doesn't earn its place. This discipline keeps Chrome responsive while preserving the tools that genuinely enhance your productivity.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
