@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension XPath Finder: A Developer's Guide to Locating Elements"
-description: "Discover the best Chrome extensions for finding XPath locators. Compare popular tools, learn practical techniques for web automation, scraping, and testing."
+title: "Chrome Extension XPath Finder: A Developer's Guide to."
+description: "Discover the best Chrome extensions for finding XPath locators. Compare popular tools, learn practical techniques for web automation, scraping, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-xpath-finder/
@@ -191,5 +191,12 @@ const button = await shadowRoot.$('button');
 Chrome extensions for finding XPath save time during development, but understanding the underlying syntax makes you more effective. The best approach combines extension-generated locators with manual refinement to create selectors that withstand page changes.
 
 Practice writing XPath expressions manually, test them using browser tools, and apply the reliability principles outlined here. Your automation scripts and tests will be more maintainable as a result.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

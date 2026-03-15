@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool"
-description: "Learn how to build a Chrome extension that uses AI to summarize web content. Complete implementation guide with code examples for developers and power users."
+title: "AI Summarizer Chrome Extension: Build Your Own Text."
+description: "Learn how to build a Chrome extension that uses AI to summarize web content. Complete implementation guide with code examples for developers and power."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-summarizer-chrome-extension/
@@ -288,5 +288,12 @@ For production extensions, consider implementing caching to avoid redundant API 
 Security best practices include never hardcoding API keys, using Chrome's secure storage mechanisms, and implementing proper Content Security Policy headers in your manifest.
 
 Building an AI summarizer Chrome extension gives you a powerful tool tailored to your specific needs while demonstrating practical integration of browser APIs with external AI services. The modular architecture allows you to swap AI providers, add new features, and customize the experience based on your workflow requirements.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

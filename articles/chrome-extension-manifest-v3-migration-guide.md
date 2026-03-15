@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Manifest V3 Migration Guide: A Practical Developer Handbook"
-description: "A comprehensive migration guide for developers transitioning Chrome extensions from Manifest V2 to V3. Covers service workers, breaking changes, code examples, and common pitfalls."
+title: "Chrome Extension Manifest V3 Migration Guide: A."
+description: "A comprehensive migration guide for developers transitioning Chrome extensions from Manifest V2 to V3. Covers service workers, breaking changes, code."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-manifest-v3-migration-guide/
@@ -267,6 +267,13 @@ Chrome provides testing capabilities before full deployment:
 Manifest V3 migration requires rethinking extension architecture around event-driven, ephemeral service workers. The changes improve security and reduce resource consumption but demand careful attention to state management, timing, and communication patterns.
 
 The migration investment pays off through better extension performance, improved security posture, and continued access to the Chrome Web Store. Most developers complete migration within a few days, depending on extension complexity.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

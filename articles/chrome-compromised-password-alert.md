@@ -2,8 +2,8 @@
 
 
 layout: default
-title: "Chrome Compromised Password Alert: What Developers Need to Know"
-description: "Learn how Chrome's compromised password alerts work, what they mean for your security, and how to integrate password checking into your development workflow."
+title: "Chrome Compromised Password Alert: What Developers Need."
+description: "Learn how Chrome's compromised password alerts work, what they mean for your security, and how to integrate password checking into your development."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-compromised-password-alert/
@@ -165,5 +165,12 @@ server {
 Chrome's compromised password alert provides valuable baseline security for everyday users. However, developers and power users should treat it as one component of a broader security strategy. Integrating breach-checking APIs into your applications, implementing multi-factor authentication, and maintaining awareness of emerging threats create more robust protection for your credentials and users.
 
 The tools and techniques discussed here—from programmatic HIBP integration to nginx security configurations—give you the foundation to build authentication systems that actively protect against compromised credentials rather than simply reacting to breaches after they occur.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

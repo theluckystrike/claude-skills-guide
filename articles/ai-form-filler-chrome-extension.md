@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Form Filler Chrome Extension: A Developer and Power User Guide"
+title: "AI Form Filler Chrome Extension: A Developer and Power."
 description: "Learn how AI form filler Chrome extensions work, their technical architecture, and how to build or customize one for automated form filling."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -137,5 +137,12 @@ Beyond simple convenience, AI form fillers serve practical development purposes.
 The key to effective use is selecting extensions that balance automation with control—allowing you to review and modify AI-predicted values before submission rather than blindly accepting all suggestions.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
