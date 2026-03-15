@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Print Slow Fix: A Developer's Guide to Faster Printing"
 description: "Troubleshooting and fixing slow printing in Google Chrome. Practical solutions for developers and power users dealing with printing delays."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-print-slow-fix/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [chrome, claude-skills]
 ---
+
 
 {% raw %}
 # Chrome Print Slow Fix: A Developer's Guide to Faster Printing

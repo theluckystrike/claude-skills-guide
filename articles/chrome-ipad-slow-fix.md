@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome iPad Slow Fix — Complete Guide for Developers and Power Users"
 description: "Discover proven solutions to fix Chrome running slow on iPad. Troubleshooting tips for developers and power users to optimize Safari and Chrome performance."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-ipad-slow-fix/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [chrome, claude-skills]
 ---
+
 
 Chrome on iPad can become sluggish for various reasons, from memory constraints to outdated configurations. This guide provides actionable solutions for developers and power users experiencing performance issues with Chrome on iPad devices.
 
