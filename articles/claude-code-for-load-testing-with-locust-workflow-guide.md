@@ -36,11 +36,19 @@ Before creating tests, ensure your environment is properly configured. Install L
 pip install locust
 ```
 
+Verify the installation by checking the version:
+
+```bash
+locust --version
+```
+
 Create a new directory for your load testing project:
 
 ```bash
 mkdir load-tests && cd load-tests
 ```
+
+A typical project structure places load tests in `tests/load/` or uses a `locustfile.py` at the project root. This organization keeps performance tests alongside your other test suites while maintaining clear separation.
 
 Initialize a basic Locustfile that defines your user behavior. A simple example for testing a REST API looks like this:
 
@@ -93,6 +101,19 @@ Claude Code can also help you add sophisticated behaviors like authentication ha
 
 As your application grows, your load tests should evolve too. Consider these advanced patterns:
 
+**Spike and Stress Testing**: Test how your application handles sudden traffic increases using `--spawn-rate` to control ramp-up speed:
+
+```bash
+locust -f locustfile.py \
+    --headless \
+    --users 1000 \
+    --spawn-rate 100 \
+    --run-time 60s \
+    --host https://api.yourapp.com
+```
+
+Claude Code can help you determine appropriate values based on your expected production traffic.
+
 **Distributed Testing**: Run Locust in distributed mode across multiple machines for higher load generation:
 
 ```bash
@@ -101,7 +122,7 @@ locust -f locustfile.py --headless -u 1000 -r 100 \
   --master
 ```
 
-**Dynamic User Authentication**: Handle JWT tokens or session-based auth:
+**Dynamic User Authentication**: Handle JWT tokens or session-based auth, including token refresh endpoints:
 
 ```python
 class AuthenticatedUser(HttpUser):
@@ -111,13 +132,31 @@ class AuthenticatedUser(HttpUser):
             "password": "testpass123"
         })
         self.token = response.json()["access_token"]
-    
+
     @task
     def get_profile(self):
         self.client.get(
             "/api/profile",
             headers={"Authorization": f"Bearer {self.token}"}
         )
+
+    @task(5)
+    def refresh_token(self):
+        """Test token refresh endpoint under load."""
+        headers = {"Authorization": f"Bearer {self.token}"}
+        self.client.post("/api/auth/refresh", headers=headers)
+```
+
+**Database Query Testing**: Simulate realistic query patterns with varied parameters:
+
+```python
+@task(2)
+def search_products(self):
+    """Simulate search queries with various parameters."""
+    search_terms = ["laptop", "phone", "tablet", "headphones"]
+    import random
+    term = random.choice(search_terms)
+    self.client.get(f"/api/products/search?q={term}")
 ```
 
 **Weighted Task Execution**: Use task sets to model complex user journeys:
@@ -149,7 +188,22 @@ locust -f locustfile.py --headless -u 500 -r 50 \
   --csv results
 ```
 
+For interactive monitoring, run Locust's web UI and open http://localhost:8089 to track real-time metrics:
+
+```bash
+locust -f locustfile.py
+```
+
 Then feed the results to Claude Code for analysis and recommendations.
+
+### Key Metrics to Monitor
+
+Claude Code can help you understand and interpret critical performance metrics:
+
+- **Requests per second (RPS)**: Measures throughput capacity
+- **Response time percentiles (p50, p95, p99)**: Identifies latency distribution — focus on p95 and p99 rather than averages, as they better represent user experience
+- **Failure rate**: Indicates error handling under load
+- **Average response time**: General performance indicator
 
 ## Automating Your Load Testing Pipeline
 
@@ -177,11 +231,13 @@ Set meaningful thresholds: response time limits, error rate maximums, or request
 
 Follow these guidelines for effective load testing:
 
+- **Start with realistic baselines**: Measure your application's performance under normal load before testing extreme conditions
+- **Test progressively**: Begin with lower user counts and gradually increase to identify the breaking point
 - **Test in production-like environments**: Staging should mirror production infrastructure
-- **Monitor comprehensively**: Track database connections, memory usage, and network latency
-- **Start small**: Begin with baseline tests before scaling up
-- **Repeat consistently**: Run the same tests regularly to detect trends
-- **Document everything**: Note test conditions, results, and conclusions
+- **Monitor infrastructure**: Track CPU, memory, network metrics, and database connections alongside application metrics
+- **Repeat consistently**: Run the same tests regularly to detect trends and regressions
+- **Focus on realistic user paths**: Target the most common user journeys rather than isolated endpoints
+- **Document everything**: Maintain historical records of test results to track performance trends over time
 
 Claude Code can help you maintain test documentation, generate run books, and create alerts for performance degradation.
 
