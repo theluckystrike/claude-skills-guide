@@ -2,8 +2,8 @@
 
 
 layout: default
-title: "Chrome Extension Key Points Extractor: Building a Content Summarization Tool"
-description: "Learn how to build a Chrome extension that extracts key points from any web page. Practical code examples, API integration patterns, and implementation guide for developers."
+title: "Chrome Extension Key Points Extractor: Building a."
+description: "Learn how to build a Chrome extension that extracts key points from any web page. Practical code examples, API integration patterns, and implementation."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-key-points-extractor/
@@ -242,3 +242,10 @@ Chrome provides excellent debugging tools for extension development. Load your e
 Test with various page types: news articles, blog posts, documentation pages, and single-page applications. Each has different structural patterns requiring robust extraction logic.
 
 Build by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
