@@ -107,7 +107,7 @@ Documentation improves through iteration, and Claude Code helps maintain quality
 
 ```bash
 # .git/hooks/pre-commit
-claude --check docs/ --rules "no-broken-links,code-blocks-valid,front-matter-complete"
+claude
 ```
 
 This catches common issues before they reach your published GitBook: broken internal links, syntax errors in code examples, and missing metadata fields.

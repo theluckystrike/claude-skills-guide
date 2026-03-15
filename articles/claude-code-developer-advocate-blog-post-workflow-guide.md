@@ -26,7 +26,7 @@ Start by checking which skills are available for content creation:
 
 ```bash
 # List available skills to see content-related options
-claude --list-skills
+claude
 ```
 
 For blog post work, several skills prove particularly valuable. The template-skill helps maintain consistent formatting across articles. If you're creating documentation alongside blog posts, the docx skill enables programmatic document generation. The internal-comms skill provides guidance on professional communication patterns that translate well to technical writing.
@@ -35,10 +35,10 @@ Load the skills you'll need at the start of each writing session:
 
 ```bash
 # Load template skill for consistent formatting
-claude --load-skill template-skill
+claude /template-skill
 
 # Load internal-comms for professional writing patterns
-claude --load-skill internal-comms
+claude /internal-comms
 ```
 
 ## Structuring Your Blog Post Workflow

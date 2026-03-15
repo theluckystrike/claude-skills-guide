@@ -182,7 +182,7 @@ For bootcamp students, these skills provide the most value:
 Install skills using:
 
 ```bash
-claude --install [skill-name]
+claude /[skill-name]
 ```
 
 ## Common Bootcamp Mistakes to Avoid

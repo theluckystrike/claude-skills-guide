@@ -77,7 +77,7 @@ Claude Code supports a global memory system and project-specific memories that p
 
 ```bash
 # Add project context to memory
-claude --remember "This project uses Redux Toolkit with createSlice for state management. All API calls go through RTK Query."
+claude --print "This project uses Redux Toolkit with createSlice for state management. All API calls go through RTK Query."
 ```
 
 For larger projects, create a comprehensive memory file:

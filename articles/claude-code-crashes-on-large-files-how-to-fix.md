@@ -116,9 +116,9 @@ When analyzing large codebases with the [tdd skill](/claude-skills-guide/claude-
 
 ```bash
 # Analyze specific directories
-claude --focus src/core/
-claude --focus src/utils/
-claude --focus tests/
+claude
+claude
+claude
 ```
 
 ### Using canvas-design for Large Assets

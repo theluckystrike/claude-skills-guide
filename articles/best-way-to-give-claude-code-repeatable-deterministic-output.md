@@ -27,7 +27,7 @@ Claude Code, like other LLMs, uses probabilistic sampling when generating respon
 One of the most powerful features for achieving deterministic output is the `--seed` flag. This tells Claude Code to use a specific random seed, which significantly increases reproducibility:
 
 ```bash
-claude --seed 42 "Write a function to calculate fibonacci numbers"
+claude "Write a function to calculate fibonacci numbers"
 ```
 
 When you use the same seed value with the same prompt, Claude Code will produce more consistent outputs. This is particularly useful for:
@@ -45,7 +45,7 @@ Claude Code allows you to control the randomness of outputs through temperature 
 For maximum determinism, use a temperature of 0:
 
 ```bash
-claude --temperature 0 "Generate a Python class for user authentication"
+claude "Generate a Python class for user authentication"
 ```
 
 This essentially tells Claude Code to always choose the most likely next token, resulting in highly predictable outputs.
@@ -137,7 +137,7 @@ claude --print < prompt.txt
 Store expected outputs and compare programmatically:
 
 ```bash
-OUTPUT=$(claude --print --seed 42 --temperature 0 "Your prompt here")
+OUTPUT=$(claude --print "Your prompt here")
 EXPECTED="expected output"
 if [ "$OUTPUT" = "$EXPECTED" ]; then
   echo "Match confirmed"
@@ -180,8 +180,8 @@ PROMPT_FILE="generation_prompt.txt"
 
 # Ensure consistent output
 claude --print \
-       --seed $SEED \
-       --temperature $TEMP \
+       \
+       \
        < "$PROMPT_FILE" > output.py
 ```
 

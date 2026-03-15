@@ -52,7 +52,7 @@ Here's a practical workflow for offline code review using local models:
 
 ```bash
 # Start Claude Code in offline mode
-claude --offline
+claude
 
 # Create a focused skill for code review that works locally
 # In your skill, specify local model preferences:

@@ -94,7 +94,7 @@ Before executing file operations, wait 500ms to allow any pending MCP server wri
 Sometimes skills and MCP servers fail to load together due to configuration parsing errors. Check your configuration files for syntax issues:
 
 ```bash
-claude --validate-config
+claude
 ```
 
 Common problems include duplicate keys, invalid YAML indentation, and missing required fields. The pdf and xlsx skills often require specific Python dependencies—ensure these are installed:

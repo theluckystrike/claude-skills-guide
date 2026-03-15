@@ -113,7 +113,7 @@ This ensures every code generation follows your team's conventions.
 Some Claude Code configurations support seed values for reproducibility. Check if your setup supports this:
 
 ```bash
-claude --seed 42 "Generate a React useState hook example"
+claude "Generate a React useState hook example"
 ```
 
 The seed parameter initializes the random number generator, which can produce more consistent results across runs.

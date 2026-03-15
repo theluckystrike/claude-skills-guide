@@ -36,7 +36,7 @@ Many AI coding tools offer local processing options. For Claude Code, you can re
 
 ```bash
 # Disable network access for Claude Code
-claude --offline
+claude
 
 # Or configure allowed directories in settings
 ANTHROPIC_NETWORK_BOUNDARY=local

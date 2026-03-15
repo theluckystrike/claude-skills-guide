@@ -128,7 +128,7 @@ Speed up your workflow with shell aliases for common Claude Code commands. Add t
 ```bash
 alias cc="claude"
 alias ccr="claude --resume"
-alias ccs="claude --stop"
+alias ccs="claude"
 ```
 
 The `--resume` flag continues interrupted sessions, while `--stop` terminates running operations cleanly.

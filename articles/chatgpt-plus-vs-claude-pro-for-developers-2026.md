@@ -36,7 +36,7 @@ Claude Code can read, edit, and create files within your project directory. This
 For example, instead of describing your error in a chat and copying solutions back, you can run:
 
 ```bash
-claude --add-vite-react-components src/
+claude
 ```
 
 Claude Code analyzes your project structure and makes the appropriate changes, maintaining consistency with your existing code style and patterns.
@@ -86,7 +86,7 @@ Claude Code's ability to run tests and examine actual output further enhances de
 
 Integrating Claude Code into your daily workflow provides immediate productivity gains:
 
-**Starting new features**: Run `claude --new-feature "user authentication"` and Claude analyzes your existing auth patterns, then implements consistent solutions.
+**Starting new features**: Run `claude --print "Add user authentication"` and Claude analyzes your existing auth patterns, then implements consistent solutions.
 
 **Code review**: Use Claude Code to review pull requests before team review, catching style issues and potential bugs early.
 

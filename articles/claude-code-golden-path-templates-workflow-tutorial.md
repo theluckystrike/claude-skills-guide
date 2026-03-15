@@ -43,7 +43,7 @@ Claude Code provides several built-in golden path templates. Let's explore how t
 To discover available golden paths, use the templates skill or check your skills directory:
 
 ```bash
-claude --list-templates
+claude
 # or
 ls ~/.claude/skills/*golden-path*
 ```
@@ -55,7 +55,7 @@ Common templates include code-review, documentation-generator, refactoring-pipel
 Most golden paths accept parameters to customize their behavior:
 
 ```bash
-claude --golden-path code-review --target ./src --focus security
+claude /code-review
 ```
 
 This invokes the code-review golden path against the `./src` directory with a security focus. Parameters vary by template, so always check the template documentation.
@@ -261,7 +261,7 @@ documentation: |
   - Dependencies installed
   
   ## Usage
-  claude --golden-path my-workflow --env staging
+  claude /my-workflow
 ```
 
 ## Advanced: Conditional Execution
