@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Soak Testing Workflow Tutorial Guide"
-description: "Learn how to build automated soak testing workflows with Claude Code. This guide covers continuous endurance testing, resource monitoring, and detecting memory leaks in your applications."
+description: "Learn how to build automated soak testing workflows with Claude Code. This guide covers continuous endurance testing, resource monitoring, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-soak-testing-workflow-tutorial-guide/
@@ -231,4 +231,11 @@ Claude Code transforms soak testing from a manually intensive process into an au
 
 Start with moderate-duration tests, establish clear thresholds, and progressively extend testing as your confidence grows. Combined with proper monitoring and analysis, Claude-assisted soak testing becomes an invaluable part of your quality assurance toolkit.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
