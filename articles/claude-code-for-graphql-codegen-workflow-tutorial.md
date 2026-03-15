@@ -6,7 +6,7 @@ description: "Learn how to automate your GraphQL codegen workflow using Claude C
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-graphql-codegen-workflow-tutorial/
-categories: [guides, guides, workflows]
+categories: [guides, workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

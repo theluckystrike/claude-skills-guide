@@ -6,7 +6,7 @@ description: "Learn how to implement the claim check pattern for message process
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-claim-check-pattern-workflow/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, claim-check-pattern, message-queue, azure-service-bus, aws-sqs]
 reviewed: true
 score: 7

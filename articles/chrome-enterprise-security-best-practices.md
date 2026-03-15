@@ -6,7 +6,7 @@ description: "A comprehensive guide to Chrome enterprise security best practices
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-security-best-practices/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [chrome, enterprise, security, browser, best-practices, claude-skills]
 reviewed: true
 score: 8

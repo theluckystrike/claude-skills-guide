@@ -7,7 +7,7 @@ description: "Learn how to implement effective rollback strategies in your Claud
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-rollback-strategy-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, rollback, deployment, devops, workflow]
 reviewed: true
 score: 7

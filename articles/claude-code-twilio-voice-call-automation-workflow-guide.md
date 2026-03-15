@@ -113,7 +113,7 @@ class TranscriptionHandler {
     const analysis = await claude.analyze({
       text: transcriptionText,
       task: 'categorize_support_call',
-      categories: [guides, guides, guides, guides]
+      categories: [guides]
     });
     
     return {

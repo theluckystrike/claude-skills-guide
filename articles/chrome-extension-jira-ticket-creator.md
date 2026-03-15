@@ -5,7 +5,7 @@ description: "Learn how to build a Chrome extension that creates Jira tickets di
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-jira-ticket-creator/
-categories: [guides, guides, guides, productivity]
+categories: [guides, productivity]
 tags: [chrome-extension, jira, ticket-creator, automation, developer-tools, workflow]
 reviewed: true
 score: 7

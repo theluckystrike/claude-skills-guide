@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code into your Go pprof profiling wo
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-go-pprof-profiling-workflow-tutorial/
-categories: [tutorials, guides, guides]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills, go, pprof, profiling, performance-optimization]
 reviewed: true
 score: 8

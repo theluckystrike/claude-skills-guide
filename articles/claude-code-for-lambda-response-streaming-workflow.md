@@ -7,7 +7,7 @@ description: "Learn how to implement streaming responses in AWS Lambda using Cla
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-lambda-response-streaming-workflow/
-categories: [guides, guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

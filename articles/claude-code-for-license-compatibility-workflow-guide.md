@@ -6,7 +6,7 @@ description: "A comprehensive guide to managing open source license compatibilit
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-license-compatibility-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

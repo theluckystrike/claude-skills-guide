@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to streamline your NGINX Ingress conf
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-nginx-ingress-workflow-tutorial/
-categories: [tutorials, guides, guides]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

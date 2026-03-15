@@ -6,7 +6,7 @@ description: "Learn how to build powerful custom diagnostics workflows using Cla
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-custom-lsp-diagnostics-workflow/
-categories: [guides, workflows, guides]
+categories: [guides, workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

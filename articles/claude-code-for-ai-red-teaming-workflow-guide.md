@@ -7,7 +7,7 @@ description: "A comprehensive guide to building AI red teaming workflows with Cl
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-ai-red-teaming-workflow-guide/
-categories: [guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

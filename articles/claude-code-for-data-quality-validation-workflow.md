@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code CLI to build robust data quality
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-data-quality-validation-workflow/
-categories: [guides, guides, workflows]
+categories: [guides, workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

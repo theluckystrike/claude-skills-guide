@@ -5,7 +5,7 @@ description: "Learn how to implement Chrome enterprise data loss prevention poli
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-data-loss-prevention/
-categories: [security, guides, enterprise, guides]
+categories: [security, guides, enterprise]
 tags: [chrome, enterprise, dlp, data-loss-prevention, browser-security, admin-console]
 reviewed: true
 score: 7

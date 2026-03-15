@@ -5,7 +5,7 @@ description: "Learn how to integrate Claude Code into your AWS Security Hub work
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-security-hub-workflow/
-categories: [guides, guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, security-hub, aws, compliance]
 reviewed: true
 score: 8

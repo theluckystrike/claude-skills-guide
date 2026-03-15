@@ -40,7 +40,7 @@ Here's a practical implementation using the Chrome Debugger Protocol to trigger 
 ```javascript
 // background.js - Manifest V3
 const AUDIT_CONFIG = {
-  categories: [guides, guides, guides, guides],
+  categories: [guides],
   throttling: {
     cpuSlowdownMultiplier: 4,
     requestLatencyMs: 40,

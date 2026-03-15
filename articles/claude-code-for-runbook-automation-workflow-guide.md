@@ -6,7 +6,7 @@ description: "Learn how to automate operational runbooks using Claude Code. This
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-runbook-automation-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, runbook, automation, workflows]
 reviewed: true
 score: 8

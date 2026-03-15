@@ -5,7 +5,7 @@ title: "Chrome vs Opera GX RAM: A Developer and Power User."
 description: "A technical deep-dive into Chrome and Opera GX memory usage. Learn practical optimization techniques, extension impact analysis, and real-world."
 date: 2026-03-15
 author: "Claude Skills Guide"
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [chrome, opera-gx, ram, memory-optimization, browser-performance, claude-skills]
 permalink: /chrome-vs-opera-gx-ram/
 reviewed: true

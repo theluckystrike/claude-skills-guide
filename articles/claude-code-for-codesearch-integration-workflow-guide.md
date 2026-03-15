@@ -6,7 +6,7 @@ description: "A comprehensive guide to integrating Claude Code with CodeSearch w
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-codesearch-integration-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

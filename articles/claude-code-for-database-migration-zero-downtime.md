@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code CLI to implement zero-downtime databa
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-database-migration-zero-downtime/
-categories: [guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

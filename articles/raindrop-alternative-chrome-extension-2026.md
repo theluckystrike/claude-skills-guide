@@ -6,7 +6,7 @@ description: "Discover the best Raindrop.io alternatives for Chrome in 2026. Ope
 date: 2026-03-15
 author: theluckystrike
 permalink: /raindrop-alternative-chrome-extension-2026/
-categories: [guides, guides]
+categories: [guides]
 reviewed: true
 score: 8
 tags: [chrome-extension, bookmarks, raindrop-alternative, developer-tools]

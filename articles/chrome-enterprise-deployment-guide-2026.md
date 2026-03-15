@@ -6,7 +6,7 @@ description: "A practical guide to deploying Chrome Enterprise in 2026. Learn po
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-deployment-guide-2026/
-categories: [guides, guides]
+categories: [guides]
 tags: [chrome-browser, enterprise, deployment, gpo, microsoft-intune, jamf, claude-skills]
 reviewed: true
 score: 8

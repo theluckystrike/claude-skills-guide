@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline Consul service dis
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-consul-service-discovery-workflow/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

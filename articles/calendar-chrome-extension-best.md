@@ -5,7 +5,7 @@ description: "Discover the top calendar Chrome extensions that boost productivit
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /calendar-chrome-extension-best/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [calendar, chrome-extension, productivity, developer-tools, time-management]
 reviewed: true
 score: 7

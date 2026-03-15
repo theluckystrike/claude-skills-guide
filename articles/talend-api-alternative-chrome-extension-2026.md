@@ -4,7 +4,7 @@ layout: default
 title: "Talend API Alternative Chrome Extension 2026"
 description: "Discover the best Talend API alternatives as Chrome extensions in 2026. Compare developer-focused options for API testing, monitoring, and integration workflows."
 date: 2026-03-15
-categories: [guides, guides]
+categories: [guides]
 tags: [talend, api, chrome-extension, developer-tools, api-testing, integration, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true

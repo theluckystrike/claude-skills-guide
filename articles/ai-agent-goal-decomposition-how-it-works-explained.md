@@ -7,7 +7,7 @@ description: "Learn how AI agents break down complex tasks into manageable sub-g
 date: 2026-03-14
 author: "theluckystrike"
 permalink: /ai-agent-goal-decomposition-how-it-works-explained/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, ai-agents, goal-decomposition, task-planning, claude-skills]
 reviewed: true
 score: 7

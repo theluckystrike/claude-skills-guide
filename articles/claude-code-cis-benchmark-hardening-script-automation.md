@@ -4,7 +4,7 @@ layout: default
 title: "Claude Code CIS Benchmark Hardening Script Automation"
 description: "Learn how to automate CIS benchmark hardening with Claude Code skills. Practical examples for security compliance, automated auditing, and system."
 date: 2026-03-14
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, cis-benchmark, security-hardening, automation, compliance, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true

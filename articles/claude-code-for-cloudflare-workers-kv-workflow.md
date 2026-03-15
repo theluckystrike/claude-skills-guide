@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to build efficient Cloudflare Workers
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-cloudflare-workers-kv-workflow/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

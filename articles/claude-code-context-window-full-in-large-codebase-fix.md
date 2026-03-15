@@ -6,7 +6,7 @@ description: "Learn practical solutions for handling context window limitations 
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-context-window-full-in-large-codebase-fix/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

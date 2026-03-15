@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code CLI for intelligent, semantic co
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-semantic-code-search-workflow-tutorial/
-categories: [tutorials, guides, guides]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

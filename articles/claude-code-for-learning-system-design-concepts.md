@@ -6,7 +6,7 @@ description: "A practical guide to using Claude Code as your learning companion 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-learning-system-design-concepts/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

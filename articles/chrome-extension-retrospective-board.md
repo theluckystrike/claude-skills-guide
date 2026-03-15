@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /chrome-extension-retrospective-board/
 reviewed: true
 score: 8
-categories: [guides, guides]
+categories: [guides]
 tags: [chrome, retrospective, agile, project-management]
 ---
 

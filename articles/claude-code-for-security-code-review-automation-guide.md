@@ -7,7 +7,7 @@ description: "A comprehensive guide to automating security code reviews using Cl
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-security-code-review-automation-guide/
-categories: [guides, guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, security, code-review, automation]
 reviewed: true
 score: 7

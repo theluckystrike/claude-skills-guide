@@ -6,7 +6,7 @@ description: "A comprehensive guide to using Claude Code for Detectron2 object d
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-detectron2-workflow-guide/
-categories: [guides, guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

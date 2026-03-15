@@ -6,7 +6,7 @@ description: "Discover powerful Chrome extensions that serve as CSS Peeper alter
 date: 2026-03-15
 author: theluckystrike
 permalink: /css-peeper-alternative-chrome-extension-2026/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [css, chrome-extensions, web-development, developer-tools, css-inspection]
 reviewed: true
 score: 7

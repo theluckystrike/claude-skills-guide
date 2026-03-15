@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to build robust RabbitMQ topic e
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-rabbitmq-topic-exchange-workflow/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

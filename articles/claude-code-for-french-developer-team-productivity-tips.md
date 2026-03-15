@@ -6,7 +6,7 @@ description: "Guide pratique pour les équipes de développement françaises : o
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-french-developer-team-productivity-tips/
-categories: [guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

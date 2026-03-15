@@ -6,7 +6,7 @@ description: "A comprehensive guide to using Claude Code CLI for implementing ef
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-code-review-checklist-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

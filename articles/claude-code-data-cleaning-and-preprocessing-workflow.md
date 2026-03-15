@@ -6,7 +6,7 @@ description: "Learn how to build an efficient data cleaning and preprocessing wo
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-data-cleaning-and-preprocessing-workflow/
-categories: [guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

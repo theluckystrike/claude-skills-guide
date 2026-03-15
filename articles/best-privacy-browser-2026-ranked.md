@@ -7,7 +7,7 @@ description: "Compare the best privacy-focused browsers of 2026. Technical analy
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /best-privacy-browser-2026-ranked/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [browser, privacy, security, developer-tools, claude-skills]
 reviewed: true
 score: 8

@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code CLI to streamline your Stencil w
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-stencil-web-components-workflow/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

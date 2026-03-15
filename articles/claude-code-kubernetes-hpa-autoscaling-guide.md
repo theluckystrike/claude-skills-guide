@@ -6,7 +6,7 @@ description: "Learn how to implement Horizontal Pod Autoscaling in Kubernetes us
 date: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-kubernetes-hpa-autoscaling-guide/
-categories: [guides, guides]
+categories: [guides]
 tags: [claude-code, kubernetes, autoscaling, hpa]
 reviewed: true
 score: 8

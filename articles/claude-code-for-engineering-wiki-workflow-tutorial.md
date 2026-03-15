@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your engineering w
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-engineering-wiki-workflow-tutorial/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

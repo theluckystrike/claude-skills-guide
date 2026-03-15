@@ -7,7 +7,7 @@ description: "Master Metaflow workflow development with Claude Code. Learn how t
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-metaflow-workflow-tutorial/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, metaflow, data-workflows, ml-pipelines]
 reviewed: true
 score: 8

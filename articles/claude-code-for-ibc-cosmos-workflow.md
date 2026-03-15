@@ -7,7 +7,7 @@ description: "A practical guide to using Claude Code for developing Inter-Blockc
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-ibc-cosmos-workflow/
-categories: [tutorials, guides, guides]
+categories: [tutorials, guides]
 tags: [claude-code, ibc, cosmos, blockchain, relayer, cross-chain, claude-skills]
 reviewed: true
 score: 8

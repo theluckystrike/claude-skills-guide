@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your release branc
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-release-branching-strategy-workflow/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

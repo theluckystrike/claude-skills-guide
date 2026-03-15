@@ -6,7 +6,7 @@ description: "Learn how to implement transaction tracing workflows using Claude 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-transaction-tracing-workflow-tutorial/
-categories: [tutorials, guides, guides]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

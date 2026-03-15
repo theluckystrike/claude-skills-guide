@@ -7,7 +7,7 @@ description: "Discover the best LastPass alternatives for Chrome in 2026. Compar
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /lastpass-alternative-chrome-extension-2026/
-categories: [guides, guides]
+categories: [guides]
 tags: [password-manager, chrome-extension, bitwarden, 1password, claude-skills]
 reviewed: true
 score: 8

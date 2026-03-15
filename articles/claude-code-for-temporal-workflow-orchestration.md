@@ -7,7 +7,7 @@ description: "Learn how to orchestrate complex workflows using Claude Code with 
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-temporal-workflow-orchestration/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, temporal, workflow-orchestration, durable-execution]
 reviewed: true
 score: 7

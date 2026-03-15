@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code for managing comments and docstr
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-multi-language-comment-and-docstring-workflow/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

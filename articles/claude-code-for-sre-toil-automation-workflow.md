@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to automate repetitive SRE tasks
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-sre-toil-automation-workflow/
-categories: [guides, guides, workflows]
+categories: [guides, workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

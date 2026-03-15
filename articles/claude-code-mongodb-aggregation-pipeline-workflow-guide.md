@@ -6,7 +6,7 @@ description: "Master MongoDB aggregation pipelines with Claude Code. Learn pract
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /claude-code-mongodb-aggregation-pipeline-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 reviewed: true
 score: 7
 tags: [claude-code, mongodb, aggregation, data-pipeline]

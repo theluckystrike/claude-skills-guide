@@ -6,7 +6,7 @@ description: "Learn how to effectively manage execution time and resource budget
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-timeout-budget-workflow-tutorial/
-categories: [tutorials, guides, guides]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "A comprehensive guide to managing Backstage software catalog workf
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-backstage-software-catalog-workflow/
-categories: [guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

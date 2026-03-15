@@ -4,7 +4,7 @@ layout: default
 title: "Best Way to Use Claude Code Inside a Docker Container"
 description: "Use Claude Code effectively inside Docker containers. Setup, permission issues, and workflow patterns for containerized development."
 date: 2026-03-14
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, docker, container, mcp, skills, development-environment, claude-skills]
 author: "Claude Skills Guide"
 permalink: /best-way-to-use-claude-code-inside-a-docker-container/

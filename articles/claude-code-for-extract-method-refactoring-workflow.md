@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code for extract method refactoring. Pract
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-extract-method-refactoring-workflow/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

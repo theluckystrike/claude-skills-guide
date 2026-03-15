@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your Android Kotli
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-android-kotlin-development-workflow-guide/
-categories: [guides, guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

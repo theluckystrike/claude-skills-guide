@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to analyze, understand, and opti
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-algorithm-complexity-optimization-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

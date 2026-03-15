@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code with New Relic APM for enhanced
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-new-relic-apm-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "A practical guide for developers using Claude Code to build on Opt
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-optimism-bedrock-workflow/
-categories: [workflows, guides, guides]
+categories: [workflows, guides]
 tags: [claude-code, claude-skills, optimism, bedrock, solidity, smart-contracts]
 reviewed: true
 score: 8

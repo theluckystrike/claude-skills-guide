@@ -3,7 +3,7 @@ layout: default
 title: "OpenCLAW Skill Security Risks and Mitigations"
 description: "Identify and mitigate security vulnerabilities in OpenCLAW skills. Covers prompt injection, code execution risks, and defense strategies."
 date: 2026-03-14
-categories: [guides, guides]
+categories: [guides]
 tags: [openclaw, claude-skills, security, prompt-injection, code-execution]
 author: theluckystrike
 reviewed: true

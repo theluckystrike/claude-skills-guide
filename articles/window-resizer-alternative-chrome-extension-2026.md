@@ -6,7 +6,7 @@ description: "Explore the best window resizer alternatives for Chrome in 2026. F
 date: 2026-03-15
 author: theluckystrike
 permalink: /window-resizer-alternative-chrome-extension-2026/
-categories: [guides, guides]
+categories: [guides]
 reviewed: true
 score: 7
 tags: [chrome, developer-tools, window-management]

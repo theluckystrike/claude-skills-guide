@@ -6,7 +6,7 @@ description: "A comprehensive guide to testing and evaluating AI prompts using C
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-prompt-testing-evaluation-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

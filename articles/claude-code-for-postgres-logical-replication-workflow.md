@@ -6,7 +6,7 @@ description: "Learn how to implement PostgreSQL logical replication using Claude
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-postgres-logical-replication-workflow/
-categories: [guides, guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, postgres, logical-replication, database]
 reviewed: true
 score: 7

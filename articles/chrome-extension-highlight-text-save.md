@@ -5,7 +5,7 @@ description: "Learn how to build Chrome extensions that capture highlighted text
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-highlight-text-save/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [chrome-extension, text-highlighting, clipboard, developer-tools, productivity, javascript]
 reviewed: true
 score: 7

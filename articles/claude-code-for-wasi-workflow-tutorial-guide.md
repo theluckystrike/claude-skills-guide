@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to streamline your WebAssembly System
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-wasi-workflow-tutorial-guide/
-categories: [guides, guides, guides, tutorials]
+categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

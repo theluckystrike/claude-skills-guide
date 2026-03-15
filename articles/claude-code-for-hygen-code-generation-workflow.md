@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code with Hygen to automate and accel
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-hygen-code-generation-workflow/
-categories: [guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

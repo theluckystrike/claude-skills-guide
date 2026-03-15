@@ -6,7 +6,7 @@ description: "A comprehensive guide to building disaster recovery workflows for 
 date: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-enterprise-disaster-recovery-workflow-planning/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

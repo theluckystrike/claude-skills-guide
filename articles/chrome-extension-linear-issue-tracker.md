@@ -7,7 +7,7 @@ description: "Learn how to build and use Chrome extensions for Linear issue trac
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-linear-issue-tracker/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [chrome-extension, linear, issue-tracker, productivity, claude-skills]
 reviewed: true
 score: 8

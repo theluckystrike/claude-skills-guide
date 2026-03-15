@@ -7,7 +7,7 @@ description: "Learn how to use Claude Code effectively for building accessible, 
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-dialog-element-html-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

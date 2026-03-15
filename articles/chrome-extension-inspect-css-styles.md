@@ -3,7 +3,7 @@ layout: default
 title: "How to Inspect CSS Styles with Chrome Extensions"
 description: "Learn how to use Chrome extensions to inspect, analyze, and debug CSS styles on any webpage. Practical techniques for developers and power users."
 date: 2026-03-15
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [chrome-extension, css-inspection, web-development, debugging, developer-tools]
 author: theluckystrike
 reviewed: true

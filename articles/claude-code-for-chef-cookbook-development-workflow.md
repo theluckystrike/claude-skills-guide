@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your Chef cookbook
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-chef-cookbook-development-workflow/
-categories: [guides, guides, workflows]
+categories: [guides, workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

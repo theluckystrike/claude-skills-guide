@@ -8,7 +8,7 @@ author: "theluckystrike"
 permalink: /chrome-extensions-that-track-you/
 reviewed: true
 score: 8
-categories: [guides, security, guides]
+categories: [guides, security]
 tags: [chrome, extensions, tracking, privacy]
 ---
 

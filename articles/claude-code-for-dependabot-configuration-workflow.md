@@ -6,7 +6,7 @@ description: "Learn how to automate and streamline your Dependabot configuration
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-dependabot-configuration-workflow/
-categories: [guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, dependabot, github, devops]
 reviewed: true
 score: 7

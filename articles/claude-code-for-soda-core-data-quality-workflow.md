@@ -6,7 +6,7 @@ description: "Learn how to integrate Claude Code with Soda Core to build automat
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-soda-core-data-quality-workflow/
-categories: [guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

@@ -7,7 +7,7 @@ description: "A comprehensive guide to integrating Claude Code with Tree-sitter 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-tree-sitter-workflow-tutorial/
-categories: [workflows, guides, guides, guides]
+categories: [workflows, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

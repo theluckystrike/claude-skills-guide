@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code CLI to automate and streamline y
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-load-testing-with-locust-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

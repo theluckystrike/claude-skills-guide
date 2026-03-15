@@ -6,7 +6,7 @@ description: "A comprehensive guide to using Claude Code for writing developer b
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-developer-blog-post-writing-workflow/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, blog-posting, technical-writing]
 reviewed: true
 score: 7
@@ -130,7 +130,7 @@ layout: post
 title: "Your Title"
 description: "Your meta description"
 date: 2026-03-15
-categories: [guides, guides]
+categories: [guides]
 tags: [tag1, tag2]
 ---
 ```

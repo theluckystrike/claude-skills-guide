@@ -6,7 +6,7 @@ description: "Learn how to build Claude skills that automate Azure cost manageme
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-azure-cost-management-workflow/
-categories: [guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

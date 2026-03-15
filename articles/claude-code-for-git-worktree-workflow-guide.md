@@ -7,7 +7,7 @@ description: "A comprehensive guide to using Claude Code with Git worktrees for 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-git-worktree-workflow-guide/
-categories: [workflows, guides, guides]
+categories: [workflows, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7

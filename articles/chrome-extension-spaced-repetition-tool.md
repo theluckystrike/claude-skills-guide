@@ -5,7 +5,7 @@ description: "Learn how to build a Chrome extension spaced repetition tool for m
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-spaced-repetition-tool/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [spaced-repetition, chrome-extension, memory, learning, developer-tools, flashcards]
 reviewed: true
 score: 7

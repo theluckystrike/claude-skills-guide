@@ -7,7 +7,7 @@ description: "A comprehensive guide to building efficient technical documentatio
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-technical-documentation-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills, documentation, workflow]
 reviewed: true
 score: 8

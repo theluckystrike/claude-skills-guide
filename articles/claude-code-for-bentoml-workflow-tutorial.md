@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to streamline your BentoML machine le
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-bentoml-workflow-tutorial/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

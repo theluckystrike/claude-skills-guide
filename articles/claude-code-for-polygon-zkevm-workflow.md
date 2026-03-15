@@ -6,7 +6,7 @@ description: "Master Polygon zkEVM development with Claude Code. Learn to set up
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-polygon-zkevm-workflow/
-categories: [tutorials, guides, guides, guides]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

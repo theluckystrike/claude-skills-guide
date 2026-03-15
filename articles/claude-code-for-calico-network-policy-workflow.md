@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to automate and streamline Calico net
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-calico-network-policy-workflow/
-categories: [guides, guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

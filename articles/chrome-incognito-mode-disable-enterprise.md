@@ -6,7 +6,7 @@ description: "Learn how to disable Chrome incognito mode in enterprise environme
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-incognito-mode-disable-enterprise/
-categories: [guides, enterprise, guides]
+categories: [guides, enterprise]
 tags: [chrome, enterprise, incognito, privacy, group-policy, security]
 reviewed: true
 score: 8
