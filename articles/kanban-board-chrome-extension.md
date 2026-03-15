@@ -261,5 +261,12 @@ Kanban board chrome extensions provide developers with a flexible, customizable 
 
 Start with a minimal viable board, then add features like tagging, filtering, and external integrations as your workflow demands. The extension ecosystem rewards incremental development—you're not building a product, you're building a tool tailored exactly to how you work.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
