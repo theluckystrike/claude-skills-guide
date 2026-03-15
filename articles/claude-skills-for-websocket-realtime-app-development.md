@@ -70,7 +70,59 @@ Let me walk through how these skills work together in a real project scenario.
 
 ### Setting Up the Connection Layer
 
-Start with a clean WebSocket connection manager. Use the tdd skill to drive the implementation:
+Before writing your connection manager, initialize your project with the necessary dependencies:
+
+```bash
+mkdir websocket-server && cd websocket-server
+npm init -y
+npm install ws express
+```
+
+Create your main server file with Express and the `ws` library:
+
+```javascript
+const WebSocket = require('ws');
+const express = require('express');
+const http = require('http');
+
+const app = express();
+const server = http.createServer(app);
+const wss = new WebSocket.Server({ server });
+
+wss.on('connection', (ws, req) => {
+  console.log('Client connected');
+
+  ws.on('message', (message) => {
+    const data = JSON.parse(message);
+    handleMessage(ws, data);
+  });
+
+  ws.on('close', () => {
+    console.log('Client disconnected');
+  });
+});
+
+function handleMessage(ws, data) {
+  switch (data.type) {
+    case 'ping':
+      ws.send(JSON.stringify({ type: 'pong', timestamp: Date.now() }));
+      break;
+    case 'broadcast':
+      wss.clients.forEach(client => {
+        if (client.readyState === WebSocket.OPEN) {
+          client.send(JSON.stringify(data.payload));
+        }
+      });
+      break;
+  }
+}
+
+server.listen(8080, () => {
+  console.log('WebSocket server running on port 8080');
+});
+```
+
+Once your scaffold is in place, build a more complete connection manager. Use the tdd skill to drive the implementation:
 
 ```javascript
 class WebSocketManager {
@@ -115,6 +167,22 @@ class WebSocketManager {
 ```
 
 The tdd skill would have guided you to write tests covering connection success, connection failure, message routing, and exponential backoff before writing this implementation.
+
+### Message Protocol Design
+
+Establish a consistent message protocol across your application. The following schema captures the minimal contract your client and server should share:
+
+```javascript
+// Message schema
+const messageSchema = {
+  type: 'string',      // Required: event type
+  payload: 'object',   // Required: event data
+  id: 'string',        // Optional: message ID for acknowledgment
+  timestamp: 'number'  // Optional: client timestamp
+};
+```
+
+Including an optional `id` field allows you to implement request-acknowledgment patterns where the server echoes the `id` back to confirm receipt. The `timestamp` field helps measure latency and order out-of-sequence messages on the client.
 
 ### React Hook for WebSocket State
 
@@ -257,6 +325,37 @@ wss.on('connection', (ws) => {
   ws.on('close', () => {
     clearInterval(interval);
   });
+});
+```
+
+To keep the heartbeat logic reusable, extract it into a named function you can apply to every new connection:
+
+```javascript
+const HEARTBEAT_INTERVAL = 30000;
+
+function setupHeartbeat(ws) {
+  ws.isAlive = true;
+
+  ws.on('pong', () => {
+    ws.isAlive = true;
+  });
+
+  const interval = setInterval(() => {
+    if (ws.isAlive === false) {
+      clearInterval(interval);
+      return ws.terminate();
+    }
+
+    ws.isAlive = false;
+    ws.ping();
+  }, HEARTBEAT_INTERVAL);
+
+  ws.on('close', () => clearInterval(interval));
+}
+
+wss.on('connection', (ws) => {
+  setupHeartbeat(ws);
+  // ...rest of connection logic
 });
 ```
 
@@ -466,7 +565,27 @@ Always implement:
 - Message validation and sanitization
 - Rate limiting per connection
 
-The tdd skill can guide you to write security tests covering these concerns. A basic token-based authentication pattern:
+The tdd skill can guide you to write security tests covering these concerns. A basic token-based authentication pattern that validates the token and places the user into a personal channel:
+
+```javascript
+wss.on('connection', (ws, req) => {
+  const url = new URL(req.url, `http://${req.headers.host}`);
+  const token = url.searchParams.get('token');
+
+  if (!validateToken(token)) {
+    ws.close(4001, 'Authentication failed');
+    return;
+  }
+
+  const userId = getUserIdFromToken(token);
+  ws.userId = userId;
+
+  // Join user to their personal channel
+  joinRoom(ws, `user:${userId}`);
+});
+```
+
+For more granular channel authorization, extend this pattern to verify access on each incoming message:
 
 ```javascript
 wss.on('connection', (ws, req) => {
@@ -534,6 +653,27 @@ describe('WebSocket Chat', () => {
 
 The `supermemory` skill benefits from WebSocket connections when syncing memories across devices in real-time. The tdd skill can stream test results as they execute, providing immediate feedback. For documentation generation with the `docx` skill, WebSocket connections enable progress updates during lengthy document assembly.
 
+## Debugging and Monitoring
+
+Intermittent connection drops and race conditions are among the hardest WebSocket bugs to reproduce. The superMemory skill maintains your investigation context across multiple Claude sessions, so you can continue a debugging thread without re-explaining the problem from scratch.
+
+Implement structured logging to capture connection metrics:
+
+```javascript
+function logConnectionEvent(event) {
+  console.log(JSON.stringify({
+    timestamp: Date.now(),
+    event: event.type,
+    clientId: event.clientId,
+    serverTime: Date.now()
+  }));
+}
+```
+
+Call `logConnectionEvent` on connection, disconnection, authentication failures, and message errors. Structured JSON output lets you pipe logs into aggregation tools (Datadog, Loki, CloudWatch) for alerting and trend analysis without additional parsing.
+
+The docx skill is also useful here: it creates formatted Word documents for post-incident reports and architectural decision records that require tracked changes or collaborative editing.
+
 ## Bringing It Together
 
 Building WebSocket real-time applications requires coordination across multiple concerns—connection management, UI updates, documentation, and testing. Claude skills provide structured guidance for each aspect.
@@ -552,5 +692,8 @@ The combination of test-driven development, thoughtful UI implementation, and li
 - [Rate Limit Management for Claude Code Skill Intensive Workflows](/claude-skills-guide/rate-limit-management-claude-code-skill-intensive-workflows/) — Manage API rate limits when skill-generating high-frequency WebSocket message handlers.
 - [Can Claude Code Skills Call External APIs Automatically](/claude-skills-guide/can-claude-code-skills-call-external-apis-automatically/) — Extend WebSocket patterns to REST and streaming API integrations.
 - [Claude Skills Use Cases](/claude-skills-guide/use-cases-hub/) — Explore more specialized use cases for Claude skills in real-time and event-driven architectures.
+- [Claude Code Server Sent Events API Guide](/claude-skills-guide/claude-code-server-sent-events-api-guide/) — Compare WebSocket bidirectional messaging with SSE for one-way streaming use cases.
+- [Claude Code gRPC API Development Guide](/claude-skills-guide/claude-code-grpc-api-development-guide/) — Use gRPC streaming as an alternative transport for high-performance real-time services.
+- [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/) — Design the complementary REST endpoints that pair with your WebSocket event stream.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
