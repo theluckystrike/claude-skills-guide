@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to analyze, understand, and opti
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-algorithm-complexity-optimization-guide/
-categories: [Developer Tools, Programming, Optimization]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -220,3 +220,4 @@ Start small: pick one function in your codebase, analyze its complexity, and opt
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -6,7 +6,7 @@ description: "Learn how to build a Chrome extension that cancels ambient noise d
 date: 2026-03-15
 author: theluckystrike
 permalink: /noise-cancellation-chrome-extension/
-categories: [chrome-extension, web-audio, productivity]
+categories: [guides, guides, guides]
 tags: [chrome-extension, noise-cancellation, web-audio-api, webrtc]
 reviewed: true
 score: 8

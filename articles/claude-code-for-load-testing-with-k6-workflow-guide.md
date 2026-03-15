@@ -238,12 +238,6 @@ Create a custom Claude Code skill for consistent K6 workflows. Add to your skill
 ```yaml
 name: k6-load-test
 description: Run K6 load tests and analyze results
-tools: [bash, read_file]
-commands:
-  - name: run-load-test
-    description: Execute K6 load test with default configuration
-    action: |
-      k6 run --summary-export=results.json script.js
 ```
 
 ## Best Practices
@@ -265,3 +259,4 @@ Integrating Claude Code with K6 transforms load testing from a manual, time-inte
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

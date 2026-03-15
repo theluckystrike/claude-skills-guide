@@ -5,7 +5,7 @@ description: "Build Chrome extensions for language learning immersion. Explore i
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-language-learning-immersion/
-categories: [guides, development, chrome-extensions, language-learning]
+categories: [guides, guides, guides, guides]
 tags: [chrome-extension, language-learning, immersion, developer-tools, localization]
 reviewed: true
 score: 8

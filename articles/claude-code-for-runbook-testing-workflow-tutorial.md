@@ -37,7 +37,6 @@ Before writing tests, you need a proper testing environment. Create a dedicated 
 ---
 name: Runbook Tester
 description: Execute and validate runbook procedures
-tools: [bash, read_file, write_file, editor]
 ---
 ```
 
@@ -325,3 +324,4 @@ Begin your runbook testing journey today, and sleep better tonight knowing your 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

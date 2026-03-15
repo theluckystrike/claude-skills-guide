@@ -4,7 +4,7 @@ layout: default
 title: "Chrome Enterprise Release Schedule 2026: What IT Admins."
 description: "A practical guide to Chrome Enterprise release cycles in 2026. Learn about version numbering, update channels, deployment strategies, and how to manage."
 date: 2026-03-15
-categories: [guides, chrome-enterprise]
+categories: [guides, guides]
 tags: [chrome-enterprise, chrome-browser, enterprise-it, chrome-releases, chrome-management, claude-skills]
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-release-schedule-2026/

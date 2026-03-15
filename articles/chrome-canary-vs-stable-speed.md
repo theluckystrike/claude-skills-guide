@@ -134,7 +134,6 @@ Most productive developers benefit from running both. Install Stable for your pr
 
 The gap between channels narrows as Chrome matures. Today's experimental features become tomorrow's Standard. Understanding this cycle helps you use both channels effectively.
 
-
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

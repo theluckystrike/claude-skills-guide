@@ -7,7 +7,7 @@ description: "A practical guide for developers and power users on how Chrome ext
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extensions-that-track-you/
-categories: [chrome, privacy, security]
+categories: [guides, guides, guides]
 tags: [chrome-extensions, privacy, tracking, claude-skills]
 reviewed: true
 score: 8

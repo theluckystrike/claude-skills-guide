@@ -6,7 +6,7 @@ description: "Learn how to configure Chrome browser sync settings via enterprise
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-enterprise-sync-settings-policy/
-categories: [guides, enterprise, chrome]
+categories: [guides, guides, guides]
 tags: [chrome-browser, enterprise-policy, sync-settings, gpo, chrome-admx]
 reviewed: true
 score: 7

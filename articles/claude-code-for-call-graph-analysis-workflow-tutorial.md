@@ -37,7 +37,6 @@ Before diving into call graph analysis, ensure Claude Code is installed and conf
 ---
 name: code-analyzer
 description: Analyzes code structure and relationships
-tools: [read_file, bash]
 ---
 
 You are a code analysis expert. Your role is to help users understand code structure through call graph analysis.
@@ -227,3 +226,4 @@ Remember: the goal isn't just to generate a call graph, but to answer specific q
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

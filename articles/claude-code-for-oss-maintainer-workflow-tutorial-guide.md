@@ -27,7 +27,6 @@ Start by creating a skill specifically tuned to your project's conventions. A ma
 ---
 name: maintainer-workflow
 description: Assists with OSS maintainer tasks
-tools: [read_file, bash, write_file, edit_file]
 ---
 
 You are an expert OSS maintainer helping manage this {project_name} repository.
@@ -91,7 +90,6 @@ Create a release skill that understands your versioning strategy and publication
 ---
 name: release-manager
 description: Handles release workflows for this project
-tools: [read_file, write_file, edit_file, bash]
 ---
 
 Run release workflows using semantic versioning. Steps:
@@ -162,3 +160,4 @@ Start with one workflow—issue triage or PR review—and expand as you gain con
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

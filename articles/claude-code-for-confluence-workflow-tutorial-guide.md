@@ -151,7 +151,6 @@ Design a Claude skill specifically for documentation review:
 ---
 name: confluence-review
 description: Reviews Confluence pages for clarity, completeness, and accuracy
-tools: [read_file, bash]
 ---
 
 ## Purpose
@@ -295,3 +294,4 @@ Remember to secure your credentials, version control your templates, and maintai
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -87,7 +87,6 @@ Now let's create a Claude Skill that automates the regression testing workflow. 
 ---
 name: benchmark-regression
 description: Run benchmark regression tests and compare against baselines
-tools: [bash, read_file, write_file]
 ---
 
 # Benchmark Regression Testing Skill
@@ -241,3 +240,4 @@ Remember: the best time to catch a regression is before it merges. The second be
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

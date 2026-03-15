@@ -39,8 +39,6 @@ The foundation of any Claude skill is the skill file itself. Here's how to struc
 ---
 name: "Review Changelog"
 description: "Analyze and validate changelog entries for consistency, completeness, and clarity"
-tools: [read_file, write_file, bash]
-version: "1.0.0"
 ---
 
 # Changelog Review Skill
@@ -214,3 +212,4 @@ Start with the skill template provided here, customize it to match your project'
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

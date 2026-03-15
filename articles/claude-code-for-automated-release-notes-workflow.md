@@ -56,25 +56,8 @@ Create a dedicated skill for release notes generation in your project's `.claude
 # .claude/skills/release-notes.md
 name: "Release Notes Generator"
 description: "Generate comprehensive release notes from git history and pull requests"
-version: "1.0.0"
 
-instructions: |
-  This skill generates release notes by analyzing:
-  1. Git commits between tags or dates
-  2. Pull request titles and descriptions
-  3. Issue references in commit messages
-  
-  Follow these steps:
-  1. Identify the previous release tag
-  2. Gather all commits since that tag
-  3. Extract PR numbers and issue references
-  4. Group changes by type (feat, fix, docs, etc.)
-  5. Generate formatted release notes
 
-tools:
-  - read_file
-  - bash
-  - write_file
 ```
 
 The skill uses bash commands to interact with git and extract the necessary information:
@@ -226,3 +209,4 @@ The key is starting simple: automate the collection and categorization first, th
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

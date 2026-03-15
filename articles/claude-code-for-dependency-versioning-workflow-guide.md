@@ -37,7 +37,6 @@ First, ensure you have Claude Code installed and configured. Then, create a skil
 ---
 name: dep-manager
 description: Analyze and manage project dependencies
-tools: [Read, Bash, Glob]
 ---
 
 You are a dependency management assistant. Analyze the project's dependency files and provide insights about:
@@ -144,7 +143,6 @@ Schedule regular dependency audits using Claude Code:
 ---
 name: dep-audit
 description: Run comprehensive dependency audit
-tools: [Bash]
 ---
 
 Run a security audit on the project dependencies and report:
@@ -211,3 +209,4 @@ Remember: the best dependency management strategy is one your team actually foll
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

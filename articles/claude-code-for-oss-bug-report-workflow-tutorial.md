@@ -6,7 +6,7 @@ description: "A practical guide to creating efficient bug report workflows for o
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-oss-bug-report-workflow-tutorial/
-categories: [Development, Open Source, Workflow]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

@@ -7,7 +7,7 @@ author: "Claude Skills Guide"
 permalink: /web-developer-toolbar-alternative-chrome-extension-2026/
 reviewed: true
 score: 8
-categories: [tools]
+categories: [guides]
 tags: [chrome-extension, web-development, developer-tools]
 ---
 
@@ -131,10 +131,10 @@ Wappalyzer identifies technologies used on websites, including frameworks, CMS, 
 {
   url: "example.com",
   technologies: [
-    { name: "React", categories: ["JavaScript Frameworks"] },
-    { name: "Next.js", categories: ["Web Frameworks"] },
-    { name: "Vercel", categories: ["Cloud Hosting"] },
-    { name: "Google Analytics", categories: ["Analytics"] }
+    { name: "React", categories: [guides] },
+    { name: "Next.js", categories: [guides] },
+    { name: "Vercel", categories: [guides] },
+    { name: "Google Analytics", categories: [guides] }
   ]
 }
 ```

@@ -69,7 +69,6 @@ While Claude Code's built-in commands work well, creating a dedicated navigation
 ---
 name: code-navigator
 description: Navigate codebases efficiently with outline-based exploration
-tools: [grep, read_file, bash]
 ---
 
 # Code Navigator Skill
@@ -165,7 +164,6 @@ Create skills that understand your project's patterns:
 ---
 name: react-navigator
 description: Navigate React codebases with component-aware navigation
-tools: [grep, read_file, bash]
 ---
 
 # React Navigator
@@ -220,3 +218,4 @@ Start building your navigation skills today, and you'll find yourself understand
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

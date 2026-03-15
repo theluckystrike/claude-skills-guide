@@ -32,11 +32,6 @@ The first step is creating a dedicated skill for routine maintenance tasks. This
 ---
 name: maintainer-triage
 description: Handles routine OSS maintenance tasks
-tools: [Read, Bash, edit_file]
-triggers:
-  - "triage issues"
-  - "review PRs"
-  - "update dependencies"
 ---
 
 # Maintainer Triage Workflow
@@ -80,7 +75,6 @@ One of the most effective burnout-prevention strategies is creating bounded work
 ---
 name: bounded-review
 description: Conduct focused, time-limited code reviews
-tools: [Bash, Read]
 ---
 
 # Bounded Code Review Session
@@ -118,7 +112,6 @@ Many maintainer burnout triggers come from repetitive community interactions. Cr
 ---
 name: community-responses
 description: Generate consistent, helpful community responses
-tools: [Read]
 ---
 
 # Community Response System
@@ -159,7 +152,6 @@ Instead of reacting to notifications as they arrive, schedule dedicated maintena
 ---
 name: bulk-maintenance
 description: Process multiple maintenance tasks in batch
-tools: [Bash, Read, edit_file]
 ---
 
 # Bulk Maintenance Workflow
@@ -199,7 +191,6 @@ If you're already experiencing burnout, Claude Code can help you recover by crea
 ---
 name: recovery-return
 description: Safely return to OSS work after burnout
-tools: [Bash]
 ---
 
 # Recovery Return Workflow
@@ -260,3 +251,4 @@ Start small: create one skill for your most repetitive task, set one bounded ses
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

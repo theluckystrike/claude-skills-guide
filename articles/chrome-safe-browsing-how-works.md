@@ -6,7 +6,7 @@ description: "A technical deep-dive into Chrome Safe Browsing mechanisms. Learn 
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-safe-browsing-how-works/
-categories: [security, browser, chrome, web-development]
+categories: [guides, guides, guides, guides]
 tags: [safe-browsing, chrome-security, web-protection, phishing-detection]
 reviewed: true
 score: 7

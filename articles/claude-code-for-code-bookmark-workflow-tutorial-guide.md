@@ -6,7 +6,7 @@ description: "Learn how to build a code bookmark workflow with Claude Code. This
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-code-bookmark-workflow-tutorial-guide/
-categories: [tutorials, workflow]
+categories: [tutorials, workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -86,35 +86,7 @@ Your skill file should define tools for common operations:
 ```yaml
 name: code-bookmark
 description: Manage your personal code snippet library
-version: 1.0.0
 
-tools:
-  - name: search-bookmarks
-    description: Search code bookmarks by keyword, tag, or language
-    parameters:
-      type: object
-      properties:
-        query:
-          type: string
-        language:
-          type: string
-        tags:
-          type: array
-          items:
-            type: string
-  - name: add-bookmark
-    description: Add a new code snippet to your library
-    parameters:
-      type: object
-      properties:
-        title:
-          type: string
-        code:
-          type: string
-        language:
-          type: string
-        tags:
-          type: array
 ```
 
 ### Integrating with Your Development Workflow
@@ -242,3 +214,4 @@ A well-maintained code bookmark system becomes one of your most valuable develop
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

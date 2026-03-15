@@ -48,7 +48,6 @@ Next, create a skill for incident communication. Place this in your skills direc
 ---
 name: incident-comm
 description: Handles incident communication workflows including status updates, stakeholder notifications, and post-incident reports
-tools: [Read, Write, Bash]
 ---
 
 You are an incident communication specialist. When an incident is declared:
@@ -165,3 +164,4 @@ Claude Code transforms incident communication from a manual, error-prone chore i
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -5,7 +5,7 @@ description: "Learn how AI code assistant Chrome extensions boost development wo
 date: 2026-03-15
 author: theluckystrike
 permalink: /ai-code-assistant-chrome-extension/
-categories: [guides, development, chrome-extensions]
+categories: [guides, guides, guides]
 tags: [ai, code-assistant, chrome-extension, coding, productivity, developer-tools]
 reviewed: true
 score: 7

@@ -6,7 +6,7 @@ description: "Learn how to automate operational runbooks using Claude Code. This
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-runbook-automation-workflow-guide/
-categories: [guides, devops, automation]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills, runbook, automation, workflows]
 reviewed: true
 score: 8
@@ -37,8 +37,6 @@ Let's build a practical runbook skill for a common DevOps task: database backup 
 ---
 name: verify-db-backup
 description: "Verifies database backup integrity and reports status"
-tools: [bash, read_file, write_file]
-category: operations
 ---
 ```
 
@@ -67,8 +65,6 @@ Consider a deployment rollback runbook:
 ---
 name: deployment-rollback
 description: "Automated deployment rollback with health verification"
-tools: [bash, read_file, write_file]
-category: operations
 ---
 ```
 
@@ -98,8 +94,6 @@ Runbook automation becomes powerful when it connects to your monitoring, alertin
 ---
 name: service-health-check
 description: "Checks service health across all environments"
-tools: [bash, http]
-category: monitoring
 ---
 ```
 
@@ -181,8 +175,6 @@ Here's a complete example combining these patterns for a production incident res
 ---
 name: incident-response
 description: "Automated incident detection and initial response"
-tools: [bash, http, read_file, write_file]
-category: operations
 ---
 ```
 
@@ -224,3 +216,4 @@ Remember: automation should augment your team's capabilities, not replace human 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

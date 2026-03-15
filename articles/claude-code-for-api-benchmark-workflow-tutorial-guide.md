@@ -59,7 +59,6 @@ A well-designed Claude Skill can encapsulate your benchmark methodology, making 
 ---
 name: api-benchmark
 description: Run HTTP API benchmarks with configurable parameters
-tools: [Bash, Read, Write]
 ---
 
 # API Benchmark Skill
@@ -199,7 +198,6 @@ Once you have benchmark data, Claude can help analyze and visualize the results.
 ---
 name: benchmark-analyzer
 description: Analyze API benchmark results and generate insights
-tools: [Read, Bash]
 ---
 
 # Benchmark Result Analyzer
@@ -228,3 +226,4 @@ Start small—create a basic benchmark skill for your most critical endpoint—a
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

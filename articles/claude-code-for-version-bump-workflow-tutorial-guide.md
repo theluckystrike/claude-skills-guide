@@ -36,8 +36,6 @@ The first step is creating a dedicated skill file that Claude can invoke. Here's
 ---
 name: version-bump
 description: "Bump project version using semantic versioning. Supports major, minor, and patch updates across multiple files."
-version: 1.0.0
-tools: [read_file, write_file, bash, git]
 ---
 
 # Version Bump Skill
@@ -286,3 +284,4 @@ The key is to treat version bumping not as a chore, but as another opportunity t
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

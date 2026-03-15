@@ -39,11 +39,6 @@ The first step is creating a Claude Code skill dedicated to issue triage. Skills
 ---
 name: issue-triage
 description: "Analyze GitHub issues, classify by type, assign priority, and suggest labels"
-tools: [read_file, bash, write_file]
-version: "1.0.0"
-triggers:
-  - "triage issue"
-  - "analyze issue"
 ---
 ```
 
@@ -253,3 +248,4 @@ Start with a simple skill that classifies issues, then progressively add priorit
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

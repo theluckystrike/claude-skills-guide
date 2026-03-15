@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code CLI for intelligent, semantic co
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-semantic-code-search-workflow-tutorial/
-categories: [Tutorial, Claude Code, Developer Tools]
+categories: [tutorials, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -222,3 +222,4 @@ Start with simple queries today, and you'll quickly discover how much more effic
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

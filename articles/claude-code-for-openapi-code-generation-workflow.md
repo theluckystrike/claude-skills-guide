@@ -39,7 +39,6 @@ Create a new skill specifically for OpenAPI code generation:
 ---
 name: openapi-codegen
 description: Generate type-safe API client code from OpenAPI specifications
-tools: [Read, Write, Bash, WebFetch]
 ---
 ```
 
@@ -196,3 +195,4 @@ Start by building a simple skill that parses your OpenAPI spec, then progressive
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

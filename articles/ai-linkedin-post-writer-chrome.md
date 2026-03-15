@@ -5,7 +5,7 @@ description: "Learn how to build and use AI-powered LinkedIn post writer Chrome 
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /ai-linkedin-post-writer-chrome/
-categories: [guides, development, chrome-extensions]
+categories: [guides, guides, guides]
 tags: [ai, linkedin, chrome-extension, content-generation, developer-tools, javascript]
 reviewed: true
 score: 7

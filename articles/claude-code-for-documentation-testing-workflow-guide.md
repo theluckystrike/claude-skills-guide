@@ -58,7 +58,6 @@ Create a skill file `docs-validator.md` in your skills directory:
 ---
 name: docs-validator
 description: Validates Markdown documentation files for syntax errors, broken links, and quality issues
-tools: [Read, Bash, Glob]
 ---
 ```
 
@@ -174,7 +173,6 @@ To use this workflow within Claude Code, create a skill that orchestrates the en
 ---
 name: docs-test-runner
 description: Runs complete documentation test suite and reports results
-tools: [Read, Bash, Glob, Edit]
 ---
 ```
 
@@ -296,3 +294,4 @@ The key is integrating these tests into your daily workflow and CI pipeline. Whe
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

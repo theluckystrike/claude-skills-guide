@@ -5,7 +5,7 @@ description: "Learn how to build and use Chrome extension wireframe builders for
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-wireframe-builder/
-categories: [guides, development, chrome-extensions, prototyping]
+categories: [guides, guides, guides, guides]
 tags: [chrome-extension, wireframe, prototyping, ui-design, developer-tools, rapid-prototyping]
 reviewed: true
 score: 7

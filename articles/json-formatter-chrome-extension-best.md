@@ -8,7 +8,7 @@ author: "Claude Skills Guide"
 permalink: /json-formatter-chrome-extension-best/
 reviewed: true
 score: 8
-categories: [tools, chrome-extensions, development]
+categories: [guides, guides, guides]
 tags: [json, chrome, formatter, developer-tools, claude-skills]
 ---
 

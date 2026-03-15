@@ -37,7 +37,6 @@ The first step is creating a dedicated Claude skill for CDN optimization tasks. 
 ---
 name: cdn-optimizer
 description: Assists with CDN configuration and optimization tasks
-tools: [Read, Write, Bash, Glob]
 ---
 
 # CDN Optimization Assistant
@@ -295,3 +294,4 @@ Remember: CDN optimization is not a one-time task but an ongoing process. Let Cl
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

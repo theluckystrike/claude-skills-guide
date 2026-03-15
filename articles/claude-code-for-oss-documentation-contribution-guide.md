@@ -43,7 +43,6 @@ Create a custom skill for your OSS documentation workflow:
 ---
 name: oss-docs
 description: "Contribute to open source project documentation"
-tools: [Read, Write, Bash, Glob, Grep]
 ---
 
 ## Contribution Workflow
@@ -297,3 +296,4 @@ Start with small contributions—fixing typos or improving clarity—and gradual
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

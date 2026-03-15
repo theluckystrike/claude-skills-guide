@@ -45,7 +45,6 @@ Create a dedicated skill for handling diagnostics. This skill will serve as the 
 ---
 name: diagnostics
 description: Analyze and report LSP diagnostics for the current project
-tools: [Read, Bash, Glob]
 ---
 ```
 
@@ -215,3 +214,4 @@ Start with the basic patterns in this guide, then adapt them to your specific ne
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

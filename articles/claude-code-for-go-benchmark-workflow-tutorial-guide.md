@@ -68,7 +68,6 @@ Create a Claude Code skill that specializes in analyzing Go benchmark results. S
 ---
 name: benchmark-analyzer
 description: Analyzes Go benchmark test results and provides performance optimization recommendations
-tools: [Bash, Read, Write]
 ---
 
 You are a Go performance expert. When given benchmark output:
@@ -123,7 +122,6 @@ For continuous improvement, create a skill that tracks performance trends:
 ---
 name: benchmark-tracker
 description: Tracks Go benchmark performance over time and alerts on regressions
-tools: [Bash, Read, Write, Glob]
 ---
 
 You track benchmark performance across multiple runs. When invoked:
@@ -233,3 +231,4 @@ Remember: measuring is the first step to improving. Let Claude handle the analys
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

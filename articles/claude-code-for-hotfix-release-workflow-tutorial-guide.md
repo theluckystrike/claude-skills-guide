@@ -53,7 +53,6 @@ Save this skill as `hotfix-release.md` in your Claude skills directory:
 ---
 name: hotfix
 description: Execute a production hotfix workflow from branch creation to deployment trigger
-tools: [Bash, Read, Write, GrepEdit]
 ---
 
 # Hotfix Release Workflow
@@ -224,3 +223,4 @@ Remember: the goal isn't just speed—it's confident, controlled deployments tha
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

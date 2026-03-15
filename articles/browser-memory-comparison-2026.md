@@ -6,7 +6,7 @@ description: "A technical comparison of browser memory usage, garbage collection
 date: 2026-03-15
 author: theluckystrike
 permalink: /browser-memory-comparison-2026/
-categories: [browsers, performance, memory]
+categories: [guides, guides, guides]
 tags: [browser, memory, chrome, firefox, safari, performance]
 reviewed: true
 score: 8

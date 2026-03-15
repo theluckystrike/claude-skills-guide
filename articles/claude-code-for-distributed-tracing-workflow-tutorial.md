@@ -62,7 +62,6 @@ One of Claude Code's powerful features is custom skills. Create a skill specific
 ---
 name: tracing
 description: "Helps implement, debug, and optimize distributed tracing in your codebase"
-tools: [Read, Write, Bash, Glob]
 ---
 
 You are a distributed tracing expert. Help the user:
@@ -207,3 +206,4 @@ Claude Code accelerates every phase of distributed tracing implementation—from
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

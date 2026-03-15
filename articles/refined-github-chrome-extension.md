@@ -3,7 +3,7 @@ layout: default
 title: "Refined GitHub Chrome Extension: Features, Setup, and."
 description: "A comprehensive guide to the Refined GitHub Chrome extension for developers—installation, key features, configuration options, and practical examples."
 date: 2026-03-15
-categories: [tools, chrome-extensions, github]
+categories: [guides, guides, guides]
 tags: [github, chrome-extension, browser-tools, productivity, developer-tools]
 author: theluckystrike
 reviewed: true

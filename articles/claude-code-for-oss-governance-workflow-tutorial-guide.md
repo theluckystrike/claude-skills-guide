@@ -225,26 +225,6 @@ Combine these elements into cohesive governance workflows tailored to your organ
 name: OSS Governance Complete
 description: Comprehensive open source governance analysis
 
-steps:
-  1. dependency-inventory:
-      - collect: All dependencies and versions
-      - check: License information
-      - scan: Security vulnerabilities
-      
-  2. analysis:
-      - compare: Against policy requirements
-      - flag: Issues requiring attention
-      - score: Overall governance health
-      
-  3. reporting:
-      - generate: Executive summary
-      - detail: Issue breakdown with recommendations
-      - track: Historical trends
-      
-  4. action-items:
-      - create: Prioritized task list
-      - escalate: Critical issues
-      - automate: Routine updates where possible
 ```
 
 ### Integration Points
@@ -290,3 +270,4 @@ With Claude Code as part of your governance toolkit, you can confidently manage 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -102,7 +102,6 @@ A well-structured skill for AST-based analysis separates concerns cleanly—the 
 ---
 name: analyze-functions
 description: "Analyze function definitions in codebase"
-tools: [read_file, bash, write_file]
 ---
 
 ## Usage
@@ -217,3 +216,4 @@ Start with simple node-finding patterns, then layer in query-based matching for 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

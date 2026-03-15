@@ -67,7 +67,6 @@ You can create a custom Claude Skill that encapsulates your PyPI publishing work
 ---
 name: "Publish to PyPI"
 description: "Guide through the complete PyPI package publishing workflow"
-tools: [bash, read_file, write_file]
 ---
 
 # PyPI Publishing Workflow
@@ -263,3 +262,4 @@ Remember to always test on Test PyPI before production, use API tokens for authe
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

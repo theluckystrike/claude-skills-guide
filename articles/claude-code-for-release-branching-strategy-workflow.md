@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline your release branc
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-release-branching-strategy-workflow/
-categories: [Development, Workflow, Git]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -217,3 +217,4 @@ The result is faster releases with fewer errors, consistent branch management, a
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

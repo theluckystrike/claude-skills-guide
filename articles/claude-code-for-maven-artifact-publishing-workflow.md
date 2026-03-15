@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to automate and streamline your 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-maven-artifact-publishing-workflow/
-categories: [Development, Maven, Automation]
+categories: [guides, guides, workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -215,3 +215,4 @@ Start small by using Claude for command generation, then gradually incorporate m
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

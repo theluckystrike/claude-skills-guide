@@ -6,7 +6,7 @@ description: "Learn how to leverage Claude Code to streamline and automate your 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-oss-funding-workflow-tutorial-guide/
-categories: [Open Source, Development Tools, Funding]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -206,3 +206,4 @@ Remember, sustainable open source isn't just about getting funded—it's about b
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

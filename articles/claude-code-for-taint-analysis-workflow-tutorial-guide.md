@@ -53,8 +53,6 @@ Edit the skill file to include the necessary configuration:
 ---
 name: taint-analyzer
 description: "Analyzes code for potential taint flow vulnerabilities"
-tools: [Read, Bash, Glob, Grep]
-version: 1.0.0
 ---
 ```
 
@@ -351,3 +349,4 @@ The key is starting simple: begin with basic source/sink definitions, run initia
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

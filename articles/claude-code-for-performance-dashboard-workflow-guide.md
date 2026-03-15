@@ -6,7 +6,7 @@ description: "Learn how to build, customize, and optimize performance dashboards
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-performance-dashboard-workflow-guide/
-categories: [Development, AI Tools, Workflow Automation]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -258,3 +258,4 @@ Remember to iterate on your prompts, utilize specialized skills, and maintain go
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

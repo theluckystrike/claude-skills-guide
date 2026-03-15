@@ -36,7 +36,6 @@ The core of this skill is a decision tree that maps your project characteristics
 ---
 name: license-selector
 description: "Guides developers through open source license selection based on project requirements"
-tools: [Read, Write, Bash]
 ---
 
 # Open Source License Selection Assistant
@@ -209,3 +208,4 @@ Remember that this skill provides guidance, not legal advice. For complex projec
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

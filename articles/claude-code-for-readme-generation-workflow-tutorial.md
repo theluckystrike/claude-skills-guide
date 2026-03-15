@@ -34,8 +34,6 @@ Let's build a skill that generates a README.md file for any project. Create a ne
 ---
 name: README Generator
 description: Generate comprehensive README documentation for projects
-version: 1.0.0
-tools: [Read, Write, Bash, Glob, Grep]
 ---
 
 # README Generator
@@ -202,3 +200,4 @@ Start with the basic skill outlined in this tutorial, then progressively enhance
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

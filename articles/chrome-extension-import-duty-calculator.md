@@ -86,10 +86,10 @@ class ImportDutyCalculator {
   loadDutyRates() {
     // Simplified HS code mappings
     return {
-      'electronics': { base: 0.034, categories: ['85', '84'] },
-      'clothing': { base: 0.12, categories: ['61', '62'] },
-      'books': { base: 0, categories: ['49'] },
-      'toys': { base: 0, categories: ['95'] },
+      'electronics': { base: 0.034, categories: [guides, guides] },
+      'clothing': { base: 0.12, categories: [guides, guides] },
+      'books': { base: 0, categories: [guides] },
+      'toys': { base: 0, categories: [guides] },
       'default': { base: 0.06, categories: [] }
     };
   }

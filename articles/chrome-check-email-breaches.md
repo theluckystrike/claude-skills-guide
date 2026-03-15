@@ -4,7 +4,7 @@ layout: default
 title: "How to Check Email Breaches in Chrome: A Developer's Guide"
 description: "Learn how to check if your email has been exposed in data breaches using Chrome, browser tools, and developer APIs. Practical examples included."
 date: 2026-03-15
-categories: [security, privacy, guides]
+categories: [guides, guides, guides]
 tags: [chrome, email-security, data-breach, have-i-been-pwned, security-tools, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true

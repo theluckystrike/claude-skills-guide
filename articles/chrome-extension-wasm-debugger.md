@@ -5,7 +5,7 @@ description: "Learn how to debug WebAssembly modules within Chrome extensions. T
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-wasm-debugger/
-categories: [guides, development, chrome-extensions, webassembly]
+categories: [guides, guides, guides, guides]
 tags: [chrome-extension, wasm, debugging, webassembly, developer-tools]
 reviewed: true
 score: 7

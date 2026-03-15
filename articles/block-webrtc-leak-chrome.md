@@ -6,7 +6,7 @@ description: "Learn how to block WebRTC leaks in Chrome to protect your real IP 
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /block-webrtc-leak-chrome/
-categories: [privacy, security, chrome]
+categories: [guides, guides, guides]
 tags: [webrtc, chrome, privacy, ip-leak, security, claude-skills]
 reviewed: true
 score: 8

@@ -41,7 +41,6 @@ Create a dedicated skill for code graph analysis by saving this as `skills/code-
 ---
 name: Code Graph Analysis
 description: Analyze code relationships and dependencies in the codebase
-tools: [read_file, bash, glob]
 ---
 
 You are a code graph analysis expert. When analyzing code:
@@ -153,7 +152,6 @@ The real power of Claude Code comes from automating these workflows. Create a sk
 ---
 name: Full Graph Analysis
 description: Complete code graph analysis with dependency mapping and cycle detection
-tools: [read_file, bash, glob]
 ---
 
 Run a complete code graph analysis:
@@ -193,3 +191,4 @@ The investment in setting up these workflows pays dividends in reduced debugging
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

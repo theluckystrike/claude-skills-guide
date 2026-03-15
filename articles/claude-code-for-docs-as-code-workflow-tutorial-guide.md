@@ -70,7 +70,6 @@ Claude Code excels at generating initial documentation from codebases, APIs, or 
 ---
 name: doc-generator
 description: Generates documentation from code files
-tools: [Read, Write, Bash]
 ---
 
 You are a technical documentation expert. When given code files, generate clear, concise documentation that explains:
@@ -225,3 +224,4 @@ Your documentation team will thank you, and your users will benefit from more co
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
