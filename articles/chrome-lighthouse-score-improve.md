@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Improve Your Chrome Lighthouse Score: A Practical Guide"
-description: "Learn actionable techniques to boost your Chrome Lighthouse scores across Performance, Accessibility, Best Practices, and SEO. Includes code examples and optimization strategies."
+title: "How to Improve Your Chrome Lighthouse Score: A Practical."
+description: "Learn actionable techniques to boost your Chrome Lighthouse scores across Performance, Accessibility, Best Practices, and SEO. Includes code examples."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-lighthouse-score-improve/
@@ -284,5 +284,12 @@ Create an `lighthouserc.json` configuration:
 Improving Lighthouse scores requires systematic attention across multiple dimensions. Start by addressing high-impact performance issues like image optimization and code splitting, then tackle accessibility and SEO requirements. Run Lighthouse regularly during development to catch issues early, and consider CI integration to prevent score regressions in production.
 
 Building a fast, accessible, and well-optimized website benefits all users and aligns with modern web standards. Small incremental improvements compound into significant score gains over time.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

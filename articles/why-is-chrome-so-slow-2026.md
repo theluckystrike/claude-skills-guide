@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Why Is Chrome So Slow in 2026? A Developer Guide to Fixing Performance Issues"
-description: "Diagnose and fix Chrome performance bottlenecks in 2026. Learn memory management, extension overhead, DevTools optimization, and practical debugging techniques for developers."
+title: "Why Is Chrome So Slow in 2026? A Developer Guide to."
+description: "Diagnose and fix Chrome performance bottlenecks in 2026. Learn memory management, extension overhead, DevTools optimization, and practical debugging."
 date: 2026-03-15
 author: "Claude Skills Guide"
 categories: [guides]
@@ -181,5 +181,12 @@ If Chrome feels slow, work through these steps in order:
 6. **Reset Chrome**: `chrome://settings/reset` as last resort
 
 Chrome's performance in 2026 depends heavily on your workflow. Developers running local servers, multiple extensions, and DevTools simultaneously push Chrome's limits. The good news: most slowdowns have identifiable causes and targeted fixes. Start with memory and extensions, then move to rendering and network issues.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

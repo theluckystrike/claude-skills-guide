@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Energy Saver Mode: A Complete Guide for Developers and Power Users"
-description: "Learn how Chrome Energy Saver Mode works, its impact on browser performance, and practical configurations for developers who need to balance power efficiency with productivity."
+title: "Chrome Energy Saver Mode: A Complete Guide for."
+description: "Learn how Chrome Energy Saver Mode works, its impact on browser performance, and practical configurations for developers who need to balance power."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-energy-saver-mode/
@@ -184,5 +184,12 @@ async function monitorBatteryDuringTask(task) {
 ```
 
 Chrome Energy Saver Mode offers a practical solution for extending device battery life while maintaining productivity. By understanding how the feature works and configuring it appropriately for your development workflow, you can reduce power consumption without sacrificing the functionality you need for building modern web applications.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

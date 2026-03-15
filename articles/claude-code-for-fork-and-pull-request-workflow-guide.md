@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Fork and Pull Request Workflow Guide"
-description: "Master the fork and pull request workflow using Claude Code CLI. Learn to clone forks, manage branches, sync with upstream, and create PRs directly from your terminal."
+description: "Master the fork and pull request workflow using Claude Code CLI. Learn to clone forks, manage branches, sync with upstream, and create PRs directly."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-fork-and-pull-request-workflow-guide/
@@ -183,3 +183,10 @@ The fork and pull request workflow doesn't have to be painful. Claude Code trans
 
 Start using these commands in your next open source contribution, and you'll find the workflow becomes second nature. Remember to sync frequently, keep branches focused, and engage promptly with review feedback. Happy coding!
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

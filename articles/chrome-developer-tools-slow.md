@@ -185,4 +185,11 @@ When Chrome Developer Tools run slow, start with these high-impact fixes:
 
 These steps resolve DevTools slowdown in the majority of cases. For large applications, combining these with targeted console filtering and selective feature disabling provides the best balance between functionality and performance.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

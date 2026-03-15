@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Distributed Tracing Workflow Tutorial"
-description: "Learn how to use Claude Code to build, implement, and debug distributed tracing systems. This tutorial covers practical workflows for integrating tracing into your microservices architecture."
+description: "Learn how to use Claude Code to build, implement, and debug distributed tracing systems. This tutorial covers practical workflows for integrating."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-distributed-tracing-workflow-tutorial/
@@ -200,3 +200,10 @@ Claude will parse the trace and provide actionable recommendations.
 - **Test tracing**: Include trace context in your integration tests
 
 Claude Code accelerates every phase of distributed tracing implementation—from initial setup to ongoing optimization. By creating specialized skills and using Claude's code generation capabilities, you can build robust observability into your systems faster than ever.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

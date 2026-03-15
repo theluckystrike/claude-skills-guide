@@ -2,7 +2,7 @@
 
 layout: default
 title: "Speed Up Chrome on Low RAM: A Developer's Guide"
-description: "Practical techniques to reduce Chrome memory usage and improve performance on low-RAM systems. Includes flags, extensions, and automation scripts for power users."
+description: "Practical techniques to reduce Chrome memory usage and improve performance on low-RAM systems. Includes flags, extensions, and automation scripts for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 categories: [guides]
@@ -193,5 +193,12 @@ For development work requiring Chrome's DevTools, you can run Chrome in a contai
 The most effective strategy combines multiple techniques. Start with aggressive tab discarding and extension auditing—these require minimal effort and provide immediate benefits. Add session management scripts to maintain productivity without keeping dozens of tabs open. Monitor memory usage to identify when a browser restart becomes necessary.
 
 These optimizations work best on systems with 8GB of RAM or less, but even machines with 16GB benefit from reduced browser memory consumption, leaving more resources for compilation, containers, and IDEs.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

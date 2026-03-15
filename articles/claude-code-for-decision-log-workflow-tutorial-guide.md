@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Decision Log Workflow Tutorial Guide"
-description: "Learn how to build an automated decision log workflow using Claude Code. This comprehensive guide covers implementation, best practices, and practical examples for developers."
+description: "Learn how to build an automated decision log workflow using Claude Code. This comprehensive guide covers implementation, best practices, and practical."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-decision-log-workflow-tutorial-guide/
@@ -216,3 +216,10 @@ Start small—begin logging significant architectural choices and gradually expa
 
 Remember: the best decision log is one that gets used. Focus on reducing friction and providing value, and your team will naturally adopt the practice.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
