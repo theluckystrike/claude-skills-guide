@@ -17,6 +17,8 @@ score: 7
 
 Preparing for coding interviews can feel overwhelming. With countless algorithms to master, data structures to review, and system design concepts to understand, many developers struggle to create an effective study routine. This is where Claude Code becomes your secret weapon. In this guide, I'll walk you through a practical workflow using Claude Code's skills and features to efficiently prepare for your next coding interview.
 
+> **Scope of this guide:** This article covers the *strategy and habits* of coding interview preparation — how to structure your study plan, build problem-solving instincts, run mock interviews, and develop the communication skills interviewers value. If you're looking for a skills-integration workflow (TDD, supermemory, pdf, docx) see [Claude Code for Interview Preparation Workflow](/claude-code-for-interview-preparation-workflow/).
+
 ## Why Claude Code for Interview Prep?
 
 Claude Code isn't just another AI assistant—it's a powerful development environment with specialized skills that can accelerate your interview preparation. Unlike passive study materials, Claude Code actively engages with you, providing immediate feedback, generating practice problems, and helping you understand concepts deeply rather than just memorizing solutions.

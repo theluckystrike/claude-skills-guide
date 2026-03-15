@@ -14,6 +14,8 @@ tags: [claude-code, interview-prep, workflow]
 
 Technical interviews demand structured practice, targeted feedback, and efficient use of your study time. Claude Code provides a workflow-first approach that integrates with your existing development environment, allowing you to practice problems, receive instant feedback, and track your progress without switching between multiple tools. This guide walks through a practical interview preparation workflow using Claude Code and its skill ecosystem.
 
+> **Scope of this guide:** This article is a hands-on **skills-integration workflow** — how to combine the `tdd`, `supermemory`, `pdf`, and `docx` skills into a cohesive daily practice system. If you're looking for preparation strategy, study scheduling, and mock interview habits see [Mastering Coding Interviews with Claude Code](/claude-code-for-coding-interview-preparation-workflow/).
+
 ## Structuring Your Practice Session
 
 A solid interview prep workflow starts with proper project organization. Create a dedicated directory for your practice sessions that Claude Code can understand and work with effectively:
