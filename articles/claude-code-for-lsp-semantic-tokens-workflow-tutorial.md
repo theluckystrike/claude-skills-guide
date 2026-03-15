@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for LSP Semantic Tokens Workflow Tutorial"
 description: "Learn how to leverage Claude Code with Language Server Protocol (LSP) semantic tokens to build intelligent code analysis, syntax highlighting, and developer tooling workflows."
@@ -7,11 +8,14 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-lsp-semantic-tokens-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for LSP Semantic Tokens Workflow Tutorial
 
-Language Server Protocol (LSP) semantic tokens represent one of the most powerful features in modern IDEs and code editors. When combined with Claude Code's CLI capabilities, you can build sophisticated code analysis tools, custom syntax highlighters, and intelligent development workflows. This tutorial walks you through practical approaches to leverage LSP semantic tokens with Claude Code.
+Language Server Protocol (LSP) semantic tokens represent one of the most powerful features in modern IDEs and code editors. When combined with Claude Code's CLI capabilities, you can build sophisticated code analysis tools, custom syntax highlighters, and intelligent development workflows. This tutorial walks you through practical approaches to use LSP semantic tokens with Claude Code.
 
 ## Understanding LSP Semantic Tokens
 
@@ -103,7 +107,7 @@ Semantic tokens enable sophisticated theming beyond syntax highlighting. You can
 
 ## Integrating with Claude Code Skills
 
-Skills can leverage semantic token information to provide context-aware assistance. Here's how to build a skill that uses semantic awareness:
+Skills can use semantic token information to provide context-aware assistance. Here's how to build a skill that uses semantic awareness:
 
 ```yaml
 ---
