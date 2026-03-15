@@ -185,4 +185,4 @@ To get the most out of Claude Code in your workflow, keep these practices in min
 Claude Code transforms Homebrew formula management from a manual, error-prone process into a streamlined workflow. By providing context about your project's needs, generating initial formula structures, and guiding you through testing and validation, Claude Code helps you create reliable packages that serve your users well. Start with the basics—creating and testing a single formula—and expand from there as you become comfortable with the workflow.
 
 Remember: automation handles the repetitive parts, but your expertise guides the process. Use Claude Code as a knowledgeable assistant, not a replacement for understanding how Homebrew works under the hood.
-
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

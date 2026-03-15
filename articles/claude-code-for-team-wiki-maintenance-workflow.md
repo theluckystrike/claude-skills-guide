@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to streamline and automate your team 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-team-wiki-maintenance-workflow/
-categories: [guides, workflows, documentation]
+categories: [guides, workflows]
 tags: [claude-code, wiki, documentation, team-workflow]
 reviewed: true
 score: 8
