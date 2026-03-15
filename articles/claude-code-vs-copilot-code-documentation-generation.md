@@ -55,37 +55,15 @@ Unlike Copilot's focus on single-file completion, Claude Code can analyze relati
 
 ## Practical Documentation Generation with Claude Code
 
-Let me walk through practical examples of using Claude Code for documentation tasks:
+Claude Code's documentation capabilities surface most clearly when compared against what Copilot can do at each stage of the documentation lifecycle. The three areas where the gap is most visible are function-level docstrings, project-level documentation, and API specification generation.
 
-### Generating Function Docstrings
+**Function docstrings**: Copilot autocompletes docstrings based on the function signature visible in the editor. Claude Code can be asked to document a function while referencing how that function is called across the rest of the codebase, producing documentation that covers edge cases Copilot would never see.
 
-When working with a complex function, you can instruct Claude Code to generate comprehensive documentation:
+**README and project docs**: Copilot has no mechanism for generating a README from scratch with awareness of the full project structure. Claude Code reads `package.json`, scans `src/`, and synthesizes a README that accurately reflects what the project does and how to use it.
 
-```
-Please generate detailed docstrings for this function, including:
-- Parameter descriptions with types
-- Return value documentation
-- Edge cases and exceptions
-- Usage examples
-- Related functions in the codebase
-```
+**API specification**: Generating an OpenAPI 3.0 spec requires cross-file analysis of route handlers, middleware, and schema definitions. This is a single-session task for Claude Code; Copilot cannot do it without manual assembly.
 
-Claude Code will analyze the function's implementation, understand its purpose, and generate documentation that explains not just the interface but the reasoning behind the implementation.
-
-### Creating README Files
-
-Claude Code excels at generating project-level documentation. You can provide context about your project goals and architecture, and Claude Code will produce comprehensive README files that include:
-
-- Project overview and purpose
-- Installation instructions
-- Usage examples
-- API reference links
-- Contributing guidelines
-- License information
-
-### API Documentation from Code
-
-Claude Code can generate OpenAPI specifications or similar documentation from existing code. This is particularly useful for REST APIs where you want synchronized documentation that stays current with your implementation.
+For a step-by-step implementation guide covering all three documentation types—plus version control integration and CI/CD automation—see the [Claude Code Documentation Generation Workflow](/claude-skills-guide/claude-code-documentation-generation-workflow/).
 
 ## Comparing with GitHub Copilot
 
@@ -152,6 +130,7 @@ For teams serious about documentation quality, Claude Code represents a signific
 
 ## Related Reading
 
+- [Claude Code Documentation Generation Workflow](/claude-skills-guide/claude-code-documentation-generation-workflow/) — Step-by-step guide to implementing automated documentation with Claude Code
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)

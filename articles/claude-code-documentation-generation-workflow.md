@@ -17,7 +17,7 @@ score: 7
 
 Documentation often falls to the bottom of the priority list in software projects. Yet it is one of the most valuable assets a team can maintain. Claude Code, combined with the right set of skills, transforms documentation from a manual chore into an automated process that keeps your codebase documented without extra effort.
 
-This guide presents a practical workflow for generating documentation automatically using Claude Code and specialized skills. You will see concrete examples, skill recommendations, and a step-by-step process you can implement immediately.
+This guide presents a practical workflow for generating documentation automatically using Claude Code and specialized skills. You will see concrete examples, skill recommendations, and a step-by-step process you can implement immediately. If you are evaluating Claude Code against GitHub Copilot for documentation tasks, see the [Claude Code vs Copilot comparison](/claude-skills-guide/claude-code-vs-copilot-code-documentation-generation/) instead.
 
 ## Prerequisites and Skill Setup
 
@@ -255,6 +255,7 @@ Start small. Document one module thoroughly, then expand to other components. Th
 
 ## Related Reading
 
+- [Claude Code vs Copilot: Code Documentation Generation](/claude-skills-guide/claude-code-vs-copilot-code-documentation-generation/) — How Claude Code compares to GitHub Copilot for documentation tasks
 - [Claude Code Readme Generation Automation](/claude-skills-guide/claude-code-readme-generation-automation/) — README is a key documentation artifact
 - [Claude Code Changelog Generation Workflow](/claude-skills-guide/claude-code-changelog-generation-workflow/) — Changelogs are part of complete documentation
 - [Claude Code Confluence Documentation Guide](/claude-skills-guide/claude-code-confluence-documentation-guide/) — Confluence is a popular documentation platform
