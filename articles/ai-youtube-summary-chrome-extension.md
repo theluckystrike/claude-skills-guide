@@ -2,7 +2,7 @@
 
 layout: default
 title: "AI YouTube Summary Chrome Extension: Developer Guide"
-description: "Learn how to build an AI-powered YouTube summary Chrome extension. Practical code examples, APIs, and implementation patterns for developers and power users."
+description: "Learn how to build an AI-powered YouTube summary Chrome extension. Practical code examples, APIs, and implementation patterns for developers and power."
 date: 2026-03-15
 author: theluckystrike
 permalink: /ai-youtube-summary-chrome-extension/
@@ -381,6 +381,13 @@ Start with basic transcript extraction, add AI integration, then refine the UI a
 The result is a powerful tool that helps developers and power users consume YouTube content more efficiently—scanning hours of content in minutes.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

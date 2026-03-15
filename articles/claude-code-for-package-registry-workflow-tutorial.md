@@ -2,11 +2,11 @@
 
 layout: default
 title: "Claude Code for Package Registry Workflow Tutorial"
-description: "Learn how to automate package registry workflows using Claude Code. This comprehensive tutorial covers npm, PyPI, Docker, and other registry operations with practical examples and actionable advice."
+description: "Learn how to automate package registry workflows using Claude Code. This comprehensive tutorial covers npm, PyPI, Docker, and other registry operations."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-package-registry-workflow-tutorial/
-categories: [tutorials, guides, workflows]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -204,3 +204,10 @@ Claude Code transforms package registry management from a manual, error-prone pr
 
 Start with one registry type, master the workflow, then expand to others. The principles apply universally, and you'll quickly see the benefits in your development process.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
