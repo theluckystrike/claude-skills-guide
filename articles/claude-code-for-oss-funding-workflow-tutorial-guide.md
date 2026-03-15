@@ -36,7 +36,7 @@ The first step is configuring Claude Code to handle funding-related tasks. Creat
 
 ```bash
 # Initialize Claude Code in your project
-claude init --project "my-oss-project"
+# Initialize: create CLAUDE.md in your project root
 ```
 
 This creates a `.claude` directory with configuration files. Now add funding-specific instructions to your `CLAUDE.md`:

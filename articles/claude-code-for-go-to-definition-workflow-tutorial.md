@@ -35,7 +35,7 @@ Before diving into the workflows, ensure your Claude Code environment is properl
 claude --version
 
 # Initialize a new project with proper structure
-claude init
+# Initialize: create CLAUDE.md in your project root
 
 # Create a CLAUDE.md file to guide context handling
 echo "# Project Context" > CLAUDE.md

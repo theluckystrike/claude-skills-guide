@@ -31,7 +31,7 @@ Claude Code helps you navigate these patterns by understanding your repository s
 Before implementing your workflow, ensure Claude Code is configured for your project. Initialize it in your repository root:
 
 ```bash
-claude init
+# Initialize: create CLAUDE.md in your project root
 ```
 
 This creates a `CLAUDE.md` file where you can define your branching conventions, release procedures, and team-specific workflows. Claude Code reads this configuration to provide context-aware assistance throughout your release cycle.

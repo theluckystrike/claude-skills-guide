@@ -31,7 +31,7 @@ A well-crafted bug report includes:
 The first step involves creating a Claude Code project configured for issue management. Initialize a new project in your repository:
 
 ```bash
-claude init oss-bug-workflow
+# Initialize: create CLAUDE.md in your project root
 cd oss-bug-workflow
 ```
 

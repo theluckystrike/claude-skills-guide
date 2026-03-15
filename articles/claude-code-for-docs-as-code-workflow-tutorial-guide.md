@@ -35,7 +35,7 @@ Initialize Claude Code in your documentation repository to enable context-aware 
 
 ```bash
 cd your-docs-repo
-claude init
+# Initialize: create CLAUDE.md in your project root
 ```
 
 Configure your `.claude/settings.json` to focus on documentation tasks:
