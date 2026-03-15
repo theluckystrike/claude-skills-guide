@@ -184,4 +184,11 @@ The Chrome ad-blocking ecosystem has diversified significantly. While uBlock Ori
 
 Evaluate your specific needs—whether that's minimal resource usage, privacy automation, or full customization—to select the best alternative for your workflow.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Performance Dashboard Workflow Guide"
-description: "Build powerful performance monitoring dashboards with Claude Code. Learn to create automated workflows, set up real-time metrics tracking, and integrate with your existing monitoring stack."
+description: "Build powerful performance monitoring dashboards with Claude Code. Learn to create automated workflows, set up real-time metrics tracking, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-performance-dashboard-workflow-guide/
@@ -213,3 +213,10 @@ Claude Code transforms performance dashboard development from a manual, error-pr
 
 Start small—collect a few key metrics, visualize them, and iterate. Claude Code handles the heavy lifting so you can focus on what the metrics actually mean for your users and business.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

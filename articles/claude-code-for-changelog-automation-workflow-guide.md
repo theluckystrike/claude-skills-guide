@@ -5,7 +5,7 @@ description: "Learn how to automate your changelog workflow using Claude Code wi
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-changelog-automation-workflow-guide/
-categories: [Development, Automation, Workflow]
+categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -161,3 +161,10 @@ Start small—implement basic git log parsing first, then gradually add Claude C
 
 The key is consistency: establish good commit practices, integrate automation into your CI/CD pipeline, and always review before publishing. With these elements in place, your changelog becomes a valuable communication tool rather than an afterthought.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+
