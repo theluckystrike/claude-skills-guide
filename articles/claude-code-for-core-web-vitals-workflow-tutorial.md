@@ -97,6 +97,101 @@ onLCP(sendToAnalytics);
 onINP(sendToAnalytics);
 ```
 
+## Collecting Field Data via the PageSpeed Insights API
+
+In addition to RUM instrumentation, you can query Google's Chrome User Experience Report (CrUX) directly through the PageSpeed Insights API. This gives you the 75th-percentile values that Google uses for ranking—how real users on the open web experience your site, not just users who have your analytics snippet installed.
+
+Store your API key as an environment variable:
+
+```bash
+export GOOGLE_API_KEY="your-api-key-here"
+```
+
+Create a script that fetches field data for a single URL:
+
+```bash
+#!/bin/bash
+# fetch-cwv-field-data.sh
+
+URL="$1"
+API_KEY="$2"
+
+if [ -z "$URL" ] || [ -z "$API_KEY" ]; then
+  echo "Usage: $0 <url> <api-key>"
+  exit 1
+fi
+
+curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${URL}&key=${API_KEY}&strategy=mobile&category=PERFORMANCE" | jq '.loadingExperience.metrics'
+```
+
+To monitor a set of pages, create a `urls.txt` file and iterate over it:
+
+```bash
+#!/bin/bash
+# collect-all-cwv.sh
+
+API_KEY="$1"
+OUTPUT_DIR="cwv-data"
+
+mkdir -p "$OUTPUT_DIR"
+
+while read -r url; do
+  filename=$(echo "$url" | sed 's|https://||' | sed 's|/|_|g' | sed 's|\.|_|g')
+  ./fetch-cwv-field-data.sh "$url" "$API_KEY" > "$OUTPUT_DIR/${filename}.json"
+  echo "Collected: $url"
+done < urls.txt
+```
+
+Once you have the raw JSON snapshots, a Python script can parse them and generate a readable report:
+
+```python
+import json
+import os
+from datetime import datetime
+
+def analyze_cwv_data(data_dir):
+    results = []
+
+    for filename in os.listdir(data_dir):
+        if not filename.endswith('.json'):
+            continue
+
+        with open(os.path.join(data_dir, filename)) as f:
+            data = json.load(f)
+
+        url = filename.replace('_', '/').replace('.json', '')
+        url = 'https://' + url if not url.startswith('http') else url
+
+        metrics = data.get('loadingExperience', {}).get('metrics', {})
+
+        lcp = metrics.get('LARGEST_CONTENTFUL_PAINT_MS75', {}).get('percentile', 0)
+        fid = metrics.get('FIRST_INPUT_DELAY_MS75', {}).get('percentile', 0)
+        cls = metrics.get('CUMULATIVE_LAYOUT_SHIFT_SCORE75', {}).get('percentile', 0)
+
+        results.append({
+            'url': url,
+            'lcp': lcp / 1000 if lcp else 0,  # Convert to seconds
+            'fid': fid,
+            'cls': cls / 100  # Convert to decimal
+        })
+
+    return results
+
+def generate_report(results):
+    print(f"Core Web Vitals Field Data Report - {datetime.now().date()}\n")
+    print(f"{'URL':<40} {'LCP':>8} {'FID':>8} {'CLS':>8} {'Status'}")
+    print("-" * 80)
+
+    for r in results:
+        lcp_status = "OK" if r['lcp'] < 2.5 else "WARN"
+        fid_status = "OK" if r['fid'] < 100 else "WARN"
+        cls_status = "OK" if r['cls'] < 0.1 else "WARN"
+
+        print(f"{r['url']:<40} {r['lcp']:>7.2f}s {r['fid']:>7.0f}ms {r['cls']:>7.3f}  {lcp_status} {fid_status} {cls_status}")
+```
+
+Field data fluctuates daily based on network conditions, device types, and user geography. Run collection on a weekly or bi-weekly schedule to get meaningful trends rather than reacting to single-day noise. When field data shows a problem, use Lighthouse (lab data) to reproduce and diagnose the root cause in a controlled environment.
+
 ## Analyzing Current Performance with Claude Code
 
 Once your project is ready, use Claude Code to run comprehensive audits. The key is to automate Lighthouse runs and parse the results programmatically.
