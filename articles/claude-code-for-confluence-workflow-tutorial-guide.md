@@ -172,3 +172,4 @@ The key to effective custom skills is modularity. Break your automation into reu
 Start with simple automations—perhaps a weekly status report or a simple API doc sync—and gradually build more sophisticated workflows as your team becomes comfortable with the integration. The foundation you establish early will support increasingly complex documentation automation over time.
 
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -225,3 +225,4 @@ Claude Code significantly improves your cargo crate publishing workflow by autom
 
 Start by implementing the pre-publish checklist, then gradually add more automation as you identify pain points in your workflow. Your future self—and your crate's users—will thank you.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

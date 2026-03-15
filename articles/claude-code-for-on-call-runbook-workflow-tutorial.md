@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code to automate and streamline your 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-on-call-runbook-workflow-tutorial/
-categories: [Development, DevOps, Automation]
+categories: [guides, guides, workflows]
 tags: [claude-code, claude-skills]
 ---
 
@@ -260,3 +260,4 @@ Start small—pick one service, create a basic runbook, and let Claude help you 
 
 Remember: The goal isn't to replace human judgment—it's to augment it with intelligent automation that helps you respond faster and more accurately when it matters most.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

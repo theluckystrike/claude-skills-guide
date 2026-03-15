@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code to efficiently search and analyz
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-cross-repo-code-search-workflow-guide/
-categories: [Development Tools, AI-Assisted Coding, Workflow Automation]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 ---
 
@@ -294,3 +294,4 @@ Claude Code's ability to search across multiple repositories transforms how you 
 Start implementing these workflows today, and you'll wonder how you ever managed without cross-repo search capabilities.
 
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -121,3 +121,4 @@ Claude Code transforms incident retrospectives from painful documentation exerci
 
 The key is starting simple—create a basic retrospective skill, use it for a few incidents, and refine based on experience. Over time, you'll build a powerful knowledge base that makes each retrospective more valuable than the last.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
