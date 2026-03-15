@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Homebrew Formula Workflow Tutorial"
-description: "Learn how to use Claude Code to streamline Homebrew formula creation, testing, and submission workflows. A practical guide for developers distributing CLI tools via Homebrew."
+description: "Learn how to use Claude Code to streamline Homebrew formula creation, testing, and submission workflows. A practical guide for developers distributing."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-homebrew-formula-workflow-tutorial/
@@ -185,4 +185,11 @@ To get the most out of Claude Code in your workflow, keep these practices in min
 Claude Code transforms Homebrew formula management from a manual, error-prone process into a streamlined workflow. By providing context about your project's needs, generating initial formula structures, and guiding you through testing and validation, Claude Code helps you create reliable packages that serve your users well. Start with the basics—creating and testing a single formula—and expand from there as you become comfortable with the workflow.
 
 Remember: automation handles the repetitive parts, but your expertise guides the process. Use Claude Code as a knowledgeable assistant, not a replacement for understanding how Homebrew works under the hood.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
