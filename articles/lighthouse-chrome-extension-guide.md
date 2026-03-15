@@ -22,7 +22,21 @@ Google Lighthouse is an open-source automated auditing tool that helps developer
 
 To get started, install the Lighthouse Chrome extension from the Chrome Web Store. Once installed, navigate to any webpage and click the extension icon in your browser toolbar. The extension opens a new tab displaying audit results within seconds.
 
-For command-line enthusiasts, Lighthouse also ships with Chrome. Open DevTools (F12 or Cmd+Option+I on Mac), navigate to the Lighthouse tab, and run an audit with specific configurations. The extension and DevTools version share the same underlying engine, so results remain consistent across both methods.
+For command-line enthusiasts, Lighthouse also ships with Chrome. Open DevTools using any of these methods:
+
+- Press `F12` or `Ctrl+Shift+I` (Windows/Linux) / `Cmd+Option+I` (Mac)
+- Right-click anywhere on a page and select "Inspect"
+- Use the Chrome menu: three dots → More tools → Developer tools
+
+Once DevTools is open, locate the "Lighthouse" tab in the top navigation bar. If you don't see it, click the double arrow (`>>`) to reveal hidden panels. The extension and DevTools version share the same underlying engine, so results remain consistent across both methods.
+
+Before running an audit, configure the settings:
+
+1. **Device type** — Choose "Mobile" or "Desktop" to simulate different user contexts
+2. **Categories** — Select which audits to run (Performance, Accessibility, Best Practices, SEO)
+3. **Throttling** — Enable simulated slow network (Slow 4G) for more realistic mobile metrics
+
+Click the "Analyze page load" button to start the audit.
 
 ## Understanding the Five Audit Categories
 
@@ -50,7 +64,11 @@ Performance Score Breakdown:
 - Time to Interactive (TTI): < 3.8s is good
 - Total Blocking Time (TBT): < 200ms is good
 - Cumulative Layout Shift (CLS): < 0.1 is good
+- Time to First Byte (TTFB): < 200ms is ideal
+- First Input Delay (FID): < 100ms is good
 ```
+
+TTFB measures server responsiveness and often indicates backend optimization needs such as caching strategies or database query improvements. FID measures the time between a user's first interaction and the browser's ability to respond—heavy JavaScript execution on the main thread often causes high FID.
 
 The opportunity section lists specific improvements ranked by impact. Addressing the top three items typically yields the most significant performance gains. Don't chase perfect scores if your users experience fast load times—optimize for real-world performance instead.
 
@@ -82,6 +100,29 @@ Modern formats like WebP and AVIF deliver superior compression. Use the `<pictur
   <source srcset="image.webp" type="image/webp">
   <img src="image.jpg" alt="Description" loading="lazy">
 </picture>
+```
+
+### Eliminating Render-Blocking Resources
+
+Render-blocking CSS and JavaScript delay the initial paint. Use async loading and media queries to defer non-critical resources:
+
+```html
+<!-- Before: Blocking render -->
+<script src="heavy-library.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+<!-- After: Async loading -->
+<script src="heavy-library.js" async></script>
+<link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+```
+
+### Enabling Text Compression
+
+Server-side compression reduces transfer sizes significantly. Configure gzip or Brotli on your server:
+
+```nginx
+gzip on;
+gzip_types text/plain text/css application/javascript image/svg+xml;
 ```
 
 ### Reducing JavaScript Impact
@@ -149,6 +190,32 @@ Preload critical fonts for faster loading:
 
 ```html
 <link rel="preload" href="/fonts/custom-font.woff2" as="font" type="font/woff2" crossorigin>
+```
+
+## Audit Workflow Best Practices
+
+Follow a systematic audit workflow for consistent results:
+
+- **Test in Incognito Mode** — Extensions can skew results; always run audits in Incognito for a clean environment
+- **Test Mobile First** — Mobile audits typically reveal more issues; address mobile performance before verifying desktop
+- **Compare Before and After** — Run audits before and after optimizations; save JSON reports for documentation
+- **Address High-Impact Items First** — Focus on LCP and render-blocking resources for the most noticeable gains
+
+For command-line audits, install and run Lighthouse directly:
+
+```bash
+# Install Lighthouse CLI
+npm install -g lighthouse
+
+# Run audit and save JSON report
+lighthouse https://example.com --output json --output-path report.json
+```
+
+Convert images from the command line before they enter your build:
+
+```bash
+# Using ImageMagick for conversion
+convert original.jpg -quality 80 -resize 800x600 optimized.webp
 ```
 
 ## Using Lighthouse in Development Workflow

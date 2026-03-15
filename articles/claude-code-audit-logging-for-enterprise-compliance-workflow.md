@@ -103,6 +103,65 @@ function createAuditEntry(
 
 This pattern captures all essential compliance elements while maintaining an immutable chain through cryptographic hashing.
 
+### Lifecycle Hook Pattern
+
+Hook into Claude Code skill lifecycle events for automatic logging without modifying each skill individually:
+
+```javascript
+// audit/start-invocation.js
+export default function beforeInvoke(context) {
+  const invocation = {
+    skill: context.skillName,
+    started: Date.now(),
+    input: context.input
+  };
+  context.auditId = storeInvocation(invocation);
+}
+```
+
+The `context.auditId` enables correlation across the entire skill execution lifecycle.
+
+### AI Decision Logging
+
+For compliance scenarios requiring explainability, log the AI's reasoning alongside its actions:
+
+```javascript
+function logDecision(decision, factors, context) {
+  return {
+    type: "ai_decision",
+    decision: decision,
+    factors_considered: factors,
+    confidence: context.confidence,
+    alternative_options: context.alternatives,
+    timestamp: new Date().toISOString()
+  };
+}
+```
+
+Fields like `factors_considered`, `confidence`, and `alternative_options` provide the audit trail needed for AI governance compliance.
+
+### Log Rotation and Archival
+
+For long-running deployments, implement log rotation to manage disk usage while preserving compliance data:
+
+```javascript
+// log-rotation.js
+export async function rotateAuditLogs(logDir) {
+  const files = fs.readdirSync(logDir);
+  const auditFiles = files.filter(f => f.startsWith('audit-'));
+
+  const cutoff = Date.now() - (30 * 24 * 60 * 60 * 1000);
+
+  for (const file of auditFiles) {
+    const stats = fs.statSync(`${logDir}/${file}`);
+    if (stats.mtimeMs < cutoff) {
+      await compressAndArchive(`${logDir}/${file}`);
+      fs.unlinkSync(`${logDir}/${file}`);
+    }
+  }
+}
+```
+
 ## Centralized Log Aggregation
 
 Individual skill logs need aggregation into a central system for enterprise compliance. This typically involves a SIEM (Security Information and Event Management) system or a compliance-focused logging service like AWS CloudTrail, Azure Sentinel, or Splunk.
@@ -191,6 +250,29 @@ For GDPR compliance, you must demonstrate lawful processing basis for all data o
 - The purpose and legal basis for each operation
 - Data subject access requests
 - Consent verification
+
+## MCP Server Integration for Audit Routing
+
+Route audit events through MCP servers to centralize logging without modifying individual skills:
+
+```yaml
+# Skill with MCP audit integration
+name: "api-builder"
+description: "Build REST APIs with Express"
+mcp_servers:
+  - audit-collector
+```
+
+The MCP server receives structured events that can be forwarded to external SIEM systems, providing a single aggregation point for all skill activity.
+
+## Security Considerations
+
+Protect the integrity and confidentiality of your audit logs:
+
+- **Sign log entries** — Use HMAC to detect tampering at the entry level
+- **Separate concerns** — Store audit logs on systems with different access controls than the skills themselves
+- **Redact sensitive data** — Never log passwords, tokens, or PII directly
+- **Encrypt at rest** — Use filesystem encryption for audit log directories
 
 ## Implementing Log Integrity and Tamper Detection
 

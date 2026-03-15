@@ -64,6 +64,22 @@ Output the changelog in the standard Keep a Changelog format.
 
 This skill uses the structured nature of conventional commits to produce organized output without manual intervention.
 
+Enforce conventional commits with a commitlint configuration:
+
+```javascript
+// .commitlintrc.js
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'type-enum': [
+      2,
+      'always',
+      ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'build', 'ci', 'chore', 'revert']
+    ]
+  }
+};
+```
+
 ### Git History Mining with Claude
 
 For teams that haven't adopted conventional commits, Claude Code can still help by analyzing your git history intelligently. It can identify patterns, group related commits, and infer the nature of changes from context.
@@ -178,9 +194,79 @@ git push --tags
 
 Consider using annotated tags rather than lightweight tags—they include metadata that helps your automation determine what changed and when.
 
+### Standalone Generation Script
+
+For teams that want a ready-to-use shell script, this handles git tag detection with a fallback for repos with no prior tags:
+
+```bash
+#!/bin/bash
+# generate-changelog.sh
+
+LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null)
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+if [ -z "$LAST_TAG" ]; then
+  echo "No previous tags found. Generating from first commit."
+  COMMITS=$(git log --pretty=format:"%h %s" HEAD)
+else
+  COMMITS=$(git log ${LAST_TAG}..HEAD --pretty=format:"%h %s")
+fi
+
+echo "## Changelog for ${CURRENT_BRANCH}"
+echo ""
+echo "$COMMITS"
+```
+
+### Prompt Template for Claude
+
+Use a reusable prompt template when feeding commits to Claude for changelog generation:
+
+```
+Review the following git commits and generate a well-structured changelog:
+- Group changes by type (Features, Bug Fixes, Improvements, Breaking Changes)
+- Translate technical commit messages into user-friendly descriptions
+- Highlight any breaking changes prominently
+- Include issue references where available
+
+Commits to process:
+{{COMMITS}}
+```
+
 ### Integrate with CI/CD
 
-The real power emerges when you integrate changelog generation into your continuous delivery pipeline. A typical workflow might look like:
+The real power emerges when you integrate changelog generation into your continuous delivery pipeline. A complete GitHub Actions workflow automates the entire process:
+
+```yaml
+name: Release Changelog
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Generate Changelog
+        run: |
+          chmod +x generate-changelog.sh
+          ./generate-changelog.sh > CHANGELOG.md
+
+      - name: Commit Changelog
+        run: |
+          git config --local user.email "ci@github.com"
+          git config --local user.name "CI Bot"
+          git add CHANGELOG.md
+          git commit -m "docs: Auto-generate changelog"
+          git push
+```
+
+A typical workflow follows these steps:
 
 1. On merge to main, calculate what changed
 2. Generate a draft changelog entry

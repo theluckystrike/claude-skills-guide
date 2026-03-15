@@ -137,6 +137,82 @@ jobs:
 
 Set thresholds in your configuration to fail builds when scores drop below acceptable levels. This prevents performance regressions from reaching production.
 
+### Lighthouse CI Configuration File
+
+Install `@lhci/cli` and create a `lighthouserc.js` with metric-specific assertions and resource budgets:
+
+```bash
+npm install --save-dev @lhci/cli
+```
+
+```javascript
+// lighthouserc.js
+module.exports = {
+  ci: {
+    collect: {
+      staticFileDistDir: './dist',
+      numberOfRuns: 3,
+      url: ['http://localhost:3000'],
+    },
+    upload: {
+      target: 'temporary-public-storage',
+      serverBaseUrl: process.env.LHCI_SERVER_URL,
+      token: process.env.LHCI_TOKEN,
+    },
+    assert: {
+      assertions: {
+        'categories:performance': ['error', { minScore: 0.9 }],
+        'categories:accessibility': ['error', { minScore: 0.9 }],
+        'first-contentful-paint': ['warn', { maxNumericValue: 2000 }],
+        'largest-contentful-paint': ['error', { maxNumericValue: 4000 }],
+        'cumulative-layout-shift': ['error', { maxNumericValue: 0.1 }],
+        'resource-summary:javascript:size': ['error', { maxNumericValue: 170000 }],
+        'resource-summary:image:size': ['error', { maxNumericValue: 500000 }],
+        'third-party-summary': ['warn', { maxNumericWeight: 0.3 }],
+      },
+    },
+  },
+};
+```
+
+These budgets catch issues before they become severe. When a JavaScript bundle exceeds 170KB or third-party scripts load too slowly, your build fails.
+
+### Local Server CI Pattern
+
+For testing against a locally built server rather than a live URL, start the server in the background:
+
+```yaml
+- name: Start server
+  run: npm start &
+
+- name: Wait for server
+  run: sleep 10
+
+- name: Run Lighthouse CI
+  run: npx lhci autorun
+  env:
+    LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
+```
+
+### Custom Claude Skill for Lighthouse CI
+
+Create a dedicated skill that gives Claude context for interpreting Lighthouse CI failures:
+
+```markdown
+---
+name: lighthouse-ci
+description: Analyze Lighthouse CI results and suggest performance improvements
+---
+
+You are a performance optimization expert. When provided with Lighthouse CI results:
+1. Identify the lowest-scoring categories and specific audits
+2. Look for patterns in failing audits (e.g., image optimization, JavaScript blocking)
+3. Note any regressions from previous runs
+4. Provide specific code changes or configuration adjustments to fix each issue
+```
+
+When a CI build fails, pass the results directly: "Claude, the Lighthouse CI build failed with a 0.7 performance score. The first-contentful-paint is 3.2s and largest-contentful-paint is 4.8s. Can you analyze this and suggest fixes?"
+
 ## Tracking Performance Over Time
 
 The **supermemory** skill proves invaluable for historical tracking. Store scores in a time-series format:
