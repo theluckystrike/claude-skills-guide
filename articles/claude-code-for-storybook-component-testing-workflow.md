@@ -28,6 +28,19 @@ Claude Code can help you set up the testing infrastructure quickly. Simply descr
 ```bash
 # Install Storybook testing packages
 npx storybook@latest init
+npm install @storybook/test --save-dev
+```
+
+Your Storybook configuration should also include the `interactions` addon:
+
+```javascript
+// .storybook/main.js
+module.exports = {
+  addons: [
+    '@storybook/addon-interactions',
+    '@storybook/addon-essentials',
+  ],
+};
 ```
 
 After initialization, configure your `preview.tsx` to include necessary testing decorators and parameters:
@@ -153,6 +166,103 @@ export const Disabled: Story = {
 
 Storybook's interaction testing allows you to verify component behavior without leaving the Storybook UI. Claude Code can help you write interaction tests that simulate user interactions and validate expected outcomes.
 
+### 3-Step Workflow for Generating Interaction Tests
+
+The most reliable pattern for AI-assisted test generation follows three steps.
+
+**Step 1: Describe Your Component**
+
+Share your component code with Claude Code and explain the user interactions you want to test. For example, if you have a modal component:
+
+```jsx
+// Modal.jsx
+export function Modal({ isOpen, title, children, onClose }) {
+  if (!isOpen) return null;
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={e => e.stopPropagation()}>
+        <header>
+          <h2>{title}</h2>
+          <button onClick={onClose} aria-label="Close">×</button>
+        </header>
+        <div className="modal-body">{children}</div>
+      </div>
+    </div>
+  );
+}
+```
+
+**Step 2: Request Test Generation**
+
+Ask Claude Code to generate interaction tests:
+
+> "Generate Storybook interaction tests for this Modal component that verify: it renders when isOpen is true, clicking the close button calls onClose, clicking the overlay calls onClose, and it doesn't render when isOpen is false."
+
+**Step 3: Review and Refine**
+
+Claude Code will generate tests like this:
+
+```jsx
+// Modal.stories.jsx
+import { fn } from '@storybook/test';
+import { Modal } from './Modal';
+
+export default {
+  title: 'Components/Modal',
+  component: Modal,
+  tags: ['autodocs'],
+  argTypes: {
+    onClose: { action: 'closed' },
+  },
+};
+
+export const Default = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    expect(canvas.getByRole('dialog')).toBeInTheDocument();
+    expect(canvas.getByRole('heading', { name: 'Confirm Action' })).toBeInTheDocument();
+  },
+};
+
+export const CloseOnOverlayClick = {
+  args: {
+    isOpen: true,
+    onClose: fn(),
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    const overlay = canvas.getByRole('presentation');
+    await userEvent.click(overlay);
+    expect(args.onClose).toHaveBeenCalled();
+  },
+};
+
+export const CloseOnButtonClick = {
+  args: {
+    isOpen: true,
+    onClose: fn(),
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'Close' }));
+    expect(args.onClose).toHaveBeenCalled();
+  },
+};
+
+export const Hidden = {
+  args: {
+    isOpen: false,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    expect(canvas.queryByRole('dialog')).not.toBeInTheDocument();
+  },
+};
+```
+
+Review generated tests for correctness and refine as needed before committing them to your test suite.
+
 ### Writing Play Functions
 
 The `play` function in Storybook stories enables interaction testing:
@@ -183,7 +293,11 @@ Claude Code can generate these play functions automatically, analyzing your comp
 
 ## Debugging Failing Tests with Claude Code
 
-When component tests fail, Claude Code becomes invaluable for debugging. The AI can analyze error messages, component code, and test configurations to identify root causes.
+When component tests fail, Claude Code becomes invaluable for debugging. The AI can analyze error messages, component code, and test configurations to identify root causes. Share the failing test output and component code directly, then ask a targeted question:
+
+> "Why is this interaction test failing? The error shows the close button is not found. The component uses aria-label='Close'."
+
+Claude Code will analyze the code and suggest fixes, whether it's a missing import, incorrect query selector, or a timing issue with async operations.
 
 ### Common Debugging Scenarios
 
@@ -249,6 +363,22 @@ Claude Code will examine your component and stories, identifying gaps such as:
 - Accessibility scenarios not covered
 - Edge cases like empty children, very long text, etc.
 
+## Automating Test Maintenance
+
+One of the most valuable aspects of using Claude Code for Storybook interaction tests is maintaining existing tests as your codebase evolves. When components change, tests often break. Claude Code can help you keep them current.
+
+### Updating Tests for Prop Changes
+
+When you modify component props, ask Claude Code to update all affected stories:
+
+> "Update all interaction tests in Modal.stories.jsx to account for the new 'size' prop with values 'small', 'medium', and 'large'."
+
+### Adding Edge Case Coverage
+
+Claude Code excels at identifying gaps in test coverage:
+
+> "What user interactions are missing from the current Modal stories? Generate additional tests for accessibility concerns, keyboard navigation, and error states."
+
 ## Integrating with CI/CD Pipelines
 
 For teams adopting continuous testing practices, integrating Storybook tests into CI/CD ensures component quality is maintained across the development lifecycle.
@@ -295,7 +425,7 @@ To maximize the effectiveness of combining Claude Code with Storybook, follow th
 
 2. **Leverage Auto-Docs**: Enable Storybook's autodocs feature and let Claude Code maintain comprehensive documentation automatically.
 
-3. **Test Accessibility In-Context**: Include `a11y` addon in your Storybook configuration and test accessibility within component stories:
+3. **Test Accessibility In-Context**: Include `a11y` addon in your Storybook configuration and test accessibility within component stories. Interaction tests are ideal for verifying accessibility—request that Claude Code include ARIA attribute checks, keyboard navigation tests, and focus management verifications:
 
 ```typescript
 // .storybook/main.ts
@@ -304,7 +434,7 @@ export default {
 };
 ```
 
-4. **Use Parameterized Stories**: Define stories that accept parameters for maximum reusability:
+4. **Use Parameterized Stories**: Define stories that accept parameters for maximum reusability. For components with multiple behavioral variations, parameterized tests help cover interaction flows concisely:
 
 ```typescript
 export const Variants: Story = {
@@ -315,6 +445,23 @@ export const Variants: Story = {
       <Button {...args} variant="danger">Danger</Button>
     </div>
   ),
+};
+
+export const FormValidation = {
+  args: {
+    email: '',
+    password: '',
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    const emailInput = canvas.getByLabelText(/email/i);
+    const passwordInput = canvas.getByLabelText(/password/i);
+    const submitButton = canvas.getByRole('button', { name: /submit/i });
+
+    await userEvent.click(submitButton);
+    expect(canvas.getByText('Email is required')).toBeInTheDocument();
+    expect(canvas.getByText('Password is required')).toBeInTheDocument();
+  },
 };
 ```
 
@@ -328,6 +475,10 @@ export const testConfig = {
   interactionTimeout: 10000,
 };
 ```
+
+6. **Write Descriptive Story Names**: Clear, descriptive story names help Claude Code generate more accurate tests. Instead of `export const Primary`, use names like `export const OpenModalWithTitle` that communicate intent.
+
+7. **Maintain Test Independence**: Each story's `play` function should be self-contained. Avoid dependencies between stories, as Storybook may execute them in any order. Claude Code can help refactor interdependent tests into isolated scenarios.
 
 ## Conclusion
 
