@@ -503,4 +503,5 @@ This section lists every article in the guides cluster alphabetically for quick 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top-ranked skills across all categories
 - [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/vibe-coding-with-claude-code-complete-guide-2026/) — The methodology behind modern Claude Code workflows
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

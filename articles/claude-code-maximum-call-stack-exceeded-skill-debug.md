@@ -265,3 +265,4 @@ Remember: Claude Code skills should complete their task and stop. If your skill 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

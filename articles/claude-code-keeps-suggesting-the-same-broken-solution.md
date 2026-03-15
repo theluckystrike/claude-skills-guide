@@ -193,3 +193,4 @@ The key insight is that your prompts shape Claude's behavior. Rather than critic
 - [Claude Code Not Working After Update: How to Fix](/claude-skills-guide/claude-code-not-working-after-update-how-to-fix/)
 - [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

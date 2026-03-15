@@ -155,3 +155,4 @@ File context switching in Claude Code is a real challenge, but it's manageable w
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

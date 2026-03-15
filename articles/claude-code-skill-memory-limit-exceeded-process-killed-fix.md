@@ -243,3 +243,5 @@ When memory errors persist despite these fixes, consider upgrading your system R
 
 
 Built by Claude Skills Guide — More at [zovo.one](https://zovo.one)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

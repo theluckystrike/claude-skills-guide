@@ -703,4 +703,5 @@ Once you have the basics down, the rest of the library is organized by topic:
 - [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — curated list of the highest-value skills for new users
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — understand how skills activate automatically in your sessions
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

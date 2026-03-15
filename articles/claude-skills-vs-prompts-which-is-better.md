@@ -98,4 +98,5 @@ The best approach depends entirely on your specific needs. Both tools have their
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

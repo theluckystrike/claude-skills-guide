@@ -127,4 +127,5 @@ When evaluating a community skill, read the `.md` file itself before using it. S
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

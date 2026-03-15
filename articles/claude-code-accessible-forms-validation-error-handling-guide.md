@@ -223,4 +223,5 @@ Invoke `/frontend-design` to generate accessible form components, `/tdd` to deve
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Test-driven development workflows
 - [Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Automated accessibility checks
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

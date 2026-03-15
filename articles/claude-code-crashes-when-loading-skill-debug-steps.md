@@ -153,4 +153,5 @@ npm update -g @anthropic-ai/claude-code
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

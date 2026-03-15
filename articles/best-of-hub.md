@@ -130,4 +130,5 @@ If you're just getting started with skills, these five deliver the highest value
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

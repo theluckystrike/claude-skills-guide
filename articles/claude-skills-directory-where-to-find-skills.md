@@ -118,4 +118,5 @@ cp /path/to/skills-repo/*.md ~/.claude/skills/
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

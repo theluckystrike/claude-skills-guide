@@ -184,3 +184,4 @@ Remember: the goal is not just to make the error go away, but to maintain secure
 - [Claude Code Not Working After Update: How to Fix](/claude-skills-guide/claude-code-not-working-after-update-how-to-fix/)
 - [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

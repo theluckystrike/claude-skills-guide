@@ -106,4 +106,5 @@ Skills work best when you give them specific, structured prompts. "Analyze this 
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

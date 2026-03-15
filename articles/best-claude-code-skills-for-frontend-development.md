@@ -142,4 +142,5 @@ Invoke `/frontend-design` to scaffold components, `/tdd` to write tests before i
 
 **Related guides:** [Claude Code Accessibility Regression Testing Guide](https://theluckystrike.github.io/claude-skills-guide/claude-code-accessibility-regression-testing/)
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

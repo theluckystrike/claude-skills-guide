@@ -151,4 +151,5 @@ Each stage produces specific, actionable findings. The result is faster reviews 
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

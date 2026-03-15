@@ -117,4 +117,5 @@ Quarterly review your active skills. Official skills update with Claude releases
 - [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Build your own skill from scratch
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The top skills every developer should know
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

@@ -246,3 +246,4 @@ Start applying these strategies on your next extended workflow, and you'll find 
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 - [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/) — Design multi-agent workflows where agents hand off context and results between subagents in Claude Code.
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

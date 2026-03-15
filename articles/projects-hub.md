@@ -242,4 +242,5 @@ Use this table to estimate what you are getting into before you start a new proj
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

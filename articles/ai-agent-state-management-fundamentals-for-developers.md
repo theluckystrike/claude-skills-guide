@@ -253,3 +253,4 @@ Remember: the complexity of your state management should match your application'
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/) — Understand the full taxonomy of agent memory — in-context, external, and episodic — that underpins state management.
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
