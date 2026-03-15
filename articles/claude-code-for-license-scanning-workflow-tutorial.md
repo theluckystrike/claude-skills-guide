@@ -9,6 +9,8 @@ permalink: /claude-code-for-license-scanning-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
+
 
 # Claude Code for License Scanning Workflow Tutorial
 
@@ -248,3 +250,4 @@ Successfully implementing license scanning requires more than just running tools
 License scanning doesn't have to be a manual, error-prone process. By leveraging Claude Code's capabilities to orchestrate scanning tools, analyze results, and guide remediation, you can establish a robust compliance workflow that scales with your project. The key lies in automation, clear policies, and consistent enforcement.
 
 Start with simple scans, gradually add automation, and build a culture of license awareness in your development team. Claude Code is well-equipped to help you every step of the way—from initial setup to ongoing maintenance.
+{% endraw %}

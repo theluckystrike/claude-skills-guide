@@ -8,6 +8,8 @@ permalink: /claude-code-for-semantic-versioning-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
+
 
 # Claude Code for Semantic Versioning Workflow Tutorial
 
@@ -244,3 +246,4 @@ Add deprecation notices to all code using the old auth module, planning removal 
 Claude Code transforms semantic versioning from a manual, error-prone process into an automated, informed workflow. By analyzing your commits, understanding conventional formats, and providing actionable recommendations, Claude Code helps maintain consistent versioning that communicates changes effectively to your users and team.
 
 Start implementing these workflows today, and your release process will become more reliable and predictable.
+{% endraw %}
