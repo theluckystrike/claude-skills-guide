@@ -3,8 +3,11 @@ layout: default
 title: "Best Authenticator Chrome Extension for Developers and Power Users"
 description: "A practical guide to Chrome TOTP authenticator extensions for developers who need secure 2FA management across multiple accounts."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /best-authenticator-chrome-extension/
+reviewed: true
+score: 8
+categories: [best-of]
 ---
 
 {% raw %}
