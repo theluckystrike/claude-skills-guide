@@ -165,4 +165,10 @@ The Grammarly alternative landscape in 2026 offers strong options for developers
 
 Choose based on your priorities: privacy-first users should self-host LanguageTool or use After the Deadline, while those wanting AI suggestions at reasonable prices should evaluate Scribe.
 
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
