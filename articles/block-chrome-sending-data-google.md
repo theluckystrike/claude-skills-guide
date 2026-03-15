@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How to Block Chrome from Sending Data to Google"
 description: "A practical guide for developers and power users to block Chrome from sending data to Google. Covers hosts file modifications, DNS-level blocking, extension methods, and enterprise deployment."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /block-chrome-sending-data-google/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # How to Block Chrome from Sending Data to Google
 

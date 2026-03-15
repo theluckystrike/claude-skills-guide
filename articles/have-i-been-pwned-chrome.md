@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "How to Check Have I Been Pwned in Chrome for Security Monitoring"
 description: "Learn how to use Have I Been Pwned directly in Chrome to monitor email addresses for data breaches. Covers browser extensions, manual checks, and programmatic integration for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [security, privacy, chrome]
-tags: [have-i-been-pwned, chrome, data-breach, security, email-security]
+tags: [have-i-been-pwned, chrome, data-breach, security, email-security, claude-skills]
 permalink: /have-i-been-pwned-chrome/
+reviewed: true
+score: 8
 ---
+
 
 # How to Check Have I Been Pwned in Chrome for Security Monitoring
 
@@ -56,7 +60,7 @@ For users who prefer not to install extensions, the HIBP website works perfectly
 2. Enter your email address in the search field
 3. Review the results showing all breaches where your email appeared
 
-This method works on any browser but integrates seamlessly with Chrome's password manager and autofill features. You can bookmark specific results for quick future reference.
+This method works on any browser but integrates smoothly with Chrome's password manager and autofill features. You can bookmark specific results for quick future reference.
 
 ## Method 3: Programmatic Integration for Developers
 

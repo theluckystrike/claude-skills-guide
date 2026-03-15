@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Update Broke Speed Fix: Solutions for Developers and Power Users"
 description: "Chrome updates sometimes cause performance regressions. Learn practical fixes to restore browser speed after a Chrome update breaks your workflow."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-update-broke-speed-fix/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 When Chrome releases a major update, you expect improved performance and new features. Instead, you might find your once-snappy browser now feels sluggish, extensions behave strangely, and pages load slower than before. This is a known issue that affects developers and power users who rely on Chrome for daily work.

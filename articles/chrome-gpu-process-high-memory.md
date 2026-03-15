@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome GPU Process High Memory: Causes and Solutions for Power Users"
 description: "Understand why Chrome's GPU process consumes excessive memory, how to diagnose the issue, and practical solutions for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-gpu-process-high-memory/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome GPU Process High Memory: Causes and Solutions for Power Users
 
@@ -35,7 +41,7 @@ Several factors contribute to elevated GPU memory usage:
 
 **Hardware Decoder Sessions**: Chrome's hardware video decoder maintains session state for each video. 4K and HDR content particularly tax GPU memory resources.
 
-**Tab Highlighting and Animations**: Chrome's tab previews, smooth scrolling, and CSS animations all leverage GPU acceleration, adding to memory consumption.
+**Tab Highlighting and Animations**: Chrome's tab previews, smooth scrolling, and CSS animations all use GPU acceleration, adding to memory consumption.
 
 ## Identifying GPU Memory Issues
 

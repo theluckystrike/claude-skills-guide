@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Permissions Explained: A Developer's Guide"
 description: "Understand Chrome extension permissions, from basic host permissions to advanced API access. Learn how to audit, request, and manage permissions safely."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-permissions-explained/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 Chrome extensions extend browser functionality through a powerful permission system that controls what data and features each extension can access. Understanding this system helps developers build secure extensions and helps users make informed decisions about the tools they install.
 
