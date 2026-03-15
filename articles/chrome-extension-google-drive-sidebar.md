@@ -5,7 +5,7 @@ description: "A practical guide to building a Chrome extension with Google Drive
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-google-drive-sidebar/
-categories: [guides, development, chrome-extension]
+categories: [guides, guides, guides]
 tags: [chrome-extension, google-drive, sidebar, developer-tools, productivity, api]
 reviewed: true
 score: 8

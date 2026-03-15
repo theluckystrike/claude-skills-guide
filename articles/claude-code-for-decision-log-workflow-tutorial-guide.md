@@ -238,3 +238,4 @@ Start small: create your first decision log entry today, and you'll immediately 
 - Create a decision log template
 - Add decision logging to your project instructions
 - Next time you make a technical choice, ask Claude Code to document it
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

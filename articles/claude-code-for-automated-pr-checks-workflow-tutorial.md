@@ -32,7 +32,6 @@ Before building the workflow, ensure Claude Code is installed and configured in 
 ---
 name: pr-review
 description: Analyzes pull request changes and provides constructive feedback
-tools: [read_file, bash]
 ---
 # PR Review Skill
 
@@ -207,3 +206,4 @@ Automated PR checks with Claude Code transform code review from a bottleneck int
 
 The investment in setting up these automated checks pays dividends in reduced bugs, improved code consistency, and more efficient human reviews. Your team focuses on creative problem-solving while Claude handles the systematic analysis—exactly the division of labor that modern development requires.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

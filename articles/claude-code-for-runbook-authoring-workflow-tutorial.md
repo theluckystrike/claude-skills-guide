@@ -3,7 +3,7 @@ layout: default
 title: "Claude Code for Runbook Authoring Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline your runbook authoring workflow. This practical tutorial covers automation, skill creation, and best practices for DevOps documentation."
 date: 2026-03-15
-categories: [tutorials, devops]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-runbook-authoring-workflow-tutorial/
@@ -46,7 +46,6 @@ Create a new skill file at `~/.claude/skills/runbook-author.md` with the followi
 ---
 name: runbook-author
 description: Assists with creating and maintaining operational runbooks
-tools: [Read, Write, Bash, Glob]
 ---
 
 # Runbook Authoring Assistant
@@ -225,3 +224,4 @@ Start by creating your runbook-author skill with your team's conventions, then g
 2. Generate a runbook for a common operational procedure
 3. Have your team review and test the generated documentation
 4. Iterate on your skill based on feedback and conventions discovered
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

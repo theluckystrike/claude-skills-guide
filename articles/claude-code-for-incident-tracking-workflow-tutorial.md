@@ -24,12 +24,6 @@ Before building workflows, you need a skill that understands incident tracking c
 ---
 name: incident-tracker
 description: Track and manage software incidents with severity levels, assignments, and resolution workflows
-commands:
-  - /log-incident
-  - /list-incidents
-  - /update-incident
-  - /incident-report
-tools: [Read, Write, Bash]
 ---
 
 # Incident Tracker Skill
@@ -201,7 +195,6 @@ For critical incidents, you need to notify the right people immediately. Extend 
 ---
 name: incident-notifications
 description: Send incident notifications to on-call teams and stakeholders
-tools: [Bash]
 ---
 
 ## Critical Incident Notifications
@@ -256,3 +249,4 @@ The skills and workflows in this tutorial are starting points. Customize them to
 
 With Claude handling the operational aspects of incident tracking, your team can focus on what matters most: building reliable systems and responding effectively when issues arise.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

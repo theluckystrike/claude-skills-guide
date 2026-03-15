@@ -124,31 +124,8 @@ For teams running multiple Claude-powered workflows, creating a reusable composi
 # .github/actions/claude-review/action.yml
 name: 'Claude Code Review'
 description: 'Run Claude Code analysis on PR changes'
-inputs:
-  api-key:
-    description: 'Anthropic API key'
-    required: true
-  task:
-    description: 'Task prompt for Claude'
-    required: true
-  files:
-    description: 'Files to analyze'
-    required: false
-    default: '.'
 
-runs:
-  using: composite
-  steps:
-    - name: Setup Claude
-      shell: bash
-      run: |
-        curl -sL https://raw.githubusercontent.com/anthropics/claude-cli/main/install.sh | sh
-        echo "CLAUDE_API_KEY=${{ inputs.api-key }}" >> $GITHUB_ENV
 
-    - name: Run Claude Task
-      shell: bash
-      run: |
-        claude --print "${{ inputs.task }}"
 ```
 
 With this reusable action, your workflow files become much cleaner:
@@ -246,3 +223,4 @@ Finally, store Claude outputs as PR comments rather than relying on workflow log
 
 Claude Code combined with GitHub Actions provides a powerful platform for PR automation that can significantly improve your development workflow. Start with simple reviews and gradually add more sophisticated automation as your team gains confidence. The key is focusing on repetitive, objective checks that free your team to focus on higher-value code review while ensuring consistent quality across all pull requests.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
