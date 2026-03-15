@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Mendeley Chrome Extension Review: A Practical Guide for Researchers and Developers"
+title: "Mendeley Chrome Extension Review: A Practical Guide for."
 description: "A technical review of the Mendeley Chrome extension covering web import, PDF annotation, citation management, and developer integration options."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -117,5 +117,12 @@ The Mendeley Chrome extension functions effectively as a web companion to the fu
 The limitations—particularly around bulk operations and advanced search—suggest pairing the extension with the desktop application for power users with large libraries. Developers building academic tools will find the REST API more valuable than extension customization, since the extension offers no plugin architecture.
 
 For teams already invested in the Mendeley ecosystem, the Chrome extension provides practical utility without requiring workflow changes. New users evaluating reference managers should test the web import experience against their primary research sources before committing.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
