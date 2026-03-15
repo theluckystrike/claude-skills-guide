@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Fork and Pull Request Workflow Guide"
 description: "Learn how to use Claude Code CLI to efficiently work with GitHub forks and pull requests. This guide covers essential commands, practical examples, and actionable tips for developers."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-fork-and-pull-request-workflow-guide/
 categories: [Development, Git, GitHub]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Fork and Pull Request Workflow Guide
@@ -202,11 +206,11 @@ gh pr create --title "Fix: issue description" --body "Your description here"
 
 4. **Sync regularly**: Don't let your fork fall behind. Rebase onto upstream main frequently, especially for long-running features.
 
-5. **Leverage Claude Code for learning**: When encountering unfamiliar code patterns in the original repository, ask Claude Code to explain them.
+5. **use Claude Code for learning**: When encountering unfamiliar code patterns in the original repository, ask Claude Code to explain them.
 
 ## Conclusion
 
-Claude Code transforms the fork and pull request workflow from a tedious series of manual steps into an efficient, assisted process. By leveraging its capabilities for understanding codebase context, crafting commits, handling conflicts, and drafting PR descriptions, you can contribute more confidently and effectively to any project.
+Claude Code transforms the fork and pull request workflow from a tedious series of manual steps into an efficient, assisted process. By using its capabilities for understanding codebase context, crafting commits, handling conflicts, and drafting PR descriptions, you can contribute more confidently and effectively to any project.
 
 Remember that the best workflow is one that works consistently for you. Experiment with these suggestions, adapt them to your needs, and enjoy smoother open source contributions.
 

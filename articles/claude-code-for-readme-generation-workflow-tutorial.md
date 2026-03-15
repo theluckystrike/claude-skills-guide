@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for README Generation Workflow Tutorial"
 description: "Learn how to automate your README generation workflow using Claude Code and custom skills. This comprehensive tutorial covers practical examples, code snippets, and best practices for developers."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-readme-generation-workflow-tutorial/
 categories: [Tutorials, Claude Code]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for README Generation Workflow Tutorial
@@ -18,7 +22,7 @@ Creating and maintaining high-quality README files is essential for any project,
 
 Claude Code is a command-line interface that allows Claude to execute tasks, run commands, and interact with your development environment. By combining Claude Code with custom skills, you can create powerful automation workflows that generate professional README files automatically.
 
-The key advantage of using Claude Code for README generation is its ability to understand your project structure, analyze code, and generate contextually appropriate documentation. Instead of manually writing README content, you can leverage Claude's understanding to create comprehensive documentation.
+The key advantage of using Claude Code for README generation is its ability to understand your project structure, analyze code, and generate contextually appropriate documentation. Instead of manually writing README content, you can use Claude's understanding to create comprehensive documentation.
 
 ## Setting Up Your README Generation Skill
 
