@@ -221,3 +221,4 @@ The key is integrating changelog management into your daily workflow rather than
 Start by adding changelog guidance to your CLAUDE.md, configure Conventional Commits for your team, and begin asking Claude to help maintain your CHANGELOG.md on a regular basis. Your future users—and your past self—will thank you.
 
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

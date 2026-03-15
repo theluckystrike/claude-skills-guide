@@ -6,7 +6,7 @@ description: "Learn how to automate your artifact publishing workflows using Cla
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-artifact-publishing-workflow-tutorial/
-categories: [Tutorial, DevOps, Automation]
+categories: [tutorials, guides, workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -247,3 +247,4 @@ Start with simple workflows and progressively add complexity as you become more 
 
 Remember to always test thoroughly in non-production environments, maintain comprehensive logs, and follow security best practices. With Claude Code as part of your development toolkit, you have a powerful ally for managing artifact publishing at any scale.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
