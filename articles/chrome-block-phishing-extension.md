@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Block Phishing Extension: A Developer Guide to Building Browser-Based Threat Detection"
-description: "Learn how Chrome block phishing extension technology works under the hood. This guide covers the Chrome Web Store, extension APIs, phishing detection techniques, and implementation patterns for developers building custom browser security tools."
+title: "Chrome Block Phishing Extension: A Developer Guide to."
+description: "Learn how Chrome block phishing extension technology works under the hood. This guide covers the Chrome Web Store, extension APIs, phishing detection."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-block-phishing-extension/
@@ -265,5 +265,12 @@ Chrome provides several APIs relevant to phishing protection:
 Building a Chrome block phishing extension requires understanding browser security APIs, implementing efficient detection algorithms, and balancing protection with user experience. The patterns shown here provide a foundation for creating custom extensions tailored to specific threat models or organizational needs.
 
 For developers, the extension architecture offers a flexible platform for experimenting with detection techniques. For power users, understanding these mechanisms helps evaluate and configure browser security tools effectively.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -2,8 +2,8 @@
 
 
 layout: default
-title: "AI LinkedIn Post Writer Chrome: Tools and Techniques for Developers"
-description: "Explore approaches to building and using AI-powered tools for writing LinkedIn posts directly in Chrome. Practical implementation patterns, code examples, and workflow strategies for developers."
+title: "AI LinkedIn Post Writer Chrome: Tools and Techniques for."
+description: "Explore approaches to building and using AI-powered tools for writing LinkedIn posts directly in Chrome. Practical implementation patterns, code."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-linkedin-post-writer-chrome/
@@ -286,5 +286,12 @@ For developers wanting to build more advanced features:
 - **Cross-Platform Adaptation**: Extend to Twitter, Medium, or newsletter formats
 
 The key to successful implementation lies in augmentation rather than replacement. Use AI to handle repetitive aspects of writing while maintaining your authentic voice in the final output.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

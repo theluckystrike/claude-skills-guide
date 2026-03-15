@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension HTTP Header Viewer: A Developer's Guide"
-description: "Learn how to inspect, analyze, and debug HTTP headers using Chrome extensions. Practical examples for developers and power users debugging APIs and web applications."
+description: "Learn how to inspect, analyze, and debug HTTP headers using Chrome extensions. Practical examples for developers and power users debugging APIs and web."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-http-header-viewer/
@@ -176,5 +176,12 @@ Chrome extensions for HTTP header viewing provide targeted functionality that co
 For most developers, a combination works best: DevTools for deep debugging, extensions for quick checks and persistent monitoring. Try a few extensions from the Web Store, evaluate which workflows they improve, and build custom solutions when your needs outpace existing options.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

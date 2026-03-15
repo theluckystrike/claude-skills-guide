@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "AI Blog Post Generator Chrome Extensions: A Practical Guide for Developers"
-description: "Discover how AI-powered Chrome extensions can streamline your content creation workflow. Learn about key features, use cases, and how to integrate these tools into your development process."
+title: "AI Blog Post Generator Chrome Extensions: A Practical."
+description: "Discover how AI-powered Chrome extensions can streamline your content creation workflow. Learn about key features, use cases, and how to integrate."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-blog-post-generator-chrome/
@@ -130,5 +130,12 @@ The Chrome Extensions documentation provides starting points for manifest config
 ---
 
 AI blog post generator Chrome extensions represent a practical category of tools that can significantly accelerate content creation when used thoughtfully. By understanding their capabilities, limitations, and best practices, developers and power users can effectively incorporate these tools into their workflows while maintaining content quality and security.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

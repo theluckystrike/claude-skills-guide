@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Proxy Slow: Troubleshooting Guide for Developers"
-description: "Diagnose and fix Chrome proxy slow connections. Practical solutions for developers and power users dealing with proxy latency, timeouts, and performance issues."
+description: "Diagnose and fix Chrome proxy slow connections. Practical solutions for developers and power users dealing with proxy latency, timeouts, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-proxy-slow/
@@ -189,5 +189,12 @@ This page shows proxy configuration status and any detected issues.
 Chrome proxy slow issues usually stem from network topology, authentication overhead, or misconfiguration rather than Chrome itself. By methodically isolating each variable—latency, DNS, authentication, TLS—you can identify the root cause and implement a targeted fix.
 
 For developers working with multiple proxy configurations, investing time in proper PAC file setup or quality proxy switch extensions pays dividends in daily productivity.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Homebrew Formula Workflow Tutorial"
-description: "Learn how to leverage Claude Code to streamline your Homebrew formula creation, testing, and maintenance workflow. Practical examples and actionable advice for developers."
+description: "Learn how to leverage Claude Code to streamline your Homebrew formula creation, testing, and maintenance workflow. Practical examples and actionable."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-homebrew-formula-workflow-tutorial/
@@ -189,3 +189,10 @@ Claude Code transforms Homebrew formula development from a manual, error-prone p
 
 Remember: Always verify generated formulas before submitting to the Homebrew core tap. Automation assists but doesn't replace careful human review.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

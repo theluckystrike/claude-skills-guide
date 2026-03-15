@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Omnibox Slow: Causes and Fixes for Better Address Bar Performance"
-description: "A practical guide for developers and power users to diagnose and fix Chrome omnibox slow performance. Covers extension conflicts, URL prediction, hardware acceleration, and profile troubleshooting."
+title: "Chrome Omnibox Slow: Causes and Fixes for Better Address."
+description: "A practical guide for developers and power users to diagnose and fix Chrome omnibox slow performance. Covers extension conflicts, URL prediction."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-omnibox-slow/
@@ -134,5 +134,12 @@ Then uninstall Chrome completely and reinstall from scratch. Import your bookmar
 ## Summary
 
 Slow omnibox performance usually stems from extension conflicts, corrupted history databases, hardware acceleration issues, or excessive stored data. Start with the simplest fixes—disabling extensions, clearing history, and toggling hardware acceleration—before moving to advanced diagnostics. Most users find that one of these approaches restores snappy address bar performance without requiring a full reinstall.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -2,7 +2,7 @@
 
 
 layout: default
-title: "Chrome Extension Shadow DOM Viewer: Inspect Hidden DOM Structures"
+title: "Chrome Extension Shadow DOM Viewer: Inspect Hidden DOM."
 description: "Discover Chrome extensions and developer tools for viewing and inspecting Shadow DOM. Learn how to debug encapsulated web components in your browser."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -164,6 +164,13 @@ Shadow DOM debugging becomes essential in several development scenarios:
 Shadow DOM inspection doesn't have to be a painful process. Chrome extensions like Shadow DOM Explorer, Web Components Inspector, and Style Scope provide dedicated tooling that significantly improves the debugging experience. Combined with console methods and DevTools settings, you can efficiently navigate and debug even complex shadow tree structures.
 
 Understanding how to inspect Shadow DOM is becoming increasingly important as web component adoption grows. The techniques and tools covered here will help you build, debug, and maintain Shadow DOM-based applications with confidence.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

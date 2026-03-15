@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extensions That Track You: What Developers Need to Know"
-description: "A technical breakdown of how Chrome extensions track users, with code examples showing the tracking mechanisms. Learn to audit extensions and protect your privacy."
+title: "Chrome Extensions That Track You: What Developers Need."
+description: "A technical breakdown of how Chrome extensions track users, with code examples showing the tracking mechanisms. Learn to audit extensions and protect."
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extensions-that-track-you/
@@ -211,5 +211,12 @@ Several tools help identify tracking behavior:
 - **Network monitoring** — use browser DevTools to identify unexpected network requests from extensions
 
 The key takeaway: every extension you install is code running with elevated privileges in your browser. Regular audits and minimal installation policies reduce your exposure to tracking.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -159,4 +159,11 @@ The "too many permissions" problem stems from both over-reaching developers and 
 
 Permission warnings exist for a reason. When an extension asks for access that seems excessive for its purpose, trust your instinct and look for alternatives.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

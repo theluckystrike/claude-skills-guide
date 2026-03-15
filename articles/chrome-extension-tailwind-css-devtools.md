@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Tailwind CSS DevTools: Debugging Tools and Techniques"
-description: "A practical guide to debugging Chrome extensions that use Tailwind CSS. Learn how to inspect components, troubleshoot styling issues, and optimize your development workflow."
+title: "Chrome Extension Tailwind CSS DevTools: Debugging Tools."
+description: "A practical guide to debugging Chrome extensions that use Tailwind CSS. Learn how to inspect components, troubleshoot styling issues, and optimize your."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-tailwind-css-devtools/
@@ -207,5 +207,12 @@ Systematic testing reveals context-specific issues early in development.
 Before publishing, verify Tailwind works correctly across all contexts. Check that your build process includes all necessary files, test dark mode thoroughly, and ensure no class conflicts with popular websites.
 
 The debugging techniques in this guide help you identify and resolve styling issues quickly, leading to a more polished extension experience.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -151,4 +151,11 @@ Keep your development extension separate from production. Use separate extension
 
 When distributing an extension with WASM, consider inlining the WASM binary using base64 encoding to avoid loading external resources. This simplifies deployment but increases extension size.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
