@@ -18,7 +18,9 @@ Caching is one of the most effective ways to speed up your GitHub Actions workfl
 
 ## Understanding the GitHub Actions Cache
 
-GitHub Actions provides a built-in cache action that stores files and directories across workflow runs. The cache is scoped to your repository and branch, meaning you can access cached files when the same workflow runs again. The key is identifying which paths change infrequently and benefit most from caching.
+GitHub Actions provides a built-in cache mechanism that stores files and directories across workflow runs. The cache lives for up to 90 days and is scoped to your repository and branch, meaning you can access cached files when the same workflow runs again. Understanding how to use this effectively is crucial for optimizing your pipelines.
+
+The core concept involves identifying paths that change infrequently and benefit most from caching. Common candidates include dependency directories like `node_modules`, `.pip`, or vendor folders, build outputs, and any downloaded resources that remain stable across commits.
 
 The basic syntax uses the official `actions/cache` action:
 
@@ -40,27 +42,50 @@ Claude Code projects often involve multiple dependency ecosystems. Here is how t
 
 ### Node.js and npm Caching
 
-For JavaScript and TypeScript projects that Claude Code manages or generates, npm caching follows the pattern above. You can also use the dedicated `actions/cache-node` action for a simpler interface:
+For JavaScript and TypeScript projects that Claude Code manages or generates, npm caching follows the pattern above. The `actions/setup-node` action provides a simpler built-in interface:
 
 ```yaml
-- uses: actions/cache-node@v4
-  with:
-    node-version: '20'
-    cache: 'npm'
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
 ```
 
-This single line handles caching based on your `package-lock.json` file. The action detects your package manager automatically and applies appropriate caching.
+Notice the `cache: 'npm'` parameter in the setup-node action. This single line handles caching automatically, detecting your package manager and applying appropriate caching based on your lockfile.
 
 ### Python and pip Caching
 
-Python projects benefit from pip cache in workflows:
+Python projects benefit from pip cache in workflows. The `actions/setup-python` action provides similar built-in caching:
 
 ```yaml
 - name: Set up Python
   uses: actions/setup-python@v5
   with:
     python-version: '3.12'
+    cache: 'pip'
+    cache-dependency-path: '**/requirements.txt'
+```
 
+For more control, or for projects using uv instead of pip, you can configure manual caching:
+
+```yaml
 - name: Cache pip dependencies
   uses: actions/cache@v4
   with:
@@ -68,11 +93,7 @@ Python projects benefit from pip cache in workflows:
     key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
     restore-keys: |
       ${{ runner.os }}-pip-
-```
 
-For projects using uv instead of pip, caching the uv cache directory provides similar benefits:
-
-```yaml
 - name: Cache uv dependencies
   uses: actions/cache@v4
   with:
@@ -96,6 +117,64 @@ Building Docker containers in CI can be slow without proper caching. The `docker
 ```
 
 This approach uses GitHub Actions cache for Docker build layers, dramatically reducing build times for projects using Docker with Claude Code.
+
+## Advanced Caching Strategies
+
+Once you master basic caching, implement these strategies for maximum efficiency.
+
+### Multi-Layer Caching
+
+For monorepos or projects with multiple dependency types, cache each dependency layer separately so updating one does not invalidate the others:
+
+```yaml
+- name: Cache Node modules
+  uses: actions/cache@v4
+  with:
+    path: node_modules
+    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    restore-keys: |
+      ${{ runner.os }}-node-
+
+- name: Cache pip packages
+  uses: actions/cache@v4
+  with:
+    path: ~/.cache/pip
+    key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+    restore-keys: |
+      ${{ runner.os }}-pip-
+
+- name: Cache Cypress binaries
+  uses: actions/cache@v4
+  with:
+    path: ~/.cache/Cypress
+    key: ${{ runner.os }}-cypress-${{ hashFiles('**/package-lock.json') }}
+    restore-keys: |
+      ${{ runner.os }}-cypress-
+```
+
+### Platform-Specific Caching with Matrix Builds
+
+Different operating systems require different caching strategies. Use matrix builds to optimize for each platform:
+
+```yaml
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [18, 20]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+```
+
+Each OS and Node version combination gets its own cache, preventing cross-platform cache pollution.
 
 ## Caching Claude Code Artifacts
 
@@ -132,7 +211,7 @@ Running tests repeatedly can be expensive. While you cannot cache test execution
 
 ## Strategic Cache Key Design
 
-Your cache key strategy determines hit rates. The most effective approach uses multiple restore keys:
+Your cache key strategy determines hit rates. The most effective approach uses multiple restore keys that provide graceful degradation when exact cache misses occur:
 
 ```yaml
 key: ${{ runner.os }}-deps-${{ hashFiles('**/lockfile') }}-v1
@@ -141,7 +220,7 @@ restore-keys: |
   ${{ runner.os }}-deps-
 ```
 
-This strategy creates a precise match first, then falls back to any cache with the same lockfile hash, then any cache with the same operating system prefix. The restore keys ensure you get partial cache hits even when exact matches fail.
+This strategy creates a precise match first, then falls back to any cache with the same lockfile hash, then any cache with the same operating system prefix. When an exact match fails, GitHub searches each restore key in order, so even without an exact cache hit you often get a partial cache that speeds up dependency installation significantly.
 
 ## Cache Invalidation Considerations
 
@@ -172,8 +251,9 @@ steps:
   - uses: actions/checkout@v4
 
   - name: Cache dependencies
-    uses: actions/cache-node@v4
+    uses: actions/setup-node@v4
     with:
+      node-version: '20'
       cache: 'npm'
 
   - name: Generate tests with TDD skill
@@ -190,23 +270,36 @@ steps:
 
 Avoid caching too aggressively. Caching files that change every run wastes storage and provides no benefit. Also avoid cache keys that are too specific—they reduce hit rates significantly.
 
+```yaml
+# Too specific — changes too frequently
+key: ${{ hashFiles('package.json', 'package-lock.json', 'yarn.lock') }}
+
+# Better — use only the lockfile
+key: ${{ hashFiles('package-lock.json') }}
+```
+
+Many tools store caches in hidden directories. Do not forget to include them:
+
+```yaml
+# Cache Maven local repository
+- name: Cache Maven repository
+  uses: actions/cache@v4
+  with:
+    path: ~/.m2/repository
+    key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+```
+
 Do not cache credentials, environment secrets, or temporary files. The cache action stores files unencrypted in GitHub's storage, so only safe, non-sensitive files belong in caches.
 
 ## Measuring Cache Performance
 
-GitHub Actions shows cache hit rates in your workflow run logs. Track these metrics over time:
+GitHub Actions shows cache hit rates in your workflow run logs. A well-configured cache typically achieves 70-90% hit rates on regular workflows, with dependency installation dropping from minutes to seconds on cache hits.
 
-```yaml
-- name: Check cache effectiveness
-  run: |
-    echo "Cache info available in workflow logs"
-```
-
-Review your workflow summaries to identify which caches provide the most value. Focus optimization efforts on dependencies and build steps that show consistent cache misses.
+Review your workflow summaries to identify which caches provide the most value. Focus optimization efforts on dependencies and build steps that show consistent cache misses. Track workflow run times before and after implementation to quantify the improvement.
 
 ## Conclusion
 
-Implementing proper caching strategies in your GitHub Actions workflows significantly reduces CI/CD execution times. Start with dependency caching, expand to build artifacts, and refine your cache key strategies based on actual hit rates. Combined with Claude Code skills like tdd, pdf, and frontend-design, efficient caching creates a faster development cycle.
+Implementing proper caching strategies in your GitHub Actions workflows significantly reduces CI/CD execution times. Start with built-in caching via setup actions, expand to manual cache steps for specialized tools and build artifacts, and refine your cache key strategies based on actual hit rates. Every second saved on CI builds compounds over time—a minute saved across hundreds of workflow runs adds up to significant developer hours reclaimed throughout your project lifecycle. Combined with Claude Code skills like tdd, pdf, and frontend-design, efficient caching creates a faster development cycle.
 
 
 ## Related Reading
