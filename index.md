@@ -1339,7 +1339,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Code with Task Runners: Getting Started with Just.](/claude-skills-guide/claude-code-with-task-runners-just-taskfile/)
 - [Claude Code with Terraform Infrastructure as Code Setup](/claude-skills-guide/claude-code-with-terraform-infrastructure-as-code-setup/)
 - [Claude Code with Turborepo Monorepo Setup Guide](/claude-skills-guide/claude-code-with-turborepo-monorepo-setup-guide/)
-- [Claude Code with Turso Embedded SQLite Edge Database](/claude-skills-guide/claude-code-with-turso-embedded-sqlite-edge-database/)
+- [Claude Code for Turso SQLite Edge Database Tutorial](/claude-skills-guide/claude-code-for-turso-sqlite-edge-database-tutorial/)
 - [Writing Helm Charts for Kubernetes with Claude Code: A.](/claude-skills-guide/claude-code-writing-helm-charts-kubernetes-tutorial/)
 - [Claude Code Xata Serverless Database Branching Guide](/claude-skills-guide/claude-code-xata-serverless-database-branching-guide/)
 - [Claude Code Zustand State Management Workflow](/claude-skills-guide/claude-code-zustand-state-management-workflow/)

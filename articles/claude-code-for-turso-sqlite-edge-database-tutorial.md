@@ -15,6 +15,15 @@ permalink: /claude-code-for-turso-sqlite-edge-database-tutorial/
 
 [Turso provides a distributed SQLite database optimized for edge computing](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code, you get an AI-assisted workflow for building applications that need low-latency data access worldwide. This tutorial covers setting up Turso, connecting it to your project, and using Claude's capabilities to accelerate development.
 
+## Why Turso for Edge Computing?
+
+Edge computing demands databases that are lightweight, fast to start, and capable of running close to users worldwide. Turso is libSQL, an open-source fork of SQLite designed specifically for edge computing and distributed databases. Unlike traditional SQLite, Turso offers replication, edge deployment capabilities, and a cloud-managed platform while maintaining SQLite's simplicity. It addresses edge needs through:
+
+- **Embedded execution**: The libSQL library runs directly in your application process, eliminating network latency
+- **Edge replicas**: Deploy database replicas to hundreds of edge locations globally
+- **HTTP client**: Query Turso over HTTP without maintaining persistent connections
+- **Row-level replication**: Replicate only the data each edge location needs
+
 ## Setting Up Turso SQLite
 
 Before integrating with Claude Code, you need a Turso database instance. Install the Turso CLI and create your first database:
@@ -144,6 +153,131 @@ npx drizzle-kit generate:sqlite
 npx drizzle-kit push:sqlite
 ```
 
+## Python Client with Async Support
+
+For Python projects, Claude Code can generate an async-ready Turso client with proper error handling:
+
+```python
+import libsql_client
+from libsql_client import ResultSet
+import asyncio
+from typing import Optional
+
+class TursoDB:
+    def __init__(self, database_url: str, auth_token: Optional[str] = None):
+        self.database_url = database_url
+        self.auth_token = auth_token
+        self._client: Optional[libsql_client.Client] = None
+
+    async def connect(self):
+        self._client = await libsql_client.connect(
+            url=self.database_url,
+            auth_token=self.auth_token
+        )
+
+    async def execute(self, query: str, parameters: list = None) -> ResultSet:
+        if not self._client:
+            await self.connect()
+        return await self._client.execute(query, parameters or [])
+
+    async def close(self):
+        if self._client:
+            await self._client.close()
+```
+
+With this client, Claude Code can generate parameterized CRUD functions for any table. For example, an upsert-on-conflict pattern for a user preferences table:
+
+```python
+async def insert_user_preference(db: TursoDB, user_id: str, key: str, value: str, edge_location: str) -> dict:
+    result = await db.execute(
+        """INSERT INTO user_preferences (user_id, preference_key, preference_value, edge_location)
+           VALUES (?, ?, ?, ?)
+           ON CONFLICT(user_id, preference_key, edge_location)
+           DO UPDATE SET preference_value = excluded.preference_value,
+                         updated_at = strftime('%s', 'now')""",
+        [user_id, key, value, edge_location]
+    )
+    return {"success": True, "last_insert_rowid": result.last_insert_rowid}
+```
+
+## Edge Replication Patterns
+
+One of Turso's strengths is its ability to replicate data to edge locations. Claude Code can help you design effective replication strategies.
+
+### Edge-First Writes
+
+For applications that write at the edge and sync later, Claude Code can scaffold an `EdgeFirstWriter` class that writes to local replicas first, then syncs to the primary:
+
+```python
+from datetime import datetime
+
+class EdgeFirstWriter:
+    def __init__(self, edge_db: TursoDB, primary_db: TursoDB):
+        self.edge_db = edge_db
+        self.primary_db = primary_db
+
+    async def write_local(self, table: str, data: dict) -> dict:
+        data['_edge_written_at'] = int(datetime.now().timestamp())
+        data['_synced'] = 0
+
+        columns = ', '.join(data.keys())
+        placeholders = ', '.join(['?' for _ in data])
+
+        await self.edge_db.execute(
+            f"INSERT INTO {table} ({columns}) VALUES ({placeholders})",
+            list(data.values())
+        )
+        return {"status": "local_write", "sync_pending": True}
+
+    async def sync_to_primary(self, table: str, local_id: int) -> dict:
+        result = await self.edge_db.execute(
+            f"SELECT * FROM {table} WHERE id = ? AND _synced = 0",
+            [local_id]
+        )
+        if not result.rows:
+            return {"status": "already_synced"}
+
+        record = dict(result.rows[0])
+        del record['id']
+        await self.primary_db.execute(
+            f"INSERT INTO {table} ({', '.join(record.keys())}) VALUES ({', '.join(['?' for _ in record])})",
+            list(record.values())
+        )
+        await self.edge_db.execute(
+            f"UPDATE {table} SET _synced = 1 WHERE id = ?", [local_id]
+        )
+        return {"status": "synced", "table": table, "local_id": local_id}
+```
+
+### Handling Sync Conflicts
+
+When multiple edge locations update the same record, a last-write-wins resolver using `updated_at` timestamps keeps data consistent:
+
+```python
+async def resolve_conflict(edge_db: TursoDB, user_id: str, preference_key: str) -> dict:
+    result = await edge_db.execute(
+        """SELECT * FROM user_preferences
+           WHERE user_id = ? AND preference_key = ?
+           ORDER BY updated_at DESC""",
+        [user_id, preference_key]
+    )
+    versions = [dict(row) for row in result.rows]
+    if len(versions) <= 1:
+        return {"resolved": True, "chosen_version": versions[0] if versions else None}
+
+    winner = versions[0]
+    await edge_db.execute(
+        """DELETE FROM user_preferences
+           WHERE user_id = ? AND preference_key = ? AND id != ?""",
+        [user_id, preference_key, winner['id']]
+    )
+    return {
+        "resolved": True,
+        "chosen_version": winner,
+        "conflicts_resolved": len(versions) - 1
+    }
+```
+
 ## Edge Function Integration
 
 Deploying to edge runtimes like Cloudflare Workers or Vercel Edge requires specific handling. Turso's HTTP endpoint works with these environments:
@@ -204,6 +338,17 @@ const start = Date.now();
 const result = await client.execute(query);
 console.log(`Query took ${Date.now() - start}ms`);
 ```
+
+## Best Practices for Claude Code + Turso
+
+When working with Turso and Claude Code, keep these practices in mind:
+
+1. **Use parameterized queries**: Always use `?` placeholders instead of string interpolation to prevent SQL injection
+2. **Batch operations**: Use bulk inserts when possible to reduce round trips
+3. **Index strategically**: Create indexes on columns used in WHERE clauses and covering indexes for frequent reads
+4. **Handle connection pooling**: Reuse connections when possible for better performance
+5. **Implement retry logic**: Network requests to edge locations can fail; handle transient errors gracefully
+6. **Monitor query performance**: Log query durations and use Turso's dashboard to spot slow queries early
 
 ## Next Steps
 
