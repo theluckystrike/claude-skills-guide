@@ -3,7 +3,7 @@
 
 layout: default
 title: "How to Harden Chrome Privacy in 2026: A Developer Guide"
-description: "A practical guide for developers and power users to harden Chrome privacy settings in 2026. Learn about flags, policies, extensions, and configuration options."
+description: "A practical guide for developers and power users to harden Chrome privacy settings in 2026. Learn about flags, policies, extensions, and configuration."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /harden-chrome-privacy-2026/
@@ -183,5 +183,12 @@ chrome.cookies.getAll({}, cookies => {
 Hardening Chrome privacy requires a layered approach. Command-line flags disable telemetry features, enterprise policies provide persistent configuration, extensions demand careful scrutiny, and network-level protections close remaining gaps.
 
 Start with the settings that match your threat model. For most developers, disabling sync, blocking third-party cookies, and using uBlock Origin provide substantial privacy gains without major usability tradeoffs.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
