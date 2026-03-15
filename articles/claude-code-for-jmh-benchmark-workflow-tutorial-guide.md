@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for JMH Benchmark Workflow Tutorial Guide"
 description: "Learn how to use Claude Code to streamline your JMH benchmark workflow. From project setup to running benchmarks and analyzing results, this guide covers practical examples and actionable advice."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-jmh-benchmark-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for JMH Benchmark Workflow Tutorial Guide
@@ -268,7 +272,7 @@ public void measureSomething(Blackhole bh) {
 
 ## Conclusion
 
-Claude Code transforms JMH benchmarking from a technical challenge into an accessible workflow. By leveraging Claude Code's understanding of Java performance and JMH internals, you can quickly create accurate benchmarks, interpret results correctly, and make informed optimization decisions. Start with simple benchmarks, iterate with Claude Code's guidance, and build confidence in your performance measurements.
+Claude Code transforms JMH benchmarking from a technical challenge into an accessible workflow. By using Claude Code's understanding of Java performance and JMH internals, you can quickly create accurate benchmarks, interpret results correctly, and make informed optimization decisions. Start with simple benchmarks, iterate with Claude Code's guidance, and build confidence in your performance measurements.
 
 Remember: benchmark results are only as good as the benchmark code. Use Claude Code to verify your benchmarks are correct before acting on the numbers.
 {% endraw %}
