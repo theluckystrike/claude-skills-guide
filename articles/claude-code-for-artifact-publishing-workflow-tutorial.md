@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Artifact Publishing Workflow Tutorial"
 description: "Learn how to automate your artifact publishing workflows using Claude Code. This comprehensive tutorial covers practical examples, code snippets, and actionable advice for developers."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-artifact-publishing-workflow-tutorial/
 categories: [tutorials, guides, workflows]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 
 {% raw %}

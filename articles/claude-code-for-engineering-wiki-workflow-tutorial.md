@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Engineering Wiki Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline your engineering wiki workflow. This comprehensive tutorial covers documentation automation, wiki templates, and practical examples for development teams."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-engineering-wiki-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
