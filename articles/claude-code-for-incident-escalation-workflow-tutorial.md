@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Incident Escalation Workflow Tutorial"
 description: "Learn how to build an incident escalation workflow system with Claude Code. This tutorial covers skill creation, escalation logic, notification handling, and practical implementation patterns."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-incident-escalation-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Incident Escalation Workflow Tutorial

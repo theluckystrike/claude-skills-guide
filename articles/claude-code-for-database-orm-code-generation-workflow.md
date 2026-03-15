@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Database ORM Code Generation Workflow"
 description: "A comprehensive guide to generating database ORM code using Claude Code. Learn practical workflows, code examples, and actionable strategies for automating your data layer."
@@ -8,13 +9,16 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-database-orm-code-generation-workflow/
 categories: [workflows]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
 # Claude Code for Database ORM Code Generation Workflow
 
-Database ORM (Object-Relational Mapping) code generation is one of the most impactful areas where Claude Code can dramatically accelerate your development workflow. Rather than manually writing repetitive model classes, migrations, and query builders, you can leverage AI to generate type-safe, well-structured ORM code that follows best practices and integrates seamlessly with your existing codebase.
+Database ORM (Object-Relational Mapping) code generation is one of the most impactful areas where Claude Code can dramatically accelerate your development workflow. Rather than manually writing repetitive model classes, migrations, and query builders, you can use AI to generate type-safe, well-structured ORM code that follows best practices and integrates smoothly with your existing codebase.
 
 This guide walks you through a practical workflow for generating ORM code using Claude Code, from initial setup to advanced customization strategies.
 
@@ -164,7 +168,7 @@ Follow these best practices to get the most out of ORM code generation:
 
 ## Conclusion
 
-Claude Code transforms ORM development from a repetitive, error-prone task into a streamlined, efficient workflow. By providing clear specifications, leveraging framework-specific knowledge, and integrating code generation into your development process, you can significantly reduce the time spent on data layer code while maintaining high quality standards.
+Claude Code transforms ORM development from a repetitive, error-prone task into a streamlined, efficient workflow. By providing clear specifications, using framework-specific knowledge, and integrating code generation into your development process, you can significantly reduce the time spent on data layer code while maintaining high quality standards.
 
 Start with simple models and gradually incorporate more advanced patterns as you become comfortable with the workflow. The key is providing clear, detailed specifications that give Claude Code everything it needs to generate accurate, production-ready code.
 
