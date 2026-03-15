@@ -2,8 +2,8 @@
 
 
 layout: default
-title: "Chrome Extension Lighthouse Audit Runner: Automate Performance Testing"
-description: "Learn how to build a Chrome extension that runs Lighthouse audits programmatically, automates performance testing, and integrates with your development workflow."
+title: "Chrome Extension Lighthouse Audit Runner: Automate."
+description: "Learn how to build a Chrome extension that runs Lighthouse audits programmatically, automates performance testing, and integrates with your development."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-lighthouse-audit-runner/
@@ -211,5 +211,12 @@ Finally, remember that Lighthouse represents synthetic testing. Real user monito
 
 A Chrome extension Lighthouse audit runner bridges the gap between ad-hoc browser testing and automated performance monitoring. By embedding this capability directly in your browser, you gain immediate access to performance metrics without external tooling, making it valuable for quick iterations during development and for establishing baseline measurements before deployment.
 {% endraw %}
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

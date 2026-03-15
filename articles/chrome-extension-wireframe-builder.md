@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Wireframe Builder: A Developer's Guide"
-description: "Learn how to build and use Chrome extension wireframe builders for rapid prototyping. Covers implementation patterns, code examples, and practical workflows for developers."
+description: "Learn how to build and use Chrome extension wireframe builders for rapid prototyping. Covers implementation patterns, code examples, and practical."
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-wireframe-builder/
@@ -201,5 +201,12 @@ function addElements(elements) {
 Chrome extension wireframe builders offer developers a powerful way to prototype interfaces without leaving their workflow. Whether you build custom tools tailored to your needs or adopt existing solutions, incorporating wireframing into your development process improves communication, reduces rework, and accelerates the design-to-code pipeline.
 
 The key is starting simple—focus on the components and export formats you need most, then expand as your requirements grow.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

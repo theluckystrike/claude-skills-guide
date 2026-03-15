@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Auto Caption Video: Building Real-Time Subtitling Tools"
-description: "Learn how to build a Chrome extension that provides automatic video captions. This guide covers the Web Speech API, content script injection, and practical implementation for developers."
+title: "Chrome Extension Auto Caption Video: Building Real-Time."
+description: "Learn how to build a Chrome extension that provides automatic video captions. This guide covers the Web Speech API, content script injection, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-auto-caption-video/
@@ -270,5 +270,12 @@ Building a Chrome extension for auto-captioning video combines web APIs, browser
 The key challenges involve capturing system audio, handling platform-specific video players, and managing recognition accuracy across different audio environments. Start with the basic implementation and iterate based on user feedback and testing results.
 
 For developers interested in extending this functionality, consider adding support for multiple languages, exporting captions as SRT files, or integrating with external transcription services for higher accuracy.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

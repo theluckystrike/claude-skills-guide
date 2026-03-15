@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Academic Paper Finder: A Developer Guide"
-description: "Discover the best Chrome extensions for finding academic papers. Learn how to use these tools effectively for research, with code examples and practical tips."
+description: "Discover the best Chrome extensions for finding academic papers. Learn how to use these tools effectively for research, with code examples and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-academic-paper-finder/
@@ -187,5 +187,12 @@ Your choice depends on workflow priorities:
 Many researchers use multiple extensions together. Zotero handles collection and citation, while Semantic Scholar provides context on search results.
 
 The best approach starts with identifying where you spend most time, then selecting tools that address those specific pain points rather than installing every available option.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
