@@ -205,5 +205,12 @@ Privacy considerations matter significantly for vocabulary extensions since you'
 
 AI vocabulary builder chrome extensions combine browser APIs with large language models to create powerful learning tools. The implementation patterns shown here provide a foundation for building extensions that capture context, provide intelligent definitions, and integrate with spaced repetition systems. Focus on user privacy, performance optimization, and meaningful AI integration to create extensions that genuinely help users expand their vocabulary.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

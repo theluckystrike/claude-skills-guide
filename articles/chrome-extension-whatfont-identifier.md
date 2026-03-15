@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension WhatFont Identifier: Identify Fonts on Any Website"
-description: "Discover how to use WhatFont identify extensions in Chrome to instantly discover font families, sizes, and styles used on any website. A practical guide for developers and designers."
+title: "Chrome Extension WhatFont Identifier: Identify Fonts on."
+description: "Discover how to use WhatFont identify extensions in Chrome to instantly discover font families, sizes, and styles used on any website. A practical."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-whatfont-identifier/
@@ -114,6 +114,13 @@ Some websites use font loading techniques like FOUT (Flash of Unstyled Text) or 
 A WhatFont identifier extension is an indispensable tool for anyone working with web typography. By providing instant access to computed font styles, these extensions accelerate design discovery, help maintain consistency in development projects, and deepen your understanding of how successful websites achieve their visual identity.
 
 The best approach is to install a well-maintained extension, experiment with different websites, and build your personal knowledge base of typography choices that resonate with your design goals.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

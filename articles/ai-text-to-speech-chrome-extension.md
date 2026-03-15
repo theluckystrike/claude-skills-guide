@@ -2,7 +2,7 @@
 
 layout: default
 title: "AI Text to Speech Chrome Extension: A Developer's Guide"
-description: "A comprehensive guide to AI-powered text to speech Chrome extensions for developers and power users. Learn about implementation, APIs, and practical usage patterns."
+description: "A comprehensive guide to AI-powered text to speech Chrome extensions for developers and power users. Learn about implementation, APIs, and practical."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-text-to-speech-chrome-extension/
@@ -181,5 +181,12 @@ AI text to speech Chrome extensions provide powerful capabilities for consuming 
 For developers, the extension platform provides robust APIs for building sophisticated TTS tools. Power users benefit from the growing ecosystem of extensions that use AI for natural-sounding voice output. Evaluate your specific requirements, test multiple solutions, and choose the approach that best fits your workflow.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
