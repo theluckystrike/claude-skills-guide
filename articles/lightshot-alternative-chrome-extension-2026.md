@@ -169,4 +169,11 @@ For most developers in 2026, **ShareX** (Windows) or **CleanShot X** (macOS) pro
 
 The right alternative ultimately depends on your workflow. If Lightshot still serves your basic needs, these alternatives become valuable when you need more—OCR for accessibility documentation, API integration for automated bug reporting, or cloud sync for team environments.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

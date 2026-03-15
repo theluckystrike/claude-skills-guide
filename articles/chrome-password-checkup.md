@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Password Checkup: Complete Guide for Developers and Power Users"
-description: "Learn how to use Chrome's built-in password checkup feature to identify compromised credentials, weak passwords, and security vulnerabilities across your accounts."
+title: "Chrome Password Checkup: Complete Guide for Developers."
+description: "Learn how to use Chrome's built-in password checkup feature to identify compromised credentials, weak passwords, and security vulnerabilities across."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-password-checkup/
@@ -169,6 +169,13 @@ console.log(`Found ${oldPasswords.length} passwords older than 30 days`);
 Chrome password checkup provides a valuable layer of security for developers and power users. Its integration with the browser makes it convenient for quick audits, while the k-anonymity approach demonstrates thoughtful privacy implementation. However, it works best as part of a comprehensive password management strategy rather than as a standalone solution.
 
 For developers managing multiple environments and services, combining Chrome's built-in checkup with dedicated password managers, regular security audits, and proper secret management practices creates a robust security posture. The key is treating password security as an ongoing process rather than a one-time configuration.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
