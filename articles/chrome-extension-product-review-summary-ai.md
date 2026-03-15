@@ -1,0 +1,221 @@
+---
+layout: default
+title: "Chrome Extension Product Review Summary AI: A Developer Guide"
+description: "Learn how to build and use Chrome extensions that leverage AI to summarize product reviews. Technical implementation, API patterns, and practical code examples."
+date: 2026-03-15
+categories: [guides]
+tags: [chrome-extension, ai, product-reviews, summarization, web-development]
+author: theluckystrike
+permalink: /chrome-extension-product-review-summary-ai/
+---
+
+# Chrome Extension Product Review Summary AI: A Developer Guide
+
+Product reviews are everywhere—Amazon, G2, Capterra, Trustpilot. For developers building e-commerce tools, comparison engines, or shopping assistants, extracting meaningful insights from thousands of reviews manually is impractical. This guide shows you how to build a Chrome extension that uses AI to summarize product reviews directly in the browser.
+
+## Why Build a Review Summary Extension
+
+The average product page displays dozens or hundreds of reviews. Reading through them takes time your users don't have. A Chrome extension that injects AI-generated summaries solves this problem by:
+
+- Condensing hundreds of reviews into actionable insights
+- Identifying common pain points and praised features
+- Extracting sentiment scores for quick decision-making
+- Providing visual highlights of key phrases
+
+For developers, this is also a practical project for learning modern extension development patterns, API integration, and AI text processing.
+
+## Architecture Overview
+
+A Chrome extension for review summarization consists of three main components:
+
+1. **Content Script** – Injected into the page to extract review text
+2. **Background Service Worker** – Handles API communication and caching
+3. **Popup/Options Page** – User interface for configuration
+
+The AI summarization typically happens server-side using an API like OpenAI, Anthropic, or a self-hosted model. The extension collects reviews, sends them to the API, and displays the generated summary.
+
+## Step-by-Step Implementation
+
+### 1. Manifest Configuration
+
+Your `manifest.json` defines the extension's permissions and entry points:
+
+```json
+{
+  "manifest_version": 3,
+  "name": "AI Review Summarizer",
+  "version": "1.0",
+  "description": "AI-powered product review summaries",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["*://*.amazon.com/*", "*://*.g2.com/*"],
+  "content_scripts": [{
+    "matches": ["*://*.amazon.com/*", "*://*.g2.com/*", "*://*.trustpilot.com/*"],
+    "js": ["content.js"]
+  }],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
+```
+
+The `host_permissions` field is critical—it grants the extension access to read content from specific domains where reviews appear.
+
+### 2. Extracting Reviews with Content Scripts
+
+Each e-commerce site structures reviews differently. You'll need site-specific selectors:
+
+```javascript
+// content.js - Amazon example
+function extractAmazonReviews() {
+  const reviewElements = document.querySelectorAll('[data-hook="review"]');
+  return Array.from(reviewElements).map(el => {
+    const text = el.querySelector('[data-hook="review-body"]')?.textContent;
+    const rating = el.querySelector('[data-hook="review-star-rating"]')?.textContent;
+    return { text, rating };
+  }).filter(r => r.text);
+}
+
+// content.js - Generic wrapper
+function getReviewsForCurrentSite() {
+  const hostname = window.location.hostname;
+  if (hostname.includes('amazon')) return extractAmazonReviews();
+  if (hostname.includes('g2')) return extractG2Reviews();
+  if (hostname.includes('trustpilot')) return extractTrustpilotReviews();
+  return [];
+}
+```
+
+### 3. Sending Data to Your Summarization API
+
+The background script handles API communication:
+
+```javascript
+// background.js
+async function summarizeReviews(reviews, apiKey) {
+  const prompt = `Summarize the following product reviews into 3-4 bullet points. 
+  Identify: 1) Main pros 2) Main cons 3) Overall sentiment.
+  
+  Reviews:
+  ${reviews.map(r => `- ${r.text}`).join('\n')}`;
+
+  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      model: 'gpt-4o-mini',
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 300
+    })
+  });
+
+  const data = await response.json();
+  return data.choices[0].message.content;
+}
+```
+
+### 4. Displaying Results in the Page
+
+Rather than forcing users to open the popup, inject summaries directly into the page:
+
+```javascript
+// content.js - Display the summary
+function displaySummary(summaryText) {
+  // Remove existing summary if present
+  const existing = document.getElementById('ai-review-summary');
+  if (existing) existing.remove();
+
+  const summaryDiv = document.createElement('div');
+  summaryDiv.id = 'ai-review-summary';
+  summaryDiv.style.cssText = `
+    background: #f8f9fa;
+    border-left: 4px solid #4f46e5;
+    padding: 16px;
+    margin: 16px 0;
+    font-family: system-ui, sans-serif;
+    max-width: 800px;
+  `;
+  
+  summaryDiv.innerHTML = `
+    <h3 style="margin-top:0;color:#4f46e5">AI Summary</h3>
+    <div style="white-space:pre-line">${summaryText}</div>
+    <button id="refresh-summary" style="margin-top:8px;cursor:pointer">
+      Regenerate
+    </button>
+  `;
+
+  // Insert at top of reviews section
+  const reviewsContainer = document.querySelector('#reviews') || 
+                           document.querySelector('[data-hook="reviews"]') ||
+                           document.querySelector('.reviews');
+  if (reviewsContainer) {
+    reviewsContainer.prepend(summaryDiv);
+  }
+}
+```
+
+## Handling API Costs and Rate Limits
+
+Calling an AI API for every page load gets expensive fast. Implement these strategies:
+
+**Caching**: Store summaries with a hash of the review texts as the key. Check cache before calling the API.
+
+```javascript
+async function getSummaryWithCache(reviews, apiKey) {
+  const cacheKey = generateHash(JSON.stringify(reviews));
+  const cached = await chrome.storage.local.get(cacheKey);
+  
+  if (cached[cacheKey]) {
+    return cached[cacheKey];
+  }
+  
+  const summary = await summarizeReviews(reviews, apiKey);
+  await chrome.storage.local.set({ [cacheKey]: summary });
+  return summary;
+}
+```
+
+**Batch Processing**: Limit summaries to pages with 10+ reviews. Skip pages with too few reviews to justify the API call.
+
+**User-Provided Keys**: Let users supply their own API key rather than footing the bill yourself. Store it securely with `chrome.storage.session`.
+
+## Practical Considerations
+
+**Privacy**: Your extension reads review text from third-party pages. Be transparent about this in your privacy policy and only send data to AI APIs when the user explicitly triggers summarization.
+
+**Site Compatibility**: E-commerce sites frequently update their HTML. Build selector flexibility into your content scripts and provide user feedback when extraction fails.
+
+**Token Limits**: Review text adds up quickly. Truncate or sample reviews if they exceed your API's context window:
+
+```javascript
+function truncateReviews(reviews, maxLength = 8000) {
+  let total = '';
+  const selected = [];
+  
+  for (const review of reviews) {
+    if ((total + review.text).length > maxLength) break;
+    total += review.text + ' ';
+    selected.push(review);
+  }
+  return selected;
+}
+```
+
+## Alternative Approaches
+
+If building from scratch isn't your goal, several existing tools handle this:
+
+- Browser extensions like "RevView AI" aggregate and summarize reviews
+- Bookmarklets can run simpler JavaScript-based analysis
+- Server-side solutions with browser automation (Puppeteer) for bulk processing
+
+For developers, building your own extension gives you full control over the summarization logic, the UI, and which sites to support.
+
+---
+
+Ready to build? Start with the manifest and content script above, add your API integration, and test on a single e-commerce site first. Expand to additional sites as you refine your extraction selectors.
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
