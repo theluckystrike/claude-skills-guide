@@ -131,7 +131,7 @@ Many extensions offer free tiers with limited usage, making them accessible for 
 
 ## Future Directions
 
-The AI autocomplete extension landscape continues evolving rapidly. Emerging trends include local model inference directly within the extension, reducing latency and privacy concerns. Browser vendors are also exploring built-in AI features that may reduce reliance on third-party extensions.
+The AI autocomplete extension market continues evolving rapidly. Emerging trends include local model inference directly within the extension, reducing latency and privacy concerns. Browser vendors are also exploring built-in AI features that may reduce reliance on third-party extensions.
 
 Integration with development workflows will deepen, with extensions that understand project structure, access documentation, and coordinate with IDE-based completions. The boundary between browser-based and editor-based AI assistance continues blurring as developers expect consistent intelligence across all text input contexts.
 
