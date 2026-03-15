@@ -256,7 +256,7 @@ Start small. Document one module thoroughly, then expand to other components. Th
 ## Related Reading
 
 - [Claude Code vs Copilot: Code Documentation Generation](/claude-skills-guide/claude-code-vs-copilot-code-documentation-generation/) — How Claude Code compares to GitHub Copilot for documentation tasks
-- [Claude Code Readme Generation Automation](/claude-skills-guide/claude-code-readme-generation-automation/) — README is a key documentation artifact
+
 - [Claude Code Changelog Generation Workflow](/claude-skills-guide/claude-code-changelog-generation-workflow/) — Changelogs are part of complete documentation
 - [Claude Code Confluence Documentation Guide](/claude-skills-guide/claude-code-confluence-documentation-guide/) — Confluence is a popular documentation platform
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Documentation and content workflow guides

@@ -162,7 +162,7 @@ This ensures Claude Code itself understands your validation requirements and can
 Several Claude Skills enhance validation workflows:
 
 - **static-analysis-automation**: Runs comprehensive static analysis
-- **claude-code-code-review-checklist-automation**: Generates review checklists
+- **claude-code-for-code-review-checklist-workflow-guide**: Generates review checklists
 - **claude-code-secret-scanning-prevent-credential-leaks-guide**: Checks for exposed secrets
 - **claude-code-git-hooks-pre-commit-automation**: Sets up pre-commit hooks
 
@@ -170,7 +170,7 @@ Install these skills to create a robust validation infrastructure:
 
 ```bash
 # Place static-analysis-automation.md in .claude/ then invoke: /static-analysis-automation
-# Place claude-code-code-review-checklist-automation.md in .claude/ then invoke: /claude-code-code-review-checklist-automation
+# Place claude-code-for-code-review-checklist-workflow-guide.md in .claude/ then invoke: /claude-code-for-code-review-checklist-workflow-guide
 ```
 
 ## Best Practices for Effective Validation

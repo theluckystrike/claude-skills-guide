@@ -264,7 +264,6 @@ The key is starting simple and expanding gradually. Begin with basic checks, the
 ## Related Reading
 
 - [Understanding Claude Code Hooks System: Complete Guide](/claude-skills-guide/understanding-claude-code-hooks-system-complete-guide/) — Claude Code hooks and git hooks work together
-- [Claude Code Conventional Commits Automation](/claude-skills-guide/claude-code-conventional-commits-automation/) — Pre-commit hooks enforce conventional commit format
 - [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Pre-commit hooks are a git best practice
 - [Claude Code Release Automation GitHub Guide](/claude-skills-guide/claude-code-release-automation-github-guide/) — Hooks are part of the full release automation pipeline
 

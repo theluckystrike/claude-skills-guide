@@ -288,7 +288,6 @@ Merge conflicts are a normal part of development. With Claude Code and the strat
 ## Related Reading
 
 - [Claude Code for End of Day Commit Workflow](/claude-skills-guide/claude-code-for-end-of-day-commit-workflow/) — Clean commit habits reduce merge conflicts
-- [Claude Code Conventional Commits Automation](/claude-skills-guide/claude-code-conventional-commits-automation/) — Structured commits make conflict resolution easier
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Tests validate that conflict resolutions are correct
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More git and development workflow guides
 

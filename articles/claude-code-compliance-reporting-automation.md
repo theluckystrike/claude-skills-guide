@@ -163,7 +163,7 @@ Start with one automation use case, measure the time savings, and expand gradual
 
 ## Related Reading
 
-- [Claude Code Audit Log Implementation Guide](/claude-skills-guide/claude-code-audit-log-implementation-guide/)
+
 - [Claude Code GDPR Compliance Implementation](/claude-skills-guide/claude-code-gdpr-compliance-implementation/)
 - [Claude Code Data Retention Policy Workflow](/claude-skills-guide/claude-code-data-retention-policy-workflow/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)

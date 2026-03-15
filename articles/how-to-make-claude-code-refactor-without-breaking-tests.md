@@ -171,7 +171,6 @@ This approach transforms refactoring from a stressful, error-prone activity into
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — TDD ensures refactors stay green
 - [Claude Code Cyclomatic Complexity Reduction](/claude-skills-guide/claude-code-cyclomatic-complexity-reduction/) — Complexity reduction is a refactoring goal
-- [Best Way to Combine Claude Code with Unit Testing](/claude-skills-guide/best-way-to-combine-claude-code-with-unit-testing/) — Tests are the safety net for refactoring
 - [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — Refactoring toward DRY/SOLID with test safety
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

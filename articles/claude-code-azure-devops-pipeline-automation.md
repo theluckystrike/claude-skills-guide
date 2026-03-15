@@ -144,7 +144,7 @@ Integrate automated code review within your pipeline using Azure DevOps pull req
             artifactName: 'code-quality'
 ```
 
-The claude-code-code-review-checklist-automation skill helps you create standardized review workflows. This skill generates checklists based on your team's coding standards and automatically validates PR descriptions, ensuring consistent review quality across the organization.
+The claude-code-for-code-review-checklist-workflow-guide skill helps you create standardized review workflows. This skill generates checklists based on your team's coding standards and automatically validates PR descriptions, ensuring consistent review quality across the organization.
 
 ## Creating Deployment Approval Workflows
 

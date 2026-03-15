@@ -432,6 +432,5 @@ The key is starting small: add accessibility checks to your next pull request, g
 - [Claude Code Axe Accessibility Testing Guide](/claude-skills-guide/claude-code-axe-accessibility-testing-guide/) — Axe is a core tool for accessibility regression testing
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/) — WCAG audits provide the baseline for regression testing
 - [Claude Code Aria Labels Implementation Guide](/claude-skills-guide/claude-code-aria-labels-implementation-guide/) — ARIA label regressions are among the most common
-- [Best Way to Combine Claude Code with Unit Testing](/claude-skills-guide/best-way-to-combine-claude-code-with-unit-testing/) — Accessibility regression tests are a category of unit tests
 
 Built by theluckystrike — More at https://zovo.one

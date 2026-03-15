@@ -193,7 +193,6 @@ Coverage metrics serve as a guide, not a scorecard. The real goal is confidence 
 
 ## Related Reading
 
-- [Best Way to Combine Claude Code with Unit Testing](/claude-skills-guide/best-way-to-combine-claude-code-with-unit-testing/) — Unit testing is the foundation of code coverage
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — TDD naturally drives higher coverage
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Automate coverage reporting in CI
 - [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — Low coverage is a technical debt indicator

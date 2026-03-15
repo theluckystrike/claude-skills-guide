@@ -178,7 +178,7 @@ Start with a data audit to map where PII appears in your system, then implement 
 
 - [Claude Code GDPR Compliance Implementation](/claude-skills-guide/claude-code-gdpr-compliance-implementation/)
 - [Claude Code CCPA Privacy Compliance Guide](/claude-skills-guide/claude-code-ccpa-privacy-compliance-guide/)
-- [Claude Code Audit Log Implementation Guide](/claude-skills-guide/claude-code-audit-log-implementation-guide/)
+
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

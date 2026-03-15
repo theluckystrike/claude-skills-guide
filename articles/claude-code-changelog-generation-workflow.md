@@ -211,7 +211,6 @@ The key advantage: what previously required hours of manual compilation now take
 ## Related Reading
 
 - [Claude Skills for Automated Changelog Generation](/claude-skills-guide/claude-skills-for-automated-changelog-generation/) — Build the skill .md files that power this workflow (changelog-generator, changelog-filter, changelog-formatter, changelog-summarizer)
-- [Claude Code Conventional Commits Automation](/claude-skills-guide/claude-code-conventional-commits-automation/) — Conventional commits make changelog generation automatic
 - [Claude Code Semantic Versioning Automation](/claude-skills-guide/claude-code-semantic-versioning-automation/) — Combine with changelogs for full release automation
 - [Claude Code Git Commit Message Generator Guide](/claude-skills-guide/claude-code-git-commit-message-generator-guide/) — Better commit messages produce better changelogs
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More automation workflow guides

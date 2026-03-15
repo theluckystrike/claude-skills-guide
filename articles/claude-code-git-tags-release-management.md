@@ -135,7 +135,6 @@ Start with annotated tags for releases, establish clear naming conventions, and 
 
 ## Related Reading
 
-- [Claude Code Semantic Versioning Automation](/claude-skills-guide/claude-code-semantic-versioning-automation/) — Semantic versioning drives git tag naming
 - [Claude Code Changelog Generation Workflow](/claude-skills-guide/claude-code-changelog-generation-workflow/) — Tags trigger changelog generation
 - [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Tags are part of git best practices
 - [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Tags trigger CI/CD release pipelines

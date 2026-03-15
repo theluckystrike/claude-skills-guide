@@ -269,7 +269,6 @@ The investment in proper setup—authentication, permission controls, and checkp
 ## Related Reading
 
 - [Claude Code GitHub Actions Approval Workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/) — GitHub Actions integration specifics
-- [Claude Code Conventional Commits Automation](/claude-skills-guide/claude-code-conventional-commits-automation/) — Complement CI/CD with automated commit formatting
 - [Claude Code Semantic Versioning Automation](/claude-skills-guide/claude-code-semantic-versioning-automation/) — Automate versioning as part of your CI pipeline
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — All CI/CD and automation workflow guides
 

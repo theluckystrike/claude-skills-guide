@@ -231,7 +231,7 @@ Start with the checklist items that affect your project most, build incrementall
 
 ## Related Reading
 
-- [Claude Code Code Review Checklist Automation](/claude-skills-guide/claude-code-code-review-checklist-automation/) — General code review checklist automation covering security, tests, style, and documentation in a single workflow
+
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise security patterns including SIEM audit logging and ACL enforcement
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills that complement automated security review workflows
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep automated code review sessions affordable at scale

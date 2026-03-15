@@ -184,7 +184,7 @@ Start with simple API calls, then layer in automation patterns as your requireme
 
 ## Related Reading
 
-- [Claude Code Readme Documentation Guide](/claude-skills-guide/claude-code-readme-documentation-guide/)
+
 - [Claude Code Confluence Documentation Guide](/claude-skills-guide/claude-code-confluence-documentation-guide/)
 - [Claude Code Swagger Documentation Workflow](/claude-skills-guide/claude-code-swagger-documentation-workflow/)
 - [Claude Skills Integrations Hub](/claude-skills-guide/integrations-hub/)

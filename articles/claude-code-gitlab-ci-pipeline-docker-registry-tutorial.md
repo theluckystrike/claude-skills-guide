@@ -13,7 +13,7 @@ permalink: /claude-code-gitlab-ci-pipeline-docker-registry-tutorial/
 
 # Claude Code GitLab CI Pipeline Docker Registry Tutorial
 
-This tutorial walks you through building a complete GitLab CI pipeline from scratch — project structure, Dockerfile, enabling the Container Registry, and configuring build, test, and push stages. If you are looking for how to run Claude Code as a live AI stage inside an existing pipeline, see the [Claude Code GitLab CI Docker Registry Workflow](/claude-code-gitlab-ci-docker-registry-workflow/) guide instead.
+This tutorial walks you through building a complete GitLab CI pipeline from scratch — project structure, Dockerfile, enabling the Container Registry, and configuring build, test, and push stages.
 
 [Setting up automated deployments with GitLab CI and Docker Registry streamlines your development workflow significantly.](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) By the end of this tutorial you will have a pipeline that builds Docker images, runs unit and integration tests in containers, scans for vulnerabilities, and pushes to GitLab's integrated private registry.
 

@@ -161,7 +161,6 @@ Whether you're working on a small project or enterprise application, integrating
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Test data generation supports TDD workflows
 - [Claude Code Mutation Testing Workflow Guide](/claude-skills-guide/claude-code-mutation-testing-workflow-guide/) — Good test data improves mutation testing quality
-- [Best Way to Combine Claude Code with Unit Testing](/claude-skills-guide/best-way-to-combine-claude-code-with-unit-testing/) — Test data is fundamental to unit testing
 - [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More testing workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
