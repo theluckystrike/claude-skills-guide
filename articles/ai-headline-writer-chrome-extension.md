@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "AI Headline Writer Chrome Extension: Tools for Creating Compelling Headlines"
 description: "A practical guide to AI-powered headline writing Chrome extensions. Learn how to generate catchy titles for blog posts, articles, and marketing content directly in your browser."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-headline-writer-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 # AI Headline Writer Chrome Extension: Tools for Creating Compelling Headlines
 

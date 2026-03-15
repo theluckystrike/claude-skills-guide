@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome iOS Slow Fix: Complete Troubleshooting Guide for Developers"
 description: "Fix Chrome running slow on iPhone and iPad with developer-tested solutions. Learn memory management, background process optimization, and performance tuning."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-ios-slow-fix/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [chrome, claude-skills]
 ---
+
 
 # Chrome iOS Slow Fix: Complete Troubleshooting Guide for Developers
 
