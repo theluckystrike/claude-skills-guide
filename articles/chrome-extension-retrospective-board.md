@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Retrospective Board: Agile Tools for."
-description: "A comprehensive guide to Chrome extension retrospective boards for development teams. Compare top tools, features, and implementation strategies for."
+title: "Chrome Extension Retrospective Board: Agile Tools for Browser-Based Teams"
+description: "A comprehensive guide to Chrome extension retrospective boards for development teams. Compare top tools, features, and implementation strategies for effective sprint retrospectives."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-retrospective-board/
