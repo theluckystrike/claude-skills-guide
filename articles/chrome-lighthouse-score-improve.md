@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Lighthouse Score Improve: A Practical Guide for Developers"
 description: "Learn proven techniques to improve your Chrome Lighthouse score. Includes code examples, performance optimization strategies, and real-world tips for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-lighthouse-score-improve/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 # Chrome Lighthouse Score Improve: A Practical Guide for Developers
 
@@ -170,7 +176,7 @@ window.addEventListener('scroll', handleScroll, { passive: true });
 
 The `passive: true` option tells browsers the listener will not call `preventDefault()`, allowing smoother scrolling.
 
-## Leveraging Browser Caching
+## using Browser Caching
 
 Setting appropriate cache headers reduces repeat visit times significantly.
 
@@ -209,6 +215,6 @@ Track your scores over time and set improvement targets. A score above 90 is con
 
 ## Summary
 
-Improving your Chrome Lighthouse score requires addressing multiple fronts: optimizing images, reducing JavaScript blocking time, preventing layout shifts, minimizing main thread work, and leveraging caching. Start with the changes that provide the biggest impact for your specific site, measure results after each change, and iterate systematically.
+Improving your Chrome Lighthouse score requires addressing multiple fronts: optimizing images, reducing JavaScript blocking time, preventing layout shifts, minimizing main thread work, and using caching. Start with the changes that provide the biggest impact for your specific site, measure results after each change, and iterate systematically.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

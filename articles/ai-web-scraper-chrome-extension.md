@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Web Scraper Chrome Extension: A Developer Guide"
 description: "Learn how to build and use AI-powered web scrapers as Chrome extensions. Practical examples, code snippets, and architecture patterns for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-web-scraper-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 Building an AI web scraper Chrome extension combines browser automation with large language models to extract structured data from dynamic web pages. This guide covers the architecture, implementation patterns, and practical considerations for developers building these tools.
 
