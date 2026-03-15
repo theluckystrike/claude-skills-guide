@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for OpenAPI Zod Client Workflow"
 description: "Learn how to leverage Claude Code to streamline your OpenAPI to Zod client workflow with practical examples and actionable advice."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-openapi-zod-client-workflow/
 categories: [Development, TypeScript, API]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 7
 ---
+
 
 {% raw %}
 # Claude Code for OpenAPI Zod Client Workflow
@@ -217,7 +221,7 @@ const UserSchema = z.object({
 
 ## Conclusion
 
-Claude Code transforms the OpenAPI to Zod workflow from a manual, error-prone process into an automated, type-safe pipeline. By leveraging Claude's ability to generate schemas, clients, and validation logic, you can focus on building features instead of fighting types.
+Claude Code transforms the OpenAPI to Zod workflow from a manual, error-prone process into an automated, type-safe pipeline. By using Claude's ability to generate schemas, clients, and validation logic, you can focus on building features instead of fighting types.
 
 Start small: generate your first Zod schema from an OpenAPI spec, then expand to full client generation. The time savings compound quickly, and your code becomes more reliable with each iteration.
 
