@@ -5,6 +5,10 @@ description: "Learn how to build a Chrome extension that helps developers and po
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-prime-day-deal-finder/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
