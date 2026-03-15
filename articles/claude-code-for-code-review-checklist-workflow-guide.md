@@ -241,4 +241,11 @@ To maximize the benefit of your Claude Code review workflow, integrate it natura
 Implementing a structured code review checklist workflow with Claude Code transforms ad-hoc reviews into consistent, thorough quality assurance processes. By following the patterns in this guide, you can reduce missed issues, improve feedback quality, and make the code review process more efficient for your entire team.
 
 The key is starting simple—implement a basic checklist first, then refine and expand as your team identifies additional needs. Claude Code's flexibility allows you to adapt the workflow to your specific requirements while maintaining the structure that ensures comprehensive reviews every time.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

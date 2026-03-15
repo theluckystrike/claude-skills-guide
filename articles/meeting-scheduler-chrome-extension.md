@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Building a Meeting Scheduler Chrome Extension: A Developer's Guide"
-description: "Learn how to build a meeting scheduler Chrome extension from scratch. Technical implementation guide with practical code examples for developers and power users."
+title: "Building a Meeting Scheduler Chrome Extension: A."
+description: "Learn how to build a meeting scheduler Chrome extension from scratch. Technical implementation guide with practical code examples for developers and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /meeting-scheduler-chrome-extension/
@@ -240,5 +240,12 @@ For unit testing core logic, consider using Node.js with a mock for the Chrome A
 Building a meeting scheduler Chrome extension requires understanding Chrome's extension architecture, OAuth flows for calendar providers, and secure data handling practices. The components outlined here—manifest configuration, popup interface, background worker, and content scripts—provide a foundation for creating powerful scheduling tools.
 
 With these building blocks, you can extend functionality to support recurring meetings, meeting notifications, conflict detection, and integration with video conferencing platforms. The key is maintaining clean separation between your UI, business logic, and external API integrations.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

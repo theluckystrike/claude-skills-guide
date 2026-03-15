@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building a Chrome Extension Invoice Generator for Freelance Work"
+title: "Building a Chrome Extension Invoice Generator for."
 description: "Learn how to create a Chrome extension that generates invoices directly from your browser. A practical guide for developers and freelancers."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -200,6 +200,13 @@ To test your extension in Chrome:
 A custom Chrome extension invoice generator gives freelancers full control over their billing workflow without recurring software costs. The implementation above provides a foundation you can expand based on your specific requirements.
 
 The extension stores all data locally using Chrome's storage API, ensuring your client information never leaves your machine. Print-to-PDF functionality provides professional-looking invoices that you can send directly to clients.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -3,7 +3,7 @@
 
 layout: default
 title: "Chrome Extension Linear Issue Tracker: A Developer's Guide"
-description: "Learn how to build and use Chrome extensions for Linear issue tracking. Practical code examples, API integration patterns, and best practices for developers."
+description: "Learn how to build and use Chrome extensions for Linear issue tracking. Practical code examples, API integration patterns, and best practices for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-linear-issue-tracker/
@@ -317,5 +317,12 @@ Building a Chrome extension for Linear issue tracking gives you instant access t
 Start with the basic issue creation flow, then add features like assigned issue viewing and quick actions based on your team's specific needs. The investment in building this extension pays dividends in time saved throughout your development workday.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

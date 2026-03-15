@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Workload Balance Tracker: A Developer's Guide"
-description: "Learn how to build a Chrome extension that tracks and balances your workload across projects. Practical code examples and implementation tips for developers."
+title: "Chrome Extension Workload Balance Tracker: A Developer's."
+description: "Learn how to build a Chrome extension that tracks and balances your workload across projects. Practical code examples and implementation tips for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-workload-balance-tracker/
@@ -261,5 +261,12 @@ document.getElementById('exportBtn').addEventListener('click', async () => {
 Beyond the core functionality, consider adding these features: project switching that automatically categorizes based on active project context, Pomodoro-style work intervals with break reminders, weekly reports emailed or saved to cloud storage, and integration with task management APIs to correlate time with specific tasks or issues.
 
 The extension architecture supports easy expansion. Adding new categories requires only updating the pattern matching logic. Storage scaling handles extended use through periodic cleanup of old sessions and optional cloud sync for users who need cross-device access.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

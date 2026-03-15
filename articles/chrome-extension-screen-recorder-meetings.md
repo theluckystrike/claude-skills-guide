@@ -2,8 +2,8 @@
 
 
 layout: default
-title: "Chrome Extension Screen Recorder for Meetings: A Developer Guide"
-description: "Learn how to build a Chrome extension that records screen and audio during meetings. Complete implementation guide with code examples for developers and power users."
+title: "Chrome Extension Screen Recorder for Meetings: A."
+description: "Learn how to build a Chrome extension that records screen and audio during meetings. Complete implementation guide with code examples for developers."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-screen-recorder-meetings/
@@ -513,6 +513,13 @@ Building a Chrome extension for meeting screen recording combines several powerf
 This guide provides a foundation you can extend with features like automatic transcription integration, cloud storage sync, or meeting timestamp markers. The modular architecture allows you to customize functionality based on your specific meeting workflows.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
