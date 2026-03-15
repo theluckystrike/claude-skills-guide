@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Core Web Vitals Workflow Tutorial"
-description: "Learn how to use Claude Code to analyze, optimize, and monitor your site's Core Web Vitals. Practical workflow with code examples for LCP, FID, and CLS."
+description: "Learn how to use Claude Code to analyze, optimize, and monitor your site's Core Web Vitals. Practical workflow with code examples for LCP, INP, FID, and CLS."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-core-web-vitals-workflow-tutorial/
@@ -15,7 +15,13 @@ score: 8
 
 # Claude Code for Core Web Vitals Workflow Tutorial
 
-Core Web Vitals have become essential metrics for web performance, directly impacting both user experience and search engine rankings. In this tutorial, you'll learn how to use Claude Code to systematically analyze, optimize, and monitor your site's Core Web Vitals: Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS).
+Core Web Vitals have become essential metrics for web performance, directly impacting both user experience and search engine rankings. In this tutorial, you'll learn how to use Claude Code to systematically analyze, optimize, and monitor your site's Core Web Vitals: Largest Contentful Paint (LCP), Interaction to Next Paint (INP), First Input Delay (FID), and Cumulative Layout Shift (CLS).
+
+**Largest Contentful Paint (LCP)** measures loading performance—specifically when the largest content element in the viewport becomes visible. LCP should occur within 2.5 seconds of when the page first starts loading.
+
+**Interaction to Next Paint (INP)** replaced First Input Delay (FID) in March 2024. INP measures responsiveness by tracking all user interactions and reporting the longest delay between the interaction and the browser's response. A good INP score is 200 milliseconds or less.
+
+**Cumulative Layout Shift (CLS)** measures visual stability—how much content shifts unexpectedly during page load. A good CLS score is 0.1 or less.
 
 ## Setting Up Your Project for Web Vitals Analysis
 
@@ -46,6 +52,51 @@ Create a `web-vitals-config.json` file to store your baseline metrics:
 }
 ```
 
+For lab testing during development, integrate Lighthouse CI into your build process:
+
+```javascript
+// lighthouse-config.js
+module.exports = {
+  ci: {
+    collect: {
+      staticDistDir: './dist',
+      numberOfRuns: 3,
+    },
+    assert: {
+      assertions: {
+        'categories:performance': ['warn', { minScore: 0.9 }],
+        'first-contentful-paint': ['warn', { maxNumericValue: 1500 }],
+        'largest-contentful-paint': ['warn', { maxNumericValue: 2500 }],
+        'cumulative-layout-shift': ['warn', { maxNumericValue: 0.1 }],
+        'interactive': ['warn', { maxNumericValue: 3000 }],
+      },
+    },
+  },
+};
+```
+
+Run this configuration with `lhci autorun` to get consistent performance metrics on every build. Claude Code can help you integrate this into your CI/CD pipeline and alert you when metrics degrade.
+
+For field data, set up the web-vitals library to collect real-user data:
+
+```javascript
+// analytics/web-vitals.js
+import { onCLS, onFID, onLCP, onINP } from 'web-vitals';
+
+function sendToAnalytics({ name, delta, id }) {
+  // Replace with your analytics endpoint
+  fetch('/api/vitals', {
+    method: 'POST',
+    body: JSON.stringify({ name, delta, id }),
+  });
+}
+
+onCLS(sendToAnalytics);
+onFID(sendToAnalytics);
+onLCP(sendToAnalytics);
+onINP(sendToAnalytics);
+```
+
 ## Analyzing Current Performance with Claude Code
 
 Once your project is ready, use Claude Code to run comprehensive audits. The key is to automate Lighthouse runs and parse the results programmatically.
@@ -61,7 +112,7 @@ const { chromium } = require('playwright');
 async function analyzeWebVitals(url) {
   const browser = await chromium.launch();
   const page = await browser.newPage();
-  
+
   const result = await lighthouse(url, {
     port: 9222,
     output: 'json',
@@ -73,7 +124,7 @@ async function analyzeWebVitals(url) {
       cpuSlowdownMultiplier: 1,
     },
   });
-  
+
   const metrics = result.lhr.audits;
   return {
     lcp: metrics['largest-contentful-paint'].numericValue,
@@ -84,6 +135,25 @@ async function analyzeWebVitals(url) {
     clsScore: metrics['cumulative-layout-shift'].score,
   };
 }
+```
+
+### Building Your Claude Code Analysis Skill
+
+Create a skill that parses Lighthouse reports and surfaces targeted improvements:
+
+```markdown
+# Core Web Vitals Analyzer
+
+## Instructions
+
+You are a web performance expert specializing in Core Web Vitals optimization. When provided with Lighthouse results or web-vitals data, analyze the metrics and provide:
+
+1. **Metric Analysis**: Explain what each Core Web Vitals score means for user experience
+2. **Root Causes**: Identify likely causes for any failing or warning metrics
+3. **Actionable Recommendations**: Provide specific, implementable fixes ranked by impact
+4. **Code Examples**: Where applicable, show before/after code patterns
+
+Focus on practical solutions that balance performance gains with development effort.
 ```
 
 ### Interpreting Results
@@ -111,16 +181,16 @@ const path = require('path');
 
 async function optimizeImages(imageDir, outputDir) {
   const images = fs.readdirSync(imageDir);
-  
+
   for (const image of images) {
     const inputPath = path.join(imageDir, image);
     const outputPath = path.join(outputDir, image.replace(/\.\w+$/, '.webp'));
-    
+
     await sharp(inputPath)
       .resize(1200, null, { withoutEnlargement: true })
       .webp({ quality: 80 })
       .toFile(outputPath);
-    
+
     console.log(`Optimized: ${image} -> ${path.basename(outputPath)}`);
   }
 }
@@ -137,9 +207,9 @@ Ask Claude Code to generate preloading directives for your HTML:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 ```
 
-## Reducing First Input Delay (FID)
+## Reducing First Input Delay (FID) and Improving INP
 
-FID measures the time between a user's first interaction and the browser's ability to respond. High FID typically results from heavy JavaScript execution blocking the main thread.
+FID measures the time between a user's first interaction and the browser's ability to respond. INP goes further, tracking the longest interaction delay across the entire session. High FID/INP typically results from heavy JavaScript execution blocking the main thread.
 
 ### JavaScript Code Splitting
 
@@ -170,6 +240,32 @@ Generate proper script deferral patterns:
 <script src="https://analytics.example.com/tracker.js" async></script>
 ```
 
+### Deferring Expensive Work with requestIdleCallback
+
+Use this pattern to defer non-critical JavaScript and break up long tasks that block INP:
+
+```javascript
+// Defer heavy computations until idle
+function deferExpensiveWork() {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => {
+      performHeavyComputation();
+    });
+  } else {
+    setTimeout(performHeavyComputation, 1);
+  }
+}
+
+// Break up long tasks
+async function processLargeDataset(data) {
+  const chunkSize = 100;
+  for (let i = 0; i < data.length; i += chunkSize) {
+    await new Promise(resolve => setTimeout(resolve, 0));
+    processChunk(data.slice(i, i + chunkSize));
+  }
+}
+```
+
 ## Fixing Cumulative Layout Shift (CLS)
 
 CLS measures visual stability—how much content shifts unexpectedly during page load. Common causes include images without dimensions, dynamically injected content, and font loading delays.
@@ -185,11 +281,11 @@ const fs = require('fs');
 function findImagesWithoutDimensions(htmlDir) {
   const files = fs.readdirSync(htmlDir).filter(f => f.endsWith('.html'));
   const issues = [];
-  
+
   for (const file of files) {
     const html = fs.readFileSync(path.join(htmlDir, file), 'utf8');
     const $ = cheerio.load(html);
-    
+
     $('img').each((i, img) => {
       const $img = $(img);
       if (!$img.attr('width') || !$img.attr('height')) {
@@ -201,8 +297,30 @@ function findImagesWithoutDimensions(htmlDir) {
       }
     });
   }
-  
+
   return issues;
+}
+```
+
+Always include explicit dimensions and reserve space for dynamic content:
+
+```html
+<!-- Always specify dimensions -->
+<img src="image.jpg" width="800" height="600" alt="Description">
+```
+
+```css
+/* Reserve space for dynamic content */
+.ad-container {
+  min-height: 250px;
+  contain: content;
+}
+
+/* Skeleton loading placeholders */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
 }
 ```
 
@@ -233,7 +351,7 @@ function measureWebVitals() {
       for (const entry of list.getEntries()) {
         const metric = entry.name;
         const value = entry.value;
-        
+
         // Send to analytics
         console.log(`${metric}: ${value}`);
       }
@@ -241,6 +359,28 @@ function measureWebVitals() {
   });
 }
 ```
+
+To catch regressions across deployments, create a tracking script that compares metrics over time:
+
+```javascript
+// scripts/track-metrics.js
+const { readFileSync } = require('fs');
+
+async function getLighthouseScore() {
+  // Fetch from your CI/CD integration
+  const report = JSON.parse(readFileSync('./lighthouse-report.json', 'utf8'));
+  return {
+    lcp: report.audits['largest-contentful-paint'].numericValue,
+    inp: report.audits['max-potential-fid'].numericValue,
+    cls: report.audits['cumulative-layout-shift'].numericValue,
+  };
+}
+
+const scores = getLighthouseScore();
+console.log(`LCP: ${scores.lcp}ms, INP: ${scores.inp}ms, CLS: ${scores.cls}`);
+```
+
+Run this script after every deployment to catch regressions immediately.
 
 ## Actionable Next Steps
 
