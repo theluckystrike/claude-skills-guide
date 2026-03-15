@@ -258,4 +258,10 @@ You can also use the Web Vitals Chrome extension or test through Google Search C
 
 Fixing Core Web Vitals requires addressing three main areas: loading speed for LCP, main thread blocking for FID, and visual stability for CLS. Implement the code examples above systematically, test with Lighthouse, and monitor field data in Search Console to ensure your fixes translate to better user experience and improved search rankings.
 
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
