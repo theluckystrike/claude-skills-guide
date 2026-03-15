@@ -99,6 +99,8 @@ Several Claude skills enhance the migration workflow when used together with Cla
 
 For teams using Prisma, the workflow becomes even tighter. Describe your schema changes, let Claude Code generate the Prisma schema updates, then use `npx prisma migrate dev` to create the actual migration files.
 
+If you find yourself running the same type of migrations repeatedly—adding audit columns, splitting contact fields, standardising index naming—consider encoding those patterns as a reusable Claude skill rather than re-prompting each time. See [Claude Skills for Creating Database Migration Scripts](/claude-skills-guide/claude-skills-for-creating-database-migration-scripts/) for how to build a dedicated `db-migration` skill that captures your project's conventions and generates production-ready scripts automatically.
+
 ## Handling Complex Scenarios
 
 Real-world migrations often involve data transformation, not just schema changes. Here's how to handle these scenarios:
@@ -148,16 +150,16 @@ When using Claude Code for production migrations, follow these proven practices:
 
 ## Conclusion
 
-The best way to use Claude Code for database migrations combines AI-powered generation with human oversight. Claude Code excels at generating correct SQL syntax, suggesting appropriate indexes, and explaining complex operations. Your role is to provide clear context about your schema and review the output before execution.
+The best way to use Claude Code for database migrations is an interactive loop: you describe the change in plain language, Claude Code generates the SQL, you review it, and you apply it only when satisfied. Claude Code excels at producing correct SQL syntax, suggesting appropriate indexes, flagging lock-time risks, and explaining what each statement does before it runs.
 
-By integrating Claude Code with skills like tdd for testing, pdf for documentation, and supermemory for knowledge management, you build a comprehensive migration workflow that scales with your project. Start with small, low-risk migrations to build confidence, then expand to more complex schema changes as you trust the workflow.
+This interactive approach is distinct from the skills-based approach, where you pre-author a `db-migration` skill that encodes your project's conventions and generates migrations on demand without needing to prompt from scratch each time. Both approaches complement each other: start interactively with Claude Code to understand your migration patterns, then crystallise those patterns into a reusable skill for day-to-day use.
 
-For more development tips and AI-assisted workflows, explore additional resources on using Claude Code throughout your project lifecycle.
+By pairing Claude Code with skills like tdd for testing, pdf for documentation, and supermemory for knowledge management, you build a migration workflow that scales with your project. Start with small, low-risk migrations to build confidence, then expand to more complex schema changes as you trust the workflow.
 
 
 ## Related Reading
 
-- [Claude Skills for Creating Database Migration Scripts](/claude-skills-guide/claude-skills-for-creating-database-migration-scripts/) — See also
+- [Claude Skills for Creating Database Migration Scripts](/claude-skills-guide/claude-skills-for-creating-database-migration-scripts/) — Once you know your patterns from interactive use, encode them as a reusable `db-migration` skill
 - [Using Claude Code with Prisma ORM Database Migrations](/claude-skills-guide/using-claude-code-with-prisma-orm-database-migrations/) — See also
 - [Should I Use Claude Code for Production Database Migrations](/claude-skills-guide/should-i-use-claude-code-for-production-database-migrations/) — See also
 - [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
