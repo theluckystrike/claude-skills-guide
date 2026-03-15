@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Building a Chrome Extension for Hashtag Generation on Social Media"
 description: "A technical guide for developers building Chrome extensions that generate hashtags for social media platforms. Covers architecture, APIs, and implementation patterns."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-hashtag-generator-social-media/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Building a Chrome Extension for Hashtag Generation on Social Media
 
