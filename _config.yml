@@ -4,6 +4,14 @@ url: "https://theluckystrike.github.io"
 baseurl: "/claude-skills-guide"
 permalink: /:title/
 theme: minima
+twitter:
+  username: _alphashark_
+  card: summary_large_image
+
+author:
+  name: Michael Lip
+  url: https://github.com/theluckystrike
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

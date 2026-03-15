@@ -156,7 +156,7 @@ Also ensure your user has read access to the file and its parent directories.
 
 Once you resolve the command not found error, you'll have access to Claude's full ecosystem. [Best Claude Code skills to install first](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) covers which skills are worth adding immediately. Skills extend Claude's capabilities for specialized tasks. The `frontend-design` skill helps generate UI components and layouts. The `pdf` skill enables document manipulation and extraction. The `tdd` skill assists with test-driven development workflows.
 
-Other valuable skills include `supermemory` for managing project context across sessions, `docx` for Word document automation, and `xlsx` for spreadsheet operations. You can explore and install skills using the `claude skill` commands.
+Other valuable skills include `supermemory` for managing project context across sessions, `docx` for Word document automation, and `xlsx` for spreadsheet operations. Skills are `.md` files stored in `~/.claude/skills/` — place the skill file there to activate it.
 
 ## Prevention Tips
 

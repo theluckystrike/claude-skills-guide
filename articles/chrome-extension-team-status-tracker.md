@@ -5,7 +5,7 @@ layout: default
 title: "Chrome Extension Team Status Tracker: A Developer Guide"
 description: "Learn how to build and integrate team status tracking into Chrome extensions for collaborative workflows and real-time updates."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-extension-team-status-tracker/
 reviewed: true
 score: 8
