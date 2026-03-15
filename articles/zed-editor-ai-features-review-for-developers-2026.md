@@ -28,7 +28,21 @@ One of Zed's standout features is its deep integration with Claude Code. Unlike 
 
 ### Setting Up Claude Code in Zed
 
-To enable Claude Code in Zed, you'll need to configure the AI panel:
+To enable AI assistance, open Zed's settings with `Cmd+,` (Mac) or `Ctrl+,` (Linux/Windows), then navigate to the AI section. You'll need to provide an API key from your preferred provider. For Claude users, the `ANTHROPIC_API_KEY` environment variable works smoothly once configured.
+
+Configure the AI panel in your settings file:
+
+```json
+{
+  "ai": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-20250514",
+    "max_tokens": 4096
+  }
+}
+```
+
+For projects where you want Zed to understand specific file types, you can extend the configuration:
 
 ```json
 {
@@ -40,7 +54,7 @@ To enable Claude Code in Zed, you'll need to configure the AI panel:
 }
 ```
 
-This configuration ensures Claude has access to your Rust, TypeScript, and JavaScript files while ignoring dependencies.
+This ensures Claude has access to your Rust, TypeScript, and JavaScript files while ignoring dependencies. The integration feels native rather than bolted on — unlike VS Code's extension-heavy approach, Zed's AI lives directly in the editor's Rust core, which means faster response times and better context awareness.
 
 ## Practical Examples: AI-Powered Development
 
@@ -127,6 +141,18 @@ This enables pair programming with AI, where team members can:
 - Tag-team problem-solving with Claude
 - Conduct AI-assisted code reviews
 
+## Memory and Context Persistence
+
+Zed's AI maintains conversation context across your editing session. The assistant remembers your previous requests, which means you can iterate on code generation without re-explaining your requirements each time.
+
+For longer projects, you can integrate with external memory tools to maintain persistent context across sessions. Export Zed's AI conversations to your memory system and pull relevant context back in when starting new work. This persistent context proves valuable when working on multi-file features — the AI understands relationships between files you've recently edited, making suggestions that span across your project architecture.
+
+## Comparing Zed's AI to Other Editors
+
+VS Code's AI capabilities come primarily through GitHub Copilot and third-party extensions. The experience feels fragmented — different extensions handle completion, chat, and refactoring separately. Zed provides a unified interface that feels more cohesive.
+
+Compared to Cursor (which builds directly on VS Code), Zed offers better performance but fewer enterprise features. Cursor excels at team-wide AI deployment, while Zed focuses on individual developer experience. Running AI through Zed's Rust core means the editor remains responsive even during heavy AI operations, unlike Electron-based editors that can stutter.
+
 ## Performance and Efficiency
 
 Zed's AI features are optimized for performance:
@@ -144,13 +170,22 @@ The Rust-based architecture ensures that AI operations don't block your editing 
 1. **Use semantic file selection**: Configure `context_files` to give Claude relevant project files
 2. **Leverage inline AI commands**: Use `Cmd+Shift+P` for quick AI actions without leaving your editor
 3. **Review AI suggestions**: Always verify AI-generated code before committing
-4. **Use AI for testing**: Let Claude generate comprehensive test suites
+4. **Use AI for testing**: Let Claude generate comprehensive test suites — this works especially well with a TDD workflow where your tests define expected behavior first
 
 ```bash
 # Generate tests with Claude
 > Write unit tests for the user authentication module
 # Include edge cases and error handling tests
 ```
+
+Zed's AI features work best when you treat the AI as a collaborator rather than a replacement for your skills. Use it for:
+
+- Generating boilerplate and repetitive patterns
+- Explaining unfamiliar code quickly
+- Refactoring with confidence through instant preview
+- Writing tests that match your existing test structure
+
+For teams adopting Zed, establish conventions around AI usage. Decide whether AI-generated code requires additional review, and configure your linters to catch common AI-output issues.
 
 ## Conclusion
 
