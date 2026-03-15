@@ -98,6 +98,22 @@ generate:
 		proto/*.proto
 ```
 
+### For Python Projects
+
+Python developers use `grpcio-tools` to compile proto files:
+
+```bash
+pip install grpcio grpcio-tools protobuf
+
+python -m grpc_tools.protoc \
+  -I. \
+  --python_out=. \
+  --grpc_python_out=. \
+  proto/service.proto
+```
+
+This generates two files: `service_pb2.py` containing your message classes, and `service_pb2_grpc.py` with the gRPC service stubs you'll extend in your implementation.
+
 ### For Java Projects
 
 If you're using Java with Gradle, Claude Code can help you set up the protobuf Gradle plugin:
@@ -365,6 +381,51 @@ func TestGetUser_Integration(t *testing.T) {
 ```
 
 This pattern lets you test real gRPC serialization, interceptors, and status code handling without spinning up a network listener.
+
+## Integrating Claude Skills for Enhanced Development
+
+Several Claude skills accelerate gRPC development workflows:
+
+- The **frontend-design** skill helps generate frontend client code from your proto definitions, particularly useful when building TypeScript or React integrations
+- The **supermemory** skill maintains context across complex multi-service architectures, remembering service dependencies and API versions
+- For documentation, the **docx** skill generates comprehensive API documentation in Word format for stakeholders who prefer formatted documents
+- The **xlsx** skill helps track API versions, deprecation schedules, and feature flags in spreadsheets
+
+## Production Considerations
+
+When deploying gRPC services to production, implement these essential patterns.
+
+**Health Checks**: Add a standard health check endpoint (shown here in Python; the same grpc_health_v1 proto applies to all languages):
+
+```python
+from grpc_health.v1 import health_pb2, health_pb2_grpc
+
+class HealthServicer(health_pb2_grpc.HealthServicer):
+    def Check(self, request, context):
+        return health_pb2.HealthCheckResponse(
+            status=health_pb2.HealthCheckResponse.SERVING
+        )
+```
+
+**TLS Encryption**: Production services require secure communication:
+
+```python
+server_credentials = grpc.ssl_server_credentials(
+    [(private_key, certificate_chain)]
+)
+server.add_secure_port('[::]:50052', server_credentials)
+```
+
+**Interceptors**: Use interceptors for logging, authentication, and metrics:
+
+```python
+class LoggingInterceptor(grpc.ServerInterceptor):
+    def intercept_service(self, continuation, handler_call_details):
+        # Log request metadata
+        return continuation(handler_call_details)
+```
+
+Ask Claude Code: "Add TLS support and a health check endpoint to this gRPC server" for language-specific implementations.
 
 ## Streamlining Development with Claude Code Prompts
 
