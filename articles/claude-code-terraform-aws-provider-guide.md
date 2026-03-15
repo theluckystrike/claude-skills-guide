@@ -17,6 +17,8 @@ tags: [claude-code, claude-skills]
 
 Infrastructure as code has become essential for managing cloud resources at scale. Terraform remains the industry standard for defining infrastructure, and when combined with Claude Code's AI capabilities, you can dramatically accelerate your AWS provisioning workflows. This guide shows you how to use Claude skills to write, review, and manage Terraform configurations more effectively.
 
+This article focuses specifically on **AWS provider patterns**: `assume_role` configuration, provider aliases for multi-account deployments, multi-region setups, and AWS-specific authentication strategies. If you are looking for a broader survey of Claude skills across general Terraform workflows — including multi-workspace scripting, terraform-docs integration, and Infracost — see the companion article [Claude Code Skills for Infrastructure as Code with Terraform](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/).
+
 ## Setting Up Claude for Terraform Development
 
 Before diving into advanced patterns, ensure your Claude environment is configured for infrastructure work. While Claude Code comes with general coding capabilities, pairing it with the right skills transforms it into an infrastructure powerhouse.
@@ -194,6 +196,7 @@ The combination of Claude's understanding of Terraform syntax and AWS services c
 
 ## Related Reading
 
+- [Claude Code Skills for Infrastructure as Code with Terraform](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — General Terraform workflows: multi-workspace, terraform-docs, Infracost, and skill survey
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
