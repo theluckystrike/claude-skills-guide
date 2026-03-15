@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Price Match Finder: A Developer's Guide"
-description: "Learn how to build a Chrome extension that finds lower prices across retailers. Covers manifest V3, content scripts, messaging between components, and practical implementation patterns."
+description: "Learn how to build a Chrome extension that finds lower prices across retailers. Covers manifest V3, content scripts, messaging between components, and."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-price-match-finder/
@@ -267,5 +267,12 @@ When ready to distribute:
 Building a price match finder demonstrates several Chrome extension concepts: content script injection, message passing between components, manifest configuration, and popup UI development. The architecture scales well—you can add more retailers, implement price alerts, or integrate with deal notification systems.
 
 Start with a minimal viable product that detects products on two or three major retailers, then expand based on your use case and API access.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

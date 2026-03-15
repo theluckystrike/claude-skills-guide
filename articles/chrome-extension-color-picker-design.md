@@ -242,4 +242,11 @@ Chrome extensions should remain lightweight. Lazy-load color conversion utilitie
 
 A well-designed color picker balances functionality with simplicity. Focus on supporting common color formats, providing visual feedback, and integrating smoothly with Chrome's extension architecture. The patterns and code examples above provide a foundation for building professional color picker experiences that serve developers and power users effectively.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -2,8 +2,8 @@
 
 
 layout: default
-title: "Chrome Extension Reading List Organizer for Academic Research"
-description: "A practical guide to Chrome extensions for organizing academic reading lists. Features code examples, API integrations, and workflow tips for researchers and developers."
+title: "Chrome Extension Reading List Organizer for Academic."
+description: "A practical guide to Chrome extensions for organizing academic reading lists. Features code examples, API integrations, and workflow tips for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-reading-list-organizer-academic/
@@ -263,5 +263,12 @@ Building automation around your reading list reduces friction and helps maintain
 Chrome extensions for academic reading list management bridge the gap between quick web capture and structured reference management. Whether you build a custom solution or use existing tools, the key is establishing a workflow that captures metadata automatically, integrates with your reference manager, and supports your research process.
 
 The best system is one you'll actually use. Start with basic bookmark capture, then add complexity as your needs evolve. With the right extension and workflow, managing hundreds of academic papers becomes manageable and even enjoyable.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Building a Chrome Extension for Instagram Post Scheduling: A Developer's Guide"
+title: "Building a Chrome Extension for Instagram Post."
 description: "Learn how to build a Chrome extension that schedules Instagram posts, with practical code examples and architectural insights for developers."
 date: 2026-03-15
 author: theluckystrike
@@ -222,5 +222,12 @@ Console logging works in both popup and background contexts, making iterative de
 Building an Instagram post scheduler as a Chrome extension requires understanding the interplay between extension components and Instagram's web interface. The architecture outlined here—using manifest v3, background service workers for timing, and content scripts for DOM interaction—provides a solid foundation. While Instagram's restrictions prevent full automation, a browser-based scheduler remains valuable for planning content in advance and receiving timely notifications.
 
 This approach gives developers full control over their scheduling logic without requiring external server infrastructure. The extension can be distributed through the Chrome Web Store once tested and polished.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

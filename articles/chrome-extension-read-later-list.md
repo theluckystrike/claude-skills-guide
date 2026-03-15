@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Read Later List: A Developer Guide"
-description: "Learn how to build a Chrome extension for managing a read later list. Covers storage APIs, background sync, and practical implementation patterns for developers."
+description: "Learn how to build a Chrome extension for managing a read later list. Covers storage APIs, background sync, and practical implementation patterns for."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-read-later-list/
@@ -271,5 +271,12 @@ Finally, your manifest.json needs the correct permissions:
 Building a production-ready read later extension involves handling edge cases like duplicate URLs, managing storage quotas, and creating a polished UI. The patterns shown here provide a solid foundation that you can extend based on your specific requirements.
 
 The key to a successful implementation is starting simple—save URLs and display them—then iteratively adding features like search, tagging, and sync. This approach lets you validate user needs before investing time in more complex functionality.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
