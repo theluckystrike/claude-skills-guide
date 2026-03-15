@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension TLDR Summary Tool: Best Options for Quick Content Digestion"
 description: "Discover the best Chrome extension TLDR summary tools for developers and power users. Compare features, API integrations, and find the right tool to quickly digest long-form content."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-tldr-summary-tool/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension TLDR Summary Tool: Best Options for Quick Content Digestion
 
@@ -45,7 +51,7 @@ These tools excel at handling poorly formatted websites by stripping ads, sideba
 
 ### 3. AI-Powered Summary Extensions
 
-For more sophisticated summarization, consider extensions that leverage large language models:
+For more sophisticated summarization, consider extensions that use large language models:
 
 - **Sumi** - Uses AI to generate context-aware summaries
 - ** Recall** - Summarizes pages and saves them to your knowledge base

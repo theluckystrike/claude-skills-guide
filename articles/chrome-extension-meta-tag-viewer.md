@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Meta Tag Viewer: Inspect HTML Metadata Without Leaving Your Browser"
 description: "Learn how to build and use a Chrome extension for viewing meta tags. Complete guide for developers to inspect OG tags, Twitter cards, and custom metadata."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-meta-tag-viewer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 A Chrome extension meta tag viewer gives developers and power users a streamlined way to inspect HTML metadata directly in the browser. Instead of viewing page source code or using external tools, you can analyze Open Graph tags, Twitter Card metadata, and custom meta properties with a single click. This guide walks you through building your own meta tag viewer extension and explores practical use cases for web development, SEO analysis, and content verification.
 

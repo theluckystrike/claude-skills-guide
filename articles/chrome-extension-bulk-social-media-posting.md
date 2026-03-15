@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Bulk Social Media Posting: A Developer Guide"
 description: "Learn how to build and use Chrome extensions for bulk social media posting. Technical guide for developers and power users with practical examples."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-bulk-social-media-posting/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 Bulk social media posting automates the process of publishing content across multiple platforms simultaneously. For developers and power users, Chrome extensions provide a flexible way to implement this functionality without relying on third-party SaaS platforms. This guide covers the technical foundations of building a Chrome extension for bulk posting, including architecture patterns, API interactions, and practical implementation details.
 
