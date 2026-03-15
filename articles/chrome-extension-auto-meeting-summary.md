@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Auto Meeting Summary: A Developer Guide"
 description: "Build a Chrome extension that automatically captures and summarizes meeting transcripts. Complete implementation guide with code examples for developers."
 date: 2026-03-15
 categories: [guides]
-tags: [chrome-extension, meeting-summary, productivity, javascript, manifest-v3]
-author: theluckystrike
+tags: [chrome-extension, meeting-summary, productivity, javascript, manifest-v3, claude-skills]
+author: "Claude Skills Guide"
 permalink: /chrome-extension-auto-meeting-summary/
+reviewed: true
+score: 8
 ---
+
 
 # Chrome Extension Auto Meeting Summary: A Developer Guide
 
@@ -187,7 +191,7 @@ The badge indicator provides visual feedback when the extension detects an activ
 
 ## Implementing Summary Generation
 
-Rather than embedding complex NLP logic in the extension, you can leverage external APIs for summarization. This keeps your extension lightweight and avoids API key exposure by handling requests server-side or through a proxy:
+Rather than embedding complex NLP logic in the extension, you can use external APIs for summarization. This keeps your extension lightweight and avoids API key exposure by handling requests server-side or through a proxy:
 
 ```javascript
 // summary.js - Client-side summary generation

@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Cookie Editor Developer Guide"
 description: "Learn how to build and use cookie editor extensions for Chrome. Practical developer guide covering API usage, debugging, and best practices."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-cookie-editor-developer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 Developing Chrome extensions that manipulate cookies requires understanding the Chrome Cookies API, proper permission configuration, and security best practices. This guide covers everything developers need to build robust cookie editing functionality into their extensions.

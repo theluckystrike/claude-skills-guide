@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Kanban Board Chrome Extension: A Developer's Guide"
 description: "Discover how Chrome extensions transform your browser into a powerful kanban workspace. Compare approaches, build custom solutions, and integrate with your development workflow."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /kanban-board-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # Kanban Board Chrome Extension: A Developer's Guide
 

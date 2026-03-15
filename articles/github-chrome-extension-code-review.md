@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "GitHub Chrome Extension Code Review: Tools and Techniques"
 description: "A practical guide to reviewing code in GitHub repository Chrome extensions. Learn methods, tools, and best practices for extension code analysis."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /github-chrome-extension-code-review/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 When you install a Chrome extension that interacts with GitHub, you're trusting that code with access to your repositories, pull requests, and potentially sensitive data. Whether you're evaluating a third-party extension before installation or reviewing code for an extension your team is building, understanding how to properly assess GitHub Chrome extension code protects your projects and users.

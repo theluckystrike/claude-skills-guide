@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Lead Generator Chrome Extension: A Developer's Guide"
 description: "Build AI-powered lead generation Chrome extensions for extracting and managing potential client data. Practical implementation patterns, code examples, and architecture strategies for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-lead-generator-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # AI Lead Generator Chrome Extension: A Developer's Guide
 

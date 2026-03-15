@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Building a Chrome Extension Mood Tracker for Team Wellness"
 description: "A practical guide to building a Chrome extension mood tracker with team collaboration features. Learn architecture patterns, data storage strategies, and implementation for team wellness monitoring."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-mood-tracker-team/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # Building a Chrome Extension Mood Tracker for Team Wellness
 
@@ -35,7 +41,7 @@ The manifest file defines these capabilities:
 }
 ```
 
-The `storage` permission enables Chrome's built-in sync storage, which handles synchronization across devices when users sign into Chrome. For team data, you'll need a lightweight backend or leverage Firebase/Supabase for real-time updates.
+The `storage` permission enables Chrome's built-in sync storage, which handles synchronization across devices when users sign into Chrome. For team data, you'll need a lightweight backend or use Firebase/Supabase for real-time updates.
 
 ## Building the Mood Logging Popup
 
