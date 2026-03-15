@@ -6,6 +6,10 @@ description: "Learn how to build and integrate chrome extension Google Docs cita
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-google-docs-citation-addon/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
