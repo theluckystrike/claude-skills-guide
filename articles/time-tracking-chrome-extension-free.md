@@ -3,8 +3,11 @@ layout: default
 title: "Best Free Time Tracking Chrome Extensions for Developers in 2026"
 description: "Discover free time tracking Chrome extensions that help developers and power users track work hours, manage projects, and boost productivity without spending a dime."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /time-tracking-chrome-extension-free/
+reviewed: true
+score: 8
+categories: [guides]
 ---
 
 {% raw %}
@@ -21,7 +24,7 @@ The best free extensions combine ease of use with features that matter to develo
 
 ### Clockify
 
-Clockify offers one of the most generous free tiers among time tracking tools. The Chrome extension integrates seamlessly with the web-based dashboard, allowing you to track time across projects and generate detailed reports.
+Clockify offers one of the most generous free tiers among time tracking tools. The Chrome extension integrates smoothly with the web-based dashboard, allowing you to track time across projects and generate detailed reports.
 
 **Key features for developers:**
 

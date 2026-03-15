@@ -3,8 +3,11 @@ layout: default
 title: "Chrome Extension Warranty Tracker: A Practical Guide for Managing Product Warranties"
 description: "Learn how to build or use a Chrome extension warranty tracker to manage product warranties, expiration dates, and receipts directly in your browser."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-warranty-tracker/
+reviewed: true
+score: 8
+categories: [guides]
 ---
 
 {% raw %}
