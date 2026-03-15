@@ -43,7 +43,7 @@ The skill handles multi-column layouts, scanned documents, and form fields. For 
 
 ## Test-Driven Development with the TDD Skill
 
-The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) enforces test-first development practices. It generates unit tests, integration tests, and edge case suggestions based on code you provide.
+The [**tdd** skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) enforces test-first development practices. It generates unit tests, integration tests, and edge case suggestions based on code you provide.
 
 ```
 /tdd write pytest tests for this function: [paste function]
@@ -57,7 +57,19 @@ The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/
 /tdd suggest what to test next given this partially covered class — I have tests for __init__ and save() but nothing else: [paste class]
 ```
 
-[The skill works with pytest, Jest, Vitest, and Bun Test](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) For API developers and service teams, it catches regressions before they reach production by structuring development around failing tests first.
+```
+/tdd write Jest tests for this authentication module: [paste code]
+```
+
+```
+/tdd this integration test is flaky — diagnose why it fails intermittently and rewrite it to be deterministic: [paste test]
+```
+
+```
+/tdd generate a property-based test suite for this pure function using fast-check: [paste function]
+```
+
+[The skill works with pytest, Jest, Vitest, and Bun Test](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) For API developers and service teams, it catches regressions before they reach production by structuring development around failing tests first. The skill analyzes your existing code and suggests meaningful test cases you might have overlooked, ensuring better coverage without the boilerplate overhead.
 
 ## Spreadsheet Automation with the xlsx Skill
 
@@ -75,7 +87,19 @@ The **xlsx** skill creates, edits, and analyzes `.xlsx`, `.xlsm`, `.csv`, and `.
 /xlsx add a new sheet named "Summary" to quarterly-report.xlsx with AVERAGEIF formulas pulling from the raw data sheet
 ```
 
-Business analysts processing financial data or generating weekly reports find this skill eliminates repetitive formula work and manual chart creation.
+```
+/xlsx create a performance report in team-metrics.xlsx with columns: Developer, Commits, PRs, Velocity. Add a formula =B2/C2 in the Velocity column.
+```
+
+```
+/xlsx pivot the data in sprint-velocity.csv by team and week, then output a heatmap showing delivery consistency
+```
+
+```
+/xlsx compare headcount.xlsx against last-quarter.xlsx and produce a diff sheet showing new hires, departures, and role changes
+```
+
+Business analysts processing financial data or generating weekly reports find this skill eliminates repetitive formula work and manual chart creation. The skill preserves formulas during edits, making it safe for maintaining calculation-heavy spreadsheets.
 
 ## Memory Management with the supermemory Skill
 
@@ -118,15 +142,47 @@ For web application developers, this skill accelerates prototyping and flags acc
 The **webapp-testing** skill automates browser interactions via Playwright.
 
 ```
-/webapp-testing verify the login flow on http://localhost:3000: navigate to /login, fill in testuser/testpass, submit, confirm redirect to /dashboard, screenshot the result
+/webapp-testing verify the login flow at http://localhost:3000: navigate to /login, fill in testuser@example.com / testpass, submit, confirm redirect to /dashboard, screenshot the result
 ```
 
 ```
 /webapp-testing run a visual regression check on /checkout comparing against the saved baseline screenshots
 ```
 
-This skill replaces manual regression testing. Frontend developers and QA engineers point it at a local dev server and get a structured test run with screenshots.
+This skill replaces manual regression testing. Frontend developers and QA engineers point it at a local dev server and get a structured test run with screenshots. It integrates well with CI/CD pipelines, catching visual regressions before they reach production.
 
+
+## Visual Asset Generation with the canvas-design Skill
+
+The **canvas-design** skill produces visual assets — images, diagrams, and design mockups — from text descriptions.
+
+```
+/canvas-design create a 1200x630 featured image for a blog post about API security. Dark background, blue accents, minimal style.
+```
+
+```
+/canvas-design generate a system architecture diagram showing three microservices communicating via a message queue
+```
+
+For a full breakdown of the frontend skill stack, see [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/).
+
+## Document Creation with the docx and pptx Skills
+
+The **docx** and **pptx** skills enable programmatic generation of professional documents and presentations.
+
+```
+/docx create a project proposal with sections: Executive Summary, Problem Statement, Proposed Solution, Timeline, Budget. Use H1 for the title, H2 for sections.
+```
+
+```
+/pptx create a 10-slide deck from this article. Use section headers as slide titles. Include a title slide and summary slide: [paste article]
+```
+
+These skills handle formatting preservation, tracked changes, and comments — useful for generating status reports, technical documentation, or client presentations automatically.
+
+## Building Custom Skills with skill-creator
+
+The **skill-creator** skill guides you through creating custom skill files tailored to your specific workflows. When none of the existing skills fit your needs, this tool helps you author a new `.md` skill file. Learn how to structure those skills properly in [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/).
 
 ## Choosing Your First Skills
 
@@ -137,16 +193,22 @@ Your starting set should match your actual daily work:
 - **Processing spreadsheets or financial data?** Start with `xlsx`.
 - **Managing a long-running or complex project?** Start with `supermemory`.
 - **Building web UIs?** Start with `frontend-design`.
+- **Need visual assets or diagrams?** Start with `canvas-design`.
+- **Generating reports or presentations?** Start with `docx` or `pptx`.
 
-Install one skill, run it on a real task, and observe the time saved before adding the next. Most developers find two or three skills cover the majority of their workflow, with additional skills filling specific gaps.
+Selecting skills also depends on your technology stack. Frontend developers benefit most from `canvas-design` and `webapp-testing`, while backend engineers might prioritize `tdd` and `pdf`. Full-stack developers should consider a combination that covers their entire workflow.
+
+Install one skill, run it on a real task, and observe the time saved before adding the next. Most developers find two or three skills cover the majority of their workflow, with additional skills filling specific gaps. The learning curve is minimal since each skill follows consistent invocation patterns and integrates with your existing development environment.
 
 ---
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills every developer should know
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Extend skills into CI/CD and infrastructure automation
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep your skill usage cost-efficient at scale
+- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Know when to trust official vs community skills
 
 
 ---
