@@ -205,9 +205,99 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 The virtual environment is copied wholesale from the builder stage, preserving all installed packages without reinstalling them in the runtime stage.
 
+### Node.js with Prisma ORM
+
+For a Node.js Express API with TypeScript and Prisma ORM, Claude Code generates a configuration that handles schema generation in the build stage:
+
+```dockerfile
+# Build stage
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Copy package files first for better layer caching
+COPY package*.json ./
+RUN npm ci --only=production
+
+COPY prisma ./prisma/
+RUN npx prisma generate
+
+COPY . .
+RUN npm run build
+
+# Production stage
+FROM node:20-alpine AS production
+
+WORKDIR /app
+
+# Create non-root user for security
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001
+
+# Copy only necessary files from builder
+COPY --from=builder --chown=nodejs:nodejs /app/dist ./dist
+COPY --from=builder --chown=nodejs:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=nodejs:nodejs /app/prisma ./prisma
+COPY --from=builder --chown=nodejs:nodejs /app/package*.json ./
+
+# Set environment for production
+ENV NODE_ENV=production
+ENV PORT=3000
+
+USER nodejs
+
+EXPOSE 3000
+
+CMD ["node", "dist/main.js"]
+```
+
+### Python Applications with uv
+
+Modern Python projects benefit from `uv` for faster dependency resolution. Claude Code can generate a multi-stage build that uses `uv` with a compiler stage for packages requiring native extensions:
+
+```dockerfile
+# Compiler stage (for packages needing native extensions)
+FROM python:3.11-slim AS compiler
+
+WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install uv
+RUN uv venv /app/.venv
+ENV PATH="/app/.venv/bin:$PATH"
+
+COPY requirements.txt .
+RUN uv pip install --system -r requirements.txt
+
+COPY . .
+
+# Production stage
+FROM python:3.11-slim AS production
+
+WORKDIR /app
+
+# Copy virtual environment from compiler
+COPY --from=compiler /app/.venv /app/.venv
+ENV PATH="/app/.venv/bin:$PATH"
+
+# Copy application code
+COPY --from=compiler /app /app
+
+# Run as non-root user
+RUN useradd -m -u 1000 appuser && chown -R appuser /app
+USER appuser
+
+EXPOSE 8000
+
+CMD ["python", "main.py"]
+```
+
 ### Go Applications
 
-Go applications benefit enormously from multi-stage builds since the compilation produces a single binary:
+Go applications benefit enormously from multi-stage builds since the compilation produces a single binary. For maximum image minimalism, Claude Code can target the `scratch` base image and copy CA certificates directly from the builder:
 
 ```dockerfile
 # Build stage
@@ -215,27 +305,37 @@ FROM golang:1.21-alpine AS builder
 
 WORKDIR /app
 
-# Install dependencies and build
+# Install build dependencies
+RUN apk add --no-cache git make
+
+# Copy go mod files first for caching
 COPY go.mod go.sum ./
 RUN go mod download
 
+# Copy source and build
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -o /appbinary -ldflags="-s -w" .
+RUN CGO_ENABLED=0 GOOS=linux go build -o /appbinary ./cmd/app
 
-# Production stage
-FROM alpine:3.18 AS production
+# Production stage (scratch for absolute minimal image)
+FROM scratch AS production
 
 WORKDIR /app
 
-# Install CA certificates for HTTPS
-RUN apk --no-cache add ca-certificates
-
+# Copy the binary
 COPY --from=builder /appbinary /appbinary
+
+# Copy static assets if needed
+COPY --from=builder /app/static /app/static
+
+# Copy CA certificates for HTTPS
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 EXPOSE 8080
 
-CMD ["/appbinary"]
+ENTRYPOINT ["/appbinary"]
 ```
+
+When HTTPS calls are not needed and no static assets are required, using `FROM scratch` produces the smallest possible image with zero OS overhead. Alternatively, use `FROM alpine:3.18` and `RUN apk --no-cache add ca-certificates` if you prefer a shell for debugging.
 
 ## Integrating Claude Code into Your Build Pipeline
 
@@ -344,17 +444,33 @@ When using Claude Code to generate multi-stage builds, keep these considerations
 
 Always specify exact versions in your base images rather than using floating tags like `latest`. This ensures reproducible builds and prevents unexpected changes when base images update.
 
-Consider security implications when copying files between stages. The production stage should never contain source code, development dependencies, or build tools.
+**Layer caching optimization**: Place `COPY` commands for dependency files (e.g., `package*.json`, `requirements.txt`) before copying source code. Docker rebuilds only the layers that changed, so this ensures dependency installation is cached when only source files change.
+
+**Minimal base images**: Prefer `alpine` or `scratch` for production stages. Smaller base images reduce vulnerability exposure and attack surface. The `scratch` image is ideal for statically compiled Go binaries.
+
+Consider security implications when copying files between stages. The production stage should never contain source code, development dependencies, or build tools. The `USER` directive setting a non-root user should appear before `CMD` or `ENTRYPOINT`.
 
 Use `.dockerignore` files to exclude unnecessary files from your build context. This reduces build context transfer time and prevents accidentally including sensitive files.
 
 Consider adding health checks to your multi-stage Dockerfiles. Claude Code can generate `HEALTHCHECK` instructions appropriate for your application type, which improves reliability in container orchestration environments like Kubernetes or Docker Swarm.
+
+**Multi-platform builds**: If deploying across CPU architectures (e.g., amd64 and arm64), use `buildx` to produce multi-platform images:
+
+```bash
+docker buildx build --platform linux/amd64,linux/arm64 -t myapp:latest .
+```
 
 Test your multi-stage builds locally before deploying. The `--target` flag allows you to build specific stages for testing:
 
 ```bash
 docker build --target test -t myapp:test .
 ```
+
+## Automating Dockerfile Updates
+
+As your project evolves, regenerate Dockerfiles when dependencies change significantly. Track the Dockerfile alongside your code in version control so changes are reviewed alongside application code. Review Claude Code's output against the Docker Bench Security checklist to ensure compliance with hardening guidelines.
+
+When base image versions receive security patches, Claude Code can help you evaluate the impact and update `FROM` references across your stages consistently. This keeps the iteration loop tight as application requirements grow.
 
 ## Conclusion
 
