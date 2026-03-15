@@ -54,8 +54,6 @@ The core of your workflow is a custom skill for technical writing. Here's a prac
 ---
 name: Technical Writer
 description: Generate clear, consistent technical documentation for code projects
-version: 1.0.0
-tools: [Read, Edit, Write, Bash]
 ---
 
 # Context
@@ -102,8 +100,6 @@ API documentation is one of the most valuable use cases for Claude Code. Create 
 ---
 name: API Documentor
 description: Generate OpenAPI documentation from code comments and endpoint definitions
-version: 1.0.0
-tools: [Read, Grep, Write]
 ---
 
 # Task
@@ -158,8 +154,6 @@ A well-structured README is essential for any project. Create a skill that gener
 ---
 name: README Generator
 description: Create comprehensive README files from project structure
-version: 1.0.0
-tools: [Read, Glob, Write]
 ---
 
 # Project Analysis
@@ -194,8 +188,6 @@ The real power of Claude Code emerges when you use it for ongoing maintenance. C
 ---
 name: Documentation Auditor
 description: Check documentation for consistency and completeness
-version: 1.0.0
-tools: [Grep, Read]
 ---
 
 # Audit Criteria

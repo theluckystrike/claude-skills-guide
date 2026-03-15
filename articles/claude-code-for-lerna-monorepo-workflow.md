@@ -56,11 +56,6 @@ For recurring monorepo tasks, create a dedicated Claude skill. Save this as `ski
 ---
 name: lerna-manager
 description: Manage Lerna monorepo operations including versioning, publishing, and dependency coordination
-tools:
-  - Bash
-  - Read
-  - Write
-  - Glob
 ---
 
 This skill helps manage a Lerna monorepo with multiple packages. When asked to make changes:
@@ -175,8 +170,6 @@ Create a skill that runs comprehensive checks before publishing:
 ---
 name: lerna-prepublish
 description: Run pre-publish validation checks
-tools:
-  - Bash
 ---
 
 Before publishing, always:

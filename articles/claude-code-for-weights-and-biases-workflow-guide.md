@@ -52,7 +52,6 @@ A dedicated Claude skill for Weights & Biases streamlines common ML workflow tas
 ---
 name: wandb-workflow
 description: "Assist with Weights & Biases experiment tracking and ML workflows"
-tools: [bash, read_file, write_file]
 ---
 
 # Weights & Biases Workflow Assistant
@@ -199,7 +198,6 @@ You can create specialized Claude skills for particular ML domains. For example,
 ---
 name: hyperparameter-tuning
 description: "Assist with ML hyperparameter optimization using W&B"
-tools: [bash, read_file, write_file]
 ---
 
 # Hyperparameter Tuning Assistant

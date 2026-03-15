@@ -28,7 +28,6 @@ Early skills were relatively simple. A basic skill looked like this:
 ---
 name: file-organizer
 description: Organizes files in a directory by type
-tools: [Read, Write, Bash]
 ---
 
 You are a file organization assistant. Help users organize their files efficiently.
@@ -46,13 +45,6 @@ The skill format expanded to include MCP server configurations:
 ---
 name: database-assistant
 description: Assists with database operations
-tools: [Read, Write, Bash]
-mcp_servers:
-  - name: postgres
-    command: npx
-    args: ["-y", "@modelcontextprotocol/server-postgres"]
-    env:
-      DATABASE_URL: "${DATABASE_URL}"
 ---
 
 You are a database expert. Help write queries and optimize database performance.
@@ -110,18 +102,6 @@ The latest versions have focused on developer experience and specialized capabil
 ---
 name: api-tester
 description: Tests REST APIs with various methods
-tools: [Bash, Read]
-input_schema:
-  type: object
-  properties:
-    endpoint:
-      type: string
-      description: "The API endpoint to test"
-    method:
-      type: string
-      enum: [GET, POST, PUT, DELETE]
-    body:
-      type: object
 ---
 
 You are an API testing expert. Execute requests and validate responses.

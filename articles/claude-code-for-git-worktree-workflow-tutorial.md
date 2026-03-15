@@ -80,7 +80,6 @@ Create a skill that helps manage worktrees:
 ---
 name: worktree-manager
 description: Manages Git worktrees for parallel feature development
-tools: [Bash, Read, Write]
 ---
 
 You help manage Git worktrees for parallel development. When asked to create a worktree:

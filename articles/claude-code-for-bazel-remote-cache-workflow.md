@@ -77,7 +77,6 @@ A Claude Code skill can automate common cache operations, diagnose issues, and h
 ---
 name: bazel-cache-status
 description: Check and analyze Bazel remote cache status
-tools: [bash, read_file]
 ---
 
 # Bazel Cache Status Checker
@@ -171,7 +170,6 @@ Sometimes you need to intentionally invalidate cache entries. Create a skill tha
 ---
 name: bazel-cache-invalidate
 description: Safely invalidate Bazel cache entries
-tools: [bash]
 ---
 
 # Cache Invalidation Helper

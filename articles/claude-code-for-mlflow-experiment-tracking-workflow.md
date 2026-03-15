@@ -200,20 +200,7 @@ Consider a skill that wraps common experiment tracking tasks:
 # skill.md example structure
 name: mlflow-experiment-tracker
 description: Automates MLflow experiment tracking with team conventions
-tools:
-  - bash
-  - read_file
-  - write_file
 
-instructions: |
-  When asked to set up experiment tracking:
-  
-  1. First, read the existing project structure to understand the ML setup
-  2. Generate tracking code that follows team conventions:
-     - Use consistent experiment naming
-     - Log all relevant hyperparameters
-     - Save model artifacts with proper versioning
-  3. Create helper functions for common operations
 ```
 
 With this skill, any team member can get properly configured experiment tracking without needing to remember every detail of the MLflow API.

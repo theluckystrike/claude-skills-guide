@@ -44,7 +44,7 @@ Documentation is often the bottleneck in demo preparation. With Claude Code, you
 After implementing a feature, ask for documentation:
 
 ```bash
-npx claude --print "Add JSDoc comments to the authenticateUser function, explaining the parameters, return values, and possible errors."
+claude --print "Add JSDoc comments to the authenticateUser function, explaining the parameters, return values, and possible errors."
 ```
 
 For README files, provide a template and let Claude Code fill in the details based on your actual implementation. Include sections for prerequisites, installation, usage examples, and troubleshooting.
@@ -78,10 +78,10 @@ Create a "base" implementation, then use branches or feature flags to create var
 
 ```bash
 # For a beginner-friendly version
-npx claude --print "Refactor this demo to use only synchronous operations and remove any callback complexity. Add comments explaining each step."
+claude --print "Refactor this demo to use only synchronous operations and remove any callback complexity. Add comments explaining each step."
 
 # For an advanced version
-npx claude --print "Refactor this demo to use async/await patterns, add error boundaries, and implement retry logic with exponential backoff."
+claude --print "Refactor this demo to use async/await patterns, add error boundaries, and implement retry logic with exponential backoff."
 ```
 
 This approach keeps your core demo clean while allowing you to quickly generate audience-appropriate variations.
