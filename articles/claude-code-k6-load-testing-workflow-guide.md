@@ -13,9 +13,9 @@ score: 7
 ---
 
 
-# Claude Code K6 Load Testing Workflow Guide
+# Integrating K6 Load Testing into Your Claude Code Development Workflow
 
-Load testing is a critical practice for building reliable applications, yet many developers treat it as an afterthought. Integrating K6 with Claude Code transforms performance testing from a separate phase into a natural part of your development workflow. This guide shows you how to embed load testing into your Claude Code projects effectively.
+Load testing is a critical practice for building reliable applications, yet many developers treat it as an afterthought rather than a continuous part of development. This guide focuses on the workflow integration side: how to structure your project for K6 tests, run them regularly during development, wire them into CI/CD pipelines with automated performance gates, and extend the strategy with advanced K6 scenarios—all alongside Claude Code.
 
 ## Why K6 Works Well with Claude Code
 
