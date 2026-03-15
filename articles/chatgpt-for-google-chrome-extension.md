@@ -17,7 +17,7 @@ date: 2026-03-15
 author: theluckystrike
 permalink: /chatgpt-for-google-chrome-extension/
 ---
-
+{% raw %}
 # ChatGPT for Google Chrome Extension: A Developer Guide
 
 Chrome extensions provide a powerful way to extend browser functionality, and integrating ChatGPT opens up numerous possibilities for developers and power users. Whether you want to add AI-assisted writing, automate repetitive tasks, or create custom productivity tools, understanding how to build ChatGPT-powered extensions gives you a significant advantage.
