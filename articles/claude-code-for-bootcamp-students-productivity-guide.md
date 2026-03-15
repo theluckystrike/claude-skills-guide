@@ -40,7 +40,7 @@ npm install -g @anthropic/claude-code
 Verify your installation:
 
 ```bash
-claude-code --version
+claude --version
 ```
 
 ### Initial Configuration
@@ -182,7 +182,7 @@ For bootcamp students, these skills provide the most value:
 Install skills using:
 
 ```bash
-claude-code --install [skill-name]
+claude --install [skill-name]
 ```
 
 ## Common Bootcamp Mistakes to Avoid

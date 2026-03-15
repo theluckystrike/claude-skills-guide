@@ -35,7 +35,7 @@ To find repositories containing Claude skills, try these searches:
 
 ```
 claude-skill language:md
-claude-code skill language:md
+claude skill language:md
 "/claude-skills" in:path
 ```
 

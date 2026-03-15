@@ -61,7 +61,7 @@ For example, when you need a new deployment pipeline:
 
 ```bash
 # Claude Code generates a complete pipeline YAML
-claude-code generate-pipeline \
+claude generate-pipeline \
   --service my-service \
   --environment production \
   --strategy rolling \
@@ -112,7 +112,7 @@ The monitoring loop can run as part of your pipeline or as a separate process:
 
 ```bash
 # Monitor a specific deployment
-claude-code monitor-deployment \
+claude monitor-deployment \
   --pipeline-id my-pipeline \
   --execution-id ${HARNESS_EXECUTION_ID}
 ```
@@ -154,7 +154,7 @@ Beyond active deployment management, Claude Code can analyze your existing pipel
 Run an analysis on your pipeline:
 
 ```bash
-claude-code analyze-pipeline \
+claude analyze-pipeline \
   --pipeline-id production-deploy \
   --recommendations true
 ```

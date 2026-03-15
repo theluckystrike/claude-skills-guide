@@ -142,7 +142,7 @@ if [ ! -d .venv ]; then uv venv; fi
 uv pip install claude-code-skills
 
 # Verify installation
-claude-code --list-skills
+claude --list-skills
 ```
 
 ## Conclusion

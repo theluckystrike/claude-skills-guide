@@ -91,7 +91,7 @@ Claude Code maintains conversation context that can grow unbounded. Use the tdd 
 
 ```bash
 # Run memory profiling alongside test suite
-claude-code --profile-memory npm test
+claude --profile-memory npm test
 ```
 
 After each test iteration, check the context window size. If it grows beyond expected bounds, your prompts or skill configurations may be accumulating unnecessary history.

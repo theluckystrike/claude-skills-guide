@@ -32,7 +32,7 @@ Claude Code's ability to read and analyze large codebases makes it invaluable fo
 When you begin a migration project, start by having Claude Code scan your Classic ASP files to understand their structure and dependencies:
 
 ```
-claude-code /path/to/your/asp/application --analyze --output report.md
+claude /path/to/your/asp/application --analyze --output report.md
 ```
 
 This command generates a detailed report identifying code patterns, potential issues, and migration complexity estimates. Claude Code recognizes common Classic ASP patterns including inline SQL queries, VBScript functions, session state usage, and COM component dependencies.

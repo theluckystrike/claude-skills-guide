@@ -111,7 +111,7 @@ Put all these pieces together into an actionable Claude Code workflow. The compl
 
 ```bash
 # Example workflow invocation
-claude-code font-optimize --project ./src --output report.md
+claude font-optimize --project ./src --output report.md
 ```
 
 This should produce a comprehensive report showing current issues, their impact, and specific code changes needed. The workflow can even apply fixes automatically with appropriate flags, or present them as a diff for manual review.

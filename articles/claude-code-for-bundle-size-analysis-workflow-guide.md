@@ -151,7 +151,7 @@ This creates a clear picture of what changed and helps reviewers understand the 
 Every few months, audit your dependencies to find opportunities to reduce bloat:
 
 ```bash
-claude-code run /find-bloat --include-dev false
+claude run /find-bloat --include-dev false
 ```
 
 This identifies:
@@ -178,7 +178,7 @@ When you identify a large dependency, search for lighter alternatives:
 Claude Code can suggest alternatives based on your usage patterns:
 
 ```bash
-claude-code run /suggest-alternatives moment --usage "format, parse, timezone"
+claude run /suggest-alternatives moment --usage "format, parse, timezone"
 ```
 
 ### Code Splitting Opportunities
@@ -244,7 +244,7 @@ This automated check ensures no PR accidentally adds significant bloat to your a
 Start by running a manual analysis on your current project:
 
 ```bash
-claude-code run /analyze-bundle
+claude run /analyze-bundle
 ```
 
 Review the output and identify your top three largest dependencies. Research alternatives for at least one of them this week. Even small reductions compound over time, improving performance for every user who visits your application.

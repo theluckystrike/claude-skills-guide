@@ -29,7 +29,7 @@ npm install -g @anthropic/claude-code
 After installation, verify the setup by running:
 
 ```bash
-claude-code --version
+claude --version
 ```
 
 Now you are ready to start your first session. The simplest way to begin is by invoking Claude Code in your terminal within any project directory:

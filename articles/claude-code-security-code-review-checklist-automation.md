@@ -157,7 +157,7 @@ Run lightweight checks before code reaches review:
 ```bash
 # .git/hooks/pre-commit
 #!/bin/bash
-claude-code /security-check --files $(git diff --cached --name-only)
+claude /security-check --files $(git diff --cached --name-only)
 ```
 
 ### Pull Request Automation

@@ -116,7 +116,7 @@ describe('ProjectCard', () => {
 Running tests becomes straightforward:
 
 ```bash
-claude-code --skill tdd run-tests --watch
+claude --skill tdd run-tests --watch
 ```
 
 ## Code Quality Standards
