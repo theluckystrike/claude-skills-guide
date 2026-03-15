@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Confluence Workflow Tutorial Guide"
-description: "Learn how to integrate Claude Code with Confluence workflows to automate documentation, streamline team collaboration, and build intelligent documentation pipelines."
+description: "Learn how to integrate Claude Code with Confluence workflows to automate documentation, streamline team collaboration, and build intelligent."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-confluence-workflow-tutorial-guide/
@@ -288,3 +288,10 @@ Integrating Claude Code with Confluence workflows transforms documentation from 
 
 Remember to secure your credentials, version control your templates, and maintain human oversight for critical content. With these practices in place, your Confluence instance becomes a living knowledge base that evolves automatically alongside your team's work.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

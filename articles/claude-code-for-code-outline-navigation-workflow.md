@@ -213,3 +213,10 @@ The most productive workflow combines navigation with actual development:
 Claude Code's navigation capabilities transform how you interact with code. Rather than manually searching through files, you can let Claude help you build a mental map of any codebase and navigate it efficiently. The key is treating navigation as a first-class skill—something you practice deliberately rather than doing ad-hoc searches.
 
 Start building your navigation skills today, and you'll find yourself understanding and contributing to complex codebases faster than ever before.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
