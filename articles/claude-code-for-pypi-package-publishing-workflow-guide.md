@@ -256,3 +256,10 @@ Claude Code makes PyPI package publishing straightforward by guiding you through
 Remember to always test on Test PyPI before production, use API tokens for authentication, and consider setting up CI/CD for automated releases. With these practices in place, sharing your Python packages with the world becomes a reliable and repeatable process.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

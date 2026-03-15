@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for OSS CoC Enforcement Workflow Tutorial"
-description: "Learn how to build automated Code of Conduct enforcement workflows using Claude Code skills. Practical examples for handling reports, notifications, and escalation."
+description: "Learn how to build automated Code of Conduct enforcement workflows using Claude Code skills. Practical examples for handling reports, notifications."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-coc-enforcement-workflow-tutorial/
@@ -220,3 +220,10 @@ The key is starting simple: document your current process, identify repetitive t
 
 Remember: enforcement isn't about punishment. It's about creating an environment where everyone can contribute confidently. A well-designed workflow makes that possible.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

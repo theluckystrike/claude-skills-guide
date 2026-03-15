@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome New Tab Slow: A Developer's Troubleshooting Guide"
-description: "Diagnose and fix slow Chrome new tab performance with developer-focused techniques. Learn to use Chrome DevTools, profile startup behavior, and optimize extensions."
+description: "Diagnose and fix slow Chrome new tab performance with developer-focused techniques. Learn to use Chrome DevTools, profile startup behavior, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-new-tab-slow/
@@ -242,5 +242,12 @@ Reinstall from the official Google Chrome website to ensure a clean build.
 Chrome new tab slowness typically stems from three sources: extension overhead, cached data corruption, or excessive feature loading. Start with the Task Manager to quickly identify high-resource processes, then isolate extension issues using incognito mode or the `--disable-extensions` flag. For persistent problems, profile with DevTools, clear caches selectively, and consider a profile reset or clean reinstall.
 
 Most users find that disabling a single problematic extension resolves their issue. The key is systematic elimination—test one variable at a time, and document changes so you can identify what actually fixed the problem.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

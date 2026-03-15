@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Canary vs Stable Speed: A Developer's Performance Guide"
+title: "Chrome Canary vs Stable Speed: A Developer's Performance."
 description: "Compare Chrome Canary and Stable channel performance. Learn real-world speed differences, when to use each build, and practical tips for developers."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -146,5 +146,12 @@ Most professional developers benefit from running both channels. Use Stable for 
 The performance gap between channels narrows with each stable release as optimizations mature. However, if you're building performance-sensitive applications or need to validate against upcoming browser behavior, Canary remains the better choice despite occasional instability.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

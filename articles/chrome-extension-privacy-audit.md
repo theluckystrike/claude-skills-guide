@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Privacy Audit: A Developer's Guide"
-description: "Learn how to audit Chrome extensions for privacy risks. Practical techniques for developers and power users to analyze permissions, data collection, and security vulnerabilities."
+description: "Learn how to audit Chrome extensions for privacy risks. Practical techniques for developers and power users to analyze permissions, data collection."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-privacy-audit/
@@ -207,5 +207,12 @@ For privacy-conscious users, consider these approaches:
 Chrome extension privacy audits require examining manifests, analyzing code patterns, and understanding what data leaves your browser. The effort protects your personal information from unnecessary exposure.
 
 Regular audits of your installed extensions, combined with careful evaluation before installing new ones, significantly reduces your exposure to privacy risks. The manual process takes 15-30 minutes per extension but provides peace of mind.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

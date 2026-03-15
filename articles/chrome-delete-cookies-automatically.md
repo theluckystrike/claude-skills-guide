@@ -196,5 +196,12 @@ When automating cookie deletion, consider these security practices:
 
 Chrome provides multiple pathways to automatically delete cookies, from simple browser settings to advanced automation scripts. Choose the method that matches your technical comfort level and use case requirements. For developers, integrating cookie cleanup into testing pipelines ensures consistent, reliable results.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
