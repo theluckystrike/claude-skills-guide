@@ -3,7 +3,7 @@
 
 layout: default
 title: "Chrome Extension GraphQL Network Inspector: Developer Guide"
-description: "Learn how to use and build Chrome extensions for inspecting GraphQL network requests. Practical patterns for debugging queries, mutations, and subscriptions in your browser."
+description: "Learn how to use and build Chrome extensions for inspecting GraphQL network requests. Practical patterns for debugging queries, mutations, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-graphql-network-inspector/
@@ -158,5 +158,12 @@ Adjust the request history limit based on your application. High-traffic applica
 ## Conclusion
 
 A Chrome extension GraphQL network inspector fills a gap that standard browser developer tools leave open. By providing operation-level visibility, formatted query display, and search capabilities, these extensions make debugging GraphQL applications significantly more efficient. Whether you build your own or adopt an existing solution, integrating a GraphQL inspector into your development workflow pays dividends in faster debugging and better understanding of your application's data layer.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

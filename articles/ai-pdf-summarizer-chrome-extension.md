@@ -239,6 +239,13 @@ For teams, integrating PDF summarization into documentation pipelines via CI/CD 
 
 The right approach depends on your specific use case, privacy requirements, and workflow integration needs. Chrome extensions provide the most seamless browser integration, while API-based solutions offer more control over processing pipelines.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 {% endraw %}

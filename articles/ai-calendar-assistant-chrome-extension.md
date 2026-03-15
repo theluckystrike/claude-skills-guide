@@ -2,7 +2,7 @@
 
 layout: default
 title: "AI Calendar Assistant Chrome Extension: A Developer's Guide"
-description: "Learn how to build and integrate AI-powered calendar assistants as Chrome extensions. Practical examples, code snippets, and architecture patterns for developers."
+description: "Learn how to build and integrate AI-powered calendar assistants as Chrome extensions. Practical examples, code snippets, and architecture patterns for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-calendar-assistant-chrome-extension/
@@ -220,6 +220,13 @@ Consider offering a self-hosted option where users run their own AI models, addr
 ## Conclusion
 
 Building an AI calendar assistant Chrome extension requires integrating multiple technologies: browser APIs, calendar services, and AI/ML capabilities. Start with the Google Calendar API, add simple pattern matching for common requests, then layer in AI for complex natural language understanding. The key is balancing functionality with performance and security considerations specific to calendar data.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

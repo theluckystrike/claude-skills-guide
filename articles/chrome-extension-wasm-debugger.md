@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Wasm Debugger: A Practical Guide"
-description: "Learn how to debug WebAssembly modules within Chrome extensions. This guide covers source maps, Chrome DevTools integration, and practical debugging workflows for extension developers."
+description: "Learn how to debug WebAssembly modules within Chrome extensions. This guide covers source maps, Chrome DevTools integration, and practical debugging."
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-wasm-debugger/
@@ -159,5 +159,12 @@ This approach transforms debugging from examining opaque binary code to working 
 ## Summary
 
 Debugging WebAssembly in Chrome extensions requires proper source map configuration and understanding the extension's execution context. By generating source maps during compilation, making them accessible to DevTools, and using the Memory Inspector for low-level examination, you can effectively debug WASM modules in both background scripts and content scripts. The key is ensuring your build pipeline preserves debug information through to the extension package.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

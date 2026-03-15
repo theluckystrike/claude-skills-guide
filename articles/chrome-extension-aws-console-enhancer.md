@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension AWS Console Enhancer: Boost Your Cloud Workflow"
+title: "Chrome Extension AWS Console Enhancer: Boost Your Cloud."
 description: "Discover the best Chrome extensions that enhance the AWS Console experience. Learn how to improve navigation, resource management, and productivity in AWS."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -144,5 +144,12 @@ This workflow, which might take 15-20 clicks without extensions, reduces to abou
 ## Wrapping Up
 
 Chrome extensions that enhance the AWS Console address real pain points in daily cloud operations. The best extensions add navigation speed, improve information density, and automate repetitive tasks. Start with one or two extensions that match your most frequent workflows, then expand as you identify additional bottlenecks.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

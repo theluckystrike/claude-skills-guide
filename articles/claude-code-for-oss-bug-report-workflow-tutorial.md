@@ -192,5 +192,12 @@ When implementing Claude Code bug report workflows, consider these recommendatio
 
 Claude Code transforms bug reporting from a manual, error-prone process into an automated workflow that improves contributor experience and maintainer productivity. By implementing the strategies in this guide, your open source project can achieve faster issue resolution and more engaged community participation.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

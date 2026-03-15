@@ -2,7 +2,7 @@
 
 
 layout: default
-title: "Chrome Extension Local Storage Viewer: Complete Guide for Developers"
+title: "Chrome Extension Local Storage Viewer: Complete Guide."
 description: "Learn how to view, debug, and manage localStorage and sessionStorage in Chrome extensions. Practical examples and code snippets for developers."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -219,5 +219,12 @@ chrome.storage.local.set({ key: 'value' }).catch((error) => {
 ```
 
 Understanding how to view and manage storage is fundamental to Chrome extension development. Whether you rely on DevTools for quick inspection or build custom viewer interfaces, having visibility into your extension's storage enables faster debugging and more reliable applications.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

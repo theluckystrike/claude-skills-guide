@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Fork and Pull Request Workflow Guide"
-description: "Master the fork and pull request workflow with Claude Code. Learn how to fork repositories, create branches, make changes, and submit pull requests effectively."
+description: "Master the fork and pull request workflow with Claude Code. Learn how to fork repositories, create branches, make changes, and submit pull requests."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills, fork, pull-request, github, workflow]
@@ -156,5 +156,12 @@ By delegating repetitive tasks to Claude Code, you move faster while maintaining
 ## Conclusion
 
 The fork and pull request workflow is essential for contributing to external projects. By forking repositories, creating feature branches, making atomic commits, and submitting clear pull requests, you become a more effective collaborator. Claude Code can automate much of the boilerplate work, letting you focus on the creative task of solving problems with code.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
