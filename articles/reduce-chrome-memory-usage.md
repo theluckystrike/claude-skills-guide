@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "How to Reduce Chrome Memory Usage: A Practical Guide for Developers"
 description: "Learn proven techniques to reduce Chrome memory usage. Includes flags, extensions, DevTools profiling, and automation scripts for power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /reduce-chrome-memory-usage/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 {% raw %}
 # How to Reduce Chrome Memory Usage: A Practical Guide for Developers

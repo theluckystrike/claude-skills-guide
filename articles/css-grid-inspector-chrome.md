@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "CSS Grid Inspector Chrome: Complete Developer Guide"
 description: "Master Chrome DevTools CSS Grid Inspector for debugging complex layouts. Learn to visualize grid lines, tracks, areas, and troubleshoot common grid issues."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /css-grid-inspector-chrome/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 # CSS Grid Inspector Chrome: A Practical Guide for Developers
 

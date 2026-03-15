@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Firefox vs Chrome Privacy 2026: A Developer's Technical Comparison"
 description: "A technical privacy comparison between Firefox and Chrome for developers and power users in 2026. Examine data collection, fingerprinting resistance, and security features."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /firefox-vs-chrome-privacy-2026/
+reviewed: true
+score: 8
+categories: [comparisons]
+tags: [chrome, claude-skills]
 ---
+
 
 {% raw %}
 ## Introduction

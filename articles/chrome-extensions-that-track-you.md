@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extensions That Track You: What Developers Need to Know"
 description: "A practical guide for developers and power users on how Chrome extensions track your data, the permissions they request, and how to audit extension behavior."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extensions-that-track-you/
 categories: [chrome, privacy, security]
-tags: [chrome-extensions, privacy, tracking]
+tags: [chrome-extensions, privacy, tracking, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 # Chrome Extensions That Track You: What Developers Need to Know
 
@@ -165,7 +169,7 @@ function trackEvent(category, action) {
 
 ## Conclusion
 
-Chrome extensions operate with significant privileges, and many leverage these capabilities for tracking purposes beyond their core functionality. As a developer or power user, you carry sensitive data in your browser that could impact your projects, accounts, and users if exposed.
+Chrome extensions operate with significant privileges, and many use these capabilities for tracking purposes beyond their core functionality. As a developer or power user, you carry sensitive data in your browser that could impact your projects, accounts, and users if exposed.
 
 Audit your extensions regularly, question broad permission requests, and prefer minimal-access designs. The convenience of an extension rarely justifies unchecked data collection.
 
