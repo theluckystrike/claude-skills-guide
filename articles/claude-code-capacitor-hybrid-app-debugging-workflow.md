@@ -179,6 +179,10 @@ Capacitor apps generate logs in multiple locations: browser console, native devi
 Parse these iOS device logs and find any Capacitor or JavaScript errors: [paste log output]. Cross-reference with the browser console errors I pasted earlier and identify the root cause
 ```
 
+## Setting Up Before You Debug
+
+This guide assumes your Capacitor project is already initialized and building. If you are starting from scratch or need to understand project configuration, plugin integration, state management, or deployment, see the [Claude Code Capacitor Hybrid App Development Guide](/claude-code-capacitor-hybrid-app-development-guide/) first.
+
 ## Conclusion
 
 Claude Code transforms Capacitor debugging from a frustrating multi-platform challenge into a structured, systematic process. By leveraging its ability to work across your entire project—including native iOS and Android configurations—you can trace issues through every layer of your hybrid application. The key is providing comprehensive context: error messages, platform information, code snippets, and reproduction steps. Combine this with skills like **webapp-testing** for automated browser testing and **bash** for build verification, and you have a powerful debugging toolkit for any Capacitor project.

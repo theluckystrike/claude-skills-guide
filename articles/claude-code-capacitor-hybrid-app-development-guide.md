@@ -328,11 +328,7 @@ Key areas to focus on include:
 
 ### Debugging Native Issues
 
-When issues occur specifically on one platform, Claude Code can help trace the root cause:
-
-```
-My app works perfectly in the browser and on Android, but crashes on iOS when opening the camera. The error appears in the native console. Help me debug this by examining the iOS native code that Capacitor generates.
-```
+Debugging platform-specific failures — crashes, plugin errors, permission denials, and log analysis across iOS and Android — is a deep topic beyond the scope of this development guide. For a step-by-step workflow covering JavaScript runtime errors, native plugin configuration, WebView inspection, and structured investigation with Claude Code skills, see the dedicated [Claude Code Capacitor Hybrid App Debugging Workflow](/claude-code-capacitor-hybrid-app-debugging-workflow/).
 
 ## Conclusion
 
