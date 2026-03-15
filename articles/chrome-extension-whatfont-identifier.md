@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension WhatFont Identifier: Complete Developer Guide"
-description: "Master font identification in browsers with Chrome extensions. Learn how WhatFont tools work, build your own identifier, and integrate font detection into development workflows."
+title: "Chrome Extension WhatFont Identifier: Complete Developer."
+description: "Master font identification in browsers with Chrome extensions. Learn how WhatFont tools work, build your own identifier, and integrate font detection."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-whatfont-identifier/
@@ -135,6 +135,13 @@ For maximum productivity, combine font identification extensions with other deve
 Consider creating keyboard shortcuts for your extension to speed up the identification workflow. Chrome allows you to configure extension shortcuts through chrome://extensions/shortcuts, enabling rapid font checking without interrupting your development flow.
 
 Font identification extensions represent a small but significant category of developer tools that bridge the gap between visual design and code implementation. Understanding how they work helps you choose the right tool for your needs and, when necessary, build custom solutions tailored to specific requirements.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

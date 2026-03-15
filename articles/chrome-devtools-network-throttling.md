@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome DevTools Network Throttling: Simulate Slow Connections for Better Apps"
-description: "Learn how to use Chrome DevTools network throttling to test your web applications under slow network conditions. Includes practical examples and real-world scenarios."
+title: "Chrome DevTools Network Throttling: Simulate Slow."
+description: "Learn how to use Chrome DevTools network throttling to test your web applications under slow network conditions. Includes practical examples and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-devtools-network-throttling/
@@ -222,4 +222,11 @@ Chrome DevTools network throttling is a practical tool for building applications
 Your users on slow connections will thank you.
 
 Built by the luckystrike — More at [zovo.one](https://zovo.one)
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Web Vitals Chrome Extension: Monitor Core Web Vitals in Real-Time"
-description: "Learn how to use Chrome extensions to monitor Web Vitals directly in your browser. Track LCP, FID, and CLS metrics while you browse and debug performance issues."
+title: "Web Vitals Chrome Extension: Monitor Core Web Vitals in."
+description: "Learn how to use Chrome extensions to monitor Web Vitals directly in your browser. Track LCP, FID, and CLS metrics while you browse and debug."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /web-vitals-chrome-extension/
@@ -113,5 +113,12 @@ These extensions work in Chrome, Edge, Brave, and other Chromium-based browsers.
 A web vitals chrome extension gives you instant visibility into page performance without leaving your browser. The official Web Vitals extension provides accurate, Google-aligned metrics. PageSpeed Insights adds detailed recommendations. Lighthouse offers comprehensive auditing.
 
 Use these tools during development to catch performance issues early, establish baselines before major changes, and verify optimizations work as expected. Combine manual testing with real-user monitoring in production for a complete performance strategy.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
