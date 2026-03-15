@@ -62,7 +62,7 @@ The most common frustration with Claude skills: you installed the skill, but not
 
 - [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/)
 - [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/)
-- [How Claude Skills Auto Invocation Actually Works — Deep Dive](/claude-skills-guide/how-claude-skills-auto-invocation-actually-works-deep-dive/)
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/)
 - [Claude Code Crashes When Loading Skill: Debug Guide](/claude-skills-guide/claude-code-crashes-when-loading-skill-debug-steps/)
 
 ---

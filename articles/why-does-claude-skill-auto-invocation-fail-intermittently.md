@@ -19,7 +19,7 @@ If you've ever watched Claude fail to invoke a skill you expected it to use—de
 
 Claude determines whether to auto-invoke a skill by analyzing your conversation context against the skill's trigger conditions. When you mention terms like "extract the text from this PDF" or start describing a component layout, Claude's underlying model evaluates whether a registered skill matches the intent. The skill registry, populated through your skill configuration files, provides the matching logic.
 
-The system relies on several signals: your explicit language, implicit task patterns, and the skill's defined triggers. For a technical breakdown, see [how Claude skills auto-invocation actually works](/claude-skills-guide/how-claude-skills-auto-invocation-actually-works-deep-dive/). When any of these signals weaken or conflict, auto invocation fails.
+The system relies on several signals: your explicit language, implicit task patterns, and the skill's defined triggers. For a technical breakdown, see [how Claude skills auto-invocation works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/). When any of these signals weaken or conflict, auto invocation fails.
 
 ## Common Causes of Intermittent Failure
 

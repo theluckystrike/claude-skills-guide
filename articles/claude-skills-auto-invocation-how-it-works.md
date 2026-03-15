@@ -28,9 +28,21 @@ DO NOT TRIGGER when: user only mentions PDF in passing without requesting file o
 
 This keeps interactions focused — skills load when relevant, not on every mention of a keyword.
 
+## The Auto-Invocation Pipeline
+
+Before Claude processes your message normally, it runs through a structured evaluation sequence:
+
+1. **Input capture**: your message text is collected
+2. **Skill candidate selection**: all loaded skills with trigger phrases are evaluated
+3. **Pattern matching**: each trigger phrase is scored against your input semantically
+4. **Threshold filtering**: scores below the activation threshold are dropped
+5. **Skill dispatch**: the best-matching skill is invoked
+
 ## How the System Detects Skill Requirements
 
-The detection process happens at multiple levels. First, Claude analyzes the language you use—terms like "generate," "extract," or "analyze" signal different skill categories. Second, file extensions and project structures provide strong indicators. Third, conversational context helps distinguish between similar domains.
+The detection process uses semantic similarity, not substring matching. When you ask "run tests on this function," the system understands you are requesting testing, the context involves code, you want execution — the `/tdd` skill watches for these intent signals. Saying "check if this code handles edge cases" can trigger `/tdd` even without mentioning "test."
+
+Detection also happens at multiple other levels. Claude analyzes the language you use — terms like "generate," "extract," or "analyze" signal different skill categories. File extensions and project structures provide strong indicators. Conversational context helps distinguish between similar domains.
 
 Here's how different triggers activate skills:
 
@@ -45,6 +57,20 @@ Here's how different triggers activate skills:
 Skills are explicitly invoked with the `/skill-name` slash command prefix. They are not auto-loaded from context detection — you invoke them directly.
 
 The skill definitions themselves are what Claude reads to understand when to activate. To understand how those definitions are structured, see [Skill MD File Format Explained With Examples](/claude-skills-guide/skill-md-file-format-explained-with-examples/).
+
+### Specific Trigger Phrases Work Better Than Generic Ones
+
+Describe specific trigger scenarios in the skill's body content:
+
+```
+When the user asks to write tests for a function, or requests added test coverage, apply this skill.
+```
+
+A trigger description that is too generic creates noise:
+
+```
+When the user asks for help with code  # fires on almost any development request
+```
 
 ## Practical Examples
 
@@ -113,6 +139,20 @@ Each skill operates at a specific privilege level within the system architecture
 When skills load, they initialize with relevant tooling and knowledge bases. The pdf skill, for instance, includes libraries for text extraction, form manipulation, and document generation. The supermemory skill connects to storage systems for retrieving previously saved information. The webapp-testing skill provides browser automation primitives for validating frontend behavior.
 
 ## Troubleshooting Auto Invocation Issues
+
+### Common Problems and Fixes
+
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Skill fires too often | Trigger phrase is too generic | Make it more specific |
+| Skill never fires | Trigger phrase is too specific or uses unusual vocabulary | Rewrite with simpler language |
+| Wrong skill fires | Two skills have overlapping trigger phrases | Differentiate their trigger blocks |
+
+**Check your trigger syntax**: Malformed trigger blocks cause the system to skip evaluation entirely.
+
+**Test with explicit invocation**: Try `/skill-name`. If it works explicitly but not automatically, the trigger phrases need adjustment.
+
+**Examine context**: The system evaluates your entire conversation context, not just your current message.
 
 Sometimes auto invocation might not activate the skill you expect. This usually happens when request language remains too generic or when multiple skill domains compete for activation. In such cases, explicitly naming the skill resolves the ambiguity immediately. For example, saying "Use the pdf skill to extract tables from this document" guarantees the correct tool loads regardless of other contextual signals.
 
