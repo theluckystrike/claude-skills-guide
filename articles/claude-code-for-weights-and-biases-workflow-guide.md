@@ -216,6 +216,64 @@ When user mentions "tune" or "optimize":
 - Explain how to interpret results
 ```
 
+You can also configure a sweep directly with a YAML file and run it from Claude Code:
+
+```yaml
+program: train.py
+method: bayes
+metric:
+  name: validation_loss
+  goal: minimize
+parameters:
+  learning_rate:
+    distribution: log_uniform
+    min: 0.0001
+    max: 0.1
+  batch_size:
+    values: [32, 64, 128]
+```
+
+Run the sweep controller from your terminal within Claude Code, then monitor results in the W&B dashboard while Claude assists with code modifications between runs.
+
+## Integrating Claude Skills with Your W&B Workflow
+
+Several Claude skills enhance W&B workflows beyond the core W&B skill itself.
+
+The **tdd** skill helps you write tests for training pipelines before implementation. When building model training code, invoke it and describe your training logic. Claude applies test-driven development principles, generating test cases for data loading, model forward passes, and metric calculations. This approach catches bugs before they affect your experiment runs:
+
+```
+/tdd
+```
+
+The **pdf** skill becomes useful when generating reports from W&B data. After completing experiments, use it to create documentation summarizing run results, comparison charts, or hyperparameter tables:
+
+```
+/pdf
+```
+
+The **supermemory** skill complements W&B by tracking context across sessions. When working on long ML projects, invoke it to maintain notes about experiment configurations, key findings, and model decisions:
+
+```
+/supermemory
+```
+
+This creates a persistent knowledge base that connects your Claude sessions with your W&B experiment history. The **docx** skill helps when documenting workflows for team distribution, generating status reports that reference specific W&B run IDs.
+
+## Project Structure for Claude Code and W&B
+
+Organize your ML projects to use both tools effectively:
+
+- **Config files**: Store W&B configurations in `configs/` with version control
+- **Scripts**: Keep training and evaluation scripts in `scripts/` or `src/`
+- **Notebooks**: Use W&B's integrated notebooks or export results for Claude's **pptx** skill to present findings
+- **Artifacts**: Name artifacts consistently — `dataset-v1`, `model-run42` — for easy retrieval
+
+When starting a new ML project in Claude Code, create a `wandb.env` file containing your API key (add it to `.gitignore`) and source it in your shell:
+
+```bash
+source wandb.env
+```
+
 ## Conclusion
 
 Integrating Claude Code with Weights & Biases creates a powerful development environment for machine learning. Claude understands your experiment history, helps you log relevant metrics, and assists with analyzing results. This combination enables data-driven decision-making while maintaining the productivity benefits of AI-assisted coding.
@@ -230,5 +288,9 @@ The key is to establish good logging practices early and use Claude's understand
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/) — combine Jupyter notebooks with Claude skills for end-to-end ML workflows
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — apply TDD to ML training pipelines and evaluation scripts
+- [Claude Code LLM Evaluation and Benchmarking Workflow](/claude-skills-guide/claude-code-llm-evaluation-and-benchmarking-workflow/) — systematically evaluate and compare model performance
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — automate experiment tracking as part of your CI/CD pipeline
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
