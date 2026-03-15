@@ -116,9 +116,7 @@ Connect Claude Code to your alert pipeline:
 
 ```bash
 # Example: Process PagerDuty webhooks
-claude-code execute --agent sre-triage \
-  --input alert.json \
-  --output triage-report.json
+claude --print "Process this PagerDuty alert and provide triage steps: $(cat alert.json)"
 ```
 
 ## Automating Log Analysis and Debugging
@@ -195,7 +193,7 @@ verify_deployment() {
 }
 
 # Use with Claude Code
-claude-code execute verify-deployment my-service production
+claude --print "Verify deployment health for my-service in the production environment"
 ```
 
 ## Creating Self-Service Runbooks
@@ -236,7 +234,7 @@ Transform static runbooks into executable Claude Code workflows:
 
 Execute this runbook automatically:
 ```bash
-claude-code execute runbook db-connection-pool --severity critical
+claude --print "Execute the database connection pool runbook. Severity: critical. Guide through diagnosing and resolving connection pool exhaustion."
 ```
 ```
 
