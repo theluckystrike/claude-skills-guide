@@ -166,6 +166,7 @@ Building Java microservices with Claude Code means you're never working alone—
 
 ## Related Reading
 
+- [Claude Code Java Backend Developer Spring Boot Workflow Tips](/claude-skills-guide/claude-code-java-backend-developer-spring-boot-workflow-tips/) — General Spring Boot workflows: dependency management, debugging, JPA entities, and project initialization
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core skills including tdd and pdf that complement Java microservices development
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Deploy Spring Boot services to Kubernetes and cloud platforms
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep long microservices refactoring sessions economical

@@ -189,6 +189,86 @@ Claude Code can guide you through App Store and Google Play submission:
 3. Handle build signing and certificates
 4. Submit for review
 
+## Writing Effective Prompts for React Native
+
+Claude Code works best when your prompts include mobile-specific context. Here are practical prompt examples you can adapt directly.
+
+### Project Initialization Prompt
+
+```
+I am building a fitness tracking mobile app with React Native.
+The app should work on both iOS and Android. I need:
+
+1. Project setup using React Native CLI (not Expo)
+2. Navigation using React Navigation v6
+3. State management with Zustand
+4. TypeScript throughout
+
+Create the initial project structure with:
+- A tab-based navigation (Home, Workout, Progress, Profile)
+- Clean folder structure (components, screens, stores, services, hooks)
+- TypeScript configuration with strict mode
+- Basic placeholder screens for each tab
+
+Focus on setting up the navigation and folder structure first.
+```
+
+### Native Module Integration Prompt
+
+When you need to integrate device hardware, be explicit about platform details:
+
+```
+I need to integrate a barcode scanner into my React Native app.
+The scanner should:
+- Use the device camera
+- Scan both QR codes and barcodes
+- Return the scanned value to JavaScript
+- Handle permissions properly
+
+I am using a local CocoaPod for iOS. Generate:
+1. The Swift native module code
+2. The Objective-C bridge file
+3. The TypeScript wrapper with proper types
+4. The React Native component that uses the wrapper
+
+Use TurboModules if possible, fallback to legacy bridge if needed.
+```
+
+### API Service Layer Prompt
+
+```
+Create a service layer for fetching workout data from my REST API.
+
+Base URL: https://api.fitnessapp.example.com/v1
+Authentication: Bearer token in headers
+
+Endpoints needed:
+- GET /workouts - list workouts
+- GET /workouts/:id - workout details
+- POST /workouts - create new workout
+- PUT /workouts/:id - update workout
+- DELETE /workouts/:id - delete workout
+
+Requirements:
+- Use Axios with interceptors for auth token refresh
+- Implement retry logic for failed requests
+- Handle offline scenarios gracefully
+- Include proper TypeScript types for requests and responses
+- Add request/response logging for debugging
+
+Create the service file and a custom hook for using it in components.
+```
+
+### Keys to Effective Mobile Prompts
+
+Mobile development prompts succeed when they include these elements:
+
+- **Specify your stack explicitly**: Mention React Native version, navigation library, state management choice, and TypeScript preferences.
+- **Describe UX requirements**: Mobile users expect performance, smooth animations, and offline capability — say so.
+- **Request specific output files**: Mention folder locations so Claude Code generates properly organized code.
+- **Separate iOS and Android concerns**: Call out platform-specific requirements explicitly.
+- **Ask for TypeScript types**: Strong typing catches errors early, especially important when debugging on device is slower than web.
+
 ## Best Practices
 
 ### Code Organization
