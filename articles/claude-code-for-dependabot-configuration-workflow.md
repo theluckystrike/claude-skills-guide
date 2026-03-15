@@ -130,7 +130,6 @@ Create a skill that audits your configuration:
 ---
 name: dependabot-audit
 description: Audit and optimize Dependabot configurations
-tools:
   - Read
   - Write
   - Bash

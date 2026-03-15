@@ -107,7 +107,6 @@ Create a remediation skill that handles common issues:
 name: security-remediation
 description: Automates common cloud security fixes
 
-commands:
   - name: s3-public-access
     description: Fix S3 buckets with public access
     

@@ -37,8 +37,6 @@ Create a new skill for automated PR reviews. This skill will handle the entire r
 ---
 name: pr-reviewer
 description: Automated pull request review workflow
-version: 1.0.0
-tools:
   - bash
   - read_file
   - write_file

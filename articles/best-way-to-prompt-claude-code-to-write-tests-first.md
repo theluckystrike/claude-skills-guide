@@ -93,7 +93,6 @@ For consistent test-first behavior, create a Claude Code skill that encapsulates
 ---
 name: tdd
 description: "Practice Test-Driven Development: write failing tests first, then implement to make them pass"
-tools:
   - Read
   - Write
   - Bash

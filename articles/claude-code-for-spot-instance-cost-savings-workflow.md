@@ -32,8 +32,6 @@ First, you'll want to create a dedicated skill for AWS spot instance operations.
 ```yaml
 name: spot-instance-manager
 description: Automates AWS spot instance lifecycle management and cost optimization
-version: 1.0.0
-commands:
   - name: launch-spot-fleet
     description: Launch a cost-optimized spot fleet for specified workload
   - name: monitor-interruptions

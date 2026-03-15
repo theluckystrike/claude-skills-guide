@@ -121,7 +121,6 @@ For skills that require specific tool access, define tool requirements in the sk
 ```yaml
 ---
 name: Security Review Skill
-tools:
   - Read
   - Grep
   - Glob

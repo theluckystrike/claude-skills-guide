@@ -38,7 +38,6 @@ Create a new Claude Code skill for license validation. This skill will handle th
 ---
 name: license-validator
 description: "Validate LemonSqueezy license keys and check activation status"
-tools:
   - bash
   - read_file
   - write_file

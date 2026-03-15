@@ -168,7 +168,6 @@ To connect, define your MCP tools in a skill file:
 ```yaml
 name: kafka-streaming
 description: Event streaming automation with Apache Kafka
-tools:
   - name: list_kafka_topics
     description: List all available Kafka topics
     input: {}

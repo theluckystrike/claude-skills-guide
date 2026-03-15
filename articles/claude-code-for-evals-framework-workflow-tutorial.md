@@ -58,7 +58,6 @@ Build a skill that orchestrates your evals workflow. Create `skills/evals-runner
 ---
 name: evals-runner
 description: Runs evaluation test cases against Claude and reports results
-tools:
   - Read
   - Write
   - Bash

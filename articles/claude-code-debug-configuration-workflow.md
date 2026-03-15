@@ -47,7 +47,6 @@ Skills that require specific tools must declare them in the front matter. If a s
 ---
 name: tdd
 description: Test-driven development assistant
-tools:
   - Read
   - Write
   - Bash
@@ -128,7 +127,6 @@ When skills involve complex prompts or multi-step workflows, the pdf skill helps
 ---
 name: pdf
 description: Converts markdown to formatted PDF documents
-tools:
   - Read
   - Write
   - Bash
@@ -157,7 +155,6 @@ Create a dedicated debug skill for your workflow:
 ---
 name: debug-helper
 description: "Helps diagnose skill configuration issues and suggests fixes"
-tools:
   - Read
   - grep
   - Bash

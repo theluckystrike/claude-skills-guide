@@ -66,7 +66,6 @@ A more sophisticated workflow uses Claude Code's ability to understand context a
 ---
 name: glow-read
 description: Find and display markdown documentation using Glow
-tools:
   - Read
   - Bash
 ---

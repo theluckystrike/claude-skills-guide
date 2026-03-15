@@ -36,7 +36,6 @@ First, create a dedicated Claude skill for changelog operations. This skill will
 ---
 name: lerna-changelog
 description: Generate and manage changelogs in Lerna monorepos
-tools:
   - Bash
   - Read
   - Write

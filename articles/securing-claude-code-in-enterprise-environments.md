@@ -54,7 +54,6 @@ For example, a PDF processing skill might declare:
 ---
 name: pdf
 description: Convert documents to PDF format
-tools:
   - Read
   - Write
   - Bash

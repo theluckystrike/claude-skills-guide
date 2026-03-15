@@ -90,7 +90,6 @@ Configure your skill's metadata to control output style:
 ```yaml
 name: my-custom-skill
 description: A skill that generates consistently formatted API documentation
-version: 1.0.0
 
 # Output configuration
 output:

@@ -35,7 +35,6 @@ The simplest form of README automation uses a skill that scans your project stru
 ---
 name: readme-generator
 description: Generates a README from project structure
-tools:
   - Read
   - Write
   - Bash
@@ -166,7 +165,6 @@ Here's how a complete README automation might work in practice:
 ---
 name: full-readme
 description: Comprehensive README generation with templates
-tools:
   - Read
   - Write
   - Bash

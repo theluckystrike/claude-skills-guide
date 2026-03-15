@@ -57,7 +57,6 @@ A well-designed Claude Code skill can automate repetitive content tasks. Here's 
 ---
 name: astro-content
 description: "Manage Astro content collections with schema validation and content generation"
-tools:
   - Read
   - Write
   - Bash

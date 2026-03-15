@@ -110,7 +110,6 @@ Create a reusable skill for generating components faster. Here's a skill that cr
 ```yaml
 name: web-component-generator
 description: Generate new web component files with proper structure
-tools:
   - write_file
   - read_file
 

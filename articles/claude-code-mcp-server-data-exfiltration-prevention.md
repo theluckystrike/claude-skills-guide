@@ -159,7 +159,6 @@ When creating your own skills that integrate with MCP servers, embed security re
 ---
 name: secure-document-processor
 description: Process documents with security constraints
-version: 1.0.0
 capabilities:
   allowed_tools:
     - read_file

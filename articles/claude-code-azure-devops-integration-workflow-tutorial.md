@@ -65,7 +65,6 @@ instructions: |
   - pipeline_name: Name of the pipeline to trigger
   - branch: Git branch to use (default: main)
   - variables: Optional pipeline variables in JSON format
-commands:
   trigger-pipeline:
     args: <pipeline_name> [branch]
     script: |
@@ -139,7 +138,6 @@ instructions: |
   - Resource existence and health
   - Configuration correctness
   - Basic connectivity tests
-commands:
   validate-deployment:
     args: <resource-group> <deployment-name>
     script: |

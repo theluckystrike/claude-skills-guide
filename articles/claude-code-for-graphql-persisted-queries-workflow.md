@@ -98,7 +98,6 @@ Create a specialized Claude skill that handles persisted query operations:
 ---
 name: graphql-pq
 description: Manage GraphQL persisted queries
-tools:
   - Read
   - Write
   - Bash

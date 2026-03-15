@@ -96,7 +96,6 @@ Here's how to structure the workflow in a Claude Code skill:
 name: CloudSploit Security Scanner
 description: Run CloudSploit scans and generate security reports
 
-parameters:
   - name: provider
     description: Cloud provider to scan (aws, azure, gcp, oracle)
     default: aws

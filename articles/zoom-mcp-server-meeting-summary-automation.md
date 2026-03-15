@@ -121,7 +121,6 @@ For teams running daily standups over Zoom, automate the documentation process:
 # Standup-automation-skill.md
 name: daily-standup-summarizer
 description: Automatically summarize daily standup meetings
-tools:
   - name: zoom_meetings
     description: Access Zoom meeting data
   - name: slack_notify

@@ -37,7 +37,6 @@ A well-designed Claude Code skill can automate much of your accessibility workfl
 ---
 name: accessibility-audit
 description: "Run automated accessibility audits on React/Vue components"
-tools:
   - Read
   - Bash
   - Glob

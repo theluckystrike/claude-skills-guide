@@ -188,7 +188,6 @@ Here's how a complete PR workflow might look in practice:
 # .claude/pr-workflow-skill.md
 name: complete-pr-workflow
 description: End-to-end PR workflow automation
-version: 1.0.0
 
 triggers:
   - event: pull_request.opened

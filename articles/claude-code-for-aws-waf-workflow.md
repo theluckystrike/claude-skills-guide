@@ -188,7 +188,6 @@ One of the most valuable Claude Code workflows is auditing existing WAF configur
 ```yaml
 name: "waf-audit"
 description: "Audit AWS WAF configurations for security and best practices"
-version: "1.0.0"
 instructions: |
   You are a WAF security expert. Audit AWS WAF configurations for:
   

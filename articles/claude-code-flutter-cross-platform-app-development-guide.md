@@ -51,7 +51,6 @@ Initialize your Flutter project with the proper dependencies by asking Claude Co
 ```yaml
 name: my_flutter_app
 description: A cross-platform Flutter application
-version: 1.0.0+1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

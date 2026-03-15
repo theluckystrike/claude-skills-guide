@@ -158,7 +158,6 @@ Create a Claude Code skill to automate repetitive fine-tuning tasks:
 name: unsloth-finetune
 description: Automate Unsloth fine-tuning workflows
 
-commands:
   train:
     description: Start training with default configuration
     command: python scripts/train.py

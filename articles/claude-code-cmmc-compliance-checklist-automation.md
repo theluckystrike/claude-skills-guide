@@ -31,8 +31,6 @@ The first step in automating your compliance workflow is creating a specialized 
 ---
 name: cmmc-compliance
 description: "Automate CMMC compliance checklist management and evidence tracking"
-version: 1.0.0
-tools:
   - read_file
   - write_file
   - bash

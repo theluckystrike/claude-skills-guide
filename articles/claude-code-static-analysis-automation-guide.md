@@ -28,7 +28,6 @@ Create a skill that runs static analysis on your codebase. The skill definition 
 ```yaml
 name: static-analysis
 description: Runs static analysis on project code
-tools:
   - type: bash
     description: Run ESLint on JavaScript and TypeScript files
   - type: bash  
@@ -114,7 +113,6 @@ Large projects often span multiple languages. A comprehensive skill might:
 ```yaml
 name: full-analysis
 description: Comprehensive static analysis for polyglot projects
-commands:
   javascript: npx eslint src --ext .js,.ts
   python: pylint src --output-format=json
   go: golangci-lint run ./...

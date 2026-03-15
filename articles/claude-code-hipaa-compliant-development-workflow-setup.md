@@ -37,7 +37,6 @@ Start by creating a dedicated HIPAA development skill with restricted tool acces
 ---
 name: hipaa-dev
 description: HIPAA-compliant development workflow with PHI handling
-tools:
   - Read
   - Write
   - Bash
@@ -68,7 +67,6 @@ Developers often need to work with realistic-looking test data. Create a skill t
 ---
 name: phi-generator
 description: Generate HIPAA-safe synthetic PHI for testing
-tools:
   - Read
   - Write
   - Bash
@@ -95,7 +93,6 @@ HIPAA requires comprehensive audit trails. Create a skill that logs all developm
 ---
 name: audit-logger
 description: Maintain development audit trail for HIPAA compliance
-tools:
   - Read
   - Write
   - Bash
@@ -127,7 +124,6 @@ HIPAA mandates encryption for PHI in transit and at rest. Create a skill that va
 ---
 name: encrypt-validator
 description: Validate encryption implementation for HIPAA compliance
-tools:
   - Read
   - Grep
   - Bash
@@ -157,7 +153,6 @@ Create a skill that enforces the minimum necessary access principle:
 ---
 name: access-enforcer
 description: Enforce role-based access control patterns
-tools:
   - Read
   - Grep
   - Write

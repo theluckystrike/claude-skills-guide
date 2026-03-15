@@ -31,7 +31,6 @@ Before diving into advanced analysis, ensure your environment is properly config
 ---
 name: zeek-analysis
 description: Analyzes Zeek network logs for security insights
-tools:
   - Read
   - Write
   - Bash

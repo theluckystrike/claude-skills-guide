@@ -38,7 +38,6 @@ The first step is configuring Claude Code to understand your GraphQL stack. Crea
 ---
 name: graphql-generator
 description: Generate GraphQL code artifacts efficiently
-tools:
   - Read
   - Write
   - Bash

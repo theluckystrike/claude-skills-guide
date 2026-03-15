@@ -76,7 +76,6 @@ Build reusable skills for recurring incidents:
 ---
 name: incident-response
 description: "Rapid incident response for common DevOps scenarios"
-tools:
   - Bash
   - Read
 ---

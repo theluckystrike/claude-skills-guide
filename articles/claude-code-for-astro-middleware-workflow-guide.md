@@ -53,7 +53,6 @@ Create a file named `astro-middleware.md` in your skills directory with the foll
 ---
 name: astro-middleware
 description: Expert guidance for building and debugging Astro middleware
-tools:
   - Read
   - Write
   - Bash

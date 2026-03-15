@@ -37,7 +37,6 @@ Before diving into workflows, ensure your development environment is properly co
 ---
 name: bff-developer
 description: "Helps develop BFF (Backend-for-Frontend) API services"
-tools:
   - Read
   - Write
   - Bash

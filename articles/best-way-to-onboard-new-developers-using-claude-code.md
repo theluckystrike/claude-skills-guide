@@ -71,7 +71,6 @@ Beyond using existing skills, create a custom skill that encapsulates your team'
 ---
 name: onboard-project
 description: Onboarding assistant for Project X
-version: 1.0.0
 ---
 
 # Project Onboarding Assistant

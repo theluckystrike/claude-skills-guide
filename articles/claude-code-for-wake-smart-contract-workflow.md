@@ -47,7 +47,6 @@ Save this skill configuration to guide Claude's interactions with Wake projects:
 ---
 name: wake-developer
 description: "Assists with Wake smart contract development, testing, and deployment"
-tools:
   - Read
   - Write
   - Bash

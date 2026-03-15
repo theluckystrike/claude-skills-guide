@@ -25,7 +25,6 @@ Before diving into federation-specific workflows, ensure Claude Code has the rig
 ---
 name: graphql-federation
 description: "Assists with GraphQL Federation development workflows"
-tools:
   - Read
   - Write
   - Bash

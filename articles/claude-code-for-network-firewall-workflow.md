@@ -32,7 +32,6 @@ Create a dedicated skill for firewall operations. This keeps your firewall-relat
 ---
 name: firewall-manager
 description: "Generate, validate, and audit network firewall rules across platforms"
-tools:
   - Read
   - Write
   - Bash
@@ -97,7 +96,6 @@ Create a validation checklist:
 ---
 name: firewall-validator
 description: "Validate firewall rules for security and best practices"
-tools:
   - Read
   - Glob
   - Bash

@@ -33,7 +33,6 @@ The `tools` field in a skill's front matter limits tool availability for that sk
 ---
 name: pdf
 description: Converts markdown documents to PDF files
-tools:
   - Read
   - Write
   - Bash
@@ -162,7 +161,6 @@ Now any skill can use `run_eslint` as a tool. For a code review skill:
 ```yaml
 ---
 name: code-review
-tools:
   - Read
   - run_eslint
   - Bash

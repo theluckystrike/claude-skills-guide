@@ -46,7 +46,6 @@ Next, create a skill file for your Kubernetes profiling workflow. This skill wil
 ---
 name: k8s-profiler
 description: "Kubernetes profiling workflow automation"
-tools:
   - Bash
   - Read
   - Write
@@ -129,11 +128,9 @@ Create a comprehensive skill that automates the entire profiling workflow. Here'
 ---
 name: k8s-profile
 description: "Automated Kubernetes profiling workflow"
-tools:
   - Bash
   - Read
   - Write
-commands:
   profile-cpu: "Profile CPU usage of a Kubernetes pod"
   profile-memory: "Profile memory usage of a Kubernetes pod"
   analyze-results: "Analyze profiling results"

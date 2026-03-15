@@ -40,7 +40,6 @@ Create a skill file called `cWV-field-data.md` in your skills directory:
 ---
 name: cwv-field-data
 description: Query Core Web Vitals field data from Google PageSpeed Insights API
-tools:
   - Bash
   - Write
   - Read

@@ -43,7 +43,6 @@ Initialize a simple configuration file to define your routing metadata:
 ```yaml
 # gateway-routing/gateway.yaml
 name: api-gateway
-version: 1.0.0
 routes:
   - path: /api/v1/users
     service: user-service

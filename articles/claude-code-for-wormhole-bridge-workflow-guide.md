@@ -58,7 +58,6 @@ The skill front matter declares the required tools for blockchain interaction:
 ---
 name: wormhole-bridge
 description: Automate Wormhole cross-chain bridge operations
-tools:
   - bash
   - read_file
   - write_file

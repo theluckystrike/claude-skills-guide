@@ -32,7 +32,6 @@ The most common approach involves parsing OpenAPI or gRPC definitions. Here's a 
 # skill-client-gen.md front matter
 name: Generate API Client
 description: Create a typed client library from OpenAPI specification
-tools:
   - read_file
   - write_file
   - bash

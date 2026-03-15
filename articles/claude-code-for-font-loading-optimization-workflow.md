@@ -32,7 +32,6 @@ Start by creating a dedicated skill for font optimization. This skill will encap
 ---
 name: font-optimize
 description: Analyzes and optimizes web font loading for performance
-tools:
   - Read
   - Write
   - Bash

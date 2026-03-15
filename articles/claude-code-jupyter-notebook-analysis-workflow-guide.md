@@ -37,7 +37,6 @@ Before diving into workflows, ensure your environment is properly configured. Cr
 ---
 name: notebook-analysis
 description: "Environment setup for Jupyter notebook data analysis"
-tools:
   - Bash
   - Read
   - Write

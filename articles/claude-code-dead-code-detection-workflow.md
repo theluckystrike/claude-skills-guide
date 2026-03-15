@@ -32,7 +32,6 @@ Start by creating a dedicated skill for coordinating the detection process:
 ```yaml
 name: dead-code-detector
 description: Analyzes codebase for unused code, unreachable branches, and dead dependencies
-tools:
   - Read
   - Bash
   - Edit

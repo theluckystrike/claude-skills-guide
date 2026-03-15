@@ -40,7 +40,6 @@ Before diving into examples, ensure Claude Code is configured with access to you
 # ~/.claude/skills/kubernetes-skill/skill.md
 name: Kubernetes Operations
 description: Assists with Kubernetes resource management and monitoring
-version: 1.0.0
 
 # Context includes kubeconfig and kubectl access
 # Focus on Kube State Metrics and Prometheus integration

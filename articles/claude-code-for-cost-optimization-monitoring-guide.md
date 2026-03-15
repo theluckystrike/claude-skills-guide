@@ -62,7 +62,6 @@ You can create custom Claude Skills specifically for cost monitoring. Here's a s
 ---
 name: cost-monitor
 description: Monitors cloud infrastructure costs and identifies optimization opportunities
-tools:
   - Bash
   - Read
   - Write

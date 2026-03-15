@@ -59,7 +59,6 @@ Header versioning keeps the URL clean while specifying the version through HTTP 
 # Using Accept header for version negotiation
 name: document-processor
 description: Process documents using the pdf skill with API version control
-tools:
   - Read
   - Write
   - Bash
@@ -92,7 +91,6 @@ Query string versioning adds the version as a URL parameter. This approach offer
 # Query-based version selection
 name: analytics-reporter
 description: Generate analytics reports through the tdd skill
-tools:
   - Read
   - Write
   - Bash

@@ -45,7 +45,6 @@ Start by creating a skill that assesses your current infrastructure's disaster r
 # CLAUDE_SKILL_METADATA
 name: disaster-recovery-assessment
 description: Analyzes infrastructure for DR readiness and generates recommendations
-version: 1.0.0
 trigger_on:
   - "/dr.*assessment/"
   - "/disaster.*recovery/"

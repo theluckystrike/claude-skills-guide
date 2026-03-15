@@ -75,7 +75,6 @@ Create a skill that breaks down competitive programming problems systematically:
 ---
 name: cp-analyze
 description: Analyze competitive programming problems and suggest approaches
-tools:
   - Read
   - Write
   - Bash

@@ -35,7 +35,6 @@ The most direct way to control what a skill can do is through the `tools` field 
 ---
 name: pdf-generator
 description: Converts markdown documents to formatted PDF files
-tools:
   - Read
   - Write
   - Bash
@@ -81,7 +80,6 @@ To restrict file access, combine tool restrictions with explicit instructions in
 ---
 name: config-editor
 description: Edits configuration files safely
-tools:
   - Read
   - Write
 ---
@@ -98,7 +96,6 @@ A common pattern for file operations is the read-modify-write sequence:
 ---
 name: code-formatter
 description: Formats code files according to project standards
-tools:
   - Read
   - Write
   - Bash
@@ -124,7 +121,6 @@ You cannot restrict which specific bash commands a skill runs through front matt
 ---
 name: test-runner
 description: Runs project test suites
-tools:
   - Bash
   - Read
 ---
@@ -156,7 +152,6 @@ The `max_turns` field controls how long a skill can run:
 ---
 name: complex-refactor
 description: Performs large-scale code refactoring
-tools:
   - Read
   - Write
   - Bash
@@ -184,7 +179,6 @@ Here's a complete example of a well-structured, restricted skill:
 ---
 name: logger
 description: Adds structured logging to JavaScript functions
-tools:
   - Read
   - Write
 max_turns: 15

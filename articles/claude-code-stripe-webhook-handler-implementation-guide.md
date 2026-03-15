@@ -31,7 +31,6 @@ Create a new Claude Code skill for Stripe webhook handling. The skill should inc
 ---
 name: stripe-webhook-handler
 description: "Implements Stripe webhook handlers with signature verification and event routing"
-tools:
   - Read
   - Write
   - Bash

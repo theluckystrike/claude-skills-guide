@@ -44,7 +44,6 @@ Configure your skill with the necessary tool access:
 ```yaml
 ---
 name: UMA Oracle Development
-tools:
   - read_file
   - write_file
   - bash

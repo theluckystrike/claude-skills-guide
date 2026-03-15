@@ -27,7 +27,6 @@ Create a project-specific skill that understands your FreeRTOS setup:
 ---
 name: freertos-dev
 description: "Assists with FreeRTOS firmware development, task creation, and ISR handling"
-tools:
   - Read
   - Write
   - Bash
@@ -206,7 +205,6 @@ Create a reusable skill that encodes your team's FreeRTOS conventions:
 ---
 name: embedded-freertos
 description: "Team skill for FreeRTOS development"
-tools:
   - Read
   - Write
   - Bash

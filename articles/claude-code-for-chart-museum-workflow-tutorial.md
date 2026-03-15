@@ -35,7 +35,6 @@ Start by creating a skill that encapsulates your Chart Museum configuration. Thi
 ---
 name: chart-museum
 description: Manage Helm charts in Chart Museum
-tools:
   - Bash
   - Read
   - Write

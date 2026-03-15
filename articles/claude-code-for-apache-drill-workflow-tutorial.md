@@ -43,7 +43,6 @@ Create a skill that encapsulates Drill connection logic:
 ---
 name: drill
 description: Execute Apache Drill queries via REST API
-tools:
   - Bash
 ---
 
@@ -142,7 +141,6 @@ Here's a skill for weekly sales reporting:
 ---
 name: drill-sales-report
 description: Generate weekly sales summary from Drill
-tools:
   - Bash
 ---
 

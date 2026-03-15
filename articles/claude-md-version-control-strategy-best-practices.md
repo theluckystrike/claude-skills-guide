@@ -93,7 +93,6 @@ name: frontend-design
 description: Generates responsive frontend components
 depends_on:
   - css-utils
-tools:
   - Read
   - Write
   - Bash

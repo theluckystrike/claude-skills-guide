@@ -232,7 +232,6 @@ steps:
   - generate-tests: Create validation tests
   - validate: Run integration tests
   
-tools:
   - file-operations
   - bash-execution
   - code-analysis

@@ -68,7 +68,6 @@ Your skill definition starts with clear documentation of the GeoSearch parameter
 ---
 name: algolia-geosearch
 description: "Build location-based search queries with Algolia"
-tools:
   - bash
   - read_file
   - write_file

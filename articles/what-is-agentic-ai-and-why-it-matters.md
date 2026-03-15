@@ -68,7 +68,6 @@ description: Automated code review with security and performance checks
 trigger_on:
   - pull_request
   - push
-tools:
   - bash
   - read_file
   - search
@@ -88,7 +87,6 @@ name: database-migration
 description: Safe database schema migrations with rollback support
 trigger_on:
   - file_pattern: **/migrations/*.sql
-tools:
   - bash
   - read_file
   - edit_file
@@ -108,7 +106,6 @@ name: api-docs
 description: Generate and maintain API documentation
 auto_invoke:
   when: modifying API endpoints
-tools:
   - read_file
   - write_file
   - bash

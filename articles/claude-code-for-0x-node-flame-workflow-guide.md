@@ -34,7 +34,6 @@ The first step involves configuring Claude Code with the appropriate context for
 ---
 name: 0x-node-flame
 description: Assists with 0x protocol node operations and flame workflow automation
-tools:
   - Read
   - Write
   - Bash

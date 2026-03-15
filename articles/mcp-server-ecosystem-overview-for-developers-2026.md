@@ -78,7 +78,6 @@ Within a skill, you reference the configured servers through tool calls. When yo
 ---
 name: database-migrator
 description: Assists with database migration tasks
-tools:
   - Read
   - Write
   - Bash

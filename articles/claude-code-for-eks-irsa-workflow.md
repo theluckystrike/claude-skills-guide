@@ -33,7 +33,6 @@ To automate IRSA workflows with Claude Code, you'll want to create a specialized
 ---
 name: eks-irsa
 description: "Manage EKS IAM Roles for Service Accounts"
-tools: [bash, read_file, write_file]
 ---
 ```
 
