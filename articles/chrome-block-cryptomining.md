@@ -1,92 +1,48 @@
 ---
-
-
 layout: default
-title: "Chrome Block Cryptomining: A Developer's Guide to Protection"
-description: "Learn how to block cryptomining scripts in Chrome. Practical methods for developers and power users to protect browsers and servers from unauthorized mining."
+title: "How to Block Cryptomining in Chrome: A Developer's Guide"
+description: "Learn multiple methods to block cryptomining scripts in Chrome. Includes built-in settings, extensions, network-level filtering, and developer tools for protecting your browser."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-block-cryptomining/
-reviewed: true
-score: 8
-categories: [troubleshooting]
-tags: [claude-code, claude-skills]
 ---
 
+# How to Block Cryptomining in Chrome: A Developer's Guide
 
-# Chrome Block Cryptomining: A Developer's Guide to Protection
+Cryptomining scripts silently consume your CPU resources when you visit certain websites. These scripts run JavaScript-based miners that can significantly slow down your machine, increase power consumption, and degrade your browsing experience. As a developer or power user, you have several effective methods to block cryptomining in Chrome without sacrificing functionality.
 
-Cryptojacking has become one of the most insidious threats in web security. Attackers embed cryptocurrency mining scripts into websites, and once you visit, your browser silently consumes CPU resources to generate revenue for the attacker. For developers and power users, understanding how to block cryptomining in Chrome is essential for maintaining system performance and security.
+## Understanding Cryptomining in the Browser
 
-## What Is Cryptomining in the Browser
+Web-based cryptomining became popular around 2017 when the Coinhive service introduced JavaScript miners. While some websites disclose their mining activity transparently, many embed miners without user consent. These scripts typically use WebAssembly to run mining algorithms directly in your browser, often consuming 30-100% of a single CPU core.
 
-Browser-based cryptomining exploits your device's processing power to solve cryptographic puzzles. The most common implementation uses JavaScript to run the CoinHive miner or similar services. When you land on an infected page, the script immediately begins mining, often at 100% CPU utilization.
+The most common mining scripts target Monero (XMR) because its proof-of-work algorithm is designed to be CPU-friendly rather than requiring expensive GPU hardware. This makes it practical to mine using regular web browsers on user machines.
 
-The signs are unmistakable: your fans spin up, your battery drains rapidly, and your system becomes sluggish. Users frequently mistake this for a malware infection, but the culprit is often a website running hidden mining scripts.
+## Chrome's Built-in Protection
 
-Legitimate sites sometimes use cryptomining as an alternative to advertising revenue. However, most cryptomining occurs without user consent, making it a significant privacy and security concern.
+Chrome introduced protection against cryptomining starting with Chrome 73. The browser maintains a blocklist of known cryptomining domains. When enabled, this feature prevents connections to these domains entirely.
 
-## Method 1: Chrome's Native Protection
+To verify this protection is active, navigate to **Settings** → **Privacy and security** → **Security** and ensure "Standard protection" or "Enhanced protection" is selected. The enhanced protection mode provides real-time checks against Google's safe browsing database, which includes cryptomining domains.
 
-Chrome includes built-in protections against malicious scripts, though it's not specifically marketed as a cryptomining blocker. The browser's Safe Browsing feature identifies known cryptomining domains and blocks them before they execute.
+However, this built-in protection has limitations. It only blocks domains explicitly listed in Google's database, so new or lesser-known mining operations may slip through. For developers testing mining scripts locally or working with blockchain applications, the blocklist might interfere with legitimate work.
 
-To ensure Safe Browsing is enabled:
+## Using Hosts File Blocking
 
-1. Open Chrome settings
-2. Navigate to Privacy and Security
-3. Click on Security
-4. Verify "Protect you and your device from dangerous sites" is selected
+For network-level control, editing your system's hosts file provides a reliable method to block known mining domains. This approach works at the DNS resolution level, preventing any application on your machine from connecting to mining servers.
 
-This provides baseline protection against known cryptomining scripts, but it relies on a database of known threats rather than proactive blocking.
+Create a comprehensive hosts file entry pattern:
 
-## Method 2: uBlock Origin for Script Blocking
-
-The most effective method for power users involves uBlock Origin, an ad and script blocker available in the Chrome Web Store. uBlock Origin maintains specific filter lists targeting cryptomining domains.
-
-After installing uBlock Origin, you should enable the following filter lists:
-
-- **uBlock filters** (default)
-- **AdGuard Base Filter**
-- **NoCoin Filter List** (specifically targets cryptominers)
-
-To configure these filters:
-1. Click the uBlock Origin icon in Chrome
-2. Open the dashboard (gear icon)
-3. Navigate to Filter Lists
-4. Enable "AdGuard Base Filter" and ensure other privacy filters are active
-
-The NoCoin filter list specifically blocks domains known to host cryptomining scripts, including coinhive.com, coin-hive.com, cryptoloot.pro, and similar services.
-
-## Method 3: Script Blocking with uMatrix
-
-For developers who want granular control, uMatrix provides fine-grained script blocking capabilities. Unlike uBlock Origin's automatic filters, uMatrix requires you to explicitly define which domains can load resources.
-
-With uMatrix, you can block all JavaScript by default and selectively enable only trusted domains:
-
-```
-# uMatrix default rules
-* script allow
-google-analytics.com script allow
-trusted-site.com script allow
-```
-
-This approach is more labor-intensive but provides comprehensive protection against cryptomining and other script-based attacks.
-
-## Method 4: DNS-Level Blocking
-
-For network-level protection, you can block known cryptomining domains at the DNS level. This approach protects all devices on your network without requiring browser extensions.
-
-Create a custom hosts file entry to block mining domains:
-
-```
-# Block cryptomining domains
-0.0.0.0 coin-hive.com
+```bash
+# Block common cryptomining domains
 0.0.0.0 coinhive.com
+0.0.0.0 coin-hive.com
+0.0.0.0 coinhive.min.js
 0.0.0.0 jsecoin.com
-0.0.0.0 cryptoloot.pro
 0.0.0.0 minero.cc
+0.0.0.0 cryptoloot.pro
 0.0.0.0 webmine.pro
-0.0.0.0 authedmine.com
+0.0.0.0 webminepool.com
+0.0.0.0 coinblind.com
+0.0.0.0 miner.pr0gramer.com
 ```
 
 On macOS, edit `/etc/hosts` with sudo privileges. On Windows, modify `C:\Windows\System32\drivers\etc\hosts`. After saving, flush your DNS cache:
@@ -99,108 +55,108 @@ sudo dscacheutil -flushcache
 ipconfig /flushdns
 ```
 
-For whole-network protection, consider running Pi-hole, a DNS-level ad blocker that also maintains blocklists for cryptomining domains.
+This method blocks known mining domains at the network level, but requires manual updates to catch new mining domains.
 
-## Method 5: Detecting Cryptominers with Developer Tools
+## Browser Extensions for Mining Protection
 
-As a developer, you may need to identify cryptomining scripts on your own websites or investigate suspicious behavior. Chrome's Developer Tools provide the necessary capabilities.
+Several Chrome extensions provide automated protection with regularly updated blocklists. These extensions typically use EasyList's mining filter list, which the community maintains.
 
-### Using the Performance Tab
+Popular options include:
 
-1. Open Developer Tools (F12 or Cmd+Option+I)
-2. Navigate to the Performance tab
-3. Click Record and let it run for 30-60 seconds
-4. Look for JavaScript functions consuming excessive CPU
+**NoCoin** is a lightweight extension with minimal resource overhead. It blocks known mining scripts and displays a small icon when it detects blocked attempts. The extension is open-source and available on GitHub.
 
-Cryptomining scripts typically show as:
-- Continuous CPU usage during page load
-- Web Worker threads with unknown origins
-- Frequent calls to crypto-related functions
+**MinerBlock** offers similar functionality with additional configuration options. You can create custom block rules, whitelist specific domains, and view statistics about blocked attempts.
 
-### Using Network Tab
+When choosing an extension, verify its source code is publicly available. Extensions with full network request interception capabilities need trustworthy implementations.
 
-1. Open the Network tab in Developer Tools
-2. Filter by Fetch/XHR
-3. Look for requests to known mining domains or unusual endpoints
+## Network-Level Filtering with Pi-hole
 
-Suspicious patterns include:
-- Repeated POST requests to unknown domains
-- Large payload transfers without visible content
-- Requests to domains with "mine" or "coin" in the URL
+For developers managing multiple machines or teams, deploying a Pi-hole DNS server provides network-wide protection. Pi-hole functions as a DNS-level ad and tracker blocker that can also filter mining domains.
 
-### Identifying Web Workers
+Install Pi-hole on a Raspberry Pi or virtual machine, then configure your network's DHCP server to use the Pi-hole as your primary DNS resolver. The Pi-hole community maintains blocklists that include known mining domains.
 
-Cryptominers often use Web Workers to mine in the background. To detect them:
+Query the Pi-hole logs to identify any mining attempts on your network:
 
-1. Open the Application tab in Developer Tools
-2. Expand "Service Workers" and "Web Workers"
-3. Check for workers with unusual names or origins
+```bash
+# Query Pi-hole API for mining domain queries
+curl -s "http://pi.hole/admin/api.php?getQuerySources" | jq '.'
+```
 
-## Method 6: Browser Extensions for Enhanced Protection
+This approach protects all devices on your network without requiring individual configuration on each machine.
 
-Several Chrome extensions specifically target cryptomining:
+## Developer Tools for Detection
 
-- **NoMiner** - Blocks known cryptomining domains
-- **MinerBlock** - Maintains an updated blocklist
-- **ScriptSafe** - Advanced script control with whitelist capabilities
+When auditing websites or testing your own applications, you need to detect mining scripts programmatically. Several methods help identify cryptomining behavior.
 
-When choosing extensions, verify their source code if possible, as malicious extensions have been known to embed their own mining scripts.
+### Network Request Monitoring
 
-## Automating Protection with Chrome Policies
+Open Chrome DevTools (F12), go to the **Network** tab, and look for suspicious scripts loading WebAssembly modules or making requests to known mining domains. Common indicators include:
 
-For enterprise environments, Chrome provides administrative policies to control extensions and script execution. You can deploy policies via group policy or MDM:
+- Scripts with names like `miner.js`, `coinhive.js`, or `cryptominer.js`
+- WebAssembly module loading
+- Repeated POST requests to mining pool domains
+- High CPU usage correlating with page load
+
+### Runtime Detection
+
+Create a simple detection script to identify mining activity:
+
+```javascript
+// Detect if WebAssembly is being used for mining
+const originalInstantiate = WebAssembly.instantiate;
+
+WebAssembly.instantiate = function(...args) {
+  console.warn('WebAssembly instantiation detected');
+  return originalInstantiate.apply(this, args);
+};
+
+// Monitor for known mining library signatures
+const miningSignatures = [
+  'CoinHive',
+  'CryptoLoot',
+  'JSEcoin',
+  'Minero'
+];
+
+function detectMiningScripts() {
+  const scripts = document.querySelectorAll('script[src]');
+  scripts.forEach(script => {
+    miningSignatures.forEach(sig => {
+      if (script.src.toLowerCase().includes(sig.toLowerCase())) {
+        console.error(`Potential mining script detected: ${script.src}`);
+      }
+    });
+  });
+}
+
+detectMiningScripts();
+```
+
+## Blocking via Chrome Policies (Enterprise)
+
+For enterprise environments or shared workstations, Chrome's group policy settings provide administrative control over mining protection. These policies can enforce specific blocklists or disable mining entirely.
+
+Configure the following policies in your Chrome policy file:
 
 ```json
 {
-  "ExtensionSettings": {
-    "*": {
-      "installation_mode": "force_installed",
-      "update_url": "https://clients2.google.com/service/update2/crx"
-    }
-  }
+  "URLBlocklist": [
+    "*://*.coinhive.com/*",
+    "*://*.coin-hive.com/*",
+    "*://*.jsecoin.com/*",
+    "*://*.cryptoloot.pro/*"
+  ]
 }
 ```
 
-This ensures consistent protection across all managed devices.
+This approach works on Chrome Enterprise editions and provides consistent enforcement across managed devices.
 
-## Building Detection into Your Applications
+## Best Practices for Protection
 
-For web developers, consider implementing detection mechanisms to alert users:
+Combining multiple protection layers provides the most robust defense against cryptomining. Use Chrome's built-in protection as a baseline, add a reliable extension for automatic blocklist updates, and consider network-level filtering for comprehensive coverage.
 
-```javascript
-// Detect potential cryptomining
-function detectMining() {
-  const miningIndicators = [
-    'coinhive',
-    'cryptoloot',
-    'coin-hive',
-    'jsecoin'
-  ];
-  
-  const scripts = document.querySelectorAll('script[src]');
-  for (const script of scripts) {
-    const src = script.src.toLowerCase();
-    if (miningIndicators.some(indicator => src.includes(indicator))) {
-      console.warn('Potential cryptomining script detected:', src);
-      return true;
-    }
-  }
-  return false;
-}
-```
+Regularly review your browser's resource usage. If you notice unexplained high CPU consumption, check the Task Manager (Shift+Esc) to identify which tabs are consuming resources. Unload suspicious tabs immediately and run a malware scan if necessary.
 
-## Conclusion
-
-Protecting against browser-based cryptomining requires a layered approach. The most effective strategy combines multiple methods: enable Safe Browsing for baseline protection, install uBlock Origin for script filtering, and implement DNS-level blocking for network-wide coverage.
-
-For developers, understanding how to detect cryptominers using Chrome's Developer Tools provides valuable debugging capabilities. Whether you're protecting personal systems or enterprise infrastructure, these methods offer practical solutions to block unauthorized cryptomining.
-
-The threat landscape continues to evolve, with new mining techniques and obfuscation methods appearing regularly. Stay vigilant, keep your blocklists updated, and monitor system performance for signs of unauthorized mining activity.
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+For developers working with blockchain technologies, maintain a whitelist of trusted domains where mining is expected. This prevents interference with legitimate development work while maintaining protection elsewhere.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
