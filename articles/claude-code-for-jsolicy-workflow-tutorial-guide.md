@@ -189,3 +189,10 @@ You can ask Claude to review your policies before deployment, suggest improvemen
 Remember that jsPolicy policies are just JavaScript—you have full access to libraries, can make HTTP calls for external validations, and can implement sophisticated logic. Claude Code understands these capabilities and can suggest approaches you might not have considered.
 
 Start with simple policies, validate they work correctly, then gradually add complexity. This incremental approach, combined with Claude's assistance, leads to robust policy sets that secure your Kubernetes environments without unnecessary friction.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

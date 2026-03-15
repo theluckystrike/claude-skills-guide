@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Release Rollback Workflow Tutorial"
-description: "A comprehensive tutorial on implementing automated release rollback workflows with Claude Code. Learn practical techniques for safe deployments and quick recovery."
+description: "A comprehensive tutorial on implementing automated release rollback workflows with Claude Code. Learn practical techniques for safe deployments and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-release-rollback-workflow-tutorial/
@@ -308,3 +308,10 @@ Remember that the key components are: automated health checks, clear deployment 
 Start by implementing the basic deployment tracker and health checks, then gradually add more sophisticated rollback logic as your confidence grows. Claude Code can help you extend and customize these patterns to match your specific deployment infrastructure.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -321,3 +321,10 @@ When you must use a license that conflicts with your project's main license, doc
 Building a robust license compatibility workflow with Claude Code transforms what was once a tedious manual process into an automated, reliable system. By implementing the skills, scripts, and practices outlined in this guide, you can ensure your projects maintain proper license compliance while focusing on what matters most: writing great software.
 
 Remember that license compliance is an ongoing responsibility. Regularly update your license compatibility skills, stay informed about license changes in your dependencies, and maintain clear documentation of your licensing decisions.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

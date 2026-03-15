@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for ERC-721A Gas Optimization Workflow"
-description: "Learn how to leverage Claude Code CLI to streamline your ERC-721A NFT smart contract development with gas optimization best practices and practical examples."
+description: "Learn how to leverage Claude Code CLI to streamline your ERC-721A NFT smart contract development with gas optimization best practices and practical."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-erc-721a-gas-optimization-workflow/
@@ -227,3 +227,10 @@ function testGasOnFork() public {
 
 By integrating Claude Code into your development workflow and following these optimization patterns, you can significantly reduce deployment and minting costs for your NFT collection while maintaining code clarity and security.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

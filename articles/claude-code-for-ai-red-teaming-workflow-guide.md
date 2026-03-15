@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for AI Red Teaming Workflow Guide"
-description: "A comprehensive guide to building AI red teaming workflows with Claude Code, featuring practical examples, testing patterns, and production-ready implementations."
+description: "A comprehensive guide to building AI red teaming workflows with Claude Code, featuring practical examples, testing patterns, and production-ready."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-ai-red-teaming-workflow-guide/
@@ -339,3 +339,10 @@ Building a robust AI red teaming workflow with Claude Code enables systematic se
 
 Start with the basic patterns in this guide, then expand your test coverage based on your specific use cases and emerging threat patterns. Regular red teaming becomes more effective as your test libraries grow and your team gains experience identifying and addressing AI vulnerabilities.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

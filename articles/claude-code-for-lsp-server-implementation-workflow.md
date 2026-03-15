@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for LSP Server Implementation Workflow"
-description: "Learn how to use Claude Code to implement Language Server Protocol (LSP) servers efficiently. A practical workflow guide with code examples for developers building IDE integrations."
+description: "Learn how to use Claude Code to implement Language Server Protocol (LSP) servers efficiently. A practical workflow guide with code examples for."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-lsp-server-implementation-workflow/
@@ -209,3 +209,10 @@ try {
 Implementing an LSP server becomes significantly more manageable with Claude Code's assistance. By starting with the core lifecycle handlers, expanding features incrementally, and using Claude Code for code generation and debugging, you can build production-ready language servers efficiently.
 
 Remember to focus on performance from the beginning, implement proper error handling, and test thoroughly against the LSP specification. With this workflow, you'll have a functional LSP server that provides excellent developer experience in code editors.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

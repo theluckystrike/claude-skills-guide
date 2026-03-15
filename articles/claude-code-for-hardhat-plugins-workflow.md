@@ -225,3 +225,10 @@ This ensures Claude Code always has context about your Hardhat setup.
 Claude Code significantly enhances your Hardhat development workflow. From configuring popular plugins like etherscan and gas-reporter to building custom plugins and debugging issues, Claude Code serves as an intelligent assistant throughout the process. By sharing your project configuration and following the practices outlined in this guide, you can automate repetitive tasks, write better tests, and deploy more reliable smart contracts.
 
 Start by adding your Hardhat configuration to Claude Code's context, then iterate on your workflow from there.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

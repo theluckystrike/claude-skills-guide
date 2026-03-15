@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for License Scanning Workflow Tutorial"
-description: "Learn how to automate software license compliance using Claude Code. This tutorial covers setting up license scanning workflows, integrating tools like scancode and fossa, and handling license violations in your CI/CD pipeline."
+description: "Learn how to automate software license compliance using Claude Code. This tutorial covers setting up license scanning workflows, integrating tools like."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-license-scanning-workflow-tutorial/
@@ -254,3 +254,10 @@ License scanning doesn't have to be a manual, error-prone process. By using Clau
 
 Start with simple scans, gradually add automation, and build a culture of license awareness in your development team. Claude Code is well-equipped to help you every step of the way—from initial setup to ongoing maintenance.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

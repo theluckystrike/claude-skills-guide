@@ -139,4 +139,11 @@ The Chrome extension ecosystem in 2026 offers several viable uBlock Origin alter
 
 Test a few options with your common workflows to determine which balance of features, performance, and control best suits your needs.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

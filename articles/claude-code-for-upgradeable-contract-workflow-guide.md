@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Upgradeable Contract Workflow Guide"
-description: "Master upgradeable smart contract development with Claude Code. Learn proxy patterns, deployment workflows, and best practices for managing contract upgrades."
+description: "Master upgradeable smart contract development with Claude Code. Learn proxy patterns, deployment workflows, and best practices for managing contract."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-upgradeable-contract-workflow-guide/
@@ -254,3 +254,10 @@ Upgradeable contracts require disciplined workflows and careful attention to sto
 
 The initial setup overhead pays dividends through the lifetime of your contract—users trust contracts that can be improved without disruption, and proper upgradeability patterns make that possible.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

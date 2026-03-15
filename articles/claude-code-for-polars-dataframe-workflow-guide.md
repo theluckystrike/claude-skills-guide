@@ -237,3 +237,10 @@ To get the most out of combining Claude Code with Polars:
 5. **Document your pipelines**: Use Claude Code to add docstrings and comments explaining your transformation logic.
 
 By integrating Claude Code into your Polars workflows, you gain a collaborative partner that helps generate efficient code, debug issues, and optimize your data processing pipelines. The combination of natural language interaction and programmatic data manipulation creates a powerful workflow for data professionals at any skill level.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
