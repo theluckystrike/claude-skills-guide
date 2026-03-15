@@ -3,10 +3,12 @@ layout: default
 title: "Claude Code for LSP Server Implementation Workflow"
 description: "A practical guide to implementing Language Server Protocol servers using Claude Code, covering workflow patterns, code examples, and actionable best practices for developers."
 date: 2026-03-15
-author: Claude Skills Guide
+author: "Claude Skills Guide"
 permalink: /claude-code-for-lsp-server-implementation-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
