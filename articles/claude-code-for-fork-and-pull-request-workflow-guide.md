@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Fork and Pull Request Workflow Guide"
 description: "Master the fork and pull request workflow with Claude Code. Learn how to fork repositories, create branches, make changes, and submit pull requests effectively."
@@ -7,7 +8,10 @@ categories: [guides]
 tags: [claude-code, claude-skills, fork, pull-request, github, workflow]
 author: "theluckystrike"
 permalink: /claude-code-for-fork-and-pull-request-workflow-guide/
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for Fork and Pull Request Workflow Guide
 

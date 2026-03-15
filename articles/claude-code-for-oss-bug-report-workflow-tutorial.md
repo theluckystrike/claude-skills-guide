@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Using Claude Code for Open Source Bug Report Workflows"
 description: "A practical guide to creating efficient bug report workflows for open source projects using Claude Code."
@@ -7,10 +8,13 @@ author: Claude Skills Guide
 permalink: /claude-code-for-oss-bug-report-workflow-tutorial/
 categories: [Development, Open Source, Workflow]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
+
 {% raw %}
-Open source projects thrive on community contributions, and effective bug reporting is the backbone of quality maintenance. When done right, bug reports provide maintainers with actionable information to reproduce and fix issues quickly. This guide explores how to leverage Claude Code to create streamlined bug report workflows that benefit both contributors and maintainers.
+Open source projects thrive on community contributions, and effective bug reporting is the backbone of quality maintenance. When done right, bug reports provide maintainers with actionable information to reproduce and fix issues quickly. This guide explores how to use Claude Code to create streamlined bug report workflows that benefit both contributors and maintainers.
 
 ## Why Structured Bug Reports Matter
 

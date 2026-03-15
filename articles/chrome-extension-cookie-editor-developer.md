@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Cookie Editor: A Developer's Guide"
 description: "Master cookie manipulation in Chrome extensions. Practical code examples, API usage patterns, and security best practices for developers building extensions that manage browser cookies."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-cookie-editor-developer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 # Chrome Extension Cookie Editor: A Developer's Guide
 

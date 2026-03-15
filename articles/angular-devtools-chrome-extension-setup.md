@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Angular DevTools Chrome Extension Setup: A Complete Guide"
 description: "Learn how to install and configure Angular DevTools for Chrome to debug, inspect, and optimize your Angular applications effectively."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /angular-devtools-chrome-extension-setup/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 {% raw %}
 
@@ -169,7 +175,7 @@ For development, use the default development configuration that preserves debugg
 - **Navigate the breadcrumb**: Click breadcrumb items at the top of the properties panel to switch between component contexts
 - **Export profiler data**: Save profiler results as JSON for further analysis or to share with team members
 
-Angular DevTools integrates seamlessly with Chrome DevTools, providing Angular-specific insights alongside the browser's standard debugging tools. Once you incorporate this extension into your workflow, debugging Angular applications becomes significantly more efficient.
+Angular DevTools integrates smoothly with Chrome DevTools, providing Angular-specific insights alongside the browser's standard debugging tools. Once you incorporate this extension into your workflow, debugging Angular applications becomes significantly more efficient.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

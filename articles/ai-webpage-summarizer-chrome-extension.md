@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "AI Webpage Summarizer Chrome Extension: A Developer Guide"
 description: "Learn how to build an AI-powered webpage summarizer Chrome extension for efficient content extraction and automated summarization."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-webpage-summarizer-chrome-extension/
 categories: [guides]
-tags: [claude-code, chrome-extension, ai-tools]
+tags: [claude-code, chrome-extension, ai-tools, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 AI webpage summarizer Chrome extensions transform how you consume web content by automatically generating concise summaries of articles, blog posts, and lengthy web pages. For developers and power users, building your own summarizer extension provides complete control over the AI model, summarization style, and integration with your workflow.

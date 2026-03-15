@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI PDF Summarizer Chrome Extension: A Developer Guide"
 description: "Learn how AI-powered PDF summarizer Chrome extensions work, their technical architecture, and how to build or integrate them into your workflow."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-pdf-summarizer-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 {% raw %}
 
@@ -150,7 +156,7 @@ When evaluating RFCs, architectural documents, or technical standards, summarize
 For developers interested in building a custom solution, here's the core architecture:
 
 1. **Manifest V3**: Use modern Chrome extension APIs
-2. **PDF Processing**: Leverage PDF.js for rendering and text extraction
+2. **PDF Processing**: use PDF.js for rendering and text extraction
 3. **LLM API**: Integrate with OpenAI, Anthropic, or local models
 4. **UI Framework**: React or vanilla JS for popup/sidebar interfaces
 5. **Storage**: Use chrome.storage for API keys and user preferences

@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Local Storage Viewer: Complete Guide for Developers"
 description: "Learn how to view, debug, and manage localStorage and sessionStorage in Chrome extensions. Practical examples and code snippets for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-local-storage-viewer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 # Chrome Extension Local Storage Viewer: Complete Guide for Developers
 
