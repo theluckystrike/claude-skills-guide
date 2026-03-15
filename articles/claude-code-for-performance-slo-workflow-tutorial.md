@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Performance SLO Workflow Tutorial"
 description: "Learn how to use Claude Code to implement and automate performance Service Level Objectives (SLOs) in your development workflow with practical examples."
@@ -8,10 +9,13 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-performance-slo-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 {% raw %}
 
-Performance Service Level Objectives (SLOs) help teams define and measure the reliability of their systems. When implemented correctly, SLOs provide clear targets for response times, throughput, and resource utilization. This guide shows you how to use Claude Code to create a performance SLO workflow that integrates seamlessly into your development process.
+Performance Service Level Objectives (SLOs) help teams define and measure the reliability of their systems. When implemented correctly, SLOs provide clear targets for response times, throughput, and resource utilization. This guide shows you how to use Claude Code to create a performance SLO workflow that integrates smoothly into your development process.
 
 ## Understanding Performance SLOs in Practice
 

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for ESLint Custom Plugin Workflow Tutorial"
 description: "Learn how to create, test, and publish custom ESLint plugins using Claude Code. A practical guide covering plugin structure, rule development, testing strategies, and automation."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-eslint-custom-plugin-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for ESLint Custom Plugin Workflow Tutorial
@@ -24,7 +28,7 @@ Before diving into the workflow, let's clarify when custom plugins make sense. Y
 - **Team-wide standards**: Codifying your team's coding style into automated checks
 - **Legacy migrations**: Gradually enforcing fixes during code refactoring
 
-Custom plugins integrate seamlessly with your existing ESLint configuration and can be shared across projects or published as npm packages.
+Custom plugins integrate smoothly with your existing ESLint configuration and can be shared across projects or published as npm packages.
 
 ## Setting Up Your Plugin Project
 
