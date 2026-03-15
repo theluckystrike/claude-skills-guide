@@ -31,10 +31,6 @@ Every Claude Code skill begins with a skill definition file. Create a new file f
 ---
 name: Courier Notification Handler
 description: Manages courier delivery notifications including shipment confirmation, tracking updates, and delivery completion alerts
-  - name: read_file
-  - name: write_file
-  - name: bash
-trigger: courier notification
 ---
 ```
 

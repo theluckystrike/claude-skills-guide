@@ -52,23 +52,8 @@ Initialize your Flutter project with the proper dependencies by asking Claude Co
 name: my_flutter_app
 description: A cross-platform Flutter application
 
-environment:
-  sdk: '>=3.0.0 <4.0.0'
 
-dependencies:
-  flutter:
-    sdk: flutter
-  flutter_riverpod: ^2.4.0
-  go_router: ^13.0.0
-  dio: ^5.3.0
-  shared_preferences: ^2.2.0
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^3.0.0
-  build_runner: ^2.4.0
-  riverpod_generator: ^2.3.0
 ```
 
 Claude Code can also help you add platform-specific configurations for iOS, Android, and web, ensuring proper permissions and build settings.

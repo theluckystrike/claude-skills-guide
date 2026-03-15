@@ -38,10 +38,6 @@ Create a skill that responds to TypeScript file modifications:
 ---
 name: file-watcher
 description: Monitors TypeScript files and triggers appropriate actions
-events:
-  - type: file-changed
-    pattern: "**/*.ts"
-    action: lint-and-typecheck
 ---
 
 You monitor TypeScript files in this project. When a .ts file changes:
@@ -66,10 +62,6 @@ Create a commit-msg hook skill:
 ---
 name: commit-validator
 description: Validates commit messages and triggers review workflows
-events:
-  - type: git-commit
-    hook: commit-msg
-  - type: git-push
 ---
 
 When a commit is created or pushed:
@@ -100,8 +92,6 @@ For complex setups, create a central event router skill that dispatches to speci
 ---
 name: event-router
 description: Routes events to appropriate handler skills
-triggers:
-  auto: true
 ---
 
 You are the central event router for this project. When invoked with an event:
@@ -137,12 +127,6 @@ Create a webhook handler skill:
 ---
 name: webhook-receiver
 description: Handles incoming webhook events from external services
-events:
-  - type: webhook
-    sources:
-      - github
-      - slack
-      - custom
 ---
 
 You process webhook payloads from external services.
@@ -180,10 +164,6 @@ Implement an event-driven testing setup that responds to code changes — the [a
 ---
 name: test-automation
 description: Automatically runs tests on code changes
-events:
-  - type: file-changed
-    pattern: "**/*.{ts,js,py}"
-    debounce: 5000
 ---
 
 You run tests automatically when code changes.
@@ -210,10 +190,6 @@ Event-driven systems require reliable error handling. Configure retry logic and 
 ---
 name: resilient-handler
 description: Handles events with retry and fallback logic
-config:
-  max_retries: 3
-  retry_delay: 5000
-  fallback_channel: error-alerts
 ---
 
 You process events with built-in resilience.

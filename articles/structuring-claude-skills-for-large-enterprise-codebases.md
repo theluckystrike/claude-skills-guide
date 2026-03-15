@@ -81,13 +81,6 @@ Create a composed skill that orchestrates these:
 ```yaml
 name: full-stack-review
 description: Run complete code review with tests and documentation
-steps:
-  - skill: tdd
-    command: generate coverage report for changed files
-  - skill: webapp-testing
-    command: run integration suite on staging
-  - skill: docx
-    command: generate review report with findings
 ```
 
 This approach lets junior developers execute sophisticated workflows without memorizing individual skill commands.

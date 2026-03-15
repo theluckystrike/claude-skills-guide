@@ -114,26 +114,6 @@ You can create a Claude Skill to validate Config Rule templates:
 # config-rule-validator-skill.md
 name: "AWS Config Rule Validator"
 description: "Validates AWS Config Rule CloudFormation templates"
-actions:
-  - name: "validate_template"
-    description: "Validate CloudFormation template syntax"
-    command: |
-      aws cloudformation validate-template \
-        --template-body file://{{template_path}}
-      
-  - name: "check_rule_parameters"
-    description: "Verify required rule parameters"
-    verify: |
-      # Check for required properties
-      grep -q "ConfigRuleName" {{template_path}}
-      grep -q "Source" {{template_path}}
-      
-  - name: "simulate_evaluation"
-    description: "Test rule evaluation logic"
-    command: |
-      aws configservice simulate-config-rules-evaluations \
-        --resource-identifiers {{resource_arn}} \
-        --config-rule-names {{rule_name}}
 ```
 
 ## Managing Rule Compliance at Scale

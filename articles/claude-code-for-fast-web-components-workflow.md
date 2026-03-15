@@ -110,15 +110,7 @@ Create a reusable skill for generating components faster. Here's a skill that cr
 ```yaml
 name: web-component-generator
 description: Generate new web component files with proper structure
-  - write_file
-  - read_file
 
-The skill should:
-1. Accept component name as input
-2. Create component file with LitElement template
-3. Create associated CSS file
-4. Create basic test file
-5. Export component in index.js
 ```
 
 ### Practical Example: Building a Card Component

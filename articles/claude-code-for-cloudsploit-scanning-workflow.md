@@ -96,35 +96,10 @@ Here's how to structure the workflow in a Claude Code skill:
 name: CloudSploit Security Scanner
 description: Run CloudSploit scans and generate security reports
 
-  - name: provider
-    description: Cloud provider to scan (aws, azure, gcp, oracle)
-    default: aws
-  - name: severity
-    description: Minimum severity to report (critical, high, medium, low)
-    default: high
-  - name: output
-    description: Output format (json, csv, table)
-    default: table
 
-workflow:
-  - name: validate-credentials
-    action: check-cloud-credentials
-    provider: "{{provider}}"
   
-  - name: execute-scan
-    action: run-cloudsploit
-    provider: "{{provider}}"
-    output: "{{output}}"
   
-  - name: filter-results
-    action: filter-by-severity
-    results: previous
-    minimum: "{{severity}}"
   
-  - name: generate-report
-    action: create-report
-    findings: filtered-results
-    format: "{{output}}"
 ```
 
 ## Practical Integration Examples

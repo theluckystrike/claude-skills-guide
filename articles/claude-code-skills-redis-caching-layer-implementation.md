@@ -219,12 +219,6 @@ To make Redis functionality available as a Claude Code skill itself, create a sk
 name: redis-cache
 description: Redis caching utilities for Claude Code skills
 # instruction
-You can use the redis-cache skill to cache skill outputs, store session state, or coordinate between agents. Available commands:
-- Set cache: set_cache key value ttl
-- Get cache: get_cache key
-- Delete cache: delete_cache key
-- Session save: save_session session_id key value
-- Session load: load_session session_id
 ```
 
 This wraps your Redis functionality as a composable skill other Claude Code workflows can use.

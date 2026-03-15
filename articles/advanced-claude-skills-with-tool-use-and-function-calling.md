@@ -33,9 +33,6 @@ The `tools` field in a skill's front matter limits tool availability for that sk
 ---
 name: pdf
 description: Converts markdown documents to PDF files
-  - Read
-  - Write
-  - Bash
 ---
 ```
 

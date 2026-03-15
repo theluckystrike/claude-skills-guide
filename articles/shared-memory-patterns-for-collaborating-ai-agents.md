@@ -67,9 +67,6 @@ Claude Code skills can define structured schemas for shared memory, ensuring con
 ---
 name: memory-store
 description: "Read and write structured memory entries"
-schema:
-  entry_type: "findings|coordination|status"
-  required_fields: ["agent", "timestamp", "content"]
 ---
 ```
 
@@ -159,7 +156,6 @@ Create skills that make agent collaboration explicit. A "team coordination" skil
 ---
 name: team-coordination
 description: "Track and coordinate multi-agent tasks"
-team_state_file: "/workspace/shared-context/team-state.json"
 ---
 # Team Coordination Skill
 

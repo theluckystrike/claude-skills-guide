@@ -27,10 +27,6 @@ Create a new skill file at `~/.claude/skills posthog skill.md`:
 ---
 name: posthog
 description: "Interact with PostHog for feature flags, events, and analytics"
-  - Read
-  - Write
-  - Bash
-  - WebFetch
 ---
 
 # PostHog Skill

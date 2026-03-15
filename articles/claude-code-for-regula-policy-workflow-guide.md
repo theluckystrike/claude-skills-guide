@@ -130,10 +130,6 @@ A custom policy might enforce naming conventions:
 ```yaml
 name: s3-bucket-naming-convention
 description: S3 buckets must follow naming standards
-resource: aws_s3_bucket
-condition:
-  bucket.matches("^[a-z0-9-]+$")
-message: "Bucket names must contain only lowercase letters, numbers, and hyphens"
 ```
 
 Claude Code can assist in writing these custom policies by suggesting appropriate conditions based on the resources you're validating. This capability makes Regula adaptable to any compliance framework.

@@ -145,21 +145,6 @@ When you build reusable composite actions for Claude Code workflows, passing sec
 # Composite action definition
 name: 'Claude Code Analysis'
 description: 'Run Claude Code analysis with required credentials'
-inputs:
-  analysis-type:
-    description: 'Type of analysis to perform'
-    required: true
-runs:
-  using: composite
-  steps:
-    - name: Perform analysis
-      shell: bash
-      env:
-        ANALYSIS_API_KEY: ${{ secrets.ANALYSIS_SERVICE_KEY }}
-      run: |
-        claude --print << EOF
-        Run ${{ inputs.analysis-type }} analysis using the API key
-        EOF
 ```
 
 This pattern keeps secrets at the repository level while enabling reusable action components.

@@ -37,9 +37,6 @@ Build a dedicated skill for managing W&B experiments. Create `skills/wandb-exper
 ---
 name: wandb-exp
 description: "Track ML experiments with Weights & Biases"
-  - Bash
-  - Read
-  - Write
 ---
 
 # Weights & Biases Experiment Tracking
@@ -142,8 +139,6 @@ You can create custom Claude commands that automatically log information to W&B.
 ---
 name: track-data
 description: "Log dataset statistics to W&B"
-  - Bash
-  - Read
 ---
 
 # Dataset Tracking

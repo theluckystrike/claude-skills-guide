@@ -154,19 +154,6 @@ You can create a Claude Skill specifically for your operator to ensure consisten
 # skill.yaml
 name: shell-operator
 description: "Specialized assistance for building and debugging shell-based Kubernetes operators"
-instructions: |
-  When helping with shell operators:
-  
-  1. Always use bash strict mode (set -euo pipefail)
-  2. Include proper logging with timestamps
-  3. Handle signals (SIGTERM, SIGINT) for graceful shutdown
-  4. Update resource status throughout reconciliation
-  5. Include retry logic with exponential backoff
-  
-  Always ask about:
-  - The target Kubernetes version
-  - Container image base (distroless, alpine, debian)
-  - Required secrets and their mounting approach
 ```
 
 ## Testing Your Operator

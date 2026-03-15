@@ -32,29 +32,12 @@ description: "Automates the end-of-day commit workflow including staging, testin
 
 ## Automatic Triggers
 
-This skill activates when you ask Claude to:
-- "Commit my changes for today"
-- "End of day commit"
-- "Stage and push my work"
 
 ## Workflow Steps
 
-1. Run `git status` to see all modified files
-2. Check for untracked files that should be added
-3. Display diff summary for review
-4. Run project tests if available
-5. Stage appropriate files
-6. Generate commit message based on changes
-7. Commit and push to remote
-8. Display summary of what was committed
 
 ## Guidelines
 
-- Never commit sensitive files (env, credentials, keys)
-- Always show the diff before committing
-- Ask for confirmation before pushing
-- If tests fail, report failures and ask whether to proceed
-- Follow conventional commit format when possible
 ```
 
 This skill serves as a template you can customize for your specific needs.
@@ -145,11 +128,6 @@ description: "Determines the current project and runs its commit workflow"
 
 ## Workflow
 
-1. Detect current working directory
-2. Identify the project from known project paths
-3. Load project-specific CLAUDE.md if available
-4. Run the end-of-day-commit skill with project context
-5. Report results specific to that project
 ```
 
 This approach scales well for developers managing several projects simultaneously.

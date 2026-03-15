@@ -123,12 +123,6 @@ Add steps that force consideration of alternatives:
 ---
 name: api-design
 description: Helps design RESTful APIs
-problem_solving_steps:
-  1: Understand the domain and data model
-  2: Identify resource boundaries
-  3: Consider at least 3 alternative designs before choosing one
-  4: Evaluate tradeoffs against the requirements
-  5: Document decisions and their rationale
 ---
 ```
 

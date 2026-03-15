@@ -27,8 +27,6 @@ Here is a minimal example of what a Claude MD file looks like:
 ---
 name: my-skill
 description: A skill that does something useful
-  - Bash
-  - Read
 ---
 
 # My Skill
@@ -54,10 +52,6 @@ Here is a more complete example showing a skill with tool restrictions:
 ---
 name: tdd
 description: Test-driven development assistant that writes tests before code
-  - Bash
-  - Read
-  - Write
-  - Glob
 ---
 
 # Test-Driven Development Skill
@@ -93,9 +87,6 @@ The `pdf` skill demonstrates a straightforward use case. Its MD file declares th
 ---
 name: pdf
 description: Creates PDF documents from markdown content
-  - Bash
-  - Write
-  - Glob
 ---
 
 # PDF Generation Skill
@@ -112,10 +103,6 @@ More complex skills like `supermemory` use additional configuration to manage pe
 ---
 name: supermemory
 description: Long-term memory system for Claude conversations
-  - Bash
-  - Read
-  - Write
-  - Edit
 ---
 
 # SuperMemory Skill
@@ -132,11 +119,6 @@ The `frontend-design` skill shows how MD files can coordinate multiple tool cate
 ---
 name: frontend-design
 description: Creates responsive web interfaces with modern CSS
-  - Bash
-  - Read
-  - Write
-  - Glob
-  - Edit
 ---
 
 # Frontend Design Skill
@@ -170,8 +152,6 @@ To create a custom skill, start with the basic structure. If you want to share y
 ---
 name: your-skill-name
 description: What your skill accomplishes
-  - ToolName1
-  - ToolName2
 ---
 
 # Your Skill Title

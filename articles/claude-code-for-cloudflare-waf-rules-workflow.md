@@ -65,8 +65,6 @@ Claude Code will generate an appropriate rule like:
 ```yaml
 name: "Block SQL Injection Attempts"
 description: "Prevents SQL injection in query parameters and headers"
-action: "block"
-expression: "(http.request.uri.query contains \"SELECT\" or http.request.uri.query contains \"UNION\" or http.request.uri.query contains \"DROP\" or http.request.uri.query contains \"INSERT\" or http.request.headers.names[*] contains \"SELECT\" or http.request.headers.names[*] contains \"UNION\")"
 ```
 
 The generated rule uses Cloudflare's expression language correctly, checking both query strings and headers for suspicious patterns.
@@ -78,14 +76,6 @@ Another common scenario is protecting API endpoints from abuse. Claude Code can 
 ```yaml
 name: "API Rate Limit Protection"
 description: "Limit API requests to 100 per minute per IP"
-action: "block"
-expression: "http.request.uri.path matches \"^/api/\""
-ratelimit:
-  requests_per_period: 100
-  period: 60
-  response:
-    content: "Rate limit exceeded. Please try again later."
-    content_type: "application/json"
 ```
 
 This rule automatically limits API endpoints to 100 requests per minute per IP address, helping prevent both accidental and intentional abuse.
@@ -97,8 +87,6 @@ For more advanced security, you can create rules that identify and block specifi
 ```yaml
 name: "Block Known Malicious Bots"
 description: "Blocks bots flagged in threat intelligence feeds"
-action: "block"
-expression: "(cf.threat_score > 10 and http.user_agent contains \"curl\") or (cf.threat_score > 15 and http.user_agent contains \"python-requests\")"
 ```
 
 This expression blocks requests from IPs with threat scores above certain thresholds when combined with suspicious user agents.

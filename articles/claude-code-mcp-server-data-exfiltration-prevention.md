@@ -159,14 +159,8 @@ When creating your own skills that integrate with MCP servers, embed security re
 ---
 name: secure-document-processor
 description: Process documents with security constraints
-capabilities:
   allowed_tools:
-    - read_file
-    - write_file
   restricted_paths:
-    - ~/.aws
-    - ~/.ssh
-    - /etc/secrets
   network_allowed: false
   log_access: true
 ---

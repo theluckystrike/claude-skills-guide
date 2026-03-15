@@ -60,29 +60,6 @@ Create a custom skill to standardize your PKI interactions. This skill should de
 ```yaml
 name: pki-manager
 description: "Manage certificates using step-ca PKI"
-actions:
-  - name: "Issue Certificate"
-    description: "Issue a new certificate for a service"
-    parameters:
-      - name: "hostname"
-        description: "The hostname or service name"
-        required: true
-      - name: "ttl"
-        description: "Certificate time-to-live (default: 24h)"
-        required: false
-    run: |
-      # Issue certificate with specified hostname and TTL
-      step ca certificate "{{hostname}}" "{{hostname}}.crt" "{{hostname}}.key" --ca-url=$STEP_CA_URL --provisioner=admin --not-before=now --not-after="{{ttl}}"
-      
-  - name: "Renew Certificate"
-    description: "Renew an existing certificate"
-    parameters:
-      - name: "cert_path"
-        description: "Path to the current certificate"
-        required: true
-    run: |
-      # Renew the certificate using the existing key
-      step ca renew "{{cert_path}}" "{{cert_path%.crt}}.key" --ca-url=$STEP_CA_URL --force
 ```
 
 ## Automating Certificate Management

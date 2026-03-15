@@ -101,8 +101,6 @@ Here's how to create a skill that helps users fill out forms intelligently:
 ---
 name: form-assistant
 description: "Helps fill out CLI forms with intelligent suggestions"
-  - Bash
-  - read_file
 ---
 
 # Form Assistant

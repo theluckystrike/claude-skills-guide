@@ -62,10 +62,6 @@ Create a custom skill that provides Claude with Wazuh-specific capabilities:
 ---
 name: wazuh-siem
 description: "Automate Wazuh SIEM operations including alert analysis, threat hunting, and incident response"
-  - Read
-  - Write
-  - Bash
-  - WebFetch
 ---
 
 ## Available Actions

@@ -163,7 +163,6 @@ When building Claude Code skills that make network requests, handle SSL errors g
 ---
 name: api-fetch
 description: Fetches data from APIs with SSL error handling
-  - Bash
 ---
 
 This skill handles SSL errors by:

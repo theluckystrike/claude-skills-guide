@@ -91,10 +91,6 @@ Here's an example skill definition for OLM operations:
 ---
 name: olm-operator
 description: Assists with Operator Lifecycle Manager tasks including CSV generation, subscription management, and operator deployment
-  - Read
-  - Write
-  - Bash
-  - Edit
 ---
 
 You are an OLM expert assistant. When asked to create operator resources:

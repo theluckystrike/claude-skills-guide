@@ -153,7 +153,6 @@ Here's a complete example of a properly configured skill file:
 ---
 name: code-review
 description: Performs a quick code review with suggestions for improvement
-  - /review - Run a code review on the current file
 ---
 
 # Code Review Skill

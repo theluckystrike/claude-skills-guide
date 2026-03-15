@@ -103,9 +103,6 @@ You can create a Claude Code skill to manage your QStash tasks more efficiently.
 ---
 name: qstash-manager
 description: Manage Upstash QStash scheduled tasks - create, list, and monitor cron jobs
-  - Bash
-  - Read
-  - Write
 ---
 
 # QStash Task Manager

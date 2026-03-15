@@ -134,22 +134,6 @@ Create a `risk-assessment` skill that runs automatically before deployments:
 # skills/risk-assessment/skill.yaml
 name: risk-assessment
 description: Evaluate AI outputs for potential risks before deployment
-triggers:
-  - pre_deploy
-  - scheduled
-  
-actions:
-  - name: content_safety_check
-    command: python scripts/check_content_safety.py
-    fail_on_critical: true
-    
-  - name: bias_audit
-    command: python scripts/audit_bias.py --sample-rate 0.1
-    report: true
-    
-  - name: security_scan
-    command: python scripts/scan_prompt_injection.py
-    fail_on_critical: true
 ```
 
 This skill can be configured to run automatically on every deployment, providing a safety net that catches issues before they reach production.

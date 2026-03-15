@@ -44,8 +44,6 @@ Here's a skill that extracts and organizes changes from conventional commits:
 ---
 name: changelog
 description: Generate changelog from conventional commits
-  - Bash
-  - Read
 ---
 
 # Changelog Generator
@@ -74,8 +72,6 @@ For teams that haven't adopted conventional commits, Claude Code can still help 
 ---
 name: smart-changelog
 description: Generate intelligent changelog from git history
-  - Bash
-  - Read
 ---
 
 # Smart Changelog Generator
@@ -121,8 +117,6 @@ Let Claude transform the categorized changes into polished release notes:
 ---
 name: release-notes-drafter
 description: Convert categorized changes into release notes
-  - Read
-  - Write
 ---
 
 # Release Notes Drafter
@@ -153,8 +147,6 @@ Modern release workflows often need multiple outputs—a GitHub release, a chang
 ---
 name: release-multi-format
 description: Generate release notes in multiple formats
-  - Read
-  - Write
 ---
 
 # Multi-Format Release Notes

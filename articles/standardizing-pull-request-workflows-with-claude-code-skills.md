@@ -53,21 +53,6 @@ Here's a practical example using Claude Code's skill system:
 # .claude/pr-validate-skill.md
 name: pr-pre-submission
 description: Validates code before creating a pull request
-triggers:
-  - event: before-commit
-actions:
-  - name: lint-check
-    tool: bash
-    command: npm run lint
-  - name: format-check
-    tool: bash
-    command: npm run format:check
-  - name: secrets-scan
-    tool: bash
-    command: git-secrets --scan
-  - name: test-quick
-    tool: bash
-    command: npm run test:unit -- --run
 ```
 
 ### 2. PR Description Generation
@@ -84,19 +69,6 @@ A well-documented PR accelerates review. Claude Code skills can automatically ge
 # .claude/pr-description-skill.md
 name: pr-description-generator
 description: Generates comprehensive PR descriptions automatically
-context:
-  - type: git
-    fields: [diff, commits, branch]
-actions:
-  - name: analyze-changes
-    tool: git-diff
-    output: changes.json
-  - name: generate-summary
-    tool: llm
-    prompt: |
-      Generate a concise PR description based on these changes:
-      {{changes}}
-      Include: summary, motivation, approach, and testing notes.
 ```
 
 ### 3. Automated Code Review
@@ -113,29 +85,6 @@ Once a PR is open, Claude Code skills can perform initial review:
 # .claude/pr-review-skill.md
 name: automated-code-review
 description: Performs automated code review on pull requests
-permissions:
-  - github
-triggers:
-  - event: pull_request.opened
-  - event: pull_request.synchronize
-actions:
-  - name: security-scan
-    tool: bash
-    command: npm audit --audit-level=high
-  - name: complexity-check
-    tool: bash
-    command: npx complexity-report --output=complexity.json
-  - name: comment-review
-    tool: github-pr-comment
-    body: |
-      ## Automated Review Summary
-      
-      Security: {{security-scan.exit_code}}
-      Complexity: See detailed report
-      
-      Suggestions:
-      - Consider extracting complex logic into separate functions
-      - Add JSDoc comments to exported functions
 ```
 
 ### 4. Review Assistance
@@ -189,28 +138,9 @@ Here's how a complete PR workflow might look in practice:
 name: complete-pr-workflow
 description: End-to-end PR workflow automation
 
-triggers:
-  - event: pull_request.opened
-  - event: pull_request.synchronize
 
-stages:
-  - name: pre-review
-    actions:
-      - run-linting
-      - run-tests
-      - check-secrets
-      - generate-description
       
-  - name: review
-    actions:
-      - security-scan
-      - complexity-analysis
-      - generate-review-comments
       
-  - name: notify
-    actions:
-      - notify-reviewers
-      - update-kanban-board
 ```
 
 This single skill orchestrates the entire PR lifecycle, ensuring every PR receives consistent treatment regardless of who authored it or who reviews it.

@@ -27,10 +27,6 @@ Create a project-specific skill that understands your FreeRTOS setup:
 ---
 name: freertos-dev
 description: "Assists with FreeRTOS firmware development, task creation, and ISR handling"
-  - Read
-  - Write
-  - Bash
-  - Edit
 ---
 
 You are an expert FreeRTOS developer. You understand:
@@ -205,11 +201,6 @@ Create a reusable skill that encodes your team's FreeRTOS conventions:
 ---
 name: embedded-freertos
 description: "Team skill for FreeRTOS development"
-  - Read
-  - Write
-  - Bash
-  - Glob
-  - Grep
 ---
 
 Follow these conventions:

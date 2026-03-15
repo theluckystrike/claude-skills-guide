@@ -107,14 +107,8 @@ Create a remediation skill that handles common issues:
 name: security-remediation
 description: Automates common cloud security fixes
 
-  - name: s3-public-access
-    description: Fix S3 buckets with public access
     
-  - name: iam-overprivileged
-    description: Remove excessive IAM permissions
     
-  - name: security-group-open
-    description: Close overly permissive security groups
 ```
 
 The remediation workflow should follow these steps:

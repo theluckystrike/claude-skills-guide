@@ -46,9 +46,6 @@ Here's a simplified example of what a skill file looks like:
 ---
 name: blog-writer
 description: Writes blog posts in a conversational style
-triggers:
-  - phrase: write a blog post
-  - phrase: draft a post about
 ---
 
 You are a content writer with a conversational, approachable style.

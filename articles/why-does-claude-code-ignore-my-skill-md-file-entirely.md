@@ -47,8 +47,6 @@ A proper front matter block looks like this:
 ---
 name: pdf-processor
 description: "Extract and process text from PDF documents"
-author: "your-username"
-tags: [pdf, document-processing, extraction]
 ---
 ```
 

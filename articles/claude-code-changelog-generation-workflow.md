@@ -40,14 +40,6 @@ Create a dedicated skill file for changelog generation in your project's `.claud
 # skills/changelog-generation.md
 name: Generate Changelog
 description: Creates release notes from git commit history
-trigger: when user asks for changelog or release notes
-actions:
-  - run: git log --pretty=format:"%h %s" [since_tag]..[to_tag]
-  - parse conventional commits
-  - group by type (feat, fix, docs, refactor, perf, test, chore)
-  - format as markdown with sections
-  - include breaking changes prominently
-  - add link references to issues and PRs
 ```
 
 This skill reads between git tags, extracting commits and organizing them by type. You specify the tag range when invoking the skill, giving you control over what appears in each release note.

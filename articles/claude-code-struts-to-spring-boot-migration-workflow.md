@@ -224,17 +224,6 @@ Chain these phases into a reproducible Claude Code skill:
 # Migration workflow skill
 name: struts-to-spring-boot-migration
 description: Automated Struts to Spring Boot migration
-steps:
-  - analyze: Scan codebase structure
-  - convert-actions: Transform Action classes
-  - migrate-config: Convert XML to annotations
-  - update-deps: Fix pom.xml dependencies  
-  - generate-tests: Create validation tests
-  - validate: Run integration tests
-  
-  - file-operations
-  - bash-execution
-  - code-analysis
 ```
 {% endraw %}
 

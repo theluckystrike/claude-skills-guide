@@ -168,30 +168,6 @@ To connect, define your MCP tools in a skill file:
 ```yaml
 name: kafka-streaming
 description: Event streaming automation with Apache Kafka
-  - name: list_kafka_topics
-    description: List all available Kafka topics
-    input: {}
-    
-  - name: produce_event
-    description: Produce an event to a Kafka topic
-    input:
-      type: object
-      properties:
-        topic:
-          type: string
-        key:
-          type: string
-        value:
-          type: object
-      required: [topic, value]
-      
-  - name: monitor_stream_health
-    description: Check Kafka cluster health and consumer lag
-    input:
-      type: object
-      properties:
-        consumerGroup:
-          type: string
 ```
 
 When Claude Code loads this skill, it can autonomously manage your event streams. You might ask Claude to "monitor the user-events topic and alert when consumer lag exceeds 1000 messages" or "redistribute events from the legacy topic to the new partition scheme."

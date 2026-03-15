@@ -158,17 +158,8 @@ Create a Claude Code skill to automate repetitive fine-tuning tasks:
 name: unsloth-finetune
 description: Automate Unsloth fine-tuning workflows
 
-  train:
-    description: Start training with default configuration
-    command: python scripts/train.py
 
-  eval:
-    description: Run evaluation on test dataset
-    command: python scripts/evaluate.py
 
-  convert:
-    description: Convert model to GGUF format for inference
-    command: python scripts/convert_to_gguf.py
 ```
 
 ## Model Evaluation and Testing

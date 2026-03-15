@@ -176,20 +176,9 @@ Claude Code can directly assist with JSON mode development through skill-based w
 name: JSON Extraction Helper
 description: Helps generate JSON schemas and extract structured data
 
-instructions: |
-  When asked to extract structured data or generate JSON:
   
-  1. First identify the required fields and their types
-  2. Generate a clear JSON schema or use existing type definitions
-  3. Provide the complete extraction prompt
-  4. Include validation logic to handle edge cases
   
-  Always verify extracted data matches the expected schema.
   
-  Available tools:
-  - Use file operations to read existing type definitions
-  - Generate code for JSON parsing and validation
-  - Create test fixtures with sample data
 ```
 
 With this skill loaded, Claude Code understands your JSON mode requirements across all interactions. It can automatically suggest schema improvements, generate validation code, and catch potential issues before they reach production.

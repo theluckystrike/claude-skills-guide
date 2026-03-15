@@ -67,24 +67,6 @@ The workflow definition might look like this:
 ```yaml
 name: log-health-check
 description: Automated daily log health analysis
-triggers:
-  - schedule: "0 8 * * *"  # Daily at 8 AM
-steps:
-  - name: fetch_errors
-    action: datadog.logs.query
-    params:
-      query: "status:error"
-      timeframe: "1h"
-  - name: analyze_patterns
-    action: datadog.logs.analyze
-    input: fetch_errors.results
-    params:
-      group_by: service
-      metrics: count, unique_errors
-  - name: generate_report
-    action: template.render
-    template: health-report.md
-    context: analyze_patterns
 ```
 
 This workflow runs automatically each morning, giving you a proactive view of application health before you start your day.

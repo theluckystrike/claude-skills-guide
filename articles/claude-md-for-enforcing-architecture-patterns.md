@@ -44,9 +44,6 @@ Let's build a skill that enforces a layered architecture pattern. This example a
 ---
 name: enforce-layered-architecture
 description: "Enforces consistent layered architecture patterns across the codebase"
-triggers:
-  - file_patterns: ["*.ts", "*.js"]
-  - context: ["new file", "refactor", "code review"]
 ---
 
 # Layered Architecture Rules

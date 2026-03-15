@@ -35,10 +35,6 @@ For example, a `code-review` skill might be configured to only use read-only too
 ---
 name: code-review
 description: Performs thorough code reviews
-  - Read
-  - Bash
-allowed_files:
-  - "**/*.py"
 ---
 ```
 
@@ -97,10 +93,6 @@ Let's say you want to refactor a legacy Python codebase. With Claude Code, you c
 ---
 name: python-refactor
 description: Refactors Python code to modern patterns
-  - Read
-  - Write
-  - Glob
-  - Bash
 ---
 # You are an expert Python refactoring assistant...
 

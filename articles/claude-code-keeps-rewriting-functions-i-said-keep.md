@@ -93,12 +93,6 @@ Claude Code skills can be configured to be more conservative about modifications
 ```yaml
 name: conservative-editor
 description: Edit code while preserving existing functionality
-instructions: |
-  - Never refactor code unless explicitly asked
-  - Preserve function signatures exactly
-  - Don't add new dependencies or imports
-  - Only modify what is explicitly requested
-  - Ask for confirmation before any refactoring
 ```
 
 Save this as `.claude/conservative-editor.md` and invoke it with `/conservative-editor` when working on sensitive code.

@@ -65,17 +65,6 @@ Here are practical examples of how Claude Code skills enable agentic behavior:
 ```yaml
 name: code-review
 description: Automated code review with security and performance checks
-trigger_on:
-  - pull_request
-  - push
-  - bash
-  - read_file
-  - search
-steps:
-  - run security scans
-  - check performance patterns
-  - validate test coverage
-  - generate review report
 ```
 
 This skill activates automatically on pull requests, analyzing code for security vulnerabilities, performance issues, and test coverage gaps—work that would otherwise require hours of manual review.
@@ -85,16 +74,6 @@ This skill activates automatically on pull requests, analyzing code for security
 ```yaml
 name: database-migration
 description: Safe database schema migrations with rollback support
-trigger_on:
-  - file_pattern: **/migrations/*.sql
-  - bash
-  - read_file
-  - edit_file
-workflow:
-  - validate migration syntax
-  - create rollback script
-  - generate backup
-  - execute with monitoring
 ```
 
 A database migration skill can autonomously handle schema changes, including creating backups and rollback scripts, ensuring safe deployment.
@@ -104,15 +83,6 @@ A database migration skill can autonomously handle schema changes, including cre
 ```yaml
 name: api-docs
 description: Generate and maintain API documentation
-auto_invoke:
-  when: modifying API endpoints
-  - read_file
-  - write_file
-  - bash
-outputs:
-  - OpenAPI specification
-  - Markdown documentation
-  - Usage examples
 ```
 
 This skill automatically updates API documentation when endpoints change, keeping docs synchronized with code.

@@ -38,10 +38,6 @@ Create a dedicated skill for internationalization tasks. This skill will underst
 ---
 name: i18n
 description: "Internationalization helper for managing translations, extracting keys, and validating locale files"
-  - Read
-  - Write
-  - Bash
-  - Glob
 ---
 
 # Internationalization Helper

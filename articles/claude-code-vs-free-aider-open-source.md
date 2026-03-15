@@ -36,10 +36,6 @@ Skills in Claude Code are defined in YAML files within your project's `.claude/s
 ```yaml
 name: generate-unit-tests
 description: Automatically generate unit tests for the current file
-trigger: when working on test files or when asked to write tests
-action: |
-  Analyze the source file and generate comprehensive unit tests
-  using the project's testing framework.
 ```
 
 This skill can then be invoked automatically when Claude Code detects you're working on test files, or you can call it explicitly in your prompts.

@@ -54,11 +54,6 @@ Claude Code's skills system allows you to create custom instructions for working
 ```yaml
 name: "Private Codebase Security"
 description: "Guidelines for handling sensitive codebases"
-instructions: |
-  - Never log or output sensitive variable values
-  - Avoid sending full file contents to API when possible
-  - Use file path references instead of file contents when explaining code
-  - Prefer local analysis over API calls for simple queries
 ```
 
 This skill ensures Claude Code follows security best practices automatically.
@@ -141,11 +136,6 @@ When debugging a sensitive authentication issue:
 ```yaml
 name: "Security Review"
 description: "Enhanced security analysis for sensitive code"
-instructions: |
-  - Always consider OWASP Top 10 vulnerabilities
-  - Flag any hardcoded credentials or secrets
-  - Check for proper input validation
-  - Review authentication/authorization patterns
 ```
 
 ## Feature Comparison Table

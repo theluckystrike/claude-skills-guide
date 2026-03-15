@@ -31,10 +31,6 @@ The orchestrator pattern uses a central agent that breaks down complex tasks and
 ---
 name: project-orchestrator
 description: Coordinates complex project tasks across specialized agents
-agents:
-  - code-agent
-  - review-agent
-  - docs-agent
 ---
 ```
 
@@ -48,9 +44,6 @@ The handoff pattern enables smooth context transfer between agents as work progr
 ---
 name: code-to-review-handoff
 description: Transfers code context to review specialist
-handoff:
-  to: code-reviewer
-  include_context: [recent_changes, test_results, code_author]
 ---
 ```
 
@@ -64,11 +57,6 @@ For tasks with independent sub-components, parallel execution dramatically reduc
 ---
 name: parallel-analysis
 description: Runs multiple analysis agents concurrently
-parallel: true
-agents:
-  - security-auditor
-  - performance-profiler
-  - architecture-reviewer
 ---
 ```
 
@@ -84,12 +72,6 @@ For critical decisions requiring thorough analysis, a debate pattern allows mult
 ---
 name: architecture-debate
 description: Coordinates architectural decision debates
-agents:
-  - pragmatic-optimizer
-  - security-focused
-  - performance-maximizer
-rounds: 3
-consensus_threshold: 0.75
 ---
 ```
 
@@ -109,14 +91,6 @@ Consider building a comprehensive API refactoring workflow. You might compose se
 ---
 name: api-refactoring-workflow
 description: Complete API refactoring pipeline
-agents:
-  - analysis-agent
-  - migration-planner
-  - code-modifier
-  - test-validator
-  - changelog-generator
-sequence: sequential
-rollback_on_failure: true
 ---
 ```
 

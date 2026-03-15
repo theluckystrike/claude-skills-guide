@@ -110,11 +110,6 @@ Create a wrapper skill that orchestrates these:
 ---
 name: frontend-workflow
 description: Complete frontend development pipeline
-composes:
-  - skills/development/frontend-design
-  - skills/development/tdd
-  - skills/data/xlsx
-  - skills/data/pdf
 ---
 
 # Frontend Development Workflow
@@ -176,9 +171,6 @@ The `reporting` skill references its dependencies:
 ---
 name: data-analysis-reporting
 description: End-to-end data analysis and reporting pipeline
-depends_on:
-  - data-analysis/pdf-extraction
-  - data-analysis/spreadsheet
 ---
 
 # Data Analysis Reporting Pipeline

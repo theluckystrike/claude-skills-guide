@@ -111,9 +111,6 @@ For more sophisticated workflows, create Claude Code skills that encapsulate you
 ---
 name: r2-manager
 description: "Manage Cloudflare R2 storage operations"
-  - Bash
-  - Read
-  - Write
 ---
 
 # R2 Storage Manager

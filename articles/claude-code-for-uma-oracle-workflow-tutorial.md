@@ -44,10 +44,6 @@ Configure your skill with the necessary tool access:
 ```yaml
 ---
 name: UMA Oracle Development
-  - read_file
-  - write_file
-  - bash
-  - edit_file
 description: Assists with UMA oracle smart contract development and integration
 ---
 ```

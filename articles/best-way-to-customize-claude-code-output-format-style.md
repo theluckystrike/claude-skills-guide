@@ -92,24 +92,10 @@ name: my-custom-skill
 description: A skill that generates consistently formatted API documentation
 
 # Output configuration
-output:
-  format: markdown
-  include_code_examples: true
-  response_template: |
-    ## Overview
-    {{description}}
     
-    ## Usage
-    {{code_examples}}
     
-    ## Parameters
-    {{parameters}}
   
 # Style preferences
-style:
-  verbosity: detailed
-  include_warnings: true
-  suggest_alternatives: false
 ```
 
 ### Creating Output Templates

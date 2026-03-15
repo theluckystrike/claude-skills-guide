@@ -66,10 +66,6 @@ You can create a dedicated Claude Code skill that encapsulates the Knip workflow
 ---
 name: knip
 description: Run Knip dead code finder to detect unused code, exports, and dependencies
-  - Bash
-  - Read
-  - Edit
-  - Write
 ---
 
 # Knip Dead Code Finder

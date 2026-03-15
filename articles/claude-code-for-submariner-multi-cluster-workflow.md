@@ -42,11 +42,6 @@ Start by creating a dedicated skill for Submariner operations. This skill should
 name: "Submariner Multi-Cluster Manager"
 description: "Automates Submariner multi-cluster configuration and troubleshooting"
 
-capabilities:
-  - Generate broker configurations
-  - Create cluster-specific deployments
-  - Validate connectivity across clusters
-  - Troubleshoot tunnel issues
 ```
 
 ### Generating Broker Configurations

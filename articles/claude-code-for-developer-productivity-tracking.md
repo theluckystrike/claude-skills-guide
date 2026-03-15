@@ -38,9 +38,6 @@ The most effective approach to developer productivity tracking with Claude Code 
 ---
 name: productivity-tracker
 description: Tracks development tasks and generates productivity insights
-  - Read
-  - Write
-  - Bash
 ---
 
 # Productivity Tracker
@@ -108,8 +105,6 @@ Create a skill that generates your daily standup from recent work:
 ---
 name: standup-generator
 description: Generates daily standup reports from recent git activity
-  - Bash
-  - Read
 ---
 
 # Standup Generator
@@ -212,8 +207,6 @@ If you find yourself solving the same problems repeatedly, create skills that en
 ---
 name: fix-lint-errors
 description: Automatically common linting errors in JavaScript/TypeScript projects
-  - Bash
-  - Read
 ---
 
 # Fix Common Lint Errors

@@ -46,10 +46,6 @@ Claude Code can then use these credentials to authenticate with Harness. Here's 
 ---
 name: harness-pipeline-assistant
 description: "AI-powered assistant for Harness CD pipeline management"
-env:
-  - HARNESS_ACCOUNT_ID
-  - HARNESS_API_TOKEN
-  - HARNESS_BASE_URL
 ---
 ```
 

@@ -74,7 +74,6 @@ The skill front matter itself serves as an injection mechanism. Use it to config
 ```yaml
 ---
 name: api-client
-config:
   base_url: "{{env.API_BASE_URL}}"
   timeout: "{{env.API_TIMEOUT}}"
   retry_count: 3

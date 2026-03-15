@@ -45,8 +45,6 @@ The foundation of any cost management workflow is querying cost data. Here's a s
 ---
 name: azure-cost-summary
 description: "Get Azure cost summary for a specified time period"
-  - Bash
-  - Read
 ---
 
 ## Cost Summary Query
@@ -103,8 +101,6 @@ Proactive cost management requires budget alerts. This skill creates and manages
 ---
 name: azure-budget-alert
 description: "Create or check Azure budget alerts"
-  - Bash
-  - Read
 ---
 
 ## Budget Alert Management
@@ -146,8 +142,6 @@ Unexpected cost spikes can indicate issues like misconfigured resources or secur
 ---
 name: azure-cost-anomaly
 description: "Detect Azure cost anomalies by comparing current vs historical spending"
-  - Bash
-  - Read
 ---
 
 ## Cost Anomaly Detection
@@ -194,8 +188,6 @@ Azure provides recommendations through the Azure Advisor API. This skill fetches
 ---
 name: azure-cost-recommendations
 description: "Fetch Azure Advisor cost optimization recommendations"
-  - Bash
-  - Read
 ---
 
 ## Cost Optimization Recommendations

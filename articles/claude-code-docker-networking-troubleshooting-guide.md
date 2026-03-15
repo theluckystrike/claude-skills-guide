@@ -121,18 +121,6 @@ You can create a reusable Claude Code skill that automates common diagnostic seq
 ```yaml
 name: docker-network-debug
 description: Diagnose common Docker networking issues
-steps:
-  - name: gather_network_info
-    command: docker network ls
-    description: List all Docker networks
-    
-  - name: inspect_bridge
-    command: docker network inspect bridge
-    description: Check default bridge configuration
-    
-  - name: list_containers
-    command: docker ps -a --format "table {{.Names}}\t{{.Networks}}"
-    description: Show container network affiliations
 ```
 
 This skill provides a consistent starting point for any networking troubleshooting session. You can expand it with conditional logic that runs additional diagnostics based on what it discovers.

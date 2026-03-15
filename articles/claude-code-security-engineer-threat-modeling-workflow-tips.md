@@ -76,13 +76,6 @@ Threat modeling must account for regulatory requirements. Create a skill that ma
 ```yaml
 name: compliance-mapper
 description: Map threats to compliance controls
-framework_mappings:
-  - name: SOC2
-    controls: [CC6.1, CC6.2, CC6.6]
-  - name: PCI-DSS
-    controls: [3.4, 6.5, 8.2]
-  - name: HIPAA
-    controls: [164.308, 164.310]
 ```
 
 This skill helps ensure your threat model addresses specific regulatory requirements. When Claude Code identifies a threat, it can automatically suggest relevant compliance controls, accelerating the documentation process for audit readiness.

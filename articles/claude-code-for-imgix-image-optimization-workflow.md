@@ -43,12 +43,6 @@ Create a skill that generates Imgix URLs based on specifications. Save this as `
 ---
 name: imgix-url-generator
 description: Generate Imgix URLs with optimal parameters for image transformation
-  source: Your Imgix source domain (e.g., your-site.imgix.net)
-  image_path: Path to image in your source
-  width: Target width in pixels
-  height: Optional height
-  fit: Resize mode (crop, clamp, max, clip, stretch)
-  quality: Quality level 1-100 (default: 75)
 ---
 
 You are an Imgix URL generator. Given source information and transformation parameters, generate optimized Imgix URLs.
@@ -119,9 +113,6 @@ For large-scale image optimization, create a skill that processes multiple image
 ---
 name: imgix-batch-processor
 description: Process multiple images through Imgix with consistent optimization settings
-  images: Array of image paths to process
-  base_url: Your Imgix source base URL
-  optimization_profile: "fast" | "balanced" | "quality"
 ---
 
 Process images through Imgix with the following optimization profiles:

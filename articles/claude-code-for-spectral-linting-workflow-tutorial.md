@@ -91,12 +91,6 @@ Create a Claude Skill that runs Spectral linting on your OpenAPI specifications:
 ```yaml
 name: spectral-linter
 description: Run Spectral linting on API specifications
-actions:
-  - name: lint
-    run: |
-      npx spectral lint openapi.yaml --format stylish
-    capture:
-      output: spectral-results
 ```
 
 When you invoke this skill, Claude Code will run Spectral against your API definition and present any issues in a readable format. This integration allows for iterative improvement where Claude Code suggests fixes based on the linting results.

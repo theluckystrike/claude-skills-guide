@@ -134,13 +134,6 @@ A postmortem skill might include instructions like:
 ```yaml
 name: postmortem
 description: "Streamline SRE postmortem creation from incident data"
-trigger: "when I mention incident documentation or postmortem"
-actions:
-  - Collect incident metadata (time, severity, affected services)
-  - Analyze available logs and metrics
-  - Generate root cause analysis using Five Whys
-  - Create document using internal-comms templates
-  - Suggest action items based on findings
 ```
 
 This skill automates routine portions while preserving human judgment for analysis and conclusions.

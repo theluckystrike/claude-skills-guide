@@ -72,25 +72,8 @@ Create a golden path definition file (e.g., `my-workflow.golden-path.yml`):
 name: custom-code-analysis
 description: Custom workflow for comprehensive code analysis
 
-steps:
-  - name: discover-files
-    skill: file-discovery
-    params:
-      patterns: ["**/*.ts", "**/*.tsx"]
-      exclude: ["node_modules/**", "dist/**"]
     
-  - name: analyze-quality
-    skill: code-analyzer
-    params:
-      metrics: ["complexity", "duplication", "naming"]
-    depends_on: discover-files
     
-  - name: generate-report
-    skill: report-generator
-    params:
-      format: markdown
-      include_metrics: true
-    depends_on: analyze-quality
 ```
 
 Each step references a skill and can declare dependencies on previous steps, enabling sequential execution with data passing.
@@ -126,24 +109,8 @@ This golden path analyzes your codebase and generates comprehensive documentatio
 name: docs-generator
 description: Generate API documentation from codebase
 
-steps:
-  - name: extract-api
-    skill: api-extractor
-    params:
-      language: typescript
-      include_private: false
       
-  - name: generate-markdown
-    skill: markdown-generator
-    params:
-      template: api-docs
-      output_dir: ./docs/api
       
-  - name: validate-links
-    skill: link-validator
-    params:
-      base_url: /docs
-    depends_on: generate-markdown
 ```
 
 Save this as `docs-generator.golden-path.yml` in your project's `.claude/workflows/` directory.
@@ -187,32 +154,10 @@ Streamline feature development from creation to documentation:
 name: feature-pipeline
 description: Complete feature development workflow
 
-steps:
-  - name: create-branch
-    skill: git-branch-manager
-    params:
-      prefix: feature/
       
-  - name: implement-feature
-    skill: code-generator
-    params:
-      pattern: component
       
-  - name: write-tests
-    skill: test-generator
-    params:
-      framework: vitest
-      coverage: full
       
-  - name: update-docs
-    skill: doc-updater
-    params:
-      sections: ["api", "usage"]
       
-  - name: create-pr
-    skill: pr-creator
-    params:
-      template: feature
 ```
 
 ## Best Practices for Golden Path Design
@@ -253,15 +198,6 @@ Add comprehensive documentation to each golden path:
 ```yaml
 name: my-workflow
 description: "What this workflow accomplishes"
-documentation: |
-  This workflow performs X, Y, and Z in sequence.
-  
-  ## Requirements
-  - Node.js 18+
-  - Dependencies installed
-  
-  ## Usage
-  claude /my-workflow
 ```
 
 ## Advanced: Conditional Execution

@@ -154,9 +154,6 @@ When existing skills don't meet requirements, build custom skills following this
 ---
 name: project-scaffolder
 description: "Generates project structure from specifications"
-triggers:
-  - "generate project"
-  - "create new project"
 ---
 
 ## Input Format

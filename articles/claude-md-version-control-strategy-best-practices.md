@@ -91,11 +91,6 @@ Some skills require others to function properly. A `frontend-design` skill might
 ---
 name: frontend-design
 description: Generates responsive frontend components
-depends_on:
-  - css-utils
-  - Read
-  - Write
-  - Bash
 ---
 ```
 

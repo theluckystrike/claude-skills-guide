@@ -155,14 +155,6 @@ You can create a custom skill that instructs Claude Code to minimize boilerplate
 ```yaml
 name: minimal-code
 description: Generate minimal, focused code snippets without boilerplate
-instructions: |
-  When generating code:
-  - Output only the essential logic requested
-  - Skip imports unless explicitly asked
-  - Omit docstrings and type hints unless required
-  - Skip error handling unless specifically requested
-  - No export statements or module setup
-  - Prefer inline implementations over helper functions
 ```
 
 To use this skill, place it in `~/.claude/skills/minimal-code.md`. Then invoke it in a session with `/minimal-code` to set a persistent preference for concise output during that session.

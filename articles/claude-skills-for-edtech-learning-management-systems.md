@@ -51,25 +51,7 @@ Here's how to structure a grading skill:
 name: code-grader
 description: Evaluates programming submissions against rubrics
 
-rubrics:
-  - criterion: "Code correctness"
-    weight: 0.4
-    levels:
-      - score: 4
-        description: "Perfect solution with edge cases handled"
-      - score: 3
-        description: "Works for main cases, minor issues"
-      - score: 2
-        description: "Partial functionality"
-      - score: 1
-        description: "Attempted but broken"
-      - score: 0
-        description: "No attempt"
 
-context:
-  language: "python"
-  test_cases: 5
-  time_limit: 30
 ```
 
 When implementing, send both the submission and rubric to Claude:

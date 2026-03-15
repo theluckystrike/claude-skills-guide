@@ -41,19 +41,6 @@ The foundation of your workflow automation is a Claude skill specifically design
 ---
 name: mitre-attck-helper
 description: "Assists with MITRE ATT&CK technique analysis, detection rule generation, and coverage mapping"
-tactics:
-  - initial-access
-  - execution
-  - persistence
-  - privilege-escalation
-  - defense-evasion
-  - credential-access
-  - discovery
-  - lateral-movement
-  - collection
-  - exfiltration
-  - command-and-control
-  - impact
 ---
 
 You are a MITRE ATT&CK expert assistant. When provided with:

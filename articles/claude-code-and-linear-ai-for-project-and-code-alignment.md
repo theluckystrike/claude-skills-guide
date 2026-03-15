@@ -126,12 +126,6 @@ You can create a Claude Skill that performs alignment checks before code is comm
 ```yaml
 name: alignment-check
 description: Verify code changes align with project goals and Linear issues
-trigger: always
-actions:
-  - read_issue_from_branch
-  - analyze_code_changes
-  - check_convention_compliance
-  - report_alignment_score
 ```
 
 This skill ensures every commit maintains proper alignment with your project's direction.
@@ -158,15 +152,6 @@ Maintain code conventions automatically:
 ```yaml
 name: convention-enforcer
 description: Ensure code follows team conventions
-auto-trigger:
-  on: [file_save, git_commit]
-conditions:
-  file_matches: "src/**/*.ts"
-actions:
-  - run_eslint
-  - check_naming_conventions
-  - verify_test_coverage
-  - block_commit_if_fails: true
 ```
 
 Every piece of code that enters your repository passes through this alignment filter.

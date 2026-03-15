@@ -58,25 +58,6 @@ Create a skill that handles pipeline triggers:
 ```yaml
 name: trigger-azure-pipeline
 description: Trigger an Azure DevOps pipeline from Claude Code
-instructions: |
-  When the user asks to trigger an Azure DevOps pipeline or start a build,
-  use the azure-pipeline-trigger script to initiate the pipeline.
-  Parameters:
-  - pipeline_name: Name of the pipeline to trigger
-  - branch: Git branch to use (default: main)
-  - variables: Optional pipeline variables in JSON format
-  trigger-pipeline:
-    args: <pipeline_name> [branch]
-    script: |
-      PIPELINE_NAME="$1"
-      BRANCH="${2:-main}"
-      
-      az pipelines run \
-        --organization "https://dev.azure.com/$AZURE_ORG" \
-        --project "$AZURE_PROJECT" \
-        --name "$PIPELINE_NAME" \
-        --branch "$BRANCH" \
-        --output json
 ```
 
 Save this as `skills/trigger-azure-pipeline.md` and Claude will automatically invoke it when you mention triggering pipelines.
@@ -133,27 +114,6 @@ Create a deployment skill that validates resources after Azure deployments:
 ```yaml
 name: azure-deployment-validator
 description: Validate Azure resources after deployment
-instructions: |
-  After Azure deployments complete, use this skill to verify:
-  - Resource existence and health
-  - Configuration correctness
-  - Basic connectivity tests
-  validate-deployment:
-    args: <resource-group> <deployment-name>
-    script: |
-      RESOURCE_GROUP="$1"
-      DEPLOYMENT_NAME="$2"
-      
-      # Check deployment status
-      az deployment group show \
-        --resource-group "$RESOURCE_GROUP" \
-        --name "$DEPLOYMENT_NAME" \
-        --query 'properties.provisioningState'
-      
-      # Verify key resources exist
-      az resource list \
-        --resource-group "$RESOURCE_GROUP" \
-        --output table
 ```
 
 ## Document Generation with PDF Skill

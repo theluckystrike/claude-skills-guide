@@ -40,9 +40,6 @@ Create a skill file called `cWV-field-data.md` in your skills directory:
 ---
 name: cwv-field-data
 description: Query Core Web Vitals field data from Google PageSpeed Insights API
-  - Bash
-  - Write
-  - Read
 ---
 
 This skill helps you fetch and analyze Core Web Vitals field data from Google's CrUX API.

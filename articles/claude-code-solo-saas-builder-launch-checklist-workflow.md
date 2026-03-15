@@ -206,9 +206,6 @@ Create skills that codify your personal best practices:
 ---
 name: saas-api-endpoint
 description: Scaffold a new API endpoint with proper auth, validation, and error handling
-  - Read
-  - Write
-  - Bash
 ---
 
 Generate a new API endpoint with:

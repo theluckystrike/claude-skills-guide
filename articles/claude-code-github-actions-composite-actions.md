@@ -31,36 +31,6 @@ A composite action lives in `.github/actions/claude-action/action.yml`. The key 
 ```yaml
 name: 'Claude Code Review'
 description: 'Runs Claude Code analysis on changed files'
-inputs:
-  api-key:
-    description: 'Anthropic API key'
-    required: true
-  model:
-    description: 'Claude model to use'
-    default: 'claude-sonnet-4-20250514'
-  files:
-    description: 'Files to analyze'
-    required: true
-runs:
-  using: 'composite'
-  steps:
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-    
-    - name: Install Claude CLI
-      shell: bash
-      run: |
-        npm install -g @anthropic-ai/claude-code
-    
-    - name: Run Claude analysis
-      shell: bash
-      env:
-        ANTHROPIC_API_KEY: ${{ inputs.api-key }}
-        CLAUDE_MODEL: ${{ inputs.model }}
-      run: |
-        claude --print "Analyze these files for code quality issues: ${{ inputs.files }}"
 ```
 
 This action sets up Node.js, installs Claude Code globally, and runs an analysis command. You can now invoke it from any workflow without repeating the setup steps.
@@ -72,25 +42,6 @@ Composite actions have access to GitHub context through `${{ github }}` and `${{
 ```yaml
 name: 'Claude PR Analysis'
 description: 'Analyzes pull request changes with Claude'
-inputs:
-  api-key:
-    description: 'Anthropic API key'
-    required: true
-runs:
-  using: 'composite'
-  steps:
-    - name: Get changed files
-      id: files
-      shell: bash
-      run: |
-        echo "files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | tr '\n' ' ')" >> $GITHUB_OUTPUT
-    
-    - name: Run Claude review
-      shell: bash
-      env:
-        ANTHROPIC_API_KEY: ${{ inputs.api-key }}
-      run: |
-        claude --print "Review these pull request changes for bugs and improvements: ${{ steps.files.outputs.files }}"
 ```
 
 The composite action captures the changed files between base and head commits, then passes them to Claude for review. This pattern works with any Claude skill you have installed.
@@ -102,29 +53,7 @@ A sophisticated composite action can invoke multiple Claude skills in sequence. 
 ```yaml
 name: 'Claude TDD Report'
 description: 'Runs TDD analysis and generates PDF report'
-inputs:
-  api-key:
-    description: 'Anthropic API key'
-    required: true
-  test-dir:
-    description: 'Test directory path'
-    default: 'tests'
-runs:
-  using: 'composite'
-  steps:
-    - name: Run TDD analysis
-      shell: bash
-      env:
-        ANTHROPIC_API_KEY: ${{ inputs.api-key }}
-      run: |
-        claude --print "Analyze test coverage in ${{ inputs.test-dir }} and suggest improvements"
 
-    - name: Generate PDF report
-      shell: bash
-      env:
-        ANTHROPIC_API_KEY: ${{ inputs.api-key }}
-      run: |
-        claude --print "Create a test coverage summary in markdown, then use the pdf skill to generate a report"
 ```
 
 This composite action chains two Claude invocations. The first analyzes test coverage using TDD patterns, and the second generates a PDF report using the pdf skill.

@@ -130,9 +130,6 @@ Create a skill that audits your configuration:
 ---
 name: dependabot-audit
 description: Audit and optimize Dependabot configurations
-  - Read
-  - Write
-  - Bash
 ---
 
 Audit the .github/dependabot.yml file and check:

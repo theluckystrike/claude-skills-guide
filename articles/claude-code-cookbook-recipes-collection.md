@@ -25,9 +25,6 @@ The pdf skill streamlines document creation by converting markdown directly to f
 ---
 name: pdf
 description: Converts markdown documents to PDF files
-  - Read
-  - Write
-  - Bash
 ---
 ```
 
@@ -48,10 +45,6 @@ Building user interfaces often requires iterating between design tools and code.
 ---
 name: frontend-design
 description: Generates responsive frontend components and layouts
-  - Read
-  - Write
-  - Bash
-  - WebFetch
 ---
 ```
 
@@ -73,9 +66,6 @@ The tdd skill implements test-driven development workflows by generating test fi
 ---
 name: tdd
 description: Implements test-driven development workflows
-  - Read
-  - Write
-  - Bash
 ---
 ```
 
@@ -109,9 +99,6 @@ Long-running projects accumulate valuable context that you shouldn't lose betwee
 ---
 name: supermemory
 description: Manages persistent memory and context for projects
-  - Read
-  - Write
-  - Bash
 ---
 ```
 
@@ -148,13 +135,6 @@ Advanced users compose skills using the sequential tool calling pattern. Instead
 ---
 name: feature-pipeline
 description: Implements a complete feature workflow
-skills:
-  - supermemory
-  - tdd
-  - frontend-design
-  - Read
-  - Write
-  - Bash
 ---
 ```
 

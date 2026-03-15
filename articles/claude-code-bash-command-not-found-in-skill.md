@@ -36,9 +36,6 @@ The most frequent cause of command failures is simply forgetting to declare the 
 ---
 name: my-skill
 description: A skill that runs shell commands
-  - Read
-  - Write
-  - Bash
 ---
 
 Your skill description and instructions go here.
@@ -113,8 +110,6 @@ Here's a properly configured skill that runs Node.js build commands:
 ---
 name: node-build
 description: Builds Node.js projects
-  - Read
-  - Bash
 ---
 
 This skill builds Node.js projects reliably.
@@ -134,9 +129,6 @@ Always use absolute paths to node and npm to avoid PATH issues.
 ---
 name: python-run
 description: Runs Python scripts in virtual environment
-  - Read
-  - Write
-  - Bash
 ---
 
 This skill activates a Python virtual environment and runs scripts.
@@ -158,8 +150,6 @@ If the virtual environment doesn't exist, create it:
 ---
 name: docker-manager
 description: Manages Docker containers
-  - Read
-  - Bash
 ---
 
 This skill helps manage Docker containers.

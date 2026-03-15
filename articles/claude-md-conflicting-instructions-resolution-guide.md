@@ -36,7 +36,6 @@ The most reliable approach is declaring instruction priority directly in your sk
 ```yaml
 ---
 name: pdf-extraction
-priority: 10
 instructions: |
   Extract table data from PDF files.
   When conflicting with tdd skill, this takes precedence for extraction phase.
@@ -120,7 +119,6 @@ When `frontend-design` and `tdd` both load, they may conflict on code structure 
 ```yaml
 ---
 name: frontend-with-tests
-priority: 8
 override:
   - skill: tdd
     conditions:

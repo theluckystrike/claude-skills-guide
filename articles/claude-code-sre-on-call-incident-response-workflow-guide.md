@@ -33,12 +33,6 @@ Start by creating a skill file at `CLAUDE.md` in your project or a dedicated ski
 ```
 name: sre-incident-response
 description: SRE on-call incident response and troubleshooting assistant
-trigger: on-call, incident, alert, pagerduty, outage, degradation
-capabilities:
-  - Execute diagnostic commands
-  - Query monitoring systems
-  - Access log aggregation
-  - Run remediation playbooks
 ```
 
 For more complex setups, create a dedicated skill file that loads automatically when working in your infrastructure repositories. This skill should include your standard operating procedures, communication templates, and common debugging patterns specific to your systems.

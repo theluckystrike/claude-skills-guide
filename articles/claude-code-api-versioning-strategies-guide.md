@@ -29,9 +29,6 @@ URL path versioning embeds the version identifier directly in the endpoint path.
 # Skill configuration for URL-path-based API calls
 name: payment-integration
 description: Process payments through the Stripe API
-api_endpoints:
-  - base_url: https://api.stripe.com/v1
-  - base_url: https://api.stripe.com/v2
 ```
 
 When your skill makes requests, the version sits explicitly in the URL:
@@ -59,13 +56,6 @@ Header versioning keeps the URL clean while specifying the version through HTTP 
 # Using Accept header for version negotiation
 name: document-processor
 description: Process documents using the pdf skill with API version control
-  - Read
-  - Write
-  - Bash
-api_config:
-  base_url: https://api.example.com
-  version_header: Accept-Version
-  default_version: "2024-01"
 ```
 
 The implementation uses the header to signal version intent:
@@ -91,14 +81,6 @@ Query string versioning adds the version as a URL parameter. This approach offer
 # Query-based version selection
 name: analytics-reporter
 description: Generate analytics reports through the tdd skill
-  - Read
-  - Write
-  - Bash
-  - python
-api_endpoints:
-  - url: https://analytics.service.io/reports
-    version_param: api_version
-    supported_versions: ["v2", "v3"]
 ```
 
 Implementation looks straightforward:

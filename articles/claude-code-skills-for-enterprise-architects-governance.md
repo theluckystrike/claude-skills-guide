@@ -41,9 +41,6 @@ The most effective governance approach uses skills that activate automatically b
 ---
 name: api-governance
 description: Enforce REST API design standards and naming conventions
-autoInvoke:
-  - pattern: "**/api/**/*.ts"
-  - pattern: "**/routes/**/*.js"
 ---
 
 # API Governance Rules

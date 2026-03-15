@@ -82,9 +82,6 @@ Claude Code skills support lifecycle hooks that let you inject logging at key mo
 ---
 name: tdd
 description: "Test-driven development assistant"
-hooks:
-  beforeinvoke: "audit/start-invocation.js"
-  afterinvoke: "audit/complete-invocation.js"
 ---
 
 # Skill continues with normal operations
@@ -189,9 +186,6 @@ Here's a practical wrapper skill that adds audit logging to any skill it wraps:
 ---
 name: audited-skill
 description: "Wrapper that adds audit logging to any skill"
-variables:
-  audit_log_path: "./logs/audit.jsonl"
-  audit_enabled: true
 ---
 
 This wrapper skill demonstrates the complete audit pattern:

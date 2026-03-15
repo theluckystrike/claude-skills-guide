@@ -32,10 +32,6 @@ Start by creating a dedicated skill for coordinating the detection process:
 ```yaml
 name: dead-code-detector
 description: Analyzes codebase for unused code, unreachable branches, and dead dependencies
-  - Read
-  - Bash
-  - Edit
-  - Glob
 ```
 
 This skill orchestrates multiple analysis passes. First, it runs language-specific linters configured for dead code detection. Then it performs cross-file analysis to identify functions defined but never called. Finally, it validates findings against runtime behavior to eliminate false positives.

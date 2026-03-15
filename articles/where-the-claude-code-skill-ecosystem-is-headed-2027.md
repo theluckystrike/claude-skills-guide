@@ -35,14 +35,6 @@ Consider a skill designed for API documentation:
 ---
 name: api-docs-generator
 description: Generate API documentation from code
-context: detection
-detection:
-  - pattern: "*.py"
-    invoke: /python-api-docs
-  - pattern: "*.ts"
-    invoke: /typescript-api-docs
-  - pattern: "*.go"
-    invoke: /go-api-docs
 ---
 ```
 

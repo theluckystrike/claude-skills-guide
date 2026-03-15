@@ -25,7 +25,6 @@ A Claude skill is simply a markdown file with front matter that defines metadata
 ---
 name: skill-name
 description: What this skill does
-tags: [category, tags]
 ---
 
 # Skill Instructions
@@ -42,7 +41,6 @@ Frontend work with Claude benefits significantly from specialized skills. The `f
 ---
 name: react-component-builder
 description: Generate React components with proper structure and styling
-tags: [frontend, react, components]
 ---
 
 # React Component Builder
@@ -67,7 +65,6 @@ Backend development with Claude requires different skill focuses. Create separat
 ---
 name: api-rest-designer
 description: Design RESTful APIs with proper HTTP semantics
-tags: [backend, api, rest]
 ---
 
 # REST API Design Guidelines
@@ -90,7 +87,6 @@ Fullstack projects require database skills that work alongside your application 
 ---
 name: postgres-schema-designer
 description: Design PostgreSQL schemas with proper normalization
-tags: [database, postgres, schema]
 ---
 
 # PostgreSQL Schema Design
@@ -118,7 +114,6 @@ Beyond layer-specific skills, create skills that span the entire stack:
 ---
 name: fullstack-debug
 description: Debug issues across frontend, API, and database layers
-tags: [debugging, fullstack, troubleshooting]
 ---
 
 # Fullstack Debugging Workflow

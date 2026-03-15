@@ -32,9 +32,6 @@ The most common approach involves parsing OpenAPI or gRPC definitions. Here's a 
 # skill-client-gen.md front matter
 name: Generate API Client
 description: Create a typed client library from OpenAPI specification
-  - read_file
-  - write_file
-  - bash
 ```
 
 When invoked with an OpenAPI spec, Claude can generate language-specific clients. For Python projects, the generated code might include:

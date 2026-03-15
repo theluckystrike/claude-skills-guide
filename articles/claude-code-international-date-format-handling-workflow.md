@@ -34,23 +34,8 @@ description: Handles international date format conversion and validation
 
 ## Instructions
 
-When working with dates in user-facing contexts:
-1. Always detect or request the user's locale
-2. Use ISO 8601 (YYYY-MM-DD) for internal storage
-3. Display dates in locale-appropriate formats
-4. Validate date strings before processing
-5. Handle timezone conversions explicitly
 
-Supported locale patterns include:
-- US: MM/DD/YYYY or MM-DD-YYYY
-- EU: DD/MM/YYYY or DD-MM-YYYY
-- ISO: YYYY-MM-DD
-- Asian: YYYY年MM月DD日 format variants
 
-When parsing ambiguous dates (01/02/2026), prioritize:
-- Explicit locale indicator in context
-- User preference settings
-- Application default locale
 ```
 
 This skill establishes clear rules that Claude Code follows whenever date-related tasks arise in your project.

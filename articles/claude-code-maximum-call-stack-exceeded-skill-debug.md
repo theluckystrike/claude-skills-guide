@@ -131,10 +131,6 @@ Review your skill's YAML front matter for problematic patterns:
 name: problematic-skill
 description: "This skill processes data"
 # Check for auto-invocation triggers
-auto_invocation:
-  triggers:
-    - type: file_change
-      action: process
 ---
 ```
 

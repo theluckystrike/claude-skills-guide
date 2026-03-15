@@ -241,14 +241,6 @@ To fully automate your schema evolution workflow, integrate Claude Code skills i
 # Example skill definition for schema evolution
 name: delta-lake-schema-evolution
 description: Automate Delta Lake schema evolution workflows
-  - read_file
-  - write_file
-  - bash
-actions:
-  - detect_schema_changes
-  - preview_evolution
-  - execute_evolution
-  - rollback_on_failure
 ```
 
 This skill can then be invoked whenever new data arrives, automatically detecting schema changes and applying safe evolution strategies.

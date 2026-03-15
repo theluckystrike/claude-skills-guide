@@ -85,7 +85,6 @@ Create a dedicated skill file for contribution workflows:
 ---
 name: Contributing Guidelines
 description: Step-by-step guide for contributing
-auto_invoke: true
 ---
 
 # Contributing to [Project Name]
@@ -188,7 +187,6 @@ Use YAML front matter to control when skills activate:
 ---
 name: React Component Guidelines
 description: Standards for React components
-file_patterns: ["*.jsx", "*.tsx", "*.react.js"]
 ---
 ```
 
@@ -200,8 +198,6 @@ Control which tools Claude Code can use:
 ---
 name: Safe Mode
 description: Restricted tool access for production
-allowed_tools: [read_file, search_files, grep]
-restricted_tools: [bash, write_file, edit_file]
 ---
 ```
 

@@ -111,7 +111,6 @@ You can create a Claude Code skill that automatically handles Docker permission 
 ---
 name: docker-permission-fixer
 description: Fix Docker bind mount permission issues automatically
-  - fix-docker-permissions
 ---
 
 # Docker Permission Fixer

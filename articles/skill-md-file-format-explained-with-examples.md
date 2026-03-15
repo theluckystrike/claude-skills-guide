@@ -23,8 +23,6 @@ A minimal skill file:
 ---
 name: example-skill
 description: A sample skill demonstrating the fundamental format
-triggers:
-  - phrase: do the example task
 ---
 
 You are a specialized assistant for example tasks.
@@ -57,10 +55,6 @@ The [pdf skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) extr
 ---
 name: pdf
 description: Extracts text and tables from PDF files and creates new PDFs
-triggers:
-  - phrase: read this PDF
-  - phrase: extract from the PDF
-  - phrase: create a PDF document
 ---
 
 # PDF Skill
@@ -88,9 +82,6 @@ The [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) en
 ---
 name: tdd
 description: Test-driven development: writes failing tests first, then implementation
-triggers:
-  - phrase: write tests for
-  - phrase: add test coverage to
 ---
 
 # TDD Skill

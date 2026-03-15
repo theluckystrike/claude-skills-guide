@@ -52,10 +52,6 @@ The most effective approach is creating a dedicated Claude skill that understand
 ---
 name: soda-data-quality
 description: "Generates and manages Soda Core data quality checks"
-  - Read
-  - Write
-  - Bash
-  - Completion
 ---
 
 # Soda Core Data Quality Skill

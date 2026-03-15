@@ -104,17 +104,7 @@ Rather than building reporting logic into every script, you can create dedicated
 # Sample reporting skill structure
 name: project-reporter
 description: Generate comprehensive project status reports
-capabilities:
-  - analyze_codebase
-  - extract_metrics
-  - generate_markdown
-  - create_summaries
 
-config:
-  include_tests: true
-  include_coverage: true
-  include_deps: true
-  output_format: markdown
 ```
 
 This modular approach allows you to reuse reporting logic across different projects while maintaining consistent output quality. You can customize the skill for different report types—sprint summaries, technical debt assessments, or security audits.

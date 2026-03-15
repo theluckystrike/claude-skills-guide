@@ -113,7 +113,6 @@ Beyond tracking events, you can query Amplitude to retrieve analytics insights. 
 ---
 name: amplitude-query
 description: "Query Amplitude analytics data"
-requires_permission: true
 ---
 
 # Query Amplitude Analytics

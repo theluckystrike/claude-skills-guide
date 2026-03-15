@@ -63,7 +63,6 @@ Create a file named `naming-conventions.md` in your `.claude/skills` directory:
 ---
 name: naming-conventions
 description: Enforces project-specific naming conventions
-trigger: always
 ---
 
 # Naming Conventions
@@ -194,7 +193,6 @@ After configuring your naming conventions, verify that Claude Code follows them 
 ---
 name: naming-audit
 description: Audits code for naming convention compliance
-trigger: verify
 ---
 
 # Naming Audit

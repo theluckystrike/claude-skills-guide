@@ -45,10 +45,6 @@ Start by creating a skill that assesses your current infrastructure's disaster r
 # CLAUDE_SKILL_METADATA
 name: disaster-recovery-assessment
 description: Analyzes infrastructure for DR readiness and generates recommendations
-trigger_on:
-  - "/dr.*assessment/"
-  - "/disaster.*recovery/"
-auto_invoke: false
 ```
 
 The skill can then analyze your infrastructure configuration files, Kubernetes manifests, database configurations, and cloud infrastructure to provide a comprehensive DR readiness report.
@@ -111,35 +107,9 @@ For enterprise systems running across multiple regions, automated failover is es
 name: cross-region-failover
 description: Automates failover to secondary region
 
-steps:
-  - name: detect_primary_failure
-    type: health_check
-    config:
-      endpoint: "{{ primary_region_load_balancer }}"
-      threshold: 3
-      interval: 30
     
-  - name: promote_standby
-    type: aws_action
-    config:
-      action: promote_read_replica
-      region: "{{ standby_region }}"
-      database: "{{ primary_database }}"
       
-  - name: update_dns
-    type: route53_action
-    config:
-      zone: "{{ dns_zone }}"
-      record: "{{ service_name }}"
-      value: "{{ standby_region_alb }}"
       
-  - name: notify_teams
-    type: notification
-    config:
-      channels:
-        - slack
-        - pagerduty
-      message: "Failover completed to {{ standby_region }}"
 ```
 
 ## Testing Your Disaster Recovery Workflows

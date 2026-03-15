@@ -188,22 +188,6 @@ One of the most valuable Claude Code workflows is auditing existing WAF configur
 ```yaml
 name: "waf-audit"
 description: "Audit AWS WAF configurations for security and best practices"
-instructions: |
-  You are a WAF security expert. Audit AWS WAF configurations for:
-  
-  1. Missing protective rules (no IP reputation lists)
-  2. Overly permissive rules (count vs block actions)
-  3. Missing logging on production Web ACLs
-  4. Rate limiting thresholds (too high/low)
-  5. Overlapping rule statements
-  
-  For each finding:
-  - Severity: Critical, High, Medium, Low
-  - Current state
-  - Recommended fix
-  - CloudFormation snippet if applicable
-  
-  Format output as a markdown audit report.
 ```
 
 ### Running the Audit

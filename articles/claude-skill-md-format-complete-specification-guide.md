@@ -25,8 +25,6 @@ The format has two parts: [YAML front matter](/claude-skills-guide/claude-skill-
 ---
 name: my-skill
 description: Does something useful
-triggers:
-  - phrase: do the thing
 ---
 
 You are a specialized assistant. When invoked, you will...

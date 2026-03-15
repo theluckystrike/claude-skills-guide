@@ -92,7 +92,6 @@ on:
   push:
     branches: [main]
 
-permissions:
   id-token: write   # Required to request OIDC token
   contents: read    # Required to checkout code
 
@@ -155,7 +154,6 @@ on:
   push:
     branches: [main]
 
-permissions:
   id-token: write
   contents: read
 
@@ -230,7 +228,6 @@ on:
   push:
     branches: [main]
 
-permissions:
   id-token: write
   contents: read
 
