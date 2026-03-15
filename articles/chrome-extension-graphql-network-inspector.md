@@ -2,8 +2,8 @@
 
 
 layout: default
-title: "Chrome Extension GraphQL Network Inspector: A Developer Guide"
-description: "Learn how to use and build Chrome extensions for inspecting GraphQL network requests. Practical examples, code snippets, and techniques for developers and power users."
+title: "Chrome Extension GraphQL Network Inspector: A Developer."
+description: "Learn how to use and build Chrome extensions for inspecting GraphQL network requests. Practical examples, code snippets, and techniques for developers."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-graphql-network-inspector/
@@ -312,6 +312,13 @@ If building for a team, consider adding authentication context to requests so yo
 Chrome extensions for GraphQL network inspection bridge the gap between standard browser DevTools and the specific needs of GraphQL debugging. Whether you use existing tools like Apollo Client DevTools or build a custom solution, proper inspection capabilities dramatically accelerate development and troubleshooting.
 
 The implementation above provides a foundation. Extend it based on your specific GraphQL setup, whether you work with Apollo, URQL, or vanilla GraphQL clients.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
