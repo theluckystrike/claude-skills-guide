@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI LinkedIn Post Writer Chrome Extension: A Developer's Guide"
-description: "Learn how to build and use AI-powered LinkedIn post writer Chrome extensions. Covering implementation with JavaScript, API integration, and practical examples for developers."
+title: "AI LinkedIn Post Writer Chrome Extension: A Developer's."
+description: "Learn how to build and use AI-powered LinkedIn post writer Chrome extensions. Covering implementation with JavaScript, API integration, and practical."
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /ai-linkedin-post-writer-chrome/
@@ -197,5 +197,12 @@ API caching reduces costs by storing frequently requested generations. User pref
 AI-powered LinkedIn post writer extensions combine Chrome extension development with large language model integration. The architecture is straightforward—content scripts interact with the LinkedIn UI while background workers handle API communication. For developers comfortable with JavaScript, building a functional prototype takes an afternoon.
 
 The key to success lies in thoughtful UX design and responsible API usage. Generate drafts for human review, implement appropriate rate limiting, and always prioritize authentic engagement over pure automation.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
