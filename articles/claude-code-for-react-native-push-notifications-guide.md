@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Claude Code for React Native Push Notifications Guide"
-description: "Learn how to implement push notifications in React Native apps using Claude Code. Step-by-step guide covering Expo, native modules, FCM, APNs, and best practices."
+description: "Learn how to implement push notifications in React Native apps using Claude Code. Step-by-step guide covering Expo, native modules, FCM, APNs, and best."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-react-native-push-notifications-guide/
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for React Native Push Notifications Guide
 
@@ -302,3 +306,10 @@ Claude Code can help you debug common push notification problems:
 ## Conclusion
 
 Push notifications are a powerful tool for React Native apps, but implementation requires careful attention to platform-specific requirements. Whether you choose Expo's managed approach or need full native control with bare React Native, this guide provides the foundation you need to deliver engaging push notifications that drive user retention and improve your app's success.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

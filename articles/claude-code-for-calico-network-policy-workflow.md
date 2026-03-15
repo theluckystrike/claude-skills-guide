@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Calico Network Policy Workflow"
 description: "Learn how to use Claude Code to automate and streamline Calico network policy creation, management, and testing in Kubernetes environments."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-calico-network-policy-workflow/
 categories: [DevOps, Kubernetes, Network Security, Cloud Native]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 Calico is one of the most popular container networking and security solutions for Kubernetes, providing fine-grained network policies that control traffic flow between pods, services, and external endpoints. Managing Calico network policies effectively requires understanding both Kubernetes networking concepts and Calico's specific CRDs (Custom Resource Definitions). In this guide, we'll explore how Claude Code can accelerate your Calico network policy workflow, from initial policy design to testing and maintenance.
@@ -276,5 +280,12 @@ Based on common patterns and pitfalls, here are actionable recommendations:
 
 Claude Code significantly streamlines the Calico network policy workflow by generating manifests, validating configurations, creating test scenarios, and assisting with policy documentation. By integrating Claude Code into your Kubernetes networking workflow, you can reduce manual errors, accelerate policy development, and maintain robust security posture.
 
-Remember to always test policies in non-production environments before deploying to production, and leverage Calico's logging and visibility features to understand the impact of your policies in real-time.
+Remember to always test policies in non-production environments before deploying to production, and use Calico's logging and visibility features to understand the impact of your policies in real-time.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

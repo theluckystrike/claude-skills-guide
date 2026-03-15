@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code for Optimism Bedrock Workflow"
-description: "A practical guide for developers using Claude Code to build on Optimism Bedrock. Learn workflow patterns, smart contract development, and deployment strategies."
+description: "A practical guide for developers using Claude Code to build on Optimism Bedrock. Learn workflow patterns, smart contract development, and deployment."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-optimism-bedrock-workflow/
 categories: [workflows, blockchain, ethereum]
 tags: [claude-code, claude-skills, optimism, bedrock, solidity, smart-contracts]
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for Optimism Bedrock Workflow
 
@@ -249,4 +253,11 @@ When encountering issues, provide Claude Code with the relevant transaction hash
 
 Integrating Claude Code into your Optimism Bedrock workflow dramatically improves productivity. From setting up your development environment to writing, testing, and deploying smart contracts, Claude Code serves as an knowledgeable partner that understands the intricacies of Bedrock architecture. By following the patterns and practices in this guide, you'll be well-equipped to build robust L2 applications on Optimism.
 
-Remember to always test thoroughly on testnet before deploying to mainnet, and take advantage of Bedrock's Ethereum equivalence to leverage existing Ethereum tooling and knowledge.
+Remember to always test thoroughly on testnet before deploying to mainnet, and take advantage of Bedrock's Ethereum equivalence to use existing Ethereum tooling and knowledge.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

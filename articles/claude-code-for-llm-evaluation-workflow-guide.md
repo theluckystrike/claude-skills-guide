@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code for LLM Evaluation Workflow Guide"
-description: "Master LLM evaluation workflows with Claude Code. Learn to build automated testing pipelines, benchmark model performance, and implement reliable evaluation systems."
+description: "Master LLM evaluation workflows with Claude Code. Learn to build automated testing pipelines, benchmark model performance, and implement reliable."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-llm-evaluation-workflow-guide/
 categories: [workflows]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for LLM Evaluation Workflow Guide
@@ -151,3 +155,10 @@ Implementing a structured LLM evaluation workflow with Claude Code transforms mo
 
 Remember that evaluation is ongoing—not a one-time setup. As your application evolves and new models become available, your evaluation workflow should adapt accordingly. Claude Code provides the automation infrastructure to make this practical at scale.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

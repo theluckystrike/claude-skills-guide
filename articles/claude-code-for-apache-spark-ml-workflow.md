@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Apache Spark ML Workflow"
-description: "A comprehensive guide to using Claude Code for Apache Spark ML workflows, including practical examples, code snippets, and actionable advice for developers building machine learning pipelines."
+description: "A comprehensive guide to using Claude Code for Apache Spark ML workflows, including practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-apache-spark-ml-workflow/
@@ -230,3 +230,10 @@ Claude Code significantly enhances your Apache Spark ML workflow by helping you 
 
 Start by applying these techniques to your current Spark ML projects. Focus on one area at a time—whether it's improving your preprocessing code or implementing proper model versioning—and gradually build comprehensive, production-ready ML pipelines.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

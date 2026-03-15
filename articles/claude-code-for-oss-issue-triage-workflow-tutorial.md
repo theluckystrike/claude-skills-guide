@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for OSS Issue Triage Workflow Tutorial"
-description: "A hands-on tutorial for building an automated issue triage workflow using Claude Code. Learn to create skills that categorize, prioritize, and route GitHub issues efficiently."
+description: "A hands-on tutorial for building an automated issue triage workflow using Claude Code. Learn to create skills that categorize, prioritize, and route."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-issue-triage-workflow-tutorial/
@@ -316,3 +316,10 @@ Start with the basic skill structure provided in this tutorial, then customize i
 **Next Steps**: Explore additional automation like auto-responding to issues with welcome messages, setting up issue templates that integrate with your triage workflow, or creating separate skills for specific issue types like security vulnerabilities.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

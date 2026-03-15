@@ -1,20 +1,24 @@
 ---
+
 layout: default
 title: "Claude Code for OpenTofu Migration Workflow Guide"
-description: "A comprehensive guide to using Claude Code for migrating from Terraform to OpenTofu. Learn workflow strategies, automation patterns, and best practices for a smooth transition."
+description: "A comprehensive guide to using Claude Code for migrating from Terraform to OpenTofu. Learn workflow strategies, automation patterns, and best practices."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-opentofu-migration-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for OpenTofu Migration Workflow Guide
 
 Migrating from Terraform to OpenTofu doesn't have to be a painful process. With Claude Code's assistance, you can automate much of the heavy lifting, ensure consistency across your infrastructure code, and maintain confidence throughout the transition. This guide walks you through a practical workflow for executing a successful Terraform to OpenTofu migration.
 
-## Understanding the Migration Landscape
+## Understanding the Migration ecosystem
 
 OpenTofu is an open-source infrastructure as code tool that originated as a fork of Terraform after HashiCorp's license change. The good news for teams currently using Terraform is that OpenTofu maintains strong compatibility—most Terraform configurations will work with minimal or no modifications. However, a systematic approach ensures you catch edge cases and maintain infrastructure reliability throughout the switch.
 
@@ -177,3 +181,10 @@ Migrating from Terraform to OpenTofu with Claude Code assistance streamlines wha
 
 The key to success lies in methodical execution and maintaining confidence through validation at each step. Claude Code's ability to understand context, generate appropriate commands, and explain complex topics makes it an invaluable partner for this migration journey.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

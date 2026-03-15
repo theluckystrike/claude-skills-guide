@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Terraform Workspace Workflow Guide"
-description: "Master Terraform workspace management with Claude Code. Learn practical workflows for organizing, deploying, and managing infrastructure across multiple environments using AI-assisted development."
+description: "Master Terraform workspace management with Claude Code. Learn practical workflows for organizing, deploying, and managing infrastructure across."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-terraform-workspace-workflow-guide/
@@ -275,3 +275,10 @@ jobs:
 Terraform workspaces combined with Claude Code create a powerful infrastructure management system. The key takeaways include: organize your project with environment-specific directories, use variable files for configuration differences, leverage workspace interpolation for conditional resources, and integrate AI assistance for planning, generation, and troubleshooting. By implementing these patterns, you'll achieve infrastructure as code that scales across environments while remaining maintainable and secure.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,14 +1,18 @@
 ---
 
+
 layout: default
 title: "Claude Code for IBC Cosmos Workflow"
-description: "A practical guide to using Claude Code for developing Inter-Blockchain Communication workflows in the Cosmos ecosystem. Learn how to automate IBC relayer configuration, packet handling, and cross-chain state synchronization."
+description: "A practical guide to using Claude Code for developing Inter-Blockchain Communication workflows in the Cosmos ecosystem. Learn how to automate IBC."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-ibc-cosmos-workflow/
 categories: [tutorials, blockchain, cosmos]
 tags: [claude-code, ibc, cosmos, blockchain, relayer, cross-chain, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for IBC Cosmos Workflow
@@ -69,7 +73,7 @@ This context helps Claude Code understand your specific IBC topology and provide
 
 ## Generating Relayer Configurations
 
-One of Claude Code's strongest capabilities is generating complex configuration files. IBC relayer configurations can be tedious to write manually. Here's how to leverage Claude Code for this task.
+One of Claude Code's strongest capabilities is generating complex configuration files. IBC relayer configurations can be tedious to write manually. Here's how to use Claude Code for this task.
 
 ```yaml
 # Example: Hermes relayer configuration generation
@@ -319,3 +323,10 @@ Claude Code significantly accelerates IBC Cosmos workflow development by automat
 
 Start with clear configuration in your CLAUDE.md, break complex tasks into manageable steps, and always validate generated code on testnets before production deployment. With these practices, you can build robust cross-chain applications efficiently.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

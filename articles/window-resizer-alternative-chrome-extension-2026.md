@@ -176,5 +176,12 @@ The best choice depends on your specific workflow. If you need quick viewport te
 
 Explore the options that align with your development environment and workflow patterns. Window management may seem like a small detail, but consistent viewport control significantly improves testing accuracy and productivity over time.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

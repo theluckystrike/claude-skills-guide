@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for CDKTF Terraform CDK Workflow"
 description: "Learn how to use Claude Code to streamline your CDKTF (Terraform Cloud Development Kit) workflow. This guide covers infrastructure-as-code best practices."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-cdktf-terraform-cdk-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
@@ -20,7 +24,7 @@ The Cloud Development Kit for Terraform (CDKTF) enables you to define cloud infr
 
 CDKTF bridges the gap between developer-friendly programming languages and Terraform's declarative infrastructure model. Instead of writing HCL (HashiCorp Configuration Language), you can use TypeScript, Python, Go, C#, or Java to define your infrastructure. CDKTF then synthesizes your code into Terraform configuration files that Terraform can deploy.
 
-This approach brings several advantages: strong typing, IDE autocomplete, testing frameworks, and the ability to leverage existing software engineering practices. However, it also introduces new challenges around testing, state management, and workflow integration that Claude Code can help address.
+This approach brings several advantages: strong typing, IDE autocomplete, testing frameworks, and the ability to use existing software engineering practices. However, it also introduces new challenges around testing, state management, and workflow integration that Claude Code can help address.
 
 ## Setting Up Claude Code for CDKTF Projects
 
@@ -221,3 +225,10 @@ When working with Claude Code on CDKTF projects, keep these recommendations in m
 Claude Code transforms CDKTF development by bringing intelligent assistance to every phase of infrastructure development. From generating boilerplate code and building reusable constructs to reviewing for security and setting up CI/CD pipelines, Claude accelerates your workflow while improving code quality. Start by setting up proper context in your project, then iterate with specific, focused requests to get the most out of your CDKTF and Claude Code combination.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

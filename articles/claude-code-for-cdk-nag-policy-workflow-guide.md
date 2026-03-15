@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for CDK Nag Policy Workflow Guide"
 description: "Learn how to integrate Claude Code with AWS CDK Nag for automated infrastructure policy compliance, security scanning, and governance workflows."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-cdk-nag-policy-workflow-guide/
 categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for CDK Nag Policy Workflow Guide
 
@@ -167,3 +171,10 @@ Working effectively with CDK Nag and Claude requires establishing good habits ea
 Integrating Claude Code with CDK Nag transforms policy compliance from a manual chore into an automated, developer-friendly process. By letting Claude interpret scan results, generate remediation code, and enforce consistent standards, your team catches security issues earlier and spends less time on repetitive fixes. The combination of automated scanning and intelligent analysis ensures your infrastructure stays compliant while maintaining development velocity.
 
 Start by running Nag on your existing CDK stacks and feed the results to Claude. Even a quick "explain these findings" query reveals the immediate value—and from there, you can build toward full pipeline integration with custom skills tailored to your organization's policies.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for OpenTofu Registry Workflow Guide"
 description: "Learn how to use Claude Code to streamline your OpenTofu registry workflow. Practical guide with examples for managing infrastructure as code efficiently."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-opentofu-registry-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
@@ -20,7 +24,7 @@ OpenTofu is a powerful infrastructure-as-code tool that lets you define, provisi
 
 The OpenTofu registry serves as the central repository for modules, providers, and state management. Before diving into the Claude Code integration, ensure you understand the core components: providers that interface with cloud APIs, modules that package reusable infrastructure patterns, and the state backend that tracks your infrastructure.
 
-OpenTofu maintains a registry of officially verified modules at registry.opentofu.org. These modules cover common infrastructure patterns like VPC creation, Kubernetes clusters, and database setups. When you use Claude Code, you can leverage its understanding of these modules to generate appropriate configuration, explain provider behaviors, and troubleshoot issues.
+OpenTofu maintains a registry of officially verified modules at registry.opentofu.org. These modules cover common infrastructure patterns like VPC creation, Kubernetes clusters, and database setups. When you use Claude Code, you can use its understanding of these modules to generate appropriate configuration, explain provider behaviors, and troubleshoot issues.
 
 ## Setting Up Claude Code for OpenTofu Projects
 
@@ -204,7 +208,7 @@ Claude Code can help you customize this pipeline for your specific needs, add dr
 
 ## Best Practices Summary
 
-- **Use modules**: Leverage registry modules for common patterns rather than writing custom configurations
+- **Use modules**: use registry modules for common patterns rather than writing custom configurations
 - **Version pinning**: Always specify provider and module versions for reproducibility
 - **Remote state**: Use remote backends with state locking for team workflows
 - **CI/CD automation**: Automate plan and apply steps through pipelines
@@ -214,3 +218,10 @@ Claude Code can help you customize this pipeline for your specific needs, add dr
 By integrating Claude Code into your OpenTofu workflow, you gain an intelligent assistant that helps generate configurations, explains provider behaviors, troubleshoots issues, and accelerates your infrastructure development cycle. The combination of declarative infrastructure as code with AI-assisted development creates a powerful workflow for modern DevOps teams.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Carvel imgpkg Workflow Tutorial"
 description: "Learn how to leverage Claude Code CLI to automate and streamline your Carvel imgpkg workflows for Kubernetes configuration management."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-carvel-imgpkg-workflow-tutorial/
 categories: [Development, Kubernetes, DevOps]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Carvel imgpkg Workflow Tutorial
@@ -45,7 +49,7 @@ Within this directory, organize your Kubernetes manifests as you normally would.
 
 ## Creating Your First imgpkg Bundle with Claude Code
 
-When you're ready to package your Kubernetes configurations, you can leverage Claude Code to generate the appropriate imgpkg commands. For example, to create a bundle from your configuration directory, Claude Code can help you construct the command:
+When you're ready to package your Kubernetes configurations, you can use Claude Code to generate the appropriate imgpkg commands. For example, to create a bundle from your configuration directory, Claude Code can help you construct the command:
 
 ```bash
 imgpkg push -i your-registry.example.com/my-app-config:v1.0.0 \
@@ -88,7 +92,7 @@ This approach ensures consistency while reducing the risk of manual errors durin
 
 ## Integrating imgpkg with Continuous Deployment Pipelines
 
-For teams adopting GitOps practices, imgpkg bundles work seamlessly with tools like ArgoCD and Flux. Claude Code can help you generate the appropriate Kubernetes Custom Resources to integrate your imgpkg bundles with these controllers.
+For teams adopting GitOps practices, imgpkg bundles work smoothly with tools like ArgoCD and Flux. Claude Code can help you generate the appropriate Kubernetes Custom Resources to integrate your imgpkg bundles with these controllers.
 
 When working with ArgoCD, you might need to generate an Application manifest that references your imgpkg bundle:
 
@@ -140,3 +144,10 @@ Combining Claude Code with Carvel imgpkg creates a powerful workflow for managin
 
 As you become more comfortable with these tools, explore advanced topics like bundle dependencies, image relocation for air-gapped environments, and integration with policy controllers for enhanced security. The combination of Claude Code and imgpkg provides a robust foundation for reliable, reproducible Kubernetes deployments at any scale.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

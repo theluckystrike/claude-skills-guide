@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Claude Code for TorchScript Workflow Guide"
-description: "A comprehensive guide to using Claude Code for PyTorch TorchScript workflows. Learn how to write, optimize, and debug TorchScript models with practical examples."
+description: "A comprehensive guide to using Claude Code for PyTorch TorchScript workflows. Learn how to write, optimize, and debug TorchScript models with practical."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-torchscript-workflow-guide/
 categories: [workflows]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for TorchScript Workflow Guide
@@ -255,3 +259,10 @@ When working with Claude Code for TorchScript development, keep these principles
 
 Claude Code can dramatically accelerate your TorchScript workflow by generating boilerplate, suggesting optimizations, and debugging compilation errors. The key is providing clear context about your model's architecture and deployment targets.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
