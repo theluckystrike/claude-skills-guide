@@ -3,8 +3,11 @@ layout: default
 title: "AI Speed Reader Chrome Extension: A Developer's Guide to Building Fast Reading Tools"
 description: "Learn how to build an AI-powered speed reading Chrome extension using JavaScript, the Web Speech API, and text processing techniques."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-speed-reader-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
 ---
 
 Speed reading has become essential for developers and power users who consume large amounts of technical documentation, research papers, and online content. Building an AI speed reader Chrome extension allows you to process text intelligently, highlight key concepts, and present content in optimized formats. This guide covers the architecture, implementation, and practical considerations for creating a production-ready speed reading extension.
