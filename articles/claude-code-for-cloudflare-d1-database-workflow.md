@@ -56,6 +56,57 @@ database_id = "your-database-id"
 
 Now you're ready to use Claude Code for database operations throughout your project.
 
+## Connecting Claude Code to Your D1 Databases
+
+The most effective workflow for D1 combines the Cloudflare MCP server with custom skills for database operations.
+
+### Installing the Cloudflare MCP Server
+
+Set up the Cloudflare MCP server to enable Claude Code to interact with your D1 databases directly:
+
+```bash
+# Install the Cloudflare MCP package
+npm install -g @cloudflare/mcp-server
+```
+
+Configure MCP in your Claude Code settings to connect to your Cloudflare account. Once configured, Claude Code can execute D1 queries directly, helping you debug issues, explore data, and run migrations.
+
+### Creating a D1-Focused Skill
+
+For repeated D1 operations, create a custom skill that understands your database schema and common patterns. Here's a skill structure for D1 workflows:
+
+```markdown
+---
+name: d1-workflow
+description: Workflows for Cloudflare D1 edge database operations
+---
+
+# D1 Database Operations
+
+You help users work with Cloudflare D1 databases through common workflows:
+
+## Schema Management
+- Generate migration scripts for schema changes
+- Create tables with appropriate indexes
+- Explain existing schema to users
+
+## Query Development
+- Write optimized SQL queries for D1
+- Debug slow queries
+- Suggest index improvements
+
+## Data Operations
+- Generate CRUD code for new tables
+- Create seed data scripts
+- Help with data validation logic
+
+When writing queries, always:
+1. Use parameterized queries to prevent injection
+2. Consider the query plan for complex operations
+3. Add appropriate error handling
+4. Return meaningful error messages
+```
+
 ## Designing Your Database Schema
 
 Claude Code excels at generating database schemas that follow best practices. When designing your D1 schema, think about your access patterns first. D1 works exceptionally well for read-heavy workloads with moderate write volumes, making it ideal for content management systems, user profiles, and caching layers.
@@ -118,6 +169,38 @@ wrangler d1 execute my-database --remote --file=./migrations/001_initial.sql
 ```
 
 Claude Code can help you write safe migrations that handle existing data, add columns without locking tables, and create appropriate indexes for new query patterns.
+
+### Migration Prompt Example
+
+Ask Claude Code to generate a migration with proper transaction wrapping:
+
+> "Create a D1 migration to add a posts table with id, title, content, author_id, created_at, and updated_at columns. Include appropriate indexes for author_id and created_at."
+
+Claude Code generates a migration wrapped in BEGIN/COMMIT for atomicity:
+
+```sql
+-- Migration: create_posts_table
+-- Created: 2026-03-14
+
+BEGIN;
+
+CREATE TABLE IF NOT EXISTS posts (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  content TEXT NOT NULL,
+  author_id INTEGER NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (author_id) REFERENCES users(id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_posts_author_id ON posts(author_id);
+CREATE INDEX IF NOT EXISTS idx_posts_created_at ON posts(created_at);
+
+COMMIT;
+```
+
+Wrapping migrations in `BEGIN`/`COMMIT` ensures that if any statement fails, the entire migration rolls back, leaving your schema in a consistent state.
 
 ## Building Data Access Functions
 
@@ -301,6 +384,40 @@ jobs:
       - name: Run migrations
         run: wrangler d1 execute my-database --remote --file=./migrations/latest.sql
 ```
+
+## Troubleshooting Common Issues
+
+Claude Code can help diagnose and fix common D1 problems that arise during development and deployment.
+
+**Database Not Found Errors**
+When encountering "database not found" errors, verify your binding configuration in `wrangler.toml` matches your Worker code. A common cause is a mismatch between the `binding` name in `wrangler.toml` and the property name you access on the `env` object in your Worker. Claude Code can review your configuration files and identify these mismatches:
+
+```toml
+# wrangler.toml — binding name must match env.DB in your Worker
+[[d1_databases]]
+binding = "DB"
+database_name = "my-database"
+database_id = "your-database-id"
+```
+
+```typescript
+// src/index.ts — must reference env.DB, not env.DATABASE or env.MY_DB
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    const result = await env.DB.prepare("SELECT 1").first();
+    // ...
+  }
+};
+```
+
+**Binding Mismatches**
+If you rename a binding in `wrangler.toml`, update every reference in your Worker code and any TypeScript `Env` interface definitions. Claude Code can search across your codebase and update all references in one pass.
+
+**Query Timeouts**
+For query timeouts, ask Claude Code to analyze your query and suggest optimizations or index additions. D1 performs best on indexed lookups — unbounded table scans on large datasets will surface latency issues at the edge.
+
+**Parameter Binding Errors**
+For binding errors, request help converting your code to use proper parameter binding. Always prefer `.bind()` over string interpolation to avoid both injection risks and query plan cache misses.
 
 ## Conclusion
 
