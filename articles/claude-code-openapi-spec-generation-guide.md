@@ -27,16 +27,48 @@ The main approaches include: prompting Claude directly to analyze code and gener
 
 The simplest approach involves asking Claude to analyze your API code and generate an OpenAPI specification. This works well for projects with well-structured route handlers.
 
-```python
-# Example Express.js route handler
-app.get('/api/users/:id', async (req, res) => {
-  const user = await getUserById(req.params.id);
-  if (!user) {
-    return res.status(404).json({ error: 'User not found' });
+Claude Code works best when route handlers include meaningful parameter names, typed responses, and explicit HTTP status codes. Here's a well-prepared example:
+
+```javascript
+// routes/users.js
+const express = require('express');
+const router = express.Router();
+
+/**
+ * GET /api/users/:id
+ * Retrieve a user by their unique identifier
+ */
+router.get('/users/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const user = await userService.findById(id);
+
+    if (!user) {
+      return res.status(404).json({
+        error: 'UserNotFound',
+        message: `No user found with ID: ${id}`
+      });
+    }
+
+    return res.status(200).json({
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      createdAt: user.created_at
+    });
+  } catch (error) {
+    return res.status(500).json({
+      error: 'InternalServerError',
+      message: 'Failed to retrieve user'
+    });
   }
-  return res.json(user);
 });
+
+module.exports = router;
 ```
+
+This endpoint includes JSDoc comments, proper error handling, and clear response structures—all signals that help Claude Code produce accurate OpenAPI output.
 
 When you share this code with Claude Code and request an OpenAPI spec, it can generate the corresponding OpenAPI document with path, method, parameters, and response definitions. For more complex APIs, provide the full route file and specify the OpenAPI version you need (typically OpenAPI 3.0 or 3.1).
 
@@ -93,17 +125,89 @@ Here's a practical workflow for generating OpenAPI specs with Claude Code:
 
 **Step 1: Prepare your API code** — Ensure your route handlers or API definitions are accessible. Group related endpoints together for clearer context.
 
-**Step 2: Generate initial spec** — Ask Claude Code to analyze your code and produce an OpenAPI document. Specify the version (OpenAPI 3.0 or 3.1) and any particular requirements.
+**Step 2: Generate initial spec** — Ask Claude Code to analyze your code and produce an OpenAPI document. Be specific about the version and organizational preferences:
 
 ```plaintext
-Analyze these Express.js route handlers and generate an OpenAPI 3.1 specification.
-Include all path parameters, query parameters, and response codes.
-Use YAML format.
+Analyze the attached Express.js route handlers and generate an OpenAPI 3.0 specification.
+Include:
+- All paths and HTTP methods
+- Parameter definitions with types and locations (path, query)
+- Response schemas for each status code
+- Request body schemas where applicable
+- Use components/schemas for reusable definitions
+```
+
+Claude Code will analyze your code and produce a YAML or JSON OpenAPI document. For example, for a user retrieval endpoint it might generate:
+
+```yaml
+paths:
+  /api/users/{id}:
+    get:
+      summary: Retrieve a user by their unique identifier
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The user's unique identifier
+      responses:
+        '200':
+          description: User found and returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        email:
+          type: string
+          format: email
+        name:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
 ```
 
 **Step 3: Review and refine** — Check the generated spec for accuracy. Claude can make corrections if you identify missing fields or incorrect types.
 
-**Step 4: Validate** — Use tools like swagger-cli or openapi-validator to ensure the spec is valid. Claude can help fix any validation errors.
+**Step 4: Validate** — Use tools like swagger-cli or the Redocly CLI to ensure the spec is valid:
+
+```bash
+npx @redocly/cli lint openapi.yaml
+```
+
+If validation fails or the spec doesn't match your expectations, refine your code or provide additional context to Claude Code. Common adjustments include:
+
+- Adding more descriptive JSDoc comments
+- Explicitly defining response types
+- Specifying authentication requirements
+- Adding example values for better documentation
 
 **Step 5: Generate client SDKs** — Once validated, use the spec to generate client libraries in various languages using tools like openapi-generator.
 
@@ -127,6 +231,25 @@ Authentication schemes need special attention. Specify whether you're using API 
 
 Automate OpenAPI generation in your CI pipeline. Run Claude against your updated API code on each commit, generate the spec, and validate it before merging. This ensures your documentation always matches your implementation.
 
+For continuous integration, create a script that combines code analysis with specification generation:
+
+```bash
+#!/bin/bash
+# generate-openapi.sh
+
+echo "Analyzing API routes..."
+CLAUDE_OUTPUT=$(claude -p "Analyze ./src/routes and generate OpenAPI 3.0 spec" 2>/dev/null)
+
+echo "$CLAUDE_OUTPUT" > openapi.yaml
+
+echo "Validating specification..."
+npx @redocly/cli lint openapi.yaml
+
+echo "OpenAPI specification generated successfully"
+```
+
+Run this script during your build process to keep specifications synchronized with your code.
+
 Combine with the tdd skill to generate tests from your OpenAPI specs, creating a full API development lifecycle that keeps contracts and implementations synchronized.
 
 ---
@@ -138,5 +261,8 @@ Combine with the tdd skill to generate tests from your OpenAPI specs, creating a
 - [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/)
 - [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-openapi-guide/)
 - [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
