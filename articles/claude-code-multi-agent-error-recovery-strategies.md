@@ -142,6 +142,72 @@ async function withRetry(prompt, skill, maxRetries = 3, delay = 1000) {
 }
 ```
 
+## Pattern 4b: Exponential Backoff with Jitter
+
+Simple fixed-delay retries can cause thundering-herd problems when many agents retry simultaneously. Exponential backoff with random jitter spreads retry pressure across time:
+
+```python
+import asyncio
+import random
+
+async def retry_with_backoff(func, max_retries=3, base_delay=1):
+    """Retry a function with exponential backoff and jitter."""
+    for attempt in range(max_retries):
+        try:
+            return await func()
+        except Exception as e:
+            if attempt == max_retries - 1:
+                raise
+            delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
+            print(f"Attempt {attempt + 1} failed: {e}. Retrying in {delay:.2f}s...")
+            await asyncio.sleep(delay)
+```
+
+This is particularly valuable when multiple agents call the same external API concurrently — the jitter prevents synchronized retry storms.
+
+## Pattern 4c: Circuit Breaker
+
+For more robust protection, a circuit breaker stops sending requests to a failing service entirely, preventing cascading failures across your agent pipeline:
+
+```python
+import time
+
+class CircuitBreaker:
+    def __init__(self, failure_threshold=5, timeout=60):
+        self.failure_threshold = failure_threshold
+        self.timeout = timeout
+        self.failures = 0
+        self.last_failure_time = None
+        self.state = "closed"
+
+    async def call(self, func):
+        if self.state == "open":
+            if time.time() - self.last_failure_time > self.timeout:
+                self.state = "half-open"
+            else:
+                raise Exception("Circuit breaker is open")
+
+        try:
+            result = await func()
+            self._on_success()
+            return result
+        except Exception as e:
+            self._on_failure()
+            raise
+
+    def _on_success(self):
+        self.failures = 0
+        self.state = "closed"
+
+    def _on_failure(self):
+        self.failures += 1
+        self.last_failure_time = time.time()
+        if self.failures >= self.failure_threshold:
+            self.state = "open"
+```
+
+Use a circuit breaker around any external dependency — an AI skill calling a third-party API, a database query, or a remote file store — that could fail repeatedly and hold up your entire pipeline.
+
 ## Pattern 5: Error Classification and Routing
 
 Not all errors warrant the same recovery approach. Classifying errors enables targeted responses:
@@ -195,6 +261,49 @@ Process quarterly data as follows:
 4. If any step fails, log error and continue with remaining data
 5. If failure rate exceeds 20%, pause and request review
 ```
+
+## Production Best Practices
+
+### Pre-Flight Validation
+
+Before executing potentially destructive operations, run pre-flight checks. Validate file existence, permissions, and input parameters before committing to an action:
+
+```python
+async def safe_delete(file_path):
+    # Pre-flight checks
+    if not await file_exists(file_path):
+        return {"success": False, "error": "File does not exist"}
+
+    if not await can_delete(file_path):
+        return {"success": False, "error": "Permission denied"}
+
+    # Execute with error handling
+    try:
+        await delete_file(file_path)
+        return {"success": True}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+```
+
+This pattern is especially important in multi-agent workflows where one agent's destructive action may affect files another agent depends on.
+
+### Logging Errors and State Changes
+
+Use Claude Code's `record_note` tool to create an audit trail of errors and recovery actions across the agent session:
+
+```python
+async def log_error(context, error, recovery_action=None):
+    await record_note({
+        "category": "error",
+        "content": f"Error in {context}: {error}. Recovery: {recovery_action or 'manual intervention required'}"
+    })
+```
+
+This complements external monitoring — see [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/) — and gives agents the ability to reason about their own error history within a session.
+
+### Test Your Error Paths
+
+Do not only test the happy path. Build test cases that simulate network failures, API timeouts, corrupted files, and invalid inputs to confirm your error handling works correctly before deploying a multi-agent workflow to production.
 
 ## Conclusion
 
