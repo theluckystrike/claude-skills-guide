@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Polygon zkEVM Workflow"
-description: "Master Polygon zkEVM development with Claude Code. Learn to set up your environment, write optimized smart contracts, and deploy Layer 2 solutions efficiently."
+description: "Master Polygon zkEVM development with Claude Code. Learn to set up your environment, write optimized smart contracts, and deploy Layer 2 solutions."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-polygon-zkevm-workflow/
@@ -265,3 +265,10 @@ Claude Code significantly accelerates Polygon zkEVM development by automating sc
 
 Start with testnet deployments to familiarize yourself with the workflow, then confidently migrate to mainnet when ready. The reduced costs and faster finality make Polygon zkEVM an excellent choice for both new projects and Ethereum application migrations.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

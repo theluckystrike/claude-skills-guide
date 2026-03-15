@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Delta Lake Workflow Guide"
-description: "A comprehensive guide to using Claude Code for Delta Lake workflows. Learn practical patterns for data ingestion, table management, and pipeline automation with actionable code examples."
+description: "A comprehensive guide to using Claude Code for Delta Lake workflows. Learn practical patterns for data ingestion, table management, and pipeline."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-delta-lake-workflow-guide/
@@ -317,3 +317,10 @@ With this skill, you can describe your table requirements in natural language, a
 By integrating Claude Code into your Delta Lake workflows, you can reduce manual coding effort, enforce best practices consistently, and focus on business logic rather than boilerplate operations.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
