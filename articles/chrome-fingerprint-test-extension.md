@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Fingerprint Test Extension: A Developer's Guide to Browser Fingerprinting"
 description: "Learn how to test and analyze your browser fingerprint using Chrome extensions. Covers fingerprinting vectors, testing tools, and code examples for developers."
 date: 2026-03-15
 categories: [guides]
-tags: [chrome, browser-fingerprinting, privacy, security, web-development]
-author: theluckystrike
-reviewed: false
-score: 0
+tags: [chrome, browser-fingerprinting, privacy, security, web-development, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
+score: 8
 permalink: /chrome-fingerprint-test-extension/
 ---
+
 
 # Chrome Fingerprint Test Extension: A Developer's Guide to Browser Fingerprinting
 
