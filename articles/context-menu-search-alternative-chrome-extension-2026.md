@@ -182,4 +182,11 @@ Chrome's default context menu search serves basic needs, but developers and powe
 
 The best context menu search alternative depends on your specific workflow. Try a few options, test the integration with your typical search patterns, and settle on the solution that feels most natural for your development process.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Semantic Versioning Workflow Tutorial"
-description: "Learn how to implement a complete semantic versioning workflow using Claude Code. This tutorial covers automated version bumps, commit analysis, changelog generation, and release automation for developers."
+description: "Learn how to implement a complete semantic versioning workflow using Claude Code. This tutorial covers automated version bumps, commit analysis."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-semantic-versioning-workflow-tutorial/
@@ -249,3 +249,10 @@ Automating semantic versioning with Claude Code eliminates manual version tracki
 By implementing this tutorial's patterns, your team gains reliable version management that scales with project complexity while maintaining the flexibility to adapt to specific release requirements.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
