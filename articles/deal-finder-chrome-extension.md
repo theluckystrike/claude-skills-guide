@@ -245,6 +245,8 @@ A deal finder Chrome extension combines DOM manipulation, storage management, an
 
 ## Related Reading
 
+- [Chrome Extension Textbook Deal Finder: A Developer Guide](/claude-skills-guide/chrome-extension-textbook-deal-finder/) — ISBN-based price comparison across academic retailers
+- [Building a Chrome Extension for Gaming Deal Finding](/claude-skills-guide/chrome-extension-gaming-deal-finder-chrome/) — CheapShark API integration and game watchlists
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
