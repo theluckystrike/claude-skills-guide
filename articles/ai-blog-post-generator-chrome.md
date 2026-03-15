@@ -39,7 +39,7 @@ Start by creating your extension's manifest file:
 }
 ```
 
-The popup HTML provides the interface for users to输入 prompts and receive generated content:
+The popup HTML provides the interface for users to input prompts and receive generated content:
 
 ```html
 <!DOCTYPE html>
