@@ -1,293 +1,227 @@
 ---
-
-
 layout: default
 title: "Claude Code for Runbook Authoring Workflow Tutorial"
-description: "Learn how to leverage Claude Code to create, maintain, and automate runbooks for DevOps and SRE workflows. A practical guide with code examples."
+description: "Learn how to use Claude Code to streamline your runbook authoring workflow. This practical tutorial covers automation, skill creation, and best practices for DevOps documentation."
 date: 2026-03-15
+categories: [tutorials, devops]
+tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-runbook-authoring-workflow-tutorial/
-categories: [guides]
-tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
+# Claude Code for Runbook Authoring Workflow Tutorial
 
-{% raw %}
+Runbooks are essential documentation for any operations team, but authoring them manually is time-consuming and error-prone. In this tutorial, you'll learn how to leverage Claude Code to automate and streamline your runbook authoring workflow, making documentation faster, more consistent, and easier to maintain.
 
-Runbooks are essential documentation for any engineering team. They capture the institutional knowledge needed to diagnose issues, execute fixes, and maintain systems. Yet many teams struggle to keep runbooks updated, making them useless when emergencies strike. This tutorial shows you how to use Claude Code to streamline runbook authoring, keeping your documentation current and actionable.
+## Why Use Claude Code for Runbook Authoring?
 
-## Why Claude Code Transforms Runbook Creation
+Traditional runbook creation involves manually writing each step, capturing commands, and ensuring consistency across documents. This process suffers from several problems:
 
-Traditional runbook authoring is time-consuming. You document steps, take screenshots, verify commands work, and then watch as your documentation becomes stale within weeks. Claude Code breaks this cycle by understanding your codebase, infrastructure, and context in real-time.
+- **Inconsistency**: Different authors use different formats and terminology
+- **Outdated content**: Runbooks quickly become stale without regular updates
+- **Time-intensive**: Writing detailed procedures takes hours
+- **Error-prone**: Manual command capture can introduce mistakes
 
-When you work with Claude Code, it reads your project files, understands your tech stack, and generates accurate, context-aware documentation. It can also execute commands to verify procedures work, ensuring your runbooks are always tested and correct.
+Claude Code addresses these challenges by providing an AI-powered assistant that understands your infrastructure, follows your conventions, and generates accurate documentation automatically.
 
-## Setting Up Your Runbook Project
+## Setting Up Your Runbook Authoring Environment
 
-Before authoring runbooks, organize your project for maintainability. Create a dedicated directory structure:
+Before starting, ensure Claude Code is installed and configured. You'll also want to create a dedicated skill for runbook authoring to maintain consistency.
+
+### Installing Claude Code
 
 ```bash
-mkdir -p runbooks/{procedures,troubleshooting,playbooks}
-cd runbooks
-git init
+# Install Claude Code via npm
+npm install -g @anthropic-ai/claude-code
+
+# Verify installation
+claude --version
 ```
 
-Initialize a CLAUDE.md file in your project root to establish context:
+### Creating a Runbook Authoring Skill
 
-```markdown
-# Runbook Project Context
-
-## Infrastructure
-- Kubernetes cluster on AWS EKS
-- PostgreSQL 14 database with primary-replica setup
-- Redis cache for session storage
-- Prometheus + Grafana for monitoring
-
-## Common Incidents
-1. Database connection exhaustion
-2. API latency spikes
-3. Cache miss rate increases
-
-## Emergency Contacts
-- On-call: PagerDuty rotation
-- DBA team: #db-support Slack
-```
-
-This context file ensures Claude Code understands your environment when generating runbooks.
-
-## Creating Your First Runbook with Claude Code
-
-Start an interactive session and ask Claude to generate a runbook:
-
-```
-Generate a runbook for troubleshooting database connection exhaustion. 
-Include diagnostic queries, common causes, and remediation steps.
-```
-
-Claude will produce a structured document. Review and refine it, then save to `runbooks/troubleshooting/db-connections.md`:
+Create a new skill file at `~/.claude/skills/runbook-author.md` with the following structure:
 
 ```markdown
 ---
-title: Database Connection Exhaustion
-severity: high
-estimated_time: 15 minutes
+name: runbook-author
+description: Assists with creating and maintaining operational runbooks
+tools: [Read, Write, Bash, Glob]
 ---
 
-## Symptoms
-- Application returns "too many connections" errors
-- New API requests timeout
-- Database CPU remains normal but connections maxed
+# Runbook Authoring Assistant
 
-## Diagnosis
+You help create clear, actionable operational runbooks following these conventions:
 
-### Step 1: Check Current Connection Count
-```sql
-SELECT count(*) FROM pg_stat_activity 
-WHERE state = 'active';
+## Format Requirements
+
+- Use numbered steps for linear procedures
+- Include verification commands after critical steps
+- Add rollback instructions for risky operations
+- Reference external documentation links when relevant
+- Use code blocks for all commands with language identifiers
+
+## Command Syntax
+
+Always format commands as:
+```bash
+# Use triple backticks with bash identifier
+command --option value
 ```
 
-### Step 2: Identify Long-Running Queries
-```sql
-SELECT pid, now() - pg_stat_activity.query_start AS duration, 
-       query, state
-FROM pg_stat_activity
-WHERE state != 'idle'
-ORDER BY duration DESC;
+## Structure Template
+
+1. **Overview**: Brief description of the procedure
+2. **Prerequisites**: Required access, permissions, tools
+3. **Steps**: Numbered procedure with verifications
+4. **Verification**: How to confirm success
+5. **Rollback**: Steps to undo if something goes wrong
+6. **Related Runbooks**: Links to related procedures
 ```
 
-### Step 3: Check Application Connection Pools
-Review your application's connection pool configuration:
-- HikariCP (Java): `maximumPoolSize`
-- Psycopg2 (Python): `max_connections`
-- PgBouncer: `max_client_conn`
+## Practical Examples: Automating Common Runbook Tasks
 
-## Remediation
+### Example 1: Generating a Database Backup Runbook
 
-### Short-Term
-1. Kill long-running idle connections:
-```sql
-SELECT pg_terminate_backend(pid) 
-FROM pg_stat_activity 
-WHERE state = 'idle' 
-AND query_start < now() - interval '10 minutes';
+When you need a new runbook for database backups, simply describe your setup to Claude:
+
+```bash
+# Invoke Claude with your runbook-author skill
+claude -s runbook-author
 ```
 
-2. Scale application pods to redistribute connection load
+Then provide context like:
 
-### Long-Term
-1. Implement connection pooling (PgBouncer)
-2. Set connection timeouts
-3. Add connection pool metrics to Grafana
-```
+> "Create a runbook for performing nightly PostgreSQL backups on a production database. Include steps for verifying backup integrity and restoring to a test environment."
 
-## Automating Runbook Validation
-
-One of Claude Code's powerful features is executing commands to verify procedures work. Create a skill that validates runbook commands:
-
-```javascript
-// runbook-validator.md
-# Runbook Command Validator
-
-You help validate that runbook commands are correct by executing them in a safe, read-only manner.
-
-## Guidelines
-- For database queries, always use EXPLAIN ANALYZE for SELECT statements
-- Never execute DELETE, UPDATE, or DROP without explicit approval
-- Prefer show commands that demonstrate configuration
-- Test API endpoints with GET methods only
-
-## Validation Workflow
-1. Parse commands from runbook
-2. Execute read-only equivalents
-3. Report success/failure with output
-```
-
-Now when you write runbooks, invoke this skill to verify each command works before finalizing:
-
-```
-@runbook-validator Validate the commands in db-connections.md
-```
-
-## Building Playbook Workflows
-
-Complex incidents require coordinated responses. Claude Code excels at creating multi-step playbooks that guide teams through incident resolution.
-
-Create a playbook for API latency spikes:
+Claude will generate a complete runbook following your template:
 
 ```markdown
----
-title: API Latency Spike Playbook
-severity: medium
-automatable: true
----
+## Overview
+
+This runbook describes the nightly backup procedure for the production PostgreSQL database.
 
 ## Prerequisites
-- [ ] Access to Kubernetes cluster
-- [ ] Grafana dashboard access
-- [ ] Permission to scale deployments
 
-## Assessment Phase
+- PostgreSQL client installed (`psql --version`)
+- Access to backup storage mount at `/backup`
+- Production database credentials in `/etc/postgresql/backup_creds`
+- Sufficient disk space (minimum 2x database size)
 
-### 1. Verify the Issue
+## Steps
+
+1. **Connect to the database server**
+   ```bash
+   ssh db-prod-01.example.com
+   ```
+
+2. **Verify available disk space**
+   ```bash
+   df -h /backup
+   # Ensure at least 50% free space remains
+   ```
+
+3. **Create the backup**
+   ```bash
+   pg_dump -Fc -U backup_user -d production_db > /backup/production_$(date +%Y%m%d).dump
+   ```
+
+4. **Verify backup integrity**
+   ```bash
+   pg_restore --list /backup/production_$(date +%Y%m%d).dump | head -20
+   ```
+
+## Verification
+
+Confirm backup success by checking:
+- Exit code: `echo $?` should be 0
+- File size: `ls -lh /backup/production_*.dump | tail -1`
+- File age: `stat /backup/production_$(date +%Y%m%d).dump`
+
+## Rollback
+
+To restore from backup:
 ```bash
-kubectl top pods -n api | head -20
-kubectl get pods -n api -o wide
+pg_restore -U restore_user -d test_db -c /backup/production_YYYYMMDD.dump
 ```
 
-### 2. Check Recent Deployments
+## Related Runbooks
+
+- [Database Restore Procedure](/runbooks/db-restore/)
+- [Storage Capacity Monitoring](/runbooks/storage-monitor/)
+```
+
+### Example 2: Converting Incident Notes to Runbooks
+
+After resolving incidents, use Claude to convert your notes into formal runbooks:
+
 ```bash
-kubectl rollout history deployment/api -n api
-kubectl get events -n api --sort-by='.lastTimestamp' | tail -20
+# Process raw incident notes into structured runbook
+claude -s runbook-author
 ```
 
-### 3. Review Metrics
-- Check P99 latency in Grafana
-- Compare with baseline (last 7 days)
-- Identify if issue is global or regional
+Provide your incident timeline and commands executed. Claude will normalize the format, add prerequisites, include verification steps, and create proper rollback procedures.
 
-## Remediation Options
+### Example 3: Updating Existing Runbooks
 
-| If symptom | Then try |
-|------------|----------|
-| High CPU | Scale replicas: `kubectl scale deployment/api --replicas=10` |
-| OOM kills | Check memory limits, increase if needed |
-| Slow DB queries | Enable query logging, identify bottlenecks |
+Runbooks become stale quickly. Use Claude to review and update:
 
-## Communication Template
-
-Use this in Slack:
-```
-🚨 API Latency Incident
-Severity: {severity}
-Timeline: {start_time}
-Current status: {investigation_phase}
-Actions taken: {list}
-ETA for resolution: {estimate}
-Channel: #incident-{number}
-```
+```bash
+# Ask Claude to audit an existing runbook
+claude -s runbook-author
 ```
 
-## Maintaining Runbooks Over Time
+Prompt: "Review the runbook at /runbooks/deployment.md and identify outdated commands, missing verification steps, and any deprecated tool references. Provide an updated version."
 
-The biggest challenge is keeping runbooks current. Claude Code makes this manageable with scheduled reviews and automated updates.
+## Best Practices for Claude-Assisted Runbook Authoring
 
-### Create a Review Skill
+### Provide Rich Context
 
-```markdown
-# Runbook Review Assistant
+The more context you give Claude about your environment, the better the output:
 
-Help maintain runbook quality by:
-1. Checking for outdated commands (old CLI flags, deprecated APIs)
-2. Verifying all code blocks have language hints
-3. Ensuring consistency in formatting
-4. Flagging steps that reference deleted resources
+- Include actual command outputs when available
+- Share your monitoring and alerting setup
+- Describe your rollback capabilities
+- Mention team conventions and naming standards
 
-Output a report with:
-- Files needing updates
-- Commands to verify
-- Overall runbook health score
-```
+### Review Generated Content
 
-Run monthly reviews:
+Always verify generated runbooks before publishing:
 
-```
-@runbook-reviewer Review all runbooks and create an update backlog
-```
+- Test commands in a non-production environment first
+- Check that file paths match your actual setup
+- Verify version numbers and tool names
+- Ensure security-sensitive information is handled appropriately
 
-### Link Runbooks to Code
+### Maintain a Knowledge Base
 
-When code changes, update related runbooks. Add a CI check:
+Help Claude produce better runbooks over time by maintaining:
 
-```yaml
-# .github/workflows/runbook-check.yml
-name: Runbook Sync Check
-on: [pull_request]
-jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Find changed files
-        id: changes
-        run: |
-          echo "::set-output name=files::$(git diff --name-only HEAD~1)"
-      - name: Alert on runbook changes needed
-        if: contains(steps.changes.outputs.files, 'infra/')
-        run: echo "Infrastructure changed - review related runbooks"
-```
+- **Command library**: Common commands with explanations
+- **Environment details**: Infrastructure specifics
+- **Glossary**: Team terminology and abbreviations
+- **Example runbooks**: Templates demonstrating your preferred style
 
-## Advanced: Generating Runbooks from Incidents
+## Advanced: Custom Runbook Templates
 
-After resolving incidents, use Claude Code to automatically generate runbook content:
+For organizations with specific requirements, create custom templates in your runbook-author skill. Define templates for different scenarios:
 
-1. Export incident timeline from PagerDuty or your incident management tool
-2. Feed to Claude with prompt:
-```
-Based on this incident timeline, generate a troubleshooting runbook 
-that captures the diagnosis and resolution steps. Include command 
-examples and decision criteria.
-```
+- **Emergency procedures**: Focus on speed and clarity
+- **Change procedures**: Include approval workflows
+- **Troubleshooting guides**: Branching decision trees
+- **Onboarding runbooks**: Step-by-step learning paths
 
-3. Review and merge into your runbook repository
+## Conclusion
 
-## Best Practices Summary
+Claude Code transforms runbook authoring from a tedious manual process into a collaborative workflow. By defining clear conventions, providing rich context, and reviewing AI-generated content, you can create consistent, accurate documentation that evolves with your infrastructure.
 
-- **Start small**: Begin with your most frequent incidents
-- **Test everything**: Use Claude's execution capabilities to verify commands
-- **Version control**: Store runbooks alongside code, review with PRs
-- **Link to monitoring**: Include Grafana dashboards and alert names
-- **Iterate**: Review and improve after each incident
+Start by creating your runbook-author skill with your team's conventions, then gradually expand to include specialized templates for different procedure types. Your future self—and your on-call team—will thank you.
 
-Claude Code transforms runbooks from static documents into living, tested, context-aware guides that scale with your infrastructure. Start with one runbook, validate the workflow, and expand from there.
+---
 
-{% endraw %}
+**Next Steps:**
 
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+1. Install Claude Code and create your first runbook-author skill
+2. Generate a runbook for a common operational procedure
+3. Have your team review and test the generated documentation
+4. Iterate on your skill based on feedback and conventions discovered
