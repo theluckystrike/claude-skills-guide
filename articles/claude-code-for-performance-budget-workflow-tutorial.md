@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Performance Budget Workflow Tutorial"
-description: "Learn how to set up and manage performance budgets in your development workflow using Claude Code. This tutorial covers practical strategies for tracking bundle sizes, load times, and resource constraints."
+description: "Learn how to set up and manage performance budgets in your development workflow using Claude Code. This tutorial covers practical strategies for."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-performance-budget-workflow-tutorial/
@@ -223,3 +223,10 @@ Integrating performance budgets into your Claude Code workflow transforms perfor
 Start small by implementing basic bundle size checks, then gradually expand to include comprehensive audits, Core Web Vitals monitoring, and automated CI enforcement. With consistent effort, performance budgets will become a natural part of how your team builds software.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
