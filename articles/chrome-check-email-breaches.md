@@ -1,15 +1,17 @@
 ---
+
 layout: default
 title: "How to Check Email Breaches in Chrome: A Developer's Guide"
 description: "Learn how to check if your email has been exposed in data breaches using Chrome, browser tools, and developer APIs. Practical examples included."
 date: 2026-03-15
 categories: [security, privacy, guides]
-tags: [chrome, email-security, data-breach, have-i-been-pwned, security-tools]
-author: theluckystrike
-reviewed: false
+tags: [chrome, email-security, data-breach, have-i-been-pwned, security-tools, claude-skills]
+author: "Claude Skills Guide"
+reviewed: true
 score: 5
 permalink: /chrome-check-email-breaches/
 ---
+
 
 # How to Check Email Breaches in Chrome: A Developer's Guide
 
@@ -81,7 +83,7 @@ Save this as `check_breaches.py`, set your environment variables, and run it wit
 
 ## Chrome-Based Developer Tools
 
-Developers working in Chrome can leverage additional tools for breach-related tasks:
+Developers working in Chrome can use additional tools for breach-related tasks:
 
 **Chrome DevTools Console Quick Check**
 You can test API calls directly from DevTools by making fetch requests in the console. This is useful for quick verification without leaving your browser:

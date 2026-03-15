@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "How to Automatically Delete Cookies in Chrome"
 description: "Learn multiple methods to automatically delete cookies in Chrome, from built-in settings to advanced automation scripts for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-delete-cookies-automatically/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 {% raw %}
 Managing cookies in Chrome is essential for privacy, security, and testing web applications. While manual cookie deletion works, automating the process saves time and ensures consistent hygiene. This guide covers multiple approaches to automatically delete cookies in Chrome, ranging from browser settings to command-line automation.
@@ -105,7 +111,7 @@ The `--purge-cookie-store` flag forces Chrome to clear all cookies on startup. C
 
 ## Method 5: PowerShell Script for Windows Users
 
-Windows users can leverage PowerShell to delete Chrome cookies directly from the database. This bypasses the browser interface entirely.
+Windows users can use PowerShell to delete Chrome cookies directly from the database. This bypasses the browser interface entirely.
 
 ```powershell
 # Delete Chrome cookies on Windows

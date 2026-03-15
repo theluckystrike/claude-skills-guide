@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for OSS CoC Enforcement Workflow Tutorial"
 description: "Learn how to build automated Code of Conduct enforcement workflows using Claude Code skills. Practical examples for handling reports, notifications, and escalation."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-coc-enforcement-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for OSS CoC Enforcement Workflow Tutorial

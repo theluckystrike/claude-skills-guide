@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Passkeys How to Use"
 description: "A practical guide for developers and power users on setting up and using passkeys in Google Chrome for passwordless authentication."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 categories: [security, authentication]
-tags: [chrome, passkeys, security, web-authentication, passwordless]
+tags: [chrome, passkeys, security, web-authentication, passwordless, claude-skills]
 permalink: /chrome-passkeys-how-to-use/
+reviewed: true
+score: 8
 ---
+
 
 # Chrome Passkeys How to Use
 

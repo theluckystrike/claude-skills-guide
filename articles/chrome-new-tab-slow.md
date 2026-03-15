@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome New Tab Slow: A Developer's Troubleshooting Guide"
 description: "Diagnose and fix slow Chrome new tab performance with developer-focused techniques. Learn to use Chrome DevTools, profile startup behavior, and optimize extensions."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-new-tab-slow/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [chrome, claude-skills]
 ---
+
 
 # Chrome New Tab Slow: A Developer's Troubleshooting Guide
 
