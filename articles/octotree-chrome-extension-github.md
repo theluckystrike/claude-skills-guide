@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Octotree Chrome Extension GitHub — A Developer's Navigation Guide"
 description: "Master Octotree for GitHub: the Chrome extension that adds a file tree sidebar to repositories. Learn setup, features, customization, and practical usage patterns."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /octotree-chrome-extension-github/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 # Octotree Chrome Extension GitHub — A Developer's Navigation Guide
 
