@@ -4,8 +4,11 @@ layout: default
 title: "Chrome Extension Royalty Free Image Search: A Developer Guide"
 description: "Discover the best Chrome extensions for finding royalty-free images. Compare features, API integrations, and workflows for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-royalty-free-image-search/
+reviewed: true
+score: 8
+categories: [guides]
 ---
 
 # Chrome Extension Royalty Free Image Search: A Developer Guide
