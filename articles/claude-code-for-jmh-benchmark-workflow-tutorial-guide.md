@@ -272,3 +272,4 @@ Claude Code transforms JMH benchmarking from a technical challenge into an acces
 
 Remember: benchmark results are only as good as the benchmark code. Use Claude Code to verify your benchmarks are correct before acting on the numbers.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
