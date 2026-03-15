@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Service Worker Inspector: Complete Debugging Guide"
 description: "Learn how to inspect, debug, and monitor service workers in Chrome extensions using built-in Chrome DevTools and advanced techniques."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-service-worker-inspector/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome, claude-skills]
 ---
+
 
 Chrome extension service workers serve as the backbone for background processing in modern extensions. Unlike traditional background scripts, service workers use an event-driven architecture that requires specific debugging approaches. This guide covers practical methods for inspecting and troubleshooting service workers in your Chrome extensions.
 
