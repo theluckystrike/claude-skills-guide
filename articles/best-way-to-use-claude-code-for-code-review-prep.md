@@ -174,4 +174,5 @@ Teams using this approach report faster review cycles and fewer repeated discuss
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

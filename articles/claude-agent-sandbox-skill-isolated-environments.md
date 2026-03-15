@@ -183,4 +183,5 @@ Start with the strictest isolation level that still allows your workflow to func
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

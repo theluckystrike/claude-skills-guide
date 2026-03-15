@@ -218,3 +218,4 @@ Remember: the goal isn't just to complete tasks, but to complete them in a way t
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 - [AI Agent Goal Decomposition: How It Works Explained](/ai-agent-goal-decomposition-how-it-works-explained/) — Learn the goal-decomposition reasoning that drives how agents decide which subtasks to tackle first.
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

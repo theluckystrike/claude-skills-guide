@@ -165,4 +165,5 @@ Then verify you have Claude 4 by checking the model in your settings or running 
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

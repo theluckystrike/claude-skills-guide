@@ -215,4 +215,5 @@ For individual developers, Claude Code becomes cost-neutral compared to GitHub C
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

@@ -224,4 +224,5 @@ This gives you immediate feedback on generated tests without manually switching 
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

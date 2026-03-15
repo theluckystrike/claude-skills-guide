@@ -121,3 +121,4 @@ By embracing this structured approach, you unlock the full potential of AI agent
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 - [AI Agent Task Decomposition for Complex Projects Guide](/ai-agent-task-decomposition-for-complex-projects-guide/) — Practical strategies for breaking large software projects into manageable agent-executable subtasks.
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

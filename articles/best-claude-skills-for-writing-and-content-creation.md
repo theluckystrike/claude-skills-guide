@@ -170,4 +170,5 @@ Each skill handles one stage of the content lifecycle. The result is a consisten
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

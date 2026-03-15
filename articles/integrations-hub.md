@@ -286,4 +286,5 @@ Publishing platform integrations let Claude participate directly in the content 
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

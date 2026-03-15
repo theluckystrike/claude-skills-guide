@@ -244,3 +244,4 @@ By structuring your interactions to work with these memory systems—keeping req
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 - [Building Stateful Agents with Claude Skills: Complete Guide](/building-stateful-agents-with-claude-skills-guide/) — Design Claude Code agents that persist and retrieve state across turns using the memory types covered here.
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -201,4 +201,5 @@ Claude Code skills for .NET development focus on automation, documentation, and 
 - [Claude Code Skills for Golang Microservices](/claude-skills-guide/claude-code-skills-for-golang-microservices/) — compare microservice patterns across languages
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for backend and enterprise development
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

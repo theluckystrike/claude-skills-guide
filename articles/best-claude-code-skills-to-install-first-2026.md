@@ -151,4 +151,5 @@ Install one skill, run it on a real task, and observe the time saved before addi
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

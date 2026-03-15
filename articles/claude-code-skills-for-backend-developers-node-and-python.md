@@ -145,3 +145,4 @@ The real built-in skills for backend development are `/tdd` for tests, `/superme
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Build a complete automated testing pipeline for your Node.js or Python backend project
 - [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more backend development, API, and infrastructure use case guides
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

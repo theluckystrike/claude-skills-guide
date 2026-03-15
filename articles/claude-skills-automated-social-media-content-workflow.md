@@ -132,4 +132,5 @@ Claude Code skills provide the building blocks. Assemble them according to [your
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

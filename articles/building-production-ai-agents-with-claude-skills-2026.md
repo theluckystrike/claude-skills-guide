@@ -197,4 +197,5 @@ claude -p "/tdd Write integration tests for this agent pipeline script: $(cat ag
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

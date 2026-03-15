@@ -174,3 +174,4 @@ For serious developers who want to accelerate their workflow, the question isn't
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
 
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

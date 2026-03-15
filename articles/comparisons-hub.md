@@ -113,4 +113,5 @@ When building custom skills, the path is: understand the [skill.md format](/clau
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Practical framework for deciding when a skill beats a one-off prompt for your workflow.
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn the foundations before diving into comparisons between tools and platforms.
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

@@ -252,4 +252,5 @@ These issues are usually caused by insufficient context in the skill body or CLA
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

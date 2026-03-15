@@ -115,4 +115,5 @@ Advanced optimization isn't just about prompts. It's about workflow design:
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

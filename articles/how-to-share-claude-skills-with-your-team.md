@@ -143,4 +143,5 @@ Ask developers which skills they actually use in team retrospectives. Remove or 
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*

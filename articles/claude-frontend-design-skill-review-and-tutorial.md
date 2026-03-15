@@ -246,4 +246,5 @@ Start with simple components to understand the skill's patterns, then scale to c
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*
