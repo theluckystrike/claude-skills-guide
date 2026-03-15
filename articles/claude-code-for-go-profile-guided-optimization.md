@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Go Profile-Guided Optimization"
-description: "Learn how to leverage Claude Code for Go Profile-Guided Optimization (PGO). Covers profiling setup, optimization strategies, and practical implementation with code examples."
+description: "Learn how to leverage Claude Code for Go Profile-Guided Optimization (PGO). Covers profiling setup, optimization strategies, and practical."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-go-profile-guided-optimization/
@@ -204,3 +204,10 @@ Claude Code can help you implement all of these practices, from generating profi
 
 The key is treating PGO as part of an ongoing performance engineering process rather than a one-time optimization. With Claude Code's help, you can establish this cycle and continuously improve your application's performance over time.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
