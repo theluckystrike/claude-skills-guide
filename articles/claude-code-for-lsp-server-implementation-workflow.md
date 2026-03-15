@@ -1,263 +1,265 @@
 ---
 layout: default
 title: "Claude Code for LSP Server Implementation Workflow"
-description: "A practical guide to implementing Language Server Protocol servers using Claude Code, covering workflow patterns, code examples, and actionable best practices for developers."
+description: "Learn how to leverage Claude Code to streamline the implementation of Language Server Protocol (LSP) servers. A practical workflow guide with code examples and actionable advice."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-lsp-server-implementation-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
 {% raw %}
 # Claude Code for LSP Server Implementation Workflow
 
-The Language Server Protocol (LSP) has become the standard for providing language features like autocomplete, go-to-definition, and diagnostics to code editors. Implementing an LSP server can seem daunting, but Claude Code transforms this into a streamlined workflow. This guide walks you through building an LSP server from scratch using Claude Code, with practical patterns you can apply to any language or tool.
+The Language Server Protocol (LSP) has become the standard for enabling language features like autocomplete, goto definition, and refactoring across code editors. Implementing an LSP server from scratch, however, can be a daunting task involving complex JSON-RPC messaging, abstract syntax tree (AST) traversal, and editor integration. This is where Claude Code transforms the development experience—turning what could be weeks of work into a streamlined, iterative process.
 
-## Why Use Claude Code for LSP Development
+This guide walks you through a practical workflow for implementing LSP servers using Claude Code, complete with code examples and actionable advice to help you build robust language servers efficiently.
 
-Building an LSP server requires understanding the protocol, handling async communications, managing document state, and implementing feature handlers—all while maintaining performance. Claude Code excels at this because it can:
+## Understanding the LSP Implementation Challenge
 
-- Generate protocol-compliant code from specifications
-- Handle the boilerplate of LSP message handling
-- Refactor and optimize as requirements evolve
-- Debug communication issues in real-time
+An LSP server communicates with editors via JSON-RPC messages, handling requests like `textDocument/completion`, `textDocument/definition`, and `textDocument/didChange`. The challenge isn't just the protocol—it's also parsing source code, building semantic understanding, and responding within the performance constraints that editors expect.
 
-Instead of writing hundreds of lines of boilerplate, you describe what you want the server to do, and Claude Code helps you build the implementation incrementally.
+Traditionally, implementing an LSP server requires:
+- Deep understanding of the LSP specification
+- Parser or AST tooling for your target language
+- Careful state management for open documents
+- Comprehensive error handling
 
-## Setting Up Your LSP Server Project
+Claude Code accelerates this by generating boilerplate, explaining complex concepts, and helping you implement features incrementally. Let's explore the workflow.
 
-Every LSP server implementation follows a similar project structure. Start by creating the foundation:
+## Setting Up Your LSP Project
 
-### Project Structure
+Start by creating a new project for your LSP server. Claude Code can help scaffold the entire structure:
 
-```
-my-lsp-server/
-├── src/
-│   ├── main.ts          # Entry point and server initialization
-│   ├── protocol/        # LSP message types
-│   ├── handlers/        # Feature implementations
-│   └── document_mgr.ts  # Document state management
-├── package.json
-└── tsconfig.json
+```bash
+mkdir my-language-lsp && cd my-language-lsp
+npm init -y
+npm install vscode-json-rpc language-server-types
 ```
 
-The key insight is separating concerns: the protocol layer handles LSP messages, handlers contain feature logic, and the document manager tracks open files and their metadata.
+Create a skill that encapsulates LSP implementation knowledge:
+
+```yaml
+---
+name: lsp-implementer
+description: Assists with LSP server implementation
+tools: [Read, Write, Bash, Glob]
+---
+
+You are an expert in Language Server Protocol implementation.
+Help me build a complete LSP server with these requirements:
+1. JSON-RPC message handling
+2. Document synchronization
+3. Code completion
+4. Definition and reference providers
+
+Use best practices and explain each component.
+```
+
+Invoke this skill when working on your LSP project to get contextual guidance throughout development.
 
 ## Implementing Core LSP Handlers
 
-Let's build the essential handlers every LSP server needs. We'll use TypeScript for this example, but the patterns apply to any language.
-
-### Initialize Handler
-
-The initialize request is the first message clients send. Your server must respond with capabilities:
+The heart of any LSP server is its request handler. Here's a practical implementation pattern that Claude Code can help you build:
 
 ```typescript
-import { InitializeParams, InitializeResult, ServerCapabilities } from 'vscode-languageserver';
+import { LanguageServer } from './language-server';
+import { TextDocument } from './text-document';
+import {
+  InitializeRequest,
+  InitializeResult,
+  ServerCapabilities
+} from 'vscode-languageserver-types';
 
-export async function handleInitialize(
-  params: InitializeParams
-): Promise<InitializeResult> {
-  return {
-    serverInfo: {
-      name: 'my-lsp-server',
-      version: '1.0.0'
-    },
-    capabilities: {
-      textDocumentSync: TextDocumentSyncKind.Full,
-      definitionProvider: true,
-      hoverProvider: true,
-      completionProvider: {
-        resolveProvider: false,
-        triggerCharacters: ['.', ':']
+export class LSPHandler {
+  private server: LanguageServer;
+  private documents: Map<string, TextDocument> = new Map();
+
+  constructor() {
+    this.server = new LanguageServer();
+    this.setupHandlers();
+  }
+
+  private setupHandlers(): void {
+    // Initialize handler - the entry point for LSP clients
+    this.server.onRequest(
+      'initialize',
+      (params: InitializeRequest): InitializeResult => {
+        return {
+          capabilities: {
+            textDocumentSync: 1, // Full document sync
+            completionProvider: { triggerCharacters: ['.'] },
+            definitionProvider: true,
+            referencesProvider: true,
+          } as ServerCapabilities
+        };
       }
-    }
-  };
+    );
+
+    // Document change notification
+    this.server.onNotification(
+      'textDocument/didChange',
+      (params: { textDocument: { uri: string; version: number }; contentChanges: Array<{ text: string }> }) => {
+        const doc = this.documents.get(params.textDocument.uri);
+        if (doc) {
+          doc.update(params.contentChanges[0].text);
+        }
+      }
+    );
+  }
+
+  start(port: number): void {
+    this.server.listen(port);
+  }
 }
 ```
 
-This tells the client which features your server supports. Start minimal and add capabilities as you implement them.
+Claude Code can explain each component and help you extend this skeleton with features specific to your language.
 
-### Document Management
+## Handling Document Synchronization
 
-LSP servers must track open documents. Create a document manager that handles synchronization:
+Document synchronization is critical—editors send content changes, and your server must maintain an accurate in-memory representation. Here's how to implement it properly:
 
 ```typescript
-class DocumentManager {
-  private documents = new Map<string, string>();
+export class TextDocumentManager {
+  private documents = new Map<string, TextDocument>();
 
-  openDocument(uri: string, content: string): void {
-    this.documents.set(uri, content);
+  openDocument(uri: string, content: string, version: number): void {
+    const doc = new TextDocument(uri, content, version);
+    this.documents.set(uri, doc);
+    this.parseDocument(doc);
   }
 
-  updateDocument(uri: string, changes: TextDocumentContentChangeEvent[]): void {
-    const content = this.documents.get(uri);
-    if (!content) return;
+  updateDocument(uri: string, changes: ContentChange[], version: number): void {
+    const doc = this.documents.get(uri);
+    if (!doc) return;
 
-    // Apply incremental changes
     for (const change of changes) {
-      if ('text' in change) {
-        this.documents.set(uri, change.text);
-      }
+      doc.applyChange(change);
     }
+    doc.setVersion(version);
+    this.parseDocument(doc);
   }
 
-  getDocument(uri: string): string | undefined {
+  private parseDocument(doc: TextDocument): void {
+    // Parse and build AST, then update indices
+    // This is where you'd integrate your parser
+    const ast = this.languageParser.parse(doc.getText());
+    this.symbolIndex.update(doc.getUri(), ast);
+  }
+
+  getDocument(uri: string): TextDocument | undefined {
     return this.documents.get(uri);
   }
 }
 ```
 
-This pattern keeps your handlers clean—they just ask the document manager for what they need.
+Ask Claude Code to explain how to integrate your specific parser (tree-sitter, ANTLR, etc.) into this pattern.
 
-## Adding Language Features
+## Implementing Code Completion
 
-With the foundation in place, implement specific language features. Each feature typically involves a single handler function.
-
-### Go-to-Definition
+Code completion is often the most visible LSP feature. Here's a practical approach:
 
 ```typescript
-import { DefinitionParams, DefinitionLocation } from 'vscode-languageserver';
+export class CompletionProvider {
+  provideCompletions(
+    uri: string,
+    position: Position
+  ): CompletionItem[] {
+    const doc = this.docManager.getDocument(uri);
+    if (!doc) return [];
 
-export async function handleDefinition(
-  params: DefinitionParams,
-  docManager: DocumentManager
-): Promise<DefinitionLocation | null> {
-  const document = docManager.getDocument(params.textDocument.uri);
-  if (!document) return null;
-
-  const offset = getOffset(document, params.position);
-  const symbol = findSymbolAtOffset(document, offset);
-  
-  if (symbol && symbol.definition) {
-    return {
-      uri: params.textDocument.uri,
-      range: {
-        start: symbol.definition.start,
-        end: symbol.definition.end
-      }
-    };
+    const line = doc.getLine(position.line);
+    const prefix = this.getWordPrefix(line, position.character);
+    
+    // Get completions from your language's analysis
+    const symbols = this.symbolIndex.getSymbols(prefix);
+    
+    return symbols.map(symbol => ({
+      label: symbol.name,
+      kind: this.mapSymbolKind(symbol.kind),
+      detail: symbol.detail,
+      documentation: symbol.documentation,
+      insertText: this.getInsertText(symbol),
+    }));
   }
-  
-  return null;
+
+  private getWordPrefix(line: string, char: number): string {
+    let start = char;
+    while (start > 0 && /[a-zA-Z0-9_]/.test(line[start - 1])) {
+      start--;
+    }
+    return line.substring(start, char);
+  }
 }
 ```
 
-The key is finding the symbol at the cursor position, then returning its definition location. The complexity lives in `findSymbolAtOffset`—that's where language-specific parsing happens.
-
-### Hover Information
-
-```typescript
-import { HoverParams, Hover } from 'vscode-languageserver';
-
-export async function handleHover(
-  params: HoverParams,
-  docManager: DocumentManager
-): Promise<Hover | null> {
-  const document = docManager.getDocument(params.textDocument.uri);
-  if (!document) return null;
-
-  const offset = getOffset(document, params.position);
-  const symbol = findSymbolAtOffset(document, offset);
-  
-  if (symbol) {
-    return {
-      contents: {
-        kind: 'markdown',
-        value: `**${symbol.name}**\n\n${symbol.documentation}`
-      }
-    };
-  }
-  
-  return null;
-}
-```
+Claude Code can help you integrate this with your language's type system and generate context-aware completions.
 
 ## Testing Your LSP Server
 
-Testing LSP implementations requires a different approach than unit tests. Use the LSP-specific testing patterns:
-
-### Integration Testing
+Testing is crucial for LSP servers since they bridge multiple systems. Claude Code can help you write integration tests:
 
 ```typescript
-import { startServer, createClient } from './test-utils';
+import { describe, it } from 'mocha';
+import { LSPClient } from './test-utils/lsp-client';
 
-async function testGoToDefinition() {
-  const server = await startServer();
-  const client = createClient(server);
-  
-  // Open a document
-  await client.didOpenTextDocument({
-    textDocument: {
-      uri: 'file:///test.ts',
-      languageId: 'typescript',
-      version: 1,
-      text: 'const x = 1;\nconst y = x;'
-    }
+describe('LSP Server', () => {
+  let client: LSPClient;
+
+  beforeEach(async () => {
+    client = await LSPClient.start();
   });
-  
-  // Request definition for 'x' on line 2
-  const result = await client.definition({
-    textDocument: { uri: 'file:///test.ts' },
-    position: { line: 1, character: 9 } // position of 'x'
+
+  afterEach(async () => {
+    await client.stop();
   });
-  
-  expect(result).toEqual({
-    uri: 'file:///test.ts',
-    range: {
-      start: { line: 0, character: 6 },
-      end: { line: 0, character: 7 }
-    }
+
+  it('should respond to initialize request', async () => {
+    const result = await client.sendRequest('initialize', {
+      processId: process.pid,
+      rootUri: '/test-project',
+      capabilities: {}
+    });
+    
+    expect(result.capabilities.completionProvider).to.not.be.undefined;
+    expect(result.capabilities.definitionProvider).to.not.be.undefined;
   });
-  
-  await server.stop();
-}
+
+  it('should provide completions', async () => {
+    await client.openDocument('test.lang', 'func myFunc', 1);
+    const completions = await client.sendRequest('textDocument/completion', {
+      textDocument: { uri: 'test.lang' },
+      position: { line: 0, character: 5 }
+    });
+    
+    expect(completions).to.not.be.empty;
+  });
+});
 ```
 
-This pattern tests the full round-trip: client sends a request, server processes it, response comes back correctly.
+Run tests with `npm test` to verify your implementation before editor integration.
 
-## Workflow Best Practices
+## Best Practices for LSP Development
 
-Follow these patterns to make LSP server development with Claude Code productive:
+Based on implementing multiple language servers, here are key recommendations:
 
-### 1. Implement Incrementally
+1. **Start with document sync and diagnostics** - Get the basic notification flow working first before tackling complex features.
 
-Start with document synchronization and basic features. Add complexity only when the foundation works. A server that handles document sync but provides no features is more useful than one that's incomplete.
+2. **Separate parsing from serving** - Keep your language parser independent from the LSP layer for easier testing.
 
-### 2. Separate Concerns
+3. **Cache aggressively** - Re-parsing on every request kills performance. Update caches incrementally on document changes.
 
-Keep handlers small and focused. The document manager handles state, handlers handle features, and the main loop handles message routing. This makes debugging much easier.
+4. **Handle cancellation** - Long-running operations should check for cancellation tokens from the client.
 
-### 3. Log Everything
+5. **Log comprehensively** - LSP errors are hard to debug without detailed logs of requests and responses.
 
-LSP communication is complex. Add logging at key points:
-
-```typescript
-function logRequest(method: string, params: unknown) {
-  console.log(`[LSP] ${method}`, JSON.stringify(params, null, 2));
-}
-```
-
-This helps when diagnosing why features don't work as expected.
-
-### 4. Test Against Multiple Clients
-
-VS Code, Neovim, and other clients behave differently. Test your server with at least two clients to catch client-specific issues.
-
-## Common Pitfalls
-
-Avoid these mistakes that trip up new LSP developers:
-
-- **Forgetting document version tracking**: Always track versions to prevent stale data issues
-- **Blocking the main thread**: LSP is async; keep handlers non-blocking
-- **Not handling missing documents**: Clients may request features for files that aren't open
-- **Ignoring cancellation**: Check cancellation tokens in long-running operations
+Claude Code excels at helping you implement each of these practices iteratively.
 
 ## Conclusion
 
-Claude Code dramatically accelerates LSP server development by handling boilerplate and letting you focus on language-specific logic. Start with the project structure, implement handlers incrementally, and test thoroughly. The LSP ecosystem is well-documented, and Claude Code can help you navigate the protocol details while building robust, feature-complete servers.
+Implementing an LSP server becomes significantly more manageable with Claude Code guiding the process. By following this workflow—scaffolding the project, implementing core handlers incrementally, and testing continuously—you can build production-ready language servers in a fraction of the traditional time.
 
-Remember: a good LSP server prioritizes correctness and performance. It's better to have a few solid features than many broken ones.
+The key is treating Claude Code as a pair programmer who understands the LSP specification deeply and can explain complex patterns while generating working code. Invoke your implementation skill early and often, and you'll have a robust language server that provides excellent editor integration for your target language.
 {% endraw %}
