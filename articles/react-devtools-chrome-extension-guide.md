@@ -2,7 +2,7 @@
 
 layout: default
 title: "React DevTools Chrome Extension: A Complete Developer Guide"
-description: "Master React DevTools Chrome extension for debugging React applications. Learn component inspection, profiling, state management, and advanced debugging techniques."
+description: "Master React DevTools Chrome extension for debugging React applications. Learn component inspection, profiling, state management, and advanced."
 date: 2026-03-15
 author: theluckystrike
 permalink: /react-devtools-chrome-extension-guide/
@@ -249,3 +249,10 @@ For production debugging, consider adding conditional development-only code or u
 
 React DevTools transforms React debugging from guesswork into a systematic process. Master the Components panel for state and prop inspection, leverage the Profiler for performance optimization, and integrate these tools with your existing Chrome DevTools workflow. As React applications grow in complexity, these debugging skills become increasingly valuable for building performant, maintainable applications.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
