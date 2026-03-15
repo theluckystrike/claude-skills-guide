@@ -194,7 +194,7 @@ Generate changelogs as part of your PR process so reviewers can verify completen
 
 ```bash
 # Preview changelog without publishing
-claude run lerna-changelog --preview
+claude --print "/lerna-changelog" --preview
 ```
 
 ### 4. Handle Monorepo Dependencies

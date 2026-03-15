@@ -64,7 +64,7 @@ For instance, a runbook documenting database migrations might invoke the `tdd` s
 2. Run the migration using the tdd skill to validate:
 
 \`\`\`bash
-claude run tdd --test migrations/test_users.sql
+claude --print "/tdd" --test migrations/test_users.sql
 \`\`\`
 
 3. Verify the schema change applied correctly
@@ -115,7 +115,7 @@ Claude skills extend runbook functionality significantly. The `frontend-design` 
 2. Run the frontend-design skill to capture new screenshots:
 
 ```bash
-claude run frontend-design capture --component button-group
+claude --print "/frontend-design" capture --component button-group
 ```
 
 3. Verify screenshots match design specifications

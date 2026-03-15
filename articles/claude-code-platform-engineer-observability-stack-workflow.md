@@ -198,7 +198,7 @@ Claude Code excels at creating automated workflows. Here's how to integrate obse
 
 ```bash
 # Create an observability validation workflow
-claude create observability-verify \
+claude "create observability-verify \"
   --service payment-service \
   --validate-metrics \
   --validate-alerts \

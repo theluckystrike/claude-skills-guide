@@ -114,7 +114,7 @@ For each control, create Claude Code skills that continuously verify compliance:
 {% raw %}
 ```bash
 # Example: Running compliance verification in CI/CD
-claude run-skill \
+claude --print \
   --skill compliance/control-cc6.1 \
   --context "Verify logical access controls are properly configured" \
   --output compliance-report.json
