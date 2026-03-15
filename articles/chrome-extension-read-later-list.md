@@ -6,6 +6,10 @@ description: "Learn how to build a Chrome extension for managing a read later li
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-read-later-list/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Read Later List: A Developer Guide

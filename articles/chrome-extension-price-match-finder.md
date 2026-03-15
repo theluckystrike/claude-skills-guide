@@ -5,6 +5,10 @@ description: "Learn how to build a Chrome extension that finds lower prices acro
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-price-match-finder/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Building a Chrome Extension Price Match Finder

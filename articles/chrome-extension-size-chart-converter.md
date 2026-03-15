@@ -6,6 +6,10 @@ description: "Learn how Chrome extension size limits work, convert between diffe
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-size-chart-converter/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Size Chart Converter: A Developer's Guide

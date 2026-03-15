@@ -5,6 +5,10 @@ description: "Learn how to build and use an eBay sniper Chrome extension for aut
 date: 2026-03-15
 author: theluckystrike
 permalink: /ebay-sniper-chrome-extension/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

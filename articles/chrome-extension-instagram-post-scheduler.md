@@ -5,6 +5,10 @@ description: "Learn how to build a Chrome extension that schedules Instagram pos
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-instagram-post-scheduler/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Building a Chrome Extension for Instagram Post Scheduling: A Developer's Guide
