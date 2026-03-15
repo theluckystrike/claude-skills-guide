@@ -6,7 +6,7 @@ description: "Learn how Chrome block phishing extension technology works under t
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-block-phishing-extension/
-categories: [security, chrome-extension]
+categories: [security, guides]
 tags: [chrome-extension, phishing, browser-security, web-security, claude-skills]
 reviewed: true
 score: 8

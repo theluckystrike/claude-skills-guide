@@ -36,7 +36,6 @@ Create a new skill file for license auditing. This skill will work with multiple
 ---
 name: license-audit
 description: Scans project dependencies and generates license compliance reports
-tools: [Read, Bash, Glob]
 ---
 ```
 

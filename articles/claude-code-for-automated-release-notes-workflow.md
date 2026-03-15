@@ -53,7 +53,6 @@ Create a skill that handles the entire workflow. Here's a practical structure:
 ---
 name: release-notes
 description: Generate automated release notes from git changes
-tools: [Bash, Read, Write, edit_file]
 ---
 ```
 
@@ -108,8 +107,6 @@ If you manage multiple repositories, create a skill that handles each one differ
 ---
 name: release-notes
 description: Generate release notes for specified repository
-env:
-  REPO_PATH: /path/to/repo
 ---
 ```
 

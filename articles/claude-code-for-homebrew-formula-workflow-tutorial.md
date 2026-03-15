@@ -53,7 +53,6 @@ First, ensure you have Claude Code installed and configured. Then, create a spec
 ---
 name: homebrew-formula-helper
 description: "Assists with Homebrew formula creation, testing, and maintenance"
-tools: [read_file, write_file, bash]
 ---
 
 You are a Homebrew formula expert. When asked to create or modify formulas:

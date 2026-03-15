@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /duckduckgo-vs-chrome-privacy/
 reviewed: true
 score: 8
-categories: [privacy, browsers, security]
+categories: [guides, guides, security]
 tags: [duckduckgo, chrome, privacy, developer-tools]
 ---
 

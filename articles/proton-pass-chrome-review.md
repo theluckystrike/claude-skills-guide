@@ -6,7 +6,7 @@ description: "A practical review of Proton Pass Chrome extension for developers 
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /proton-pass-chrome-review/
-categories: [security, password-manager]
+categories: [security, guides]
 tags: [chrome, proton-pass, developer-tools, claude-skills]
 reviewed: true
 score: 8
