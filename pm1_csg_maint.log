@@ -1,0 +1,1342 @@
+[12:35:26] PM1 claude-skills-guide maintenance loop started.
+[12:35:26] --- Cycle 1 ---
+[12:35:27] pull: Updating 8a550ded..4b8e4161
+Fast-forward
+ articles/browser-speed-benchmark-2026.md           |  146 +
+ articles/chrome-canary-vs-stable-speed.md          |    2 +-
+ articles/chrome-core-web-vitals-fix.md             |  305 +-
+ articles/chrome-developer-tools-slow.md            |  255 +-
+ articles/chrome-extension-slowing-browser.md       |  267 +-
+ articles/chrome-flags-faster-browsing.md           |  195 +
+ articles/chrome-hardware-acceleration.md           |  203 ++
+ articles/chrome-ios-slow-fix.md                    |  231 +-
+ articles/chrome-ipad-slow-fix.md                   |    4 +-
+ articles/chrome-lag-switching-tabs.md              |  215 ++
+ articles/chrome-print-slow-fix.md                  |    2 +-
+ articles/chrome-slow-startup.md                    |  128 +
+ articles/chrome-tabs-crashing.md                   |  229 ++
+ articles/chrome-vs-firefox-memory-2026.md          |  140 +
+ articles/chrome-wasm-performance.md                |  228 +-
+ ...code-for-oss-roadmap-workflow-tutorial-guide.md |  214 ++
+ ...ode-for-performance-budget-workflow-tutorial.md |    2 +-
+ articles/speed-up-chrome-low-ram.md                |  306 +-
+ index.md                                           | 3841 ++++++++++++--------
+ 19 files changed, 4660 insertions(+), 2253 deletions(-)
+ create mode 100644 articles/browser-speed-benchmark-2026.md
+ create mode 100644 articles/chrome-flags-faster-browsing.md
+ create mode 100644 articles/chrome-hardware-acceleration.md
+ create mode 100644 articles/chrome-lag-switching-tabs.md
+ create mode 100644 articles/chrome-slow-startup.md
+ create mode 100644 articles/chrome-tabs-crashing.md
+ create mode 100644 articles/chrome-vs-firefox-memory-2026.md
+ create mode 100644 articles/claude-code-for-oss-roadmap-workflow-tutorial-guide.md
+[12:35:28] claude-skills-guide: 14 unreviewed, 0 raw-tag regressions — fixing 14 articles
+[12:35:28]   fixed 14/14 articles
+[12:35:28]   commit: [main 25b81a65] maint: cycle1 14 articles raw-tag/review (pm1-csg)
+ 14 files changed, 99 insertions(+), 17 deletions(-)
+[12:35:30]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   4b8e4161..25b81a65  main -> main
+[12:35:30] PUSH OK maint cycle1 14 fixes (csg)
+[12:35:30]   sleeping 120s...
+[12:37:30] --- Cycle 2 ---
+[12:37:31] pull: Already up to date.
+[12:37:31] claude-skills-guide: clean — 2363 articles, 0 issues
+[12:37:31]   sleeping 120s...
+[12:39:31] --- Cycle 3 ---
+[12:39:33] pull: Updating 25b81a65..e4b2807a
+Fast-forward
+ articles/browser-speed-benchmark-2026.md                      | 11 +++++++++--
+ articles/chrome-core-web-vitals-fix.md                        |  7 +++++++
+ articles/chrome-developer-tools-slow.md                       |  7 +++++++
+ articles/chrome-extension-slowing-browser.md                  |  7 +++++++
+ articles/chrome-flags-faster-browsing.md                      |  7 +++++++
+ articles/chrome-hardware-acceleration.md                      |  9 ++++++++-
+ articles/chrome-ios-slow-fix.md                               | 11 +++++++++--
+ articles/chrome-lag-switching-tabs.md                         |  9 ++++++++-
+ articles/chrome-slow-startup.md                               |  9 ++++++++-
+ articles/chrome-tabs-crashing.md                              | 11 +++++++++--
+ articles/chrome-vs-firefox-memory-2026.md                     | 11 +++++++++--
+ articles/chrome-wasm-performance.md                           |  7 +++++++
+ .../claude-code-for-oss-roadmap-workflow-tutorial-guide.md    |  9 ++++++++-
+ articles/speed-up-chrome-low-ram.md                           |  9 ++++++++-
+ 14 files changed, 111 insertions(+), 13 deletions(-)
+[12:39:33] claude-skills-guide: clean — 2363 articles, 0 issues
+[12:39:33]   sleeping 120s...
+[12:41:33] --- Cycle 4 ---
+[12:41:34] pull: Already up to date.
+[12:41:35] claude-skills-guide: clean — 2363 articles, 0 issues
+[12:41:35]   sleeping 120s...
+[12:43:35] --- Cycle 5 ---
+[12:43:36] pull: Already up to date.
+[12:43:36] claude-skills-guide: clean — 2363 articles, 0 issues
+[12:43:36]   sleeping 120s...
+[12:45:36] --- Cycle 6 ---
+[12:45:37] pull: Already up to date.
+[12:45:37] claude-skills-guide: clean — 2363 articles, 0 issues
+[12:45:37]   sleeping 120s...
+[12:47:37] --- Cycle 7 ---
+[12:47:38] pull: Updating e4b2807a..fc8884f0
+Fast-forward
+ articles/ai-accessibility-chrome-extension.md      | 376 ++++++++++--------
+ articles/ai-answer-engine-chrome-extension.md      |   2 +-
+ articles/ai-blog-post-generator-chrome.md          | 219 ++++------
+ articles/ai-headline-writer-chrome-extension.md    | 237 ++++++-----
+ articles/ai-linkedin-post-writer-chrome.md         | 336 ++++++++++------
+ articles/ai-pdf-summarizer-chrome-extension.md     | 293 +++++---------
+ articles/bitwarden-vs-lastpass-chrome-2026.md      | 239 ++++++-----
+ articles/block-webrtc-leak-chrome.md               | 280 +++++++------
+ articles/chrome-block-phishing-extension.md        | 441 +++++++++------------
+ articles/chrome-compromised-password-alert.md      | 233 ++++++-----
+ articles/chrome-extension-diff-checker.md          | 147 +++++++
+ articles/chrome-extension-http-header-viewer.md    | 174 ++++++++
+ articles/chrome-extension-mock-api-responses.md    | 210 ++++++++++
+ articles/chrome-extension-permissions-too-many.md  | 236 ++++-------
+ articles/chrome-extension-shadow-dom-viewer.md     | 250 +++++-------
+ articles/chrome-extension-tailwind-css-devtools.md | 205 ++++++++++
+ articles/chrome-extension-typescript-playground.md | 301 ++++++--------
+ articles/chrome-extension-wasm-debugger.md         | 202 +++++-----
+ articles/chrome-extensions-that-track-you.md       | 262 ++++++------
+ articles/chrome-omnibox-slow.md                    | 132 ++++++
+ articles/chrome-proxy-slow.md                      | 187 +++++++++
+ articles/chrome-web-vitals-optimization.md         | 316 ++++++++-------
+ ...e-code-for-dependency-license-audit-workflow.md | 217 ++++++++++
+ ...-code-for-homebrew-formula-workflow-tutorial.md | 187 +++++++++
+ ...-code-for-release-pipeline-workflow-tutorial.md | 318 ++++++---------
+ ...-code-for-release-rollback-workflow-tutorial.md | 390 +++++++-----------
+ articles/disable-chrome-background-extensions.md   | 318 +++++++++------
+ articles/duckduckgo-vs-chrome-privacy.md           | 195 +++++++++
+ articles/mock-data/users.json                      |   7 +
+ articles/proton-pass-chrome-review.md              | 182 +++++++++
+ 30 files changed, 4339 insertions(+), 2753 deletions(-)
+ create mode 100644 articles/chrome-extension-diff-checker.md
+ create mode 100644 articles/chrome-extension-http-header-viewer.md
+ create mode 100644 articles/chrome-extension-mock-api-responses.md
+ create mode 100644 articles/chrome-extension-tailwind-css-devtools.md
+ create mode 100644 articles/chrome-omnibox-slow.md
+ create mode 100644 articles/chrome-proxy-slow.md
+ create mode 100644 articles/claude-code-for-dependency-license-audit-workflow.md
+ create mode 100644 articles/claude-code-for-homebrew-formula-workflow-tutorial.md
+ create mode 100644 articles/duckduckgo-vs-chrome-privacy.md
+ create mode 100644 articles/mock-data/users.json
+ create mode 100644 articles/proton-pass-chrome-review.md
+[12:47:38] claude-skills-guide: 25 unreviewed, 0 raw-tag regressions — fixing 25 articles
+[12:47:38]   fixed 25/25 articles
+[12:47:38]   commit: [main ea680c83] maint: cycle7 25 articles raw-tag/review (pm1-csg)
+ 25 files changed, 165 insertions(+), 31 deletions(-)
+[12:47:41]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   fc8884f0..ea680c83  main -> main
+[12:47:41] PUSH OK maint cycle7 25 fixes (csg)
+[12:47:41]   sleeping 120s...
+[12:49:41] --- Cycle 8 ---
+[12:49:42] pull: Updating ea680c83..8205e0e4
+Fast-forward
+ articles/ai-accessibility-chrome-extension.md                 |  7 +++++++
+ articles/ai-blog-post-generator-chrome.md                     | 11 +++++++++--
+ articles/ai-headline-writer-chrome-extension.md               |  7 +++++++
+ articles/ai-linkedin-post-writer-chrome.md                    | 11 +++++++++--
+ articles/ai-pdf-summarizer-chrome-extension.md                |  7 +++++++
+ articles/bitwarden-vs-lastpass-chrome-2026.md                 | 11 +++++++++--
+ articles/block-webrtc-leak-chrome.md                          |  7 +++++++
+ articles/chrome-block-phishing-extension.md                   | 11 +++++++++--
+ articles/chrome-compromised-password-alert.md                 |  9 ++++++++-
+ articles/chrome-extension-diff-checker.md                     |  9 ++++++++-
+ articles/chrome-extension-http-header-viewer.md               |  9 ++++++++-
+ articles/chrome-extension-mock-api-responses.md               |  7 +++++++
+ articles/chrome-extension-permissions-too-many.md             |  7 +++++++
+ articles/chrome-extension-shadow-dom-viewer.md                |  9 ++++++++-
+ articles/chrome-extension-tailwind-css-devtools.md            | 11 +++++++++--
+ articles/chrome-extension-typescript-playground.md            |  7 +++++++
+ articles/chrome-extension-wasm-debugger.md                    |  7 +++++++
+ articles/chrome-extensions-that-track-you.md                  | 11 +++++++++--
+ articles/chrome-omnibox-slow.md                               | 11 +++++++++--
+ articles/chrome-proxy-slow.md                                 |  9 ++++++++-
+ articles/chrome-web-vitals-optimization.md                    |  9 ++++++++-
+ articles/claude-code-for-dependency-license-audit-workflow.md |  9 ++++++++-
+ .../claude-code-for-homebrew-formula-workflow-tutorial.md     |  9 ++++++++-
+ .../claude-code-for-release-pipeline-workflow-tutorial.md     |  9 ++++++++-
+ .../claude-code-for-release-rollback-workflow-tutorial.md     |  7 +++++++
+ articles/disable-chrome-background-extensions.md              |  9 ++++++++-
+ articles/duckduckgo-vs-chrome-privacy.md                      |  9 ++++++++-
+ articles/proton-pass-chrome-review.md                         |  7 +++++++
+ 28 files changed, 221 insertions(+), 25 deletions(-)
+[12:49:43] claude-skills-guide: clean — 2373 articles, 0 issues
+[12:49:43]   sleeping 120s...
+[12:51:43] --- Cycle 9 ---
+[12:51:43] pull: Already up to date.
+[12:51:44] claude-skills-guide: clean — 2373 articles, 0 issues
+[12:51:44]   sleeping 120s...
+[12:53:44] --- Cycle 10 ---
+[12:53:45] pull: Already up to date.
+[12:53:45] claude-skills-guide: clean — 2373 articles, 0 issues
+[12:53:45]   sleeping 120s...
+[12:55:45] --- Cycle 11 ---
+[12:55:46] pull: Already up to date.
+[12:55:46] claude-skills-guide: clean — 2373 articles, 0 issues
+[12:55:46]   sleeping 120s...
+[12:57:46] --- Cycle 12 ---
+[12:57:47] pull: Already up to date.
+[12:57:47] claude-skills-guide: clean — 2373 articles, 0 issues
+[12:57:47]   sleeping 120s...
+[12:59:47] --- Cycle 13 ---
+[12:59:48] pull: Already up to date.
+[12:59:48] claude-skills-guide: clean — 2373 articles, 0 issues
+[12:59:48]   sleeping 120s...
+[13:01:48] --- Cycle 14 ---
+[13:01:50] pull: Already up to date.
+[13:01:50] claude-skills-guide: clean — 2373 articles, 0 issues
+[13:01:50]   sleeping 120s...
+[13:03:50] --- Cycle 15 ---
+[13:03:51] pull: Updating 8205e0e4..39875e5a
+Fast-forward
+ ...chrome-extension-blog-post-outline-generator.md | 149 +++++
+ articles/chrome-extension-css-coverage-analyzer.md | 230 ++++----
+ .../chrome-extension-delivery-date-estimator.md    | 143 +++++
+ articles/chrome-extension-figma-inspector.md       | 151 +++++
+ .../chrome-extension-file-sharing-quick-upload.md  | 188 ++++++
+ .../chrome-extension-focus-timer-productivity.md   | 228 +++++++
+ articles/chrome-extension-habit-tracker-work.md    | 283 +++++++++
+ .../chrome-extension-import-duty-calculator.md     | 653 +++++++++++++--------
+ articles/chrome-extension-knowledge-wiki-team.md   | 197 +++++++
+ .../chrome-extension-meeting-agenda-template.md    | 188 ++++++
+ .../chrome-extension-meeting-transcription-live.md | 216 +++++++
+ articles/chrome-extension-miro-whiteboard.md       | 266 +++++++++
+ .../chrome-extension-product-research-amazon.md    | 297 ++++++++++
+ articles/chrome-extension-svelte-devtools.md       | 208 +++++++
+ articles/chrome-extension-team-status-tracker.md   | 258 ++++++++
+ articles/chrome-extension-trello-power-up.md       | 263 +++++++++
+ ...rome-extension-user-agent-switcher-developer.md | 266 +++++++++
+ articles/chrome-extension-walmart-price-tracker.md | 382 ++++++++++++
+ articles/chrome-extension-warranty-tracker.md      | 116 ++++
+ .../chrome-extension-window-resizer-testing.md     | 216 +++++++
+ articles/chrome-extension-workspace-switcher.md    | 191 ++++++
+ ...de-code-for-automated-release-notes-workflow.md | 246 +++-----
+ ...de-for-cargo-crate-publishing-workflow-guide.md | 225 ++++---
+ ...e-for-cla-management-workflow-tutorial-guide.md | 184 ++++++
+ articles/deal-finder-chrome-extension.md           | 240 ++++++++
+ articles/price-comparison-chrome-extension.md      | 289 +++++++++
+ articles/price-tracker-chrome-extension-amazon.md  | 325 ++++++++++
+ 27 files changed, 6021 insertions(+), 577 deletions(-)
+ create mode 100644 articles/chrome-extension-blog-post-outline-generator.md
+ create mode 100644 articles/chrome-extension-delivery-date-estimator.md
+ create mode 100644 articles/chrome-extension-figma-inspector.md
+ create mode 100644 articles/chrome-extension-file-sharing-quick-upload.md
+ create mode 100644 articles/chrome-extension-focus-timer-productivity.md
+ create mode 100644 articles/chrome-extension-habit-tracker-work.md
+ create mode 100644 articles/chrome-extension-knowledge-wiki-team.md
+ create mode 100644 articles/chrome-extension-meeting-agenda-template.md
+ create mode 100644 articles/chrome-extension-meeting-transcription-live.md
+ create mode 100644 articles/chrome-extension-miro-whiteboard.md
+ create mode 100644 articles/chrome-extension-product-research-amazon.md
+ create mode 100644 articles/chrome-extension-svelte-devtools.md
+ create mode 100644 articles/chrome-extension-team-status-tracker.md
+ create mode 100644 articles/chrome-extension-trello-power-up.md
+ create mode 100644 articles/chrome-extension-user-agent-switcher-developer.md
+ create mode 100644 articles/chrome-extension-walmart-price-tracker.md
+ create mode 100644 articles/chrome-extension-warranty-tracker.md
+ create mode 100644 articles/chrome-extension-window-resizer-testing.md
+ create mode 100644 articles/chrome-extension-workspace-switcher.md
+ create mode 100644 articles/claude-code-for-cla-management-workflow-tutorial-guide.md
+ create mode 100644 articles/deal-finder-chrome-extension.md
+ create mode 100644 articles/price-comparison-chrome-extension.md
+ create mode 100644 articles/price-tracker-chrome-extension-amazon.md
+[13:03:51] claude-skills-guide: 25 unreviewed, 0 raw-tag regressions — fixing 25 articles
+[13:03:52]   fixed 25/25 articles
+[13:03:52]   commit: [main 811cc3d7] maint: cycle15 25 articles raw-tag/review (pm1-csg)
+ 25 files changed, 176 insertions(+), 32 deletions(-)
+[13:03:54]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   39875e5a..811cc3d7  main -> main
+[13:03:54] PUSH OK maint cycle15 25 fixes (csg)
+[13:03:54]   sleeping 120s...
+[13:05:54] --- Cycle 16 ---
+[13:05:55] pull: Already up to date.
+[13:05:55] claude-skills-guide: clean — 2396 articles, 0 issues
+[13:05:55]   sleeping 120s...
+[13:07:55] --- Cycle 17 ---
+[13:07:56] pull: Updating 811cc3d7..198c2436
+Fast-forward
+ articles/chrome-extension-blog-post-outline-generator.md      | 11 +++++++++--
+ articles/chrome-extension-css-coverage-analyzer.md            |  9 ++++++++-
+ articles/chrome-extension-delivery-date-estimator.md          |  9 ++++++++-
+ articles/chrome-extension-figma-inspector.md                  |  9 ++++++++-
+ articles/chrome-extension-file-sharing-quick-upload.md        |  9 ++++++++-
+ articles/chrome-extension-focus-timer-productivity.md         | 11 +++++++++--
+ articles/chrome-extension-habit-tracker-work.md               |  9 ++++++++-
+ articles/chrome-extension-import-duty-calculator.md           |  7 +++++++
+ articles/chrome-extension-knowledge-wiki-team.md              | 11 +++++++++--
+ articles/chrome-extension-meeting-agenda-template.md          | 11 +++++++++--
+ articles/chrome-extension-meeting-transcription-live.md       |  9 ++++++++-
+ articles/chrome-extension-miro-whiteboard.md                  | 11 +++++++++--
+ articles/chrome-extension-product-research-amazon.md          |  9 ++++++++-
+ articles/chrome-extension-svelte-devtools.md                  |  7 +++++++
+ articles/chrome-extension-team-status-tracker.md              |  7 +++++++
+ articles/chrome-extension-trello-power-up.md                  |  9 ++++++++-
+ articles/chrome-extension-user-agent-switcher-developer.md    |  7 +++++++
+ articles/chrome-extension-walmart-price-tracker.md            |  9 ++++++++-
+ articles/chrome-extension-warranty-tracker.md                 |  9 ++++++++-
+ articles/chrome-extension-window-resizer-testing.md           |  9 ++++++++-
+ articles/chrome-extension-workspace-switcher.md               |  7 +++++++
+ articles/claude-code-for-automated-release-notes-workflow.md  |  9 ++++++++-
+ .../claude-code-for-cargo-crate-publishing-workflow-guide.md  |  7 +++++++
+ .../claude-code-for-cla-management-workflow-tutorial-guide.md |  9 ++++++++-
+ articles/deal-finder-chrome-extension.md                      |  7 +++++++
+ articles/price-comparison-chrome-extension.md                 | 11 +++++++++--
+ articles/price-tracker-chrome-extension-amazon.md             |  7 +++++++
+ 27 files changed, 214 insertions(+), 25 deletions(-)
+[13:07:56] claude-skills-guide: clean — 2396 articles, 0 issues
+[13:07:56]   sleeping 120s...
+[13:09:56] --- Cycle 18 ---
+[13:09:57] pull: Already up to date.
+[13:09:57] claude-skills-guide: clean — 2396 articles, 0 issues
+[13:09:57]   sleeping 120s...
+[13:11:57] --- Cycle 19 ---
+[13:11:59] pull: Already up to date.
+[13:11:59] claude-skills-guide: clean — 2396 articles, 0 issues
+[13:11:59]   sleeping 120s...
+[13:13:59] --- Cycle 20 ---
+[13:13:59] pull: Already up to date.
+[13:14:00] claude-skills-guide: clean — 2396 articles, 0 issues
+[13:14:00]   sleeping 120s...
+[13:16:00] --- Cycle 21 ---
+[13:16:00] pull: Already up to date.
+[13:16:01] claude-skills-guide: clean — 2396 articles, 0 issues
+[13:16:01]   sleeping 120s...
+[13:18:01] --- Cycle 22 ---
+[13:18:02] pull: Already up to date.
+[13:18:02] claude-skills-guide: clean — 2396 articles, 0 issues
+[13:18:02]   sleeping 120s...
+[13:20:02] --- Cycle 23 ---
+[13:20:03] pull: Already up to date.
+[13:20:03] claude-skills-guide: clean — 2396 articles, 0 issues
+[13:20:03]   sleeping 120s...
+[13:22:03] --- Cycle 24 ---
+[13:22:05] pull: Updating 198c2436..e0dc8fbe
+Fast-forward
+ .../best-chrome-extensions-for-students-2026.md    | 188 ++++++++++
+ .../chrome-block-file-downloads-group-policy.md    | 184 ++++++++++
+ articles/chrome-browser-reporting-api.md           | 245 +++++++++++++
+ articles/chrome-enterprise-auto-update-settings.md | 147 ++++++++
+ articles/chrome-enterprise-bundle-download.md      | 178 ++++++++++
+ .../chrome-enterprise-certificate-management.md    | 212 ++++++++++++
+ .../chrome-enterprise-deployment-guide-2026.md     | 301 ++++++++++++++++
+ articles/chrome-enterprise-jamf-deployment-mac.md  | 294 ++++++++--------
+ articles/chrome-enterprise-kiosk-mode-setup.md     | 237 +++++++++++++
+ ...chrome-enterprise-network-settings-proxy-pac.md | 192 +++++++++++
+ ...hrome-enterprise-self-hosted-extension-store.md | 291 ++++++++--------
+ .../chrome-enterprise-split-tunnel-browsing.md     | 183 ++++++++++
+ articles/chrome-extension-academic-paper-finder.md | 264 ++++++--------
+ articles/chrome-extension-anki-web-integration.md  |   2 +-
+ ...-extension-arrow-and-text-overlay-screenshot.md | 240 +++++++++++++
+ articles/chrome-extension-batch-image-download.md  | 379 ++++++++++-----------
+ .../chrome-extension-bookmark-manager-students.md  | 312 ++++++-----------
+ .../chrome-extension-core-web-vitals-checker.md    | 243 +++++++++++++
+ articles/chrome-extension-costco-deal-tracker.md   | 281 +++++++++++++++
+ articles/chrome-extension-crop-images-online.md    | 219 ++++++++++++
+ .../chrome-extension-export-highlights-notes.md    | 247 ++++++++++++++
+ articles/chrome-extension-favicon-generator.md     | 189 ++++++++++
+ .../chrome-extension-flash-sale-notification.md    | 300 ++++++++++++++++
+ articles/chrome-extension-github-issues-manager.md |   2 +-
+ articles/chrome-extension-google-serp-preview.md   | 320 +++++++++--------
+ articles/chrome-extension-html-email-preview.md    | 166 +++++++++
+ articles/chrome-extension-inspect-css-styles.md    | 154 +++++++++
+ ...chrome-extension-language-learning-immersion.md | 345 ++++++++-----------
+ .../chrome-extension-periodic-table-reference.md   | 238 +++++++++++++
+ articles/chrome-extension-price-match-finder.md    | 276 +++++++++++++++
+ .../chrome-extension-responsive-design-tester.md   | 224 ++++++------
+ .../chrome-extension-save-research-sessions.md     | 132 +++++++
+ .../chrome-extension-screen-annotation-tool.md     | 272 +++++++++++++++
+ .../chrome-extension-study-schedule-planner.md     | 220 ++++++++++++
+ articles/chrome-extension-svg-editor.md            | 252 ++++++++++++++
+ .../chrome-extension-tab-organizer-research.md     | 240 +++++++++++++
+ articles/chrome-extension-translate-pages.md       | 305 +++++++++++++++++
+ .../chrome-incognito-mode-disable-enterprise.md    | 179 ++++++++++
+ articles/chrome-javascript-blocker-extension.md    | 185 ++++++++++
+ articles/chrome-managed-browser-vs-unmanaged.md    | 241 +++++++------
+ articles/chrome-os-enterprise-management.md        | 234 +++++++++++++
+ articles/google-workspace-chrome-policies.md       | 155 +++++++++
+ 42 files changed, 8036 insertions(+), 1432 deletions(-)
+ create mode 100644 articles/best-chrome-extensions-for-students-2026.md
+ create mode 100644 articles/chrome-block-file-downloads-group-policy.md
+ create mode 100644 articles/chrome-browser-reporting-api.md
+ create mode 100644 articles/chrome-enterprise-auto-update-settings.md
+ create mode 100644 articles/chrome-enterprise-bundle-download.md
+ create mode 100644 articles/chrome-enterprise-certificate-management.md
+ create mode 100644 articles/chrome-enterprise-deployment-guide-2026.md
+ create mode 100644 articles/chrome-enterprise-kiosk-mode-setup.md
+ create mode 100644 articles/chrome-enterprise-network-settings-proxy-pac.md
+ create mode 100644 articles/chrome-enterprise-split-tunnel-browsing.md
+ create mode 100644 articles/chrome-extension-arrow-and-text-overlay-screenshot.md
+ create mode 100644 articles/chrome-extension-core-web-vitals-checker.md
+ create mode 100644 articles/chrome-extension-costco-deal-tracker.md
+ create mode 100644 articles/chrome-extension-crop-images-online.md
+ create mode 100644 articles/chrome-extension-export-highlights-notes.md
+ create mode 100644 articles/chrome-extension-favicon-generator.md
+ create mode 100644 articles/chrome-extension-flash-sale-notification.md
+ create mode 100644 articles/chrome-extension-html-email-preview.md
+ create mode 100644 articles/chrome-extension-inspect-css-styles.md
+ create mode 100644 articles/chrome-extension-periodic-table-reference.md
+ create mode 100644 articles/chrome-extension-price-match-finder.md
+ create mode 100644 articles/chrome-extension-save-research-sessions.md
+ create mode 100644 articles/chrome-extension-screen-annotation-tool.md
+ create mode 100644 articles/chrome-extension-study-schedule-planner.md
+ create mode 100644 articles/chrome-extension-svg-editor.md
+ create mode 100644 articles/chrome-extension-tab-organizer-research.md
+ create mode 100644 articles/chrome-extension-translate-pages.md
+ create mode 100644 articles/chrome-incognito-mode-disable-enterprise.md
+ create mode 100644 articles/chrome-javascript-blocker-extension.md
+ create mode 100644 articles/chrome-os-enterprise-management.md
+ create mode 100644 articles/google-workspace-chrome-policies.md
+[13:22:06] claude-skills-guide: 35 unreviewed, 0 raw-tag regressions — fixing 35 articles
+[13:22:06]   fixed 35/35 articles
+[13:22:06]   commit: [main 0e9185a8] maint: cycle24 35 articles raw-tag/review (pm1-csg)
+ 35 files changed, 252 insertions(+), 46 deletions(-)
+[13:22:10]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   e0dc8fbe..0e9185a8  main -> main
+[13:22:10] PUSH OK maint cycle24 35 fixes (csg)
+[13:22:10]   sleeping 120s...
+[13:24:10] --- Cycle 25 ---
+[13:24:11] pull: Already up to date.
+[13:24:11] claude-skills-guide: clean — 2427 articles, 0 issues
+[13:24:11]   sleeping 120s...
+[13:26:11] --- Cycle 26 ---
+[13:26:12] pull: Already up to date.
+[13:26:13] claude-skills-guide: clean — 2427 articles, 0 issues
+[13:26:13]   sleeping 120s...
+[13:28:13] --- Cycle 27 ---
+[13:28:13] pull: Updating 40e8969f..668afbf0
+Fast-forward
+ articles/claude-code-for-automated-release-notes-workflow.md       | 2 +-
+ articles/claude-code-for-cargo-crate-publishing-workflow-guide.md  | 2 +-
+ articles/claude-code-for-cla-management-workflow-tutorial-guide.md | 2 +-
+ articles/claude-code-for-dependency-license-audit-workflow.md      | 2 +-
+ articles/claude-code-for-docs-as-code-workflow-tutorial-guide.md   | 2 +-
+ articles/claude-code-for-go-to-definition-workflow-tutorial.md     | 2 +-
+ articles/claude-code-for-homebrew-formula-workflow-tutorial.md     | 2 +-
+ articles/claude-code-for-oss-bug-report-workflow-tutorial.md       | 2 +-
+ articles/claude-code-for-oss-funding-workflow-tutorial-guide.md    | 2 +-
+ articles/claude-code-for-oss-roadmap-workflow-tutorial-guide.md    | 2 +-
+ articles/claude-code-for-release-branching-strategy-workflow.md    | 2 +-
+ articles/claude-code-for-release-pipeline-workflow-tutorial.md     | 2 +-
+ articles/claude-code-for-release-rollback-workflow-tutorial.md     | 2 +-
+ 13 files changed, 13 insertions(+), 13 deletions(-)
+[13:28:14] claude-skills-guide: clean — 2427 articles, 0 issues
+[13:28:14]   sleeping 120s...
+[13:30:14] --- Cycle 28 ---
+[13:30:15] pull: Updating 668afbf0..05445e11
+Fast-forward
+ .../chrome-disable-developer-tools-group-policy.md | 191 ++++++-----
+ ...hrome-extension-compare-sources-side-by-side.md | 204 ++++++++++++
+ articles/chrome-extension-dual-pane-reader.md      | 232 +++++++++++++
+ ...hrome-extension-enterprise-approval-workflow.md | 304 ++++++++---------
+ articles/chrome-extension-flashcard-maker.md       | 208 ++++++++++++
+ ...hrome-extension-outlook-calendar-integration.md | 214 ++++++++++++
+ articles/chrome-extension-pubmed-search-helper.md  | 314 +++++++++---------
+ articles/chrome-extension-research-organizer.md    | 256 ++++++++++++++
+ articles/chrome-extension-speed-reader-tool.md     | 193 +++++++++++
+ articles/chrome-extension-vocabulary-builder.md    | 367 +++++++++------------
+ .../citation-generator-chrome-extension-free.md    | 243 ++++++++++++++
+ articles/google-meet-chrome-extension-enhancer.md  | 222 +++++++++++++
+ articles/noise-cancellation-chrome-extension.md    | 322 ++++++------------
+ articles/time-tracking-chrome-extension-free.md    | 113 +++++++
+ 14 files changed, 2550 insertions(+), 833 deletions(-)
+ create mode 100644 articles/chrome-extension-compare-sources-side-by-side.md
+ create mode 100644 articles/chrome-extension-dual-pane-reader.md
+ create mode 100644 articles/chrome-extension-flashcard-maker.md
+ create mode 100644 articles/chrome-extension-outlook-calendar-integration.md
+ create mode 100644 articles/chrome-extension-research-organizer.md
+ create mode 100644 articles/chrome-extension-speed-reader-tool.md
+ create mode 100644 articles/citation-generator-chrome-extension-free.md
+ create mode 100644 articles/google-meet-chrome-extension-enhancer.md
+ create mode 100644 articles/time-tracking-chrome-extension-free.md
+[13:30:16] claude-skills-guide: 12 unreviewed, 1 raw-tag regressions — fixing 13 articles
+[13:30:16]   raw-tag regressions: ['chrome-extension-flashcard-maker.md']
+[13:30:16]   fixed 13/13 articles
+[13:30:16]   commit: [main 19dee5ee] maint: cycle28 13 articles raw-tag/review (pm1-csg)
+ 13 files changed, 94 insertions(+), 16 deletions(-)
+[13:30:18]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   05445e11..19dee5ee  main -> main
+[13:30:18] PUSH OK maint cycle28 13 fixes (csg)
+[13:30:18]   sleeping 120s...
+[13:32:18] --- Cycle 29 ---
+[13:32:20] pull: Updating 147ed0a9..0e0b4e88
+Fast-forward
+ articles/chrome-browser-token-enrollment.md        | 168 +++++++
+ articles/chrome-enterprise-content-filtering.md    | 230 +++++++++
+ articles/chrome-enterprise-data-loss-prevention.md | 253 ++++++++++
+ .../chrome-enterprise-stable-channel-management.md | 225 ++++-----
+ articles/chrome-enterprise-startup-pages-policy.md | 210 +++++++++
+ .../chrome-extension-blackboard-learn-helper.md    | 414 ++++++++---------
+ articles/chrome-extension-figma-inspector.md       | 193 ++++----
+ .../chrome-extension-focus-timer-productivity.md   | 287 +++++-------
+ ...chrome-extension-invoice-generator-freelance.md | 288 ++++++------
+ articles/chrome-extension-knowledge-wiki-team.md   |   2 +-
+ articles/chrome-extension-linear-issue-tracker.md  | 382 ++++++++-------
+ articles/chrome-extension-notion-web-clipper.md    | 227 +++++++++
+ .../chrome-extension-paraphrase-tool-students.md   | 245 ++++++++++
+ articles/chrome-extension-retrospective-board.md   | 148 ++++++
+ .../chrome-extension-screen-recorder-meetings.md   | 515 +++++++++++++++++++++
+ .../chrome-extension-tab-suspender-memory-saver.md | 163 +++++++
+ .../chrome-extension-workload-balance-tracker.md   | 303 ++++++++----
+ ...code-for-extract-method-refactoring-workflow.md | 198 ++++++++
+ articles/meeting-scheduler-chrome-extension.md     | 238 ++++++++++
+ 19 files changed, 3662 insertions(+), 1027 deletions(-)
+ create mode 100644 articles/chrome-browser-token-enrollment.md
+ create mode 100644 articles/chrome-enterprise-content-filtering.md
+ create mode 100644 articles/chrome-enterprise-data-loss-prevention.md
+ create mode 100644 articles/chrome-enterprise-startup-pages-policy.md
+ create mode 100644 articles/chrome-extension-notion-web-clipper.md
+ create mode 100644 articles/chrome-extension-paraphrase-tool-students.md
+ create mode 100644 articles/chrome-extension-retrospective-board.md
+ create mode 100644 articles/chrome-extension-screen-recorder-meetings.md
+ create mode 100644 articles/chrome-extension-tab-suspender-memory-saver.md
+ create mode 100644 articles/claude-code-for-extract-method-refactoring-workflow.md
+ create mode 100644 articles/meeting-scheduler-chrome-extension.md
+[13:32:21] claude-skills-guide: 13 unreviewed, 0 raw-tag regressions — fixing 13 articles
+[13:32:21]   fixed 13/13 articles
+[13:32:21]   commit: [main 36c152b3] maint: cycle29 13 articles raw-tag/review (pm1-csg)
+ 13 files changed, 92 insertions(+), 18 deletions(-)
+[13:32:21]   push cooldown: waiting 58s
+[13:33:21]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+ ! [rejected]          main -> main (non-fast-forward)
+erro
+[13:33:21] PUSH OK maint cycle29 13 fixes (csg)
+[13:33:21]   sleeping 120s...
+[13:35:21] --- Cycle 30 ---
+[13:35:21] pull: error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git ad
+[13:35:22] claude-skills-guide: clean — 2447 articles, 0 issues
+[13:35:22]   sleeping 120s...
+[13:37:22] --- Cycle 31 ---
+[13:37:22] pull: error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git ad
+[13:37:22] claude-skills-guide: clean — 2447 articles, 0 issues
+[13:37:22]   sleeping 120s...
+[13:39:22] --- Cycle 32 ---
+[13:39:22] pull: error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git ad
+[13:39:23] claude-skills-guide: clean — 2447 articles, 0 issues
+[13:39:23]   sleeping 120s...
+[13:41:23] --- Cycle 33 ---
+[13:41:24] pull: Already up to date.
+[13:41:24] claude-skills-guide: clean — 2457 articles, 0 issues
+[13:41:24]   sleeping 120s...
+[13:43:24] --- Cycle 34 ---
+[13:43:24] pull: error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git ad
+[13:43:25] claude-skills-guide: clean — 2469 articles, 0 issues
+[13:43:25]   sleeping 120s...
+[13:45:25] --- Cycle 35 ---
+[13:45:26] pull: Updating 95bb017d..11ee29d3
+Fast-forward
+ articles/claude-code-for-inspector-v2-workflow.md  |   8 +-
+ ...e-for-knowledge-base-workflow-tutorial-guide.md | 317 ++++++++++++++++++
+ ...ude-code-for-runbook-review-process-workflow.md | 230 ++++++++++++++
+ ...de-for-tree-sitter-syntax-highlighting-guide.md | 353 ++++++++++-----------
+ 4 files changed, 715 insertions(+), 193 deletions(-)
+ create mode 100644 articles/claude-code-for-knowledge-base-workflow-tutorial-guide.md
+ create mode 100644 articles/claude-code-for-runbook-review-process-workflow.md
+[13:45:27] claude-skills-guide: 3 unreviewed, 0 raw-tag regressions — fixing 3 articles
+[13:45:27]   fixed 3/3 articles
+[13:45:27]   commit: [main bbd1ebea] maint: cycle35 3 articles raw-tag/review (pm1-csg)
+ 3 files changed, 18 insertions(+), 6 deletions(-)
+[13:45:29]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   11ee29d3..bbd1ebea  main -> main
+[13:45:29] PUSH OK maint cycle35 3 fixes (csg)
+[13:45:29]   sleeping 120s...
+[13:47:29] --- Cycle 36 ---
+[13:47:30] pull: Already up to date.
+[13:47:30] claude-skills-guide: 3 unreviewed, 0 raw-tag regressions — fixing 3 articles
+[13:47:30]   fixed 3/3 articles
+[13:47:31]   commit: [main 6478732f] maint: cycle36 3 articles raw-tag/review (pm1-csg)
+ 3 files changed, 15 insertions(+), 3 deletions(-)
+[13:47:31]   push cooldown: waiting 59s
+[13:48:32]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   6a54893e..6ac12768  main -> main
+[13:48:32] PUSH OK maint cycle36 3 fixes (csg)
+[13:48:32]   sleeping 120s...
+[13:50:32] --- Cycle 37 ---
+[13:50:34] pull: Merge made by the 'ort' strategy.
+ ...-code-for-cdn-optimization-workflow-tutorial.md | 451 +++++++++++----------
+ ...de-for-jmh-benchmark-workflow-tutorial-guide.md | 274 +++++++++++++
+ 2 files changed, 503 insertions(+), 222 deletions(-)
+ create mode 100644 articles/claude-code-for-jmh-benchmark-workflow-tutorial-guide.md
+[13:50:35] claude-skills-guide: 2 unreviewed, 0 raw-tag regressions — fixing 2 articles
+[13:50:35]   fixed 2/2 articles
+[13:50:35]   commit: [main 0f8fbaa8] maint: cycle37 2 articles raw-tag/review (pm1-csg)
+ 2 files changed, 10 insertions(+), 2 deletions(-)
+[13:50:35]   push cooldown: waiting 58s
+[13:51:35]   push attempt 1: Everything up-to-date
+[13:51:35] PUSH OK maint cycle37 2 fixes (csg)
+[13:51:35]   sleeping 120s...
+[13:53:35] --- Cycle 38 ---
+[13:53:36] pull: Already up to date.
+[13:53:36] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[13:53:36]   fixed 1/1 articles
+[13:53:36]   commit: [main 73648cf3] maint: cycle38 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 4 insertions(+)
+[13:53:36]   push cooldown: waiting 59s
+[13:54:39]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   170a530c..a9720de8  main -> main
+[13:54:39] PUSH OK maint cycle38 1 fixes (csg)
+[13:54:39]   sleeping 120s...
+[13:56:39] --- Cycle 39 ---
+[13:56:40] pull: Updating a9720de8..ddc09cad
+Fast-forward
+ ...-for-apm-integration-workflow-tutorial-guide.md |   9 +-
+ ...-code-for-cdn-optimization-workflow-tutorial.md |   9 +-
+ ...de-for-ctags-configuration-workflow-tutorial.md |   9 +-
+ ...de-for-database-orm-code-generation-workflow.md |   9 +-
+ ...de-for-distributed-tracing-workflow-tutorial.md |   7 +
+ ...ode-for-fork-and-pull-request-workflow-guide.md | 215 ++++++++++------
+ ...ode-for-go-pprof-profiling-workflow-tutorial.md |   9 +-
+ ...code-for-grpc-stub-generation-workflow-guide.md |   7 +
+ ...de-for-incident-escalation-workflow-tutorial.md |   9 +-
+ ...-code-for-inline-code-documentation-workflow.md |   7 +
+ ...de-for-jmh-benchmark-workflow-tutorial-guide.md |   9 +-
+ ...-for-load-testing-with-locust-workflow-guide.md |   7 +
+ ...-code-for-lsp-document-symbol-workflow-guide.md |   9 +-
+ ...de-for-performance-monitoring-workflow-guide.md |   9 +-
+ ...code-for-readme-generation-workflow-tutorial.md | 274 ++++++++++++---------
+ ...de-for-transaction-tracing-workflow-tutorial.md |   9 +-
+ 16 files changed, 408 insertions(+), 199 deletions(-)
+[13:56:41] claude-skills-guide: 2 unreviewed, 0 raw-tag regressions — fixing 2 articles
+[13:56:41]   fixed 2/2 articles
+[13:56:41]   commit: [main 709e081a] maint: cycle39 2 articles raw-tag/review (pm1-csg)
+ 2 files changed, 11 insertions(+), 3 deletions(-)
+[13:56:41]   push cooldown: waiting 58s
+[13:57:41]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+ ! [rejected]          main -> main (non-fast-forward)
+erro
+[13:57:41] PUSH OK maint cycle39 2 fixes (csg)
+[13:57:41]   sleeping 120s...
+[13:59:41] --- Cycle 40 ---
+[13:59:43] pull: Updating f5563fea..daa418f5
+Fast-forward
+ ...-code-for-homebrew-formula-workflow-tutorial.md | 243 ++++++++++-----------
+ ...aude-code-for-team-wiki-maintenance-workflow.md | 142 ++++++++++++
+ 2 files changed, 259 insertions(+), 126 deletions(-)
+ create mode 100644 articles/claude-code-for-team-wiki-maintenance-workflow.md
+[13:59:43] claude-skills-guide: clean — 2488 articles, 0 issues
+[13:59:43]   sleeping 120s...
+[14:01:43] --- Cycle 41 ---
+[14:01:44] pull: Updating b5245fb3..f5f189a3
+Fast-forward
+ .../workona-alternative-chrome-extension-2026.md   | 151 +++++++++++++++++++++
+ 1 file changed, 151 insertions(+)
+ create mode 100644 articles/workona-alternative-chrome-extension-2026.md
+[14:01:45] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[14:01:45]   fixed 1/1 articles
+[14:01:45]   commit: [main 91a7551f] maint: cycle41 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+[14:01:47]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   f5f189a3..91a7551f  main -> main
+[14:01:47] PUSH OK maint cycle41 1 fixes (csg)
+[14:01:47]   sleeping 120s...
+[14:03:47] --- Cycle 42 ---
+[14:03:48] pull: Already up to date.
+[14:03:48] claude-skills-guide: clean — 2489 articles, 0 issues
+[14:03:48]   sleeping 120s...
+[14:05:48] --- Cycle 43 ---
+[14:05:49] pull: Updating 2e7bf2c3..d9af9798
+Fast-forward
+ articles/claude-code-for-soak-testing-workflow-tutorial-guide.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[14:05:50] claude-skills-guide: 4 unreviewed, 0 raw-tag regressions — fixing 4 articles
+[14:05:50]   fixed 4/4 articles
+[14:05:50]   commit: [main a96dceea] maint: cycle43 4 articles raw-tag/review (pm1-csg)
+ 4 files changed, 28 insertions(+), 6 deletions(-)
+[14:05:52]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   d9af9798..a96dceea  main -> main
+[14:05:52] PUSH OK maint cycle43 4 fixes (csg)
+[14:05:52]   sleeping 120s...
+[14:07:52] --- Cycle 44 ---
+[14:07:53] pull: Already up to date.
+[14:07:53] claude-skills-guide: clean — 2494 articles, 0 issues
+[14:07:53]   sleeping 120s...
+[14:09:53] --- Cycle 45 ---
+[14:09:54] pull: Already up to date.
+[14:09:54] claude-skills-guide: clean — 2494 articles, 0 issues
+[14:09:54]   sleeping 120s...
+[14:11:54] --- Cycle 46 ---
+[14:11:55] pull: Already up to date.
+[14:11:55] claude-skills-guide: 4 unreviewed, 0 raw-tag regressions — fixing 4 articles
+[14:11:55]   fixed 4/4 articles
+[14:11:55]   commit: [main e295ab29] maint: cycle46 4 articles raw-tag/review (pm1-csg)
+ 4 files changed, 26 insertions(+), 6 deletions(-)
+[14:11:57]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   c3994476..e295ab29  main -> main
+[14:11:57] PUSH OK maint cycle46 4 fixes (csg)
+[14:11:57]   sleeping 120s...
+[14:13:57] --- Cycle 47 ---
+[14:13:58] pull: Already up to date.
+[14:13:58] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[14:13:58]   fixed 1/1 articles
+[14:13:58]   commit: [main eac9de3c] maint: cycle47 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+[14:13:58]   push cooldown: waiting 59s
+[14:14:59]   push attempt 1: Everything up-to-date
+[14:14:59] PUSH OK maint cycle47 1 fixes (csg)
+[14:14:59]   sleeping 120s...
+[14:16:59] --- Cycle 48 ---
+[14:17:00] pull: Updating f36fd15e..492f601c
+Fast-forward
+ articles/best-dns-chrome-speed.md                                | 9 ++++++++-
+ articles/chrome-dns-faster-browsing.md                           | 9 ++++++++-
+ articles/chrome-extension-audit-tool.md                          | 2 +-
+ articles/chrome-lighthouse-score-improve.md                      | 9 ++++++++-
+ articles/chrome-new-tab-slow.md                                  | 4 ++--
+ articles/chrome-preload-pages-setting.md                         | 9 ++++++++-
+ articles/chrome-vs-opera-gx-ram.md                               | 7 +++++++
+ .../claude-code-for-artifact-publishing-workflow-tutorial.md     | 9 ++++++++-
+ articles/claude-code-for-keep-a-changelog-workflow-tutorial.md   | 9 ++++++++-
+ articles/disable-chrome-background-extensions.md                 | 9 ++++++++-
+ articles/hootsuite-alternative-chrome-extension-2026.md          | 7 +++++++
+ articles/pesticide-alternative-chrome-extension-2026.md          | 9 ++++++++-
+ 12 files changed, 81 insertions(+), 11 deletions(-)
+[14:17:01] claude-skills-guide: clean — 2500 articles, 0 issues
+[14:17:01]   sleeping 120s...
+[14:19:01] --- Cycle 49 ---
+[14:19:02] pull: Updating 492f601c..da9e729c
+Fast-forward
+ articles/best-vpn-chrome-extension-free.md | 241 +++++++++++++++++------------
+ 1 file changed, 139 insertions(+), 102 deletions(-)
+[14:19:02] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[14:19:02]   fixed 1/1 articles
+[14:19:02]   commit: [main 6ef0dfdb] maint: cycle49 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+[14:19:05]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   da9e729c..6ef0dfdb  main -> main
+[14:19:05] PUSH OK maint cycle49 1 fixes (csg)
+[14:19:05]   sleeping 120s...
+[14:21:05] --- Cycle 50 ---
+[14:21:06] pull: Already up to date.
+[14:21:06] claude-skills-guide: 5 unreviewed, 0 raw-tag regressions — fixing 5 articles
+[14:21:06]   fixed 5/5 articles
+[14:21:06]   commit: [main 37b504b6] maint: cycle50 5 articles raw-tag/review (pm1-csg)
+ 5 files changed, 37 insertions(+), 7 deletions(-)
+[14:21:06]   push cooldown: waiting 59s
+[14:22:07]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   15e41b37..6746e6f6  main -> main
+[14:22:07] PUSH OK maint cycle50 5 fixes (csg)
+[14:22:07]   sleeping 120s...
+[14:24:07] --- Cycle 51 ---
+[14:24:09] pull: Updating ef835f54..ebc70f71
+Fast-forward
+ articles/ai-content-repurposer-chrome-extension.md |  7 +++++++
+ articles/harden-chrome-privacy-2026.md             |  9 ++++++++-
+ articles/proton-pass-chrome-review.md              | 11 +++++++++--
+ articles/stop-chrome-tracking-location.md          | 11 +++++++++--
+ 4 files changed, 33 insertions(+), 5 deletions(-)
+[14:24:09] claude-skills-guide: clean — 2503 articles, 0 issues
+[14:24:09]   sleeping 120s...
+[14:26:09] --- Cycle 52 ---
+[14:26:10] pull: Already up to date.
+[14:26:10] claude-skills-guide: 4 unreviewed, 2 raw-tag regressions — fixing 4 articles
+[14:26:10]   raw-tag regressions: ['ai-inbox-organizer-chrome-extension.md', 'chatgpt-for-google-chrome-extension.md']
+[14:26:10]   fixed 4/4 articles
+[14:26:10]   commit: [main 1e1ae840] maint: cycle52 4 articles raw-tag/review (pm1-csg)
+ 4 files changed, 40 insertions(+), 8 deletions(-)
+[14:26:12]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   7c21b62f..1e1ae840  main -> main
+[14:26:12] PUSH OK maint cycle52 4 fixes (csg)
+[14:26:12]   sleeping 120s...
+[14:28:12] --- Cycle 53 ---
+[14:28:14] pull: Updating 1e1ae840..42b5f1b9
+Fast-forward
+ articles/ai-blog-post-generator-chrome.md          |   7 +
+ articles/ai-document-editor-chrome-extension.md    |  11 +-
+ articles/ai-inbox-organizer-chrome-extension.md    |   9 +-
+ articles/chatgpt-for-google-chrome-extension.md    |   9 +-
+ ...rome-extension-user-agent-switcher-developer.md |   6 +-
+ articles/chrome-fingerprint-test-extension.md      | 206 +++++++++++++++
+ articles/css-grid-inspector-chrome.md              | 281 +++++++++++++--------
+ articles/wave-chrome-extension-accessibility.md    |   2 +-
+ 8 files changed, 410 insertions(+), 121 deletions(-)
+ create mode 100644 articles/chrome-fingerprint-test-extension.md
+[14:28:14] claude-skills-guide: 2 unreviewed, 0 raw-tag regressions — fixing 2 articles
+[14:28:14]   fixed 2/2 articles
+[14:28:14]   commit: [main 5dcd3614] maint: cycle53 2 articles raw-tag/review (pm1-csg)
+ 2 files changed, 13 insertions(+), 5 deletions(-)
+[14:28:14]   push cooldown: waiting 58s
+[14:29:15]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   61a9667b..21e783fd  main -> main
+[14:29:15] PUSH OK maint cycle53 2 fixes (csg)
+[14:29:15]   sleeping 120s...
+[14:31:15] --- Cycle 54 ---
+[14:31:16] pull: Already up to date.
+[14:31:16] claude-skills-guide: clean — 2508 articles, 0 issues
+[14:31:16]   sleeping 120s...
+[14:33:17] --- Cycle 55 ---
+[14:33:18] pull: Already up to date.
+[14:33:18] claude-skills-guide: clean — 2510 articles, 0 issues
+[14:33:18]   sleeping 120s...
+[14:35:18] --- Cycle 56 ---
+[14:35:19] pull: Updating 96172b09..73342c3f
+Fast-forward
+ .../chrome-extension-graphql-network-inspector.md  | 324 +++++++++++++++------
+ 1 file changed, 233 insertions(+), 91 deletions(-)
+[14:35:20] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[14:35:20]   fixed 1/1 articles
+[14:35:20]   commit: [main d6e78064] maint: cycle56 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+[14:35:23]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   73342c3f..d6e78064  main -> main
+[14:35:23] PUSH OK maint cycle56 1 fixes (csg)
+[14:35:23]   sleeping 120s...
+[14:37:23] --- Cycle 57 ---
+[14:37:25] pull: Updating d6e78064..cb53bcba
+Fast-forward
+ articles/ai-color-picker-chrome-extension.md       |   9 +-
+ articles/best-anti-fingerprinting-chrome.md        |  11 +-
+ articles/chrome-built-in-password-manager-safe.md  |   9 +-
+ .../chrome-extension-graphql-network-inspector.md  |  11 +-
+ articles/chrome-extension-svelte-devtools.md       | 226 +++++++++------------
+ 5 files changed, 135 insertions(+), 131 deletions(-)
+[14:37:25] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[14:37:25]   fixed 1/1 articles
+[14:37:25]   commit: [main 553d93d8] maint: cycle57 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+[14:37:25]   push cooldown: waiting 58s
+[14:38:26]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   96208656..c43f6db7  main -> main
+[14:38:26] PUSH OK maint cycle57 1 fixes (csg)
+[14:38:26]   sleeping 120s...
+[14:40:26] --- Cycle 58 ---
+[14:40:28] pull: Updating a16b76df..06a942cd
+Fast-forward
+ articles/ai-speed-reader-chrome-extension.md | 9 ++++++++-
+ articles/chrome-extension-diff-checker.md    | 9 ++++++++-
+ articles/chrome-extension-svelte-devtools.md | 7 +++++++
+ 3 files changed, 23 insertions(+), 2 deletions(-)
+[14:40:28] claude-skills-guide: clean — 2511 articles, 0 issues
+[14:40:28]   sleeping 120s...
+[14:42:28] --- Cycle 59 ---
+[14:42:29] pull: Already up to date.
+[14:42:29] claude-skills-guide: clean — 2512 articles, 0 issues
+[14:42:29]   sleeping 120s...
+[14:44:29] --- Cycle 60 ---
+[14:44:30] pull: Updating 6e6c0588..7f5fa013
+Fast-forward
+ articles/chrome-extension-javascript-profiler.md | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+[14:44:30] claude-skills-guide: clean — 2512 articles, 0 issues
+[14:44:30]   sleeping 120s...
+[14:46:30] --- Cycle 61 ---
+[14:46:32] pull: Updating 7f5fa013..619149d9
+Fast-forward
+ articles/chrome-extension-prime-day-deal-finder.md | 311 +++++++++++++++++++++
+ 1 file changed, 311 insertions(+)
+ create mode 100644 articles/chrome-extension-prime-day-deal-finder.md
+[14:46:32] claude-skills-guide: clean — 2513 articles, 0 issues
+[14:46:32]   sleeping 120s...
+[14:48:32] --- Cycle 62 ---
+[14:48:33] pull: Updating 619149d9..2016e49d
+Fast-forward
+ articles/chrome-extension-prime-day-deal-finder.md | 7 +++++++
+ 1 file changed, 7 insertions(+)
+[14:48:34] claude-skills-guide: clean — 2513 articles, 0 issues
+[14:48:34]   sleeping 120s...
+[14:50:34] --- Cycle 63 ---
+[14:50:36] pull: Updating d37e25ac..c971c25b
+Fast-forward
+ articles/chrome-extension-headline-analyzer.md | 158 +++++++++++++++++++++++++
+ 1 file changed, 158 insertions(+)
+ create mode 100644 articles/chrome-extension-headline-analyzer.md
+[14:50:36] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[14:50:36]   fixed 1/1 articles
+[14:50:36]   commit: [main 266bcffa] maint: cycle63 1 articles raw-tag/review (pm1-csg)
+ 3 files changed, 15 insertions(+), 3 deletions(-)
+[14:50:39]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   c971c25b..266bcffa  main -> main
+[14:50:39] PUSH OK maint cycle63 1 fixes (csg)
+[14:50:39]   sleeping 120s...
+[14:52:39] --- Cycle 64 ---
+[14:52:41] pull: From https://github.com/theluckystrike/claude-skills-guide
+ * branch              main       -> FETCH_HEAD
+warning: fetc
+[14:52:42] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[14:52:42]   fixed 1/1 articles
+[14:52:42]   commit: [main ca698cfa] maint: cycle64 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+[14:52:42]   push cooldown: waiting 57s
+[14:53:42]   push attempt 1: Everything up-to-date
+[14:53:42] PUSH OK maint cycle64 1 fixes (csg)
+[14:53:42]   sleeping 120s...
+[14:55:42] --- Cycle 65 ---
+[14:55:43] pull: Updating 9d85b49e..6a10f402
+Fast-forward
+ articles/chrome-extension-pinterest-pin-scheduler.md | 4 ++++
+ articles/chrome-extension-resize-images.md           | 4 ++++
+ articles/chrome-extension-text-expander.md           | 4 ++++
+ 3 files changed, 12 insertions(+)
+[14:55:43] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[14:55:43]   fixed 1/1 articles
+[14:55:43]   commit: [main 15c01eba] maint: cycle65 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+[14:55:43]   push cooldown: waiting 58s
+[14:56:45]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   06633bc1..cb58f279  main -> main
+[14:56:45] PUSH OK maint cycle65 1 fixes (csg)
+[14:56:45]   sleeping 120s...
+[14:58:45] --- Cycle 66 ---
+[14:58:46] pull: Already up to date.
+[14:58:47] claude-skills-guide: clean — 2518 articles, 0 issues
+[14:58:47]   sleeping 120s...
+[15:00:47] --- Cycle 67 ---
+[15:00:48] pull: Updating cb58f279..708e3a7d
+Fast-forward
+ articles/chrome-extension-apa-citation-formatter.md | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+[15:00:48] claude-skills-guide: clean — 2518 articles, 0 issues
+[15:00:48]   sleeping 120s...
+[15:02:48] --- Cycle 68 ---
+[15:02:50] pull: Already up to date.
+[15:02:51] claude-skills-guide: clean — 2518 articles, 0 issues
+[15:02:51]   sleeping 120s...
+[17:55:09] --- Cycle 69 ---
+[17:55:09] pull: fatal: unable to access 'https://github.com/theluckystrike/claude-skills-guide.git/': Could not resolve host: github.com
+[17:55:10] claude-skills-guide: clean — 2518 articles, 0 issues
+[17:55:10]   sleeping 120s...
+[19:23:00] --- Cycle 70 ---
+[19:23:05] pull: Already up to date.
+[19:23:11] claude-skills-guide: clean — 2518 articles, 0 issues
+[19:23:11]   sleeping 120s...
+[19:27:50] --- Cycle 71 ---
+[19:27:51] pull: Already up to date.
+[19:27:51] claude-skills-guide: clean — 2518 articles, 0 issues
+[19:27:51]   sleeping 120s...
+[19:29:51] --- Cycle 72 ---
+[19:29:52] pull: From https://github.com/theluckystrike/claude-skills-guide
+ * branch              main       -> FETCH_HEAD
+warning: fetc
+[19:29:53] claude-skills-guide: clean — 2523 articles, 0 issues
+[19:29:53]   sleeping 120s...
+[19:31:53] --- Cycle 73 ---
+[19:31:54] pull: Already up to date.
+[19:31:54] claude-skills-guide: 3 unreviewed, 0 raw-tag regressions — fixing 3 articles
+[19:31:54]   fixed 3/3 articles
+[19:31:54]   commit: [main 06047677] maint: cycle73 3 articles raw-tag/review (pm1-csg)
+ 3 files changed, 20 insertions(+), 8 deletions(-)
+[19:31:58]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   a9d74ac3..06047677  main -> main
+[19:31:58] PUSH OK maint cycle73 3 fixes (csg)
+[19:31:58]   sleeping 120s...
+[19:33:58] --- Cycle 74 ---
+[19:33:59] pull: Updating 06047677..5e678c87
+Fast-forward
+ articles/chrome-extension-canvas-lms-helper.md                |  7 +++++++
+ articles/chrome-extension-color-picker-design.md              |  7 +++++++
+ articles/chrome-extension-evernote-web-clipper-alternative.md |  9 ++++++++-
+ articles/chrome-extension-instagram-post-scheduler.md         |  9 ++++++++-
+ articles/chrome-extension-price-match-finder.md               |  9 ++++++++-
+ articles/chrome-extension-read-later-list.md                  |  9 ++++++++-
+ articles/chrome-extension-reading-list-organizer-academic.md  | 11 +++++++++--
+ articles/chrome-extension-save-articles-offline.md            |  9 ++++++++-
+ articles/chrome-extension-size-chart-converter.md             |  7 +++++++
+ articles/chrome-extension-stockx-price-tracker.md             | 11 +++++++++--
+ articles/ebay-sniper-chrome-extension.md                      |  7 +++++++
+ 11 files changed, 86 insertions(+), 9 deletions(-)
+[19:34:00] claude-skills-guide: clean — 2528 articles, 0 issues
+[19:34:00]   sleeping 120s...
+[19:36:00] --- Cycle 75 ---
+[19:36:01] pull: Updating 5e678c87..8043cbad
+Fast-forward
+ articles/best-free-password-manager-chrome.md      | 118 -----
+ articles/best-password-manager-chrome-free.md      |  40 +-
+ ...to-use-claude-code-inside-a-docker-container.md | 234 ---------
+ .../chrome-extension-image-format-converter.md     | 215 ++++++++
+ articles/chrome-extension-stockx-price-tracker.md  |   2 +-
+ ...claude-code-accessibility-regression-testing.md | 197 ++++++-
+ ...de-android-kotlin-development-workflow-guide.md | 258 ---------
+ ...claude-code-api-rate-limiting-implementation.md | 228 ++++++--
+ ...-astro-static-site-generation-workflow-guide.md |  65 ++-
+ ...e-chaos-engineering-testing-automation-guide.md | 140 ++++-
+ ...ntainer-debugging-docker-logs-workflow-guide.md |  54 ++
+ ...art-flutter-cross-platform-development-guide.md | 335 +++++++++++-
+ ...e-code-docker-debugging-container-logs-guide.md | 175 -------
+ ...e-error-tracking-sentry-integration-workflow.md | 246 ---------
+ ...irst-open-source-contribution-workflow-guide.md | 184 -------
+ ...flutter-cross-platform-app-development-guide.md | 285 ----------
+ ...e-for-accessibility-regression-testing-guide.md | 253 ---------
+ .../claude-code-for-chaos-testing-automation.md    | 206 --------
+ ...ude-code-for-flutter-cross-platform-workflow.md | 227 --------
+ ...-for-open-source-contribution-workflow-guide.md | 181 +++++--
+ ...de-for-rate-limiting-implementation-workflow.md | 294 -----------
+ ...e-code-for-sentry-error-tracking-integration.md |  66 +++
+ ...code-ios-swift-development-workflow-tutorial.md | 269 ----------
+ ...de-kotlin-android-development-workflow-guide.md | 205 +++++++-
+ ...open-source-contribution-workflow-guide-2026.md | 171 ------
+ ...claude-code-skills-for-ios-swift-development.md | 574 +++++++++++++++++++--
+ ...e-skills-websocket-real-time-app-development.md | 313 -----------
+ ...-code-swift-ios-feature-development-workflow.md | 211 --------
+ ...socket-implementation-real-time-events-guide.md | 263 ----------
+ .../claude-md-example-for-ios-swift-application.md | 334 ------------
+ ...claude-skills-for-android-kotlin-development.md | 183 -------
+ ...kills-for-websocket-realtime-app-development.md | 354 ++++++++++++-
+ ...-skills-for-writing-unit-tests-automatically.md |  17 +
+ ...te-unit-tests-automatically-with-claude-code.md | 141 -----
+ ...claude-code-inside-docker-container-tutorial.md |  96 +++-
+ ...laude-code-with-astro-static-site-generation.md | 149 ------
+ 36 files changed, 2579 insertions(+), 4704 deletions(-)
+ delete mode 100644 articles/best-free-password-manager-chrome.md
+ delete mode 100644 articles/best-way-to-use-claude-code-inside-a-docker-container.md
+ create mode 100644 articles/chrome-extension-image-format-converter.md
+ delete mode 100644 articles/claude-code-android-kotlin-development-workflow-guide.md
+ delete mode 100644 articles/claude-code-docker-debugging-container-logs-guide.md
+ delete mode 100644 articles/claude-code-error-tracking-sentry-integration-workflow.md
+ delete mode 100644 articles/claude-code-first-open-source-contribution-workflow-guide.md
+ delete mode 100644 articles/claude-code-flutter-cross-platform-app-development-guide.md
+ delete mode 100644 articles/claude-code-for-accessibility-regression-testing-guide.md
+ delete mode 100644 articles/claude-code-for-chaos-testing-automation.md
+ delete mode 100644 articles/claude-code-for-flutter-cross-platform-workflow.md
+ delete mode 100644 articles/claude-code-for-rate-limiting-implementation-workflow.md
+ delete mode 100644 articles/claude-code-ios-swift-development-workflow-tutorial.md
+ delete mode 100644 articles/claude-code-open-source-contribution-workflow-guide-2026.md
+ delete mode 100644 articles/claude-code-skills-websocket-real-time-app-development.md
+ delete mode 100644 articles/claude-code-swift-ios-feature-development-workflow.md
+ delete mode 100644 articles/claude-code-websocket-implementation-real-time-events-guide.md
+ delete mode 100644 articles/claude-md-example-for-ios-swift-application.md
+ delete mode 100644 articles/claude-skills-for-android-kotlin-development.md
+ delete mode 100644 articles/how-to-generate-unit-tests-automatically-with-claude-code.md
+ delete mode 100644 articles/using-claude-code-with-astro-static-site-generation.md
+[19:36:02] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[19:36:02]   fixed 1/1 articles
+[19:36:02]   commit: [main b9ce42c5] maint: cycle75 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+[19:36:06]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+ ! [remote rejected]   main -> main (cannot lock ref 'refs/
+[19:36:06] PUSH OK maint cycle75 1 fixes (csg)
+[19:36:06]   sleeping 120s...
+[19:38:06] --- Cycle 76 ---
+[19:38:09] pull: Merge made by the 'ort' strategy.
+ .../chrome-extension-color-palette-extractor.md    | 277 +++++++++------------
+ articles/chrome-extension-speed-reader-tool.md     | 208 ++++++++--------
+ .../chrome-extension-stock-photo-finder-free.md    | 240 ++++++++++++++++++
+ 3 files changed, 460 insertions(+), 265 deletions(-)
+ create mode 100644 articles/chrome-extension-stock-photo-finder-free.md
+[19:38:09] claude-skills-guide: 3 unreviewed, 0 raw-tag regressions — fixing 3 articles
+[19:38:09]   fixed 3/3 articles
+[19:38:09]   commit: [main 4c6e63bb] maint: cycle76 3 articles raw-tag/review (pm1-csg)
+ 3 files changed, 23 insertions(+), 4 deletions(-)
+[19:38:09]   push cooldown: waiting 57s
+[19:39:10]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   483f7cf5..4c6e63bb  main -> main
+[19:39:10] PUSH OK maint cycle76 3 fixes (csg)
+[19:39:10]   sleeping 120s...
+[19:41:10] --- Cycle 77 ---
+[19:41:11] pull: Already up to date.
+[19:41:12] claude-skills-guide: clean — 2510 articles, 0 issues
+[19:41:12]   sleeping 120s...
+[19:43:12] --- Cycle 78 ---
+[19:43:13] pull: Updating 4c6e63bb..ab4be5db
+Fast-forward
+ articles/chrome-extension-color-palette-extractor.md | 9 ++++++++-
+ articles/chrome-extension-image-format-converter.md  | 7 +++++++
+ articles/chrome-extension-speed-reader-tool.md       | 9 ++++++++-
+ articles/chrome-extension-stock-photo-finder-free.md | 9 ++++++++-
+ 4 files changed, 31 insertions(+), 3 deletions(-)
+[19:43:14] claude-skills-guide: clean — 2510 articles, 0 issues
+[19:43:14]   sleeping 120s...
+[19:45:14] --- Cycle 79 ---
+[19:45:15] pull: Already up to date.
+[19:45:16] claude-skills-guide: clean — 2510 articles, 0 issues
+[19:45:16]   sleeping 120s...
+[19:47:16] --- Cycle 80 ---
+[19:47:17] pull: Already up to date.
+[19:47:17] claude-skills-guide: clean — 2510 articles, 0 issues
+[19:47:17]   sleeping 120s...
+[19:49:17] --- Cycle 81 ---
+[19:49:19] pull: Already up to date.
+[19:49:19] claude-skills-guide: clean — 2510 articles, 0 issues
+[19:49:19]   sleeping 120s...
+[19:51:19] --- Cycle 82 ---
+[19:51:20] pull: Updating ab4be5db..4dcafc3c
+Fast-forward
+ ...-writing-tools-for-real-estate-listings-2026.md | 212 +++++++++++++++++++++
+ articles/chrome-extension-leetcode-helper.md       | 136 +++++++++++++
+ 2 files changed, 348 insertions(+)
+ create mode 100644 articles/ai-writing-tools-for-real-estate-listings-2026.md
+ create mode 100644 articles/chrome-extension-leetcode-helper.md
+[19:51:21] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[19:51:21]   fixed 1/1 articles
+[19:51:21]   commit: [main 5eb69f8a] maint: cycle82 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+[19:51:24]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   4dcafc3c..5eb69f8a  main -> main
+[19:51:24] PUSH OK maint cycle82 1 fixes (csg)
+[19:51:24]   sleeping 120s...
+[19:53:24] --- Cycle 83 ---
+[19:53:25] pull: Updating 5eb69f8a..a4e1234b
+Fast-forward
+ articles/ai-writing-tools-for-real-estate-listings-2026.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[19:53:25] claude-skills-guide: clean — 2512 articles, 0 issues
+[19:53:25]   sleeping 120s...
+[19:55:25] --- Cycle 84 ---
+[19:55:28] pull: Updating a4e1234b..5f4de3ce
+Fast-forward
+ .../chrome-extension-blackboard-learn-helper.md    | 339 +++++++++------------
+ 1 file changed, 141 insertions(+), 198 deletions(-)
+[19:55:28] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[19:55:28]   fixed 1/1 articles
+[19:55:28]   commit: [main 3d144d77] maint: cycle84 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+[19:55:31]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   5f4de3ce..3d144d77  main -> main
+[19:55:31] PUSH OK maint cycle84 1 fixes (csg)
+[19:55:31]   sleeping 120s...
+[19:57:31] --- Cycle 85 ---
+[19:57:32] pull: Already up to date.
+[19:57:33] claude-skills-guide: clean — 2513 articles, 0 issues
+[19:57:33]   sleeping 120s...
+[19:59:33] --- Cycle 86 ---
+[19:59:34] pull: Already up to date.
+[19:59:35] claude-skills-guide: clean — 2513 articles, 0 issues
+[19:59:35]   sleeping 120s...
+[20:01:35] --- Cycle 87 ---
+[20:01:36] pull: Updating 8f784d55..39a7179a
+Fast-forward
+ articles/chrome-extension-blackboard-learn-helper.md | 9 ++++++++-
+ articles/chrome-managed-bookmarks-group-policy.md    | 9 ++++++++-
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+[20:01:36] claude-skills-guide: clean — 2513 articles, 0 issues
+[20:01:36]   sleeping 120s...
+[20:03:36] --- Cycle 88 ---
+[20:03:38] pull: Updating 39a7179a..58450c6b
+Fast-forward
+ .../chrome-block-file-downloads-group-policy.md    | 239 +++++++++---------
+ articles/chrome-enterprise-content-filtering.md    | 281 +++++++++------------
+ 2 files changed, 230 insertions(+), 290 deletions(-)
+[20:03:38] claude-skills-guide: 2 unreviewed, 0 raw-tag regressions — fixing 2 articles
+[20:03:38]   fixed 2/2 articles
+[20:03:38]   commit: [main fc673009] maint: cycle88 2 articles raw-tag/review (pm1-csg)
+ 2 files changed, 15 insertions(+), 3 deletions(-)
+[20:03:42]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   58450c6b..fc673009  main -> main
+[20:03:42] PUSH OK maint cycle88 2 fixes (csg)
+[20:03:42]   sleeping 120s...
+[20:05:42] --- Cycle 89 ---
+[20:05:45] pull: Updating fc673009..0213b193
+Fast-forward
+ articles/chrome-enterprise-printing-settings.md | 177 ++++++++++++++++++++++++
+ 1 file changed, 177 insertions(+)
+ create mode 100644 articles/chrome-enterprise-printing-settings.md
+[20:05:46] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[20:05:46]   fixed 1/1 articles
+[20:05:46]   commit: [main 0935ea5d] maint: cycle89 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+[20:05:46]   push cooldown: waiting 57s
+[20:06:46]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   0213b193..0935ea5d  main -> main
+[20:06:46] PUSH OK maint cycle89 1 fixes (csg)
+[20:06:46]   sleeping 120s...
+[20:08:46] --- Cycle 90 ---
+[20:08:47] pull: Already up to date.
+[20:08:48] claude-skills-guide: clean — 2514 articles, 0 issues
+[20:08:48]   sleeping 120s...
+[20:10:48] --- Cycle 91 ---
+[20:10:49] pull: Already up to date.
+[20:10:49] claude-skills-guide: clean — 2514 articles, 0 issues
+[20:10:49]   sleeping 120s...
+[20:12:49] --- Cycle 92 ---
+[20:12:51] pull: Updating ba83ecef..0cf4475c
+Fast-forward
+ articles/chrome-enterprise-printing-settings.md | 7 +++++++
+ 1 file changed, 7 insertions(+)
+[20:12:51] claude-skills-guide: clean — 2514 articles, 0 issues
+[20:12:51]   sleeping 120s...
+[20:14:51] --- Cycle 93 ---
+[20:14:54] pull: Already up to date.
+[20:14:54] claude-skills-guide: clean — 2514 articles, 0 issues
+[20:14:54]   sleeping 120s...
+[20:16:54] --- Cycle 94 ---
+[20:16:56] pull: Already up to date.
+[20:16:56] claude-skills-guide: clean — 2514 articles, 0 issues
+[20:16:56]   sleeping 120s...
+[20:18:56] --- Cycle 95 ---
+[20:18:57] pull: Already up to date.
+[20:18:58] claude-skills-guide: clean — 2514 articles, 0 issues
+[20:18:58]   sleeping 120s...
+[20:20:58] --- Cycle 96 ---
+[20:20:59] pull: Already up to date.
+[20:21:00] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[20:21:00]   fixed 1/1 articles
+[20:21:00]   commit: [main 9a5b3616] maint: cycle96 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+[20:21:03]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   69fc3306..9a5b3616  main -> main
+[20:21:03] PUSH OK maint cycle96 1 fixes (csg)
+[20:21:03]   sleeping 120s...
+[20:23:03] --- Cycle 97 ---
+[20:23:05] pull: Updating 9a5b3616..d5d99079
+Fast-forward
+ ...-for-load-testing-with-locust-workflow-guide.md |   2 +-
+ ...e-code-for-runbook-testing-workflow-tutorial.md | 406 +++++++++------------
+ 2 files changed, 175 insertions(+), 233 deletions(-)
+[20:23:05] claude-skills-guide: clean — 2514 articles, 0 issues
+[20:23:05]   sleeping 120s...
+[20:25:05] --- Cycle 98 ---
+[20:25:11] pull: Updating c6998c90..6a2cb576
+Fast-forward
+ articles/chrome-extension-markdown-preview.md      | 171 +++++++++++++++++
+ ...de-for-lsp-semantic-tokens-workflow-tutorial.md | 203 +++++++++++++++++++++
+ 2 files changed, 374 insertions(+)
+ create mode 100644 articles/chrome-extension-markdown-preview.md
+ create mode 100644 articles/claude-code-for-lsp-semantic-tokens-workflow-tutorial.md
+[20:25:11] claude-skills-guide: 3 unreviewed, 0 raw-tag regressions — fixing 3 articles
+[20:25:11]   fixed 3/3 articles
+[20:25:11]   commit: [main 26344607] maint: cycle98 3 articles raw-tag/review (pm1-csg)
+ 3 files changed, 14 insertions(+), 2 deletions(-)
+[20:25:18]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   6a2cb576..26344607  main -> main
+[20:25:18] PUSH OK maint cycle98 3 fixes (csg)
+[20:25:18]   sleeping 120s...
+[20:27:18] --- Cycle 99 ---
+[20:27:21] pull: Updating 348b246e..0995d49d
+Fast-forward
+ ...-for-apm-integration-workflow-tutorial-guide.md | 279 +++++++++++----------
+ 1 file changed, 153 insertions(+), 126 deletions(-)
+[20:27:22] claude-skills-guide: 5 unreviewed, 0 raw-tag regressions — fixing 5 articles
+[20:27:22]   fixed 5/5 articles
+[20:27:22]   commit: [main d9e338a6] maint: cycle99 5 articles raw-tag/review (pm1-csg)
+ 5 files changed, 23 insertions(+), 3 deletions(-)
+[20:27:22]   push cooldown: waiting 57s
+[20:28:22]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   001cfc70..3a135da5  main -> main
+[20:28:22] PUSH OK maint cycle99 5 fixes (csg)
+[20:28:22]   sleeping 120s...
+[20:30:22] --- Cycle 100 ---
+[20:30:23] pull: Already up to date.
+[20:30:24] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[20:30:24]   fixed 1/1 articles
+[20:30:24]   commit: [main 725396d3] maint: cycle100 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+[20:30:24]   push cooldown: waiting 58s
+[20:31:25]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   5989e6f3..65c34d29  main -> main
+[20:31:25] PUSH OK maint cycle100 1 fixes (csg)
+[20:31:25]   sleeping 120s...
+[20:33:25] --- Cycle 101 ---
+[20:33:29] pull: Updating 65c34d29..58f3483d
+Fast-forward
+ ...ock-origin-alternative-chrome-extension-2026.md | 217 ++++++++++++---------
+ 1 file changed, 124 insertions(+), 93 deletions(-)
+[20:33:29] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[20:33:29]   fixed 1/1 articles
+[20:33:29]   commit: [main 0a351df0] maint: cycle101 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+[20:33:29]   push cooldown: waiting 56s
+[20:34:29]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   58f3483d..0a351df0  main -> main
+[20:34:29] PUSH OK maint cycle101 1 fixes (csg)
+[20:34:29]   sleeping 120s...
+[20:36:29] --- Cycle 102 ---
+[20:36:32] pull: Updating 0a351df0..9603380a
+Fast-forward
+ articles/claude-code-for-dependency-license-audit-workflow.md | 9 ++++++++-
+ articles/claude-code-for-runbook-automation-workflow-guide.md | 9 ++++++++-
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+[20:36:32] claude-skills-guide: clean — 2518 articles, 0 issues
+[20:36:32]   sleeping 120s...
+[20:38:32] --- Cycle 103 ---
+[20:38:34] pull: Already up to date.
+[20:38:34] claude-skills-guide: clean — 2518 articles, 0 issues
+[20:38:34]   sleeping 120s...
+[20:40:34] --- Cycle 104 ---
+[20:40:36] pull: Updating 4ec68c02..e77c1542
+Fast-forward
+ articles/claude-code-for-changelog-automation-workflow-guide.md  | 9 ++++++++-
+ articles/claude-code-for-performance-dashboard-workflow-guide.md | 9 ++++++++-
+ articles/ublock-origin-alternative-chrome-extension-2026.md      | 7 +++++++
+ 3 files changed, 23 insertions(+), 2 deletions(-)
+[20:40:37] claude-skills-guide: clean — 2514 articles, 0 issues
+[20:40:37]   sleeping 120s...
+[20:42:37] --- Cycle 105 ---
+[20:42:38] pull: Already up to date.
+[20:42:38] claude-skills-guide: clean — 2514 articles, 0 issues
+[20:42:38]   sleeping 120s...
+[20:44:38] --- Cycle 106 ---
+[20:44:40] pull: Updating 09150d92..81fe5d1b
+Fast-forward
+ .../raindrop-alternative-chrome-extension-2026.md  | 304 ++++++++++-----------
+ 1 file changed, 152 insertions(+), 152 deletions(-)
+[20:44:40] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[20:44:40]   fixed 1/1 articles
+[20:44:40]   commit: [main c4966661] maint: cycle106 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+[20:44:43]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   81fe5d1b..c4966661  main -> main
+[20:44:43] PUSH OK maint cycle106 1 fixes (csg)
+[20:44:43]   sleeping 120s...
+[20:46:43] --- Cycle 107 ---
+[20:46:45] pull: Already up to date.
+[20:46:45] claude-skills-guide: clean — 2514 articles, 0 issues
+[20:46:45]   sleeping 120s...
+[20:48:45] --- Cycle 108 ---
+[20:48:47] pull: Updating 34791c2c..415a97c3
+Fast-forward
+ articles/ai-color-picker-chrome-extension.md       | 209 ++++++++++++++++-
+ articles/ai-flashcard-maker-chrome-extension.md    | 108 +++++++++
+ articles/ai-font-identifier-chrome-extension.md    | 156 -------------
+ articles/chrome-extension-color-picker-design.md   | 252 ---------------------
+ articles/chrome-extension-flashcard-maker.md       | 225 ------------------
+ articles/chrome-extension-font-identifier.md       | 111 ++++++++-
+ ...de-for-core-web-vitals-optimization-workflow.md | 240 --------------------
+ ...e-code-for-core-web-vitals-workflow-tutorial.md | 166 ++++++++++++--
+ ...ude-code-skill-tool-not-found-error-solution.md |  30 +++
+ .../claude-code-tool-not-found-error-fix-guide.md  | 106 ---------
+ articles/devin-ai-software-engineer-review-2026.md |  12 +-
+ ...evin-ai-software-engineer-review-honest-2026.md | 131 -----------
+ ...ditor-ai-features-review-for-developers-2026.md |  41 +++-
+ .../zed-editor-with-ai-features-review-2026.md     | 125 ----------
+ 14 files changed, 657 insertions(+), 1255 deletions(-)
+ delete mode 100644 articles/ai-font-identifier-chrome-extension.md
+ delete mode 100644 articles/chrome-extension-color-picker-design.md
+ delete mode 100644 articles/chrome-extension-flashcard-maker.md
+ delete mode 100644 articles/claude-code-for-core-web-vitals-optimization-workflow.md
+ delete mode 100644 articles/claude-code-tool-not-found-error-fix-guide.md
+ delete mode 100644 articles/devin-ai-software-engineer-review-honest-2026.md
+ delete mode 100644 articles/zed-editor-with-ai-features-review-2026.md
+[20:48:48] claude-skills-guide: clean — 2507 articles, 0 issues
+[20:48:48]   sleeping 120s...
+[20:50:48] --- Cycle 109 ---
+[20:50:50] pull: Already up to date.
+[20:50:50] claude-skills-guide: clean — 2507 articles, 0 issues
+[20:50:50]   sleeping 120s...
+[20:52:50] --- Cycle 110 ---
+[20:52:52] pull: Updating 846fe3fd..138a2aa5
+Fast-forward
+ articles/raindrop-alternative-chrome-extension-2026.md | 7 +++++++
+ 1 file changed, 7 insertions(+)
+[20:52:53] claude-skills-guide: clean — 2507 articles, 0 issues
+[20:52:53]   sleeping 120s...
+[20:54:53] --- Cycle 111 ---
+[20:54:54] pull: Already up to date.
+[20:54:55] claude-skills-guide: clean — 2508 articles, 0 issues
+[20:54:55]   sleeping 120s...
+[20:56:55] --- Cycle 112 ---
+[20:56:56] pull: Already up to date.
+[20:56:56] claude-skills-guide: clean — 2508 articles, 0 issues
+[20:56:56]   sleeping 120s...
+[20:58:56] --- Cycle 113 ---
+[20:58:58] pull: Already up to date.
+[20:58:58] claude-skills-guide: 1 unreviewed, 0 raw-tag regressions — fixing 1 articles
+[20:58:58]   fixed 1/1 articles
+[20:58:58]   commit: [main 8e24f880] maint: cycle113 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+[20:59:03]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+   403b5424..8e24f880  main -> main
+[20:59:03] PUSH OK maint cycle113 1 fixes (csg)
+[20:59:03]   sleeping 120s...
+[21:01:03] --- Cycle 114 ---
+[21:01:05] pull: Already up to date.
+[21:01:05] claude-skills-guide: 0 unreviewed, 1 raw-tag regressions — fixing 1 articles
+[21:01:05]   raw-tag regressions: ['claude-code-code-review-checklist-automation.md']
+[21:01:05]   fixed 1/1 articles
+[21:01:05]   commit: [main 653d9ca4] maint: cycle114 1 articles raw-tag/review (pm1-csg)
+ 1 file changed, 4 insertions(+)
+[21:01:05]   push cooldown: waiting 59s
+[21:02:06]   push attempt 1: To https://github.com/theluckystrike/claude-skills-guide.git
+ ! [rejected]          main -> main (non-fast-forward)
+erro
+[21:02:06] PUSH OK maint cycle114 1 fixes (csg)
+[21:02:06]   sleeping 120s...

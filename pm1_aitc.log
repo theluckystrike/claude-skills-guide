@@ -1,0 +1,294 @@
+[12:33:25] PM1 ai-tools-compared reviewer starting
+[12:33:25] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:34:57] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:36:28] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:37:58] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:39:29] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:41:00] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:42:31] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:44:02] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:45:33] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:47:04] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:48:35] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:50:06] ai-tools-compared: clean (0 unreviewed, 0 total articles)
+[12:51:37] ai-tools-compared: 14 unreviewed / 14 total
+  FIXED ai-coding-assistant-for-rust-developers-compared.md
+  FIXED ai-pair-programming-tools-for-c-sharp-dotnet.md
+  FIXED aider-vs-claude-code-terminal-ai-comparison.md
+  FIXED best-ai-coding-assistant-for-react-development.md
+  FIXED best-ai-coding-tool-for-golang-developers-2026.md
+  FIXED best-ai-tool-for-academic-paper-editing-2026.md
+  FIXED best-ai-tool-for-generating-regex-patterns-compared.md
+  FIXED chatgpt-vs-claude-for-creative-storytelling-compared.md
+  FIXED claude-code-vs-chatgpt-code-interpreter-comparison.md
+  FIXED continue-dev-vs-github-copilot-open-source-comparison.md
+  FIXED copy-ai-vs-chatgpt-for-social-media-content.md
+  FIXED github-copilot-vs-cody-sourcegraph-comparison.md
+  FIXED notion-ai-writing-features-vs-google-docs-ai-compared.md
+  FIXED wordtune-vs-quillbot-sentence-rewriting-comparison.md
+[12:51:37] Commit: [main b5cb201] review: cycle13 14 articles (pm1-aitc)
+ 14 files changed, 95 insertions(+), 25 deletions(-)
+[12:51:39] PUSH OK cycle13 14 articles (attempt 1)
+[12:53:11] ai-tools-compared: clean (0 unreviewed, 14 total articles)
+[12:54:42] ai-tools-compared: clean (0 unreviewed, 14 total articles)
+[12:56:12] ai-tools-compared: clean (0 unreviewed, 14 total articles)
+[12:57:43] ai-tools-compared: clean (0 unreviewed, 14 total articles)
+[12:59:14] ai-tools-compared: clean (0 unreviewed, 14 total articles)
+[13:00:45] ai-tools-compared: clean (0 unreviewed, 14 total articles)
+[13:02:16] ai-tools-compared: clean (0 unreviewed, 14 total articles)
+[13:03:47] ai-tools-compared: clean (0 unreviewed, 14 total articles)
+[13:05:18] ai-tools-compared: clean (0 unreviewed, 14 total articles)
+[13:06:49] ai-tools-compared: clean (0 unreviewed, 14 total articles)
+[13:08:20] ai-tools-compared: 5 unreviewed / 20 total
+  FIXED best-ai-assistant-for-sql-query-optimization.md
+  FIXED chatgpt-vs-claude-for-writing-api-documentation.md
+  FIXED cursor-tab-vs-copilot-ghost-text-comparison.md
+  FIXED grammarly-business-vs-chatgpt-team-for-enterprises.md
+  FIXED writesonic-vs-jasper-ai-copywriting-tool-comparison.md
+[13:08:20] Commit: [main c86481e] review: cycle24 5 articles (pm1-aitc)
+ 5 files changed, 35 insertions(+), 11 deletions(-)
+[13:08:22] PUSH OK cycle24 5 articles (attempt 1)
+[13:09:54] ai-tools-compared: clean (0 unreviewed, 20 total articles)
+[13:11:24] ai-tools-compared: clean (0 unreviewed, 20 total articles)
+[13:12:56] ai-tools-compared: clean (0 unreviewed, 20 total articles)
+[13:14:27] ai-tools-compared: clean (0 unreviewed, 20 total articles)
+[13:15:58] ai-tools-compared: clean (0 unreviewed, 20 total articles)
+[13:17:29] ai-tools-compared: clean (0 unreviewed, 20 total articles)
+[13:19:00] ai-tools-compared: clean (0 unreviewed, 20 total articles)
+[13:20:30] ai-tools-compared: clean (0 unreviewed, 20 total articles)
+[13:22:01] ai-tools-compared: clean (0 unreviewed, 20 total articles)
+[13:23:33] ai-tools-compared: clean (0 unreviewed, 20 total articles)
+[13:25:04] ai-tools-compared: 1 unreviewed / 21 total
+  FIXED runway-ml-vs-pika-labs-ai-video-comparison-2026.md
+[13:25:04] Commit: [main a5a43cc] review: cycle35 1 articles (pm1-aitc)
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+[13:25:06] PUSH OK cycle35 1 articles (attempt 1)
+[13:26:38] ai-tools-compared: clean (0 unreviewed, 21 total articles)
+[13:28:09] ai-tools-compared: clean (0 unreviewed, 21 total articles)
+[13:29:40] ai-tools-compared: 1 unreviewed / 22 total
+  FIXED canva-ai-video-editor-vs-capcut-ai-compared-2026.md
+[13:29:40] Commit: [main e419c9a] review: cycle38 1 articles (pm1-aitc)
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+[13:29:42] PUSH OK cycle38 1 articles (attempt 1)
+[13:31:13] ai-tools-compared: clean (0 unreviewed, 22 total articles)
+[13:32:45] ai-tools-compared: clean (0 unreviewed, 22 total articles)
+[13:34:16] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:35:47] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:37:18] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:38:49] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:40:19] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:41:51] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:43:22] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:44:52] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:46:23] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:47:54] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:49:25] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:50:56] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:52:27] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:53:58] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:55:28] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:56:59] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[13:58:30] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[14:00:01] ai-tools-compared: clean (0 unreviewed, 23 total articles)
+[14:01:32] ai-tools-compared: 1 unreviewed / 24 total
+  FIXED best-ai-tool-for-real-estate-agents-property-listings.md
+[14:01:32] Commit: [main 0d61d2c] review: cycle59 1 articles (pm1-aitc)
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+[14:01:34] PUSH OK cycle59 1 articles (attempt 1)
+[14:03:05] ai-tools-compared: clean (0 unreviewed, 24 total articles)
+[14:04:36] ai-tools-compared: clean (0 unreviewed, 24 total articles)
+[14:06:07] ai-tools-compared: 1 unreviewed / 25 total
+  FIXED best-ai-tool-for-graphic-designers-brief-creation.md
+[14:06:07] Commit: [main f966c09] review: cycle62 1 articles (pm1-aitc)
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+[14:06:09] PUSH OK cycle62 1 articles (attempt 1)
+[14:07:41] ai-tools-compared: 1 unreviewed / 26 total
+  FIXED best-ai-tool-for-compliance-officers-policy-review.md
+[14:07:41] Commit: [main 4f541fd] review: cycle63 1 articles (pm1-aitc)
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+[14:07:41] Cooldown: waiting 89s before push
+[14:09:12] PUSH OK cycle63 1 articles (attempt 1)
+[14:10:43] ai-tools-compared: 2 unreviewed / 28 total
+  FIXED best-ai-tool-for-cybersecurity-analysts-incident-reports.md
+  FIXED best-ai-tool-for-environmental-scientists-reporting.md
+[14:10:43] Commit: [main cc6be5d] review: cycle64 2 articles (pm1-aitc)
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+[14:10:43] Cooldown: waiting 89s before push
+[14:12:14] PUSH OK cycle64 2 articles (attempt 1)
+[14:13:45] ai-tools-compared: clean (0 unreviewed, 28 total articles)
+[14:15:16] ai-tools-compared: clean (0 unreviewed, 28 total articles)
+[14:16:47] ai-tools-compared: 1 unreviewed / 29 total
+  FIXED claude-max-context-window-exceeded-what-to-do.md
+[14:16:47] Commit: [main a5b415e] review: cycle67 1 articles (pm1-aitc)
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+[14:16:49] PUSH OK cycle67 1 articles (attempt 1)
+[14:18:21] ai-tools-compared: 2 unreviewed / 31 total
+  FIXED ai-coding-tools-for-scala-functional-programming.md
+  FIXED claude-sonnet-vs-gpt-4o-for-code-generation.md
+[14:18:21] Commit: [main 5be4720] review: cycle68 2 articles (pm1-aitc)
+ 2 files changed, 15 insertions(+), 5 deletions(-)
+[14:18:21] Cooldown: waiting 89s before push
+[14:19:52] PUSH OK cycle68 2 articles (attempt 1)
+[14:21:23] ai-tools-compared: 4 unreviewed / 35 total
+  FIXED best-ai-tool-for-doctors-writing-clinical-notes.md
+  FIXED best-ai-tool-for-game-developers-design-docs-writing.md
+  FIXED chatgpt-hallucinating-facts-how-to-reduce-errors.md
+  FIXED cursor-background-agent-timing-out-fix-2026.md
+[14:21:23] Commit: [main ce43714] review: cycle69 4 articles (pm1-aitc)
+ 4 files changed, 25 insertions(+), 5 deletions(-)
+[14:21:23] Cooldown: waiting 89s before push
+[14:22:55] PUSH OK cycle69 4 articles (attempt 1)
+[14:24:26] ai-tools-compared: clean (0 unreviewed, 36 total articles)
+[14:25:57] ai-tools-compared: clean (0 unreviewed, 36 total articles)
+[14:27:28] ai-tools-compared: clean (0 unreviewed, 36 total articles)
+[14:29:00] ai-tools-compared: clean (0 unreviewed, 36 total articles)
+[14:30:31] ai-tools-compared: clean (0 unreviewed, 36 total articles)
+[14:32:02] ai-tools-compared: clean (0 unreviewed, 36 total articles)
+[14:33:33] ai-tools-compared: 1 unreviewed / 37 total
+  FIXED gemini-advanced-not-available-in-my-country-fix.md
+[14:33:33] Commit: [main a8aa1ff] review: cycle76 1 articles (pm1-aitc)
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+[14:33:36] PUSH OK cycle76 1 articles (attempt 1)
+[14:35:07] ai-tools-compared: clean (0 unreviewed, 37 total articles)
+[14:36:39] ai-tools-compared: clean (0 unreviewed, 37 total articles)
+[14:38:10] ai-tools-compared: clean (0 unreviewed, 37 total articles)
+[14:39:42] ai-tools-compared: clean (0 unreviewed, 37 total articles)
+[14:41:13] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:42:44] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:44:15] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:45:47] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:47:19] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:48:50] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:50:21] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:51:52] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:53:24] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:54:55] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:56:26] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:57:57] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[14:59:28] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[15:00:59] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[15:02:33] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[17:03:19] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[18:55:54] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[19:23:16] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[19:27:29] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[19:29:00] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[19:30:32] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[19:32:03] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[19:33:34] ai-tools-compared: clean (0 unreviewed, 38 total articles)
+[19:35:06] ai-tools-compared: clean (0 unreviewed, 39 total articles)
+[19:36:37] ai-tools-compared: clean (0 unreviewed, 41 total articles)
+[19:38:09] ai-tools-compared: clean (0 unreviewed, 42 total articles)
+[19:39:40] ai-tools-compared: clean (0 unreviewed, 42 total articles)
+[19:41:12] ai-tools-compared: 3 unreviewed / 45 total
+  FIXED best-ai-tool-for-writing-press-releases-2026.md
+  FIXED jasper-ai-brand-voice-vs-claude-style-matching.md
+  FIXED jasper-ai-vs-copy-ai-which-is-better-for-marketing.md
+[19:41:12] Commit: [main b7e47a8] review: cycle108 3 articles (pm1-aitc)
+ 3 files changed, 18 insertions(+), 4 deletions(-)
+[19:41:15] PUSH OK cycle108 3 articles (attempt 1)
+[19:42:47] ai-tools-compared: 5 unreviewed / 51 total
+  FIXED ai-tools-for-writing-app-store-descriptions-2026.md
+  FIXED ai-tools-for-writing-grant-proposals-compared-2026.md
+  FIXED best-ai-writing-tool-for-saas-marketing-teams.md
+  FIXED grammarly-vs-chatgpt-for-non-native-english-writers.md
+  FIXED notion-ai-vs-chatgpt-for-content-creation-compared.md
+[19:42:47] Commit: [main a7cb91e] review: cycle109 5 articles (pm1-aitc)
+ 5 files changed, 36 insertions(+), 9 deletions(-)
+[19:42:47] Cooldown: waiting 88s before push
+[19:44:18] PUSH OK cycle109 5 articles (attempt 1)
+[19:45:49] ai-tools-compared: clean (0 unreviewed, 51 total articles)
+[19:47:21] ai-tools-compared: 2 unreviewed / 53 total
+  FIXED best-ai-tool-for-repurposing-blog-content-2026.md
+  FIXED best-ai-tool-for-writing-cold-outreach-emails.md
+[19:47:21] Commit: [main 5a501ab] review: cycle111 2 articles (pm1-aitc)
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+[19:47:23] PUSH OK cycle111 2 articles (attempt 1)
+[19:48:55] ai-tools-compared: clean (0 unreviewed, 53 total articles)
+[19:50:27] ai-tools-compared: clean (0 unreviewed, 53 total articles)
+[19:51:59] ai-tools-compared: clean (0 unreviewed, 53 total articles)
+[19:53:30] ai-tools-compared: clean (0 unreviewed, 53 total articles)
+[19:55:02] ai-tools-compared: 1 unreviewed / 56 total
+  FIXED notion-ai-vs-clickup-ai-task-writing-compared.md
+[19:55:02] Commit: [main ba894a3] review: cycle116 1 articles (pm1-aitc)
+ 2 files changed, 11 insertions(+), 3 deletions(-)
+[19:55:05] PUSH OK cycle116 1 articles (attempt 1)
+[19:56:37] ai-tools-compared: clean (0 unreviewed, 56 total articles)
+[19:58:09] ai-tools-compared: 1 unreviewed / 57 total
+  FIXED copy-ai-vs-closerscopy-sales-copywriting-compared.md
+[19:58:09] Commit: [main c4aabe2] review: cycle118 1 articles (pm1-aitc)
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+[19:58:14] PUSH OK cycle118 1 articles (attempt 1)
+[19:59:47] ai-tools-compared: clean (0 unreviewed, 58 total articles)
+[20:01:19] ai-tools-compared: 1 unreviewed / 59 total
+  FIXED ai-writing-tools-for-healthcare-content-compared-2026.md
+[20:01:19] Commit: [main 0d58324] review: cycle120 1 articles (pm1-aitc)
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+[20:01:22] PUSH OK cycle120 1 articles (attempt 1)
+[20:02:54] ai-tools-compared: clean (0 unreviewed, 59 total articles)
+[20:04:25] ai-tools-compared: clean (0 unreviewed, 60 total articles)
+[20:05:57] ai-tools-compared: clean (0 unreviewed, 60 total articles)
+[20:07:28] ai-tools-compared: clean (0 unreviewed, 60 total articles)
+[20:09:01] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:10:32] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:12:04] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:13:36] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:15:09] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:16:40] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:18:12] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:19:44] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:21:16] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:22:47] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:24:19] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:25:50] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:27:22] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:28:53] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:30:24] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:31:56] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:33:27] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:34:59] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:36:31] ai-tools-compared: clean (0 unreviewed, 61 total articles)
+[20:38:02] ai-tools-compared: clean (0 unreviewed, 63 total articles)
+[20:39:34] ai-tools-compared: 2 unreviewed / 64 total
+  FIXED canva-ai-vs-adobe-firefly-design-tool-compared.md
+  FIXED runway-ml-vs-pika-labs-ai-video-comparison-2026.md
+[20:39:34] Commit: [main fe7d6a6] review: cycle145 2 articles (pm1-aitc)
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+[20:39:38] PUSH OK cycle145 2 articles (attempt 1)
+[20:41:09] ai-tools-compared: clean (0 unreviewed, 64 total articles)
+[20:42:41] ai-tools-compared: clean (0 unreviewed, 64 total articles)
+[20:44:12] ai-tools-compared: clean (0 unreviewed, 66 total articles)
+[20:45:44] ai-tools-compared: clean (0 unreviewed, 66 total articles)
+[20:47:15] ai-tools-compared: clean (0 unreviewed, 67 total articles)
+[20:48:48] ai-tools-compared: clean (0 unreviewed, 67 total articles)
+[20:50:19] ai-tools-compared: 1 unreviewed / 69 total
+  FIXED ai-tools-for-generating-website-hero-images-compared.md
+[20:50:19] Commit: [main f0b6956] review: cycle152 1 articles (pm1-aitc)
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+[20:50:23] PUSH OK cycle152 1 articles (attempt 1)
+[20:51:54] ai-tools-compared: clean (0 unreviewed, 70 total articles)
+[20:53:25] ai-tools-compared: clean (0 unreviewed, 71 total articles)
+[20:54:57] ai-tools-compared: clean (0 unreviewed, 71 total articles)
+[20:56:28] ai-tools-compared: 1 unreviewed / 73 total
+  FIXED dall-e-3-vs-stable-diffusion-for-illustrations.md
+[20:56:29] Commit: [main 153e734] review: cycle156 1 articles (pm1-aitc)
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+[20:56:32] PUSH OK cycle156 1 articles (attempt 1)
+[20:58:04] ai-tools-compared: clean (0 unreviewed, 73 total articles)
+[20:59:36] ai-tools-compared: clean (0 unreviewed, 73 total articles)
+[21:01:07] ai-tools-compared: 3 unreviewed / 76 total
+  FIXED best-ai-tool-for-event-planners-proposal-writing.md
+  FIXED best-ai-tool-for-financial-advisors-client-reports.md
+  FIXED best-ai-tool-for-financial-analysts-modeling-2026.md
+[21:01:07] Commit: [main b16c738] review: cycle159 3 articles (pm1-aitc)
+ 3 files changed, 19 insertions(+), 4 deletions(-)
+[21:01:11] PUSH OK cycle159 3 articles (attempt 1)
+[21:02:43] ai-tools-compared: 5 unreviewed / 85 total
+  FIXED best-ai-tool-for-customer-success-managers-2026.md
+  FIXED best-ai-tool-for-dietitians-meal-plan-creation-2026.md
+  FIXED best-ai-tool-for-real-estate-investors-deal-analysis.md
+  FIXED best-ai-tool-for-traders-market-research-summaries.md
+  FIXED best-ai-tool-for-youtubers-script-writing-2026.md
+[21:02:43] Commit: [main cecc6f9] review: cycle160 5 articles (pm1-aitc)
+ 5 files changed, 30 insertions(+), 5 deletions(-)
+[21:02:43] Cooldown: waiting 88s before push
