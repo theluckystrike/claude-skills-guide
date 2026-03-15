@@ -169,3 +169,4 @@ Claude Code transforms ORM development from a repetitive, error-prone task into 
 Start with simple models and gradually incorporate more advanced patterns as you become comfortable with the workflow. The key is providing clear, detailed specifications that give Claude Code everything it needs to generate accurate, production-ready code.
 
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

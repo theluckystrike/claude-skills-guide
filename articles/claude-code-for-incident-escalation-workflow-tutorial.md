@@ -44,10 +44,6 @@ Create a new skill file called `incident-escalation.md`:
 ---
 name: incident-escalation
 description: Handles incident escalation workflows with tiered response times
-tools: [bash, read_file, write_file]
-triggers:
-  - phrase: "escalate incident"
-  - phrase: "create incident"
 ---
 
 # Incident Escalation Handler
@@ -296,3 +292,4 @@ Building an incident escalation workflow with Claude Code gives you flexibility,
 The key is to balance automation with human judgment - let Claude handle the timing and routing, but ensure experienced team members make critical decisions about severity and response strategies.
 
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
