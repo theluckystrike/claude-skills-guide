@@ -3,8 +3,11 @@ layout: default
 title: "Chrome Extension Discount Code Aggregator: A Developer's Guide"
 description: "Learn how to build a Chrome extension that aggregates discount codes from multiple sources. Practical implementation guide with code examples for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-discount-code-aggregator/
+reviewed: true
+score: 8
+categories: [guides]
 ---
 
 Building a Chrome extension that aggregates discount codes from e-commerce sites addresses a real pain point for developers and power users who want to save money online. Rather than visiting multiple coupon sites or manually searching for codes, users can have a tool that does the heavy lifting automatically.
