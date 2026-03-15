@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Building a Chrome Extension Trello Power-Up: A Developer's Guide"
 description: "Learn how to build a Chrome extension that integrates with Trello Power-Ups. Practical code examples and architecture for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-trello-power-up/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Building a Chrome Extension Trello Power-Up
 
@@ -15,7 +21,7 @@ Trello Power-Ups extend Trello's functionality, allowing developers to add custo
 
 A Trello Power-Up is essentially a JavaScript application that runs within Trello's iframe environment. It communicates with Trello through their Power-Up SDK, which provides methods for reading card data, updating UI, and storing persistence data. A Chrome extension, meanwhile, runs in the browser context and can access Chrome APIs, local storage, and the broader web.
 
-The key distinction: Trello Power-Ups only run inside Trello. Chrome extensions run in the browser but can inject content scripts into Trello pages. The most robust approach combines both—a Chrome extension that provides the "Power-Up" capabilities while leveraging Trello's client-side API.
+The key distinction: Trello Power-Ups only run inside Trello. Chrome extensions run in the browser but can inject content scripts into Trello pages. The most robust approach combines both—a Chrome extension that provides the "Power-Up" capabilities while using Trello's client-side API.
 
 ## Setting Up Your Project
 

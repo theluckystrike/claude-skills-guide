@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Figma Inspector: A Developer Guide"
 description: "Learn how to use Chrome extensions for Figma inspection, enabling developers to extract design tokens, inspect CSS, and bridge the gap between design and development workflows."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-figma-inspector/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension Figma Inspector: A Developer Guide
 

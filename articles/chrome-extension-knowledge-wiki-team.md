@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Knowledge Wiki Team: A Complete Guide for Developers"
 description: "Learn how to build and manage a comprehensive knowledge wiki for chrome extension development teams. Covers documentation strategies, tooling, and collaboration workflows."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-knowledge-wiki-team/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 Building a robust knowledge wiki for chrome extension development teams solves one of the most common pain points in browser extension development: scattered documentation, inconsistent APIs, and lost tribal knowledge. This guide walks through establishing a centralized knowledge base that accelerates onboarding, improves code quality, and reduces重复 questions.
 

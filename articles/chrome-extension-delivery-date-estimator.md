@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Delivery Date Estimator: A Developer's Guide"
 description: "Learn how to build or use a chrome extension delivery date estimator for your projects. Practical examples and code snippets for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-delivery-date-estimator/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 A chrome extension delivery date estimator helps developers predict when their extension will be reviewed and published to the Chrome Web Store. The review process can take anywhere from a few hours to several weeks, depending on complexity and current queue times. Understanding how these estimators work and building one into your development workflow can save significant waiting time and help you plan releases more effectively.
 

@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Habit Tracker for Work: A Developer Guide"
 description: "Build a Chrome extension habit tracker tailored for work productivity. Practical code examples, storage patterns, and implementation strategies for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-habit-tracker-work/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Chrome Extension Habit Tracker for Work: A Developer Guide

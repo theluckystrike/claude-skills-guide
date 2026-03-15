@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension User Agent Switcher: A Developer's Guide"
 description: "Learn how to build a Chrome extension that switches user agents programmatically. Practical code examples and implementation patterns for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-user-agent-switcher-developer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 Building a Chrome extension to switch user agents is a practical project that demonstrates how to interact with browser network requests and modify extension behavior dynamically. This guide walks you through the implementation, from manifest configuration to runtime message handling.

@@ -1,15 +1,21 @@
 ---
+
 layout: default
 title: "Chrome Extension CSS Coverage Analyzer: Identify Unused Styles"
 description: "Learn how to use CSS coverage analyzer tools in Chrome extensions to detect and remove unused CSS rules, optimize performance, and reduce bundle sizes."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-css-coverage-analyzer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension CSS Coverage Analyzer: Identify Unused Styles
 
-CSS coverage analysis helps developers discover which stylesheet rules your application actually uses versus what gets loaded but never applied. Chrome DevTools includes built-in coverage functionality, and several Chrome extensions extend this capability with enhanced features for development workflows. This guide explains how CSS coverage analysis works, what tools exist, and how to leverage them effectively.
+CSS coverage analysis helps developers discover which stylesheet rules your application actually uses versus what gets loaded but never applied. Chrome DevTools includes built-in coverage functionality, and several Chrome extensions extend this capability with enhanced features for development workflows. This guide explains how CSS coverage analysis works, what tools exist, and how to use them effectively.
 
 ## Understanding CSS Coverage Analysis
 

@@ -1,16 +1,22 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Svelte Devtools: A Practical Guide"
 description: "Learn how to build Chrome extensions with Svelte and effectively use browser devtools for debugging. Includes code examples and best practices."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-svelte-devtools/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension Svelte Devtools: A Practical Guide
 
-Building Chrome extensions with Svelte offers a compelling combination of reactive UI development and the ability to interact with browser APIs directly. This guide covers the essentials of creating Chrome extensions using Svelte and shows you how to leverage browser devtools effectively during development.
+Building Chrome extensions with Svelte offers a compelling combination of reactive UI development and the ability to interact with browser APIs directly. This guide covers the essentials of creating Chrome extensions using Svelte and shows you how to use browser devtools effectively during development.
 
 ## Why Svelte for Chrome Extensions
 

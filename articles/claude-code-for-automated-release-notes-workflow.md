@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Automated Release Notes Workflow"
 description: "Learn how to build an automated release notes workflow using Claude Code. Extract changes from git, generate changelogs with AI, and streamline your release process."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-automated-release-notes-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Automated Release Notes Workflow
@@ -150,7 +154,7 @@ This ensures every release automatically gets comprehensive, consistent notes wi
 
 ## Conclusion
 
-Automated release notes with Claude Code transform a tedious task into a seamless part of your development workflow. By extracting changes from git, leveraging AI for intelligent categorization, and integrating with your existing tools, you can maintain high-quality release documentation with minimal effort.
+Automated release notes with Claude Code transform a tedious task into a seamless part of your development workflow. By extracting changes from git, using AI for intelligent categorization, and integrating with your existing tools, you can maintain high-quality release documentation with minimal effort.
 
 Start small: create a basic skill that extracts commits and formats them. Then progressively add intelligence—categorization, conventional commit parsing, GitHub release creation. Each iteration makes your release process smoother.
 

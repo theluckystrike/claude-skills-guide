@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Deal Finder Chrome Extension: A Developer Guide"
 description: "Learn how to build a deal finder Chrome extension from scratch. Practical code examples, APIs, and implementation patterns for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /deal-finder-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Deal Finder Chrome Extension: A Developer Guide

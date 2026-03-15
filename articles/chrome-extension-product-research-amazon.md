@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension for Amazon Product Research: A Developer Guide"
 description: "Learn how to build and use Chrome extensions for Amazon product research. Includes practical code examples and implementation patterns for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-product-research-amazon/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Chrome Extension for Amazon Product Research: A Developer Guide

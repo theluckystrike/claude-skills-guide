@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Focus Timer for Productivity: A Developer's Guide"
 description: "Build and use Chrome extensions for focus timers to maximize productivity. Practical examples, code patterns, and implementation strategies for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-focus-timer-productivity/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Chrome Extension Focus Timer for Productivity: A Developer's Guide

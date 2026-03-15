@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Team Status Tracker: A Developer Guide"
 description: "Learn how to build and integrate team status tracking into Chrome extensions for collaborative workflows and real-time updates."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-team-status-tracker/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 Chrome extension team status trackers enable distributed teams to monitor member availability, track project progress, and coordinate work directly from the browser. For developers building collaborative tools and power users managing remote teams, understanding how to implement these features unlocks significant productivity gains.

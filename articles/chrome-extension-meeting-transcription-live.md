@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Meeting Transcription Live: A Developer Guide"
 description: "Learn how to build Chrome extensions for real-time meeting transcription. Technical implementation, APIs, and best practices for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-meeting-transcription-live/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 Building a Chrome extension for live meeting transcription requires understanding browser permissions, Web Speech API integration, and audio capture mechanisms. This guide covers the technical implementation for developers and power users who want to create or customize real-time transcription tools.
 

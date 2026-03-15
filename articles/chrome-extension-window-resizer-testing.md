@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Window Resizer Testing: A Practical Guide"
 description: "Master chrome extension window resizer testing with practical code examples. Learn methods for testing window sizing APIs, handling resize events, and debugging viewport-related issues."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-window-resizer-testing/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 # Chrome Extension Window Resizer Testing: A Practical Guide
