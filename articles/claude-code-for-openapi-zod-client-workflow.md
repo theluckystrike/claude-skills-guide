@@ -223,3 +223,10 @@ Start small: generate your first Zod schema from an OpenAPI spec, then expand to
 
 Remember: type safety isn't just about catching bugs—it's about documentation that never lies and refactoring with confidence. Let Claude Code help you achieve both.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
