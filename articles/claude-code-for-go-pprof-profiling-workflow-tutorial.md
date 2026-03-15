@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Go pprof Profiling Workflow Tutorial"
 description: "Learn how to integrate Claude Code into your Go pprof profiling workflow to efficiently identify performance bottlenecks, analyze heap allocations, and optimize your applications."
@@ -7,13 +8,16 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-go-pprof-profiling-workflow-tutorial/
 categories: [tutorials, guides, guides]
 tags: [claude-code, claude-skills, go, pprof, profiling, performance-optimization]
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for Go pprof Profiling Workflow Tutorial
 
 Performance optimization is a critical skill for any Go developer, and the pprof tool is your gateway to understanding where your application spends its time and memory. This tutorial shows you how to integrate Claude Code into your pprof workflow to accelerate profile analysis and make smarter optimization decisions.
 
-## Understanding the Go pprof Landscape
+## Understanding the Go pprof ecosystem
 
 The Go standard library includes [net/http/pprof](https://pkg.go.dev/net/http/pprof) package, which exposes profiling data over HTTP. When you import this package in your application, you gain access to CPU, memory, goroutine, block, and mutex profiles via HTTP endpoints.
 

@@ -1,18 +1,22 @@
 ---
+
 layout: default
 title: "Claude Code for LSP Document Symbol Workflow Guide"
 description: "Learn how to leverage Claude Code with Language Server Protocol (LSP) document symbols to enhance your code navigation, refactoring, and development workflow."
 date: 2026-03-15
-author: Claude Skills Guide
+author: "Claude Skills Guide"
 permalink: /claude-code-for-lsp-document-symbol-workflow-guide/
 categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for LSP Document Symbol Workflow Guide
 
-The Language Server Protocol (LSP) has revolutionized how development tools communicate about code. Document symbols represent the structural elements of your code—classes, functions, methods, variables, and more. Understanding how to leverage Claude Code with LSP document symbols can dramatically improve your development workflow, making code navigation faster and refactoring more reliable.
+The Language Server Protocol (LSP) has revolutionized how development tools communicate about code. Document symbols represent the structural elements of your code—classes, functions, methods, variables, and more. Understanding how to use Claude Code with LSP document symbols can dramatically improve your development workflow, making code navigation faster and refactoring more reliable.
 
 ## Understanding LSP Document Symbols
 
@@ -115,7 +119,7 @@ This comprehensive understanding ensures renames don't break functionality.
 
 ## Automating Symbol-Based Code Generation
 
-Claude Code can leverage document symbols to generate contextually appropriate code. When creating new functions or classes, understanding the existing symbol structure helps produce code that follows project conventions.
+Claude Code can use document symbols to generate contextually appropriate code. When creating new functions or classes, understanding the existing symbol structure helps produce code that follows project conventions.
 
 ### Template-Based Generation
 
@@ -157,7 +161,7 @@ validate()
 gen()
 ```
 
-### 3. Leverage Symbol Hierarchies
+### 3. use Symbol Hierarchies
 
 Group related symbols under interfaces or classes to improve code organization:
 
