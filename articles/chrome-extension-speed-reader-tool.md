@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Speed Reader Tool for Developers"
 description: "Learn how to build and use Chrome extension speed reader tools for rapid content consumption. Includes code examples and practical implementations for power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-speed-reader-tool/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension Speed Reader Tool for Developers
 
