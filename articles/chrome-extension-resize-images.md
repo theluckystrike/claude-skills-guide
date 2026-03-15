@@ -6,6 +6,10 @@ description: "Learn how to build image resizing functionality into Chrome extens
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-resize-images/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 Image resizing is a fundamental capability for many Chrome extensions. Whether you're building a screenshot tool, a bookmark manager with thumbnail previews, or an extension that optimizes images before uploading, understanding how to resize images efficiently within the Chrome extension environment is essential knowledge.

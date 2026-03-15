@@ -5,6 +5,10 @@ description: "A practical guide to building a Chrome extension text expander for
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-text-expander/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

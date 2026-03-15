@@ -6,6 +6,10 @@ description: "Build or customize a Pinterest pin scheduler using Chrome extensio
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-pinterest-pin-scheduler/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 
