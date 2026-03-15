@@ -48,6 +48,13 @@ Specify your preferred framework in the request for the most relevant output.
 
 Beyond the TDD skill, Claude can analyze existing implementation code and generate corresponding unit tests. This works well for adding test coverage to legacy projects or quickly scaffolding tests for new functions.
 
+The process for generating tests from existing code follows a consistent pattern:
+
+1. Provide the source file to Claude
+2. Request test generation with specific coverage goals
+3. Review and refine the generated tests
+4. Integrate into your test suite
+
 Provide Claude with your source file and ask for test generation:
 
 ```
@@ -62,6 +69,15 @@ Claude analyzes function signatures, identifies dependencies, and produces testa
 - Invalid input handling
 - Boundary conditions
 - Exception scenarios
+
+## Additional Skills for Specialized Testing
+
+Beyond the `/tdd` skill, several other Claude skills enhance test generation for specific use cases:
+
+- **xlsx**: When testing code that processes spreadsheet data, this skill helps you create sample data files and generate tests that verify parsing logic, formula evaluation, and error handling for edge cases like corrupted files or unusual encodings.
+- **pdf**: For PDF processing code, this skill generates tests covering unusual encodings, large documents, and malformed files.
+- **frontend-design**: When generating tests for React components or JavaScript UI functions, this skill understands component structure and produces tests that verify rendering, state changes, and user interactions.
+- **supermemory**: Helps maintain test consistency across a project by recalling testing patterns you've used previously, ensuring new tests follow the same conventions and style.
 
 ## Custom Skills for Test Automation
 
@@ -217,6 +233,7 @@ For optimal results:
 - Add domain-specific assertions the generator cannot infer
 - Update tests when requirements change rather than regenerating blindly
 - Keep test assertions specific enough to catch regressions
+- Verify test independence: each test should run without relying on execution order or shared mutable state
 
 Claude skills for writing unit tests automatically handle the mechanical parts of test creation, freeing you to focus on test strategy and meaningful assertions that protect your codebase.
 
