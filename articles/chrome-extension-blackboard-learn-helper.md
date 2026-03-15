@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Blackboard Learn Helper: A Developer Guide"
-description: "Learn how to build a Chrome extension to enhance Blackboard Learn. Practical code examples, API integrations, and techniques for developers and power users."
+description: "Learn how to build a Chrome extension to enhance Blackboard Learn. Practical code examples, API integrations, and techniques for developers and power."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-blackboard-learn-helper/
@@ -212,6 +212,13 @@ Finally, maintain clear documentation for users. Explain what your extension doe
 Once you have established the core features, consider adding grade tracking dashboards, assignment submission reminders, or integration with calendar applications. The foundation built with deadline extraction and navigation shortcuts provides a solid base for more sophisticated features.
 
 The Blackboard Learn platform will continue evolving, and maintaining a helper extension requires ongoing attention to DOM changes and API updates. Focus on robust, adaptable implementations that can withstand structural modifications to the underlying platform.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
