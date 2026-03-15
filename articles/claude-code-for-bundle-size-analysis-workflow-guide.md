@@ -138,10 +138,10 @@ Before shipping a release, run a full analysis to document changes:
 
 ```bash
 # Generate comparison against main branch
-claude-code run /compare-bundles main
+claude "/compare-bundles main"
 
 # Output summary
-claude-code run /analyze-bundle --output release-bundle-report.md
+claude "/analyze-bundle" >> release-bundle-report.md
 ```
 
 This creates a clear picture of what changed and helps reviewers understand the impact of new dependencies.

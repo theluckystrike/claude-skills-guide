@@ -56,7 +56,7 @@ Here's a practical refactoring scenario:
 // With Copilot: You'd need to do this manually or with IDE refactoring tools
 // With Claude Code:
 
-claude-code "Find all usages of 'calculateTotal' and rename them to 
+claude "Find all usages of 'calculateTotal' and rename them to 
 'computeOrderTotal' across the entire codebase. Update the related 
 tests as well."
 ```

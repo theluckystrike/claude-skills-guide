@@ -23,7 +23,7 @@ Claude Code excels at large-scale code modifications across multiple files. Its 
 For example, renaming a function across a monorepo takes minimal effort:
 
 ```bash
-claude-code "rename the authenticateUser function to verifyUserCredentials across all TypeScript files in src/"
+claude "rename the authenticateUser function to verifyUserCredentials across all TypeScript files in src/"
 ```
 
 The tool understands your project structure and can intelligently propagate changes while preserving functionality.
@@ -54,7 +54,7 @@ Claude Code's extensible architecture through skills and MCP (Model Context Prot
 Example: Using the frontend-design skill for component generation:
 
 ```bash
-claude-code "Create a accessible button component using the frontend-design skill, following WCAG 2.1 AA guidelines"
+claude "Create a accessible button component using the frontend-design skill, following WCAG 2.1 AA guidelines"
 ```
 
 MCP servers extend capabilities further—connecting to databases, cloud services, and development tools. This ecosystem transforms Claude Code from a simple coding assistant into a comprehensive development environment.
@@ -64,7 +64,7 @@ MCP servers extend capabilities further—connecting to databases, cloud service
 When facing obscure bugs, Claude Code's extended thinking capabilities help trace through complex code paths. It can analyze stack traces, examine logs, and propose solutions with reasoning that shows its work:
 
 ```bash
-claude-code "Debug the race condition in our user authentication flow. The issue occurs intermittently when multiple requests hit the /login endpoint simultaneously."
+claude "Debug the race condition in our user authentication flow. The issue occurs intermittently when multiple requests hit the /login endpoint simultaneously."
 ```
 
 ## When ChatGPT Is the Better Choice
@@ -132,7 +132,7 @@ Example workflow for building a new feature:
 # "How do I implement WebSocket reconnection with exponential backoff?"
 
 # Phase 2: Implementation with Claude Code
-claude-code "Implement WebSocket reconnection with exponential backoff in src/network/WebSocketManager.ts, following our existing patterns in that directory"
+claude "Implement WebSocket reconnection with exponential backoff in src/network/WebSocketManager.ts, following our existing patterns in that directory"
 ```
 
 ## Common Mistakes to Avoid

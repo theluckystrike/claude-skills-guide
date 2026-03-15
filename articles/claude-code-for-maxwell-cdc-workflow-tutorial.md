@@ -99,7 +99,7 @@ Use Claude Code to initialize your CDC pipeline with proper validation:
 
 ```bash
 # Ask Claude Code to start the CDC pipeline
-claude-code "Start Maxwell CDC and verify it's reading from the production database"
+claude "Start Maxwell CDC and verify it's reading from the production database"
 ```
 
 Claude Code will:
@@ -194,7 +194,7 @@ If Maxwell stops unexpectedly, restart from the last processed position:
 
 ```bash
 # Resume from last known position
-claude-code "Restart Maxwell from the last processed binlog position"
+claude "Restart Maxwell from the last processed binlog position"
 ```
 
 The `--reset` flag allows manual recovery when you need to reprocess events.
@@ -227,7 +227,7 @@ kafka.topic=maxwell_production
 Switch between configurations using Claude Code:
 
 ```bash
-claude-code "Switch Maxwell to use the production configuration"
+claude "Switch Maxwell to use the production configuration"
 ```
 
 ## Best Practices for Maxwell CDC with Claude Code

@@ -120,7 +120,7 @@ Integrate security scanning into your Claude Code workflow:
 
 ```bash
 # Pre-commit security check
-claude-code --prompt "Review the changes for security vulnerabilities" \
+claude --print "Review the changes for security vulnerabilities" \
   --tools [Read] \
   --context {scan_target: "diff", severity: "high"}
 ```
@@ -156,7 +156,7 @@ Never allow Claude Code direct access to secrets. Instead, implement secret inje
 ```bash
 # Environment-based secret injection
 export SECRETS_PREFIX="AI_ACCESSIBLE_"
-claude-code --prompt "Deploy the application"
+claude --print "Deploy the application"
 
 # Claude Code only sees prefixed (safe) variables
 # Actual secrets remain in secure vault

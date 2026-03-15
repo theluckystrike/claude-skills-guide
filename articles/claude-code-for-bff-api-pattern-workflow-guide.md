@@ -66,7 +66,7 @@ Use Claude Code to scaffold the BFF project:
 
 ```bash
 # Ask Claude to generate a Node.js Express BFF structure
-claude-code "Generate a BFF project structure with Express, TypeScript, and proper layering"
+claude "Generate a BFF project structure with Express, TypeScript, and proper layering"
 ```
 
 Claude will create the appropriate directory structure:
@@ -267,7 +267,7 @@ Claude Code can generate comprehensive documentation automatically:
 
 ```bash
 # Generate API docs from code
-claude-code "Generate OpenAPI documentation from all route files"
+claude "Generate OpenAPI documentation from all route files"
 ```
 
 ## Actionable Summary

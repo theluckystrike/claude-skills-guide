@@ -64,7 +64,7 @@ This extracts key decisions and code snippets into a searchable database. Run yo
 
 ```bash
 # Archive first, then clean
-claude-code --run "/supermemory archive --project client-api --label compliance"
+claude --print "/supermemory archive --project client-api --label compliance"
 ./retention-cleanup.sh
 ```
 

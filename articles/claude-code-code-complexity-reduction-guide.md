@@ -115,7 +115,7 @@ After refactoring, verify your changes actually reduced complexity. Claude Code 
 
 ```bash
 # Use a complexity tool, then ask Claude to summarize
-claude-code "Analyze the complexity metrics in complexity-report.txt 
+claude "Analyze the complexity metrics in complexity-report.txt 
 and identify the top 5 functions that need refactoring"
 ```
 

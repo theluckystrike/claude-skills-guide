@@ -148,7 +148,7 @@ Here's an example of how this automation might work:
 
 ```bash
 # Claude Code generates deployment script
-claude-code execute "Generate Cloudflare WAF deployment script for rule changes in this PR"
+claude --print "Generate Cloudflare WAF deployment script for rule changes in this PR"
 ```
 
 The output would include API calls to update your Cloudflare WAF rules, with appropriate error handling and rollback instructions.
