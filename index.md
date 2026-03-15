@@ -838,7 +838,7 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Code for PostgreSQL JSONB Workflow Tutorial](/claude-skills-guide/claude-code-for-postgres-jsonb-workflow-tutorial/)
 - [Claude Code for Postgres Logical Replication Workflow](/claude-skills-guide/claude-code-for-postgres-logical-replication-workflow/)
 - [Claude Code for PR Changelog Generation Workflow](/claude-skills-guide/claude-code-for-pr-changelog-generation-workflow/)
-- [Claude Code for Pre-Commit Checks Automation](/claude-skills-guide/claude-code-for-pre-commit-checks-automation/)
+- [Claude Code Git Hooks: Automate Your Pre-Commit Workflow](/claude-skills-guide/claude-code-git-hooks-pre-commit-automation/)
 - [Claude Code for Process Manager Pattern Workflow](/claude-skills-guide/claude-code-for-process-manager-pattern-workflow/)
 - [Claude Code for Project Scaffolding Automation](/claude-skills-guide/claude-code-for-project-scaffolding-automation/)
 - [Claude Code for Prometheus Federation Workflow Guide](/claude-skills-guide/claude-code-for-prometheus-federation-workflow-guide/)

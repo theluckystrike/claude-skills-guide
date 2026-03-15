@@ -150,11 +150,74 @@ repos:
         stages: [pre-commit]
 ```
 
+## Building a Pre-Commit Skill
+
+Rather than wiring Claude Code into hooks via shell scripts alone, you can define a dedicated Claude skill that manages the entire validation workflow. This lets you invoke checks conversationally and extend them without touching hook configuration files:
+
+```markdown
+---
+name: pre-commit-check
+description: Run pre-commit validation on staged files
+---
+
+# Pre-Commit Check
+
+Run comprehensive checks on staged files before commit.
+
+## Available Tools
+- eslint, prettier, tslint for JavaScript/TypeScript
+- black, ruff, mypy for Python
+- gofmt, golint for Go
+- rustfmt, clippy for Rust
+
+## Process
+1. Identify staged files using git diff --cached
+2. Determine file types and select appropriate checkers
+3. Run selected validators
+4. Report results and suggest fixes
+5. If checks pass, confirm ready for commit
+
+## Usage
+
+- Run all checks: "check my code"
+- Run specific checks: "check only linting" or "check types only"
+- Skip checks: "commit without checks" (with warning)
+```
+
+The skill uses the `bash` tool to execute commands and can detect which tools are available in your project by checking for `package.json`, `pyproject.toml`, `go.mod`, or `Cargo.toml`.
+
+## Adding Smart Fix Suggestions
+
+Extend your pre-commit skill to offer automatic corrections rather than just reporting problems:
+
+```markdown
+## Fix Suggestions
+
+For linting errors:
+- If ESLint reports issues, offer: `npx eslint --fix`
+- If ruff finds problems, offer: `ruff check --fix`
+- If black detects formatting issues, offer: `black .`
+
+Always confirm before applying automatic fixes to avoid unintended changes.
+```
+
+## Automating Dependency Checks
+
+Another valuable pre-commit use case is verifying dependencies. A skill or hook can check for outdated packages with known vulnerabilities, incompatible version mismatches, missing peer dependencies, and unused packages:
+
+```bash
+# Check for vulnerabilities
+npm audit --audit-level=moderate
+
+# List outdated packages
+npm outdated --json > /tmp/outdated.json
+```
+
 ## Automating with Claude Code Skills
 
 Claude Code's skills excel in specific domains. You can create specialized hooks that use these capabilities:
 
-For frontend projects, the frontend-design skill can validate component implementations against design patterns. For documentation-heavy projects, the pdf skill ensures generated documents maintain professional quality. The supermemory skill can even help maintain a knowledge base of commit patterns and code standards.
+For frontend projects, the frontend-design skill can validate component implementations against design patterns. For documentation-heavy projects, the pdf skill ensures generated documents maintain professional quality. The supermemory skill can even help maintain a knowledge base of commit patterns and code standards across sessions, including project-specific naming conventions, import ordering, and custom rules not captured in config files.
 
 Here's a comprehensive pre-commit configuration that demonstrates this approach:
 
