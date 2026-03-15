@@ -157,6 +157,114 @@ Several Chrome extensions offer AI flashcard functionality. When selecting one, 
 
 Open-source solutions typically offer more customization but require technical setup. Commercial extensions prioritize ease of use but may limit your control.
 
+## Building a Popup UI for Card Creation
+
+A polished popup interface lets you create cards with deck selection directly from the extension icon:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 320px; padding: 16px; font-family: system-ui; }
+    textarea { width: 100%; height: 80px; margin-bottom: 8px; }
+    input { width: 100%; margin-bottom: 8px; }
+    button { width: 100%; padding: 8px; background: #4a90d9; color: white; border: none; cursor: pointer; }
+    .deck-select { width: 100%; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <h3>Add Flashcard</h3>
+  <select id="deckSelect" class="deck-select">
+    <option value="javascript">JavaScript</option>
+    <option value="python">Python</option>
+    <option value="apis">APIs</option>
+  </select>
+  <textarea id="front" placeholder="Front (question)"></textarea>
+  <textarea id="back" placeholder="Back (answer)"></textarea>
+  <button id="saveBtn">Save Card</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
+```
+
+The save handler uses Chrome's synchronized storage and implements the SM-2 spaced repetition fields:
+
+```javascript
+document.getElementById('saveBtn').addEventListener('click', async () => {
+  const front = document.getElementById('front').value.trim();
+  const back = document.getElementById('back').value.trim();
+  const deck = document.getElementById('deckSelect').value;
+
+  if (!front || !back) {
+    document.getElementById('status').textContent = 'Fill both fields';
+    return;
+  }
+
+  const card = {
+    id: Date.now(),
+    front, back, deck,
+    created: new Date().toISOString(),
+    nextReview: Date.now(),
+    interval: 1,
+    easeFactor: 2.5
+  };
+
+  const { cards = [] } = await chrome.storage.sync.get('cards');
+  cards.push(card);
+  await chrome.storage.sync.set({ cards });
+  document.getElementById('status').textContent = 'Card saved!';
+});
+```
+
+## Building a Study Interface
+
+Your extension also needs a review mode that implements SM-2 scheduling:
+
+```javascript
+// study.js
+async function loadDeck(deckName) {
+  const { cards = [] } = await chrome.storage.sync.get('cards');
+  return cards.filter(c => c.deck === deckName && c.nextReview <= Date.now());
+}
+
+function showCard(card) {
+  document.getElementById('question').textContent = card.front;
+  document.getElementById('answer').textContent = card.back;
+  document.getElementById('answer').hidden = true;
+}
+
+function rateCard(card, quality) {
+  // SM-2 algorithm: quality 0-2 = fail, 3-5 = pass
+  const { interval, easeFactor } = card;
+  let newInterval, newEase = easeFactor;
+
+  if (quality >= 3) {
+    newInterval = interval === 1 ? 6 : Math.round(interval * easeFactor);
+    newEase = easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
+  } else {
+    newInterval = 1;
+  }
+
+  card.interval = newInterval;
+  card.easeFactor = Math.max(1.3, newEase);
+  card.nextReview = Date.now() + (newInterval * 24 * 60 * 60 * 1000);
+
+  chrome.storage.sync.get('cards').then(({ cards }) => {
+    const index = cards.findIndex(c => c.id === card.id);
+    cards[index] = card;
+    chrome.storage.sync.set({ cards });
+  });
+}
+```
+
+## Publishing Your Extension
+
+When your flashcard maker is ready for distribution, package it for the Chrome Web Store. Navigate to `chrome://extensions`, enable Developer mode, click Pack Extension, and select your extension folder. Chrome generates a CRX file for local testing.
+
+For public distribution, create a developer account through the Chrome Web Store publisher dashboard. Prepare store listing assets including a 128x128 icon, screenshots demonstrating key features, and a detailed description. The review process typically takes 24-72 hours.
+
 ## Optimizing Your Workflow
 
 Getting the most from an AI flashcard maker involves strategic selection and review habits. Select focused content rather than entire pages—the AI generates better questions from concentrated sections. Review generated cards before accepting them; AI makes mistakes, especially with technical content.
