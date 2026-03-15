@@ -1,293 +1,277 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Blackboard Learn Helper: A Developer Guide"
-description: "Learn how to build a Chrome extension to enhance your Blackboard Learn experience with automation, customization, and productivity features."
+description: "Learn how to build and use Chrome extensions for Blackboard Learn. Practical code examples, architecture patterns, and customization tips for developers."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-extension-blackboard-learn-helper/
-reviewed: true
-score: 8
-categories: [guides]
-tags: [chrome-extension, claude-skills]
 ---
 
+# Chrome Extension Blackboard Learn Helper: A Developer Guide
 
-{% raw %}
-Blackboard Learn remains one of the most widely used learning management systems in educational institutions worldwide. While it provides core functionality for course management, assignments, and grade tracking, many power users find themselves performing repetitive tasks or wishing for streamlined interfaces. Building a Chrome extension to enhance Blackboard Learn addresses these pain points directly.
+Blackboard Learn remains one of the most widely deployed Learning Management Systems (LMS) in higher education and corporate training. While the platform provides core functionality, power users and developers often need custom enhancements to streamline workflows, automate repetitive tasks, and improve the overall user experience. Building a Chrome extension for Blackboard Learn gives you browser-level control to inject functionality directly into the platform.
 
-This guide walks through creating a Chrome extension specifically designed for Blackboard Learn, focusing on practical automation, UI improvements, and integration patterns that developers and power users can implement and customize.
+This guide covers the technical foundation for creating a Chrome extension that extends Blackboard Learn, with practical examples developers can adapt for their specific needs.
 
-## Understanding Blackboard Learn's Architecture
+## Understanding the Blackboard Learn Architecture
 
-Before building an extension, understanding how Blackboard Learn delivers content helps you design better integrations. Blackboard Learn uses a combination of server-side rendering and JavaScript-based interactions. The platform typically loads content through iframes and relies on AJAX calls for dynamic updates.
+Before writing code, understand how Blackboard Learn renders its interface. The platform uses a combination of server-side rendering and client-side JavaScript. Key components include:
 
-The key DOM elements you'll interact with include course list containers, assignment submission areas, grade tables, and navigation menus. Blackboard's HTML structure often uses semantic class names like `.courseList`, `.assignment`, and `.gradebook`, though these can vary between institutions depending on custom theming.
+- **Ultra Base**: The modern UI framework introduced in Blackboard Learn SaaS
+- **Original Course View**: The legacy interface still found in many institutions
+- **REST API**: Programmatic access to courses, assignments, and grades
+- **Building Blocks**: Server-side plugins (Java-based)
 
-To inspect Blackboard's structure effectively, open the browser developer tools while navigating your institution's Blackboard instance. Pay attention to network requests—many grade updates and content loads happen asynchronously through REST API endpoints.
+A Chrome extension operates at the client level, interacting with the rendered HTML and JavaScript environment. This means your extension works with whatever the server sends to the browser.
 
-## Extension Manifest and Permissions
+## Manifest V3 Extension Structure
 
-Every Chrome extension starts with the manifest file. For a Blackboard Learn helper, you'll need specific permissions to interact with the LMS effectively:
+Modern Chrome extensions use Manifest V3. Here is a minimal structure for a Blackboard Learn helper extension:
 
 ```json
 {
   "manifest_version": 3,
   "name": "Blackboard Learn Helper",
-  "version": "1.0",
-  "description": "Enhance your Blackboard Learn experience with automation and customizations",
-  "permissions": [
-    "activeTab",
-    "storage",
-    "scripting"
-  ],
-  "host_permissions": [
-    "https://*.blackboard.com/*"
-  ],
+  "version": "1.0.0",
+  "description": "Enhances Blackboard Learn with custom utilities",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["*://*.blackboard.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["*://*.blackboard.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
-  },
-  "background": {
-    "service_worker": "background.js"
   }
 }
 ```
 
-The `host_permissions` array is critical—you must specify the exact Blackboard domain your institution uses. This typically follows the pattern `https://*.your-institution.blackboard.com/*`.
+The `host_permissions` field is critical. Without proper match patterns, your extension cannot access Blackboard domains.
 
-## Content Script Implementation
+## Content Script Injection Strategies
 
-The content script runs within Blackboard pages and handles DOM manipulation, data extraction, and user interactions. Here's a practical implementation that extracts course information:
+Content scripts run in the context of web pages. For Blackboard Learn, you need to handle different page types:
 
 ```javascript
-// content.js
+// content.js - Main content script
+
 (function() {
   'use strict';
 
-  // Configuration for Blackboard selectors
-  const SELECTORS = {
-    courseList: '.courseList .course',
-    assignmentItem: '.assignmentList .assignment-item',
-    gradeCell: '.grade-cell',
-    navigationItem: '.navItem'
-  };
-
-  // Extract course information from the main courses page
-  function extractCourses() {
-    const courses = [];
-    const courseElements = document.querySelectorAll(SELECTORS.courseList);
-    
-    courseElements.forEach(element => {
-      const name = element.querySelector('.course-title')?.textContent?.trim();
-      const id = element.dataset.courseId;
-      const link = element.querySelector('a')?.href;
-      
-      if (name && id) {
-        courses.push({ name, id, link });
-      }
-    });
-    
-    return courses;
+  // Detect current page context
+  const path = window.location.pathname;
+  
+  // Course list page
+  if (path.includes('/webapps/portal/')) {
+    initializeCourseList();
+  }
+  
+  // Assignment list
+  if (path.includes('/webapps/assignment/')) {
+    initializeAssignments();
+  }
+  
+  // Grade book
+  if (path.includes('/webapps/gradebook/')) {
+    initializeGradebook();
   }
 
-  // Find upcoming assignments across all visible courses
-  function findUpcomingAssignments() {
-    const assignments = [];
-    const deadlineElements = document.querySelectorAll('[data-*="dueDate"]');
-    
-    deadlineElements.forEach(element => {
-      const dueDate = new Date(element.dataset.dueDate);
-      const now = new Date();
-      
-      if (dueDate > now) {
-        assignments.push({
-          title: element.textContent?.trim(),
-          dueDate: dueDate.toISOString(),
-          course: element.closest('[data-course-id]')?.dataset.courseId
-        });
-      }
+  function initializeCourseList() {
+    const courses = document.querySelectorAll('.course');
+    courses.forEach(course => {
+      // Add custom functionality here
+      console.log('Course element found:', course.textContent);
     });
-    
-    return assignments.sort((a, b) => a.dueDate - b.dueDate);
   }
 
-  // Listen for messages from popup or background script
-  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    switch (request.action) {
-      case 'getCourses':
-        sendResponse({ courses: extractCourses() });
-        break;
-      case 'getAssignments':
-        sendResponse({ assignments: findUpcomingAssignments() });
-        break;
-      case 'highlightOverdue':
-        highlightOverdueItems();
-        sendResponse({ success: true });
-        break;
-    }
-    return true;
-  });
+  function initializeAssignments() {
+    // Assignment-specific logic
+  }
 
-  function highlightOverdueItems() {
-    const overdueSelector = '[data-due-date]';
-    document.querySelectorAll(overdueSelector).forEach(element => {
-      const dueDate = new Date(element.dataset.dueDate);
-      if (dueDate < new Date()) {
-        element.style.borderLeft = '3px solid #dc3545';
-        element.style.backgroundColor = 'rgba(220, 53, 69, 0.1)';
-      }
-    });
+  function initializeGradebook() {
+    // Gradebook-specific logic
   }
 })();
 ```
 
-This script provides three essential features: course extraction, assignment tracking, and visual overdue highlighting. Each function operates independently, making it easy to enable or disable specific features.
+## Practical Extension Features
 
-## Building the Popup Interface
+Here are three features you can implement for a Blackboard Learn helper:
 
-The popup provides quick access to extension features without leaving your current page. Here's a practical popup implementation:
+### 1. Quick Course Navigation
 
-```html
-<!-- popup.html -->
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body { width: 320px; padding: 16px; font-family: system-ui, sans-serif; }
-    h2 { margin: 0 0 12px; font-size: 16px; }
-    .course-list { max-height: 300px; overflow-y: auto; }
-    .course-item { 
-      padding: 8px; 
-      border-bottom: 1px solid #eee; 
-      cursor: pointer;
-    }
-    .course-item:hover { background: #f5f5f5; }
-    .assignment-count { 
-      font-size: 12px; 
-      color: #666; 
-      float: right;
-    }
-    button {
-      width: 100%;
-      padding: 8px;
-      margin-top: 8px;
-      background: #0056b3;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover { background: #004494; }
-  </style>
-</head>
-<body>
-  <h2>Blackboard Learn Helper</h2>
-  <div id="courses" class="course-list"></div>
-  <button id="refreshBtn">Refresh Data</button>
-  <button id="highlightBtn">Highlight Overdue</button>
-  <script src="popup.js"></script>
-</body>
-</html>
-```
+Instead of clicking through multiple pages, add a keyboard shortcut to jump between courses:
 
 ```javascript
-// popup.js
-document.addEventListener('DOMContentLoaded', () => {
-  loadCourses();
-  
-  document.getElementById('refreshBtn').addEventListener('click', loadCourses);
-  document.getElementById('highlightBtn').addEventListener('click', highlightOverdue);
-});
-
-function loadCourses() {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, { action: 'getCourses' }, (response) => {
-      if (response && response.courses) {
-        displayCourses(response.courses);
+// Add to content.js
+document.addEventListener('keydown', (e) => {
+  if (e.altKey && e.key === 'c') {
+    const courseInput = document.createElement('input');
+    courseInput.type = 'text';
+    courseInput.placeholder = 'Enter course ID...';
+    courseInput.style.cssText = 'position:fixed;top:10px;right:10px;z-index:9999;padding:8px;';
+    
+    courseInput.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Enter') {
+        window.location.href = `/webapps/blackboard/executeCourseHome?course_id=${courseInput.value}`;
+        courseInput.remove();
       }
     });
-  });
-}
+    
+    document.body.appendChild(courseInput);
+    courseInput.focus();
+  }
+});
+```
 
-function displayCourses(courses) {
-  const container = document.getElementById('courses');
-  container.innerHTML = courses.map(course => `
-    <div class="course-item" data-id="${course.id}">
-      ${course.name}
-    </div>
-  `).join('');
-}
+### 2. Assignment Deadline Highlighter
 
-function highlightOverdue() {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, { action: 'highlightOverdue' });
+Automatically highlight assignments due within 24 hours:
+
+```javascript
+function highlightUrgentAssignments() {
+  const dueDates = document.querySelectorAll('[data-due-date]');
+  const now = new Date();
+  
+  dueDates.forEach(element => {
+    const dueDate = new Date(element.getAttribute('data-due-date'));
+    const hoursRemaining = (dueDate - now) / (1000 * 60 * 60);
+    
+    if (hoursRemaining > 0 && hoursRemaining < 24) {
+      element.style.borderLeft = '4px solid #ff6b6b';
+      element.style.paddingLeft = '12px';
+    }
   });
 }
 ```
 
-## Advanced Features for Power Users
+### 3. Grade Export Functionality
 
-Beyond basic functionality, several advanced features can significantly enhance the Blackboard experience:
-
-**Grade Calculation Automation**: Create a content script that parses grade tables and calculates weighted averages based on your institution's grading scheme. This requires understanding the specific grade structure your institution uses.
-
-**Notification System**: Implement a background script that periodically checks Blackboard for new announcements or grade updates using the platform's notification APIs. Store last-checked timestamps in `chrome.storage` to detect changes.
-
-**Custom Theming**: Use CSS injection through the content script to modify Blackboard's appearance. Many users prefer a cleaner, less cluttered interface:
+Extract grades to a CSV file for external analysis:
 
 ```javascript
-// Inject custom styles
-function injectCustomStyles() {
-  const style = document.createElement('style');
-  style.textContent = `
-    .course-list { 
-      display: grid !important; 
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+function exportGrades() {
+  const gradeRows = document.querySelectorAll('.gradebook-row');
+  const grades = [];
+  
+  gradeRows.forEach(row => {
+    const studentName = row.querySelector('.student-name')?.textContent;
+    const score = row.querySelector('.grade-score')?.textContent;
+    const maxScore = row.querySelector('.grade-max')?.textContent;
+    
+    if (studentName && score) {
+      grades.push({ studentName, score, maxScore });
     }
-    .announcement { 
-      border-left: 3px solid #0056b3 !important;
-      padding-left: 12px !important;
-    }
-    #commonModalBG { 
-      backdrop-filter: blur(4px) !important;
-    }
-  `;
-  document.head.appendChild(style);
+  });
+  
+  const csv = 'Name,Score,Max Score\n' + 
+    grades.map(g => `${g.studentName},${g.score},${g.maxScore}`).join('\n');
+  
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'grades.csv';
+  a.click();
 }
 ```
 
 ## Handling Authentication and Sessions
 
-Blackboard uses session-based authentication, which presents challenges for extensions that need to make API requests. The recommended approach is to operate within the authenticated browser session—your extension performs actions as the logged-in user without handling credentials directly.
-
-For features requiring API access, you can use the `cookies` permission to check authentication status:
+Blackboard Learn uses session-based authentication. Your extension needs to handle this carefully:
 
 ```javascript
-// Check if user is authenticated
-async function checkAuthStatus() {
-  const cookies = await chrome.cookies.get({
-    url: 'https://your-institution.blackboard.com',
-    name: 'JSESSIONID'
-  });
-  return cookies !== null;
+// Check if user is logged in
+function isAuthenticated() {
+  const sessionCookie = document.cookie
+    .split('; ')
+    .find(row => row.startsWith('JSESSIONID='));
+  return !!sessionCookie;
+}
+
+// Get current user info from the DOM
+function getCurrentUser() {
+  const userElement = document.querySelector('[data-user-id]');
+  if (userElement) {
+    return {
+      id: userElement.getAttribute('data-user-id'),
+      name: userElement.getAttribute('data-user-name')
+    };
+  }
+  return null;
 }
 ```
 
-## Deployment and Distribution
+## Extension Communication Patterns
 
-When distributing your extension, consider these factors:
+For complex extensions, use message passing between content scripts and the background service worker:
 
-- **Institutional Restrictions**: Some institutions block custom extensions. Provide installation instructions that work within enterprise-managed Chrome environments if applicable.
-- **Update Strategy**: Blackboard updates its interface periodically. Design your selectors to be resilient to minor HTML changes, or implement fallback selector strategies.
-- **Privacy**: Clearly communicate what data your extension accesses. Since Blackboard contains sensitive educational records, users need confidence in your data handling practices.
+```javascript
+// From content script to background
+chrome.runtime.sendMessage({
+  type: 'COURSE_UPDATED',
+  courseId: 'COURSE-123',
+  timestamp: Date.now()
+});
 
-## Related Reading
+// In background.js
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === 'COURSE_UPDATED') {
+    // Handle the message
+    console.log('Course update received:', message.courseId);
+  }
+});
+```
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Chrome Extension Development Best Practices](/claude-skills-guide/chrome-extension-development-best-practices/)
+## Testing and Debugging
+
+Chrome provides developer tools for extension debugging:
+
+1. Load your unpacked extension at `chrome://extensions/`
+2. Enable Developer mode in the top right
+3. Click Load unpacked and select your extension directory
+4. Use the background script console for service worker logs
+5. Inspect content script execution via the page's developer tools
+
+For Blackboard specifically, watch for dynamic content loading. Use MutationObserver to detect DOM changes:
+
+```javascript
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.addedNodes.length > 0) {
+      // New content loaded - re-run your logic
+      initializeCourseList();
+    }
+  });
+});
+
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
+```
+
+## Deployment Considerations
+
+When distributing your extension:
+
+- Host the source on GitHub for transparency
+- Publish to the Chrome Web Store with clear privacy policies
+- Document what data your extension accesses
+- Provide clear user opt-in for any data collection
+
+Many institutions have strict policies about browser extensions. If you are building for organizational use, create an internal distribution method rather than public listing.
+
+## Summary
+
+Building a Chrome extension for Blackboard Learn requires understanding the platform's DOM structure, handling its authentication mechanisms, and working within the constraints of Manifest V3. The examples above provide starting points for course navigation, deadline highlighting, and grade export functionality.
+
+Start with a single feature, test thoroughly against your institution's Blackboard instance, and expand incrementally. The Chrome extension platform gives you powerful tools to customize your learning management experience without requiring changes to the server-side code.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-{% endraw %}
