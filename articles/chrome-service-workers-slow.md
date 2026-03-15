@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Service Workers Slow: Practical Solutions for Developers and Power Users"
 description: "Discover why Chrome service workers become slow, common performance pitfalls, and actionable fixes to optimize your PWA and caching strategies."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-service-workers-slow/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 Service workers have transformed web performance by enabling powerful caching strategies and offline capabilities. However, developers frequently encounter situations where service workers themselves become a performance bottleneck. Understanding why Chrome service workers slow down and knowing how to diagnose and fix these issues is essential for building responsive Progressive Web Apps.
 

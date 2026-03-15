@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Core Web Vitals Workflow Tutorial"
 description: "Learn how to use Claude Code to analyze, optimize, and monitor your site's Core Web Vitals. Practical workflow with code examples for LCP, FID, and CLS improvements."
@@ -7,11 +8,14 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-core-web-vitals-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 # Claude Code for Core Web Vitals Workflow Tutorial
 
-Core Web Vitals have become essential metrics for web performance, directly impacting both user experience and search engine rankings. In this tutorial, you'll learn how to leverage Claude Code to systematically analyze, optimize, and monitor your site's Core Web Vitals: Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS).
+Core Web Vitals have become essential metrics for web performance, directly impacting both user experience and search engine rankings. In this tutorial, you'll learn how to use Claude Code to systematically analyze, optimize, and monitor your site's Core Web Vitals: Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS).
 
 ## Setting Up Your Project for Web Vitals Analysis
 

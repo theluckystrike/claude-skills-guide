@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Update Broke Speed Fix – Troubleshooting Guide for Developers"
 description: "Chrome browser updates can sometimes cause performance regressions. Learn how to diagnose and fix speed issues after Chrome updates with practical solutions."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-update-broke-speed-fix/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [claude-code, claude-skills]
 ---
+
 
 Chrome updates ship with new features and security patches, but occasionally they introduce performance regressions that affect browser speed. If your Chrome browser feels slower after an update, you are not alone. This guide walks through the most common causes and provides actionable fixes for developers and power users experiencing speed issues after a Chrome update.
 
