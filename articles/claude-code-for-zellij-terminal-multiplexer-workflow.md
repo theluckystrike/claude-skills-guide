@@ -104,7 +104,7 @@ This layout creates a main pane for primary development with two smaller panes b
 
 ```bash
 # In the main pane
-claude --print-only > /tmp/claude-main.md
+claude --print > /tmp/claude-main.md
 
 # In pane 2
 cd /path/to/backend && claude
