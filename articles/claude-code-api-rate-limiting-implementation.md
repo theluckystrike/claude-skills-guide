@@ -31,6 +31,31 @@ Rate limiting controls how frequently your application makes requests to the Cla
 
 For Claude Code API integrations, token bucket is often the best choice because API usage naturally varies based on task complexity.
 
+## Setting Up Your Rate Limiting Project
+
+Before diving into code, ensure your project is properly configured for rate limiting development. Create a dedicated module for rate limiting logic so it remains testable and maintainable.
+
+Define your rate limits as constants or configuration values using a dataclass:
+
+```python
+# config/rate_limits.py
+from dataclasses import dataclass
+
+@dataclass
+class RateLimitConfig:
+    requests_per_minute: int
+    requests_per_hour: int
+    burst_limit: int
+    key_prefix: str
+
+API_RATE_LIMIT = RateLimitConfig(
+    requests_per_minute=60,
+    requests_per_hour=1000,
+    burst_limit=10,
+    key_prefix="api:rate_limit"
+)
+```
+
 ## Implementing Token Bucket Rate Limiting
 
 Here's a practical implementation you can use in a Python-based MCP server or skill helper:
@@ -38,29 +63,30 @@ Here's a practical implementation you can use in a Python-based MCP server or sk
 ```python
 import time
 import threading
+from typing import Callable
 
 class TokenBucket:
-    def __init__(self, rate, capacity):
+    def __init__(self, rate: float, capacity: int):
         self.rate = rate  # tokens per second
         self.capacity = capacity
         self.tokens = capacity
-        self.last_update = time.time()
-        self.lock = threading.Lock()
-    
-    def consume(self, tokens=1):
-        with self.lock:
+        self.last_refill = time.time()
+        self._lock = threading.Lock()
+
+    def _refill(self):
+        now = time.time()
+        elapsed = now - self.last_refill
+        self.tokens = min(self.capacity, self.tokens + elapsed * self.rate)
+        self.last_refill = now
+
+    def consume(self, tokens: int = 1) -> bool:
+        with self._lock:
             self._refill()
             if self.tokens >= tokens:
                 self.tokens -= tokens
                 return True
             return False
-    
-    def _refill(self):
-        now = time.time()
-        elapsed = now - self.last_update
-        self.tokens = min(self.capacity, self.tokens + elapsed * self.rate)
-        self.last_update = now
-    
+
     def wait_for_token(self, tokens=1):
         while not self.consume(tokens):
             time.sleep(0.1)
@@ -80,7 +106,7 @@ When building Claude skills that make API calls, wrap your requests with the rat
 ```python
 def call_claude_api(messages, rate_limiter):
     rate_limiter.wait_for_token()
-    
+
     response = anthropic.messages.create(
         model="claude-sonnet-4-20250514",
         messages=messages,
@@ -93,7 +119,36 @@ For skills that coordinate multiple API calls, such as those using the `tdd` ski
 
 ## Per-User Rate Limiting
 
-In multi-user scenarios, you need isolated rate limiting per user. Store rate limiter instances in a dictionary keyed by user identifier:
+In multi-user scenarios, you need isolated rate limiting per user. A `RateLimiter` wrapper manages per-key buckets and exposes rate limit metadata:
+
+```python
+class RateLimiter:
+    def __init__(self, bucket: TokenBucket, key_func: Callable):
+        self.bucket = bucket
+        self.key_func = key_func
+        self._buckets: dict[str, TokenBucket] = {}
+        self._lock = threading.Lock()
+
+    def check_limit(self, request) -> tuple[bool, dict]:
+        key = self.key_func(request)
+
+        with self._lock:
+            if key not in self._buckets:
+                self._buckets[key] = TokenBucket(
+                    rate=self.bucket.rate,
+                    capacity=self.bucket.capacity
+                )
+
+        allowed = self._buckets[key].consume()
+
+        return allowed, {
+            "limit": self.bucket.capacity,
+            "remaining": int(self._buckets[key].tokens),
+            "reset": int(self._buckets[key].last_refill + self.bucket.capacity / self.bucket.rate)
+        }
+```
+
+For simpler cases without request objects, store rate limiter instances in a dictionary keyed by user identifier:
 
 ```python
 user_rate_limiters = {}
@@ -132,37 +187,122 @@ The `Retry-After` header tells you how long to wait before retrying. Always resp
 
 ## Advanced: Distributed Rate Limiting
 
-When running multiple instances of your service, you need distributed rate limiting that coordinates across processes. Redis provides a reliable implementation:
+When running multiple instances of your service, you need distributed rate limiting that coordinates across processes. Redis provides a reliable implementation. The Lua script approach ensures atomic check-and-consume operations:
+
+{% raw %}
+```python
+# redis_rate_limiter.py
+import redis
+import time
+from typing import Optional
+
+LUA_SCRIPT = """
+local key = KEYS[1]
+local limit = tonumber(ARGV[1])
+local window = tonumber(ARGV[2])
+local now = tonumber(ARGV[3])
+
+redis.call('ZREMRANGEBYSCORE', key, 0, now - window)
+local count = redis.call('ZCARD', key)
+
+if count < limit then
+    redis.call('ZADD', key, now, now .. '-' .. math.random())
+    redis.call('EXPIRE', key, window)
+    return {1, limit - count - 1}
+end
+
+return {0, 0}
+"""
+
+class RedisRateLimiter:
+    def __init__(self, redis_client: redis.Redis, key_prefix: str):
+        self.client = redis_client
+        self.key_prefix = key_prefix
+        self._script = self.client.register_script(LUA_SCRIPT)
+
+    def check_rate_limit(
+        self,
+        identifier: str,
+        limit: int,
+        window_seconds: int
+    ) -> tuple[bool, int]:
+        key = f"{self.key_prefix}:{identifier}"
+        now = time.time()
+
+        result = self._script(
+            keys=[key],
+            args=[limit, window_seconds, now]
+        )
+
+        allowed = bool(result[0])
+        remaining = int(result[1])
+
+        return allowed, remaining
+```
+{% endraw %}
+
+## Integrating with Your API Framework
+
+Integrate the rate limiter into your API framework as middleware. Here's an example with FastAPI, but the pattern applies to any framework:
 
 ```python
-import redis
+# main.py
+from fastapi import FastAPI, Request, HTTPException
+from fastapi.responses import JSONResponse
+from redis import Redis
+from redis_rate_limiter import RedisRateLimiter
+from config import API_RATE_LIMIT
 
-class DistributedTokenBucket:
-    def __init__(self, rate, capacity, key, redis_client):
-        self.key = key
-        self.rate = rate
-        self.capacity = capacity
-        self.redis = redis_client
-    
-    def consume(self, tokens=1):
-        pipe = self.redis.pipeline()
-        now = redis_time()
-        
-        pipe.multi()
-        pipe.zremrangebyscore(self.key, 0, now - 1000)
-        pipe.zcard(self.key)
-        pipe.zadd(self.key, {str(now): now})
-        pipe.expire(self.key, 1)
-        
-        results = pipe.execute()
-        current_count = results[1]
-        
-        if current_count + tokens <= self.capacity:
-            return True
-        return False
+app = FastAPI()
+redis_client = Redis.from_env()
+rate_limiter = RedisRateLimiter(redis_client, API_RATE_LIMIT.key_prefix)
+
+@app.middleware("http")
+async def rate_limit_middleware(request: Request, call_next):
+    # Extract identifier (user ID, API key, IP, etc.)
+    identifier = get_identifier(request)
+
+    allowed, remaining = rate_limiter.check_rate_limit(
+        identifier=identifier,
+        limit=API_RATE_LIMIT.requests_per_minute,
+        window_seconds=60
+    )
+
+    response = await call_next(request)
+    response.headers["X-RateLimit-Limit"] = str(API_RATE_LIMIT.requests_per_minute)
+    response.headers["X-RateLimit-Remaining"] = str(remaining)
+
+    if not allowed:
+        raise HTTPException(
+            status_code=429,
+            detail="Rate limit exceeded. Please try again later."
+        )
+
+    return response
 ```
 
-This approach uses Redis sorted sets to track request timestamps. It's more complex than in-memory limiting but works reliably across multiple servers.
+## Graceful Degradation
+
+When Redis becomes unavailable, you have two options: fail open (allow requests) or fail closed (deny requests). Fail open risks exceeding limits during outages but prevents service degradation. A `HybridRateLimiter` implements automatic fallback to in-memory limiting:
+
+```python
+class HybridRateLimiter:
+    def __init__(self, redis_limiter: RedisRateLimiter, local_limiter: TokenBucket):
+        self.redis_limiter = redis_limiter
+        self.local_limiter = local_limiter
+        self.use_redis = True
+
+    async def check_limit(self, identifier: str, limit: int, window: int):
+        try:
+            if self.use_redis:
+                return await self.redis_limiter.async_check(identifier, limit, window)
+        except redis.RedisError:
+            self.use_redis = False
+
+        # Fallback to local limiter
+        allowed = self.local_limiter.consume()
+        return allowed, self.local_limiter.tokens
+```
 
 ## Practical Recommendations
 
@@ -171,6 +311,8 @@ For most Claude Code skill implementations, start simple. A single in-memory tok
 Monitor your actual usage patterns. If you're building skills that process documents using the `pdf` skill or analyze code with custom tools, track how many API calls each operation requires. This helps you set appropriate rate limits that balance responsiveness with cost control.
 
 Consider implementing circuit breakers alongside rate limiting. When the Claude API experiences issues, circuit breakers stop making requests temporarily, preventing cascading failures in your application.
+
+Monitor your rate limiter in production — track hit rates, rejected requests, and any fallback activations. This data informs tuning decisions and helps you understand whether your rate limits align with actual usage patterns.
 
 ## Testing Your Implementation
 
@@ -186,7 +328,7 @@ class TestTokenBucket(unittest.TestCase):
         self.assertTrue(limiter.consume(5))
         # Next request should fail
         self.assertFalse(limiter.consume(1))
-    
+
     def test_refill_over_time(self):
         limiter = TokenBucket(rate=10, capacity=10)
         limiter.consume(10)
@@ -198,11 +340,11 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-Run these tests as part of your skill's continuous integration pipeline.
+Run these tests as part of your skill's continuous integration pipeline. Key test scenarios also include verifying concurrent requests are handled atomically and that the system degrades gracefully when Redis fails.
 
 ## Conclusion
 
-Rate limiting protects your Claude Code integrations from unexpected costs and ensures reliable performance. Start with token bucket implementation, add per-user isolation for multi-user scenarios, and graduate to distributed limiting only when running multi-server deployments. Handle rate limit errors gracefully with proper retry logic, and always test your implementation under load before production deployment.
+Rate limiting protects your Claude Code integrations from unexpected costs and ensures reliable performance. Start with a token bucket implementation using a typed config dataclass, add per-user isolation for multi-user scenarios, and graduate to distributed limiting with Redis and Lua atomicity only when running multi-server deployments. Handle rate limit errors gracefully with proper retry logic, implement hybrid fallback for Redis outages, and always test your implementation under load before production deployment.
 
 
 ## Related Reading
