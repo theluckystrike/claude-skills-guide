@@ -2,286 +2,214 @@
 
 layout: default
 title: "Claude Code for Version Bump Workflow Tutorial Guide"
-description: "Learn how to create a Claude skill that automates version bumping in your projects. This tutorial covers semantic versioning, file updates, and Git."
+description: "Learn how to automate version bumping in your projects using Claude Code. A comprehensive guide with practical examples, code snippets, and actionable advice."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-version-bump-workflow-tutorial-guide/
-categories: [tutorials, guides]
+categories: [workflows, tutorials]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
-
-{% raw %}
 # Claude Code for Version Bump Workflow Tutorial Guide
 
-Version management is one of those repetitive tasks that every developer faces but few enjoy. Whether you're releasing a new npm package, updating a Python library, or managing a multi-module Java project, manually bumping version numbers across multiple files is error-prone and time-consuming. In this guide, I'll show you how to create a Claude skill that automates the entire version bump workflow, making releases as simple as asking Claude to "bump the version to 2.1.0."
+Version management is a critical aspect of software development that often gets overlooked until conflicts arise or releases become difficult to track. Whether you're maintaining a small library or a large enterprise application, having an automated version bump workflow saves time and prevents human error. This guide shows you how to leverage Claude Code to create a streamlined, reliable version bumping process that integrates seamlessly into your development workflow.
 
-## Understanding Semantic Versioning
+## Understanding Version Bumping Fundamentals
 
-Before diving into the implementation, let's establish a clear version bumping strategy. Semantic versioning (SemVer) provides a predictable framework: MAJOR.MINOR.PATCH. Each component serves a specific purpose:
+Before diving into automation, it's essential to understand the semantic versioning (SemVer) system that most projects use. Version numbers follow the format MAJOR.MINOR.PATCH, where each component serves a specific purpose:
 
-- **MAJOR** (X.0.0): Breaking changes that are incompatible with previous versions
-- **MINOR** (1.x.0): New functionality that maintains backward compatibility
-- **PATCH** (1.1.x): Bug fixes that don't affect the API
+- **MAJOR**: Incompatible API changes
+- **MINOR**: New functionality that's backward compatible
+- **PATCH**: Backward-compatible bug fixes
 
-Your version bump skill needs to understand these distinctions and apply the appropriate increment based on the type of change being released.
+Claude Code can help you track which type of bump is appropriate based on your commit messages, pull request titles, or your explicit instructions. The key is establishing clear conventions that the AI can follow consistently.
 
-## Creating the Version Bump Skill
+## Setting Up Your Version Bump Workflow
 
-The first step is creating a dedicated skill file that Claude can invoke. Here's a complete implementation:
+The first step involves configuring your project to support automated version management. Most modern package managers and build tools provide命令行接口 for version manipulation. Here's how to set up the foundation:
 
-```yaml
----
-name: version-bump
-description: "Bump project version using semantic versioning. Supports major, minor, and patch updates across multiple files."
----
+### For Node.js Projects
 
-# Version Bump Skill
+Initialize your version tracking by adding a script to your package.json:
 
-You help developers increment version numbers across their project files using semantic versioning.
-
-## Available Actions
-
-When asked to bump a version, determine the type of update:
-
-1. **Major bump** - For breaking changes: `{{version}}+1.0.0` (e.g., 1.2.3 → 2.0.0)
-2. **Minor bump** - For new features: `{{version}}+0.1.0` (e.g., 1.2.3 → 1.3.0)
-3. **Patch bump** - For bug fixes: `{{version}}+0.0.1` (e.g., 1.2.3 → 1.2.4)
-4. **Specific version** - Set exact version: `{{version}}=X.Y.Z`
-
-## Files to Update
-
-Common version file locations:
-- `package.json` - npm/Node.js projects (version field)
-- `pyproject.toml` - Python projects (version in [project] section)
-- `setup.py` - Python projects (version parameter)
-- `__init__.py` - Python package __version__ variable
-- `VERSION` or `version.txt` - Simple text files
-- `gradle.properties` - Android/Gradle projects
-- `pom.xml` - Maven/Java projects
-
-## Workflow
-
-1. **Detect current version** - Read from primary version file
-2. **Calculate new version** - Apply the requested increment
-3. **Update all version files** - Find and replace in all relevant files
-4. **Create git commit** - Commit with conventional commit message
-5. **Tag the release** - Create version tag (e.g., v2.1.0)
-
-## Important Notes
-
-- Always confirm the new version before making changes
-- Use --dry-run flag first to preview changes
-- Include CHANGELOG.md updates when applicable
-- Follow conventional commits: `feat: add new login` or `fix: resolve auth bug`
+```json
+{
+  "scripts": {
+    "version:bump": "standard-version",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
+  }
+}
 ```
 
-This skill definition provides Claude with clear instructions on how to handle version bumps.
+### For Python Projects
 
-## Implementing the Version Detection Logic
+Configure your setup.py or pyproject.toml:
 
-Now you need a helper script that Claude can call to detect and parse versions from different file formats. Create a Python script called `version_bump.py`:
-
-```python
-#!/usr/bin/env python3
-"""Version bump utility for automated version management."""
-
-import json
-import re
-import sys
-from pathlib import Path
-
-def parse_version(version_string):
-    """Parse a semantic version string into components."""
-    match = re.match(r'(\d+)\.(\d+)\.(\d+)', version_string.strip())
-    if not match:
-        raise ValueError(f"Invalid version format: {version_string}")
-    return tuple(map(int, match.groups()))
-
-def bump_version(version, bump_type):
-    """Bump version based on type: major, minor, or patch."""
-    major, minor, patch = parse_version(version)
-    
-    if bump_type == 'major':
-        return f"{major + 1}.0.0"
-    elif bump_type == 'minor':
-        return f"{major}.{minor + 1}.0"
-    elif bump_type == 'patch':
-        return f"{major}.{minor}.{patch + 1}"
-    else:
-        raise ValueError(f"Unknown bump type: {bump_type}")
-
-def update_package_json(file_path, new_version):
-    """Update version in package.json."""
-    with open(file_path, 'r') as f:
-        data = json.load(f)
-    
-    old_version = data.get('version', '0.0.0')
-    data['version'] = new_version
-    
-    with open(file_path, 'w') as f:
-        json.dump(data, f, indent=2)
-    
-    return old_version, new_version
-
-def update_version_file(file_path, new_version):
-    """Update simple version text file."""
-    with open(file_path, 'r') as f:
-        content = f.read()
-    
-    old_version = re.search(r'(\d+\.\d+\.\d+)', content).group(1)
-    new_content = re.sub(r'\d+\.\d+\.\d+', new_version, content)
-    
-    with open(file_path, 'w') as f:
-        f.write(new_content)
-    
-    return old_version, new_version
-
-if __name__ == '__main__':
-    # Example usage
-    if len(sys.argv) > 2:
-        version = sys.argv[1]
-        bump_type = sys.argv[2]
-        new_version = bump_version(version, bump_type)
-        print(new_version)
+```toml
+[tool.bumpversion]
+current_version = "1.0.0"
+commit = true
+tag = true
 ```
 
-Make this script executable and place it in your project or a shared tools directory.
+After setting up these configurations, you're ready to integrate Claude Code into the workflow.
 
-## Practical Usage Examples
+## Using Claude Code for Automated Version Bumping
 
-Here's how the version bump skill works in practice:
+Claude Code excels at handling repetitive tasks like version management because it can understand context and apply consistent rules. Here's a practical workflow:
 
-### Example 1: Minor Version Bump
+### Basic Version Bump Request
+
+When you need to bump a version, simply describe your intent to Claude Code:
+
+```
+Bump the version to 1.2.0 and create a git tag
+```
+
+Claude Code will:
+1. Read your current version from the appropriate file
+2. Update version files (package.json, VERSION, pyproject.toml, etc.)
+3. Create a git commit with an appropriate message
+4. Tag the commit with the new version
+
+### Context-Aware Version Bumping
+
+Claude Code can analyze your recent changes to determine the appropriate version bump type:
+
+```
+Analyze the last 10 commits and determine whether this should be a patch, minor, or major version bump
+```
+
+The AI examines commit messages and PR titles to make an informed decision. For example, commits containing "fix" or "bug" typically warrant a patch bump, while "feat" suggests a minor bump, and "BREAKING CHANGE" indicates a major bump.
+
+## Practical Examples and Code Snippets
+
+Let's explore real-world scenarios where Claude Code simplifies version management:
+
+### Example 1: Post-Release Version Bump
+
+After successfully deploying version 2.1.0, you need to prepare for development:
+
+```
+After releasing 2.1.0, bump to the next development version
+```
+
+Claude Code interprets "next development version" as 2.2.0-alpha.0 or 2.2.0-dev.0, depending on your project's pre-release convention.
+
+### Example 2: Conditional Version Bumping
+
+Create a custom skill that handles different scenarios:
+
+```javascript
+// claude-skills/version-bump.js
+module.exports = {
+  name: "version-bump",
+  description: "Intelligently bump version based on changes",
+  parameters: {
+    type: "object",
+    properties: {
+      changeType: {
+        type: "string",
+        enum: ["major", "minor", "patch", "auto"],
+        description: "Type of version bump"
+      },
+      message: {
+        type: "string",
+        description: "Release message or changelog entry"
+      }
+    },
+    required: ["changeType"]
+  },
+  execute: async (params, context) => {
+    const { changeType, message } = params;
+    const version = await getCurrentVersion();
+    const newVersion = calculateNewVersion(version, changeType);
+    
+    await updateVersionFiles(newVersion);
+    await gitCommit(`Release ${newVersion}`, message);
+    await gitTag(`v${newVersion}`);
+    
+    return { oldVersion: version, newVersion };
+  }
+};
+```
+
+### Example 3: Monorepo Version Management
+
+For projects with multiple packages, Claude Code can coordinate version bumps across all packages:
+
+```
+Bump all packages in the monorepo. The ui package gets a minor bump, the api package gets a patch bump, and the shared package stays the same
+```
+
+This demonstrates Claude Code's ability to handle complex, multi-package scenarios while respecting individual package requirements.
+
+## Actionable Advice for Version Management
+
+### Establish Clear Conventions
+
+Create a CONTRIBUTING.md or version policy document that specifies your version bump rules. Claude Code can reference this document when making decisions:
+
+```markdown
+## Version Bump Rules
+
+- **Patch** (x.y.Z): Bug fixes, documentation updates, refactoring
+- **Minor** (x.Y.0): New features, backward-compatible changes
+- **Major** (X.0.0): Breaking changes, API modifications
+
+Always include a changelog entry with version bumps.
+```
+
+### Use Pre-Commit Hooks
+
+Integrate version checking into your development workflow:
 
 ```bash
-# Ask Claude to bump the minor version
-> Bump the version for a new feature release
+# .git/hooks/pre-commit
+#!/bin/bash
+# Check if version was updated for tagged commits
+if git describe --tags --exact-match HEAD 2>/dev/null; then
+  echo "Tag commit detected - ensure version was bumped"
+fi
 ```
 
-Claude will:
-1. Detect the current version (e.g., 1.2.3)
-2. Calculate the new version (1.3.0)
-3. Update package.json, pyproject.toml, and other version files
-4. Run: `git add -A && git commit -m "feat: release v1.3.0"`
-5. Create tag: `git tag v1.3.0`
+### Automate Changelog Generation
 
-### Example 2: Specific Version Set
+Pair version bumps with automatic changelog creation:
 
-```bash
-# Request a specific version
-> Set version to 3.0.0-beta.1
+```
+Bump version to 1.3.0 and generate a changelog from commits since last release
 ```
 
-This is useful for prereleases or when coordinating version numbers across multiple projects.
+Claude Code can parse conventional commits and format them into a readable changelog.
 
-### Example 3: Preview Before Applying
+### Tag Strategically
 
-```bash
-# Preview changes without applying
-> Show me what a patch bump would look like
+Use annotated tags for releases rather than lightweight tags:
+
+```
+Create an annotated tag for version 2.0.0 with the release notes from CHANGELOG.md
 ```
 
-Claude will display the proposed changes without modifying any files.
-
-## Best Practices for Version Bump Workflows
-
-### 1. Always Use Dry-Run Mode
-
-Before making any changes, preview what will happen:
-
-```bash
-> What files would be modified for a major version bump?
-```
-
-### 2. Maintain a CHANGELOG
-
-Include automatic CHANGELOG generation in your workflow:
-
-```yaml
-## Add to skill definition
-
-### CHANGELOG Updates
-
-After bumping version, offer to:
-1. Generate changelog entries from git commits since last release
-2. Update release date in CHANGELOG.md
-3. Create GitHub release notes
-```
-
-### 3. Coordinate Across Multiple Packages
-
-For monorepos or multi-package projects, update all related packages:
-
-```bash
-> Bump all packages to 2.0.0
-```
-
-### 4. Integrate with CI/CD
-
-Add version bump to your release pipeline:
-
-```yaml
-# .github/workflows/release.yml
-name: Release
-on:
-  push:
-    tags:
-      - 'v*'
-
-jobs:
-  release:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Bump version
-        run: |
-          git tag -d ${{ github.ref_name }} || true
-          npm version patch
-          git push origin --tags
-```
+Annotated tags include metadata like the tagger, date, and message—valuable information for future reference.
 
 ## Troubleshooting Common Issues
 
-### Version Not Found
+Even with automation, issues can arise. Here are solutions for common problems:
 
-If Claude can't find the version, provide explicit guidance:
+**Problem**: Version mismatch between files
+**Solution**: Create a validation step that compares versions across all files before committing
 
-```bash
-> The version is in src/__init__.py as __version__ = "1.0.0"
-```
+**Problem**: Accidental major version bump
+**Solution**: Require confirmation for major bumps or add a manual approval step
 
-### Merge Conflicts in Version Files
-
-Always resolve conflicts manually:
-
-```bash
-> Show me the conflicting version files so I can resolve manually
-```
-
-### Wrong Version Bump Type
-
-Mistakes happen. To revert:
-
-```bash
-> Revert the last version bump and try again as a patch release
-```
-
-Then: `git revert HEAD && git tag -d v1.2.4`
+**Problem**: Missing git tags
+**Solution**: Use `git fetch --tags` to ensure local tags are synchronized with remote
 
 ## Conclusion
 
-Automating version bumps with Claude Code transforms a tedious manual process into a simple conversation. By creating a well-designed skill with clear instructions, proper tool access, and helper scripts, you can eliminate version management errors and make releases feel effortless. Start with the basic implementation shown here, then customize it to match your project's specific needs and conventions.
+Automating version bumps with Claude Code transforms a tedious manual task into a streamlined, error-free process. By setting up clear conventions, leveraging context-aware decision making, and integrating with your existing tooling, you ensure consistent version management across your project lifecycle. Start with simple bump commands and gradually incorporate more sophisticated logic as your workflow matures.
 
-The key is to treat version bumping not as a chore, but as another opportunity to let Claude handle the repetitive details while you focus on writing code.
-{% endraw %}
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+The key is treating version management not as an afterthought, but as an integral part of your development process—something Claude Code handles reliably while you focus on writing code.
