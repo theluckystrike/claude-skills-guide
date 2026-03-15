@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Version Bump Workflow Tutorial Guide"
 description: "Learn how to create a Claude skill that automates version bumping in your projects. This tutorial covers semantic versioning, file updates, and Git workflows."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-version-bump-workflow-tutorial-guide/
 categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Version Bump Workflow Tutorial Guide
