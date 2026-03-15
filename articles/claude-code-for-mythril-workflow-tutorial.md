@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Mythril Workflow Tutorial"
 description: "Learn how to integrate Claude Code with Mythril for automated smart contract security analysis. Step-by-step guide with practical examples."
@@ -7,12 +8,15 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-mythril-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills, mythril, security, ethereum, smart-contracts]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Mythril Workflow Tutorial
 
-Security analysis of Ethereum smart contracts is critical for any DeFi project, yet it can be time-consuming and error-prone when done manually. This tutorial shows you how to leverage Claude Code to automate your Mythril security scanning workflow, making vulnerability detection faster and more consistent across your development cycle.
+Security analysis of Ethereum smart contracts is critical for any DeFi project, yet it can be time-consuming and error-prone when done manually. This tutorial shows you how to use Claude Code to automate your Mythril security scanning workflow, making vulnerability detection faster and more consistent across your development cycle.
 
 ## What is Mythril?
 

@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Terraform Backend Migration Workflow"
 description: "Learn how to use Claude Code to automate and streamline Terraform backend migration workflows with practical examples and actionable advice."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-terraform-backend-migration-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Terraform Backend Migration Workflow
@@ -235,5 +239,5 @@ Terraform backend migration doesn't have to be a stressful operation. Claude Cod
 
 The key is treating migration as a planned operation with proper backups, testing, and verification rather than a quick change. Claude Code's ability to explain complex configurations, generate safe scripts, and recommend best practices makes it an essential tool for infrastructure teams.
 
-Remember: the goal is not just to migrate state, but to maintain infrastructure reliability throughout the process. Take your time, test thoroughly, and leverage Claude Code's assistance at every step.
+Remember: the goal is not just to migrate state, but to maintain infrastructure reliability throughout the process. Take your time, test thoroughly, and use Claude Code's assistance at every step.
 {% endraw %}

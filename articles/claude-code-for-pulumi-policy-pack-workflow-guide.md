@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Pulumi Policy Pack Workflow Guide"
 description: "Learn how to use Claude Code to create, manage, and automate Pulumi Policy Packs with practical examples and actionable workflows."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-pulumi-policy-pack-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Pulumi Policy Pack Workflow Guide

@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Multi-Platform Release Workflow Guide"
 description: "Learn how to leverage Claude Code CLI to automate and streamline multi-platform release workflows across iOS, Android, Web, and Desktop applications."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-multi-platform-release-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills, release-automation, devops, ci-cd]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Multi-Platform Release Workflow Guide
 
-Modern software development increasingly targets multiple platforms—iOS, Android, Web, macOS, Windows, and Linux. Managing release workflows across these platforms introduces significant complexity: different build systems, signing requirements, distribution channels, and deployment pipelines. This guide shows you how to leverage Claude Code CLI to automate and streamline multi-platform release workflows, reducing manual effort while maintaining reliability and consistency.
+Modern software development increasingly targets multiple platforms—iOS, Android, Web, macOS, Windows, and Linux. Managing release workflows across these platforms introduces significant complexity: different build systems, signing requirements, distribution channels, and deployment pipelines. This guide shows you how to use Claude Code CLI to automate and streamline multi-platform release workflows, reducing manual effort while maintaining reliability and consistency.
 
 ## Understanding Multi-Platform Release Challenges
 

@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for Wasmtime Runtime Workflow Guide"
 description: "Learn how to use Claude Code effectively with Wasmtime for WebAssembly runtime development. This guide covers workflow patterns, code examples, and best practices for building high-performance WASM applications."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-wasmtime-runtime-workflow-guide/
 categories: [workflows]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 
@@ -258,7 +262,7 @@ enabled = true
 
 ## Conclusion
 
-Claude Code significantly accelerates Wasmtime development by understanding the intricacies of WebAssembly runtimes, Rust's type system, and the WASI specifications. By providing proper context through CLAUDE.md files and sharing relevant error messages, you can leverage Claude Code's capabilities to build robust, production-ready Wasmtime applications faster.
+Claude Code significantly accelerates Wasmtime development by understanding the intricacies of WebAssembly runtimes, Rust's type system, and the WASI specifications. By providing proper context through CLAUDE.md files and sharing relevant error messages, you can use Claude Code's capabilities to build robust, production-ready Wasmtime applications faster.
 
 Start with a well-structured project, configure resource limits early, and use Claude Code to handle the boilerplate and debug tricky runtime issues. Your WASM applications will be more reliable and maintainable as a result.
 

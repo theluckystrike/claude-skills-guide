@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code for OSS Community Engagement Workflow"
 description: "Learn how to leverage Claude Code to streamline open source community engagement, from triaging issues to managing contributions and fostering contributor relationships."
@@ -8,7 +9,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-community-engagement-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 

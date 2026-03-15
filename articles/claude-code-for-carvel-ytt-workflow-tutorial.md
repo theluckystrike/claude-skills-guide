@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Carvel YTT Workflow Tutorial"
 description: "Learn how to leverage Claude Code to streamline your Carvel ytt templating workflow, from initial setup to advanced customization techniques."
@@ -7,7 +8,10 @@ author: Claude Skills Guide
 permalink: /claude-code-for-carvel-ytt-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills, carvel, ytt, kubernetes]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Carvel YTT Workflow Tutorial
