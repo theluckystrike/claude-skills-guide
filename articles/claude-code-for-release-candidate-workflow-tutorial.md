@@ -3,11 +3,11 @@
 
 layout: default
 title: "Claude Code for Release Candidate Workflow Tutorial"
-description: "Learn how to create a professional release candidate workflow using Claude Code. This tutorial covers automated testing, version management, and deployment strategies for developers."
+description: "Learn how to create a professional release candidate workflow using Claude Code. This tutorial covers automated testing, version management, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-release-candidate-workflow-tutorial/
-categories: [tutorials]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -160,3 +160,10 @@ Building an effective release candidate workflow with Claude Code transforms a p
 
 Start implementing these patterns in your next project, and you'll see immediate improvements in release consistency and team productivity. Claude Code becomes not just a coding assistant but a reliable partner in your entire software delivery lifecycle.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

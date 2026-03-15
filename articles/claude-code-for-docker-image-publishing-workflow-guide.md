@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Docker Image Publishing Workflow Guide"
-description: "A comprehensive guide to using Claude Code for automating Docker image building, tagging, and publishing workflows. Learn practical techniques for CI/CD integration and multi-registry deployments."
+description: "A comprehensive guide to using Claude Code for automating Docker image building, tagging, and publishing workflows. Learn practical techniques for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-docker-image-publishing-workflow-guide/
@@ -357,3 +357,10 @@ Start small: automate your local build process first, then add tagging, then CI/
 Remember to always consider security, implement proper versioning, and test your publishing workflow regularly. With Claude Code as your assistant, you have an expert guide available at every step.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

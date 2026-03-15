@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Runbook Review Process Workflow"
-description: "Learn how to use Claude Code CLI to streamline runbook review processes, automate validation checks, and ensure operational documentation meets quality standards."
+description: "Learn how to use Claude Code CLI to streamline runbook review processes, automate validation checks, and ensure operational documentation meets quality."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-runbook-review-process-workflow/
@@ -207,3 +207,10 @@ Claude Code transforms runbook review from a manual, inconsistent process into a
 
 Start small: create one review skill, test it on your existing runbooks, and expand from there. The investment pays dividends in reduced incident duration and increased team confidence.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

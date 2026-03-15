@@ -3,11 +3,11 @@
 
 layout: default
 title: "Claude Code for APM Integration Workflow Tutorial Guide"
-description: "Learn how to integrate Claude Code into your Application Performance Monitoring workflows. This guide covers practical techniques for setting up APM integrations, automating alerts, and streamlining incident response using AI-powered development tools."
+description: "Learn how to integrate Claude Code into your Application Performance Monitoring workflows. This guide covers practical techniques for setting up APM."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-apm-integration-workflow-tutorial-guide/
-categories: [tutorials, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -209,3 +209,10 @@ Start small: configure Claude Code with your APM API, create a few basic query s
 Remember: Claude Code augments your expertise—it doesn't replace your understanding of your systems. Use it to amplify your capabilities, not to bypass learning your infrastructure's behavior. With the right balance, you'll find your APM workflows become significantly more productive while maintaining the thoroughness required for reliable software operations.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

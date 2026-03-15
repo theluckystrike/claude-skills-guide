@@ -3,11 +3,11 @@
 
 layout: default
 title: "Claude Code for Async Code Review Workflow Tutorial"
-description: "Learn how to set up and use Claude Code for asynchronous code review workflows that improve code quality while fitting seamlessly into distributed team environments."
+description: "Learn how to set up and use Claude Code for asynchronous code review workflows that improve code quality while fitting seamlessly into distributed team."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-async-code-review-workflow-tutorial/
-categories: [tutorials]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -190,3 +190,10 @@ The key is starting simple: configure a basic review skill, integrate it into yo
 
 Start small, iterate frequently, and watch your team's productivity improve while maintaining—or even enhancing—your code quality standards.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
