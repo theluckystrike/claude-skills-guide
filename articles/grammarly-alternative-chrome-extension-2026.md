@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Grammarly Alternative Chrome Extension 2026"
 description: "Discover the best Grammarly alternatives for Chrome in 2026. Free and open-source writing assistants with API integrations, Markdown support, and developer-friendly features."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /grammarly-alternative-chrome-extension-2026/
+reviewed: true
+score: 8
+categories: [comparisons]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Grammarly Alternative Chrome Extension 2026
 
