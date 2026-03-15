@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code Lighthouse Score Improvement Automation Guide"
 description: "Practical automation strategies for improving Lighthouse scores using Claude Code skills, with code examples and workflows for developers."
@@ -10,6 +11,8 @@ reviewed: true
 score: 8
 permalink: /claude-code-lighthouse-score-improvement-automation-guide/
 ---
+{% raw %}
+
 
 # Claude Code Lighthouse Score Improvement Automation Guide
 
@@ -318,3 +321,4 @@ Start with automated audits, then layer in optimization scripts for the highest-
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep automated Lighthouse audit sessions economical
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
