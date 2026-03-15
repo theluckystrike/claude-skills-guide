@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Zotero Chrome Extension Setup Guide"
 description: "A practical guide for developers and power users setting up Zotero Chrome connector. Configure metadata capture, troubleshoot common issues, and integrate with your research workflow."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /zotero-chrome-extension-setup-guide/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Zotero Chrome Extension Setup Guide
 
