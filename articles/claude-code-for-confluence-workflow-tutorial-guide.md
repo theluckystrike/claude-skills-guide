@@ -1,186 +1,265 @@
 ---
-
-
 layout: default
 title: "Claude Code for Confluence Workflow Tutorial Guide"
-description: "Learn how to integrate Claude Code with Atlassian Confluence to automate documentation workflows, sync code changes with team wikis, and streamline."
+description: "Learn how to build Claude skills that integrate with Confluence to automate documentation workflows, create pages from templates, and streamline team collaboration."
 date: 2026-03-15
-author: "Claude Skills Guide"
-permalink: /claude-code-for-confluence-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
+author: "Claude Skills Guide"
+permalink: /claude-code-for-confluence-workflow-tutorial-guide/
 ---
 
+# Claude Code for Confluence Workflow Tutorial Guide
 
-{% raw %}
+[Confluence](https://www.atlassian.com/software/confluence) is the backbone of documentation for countless development teams, yet creating and maintaining pages remains a manual, time-consuming process. This guide shows you how to build Claude skills that integrate directly with Confluence's REST API to automate page creation, apply templates, manage spaces, and keep your team wiki always up-to-date.
 
-Claude Code is transforming how development teams create, update, and maintain documentation in Atlassian Confluence. By integrating Claude Code with your Confluence workspace, you can automate documentation workflows, keep wikis synchronized with code changes, and reduce the manual burden of keeping team knowledge bases current. This comprehensive guide walks you through practical implementations, code examples, and actionable strategies to build a powerful Confluence automation system using Claude Code.
+## Why Integrate Claude with Confluence?
 
-## Understanding the Confluence Integration Architecture
+Manual Confluence workflows typically involve logging into the browser, navigating to the right space, creating a new page, applying formatting, and manually updating any related pages. This process breaks down at scale:
 
-Before diving into implementation, it's essential to understand how Claude Code communicates with Confluence. The integration typically uses Confluence's REST API, which allows you to create, read, update, and delete pages programmatically. You'll need to authenticate using API tokens or OAuth 2.0, depending on your Atlassian Cloud or Server setup.
+- **Inconsistent templates**: Different team members apply different formatting standards
+- **Outdated documentation**: Pages rarely get updated after initial creation
+- **Time sink**: Engineers spend hours on administrative documentation tasks
 
-The architecture consists of three main components: the Confluence API client, the Claude Code skill that orchestrates the workflow, and your documentation templates. When properly configured, Claude Code can watch for specific triggers—like git commits or scheduled times—and automatically update Confluence pages with fresh content.
+A Claude skill for Confluence can handle all of this automatically, following your team's conventions precisely while you focus on writing the actual content.
 
-For most teams, the integration follows this pattern: Claude Code receives a trigger (either manual or automated), gathers relevant information from your codebase or other sources, formats the data according to your templates, and pushes the updates to Confluence via the API. This eliminates the need for manual documentation updates while ensuring your wiki always reflects the current state of your projects.
+## Prerequisites and Setup
 
-## Setting Up Your Confluence API Credentials
+Before building a Confluence integration skill, ensure you have:
 
-The first step in building your integration is configuring authentication with Confluence. You'll need to gather your Atlassian credentials and store them securely. Never hardcode API tokens in your skill files—use environment variables or a secure credentials manager instead.
+1. A Confluence Cloud or Data Center instance with API access
+2. An API token (for Cloud) or personal access token (for Data Center)
+3. Your Confluence domain and space keys
 
-Create a configuration file in your Claude Code skills directory:
+You'll store credentials in environment variables rather than hardcoding them:
 
 ```bash
-# Store these in your shell profile or .env file
-export CONFLUENCE_DOMAIN="yourcompany.atlassian.net"
-export CONFLUENCE_EMAIL="your.email@company.com"
-export CONFLUENCE_API_TOKEN="your-api-token-here"
+export CONFLUENCE_DOMAIN="your-company.atlassian.net"
+export CONFLUENCE_EMAIL="you@company.com"
+export CONFLUENCE_API_TOKEN="your-api-token"
 ```
 
-For Claude Code to access these credentials, create a skill that loads them:
+For security, never commit API tokens to version control. Consider using a `.env` file with `.gitignore` protection or your system's credential manager.
 
-```javascript
-// In your confluent-sync.skill file
-const getConfluenceCredentials = () => {
-  return {
-    domain: process.env.CONFLUENCE_DOMAIN,
-    email: process.env.CONFLUENCE_EMAIL,
-    token: process.env.CONFLUENCE_API_TOKEN
-  };
-};
+## Creating Your First Confluence Skill
 
-export { getConfluenceCredentials };
+The foundation of any Confluence skill is the ability to authenticate and make API calls. Here's a basic skill structure:
+
+```yaml
+---
+name: confluence-page-creator
+description: Creates new Confluence pages from structured input
+tools: [Bash, Write]
+---
+
+# Confluence Page Creator
+
+You help create Confluence pages using the Confluence REST API. When asked to create a page, follow this process:
+
+1. Gather required information: space key, page title, and content
+2. Use the create-page script to add the page to Confluence
+3. Return the URL of the newly created page
+
+## Available Commands
+
+Use the `create-confluence-page` function with these parameters:
+- SPACE_KEY: The Confluence space (e.g., "ENG", "TEAM")
+- TITLE: Page title
+- CONTENT: Page content in Confluence storage format
 ```
 
-With authentication in place, you can now make API calls to Confluence. The base URL for all requests follows this pattern: `https://{your-domain}/wiki/rest/api/`. Use this as the foundation for all your API interactions.
+Now you need the underlying bash script that performs the actual API call:
 
-## Creating a Basic Page Sync Workflow
+```bash
+#!/bin/bash
+# create-confluence-page.sh
 
-Let's build a practical example that demonstrates a common use case: automatically updating an API documentation page whenever your OpenAPI specification changes. This workflow ensures your Confluence documentation always matches your current API surface.
+SPACE_KEY="$1"
+TITLE="$2"
+CONTENT="$3"
 
-First, create a skill that reads your OpenAPI specification and formats it for Confluence:
+DOMAIN="${CONFLUENCE_DOMAIN}"
+EMAIL="${CONFLUENCE_EMAIL}"
+TOKEN="${CONFLUENCE_API_TOKEN}"
 
-```javascript
-// sync-api-docs.skill
-import { readFileSync } from 'fs';
-import { confluenceClient } from './confluence-client.js';
-
-const syncApiDocs = async () => {
-  // Load your OpenAPI spec
-  const spec = JSON.parse(readFileSync('./api/openapi.json', 'utf8'));
-  
-  // GenerateConfluence-formatted content
-  const content = generateDocContent(spec);
-  
-  // Update the Confluence page
-  await confluenceClient.updatePage({
-    spaceKey: 'DEV',
-    pageId: '123456789',
-    title: 'API Documentation',
-    body: content
-  });
-  
-  console.log('API documentation synced successfully');
-};
-
-const generateDocContent = (spec) => {
-  let content = 'h1. API Endpoints\n\n';
-  
-  for (const [path, methods] of Object.entries(spec.paths)) {
-    for (const [method, details] of Object.entries(methods)) {
-      content += `h2. ${method.toUpperCase()} ${path}\n`;
-      content += `${details.summary || 'No description'}\n\n`;
-      content += '||Parameter||Type||Description||\n';
-      
-      if (details.parameters) {
-        for (const param of details.parameters) {
-          content += `|${param.name}|${param.schema?.type}|${param.description}|\n`;
-        }
-      }
-      content += '\n';
+API_RESPONSE=$(curl -s -X POST \
+  "https://${DOMAIN}/wiki/api/v2/pages" \
+  -u "${EMAIL}:${TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"spaceId\": \"${SPACE_KEY}\",
+    \"status\": \"current\",
+    \"title\": \"${TITLE}\",
+    \"body\": {
+      \"representation\": \"storage\",
+      \"value\": \"${CONTENT}\"
     }
-  }
-  
-  return content;
-};
+  }")
 
-export { syncApiDocs };
+echo "$API_RESPONSE"
 ```
 
-This skill reads your OpenAPI specification, generates Confluence storage format (which uses wiki markup), and updates the target page. The key advantage is that your documentation updates happen automatically—no manual copying required.
+Make this script executable and place it in your skills' scripts directory:
 
-## Implementing Real-Time Documentation Triggers
+```bash
+chmod +x /path/to/your/skills/scripts/create-confluence-page.sh
+```
 
-Beyond scheduled updates, you can configure Claude Code to respond to real-time events. Git webhooks are particularly useful for documentation workflows. When code changes are pushed, Claude Code can automatically generate updated documentation and push it to Confluence.
+## Working with Confluence Storage Format
 
-Set up a webhook handler that listens for push events:
+Confluence uses a storage format based on XHTML. Your skill needs to handle this format correctly. The most common elements you'll need:
 
-```javascript
-// handle-push-webhook.skill
-import { confluenceClient } from './confluence-client.js';
+```xml
+<h1>Page Title</h1>
+<p>Paragraph text with <strong>bold</strong> and <em>italic</em>.</p>
+<h2>Subsection</h2>
+<ul>
+  <li>Bullet point one</li>
+  <li>Bullet point two</li>
+</ul>
+<ac:structured-macro ac:name="code">
+  <ac:plain-text-body><![CDATA[your code here]]></ac:plain-text-body>
+</ac:structured-macro>
+<ac:link ac:title="Related Page"><ri:page ri:content-title="Another Page"/></ac:link>
+```
 
-const handleGitPush = async (payload) => {
-  const { repository, commits } = payload;
-  
-  for (const commit of commits) {
-    // Check if commit includes documentation changes
-    const docFiles = commit.added
-      .concat(commit.modified)
-      .filter(f => f.endsWith('.md') || f.endsWith('.api'));
-    
-    if (docFiles.length > 0) {
-      await updateConfluenceDocs(commit, docFiles);
+For complex pages, consider building content as markdown first, then converting to Confluence storage format using a tool like Pandoc:
+
+```bash
+pandoc -f markdown -t confluence -o output.html input.md
+```
+
+## Building a Meeting Notes Automation Skill
+
+One of the most practical Confluence automations is a skill that generates meeting notes from a template. Here's how to build it:
+
+```yaml
+---
+name: meeting-notes
+description: Creates formatted meeting notes in Confluence
+tools: [Bash, Write]
+---
+
+# Meeting Notes Generator
+
+You create standardized meeting notes in Confluence using the team's template.
+
+## Process
+
+When asked to create meeting notes:
+
+1. Ask for: Meeting title, date, attendees, and agenda items
+2. Use the `create-meeting-notes` script to generate and store the page
+3. Provide the Confluence URL to the user
+
+## Template Structure
+
+Use this structure for all meeting notes:
+- **Attendees**: List all participants
+- **Agenda**: Bullet points of topics to cover
+- **Discussion**: Main notes section
+- **Action Items**: Tasks with owners and due dates
+- **Next Meeting**: Scheduled follow-up time
+```
+
+The corresponding script populates your template:
+
+```bash
+#!/bin/bash
+# create-meeting-notes.sh
+
+SPACE_KEY="$1"
+MEETING_TITLE="$2"
+DATE="$3"
+ATTENDEES="$4"
+
+CONTENT="<h1>${MEETING_TITLE}</h1>
+<p><strong>Date:</strong> ${DATE}</p>
+<p><strong>Attendees:</strong> ${ATTENDEES}</p>
+
+<h2>Agenda</h2>
+<p>Add agenda items here...</p>
+
+<h2>Discussion</h2>
+<p>Meeting notes go here...</p>
+
+<h2>Action Items</h2>
+<table>
+  <tbody>
+    <tr>
+      <th>Task</th>
+      <th>Owner</th>
+      <th>Due Date</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Next Meeting</h2>
+<p>TBD</p>"
+
+./create-confluence-page.sh "$SPACE_KEY" "$MEETING_TITLE" "$CONTENT"
+```
+
+## Automating Technical Documentation Updates
+
+For engineering teams, keeping runbooks and API docs current is critical. A skill can automate this:
+
+```yaml
+---
+name: update-runbook
+description: Updates Confluence runbooks with latest deployment info
+tools: [Bash, Write, read_file]
+---
+
+# Runbook Updater
+
+You maintain up-to-date runbooks in Confluence by:
+1. Reading the current page content via API
+2. Identifying sections that need updates (version numbers, URLs, etc.)
+3. Generating updated content
+4. Updating the page in Confluence
+```
+
+This skill uses Confluence's page version API to retrieve existing content, make modifications, and push updates—all while preserving page history and attachments.
+
+## Best Practices for Confluence Skills
+
+When building production Confluence integrations, follow these guidelines:
+
+- **Always use page IDs, not titles**: Page titles can change; IDs are permanent
+- **Handle conflicts**: Check for existing pages with the same title before creating
+- **Implement retry logic**: API calls can fail transiently; wrap in retry logic
+- **Log everything**: Store API responses for debugging failed operations
+- **Respect rate limits**: Confluence enforces API rate limits; space out requests
+- **Use macros sparingly**: Complex macros can break the API; stick to basic elements
+
+## Advanced: Webhooks and Real-Time Updates
+
+For more sophisticated workflows, combine your skill with Confluence webhooks. Set up a webhook to trigger on page updates, then have your skill process changes:
+
+```bash
+# Example webhook handler
+curl -X POST webhook-endpoint \
+  -H "Content-Type: application/json" \
+  -d '{
+    "webhookEvent": "page_updated",
+    "page": {
+      "id": "123456789",
+      "title": "Updated Page",
+      "space": {"key": "ENG"}
     }
-  }
-};
-
-const updateConfluenceDocs = async (commit, files) => {
-  for (const file of files) {
-    const pageTitle = extractPageTitle(file);
-    const content = await generateDocFromChanges(commit, file);
-    
-    await confluenceClient.createOrUpdatePage({
-      spaceKey: 'DEV',
-      title: pageTitle,
-      body: content,
-      parentId: getParentPageId(file)
-    });
-  }
-};
-
-export { handleGitPush };
+  }'
 ```
 
-This webhook handler processes every push to your repository. When it detects documentation file changes, it automatically updates the corresponding Confluence pages. Your team gets instant documentation updates without remembering to publish changes manually.
+This enables scenarios like notifying Slack when critical docs change, automatically translating pages, or triggering CI/CD pipelines from documentation updates.
 
-## Best Practices for Confluence Automation
+## Conclusion
 
-Successful Confluence integration requires thoughtful configuration. Here are key practices that experienced teams follow:
+Claude Code skills for Confluence transform static documentation into dynamic, automated workflows. Start with simple page creation, then expand to templates, automated updates, and webhook-driven automation. Your team will save hours each week while maintaining consistent, well-structured documentation that actually stays current.
 
-**Use content versioning wisely.** Confluence tracks page history, and automated updates can create numerous versions. Configure your integration to batch updates or use minor edits when appropriate. This keeps your version history meaningful rather than cluttered with trivial changes.
-
-**Implement proper error handling.** Network failures and API rate limits happen. Build retry logic with exponential backoff, and always log failures for manual review. A failed sync shouldn't crash your entire CI pipeline.
-
-**Organize pages with consistent hierarchy.** Create a clear structure for your automated documentation. Use labels and page properties to make content discoverable. Confluence's content tree works best when there's a predictable organization scheme.
-
-**Test in staging first.** Before automating production Confluence updates, test your skills against a staging instance. This prevents accidental corruption of important documentation and gives you confidence in your automation logic.
-
-## Advanced: Building Custom Skills for Team Needs
-
-Every team has unique documentation requirements. Claude Code's extensibility lets you build custom skills tailored to your specific workflows. Consider creating skills for generating test coverage reports, updating architecture decision records, or maintaining API changelogs.
-
-The key to effective custom skills is modularity. Break your automation into reusable components: one module for Confluence authentication, another for content formatting, and a third for the specific documentation type you're generating. This separation makes skills easier to test, debug, and extend.
-
-Start with simple automations—perhaps a weekly status report or a simple API doc sync—and gradually build more sophisticated workflows as your team becomes comfortable with the integration. The foundation you establish early will support increasingly complex documentation automation over time.
-
-{% endraw %}
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+The key is treating Confluence as an API-first platform rather than a web application. By abstracting away the browser interface through Claude skills, you enable developers to focus on writing content while automation handles the administrative overhead.
