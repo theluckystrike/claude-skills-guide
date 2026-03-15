@@ -1,5 +1,6 @@
 ---
 
+
 layout: default
 title: "Claude Code Code Review Checklist Automation"
 description: "Automate code review checklists with Claude Code skills. Create repeatable review workflows, enforce consistency, and reduce manual overhead."
@@ -11,6 +12,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
+{% raw %}
+
 
 
 # Claude Code Code Review Checklist Automation
@@ -286,3 +289,4 @@ Involve the whole team in maintaining the skill. The best automated checklists r
 - [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Automate code review in your CI pipeline
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
