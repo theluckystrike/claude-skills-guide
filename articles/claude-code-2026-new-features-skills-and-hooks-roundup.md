@@ -17,9 +17,22 @@ Claude Code has expanded significantly in 2026. [The skills ecosystem now covers
 
 [Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Hooks are shell commands configured in `~/.claude/settings.json` that fire before and after Claude's actions.
 
+## Skills Overview
+
+The table below summarizes the key skills added or significantly expanded in 2026. Each section below goes deeper on invocation patterns and practical use.
+
+| Skill | Primary Use |
+|---|---|
+| `pdf` | Extract, batch-process, and merge PDF documents |
+| `frontend-design` | Generate components and audit UI against design specs |
+| `tdd` | Write test-first suites with edge case and property-based coverage |
+| `supermemory` | Persist and semantically retrieve context across sessions |
+| `webapp-testing` | Playwright-driven E2E testing and visual regression |
+| `xlsx` | Generate and modify spreadsheets with charts and formulas |
+
 ## PDF Processing with the pdf Skill
 
-The [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) handles technical documentation, contracts, and data extraction. It now supports batch processing and encrypted documents:
+The [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) handles technical documentation, contracts, and data extraction. It supports batch processing and encrypted documents:
 
 ```
 /pdf process all files in invoices/ and extract the vendor, amount, and date from each. Format as a markdown table.
@@ -112,6 +125,24 @@ The `webapp-testing` skill provides Playwright integration for frontend testing:
 ```
 
 Visual regression testing is the most impactful new capability — screenshot comparisons catch layout regressions without manual inspection.
+
+## Spreadsheet Automation with the xlsx Skill
+
+The `xlsx` skill generates and modifies Excel spreadsheets programmatically, including chart types that are cumbersome to configure manually:
+
+```
+/xlsx create a waterfall chart in budget.xlsx showing starting balance, monthly inflows, monthly outflows, and ending balance for Q1
+```
+
+```
+/xlsx add sparklines to the summary row in metrics.xlsx showing the 12-month trend for each KPI
+```
+
+```
+/xlsx build a pivot table in sales-data.xlsx grouped by region and product line, showing total revenue and unit count
+```
+
+Waterfall charts, treemaps, and sparklines were added in 2026 — chart types previously requiring manual steps in Excel are now one-command operations.
 
 ## Hook System
 

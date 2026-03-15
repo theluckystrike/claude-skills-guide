@@ -125,17 +125,48 @@ The `xlsx` skill gained waterfall charts, treemaps, and sparklines in Claude 4:
 
 These chart types were previously difficult to generate programmatically and required manual steps in Excel. The skill handles the chart object configuration directly.
 
-## Skill Auto-Invocation Triggers
+## Skill Auto-Invocation Triggers and Hook Configuration
 
-Claude 4 introduced configurable auto-invocation triggers. Skills can now activate based on file patterns you define in `~/.claude/settings.json` under the `"hooks"` key:
+Claude 4 introduced configurable auto-invocation triggers. Skills can now activate based on file patterns you define in `~/.claude/settings.json` under the `"hooks"` key.
+
+The hook types available are:
+
+- **PreToolUse** — fires before Claude executes a tool (Bash, Write, Edit, etc.)
+- **PostToolUse** — fires after tool execution with access to the output
+- **Notification** — fires when Claude sends a notification
+
+Hooks receive context about the current operation as environment variables. `CLAUDE_TOOL_NAME`, `CLAUDE_TOOL_INPUT`, and `CLAUDE_TOOL_OUTPUT_PATH` are available depending on the hook type.
+
+A minimal example that logs every bash command and auto-formats file writes:
 
 ```json
 {
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": { "tool_name": "Read", "file_pattern": "**/*.test.ts" },
-        "command": "echo 'tdd skill active for test files'"
+        "matcher": { "tool_name": "Bash" },
+        "command": "echo 'Running bash command' >> ~/.claude/audit.log"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": { "tool_name": "Write" },
+        "command": "npx prettier --write \"$CLAUDE_TOOL_OUTPUT_PATH\""
+      }
+    ]
+  }
+}
+```
+
+You can also block dangerous operations by exiting with a non-zero code in a PreToolUse hook:
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": { "tool_name": "Bash" },
+        "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -q 'rm -rf'; then echo 'Blocked: rm -rf not allowed' >&2; exit 1; fi"
       }
     ]
   }
