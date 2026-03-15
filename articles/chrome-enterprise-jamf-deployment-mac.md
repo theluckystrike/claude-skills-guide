@@ -2,230 +2,208 @@
 
 layout: default
 title: "Chrome Enterprise Jamf Deployment on Mac: A Practical Guide"
-description: "Learn how to deploy and manage Google Chrome Enterprise on Mac using Jamf Pro with practical examples, scripts, and configuration strategies."
+description: "Learn how to deploy Chrome Enterprise on Mac using Jamf Pro. Includes configuration profiles, plist settings, and automation scripts for IT administrators and developers."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-enterprise-jamf-deployment-mac/
-reviewed: true
-score: 8
-categories: [guides]
-tags: [chrome-extension, claude-skills]
 ---
 
+# Chrome Enterprise Jamf Deployment on Mac: A Practical Guide
 
-Deploying Google Chrome Enterprise across a Mac fleet using Jamf Pro gives administrators precise control over browser settings, updates, and security policies. This guide walks through the complete deployment pipeline, from package acquisition to ongoing management, with actionable scripts you can adapt for your environment.
+Deploying Google Chrome Enterprise on Mac at scale requires more than simple package installation. Jamf Pro provides the infrastructure to push Chrome Enterprise to managed Macs, configure enterprise policies, and maintain browser settings across your organization. This guide covers the practical implementation details developers and IT professionals need.
 
-## Acquiring the Chrome Enterprise Package
+## Understanding Chrome Enterprise on macOS
 
-Google distributes Chrome Enterprise as a DMG file containing a PKG installer. Download the macOS version from the [Chrome Enterprise browser page](https://chromeenterprise.google/browser/). You need a Google Admin console to access the full policy templates, but the base installer works without one.
+Chrome Enterprise combines the Chromium browser with additional management features, enterprise support, and extended Group Policy support. Unlike the standard Chrome channel, Enterprise builds receive extended stability windows and can be managed through Google's Admin console or local configuration profiles.
 
-For automated downloads, use the direct download URL:
+The browser supports two deployment methods: the standard DMG installer and the Enterprise installer (.pkg). For Jamf deployments, the Enterprise PKG provides the most control over installation behavior and subsequent updates.
 
-```bash
-curl -L -o /tmp/GoogleChrome.dmg "https://dl.google.com/chrome/mac/stable/GGRO/GoogleChrome.dmg"
-```
+## Preparing Your Jamf Pro Environment
 
-Extract the PKG from the DMG using the `hdiutil` command:
+Before deployment, ensure your Jamf Pro server can distribute the Chrome Enterprise package. Download the appropriate installer from the Google Chrome Enterprise bundle page—you need a Google Workspace or Chrome Enterprise Premium subscription to access the Enterprise-specific builds.
 
-```bash
-hdiutil attach /tmp/GoogleChrome.dmg -nobrowse
-cp -R /Volumes/Google\ Chrome/Google\ Chrome.pkg /tmp/
-hdiutil detach /Volumes/Google\ Chrome
-```
-
-## Creating a Jamf Pro Policy
-
-In your Jamf Pro console, navigate to **Computers > Policies** and create a new policy. Set the trigger to match your deployment strategy—common options include:
-
-- **Enrollment complete**: Deploys when a Mac finishes Jamf enrollment
-- **Recurring check**: Runs on a schedule for ongoing deployment
-- **Manual**: Allows users to request Chrome from Self Service
-
-Add the Chrome PKG as a package:
+### Downloading Chrome Enterprise
 
 ```bash
-# Upload the .pkg to Jamf Pro via API
-jamf policy -event installChrome
+# Download the Chrome Enterprise DMG (then convert to PKG)
+curl -o chrome-enterprise.dmg "https://dl.google.com/chrome/mac/enterprise/googlechromeenterprise.dmg"
+
+# Extract and convert to PKG using pkgbuild or Packages
+hdiutil attach chrome-enterprise.dmg
+cp "/Volumes/Google Chrome/Google Chrome.app/Contents/Resources/Google Chrome.pkg" ~/Desktop/
+hdiutil detach "/Volumes/Google Chrome"
 ```
 
-For scripting the installation directly on Macs, use this bash script:
+For scripted downloads, you can also access direct download URLs through your Google Admin console or use the `gsutil` command if you have buckets configured.
 
-```bash
-#!/bin/bash
-CHROME_DMG="/tmp/GoogleChrome.dmg"
-CHROME_VOLUME="/Volumes/Google Chrome"
-INSTALL_PATH="/Applications/Google Chrome.app"
+## Creating the Jamf Policy
 
-# Download Chrome Enterprise
-curl -L -o "$CHROME_DMG" "https://dl.google.com/chrome/mac/stable/GGRO/GoogleChrome.dmg"
+Jamf Pro uses policies to trigger installations. Create a new policy scoped to your target computers.
 
-# Mount and install
-hdiutil attach "$CHROME_DMG" -nobrowse
-cp -R "${CHROME_VOLUME}/Google Chrome.app" /Applications/
-hdiutil detach "$CHROME_VOLUME"
+### Policy Configuration Steps
 
-# Clean up
-rm -f "$CHROME_DMG"
+1. **Create Policy**: Navigate to Computers > Policies > New
+2. **General**: Set triggering to match your deployment strategy (Recurring Check-in, Startup, or Manual)
+3. **Packages**: Add the Chrome Enterprise PKG
+4. **Scripts**: Include post-install configuration scripts if needed
+5. **Scope**: Target appropriate computer groups
 
-# Verify installation
-if [ -d "$INSTALL_PATH" ]; then
-    echo "Chrome installed successfully"
-else
-    echo "Chrome installation failed" >&2
-    exit 1
-fi
-```
+The package priority determines installation order when multiple packages deploy simultaneously. Chrome Enterprise should install before configuration profiles that depend on its presence.
 
-## Managing Chrome Preferences with Configuration Profiles
+## Configuration Profiles for Chrome Enterprise
 
-Jamf Pro integrates with macOS configuration profiles to push Chrome settings. Create a new **Computer Configuration Profile** in Jamf and add Chrome-specific preferences under the **Google Chrome** payload.
+Jamf Configuration Profiles apply settings to managed Macs through macOS preferences. Chrome reads enterprise policies from multiple sources, with Preference Manifests (.plist files) taking precedence.
 
-### Essential Enterprise Settings
+### Creating the Configuration Profile
 
-Configure these settings in your configuration profile:
+Create a Configuration Profile in Jamf Pro with the following payload structure:
 
 ```xml
-<key>ChromePreferences</key>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
 <dict>
-    <key>DefaultBrowserProviderID</key>
-    <string>com.google.chrome</string>
-    <key>Disable3rdPartyAppBlocking</key>
-    <false/>
-    <key>ForceSafeSearch</key>
-    <true/>
-    <key>IncognitoModeAvailability</key>
-    <integer>1</integer>
-    <key>ManagedBookmarks</key>
-    <array>
-        <dict>
-            <key>children</key>
-            <array>
-                <dict>
-                    <key>url</key>
-                    <string>https://internal.yourcompany.com</string>
-                </dict>
-            </array>
-            <key>name</key>
-            <string>Internal Tools</string>
-        </dict>
-    </array>
-    <key>ShowBookmarkBar</key>
-    <true/>
+    <key>com.google.Chrome</key>
+    <dict>
+        <key>ExtensionInstallForcelist</key>
+        <array>
+            <string>gfdkimpbcpahaombhbimeihdjnejgicl;https://clients2.google.com/service/update2/crx</string>
+        </array>
+        <key>HomepageLocation</key>
+        <string>https://yourcompany.com/dashboard</string>
+        <key>ManagedBookmarks</key>
+        <array>
+            <dict>
+                <key>toplevel_name</key>
+                <string>Engineering</string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Jira</string>
+                <key>url</key>
+                <string>https://jira.yourcompany.com</string>
+            </dict>
+        </array>
+        <key>DefaultBrowserSettingEnabled</key>
+        <false/>
+        <key>BrowserSignin</key>
+        <integer>0</integer>
+    </dict>
 </dict>
+</plist>
 ```
 
-### Extension Management
+This configuration forces installation of specific extensions, sets a company homepage, configures managed bookmarks, and disables Chrome as the default browser—common enterprise requirements.
 
-Control which extensions load by default:
+### Applying via Jamf
+
+Upload this plist as a custom Configuration Profile in Jamf Pro. The profile applies to `/Library/Preferences/com.google.Chrome.plist` on managed Macs. Users cannot modify settings marked as mandatory through the management framework.
+
+## Extension Management Strategies
+
+Browser extensions represent both productivity tools and security risks. Chrome Enterprise provides several mechanisms for controlling extension deployment.
+
+### Force-Installing Extensions
+
+The `ExtensionInstallForcelist` policy installs extensions automatically and prevents users from removing them. Use extension IDs from the Chrome Web Store:
 
 ```xml
 <key>ExtensionInstallForcelist</key>
 <array>
-    <string>gbkeegbaiigmenfmjfclcdgdpimamgkj;https://clients2.google.com/service/update2/crx</string>
+    <string>extension-id-1;update-url-1</string>
+    <string>extension-id-2;update-url-2</string>
 </array>
+```
+
+The update URL typically follows the pattern: `https://clients2.google.com/service/update2/crx`
+
+### Blocking Extensions
+
+Prevent specific extensions from being installed using `ExtensionInstallBlocklist`:
+
+```xml
 <key>ExtensionInstallBlocklist</key>
 <array>
-    <string>extension_id_to_block</string>
+    <string>extension-id-to-block</string>
 </array>
 ```
 
-Replace the extension ID with your organization's required extensions. Find extension IDs by visiting the Chrome Web Store and copying the ID from the URL.
+## Automated Updates with Jamf
 
-## Automating Updates with Jamf
+Keeping Chrome Enterprise updated requires coordinating Jamf Smart Software Update policies with Google's update infrastructure.
 
-Chrome's auto-update mechanism works independently of Jamf, but enterprises often require controlled update rollouts. Disable Chrome's built-in updates and manage them through Jamf policies instead.
+### Update Channel Configuration
 
-Create a separate policy for updates:
+Set the update channel through configuration policy:
 
-```bash
-#!/bin/bash
-# update-chrome.sh - Run via Jamf policy
-
-CURRENT_VERSION=$(/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version | awk '{print $3}')
-LATEST_VERSION=$(curl -s "https://omahaproxy.appspot.com/all?channel=stable" | grep "mac,arm64" | cut -d',' -f3)
-
-if [ "$CURRENT_VERSION" != "$LATEST_VERSION" ]; then
-    echo "Updating Chrome from $CURRENT_VERSION to $LATEST_VERSION"
-    
-    # Download and install new version
-    curl -L -o /tmp/GoogleChrome.dmg "https://dl.google.com/chrome/mac/stable/GGRO/GoogleChrome.dmg"
-    hdiutil attach /tmp/GoogleChrome.dmg -nobrowse
-    rm -rf /Applications/Google\ Chrome.app
-    cp -R "/Volumes/Google Chrome/Google Chrome.app" /Applications/
-    hdiutil detach "/Volumes/Google Chrome"
-    rm -f /tmp/GoogleChrome.dmg
-    
-    echo "Chrome updated successfully"
-else
-    echo "Chrome is current ($CURRENT_VERSION)"
-fi
+```xml
+<key>AutoUpdateCheckPeriod</key>
+<integer>4</integer>
+<key>ProtocolHandler</key>
+<array>
+    <string>https</string>
+</array>
 ```
 
-Schedule this policy to run weekly or monthly depending on your change management requirements.
+Jamf Pro's Smart Software Update feature can target specific versions, but Chrome Enterprise typically handles its own updates through Google Update services. You may need to disable automatic Chrome updates if your organization requires staged rollouts through Jamf.
 
-## Deploying Chrome Policies via ADMD Files
-
-For more complex policy management, use Chrome's administrative template (ADMX/ADML) files. Download them from the [Chrome Enterprise release archive](https://chromeenterprise.google/browser/download). Import the templates into your Jamf Pro instance:
-
-1. Download the Chrome policy template ZIP
-2. Extract `chrome.adml` and `chrome.admx`
-3. In Jamf Pro, go to **Computer Configuration Profiles > New > Add**
-4. Under **Templates**, select the Chrome policies you need
-
-This approach supports hundreds of settings including proxy configuration, certificate management, and content filtering.
+```bash
+# Disable Chrome Auto-Update via launchd (run as root)
+launchctl unload /Library/LaunchDaemons/com.google.keystone.daemon.plist
+```
 
 ## Verification and Troubleshooting
 
-After deployment, verify Chrome is installed and configured correctly:
+After deployment, verify installation and configuration on client machines.
+
+### Checking Installation
 
 ```bash
-# Check Chrome installation
-ls -la /Applications/Google\ Chrome.app
-
-# Verify Chrome opens without errors
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version
-
-# Check applied policies
-defaults read com.google.Chrome 2>/dev/null | head -20
+# Verify Chrome Enterprise is installed
+ls "/Applications/Google Chrome.app/Contents/Info.plist"
+# Check the bundle identifier - Enterprise shows as Google Chrome Enterprise
+defaults read "/Applications/Google Chrome.app/Contents/Info" CFBundleIdentifier
 ```
 
-Common issues and solutions:
-
-- **Extension blocked**: Ensure the extension ID in your blocklist matches exactly
-- **Policies not applying**: Check the configuration profile is assigned to the correct computer group
-- **Update failures**: Verify network access to dl.google.com and ensure the Mac has sufficient permissions
-
-## Scripted Uninstall for Testing
-
-When testing different configurations, you may need to remove Chrome:
+### Checking Configuration
 
 ```bash
-#!/bin/bash
-# uninstall-chrome.sh
-
-# Quit Chrome if running
-osascript -e 'quit app "Google Chrome"' 2>/dev/null
-
-# Remove application
-rm -rf /Applications/Google\ Chrome.app
-
-# Remove supporting files
-rm -rf ~/Library/Application\ Support/Google/Chrome
-rm -rf ~/Library/Caches/Google/Chrome
-rm -rf ~/Library/Preferences/com.google.Chrome.plist
-
-echo "Chrome removed"
+# View applied Chrome preferences
+defaults read /Library/Preferences/com.google.Chrome
+# Check extension policies
+defaults read /Library/Preferences/com.google.Chrome ExtensionInstallForcelist
 ```
 
-## Wrapping Up
+### Common Issues
 
-Deploying Chrome Enterprise via Jamf gives you the best of both worlds: the browser your users expect combined with enterprise-grade control. Start with basic deployment, then layer on policies for extensions, bookmarks, and security settings as your rollout matures.
+**Extension force-install fails**: Verify the extension ID and update URL are correct. Some extensions require manifest version 2 or 3—check Google documentation for compatibility.
 
+**Configuration not applying**: Ensure the Configuration Profile is scoped to the correct computers. Restart Chrome after applying new policies—the browser reads preferences on launch.
 
-## Related Reading
+**Update failures**: Check network connectivity to `clients2.google.com`. Corporate proxies may require configuration through `ProxySettings` in your Chrome configuration profile.
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+## Security Considerations
+
+Chrome Enterprise on Mac integrates with macOS security frameworks. Consider these hardening steps:
+
+- Enable `SafeBrowsingProtectionLevel` to configure phishing and malware protection
+- Configure `RemoteDebuggingPort` only for authorized management tools
+- Set `IncognitoModeAvailability` to disable private browsing if compliance requires it
+- Use `PasswordManagerEnabled` to control whether Chrome stores credentials
+
+```xml
+<key>SafeBrowsingProtectionLevel</key>
+<string>2</string>
+<key>PasswordManagerEnabled</key>
+<false/>
+<key>IncognitoModeAvailability</key>
+<integer>1</integer>
+```
+
+## Conclusion
+
+Deploying Chrome Enterprise through Jamf Pro combines package distribution with macOS Configuration Profiles to achieve enterprise browser management. The key is structuring your Jamf policies, Configuration Profiles, and update mechanisms to work together. Start with basic package deployment, add configuration profiles for your required policies, then refine your update strategy based on organizational needs.
+
+For teams managing development environments, Chrome Enterprise's extension management and managed bookmarks provide consistent tooling across machines. The combination of Jamf's device management and Chrome's enterprise policies gives administrators the control needed for secure, standardized browser deployments.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
