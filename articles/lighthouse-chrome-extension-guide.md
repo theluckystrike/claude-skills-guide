@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Lighthouse Chrome Extension Guide: Complete Performance Auditing"
-description: "Master Google's Lighthouse Chrome extension for web performance auditing. Learn how to run audits, interpret results, and optimize your websites with practical examples."
+title: "Lighthouse Chrome Extension Guide: Complete Performance."
+description: "Master Google's Lighthouse Chrome extension for web performance auditing. Learn how to run audits, interpret results, and optimize your websites with."
 date: 2026-03-15
 author: theluckystrike
 permalink: /lighthouse-chrome-extension-guide/
@@ -144,5 +144,12 @@ For mobile-specific testing, enable CPU throttling in DevTools to simulate slowe
 The Lighthouse Chrome extension transforms performance optimization from guesswork into data-driven decisions. By understanding each audit category, interpreting scores correctly, and implementing recommended fixes, you can systematically improve your website's user experience, search visibility, and accessibility.
 
 Start auditing your pages today, focus on high-impact improvements, and establish performance budgets in your development workflow to maintain excellent scores over time.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
