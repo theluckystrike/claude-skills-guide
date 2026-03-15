@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code to efficiently search and analyz
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-cross-repo-code-search-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 

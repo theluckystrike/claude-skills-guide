@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code to automate and streamline your 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-on-call-runbook-workflow-tutorial/
-categories: [guides, guides, workflows]
+categories: [guides, workflows]
 tags: [claude-code, claude-skills]
 ---
 

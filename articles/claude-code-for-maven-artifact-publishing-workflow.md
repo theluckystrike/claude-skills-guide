@@ -185,3 +185,4 @@ When you encounter issues, describe the error message to Claude Code and it will
 Claude Code transforms Maven artifact publishing from a manual, error-prone process into an assisted workflow where you have expert guidance at every step. By understanding your project configuration, suggesting appropriate plugins, and helping troubleshoot issues, Claude makes publishing artifacts to Maven Central, GitHub Packages, or private repositories more accessible to developers at all experience levels.
 
 Start by ensuring your project configuration is complete, use Claude to guide you through each publishing step, and take advantage of its troubleshooting capabilities when issues arise. With practice, you'll develop a streamlined workflow that makes artifact publishing a routine part of your development process.
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

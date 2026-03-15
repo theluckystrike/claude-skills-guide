@@ -5,7 +5,7 @@ description: "Learn how to use Claude Code to set up and execute memory profilin
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-memory-profiling-workflow-tutorial/
-categories: [tutorials, programming]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills, memory-profiling, performance-optimization]
 ---
 
@@ -78,8 +78,6 @@ Create a new file in your skills directory:
 ---
 name: memory-profiler
 description: Automated memory profiling workflow for identifying leaks and optimization opportunities
-version: 1.0.0
-tools: [bash, read_file, write_file]
 ---
 
 # Memory Profiling Workflow
@@ -261,19 +259,6 @@ Integrate this into your Claude Code skill for continuous memory monitoring:
 ---
 name: ci-memory-profile
 description: Run memory profiling in CI/CD pipelines
-tools: [bash]
-commands:
-  profile:
-    description: "Run memory profiling and fail on threshold"
-    run: |
-      node --inspect app.js &
-      APP_PID=$!
-      sleep 10
-      # Analyze and check thresholds
-      node analyze-memory.js
-      RESULT=$?
-      kill $APP_PID
-      exit $RESULT
 ---
 ```
 
@@ -297,3 +282,4 @@ Memory profiling doesn't have to be a frustrating detective game. By creating a 
 
 Start by setting up the profiling environment, create your custom memory profiling skill, and run through several profiling cycles to build intuition. As you become more familiar with your application's memory patterns, you'll find it increasingly easy to spot anomalies and address them before they become production problems.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

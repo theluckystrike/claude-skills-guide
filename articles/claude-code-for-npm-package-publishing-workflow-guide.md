@@ -65,7 +65,6 @@ Create a skill that validates your package before publication:
 ---
 name: npm-publish-check
 description: Validates npm package before publishing
-tools: [Bash, Read]
 ---
 
 Run these validation steps before any npm publish:
@@ -107,7 +106,6 @@ Here's a skill that handles the complete publish workflow:
 ---
 name: npm-publish
 description: Safely publishes npm package with validation
-tools: [Bash, Read, Write]
 ---
 
 Publish the current package to npm following this workflow:
@@ -179,3 +177,4 @@ When using Claude Code for npm publishing, keep these principles in mind:
 
 Claude Code transforms npm package publishing from a manual, error-prone process into an assisted workflow where you remain in control while benefiting from intelligent automation. By integrating Claude into initialization, quality checks, versioning, and maintenance tasks, you publish faster with greater confidence. Start with the basic skills outlined here, then customize and expand them to match your specific package requirements and organizational standards.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

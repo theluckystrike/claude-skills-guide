@@ -5,7 +5,7 @@ description: "Learn how to use Claude Code CLI to efficiently work with GitHub f
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-fork-and-pull-request-workflow-guide/
-categories: [guides, guides, guides]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
