@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Sneaker Release Alert: A Developer Guide"
 description: "Learn how to build and configure Chrome extensions for sneaker release alerts. Technical implementation guide for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-sneaker-release-alert-chrome/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 

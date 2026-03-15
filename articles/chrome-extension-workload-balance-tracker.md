@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Workload Balance Tracker: A Developer Guide"
 description: "Learn how to build and use chrome extension workload balance trackers to monitor task distribution, prevent burnout, and optimize productivity workflows."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-workload-balance-tracker/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 # Chrome Extension Workload Balance Tracker: A Developer Guide
