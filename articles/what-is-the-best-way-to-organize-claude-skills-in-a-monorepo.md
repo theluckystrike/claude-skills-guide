@@ -13,7 +13,9 @@ permalink: /what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/
 
 # What Is the Best Way to Organize Claude Skills in a Monorepo
 
-[Managing multiple Claude skills across several projects becomes unwieldy without a clear organizational strategy](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) A monorepo approach centralizes your skill library, enables shared dependencies, and simplifies version control. This guide covers practical approaches for developers and power users who want to maintain a scalable skill architecture.
+This guide covers building a **dedicated skills monorepo** — a repository whose sole purpose is housing, organizing, and versioning your Claude skill library. It is not about a software project that happens to use a monorepo structure; if you have an existing multi-package software monorepo (with packages like `api/`, `web/`, etc.) and need to share skills across those packages, see [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/) instead.
+
+[Managing multiple Claude skills across several projects becomes unwieldy without a clear organizational strategy](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) A dedicated skills monorepo centralizes your skill library, enables shared template dependencies between skills, and simplifies version control. This guide covers practical approaches for developers and power users who want to maintain a scalable, standalone skill architecture.
 
 ## Understanding Skill Structure
 
@@ -217,6 +219,7 @@ Start with the recommended directory layout, add your skills progressively, and 
 
 ## Related Reading
 
+- [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/) — If your software project is itself a multi-package monorepo, this companion guide covers how to share skills across those packages using symlinks, overrides, and composition
 - [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Master the full skill.md specification to author well-structured skills for your monorepo
 - [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Distribute your monorepo-organized skills consistently across all team members
 - [What Is the Best File Structure for a Complex Claude Skill](/claude-skills-guide/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Apply the individual skill file structure guidance alongside this monorepo organization approach

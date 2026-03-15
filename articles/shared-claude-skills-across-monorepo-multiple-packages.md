@@ -13,6 +13,8 @@ permalink: /shared-claude-skills-across-monorepo-multiple-packages/
 
 # Shared Claude Skills Across Monorepo Multiple Packages
 
+This guide addresses a specific scenario: **your software project is already structured as a monorepo** — with packages like `api/`, `web/`, `shared/`, or Python data modules — and you need Claude skills to be consistently available across all of those packages without duplicating skill files in every directory. If instead you are looking to build a *dedicated repository whose sole purpose is storing and organizing Claude skills themselves*, see [What Is the Best Way to Organize Claude Skills in a Monorepo](/claude-skills-guide/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/).
+
 Managing Claude skills across a [monorepo](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) with multiple packages presents unique challenges. When your project spans dozens of packages—whether TypeScript workspaces, Python modules, or mixed-language environments—you need a strategy that avoids duplication while keeping skills accessible to every package that needs them. This guide covers practical approaches for sharing Claude skills across your entire monorepo.
 
 ## Understanding the Monorepo Challenge
@@ -129,8 +131,6 @@ Run the complete CI process for changed packages in your monorepo.
 This composition approach means you maintain the TDD skill once, and it automatically propagates to every package that needs it.
 
 ## Package-Specific Customization
-
-While shared skills handle common patterns, individual packages often need customization. The frontend-design skill might apply only to UI packages, while database migration skills belong only to packages with data layer code.
 
 While shared skills handle common patterns, individual packages often need customization. The frontend-design skill might apply only to UI packages, while database migration skills belong only to packages with data layer code.
 
