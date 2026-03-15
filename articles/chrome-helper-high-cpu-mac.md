@@ -4,8 +4,11 @@ layout: default
 title: "Chrome Helper High CPU Mac: Diagnosis and Solutions for Developers"
 description: "A technical guide to identifying and resolving Chrome Helper process high CPU usage on macOS. Includes diagnostic commands, extension analysis, and optimization strategies."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-helper-high-cpu-mac/
+reviewed: true
+score: 8
+categories: [guides]
 ---
 
 {% raw %}
