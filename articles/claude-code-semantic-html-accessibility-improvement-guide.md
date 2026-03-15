@@ -13,15 +13,15 @@ permalink: /claude-code-semantic-html-accessibility-improvement-guide/
 
 # Claude Code Semantic HTML Accessibility Improvement Guide
 
-Building accessible websites isn't just about compliance—it's about ensuring everyone can use what you create. Semantic HTML forms the foundation of accessible web development, and Claude Code can help you write markup that works for all users, including those using screen readers and assistive technologies.
+Semantic HTML is the foundation of accessible web development. When you use the right elements — `<nav>`, `<main>`, `<button>`, `<label>` — you give screen readers and other assistive technologies the signals they need to navigate your pages correctly. Claude Code, combined with the [`frontend-design` skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/), helps you audit existing markup and enforce accessibility-focused patterns consistently across your project.
+
+This guide focuses specifically on the accessibility dimension of semantic HTML: WCAG compliance, assistive technology compatibility, and testable accessibility requirements. For broader structural refactoring (replacing divs, advanced HTML elements), see the [Semantic HTML Improvement Guide](/claude-code-semantic-html-improvement-guide/).
 
 ## Why Semantic HTML Matters for Accessibility
 
-Semantic HTML uses elements that carry meaning. Instead of wrapping everything in generic `<div>` tags, you use elements like `<nav>`, `<main>`, `<article>`, and `<button>` that convey purpose. Screen readers rely on these semantic elements to navigate pages efficiently.
+Screen readers rely on semantic elements to navigate pages efficiently. Users of assistive technology can jump between landmark regions, cycle through headings, and activate interactive elements — but only if the markup signals the correct roles.
 
-When you write semantic markup, you're providing a map of your content's structure. Users of assistive technology can jump between sections, understand relationships, and find what they need without wading through meaningless containers.
-
-Claude Code, combined with the [`frontend-design` skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/), can analyze your existing markup and suggest improvements that enhance accessibility without changing your visual design.
+When you write semantic markup, you provide a structural map of your content. Instead of announcing "group" for every `<div>`, a screen reader can announce "navigation", "main content", or "button" based on the element used. That distinction determines whether a user can independently navigate your interface.
 
 ## Using Claude Code to Audit Your HTML
 
@@ -161,6 +161,7 @@ Accessibility isn't a destination but an ongoing commitment. With Claude Code as
 
 ## Related Reading
 
+- [Claude Code Semantic HTML Improvement Guide](/claude-code-semantic-html-improvement-guide/) — Structural refactoring: replacing generic containers, advanced HTML elements, and pre-commit audits
 - [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills for building accessible, semantic HTML structures
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills including tdd for writing accessibility tests
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-trigger frontend and accessibility skills when working on HTML files

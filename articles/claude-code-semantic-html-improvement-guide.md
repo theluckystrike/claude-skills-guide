@@ -15,15 +15,15 @@ tags: [claude-code, claude-skills]
 
 # Claude Code Semantic HTML Improvement Guide
 
-Semantic HTML forms the backbone of accessible, maintainable web pages. Yet many developers fall into the trap of overusing `<div>` and `<span>` elements, losing the structural meaning that makes HTML powerful. Claude Code offers practical workflows to audit and improve your HTML semantics, whether you're working on a new project or refactoring legacy code.
+Many codebases accumulate `<div>` soup over time — wrappers, containers, and sections that could all be expressed with purpose-built HTML elements. Claude Code offers practical workflows to audit and refactor that structural debt, whether you're working on a new project or cleaning up legacy markup.
 
-This guide shows you how to use Claude Code and related skills to transform your HTML from generic containers into meaningful structure.
+This guide covers the structural side of semantic HTML: replacing generic containers, fixing heading hierarchies, using advanced elements like `<details>` and `<figure>`, and integrating audits into your development workflow. For accessibility-specific concerns — WCAG compliance, ARIA, screen reader testing — see the [Semantic HTML Accessibility Guide](/claude-code-semantic-html-accessibility-improvement-guide/).
 
 ## Why Semantic HTML Matters
 
-Search engines and assistive technologies rely on semantic markup to understand page content. When you use `<article>` instead of `<div>`, you signal that content stands independently. When you use `<nav>` for navigation regions, screen readers can skip directly to menus. Proper semantics reduce the accessibility debt that accumulates when developers default to generic containers.
+Search engines rely on semantic markup to understand page content. When you use `<article>` instead of `<div>`, you signal that content stands independently. When you use `<nav>`, crawlers recognize navigation regions without needing to infer from class names.
 
-Beyond accessibility, semantic HTML improves maintainability. Code becomes self-documenting when elements communicate their purpose through their tag names rather than relying on class names like "header-section" or "content-wrapper."
+Beyond SEO, semantic HTML improves maintainability. Code becomes self-documenting when elements communicate their purpose through tag names rather than classes like `header-section` or `content-wrapper`. Developers reading the codebase later understand intent without hunting through stylesheets.
 
 ## Using Claude Code to Audit HTML Structure
 
@@ -181,6 +181,7 @@ Good semantics pay dividends in accessibility, SEO, and maintainability. Start w
 
 ## Related Reading
 
+- [Claude Code Semantic HTML Accessibility Improvement Guide](/claude-code-semantic-html-accessibility-improvement-guide/) — WCAG compliance, screen reader testing, ARIA patterns, and accessibility-focused HTML audits
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
