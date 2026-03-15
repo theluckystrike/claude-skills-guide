@@ -6,7 +6,7 @@ description: "Learn how to use Claude Code to streamline on-call rotations, auto
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-on-call-rotation-workflow-tutorial/
-categories: [workflows, devops]
+categories: [workflows, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

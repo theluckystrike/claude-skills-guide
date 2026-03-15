@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /proton-drive-review-honest-assessment-2026/
 reviewed: true
 score: 7
-categories: [reviews]
+categories: [guides]
 tags: [proton, cloud-storage, privacy]
 ---
 
