@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Changelog Review Workflow Tutorial"
-description: "Learn how to create a Claude skill for automated changelog review. This tutorial covers building a custom skill that validates, analyzes, and improves your project's changelog entries."
+description: "Learn how to create a Claude skill for automated changelog review. This tutorial covers building a custom skill that validates, analyzes, and improves."
 date: 2026-03-15
 categories: [tutorials, workflows]
 tags: [claude-code, claude-skills]
@@ -207,3 +207,10 @@ Creating a Claude skill for changelog review transforms an often-overlooked task
 The workflow we've explored here—starting with a basic skill structure, adding interactive capabilities, integrating with development tools, and refining based on project needs—can be applied to countless other review tasks in your development process.
 
 Start with the skill template provided here, customize it to match your project's standards, and watch as your changelog quality improves automatically with every review.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
