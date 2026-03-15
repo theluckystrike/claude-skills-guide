@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for OSS License Selection Workflow Guide"
-description: "Build a Claude Code skill that guides developers through open source license selection with practical examples, decision trees, and automated compliance checks."
+description: "Build a Claude Code skill that guides developers through open source license selection with practical examples, decision trees, and automated."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-license-selection-workflow-guide/
@@ -202,3 +202,10 @@ Building a Claude Code skill for OSS license selection transforms a complex lega
 
 Remember that this skill provides guidance, not legal advice. For complex projects or uncertain situations, always recommend consulting with an open source legal expert. But for the vast majority of projects, a well-designed license selection workflow saves time and prevents costly mistakes.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

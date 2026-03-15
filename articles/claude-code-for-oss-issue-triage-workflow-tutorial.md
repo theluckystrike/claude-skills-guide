@@ -1,188 +1,244 @@
 ---
-
-
 layout: default
 title: "Claude Code for OSS Issue Triage Workflow Tutorial"
-description: "Learn how to use Claude Code to automate and streamline your open-source issue triage workflow, saving time and improving community engagement."
+description: "Learn how to build an automated issue triage workflow for open source projects using Claude Code. Streamline bug classification, priority assignment, and first responses."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-issue-triage-workflow-tutorial/
-categories: [guides]
+categories: [tutorials]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
 {% raw %}
+# Claude Code for OSS Issue Triage Workflow Tutorial
 
-Issue triage is one of the most critical yet time-consuming tasks in maintaining an open-source project. Every day, OSS maintainers face a flood of new issues: bug reports, feature requests, duplicate tickets, and questions that could be answered by reading the documentation. This guide shows you how to use Claude Code to automate and streamline your issue triage workflow, helping you respond faster while maintaining quality engagement with your community.
+Issue triage is one of the most time-consuming responsibilities in open source maintenance. Every day, project maintainers face hundreds of new issues—bug reports, feature requests, duplicate complaints, and questions that could be answered by better documentation. Without an efficient triage system, maintainers burn out and critical issues slip through the cracks.
 
-## Understanding the Issue Triage Challenge
+In this tutorial, you'll learn how to leverage Claude Code to build an automated issue triage workflow that classifies issues, assigns priorities, suggests labels, and drafts initial responses. This workflow can save hours of manual work each week while ensuring every contributor gets a thoughtful first response.
 
-Before diving into automation, it's important to understand what makes issue triage challenging for OSS projects. Unlike commercial software where you control the user base, open-source projects receive issues from developers with varying levels of experience, different coding conventions, and diverse expectations. Some issues lack crucial information like reproduction steps or error messages. Others are feature requests that need careful evaluation against project goals. And then there are the classic "me too" comments on existing issues, spam, and issues that belong to other projects.
+## Understanding Issue Triage Challenges
 
-Traditional triage requires reading each issue, categorizing it, requesting missing information, tagging appropriately, and prioritizing. For popular projects receiving dozens of issues daily, this becomes unsustainable. Claude Code offers a powerful solution by helping you process issues intelligently while maintaining the human touch that community members appreciate.
+Before diving into the technical implementation, let's identify the core challenges that make issue triage difficult:
 
-## Setting Up Claude Code for Issue Triage
+1. **Volume**: Popular projects receive dozens of new issues daily
+2. **Quality**: Many issues lack sufficient detail or are duplicates
+3. **Context**: Triage requires understanding the codebase, existing labels, and community conventions
+4. **Response Time**: Delayed responses discourage contributors
 
-The first step is configuring Claude Code to interact with your GitHub repository. You'll need to set up proper authentication and permissions. Create a personal access token with repo scope permissions, then configure Claude Code to use it for GitHub operations.
+Claude Code excels at this because it can read your project's documentation, understand your codebase structure, and apply consistent triage logic across all incoming issues.
 
-```bash
-# Configure GitHub CLI authentication
-gh auth login
+## Setting Up Your Triage Skill
 
-# Verify authentication status
-gh auth status
-```
-
-Once authenticated, you can use Claude Code's built-in capabilities to fetch and analyze issues. The key is creating a systematic workflow that handles different issue types appropriately.
-
-## Building Your Triage Workflow
-
-A robust issue triage workflow using Claude Code typically follows these stages: initial classification, information gathering, prioritization, and routing. Let's explore each stage in detail.
-
-### Initial Classification
-
-The first thing Claude Code should do is categorize each issue. Create a prompt that helps Claude understand your project's issue categories:
-
-```markdown
-Classify this issue into one of these categories:
-- bug: Something isn't working as expected
-- feature-request: A new feature or capability
-- documentation: Improvements to docs
-- question: How-to or clarification
-- duplicate: Already addressed elsewhere
-- wontfix: Valid but outside project scope
-
-Consider the issue content and apply labels accordingly.
-```
-
-When processing new issues, Claude Code can analyze the title, body, and comments to suggest appropriate labels. This classification helps maintainers quickly scan issue lists and prioritize responses.
-
-### Information Gathering
-
-Many issues lack sufficient detail for meaningful action. Instead of waiting for maintainers to request information, Claude Code can proactively ask for missing details. Build a checklist of required information for each issue type:
-
-For bug reports, ensure the issue includes:
-- Clear description of expected vs actual behavior
-- Steps to reproduce
-- Environment details (OS, version, configuration)
-- Relevant error messages or logs
+The first step is creating a Claude Code skill dedicated to issue triage. Skills are defined in `.md` files with specific front matter that controls their behavior.
 
 ```yaml
-# triage-prompts/bug-report-checklist.md
-Required elements for bug reports:
-1. Does the issue have a clear title describing the problem?
-2. Are reproduction steps provided?
-3. Is the expected behavior stated?
-4. Is the actual behavior described?
-5. Are relevant environment details included?
-
-If any elements are missing, generate a friendly comment requesting the information.
+---
+name: issue-triage
+description: "Analyze GitHub issues, classify by type, assign priority, and suggest labels"
+tools: [read_file, bash, write_file]
+version: "1.0.0"
+triggers:
+  - "triage issue"
+  - "analyze issue"
+---
 ```
 
-### Smart Prioritization
+This skill declaration specifies that it responds to phrases like "triage issue" and requires access to file reading and writing capabilities.
 
-Not all issues are equal. Using Claude Code, you can implement a prioritization system based on factors like severity, impact, and feasibility. Create a scoring system that evaluates issues:
+## Core Triage Analysis Logic
+
+The skill body contains the prompt that guides Claude's triage behavior. Here's a practical implementation:
 
 ```markdown
-Assign a priority score (1-5) based on:
-- Severity: How broken is the functionality?
-- Scope: How many users are affected?
-- Workaround: Is there a temporary fix?
-- Fix complexity: How difficult is the solution?
+You are an expert issue triage assistant for this open source project. Your role is to analyze incoming GitHub issues and provide structured triage feedback.
 
-Priority 1: Critical - Security, data loss, complete breakage
-Priority 2: High - Major feature broken, no workaround
-Priority 3: Medium - Feature impaired, workaround exists
-Priority 4: Low - Minor issue, cosmetic
-Priority 5: Nice-to-have - Feature requests, improvements
+## Project Context
+
+Before triage, read these files to understand the project:
+- README.md - project overview and contribution guidelines
+- CONTRIBUTING.md - contribution process and issue templates
+- .github/ISSUE_TEMPLATE/ - issue templates (if exists)
+
+## Triage Output Format
+
+For each issue, provide:
+
+1. **Type Classification**: bug | feature-request | question | duplicate | documentation
+2. **Priority**: critical | high | medium | low
+3. **Suggested Labels**: 2-5 relevant labels from the project label set
+4. **Missing Information**: What details are needed but not provided
+5. **First Response Draft**: A friendly, helpful initial response
+
+## Classification Criteria
+
+- **Bug**: Reports unexpected behavior with steps to reproduce
+- **Feature Request**: Proposes new functionality or improvements
+- **Question**: Seeks clarification rather than reporting a problem
+- **Duplicate**: References an existing issue
+- **Documentation**: Related to docs improvements
+
+## Priority Guidelines
+
+- **Critical**: Security issues, data loss, complete crashes
+- **High**: Major features broken, significant user impact
+- **Medium**: Workarounds exist, partial functionality affected
+- **Low**: Cosmetic issues, minor inconveniences
 ```
 
-## Practical Implementation Example
+This prompt structure ensures consistent triage output regardless of who invokes the skill or when.
 
-Here's a complete example of how to implement an automated triage workflow:
+## Integrating with GitHub
+
+To make this workflow practical, you need to connect it to your actual GitHub repository. There are two main approaches:
+
+### Option 1: GitHub CLI Integration
+
+First, install and configure the GitHub CLI:
+
+```bash
+brew install gh
+gh auth login
+```
+
+Then create a simple script that combines GitHub's issue fetching with Claude Code's analysis:
 
 ```bash
 #!/bin/bash
-# triage-issues.sh - Automated issue triage script
+# triage-new-issues.sh
 
-# Fetch open issues
-ISSUES=$(gh issue list --state open --limit 50 --json number,title,labels)
+# Fetch the latest 10 open issues
+ISSUES=$(gh issue list --state open --limit 10 --json number,title,body)
 
-# Process each issue
-echo "$ISSUES" | jq -r '.[] | "\(.number)|\(.title)|\(.labels[].name)"' | while IFS='|' read -r number title labels; do
-  echo "Processing issue #$number: $title"
+# Send each issue to Claude for triage
+echo "$ISSUES" | jq -r '.[] | .number, .title, .body' | while read -r num; do
+  read -r title
+  read -r body
   
-  # Use Claude Code to analyze and triage
-  claude --print << EOF
-Analyze this GitHub issue for the awesome-project repository:
-
-Title: $title
-Existing Labels: $labels
-
-Provide:
-1. Suggested new labels
-2. Priority assessment (1-5)
-3. Whether more information is needed
-4. A friendly triage response comment
-
-Issue URL: https://github.com/awesome-project/awesome-project/issues/$number
-EOF
+  echo "=== Triage for Issue #$num: $title ==="
+  echo "$body" | claude --print "triage issue" 2>/dev/null
+  echo ""
 done
 ```
 
-This script demonstrates the core concept, but you'll want to customize it for your project's specific needs and integrate it with your existing tools.
+### Option 2: Claude Code as GitHub Action
 
-## Handling Community Interaction
+For fully automated workflows, create a GitHub Action that runs Claude Code on new issues:
 
-One of the most valuable aspects of using Claude Code for triage is maintaining responsive community engagement. Contributors appreciate knowing their issues have been seen, even if resolution takes time.
+```yaml
+# .github/workflows/issue-triage.yml
+name: Issue Triage
+on:
+  issues:
+    types: [opened, reopened]
 
-Create templates for common responses:
-
-```markdown
-# Response templates for issue triage
-
-## Needs More Information
-Thank you for reporting this! To help us investigate, could you please provide:
-1. Steps to reproduce
-2. Expected vs actual behavior
-3. Environment details
-
-## Confirmed Bug
-We've reproduced this issue. Tagging it as a bug for the next release cycle.
-
-## Feature Request
-Thank you for the suggestion! This aligns with our roadmap. Adding to the feature request backlog for evaluation.
-
-## Duplicate
-This appears to be similar to issue #[NUMBER]. Closing as a duplicate. Please subscribe to that issue for updates.
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Claude Triage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          ISSUE_BODY=$(gh issue view $ISSUE_NUMBER --json body -q .body)
+          
+          echo "$ISSUE_BODY" > /tmp/issue.txt
+          claude --print "triage issue" < /tmp/issue.txt
 ```
 
-## Best Practices and Tips
+## Practical Triage Examples
 
-As you implement Claude Code for issue triage, keep these best practices in mind:
+Let's walk through concrete examples to demonstrate the triage workflow in action.
 
-First, always maintain human oversight. Claude Code should assist and accelerate triage, but maintainers should review decisions, especially for sensitive issues or complex feature requests. The goal is augmented intelligence, not fully automated processing.
+### Example 1: A Well-Formatted Bug Report
 
-Second, continuously improve your prompts. Treat your triage workflows as living documents. Track which classifications work well and which need refinement. Use this feedback to make Claude Code more accurate over time.
+**Issue Title**: "Application crashes when uploading files larger than 10MB"
 
-Third, respect contributor effort. When using Claude Code to respond to issues, ensure the tone remains welcoming and appreciative. Contributors give their time to report issues; acknowledge that effort appropriately.
+**Issue Body**:
+```
+## Description
+When I try to upload files larger than 10MB, the application crashes.
 
-Fourth, handle duplicates gracefully. Duplicate issues are valuable signal—they indicate multiple users care about the same problem. Use Claude Code to identify potential duplicates and consolidate them thoughtfully.
+## Steps to Reproduce
+1. Go to the upload page
+2. Select a file larger than 10MB
+3. Click the upload button
 
-Finally, document your triage process. Create a CONTRIBUTING.md section explaining how issues are triaged. This helps set community expectations and encourages better issue reports over time.
+## Expected Behavior
+File should upload successfully or show a friendly error message
+
+## Actual Behavior
+Application shows "Unexpected Error" and logs show:
+TypeError: Cannot read property 'size' of undefined
+
+## Environment
+- OS: macOS 14.0
+- Browser: Chrome 120
+- App Version: 2.3.1
+```
+
+**Claude Triage Output**:
+- **Type**: bug
+- **Priority**: high (crashes for common use case)
+- **Suggested Labels**: bug, confirmed, needs-investigation, files-upload
+- **Missing Information**: Server-side logs, whether this occurs in Firefox/Safari
+- **First Response Draft**: "Thank you for this detailed bug report! We're looking into this issue with file uploads. Could you also share the server-side logs from when this crash occurs? This will help us identify the root cause."
+
+### Example 2: A Vague Feature Request
+
+**Issue Title**: "Make it faster"
+
+**Issue Body**:
+```
+The app is really slow. Please make it faster.
+```
+
+**Claude Triage Output**:
+- **Type**: feature-request (likely performance-related)
+- **Priority**: low (needs clarification)
+- **Suggested Labels**: needs-triage, performance
+- **Missing Information**: What specific operations are slow? What is your environment? Can you provide benchmarks or profiling data? Which version are you using?
+- **First Response Draft**: "Thanks for this suggestion! To help us address the performance concerns, could you provide more details? Specifically: which operations feel slow, what's your system environment, and do you have any benchmarking data?"
+
+## Best Practices for Triage Workflows
+
+To get the most out of your Claude Code triage system, follow these recommendations:
+
+### 1. Maintain Clear Documentation
+
+Create a CONTRIBUTING.md that includes:
+- Clear issue templates for different types of reports
+- Links to FAQ and existing documentation
+- Expected response times and triage priorities
+- How to mark issues as resolved
+
+### 2. Iterate on Your Prompts
+
+The first version of your triage skill won't be perfect. Review the outputs weekly and refine the prompts based on:
+- Common misclassifications
+- Labels that are overused or underused
+- Feedback from the community
+
+### 3. Combine Automation with Human Oversight
+
+Automated triage should speed up your workflow, not replace judgment. Use it to:
+- Pre-fill triage fields
+- Identify missing information
+- Draft initial responses
+
+But always have a maintainer review the output before posting to ensure accuracy.
+
+### 4. Handle Escalations Gracefully
+
+Not all issues can be auto-triaged. Build in logic to escalate:
+- Security vulnerabilities to security team channels
+- Legal questions to appropriate contacts
+- Complex architectural decisions to discussion labels
 
 ## Conclusion
 
-Claude Code transforms issue triage from an overwhelming chore into a manageable, even enjoyable, part of OSS maintenance. By automating classification, requesting missing information, prioritizing effectively, and maintaining consistent community interaction, you free up time for actual code work while keeping contributors engaged and informed.
+Building an automated issue triage workflow with Claude Code transforms a tedious maintenance task into a scalable process. By defining clear classification criteria, integrating with GitHub's tooling, and maintaining human oversight, you can ensure every contributor receives a thoughtful response while freeing maintainers to focus on substantive work.
 
-Start with simple classification and labeling, then gradually add more sophistication as your workflow matures. The key is consistency—readers and contributors will appreciate knowing what to expect when they submit issues to your project.
+Start with a simple skill that classifies issues, then progressively add priority assignment, label suggestions, and response drafting. Your future self—and your community—will thank you.
 {% endraw %}
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
