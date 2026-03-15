@@ -40,10 +40,10 @@ Begin by installing Claude Code globally via your preferred package manager:
 npm install -g @anthropic-ai/claude-code
 ```
 
-After installation, authenticate with your Anthropic account using the CLI command:
+After installation, launch Claude Code and it will prompt you to authenticate with your Anthropic account:
 
 ```bash
-claude auth login
+claude
 ```
 
 For project-specific configuration, create a `.claude.json` file in your project root. This file controls how Claude Code behaves within your project:

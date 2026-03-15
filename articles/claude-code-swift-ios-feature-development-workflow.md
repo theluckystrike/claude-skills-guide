@@ -31,9 +31,6 @@ Before diving into feature development, ensure your Claude Code setup is optimiz
 ```bash
 # Verify Claude Code is installed and accessible
 claude --version
-
-# Check available configurations
-claude config list
 ```
 
 Configure your project directory to include common iOS development paths:

@@ -39,10 +39,10 @@ First, ensure your environment is properly configured. Install the latest Claude
 npm install -g @anthropic-ai/claude-code
 
 # Enable Inspector v2
-claude config set inspector.v2.enabled true
+# Inspector v2 is enabled by default in recent versions
 
-# Verify configuration
-claude inspect --version
+# Verify installation
+claude --version
 ```
 
 Create a `.claude/settings.json` file in your project to configure Inspector behavior:

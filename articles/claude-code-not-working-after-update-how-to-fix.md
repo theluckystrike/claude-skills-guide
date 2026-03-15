@@ -200,7 +200,7 @@ To minimize disruptions from future updates, consider these best practices:
 When Claude Code stops working after an update, work through these steps in order:
 
 - [ ] Restart Claude Code completely
-- [ ] Run `claude doctor` to check for obvious issues
+- [ ] Run `claude --version` to verify installation
 - [ ] Verify all skill files exist in the expected locations
 - [ ] Re-register affected skills
 - [ ] Clear any cached data (`claude cache clear`)
