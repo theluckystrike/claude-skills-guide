@@ -4,8 +4,11 @@ layout: default
 title: "Chrome Extension Size Chart Converter: A Practical Guide"
 description: "Learn how to analyze, visualize, and convert Chrome extension sizes using developer tools and scripts. Practical examples for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-size-chart-converter/
+reviewed: true
+score: 8
+categories: [guides]
 ---
 
 {% raw %}
