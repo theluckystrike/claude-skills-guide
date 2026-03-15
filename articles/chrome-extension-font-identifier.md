@@ -55,7 +55,43 @@ With a font identifier extension, this information appears with a single click, 
 
 ### Typography Consistency Audits
 
-During development, ensuring typography consistency across pages becomes challenging in larger projects. Extensions allow quick spot-checks to verify that designers' specifications have been implemented correctly.
+During development, ensuring typography consistency across pages becomes challenging in larger projects. Extensions allow quick spot-checks, and you can programmatically audit all fonts in use:
+
+```javascript
+function auditPageFonts() {
+  const elements = document.querySelectorAll('*');
+  const fontMap = new Map();
+
+  elements.forEach(el => {
+    const family = getComputedStyle(el).fontFamily;
+    fontMap.set(family, (fontMap.get(family) || 0) + 1);
+  });
+
+  return [...fontMap.entries()].sort((a, b) => b[1] - a[1]);
+}
+```
+
+This returns a frequency-sorted list of all font families on the page, making it easy to spot inconsistencies.
+
+### Accessibility Verification
+
+Font size directly affects readability and WCAG compliance. Check that body text meets minimum size thresholds:
+
+```javascript
+function checkAccessibility() {
+  const elements = document.querySelectorAll('p, li, td, th');
+  const issues = [];
+
+  elements.forEach(el => {
+    const size = parseFloat(getComputedStyle(el).fontSize);
+    if (size < 16) {
+      issues.push({ tag: el.tagName, size, text: el.textContent.slice(0, 50) });
+    }
+  });
+
+  return issues;
+}
+```
 
 ### Client Communication
 
@@ -114,6 +150,21 @@ function findClosestFont(targetFamily, knownFonts) {
   );
 }
 ```
+
+## AI-Powered Visual Font Detection
+
+Beyond CSS-based detection, some extensions use machine learning to visually identify fonts from rendered text. The pipeline involves text region detection, visual feature extraction (stroke width, serifs, x-height) using CNNs, font matching against trained embeddings, and confidence-ranked results.
+
+A hybrid approach merges CSS-detected font names with visual AI results for higher accuracy, especially with custom or obfuscated fonts where CSS metadata alone is insufficient.
+
+## Choosing the Right Extension
+
+When evaluating font identifier extensions, consider:
+
+- **Detection accuracy** — How well it handles both common Google Fonts and obscure custom typefaces
+- **Performance impact** — Whether it slows down page loading when active
+- **Privacy policy** — Whether font data or page screenshots are sent to external servers
+- **Offline capability** — Whether it works without an internet connection for local development
 
 ## Limitations and Considerations
 
