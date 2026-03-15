@@ -4,7 +4,7 @@ layout: default
 title: "Chrome Extension Work Hours Logger: A Developer Guide"
 description: "Learn how to build and use Chrome extensions for tracking work hours. Explore implementation patterns, time tracking APIs, and practical solutions for."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /chrome-extension-work-hours-logger/
 reviewed: true
 score: 8
