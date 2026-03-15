@@ -20,13 +20,21 @@ State management is one of the most critical aspects of building scalable React 
 
 This guide explores how to effectively use Claude Code for Zustand state management, covering everything from initial setup to advanced patterns that will make your React applications more robust.
 
+## Setting Up Zustand in Your Project
+
+Before integrating with Claude Code, ensure Zustand is installed in your project:
+
+```bash
+npm install zustand
+# or
+pnpm add zustand
+```
+
+If you are starting fresh, the **frontend-design** skill can scaffold a React project with Zustand pre-configured. Simply describe your requirements and let Claude Code generate the foundation.
+
 ## Understanding Zustand Fundamentals
 
-Before diving into the Claude Code integration, let's establish a solid foundation of Zustand's core concepts. Zustand uses a simple hook-based API that makes state management remarkably straightforward.
-
-### Creating Your First Store
-
-The fundamental building block in Zustand is the store. Unlike other state management solutions that require wrapper components or complex configurations, Zustand stores are just hooks:
+Zustand uses a simple hook-based API that makes state management remarkably straightforward. The fundamental building block is the store—unlike other state management solutions that require wrapper components or complex configurations, Zustand stores are just hooks:
 
 ```javascript
 import { create } from 'zustand'
@@ -61,7 +69,7 @@ import { create } from 'zustand'
 
 const useCartStore = create((set, get) => ({
   items: [],
-  
+
   addToCart: (product) => set((state) => {
     const existingItem = state.items.find(item => item.id === product.id)
     if (existingItem) {
@@ -75,16 +83,16 @@ const useCartStore = create((set, get) => ({
     }
     return { items: [...state.items, { ...product, quantity: 1 }] }
   }),
-  
+
   removeFromCart: (productId) => set((state) => ({
     items: state.items.filter(item => item.id !== productId)
   })),
-  
+
   clearCart: () => set({ items: [] }),
-  
+
   get totalPrice() {
     return get().items.reduce(
-      (total, item) => total + item.price * item.quantity, 
+      (total, item) => total + item.price * item.quantity,
       0
     )
   }
@@ -115,25 +123,85 @@ interface CartState {
 
 const useCartStore = create<CartState>((set, get) => ({
   items: [],
-  
+
   addToCart: (product) => set((state) => ({
     items: [...state.items, { ...product, quantity: 1 }]
   })),
-  
+
   removeFromCart: (productId) => set((state) => ({
     items: state.items.filter(item => item.id !== productId)
   })),
-  
+
   clearCart: () => set({ items: [] }),
-  
+
   get totalPrice() {
     return get().items.reduce(
-      (total, item) => total + item.price * item.quantity, 
+      (total, item) => total + item.price * item.quantity,
       0
     )
   }
 }))
 ```
+
+## Consuming State in Components
+
+One of Zustand's greatest strengths is its component-agnostic approach. You don't need to wrap your app in providers or use complex connectors. Claude Code can help you write clean, efficient component integrations:
+
+```javascript
+import { useCartStore } from './stores/cartStore'
+
+function CartButton() {
+  const itemCount = useCartStore((state) => state.items.length)
+
+  return (
+    <button className="cart-button">
+      Cart ({itemCount})
+    </button>
+  )
+}
+
+function CartTotal() {
+  const total = useCartStore((state) => state.totalPrice)
+
+  return <span>${total.toFixed(2)}</span>
+}
+```
+
+Zustand's selector pattern ensures components only re-render when the selected state actually changes. This eliminates unnecessary renders that plague Context-based solutions.
+
+## Handling Async Operations
+
+Real applications require async state updates. Zustand handles this elegantly without requiring additional libraries:
+
+```typescript
+import { create } from 'zustand'
+
+interface AsyncStore {
+  data: string[]
+  loading: boolean
+  error: string | null
+  fetchData: () => Promise<void>
+}
+
+export const useAsyncStore = create<AsyncStore>((set) => ({
+  data: [],
+  loading: false,
+  error: null,
+
+  fetchData: async () => {
+    set({ loading: true, error: null })
+    try {
+      const response = await fetch('/api/data')
+      const data = await response.json()
+      set({ data, loading: false })
+    } catch (error) {
+      set({ error: error.message, loading: false })
+    }
+  }
+}))
+```
+
+This pattern integrates cleanly with React Query or SWR for server state, while Zustand handles client-side UI state.
 
 ## Advanced Zustand Patterns with Claude Code
 
@@ -163,6 +231,8 @@ const useUserPreferencesStore = create(
 )
 ```
 
+The persist middleware automatically saves state to localStorage and hydrates on page load. For production applications, consider combining this with the **tdd** skill to write tests that verify middleware behavior before deploying.
+
 ### Store Slicing for Large Applications
 
 For larger applications, monolithic stores become hard to maintain. Claude Code can help you implement the slice pattern, where you create smaller, focused stores that can be combined:
@@ -182,8 +252,8 @@ const createAuthSlice = (set, get) => ({
 // uiSlice.js
 const createUISlice = (set) => ({
   sidebarOpen: true,
-  toggleSidebar: () => set((state) => ({ 
-    sidebarOpen: !state.sidebarOpen 
+  toggleSidebar: () => set((state) => ({
+    sidebarOpen: !state.sidebarOpen
   })),
 })
 
@@ -198,6 +268,59 @@ const useAppStore = create(
   )
 )
 ```
+
+### Organizing Stores in Larger Applications
+
+As applications grow, splitting stores by domain improves maintainability:
+
+```
+src/
+  stores/
+    auth.ts
+    cart.ts
+    ui.ts
+    notifications.ts
+```
+
+Each store remains focused on a single responsibility. When you need to combine related state, create a hook that selects from multiple stores:
+
+```tsx
+import { useAuthStore } from './auth'
+import { useCartStore } from './cart'
+
+function useCheckout() {
+  const user = useAuthStore((s) => s.user)
+  const cartItems = useCartStore((s) => s.items)
+  const cartTotal = useCartStore((s) => s.total())
+
+  return { user, cartItems, cartTotal }
+}
+```
+
+## Claude Skills That Accelerate Zustand Development
+
+Several Claude Code skills pair particularly well with Zustand:
+
+- **tdd**: Write tests for store actions before implementation. Writing tests first clarifies your state transitions and prevents regressions as your application evolves.
+- **frontend-design**: Generate component templates that consume your stores
+- **docx**: Document your store API for team members
+- **supermemory**: Remember complex state relationships across sessions
+
+## Performance Considerations
+
+Zustand performs well out of the box, but follow these guidelines for optimal results.
+
+Select only what you need. Rather than subscribing to the entire store, pick specific slices:
+
+```typescript
+// Bad: re-renders on any store change
+const { items } = useCartStore()
+
+// Good: re-renders only when items change
+const items = useCartStore((state) => state.items)
+```
+
+For frequently updating values like mouse position or scroll depth, consider using transient updates via subscribe outside the render cycle.
 
 ## Best Practices for Claude Code + Zustand
 
@@ -219,37 +342,11 @@ When your stores grow complex, ask Claude Code to help refactor them. You can re
 
 Include comments in your prompts describing the business logic requirements. For example: "Create a store that handles shopping cart state with proper quantity updates (incrementing/decrementing), duplicate item handling, and a computed total."
 
-## Integrating Zustand with React Components
-
-One of Zustand's greatest strengths is its component-agnostic approach. You don't need to wrap your app in providers or use complex connectors. Claude Code can help you write clean, efficient component integrations:
-
-```javascript
-import { useCartStore } from './stores/cartStore'
-
-function CartButton() {
-  const itemCount = useCartStore((state) => state.items.length)
-  
-  return (
-    <button className="cart-button">
-      Cart ({itemCount})
-    </button>
-  )
-}
-
-function CartTotal() {
-  const total = useCartStore((state) => state.totalPrice)
-  
-  return <span>${total.toFixed(2)}</span>
-}
-```
-
-Notice how we only subscribe to the specific state slices we need—this is the key to optimizing performance with Zustand, and Claude Code understands this pattern well.
-
 ## Conclusion
 
-Claude Code and Zustand form a powerful combination for React developers. The AI assistant understands Zustand's philosophy and can generate clean, idiomatic code that follows best practices. By using Claude Code for template generation, TypeScript typing, pattern implementation, and refactoring, you can significantly speed up your development workflow while maintaining high code quality.
+Claude Code and Zustand form a powerful combination for React developers. The AI assistant understands Zustand's philosophy and can generate clean, idiomatic code that follows best practices. By using Claude Code for template generation, TypeScript typing, async operations, pattern implementation, and refactoring, you can significantly speed up your development workflow while maintaining high code quality.
 
-Start small—use Claude Code for simple store generation—and gradually incorporate its assistance for more complex patterns. As you become more comfortable with the workflow, you'll find yourself building more sophisticated state management solutions with confidence.
+Start small—use Claude Code for simple store generation—and gradually incorporate its assistance for more complex patterns. The workflow scales from simple shopping carts to complex enterprise dashboards. Start with a single store, add middleware as needed, and split into multiple stores when domain boundaries become clear.
 
 Remember: Claude Code is a powerful tool that amplifies your capabilities, but the final decisions about your application's architecture should always be made with careful consideration of your specific requirements.
 {% endraw %}
