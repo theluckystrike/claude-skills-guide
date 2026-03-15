@@ -116,6 +116,14 @@ Teams building on AWS will benefit from both: Q Developer for AWS-specific work 
 
 ---
 
+## Combining Both Tools
+
+Many developers use both tools strategically rather than choosing one exclusively. Use Amazon Q for AWS infrastructure tasks and Claude Code for application logic, testing, and cross-platform work.
+
+Claude Code with skills like `/tdd` excels at application-level development where test coverage and code quality matter. The skill system particularly shines when you need consistent patterns across projects. Create a `/security` skill that always prompts for security considerations, or a `/performance` skill that benchmarks and optimizes code automatically — behaviors that have no equivalent in Amazon Q Developer.
+
+---
+
 ## Related Reading
 
 - [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's skills ecosystem is a key differentiator from Amazon Q Developer; this guide maps out what is available
