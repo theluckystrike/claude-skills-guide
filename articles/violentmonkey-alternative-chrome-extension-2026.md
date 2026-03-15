@@ -7,7 +7,7 @@ author: theluckystrike
 permalink: /violentmonkey-alternative-chrome-extension-2026/
 reviewed: true
 score: 8
-categories: [guides, guides]
+categories: [guides]
 tags: [chrome, userscripts, automation]
 ---
 
