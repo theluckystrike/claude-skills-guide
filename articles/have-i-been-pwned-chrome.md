@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Have I Been Pwned Chrome: A Developer and Power User Guide"
 description: "Learn how to check if your credentials have been exposed in data breaches using Have I Been Pwned. Explore browser extensions, API integration, and automated monitoring strategies."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /have-i-been-pwned-chrome/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # Have I Been Pwned Chrome: A Developer and Power User Guide
 

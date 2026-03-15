@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Study Helper Chrome Extension: A Developer's Guide"
 description: "Learn how to build and use AI-powered study helper Chrome extensions. Practical code examples, architecture patterns, and implementation tips for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-study-helper-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 # AI Study Helper Chrome Extension: A Developer's Guide

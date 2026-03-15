@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Manifest V3 vs V2 Security: What Developers Need to Know"
 description: "A practical comparison of Chrome extension security between Manifest V2 and V3. Learn about the key security changes, breaking differences, and migration strategies."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /manifest-v3-vs-v2-security/
+reviewed: true
+score: 8
+categories: [comparisons]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # Manifest V3 vs V2 Security: What Developers Need to Know
 

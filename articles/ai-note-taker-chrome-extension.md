@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "AI Note Taker Chrome Extension: A Developer Guide"
 description: "Learn how to build and integrate AI-powered note taker Chrome extensions. Practical examples, APIs, and implementation patterns for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-note-taker-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 # AI Note Taker Chrome Extension: A Developer Guide
 

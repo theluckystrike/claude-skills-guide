@@ -1,13 +1,17 @@
 ---
+
 layout: default
 title: "AI Webpage Summarizer Chrome Extension — Build Your Own"
 description: "A practical guide for developers building AI-powered Chrome extensions that summarize web pages. Covers architecture, API integration, and implementation patterns."
 date: 2026-03-15
 categories: [development, chrome-extensions]
-tags: [chrome-extension, ai, summarization, chrome-extension-development]
-author: theluckystrike
+tags: [chrome-extension, ai, summarization, chrome-extension-development, claude-skills]
+author: "Claude Skills Guide"
 permalink: /ai-webpage-summarizer-chrome-extension/
+reviewed: true
+score: 8
 ---
+
 
 # AI Webpage Summarizer Chrome Extension — Build Your Own
 
