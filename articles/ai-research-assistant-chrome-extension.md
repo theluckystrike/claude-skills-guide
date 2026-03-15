@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "AI Research Assistant Chrome Extension: A Developer's Guide"
 description: "Learn how AI research assistant Chrome extensions can streamline your research workflow. Practical examples and code snippets for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-research-assistant-chrome-extension/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 {% raw %}
 AI research assistant Chrome extensions transform how developers and researchers gather, organize, and synthesize information from the web. Rather than manually collecting bookmarks, copying text snippets, and toggling between dozens of tabs, these tools let you capture, annotate, and process web content directly within your browser.
