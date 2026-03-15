@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building a Noise Cancellation Chrome Extension: A Developer's Guide"
+title: "Building a Noise Cancellation Chrome Extension: A."
 description: "Learn how to build a Chrome extension that cancels ambient noise during calls. Technical implementation, Web Audio API usage, and practical code examples."
 date: 2026-03-15
 author: theluckystrike
@@ -284,6 +284,13 @@ function debugLoop() {
 Load your extension in developer mode through `chrome://extensions/`, enable it, and test with various noise conditions. Pay attention to how the extension affects voice clarity and ensure it doesn't introduce artifacts or distortion.
 
 Building a noise cancellation Chrome extension requires understanding Web Audio API, Chrome extension architecture, and audio signal processing. Start with a simple noise gate implementation, then iterate toward more sophisticated algorithms as you gather user feedback.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
