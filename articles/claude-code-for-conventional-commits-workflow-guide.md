@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Conventional Commits Workflow Guide"
-description: "Learn how to leverage Claude Code to automate and simplify Conventional Commits in your development workflow. Practical examples, code snippets, and actionable advice."
+description: "Learn how to leverage Claude Code to automate and simplify Conventional Commits in your development workflow. Practical examples, code snippets, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-conventional-commits-workflow-guide/
@@ -186,3 +186,10 @@ It will review each message and provide actionable feedback for improvement.
 
 Claude Code transforms conventional commits from a chore into a conversation. By leveraging AI assistance for message crafting, organization, and validation, you maintain commit standards without sacrificing productivity. Start with one workflow—interactive message generation—and expand as your team matures. Your future self will thank you when browsing the git history.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
