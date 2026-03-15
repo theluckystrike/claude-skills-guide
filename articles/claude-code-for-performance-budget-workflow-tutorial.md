@@ -8,7 +8,7 @@ permalink: /claude-code-for-performance-budget-workflow-tutorial/
 categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
-score: 0
+score: 7
 ---
 
 {% raw %}
