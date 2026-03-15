@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Which Chrome Extensions Are Safe? A Developer's Guide to Security"
 description: "Learn how to evaluate Chrome extension safety, identify red flags, and protect your browser from malicious extensions. Practical checklist for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /which-chrome-extensions-safe/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 Chrome extensions add powerful functionality to your browser, but they also represent a significant attack surface. Every extension you install can access your browsing data, modify web pages, and potentially exfiltrate sensitive information. This guide shows you how to evaluate extension safety effectively.
 

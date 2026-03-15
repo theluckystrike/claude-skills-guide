@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Shadow DOM Viewer: Inspect Hidden Elements in Your Browser"
 description: "A practical guide to Chrome extensions for viewing Shadow DOM. Learn how to inspect, debug, and work with shadow roots in web development."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-shadow-dom-viewer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension Shadow DOM Viewer: Inspect Hidden Elements in Your Browser
 
