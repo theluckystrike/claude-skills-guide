@@ -20,6 +20,8 @@ If you're working with GraphQL in a modern TypeScript project, you've probably e
 
 In this tutorial, I'll show you how to use Claude Code to automate your GraphQL codegen workflow, making type generation seamless and almost entirely hands-off.
 
+> **Scope of this tutorial:** This article focuses specifically on **automating the `graphql-codegen` CLI tool**—configuring `codegen.yml`, running codegen commands, watch mode, pre-commit validation, and troubleshooting codegen errors. If you want to generate server-side GraphQL schema artifacts and resolver scaffolding from TypeScript models, see the [GraphQL Code Generation Workflow guide](/claude-code-for-graphql-code-generation-workflow/). If you need client-side type and hook generation for React/Apollo, see the [GraphQL Client Codegen Guide](/claude-code-graphql-client-codegen-guide/).
+
 ## What is GraphQL Codegen?
 
 GraphQL Code Generator is a tool that reads your GraphQL schema and operations, then generates type-safe code for your frontend or backend. Instead of manually defining types like this:
@@ -308,6 +310,8 @@ Remember to regularly update your Claude Code agents as your project evolves, an
 
 ## Related Reading
 
+- [Claude Code for GraphQL Code Generation Workflow](/claude-code-for-graphql-code-generation-workflow/) — server-side schema and resolver generation from TypeScript models
+- [Claude Code GraphQL Client Codegen Guide](/claude-code-graphql-client-codegen-guide/) — client-side type generation for React, TypeScript, and Apollo Client
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)

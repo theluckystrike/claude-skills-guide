@@ -15,6 +15,8 @@ score: 7
 
 GraphQL development has become standard practice for modern APIs, but maintaining type-safe client code remains challenging. Schema changes often break builds, and manually updating types consumes valuable development time. This guide demonstrates how Claude Code skills automate GraphQL client codegen, keeping your frontend types synchronized with your backend schema.
 
+> **Scope of this guide:** This article focuses on **client-side GraphQL codegen**—generating TypeScript types, React hooks, and Apollo Client integration code from your GraphQL schema and query files. If you need to generate server-side schema artifacts and resolver scaffolding from TypeScript models, see the [GraphQL Code Generation Workflow guide](/claude-code-for-graphql-code-generation-workflow/). If you need to configure and automate the `graphql-codegen` CLI tool itself, see the [GraphQL Codegen Workflow Tutorial](/claude-code-for-graphql-codegen-workflow-tutorial/).
+
 ## Why Automate GraphQL Codegen with Claude
 
 Manual GraphQL type management creates several problems. When your schema updates, you must regenerate types, update queries, and verify everything compiles. This cycle repeats frequently in active projects. The tdd skill can help you write tests that validate your GraphQL integration, but you still need accurate types to test against.
@@ -182,6 +184,8 @@ The key lies in proper skill configuration and consistent project organization. 
 
 ## Related Reading
 
+- [Claude Code for GraphQL Code Generation Workflow](/claude-code-for-graphql-code-generation-workflow/) — server-side schema and resolver generation from TypeScript models
+- [Claude Code for GraphQL Codegen Workflow Tutorial](/claude-code-for-graphql-codegen-workflow-tutorial/) — automating the graphql-codegen CLI, codegen.yml configuration, and watch mode
 - [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
 - [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)

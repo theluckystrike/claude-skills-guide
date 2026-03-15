@@ -18,6 +18,8 @@ score: 7
 
 GraphQL has revolutionized how we build APIs, but the boilerplate code required to implement a robust GraphQL server can quickly become overwhelming. From type definitions to resolvers, inputs to interfaces—there's a lot of repetitive code to maintain. This is where Claude Code becomes invaluable, helping you automate and streamline your GraphQL code generation workflow.
 
+> **Scope of this guide:** This article focuses on **server-side GraphQL code generation**—using Claude Code to derive GraphQL type definitions, resolver scaffolding, union types, and subscriptions directly from your TypeScript data models. If you want to automate the `graphql-codegen` CLI tool and manage `codegen.yml` configuration, see the [GraphQL Codegen Workflow Tutorial](/claude-code-for-graphql-codegen-workflow-tutorial/). If you need client-side type generation for React/Apollo, see the [GraphQL Client Codegen Guide](/claude-code-graphql-client-codegen-guide/).
+
 ## Understanding the GraphQL Code Generation Challenge
 
 When working with GraphQL, developers typically face several repetitive tasks:
@@ -239,6 +241,8 @@ Start small: use Claude Code to generate one type and its resolver, then expand 
 
 ## Related Reading
 
+- [Claude Code for GraphQL Codegen Workflow Tutorial](/claude-code-for-graphql-codegen-workflow-tutorial/) — automating the graphql-codegen CLI, codegen.yml configuration, and watch mode
+- [Claude Code GraphQL Client Codegen Guide](/claude-code-graphql-client-codegen-guide/) — client-side type generation for React, TypeScript, and Apollo Client
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
