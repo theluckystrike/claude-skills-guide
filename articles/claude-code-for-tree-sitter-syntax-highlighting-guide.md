@@ -249,3 +249,4 @@ Tree-sitter syntax highlighting transforms code visualization from simple patter
 
 The investment in well-crafted Tree-sitter queries pays dividends every time you open your editor and instantly recognize code structure at a glance.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code to build, manage, and automate k
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-knowledge-base-workflow-tutorial-guide/
-categories: [Development, AI, Knowledge Management]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 ---
 
@@ -30,8 +30,8 @@ Before diving into implementation, ensure you have Claude Code installed and con
 # Verify Claude Code installation
 claude --version
 
-# Initialize a new project with knowledge base tools
-claude init knowledge-base-project
+# Initialize: create CLAUDE.md in your project root
+# (mkdir knowledge-base-project && cd knowledge-base-project && touch CLAUDE.md)
 ```
 
 ### Project Structure for Knowledge Base Management
@@ -314,3 +314,4 @@ Start small—automate one repetitive task this week. As you see results, expand
 
 Remember: The best knowledge base is one that's actively maintained and consistently improved. Claude Code gives you the tools to make that possible.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
