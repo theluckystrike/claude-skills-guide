@@ -108,7 +108,7 @@ A useful approach is creating a skill library in a central location:
 Load these skills as needed for specific tasks. For example, when starting a code review for any client:
 
 ```bash
-claude --load-skill ~/freelance/skills/common/code-review.md
+claude /code-review
 ```
 
 This skill might contain prompts like:

@@ -159,10 +159,10 @@ Control retention at the session level using Claude Code flags:
 
 ```bash
 # Start session with no persistence
-claude --no-persist
+claude
 
 # Start session with ephemeral only (no disk writes)
-claude --ephemeral
+claude
 ```
 
 Use `--no-persist` for sensitive one-off tasks where you don't need conversation history afterward.

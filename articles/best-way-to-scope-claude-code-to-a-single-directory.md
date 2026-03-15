@@ -117,7 +117,7 @@ This tells Claude to ignore certain directories when scanning for relevant files
 When initializing a new Claude Code project, you can establish directory scope from the start:
 
 ```bash
-claude --init --dir /path/to/project
+claude --add-dir /path/to/project
 ```
 
 This creates the project configuration with the specified directory as the default scope.

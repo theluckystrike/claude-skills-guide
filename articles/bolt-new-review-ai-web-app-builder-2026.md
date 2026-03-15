@@ -84,7 +84,7 @@ cd your-bolt-project
 
 2. Initialize Claude Code and load the bolt-review skill:
 ```bash
-claude --init
+claude
 # claude skill commands don\'t exist — manage skill files in ~/.claude/skills/ add bolt-review
 ```
 

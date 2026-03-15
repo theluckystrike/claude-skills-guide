@@ -67,7 +67,7 @@ The explicit boundaries—input type, output count, constraints—force the mode
 Claude Code's `--file` flag lets you inject specific files into context. Use this strategically to ground responses:
 
 ```bash
-claude --file src/utils/validator.ts --file package.json "Add email validation to the existing validator"
+claude --print "Add email validation to the existing validator in src/utils/validator.ts"
 ```
 
 By providing actual file contents, you ensure Claude sees your current implementation patterns, naming conventions, and dependencies. This technique works exceptionally well when combined with supermemory for remembering project-specific patterns across sessions.

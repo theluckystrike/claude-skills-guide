@@ -76,8 +76,8 @@ Integrate Claude Code into your CI/CD pipeline for automated security scanning. 
 
 ```bash
 # Run security analysis on new code
-claude --security-scan --path ./src
-claude --dependency-audit --lockfile package-lock.json
+claude --print "Run security scan on ./src directory"
+claude --print "Audit dependencies in package-lock.json"
 ```
 
 This approach helps catch vulnerabilities early and ensures security checks aren't forgotten in fast-paced development cycles.

@@ -114,7 +114,7 @@ Now create a script that Claude Code can run:
 #!/bin/bash
 
 # Design Token Automation Script
-# Run with: claude --script process-tokens.sh
+# Run with: bash process-tokens.sh  # then describe results to claude
 
 echo "🔄 Starting design token automation..."
 

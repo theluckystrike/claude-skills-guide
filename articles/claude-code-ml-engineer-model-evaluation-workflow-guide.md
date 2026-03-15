@@ -76,7 +76,7 @@ Configure your CI/CD pipelines to run evaluation suites automatically on model u
 ```yaml
 evaluation_step:
   script: |
-    claude --eval --model $MODEL_VERSION \
+    claude --print \
       --benchmark squad \
       --threshold 0.92
   allow_failure: false

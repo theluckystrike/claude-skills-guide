@@ -120,7 +120,7 @@ Automate dashboard refreshes using cron jobs or webhook triggers:
 
 ```bash
 # Schedule hourly KPI updates
-0 * * * * cd /path/to/project && claude --kpi-update
+0 * * * * cd /path/to/project && claude --print "Update KPI dashboard metrics"
 ```
 
 Configure your KPI dashboard skill to accept a `--kpi-update` flag that triggers automatic data collection without user prompts.

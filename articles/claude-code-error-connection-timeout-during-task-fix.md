@@ -81,7 +81,7 @@ For tasks that involve large file processing or complex operations—common when
 export CLAUDE_TIMEOUT=300
 
 # Or pass it directly to the command
-claude --timeout 300 "your task here"
+claude --print "your task here"
 ```
 
 **Solution:** Adjust the `ANTHROPIC_TIMEOUT` environment variable or use the `--timeout` flag. Values between 180 and 600 seconds work well for complex tasks.
@@ -134,7 +134,7 @@ When connection timeouts occur during skill execution—perhaps while using tdd 
 claude --continue "continue the previous task"
 
 # Or specify a checkpoint file
-claude --checkpoint /tmp/claude-checkpoint.json "continue from checkpoint"
+claude --continue
 ```
 
 **Best practice:** Break large tasks into smaller steps when working with skills. This reduces the impact of timeouts and makes recovery easier.
