@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Outline Notes Organizer: A Developer Guide"
 description: "Learn how to build and use Chrome extensions for organizing outline-style notes. Practical examples, code snippets, and architecture patterns for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-outline-notes-organizer/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [chrome-extension, claude-skills]
 ---
+
 
 {% raw %}
 
