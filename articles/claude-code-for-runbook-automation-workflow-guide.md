@@ -4,10 +4,12 @@ layout: default
 title: "Claude Code for Runbook Automation Workflow Guide"
 description: "Master runbook automation with Claude Code. Learn how to create, manage, and execute automated workflows that streamline DevOps operations and incident response."
 date: 2026-03-15
-author: Claude Skills Guide
+author: "Claude Skills Guide"
 permalink: /claude-code-for-runbook-automation-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
@@ -15,7 +17,7 @@ tags: [claude-code, claude-skills]
 
 Runbooks have long been a staple of DevOps and Site Reliability Engineering (SRE) practices. These living documents capture operational procedures, troubleshooting steps, and incident response playbooks. However, traditional runbooks often suffer from staleness, manual execution errors, and version control challenges. Enter Claude Code for runbook automation—a powerful approach that transforms static documentation into executable, intelligent workflows.
 
-This guide explores how developers can leverage Claude Code to create robust, automated runbook workflows that reduce toil, improve consistency, and accelerate incident response times.
+This guide explores how developers can use Claude Code to create robust, automated runbook workflows that reduce toil, improve consistency, and accelerate incident response times.
 
 ## Understanding Runbook Automation with Claude Code
 
