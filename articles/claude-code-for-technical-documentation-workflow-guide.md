@@ -7,7 +7,7 @@ description: "A comprehensive guide to building efficient technical documentatio
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-technical-documentation-workflow-guide/
-categories: [guides, documentation, claude-code]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills, documentation, workflow]
 reviewed: true
 score: 8
@@ -239,3 +239,4 @@ Claude Code transforms technical documentation from a tedious chore into an effi
 
 The key is consistency: regular updates, automated reviews, and treating documentation as a first-class citizen in your development process. With Claude Code handling the heavy lifting, your team can focus on writing great code—and having that code document itself.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

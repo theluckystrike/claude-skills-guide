@@ -42,7 +42,6 @@ Create a dedicated skill for documentation testing to make your workflow efficie
 ---
 name: doc-test
 description: Run comprehensive documentation tests
-tools: [Read, Bash, Glob]
 ---
 ```
 
@@ -63,7 +62,6 @@ For more targeted link checking, create a skill that specifically validates inte
 ---
 name: link-check
 description: Validate internal documentation links
-tools: [Glob, Read]
 ---
 
 Check all internal links in markdown files. For each link:
@@ -113,7 +111,6 @@ Create a skill that combines these validations:
 ---
 name: validate-code-blocks
 description: Validate code blocks in markdown documentation
-tools: [Read, Bash]
 ---
 
 For each code block in the documentation:
@@ -132,7 +129,6 @@ Jekyll and other static site generators rely on front matter for site configurat
 ---
 name: frontmatter-check
 description: Validate front matter in all articles
-tools: [Glob, Read]
 ---
 
 Check the front matter of every markdown file in articles/:
@@ -206,3 +202,4 @@ Claude Code transforms documentation testing from a manual, error-prone process 
 Start small—implement one test category at a time—and gradually build a complete testing suite. Your future self (and your documentation readers) will thank you.
 
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

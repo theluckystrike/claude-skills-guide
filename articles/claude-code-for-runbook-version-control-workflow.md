@@ -83,7 +83,6 @@ Create a skill that validates runbook structure. This ensures every runbook foll
 ---
 name: runbook-validator
 description: Validates runbook structure and content
-tools: [read_file, write_file, bash]
 ---
 
 You are a runbook quality checker. For each runbook:
@@ -221,3 +220,4 @@ Version control transforms runbooks from static documents into living, collabora
 
 Start by initializing a repository, creating a few core runbooks, and establishing review practices. Over time, you'll develop a culture where runbook maintenance is as natural as code maintenance—and your future self (or the person on-call at 3 AM) will thank you.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

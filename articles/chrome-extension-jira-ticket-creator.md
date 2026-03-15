@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Chrome Extension Jira Ticket Creator: Automate Issue Tracking"
-description: "Learn how to build a Chrome extension that creates Jira tickets directly from your browser. Includes code examples, API integration patterns, and deployment steps."
+title: "Chrome Extension Jira Ticket Creator: Automate Issue."
+description: "Learn how to build a Chrome extension that creates Jira tickets directly from your browser. Includes code examples, API integration patterns, and."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-jira-ticket-creator/
-categories: [guides, chrome-extension, jira, productivity]
+categories: [guides, guides, guides, productivity]
 tags: [chrome-extension, jira, ticket-creator, automation, developer-tools, workflow]
 reviewed: true
 score: 7
@@ -233,5 +233,12 @@ To distribute the extension, package it through the Chrome Web Store Developer D
 Once the basic version works, consider adding features like quick templates for common ticket formats, keyboard shortcuts for faster creation, context-menu integration to create tickets from selected text, and project switching without re-entering the project key. You can also integrate with Claude or other AI tools to auto-generate descriptions from screenshots or error messages.
 
 A well-built Jira ticket creator extension reduces context switching and standardizes how your team captures issues. The foundation established here scales with your workflow needs.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

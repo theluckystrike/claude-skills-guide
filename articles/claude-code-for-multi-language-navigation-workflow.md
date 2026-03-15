@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Multi-Language Navigation Workflow"
-description: "Master multi-language navigation workflows in Claude Code. Learn to create skills that seamlessly switch between programming languages, handle code context switching, and maintain clarity across multilingual projects."
+description: "Master multi-language navigation workflows in Claude Code. Learn to create skills that seamlessly switch between programming languages, handle code."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-multi-language-navigation-workflow/
@@ -201,4 +201,11 @@ Finally, invest time in customizing language-specific skills for the specific fr
 Multi-language navigation is a powerful capability that transforms Claude Code from a single-language assistant into a truly polyglot development partner. By building skills that understand language context, delegate appropriately, and handle cross-language references, you create workflows that feel natural regardless of which language you're working in.
 
 The key is treating language not as an afterthought, but as a first-class concern in your skill design. With proper context detection, specialized sub-skills, and clear delegation patterns, you can navigate complex multilingual codebases with confidence and speed.
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

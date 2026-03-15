@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Review Comment Automation Workflow"
-description: "Learn how to build a review comment automation workflow with Claude Code to streamline code reviews, manage feedback, and maintain consistent quality standards."
+description: "Learn how to build a review comment automation workflow with Claude Code to streamline code reviews, manage feedback, and maintain consistent quality."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-review-comment-automation-workflow/
@@ -252,4 +252,11 @@ Building a review comment automation workflow with Claude Code transforms an cha
 Start with the basic skill structure outlined here, customize it to your team's needs, and iterate as you learn what works best. The time investment pays dividends in reduced review cycle times and clearer communication.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

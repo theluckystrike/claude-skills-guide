@@ -2,8 +2,8 @@
 
 
 layout: default
-title: "Chrome Extension Figma Inspector: A Practical Guide for Developers"
-description: "Learn how Chrome extensions for Figma inspection streamline design handoff workflows. Compare tools, understand key features, and implement practical solutions."
+title: "Chrome Extension Figma Inspector: A Practical Guide for."
+description: "Learn how Chrome extensions for Figma inspection streamline design handoff workflows. Compare tools, understand key features, and implement practical."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-figma-inspector/
@@ -135,5 +135,12 @@ For development teams adopting these tools, establish conventions early:
 - Periodically audit implementations against Figma to catch drift
 
 Individual developers benefit from adding inspector shortcuts to their workflow. Most extensions support keyboard shortcuts—learn them once and use them throughout every project.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

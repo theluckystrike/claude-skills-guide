@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Chrome Extension Google Drive Sidebar: Build Your Own"
-description: "A practical guide to building a Chrome extension with Google Drive sidebar integration. Learn manifest configuration, authentication, Drive API usage, and sidebar UI implementation."
+description: "A practical guide to building a Chrome extension with Google Drive sidebar integration. Learn manifest configuration, authentication, Drive API usage."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-google-drive-sidebar/
-categories: [guides, development, chrome-extension]
+categories: [guides, guides, guides]
 tags: [chrome-extension, google-drive, sidebar, developer-tools, productivity, api]
 reviewed: true
 score: 8
@@ -276,5 +276,12 @@ This opens the sidebar when users click your extension icon. You can also progra
 A Drive sidebar extension serves multiple workflows. Support teams can pull knowledge base documents while browsing helpdesk tickets. Developers can reference Drive-stored API docs alongside code. Content creators can attach Drive assets to CMS entries without tab switching.
 
 For deeper integration, consider implementing file upload from the sidebar, folder tree navigation, or direct sharing capabilities. Each adds value but increases complexity—start simple and iterate based on user feedback.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

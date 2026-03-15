@@ -6,7 +6,7 @@ description: "Learn how to build powerful custom diagnostics workflows using Cla
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-custom-lsp-diagnostics-workflow/
-categories: [Development, Automation, Claude Code]
+categories: [guides, workflows, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
@@ -236,3 +236,4 @@ Building custom LSP diagnostics workflows with Claude Code opens up powerful pos
 Start with simple workflows and iterate. The key is finding the right balance between thoroughness and performance, ensuring your diagnostics enhance rather than hinder your development process.
 
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

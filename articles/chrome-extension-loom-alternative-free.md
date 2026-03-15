@@ -153,5 +153,12 @@ Free Loom alternatives exist and some exceed Loom's free tier capabilities. Scre
 
 The "free" label sometimes masks limitations—watch for recording time caps, watermarks, or restricted export options. Screenity's unlimited recording without watermarks makes it the most honest free alternative. For professional workflows, OBS Studio's zero cost combined with maximum flexibility earns its place in any developer's toolkit.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
