@@ -1,165 +1,129 @@
 ---
-
 layout: default
 title: "Claude Code for OSS License Selection Workflow Guide"
-description: "Build a Claude Code skill that guides developers through open source license selection with practical examples, decision trees, and automated."
+description: "Learn how to use Claude Code to systematically select the right open source license for your project. A practical workflow guide for developers."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-license-selection-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
-
-{% raw %}
 # Claude Code for OSS License Selection Workflow Guide
 
-Choosing the right open source license is one of the most important decisions you'll make when starting a new project. The wrong choice can lead to legal complications, missed opportunities for collaboration, or unintended commercial use of your code. This guide shows you how to build a Claude Code skill that systematically guides developers through license selection, helping them make informed decisions while avoiding common pitfalls.
+Choosing the right open source license is one of the most important decisions you'll make when starting a new project. The license you select determines how others can use, modify, and distribute your code—and can have significant implications for your project's community, commercial use cases, and long-term success. This guide walks you through a practical workflow for license selection using Claude Code, making what can be an overwhelming decision process clear and methodical.
 
-## Why Automate License Selection?
+## Why License Selection Matters
 
-License selection isn't just about copying a generic MIT or Apache 2.0 license into your repository. It requires understanding your project's goals, your tolerance for commercial use, your preferences for derivative works, and your obligations regarding patent grants. A well-designed Claude Code skill can:
+Before diving into the workflow, it's worth understanding why license choice deserves careful consideration. An open source license is a legal contract between you (the copyright holder) and anyone who uses your code. The wrong license can:
 
-- Ask targeted questions about your project requirements
-- Provide clear explanations of license obligations
-- Check existing dependencies for license compatibility
-- Generate appropriate LICENSE files with proper attribution
-- Warn about potential conflicts with your dependencies
+- Prevent commercial companies from using your project
+- Allow competitors to profit from your work without contributing back
+- Create legal uncertainties that discourage adoption
+- Limit the ways others can build upon your contributions
 
-## Designing the License Selection Skill
+Claude Code can help you navigate these considerations by asking the right questions, explaining license implications, and helping you weigh trade-offs based on your specific goals.
 
-The core of this skill is a decision tree that maps your project characteristics to suitable licenses. Here's how to structure it:
+## The License Selection Workflow
 
-```yaml
----
-name: license-selector
-description: "Guides developers through open source license selection based on project requirements"
----
+### Step 1: Define Your Goals
 
-# Open Source License Selection Assistant
+The first step in license selection is clarifying what you want to achieve with your open source project. Start a conversation with Claude Code by describing your project and your intentions.
 
-I'll help you choose the right open source license for your project. Let me ask you a few questions to narrow down the options.
-
-## Question 1: Commercial Use
-
-Do you want to allow commercial use of your software?
-- **Yes**: Continue to next question
-- **No**: Consider GPL family licenses (AGPL, GPLv3, GPLv2)
-
-## Question 2: Source Code Distribution
-
-Do you want to require that derivative works must also be open source?
-- **Yes**: Consider GPLv3, AGPL, MPL
-- **No**: Consider MIT, Apache 2.0, BSD
-
-## Question 3: Patent Grants
-
-Do you want to include an explicit patent grant?
-- **Yes**: Apache 2.0 provides strong patent provisions
-- **No**: MIT or BSD may be simpler choices
+**Prompt example:**
+```
+I'm starting a new JavaScript library for data visualization. I want it to be widely used but also want to ensure that companies contributing improvements share those improvements back. What license should I use?
 ```
 
-This basic structure provides the framework, but the real value comes from adding practical checks and automated actions.
+Claude Code will respond by asking clarifying questions about your priorities. Be honest about your goals—whether you prioritize maximum adoption, commercial use, copyleft requirements, or simplicity.
 
-## Implementing Dependency License Analysis
+### Step 2: Understand License Categories
 
-A truly useful license selection skill should check your project's dependencies to identify potential conflicts. Create a function that analyzes your package.json, requirements.txt, or Cargo.toml:
+Once Claude Code understands your goals, it will help you understand the major license categories. Here's a quick overview you can discuss with Claude:
 
-```javascript
-async function analyzeDependencies(projectPath) {
-  const packageJson = await readFile(`${projectPath}/package.json`);
-  const dependencies = {
-    ...packageJson.dependencies,
-    ...packageJson.devDependencies
-  };
-  
-  const licenseInfo = {};
-  for (const [dep, version] of Object.entries(dependencies)) {
-    const info = await fetchPackageLicense(dep);
-    licenseInfo[dep] = info.license;
-  }
-  
-  return licenseInfo;
-}
+**Permissive Licenses** (MIT, BSD, Apache 2.0)
+- Allow maximum freedom for users
+- Few restrictions on how code can be used
+- Popular for libraries that want wide adoption
+- Example: React, jQuery, Ruby on Rails
+
+**Copyleft Licenses** (GPL, AGPL, LGPL)
+- Require derivative works to be distributed under the same license
+- Ensure improvements remain open source
+- Can be problematic for proprietary code integration
+- Example: Linux kernel, Bash, GIMP
+
+**Proprietary-Friendly Licenses**
+- Allow use in proprietary products
+- Often require attribution and license inclusion
+- Good for tools used in commercial development
+- Example: Apache 2.0, BSD 3-Clause
+
+### Step 3: Analyze Specific Considerations
+
+Claude Code can help you think through specific scenarios that might affect your license choice. Here are key questions to discuss:
+
+**Commercial Usage**
+- Will companies use your code in proprietary products?
+- Do you want to allow this, or require open source derivative works?
+- Are you okay with competitors using your work commercially?
+
+**Patent Protection**
+- Some licenses (like Apache 2.0) include explicit patent grants
+- Others rely on copyright alone
+- Consider whether you need or want patent protections
+
+**License Compatibility**
+- Will your project combine with other open source code?
+- Some licenses are incompatible with each other
+- Consider the ecosystem where your project will live
+
+**Contribution Expectations**
+- Do you want to require contributors to sign a CLA?
+- How will you handle copyright assignment?
+- Should contributions be under the same license?
+
+### Step 4: Evaluate Specific Licenses
+
+Based on your responses, Claude Code can narrow down recommendations. Here's a practical comparison you can work through together:
+
+```
+## Common License Comparison
+
+| License    | Commercial Use | Copyleft | Patent Grant | Simplicity |
+|------------|----------------|----------|--------------|------------|
+| MIT        | ✓              | ✗        | ✗            | High       |
+| Apache 2.0 | ✓              | ✗        | ✓            | Medium     |
+| BSD 3-Clause| ✓            | ✗        | ✓            | High       |
+| GPLv3      | ✓              | ✓        | ✓            | Medium     |
+| AGPLv3     | ✓              | ✓*       | ✓            | Low        |
+
+* Stronger copyleft for network use
 ```
 
-This function collects license information for all dependencies, which you can then cross-reference against your chosen license using a compatibility matrix:
+### Step 5: Research Real-World Examples
 
-```javascript
-const licenseCompatibility = {
-  'MIT': ['MIT', 'Apache-2.0', 'BSD-2-Clause', 'BSD-3-Clause', 'ISC', 'Unlicense'],
-  'Apache-2.0': ['MIT', 'Apache-2.0', 'BSD-2-Clause', 'BSD-3-Clause', 'ISC', 'Unlicense'],
-  'GPL-3.0': ['GPL-3.0', 'AGPL-3.0', 'LGPL-3.0'],
-  'GPL-2.0': ['GPL-2.0', 'LGPL-2.1']
-};
+One of Claude Code's strengths is helping you find comparable projects. Ask about projects using similar licenses in your ecosystem:
 
-function checkCompatibility(projectLicense, depLicenses) {
-  const compatible = [];
-  const conflicts = [];
-  
-  for (const dep of depLicenses) {
-    if (licenseCompatibility[projectLicense]?.includes(dep)) {
-      compatible.push(dep);
-    } else {
-      conflicts.push(dep);
-    }
-  }
-  
-  return { compatible, conflicts };
-}
+**Prompt example:**
+```
+What popular JavaScript libraries use the MIT license versus Apache 2.0? What about the BSD license?
 ```
 
-## Creating Interactive Decision Flows
+This helps you understand how your choice will be perceived in your development community and what compatibility expectations exist.
 
-The most effective license selection workflows are interactive. Claude Code skills can maintain conversation context to drill down through a series of questions:
+### Step 6: Document Your Decision
 
-```markdown
-## License Selection Workflow
+Once you've selected a license, document your reasoning. Claude Code can help you create a LICENSE file with appropriate headers and maintain a decision log in your repository.
 
-Let me guide you through the license selection process. Answer each question, and I'll provide recommendations based on your responses.
+## Practical Code Snippets
 
-### Question 1: What is the primary purpose of your project?
+When you're ready to add your license, Claude Code can generate the appropriate files. Here are common patterns:
 
-1. **Library/Framework** - Used by other projects
-2. **Application** - End-user software
-3. **Tool/Utility** - Developer productivity
-4. **SaaS/Service** - Running as a hosted service
-
-### For Library/Framework:
-If others will embed or extend your code, consider:
-- **LGPL**: Allows proprietary use if you link dynamically
-- **MPL**: Balanced approach for Firefox-style licensing
-- **MIT/Apache**: Maximum compatibility with other projects
-
-### For SaaS/Service:
-If you're building a hosted service, you may want:
-- **AGPL**: Requires sharing modifications if you run a hosted service
-- **MIT/Apache**: No obligation to share your modifications
-```
-
-## Generating the LICENSE File
-
-Once the skill helps users select a license, it should generate the appropriate LICENSE file:
-
-```markdown
-## Generate License File
-
-Based on your responses, I recommend the **MIT License** for your project. It provides:
-
-- Simple, permissive terms
-- Commercial use allowed
-- No source code redistribution requirements
-- Minimal liability
-
-Shall I generate the LICENSE file now? I can:
-1. Create a standard MIT LICENSE file
-2. Customize it with your name and project year
-3. Add a NOTICE file for attribution requirements
-
-Example output for MIT:
-```
+**For MIT License:**
+```bash
+# Create LICENSE file
+cat > LICENSE << 'EOF'
 MIT License
 
 Copyright (c) 2026 Your Name
@@ -167,45 +131,57 @@ Copyright (c) 2026 Your Name
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction...
+EOF
 ```
-```
 
-## Best Practices for License Selection Skills
-
-When building this skill, keep these principles in mind:
-
-1. **Provide context, not just recommendations**: Explain *why* a license suits their use case
-2. **Warn about trademark issues**: License ≠ trademark protection
-3. **Consider future flexibility**: Some licenses are easier to change than others
-4. **Address dual licensing**: Explain how dual licensing works for commercial projects
-5. **Include jurisdiction notes**: Different countries have different legal interpretations
-
-## Testing Your License Selection Skill
-
-Validate your skill works correctly by testing various scenarios:
-
+**For Adding License Headers to Source Files:**
 ```bash
-# Test case 1: Commercial library
-echo "Library for commercial use, no copyleft" | claude -s license-selector
-
-# Test case 2: Open source application
-echo "Application, want attribution, allow modifications" | claude -s license-selector
-
-# Test case 3: Check dependencies
-cd my-project && claude -s license-selector --check-deps
+# Add MIT header to JavaScript files
+for file in *.js; do
+  sed -i '' '1s/^/\/\/ MIT License\n\/\/ Copyright (c) 2026 Your Name\n\n/' "$file"
+done
 ```
+
+**Using Claude Code to Add Headers:**
+You can also ask Claude Code to add proper license headers to your source files:
+
+```
+Please add the appropriate license header to all JavaScript files in this project, using the MIT license.
+```
+
+## Actionable Advice
+
+### Start Simple
+
+If you're unsure, MIT license is the safest starting point. It's simple to understand, widely accepted, and allows maximum adoption. You can always migrate to a different license later (though this can be complex).
+
+### Match Your Ecosystem
+
+Look at what licenses similar projects in your language or domain use. Following conventions reduces friction for potential users and contributors.
+
+### Consider Dual Licensing
+
+For commercial projects, consider dual licensing (offering both open source and commercial licenses). This allows open source use while preserving revenue opportunities.
+
+### Include License in Every File
+
+Add license headers to every source file in your project. This ensures copyright is maintained even if files are copied individually.
+
+### Update Annually
+
+Review your license decision annually or when significant project changes occur. Your goals and the landscape may evolve.
 
 ## Conclusion
 
-Building a Claude Code skill for OSS license selection transforms a complex legal decision into a guided, informed process. By combining interactive questioning, dependency analysis, and automated file generation, you create a tool that helps developers choose licenses confidently while avoiding common mistakes.
+Selecting an open source license doesn't have to be overwhelming. By following this workflow with Claude Code—defining your goals, understanding license categories, analyzing specific considerations, evaluating options, researching examples, and documenting your decision—you can make an informed choice that serves your project's long-term interests.
 
-Remember that this skill provides guidance, not legal advice. For complex projects or uncertain situations, always recommend consulting with an open source legal expert. But for the vast majority of projects, a well-designed license selection workflow saves time and prevents costly mistakes.
-{% endraw %}
+Remember that the "best" license depends entirely on your specific goals. What works perfectly for one project may be entirely wrong for another. Use Claude Code as a thinking partner to work through the nuances, and you'll emerge with a license choice you can confidently defend.
 
-## Related Reading
+---
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+**Next Steps:**
+- Discuss your specific project with Claude Code using the prompts in this guide
+- Research comparable projects in your ecosystem
+- Make your decision and add the appropriate LICENSE file
+- Add license headers to all source files
+- Document your reasoning for future reference
