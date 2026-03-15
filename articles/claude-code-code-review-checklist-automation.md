@@ -283,6 +283,7 @@ Involve the whole team in maintaining the skill. The best automated checklists r
 
 ## Related Reading
 
+- [Claude Code Security Code Review Checklist Automation](/claude-skills-guide/claude-code-security-code-review-checklist-automation/) — Deep-dive into security-specific automation: input validation scanning, SQL injection detection, token handling, and dependency vulnerability checks
 - [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Top skills for automated code review
 - [Claude Code Static Analysis Automation Guide](/claude-skills-guide/claude-code-static-analysis-automation-guide/) — Static analysis is part of automated code review
 - [Claude Code Code Smell Identification Guide](/claude-skills-guide/claude-code-code-smell-identification-guide/) — Code review checklists should include smell detection
