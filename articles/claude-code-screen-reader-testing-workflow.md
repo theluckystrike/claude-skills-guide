@@ -36,6 +36,17 @@ open -a VoiceOver
 
 For cross-platform testing, consider using virtual machines with Windows and NVDA installed. Tools like VirtualBox or Parallels make this manageable.
 
+### Configuring NVDA for Consistent Results
+
+When testing with NVDA on Windows, use these settings for repeatable test outcomes:
+
+- **Speech viewer**: Enabled — displays announced text on-screen for verification
+- **Punctuation level**: All — ensures complete announcements during testing
+- **Input composition**: Disabled — produces more predictable behavior
+- **Table headers**: Report all — verifies data table accessibility
+
+Key NVDA navigation commands to document alongside your test cases: Tab/Shift+Tab for form fields, arrow keys for content, Enter to activate links and buttons, Escape to close dialogs.
+
 ## Automating Screen Reader Checks with Claude
 
 While you cannot fully automate screen reader testing (human judgment is still required), Claude Code can help in several ways:
@@ -108,6 +119,22 @@ axe http://localhost:3000 --timeout 10000
 
 This catches low-hanging fruit before human testing.
 
+For Windows-based CI environments running NVDA-compatible checks:
+
+```yaml
+name: Accessibility Tests
+on: [pull_request]
+jobs:
+  a11y-test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run axe accessibility tests
+        run: npx axe-cli http://localhost:3000
+      - name: Validate HTML structure
+        run: npm run test:a11y-html
+```
+
 ### Step 3: Document Findings
 
 Use the supermemory skill to track accessibility issues across your project:
@@ -137,6 +164,32 @@ Focus on these high-impact areas during testing:
 4. **Link text clarity** — "Click here" or "Read more" lacks context
 5. **Dynamic content announcements** — ARIA live regions missing for updates
 6. **Keyboard trap** — Users cannot exit modal or dialog
+
+When NVDA encounters a keyboard trap, users have no way to continue navigating. Implement focus trapping correctly in modals:
+
+```javascript
+function trapFocus(element) {
+  const focusableElements = element.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  element.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      if (e.shiftKey && document.activeElement === firstElement) {
+        e.preventDefault();
+        lastElement.focus();
+      } else if (!e.shiftKey && document.activeElement === lastElement) {
+        e.preventDefault();
+        firstElement.focus();
+      }
+    }
+  });
+}
+```
+
+For NVDA-specific test scenarios, verify that announcements match expectations — for example, a login form should announce "Username, edit, required" when tabbing to the first field, "Password, password edit, required" for the password field, and "Sign in, button" for the submit button.
 
 ## Testing Specific Components
 
@@ -209,7 +262,6 @@ The key is consistency—test regularly, document findings, and iterate. Each cy
 
 ## Related Reading
 
-- [Claude Code for NVDA Screen Reader Testing Workflow](/claude-skills-guide/claude-code-for-nvda-screen-reader-testing-workflow/) — Deep dive into Windows-specific NVDA setup, configuration, and test scenarios
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/)
 - [Claude Code Axe Accessibility Testing Guide](/claude-skills-guide/claude-code-axe-accessibility-testing-guide/)
 - [Claude Code Color Contrast Checking Workflow](/claude-skills-guide/claude-code-color-contrast-checking-workflow/)

@@ -249,6 +249,34 @@ The supermemory skill proves valuable when implementing webhooks for multiple pr
 
 For frontend integration, the frontend-design skill helps build admin dashboards to monitor webhook events, display processing status, and handle retry logic through a user interface.
 
+## Stripe-Specific Implementation
+
+Stripe uses a timestamp-based signature scheme with replay attack prevention. Parse the `Stripe-Signature` header and validate within a tolerance window:
+
+```javascript
+function verifyStripeSignature(payload, signature, secret, tolerance = 300) {
+  const timestamp = signature.split(',')[0].split('=')[1];
+  const signedPayload = `${timestamp}.${payload}`;
+  const expectedSignature = createHmac('sha256', secret)
+    .update(signedPayload).digest('hex');
+
+  const currentTime = Math.floor(Date.now() / 1000);
+  if (Math.abs(currentTime - parseInt(timestamp)) > tolerance) {
+    throw new Error('Webhook timestamp outside tolerance window');
+  }
+  // Compare signatures...
+}
+```
+
+Use the Stripe CLI for local development testing:
+
+```bash
+stripe listen --forward-to localhost:3000/webhooks
+stripe trigger payment_intent.succeeded
+```
+
+Handle Stripe-specific event types including `payment_intent.succeeded`, `customer.subscription.updated`, and `charge.dispute.created` for chargeback scenarios. Always use test mode API keys in development — never mix test and live keys.
+
 ## Best Practices Summary
 
 Implementing reliable webhook handlers requires attention to several key areas:
@@ -267,7 +295,6 @@ With this workflow guide, you're equipped to implement webhook handlers that are
 
 ## Related Reading
 
-- [Claude Code Stripe Webhook Handler Implementation Guide](/claude-skills-guide/claude-code-stripe-webhook-handler-implementation-guide/) — Stripe-specific implementation covering Stripe's timestamp-based signature format, Stripe CLI local testing, and Stripe event types like `payment_intent.succeeded` and `charge.dispute.created`
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
