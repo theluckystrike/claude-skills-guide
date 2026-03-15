@@ -177,6 +177,262 @@ Create an accessibility audit report tracking:
 
 Prioritize fixes using severity: critical issues prevent any user with disabilities from using a feature, while minor issues cause inconvenience but do not block functionality.
 
+## Building a Custom Accessibility Checker Extension
+
+If you want to embed accessibility scanning directly into your own extension rather than relying on external tools, the following patterns provide a solid starting point.
+
+### Manifest Setup
+
+```json
+{
+  "manifest_version": 3,
+  "name": "Accessibility Tester",
+  "version": "1.0",
+  "description": "Automated accessibility testing for any webpage",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }]
+}
+```
+
+### Page Analysis: Images, Headings, and Form Labels
+
+Inject a content script to detect the most common issues: missing image alt text, skipped heading levels, and unlabelled form inputs.
+
+```javascript
+// content.js - Analyze page accessibility
+function analyzeAccessibility() {
+  const issues = [];
+
+  // Check for images missing alt text
+  const images = document.querySelectorAll('img');
+  images.forEach((img) => {
+    if (!img.hasAttribute('alt') && img.src) {
+      issues.push({
+        type: 'missing-alt',
+        element: 'img',
+        selector: getSelector(img),
+        message: 'Image missing alternative text'
+      });
+    }
+  });
+
+  // Check heading structure
+  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  let lastLevel = 0;
+  headings.forEach(heading => {
+    const currentLevel = parseInt(heading.tagName.charAt(1));
+    if (currentLevel > lastLevel + 1 && lastLevel !== 0) {
+      issues.push({
+        type: 'heading-skip',
+        element: heading.tagName,
+        message: `Heading level skipped: ${lastLevel} to ${currentLevel}`
+      });
+    }
+    lastLevel = currentLevel;
+  });
+
+  // Check form labels
+  const inputs = document.querySelectorAll('input:not([type="hidden"]):not([type="submit"])');
+  inputs.forEach(input => {
+    const id = input.getAttribute('id');
+    const labelled = document.querySelector(`label[for="${id}"]`);
+    const parentLabel = input.closest('label');
+    if (!labelled && !parentLabel) {
+      issues.push({
+        type: 'missing-label',
+        element: 'input',
+        selector: getSelector(input),
+        message: 'Form input missing associated label'
+      });
+    }
+  });
+
+  return issues;
+}
+
+function getSelector(el) {
+  if (el.id) return `#${el.id}`;
+  let selector = el.tagName.toLowerCase();
+  if (el.className) {
+    selector += '.' + el.className.split(' ')[0];
+  }
+  return selector;
+}
+```
+
+### Programmatic Color Contrast Calculation
+
+To check contrast ratios at runtime rather than relying on DevTools, compute relative luminance directly from computed styles:
+
+```javascript
+function getContrastRatio(foreground, background) {
+  const lum1 = getLuminance(foreground);
+  const lum2 = getLuminance(background);
+  const brightest = Math.max(lum1, lum2);
+  const darkest = Math.min(lum1, lum2);
+  return (brightest + 0.05) / (darkest + 0.05);
+}
+
+function getLuminance(hex) {
+  const rgb = hexToRgb(hex);
+  const [r, g, b] = rgb.map(c => {
+    c = c / 255;
+    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+
+function hexToRgb(hex) {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? [
+    parseInt(result[1], 16),
+    parseInt(result[2], 16),
+    parseInt(result[3], 16)
+  ] : [0, 0, 0];
+}
+```
+
+WCAG 2.1 AA requires 4.5:1 for normal text and 3:1 for large text. Call `getContrastRatio` with the foreground and background hex values extracted from `window.getComputedStyle`.
+
+### Programmatic Keyboard Accessibility Checks
+
+Beyond manual testing, you can detect two common keyboard issues in code: positive `tabindex` values (which disrupt natural tab order) and focusable elements with no visible focus ring.
+
+```javascript
+function checkKeyboardAccessibility() {
+  const issues = [];
+
+  // Check for positive tabindex
+  const positiveTabindex = document.querySelectorAll('[tabindex="1"], [tabindex="2"], [tabindex="3"]');
+  positiveTabindex.forEach(() => {
+    issues.push({
+      type: 'positive-tabindex',
+      message: 'Avoid positive tabindex values; use 0 or -1'
+    });
+  });
+
+  // Check for focusable elements without visible focus
+  const focusableSelectors = 'a[href], button, input, select, textarea, [tabindex]';
+  const focusableElements = document.querySelectorAll(focusableSelectors);
+
+  focusableElements.forEach(el => {
+    const style = window.getComputedStyle(el);
+    if (style.outline === 'none' || style.outlineColor === 'transparent') {
+      issues.push({
+        type: 'missing-focus-style',
+        message: 'Focusable element lacks visible focus indicator'
+      });
+    }
+  });
+
+  return issues;
+}
+```
+
+### ARIA Validation
+
+Catch empty or invalid ARIA roles and mismatched `aria-required` usage:
+
+```javascript
+function validateARIA() {
+  const issues = [];
+
+  // Check for invalid ARIA roles
+  const invalidRoles = document.querySelectorAll('[role=""], [role="null"]');
+  invalidRoles.forEach(() => {
+    issues.push({
+      type: 'invalid-aria-role',
+      message: 'Element has empty or invalid ARIA role'
+    });
+  });
+
+  // Check for required ARIA properties
+  const ariaRequired = document.querySelectorAll('[aria-required="true"]');
+  ariaRequired.forEach(el => {
+    if (!el.hasAttribute('required') && el.tagName !== 'INPUT' && el.tagName !== 'SELECT') {
+      issues.push({
+        type: 'aria-required-check',
+        message: 'Element has aria-required but missing native required'
+      });
+    }
+  });
+
+  return issues;
+}
+```
+
+### Displaying Results in the Extension Popup
+
+Wire up a minimal popup to display findings from the content script:
+
+```html
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 350px; padding: 16px; font-family: system-ui, sans-serif; }
+    .issue { padding: 8px; margin: 4px 0; border-radius: 4px; background: #fee; }
+    .issue-type { font-weight: bold; color: #c00; }
+    .issue-message { font-size: 13px; color: #333; }
+    .summary { padding: 12px; background: #eef; border-radius: 4px; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <h2>Accessibility Report</h2>
+  <div id="summary" class="summary"></div>
+  <div id="issues"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
+```
+
+```javascript
+// popup.js
+document.addEventListener('DOMContentLoaded', () => {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, { action: 'analyze' }, (response) => {
+      if (response && response.issues) {
+        displayResults(response.issues);
+      }
+    });
+  });
+});
+
+function displayResults(issues) {
+  const summary = document.getElementById('summary');
+  const container = document.getElementById('issues');
+
+  summary.textContent = `Found ${issues.length} accessibility issue${issues.length !== 1 ? 's' : ''}`;
+
+  issues.forEach(issue => {
+    const div = document.createElement('div');
+    div.className = 'issue';
+    div.innerHTML = `
+      <div class="issue-type">${issue.type}</div>
+      <div class="issue-message">${issue.message}</div>
+    `;
+    container.appendChild(div);
+  });
+}
+```
+
+### Best Practices for Accessibility-Checker Extensions
+
+- **Scan dynamically**: Use `MutationObserver` to catch dynamically added content after initial page load
+- **Provide actionable feedback**: Each reported issue should include clear remediation steps, not just a type label
+- **Support export**: Allow users to export reports as JSON or CSV for sharing with stakeholders
+- **Stay updated**: Revisit your checks as WCAG guidelines evolve (e.g., WCAG 2.2 additions)
+- **Test with screen readers**: Verify your extension's own UI works with NVDA, JAWS, and VoiceOver
+
 ## Continuous Accessibility Testing
 
 Integrate accessibility testing into your development workflow:
