@@ -1,12 +1,12 @@
 ---
 
 layout: default
-title: "Context Menu Search Alternative Chrome Extension: A."
+title: "Context Menu Search Alternative Chrome Extension 2026"
 description: "Build custom context menu search functionality in Chrome extensions. Practical implementation guide with code examples for developers and power users."
 date: 2026-03-15
 categories: [guides]
 tags: [chrome-extension, context-menu, search, developer-tools, web-development, claude-skills]
-author: "Claude Skills Guide"
+author: theluckystrike
 reviewed: true
 score: 8
 permalink: /context-menu-search-alternative-chrome-extension-2026/
