@@ -101,7 +101,6 @@ Beyond interactive use, you can create Claude skills that automate common stash 
 ---
 name: "Context Switch"
 description: "Stash current work and prepare for new task"
-tools: [bash]
 ---
 
 This skill helps you switch contexts by stashing your current work.
