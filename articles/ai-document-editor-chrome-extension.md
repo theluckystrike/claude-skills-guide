@@ -2,8 +2,8 @@
 
 
 layout: default
-title: "AI Document Editor Chrome Extension: A Practical Guide for Developers"
-description: "Learn how AI document editor Chrome extensions can streamline your workflow. Practical examples, code snippets, and integration tips for developers and power users."
+title: "AI Document Editor Chrome Extension: A Practical Guide."
+description: "Learn how AI document editor Chrome extensions can streamline your workflow. Practical examples, code snippets, and integration tips for developers and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-document-editor-chrome-extension/
@@ -191,6 +191,13 @@ For teams, consider extensions offering shared configuration and usage analytics
 The ideal extension integrates smoothly without disrupting your existing workflow while providing enough power to handle diverse text transformation tasks efficiently.
 
 ---
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
