@@ -3,10 +3,12 @@ layout: default
 title: "Claude Code for Heap Profiling Workflow Tutorial Guide"
 description: "Learn how to use Claude Code for heap profiling workflow, with practical examples and actionable advice for developers debugging memory issues."
 date: 2026-03-15
-author: Claude Skills Guide
+author: "Claude Skills Guide"
 permalink: /claude-code-for-heap-profiling-workflow-tutorial-guide/
 categories: [Development, Performance Optimization, Debugging]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 ## Introduction
@@ -211,6 +213,6 @@ To get the most out of your heap profiling workflow with Claude Code, follow the
 
 ## Conclusion
 
-Heap profiling doesn't have to be a daunting task. With Claude Code assisting your workflow, you can efficiently identify memory issues, understand allocation patterns, and implement targeted optimizations. The key is establishing a systematic approach: set up proper profiling infrastructure, capture meaningful snapshots, leverage Claude Code's analysis capabilities, and validate your fixes through repeated profiling.
+Heap profiling doesn't have to be a daunting task. With Claude Code assisting your workflow, you can efficiently identify memory issues, understand allocation patterns, and implement targeted optimizations. The key is establishing a systematic approach: set up proper profiling infrastructure, capture meaningful snapshots, use Claude Code's analysis capabilities, and validate your fixes through repeated profiling.
 
 By integrating Claude Code into your heap profiling workflow, you'll not only solve memory issues faster but also develop a deeper understanding of your application's memory behavior. Start small, profile regularly, and let Claude Code help you build more efficient, memory-conscious applications.
