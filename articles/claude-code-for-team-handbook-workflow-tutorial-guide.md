@@ -7,6 +7,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-team-handbook-workflow-tutorial-guide/
 categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Claude Code for Team Handbook Workflow Tutorial Guide

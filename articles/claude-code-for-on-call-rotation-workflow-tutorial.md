@@ -8,11 +8,13 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-on-call-rotation-workflow-tutorial/
 categories: [workflows, devops]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Claude Code for On-Call Rotation Workflow Tutorial
 
-On-call rotations are a critical part of maintaining reliable software systems, but they often come with stress, sleep interruptions, and manual toil. What if you could automate significant portions of your incident response workflow? This tutorial shows you how to leverage Claude Code to transform your on-call experience from reactive firefighting into a more manageable, automated process.
+On-call rotations are a critical part of maintaining reliable software systems, but they often come with stress, sleep interruptions, and manual toil. What if you could automate significant portions of your incident response workflow? This tutorial shows you how to use Claude Code to transform your on-call experience from reactive firefighting into a more manageable, automated process.
 
 ## Understanding the On-Call Challenge
 
