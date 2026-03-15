@@ -15,6 +15,8 @@ permalink: /claude-skills-for-solidity-smart-contract-development/
 
 [Building smart contracts on Ethereum requires a combination of security-first thinking, rigorous testing, and clean code practices](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code, combined with its skill system, offers powerful tools that can accelerate your Solidity development workflow. This guide explores which Claude skills are most valuable for smart contract development and how to integrate them into your projects.
 
+**Scope note:** This guide is about *using* existing Claude skills — activating `/tdd` for test-driven contract development, `/pdf` for audit-ready documentation, and `/supermemory` for managing multi-contract context. If you want to *build* your own custom Solidity skills (auditing checklists, gas-optimization templates, deployment runbooks), see [Claude Code Skills for Solidity Smart Contracts](/claude-skills-guide/claude-code-skills-for-solidity-smart-contracts/).
+
 ## Understanding Claude Skills for Blockchain Development
 
 Claude skills are Markdown files stored in `~/.claude/skills/` that enhance Claude's capabilities in specific domains. When working with Solidity, these skills help Claude understand smart contract patterns, security considerations, and deployment workflows specific to the Ethereum ecosystem.
@@ -166,6 +168,7 @@ Claude skills significantly enhance Solidity development by providing specialize
 
 ## Related Reading
 
+- [Claude Code Skills for Solidity Smart Contracts](/claude-skills-guide/claude-code-skills-for-solidity-smart-contracts/) — How to *build* custom Solidity skills: auditing checklists, gas-optimization templates, and compiler-version rules.
 - [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/) — Apply security scanning patterns to smart contract vulnerability auditing.
 - [Claude Code Security Code Review Checklist Automation](/claude-skills-guide/claude-code-security-code-review-checklist-automation/) — Automate security code reviews for Solidity smart contracts using the same checklist approach.
 - [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Build comprehensive test suites for smart contract logic using the tdd skill workflow.

@@ -15,6 +15,8 @@ permalink: /claude-code-skills-for-solidity-smart-contracts/
 
 Developing Solidity smart contracts requires a unique set of patterns, security considerations, and tooling workflows. By creating [specialized Claude Code skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) for Solidity development, you can automate contract auditing, enforce best practices, and accelerate your development cycle.
 
+**Scope note:** This guide is about *building* new Claude Code skills tailored to Solidity — writing the skill files themselves, defining auditing checklists, gas-optimization templates, and compiler-version rules that Claude will follow. If you want to learn how to *use* existing skills like `/tdd`, `/pdf`, and `/supermemory` inside a Solidity project, see [Claude Skills for Solidity Smart Contract Development](/claude-skills-guide/claude-skills-for-solidity-smart-contract-development/).
+
 ## Understanding the Solidity Development Workflow
 
 Solidity development differs significantly from traditional software engineering. Your skills must account for the Ethereum Virtual Machine (EVM) constraints, gas optimization requirements, and the immutable nature of deployed contracts. A well-crafted Solidity skill guides Claude through the complete development lifecycle: initial implementation, [testing with the tdd skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/), security auditing, and deployment preparation.
@@ -191,7 +193,7 @@ Keep your skills maintainable by following these principles:
 
 ## Related Reading
 
-- [Claude Skills for Solidity Smart Contract Development](/claude-skills-guide/claude-skills-for-solidity-smart-contract-development/) — Companion guide covering skill authoring patterns for DeFi and contract workflows
+- [Claude Skills for Solidity Smart Contract Development](/claude-skills-guide/claude-skills-for-solidity-smart-contract-development/) — How to *use* existing skills like `/tdd`, `/pdf`, and `/supermemory` in a Solidity project, rather than building new ones
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Apply TDD skill patterns to Solidity test coverage and contract verification
 - [Claude Code Skills for Infrastructure as Code](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — Apply similar domain-specific skill patterns to infrastructure tooling alongside smart contract work
 - [Advanced Claude Code Skills Hub](/claude-skills-guide/advanced-hub/) — Explore specialized skill patterns for complex technical domains

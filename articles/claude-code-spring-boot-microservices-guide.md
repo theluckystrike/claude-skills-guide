@@ -62,12 +62,43 @@ The **supermemory** skill allows you to maintain context across multiple develop
 
 Spring Boot microservices typically communicate through REST APIs or message queues. Claude Code can help you implement both approaches.
 
-For synchronous communication using REST:
+For synchronous communication using REST, you can use Spring's modern RestClient:
+
+```java
+@Service
+public class OrderService {
+
+    private final RestClient restClient;
+
+    public OrderService(RestClient.Builder restClientBuilder) {
+        this.restClient = restClientBuilder
+            .baseUrl("http://inventory-service:8080")
+            .build();
+    }
+
+    public OrderDto createOrder(OrderRequest request) {
+        // Validate inventory availability
+        boolean available = restClient.get()
+            .uri("/api/v1/inventory/{productId}", request.productId())
+            .retrieve()
+            .body(Boolean.class);
+
+        if (!available) {
+            throw new InventoryNotAvailableException("Product unavailable");
+        }
+
+        // Proceed with order creation
+        return orderRepository.save(mapToEntity(request));
+    }
+}
+```
+
+Or using Feign for declarative REST clients:
 
 ```java
 @FeignClient(name = "order-service")
 public interface OrderClient {
-    
+
     @GetMapping("/orders/{userId}")
     List<Order> getOrdersByUserId(@PathVariable("userId") Long userId);
 }
@@ -155,49 +186,148 @@ Claude Code can help you structure your configuration for different environments
 
 ## Testing Your Microservices
 
-Testing is crucial for microservices reliability. Claude Code with the tdd skill guides you through writing comprehensive tests:
+Testing is crucial for microservices reliability. Claude Code with the tdd skill guides you through writing comprehensive tests at multiple layers:
+
+- **Unit Tests**: Test individual components in isolation using JUnit 5 and Mockito
+- **Integration Tests**: Verify database interactions with Testcontainers
+- **Contract Tests**: Ensure API compatibility between services using Spring Cloud Contract
+- **End-to-End Tests**: Validate complete user journeys with RestAssured
 
 ```java
 @SpringBootTest
 @AutoConfigureMockMvc
 class UserControllerTest {
-    
+
     @Autowired
     private MockMvc mockMvc;
-    
+
     @MockBean
     private UserService userService;
-    
+
     @Test
     void getUser_WhenUserExists_ReturnsUser() throws Exception {
         User user = new User(1L, "test@example.com", "Test User");
         when(userService.findById(1L)).thenReturn(Optional.of(user));
-        
+
         mockMvc.perform(get("/api/users/1"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.email").value("test@example.com"));
     }
-    
+
     @Test
     void getUser_WhenUserNotExists_Returns404() throws Exception {
         when(userService.findById(999L)).thenReturn(Optional.empty());
-        
+
         mockMvc.perform(get("/api/users/999"))
             .andExpect(status().isNotFound());
     }
 }
 ```
 
+### Integration Testing with Testcontainers
+
+Testcontainers lets you run real database instances inside Docker containers during tests, eliminating the need for embedded in-memory databases that behave differently from production:
+
+```java
+@SpringBootTest
+@Testcontainers
+class UserRepositoryIntegrationTest {
+
+    @Container
+    static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:15")
+        .withDatabaseName("testdb")
+        .withUsername("test")
+        .withPassword("test");
+
+    @DynamicPropertySource
+    static void configureProperties(DynamicPropertyRegistry registry) {
+        registry.add("spring.datasource.url", postgres::getJdbcUrl);
+        registry.add("spring.datasource.username", postgres::getUsername);
+        registry.add("spring.datasource.password", postgres::getPassword);
+    }
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Test
+    void shouldPersistAndRetrieveUser() {
+        User user = new User(null, "test@example.com", "Test User");
+        User saved = userRepository.save(user);
+
+        Optional<User> found = userRepository.findByEmail("test@example.com");
+        assertThat(found).isPresent();
+        assertThat(found.get().getId()).isEqualTo(saved.getId());
+    }
+}
+```
+
+### Contract Testing with Spring Cloud Contract
+
+Contract tests prevent breaking changes when services evolve. The producer defines a contract and the framework generates stubs that consumers use in their own tests:
+
+```groovy
+// contracts/shouldReturnUser.groovy (producer side)
+Contract.make {
+    description "should return user by id"
+    request {
+        method GET()
+        url "/api/users/1"
+    }
+    response {
+        status OK()
+        headers {
+            contentType(applicationJson())
+        }
+        body([
+            id: 1,
+            email: "test@example.com",
+            name: "Test User"
+        ])
+    }
+}
+```
+
+The consumer then tests against the generated stub:
+
+```java
+@SpringBootTest
+@AutoConfigureStubRunner(
+    ids = "com.example:user-service:+:stubs:8090",
+    stubsMode = StubRunnerProperties.StubsMode.LOCAL
+)
+class OrderServiceContractTest {
+
+    @Autowired
+    private OrderService orderService;
+
+    @Test
+    void shouldFetchUserFromUserService() {
+        UserDto user = orderService.fetchUser(1L);
+        assertThat(user.getEmail()).isEqualTo("test@example.com");
+    }
+}
+```
+
+Claude Code can generate both the contract definitions and the corresponding test scaffolding, ensuring your services stay compatible as they evolve independently.
+
 Integration tests ensure your microservices work correctly when deployed. Claude Code can generate test cases that cover various scenarios including error handling, edge cases, and concurrent requests.
 
 ## Docker Containerization
 
-Packaging your microservice in Docker containers is standard practice:
+Packaging your microservice in Docker containers is standard practice. A multi-stage build keeps your final image lean by separating the build environment from the runtime environment:
 
 ```dockerfile
-FROM eclipse-temurin:17-jdk-alpine
+# Build stage
+FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
-COPY target/user-service-0.0.1-SNAPSHOT.jar app.jar
+COPY pom.xml .
+COPY src ./src
+RUN mvn package -DskipTests
+
+# Runtime stage
+FROM eclipse-temurin:17-jre-alpine
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
@@ -219,7 +349,36 @@ management:
       show-details: always
 ```
 
-For distributed tracing across microservices, integrate with tools like Zipkin or Jaeger. Claude Code can help you configure these integrations and set up appropriate sampling rates.
+For distributed tracing across microservices, integrate with tools like Zipkin or Jaeger. Spring Cloud Sleuth instruments your services automatically, propagating trace IDs across service boundaries. Pair this with Prometheus for metrics collection and Grafana for visualization dashboards. Claude Code can help you configure these integrations and set up appropriate sampling rates.
+
+The **pdf skill** can generate daily health reports that summarize service availability and performance metrics, useful for sharing with operations teams.
+
+## Deployment Considerations
+
+When deploying to Kubernetes or cloud platforms, ensure your microservices are production-ready:
+
+- **Graceful shutdowns**: Configure Spring Boot to drain in-flight requests before shutting down so rolling deployments do not drop traffic
+- **Health check endpoints**: Expose `/actuator/health/liveness` and `/actuator/health/readiness` so Kubernetes knows when a pod is ready to serve requests
+- **Horizontal scaling**: Design services to be stateless so Kubernetes can scale replicas up and down freely
+- **Secret management**: Use environment variables or a secrets manager (Vault, AWS Secrets Manager) rather than embedding credentials in container images
+
+```yaml
+# Kubernetes liveness and readiness probes
+livenessProbe:
+  httpGet:
+    path: /actuator/health/liveness
+    port: 8080
+  initialDelaySeconds: 30
+  periodSeconds: 10
+readinessProbe:
+  httpGet:
+    path: /actuator/health/readiness
+    port: 8080
+  initialDelaySeconds: 20
+  periodSeconds: 5
+```
+
+Claude Code can generate Kubernetes manifests and Helm chart templates tailored to your service's resource requirements and scaling policies.
 
 ## Best Practices for AI-Assisted Microservice Development
 
@@ -242,6 +401,9 @@ The key is providing clear requirements, reviewing generated code, and maintaini
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Code Java Backend Developer Spring Boot Workflow Tips](/claude-skills-guide/claude-code-java-backend-developer-spring-boot-workflow-tips/) — General Spring Boot workflows: dependency management, debugging, JPA entities, and project initialization
+- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Deploy Spring Boot services to Kubernetes and cloud platforms
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep long microservices refactoring sessions economical
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
