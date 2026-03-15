@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for README Generation Workflow Tutorial"
 description: "Learn how to create automated README generation workflows using Claude Code. This tutorial covers skill creation, template customization, and practical automation patterns."
@@ -7,7 +8,10 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-readme-generation-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for README Generation Workflow Tutorial

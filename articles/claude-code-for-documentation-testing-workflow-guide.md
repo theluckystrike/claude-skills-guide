@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Documentation Testing Workflow Guide"
 description: "Learn how to build automated documentation testing workflows using Claude Code. Verify your docs compile, links work, and content stays accurate with practical examples and CI integration."
@@ -7,12 +8,15 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-documentation-testing-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Documentation Testing Workflow Guide
 
-Documentation is a critical part of any software project, yet it's often neglected when it comes to automated testing. Broken links, outdated examples, and syntax errors can erode trust in your documentation. This guide shows you how to leverage Claude Code to create a robust documentation testing workflow that catches issues before your users do.
+Documentation is a critical part of any software project, yet it's often neglected when it comes to automated testing. Broken links, outdated examples, and syntax errors can erode trust in your documentation. This guide shows you how to use Claude Code to create a robust documentation testing workflow that catches issues before your users do.
 
 ## Why Document Testing Matters
 

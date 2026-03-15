@@ -1,4 +1,5 @@
 ---
+
 layout: default
 title: "Claude Code for Runbook Testing Workflow Tutorial"
 description: "Learn how to use Claude Code to automate runbook testing workflows. This tutorial covers setting up test environments, executing validation steps, and integrating with CI/CD pipelines."
@@ -7,12 +8,15 @@ author: Claude Skills Guide
 permalink: /claude-code-for-runbook-testing-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
+
 
 {% raw %}
 # Claude Code for Runbook Testing Workflow Tutorial
 
-Runbook testing is a critical yet often neglected aspect of operational excellence. As infrastructure becomes more complex, the need for reliable, tested runbooks grows. This tutorial shows you how to leverage Claude Code to automate your runbook testing workflow, ensuring your operational procedures work when you need them most.
+Runbook testing is a critical yet often neglected aspect of operational excellence. As infrastructure becomes more complex, the need for reliable, tested runbooks grows. This tutorial shows you how to use Claude Code to automate your runbook testing workflow, ensuring your operational procedures work when you need them most.
 
 ## Why Automate Runbook Testing?
 
@@ -21,7 +25,7 @@ Manual runbook testing is time-consuming and error-prone. Teams often skip testi
 - Execute runbook steps programmatically
 - Validate expected outcomes at each stage
 - Generate detailed test reports
-- Integrate seamlessly with existing CI/CD pipelines
+- Integrate smoothly with existing CI/CD pipelines
 
 The key insight is that Claude Code can interact with your infrastructure just like a human operator, but with perfect consistency and detailed logging.
 
