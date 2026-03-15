@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Proton Pass Chrome Review: A Developer and Power User Perspective"
 description: "A practical review of Proton Pass Chrome extension for developers. Examine security architecture, CLI tools, autofill performance, and integration with development workflows."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /proton-pass-chrome-review/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Proton Pass Chrome Review: A Developer and Power User Perspective
 

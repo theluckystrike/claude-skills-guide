@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "How to Stop Chrome from Tracking Your Location: A Developer Guide"
 description: "A practical technical guide for developers and power users to disable Chrome location tracking, configure geolocation permissions, and understand the underlying APIs."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /stop-chrome-tracking-location/
+reviewed: true
+score: 8
+categories: [best-of]
+tags: [claude-code, claude-skills]
 ---
+
 
 # How to Stop Chrome from Tracking Your Location: A Developer Guide
 

@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "How to Harden Chrome Privacy in 2026: A Developer Guide"
 description: "A practical guide for developers and power users to harden Chrome privacy settings in 2026. Learn about flags, policies, extensions, and configuration options."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /harden-chrome-privacy-2026/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # How to Harden Chrome Privacy in 2026: A Developer Guide
 
