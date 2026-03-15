@@ -315,4 +315,11 @@ Privacy concerns affect user adoption. Clearly communicate what data your extens
 
 Building a robust auto meeting summary extension takes iteration across different platforms. Start with one meeting provider, perfect the transcript capture for that specific platform, then expand to others. The architecture outlined here provides a foundation you can adapt based on your target users' preferred meeting tools.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Time Zone Meeting Planner: A Developer's Guide"
-description: "Discover the best Chrome extensions for time zone meeting planning in 2026. Learn how to coordinate meetings across time zones with code examples and practical implementation patterns."
+title: "Chrome Extension Time Zone Meeting Planner: A."
+description: "Discover the best Chrome extensions for time zone meeting planning in 2026. Learn how to coordinate meetings across time zones with code examples and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-time-zone-meeting-planner/
@@ -185,5 +185,12 @@ Regardless of which extension you choose, follow these practices for smoother co
 Chrome extensions for time zone meeting planning eliminate the friction of coordinating across geographic boundaries. Whether you choose a ready-made solution like World Time Buddy or build a custom implementation, the key is selecting tools that handle daylight saving time correctly, display multiple zones clearly, and integrate with your existing workflow.
 
 The best extension for you depends on your specific needs—team size, meeting frequency, and existing calendar tools. Start with one of the established options, and if your requirements are more specialized, the development patterns covered here provide a foundation for building your own solution.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

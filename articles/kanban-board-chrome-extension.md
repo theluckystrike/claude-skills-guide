@@ -2,7 +2,7 @@
 
 layout: default
 title: "Kanban Board Chrome Extension: A Developer's Guide"
-description: "Discover how Chrome extensions transform your browser into a powerful kanban workspace. Compare approaches, build custom solutions, and integrate with your development workflow."
+description: "Discover how Chrome extensions transform your browser into a powerful kanban workspace. Compare approaches, build custom solutions, and integrate with."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /kanban-board-chrome-extension/
@@ -139,5 +139,12 @@ Test a few extensions before committing. Most are free or offer generous free ti
 Chrome extensions have inherent constraints. Browser-based storage has capacity limits—very large boards may hit performance issues. Extension data isn't accessible outside Chrome, which matters if you frequently use other browsers.
 
 Popup size limits mean complex interfaces can feel cramped. If you need rich formatting, attachments, or extensive metadata, a dedicated application might serve better despite the convenience factor.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
