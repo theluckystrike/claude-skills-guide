@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code CLI to automate and streamline y
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-load-testing-with-locust-workflow-guide/
-categories: [Development, Performance Testing, DevOps]
+categories: [guides, guides, guides]
 tags: [claude-code, claude-skills]
 ---
 
@@ -228,3 +228,4 @@ Start integrating Claude Code into your load testing workflow today, and experie
 - Explore Locust's advanced features like custom metrics and distributed testing
 - Build a library of reusable test scenarios for different use cases
 - Set up automated performance regression testing in your CI/CD pipeline
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

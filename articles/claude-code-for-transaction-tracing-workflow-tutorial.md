@@ -5,7 +5,7 @@ description: "Learn how to implement transaction tracing workflows using Claude 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-transaction-tracing-workflow-tutorial/
-categories: [Tutorial, Development, Workflow]
+categories: [tutorials, guides, guides]
 tags: [claude-code, claude-skills]
 ---
 
@@ -287,3 +287,4 @@ Start with automatic instrumentation, add custom spans for business operations, 
 
 Remember: the best tracing is the one that helps you solve production issues quickly. Start simple, add sophistication as needed, and always keep your team's debugging workflow in mind.
 {% endraw %}
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
