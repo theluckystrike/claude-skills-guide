@@ -209,6 +209,7 @@ The key is consistency—test regularly, document findings, and iterate. Each cy
 
 ## Related Reading
 
+- [Claude Code for NVDA Screen Reader Testing Workflow](/claude-skills-guide/claude-code-for-nvda-screen-reader-testing-workflow/) — Deep dive into Windows-specific NVDA setup, configuration, and test scenarios
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/)
 - [Claude Code Axe Accessibility Testing Guide](/claude-skills-guide/claude-code-axe-accessibility-testing-guide/)
 - [Claude Code Color Contrast Checking Workflow](/claude-skills-guide/claude-code-color-contrast-checking-workflow/)
