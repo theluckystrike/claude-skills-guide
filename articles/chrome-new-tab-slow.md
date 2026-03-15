@@ -4,7 +4,7 @@ layout: default
 title: "Chrome New Tab Slow: A Developer's Troubleshooting Guide"
 description: "Diagnose and fix slow Chrome new tab performance with developer-focused techniques. Learn to use Chrome DevTools, profile startup behavior, and."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-new-tab-slow/
 reviewed: true
 score: 8
@@ -60,7 +60,7 @@ console.time('New Tab Load');
 
 The Performance panel records detailed timelines. Look for:
 
-- **Long Tasks**: Tasks blocking the main thread for超过50ms
+- **Long Tasks**: Tasks blocking the main thread for over 50ms
 - **Script Evaluation**: Time spent executing JavaScript
 - **Style Recalculation**: Expensive CSS changes
 
