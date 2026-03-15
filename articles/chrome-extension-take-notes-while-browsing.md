@@ -1,12 +1,18 @@
 ---
 
+
 layout: default
 title: "Chrome Extension Take Notes While Browsing: A Developer Guide"
 description: "Learn how to build and use Chrome extensions for taking notes while browsing. Practical examples, code snippets, and techniques for developers and power users."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-take-notes-while-browsing/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension Take Notes While Browsing: A Developer Guide
 

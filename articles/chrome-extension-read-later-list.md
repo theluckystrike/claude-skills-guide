@@ -1,11 +1,17 @@
 ---
+
 layout: default
 title: "Chrome Extension Read Later List: Building Your Own with Modern APIs"
 description: "Learn how to build a Chrome extension for managing a read later list. Covers storage APIs, manifest V3, and practical implementation patterns for developers."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chrome-extension-read-later-list/
+reviewed: true
+score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
+
 
 # Chrome Extension Read Later List: Building Your Own with Modern APIs
 
