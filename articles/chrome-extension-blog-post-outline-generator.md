@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Blog Post Outline Generator: Build Your Own Writing Assistant"
-description: "Create a Chrome extension that generates blog post outlines automatically. This guide covers architecture, implementation, and practical code examples for developers."
+title: "Chrome Extension Blog Post Outline Generator: Build Your."
+description: "Create a Chrome extension that generates blog post outlines automatically. This guide covers architecture, implementation, and practical code examples."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-blog-post-outline-generator/
@@ -151,5 +151,12 @@ Monitor user feedback after publication and iterate based on usage patterns and 
 Building a Chrome extension for generating blog post outlines combines practical development skills with genuine utility for content creators. The straightforward architecture means you can prototype a working version in a single afternoon, then refine it based on real user feedback. Whether you build it for personal use or plan to share it with a wider audience, this project demonstrates how browser extensions can solve real productivity challenges.
 
 Start with the core functionality outlined here, then expand based on what your users actually need. The best extensions evolve through iteration and genuine understanding of their users' workflows.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

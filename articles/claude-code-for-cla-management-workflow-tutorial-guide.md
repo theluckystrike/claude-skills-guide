@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for CLA Management Workflow Tutorial Guide"
-description: "Learn how to automate Contributor License Agreement (CLA) management using Claude Code. This guide covers practical workflows, code examples, and actionable advice for streamlining your open source contribution process."
+description: "Learn how to automate Contributor License Agreement (CLA) management using Claude Code. This guide covers practical workflows, code examples, and."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-cla-management-workflow-tutorial-guide/
@@ -186,3 +186,10 @@ When implementing CLA management with Claude Code, follow these best practices:
 Automating CLA management with Claude Code transforms a tedious administrative task into a streamlined, hands-off process. By setting up automated verification, maintaining a contributor database, and integrating with your pull request workflow, you can ensure CLA compliance without sacrificing development velocity. The initial setup investment pays dividends as your contributor community grows, freeing maintainers to focus on what matters most—building great software together.
 
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

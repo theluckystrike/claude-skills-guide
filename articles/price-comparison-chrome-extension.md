@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Building a Price Comparison Chrome Extension: A Developer's Guide"
-description: "Learn how to build a price comparison Chrome extension from scratch. Covers manifest V3, content scripts, messaging APIs, and real-world implementation patterns for developers."
+title: "Building a Price Comparison Chrome Extension: A."
+description: "Learn how to build a price comparison Chrome extension from scratch. Covers manifest V3, content scripts, messaging APIs, and real-world implementation."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /price-comparison-chrome-extension/
@@ -291,5 +291,12 @@ When building production-ready price comparison extensions:
 - **Storage management**: Chrome storage has quotas—implement cleanup of old price history entries
 
 Building a price comparison extension combines DOM manipulation, Chrome APIs, and data management into a practical project that demonstrates real-world extension development patterns.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

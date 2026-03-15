@@ -3,7 +3,7 @@
 
 layout: default
 title: "Chrome Extension Window Resizer Testing: A Practical Guide"
-description: "Master chrome extension window resizer testing with practical code examples. Learn methods for testing window sizing APIs, handling resize events, and debugging viewport-related issues."
+description: "Master chrome extension window resizer testing with practical code examples. Learn methods for testing window sizing APIs, handling resize events, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-window-resizer-testing/
@@ -217,6 +217,13 @@ Finally, maintain test coverage for all resize-related code paths. As your exten
 Chrome extension window resizer testing requires understanding the distinct contexts where resizing occurs—popups, side panels, content scripts, and programmatic window manipulation. By implementing proper test coverage with the patterns demonstrated in this guide, you can build extensions that deliver consistent behavior across all window sizes and states.
 
 The key is combining automated unit tests that verify logic with manual testing that confirms real-world usability. This dual approach ensures your extension handles the diverse ways users interact with window dimensions in their daily browsing.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

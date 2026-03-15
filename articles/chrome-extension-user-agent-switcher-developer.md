@@ -268,5 +268,12 @@ Test your extension against multiple websites to verify compatibility. Some site
 
 Building a user agent switcher in Chrome extensions requires understanding the Declarative Net Request API and its limitations. Choose the method that matches your use case: declarative rules for simple global switching, runtime messaging for dynamic control, or content script injection for per-tab customization. The Manifest V3 approach provides the most reliable results for HTTP header modification.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

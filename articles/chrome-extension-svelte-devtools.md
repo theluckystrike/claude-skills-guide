@@ -211,4 +211,11 @@ Test your extension across Chrome, Edge, and Brave (which uses Chromium). Manife
 
 Svelte provides an excellent foundation for building efficient Chrome extensions. The framework's small output size, reactive updates, and straightforward component model translate well to extension development patterns. Use Chrome DevTools appropriately for each extension context—popup, options page, background worker, and content scripts—to debug effectively. Focus on minimal permissions, lazy loading, and cross-browser testing to deliver a polished extension experience.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

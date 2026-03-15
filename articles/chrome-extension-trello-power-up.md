@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building a Chrome Extension Trello Power-Up: A Developer's Guide"
+title: "Building a Chrome Extension Trello Power-Up: A."
 description: "Learn how to build a Chrome extension that integrates with Trello Power-Ups. Practical code examples and architecture for developers and power users."
 date: 2026-03-15
 author: "Claude Skills Guide"
@@ -265,5 +265,12 @@ Always handle the case where users haven't authorized Trello. Provide clear UI p
 Building a Chrome extension that functions as a Trello Power-Up combines the best of both worlds: browser extension capabilities with Trello's embedded Power-Up SDK. The architecture described here gives you the foundation to create sophisticated integrations that can read, modify, and enhance Trello cards directly from the browser.
 
 Start with the basic structure, add Trello SDK initialization, then layer on your specific functionality. The Trello developer documentation provides additional capability references, and their Power-Up framework handles the complexity of iframe communication and authentication.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

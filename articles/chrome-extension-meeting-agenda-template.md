@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Meeting Agenda Template: A Developer's Guide"
-description: "Learn how to create and use meeting agenda templates specifically designed for Chrome extension development teams. Includes practical examples and code snippets."
+title: "Chrome Extension Meeting Agenda Template: A Developer's."
+description: "Learn how to create and use meeting agenda templates specifically designed for Chrome extension development teams. Includes practical examples and code."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-meeting-agenda-template/
@@ -190,5 +190,12 @@ Track which agenda items consistently get cut due to time constraints. This indi
 Effective Chrome extension development requires meetings that address the unique aspects of browser extension projects. A well-designed meeting agenda template ensures consistent coverage of manifest versioning, Chrome API usage, permission management, and Web Store compliance.
 
 Start with the templates provided, adapt them to your team's workflow, and refine them over time. The goal is meetings that respect everyone's time while ensuring critical extension-specific topics receive proper attention.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

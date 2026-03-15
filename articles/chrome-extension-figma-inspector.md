@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Figma Inspector: A Developer Guide"
-description: "Learn how to use Chrome extensions for Figma inspection, enabling developers to extract design tokens, inspect CSS, and bridge the gap between design and development workflows."
+description: "Learn how to use Chrome extensions for Figma inspection, enabling developers to extract design tokens, inspect CSS, and bridge the gap between design."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-figma-inspector/
@@ -153,5 +153,12 @@ The learning curve is minimal. Most developers become productive within minutes.
 Chrome extensions for Figma inspection transform how developers work with design files. They eliminate manual measurement, ensure consistency with design systems, and accelerate the design-to-code handoff. By extracting CSS, tokens, typography, and spacing information, these tools reduce errors and free developers to focus on building features rather than guessing at pixel values.
 
 Start with one extension that fits your workflow, use it on your next project, and expand from there. The time saved compounds across sprints.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

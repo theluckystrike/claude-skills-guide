@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Miro Whiteboard: Integration Guide for Developers"
-description: "Learn how to build Chrome extensions that integrate with Miro whiteboards. Practical code examples, API patterns, and techniques for developers and power users."
+title: "Chrome Extension Miro Whiteboard: Integration Guide for."
+description: "Learn how to build Chrome extensions that integrate with Miro whiteboards. Practical code examples, API patterns, and techniques for developers and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-miro-whiteboard/
@@ -267,6 +267,13 @@ async function processQueue(delay) {
 Building Chrome extensions for Miro whiteboard integration requires understanding OAuth authentication, REST API patterns, and Chrome extension architecture. The examples in this guide provide foundational patterns you can adapt for specific use cases, from simple board automation to complex enterprise integrations.
 
 Start with minimal permissions, test thoroughly with different board configurations, and consider implementing caching for frequently accessed data to reduce API calls. The Miro platform continues to expand its API capabilities, so staying current with their developer documentation ensures you can use new features as they become available.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

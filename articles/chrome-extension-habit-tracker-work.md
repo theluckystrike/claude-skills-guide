@@ -3,7 +3,7 @@
 
 layout: default
 title: "Chrome Extension Habit Tracker for Work: A Developer Guide"
-description: "Build a Chrome extension habit tracker tailored for work productivity. Practical code examples, storage patterns, and implementation strategies for developers."
+description: "Build a Chrome extension habit tracker tailored for work productivity. Practical code examples, storage patterns, and implementation strategies for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-habit-tracker-work/
@@ -284,6 +284,13 @@ Consider offline behavior. Chrome extensions work offline by default, but sync s
 Once the core habit tracking works, consider adding features like weekly reports exported as markdown, integration with calendar APIs for meeting-linked habits, or simple gamification with achievement badges stored in sync storage.
 
 The foundation built here—manifest configuration, storage patterns, popup UI, and notifications—provides a template for any productivity-focused Chrome extension. Adapt the data model and interfaces to match specific work flows and team needs.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -321,5 +321,12 @@ Finally, test extensively across different Amazon page layouts. Amazon frequentl
 
 A custom Amazon price tracker Chrome extension puts you in control of your shopping data. By implementing the core components outlined here, you can build a tool that precisely matches your price monitoring needs.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

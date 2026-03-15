@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Knowledge Wiki Team: A Complete Guide for Developers"
-description: "Learn how to build and manage a comprehensive knowledge wiki for chrome extension development teams. Covers documentation strategies, tooling, and collaboration workflows."
+title: "Chrome Extension Knowledge Wiki Team: A Complete Guide."
+description: "Learn how to build and manage a comprehensive knowledge wiki for chrome extension development teams. Covers documentation strategies, tooling, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-knowledge-wiki-team/
@@ -199,5 +199,12 @@ Consider metrics for wiki effectiveness: Are new team members reaching out less 
 ---
 
 A well-maintained knowledge wiki transforms how your chrome extension team operates. New developers become productive faster, experienced developers avoid repetitive research, and your team builds institutional knowledge that survives personnel changes. Start with the basics—document your current practices—and expand from there as your team identifies gaps.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

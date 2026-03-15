@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Focus Timer for Productivity: A Developer's Guide"
-description: "Build and use Chrome extensions for focus timers to maximize productivity. Practical examples, code patterns, and implementation strategies for developers and power users."
+title: "Chrome Extension Focus Timer for Productivity: A."
+description: "Build and use Chrome extensions for focus timers to maximize productivity. Practical examples, code patterns, and implementation strategies for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-focus-timer-productivity/
@@ -229,6 +229,13 @@ Even the best extension requires good habits to be effective. Consider these app
 ## Conclusion
 
 Chrome extension focus timers offer developers and power users a powerful way to structure their work and maintain productivity. Whether you build your own extension using the patterns above or customize an existing one, the key is consistency. The best timer is one you'll actually use, so start simple and add features as needed.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

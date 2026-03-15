@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Automated Release Notes Workflow"
-description: "Learn how to build an automated release notes workflow using Claude Code. Extract changes from git, generate changelogs with AI, and streamline your release process."
+description: "Learn how to build an automated release notes workflow using Claude Code. Extract changes from git, generate changelogs with AI, and streamline your."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-automated-release-notes-workflow/
@@ -160,3 +160,10 @@ Start small: create a basic skill that extracts commits and formats them. Then p
 
 The goal isn't to eliminate human oversight entirely, but to eliminate the mechanical drudgery so your team can focus on what matters: shipping great software.
 {% endraw %}
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+

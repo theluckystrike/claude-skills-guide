@@ -242,5 +242,12 @@ Check the background service worker console for errors—content script errors a
 
 A deal finder Chrome extension combines DOM manipulation, storage management, and user notification systems into a cohesive product. Start with basic price extraction and tracking, then add sophistication as you understand your users' needs. The architecture described here scales from simple discount detection to comprehensive price intelligence tools.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
