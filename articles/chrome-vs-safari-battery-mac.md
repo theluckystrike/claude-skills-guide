@@ -5,6 +5,10 @@ description: "Compare Chrome and Safari battery performance on Mac. Practical be
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-vs-safari-battery-mac/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

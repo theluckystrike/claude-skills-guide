@@ -6,6 +6,10 @@ description: "Experiencing slow Chrome downloads? This guide covers debugging te
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-downloads-slow/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Downloads Slow: Practical Fixes for Developers and Power Users

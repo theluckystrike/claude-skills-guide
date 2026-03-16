@@ -6,6 +6,10 @@ description: "Learn how Chrome's Memory Saver mode works, how to enable it progr
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-memory-saver-mode/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Memory Saver Mode: A Developer's Guide to Reducing Browser Memory Usage

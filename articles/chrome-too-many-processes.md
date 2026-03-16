@@ -6,6 +6,10 @@ description: "Learn why Chrome creates so many processes and how to identify, di
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-too-many-processes/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Too Many Processes: A Developer's Guide to Managing Browser Resource Usage

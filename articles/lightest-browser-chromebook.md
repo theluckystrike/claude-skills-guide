@@ -6,6 +6,10 @@ description: "Find the lightest browser for Chromebook optimized for developers 
 date: 2026-03-15
 author: theluckystrike
 permalink: /lightest-browser-chromebook/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Lightest Browser for Chromebook: A Developer Guide

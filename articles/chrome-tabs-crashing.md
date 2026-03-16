@@ -5,6 +5,10 @@ description: "Learn why Chrome tabs crash and how to diagnose the root cause. Pr
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-tabs-crashing/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Tabs Crashing: A Developer's Guide to Diagnosis and Prevention

@@ -5,6 +5,10 @@ description: "Comprehensive browser speed benchmarks for 2026. Compare Chrome, F
 date: 2026-03-15
 author: theluckystrike
 permalink: /browser-speed-benchmark-2026/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

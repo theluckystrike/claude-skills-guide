@@ -5,6 +5,10 @@ description: "Learn why Chrome Network Service consumes CPU resources and how to
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-network-service-cpu/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Network Service CPU: Causes, Solutions, and Optimization Tips

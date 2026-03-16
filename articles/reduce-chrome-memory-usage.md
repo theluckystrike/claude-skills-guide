@@ -6,6 +6,10 @@ description: "Learn practical techniques to reduce Chrome memory usage. Includes
 date: 2026-03-15
 author: theluckystrike
 permalink: /reduce-chrome-memory-usage/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # How to Reduce Chrome Memory Usage: A Developer's Guide

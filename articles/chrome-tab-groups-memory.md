@@ -6,6 +6,10 @@ description: "Learn how Chrome tab groups affect browser memory usage, optimizat
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-tab-groups-memory/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Tab Groups Memory: A Developer and Power User Guide
