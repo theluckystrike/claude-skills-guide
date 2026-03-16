@@ -1,22 +1,14 @@
 ---
 layout: default
-raw %}
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
-date: 2026-03-15
-categories: [guides]
-tags: [claude-code, claude-skills]
-permalink: /ai-inbox-organizer-chrome-extension/
----
-
-
-layout: default
 title: "AI Inbox Organizer Chrome Extension: A Developer's Guide to Intelligent Email Management"
 description: "Learn how AI inbox organizer Chrome extensions work under the hood. Practical implementation guide for developers building email automation tools."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /ai-inbox-organizer-chrome-extension/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 {% raw %}
 # AI Inbox Organizer Chrome Extension: A Developer's Guide to Intelligent Email Management

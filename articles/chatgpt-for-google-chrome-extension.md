@@ -1,21 +1,14 @@
 ---
 layout: default
-raw %}
-author: "Claude Skills Guide"
-reviewed: true
-score: 8
-date: 2026-03-15
-categories: [guides]
-tags: [claude-code, claude-skills]
-permalink: /chatgpt-for-google-chrome-extension/
----
-
-layout: default
 title: "ChatGPT for Google Chrome Extension: A Developer Guide"
 description: "Learn how to integrate ChatGPT into Chrome extensions, build AI-powered features, and create custom implementations for enhanced productivity."
 date: 2026-03-15
-author: theluckystrike
+author: "Claude Skills Guide"
 permalink: /chatgpt-for-google-chrome-extension/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 {% raw %}
 # ChatGPT for Google Chrome Extension: A Developer Guide
