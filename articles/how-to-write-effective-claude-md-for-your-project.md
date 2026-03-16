@@ -170,7 +170,7 @@ Avoid conflicting instructions. If your CLAUDE.md says "always write tests first
 
 Update your CLAUDE.md when your project evolves. New team members, changing frameworks, or shifted priorities should all trigger a review of your instructions. Treat it as living documentation that grows with your project.
 
-A good practice is to review your CLAUDE.md during sprint retrospectives or when onboarding new developers. Their fresh perspective often reveals unclear or missing instructions. If Claude ever starts ignoring your file, the [troubleshooting guide for Claude ignoring CLAUDE.md instructions](/claude-skills-guide/claude-code-ignores-claude-md-instructions-fix/) walks through the most common causes.
+A good practice is to review your CLAUDE.md during sprint retrospectives or when onboarding new developers. Their fresh perspective often reveals unclear or missing instructions. If Claude ever starts ignoring your file, the [troubleshooting guide for Claude ignoring CLAUDE.md instructions](/claude-skills-guide/how-to-fix-claude-code-ignoring-my-claude-md-file/) walks through the most common causes.
 
 ## Conclusion
 

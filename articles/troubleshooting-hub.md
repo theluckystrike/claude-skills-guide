@@ -173,7 +173,7 @@ These issues are usually caused by insufficient context in the skill body or CLA
 - [Claude Code Creates Files in Wrong Directory Fix](/claude-skills-guide/claude-code-creates-files-in-wrong-directory-fix/) — Specifying output directories explicitly to prevent misplaced files
 - [Claude Code Generates Insecure Code Patterns Fix](/claude-skills-guide/claude-code-generates-insecure-code-patterns-fix/) — Preventing Claude from generating insecure code patterns
 - [Claude Code Gives Incorrect Imports: How to Fix](/claude-skills-guide/claude-code-gives-incorrect-imports-how-to-fix/) — Correcting wrong import statements in Claude Code output
-- [Claude Code Ignores CLAUDE.md Instructions Fix](/claude-skills-guide/claude-code-ignores-claude-md-instructions-fix/) — Why Claude Code sometimes ignores CLAUDE.md and how to fix it
+- [Claude Code Ignores CLAUDE.md Instructions Fix](/claude-skills-guide/how-to-fix-claude-code-ignoring-my-claude-md-file/) — Why Claude Code sometimes ignores CLAUDE.md and how to fix it
 - [Claude Code Skips Error Handling in Generated Code](/claude-skills-guide/claude-code-skips-error-handling-in-generated-code/) — Enforcing error handling in every Claude Code output
 - [Claude Code Writes Code in Wrong Programming Language](/claude-skills-guide/claude-code-writes-code-in-wrong-programming-language/) — Preventing language confusion in multi-language projects
 - [How to Make Claude Code Make Smaller Focused Changes](/claude-skills-guide/how-to-make-claude-code-make-smaller-focused-changes/) — Constraining Claude Code to produce scoped, reviewable diffs
@@ -230,7 +230,7 @@ These issues are usually caused by insufficient context in the skill body or CLA
 | [Claude Code Error: Out of Memory for Large Codebase Fix](/claude-skills-guide/claude-code-error-out-of-memory-large-codebase-fix/) | Fixing OOM errors when working with very large codebases |
 | [Claude Code Generates Insecure Code Patterns Fix](/claude-skills-guide/claude-code-generates-insecure-code-patterns-fix/) | Preventing Claude from generating insecure code patterns |
 | [Claude Code Gives Incorrect Imports: How to Fix](/claude-skills-guide/claude-code-gives-incorrect-imports-how-to-fix/) | Correcting wrong import statements in generated code |
-| [Claude Code Ignores CLAUDE.md Instructions Fix](/claude-skills-guide/claude-code-ignores-claude-md-instructions-fix/) | Why Claude Code sometimes skips CLAUDE.md and how to fix it |
+| [Claude Code Ignores CLAUDE.md Instructions Fix](/claude-skills-guide/how-to-fix-claude-code-ignoring-my-claude-md-file/) | Why Claude Code sometimes skips CLAUDE.md and how to fix it |
 | [Segfault and Core Dump Analysis with Claude Code Guide](/claude-skills-guide/claude-code-segfault-core-dump-analysis-workflow-guide/) | Diagnosing native crashes and memory corruption with Claude |
 | [Claude Code Skill Conflicts with MCP Server Resolution Guide](/claude-skills-guide/claude-code-skill-conflicts-with-mcp-server-resolution-guide/) | Resolving conflicts between skill definitions and MCP server tools |
 | [Claude Code Skips Error Handling in Generated Code](/claude-skills-guide/claude-code-skips-error-handling-in-generated-code/) | Enforcing error handling in every Claude Code output |

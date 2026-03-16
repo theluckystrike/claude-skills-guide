@@ -133,7 +133,7 @@ German compliance audits often require detailed documentation. Structure your Cl
 - **Log AI assistance**: Maintain records of which files Claude Code modified
 - **Review AI-generated code**: Establish manual review processes for compliance-critical sections
 
-[Create a `CLAUDE.md` file in each project](/claude-skills-guide/claude-code-ignores-claude-md-instructions-fix/) explaining how AI assistance was used:
+[Create a `CLAUDE.md` file in each project](/claude-skills-guide/how-to-fix-claude-code-ignoring-my-claude-md-file/) explaining how AI assistance was used:
 
 ```markdown
 # AI Assistance Documentation
