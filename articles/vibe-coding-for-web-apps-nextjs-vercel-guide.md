@@ -148,6 +148,51 @@ Test that:
 
 The **tdd** skill helps Claude write tests that match your expectations. Run tests with `npm test` before deploying.
 
+## Adding Subscription Payments
+
+For SaaS apps, Stripe integration provides recurring revenue. Model your plans and create checkout sessions:
+
+```typescript
+// lib/stripe.ts
+export const PLANS = {
+  free: {
+    name: 'Free',
+    price: 0,
+    features: ['3 projects', '5 team members', '1GB storage'],
+  },
+  pro: {
+    name: 'Pro',
+    price: 1000, // cents
+    features: ['Unlimited projects', '25 team members', '50GB storage'],
+  },
+};
+
+export async function createCheckoutSession(userId: string, plan: string) {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+
+  const session = await stripe.checkout.sessions.create({
+    customer_email: await getUserEmail(userId),
+    line_items: [{
+      price_data: {
+        currency: 'usd',
+        product_data: { name: PLANS[plan].name },
+        unit_amount: PLANS[plan].price,
+        recurring: { interval: 'month' },
+      },
+      quantity: 1,
+    }],
+    mode: 'subscription',
+    success_url: `${process.env.NEXTAUTH_URL}/dashboard?success=true`,
+    cancel_url: `${process.env.NEXTAUTH_URL}/pricing`,
+    metadata: { userId },
+  });
+
+  return session.url;
+}
+```
+
+Test payment flows with the **tdd** skill — cover successful payments, failed payments, plan upgrades, and cancellations before deploying.
+
 ## Maintaining and Iterating on Your App
 
 Vibe coding truly shines during iteration. When you need to add features or make changes, simply describe them to Claude. The workflow stays consistent:
