@@ -1,215 +1,222 @@
 ---
-
 layout: default
 title: "Claude Code for Changelog Review Workflow Tutorial"
-description: "Learn how to create a Claude skill for automated changelog review. This tutorial covers building a custom skill that validates, analyzes, and improves."
+description: "Learn how to build a Claude Code skill for automating changelog review workflows. This tutorial covers creating a skill that parses, validates, and reviews CHANGELOG entries with practical examples."
 date: 2026-03-15
-categories: [tutorials, workflows]
-tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-changelog-review-workflow-tutorial/
-reviewed: true
-score: 8
+categories: [guides]
+tags: [claude-code, claude-skills]
 ---
 
-
+{% raw %}
 # Claude Code for Changelog Review Workflow Tutorial
 
-Keeping a well-maintained changelog is one of those development practices that's universally acknowledged as valuable but rarely enjoyed. Between version bumps, breaking changes, and the endless stream of feature additions and bug fixes, reviewing changelog entries can become a tedious task. This is where Claude Code shines—automating repetitive review tasks so you can focus on what matters: shipping great software.
+Changelog management is a critical yet often overlooked part of software development. Keeping CHANGELOG files accurate, consistent, and informative requires systematic review. In this tutorial, you'll learn how to create a Claude Code skill that automates your changelog review workflow—parsing entries, validating formats, checking for consistency issues, and providing actionable feedback.
 
-In this tutorial, you'll learn how to create a Claude skill specifically designed for changelog review. We'll build a skill that validates format consistency, flags potential issues, suggests improvements, and ensures your changelog meets community standards.
+## Why Automate Changelog Reviews?
 
-## Understanding the Changelog Review Challenge
+Manual changelog reviews are error-prone and time-consuming. Developers often forget to update versions, use inconsistent formatting, or miss required sections. A Claude Code skill can catch these issues automatically, ensuring your changelog maintains professional quality without requiring tedious manual checks.
 
-Before diving into the skill creation, let's identify what makes changelog review challenging:
+The skill we'll build today can:
+- Parse changelog entries and extract version information
+- Validate entry formatting against your team's conventions
+- Check for missing or duplicate entries
+- Suggest improvements for clarity and completeness
 
-1. **Inconsistent formatting** across different contributors
-2. **Missing sections** (breaking changes, deprecations)
-3. **Vague descriptions** that lack actionable information
-4. **Version number mismanagement**
-5. **Spelling and grammar errors**
+## Setting Up Your Changelog Review Skill
 
-A well-designed Claude skill can handle all of these issues, providing consistent feedback that's both thorough and educational for contributors.
-
-## Creating the Changelog Review Skill
-
-The foundation of any Claude skill is the skill file itself. Here's how to structure your changelog review skill:
+Create a new skill file at `~/.claude/skills/claude-code-skill-changelog-review/skill.md`. This skill will analyze CHANGELOG files and provide structured feedback.
 
 ```markdown
 ---
-name: "Review Changelog"
-description: "Analyze and validate changelog entries for consistency, completeness, and clarity"
+name: "Changelog Reviewer"
+description: "Review and validate CHANGELOG entries for consistency and completeness"
+version: 1.0.0
+tools: [read_file, write_file, bash]
 ---
 
 # Changelog Review Skill
 
-You are an expert at reviewing changelog entries. Your role is to ensure each entry meets these standards:
+You are an expert at reviewing CHANGELOG files. Analyze the CHANGELOG and provide structured feedback on:
+1. Version consistency and ordering
+2. Entry formatting and style
+3. Missing information or sections
+4. Suggestions for improvement
+```
 
-## Review Criteria
+This basic skill structure gives you a foundation to build upon. Let's enhance it with specific validation rules.
 
-1. **Version Format**: Follows semantic versioning (MAJOR.MINOR.PATCH)
-2. **Section Completeness**: Contains appropriate sections (Added, Changed, Fixed, Removed, Deprecated)
-3. **Description Quality**: Entries are specific and actionable
-4. **Breaking Changes**: Clearly marked with "BREAKING" prefix
-5. **Consistency**: Uses consistent tense and formatting throughout
+## Parsing and Validating Changelog Entries
+
+The core of an effective changelog review skill is robust parsing. Let's add patterns to extract and validate version entries:
+
+```python
+import re
+from datetime import datetime
+
+def parse_changelog(content):
+    """Parse changelog and extract version entries."""
+    entries = []
+    
+    # Match version headers like "## 1.2.3 - 2024-01-15"
+    version_pattern = r'^##\s+(\d+\.\d+\.\d+)(?:\s*-\s*(\d{4}-\d{2}-\d{2}))?'
+    
+    for line in content.split('\n'):
+        match = re.match(version_pattern, line)
+        if match:
+            version = match.group(1)
+            date = match.group(2)
+            entries.append({
+                'version': version,
+                'date': date,
+                'type': 'release'
+            })
+    
+    return entries
+```
+
+This parser extracts version numbers and dates from standard changelog formats. Integrate this logic into your skill by creating a helper script that the skill calls via `bash`.
+
+## Building the Complete Skill
+
+Here's a more complete skill that combines parsing, validation, and feedback generation:
+
+```markdown
+---
+name: "Changelog Reviewer"
+description: "Review CHANGELOG.md files for consistency, formatting, and completeness"
+version: 1.0.0
+tools: [read_file, bash]
+---
+
+# Changelog Review Skill
+
+You are a changelog review expert. When asked to review a CHANGELOG, follow this workflow:
 
 ## Review Process
 
-For each changelog entry:
-1. Verify version number format is correct
-2. Check all required sections are present
-3. Analyze each entry for clarity and specificity
-4. Flag any potential issues with explanations
-5. Suggest concrete improvements
+1. **Read the CHANGELOG** using the read_file tool
+2. **Parse entries** - identify version numbers, dates, and sections
+3. **Validate format** - check against these rules:
+   - Versions should be in descending order (newest first)
+   - Each release should have a date
+   - Sections should use standard categories: Added, Changed, Deprecated, Removed, Fixed, Security
+   - Entries should start with verbs (Added, Fixed, Updated)
+4. **Generate report** - provide structured feedback with specific line numbers
 
-Always provide a summary report with:
-- Total entries reviewed
-- Issues found (if any)
-- Suggested improvements
-- Overall quality score (1-10)
+## Common Issues to Flag
+
+- Missing dates for recent releases
+- Inconsistent capitalization in section headers
+- Entries without action verbs
+- Version numbers not in descending order
+- Empty sections or placeholder text
+- "TODO" or "TBD" entries not yet completed
 ```
 
-This skill provides the foundation, but to make it truly useful, we need to add interactive capabilities.
+## Practical Example: Reviewing a Sample Changelog
 
-## Adding Interactive Review Capabilities
-
-The real power of Claude Code comes from its ability to interact with your codebase. Let's enhance the skill to handle real changelog files:
+Consider this sample CHANGELOG.md:
 
 ```markdown
-## Interactive Review Mode
+# Changelog
 
-When the user provides a changelog file path or asks to review a specific version:
-
-1. Read the changelog file using the read_file tool
-2. Parse the content to identify individual entries
-3. Apply the review criteria to each entry
-4. Generate a detailed report with:
-   - Line-by-line analysis for problematic entries
-   - Specific suggestions for improvement
-   - Examples of better phrasing where applicable
-5. Offer to apply fixes automatically if requested
-
-### Common Issues to Flag
-
-- Entries without version numbers
-- Missing blank lines between sections
-- Inconsistent use of past vs present tense
-- Entries that just repeat the ticket number without description
-- "Various bug fixes" or "Minor improvements" without specifics
-```
-
-This interactive approach transforms the skill from a passive reference into an active assistant that can actually improve your changelog.
-
-## Practical Example: Reviewing a Real Changelog
-
-Let's walk through how this skill operates in practice. Imagine you have a changelog entry like this:
-
-```markdown
-## [2.1.0] - 2026-03-15
+## [2.1.0] - 2024-02-15
 
 ### Added
-- New feature
+- User authentication via OAuth2
+- API rate limiting
 
 ### Fixed
-- Bug fixes
+- memory leak in connection pool
+- security vulnerability in password reset
+
+## [2.0.1] - 2024-01-10
+
+### Changed
+- Updated dependencies
 ```
 
-When you invoke the skill with this changelog, Claude will respond with:
+When this skill reviews this file, it should identify these issues:
 
+- **Line 8**: "memory leak" should be capitalized ("Memory leak")
+- **Line 9**: "security vulnerability" - should reference CVE or severity
+- **Line 15**: "Updated dependencies" should list what was updated
+- Missing sections: No "Deprecated" or "Removed" sections (may be intentional but worth noting)
+
+The skill provides specific, actionable feedback that developers can immediately act upon.
+
+## Advanced: Adding Auto-Fix Capabilities
+
+For a more powerful workflow, extend your skill to auto-fix common issues. Add a `write_file` tool and create a fix function:
+
+```python
+def auto_fix_changelog(content):
+    """Automatically fix common changelog issues."""
+    fixes_applied = []
+    
+    # Fix capitalization in section headers
+    sections = ['added', 'changed', 'deprecated', 'removed', 'fixed', 'security']
+    for section in sections:
+        pattern = f'### {section}\\b'
+        if re.search(pattern, content):
+            fixed = re.sub(pattern, f'### {section.capitalize()}', content)
+            if fixed != content:
+                fixes_applied.append(f"Capitalized '{section}' section header")
+            content = fixed
+    
+    # Fix missing dates
+    version_pattern = r'##\s+(\d+\.\d+\.\d+)(?!\s*-\s*\d{4})'
+    content = re.sub(version_pattern, r'## [\1] - TODO', content)
+    
+    return content, fixes_applied
 ```
-## Changelog Review Report
 
-### Overall Quality: 4/10
+## Integrating with Your Development Workflow
 
-### Issues Found:
+To get maximum value from your changelog review skill, integrate it into your development process:
 
-1. **Version Date**: The date format should be YYYY-MM-DD (currently correct)
+### Pre-commit Hook Integration
 
-2. **Missing Sections**:
-   - No "Changed" section (recommended even if empty)
-   - No "Deprecated" section (check if anything was deprecated)
-
-3. **Entry Quality Issues**:
-   
-   - "New feature" - Too vague. What feature? Include a brief description.
-     *Suggested fix*: "- Support for dark mode in the settings panel"
-   
-   - "Bug fixes" - This is a prohibited entry. You must specify what bugs were fixed.
-     *Suggested fix*: "- Fixed crash when importing large CSV files (#123)"
-
-4. **Formatting**:
-   - Consider adding links to issues/PRs where applicable
-   - Breaking changes should be clearly marked with "BREAKING" in ALL CAPS
-```
-
-This level of detailed feedback helps contributors improve their changelog entries while learning best practices.
-
-## Automating Pre-Commit Reviews
-
-One of the most powerful applications is integrating changelog review into your development workflow. You can create a pre-commit hook that invokes Claude to review changelog entries before they're committed:
+Add the skill to your pre-commit workflow to review changelogs before commits:
 
 ```bash
-#!/bin/bash
 # .git/hooks/pre-commit
-
-# Check if CHANGELOG.md was modified
-if git diff --name-only | grep -q "CHANGELOG.md"; then
-    echo "Running changelog review..."
-    
-    # Use Claude Code to review the changelog
-    claude --print "Review the modified CHANGELOG.md file and report any issues"
-    
-    # Check for critical issues
-    if [ $? -ne 0 ]; then
-        echo "Changelog review failed. Please fix the issues above."
-        exit 1
-    fi
-fi
+claude -s changelog-review --path CHANGELOG.md
 ```
 
-This automation ensures that changelog quality never slips through the cracks.
+### CI/CD Pipeline
 
-## Best Practices for Changelog Review Skills
+Include changelog reviews in your continuous integration:
 
-When building your own changelog review skill, keep these principles in mind:
-
-1. **Be Educational**: Instead of just flagging errors, explain why something is wrong and how to fix it. This helps contributors improve over time.
-
-2. **Stay Configurable**: Different projects have different standards. Allow users to customize which rules are enforced through skill configuration.
-
-3. **Provide Examples**: Show, don't just tell. Include before/after examples of improved entries.
-
-4. **Balance Strictness**: Some rules are hard requirements (like semantic versioning), while others are stylistic preferences. Distinguish between them clearly.
-
-5. **Learn from Community Standards**: Reference established conventions like Keep a Changelog to ensure your skill promotes widely-accepted practices.
-
-## Advanced: Conditional Formatting Checks
-
-For more sophisticated workflows, you can add conditional logic that adapts the review based on project context:
-
-```markdown
-## Conditional Review Rules
-
-- If the project uses Angular commit message conventions: enforce conventional commit format
-- If the project has a CONTRIBUTING.md: reference it for project-specific guidelines
-- If reviewing a security-focused project: emphasize vulnerability disclosure formatting
-- If the version is a major release: require breaking changes documentation
+```yaml
+# .github/workflows/changelog-review.yml
+name: Changelog Review
+on [pull_request]
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Changelog Review
+        run: claude -s changelog-review --path CHANGELOG.md
 ```
 
-This flexibility makes your skill adaptable across different project types and team preferences.
+## Best Practices for Changelog Skills
+
+When building and maintaining your changelog review skill, keep these tips in mind:
+
+1. **Start simple** - Begin with basic format validation, then add complexity
+2. **Customize for your team** - Adjust rules based on your project's conventions
+3. **Provide actionable feedback** - Include specific line numbers and suggestions
+4. **Allow overrides** - Some rules may need exceptions; make the skill flexible
+5. **Test with real changelogs** - Validate your skill against actual projects
 
 ## Conclusion
 
-Creating a Claude skill for changelog review transforms an often-overlooked task into an automated, consistent process that improves over time. By investing effort in building a comprehensive skill, you not only maintain better changelogs but also educate contributors on best practices.
+Automating changelog reviews with Claude Code skills saves time and ensures consistency across your project. Start with the basic skill structure in this tutorial, then customize it to match your team's conventions. The investment in setting up a robust changelog review workflow pays dividends in code quality and documentation accuracy.
 
-The workflow we've explored here—starting with a basic skill structure, adding interactive capabilities, integrating with development tools, and refining based on project needs—can be applied to countless other review tasks in your development process.
+Remember: A well-maintained changelog is a gift to future developers (including yourself) who need to understand how your project evolved. Automating its review ensures it stays accurate and useful.
 
-Start with the skill template provided here, customize it to match your project's standards, and watch as your changelog quality improves automatically with every review.
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
