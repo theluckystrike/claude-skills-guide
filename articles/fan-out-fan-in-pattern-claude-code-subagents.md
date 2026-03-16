@@ -192,6 +192,12 @@ def safe_process(task):
         return {"success": False, "error": str(e), "task": task}
 ```
 
+## Monitoring and Debugging Parallel Workflows
+
+Parallel execution introduces debugging challenges. Tracking which subagent produced which output, identifying bottlenecks, and handling partial failures require structured logging and monitoring.
+
+Implement unique identifiers for each subagent execution. Log start times, completion times, and outcomes. Capture stdout and stderr from each agent for post-mortem analysis. Consider implementing a coordinator agent whose sole responsibility is managing the fan-out fan-in workflow, collecting outputs, and handling edge cases.
+
 ## Performance Considerations
 
 When implementing this pattern, consider these factors:

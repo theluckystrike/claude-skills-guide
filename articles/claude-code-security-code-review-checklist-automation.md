@@ -21,6 +21,10 @@ Manual security reviews often suffer from inconsistency. Different reviewers cat
 
 Claude Code skills excel at this because they combine natural language understanding with tool execution. You describe what to check, and the skill handles the implementation across your codebase.
 
+## Setting Up for Security Review
+
+Start by ensuring Claude Code has access to your codebase and understands the programming languages you use. Create a CLAUDE.md file in your project root to initialize context, then navigate to your project directory. The automation approach works by combining Claude Code's understanding of code semantics with established security best practices—handling repetitive checks consistently while flagging complex issues that require human judgment.
+
 ## Building Your Security Checklist Automation
 
 ### Setting Up the Foundation

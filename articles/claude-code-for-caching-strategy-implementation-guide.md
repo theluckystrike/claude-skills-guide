@@ -287,6 +287,49 @@ class FileBasedInvalidation:
 
 **Manual Invalidation**: Provides explicit control when you know data has changed. Useful for administrative operations or forced refreshes.
 
+## Conversation-Context Caching
+
+The simplest form of caching leverages Claude Code's built-in conversation memory. By structuring your prompts and skills to reference previously computed values, you avoid redundant operations within a single session:
+
+```python
+# skill: file-analyzer
+# This skill demonstrates memory-based caching
+
+## Context
+The project structure has already been analyzed in this conversation.
+File paths referenced: {{context.analyzed_files}}
+
+## Action
+For new file {{input.file_path}}:
+1. Check if it's in the analyzed files list
+2. If yes, return cached analysis
+3. If no, perform full analysis and add to analyzed_files
+```
+
+This pattern works because Claude Code maintains conversation context throughout a session. By explicitly tracking what's been done, you avoid reprocessing the same content.
+
+### Stale-While-Revalidate Pattern
+
+For scenarios where fresh data is desirable but cached data is acceptable as a fallback, implement the stale-while-revalidate pattern:
+
+```python
+async def get_data_with_swr(key, fetch_function):
+    cached = await cache.get(key)
+
+    if cached:
+        # Return cached data immediately
+        return {
+            'data': cached,
+            'stale': True,
+            'background_update': True
+        }
+
+    # No cache, fetch fresh data
+    fresh_data = await fetch_function()
+    await cache.set(key, fresh_data)
+    return {'data': fresh_data, 'stale': False}
+```
+
 ## Best Practices and Actionable Advice
 
 Start with simple caching and iterate. In-memory caching takes minutes to implement and provides immediate benefits. Add persistence when you need session continuity, and consider distributed caching only when working in team environments.

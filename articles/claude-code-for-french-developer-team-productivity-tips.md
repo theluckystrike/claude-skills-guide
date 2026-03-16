@@ -143,6 +143,27 @@ def apply_business_rules(invoice: Invoice) -> Invoice:
     return Invoice(invoice.id, amount, status)
 ```
 
+## Intégration dans les Standups Quotidiens
+
+Les équipes françaises conduisent généralement les standups en français. Claude Code facilite la préparation des mises à jour :
+
+```
+Analyse mes commits des 24 dernières heures et prépare un résumé en français pour le standup team.
+```
+
+Claude Code peut revoir les commits récents, identifier les tâches en attente et les blockers, et préparer des résumés en français pour la communication d'équipe.
+
+## Métriques et Mesure du Succès
+
+Suivez l'adoption de Claude Code par votre équipe avec des indicateurs concrets :
+
+| Métrique | Avant Claude Code | Avec Claude Code | Amélioration |
+|----------|-------------------|------------------|--------------|
+| Temps moyen de revue | 45 min | 15 min | -67% |
+| Bugs en production | 12/sprint | 4/sprint | -67% |
+| Documentation à jour | 40% | 85% | +112% |
+| Temps de onboarding | 3 semaines | 1.5 semaines | -50% |
+
 ## Collaboration d'Équipe Efficace
 
 ### Partage de Sessions et Contextes

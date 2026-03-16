@@ -146,6 +146,76 @@ Error handling protocol:
 5. Document issue for future resolution
 ```
 
+## Worker Implementation Examples
+
+Workers can be implemented in any language. Here's a Python example of a focused code review worker:
+
+```python
+class CodeReviewWorker:
+    """Worker agent specialized in code review tasks."""
+
+    def __init__(self):
+        self.capabilities = [
+            "syntax_errors",
+            "security_vulnerabilities",
+            "performance_issues",
+            "best_practices"
+        ]
+
+    def review(self, code: str, focus_areas: list) -> dict:
+        """Perform code review on provided code."""
+        results = {"issues": [], "suggestions": []}
+        for area in focus_areas:
+            if area in self.capabilities:
+                findings = self._analyze_code(code, area)
+                results["issues"].extend(findings)
+        return results
+```
+
+And a JavaScript function definition for the supervisor routing:
+
+```javascript
+const supervisorAgent = {
+  name: "supervisor",
+  description: "Routes user requests to specialized worker agents",
+  parameters: {
+    type: "object",
+    properties: {
+      task: { type: "string", description: "The user's request" },
+      requires_workers: {
+        type: "array",
+        items: { type: "string" },
+        description: "List of required worker types"
+      }
+    },
+    required: ["task"]
+  }
+};
+```
+
+### Error Handling with Retry
+
+Good implementations include error handling at multiple levels:
+
+```javascript
+async function executeWithRetry(worker, task, maxRetries = 3) {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      return await worker.execute(task);
+    } catch (error) {
+      if (attempt === maxRetries) {
+        return { status: "failed", error: error.message, worker: worker.name };
+      }
+      await sleep(Math.pow(2, attempt) * 100);
+    }
+  }
+}
+```
+
+### Performance Considerations
+
+When scaling the supervisor worker pattern, consider state management (the supervisor must maintain context across worker invocations), latency chaining (sequential worker execution adds latency—parallelize where possible), resource allocation (heavy workers may require dedicated resources), and caching (intermediate results between workers can be cached for reuse).
+
 ## Best Practices
 
 **Define clear boundaries.** Workers should have explicit, limited scopes. This makes them easier to test, debug, and maintain.

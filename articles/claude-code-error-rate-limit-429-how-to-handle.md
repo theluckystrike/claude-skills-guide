@@ -174,6 +174,40 @@ async function safeBatchOperation(operations) {
 }
 ```
 
+## Checkpointing for Long Tasks
+
+When rate limits interrupt long-running workflows, implement checkpointing to preserve progress:
+
+```python
+# checkpoint.py - save progress before continuing
+import json
+import os
+
+def save_checkpoint(task_id, progress):
+    checkpoint_file = f".claude/checkpoints/{task_id}.json"
+    os.makedirs(os.path.dirname(checkpoint_file), exist_ok=True)
+    with open(checkpoint_file, 'w') as f:
+        json.dump(progress, f)
+
+def load_checkpoint(task_id):
+    checkpoint_file = f".claude/checkpoints/{task_id}.json"
+    if os.path.exists(checkpoint_file):
+        with open(checkpoint_file, 'r') as f:
+            return json.load(f)
+    return None
+```
+
+After a rate limit interruption, resume from the last checkpoint rather than restarting from scratch. This is especially valuable when using batch processing workflows — instead of many small operations, consolidate into fewer, larger ones:
+
+```bash
+# Instead of many small operations:
+claude "fix this function"
+claude "now fix this one"
+
+# Do this:
+claude "fix these three functions: [list them all at once]"
+```
+
 ## Best Practices Summary
 
 1. **Honor the Retry-After header** — It's your clearest guide to when you can resume

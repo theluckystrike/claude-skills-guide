@@ -106,6 +106,22 @@ The skill system represents significant extensibility:
 
 Each skill installs in seconds and activates when relevant to your task.
 
+Skills are Markdown files (`.md`) that you place in your `.claude/` directory at the project level or `~/.claude/` for global access. Beyond using pre-built skills, you can create custom skills that address your specific requirements:
+
+```markdown
+---
+name: security-audit
+description: Performs security analysis on code, checking for vulnerabilities, dependency issues, and secret detection
+---
+
+You are a security analysis specialist. When invoked, scan the codebase for:
+- Known vulnerability patterns
+- Dependency issues
+- Exposed secrets or credentials
+```
+
+This extensibility means that as your project evolves, you can build custom skills for enforcing coding standards, generating documentation, or automating testing workflows.
+
 ### MCP Server Integration
 
 Model Context Protocol servers extend capabilities further:

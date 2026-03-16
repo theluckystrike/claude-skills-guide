@@ -23,6 +23,34 @@ Claude Code interacts with your project through the terminal, executing commands
 
 The root cause typically falls into one of three categories: the virtual environment path is not configured in your project, Claude Code is using a different shell initialization, or your project's Python interpreter settings are ambiguous. Identifying which scenario applies to your situation determines which fix will work.
 
+## Quick Fix: Create a Virtual Environment
+
+If no virtual environment exists, create one immediately:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate   # macOS/Linux
+# .venv\Scripts\activate    # Windows
+```
+
+Verify the correct Python is active:
+
+```bash
+which python
+# Should show: ./.venv/bin/python
+```
+
+Then install required packages and create a `requirements.txt` for reproducibility:
+
+```bash
+pip install -r requirements.txt
+# or if starting fresh:
+pip install requests fastapi pytest
+pip freeze > requirements.txt
+```
+
+Add `.venv` to your `.gitignore` to avoid committing it to version control. This ensures that every time you clone the repository, you can recreate the environment with `python3 -m venv .venv && pip install -r requirements.txt`.
+
 ## Solution 1: Configure PYTHONPATH in Your Project
 
 The most reliable approach is to explicitly tell Claude Code which Python interpreter to use. Create or update a CLAUDE.md file in your project root with Python-specific instructions:

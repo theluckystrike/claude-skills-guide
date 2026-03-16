@@ -39,6 +39,15 @@ claude
 
 Once in the interactive session, you can ask for code suggestions by typing naturally, for example: "How do I implement authentication in Express?"
 
+The free tier also provides basic API functionality suitable for experimentation and simple integrations:
+
+```bash
+# Free tier API rate limit example
+curl -X POST https://api.claude.ai/v1/completions \
+  -H "Authorization: Bearer $FREE_TOKEN" \
+  -d '{"prompt": "Review this function", "max_tokens": 500}'
+```
+
 ### Limitations to Consider
 
 During peak usage times, free tier users may experience queue delays. The response complexity for deeply nested projects or large codebases might be throttled. Additionally, some advanced features like real-time collaboration and enterprise-grade security controls remain exclusive to paid tiers.

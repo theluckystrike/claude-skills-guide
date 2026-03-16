@@ -82,7 +82,37 @@ repos:
 
 ### Linting and Formatting Integration
 
-Combine Claude Code with industry-standard linting tools for comprehensive validation. For JavaScript and TypeScript projects, integrate with eslint and prettier:
+Combine Claude Code with industry-standard linting tools for comprehensive validation. For JavaScript and TypeScript projects, integrate ESLint and Prettier alongside Python tools like Black and Flake8:
+
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.56.0
+    hooks:
+      - id: eslint
+        types: [javascript, jsx, typescript, tsx]
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.1.1
+    hooks:
+      - id: prettier
+        types: [javascript, jsx, typescript, tsx, css, yaml]
+
+  - repo: https://github.com/psf/black
+    rev: 24.1.0
+    hooks:
+      - id: black
+        language_version: python3.11
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+```
+
+The order matters—formatting tools should run before linters to avoid conflicts.
+
+For Claude Code-specific format checks:
 
 ```yaml
 repos:
@@ -254,6 +284,14 @@ Version control your hook configurations. Store `.pre-commit-config.yaml` in you
 Test your hooks thoroughly before deployment. Use `pre-commit run --all-files` to validate existing code, then gradually introduce new hooks. This prevents surprises when developers first encounter the automation.
 
 Monitor hook effectiveness. Track which issues get caught most frequently and adjust your configuration accordingly. Remove checks that rarely catch problems to keep the pipeline efficient.
+
+## Troubleshooting Common Issues
+
+**Hook runs but fails intermittently**: Check for environment differences between local machines. Use a consistent Python version and lock your tool versions in the config file.
+
+**Pre-commit is too slow**: Enable caching with `export PRE_COMMIT_HOME=$HOME/.cache/pre-commit`, reduce the number of hooks, or move some checks to CI pipeline only.
+
+**Claude Code keeps making the same mistakes**: Update your project's `.gitignore` to exclude generated files, and provide explicit context about your linting rules in your project notes.
 
 ## Conclusion
 

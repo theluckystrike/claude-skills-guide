@@ -251,6 +251,38 @@ Consider implementing keyboard shortcuts for common actions. The Chrome Extensio
 }
 ```
 
+## Recommended Tab Organizer Extensions
+
+For developers who want ready-made solutions alongside custom research organizers, several Chrome extensions offer robust tab management:
+
+- **Tabler** — Visual grid layout with drag-and-drop organization and workspaces
+- **The Great Suspender** — Suspends inactive tabs to free RAM, with custom suspension rules and whitelist
+- **Toby** — Visual bookmark manager for saving and restoring tab collections/sessions
+- **Workona** — Workspace-centric organization linking tabs to specific projects with team collaboration
+- **Session Buddy** — Session save/restore with automatic backups and tab history search
+
+| Factor | Recommendation |
+|--------|----------------|
+| Memory issues | The Great Suspender |
+| Project-based workflows | Workona |
+| Visual organization | Toby, Tabler |
+| Session management | Session Buddy |
+| Custom automation | Build your own |
+
+### Tab Grouping API
+
+Chrome provides a native tab grouping API for building custom solutions:
+
+```javascript
+// Create a tab group
+chrome.tabs.group({ tabIds: [tabId1, tabId2] }, (groupId) => {
+  chrome.tabGroups.update(groupId, {
+    title: 'Research Tabs',
+    color: 'blue'
+  });
+});
+```
+
 ## Choosing or Building Your Solution
 
 Ready-made research organizer extensions exist across the functionality spectrum. Evaluate them based on extraction reliability, export flexibility, and whether they support the workflows you need. Many popular options work well out of the box, but developers often benefit from building custom solutions that integrate precisely with their existing toolchains.
