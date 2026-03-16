@@ -1,241 +1,287 @@
 ---
-
 layout: default
 title: "Claude Code for Soak Testing Workflow Tutorial Guide"
-description: "Learn how to build automated soak testing workflows with Claude Code. This guide covers continuous endurance testing, resource monitoring, and."
+description: "Learn how to leverage Claude Code CLI to build, automate, and analyze soak testing workflows for your applications. Practical examples and actionable advice included."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: Claude Skills Guide
 permalink: /claude-code-for-soak-testing-workflow-tutorial-guide/
-categories: [tutorials, guides]
-tags: [claude-code, claude-skills, soak-testing, automation, DevOps]
-reviewed: true
-score: 8
+categories: tutorial
+tags: [claude-code, claude-skills]
 ---
-
 
 {% raw %}
 # Claude Code for Soak Testing Workflow Tutorial Guide
 
-Soak testing—also known as endurance testing—is a critical quality assurance practice that runs your application under sustained load for extended periods to identify issues that only emerge over time. Memory leaks, database connection exhaustion, resource leaks, and gradual performance degradation often go unnoticed in short functional tests but can bring production systems to their knees after hours or days of operation.
-
-This guide shows you how to use Claude Code to build automated soak testing workflows that run continuously, monitor resource consumption, and alert you to problems before they reach production.
+Soak testing is a critical performance testing methodology that runs your application under sustained load over an extended period—typically hours or even days. The goal is to uncover memory leaks, resource exhaustion, database connection pool degradation, and other issues that only manifest during prolonged operation. In this comprehensive guide, you'll learn how to leverage Claude Code CLI to build, automate, and analyze soak testing workflows effectively.
 
 ## Understanding Soak Testing Fundamentals
 
-Before diving into automation, it's essential to understand what soak testing aims to detect. Unlike load testing (which measures performance under peak load) or stress testing (which pushes systems beyond breaking points), soak testing runs at moderate, realistic load levels for extended durations—typically 8 to 72 hours.
+Before diving into the Claude Code implementation, let's establish the core principles of soak testing. Unlike load testing which focuses on peak capacity, or stress testing which pushes beyond limits, soak testing simulates real-world usage patterns over time. This reveals cumulative failures that short tests cannot detect.
 
-The primary issues soak testing reveals include:
+Common issues discovered through soak testing include:
 
-- **Memory leaks**: Gradual memory consumption that eventually exhausts available RAM
+- **Memory leaks**: Gradual memory consumption that exhausts available RAM
 - **Connection pool exhaustion**: Database or API connections not properly released
-- **Log file growth**: Unbounded logging that fills disk space
-- **Cache degradation**: Caches that lose effectiveness over time
-- **Resource cleanup failures**: Background jobs or threads that don't terminate properly
+- **Log file growth**: Unbounded logging filling disk space
+- **Session timeout issues**: Tokens or sessions expiring unexpectedly
+- **Resource degradation**: Gradual performance decline due to caching or indexing issues
 
-## Setting Up Your First Soak Test Project
+## Setting Up Your Claude Code Environment
 
-Let's create a Claude Code skill specifically designed for soak testing workflows. This skill will help you generate test scenarios, execute them, and analyze results.
+First, ensure Claude Code is installed and configured on your system. The CLI tool provides powerful capabilities for generating test scripts, analyzing results, and automating workflows.
 
-First, create a new skill for soak testing:
+```bash
+# Verify Claude Code installation
+claude --version
 
-```yaml
----
-name: soak-test
-description: Generate and run soak testing workflows for your applications
----
-
-# Soak Testing Workflow Generator
-
-You help developers create automated soak tests that run applications under sustained load to detect memory leaks, resource exhaustion, and performance degradation over time.
+# Initialize a new project with test directory structure
+mkdir -p soak-tests/{scripts,results,reports}
 ```
 
-This skill definition restricts available tools to those necessary for file operations and command execution, keeping the skill focused and secure.
+## Building a Soak Test Script with Claude Code
 
-## Creating a Soak Test Script
+Claude Code excels at generating test scripts tailored to your specific application. Here's how to create a comprehensive soak test:
 
-Now let's create a practical soak test script that Claude can generate and run. A good soak test should simulate realistic user behavior over an extended period.
+### Step 1: Analyze Your Application's API Surface
 
-Here's a Python-based soak test template you can adapt:
+Ask Claude to help you document the endpoints and operations that need testing:
+
+```
+I need to create a soak test for my REST API. The main endpoints are:
+- POST /api/users (create user)
+- GET /api/users/{id} (get user)
+- PUT /api/users/{id} (update user)
+- GET /api/users (list users with pagination)
+
+Generate a load test script that simulates 100 concurrent users making requests over 8 hours.
+```
+
+### Step 2: Generate the Test Script
+
+Claude can generate scripts in various languages. Here's an example using k6 (a popular load testing tool):
+
+```javascript
+// soak-test.js - Generated with Claude Code guidance
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+import { Counter, Rate, Trend } from 'k6/metrics';
+
+// Custom metrics for soak testing
+const errorRate = new Rate('errors');
+const responseTime = new Trend('response_time');
+const requestsPerSecond = new Counter('requests_total');
+
+export const options = {
+  scenarios: {
+    soak_test: {
+      executor: 'constant-vus',
+      vus: 100,
+      duration: '8h',
+      gracefulRampDown: '30m',
+    },
+  },
+  thresholds: {
+    http_req_duration: ['p(95)<500'],
+    errors: ['rate<0.01'],
+  },
+};
+
+const BASE_URL = __ENV.API_URL || 'http://localhost:3000';
+
+export default function () {
+  const endpoints = [
+    { method: 'GET', path: '/api/users' },
+    { method: 'POST', path: '/api/users', body: generateUserPayload() },
+  ];
+
+  const endpoint = endpoints[Math.floor(Math.random() * endpoints.length)];
+  
+  const params = {
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${__ENV.API_TOKEN}`,
+    },
+  };
+
+  const startTime = Date.now();
+  let response;
+
+  if (endpoint.method === 'POST') {
+    response = http.post(`${BASE_URL}${endpoint.path}`, JSON.stringify(endpoint.body), params);
+  } else {
+    response = http.get(`${BASE_URL}${endpoint.path}`, params);
+  }
+
+  const duration = Date.now() - startTime;
+  responseTime.add(duration);
+  requestsPerSecond.add(1);
+
+  check(response, {
+    'status is 200 or 201': (r) => [200, 201].includes(r.status),
+    'response time < 500ms': (r) => response.timings.duration < 500,
+  }) || errorRate.add(1);
+
+  sleep(Math.random() * 2 + 0.5);
+}
+
+function generateUserPayload() {
+  const id = Math.floor(Math.random() * 1000000);
+  return {
+    name: `TestUser_${id}`,
+    email: `user${id}@test.com`,
+    role: 'user',
+  };
+}
+```
+
+## Automating Soak Test Execution
+
+Claude Code can help you create automation scripts that run soak tests on schedule and manage the results:
+
+```bash
+#!/bin/bash
+# soak-test-runner.sh - Automated soak test execution
+
+set -e
+
+API_URL="${1:-http://localhost:3000}"
+DURATION="${2:-8h}"
+OUTPUT_DIR="soak-tests/results/$(date +%Y%m%d_%H%M%S)"
+
+mkdir -p "$OUTPUT_DIR"
+
+echo "Starting soak test at $(date)"
+echo "API URL: $API_URL"
+echo "Duration: $DURATION"
+
+# Run k6 with JSON output for parsing
+k6 run \
+  --out json="$OUTPUT_DIR/results.jsonl" \
+  --summary-export="$OUTPUT_DIR/summary.json" \
+  -e API_URL="$API_URL" \
+  soak-test.js
+
+echo "Soak test completed at $(date)"
+
+# Generate HTML report
+k6 report \
+  --output "$OUTPUT_DIR/report.html" \
+  "$OUTPUT_DIR/summary.json"
+
+echo "Report generated: $OUTPUT_DIR/report.html"
+```
+
+## Analyzing Soak Test Results
+
+One of Claude Code's most valuable capabilities is analyzing test results to identify issues. Here's a practical approach:
+
+### Memory Leak Detection
 
 ```python
-#!/usr/bin/env python3
-"""Soak test runner for detecting memory leaks and resource exhaustion."""
-
-import subprocess
-import time
-import psutil
+# analyze-memory.py - Memory trend analysis
 import json
-from datetime import datetime
-from pathlib import Path
-
-class SoakTestRunner:
-    def __init__(self, target_command, duration_hours=8, check_interval=60):
-        self.target_command = target_command
-        self.duration_seconds = duration_hours * 3600
-        self.check_interval = check_interval
-        self.start_time = None
-        self.metrics = []
-    
-    def run(self):
-        self.start_time = time.time()
-        print(f"Starting soak test for {self.duration_seconds/3600} hours")
-        
-        # Start the target process
-        process = subprocess.Popen(
-            self.target_command,
-            shell=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
-        )
-        
-        try:
-            while time.time() - self.start_time < self.duration_seconds:
-                # Collect metrics
-                metrics = self.collect_metrics(process.pid)
-                self.metrics.append(metrics)
-                
-                # Check for anomalies
-                self.check_thresholds(metrics)
-                
-                time.sleep(self.check_interval)
-                
-        finally:
-            process.terminate()
-            self.save_results()
-    
-    def collect_metrics(self, pid):
-        try:
-            proc = psutil.Process(pid)
-            return {
-                'timestamp': datetime.now().isoformat(),
-                'memory_mb': proc.memory_info().rss / 1024 / 1024,
-                'cpu_percent': proc.cpu_percent(),
-                'num_threads': proc.num_threads(),
-                'open_files': len(proc.open_files()),
-                'connections': len(proc.connections())
-            }
-        except psutil.NoSuchProcess:
-            return None
-    
-    def check_thresholds(self, metrics):
-        if metrics['memory_mb'] > 1024:  # 1GB threshold
-            print(f"WARNING: Memory usage exceeded 1GB: {metrics['memory_mb']:.2f}MB")
-    
-    def save_results(self):
-        output_path = Path("soak_test_results.json")
-        output_path.write_text(json.dumps(self.metrics, indent=2))
-        print(f"Results saved to {output_path}")
-```
-
-This script monitors a running process and records key metrics at regular intervals. You can customize the target command, duration, and thresholds based on your application's characteristics.
-
-## Integrating with Claude Code
-
-Once you have your soak test script, use Claude to orchestrate the entire workflow. Here's how to structure your interaction:
-
-```markdown
-Generate a soak test for my API server. The server runs with:
-- Command: `python -m uvicorn api.main:app --host 0.0.0.0 --port 8000`
-- Expected duration: 12 hours
-- Memory threshold: 512MB
-- Test pattern: 50 requests per second with random endpoints
-
-Create the test script, run it, and monitor for any memory growth patterns.
-```
-
-Claude will generate the appropriate test configuration, execute the soak test, and periodically check the results for anomalies. This hands-off approach lets you set up long-running tests and review results when complete.
-
-## Monitoring and Analysis Patterns
-
-Effective soak testing requires meaningful metrics collection. Here's a recommended monitoring strategy:
-
-### Memory Monitoring
-
-Track memory consumption over time using a moving average to distinguish normal variation from actual leaks:
-
-```python
+from datetime import datetime, timedelta
 import statistics
 
-def analyze_memory_trend(metrics):
-    memory_values = [m['memory_mb'] for m in metrics if m]
+def analyze_memory_trend(results_file):
+    with open(results_file) as f:
+        data = [json.loads(line) for line in f]
     
-    if len(memory_values) < 10:
-        return "Insufficient data"
+    # Extract memory metrics over time
+    memory_samples = []
+    for entry in data:
+        if 'metrics' in entry and 'data.memory_used' in entry['metrics']:
+            memory_samples.append({
+                'timestamp': entry['data.time'],
+                'memory_mb': entry['metrics']['data.memory_used']['values']['value']
+            })
     
-    # Compare first 10% to last 10% of measurements
-    sample_size = len(memory_values) // 10
-    early_avg = statistics.mean(memory_values[:sample_size])
-    late_avg = memory_values[-sample_size:]
-    late_avg = statistics.mean(late_avg)
+    # Analyze trend
+    if len(memory_samples) > 10:
+        first_half = memory_samples[:len(memory_samples)//2]
+        second_half = memory_samples[len(memory_samples)//2:]
+        
+        avg_first = statistics.mean([s['memory_mb'] for s in first_half])
+        avg_second = statistics.mean([s['memory_mb'] for s in second_half])
+        
+        growth_percentage = ((avg_second - avg_first) / avg_first) * 100
+        
+        if growth_percentage > 10:
+            print(f"⚠️  POTENTIAL MEMORY LEAK: {growth_percentage:.1f}% growth detected")
+            return False
     
-    growth_percent = ((late_avg - early_avg) / early_avg) * 100
-    
-    if growth_percent > 20:
-        return f"MEMORY LEAK DETECTED: {growth_percent:.1f}% growth"
-    elif growth_percent > 10:
-        return f"WARNING: Elevated memory growth: {growth_percent:.1f}%"
-    else:
-        return "Memory stable"
+    print("✓ No memory leak detected")
+    return True
 ```
 
-### Resource Connection Tracking
+### Performance Degradation Analysis
 
-Monitor database and API connections to detect leaks:
+Ask Claude to generate queries that identify performance trends:
 
-```python
-def check_connection_health(metrics):
-    connection_counts = [m['connections'] for m in metrics if m]
-    
-    if not connection_counts:
-        return "No connections to monitor"
-    
-    max_connections = max(connection_counts)
-    avg_connections = statistics.mean(connection_counts)
-    
-    # Connection leak if max is 5x average
-    if max_connections > avg_connections * 5:
-        return f"POTENTIAL CONNECTION LEAK: max={max_connections}, avg={avg_connections:.1f}"
-    
-    return f"Connections healthy: max={max_connections}, avg={avg_connections:.1f}"
+```
+Analyze the k6 results and identify:
+1. Response time trends over each hour
+2. Error rate patterns
+3. Any correlation between time elapsed and performance degradation
+4. Peak error periods and their characteristics
 ```
 
-## Best Practices for Claude-Assisted Soak Testing
+## Best Practices for Claude Code Soak Testing
 
-Follow these guidelines to get the most from your soak testing workflows:
+Based on practical experience, here are actionable recommendations:
 
-**Start with realistic load levels.** Don't over-stress your system initially. Use production-like traffic patterns at 50-70% capacity, then increase gradually if no issues emerge.
+### Test Environment Configuration
 
-**Run tests in isolated environments.** Soak tests can consume significant resources. Use containerized environments or dedicated staging infrastructure to avoid impacting development work.
+- **Isolate test environments**: Run soak tests in dedicated staging environments to avoid impacting production
+- **Monitor baseline metrics**: Establish performance baselines before running soak tests
+- **Control external dependencies**: Mock third-party APIs to prevent flakiness from external services
 
-**Establish clear pass/fail criteria before starting.** Define acceptable thresholds for memory growth, response time degradation, and resource consumption. Claude can help you analyze results against these criteria.
+### Test Design
 
-**Automate result analysis.** Don't rely on manual inspection. Use scripts like the analysis functions above to automatically flag potential issues.
+- **Start with realistic load**: Begin with 50-70% of expected peak load
+- **Include varied user patterns**: Not all users behave identically—mix read and write operations
+- **Plan for graceful degradation**: Include mechanisms to stop tests safely if critical errors occur
 
-**Test progressively longer durations.** Start with 1-2 hour tests, then extend to 8, 24, and 72 hours as confidence builds. Each duration level may reveal different problem types.
+### Analysis and Monitoring
 
-## Common Pitfalls to Avoid
+- **Collect comprehensive metrics**: CPU, memory, disk I/O, network, database connections
+- **Set up alerting**: Notify team immediately if error rates exceed thresholds
+- **Document findings**: Maintain a knowledge base of soak test discoveries
 
-Several mistakes can undermine your soak testing efforts:
+## Integrating Claude Code into CI/CD
 
-- **Stopping too early**: Many issues only appear after several hours. A 30-minute test won't reveal slow memory leaks.
+Automate soak testing as part of your deployment pipeline:
 
-- **Ignoring system resources**: Monitor the entire system, not just your application process. Database servers, caches, and supporting services can develop issues.
+```yaml
+# .github/workflows/soak-test.yml
+name: Weekly Soak Test
 
-- **Testing in inconsistent environments**: Ensure your test environment mirrors production as closely as possible, including OS version, available memory, and network conditions.
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Weekly at 2 AM Sunday
 
-- **Not accounting for warm-up periods**: Applications often show elevated resource usage during initialization. Allow sufficient warm-up time before measuring baseline.
+jobs:
+  soak-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run Soak Test
+        run: |
+          chmod +x soak-tests/scripts/soak-test-runner.sh
+          ./soak-tests/scripts/soak-test-runner.sh $API_URL 8h
+      
+      - name: Upload Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: soak-test-results
+          path: soak-tests/results/
+```
 
 ## Conclusion
 
-Claude Code transforms soak testing from a manually intensive process into an automated, reproducible workflow. By generating test scripts, executing long-running tests, and analyzing results for patterns, Claude helps you catch production-breaking issues before they affect users.
+Claude Code transforms soak testing from a manually intensive process into an automated, intelligent workflow. By leveraging its capabilities for script generation, result analysis, and CI/CD integration, you can establish robust soak testing practices that catch critical issues before they reach production. Start with realistic tests, monitor comprehensively, and iterate based on findings.
 
-Start with moderate-duration tests, establish clear thresholds, and progressively extend testing as your confidence grows. Combined with proper monitoring and analysis, Claude-assisted soak testing becomes an invaluable part of your quality assurance toolkit.
+Remember: the best soak tests are those that closely mirror real-world usage patterns over time. Let Claude Code help you build tests that truly stress your system in ways that matter.
+
 {% endraw %}
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
