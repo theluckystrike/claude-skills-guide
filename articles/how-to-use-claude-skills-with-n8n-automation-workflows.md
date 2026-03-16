@@ -27,6 +27,10 @@ Before getting into setup, here are realistic automation patterns that combine n
 - Monitor RSS feeds, summarize articles with Claude, send a daily digest email
 - Capture form submissions, run through Claude for classification, route to the appropriate team
 
+### Why Combine Claude with n8n?
+
+n8n excels at orchestrating connections between services—moving data from webhooks to databases, sending notifications, and triggering external APIs. However, n8n's native nodes are limited to predefined actions. When you need your workflow to understand unstructured text, make context-aware decisions, generate code, or summarize lengthy documents, Claude adds a reasoning engine to your automation without sacrificing n8n's visual workflow management.
+
 ## Prerequisites
 
 - n8n instance (self-hosted via Docker or n8n.cloud)

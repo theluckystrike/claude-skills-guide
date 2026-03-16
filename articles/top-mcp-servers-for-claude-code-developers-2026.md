@@ -21,6 +21,8 @@ MCP servers are lightweight processes that expose tools to Claude Code through a
 
 Configuration happens in your Claude Desktop settings file (`claude_desktop_config.json`). Once configured, MCP servers remain available across all sessions.
 
+The protocol works through a client-server architecture where Claude acts as the client and MCP servers provide specialized capabilities. Each server exposes a set of tools and resources that Claude can invoke based on task requirements. This modular design means you can mix and match servers to create exactly the capabilities your projects need.
+
 ---
 
 ## 1. Filesystem MCP Server

@@ -64,6 +64,21 @@ Output the changelog in the standard Keep a Changelog format.
 
 This skill uses the structured nature of conventional commits to produce organized output without manual intervention.
 
+For more interactive control, define a skill with explicit commands:
+
+```yaml
+---
+name: changelog-manager
+description: Automate changelog generation from git history
+tools: [git, read_file, write_file, bash]
+---
+
+## Available Commands
+- `generate`: Create changelog entries since the last release tag
+- `release`: Finalize and commit the changelog for a new release
+- `preview`: Show what the next changelog entries would look like
+```
+
 Enforce conventional commits with a commitlint configuration:
 
 ```javascript

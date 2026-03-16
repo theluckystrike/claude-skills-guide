@@ -17,6 +17,17 @@ score: 7
 
 Git hooks have long been the backbone of quality code enforcement in development teams. When combined with Claude Code's powerful capabilities, you can create a sophisticated pre-commit automation system that catches issues before they ever reach your repository. This guide walks you through setting up Claude Code git hooks that will transform how you validate and prepare code for commit.
 
+## Understanding Git Hooks Beyond Pre-Commit
+
+While pre-commit hooks get the most attention, Git supports several hook types that Claude Code can orchestrate:
+
+- **pre-commit**: Runs before a commit is created, ideal for linting and code formatting
+- **commit-msg**: Validates commit message format (conventional commits, ticket references)
+- **pre-push**: Executes before code is pushed to remote, perfect for running full test suites
+- **post-merge**: Runs after a successful merge, useful for automatic dependency installation
+
+Claude Code can serve as the intelligent orchestrator for all these hooks, interpreting your natural language instructions and executing complex automation sequences.
+
 ## Understanding the Pre-Commit Framework
 
 The pre-commit framework provides a standardized way to manage and maintain multi-language pre-commit hooks. Rather than writing shell scripts from scratch, pre-commit lets you define your validation pipeline in a simple YAML configuration file. This approach works exceptionally well with Claude Code because you can use existing skills while adding custom checks tailored to your project needs.

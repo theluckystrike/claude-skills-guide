@@ -52,6 +52,24 @@ The actual work begins, but it's executed in manageable chunks. Rather than atte
 **Phase 4: Verification**
 Finally, Claude Code verifies the results—checking that all content was migrated, formatting was applied correctly, and links and references work properly.
 
+## Layer-by-Layer Architecture Decomposition
+
+For complex software projects, a layer-by-layer approach works exceptionally well. Instead of asking for an entire application at once, provide a phased approach:
+
+```
+Phase 1: Design the data layer
+- Define User, Session, and AuditLog models
+- Create migration scripts for PostgreSQL
+- Include indexes for common query patterns
+
+Phase 2: Build the API layer
+- Implement REST endpoints for auth operations
+- Add request validation and error handling
+- Include rate limiting for login endpoints
+```
+
+This layered approach lets Claude focus on one concern at a time, producing higher quality code with fewer integration issues. Before starting implementation, identify dependencies between components and order the work from most independent to most dependent.
+
 ## Practical Examples with Claude Code Skills
 
 ### Example 1: Creating a Comprehensive Report

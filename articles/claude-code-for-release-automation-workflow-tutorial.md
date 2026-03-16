@@ -39,6 +39,18 @@ Several Claude skills enhance release automation capabilities. Install the core 
 
 Each skill brings specific capabilities. The semantic versioning skill handles version calculations following SemVer conventions. The GitHub Actions skill enables workflow file generation and management. The npm publish skill streamlines package distribution.
 
+### Configuring GitHub Authentication
+
+Before automating releases, configure secure authentication. Claude Code needs appropriate GitHub credentials to push tags, create releases, and trigger workflows:
+
+```bash
+# Generate a personal access token with repo permissions
+gh auth token
+# Or create via GitHub Settings > Developer settings > Personal access tokens
+```
+
+For organizations, consider GitHub Apps with fine-grained permissions instead of personal tokens. This provides better audit trails and allows revoking access without affecting other workflows.
+
 ### Configuring Environment Variables
 
 Release workflows require secure credential handling. Store sensitive values as environment variables rather than hardcoding them:

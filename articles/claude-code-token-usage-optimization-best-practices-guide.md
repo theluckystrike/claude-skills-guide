@@ -51,9 +51,29 @@ When working across multiple files, batch your requests:
 "Explain the architecture: server.js handles Express setup, database.js manages PostgreSQL connections, routes.js defines API endpoints."
 ```
 
+## Load Only What You Need
+
+When reading files, avoid loading entire repositories when you only need specific sections. Tell Claude to read only what's relevant:
+
+```
+Read lines 100-150 of /src/utils/parser.ts and explain the parsing logic.
+```
+
+Not: "Read all files in the src/ directory."
+
+This retrieves only the relevant section, leaving room for meaningful conversation about that specific code. For large codebases, targeted reads dramatically reduce token consumption.
+
 ## Strategic Skill Selection
 
 Claude skills extend functionality but also add to token overhead. Each skill's definition gets loaded into context, so installing many skills simultaneously increases baseline token usage.
+
+Invoke skills directly for targeted tasks rather than explaining your entire workflow in each message:
+
+```
+/pdf extract the table data from requirements.pdf
+/xlsx analyze monthly-sales.xlsx and create a trend chart
+/tdd generate unit tests for src/validators/email.ts
+```
 
 Choose skills strategically based on your current task:
 
