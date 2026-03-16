@@ -171,6 +171,52 @@ pipelines:
 
 This configuration runs comprehensive checks on pull requests, including test generation, quality analysis, and documentation creation. The main branch triggers deployment to your staging environment.
 
+## Advanced Pipeline Patterns
+
+### Intelligent Code Review with PR Context
+
+Use Claude Code to analyze code changes in the context of pull requests, identifying issues that static analyzers miss:
+
+```yaml
+    - step:
+        name: AI-Powered Code Review
+        script:
+          - |
+            claude --print "Review all changed files in ./src in the context of PR $BITBUCKET_PR_ID. Flag issues at medium severity or above and output findings to review-results.json"
+        artifacts:
+          - review-results.json
+```
+
+### Smart Deployment with Health Checks
+
+Implement intelligent deployments that evaluate health metrics and make rollback decisions:
+
+```yaml
+    - step:
+        name: Deploy with AI Health Evaluation
+        deployment: production
+        script:
+          - |
+            ./deploy.sh production
+            sleep 30
+            claude --print "Evaluate deployment health for production using metrics from $METRICS_URL. Output a JSON decision to deployment-decision.json with fields: action (deploy|rollback) and reason."
+            DECISION=$(cat deployment-decision.json | jq -r '.action')
+            if [ "$DECISION" == "rollback" ]; then
+              echo "Claude recommended rollback: $(cat deployment-decision.json | jq -r '.reason')"
+              ./rollback.sh production
+              exit 1
+            fi
+```
+
+### Version Pinning
+
+Ensure reproducible builds by pinning Claude Code versions in your pipeline:
+
+```yaml
+    script:
+      - npm install -g @anthropic-ai/claude-code@1.2.3
+```
+
 ## Best Practices for Pipeline Integration
 
 When integrating Claude Code into Bitbucket Pipelines, consider these practical recommendations:
