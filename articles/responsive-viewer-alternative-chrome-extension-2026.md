@@ -6,7 +6,7 @@ description: "Discover practical alternatives to traditional responsive viewer e
 date: 2026-03-15
 categories: [guides]
 tags: [chrome-extension, responsive-design, web-development, developer-tools, browser-tools, claude-skills]
-author: "Claude Skills Guide"
+author: theluckystrike
 reviewed: true
 score: 8
 permalink: /responsive-viewer-alternative-chrome-extension-2026/
