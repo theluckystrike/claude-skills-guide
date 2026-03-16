@@ -102,6 +102,60 @@ The inherent randomness of skill outputs can be problematic. Here are practical 
 
 **Chain skills deliberately.** If a skill produces variable code that another skill then processes, the second skill can normalize inconsistencies, reducing overall variation.
 
+## Practical Examples of Output Variation
+
+### Code Generation Approaches
+
+Two requests for "write a function to sort an array" might produce entirely different implementations:
+
+```python
+# Run 1: Using built-in sort
+def sort_array(arr):
+    return sorted(arr)
+
+# Run 2: Manual implementation
+def sort_array(arr):
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[i]:
+                arr[i], arr[j] = arr[j], arr[i]
+    return arr
+```
+
+Both solve the problem, but one is more efficient. The variation is influenced by how the model interprets your request and subtle cues in your prompt.
+
+### Documentation Style
+
+Requesting documentation might alternate between styles:
+
+```javascript
+// Run 1: JSDoc style
+/**
+ * Calculates the sum of two numbers
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns {number} Sum of a and b
+ */
+function add(a, b) {
+  return a + b;
+}
+
+// Run 2: Inline comments style
+// Adds two numbers together and returns the result
+function add(a, b) {
+  return a + b; // simple arithmetic
+}
+```
+
+## When Variation Is Actually Beneficial
+
+The variability isn't just a quirk — it has real advantages:
+
+- **Creative problem-solving**: Different approaches might reveal solutions you hadn't considered
+- **Natural language generation**: Text sounds more human when it isn't perfectly repetitive
+- **Exploration**: You can get multiple perspectives on the same problem by re-asking
+- **Avoiding echo chambers**: Consistent-but-wrong outputs would be more dangerous than varied ones
+
 ## The Practical Reality
 
 For most use cases, the variation in skill outputs isn't a bug — it's a feature. It means Claude skills can adapt to context, offer creative solutions, and avoid getting stuck in repetitive patterns. A `tdd` skill that produces slightly different tests each run is actually providing valuable perspective by approaching your code from different angles.

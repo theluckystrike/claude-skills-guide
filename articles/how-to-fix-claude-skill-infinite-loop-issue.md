@@ -173,6 +173,44 @@ Example of a well-structured iterative skill instruction:
 - If all errors are resolved, stop immediately
 ```
 
+## Diagnosing Hangs: System Resources and Logs
+
+Sometimes a skill appears to loop but is actually stalled due to system constraints. Check resources before assuming a logic bug:
+
+```bash
+# Check available memory
+free -h
+
+# Check disk space
+df -h
+
+# Check CPU usage
+top
+```
+
+Review Claude Code logs for error messages or warnings:
+
+```bash
+# macOS
+log show --predicate 'process == "claude"' --last 1h
+
+# Linux
+journalctl --user -u claude --since "1 hour ago"
+```
+
+If a skill depends on missing MCP tools, it may hang waiting for responses. Run `/mcp` inside a Claude Code session to verify available tools match what the skill requires.
+
+### Clearing Corrupted Cache
+
+Claude Code caches skill data, which can become corrupted and cause repeated hangs:
+
+```bash
+rm -rf ~/.claude/skills/cache/
+rm -rf ~/.claude/skills/state/
+```
+
+Restart Claude Code after clearing these directories.
+
 ## Emergency Recovery After a Loop
 
 If a loop consumed significant tokens or left your codebase in a partial state:

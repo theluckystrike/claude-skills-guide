@@ -159,6 +159,74 @@ services:
 
 Deploy this locally, then configure your Chrome extension to point to `http://localhost:8010`. All text processing happens on your machine.
 
+## Integrating Grammar Checking into Your Development Workflow
+
+Beyond browser extensions, developers benefit from grammar checking integrated into their primary tools.
+
+### VS Code Extensions
+
+```json
+// Recommended VS Code extensions for writing
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "DavidAnson.vscode-markdownlint",
+    "errata-ai.vale-vscode"
+  ]
+}
+```
+
+The Code Spell Checker extension catches typos in code and comments. Markdownlint ensures documentation follows consistent formatting. Vale provides grammar checking with customizable rules.
+
+### Git Hooks for Commit Messages
+
+Poor commit messages make project history harder to navigate. Add a pre-commit hook to check message quality:
+
+```bash
+#!/bin/bash
+# .git/hooks/commit-msg
+
+message=$(cat "$1")
+min_length=10
+
+if [ ${#message} -lt $min_length ]; then
+  echo "Commit message too short. Minimum $min_length characters."
+  exit 1
+fi
+
+if ! echo "$message" | grep -qE "^[A-Z]"; then
+  echo "Commit message should start with a capital letter"
+  exit 1
+fi
+```
+
+### CI/CD Integration
+
+Run grammar checks as part of your continuous integration pipeline:
+
+```yaml
+# .github/workflows/docs.yml
+name: Documentation Check
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Vale
+        uses: errata-ai/vale-action@v1
+        with:
+          files: docs/
+```
+
+Vale supports multiple style guides and integrates with GitHub Actions, making it effective for teams maintaining documentation standards.
+
+## Privacy-First Considerations
+
+When evaluating grammar tools, consider where your data travels. **Local processing** options like browser-based tools never send data externally. **Self-hosted solutions** like LanguageTool let you control data while maintaining feature richness. **Open-source alternatives** allow code review of processing logic so you can verify what happens to your text.
+
 ## Conclusion
 
 The Grammarly alternative landscape in 2026 offers strong options for developers and power users. LanguageTool provides the best overall combination of features, open-source availability, and self-hosting capability. After the Deadline remains the top choice for complete privacy and custom rule development. Scribe delivers AI-powered assistance at a lower cost than Grammarly.

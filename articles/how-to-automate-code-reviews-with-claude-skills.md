@@ -217,6 +217,38 @@ and component quality (frontend-design). Give me a prioritized list of issues.
 
 This single prompt triggers all three skill contexts. Claude applies each skill's lens to the same codebase and produces one consolidated review — more efficient than running three separate prompts.
 
+## Spec Compliance with the PDF Skill
+
+For teams maintaining API specifications or architecture decision records as PDFs, the `/pdf` skill lets you compare implementations against specs during review:
+
+```
+/pdf Load API-spec-v2.pdf and check if the new /users/profile endpoint matches the spec
+```
+
+Claude compares the implementation against the specification and flags deviations — missing fields, wrong status codes, undocumented parameters. The `/docx` skill works identically for Word documents.
+
+Pair this with a CLAUDE.md security checklist so your security requirements become implicit context for every review:
+
+```markdown
+# Security Review Checklist (CLAUDE.md)
+
+When reviewing authentication code:
+- Check for hardcoded secrets or API keys
+- Verify JWT expiration is set and validated
+- Confirm password hashing uses bcrypt or argon2 (never MD5/SHA1)
+- Check for SQL injection via unsanitized inputs
+```
+
+## Establishing a Consistent Review Protocol
+
+Consistency matters more than comprehensiveness. Pick two or three skills and apply them to every PR rather than running all four irregularly:
+
+1. **`/tdd`** on every PR that touches business logic
+2. **CLAUDE.md security checklist** on every PR touching authentication or data handling
+3. **`/pdf`** or **`/docx`** only when a spec document is directly relevant
+
+Document this protocol in your `CLAUDE.md` so every team member's Claude Code session starts with the same review expectations. Over time, the consistency compounds — reviewers stop re-explaining context, and Claude's suggestions become more calibrated to your codebase's patterns.
+
 ## What Automated Review Catches (and What It Doesn't)
 
 Claude skills handle mechanical checks well: missing tests, accessibility attributes, hook dependency arrays, naming convention violations, file length limits. They are less reliable for: architectural trade-offs, business logic correctness, security vulnerabilities in complex flows, and cross-service consistency.

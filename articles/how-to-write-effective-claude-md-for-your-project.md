@@ -122,6 +122,42 @@ Example component structure:
 
 When you then ask Claude to create a new component, it automatically follows these patterns without additional prompting.
 
+## Structure Information with the Pyramid Principle
+
+The most effective CLAUDE.md files structure information like an inverted pyramid — lead with the most critical information and progressively add detail. Sections appearing earlier carry more weight in determining overall behavior. Place your project type, framework, and primary language at the very top, followed immediately by your most important conventions. Save detailed architecture explanations for later sections.
+
+## Token Budget Strategy
+
+Every token in your CLAUDE.md competes for attention. Treat this as a resource allocation problem. Aim for 800–1200 words as a general maximum. If you find yourself exceeding this, move detailed documentation to separate files and reference them. Claude Code can read additional files when explicitly instructed.
+
+## Document Command Aliases and Scripts
+
+One of the most valuable yet underutilized CLAUDE.md features is documenting your project's npm scripts and custom commands. Many teams have intricate build processes or deployment scripts that Claude cannot discover independently:
+
+```markdown
+## Available Commands
+
+- npm run dev: Start development server with hot reload
+- npm run db:migrate: Run Prisma migrations
+- npm run db:seed: Seed database with test data
+- npm run lint: Run ESLint with auto-fix
+- npm run test:watch: Run tests in watch mode
+- npm run deploy:staging: Deploy to staging environment
+```
+
+## Legacy Code Guidelines
+
+Projects with existing codebases face unique challenges. Explicitly address how Claude should interact with older patterns:
+
+```markdown
+## Legacy Code Guidelines
+
+- Do NOT refactor legacy code in src/legacy/ unless explicitly asked
+- Follow existing patterns in legacy modules even if they violate current conventions
+- New code should use modern patterns but remain compatible with legacy interfaces
+- Database migrations in src/migrations/ should never be modified after creation
+```
+
 ## Common Mistakes to Avoid
 
 Avoid making your CLAUDE.md too verbose. Claude works best with concise, scannable instructions. If your file exceeds 200 lines, consider splitting it into focused files like `CLAUDE.md` for high-level context and `.claude/rules/` for detailed patterns. The [CLAUDE.md best practices for large codebases guide](/claude-skills-guide/claude-md-best-practices-for-large-codebases/) explores this multi-file approach in depth.
