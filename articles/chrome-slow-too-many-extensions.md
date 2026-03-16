@@ -6,6 +6,10 @@ description: "Discover why Chrome slows down with too many extensions. Practical
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-slow-too-many-extensions/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

@@ -6,6 +6,10 @@ description: "Find the best Buffer alternatives with Chrome extensions for socia
 date: 2026-03-15
 author: theluckystrike
 permalink: /buffer-alternative-chrome-extension-2026/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Buffer Alternative Chrome Extension 2026
