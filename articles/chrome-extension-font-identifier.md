@@ -151,6 +151,35 @@ function findClosestFont(targetFamily, knownFonts) {
 }
 ```
 
+### Stylesheet Scanning for Web Fonts
+
+Beyond the Font Loading API, you can scan stylesheets directly for `@font-face` rules to determine whether an element uses a web font:
+
+```javascript
+function checkIfWebFont(element) {
+  const fontFamily = getComputedStyle(element).fontFamily;
+  for (const sheet of document.styleSheets) {
+    try {
+      const rules = sheet.cssRules || sheet.rules;
+      for (const rule of rules) {
+        if (rule.type === CSSRule.FONT_FACE_RULE) {
+          if (rule.style.fontFamily.includes(fontFamily)) {
+            return true;
+          }
+        }
+      }
+    } catch (e) {
+      // Cross-origin stylesheets may throw
+    }
+  }
+  return false;
+}
+```
+
+### Canvas-Based Font Detection
+
+When standard APIs don't reveal font names (e.g., with subsetted or custom-named fonts), canvas-based detection provides a workaround. By rendering known text to an off-screen canvas with different fonts and comparing the pixel output, you can match an unknown font against a database of known typefaces. Each font renders distinctive glyph shapes, producing measurable differences in the canvas bitmap. This technique is especially useful when fonts use custom names through `font-display` swap mechanisms or when subsetting changes the exposed font name.
+
 ## AI-Powered Visual Font Detection
 
 Beyond CSS-based detection, some extensions use machine learning to visually identify fonts from rendered text. The pipeline involves text region detection, visual feature extraction (stroke width, serifs, x-height) using CNNs, font matching against trained embeddings, and confidence-ranked results.
