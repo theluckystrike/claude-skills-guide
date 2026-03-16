@@ -4,7 +4,7 @@ layout: default
 title: "Chrome Proxy Slow: Troubleshooting Guide for Developers"
 description: "Diagnose and fix Chrome proxy slow connections. Practical solutions for developers and power users dealing with proxy latency, timeouts, and."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /chrome-proxy-slow/
 reviewed: true
 score: 8
