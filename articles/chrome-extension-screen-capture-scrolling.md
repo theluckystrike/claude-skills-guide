@@ -5,6 +5,10 @@ description: "Learn how to capture full-page screenshots with automatic scrollin
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-screen-capture-scrolling/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Screen Capture with Scrolling: A Developer's Guide
