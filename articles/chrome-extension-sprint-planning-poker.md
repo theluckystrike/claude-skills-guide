@@ -1,324 +1,125 @@
 ---
-
-
 layout: default
-title: "Chrome Extension Sprint Planning Poker: Build Your Own."
-description: "Learn how to build a Chrome extension for sprint planning poker. Practical code examples, architecture patterns, and implementation strategies for."
+title: "Chrome Extension Sprint Planning Poker"
+description: "A practical guide to using Chrome extensions for sprint planning poker in agile teams. Learn how to run estimation sessions directly in your browser with real-time collaboration features."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-extension-sprint-planning-poker/
-reviewed: true
-score: 8
-categories: [guides]
-tags: [chrome-extension, claude-skills]
 ---
 
+# Chrome Extension Sprint Planning Poker
 
-# Chrome Extension Sprint Planning Poker: Build Your Own Agile Estimation Tool
+Sprint planning poker has become a staple in agile software development, helping teams estimate user stories with shared, anonymous voting. While dedicated web applications exist, Chrome extensions offer a convenient alternative that runs directly in your browser without requiring additional software installation or account creation.
 
-Sprint planning poker has become an essential tool for Agile teams seeking consensus on story point estimates. While many teams rely on standalone web applications, building a Chrome extension for sprint planning poker offers unique advantages: offline capability, tight integration with project management tools, and complete control over the user experience. This guide walks you through building a functional sprint planning poker Chrome extension from scratch.
+## What Is Sprint Planning Poker
 
-## Why Build a Chrome Extension for Sprint Planning Poker
+Sprint planning poker, also known as estimation poker, is a consensus-based technique for estimating the effort required for user stories. Each team member receives a deck of cards with values like 0, 1, 2, 3, 5, 8, 13, 21, and so on—representing story points. During a planning session, the product owner describes a story, team members privately select their estimate, and everyone reveals their choice simultaneously.
 
-Browser-based planning poker tools require internet connectivity and often come with feature limitations or subscription costs. A custom Chrome extension gives you several benefits that standalone tools cannot match.
+The beauty of this approach lies in anonymity. When estimates differ significantly, it sparks valuable discussion about requirements, edge cases, and technical complexity that might otherwise go unspoken. Teams often discover hidden assumptions during these conversations.
 
-First, you gain offline functionality. Teams working in locations with unreliable internet or those who prefer local-first tools can continue estimating stories without disruption. Second, you can integrate directly with your existing project management system—whether Jira, Linear, or a custom solution—by reading page content and injecting estimates automatically. Third, you own the data. No third-party servers store your estimation history, making compliance with data residency requirements straightforward.
+## Chrome Extension Options for Planning Poker
 
-The extension architecture also allows you to use Chrome's native capabilities, including storage synchronization across devices, native notifications, and the ability to interact with any webpage your team uses.
+Several Chrome extensions bring planning poker functionality directly to your browser. Here's what to look for when selecting one:
 
-## Project Structure and Manifest Configuration
+### Key Features to Consider
 
-Every Chrome extension begins with a manifest file that defines capabilities and permissions. For a sprint planning poker extension, you'll need the following structure:
+**Real-time Synchronization**: The extension must update all participants' votes instantly when cards are revealed. Look for extensions that use WebSockets or polling to maintain live connection.
 
-```
-sprint-poker-extension/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── content.js
-├── background.js
-├── styles.css
-└── icons/
-    ├── icon16.png
-    ├── icon48.png
-    └── icon128.png
-```
+**Room Management**: Most extensions work through room codes. The host creates a room and shares a code with teammates. Verify that the room system supports your team size.
 
-Your manifest.json defines the extension's configuration:
+**Card Decks**: Standard Fibonacci sequences (1, 2, 3, 5, 8, 13, 21) work well, but some teams prefer linear scales or t-shirt sizes. Extensions with customizable decks offer flexibility.
 
-```json
-{
-  "manifest_version": 3,
-  "name": "Sprint Planning Poker",
-  "version": "1.0.0",
-  "description": "Agile estimation tool for sprint planning",
-  "permissions": [
-    "storage",
-    "activeTab",
-    "notifications"
-  ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
-  },
-  "background": {
-    "service_worker": "background.js"
-  },
-  "content_scripts": [{
-    "matches": ["<all_urls>"],
-    "js": ["content.js"]
-  }]
-}
-```
+**Voting Mechanics**: Some extensions show cards face-down until reveal, while others display participant status (voted/not voted) without showing estimates. Choose based on your team's preference for anonymity versus transparency during voting.
 
-The manifest declares three key permissions. Storage allows persisting estimation history and user preferences across sessions. ActiveTab enables the extension to interact with the currently visible page for integration purposes. Notifications provide feedback when team members submit estimates.
+### Using Planning Poker Extensions
 
-## Core Functionality: The Estimation Interface
+The typical workflow with a planning poker Chrome extension looks like this:
 
-The popup interface serves as the primary user interaction point. When clicked, it displays the estimation interface where users select their vote:
+1. **Install the extension** from the Chrome Web Store
+2. **Create or join a room** using a generated room code
+3. **Present a user story** from your product backlog
+4. **Team members select their estimates** by clicking cards
+5. **Host reveals** all votes simultaneously
+6. **Discuss discrepancies** when estimates vary widely
+7. **Re-vote or agree on final estimate** and record the result
 
-```html
-<!-- popup.html -->
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="poker-container">
-    <h2>Planning Poker</h2>
-    <div class="session-info">
-      <input type="text" id="sessionId" placeholder="Session ID">
-      <button id="joinSession">Join</button>
-    </div>
-    <div class="card-selection">
-      <button class="poker-card" data-value="1">1</button>
-      <button class="poker-card" data-value="2">2</button>
-      <button class="poker-card" data-value="3">3</button>
-      <button class="poker-card" data-value="5">5</button>
-      <button class="poker-card" data-value="8">8</button>
-      <button class="poker-card" data-value="13">13</button>
-      <button class="poker-card" data-value="21">21</button>
-      <button class="poker-card" data-value="?">?</button>
-    </div>
-    <div class="vote-status" id="voteStatus"></div>
-    <button id="revealVotes" class="action-btn">Reveal Votes</button>
-    <button id="clearVotes" class="action-btn secondary">Clear</button>
-  </div>
-  <script src="popup.js"></script>
-</body>
-</html>
-```
+For teams using Jira or similar project management tools, some extensions integrate directly, allowing you to estimate stories without switching contexts.
 
-The card values follow the standard Fibonacci sequence used in many Agile teams, though you can customize these based on your team's preferences.
+## Practical Implementation Examples
 
-## Managing State and Synchronization
+### Setting Up a Quick Estimation Session
 
-The extension needs to handle both local state and synchronization with other team members. Chrome's storage API provides the foundation:
+When you need to run an ad-hoc estimation session, Chrome extensions provide immediate access. Unlike web applications that might require account setup, extensions install once and remain available in your browser toolbar.
+
+Here's a typical room creation flow:
 
 ```javascript
-// background.js - handles cross-tab communication
-chrome.storage.sync.get(['votes', 'sessionId'], (result) => {
-  const votes = result.votes || {};
-  const sessionId = result.sessionId || null;
-  
-  // Broadcast vote updates to all extension views
-  chrome.runtime.sendMessage({
-    type: 'VOTE_UPDATE',
-    votes: votes,
-    sessionId: sessionId
-  });
-});
-
-// Listen for votes from popup
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.type === 'SUBMIT_VOTE') {
-    const { sessionId, userId, vote, userName } = message;
-    
-    chrome.storage.sync.get(['votes'], (result) => {
-      const votes = result.votes || {};
-      votes[userId] = { vote, userName, timestamp: Date.now() };
-      
-      chrome.storage.sync.set({ votes }, () => {
-        // Notify all connected clients
-        chrome.runtime.sendMessage({
-          type: 'VOTE_UPDATE',
-          votes: votes,
-          sessionId: sessionId
-        });
-        sendResponse({ success: true });
-      });
-    });
-    return true;
-  }
-});
+// Most extensions provide a simple interface
+// 1. Click the extension icon
+// 2. Select "Create Room"
+// 3. Share the room code with your team
+// 4. Wait for team members to join
+// 5. Start estimating
 ```
 
-This pattern uses Chrome's message passing system to keep all extension views synchronized. When a user submits a vote, the background script updates storage and broadcasts the change to every open popup and content script.
+### Managing Remote Teams
 
-## Content Script Integration
+For distributed teams across time zones, planning poker Chrome extensions work particularly well. Since participants join through room codes, geographic location becomes irrelevant. The extension handles the synchronization, ensuring everyone sees votes simultaneously regardless of network latency.
 
-For deeper integration with project management tools, the content script can read page context and suggest estimations:
+When running remote sessions, establish clear protocols:
+
+- Wait for all participants to join before presenting stories
+- Use the "show votes" feature intentionally to prompt discussion
+- Designate a facilitator to keep the session focused
+
+### Integrating with Sprint Planning Workflows
+
+If your team uses Jira, you can estimate directly within that environment. Some Chrome extensions detect Jira story pages and allow estimation without leaving the ticket:
 
 ```javascript
-// content.js
-// Extracts story information from Jira, Linear, or similar tools
-function extractStoryInfo() {
-  const storyPatterns = {
-    'jira': {
-      id: '[data-testid="issue-key"]',
-      title: '[data-testid="issue-title"]',
-      description: '[data-testid="issue-description"]'
-    },
-    'linear': {
-      id: '[data-issue-id]',
-      title: '[data-keyboard-shortcut="Issue: View issue details"]',
-      description: '.issue-description'
-    }
-  };
-  
-  // Detect which tool is active
-  for (const [tool, selectors] of Object.entries(storyPatterns)) {
-    const element = document.querySelector(selectors.id);
-    if (element) {
-      return {
-        tool: tool,
-        id: element.textContent.trim(),
-        title: document.querySelector(selectors.title)?.textContent.trim(),
-        description: document.querySelector(selectors.description)?.textContent.trim()
-      };
-    }
-  }
-  return null;
-}
-
-// Send story info to popup when requested
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.type === 'GET_STORY_INFO') {
-    const storyInfo = extractStoryInfo();
-    sendResponse(storyInfo);
-  }
-});
+// When viewing a Jira story, the extension
+// may add an "Estimate" button that:
+// 1. Creates or joins a planning poker room
+// 2. Uses the story title as the topic
+// 3. Syncs the final estimate back to Jira
 ```
 
-This enables the extension to display relevant story context directly in the estimation interface, helping team members make more informed estimates.
+Not all extensions support this integration, so verify compatibility with your specific Jira setup before relying on it.
 
-## Styling the Extension
+## Limitations and Workarounds
 
-A clean, functional design improves adoption. Use CSS variables for theming and keep the interface focused:
+Chrome extensions for planning poker come with constraints worth understanding:
 
-```css
-/* styles.css */
-:root {
-  --primary: #4f46e5;
-  --primary-hover: #4338ca;
-  --bg: #ffffff;
-  --surface: #f9fafb;
-  --text: #111827;
-  --border: #e5e7eb;
-}
+**Browser Dependency**: All participants must use Chrome or a Chromium-based browser. If team members use Firefox or Safari, they cannot participate through the extension.
 
-.poker-container {
-  width: 320px;
-  padding: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
+**Internet Connection**: These tools require stable internet for real-time synchronization. Offline usage isn't supported.
 
-.card-selection {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin: 16px 0;
-}
+**Feature Parity**: Compared to dedicated planning poker platforms, Chrome extensions often lack advanced features like retrospective tracking, export capabilities, or detailed analytics.
 
-.poker-card {
-  padding: 12px 8px;
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg);
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
+**Session Persistence**: Room data typically disappears when the session ends. If you need historical records, manually document estimates or use a platform with data retention.
 
-.poker-card:hover {
-  border-color: var(--primary);
-  background: var(--surface);
-}
+## Alternative Approaches
 
-.poker-card.selected {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-}
-```
+When Chrome extensions don't fit your needs, consider these alternatives:
 
-## Local Storage for Offline Support
+**Dedicated Web Applications**: Platforms like Planning Poker, Scrum Poker, or Songkick offer more robust features, cross-browser support, and data persistence. The tradeoff involves additional accounts and potential costs.
 
-Implementing offline capability requires careful handling of storage and synchronization logic:
+**Standalone Tools**: Some teams use physical card decks for in-person sessions or video conferencing with screen sharing. While less convenient for remote teams, these approaches don't depend on browser extensions.
 
-```javascript
-// popup.js - offline vote handling
-class VoteManager {
-  constructor() {
-    this.offlineQueue = [];
-    this.isOnline = navigator.onLine;
-    
-    window.addEventListener('online', () => this.syncOfflineVotes());
-    window.addEventListener('offline', () => this.handleOffline());
-  }
-  
-  async submitVote(sessionId, userId, vote) {
-    const voteData = {
-      sessionId,
-      userId,
-      vote,
-      timestamp: Date.now(),
-      synced: this.isOnline
-    };
-    
-    if (!this.isOnline) {
-      this.offlineQueue.push(voteData);
-      this.saveToLocalStorage();
-      return { status: 'offline', queued: true };
-    }
-    
-    return this.submitToServer(voteData);
-  }
-  
-  async syncOfflineVotes() {
-    const queued = this.loadFromLocalStorage();
-    for (const vote of queued) {
-      await this.submitToServer(vote);
-    }
-    this.offlineQueue = [];
-    this.clearLocalStorage();
-  }
-}
-```
+**Custom Solutions**: Development teams with specific requirements sometimes build custom estimation tools integrated with their internal systems. This approach requires development resources but delivers precisely tailored functionality.
 
-This class queues votes locally when offline and automatically syncs them when connectivity returns, ensuring no estimation data is lost.
+## Getting Started
 
-## Deployment and Testing
+To begin using a planning poker Chrome extension:
 
-To test your extension during development, navigate to `chrome://extensions` in Chrome, enable Developer mode, and click "Load unpacked". Select your extension directory. The extension reloads automatically when you make changes to the files.
+1. Search the Chrome Web Store for "planning poker" or "sprint planning poker"
+2. Review ratings and recent reviews to gauge reliability
+3. Install the extension and create a test room
+4. Have a teammate join using another browser
+5. Run a trial estimation to verify synchronization works
 
-For team distribution, package the extension using the "Pack extension" button in the developer tools, which generates a .crx file. You can distribute this directly to team members or publish to the Chrome Web Store after creating a developer account.
+Most extensions work immediately without configuration. If your team adopts planning poker regularly, you'll quickly identify which features matter most for your workflow.
 
-## Summary
-
-Building a Chrome extension for sprint planning poker gives your team complete control over the estimation experience. The architecture demonstrated here—using manifest V3, Chrome storage APIs, and content scripts—provides a solid foundation that scales from simple local tools to fully synchronized team applications. You can extend this further with features like estimation history tracking, integration with more project management tools, or real-time collaboration through WebSockets.
-
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+The convenience of browser-based planning poker makes it accessible for teams wanting to try estimation games without committing to additional software. As your team grows more comfortable with sprint estimation, you can evaluate whether the extension meets your needs or whether a more full-featured platform would serve better.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
