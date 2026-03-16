@@ -5,7 +5,7 @@ description: "Learn how to automate Confluence workflows using Claude Code CLI w
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-confluence-workflow-tutorial-guide/
-categories: [Development, Automation, Atlassian]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
