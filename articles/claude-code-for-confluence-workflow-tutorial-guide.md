@@ -1,276 +1,241 @@
 ---
-
 layout: default
 title: "Claude Code for Confluence Workflow Tutorial Guide"
-description: "Learn how to build Claude skills that integrate with Confluence to automate documentation workflows, create pages from templates, and streamline team."
+description: "Learn how to automate Confluence workflows using Claude Code CLI with practical examples and actionable advice for developers."
 date: 2026-03-15
-categories: [guides]
-tags: [claude-code, claude-skills]
-author: "Claude Skills Guide"
+author: Claude Skills Guide
 permalink: /claude-code-for-confluence-workflow-tutorial-guide/
-reviewed: true
-score: 8
+categories: [Development, Automation, Atlassian]
+tags: [claude-code, claude-skills]
 ---
 
-
+{% raw %}
 # Claude Code for Confluence Workflow Tutorial Guide
 
-[Confluence](https://www.atlassian.com/software/confluence) is the backbone of documentation for countless development teams, yet creating and maintaining pages remains a manual, time-consuming process. This guide shows you how to build Claude skills that integrate directly with Confluence's REST API to automate page creation, apply templates, manage spaces, and keep your team wiki always up-to-date.
+Confluence is a powerful collaboration platform, but managing content workflows manually can be time-consuming. This guide shows you how to leverage Claude Code CLI to automate Confluence workflows, saving hours of repetitive work and ensuring consistency across your team's documentation.
 
-## Why Integrate Claude with Confluence?
+## Understanding Claude Code and Confluence Integration
 
-Manual Confluence workflows typically involve logging into the browser, navigating to the right space, creating a new page, applying formatting, and manually updating any related pages. This process breaks down at scale:
+Claude Code is Anthropic's command-line interface that brings AI assistance directly to your terminal. When combined with Confluence's REST API, you can create sophisticated automation scripts that handle page creation, updates, space management, and complex workflow approvals.
 
-- **Inconsistent templates**: Different team members apply different formatting standards
-- **Outdated documentation**: Pages rarely get updated after initial creation
-- **Time sink**: Engineers spend hours on administrative documentation tasks
+Before diving in, ensure you have:
+- Claude Code installed (`brew install claude-cli` or download from anthropic.com)
+- Confluence Cloud or Server with API access
+- Basic familiarity with JavaScript/Node.js
 
-A Claude skill for Confluence can handle all of this automatically, following your team's conventions precisely while you focus on writing the actual content.
+## Setting Up Your Development Environment
 
-## Prerequisites and Setup
-
-Before building a Confluence integration skill, ensure you have:
-
-1. A Confluence Cloud or Data Center instance with API access
-2. An API token (for Cloud) or personal access token (for Data Center)
-3. Your Confluence domain and space keys
-
-You'll store credentials in environment variables rather than hardcoding them:
+Start by creating a dedicated project directory for your Confluence automation:
 
 ```bash
-export CONFLUENCE_DOMAIN="your-company.atlassian.net"
-export CONFLUENCE_EMAIL="you@company.com"
-export CONFLUENCE_API_TOKEN="your-api-token"
+mkdir confluence-automation && cd confluence-automation
+npm init -y
+npm install @anthropic-ai/claude-code atlassian-api-client dotenv
 ```
 
-For security, never commit API tokens to version control. Consider using a `.env` file with `.gitignore` protection or your system's credential manager.
-
-## Creating Your First Confluence Skill
-
-The foundation of any Confluence skill is the ability to authenticate and make API calls. Here's a basic skill structure:
-
-```yaml
----
-name: confluence-page-creator
-description: Creates new Confluence pages from structured input
-tools: [Bash, Write]
----
-
-# Confluence Page Creator
-
-You help create Confluence pages using the Confluence REST API. When asked to create a page, follow this process:
-
-1. Gather required information: space key, page title, and content
-2. Use the create-page script to add the page to Confluence
-3. Return the URL of the newly created page
-
-## Available Commands
-
-Use the `create-confluence-page` function with these parameters:
-- SPACE_KEY: The Confluence space (e.g., "ENG", "TEAM")
-- TITLE: Page title
-- CONTENT: Page content in Confluence storage format
-```
-
-Now you need the underlying bash script that performs the actual API call:
+Create a `.env` file to store your credentials securely:
 
 ```bash
-#!/bin/bash
-# create-confluence-page.sh
+CONFLUENCE_DOMAIN=yourcompany.atlassian.net
+CONFLUENCE_EMAIL=your.email@company.com
+CONFLUENCE_API_TOKEN=your_api_token_here
+```
 
-SPACE_KEY="$1"
-TITLE="$2"
-CONTENT="$3"
+## Creating Your First Automated Page Creation
 
-DOMAIN="${CONFLUENCE_DOMAIN}"
-EMAIL="${CONFLUENCE_EMAIL}"
-TOKEN="${CONFLUENCE_API_TOKEN}"
+Let's build a simple script that creates a new Confluence page using Claude Code. This foundational example demonstrates the core concepts you'll build upon:
 
-API_RESPONSE=$(curl -s -X POST \
-  "https://${DOMAIN}/wiki/api/v2/pages" \
-  -u "${EMAIL}:${TOKEN}" \
-  -H "Content-Type: application/json" \
-  -d "{
-    \"spaceId\": \"${SPACE_KEY}\",
-    \"status\": \"current\",
-    \"title\": \"${TITLE}\",
-    \"body\": {
-      \"representation\": \"storage\",
-      \"value\": \"${CONTENT}\"
+```javascript
+import { ClaudeCode } from '@anthropic-ai/claude-code';
+import Confluence from 'atlassian-api-client';
+
+const claude = new ClaudeCode();
+const confluence = new Confluence({
+  domain: process.env.CONFLUENCE_DOMAIN,
+  email: process.env.CONFLUENCE_EMAIL,
+  token: process.env.CONFLUENCE_API_TOKEN
+});
+
+async function createMeetingNotes(spaceKey, meetingTitle, attendees) {
+  const content = `
+# ${meetingTitle}
+
+## Attendees
+${attendees.map(a => `- ${a}`).join('\n')}
+
+## Agenda
+<!-- Add agenda items here -->
+
+## Action Items
+- [ ]
+
+## Notes
+`;
+
+  const result = await confluence.pages.create({
+    space: spaceKey,
+    title: `Meeting: ${meetingTitle}`,
+    content: content,
+    status: 'current'
+  });
+
+  return result;
+}
+```
+
+Run this script with Claude Code assistance:
+
+```bash
+npx claude run --script create-meeting-notes.js
+```
+
+## Building Multi-Step Approval Workflows
+
+Real-world documentation often requires approval chains. Here's how to automate a review workflow:
+
+```javascript
+async function initiateReviewWorkflow(pageId, reviewers) {
+  // Add reviewers as page watchers
+  for (const reviewer of reviewers) {
+    await confluence.pages.addWatcher(pageId, reviewer);
+  }
+
+  // Create a comment requesting review
+  await confluence.comments.create(pageId, {
+    body: {
+      version: 1,
+      value: `📋 **Review Requested**\n\nPlease review this document by end of day.`
     }
-  }")
+  });
 
-echo "$API_RESPONSE"
+  // Update page status to "in review"
+  await confluence.pages.update(pageId, {
+    status: 'current',
+    title: `[DRAFT] ${await getPageTitle(pageId)}`
+  });
+
+  console.log(`Review initiated for page ${pageId}`);
+}
 ```
 
-Make this script executable and place it in your skills' scripts directory:
+## Automating Content Sync Across Spaces
 
-```bash
-chmod +x /path/to/your/skills/scripts/create-confluence-page.sh
-```
+A common use case is keeping template content synchronized across multiple spaces. This script uses Claude Code to intelligently update pages while preserving local modifications:
 
-## Working with Confluence Storage Format
+```javascript
+async function syncTemplateToSpaces(templatePageId, targetSpaces) {
+  const template = await confluence.pages.get(templatePageId);
+  const templateContent = template.body.storage.value;
 
-Confluence uses a storage format based on XHTML. Your skill needs to handle this format correctly. The most common elements you'll need:
+  for (const space of targetSpaces) {
+    const existingPage = await findPageByTitle(space, template.title);
 
-```xml
-<h1>Page Title</h1>
-<p>Paragraph text with <strong>bold</strong> and <em>italic</em>.</p>
-<h2>Subsection</h2>
-<ul>
-  <li>Bullet point one</li>
-  <li>Bullet point two</li>
-</ul>
-<ac:structured-macro ac:name="code">
-  <ac:plain-text-body><![CDATA[your code here]]></ac:plain-text-body>
-</ac:structured-macro>
-<ac:link ac:title="Related Page"><ri:page ri:content-title="Another Page"/></ac:link>
-```
+    if (existingPage) {
+      const hasLocalChanges = await checkForLocalModifications(
+        existingPage.id,
+        templateContent
+      );
 
-For complex pages, consider building content as markdown first, then converting to Confluence storage format using a tool like Pandoc:
-
-```bash
-pandoc -f markdown -t confluence -o output.html input.md
-```
-
-## Building a Meeting Notes Automation Skill
-
-One of the most practical Confluence automations is a skill that generates meeting notes from a template. Here's how to build it:
-
-```yaml
----
-name: meeting-notes
-description: Creates formatted meeting notes in Confluence
-tools: [Bash, Write]
----
-
-# Meeting Notes Generator
-
-You create standardized meeting notes in Confluence using the team's template.
-
-## Process
-
-When asked to create meeting notes:
-
-1. Ask for: Meeting title, date, attendees, and agenda items
-2. Use the `create-meeting-notes` script to generate and store the page
-3. Provide the Confluence URL to the user
-
-## Template Structure
-
-Use this structure for all meeting notes:
-- **Attendees**: List all participants
-- **Agenda**: Bullet points of topics to cover
-- **Discussion**: Main notes section
-- **Action Items**: Tasks with owners and due dates
-- **Next Meeting**: Scheduled follow-up time
-```
-
-The corresponding script populates your template:
-
-```bash
-#!/bin/bash
-# create-meeting-notes.sh
-
-SPACE_KEY="$1"
-MEETING_TITLE="$2"
-DATE="$3"
-ATTENDEES="$4"
-
-CONTENT="<h1>${MEETING_TITLE}</h1>
-<p><strong>Date:</strong> ${DATE}</p>
-<p><strong>Attendees:</strong> ${ATTENDEES}</p>
-
-<h2>Agenda</h2>
-<p>Add agenda items here...</p>
-
-<h2>Discussion</h2>
-<p>Meeting notes go here...</p>
-
-<h2>Action Items</h2>
-<table>
-  <tbody>
-    <tr>
-      <th>Task</th>
-      <th>Owner</th>
-      <th>Due Date</th>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Next Meeting</h2>
-<p>TBD</p>"
-
-./create-confluence-page.sh "$SPACE_KEY" "$MEETING_TITLE" "$CONTENT"
-```
-
-## Automating Technical Documentation Updates
-
-For engineering teams, keeping runbooks and API docs current is critical. A skill can automate this:
-
-```yaml
----
-name: update-runbook
-description: Updates Confluence runbooks with latest deployment info
-tools: [Bash, Write, read_file]
----
-
-# Runbook Updater
-
-You maintain up-to-date runbooks in Confluence by:
-1. Reading the current page content via API
-2. Identifying sections that need updates (version numbers, URLs, etc.)
-3. Generating updated content
-4. Updating the page in Confluence
-```
-
-This skill uses Confluence's page version API to retrieve existing content, make modifications, and push updates—all while preserving page history and attachments.
-
-## Best Practices for Confluence Skills
-
-When building production Confluence integrations, follow these guidelines:
-
-- **Always use page IDs, not titles**: Page titles can change; IDs are permanent
-- **Handle conflicts**: Check for existing pages with the same title before creating
-- **Implement retry logic**: API calls can fail transiently; wrap in retry logic
-- **Log everything**: Store API responses for debugging failed operations
-- **Respect rate limits**: Confluence enforces API rate limits; space out requests
-- **Use macros sparingly**: Complex macros can break the API; stick to basic elements
-
-## Advanced: Webhooks and Real-Time Updates
-
-For more sophisticated workflows, combine your skill with Confluence webhooks. Set up a webhook to trigger on page updates, then have your skill process changes:
-
-```bash
-# Example webhook handler
-curl -X POST webhook-endpoint \
-  -H "Content-Type: application/json" \
-  -d '{
-    "webhookEvent": "page_updated",
-    "page": {
-      "id": "123456789",
-      "title": "Updated Page",
-      "space": {"key": "ENG"}
+      if (!hasLocalChanges) {
+        await confluence.pages.update(existingPage.id, {
+          body: { storage: { value: templateContent } }
+        });
+        console.log(`Updated ${template.title} in space ${space}`);
+      } else {
+        console.log(`Skipped ${space} - contains local modifications`);
+      }
+    } else {
+      await confluence.pages.create({
+        space: space,
+        title: template.title,
+        body: { storage: { value: templateContent } }
+      });
+      console.log(`Created ${template.title} in space ${space}`);
     }
-  }'
+  }
+}
 ```
 
-This enables scenarios like notifying Slack when critical docs change, automatically translating pages, or triggering CI/CD pipelines from documentation updates.
+## Implementing Scheduled Content Updates
+
+Use cron jobs combined with Claude Code for time-sensitive documentation:
+
+```javascript
+import { schedule } from 'node-cron';
+
+function setupWeeklyReports() {
+  schedule('0 9 * * Monday', async () => {
+    const mondayDate = getLastMonday();
+    const teams = ['Engineering', 'Marketing', 'Sales'];
+
+    for (const team of teams) {
+      await createWeeklyReport(team, mondayDate);
+    }
+  });
+
+  console.log('Weekly report scheduler started');
+}
+```
+
+## Best Practices for Production Workflows
+
+When deploying Claude Code workflows for Confluence in production, follow these guidelines:
+
+**Error Handling**: Always wrap API calls in try-catch blocks and implement retry logic for transient failures. Confluence's rate limits mean you should add exponential backoff:
+
+```javascript
+async function withRetry(fn, maxRetries = 3) {
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      return await fn();
+    } catch (error) {
+      if (i === maxRetries - 1) throw error;
+      await sleep(Math.pow(2, i) * 1000);
+    }
+  }
+}
+```
+
+**Audit Logging**: Maintain logs of all automated actions for compliance and debugging:
+
+```javascript
+function logAction(action, details) {
+  const logEntry = {
+    timestamp: new Date().toISOString(),
+    action,
+    details,
+    user: process.env.CONFLUENCE_EMAIL
+  };
+  console.log(JSON.stringify(logEntry));
+}
+```
+
+**Security**: Never commit API tokens to version control. Use environment variables or secrets management tools, and rotate tokens regularly.
+
+## Advanced: Using Claude Code's AI Capabilities
+
+One of Claude Code's unique advantages is its AI processing capability. You can analyze existing Confluence content and generate intelligent summaries or suggestions:
+
+```javascript
+async function analyzePageAndSuggestImprovements(pageId) {
+  const page = await confluence.pages.get(pageId);
+  
+  const analysis = await claude.complete({
+    prompt: `Analyze this Confluence page and suggest improvements for clarity and structure:\n\n${page.body.storage.value}`,
+    max_tokens: 500
+  });
+
+  await confluence.comments.create(pageId, {
+    body: {
+      value: `💡 **AI Suggested Improvements**\n\n${analysis}`
+    }
+  });
+}
+```
 
 ## Conclusion
 
-Claude Code skills for Confluence transform static documentation into dynamic, automated workflows. Start with simple page creation, then expand to templates, automated updates, and webhook-driven automation. Your team will save hours each week while maintaining consistent, well-structured documentation that actually stays current.
+Automating Confluence workflows with Claude Code transforms how your team manages documentation. Start with simple scripts like page creation, then gradually build complex approval chains and scheduled tasks. The key is to identify repetitive tasks, prototype solutions, and iterate based on team feedback.
 
-The key is treating Confluence as an API-first platform rather than a web application. By abstracting away the browser interface through Claude skills, you enable developers to focus on writing content while automation handles the administrative overhead.
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
+Remember to test thoroughly in a non-production environment before deploying automation scripts. With proper error handling and logging, your Confluence automation will become a reliable asset in your development workflow.
+{% endraw %}
