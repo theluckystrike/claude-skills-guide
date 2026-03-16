@@ -1,498 +1,162 @@
 ---
-
 layout: default
 title: "Claude Code for Core Web Vitals Workflow Tutorial"
-description: "Learn how to use Claude Code to analyze, optimize, and monitor your site's Core Web Vitals. Practical workflow with code examples for LCP, INP, FID, and CLS."
+description: "Learn how to use Claude Code to measure, monitor, and optimize Core Web Vitals. Practical workflows with code examples for LCP, FID, and CLS optimization."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-core-web-vitals-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
-
+{% raw %}
 # Claude Code for Core Web Vitals Workflow Tutorial
 
-Core Web Vitals have become essential metrics for web performance, directly impacting both user experience and search engine rankings. In this tutorial, you'll learn how to use Claude Code to systematically analyze, optimize, and monitor your site's Core Web Vitals: Largest Contentful Paint (LCP), Interaction to Next Paint (INP), First Input Delay (FID), and Cumulative Layout Shift (CLS).
+Core Web Vitals have become essential metrics for web performance, directly impacting user experience and search engine rankings. Google's Core Web Vitals—Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS)—measure loading performance, interactivity, and visual stability. This tutorial shows you how to leverage Claude Code to create efficient workflows for measuring, monitoring, and optimizing these critical metrics.
 
-**Largest Contentful Paint (LCP)** measures loading performance—specifically when the largest content element in the viewport becomes visible. LCP should occur within 2.5 seconds of when the page first starts loading.
+## Understanding Core Web Vitals Metrics
 
-**Interaction to Next Paint (INP)** replaced First Input Delay (FID) in March 2024. INP measures responsiveness by tracking all user interactions and reporting the longest delay between the interaction and the browser's response. A good INP score is 200 milliseconds or less.
+Before diving into workflows, let's quickly review what each metric measures:
 
-**Cumulative Layout Shift (CLS)** measures visual stability—how much content shifts unexpectedly during page load. A good CLS score is 0.1 or less.
+- **Largest Contentful Paint (LCP)**: Measures loading performance. A good LCP is under 2.5 seconds.
+- **First Input Delay (FID)**: Measures interactivity. A good FID is under 100 milliseconds.
+- **Cumulative Layout Shift (CLS)**: Measures visual stability. A good CLS is under 0.1.
 
-## Setting Up Your Project for Web Vitals Analysis
+Claude Code can help you audit these metrics, identify issues, and implement fixes systematically. Let's explore practical workflows.
 
-Before diving into optimization workflows, ensure your project is properly configured for Claude Code to analyze. Create a dedicated skill or prompt context for web vitals work.
+## Setting Up Your Web Vitals Testing Environment
 
-First, initialize your project with necessary dependencies:
+First, create a skill that helps you run Web Vitals audits. This skill will encapsulate the tools and prompts needed for consistent testing.
 
-```bash
-npm init -y
-npm install --save-dev @web-vitals/web-vitals lighthouse
+```yaml
+---
+name: web-vitals
+description: "Audit and analyze Core Web Vitals for web applications"
+tools: [Bash, WebFetch, Read, Write]
+---
 ```
 
-Create a `web-vitals-config.json` file to store your baseline metrics:
+The skill can use multiple tools to fetch pages, run Lighthouse audits, and analyze results. Before running audits, ensure you have the necessary tools installed:
+
+```bash
+npm install -g lighthouse
+```
+
+## Workflow 1: Running Quick Web Vitals Audits
+
+The most common workflow is running a quick audit on a URL to get baseline metrics. Create a simple bash command within your skill to run Lighthouse:
+
+```bash
+lighthouse <url> --only-categories=performance --output=json --output-path=<output-file>.json
+```
+
+After running the audit, you can ask Claude to analyze the results:
 
 ```json
 {
-  "url": "https://your-site.com",
-  "thresholds": {
-    "lcp": 2500,
-    "fid": 100,
-    "cls": 0.1
-  },
-  "budget": {
-    "lcp": "good",
-    "fid": "good",
-    "cls": "good"
+  "audits": {
+    "lcp-lazy-loaded": { "score": 0, "details": {...} },
+    "layout-shift-elements": { "score": 0, "details": {...} }
   }
 }
 ```
 
-For lab testing during development, integrate Lighthouse CI into your build process:
+When Claude returns the JSON audit results, ask it to extract and summarize the Core Web Vitals scores. This is particularly useful for comparing performance before and after optimizations.
 
-```javascript
-// lighthouse-config.js
-module.exports = {
-  ci: {
-    collect: {
-      staticDistDir: './dist',
-      numberOfRuns: 3,
-    },
-    assert: {
-      assertions: {
-        'categories:performance': ['warn', { minScore: 0.9 }],
-        'first-contentful-paint': ['warn', { maxNumericValue: 1500 }],
-        'largest-contentful-paint': ['warn', { maxNumericValue: 2500 }],
-        'cumulative-layout-shift': ['warn', { maxNumericValue: 0.1 }],
-        'interactive': ['warn', { maxNumericValue: 3000 }],
-      },
-    },
-  },
-};
-```
+## Workflow 2: Batch Testing Multiple Pages
 
-Run this configuration with `lhci autorun` to get consistent performance metrics on every build. Claude Code can help you integrate this into your CI/CD pipeline and alert you when metrics degrade.
-
-For field data, set up the web-vitals library to collect real-user data:
-
-```javascript
-// analytics/web-vitals.js
-import { onCLS, onFID, onLCP, onINP } from 'web-vitals';
-
-function sendToAnalytics({ name, delta, id }) {
-  // Replace with your analytics endpoint
-  fetch('/api/vitals', {
-    method: 'POST',
-    body: JSON.stringify({ name, delta, id }),
-  });
-}
-
-onCLS(sendToAnalytics);
-onFID(sendToAnalytics);
-onLCP(sendToAnalytics);
-onINP(sendToAnalytics);
-```
-
-## Collecting Field Data via the PageSpeed Insights API
-
-In addition to RUM instrumentation, you can query Google's Chrome User Experience Report (CrUX) directly through the PageSpeed Insights API. This gives you the 75th-percentile values that Google uses for ranking—how real users on the open web experience your site, not just users who have your analytics snippet installed.
-
-Store your API key as an environment variable:
+For larger sites, you need to test multiple pages systematically. Create a workflow that reads a list of URLs and runs audits on each:
 
 ```bash
-export GOOGLE_API_KEY="your-api-key-here"
+# Read URLs from a file
+cat urls.txt | while read url; do
+  lighthouse "$url" --only-categories=performance --output=json --output-path="reports/$(basename "$url").json"
+done
 ```
 
-Create a script that fetches field data for a single URL:
+This batch approach lets you track performance across your entire site. Store the results in a dedicated folder and use Claude to compare them over time.
+
+## Workflow 3: Automated Regression Detection
+
+Set up a GitHub Actions workflow that runs Web Vitals audits on every pull request:
+
+```yaml
+name: Core Web Vitals
+on: [pull_request]
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Lighthouse
+        run: |
+          npm install -g lighthouse
+          lighthouse ${{ vars.SITE_URL }} --only-categories=performance --output=json --output-path=lighthouse.json
+      - name: Check thresholds
+        run: |
+          node check-metrics.js
+```
+
+The `check-metrics.js` script parses the Lighthouse JSON and fails the build if any Core Web Vitals fall below thresholds. This prevents performance regressions from reaching production.
+
+## Workflow 4: Real User Monitoring Integration
+
+For production applications, combine Claude Code with real user monitoring (RUM) data. Export Web Vitals from Google Chrome User Experience Report or your analytics provider:
 
 ```bash
-#!/bin/bash
-# fetch-cwv-field-data.sh
-
-URL="$1"
-API_KEY="$2"
-
-if [ -z "$URL" ] || [ -z "$API_KEY" ]; then
-  echo "Usage: $0 <url> <api-key>"
-  exit 1
-fi
-
-curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${URL}&key=${API_KEY}&strategy=mobile&category=PERFORMANCE" | jq '.loadingExperience.metrics'
+# Fetch CrUX data (requires API key)
+curl "https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=$CRUX_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://example.com"}'
 ```
 
-To monitor a set of pages, create a `urls.txt` file and iterate over it:
+Use Claude to analyze the RUM data alongside lab data from Lighthouse. This gives you a complete picture—both simulated test results and real-world user experiences.
 
-```bash
-#!/bin/bash
-# collect-all-cwv.sh
-
-API_KEY="$1"
-OUTPUT_DIR="cwv-data"
+## Common Optimization Patterns
 
-mkdir -p "$OUTPUT_DIR"
+Claude Code can help you implement proven optimization techniques. Here are patterns for each metric:
 
-while read -r url; do
-  filename=$(echo "$url" | sed 's|https://||' | sed 's|/|_|g' | sed 's|\.|_|g')
-  ./fetch-cwv-field-data.sh "$url" "$API_KEY" > "$OUTPUT_DIR/${filename}.json"
-  echo "Collected: $url"
-done < urls.txt
-```
+### Optimizing LCP
 
-Once you have the raw JSON snapshots, a Python script can parse them and generate a readable report:
+LCP measures when the largest content element becomes visible. Common optimizations include:
 
-```python
-import json
-import os
-from datetime import datetime
+1. **Optimize server response time**: Use CDN, enable caching, optimize database queries
+2. **Eliminate render-blocking resources**: Inline critical CSS, defer non-critical JavaScript
+3. **Optimize images**: Use WebP/AVIF formats, implement lazy loading for below-fold images
+4. **Preload key resources**: Use `<link rel="preload">` for LCP element images
 
-def analyze_cwv_data(data_dir):
-    results = []
+### Optimizing FID
 
-    for filename in os.listdir(data_dir):
-        if not filename.endswith('.json'):
-            continue
+FID measures the delay between first user interaction and browser response. Focus on:
 
-        with open(os.path.join(data_dir, filename)) as f:
-            data = json.load(f)
+1. **Reduce JavaScript execution time**: Code-split, tree-shake, remove unused code
+2. **Break up long tasks**: Use `requestIdleCallback` or `setTimeout` to break large tasks
+3. **Optimize third-party scripts**: Defer non-critical third-party scripts
 
-        url = filename.replace('_', '/').replace('.json', '')
-        url = 'https://' + url if not url.startswith('http') else url
+### Optimizing CLS
 
-        metrics = data.get('loadingExperience', {}).get('metrics', {})
+CLS measures visual stability during page load. Prevent layout shifts by:
 
-        lcp = metrics.get('LARGEST_CONTENTFUL_PAINT_MS75', {}).get('percentile', 0)
-        fid = metrics.get('FIRST_INPUT_DELAY_MS75', {}).get('percentile', 0)
-        cls = metrics.get('CUMULATIVE_LAYOUT_SHIFT_SCORE75', {}).get('percentile', 0)
+1. **Set explicit dimensions**: Always specify width and height attributes for images and videos
+2. **Reserve space for ads**: Use min-height containers for dynamic ad placements
+3. **Font loading optimization**: Use `font-display: swap` and preload web fonts
 
-        results.append({
-            'url': url,
-            'lcp': lcp / 1000 if lcp else 0,  # Convert to seconds
-            'fid': fid,
-            'cls': cls / 100  # Convert to decimal
-        })
+## Continuous Monitoring Strategy
 
-    return results
+For sustainable performance improvement, establish a monitoring strategy:
 
-def generate_report(results):
-    print(f"Core Web Vitals Field Data Report - {datetime.now().date()}\n")
-    print(f"{'URL':<40} {'LCP':>8} {'FID':>8} {'CLS':>8} {'Status'}")
-    print("-" * 80)
+1. **Daily lab tests**: Run Lighthouse on staging environments
+2. **PR-level audits**: Block merges that regress Core Web Vitals
+3. **Production RUM**: Track real user metrics continuously
+4. **Alerting**: Notify team when metrics exceed thresholds
 
-    for r in results:
-        lcp_status = "OK" if r['lcp'] < 2.5 else "WARN"
-        fid_status = "OK" if r['fid'] < 100 else "WARN"
-        cls_status = "OK" if r['cls'] < 0.1 else "WARN"
+Claude Code can automate much of this workflow, from running audits to generating reports and alerting stakeholders.
 
-        print(f"{r['url']:<40} {r['lcp']:>7.2f}s {r['fid']:>7.0f}ms {r['cls']:>7.3f}  {lcp_status} {fid_status} {cls_status}")
-```
+## Conclusion
 
-Field data fluctuates daily based on network conditions, device types, and user geography. Run collection on a weekly or bi-weekly schedule to get meaningful trends rather than reacting to single-day noise. When field data shows a problem, use Lighthouse (lab data) to reproduce and diagnose the root cause in a controlled environment.
+Claude Code transforms Core Web Vitals optimization from a manual, sporadic process into an automated, systematic workflow. By integrating Lighthouse audits into your development pipeline, setting up regression detection, and following proven optimization patterns, you can maintain excellent Core Web Vitals scores consistently.
 
-## Analyzing Current Performance with Claude Code
+Start with quick audits on your key pages, establish baseline metrics, then build up to continuous monitoring. Claude Code handles the heavy lifting—running tests, analyzing results, and guiding implementation—so you can focus on building great user experiences.
 
-Once your project is ready, use Claude Code to run comprehensive audits. The key is to automate Lighthouse runs and parse the results programmatically.
-
-### Creating a Performance Analysis Script
-
-Create a `analyze-vitals.js` script that Claude Code can execute:
-
-```javascript
-const lighthouse = require('lighthouse');
-const { chromium } = require('playwright');
-
-async function analyzeWebVitals(url) {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
-
-  const result = await lighthouse(url, {
-    port: 9222,
-    output: 'json',
-    onlyCategories: ['performance'],
-    throttlingMethod: 'simulate',
-    throttling: {
-      rttMs: 40,
-      throughputKbps: 10240,
-      cpuSlowdownMultiplier: 1,
-    },
-  });
-
-  const metrics = result.lhr.audits;
-  return {
-    lcp: metrics['largest-contentful-paint'].numericValue,
-    fid: metrics['max-potential-fid'].numericValue,
-    cls: metrics['cumulative-layout-shift'].value,
-    lcpScore: metrics['largest-contentful-paint'].score,
-    fidScore: metrics['max-potential-fid'].score,
-    clsScore: metrics['cumulative-layout-shift'].score,
-  };
-}
-```
-
-### Building Your Claude Code Analysis Skill
-
-Create a skill that parses Lighthouse reports and surfaces targeted improvements:
-
-```markdown
-# Core Web Vitals Analyzer
-
-## Instructions
-
-You are a web performance expert specializing in Core Web Vitals optimization. When provided with Lighthouse results or web-vitals data, analyze the metrics and provide:
-
-1. **Metric Analysis**: Explain what each Core Web Vitals score means for user experience
-2. **Root Causes**: Identify likely causes for any failing or warning metrics
-3. **Actionable Recommendations**: Provide specific, implementable fixes ranked by impact
-4. **Code Examples**: Where applicable, show before/after code patterns
-
-Focus on practical solutions that balance performance gains with development effort.
-```
-
-### Interpreting Results
-
-After running your analysis, Claude Code can interpret the results and provide actionable recommendations:
-
-| Metric | Good | Needs Improvement | Poor |
-|--------|------|-------------------|------|
-| LCP | < 2.5s | 2.5s - 4.0s | > 4.0s |
-| FID | < 100ms | 100ms - 300ms | > 300ms |
-| CLS | < 0.1 | 0.1 - 0.25 | > 0.25 |
-
-## Optimizing Largest Contentful Paint (LCP)
-
-LCP measures when the largest content element becomes visible. Common causes of poor LCP include slow server response times, render-blocking resources, and unoptimized images.
-
-### Image Optimization Workflow
-
-Use Claude Code to automate image optimization:
-
-```javascript
-const sharp = require('sharp');
-const fs = require('fs');
-const path = require('path');
-
-async function optimizeImages(imageDir, outputDir) {
-  const images = fs.readdirSync(imageDir);
-
-  for (const image of images) {
-    const inputPath = path.join(imageDir, image);
-    const outputPath = path.join(outputDir, image.replace(/\.\w+$/, '.webp'));
-
-    await sharp(inputPath)
-      .resize(1200, null, { withoutEnlargement: true })
-      .webp({ quality: 80 })
-      .toFile(outputPath);
-
-    console.log(`Optimized: ${image} -> ${path.basename(outputPath)}`);
-  }
-}
-```
-
-### Preloading Critical Resources
-
-Ask Claude Code to generate preloading directives for your HTML:
-
-```html
-<!-- Add to <head> for critical resources -->
-<link rel="preload" as="image" href="/images/hero.webp" fetchpriority="high">
-<link rel="preload" as="font" href="/fonts/main-font.woff2" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-```
-
-## Reducing First Input Delay (FID) and Improving INP
-
-FID measures the time between a user's first interaction and the browser's ability to respond. INP goes further, tracking the longest interaction delay across the entire session. High FID/INP typically results from heavy JavaScript execution blocking the main thread.
-
-### JavaScript Code Splitting
-
-Work with Claude Code to implement code splitting:
-
-```javascript
-// Instead of importing everything at once
-import { Button, Modal, Charts, Analytics } from './components';
-
-// Use dynamic imports
-const Modal = () => import('./components/Modal');
-const Charts = () => import('./components/Charts');
-```
-
-### Deferring Non-Critical Scripts
-
-Generate proper script deferral patterns:
-
-```html
-<!-- Critical scripts load immediately -->
-<script src="/js/critical.js" defer></script>
-
-<!-- Non-critical scripts load after page is interactive -->
-<script src="/js/vendor.js" defer></script>
-<script src="/js/app.js" defer></script>
-
-<!-- Third-party scripts use loading="lazy" -->
-<script src="https://analytics.example.com/tracker.js" async></script>
-```
-
-### Deferring Expensive Work with requestIdleCallback
-
-Use this pattern to defer non-critical JavaScript and break up long tasks that block INP:
-
-```javascript
-// Defer heavy computations until idle
-function deferExpensiveWork() {
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => {
-      performHeavyComputation();
-    });
-  } else {
-    setTimeout(performHeavyComputation, 1);
-  }
-}
-
-// Break up long tasks
-async function processLargeDataset(data) {
-  const chunkSize = 100;
-  for (let i = 0; i < data.length; i += chunkSize) {
-    await new Promise(resolve => setTimeout(resolve, 0));
-    processChunk(data.slice(i, i + chunkSize));
-  }
-}
-```
-
-## Fixing Cumulative Layout Shift (CLS)
-
-CLS measures visual stability—how much content shifts unexpectedly during page load. Common causes include images without dimensions, dynamically injected content, and font loading delays.
-
-### Setting Image Dimensions
-
-Prompt Claude Code to scan your codebase for missing image dimensions:
-
-```javascript
-const cheerio = require('cheerio');
-const fs = require('fs');
-
-function findImagesWithoutDimensions(htmlDir) {
-  const files = fs.readdirSync(htmlDir).filter(f => f.endsWith('.html'));
-  const issues = [];
-
-  for (const file of files) {
-    const html = fs.readFileSync(path.join(htmlDir, file), 'utf8');
-    const $ = cheerio.load(html);
-
-    $('img').each((i, img) => {
-      const $img = $(img);
-      if (!$img.attr('width') || !$img.attr('height')) {
-        issues.push({
-          file,
-          src: $img.attr('src'),
-          alt: $img.attr('alt')
-        });
-      }
-    });
-  }
-
-  return issues;
-}
-```
-
-Always include explicit dimensions and reserve space for dynamic content:
-
-```html
-<!-- Always specify dimensions -->
-<img src="image.jpg" width="800" height="600" alt="Description">
-```
-
-```css
-/* Reserve space for dynamic content */
-.ad-container {
-  min-height: 250px;
-  contain: content;
-}
-
-/* Skeleton loading placeholders */
-.skeleton {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s infinite;
-}
-```
-
-### Font Loading Optimization
-
-Implement font display swap to prevent FOIT/FOUT:
-
-```css
-@font-face {
-  font-family: 'MainFont';
-  src: url('/fonts/main-font.woff2') format('woff2');
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-}
-```
-
-## Building a Continuous Monitoring Workflow
-
-Set up automated monitoring with Claude Code to track Web Vitals over time:
-
-```javascript
-const { performance } = require('perf_hooks');
-
-function measureWebVitals() {
-  return new Promise((resolve) => {
-    new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        const metric = entry.name;
-        const value = entry.value;
-
-        // Send to analytics
-        console.log(`${metric}: ${value}`);
-      }
-    }).observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-  });
-}
-```
-
-To catch regressions across deployments, create a tracking script that compares metrics over time:
-
-```javascript
-// scripts/track-metrics.js
-const { readFileSync } = require('fs');
-
-async function getLighthouseScore() {
-  // Fetch from your CI/CD integration
-  const report = JSON.parse(readFileSync('./lighthouse-report.json', 'utf8'));
-  return {
-    lcp: report.audits['largest-contentful-paint'].numericValue,
-    inp: report.audits['max-potential-fid'].numericValue,
-    cls: report.audits['cumulative-layout-shift'].numericValue,
-  };
-}
-
-const scores = getLighthouseScore();
-console.log(`LCP: ${scores.lcp}ms, INP: ${scores.inp}ms, CLS: ${scores.cls}`);
-```
-
-Run this script after every deployment to catch regressions immediately.
-
-## Actionable Next Steps
-
-1. **Run your first audit**: Use Lighthouse via Claude Code to establish a baseline
-2. **Prioritize LCP first**: It typically has the biggest impact on user experience
-3. **Implement image optimization**: Use WebP format with proper dimensions
-4. **Review JavaScript bundles**: Remove unused code and implement lazy loading
-5. **Set up continuous monitoring**: Track metrics in production to catch regressions
-
-By integrating Claude Code into your development workflow, you can systematically improve your Core Web Vitals scores and deliver better experiences to your users. The key is to automate the measurement process and make performance optimization an integral part of your development cycle rather than an afterthought.
-
-Remember that Core Web Vitals are user-centric metrics—improving them directly translates to better user satisfaction and improved search visibility. Let Claude Code help you achieve and maintain excellent performance scores consistently.
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Remember: good Core Web Vitals scores not only improve user experience but also contribute to better search rankings. Make them a priority in your development workflow.
+{% endraw %}
