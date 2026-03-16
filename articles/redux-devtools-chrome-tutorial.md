@@ -5,6 +5,10 @@ description: "A comprehensive guide to using Redux DevTools in Chrome for debugg
 date: 2026-03-15
 author: theluckystrike
 permalink: /redux-devtools-chrome-tutorial/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 Redux DevTools is a powerful browser extension that transforms how developers debug and inspect Redux applications. If you're building applications with Redux, this tool provides essential visibility into your application's state changes and helps you track down bugs faster.

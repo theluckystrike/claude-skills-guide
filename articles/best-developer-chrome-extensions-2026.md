@@ -3,7 +3,7 @@ layout: default
 title: "Best Developer Chrome Extensions 2026"
 description: "A practical guide to the most useful Chrome extensions for developers and power users in 2026, covering debugging, productivity, and workflow tools."
 date: 2026-03-15
-categories: [chrome-extensions]
+categories: [guides]
 tags: [chrome, developer-tools, productivity, browser]
 author: theluckystrike
 permalink: /best-developer-chrome-extensions-2026/
