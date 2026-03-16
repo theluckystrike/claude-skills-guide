@@ -5,6 +5,10 @@ description: "Learn to create a Chrome extension that captures highlighted text 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-highlight-text-save/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # How to Build a Chrome Extension to Highlight and Save Text
