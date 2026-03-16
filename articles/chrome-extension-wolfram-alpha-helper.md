@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Wolfram Alpha Helper"
 description: "A practical guide to Chrome extensions that integrate Wolfram Alpha for developers and power users. Learn how to leverage computational knowledge."
