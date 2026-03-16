@@ -138,6 +138,52 @@ LIMIT 1000;
 ALTER TABLE orders ALTER COLUMN tracking_number SET DEFAULT 'PENDING';
 ```
 
+## Zero-Downtime Migration Patterns
+
+For production systems that cannot tolerate downtime, the expand-contract pattern provides the safest approach:
+
+1. **Expand**: Add new columns or tables alongside existing ones without removing anything
+2. **Migrate**: Backfill data from old columns to new ones using batch operations
+3. **Contract**: Remove old columns only after all application code references the new structure
+
+```sql
+-- Step 1: Expand — add new column alongside old one
+ALTER TABLE users ADD COLUMN email_verified_at TIMESTAMP NULL;
+CREATE INDEX idx_users_email_verified ON users(email_verified_at);
+
+-- Step 2: Migrate — backfill data in batches
+UPDATE users SET email_verified_at = created_at
+WHERE email_verified = true AND email_verified_at IS NULL
+LIMIT 1000;
+
+-- Step 3: Contract — remove old column (only after code migration)
+ALTER TABLE users DROP COLUMN email_verified;
+```
+
+Key principles for zero-downtime migrations: maintain backward compatibility between old and new schemas, deploy changes in small reversible steps, and use feature flags to toggle new behavior without redeployment.
+
+## Zero-Downtime Migration Patterns
+
+For production databases serving live traffic, zero-downtime migrations follow the **expand-contract** pattern:
+
+1. **Expand**: Add the new column alongside the old one (additive, no locks on reads)
+2. **Migrate**: Backfill data from the old column to the new column in batches
+3. **Contract**: Remove the old column after all application code uses the new one
+
+```sql
+-- Step 1: Add new column (safe, additive)
+ALTER TABLE users ADD COLUMN email_verified_at TIMESTAMP NULL;
+CREATE INDEX idx_users_email_verified ON users(email_verified_at);
+
+-- Step 2: Backfill in batches (run during low traffic)
+UPDATE users SET email_verified_at = created_at WHERE email_verified = true AND email_verified_at IS NULL LIMIT 1000;
+
+-- Step 3: Remove old column (after application code is updated)
+ALTER TABLE users DROP COLUMN email_verified;
+```
+
+Key principles: never change a column in place, deploy changes in small reversible steps, and use feature flags to toggle new features on/off without redeployment. Your application must work with both old and new schemas simultaneously during the migration window.
+
 ## Production Best Practices
 
 When using Claude Code for production migrations, follow these proven practices:

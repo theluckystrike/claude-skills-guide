@@ -169,6 +169,21 @@ Fix all linting errors in the newly added authentication module.
 Verify the changes pass CI before we merge.
 ```
 
+## Strategic Skill Loading and Workspace Context
+
+In a monorepo, don't load all skills at once. Each skill adds context that may not be relevant to your current package. Load language-specific skills selectively—don't load Python skills when working in a Node.js package.
+
+Navigate to the specific package directory rather than the repo root before starting a session:
+
+```bash
+cd packages/auth-service
+claude
+```
+
+This targeted approach keeps Claude Code's analysis faster and more relevant. The context window stays focused on the package you're modifying rather than scanning the entire repository.
+
+**Universal skills** (always useful): `skill-creator` for building custom patterns, `internal-comms` for changelogs and commit messages. **Package-specific skills**: load `tdd` only when writing tests, `frontend-design` only in UI packages, `pdf` only for documentation generation.
+
 ## Best Practices for Monorepo Skills
 
 Keep your monorepo skills maintainable by following these principles:

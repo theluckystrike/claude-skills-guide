@@ -81,6 +81,30 @@ services:
 
 This approach works well for storing skill outputs, cached data, and generated files that should persist across sessions. When you regenerate your container, the volume content remains intact.
 
+### Database Persistence with Named Volumes
+
+One of the most common volume workflows involves persisting database data across container lifecycles:
+
+```yaml
+version: '3.8'
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: myapp
+      POSTGRES_USER: developer
+      POSTGRES_PASSWORD: devpass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
+```
+
+The `postgres_data` named volume ensures your database files survive container recreation. This pattern applies to MySQL, MongoDB, and Redis containers as well—map each service's data directory to a named volume.
+
 ## Practical Volume Strategies by Use Case
 
 ### Persisting Skill Configurations

@@ -111,6 +111,58 @@ export API_BASE=http://localhost:3000
 
 Your application now talks to the mock server, returning controlled responses without making any external network calls.
 
+### Alternative: Python Flask Mock Server
+
+For Python-based workflows, Flask provides a lightweight mock server alternative:
+
+```python
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+MOCK_RESPONSES = {
+    "users": {"users": [{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]},
+    "products": {"products": [{"id": 101, "name": "Widget", "price": 29.99}]}
+}
+
+@app.route("/api/<path:endpoint>", methods=["GET", "POST"])
+def handle_mock(endpoint):
+    if endpoint in MOCK_RESPONSES:
+        return jsonify(MOCK_RESPONSES[endpoint])
+    return jsonify({"error": "Not found"}), 404
+
+if __name__ == "__main__":
+    app.run(port=3000)
+```
+
+Run this alongside your Claude Code session and point API clients to `http://localhost:3000`. The skill code remains unchanged—only the endpoint configuration changes.
+
+### Alternative: Python Flask Mock Server
+
+For Python-based projects, Flask provides a lightweight mock server alternative:
+
+```python
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+MOCK_RESPONSES = {
+    "users": {"users": [{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]},
+    "products": {"products": [{"id": 101, "name": "Widget", "price": 29.99}]}
+}
+
+@app.route("/api/<path:endpoint>", methods=["GET", "POST"])
+def handle_mock(endpoint):
+    if endpoint in MOCK_RESPONSES:
+        return jsonify(MOCK_RESPONSES[endpoint])
+    return jsonify({"error": "Not found"}), 404
+
+if __name__ == "__main__":
+    app.run(port=3000)
+```
+
+Run this alongside your Claude Code session and configure your API client to point to `http://localhost:3000` instead of the production URL.
+
 ## Testing Error Scenarios
 
 One of the most valuable aspects of mocking is the ability to test error conditions that are otherwise difficult to trigger. Your mock server can simulate various HTTP status codes, network timeouts, and malformed responses.

@@ -178,6 +178,30 @@ Configure Claude Code to communicate with MCP servers running in separate contai
 
 This configuration allows Claude Code to interact with filesystem operations running in an isolated container, providing an additional layer of security and isolation.
 
+## Running Skills Inside Containers
+
+Claude Code skills like `tdd`, `pdf`, `supermemory`, and `frontend-design` work inside containers when properly configured. Mount the skills directory and ensure dependencies are available:
+
+```dockerfile
+# Install skill dependencies
+RUN pip3 install openpyxl reportlab python-pptx python-docx
+
+# Mount skills from host
+VOLUME /root/.claude/skills
+```
+
+In print mode, skills can run non-interactively for CI/CD pipelines:
+
+```bash
+docker run --rm \
+  -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
+  -v $(pwd):/workspace \
+  claude-code:latest \
+  claude -p "/tdd generate tests for /workspace/src/auth.js"
+```
+
+This pattern enables reproducible skill execution across developer machines and CI runners.
+
 ## Best Practices for Docker-Based Claude Code Development
 
 When using Claude Code inside Docker containers, follow these best practices for optimal results. First, always mount your project directory as a volume to persist changes. Second, set up a `CLAUDE.md` file in each project to provide context about your development environment. Third, use environment variables for sensitive data like API keys rather than hardcoding them in Dockerfiles.

@@ -56,6 +56,59 @@ Write validation for email format and password minimum 8 characters.
 
 Claude generates tests first, then implements the route to satisfy those tests.
 
+## Defining Your API Specification First
+
+A well-designed API begins with clear specification before implementation. Document your endpoints, request methods, and expected responses upfront:
+
+- **Resource paths**: `/users`, `/products`, `/orders`
+- **HTTP methods**: GET for retrieval, POST for creation, PUT/PATCH for updates, DELETE for removal
+- **Request/response formats**: JSON structures with field types
+- **Status codes**: 200 for success, 201 for created, 404 for not found, 400 for bad request
+
+For Python-based APIs, FastAPI provides automatic documentation from type hints:
+
+```python
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import Optional
+
+app = FastAPI()
+
+class User(BaseModel):
+    name: str
+    email: str
+    bio: Optional[str] = None
+```
+
+Claude Code translates these specifications into complete implementations regardless of framework—Express, FastAPI, or others.
+
+## Defining Your API Specification
+
+A well-designed API begins with clear specification. Document your endpoints, request methods, and expected responses before writing implementation code:
+
+- **Resource paths**: `/users`, `/products`, `/orders`
+- **HTTP methods**: GET for retrieval, POST for creation, PUT/PATCH for updates, DELETE for removal
+- **Request/response formats**: JSON structures with field types
+- **Status codes**: 200 for success, 201 for created, 404 for not found, 400 for bad request
+
+For Python projects, FastAPI provides a strong alternative to Express:
+
+```python
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import Optional
+import uuid
+
+app = FastAPI()
+
+class User(BaseModel):
+    name: str
+    email: str
+    bio: Optional[str] = None
+```
+
+Claude Code translates these specifications into code for either framework. Use the `tdd` skill to structure your development: write tests first, then implement to meet those tests.
+
 ## Creating Your First Endpoint
 
 Create a basic Express server with user management endpoints:

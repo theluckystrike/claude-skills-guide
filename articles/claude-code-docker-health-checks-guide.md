@@ -78,6 +78,17 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
 CMD ["python", "app.py"]
 ```
 
+### HEALTHCHECK Parameter Reference
+
+Each parameter controls a different aspect of the check behavior:
+
+- **--interval**: How often to run the healthcheck (default: 30s)
+- **--timeout**: How long to wait for the check to complete (default: 30s)
+- **--start-period**: Grace period after container starts before first check (default: 0s). Set this to at least your application's startup time to avoid false failures.
+- **--retries**: Number of consecutive failures before marking unhealthy (default: 3)
+
+When a healthcheck fails repeatedly, Docker automatically restarts the container in orchestration platforms like Docker Swarm, providing self-healing capabilities for your infrastructure.
+
 ## Health Checks with Docker Compose
 
 When running multi-container applications with Docker Compose, health checks enable service dependencies to wait for dependencies to become healthy. This prevents race conditions where one service starts before its dependencies are ready.
