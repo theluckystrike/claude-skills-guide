@@ -251,6 +251,53 @@ groups:
 
 Deploy these rules alongside your tracing collector to automatically detect and escalate issues.
 
+## Setting Up Jaeger Locally
+
+For teams using Jaeger as their tracing backend, Claude Code can generate a docker-compose setup for local development:
+
+```yaml
+version: '3.8'
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:1.52
+    ports:
+      - "6831:6831/udp"
+      - "16686:16686"
+      - "14268:14268"
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    networks:
+      - tracing
+
+  your-app:
+    build: .
+    environment:
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317
+      - OTEL_SERVICE_NAME=your-service
+    networks:
+      - tracing
+
+networks:
+  tracing:
+    driver: bridge
+```
+
+Access the Jaeger UI at `http://localhost:16686` to visualize traces and debug latency issues.
+
+## Sampling Strategies for Production
+
+High-throughput systems generate enormous trace volumes. Configure sampling to balance observability with cost:
+
+- **Probabilistic sampling**: Collects a percentage of traces (e.g., 1-5%)
+- **Rate limiting**: Ensures maximum traces per second
+- **Adaptive sampling**: Adjusts dynamically based on error rates
+
+For production environments, you might sample 5% of requests normally but increase to 50% when error rates spike, and always sample requests with priority headers set to "high".
+
+## Debugging with Trace Context
+
+Once traces flow into your backend, paste trace IDs into Claude Code and ask it to analyze the timing. For example, if a trace shows 3 seconds of total latency but only 80ms of span time, Claude can help identify the missing time — common causes include database locks, connection pool exhaustion, or synchronous calls that could benefit from async processing.
+
 ## Best Practices for Distributed Tracing
 
 Implementing distributed tracing requires thoughtful decisions to avoid common pitfalls:

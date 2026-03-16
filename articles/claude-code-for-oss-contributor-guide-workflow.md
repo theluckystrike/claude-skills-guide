@@ -166,6 +166,20 @@ claude -p "The reviewer requested changes to improve code readability. Make the 
 
 Address each comment, ask clarifying questions when needed, and thank reviewers for their input. Claude Code can help you implement feedback accurately while maintaining the spirit of your original contribution.
 
+## Leveraging Claude Skills for OSS Work
+
+The **supermemory** skill helps you maintain context across multiple contribution sessions. When working on larger projects or contributing over time, it remembers previous research, decisions, and conversations, reducing redundant work.
+
+The **frontend-design** skill assists when your contribution involves UI changes, providing guidance on component patterns, accessibility considerations, and design system compliance. For documentation-heavy projects, the **pdf** and **docx** skills help you read and modify existing documentation.
+
+## Common Pitfalls to Avoid
+
+Don't claim an issue and then disappear. Maintainers track issues, and unclaimed work blocks others. Only start work you can complete in a reasonable timeframe.
+
+Avoid making huge changes in your first contribution. Large pull requests are harder to review and more likely to encounter issues. Smaller, focused changes get merged faster.
+
+Never ignore feedback during review. Maintainers provide guidance to improve your code. Accepting constructive criticism helps you grow and produces better contributions.
+
 ## Best Practices for OSS Contribution
 
 ### Start Small

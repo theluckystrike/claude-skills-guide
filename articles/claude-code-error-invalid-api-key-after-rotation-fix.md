@@ -21,6 +21,20 @@ When you rotate your Anthropic API key in the console, any application storing t
 
 Common scenarios causing the error after rotation include environment variables pointing to expired keys, configuration files with cached credentials, MCP servers holding stale authentication, and skills that store API keys directly in their configuration.
 
+## Verify Your API Key First
+
+Before troubleshooting configuration, confirm your API key works directly with a curl request:
+
+```bash
+curl -s https://api.anthropic.com/v1/messages \
+  -H "x-api-key: sk-ant-api03-YOUR_KEY_HERE" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "content-type: application/json" \
+  -d '{"model":"claude-3-haiku-20240307","max_tokens":10,"messages":[{"role":"user","content":"hi"}]}'
+```
+
+A successful response confirms the key is valid. If you receive an error, obtain a fresh key from your Anthropic console. Also watch for whitespace or formatting issues — extra spaces before or after your API key, or accidentally copying surrounding text from the dashboard, causes validation failures.
+
 ## Identifying the Error
 
 After rotating your API key, you may encounter error messages like:
@@ -189,6 +203,20 @@ find . -name ".env" -exec sed -i '' "s/ANTHROPIC_API_KEY=.*/ANTHROPIC_API_KEY=$N
 echo "API key rotated across all locations"
 ```
 
+## Solution 6: Fix Permission and Network Issues
+
+Claude Code needs read access to your configuration files. Check file permissions:
+
+```bash
+ls -la ~/.claude/settings.json
+# Fix restrictive permissions
+chmod 600 ~/.claude/settings.json
+```
+
+Some organizations route API requests through proxies that interfere with authentication. If you're behind a corporate network, verify your proxy settings allow connections to `api.anthropic.com`. You may need to configure `HTTPS_PROXY` or `NO_PROXY` environment variables.
+
+Claude Code checks for your API key in this order: `ANTHROPIC_API_KEY` environment variable, then `CLAUDE_API_KEY` environment variable, then the configuration file at `~/.claude/settings.json`. Multiple Claude installations or conflicting configuration files across directories can load stale credentials — check each location systematically.
+
 ## Verification Steps
 
 After applying fixes, verify that Claude Code recognizes your new API key:
@@ -203,7 +231,6 @@ If errors persist, systematically check each credential location again—it's ea
 
 ## Related Reading
 
-- [Claude Code Error: Invalid API Key Troubleshoot Guide](/claude-skills-guide/claude-code-error-invalid-api-key-troubleshoot-guide/) — See also
 - [How Do I Set Environment Variables for a Claude Skill?](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) — See also
 - [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — See also
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also

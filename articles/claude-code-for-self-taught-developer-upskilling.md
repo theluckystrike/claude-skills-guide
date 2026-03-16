@@ -50,6 +50,47 @@ Self-taught developers constantly re-learn concepts they've forgotten. The **sup
 
 Many backend-focused developers struggle with visual design. The **frontend-design** skill helps you create polished user interfaces by suggesting color schemes, layout patterns, and accessibility improvements. You learn design principles through practical application rather than abstract theory.
 
+## Interactive Learning Techniques
+
+### Code Explanation on Demand
+
+When you encounter unfamiliar code — whether in tutorials, open source projects, or your own work — use Claude to explain it in context:
+
+```
+/explain What does this function do? Focus on explaining
+the recursion pattern so I can understand how it works.
+```
+
+Claude analyzes the code within your project context, explaining not just what the code does but **why** it was written that way. For cross-language learning, ask for comparisons: "Explain how scope in Python relates to what I already know about JavaScript scope, with code examples showing both."
+
+### Guided Debugging Sessions
+
+Debugging is where self-taught developers often struggle most. Share buggy code with Claude and ask it to teach you the debugging process:
+
+```python
+# A common beginner mistake - off-by-one error
+def find_max(numbers):
+    for i in range(len(numbers)):
+        if numbers[i] > numbers[i + 1]:  # IndexError when i is last index
+            return numbers[i]
+```
+
+Ask Claude: "Find the bug in this function and explain not just the fix, but how to identify similar bugs in the future." This builds pattern recognition over time.
+
+### Scaffolded Learning Projects
+
+Rather than starting from blank files, use Claude to generate project scaffolds tailored to your learning goals, then modify, break, and fix them:
+
+```
+Create a REST API project in Python using FastAPI with:
+- User authentication with JWT
+- SQLite database connection
+- Basic CRUD operations for a "notes" resource
+- Include inline comments explaining each component
+```
+
+This approach lets you study working code rather than piecing together fragments from tutorials.
+
 ## Building Projects That Demonstrate Competence
 
 The biggest challenge for self-taught developers is proving capability without formal credentials. Portfolio projects must demonstrate production-quality code, not just working functionality. Here's how Claude Code helps:
