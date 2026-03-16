@@ -7,7 +7,7 @@ author: theluckystrike
 permalink: /extensity-alternative-chrome-extension-2026/
 reviewed: true
 score: 8
-categories: [extensions, chrome]
+categories: [guides]
 tags: [chrome-extensions, productivity]
 ---
 
