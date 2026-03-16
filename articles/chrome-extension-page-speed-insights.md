@@ -5,6 +5,10 @@ description: "Learn how to build and use Chrome extensions for page speed insigh
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-page-speed-insights/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Page Speed Insights: A Developer's Guide

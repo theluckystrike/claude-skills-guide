@@ -5,6 +5,10 @@ description: "Learn how to build and integrate AI image generation directly into
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-ai-image-generator/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

@@ -5,6 +5,10 @@ description: "Learn how to create perfect favicons for your Chrome extension wit
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-favicon-generator/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

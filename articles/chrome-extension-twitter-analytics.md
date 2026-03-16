@@ -5,6 +5,10 @@ description: "Learn how to build a Twitter analytics Chrome extension from scrat
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-twitter-analytics/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

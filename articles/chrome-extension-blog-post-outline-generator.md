@@ -5,6 +5,10 @@ description: "Learn how to use Chrome extension blog post outline generators to 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-blog-post-outline-generator/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Blog Post Outline Generator: A Practical Guide for Content Creators

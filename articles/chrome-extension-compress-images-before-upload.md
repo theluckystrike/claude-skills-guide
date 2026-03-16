@@ -6,6 +6,10 @@ description: "Learn how to build or use Chrome extensions to compress images bef
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-compress-images-before-upload/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Compress Images Before Upload: A Developer's Guide

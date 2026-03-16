@@ -5,6 +5,10 @@ description: "A comprehensive guide to chrome extension mockup screenshot tools 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-mockup-screenshot-tool/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 Creating compelling visual mockups of Chrome extensions is essential for documentation, marketing materials, and user onboarding. This guide explores tools and techniques for capturing professional screenshots of your Chrome extension interfaces.
