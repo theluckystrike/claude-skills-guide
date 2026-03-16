@@ -5,6 +5,10 @@ description: "Learn how to build and use Chrome extensions for email snooze sche
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-email-snooze-scheduler/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 Email snooze functionality has become essential for managing inbox overwhelm. Chrome extensions that implement email snooze scheduling allow users to temporarily remove emails from their inbox and have them reappear at a specified future time. This guide covers the implementation patterns, APIs, and practical considerations for developers building this type of extension.

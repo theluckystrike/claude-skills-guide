@@ -6,6 +6,10 @@ description: "Learn how chrome extension hotel price comparison tools work under
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-hotel-price-comparison/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Hotel Price Comparison: A Developer Guide
