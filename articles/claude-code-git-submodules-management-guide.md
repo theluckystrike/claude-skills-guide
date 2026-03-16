@@ -170,7 +170,7 @@ When working with CI/CD pipelines, ensure your CI environment includes submodule
 
 - [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Submodule management is part of git workflow
 - [How to Make Claude Code Respect Module Boundaries](/claude-skills-guide/how-to-make-claude-code-respect-module-boundaries/) — Module boundaries and submodules are related
-- [Claude Code Git Stash Workflow Tips Guide](/claude-skills-guide/claude-code-git-stash-workflow-tips-guide/) — Stash tips apply to submodule workflows too
+- [Claude Code for Git Stash Advanced Workflow](/claude-skills-guide/claude-code-for-git-stash-advanced-workflow/) — Stash tips apply to submodule workflows too
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Git automation and workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

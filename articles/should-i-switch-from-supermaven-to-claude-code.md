@@ -93,6 +93,32 @@ Claude Code becomes the clear winner in these situations:
 - **Code review at scale**: Get comprehensive reviews of entire PRs with security and performance analysis
 - **Multi-file operations**: Create new features that span multiple files with consistent patterns
 
+## Using Both Tools Together
+
+Many developers use Supermaven and Claude Code side by side. Supermaven handles routine inline completions while Claude Code tackles complex tasks. Here are effective combined workflow patterns:
+
+**TDD with AI assistance**: Write tests with Claude Code explaining expected behavior, let Supermaven complete test assertions, implement code using Supermaven for boilerplate, then use Claude Code to debug any failures.
+
+**Refactoring workflow**: Invoke Claude Code to understand the code, plan refactoring steps together, execute changes while Supermaven handles syntax and patterns, then have Claude Code verify correctness.
+
+**Learning new codebases**: Start with Claude Code for an architectural overview, navigate files while Supermaven provides context-aware completions, ask Claude Code for explanations of complex logic, then apply what you learned with Supermaven's help.
+
+### Configuring Supermaven for Combined Use
+
+In VS Code, tune Supermaven's suggestion aggressiveness:
+
+```json
+{
+  "supermaven.config": {
+    "enable": true,
+    "maxSuggestionLength": "maximum",
+    "probaThreshold": 0.3
+  }
+}
+```
+
+Lower `probaThreshold` values produce more suggestions; higher values show only high-confidence completions. For Neovim, add Supermaven as an nvim-cmp source in your completion configuration.
+
 ## Making the Switch
 
 If you decide to try Claude Code, here's how to get started:

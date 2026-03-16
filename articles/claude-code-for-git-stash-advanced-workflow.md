@@ -120,6 +120,81 @@ If there are no uncommitted changes, simply confirm that the working directory i
 
 This type of skill standardizes the context-switching process across your team and ensures consistent stash naming conventions.
 
+## Integrating Stash with Claude Skills
+
+Claude Skills can enhance your stash workflow. The **supermemory** skill preserves context about what you were working on when you stash and step away:
+
+```markdown
+<!-- In your project notes -->
+## Claude Code Session Context
+- Working on: authentication module
+- Stashed changes: 3 files modified
+- Stash message: "WIP: OAuth2 implementation"
+- Next step: Resume and complete token refresh logic
+```
+
+When using the **tdd** skill, stashing requires extra care. Always ensure test files are saved before stashing, and run the test suite after popping to restore context:
+
+```bash
+git add tests/
+git stash push -m "WIP: tdd - user auth tests"
+# After popping back:
+claude -p "Run the test suite to verify current state"
+```
+
+## Practical Workflow Examples
+
+### Emergency Hotfix Scenario
+
+You're mid-session with Claude Code implementing a new feature, and a production bug report comes in:
+
+```bash
+# 1. Quickly stash current work
+git stash push -m "WIP: new feature - brief description"
+# 2. Switch to main/production branch
+git checkout main
+# 3. Create hotfix branch
+git checkout -b hotfix/production-bug
+# 4. Work with Claude Code on the fix
+claude -p "Fix the login timeout issue described in ticket #123"
+# 5. Deploy and merge
+git checkout main && git merge hotfix/production-bug
+# 6. Return to your feature work
+git checkout feature/my-new-feature
+git stash pop
+```
+
+### Stash for Experimentation
+
+When you want to try a different approach suggested by Claude Code but aren't sure it will work:
+
+```bash
+# Stash current approach
+git stash push -m "Experiment: original approach"
+# Try the new approach with Claude
+# If it works, drop the old stash: git stash drop
+# If it doesn't work, recover the original: git stash pop
+```
+
+## Common Stash Issues and Solutions
+
+### Stash Conflicts After Long Absences
+
+If you return to find stash conflicts after an extended break, let Claude Code help resolve them:
+
+```bash
+git stash show -p stash@{0} | head -100
+claude -p "Help me resolve this git stash conflict. The changes involve [describe what you were working on]"
+```
+
+### Losing Stash References
+
+Stashes can become orphaned if branches are deleted. Convert important stashes to commits for safekeeping:
+
+```bash
+git stash show -p stash@{0} | git commit -m "Stashed work: feature implementation" -F -
+```
+
 ## Stash Recovery and Cleanup
 
 Even with careful management, stashes can accumulate or become stale. Here's how to stay organized:
