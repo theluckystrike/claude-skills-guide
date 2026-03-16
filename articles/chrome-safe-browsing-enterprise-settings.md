@@ -5,6 +5,10 @@ description: "Configure Chrome Safe Browsing enterprise settings for organizatio
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-safe-browsing-enterprise-settings/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Safe Browsing Enterprise Settings: A Developer's Guide
