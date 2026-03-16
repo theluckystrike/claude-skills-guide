@@ -5,7 +5,7 @@ description: "Learn how to automate Helm chart publishing workflows using Claude
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-helm-chart-publishing-workflow-guide/
-categories: [DevOps, Kubernetes, Helm]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8

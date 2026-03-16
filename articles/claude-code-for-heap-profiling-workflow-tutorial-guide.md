@@ -5,7 +5,7 @@ description: "Learn how to use Claude Code for heap profiling workflow, with pra
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-heap-profiling-workflow-tutorial-guide/
-categories: [Development, Performance Optimization, Debugging]
+categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
