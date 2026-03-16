@@ -1,8 +1,7 @@
 ---
-
 layout: default
 title: "Claude Code for Fiber Go Web Framework Workflow"
-description: "Learn how to integrate Claude Code into your Fiber Go web framework development workflow for enhanced productivity and efficient coding.
+description: "Learn how to integrate Claude Code into your Fiber Go web framework development workflow for enhanced productivity and efficient coding."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-fiber-go-web-framework-workflow/

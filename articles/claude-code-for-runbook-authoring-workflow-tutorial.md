@@ -116,11 +116,9 @@ When authoring, mark executable sections clearly:
 
 Run the following to check current database connections:
 
-{% raw %}
 ```bash
 psql -h $DB_HOST -U $DB_USER -c "SELECT datname, count(*) FROM pg_stat_activity GROUP BY datname;"
 ```
-{% endraw %}
 ```
 
 ### Integrating Monitoring Links
