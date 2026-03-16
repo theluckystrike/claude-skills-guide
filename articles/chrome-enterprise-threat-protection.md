@@ -6,6 +6,10 @@ description: "Learn how Chrome Enterprise threat protection works, its built-in 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-threat-protection/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Enterprise Threat Protection: A Developer Guide
