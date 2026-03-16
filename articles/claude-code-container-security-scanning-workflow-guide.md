@@ -87,6 +87,12 @@ Present findings in this structure:
 - Recommended fixes with versions
 ```
 
+## Triaging Scan Results Effectively
+
+The key challenge is not just running scans but effectively triaging results. A single base image might contain dozens of vulnerabilities, many of which may not apply to your specific application or may have available patches. Claude Code can help prioritize findings and suggest remediation steps based on your project's dependency tree.
+
+For teams using MCP servers, the mcp-server-docker extension provides direct Docker daemon communication for scanning images without manual image export steps, reducing workflow friction and providing faster feedback during development.
+
 ## Integrating Security Scanning into CI/CD Pipelines
 
 Claude Code excels at automating CI/CD security workflows. Here's a practical example integrating Trivy into GitHub Actions:

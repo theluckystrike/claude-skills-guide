@@ -259,6 +259,19 @@ buildInputs = with pkgs; [
 
 **Hash mismatch** errors indicate a source package changed upstream. Update the hash in your Flake, or temporarily use `sha256 = "0000000000000000000000000000000000000000000000000000000000000000";` to let Nix report the correct hash.
 
+## Claude Code-Specific Configuration in Flakes
+
+You can set Claude Code environment variables directly in your flake's `devShell` definition:
+
+```nix
+devShells.default = pkgs.mkShell {
+  buildInputs = with pkgs; [ nodejs_22 python311 git curl ripgrep docker ];
+  CLAUDE_CONFIG_PATH = "./.claude";
+};
+```
+
+This ensures Claude Code reads project-specific configuration when you enter the shell with `nix develop`. The combination means Claude Code understands exactly what tools and versions are available in your reproducible environment.
+
 ## When to Choose Nix Flakes Over Docker
 
 Docker containers excel at full-system isolation and deployment. Nix Flakes excel at development environment consistency without container overhead. For local development, Nix typically provides faster iteration—changes to your environment apply instantly without container rebuilds. See the [full Docker vs Nix comparison for Claude Code projects](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) for a detailed breakdown.

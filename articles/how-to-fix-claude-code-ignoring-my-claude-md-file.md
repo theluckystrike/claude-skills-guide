@@ -170,6 +170,12 @@ I'll analyze:
 - Style inconsistencies
 ```
 
+## Encoding and YAML Front Matter Issues
+
+Claude Code expects UTF-8 encoded Markdown files. If your `.md` file contains special characters, non-standard quotes (curly quotes from word processors), or hidden formatting, the parser may fail silently. Always create skill files in a plain text editor and save as UTF-8.
+
+YAML front matter can also interfere with instruction parsing. While some skills include front matter for organizational purposes, Claude Code reads content after the closing `---` delimiter. Ensure your core instructions appear after the front matter, and keep front matter minimal—only `name` and `description` are recognized fields.
+
 ## Advanced Troubleshooting
 
 If your skill still isn't working after checking the basics:
