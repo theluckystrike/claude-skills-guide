@@ -5,6 +5,10 @@ description: "Master Chrome extension development with hands-on practice problem
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-coding-practice-problems/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Coding Practice Problems
