@@ -160,7 +160,7 @@ Major cloud platforms are integration targets for skills that manage infrastruct
 - [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/)
 - [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/)
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/)
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/)
+- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/)
 
 ---
 
@@ -226,7 +226,7 @@ Publishing platform integrations let Claude participate directly in the content 
 | Zoom | Meeting transcript summarization, action item extraction | [Guide](/claude-skills-guide/zoom-mcp-server-meeting-summary-automation/) |
 | Vercel | Deployment monitoring, build failure diagnosis, redeployments | [Guide](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) |
 | GCP | Log analysis, Cloud Run config, IAM policy review | [Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/) |
-| Docker | Container setup, Dockerfile generation, image optimization | [Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) |
+| Docker | Container setup, Dockerfile generation, image optimization | [Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) |
 | Datadog | Metrics queries, alert correlation, incident summaries | [Guide](/claude-skills-guide/datadog-mcp-server-monitoring-automation-claude/) |
 | Trigger.dev | Background job orchestration, event-driven Claude workflows | [Guide](/claude-skills-guide/claude-code-for-trigger-dev-workflow-automation-tutorial/) |
 | Firecrawl | Web scraping, content extraction, research automation | [Guide](/claude-skills-guide/firecrawl-mcp-server-web-scraping-automation/) |
@@ -250,7 +250,7 @@ Publishing platform integrations let Claude participate directly in the content 
 | [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) | Automating Vercel deployments with Claude |
 | [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) | Next.js-specific Vercel deployment workflows |
 | [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/) | GCP integration and deployment setup |
-| [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) | Running Claude skills in Docker containers |
+| [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) | Running Claude skills in Docker containers |
 | [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-skills-guide/claude-code-azure-devops-integration-workflow-tutorial/) | Azure DevOps pipeline integration |
 | [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) | Automated PR review workflows |
 | [Automated GitHub Issue Triage with Claude Skills Guide](/claude-skills-guide/claude-skills-for-automated-github-issue-triage/) | Classifying and routing GitHub issues automatically |

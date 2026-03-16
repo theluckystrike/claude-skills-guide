@@ -261,7 +261,7 @@ buildInputs = with pkgs; [
 
 ## When to Choose Nix Flakes Over Docker
 
-Docker containers excel at full-system isolation and deployment. Nix Flakes excel at development environment consistency without container overhead. For local development, Nix typically provides faster iteration—changes to your environment apply instantly without container rebuilds. See the [full Docker vs Nix comparison for Claude Code projects](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) for a detailed breakdown.
+Docker containers excel at full-system isolation and deployment. Nix Flakes excel at development environment consistency without container overhead. For local development, Nix typically provides faster iteration—changes to your environment apply instantly without container rebuilds. See the [full Docker vs Nix comparison for Claude Code projects](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) for a detailed breakdown.
 
 A practical approach uses both: Nix Flakes for development, Docker for production deployment. Your `flake.nix` can even specify a Docker image as an output:
 
@@ -300,7 +300,7 @@ The goal isn't perfection—it's consistency. A flake that covers 80% of your en
 
 - [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-skills-guide/claude-code-dev-containers-devcontainer-json-setup-guide/) — Use dev containers as an alternative approach for reproducible environments
 - [Claude Code GitPod Cloud IDE Integration Tutorial 2026](/claude-skills-guide/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Run Claude Code in ephemeral cloud environments without local Nix setup
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) — Compare Docker-based isolation against Nix flake reproducibility
+- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) — Compare Docker-based isolation against Nix flake reproducibility
 - [Claude Skills Hub](/claude-skills-guide/integrations-hub/) — Explore all environment setup and toolchain integration patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

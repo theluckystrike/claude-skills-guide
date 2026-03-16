@@ -240,6 +240,6 @@ For teams adopting Claude Code at scale, investing time in dev container configu
 - [Claude Code GitPod Integration Tutorial 2026](/claude-skills-guide/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Set up Claude Code in cloud-based GitPod workspaces for team environments
 - [How to Share Claude Skills Across Multiple Projects](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) — Keep skill versions consistent across repositories and teams
 - [Claude Code Worktrees and Skills Isolation Explained](/claude-skills-guide/claude-code-worktrees-and-skills-isolation-explained/) — Use worktrees to keep experimental skill setups separate from stable ones
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) — Run Claude Code skills inside Docker containers for maximum isolation
+- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) — Run Claude Code skills inside Docker containers for maximum isolation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

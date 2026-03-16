@@ -16,7 +16,7 @@ permalink: /claude-code-container-debugging-docker-logs-workflow-guide/
 
 # Claude Code Container Debugging: Docker Logs Workflow Guide
 
-Debugging containerized applications requires a systematic approach to log analysis, process inspection, and runtime investigation. This guide provides a practical workflow for debugging Docker containers using Claude Code, covering essential commands, automation patterns, and real-world scenarios that developers encounter daily. For setting up Claude Code itself inside Docker containers, see the [Claude Code with Docker container setup guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/).
+Debugging containerized applications requires a systematic approach to log analysis, process inspection, and runtime investigation. This guide provides a practical workflow for debugging Docker containers using Claude Code, covering essential commands, automation patterns, and real-world scenarios that developers encounter daily. For setting up Claude Code itself inside Docker containers, see the [Claude Code with Docker container setup guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/).
 
 ## Why Claude Code for Docker Debugging?
 
@@ -293,7 +293,7 @@ Claude Code enhances this workflow through skills that maintain context, generat
 
 ## Related Reading
 
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) — Set up Claude Code to run inside Docker containers for consistent debugging environments
+- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) — Set up Claude Code to run inside Docker containers for consistent debugging environments
 - [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Preserve debugging findings and hypotheses across multi-session investigations
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/) — Extend container logging to multi-agent orchestration scenarios
 - [Claude Code Segfault and Core Dump Analysis Workflow](/claude-skills-guide/claude-code-segfault-core-dump-analysis-workflow-guide/) — Debug deeper container crashes with core dump analysis

@@ -81,7 +81,7 @@ claude
 
 Claude Code opens an interactive session scoped to that directory. Claude can see everything inside the directory and its subdirectories.
 
-**Platform-specific setup:** If you are on Windows, run Claude Code inside WSL2. See [Claude Code Skills in WSL2: A Practical Setup Guide](/claude-skills-guide/claude-code-skills-in-wsl2-windows-subsystem-linux-guide/) for a complete walkthrough. Docker users can also run Claude Code containerized — see [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/).
+**Platform-specific setup:** If you are on Windows, run Claude Code inside WSL2. See [Claude Code Skills in WSL2: A Practical Setup Guide](/claude-skills-guide/claude-code-skills-in-wsl2-windows-subsystem-linux-guide/) for a complete walkthrough. Docker users can also run Claude Code containerized — see [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/).
 
 **Keeping skills in sync across machines:** [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/claude-code-dotfiles-management-and-skill-sync-workflow/) covers how to keep your skill files in a dotfiles repo so they follow you everywhere.
 
@@ -372,7 +372,7 @@ This configuration allows Claude to read files and run git commands only, with n
 | Token optimization | [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) | Intermediate |
 | Sharing skills with a team | [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) | Intermediate |
 | WSL2 setup | [Claude Code Skills in WSL2: A Practical Setup Guide](/claude-skills-guide/claude-code-skills-in-wsl2-windows-subsystem-linux-guide/) | Intermediate |
-| Docker integration | [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) | Intermediate |
+| Docker integration | [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) | Intermediate |
 | Context window management | [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-skills-context-window-management-best-practices/) | Intermediate |
 | Skill versioning | [Claude Skill Versioning: Semver Best Practices](/claude-skills-guide/claude-skill-versioning-semver-best-practices/) | Advanced |
 | Enterprise skill structure | [Structuring Claude Skills for Large Enterprise Codebases](/claude-skills-guide/structuring-claude-skills-for-large-enterprise-codebases/) | Advanced |
@@ -409,7 +409,7 @@ Articles explaining the platform, its purpose, and why developers choose it.
 Getting Claude Code running on different platforms and configurations.
 
 - [Claude Code Skills in WSL2: A Practical Setup Guide](/claude-skills-guide/claude-code-skills-in-wsl2-windows-subsystem-linux-guide/)
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/)
+- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/)
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/claude-code-dotfiles-management-and-skill-sync-workflow/)
 - [Claude Code Worktrees and Skills Isolation Guide](/claude-skills-guide/claude-code-worktrees-and-skills-isolation-explained/)
 - [How Do I Use Claude Skills in an Air-Gapped Environment](/claude-skills-guide/how-do-i-use-claude-skills-in-an-air-gapped-environment/)

@@ -131,7 +131,7 @@ Claude Code adapts to every major programming language and framework. These guid
 ### Cloud and Infrastructure
 - [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-skills-guide/claude-code-azure-devops-integration-workflow-tutorial/) — Azure DevOps pipeline integration
 - [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/) — GCP project setup and Cloud Run deployments
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) — Running Claude Code skills in Docker containers
+- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) — Running Claude Code skills in Docker containers
 - [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-skills-guide/claude-code-dev-containers-devcontainer-json-setup-guide/) — Reproducible dev environments with devcontainer
 - [Claude Code Skills in WSL2: A Practical Setup Guide](/claude-skills-guide/claude-code-skills-in-wsl2-windows-subsystem-linux-guide/) — Claude Code on Windows Subsystem for Linux
 - [Claude Code Nix Flake Reproducible Development Environment](/claude-skills-guide/claude-code-nix-flake-reproducible-development-environment/) — Nix Flakes for fully reproducible development environments
@@ -381,7 +381,7 @@ This section lists every article in the guides cluster alphabetically for quick 
 | [Claude Code vs GitHub Copilot Workspace 2026](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/) | Comparisons |
 | [Claude Code vs Replit Agent: Which Is Better in 2026?](/claude-skills-guide/claude-code-vs-replit-agent-which-is-better-2026/) | Comparisons |
 | [Claude Code WebSocket Implementation: Real-Time Events Guide](/claude-skills-guide/claude-code-websocket-implementation-real-time-events-guide/) | Backend |
-| [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) | Cloud |
+| [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) | Cloud |
 | [Claude Code vs Cursor AI Editor Comparison 2026](/claude-skills-guide/claude-cowork-vs-cursor-ai-editor-comparison-2026/) | Comparisons |
 | [Claude MD Best Practices for Large Codebases](/claude-skills-guide/claude-md-best-practices-for-large-codebases/) | Claude MD |
 | [Claude MD Character Limit and Optimization Guide](/claude-skills-guide/claude-md-character-limit-and-optimization-guide/) | Claude MD |

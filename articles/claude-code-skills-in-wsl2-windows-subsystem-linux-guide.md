@@ -265,7 +265,7 @@ The key steps are installing Claude Code within WSL2, creating the skills direct
 
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/claude-code-dotfiles-management-and-skill-sync-workflow/) — Sync your Claude Code skills and dotfiles from WSL2 to other environments consistently
 - [Claude Code GitHub Codespaces Cloud Development Workflow](/claude-skills-guide/claude-code-github-codespaces-cloud-development-workflow/) — Compare the WSL2 local setup with GitHub Codespaces cloud development for different project needs
-- [Claude Code With Docker Container Skill Setup Guide](/claude-skills-guide/claude-code-with-docker-container-skill-setup-guide/) — Extend your WSL2 environment with Docker container skills for isolated development workflows
+- [Claude Code With Docker Container Skill Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) — Extend your WSL2 environment with Docker container skills for isolated development workflows
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational Claude Code installation and skill setup patterns across all platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
