@@ -164,7 +164,7 @@ These issues are usually caused by insufficient context in the skill body or CLA
 
 **Environment and connection errors:**
 - [Claude Code Error: Connection Timeout During Task Fix](/claude-skills-guide/claude-code-error-connection-timeout-during-task-fix/) — Handling connection timeouts in long-running skill sessions
-- [Claude Code Error: Invalid API Key Troubleshoot Guide](/claude-skills-guide/claude-code-error-invalid-api-key-troubleshoot-guide/) — Resolving invalid API key errors in Claude Code
+- [Claude Code Error: Invalid API Key After Rotation Fix](/claude-skills-guide/claude-code-error-invalid-api-key-after-rotation-fix/) — Resolving invalid API key errors in Claude Code
 - [Claude Code Error: npm install Fails in Skill Workflow](/claude-skills-guide/claude-code-error-npm-install-fails-in-skill-workflow/) — Diagnosing and fixing npm install failures in Claude skill execution
 - [Claude Code Error: Out of Memory for Large Codebase Fix](/claude-skills-guide/claude-code-error-out-of-memory-large-codebase-fix/) — Fixing OOM errors when working with very large codebases
 - [Claude Code Verbose Mode Debugging Tips](/claude-skills-guide/claude-code-verbose-mode-debugging-tips/) — Using verbose mode to surface hidden problems in skill sessions
@@ -225,7 +225,7 @@ These issues are usually caused by insufficient context in the skill body or CLA
 | [Why Does My Claude Skill Work Locally But Fail in CI?](/claude-skills-guide/why-does-my-claude-skill-work-locally-but-fail-in-ci/) | Environment differences that cause local-to-CI skill failures |
 | [Claude Code Creates Files in Wrong Directory Fix](/claude-skills-guide/claude-code-creates-files-in-wrong-directory-fix/) | Specifying output directories to prevent misplaced file generation |
 | [Claude Code Error: Connection Timeout During Task Fix](/claude-skills-guide/claude-code-error-connection-timeout-during-task-fix/) | Handling connection timeouts in long-running skill sessions |
-| [Claude Code Error: Invalid API Key Troubleshoot Guide](/claude-skills-guide/claude-code-error-invalid-api-key-troubleshoot-guide/) | Resolving invalid API key authentication errors |
+| [Claude Code Error: Invalid API Key After Rotation Fix](/claude-skills-guide/claude-code-error-invalid-api-key-after-rotation-fix/) | Resolving invalid API key authentication errors |
 | [Fixing Claude Code npm install Errors in Skill Workflows](/claude-skills-guide/claude-code-error-npm-install-fails-in-skill-workflow/) | Diagnosing npm install failures inside Claude skill execution |
 | [Claude Code Error: Out of Memory for Large Codebase Fix](/claude-skills-guide/claude-code-error-out-of-memory-large-codebase-fix/) | Fixing OOM errors when working with very large codebases |
 | [Claude Code Generates Insecure Code Patterns Fix](/claude-skills-guide/claude-code-generates-insecure-code-patterns-fix/) | Preventing Claude from generating insecure code patterns |
