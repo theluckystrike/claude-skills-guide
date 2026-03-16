@@ -1,247 +1,218 @@
 ---
 layout: default
 title: "Claude Code for Runbook Authoring Workflow Tutorial"
-description: "Learn how to use Claude Code to streamline runbook authoring. This tutorial covers workflow setup, skill configuration, and practical examples for creating effective operational runbooks."
+description: "Learn how to use Claude Code to create comprehensive runbooks for DevOps and SRE workflows. This tutorial covers practical techniques for documenting operational procedures."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-runbook-authoring-workflow-tutorial/
-categories: [tutorials, guides]
+categories: [tutorials]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
 {% raw %}
 # Claude Code for Runbook Authoring Workflow Tutorial
 
-Operational runbooks are critical infrastructure documentation that teams rely on during incidents, deployments, and routine maintenance. Yet authoring them remains a tedious, often neglected task. Claude Code transforms runbook creation from a burden into a streamlined workflow that produces consistent, comprehensive documentation every time.
+Runbooks are the backbone of reliable operational procedures. Whether you're handling incident response, deployment rollback, or routine maintenance, well-authored runbooks ensure consistency and reduce mean time to recovery (MTTR). In this tutorial, you'll learn how to leverage Claude Code to create, maintain, and evolve comprehensive runbooks that your team can actually use.
 
-This tutorial walks you through setting up and using Claude Code for runbook authoring, with practical examples you can apply immediately to your team's documentation practices.
+## Why Use Claude Code for Runbook Authoring
 
-## Why Use Claude Code for Runbooks?
+Traditional runbook creation is often a tedious documentation exercise that quickly becomes outdated. Claude Code transforms this workflow by acting as an intelligent collaborator that understands your infrastructure, suggests best practices, and helps maintain living documentation that evolves with your systems.
 
-Traditional runbook authoring suffers from several common problems: inconsistent formatting, missing prerequisites, unclear escalation paths, and outdated content that doesn't match actual procedures. Claude Code addresses these issues through:
+When you use Claude Code for runbook authoring, you gain several advantages:
 
-- **Consistent structure**: Enforce standardized templates across all runbooks
-- **Contextual awareness**: Pull relevant details from your codebase and configuration
-- **Iterative refinement**: Quickly update and improve existing runbooks
-- **Cross-reference generation**: Automatically link related procedures and dependencies
+- **Contextual awareness**: Claude Code understands your codebase and can reference actual configurations
+- **Iterative improvement**: You can continuously refine runbooks through conversational feedback
+- **Cross-team consistency**: Standardized templates and language across all runbooks
+- **Validation**: Claude Code can verify that procedures are actually executable
 
-Rather than starting from a blank page, you provide Claude with context about your systems, and it generates structured, actionable documentation aligned with your team's conventions.
+## Setting Up Your Runbook Project
 
-## Setting Up Your Runbook Authoring Skill
-
-The first step involves creating a dedicated Claude Skill for runbook authoring. This skill encapsulates your team's conventions, template preferences, and domain knowledge.
-
-Create a new skill file at `~/.claude/skills/runbook-author-skill.md`:
-
-```markdown
----
-name: Runbook Author
-description: Creates and maintains operational runbooks with consistent structure
-tools: [Read, Write, Bash, Glob, Grep]
-version: 1.0.0
----
-
-# Runbook Author Skill
-
-You specialize in creating clear, actionable operational runbooks for DevOps and SRE teams.
-
-## Runbook Structure
-
-All runbooks must include:
-
-1. **Title and metadata** - Purpose, owner, last updated, related systems
-2. **Prerequisites** - Required access, permissions, tools
-3. **Pre-flight checks** - Verification steps before starting
-4. **Step-by-step procedure** - Numbered, actionable instructions
-5. **Rollback procedure** - How to undo if something goes wrong
-6. **Escalation path** - When to escalate, contacts, SLAs
-7. **Related runbooks** - Links to dependent or related procedures
-
-## Writing Guidelines
-
-- Use imperative voice: "Restart the service" not "The service should be restarted"
-- Include exact commands with placeholders: `kubectl rollout restart deployment/{{deployment-name}}`
-- Add expected output examples for verification steps
-- Highlight warnings and cautions prominently
-- Keep steps atomic and independent when possible
-```
-
-This skill establishes conventions that Claude applies to every runbook it helps you create.
-
-## The Runbook Authoring Workflow
-
-With your skill configured, here's the typical workflow for creating a new runbook:
-
-### Step 1: Gather Context
-
-Before generating content, provide Claude with relevant context about the system or procedure:
+Before diving into authoring, set up a dedicated structure for your runbooks. This makes them discoverable and maintainable.
 
 ```bash
-# Provide Claude with system context
-- Share relevant configuration files
-- Paste relevant code snippets
-- Describe the incident type or operation
-- Identify stakeholders and owners
+mkdir -p runbooks/{incidents,deployments,maintenance,troubleshooting}
+cd runbooks
 ```
 
-### Step 2: Generate Initial Draft
-
-Ask Claude to create the runbook using your established template:
+Initialize a simple structure that Claude Code can understand:
 
 ```
-Create a runbook for [operation name]. The target audience is [team/role].
-Include prerequisites for [specific permissions or access].
-Related systems: [list systems]
+runbooks/
+├── README.md
+├── incidents/
+│   ├── database-outage.md
+│   └── service-degradation.md
+├── deployments/
+│   ├── rollback-procedure.md
+│   └── blue-green-deploy.md
+└── maintenance/
+    ├── database-backup.md
+    └── certificate-renewal.md
 ```
 
-Claude generates a structured draft incorporating your skill's conventions.
+The README.md should serve as an index with quick links to each runbook and their current status.
 
-### Step 3: Review and Refine
+## Authoring Your First Runbook
 
-Iteratively improve the draft by requesting specific enhancements:
+Let's walk through creating a runbook for a common scenario: database connection pool exhaustion. Start by invoking Claude Code with your project context:
 
-- Add verification checkpoints after critical steps
-- Expand ambiguous instructions with exact commands
-- Include monitoring queries for each step
-- Add conditional branches for different scenarios
-
-### Step 4: Validate and Publish
-
-Final validation checks:
-- All commands are syntactically correct
-- Placeholders follow consistent naming
-- Links to related runbooks are valid
-- Prerequisites are realistic and testable
-
-## Practical Example: Database Migration Runbook
-
-Let's walk through creating a real runbook. Suppose you need a runbook for performing a production database migration:
-
-**Initial request to Claude:**
-```
-Create a runbook for performing a PostgreSQL database migration in production.
-The migration adds a new column to the orders table.
-We use Kubernetes with Helm deployments.
+```bash
+claude --print "Create a runbook for diagnosing and resolving database connection pool exhaustion. Include prerequisites, symptom identification, resolution steps, and verification procedures. Use clear numbered steps."
 ```
 
-**Claude generates the initial structure:**
+Claude Code will generate a comprehensive runbook. Here's a refined example structure you'll receive:
 
 ```markdown
----
-title: "Production Database Migration - Add orders table column"
-owner: "Database Team"
-last_updated: "2026-03-15"
-related_systems: ["orders-api", "payment-service"]
----
+# Database Connection Pool Exhaustion Response
+
+## Severity
+- **Level**: SEV-2 (Service Impact)
+- **Response Time**: 15 minutes
 
 ## Prerequisites
+- Access to production Kubernetes cluster
+- Database admin credentials
+- Monitoring dashboard access
 
-- [ ] Production database access (read replica for verification)
-- [ ] Kubernetes cluster access with namespace permissions
-- [ ] Helm 3.x installed locally
-- [ ] pg_dump available for backup verification
-- [ ] On-call DBA notified
+## Symptoms
+1. Application returns connection timeout errors
+2. Database CPU usage appears normal
+3. Active connections at maximum capacity
+4. Connection pool metrics show steady increase
 
-## Pre-flight Checks
+## Diagnosis Steps
+1. Identify affected service: `kubectl get pods -n production`
+2. Check current connection count: `SELECT count(*) FROM pg_stat_activity`
+3. Review application logs for connection leaks
+4. Examine connection pool configuration
 
-1. Verify current schema: `kubectl exec -it orders-db-0 -- psql -U postgres -d orders -c "\d orders"`
-2. Check current row count: `SELECT COUNT(*) FROM orders;`
-3. Verify no long-running transactions: `SELECT * FROM pg_stat_activity WHERE state != 'idle';`
+## Resolution Steps
+1. Scale down affected pods to release connections
+2. Restart application pods to clear stale connections
+3. Increase connection pool size if necessary
+4. Verify resolution
 
-## Migration Procedure
+## Verification
+- Confirm connection count returns to baseline
+- Test application functionality
+- Monitor for 30 minutes
+```
 
-### 1. Create Backup (Recommended)
+## Enhancing Runbooks with Claude Code Features
+
+### Adding Interactive Prompts
+
+Modern runbooks can include interactive elements that Claude Code can execute directly. Add executable blocks that your team can run:
 
 ```bash
-kubectl exec -it orders-db-0 -- pg_dump -U postgres orders > backup_$(date +%Y%m%d).sql
+# Diagnostic command example
+kubectl top pods -n production --sort-by=memory | head -20
 ```
 
-### 2. Apply Migration
-
-```bash
-kubectl exec -it orders-db-0 -- psql -U postgres -d orders -c "
-ALTER TABLE orders ADD COLUMN IF NOT EXISTS customer_reference VARCHAR(100);
-"
-```
-
-### 3. Verify Migration
-
-```bash
-kubectl exec -it orders-db-0 -- psql -U postgres -d orders -c "\d orders"
-# Confirm customer_reference column appears
-```
-
-### 4. Deploy Application
-
-```bash
-helm upgrade orders ./orders-chart --set image.tag=v2.1.0
-```
-
-## Rollback Procedure
-
-If issues occur:
-
-```bash
-# Rollback application
-helm rollback orders 1
-
-# If schema rollback needed (rare):
-kubectl exec -it orders-db-0 -- psql -U postgres -d orders -c "
-ALTER TABLE orders DROP COLUMN IF EXISTS customer_reference;
-"
-```
-
-## Escalation
-
-- **Severity 1 (Production Down)**: Page on-call immediately
-- **Severity 2 (Degraded Performance)**: Notify within 15 minutes
-- **Database Team Lead**: database-lead@company.com
-```
-
-This demonstrates how Claude transforms a simple request into comprehensive, production-ready documentation.
-
-## Best Practices for Runbook Authoring with Claude
-
-### Maintain a Runbook Inventory
-
-Keep an index of all runbooks with metadata:
+When authoring, mark executable sections clearly:
 
 ```markdown
-# Runbook Index
+## Execute Diagnostics
 
-| Runbook | Owner | Last Updated | Related Systems |
-|---------|-------|--------------|-----------------|
-| DB Migration | Database Team | 2026-03-15 | orders-api |
-| SSL Certificate Rotation | Platform Team | 2026-02-28 | ingress |
-| Service Restart | SRE Team | 2026-03-10 | all services |
+Run the following to check current database connections:
+
+{% raw %}
+```bash
+psql -h $DB_HOST -U $DB_USER -c "SELECT datname, count(*) FROM pg_stat_activity GROUP BY datname;"
+```
+{% endraw %}
 ```
 
-### Version Control Your Runbooks
+### Integrating Monitoring Links
 
-Store runbooks in Git alongside your infrastructure code. This provides:
+Include direct links to your monitoring infrastructure:
 
-- Change history and audit trail
-- Pull request reviews for runbook changes
-- Automatic deployment of updates
+```markdown
+## Check Metrics
+- [Grafana Dashboard](https://grafana.example.com/d/db-connections)
+- [Datadog Service Map](https://app.datadoghq.com/service/map)
+```
 
-### Test Runbooks Regularly
+Claude Code can help you generate these links dynamically based on your environment configuration.
 
-Include "tested" or "verified" badges in runbook metadata. Regular testing ensures procedures remain accurate as systems evolve.
+## Maintaining Runbooks Over Time
 
-### Use Placeholders Consistently
+The real value of Claude Code comes from ongoing maintenance. Here's how to keep runbooks current:
 
-Establish a placeholder convention and document it in your skill:
+### Review Triggers
 
-- `{{deployment-name}}` - Kubernetes deployment names
-- `{{namespace}}` - Kubernetes namespaces
-- `{{table-name}}` - Database tables
-- `{{api-key}}` - Secrets (never commit actual values)
+Establish triggers for runbook updates:
+
+```markdown
+<!-- Review this runbook when:
+- New database version released
+- Application architecture changes
+- After any SEV-2 or higher incident
+- Quarterly baseline review -->
+```
+
+### Using Claude Code for Updates
+
+When you need to update a runbook, engage Claude Code contextually:
+
+```bash
+claude --print "Update the database connection pool runbook to include new connection pooler (PgBouncer) configuration steps. Include pre-deployment checklist."
+```
+
+This approach ensures your runbooks evolve with your infrastructure.
+
+## Advanced: Creating Runbook Templates
+
+For organizations with multiple similar procedures, create reusable templates. Here's a template structure Claude Code understands:
+
+```markdown
+---
+title: {PROCEDURE_NAME}
+severity: {SEV-1|SEV-2|SEV-3}
+estimated_time: {MINUTES}
+author: {TEAM_MEMBER}
+last_reviewed: {DATE}
+---
+
+## Overview
+{Brief description of what this procedure accomplishes}
+
+## Prerequisites
+- [ ] Access to {SYSTEM}
+- [ ] Required permissions
+- [ ] Notification sent to {CHANNEL}
+
+## Pre-checks
+1. Verify current state
+2. Confirm backup exists
+3. Notify stakeholders
+
+## Steps
+1. {Step one}
+2. {Step two}
+3. {Step three}
+
+## Rollback
+{Steps to reverse if something goes wrong}
+
+## Post-procedure
+- [ ] Verify success
+- [ ] Update status page
+- [ ] Document in incident tracker
+```
+
+## Best Practices Summary
+
+1. **Start small**: Begin with your most critical procedures
+2. **Make it executable**: Include actual commands, not just descriptions
+3. **Version control**: Store runbooks alongside your code
+4. **Test regularly**: Treat runbooks as code—test them in staging
+5. **Get feedback**: Have operators note what worked and what didn't
+6. **Automate where possible**: Convert manual steps to scripts over time
 
 ## Conclusion
 
-Claude Code transforms runbook authoring from a documentation chore into an efficient, consistent process. By defining your conventions in a dedicated skill and following the workflow outlined in this tutorial, your team can maintain comprehensive, actionable runbooks with minimal effort.
+Claude Code transforms runbook authoring from a documentation chore into a collaborative, maintainable practice. By treating runbooks as living documents and leveraging Claude Code's contextual understanding, you create operational procedures that actually get used when incidents occur.
 
-The key is starting simple: create one runbook using this approach, refine your skill based on what you learn, and progressively expand coverage. Your future self—managing an incident at 2 AM—will thank you for the investment in clear, consistent documentation.
+Start with one critical runbook, refine it through actual use, and gradually expand your library. Your future self—and your on-call team—will thank you.
 {% endraw %}
