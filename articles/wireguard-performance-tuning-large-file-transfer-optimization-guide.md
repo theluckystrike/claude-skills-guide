@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /wireguard-performance-tuning-large-file-transfer-optimization-guide/
 reviewed: true
 score: 8
-categories: [vpn, networking, security]
+categories: [guides, security]
 tags: [wireguard, vpn, performance, file-transfer]
 ---
 
