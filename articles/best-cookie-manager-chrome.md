@@ -6,6 +6,10 @@ description: "Discover the best cookie manager Chrome extensions for developers 
 date: 2026-03-15
 author: theluckystrike
 permalink: /best-cookie-manager-chrome/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Best Cookie Manager Chrome Extensions for Developers in 2026

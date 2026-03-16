@@ -5,6 +5,10 @@ description: "Learn how to build and use AI-powered Chrome extensions for compet
 date: 2026-03-15
 author: theluckystrike
 permalink: /ai-competitive-analysis-chrome-extension/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

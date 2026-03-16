@@ -5,6 +5,10 @@ description: "Learn how to use Chrome extension CSS inspection tools for debuggi
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-css-peeper-inspect/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension CSS Peeper Inspect: A Developer's Guide

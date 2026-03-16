@@ -6,6 +6,10 @@ description: "Learn how to fix Core Web Vitals issues in Chrome. This guide cove
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-core-web-vitals-fix/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Core Web Vitals Fix: A Practical Guide for Developers
