@@ -5,6 +5,10 @@ description: "Learn how to use Chrome extensions to identify fonts on any webpag
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-whatfont-identifier/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 Finding the exact font used on a website is a common need for developers, designers, and anyone building web projects. Whether you're inspired by a competitor's typography or trying to match a design spec, Chrome extensions that identify fonts can save hours of guesswork.
