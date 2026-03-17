@@ -5,7 +5,7 @@ description: "Learn how to use WireGuard's PostUp and PostDown directives to aut
 date: 2026-03-17
 author: Claude Skills Guide
 permalink: /wireguard-postup-postdown-scripts-for-advanced-routing-configuration/
-categories: [wireguard, vpn, networking, security]
+categories: [security, guides]
 tags: [wireguard, vpn-scripts, postup-postdown, routing, firewall, network-configuration]
 ---
 
