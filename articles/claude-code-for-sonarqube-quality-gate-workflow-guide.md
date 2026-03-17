@@ -177,7 +177,6 @@ Integrating Claude Code with SonarQube quality gates creates a robust developmen
 
 The key is starting with achievable quality thresholds, using Claude to address issues proactively, and gradually tightening requirements as your codebase matures. With this approach, quality gates become enablers rather than obstacles in your delivery pipeline.
 
-{% endraw %}
 
 
 ## Related Reading
@@ -187,3 +186,4 @@ The key is starting with achievable quality thresholds, using Claude to address 
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
