@@ -11,8 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
-
-
+{% raw %}
 # Claude Code Git Hooks: Automate Your Pre-Commit Workflow
 
 Git hooks have long been the backbone of quality code enforcement in development teams. When combined with Claude Code's powerful capabilities, you can create a sophisticated pre-commit automation system that catches issues before they ever reach your repository. This guide walks you through setting up Claude Code git hooks that will transform how you validate and prepare code for commit.
@@ -392,3 +391,4 @@ The key is starting simple and expanding gradually. Begin with basic checks, the
 - [Claude Code for Release Automation Workflow Tutorial](/claude-skills-guide/claude-code-for-release-automation-workflow-tutorial/) — Hooks are part of the full release automation pipeline
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
