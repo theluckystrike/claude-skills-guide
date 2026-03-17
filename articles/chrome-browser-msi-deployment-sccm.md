@@ -1,209 +1,188 @@
 ---
+
 layout: default
-title: "Chrome Browser MSI Deployment via SCCM: A Practical Guide"
-description: "Learn how to deploy Google Chrome using MSI packages through Microsoft SCCM/Configuration Manager. Includes command-line parameters, distribution."
+title: "Chrome Browser MSI Deployment with SCCM: A Complete Guide"
+description: "Learn how to deploy Google Chrome via MSI installer using Microsoft SCCM. Practical examples, command-line parameters, and troubleshooting tips for IT administrators."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-browser-msi-deployment-sccm/
-categories: [guides]
-tags: [sccm, chrome, msi, deployment, enterprise, windows]
-reviewed: true
-score: 7
 ---
 
-# Chrome Browser MSI Deployment via SCCM: A Practical Guide
+{% raw %}
+# Chrome Browser MSI Deployment with SCCM: A Complete Guide
 
-Enterprise environments often require centralized software distribution, and Microsoft SCCM (System Center Configuration Manager) remains a popular choice for Windows deployments. Deploying Google Chrome via MSI through SCCM provides administrators with Group Policy-like control over browser settings, silent installation capabilities, and consistent rollout across the organization.
+Deploying Google Chrome Enterprise across an organization requires a strategic approach. System Center Configuration Manager (SCCM) provides a robust framework for enterprise software distribution, and combining it with Chrome's MSI installer creates a reliable deployment pipeline. This guide covers the technical details you need to implement Chrome Browser MSI deployment through SCCM.
 
-## Obtaining the Chrome MSI Package
+## Why Use MSI for Chrome Deployment
 
-Google provides enterprise MSI installers directly through their Chrome Enterprise bundle. The enterprise MSI differs from the standard EXE installer in that it supports silent installation and includes administrative template files for Group Policy configuration.
+The MSI (Windows Installer) format offers significant advantages over EXE installers in enterprise environments. MSI packages support silent installation, group policy integration, and detailed transaction logging. When deploying Chrome across hundreds or thousands of machines, these capabilities become essential for compliance and troubleshooting.
 
-Navigate to the [Chrome Enterprise](https://chromeenterprise.google/) downloads page and select the MSI installer for your architecture. You will typically find two versions:
+Google provides official MSI installers for Chrome Enterprise through their Chrome Enterprise bundle. These MSI packages differ from the consumer installer in several key ways:
 
-- `GoogleChromeStandaloneEnterprise.msi` — per-machine installation
-- `GoogleChromeEnterprise.msi` — the same package that works for both per-user and per-machine scenarios
+- Managed preferences can be embedded during installation
+- Update behavior is configurable through installer properties
+- Enterprise-specific policies are pre-configured in the installer
 
-Download the 64-bit or 32-bit version depending on your organizational requirements. Place the MSI file in your SCCM package source directory.
+## Obtaining the Chrome Enterprise MSI
 
-## Understanding MSI Installation Parameters
+The Chrome Enterprise MSI is available through the Chrome Enterprise storefront. You'll need a Google Chrome Enterprise license to access the official MSI files. Once licensed, download the ChromeEnterpriseBundle.msi which extracts to include the Chrome MSI installer along with administrative templates and documentation.
 
-The Chrome MSI supports several command-line parameters that control installation behavior. These parameters become critical when configuring your SCCM application deployment type.
+The extracted package contains `GoogleChromeStandaloneEnterprise.msi`—this is the file you'll distribute through SCCM.
 
-### Common Installation Properties
+## SCCM Application Creation Steps
 
-```powershell
-# Basic silent installation
-msiexec /i GoogleChromeStandaloneEnterprise.msi /qn
+### Creating the Application
 
-# Installation with logging
-msiexec /i GoogleChromeStandaloneEnterprise.msi /qn /l*v C:\Logs\chrome_install.log
+Launch the SCCM console and navigate to the Software Library workspace. Right-click on Applications and select Create Application. Choose Manually specify the application information since you're working with an MSI that SCCM doesn't automatically detect.
 
-# Specify installation directory
-msiexec /i GoogleChromeStandaloneEnterprise.msi INSTALLDIR="C:\Program Files\Google\Chrome" /qn
+The general information phase requires these details:
+- Name: Google Chrome Enterprise
+- Manufacturer: Google LLC
+- Software version: (check the downloaded MSI version)
+- Category: Web Browsers (or your organization's preference)
 
-# Disable automatic updates via MSI
-msiexec /i GoogleChromeStandaloneEnterprise.msi UPDATE_DISABLED=1 /qn
+### Distribution Point Configuration
+
+Before proceeding, ensure you have a distribution point configured in your SCCM hierarchy. The application content will need to be distributed to this point for client deployment.
+
+### Deployment Type Setup
+
+The deployment type defines how SCCM installs the software. For Chrome MSI, create a new deployment type with these specifications:
+
+**Installation Program:**
+```
+msiexec /i "GoogleChromeStandaloneEnterprise.msi" /q /norestart
 ```
 
-The `UPDATE_DISABLED=1` parameter proves particularly useful in enterprise environments where you manage Chrome updates separately through SCCM or Group Policy. Without this parameter, Chrome will attempt to check for and install updates independently, potentially conflicting with your deployment schedule.
+**Uninstall Program:**
+```
+msiexec /x "GoogleChromeStandaloneEnterprise.msi" /q
+```
 
-### Silent Switch Considerations
+**Installation behavior:** Install for system
+**Installation program visibility:** Normal (or Hidden if you prefer completely silent deployment)
+**Maximum allowed run time:** 60 minutes
+**Estimated installation time:** 10 minutes
 
-Note that `/qn` provides silent installation with no UI, while `/qb` displays a basic progress bar. For SCCM deployments, `/qn` is typically preferred to avoid any interactive prompts that might cause deployment failures.
+## Essential MSI Properties for Enterprise Deployment
 
-## Creating the SCCM Application
+The msiexec command supports numerous properties that control Chrome's installation behavior. Understanding these parameters enables customized deployments matching your organization's requirements.
 
-Begin by creating a new application in the SCCM console rather than a legacy package. Applications provide better detection logic and user experience management.
+### Silent Installation Properties
 
-### Application Properties
+| Property | Description | Example Value |
+|----------|-------------|---------------|
+| /q | Quiet mode - minimal UI | Required |
+| /qn | No UI at all | Optional |
+| /norestart | Prevents automatic restart | Recommended |
+| /l*v | Verbose logging | /l*v chrome_install.log |
 
-1. Open the SCCM console and navigate to **Software Library** → **Applications**
-2. Right-click and select **Create Application**
-3. Choose **Manually specify the application information**
-4. Fill in the general details:
-   - **Name**: Google Chrome Enterprise
-   - **Publisher**: Google LLC
-   - **Version**: (current version number)
+### Chrome-Specific Properties
 
-### Deployment Type Configuration
+Chrome's MSI supports additional properties for enterprise control:
 
-Create a Windows Installer (.msi file) deployment type:
+```
+msiexec /i "GoogleChromeStandaloneEnterprise.msi" /q 
+INSTALLDIR="C:\Program Files\Google\Chrome" 
+DELETE_CACHE=1 
+ENABLE_CHROMIUM_UPDATE=0
+```
 
-1. Add a deployment type
-2. Select **Windows Installer (.msi file)**
-3. Browse to your MSI file in the content location
-4. Set the installation program to:
-   ```
-   msiexec /i GoogleChromeStandaloneEnterprise.msi /qn
-   ```
-5. Configure detection rules to verify Chrome is installed:
-   - Rule: **File System**
-   - Path: `C:\Program Files\Google\Chrome\Application\chrome.exe`
-   - File or folder: `chrome.exe`
-   - This file exists with version property
+The `INSTALLDIR` property specifies a custom installation path. By default, Chrome installs to `%ProgramFiles%\Google\Chrome\Application`.
+
+Setting `DELETE_CACHE=1` removes the Google Update cache after installation, preventing potential conflicts with your update infrastructure.
+
+The `ENABLE_CHROMROMIUM_UPDATE=0` property disables Chrome's built-in update mechanism—critical when you manage updates through SCCM or Group Policy.
+
+## Configuring Installation Behavior
+
+### Detection Method
+
+SCCM requires a detection method to determine if Chrome is already installed. Create a rule checking for the Chrome installation directory:
+
+- Path: `%ProgramFiles%\Google\Chrome\Application`
+- File: `chrome.exe`
+- This registry key also works: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome`
 
 ### Requirements and Dependencies
 
-Configure requirements to ensure Chrome only deploys to supported systems:
+Create requirements to target appropriate machines:
+- Operating System: Windows 10 version 1809 or later
+- Available disk space: Minimum 500 MB
+- Existing browser: Not required (Chrome can be the primary or secondary browser)
 
-- **OS**: Windows 10 or later
-- **Architecture**: x64 or x86 depending on your MSI version
+Dependencies typically aren't required for Chrome, but you might create an application dependency for Visual C++ redistributables if your organization uses older infrastructure.
 
-You may also create dependencies on runtime dependencies like Visual C++ redistributables if your environment requires them.
+## Deployment Collection Strategy
 
-## Distributing Content to Distribution Points
+Organize your deployment using SCCM collections for staged rollouts:
 
-After creating the application, you must distribute the content to your SCCM distribution points.
+1. **Pilot Collection**: IT department and early adopters
+2. **Broad Collection**: General workforce
+3. **Exclude Collection**: Machines requiring legacy browser compatibility
 
-1. Right-click the application and select **Distribute Content**
-2. Choose your distribution point groups
-3. Complete the distribution wizard
-
-Verify the content status shows as **Success** on your distribution points before proceeding with deployment.
-
-## Creating the Deployment
-
-### Collection Selection
-
-Create or select a device collection for your Chrome deployment. Common approaches include:
-
-- **Pilot collection**: IT test devices first
-- **Department collections**: Specific user groups
-- **All Systems**: organization-wide rollout
-
-### Deployment Settings
-
-When creating the deployment:
-
-- **Action**: Install
-- **Purpose**: Required (or Available for user-initiated)
-- **Deployment available time**: Set based on your maintenance window
-- **Installation deadline**: Allow immediate or schedule for after-hours
-
-For a required deployment, users cannot easily bypass the installation. This ensures consistent browser deployment across your organization.
-
-### User Experience Settings
-
-Configure the deployment to minimize user disruption:
-
-- **User notifications**: Display in Software Center and show all notifications
-- **Installation restart behavior**: No action required
-- **Allow users to run the application independently**: Disabled for required deployments
-
-## Post-Installation Configuration
-
-Chrome's enterprise MSI includes support for administrative template settings that control browser behavior. These settings integrate with Group Policy after installation.
-
-### Administrative Templates
-
-The Chrome Enterprise bundle includes ADMX template files. Copy these to your Group Policy Central Store:
-
-- `chrome.admx` — template definitions
-- `chrome.adml` — language-specific definitions
-
-Common enterprise settings include:
-
-- **Default search provider**: Configure your organization's preferred search
-- **Homepage URL**: Set corporate intranet or dashboard as homepage
-- **Auto-update settings**: Control update behavior and timing
-- **Proxy settings**: Configure organizational proxy configurations
-
-### Registry-Based Configuration
-
-For simpler configurations without Group Policy, you can set registry values post-installation through SCCM scripts:
-
-```powershell
-# Set default homepage via registry
-$regPath = "HKLM:\SOFTWARE\Policies\Google\Chrome"
-New-Item -Path $regPath -Force | Out-Null
-New-ItemProperty -Path $regPath -Name "HomepageURL" -Value "https://intranet.company.com" -PropertyType String -Force | Out-Null
-```
-
-## Managing Updates
-
-Enterprise Chrome deployments require a strategy for browser updates. Without explicit configuration, Chrome will attempt self-updates.
-
-### Update Management Options
-
-1. **Group Policy updates**: Use the Update policy settings to control timing
-2. **SCCM software updates**: Deploy Chrome updates as you would any other update
-3. **Third-party tools**: Enterprise tools like PatchMyPC can manage Chrome updates
-
-For organizations preferring full control, disable Chrome's internal update mechanism and use SCCM to deploy new MSI versions as they become available. This approach requires monitoring Google's release cadence and testing new versions before production deployment.
+Apply deployment settings appropriate to each collection:
+- **Pilot**: Available deployment, 2-day enforcement deadline
+- **Broad**: Required deployment, 7-day enforcement deadline
 
 ## Troubleshooting Common Issues
 
-When deployments fail, check several common sources:
+### Installation Failures
 
-**Installation logs**: The `/l*v` parameter creates detailed logs. Check `%TEMP%\Chrome_Install.log` on client machines.
+When deployments fail, check these common causes:
 
-**Exit codes**: MSI installations return specific exit codes. A return value of 0 indicates success, while 3010 typically means a restart is required.
+**Insufficient Permissions**: Ensure the computer account has read access to the distribution point. The SYSTEM account performs the installation, not the user.
 
-**Detection rule failures**: Verify the detection rule correctly identifies Chrome installation. The path must match exactly where the MSI installs Chrome.
+**Disk Space**: Chrome requires approximately 300 MB. Verify available space before deployment.
 
-**Distribution point issues**: Ensure content has replicated to all distribution points serving the collection.
+**Conflicting Processes**: If Chrome is already running during installation, the MSI fails. Use task sequencing or mandatory restart before deployment.
 
-## Advanced: Task Sequence Deployment
+### Log File Analysis
 
-For complex scenarios requiring pre-installation steps or multiple applications, consider using task sequences:
+Chrome installation generates logs in multiple locations:
 
-1. Create a task sequence that installs prerequisites
-2. Add the Chrome MSI application step
-3. Configure post-installation scripts for organizational settings
-4. Deploy the task sequence to collections
+- MSI Log: `%TEMP%\ChromeInstall.log` (or path specified with /l*v)
+- Google Update Log: `%ProgramFiles%\Google\Update\Log\update.log`
+- SCCM Logs: Check `%Windir%\ccm\logs` for AppDiscovery.log and AppEnforce.log
 
-This approach provides flexibility for organizations with varied machine configurations.
+The MSI log provides the most detailed failure information. Look for return code 1603 (fatal error during installation) which typically indicates permission or path issues.
 
-## Conclusion
+### Return Codes
 
-Deploying Chrome via SCCM using MSI packages gives enterprise administrators control over browser deployment and configuration. The combination of silent installation, detection rules, and Group Policy integration creates a robust deployment framework. Remember to disable automatic updates if managing updates through SCCM, and establish a process for testing and deploying Chrome browser updates regularly.
+Understanding MSI return codes helps diagnose issues:
 
+- 0: Success
+- 1602: User cancelled installation
+- 1603: Fatal error during installation
+- 1618: Another installation in progress
+- 1641: Success, restart initiated
 
-## Related Reading
+Code 1618 requires waiting for other installations to complete or investigating what process holds the Windows Installer mutex.
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+## Automating Updates Post-Deployment
+
+After initial deployment, you'll need a strategy for Chrome updates. Three primary approaches work for enterprise environments:
+
+**Option 1: Disable Chrome Updates**: Set `ENABLE_CHROMIUM_UPDATE=0` during installation and manage entirely through SCCM application updates.
+
+**Option 2: Use Google Update**: Deploy the Google Update administrative template and configure policy settings for automatic updates.
+
+**Option 3: Hybrid Approach**: Allow Chrome to check for updates but delay installation, giving SCCM time to test new versions before they're applied.
+
+For most organizations, disabling Chrome's built-in updates and managing through SCCM provides the best control over version stability.
+
+## Final Checklist Before Production Deployment
+
+Before rolling out to production, verify:
+
+- [ ] MSI file tested on clean Windows 10 and Windows 11 images
+- [ ] Detection method correctly identifies existing Chrome installations
+- [ ] Uninstall capability tested and verified
+- [ ] Distribution point content status shows "Successfully distributed"
+- [ ] Test deployment to pilot collection completed without errors
+- [ ] Logging paths configured for post-deployment troubleshooting
+
+Deploying Chrome through SCCM provides centralized control, consistent configuration, and enterprise-grade update management. The initial setup effort pays dividends through simplified ongoing maintenance and improved security posture across your organization.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
