@@ -158,6 +158,42 @@ chrome://net-internals
 
 Select "Flush socket pools" and then navigate to the DNS tab to clear the cache. This often resolves issues after network changes or VPN disconnection.
 
+## Using Hosts Files for Local Development
+
+For local development, overriding DNS via the system hosts file remains the fastest approach. Chrome respects system hosts entries, so you can map domains to local IPs with zero network overhead.
+
+Edit `/etc/hosts` (macOS/Linux) or `C:\Windows\System32\drivers\etc\hosts` (Windows):
+
+```
+# Local development overrides
+127.0.0.1    myapp.local
+127.0.0.1    api.myapp.local
+192.168.1.50    staging.example.com
+```
+
+After modifying the hosts file, flush your system DNS cache:
+
+```bash
+# macOS
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+
+# Linux
+sudo systemd-resolve --flush-caches
+
+# Windows
+ipconfig /flushdns
+```
+
+This eliminates DNS lookup time entirely for local domains, which is critical when working with microservices or multi-tenant applications during development.
+
+## When DNS Optimization Has Diminishing Returns
+
+DNS is only one factor in page load time. If your DNS is already fast (under 20ms), further optimization yields diminishing returns. At that point, focus instead on:
+
+- **CDN selection**: Ensure static assets come from nearby edge servers
+- **HTTP/2 or HTTP/3**: These protocols multiplex connections, reducing handshake overhead
+- **TLS session resumption**: Caches cryptographic session keys to skip full handshakes
+
 ## Measuring the Impact
 
 Quantify your DNS optimization results. Record page load times before and after configuration changes using Chrome DevTools. Measure multiple loads to account for variance.
