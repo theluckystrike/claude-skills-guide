@@ -8,8 +8,6 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-criterion-benchmarking-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
 {% raw %}
@@ -71,7 +69,7 @@ criterion_main!(benches);
 
 Claude Code excels at automating repetitive benchmarking tasks. Here are the key integration patterns:
 
-### 1. Automated Baseline Generation
+### Automated Baseline Generation
 
 Use Claude Code to generate and save baseline benchmarks:
 
@@ -90,7 +88,7 @@ cargo bench --save-baseline "baseline-$TIMESTAMP"
 echo "Baseline saved: baseline-$TIMESTAMP"
 ```
 
-### 2. Regression Detection Workflow
+### Regression Detection Workflow
 
 Compare current results against baselines to detect regressions:
 
@@ -99,7 +97,7 @@ Compare current results against baselines to detect regressions:
 cargo bench --compare baseline-2026
 ```
 
-### 3. Batch Benchmarking
+### Batch Benchmarking
 
 For comprehensive analysis, run multiple benchmarks in sequence:
 
@@ -183,19 +181,19 @@ cargo bench --bench string_processing --compare baseline-2026
 
 ## Best Practices for Benchmarking Workflows
 
-### 1. Consistent Environment
+### Consistent Environment
 
 - Run benchmarks on a quiet system
 - Disable CPU frequency scaling
 - Use fixed seeds for random data
 
-### 2. Statistical Significance
+### Statistical Significance
 
 - Increase sample size for noisy benchmarks
 - Set appropriate measurement time
 - Use warmup phases effectively
 
-### 3. Automation with Claude Code
+### Automation with Claude Code
 
 Claude Code can help automate the entire pipeline:
 
@@ -211,7 +209,7 @@ benchmark:
     regression_error: 0.25    # 25% regression triggers error
 ```
 
-### 4. Continuous Integration
+### Continuous Integration
 
 Integrate benchmarking into your CI pipeline:
 
@@ -228,51 +226,6 @@ jobs:
         run: cargo bench --no-run
       - name: Compare with baseline
         run: cargo bench --compare baseline-main
-```
-
-## Advanced Techniques
-
-### Memory Profiling
-
-Combine Criterion with memory profiling tools:
-
-```rust
-use criterion::Bencher;
-
-fn benchmark_with_memory(b: &mut Bencher) {
-    // Measure memory allocations
-    b.iter(|| {
-        let mut vec = Vec::new();
-        for i in 0..1000 {
-            vec.push(i);
-        }
-        vec
-    });
-}
-```
-
-### Custom Measurements
-
-Extend Criterion with custom measurements:
-
-```rust
-use criterion::{Criterion, BenchmarkId};
-
-fn custom_benchmark(c: &mut Criterion) {
-    let mut group = c.benchmark_group("custom_metrics");
-    
-    for size in [100, 1000, 10000].iter() {
-        group.bench_with_input(
-            BenchmarkId::new("processing", size),
-            size,
-            |b, &size| {
-                b.iter(|| process_size(black_box(size)))
-            }
-        );
-    }
-    
-    group.finish();
-}
 ```
 
 ## Conclusion
