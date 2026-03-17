@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code to streamline incident communica
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-incident-communication-workflow-guide/
-categories: [Development, DevOps, AI Tools]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 

@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code to automate incident metrics tra
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-incident-metrics-workflow-tutorial/
-categories: [Development, DevOps, AI Tools]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 

@@ -5,7 +5,7 @@ description: "Learn how to use Claude Code to set up and manage repository branc
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-repo-branch-protection-rules-workflow/
-categories: [Claude Code, Development Workflow]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
