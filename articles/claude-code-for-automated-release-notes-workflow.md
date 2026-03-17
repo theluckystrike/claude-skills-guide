@@ -1,166 +1,279 @@
 ---
-
 layout: default
 title: "Claude Code for Automated Release Notes Workflow"
-description: "Learn how to build an automated release notes workflow using Claude Code. Extract changes from git, generate changelogs with AI, and streamline your."
+description: "Build an automated release notes workflow using Claude Code skills. Generate changelogs from git commits, integrate with GitHub releases, and streamline your deployment pipeline."
 date: 2026-03-15
-author: Claude Skills Guide
-permalink: /claude-code-for-automated-release-notes-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
+author: "Claude Skills Guide"
+permalink: /claude-code-for-automated-release-notes-workflow/
 ---
-
 
 {% raw %}
 # Claude Code for Automated Release Notes Workflow
 
-Release notes are one of the most tedious yet important artifacts in software development. They keep users informed, help teams track progress, and serve as documentation for what changed between versions. But manually writing them? That's a chore that often gets delayed or rushed.
+Manual release notes are time-consuming and error-prone. Developers often delay creating them, leading to incomplete documentation and confused users. Automating this process with Claude Code skills transforms how teams handle releases—generating consistent, informative changelogs from your existing git history while you focus on writing code.
 
-What if you could automate this entire process? With Claude Code and a well-designed skill, you can extract changes from your git history, categorize them intelligently, and generate polished release notes in seconds—not minutes.
+This guide shows you how to build a complete automated release notes workflow using Claude Code skills that integrate with your existing development pipeline.
 
-## Why Automate Release Notes?
+## Understanding the Release Notes Pipeline
 
-Before diving into the implementation, let's consider why automated release notes matter:
+Before diving into code, let's understand what an automated release notes workflow needs to accomplish:
 
-- **Consistency**: Automated notes follow a predictable format every time
-- **Time savings**: Instead of manually reviewing commits, let AI do the heavy lifting
-- **Completeness**: Nothing gets accidentally omitted from the changelog
-- **Developer experience**: Release day becomes less stressful
+1. **Collect changes** from git commits, PRs, or conventional commits
+2. **Categorize changes** into features, bug fixes, breaking changes
+3. **Format the output** in a readable, consistent style
+4. **Publish** to GitHub releases, CHANGELOG.md, or notifications
 
-The key challenge is extracting meaningful information from your git history and presenting it in a user-friendly format. That's where Claude Code shines.
+Claude Code skills excel at this because they can execute bash commands, read file contents, and format output—all essential operations for generating release notes.
 
-## Extracting Changes from Git
+## Creating the Release Notes Skill
 
-The foundation of any automated release notes workflow is extracting commits, pull requests, or changes since your last release. Here's how to do it:
+Start by creating a skill file at `~/.claude/skills/generate-release-notes/skill.md`:
 
-```bash
-# Get commits since last tag
-git log --pretty=format:"%h %s" $(git describe --tags --abbrev=0)..HEAD
+```markdown
+---
+name: Generate Release Notes
+description: Generate automated release notes from git commits and conventional commits
+version: 1.0.0
+tools: [bash, read_file, write_file]
+---
 
-# Or get merged PRs since last release
-git log --merges --pretty=format:"%s" $(git describe --tags --abbrev=0)..HEAD
+# Generate Release Notes Skill
+
+You generate release notes from git commit history using conventional commit format.
+
+## Available Variables
+
+- `since_tag`: The git tag to compare from (default: last tag)
+- `output_format`: Output format - markdown, github, or json
+- `include_files`: List of files to include in the release notes
+
+## Commands
+
+### Generate Changelog
+
+Run the following to generate release notes:
+
+1. Get commits since last tag:
+   ```bash
+   git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:"%s|%h|%an|%ad" --date=short
+   ```
+
+2. Parse conventional commits and categorize:
+   - `feat:` → Features
+   - `fix:` → Bug Fixes
+   - `docs:` → Documentation
+   - `BREAKING CHANGE:` → Breaking Changes
+
+3. Format output based on `output_format` variable
+
+## Output Format
+
+Generate release notes with:
+- Version number and date
+- Total changes count
+- Categorized changes list
+- Contributors list
+- Links to compare views
 ```
 
-For a Claude Code skill, you'd wrap this in a Bash tool call and parse the output. The skill can then feed this information to the AI model for intelligent categorization.
+This skill uses git commands to extract commit information. Now let's build the actual automation script.
 
-## Building the Release Notes Skill
+## Building the Release Notes Generator Script
 
-Create a skill that handles the entire workflow. Here's a practical structure:
+Create a helper script at `~/.claude/scripts/generate-release-notes.sh`:
+
+```bash
+#!/bin/bash
+
+# Generate Release Notes Script
+# Usage: ./generate-release-notes.sh [version] [since_tag]
+
+VERSION="${1:-$(date +%Y.%m.%d)}"
+SINCE_TAG="${2:-$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")}"
+
+echo "Generating release notes for version $VERSION (since $SINCE_TAG)..."
+
+# Get commits with conventional format
+COMMITS=$(git log "$SINCE_TAG..HEAD" --pretty=format:"%s|%h|%an|%ae" 2>/dev/null)
+
+# Initialize categories
+FEATURES=()
+BUGFIXES=()
+DOCS=()
+BREAKING=()
+OTHER=()
+
+# Parse and categorize commits
+while IFS='|' read -r msg hash author email; do
+  case "$msg" in
+    feat:*)
+      FEATURES+=("- $msg ($hash)")
+      ;;
+    fix:*)
+      BUGFIXES+=("- $msg ($hash)")
+      ;;
+    docs:*)
+      DOCS+=("- $msg ($hash)")
+      ;;
+    BREAKING\ CHANGE:*)
+      BREAKING+=("- $msg ($hash)")
+      ;;
+    *)
+      OTHER+=("- $msg ($hash)")
+      ;;
+  esac
+done <<< "$COMMITS"
+
+# Generate markdown output
+cat << EOF
+# Release Notes - Version $VERSION
+
+**Release Date:** $(date +%Y-%m-%d)
+
+EOF
+
+# Output breaking changes first (most important)
+if [ ${#BREAKING[@]} -gt 0 ]; then
+  echo "## 🚨 Breaking Changes"
+  echo ""
+  for item in "${BREAKING[@]}"; do
+    echo "$item"
+  done
+  echo ""
+fi
+
+# Output features
+if [ ${#FEATURES[@]} -gt 0 ]; then
+  echo "## ✨ New Features"
+  echo ""
+  for item in "${FEATURES[@]}"; do
+    echo "$item"
+  done
+  echo ""
+fi
+
+# Output bug fixes
+if [ ${#BUGFIXES[@]} -gt 0 ]; then
+  echo "## 🐛 Bug Fixes"
+  echo ""
+  for item in "${BUGFIXES[@]}"; do
+    echo "$item"
+  done
+  echo ""
+fi
+
+echo "Generated $(git rev-list "$SINCE_TAG..HEAD" --count) changes"
+```
+
+Make it executable and add it to your workflow:
+
+```bash
+chmod +x ~/.claude/scripts/generate-release-notes.sh
+```
+
+## Integrating with GitHub Actions
+
+Automate release notes as part of your CI/CD pipeline. Create `.github/workflows/release.yml`:
 
 ```yaml
+name: Generate Release Notes
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate Release Notes
+        id: release-notes
+        run: |
+          chmod +x ~/.claude/scripts/generate-release-notes.sh
+          NOTES=$(~/.claude/scripts/generate-release-notes.sh ${{ github.ref_name }})
+          echo "notes<<EOF" >> $GITHUB_OUTPUT
+          echo "$NOTES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: Release ${{ github.ref_name }}
+          body: ${{ steps.release-notes.outputs.notes }}
+          draft: false
+```
+
+This workflow triggers on tag pushes, generates release notes automatically, and publishes them to GitHub.
+
+## Using Claude Code Interactively
+
+You can also generate release notes interactively during development. Invoke the skill:
+
+```
+/generate-release-notes --version 2.1.0 --since-tag v2.0.0
+```
+
+Claude will execute the git commands, parse the commits, and present formatted release notes that you can edit before publishing.
+
+## Advanced: AI-Enhanced Release Notes
+
+For more intelligent release notes, enhance your skill to use Claude's language capabilities:
+
+```python
+# Process commits with AI summarization
+import subprocess
+import anthropic
+
+# Get raw commits
+result = subprocess.run(
+    ["git", "log", f"{since_tag}..HEAD", "--pretty=format:%s%n%b"],
+    capture_output=True, text=True
+)
+commits = result.stdout
+
+# Use Claude to summarize and enhance
+client = anthropic.Anthropic()
+response = client.messages.create(
+    model="claude-3-sonnet-20240229",
+    max_tokens=1000,
+    system="You are a technical writer. Summarize these git commits into user-friendly release notes.",
+    messages=[{"role": "user", "content": commits}]
+)
+
+enhanced_notes = response.content[0].text
+```
+
+This approach converts technical commit messages into readable descriptions suitable for end users.
+
+## Best Practices for Automated Release Notes
+
+1. **Use conventional commits** - Train your team to use `feat:`, `fix:`, `docs:` prefixes for machine-parseable commits
+
+2. **Version consistently** - Follow semantic versioning and tag releases consistently
+
+3. **Review before publishing** - Always review generated notes before public release
+
+4. **Include context** - Add manual sections for significant changes that need explanation
+
+5. **Test the pipeline** - Run your release notes generation before actual releases to catch issues
+
+## Wrapping Up
+
+Automated release notes with Claude Code eliminate manual documentation overhead while ensuring consistency. By combining git history parsing, conventional commits, and CI/CD integration, you create a self-sustaining documentation pipeline.
+
+Start with the basic skill and script, then enhance as your team grows comfortable with the workflow. The investment pays dividends in time saved and documentation quality improved.
+
 ---
-name: release-notes
-description: Generate automated release notes from git changes
----
-```
 
-The skill body should guide Claude through:
-
-1. Finding the previous release tag
-2. Extracting all changes since that tag
-3. Categorizing changes (features, bug fixes, breaking changes, improvements)
-4. Formatting the output in your preferred style
-5. Optionally creating a GitHub release or updating a CHANGELOG.md
-
-## Practical Example: The Complete Workflow
-
-Here's how a complete release notes workflow looks in practice:
-
-```bash
-# Step 1: Find the last release tag
-LAST_TAG=$(git describe --tags --abbrev=0)
-echo "Last release: $LAST_TAG"
-
-# Step 2: Get all changes
-CHANGES=$(git log --pretty=format:"- %s (%h)" $LAST_TAG..HEAD)
-echo "$CHANGES"
-```
-
-Once you have the raw changes, feed them to Claude with clear instructions:
-
-> "Analyze these git commits and categorize them into: Features, Bug Fixes, Breaking Changes, and Improvements. Then format them as a release note draft."
-
-Claude will intelligently group related commits, identify the nature of each change, and present them in a clean, readable format.
-
-## Advanced Patterns
-
-### Semantic Versioning Integration
-
-For projects using semantic versioning, you can automatically determine the release type:
-
-```bash
-# Check commit messages for conventional commits patterns
-# feat: → minor release (new feature)
-# fix: → patch release (bug fix)
-# BREAKING CHANGE: → major release
-```
-
-Your skill can parse these patterns and suggest the appropriate version bump.
-
-### Multi-Repo Support
-
-If you manage multiple repositories, create a skill that handles each one differently:
-
-```yaml
----
-name: release-notes
-description: Generate release notes for specified repository
----
-```
-
-Pass the repository path as a parameter when invoking the skill.
-
-### GitHub Release Automation
-
-Take it a step further by automatically creating GitHub releases:
-
-```bash
-# Create a GitHub release
-gh release create v1.2.0 \
-  --title "Version 1.2.0 - New Dashboard" \
-  --notes-file release-notes.md
-```
-
-Your Claude skill can generate the release notes file, then trigger the GitHub CLI command to publish it.
-
-## Best Practices for Release Note Skills
-
-When building your automated release notes workflow, keep these tips in mind:
-
-1. **Use conventional commits**: Enforce a commit message format (like Conventional Commits) to make parsing easier
-2. **Filter noise**: Exclude chore commits, dependency updates, and refactoring from the final notes
-3. **Include context**: Add links to related issues, PRs, or documentation
-4. **Review before publishing**: Always have a human review AI-generated notes before release
-5. **Maintain a template**: Create a consistent structure your team is familiar with
-
-## Integrating with CI/CD
-
-The real power of automated release notes comes from integrating them into your continuous deployment pipeline:
-
-```yaml
-# Example GitHub Actions workflow
-- name: Generate Release Notes
-  run: |
-    claude --skill release-notes \
-      --param version=${{ github.ref_name }}
-```
-
-This ensures every release automatically gets comprehensive, consistent notes without manual effort.
-
-## Conclusion
-
-Automated release notes with Claude Code transform a tedious task into a seamless part of your development workflow. By extracting changes from git, using AI for intelligent categorization, and integrating with your existing tools, you can maintain high-quality release documentation with minimal effort.
-
-Start small: create a basic skill that extracts commits and formats them. Then progressively add intelligence—categorization, conventional commit parsing, GitHub release creation. Each iteration makes your release process smoother.
-
-The goal isn't to eliminate human oversight entirely, but to eliminate the mechanical drudgery so your team can focus on what matters: shipping great software.
+*Want more Claude Code automation tips? Explore our guides on CI/CD integration and skill development.*
 {% endraw %}
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
