@@ -95,6 +95,37 @@ const channel = supabase
 
 For real-time features, consider using the **frontend-design** skill to build reactive UI components that update automatically when data changes.
 
+## Schema Design with Row Level Security
+
+Design your database schema with RLS from the start. Here is a practical example for a todo application:
+
+```sql
+CREATE TABLE todos (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
+  title TEXT NOT NULL,
+  completed BOOLEAN DEFAULT false,
+  created_at TIMESTAMPTZ DEFAULT now(),
+  updated_at TIMESTAMPTZ DEFAULT now()
+);
+
+ALTER TABLE todos ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users can view own todos" ON todos
+  FOR SELECT USING (auth.uid() = user_id);
+
+CREATE POLICY "Users can insert own todos" ON todos
+  FOR INSERT WITH CHECK (auth.uid() = user_id);
+
+CREATE POLICY "Users can update own todos" ON todos
+  FOR UPDATE USING (auth.uid() = user_id);
+
+CREATE POLICY "Users can delete own todos" ON todos
+  FOR DELETE USING (auth.uid() = user_id);
+```
+
+For advanced RLS patterns and fine-grained access control, see the [Supabase Auth RLS Guide](/claude-skills-guide/claude-code-supabase-auth-row-level-security-guide/).
+
 ## Authentication Integration
 
 Supabase handles authentication with multiple providers. Claude Code can manage user sessions and protected routes.
