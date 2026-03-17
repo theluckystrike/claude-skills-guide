@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code to automate and streamline your 
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-incident-response-runbook-workflow/
-categories: [Development, DevOps, Automation]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
