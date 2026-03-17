@@ -1,198 +1,243 @@
 ---
-
-
 layout: default
 title: "Claude Code for PR Status Check Workflow Tutorial"
-description: "Learn how to build automated PR status check workflows with Claude Code. This tutorial covers GitHub API integration, status monitoring, and automation."
+description: "Learn how to build automated PR status check workflows using Claude Code. This tutorial covers GitHub integration, status monitoring, and creating custom skills for pull request automation."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pr-status-check-workflow-tutorial/
-categories: [guides]
+categories: [tutorials]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
-
 
 {% raw %}
 # Claude Code for PR Status Check Workflow Tutorial
 
-Pull request status checks are essential for maintaining code quality in any development workflow. Whether you're managing a small team or coordinating across an entire organization, automated PR status checks help ensure that only properly reviewed and tested code makes it into your main branch. This tutorial demonstrates how to build powerful PR status check workflows using Claude Code, using GitHub's API and automation capabilities to streamline your development process.
+Pull request status checks are essential for maintaining code quality in any development workflow. Automating these checks with Claude Code can save time and ensure consistent validation across your codebase. This tutorial walks you through building a complete PR status check workflow using Claude Code's capabilities.
 
-## Understanding PR Status Checks
+## Why Automate PR Status Checks with Claude Code?
 
-Before diving into implementation, it's important to understand what PR status checks actually do. When you create a pull request in GitHub, various systems can report their status back to that PR. These statuses appear as check runs, check suites, and commit statuses, providing immediate visual feedback about whether your code meets certain criteria.
+Manual PR status checking is time-consuming and prone to oversight. By leveraging Claude Code, you can:
 
-GitHub provides several types of status reporting:
+- **Automate repetitive checks** - Run linting, testing, and validation without manual intervention
+- **Get contextual alerts** - Receive specific guidance when checks fail
+- **Enforce consistency** - Ensure every PR meets your team's standards
+- **Reduce context switching** - Stay in your terminal while monitoring PR status
 
-- **Commit statuses**: Simple pass/fail indicators that appear on commits
-- **Check runs**: Detailed results from CI/CD systems and other tools
-- **Check suites**: Collections of check runs that run on the same commit
+Claude Code's ability to interact with GitHub's API makes it an ideal tool for building these automation workflows.
 
-Claude Code can interact with all of these through the GitHub API, enabling you to create sophisticated monitoring and automation workflows.
+## Setting Up Your Environment
 
-## Setting Up GitHub API Access
-
-To interact with PR statuses programmatically, you'll need to authenticate with GitHub's API. The recommended approach is using a personal access token with appropriate scopes. Create a token with the `repo` scope for full repository access, or `public_repo` for public repositories only.
-
-Store your token securely as an environment variable:
+Before building the workflow, ensure Claude Code is installed and authenticated with GitHub:
 
 ```bash
-export GITHUB_TOKEN="your_personal_access_token_here"
+# Verify Claude Code installation
+claude --version
+
+# Check GitHub CLI authentication
+gh auth status
 ```
 
-In your Claude Code workflow, you can reference this using environment variable substitution. This keeps your credentials secure and out of your codebase.
+You need both Claude Code and the GitHub CLI (`gh`) installed. The `gh` CLI handles authentication, while Claude Code orchestrates the workflow logic.
 
-## Building the Status Check Workflow
+## Creating a PR Status Check Skill
 
-Let's create a Claude Code skill that monitors PR status checks and reports their state. We'll use a skill that can be invoked whenever you need to check the status of a pull request.
+A Claude skill is a reusable prompt that defines behavior for specific tasks. Create a new skill for PR status checking:
 
-First, define the skill structure with appropriate tools:
+```markdown
+# PR Status Check Skill
 
-```yaml
-name: pr-status-check
-description: Check pull request status and wait for required checks
+You are a PR status monitoring assistant. Your role is to check the status of pull requests and report their current state.
+
+## Available Tools
+- gh: Use GitHub CLI commands to interact with GitHub
+- read_file: Read files from the repository
+- bash: Execute shell commands
+
+## Instructions
+
+1. When asked to check PR status, use `gh pr status` to get current PR information
+2. For detailed status of a specific PR, use `gh pr view <PR-number> --json statusChecks`
+3. Report the status of each check: PENDING, SUCCESS, FAILURE, or CANCELLED
+4. If any check failed, explain what needs to be fixed
+5. Suggest next steps based on the current status
+
+## Response Format
+
+Provide responses in this format:
+- **PR Title**: [title]
+- **Branch**: [source] → [target]
+- **Status**: [open/merged/closed]
+- **Checks**:
+  - [check name]: [status] ([details if failed])
 ```
 
-The skill should use GitHub's API endpoint to fetch the combined status for a commit:
+Save this skill to `~/.claude/skills/pr-status-skill.md`.
 
-```javascript
-async function getPRStatus(owner, repo, prNumber) {
-  const { data: pr } = await github.rest.pulls.get({
-    owner,
-    repo,
-    pull_number: prNumber
-  });
-  
-  const { data: checks } = await github.rest.checks.listForRef({
-    owner,
-    repo,
-    ref: pr.head.sha,
-    status: "completed"
-  });
-  
-  return {
-    sha: pr.head.sha,
-    status: checks.check_runs.map(run => ({
-      name: run.name,
-      status: run.conclusion,
-      url: run.html_url
-    }))
-  };
-}
+## Practical Example: Checking PR Before Merge
+
+Here's a practical workflow for checking PR status before merging:
+
+```bash
+# Get current PR status
+claude -p "Check the status of the current pull request. 
+Use gh pr status to see what PRs are available, then check 
+the status checks for any open PRs."
 ```
 
-This function retrieves all completed check runs for the PR's latest commit, allowing you to see which checks have passed or failed.
+Claude Code will execute the GitHub CLI commands and present a clear status report.
 
-## Creating a Wait-for-Checks Pattern
+## Building an Automated Check Script
 
-A common workflow pattern is waiting for all required checks to complete before proceeding. This is particularly useful in automation scripts where you need to ensure CI pipelines have finished before taking further action.
+For more advanced automation, create a bash script that combines multiple checks:
 
-Here's how to implement a wait-for-checks function:
+```bash
+#!/bin/bash
+# pr-check-workflow.sh
 
-```javascript
-async function waitForChecksComplete(owner, repo, prNumber, requiredChecks, timeoutMinutes) {
-  const deadline = Date.now() + (timeoutMinutes * 60 * 1000);
-  
-  while (Date.now() < deadline) {
-    const status = await getPRStatus(owner, repo, prNumber);
+REPO=${1:-$(gh repo view --json name -q .name)}
+OWNER=${2:-$(gh repo view --json owner -q .owner.login)}
+
+echo "Checking open PRs for $OWNER/$REPO..."
+
+# Get open PRs
+open_prs=$(gh pr list --state open --json number,title --jq '.[]')
+
+if [ -z "$open_prs" ]; then
+    echo "No open PRs found."
+    exit 0
+fi
+
+# Check each open PR
+echo "$open_prs" | while read pr; do
+    pr_number=$(echo "$pr" | jq -r '.number')
+    pr_title=$(echo "$pr" | jq -r '.title')
     
-    const allRequiredComplete = requiredChecks.every(required => 
-      status.status.some(check => 
-        check.name === required && 
-        check.status !== "pending"
-      )
-    );
+    echo "---"
+    echo "PR #$pr_number: $pr_title"
     
-    if (allRequiredComplete) {
-      return status;
-    }
+    # Get check status
+    gh pr view "$pr_number" --json statusChecks --jq '.statusChecks[]' | \
+        jq -r '"\(.name): \(.state)"'
     
-    await new Promise(resolve => setTimeout(resolve, 30000));
-  }
-  
-  throw new Error(`Timeout waiting for checks after ${timeoutMinutes} minutes`);
-}
+    echo ""
+done
 ```
 
-This function polls GitHub every 30 seconds until either all required checks complete or the timeout is reached. Adjust the polling interval based on your typical CI pipeline durations.
+Run this script with:
 
-## Integrating with Claude Code Sessions
-
-To make this truly useful within Claude Code workflows, you can create custom skills that integrate status checking into your development process. Consider creating skills for common scenarios:
-
-- **Wait for CI**: Block until all CI checks pass
-- **Retry failed checks**: Automatically trigger re-runs of failed checks
-- **Notify on failure**: Send notifications when checks fail
-- **Block on requirement**: Only proceed with merges when specific checks pass
-
-Here's an example skill that waits for PR checks:
-
-```yaml
-name: wait-for-pr-checks
-description: Wait for all required PR status checks to complete
+```bash
+chmod +x pr-check-workflow.sh
+./pr-check-workflow.sh
 ```
 
-## Automating PR Merge Conditions
+## Integrating with Claude Code
 
-Beyond simple status checking, you can build more sophisticated automation that makes decisions based on PR status. For example, you might want to automatically merge PRs when all checks pass:
+You can enhance this script with Claude Code's natural language processing:
 
-```javascript
-async function attemptAutoMerge(owner, repo, prNumber) {
-  const { data: pr } = await github.rest.pulls.get({
-    owner,
-    repo,
-    pull_number: prNumber
-  });
-  
-  const { data: combinedStatus } = await github.rest.repos.getCombinedStatusForRef({
-    owner,
-    repo,
-    ref: pr.head.sha
-  });
-  
-  if (combinedStatus.state === "success") {
-    await github.rest.pulls.merge({
-      owner,
-      repo,
-      pull_number: prNumber,
-      merge_method: "squash"
-    });
-    return { success: true, message: "PR merged successfully" };
-  }
-  
-  return { 
-    success: false, 
-    message: `PR not ready for merge, status: ${combinedStatus.state}` 
-  };
-}
+```bash
+# Ask Claude to analyze PR status and suggest actions
+claude -p "Analyze the output from our pr-check-workflow.sh 
+script and tell me:
+1. Which PRs have failing checks
+2. What the common failure patterns are
+3. Which PRs are ready to merge
+4. Prioritized suggestions for moving forward"
 ```
 
-This function first verifies that all statuses are successful before attempting to merge. It uses squash merging, which creates a clean commit history while preserving the PR's commits in the git history.
+This combines the structured data from GitHub with Claude Code's analysis capabilities.
 
-## Best Practices for PR Status Workflows
+## Monitoring Continuous Integration Status
 
-When implementing PR status check workflows with Claude Code, keep these best practices in mind:
+For teams using GitHub Actions or other CI systems, create a monitoring skill:
 
-**Always use timeouts**: Network issues and CI delays happen. Build reasonable timeouts into any wait operations to prevent workflows from hanging indefinitely.
+```markdown
+# CI Status Monitor
 
-**Handle edge cases**: What happens if a required check doesn't run at all? Your workflow should detect this and report it clearly rather than waiting forever.
+You monitor continuous integration status for pull requests.
 
-**Log extensively**: Since PR status workflows often run in the background, comprehensive logging helps debug issues when things go wrong.
+## Tool Usage
 
-**Respect rate limits**: GitHub's API has rate limits. If you're checking status frequently, implement exponential backoff to avoid hitting these limits.
+Use gh run list to see recent workflow runs:
+gh run list --branch <branch-name> --limit 10
 
-## Summary
+Use gh run view to get details:
+gh run view <run-id> --log
 
-Building PR status check workflows with Claude Code opens up powerful automation possibilities for your development process. From simple status monitoring to sophisticated auto-merge systems, the GitHub API integration allows you to create workflows that fit your team's specific needs.
+## Your Task
 
-Remember to always handle failures gracefully, implement appropriate timeouts, and keep your credentials secure. With these patterns in place, you can create reliable automation that improves your team's productivity and code quality.
+1. Check the latest workflow runs for the specified branch
+2. Identify any failing jobs
+3. Provide actionable recommendations to fix failures
+4. Suggest whether the PR is ready for review based on CI status
+
+## Status Meanings
+
+- QUEUED: Waiting to start
+- IN_PROGRESS: Currently running
+- COMPLETED: Finished (check conclusion for success/failure)
+- QUEUED: Waiting for availability
+```
+
+## Advanced: Webhook-Based Automation
+
+For real-time notifications, set up GitHub webhooks that trigger Claude Code:
+
+1. Create a webhook in your GitHub repository settings
+2. Point it to a server endpoint
+3. Have that server trigger Claude Code via CLI when events occur
+
+```bash
+# Example: Claude Code responds to webhook payload
+claude -p "A new PR has been opened. Here's the payload:
+$WEBHOOK_PAYLOAD
+
+Check if the PR follows our contribution guidelines and 
+provide initial feedback."
+```
+
+## Best Practices
+
+- **Use descriptive PR titles** - Makes status reports more readable
+- **Set up required status checks** - Ensures merge blocking until checks pass
+- **Combine multiple tools** - Use Claude Code with GitHub CLI, grep, and custom scripts
+- **Cache results** - For large repositories, cache check results to reduce API calls
+- **Handle rate limits** - Be mindful of GitHub API rate limits when checking many PRs
+
+## Troubleshooting Common Issues
+
+### Authentication Errors
+
+If you see authentication errors:
+
+```bash
+# Re-authenticate with GitHub
+gh auth login
+
+# Verify permissions
+gh auth status
+```
+
+### Rate Limiting
+
+When hitting rate limits:
+
+```bash
+# Use GitHub token for higher limits
+export GH_TOKEN=$(gh auth token)
+```
+
+### Missing Check Context
+
+If status checks don't appear:
+
+```bash
+# Ensure branch protection rules include required checks
+gh rule-check list
+```
+
+## Conclusion
+
+Automating PR status checks with Claude Code transforms how you manage pull requests. By combining Claude Code's natural language capabilities with GitHub's API, you can build sophisticated workflows that save time and improve code quality. Start with simple checks and gradually add complexity as your needs evolve.
+
+Remember: The goal is not to replace human review, but to handle repetitive tasks so developers can focus on code quality and innovation.
 {% endraw %}
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
