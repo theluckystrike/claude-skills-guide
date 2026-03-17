@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /browser-speed-benchmark-2026/
 reviewed: true
 score: 8
-categories: [browsers, performance]
+categories: [guides, advanced]
 tags: [browser-speed-benchmark-2026]
 ---
 
