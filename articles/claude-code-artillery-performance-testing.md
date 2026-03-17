@@ -111,6 +111,54 @@ For deeper analysis, export results to JSON and process them with custom scripts
 npx artillery run login-load-test.yml --output results.json --format json
 ```
 
+## Modeling Realistic User Journeys
+
+Instead of testing endpoints in isolation, create flows that represent actual user behavior. An e-commerce checkout flow, for example, tests how your system handles sequential, stateful operations under load:
+
+```yaml
+scenarios:
+  - name: "E-commerce checkout flow"
+    weight: 70
+    flow:
+      - get:
+          url: "/api/products?page={{ $randomPage }}"
+      - get:
+          url: "/api/products/{{ $randomProductId }}"
+      - post:
+          url: "/api/cart"
+          json:
+            productId: "{{ $randomProductId }}"
+            quantity: 1
+      - put:
+          url: "/api/cart/{{ $cartId }}"
+          json:
+            quantity: "{{ $randomQuantity }}"
+      - post:
+          url: "/api/orders"
+          json:
+            cartId: "{{ $cartId }}"
+            paymentMethod: "credit_card"
+```
+
+Spike testing is another valuable pattern — verify your system recovers gracefully from sudden traffic surges:
+
+```yaml
+config:
+  phases:
+    - duration: 60
+      arrivalRate: 10
+      name: "Baseline"
+    - duration: 120
+      arrivalRate: 50
+      name: "Gradual load"
+    - duration: 30
+      arrivalRate: 500
+      name: "Spike test"
+    - duration: 60
+      arrivalRate: 10
+      name: "Recovery"
+```
+
 ## Advanced Strategies
 
 ### Dynamic Data Generation
@@ -145,7 +193,32 @@ artillery run --config cloud-config.yml login-load-test.yml
 
 ### Integration with CI/CD
 
-Automate performance testing in your pipeline. For broader CI patterns, see [Claude Code GitHub Actions approval workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/). Add a basic threshold check:
+Automate performance testing in your pipeline. For broader CI patterns, see [Claude Code GitHub Actions approval workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/). A complete GitHub Actions workflow:
+
+```yaml
+# .github/workflows/load-test.yml
+name: Load Tests
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM
+  workflow_dispatch:
+
+jobs:
+  load-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install
+      - run: npx artillery run config/production.yml --output results.json
+      - run: npx artillery report results.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: load-test-results
+          path: results.html
+```
+
+Add threshold checks to fail the build on performance regressions:
 
 ```bash
 npx artillery run api-test.yml --threshold "p95.responseTime:500"

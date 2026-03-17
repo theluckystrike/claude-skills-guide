@@ -59,6 +59,19 @@ Images are the most common cause of poor LCP scores. Use modern formats and prop
 
 The `fetchpriority="high"` attribute tells the browser to prioritize this image above other resources. Use `loading="eager"` for above-the-fold content and `loading="lazy"` for everything below the fold.
 
+### Monitor Server Response Time
+
+Before optimizing, measure your Time to First Byte (TTFB) to establish a baseline:
+
+```javascript
+const perfEntries = performance.getEntriesByType('navigation');
+perfEntries.forEach((entry) => {
+  console.log(`TTFB: ${entry.responseStart - entry.requestStart}ms`);
+});
+```
+
+If TTFB exceeds 600ms, prioritize server-side improvements: enable caching, use a CDN, and optimize database queries.
+
 ### Implement Effective Caching
 
 Server-side caching dramatically improves repeat visits. Enable compression and set cache headers in Express.js:
@@ -166,6 +179,32 @@ self.onmessage = (e) => {
 ```
 
 This keeps the main thread free for user interactions.
+
+### Defer Third-Party Scripts
+
+Third-party scripts often cause interactivity problems. Load non-essential scripts dynamically after the page becomes interactive:
+
+```javascript
+function deferThirdPartyScripts() {
+  const scripts = [
+    'https://analytics.example.com/tracker.js',
+    'https://chat.widget.com/widget.js'
+  ];
+
+  scripts.forEach(src => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    document.body.appendChild(script);
+  });
+}
+
+if (document.readyState === 'complete') {
+  deferThirdPartyScripts();
+} else {
+  window.addEventListener('load', deferThirdPartyScripts);
+}
+```
 
 ### Optimize Event Handlers
 
