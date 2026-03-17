@@ -6,6 +6,10 @@ description: "Learn how to use Chrome managed profiles to cleanly separate work 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-managed-profiles-work-personal/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Managed Profiles: Separating Work and Personal Browsing

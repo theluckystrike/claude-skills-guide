@@ -5,6 +5,10 @@ description: "Research guide for building Chrome extensions that organize browse
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-tab-organizer-research/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Tab Organizer Research: A Developer's Guide

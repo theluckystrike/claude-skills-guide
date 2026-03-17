@@ -6,6 +6,10 @@ description: "Learn how to deploy Google Chrome via MSI installer using Microsof
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-browser-msi-deployment-sccm/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

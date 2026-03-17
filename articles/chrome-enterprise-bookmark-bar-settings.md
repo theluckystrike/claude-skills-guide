@@ -5,6 +5,10 @@ description: "Learn how to configure Chrome browser bookmark bar settings via en
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-bookmark-bar-settings/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

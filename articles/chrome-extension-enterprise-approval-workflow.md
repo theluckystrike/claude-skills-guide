@@ -5,6 +5,10 @@ description: "Learn how to build enterprise-grade approval workflows for Chrome 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-enterprise-approval-workflow/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Enterprise Approval Workflow: A Practical Guide

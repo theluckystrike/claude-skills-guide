@@ -6,6 +6,10 @@ description: "Master Chrome Enterprise stable channel management with practical 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-stable-channel-management/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Enterprise Stable Channel Management: A Practical Guide

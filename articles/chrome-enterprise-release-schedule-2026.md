@@ -5,6 +5,10 @@ description: "A comprehensive guide to Chrome Enterprise release schedule 2026. 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-release-schedule-2026/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Enterprise Release Schedule 2026: A Practical Guide

@@ -6,6 +6,10 @@ description: "Learn how to build and use Chrome extensions for bibliography gene
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-bibliography-generator/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 Building a Chrome extension for bibliography generation can save researchers, students, and developers hours of tedious citation work. This guide walks you through creating a functional bibliography generator extension, from understanding the core architecture to implementing practical features that integrate seamlessly with Chrome.

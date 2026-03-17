@@ -5,6 +5,10 @@ description: "Discover how to leverage the Miro Chrome extension for seamless wh
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-miro-whiteboard/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 The Miro whiteboard platform has become an essential tool for remote collaboration, design thinking, and visual project management. While the web-based version offers robust functionality, the Chrome extension brings additional capabilities that streamline your workflow directly from the browser. This guide explores how developers and power users can maximize their productivity with the Miro Chrome extension.

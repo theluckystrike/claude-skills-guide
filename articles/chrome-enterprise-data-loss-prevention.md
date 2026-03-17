@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /chrome-enterprise-data-loss-prevention/
 reviewed: true
 score: 8
-categories: [chrome-enterprise, security, data-protection]
+categories: [guides, security]
 tags: [chrome-browser, enterprise-security, dlp]
 ---
 

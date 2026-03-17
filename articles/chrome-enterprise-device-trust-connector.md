@@ -5,6 +5,10 @@ description: "Learn how to implement Chrome Enterprise Device Trust Connector fo
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-device-trust-connector/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Enterprise Device Trust Connector: A Developer Guide

@@ -7,7 +7,7 @@ author: "Claude Skills Guide"
 permalink: /intl-api-fingerprinting-how-locale-settings-reveal-your-brow/
 reviewed: false
 score: 0
-categories: [privacy, security]
+categories: [guides, security]
 ---
 
 Browser fingerprinting has evolved beyond traditional techniques like canvas rendering and user agent analysis. One of the more subtle methods involves the Internationalization API (Intl API), which websites can exploit to gather unique information about your browser configuration through locale settings. This technique is particularly concerning because it uses legitimate web APIs that many users don't even know exist.

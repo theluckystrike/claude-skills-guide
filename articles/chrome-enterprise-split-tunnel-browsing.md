@@ -6,6 +6,10 @@ description: "Learn how to configure split tunnel browsing in Chrome Enterprise 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-split-tunnel-browsing/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Enterprise Split Tunnel Browsing: A Practical Guide

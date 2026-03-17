@@ -6,6 +6,10 @@ description: "A practical guide to deploying Chrome Enterprise in 2026. Learn to
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-deployment-guide-2026/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Enterprise Deployment Guide 2026: Complete Implementation for Developers
