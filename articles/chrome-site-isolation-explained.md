@@ -6,6 +6,10 @@ description: "Understand Chrome site isolation mechanics, security benefits, and
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-site-isolation-explained/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Site Isolation Explained: A Developer Guide

@@ -6,6 +6,10 @@ description: "Learn how to audit Chrome extensions for privacy risks. Step-by-st
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-privacy-audit/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Privacy Audit: A Practical Guide for Developers
