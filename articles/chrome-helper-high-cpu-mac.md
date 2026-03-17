@@ -4,7 +4,7 @@ layout: default
 title: "Chrome Helper High CPU Mac: Diagnosis and Solutions for Developers"
 description: "A technical guide to identifying and resolving Chrome Helper process high CPU usage on macOS. Includes diagnostic commands, extension analysis, and optimization strategies."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-helper-high-cpu-mac/
 reviewed: true
 score: 8
@@ -218,5 +218,5 @@ If issues persist after trying all solutions:
 
 Chrome Helper high CPU on Mac stems from extension behavior, content script execution, memory leaks, and hardware acceleration conflicts. Systematic diagnosis using Activity Monitor, Chrome Task Manager, and command-line tools identifies the root cause. Most issues resolve through extension management and hardware acceleration toggles. For persistent problems, profile isolation and Chrome reinstallation provide clean slates.
 
-Built by the luckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}
