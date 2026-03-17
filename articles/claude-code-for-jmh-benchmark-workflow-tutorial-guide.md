@@ -1,254 +1,233 @@
 ---
-
 layout: default
 title: "Claude Code for JMH Benchmark Workflow Tutorial Guide"
-description: "Learn how to use Claude Code to streamline your JMH benchmark workflow—from setting up benchmarks to analyzing results and optimizing performance."
+description: "Learn how to leverage Claude Code to streamline your JMH benchmark workflow—from project setup to writing effective benchmarks and analyzing results."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-jmh-benchmark-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
-
 
 {% raw %}
 # Claude Code for JMH Benchmark Workflow Tutorial Guide
 
-Java Microbenchmark Harness (JMH) is the standard tool for benchmarking Java code, but setting up and running benchmarks effectively requires understanding its intricacies. This guide shows you how to use Claude Code to streamline your entire JMH workflow—from project setup to result analysis.
+Java Microbenchmark Harness (JMH) is the standard tool for benchmarking Java code, but setting up and running JMH benchmarks effectively can be challenging. This guide shows you how to use Claude Code to streamline every phase of your JMH workflow—project setup, benchmark implementation, execution, and result analysis.
 
 ## Why Use Claude Code with JMH?
 
 Claude Code brings several advantages to your benchmark workflow:
 
-- **Scaffold JMH projects quickly** without memorizing Maven configurations
-- **Generate benchmark templates** for common patterns
-- **Explain benchmark results** and identify optimization opportunities
-- **Debug benchmark issues** like dead code elimination and JIT optimizations
-- **Automate repetitive benchmarking tasks**
+- **Project scaffolding**: Quickly generate JMH-enabled Maven or Gradle projects with proper dependencies
+- **Benchmark template generation**: Create well-structured benchmark classes following JMH best practices
+- **Result interpretation**: Analyze JMH output and explain what the numbers mean in practical terms
+- **Iteration and optimization**: Rapidly modify and re-run benchmarks as you optimize your code
+
+The combination of Claude Code's contextual understanding and JMH's precision makes for a powerful performance investigation workflow.
 
 ## Setting Up Your JMH Project
 
-The first step is creating a proper Maven project with JMH dependencies. Instead of manually configuring your pom.xml, ask Claude Code to generate the right configuration:
+The first step is creating a JMH-capable project. Rather than manually configuring build files, ask Claude Code to scaffold everything for you.
 
-```
-Create a Maven pom.xml for JMH benchmarking with Java 17. Include the JMH dependencies, proper compiler settings, and JAR plugin configuration for creating an executable benchmark JAR.
-```
+### Maven Setup
 
-Claude will generate a pom.xml similar to this:
+For a Maven project, include the JMH dependencies and the JMH Maven plugin:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.example</groupId>
-    <artifactId>jmh-benchmarks</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jmh.version>1.37</jmh.version>
-        <jar.plugin.version>3.3.0</jar.plugin.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.openjdk.jmh</groupId>
-            <artifactId>jmh-core</artifactId>
-            <version>${jmh.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjdk.jmh</groupId>
-            <artifactId>jmh-generator-annprocess</artifactId>
-            <version>${jmh.version}</version>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>${jar.plugin.version}</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>org.openjdk.jmh.Main</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-</project>
+<dependency>
+    <groupId>org.openjdk.jmh</groupId>
+    <artifactId>jmh-core</artifactId>
+    <version>1.37</version>
+</dependency>
+<dependency>
+    <groupId>org.openjdk.jmh</groupId>
+    <artifactId>jmh-generator-annprocess</artifactId>
+    <version>1.37</version>
+</dependency>
 ```
 
-## Writing Your First Benchmark
+Add the JMH Maven plugin to generate the benchmark runner:
 
-Creating effective JMH benchmarks requires understanding annotations and proper benchmark structure. Here's how Claude Code can help you write benchmarks correctly:
-
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>3.5.1</version>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals>
+                <goal>shade</goal>
+            </goals>
+            <configuration>
+                <finalName>benchmark</finalName>
+                <transformers>
+                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                        <mainClass>org.openjdk.jmh.Main</mainClass>
+                    </transformer>
+                </transformers>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
 ```
-Write a JMH benchmark for comparing ArrayList vs LinkedList performance for random access operations. Include proper Warmup and Measurement annotations, and use Blackhole for consuming results.
+
+### Gradle Setup
+
+For Gradle, the setup is simpler with the `jmh-gradle-plugin`:
+
+```groovy
+plugins {
+    id 'me.champeau.jmh' version '0.7.2'
+}
+
+jmh {
+    include = '.*Benchmark.*'
+    fork = 2
+    iterations = 5
+    benchmarkMode = ['thrpt', 'avgt']
+}
 ```
 
-Claude will generate a well-structured benchmark:
+Ask Claude Code to generate either of these configurations and explain any parts you don't understand.
+
+## Writing Effective Benchmarks
+
+A well-written benchmark is the key to meaningful results. Here's how Claude Code can help you write benchmarks that accurately measure what you care about.
+
+### Basic Benchmark Structure
+
+Every JMH benchmark follows a similar pattern:
 
 ```java
-package com.example.benchmarks;
-
 import org.openjdk.jmh.annotations.*;
-import org.openjdk.jmh.infrastructure.Blackhole;
-import org.openjdk.jmh.runner.Runner;
-import org.openjdk.jmh.runner.options.Options;
-import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-
+@BenchmarkMode(Mode.Throughput)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
-@OutputTimeUnit(java.util.concurrent.TimeUnit.MICROSECONDS)
-public class ListAccessBenchmark {
+@Benchmark
+public class StringBenchmark {
 
-    private List<Integer> arrayList;
-    private List<Integer> linkedList;
-    private Random random;
-    private int[] accessIndices;
+    private String input;
 
     @Setup
-    public void setup() {
-        int size = 10000;
-        arrayList = new ArrayList<>(size);
-        linkedList = new LinkedList<>();
-        random = new Random(42);
-
-        for (int i = 0; i < size; i++) {
-            arrayList.add(i);
-            linkedList.add(i);
-        }
-
-        accessIndices = new int[1000];
-        for (int i = 0; i < accessIndices.length; i++) {
-            accessIndices[i] = random.nextInt(size);
-        }
+    public void prepare() {
+        input = "hello world test string for benchmarking";
     }
 
     @Benchmark
-    @Warmup(iterations = 3, time = 1)
-    @Measurement(iterations = 5, time = 2)
-    @Fork(value = 2, warmupFork = 1)
-    public void arrayListRandomAccess(Blackhole bh) {
-        for (int index : accessIndices) {
-            bh.consume(arrayList.get(index));
-        }
+    public String concat() {
+        return input + " - appended";
     }
 
     @Benchmark
-    @Warmup(iterations = 3, time = 1)
-    @Measurement(iterations = 5, time = 2)
-    @Fork(value = 2, warmupFork = 1)
-    public void linkedListRandomAccess(Blackhole bh) {
-        for (int index : accessIndices) {
-            bh.consume(linkedList.get(index));
-        }
-    }
-
-    public static void main(String[] args) throws Exception {
-        Options opt = new OptionsBuilder()
-                .include(ListAccessBenchmark.class.getSimpleName())
-                .build();
-
-        new Runner(opt).run();
+    public String builder() {
+        return new StringBuilder(input).append(" - appended").toString();
     }
 }
 ```
 
-## Running and Analyzing Benchmarks
+Ask Claude Code to explain each annotation: what `@BenchmarkMode` does, why `@State(Scope.Thread)` matters, and how `@Setup` prepares your test data.
 
-Running benchmarks is straightforward with Maven:
+### Common Benchmark Patterns
 
-```bash
-mvn clean package
-java -jar target/jmh-benchmarks-1.0-SNAPSHOT.jar -f 1
-```
+Claude Code can help you implement several common benchmark scenarios:
 
-The `-f 1` flag runs one fork. For production results, use `-f 3` or more.
+**1. Comparing implementations**: Compare different approaches to the same problem by writing multiple `@Benchmark` methods in the same class.
 
-After running, you'll get output like:
-
-```
-Benchmark                               Mode  Cnt    Score    Error  Units
-ListAccessBenchmark.arrayListRandomAccess  avgt    5    0.892 ±  0.023  us/op
-ListAccessBenchmark.linkedListRandomAccess avgt    5  142.341 ± 15.207  us/op
-```
-
-When you need to interpret results or debug issues, ask Claude Code:
-
-```
-Explain these JMH results and explain why LinkedList is slower for random access. Also suggest how to benchmark the add() operation for both implementations.
-```
-
-Claude will explain that ArrayList has O(1) random access while LinkedList is O(n), making it much slower for random access patterns. It will also guide you on writing additional benchmarks for add() operations.
-
-## Avoiding Common JMH Pitfalls
-
-Claude Code helps you avoid several common benchmark mistakes:
-
-### 1. Dead Code Elimination
-
-Always consume results via Blackhole or return values. Without this, the JIT compiler may optimize away your entire benchmark:
+**2. Testing with different inputs**: Use `@Param` to run the same benchmark with multiple input values:
 
 ```java
-// Wrong - will be optimized away
-@Benchmark
-public void badBenchmark() {
-    int sum = 0;
-    for (int i = 0; i < 1000; i++) {
-        sum += i;
+@Param({"100", "1000", "10000"})
+private int size;
+
+@State(Scope.Thread)
+public static class MyState {
+    public List<String> items;
+    
+    @Setup
+    public void setup() {
+        items = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            items.add("item" + i);
+        }
     }
 }
+```
 
-// Correct - results consumed
+**3. Blackhole consumption**: Prevent the JIT compiler from optimizing away your benchmark by using Blackhole:
+
+```java
 @Benchmark
-public void goodBenchmark(Blackhole bh) {
-    int sum = 0;
-    for (int i = 0; i < 1000; i++) {
-        sum += i;
-    }
-    bh.consume(sum);
+public void process(Blackhole bh) {
+    String result = expensiveOperation();
+    bh.consume(result);
 }
 ```
 
-### 2. Improper Warmup
+## Running Your Benchmarks
 
-JMH needs warmup iterations to trigger JIT compilation. Claude can configure appropriate settings:
+Once your benchmarks are written, running them properly is crucial for accurate results.
+
+### Command Line Execution
+
+Run benchmarks using Maven or Gradle:
+
+```bash
+# Maven
+mvn clean package
+java -jar target/benchmark.jar -f 1 -i 3
+
+# Gradle  
+./gradlew jmh
+```
+
+Key JMH parameters include:
+- `-f <count>`: Number of fork iterations (run each benchmark in separate JVM processes)
+- `-i <count>`: Number of measurement iterations
+- `-wi <count>`: Number of warmup iterations
+- `-o <file>`: Output results to file
+- `-rf <format>`: Result format (JSON, CSV, text)
+
+### Interpreting Results
+
+After running, JMH produces output like this:
 
 ```
-Add proper warmup and measurement configuration to benchmark JSON parsing. Use at least 3 warmup iterations and 5 measurement iterations with 2 forks.
+Benchmark                  Mode  Cnt    Score    Error  Units
+StringBenchmark.concat    thrpt       1523.458          ops/ms
+StringBenchmark.builder  thrpt       3847.219          ops/ms
 ```
 
-### 3. Benchmarking the Wrong Thing
+Ask Claude Code to interpret these results in context. It can explain:
+- What "thrpt" (throughput) means versus "avgt" (average time)
+- How to compare scores between benchmarks
+- Whether the error margin is acceptable
+- What the numbers mean for your specific use case
 
-Sometimes you want to test a specific operation, not the entire method. Use `@BenchmarkMode(Mode.SingleShotTime)` for measuring single operations or isolate the specific code path.
+## Best Practices for Reliable Benchmarks
 
-## Advanced Tips for Claude-Assisted Benchmarking
+Follow these guidelines, and Claude Code can help you verify your implementations:
 
-- **Profile while benchmarking**: Ask Claude to help add `-prof gc` or `-prof perf` to understand memory allocation and CPU behavior
-- **Compare implementations**: Use `@Param` annotation to test multiple implementations in one benchmark run
-- **Generate flame graphs**: For deep analysis, combine JMH with async-profiler and ask Claude for integration steps
-- **Automate regression testing**: Create scripts that fail if performance degrades beyond a threshold
+1. **Always warm up**: Include warmup iterations so JIT compilation doesn't skew results
+2. **Use appropriate modes**: Choose throughput for batch processing, latency for response-time sensitive code
+3. **Avoid dead code elimination**: Use Blackhole or return results to prevent JIT from optimizing away your code
+4. **Fork between iterations**: Run each benchmark in a fresh JVM to avoid cross-contamination
+5. **Measure realistic workloads**: Your benchmark should reflect actual production patterns
+
+## Integrating Claude Code into Your Workflow
+
+Here's a practical workflow for using Claude Code with JMH:
+
+1. **Initial investigation**: Describe the performance problem to Claude Code—it may suggest what to benchmark
+2. **Scaffold project**: Ask Claude Code to generate a properly configured JMH project
+3. **Write benchmarks**: Describe what you want to measure, and Claude Code will generate benchmark templates
+4. **Run and analyze**: Execute benchmarks and ask Claude Code to interpret the results
+5. **Iterate**: As you make optimizations, re-run benchmarks and compare results
+
+This workflow transforms JMH from a complex tool into an approachable part of your development process.
 
 ## Conclusion
 
-Claude Code significantly accelerates your JMH workflow by generating correct configurations, writing well-structured benchmarks, and helping interpret results. By using Claude's assistance, you can focus on what matters: writing meaningful benchmarks and optimizing your Java code's performance.
-
-Start by setting up a basic JMH project, write your first benchmark with Claude's help, and gradually explore advanced features like profilers and parameterization. The combination of Claude Code and JMH makes performance optimization accessible to every Java developer.
+Claude Code makes JMH benchmarking accessible by handling project setup, generating benchmark code, and interpreting results. Start with simple benchmarks, follow best practices, and let Claude Code guide you through the process. Your performance optimization efforts will benefit from more accurate, reliable benchmark data—and you'll learn JMH in the process.
 {% endraw %}
