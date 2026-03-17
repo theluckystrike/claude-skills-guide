@@ -5,7 +5,7 @@ description: "Learn how to configure and use ctags with Claude Code for efficien
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-ctags-configuration-workflow-tutorial/
-categories: [tutorials, development-tools]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 ---
 
