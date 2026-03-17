@@ -3,7 +3,7 @@ layout: default
 title: "How to Remove Image Backgrounds Using Chrome Extensions"
 description: "A practical guide for developers and power users to remove image backgrounds directly in Chrome using extensions and automation."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-extension-remove-image-background/
 reviewed: true
 score: 8
