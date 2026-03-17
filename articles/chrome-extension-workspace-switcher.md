@@ -4,7 +4,7 @@ layout: default
 title: "Chrome Extension Workspace Switcher: A Practical Guide"
 description: "Learn how to build and use a Chrome extension workspace switcher for developers managing multiple projects across browser contexts."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-extension-workspace-switcher/
 reviewed: true
 score: 8
