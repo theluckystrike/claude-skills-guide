@@ -218,7 +218,7 @@ paths:
                 $ref: '#/components/schemas/User'
 ```
 
-The `claude-code-api-documentation-openapi-guide` skill can generate OpenAPI specs from your existing codebase or help validate your documentation.
+The `claude-code-api-documentation-best-practices` skill can generate OpenAPI specs from your existing codebase or help validate your documentation.
 
 ## Testing Your API with Claude Skills
 
@@ -237,7 +237,7 @@ Applying these REST API design patterns creates interfaces that Claude Code can 
 
 ## Related Reading
 
-- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-openapi-guide/) — OpenAPI documents REST API designs
+- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-best-practices/) — OpenAPI documents REST API designs
 - [How to Make Claude Code Generate Consistent API Responses](/claude-skills-guide/how-to-make-claude-code-generate-consistent-api-responses/) — Consistent responses are a REST best practice
 - [Claude Code API Contract Testing Guide](/claude-skills-guide/claude-code-api-contract-testing-guide/) — Contract tests validate REST API design
 - [Claude Code API Backward Compatibility Guide](/claude-skills-guide/claude-code-api-backward-compatibility-guide/) — REST API versioning and backward compatibility

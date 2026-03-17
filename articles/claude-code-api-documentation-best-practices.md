@@ -55,6 +55,100 @@ Integrate these commands into your CI/CD pipeline to catch documentation drift b
 
 For teams using TypeScript, combine Claude Code with the `tdd` skill to write tests that verify your API behavior matches your documentation. This test-driven approach ensures your docs never lie about functionality.
 
+### Generating Specs from Code Annotations
+
+The most practical approach starts with annotations in your code. Modern frameworks like Express, FastAPI, and Spring support decorators that generate OpenAPI specs directly from endpoint implementations:
+
+```javascript
+/**
+ * @openapi
+ * /users/{id}:
+ *   get:
+ *     summary: Retrieve a user by ID
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: User found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ *       404:
+ *         description: User not found
+ */
+app.get('/users/:id', getUser);
+```
+
+Claude Code reads these annotations and compiles them into a complete `openapi.yaml` or `openapi.json` file across all route files.
+
+### Validating Specs Against Running Code
+
+A common problem with large OpenAPI specs is drift between the specification and actual implementation. Create a validation script that Claude can execute as part of your workflow:
+
+```javascript
+// validate-openapi.js
+const swaggerParser = require('@apidevtools/swagger-parser');
+
+async function validateSpec() {
+  try {
+    await swaggerParser.validate('./openapi.json');
+    console.log('Spec is valid');
+
+    const spec = await swaggerParser.dereference('./openapi.json');
+    for (const [path, methods] of Object.entries(spec.paths)) {
+      for (const [method] of Object.entries(methods)) {
+        console.log(`Validated: ${method.toUpperCase()} ${path}`);
+      }
+    }
+  } catch (err) {
+    console.error('Validation failed:', err.message);
+    process.exit(1);
+  }
+}
+
+validateSpec();
+```
+
+The `tdd` skill integrates naturally here, letting you treat OpenAPI validation as part of your test suite. Integrate this into CI to catch documentation issues before they reach users:
+
+```yaml
+# .github/workflows/api-docs.yml
+name: API Documentation
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate OpenAPI spec
+        run: npm run generate:openapi
+      - name: Validate spec
+        run: npm run validate:openapi
+      - name: Check for drifts
+        run: npm run test:api-integration
+```
+
+### Documenting Responses with Examples
+
+Good API documentation includes realistic response examples. Use a `responses` directory with JSON files representing successful and error cases:
+
+```
+api-docs/
+├── responses/
+│   ├── user-get-200.json
+│   ├── user-get-404.json
+│   └── user-create-201.json
+├── openapi.yaml
+└── generate-docs.js
+```
+
+Reference these in your OpenAPI spec to keep documentation DRY and ensure examples stay synchronized with test fixtures.
+
 ## Writing Clear, Actionable Guide Content
 
 Reference documentation tells developers what endpoints exist. Guide content teaches them how to solve problems. Claude Code helps you write both, but excels particularly at crafting tutorial-style content that addresses real developer pain points.
@@ -119,7 +213,20 @@ APIs evolve, and documentation must evolve with them. Implement a versioning str
 - **OpenAPI spec versioning**: Keep all versions in your repository
 - **Deprecation notices**: Prominent banners on outdated content
 
-Claude Code can automate version announcements. When you create a new API version, invoke workflows that update your documentation index, send notifications to consumers, and archive old versions appropriately.
+A practical structure for versioned APIs keeps each version self-contained:
+
+```
+openapi/
+├── v1/
+│   ├── openapi.yaml
+│   └── CHANGELOG.md
+├── v2/
+│   ├── openapi.yaml
+│   └── CHANGELOG.md
+└── generate-all.js
+```
+
+Claude Code with the `supermemory` skill tracks version context across sessions, remembering which endpoints changed between versions. When you create a new API version, invoke workflows that update your documentation index, send notifications to consumers, and archive old versions appropriately.
 
 ## Maintaining Documentation Quality
 

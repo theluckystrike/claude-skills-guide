@@ -227,7 +227,7 @@ Automated Swagger documentation with Claude Code transforms API documentation fr
 ## Related Reading
 
 - [Claude Code OpenAPI Spec Generation Guide](/claude-skills-guide/claude-code-openapi-spec-generation-guide/)
-- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-openapi-guide/)
+- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-best-practices/)
 - [Claude Code Postman Collection Automation](/claude-skills-guide/claude-code-postman-collection-automation/)
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/)
 

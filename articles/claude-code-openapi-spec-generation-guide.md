@@ -259,7 +259,7 @@ Combine with the tdd skill to generate tests from your OpenAPI specs, creating a
 
 - [Claude Code Swagger Documentation Workflow](/claude-skills-guide/claude-code-swagger-documentation-workflow/)
 - [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/)
-- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-openapi-guide/)
+- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-best-practices/)
 - [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/)
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
