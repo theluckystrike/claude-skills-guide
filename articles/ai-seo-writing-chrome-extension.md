@@ -6,6 +6,10 @@ description: "Learn how to build and use AI-powered SEO writing Chrome extension
 date: 2026-03-15
 author: theluckystrike
 permalink: /ai-seo-writing-chrome-extension/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # AI SEO Writing Chrome Extension: A Developer's Guide

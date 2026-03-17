@@ -5,6 +5,10 @@ description: "Learn how to build an AI voice typing Chrome extension using the W
 date: 2026-03-15
 author: theluckystrike
 permalink: /ai-voice-typing-chrome-extension/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
