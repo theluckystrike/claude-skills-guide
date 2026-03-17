@@ -1,223 +1,257 @@
 ---
 layout: default
 title: "Claude Code for Code Intelligence Indexing Workflow"
-description: "Learn how to build powerful code intelligence workflows with Claude Code. Index your codebase, create semantic search, and enable AI-powered code understanding."
+description: "Learn how to build intelligent code indexing workflows with Claude Code. This guide covers semantic search, code graph analysis, and automated documentation generation."
 date: 2026-03-15
-author: "Claude Skills Guide"
-permalink: /claude-code-for-code-intelligence-indexing-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
+author: "Claude Skills Guide"
+permalink: /claude-code-for-code-intelligence-indexing-workflow/
 ---
 
+{% raw %}
 # Claude Code for Code Intelligence Indexing Workflow
 
-Code intelligence is the foundation of modern developer productivity. From IDE features like "go to definition" to semantic code search, having a deep understanding of your codebase enables faster debugging, better refactoring, and more efficient code reviews. Claude Code, Anthropic's CLI tool for AI-assisted development, provides powerful capabilities for building custom code intelligence indexing workflows that can transform how you interact with your code.
+Code intelligence is the backbone of modern developer experience. From IDE autocomplete to semantic search, from cross-repository analysis to automated documentation—intelligent code understanding powers the tools developers rely on daily. Claude Code isn't just an AI assistant; it's a powerful engine for building custom code intelligence workflows that understand your codebase deeply and act on that knowledge precisely.
 
-## Understanding Code Intelligence Indexing
+This guide walks you through designing and implementing code intelligence indexing workflows using Claude Code skills, from basic tokenization to advanced semantic graph construction.
 
-Code intelligence indexing goes beyond simple text search. It involves understanding the semantic relationships in your code: which functions call which other functions, where variables are defined, what modules export what symbols, and how data flows through your application. Traditional tools rely on static analysis, but with Claude Code, you can use AI to understand context, intent, and even predict code patterns.
+## What Is Code Intelligence Indexing?
 
-An indexing workflow typically involves three stages: extraction (gathering code metadata), processing (analyzing relationships), and storage (indexing for fast retrieval). Claude Code excels at each stage, particularly at processing where traditional tools struggle with complex patterns like dynamic imports or callback chains.
+Code intelligence indexing goes beyond simple text search. It's the process of transforming source code into structured, queryable representations that capture:
 
-## Setting Up Your Indexing Pipeline
+- **Syntactic structure**: Functions, classes, imports, and control flow
+- **Semantic relationships**: Which functions call which, type hierarchies, data flow
+- **Developer intent**: Through documentation, comments, and naming patterns
 
-Before building an indexing workflow, ensure Claude Code is installed and configured:
+Traditional indexing tools like ctags provide symbol tables. Modern approaches like tree-sitter parsers give you ASTs. But combining these with Claude's language understanding creates something more powerful—an index that understands not just what code does, but why it was written that way.
 
-```bash
-# Install Claude Code CLI
-npm install -g @anthropic-ai/claude-code
+## Building a Basic Code Indexing Skill
 
-# Initialize with your API key
-claude config set api-key YOUR_API_KEY
-```
-
-Create a dedicated skill for code indexing that encapsulates your workflow:
+The foundation of any code intelligence workflow is a Claude Code skill that can parse and analyze your codebase. Here's a skill that extracts function signatures and creates a searchable index:
 
 ```yaml
 ---
 name: code-indexer
-description: Extract and index code structure for intelligence
+description: Index codebase for intelligent search and analysis
 tools: [read_file, bash, write_file]
+version: 1.0.0
 ---
 
-You are a code indexing assistant. Your task is to analyze the provided code and extract structural intelligence.
+# Code Intelligence Indexer
+
+This skill indexes your codebase to enable semantic search and code analysis.
+
+## Indexing Strategy
+
+1. Walk the codebase directory tree
+2. Parse each supported file type
+3. Extract symbols: functions, classes, imports
+4. Build relationship graph
+5. Store index in JSON format
+
+## Configuration
+
+Set these environment variables:
+- `INDEX_ROOT`: Root directory to index (default: current directory)
+- `INDEX_OUTPUT`: Path for index file (default: .code-index.json)
+- `IGNORE_PATTERNS`: Comma-separated glob patterns to exclude
+
+## Execution
+
+When invoked, this skill will:
+1. Discover all source files
+2. Parse and extract symbols
+3. Build relationship edges
+4. Write the index to the output path
+
+Use the tool `read_file` to read source files, `bash` for file discovery with `find`, and `write_file` to save the index.
 ```
 
-## Extracting Code Metadata with Claude
+This basic skill provides the structure. Now let's make it functional with actual implementation code that your skill body can use.
 
-The first step in building code intelligence is extracting meaningful metadata from your source files. Claude can analyze files and produce structured data about functions, classes, imports, and relationships.
+## Parsing Source Files Effectively
 
-Create a script that uses Claude to extract metadata:
-
-```bash
-# index-code.sh - Extract code metadata using Claude
-#!/bin/bash
-
-FILE_PATH="$1"
-OUTPUT_DIR="./code-index"
-
-if [ -z "$FILE_PATH" ]; then
-    echo "Usage: $0 <file-or-directory>"
-    exit 1
-fi
-
-# Use Claude to analyze the file and extract structure
-claude -p "Analyze this code and output a JSON structure containing:
-- functions (name, params, line numbers)
-- classes (name, methods, inheritance)
-- imports (module, imported symbols)
-- exports (symbols, visibility)
-Return ONLY valid JSON, no explanations." < "$FILE_PATH" > "$OUTPUT_DIR/metadata.json"
-```
-
-This approach works well for individual files, but for comprehensive indexing, you'll want to process entire directories. Use a loop to iterate through your codebase:
-
-```bash
-# Batch index all source files
-for file in $(find src -name "*.js" -o -name "*.ts" -o -name "*.py"); do
-    echo "Indexing: $file"
-    ./index-code.sh "$file"
-done
-```
-
-## Building Semantic Search Indexes
-
-Once you have metadata extracted, the next challenge is enabling fast semantic search. Traditional search looks for exact text matches; semantic search understands meaning. You can build a hybrid system using Claude's embedding capabilities.
-
-Create a skill that converts code entities into searchable representations:
-
-```yaml
----
-name: semantic-indexer
-description: Create semantic embeddings of code entities
-tools: [read_file, bash]
----
-
-Generate semantic descriptions for code entities that capture:
-1. What the function/class does (purpose)
-2. How it's typically used (usage patterns)
-3. What problems it solves (intent)
-4. Related domain concepts
-
-Format each entity as: SYMBOL_NAME | PURPOSE | USAGE_CONTEXT
-```
-
-Use this skill to generate searchable descriptions:
-
-```bash
-# Generate semantic index
-claude -s semantic-indexer -p "Process all files in ./src and output semantic index" --output semantic-index.txt
-```
-
-For production systems, integrate with vector databases:
+The key to good code intelligence is proper parsing. Here's a Python script you can include in your skill that uses tree-sitter for language-agnostic parsing:
 
 ```python
-# Python: Store embeddings in vector DB
-import chromadb
-from anthropic import Anthropic
+#!/usr/bin/env python3
+"""Code intelligence indexer using tree-sitter."""
 
-client = ChromaClient()
-collection = client.get_or_create_collection("code-intel")
+import json
+import os
+from pathlib import Path
+from tree_sitter import Language, Parser
 
-# Get embeddings from Claude
-anthropic = Anthropic()
-response = anthropic.embeddings.create(
-    model="claude-embedding-3",
-    input="function userAuthenticate validate credentials"
-)
+# Load language parsers
+from tree_sitter_python import Language as PythonLanguage
+from tree_sitter_javascript import Language as JSLanguage
 
-# Store in vector DB
-collection.add(
-    ids=["userAuthenticate"],
-    embeddings=[response.embedding],
-    metadatas=[{"file": "auth.js", "type": "function"}]
-)
+LANGUAGES = {
+    '.py': (PythonLanguage(), 'function_definition', 'class_definition'),
+    '.js': (PythonLanguage(), 'function_declaration', 'class_declaration'),
+    '.ts': (PythonLanguage(), 'function_declaration', 'class_declaration'),
+}
+
+def parse_file(filepath: str) -> dict:
+    """Extract symbols from a source file."""
+    ext = Path(filepath).suffix
+    if ext not in LANGUAGES:
+        return {'symbols': [], 'imports': []}
+    
+    parser = Parser(Language(PythonLanguage()))
+    with open(filepath, 'r') as f:
+        tree = parser.parse(bytes(f.read(), 'utf8'))
+    
+    symbols = extract_symbols(tree.root_node, LANGUAGES[ext])
+    return {'symbols': symbols, 'file': filepath}
+
+def extract_symbols(node, language_config):
+    """Recursively extract function and class definitions."""
+    func_type, class_type = language_config
+    results = []
+    
+    for child in node.children:
+        if child.type == func_type:
+            results.append({
+                'type': 'function',
+                'name': child.text.decode(),
+                'line': child.start_point.row
+            })
+        elif child.type == class_type:
+            results.append({
+                'type': 'class', 
+                'name': child.text.decode(),
+                'line': child.start_point.row
+            })
+        results.extend(extract_symbols(child, language_config))
+    
+    return results
+
+if __name__ == '__main__':
+    import sys
+    result = parse_file(sys.argv[1])
+    print(json.dumps(result, indent=2))
 ```
 
-## Implementing Smart Code Navigation
+This script demonstrates the core pattern: parse code into an AST, then extract meaningful symbols. The output feeds directly into your index.
 
-Code intelligence becomes truly powerful when it enables smart navigation. Build a workflow that lets developers find code by describing what they want to accomplish rather than remembering exact names.
+## Building Semantic Relationships
+
+A code index is only as good as its relationships. Once you have symbols, you need to connect them:
+
+- **Call graphs**: Which functions call which
+- **Import graphs**: What depends on what
+- **Type hierarchies**: Class inheritance and interface implementation
+- **Data flow**: How values propagate through the system
+
+Here's how to build an import relationship graph:
+
+```python
+def build_import_graph(source_files: list) -> dict:
+    """Build a graph of import relationships."""
+    graph = {}
+    import_pattern = r'^import\s+(\S+)|^from\s+(\S+)\s+import'
+    
+    for filepath in source_files:
+        with open(filepath, 'r') as f:
+            content = f.read()
+        
+        imports = re.findall(import_pattern, content, re.MULTILINE)
+        graph[filepath] = {
+            'imports': [imp[0] or imp[1] for imp in imports],
+            'imported_by': []
+        }
+    
+    # Calculate reverse relationships
+    for source, data in graph.items():
+        for imp in data['imports']:
+            for other_source, other_data in graph.items():
+                if imp in other_data.get('exports', []):
+                    other_data['imported_by'].append(source)
+    
+    return graph
+```
+
+The resulting graph lets you answer questions like "what breaks if I change this function?" or "where is this utility used across my codebase?"
+
+## Integrating with Claude Code
+
+Now for the magic: connecting your index to Claude Code for interactive querying. Create a skill that loads your index and enables natural language queries:
 
 ```yaml
 ---
-name: code-finder
-description: Find code by describing intent
+name: code-search
+description: Search your codebase semantically using natural language
 tools: [read_file, bash]
+version: 1.0.0
+requires:
+  index_file: .code-index.json
 ---
 
-When user describes what they want to do, search the index and find relevant code.
-Respond with: FILE_PATH | LINE_NUMBER | RELEVANCE_SCORE | WHY_MATCHES
+# Semantic Code Search
+
+I can help you find code across your entire codebase using natural language queries.
+
+## Available Queries
+
+- "Find all uses of function X"
+- "Show me the call graph for class Y"
+- "Where is error handling missing?"
+- "Find similar implementations to this pattern"
+
+## How It Works
+
+1. Load the code index from `.code-index.json`
+2. Match your query against symbols and relationships
+3. Present ranked results with context
+4. Enable drill-down exploration
+
+## Examples
+
+```
+> find all auth-related functions
+Found 3 authentication functions:
+- src/auth/login.py: authenticate_user (line 42)
+- src/auth/session.py: create_session (line 18)
+- src/auth/oauth.py: validate_token (line 31)
 ```
 
-Test the code finder:
-
-```bash
-# Find code for "handling user login"
-claude -s code-finder -p "I need code for handling user login and session management"
+The skill reads your index and uses Claude's understanding to match intent, not just keywords.
 ```
 
-## Advanced: Context-Aware Code Analysis
+## Practical Workflow: Automated Documentation
 
-Take your indexing workflow to the next level with context-aware analysis. This involves understanding not just what code does, but the broader architectural context.
+One powerful application is generating documentation from your index. Here's a workflow that documents APIs automatically:
 
-Create a skill for architectural analysis:
+1. **Index the codebase** to get all public functions and classes
+2. **Parse docstrings** using tree-sitter or regex
+3. **Generate markdown** with the structure: Overview → API Reference → Examples
+4. **Publish** to your documentation site
 
-```yaml
----
-name: arch-analyzer
-description: Analyze code architecture and dependencies
-tools: [read_file, bash]
----
+This approach ensures your docs stay synchronized with code—every time you build, you regenerate from the current state.
 
-Analyze the codebase architecture:
-1. Identify main entry points
-2. Map module dependencies
-3. Detect circular dependencies
-4. Identify architectural patterns (MVC, microservices, etc.)
-5. Find potential code smells or design issues
+## Actionable Advice for Implementation
 
-Output a comprehensive architectural report.
-```
+Start small and iterate. Here's a recommended path:
 
-Run architectural analysis on your project:
+1. **Week 1**: Build a basic symbol extractor for one language. Get comfortable with tree-sitter and AST traversal.
 
-```bash
-# Analyze project architecture
-claude -s arch-analyzer -p "Analyze the architecture of this project" --output architecture-report.md
-```
+2. **Week 2**: Add relationship extraction—imports and basic call graphs. Test on a real codebase.
 
-## Practical Tips for Production Workflows
+3. **Week 3**: Integrate with Claude Code. Create a skill that loads your index and answers simple queries.
 
-When deploying code intelligence indexing in production, consider these best practices:
+4. **Week 4**: Add advanced features—semantic similarity, automated docs, vulnerability detection.
 
-**Incremental Indexing**: Rather than re-indexing everything on every change, implement incremental updates. Track file hashes and only re-index modified files:
-
-```bash
-# Check if re-indexing needed
-if [ "$CURRENT_HASH" != "$SAVED_HASH" ]; then
-    index-code.sh "$FILE"
-fi
-```
-
-**Parallel Processing**: Use GNU parallel or xargs to index multiple files simultaneously:
-
-```bash
-find src -name "*.ts" | parallel -j 4 ./index-code.sh {}
-```
-
-**Caching**: Cache Claude responses for unchanged files to reduce API costs and improve performance.
-
-**Error Handling**: Implement robust error handling for malformed files or API failures:
-
-```bash
-# With error handling
-claude -p "Analyze: $file" < "$file" 2>/dev/null || echo '{"error": "failed"}'
-```
+Key principles:
+- **Cache aggressively**: Indexes don't need to rebuild on every query
+- **Version your index**: Track changes over time to understand code evolution
+- **Test your parsing**: Edge cases in real codebases will break naive parsers
+- **Iterate on queries**: Natural language search requires tuning based on how developers actually ask questions
 
 ## Conclusion
 
-Building code intelligence indexing workflows with Claude Code opens up powerful possibilities for developer productivity. From simple metadata extraction to sophisticated semantic search, Claude's AI capabilities complement traditional static analysis tools. Start with basic indexing and progressively add more sophisticated features as your workflow matures.
+Claude Code transforms code intelligence from a static, pre-built feature into a customizable workflow. By building your own indexing skills, you create tooling that understands your specific codebase, your team's patterns, and your project's unique requirements.
 
-The key is to start small: index a single project, enable basic search, then expand to architectural analysis and semantic understanding. With Claude Code, you have an AI partner that understands code context and can help build increasingly sophisticated intelligence systems tailored to your specific needs.
+The investment pays dividends in developer productivity, code quality, and the ability to explore and understand large codebases with ease. Start with the basics—symbol extraction—and build toward the sophisticated semantic understanding your projects need.
+{% endraw %}
