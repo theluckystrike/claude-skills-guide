@@ -166,6 +166,37 @@ Focus your session-level monitoring on workflow patterns rather than individual 
 
 If you find that token costs are coming from the skill files themselves rather than your prompts and context, that's a skill authoring problem covered separately in [Claude Skill Token Usage Profiling and Optimization](/claude-skills-guide/claude-skill-token-usage-profiling-and-optimization/).
 
+## Rate Limiting in Automated Workflows
+
+If you use Claude Code in automated pipelines, implement intelligent rate limiting to prevent unnecessary API calls:
+
+```javascript
+const shouldInvokeClaude = (diff) => {
+  const significantPatterns = [
+    /src\/.*\.(js|ts)$/,
+    /test\/.*\.(js|ts)$/,
+  ];
+  return significantPatterns.some(p => p.test(diff));
+};
+```
+
+Trigger Claude Code only when meaningful code changes occur, skipping documentation or configuration updates.
+
+## Real-World Cost Reduction Example
+
+A development team using Claude Skills for a web application initially invoked the **frontend-design** skill for every UI component request, loading their entire design system documentation each time. By extracting just the relevant component specifications and passing them explicitly, they reduced average token usage per request from 8,000 to 4,800 tokens.
+
+They applied similar optimizations to their **tdd** workflow, narrowing test requests to specific functions with precise input-output expectations. Combined with tiered model selection (Sonnet for architecture, Haiku for boilerplate), they achieved a 40% reduction in daily token usage with no measurable decrease in output quality.
+
+## Implementation Checklist
+
+Start with these high-impact changes:
+1. Audit your prompts for verbosity
+2. Enable context caching for repeated workflows
+3. Match model size to task complexity
+4. Use supermemory for persistent project context
+5. Batch multiple file operations into single prompts
+
 ## Summary
 
 Token optimization in Claude Code balances efficiency with effectiveness. The core strategies are:

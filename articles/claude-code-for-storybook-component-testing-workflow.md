@@ -480,6 +480,34 @@ export const testConfig = {
 
 7. **Maintain Test Independence**: Each story's `play` function should be self-contained. Avoid dependencies between stories, as Storybook may execute them in any order. Claude Code can help refactor interdependent tests into isolated scenarios.
 
+## Maintaining Component Documentation
+
+Storybook's autodocs feature automatically generates documentation from component metadata. Enhance this with Claude Code to maintain consistent documentation across your component library. Include JSDoc comments with prop descriptions, usage examples, and accessibility notes:
+
+```typescript
+/**
+ * Primary button component for main actions.
+ * Supports multiple variants and sizes for different contexts.
+ *
+ * @example
+ * ```tsx
+ * <Button variant="primary" size="large" onClick={() => handleSubmit()}>
+ *   Submit Form
+ * </Button>
+ * ```
+ */
+export const Button: React.FC<ButtonProps> = ({
+  variant = 'primary',
+  size = 'medium',
+  children,
+  ...props
+}) => {
+  // Implementation
+};
+```
+
+Use Claude Code regularly to audit story files for missing variants, suggest prop standardization across similar components, and generate changelogs based on story modifications. The **supermemory** skill helps maintain context across complex component libraries, remembering design decisions and component relationships between sessions.
+
 ## Conclusion
 
 Claude Code transforms Storybook component testing from a manual, time-consuming process into an efficient, automated workflow. By using AI-assisted story generation, intelligent debugging, and systematic coverage analysis, frontend teams can maintain high-quality component libraries without sacrificing development speed. The key is establishing clear conventions, automating repetitive tasks, and using Claude Code as a collaborative partner in your testing process.

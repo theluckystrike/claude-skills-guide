@@ -168,6 +168,42 @@ esac
 
 You can also combine this with Claude Code's MCP (Model Context Protocol) capabilities. Skills like `internal-comms` can automatically generate status updates about what you're working on in each worktree, keeping your team informed without manual tracking.
 
+## Tracking Worktrees with a Manifest
+
+For teams or complex projects, maintain a `WORKTREES.md` file in your repository root that Claude can read and update:
+
+```markdown
+# Project Worktrees
+
+| Path | Branch | Task | Status |
+|------|--------|------|--------|
+| ../project-feature-auth | feature/oauth-authentication | OAuth 2.0 integration | In Progress |
+| ../project-bugfix-login | fix/login-timeout | Login timeout bug | Review |
+```
+
+Create a companion skill to manage this manifest:
+
+```markdown
+---
+name: worktree-manager
+description: Manages Git worktrees for parallel feature development
+---
+
+You help manage Git worktrees for parallel development. When asked to create a worktree:
+
+1. Use descriptive directory names like `project-feature-{name}` or `project-bugfix-{issue}`
+2. Create the worktree from the appropriate branch (typically main or develop)
+3. Update the WORKTREES.md file in the repository root with current worktree status
+
+Always maintain a clean WORKTREES.md tracking file showing:
+- Worktree path
+- Branch name
+- Current task/status
+- Last updated timestamp
+```
+
+This manifest gives Claude instant context about your parallel work without scanning the filesystem.
+
 ## Best Practices
 
 Organize your worktree parent directory consistently. Many developers use a structure like `~/workspaces/project-name/` with subdirectories for each branch. This keeps related directories grouped and makes navigation intuitive.
