@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /chrome-extension-manager-best-2026/
 reviewed: true
 score: 8
-categories: [tools]
+categories: [integrations]
 tags: [chrome, extensions, productivity]
 ---
 

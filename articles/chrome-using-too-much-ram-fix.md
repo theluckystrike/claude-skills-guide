@@ -5,6 +5,10 @@ description: "Practical solutions for developers and power users to reduce Chrom
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-using-too-much-ram-fix/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 Chrome's memory appetite is notorious among developers. With dozens of tabs open, development tools running, and multiple browser instances active, RAM usage can quickly spiral beyond reasonable limits. This guide provides practical solutions to bring Chrome's memory consumption under control.

@@ -5,6 +5,10 @@ description: "Is your Chrome address bar lagging? Discover the common causes of 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-omnibox-slow/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 If you've noticed your Chrome omnibox (the address bar at the top of the browser) responding sluggishly, you're not alone. This issue affects developers and power users who rely on quick navigation through dozens of tabs and hundreds of bookmarks. The good news is that most slow omnibox problems have identifiable causes and straightforward fixes.

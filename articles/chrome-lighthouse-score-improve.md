@@ -5,6 +5,10 @@ description: "Learn practical techniques to improve your Chrome Lighthouse score
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-lighthouse-score-improve/
+categories: [guides]
+tags: [tools]
+reviewed: true
+score: 8
 ---
 
 # How to Improve Your Chrome Lighthouse Score: A Practical Guide
