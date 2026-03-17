@@ -1,223 +1,309 @@
 ---
-
 layout: default
 title: "Claude Code for Incident Metrics Workflow Tutorial"
-description: "Learn how to build automated incident metrics tracking workflows with Claude Code. This tutorial covers practical examples for measuring MTTR, MTTD, incident frequency, and more."
+description: "Learn how to leverage Claude Code to automate incident metrics tracking, analysis, and reporting workflows. A practical guide for developers."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: Claude Skills Guide
 permalink: /claude-code-for-incident-metrics-workflow-tutorial/
-categories: [tutorials]
+categories: [Development, DevOps, AI Tools]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
+{% raw %}
 # Claude Code for Incident Metrics Workflow Tutorial
 
-Tracking incident metrics is essential for any engineering team that wants to maintain reliable systems and continuously improve their incident response processes. With Claude Code, you can build powerful automation workflows that collect, analyze, and report on incident data without manual intervention. This tutorial walks you through creating a complete incident metrics workflow using Claude Code's capabilities.
+Incident management is a critical aspect of DevOps and Site Reliability Engineering (SRE). Tracking metrics like Mean Time to Detect (MTTD), Mean Time to Resolve (MTTR), and incident frequency helps teams improve their response capabilities. In this tutorial, you'll learn how to use Claude Code to automate and streamline your incident metrics workflow.
 
-## Why Automate Incident Metrics with Claude Code
+## What is Claude Code?
 
-Manual incident tracking consumes valuable engineering time and often results in incomplete or inconsistent data. By using Claude Code, you can create workflows that automatically capture incident data from multiple sources, calculate key metrics, and generate actionable reports. The benefits extend beyond time savings—automated workflows ensure consistency and provide real-time visibility into your system's reliability.
+Claude Code is an AI-powered coding assistant that can interact with your development environment through a Model Context Protocol (MCP) server. It can execute commands, read and write files, and integrate with various tools in your workflow. For incident metrics, Claude Code can help you collect data, generate reports, and even trigger automated responses based on your metrics.
 
-Claude Code excels at this use case because it can interact with APIs, parse logs, execute shell commands, and generate formatted reports. This makes it ideal for building an incident metrics pipeline that pulls data from your incident management system, processes it, and delivers insights.
+## Setting Up Your Incident Metrics Environment
 
-## Setting Up Your Incident Metrics Workflow
+Before diving into the workflow, you need to set up your environment. Claude Code needs access to your incident management tools and metrics storage.
 
-Before building the workflow, ensure you have Claude Code installed and configured with access to your incident management tools. For this tutorial, we'll assume you have access to a generic incident API or log files that contain incident data.
+### Prerequisites
 
-Create a new directory for your incident metrics project:
+- Claude Code installed and configured
+- Access to your incident management system (PagerDuty, OpsGenie, etc.)
+- Metrics storage (Prometheus, Datadog, or a custom solution)
+- Basic understanding of your incident data structure
 
-```bash
-mkdir incident-metrics-workflow
-cd incident-metrics-workflow
-```
+### Configuration Steps
 
-Initialize your workflow configuration file to store settings:
+First, create a configuration file for your incident metrics:
 
-```bash
-cat > config.json << 'EOF'
-{
-  "incident_sources": [
-    {
-      "name": "pagerduty",
-      "api_endpoint": "https://api.pagerduty.com/incidents",
-      "time_range_days": 30
+```python
+# incident_metrics_config.py
+
+INCIDENT_SOURCES = {
+    "pagerduty": {
+        "api_key": "{{PAGERDUTY_API_KEY}}",
+        "region": "us"
+    },
+    "datadog": {
+        "api_key": "{{DATADOG_API_KEY}}",
+        "app_key": "{{DATADOG_APP_KEY}}"
     }
-  ],
-  "metrics": {
-    "mttr_target_minutes": 30,
-    "mttd_target_minutes": 5,
-    "sla_threshold_minutes": 60
-  },
-  "output": {
-    "format": "markdown",
-    "destination": "./reports"
-  }
 }
-EOF
+
+METRICS_CONFIG = {
+    "mttd_target": 300,  # 5 minutes in seconds
+    "mttr_target": 1800,  # 30 minutes in seconds
+    "incident_severity_levels": ["critical", "high", "medium", "low"]
+}
 ```
 
-This configuration establishes the foundation for your workflow. The `incident_sources` array defines where Claude Code should pull incident data, while `metrics` specifies your target thresholds for comparison.
+## Building the Incident Metrics Collector
 
-## Fetching and Processing Incident Data
+The core of your workflow is an incident metrics collector. This script gathers data from your incident management tools and computes key metrics.
 
-The core of your workflow involves fetching incident data and calculating metrics. Create a Python script that Claude Code can invoke to handle the data processing:
+### Creating the Collector Script
 
 ```python
 #!/usr/bin/env python3
-import json
-import requests
-from datetime import datetime, timedelta
-from collections import defaultdict
+"""Incident Metrics Collector using Claude Code MCP"""
 
-class IncidentMetricsCalculator:
-    def __init__(self, config_path):
-        with open(config_path) as f:
-            self.config = json.load(f)
+import json
+from datetime import datetime, timedelta
+from dataclasses import dataclass
+from typing import List, Optional
+
+@dataclass
+class Incident:
+    incident_id: str
+    title: str
+    severity: str
+    created_at: datetime
+    resolved_at: Optional[datetime]
+    assignee: str
     
-    def fetch_incidents(self, source):
-        """Fetch incidents from API or return mock data for testing"""
-        # In production, replace with actual API call
-        return self._generate_sample_data()
+    @property
+    def mttd(self) -> Optional[int]:
+        """Mean Time to Detect - from creation to first acknowledgment"""
+        # Implementation depends on your incident data
+        return None
     
-    def _generate_sample_data(self):
-        """Generate sample incidents for demonstration"""
-        now = datetime.now()
-        incidents = []
-        
-        # Sample incident data
-        sample_incidents = [
-            {"id": "INC-001", "created_at": now - timedelta(hours=2),
-             "resolved_at": now - timedelta(hours=1), "severity": "high"},
-            {"id": "INC-002", "created_at": now - timedelta(hours=5),
-             "resolved_at": now - timedelta(hours=4), "severity": "medium"},
-            {"id": "INC-003", "created_at": now - timedelta(days=1),
-             "resolved_at": now - timedelta(days=1, hours=1), "severity": "critical"},
-        ]
-        
-        return sample_incidents
+    @property
+    def mttr(self) -> Optional[int]:
+        """Mean Time to Resolve - from creation to resolution"""
+        if self.resolved_at:
+            return int((self.resolved_at - self.created_at).total_seconds())
+        return None
+
+class IncidentMetricsCollector:
+    def __init__(self, config: dict):
+        self.config = config
+        self.incidents: List[Incident] = []
     
-    def calculate_metrics(self, incidents):
-        """Calculate key incident metrics"""
-        total_incidents = len(incidents)
+    def fetch_incidents(self, days: int = 30) -> List[Incident]:
+        """Fetch incidents from the past N days"""
+        # This would integrate with your actual incident source
+        # Using a placeholder implementation
+        start_date = datetime.now() - timedelta(days=days)
         
-        mttr_total = 0
-        mttd_total = 0
+        # Example: Fetch from PagerDuty API
+        # response = self.pagerduty_client Incidents.list(
+        #     since=start_date.isoformat()
+        # )
         
-        for incident in incidents:
-            created = incident['created_at']
-            resolved = incident['resolved_at']
-            mttr_total += (resolved - created).total_seconds() / 60
-        
-        avg_mttr = mttr_total / total_incidents if total_incidents > 0 else 0
-        
+        return self.incidents
+    
+    def calculate_mttd(self) -> float:
+        """Calculate Mean Time to Detect across all incidents"""
+        detected_times = [i.mttd for i in self.incidents if i.mttd is not None]
+        if not detected_times:
+            return 0.0
+        return sum(detected_times) / len(detected_times)
+    
+    def calculate_mttr(self) -> float:
+        """Calculate Mean Time to Resolve across all incidents"""
+        resolved_times = [i.mttr for i in self.incidents if i.mttr is not None]
+        if not resolved_times:
+            return 0.0
+        return sum(resolved_times) / len(resolved_times)
+    
+    def generate_report(self) -> dict:
+        """Generate a comprehensive metrics report"""
         return {
-            "total_incidents": total_incidents,
-            "average_mttr_minutes": round(avg_mttr, 2),
-            "period_start": min(i['created_at'] for i in incidents),
-            "period_end": max(i['resolved_at'] for i in incidents)
+            "period": f"Last 30 days",
+            "total_incidents": len(self.incidents),
+            "mttd_seconds": self.calculate_mttd(),
+            "mttr_seconds": self.calculate_mttr(),
+            "severity_breakdown": self._severity_breakdown()
         }
     
-    def generate_report(self, metrics):
-        """Generate markdown report"""
-        report = f"""# Incident Metrics Report
-
-## Summary
-- **Total Incidents**: {metrics['total_incidents']}
-- **Average MTTR**: {metrics['average_mttr_minutes']} minutes
-- **Period**: {metrics['period_start']} to {metrics['period_end']}
-
-## Key Insights
-"""
-        
-        if metrics['average_mttr_minutes'] > self.config['metrics']['mttr_target_minutes']:
-            report += "- ⚠️ MTTR exceeds target - consider improving response process\n"
-        else:
-            report += "- ✅ MTTR within acceptable range\n"
-        
-        return report
-
-if __name__ == "__main__":
-    calculator = IncidentMetricsCalculator("config.json")
-    incidents = calculator.fetch_incidents({})
-    metrics = calculator.calculate_metrics(incidents)
-    report = calculator.generate_report(metrics)
-    print(report)
+    def _severity_breakdown(self) -> dict:
+        breakdown = {}
+        for incident in self.incidents:
+            breakdown[incident.severity] = breakdown.get(incident.severity, 0) + 1
+        return breakdown
 ```
 
-This script handles the calculation logic, but Claude Code orchestrates the entire workflow. The key advantage is that Claude Code can interpret the results, explain the metrics in context, and take additional actions based on the findings.
+## Automating Metrics Collection with Claude Code
 
-## Creating the Claude Code Workflow
+Now that you have the collector, let's integrate it with Claude Code to create an automated workflow.
 
-Now create the main workflow file that Claude Code will execute:
+### Using Claude Code for Daily Metrics
+
+You can create a Claude Code skill that runs your metrics collection on a schedule:
 
 ```yaml
-# incident-metrics-workflow.md
-# Claude Code workflow for incident metrics
+# .claude/skills/incident-metrics-skill.md
+# Skill: Incident Metrics Automation
 
-## Configuration
-- Define incident data sources (PagerDuty, Datadog, custom logs)
-- Set metric targets (MTTR < 30min, MTTD < 5min)
-- Configure reporting frequency (daily, weekly)
+## Triggers
+- Run daily at 9:00 AM
+- On demand via "/incident-metrics"
 
-## Workflow Steps
+## Actions
 
-### Step 1: Gather Incident Data
-- Connect to incident management APIs
-- Query incidents within the specified time range
-- Validate data completeness
+### Daily Metrics Collection
+1. Execute incident_metrics_collector.py
+2. Compare metrics against SLAs
+3. If metrics exceed thresholds, create alert
+4. Generate and save report to /reports/
 
-### Step 2: Calculate Metrics
-- Compute Mean Time to Resolve (MTTR)
-- Compute Mean Time to Detect (MTTD)
-- Calculate incident frequency by severity
-- Measure SLA compliance rates
-
-### Step 3: Analyze Trends
-- Compare current period to previous periods
-- Identify recurring incident patterns
-- Flag incidents exceeding severity thresholds
-
-### Step 4: Generate Reports
-- Create markdown-formatted reports
-- Include visualizations where possible
-- Distribute to relevant stakeholders
+### Alert Conditions
+- MTTD exceeds {{MTTD_THRESHOLD}} seconds
+- MTTR exceeds {{MTTR_THRESHOLD}} seconds
+- Critical incidents increase by >20% from previous week
 ```
 
-## Running Your Workflow
+### Running Metrics Analysis
 
-Execute the workflow using Claude Code:
+To run your metrics collection with Claude Code:
 
 ```bash
-claude-code run incident-metrics-workflow.md
+claude --dangerously-skip-permissions \
+  --allowed-tools Read,Write,Bash \
+  "Run the incident metrics collector and generate today's report"
 ```
 
-Claude Code will guide you through each step, providing context-aware suggestions and handling edge cases. For automated execution, configure scheduled runs:
+## Practical Examples and Use Cases
 
-```bash
-# Add to crontab for daily execution
-0 8 * * * claude-code run incident-metrics-workflow.md --output ./daily-report.md
+### Example 1: Weekly Incident Review
+
+Here's how to set up a weekly incident review workflow:
+
+```python
+def weekly_review_workflow():
+    """Automated weekly incident review"""
+    
+    # Step 1: Collect week's incidents
+    collector = IncidentMetricsCollector(config)
+    incidents = collector.fetch_incidents(days=7)
+    
+    # Step 2: Calculate key metrics
+    report = collector.generate_report()
+    
+    # Step 3: Compare with previous week
+    previous_report = load_previous_report()
+    changes = compare_reports(report, previous_report)
+    
+    # Step 4: Generate actionable insights
+    insights = []
+    if report['mttr_seconds'] > 1800:
+        insights.append("MTTR exceeded 30-minute target")
+    if changes['critical_incidents'] > 0.2:
+        insights.append("Critical incidents increased by >20%")
+    
+    # Step 5: Format and save report
+    formatted = format_slack_message(report, insights)
+    save_report(formatted)
+    
+    return formatted
 ```
 
-## Measuring Key Incident Metrics
+### Example 2: Post-Incident Analysis
 
-Understanding which metrics matter most helps you build a focused workflow. Here are the essential metrics to track:
+After each major incident, use Claude Code to perform a quick analysis:
 
-**Mean Time to Resolve (MTTR)** measures the average time from incident creation to resolution. Lower MTTR indicates faster incident resolution. Set realistic targets based on your team's capabilities and incident complexity.
+```python
+def post_incident_analysis(incident_id: str):
+    """Analyze a specific incident for improvements"""
+    
+    # Fetch incident details
+    incident = fetch_incident(incident_id)
+    
+    # Calculate incident-specific metrics
+    analysis = {
+        "incident_id": incident_id,
+        "time_to_acknowledge": incident.first_ack_time - incident.created_at,
+        "time_to_resolve": incident.resolved_at - incident.created_at,
+        "number_of_responders": len(incident.responders),
+        "escalation_count": incident.escalation_count
+    }
+    
+    # Identify improvements
+    improvements = []
+    if analysis['time_to_acknowledge'] > 300:
+        improvements.append("Consider improving on-call notification")
+    if analysis['escalation_count'] > 2:
+        improvements.append("Review escalation policy")
+    
+    return analysis, improvements
+```
 
-**Mean Time to Detect (MTTD)** tracks how quickly your team identifies incidents after they occur. This metric reveals gaps in your monitoring and alerting setup.
+## Actionable Advice for Implementation
 
-**Incident Frequency** counts the number of incidents over a period. A high frequency often indicates underlying system issues that need addressing.
+### Start Small and Iterate
 
-**SLA Compliance** measures what percentage of incidents are resolved within your service level agreement timeframes.
+Begin with simple metrics like total incident count and MTTR. As your workflow matures, add more sophisticated metrics like:
+- Time to first response
+- Number of false positives
+- Incident recurrence rate
+- Customer impact duration
 
-## Best Practices for Incident Metrics Automation
+### Automate Gradually
 
-Keep your workflow maintainable by following these practices. First, version control your configuration and scripts—incident metrics logic should be as carefully tracked as production code. Second, validate incoming data before processing to avoid garbage-in-garbage-out scenarios. Third, implement alerts for anomalous metric values rather than relying solely on scheduled reports. Fourth, regularly review and adjust your targets as your team improves.
+Don't try to automate everything at once. Start with:
+1. Automated data collection
+2. Basic reporting
+3. Threshold-based alerts
+4. Advanced analytics
+
+### Integrate with Your Existing Tools
+
+Claude Code works best when integrated with your existing workflow:
+
+- **Slack**: Send reports and alerts to your #incidents channel
+- **Jira**: Create tickets for identified improvements
+- **PagerDuty**: Enrich incidents with metrics context
+- **Grafana**: Push metrics to existing dashboards
+
+### Set Meaningful Targets
+
+Define realistic targets based on your team's historical performance:
+
+```python
+SLA_TARGETS = {
+    "mttd": {
+        "critical": 300,    # 5 minutes
+        "high": 900,        # 15 minutes
+        "medium": 3600,     # 1 hour
+    },
+    "mttr": {
+        "critical": 1800,   # 30 minutes
+        "high": 7200,       # 2 hours
+        "medium": 28800,    # 8 hours
+    }
+}
+```
 
 ## Conclusion
 
-Building an incident metrics workflow with Claude Code transforms raw incident data into actionable insights. By automating data collection and calculation, your team gains consistent, real-time visibility into system reliability without manual overhead. Start with the basic workflow outlined here, then customize it to fit your specific tools and requirements.
+Claude Code can significantly streamline your incident metrics workflow by automating data collection, analysis, and reporting. Start with the basic collector script, integrate it with your incident management tools, and gradually add more automation as you see value.
 
-The key is to begin simply, measure what matters most to your organization, and iteratively improve your workflow as your incident management matures.
+Remember that the goal isn't just to collect metrics—it's to use them to improve your incident response process. Let Claude Code handle the routine work so your team can focus on what matters: resolving incidents quickly and preventing future occurrences.
+
+---
+
+**Next Steps:**
+- Customize the collector for your specific incident management system
+- Set up scheduled runs with Claude Code
+- Integrate with your team's communication tools
+- Review and act on the insights generated
+
+Happy incident managing!
+{% endraw %}
