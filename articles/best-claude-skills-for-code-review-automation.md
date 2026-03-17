@@ -11,6 +11,7 @@ score: 9
 permalink: /best-claude-skills-for-code-review-automation/
 ---
 
+{% raw %}
 # Best Claude Skills for Code Review Automation
 
 [Code review is one of the most time-intensive activities in software development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/). Manually checking pull requests for style violations, security vulnerabilities, and architectural inconsistencies drains developer hours each week. Claude Code skills reduce this load by handling repetitive checks while you focus on logic and architecture.
@@ -144,6 +145,91 @@ Invoke it with `/review-security Review src/auth/ and src/api/ for security vuln
 
 For most teams, the combination of `tdd` + `supermemory` + one custom security skill provides comprehensive coverage without overwhelming complexity.
 
+## Pre-Commit Hook Setup
+
+For local enforcement before code reaches CI, wire skills into a pre-commit hook:
+
+```bash
+#!/bin/bash
+# .git/hooks/pre-commit
+# Make executable: chmod +x .git/hooks/pre-commit
+
+STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(js|ts|jsx|tsx)$')
+
+if [ -z "$STAGED" ]; then
+  exit 0
+fi
+
+echo "Running Claude Code skill review..."
+
+OUTPUT=$(claude --print "/tdd
+List any staged files that are missing test coverage. Be brief — one line per file.
+Staged files: $STAGED")
+
+echo "$OUTPUT"
+
+# Fail if tdd skill found uncovered files
+if echo "$OUTPUT" | grep -q "missing"; then
+  echo "Pre-commit: test coverage issues found. Fix before committing."
+  exit 1
+fi
+```
+
+## CI Pipeline Integration
+
+For GitHub Actions, drive Claude Code with `--print` to get structured output and fail the build if issues are found:
+
+```yaml
+# .github/workflows/claude-review.yml
+name: Claude Code Review
+on: [pull_request]
+
+jobs:
+  skill-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: TDD coverage check
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '\.(js|ts)$' | grep -v test)
+          if [ -n "$CHANGED" ]; then
+            claude --print "/tdd
+Check if these files have corresponding test files: $CHANGED
+If any lack tests, exit with a non-zero summary." > review-output.txt
+            cat review-output.txt
+          fi
+
+      - name: Frontend design check
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          CHANGED_UI=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '\.(tsx|jsx)$')
+          if [ -n "$CHANGED_UI" ]; then
+            claude --print "/frontend-design
+Review these component files for accessibility and hook correctness: $CHANGED_UI"
+          fi
+```
+
+Pair this with a `CLAUDE.md` security checklist so security requirements become implicit context for every review:
+
+```markdown
+# Security Review Checklist (CLAUDE.md)
+
+When reviewing authentication code:
+- Check for hardcoded secrets or API keys
+- Verify JWT expiration is set and validated
+- Confirm password hashing uses bcrypt or argon2 (never MD5/SHA1)
+- Check for SQL injection via unsanitized inputs
+```
+
 ## A Practical Review Pipeline
 
 Combining these skills into a structured review workflow produces consistent results:
@@ -175,6 +261,8 @@ Then cross-reference against the implementation.
 ```
 
 Each stage produces specific, actionable findings. The result is faster reviews with fewer inconsistencies, and a growing institutional memory that makes each subsequent review easier.
+
+{% endraw %}
 
 ---
 

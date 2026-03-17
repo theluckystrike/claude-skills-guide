@@ -280,7 +280,7 @@ Claude Code enhances this workflow by assisting with code generation, type defin
 
 - [Full Stack Web App with Claude Skills Step-by-Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/) — See how Remix-style loaders and actions fit into a complete full-stack application built with Claude skills.
 - [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) — Deploy your Remix application to production using Vercel with a Claude Code-assisted workflow.
-- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) — Add automated code review to your Remix development workflow to catch loader and action bugs early.
+- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Add automated code review to your Remix development workflow to catch loader and action bugs early.
 - [Claude Skills Workflow Guide](/claude-skills-guide/workflows-hub/) — Chain Remix development skills into automated multi-step pipelines for production-ready apps.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

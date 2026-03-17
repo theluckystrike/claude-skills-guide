@@ -151,7 +151,7 @@ Finally, avoid ignoring the feedback. If developers routinely dismiss AI suggest
 
 ## Building Your Custom Review Skill
 
-For teams with specific needs, building a custom review skill provides the most control. The **how-to-automate-code-reviews-with-claude-skills** guide walks through creating specialized checks.
+For teams with specific needs, building a custom review skill provides the most control. The **best-claude-skills-for-code-review-automation** guide walks through creating specialized checks.
 
 A custom skill might enforce domain-specific rules like:
 - API response format consistency

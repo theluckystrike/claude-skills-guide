@@ -320,7 +320,7 @@ For more advanced patterns, explore the `supermemory` skill for tracking matrix 
 
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrate Claude skills directly into GitHub Actions workflows beyond matrix strategy patterns.
 - [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Build continuous testing pipelines that feed results back into your matrix analysis workflows.
-- [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) — Extend your matrix CI pipeline with automated pull request review for every combination.
+- [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Extend your matrix CI pipeline with automated pull request review for every combination.
 - [Claude Skills Workflow Guide](/claude-skills-guide/workflows-hub/) — See how matrix workflows fit into larger multi-skill automation patterns.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

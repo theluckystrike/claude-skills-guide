@@ -149,7 +149,7 @@ Testing is one of Claude Code's strongest applied use cases. The `/tdd` skill en
 
 - [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Building full CI-integrated test pipelines with the `/tdd` skill.
 - [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Automated code review workflows for consistent quality feedback.
-- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) — End-to-end setup for PR-triggered automated review.
+- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — End-to-end setup for PR-triggered automated review.
 - [Claude Code Selenium Browser Testing Automation Guide](/claude-skills-guide/claude-code-selenium-browser-testing-automation-guide/) — Cross-browser test automation with Selenium and Claude orchestration.
 - [Claude Code Pytest Fixtures Parametrize Workflow Tutorial](/claude-skills-guide/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — Advanced pytest patterns for data-driven and fixture-heavy test suites.
 

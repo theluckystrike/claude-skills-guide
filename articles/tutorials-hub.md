@@ -166,7 +166,7 @@ Testing is one of Claude Code's most reliable applied domains. The `/tdd` skill 
 - [Claude Code Skills for Writing Integration Tests](/claude-skills-guide/claude-code-skills-for-writing-integration-tests/) — Writing integration tests with Claude Code skill assistance
 - [Claude Skills for Writing Unit Tests Automatically](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/) — Automated unit test generation with Claude skills
 - [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Complete guide to the `/tdd` skill workflow
-- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) — End-to-end setup for PR-triggered automated code review
+- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — End-to-end setup for PR-triggered automated code review
 - [How to Make Claude Code Test Before Implementing Feature](/claude-skills-guide/how-to-make-claude-code-test-before-implementing-feature/) — Enforcing test-first development with Claude Code
 
 ---
@@ -329,7 +329,7 @@ Short, focused tutorials answering specific "how do I" questions about Claude Co
 | [How Do I Share Claude Skills Across Multiple Projects](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) | Skill Management |
 | [How Do I Test a Claude Skill Before Deploying to Team](/claude-skills-guide/how-do-i-test-a-claude-skill-before-deploying-to-team/) | Skill Management |
 | [How Do I Use Claude Skills in an Air-Gapped Environment](/claude-skills-guide/how-do-i-use-claude-skills-in-an-air-gapped-environment/) | Skill Management |
-| [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) | Testing |
+| [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) | Testing |
 | [How to Combine Multiple Claude Skills in One Project](/claude-skills-guide/how-to-combine-multiple-claude-skills-in-one-project/) | Skill Management |
 | [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/how-to-connect-claude-skills-to-external-apis-guide/) | Skill Management |
 | [How to Make Claude Code Test Before Implementing Feature](/claude-skills-guide/how-to-make-claude-code-test-before-implementing-feature/) | Testing |

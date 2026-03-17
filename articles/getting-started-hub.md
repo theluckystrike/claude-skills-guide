@@ -608,8 +608,8 @@ Complete workflow automation guides using Claude Code skills.
 
 - [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/)
 - [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/)
-- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/)
-- [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/)
+- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/)
+- [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/)
 - [Automated GitHub Issue Triage with Claude Skills Guide](/claude-skills-guide/claude-skills-for-automated-github-issue-triage/)
 - [Claude Skills Automated Dependency Update Workflow](/claude-skills-guide/claude-skills-automated-dependency-update-workflow/)
 - [Claude Skills Daily Standup Automation Workflow](/claude-skills-guide/claude-skills-daily-standup-automation-workflow/)

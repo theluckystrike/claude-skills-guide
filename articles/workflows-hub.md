@@ -90,9 +90,9 @@ For cost-conscious teams running these workflows at scale, see [Claude Skills To
 | [Automate Social Media Content with Claude Skills](/claude-skills-guide/claude-skills-automated-social-media-content-workflow/) | Scheduling and generating social posts automatically via skills |
 | [Daily Standup Automation with Claude Skills](/claude-skills-guide/claude-skills-daily-standup-automation-workflow/) | Generating daily standups automatically from project context |
 | [Automated Dependency Updates with Claude Skills](/claude-skills-guide/claude-skills-automated-dependency-update-workflow/) | Keeping dependencies current with an automated Claude skill workflow |
-| [How to Automate Pull Request Review with Claude Skill](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) | Setting up an automated PR review skill for code quality |
+| [How to Automate Pull Request Review with Claude Skill](/claude-skills-guide/best-claude-skills-for-code-review-automation/) | Setting up an automated PR review skill for code quality |
 | [How to Automate Client Reports with Claude Skills](/claude-skills-guide/how-to-automate-client-reports-with-claude-skills/) | Generating polished client reports from raw data automatically |
-| [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) | Automating detailed code review as part of your CI pipeline |
+| [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) | Automating detailed code review as part of your CI pipeline |
 | [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) | Integrating Claude skills directly into GitHub Actions workflows |
 | [Automated GitHub Issue Triage with Claude Skills](/claude-skills-guide/claude-skills-for-automated-github-issue-triage/) | Automatically categorize and route GitHub issues using skills |
 | [Competitive Analysis Automation with Claude Skills](/claude-skills-guide/claude-skills-competitive-analysis-automation-workflow/) | Running recurring competitive research with an automated skill |
@@ -125,7 +125,7 @@ For cost-conscious teams running these workflows at scale, see [Claude Skills To
 
 - [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/) — Build a continuous testing pipeline driven by the TDD skill for reliable, repeatable results.
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrate Claude skills directly into GitHub Actions for fully automated deployment workflows.
-- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) — Set up automated code review as part of your CI pipeline with Claude skills.
+- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Set up automated code review as part of your CI pipeline with Claude skills.
 - [Claude Skills by Use Case](/claude-skills-guide/use-cases-hub/) — Find the right skills for your specific domain before building them into workflows.
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -292,6 +292,7 @@ Mobile development prompts succeed when they include these elements:
 3. **Verify platform-specific code**: Always test on both iOS and Android
 4. **Use Expo**: Prefer Expo SDK over bare React Native for faster development
 5. **Check dependencies**: Ask Claude Code to verify library compatibility before installing
+6. **Leverage specialized skills**: Use the `frontend-design` skill for consistent styling and component patterns, `tdd` for generating component tests, `pdf` for creating user documentation, and `supermemory` for maintaining context across long mobile development sessions
 
 ## Conclusion
 

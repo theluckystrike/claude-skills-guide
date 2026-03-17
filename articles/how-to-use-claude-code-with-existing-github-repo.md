@@ -248,7 +248,7 @@ Connect Claude Code to your repository, respect existing patterns, and gradually
 
 - [Claude Code Project Initialization Best Practices](/claude-skills-guide/claude-code-project-initialization-best-practices/) — set up CLAUDE.md and project structure for optimal AI assistance
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — integrate Claude Code workflows into your existing GitHub CI pipelines
-- [How to Automate Pull Request Review with Claude Skill](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) — automate code review for existing GitHub repos
+- [How to Automate Pull Request Review with Claude Skill](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — automate code review for existing GitHub repos
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/) — more resources for setting up and configuring Claude Code effectively
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

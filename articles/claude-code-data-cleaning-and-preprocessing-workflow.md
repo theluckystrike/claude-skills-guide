@@ -43,6 +43,23 @@ Start by establishing a clean, organized project structure for your data process
 
 Claude Code can help scaffold this structure and create the necessary configuration files. Simply describe your requirements and let Claude generate the appropriate files.
 
+## Automated Exploratory Data Analysis
+
+Before applying cleaning transformations, perform a systematic EDA to understand your dataset's quality issues. Claude Code can generate comprehensive assessments from a single prompt:
+
+```
+"Perform a complete EDA on this dataset including:
+- Shape and basic info
+- Data types distribution
+- Missing value analysis with percentages
+- Duplicate row detection
+- Basic statistics for numeric columns
+- Value counts for categorical columns with high cardinality
+- Potential outliers using IQR method"
+```
+
+This ensures you never miss critical data quality issues before selecting your cleaning strategies. Claude will generate the Python code, execute it, and present results in a readable format you can discuss and act on immediately.
+
 ## Practical Data Cleaning Techniques
 
 ### Handling Missing Values
@@ -246,6 +263,25 @@ def test_handle_missing_values():
     result = handle_missing_values(test_data, strategy='drop')
     assert result.isnull().sum().sum() == 0
 ```
+
+## Working with Large Datasets
+
+When dealing with large datasets, optimize your cleaning approach for memory efficiency:
+
+- **Chunk processing**: Load and process data in chunks rather than reading entire files into memory
+- **Datatype optimization**: Convert strings to categories and use appropriate numeric types to reduce memory footprint
+- **Sampling strategies**: Use statistical sampling for initial exploration, then apply finalized cleaning steps to the full dataset
+
+Ask Claude Code to optimize your DataFrame's memory usage:
+
+```
+"Optimize this dataset for memory usage:
+1. Suggest appropriate data types for each column
+2. Identify columns that can be converted to categorical
+3. Provide code to reduce memory footprint while preserving information"
+```
+
+This is especially important when working with datasets that approach or exceed available RAM, where naive loading with `pd.read_csv()` can cause out-of-memory errors.
 
 ## Actionable Takeaways
 

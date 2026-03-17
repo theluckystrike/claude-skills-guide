@@ -49,7 +49,7 @@ The key constraint is token budget. Long diffs consume context fast. Skills desi
 **GitLab CI** follows the same pattern. Claude Code can run as a CI job, with the skill invoked via CLI. The integration is slightly less turnkey than GitHub Actions but fully supported.
 
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/)
-- [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/)
+- [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/)
 - [Automated GitHub Issue Triage with Claude Skills Guide](/claude-skills-guide/claude-skills-for-automated-github-issue-triage/)
 - [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-skills-guide/claude-code-azure-devops-integration-workflow-tutorial/)
 
@@ -252,7 +252,7 @@ Publishing platform integrations let Claude participate directly in the content 
 | [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/) | GCP integration and deployment setup |
 | [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) | Running Claude skills in Docker containers |
 | [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-skills-guide/claude-code-azure-devops-integration-workflow-tutorial/) | Azure DevOps pipeline integration |
-| [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/) | Automated PR review workflows |
+| [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) | Automated PR review workflows |
 | [Automated GitHub Issue Triage with Claude Skills Guide](/claude-skills-guide/claude-skills-for-automated-github-issue-triage/) | Classifying and routing GitHub issues automatically |
 | [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/how-to-connect-claude-skills-to-external-apis-guide/) | General patterns for external API connections |
 | [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) | Top skills for infrastructure and deployment work |

@@ -53,7 +53,7 @@ The skill metadata declares which event types it handles. Claude Code's event sy
 
 ## Git Hook Integration
 
-Git hooks provide another powerful event source. Configure skills to respond to commit events, branch operations, or pull request activities. For a detailed git workflow example, see [how to automate pull request review with Claude skills](/claude-skills-guide/how-to-automate-code-reviews-with-claude-skills/).
+Git hooks provide another powerful event source. Configure skills to respond to commit events, branch operations, or pull request activities. For a detailed git workflow example, see [how to automate pull request review with Claude skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/).
 
 Create a commit-msg hook skill:
 
