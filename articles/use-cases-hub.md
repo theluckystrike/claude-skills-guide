@@ -159,7 +159,7 @@ Deployment workflows benefit from Claude's ability to validate configuration, ge
 
 - [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) — Next.js production deployments with automated validation.
 - [Claude Code AWS ECS Fargate Deployment Tutorial](/claude-skills-guide/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — Container orchestration without EC2 management overhead.
-- [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) — Skill-based automation for Vercel preview and production deployments.
+- [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) — Skill-based automation for Vercel preview and production deployments.
 - [Claude Skills + AWS Lambda: Serverless Guide](/claude-skills-guide/claude-skills-aws-lambda-serverless-integration/) — Deploying Claude skill workflows as serverless Lambda functions.
 
 ### Security & Compliance

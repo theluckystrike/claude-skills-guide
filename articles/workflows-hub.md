@@ -109,7 +109,7 @@ For cost-conscious teams running these workflows at scale, see [Claude Skills To
 | [Claude Skills Email Drafting Automation Workflow](/claude-skills-guide/claude-skills-email-drafting-automation-workflow/) | Automating email drafts with Claude skills for professional outreach |
 | [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/how-to-optimize-claude-skill-prompts-for-accuracy/) | Writing precise skill prompts to get more accurate outputs |
 | [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/how-to-connect-claude-skills-to-external-apis-guide/) | Integrating external APIs into Claude skill workflows |
-| [Claude Skills with Vercel Deployment Automation](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) | Automating Vercel deployments with Claude skills as part of a CI/CD workflow |
+| [Claude Skills with Vercel Deployment Automation](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) | Automating Vercel deployments with Claude skills as part of a CI/CD workflow |
 
 ---
 

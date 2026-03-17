@@ -594,7 +594,7 @@ Connecting Claude Code skills to external services and workflows.
 - [Claude Skills + AWS Lambda: Serverless Guide](/claude-skills-guide/claude-skills-aws-lambda-serverless-integration/)
 - [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-guide/claude-skills-with-slack-bot-integration-tutorial/)
 - [Claude Skills with Supabase: Practical Workflows](/claude-skills-guide/claude-skills-with-supabase-database-integration/)
-- [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/)
+- [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/)
 - [Claude Skills with Linear Project Management Tutorial](/claude-skills-guide/claude-skills-with-linear-project-management-tutorial/)
 - [How to Integrate Claude Skills with Notion API Guide](/claude-skills-guide/how-to-integrate-claude-skills-with-notion-api-guide/)
 - [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/how-to-connect-claude-skills-to-external-apis-guide/)

@@ -156,7 +156,7 @@ Major cloud platforms are integration targets for skills that manage infrastruct
 
 **Vercel** is the standard deployment target for Next.js applications. Claude skills can read Vercel deployment logs, diagnose build failures, and trigger redeployments as part of a CI/CD workflow. The combination of GitHub Actions + Claude + Vercel creates a nearly automated deployment pipeline with AI-assisted validation at each step.
 
-- [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/)
+- [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/)
 - [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/)
 - [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/)
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/)
@@ -224,7 +224,7 @@ Publishing platform integrations let Claude participate directly in the content 
 | SendGrid | Email generation, sequence automation, transactional sends | [Guide](/claude-skills-guide/claude-code-skills-sendgrid-email-automation-setup/) |
 | Intercom | Customer message classification, response drafting, escalation | [Guide](/claude-skills-guide/intercom-mcp-server-customer-data-automation/) |
 | Zoom | Meeting transcript summarization, action item extraction | [Guide](/claude-skills-guide/zoom-mcp-server-meeting-summary-automation/) |
-| Vercel | Deployment monitoring, build failure diagnosis, redeployments | [Guide](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) |
+| Vercel | Deployment monitoring, build failure diagnosis, redeployments | [Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) |
 | GCP | Log analysis, Cloud Run config, IAM policy review | [Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/) |
 | Docker | Container setup, Dockerfile generation, image optimization | [Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) |
 | Datadog | Metrics queries, alert correlation, incident summaries | [Guide](/claude-skills-guide/datadog-mcp-server-monitoring-automation-claude/) |
@@ -247,7 +247,7 @@ Publishing platform integrations let Claude participate directly in the content 
 | [Claude Skills with Supabase: Practical Workflows](/claude-skills-guide/claude-skills-with-supabase-database-integration/) | Database read/write patterns for Claude skills |
 | [Claude Skills + AWS Lambda: Serverless Guide](/claude-skills-guide/claude-skills-aws-lambda-serverless-integration/) | Invoking Lambda functions from within Claude skill workflows |
 | [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-guide/claude-skills-with-slack-bot-integration-tutorial/) | Building Slack bots powered by Claude skills |
-| [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) | Automating Vercel deployments with Claude |
+| [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) | Automating Vercel deployments with Claude |
 | [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) | Next.js-specific Vercel deployment workflows |
 | [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/) | GCP integration and deployment setup |
 | [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) | Running Claude skills in Docker containers |
