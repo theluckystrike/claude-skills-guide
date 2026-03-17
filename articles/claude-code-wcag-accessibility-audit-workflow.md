@@ -240,6 +240,26 @@ Here are frequent issues Claude helps identify and fix:
 }
 ```
 
+## CLAUDE.md for Accessibility Standards
+
+Define your accessibility standards in a `CLAUDE.md` file so Claude Code enforces them automatically when working on components:
+
+```markdown
+# Accessibility Requirements
+
+All components must pass WCAG 2.1 AA standards. Before writing any component:
+
+1. Use semantic HTML elements (header, nav, main, footer)
+2. Include proper ARIA labels where semantic elements aren't sufficient
+3. Ensure keyboard navigation works for all interactive elements
+4. Verify color contrast meets 4.5:1 for normal text
+5. Add alt text to all meaningful images
+
+After implementing, run: npx playwright test --grep "accessibility"
+```
+
+For full automation, add Playwright with axe-core to your CI pipeline. This catches regressions on every push and pull request, blocking merges when critical issues are found.
+
 ## Conclusion
 
 Building a WCAG accessibility audit workflow with Claude Code skills means shifting from reactive code review to a systematic practice. The `/frontend-design` skill prevents violations at the component level. The `/tdd` skill encodes accessibility requirements as executable tests. The CI/CD pipeline catches regressions automatically. The `/pdf` skill turns audit findings into formal documentation, and `/supermemory` preserves your team's accumulated patterns across sessions.

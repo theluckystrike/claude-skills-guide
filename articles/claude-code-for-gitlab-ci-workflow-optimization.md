@@ -161,6 +161,37 @@ Optimizing pipelines is an ongoing process. Claude Code can help you set up pipe
 
 Ask Claude to create a pipeline review workflow that automatically analyzes each pipeline run and suggests specific improvements based on the results. This creates a continuous feedback loop that steadily improves pipeline performance.
 
+## Debugging Failed Pipelines
+
+When pipelines fail, Claude Code accelerates troubleshooting. Copy the job log output and ask Claude to analyze the error messages. It identifies common issues such as missing environment variables, version mismatches, or timeout configurations. Combine Claude Code with the `supermemory` skill to maintain a knowledge base of previous pipeline issues and their solutions, creating institutional memory that reduces repeat incidents.
+
+For multi-environment deployments, define environment-specific configurations with approval gates:
+
+```yaml
+deploy:staging:
+  stage: deploy
+  script:
+    - ./deploy.sh staging
+  environment:
+    name: staging
+    url: https://staging.example.com
+  only:
+    - develop
+
+deploy:production:
+  stage: deploy
+  script:
+    - ./deploy.sh production
+  environment:
+    name: production
+    url: https://example.com
+  when: manual
+  only:
+    - main
+```
+
+The `when: manual` directive creates a production approval gate. Claude Code can also help configure SAST and dependency scanning stages to automate security checks within your pipeline.
+
 ## Actionable Next Steps
 
 Start optimizing your GitLab CI workflows today with these concrete steps:

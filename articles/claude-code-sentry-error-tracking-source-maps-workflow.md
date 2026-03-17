@@ -160,6 +160,39 @@ Claude will generate a test case and recommend adding null checks or default val
 const total = cart?.reduce((sum, item) => sum + item.price, 0) ?? 0;
 ```
 
+## Multi-Language SDK Setup
+
+Sentry supports every major backend language. For Python projects:
+
+```python
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn="https://example@sentry.io/12345",
+    environment="production",
+    traces_sample_rate=1.0,
+)
+```
+
+For Go services:
+
+```go
+import "github.com/getsentry/sentry-go"
+
+func init() {
+    err := sentry.Init(sentry.ClientOptions{
+        Dsn:              os.Getenv("SENTRY_DSN"),
+        Environment:      os.Getenv("GO_ENV"),
+        TracesSampleRate: 1.0,
+    })
+    if err != nil {
+        log.Fatalf("Sentry initialization failed: %v", err)
+    }
+}
+```
+
+You can also build a Sentry query tool that lets Claude Code search issues directly via the API, and set up webhook handlers that trigger automated Claude analysis whenever Sentry detects a new critical error.
+
 ## Key Takeaways
 
 - Generate source maps with `--devtool=source-map` in your build process

@@ -187,6 +187,14 @@ A minimal dashboard might display:
 - Average task completion time per agent type
 - Success/failure rates
 
+## Alerting and Auto-Remediation
+
+Transform monitoring data into actionable notifications by routing alerts based on severity. Critical alerts go to phone/SMS and Slack urgent channels; warnings go to regular Slack channels and email; informational events update the dashboard only. Use the `supermemory` skill to find similar past incidents and include relevant historical context in every alert.
+
+For common issues, automated runbooks can handle remediation before escalating to humans: restart worker processes on high memory, clean old logs when disk space is low, retry failed API requests with exponential backoff. Always verify the fix worked, log the action taken, and escalate to a human after three failed attempts.
+
+Use the `pdf` skill to generate periodic status reports with uptime percentages and recurring issue summaries, and the `frontend-design` skill to create real-time HTML dashboards that visualize system health across all monitored agents.
+
 ## Best Practices Summary
 
 1. **Emit structured JSON logs** from every agent for parseable output

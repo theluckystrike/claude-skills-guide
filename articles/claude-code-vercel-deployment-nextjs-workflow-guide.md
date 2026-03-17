@@ -188,6 +188,30 @@ const nextConfig = {
 module.exports = nextConfig
 ```
 
+## Pre-Deployment TDD Gate with Claude API
+
+For teams that want a programmatic quality gate, build a pre-deployment check that sends your staged diff to Claude's `tdd` skill for analysis before Vercel deploys:
+
+```javascript
+const Anthropic = require('@anthropic-ai/sdk');
+const { execSync } = require('child_process');
+
+const claude = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+
+async function runTDDGate(diffContent) {
+  const message = await claude.messages.create({
+    model: 'claude-opus-4-6',
+    max_tokens: 1024,
+    system: `You are a pre-deployment gate. Analyze the diff for critical untested code paths.
+Return JSON: { "approved": true/false, "risk_level": "low|medium|high", "issues": [] }`,
+    messages: [{ role: 'user', content: `Review this diff:\n\n${diffContent.slice(0, 8000)}` }],
+  });
+  return JSON.parse(message.content[0].text);
+}
+```
+
+Wire this into a GitHub Actions job that runs before Vercel's automatic deployment. If the gate blocks, cancel the deployment via the Vercel API. Use `supermemory` to store deployment metadata (commit SHA, gate result, deployment URL) for faster incident debugging later.
+
 ## Wrapping Up
 
 This workflow transforms Vercel deployments from manual processes into automated, reliable operations. Claude Code acts as your intelligent deployment assistant, validating code before release and maintaining deployment history through `/tdd`, `/frontend-design`, `/pdf`, and `/supermemory`.
@@ -200,7 +224,7 @@ Start with the preview deployment workflow, then gradually add production safegu
 
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — DevOps skills for managing preview and production deployments
 - [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills that pair with Vercel and Next.js workflows
-- [Claude Skills with Vercel Deployment Automation](/claude-skills-guide/claude-skills-with-vercel-deployment-automation/) — Step-by-step Vercel deployment automation using Claude skills
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate deployment pipelines with Claude skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

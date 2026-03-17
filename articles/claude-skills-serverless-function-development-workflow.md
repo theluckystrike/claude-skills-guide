@@ -240,6 +240,29 @@ def handler(event, context):
     # Your main logic here
 ```
 
+## Database Integration and Authentication
+
+Serverless APIs need efficient database connections. Use managed services like DynamoDB to avoid connection pooling issues:
+
+```javascript
+const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
+const { DynamoDBDocumentClient, GetCommand } = require('@aws-sdk/lib-dynamodb');
+
+const client = new DynamoDBClient({});
+const docClient = DynamoDBDocumentClient.from(client);
+
+async function fetchUsers() {
+  const command = new GetCommand({
+    TableName: 'Users',
+    Key: { id: 'all' }
+  });
+  const response = await docClient.send(command);
+  return response.Item?.users || [];
+}
+```
+
+For authentication, add JWT middleware that validates tokens before reaching your handler logic. Pair this with the `tdd` skill to generate integration tests using `supertest` that verify your endpoints return correct status codes and payloads before deploying.
+
 ## Conclusion
 
 [Building serverless functions through Claude skills](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/). Your skill handles boilerplate, configuration, and deployment commands so you can focus on writing function logic. Start with a simple HTTP function, add environment configuration, then expand to scheduled jobs and event triggers.

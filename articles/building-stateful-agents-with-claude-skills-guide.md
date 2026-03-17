@@ -248,6 +248,32 @@ When a task reaches "complete" or "cancelled" status:
 3. Never delete state files for in_progress tasks
 ```
 
+## Common State Management Abstractions
+
+For agents that track multi-turn conversations, a dedicated conversation state class keeps history bounded and queryable:
+
+```python
+class ConversationState:
+    def __init__(self):
+        self.history = []
+        self.current_intent = None
+        self.entities = {}
+        self.turn_count = 0
+
+    def add_turn(self, user_input, agent_response):
+        self.history.append({
+            "turn": self.turn_count,
+            "user": user_input,
+            "agent": agent_response,
+        })
+        self.turn_count += 1
+
+    def get_context_window(self, n=5):
+        return self.history[-n:]
+```
+
+Similarly, agents that call external tools benefit from a tool state tracker that records every invocation and its result, making it possible to replay or audit tool usage after the fact.
+
 ## Anti-Patterns in Stateful Skill Design
 
 **Storing state in conversation history**: Conversation history is ephemeral and grows unbounded. Do not use it as your primary state store.
