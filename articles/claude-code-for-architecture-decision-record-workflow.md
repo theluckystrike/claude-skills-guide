@@ -1,216 +1,152 @@
 ---
-
 layout: default
-title: "Using Claude Code for Architecture Decision Record Workflow"
-description: "Learn how to streamline your Architecture Decision Record (ADR) workflow with Claude Code. Practical examples, code snippets, and actionable advice for."
+title: "Claude Code for Architecture Decision Record Workflow"
+description: "Learn how to use Claude Code to streamline your architecture decision record (ADR) workflow. Practical examples for drafting, reviewing, and managing ADRs efficiently."
 date: 2026-03-15
-author: Claude Skills Guide
-permalink: /claude-code-for-architecture-decision-record-workflow/
-categories: [guides]
+categories: [workflow]
 tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
+author: "Claude Skills Guide"
+permalink: /claude-code-for-architecture-decision-record-workflow/
 ---
 
+# Claude Code for Architecture Decision Record Workflow
 
-{% raw %}
-# Using Claude Code for Architecture Decision Record Workflow
+Architecture Decision Records (ADRs) are a crucial part of sustainable software development. They document the "why" behind technical choices, making your project's architectural evolution traceable and understandable. Claude Code can significantly accelerate your ADR workflow—from initial drafting to ongoing maintenance. This guide shows you how to leverage Claude Code effectively for creating and managing ADRs.
 
-Architecture Decision Records (ADRs) have become an essential part of modern software development. They document the "why" behind technical choices, making it easier for teams to understand past decisions and maintain consistency across projects. In this guide, we'll explore how Claude Code can automate and enhance your ADR workflow, saving time while improving documentation quality.
+## Why Use Claude Code for ADRs
 
-## What is an Architecture Decision Record?
+Writing ADRs manually is time-consuming. You need to structure decisions consistently, consider alternatives, and articulate consequences clearly. Claude Code excels at this because it understands software architecture patterns and can generate well-structured documents in minutes rather than hours.
 
-An ADR is a document that captures an important architectural decision made along with its context and consequences. The standard format includes:
+The key benefits include faster drafting, consistent formatting across your team's ADRs, and improved coverage of alternatives and trade-offs.
 
-- **Title**: A brief description of the decision
-- **Status**: Proposed, Accepted, Deprecated, or Superseded
-- **Context**: The issue motivating this decision
-- **Decision**: What we've decided to do
-- **Consequences**: What happens after this decision (positive and negative)
+## Starting a New ADR
 
-Managing ADRs manually can become tedious, especially in large projects with many stakeholders. This is where Claude Code becomes invaluable.
+When you need to document a new architectural decision, provide Claude Code with context about your system and the decision at hand. Here's a practical prompt structure:
 
-## Setting Up Your ADR Workflow with Claude Code
+```
+I need to write an ADR for [decision description]. Our system is [brief system context]. 
+The context is [what prompted this decision]. Please draft a complete ADR following the 
+MADR format with at least 3 alternatives considered.
+```
 
-Claude Code can assist you at every stage of the ADR lifecycle. Here's how to set up an efficient workflow:
+Claude Code will generate a comprehensive ADR that includes the title, status, context, decision, consequences, and alternatives. You can then refine it based on your specific requirements.
 
-### Creating a Claude Code Skill for ADR Generation
+## ADR Templates and Structure
 
-Create a custom skill that generates standardized ADR templates:
+A well-structured ADR follows a consistent format. Here's a template you can use with Claude Code:
+
+```markdown
+# ADR-{number}: {Decision Title}
+
+## Status
+Proposed | Accepted | Deprecated | Superseded
+
+## Context
+What is the issue that we're seeing that is motivating this decision?
+
+## Decision
+What is the change that we're proposing and/or doing?
+
+## Consequences
+What becomes easier or more difficult to do because of this change?
+
+## Alternatives Considered
+- Option 1: [description]
+- Option 2: [description]  
+- Option 3: [description]
+```
+
+When working with Claude Code, reference this structure explicitly in your prompts. For example:
+
+```
+Create an ADR using the MADR format for migrating our authentication 
+system from JWT to OAuth 2.0 with PKCE. Include security considerations, 
+implementation complexity, and three alternatives: SAML, session-based 
+auth, and the chosen option.
+```
+
+## Bulk ADR Generation
+
+For larger projects with multiple related decisions, you can generate several ADRs in one session. This is particularly useful during major refactoring or when adopting new technology stacks:
+
+```
+Generate 5 ADRs for migrating our monolithic application to microservices:
+1. Decomposition strategy
+2. Inter-service communication (REST vs gRPC)
+3. Data management approach (database per service vs shared database)
+4. Service discovery mechanism
+5. Deployment infrastructure (Kubernetes vs serverless)
+```
+
+Claude Code will create interconnected ADRs with proper cross-references, ensuring your architectural documentation remains coherent.
+
+## Reviewing and Improving Existing ADRs
+
+Claude Code isn't just for creating new ADRs—it excels at improving existing ones. Use it to identify gaps, strengthen arguments, and ensure consistency:
+
+```
+Review this ADR for completeness and suggest improvements. Check if:
+- All consequences are covered (positive and negative)
+- Alternatives are fairly evaluated
+- The decision is clearly justified
+- Technical details are accurate
+
+[paste your ADR here]
+```
+
+This approach helps catch omissions before your ADRs become historical records that future developers will rely on.
+
+## Converting Legacy Decisions to ADRs
+
+Many teams have architectural decisions buried in Slack threads, meeting notes, or implicit knowledge. Claude Code can help formalize these:
+
+```
+Convert these meeting notes about our caching strategy into a proper ADR. 
+Extract the context, decision, and consequences. Add two alternatives we 
+considered but rejected, with brief reasoning.
+
+[paste meeting notes]
+```
+
+This transforms scattered knowledge into actionable documentation.
+
+## Integration with Version Control
+
+For optimal ADR management, store ADRs in your repository with a clear naming convention. Claude Code can help you maintain this organization:
+
+```
+Create an ADR about implementing feature flags. After drafting, suggest 
+a filename following the pattern ADR-{YYYY}-{number}-{short-title}.md
+and propose where in our repo structure this should live.
+```
+
+Common patterns include `docs/adr/` or `architecture/adr/` directories at your repository root.
+
+## Automating ADR Reviews in CI
+
+You can set up Claude Code to review ADRs as part of your pull request process. Create a simple script that invokes Claude Code on new or modified ADR files:
 
 ```bash
-mkdir -p ~/.claude/skills/adr-generator
+# Review new or modified ADRs in a PR
+for file in $(git diff --name-only HEAD~1 | grep -E "adr/.*\.md$"); do
+  claude --review "Review this ADR for quality and completeness: $file"
+done
 ```
 
-Then create the skill definition file:
+This ensures consistent documentation standards across your team.
 
-```json
-{
-  "name": "adr-generator",
-  "description": "Generate Architecture Decision Records",
-  "commands": [
-    {
-      "name": "new-adr",
-      "description": "Create a new ADR with template"
-    }
-  ]
-}
-```
+## Best Practices for Claude Code ADR Workflows
 
-### Interactive ADR Creation
+When using Claude Code for ADRs, keep these tips in mind:
 
-Instead of starting from scratch, use Claude to interactively build your ADR:
+Always provide context about your system. The more Claude Code knows about your architecture, the better its recommendations. Review generated drafts carefully—Claude Code produces solid foundations but you should validate technical accuracy.
 
-```
-You: Create an ADR for adopting PostgreSQL as our primary database
+Use consistent templates across your team. Establish your ADR format early and reference it in every prompt. Iterate rather than accept first drafts. Use Claude Code's output as a starting point and refine based on team discussions.
 
-Claude: I'll help you create a comprehensive ADR. Let me gather the necessary context:
-
-1. What problem are you solving with this decision?
-2. What alternatives did you consider?
-3. What are the expected benefits and risks?
-```
-
-This interactive approach ensures all necessary sections are complete before documentation begins.
-
-## Automating ADR Reviews with Claude Code
-
-One of the most powerful applications is using Claude to review proposed ADRs before they become final. Create a review skill that checks for:
-
-- Complete metadata (status, date, author)
-- Clear problem statement
-- At least two alternatives considered
-- Explicit trade-offs documented
-- Actionable consequences
-
-### Sample Review Prompt
-
-```
-Review the following ADR for completeness and clarity:
-
-[ADR Content Here]
-
-Check for:
-1. All required sections present
-2. Clear reasoning in the Decision section
-3. Balanced consequences (pros and cons)
-4. Technical accuracy
-5. Consistency with existing ADRs
-```
-
-Claude will analyze your ADR and provide specific, actionable feedback for improvement.
-
-## Maintaining ADR Consistency Across Teams
-
-Large organizations often struggle with ADR consistency. Claude Code can enforce standards through:
-
-### Template Validation
-
-Use Claude to validate new ADRs against your organization's standards:
-
-```python
-def validate_adr(content: str) -> dict:
-    """Validate ADR meets organizational standards"""
-    required_sections = [
-        "Status",
-        "Context", 
-        "Decision",
-        "Consequences"
-    ]
-    
-    # Check each required section exists
-    missing = [s for s in required_sections if s not in content]
-    
-    return {
-        "valid": len(missing) == 0,
-        "missing_sections": missing
-    }
-```
-
-### Cross-Reference Checking
-
-Claude can analyze existing ADRs to identify conflicts or dependencies:
-
-```
-Find all ADRs related to database decisions in the /docs/adr/ directory
-and identify any that might conflict with a new decision to use NoSQL
-```
-
-## Integrating ADR Workflow with Git
-
-For teams using Git-based workflows, Claude can streamline the entire process:
-
-### Automated Branch and PR Creation
-
-```
-Create a new ADR for implementing caching layer, then create a 
-feature branch and pull request for team review
-```
-
-Claude will:
-1. Generate the ADR with proper naming convention (e.g., `ADR-042-caching-layer.md`)
-2. Create a feature branch
-3. Open a pull request with appropriate reviewers
-
-### Commit Message Standards
-
-Configure Claude to use standardized commit messages for ADR changes:
-
-```
-Commit the ADR status change to "Accepted" with proper commit format
-```
-
-This ensures your ADR history remains clean and searchable.
-
-## Best Practices for Claude-Assisted ADR Workflow
-
-To get the most out of Claude Code in your ADR process:
-
-### 1. Start with Clear Prompts
-
-The quality of Claude's output depends on your input. Be specific about:
-
-- The technical context
-- Constraints or requirements
-- Expected audience
-- Desired depth of analysis
-
-### 2. Iterate on Drafts
-
-Don't expect perfect first drafts. Use Claude for multiple revision cycles:
-
-```
-Refine the consequences section to better explain performance implications
-```
-
-### 3. Maintain Human Oversight
-
-While Claude excels at generating and reviewing ADRs, always have a human expert validate technical accuracy and organizational fit.
-
-### 4. Keep Templates Updated
-
-As your organization evolves, update your ADR templates. Use Claude to migrate existing ADRs to new formats when needed.
+Consider maintaining an ADR index. Create a master document that lists all ADRs with their status and relationships. Claude Code can help generate and update this index.
 
 ## Conclusion
 
-Claude Code transforms Architecture Decision Records from a burdensome documentation task into a streamlined, efficient workflow. By automating template generation, providing intelligent reviews, and enforcing consistency, your team can focus on making better architectural decisions rather than managing paperwork.
+Claude Code transforms ADR creation from a tedious chore into a streamlined workflow. By generating well-structured drafts, identifying gaps in existing documents, and helping maintain consistency, it lets your team focus on the technical decisions themselves rather than the documentation overhead.
 
-Start small by creating one custom skill for ADR generation, then expand to include review and maintenance capabilities. The time invested in setting up this workflow will pay dividends in clearer documentation and more informed technical decisions.
-
----
-
-**Next Steps:**
-
-1. Create your first ADR generation skill
-2. Define your organization's ADR template standards
-3. Train your team on Claude-assisted ADR workflows
-4. Integrate ADR creation into your development process
-{% endraw %}
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Start by using Claude Code for your next architectural decision. You'll be surprised how much time you save while producing better documentation that your future self will thank you for.
