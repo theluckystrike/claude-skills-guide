@@ -249,6 +249,65 @@ The supermemory skill proves valuable when implementing webhooks for multiple pr
 
 For frontend integration, the frontend-design skill helps build admin dashboards to monitor webhook events, display processing status, and handle retry logic through a user interface.
 
+## Invoking Claude Code from Webhook Handlers
+
+To leverage Claude Code's AI capabilities directly within your webhook flow, invoke it programmatically with context from the incoming payload. This pattern lets Claude analyze events, generate summaries, or suggest actions based on webhook data:
+
+```javascript
+const { spawn } = require('child_process');
+
+function invokeClaudeWithContext(eventType, payload) {
+  const prompt = buildPromptForEvent(eventType, payload);
+
+  const claude = spawn('claude', ['--print', prompt]);
+
+  let output = '';
+  claude.stdout.on('data', (data) => {
+    output += data.toString();
+  });
+
+  claude.stderr.on('data', (data) => {
+    console.error('Claude error:', data.toString());
+  });
+
+  return new Promise((resolve) => {
+    claude.on('close', () => resolve(output));
+  });
+}
+
+function buildPromptForEvent(type, payload) {
+  const templates = {
+    'issue_opened': `A new issue was created: "${payload.issue.title}".
+      Body: ${payload.issue.body}
+      Provide a summary and suggest labels.`,
+    'push': `${payload.commits.length} commits pushed to ${payload.repository.name}.
+      Review the changes and identify potential issues.`
+  };
+
+  return templates[type] || `Process webhook event: ${type}`;
+}
+```
+
+This approach transforms your webhook handler into an AI-powered event processor, enabling natural language analysis of incoming payloads rather than purely rule-based routing.
+
+## Practical Use Cases
+
+### Automated Code Review
+
+Configure GitHub webhooks to trigger Claude Code review when pull requests are opened. The webhook delivers the diff, and Claude analyzes changes for potential issues, style violations, or security concerns. Pair this with the **tdd** skill to auto-generate tests for modified functions.
+
+### Documentation Updates
+
+When your documentation repository receives commits, webhooks can notify Claude Code to validate documentation links, check for broken references, or generate updated API documentation using the **docx** skill.
+
+### Incident Response
+
+Integrate monitoring tool webhooks (PagerDuty, OpsGenie) with Claude Code to receive incident alerts. Claude analyzes the incident context, gathers relevant information from your **supermemory** skill, and suggests remediation steps based on historical patterns.
+
+### Project Management Automation
+
+Connect project management webhooks to create tasks, update statuses, or notify team members automatically. Use the **internal-comms** skill to draft appropriate messages based on the webhook payload, keeping your team informed without manual intervention.
+
 ## Stripe-Specific Implementation
 
 Stripe uses a timestamp-based signature scheme with replay attack prevention. Parse the `Stripe-Signature` header and validate within a tolerance window:
