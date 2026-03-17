@@ -46,6 +46,40 @@ For projects using conventional commits, the **conventional-commits-automation**
 3. The semantic versioning skill calculates the next version
 4. A new git tag is created and pushed
 
+For projects that need custom version management, you can implement the logic directly in Python:
+
+```python
+import re
+import subprocess
+
+def get_latest_tag():
+    """Get the most recent tag from Git"""
+    result = subprocess.run(
+        ['git', 'describe', '--tags', '--abbrev=0'],
+        capture_output=True, text=True
+    )
+    if result.returncode == 0:
+        return result.stdout.strip()
+    return None
+
+def parse_version(version_str):
+    """Parse semantic version string into components"""
+    match = re.match(r'v?(\d+)\.(\d+)\.(\d+)', version_str)
+    if match:
+        return tuple(map(int, match.groups()))
+    return (0, 0, 0)
+
+def bump_version(current, bump_type='patch'):
+    """Increment version based on bump type"""
+    major, minor, patch = parse_version(current or '0.0.0')
+    if bump_type == 'major':
+        return f'v{major + 1}.0.0'
+    elif bump_type == 'minor':
+        return f'v{major}.{minor + 1}.0'
+    else:
+        return f'v{major}.{minor}.{patch + 1}'
+```
+
 Here's a practical example of querying your tag history:
 
 ```bash
@@ -81,6 +115,23 @@ on:
 ```
 
 This configuration starts the workflow whenever any tag starting with "v" is pushed. You can refine this to specific patterns like `v[0-9].[0-9].[0-9]` for semantic versions only.
+
+## Pre-Release Tags
+
+For beta, alpha, or RC releases, use pre-release suffixes:
+
+```bash
+# Create pre-release tag
+git tag -a v1.0.0-beta.1 -m "Beta release v1.0.0-beta.1"
+
+# Create RC tag
+git tag -a v2.0.0-rc.1 -m "Release candidate v2.0.0-rc.1"
+
+# List only pre-release tags
+git tag --list '*-*'
+```
+
+Pre-release tags let you test in staging before production releases while maintaining a clear audit trail of every candidate version.
 
 ## Best Practices for Tag Management
 
@@ -126,6 +177,15 @@ Production issues sometimes require immediate attention. The git tag workflow su
 4. Merge back to main and develop branches
 
 This pattern, often called "git flow" for hotfixes, maintains a clear audit trail of emergency releases while keeping development work ongoing.
+
+## Error Handling in Tagging Skills
+
+Your tagging skill should handle common errors gracefully:
+
+- **Tag already exists**: Prompt for overwrite or suggest an alternative version
+- **Uncommitted changes**: Warn before tagging or offer to stash
+- **Detached HEAD**: Inform user and suggest checking out a branch
+- **Push permission denied**: Check remote configuration and credentials
 
 ## Conclusion
 

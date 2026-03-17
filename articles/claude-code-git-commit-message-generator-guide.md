@@ -73,6 +73,29 @@ Closes #142
 
 You can then review and adjust before committing.
 
+## Analyzing Diff Output for Precise Messages
+
+For more accurate commit messages, provide Claude with the actual diff rather than just a description. Use `git diff --staged` to show your staged changes:
+
+```bash
+git diff --staged
+```
+
+Claude analyzes the code changes and suggests a message that accurately reflects what was modified. For example, if your diff shows:
+
+```diff
+-  const user = null;
++  const user = await fetchUserById(id);
+```
+
+Claude recognizes this as a bug fix and will suggest:
+
+```
+fix: resolve user object initialization with async fetch
+```
+
+This approach produces more precise messages because it sees the actual code rather than relying on your summary.
+
 ## Combining with Project-Specific Context
 
 The real power emerges when you combine commit message generation with other Claude skills. A supermemory skill can reference your project's previous commits to maintain consistency in terminology. A tdd skill can ensure your commit matches your test-driven workflow, noting which tests were added versus modified.
@@ -108,7 +131,20 @@ For breaking changes, your skill can prompt for migration notes or deprecation w
 
 While Claude generates messages, you control the final commit. Always review output before committing—Claude understands context but may miss project-specific nuances. The skill approach keeps you in the loop while doing the heavy lifting.
 
-Some teams integrate this into their workflow by creating custom git aliases that invoke Claude with the appropriate skill. This streamlines the process without sacrificing review quality.
+Some teams integrate this into their workflow using git hooks. A `prepare-commit-msg` hook can automatically invoke Claude for message suggestions:
+
+```bash
+#!/bin/bash
+# .git/hooks/prepare-commit-msg
+
+# Get the staged diff
+STAGED_DIFF=$(git diff --cached --stat)
+
+# Pass to Claude for message suggestion
+# Store result and present to user for editing
+```
+
+This automation streamlines the process while keeping you in control of the final message. Always review generated messages for accuracy—Claude may occasionally misinterpret a change, especially refactoring that touches multiple areas. Verify that the message type (`feat`, `fix`, `refactor`) matches the actual nature of the change.
 
 ## Advanced: Contextual Awareness
 
