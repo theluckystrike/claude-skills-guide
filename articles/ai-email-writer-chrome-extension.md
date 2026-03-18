@@ -1,15 +1,11 @@
 ---
 
 layout: default
-title: "AI Email Writer Chrome Extension: A Developer's Guide to."
-description: "Learn how AI-powered Chrome extensions can streamline your email workflow with intelligent composing, reply generation, and customization options for."
+title: "AI Email Writer Chrome Extension: A Developer's Guide"
+description: "Learn how AI-powered Chrome extensions can streamline your email workflow with intelligent composing, reply generation, and customization options for developers and power users."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /ai-email-writer-chrome-extension/
-reviewed: true
-score: 8
-categories: [guides]
-tags: [chrome, claude-skills]
 ---
 {% raw %}
 
