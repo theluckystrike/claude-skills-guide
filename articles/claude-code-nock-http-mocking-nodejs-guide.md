@@ -1,220 +1,289 @@
 ---
+
+
+
 layout: default
-title: "Claude Code Nock HTTP Mocking Node.js Guide"
-description: "Learn how to use Nock for HTTP mocking in Node.js with Claude Code. Practical examples for intercepting HTTP requests, testing APIs, and building."
-date: 2026-03-14
-categories: [tutorials]
-tags: [claude-code, claude-skills, nock, http-mocking, nodejs, testing, tdd]
+title: "Claude Code Nock HTTP Mocking Nodejs Guide"
+description: "Learn how to use Nock for HTTP mocking in Node.js with Claude Code. Master intercepting HTTP requests, creating mock endpoints, and testing API integrations."
+date: 2026-03-18
 author: "Claude Skills Guide"
+permalink: /claude-code-nock-http-mocking-nodejs-guide/
+categories: [guides]
 reviewed: true
 score: 7
-permalink: /claude-code-nock-http-mocking-nodejs-guide/
+tags: [claude-code, nodejs, testing, http-mocking]
 ---
 
-# Claude Code Nock HTTP Mocking Node.js Guide
 
-Building reliable Node.js applications requires testing HTTP integrations without depending on external services. Nock provides HTTP interception capabilities that make this possible, and when combined with Claude Code's skills, you can create solid testing workflows for your Node.js projects.
 
-## What is Nock and Why Use It
+# Claude Code Nock HTTP Mocking Nodejs Guide
 
-Nock is an HTTP mocking library for Node.js that intercepts outgoing HTTP requests and returns predefined responses. Instead of making real network calls to APIs like Stripe, GitHub, or your own microservices during tests, Nock simulates those responses locally.
+Nock is a powerful HTTP mocking library for Node.js that allows you to intercept and mock HTTP requests. When combined with Claude Code, you can create reliable tests for your API integrations without relying on external services. This guide covers practical techniques for using Nock effectively with Claude Code for testing Node.js applications.
 
-The primary benefits include faster test execution, elimination of network flakiness, ability to test error scenarios that are difficult to reproduce with live APIs, and running tests in CI/CD pipelines without external dependencies.
+## Understanding Nock Basics
 
-When you use Nock with Claude Code, you can describe the HTTP interactions you need to mock using natural language, and Claude will generate the appropriate Nock configurations while you work on your implementation.
+Nock works by overriding the Node.js `http` and `https` modules, allowing you to intercept outgoing requests and return predefined responses. This is invaluable for testing code that makes HTTP calls to external APIs, third-party services, or even internal microservices.
 
-## Setting Up Nock in Your Node.js Project
-
-Install Nock as a development dependency in your project:
+To get started with Nock, install it as a development dependency:
 
 ```bash
-npm install --save-dev nock
+npm install nock --save-dev
 ```
 
-For TypeScript projects, you may need the type definitions:
+### Simple Request Interception
 
-```bash
-npm install --save-dev @types/nock
-```
-
-Nock works by intercepting requests made through the native `http` module, as well as libraries like `axios` and `node-fetch` that use `http` under the hood.
-
-## Basic Nock Interception Example
-
-Consider a simple function that fetches user data from an external API:
+The most basic use of Nock is intercepting a specific URL and returning a mock response. Here's how you can set up a simple mock:
 
 ```javascript
-// src/userService.js
-const https = require('https');
+const nock = require('nock');
+const axios = require('axios');
 
-async function getUser(userId) {
-  return new Promise((resolve, reject) => {
-    https.get(`https://api.example.com/users/${userId}`, (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => resolve(JSON.parse(data)));
-    }).on('error', reject);
-  });
+// Mock an API endpoint
+const scope = nock('https://api.example.com')
+  .get('/users')
+  .reply(200, [
+    { id: 1, name: 'John Doe' },
+    { id: 2, name: 'Jane Smith' }
+  ]);
+
+// Your code makes the actual request
+async function fetchUsers() {
+  const response = await axios.get('https://api.example.com/users');
+  return response.data;
 }
 
-module.exports = { getUser };
+// Test it
+fetchUsers().then(users => {
+  console.log(users);
+});
 ```
 
-To test this with Nock, create a test file:
+## Setting Up Nock with Claude Code
+
+When working with Claude Code, you can leverage Nock to test your code while receiving intelligent suggestions for improving your test coverage. Here's a typical workflow:
+
+### Step 1: Identify HTTP Dependencies
+
+First, have Claude Code analyze your codebase to identify all HTTP endpoints your code depends on:
 
 ```javascript
-// tests/userService.test.js
-const nock = require('nock');
-const { getUser = require('../src/userService');
+// Ask Claude to help identify HTTP calls
+// Claude can scan your code and suggest which endpoints need mocking
+```
 
-describe('getUser', () => {
+### Step 2: Create Mock Scopes
+
+Organize your Nock scopes logically to match your application's API integration points:
+
+```javascript
+const nock = require('nock');
+
+// Create reusable scopes for different services
+const githubScope = nock('https://api.github.com')
+  .persist()  // Keep the mock active for multiple requests
+  .get('/users/{username}')
+  .reply(200, {
+    login: 'theluckystrike',
+    public_repos: 42,
+    followers: 100
+  });
+
+const stripeScope = nock('https://api.stripe.com')
+  .post('/v1/charges')
+  .reply(200, {
+    id: 'ch_1234567890',
+    amount: 2000,
+    currency: 'usd',
+    status: 'succeeded'
+  });
+```
+
+### Step 3: Scope Filtering for Dynamic URLs
+
+When dealing with dynamic URLs, such as URLs with query parameters or path variables, Nock provides scope filtering:
+
+```javascript
+const nock = require('nock');
+
+const scope = nock('https://api.weather.com')
+  .filteringPath(path => '/forecast')
+  .get('/forecast')
+  .reply(200, {
+    temperature: 72,
+    conditions: 'sunny'
+  });
+```
+
+## Advanced Nock Patterns
+
+### Matching Headers and Query Parameters
+
+For more precise mocking, you can match specific headers or query parameters:
+
+```javascript
+const nock = require('nock');
+
+const scope = nock('https://api.example.com')
+  .matchHeader('Authorization', 'Bearer token123')
+  .query({ format: 'json', limit: 10 })
+  .get('/data')
+  .reply(200, { data: 'mocked response' });
+```
+
+### Mocking Error Responses
+
+Test your error handling by mocking various HTTP error scenarios:
+
+```javascript
+const nock = require('nock');
+
+// Mock a 404 Not Found error
+nock('https://api.example.com')
+  .get('/missing-resource')
+  .reply(404, { error: 'Resource not found' });
+
+// Mock a 500 Internal Server Error
+nock('https://api.example.com')
+  .get('/server-error')
+  .reply(500, { error: 'Internal server error' });
+
+// Mock a network error
+nock('https://api.example.com')
+  .get('/network-error')
+  .replyWithError('Connection refused');
+```
+
+### Using Reply With Function
+
+For dynamic responses, you can use a function to generate the reply:
+
+```javascript
+const nock = require('nock');
+
+const scope = nock('https://api.example.com')
+  .post('/webhooks', body => {
+    return body.event === 'payment_received';
+  })
+  .reply(200, (uri, requestBody) => {
+    return {
+      status: 'processed',
+      receivedAt: new Date().toISOString()
+    };
+  });
+```
+
+## Best Practices for Nock with Claude Code
+
+### 1. Clean Up After Tests
+
+Always clean up Nock interceptors to prevent test pollution:
+
+```javascript
+afterEach(() => {
+  nock.cleanAll();
+  nock.cleanHistory();
+});
+```
+
+### 2. Use Environment Variables for API URLs
+
+Structure your code to use environment variables for API endpoints, making it easier to switch between real and mocked APIs:
+
+```javascript
+const API_BASE = process.env.API_BASE || 'https://api.example.com';
+
+async function getUser(id) {
+  const response = await axios.get(`${API_BASE}/users/${id}`);
+  return response.data;
+}
+```
+
+### 3. Disable Network Connections in Tests
+
+Ensure your tests don't make real network calls:
+
+```javascript
+beforeEach(() => {
+  nock.disableNetConnect();
+});
+
+afterEach(() => {
+  nock.enableNetConnect();
+  nock.cleanAll();
+});
+```
+
+### 4. Document Your Mock Expectations
+
+When working with Claude Code, document what each mock is testing:
+
+```javascript
+/**
+ * Mocks GitHub API user endpoint
+ * Used for testing user profile display functionality
+ * Returns mock user data with known repositories
+ */
+const githubUserMock = nock('https://api.github.com')
+  .get('/users/testuser')
+  .reply(200, {
+    login: 'testuser',
+    name: 'Test User',
+    public_repos: 5
+  });
+```
+
+## Common Pitfalls to Avoid
+
+### Persisting Scopes Accidentally
+
+Be careful with `.persist()` - only use it when you need the same mock to handle multiple requests:
+
+```javascript
+// Good: Use persist for retriable operations
+const retryableScope = nock('https://api.example.com')
+  .persist()
+  .get('/data')
+  .reply(200, { data: 'cached' });
+
+// Bad: Don't persist for one-off requests unless needed
+```
+
+### Not Matching Request Body Correctly
+
+When POSTing data, ensure your mock matches the expected body format:
+
+```javascript
+// Correct: Match the exact body structure
+nock('https://api.example.com')
+  .post('/users', {
+    name: 'John',
+    email: 'john@example.com'
+  })
+  .reply(201, { id: 1 });
+```
+
+### Forgetting to Clean Between Tests
+
+Always clean Nock state between tests to avoid flaky test results:
+
+```javascript
+describe('User API', () => {
   afterEach(() => {
     nock.cleanAll();
   });
 
-  it('should return user data from API', async () => {
-    // Set up the mock
-    nock('https://api.example.com')
-      .get('/users/123')
-      .reply(200, {
-        id: '123',
-        name: 'John Doe',
-        email: 'john@example.com'
-      });
+  it('fetches user by ID', async () => {
+    // test code
+  });
 
-    const user = await getUser('123');
-    
-    expect(user.name).toBe('John Doe');
+  it('creates a new user', async () => {
+    // test code
   });
 });
 ```
-
-## Mocking Different HTTP Scenarios
-
-Nock excels at testing various HTTP scenarios that would be difficult to test with live APIs.
-
-### Testing Error Responses
-
-```javascript
-it('should handle API errors', async () => {
-  nock('https://api.example.com')
-    .get('/users/999')
-    .reply(404, { error: 'User not found' });
-
-  await expect(getUser('999')).rejects.toThrow();
-});
-```
-
-### Testing Request Headers and Bodies
-
-```javascript
-it('should send authentication header', async () => {
-  nock('https://api.example.com', {
-    reqheaders: {
-      'Authorization': 'Bearer my-token'
-    }
-  })
-  .post('/users', { name: 'Jane' })
-  .reply(201, { id: '456', name: 'Jane' });
-
-  const result = await createUser({ name: 'Jane' });
-  expect(result.id).toBe('456');
-});
-```
-
-### Simulating Network Delays
-
-```javascript
-it('should handle slow API responses', async () => {
-  nock('https://api.example.com')
-    .get('/users/123')
-    .delay(2000) // 2 second delay
-    .reply(200, { id: '123', name: 'Slow User' });
-
-  const start = Date.now();
-  await getUser('123');
-  const duration = Date.now() - start;
-  
-  expect(duration).toBeGreaterThanOrEqual(2000);
-});
-```
-
-## Using Claude Code with Nock
-
-The tdd skill in Claude Code works particularly well with Nock. When you need to test HTTP-dependent code, you can invoke the skill and describe your API interactions.
-
-Activate the skill by typing:
-
-```
-/tdd
-```
-
-Then describe what you need:
-
-> "I have a function that calls the GitHub API to fetch repository details. I need tests that verify it handles rate limiting (429 responses), authentication failures (401), and successful responses with the repository data."
-
-Claude will generate Nock interceptors for each scenario, complete with proper status codes and response bodies.
-
-For projects that involve PDF generation from web content, you might combine the tdd skill with the pdf skill to test scenarios where your application fetches data and converts it to PDF format.
-
-## Advanced Nock Patterns
-
-### Matching with Regular Expressions
-
-```javascript
-nock('https://api.example.com')
-  .get(/\/users\/\d+/) // Match any user ID
-  .reply(200, (uri) => {
-    const id = uri.match(/\/users\/(\d+)/)[1];
-    return { id, name: `User ${id}` };
-  });
-```
-
-### Persisting Mocks for Development
-
-For local development without external services:
-
-```javascript
-nock('https://api.example.com')
-  .persist()
-  .get('/users/me')
-  .reply(200, { id: '1', name: 'Dev User' });
-```
-
-### Mocking HTTPS with Custom Certificates
-
-```javascript
-nock('https://api.example.com', { 'allowUnmocked': false })
-  .get('/users')
-  .reply(200, [{ id: '1', name: 'Test User' }]);
-```
-
-## Combining Nock with Integration Testing
-
-For comprehensive testing, combine Nock with integration tests using the supermemory skill to maintain context across test runs, or with the frontend-design skill if your Node.js application serves a frontend.
-
-When testing Express or Fastify applications, you can use Nock to mock external API calls while your route handlers execute normally, giving you confidence that both your routing logic and external integrations work correctly.
-
-## Best Practices
-
-Keep your Nock configurations organized by placing them in dedicated fixture files. Name your mock files descriptively, like `mocks/github-api-repository-success.json` or `mocks/stripe-payment-failed.json`.
-
-Use `nock.cleanAll()` in your test cleanup to prevent mock leakage between tests. For complex applications, consider creating helper functions that set up common mock patterns.
 
 ## Conclusion
 
-Nock provides essential HTTP mocking capabilities for Node.js testing, and when paired with Claude Code's skills like tdd, you can rapidly generate comprehensive test coverage for HTTP-dependent code. This combination ensures your applications handle various API scenarios gracefully without relying on external services.
+Nock is an essential tool for testing Node.js applications that rely on HTTP APIs. By combining Nock with Claude Code's intelligent assistance, you can create comprehensive test suites that verify your API integrations without the complexity of setting up mock servers or relying on external services during testing.
 
-The ability to simulate success, error, and edge-case responses gives you confidence in your code's reliable while keeping your test suite fast and reliable.
-
----
-
-
-## Related Reading
-
-- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Remember to keep your mocks close to your actual API contracts, clean up after each test, and use environment variables to make your code testable. With these practices, you'll have reliable, fast tests that give you confidence in your application's HTTP integration logic.
