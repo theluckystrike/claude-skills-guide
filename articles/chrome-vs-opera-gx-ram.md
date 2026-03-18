@@ -12,7 +12,7 @@ categories: [comparisons]
 tags: [chrome, opera, browser, ram, performance]
 ---
 
-
+{% raw %}
 # Chrome vs Opera GX RAM: Which Browser Uses Less Memory?
 
 Memory consumption matters for developers running multiple instances, containers, and virtual machines simultaneously. Chrome and Opera GX take different approaches to RAM management, and understanding these differences helps you choose the right browser for your workflow.
@@ -136,3 +136,4 @@ For pure development work with multiple heavy web applications, Chrome typically
 Both browsers offer similar performance for static content and basic web applications. The choice ultimately depends on whether you prioritize development tooling (Chrome) or resource control (Opera GX).
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
