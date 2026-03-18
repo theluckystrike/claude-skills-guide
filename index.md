@@ -823,7 +823,6 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Claude Code for Pair Review Workflow Tutorial Guide](/claude-skills-guide/claude-code-for-pair-review-workflow-tutorial-guide/)
 - [Claude Code for Pants Build System Workflow Guide](/claude-skills-guide/claude-code-for-pants-build-system-workflow-guide/)
 - [Claude Code for Percy Visual Testing Workflow Guide](/claude-skills-guide/claude-code-for-percy-visual-testing-workflow-guide/)
-- [Claude Code for Performance Dashboard Workflow Guide](/claude-skills-guide/claude-code-for-performance-dashboard-workflow-guide/)
 - [Claude Code for Performance Data Analysis Workflow](/claude-skills-guide/claude-code-for-performance-data-analysis-workflow/)
 - [Claude Code for Performance Regression Workflow Guide](/claude-skills-guide/claude-code-for-performance-regression-workflow-guide/)
 - [Claude Code for PhD Student Coding Productivity](/claude-skills-guide/claude-code-for-phd-student-coding-productivity/)

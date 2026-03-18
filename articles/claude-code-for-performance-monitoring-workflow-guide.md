@@ -236,6 +236,30 @@ class MonitoringService:
         return [m for m in self.metrics[name] if m.timestamp.timestamp() > cutoff]
 ```
 
+## Grafana Dashboard Integration
+
+For teams using Grafana, Claude Code can generate panel configurations programmatically based on your metric naming conventions:
+
+```yaml
+# Example dashboard configuration
+panels:
+  - title: "API Response Time"
+    type: graph
+    targets:
+      - expr: 'rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds_count[5m])'
+        legendFormat: "p50"
+      - expr: 'histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m]))'
+        legendFormat: "p95"
+```
+
+This automation ensures consistency across dashboards and reduces manual configuration errors. Use short time windows (5-15 minutes) for operational dashboards that catch immediate issues, and longer windows (days to weeks) for trend analysis and capacity planning.
+
+Structure your dashboards around Google's four golden signals: latency, traffic, errors, and saturation. These metrics indicate system health at a glance and provide immediate business value.
+
+## Automated Performance Reporting
+
+Beyond real-time dashboards, automated performance reports provide valuable historical context. Define reporting periods—daily, weekly, or monthly—and focus on trends rather than point-in-time values. Reports should include summary statistics, trend analysis, and actionable recommendations. If response times increased 20% over the past week, the report should identify potential causes and suggest next steps.
+
 ## Integrating Claude Code into Monitoring Workflows
 
 The real power of Claude Code emerges when you integrate it directly into your monitoring and incident response workflows.
