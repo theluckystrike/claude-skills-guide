@@ -1641,7 +1641,6 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Apache Kafka MCP Server for Event Streaming Guide](/claude-skills-guide/apache-kafka-mcp-server-event-streaming-guide/)
 - [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/automated-testing-pipeline-with-claude-tdd-skill-2026/)
 - [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
-- [Best Way to Chain Multiple Claude Code Skill Steps](/claude-skills-guide/best-way-to-chain-multiple-claude-code-skill-steps/)
 - [Best Way to Feed Claude Code a Large SQL Schema](/claude-skills-guide/best-way-to-feed-claude-code-a-large-sql-schema/)
 - [Best Way to Use Claude Code for Database Migrations](/claude-skills-guide/best-way-to-use-claude-code-for-database-migrations/)
 - [Building a Mobile App with Claude Code and Expo](/claude-skills-guide/building-a-mobile-app-with-claude-code-and-expo/)

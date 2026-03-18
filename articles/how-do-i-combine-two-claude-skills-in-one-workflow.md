@@ -44,6 +44,27 @@ You: Now use pdf to create API documentation from these test specifications
 
 This sequential pattern works well when each skill produces discrete output that the next skill can consume.
 
+## Context Building with Progressive Disclosure
+
+For complex workflows, build context progressively by invoking skills in stages. This pattern works particularly well when you need to gather information from multiple sources before processing.
+
+Start by establishing what information you need to collect:
+
+```
+/pdf extract key_metrics from Q4_report.pdf
+/mcp-server list available from confluence
+/read wiki_page "Project Requirements"
+```
+
+After gathering all necessary data, invoke processing skills that operate on the accumulated context:
+
+```
+/xlsx create dashboard from all collected metrics
+/pptx generate quarterly review presentation
+```
+
+This approach ensures each downstream skill has full context from every source, rather than operating on partial information.
+
 ## Parallel Skill Execution
 
 Some workflows benefit from running multiple skills simultaneously, then combining their results. The **frontend-design** skill can work in parallel with backend-focused skills when building full-stack features.
@@ -123,6 +144,23 @@ Next: Use pdf to document these findings in a security audit report
 Don't assume skills share implicit context. Each skill has its own focus and may not remember details from a previous skill unless you explicitly restate them. Always provide relevant context when invoking a new skill in a chain.
 
 Avoid over-chaining. If you find yourself invoking five or more skills in sequence, consider whether a single comprehensive prompt might be more efficient. Skill chaining works best for natural breakpoints in work.
+
+## Advanced Technique: Skill Composition
+
+For frequently used combinations, consider creating composite skills that invoke multiple underlying skills. Write a skill file that sequences the invocations:
+
+```markdown
+# Composite Skill: Complete Analysis Pipeline
+This skill runs the full analysis workflow:
+1. Extract data from PDF input
+2. Process with spreadsheet calculations
+3. Generate documentation
+4. Create presentation
+
+Use this for recurring reporting tasks.
+```
+
+Users then invoke the single composite skill instead of remembering the full sequence. This approach transforms complex multi-step pipelines into a single command that any team member can use consistently.
 
 ## Building Your Own Workflows
 
