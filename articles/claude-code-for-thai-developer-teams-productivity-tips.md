@@ -762,6 +762,33 @@ Claude Code มีประสิทธิภาพสูงสุดเมื�
 การแชร์ prompts และ workflows ที่ดีระหว่างสมาชิกในทีมผ่าน knowledge base ที่สร้างขึ้นจะสร้าง compound effect ที่ทำให้ทั้งทีมพัฒนาขึ้นพร้อมกัน
 
 
+## Building a Claude Code-First Engineering Culture
+
+Adopting Claude Code at the team level requires more than individual proficiency — it requires building a culture where AI-assisted development is the norm rather than the exception. Thai development teams face a unique opportunity: they can leapfrog legacy habits and establish AI-first workflows from the ground up.
+
+**Start with a team hackathon.** Allocate one full sprint day for all team members to experiment with Claude Code on real tasks from the current backlog. Pair junior and senior developers to share prompt strategies. Document the most effective prompts that emerge from the session and add them to your shared knowledge base. Teams that invest in a structured discovery session report faster adoption and higher average productivity gains than teams left to self-discover.
+
+**Establish prompt review in retrospectives.** Add a standing agenda item to your sprint retrospective: share one Claude Code prompt that worked well this sprint and one that did not work as expected. This creates a feedback loop where the entire team learns from individual experiences, gradually improving the shared prompt library and identifying gaps in the CLAUDE.md configuration.
+
+**Create a Claude Code champion role.** Designate one team member per quarter as the Claude Code champion responsible for updating the CLAUDE.md configuration, maintaining the prompt library, and staying current with new Claude capabilities. Rotating this role ensures knowledge is distributed rather than concentrated in one person.
+
+**Measure and celebrate wins.** Track specific metrics before and after Claude Code adoption: lines of code reviewed per hour, time to close bug tickets, onboarding time for new developers. Share improvements visibly — a Slack channel or dashboard that shows the team's collective productivity gains creates positive reinforcement and encourages continued investment in AI-assisted workflows.
+
+**Address concerns openly.** Some team members may worry that Claude Code makes their skills less valuable. Address this directly: Claude Code handles repetitive, mechanical tasks, freeing developers to focus on architecture decisions, stakeholder communication, and novel problem-solving — the aspects of software engineering that machines cannot replicate. The developers who thrive are those who learn to direct AI effectively, not those who compete with it.
+
+**Integrate with onboarding.** New team members should learn Claude Code alongside your codebase, not as an afterthought. Add a dedicated Claude Code onboarding session to your new hire checklist. Walk new developers through the CLAUDE.md configuration, show them the prompt library, and have them complete their first bug fix using Claude Code with a senior developer pairing. This sets the expectation from day one that AI-assisted development is the standard workflow.
+
+## Practical Tips for Remote Thai Teams
+
+Many Thai development teams operate in partially or fully remote environments, often collaborating across time zones with international clients or distributed team members. Claude Code's text-based interface makes it particularly well-suited to asynchronous remote workflows.
+
+**Document decisions in code comments.** When Claude Code helps you make an architectural decision, capture the reasoning in a comment rather than in a Slack message that will be buried in scrollback. Future team members — and your future self — will thank you for the context. Prompt Claude to generate decision-record comments that explain not just what was done but why alternatives were rejected.
+
+**Use Claude for async code review.** When time zone differences make synchronous code review impractical, use Claude Code to generate a preliminary review before the pull request sits in the queue. Claude's review catches obvious issues, leaving human reviewers to focus on design and business logic questions that require team context. This reduces the round-trip time for PR approval, keeping the team's deployment cadence fast even across time zones.
+
+**Generate meeting preparation materials.** Before architecture discussions or sprint planning meetings, use Claude Code to summarize relevant code areas, generate option analyses for technical decisions, and draft agenda items with supporting context. Meetings that start with shared written context rather than real-time explanation are shorter and produce better decisions.
+
+
 ## บทสรุป
 
 การใช้ Claude Code อย่างมีประสิทธิภาพไม่ใช่แค่การพิมพ์คำถามแล้วรอคำตอบ แต่ต้องอาศัย:
