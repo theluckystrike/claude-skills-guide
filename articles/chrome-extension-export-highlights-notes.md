@@ -46,6 +46,8 @@ const highlight = {
 };
 ```
 
+Choosing the right storage backend up front matters a great deal. `localStorage` works for small highlight sets but will hit its quota limit once a user accumulates hundreds of annotated pages. `IndexedDB` scales to tens of thousands of records without complaint, but requires more boilerplate. The `chrome.storage` API sits in the middle: it offers a clean async interface, built-in sync across devices, and a quota of around 100 KB for `sync` or roughly unlimited for `local`. For most annotation extensions, `chrome.storage.local` is the right starting point.
+
 ## Exporting via chrome.storage API
 
 The `chrome.storage` API is the standard way extensions persist data. Here's how to export highlights and notes:
@@ -55,22 +57,37 @@ The `chrome.storage` API is the standard way extensions persist data. Here's how
 async function exportAllHighlights() {
   const result = await chrome.storage.local.get('highlights');
   const highlights = result.highlights || [];
-  
+
   // Convert to JSON
   const jsonData = JSON.stringify(highlights, null, 2);
-  
+
   // Create downloadable file
   const blob = new Blob([jsonData], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
-  
+
   const a = document.createElement('a');
   a.href = url;
   a.download = `highlights-export-${new Date().toISOString().slice(0, 10)}.json`;
   a.click();
-  
+
   URL.revokeObjectURL(url);
 }
 ```
+
+One edge case worth handling is paginated storage. If users have thousands of highlights stored under multiple keys, a single `get('highlights')` call returns nothing. A more robust pattern uses `chrome.storage.local.get(null)` to retrieve everything, then filters by key prefix:
+
+```javascript
+async function exportAllHighlightsPaginated() {
+  const allData = await chrome.storage.local.get(null);
+  const highlights = Object.entries(allData)
+    .filter(([key]) => key.startsWith('hl_'))
+    .map(([, value]) => value);
+
+  return highlights;
+}
+```
+
+This pattern also makes it straightforward to export highlights grouped by domain or by date range without loading the entire dataset into memory at once.
 
 ## Exporting to Markdown Format
 
@@ -82,7 +99,7 @@ function exportToMarkdown(highlights, pageTitle, pageUrl) {
   md += `Source: ${pageUrl}\n`;
   md += `Exported: ${new Date().toISOString()}\n\n`;
   md += `---\n\n`;
-  
+
   highlights.forEach((hl, index) => {
     md += `## Highlight ${index + 1}\n\n`;
     md += `> ${hl.text}\n\n`;
@@ -91,10 +108,34 @@ function exportToMarkdown(highlights, pageTitle, pageUrl) {
     }
     md += `---\n\n`;
   });
-  
+
   return md;
 }
 ```
+
+If your users work with Obsidian specifically, you can enhance this output with frontmatter YAML so each exported file becomes a proper Obsidian note with tags and backlinks:
+
+```javascript
+function exportToObsidianMarkdown(highlights, pageTitle, pageUrl, tags) {
+  const tagList = (tags || []).map(t => `  - ${t}`).join('\n');
+  let md = `---\n`;
+  md += `title: "${pageTitle}"\n`;
+  md += `source: "${pageUrl}"\n`;
+  md += `exported: "${new Date().toISOString()}"\n`;
+  if (tagList) md += `tags:\n${tagList}\n`;
+  md += `---\n\n`;
+
+  highlights.forEach((hl) => {
+    md += `> ${hl.text}\n\n`;
+    if (hl.note) md += `${hl.note}\n\n`;
+    md += `---\n\n`;
+  });
+
+  return md;
+}
+```
+
+Roam Research users prefer a slightly different format with `((block-uid))` references, but a basic block-level export works well with `[[page title]]` syntax as wiki-style links.
 
 ## Building an Export Popup UI
 
@@ -134,13 +175,41 @@ Users need a simple interface to trigger exports. Here's a popup implementation:
 // popup.js
 document.getElementById('exportBtn').addEventListener('click', async () => {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  
+
   chrome.tabs.sendMessage(tab.id, { action: 'getHighlights' }, (highlights) => {
     const format = document.getElementById('format').value;
     downloadHighlights(highlights, format, tab.title, tab.url);
   });
 });
 ```
+
+A common UX improvement is to show a highlight count badge in the popup so users know how many annotations exist for the current page before exporting. You can fetch this from storage when the popup opens:
+
+```javascript
+// popup.js - show count on load
+document.addEventListener('DOMContentLoaded', async () => {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  const result = await chrome.storage.local.get('highlights');
+  const all = result.highlights || [];
+  const pageCount = all.filter(h => h.pageUrl === tab.url).length;
+  document.getElementById('count').textContent =
+    `${pageCount} highlight${pageCount !== 1 ? 's' : ''} on this page`;
+});
+```
+
+## Comparing Export Format Options
+
+Different downstream workflows demand different formats. The table below summarizes when to reach for each:
+
+| Format | Best For | Drawbacks |
+|--------|----------|-----------|
+| JSON | Developer pipelines, re-import, full fidelity | Not human-readable without tooling |
+| Markdown | Obsidian, Notion, Roam, static sites | Loses color and position metadata |
+| CSV | Spreadsheet analysis, Airtable, data science | No nesting; notes must be single-line |
+| HTML | Email, web sharing, printing | Larger file size, requires sanitization |
+| Plain text | Quick copy-paste, minimal setup | Loses all structure and metadata |
+
+For teams building annotation tools, offering JSON as the canonical format plus Markdown and CSV as convenience exports covers the majority of user workflows without significant added complexity.
 
 ## Handling Cross-Extension Data Sharing
 
@@ -159,6 +228,8 @@ chrome.runtime.sendMessage(extensionId, {
 });
 ```
 
+Cross-extension messaging requires that the receiving extension explicitly whitelists the sender's ID in its manifest. This is a useful pattern when you split annotation storage into one extension and export/sync into another, keeping each extension's surface area small.
+
 ## CSV Export for Spreadsheet Analysis
 
 Sometimes you need data in a format suitable for spreadsheets:
@@ -174,10 +245,20 @@ function exportToCSV(highlights) {
     `"${(hl.note || '').replace(/"/g, '""')}"`,
     hl.color
   ]);
-  
+
   return [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
 }
 ```
+
+One detail worth noting: some highlight text contains newlines, which will break the CSV row structure unless you strip or escape them before writing to the field. A safe approach is to replace newlines with a space inside quoted fields:
+
+```javascript
+function sanitizeForCSV(text) {
+  return `"${(text || '').replace(/"/g, '""').replace(/\n/g, ' ').trim()}"`;
+}
+```
+
+Running the resulting CSV through a validator like csvlint before shipping to users will catch these edge cases before they become support tickets.
 
 ## Automating Exports with Background Scripts
 
@@ -196,7 +277,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 async function performScheduledExport() {
   const result = await chrome.storage.local.get('highlights');
   const highlights = result.highlights || [];
-  
+
   // Save to Downloads folder
   const blob = new Blob([JSON.stringify(highlights)], { type: 'application/json' });
   await chrome.downloads.download({
@@ -207,6 +288,43 @@ async function performScheduledExport() {
 }
 ```
 
+For incremental backups rather than full dumps, track a `lastExportTimestamp` in storage and filter highlights created after that timestamp:
+
+```javascript
+async function performIncrementalExport() {
+  const meta = await chrome.storage.local.get('lastExportTimestamp');
+  const since = meta.lastExportTimestamp || 0;
+
+  const result = await chrome.storage.local.get('highlights');
+  const newHighlights = (result.highlights || []).filter(
+    h => new Date(h.createdAt).getTime() > since
+  );
+
+  if (newHighlights.length === 0) return;
+
+  const blob = new Blob([JSON.stringify(newHighlights)], { type: 'application/json' });
+  await chrome.downloads.download({
+    url: URL.createObjectURL(blob),
+    filename: `highlights-incremental-${Date.now()}.json`,
+    saveAs: false
+  });
+
+  await chrome.storage.local.set({ lastExportTimestamp: Date.now() });
+}
+```
+
+This pattern keeps individual export files small and makes it practical to store months of backup history without bloating the user's Downloads folder.
+
+## Real-World Scenario: Research Workflow Integration
+
+Consider a researcher who highlights academic papers and needs to push those highlights into a Zotero-compatible notes format. The export logic would look like this:
+
+1. Capture highlights with `position` metadata intact so citations can reference exact passage locations.
+2. On export, group by `pageUrl` and map each group to a Zotero note item using the Zotero API's `notes` field format.
+3. Tag each note with the highlight color mapped to a Zotero tag (e.g., yellow = "important", red = "disagree").
+
+This kind of integration turns a simple annotation extension into a full research pipeline tool. The extension itself stays lightweight — the export format is the integration surface.
+
 ## Security Considerations
 
 When exporting user data, keep these security practices in mind:
@@ -216,11 +334,22 @@ When exporting user data, keep these security practices in mind:
 3. **Request minimal permissions** - only what's needed for your export feature
 4. **Clear sensitive data** from temporary variables after export completes
 
+A fifth consideration often overlooked: revoke object URLs promptly. `URL.createObjectURL()` holds a reference to the blob in memory until either the document unloads or `URL.revokeObjectURL()` is called explicitly. For large exports, failing to revoke can cause measurable memory pressure in long-running extension contexts.
+
+```javascript
+// Always revoke after triggering the download
+const url = URL.createObjectURL(blob);
+a.href = url;
+a.click();
+// Revoke on next tick to ensure the download has started
+setTimeout(() => URL.revokeObjectURL(url), 100);
+```
+
 ## Conclusion
 
 Exporting highlights and notes from Chrome extensions requires understanding storage APIs, data formatting, and user interface patterns. The approaches covered here—JSON, Markdown, CSV, and automated exports—provide a foundation for building robust export functionality.
 
-These patterns work whether you're extending an existing annotation tool or building a new reading companion. Start with the data structure that matches your needs, then layer in export formats as your users require them.
+These patterns work whether you're extending an existing annotation tool or building a new reading companion. Start with the data structure that matches your needs, then layer in export formats as your users require them. Incremental exports, paginated storage reads, and Obsidian-compatible Markdown output are all straightforward additions once the core pipeline is in place. The key is treating the export format as a first-class feature rather than an afterthought, because for knowledge workers, the ability to own and move their data is often more important than any individual annotation feature.
 
 
 ## Related Reading
