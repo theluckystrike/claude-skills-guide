@@ -315,4 +315,88 @@ A custom Chrome extension gives you control over deal discovery that generic sho
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Advanced: Category-Aware Scanning
+
+Prime Day surfaces deals across dozens of categories simultaneously. Prioritize categories with a config-driven scanner:
+
+```javascript
+const PRIORITY_CATEGORIES = ['electronics', 'gaming', 'home-kitchen'];
+
+async function scanCategoryDeals(category) {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  const results = await chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    func: (sel) => Array.from(document.querySelectorAll(sel)).map(el => ({
+      asin: el.dataset.asin,
+      title: el.querySelector('h2 a span')?.textContent?.trim(),
+      price: el.querySelector('.a-price .a-offscreen')?.textContent
+    })),
+    args: ['[data-component-type="s-search-result"]']
+  });
+  return results[0]?.result || [];
+}
+```
+
+Combine scans using `Promise.all` to check multiple departments simultaneously during the Prime Day window.
+
+## Best Practices for Prime Day Usage
+
+Build in courteous rate limiting to avoid hammering Amazon's infrastructure:
+
+- Space out page requests by at least 2-3 seconds
+- Use the `alarms` API with a minimum `periodInMinutes: 5` for background checks
+- Cache results in `chrome.storage.local` to avoid redundant fetches
+- Disable or reduce check frequency outside Prime Day windows
+
+## Comparison with Amazon's Built-In Tools
+
+| Feature | This Extension | Amazon Wish List | Amazon Deal Notifications |
+|---|---|---|---|
+| Custom filters | Full control | Basic | Category only |
+| Cross-category view | Yes | No | No |
+| Price history | You build it | No | No |
+| Export data | Yes | No | No |
+| Works outside Prime Day | Yes | Yes | No |
+
+The extension is most valuable during Prime Day because you can combine multiple filters simultaneously — minimum discount percentage, minimum rating, specific category — that Amazon's native interface does not support together.
+
+## Troubleshooting Common Issues
+
+**Deal data missing after page load**: Amazon renders deal data asynchronously. Wait for the DOM to stabilize using a `MutationObserver`:
+
+```javascript
+function waitForDeals(selector, timeout = 5000) {
+  return new Promise((resolve, reject) => {
+    const observer = new MutationObserver(() => {
+      const el = document.querySelector(selector);
+      if (el) { observer.disconnect(); resolve(el); }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    setTimeout(() => { observer.disconnect(); reject(new Error('Timeout')); }, timeout);
+  });
+}
+```
+
+**Extension popup closes when opening a deal**: Open links with `chrome.tabs.create` instead of anchor tags so the popup stays open:
+
+```javascript
+document.getElementById('viewDeal').addEventListener('click', () => {
+  chrome.tabs.create({ url: deal.url });
+});
+```
+
+**Storage filling up during Prime Day**: Keep only the top 50 deals ranked by discount:
+
+```javascript
+async function trimDeals() {
+  const { deals = [] } = await chrome.storage.local.get('deals');
+  const trimmed = deals.sort((a, b) => b.discount - a.discount).slice(0, 50);
+  await chrome.storage.local.set({ deals: trimmed });
+}
+```
+
+A custom Chrome extension gives you control over deal discovery during Prime Day that generic shopping tools cannot match. Start with the foundation above and extend it with price history tracking or category-based alerts based on your needs.
+
+
 {% endraw %}

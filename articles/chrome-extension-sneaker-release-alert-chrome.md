@@ -286,4 +286,61 @@ The implementation above provides a foundation that you can customize based on s
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
+## Step-by-Step: Setting Up Your First Alert
+
+1. Load the extension via `chrome://extensions` > "Load unpacked"
+2. Click the extension icon and check the retailers you want to monitor
+3. Enable desktop notifications when prompted
+4. Click "Save Settings" — the service worker starts checking on a 1-minute interval
+5. When a new release appears, a Chrome notification fires with name, price, and release date
+6. Click the notification to open the product page directly
+
+## Common Use Cases
+
+**Jordan Retro drops**: Nike.com's `/launch` URL surfaces upcoming releases before the SNKRS queue opens. Monitoring it provides advance visibility.
+
+**Yeezy restocks**: Adidas restocks appear briefly before selling out. A 1-minute check interval often catches restock windows.
+
+**Footlocker exclusive colorways**: Chain retailer exclusives often go live with minimal marketing. Monitoring multiple retailer domains catches drops that filter-based tools miss.
+
+## Comparison with Existing Alert Tools
+
+| Tool | Retailers | Setup | Alert speed | Cost |
+|---|---|---|---|---|
+| This extension | Any (customizable) | Build yourself | Configurable | Free |
+| Discord bots (Sole Alert) | Multi-retailer | Join Discord | Near-instant | Free/Paid |
+| Eve from Snkrs | Nike only | Mobile app | Push notification | Free |
+
+The extension is unique in that you control the check interval, selector logic, and notification format. Discord bots are faster for hyped releases but require community infrastructure you do not control.
+
+## Troubleshooting Common Issues
+
+**Selector no longer matching**: Build fallback selectors and log misses for debugging:
+
+```javascript
+async function fetchReleases(retailer) {
+  for (const selector of retailer.selectors) {
+    const elements = document.querySelectorAll(selector);
+    if (elements.length > 0) return Array.from(elements).map(el => parseRelease(el));
+  }
+  await chrome.storage.local.set({ lastMiss: { retailer: retailer.name, time: Date.now() } });
+  return [];
+}
+```
+
+**Service worker terminating between checks**: Use the `alarms` API instead of `setInterval`. Alarms persist across service worker restarts in Manifest V3.
+
+**False positives from restocked items**: Track seen products by ASIN or ID to avoid re-alerting on items already seen. Store seen IDs in `chrome.storage.local`.
+
+**Notifications not appearing**: Add `"notifications"` to the manifest `permissions` array and prompt for permission on first run:
+
+```javascript
+chrome.permissions.request({ permissions: ['notifications'] }, (granted) => {
+  if (!granted) alert('Enable notifications to receive sneaker alerts.');
+});
+```
+
+When publishing to the Chrome Web Store, frame your extension as a notification utility rather than an automated purchase tool — the latter violates store policies and retailer terms. Include a clear privacy policy and test thoroughly across each target retailer.
+
+
 {% endraw %}

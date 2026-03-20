@@ -393,3 +393,86 @@ Building a price tracker teaches valuable skills in Chrome extension development
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Advanced: Price History Chart
+
+Track prices over time and render a mini price history chart in the popup:
+
+```javascript
+function renderPriceHistory(canvas, product) {
+  const ctx = canvas.getContext('2d');
+  const history = product.priceHistory || [];
+  if (history.length < 2) return;
+
+  const prices = history.map(h => h.price);
+  const min = Math.min(...prices) * 0.95;
+  const max = Math.max(...prices) * 1.05;
+  const range = max - min;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = '#0071ce';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+
+  prices.forEach((price, i) => {
+    const x = (i / (prices.length - 1)) * canvas.width;
+    const y = canvas.height - ((price - min) / range) * canvas.height;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+}
+```
+
+## Comparison with Existing Tools
+
+| Tool | Setup | Real-time alerts | Price history | Cost |
+|---|---|---|---|---|
+| This extension | Build yourself | Yes | Yes (local) | Free |
+| Honey | Install from store | Sale events only | Limited | Free |
+| CamelCamelCamel | Website only | Email alerts | Excellent (Amazon only) | Free |
+| Keepa | Install from store | Yes | Excellent | Free/Premium |
+
+Building your own gives full control over data and notification triggers. The trade-off is maintenance when Walmart updates their page structure.
+
+## Step-by-Step: Tracking Your First Product
+
+1. Navigate to a Walmart product page (`walmart.com/ip/...`)
+2. Click the extension icon in the toolbar
+3. The popup detects the product page and enables "Track This Product"
+4. Click the button — the content script extracts the product ID, title, and price
+5. The background script stores the product and schedules 6-hour checks
+6. Revisit the popup to see current price and history chart
+7. Chrome sends a notification when the background alarm detects a price change
+
+## Troubleshooting Common Issues
+
+**Selector no longer matching prices**: Use `[itemprop="price"]` or look for JSON-LD structured data as a more resilient fallback:
+
+```javascript
+function extractPriceFromStructuredData() {
+  const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  for (const script of scripts) {
+    try {
+      const data = JSON.parse(script.textContent);
+      if (data.offers?.price) return parseFloat(data.offers.price);
+    } catch {}
+  }
+  return null;
+}
+```
+
+**`setInterval` not persisting in service worker**: Replace `setInterval(checkPrices, ...)` with the `alarms` API:
+
+```javascript
+chrome.alarms.create('walmartPriceCheck', { periodInMinutes: 360 });
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === 'walmartPriceCheck') checkPrices();
+});
+```
+
+**Notifications not appearing**: Add `"notifications"` to the `permissions` array in the manifest and reload the extension.
+
+**Content script not running**: Verify the `content_scripts.matches` pattern is `"https://www.walmart.com/ip/*"`. A missing wildcard silently prevents injection.
+
+Building a price tracker teaches valuable skills in Chrome extension development, web scraping ethics, and real-time notification systems. Use these principles responsibly — build for personal use and respect platform terms of service.
+

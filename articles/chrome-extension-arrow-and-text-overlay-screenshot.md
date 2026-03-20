@@ -282,18 +282,122 @@ function copyToClipboard(canvas) {
 }
 ```
 
+
+## Step-by-Step: From Capture to Export
+
+1. Navigate to the page you want to capture
+2. Click the extension icon in the toolbar
+3. The popup's capture button calls `chrome.tabs.captureVisibleTab`
+4. The PNG data URL is passed to the editor page via `chrome.storage.session`
+5. The editor canvas loads the image and waits for user input
+6. Select "Arrow" mode and click-drag to place an arrow
+7. Select "Text" mode, click a location, and type your annotation
+8. Use the color picker to change annotation colors
+9. Click "Save" to download the annotated PNG, or "Copy" to send directly to clipboard
+
+## Advanced: Blur Tool for Sensitive Data
+
+Screenshots for documentation often contain passwords or PII. Add a pixelate-to-blur region tool:
+
+```javascript
+function blurRegion(x, y, width, height, blockSize = 10) {
+  const imageData = ctx.getImageData(x, y, width, height);
+  for (let bx = 0; bx < width; bx += blockSize) {
+    for (let by = 0; by < height; by += blockSize) {
+      const idx = (by * width + bx) * 4;
+      const r = imageData.data[idx];
+      const g = imageData.data[idx + 1];
+      const b = imageData.data[idx + 2];
+      for (let px = bx; px < Math.min(bx + blockSize, width); px++) {
+        for (let py = by; py < Math.min(by + blockSize, height); py++) {
+          const i = (py * width + px) * 4;
+          imageData.data[i] = r;
+          imageData.data[i + 1] = g;
+          imageData.data[i + 2] = b;
+        }
+      }
+    }
+  }
+  ctx.putImageData(imageData, x, y);
+}
+```
+
+## Advanced: Undo / Redo Stack
+
+Implement an undo stack using annotation history:
+
+```javascript
+const history = [[]];
+let historyIndex = 0;
+
+function pushHistory() {
+  history.splice(historyIndex + 1);
+  history.push([...annotations]);
+  historyIndex = history.length - 1;
+}
+
+function undo() {
+  if (historyIndex > 0) {
+    historyIndex--;
+    annotations = [...history[historyIndex]];
+    redrawCanvas();
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && e.key === 'z') undo();
+  if (e.ctrlKey && e.key === 'y') {
+    if (historyIndex < history.length - 1) {
+      historyIndex++;
+      annotations = [...history[historyIndex]];
+      redrawCanvas();
+    }
+  }
+});
+```
+
+Call `pushHistory()` in `stopDrawing` after each annotation is committed.
+
+## Comparison with Desktop Annotation Tools
+
+| Tool | Setup | Blur tool | Clipboard export | Cost |
+|---|---|---|---|---|
+| This extension | Build yourself | Add it yourself | Yes (canvas.toBlob) | Free |
+| Snagit | Desktop install | Yes | Yes | $62.99 |
+| Greenshot | Desktop install | Yes | Yes | Free |
+| CleanShot X (macOS) | Desktop install | Yes | Yes | $29 |
+
+The extension wins on zero install friction — no desktop app required, works across all operating systems inside Chrome.
+
+## Troubleshooting Common Issues
+
+**`captureVisibleTab` returning a blank image**: Try `{ format: 'jpeg', quality: 90 }` as a fallback if the PNG capture returns blank on hardware-accelerated pages.
+
+**Canvas blurry on high-DPI displays**: Account for `window.devicePixelRatio` when sizing the canvas:
+
+```javascript
+const dpr = window.devicePixelRatio || 1;
+canvas.width = image.width * dpr;
+canvas.height = image.height * dpr;
+canvas.style.width = image.width + 'px';
+canvas.style.height = image.height + 'px';
+ctx.scale(dpr, dpr);
+```
+
+**Clipboard API not working in extension context**: The copy must be triggered directly by a button click — not from a `setTimeout` or async callback — to satisfy the user gesture requirement.
+
+**Editor page not opening**: Register the editor as an options page or open it explicitly:
+
+```javascript
+chrome.tabs.create({ url: chrome.runtime.getURL('editor.html') });
+```
+
 ## Security and Performance Considerations
 
-When building screenshot extensions, keep these best practices in mind:
-
-- Request only the permissions your extension actually needs
-- Process images in the background script to avoid UI blocking
-- Use `chrome.offscreen` API for heavy image processing
-- Implement rate limiting to prevent abuse
-
-For extensions that handle sensitive data, consider adding a blur option for masking sensitive information before export.
-
----
+- Request only the minimum necessary permissions (`activeTab` and `tabCapture` are sufficient for basic capture)
+- Process heavy image operations in a background offscreen document using `chrome.offscreen` to avoid freezing the popup UI
+- For extensions that handle sensitive documentation screenshots, add an auto-clear feature that removes the image from storage after a configurable timeout
+- The blur tool is essential before sharing screenshots in public bug trackers or documentation systems
 
 
 ## Related Reading

@@ -519,4 +519,71 @@ Chrome extensions for Facebook page management provide flexibility for automatio
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Advanced: Batch Operations Across Multiple Pages
+
+Managing a portfolio of Facebook pages means repeating the same operations over and over. A batch operations layer reduces this to a single click:
+
+```javascript
+async function batchOperation(action) {
+  const { managedPages = [] } = await chrome.storage.local.get('managedPages');
+  const results = [];
+  for (const page of managedPages) {
+    try {
+      results.push({ page: page.name, success: true, result: await performAction(page, action) });
+    } catch (err) {
+      results.push({ page: page.name, success: false, error: err.message });
+    }
+  }
+  return results;
+}
+```
+
+Expose `batchOperation` through the popup's action menu so page managers can trigger multi-page updates without writing code.
+
+## Scheduled Analytics Export
+
+Automate weekly summary reports with the `alarms` API:
+
+```javascript
+chrome.alarms.create('weeklyExport', { periodInMinutes: 10080 });
+
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name !== 'weeklyExport') return;
+  const { managedPages = [] } = await chrome.storage.local.get('managedPages');
+  const report = managedPages.map(page => ({
+    name: page.name,
+    followers: page.followers,
+    weeklyGrowth: page.followers - (page.lastWeekFollowers || page.followers),
+    engagement: ((page.likes + page.comments) / (page.followers || 1) * 100).toFixed(2) + '%'
+  }));
+  const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+  chrome.downloads.download({ url: URL.createObjectURL(blob), filename: `fb-report-${Date.now()}.json`, saveAs: false });
+});
+```
+
+## Comparison with Facebook Business Suite
+
+| Feature | Chrome Extension | Facebook Business Suite |
+|---|---|---|
+| Setup time | Minutes | Requires business account |
+| Custom automation | Full control | Limited workflows |
+| Data export | Any format | CSV only |
+| Maintenance | DOM selectors | API deprecations |
+
+The extension wins on flexibility and speed of iteration. Business Suite wins on long-term stability.
+
+## Troubleshooting Common Issues
+
+**Content script not injecting**: Facebook uses aggressive CSP headers. Ensure `host_permissions` includes both `"https://www.facebook.com/*"` and `"https://web.facebook.com/*"`.
+
+**Message timeout on slow pages**: Send a readiness signal from the content script so the popup knows when it can safely communicate:
+
+```javascript
+// content.js
+chrome.runtime.sendMessage({ action: 'contentScriptReady' });
+```
+
+**Storage quota hit**: `chrome.storage.local` is limited to 10MB. Prune old data on a rolling basis by keeping only the most recent 100 page snapshots.
+
 {% endraw %}

@@ -244,11 +244,77 @@ To test your extension in Chrome:
 
 Use Chrome's developer tools to debug content scripts and background service workers. The console output appears in the respective dev tool context.
 
+
+## Advanced: Cross-Tab Draft Synchronization
+
+Researchers often work across multiple tabs simultaneously. Keep drafts in sync using the `chrome.storage.onChanged` event:
+
+```javascript
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area !== 'local') return;
+  Object.keys(changes).forEach(key => {
+    if (key.startsWith('draft_')) {
+      const newDraft = changes[key].newValue;
+      if (newDraft && newDraft.url !== window.location.href) {
+        showSyncBanner(new Date(newDraft.timestamp).toLocaleTimeString());
+      }
+    }
+  });
+});
+```
+
+## Comparison with Standalone Writing Tools
+
+| Feature | This Extension | Scrivener | Microsoft Word |
+|---|---|---|---|
+| Browser-native | Yes | No | Web app only |
+| Works in Google Docs | Yes (content script) | No | No |
+| Citation management | Custom | Via plugin | Via plugin |
+| Auto-save | Yes | Yes | Yes |
+| Price | Free (build it) | $59 | Microsoft 365 |
+
+The extension approach is most powerful for researchers who write in browser-based editors like Google Docs, Overleaf, or Notion — it extends these platforms without requiring a separate application.
+
+## Troubleshooting Common Issues
+
+**Content script not injecting into Google Docs**: Google Docs renders inside an iframe. Add `all_frames: true` to your content script declaration and ensure the `matches` pattern includes `https://docs.google.com/*`.
+
+**Auto-save overwriting newer content**: Use a monotonic version counter instead of wall time for draft versioning to handle clock drift across devices:
+
+```javascript
+async function getNextDraftVersion() {
+  const { draftCounter = 0 } = await chrome.storage.local.get('draftCounter');
+  const next = draftCounter + 1;
+  await chrome.storage.local.set({ draftCounter: next });
+  return next;
+}
+```
+
+**Word count panel blocking content**: Make the panel draggable and persist its position in `localStorage`:
+
+```javascript
+let isDragging = false, dragOffsetX, dragOffsetY;
+panel.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  dragOffsetX = e.clientX - panel.offsetLeft;
+  dragOffsetY = e.clientY - panel.offsetTop;
+});
+document.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  panel.style.left = e.clientX - dragOffsetX + 'px';
+  panel.style.top = e.clientY - dragOffsetY + 'px';
+});
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  localStorage.setItem('panelPos', JSON.stringify({ left: panel.style.left, top: panel.style.top }));
+});
+```
+
 ## Extension Best Practices
 
-When building thesis writing tools, prioritize data reliability. Implement conflict resolution for auto-saved drafts to prevent data loss when users work across multiple devices. Use encryption for sensitive research notes stored in Chrome's sync storage.
+When building thesis writing tools, prioritize data reliability above all else. Implement conflict resolution for auto-saved drafts to prevent data loss when users work across multiple devices. Use encryption for sensitive research notes stored in Chrome's sync storage.
 
-Performance matters for extensions that run continuously. Minimize DOM manipulation in content scripts and use MutationObserver efficiently to detect content changes without polling. Your extension should remain lightweight even when processing large thesis documents.
+Performance matters for extensions that run continuously. Minimize DOM manipulation in content scripts and use `MutationObserver` efficiently to detect content changes without polling. Your extension should remain lightweight even when processing large thesis documents with hundreds of pages.
 
 ---
 

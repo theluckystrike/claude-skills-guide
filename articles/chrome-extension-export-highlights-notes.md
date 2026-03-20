@@ -360,4 +360,88 @@ These patterns work whether you're extending an existing annotation tool or buil
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
+## Integration with Notion via API
+
+Push highlights directly to a Notion page using the Notion API:
+
+```javascript
+async function pushToNotion(highlight, notionPageId, apiKey) {
+  const response = await fetch(`https://api.notion.com/v1/blocks/${notionPageId}/children`, {
+    method: 'PATCH',
+    headers: {
+      'Authorization': 'Bearer ' + apiKey,
+      'Content-Type': 'application/json',
+      'Notion-Version': '2022-06-28'
+    },
+    body: JSON.stringify({
+      children: [{
+        object: 'block', type: 'quote',
+        quote: { rich_text: [{ type: 'text', text: { content: highlight.text } }] }
+      }]
+    })
+  });
+  return response.json();
+}
+```
+
+Store the Notion API key and page ID in `chrome.storage.sync` so the integration persists across devices.
+
+## Advanced: Obsidian Vault Export
+
+Generate Obsidian-compatible markdown with YAML frontmatter for Dataview compatibility:
+
+```javascript
+function exportToObsidian(highlights, pageTitle) {
+  const safeTitle = pageTitle.replace(/[\/\\?%*:|"<>]/g, '-');
+  let md = `---\ntags: [highlights, web-clip]\nsource: "${pageTitle}"\ndate: ${new Date().toISOString().slice(0,10)}\n---\n\n`;
+
+  highlights.forEach((hl, i) => {
+    md += `> [!quote] Highlight ${i + 1}\n`;
+    md += `> ${hl.text}\n\n`;
+    if (hl.note) md += `**Note:** ${hl.note}\n\n`;
+  });
+
+  return md;
+}
+```
+
+## Comparison with Existing Tools
+
+| Tool | Export formats | Sync | Price |
+|---|---|---|---|
+| This extension | JSON, MD, CSV (you decide) | chrome.storage.sync | Free (build it) |
+| Hypothesis | JSON, CSV | Cloud account | Free/Pro |
+| Readwise | Markdown, Obsidian plugin | Cloud sync | $7.99/month |
+| Liner | PDF, text | Cloud | Freemium |
+
+Building your own gives complete control over formats and integrations. Readwise remains the most polished commercial option for users who want a no-build solution.
+
+## Troubleshooting Common Issues
+
+**`URL.createObjectURL` failing in service worker**: Service workers cannot use `createObjectURL`. Convert the blob to a data URL instead:
+
+```javascript
+function blobToDataURL(blob) {
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result);
+    reader.readAsDataURL(blob);
+  });
+}
+```
+
+**CSV breaking on commas**: Always double-quote text fields and escape internal quotes by doubling them. Verify you are not bypassing the escape logic when concatenating fields.
+
+**Exported JSON too large**: Compress large exports using the Compression Streams API (Chrome 80+):
+
+```javascript
+async function compressJSON(data) {
+  const stream = new Blob([data]).stream().pipeThrough(new CompressionStream('gzip'));
+  return new Response(stream).blob();
+}
+```
+
+These patterns work whether you are extending an existing annotation tool or building a new reading companion from scratch. Start with the data structure that matches your needs, then layer in export formats as your users require them.
+
+
 {% endraw %}

@@ -294,3 +294,62 @@ Consider adding support for multiple language regions and currency preferences f
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Advanced: Historical Price Charts
+
+Store price history and render a simple sparkline using the canvas element in your popup:
+
+```javascript
+function drawSparkline(canvas, priceHistory) {
+  const ctx = canvas.getContext('2d');
+  const prices = priceHistory.map(p => p.price);
+  const min = Math.min(...prices);
+  const max = Math.max(...prices);
+  const range = max - min || 1;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = '#2ecc71';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+
+  prices.forEach((price, i) => {
+    const x = (i / (prices.length - 1)) * canvas.width;
+    const y = canvas.height - ((price - min) / range) * canvas.height;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+}
+```
+
+Add a `<canvas width="120" height="30">` element next to each game in the popup HTML and call `drawSparkline` after loading deal data.
+
+## Comparison with Alternatives
+
+| Approach | Pros | Cons |
+|---|---|---|
+| Chrome Extension (this guide) | Inline comparisons while browsing | Requires development and maintenance |
+| IsThereAnyDeal website | No setup, great historical data | Manual checking, separate tab |
+| Steam wishlist notifications | Native Steam integration | Steam-only |
+| Discord deal bots | Community-driven | Dependent on bot uptime |
+
+A custom extension beats alternatives for developers who want inline deal comparisons on any retailer page without switching tabs.
+
+## Troubleshooting Common Issues
+
+**`chrome.storage.sync` quota exceeded**: Sync storage is limited to 100KB total. For users tracking many games, store price history in `chrome.storage.local` and only sync the game ID list:
+
+```javascript
+await chrome.storage.sync.set({ gameIds: games.map(g => g.id) });
+await chrome.storage.local.set({ [`history_${gameId}`]: priceHistory });
+```
+
+**Alarm not firing in service worker**: Register alarm listeners at the top level of the service worker, not inside async functions. `setInterval` does not persist across service worker restarts in Manifest V3.
+
+**CheapShark returning stale data**: Use `sortBy=Recent` and `onSale=1` parameters to query fresh results:
+
+```javascript
+const url = `https://www.cheapshark.com/api/1.0/deals?sortBy=Recent&onSale=1&pageSize=15`;
+```
+
+**Deal widget overlapping page content**: Give users a dismiss button and store the dismissed state in `sessionStorage` so the widget does not reappear on the same page during that session.
+

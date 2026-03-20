@@ -278,4 +278,75 @@ Building a user agent switcher in Chrome extensions requires understanding the D
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step Guide: Loading the Extension
+
+1. Create a directory `user-agent-switcher/` with the files described above
+2. Navigate to `chrome://extensions/` in Chrome
+3. Enable "Developer mode" in the top-right corner
+4. Click "Load unpacked" and select your extension directory
+5. The extension icon appears in the toolbar
+6. Click it, select a user agent preset, and click Apply
+7. Visit `https://httpbin.org/headers` to confirm the `User-Agent` field in the response JSON reflects your change
+
+## Practical Use Cases for Developers
+
+**Testing responsive designs without device emulation**: Some servers send different HTML based on UA strings, which Chrome DevTools device emulation does not always replicate accurately. Switching to a mobile UA reveals actual server-side differences.
+
+**Debugging SSR differences**: If your SSR layer serves different content to Googlebot vs. users, switching to the Googlebot UA reveals what the crawler sees.
+
+**Verifying CDN behavior**: Some CDNs use the UA string to determine which assets to serve. Switching UAs confirms your CDN configuration is routing correctly.
+
+## Comparison with DevTools Device Emulation
+
+| Feature | This Extension | Chrome DevTools Device Mode |
+|---|---|---|
+| Modifies HTTP User-Agent header | Yes (declarativeNetRequest) | Yes |
+| Modifies JS navigator.userAgent | Content script method | Yes |
+| Persists across page loads | Yes | Resets per session |
+| Works in all tabs simultaneously | Yes | One tab at a time |
+| Requires DevTools open | No | Yes |
+
+The extension wins for workflows where you want a persistent UA change across all tabs or across a full browser session.
+
+## Advanced: Per-Domain UA Switching
+
+For power users who need different UAs on different sites, extend the dynamic rules system:
+
+```javascript
+async function setDomainUA(domain, userAgent, ruleId) {
+  await chrome.declarativeNetRequest.updateDynamicRules({
+    removeRuleIds: [ruleId],
+    addRules: [{
+      id: ruleId,
+      priority: 2,
+      action: {
+        type: 'modifyHeaders',
+        requestHeaders: [{ header: 'User-Agent', operation: 'set', value: userAgent }]
+      },
+      condition: {
+        domains: [domain],
+        urlFilter: '*',
+        resourceTypes: ['main_frame']
+      }
+    }]
+  });
+}
+```
+
+Store domain-to-UA mappings in `chrome.storage.sync` so preferences follow the user across devices.
+
+## Troubleshooting Common Issues
+
+**UA header not changing for subframe requests**: Add `sub_frame` and `xmlhttprequest` to the `resourceTypes` array in your declarativeNetRequest rule condition.
+
+**Rule ID conflicts**: Use non-overlapping ID ranges for static vs. dynamic rules to prevent unexpected behavior (e.g., static rules use IDs 1-100, dynamic rules use 101+).
+
+**UA not persisting after browser restart**: Dynamic rules created via `updateDynamicRules` persist across restarts. If your UA is not persisting, check whether you are calling `removeRuleIds` on startup unintentionally.
+
+**Testing on localhost**: The `urlFilter: "*"` may not match `localhost` in all Chrome versions. Add an explicit rule for `http://localhost/*` when testing against local dev servers.
+
+Building a user agent switcher requires understanding the Declarative Net Request API and its trade-offs. Choose the method that matches your use case: declarative rules for global switching, runtime messaging for dynamic control, or content script injection for per-tab JavaScript-level overrides.
+
+
 {% endraw %}
