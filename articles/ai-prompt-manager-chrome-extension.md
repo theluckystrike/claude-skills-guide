@@ -24,6 +24,8 @@ Developers and power users often maintain dozens of carefully crafted prompts fo
 
 The core problem is context switching. When you're deep in a coding session and need a specific prompt structure, navigating to a separate notes app or scrolling through a document breaks your concentration. A prompt manager extension embeds directly into your browser workflow, making retrieval instantaneous.
 
+The compounding value is easy to underestimate. A developer who crafts an excellent debugging prompt today, then forgets where they saved it in two weeks, loses that investment entirely. Multiply that across a team of ten engineers and the productivity loss is real. A properly maintained prompt library is organizational knowledge that persists through personnel changes, machine upgrades, and the general chaos of software development.
+
 ## Key Features in a Quality Prompt Manager
 
 Effective AI prompt manager extensions share several critical capabilities:
@@ -42,6 +44,29 @@ Dynamic prompts with placeholders like `{{project_name}}` or `{{language}}` let 
 
 **Cross-Device Sync**
 Your prompt library should be available on all your machines. Cloud synchronization ensures consistency across devices.
+
+**Keyboard Shortcut Access**
+The best extensions let you trigger a prompt picker with a single keyboard shortcut from any tab, eliminating the need to click through extension menus when you're in flow.
+
+**Version History**
+Being able to roll back a prompt to a previous version matters when you've refined it over time and then accidentally made it worse. Some extensions track edit history per prompt.
+
+## Feature Comparison Table
+
+Here's how the major prompt manager extensions compare on key dimensions:
+
+| Feature | PromptBox | Merlin | AIPRM | Superpower | DIY JSON |
+|---|---|---|---|---|---|
+| Variable placeholders | Yes | Limited | Yes | Yes | Manual |
+| Folder hierarchy | Yes | Tags only | Yes | Yes | Manual |
+| Keyboard shortcut | Yes | Yes | No | Yes | No |
+| Cloud sync | Yes | Yes | Yes | Yes | Git |
+| Export format | JSON, CSV | JSON | CSV | JSON | N/A |
+| Site injection | Limited | Yes | ChatGPT only | Multi-site | No |
+| Price | Freemium | Freemium | Freemium | Paid | Free |
+| Local storage option | No | No | No | No | Yes |
+
+The "DIY JSON" column represents the approach of maintaining a hand-edited JSON file and syncing it via Git—worth considering for teams that want full control and zero vendor dependency, even though it lacks automation.
 
 ## Practical Implementation Examples
 
@@ -70,6 +95,32 @@ prompts/
 
 Many Chrome extensions support this hierarchical structure, allowing nested folders for complex prompt libraries.
 
+If you prefer managing prompts as plain files outside a Chrome extension—useful for teams where everyone uses a mix of terminal tools, VS Code, and the browser—a JSON manifest works well:
+
+```json
+{
+  "version": "1.0",
+  "library": [
+    {
+      "id": "code-review-security",
+      "title": "Security Audit",
+      "folder": "code-review",
+      "tags": ["security", "review"],
+      "body": "Review this code for common security vulnerabilities including SQL injection, XSS, insecure authentication, hardcoded credentials, and improper error handling."
+    },
+    {
+      "id": "debug-stack-trace",
+      "title": "Stack Trace Analysis",
+      "folder": "debugging",
+      "tags": ["debugging", "errors"],
+      "body": "Analyze this stack trace. Identify the root cause, explain what happened, and suggest a fix with example code."
+    }
+  ]
+}
+```
+
+Committing this file to your team's repository means prompt updates go through the same review process as code changes—which matters when your prompts encode institutional knowledge.
+
 ## Common Use Cases
 
 **Code Review Prompts**
@@ -88,11 +139,59 @@ Review this code for common security vulnerabilities including:
 **Debugging Templates**
 When encountering errors, having structured debugging prompts ready saves time. A template for stack trace analysis helps AI assistants provide better solutions.
 
+```markdown
+# Stack Trace Debugger
+Given the following stack trace:
+
+[PASTE STACK TRACE]
+
+1. Identify the root cause
+2. Explain what conditions triggered it
+3. Show a minimal fix with before/after code
+4. Suggest any defensive patterns to prevent recurrence
+```
+
 **Documentation Generation**
 Keep prompt templates for generating API documentation, README files, and code comments. Consistency across projects improves maintainability.
 
+```markdown
+# API Endpoint Documentation
+Document this API endpoint. Include:
+- Endpoint path and HTTP method
+- Required and optional parameters with types
+- Example request (curl format)
+- Example response JSON
+- Common error codes and their meaning
+
+Function or route definition:
+[PASTE CODE]
+```
+
 **Learning and Research**
 Store prompts for exploring new technologies, comparing frameworks, or understanding complex concepts. Reusable research prompts accelerate onboarding to new tools.
+
+```markdown
+# Framework Comparison
+Compare [FRAMEWORK A] and [FRAMEWORK B] for building [USE CASE].
+Cover: performance characteristics, ecosystem maturity, learning curve,
+production readiness, and which teams or project types each suits best.
+Give a recommendation with reasoning.
+```
+
+**Refactoring Assistance**
+A well-structured refactor prompt produces far more useful output than a vague "clean this up" request:
+
+```markdown
+# Refactor for Readability
+Refactor the following code. Goals:
+- Reduce function length to under 30 lines each
+- Extract magic numbers to named constants
+- Replace nested conditionals with early returns
+- Add JSDoc comments to exported functions
+Do not change external behavior or method signatures.
+
+[PASTE CODE]
+```
 
 ## Extension Options and Capabilities
 
@@ -103,8 +202,10 @@ Several prompt manager extensions exist with varying feature sets. When evaluati
 - **Keyboard shortcuts**: Quick paste without leaving your current tab
 - **AI integration**: Direct API connections to popular AI tools
 - **Privacy**: Local storage vs. cloud sync implications
+- **Team sharing**: Whether the extension supports shared libraries or is single-user only
+- **Site compatibility**: Does it inject into Claude, ChatGPT, Gemini, and custom tools, or only one platform?
 
-The best extension depends on your specific workflow. A developer working primarily with Claude Code has different needs than someone using multiple AI assistants.
+The best extension depends on your specific workflow. A developer working primarily with Claude Code has different needs than someone using multiple AI assistants throughout the day. If you're exclusively in the terminal with Claude Code, you may find that a local skills file serves the same purpose more natively than a browser extension.
 
 ## Optimizing Your Prompt Library
 
@@ -122,6 +223,12 @@ Establish naming conventions: `[tool]-[type]-[description]` or `[project]-[purpo
 **Documentation**
 Add notes to complex prompts explaining when to use them and what variables need substitution. Future you will appreciate this context.
 
+**Usage Metrics**
+If your extension tracks which prompts get used most frequently, review that data periodically. High-use prompts deserve the most refinement attention. Low-use prompts are candidates for archiving.
+
+**Team Conventions**
+If you share a prompt library with teammates, establish a contribution process. A simple rule like "test the prompt five times before adding it to shared folders" prevents the library from filling with half-baked drafts that nobody uses.
+
 ## Integration with AI Workflows
 
 Prompt managers work best when integrated into your complete AI workflow:
@@ -135,11 +242,47 @@ Prompt managers work best when integrated into your complete AI workflow:
 
 This systematic approach builds a personal prompt library that grows more valuable over time.
 
+For teams using Claude Code alongside a browser-based AI tool, consider maintaining two synchronized libraries: one as Claude Code skill files (for terminal-based tasks) and one in your Chrome prompt manager (for browser-based work). The overlap in content is healthy—the key is that each library lives where it gets used, so friction stays low.
+
+## Building a Prompt Template from Scratch
+
+When you're starting from nothing and want to build a genuinely useful prompt template, this process works well:
+
+**Step 1: Write a free-form version first.** Don't try to write a perfect template immediately. Write the prompt exactly as you'd phrase it for a specific task, note what output you got, and evaluate whether it was useful.
+
+**Step 2: Identify the variable parts.** Look at your free-form prompt and mark every piece that would change for a different instance of the same task. The function name, the language, the requirement—these become your placeholders.
+
+**Step 3: Add explicit output format requirements.** AI assistants produce better output when you specify the format. "List three options, each with a title, one sentence description, and pros/cons table" beats "give me some options."
+
+**Step 4: Add a constraint line.** Most prompts benefit from at least one constraint: "Do not explain concepts I didn't ask about," "Keep the response under 200 words," or "Use only standard library functions." Constraints reduce filler and keep output actionable.
+
+**Step 5: Save with metadata.** Title it clearly, tag it with the tool and task type, and add one sentence in the notes field explaining when to reach for it.
+
+Here's what that process produces for a concrete example—a prompt for reviewing database query performance:
+
+```markdown
+# Query Performance Review
+
+Review this SQL query for performance issues. Assume the table has 10M+ rows.
+
+[PASTE QUERY]
+
+Identify:
+1. Missing indexes (specify which columns)
+2. N+1 patterns or unnecessary subqueries
+3. Operations that prevent index use (functions on indexed columns, implicit casts)
+
+For each issue, show the original pattern and a corrected version.
+Do not suggest architectural changes outside the query itself.
+```
+
+That template took five minutes to build and will save time on every code review that touches a slow query.
+
 ## Conclusion
 
-An AI prompt manager Chrome extension transforms scattered prompts into a organized, searchable library. For developers working with AI coding assistants, the time invested in setting up and maintaining a prompt library pays dividends in reduced context switching and consistent output quality. Whether you're debugging, code reviewing, or generating documentation, having the right prompt instantly available keeps your AI workflow efficient.
+An AI prompt manager Chrome extension transforms scattered prompts into an organized, searchable library. For developers working with AI coding assistants, the time invested in setting up and maintaining a prompt library pays dividends in reduced context switching and consistent output quality. Whether you're debugging, code reviewing, or generating documentation, having the right prompt instantly available keeps your AI workflow efficient.
 
-The key is starting simple—organize your most-used prompts first, then expand as your library grows. With proper structure and regular maintenance, your prompt library becomes a genuine productivity asset rather than another tool to manage.
+The key is starting simple—organize your most-used prompts first, then expand as your library grows. With proper structure and regular maintenance, your prompt library becomes a genuine productivity asset rather than another tool to manage. Treat it like a codebase: review it, refine it, and don't let it rot.
 
 ## Related Reading
 
