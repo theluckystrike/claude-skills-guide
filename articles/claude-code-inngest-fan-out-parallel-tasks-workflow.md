@@ -225,6 +225,49 @@ export const monitoredFunction = inngest.createFunction(
 );
 ```
 
+
+## Step-by-Step Guide: Building Your Fan-Out System
+
+Here is a concrete workflow for building a production fan-out system with Inngest and Claude Code.
+
+**Step 1 — Define your events.** Start by listing every trigger event in your system and the downstream tasks each one spawns. For a content platform, publishing an article might trigger thumbnail generation, SEO metadata creation, social media post scheduling, and email notifications to subscribers. Claude Code helps you model these as typed Inngest events.
+
+**Step 2 — Create the Inngest client and event types.** Claude Code generates the client.ts file with your event type registry. Proper TypeScript types on events catch mismatches between producers and consumers at compile time rather than runtime.
+
+**Step 3 — Implement independent task functions.** Write each parallel task as a separate Inngest function registered to the same trigger event. Each function should be independently deployable and idempotent. Claude Code generates the function scaffolding with proper retry configuration and structured logging.
+
+**Step 4 — Add the orchestrator function.** When parallel tasks need to synchronize before a final action, add an orchestrator function that uses step.waitForEvent to collect results. Claude Code generates the orchestration pattern with proper timeout handling.
+
+**Step 5 — Deploy and test with Inngest Dev Server.** Run the Inngest Dev Server locally to simulate events and inspect function execution. Claude Code generates the local development setup including the tunnel configuration for webhook delivery to your localhost.
+
+## Advanced: Error Isolation in Fan-Out
+
+One of the most important properties of a fan-out architecture is that a failure in one parallel branch should not block others. Inngest handles this by default since each step function runs independently, but your application logic needs to handle partial success scenarios.
+
+When your orchestrator collects results from parallel tasks, design it to handle cases where some tasks succeeded and others failed. Claude Code generates the result aggregation pattern that distinguishes between hard failures requiring retry and soft failures that are acceptable as partial results, generating appropriate notifications for each case.
+
+## Common Pitfalls
+
+**Sharing mutable state between parallel steps.** Parallel Inngest steps run on different servers. Never share in-memory state between steps. Pass data explicitly through event payloads or retrieve it from a database in each step.
+
+**Unbounded fan-out.** If your trigger event contains a list of items and you create one step per item, very large lists create enormous function call volumes. Add a maximum fan-out limit and chunk large lists into batches.
+
+**Not setting step timeouts.** A step that hangs indefinitely blocks execution resources. Set explicit timeouts on every step function, particularly those making external API calls. Claude Code generates timeout configuration for each step based on the expected operation duration.
+
+## Best Practices
+
+**Use deterministic step IDs.** Inngest uses step IDs to deduplicate and resume interrupted workflows. Use descriptive, stable IDs based on the operation and its key inputs rather than random identifiers.
+
+**Log correlation IDs.** Include a correlation ID from the triggering event in all logs produced by parallel tasks. This makes it possible to reconstruct the full execution trace of a workflow across multiple function invocations.
+
+**Monitor queue depth.** Inngest provides observability metrics for function queue depth and execution times. Set up alerts for queue depth growth that indicates your functions are falling behind the event rate. Claude Code generates the alert configuration for these metrics.
+
+## Integration Patterns
+
+**Connecting to your existing message broker.** If you have Kafka, RabbitMQ, or SQS producing events, Inngest can consume from these sources. Claude Code generates the event bridge configuration that forwards messages from your existing broker to Inngest functions.
+
+**Database triggers.** Use database change events from Supabase or PlanetScale as Inngest triggers. Claude Code generates the webhook handler that translates database row changes into properly typed Inngest events, enabling database-driven workflows without polling.
+
 ## Best Practices
 
 When implementing fan-out workflows with Claude Code and Inngest, keep these tips in mind:
