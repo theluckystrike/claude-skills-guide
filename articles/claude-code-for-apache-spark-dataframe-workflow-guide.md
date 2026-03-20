@@ -238,6 +238,53 @@ class DataFramePipeline:
         return transformed
 ```
 
+
+## Step-by-Step Guide: Building a Production Data Pipeline
+
+Here is a practical walkthrough for building a production Spark pipeline with Claude Code at every stage.
+
+**Step 1 — Set up the Spark session.** Claude Code generates the SparkSession configuration including memory settings, shuffle partitions, and adaptive query execution. For production clusters, it also generates the connection parameters for your cluster manager whether Yarn, Mesos, or Kubernetes.
+
+**Step 2 — Design your data schema explicitly.** Ask Claude Code to generate an explicit StructType schema for your datasets rather than relying on schema inference. Inferred schemas fail on edge cases—null columns, inconsistent types across files—that explicit schemas catch immediately.
+
+**Step 3 — Build the transformation pipeline.** Describe your business logic in plain language. Claude Code generates the DataFrame transformation chain using Spark SQL functions rather than UDFs where possible, preserving Catalyst optimizer benefits.
+
+**Step 4 — Add data quality checks.** Claude Code generates assertion functions that verify row counts, null percentages, and value distributions match expectations. Wire these checks between pipeline stages to catch data drift before it propagates downstream.
+
+**Step 5 — Write unit tests.** Use Claude Code with a local SparkSession (master=local[1]) to generate unit tests for each transformation function. Testing Spark code locally is fast and catches logic errors before cluster deployment.
+
+## Common Pitfalls
+
+**Schema inference on CSV files.** Spark infers all CSV columns as strings unless you provide an explicit schema. Claude Code generates proper StructType definitions and reminds you to use inferSchema=False in production pipelines where schema stability matters.
+
+**Cartesian joins without realizing it.** A join missing a join condition in Spark SQL produces a full cross join that explodes row counts. Claude Code reviews join conditions and flags cases where the result cardinality looks suspicious relative to input sizes.
+
+**Wide transformations without repartitioning.** GroupBy and join operations trigger shuffles. Without repartitioning before expensive operations, data skew concentrates work on a small number of partitions. Claude Code can analyze your pipeline and suggest repartition calls at the right points.
+
+**Collecting large DataFrames to the driver.** The .collect() method transfers all data from executors to the driver. On large datasets, this causes out-of-memory errors. Claude Code flags .collect() calls that could be replaced with .write() operations that keep data distributed.
+
+**Recomputing the same DataFrame multiple times.** Without explicit caching, Spark recomputes a DataFrame from scratch each time it is referenced. Claude Code identifies DataFrames used in multiple downstream operations and adds .cache() calls at the right points.
+
+## Best Practices
+
+**Use Parquet for intermediate storage.** Parquet's columnar format and predicate pushdown make it dramatically faster than CSV for analytical workloads. Claude Code generates .write.parquet() calls with appropriate partitionBy() columns based on your query patterns.
+
+**Broadcast small dimension tables.** When joining a large fact table to a small dimension table under a few hundred MB, use broadcast hints to avoid a shuffle join. Claude Code identifies join size asymmetries and adds broadcast hints automatically.
+
+**Profile your queries with explain().** Before running expensive transformations on large datasets, call .explain(mode=formatted) to review the physical plan. Claude Code can parse the explain output and identify problematic stages like BroadcastNestedLoopJoin or CartesianProduct.
+
+**Tune parallelism to your cluster.** The default spark.sql.shuffle.partitions of 200 is too high for small datasets and too low for very large ones. Claude Code generates configuration recommendations based on your data size and cluster cores.
+
+**Monitor garbage collection.** Long GC pauses are a sign of executor memory pressure. Claude Code can review your Spark configuration and suggest heap size ratios, off-heap memory settings, and serialization format choices that reduce GC pressure.
+
+## Integration Patterns
+
+**Delta Lake integration.** Delta Lake adds ACID transactions and schema enforcement to Spark workloads. Claude Code generates Delta table creation, merge operations for upserts, and time travel queries for auditing data changes. The combination of Delta Lake and Claude Code makes building reliable data lakes significantly easier.
+
+**MLlib pipeline integration.** When your Spark pipeline feeds a machine learning workflow, Claude Code generates the MLlib Pipeline stages that fit naturally into your existing DataFrame transformations. Feature engineering, vectorization, and model training steps all flow through the same Spark execution engine.
+
+**Great Expectations integration.** For enterprise data quality, Claude Code can generate Great Expectations suites that validate your DataFrames against business rules. The validation results integrate with your CI/CD pipeline to gate deployments on data quality thresholds.
+
 ## Testing Your DataFrame Code
 
 Claude Code can help you write comprehensive tests for your Spark code:
