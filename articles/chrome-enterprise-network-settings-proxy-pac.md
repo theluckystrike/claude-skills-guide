@@ -6,6 +6,10 @@ description: "Learn how to configure Proxy PAC files in Chrome Enterprise for de
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-network-settings-proxy-pac/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Enterprise Network Settings: Configuring Proxy PAC Files
