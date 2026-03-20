@@ -5,7 +5,7 @@ description: "Learn how to build powerful webhook handlers using Claude Code ski
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-webhook-handler-tutorial-guide/
-categories: [Development, Tutorials, Webhooks]
+categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
 ---
 

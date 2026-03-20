@@ -11,7 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
+{% raw %}
 # Claude Code Python SDK Package Guide
 
 Building a Python SDK package for Claude Code opens up powerful automation possibilities. This guide walks you through creating, structuring, and publishing a Python package that integrates with Claude Code workflows — from the initial project scaffold through testing, publishing, and versioning best practices that real-world SDK consumers expect.
@@ -477,3 +477,4 @@ The Python ecosystem benefits from well-designed packages. Your SDK contributes 
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

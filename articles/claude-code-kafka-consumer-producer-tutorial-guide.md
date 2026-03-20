@@ -5,7 +5,7 @@ description: "A comprehensive guide to building Kafka consumers and producers wi
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-kafka-consumer-producer-tutorial-guide/
-categories: [Development, Kafka, Messaging]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
