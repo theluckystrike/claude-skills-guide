@@ -6,6 +6,10 @@ description: "A comprehensive guide to building and designing newsletters using 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-newsletter-design-tool/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 {% raw %}
 # Chrome Extension Newsletter Design Tool for Developers
