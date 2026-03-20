@@ -302,4 +302,67 @@ Claude Code accelerates each phase: generating Terraform and task definitions, w
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills for deployment workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Advanced: Auto-Scaling Based on Custom Metrics
+
+Default ECS auto-scaling uses CPU and memory. For web services, request count per target is often a better signal:
+
+```json
+{
+  "ServiceName": "my-service",
+  "ScalableDimension": "ecs:service:DesiredCount",
+  "PolicyType": "TargetTrackingScaling",
+  "TargetTrackingScalingPolicyConfiguration": {
+    "TargetValue": 1000,
+    "CustomizedMetricSpecification": {
+      "MetricName": "RequestCountPerTarget",
+      "Namespace": "AWS/ApplicationELB",
+      "Dimensions": [
+        { "Name": "TargetGroup", "Value": "targetgroup/my-tg/abc123" }
+      ],
+      "Statistic": "Sum"
+    },
+    "ScaleInCooldown": 300,
+    "ScaleOutCooldown": 60
+  }
+}
+```
+
+Claude Code generates the full Application Auto Scaling policy configuration from a description of your target metric and scaling behavior.
+
+## Step-by-Step: Zero-Downtime Deployment
+
+1. Push your new Docker image to ECR: `docker push $ECR_REPO:$COMMIT_SHA`
+2. Update the task definition with the new image tag using AWS CLI or Terraform
+3. Trigger a new deployment: `aws ecs update-service --cluster my-cluster --service my-service --force-new-deployment`
+4. ECS performs a rolling update — new tasks start before old ones drain
+5. The ALB health check ensures traffic only routes to healthy new tasks
+6. Monitor the deployment in the ECS console until all tasks are running the new revision
+7. Roll back with `aws ecs update-service --task-definition previous-revision` if health checks fail
+
+## Comparison with Alternative Deployment Approaches
+
+| Platform | Setup complexity | Serverless | Auto-scaling | Cost |
+|---|---|---|---|---|
+| ECS Fargate (this guide) | Medium | Yes | Yes | Pay-per-use |
+| ECS EC2 | Higher (manage instances) | No | Yes | EC2 pricing |
+| EKS | High (Kubernetes) | No | Yes | $0.10/hr per cluster + nodes |
+| App Runner | Low | Yes | Yes | Higher per-request cost |
+| Lambda containers | Low | Yes | Yes | Per-invocation |
+
+ECS Fargate hits the sweet spot for teams that want container portability without managing EC2 instances. Lambda containers win for event-driven workloads with highly variable traffic.
+
+## Troubleshooting Common Issues
+
+**Task stopping with exit code 1**: Check CloudWatch Logs for the task's log group (`/ecs/service-name`). Increase the log retention period during debugging so you can access logs from stopped tasks.
+
+**ECS service stuck in "pending" state**: Usually means the task cannot pull the image from ECR. Verify the task execution role has `ecr:GetAuthorizationToken` and `ecr:BatchGetImage` permissions.
+
+**Health check failing on new tasks**: If the application takes more than 30 seconds to start, increase the `healthCheckGracePeriodSeconds` on the ECS service to give the app time to initialize before ELB starts checking.
+
+**Secrets Manager not injecting into container environment**: Ensure the task execution role has `secretsmanager:GetSecretValue` and that the secret ARN in the task definition matches exactly (including the version suffix if used).
+
+Claude Code accelerates each phase of ECS Fargate deployment — generating Terraform and task definitions, writing tests, and producing deployment runbooks. Start with a single-task deployment and add complexity incrementally.
+
+
 {% endraw %}

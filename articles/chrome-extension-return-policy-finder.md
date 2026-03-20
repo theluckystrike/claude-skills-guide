@@ -279,6 +279,76 @@ Building a return policy finder for Chrome involves combining DOM scanning techn
 
 For developers integrating this into larger shopping tools, consider adding features like policy comparison, return window tracking, and alert systems for policy changes. The foundation provided here scales well with additional detection patterns and data sources.
 
+## Step-by-Step: Finding the Return Policy on a Retailer Site
+
+1. Navigate to any product page or retailer website
+2. Click the extension icon — the content script scans for return policy text on the current page
+3. If found inline, the policy summary appears immediately in the popup
+4. If not found, the extension searches the site's `/returns`, `/help`, or `/faq` pages
+5. The extracted policy shows key details: return window, condition requirements, and free return shipping status
+6. Click "Save Policy" to store it in `chrome.storage.local` linked to the current domain
+
+## Advanced: Policy Comparison Across Retailers
+
+When comparing products across sites, show return policies side by side:
+
+```javascript
+async function compareRetailerPolicies(domains) {
+  const policies = await Promise.all(
+    domains.map(async (domain) => {
+      const { returnPolicies = {} } = await chrome.storage.local.get('returnPolicies');
+      return { domain, policy: returnPolicies[domain] || null };
+    })
+  );
+
+  return policies.sort((a, b) => {
+    // Sort by return window, longest first
+    const aWindow = a.policy?.returnWindowDays || 0;
+    const bWindow = b.policy?.returnWindowDays || 0;
+    return bWindow - aWindow;
+  });
+}
+```
+
+Show this comparison when the user has multiple tabs open with product pages from different retailers.
+
+## Comparison with Manual Policy Research
+
+| Approach | Time per site | Comprehensiveness | Requires policy storage | Cost |
+|---|---|---|---|---|
+| This extension | Seconds (automated) | Dependent on extraction quality | Yes (local) | Free to build |
+| Manual search (Google) | 2-5 minutes | High | No | Free |
+| TrustPilot/reviews | Variable | Variable | No | Free |
+
+The extension wins for frequent shoppers who compare multiple retailers regularly and want consistent policy information without clicking to each site's help pages.
+
+## Troubleshooting Common Issues
+
+**Policy text not extracting from dynamic pages**: Some retailers load return policy content via AJAX. Use `MutationObserver` to detect when policy text appears:
+
+```javascript
+function waitForPolicyText(timeout = 5000) {
+  return new Promise((resolve) => {
+    const observer = new MutationObserver(() => {
+      const found = scanPageForPolicy(document);
+      if (found) { observer.disconnect(); resolve(found); }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    setTimeout(() => { observer.disconnect(); resolve(null); }, timeout);
+  });
+}
+```
+
+**Policy page URL patterns not matching**: Build a configurable URL pattern list that users can extend:
+
+```javascript
+const POLICY_PATHS = ['/returns', '/return-policy', '/help/returns', '/faq#returns', '/policies/refund'];
+```
+
+**Extracted text containing irrelevant navigation content**: Narrow the extraction to `<main>`, `<article>`, or elements with semantic class names like `policy-content` rather than `document.body.innerText`.
+
+For developers integrating this into larger shopping tools, consider adding features like policy comparison, return window tracking, and alert systems for policy changes.
+
 
 ## Related Reading
 

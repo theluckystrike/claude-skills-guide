@@ -262,4 +262,89 @@ Building an AI password generator extension gives you complete control over your
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Generating a Password for a New Account
+
+1. Navigate to a website's registration or password change page
+2. Click the extension icon — the popup detects the current domain
+3. The AI component suggests a password length and character set based on site-specific requirements detected from the page
+4. Review the generated password in the popup — it appears masked by default
+5. Click "Copy" to send it to your clipboard, or click "Autofill" to inject it directly into the password field
+6. The extension optionally saves an encrypted hint (not the password itself) to `chrome.storage.sync`
+
+## Advanced: HaveIBeenPwned Integration
+
+Check generated passwords against known breach databases before use:
+
+```javascript
+async function checkPasswordBreach(password) {
+  // Use k-anonymity: only send first 5 chars of SHA-1 hash
+  const hash = await crypto.subtle.digest('SHA-1', new TextEncoder().encode(password));
+  const hashHex = Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('').toUpperCase();
+
+  const prefix = hashHex.slice(0, 5);
+  const suffix = hashHex.slice(5);
+
+  const response = await fetch(`https://api.pwnedpasswords.com/range/${prefix}`);
+  const text = await response.text();
+
+  return text.split('\n').some(line => line.startsWith(suffix));
+}
+
+async function generateSafePassword(length = 20) {
+  let password;
+  let isBreached = true;
+
+  while (isBreached) {
+    password = generatePassword(length);
+    isBreached = await checkPasswordBreach(password);
+  }
+
+  return password;
+}
+```
+
+## Comparison with Password Managers
+
+| Feature | This Extension | 1Password | Bitwarden |
+|---|---|---|---|
+| Password generation | Yes (AI-enhanced) | Yes | Yes |
+| Vault/storage | Not included | Full encrypted vault | Full encrypted vault |
+| Autofill | Basic injection | Excellent | Good |
+| Breach checking | Yes (HIBP) | Yes | Yes |
+| Cross-device sync | Not included | Yes | Yes |
+| Cost | Free to build | $3/month | Free/Premium |
+
+The extension is best as a focused password generation tool, not a full password manager. 1Password and Bitwarden provide the complete ecosystem of vault storage, sync, and autofill that production use requires.
+
+## Troubleshooting Common Issues
+
+**Autofill not working on some sites**: Directly dispatching input events is not always enough to trigger React/Vue form validation. Fire both `input` and `change` events and ensure the `nativeInputValueSetter` trick is applied for React-controlled inputs:
+
+```javascript
+function fillPasswordField(field, password) {
+  const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+  nativeInputValueSetter.call(field, password);
+  field.dispatchEvent(new Event('input', { bubbles: true }));
+  field.dispatchEvent(new Event('change', { bubbles: true }));
+}
+```
+
+**`crypto.subtle` not available**: This API requires a secure context (HTTPS or localhost). Extension popup pages automatically run in a secure context, so this should only fail in non-extension test environments.
+
+**Password length violating site constraints**: Parse the `maxlength` attribute on the password field and respect any pattern attributes for format requirements:
+
+```javascript
+function detectPasswordConstraints(field) {
+  return {
+    minLength: parseInt(field.minLength) || 8,
+    maxLength: parseInt(field.maxLength) || 128,
+    pattern: field.pattern || null
+  };
+}
+```
+
+Building an AI password generator extension gives you complete control over password security while developing practical skills in Chrome extension development, cryptographic implementation, and secure coding practices.
+
+
 {% endraw %}

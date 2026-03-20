@@ -244,6 +244,79 @@ function renderFrame() {
 }
 ```
 
+## Step-by-Step: Creating Your First Concept Map
+
+1. Open any article, documentation page, or research paper in Chrome
+2. Click the extension icon to open the concept map editor panel
+3. Click "Extract Concepts" — the content script identifies key terms from the page text
+4. Drag extracted concepts onto the canvas as nodes
+5. Click two nodes sequentially to create an edge (relationship) between them
+6. Label the edge by typing in the popup that appears ("causes", "depends on", "part of")
+7. Click "Export" to download the map as SVG or JSON for use in other tools
+
+## Advanced: Auto-Generating Edges from Page Content
+
+Parse sentence co-occurrences to suggest relationships between extracted concepts:
+
+```javascript
+function suggestEdges(concepts, pageText) {
+  const sentences = pageText.split(/[.!?]+/);
+  const suggestions = [];
+
+  for (const sentence of sentences) {
+    const presentConcepts = concepts.filter(c => sentence.toLowerCase().includes(c.toLowerCase()));
+    if (presentConcepts.length >= 2) {
+      for (let i = 0; i < presentConcepts.length - 1; i++) {
+        suggestions.push({
+          from: presentConcepts[i],
+          to: presentConcepts[i + 1],
+          sentence: sentence.trim(),
+          confidence: 0.6
+        });
+      }
+    }
+  }
+
+  return suggestions;
+}
+```
+
+Display suggested edges as dashed lines that users can confirm or dismiss with a click.
+
+## Comparison with Standalone Mind-Mapping Tools
+
+| Feature | This Extension | MindMeister | Miro |
+|---|---|---|---|
+| Auto-extract from web pages | Yes | No | No |
+| Browser-native | Yes | No (app) | No (app) |
+| Offline support | Yes (local storage) | No | No |
+| Collaboration | Not included | Yes | Yes |
+| Cost | Free to build | Freemium | Freemium |
+
+The extension's key differentiator is the ability to extract concepts directly from the web page you are reading, rather than manually entering all nodes. Miro and MindMeister win for collaborative work.
+
+## Troubleshooting Common Issues
+
+**Canvas performance degrades with many nodes**: Switch from SVG to Canvas API rendering for concept maps with more than 50 nodes. Use `requestAnimationFrame` and only redraw elements that have changed:
+
+```javascript
+function renderFrame() {
+  if (this.needsRender) {
+    this.render();
+    this.needsRender = false;
+  }
+  requestAnimationFrame(this.renderFrame.bind(this));
+}
+```
+
+**Concept extraction returning too many or too few terms**: Add a relevance threshold based on term frequency — filter out both very common words (stop words) and very rare words that appear only once in the text.
+
+**Export JSON not compatible with other tools**: Use standard graph interchange formats like GraphML or the Cytoscape.js JSON format so exported maps can be imported into visualization tools.
+
+**Edges overlapping nodes on complex maps**: Implement a simple force-directed layout algorithm that spaces nodes apart automatically, or let users drag nodes to manual positions and snap to a grid.
+
+The modular architecture separates concerns cleanly, making it straightforward to add features like deal alerts, real-time collaboration, or integration with Obsidian and Roam Research.
+
 
 ## Related Reading
 

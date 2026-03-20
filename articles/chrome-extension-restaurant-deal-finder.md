@@ -256,4 +256,85 @@ The restaurant deal space remains fragmented, with many independent restaurants 
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Finding Deals at a Local Restaurant
+
+1. Navigate to a restaurant's website or a deal aggregator like Yelp or OpenTable
+2. Click the extension icon — the popup detects the restaurant name and location from page metadata
+3. The content script scans for on-page promotions (happy hour banners, coupon codes)
+4. The background script simultaneously queries configured deal APIs for the same location
+5. All deals are merged, deduplicated, and displayed sorted by discount percentage
+6. Click any deal to view the original offer or copy the promo code to clipboard
+
+## Advanced: Location-Aware Deal Sorting
+
+Use the browser's Geolocation API to prioritize nearby restaurants:
+
+```javascript
+function getNearbyDeals(deals, userLocation, radiusMiles = 5) {
+  function toRad(deg) { return deg * Math.PI / 180; }
+  function haversine(a, b) {
+    const R = 3958.8; // Earth radius in miles
+    const dLat = toRad(b.lat - a.lat);
+    const dLon = toRad(b.lng - a.lng);
+    const h = Math.sin(dLat/2)**2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLon/2)**2;
+    return R * 2 * Math.asin(Math.sqrt(h));
+  }
+
+  return deals
+    .map(deal => ({ ...deal, distance: haversine(userLocation, deal.location) }))
+    .filter(deal => deal.distance <= radiusMiles)
+    .sort((a, b) => a.distance - b.distance);
+}
+
+navigator.geolocation.getCurrentPosition(({ coords }) => {
+  const nearby = getNearbyDeals(allDeals, { lat: coords.latitude, lng: coords.longitude });
+  displayDeals(nearby);
+});
+```
+
+## Comparison with Existing Restaurant Deal Apps
+
+| Tool | Coverage | Browser integration | Notification support | Cost |
+|---|---|---|---|---|
+| This extension | Configurable | Deep (inline on restaurant sites) | Yes | Free to build |
+| Groupon | Restaurant deals + more | Website/app | Email | Free |
+| Yelp deals | Local restaurants | Website/app | Email/push | Free |
+| DoorDash promos | Delivery only | App-focused | Push notifications | Free |
+
+The extension wins for users who browse restaurant websites directly and want deals surfaced inline without switching apps.
+
+## Troubleshooting Common Issues
+
+**Geolocation permission denied**: Provide a manual zip code entry fallback. Not all users are comfortable granting location access to browser extensions.
+
+**Deal API returning empty results for smaller cities**: Most deal APIs have better coverage in major metros. Add a "Check restaurant website directly" fallback that scans the current page for any promotion-related text patterns:
+
+```javascript
+const PROMO_PATTERNS = [/(\d+)%\s*off/i, /happy hour/i, /buy one get one/i, /free\s+\w+\s+with/i];
+
+function scanPageForDeals(doc) {
+  const text = doc.body.innerText;
+  return PROMO_PATTERNS.filter(p => p.test(text)).map(p => {
+    const match = text.match(p);
+    return { text: match[0], source: 'page-scan' };
+  });
+}
+```
+
+**Duplicate deals from multiple sources**: Deduplicate using a normalized key (restaurant name + offer type + discount amount):
+
+```javascript
+function deduplicateDeals(deals) {
+  const seen = new Set();
+  return deals.filter(deal => {
+    const key = `${deal.restaurantName.toLowerCase()}_${deal.discount}`;
+    return seen.has(key) ? false : seen.add(key);
+  });
+}
+```
+
+The restaurant deal space remains fragmented, with many independent restaurants lacking sophisticated online presence. A well-built extension that aggregates deals across multiple sources fills a genuine gap while providing developers with portfolio-worthy implementation experience.
+
+
 {% endraw %}

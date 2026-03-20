@@ -315,4 +315,68 @@ Once you have the core functionality, consider adding collaborative features thr
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Creating a Wireframe from an Existing Page
+
+1. Navigate to any web page you want to wireframe
+2. Click the extension icon and select "Wireframe Current Page"
+3. The content script traverses the DOM and replaces visual styling with a grayscale wireframe overlay
+4. Interactive elements (buttons, forms, links) are highlighted with blue outlines
+5. Images are replaced with gray placeholder boxes showing their dimensions
+6. Click "Export" to save as an SVG or PNG for use in design tools
+7. Click "Annotate" to add labels and notes to specific elements before exporting
+
+## Advanced: Semantic Element Recognition
+
+Improve wireframe quality by recognizing common UI patterns and rendering them as standard wireframe components:
+
+```javascript
+const COMPONENT_PATTERNS = {
+  nav: (el) => ({ type: 'navigation', label: 'Nav Bar', width: el.offsetWidth, height: el.offsetHeight }),
+  form: (el) => ({ type: 'form', label: 'Form', fields: el.querySelectorAll('input,select,textarea').length }),
+  button: (el) => ({ type: 'button', label: el.textContent.trim() || 'Button' }),
+  img: (el) => ({ type: 'image', label: `Image ${el.naturalWidth}x${el.naturalHeight}` }),
+  table: (el) => ({ type: 'data-table', rows: el.rows.length, cols: el.rows[0]?.cells.length || 0 })
+};
+
+function recognizeComponent(el) {
+  const tag = el.tagName.toLowerCase();
+  return COMPONENT_PATTERNS[tag]?.(el) || { type: 'container', tag };
+}
+```
+
+This produces wireframes with standardized component representations rather than raw HTML structure.
+
+## Practical Use Cases
+
+- **Rapid Prototyping**: Convert existing websites into wireframes for redesign projects without recreating the layout from scratch
+- **Client Presentations**: Show clients quick mockups based on their existing sites — much faster than building wireframes by hand
+- **Documentation**: Generate wireframe snapshots for design documentation and handoff packages
+- **Accessibility Audits**: Create simplified views of complex pages that make the information hierarchy visible
+
+## Comparison with Standalone Wireframing Tools
+
+| Feature | This Extension | Figma | Balsamiq |
+|---|---|---|---|
+| Auto-extract from existing pages | Yes | No | No |
+| Browser-native | Yes | No (app) | No (app) |
+| Collaboration | Not included | Excellent | Limited |
+| Learning curve | Low | Medium | Low |
+| Cost | Free to build | Free/Professional | $9/month |
+
+The extension is uniquely suited for reverse-wireframing existing sites. Figma and Balsamiq win for building wireframes from scratch with a rich component library.
+
+## Troubleshooting Common Issues
+
+**Wireframe overlay breaking page layout**: Use `pointer-events: none` on all overlay elements so the original page remains interactive while the wireframe is visible.
+
+**SVG export not rendering correctly in other tools**: Ensure all SVG elements have explicit `width` and `height` attributes and use a `viewBox` that matches the page dimensions at the time of export.
+
+**Complex CSS animations breaking the wireframe overlay**: Freeze animations before applying the wireframe transform using `animation-play-state: paused` on the document root.
+
+**Extension iframe not loading on pages with strict CSP**: Use a Chrome extension side panel instead of an injected iframe for the wireframe editor UI.
+
+Once you have core functionality working, consider adding collaborative features through cloud storage, element libraries for common UI patterns, or integration with design tools like Figma through their APIs.
+
+
 {% endraw %}

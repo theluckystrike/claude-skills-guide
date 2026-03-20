@@ -234,6 +234,77 @@ Start by invoking one skill for your next Rails task:
 description:text, due_date:date, and status:integer"
 ```
 
+## Advanced: Generating Complex Rails Features
+
+Claude Code handles complex Rails patterns that typically require significant boilerplate. Some of the most time-saving use cases:
+
+**Polymorphic associations**: Describe the relationship and Claude generates the migration, model macros, and the corresponding controller logic:
+
+```ruby
+# Prompt: "Generate a polymorphic comment system for Posts and Articles"
+# Claude generates:
+class Comment < ApplicationRecord
+  belongs_to :commentable, polymorphic: true
+  validates :body, presence: true, length: { minimum: 10, maximum: 2000 }
+end
+
+class Post < ApplicationRecord
+  has_many :comments, as: :commentable, dependent: :destroy
+end
+
+class Article < ApplicationRecord
+  has_many :comments, as: :commentable, dependent: :destroy
+end
+```
+
+**Background jobs with error handling**: Describe retry logic and Claude generates the complete Sidekiq job with exponential backoff:
+
+```ruby
+class EmailDeliveryJob < ApplicationJob
+  queue_as :emails
+  retry_on Net::SMTPServerBusy, wait: :exponentially_longer, attempts: 5
+  discard_on ActiveJob::DeserializationError
+
+  def perform(user_id, template_name, params = {})
+    user = User.find(user_id)
+    UserMailer.with(user: user, **params).public_send(template_name).deliver_now
+  end
+end
+```
+
+## Step-by-Step: Using Claude Code for a New Feature
+
+1. Describe the feature in plain English: "Add a user reputation system where posts can be upvoted and downvoted, with reputation affecting user permissions"
+2. Claude Code generates the migration files, model changes, and controller actions
+3. Use the `tdd` skill to generate RSpec specs for the reputation logic before implementing
+4. Run the specs to confirm behavior expectations match your intent
+5. Implement the feature and iterate with Claude Code for edge cases
+6. Use `supermemory` to store the reputation system's rules so future prompts in this project have context
+
+## Comparison with Rails Scaffolding
+
+| Feature | Claude Code | `rails generate scaffold` | Manual coding |
+|---|---|---|---|
+| Custom business logic | Yes | No (generic CRUD) | Yes |
+| Test generation | Yes (via tdd skill) | Basic fixtures | Manual |
+| Complex associations | Yes | No | Manual |
+| Service objects | Yes | No | Manual |
+| Time to working code | Minutes | Seconds (but needs customization) | Hours |
+
+Claude Code wins for features with custom logic. `rails generate scaffold` wins for standard CRUD resources where you just need the skeleton.
+
+## Troubleshooting Common Issues
+
+**Generated migrations conflicting with existing schema**: Always review generated migrations before running `rails db:migrate`. Claude Code works from a description, not direct database inspection, so check for column name conflicts or missing indexes.
+
+**RSpec specs failing due to factory setup**: When Claude Code generates specs, it may assume FactoryBot factories exist that do not. Add the missing factories before running the test suite.
+
+**Generated code not following your project conventions**: Provide Claude Code with a brief style guide in your prompt: "Use service objects in `app/services/`, never put business logic in controllers, use keyword arguments for all service object `call` methods."
+
+**N+1 queries in generated associations**: Claude Code often generates clean code but may not include eager loading. After generating controller code, check the query log with `bullet` gem enabled and add `.includes()` where needed.
+
+These Claude Code skills transform Ruby on Rails development workflows. Integrate them into your workflow to reduce boilerplate, improve test coverage, and build reliable Rails applications faster.
+
 
 ## Related Reading
 

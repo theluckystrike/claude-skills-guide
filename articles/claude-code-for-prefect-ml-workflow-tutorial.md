@@ -256,6 +256,80 @@ Combining Claude Code with Prefect creates a powerful development environment fo
 
 Start with simple flows, then gradually add complexity as your ML pipelines grow. The integration between these tools makes it easy to scale from local development to production deployments.
 
+## Advanced: Automated Hyperparameter Tuning Flow
+
+Use Prefect to orchestrate hyperparameter search with Claude Code generating the search space and evaluation logic:
+
+```python
+from prefect import flow, task
+import optuna
+
+@task
+def train_with_params(params: dict, train_data, val_data):
+    model = build_model(**params)
+    model.fit(train_data.X, train_data.y)
+    return model.score(val_data.X, val_data.y)
+
+@flow
+def hyperparameter_search(n_trials: int = 50):
+    def objective(trial):
+        params = {
+            'n_estimators': trial.suggest_int('n_estimators', 50, 500),
+            'max_depth': trial.suggest_int('max_depth', 3, 10),
+            'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.3)
+        }
+        score = train_with_params(params, train_data, val_data)
+        return score
+
+    study = optuna.create_study(direction='maximize')
+    study.optimize(objective, n_trials=n_trials)
+    return study.best_params
+```
+
+Claude Code generates the Optuna objective function from a plain-language description of your model and the parameters you want to tune.
+
+## Step-by-Step: Deploying Your First Prefect Flow
+
+1. Install Prefect: `pip install prefect`
+2. Create a flow file with the `@flow` and `@task` decorators on your ML pipeline functions
+3. Ask Claude Code to add Prefect decorators to your existing training script
+4. Run `prefect server start` to start the local UI
+5. Execute your flow: `python your_flow.py`
+6. Navigate to `http://127.0.0.1:4200` to see the flow run, task states, and logs
+7. Add `prefect deploy` to push the flow to a work pool for scheduled execution
+
+## Comparison with Alternative ML Orchestration Tools
+
+| Tool | Learning curve | UI | Cloud integration | Cost |
+|---|---|---|---|---|
+| Prefect (this guide) | Low | Excellent | Yes (Prefect Cloud) | Open source / Cloud paid |
+| Airflow | High | Good | Yes | Open source |
+| MLflow | Low (tracking) | Good | Limited | Open source |
+| Kubeflow | High | Good | Kubernetes-native | Open source |
+
+Prefect wins for teams that want production-grade orchestration without the overhead of Airflow's DAG-first model. Claude Code reduces Prefect's already-low learning curve further by generating boilerplate flows from descriptions.
+
+## Troubleshooting Common Issues
+
+**Flow failing silently**: Add explicit logging and result persistence to each task:
+
+```python
+@task(log_prints=True, persist_result=True)
+def train_model(config: dict):
+    print(f"Training with config: {config}")
+    # training logic
+    return model_artifacts
+```
+
+**Prefect server not detecting flow changes**: Flows are imported at registration time. After changing a flow file, re-register it with `prefect deploy` or restart the worker process.
+
+**Memory issues with large datasets in tasks**: Use Prefect's artifact system to store large intermediate results to S3 or GCS rather than passing them between tasks as Python objects.
+
+**Scheduled flows not running**: Verify the Prefect agent or worker is running and connected to the correct work pool. Check the Prefect UI dashboard for agent status and any queued runs that failed to dispatch.
+
+Combining Claude Code with Prefect creates a powerful development environment for ML workflows. Claude Code generates boilerplate and suggests optimizations; Prefect handles orchestration, scheduling, and monitoring. Start with simple flows and add complexity as your pipelines grow.
+
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

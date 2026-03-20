@@ -264,6 +264,87 @@ Chrome extension session management transforms chaotic tab collections into orga
 
 The key is understanding your users' workflows and designing session management around those patterns. Developers working on multiple projects benefit from quick session switching. Researchers need reliable long-term storage. Power users want automation and keyboard-driven interfaces. Build for your specific audience and iterate based on feedback.
 
+## Advanced: Scheduled Auto-Saves
+
+Ensure no research session is ever lost by auto-saving on a schedule:
+
+```javascript
+// Register a daily auto-save alarm
+chrome.alarms.create('autoSave', { periodInMinutes: 60 });
+
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name !== 'autoSave') return;
+
+  const tabs = await chrome.tabs.query({ currentWindow: true });
+  const groups = await chrome.tabGroups.query({ windowId: chrome.windows.CURRENT_WINDOW_ID });
+
+  const session = {
+    id: `auto_${Date.now()}`,
+    name: `Auto-save ${new Date().toLocaleString()}`,
+    tabs: tabs.map(t => ({ url: t.url, title: t.title, pinned: t.pinned, groupId: t.groupId })),
+    groups: groups.map(g => ({ id: g.id, title: g.title, color: g.color })),
+    savedAt: Date.now()
+  };
+
+  const { sessions = [] } = await chrome.storage.local.get('sessions');
+  // Keep last 24 auto-saves
+  const filtered = sessions.filter(s => !s.id.startsWith('auto_')).slice(-24);
+  await chrome.storage.local.set({ sessions: [...filtered, session] });
+});
+```
+
+## Comparison with Native Chrome Session Management
+
+| Feature | This Extension | Chrome's built-in sync | Session Buddy extension |
+|---|---|---|---|
+| Manual session naming | Yes | No | Yes |
+| Auto-save schedules | Yes | Partial (last closed tabs) | Limited |
+| Tab group preservation | Yes | Partial | Limited |
+| Cross-device sync | Optional (storage.sync) | Yes | Via account |
+| Cost | Free to build | Free | Free |
+
+The extension wins for power users who need named, searchable sessions. Chrome's built-in sync handles basic "reopen last session" but lacks organization features.
+
+## Troubleshooting Common Issues
+
+**Sessions not restoring tab groups**: The `chrome.tabs.group` API requires the target tabs to exist before grouping. Restore all tabs first, then group them:
+
+```javascript
+async function restoreSession(session) {
+  const tabIdMap = {};
+  for (const tab of session.tabs) {
+    const newTab = await chrome.tabs.create({ url: tab.url, pinned: tab.pinned });
+    if (tab.groupId !== undefined) tabIdMap[tab.groupId] = tabIdMap[tab.groupId] || [];
+    tabIdMap[tab.groupId]?.push(newTab.id);
+  }
+  // Now create groups
+  for (const [origGroupId, tabIds] of Object.entries(tabIdMap)) {
+    const group = session.groups.find(g => g.id === parseInt(origGroupId));
+    if (group) {
+      const newGroupId = await chrome.tabs.group({ tabIds });
+      await chrome.tabGroups.update(newGroupId, { title: group.title, color: group.color });
+    }
+  }
+}
+```
+
+**Storage running out with many sessions**: Compress session data using the Compression Streams API and set a maximum session count (50-100) with automatic pruning of the oldest sessions.
+
+**Session search not finding older sessions**: Build an index of session names and tab titles that is updated whenever sessions are saved:
+
+```javascript
+async function rebuildSearchIndex() {
+  const { sessions = [] } = await chrome.storage.local.get('sessions');
+  const index = sessions.flatMap(s => [
+    { id: s.id, text: s.name.toLowerCase() },
+    ...s.tabs.map(t => ({ id: s.id, text: t.title?.toLowerCase() || '' }))
+  ]);
+  await chrome.storage.local.set({ searchIndex: index });
+}
+```
+
+Chrome extension session management transforms chaotic tab collections into organized, recoverable workflows. Start with basic save and restore, then incrementally add features like tab groups, scheduled backups, and keyboard shortcuts.
+
 
 ## Related Reading
 
