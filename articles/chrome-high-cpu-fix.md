@@ -35,17 +35,33 @@ workers.then(registrations => {
 });
 ```
 
+You can also use the `performance.now()` API to profile your own code and pinpoint where time is being spent:
+
+```javascript
+// Measure execution time of a suspect function
+const start = performance.now();
+suspectFunction();
+const end = performance.now();
+console.log(`Execution time: ${end - start}ms`);
+```
+
+If you suspect a specific site, open a private/incognito window with extensions disabled and revisit the site. If CPU usage normalizes, an extension is the culprit. If the spike persists, the page itself is the problem.
+
 ## Disabling Hardware Acceleration
 
 Hardware acceleration can cause CPU (and GPU) spikes, particularly on systems with incompatible drivers. Disabling it forces Chrome to use software rendering.
 
 **Steps to disable hardware acceleration:**
 1. Go to `chrome://settings`
-2. Search for "Hardware acceleration" 
+2. Search for "Hardware acceleration"
 3. Toggle off "Use hardware acceleration when available"
 4. Restart Chrome
 
 This fix often resolves issues with specific sites causing CPU spikes, especially on Linux systems with older graphics drivers.
+
+On macOS, hardware acceleration conflicts are less common but still occur with certain external displays or GPU switching on MacBook Pro models. If you notice CPU spiking after connecting an external monitor, hardware acceleration is a likely suspect.
+
+You can verify the current GPU and acceleration status at `chrome://gpu`. Look for items flagged as "Software only, hardware acceleration unavailable" — these indicate Chrome has already fallen back to software rendering for that feature.
 
 ## Managing Extensions and Background Processes
 
@@ -66,7 +82,18 @@ Remove or disable extensions systematically:
 3. Use "Reload" to test each extension individually
 4. Remove extensions you no longer use
 
-Pay special attention to extensions that modify page content, scrape data, or run persistent background scripts.
+Pay special attention to extensions that modify page content, scrape data, or run persistent background scripts. Common offenders include:
+
+| Extension Type | CPU Risk | Reason |
+|---|---|---|
+| Ad blockers | Medium | Parse every page's DOM |
+| Password managers | Low-Medium | Content script injection on every page |
+| Screen recorders | High | Continuous frame capture |
+| Analytics injectors | High | Persistent background polling |
+| Dev tools extensions | Medium | DevTools panel hooks |
+| Translation tools | Medium | Full-page text extraction |
+
+A useful technique is to open `chrome://extensions` and note the "Background page" link next to any extension that has one. Clicking that link opens a DevTools window for that extension's background page, letting you directly profile its CPU usage.
 
 ## Clearing Cache and Site Data
 
@@ -86,6 +113,18 @@ caches.keys().then(names => {
 console.log('All caches cleared');
 ```
 
+For developer workflows where you need to reset state frequently, add this snippet to your browser console snippets (`DevTools → Sources → Snippets`) so you can run it with a single click without retyping.
+
+Beyond the browser cache, also consider clearing the DNS cache if you're seeing high CPU from the network service process:
+
+```bash
+# macOS — flush DNS cache
+sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+
+# Linux (systemd-resolved)
+sudo systemd-resolve --flush-caches
+```
+
 ## Adjusting Chrome Flags for Performance
 
 Chrome's experimental flags include settings that can reduce CPU usage.
@@ -100,6 +139,24 @@ Chrome's experimental flags include settings that can reduce CPU usage.
 open -a Google\ Chrome --args --disable-gpu --no-sandbox
 ```
 
+For developers running Chrome in automated testing environments, a more comprehensive flag set reduces resource consumption significantly:
+
+```bash
+# Headless Chrome with minimal resource usage
+google-chrome \
+  --headless \
+  --disable-gpu \
+  --disable-extensions \
+  --disable-background-networking \
+  --disable-default-apps \
+  --no-first-run \
+  --no-sandbox \
+  --disable-dev-shm-usage \
+  --memory-pressure-off
+```
+
+Note that `--no-sandbox` reduces security and should only be used in controlled environments like CI pipelines, never in a browser you use for personal browsing.
+
 ## Handling Specific CPU Culprits
 
 ### JavaScript Infinite Loops
@@ -110,6 +167,26 @@ If a tab contains buggy JavaScript running an infinite loop, CPU will spike imme
 // Add breakpoints in DevTools Sources panel
 // Look for setInterval/setTimeout calls without clear conditions
 // Check for requestAnimationFrame in loops without proper exit conditions
+```
+
+In the Performance panel, record a 5-second session and look for a "flame chart" that fills horizontally with no gaps. That flat, dense band indicates code running continuously. Click any frame to jump to the source location.
+
+For your own code, prefer `requestIdleCallback` over `setInterval` for non-critical background work:
+
+```javascript
+// Bad: runs every 100ms regardless of system load
+setInterval(() => updateUI(), 100);
+
+// Better: runs only when the browser is idle
+function scheduleUpdate() {
+  requestIdleCallback((deadline) => {
+    while (deadline.timeRemaining() > 0) {
+      updateUI();
+    }
+    scheduleUpdate(); // reschedule
+  });
+}
+scheduleUpdate();
 ```
 
 ### WebGL and Canvas Intensive Sites
@@ -125,6 +202,18 @@ Sites using WebGL or heavy canvas operations can max out CPU:
 // chrome://flags/#automatic-tab-discarding
 ```
 
+If you're building canvas-heavy applications yourself, reducing the render resolution and scaling up with CSS is one of the most effective CPU optimizations:
+
+```javascript
+// Render at 50% resolution and scale up — halves pixel count, quarter the fill cost
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth * 0.5;
+canvas.height = window.innerHeight * 0.5;
+canvas.style.width = window.innerWidth + 'px';
+canvas.style.height = window.innerHeight + 'px';
+```
+
 ### Network Service High CPU
 
 Chrome's Network Service process handles all HTTP requests. When it spikes:
@@ -132,6 +221,8 @@ Chrome's Network Service process handles all HTTP requests. When it spikes:
 1. Check for broken extensions intercepting requests
 2. Disable QUIC protocol: `chrome://flags/#disable-quic`
 3. Clear socket pools: Visit `chrome://net-internals/#sockets` and click "Flush socket pools"
+
+QUIC (HTTP/3) is efficient but can cause CPU overhead if your network hardware doesn't handle it well. Disabling it reverts Chrome to standard TCP connections, which may reduce Network Service CPU at the cost of slightly slower connection establishment.
 
 ## Automation and Scripting Solutions
 
@@ -144,14 +235,24 @@ const puppeteer = require('puppeteer');
 async function checkCPUTabs() {
   const browser = await puppeteer.launch();
   const pages = await browser.pages();
-  
+
   for (const page of pages) {
     const metrics = await page.metrics();
     console.log(`Tab: ${page.url()}, JS Heap: ${metrics.JSHeapUsedSize}`);
   }
-  
+
   await browser.close();
 }
+```
+
+You can extend this to actively close tabs exceeding a memory threshold, or log metrics to a file for trend analysis over time. Combine with `page.evaluate()` to pull custom performance data from each page:
+
+```javascript
+const metrics = await page.evaluate(() => ({
+  timing: performance.timing,
+  memory: performance.memory,
+  entries: performance.getEntriesByType('resource').length
+}));
 ```
 
 ## Profile Management for Power Users
@@ -163,6 +264,23 @@ Running separate Chrome profiles isolates resource-heavy scenarios:
 3. Manually pin critical tabs to keep them in memory
 
 Access profile management at `chrome://settings/profiles`.
+
+A practical workflow for developers: maintain three profiles — one for daily browsing with personal extensions, one stripped-down profile for work with only essential developer extensions, and one completely clean profile for testing. Switching profiles takes seconds and eliminates extension interference from other contexts.
+
+Memory Saver mode aggressively discards background tabs, which reduces both RAM and CPU since discarded tabs stop executing JavaScript entirely. You can exclude specific sites from discarding by adding them to the Memory Saver exceptions list in `chrome://settings/performance`.
+
+## Monitoring CPU Over Time
+
+Rather than investigating only when things get bad, consider setting up ongoing monitoring. On macOS, the `caffeinate` command with Activity Monitor can log CPU data. On Linux, use `top -b -n 5 -d 2` to capture snapshots.
+
+For a developer-oriented approach, Chrome's `chrome://tracing` interface records detailed system-level traces that you can analyze offline or share with teammates:
+
+1. Open `chrome://tracing`
+2. Click "Record" and choose a preset (use "Rendering" for most CPU issues)
+3. Reproduce the high CPU scenario
+4. Click "Stop" and save the trace file
+
+The resulting `.json` file can be shared and opened in any Chromium browser's tracing viewer for collaborative debugging.
 
 ## Preventive Measures
 
