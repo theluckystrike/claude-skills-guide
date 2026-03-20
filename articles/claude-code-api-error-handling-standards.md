@@ -214,6 +214,49 @@ The key is anticipating failure modes and building systems that recover graceful
 ---
 
 
+## Step-by-Step Guide: Implementing Production Error Handling
+
+Here is a concrete approach to adding robust error handling to Claude Code API integrations.
+
+**Step 1 — Audit your existing error surface.** Before writing new error handling code, inventory every place in your codebase that calls the API. Claude Code generates a static analysis script that finds all `fetch`, `client.messages.create`, and SDK call sites and produces a report of which ones have error handling and which do not. This baseline reveals the gaps.
+
+**Step 2 — Create a centralized error taxonomy.** Define a TypeScript enum or Python dataclass hierarchy that maps every error category (authentication, rate limit, validation, server, timeout) to a structured error object with actionable fields. Claude Code generates this taxonomy and a factory function that converts raw API error responses into your structured types.
+
+**Step 3 — Implement circuit breakers for external dependencies.** If your integration calls Claude Code as part of a larger request chain, a sustained API outage should stop sending requests rather than queuing them up indefinitely. Claude Code generates a circuit breaker implementation using the half-open pattern with configurable thresholds for error rate and recovery timeout.
+
+**Step 4 — Add dead letter queues for async workflows.** For workflows that process Claude API calls asynchronously, failed items need a holding area for later retry or manual inspection. Claude Code generates the dead letter queue pattern using Redis lists or a database table, with a retry scheduler that applies exponential backoff and a maximum retry count before moving items to a permanent failure log.
+
+**Step 5 — Set up error budget tracking.** Define an acceptable error rate (for example, 0.5% of API calls allowed to fail) and instrument your code to track actual error rates against this budget. Claude Code generates the instrumentation and a dashboard query for your monitoring platform that fires an alert when you are consuming error budget faster than expected.
+
+## Common Pitfalls
+
+**Catching all exceptions with a bare `except` block.** Generic exception handlers mask programming errors like `NameError` and `AttributeError` alongside real API errors, making bugs invisible in production. Always catch specific exception types and let unexpected exceptions propagate to your global error handler where they can be logged and alerted on.
+
+**Swallowing errors in background tasks.** Fire-and-forget async tasks that fail silently are a major reliability hazard. When Claude Code is called from a background worker, task queue job, or scheduled cron, ensure failures are logged to an error tracker like Sentry rather than disappearing. Claude Code generates background task wrappers with automatic error capture.
+
+**Not including request context in error logs.** An error log that says "API request failed" without the prompt, model, token count, or user context is nearly useless for debugging. Claude Code generates a request context logger that captures the safe parts of the request (excluding sensitive user data) and attaches them to every error log entry.
+
+**Treating all 4xx errors the same.** A 400 Bad Request means your code sent invalid data and retrying will fail again. A 429 Rate Limited means you should wait and retry. A 401 Unauthorized means your credentials need rotation. Bundling all 4xx responses into a single retry loop burns through rate limit quota on unretryable errors. Claude Code generates response-code-aware retry logic that only retries on appropriate status codes.
+
+**Not testing error handling paths.** Error handling code that is never exercised in tests can accumulate bugs silently. Claude Code generates a test suite using `jest.mock` or `unittest.mock` that injects specific error conditions for each API error type, verifying that your handling code responds correctly to each scenario.
+
+## Advanced Error Patterns
+
+**Structured error responses for API consumers.** If your service exposes Claude Code capabilities to downstream clients through your own API, surface errors in a consistent structure that includes an error code, human-readable message, retry-after hint for rate limit errors, and a correlation ID for support escalation. Claude Code generates the error response schema and the middleware that translates upstream errors into your API's error format.
+
+**Partial failure handling in batch operations.** When processing multiple prompts in a loop, you must decide whether one failure aborts the entire batch or allows the batch to continue with the failed items recorded. Claude Code generates both patterns — fail-fast and best-effort — and a configuration flag that lets operators choose the behavior at runtime without code changes.
+
+**Token budget overflow recovery.** When a response is truncated due to `max_tokens` being too low, some workflows can recover by requesting a continuation with the truncated response as context. Claude Code generates the continuation logic that detects `stop_reason: max_tokens` and automatically requests completion, up to a configurable maximum number of continuation rounds.
+
+## Integration Patterns
+
+**Sentry integration.** Claude Code generates the Sentry SDK configuration that captures API errors with full context, groups similar errors intelligently, and sets alert thresholds based on error frequency. The integration includes custom fingerprinting rules so rate limit errors do not flood your Sentry issue inbox.
+
+**PagerDuty escalation for critical errors.** For integrations where API failures have direct business impact (customer-facing features, revenue-critical workflows), Claude Code generates the PagerDuty event rule configuration that escalates P0 errors to on-call engineers immediately while queuing lower-severity errors for business-hours review.
+
+**Datadog APM tracing.** Claude Code generates OpenTelemetry instrumentation that creates distributed traces spanning your application code and the Claude API calls within it. Error rates, latency percentiles, and token usage metrics all appear in your existing Datadog dashboards alongside your other service metrics.
+
+
 ## Related Reading
 
 - [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
