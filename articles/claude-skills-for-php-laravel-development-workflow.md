@@ -86,11 +86,96 @@ Imagine you need to add a comments feature to your Laravel application. With pro
 
 Each skill produces code that follows your project conventions, reducing the back-and-forth typically required to integrate new features.
 
+## Writing Effective Skill Prompts for Laravel
+
+The quality of code your skills generate depends entirely on the instructions inside the skill file. Vague prompts produce generic Laravel code that still needs heavy editing. Precise prompts produce code you can commit immediately.
+
+**Weak prompt:**
+```
+Generate a Laravel controller for the resource.
+```
+
+**Strong prompt:**
+```
+Generate a Laravel resource controller for the given model name. Follow these rules:
+- Namespace: App\Http\Controllers\Api\V1
+- Use FormRequest classes for validation (create them if they do not exist)
+- Return resources using App\Http\Resources — create the resource class if missing
+- All responses use the ApiResponse helper at App\Helpers\ApiResponse
+- Include PHPDoc blocks on every public method
+- index() must accept query string filters: per_page (default 15), sort_by, sort_dir
+- Wrap database writes in DB::transaction()
+```
+
+The second version gives Claude everything it needs to produce code that matches your actual project. Document your team's conventions once inside the skill, and every developer on the team gets consistent output without needing to remember the rules.
+
+## Handling Form Requests and Validation
+
+Validation logic scattered across controllers is a common Laravel code smell. Build a dedicated skill that generates FormRequest classes with your validation conventions:
+
+```
+/laravel-request StoreCommentRequest
+```
+
+A well-written skill for this produces the FormRequest class, fills in `authorize()` with sensible logic, and adds `rules()` with typed validation based on the model's migration columns. It should also generate the corresponding test that posts invalid payloads and asserts 422 responses.
+
+Example output from a strong skill:
+
+```php
+class StoreCommentRequest extends FormRequest
+{
+    public function authorize(): bool
+    {
+        return $this->user()->can('create', Comment::class);
+    }
+
+    public function rules(): array
+    {
+        return [
+            'post_id'  => ['required', 'integer', 'exists:posts,id'],
+            'body'     => ['required', 'string', 'min:3', 'max:2000'],
+            'parent_id'=> ['nullable', 'integer', 'exists:comments,id'],
+        ];
+    }
+}
+```
+
+This saves roughly 15 minutes per feature and eliminates the class of bugs where a developer forgets to add `exists:` constraints.
+
+## Service Layer Pattern
+
+Larger Laravel applications benefit from a service layer that keeps controllers thin. Create a skill that generates the full stack: controller, service class, and repository interface together.
+
+Invoke it as:
+
+```
+/laravel-service CommentService
+```
+
+Your skill should produce:
+- `app/Services/CommentService.php` with constructor injection of the repository
+- `app/Repositories/Contracts/CommentRepositoryInterface.php`
+- `app/Repositories/EloquentCommentRepository.php` implementing the interface
+- A service provider binding entry to paste into `AppServiceProvider`
+
+Generating all four pieces together prevents the common mistake of creating a service class that directly calls the model, bypassing the repository abstraction you already have in place.
+
+## Debugging with Laravel Telescope Integration
+
+When something breaks, you want Claude to help you debug using your actual log data rather than guessing. Build a skill that reads from Laravel Telescope or your log files and summarizes errors:
+
+```
+name: laravel-debug
+description: Read Laravel logs or Telescope entries and identify the root cause
+```
+
+Invoke it with a reference to the failing endpoint or an error message excerpt. The skill reads `storage/logs/laravel.log`, identifies the relevant stack trace, and suggests a fix with context about which part of the framework is involved. This is faster than grepping log files manually and more targeted than pasting raw stack traces into a chat.
+
 ## Optimizing Skills for Laravel Projects
 
 When building Laravel-specific skills, consider these patterns:
 
-**Project Detection**: Start skills by checking for the presence of ` artisan` in the project root. This ensures you're working within a Laravel environment.
+**Project Detection**: Start skills by checking for the presence of `artisan` in the project root. This ensures you're working within a Laravel environment.
 
 **Configuration Awareness**: Read `config/app.php` to determine the application namespace and locale settings. Use these values when generating code.
 
@@ -100,6 +185,10 @@ When building Laravel-specific skills, consider these patterns:
 name: laravel-permission
 description: Add Spatie permission checks to controllers and routes
 ```
+
+**API Versioning**: If your project uses versioned APIs under `app/Http/Controllers/Api/V1/`, hardcode that namespace expectation into your controller skill so no generated file ends up in the wrong directory.
+
+**Soft Deletes**: Add a flag to your model skill so it asks whether to include `SoftDeletes`. One flag prevents a migration oversight that is painful to fix after data exists in production.
 
 ## Testing Your Laravel Skills
 
@@ -112,6 +201,14 @@ Before deploying skills team-wide, validate them against a test project:
 5. Check code style with PHP CS Fixer or Pint
 
 Iterate on skill prompts based on results. The goal is producing code that requires zero modifications before your first commit.
+
+## Team Adoption Strategy
+
+The fastest way to get a team using Laravel skills consistently is to commit the skill files into the repository under `.claude/skills/`. Every developer who clones the repo gets the same skills automatically. When a convention changes—say, you adopt a new API response format—you update one skill file, commit it, and the entire team picks it up on the next pull.
+
+Document each skill's expected inputs and outputs in a brief comment at the top of the skill file. A developer who has never used the skill before should be able to invoke it correctly after reading five lines.
+
+Start with the two or three most repetitive tasks your team does: usually controller generation, migration creation, and test scaffolding. Get those three skills producing clean output on your existing codebase before expanding. Once developers see that `/laravel-controller` produces commit-ready code on the first try, adoption takes care of itself.
 
 ## Conclusion
 

@@ -202,15 +202,125 @@ chrome.declarativeNetRequest.onRuleMatchedDebug.addListener((info) => {
 });
 ```
 
+## Toggling Mocks with a Popup UI
+
+For day-to-day development, you want to switch mocks on and off without touching code. Add a simple popup that reads and updates a flag in `chrome.storage.local`:
+
+```javascript
+// popup.js
+async function loadState() {
+  const { mocksEnabled } = await chrome.storage.local.get('mocksEnabled');
+  document.getElementById('toggle').checked = !!mocksEnabled;
+}
+
+document.getElementById('toggle').addEventListener('change', async (e) => {
+  const enabled = e.target.checked;
+  await chrome.storage.local.set({ mocksEnabled: enabled });
+  // Notify background to swap rule sets
+  chrome.runtime.sendMessage({ action: 'setMocks', enabled });
+});
+
+loadState();
+```
+
+In your background script, listen for that message and call `enableMocks()` or `disableMocks()` as defined earlier. This gives every team member a one-click toggle without requiring a reload or a code change.
+
+## Simulating Network Latency
+
+Real APIs are not instant. If you test exclusively against local JSON files, you may miss bugs that only appear under latency — race conditions, spinner states that never clear, or UI that assumes synchronous behavior. Add artificial delay by routing through a small service worker response handler:
+
+```javascript
+// background.js — fetch event approach for extension pages
+self.addEventListener('fetch', (event) => {
+  if (event.request.url.includes('/mock-data/')) {
+    event.respondWith(
+      new Promise((resolve) => {
+        setTimeout(async () => {
+          const response = await fetch(event.request);
+          resolve(response);
+        }, 800); // simulate 800 ms latency
+      })
+    );
+  }
+});
+```
+
+You can randomize the delay to simulate unstable connections:
+
+```javascript
+const delay = 200 + Math.random() * 1200; // 200–1400 ms
+```
+
+This forces your UI to handle slow responses correctly before you ever ship.
+
+## Mocking Authentication Flows
+
+Authentication is one of the trickiest areas to mock. Tokens expire, refresh flows involve multiple sequential requests, and 401 responses must trigger re-auth logic. Set up dedicated mock rule IDs for auth endpoints:
+
+```json
+[
+  {
+    "id": 10,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": { "extensionPath": "/mock-data/auth-success.json" }
+    },
+    "condition": {
+      "urlFilter": "https://api.example.com/auth/token",
+      "resourceTypes": ["xmlhttprequest", "fetch"]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": { "extensionPath": "/mock-data/auth-expired.json" }
+    },
+    "condition": {
+      "urlFilter": "https://api.example.com/auth/refresh",
+      "resourceTypes": ["xmlhttprequest", "fetch"]
+    }
+  }
+]
+```
+
+Your `auth-expired.json` returns a 401-equivalent payload so your extension's token refresh logic runs against a realistic scenario. Pair this with the toggle mechanism above to flip between success and failure states without editing files.
+
+## Keeping Mock Data in Sync with Real APIs
+
+The most common failure mode with mocking is drift — the real API changes its response shape and your mocks silently fall behind. Two practices prevent this:
+
+**Schema snapshots.** Periodically run your extension against the live API, log the responses, and save them as your mock files. A simple Node script run in CI can do this:
+
+```javascript
+// scripts/refresh-mocks.js
+const endpoints = [
+  { path: '/users', file: 'mock-data/users.json' },
+  { path: '/products', file: 'mock-data/products.json' }
+];
+
+for (const ep of endpoints) {
+  const res = await fetch(`https://api.example.com${ep.path}`, { headers: authHeaders });
+  const data = await res.json();
+  fs.writeFileSync(ep.file, JSON.stringify(data, null, 2));
+}
+```
+
+**Contract tests.** After generating content, a real API call should produce a response whose keys are a superset of what your mock provides. Any key your extension reads but your mock does not include is a bug waiting to surface in production.
+
 ## Performance Considerations
 
 The declarative NetRequest API processes rules efficiently, but keep these tips in mind. Limit the number of rules to avoid memory overhead. Use specific URL filters rather than broad patterns. Remove unused rules when they are no longer needed.
+
+Rule IDs must be unique integers. Using a numbering convention — 1xx for user endpoints, 2xx for auth, 3xx for error scenarios — makes large rule sets easier to manage and debug without collisions.
 
 ## Conclusion
 
 Mocking API responses in Chrome extensions is straightforward with the declarative NetRequest API. By defining rules in your manifest and background scripts, you can intercept network requests and serve custom responses without complex backend setup. This approach accelerates development, improves testing, and gives you full control over your extension's API interactions.
 
-Start with simple redirects to local JSON files, then expand to handle dynamic responses and error scenarios as your needs grow.
+Start with simple redirects to local JSON files, then layer in latency simulation, toggle UI, and auth-flow mocks as your extension grows in complexity. The investment pays off the first time you catch a race condition in local testing that would have been a production bug.
 
 
 ## Related Reading

@@ -160,7 +160,7 @@ While primarily a privacy feature, DNS-over-HTTPS can also improve resolution sp
 For most users in 2026, we recommend enabling these flags:
 
 1. **Parallel Downloading** - Immediate speed benefit for downloads
-2. **Back-Forward Cache** - Smoother browsing experience  
+2. **Back-Forward Cache** - Smoother browsing experience
 3. **GPU Rasterization** - Better graphics performance
 4. **Enable HTTP/3** - Faster page loads
 
@@ -179,6 +179,100 @@ Compare metrics before and after enabling flags to see your improvements.
 ## Conclusion
 
 Chrome flags offer powerful ways to customize your browsing experience for better performance. Start with the flags listed above and experiment to find the optimal configuration for your workflow. Remember to check for updates periodically, as flags can change between Chrome releases.
+
+## How to Verify a Flag Is Actually Helping
+
+Enabling flags without measuring them is guesswork. Chrome gives you everything you need to confirm whether a change made a real difference.
+
+The most direct method is `chrome://net-internals/#events`. This live log captures every network event Chrome processes. Before enabling a flag, load a page you visit regularly and note the timing. Enable the flag, restart Chrome, load the same page, and compare. For network flags like HTTP/3 or parallel downloading, you will see measurable differences in connection setup time and transfer speed.
+
+For rendering flags, use the built-in frame rate counter. Open DevTools, press Escape to open the Console drawer, click the three-dot menu, and select "Rendering". Enable "Frame Rendering Stats". This overlay shows your actual frames per second. With GPU rasterization enabled on a graphics-heavy site, you should see the frame rate stabilize at 60fps where it previously dropped.
+
+A more systematic approach uses the Performance panel:
+
+```javascript
+// Run this in the Console before profiling a page load
+// It gives you a clean baseline to compare against
+const captureBaseline = () => {
+  const entries = performance.getEntriesByType('navigation');
+  const nav = entries[0];
+  return {
+    ttfb: nav.responseStart - nav.requestStart,
+    domReady: nav.domContentLoadedEventEnd - nav.startTime,
+    fullyLoaded: nav.loadEventEnd - nav.startTime,
+    transferSize: nav.transferSize
+  };
+};
+
+console.table(captureBaseline());
+```
+
+Run that before and after enabling your flags. If TTFB drops and fully loaded time improves, the flags are working. If nothing changes, you may already have those optimizations active by default in your Chrome version.
+
+## Flags for Developers vs. Regular Users
+
+Not every flag belongs in every profile. The right set depends on what you actually do in the browser.
+
+**For general browsing**, the four flags in the Practical Recommendations section cover the most impactful changes with the least risk. Back-Forward Cache alone makes a noticeable difference on any site where you frequently navigate back — product listings, documentation, search results.
+
+**For developers**, several additional flags are worth considering:
+
+`chrome://flags/#enable-developer-mode-highlights` — Adds visual overlays for layout shifts and paint regions directly in the browser. Useful during performance audits without requiring DevTools to be open.
+
+`chrome://flags/#force-color-profile` — Forces a specific color space. If you work across multiple monitors with different color profiles, this flag prevents Chrome from rendering colors inconsistently between screens.
+
+`chrome://flags/#show-performance-metrics-hud` — Overlays Core Web Vitals scores (LCP, CLS, FID) on every page in real time. This is faster than running Lighthouse for a quick check on whether a page is in the good, needs improvement, or poor range.
+
+```bash
+# Developer-focused flag set
+# chrome://flags/#enable-developer-mode-highlights
+# chrome://flags/#force-color-profile
+# chrome://flags/#show-performance-metrics-hud
+# chrome://flags/#enable-experimental-web-platform-features
+```
+
+The last one — experimental web platform features — enables APIs that are in spec but not yet shipped to stable Chrome. This includes early CSS features, new JavaScript APIs, and Storage Access improvements. Enable it only in a development profile, never in a browser you use for banking or work accounts.
+
+## Managing Flags Across Updates
+
+Chrome updates automatically, and with each update some flags get promoted to stable defaults or removed entirely. A flag you enabled three months ago may no longer exist, or may now be on by default and doing nothing.
+
+Check your flags every 4-6 weeks. Go to `chrome://flags` and look for any that show "Unavailable" — those have been removed and you can stop thinking about them. Flags showing "Default" in the dropdown that you previously set to "Enabled" means they graduated to default-on, which is good. Your flag had no effect on recent versions, but the feature is now active for everyone.
+
+There is no automatic export for Chrome flags. If you configure flags on multiple machines, you will need to set them manually on each. Chrome's sync feature does not include flag settings. The practical solution is to keep a simple text file noting which flags you have enabled and why. When you set up a new machine or browser profile, you spend five minutes restoring your configuration rather than trying to remember it.
+
+```bash
+# Quick reference — save this and update as you go
+# Last checked: 2026-03
+
+# Speed
+# chrome://flags/#enable-parallel-downloading — Enabled
+# chrome://flags/#back-forward-cache — Enabled
+# chrome://flags/#predictive-page-loading — Enabled
+
+# Rendering
+# chrome://flags/#enable-gpu-rasterization — Enabled
+# chrome://flags/#enable-zero-copy — Enabled
+
+# Network
+# chrome://flags/#enable-http3 — Already default, no action needed
+```
+
+Keeping that reference prevents you from enabling a flag you already have active, or re-enabling one that was removed.
+
+## Flags to Avoid in 2026
+
+Some flags that circulate in "speed tips" articles are either redundant (the feature is already on by default), removed, or actively detrimental on modern hardware.
+
+**Smooth Scrolling** — On by default in every stable Chrome release since 2023. Enabling it as a flag does nothing.
+
+**Experimental QUIC Protocol** — HTTP/3 with QUIC is now the default where supported. A separate QUIC flag refers to an older experimental implementation. Leave it alone; enabling it can interfere with the stable HTTP/3 implementation.
+
+**Tab Hover Cards** — A cosmetic flag that was promoted to stable and then removed from the flags list. Searching for it returns nothing, but older articles still recommend it.
+
+**Override Software Rendering List** — This forces GPU rendering even when Chrome has detected incompatible drivers and disabled GPU acceleration for stability. On modern hardware this is rarely needed and can cause crashes on machines with driver issues. Only enable this if you have specifically identified that Chrome is falling back to software rendering when it should not be.
+
+The general rule: if a flag is widely recommended, check whether it still exists at `chrome://flags` before acting on the advice. Chrome moves fast and the flags landscape changes with each major release.
 
 
 ## Related Reading

@@ -216,6 +216,188 @@ testCases.forEach(tc => {
 });
 ```
 
+## Handling Dynamic Store Pages
+
+Modern grocery websites load content asynchronously. Kroger, Albertsons, and Instacart all use React or Angular frontends where product grids render after the initial page load. A plain DOMContentLoaded listener will miss most products.
+
+Use a MutationObserver to watch for new product nodes, then trigger your detection logic:
+
+```javascript
+const observer = new MutationObserver((mutations) => {
+  const hasNewProducts = mutations.some(m =>
+    [...m.addedNodes].some(n =>
+      n.nodeType === 1 && (
+        n.matches('.product-item') ||
+        n.querySelector?.('.product-item')
+      )
+    )
+  );
+  if (hasNewProducts) scanPage();
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
+```
+
+Stop the observer once the user navigates away by listening for the `pagehide` event:
+
+```javascript
+window.addEventListener('pagehide', () => observer.disconnect());
+```
+
+For infinite scroll pages — common in Instacart's search results — throttle the observer so it fires at most once per 300ms. Batch all newly detected products and send a single message to the background worker rather than one message per product.
+
+## Coupon Expiry and Freshness
+
+A coupon that expired yesterday is worse than no coupon — it creates false expectations and erodes user trust. Build expiry handling into your data model from the start.
+
+Every coupon object should carry an `expiresAt` timestamp. Your `matchCoupons` function should filter before sorting:
+
+```javascript
+function matchCoupons(productList, availableCoupons) {
+  const now = Date.now();
+  const validCoupons = availableCoupons.filter(c => c.expiresAt > now);
+
+  const matches = [];
+  for (const product of productList) {
+    for (const coupon of validCoupons) {
+      if (coupon.matchesProduct(product.name) &&
+          product.price >= coupon.minPurchase) {
+        matches.push({
+          product: product.name,
+          coupon: coupon.code,
+          discount: coupon.discount,
+          savings: calculateSavings(product.price, coupon),
+          expiresAt: coupon.expiresAt
+        });
+      }
+    }
+  }
+  return matches.sort((a, b) => b.savings - a.savings);
+}
+```
+
+Show a visual indicator in your injected badges when a coupon expires within 24 hours. A yellow warning color performs better than red — users associate red with errors, not urgency.
+
+For cache freshness, set a maximum TTL of 4 hours for coupon data. Refresh on extension startup and again whenever the user opens a supported grocery domain:
+
+```javascript
+async function getCouponsWithFreshness(storeId) {
+  const { coupons, fetchedAt } = await chrome.storage.local.get(['coupons', 'fetchedAt']);
+  const stale = !fetchedAt || (Date.now() - fetchedAt) > 4 * 60 * 60 * 1000;
+
+  if (stale) {
+    const fresh = await fetchCouponsFromAPI(storeId);
+    await chrome.storage.local.set({ coupons: fresh, fetchedAt: Date.now() });
+    return fresh;
+  }
+  return coupons;
+}
+```
+
+## Multi-Store Support Architecture
+
+Supporting one store is straightforward. Supporting ten requires a translator pattern — the same logic that powers Zotero's site adapters.
+
+Create a store registry where each entry defines the selectors and scraping strategy for a specific domain:
+
+```javascript
+const storeRegistry = {
+  'kroger.com': {
+    priceSelector: '[data-testid="cart-page-item-price"]',
+    nameSelector: '[data-testid="product-title"]',
+    itemWrapper: '.CartItem',
+    storeId: 'kroger'
+  },
+  'safeway.com': {
+    priceSelector: '.product-price__saleprice',
+    nameSelector: '.product-title__name',
+    itemWrapper: '.product-card',
+    storeId: 'safeway'
+  },
+  'instacart.com': {
+    priceSelector: '[data-testid="item_price"]',
+    nameSelector: '[data-testid="item_name"]',
+    itemWrapper: '[data-testid="item_card"]',
+    storeId: 'instacart'
+  }
+};
+
+function getStoreConfig() {
+  const host = window.location.hostname.replace('www.', '');
+  return Object.entries(storeRegistry).find(([domain]) =>
+    host.includes(domain)
+  )?.[1];
+}
+```
+
+Your content script calls `getStoreConfig()` once on load. If it returns null, exit immediately — no processing on unsupported sites. This keeps performance impact to zero for unrecognized domains.
+
+Update `manifest.json` host_permissions to match your registry:
+
+```json
+"host_permissions": [
+  "*://*.kroger.com/*",
+  "*://*.safeway.com/*",
+  "*://*.instacart.com/*",
+  "*://*.albertsons.com/*"
+]
+```
+
+## Clipping Coupons Programmatically
+
+Showing a coupon code is useful. Clipping it automatically is better. Some store websites expose clip-to-card flows through predictable POST endpoints. When you detect a clipable coupon, you can trigger the clip directly from your content script using the user's existing authenticated session:
+
+```javascript
+async function clipCoupon(couponId, storeEndpoint) {
+  try {
+    const response = await fetch(storeEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      credentials: 'include', // sends existing cookies
+      body: JSON.stringify({ couponId })
+    });
+
+    if (response.ok) {
+      return { success: true };
+    }
+    return { success: false, status: response.status };
+  } catch (err) {
+    return { success: false, error: err.message };
+  }
+}
+```
+
+The `credentials: 'include'` flag is critical — it sends the user's existing store session cookie with the request, so no login flow is needed. Test this carefully; stores occasionally change their endpoint paths after site rebuilds. Keep endpoint strings in your store registry so a single config update fixes everything.
+
+Not all stores allow this. Those that do typically use an anti-CSRF token in their headers. Read it from the page before clipping:
+
+```javascript
+const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content;
+```
+
+## Privacy and Permissions Design
+
+Coupon extensions have a reputation problem: users worry they're being profiled. Design around that concern, not against it.
+
+Request the minimum viable permissions. The manifest above requests `activeTab` rather than broad host access. Use `activeTab` when possible — it only activates on the current tab when the user explicitly clicks your icon, rather than running silently on every page.
+
+For API calls, avoid sending raw product names to your backend. Hash them instead:
+
+```javascript
+async function hashProductName(name) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(name.toLowerCase().trim());
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+```
+
+Your API receives hashes and returns matching coupon data without ever seeing the raw shopping list. Put this in your privacy policy and call it out in your Chrome Web Store listing — it differentiates you from competitors that log everything.
+
 ## Distribution and Updates
 
 When ready to distribute:
@@ -224,6 +406,8 @@ When ready to distribute:
 2. Create a store listing with clear screenshots
 3. Implement update checking via manifest version
 4. Track usage with anonymous analytics
+
+A few things that meaningfully improve Chrome Web Store conversion: screenshot your badge notification on a real product page (not a mockup), include a short video showing the clip-and-save flow, and list the exact store names you support in the first sentence of your description. Users search for "Kroger coupon extension" — store-specific keywords in your listing title outperform generic terms.
 
 Building a grocery coupon finder requires balancing functionality with performance. Focus on supporting major grocery store websites first, then expand to regional chains. The key is providing genuine value without overwhelming users with irrelevant offers.
 

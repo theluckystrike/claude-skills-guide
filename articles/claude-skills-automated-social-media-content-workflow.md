@@ -108,6 +108,94 @@ Here is how the workflow operates for a feature launch:
 4. Store launch hashtags and key messages with `/supermemory` for team consistency
 5. After launch, import analytics into the xlsx dashboard and log results with `/supermemory`
 
+## Tailoring Content Per Platform
+
+Generating one piece of content and pushing it identically to every platform is a fast path to poor engagement. Each platform has a distinct format expectation, audience behavior, and algorithm preference. The `/docx` and `/pdf` skills generate raw material—your job is to reshape that material for each destination.
+
+Use the `/docx` skill with explicit platform targeting:
+
+```
+/docx
+Read product-launch.docx. Generate separate posts for three platforms:
+- Twitter/X: 240 characters max, one concrete stat, no hashtag spam
+- LinkedIn: 150-200 word professional narrative, end with a question to drive comments
+- Bluesky: conversational, 300 characters, no corporate language
+```
+
+The difference in tone and structure between a LinkedIn post and a tweet is not cosmetic—it directly affects whether the algorithm surfaces your content and whether people engage. Providing explicit character counts and format constraints in your skill prompt produces platform-ready output rather than generic text you still need to edit.
+
+For technical content, the `/pdf` skill is particularly effective at extracting quotable data points. A whitepaper might contain a benchmark result buried on page 14. Pull it with:
+
+```
+/pdf
+Extract all numerical statistics and benchmark results from this whitepaper. Format each as a standalone sentence that works as a social post caption.
+```
+
+This turns dense technical documents into a library of ready-to-use proof points.
+
+## Maintaining Brand Voice Across Sessions
+
+One of the practical problems with AI-generated content is inconsistency. Claude does not remember your brand guidelines session-to-session unless you build that memory explicitly. The **supermemory** skill solves this by persisting style rules and voice guidelines:
+
+```
+/supermemory store: brand-voice: direct and technical, avoid corporate buzzwords like "leverage" and "synergy", never use exclamation points, always include one concrete metric or example per post
+```
+
+Before any content generation session, retrieve this context:
+
+```
+/supermemory What are our brand voice guidelines?
+```
+
+This surfaces the stored rules and puts them in the active context before you start generating posts. Apply the same pattern for platform-specific rules, recurring campaign hashtags, and competitor mentions to avoid.
+
+For teams, this shared memory becomes especially valuable. When multiple contributors use the same supermemory store, every session starts with the same baseline—no more inconsistent tone between posts written by different people.
+
+## Approval Workflows and Quality Gates
+
+Content going directly from generation to publication without review is a liability. The **xlsx** skill supports multi-stage approval tracking:
+
+```
+/xlsx
+Add a status workflow to the content calendar. Status values: draft, review_pending, approved, scheduled, published, rejected. Add an approver_notes column and a last_modified_date column.
+```
+
+Build filtering views within the spreadsheet to show only items in each status bucket. A weekly review meeting becomes a matter of opening the "review_pending" filtered view and working through the queue.
+
+The **tdd** skill adds another quality gate if you are building custom tooling around this workflow. Write tests for your validation logic before implementing it:
+
+```
+/tdd
+Write tests for a social media post validator that checks:
+- Twitter posts are under 280 characters
+- LinkedIn posts do not contain more than 5 hashtags
+- All posts include at least one of the approved campaign hashtags from this list: [list]
+- No post contains banned phrases from this list: [list]
+```
+
+Running these checks programmatically before posts enter the approval queue saves review time and prevents obvious errors from reaching human reviewers.
+
+## Repurposing Content at Scale
+
+The highest-leverage application of this workflow is systematic repurposing. A single long-form piece of content—a blog post, a recorded talk transcript, a product changelog—can generate weeks of social posts if you process it correctly.
+
+Set up a repurposing session with `/pdf` or `/docx`:
+
+```
+/pdf
+Process this blog post transcript. Create:
+1. Five standalone tweet-length facts or opinions from the piece
+2. One LinkedIn carousel outline (5 slides, each with a heading and two bullet points)
+3. Three Bluesky thread starters (first post only, each taking a different angle)
+4. One Instagram caption with relevant hashtag suggestions
+```
+
+Store the output in your xlsx calendar across different dates and platforms. A single processing session populates two to three weeks of scheduled content. Log the source document and extraction date in supermemory so you do not reprocess the same material:
+
+```
+/supermemory store: content-extracted: developer-productivity-blog-post-march2026.pdf - extracted 14 posts on 2026-03-18
+```
+
 ## Building Your Own Workflow
 
 Start with one phase. Automating the scheduling spreadsheet with `/xlsx` is the lowest-friction starting point—it immediately centralizes your content calendar. Add supermemory for strategy tracking, then layer in pdf or docx for content extraction as needs become clearer.
@@ -118,6 +206,9 @@ Consider these factors when designing your workflow:
 - **Content volume**: Higher volume justifies more automation investment
 - **Team size**: Supermemory becomes essential with multiple contributors
 - **Analytics maturity**: Build measurement capabilities as you scale
+- **Repurposing ratio**: Track how many social posts each long-form piece generates; a ratio below 5:1 suggests you are leaving content on the table
+
+The order of operations matters. Build scheduling infrastructure first, then add content extraction, then analytics. Trying to build all phases simultaneously creates complexity before you understand your actual bottlenecks.
 
 Claude Code skills provide the building blocks. Assemble them according to [your specific requirements](/claude-skills-guide/use-cases-hub/) a one-size-fits-all approach.
 

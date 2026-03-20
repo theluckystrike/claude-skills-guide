@@ -179,17 +179,122 @@ const templates = {
 };
 ```
 
+## Streaming Responses for Better UX
+
+Waiting 10 seconds for a 1000-token response is a bad experience. Most modern AI APIs support streaming. With streaming, text appears word-by-word as the model generates it, which feels responsive even for long outputs.
+
+Update your fetch call to handle a streaming response:
+
+```javascript
+const response = await fetch('https://api.openai.com/v1/chat/completions', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${await getApiKey()}`
+  },
+  body: JSON.stringify({
+    model: 'gpt-4',
+    stream: true,
+    messages: [{ role: 'user', content: prompt }]
+  })
+});
+
+const reader = response.body.getReader();
+const decoder = new TextDecoder();
+let buffer = '';
+
+while (true) {
+  const { done, value } = await reader.read();
+  if (done) break;
+
+  buffer += decoder.decode(value, { stream: true });
+  const lines = buffer.split('\n');
+  buffer = lines.pop(); // keep incomplete line in buffer
+
+  for (const line of lines) {
+    if (!line.startsWith('data: ') || line === 'data: [DONE]') continue;
+    const json = JSON.parse(line.slice(6));
+    const delta = json.choices[0].delta.content;
+    if (delta) output.textContent += delta;
+  }
+}
+```
+
+This adds meaningful interactivity without extra complexity. Users see progress immediately and can stop generation early if the output is heading in the wrong direction.
+
+## Structured Output for CMS Integration
+
+Raw prose is only half the problem. If you are inserting content into a CMS or static site generator, you usually need front matter, headings at specific levels, and metadata fields. Structure your system prompt to enforce a consistent output format:
+
+```javascript
+const systemPrompt = `You are a technical blog writer. Always respond with valid JSON matching this schema:
+{
+  "title": "string",
+  "description": "string (150 chars max)",
+  "body": "string (markdown)",
+  "tags": ["string"]
+}
+Do not include any text outside the JSON object.`;
+```
+
+Then parse the response before display:
+
+```javascript
+const raw = data.choices[0].message.content;
+const post = JSON.parse(raw);
+
+document.getElementById('title').value = post.title;
+document.getElementById('description').value = post.description;
+document.getElementById('body').value = post.body;
+document.getElementById('tags').value = post.tags.join(', ');
+```
+
+With this approach, clicking Generate populates a form that maps directly to your CMS fields. There is no copy-paste step — the user reviews and submits directly from the extension.
+
+## Injecting Content into the Active Tab
+
+Many developers want to push generated content into an editor on the page itself — a WordPress Gutenberg block, a Ghost editor, a Notion page. Use a content script to find the editor and insert text:
+
+```javascript
+// content.js
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'insertContent') {
+    // Target varies by editor — this covers many contenteditable fields
+    const editor = document.querySelector('[contenteditable="true"]');
+    if (editor) {
+      editor.focus();
+      document.execCommand('insertText', false, request.content);
+      sendResponse({ success: true });
+    } else {
+      sendResponse({ success: false, reason: 'No contenteditable found' });
+    }
+  }
+});
+```
+
+From your popup, after generation completes:
+
+```javascript
+const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+await chrome.tabs.sendMessage(tab.id, {
+  action: 'insertContent',
+  content: generatedText
+});
+```
+
+For editors that do not expose `contenteditable` — some custom React or Vue editors use synthetic input handling — you may need to dispatch native `InputEvent` objects instead of relying on `execCommand`. Inspect the target editor in DevTools to understand its event model before committing to an injection strategy.
+
 ## Privacy and Security Considerations
 
 When building or using AI Chrome extensions, keep these points in mind:
 
-1. **API key storage**: Never hardcode keys. Use chrome.storage.local with encryption for sensitive data.
+**API key storage**: Never hardcode keys. Use `chrome.storage.local` with a separate options page. For higher security, route requests through your own backend proxy so the raw API key never lives in the browser.
 
-2. **Data transmission**: Ensure all API calls use HTTPS. Review what data leaves the browser.
+**Data transmission**: Ensure all API calls use HTTPS. Review what data leaves the browser — page context, selected text, and user prompts may contain sensitive information that you did not intend to send to a third-party API.
 
-3. **Content ownership**: AI-generated content may have licensing implications. Verify terms of service for commercial use.
+**Content ownership**: AI-generated content may have licensing implications. Verify terms of service for commercial use, especially if you are generating content at scale for clients.
 
-4. **Rate limiting**: Implement throttling to avoid unexpected API costs.
+**Rate limiting**: Implement throttling to avoid unexpected API costs. A simple token bucket in `chrome.storage.session` works well for limiting requests per minute without a backend.
 
 ## Extension Distribution
 
@@ -199,11 +304,11 @@ To share your extension with others:
 2. Or distribute as a ZIP file for manual installation
 3. Include clear documentation for API key setup
 
-Users will need their own API keys from providers like OpenAI, Anthropic, or other AI services. This keeps costs individual and provides flexibility.
+Users will need their own API keys from providers like OpenAI, Anthropic, or other AI services. This keeps costs individual and provides flexibility. If you distribute through the Chrome Web Store, be explicit in your privacy disclosure about what data is sent to external APIs — reviewers check this carefully for AI extensions.
 
 ## Conclusion
 
-AI blog post generator Chrome extensions offer powerful capabilities for content creation workflows. By understanding the underlying architecture and implementing proper security practices, developers can build tools that significantly accelerate the writing process. The examples above provide a foundation—extend them based on your specific needs and use cases.
+AI blog post generator Chrome extensions offer powerful capabilities for content creation workflows. By understanding the underlying architecture and implementing proper security practices, developers can build tools that significantly accelerate the writing process. The streaming, structured output, and direct-injection patterns above move the extension from a simple text generator to a genuine CMS integration layer. Start with the basic popup-to-API flow, then layer in streaming and structured output once the core is working reliably.
 
 
 ## Related Reading
