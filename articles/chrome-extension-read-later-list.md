@@ -5,6 +5,10 @@ description: "A practical guide for developers to build a Chrome extension that 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-read-later-list/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 score: 7
 reviewed: true
 ---

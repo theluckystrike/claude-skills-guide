@@ -5,6 +5,10 @@ description: "Build a Chrome extension to streamline thesis writing: auto-save d
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-thesis-writing-helper/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Thesis Writing Helper
