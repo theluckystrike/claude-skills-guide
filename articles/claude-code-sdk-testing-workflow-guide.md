@@ -10,7 +10,7 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 ---
-
+{% raw %}
 # Claude Code SDK Testing Workflow Guide
 
 Testing Claude Code skills requires a structured approach that validates both the skill definition and its runtime behavior. This guide walks you through building a solid testing workflow that catches issues before deployment and ensures your skills work reliably across different scenarios.
@@ -462,3 +462,4 @@ Finally, keep your test suite fast. A suite that takes ten minutes to run will b
 - [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

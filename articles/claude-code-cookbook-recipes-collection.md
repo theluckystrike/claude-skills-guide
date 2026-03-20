@@ -11,8 +11,7 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 ---
-
-
+{% raw %}
 # Claude Code Cookbook: Practical Recipes Collection
 
 Claude Code transforms how developers approach coding tasks by providing specialized skills that handle complex workflows. This cookbook presents practical recipes you can implement immediately, covering document generation, frontend development, test-driven development, and knowledge management. Each recipe includes concrete examples, common pitfalls, and tips for integrating skills into real development pipelines.
@@ -311,3 +310,4 @@ The most durable habit is consistent use of supermemory across every project. On
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
