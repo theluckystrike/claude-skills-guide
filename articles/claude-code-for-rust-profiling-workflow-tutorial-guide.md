@@ -83,13 +83,13 @@ use std::collections::HashMap;
 
 fn process_data(items: Vec<String>) -> HashMap<String, usize> {
     let mut counts = HashMap::new();
-    
+
     for item in items {
         // Inefficient string processing
         let processed = item.to_lowercase().trim().to_string();
         *counts.entry(processed).or_insert(0) += 1;
     }
-    
+
     counts
 }
 
@@ -97,7 +97,7 @@ fn main() {
     let data: Vec<String> = (0..100_000)
         .map(|i| format!("Item {}", i))
         .collect();
-    
+
     let result = process_data(data);
     println!("Processed {} unique items", result.len());
 }
@@ -141,7 +141,7 @@ pub fn start_periodic_profiling(interval_secs: u64) {
     std::thread::spawn(move || {
         loop {
             std::thread::sleep(std::time::Duration::from_secs(interval_secs));
-            
+
             if PROFILING_ENABLED.load(Ordering::Relaxed) {
                 // Trigger profiling snapshot
                 println!("Profiling snapshot taken");
@@ -188,6 +188,160 @@ Always baseline your performance before making changes, then compare profiles af
 - **cargo-profiler**: Function-level timing analysis
 - ** Instruments** (macOS): Native performance tools
 - **perf**: Linux profiling system
+
+## Applying Optimizations with Claude Code Assistance
+
+Once you have profiling data pointing to specific bottlenecks, the next step is actually implementing fixes. This is where Claude Code's code generation capabilities become a force multiplier. Rather than manually researching Rust optimization patterns, you can paste your hot function along with the profiler output and ask Claude to rewrite it.
+
+For the `process_data` example from earlier, the rewrite targets three separate sources of overhead: repeated heap allocations per loop iteration, a redundant `trim()` call that allocates, and a HashMap that starts with a default low capacity and rehashes as it grows.
+
+```rust
+use std::collections::HashMap;
+
+fn process_data(items: Vec<String>) -> HashMap<String, usize> {
+    // Pre-allocate with a reasonable capacity estimate
+    let mut counts = HashMap::with_capacity(items.len());
+
+    for item in &items {
+        // Avoid allocation by working with &str
+        let trimmed = item.trim();
+        // Only allocate for the map key when necessary
+        let entry = counts.entry(trimmed.to_lowercase()).or_insert(0);
+        *entry += 1;
+    }
+
+    counts
+}
+```
+
+This is a small but representative example of what Claude Code catches routinely. The pattern repeats across Rust codebases: unnecessary `.to_string()` calls, clones inside loops, and data structures initialized without capacity hints.
+
+A practical prompt to give Claude Code after reviewing a flamegraph:
+
+```
+"This function appears in the top 15% of CPU time in my flamegraph.
+Here is the source. Identify every allocation happening inside the hot loop
+and rewrite the function to minimize heap usage without changing its behavior."
+```
+
+Claude will typically respond with the rewritten function, an explanation of each change, and a note on which changes are safe and which involve tradeoffs.
+
+## Benchmarking Changes with Criterion
+
+Profiling tells you where time is spent; benchmarking tells you whether your fix actually helped. The two tools work together, and Claude Code can generate Criterion benchmarks from your existing function signatures automatically.
+
+Install Criterion:
+
+```toml
+# Cargo.toml
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name = "process_data_bench"
+harness = false
+```
+
+Ask Claude Code to scaffold the benchmark:
+
+```
+"Generate a Criterion benchmark for the process_data function that tests
+three input sizes: 1,000, 10,000, and 100,000 strings."
+```
+
+Claude will produce something like:
+
+```rust
+// benches/process_data_bench.rs
+use criterion::{black_box, criterion_group, criterion_main, BenchmarkId, Criterion};
+use myapp::process_data;
+
+fn bench_process_data(c: &mut Criterion) {
+    let mut group = c.benchmark_group("process_data");
+
+    for size in [1_000usize, 10_000, 100_000] {
+        let data: Vec<String> = (0..size)
+            .map(|i| format!("  Item {}  ", i))
+            .collect();
+
+        group.bench_with_input(BenchmarkId::from_parameter(size), &data, |b, d| {
+            b.iter(|| process_data(black_box(d.clone())))
+        });
+    }
+
+    group.finish();
+}
+
+criterion_group!(benches, bench_process_data);
+criterion_main!(benches);
+```
+
+Run this before and after your optimization changes and compare the HTML reports Criterion generates. This gives you a quantified regression check you can commit alongside the code change.
+
+## Memory Profiling with DHAT and heaptrack
+
+CPU flamegraphs show time; they do not show allocations. For applications where heap pressure causes performance issues, you need a memory profiler. Claude Code can help you set up both DHAT (part of Valgrind) and heaptrack, depending on your platform.
+
+On Linux with Valgrind:
+
+```bash
+# Build a debug binary first
+cargo build --bin myapp
+
+# Run under DHAT
+valgrind --tool=dhat --dhat-out-file=dhat-output.dhat ./target/debug/myapp
+
+# Open the DHAT viewer
+dh_view.pl dhat-output.dhat
+```
+
+Once you have DHAT output, ask Claude to interpret the allocation summary:
+
+```
+"Here is my DHAT total-bytes-at-t-gmax output. The top allocation sites are in
+process_data and hash_map::insert. Explain what each site means and how to reduce it."
+```
+
+DHAT output is dense and not immediately readable for developers unfamiliar with it. Claude Code closes this gap by translating the allocation trees into plain language and mapping them back to source-level constructs.
+
+For macOS developers, heaptrack is available via Homebrew and provides similar heap profiling capability with a GUI viewer. Claude can generate the build and run commands specific to your project structure.
+
+## Working with Async Rust Profiling
+
+Tokio-based applications have a separate profiling surface that CPU flamegraphs miss: task scheduling overhead, long poll times, and stalled futures. The `tokio-console` tool exposes this at runtime.
+
+Enable `tokio-console` in your project:
+
+```toml
+# Cargo.toml
+[dependencies]
+console-subscriber = "0.3"
+tokio = { version = "1", features = ["full", "tracing"] }
+```
+
+```rust
+// main.rs
+#[tokio::main]
+async fn main() {
+    console_subscriber::init();
+    // rest of your application
+}
+```
+
+Run the console in a second terminal:
+
+```bash
+tokio-console
+```
+
+This shows you live task states, poll durations, and which tasks are blocking the runtime. When you spot a task with high average poll time, copy its name and the relevant async function to Claude Code:
+
+```
+"This tokio task shows an average poll time of 8ms with a max of 400ms.
+Here is the async function. Identify what could cause long polls and how to break it up."
+```
+
+Claude will check for common patterns: blocking I/O called inside async context, large synchronous computations on the async thread, and `Mutex` locks held across `.await` points. All three are easy to miss in code review but show up immediately in tokio-console.
 
 ## Conclusion
 

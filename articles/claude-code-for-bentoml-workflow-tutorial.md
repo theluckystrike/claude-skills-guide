@@ -38,7 +38,7 @@ class MLService:
         import pickle
         with open("model.pkl", "rb") as f:
             self.model = pickle.load(f)
-    
+
     @bentoml.api(input=JSON(), output=JSON())
     def predict(self, input_data: dict) -> dict:
         features = np.array(input_data["features"])
@@ -89,17 +89,17 @@ import yaml
 def build_and_deploy():
     # Build the bento
     subprocess.run(["bentoml", "build"], check=True)
-    
+
     # Get the latest bento
     bento_tag = bentoml.list().pop().tag
-    
+
     # Containerize with GPU support
     subprocess.run([
         "bentoml", "containerize",
         str(bento_tag),
         "--dockerfile", "Dockerfile.gpu"
     ], check=True)
-    
+
     print(f"Successfully built: {bento_tag}")
 
 if __name__ == "__main__":
@@ -149,7 +149,7 @@ class OptimizedService:
     def __init__(self):
         # Initialize once, reuse across requests
         self.model = self._load_model()
-    
+
     def _load_model(self):
         # Your optimized loading logic
         pass
@@ -189,6 +189,170 @@ class MonitoredService:
             logger.error(f"Prediction error: {e}")
             raise
 ```
+
+## Managing Multiple Models and Runners
+
+Real ML systems rarely serve a single model. You might have a preprocessing pipeline, a primary classifier, and a post-processing step that each need to run efficiently. BentoML's runner abstraction handles this, and Claude Code can generate the wiring automatically when you describe your pipeline.
+
+Consider a text classification system that needs an embedding model and a classification head:
+
+```python
+# multi_model_service.py
+import bentoml
+import numpy as np
+from bentoml.io import JSON, NumpyNdarray
+
+# Create runners for each model stage
+embedding_runner = bentoml.picklable_model.get("text_embedder:latest").to_runner()
+classifier_runner = bentoml.sklearn.get("text_classifier:latest").to_runner()
+
+@bentoml.service(runners=[embedding_runner, classifier_runner])
+class TextClassificationService:
+    def __init__(self):
+        self.embedding_runner = embedding_runner
+        self.classifier_runner = classifier_runner
+
+    @bentoml.api(input=JSON(), output=JSON())
+    async def classify(self, input_data: dict) -> dict:
+        text = input_data["text"]
+
+        # Run embedding in parallel if batching multiple inputs
+        embeddings = await self.embedding_runner.async_run(text)
+
+        # Feed embeddings to classifier
+        prediction = await self.classifier_runner.predict.async_run(
+            embeddings.reshape(1, -1)
+        )
+
+        return {
+            "label": prediction[0],
+            "confidence": float(np.max(prediction))
+        }
+```
+
+Ask Claude Code to scaffold this for your specific model combination by describing what each stage does and what format it expects. Claude will generate the runner configuration, handle shape mismatches between stages, and add error handling where predictions can fail silently.
+
+## Versioning Models with the BentoML Model Store
+
+One area where production ML systems break down quickly is model versioning. Teams end up with `model_v2_final_REAL.pkl` files scattered across servers. BentoML's model store solves this, and Claude Code can help you integrate it properly into your training pipeline.
+
+Save a trained model directly into the BentoML store after training:
+
+```python
+# train_and_save.py
+import bentoml
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+X, y = load_iris(return_X_y=True)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+clf = GradientBoostingClassifier(n_estimators=100, max_depth=3)
+clf.fit(X_train, y_train)
+
+# Save to BentoML model store with metadata
+saved_model = bentoml.sklearn.save_model(
+    "iris_classifier",
+    clf,
+    signatures={"predict": {"batchable": True, "batch_dim": 0}},
+    metadata={
+        "accuracy": clf.score(X_test, y_test),
+        "training_rows": len(X_train),
+        "feature_names": ["sepal_length", "sepal_width", "petal_length", "petal_width"]
+    }
+)
+
+print(f"Saved: {saved_model.tag}")
+```
+
+From here, your service always loads by tag, making rollbacks straightforward:
+
+```python
+# Load a specific version
+model_ref = bentoml.sklearn.get("iris_classifier:abc123")
+
+# Or always load the latest
+model_ref = bentoml.sklearn.get("iris_classifier:latest")
+```
+
+Claude Code can generate a model comparison script that loads two versions, runs them against the same validation set, and prints a side-by-side accuracy and latency report. This makes promoting a new model version a deliberate, reviewable decision rather than an overwrite.
+
+## Generating Clients and API Documentation
+
+One underused BentoML feature is its ability to generate typed clients from your service definition. Claude Code can take this further by generating complete client libraries, curl examples, and OpenAPI-compatible documentation.
+
+After your service is running locally at `http://localhost:3000`, ask Claude Code:
+
+```
+"Generate a Python client class for this BentoML service with typed methods,
+retry logic with exponential backoff, and docstrings. Also generate 3 curl
+examples showing different input formats."
+```
+
+Claude will produce something like:
+
+```python
+# client.py
+import time
+import httpx
+from typing import List
+
+class MLServiceClient:
+    """Typed client for MLService with retry logic."""
+
+    def __init__(self, base_url: str = "http://localhost:3000", max_retries: int = 3):
+        self.base_url = base_url.rstrip("/")
+        self.max_retries = max_retries
+        self.client = httpx.Client(timeout=30.0)
+
+    def predict(self, features: List[float]) -> List[float]:
+        """
+        Run inference on the provided feature vector.
+
+        Args:
+            features: List of numeric feature values matching the model's input shape.
+
+        Returns:
+            List of prediction values.
+        """
+        payload = {"features": features}
+        url = f"{self.base_url}/predict"
+
+        for attempt in range(self.max_retries):
+            try:
+                response = self.client.post(url, json=payload)
+                response.raise_for_status()
+                return response.json()["prediction"]
+            except httpx.HTTPStatusError as e:
+                if attempt == self.max_retries - 1:
+                    raise
+                wait = 2 ** attempt
+                time.sleep(wait)
+```
+
+This eliminates manual client code that tends to diverge from the actual API over time.
+
+## CI/CD Pipeline Integration
+
+Automated testing and deployment of BentoML services through CI requires a few non-obvious steps. Claude Code can generate a complete GitHub Actions workflow that handles model testing, bento building, container publishing, and deployment.
+
+A minimal but production-grade workflow covers:
+
+1. Run unit tests against the service class in isolation
+2. Build the bento artifact and verify it loads cleanly
+3. Containerize and push to your registry only on main branch pushes
+4. Optionally trigger a deployment to a staging environment
+
+Ask Claude Code to generate this with a prompt like:
+
+```
+"Create a GitHub Actions workflow for a BentoML project that runs pytest,
+builds the bento, containerizes it with a tag based on git SHA, pushes to
+AWS ECR, and deploys to a staging environment using kubectl."
+```
+
+The generated workflow will include proper secret handling, layer caching for the Docker build to keep CI times reasonable, and a health check step that polls the staging deployment before marking the run as successful. This is the kind of scaffolding that takes hours to write from scratch but which Claude Code produces correctly on the first pass.
 
 ## Best Practices Summary
 

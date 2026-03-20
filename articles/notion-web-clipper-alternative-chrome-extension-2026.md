@@ -129,6 +129,111 @@ curl -X POST "https://api.raindrop.io/rest/v1/raindrop" \
 
 Developers appreciate Raindrop's browser extension API, which allows programmatic access to saved content for integration with custom tooling.
 
+## Building an Automated Clipping Pipeline
+
+The real power of these alternatives emerges when you combine them into a pipeline. A practical setup for developers might look like this: MarkDownload captures raw content, a local script enriches the Markdown with metadata, and the Notion API pushes the final result into a structured database.
+
+Here is a Node.js script that ties those pieces together. It watches a local folder for new Markdown files dropped by MarkDownload, extracts frontmatter, and syncs the content to Notion:
+
+```javascript
+const chokidar = require('chokidar');
+const fs = require('fs');
+const path = require('path');
+const matter = require('gray-matter');
+const { Client } = require('@notionhq/client');
+
+const notion = new Client({ auth: process.env.NOTION_KEY });
+const WATCH_DIR = path.join(process.env.HOME, 'Downloads', 'clips');
+
+chokidar.watch(WATCH_DIR, { ignoreInitial: true }).on('add', async (filePath) => {
+  const raw = fs.readFileSync(filePath, 'utf8');
+  const parsed = matter(raw);
+
+  await notion.pages.create({
+    parent: { database_id: process.env.CLIP_DATABASE_ID },
+    properties: {
+      Name: { title: [{ text: { content: parsed.data.title || path.basename(filePath, '.md') } }] },
+      URL:  { url: parsed.data.url || '' },
+      Tags: { multi_select: (parsed.data.tags || []).map(t => ({ name: t })) }
+    },
+    children: [{
+      object: 'block',
+      type: 'paragraph',
+      paragraph: { rich_text: [{ type: 'text', text: { content: parsed.content.slice(0, 2000) } }] }
+    }]
+  });
+
+  console.log('Synced:', filePath);
+});
+```
+
+Run this as a background process with `pm2` or a LaunchAgent on macOS and your clipping pipeline becomes fully hands-off. Every Markdown file MarkDownload saves fires the sync automatically.
+
+## Metadata Enrichment Before Saving
+
+Raw clipped content rarely has enough context to be useful six months later. Before the content lands in its final destination, enriching it with structured metadata dramatically improves searchability and relevance.
+
+At minimum, every clipped item should carry:
+
+- **Source domain** — filtered at query time to find all clips from a specific site
+- **Reading time estimate** — `Math.ceil(wordCount / 200)` gives a rough minute estimate
+- **Content type tag** — `article`, `docs`, `thread`, `paper`, `video-transcript`
+- **Project tag** — which active project this clip is relevant to
+
+You can automate this enrichment with a simple preprocessing step. The following function runs before the Notion push and fills in missing fields:
+
+```javascript
+function enrichClip(clip) {
+  const words = clip.content.split(/\s+/).length;
+  const domain = new URL(clip.url).hostname.replace('www.', '');
+
+  return {
+    ...clip,
+    domain,
+    readingTime: Math.ceil(words / 200),
+    contentType: detectType(clip.url, clip.title),
+    project: inferProject(clip.tags)
+  };
+}
+
+function detectType(url, title) {
+  if (url.includes('github.com'))    return 'docs';
+  if (url.includes('reddit.com'))    return 'thread';
+  if (url.includes('arxiv.org'))     return 'paper';
+  if (/\b(how to|tutorial|guide)\b/i.test(title)) return 'article';
+  return 'article';
+}
+```
+
+This pattern keeps your database clean without requiring manual tagging for every clip.
+
+## Handling Code-Heavy Pages
+
+Technical documentation pages present a specific challenge: nested code blocks, syntax highlighting markup, and pre-formatted text often survive poorly through generic HTML-to-Markdown converters. Both MarkDownload and Web Clipper handle this better than Notion's native clipper, but there are edge cases worth knowing.
+
+For GitHub READMEs, the cleanest workflow is skipping the browser extension entirely and pulling content directly through the GitHub API:
+
+```bash
+# Fetch README as Markdown via GitHub API
+curl -s -H "Accept: application/vnd.github.v3.raw" \
+  "https://api.github.com/repos/owner/repo/contents/README.md" \
+  -H "Authorization: Bearer YOUR_GITHUB_TOKEN" \
+  > clipped-readme.md
+```
+
+For Stack Overflow answers, MarkDownload's CSS selector targeting lets you isolate the accepted answer div and skip the noise of comments and navigation:
+
+```json
+{
+  "selectors": {
+    "article": ".accepted-answer .answercell .s-prose",
+    "exclude": [".comments-list", ".vote-count-post"]
+  }
+}
+```
+
+Configuring targeted selectors per domain takes an hour upfront but dramatically improves clip quality for the 10-15 sites you visit most.
+
 ## Choosing the Right Alternative
 
 The best Notion Web Clipper alternative depends on your workflow requirements:
@@ -140,7 +245,40 @@ The best Notion Web Clipper alternative depends on your workflow requirements:
 
 For developers already invested in the Notion ecosystem, the custom API approach provides the best balance between convenience and control. You maintain Notion as your storage layer while gaining programmatic clipping capabilities that the official Web Clipper lacks.
 
-The key advantage of these alternatives is escaping vendor lock-in. By using open standards like Markdown, local storage, or APIs, your clipped content remains portable and accessible regardless of platform changes.
+## Migrating Away from Notion Web Clipper
+
+If you have an existing Notion database of clipped content, migrating it to a new system does not require starting from scratch. The Notion API exposes a database query endpoint that lets you export everything programmatically:
+
+```javascript
+async function exportClips(databaseId) {
+  const clips = [];
+  let cursor;
+
+  do {
+    const response = await notion.databases.query({
+      database_id: databaseId,
+      start_cursor: cursor,
+      page_size: 100
+    });
+
+    for (const page of response.results) {
+      clips.push({
+        title:   page.properties.Name?.title?.[0]?.text?.content || '',
+        url:     page.properties.URL?.url || '',
+        created: page.created_time
+      });
+    }
+
+    cursor = response.has_more ? response.next_cursor : undefined;
+  } while (cursor);
+
+  return clips;
+}
+```
+
+Pipe the output to a JSON file, then use a transform script to map it into whatever format your new tool expects. Raindrop.io accepts bulk CSV import; Web Clipper's local storage accepts individual Markdown files. The migration is a one-time operation that typically completes in under an hour for databases of a few thousand clips.
+
+The key advantage of these alternatives is escaping vendor lock-in. By using open standards like Markdown, local storage, or APIs, your clipped content remains portable and accessible regardless of platform changes. The official Notion Web Clipper is convenient, but convenience that locks data into a proprietary format has a cost that compounds over time.
 
 
 ## Related Reading

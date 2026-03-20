@@ -175,6 +175,66 @@ function updateStatus(enabled) {
 }
 ```
 
+## Testing Geo-Restricted APIs During Development
+
+One of the most common reasons developers reach for a VPN extension is testing APIs that return different responses based on the caller's location. A payment gateway may block certain countries, a CDN may serve different assets, or an A/B test may only activate in specific regions.
+
+The cleanest solution for this use case is SSH tunneling through a cloud VM in the target region. Most developers already have access to a $5/month VPS. Set up the tunnel once and point Chrome at it:
+
+```bash
+# Open a SOCKS5 tunnel through a remote server in the target region
+ssh -D 1080 -C -q -N user@your-remote-server.com
+```
+
+Then launch Chrome with that tunnel as the proxy for a single session without affecting your main browser profile:
+
+```bash
+# macOS — open a separate Chrome instance using the tunnel
+open -na "Google Chrome" --args \
+  --user-data-dir="/tmp/chrome-proxy-test" \
+  --proxy-server="socks5://localhost:1080"
+```
+
+This gives you a clean, isolated browser context that routes entirely through the remote server. When you close the SSH connection, Chrome falls back to your normal network. No extension needed, no third-party server involved.
+
+## Evaluating Free Extensions That Actually Work
+
+If you need a quick solution without infrastructure overhead, a handful of free extensions hold up under scrutiny for light use.
+
+**Windscribe** offers 10 GB per month on the free tier with a Chrome extension that covers browser traffic only. Windscribe publishes audited no-log policies and the extension does not inject ads into pages. The 10 GB limit is adequate for research sessions and API testing but insufficient for streaming.
+
+**Proton VPN Free** does not impose a data cap, which is unusual among free tiers. The free plan limits you to servers in three countries and lower speeds, but for a developer who just needs a different exit IP occasionally, it is the most defensible free option. The browser extension routes only browser traffic; system-level traffic bypasses it.
+
+**1.1.1.1 (Cloudflare WARP)** is technically a privacy proxy rather than a VPN. It encrypts your DNS and routes traffic through Cloudflare's network but does not change your visible IP address. For developers who care primarily about preventing ISP-level traffic analysis on public networks, WARP is the most lightweight option with near-zero performance overhead.
+
+What all three have in common: they publish transparency reports, do not monetize through data sales, and their extensions request minimal browser permissions. Extensions that request `tabs`, `browsing history`, or `cookies` permissions alongside `proxy` permissions are a red flag.
+
+## DNS Leak Testing and Verification
+
+Installing an extension and assuming it works is a mistake. You must verify that your actual IP and DNS resolver are being masked, not just the extension's status icon.
+
+The verification workflow takes under two minutes:
+
+```bash
+# Step 1: Record your baseline IP
+curl -s https://api.ipify.org
+
+# Step 2: Record your baseline DNS resolver
+dig +short myip.opendns.com @resolver1.opendns.com
+
+# Step 3: Enable your VPN extension
+
+# Step 4: Verify IP has changed
+curl -s https://api.ipify.org
+
+# Step 5: Verify DNS resolver has changed (should differ from step 2)
+dig +short myip.opendns.com @resolver1.opendns.com
+```
+
+If steps 4 and 5 return the same values as steps 1 and 2, the extension is not working regardless of what the UI shows.
+
+For WebRTC leak testing, visit a site like browserleaks.com while the extension is active and check whether your local IP appears under the WebRTC section. A properly functioning extension either blocks WebRTC entirely or routes it through the VPN tunnel. If your real LAN IP appears, the extension leaks.
+
 ## Security Considerations
 
 When evaluating VPN extensions, consider these factors:
@@ -187,11 +247,25 @@ When evaluating VPN extensions, consider these factors:
 
 For development purposes, using your own proxy server or configuring Chrome's built-in proxy settings provides the most transparency and control.
 
+## Chrome Extension Permissions Red Flags
+
+Beyond the proxy functionality itself, the permissions an extension declares in its manifest reveal its intentions. Before installing any VPN or proxy extension, open the Chrome Web Store listing, scroll to "Permissions," and look for:
+
+- `tabs` — the extension can read the URLs of every tab you have open
+- `history` — full access to your browsing history
+- `cookies` — can read and write cookies for any site
+- `webRequest` — can inspect all network requests (this one is required for legitimate VPNs, but combined with the above it is a data harvesting signal)
+- `nativeMessaging` — can communicate with software installed on your machine
+
+A proxy extension needs `proxy` and possibly `storage` to save settings. It does not need `history`, `cookies`, or `tabs`. If a free extension requests all of these, the proxy functionality is not the product — your browsing data is.
+
+You can audit any installed extension's active permissions directly in Chrome by navigating to `chrome://extensions`, clicking "Details" on the extension, and reviewing the "Permissions" section.
+
 ## Conclusion
 
 The "best" free VPN Chrome extension depends on your specific needs. For developers testing geo-restricted APIs, configuring Chrome's proxy settings or building a custom extension offers the most flexibility. For quick browser privacy, understanding the tradeoffs of free services helps you make informed decisions.
 
-For production use, consider investing in a reputable paid VPN service that doesn't log your data. The cost is minimal compared to the privacy risks of free alternatives that monetize through data harvesting.
+For production use, consider investing in a reputable paid VPN service that does not log your data. The cost is minimal compared to the privacy risks of free alternatives that monetize through data harvesting. For development workflows specifically, an SSH tunnel through a cloud VM costs nothing extra if you already maintain a VPS and gives you more control than any free extension.
 
 
 ## Related Reading

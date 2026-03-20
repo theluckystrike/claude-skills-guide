@@ -212,11 +212,219 @@ Return JSON: { "approved": true/false, "risk_level": "low|medium|high", "issues"
 
 Wire this into a GitHub Actions job that runs before Vercel's automatic deployment. If the gate blocks, cancel the deployment via the Vercel API. Use `supermemory` to store deployment metadata (commit SHA, gate result, deployment URL) for faster incident debugging later.
 
+## Handling Rollbacks and Deployment Failures
+
+When a production deployment goes wrong, speed matters. Vercel keeps every deployment permanently accessible, which means rollbacks are instant — but knowing which deployment to roll back to requires good tracking.
+
+Start by finding the last known-good deployment:
+
+```bash
+vercel ls --scope=your-team-name
+```
+
+This outputs a list of deployments with their URLs and statuses. Identify the last green deployment, then promote it to production:
+
+```bash
+vercel promote <deployment-url> --scope=your-team-name
+```
+
+That single command swaps production traffic back to the previous deployment without rebuilding anything. It completes in seconds.
+
+For automated rollback detection, add a health check job to your GitHub Actions workflow that runs immediately after production deployment:
+
+```yaml
+post-deploy-health-check:
+  needs: deploy-production
+  runs-on: ubuntu-latest
+  steps:
+    - name: Check production health endpoint
+      run: |
+        STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://your-app.vercel.app/api/health)
+        if [ "$STATUS" != "200" ]; then
+          echo "Health check failed with status $STATUS"
+          exit 1
+        fi
+```
+
+If this job fails, trigger an alert to your team and reference the last good deployment URL stored via `/supermemory`. Claude Code can pull that stored URL and issue the `vercel promote` command automatically during an incident response session.
+
+## Optimizing Build Performance for Large Next.js Apps
+
+As Next.js projects grow, build times on Vercel can balloon past 5 minutes. Several techniques keep builds fast.
+
+**Enable Turborepo caching.** If you are in a monorepo, Vercel natively integrates with Turborepo's remote cache. Add this to your `vercel.json`:
+
+```json
+{
+  "framework": "nextjs",
+  "buildCommand": "turbo run build --filter=web",
+  "installCommand": "npm install"
+}
+```
+
+**Limit the scope of type checking.** Full `tsc --noEmit` runs on every file during builds. For faster CI, check only changed files:
+
+```bash
+# In your deploy.sh pre-check block
+git diff --name-only origin/main...HEAD | grep '\.tsx\?$' | xargs npx tsc --noEmit --allowJs
+```
+
+This scopes the type checker to the diff rather than the entire project. For projects with 200+ components the time savings are significant.
+
+**Split your next.config.js for environment awareness.** Heavy plugins like `@next/bundle-analyzer` should never run during production builds:
+
+```javascript
+/** @type {import('next').NextConfig} */
+const baseConfig = {
+  reactStrictMode: true,
+  images: {
+    domains: ['your-image-cdn.com'],
+  },
+  env: {
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+  },
+}
+
+const withBundleAnalyzer = process.env.ANALYZE === 'true'
+  ? require('@next/bundle-analyzer')({ enabled: true })
+  : (config) => config
+
+module.exports = withBundleAnalyzer(baseConfig)
+```
+
+Run analysis locally with `ANALYZE=true npm run build` and never accidentally include it in Vercel's build environment.
+
+## Managing Multiple Environments: Preview, Staging, and Production
+
+Most production Next.js apps need three distinct environments, not two. Vercel's native preview/production split handles two, but staging requires an explicit deployment target.
+
+Set up a dedicated `staging` branch in your repository and configure a separate Vercel project for it:
+
+```bash
+# Create a staging project linked to the same repo
+vercel link --project=my-app-staging
+vercel env add NEXT_PUBLIC_API_URL staging https://api-staging.your-domain.com
+```
+
+In your GitHub Actions workflow, route branch deployments to the correct project:
+
+```yaml
+deploy-staging:
+  if: github.ref == 'refs/heads/staging'
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v4
+    - run: npm ci && npm run build
+    - run: vercel --yes --prebuilt --prod
+      env:
+        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_STAGING_PROJECT_ID }}
+        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+```
+
+Now your staging branch deploys to the staging Vercel project with staging environment variables, while `main` deploys to production.
+
+Use `/supermemory` to track which feature branches are currently live on staging:
+
+```
+/supermemory
+Store: Staging currently running feature/payment-v2 (commit def456).
+Deployed 2026-03-20. Testing: checkout flow, webhook handling.
+```
+
+This makes handoffs between team members frictionless. Anyone picking up the incident or review can query context instantly rather than digging through Slack history.
+
+## Debugging Environment Variable Issues
+
+Environment variable problems are the most common source of Vercel deployment failures that pass locally. The key insight: Vercel distinguishes between build-time and runtime variables, and Next.js adds a third distinction with `NEXT_PUBLIC_` prefix variables that get inlined at build time.
+
+If a variable is working locally but undefined in production, check this hierarchy:
+
+1. Variables prefixed with `NEXT_PUBLIC_` are baked into the JavaScript bundle at build time. If you change them in Vercel's dashboard, you must redeploy — not just restart.
+2. Server-side variables (without the prefix) are available to API routes and `getServerSideProps` at runtime. These update without a rebuild.
+3. Variables set in `.env.local` are never deployed by Vercel by design. Do not rely on them for production values.
+
+To audit your production environment interactively:
+
+```bash
+vercel env ls production
+```
+
+To pull your current production variables into a local file for comparison:
+
+```bash
+vercel env pull .env.production.local
+```
+
+Never commit `.env.production.local`. Add it to `.gitignore` immediately after generating it:
+
+```bash
+echo ".env.production.local" >> .gitignore
+```
+
+When a build fails due to a missing variable, the Vercel build log will typically surface `undefined` values deep in the output. Use Claude Code to scan build logs and identify the root cause quickly:
+
+```
+Read the build log output below and identify which environment variables
+are undefined at build time, then list the exact Vercel CLI commands
+needed to add them:
+[paste build log]
+```
+
+## Automating Lighthouse Audits on Preview Deployments
+
+Every PR preview is an opportunity to catch performance regressions before they reach production. Integrate Lighthouse CI directly into your Vercel preview workflow:
+
+```yaml
+lighthouse-audit:
+  needs: deploy-preview
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v4
+    - name: Run Lighthouse CI
+      uses: treosh/lighthouse-ci-action@v10
+      with:
+        urls: ${{ needs.deploy-preview.outputs.preview-url }}
+        budgetPath: ./lighthouse-budget.json
+        uploadArtifacts: true
+```
+
+Define your performance budget in `lighthouse-budget.json`:
+
+```json
+[
+  {
+    "path": "/*",
+    "timings": [
+      { "metric": "first-contentful-paint", "budget": 2000 },
+      { "metric": "largest-contentful-paint", "budget": 3000 },
+      { "metric": "total-blocking-time", "budget": 200 }
+    ],
+    "resourceSizes": [
+      { "resourceType": "script", "budget": 300 },
+      { "resourceType": "total", "budget": 600 }
+    ]
+  }
+]
+```
+
+Use the `/frontend-design` skill before merging any PR that touches layout or component structure:
+
+```
+/frontend-design
+Audit the Lighthouse report below for LCP regressions. The previous
+baseline was LCP: 1.8s. Identify which components or routes degraded
+and suggest targeted fixes:
+[paste Lighthouse JSON output]
+```
+
+This pattern catches real-world performance regressions that unit tests miss entirely.
+
 ## Wrapping Up
 
 This workflow transforms Vercel deployments from manual processes into automated, reliable operations. Claude Code acts as your intelligent deployment assistant, validating code before release and maintaining deployment history through `/tdd`, `/frontend-design`, `/pdf`, and `/supermemory`.
 
-Start with the preview deployment workflow, then gradually add production safeguards as your project matures.
+Start with the preview deployment workflow, then gradually add production safeguards as your project matures. Once the core pipeline is solid, layer in the performance budgeting, multi-environment routing, and rollback automation covered here to handle production-grade requirements without adding operational overhead.
 
 ---
 
