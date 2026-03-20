@@ -7,6 +7,7 @@ author: theluckystrike
 permalink: /best-dns-chrome-speed/
 ---
 
+{% raw %}
 DNS (Domain Name System) resolution is often the hidden bottleneck in browser performance. When Chrome visits a website, it must translate human-readable domain names into IP addresses before establishing a connection. This process can add measurable latency to page load times, especially on networks with slow or congested DNS resolvers.
 
 For developers and power users, Chrome provides several settings to optimize DNS behavior. This guide covers practical configurations that can reduce resolution time and improve overall browsing speed.
@@ -143,3 +144,4 @@ Optimizing DNS settings in Chrome involves balancing speed, privacy, and control
 The key is to measure your baseline performance before making changes, then test incrementally to identify which configurations provide the most improvement for your specific workflow.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
