@@ -5,6 +5,10 @@ description: "Learn how to use Chrome extensions to remove image backgrounds, wi
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-remove-image-background/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
