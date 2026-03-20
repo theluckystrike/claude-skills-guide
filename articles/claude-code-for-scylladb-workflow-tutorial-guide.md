@@ -224,6 +224,51 @@ SELECT * FROM user_profiles WHERE user_id = 123e4567-e89b-12d3-a456-426614174000
 
 Claude Code transforms ScyllaDB database management from manual query construction to intelligent automation. By establishing proper connection patterns, implementing robust CRUD operations, and following best practices for performance, you can build reliable workflows that scale with your application needs. Start with the examples in this guide, then customize them to match your specific data models and business requirements.
 
+## Step-by-Step Guide: Building a Production ScyllaDB Workflow
+
+Here is a concrete approach to standing up a reliable ScyllaDB integration with Claude Code.
+
+**Step 1 — Model your access patterns before creating tables.** ScyllaDB's performance depends entirely on how your partition keys match your query patterns. Before writing a single CQL statement, list every query your application needs to execute. Claude Code takes this list and generates partition key recommendations that avoid hot spots while supporting your access patterns — including secondary index suggestions for low-cardinality filter fields.
+
+**Step 2 — Set up a local ScyllaDB cluster with Docker.** Use a Docker Compose file with a three-node ScyllaDB cluster to mimic production replication locally. Claude Code generates the compose file with proper memory limits, seed node configuration, and a health check that waits until the cluster reaches UN (Up Normal) status before your application containers start.
+
+**Step 3 — Create keyspaces with environment-aware replication factors.** Development clusters use SimpleStrategy with a replication factor of 1 for speed. Production clusters use NetworkTopologyStrategy with a replication factor of 3. Claude Code generates a migration script that creates keyspaces with the correct strategy based on an environment variable, so the same code runs correctly in both contexts.
+
+**Step 4 — Generate prepared statements for all queries.** Prepared statements in ScyllaDB are cached on the cluster and avoid repeated parsing overhead. Claude Code generates a StatementRegistry class that prepares all your CQL statements at startup, validates them against the live schema, and exposes typed execute methods that prevent parameter type mismatches.
+
+**Step 5 — Add token-aware load balancing.** Configure your driver's load balancing policy to be token-aware, so queries are routed directly to the coordinator node that owns the data rather than making an extra network hop. Claude Code generates the driver configuration with token-aware routing enabled and a local datacenter preference for multi-datacenter deployments.
+
+## Common Pitfalls
+
+**Using ALLOW FILTERING without understanding the cost.** ALLOW FILTERING executes a full table scan, which is catastrophic at scale. It works fine in development with small datasets but causes multi-second query times in production. Claude Code flags every query that requires ALLOW FILTERING and generates alternative table designs or materialized views that serve the same query without the scan.
+
+**Creating too many secondary indexes.** Secondary indexes in ScyllaDB create a hidden table per index, which doubles your write load for each indexed column. For high-cardinality columns accessed frequently, a global secondary index or a separate lookup table with a carefully chosen partition key performs better. Claude Code analyzes your index usage patterns and recommends consolidations.
+
+**Unbounded partition growth.** Time-series data inserted with a single partition key (like a user ID) and a time-based clustering key can create partitions with millions of rows that degrade query performance. Claude Code recommends bucket strategies — for example, partitioning by user_id and week — that keep individual partitions manageable while still supporting range queries.
+
+**Not setting TTLs on ephemeral data.** Session tokens, cache entries, and temporary workflow state that are never explicitly deleted accumulate indefinitely. Claude Code generates the default_time_to_live table option and the per-insert USING TTL syntax so time-limited data expires automatically without requiring a background cleanup job.
+
+**Ignoring tombstones.** When data is deleted in ScyllaDB, deletion markers called tombstones are written and accumulate until compaction. Heavy delete workloads can slow reads significantly as ScyllaDB scans through tombstones before finding live data. Claude Code recommends TTL-based expiration over explicit deletes for high-deletion workloads and generates compaction strategy tuning for tables with expected deletion patterns.
+
+## Best Practices
+
+**Use lightweight transactions sparingly.** IF NOT EXISTS and conditional updates use Paxos consensus, which requires multiple round trips and is 5-10x slower than regular writes. Reserve them for truly idempotent operations like ensuring a user ID is unique. Claude Code generates idempotent alternatives using application-level deduplication for cases where lightweight transactions are not strictly necessary.
+
+**Monitor partition sizes and row counts.** Large partitions are the most common source of ScyllaDB performance problems. Claude Code generates a monitoring query that samples partition sizes using the system.size_estimates table and alerts when any partition exceeds a configurable threshold — typically 100MB or 100,000 rows.
+
+**Use client-side batching for related writes, not server-side batching.** Server-side BATCH statements in ScyllaDB are not atomic across partitions — they only add round-trip overhead. For writes to the same partition, a logged batch provides atomicity. For writes to different partitions, unlogged batches save no overhead. Claude Code generates the appropriate batch type for each write pattern and explains why.
+
+**Test failover with chaos engineering.** Stop individual nodes in your test cluster and verify your application continues to read and write with acceptable latency degradation. Claude Code generates the chaos test script that kills nodes, measures latency during recovery, and verifies data consistency after the node rejoins.
+
+## Integration Patterns
+
+**Django with the ScyllaDB Django backend.** A Django ORM backend exists for ScyllaDB. Claude Code generates the Django settings configuration, model definitions with proper partition key declarations, and the migration workflow that creates tables without the standard makemigrations and migrate flow.
+
+**FastAPI background tasks.** For FastAPI applications that need to log events to ScyllaDB without adding latency to API responses, Claude Code generates the background task pattern using FastAPI's BackgroundTasks with a connection pool that is shared across requests without blocking the event loop.
+
+**Kafka consumer persistence.** For Kafka consumers that need to persist processed events to ScyllaDB, Claude Code generates the idempotent write pattern that uses the Kafka message offset as part of the ScyllaDB partition key, ensuring that replayed messages do not create duplicate records.
+
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
