@@ -210,4 +210,100 @@ The .NET skills work well with other Claude skills. The pdf skill helps generate
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
+
+## Building a Complete CLAUDE.md for ASP.NET Core
+
+A project-level `CLAUDE.md` at the repository root gives Claude Code persistent context about your codebase without requiring skill invocations. Here is a production-ready example for an ASP.NET Core API project:
+
+```markdown
+# CLAUDE.md — MyApp API
+
+## Project Overview
+This is an ASP.NET Core 8 Web API for the MyApp platform. It uses Clean Architecture
+with CQRS via MediatR, Entity Framework Core 8 with PostgreSQL, and Serilog for structured logging.
+
+## Build and Run
+dotnet build src/MyApp.sln
+dotnet run --project src/MyApp.Api
+
+## Testing
+dotnet test                          # run all tests
+dotnet test --filter Category=Unit   # unit tests only
+dotnet test --filter Category=Integration  # requires local postgres
+
+## Code Conventions
+- Use records for DTOs and value objects
+- Use FluentValidation for all command/query validation
+- Commands use Result<T> return type from ErrorOr library
+- Never return domain entities from API controllers — always map to response DTOs
+- Follow vertical slice structure: Features/FeatureName/Command|Query files
+
+## Database
+- Migrations live in src/MyApp.Infrastructure/Migrations
+- Create migration: dotnet ef migrations add MigrationName -p src/MyApp.Infrastructure -s src/MyApp.Api
+- Apply migration: dotnet ef database update -p src/MyApp.Infrastructure -s src/MyApp.Api
+
+## Key Patterns
+### Adding a New Feature
+1. Create Feature folder under src/MyApp.Application/Features/FeatureName
+2. Add command or query class implementing IRequest<Result<T>>
+3. Add handler implementing IRequestHandler<Command, Result<T>>
+4. Add FluentValidation validator
+5. Add controller endpoint in appropriate controller or a dedicated minimal API
+
+### Error Handling
+- Use ErrorOr.Error types for domain errors
+- Global exception handler in MyApp.Api converts unhandled exceptions to ProblemDetails
+- Never throw exceptions for expected business rule violations — use ErrorOr
+
+## What NOT to Do
+- Do not use repository pattern — use DbContext directly in handlers
+- Do not add service layers between handlers and DbContext
+- Do not use AutoMapper — write explicit mapping methods
+```
+
+## Workflow Tips for .NET Projects
+
+### Using Claude Code for Migrations
+
+When you add a new property to a domain entity, describe the change to Claude Code and ask it to generate both the migration and update any affected queries:
+
+```
+I added a nullable DateTimeOffset? DeletedAt property to the User entity for soft deletes.
+Generate:
+1. The EF Core migration
+2. Update GetUsersQuery to filter out soft-deleted users
+3. A new RestoreUserCommand for undeleting a user
+4. Unit tests for the restore command
+```
+
+Claude Code reads your existing code structure and generates components that match your conventions — including the correct namespace, FluentValidation placement, and Result<T> return patterns.
+
+### Debugging Integration Tests
+
+ASP.NET Core integration tests using `WebApplicationFactory` often fail in subtle ways. Describe the failure to Claude Code with the full stack trace and test setup:
+
+```
+My integration test for POST /api/users is returning 500 instead of 201.
+The test uses WebApplicationFactory with an in-memory database.
+Here is the test setup and the error: [paste error]
+```
+
+Common issues Claude Code surfaces quickly: missing service registrations in test configuration, EF Core not seeding required lookup data, JWT authentication not bypassed for test requests, and response body deserialization failing due to JSON naming policy mismatches.
+
+## Combining Skills for Full-Stack .NET Development
+
+When building features that span backend API and Blazor frontend, invoke skills in sequence:
+
+```
+/dotnet-api
+Create the backend endpoint for user profile updates: PUT /api/users/{id}/profile
+
+/blazor
+Create the Blazor component that calls the new profile update endpoint,
+with form validation matching the server-side validation rules
+```
+
+The `dotnet-api` skill ensures consistent response shapes and error handling on the server side. The `blazor` skill ensures the component handles loading states, error display, and form validation in the project's established style — rather than defaulting to generic patterns.
+
 {% endraw %}
