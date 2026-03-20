@@ -233,6 +233,51 @@ This workflow demonstrates how TypeScript clients can orchestrate multiple Claud
 
 Building a TypeScript API client for Claude Code gives you programmatic control over AI-powered workflows. The patterns covered here—authentication, skill composition, tool handling, and error recovery—provide a solid foundation for both simple integrations and complex production systems.
 
+## Step-by-Step Guide: Building a Production TypeScript Client
+
+Here is a concrete workflow for taking a TypeScript API client from prototype to production-ready integration.
+
+**Step 1 — Scaffold the project with strict TypeScript settings.** Start with `npx tsc --init` and enable `strict`, `noImplicitAny`, and `exactOptionalPropertyTypes` in your tsconfig. Claude Code generates a tsconfig.json tuned for Node.js API projects that catches common type errors at compile time rather than runtime.
+
+**Step 2 — Create a centralized client factory.** Rather than instantiating `Anthropic` directly in every module, create a singleton factory that validates configuration, sets defaults, and exposes the configured client. Claude Code generates this factory with Zod schema validation so misconfigured environments fail fast with descriptive errors.
+
+**Step 3 — Define your skill registry.** Create a TypeScript module that exports typed skill definitions mapping skill names to their system prompts, expected input shapes, and output parsers. This registry becomes the single source of truth—when skill prompts change, you update one file and the compiler flags every call site that needs attention.
+
+**Step 4 — Add request/response logging middleware.** Wrap the Anthropic client with a thin middleware layer that logs request parameters, token usage, latency, and error codes to your observability platform. Claude Code generates the wrapper using the decorator pattern, keeping logging concerns separate from business logic.
+
+**Step 5 — Implement integration tests with recorded fixtures.** Record real API responses using `nock` or `msw` and use them as fixtures in your test suite. Claude Code generates the fixture recording script and the test harness, so your CI pipeline runs without hitting the live API while still testing real response shapes.
+
+## Common Pitfalls
+
+**Not handling streaming responses correctly.** When using `client.messages.stream()`, you must handle the async iterator properly. Forgetting to await the stream completion or not handling backpressure causes incomplete responses. Claude Code generates stream handlers with proper error boundaries and cancellation support.
+
+**Sharing client instances across async contexts without isolation.** The Anthropic SDK client is stateless and safe to share, but per-request state like conversation history is not. Teams that attach message history to the shared client instance see conversation bleeding between unrelated requests. Claude Code generates a `ConversationSession` wrapper that keeps history isolated per session.
+
+**Hardcoding model identifiers.** Model names change with new releases. Hardcoding `claude-sonnet-4-20250514` throughout your codebase means a model upgrade requires a search-and-replace across dozens of files. Claude Code generates a constants module with version-aware model references and a migration guide for updating when new models ship.
+
+**Ignoring the `stop_reason` field.** When `stop_reason` is `max_tokens`, the response is truncated. Code that treats all responses as complete misses this signal and presents partial output to users. Claude Code generates response validators that check `stop_reason` and either request continuation or surface a clear error.
+
+**Not implementing circuit breakers for downstream failures.** If your TypeScript client is part of a larger service, unhandled API failures cascade into upstream timeouts. Claude Code generates a circuit breaker wrapper using the half-open pattern that stops sending requests when the API is degraded and resumes automatically when health is restored.
+
+## Best Practices
+
+**Version your skill definitions alongside your API version.** When Anthropic releases a new model, your skill system prompts may need tuning. Keep skill definitions in a versioned directory structure (`skills/v1/`, `skills/v2/`) and use feature flags to control which version your client loads. Claude Code generates the versioning scaffold and the feature flag integration.
+
+**Use TypeScript discriminated unions for response handling.** The Messages API returns different content block types. Instead of checking `.type === 'text'` everywhere, define a discriminated union and use exhaustive switch statements. The TypeScript compiler then flags unhandled content block types when new types are added.
+
+**Cache system prompts, not completions.** Skill system prompts are static text that can reach thousands of tokens. Cache the compiled system prompt string in memory rather than rebuilding it from templates on every request. This saves CPU and reduces the risk of template rendering bugs affecting production traffic.
+
+**Test with realistic token budgets.** Development testing with generous `max_tokens` values hides truncation bugs that surface in production when cost controls reduce the budget. Claude Code generates parameterized test suites that run the same prompts against multiple token budget configurations.
+
+## Integration Patterns
+
+**Next.js API routes.** Expose your TypeScript Claude client through Next.js API routes with proper streaming support. Claude Code generates the route handler using `Response.stream()` with the Vercel AI SDK's streaming helpers, enabling real-time token streaming to browser clients without buffering the full response server-side.
+
+**Nx monorepo shared libraries.** In a monorepo, extract your Claude client into a shared library package that multiple applications import. Claude Code generates the Nx library scaffold with proper peer dependency declarations so the Anthropic SDK is not bundled multiple times.
+
+**OpenTelemetry tracing.** Instrument your client with OpenTelemetry spans to track API latency, token usage, and error rates alongside your other services. Claude Code generates the instrumentation wrapper that creates spans for each API call and propagates trace context through the `x-request-id` header.
+
+
 ---
 
 
