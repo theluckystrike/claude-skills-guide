@@ -6,6 +6,10 @@ description: "Troubleshoot Chrome network service CPU spikes. Learn why Chrome u
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-network-service-cpu/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Network Service High CPU Usage: Causes and Solutions for Developers

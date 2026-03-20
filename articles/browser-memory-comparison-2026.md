@@ -6,6 +6,10 @@ description: "A practical comparison of browser memory usage in 2026. Learn whic
 date: 2026-03-15
 author: theluckystrike
 permalink: /browser-memory-comparison-2026/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Browser Memory Comparison 2026: A Developer and Power User Guide

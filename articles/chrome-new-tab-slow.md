@@ -6,6 +6,10 @@ description: "Experiencing chrome new tab slow issues? This guide covers common 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-new-tab-slow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome New Tab Slow: Causes and Fixes for Developers

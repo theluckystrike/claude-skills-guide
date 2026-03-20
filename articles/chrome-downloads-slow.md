@@ -5,6 +5,10 @@ description: "Troubleshoot and fix slow Chrome downloads with these developer-fo
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-downloads-slow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Downloads Slow: A Developer's Guide to Fixing Download Performance

@@ -6,6 +6,10 @@ description: "Learn how to build and use Chrome extensions for resizing images d
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-resize-images/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

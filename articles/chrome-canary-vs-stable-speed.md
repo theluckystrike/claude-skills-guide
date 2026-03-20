@@ -5,6 +5,10 @@ description: "Compare Chrome Canary vs Stable speed and performance. Learn which
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-canary-vs-stable-speed/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 Chrome offers multiple release channels, each serving different purposes for different users. The two most common options are Chrome Stable and Chrome Canary. While Stable provides reliability, Canary gives you access to the newest features before anyone else. But how do these channels compare in terms of speed and performance?

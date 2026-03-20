@@ -5,6 +5,10 @@ description: "Optimize Chrome DNS settings for faster page loads. Learn about DN
 date: 2026-03-15
 author: theluckystrike
 permalink: /best-dns-chrome-speed/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

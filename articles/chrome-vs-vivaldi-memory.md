@@ -6,6 +6,10 @@ description: "A practical comparison of Chrome and Vivaldi memory usage. Learn m
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-vs-vivaldi-memory/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

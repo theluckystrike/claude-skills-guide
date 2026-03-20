@@ -5,6 +5,10 @@ description: "Learn how to build Chrome extensions that edit images directly in 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-edit-images/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Edit Images: A Practical Guide for Developers

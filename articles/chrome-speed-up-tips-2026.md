@@ -6,6 +6,10 @@ description: "Practical Chrome speed up tips for 2026. Optimize browser performa
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-speed-up-tips-2026/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Speed Up Tips for Developers and Power Users in 2026

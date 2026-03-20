@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /chrome-extension-arrow-and-text-overlay-screenshot/
 reviewed: true
 score: 8
-categories: [chrome-extension, screenshot, tutorial]
+categories: [integrations, guides]
 tags: [chrome-extension, javascript, screenshot-api]
 ---
 

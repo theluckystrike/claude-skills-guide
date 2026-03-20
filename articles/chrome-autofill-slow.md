@@ -5,6 +5,10 @@ description: "Troubleshooting slow Chrome autofill performance. Learn why browse
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-autofill-slow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Autofill Slow: Causes and Solutions for Developers

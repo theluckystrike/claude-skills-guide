@@ -7,7 +7,7 @@ author: theluckystrike
 permalink: /chrome-extension-keyword-density-checker/
 reviewed: true
 score: 8
-categories: [tools, development]
+categories: [integrations, guides]
 tags: [chrome-extension, seo, keyword-research]
 ---
 

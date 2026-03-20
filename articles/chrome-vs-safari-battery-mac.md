@@ -6,6 +6,10 @@ description: "Compare Chrome and Safari battery consumption on Mac with practica
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-vs-safari-battery-mac/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 When you're working on a MacBook, browser choice directly impacts how long you can code before reaching for the charger. For developers running local servers, debugging tools, and multiple tabs, understanding the battery implications of Chrome versus Safari becomes essential for mobile workflows.

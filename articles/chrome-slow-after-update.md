@@ -5,6 +5,10 @@ description: "Learn why Chrome slows down after updates and how to fix it. Pract
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-slow-after-update/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Slow After Update: Causes and Solutions for Power Users

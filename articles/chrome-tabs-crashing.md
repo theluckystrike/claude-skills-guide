@@ -6,6 +6,10 @@ description: "Diagnose and fix Chrome tabs crashing issues with developer-focuse
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-tabs-crashing/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Tabs Crashing: A Developer's Guide to Diagnosis and Fixes

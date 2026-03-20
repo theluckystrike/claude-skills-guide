@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /fastest-browser-web-development/
 reviewed: true
 score: 8
-categories: [tools, development]
+categories: [integrations, guides]
 tags: [browsers, web-development, devtools]
 ---
 

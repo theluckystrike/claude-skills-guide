@@ -6,6 +6,10 @@ description: "Diagnose and fix WebGL performance issues in Chrome. Practical sol
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-webgl-slow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome WebGL Slow: Causes and Solutions for Developers

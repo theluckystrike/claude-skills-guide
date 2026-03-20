@@ -5,6 +5,10 @@ description: "A practical guide to the most useful Chrome extensions for develop
 date: 2026-03-15
 author: theluckystrike
 permalink: /best-developer-chrome-extensions-2026/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 Chrome extensions have become essential tools for developers who spend hours in the browser debugging, testing, and building web applications. The right set of extensions can dramatically improve your workflow, saving minutes throughout the day that add up to significant productivity gains.

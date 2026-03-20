@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /chrome-flags-faster-browsing/
 reviewed: true
 score: 8
-categories: [browsers]
+categories: [guides]
 tags: [chrome, browser-optimization]
 ---
 

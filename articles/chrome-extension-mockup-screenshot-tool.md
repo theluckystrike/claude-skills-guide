@@ -6,6 +6,10 @@ description: "Learn how to use and build chrome extension mockup screenshot tool
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-mockup-screenshot-tool/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Mockup Screenshot Tool: A Practical Guide

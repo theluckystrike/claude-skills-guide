@@ -5,6 +5,10 @@ description: "Learn how to build a Chrome extension that uses AI to summarize vi
 date: 2026-03-15
 author: theluckystrike
 permalink: /ai-video-summarizer-chrome-extension/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

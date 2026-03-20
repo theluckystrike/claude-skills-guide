@@ -6,6 +6,10 @@ description: "Practical solutions to reduce Chrome memory usage. Learn memory pr
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-using-too-much-ram-fix/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Using Too Much RAM Fix: A Developer's Guide

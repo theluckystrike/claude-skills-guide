@@ -5,6 +5,10 @@ description: "Discover proven solutions to fix slow printing in Google Chrome. T
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-print-slow-fix/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

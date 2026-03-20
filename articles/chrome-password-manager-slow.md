@@ -5,6 +5,10 @@ description: "Diagnose and resolve slow Chrome password manager performance with
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-password-manager-slow/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

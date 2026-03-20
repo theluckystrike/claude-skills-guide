@@ -5,6 +5,10 @@ description: "Practical solutions for fixing Chrome performance issues on MacBoo
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-slow-macbook-fix/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 Chrome running slowly on your MacBook can derail your entire workflow. Whether you're debugging applications, managing multiple development environments, or just browsing, a sluggish browser wastes time. This guide provides concrete fixes targeting developers and power users who need Chrome to perform reliably.

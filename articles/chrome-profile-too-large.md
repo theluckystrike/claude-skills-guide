@@ -6,6 +6,10 @@ description: "Diagnose and fix Chrome profile size issues. Learn what causes Chr
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-profile-too-large/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Profile Too Large: Practical Solutions for Developers

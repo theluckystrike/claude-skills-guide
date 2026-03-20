@@ -7,7 +7,7 @@ author: theluckystrike
 permalink: /chrome-vs-firefox-memory-2026/
 reviewed: true
 score: 8
-categories: [browser, performance, development-tools]
+categories: [integrations, guides]
 tags: [chrome, firefox, memory, performance]
 ---
 

@@ -5,6 +5,10 @@ description: "Practical solutions to fix Chrome browser freezing and unresponsiv
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-freezing-fix/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 Chrome freezing issues can bring productivity to a halt, especially when you're debugging web applications or managing multiple tabs during development work. This guide provides practical solutions for developers and power users experiencing Chrome freezes, covering command-line tools, browser flags, and systematic troubleshooting approaches.

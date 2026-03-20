@@ -5,6 +5,10 @@ description: "Learn how to create effective CLAUDE.md files that establish clear
 date: 2026-03-16
 author: theluckystrike
 permalink: /writing-claude-md-files-that-define-your-projects-api-versio/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

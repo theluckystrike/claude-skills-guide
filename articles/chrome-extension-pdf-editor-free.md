@@ -6,6 +6,10 @@ description: "Discover free Chrome extension PDF editors for developers and powe
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-pdf-editor-free/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 Chrome extension PDF editors have transformed how developers and power users handle document workflows directly in the browser. Rather than switching between applications or purchasing expensive software, you can now edit, annotate, and manipulate PDF files without leaving Chrome. This guide explores free Chrome extension PDF editor options and provides practical insights for integrating them into development workflows.

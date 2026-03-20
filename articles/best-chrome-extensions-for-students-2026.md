@@ -7,7 +7,7 @@ author: theluckystrike
 permalink: /best-chrome-extensions-for-students-2026/
 reviewed: true
 score: 8
-categories: [tools]
+categories: [integrations]
 tags: [chrome, extensions, productivity]
 ---
 

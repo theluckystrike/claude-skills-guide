@@ -5,6 +5,10 @@ description: "Learn how to diagnose and fix Chrome browser high CPU usage with p
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-high-cpu-fix/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 Chrome consuming excessive CPU can disrupt your workflow, drain your laptop battery, and make even simple tasks feel sluggish. For developers and power users running multiple tabs, heavy web applications, or browser-based development tools, high CPU usage becomes a common frustration. This guide covers practical diagnostic steps and fixes to bring Chrome back to reasonable resource levels.
