@@ -18,9 +18,21 @@ Kubernetes resource limits control how much CPU and memory your containers can u
 
 ## Why Resource Limits Matter
 
-Without proper resource limits, your pods can consume excessive cluster resources, causing instability for other workloads.设置过低的限制会导致应用程序崩溃，而设置过高则浪费宝贵的集群资源。
+Without proper resource limits, your pods can consume excessive cluster resources, causing instability for other workloads. Setting limits too low causes application crashes; setting them too high wastes valuable cluster resources and inflates your infrastructure costs.
 
 The key concepts are requests and limits. Requests define the minimum resources Kubernetes guarantees to your container. Limits cap the maximum resources a container can use. Striking the right balance requires understanding your application's actual needs.
+
+When you omit resource limits entirely, your containers run in a "best effort" QoS class. Kubernetes will evict these pods first under memory pressure. If you set requests but no limits, your pods run in the "burstable" class. Setting both requests and limits equal gives you the "guaranteed" QoS class — the highest priority for scheduling and eviction.
+
+```
+QoS Class    | Requests Set | Limits Set | Eviction Priority
+-------------|--------------|------------|-------------------
+Guaranteed   | Yes          | Yes (equal)| Last to evict
+Burstable    | Yes          | Optional   | Middle priority
+BestEffort   | No           | No         | First to evict
+```
+
+For production workloads, always aim for at least Burstable class. Critical services should target Guaranteed where feasible.
 
 ## Setting Resource Limits in Your Pod Specification
 
@@ -46,11 +58,42 @@ spec:
 
 In this example, the container requests 128MB memory and 100 millicpus (0.1 CPU cores). The limits cap memory at 256MB and CPU at 500m (0.5 cores). Kubernetes uses these values to schedule pods on appropriate nodes.
 
+CPU is a compressible resource — when a container exceeds its CPU limit, it gets throttled but keeps running. Memory is incompressible — when a container exceeds its memory limit, the kernel kills it with an OOMKilled exit code. This distinction is crucial when deciding how conservatively to set each limit type.
+
+## Understanding CPU Units
+
+CPU values in Kubernetes can be confusing. Here is a quick reference:
+
+```
+Value     | Meaning
+----------|------------------------------------
+1         | 1 full CPU core
+500m      | 500 millicpus = 0.5 cores
+250m      | 250 millicpus = 0.25 cores
+100m      | 100 millicpus = 0.1 cores
+2000m     | 2000 millicpus = 2 cores (same as "2")
+```
+
+The millicpu unit is useful because most microservices need fractions of a core at idle. A Node.js API might idle at 5-10m and spike to 200m under load. Setting the request to 50m and the limit to 500m is perfectly reasonable and reflects real-world usage.
+
 ## Using Claude Code to Generate Resource Configurations
 
-Claude Code can help you generate appropriate resource configurations based on your application characteristics. By describing your workload type—whether it's a REST API, background worker, or data processing job—you can get tailored recommendations.
+Claude Code can help you generate appropriate resource configurations based on your application characteristics. By describing your workload type — whether it's a REST API, background worker, or data processing job — you can get tailored recommendations.
 
 For example, a web API typically needs more CPU for request handling, while a batch processing job might need higher memory for data manipulation. When working with Claude Code, provide context about your workload to receive more accurate configurations.
+
+A practical prompt pattern that works well with Claude Code:
+
+```
+"Generate a Kubernetes Deployment manifest for a Node.js REST API that:
+- Serves ~500 requests/minute at peak
+- Connects to a PostgreSQL database
+- Includes health check endpoints at /healthz
+- Should use 3 replicas
+- Needs appropriate resource limits for a mid-size production cluster"
+```
+
+The more context you provide — runtime, traffic patterns, observed memory usage — the more accurate the generated configuration will be. Claude Code can also help you reason through the tradeoffs between different limit settings by asking follow-up questions about your cluster node sizes and other workloads sharing the namespace.
 
 ## Practical Examples for Common Workloads
 
@@ -96,17 +139,19 @@ resources:
 
 Database containers need generous memory allocations for caching and query processing. CPU limits can be higher since database operations are often CPU-intensive.
 
-## Claude Code Skills That Enhance Kubernetes Workflows
+### Sidecar Container (Log Shipper or Agent)
 
-Several Claude skills can improve your Kubernetes resource management:
+```yaml
+resources:
+  requests:
+    memory: "32Mi"
+    cpu: "10m"
+  limits:
+    memory: "128Mi"
+    cpu: "100m"
+```
 
-The **pdf** skill helps you generate documentation for your resource configurations. You can create deployment guides or architecture documents in PDF format for team sharing.
-
-When implementing test-driven development with the **tdd** skill, you can write tests that verify your application behavior under different resource constraints. This ensures your code handles OOM (out of memory) situations gracefully.
-
-The **frontend-design** skill indirectly supports Kubernetes work by helping you build monitoring dashboards that visualize resource usage. These dashboards help teams understand consumption patterns.
-
-For maintaining historical data about your configurations, the **supermemory** skill stores and retrieves context about past resource limit decisions. This helps teams learn from previous tuning efforts.
+Sidecar containers like Fluentd or Datadog agents should be given tight limits so they do not compete with your main application container. These processes are generally predictable and tolerate throttling well.
 
 ## Configuring Limits for Deployments
 
@@ -143,6 +188,31 @@ spec:
 
 Deployments apply the same resource limits to all replica pods automatically. This ensures consistent resource allocation across your application instances.
 
+With 3 replicas using the configuration above, your Deployment will reserve 3 x 256Mi = 768Mi of memory and 3 x 200m = 600m CPU across the cluster. Always account for total replica count when estimating cluster capacity requirements.
+
+## Using LimitRange to Enforce Namespace Defaults
+
+For teams where developers might forget to set resource limits, LimitRange objects enforce namespace-wide defaults:
+
+```yaml
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: default-limits
+  namespace: production
+spec:
+  limits:
+  - default:
+      cpu: "500m"
+      memory: "256Mi"
+    defaultRequest:
+      cpu: "100m"
+      memory: "128Mi"
+    type: Container
+```
+
+Any container deployed to the `production` namespace without explicit resource settings will automatically receive these defaults. This prevents BestEffort pods from appearing in production and protects neighboring workloads from runaway containers.
+
 ## Monitoring and Tuning Your Limits
 
 After deployment, monitor actual resource usage to refine your limits. Tools like kubectl top show current consumption:
@@ -151,13 +221,43 @@ After deployment, monitor actual resource usage to refine your limits. Tools lik
 kubectl top pod api-deployment-abc123
 ```
 
+For namespace-wide visibility:
+
+```bash
+kubectl top pods -n production --sort-by=memory
+kubectl top pods -n production --sort-by=cpu
+```
+
 Compare actual usage against your limits. If containers consistently hit their limits, consider increasing them. If they rarely approach their limits, you might be overallocating and should consider reducing them.
 
-The goal is to set limits as close to actual usage as possible while maintaining headroom for traffic spikes and error conditions. This maximizes cluster efficiency without risking application stability.
+A useful pattern is to check utilization ratios. If a container requests 256Mi but only ever uses 80Mi at peak, your request is 3x larger than needed — that reserved memory cannot be used by other workloads:
+
+```bash
+# Get actual vs requested memory for all pods in a namespace
+kubectl top pods -n production --no-headers | while read name cpu mem; do
+  echo "$name: actual=${mem}"
+done
+```
+
+For sustained analysis, deploy Prometheus and Grafana alongside your workloads, or use the Kubernetes Metrics Server. The goal is to set limits as close to actual usage as possible while maintaining headroom for traffic spikes and error conditions. This maximizes cluster efficiency without risking application stability.
 
 ## Handling Memory Limits Gracefully
 
 When containers exceed their memory limits, Kubernetes terminates them with an OOMKilled status. Your application should handle SIGTERM signals for graceful shutdown. Implement proper shutdown hooks to complete in-flight requests before termination.
+
+For Node.js applications:
+
+```javascript
+process.on('SIGTERM', () => {
+  console.log('SIGTERM received, shutting down gracefully');
+  server.close(() => {
+    console.log('HTTP server closed');
+    process.exit(0);
+  });
+  // Force exit after 10 seconds
+  setTimeout(() => process.exit(1), 10000);
+});
+```
 
 For Java applications, set JVM heap sizes within your container memory limits. A common pattern:
 
@@ -167,7 +267,58 @@ env:
   value: "-XX:MaxHeapSize=384m -XX:ActiveProcessorCount=1"
 ```
 
-This prevents the JVM from exceeding your container's memory allocation.
+This prevents the JVM from exceeding your container's memory allocation. The JVM defaults to using a fraction of total system memory, which in a container context means it looks at node memory rather than container limits — leading to OOMKills. Always set explicit heap bounds for JVM workloads.
+
+For Go applications, you can limit the garbage collector's memory target:
+
+```yaml
+env:
+- name: GOMEMLIMIT
+  value: "400MiB"
+```
+
+This Go runtime environment variable (introduced in Go 1.19) tells the GC to run more aggressively before you approach the container limit, reducing the chance of an OOMKill under burst conditions.
+
+## Horizontal Pod Autoscaling with Resource Limits
+
+Resource requests are the basis for HPA (Horizontal Pod Autoscaler) calculations. The HPA measures CPU or memory usage as a percentage of the container's request value:
+
+```yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: api-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: api-deployment
+  minReplicas: 2
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+```
+
+This HPA scales the deployment when average CPU usage across pods exceeds 70% of their CPU request. If your request is set too low, the HPA will scale aggressively even when actual load is modest. If set too high, the HPA will be slow to respond to genuine traffic spikes.
+
+Accurate CPU requests are therefore not just about cost efficiency — they directly control your autoscaling behavior.
+
+## Claude Code Skills That Enhance Kubernetes Workflows
+
+Several Claude skills can improve your Kubernetes resource management:
+
+The **pdf** skill helps you generate documentation for your resource configurations. You can create deployment guides or architecture documents in PDF format for team sharing.
+
+When implementing test-driven development with the **tdd** skill, you can write tests that verify your application behavior under different resource constraints. This ensures your code handles OOM (out of memory) situations gracefully.
+
+The **frontend-design** skill indirectly supports Kubernetes work by helping you build monitoring dashboards that visualize resource usage. These dashboards help teams understand consumption patterns.
+
+For maintaining historical data about your configurations, the **supermemory** skill stores and retrieves context about past resource limit decisions. This helps teams learn from previous tuning efforts.
 
 ## Best Practices Summary
 
@@ -176,6 +327,14 @@ Start with requests based on baseline measurements. Set limits conservatively at
 Document your resource limit decisions. When you change limits, record the reasoning. This helps future maintainers understand why specific values were chosen.
 
 Regularly review and adjust limits as your application evolves. What works today might not suit your needs next quarter.
+
+Key rules to internalize:
+
+- **Never run production workloads without resource requests** — this protects the cluster from noisy neighbors
+- **Set memory limits conservatively** — OOMKills are always preferable to cascading node pressure
+- **Use LimitRange for namespace-level safety nets** — it catches configurations that slip through code review
+- **Align CPU requests with HPA thresholds** — your autoscaling behavior depends on accurate request values
+- **Test OOM behavior in staging** — deliberately trigger OOMKills to verify your application restarts cleanly
 
 ---
 

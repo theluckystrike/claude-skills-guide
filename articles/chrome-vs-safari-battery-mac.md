@@ -22,6 +22,8 @@ Chrome uses Blink, a Chromium-based engine that must balance cross-platform comp
 
 The fundamental difference lies in process isolation. Chrome spawns separate processes for each tab, extension, and GPU task. This architecture provides stability but consumes more energy when managing many concurrent processes. Safari uses a more aggressive approach to tab throttling and can pause background tabs entirely.
 
+Apple Silicon Macs have made this gap even more pronounced. Safari is compiled with specific optimizations for the M1/M2/M3 chip's efficiency cores. When you browse in Safari, the OS can delegate rendering work to those low-power cores, preserving the performance cores for your actual dev tools. Chrome has improved its Apple Silicon support significantly, but it still cannot reach the same depth of hardware integration.
+
 ## Measuring Battery Impact
 
 You can measure browser power consumption directly on your Mac. The `powermetrics` command provides detailed energy usage data:
@@ -29,6 +31,14 @@ You can measure browser power consumption directly on your Mac. The `powermetric
 ```bash
 sudo powermetrics -i 1000 --gpu | grep -A 5 "GPU Active"
 ```
+
+For a more granular view that logs power use over time, redirect the output to a file:
+
+```bash
+sudo powermetrics -i 2000 -n 30 --samplers cpu_power,gpu_power > ~/power_log.txt
+```
+
+This collects 30 samples at 2-second intervals and writes a log you can review afterward.
 
 For a more accessible approach, use the Activity Monitor's Energy tab:
 
@@ -46,6 +56,25 @@ Chrome           | 10        | 28.7          | 8.4
 ```
 
 Chrome's energy impact is typically 2-3x higher than Safari for equivalent workloads.
+
+You can also compare CPU time over a timed session using the `time` command alongside a browser script trigger, or use third-party tools like iStatMenus to chart power draw in real time. The key metric to watch is the "12h Power" column in Activity Monitor's Energy tab — it reflects a rolling average that smooths out short bursts and gives you a more honest picture.
+
+## Detailed Workload Comparison
+
+The gap between browsers is not uniform across all tasks. Here is how the two browsers compare across common developer activities:
+
+```
+Workload                  | Safari Energy | Chrome Energy | Winner
+--------------------------|---------------|---------------|--------
+Reading documentation     | Low (6-10)    | Medium (18-24)| Safari
+Watching video (1080p)    | Low (8-12)    | High (30-40)  | Safari
+Running DevTools profiler | Medium (20-25)| Medium (22-28)| Tie
+Multiple active tabs      | Low-Med (15)  | High (35-45)  | Safari
+Local dev with hot reload | Medium (22)   | High (32-40)  | Safari
+WebGL/Canvas rendering    | Medium (25)   | High (35-50)  | Safari
+```
+
+Video is the area where Safari wins most decisively. Apple Silicon has dedicated media decode hardware that Safari accesses natively. Chrome's hardware acceleration has improved but still falls short of Safari's codec-level integration, especially for H.264 and HEVC streams.
 
 ## Real-World Developer Scenarios
 
@@ -75,6 +104,17 @@ Running your tests in headless mode reduces Chrome's footprint considerably:
 npx playwright test --project=chromium --headed=false
 ```
 
+If you need to run Playwright locally with a visible browser only occasionally, consider a shell function that opens Chrome just for that session:
+
+```bash
+# Add to your .zshrc
+debug_test() {
+  npx playwright test --project=chromium --headed=true "$@"
+}
+```
+
+This way Chrome never runs unless you explicitly call the debug function.
+
 ### Multiple Browser Instances
 
 Developers often need to test across browsers. Opening Chrome alongside Safari for cross-browser testing multiplies your energy consumption. Here's a practical approach:
@@ -87,6 +127,16 @@ pmset -g batt | grep -o '[0-9]*%'
 # In Chrome: chrome://settings/performance -> "Pause background tabs"
 ```
 
+A smarter cross-browser testing strategy on battery power is to use Playwright's multi-browser runner rather than keeping all browsers open simultaneously:
+
+```bash
+# Run tests sequentially across browsers instead of in parallel
+npx playwright test --workers=1 --project=chromium
+npx playwright test --workers=1 --project=webkit
+```
+
+Sequential runs take longer but consume far less power than spinning up three browser instances at once.
+
 ### Extension Overhead
 
 Chrome extensions run as separate processes, each consuming power even when idle. Audit your extensions:
@@ -96,6 +146,8 @@ Chrome extensions run as separate processes, each consuming power even when idle
 // Press Shift+Esc in Chrome to open Task Manager
 // Sort by "Energy Impact" column
 ```
+
+A typical developer Chrome install with 10-15 extensions can easily have 5-8 background processes running at all times. Disable extensions you do not use daily rather than leaving them installed and idle. Chrome's profile system helps here — create a lean "battery" profile with only essential extensions, and use your full profile when plugged in.
 
 Safari extensions run more tightly integrated and typically consume less background energy.
 
@@ -114,7 +166,7 @@ open -a Google\ Chrome --args --disable-gpu
 **Use Chrome's Energy Saver mode:**
 
 1. Navigate to `chrome://settings/performance`
-2. Enable "Energy Saver" 
+2. Enable "Energy Saver"
 3. Choose "When on battery power" or "Always"
 
 This setting limits background activity and reduces frame rates for animations.
@@ -128,6 +180,37 @@ This setting limits background activity and reduces frame rates for animations.
 // Right-click tab -> "Put Tab to Sleep"
 ```
 
+**Disable unnecessary background services in Chrome flags:**
+
+Navigate to `chrome://flags` and consider disabling:
+- `#enable-force-dark` — forces dark mode computationally rather than via CSS, adding CPU overhead
+- `#smooth-scrolling` — reduces animation CPU cost on older hardware
+
+You can also limit Chrome to a single process on battery with a launch argument, though this trades stability for power savings:
+
+```bash
+open -a Google\ Chrome --args --process-per-site
+```
+
+## Safari Developer Tools: Are They Good Enough?
+
+A common reason developers avoid Safari is the perception that Safari DevTools are inferior. This has improved substantially. Safari's Web Inspector supports:
+
+- JavaScript debugging with breakpoints and call stacks
+- Network request inspection with timing waterfall views
+- Storage inspection (localStorage, cookies, IndexedDB)
+- Canvas and WebGL debugging
+- Responsive design simulation
+
+Where Safari still lags behind Chrome DevTools:
+
+- **Lighthouse audits** — only available in Chrome
+- **Performance profiling** — Chrome's flame graphs are more detailed
+- **Protocol extensions** — Chrome DevTools Protocol (CDP) has far more tooling built around it
+- **React/Vue DevTools** — browser extensions for frameworks work better in Chrome
+
+For a hybrid workflow, use Safari for browser testing during development but switch to Chrome specifically when you need Lighthouse scores or deep performance profiling.
+
 ## When Safari Makes Sense
 
 Safari becomes the clear choice in these scenarios:
@@ -136,6 +219,7 @@ Safari becomes the clear choice in these scenarios:
 - **Video content**: Hardware-accelerated decoding saves significant energy
 - **Long coding sessions**: Maximizes your MacBook's untethered time
 - **Battery-critical situations**: When you need every percentage point
+- **Zoom or video calls while coding**: Running a meeting tab in Safari while working in your IDE keeps that tab's energy footprint much lower
 
 ## When Chrome Is Necessary
 
@@ -145,6 +229,7 @@ Keep Chrome for:
 - **Extension-dependent workflows**: Many developer tools only exist as Chrome extensions
 - **Cross-browser testing**: Essential for web developers
 - **Progressive Web App development**: Chrome's PWA support is more mature
+- **Lighthouse audits and Core Web Vitals testing**: Chrome's built-in tools are the standard here
 
 ## Practical Battery Optimization Workflow
 
@@ -161,13 +246,48 @@ open -a Safari https://developer.mozilla.org
 # Close Chrome when not actively debugging
 ```
 
+A more structured daily workflow for laptop-first developers:
+
+```bash
+# .zshrc aliases for battery-aware browsing
+
+# Open docs in Safari (battery-efficient)
+alias docs='open -a Safari'
+
+# Open Chrome only for debugging sessions
+alias devchrome='open -a "Google Chrome" --args --disable-background-networking'
+
+# Quick battery check
+alias batt='pmset -g batt | tail -1'
+
+# Kill Chrome when done debugging
+alias killchrome='pkill -a -i "Google Chrome"'
+```
+
 Create a keyboard shortcut to quickly toggle between browsers based on your current task.
+
+You can take this further with a simple shell function that opens the right browser based on the URL pattern:
+
+```bash
+smart_open() {
+  if [[ "$1" == *"localhost"* ]] || [[ "$1" == *"127.0.0.1"* ]]; then
+    open -a "Google Chrome" "$1"
+  else
+    open -a Safari "$1"
+  fi
+}
+alias so='smart_open'
+```
+
+This sends all localhost debugging to Chrome automatically while routing everything else to Safari.
 
 ## Summary
 
 For Mac users concerned with battery life, Safari provides 2-3x better efficiency than Chrome for equivalent tasks. Chrome's flexibility and developer tooling come with power costs that matter when working away from power outlets.
 
 The optimal strategy depends on your workflow: use Safari for research, documentation, and battery-critical situations. Reserve Chrome for active development and debugging sessions, then close it when finished. This hybrid approach maximizes both productivity and battery life.
+
+The shell aliases and workflow scripts above make switching automatic rather than a conscious decision you have to make each time. Build the habit of treating Chrome as a specialized debugging tool rather than a default browser, and you will notice meaningful improvements in how long your MacBook lasts between charges.
 
 
 ## Related Reading
