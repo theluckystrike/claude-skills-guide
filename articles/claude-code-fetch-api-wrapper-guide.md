@@ -307,6 +307,51 @@ This pattern extends naturally to streaming responses, webhook signatures, rate 
 
 A fetch API wrapper transforms scattered HTTP calls into a maintainable, testable, and extensible client. Start with the basic pattern shown here, then layer in authentication, retry logic, and specialized methods as your needs grow. The investment pays off immediately through cleaner code and fewer bugs—and compounds as you build more tools that interact with external services in your Claude Code projects.
 
+## Step-by-Step Guide: Building an API Client Library
+
+Here is a concrete approach to building a reusable fetch API wrapper for use across a Claude Code project.
+
+**Step 1 — Define your client's interface contract first.** Before writing implementation, write the TypeScript interface that consumers will use. What methods do they need? What error types should they catch? Claude Code generates the interface file and the corresponding error hierarchy, giving you a clear target before writing the implementation details.
+
+**Step 2 — Implement the request method with structured logging.** Every outgoing request and incoming response should emit a structured log entry with the URL, method, status code, and duration. Claude Code generates the logging middleware that wraps the fetch call and writes JSON log lines compatible with your observability stack.
+
+**Step 3 — Add request deduplication for GET requests.** When multiple parts of your application simultaneously request the same resource, your wrapper should coalesce them into a single network request. Claude Code generates an in-flight request cache using a Map keyed on the request URL that returns the same Promise to all callers.
+
+**Step 4 — Implement response caching with TTL.** For endpoints that return stable data, cache responses for a configurable duration. Claude Code generates the cache implementation using a Map with expiration timestamps, including a cache invalidation method for when you know the data has changed.
+
+**Step 5 — Write integration tests against a mock server.** Use msw (Mock Service Worker) to intercept fetch calls in tests and return controlled responses. Claude Code generates the msw handler definitions for each endpoint your wrapper targets, covering success responses, error responses, and network failure scenarios.
+
+## Common Pitfalls
+
+**Not aborting inflight requests on component unmount.** In React applications, fetch calls started in a useEffect can resolve after the component has unmounted. Integrate AbortController into your wrapper and expose an abort method. Claude Code generates the React hook that automatically calls abort when the component unmounts.
+
+**Treating all error responses as network errors.** A 404 response is not a network error. Your wrapper should distinguish between network-level failures and HTTP error responses, using different error classes for each. Claude Code generates the error taxonomy and the conditional that routes to the correct error type.
+
+**Not serializing query parameters safely.** Manually building query strings with string concatenation breaks when parameter values contain special characters. Use URLSearchParams to construct query strings from an object. Claude Code generates the query parameter builder that handles arrays, null values, and special characters correctly.
+
+**Missing timeout handling.** Fetch has no built-in timeout. A request to a slow server can hang indefinitely. Claude Code generates the timeout wrapper using AbortController and a setTimeout that aborts the request after a configurable duration, then rejects the Promise with a typed TimeoutError.
+
+**Not handling 429 Rate Limited responses.** APIs that enforce rate limits return 429 with a Retry-After header. Without special handling, your wrapper's generic retry logic may retry immediately and get another 429. Claude Code generates the Retry-After aware retry logic that parses the header value and waits the specified duration before retrying.
+
+## Best Practices
+
+**Create typed endpoint definitions.** Rather than passing raw URLs to your client methods, define typed endpoint descriptors that specify the URL template, path parameters, query parameters, and response type. Claude Code generates the endpoint registry and the typed call function that accepts strongly-typed parameters and returns typed response data.
+
+**Implement request and response interceptors.** Interceptors allow you to modify requests before they are sent and process responses before they are returned. Claude Code generates the interceptor chain using the decorator pattern, making it easy to add or remove interceptors without modifying the core request logic.
+
+**Use a base URL per environment.** Store API base URLs in environment variables and select the correct one based on NODE_ENV. Your wrapper should accept the base URL as a constructor parameter and never hardcode it. Claude Code generates the environment-aware configuration module.
+
+**Document error codes with their causes and remediations.** When your wrapper catches a specific HTTP status code, include a message that explains what the code means in the context of your API and what the caller should do. Claude Code generates an error code registry file that maps each status code to a human-readable description.
+
+## Integration Patterns
+
+**React Query integration.** React Query expects a function that returns a Promise. Claude Code generates the React Query adapter that wraps your API client methods as queryFn functions, configures default staleTime and cacheTime, and sets up the QueryClient with your wrapper's error handling.
+
+**Next.js server actions.** For Next.js 13 and later server actions, Claude Code generates the server-side fetch wrapper that uses Next.js runtime fetch with server-specific configuration like longer timeouts and no client-side caching headers.
+
+**Offline-first with service workers.** Claude Code generates the service worker registration code and the cache strategy configuration that intercepts fetch calls and serves cached responses when the network is unavailable, implementing a stale-while-revalidate pattern for non-critical data.
+
+
 
 ## Related Reading
 

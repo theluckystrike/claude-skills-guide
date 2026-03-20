@@ -166,6 +166,51 @@ Place this file in your project root as `CLAUDE.md` or in a `.claude/skills/` di
 The real power emerges when you customize skills for different sub-projects. A data preprocessing skill in your ETL directory, a modeling skill in your experiments folder—Claude adapts its behavior based on which skill file it finds.
 
 
+## Step-by-Step Guide: Building Your Data Science CLAUDE.md
+
+Here is a concrete workflow for creating an effective CLAUDE.md file for your data science project.
+
+**Step 1 — Start with your project's pain points.** Before writing any skill content, list the three most common mistakes or inconsistencies in your team's data code. Maybe functions lack docstrings, or people keep fitting scalers on test data. These pain points become the first rules in your skill file. Claude Code uses them as a checklist when reviewing or generating code.
+
+**Step 2 — Document your data conventions explicitly.** Add a section describing your data directory structure, naming conventions for raw versus processed files, and the column naming scheme your team uses. Claude Code uses these conventions when generating file I/O code, ensuring generated scripts write to the right directories and follow your naming patterns without prompting.
+
+**Step 3 — Add experiment tracking instructions.** Specify which MLflow tracking server URL, experiment naming convention, and mandatory tags your team requires. When you ask Claude Code to train a model, it automatically wraps the training loop with experiment tracking and logs the hyperparameters and metrics without you having to remember each call.
+
+**Step 4 — Include environment troubleshooting hints.** Document known issues with your setup: which CUDA version your team uses, any conda conflicts, or environment variables required before running GPU training. When Claude Code encounters errors, it checks these hints before suggesting generic fixes.
+
+**Step 5 — Version your skill file alongside your data code.** Commit CLAUDE.md to the same Git repository as your data pipeline. When the project's conventions change, update CLAUDE.md in the same commit. This keeps the skill file synchronized with the actual project state.
+
+## Common Pitfalls
+
+**Writing vague instructions.** Saying "use good variable names" gives Claude Code nothing actionable. Instead, be specific: DataFrame variables must be named df_purpose (e.g. df_train, df_features). Specific rules produce consistent code.
+
+**Forgetting to update the skill file when conventions change.** A CLAUDE.md that documents your old sklearn pipeline structure while the project has moved to PyTorch misleads Claude Code and generates code that does not match your actual codebase. Treat the skill file as living documentation that requires the same maintenance as your README.
+
+**Including sensitive information in the skill file.** Do not put database connection strings, API keys, or internal server URLs in CLAUDE.md if the repository is public. Use environment variable names instead: specify that credentials are loaded from DATABASE_URL, not the values themselves.
+
+**Making the skill file too long.** Skill files over 500 lines dilute the signal. Claude Code parses the entire file as context, and a very long file means important rules compete with less important ones for attention. Keep your CLAUDE.md focused on the 20 rules that matter most.
+
+**Not testing the skill file with real tasks.** After writing CLAUDE.md, test it by asking Claude Code to complete a representative task from scratch. Review the output for compliance with your rules. This testing reveals ambiguous instructions before they confuse the team.
+
+## Best Practices
+
+**Use hierarchical skill files for multi-project workspaces.** Place a global CLAUDE.md in your home directory with organization-wide conventions, and project-specific CLAUDE.md files in each project root. Claude Code merges both when working in a project directory, applying the most specific rule when there is a conflict.
+
+**Add a Quick Reference section at the top.** The first section of your CLAUDE.md should be a brief bulleted list of the most important constraints. Developers and Claude Code get the critical context immediately without reading every section.
+
+**Include example code snippets for non-obvious conventions.** For complex patterns like your custom cross-validation loop or your feature store integration, include a short code snippet showing the correct pattern. Claude Code learns from examples faster than from prose descriptions.
+
+**Document what to do when things go wrong.** Add a section describing common failure modes and their remedies. This turns CLAUDE.md into a troubleshooting guide as well as a style guide.
+
+## Integration Patterns
+
+**DVC pipeline integration.** For projects using DVC to version data and pipeline stages, add a CLAUDE.md section documenting your dvc.yaml stage names and their expected inputs and outputs. Claude Code then generates code that reads from and writes to the correct DVC-managed paths.
+
+**Jupyter and VS Code integration.** Add VS Code workspace settings that enable the Claude Code extension to automatically load CLAUDE.md from the project root when you open a notebook. Teams that use JupyterHub can configure a startup hook that loads the skill file into every new notebook session.
+
+**CI integration for skill file compliance.** Claude Code can generate a GitHub Actions job that runs a compliance check against your CLAUDE.md rules, verifying that all Python files have type hints, all functions have docstrings, and all notebooks have been cleared of output before commit.
+
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

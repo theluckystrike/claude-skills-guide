@@ -259,6 +259,51 @@ Building a Claude Code skill for Rome or Biome linting provides:
 
 Start by creating a basic skill following the structure above, then customize it for your team's specific needs and coding standards. With Biome's speed and Claude Code's automation, you'll have a powerful linting workflow that requires minimal manual intervention while maintaining high code quality standards.
 
+## Step-by-Step Guide: Setting Up Biome in an Existing Project
+
+Here is a concrete workflow for migrating an existing ESLint and Prettier setup to Biome with Claude Code.
+
+**Step 1 — Audit your current configuration.** Before removing ESLint and Prettier, run a migration audit. Claude Code reads your eslintrc and prettierrc files and produces a mapping showing which rules have Biome equivalents, which do not, and which need custom configuration. This prevents accidentally losing rules your team depends on.
+
+**Step 2 — Install Biome and generate the initial config.** Run npm install --save-dev @biomejs/biome and then npx biome init. Claude Code customizes the generated biome.json to match your existing code style. Indentation width, quote style, trailing commas, and print width are read from your prettierrc and translated to Biome format automatically.
+
+**Step 3 — Run Biome alongside your existing tools.** For the first week, run Biome in check-only mode alongside ESLint and Prettier rather than replacing them. Claude Code sets up a comparison script that runs both tools and reports differences. This validation period builds confidence before removing the old toolchain.
+
+**Step 4 — Apply fixes incrementally.** Instead of running biome check --write on the entire codebase at once, process directories one at a time. Claude Code generates a script that processes directories in order of change frequency, prioritizing modules that see the most active development.
+
+**Step 5 — Remove old tooling and update CI.** Once Biome is verified, remove ESLint, Prettier, and their configuration files. Claude Code updates your GitHub Actions workflow to use biome ci and removes the old lint and format steps. The biome ci command is faster than running ESLint and Prettier separately.
+
+## Common Pitfalls
+
+**Enabling too many rules at once.** Biome's recommended ruleset is opinionated. Enabling all rules on a large existing codebase generates hundreds of warnings and overwhelms developers. Claude Code generates a gradual adoption plan that enables rules in phases, starting with error-level rules that catch real bugs and deferring style rules to a later phase.
+
+**Not pinning the Biome version.** Biome releases frequently and sometimes changes rule behavior between minor versions. Without a pinned version in your package.json, a CI run can introduce unexpected rule changes. Always use an exact version rather than a range.
+
+**Ignoring the formatter in favor of editor settings.** Teams that configure their editors to use Prettier end up with files that pass Biome lint check but fail the format check. Claude Code generates a .editorconfig file and VS Code workspace settings that point all editors to Biome for formatting.
+
+**Using suppression comments without explanations.** Suppression comments without explanations become technical debt that no one removes. Biome requires an explanation in suppression comments and Claude Code enforces this by generating a pre-commit check that rejects bare suppression comments.
+
+**Not testing Biome behavior on TypeScript decorators.** If your project uses TypeScript decorators (common in NestJS and Angular), verify Biome handles them correctly before migrating. Claude Code generates a smoke test that runs Biome against your most decorator-heavy files and reports parse errors.
+
+## Best Practices
+
+**Use Biome's organize-imports feature consistently.** Import ordering conflicts are a common source of noisy git diffs. Enable organizeImports in your biome.json and configure your editor to sort imports on save. This eliminates entire categories of merge conflicts in heavily modified files.
+
+**Create project-specific rule overrides for generated code.** Generated files such as GraphQL types and API client stubs should not be subject to linting. Add them to Biome's files.ignore list. Claude Code scans your project for common code generation patterns and suggests files to ignore.
+
+**Document rule decisions in a linting guide.** When you disable a rule or change its severity, document why. Claude Code generates this document automatically from your biome.json, listing every non-default rule configuration with a placeholder for the rationale.
+
+**Use Biome's LSP for editor feedback.** The Biome VS Code extension provides real-time lint feedback without running the CLI. Claude Code generates the workspace settings that enable the extension and disable conflicting ESLint and Prettier extensions.
+
+## Integration Patterns
+
+**Husky and lint-staged integration.** Claude Code generates the husky pre-commit hook and lint-staged configuration that runs biome check --staged on only the files included in the commit. This is significantly faster than linting the entire project on each commit.
+
+**Nx and Turborepo monorepos.** In monorepos, you typically want a single biome.json at the root with per-package overrides. Claude Code generates the Nx executor or Turborepo pipeline task that runs Biome scoped to the changed packages, avoiding unnecessary lint runs on unmodified packages.
+
+**GitHub Actions matrix testing.** If your project supports multiple Node.js versions, Claude Code generates a GitHub Actions matrix that runs biome ci across each supported version to catch environment-specific issues before they reach production.
+
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

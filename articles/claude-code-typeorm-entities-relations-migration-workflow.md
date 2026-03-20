@@ -532,6 +532,51 @@ If any step inside the transaction callback throws, TypeORM automatically rolls 
 A solid TypeORM workflow combines proper entity design, clear relationship definitions, and disciplined migration management. Claude Code can help you generate entities, write migrations, review schemas for integrity issues, and maintain consistency across your database layer. By following these patterns — shared base entities, explicit foreign key columns, string enums, soft deletes, transactional writes, and always-present `down` methods — you build a database layer that holds up as your application grows.
 
 Remember: your database schema is the foundation of your application. Invest time in proper design, use migrations for all changes, and your future self will thank you.
+## Step-by-Step Guide: Building a Type-Safe Data Layer with TypeORM
+
+Here is a concrete approach to establishing a production-ready TypeORM workflow.
+
+**Step 1 — Generate entities from your existing database.** If you are migrating a legacy project, use typeorm-model-generator to reverse-engineer your existing tables into TypeORM entities. Claude Code reviews the generated entities, adds proper relationship decorators, replaces nullable constraints, and adds missing indexes the generator may have omitted.
+
+**Step 2 — Set up the DataSource with environment-specific configuration.** Create a dataSource.ts that reads connection parameters from environment variables and selects the appropriate logging level based on NODE_ENV. Claude Code generates the DataSource factory with TypeScript discriminated unions that prevent running synchronize: true in production.
+
+**Step 3 — Write your first migration manually.** For the initial database creation, write the migration by hand rather than relying on typeorm migration:generate. This teaches you the migration API and ensures you understand exactly what DDL runs against your database. Claude Code reviews the migration for correctness and checks that the down method properly reverses every up action.
+
+**Step 4 — Create a migration workflow script.** Add npm scripts for common migration operations: generate, run, revert, and show. Claude Code generates these scripts and documents the correct order of operations for common scenarios like adding a column to a table that already has data.
+
+**Step 5 — Set up the repository pattern.** Create typed repository classes that extend TypeORM's Repository with your business-logic query methods. Claude Code generates the base repository class with common patterns — findByIdOrThrow that throws a typed NotFoundException, softDelete that sets isDeleted rather than removing the row, and paginate that returns a typed PaginationResult.
+
+## Common Pitfalls
+
+**Using synchronize: true in staging or production.** TypeORM's automatic synchronization can drop columns silently when you rename a property on an entity. Always set synchronize: false for any environment that has real data. Claude Code adds an environment guard that throws if synchronize is set to true while NODE_ENV is not development.
+
+**Not handling migrations in CI/CD correctly.** Running migrations during application startup means a failed migration can crash your entire application fleet simultaneously. Instead, run migrations as a pre-deployment step in CI. Claude Code generates the separate migration runner script and the GitHub Actions job.
+
+**Circular relationship definitions causing import errors.** TypeORM relationships often require circular imports between entity files. Using string references for relation targets breaks these cycles cleanly. Claude Code detects circular imports in your entity files and suggests the string reference approach.
+
+**N+1 queries from unoptimized loading.** Loading a User entity and then accessing user.orders triggers a separate query for each user. Using TypeORM's findAndCount with a properly structured eager loading option avoids this. Claude Code reviews your repository queries and flags any patterns likely to produce N+1 queries.
+
+**Not using transactions for multi-entity writes.** Writing to two related tables without a transaction means a failure partway through leaves your database in an inconsistent state. Claude Code generates transaction wrappers for every service method that touches more than one table.
+
+## Best Practices
+
+**Use a base entity with common fields.** Create a BaseEntity class with id, createdAt, and updatedAt that all your entities extend. This ensures consistent column types and names across your schema. Claude Code generates the BaseEntity with UUID primary key and automatic timestamp columns.
+
+**Add database-level indexes for all foreign keys.** TypeORM creates foreign key constraints but does not automatically create indexes on the referencing column. Without indexes, joins and filtered queries on foreign key columns perform full table scans. Claude Code generates a migration that adds indexes for every relationship in your entities.
+
+**Test migrations against a copy of production data.** Before applying a migration to production, run it against a recent database dump in your staging environment. Claude Code generates the staging migration testing script and a timing report showing how long each migration step took.
+
+**Version your DataSource configuration.** Keep multiple DataSource configurations: one for the application, one for migrations, one for testing. Claude Code generates all three with the appropriate settings and the environment switching logic that selects the right configuration.
+
+## Integration Patterns
+
+**NestJS integration.** Claude Code generates the TypeORM NestJS module configuration that registers your entities, provides the DataSource token for injection, and configures the connection pool size. It also generates the custom repository provider pattern that NestJS recommends for testing.
+
+**GraphQL with TypeGraphQL.** For projects combining TypeORM with TypeGraphQL, Claude Code generates entities that use both ObjectType and Entity decorators on the same class, sharing the schema definition between the GraphQL layer and the database layer without duplication.
+
+**Seeding and test fixtures.** Claude Code generates a seed script using TypeORM's DataSource that creates realistic test data for each entity in dependency order. The seed script uses factories that generate realistic data and can be run in CI before integration tests.
+
+
 {% endraw %}
 
 ## Related Reading

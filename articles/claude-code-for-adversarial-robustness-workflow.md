@@ -296,6 +296,51 @@ This workflow handles model loading, test execution, metric calculation, and rep
 
 Building robust ML systems requires proactive security testing. Claude Code makes adversarial robustness evaluation accessible through automation, comprehensive tooling, and continuous monitoring. Start with basic FGSM testing and progressively add more sophisticated attacks and defenses as your workflow matures.
 
+## Step-by-Step Guide: Building a Continuous Robustness Testing Pipeline
+
+Here is a concrete approach to integrating adversarial robustness testing into your ML deployment workflow.
+
+**Step 1 — Establish your robustness baseline.** Before implementing defenses, measure your current model's robustness by running FGSM attacks at multiple epsilon values and plotting the accuracy curve. This baseline tells you how much robustness you need to improve and gives you a metric to track over time. Claude Code generates the baseline measurement script and the matplotlib visualization.
+
+**Step 2 — Integrate attacks into your evaluation script.** Extend your existing model evaluation script to include adversarial examples alongside clean test data. The evaluation should report both clean accuracy and adversarial accuracy at your chosen epsilon value. Claude Code generates the evaluation extension that adds adversarial metrics without requiring changes to your existing model code.
+
+**Step 3 — Add robustness tests to your CI pipeline.** Add a step that runs the robustness evaluation script after every model training run. Claude Code generates the GitHub Actions job that loads the latest checkpoint, runs adversarial evaluation, and fails the CI job if adversarial accuracy drops below your threshold.
+
+**Step 4 — Implement adversarial training as an experiment.** Create a training variant that mixes clean and adversarial examples in each batch. Track both clean and adversarial accuracy in your experiment tracking system. Claude Code generates the modified training loop and the MLflow logging configuration that records both metrics across epochs.
+
+**Step 5 — Deploy robustness monitoring for production models.** Add input validation at inference time that detects statistical anomalies consistent with adversarial examples. Claude Code generates the detection wrapper that computes feature statistics for each input, compares them to training distribution statistics, and flags anomalous inputs for review.
+
+## Common Pitfalls
+
+**Testing only with FGSM.** FGSM is the simplest attack and a model that resists FGSM may still be vulnerable to stronger attacks like PGD or AutoAttack. A model that claims robustness based on FGSM alone is likely overestimating its security. Claude Code generates an evaluation suite that includes multiple attack types at standardized epsilon values.
+
+**Using the wrong epsilon scale.** The choice of epsilon depends on your input normalization. An epsilon of 0.03 is meaningful for pixels normalized to [0, 1] but nonsensical for other normalization schemes. Claude Code generates epsilon conversion utilities that translate between common normalization schemes.
+
+**Not separating adversarial training from test evaluation.** The attacker in the evaluation should not have access to your defense. Claude Code generates the evaluation protocol that uses a fresh attack instance that treats the defended model as a black box.
+
+**Evaluating robustness only on aggregate accuracy.** Some classes may be much more vulnerable than others, and aggregate accuracy hides this. A model that is 95% accurate overall but 30% accurate on one safety-critical class is not robust. Claude Code generates the per-class robustness breakdown.
+
+**Treating adversarial robustness as a one-time task.** Model robustness degrades when you retrain on new data or fine-tune for a different task. Claude Code generates the robustness regression test suite that runs on every model update.
+
+## Best Practices
+
+**Use certified defenses for high-assurance applications.** Empirical defenses like adversarial training can be broken by adaptive attacks. For security-critical applications, use certified defenses based on randomized smoothing which provide provable guarantees. Claude Code generates the randomized smoothing wrapper and the certification script.
+
+**Report robustness results using standardized protocols.** When sharing robustness results, use AutoAttack as the evaluation method. Results with FGSM are easy to overfit to and hard to compare across implementations. Claude Code generates the AutoAttack evaluation script and a result card template.
+
+**Maintain adversarial example datasets for regression testing.** Save a fixed set of adversarial examples generated from your baseline evaluation. Use this fixed set to check for regressions after every model update. Claude Code generates the adversarial example archiving script and the regression comparison report.
+
+**Document your threat model explicitly.** Robustness is meaningful only relative to a threat model: what epsilon constraint, what attack budget, what attack algorithm? Document these parameters explicitly in your model card. Claude Code generates the threat model documentation template.
+
+## Integration Patterns
+
+**Weights and Biases integration.** Claude Code generates the W&B callback that logs adversarial accuracy, robustness gap, and vulnerability distribution to your existing W&B runs alongside your standard training metrics. Robustness trends across experiments are visible in the same dashboard as your clean accuracy curves.
+
+**Model registry integration.** Claude Code generates the pre-registration robustness check that gates model promotion to production. Only models that pass the robustness threshold are eligible for promotion. The check result is logged as a model registry tag for auditability.
+
+**Red team automation.** Claude Code generates a scheduled adversarial red team job that runs weekly against your production model endpoints using the latest attack algorithms, simulating the behavior of an attacker who periodically tries new approaches to defeat your defenses.
+
+
 ---
 
 

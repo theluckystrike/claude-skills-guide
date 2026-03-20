@@ -234,4 +234,49 @@ schema = parse_schema({
 Building reliable Kafka consumers and producers requires attention to error handling, configuration, and monitoring. The patterns and examples in this guide provide a solid foundation for integrating Kafka into your Claude Code projects. Start with the basic producer and consumer implementations, then add exactly-once semantics, schema validation, and comprehensive monitoring as your requirements evolve.
 
 Kafka's distributed nature provides scalability and durability, but the benefits only materialize when your implementations follow best practices. Apply these patterns to your projects, and you'll have robust message processing that scales with your application's demands.
+## Step-by-Step Guide: Deploying Kafka Consumers and Producers
+
+Here is a concrete approach to going from local Kafka development to a production-ready integration.
+
+**Step 1 — Set up local Kafka with Docker Compose.** Before writing application code, get a Kafka cluster running locally. Claude Code generates a Docker Compose file with a single-node Kafka broker and Zookeeper, health checks that wait for Kafka to be fully ready, and a topic initialization script that creates your topics with the appropriate partition count and replication factor.
+
+**Step 2 — Write a smoke test for your producer and consumer.** Before implementing business logic, write a test that produces a known message and verifies the consumer receives it. Claude Code generates the smoke test using pytest-kafka or a simple script that starts producer and consumer in separate threads, sends one message, and asserts receipt within a timeout.
+
+**Step 3 — Implement your message schema with Avro.** Define your message schema in Avro IDL or JSON Schema before writing the producer code. Claude Code generates the schema file, the Python dataclass or TypeScript interface derived from it, and the Confluent Schema Registry client configuration that validates messages on every produce and consume call.
+
+**Step 4 — Add consumer group offset monitoring.** Set up a monitoring dashboard that tracks consumer group lag. Claude Code generates the Prometheus metrics exporter that queries Kafka's consumer group API and exposes lag as a gauge metric, plus a Grafana dashboard definition that alerts when lag exceeds your acceptable threshold.
+
+**Step 5 — Implement graceful shutdown for consumers.** Kafka consumers killed without committing offsets will reprocess messages from the last committed offset on restart. Claude Code generates the signal handler that calls consumer.close() on SIGTERM and SIGINT, ensuring the consumer commits its current offset before exiting.
+
+## Common Pitfalls
+
+**Committing offsets before processing completes.** Auto-commit offsets every 5 seconds (the default) means your consumer might commit an offset before the message has been fully processed. If the consumer crashes after the commit but before the database write, the message is lost. Claude Code generates the manual commit pattern that only commits after the database write is confirmed.
+
+**Using a single partition for high-throughput topics.** A Kafka topic with one partition can only be consumed by one consumer in a group, limiting throughput to a single machine. Size your partition count based on your target throughput divided by the throughput of a single consumer. Claude Code generates the partition sizing calculator.
+
+**Not configuring max.poll.interval.ms appropriately.** If your consumer's message processing takes longer than max.poll.interval.ms (default 5 minutes), Kafka considers the consumer dead and reassigns its partitions. Long-running processing jobs need this value increased. Claude Code generates the consumer configuration with recommended values for different processing latency profiles.
+
+**Producing messages without error callbacks.** The Kafka producer is asynchronous. Calling producer.send() without waiting for confirmation or registering an error callback means failed messages are silently dropped. Claude Code generates the producer with delivery reports enabled and a dead letter queue writer that captures failed messages.
+
+**Not handling deserialization errors.** If a producer sends a malformed message, the consumer's deserializer will throw an exception. Without handling this exception, the consumer gets stuck and cannot advance past the bad message. Claude Code generates the deserialization error handler that logs the raw bytes to a dead letter queue and advances the offset.
+
+## Best Practices
+
+**Use idempotent producers for exactly-once delivery.** Enable idempotent producers to prevent duplicate messages from network retries. Combined with exactly-once transactions, you can build pipelines where each message is processed exactly once even under failure conditions. Claude Code generates the idempotent producer configuration.
+
+**Monitor broker metrics alongside application metrics.** Consumer lag is only part of the picture. Monitor broker disk usage, network throughput, and request latency to catch infrastructure bottlenecks before they affect your application. Claude Code generates the JMX metric collection configuration.
+
+**Version your message schemas with backward compatibility.** When you need to change a message schema, use Avro's schema evolution rules to add optional fields with defaults rather than removing or changing existing fields. Claude Code generates the schema evolution validation script.
+
+**Test with realistic message rates.** A consumer that handles 10 messages per second in a unit test may fail at 10,000 messages per second in production. Claude Code generates the load test script that ramps up message rate and measures consumer lag growth.
+
+## Integration Patterns
+
+**Faust stream processing.** For Python services that need stream processing capabilities such as windowed aggregations and stateful transformations, Faust provides a higher-level API built on top of Kafka. Claude Code generates the Faust app definition with agents for your consumer topics.
+
+**Kafka Connect for database integration.** For reading from or writing to databases without writing consumer or producer code, Kafka Connect provides managed connectors. Claude Code generates the connector configuration JSON for common databases including PostgreSQL CDC via Debezium, Elasticsearch sink, and S3 sink.
+
+**Dead letter queue patterns.** For messages that fail processing after all retries, a dead letter queue topic captures the failed message with metadata about the failure. Claude Code generates the DLQ producer wrapper and the monitoring alert that notifies your team when DLQ depth exceeds a threshold.
+
+
 {% endraw %}

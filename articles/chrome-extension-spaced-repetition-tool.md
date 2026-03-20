@@ -255,6 +255,51 @@ This foundation supports numerous enhancements: sync across devices using a back
 
 Building your own Chrome extension spaced repetition tool gives you full control over your learning system. Tailor card formats, review algorithms, and interface interactions to match your workflow precisely. The investment in setup pays dividends as you systematically consolidate technical knowledge over time.
 
+## Step-by-Step Guide: Shipping a Spaced Repetition Extension
+
+Here is a concrete approach to taking a spaced repetition extension from prototype to published Chrome extension.
+
+**Step 1 — Set up your development environment.** Create a project directory with a manifest.json, a content-script.js, a background.js service worker, and a popup.html with its associated popup.js. Claude Code generates the initial file structure with the correct Manifest V3 format, a build script using esbuild for bundling, and hot reload configuration so changes are reflected immediately during development.
+
+**Step 2 — Implement the card data model first.** Before building UI, define your card schema and the CRUD operations for IndexedDB. Claude Code generates the database module with typed card objects (front, back, ease, interval, repetitions, nextReview), all wrapped in a clean async API. Test this module in isolation before connecting it to the UI.
+
+**Step 3 — Build the card creation flow.** Users need a fast way to capture content as cards. Claude Code generates the context menu integration that creates a card from selected text, the popup form for manually entering cards, and the content script that highlights saved content on pages where cards were created.
+
+**Step 4 — Implement the review session.** The review session is the core experience. Claude Code generates the session manager that loads due cards, tracks the current card index, handles rating callbacks, and updates card schedules in IndexedDB. The session UI shows one card at a time, reveals the answer on click, and presents four rating buttons.
+
+**Step 5 — Add a daily reminder notification.** Chrome extensions can send desktop notifications to remind users to complete their daily reviews. Claude Code generates the alarm-based reminder that fires at the user's configured daily review time, checks the number of cards due, and sends a notification with the due count.
+
+## Common Pitfalls
+
+**Using Manifest V2 APIs in a Manifest V3 extension.** Chrome has sunset Manifest V2 and will reject new V2 extensions from the Web Store. The most common V2 APIs used accidentally are chrome.extension.getBackgroundPage() (replaced by service workers) and persistent background pages. Claude Code reviews your extension code and flags any V2 API usage.
+
+**Losing IndexedDB data on extension update.** When you update your extension, the IndexedDB database persists but only if you handle schema migrations correctly. If you bump the DB_VERSION without handling the onupgradeneeded event for the new version, the old database structure causes errors. Claude Code generates the migration handler that upgrades the schema without losing existing card data.
+
+**Not handling storage quota limits.** Chrome extensions have storage limits. For IndexedDB, the limit is a percentage of available disk space. Claude Code generates the storage usage monitor that checks remaining quota before adding large batches of cards and warns users when they are approaching the limit.
+
+**Not requesting permissions narrowly.** The Chrome Web Store review process rejects extensions that request broader permissions than they use. Claude Code audits your manifest permissions against your actual API usage and recommends the minimum set of permissions.
+
+**Testing only in Chrome.** If you plan to publish to the Firefox Add-ons store or Edge Add-ons, test in those browsers early. Manifest V3 support differs across browsers. Claude Code generates a compatibility notes file that documents known differences between Chrome, Firefox, and Edge for the APIs your extension uses.
+
+## Best Practices
+
+**Separate content script logic from background logic clearly.** Content scripts run in the context of web pages and have access to the DOM. Background service workers run in a separate context with access to extension APIs. Communication between them uses chrome.runtime.sendMessage. Claude Code generates the message protocol type definitions that make the communication contract explicit and type-safe.
+
+**Use the sync storage API for settings and IndexedDB for cards.** Chrome provides chrome.storage.sync (synced across devices, 100KB limit) and chrome.storage.local (local only, 10MB limit). Use sync storage for user preferences. Use IndexedDB for card data. Claude Code generates the settings module that uses the appropriate storage API for each setting.
+
+**Add keyboard shortcuts for review ratings.** Power users rate cards much faster with keyboard shortcuts (1 for Again, 2 for Hard, 3 for Good, 4 for Easy). Claude Code generates the keyboard event listener that maps number keys to rating buttons during a review session, with a visual indicator showing which key maps to which rating.
+
+**Implement undo for rating mistakes.** Accidentally rating a card incorrectly changes its schedule significantly. An undo stack that remembers the last few rating actions lets users correct mistakes. Claude Code generates the undo system with a keyboard shortcut and an undo button in the review UI.
+
+## Integration Patterns
+
+**Obsidian plugin integration.** Claude Code generates a companion Obsidian plugin that reads flashcard definitions from your vault's markdown files and syncs them to your Chrome extension's IndexedDB through a local API. This lets you manage cards in Obsidian and review them in the browser.
+
+**GitHub Gist sync.** For users who want to back up their card decks without setting up a server, Claude Code generates the GitHub Gist sync module that exports your card decks as JSON, stores them in a private Gist, and imports them back on a new device.
+
+**Anki-compatible export.** Claude Code generates the Anki deck export function that converts your IndexedDB cards into an Anki-compatible format. Users who want to move to Anki or share their decks with Anki users can export with one click from the extension popup.
+
+
 
 ## Related Reading
 
