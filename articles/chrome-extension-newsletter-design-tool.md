@@ -7,7 +7,7 @@ date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-newsletter-design-tool/
 ---
-
+{% raw %}
 # Chrome Extension Newsletter Design Tool for Developers
 
 Building newsletters has traditionally required switching between multiple platforms, exporting content, and wrestling with HTML email compatibility. For developers and power users, a Chrome extension newsletter design tool offers a streamlined alternative—allowing you to design, preview, and export email campaigns directly from your browser without leaving your workflow.
@@ -164,3 +164,4 @@ The most effective approach combines a capable Chrome extension with version-con
 Explore the Chrome Web Store for options that match your specific needs, or consider building a minimal extension tailored to your newsletter format if existing tools don't fit your workflow.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
