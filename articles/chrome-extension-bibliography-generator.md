@@ -248,6 +248,89 @@ When your extension is ready, package it for distribution:
 
 Building a bibliography generator Chrome extension combines practical utility with valuable development experience. The extension architecture—manifest configuration, content scripts, message passing—applies directly to countless other extension projects. Start with the basic implementation above, then expand with features like citation collection management, export to BibTeX or RIS formats, and integration with reference managers like Zotero.
 
+## Step-by-Step Guide: Capturing a Citation
+
+1. Navigate to any article or web page you want to cite
+2. Click the extension icon — the popup shows auto-detected metadata
+3. Verify the extracted title, author, and publication date
+4. Select your citation format (APA, MLA, Chicago, IEEE) from the dropdown
+5. Click "Copy Citation" — the formatted string is in your clipboard
+
+For pages with poor metadata, the popup shows editable fields so you can correct values before generating the citation.
+
+## Advanced: BibTeX and RIS Export
+
+Academic workflows often require machine-readable formats. Add BibTeX export:
+
+```javascript
+function toBibTeX(ref) {
+  const key = `${(ref.author || 'Unknown').split(' ').pop()}${ref.year || new Date().getFullYear()}`;
+  return `@misc{${key},
+  author = {${ref.author || 'Unknown Author'}},
+  title = {${ref.title || 'Untitled'}},
+  howpublished = {\\url{${ref.url}}},
+  year = {${ref.year || new Date().getFullYear()}},
+  note = {Accessed: ${new Date().toISOString().slice(0, 10)}}
+}`;
+}
+```
+
+For Zotero users, generate RIS format for direct library import:
+
+```javascript
+function toRIS(ref) {
+  return ['TY  - ELEC', `TI  - ${ref.title || 'Untitled'}`,
+    `AU  - ${ref.author || 'Unknown'}`, `UR  - ${ref.url}`,
+    `PY  - ${ref.year || new Date().getFullYear()}`, 'ER  -'].join('\n');
+}
+```
+
+## Comparison with Manual Citation Tools
+
+| Approach | Speed | Format support | Cost |
+|---|---|---|---|
+| This extension | Instant (auto-extract) | Customizable | Free to build |
+| Zotero browser connector | Fast | Excellent | Free |
+| Citation Machine | Moderate (manual) | APA, MLA, Chicago | Freemium |
+
+The extension wins on speed for developers already working in Chrome — you never leave the page you are citing.
+
+## Troubleshooting Common Issues
+
+**Metadata not extracting correctly**: Build a fallback chain for title extraction:
+
+```javascript
+function extractTitle(doc) {
+  return (
+    doc.querySelector('meta[property="og:title"]')?.content ||
+    doc.querySelector('meta[name="title"]')?.content ||
+    doc.querySelector('h1')?.textContent?.trim() ||
+    doc.title
+  );
+}
+```
+
+**Author field empty for news articles**: Parse JSON-LD structured data as a fallback:
+
+```javascript
+function extractAuthorFromJSONLD(doc) {
+  const scripts = doc.querySelectorAll('script[type="application/ld+json"]');
+  for (const s of scripts) {
+    try {
+      const data = JSON.parse(s.textContent);
+      return data.author?.name || data.author?.[0]?.name || null;
+    } catch {}
+  }
+  return null;
+}
+```
+
+**Clipboard permission denied**: Trigger copy only from a direct button click handler, not from a timer or async callback outside the user gesture chain.
+
+**Publication date off by one day**: Parse dates with `new Date(dateString).toLocaleDateString()` to display the correct local date.
+
+Start with the basic implementation, then expand with BibTeX/RIS export and integration with reference managers like Zotero.
+
 
 ## Related Reading
 

@@ -362,6 +362,48 @@ console.log('[CarRentalDeals] Found deals:', deals.length);
 
 Building a functional car rental deal tracker demonstrates practical skills in Chrome extension development, web scraping techniques, IndexedDB usage, and notification systems—all valuable competencies for developer portfolios and real-world applications.
 
+## Step-by-Step: Finding Deals for Your Next Trip
+
+1. Navigate to a supported rental site and enter your trip dates
+2. Click the extension icon — popup shows deals detected from the current page
+3. Click "Compare All" to search across all configured providers
+4. Results populate sorted by price ascending
+5. Set a price alert threshold — the extension notifies you if prices drop before pickup
+6. Click any deal row to open that provider's booking page
+
+## Advanced: Multi-Provider Aggregation
+
+Aggregate prices from multiple provider APIs:
+
+```javascript
+class CarRentalAggregator {
+  constructor(providers) { this.providers = providers; }
+
+  async getDeals(params) {
+    const results = await Promise.allSettled(this.providers.map(p => p.searchFn(params)));
+    return results.filter(r => r.status === 'fulfilled').flatMap(r => r.value).sort((a, b) => a.dailyRate - b.dailyRate);
+  }
+}
+```
+
+## Comparison with Existing Tools
+
+| Tool | Provider coverage | Price alerts | Browser-integrated | Cost |
+|---|---|---|---|---|
+| This extension | Configurable | Yes | Deep | Free to build |
+| Kayak | Many | Email | Website/app | Free |
+| AutoSlash | Many | Yes (email) | Website | Subscription |
+
+## Troubleshooting Common Issues
+
+**Selector breaking after site update**: Use arrays of fallback selectors and a maintenance-friendly config object so a single update breaks only one selector.
+
+**CORS blocking API requests**: Add rental site domains to `host_permissions` in your manifest. Background service worker requests bypass CORS when host permission is granted.
+
+**Rate limiting from rental sites**: Implement exponential backoff and add a 2-3 second gap between provider queries.
+
+Building a car rental deal tracker demonstrates practical skills in Chrome extension development, web scraping, data aggregation, and notification systems.
+
 
 ## Related Reading
 

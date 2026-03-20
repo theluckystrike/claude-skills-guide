@@ -264,6 +264,55 @@ For developers seeking deeper integration, the Declarative Content API can trigg
 
 This extension keeps your financial data in your browser, under your control. No subscriptions, no data harvesting, just functional expense tracking built exactly to your specifications.
 
+## Advanced: Monthly Budget Tracking
+
+Show progress toward a monthly budget with visual progress bars:
+
+```javascript
+function calculateBudgetStatus(transactions, budgets) {
+  const monthStart = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+  const monthlyTotals = transactions
+    .filter(t => new Date(t.date) >= monthStart)
+    .reduce((acc, t) => { acc[t.category] = (acc[t.category] || 0) + t.amount; return acc; }, {});
+
+  return Object.entries(budgets).map(([category, limit]) => ({
+    category, spent: monthlyTotals[category] || 0, limit,
+    pct: ((monthlyTotals[category] || 0) / limit * 100).toFixed(1),
+    status: (monthlyTotals[category] || 0) >= limit ? 'over' : 'under'
+  }));
+}
+```
+
+Render each category as a progress bar colored green (under 80%), yellow (80-100%), red (over budget).
+
+## Comparison with Standalone Budgeting Tools
+
+| Feature | This Extension | YNAB | Mint |
+|---|---|---|---|
+| Data location | Local (browser) | Cloud | Cloud |
+| Bank sync | Not included | Yes | Yes |
+| Privacy | Complete local control | Shared | Shared |
+| Cost | Free to build | $14.99/month | Free (ads) |
+
+## Troubleshooting Common Issues
+
+**Storage filling up after months of data**: Auto-archive transactions older than 90 days to a JSON file in Downloads, then clear them from storage.
+
+**Category totals showing rounding errors**: Store amounts in cents (integers) and divide by 100 only when displaying:
+
+```javascript
+// Store: amount_cents: 4250 (for $42.50)
+// Display: (transaction.amount_cents / 100).toFixed(2)
+```
+
+**CSV not opening correctly in Excel**: Add a UTF-8 BOM at the start:
+
+```javascript
+const csvContent = '\uFEFF' + [headers, ...rows].map(r => r.join(',')).join('\n');
+```
+
+This extension keeps your financial data in your browser with no subscriptions and no data harvesting — just functional expense tracking built to your exact specifications.
+
 
 ## Related Reading
 

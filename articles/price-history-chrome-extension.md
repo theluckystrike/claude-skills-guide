@@ -379,4 +379,56 @@ Building a price history extension requires handling diverse price formats, mana
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Tracking Your First Product
+
+1. Navigate to any product page on a supported retailer
+2. Click the extension icon — the popup detects the product from URL and page metadata
+3. Click "Track Price" to save the current price to local storage
+4. The background alarm checks prices every 6-12 hours and adds new data points
+5. When the price drops below your alert threshold, a Chrome notification fires
+6. View the price history chart in the popup at any time
+
+## Advanced: Cross-Retailer Price Comparison
+
+Show prices from multiple retailers side by side:
+
+```javascript
+async function findCrossRetailerPrices(productTitle) {
+  const results = await Promise.allSettled([
+    fetch(`https://www.cheapshark.com/api/1.0/games?title=${encodeURIComponent(productTitle)}`).then(r => r.json())
+  ]);
+  return results.filter(r => r.status === 'fulfilled').flatMap(r => r.value).sort((a, b) => a.price - b.price);
+}
+```
+
+## Comparison with Established Price Tools
+
+| Tool | Retailers | Price history | Integration | Cost |
+|---|---|---|---|---|
+| This extension | Configurable | Full control | Deep (content script) | Free to build |
+| Honey | 30,000+ | Limited | Excellent | Free |
+| CamelCamelCamel | Amazon only | Excellent charts | Website only | Free |
+| Keepa | Amazon only | Excellent | Extension available | Free/Premium |
+
+## Troubleshooting Common Issues
+
+**Price not extracting correctly**: Build a robust parser for varied price formats:
+
+```javascript
+function parsePrice(text) {
+  if (!text) return null;
+  const normalized = text.replace(/[^\d.,]/g, '');
+  if (normalized.match(/,\d{2}$/)) return parseFloat(normalized.replace('.','').replace(',','.'));
+  return parseFloat(normalized.replace(',',''));
+}
+```
+
+**Storage quota hit**: Use IndexedDB for price history and keep only the last 90 days by default. Let users configure the retention period in settings.
+
+**Chart not rendering**: Chart.js requires the canvas element to be in the DOM when instantiated. Verify the canvas exists before calling `new Chart()`.
+
+Building a price history extension requires handling diverse price formats, managing storage efficiently, and creating useful visualizations.
+
+
 {% endraw %}

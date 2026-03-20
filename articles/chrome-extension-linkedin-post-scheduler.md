@@ -264,4 +264,59 @@ Remember to test thoroughly with LinkedIn's evolving interface, as their DOM str
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Scheduling Your First Post
+
+1. Write your post content and target publish time
+2. Navigate to `linkedin.com/feed` in Chrome
+3. Click the extension icon — popup shows a text area and date/time picker
+4. Paste content, set publish time, click "Schedule"
+5. The post saves to `chrome.storage.local` with its target timestamp
+6. The background alarm fires at the scheduled time and the content script publishes the post
+7. A Chrome notification confirms the post was published
+
+## Advanced: Post Templates
+
+Build a template system for recurring content formats:
+
+```javascript
+async function saveTemplate(name, content) {
+  const { templates = {} } = await chrome.storage.local.get('templates');
+  templates[name] = { content, created: Date.now() };
+  await chrome.storage.local.set({ templates });
+}
+```
+
+Expose templates in the popup so users only need to customize variable parts of each post.
+
+## Comparison with LinkedIn Native Scheduling
+
+| Feature | This Extension | LinkedIn Native | Buffer |
+|---|---|---|---|
+| Setup | Build yourself | Free, no setup | Account + subscription |
+| Scheduling limit | Unlimited (local) | 30-day window | Plan-dependent |
+| Analytics | Not included | Post-level insights | Dashboard |
+| Cost | Free | Free | Freemium |
+
+## Troubleshooting Common Issues
+
+**Content script failing to find the post input box**: Use stable aria-label selectors:
+
+```javascript
+function findPostInput() {
+  return (
+    document.querySelector('[aria-label="Text editor for creating content"]') ||
+    document.querySelector('[data-placeholder="What do you want to talk about?"]') ||
+    document.querySelector('.ql-editor')
+  );
+}
+```
+
+**Alarm not firing when Chrome is closed**: The alarms API only fires when Chrome is running. For fully reliable scheduling with Chrome closed, you need a backend service. For personal use, remind users to keep Chrome open around scheduled post times.
+
+**Post not publishing due to rate limiting**: Add a 3-5 second delay between opening the post dialog and simulating submit to appear more human-like.
+
+Use your extension responsibly — LinkedIn's Terms of Service prohibit automated bulk posting. Test thoroughly since LinkedIn's DOM structure changes frequently.
+
+
 {% endraw %}

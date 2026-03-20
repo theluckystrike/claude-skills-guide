@@ -295,6 +295,66 @@ When building a tab organizer, consider these architectural choices:
 
 Building a tab organizer extension requires balancing functionality with Chrome's API constraints. Start with basic grouping and session save/restore, then layer on intelligent automation as you understand user patterns in your extension.
 
+## Advanced: AI-Powered Tab Grouping
+
+Use a keyword classifier to automatically group tabs by purpose:
+
+```javascript
+const GROUP_RULES = [
+  { keywords: ['github', 'gitlab', 'pull request', 'commit'], group: 'Dev' },
+  { keywords: ['docs', 'documentation', 'mdn', 'reference'], group: 'Docs' },
+  { keywords: ['youtube', 'netflix', 'twitch', 'video'], group: 'Media' },
+  { keywords: ['gmail', 'calendar', 'meet', 'slack'], group: 'Communication' }
+];
+
+function classifyTab(tab) {
+  const text = (tab.title + ' ' + tab.url).toLowerCase();
+  for (const rule of GROUP_RULES) {
+    if (rule.keywords.some(kw => text.includes(kw))) return rule.group;
+  }
+  return 'Other';
+}
+
+async function autoGroupTabs() {
+  const tabs = await chrome.tabs.query({ currentWindow: true });
+  const groups = {};
+  for (const tab of tabs) {
+    const g = classifyTab(tab);
+    groups[g] = groups[g] || [];
+    groups[g].push(tab.id);
+  }
+  for (const [title, tabIds] of Object.entries(groups)) {
+    const gid = await chrome.tabs.group({ tabIds });
+    await chrome.tabGroups.update(gid, { title });
+  }
+}
+```
+
+## Comparison with Native Chrome Features
+
+| Feature | This Extension | Chrome Tab Groups (native) | OneTab |
+|---|---|---|---|
+| Auto-grouping | Yes (custom logic) | No | No |
+| Session save/restore | Yes | No | Yes |
+| Cross-device sync | Optional | Partial (Google account) | No |
+| Cost | Free to build | Free | Free |
+
+## Troubleshooting Common Issues
+
+**`chrome.tabGroups` API not available**: Add `"tabGroups"` to the manifest `permissions` array. Requires Chrome 89+.
+
+**Session restore in wrong order**: Use sequential `await chrome.tabs.create()` calls rather than `Promise.all` to maintain tab order.
+
+**Auto-group conflicting with manually set groups**: Only auto-group ungrouped tabs:
+
+```javascript
+const ungrouped = (await chrome.tabs.query({ currentWindow: true })).filter(t => t.groupId === chrome.tabGroups.TAB_GROUP_ID_NONE);
+```
+
+**Storage quota exceeded**: Compress session data before storing using the Compression Streams API (Chrome 80+).
+
+Building a tab organizer requires balancing functionality with Chrome's API constraints. Start with basic grouping and session save/restore, then layer on intelligent automation.
+
 
 ## Related Reading
 

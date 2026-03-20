@@ -272,6 +272,59 @@ Chrome extensions face inherent limitations for rewards optimization. They canno
 
 For comprehensive optimization, pair your extension with manual tracking for offline purchases and annual fee calculations. The extension handles the quick decision-making at checkout; you handle the strategic optimization.
 
+## Step-by-Step: Setting Up Your Card Profiles
+
+1. Click the extension icon and navigate to "My Cards"
+2. Add each credit card with reward categories and rates (e.g., Amex Gold: 4x dining, 1x general)
+3. Save profiles — stored in `chrome.storage.sync` for cross-device access
+4. Browse to any retailer checkout page
+5. The content script detects the merchant category and injects a recommendation overlay
+6. The overlay shows which card earns the most rewards for that purchase
+
+## Advanced: Automatic Category Detection
+
+```javascript
+const CATEGORY_PATTERNS = [
+  { pattern: /amazon\.com/, category: 'shopping' },
+  { pattern: /doordash\.com|ubereats\.com|grubhub\.com/, category: 'dining' },
+  { pattern: /delta\.com|united\.com|southwest\.com/, category: 'travel' },
+  { pattern: /wholefoodsmarket\.com|safeway\.com/, category: 'groceries' }
+];
+
+function detectCategory(url) {
+  for (const { pattern, category } of CATEGORY_PATTERNS) {
+    if (pattern.test(url)) return category;
+  }
+  return 'general';
+}
+```
+
+## Comparison with Bank-Provided Tools
+
+| Feature | This Extension | Issuer apps | MaxRewards |
+|---|---|---|---|
+| Multi-issuer | Yes (you configure) | Single issuer | Yes |
+| Real-time suggestions | Yes | Rarely | Yes |
+| Data privacy | Local only | Sent to issuer | Sent to service |
+| Cost | Free | Free | Subscription |
+
+The extension wins on privacy — your card data and browsing history stay entirely in the browser.
+
+## Troubleshooting Common Issues
+
+**Category detection wrong for unfamiliar site**: Build a user correction mechanism that stores hostname-to-category overrides in `chrome.storage.local`.
+
+**Overlay appearing on payment processors**: Exclude payment pages where rewards suggestions are not useful:
+
+```javascript
+const EXCLUDED = [/paypal\.com/, /checkout\.stripe\.com/];
+function shouldShowOverlay(url) { return !EXCLUDED.some(p => p.test(url)); }
+```
+
+**Reward rates out of date**: Add a "Last updated" timestamp and show a warning badge when rates are more than 6 months old.
+
+For comprehensive optimization, pair your extension with manual tracking for offline purchases and annual fee calculations. The extension handles quick checkout decisions; strategic card selection requires a broader view.
+
 
 ## Related Reading
 

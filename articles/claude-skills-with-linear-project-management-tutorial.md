@@ -273,6 +273,49 @@ Claude skills with Linear project management transforms routine PM work into aut
 
 ---
 
+## Advanced: Automated Sprint Review Summaries
+
+Automate sprint review generation by combining the Linear API with Claude:
+
+```javascript
+async function generateSprintSummary(cycleId) {
+  const issues = await getCompletedIssues(cycleId);
+
+  const byLabel = issues.reduce((acc, issue) => {
+    const key = issue.labels.nodes[0]?.name || 'General';
+    acc[key] = acc[key] || [];
+    acc[key].push(issue.title);
+    return acc;
+  }, {});
+
+  const prompt = `Generate a sprint review summary from these completed issues grouped by area:\n${JSON.stringify(byLabel, null, 2)}\nFormat as a professional stakeholder update, 3-4 sentences per group.`;
+
+  return prompt; // Pass to Claude Code via stdin or API
+}
+```
+
+## Comparison with Native Linear Automation
+
+| Feature | Claude Skills + Linear | Linear Workflow Automations | GitHub Actions |
+|---|---|---|---|
+| AI-powered triage | Yes | No | Via third-party action |
+| Spec generation | Yes | No | No |
+| Custom logic | Full | Rule-based only | Full (YAML) |
+| Setup complexity | Medium | Low | Medium |
+
+## Troubleshooting Common Issues
+
+**API key not authorized for specific team**: Ensure the API key has read/write access to the target team's workspace. Linear uses team-specific permissions.
+
+**Triage comments in wrong format**: Use the `commentCreate` mutation and escape markdown properly before sending to the Linear API.
+
+**Webhook timing out**: Claude Code responses can take 5-10 seconds. Use a background job queue (BullMQ, Inngest) to acknowledge the webhook immediately and process triage asynchronously.
+
+**Duplicate triage comments on retries**: Check for existing triage comments before adding a new one by filtering issue comments for your triage marker.
+
+Claude skills with Linear transforms routine PM work into automated intelligence. The `tdd` skill makes triage actionable, `supermemory` tracks patterns across sprints, and spec generation saves hours per feature.
+
+
 ## Related Reading
 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Covers the tdd and supermemory skills used throughout this Linear integration guide, with usage patterns and invocation tips

@@ -336,4 +336,80 @@ AI screen readers transform how users interact with web content. By combining ML
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Testing Your AI Screen Reader
+
+1. Load the extension via `chrome://extensions` > "Load unpacked"
+2. Navigate to a page with images, buttons, and complex UI elements
+3. Press Tab to move focus through interactive elements
+4. Listen to the AI-generated descriptions via the Web Speech API
+5. Compare against native aria-label attributes using Chrome DevTools Accessibility pane
+6. Tune the model prompt to produce clearer, more actionable descriptions
+
+## Advanced: Context-Aware Navigation Commands
+
+Implement voice-command navigation so users can say "go to the price" instead of tabbing through every element:
+
+```javascript
+class VoiceNavigator {
+  constructor(aiModel) {
+    this.recognition = new webkitSpeechRecognition();
+    this.recognition.continuous = true;
+    this.ai = aiModel;
+  }
+
+  start() {
+    this.recognition.onresult = async (event) => {
+      const command = event.results[event.results.length - 1][0].transcript.toLowerCase();
+      await this.handleCommand(command);
+    };
+    this.recognition.start();
+  }
+
+  async handleCommand(command) {
+    if (command.includes('go to') || command.includes('find')) {
+      const target = await this.ai.findElement(document.body, command);
+      target?.focus();
+      target?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}
+```
+
+## Comparison with Traditional Screen Readers
+
+| Feature | AI Screen Reader Extension | NVDA | JAWS |
+|---|---|---|---|
+| AI semantic understanding | Yes | No | No |
+| Setup | Browser extension | Desktop install | Desktop install |
+| Cost | Free (build it) | Free | $90-1095/year |
+| Latency | 100-500ms per element | <10ms | <10ms |
+
+AI screen readers complement rather than replace established tools. They add semantic understanding that rule-based parsers cannot provide, but introduce latency that experienced users may find disruptive.
+
+## Troubleshooting Common Issues
+
+**High latency**: Cache descriptions for static DOM elements using a WeakMap:
+
+```javascript
+const cache = new WeakMap();
+async function describeCached(el) {
+  if (cache.has(el)) return cache.get(el);
+  const desc = await aiModel.describe(el);
+  cache.set(el, desc);
+  return desc;
+}
+```
+
+**Descriptions not updating on dynamic pages**: Use MutationObserver to invalidate cache entries for changed elements.
+
+**TTS speaking over itself**: Always cancel the current utterance before speaking the next:
+
+```javascript
+function speak(text) { speechSynthesis.cancel(); speechSynthesis.speak(new SpeechSynthesisUtterance(text)); }
+```
+
+AI screen readers transform web accessibility by combining ML context understanding with Chrome extension APIs.
+
+
 {% endraw %}

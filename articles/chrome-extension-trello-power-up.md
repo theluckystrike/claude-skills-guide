@@ -265,6 +265,61 @@ Building a Chrome extension that functions as a Trello Power-Up combines the bes
 
 Start with the basic structure, add Trello SDK initialization, then layer on your specific functionality. The Trello developer documentation provides additional capability references, and their Power-Up framework handles the complexity of iframe communication and authentication.
 
+## Advanced: Card Automation Triggers
+
+React to card events automatically. When a card moves to "Done", trigger a deployment webhook:
+
+```javascript
+const t = TrelloPowerUp.iframe();
+
+t.board('all').then(board => {
+  const card = board.lists.flatMap(l => l.cards).find(c => c.id === cardId);
+  if (card?.list?.name === 'Done') {
+    triggerDeploymentWebhook(card);
+  }
+});
+```
+
+## Step-by-Step: Adding the Extension to Trello
+
+1. Load the extension via `chrome://extensions` > "Load unpacked"
+2. Navigate to your Trello board
+3. Click "Power-Ups" in the board menu
+4. Select "Custom Power-Up" and enter your extension's capability URL
+5. The Power-Up iframe initializes and renders custom buttons on each card
+6. Click a card — your extension's custom section appears below the card description
+
+## Comparison with Native Trello Integrations
+
+| Feature | Chrome Extension + Power-Up | Trello Butler | Zapier |
+|---|---|---|---|
+| Setup complexity | Medium (build it) | Low (no-code) | Low (visual builder) |
+| Custom logic | Full JavaScript | Rule-based | Moderate |
+| Runs when browser is closed | No | Yes | Yes |
+| Cost | Free | Free/Gold plan | Subscription |
+
+## Troubleshooting Common Issues
+
+**Power-Up iframe not loading**: Trello requires Power-Up pages served over HTTPS. Use `ngrok` during development to expose your local server with a public HTTPS URL.
+
+**Trello API rate limits**: Batch multiple card requests using the `/batch` endpoint:
+
+```javascript
+async function getBatchCardData(cardIds) {
+  const params = cardIds.map(id => `/cards/${id}`).join(',');
+  const res = await fetch(`https://api.trello.com/1/batch?urls=${encodeURIComponent(params)}&key=${KEY}&token=${TOKEN}`);
+  return res.json();
+}
+```
+
+**Custom button not appearing**: Ensure your capability registration includes `card-buttons`:
+
+```javascript
+TrelloPowerUp.initialize({ 'card-buttons': (t) => [{ text: 'My Action', callback: myAction }] });
+```
+
+The combination of Chrome extension capabilities with Trello's Power-Up framework gives you a powerful integration layer for custom project management automation.
+
 
 ## Related Reading
 
