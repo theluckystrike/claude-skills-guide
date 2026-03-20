@@ -573,6 +573,15 @@ Claude Code combined with Trello's API opens up a wide range of automation possi
 
 The key to maintaining these automations long-term is treating your Trello scripts like production code: version-control them, add error handling, log failures, and rotate credentials on a schedule. With proper setup and security measures, you'll have a reliable automation layer that keeps your boards organized without manual effort.
 
+## Automating Card Lifecycle Management
+
+Beyond creating and moving cards, a complete Trello automation handles the entire card lifecycle: creation from templates, assignment, due date management, checklist completion tracking, and archiving when work is done. Claude Code generates the full lifecycle manager that responds to card events via webhooks and enforces your team's workflow rules automatically.
+
+For cards that represent recurring tasks, Claude Code generates the template cloner that creates a new card from a template when the previous instance is moved to Done, pre-populating the description, checklist, and labels from the template. This eliminates the manual setup overhead for tasks that repeat on a regular cadence.
+
+Due date management is another area where automation saves time. Claude Code generates the due date monitor that runs daily, finds cards approaching their due date without assignees, and sends a Slack message to the board owner asking for assignment. Cards that pass their due date without being moved get a red label added automatically, making overdue work visible in the board view without manual tracking.
+
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

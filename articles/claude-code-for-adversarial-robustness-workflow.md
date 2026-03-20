@@ -341,6 +341,15 @@ Here is a concrete approach to integrating adversarial robustness testing into y
 **Red team automation.** Claude Code generates a scheduled adversarial red team job that runs weekly against your production model endpoints using the latest attack algorithms, simulating the behavior of an attacker who periodically tries new approaches to defeat your defenses.
 
 
+## Input Preprocessing Defenses
+
+Before reaching the model, input preprocessing can neutralize many adversarial perturbations. Feature squeezing reduces color depth or applies spatial smoothing to remove high-frequency perturbations. JPEG compression removes subtle pixel-level changes that adversarial attacks rely on. These preprocessing steps are fast, require no model retraining, and can be applied at inference time with minimal latency impact.
+
+The trade-off is that preprocessing also changes benign inputs, which can slightly reduce clean accuracy. Claude Code generates the preprocessing pipeline with configurable strength parameters and a measurement script that quantifies the clean accuracy cost versus the adversarial robustness gain for each preprocessing step, helping you choose the right balance for your application.
+
+Input certification through randomized smoothing adds Gaussian noise to inputs multiple times, runs inference on each noisy version, and uses the majority vote as the prediction. Certified robustness means you can mathematically prove that no perturbation within a certain radius can change the prediction. Claude Code generates the smoothed classifier wrapper and the certification procedure using the CDF-based radius calculation from the original randomized smoothing paper.
+
+
 ---
 
 

@@ -339,6 +339,43 @@ The best teams treat their templates as living documents. They refine them after
 
 Start with one simple template, test it in your next project, and iterate. The best template is one you actually use.
 
+## Step-by-Step Guide: Building Your Starter CLAUDE.md
+
+Here is a concrete process for creating a CLAUDE.md template that your team actually uses.
+
+**Step 1 — Interview your senior developers.** Spend 30 minutes with each senior developer on your team asking two questions: What are the three things you most often have to correct in code reviews? What are the three things Claude Code does by default that do not match our conventions? Their answers become the core content of your CLAUDE.md. Claude Code compiles interview notes into a structured draft.
+
+**Step 2 — Write the project overview section first.** Start CLAUDE.md with a brief paragraph describing what the project does, its primary language and framework, and its deployment target. This context shapes every subsequent code generation decision. Claude Code uses this overview to infer appropriate defaults for things not explicitly specified.
+
+**Step 3 — Document your directory structure.** Explicitly list which directories contain what type of code and what file naming conventions apply in each. Developers and AI assistants both benefit from knowing where new files should go. Claude Code generates a directory tree with annotations explaining each directory's purpose and the file naming conventions expected within it.
+
+**Step 4 — Add code generation constraints.** List specific patterns you want enforced: always use dependency injection, never write raw SQL queries (use the ORM), always handle errors with the custom AppError class. These constraints produce the most immediate improvement in generated code quality. Claude Code can audit your existing codebase for violations and turn each violation category into a CLAUDE.md rule.
+
+**Step 5 — Include examples of correct and incorrect patterns.** For non-obvious conventions, pair the rule with a code example showing the right pattern and a comment explaining why the alternative is wrong. Claude Code generates these examples by extracting patterns from your existing codebase and presenting the most idiomatic version as the positive example.
+
+## Common Pitfalls
+
+**Writing CLAUDE.md for an audience of developers rather than for Claude Code.** CLAUDE.md is parsed by an AI, not a human. Prose that developers find clear ("follow good OOP principles") is too vague for Claude Code to act on. Every instruction should be concrete enough that you could write an automated test to check for compliance.
+
+**Including too much documentation context.** If your CLAUDE.md tries to explain the business domain in depth, the coding instructions get diluted. Keep domain explanation to two or three sentences. Use a separate ADR (Architecture Decision Record) or wiki for deeper context that developers need but Claude Code does not.
+
+**Not updating CLAUDE.md when the tech stack changes.** Outdated CLAUDE.md instructions that reference retired frameworks or deprecated patterns mislead Claude Code into generating code that does not compile. Assign ownership of CLAUDE.md to a specific team member and review it at the start of each sprint.
+
+## Best Practices
+
+**Start with the smallest possible CLAUDE.md.** A 50-line CLAUDE.md that your team consistently maintains beats a 500-line document that drifts out of date within a month. Add sections when you identify a repeated correction in code review rather than trying to anticipate everything upfront.
+
+**Use CLAUDE.md as onboarding documentation.** New team members should read CLAUDE.md to understand how the team works. If your CLAUDE.md would embarrass you as onboarding documentation, it needs improvement. Claude Code can help you identify which sections are incomplete or unclear by asking it to summarize the project from the CLAUDE.md alone.
+
+**Pair CLAUDE.md with automated linting.** Coding standards that can be automatically enforced should be in linter configuration, not CLAUDE.md. Reserve CLAUDE.md for the standards that require judgment — things that pass the linter but still violate your team's quality standards.
+
+## Integration Patterns
+
+**Template repository with CLAUDE.md scaffolding.** Create a GitHub template repository that includes a base CLAUDE.md for your organization's common standards. When teams create new projects from the template, they start with the organizational baseline and add project-specific rules. Claude Code helps generate the project-specific additions by analyzing the initial project description and tech stack.
+
+**Pre-commit hook compliance check.** Claude Code generates a pre-commit hook that runs a static analysis check against your CLAUDE.md rules. The hook uses AST-based analysis for rules like required docstrings and consistent error handling patterns, and line-based analysis for simpler rules like banned imports and prohibited function names.
+
+
 ## Related Reading
 
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)

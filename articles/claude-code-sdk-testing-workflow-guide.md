@@ -454,6 +454,43 @@ When a bug is reported, write a failing test that reproduces it before fixing th
 Finally, keep your test suite fast. A suite that takes ten minutes to run will be skipped under deadline pressure. Target under ninety seconds for the full unit and interaction suite, and reserve longer-running integration tests for CI only. Developers who can run tests in under two minutes run them constantly, which is exactly the behavior you want to encourage.
 
 
+## Step-by-Step Guide: Building a Test Suite for Claude Code Skills
+
+Here is a concrete workflow for creating a reliable skill test suite.
+
+**Step 1 — Define your test categories.** Skill tests fall into three categories: definition tests (does the YAML front matter parse correctly, are required fields present), unit tests (does the skill produce the correct output for a given input), and integration tests (does the skill interact correctly with Claude Code's tool system). Claude Code generates the test directory structure and base test classes for each category.
+
+**Step 2 — Write definition tests first.** These tests catch the most common skill authoring mistakes: missing required fields, invalid YAML syntax, and mismatched tool declarations. Claude Code generates a pytest parametrize fixture that loads every .md file in your skills directory and runs the definition validators against each one. These tests run in milliseconds and catch structural errors before you test behavior.
+
+**Step 3 — Create test fixtures for skill inputs.** A well-organized fixture set covers the happy path, edge cases, and error conditions. For each major feature of your skill, create a corresponding fixture file in tests/fixtures/. Claude Code generates the fixture loader that reads YAML or JSON fixture files and passes them as parametrize arguments to your tests, making it easy to add test cases without changing test code.
+
+**Step 4 — Add integration tests with response mocking.** Integration tests verify that your skill correctly interacts with Claude Code's tool calls. Claude Code generates the mock tool framework that intercepts tool calls, returns predefined responses, and records all tool invocations. Your tests assert that the skill called the right tools in the right order with the right arguments.
+
+**Step 5 — Set up CI to run tests on every commit.** Claude Code generates the GitHub Actions workflow that installs the Claude Code CLI in CI, loads your skill fixtures, and runs the full test suite. The workflow matrix runs tests on multiple Python versions and operating systems to catch environment-specific failures.
+
+## Common Pitfalls
+
+**Testing only the happy path.** Skills that work correctly on well-formed inputs can still fail spectacularly on malformed data, empty files, or unexpected tool responses. Claude Code generates an adversarial test fixture generator that creates edge case inputs based on your skill's input schema: empty strings, very long inputs, inputs with special characters, and inputs that would trigger each error handling branch.
+
+**Not isolating skill state between tests.** If your skill reads from or writes to files, databases, or external services, these side effects must be reset between tests. Claude Code generates setup and teardown fixtures that create fresh temporary directories for file operations and mock external service calls so tests are independent and reproducible.
+
+**Ignoring flaky tests.** Flaky tests that pass sometimes and fail other times erode trust in your test suite. Common causes are time-dependent tests, tests that depend on network availability, and tests that share mutable state. Claude Code generates the flaky test detector that runs your suite multiple times and reports any tests with variable results.
+
+## Best Practices
+
+**Use snapshot testing for complex outputs.** For skills that produce formatted output like code, tables, or structured documents, snapshot tests capture the expected output and fail when it changes. This catches unintentional regressions. Claude Code generates the snapshot testing setup with an update command that refreshes snapshots when you intentionally change behavior.
+
+**Measure test coverage for skill branches.** Skills with conditional logic have multiple paths through the code. Coverage measurement ensures you have tested each branch. Claude Code generates the coverage configuration and the threshold check that fails CI if coverage drops below your minimum.
+
+**Document test purpose in fixture comments.** Each test fixture should have a comment explaining what scenario it represents and why that scenario matters. Claude Code generates fixture files with comment fields that are displayed in test output, making it easy to understand failing tests without reading the fixture data.
+
+## Integration Patterns
+
+**Property-based testing with Hypothesis.** For skills that accept structured data, property-based tests generate thousands of random inputs and verify invariants that should always hold. Claude Code generates the Hypothesis strategies for your skill's input schema and the invariant checks (output is always valid JSON, output length is always within bounds, etc.).
+
+**Mutation testing with mutmut.** Mutation testing modifies your skill code in small ways and verifies that your tests catch the change. A test suite with high code coverage but low mutation score is not actually verifying correctness. Claude Code generates the mutmut configuration and the CI job that runs mutation testing nightly, reporting the mutation score trend over time.
+
+
 ## Related Reading
 
 - [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)

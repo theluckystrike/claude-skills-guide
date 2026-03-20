@@ -279,4 +279,13 @@ Here is a concrete approach to going from local Kafka development to a productio
 **Dead letter queue patterns.** For messages that fail processing after all retries, a dead letter queue topic captures the failed message with metadata about the failure. Claude Code generates the DLQ producer wrapper and the monitoring alert that notifies your team when DLQ depth exceeds a threshold.
 
 
+## Schema Evolution and Compatibility
+
+As your application evolves, message schemas change. Adding new fields, removing deprecated fields, or changing field types all require careful management to avoid breaking consumers that run on older code versions. The Confluent Schema Registry supports three compatibility modes: backward (new schema can read old messages), forward (old schema can read new messages), and full (both directions).
+
+Claude Code generates the schema evolution test that validates a proposed schema change against your registered compatibility mode before you publish it. The test fetches the current schema from the registry, applies your proposed change, and runs the compatibility check locally without making any registry updates. This prevents accidentally registering an incompatible schema that would break live consumers.
+
+For teams that manage schemas in files rather than through the registry directly, Claude Code generates the CI workflow that registers new schema versions from your schemas directory, enforces your compatibility mode, and fails the CI job if a proposed schema change violates compatibility.
+
+
 {% endraw %}

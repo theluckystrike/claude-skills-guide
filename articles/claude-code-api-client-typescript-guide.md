@@ -278,6 +278,15 @@ Here is a concrete workflow for taking a TypeScript API client from prototype to
 **OpenTelemetry tracing.** Instrument your client with OpenTelemetry spans to track API latency, token usage, and error rates alongside your other services. Claude Code generates the instrumentation wrapper that creates spans for each API call and propagates trace context through the `x-request-id` header.
 
 
+## Advanced Patterns: Streaming and Long-Running Operations
+
+For operations that take more than a few seconds, the synchronous request-response pattern produces a poor user experience. Streaming responses let you display partial results as they arrive rather than waiting for the complete response.
+
+Claude Code generates the streaming client method using `client.messages.stream()` that returns an async generator. Your TypeScript calling code iterates the generator and passes each text delta to a state update function. The pattern integrates naturally with React's concurrent rendering model — the stream updates state incrementally, and React batches the renders for smooth display.
+
+For background jobs that run for minutes or hours, Claude Code generates the polling helper that initiates the job, stores the job ID, and polls a status endpoint with exponential backoff until the job completes or fails. The helper returns a typed result object and surfaces progress updates through a callback, giving users visibility into long-running operations without blocking the main thread.
+
+
 ---
 
 

@@ -352,6 +352,15 @@ Here is a concrete approach to building a reusable fetch API wrapper for use acr
 **Offline-first with service workers.** Claude Code generates the service worker registration code and the cache strategy configuration that intercepts fetch calls and serves cached responses when the network is unavailable, implementing a stale-while-revalidate pattern for non-critical data.
 
 
+## Handling Streaming Responses
+
+Some API endpoints return streaming responses — server-sent events, chunked JSON, or newline-delimited JSON (NDJSON). The standard fetch API's response.json() method buffers the entire response before parsing, which fails for streaming endpoints. Your wrapper needs a streaming mode that processes chunks as they arrive.
+
+Claude Code generates the streaming reader that processes chunks line-by-line for NDJSON, accumulates partial JSON objects across chunk boundaries, and emits each complete object through an async generator. The generator interface integrates naturally with React's state updates and allows early termination of long-running streams when the user navigates away.
+
+For server-sent events specifically, Claude Code generates the EventSource wrapper with automatic reconnection, last-event-id tracking, and typed event discrimination based on the event type field. This pattern is particularly useful for progress reporting on long-running API operations.
+
+
 
 ## Related Reading
 

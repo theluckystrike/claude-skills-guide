@@ -211,6 +211,15 @@ Here is a concrete workflow for creating an effective CLAUDE.md file for your da
 **CI integration for skill file compliance.** Claude Code can generate a GitHub Actions job that runs a compliance check against your CLAUDE.md rules, verifying that all Python files have type hints, all functions have docstrings, and all notebooks have been cleared of output before commit.
 
 
+## Organizing Multi-Stage Pipelines
+
+Data science projects often involve multiple stages: raw data ingestion, cleaning, feature engineering, model training, and evaluation. Each stage has different performance characteristics, data dependencies, and failure modes. Document these stages explicitly in your CLAUDE.md so Claude Code understands the pipeline context when generating code.
+
+Specify which stages should be idempotent (safe to re-run), which should be skipped if outputs already exist, and which should always regenerate outputs. Claude Code uses these annotations when generating pipeline scripts, adding the appropriate existence checks and cache validation logic. When a pipeline stage fails mid-run, the restart behavior should be clear from the CLAUDE.md annotations rather than requiring developer investigation.
+
+For large datasets, document the approximate size of each stage's inputs and outputs. Claude Code uses this information to suggest appropriate chunk sizes for pandas operations and to flag operations likely to exhaust memory — such as a merge that would create a DataFrame too large to fit in RAM given your documented dataset sizes.
+
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

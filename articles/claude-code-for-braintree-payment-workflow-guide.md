@@ -448,6 +448,35 @@ The patterns here — singleton gateway initialization, client token generation,
 Remember to always keep your API credentials secure, implement idempotent payment processing, and thoroughly test in sandbox before deploying to production. With these practices in place, your Braintree integration will provide a seamless payment experience for your users.
 {% endraw %}
 
+## Step-by-Step Guide: Building a Production Payment Integration
+
+Here is a concrete approach to deploying a Braintree payment flow with Claude Code.
+
+**Step 1 — Set up your Braintree sandbox environment.** Create a Braintree developer account and generate sandbox API credentials. Store the merchant ID, public key, and private key as environment variables. Claude Code generates the environment validation script that checks all three credentials are present before application startup, failing fast with a descriptive error if any are missing.
+
+**Step 2 — Generate client tokens server-side.** Your backend must generate a client token that the frontend uses to initialize the Braintree Drop-in UI or Hosted Fields. Claude Code generates the endpoint that creates a client token with the appropriate customer ID (if the customer exists) to enable saved payment methods. The endpoint includes proper error handling for gateway connectivity failures.
+
+**Step 3 — Handle the payment nonce on the backend.** When a customer submits payment details, Braintree converts them to a one-time-use nonce on the frontend. Your backend receives this nonce and creates a transaction. Claude Code generates the transaction creation function with proper decimal handling for currency amounts, support for 3D Secure verification, and the complete set of error code handlers for common decline reasons.
+
+**Step 4 — Implement idempotency for payment requests.** Network issues can cause duplicate transaction attempts. Use Braintree's transaction.sale options to include a unique order ID that Braintree uses for idempotency. Claude Code generates the idempotency key generator and the duplicate detection logic that returns the existing transaction result if the same order ID has already been processed.
+
+**Step 5 — Verify webhooks from Braintree.** Braintree sends webhook notifications for subscription events, disputes, and other asynchronous events. Claude Code generates the webhook verification handler using Braintree's signature verification, the router that dispatches each notification type to the appropriate handler, and the idempotent processing logic that prevents duplicate handling if Braintree retries delivery.
+
+## Common Pitfalls
+
+**Sending raw card numbers to your server.** Braintree's Drop-in UI and Hosted Fields exist specifically to prevent PCI scope expansion. If raw card numbers ever touch your server, you are subject to PCI DSS Level 1 compliance requirements. Always use the nonce pattern where card details are tokenized client-side. Claude Code generates the frontend integration that uses the Drop-in UI and warns if it detects any attempt to pass card numbers directly.
+
+**Not handling declined transactions gracefully.** A decline is not an exception — it is a valid response that requires user-facing messaging. The decline reason (insufficient funds, do not honor, card expired) should inform the message shown to the customer. Claude Code generates the decline message mapper that converts Braintree's processor response codes into user-friendly messages.
+
+**Storing nonces for later use.** Nonces are single-use tokens that expire after 3 hours. Storing a nonce in your database and attempting to use it later will always fail. For saving payment methods for future use, use Braintree's vault to store a payment method nonce as a reusable payment method token. Claude Code generates the vault integration and the payment method update flow.
+
+## Integration Patterns
+
+**Subscription billing with Braintree.** Claude Code generates the subscription creation endpoint that creates a Braintree plan, subscribes a customer to it with their vaulted payment method, and sets up the webhook handlers for subscription charged, subscription failed, and subscription canceled events.
+
+**Multi-currency support.** For international businesses, Braintree supports multiple settlement currencies. Claude Code generates the currency detection logic that selects the appropriate Braintree merchant account based on the customer's currency, and the currency formatting utilities that display amounts correctly for each locale.
+
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

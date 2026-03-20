@@ -492,6 +492,45 @@ A well-structured Axios HTTP client workflow transforms raw API calls into maint
 Pair this workflow with Claude Code skills like **pdf** for documentation, **frontend-design** for UI components, and **tdd** for comprehensive test coverage. Your API integration becomes not just functional, but professional-grade — the kind of code that survives team growth, API changes, and the inevitable security audit that asks "how do you handle token expiry?"
 
 
+## Step-by-Step Guide: Building a Production Axios Client
+
+Here is a concrete approach to building an Axios client that handles real-world API complexity.
+
+**Step 1 — Create a centralized instance factory.** Rather than calling axios.create() inline, create a factory function that accepts the API configuration and returns a configured instance. Claude Code generates the factory with environment-specific defaults: shorter timeouts for development, longer timeouts for production, and debug logging enabled only when LOG_LEVEL=debug is set.
+
+**Step 2 — Add request interceptors for authentication.** Authentication headers need to be fresh on every request, especially when using short-lived JWTs. Claude Code generates the request interceptor that reads the current token from your auth store, checks if it is expired, refreshes it if necessary (using a mutex to prevent concurrent refresh races), and attaches the fresh token to the request.
+
+**Step 3 — Add response interceptors for token refresh.** When a 401 response arrives, your client should automatically refresh the token and retry the original request rather than letting the error propagate. Claude Code generates the 401 interceptor with a queue mechanism that holds pending requests while the token refresh is in progress, then replays them all once the new token is available.
+
+**Step 4 — Implement request cancellation for navigation.** In single-page applications, requests started on one route should be cancelled when the user navigates to a different route. Claude Code generates the request manager that tracks all in-flight requests using AbortController, and the React hook that cancels pending requests on component unmount.
+
+**Step 5 — Add structured error handling with error transformation.** Network errors, HTTP errors, and application-level errors need different handling. Claude Code generates the error transformer that converts Axios errors into your application's error type hierarchy, with serializable properties that can be passed to error boundaries and displayed in UI.
+
+## Common Pitfalls
+
+**Not clearing interceptors when the client is destroyed.** If you create Axios instances inside React components (rare but sometimes necessary), each render creates new interceptors that accumulate. Call axios.interceptors.request.eject() and axios.interceptors.response.eject() in the component's cleanup function. Claude Code generates the cleanup hook.
+
+**Race conditions in concurrent requests.** When multiple components simultaneously make requests to the same endpoint, you may want request deduplication. Without it, you get N requests for N subscribers. Claude Code generates the deduplication layer using a shared request cache Map keyed on the serialized URL and parameters.
+
+**Not serializing complex query parameters correctly.** Axios serializes nested objects and arrays in query strings using PHP-style brackets by default. Many APIs expect comma-separated values or repeated keys. Configure Axios's paramsSerializer to match your API's expected format. Claude Code generates the custom serializer configured to your API's conventions.
+
+**Caching responses without considering cache invalidation.** Response caching saves bandwidth but can serve stale data. Without a strategy for invalidating cache entries after mutations, your application shows outdated data. Claude Code generates the cache manager with time-based expiration and manual invalidation methods that are called after write operations.
+
+## Best Practices
+
+**Use TypeScript generics for typed responses.** Axios supports generic type parameters for response data: axios.get<User[]>('/users'). Claude Code generates the typed API module where every endpoint is represented as a function with typed request parameters and typed return values, giving full IntelliSense coverage across your API surface.
+
+**Test interceptors independently.** Interceptors are the most complex part of an Axios client and the most error-prone. Unit test each interceptor by calling it directly rather than through the full Axios stack. Claude Code generates isolated test cases for the authentication interceptor, the retry interceptor, and the error transform interceptor.
+
+**Document base URL and authentication requirements.** Each Axios instance should have a comment explaining which API it targets, what authentication it uses, and any special request or response handling. Claude Code generates the JSDoc comments for each instance factory that document these details and appear in IDE tooltips.
+
+## Integration Patterns
+
+**React Query integration.** React Query manages server state and caching on top of any fetch mechanism. Claude Code generates the Axios adapter for React Query that configures sensible defaults (stale time, retry count, error boundary integration) and generates typed query hooks for each of your API endpoints.
+
+**Vue.js with Pinia.** In Vue applications using Pinia for state management, Claude Code generates the Axios instance as a Pinia plugin that shares the auth state store reference, allowing interceptors to read and write authentication tokens from the central store without circular dependencies.
+
+
 ## Related Reading
 
 - [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)

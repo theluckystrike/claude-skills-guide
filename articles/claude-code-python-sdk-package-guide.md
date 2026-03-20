@@ -469,6 +469,35 @@ Building a Python SDK for Claude Code follows established patterns. Focus on cle
 The Python ecosystem benefits from well-designed packages. Your SDK contributes to that ecosystem and enables others to build powerful Claude Code integrations without reinventing the authentication, retry, and error-handling logic you have already worked through.
 
 
+## Step-by-Step Guide: Publishing Your First SDK Package
+
+Here is a concrete workflow for taking a Python SDK from local development to PyPI.
+
+**Step 1 — Create the package structure with hatch or uv.** Use hatch new my-sdk or uv init --lib my-sdk to scaffold the package directory. Claude Code generates the pyproject.toml with all required metadata fields, sensible version constraints for your dependencies, and the build backend configuration (hatchling or setuptools). The generated structure separates the library code in src/my_sdk from the tests in tests/ to prevent accidental test imports in production.
+
+**Step 2 — Design your public API surface carefully.** Your SDK's public API is a contract with your users. Adding to it is easy; removing or changing it requires a major version bump. Claude Code reviews your proposed API and flags any anti-patterns: too many required parameters in constructors, methods that do too many things, or inconsistent naming conventions. It also generates the __all__ list in your package's __init__.py that explicitly declares your public interface.
+
+**Step 3 — Implement the client with environment-aware configuration.** SDK users should be able to configure the client from environment variables without instantiation arguments. Claude Code generates the configuration hierarchy: explicit arguments override environment variables, which override default values. A validate() method on the config class raises clear errors when required configuration is missing.
+
+**Step 4 — Add comprehensive type annotations.** Type-annotated SDKs provide better IDE autocomplete and catch integration errors at development time. Claude Code generates py.typed marker file and typed stub files for any compiled or dynamic components. Running mypy --strict against the generated code ensures the annotations are complete.
+
+**Step 5 — Automate publishing with GitHub Actions.** Claude Code generates the GitHub Actions release workflow that triggers on git tag pushes, runs the test suite, builds the wheel and source distribution, and publishes to PyPI using trusted publishing (no API tokens required). The workflow includes a dry-run step that builds the distribution and checks the package metadata without publishing.
+
+## Common Pitfalls
+
+**Including test files or development dependencies in the wheel.** A wheel that includes your test suite adds unnecessary size and may include test fixtures that contain sensitive data. Verify your MANIFEST.in and pyproject.toml build configuration excludes tests, documentation source, and CI configuration files. Claude Code generates the build verification script that inspects the built wheel contents before publishing.
+
+**Not versioning your API properly.** SDK breaking changes require major version bumps following semantic versioning. Adding an optional parameter is backward compatible (minor version). Removing a method or changing its signature requires a major version bump. Claude Code generates the changelog and version bump automation that analyzes your git diff for breaking changes and suggests the appropriate version increment.
+
+**Forgetting to handle network errors gracefully.** SDK users run your library in environments you do not control — behind corporate proxies, with strict firewall rules, or with intermittent connectivity. Claude Code generates the network error hierarchy and the retry configuration that your users can customize to match their environment's reliability characteristics.
+
+## Integration Patterns
+
+**AsyncIO support.** If your SDK makes network calls, provide both synchronous and asynchronous client classes. Claude Code generates the async client using httpx.AsyncClient and the synchronous wrapper that runs the async implementation in a new event loop, so users can choose based on their application's concurrency model.
+
+**Mock client for testing.** SDK users need to test their code without making real API calls. Claude Code generates the MockClient class that records calls and returns configurable responses, and a pytest fixture that automatically injects the mock client in test environments. Providing this in your SDK reduces the testing burden for every user.
+
+
 ## Related Reading
 
 - [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)

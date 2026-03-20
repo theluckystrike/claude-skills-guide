@@ -304,6 +304,15 @@ Here is a concrete workflow for migrating an existing ESLint and Prettier setup 
 **GitHub Actions matrix testing.** If your project supports multiple Node.js versions, Claude Code generates a GitHub Actions matrix that runs biome ci across each supported version to catch environment-specific issues before they reach production.
 
 
+## Advanced Configuration Patterns
+
+Biome's rule system supports three severity levels: error, warn, and off. Understanding when to use each helps you build a configuration that provides actionable signal without creating noise.
+
+Use error for rules where a violation indicates a real bug or security issue — such as noExplicitAny, noDebugger, and noUnusedVariables. These violations should block commits. Use warn for stylistic preferences where the team has a standard but legacy code may not yet comply — such as import organization or naming conventions. Use off for rules that conflict with your project's intentional patterns. Claude Code reviews your existing codebase against Biome's full rule catalog and suggests the appropriate severity level for each rule based on how frequently your code would violate it.
+
+The `overrides` feature in biome.json lets you apply different rule sets to different file patterns. Test files often need different rules than production code — for example, tests legitimately use any to mock complex types. Claude Code generates a biome.json with separate rule configurations for test files, generated files, and production source, so each category of code gets appropriate linting without over-broad suppressions.
+
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
