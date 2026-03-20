@@ -275,4 +275,61 @@ Wiring Claude intelligence into GitHub Actions CI/CD [bridges the gap between au
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep CI/CD API costs under control
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Integrating Claude Skills into CI/CD
+
+1. **Add the Claude API key as a GitHub Actions secret**: navigate to Settings > Secrets and Variables > Actions and add `CLAUDE_API_KEY`.
+2. **Create a workflow trigger**: choose when Claude analysis runs — on every pull request, failed tests, or production deployments.
+3. **Fetch the diff**: use `git diff` between the PR base SHA and head SHA to get the exact changed lines.
+4. **Call the Claude API**: use a Python script in a `run` step to send the diff to Claude and write the response to a file.
+5. **Post results back to the PR**: use the GitHub CLI to post Claude's review as a PR comment with actionable file names and line numbers.
+6. **Gate deployments**: for sensitive changes, require Claude to return a "LGTM" signal before the deploy job runs.
+
+## Example: Claude Review Script
+
+```python
+# scripts/claude_review.py
+import anthropic, sys
+
+diff = sys.argv[1] if len(sys.argv) > 1 else ""
+client = anthropic.Anthropic()
+
+message = client.messages.create(
+    model="claude-opus-4-6",
+    max_tokens=2048,
+    messages=[{
+        "role": "user",
+        "content": (
+            "Review this diff for bugs, security issues, and style. "
+            "Format as markdown.\n\n```diff\n" + diff + "\n```"
+        )
+    }]
+)
+
+with open("review.md", "w") as f:
+    f.write(message.content[0].text)
+```
+
+## CI/CD Integration Points
+
+| Integration point | What Claude analyzes | Value |
+|---|---|---|
+| Pull request review | Changed files diff | Bug detection, security, style |
+| Test failure analysis | Failed test output | Root cause and fix suggestion |
+| Deployment gate | Change summary | Go/no-go recommendation |
+| Post-deploy verification | Health check results | Rollback recommendation |
+| Dependency updates | Changelog + breaking changes | Impact assessment |
+
+## Advanced: Automatic Test Generation
+
+When a PR adds new functions without tests, trigger Claude to generate the missing tests. Parse the diff to find new function signatures, ask Claude to write unit tests, and commit them back to the PR branch automatically.
+
+## Troubleshooting
+
+**Workflow timing out on large diffs**: Only pass diffs from `src/` directories — not `dist/` or `node_modules/`. A 4,000-token diff is usually enough for meaningful feedback.
+
+**Review comments not appearing**: The workflow needs `pull-requests: write` in the `permissions` block. Organization policies may also need to allow write permissions for external contributors.
+
+**Inconsistent review quality**: Use a structured prompt template specifying what to look for: security vulnerabilities, missing error handling, type safety, and performance. Checklists produce more consistent results than open-ended prompts.
+
 {% endraw %}

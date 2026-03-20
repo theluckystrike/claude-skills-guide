@@ -297,6 +297,76 @@ Once the base works, consider adding these features:
 
 The Chrome Extensions documentation provides comprehensive details on content scripts, message passing, and storage APIs. Start with the basics, then layer in features as your needs evolve.
 
+## Step-by-Step: Building the DOM Inspector
+
+1. **Set up Manifest V3** with `activeTab` and `scripting` permissions.
+2. **Inject the inspector panel**: use `chrome.scripting.executeScript` to inject a fixed-position sidebar div when the user activates the extension.
+3. **Implement element highlighting**: on `mouseover`, draw a semi-transparent overlay around the hovered element with a tooltip showing tag, classes, and dimensions.
+4. **Build the element detail panel**: on click, display the element's attribute list, computed styles, and position in the DOM tree.
+5. **Add CSS path generation**: compute the full CSS selector path to the clicked element with a one-click copy button.
+6. **Export selected elements**: let users export HTML, computed styles, or XPath to a JSON file for automated test use.
+
+## Computing a Unique CSS Selector
+
+```javascript
+function getCSSSelector(element) {
+  if (element.id) return '#' + element.id;
+
+  const parts = [];
+  let current = element;
+
+  while (current && current !== document.documentElement) {
+    let selector = current.tagName.toLowerCase();
+
+    if (current.classList.length > 0) {
+      selector += '.' + Array.from(current.classList).join('.');
+    } else {
+      const parent = current.parentElement;
+      if (parent) {
+        const index = Array.from(parent.children).indexOf(current) + 1;
+        selector += ':nth-child(' + index + ')';
+      }
+    }
+
+    parts.unshift(selector);
+    current = current.parentElement;
+  }
+
+  return parts.join(' > ');
+}
+```
+
+## Comparison with Browser DevTools
+
+| Feature | This extension | Chrome DevTools | Firefox Inspector |
+|---|---|---|---|
+| Always-visible overlay | Yes | No | No |
+| CSS selector copy | One-click | Manual | Manual |
+| Custom export formats | Yes | Limited | Limited |
+| Mobile Chrome | Yes | Via remote debug | No |
+
+## Advanced: Accessibility Audit Overlay
+
+```javascript
+function auditAccessibility() {
+  document.querySelectorAll('img:not([alt])').forEach(img => {
+    img.style.outline = '3px solid red';
+  });
+  document.querySelectorAll('button').forEach(btn => {
+    if (!btn.textContent.trim() && !btn.getAttribute('aria-label')) {
+      btn.style.outline = '3px solid orange';
+    }
+  });
+}
+```
+
+## Troubleshooting
+
+**Inspector not injecting on chrome:// URLs**: Chrome restricts injection on `chrome://` and extension pages. Show a message in the popup explaining that the inspector only works on regular web pages.
+
+**Element highlighting flicker**: Throttle the `mouseover` handler with `requestAnimationFrame` to update the overlay at most once per frame.
+
+**CSS selector not unique**: Fall back to XPath when `document.querySelectorAll(selector).length > 1`. Use `document.evaluate()` to compute the XPath and switch to it automatically.
 
 ## Related Reading
 

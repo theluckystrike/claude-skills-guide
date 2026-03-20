@@ -328,6 +328,60 @@ Consider adding these features based on your team's needs:
 
 Building a timezone converter Chrome extension combines web development skills with practical utility for remote teams. The extension uses JavaScript's native `Intl` API for accurate conversions without heavy dependencies. Start with the core conversion functionality, then add features like saved timezones and page-level detection as your users request them.
 
+## Step-by-Step: Building the Timezone Converter
+
+1. **Set up your extension** with `storage` and `contextMenus` permissions. The `storage` permission saves the user's team timezones across sessions.
+2. **Build the timezone selector**: use `Intl.supportedValuesOf('timeZone')` to generate a complete list of IANA timezone names. Group them by continent for easier navigation.
+3. **Create the converter popup**: display a digital time display for each saved timezone. Update every second using `setInterval` — `new Date().toLocaleTimeString('en-US', { timeZone })` handles conversion.
+4. **Add a context menu converter**: right-click on a time string shows "Convert to your timezones". Parse the selected text with a regex and convert it to all saved zones.
+5. **Highlight business hours**: mark timezones outside 9 AM to 6 PM with a yellow indicator so users can instantly see who is available.
+6. **Add meeting planner**: let users input a target meeting time and highlight which slots work for all saved timezones.
+
+## Working with the Intl API
+
+```javascript
+function convertTime(date, targetTimezone) {
+  return new Intl.DateTimeFormat('en-US', {
+    timeZone: targetTimezone,
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+    weekday: 'short',
+  }).format(date);
+}
+
+const zones = ['America/New_York', 'Europe/London', 'Asia/Tokyo', 'Australia/Sydney'];
+zones.forEach(tz => console.log(tz + ': ' + convertTime(new Date(), tz)));
+```
+
+No external library needed — `Intl` handles DST transitions, UTC offsets, and locale-specific formatting automatically.
+
+## Comparison with Standalone Timezone Tools
+
+| Tool | Browser-native | Team presets | Context menu | Offline | Cost |
+|---|---|---|---|---|---|
+| This extension | Yes | Yes | Yes | Yes | Free |
+| Every Time Zone | No | No | No | No | Free |
+| World Time Buddy | No | Yes | No | No | Free/Pro |
+| Clockwise | Calendar integration | Yes | No | No | Free/Pro |
+
+## Advanced: Calendar Event Timezone Detection
+
+```javascript
+const timeRegex = /(\d{1,2}:\d{2}\s*(?:AM|PM)?)\s*([A-Z]{2,4}T|UTC[+-]\d+)/gi;
+document.querySelectorAll('[data-eventid]').forEach(event => {
+  const match = timeRegex.exec(event.textContent);
+  if (match) showTimezoneTooltip(event, match[1], match[2]);
+});
+```
+
+## Troubleshooting
+
+**Times off by one hour during DST**: Store IANA names like `America/New_York`, never fixed offsets like `UTC-5`. Fixed offsets are wrong for half the year in DST regions.
+
+**Context menu creating duplicates on reload**: Call `chrome.contextMenus.create` inside `chrome.runtime.onInstalled` only — not on every message listener invocation.
+
+**Timezone list not syncing across devices**: Use `chrome.storage.sync` instead of `chrome.storage.local`. The 100 KB sync limit is more than enough for a list of timezone names.
 
 ## Related Reading
 

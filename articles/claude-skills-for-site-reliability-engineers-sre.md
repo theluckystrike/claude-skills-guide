@@ -209,4 +209,54 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrate AI-powered analysis into CI/CD pipelines for SRE quality gates
 - [Claude Code Skills for Infrastructure as Code Terraform](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — Manage SRE infrastructure with Terraform using Claude Code skills
 - [Claude Code Best-Of Skills Hub](/claude-skills-guide/best-of-hub/) — Discover the top Claude Code skills for infrastructure and reliability work
+
+## Step-by-Step: Using Claude Skills for On-Call Workflows
+
+1. **Connect your observability stack**: integrate Claude with Datadog, Prometheus, or Grafana. Claude can then query metrics directly during an incident.
+2. **Create a runbook skill**: convert existing runbooks into a Claude skill. When an alert fires, Claude walks through the runbook steps against live metrics.
+3. **Set up log analysis**: connect Claude to Splunk, Loki, or CloudWatch Logs. Ask it to surface the top 5 error patterns from the last 15 minutes.
+4. **Automate postmortem drafts**: ask Claude to draft the postmortem from the incident timeline. It populates timeline, impact, root cause, and action items.
+5. **Build a change risk scorer**: give Claude access to deployment history to score the risk of a proposed change based on time of day, recent incident rate, and affected components.
+
+## Error Budget Tracking
+
+Claude can perform SLO and error budget calculations on demand. A 99.9% monthly SLO allows 43.8 minutes of downtime per 30-day month. Ask Claude to calculate the current error budget burn rate given your uptime data and recommend whether a deployment freeze is warranted.
+
+Run this as a daily scheduled skill that posts the error budget status to your team Slack channel.
+
+## SRE Task Automation Comparison
+
+| Task | Manual time | With Claude Skills | Time saved |
+|---|---|---|---|
+| Incident triage | 20-30 min | 5-8 min | ~75% |
+| Postmortem draft | 2-3 hours | 20-30 min | ~85% |
+| Capacity planning report | 4-6 hours | 30-60 min | ~87% |
+| Runbook review | 1-2 hours | 15-20 min | ~80% |
+| On-call handoff notes | 20-30 min | 5 min | ~83% |
+
+## Advanced: Automated Alert Explanations
+
+Connect Claude to your alerting system so it generates a plain-language explanation whenever a P1 or P2 alert fires. Pass the alert description, recent metrics summary, and error log samples. Ask Claude to explain the likely cause, customer impact, and first two diagnostic steps.
+
+```python
+async def explain_alert(description, metrics_summary, error_samples):
+    prompt = (
+        "Alert: " + description + "\n\n"
+        "Recent metrics: " + metrics_summary + "\n\n"
+        "Error samples: " + error_samples + "\n\n"
+        "Explain the likely cause, customer impact, and first two diagnostic steps."
+    )
+    return await claude.complete(prompt)
+```
+
+Post the explanation to the incident Slack channel within seconds of the alert firing.
+
+## Troubleshooting
+
+**Inconsistent incident summaries**: Instruct Claude to respond with JSON containing `summary`, `impact`, `likely_cause`, and `next_steps` fields. Parse this JSON rather than treating the response as free text.
+
+**Metrics context too large**: Downsample time series before passing to Claude. Send 48 thirty-minute averages instead of 1,440 one-minute data points.
+
+**Postmortem missing action items**: Include the explicit moment each mitigation was applied and whether metrics improved. Claude can then infer what worked and what systemic changes would prevent recurrence.
+
 {% endraw %}

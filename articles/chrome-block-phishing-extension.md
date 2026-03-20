@@ -266,6 +266,85 @@ Building a Chrome block phishing extension requires understanding browser securi
 
 For developers, the extension architecture offers a flexible platform for experimenting with detection techniques. For power users, understanding these mechanisms helps evaluate and configure browser security tools effectively.
 
+## Step-by-Step: Building the Phishing Blocker
+
+1. **Set up Manifest V3** with `declarativeNetRequest`, `storage`, and `webNavigation` permissions.
+2. **Load a block list**: download a phishing domain list at install time and store it as a `declarativeNetRequest` ruleset. Update daily via `chrome.alarms`.
+3. **Check URLs on navigation**: use `chrome.webNavigation.onBeforeNavigate` to intercept navigations and compare hostnames against your block list.
+4. **Show a warning page**: redirect blocked URLs to an extension-hosted warning page with options to proceed or go back.
+5. **Add heuristic checks**: check for lookalike domains, excessive subdomain depth, and brand impersonation using JavaScript string analysis.
+6. **Handle false positives**: add a "This site is safe" button that stores the domain in `chrome.storage.local` as a user allowlist.
+
+## Heuristic URL Analysis
+
+```javascript
+function analyzeUrl(url) {
+  const { hostname } = new URL(url);
+  const issues = [];
+
+  if (/[^\x00-\x7F]/.test(hostname)) {
+    issues.push({ type: 'homograph', severity: 'high' });
+  }
+
+  if (hostname.split('.').length > 4) {
+    issues.push({ type: 'subdomain_depth', severity: 'medium' });
+  }
+
+  const brands = ['paypal', 'amazon', 'apple', 'google', 'microsoft', 'netflix'];
+  const cleanHost = hostname.replace(/[0-9]/g, '');
+  brands.forEach(brand => {
+    if (cleanHost.includes(brand) && !cleanHost.endsWith(brand + '.com')) {
+      issues.push({ type: 'brand_impersonation', severity: 'high', brand });
+    }
+  });
+
+  return issues;
+}
+```
+
+## Comparison with Existing Protections
+
+| Protection | Coverage | Real-time | Privacy | Performance |
+|---|---|---|---|---|
+| This extension | Block list + heuristics | Daily | Local only | Minimal |
+| Chrome Safe Browsing | Google database | Minutes | Partial | Minimal |
+| uBlock Origin | Multiple lists | Hours | Local | Minimal |
+| Avast Online Security | Proprietary | Minutes | Account | Low |
+
+## Advanced: Safe Browsing API Supplement
+
+```javascript
+async function checkSafeBrowsing(url, apiKey) {
+  const resp = await fetch(
+    'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=' + apiKey,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        client: { clientId: 'phishing-guard', clientVersion: '1.0' },
+        threatInfo: {
+          threatTypes: ['MALWARE', 'SOCIAL_ENGINEERING'],
+          platformTypes: ['ANY_PLATFORM'],
+          threatEntryTypes: ['URL'],
+          threatEntries: [{ url }]
+        }
+      })
+    }
+  );
+  const data = await resp.json();
+  return !!(data.matches && data.matches.length > 0);
+}
+```
+
+Use this as a secondary check after the local block list.
+
+## Troubleshooting
+
+**Block list not loading**: The rules file must appear in both `web_accessible_resources` and `declarative_net_request.rule_resources` in the manifest.
+
+**Warning page not showing**: `webNavigation.onBeforeNavigate` cannot cancel navigations. Use `declarativeNetRequest` rules with a `redirect` action — this runs at the network level before any content loads.
+
+**High false positive rate**: Only flag URLs where multiple heuristics trigger simultaneously. A single match is rarely sufficient evidence of a phishing attempt.
 
 ## Related Reading
 
