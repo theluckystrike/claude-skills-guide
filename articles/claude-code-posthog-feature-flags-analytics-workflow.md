@@ -253,6 +253,57 @@ When building PostHog workflows with Claude Code, keep these recommendations in 
 
 5. **Error Handling**: Always validate API responses and handle authentication errors gracefully.
 
+
+## Step-by-Step Guide: Feature Flag Deployment with Claude Code
+
+Here is a practical workflow for safely deploying a new feature using PostHog feature flags and Claude Code automation.
+
+**Step 1 — Create the feature flag.** Use the PostHog skill or the Python client to create a new feature flag with an initial rollout of 0%. Claude Code generates the creation call with proper variant configuration for A/B tests or a simple boolean for canary releases.
+
+**Step 2 — Deploy behind the flag.** Implement your feature behind the flag check in your application code. Claude Code generates the PostHog feature flag check pattern for your frontend framework—React, Vue, or vanilla JavaScript—and the server-side variant evaluation for your backend.
+
+**Step 3 — Internal testing phase.** Use PostHog person properties to target the flag at internal team members only. Claude Code generates the property-based rollout filter that enables the feature only for users with is_internal: true in their PostHog profile.
+
+**Step 4 — Gradual public rollout.** Increase the rollout percentage incrementally—1%, 5%, 20%, 50%, 100%—while monitoring your key metrics after each step. Claude Code generates the rollout update API calls and a monitoring script that checks for regressions in your conversion and error metrics after each increase.
+
+**Step 5 — Clean up after full rollout.** Once the feature is stable at 100%, remove the flag check from your code and archive the flag in PostHog. Claude Code generates a checklist of all flag usage locations in your codebase and the cleanup tasks for each one.
+
+## Building a Feature Flag Governance Workflow
+
+For teams managing many flags, governance becomes critical. Stale flags add complexity without benefit. Claude Code can help you build a governance workflow:
+
+First, generate a weekly report of all active flags, their creation dates, rollout percentages, and last-modified dates. Flags that have been at 100% or 0% for more than 30 days are candidates for cleanup. Claude Code generates this report script and formats it as a Slack message or Confluence page.
+
+Second, enforce flag naming conventions. Claude Code generates a validation function that checks new flag keys against your naming standard—for example, feature/team-name/feature-slug—and rejects creates that do not match.
+
+Third, require owner attribution. Add a team and owner field to every flag using PostHog's metadata API. Claude Code generates the enforcement script that flags (pun intended) flags without owner information and routes cleanup requests to the right team.
+
+## Common Pitfalls
+
+**Evaluating flags on every render.** Calling PostHog's feature flag evaluation API on every React render adds latency and burns API quota. Cache flag values at session start and invalidate the cache only when the user's properties change. Claude Code generates the caching wrapper and the cache invalidation hook.
+
+**Not handling flag evaluation errors gracefully.** If PostHog is unreachable, your flag evaluation should default to a safe value rather than crashing. Claude Code generates try-catch wrappers around all flag evaluations with configurable default values.
+
+**Running experiments without statistical significance.** Analyzing experiment results before reaching statistical significance produces misleading conclusions. Claude Code can generate a sample size calculator that tells you how many users you need in each variant before you can draw valid conclusions from your conversion metrics.
+
+**Creating too many flags at once.** Each active feature flag adds a branch in your code that must be tested and maintained. Claude Code can help you enforce a flag budget—a maximum number of active flags per team—to prevent technical debt accumulation.
+
+## Best Practices
+
+**Use multivariate flags for meaningful A/B tests.** Binary flags limit you to comparing one variant against control. Multivariate flags let you test multiple designs or algorithms simultaneously, reducing the time needed to find the optimal solution. Claude Code generates the multivariate flag creation and the analysis queries for comparing all variants.
+
+**Tie flags to deployment events.** When you deploy a new feature flag, automatically tag the deployment in PostHog using the deployments API. This lets you overlay feature flag changes on your metric charts, making it easy to see which flag change caused a metric shift.
+
+**Keep flag evaluation logic simple.** Complex nested flag conditions are hard to reason about and debug. If you need complex targeting, use PostHog cohorts to pre-compute eligible users, then use a simple percentage rollout against that cohort. Claude Code can refactor complex flag conditions into simpler cohort-based targeting.
+
+**Test flag states in your test suite.** Every code path gated by a feature flag needs test coverage in both the enabled and disabled state. Claude Code generates the test utilities that let you mock PostHog flag evaluation and verify your application behaves correctly in each flag state.
+
+## Integration Patterns
+
+**Connecting PostHog to your CI/CD pipeline.** When a deployment completes, automatically update the rollout percentage for the corresponding feature flag. Claude Code generates the deployment webhook handler that maps your deployment environment to the appropriate flag rollout increment.
+
+**PostHog and Sentry integration.** Tag PostHog events with the active feature flag values so you can filter Sentry errors by flag state. This lets you quickly identify whether an error spike correlates with a specific flag being enabled. Claude Code generates the Sentry enrichment middleware that adds flag context to error reports.
+
 ## Conclusion
 
 Claude Code combined with PostHog creates a powerful automation layer for feature management and product analytics. By wrapping PostHog's API in custom skills, you can manage feature flags through natural language commands, build automated experiment analysis pipelines, and set up real-time monitoring that keeps your team informed of important metric changes. The key is starting simple—perhaps just flag toggling—and gradually expanding to more sophisticated analytics workflows as your needs grow.
