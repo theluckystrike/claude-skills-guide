@@ -16,111 +16,169 @@ score: 7
 {% raw %}
 # Claude Code TypeORM Entities Relations Migration Workflow
 
-Building robust database layers with TypeORM requires careful attention to entity design, relationship mapping, and migration management. This guide walks you through a practical workflow using Claude Code to accelerate TypeORM development while maintaining code quality and database integrity.
+Building robust database layers with TypeORM requires careful attention to entity design, relationship mapping, and migration management. This guide walks you through a practical workflow using Claude Code to accelerate TypeORM development while maintaining code quality and database integrity. Each section includes production-ready patterns you can adapt directly to your NestJS, Express, or standalone TypeScript projects.
 
 ## Setting Up Your TypeORM Project
 
-Before diving into entities, ensure your TypeORM project is properly configured. Claude Code can help scaffold the initial setup quickly:
+Before diving into entities, ensure your TypeORM project is properly configured. Claude Code can help scaffold the initial setup quickly, but the configuration deserves careful thought. The DataSource configuration is the foundation everything else depends on:
 
 ```typescript
 import { DataSource } from "typeorm";
 import { User } from "./entities/User";
 import { Product } from "./entities/Product";
 import { Order } from "./entities/Order";
+import { OrderItem } from "./entities/OrderItem";
+import { Category } from "./entities/Category";
 
 export const AppDataSource = new DataSource({
   type: "postgres",
-  host: "localhost",
-  port: 5432,
-  username: "your_username",
-  password: "your_password",
-  database: "your_database",
-  entities: [User, Product, Order],
+  host: process.env.DB_HOST ?? "localhost",
+  port: parseInt(process.env.DB_PORT ?? "5432"),
+  username: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  entities: [User, Product, Order, OrderItem, Category],
   migrations: ["src/migrations/*.ts"],
+  logging: process.env.NODE_ENV === "development",
   synchronize: false,
 });
 ```
 
-Always set `synchronize: false` in production environments. Relying on automatic synchronization can lead to unintended schema changes and data loss.
+Always set `synchronize: false` in production environments. Relying on automatic synchronization can lead to unintended schema changes and data loss. The `synchronize: true` shortcut is fine for rapid prototyping, but the moment your data matters — switch it off and use migrations.
+
+A useful practice is to keep a `CLAUDE.md` at your project root so Claude Code carries context across sessions:
+
+```markdown
+# TypeORM Project Context
+
+## Stack
+- TypeORM 0.3.x
+- PostgreSQL 16
+- NestJS 10
+- Node 20 / TypeScript 5.3
+
+## Conventions
+- All primary keys are UUIDs
+- All entities extend BaseEntity (src/entities/BaseEntity.ts)
+- Migrations live in src/migrations/
+- Do not use synchronize in production — always generate migrations
+- Foreign key columns are explicit (e.g. userId: string alongside user: User)
+- Use soft deletes (deletedAt) rather than hard deletes for user data
+```
 
 ## Creating TypeORM Entities
 
-Entities are the foundation of your database layer. Each entity maps to a database table, and properties map to columns. Here's a well-structured User entity:
+Entities are the foundation of your database layer. Each entity maps to a database table, and properties map to columns. Rather than duplicating audit columns on every entity, define a shared base entity that all others extend:
 
 ```typescript
+// src/entities/BaseEntity.ts
 import {
-  Entity,
   PrimaryGeneratedColumn,
-  Column,
   CreateDateColumn,
   UpdateDateColumn,
-  OneToMany,
+  DeleteDateColumn,
 } from "typeorm";
-import { Order } from "./Order";
 
-@Entity()
-export class User {
+export abstract class BaseEntity {
   @PrimaryGeneratedColumn("uuid")
   id: string;
-
-  @Column({ unique: true })
-  email: string;
-
-  @Column()
-  passwordHash: string;
-
-  @Column({ nullable: true })
-  firstName: string;
-
-  @Column({ nullable: true })
-  lastName: string;
-
-  @Column({ default: false })
-  isActive: boolean;
-
-  @OneToMany(() => Order, (order) => order.user)
-  orders: Order[];
 
   @CreateDateColumn()
   createdAt: Date;
 
   @UpdateDateColumn()
   updatedAt: Date;
+
+  @DeleteDateColumn()
+  deletedAt: Date | null;
 }
 ```
 
-Notice the use of `PrimaryGeneratedColumn("uuid")` for secure, unique identifiers. Always prefer UUIDs over sequential IDs for user-facing records.
+Now every entity automatically gets `id`, `createdAt`, `updatedAt`, and soft-delete support via `deletedAt`. Here is a complete `User` entity using the base:
+
+```typescript
+// src/entities/User.ts
+import {
+  Entity,
+  Column,
+  OneToMany,
+  OneToOne,
+  Index,
+} from "typeorm";
+import { BaseEntity } from "./BaseEntity";
+import { Order } from "./Order";
+import { Profile } from "./Profile";
+
+export enum UserRole {
+  USER      = "user",
+  ADMIN     = "admin",
+  MODERATOR = "moderator",
+}
+
+@Entity("users")
+export class User extends BaseEntity {
+  @Index()
+  @Column({ unique: true })
+  email: string;
+
+  @Column({ select: false })   // never returned by default queries
+  passwordHash: string;
+
+  @Column({ nullable: true, length: 100 })
+  firstName: string;
+
+  @Column({ nullable: true, length: 100 })
+  lastName: string;
+
+  @Column({ type: "enum", enum: UserRole, default: UserRole.USER })
+  role: UserRole;
+
+  @Column({ default: false })
+  isActive: boolean;
+
+  @OneToOne(() => Profile, (profile) => profile.user, { cascade: ["insert", "update"] })
+  profile: Profile;
+
+  @OneToMany(() => Order, (order) => order.user)
+  orders: Order[];
+}
+```
+
+Notice several production details here: `select: false` on `passwordHash` means it never leaks into API responses unless explicitly requested; the `@Index()` on email speeds up lookups; the enum is string-based rather than integer-based for readable query logs and easier debugging.
 
 ## Defining Entity Relationships
 
-TypeORM supports multiple relationship types: OneToOne, OneToMany, ManyToMany, and ManyToOne. Understanding when to use each is crucial for maintaining data integrity.
+TypeORM supports four relationship types. Choosing the wrong one is a common source of bugs and performance problems. Here is a quick decision guide:
 
-### One-to-Many Relationship
+| Scenario | Decorator | Foreign key lives on |
+|---|---|---|
+| Profile belongs to one User | OneToOne | profiles table |
+| User has many Orders | OneToMany + ManyToOne | orders table |
+| Order contains many Products | ManyToMany | join table |
+| OrderItem has one Product | ManyToOne | order_items table |
 
-A User can have multiple Orders:
+### One-to-One Relationship
+
+A User has exactly one Profile. The foreign key lives on the Profile side:
 
 ```typescript
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  ManyToOne,
-  JoinColumn,
-} from "typeorm";
+// src/entities/Profile.ts
+import { Entity, Column, OneToOne, JoinColumn } from "typeorm";
+import { BaseEntity } from "./BaseEntity";
 import { User } from "./User";
 
-@Entity()
-export class Order {
-  @PrimaryGeneratedColumn("uuid")
-  id: string;
+@Entity("profiles")
+export class Profile extends BaseEntity {
+  @Column({ nullable: true })
+  bio: string;
 
-  @Column()
-  totalAmount: number;
+  @Column({ nullable: true })
+  avatarUrl: string;
 
-  @Column({ default: "pending" })
-  status: string;
+  @Column({ nullable: true })
+  website: string;
 
-  @ManyToOne(() => User, (user) => user.orders)
+  @OneToOne(() => User, (user) => user.profile)
   @JoinColumn({ name: "userId" })
   user: User;
 
@@ -129,154 +187,349 @@ export class Order {
 }
 ```
 
-The `@JoinColumn` decorator specifies which column represents the foreign key. Always include the foreign key column explicitly for clarity.
+Always include the explicit foreign key column (`userId: string`) alongside the relation property. This makes it possible to update the relation without loading the related entity, and it prevents accidental lazy-load queries.
+
+### One-to-Many Relationship
+
+A User can have multiple Orders. The `@JoinColumn` decorator specifies which column represents the foreign key on the many side:
+
+```typescript
+// src/entities/Order.ts
+import {
+  Entity,
+  Column,
+  ManyToOne,
+  OneToMany,
+  JoinColumn,
+} from "typeorm";
+import { BaseEntity } from "./BaseEntity";
+import { User } from "./User";
+import { OrderItem } from "./OrderItem";
+
+export enum OrderStatus {
+  PENDING   = "pending",
+  CONFIRMED = "confirmed",
+  SHIPPED   = "shipped",
+  DELIVERED = "delivered",
+  CANCELLED = "cancelled",
+}
+
+@Entity("orders")
+export class Order extends BaseEntity {
+  @Column({ type: "enum", enum: OrderStatus, default: OrderStatus.PENDING })
+  status: OrderStatus;
+
+  @Column("decimal", { precision: 10, scale: 2 })
+  totalAmount: number;
+
+  @Column({ nullable: true })
+  shippedAt: Date;
+
+  @ManyToOne(() => User, (user) => user.orders, { onDelete: "RESTRICT" })
+  @JoinColumn({ name: "userId" })
+  user: User;
+
+  @Column()
+  userId: string;
+
+  @OneToMany(() => OrderItem, (item) => item.order, { cascade: ["insert"] })
+  items: OrderItem[];
+}
+```
+
+Note the use of `onDelete: "RESTRICT"` rather than `CASCADE`. This prevents accidentally deleting all of a user's order history if a User record is removed. Use `RESTRICT` by default and only use `CASCADE` when you have explicitly decided child records should be destroyed.
 
 ### Many-to-Many Relationship
 
-Products can belong to multiple Categories:
+Products can belong to multiple Categories. Use `@JoinTable` only on the owning side:
 
 ```typescript
+// src/entities/Product.ts
 import {
   Entity,
-  PrimaryGeneratedColumn,
   Column,
   ManyToMany,
+  OneToMany,
   JoinTable,
+  Index,
 } from "typeorm";
+import { BaseEntity } from "./BaseEntity";
 import { Category } from "./Category";
+import { OrderItem } from "./OrderItem";
 
-@Entity()
-export class Product {
-  @PrimaryGeneratedColumn("uuid")
-  id: string;
-
-  @Column()
+@Entity("products")
+export class Product extends BaseEntity {
+  @Index()
+  @Column({ length: 200 })
   name: string;
+
+  @Column({ type: "text", nullable: true })
+  description: string;
 
   @Column("decimal", { precision: 10, scale: 2 })
   price: number;
 
+  @Column({ default: 0 })
+  stockQuantity: number;
+
+  @Column({ default: true })
+  isActive: boolean;
+
   @ManyToMany(() => Category, (category) => category.products)
   @JoinTable({
     name: "product_categories",
-    joinColumn: { name: "productId", referencedColumnName: "id" },
+    joinColumn:        { name: "productId",  referencedColumnName: "id" },
     inverseJoinColumn: { name: "categoryId", referencedColumnName: "id" },
   })
   categories: Category[];
+
+  @OneToMany(() => OrderItem, (item) => item.product)
+  orderItems: OrderItem[];
 }
 ```
 
-Use `@JoinTable` only on the owning side of the relationship. The inverse side simply references the entity without additional decorators.
-
-### Handling Cascade Deletes
-
-Cascade operations determine what happens to related entities when the parent is deleted:
+The Category entity on the inverse side simply declares the `@ManyToMany` without `@JoinTable`:
 
 ```typescript
-@OneToMany(() => Order, (order) => order.user, { onDelete: "CASCADE" })
-orders: Order[];
+// src/entities/Category.ts
+import { Entity, Column, ManyToMany } from "typeorm";
+import { BaseEntity } from "./BaseEntity";
+import { Product } from "./Product";
+
+@Entity("categories")
+export class Category extends BaseEntity {
+  @Column({ unique: true, length: 100 })
+  name: string;
+
+  @Column({ unique: true, length: 120 })
+  slug: string;
+
+  @ManyToMany(() => Product, (product) => product.categories)
+  products: Product[];
+}
 ```
 
-Be cautious with `onDelete: "CASCADE"`. While convenient, it can lead to accidental data loss. Consider using soft deletes instead:
+### The OrderItem Join Entity
+
+For many-to-many relationships that carry extra data (like quantity and unit price at time of purchase), use an explicit join entity rather than `@JoinTable`:
 
 ```typescript
-@Column({ default: false })
-isDeleted: boolean;
+// src/entities/OrderItem.ts
+import { Entity, Column, ManyToOne, JoinColumn } from "typeorm";
+import { BaseEntity } from "./BaseEntity";
+import { Order } from "./Order";
+import { Product } from "./Product";
 
-@OneToMany(() => Order, (order) => order.user)
-@Where("isDeleted = :isDeleted", { isDeleted: false })
-orders: Order[];
+@Entity("order_items")
+export class OrderItem extends BaseEntity {
+  @ManyToOne(() => Order, (order) => order.items, { onDelete: "CASCADE" })
+  @JoinColumn({ name: "orderId" })
+  order: Order;
+
+  @Column()
+  orderId: string;
+
+  @ManyToOne(() => Product, (product) => product.orderItems, { onDelete: "RESTRICT" })
+  @JoinColumn({ name: "productId" })
+  product: Product;
+
+  @Column()
+  productId: string;
+
+  @Column({ type: "int" })
+  quantity: number;
+
+  // Snapshot the price at time of purchase — never join back to Product for historical prices
+  @Column("decimal", { precision: 10, scale: 2 })
+  unitPrice: number;
+}
 ```
+
+This is a critical pattern: storing `unitPrice` as a snapshot means historical orders remain accurate even if the product's price changes later. Claude Code can flag this risk when you paste a schema and ask "what data integrity issues does this have?"
+
+## Handling Soft Deletes Correctly
+
+With `deletedAt` on `BaseEntity`, TypeORM automatically filters soft-deleted records when you have the `@DeleteDateColumn` decorator. Verify this in your queries:
+
+```typescript
+// Records with deletedAt !== null are excluded automatically
+const users = await userRepository.find();
+
+// To include soft-deleted records:
+const allUsers = await userRepository.find({ withDeleted: true });
+
+// To soft-delete:
+await userRepository.softDelete(userId);
+
+// To hard-delete (use with extreme caution):
+await userRepository.delete(userId);
+```
+
+Be aware that `softDelete` does not cascade. If you soft-delete a User, their Orders are not automatically soft-deleted. You need to handle cascading soft deletes in your service layer, or accept that orphaned child records remain visible. Ask Claude to audit your service layer for this pattern: "Check all places where we soft-delete User and tell me what related records are left dangling."
 
 ## Generating and Running Migrations
 
-Never modify your schema directly in production. Instead, use migrations to track all changes:
+Never modify your schema directly in production. Migrations give you a versioned, reversible record of every schema change. The workflow with TypeORM migrations has three steps: generate, review, apply.
 
-### Creating Migrations
+### Generating Migrations Automatically
+
+TypeORM can diff your entity definitions against the current database schema and generate the migration for you:
 
 ```bash
-typeorm migration:create src/migrations/UserEntity
+npx typeorm-ts-node-commonjs migration:generate src/migrations/AddUserRoleEnum -d src/data-source.ts
 ```
 
-This generates a migration file where you define up and down methods:
+This produces a timestamped migration file. Always read the generated file before running it — TypeORM sometimes generates destructive changes if column types have changed.
+
+### Writing Migrations Manually
+
+For complex changes involving data backfills or multi-step operations, write the migration by hand:
 
 ```typescript
-import { MigrationInterface, QueryRunner, Table } from "typeorm";
+// src/migrations/1700000000000-AddOrderStatusEnum.ts
+import { MigrationInterface, QueryRunner } from "typeorm";
 
-export class UserEntity1700000000000 implements MigrationInterface {
+export class AddOrderStatusEnum1700000000000 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.createTable(
-      new Table({
-        name: "user",
-        columns: [
-          {
-            name: "id",
-            type: "uuid",
-            isPrimary: true,
-          },
-          {
-            name: "email",
-            type: "varchar",
-            isUnique: true,
-          },
-          {
-            name: "passwordHash",
-            type: "varchar",
-          },
-          {
-            name: "isActive",
-            type: "boolean",
-            default: false,
-          },
-          {
-            name: "createdAt",
-            type: "timestamp",
-            default: "now()",
-          },
-          {
-            name: "updatedAt",
-            type: "timestamp",
-            default: "now()",
-          },
-        ],
-      }),
-      true
-    );
+    // Create the enum type
+    await queryRunner.query(`
+      CREATE TYPE order_status_enum AS ENUM (
+        'pending', 'confirmed', 'shipped', 'delivered', 'cancelled'
+      )
+    `);
+
+    // Add the column using the new type
+    await queryRunner.query(`
+      ALTER TABLE orders
+        ADD COLUMN status order_status_enum NOT NULL DEFAULT 'pending'
+    `);
+
+    // Backfill from old boolean columns if they existed
+    await queryRunner.query(`
+      UPDATE orders SET status = 'confirmed' WHERE is_confirmed = true
+    `);
+
+    // Add index for common status-based queries
+    await queryRunner.query(`
+      CREATE INDEX idx_orders_status ON orders (status)
+    `);
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable("user");
+    await queryRunner.query(`DROP INDEX idx_orders_status`);
+    await queryRunner.query(`ALTER TABLE orders DROP COLUMN status`);
+    await queryRunner.query(`DROP TYPE order_status_enum`);
   }
 }
 ```
 
-### Running Migrations
+The `down` method is not optional. If a deployment goes wrong and you need to roll back, a missing `down` method turns a 5-minute fix into an emergency.
 
-Apply migrations to your database:
-
-```bash
-typeorm migration:run
-```
-
-Revert the last migration if needed:
+### Running and Reverting Migrations
 
 ```bash
-typeorm migration:revert
+# Apply all pending migrations
+npx typeorm-ts-node-commonjs migration:run -d src/data-source.ts
+
+# Check which migrations are pending
+npx typeorm-ts-node-commonjs migration:show -d src/data-source.ts
+
+# Revert the last applied migration
+npx typeorm-ts-node-commonjs migration:revert -d src/data-source.ts
 ```
+
+In a CI/CD pipeline, run migrations as a step before deploying the new application version. Never run migrations after the app is already serving traffic on the new version — some migrations are incompatible with the old application code and will cause errors during the rollout window.
+
+## Querying with the Repository Pattern
+
+TypeORM's repository pattern integrates naturally with Claude Code's ability to generate complex query builders from plain English descriptions. Here is a realistic example combining eager loading, filtering, and pagination:
+
+```typescript
+// src/repositories/OrderRepository.ts
+import { Repository, DataSource, Between } from "typeorm";
+import { Order, OrderStatus } from "../entities/Order";
+
+export class OrderRepository {
+  private repo: Repository<Order>;
+
+  constructor(dataSource: DataSource) {
+    this.repo = dataSource.getRepository(Order);
+  }
+
+  async findByUserWithItems(
+    userId: string,
+    page = 1,
+    limit = 20
+  ): Promise<[Order[], number]> {
+    return this.repo.findAndCount({
+      where: { userId },
+      relations: { items: { product: true } },
+      order: { createdAt: "DESC" },
+      skip: (page - 1) * limit,
+      take: limit,
+    });
+  }
+
+  async findRevenueByDateRange(startDate: Date, endDate: Date): Promise<number> {
+    const result = await this.repo
+      .createQueryBuilder("order")
+      .select("SUM(order.totalAmount)", "total")
+      .where("order.status = :status", { status: OrderStatus.DELIVERED })
+      .andWhere("order.createdAt BETWEEN :start AND :end", {
+        start: startDate,
+        end: endDate,
+      })
+      .getRawOne<{ total: string }>();
+
+    return parseFloat(result?.total ?? "0");
+  }
+}
+```
+
+Ask Claude Code to generate repository methods by describing them: "Write a TypeORM query that returns all orders for a user in the last 30 days, including items and products, ordered by most recent, with a count of total results for pagination."
 
 ## Best Practices for TypeORM Development
 
-Follow these guidelines for maintainable TypeORM code:
+| Practice | Why it matters |
+|---|---|
+| Use explicit column types | TypeORM's inference can produce unexpected types on different databases |
+| Index foreign keys | Without indexes, joins and lookups on FK columns do full table scans |
+| Never modify existing migrations | Other developers or environments may have already run them |
+| Write `down` methods | Rollbacks are impossible without them |
+| Use transactions for multi-entity writes | Without transactions, partial failures leave data in inconsistent states |
+| Store price/name snapshots on order items | Prevents historical records from changing when source data changes |
+| Use string enums over integer enums | Readable in database logs, easier to debug, safe to add values |
+| Keep entities lean | Move business logic to service classes; entities are schema definitions |
 
-1. **Use explicit column types** - Don't rely on TypeORM's type inference for production databases
-2. **Add indexes frequently** - Query performance matters; add indexes on foreign keys and frequently queried columns
-3. **Version your migrations** - Never modify existing migrations; create new ones for changes
-4. **Use transactions** - Wrap multiple related operations in transactions to maintain data consistency
-5. **Separate concerns** - Keep entities lean; use separate service classes for business logic
+For transactions wrapping multi-entity writes:
+
+```typescript
+await AppDataSource.transaction(async (manager) => {
+  const order = manager.create(Order, { userId, status: OrderStatus.PENDING, totalAmount: 0 });
+  await manager.save(order);
+
+  let total = 0;
+  for (const item of cartItems) {
+    const orderItem = manager.create(OrderItem, {
+      orderId: order.id,
+      productId: item.productId,
+      quantity: item.quantity,
+      unitPrice: item.product.price,
+    });
+    await manager.save(orderItem);
+    total += item.quantity * item.product.price;
+  }
+
+  order.totalAmount = total;
+  await manager.save(order);
+});
+```
+
+If any step inside the transaction callback throws, TypeORM automatically rolls back the entire operation. Without a transaction, a crash between saving the Order and saving its OrderItems leaves an empty order in the database.
 
 ## Conclusion
 
-A solid TypeORM workflow combines proper entity design, clear relationship definitions, and disciplined migration management. Claude Code can help you generate entities, write migrations, and maintain consistency across your database layer. By following these patterns, you'll build database code that's reliable, maintainable, and scalable.
+A solid TypeORM workflow combines proper entity design, clear relationship definitions, and disciplined migration management. Claude Code can help you generate entities, write migrations, review schemas for integrity issues, and maintain consistency across your database layer. By following these patterns — shared base entities, explicit foreign key columns, string enums, soft deletes, transactional writes, and always-present `down` methods — you build a database layer that holds up as your application grows.
 
 Remember: your database schema is the foundation of your application. Invest time in proper design, use migrations for all changes, and your future self will thank you.
 {% endraw %}
