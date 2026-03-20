@@ -22,7 +22,22 @@ Cookie consent has become a legal requirement across most jurisdictions. Impleme
 
 Modern web applications typically load scripts from multiple third-party sources: analytics platforms, advertising networks, embedded videos, and API integrations. Each of these may set cookies without explicit user permission. Regulatory frameworks like GDPR, CCPA, and ePrivacy Directive require informed consent before any non-essential cookies are set.
 
+The stakes are concrete. Under GDPR, fines can reach 4% of global annual turnover or €20 million, whichever is higher. Under CCPA, California residents can bring private actions for data breaches involving improperly handled personal data. Regulators have shown they will pursue enforcement actions against mid-sized companies, not just large platforms.
+
 Building a compliant consent system involves three core components: a UI for presenting consent options, state management for tracking user preferences, and a mechanism for blocking scripts until consent is granted. The frontend-design skill helps generate clean, accessible consent UIs, while your application logic handles preference storage and script blocking.
+
+## Consent Categories: What You Actually Need to Track
+
+Before writing a single line of code, map out what cookies your application sets and which category each belongs to. This mapping drives your UI design and your script-blocking logic.
+
+| Category | Examples | Requires consent? |
+|---|---|---|
+| Strictly necessary | Session tokens, CSRF tokens, load balancer cookies | No — exempt under GDPR |
+| Functional | Language preferences, saved form state, video player settings | Yes in most jurisdictions |
+| Analytics | Google Analytics, Mixpanel, Hotjar session recordings | Yes |
+| Marketing/Advertising | Facebook Pixel, Google Ads conversion tracking, retargeting | Yes |
+
+Marking necessary cookies as always-on in your UI is not just a UX convenience—it is legally accurate. Stripping necessary cookies based on a user's rejection would break your application and is not required by regulation. Make this distinction explicit in both your UI labels and your code.
 
 ## A Minimal Consent Implementation
 
@@ -60,7 +75,7 @@ export function applyConsent(consent) {
   if (consent.analytics) {
     loadScript('https://analytics.example.com/tracker.js');
   }
-  
+
   if (consent.marketing) {
     loadScript('https://ads.example.com/pixel.js');
   }
@@ -75,6 +90,8 @@ function loadScript(src) {
 ```
 
 This pattern separates concerns: the consent manager handles storage and preferences, while your application code decides which scripts to load based on those preferences. Integrate this with your existing analytics setup by wrapping initialization calls in consent checks.
+
+One critical detail: scripts that were already loaded on a previous page visit do not get "unloaded" when a user later revokes consent. Handle this by checking consent before the initial page load rather than reactively removing scripts. On each page load, call `applyConsent(getConsent())` before any third-party scripts execute.
 
 ## Building the Consent UI with Claude Code
 
@@ -98,7 +115,7 @@ import { getConsent, setConsent } from './consent-manager.js';
 
 function initConsentBanner() {
   const consent = getConsent();
-  
+
   if (!consent.timestamp) {
     showConsentBanner();
   } else {
@@ -120,6 +137,38 @@ document.getElementById('consent-reject').addEventListener('click', () => {
   hideConsentBanner();
 });
 ```
+
+## Blocking Scripts Before Consent: The Hard Part
+
+The `loadScript` approach above handles scripts you control directly. Third-party tag managers and inline scripts require additional techniques. Two common patterns:
+
+**Pattern 1: Script type blocking.** Change third-party script tags from `type="text/javascript"` to `type="text/plain"`. Browsers will not execute scripts with an unrecognized type. Once consent is granted, swap the type back and the browser executes the script.
+
+```javascript
+export function activateBlockedScripts(category) {
+  const blocked = document.querySelectorAll(
+    `script[type="text/plain"][data-consent="${category}"]`
+  );
+  blocked.forEach(original => {
+    const active = document.createElement('script');
+    active.src = original.src;
+    active.async = true;
+    document.head.appendChild(active);
+  });
+}
+```
+
+In your HTML, mark blocked scripts with data attributes:
+
+```html
+<script
+  type="text/plain"
+  data-consent="analytics"
+  src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX">
+</script>
+```
+
+**Pattern 2: Server-side rendering with consent flags.** For SSR applications, pass the stored consent token as a cookie (ironically, a strictly necessary cookie) and have the server conditionally render third-party script tags. This prevents blocked scripts from appearing in the DOM at all for users who have not consented.
 
 ## Testing Your Implementation
 
@@ -158,6 +207,29 @@ describe('Cookie Consent', () => {
 
 Run these tests through your existing test runner to ensure the consent system behaves correctly across different scenarios.
 
+Beyond unit tests, add integration tests that verify real scripts are not loaded before consent. In a Playwright or Cypress test, intercept network requests and assert that analytics endpoints receive no requests until the user clicks save:
+
+```javascript
+// playwright example
+test('analytics scripts do not load before consent', async ({ page }) => {
+  const analyticsRequests = [];
+  page.on('request', req => {
+    if (req.url().includes('analytics.example.com')) {
+      analyticsRequests.push(req.url());
+    }
+  });
+
+  await page.goto('/');
+  // Banner should be visible, no analytics loaded yet
+  expect(analyticsRequests.length).toBe(0);
+
+  await page.click('#consent-analytics');
+  await page.click('#consent-save');
+  // Now analytics should load
+  expect(analyticsRequests.length).toBeGreaterThan(0);
+});
+```
+
 ## Advanced Considerations
 
 For complex applications, consider implementing consent categories that align with specific functionality. Some teams use separate consent states for:
@@ -169,15 +241,40 @@ For complex applications, consider implementing consent categories that align wi
 
 If your application serves users in multiple jurisdictions, the supermemory skill can help document which regulations apply to different user segments. Store jurisdiction information alongside consent preferences to handle cases where GDPR applies but CCPA does not, or vice versa.
 
+Jurisdiction detection is commonly handled via IP geolocation at the CDN or server layer. Return a header like `X-User-Region: EU` and use that to determine whether to show a full GDPR banner or a lighter CCPA notice. Both regulations require consent, but GDPR imposes stricter affirmative consent requirements than CCPA's opt-out model.
+
 When integrating third-party tools, prefer solutions that support consent-aware loading. Google Analytics 4, for example, respects consentMode settings that let you configure baseline consent requirements. This reduces the complexity of manual script blocking while maintaining compliance.
+
+```javascript
+// Google consentMode v2 integration
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+
+// Set default denied state before GA loads
+gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  wait_for_update: 2000
+});
+
+// After user grants consent
+function updateGoogleConsent(analytics, marketing) {
+  gtag('consent', 'update', {
+    analytics_storage: analytics ? 'granted' : 'denied',
+    ad_storage: marketing ? 'granted' : 'denied'
+  });
+}
+```
 
 ## Documentation and Maintenance
 
 Document your consent implementation in your project's privacy section. The pdf skill can help generate downloadable privacy notices that explain what cookies your application uses, why each category exists, and how users can update their preferences.
 
-Regular maintenance involves reviewing which scripts your application loads and ensuring new integrations respect the consent system. Add a checklist item for consent compliance whenever introducing new third-party services.
+Regular maintenance involves reviewing which scripts your application loads and ensuring new integrations respect the consent system. Add a checklist item for consent compliance whenever introducing new third-party services. It is easy for a developer to add a new analytics tool by dropping a script tag into a layout template, bypassing the consent gate entirely. A code review checklist item prevents this.
 
-Cookie consent implementation doesn't need to be complicated. By building a small, focused consent manager and pairing it with a well-designed UI component, you satisfy regulatory requirements while keeping your codebase maintainable.
+Set a calendar reminder to audit your cookie inventory every six months. Vendors change what they set, and tools you added years ago may now set cookies they did not originally. Browser developer tools show all cookies set on a page—use them to verify your inventory is current.
+
+Cookie consent implementation doesn't need to be complicated. By building a small, focused consent manager and pairing it with a well-designed UI component, you satisfy regulatory requirements while keeping your codebase maintainable. The patterns here scale from a simple static site to a full single-page application—start with the minimal implementation and layer in complexity only where your specific situation requires it.
 {% endraw %}
 
 

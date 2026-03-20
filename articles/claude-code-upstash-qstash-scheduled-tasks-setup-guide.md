@@ -16,7 +16,7 @@ score: 7
 {% raw %}
 # Claude Code Upstash QStash Scheduled Tasks Setup Guide
 
-Upstash QStash is a serverless message queue and cron service that integrates smoothly with Next.js, Cloudflare Workers, and other serverless platforms. Combined with Claude Code's skill system, you can create powerful automated workflows that handle scheduled tasks intelligently. This guide walks you through setting up QStash scheduled tasks while using Claude Code's capabilities for enhanced productivity.
+Upstash QStash is a serverless message queue and cron service that integrates smoothly with Next.js, Cloudflare Workers, and other serverless platforms. Combined with Claude Code's skill system, you can create powerful automated workflows that handle scheduled tasks intelligently. This guide walks you through setting up QStash scheduled tasks while using Claude Code's capabilities for enhanced productivity — covering everything from basic cron setup to idempotent handlers and production debugging.
 
 ## Understanding QStash Scheduled Tasks
 
@@ -26,6 +26,21 @@ QStash provides HTTP-based task scheduling that works without dedicated servers.
 - **Exactly-once delivery**: Prevents duplicate task execution
 - **Automatic retries**: Failed tasks are automatically retried with exponential backoff
 - **Dashboard monitoring**: Visualize task execution history and success rates
+- **Edge-compatible**: Works on Vercel Edge Functions and Cloudflare Workers where persistent processes are not available
+
+### QStash vs Traditional Cron: A Comparison
+
+| Feature | Traditional Cron | QStash |
+|---|---|---|
+| Infrastructure | Dedicated server required | Fully serverless |
+| Failure handling | Manual retry logic | Built-in exponential backoff |
+| Visibility | Log files only | Dashboard with delivery history |
+| Deployment | SSH + crontab changes | API call or SDK |
+| Duplicate protection | None by default | Idempotency keys |
+| Edge compatibility | No | Yes |
+| Cost model | Server uptime | Per-message pricing |
+
+The trade-off is that QStash adds a network hop to every scheduled execution, so it is not the right choice for sub-second scheduling or extremely high-frequency tasks. For anything running every 15 minutes or less frequently, the operational benefits far outweigh the added latency.
 
 ## Setting Up Your Project
 
@@ -42,62 +57,157 @@ Create a `.env.local` file to store your QStash credentials:
 ```
 QSTASH_TOKEN=your_qstash_token_here
 QSTASH_NEXT_SIGNING_KEY=your_next_signing_key_here
+QSTASH_CURRENT_SIGNING_KEY=your_current_signing_key_here
 ```
+
+You can find these values in the Upstash Console under your QStash instance. The two signing keys — current and next — support key rotation without downtime. QStash will try to verify a request with the current key first, then fall back to the next key. This is important for production environments where you need to rotate credentials periodically.
+
+Never commit these values to source control. Add `.env.local` to your `.gitignore` and use your deployment platform's secret management (Vercel environment variables, Fly.io secrets, etc.) for production values.
 
 ## Creating Scheduled Tasks with Claude Code
 
-Here's how to create a basic scheduled task using the QStash SDK:
+Here is how to create a basic scheduled task using the QStash SDK:
 
 ```javascript
-import { QStash } from '@upstash/qstash';
+import { Client } from '@upstash/qstash';
 
-const qstash = new QStash({
+const qstash = new Client({
   token: process.env.QSTASH_TOKEN,
 });
 
 // Schedule a task to run every hour
-await qstash.publish({
+const result = await qstash.publishJSON({
   url: 'https://your-domain.com/api/cronjob',
-  schedule: '*/60 * * * *', // Cron expression for every 60 minutes
-  body: JSON.stringify({
+  cron: '0 * * * *', // Top of every hour
+  body: {
     task: 'data-sync',
-    timestamp: new Date().toISOString()
-  }),
+    timestamp: new Date().toISOString(),
+  },
 });
+
+console.log('Schedule created:', result.scheduleId);
 ```
 
-The `schedule` field accepts standard cron expressions. QStash also supports human-readable intervals like `in 1 hour` or `every day at 9am`.
+The `cron` field accepts standard five-field cron expressions. QStash also supports one-time delayed delivery using the `delay` field for event-driven use cases where you want to fire a task after a specific amount of time rather than on a repeating schedule.
+
+### Common Cron Expression Reference
+
+| Expression | Meaning |
+|---|---|
+| `0 * * * *` | Every hour at :00 |
+| `*/15 * * * *` | Every 15 minutes |
+| `0 9 * * 1-5` | 9am Monday–Friday (UTC) |
+| `0 0 * * *` | Midnight daily |
+| `0 0 1 * *` | First day of each month |
+| `0 2 * * 0` | 2am every Sunday |
+
+Always specify cron schedules in UTC and document the intended local time for your team. A task intended to run at midnight US/Eastern should be documented as `0 5 * * *` (UTC) with a comment explaining the timezone offset.
 
 ## Integrating with Next.js API Routes
 
-Create an API route to handle the scheduled task:
+Create an API route to handle the scheduled task. In the Next.js App Router:
+
+```typescript
+// app/api/cronjob/route.ts
+import { verifySignatureAppRouter } from '@upstash/qstash/nextjs';
+import { NextRequest, NextResponse } from 'next/server';
+
+async function handler(req: NextRequest) {
+  const body = await req.json();
+
+  console.log('Received scheduled task:', body.task);
+
+  // Your business logic here
+  await processScheduledTask(body);
+
+  return NextResponse.json({ success: true });
+}
+
+export const POST = verifySignatureAppRouter(handler);
+```
+
+For the Pages Router the approach is similar:
 
 ```javascript
 // pages/api/cronjob.js
 import { verifySignature } from '@upstash/qstash/nextjs';
 
 async function handler(req, res) {
-  // Verify the request comes from QStash
-  const body = await req.text();
-  
-  // Process the task
-  const payload = JSON.parse(body);
+  const payload = req.body;
   console.log('Received task:', payload.task);
-  
-  // Your business logic here
+
   await processScheduledTask(payload);
-  
+
   res.status(200).json({ success: true });
 }
 
 export default verifySignature(handler);
+
+export const config = {
+  api: {
+    bodyParser: false, // Required for signature verification
+  },
+};
 ```
 
-The `verifySignature` middleware ensures only QStash can trigger your endpoint, adding security to your scheduled tasks.
+The `verifySignature` middleware ensures only QStash can trigger your endpoint by validating the `Upstash-Signature` header. Without this check, anyone who discovers your API URL could trigger arbitrary task executions. Always include signature verification in production handlers.
+
+## Writing Idempotent Handlers
+
+QStash guarantees at-least-once delivery, which means under rare network conditions your handler might receive the same message twice. Design your handlers to produce the same result whether they run once or multiple times.
+
+The simplest approach is to use a database record to track whether a task has been processed:
+
+```typescript
+// app/api/send-weekly-report/route.ts
+import { verifySignatureAppRouter } from '@upstash/qstash/nextjs';
+import { NextRequest, NextResponse } from 'next/server';
+import { db } from '@/lib/db';
+
+async function handler(req: NextRequest) {
+  const body = await req.json();
+  const { reportPeriod, userId } = body;
+
+  // Check if this report was already sent
+  const existing = await db.reportLog.findUnique({
+    where: { userId_reportPeriod: { userId, reportPeriod } },
+  });
+
+  if (existing) {
+    console.log(`Report for ${userId}/${reportPeriod} already sent, skipping`);
+    return NextResponse.json({ skipped: true });
+  }
+
+  // Generate and send the report
+  const report = await generateReport(userId, reportPeriod);
+  await sendEmail(userId, report);
+
+  // Record that we sent it
+  await db.reportLog.create({
+    data: { userId, reportPeriod, sentAt: new Date() },
+  });
+
+  return NextResponse.json({ success: true });
+}
+
+export const POST = verifySignatureAppRouter(handler);
+```
+
+You can also pass an idempotency key when publishing to QStash, which causes QStash itself to deduplicate messages before they reach your handler:
+
+```typescript
+await qstash.publishJSON({
+  url: 'https://your-domain.com/api/send-weekly-report',
+  body: { reportPeriod: '2026-W12', userId: 'user_123' },
+  headers: {
+    'Upstash-Deduplication-Id': `weekly-report-user_123-2026-W12`,
+  },
+});
+```
 
 ## Building a Claude Code Skill for Task Management
 
-You can create a Claude Code skill to manage your QStash tasks more efficiently. Here's a skill that helps you create, list, and delete scheduled tasks:
+You can create a Claude Code skill to manage your QStash tasks more efficiently. Here is a skill that helps you create, list, and delete scheduled tasks:
 
 ```yaml
 ---
@@ -113,10 +223,10 @@ This skill helps you manage scheduled tasks in Upstash QStash.
 
 ### List All Scheduled Tasks
 
-To view all your scheduled tasks, you'll need to call the QStash API:
+To view all your scheduled tasks, call the QStash API:
 
 ```bash
-curl -X GET "https://qstash.upstash.io/v2/scheduled" \
+curl -X GET "https://qstash.upstash.io/v2/schedules" \
   -H "Authorization: Bearer $QSTASH_TOKEN"
 ```
 
@@ -130,7 +240,7 @@ curl -X POST "https://qstash.upstash.io/v2/schedules" \
   -H "Content-Type: application/json" \
   -d '{
     "destination": "https://your-domain.com/api/handler",
-    "schedule": "*/30 * * * *",
+    "cron": "*/30 * * * *",
     "body": {"task": "cleanup"}
   }'
 ```
@@ -143,40 +253,76 @@ Remove a task by its schedule ID:
 curl -X DELETE "https://qstash.upstash.io/v2/schedules/{scheduleId}" \
   -H "Authorization: Bearer $QSTASH_TOKEN"
 ```
-
-## Best Practices
-
-When working with QStash scheduled tasks, keep these best practices in mind:
-
-1. **Idempotency**: Design your handlers to handle duplicate deliveries gracefully. Use the `idempotencyKey` parameter when publishing tasks.
-
-2. **Error handling**: Always return a 200 status code from your handler. QStash interprets non-2xx responses as failures and triggers retries.
-
-3. **Payload size**: Keep your request body under 1MB. For larger payloads, store the data in a database and pass only an ID.
-
-4. **Monitoring**: Use QStash's dashboard to track task success rates and identify failing jobs quickly.
-
-5. **Time zones**: Cron expressions use UTC by default. Account for time zone differences when scheduling tasks.
+```
 
 ## Advanced: Dynamic Task Scheduling
 
-You can create dynamic schedules based on business logic:
+One of QStash's most useful capabilities is the ability to create schedules programmatically based on business logic. Rather than hardcoding a fixed cron expression, you can derive the schedule from context at runtime.
 
-```javascript
+```typescript
 // Schedule tasks based on user activity patterns
-const getOptimalSchedule = (userTimezone) => {
-  const hour = new Date().getHours();
-  return hour >= 9 && hour <= 18 
-    ? '*/15 * * * *'  // Every 15 minutes during business hours
-    : '*/60 * * * *'; // Every hour after hours
-};
+function getOptimalSchedule(isPeakHours: boolean): string {
+  return isPeakHours
+    ? '*/15 * * * *'   // Every 15 minutes during business hours
+    : '0 * * * *';     // Every hour after hours
+}
 
-await qstash.publish({
+const now = new Date();
+const hour = now.getUTCHours();
+const isPeakHours = hour >= 13 && hour <= 22; // 9am-6pm US/Eastern in UTC
+
+await qstash.publishJSON({
   url: processUserDataEndpoint,
-  schedule: getOptimalSchedule(user.timezone),
-  body: JSON.stringify({ userId: user.id }),
+  cron: getOptimalSchedule(isPeakHours),
+  body: { userId: user.id, mode: isPeakHours ? 'realtime' : 'batch' },
 });
 ```
+
+You can also use QStash's one-time delay feature to implement event-driven follow-ups — for example, sending a reminder email 24 hours after a user signs up but has not completed onboarding:
+
+```typescript
+// Triggered when a user registers
+export async function scheduleOnboardingReminder(userId: string) {
+  await qstash.publishJSON({
+    url: `${process.env.HOST}/api/onboarding-reminder`,
+    delay: 60 * 60 * 24, // 24 hours in seconds
+    body: { userId, type: 'onboarding-incomplete' },
+    headers: {
+      'Upstash-Deduplication-Id': `onboarding-reminder-${userId}`,
+    },
+  });
+}
+```
+
+This pattern is far cleaner than polling a database table for users whose onboarding timer has expired, and it requires no background worker process.
+
+## Handling Large Payloads
+
+QStash has a 1MB limit on request body size. For tasks that need to process large datasets, pass only a reference to the data rather than the data itself:
+
+```typescript
+// Instead of this (risky with large datasets):
+await qstash.publishJSON({
+  url: `${process.env.HOST}/api/process-report`,
+  body: { reportData: hugeArray }, // Could exceed 1MB
+});
+
+// Do this instead:
+const reportJobId = await db.reportJob.create({
+  data: {
+    filters: queryFilters,
+    requestedBy: userId,
+    status: 'pending',
+  },
+});
+
+await qstash.publishJSON({
+  url: `${process.env.HOST}/api/process-report`,
+  body: { reportJobId: reportJobId.id }, // Just the ID
+});
+```
+
+Your handler then fetches the full data from the database using that ID. This approach also makes retry behavior safer — if the task runs twice, both executions look up the same job record and you can use job status to prevent double-processing.
 
 ## Monitoring and Debugging
 
@@ -187,13 +333,68 @@ curl "https://qstash.upstash.io/v2/stats" \
   -H "Authorization: Bearer $QSTASH_TOKEN"
 ```
 
-The response includes delivery success rates, average latency, and retry counts.
+The response includes delivery success rates, average latency, and retry counts. You can also retrieve the delivery history for a specific message to understand why a task failed:
+
+```bash
+curl "https://qstash.upstash.io/v2/messages/{messageId}/events" \
+  -H "Authorization: Bearer $QSTASH_TOKEN"
+```
+
+For structured logging inside your handlers, always include enough context to correlate log entries with QStash message IDs. The `Upstash-Message-Id` header is present on every request:
+
+```typescript
+async function handler(req: NextRequest) {
+  const messageId = req.headers.get('Upstash-Message-Id');
+  const body = await req.json();
+
+  console.log(JSON.stringify({
+    event: 'task_received',
+    messageId,
+    task: body.task,
+    timestamp: new Date().toISOString(),
+  }));
+
+  try {
+    await processScheduledTask(body);
+    console.log(JSON.stringify({ event: 'task_completed', messageId }));
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error(JSON.stringify({
+      event: 'task_failed',
+      messageId,
+      error: error instanceof Error ? error.message : String(error),
+    }));
+    // Return 500 to trigger QStash retry
+    return NextResponse.json({ error: 'Processing failed' }, { status: 500 });
+  }
+}
+```
+
+Returning a non-2xx status code tells QStash the task failed and should be retried. Return 200 only when the task truly succeeded. If a task should be considered complete even though an expected condition was not met (like the idempotency skip case above), return 200 with a `skipped: true` body — do not return an error status for intentional no-ops.
+
+## Best Practices Summary
+
+When working with QStash scheduled tasks, keep these practices in mind:
+
+1. **Idempotency**: Design handlers to handle duplicate deliveries gracefully. Use the `Upstash-Deduplication-Id` header and database-level uniqueness checks as a two-layer defense.
+
+2. **Error handling**: Return non-2xx status codes only for genuine failures that should trigger a retry. Return 200 for intentional skips and expected no-ops.
+
+3. **Payload size**: Keep request bodies under 1MB. For larger datasets, store the data in a database and pass only an ID.
+
+4. **Monitoring**: Use QStash's dashboard and message event history to track task success rates and identify failing jobs quickly.
+
+5. **Time zones**: Cron expressions use UTC by default. Document the intended local time alongside every cron expression.
+
+6. **Signature verification**: Always verify the `Upstash-Signature` header using the provided middleware. Never skip this in production.
+
+7. **Structured logging**: Include the `Upstash-Message-Id` in your log entries so you can correlate handler logs with QStash delivery records.
 
 ## Conclusion
 
-Upstash QStash combined with Claude Code creates a powerful system for managing scheduled tasks. The serverless approach eliminates infrastructure concerns, while Claude Code skills provide a natural interface for task management. Start with simple cron jobs and gradually add complexity as your needs grow.
+Upstash QStash combined with Claude Code creates a powerful system for managing scheduled tasks. The serverless approach eliminates infrastructure concerns while providing better visibility, automatic retries, and edge compatibility that traditional cron jobs cannot match. Start with simple repeating schedules, layer in idempotency once your task volume grows, and use dynamic scheduling to adapt execution frequency to real-world conditions.
 
-Remember to always design for failure, monitor your tasks, and keep payloads small. With these practices, you'll build reliable scheduled task systems that scale effortlessly.
+The combination of small payloads, idempotent handlers, and structured logging gives you a scheduled task system that is reliable enough for production use and observable enough to debug when something goes wrong. With these practices in place, you can schedule tasks confidently and spend your time on product logic rather than infrastructure maintenance.
 {% endraw %}
 
 ## Related Reading

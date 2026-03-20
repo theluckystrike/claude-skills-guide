@@ -30,7 +30,9 @@ The tool supports multiple update strategies:
 - **Latest**: Always pulls the newest image tag
 - **Name**: Matches image names as update triggers
 
-Claude Code can help you configure these strategies, generate proper configuration files, and resolve common issues without deep manual knowledge of the Image Updater's intricacies.
+Without Image Updater, your team faces a manual process: a new image is pushed to the registry, someone notices, they edit the manifest or Helm values file, open a PR, wait for review, merge, and watch ArgoCD sync. For active teams pushing multiple images a day, this is a meaningful drag on delivery speed. Image Updater collapses that loop into an automated commit that ArgoCD then picks up and syncs.
+
+Claude Code helps you navigate Image Updater's annotation-heavy configuration model, debug sync failures, and write the supporting scripts that production workflows require.
 
 ## Setting Up the Image Updater
 
@@ -39,6 +41,12 @@ Begin by installing ArgoCD Image Updater in your Kubernetes cluster. Claude Code
 ```bash
 # Install ArgoCD Image Updater using kubectl
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/install.yaml
+```
+
+Verify the installation is running:
+
+```bash
+kubectl -n argocd get pods -l app.kubernetes.io/name=argocd-image-updater
 ```
 
 After installation, you need to configure authentication for container registries. Create a Kubernetes secret containing your registry credentials:
@@ -55,7 +63,14 @@ stringData:
   password: your-password
 ```
 
-Claude Code can generate these configurations and ensure proper RBAC permissions are in place.
+For ECR (AWS Elastic Container Registry), authentication works differently because credentials expire. You need to configure a credentials helper or use IAM roles for service accounts. Ask Claude Code to generate the appropriate configuration for your registry type:
+
+```
+Generate ArgoCD Image Updater registry configuration for AWS ECR in us-east-1.
+My cluster uses IRSA (IAM Roles for Service Accounts).
+```
+
+Claude Code produces the full RBAC manifest, the ConfigMap update for Image Updater, and instructions for annotating the service account — all in one response.
 
 ## Configuring Application Updates
 
@@ -75,6 +90,19 @@ metadata:
 ```
 
 This configuration tells the Image Updater to monitor `myimage` from your registry, update using semantic versioning, only accept `v1.x.x` tags, and write changes back to Git.
+
+### Update Strategy Comparison
+
+Understanding which strategy fits your use case prevents misconfiguration. Here is a practical comparison:
+
+| Strategy | What it does | Best for |
+|---|---|---|
+| `semver` | Picks the highest version that satisfies semver rules | Production apps with proper versioning |
+| `semver-patch` | Only upgrades patch releases (1.2.x) | Apps where minor releases need review |
+| `latest` | Always pulls the most recently pushed tag | Dev/staging branches tracking `main` |
+| `name` | Updates when a tag matching a specific name appears | Custom versioning schemes |
+
+For production workloads, `semver` with an `allow-tags` constraint is the safest default. For staging environments that should always track the latest build, `latest` is appropriate. Mixing strategies across environments in the same cluster is common and expected.
 
 ## Using Claude Code to Manage Workflows
 
@@ -96,18 +124,46 @@ annotations:
   argocd-image-updater.argoproj.io/nodeapp.helm.image-spec: image:tag
 ```
 
+You can follow up immediately with scoped questions:
+
+> "Now add a constraint that only allows tags matching the format YYYYMMDD-githash"
+
+Claude Code adds the appropriate `allow-tags` regex without you having to look up the annotation name or regex syntax.
+
 ### Troubleshooting Update Failures
 
-When images fail to update, Claude Code helps diagnose the issue. Share the error message or describe the symptoms, and Claude Code suggests targeted solutions:
+When images fail to update, Claude Code helps diagnose the issue. Share the error message or describe the symptoms, and Claude Code suggests targeted solutions.
 
-Common issues include:
+Start by fetching the logs:
 
-- **Authentication failures**: Registry credentials missing or expired
-- **Tag matching problems**: Your allow-tags regex doesn't match available tags
-- **Git write-back failures**: Missing write permissions or repository configuration
-- **Pull policy issues**: ImagePullBackOff errors indicating image access problems
+```bash
+kubectl -n argocd logs -l app.kubernetes.io/name=argocd-image-updater --tail=100
+```
 
-Claude Code analyzes your specific situation and provides step-by-step remediation.
+Paste the relevant log lines into Claude Code with context:
+
+> "Here are the Image Updater logs. My app 'payment-service' hasn't updated in 48 hours even though new images were pushed. What's wrong?"
+
+Common issues and their resolutions:
+
+- **Authentication failures**: Registry credentials missing or expired. Claude Code generates the corrected secret and the command to verify authentication manually with `docker login`.
+- **Tag matching problems**: Your `allow-tags` regex doesn't match available tags. Claude Code can test your regex against sample tag names and suggest corrections.
+- **Git write-back failures**: Missing write permissions or repository configuration. Claude Code generates the SSH key setup steps and the ArgoCD repo secret manifest.
+- **Pull policy issues**: `ImagePullBackOff` errors indicating image access problems. Claude Code distinguishes between a missing image tag (bad version reference) and a permissions problem (RBAC or registry auth).
+
+### Auditing What Image Updater Has Changed
+
+Image Updater commits to your Git repo when it updates an image. To audit recent automated commits:
+
+```bash
+git log --oneline --author="argocd-image-updater" --since="7 days ago"
+```
+
+If you want Claude Code to summarize the update history and flag any anomalies:
+
+> "Here is my git log for the last week of Image Updater commits. Are there any update patterns that look wrong — like a version going backward or the same image updating more than once per day?"
+
+This is especially useful when something breaks in production and you want to quickly determine whether an automated image update is the likely cause.
 
 ## Advanced Workflow Patterns
 
@@ -126,6 +182,8 @@ annotations:
   argocd-image-updater.argoproj.io/redis.update-strategy: latest
 ```
 
+A common mistake here is using `latest` for a dependency like Redis in production. Claude Code will flag this if you ask it to review your annotation configuration — it can explain the risk (no pinning to a known-good version) and suggest a semver constraint instead.
+
 ### Helm Integration
 
 When using Helm charts, specify the image location within values:
@@ -137,7 +195,20 @@ annotations:
   argocd-image-updater.argoproj.io/appimage.helm.image-values: image.repository,image.tag
 ```
 
-This tells Image Updater where to find the image in your Helm values and how to write back changes.
+This tells Image Updater where to find the image in your Helm values and how to write back changes. If your Helm chart uses a non-standard values structure — for example `deployment.image.fullTag` instead of the common `image.tag` — just describe your values file structure to Claude Code and it generates the correct annotation.
+
+### Git Write-Back Configuration
+
+The `git` write-back method is the recommended approach for production. It maintains your Git repository as the authoritative source of truth and creates a reviewable commit trail. Configure it fully:
+
+```yaml
+annotations:
+  argocd-image-updater.argoproj.io/write-back-method: git
+  argocd-image-updater.argoproj.io/git-branch: image-updates
+  argocd-image-updater.argoproj.io/write-back-target: kustomization
+```
+
+The `git-branch` annotation tells Image Updater to write to a specific branch rather than directly to `main`. Combined with a branch protection rule and a simple CI check, this gives you a lightweight approval gate on automated image updates without eliminating automation entirely.
 
 ### Custom Update Strategies
 
@@ -153,21 +224,35 @@ NEW_NUM=$((NUM + 1))
 echo "v$(echo $NEW_NUM | sed 's/\([0-9]\)$/.\1/')"
 ```
 
+For more complex schemes — like a build stamp format of `2026.03.20-abc1234` — Claude Code can write and test the full extraction and comparison logic, including edge cases where two builds happen on the same date.
+
+### Notifications on Image Updates
+
+Teams often want Slack or PagerDuty notifications when Image Updater commits a change. ArgoCD's notification engine can be configured to trigger on Application sync events. Ask Claude Code to generate the notification template:
+
+> "Generate an ArgoCD notification template that sends a Slack message when Image Updater updates any image in the production namespace. Include the image name, old tag, and new tag in the message."
+
+Claude Code produces the `argocd-notifications-cm` ConfigMap update and the trigger definition.
+
 ## Best Practices
 
 1. **Use Git write-back method**: Always prefer Git-based updates over direct manifest updates. This maintains Git as the source of truth and enables proper code review.
 
-2. **Restrict tag patterns**: Be explicit about which tags you accept. Use `allow-tags` and `ignore-tags` to prevent unwanted updates.
+2. **Restrict tag patterns**: Be explicit about which tags you accept. Use `allow-tags` and `ignore-tags` to prevent unwanted updates. A regex like `^v[0-9]+\.[0-9]+\.[0-9]+$` ensures only clean semver tags are accepted.
 
-3. **Monitor update logs**: Regularly check Image Updater logs for failed updates and adjust configurations proactively.
+3. **Monitor update logs**: Regularly check Image Updater logs for failed updates and adjust configurations proactively. Set up a simple CronJob that alerts your team if no successful updates have been logged in 24 hours on an active project.
 
-4. **Test in staging first**: Before enabling automated updates in production, validate your configuration in a non-production environment.
+4. **Test in staging first**: Before enabling automated updates in production, validate your configuration in a non-production environment. Use a separate ArgoCD Application pointing at the same image but with a wider `allow-tags` constraint so you catch configuration issues early.
 
-5. **Configure rollback procedures**: Ensure you can quickly revert problematic image updates through Git history.
+5. **Configure rollback procedures**: Ensure you can quickly revert problematic image updates through Git history. With `write-back-method: git`, reverting is a standard `git revert` followed by an ArgoCD sync.
+
+6. **Pin Image Updater itself**: Like any tool in your delivery chain, Image Updater should be pinned to a specific version in your cluster manifests. Automated updates to the tool that manages your automated updates introduce unnecessary risk.
 
 ## Conclusion
 
-ArgoCD Image Updater combined with Claude Code creates a powerful automation pipeline for container image management. Claude Code serves as your knowledgeable companion, generating configurations, explaining options, and troubleshooting issues without requiring you to become an expert in every detail.
+ArgoCD Image Updater combined with Claude Code creates a powerful automation pipeline for container image management. Claude Code serves as your knowledgeable companion, generating configurations, explaining options, and troubleshooting issues without requiring you to become an expert in every annotation key and regex syntax.
+
+The combination is particularly effective during the setup phase, when teams are still learning which update strategy fits each workload, and during incidents, when you need fast answers about why a specific image stopped updating. Claude Code closes the loop between "I know what I want" and "I know exactly which annotation to write."
 
 Start with simple configurations, gradually add complexity as your understanding grows, and use Claude Code whenever you encounter challenges. This approach makes automated image updates accessible to teams of all experience levels while maintaining reliable, secure deployment workflows.
 
