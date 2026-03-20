@@ -122,19 +122,19 @@ export function PrimaryButton({ children, onClick, disabled = false }) {
       onClick={onClick}
       disabled={disabled}
       className={`
-        px-4 py-3 
-        bg-blue-600 
-        text-white 
-        font-medium 
-        rounded-lg 
-        hover:bg-blue-700 
-        focus:outline-none 
-        focus:ring-2 
-        focus:ring-blue-500 
-        focus:ring-offset-2 
-        disabled:opacity-50 
-        disabled:cursor-not-allowed 
-        transition-colors 
+        px-4 py-3
+        bg-blue-600
+        text-white
+        font-medium
+        rounded-lg
+        hover:bg-blue-700
+        focus:outline-none
+        focus:ring-2
+        focus:ring-blue-500
+        focus:ring-offset-2
+        disabled:opacity-50
+        disabled:cursor-not-allowed
+        transition-colors
         duration-200
       `}
     >
@@ -152,35 +152,35 @@ A more complex card component with Figma-style properties:
 export function FeatureCard({ title, description, icon, ctaText }) {
   return (
     <div className="
-      p-6 
-      bg-white 
-      rounded-xl 
-      shadow-sm 
-      border border-gray-100 
-      hover:shadow-md 
-      transition-shadow 
+      p-6
+      bg-white
+      rounded-xl
+      shadow-sm
+      border border-gray-100
+      hover:shadow-md
+      transition-shadow
       duration-200
     ">
       <div className="w-12 h-12 mb-4 bg-blue-50 rounded-lg flex items-center justify-center">
         <span className="text-blue-600">{icon}</span>
       </div>
-      
+
       <h3 className="text-lg font-semibold text-gray-900 mb-2">
         {title}
       </h3>
-      
+
       <p className="text-gray-600 mb-4 leading-relaxed">
         {description}
       </p>
-      
-      <a 
-        href="#" 
+
+      <a
+        href="#"
         className="
-          text-blue-600 
-          font-medium 
-          hover:text-blue-700 
-          inline-flex 
-          items-center 
+          text-blue-600
+          font-medium
+          hover:text-blue-700
+          inline-flex
+          items-center
           gap-1
         "
       >
@@ -208,10 +208,10 @@ Generates:
 
 ```jsx
 <div className="
-  grid 
-  grid-cols-1 
-  md:grid-cols-2 
-  lg:grid-cols-3 
+  grid
+  grid-cols-1
+  md:grid-cols-2
+  lg:grid-cols-3
   gap-6
 ">
   {/* Cards here */}
@@ -230,24 +230,24 @@ function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-export function Button({ 
-  variant = 'primary', 
-  size = 'md', 
+export function Button({
+  variant = 'primary',
+  size = 'md',
   children,
-  className 
+  className
 }) {
   const variants = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700',
     secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200',
     ghost: 'bg-transparent text-gray-600 hover:bg-gray-100',
   };
-  
+
   const sizes = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2',
     lg: 'px-6 py-3 text-lg',
   };
-  
+
   return (
     <button className={cn(
       'rounded-lg font-medium transition-colors',
@@ -261,18 +261,144 @@ export function Button({
 }
 ```
 
+### Converting Form Components
+
+Forms are among the most complex Figma elements to convert accurately. Input fields carry states — default, focused, errored, disabled — that Figma designers represent across multiple frames. Prompt Claude to enumerate these states explicitly:
+
+```
+This Figma input component has four states: Default, Focused, Error, and Disabled.
+Convert all four states using Tailwind peer and group utilities where appropriate.
+```
+
+Claude generates a single component that covers all states through conditional classes:
+
+```jsx
+export function TextInput({
+  label,
+  id,
+  error,
+  disabled = false,
+  placeholder,
+  ...props
+}) {
+  return (
+    <div className="flex flex-col gap-1">
+      <label
+        htmlFor={id}
+        className="text-sm font-medium text-gray-700"
+      >
+        {label}
+      </label>
+      <input
+        id={id}
+        disabled={disabled}
+        placeholder={placeholder}
+        className={cn(
+          'px-3 py-2 rounded-lg border text-sm transition-colors',
+          'focus:outline-none focus:ring-2 focus:ring-offset-0',
+          error
+            ? 'border-red-400 focus:ring-red-300 bg-red-50'
+            : 'border-gray-300 focus:ring-blue-300 focus:border-blue-400',
+          disabled && 'bg-gray-100 text-gray-400 cursor-not-allowed'
+        )}
+        {...props}
+      />
+      {error && (
+        <p className="text-xs text-red-600">{error}</p>
+      )}
+    </div>
+  );
+}
+```
+
+### Handling Figma Auto-Layout
+
+Figma's Auto Layout feature is the most direct mapping to Flexbox and CSS Grid. When Claude reads an Auto Layout frame, it extracts direction, gap, padding, and alignment into equivalent Tailwind utilities:
+
+| Figma Auto Layout Property | Tailwind Equivalent |
+|---|---|
+| Direction: Horizontal | `flex flex-row` |
+| Direction: Vertical | `flex flex-col` |
+| Gap: 16px | `gap-4` |
+| Padding: 24px all sides | `p-6` |
+| Padding: 16px / 24px (v/h) | `py-4 px-6` |
+| Align Items: Center | `items-center` |
+| Justify Content: Space Between | `justify-between` |
+| Fill Container (child) | `flex-1` |
+| Hug Contents (child) | `w-fit` |
+
+If your Figma frame uses nested Auto Layout — common in navigation bars and list items — Claude preserves the nesting in JSX and applies Tailwind at each level:
+
+```jsx
+// Figma: Navbar with horizontal auto-layout containing a logo group and nav links group
+export function Navbar() {
+  return (
+    <nav className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-100">
+      {/* Logo group: horizontal, gap-2 */}
+      <div className="flex items-center gap-2">
+        <img src="/logo.svg" alt="Logo" className="w-8 h-8" />
+        <span className="font-semibold text-gray-900">Acme</span>
+      </div>
+
+      {/* Nav links group: horizontal, gap-6 */}
+      <div className="flex items-center gap-6">
+        <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Features</a>
+        <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+        <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Docs</a>
+        <PrimaryButton>Get Started</PrimaryButton>
+      </div>
+    </nav>
+  );
+}
+```
+
+## Tailwind vs CSS Modules: When to Use Each
+
+Not every project should use Tailwind for Figma conversions. This table helps you decide which approach fits your situation:
+
+| Factor | Tailwind CSS | CSS Modules |
+|---|---|---|
+| Team size | Works well for small-to-mid teams | Scales better for large teams with strict style ownership |
+| Design token management | Centralized in `tailwind.config.js` | Distributed across module files |
+| Class name verbosity | High — long class strings in JSX | Low — semantic class names |
+| Purge/tree-shaking | Built-in with Tailwind v3+ | Manual setup required |
+| IDE autocomplete | Excellent with Tailwind IntelliSense | Good with CSS Modules plugin |
+| Prototyping speed | Fast — no context switching | Slower — requires separate file edits |
+| Overriding third-party | `twMerge` handles conflicts | Cascade specificity can be tricky |
+
+If your Figma designs use a mature design system with named components and strict token usage, CSS Modules often produce cleaner output. If your team is iterating rapidly on layout, Tailwind's utility model keeps the design-to-code loop tight.
+
+## Validating the Output
+
+After Claude generates a component, validation is not optional — generated code should be reviewed against the original design at several checkpoints:
+
+**Visual diff check.** Render the component in Storybook or a sandbox page alongside a screenshot of the Figma frame. Look for spacing discrepancies, incorrect font weights, and missing hover states.
+
+**Accessibility audit.** Generated components often lack ARIA attributes that are implied by Figma but not encoded in it. Ask Claude to audit the output explicitly:
+
+```
+Review this component for accessibility issues. Add aria-label, role, and keyboard event
+handlers where the Figma design implies interactive behavior.
+```
+
+**Responsive breakpoint test.** Use browser DevTools to test at Tailwind's standard breakpoints (`sm: 640px`, `md: 768px`, `lg: 1024px`, `xl: 1280px`). Compare against Figma's responsive variants.
+
+**Token consistency check.** Verify that colors, spacing, and font values in the generated classes match the tokens in your `tailwind.config.js`. Mismatches appear when Claude falls back to raw Tailwind defaults (`blue-600`) instead of your custom tokens (`primary`).
+
 ## Best Practices
 
 1. **Extract to Design Tokens**: Always convert repeated values to Tailwind config tokens
 2. **Preserve Figma Hierarchy**: Match Figma's component structure in your code
 3. **Add Interaction States**: Include hover, focus, and disabled states from Figma
 4. **Test Responsive Behavior**: Verify the generated code matches Figma's responsive variants
+5. **Be explicit about variants**: When your Figma component has multiple states or sizes, list them all in the prompt — Claude generates more complete output when it knows the full scope upfront
+6. **One component at a time**: Large Figma frames contain dozens of nested components. Convert leaf components first (buttons, inputs, badges), then compose them into containers. Claude's output quality degrades when the scope is too broad in a single prompt.
 
 ## Conclusion
 
 Claude Code dramatically accelerates Figma to Tailwind conversion by analyzing designs, generating component code, and creating proper configuration tokens. The key is setting up the MCP connection and providing Claude with structured design analysis. With this workflow, you can convert complex designs into clean, maintainable Tailwind components in minutes instead of hours.
 
-The combination of Claude's understanding of both design principles and Tailwind's utility classes makes this workflow particularly powerful for development teams working with design-driven development processes.
+The combination of Claude's understanding of both design principles and Tailwind's utility classes makes this workflow particularly powerful for development teams working with design-driven development processes. As your component library grows, the design tokens you define in `tailwind.config.js` become the shared language between designers and developers — and Claude helps you keep that language consistent across every new component you add.
 {% endraw %}
 
 
