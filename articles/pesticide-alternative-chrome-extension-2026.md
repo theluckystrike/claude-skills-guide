@@ -23,6 +23,8 @@ The Pesticide extension works by applying outlines to every element on a page, m
 - Integration with browser developer tools
 - Support for pseudo-elements and computed styles
 
+There's also the question of maintenance. The original Pesticide extension has seen irregular updates, which means it can break after Chrome releases a major version update. Developers who rely on it for daily debugging find themselves scrambling to find a substitute — often mid-project. The alternatives below have more active maintenance cycles and broader feature sets that match how developers actually work in 2026.
+
 ## Top Pesticide Alternatives for Chrome in 2026
 
 ### 1. CSS Peeper
@@ -34,6 +36,8 @@ CSS Peeper has become one of the most popular Pesticide alternatives among moder
 - Color palette detection
 - Asset inventory (images, fonts, icons)
 - Clean, organized inspector panel
+
+**Best for:** Developers who frequently audit existing sites, hand off CSS values to teammates, or need to reverse-engineer a design. The color palette export alone saves significant time when matching brand colors across components.
 
 **Installation:** Available from the Chrome Web Store
 
@@ -47,6 +51,8 @@ If you prefer the original Pesticide experience, the maintained fork offers the 
 - Performance improvements for large pages
 - Regular updates for Chrome compatibility
 
+**Best for:** Developers who already know Pesticide's keyboard shortcut muscle memory and simply want something that works reliably without learning a new interface. Zero configuration required — install and click the toolbar icon.
+
 **Installation:** Available from the Chrome Web Store
 
 ### 3. Visual Inspector by CanvasFlip
@@ -59,6 +65,8 @@ Visual Inspector combines layout visualization with design comparison features, 
 - Annotation tools for marking issues
 - Export capabilities for reports
 
+**Best for:** Teams with a dedicated QA process or designers who need to verify that implementations match mockups. The overlay comparison feature — where you can place a Figma or Sketch screenshot directly on top of the live page — is genuinely unique among Chrome extensions in this category.
+
 ### 4. CSS Shadow Parts Inspector
 
 This extension specifically targets shadow DOM and web component development, filling a gap that the original Pesticide extension doesn't address.
@@ -69,6 +77,8 @@ This extension specifically targets shadow DOM and web component development, fi
 - Web component debugging
 - Light DOM / shadow DOM toggle
 
+**Best for:** Any developer building with Lit, Stencil, or native custom elements. Pesticide cannot pierce shadow roots, which means entire swaths of your component tree are invisible to it. This extension was built specifically to solve that problem.
+
 ### 5. Daily Dev CSS Inspector
 
 Part of the Daily Dev developer community extension, this tool provides layout visualization alongside other development utilities.
@@ -78,6 +88,20 @@ Part of the Daily Dev developer community extension, this tool provides layout v
 - Spacing visualization
 - Integrated developer news feed
 - Quick access to DevTools
+
+**Best for:** Developers who already use Daily Dev for content discovery and want to consolidate their extension count. The CSS inspector itself is lightweight — it won't replace a dedicated tool — but it's convenient if you're already in the Daily Dev ecosystem.
+
+## Quick Comparison
+
+| Tool | Element Outlines | CSS Extraction | Shadow DOM | Design QA | Best Fit |
+|---|---|---|---|---|---|
+| CSS Peeper | No | Yes | No | No | CSS audits |
+| Pesticide Fork | Yes | No | No | No | Fast layout check |
+| Visual Inspector | Yes | Partial | No | Yes | Design handoff |
+| CSS Shadow Parts | Yes | Partial | Yes | No | Web components |
+| Daily Dev Inspector | Yes | No | No | No | Casual use |
+
+Use this table as a starting point, not a verdict. The "Best Fit" column reflects the single strongest use case for each tool, but most of them are general enough to handle day-to-day layout debugging.
 
 ## Making Your Choice
 
@@ -109,6 +133,41 @@ console.log('Box Model:', {
 ```
 
 This quick script complements any visualizer by giving you exact pixel values for any selected element.
+
+You can also add a temporary CSS rule directly from the console to replicate the core Pesticide behavior without installing anything:
+
+```javascript
+// Inject a Pesticide-style outline rule into the current page
+const style = document.createElement('style');
+style.id = 'dev-outlines';
+style.textContent = '* { outline: 1px solid rgba(255, 0, 0, 0.4) !important; }';
+document.head.appendChild(style);
+
+// To remove it:
+// document.getElementById('dev-outlines').remove();
+```
+
+And a slightly more useful version that color-codes by element type:
+
+```javascript
+const rules = `
+  div   { outline: 1px solid rgba(255, 80,  80,  0.5) !important; }
+  span  { outline: 1px solid rgba(80,  180, 255, 0.5) !important; }
+  p     { outline: 1px solid rgba(80,  220, 120, 0.5) !important; }
+  img   { outline: 2px solid rgba(255, 200, 0,   0.8) !important; }
+  a     { outline: 1px solid rgba(200, 80,  255, 0.5) !important; }
+  *     { outline: 1px solid rgba(150, 150, 150, 0.2) !important; }
+`;
+
+const style = document.createElement('style');
+style.id = 'dev-outlines-typed';
+style.textContent = rules;
+document.head.appendChild(style);
+```
+
+Paste either snippet into the DevTools console while testing. This approach works on any page — including those behind authentication where you can't install an extension — and leaves zero trace once you remove the style element or refresh the page.
+
+For teams that share a codebase, the color-coded version can be saved as a DevTools snippet (Sources > Snippets) so every developer on the project can run it in one click without re-typing it.
 
 ## Conclusion
 
