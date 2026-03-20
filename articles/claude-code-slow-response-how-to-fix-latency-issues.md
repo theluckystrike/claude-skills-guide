@@ -27,6 +27,22 @@ Claude Code latency typically stems from a few key areas. Understanding these ca
 
 **Network latency** affects cloud-based model routing. Your geographic location and connection quality impact how quickly responses return.
 
+**CLAUDE.md file size** is frequently underestimated as a performance factor. Claude reads your CLAUDE.md on every session start. A 3,000-line CLAUDE.md with redundant instructions adds noticeable delay before the first response in every new session.
+
+Understanding which of these factors is actually hurting you is the first step. A developer on a fast connection whose session just started and is still slow has a different problem than someone who's been in the same session for three hours.
+
+### Quick Diagnosis Checklist
+
+Before diving into fixes, run through this checklist to identify your specific bottleneck:
+
+| Symptom | Likely Cause | Priority Fix |
+|---|---|---|
+| Slow on first response, fresh session | Too many skills or large CLAUDE.md | Trim skills and CLAUDE.md |
+| Fast at start, slow after 1-2 hours | Context window saturation | Run `/compact` or start new session |
+| Slow only when reading files | Large files being scanned | Add `.claudeignore` rules |
+| Slow regardless of session state | Network or service issue | Check connection, verify status page |
+| Slow with specific skill active | Skill instruction overhead | Deactivate or trim that skill |
+
 ## Optimizing Your Skill Configuration
 
 The most impactful fix involves managing your installed skills. Start by auditing your current setup.
@@ -42,6 +58,17 @@ Keep your core skills lean. The **pdf**, **tdd**, and **xlsx** skills add minima
 
 For power users managing many skills, organize skills into subdirectories by project type and copy only the relevant ones into `.claude/` before starting a session. This loads only skills relevant to your current task, reducing processing overhead.
 
+A practical approach is to maintain separate skill profiles for different contexts. Create a `~/.claude/profiles/` directory and store named skill bundles there:
+
+```bash
+~/.claude/profiles/
+  backend-api/       # tdd, http-client, db-schema skills
+  frontend-react/    # frontend-design, tdd, accessibility skills
+  data-analysis/     # xlsx, pdf, python-repl skills
+```
+
+Before a session, copy the appropriate profile into `~/.claude/skills/`. This keeps your active skill count low — typically 3-5 instead of 15-20 — which meaningfully cuts initial response time.
+
 ## Context Management Strategies
 
 Managing conversation context dramatically improves response speed. Claude Code provides several context-handling commands.
@@ -52,7 +79,7 @@ Use context truncation strategically:
 /compact
 ```
 
-This command summarizes the conversation history, reducing the context Claude must process while preserving key information. Run `/compact` periodically during long sessions—every 50-100 messages works well for most workflows.
+This command summarizes the conversation history, reducing the context Claude must process while preserving key information. Run `/compact` periodically during long sessions — every 50-100 messages works well for most workflows.
 
 For projects requiring extensive history, consider splitting work across multiple sessions:
 
@@ -65,6 +92,19 @@ Starting fresh sessions prevents context bloat. You can reference previous work 
 ```
 /supermemory What do you know about the previous implementation details?
 ```
+
+### Understanding Context Growth
+
+Context grows faster than most developers expect. Each exchange adds both your message and Claude's response to the running history. A typical back-and-forth debugging session might look like this:
+
+- Session start: ~2,000 tokens (CLAUDE.md + skills)
+- After 20 exchanges: ~12,000 tokens
+- After 50 exchanges: ~30,000 tokens
+- After 100 exchanges: ~60,000+ tokens
+
+Response latency scales roughly with context size. At 60,000 tokens, you're processing nearly four times as much as at 15,000. This is why sessions that started fast feel sluggish two hours in — the problem isn't your connection or skills, it's accumulated history.
+
+Running `/compact` typically compresses context by 60-70%, bringing a bloated session back to a manageable size without losing the important conclusions and code you've already established.
 
 ## File Processing Optimizations
 
@@ -94,6 +134,24 @@ This prevents Claude from reading files that slow responses without adding value
 Read only src/app.js and src/components/, ignoring all other files.
 ```
 
+Being explicit about what to read is faster than letting Claude decide. When you say "look at my authentication code," Claude may scan through several directories before settling on the relevant files. When you say "read src/auth/middleware.js and src/auth/session.js," it goes directly there.
+
+### Large Repository Strategies
+
+In monorepos or large codebases, file scanning becomes a serious latency source. Beyond `.claudeignore`, consider these approaches:
+
+**Provide direct file paths** in your prompts rather than asking Claude to find things. "Look at the function in `packages/api/src/handlers/users.ts` around line 145" is far faster than "find the user handler function."
+
+**Pre-summarize large files** for Claude. If you have a 2,000-line configuration file that Claude frequently references, create a shorter summary document at the start of your session:
+
+```
+Here is a summary of our webpack.config.js — it uses SplitChunksPlugin with
+maxSize 200kb, outputs to /dist, and has aliases for @components and @utils.
+You do not need to read the full config file.
+```
+
+This trades a short manual summary for significant repeated file-read overhead across the session.
+
 ## Network and Connection Improvements
 
 Network latency often goes overlooked. Simple adjustments improve response times noticeably.
@@ -103,6 +161,8 @@ Network latency often goes overlooked. Simple adjustments improve response times
 **Close unnecessary browser tabs and applications** that consume bandwidth. Claude Code's WebSocket connection benefits from available network resources.
 
 **Consider regional model routing**. Some Claude Code configurations allow selecting model regions. Choose the region closest to your physical location.
+
+**VPN impact is significant and bidirectional**. A VPN routing through a nearby server can actually improve latency on congested networks. However, a VPN routing through a distant server — especially common with corporate VPNs that route all traffic through headquarters — can add 50-100ms or more per request. If you're on a corporate VPN and experiencing unusual slowness, test temporarily without it to isolate whether the VPN is a factor.
 
 ## Monitoring and Diagnostics
 
@@ -122,7 +182,7 @@ For advanced users, examine system logs:
 /logs tail
 ```
 
-Real-time log monitoring reveals patterns in slow responses—certain skill combinations, specific file types, or conversation topics that consistently cause delays.
+Real-time log monitoring reveals patterns in slow responses — certain skill combinations, specific file types, or conversation topics that consistently cause delays.
 
 ## Configuration Tweaks
 
@@ -140,6 +200,10 @@ Edit your `~/.claude/settings.json`:
 
 Reducing `maxContextTokens` forces more aggressive context management but speeds responses. Setting `skillAutoLoad` to false requires manual skill activation but eliminates automatic overhead.
 
+The `responseStreaming` setting is worth keeping enabled even when troubleshooting latency. Streaming means you see tokens as they generate rather than waiting for the full response to complete. The total time to full response is the same, but streaming makes the interaction feel faster because you can start reading and processing the output while Claude finishes generating it.
+
+For teams with shared configuration, push a standardized `settings.json` through your team's dotfiles repository so everyone starts with sensible performance defaults rather than leaving things at defaults.
+
 ## Skill-Specific Performance Tips
 
 Certain skills require special consideration for performance.
@@ -154,6 +218,8 @@ The **pdf** skill processes document content during extraction. Large PDFs take 
 
 The **xlsx** skill handles spreadsheet operations efficiently, but complex formulas require computation time. Break large spreadsheet tasks into smaller operations.
 
+For any skill that combines multiple tools — for instance, a skill that reads files, then searches the web, then generates code — expect compounding latency. Each external operation adds round-trip time. If you notice a particular skill-triggered workflow is consistently slow, consider whether you can break the task into sequential manual steps rather than letting the skill chain them automatically.
+
 ## When to Seek Further Help
 
 If latency persists after applying these solutions, consider these additional steps:
@@ -161,6 +227,8 @@ If latency persists after applying these solutions, consider these additional st
 1. Check Claude Code status pages for service disruptions
 2. Review your system's available resources (CPU, memory)
 3. Test with a minimal skill configuration to isolate the issue
+
+If you're on a team, compare response times with a colleague on a different machine and network. If their experience is similar, the issue is server-side and likely temporary. If yours is consistently worse, the problem is local to your setup.
 
 ## Related Reading
 
