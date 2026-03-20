@@ -176,6 +176,215 @@ Selecting a Dark Reader alternative depends on your specific requirements:
 
 Each alternative handles the core dark mode requirement while offering distinct advantages for developers and power users. Test a few options to determine which workflow matches your preferences.
 
+## Performance Comparison: Why Dark Reader's Approach Costs You
+
+The core technical difference between Dark Reader and its alternatives comes down to how each extension intercepts and transforms page styles. Dark Reader operates by injecting dynamic CSS filters and continuously monitoring DOM mutations through a MutationObserver. On content-heavy pages — documentation sites, GitHub diffs, complex dashboards — this constant observation creates measurable CPU overhead.
+
+To quantify the difference yourself, open Chrome DevTools and run a performance profile on a site like the MDN Web Docs homepage. With Dark Reader active, you will typically see recurring style recalculation tasks firing every few hundred milliseconds. With Stylus or Midnight Lizard applying a static stylesheet once on page load, those tasks disappear entirely.
+
+For developers running multiple browser tabs during a long coding session, this difference compounds. A laptop with fifteen tabs open will run noticeably cooler and quieter when a static stylesheet approach replaces continuous DOM monitoring.
+
+The architectural tradeoff is coverage: Dark Reader works everywhere automatically, while static stylesheet extensions require explicit theme files per site. The right balance depends on your browsing patterns. If most of your time is spent on twenty specific sites — GitHub, Stack Overflow, your company's internal tools, a few documentation domains — Stylus with curated styles wins on both performance and visual accuracy.
+
+## Building Your Own Minimal Dark Mode Extension
+
+For developers who want complete control without any dependency on third-party extensions, building a minimal dark mode extension takes roughly an hour and produces a tool precisely tuned to your preferences. This approach also removes any concern about extension updates changing behavior unexpectedly.
+
+The core manifest is deliberately minimal:
+
+```json
+{
+  "manifest_version": 3,
+  "name": "Dev Dark Mode",
+  "version": "1.0",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["dark.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
+```
+
+The stylesheet uses a modern media-query-aware approach that respects system preferences by default and activates forced dark mode only when explicitly toggled:
+
+```css
+/* dark.css */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+.force-dark {
+  filter: invert(90%) hue-rotate(180deg);
+}
+
+.force-dark img,
+.force-dark video,
+.force-dark canvas,
+.force-dark [style*="background-image"] {
+  filter: invert(100%) hue-rotate(180deg);
+}
+```
+
+The background service worker handles cross-tab state synchronization, which is where most minimal extensions fall short:
+
+```javascript
+// background.js
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+  if (msg.type === 'toggleDark') {
+    chrome.storage.local.get('darkEnabled', (data) => {
+      const newState = !data.darkEnabled;
+      chrome.storage.local.set({ darkEnabled: newState });
+
+      // Apply to all existing tabs
+      chrome.tabs.query({}, (tabs) => {
+        tabs.forEach((tab) => {
+          chrome.scripting.executeScript({
+            target: { tabId: tab.id },
+            func: (enabled) => {
+              document.documentElement.classList.toggle('force-dark', enabled);
+            },
+            args: [newState]
+          });
+        });
+      });
+      sendResponse({ enabled: newState });
+    });
+    return true;
+  }
+});
+```
+
+This pattern keeps the extension stateless per-tab and centralized in storage, avoiding the race conditions that plague extensions maintaining separate per-tab state objects.
+
+## Integrating Dark Mode with Playwright and Browser Automation
+
+Developers using Playwright for end-to-end testing or scraping often need to test their applications under dark mode conditions. None of the popular dark mode extensions expose a clean automation interface, which is a practical reason to favor alternatives that do — or to build your own.
+
+Playwright supports emulating the `prefers-color-scheme` media feature directly, which is the cleanest approach when testing your own applications:
+
+```javascript
+import { test, expect } from '@playwright/test';
+
+test('dark mode renders correctly', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.goto('https://your-app.dev');
+
+  const background = await page.evaluate(() => {
+    return window.getComputedStyle(document.body).backgroundColor;
+  });
+
+  expect(background).toBe('rgb(18, 18, 18)');
+});
+```
+
+When you need to test third-party sites under a specific dark theme (not your own CSS), Night Mode Z's JavaScript API becomes genuinely useful. You can drive the extension programmatically through Playwright's extension loading support:
+
+```javascript
+import { chromium } from 'playwright';
+import path from 'path';
+
+const extensionPath = path.resolve('./extensions/night-mode-z');
+
+const context = await chromium.launchPersistentContext('', {
+  headless: false,
+  args: [
+    `--disable-extensions-except=${extensionPath}`,
+    `--load-extension=${extensionPath}`
+  ]
+});
+
+const page = await context.newPage();
+await page.goto('https://target-site.com');
+
+// Trigger the extension's API via the page context
+await page.evaluate(() => {
+  window.nightModeZ.setTheme('dark');
+});
+
+await page.screenshot({ path: 'dark-mode-capture.png' });
+```
+
+This setup is useful for visual regression testing workflows where you want consistent screenshots across automated runs without relying on OS-level dark mode state.
+
+## Site-Specific Overrides: Handling Difficult Pages
+
+Every dark mode extension eventually encounters pages that break under automated color inversion. Common offenders include pages that use canvas-based rendering, PDF viewers, embedded maps, and design tools where color accuracy is critical.
+
+All four alternatives covered in this guide support per-site exclusions, but the implementation details differ in ways that matter to developers.
+
+For Stylus, exclusions are handled naturally by the domain-scoped nature of styles — you simply do not create a style for a domain you want to exclude. Night Mode Z and Midnight Lizard both support exclusion lists in their settings panels, accepting glob patterns:
+
+```
+# Night Mode Z exclusion patterns
+figma.com/*
+*.google.com/maps*
+localhost:*
+```
+
+Darkman's local server approach gives the most flexibility here. You can write middleware that inspects the request URL and returns an empty stylesheet for excluded domains:
+
+```javascript
+// darkman server middleware
+app.use('/theme.css', (req, res) => {
+  const referer = req.headers.referer || '';
+  const excluded = ['figma.com', 'maps.google.com', 'codepen.io'];
+
+  const isExcluded = excluded.some((domain) => referer.includes(domain));
+  if (isExcluded) {
+    return res.type('css').send('/* excluded */');
+  }
+
+  res.sendFile(path.resolve('./themes/dark.css'));
+});
+```
+
+This server-side approach means exclusion logic lives in one place and updates immediately without touching extension settings. For teams maintaining a consistent development environment, checking this configuration into version control keeps everyone's dark mode behavior synchronized.
+
+## Accessibility and Contrast Ratios
+
+Dark mode implementations vary significantly in how they handle contrast ratios, which matters for developers building accessible applications and for users with visual sensitivities. Automated color inversion, which both Dark Reader and some alternatives use, does not guarantee WCAG compliance — it can actually reduce contrast on pages that were designed with dark mode in mind.
+
+Midnight Lizard's contrast auto-adjustment feature is the most thoughtful implementation here. It runs a post-processing pass on applied styles and bumps contrast values that fall below a configurable threshold:
+
+```json
+{
+  "accessibility": {
+    "minContrastRatio": 4.5,
+    "autoAdjust": true,
+    "adjustTextOnly": false
+  }
+}
+```
+
+For developers evaluating which extension to recommend to accessibility-conscious teams, this matters. An extension that applies dark styles while maintaining WCAG AA contrast ratios by default reduces the risk of creating an environment where bugs in application CSS go unnoticed because the extension is masking them.
+
+Testing contrast compliance after dark mode application is straightforward with axe-core in a Playwright context:
+
+```javascript
+import AxeBuilder from '@axe-core/playwright';
+
+test('dark mode maintains contrast compliance', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.goto('https://your-app.dev');
+
+  const results = await new AxeBuilder({ page })
+    .withRules(['color-contrast'])
+    .analyze();
+
+  expect(results.violations).toHaveLength(0);
+});
+```
+
+Running this check in CI as part of your visual regression suite catches contrast regressions before they reach users.
+
 
 ## Related Reading
 

@@ -259,9 +259,177 @@ new PerformanceObserver((list) => {
 }).observe({ entryTypes: ['paint', 'longtask', 'measure'] });
 ```
 
+## Image and Media Optimization
+
+Images are frequently the largest payload on mobile pages. On iOS Chrome, unoptimized images cause layout thrashing and stall rendering. Use modern formats and lazy loading together:
+
+```html
+<img
+  src="hero.webp"
+  srcset="hero-480.webp 480w, hero-768.webp 768w, hero-1200.webp 1200w"
+  sizes="(max-width: 600px) 100vw, 50vw"
+  loading="lazy"
+  decoding="async"
+  width="1200"
+  height="630"
+  alt="Hero image"
+>
+```
+
+The `decoding="async"` attribute is specifically valuable on iOS because it offloads image decoding to a separate thread, preventing the main thread from stalling during heavy page loads. Always set explicit `width` and `height` attributes to eliminate cumulative layout shift, which is penalized heavily in Core Web Vitals scoring.
+
+For video embeds, defer loading until the user signals intent:
+
+```javascript
+const videoWrapper = document.querySelector('.video-wrapper');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const iframe = document.createElement('iframe');
+      iframe.src = videoWrapper.dataset.src;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      videoWrapper.appendChild(iframe);
+      observer.disconnect();
+    }
+  });
+}, { threshold: 0.25 });
+
+observer.observe(videoWrapper);
+```
+
+This intersection-observer pattern avoids loading third-party embeds until they are actually near the viewport, which is one of the single highest-impact changes you can make for iOS Chrome load times on media-heavy pages.
+
+## Font Loading Strategy
+
+Web fonts are a common but underappreciated source of slowness on iOS Chrome. The browser blocks rendering until fonts resolve, producing invisible text during a slow connection. Address this with `font-display: swap` and preloading:
+
+```html
+<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+```
+
+```css
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-var.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 100 900;
+}
+```
+
+Variable fonts are worth adopting specifically for iOS optimization. A single variable font file replaces four or five separate weight files, cutting both the number of requests and total transfer size. If you currently load `font-weight: 400` and `font-weight: 700` as separate files, switching to a variable font typically saves 60-80KB after compression.
+
+System font stacks are the zero-cost alternative when brand fidelity allows it:
+
+```css
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+```
+
+On iOS, `-apple-system` resolves to San Francisco, which renders beautifully and requires no network request at all.
+
+## Scroll Performance and Passive Listeners
+
+Janky scrolling is one of the most visible Chrome iOS performance complaints. The primary cause is non-passive event listeners on `touchstart` and `touchmove`, which block the compositor thread from scrolling immediately while JavaScript executes.
+
+Audit your codebase for scroll-blocking listeners:
+
+```javascript
+// Bad: blocks scrolling until handler completes
+window.addEventListener('scroll', handler);
+document.addEventListener('touchmove', preventDefaultOnSomeCondition);
+
+// Good: declares that this listener will not call preventDefault
+window.addEventListener('scroll', handler, { passive: true });
+document.addEventListener('touchmove', handler, { passive: true });
+```
+
+If you genuinely need to call `preventDefault` inside a touchmove handler (for custom drag interactions), isolate that listener to the specific element that needs it rather than applying it at the document level. Document-level non-passive listeners block every scroll on the entire page.
+
+CSS scroll snap can replace JavaScript-driven scroll animations entirely for many carousel and slider patterns, removing event listener overhead completely:
+
+```css
+.scroll-container {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+}
+```
+
+The `-webkit-overflow-scrolling: touch` property activates momentum scrolling on iOS, which uses native UIScrollView behavior and is significantly smoother than JavaScript-based equivalents.
+
+## Reducing Third-Party Script Impact
+
+Third-party scripts — analytics, chat widgets, A/B testing tools, ad tags — are the most common cause of unexplained slowness on iOS Chrome because they arrive from different origins and compete for bandwidth and main thread time.
+
+The correct pattern is to defer all non-critical third-party scripts until after the main page is interactive:
+
+```javascript
+// Load third-party scripts after the page is fully interactive
+function loadThirdPartyScripts() {
+  const scripts = [
+    { src: 'https://www.googletagmanager.com/gtm.js?id=GTM-XXXXX', async: true },
+    { src: 'https://widget.intercom.io/widget/APP_ID', async: true }
+  ];
+
+  scripts.forEach(({ src, async }) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = async;
+    document.body.appendChild(script);
+  });
+}
+
+if (document.readyState === 'complete') {
+  loadThirdPartyScripts();
+} else {
+  window.addEventListener('load', loadThirdPartyScripts);
+}
+```
+
+For analytics that must capture early pageview data, use a minimal inline snippet that queues events, then load the full library lazily. Every major analytics platform supports this pattern.
+
+DNS prefetch for third-party origins eliminates one round-trip from connection setup:
+
+```html
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://widget.intercom.io">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+```
+
+Use `preconnect` for origins you will definitely load from, and `dns-prefetch` for origins that are conditional. Over-using `preconnect` wastes connections and can hurt performance on constrained iOS network links.
+
+## Practical Testing Workflow
+
+Never rely solely on desktop Chrome DevTools simulations for iOS performance work. Simulated throttling does not replicate WebKit's JavaScript engine, memory pressure behavior, or iOS-specific rendering paths.
+
+The recommended testing stack:
+
+1. Connect a physical iPhone to a Mac via USB
+2. Enable Web Inspector in iOS Settings > Safari > Advanced
+3. Open Safari on Mac, navigate to Develop > [device name] > [page]
+4. Use the Timeline profiler to record real paint and script timings
+
+Lighthouse CI can be integrated into your deployment pipeline to catch regressions before they reach production:
+
+```bash
+npm install -g @lhci/cli
+lhci autorun --upload.target=temporary-public-storage
+```
+
+Set a budget in `lighthouserc.js` to fail builds that regress below your performance threshold. A practical starting target for iOS Chrome is LCP under 2.5 seconds and TBT under 300ms on a simulated mid-tier mobile connection.
+
 ## Conclusion
 
-Chrome iOS performance requires understanding the platform's constraints and optimizing accordingly. Focus on reducing JavaScript main thread work, implementing aggressive caching, minimizing network requests, and leveraging iOS-specific APIs. Regular profiling on actual devices ensures your optimizations deliver real improvements.
+Chrome iOS performance requires understanding the platform's constraints and optimizing accordingly. Focus on reducing JavaScript main thread work, implementing aggressive caching, minimizing network requests, and leveraging iOS-specific APIs. Image optimization, passive scroll listeners, deferred third-party scripts, and proper font loading strategies collectively deliver the largest gains for real users. Regular profiling on actual devices ensures your optimizations deliver measurable improvements rather than theoretical gains from simulation alone.
 
 
 ## Related Reading

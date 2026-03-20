@@ -177,7 +177,174 @@ ALTER TABLE users ADD COLUMN subscription_tier VARCHAR(20) DEFAULT 'free';
 
 This methodical approach prevents data loss and ensures smooth deployments.
 
-Start with the skills that address your most frequent pain points — shell scripting and CI/CD are good entry points for most teams. Add security scanning and database migration patterns as your pipeline matures.
+## Environment Parity and Configuration Drift
+
+One of the most persistent sources of deployment failures is environment drift — staging behaves differently from production because someone manually changed a configuration value three weeks ago and never committed it. Claude skills help you audit and enforce parity across environments.
+
+When you suspect drift, describe the situation directly and let Claude help you build an auditing script:
+
+```bash
+#!/bin/bash
+# Compare env config between staging and production
+STAGING_URL="https://staging-api.example.com/health"
+PROD_URL="https://api.example.com/health"
+
+staging_version=$(curl -s "$STAGING_URL" | jq -r '.version')
+prod_version=$(curl -s "$PROD_URL" | jq -r '.version')
+
+if [ "$staging_version" != "$prod_version" ]; then
+  echo "VERSION MISMATCH: staging=$staging_version prod=$prod_version"
+  exit 1
+fi
+echo "Versions match: $staging_version"
+```
+
+Beyond version checks, Claude helps you enforce configuration parity through Terraform variable files. Rather than maintaining separate `staging.tfvars` and `production.tfvars` files that diverge over time, Claude can generate a diff report and flag any variables that exist in one environment but not the other.
+
+The pattern that works best: describe the two environments and ask Claude to produce a structured comparison. Store the expected differences in a comment block — intentional differences, like instance size — so future audits distinguish deliberate configuration choices from accidental drift.
+
+## Rollback Strategies and Deployment Safety
+
+Fast rollback is the difference between a five-minute incident and a two-hour outage. Claude skills help you build rollback procedures into your deployment pipeline rather than writing them under pressure during an incident.
+
+For container deployments, a working rollback script is straightforward to generate:
+
+```bash
+#!/bin/bash
+# Rollback to previous image tag
+SERVICE_NAME=$1
+REGISTRY="123456789.dkr.ecr.us-east-1.amazonaws.com"
+
+# Get the current running tag
+current_tag=$(aws ecs describe-services \
+  --cluster production \
+  --services "$SERVICE_NAME" \
+  --query 'services[0].taskDefinition' \
+  --output text | grep -oP 'task-\K[^:]+')
+
+echo "Rolling back $SERVICE_NAME from $current_tag"
+
+# Fetch the previous task definition revision
+prev_revision=$(($(aws ecs describe-task-definition \
+  --task-definition "$SERVICE_NAME" \
+  --query 'taskDefinition.revision' \
+  --output text) - 1))
+
+aws ecs update-service \
+  --cluster production \
+  --service "$SERVICE_NAME" \
+  --task-definition "$SERVICE_NAME:$prev_revision"
+```
+
+Ask Claude to adapt this pattern to your specific container orchestration setup. The same logic applies to Kubernetes deployments using `kubectl rollout undo` or to serverless functions using Lambda version aliases.
+
+For database-backed services, rollback requires more thought. Claude skills help you think through the sequence: application rollback first, then evaluate whether the schema change is backward-compatible before rolling back the migration. This sequencing matters because rolling back a schema change after application rollback can corrupt data if the old code expects the old schema while new records already exist.
+
+Store your rollback runbooks in `supermemory` so Claude can retrieve and adapt them across sessions without you re-explaining your infrastructure each time.
+
+## Secrets Management and Credential Rotation
+
+Hardcoded credentials in deployment scripts are a common security failure. Claude skills help you audit existing scripts for hardcoded secrets and restructure them to use environment variables or secrets managers.
+
+When auditing a script, ask Claude to scan for common patterns:
+
+```bash
+# Patterns Claude looks for when auditing scripts
+# Hardcoded AWS keys
+AWS_ACCESS_KEY_ID="AKIA..."
+AWS_SECRET_ACCESS_KEY="..."
+
+# Hardcoded database passwords
+DB_PASSWORD="supersecret123"
+
+# Hardcoded API tokens
+GITHUB_TOKEN="ghp_..."
+```
+
+Claude will flag each instance and suggest the correct replacement — either an environment variable reference or a call to your secrets manager (AWS Secrets Manager, HashiCorp Vault, or similar).
+
+For credential rotation, Claude skills help you generate rotation scripts that fetch new credentials, update all consuming services, verify connectivity, and only then revoke the old credentials. The ordering matters. Revoking before verifying is a common mistake that causes brief outages during rotation windows.
+
+A rotation workflow structure Claude generates well:
+
+1. Fetch new credentials from the secrets manager
+2. Deploy new credentials to each consuming service
+3. Run health checks against each service
+4. Confirm all services respond with new credentials
+5. Revoke the old credentials
+6. Log the rotation event with timestamp and operator identity
+
+This sequence is simple to describe to Claude, and the generated scripts are easy to review and adapt to your specific secrets backend.
+
+## Incident Response Automation
+
+When a deployment triggers an incident, the first thirty minutes are critical. Claude skills accelerate the diagnostic phase by helping you write runbooks as executable scripts rather than prose documents.
+
+A practical first-response script for a failing deployment:
+
+```bash
+#!/bin/bash
+# First-response diagnostic for deployment failures
+APP=$1
+
+echo "=== Service Status ==="
+kubectl get pods -l app="$APP" -o wide
+
+echo "=== Recent Events ==="
+kubectl get events --field-selector involvedObject.name="$APP" \
+  --sort-by='.lastTimestamp' | tail -20
+
+echo "=== Last 50 Log Lines ==="
+kubectl logs -l app="$APP" --tail=50 --timestamps=true
+
+echo "=== Resource Usage ==="
+kubectl top pods -l app="$APP"
+```
+
+Claude helps you build these scripts by describing the diagnostic information you typically need during incidents. The key improvement over prose runbooks is that executable scripts produce consistent output — every responder sees the same information in the same format, which speeds up diagnosis in high-stress situations.
+
+For post-incident review, Claude skills help you parse log exports and identify the timeline of events. Describe the incident to Claude, share the relevant log snippets, and ask it to reconstruct the event sequence. This is significantly faster than manually scrolling through log aggregation dashboards.
+
+## Cost Optimization in Deployment Infrastructure
+
+Cloud deployment costs escalate quickly when pipelines run frequently. Claude skills help you audit your pipeline configurations and identify waste.
+
+Common sources of waste Claude helps identify:
+
+- Build caches that are invalidated unnecessarily, forcing full rebuilds on every run
+- Test jobs that run in series when they could run in parallel
+- Container images that pull large base images instead of using pre-built images stored in a private registry
+- Resources that stay running between deployments instead of spinning down
+
+For GitHub Actions specifically, describe your current workflow and ask Claude to analyze it for parallelization opportunities:
+
+```yaml
+# Before: sequential jobs taking 18 minutes
+jobs:
+  lint:
+    ...
+  unit-test:
+    needs: lint
+  integration-test:
+    needs: unit-test
+  build:
+    needs: integration-test
+
+# After: parallel jobs taking 7 minutes
+jobs:
+  lint:
+    ...
+  unit-test:
+    ...
+  integration-test:
+    ...
+  build:
+    needs: [lint, unit-test, integration-test]
+```
+
+The dependency restructuring is straightforward once you identify which jobs are actually independent. Claude catches dependency chains that were added conservatively — `needs: previous-job` is easy to add and rarely removed even when the actual dependency no longer exists.
+
+Start with the skills that address your most frequent pain points — shell scripting and CI/CD are good entry points for most teams. Add security scanning, rollback automation, and database migration patterns as your pipeline matures.
 
 ---
 

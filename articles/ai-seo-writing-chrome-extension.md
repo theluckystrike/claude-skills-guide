@@ -221,17 +221,176 @@ Validate all content passed to AI APIs to prevent injection attacks.
 
 Use content security policy headers in your extension to restrict script execution.
 
+## Keyword Density and Heading Analysis
+
+An SEO extension that only generates content misses half the value. Analysis of existing page content is equally important. The following utility calculates keyword density and heading structure in one pass:
+
+```javascript
+// content.js - Keyword and heading analysis
+function analyzeKeywordDensity(targetKeyword) {
+  const bodyText = document.body.innerText.toLowerCase();
+  const words = bodyText.split(/\s+/).filter(w => w.length > 0);
+  const totalWords = words.length;
+
+  const keywordLower = targetKeyword.toLowerCase();
+  const keywordCount = words.filter(w => w.includes(keywordLower)).length;
+  const density = ((keywordCount / totalWords) * 100).toFixed(2);
+
+  const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4')).map(h => ({
+    level: h.tagName,
+    text: h.innerText.trim(),
+    containsKeyword: h.innerText.toLowerCase().includes(keywordLower)
+  }));
+
+  return {
+    totalWords,
+    keywordCount,
+    density: parseFloat(density),
+    headingCount: headings.length,
+    headings,
+    keywordInH1: headings.filter(h => h.level === 'H1' && h.containsKeyword).length > 0
+  };
+}
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'analyzeKeyword') {
+    sendResponse(analyzeKeywordDensity(request.keyword));
+  }
+  return true;
+});
+```
+
+This gives the popup enough data to flag common SEO issues: keyword density above 3% (potential over-optimization), no keyword in the H1, or a page with too few headings for its word count. Returning structured data rather than pre-formatted strings keeps the popup logic flexible and makes the data easy to send to your AI prompt as context.
+
+## Building SEO-Aware AI Prompts
+
+The quality of AI-generated SEO content depends almost entirely on the quality of the prompt. A generic "write SEO content" instruction produces generic output. The background script should construct prompts that include the page's current state:
+
+```javascript
+// background.js - Context-aware prompt construction
+function buildSEOPrompt(context) {
+  const { keyword, currentWordCount, density, headings, metaDescription } = context;
+
+  let prompt = `You are an expert SEO writer. `;
+  prompt += `Target keyword: "${keyword}". `;
+  prompt += `Current word count: ${currentWordCount}. `;
+  prompt += `Current keyword density: ${density}%. `;
+
+  if (density < 0.5) {
+    prompt += `The keyword appears too rarely. Add it naturally in the next paragraph. `;
+  } else if (density > 3) {
+    prompt += `The keyword is overused. Write a new paragraph that avoids it. `;
+  }
+
+  if (!context.keywordInH1) {
+    prompt += `Suggest a revised H1 that includes the keyword naturally. `;
+  }
+
+  prompt += `Current meta description: "${metaDescription}". `;
+  prompt += `Suggest an improved meta description under 160 characters that includes the keyword in the first 60 characters.`;
+
+  return prompt;
+}
+```
+
+Injecting real page diagnostics into the prompt produces output that addresses the specific deficiencies of the page being edited, not generic advice. This is the difference between an extension users return to and one they uninstall after the first session.
+
+## Meta Tag Extraction and Editing
+
+Reading and writing meta tags from a content script requires careful DOM handling. Many CMS editors render meta tags dynamically, so a simple `document.querySelector` will not always find what you expect:
+
+```javascript
+// content.js - Meta tag utilities
+function getMetaTags() {
+  const title = document.querySelector('title')?.innerText || '';
+  const description = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
+  const ogTitle = document.querySelector('meta[property="og:title"]')?.getAttribute('content') || '';
+  const canonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '';
+
+  return { title, description, ogTitle, canonical };
+}
+
+function updateMetaDescription(newDescription) {
+  let meta = document.querySelector('meta[name="description"]');
+  if (!meta) {
+    meta = document.createElement('meta');
+    meta.setAttribute('name', 'description');
+    document.head.appendChild(meta);
+  }
+  meta.setAttribute('content', newDescription);
+  return true;
+}
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'getMeta') {
+    sendResponse(getMetaTags());
+  }
+  if (request.action === 'setMetaDescription') {
+    sendResponse({ success: updateMetaDescription(request.description) });
+  }
+  return true;
+});
+```
+
+Note that writing meta tags via content script only affects the in-memory DOM. For the change to persist, the user must copy the suggested value into their CMS editor. The extension's role is suggestion and preview, not permanent DOM modification — which also avoids complications with sites that use strict Content Security Policies.
+
+## Rate Limiting and Cost Management
+
+AI API calls are expensive at scale. An extension used on dozens of pages per day by multiple users can accumulate API costs quickly. Implement token budgets and per-session rate limiting in the background script:
+
+```javascript
+// background.js - Rate limiting
+const RATE_LIMIT = {
+  maxRequestsPerHour: 20,
+  requestLog: []
+};
+
+function isRateLimited() {
+  const now = Date.now();
+  const oneHourAgo = now - 3600000;
+  RATE_LIMIT.requestLog = RATE_LIMIT.requestLog.filter(t => t > oneHourAgo);
+  return RATE_LIMIT.requestLog.length >= RATE_LIMIT.maxRequestsPerHour;
+}
+
+async function generateSEOContentWithLimit(prompt) {
+  if (isRateLimited()) {
+    throw new Error('Rate limit reached. Try again in an hour.');
+  }
+  RATE_LIMIT.requestLog.push(Date.now());
+
+  // Trim prompt to avoid token waste
+  const trimmedPrompt = prompt.slice(0, 2000);
+
+  return generateSEOContent(trimmedPrompt);
+}
+```
+
+Store `requestLog` in `chrome.storage.session` rather than in-memory if you want the rate limit to survive service worker restarts, which Manifest V3 background scripts are subject to frequently.
+
 ## Deployment and Testing
 
 Before publishing to the Chrome Web Store:
 
-- Test across different websites with varying DOM structures
-- Verify API key storage and retrieval works correctly
-- Ensure the extension handles network failures gracefully
-- Check that content scripts inject only where needed
-- Validate all user inputs are sanitized
+- Test across different websites with varying DOM structures, including SPAs that update the DOM after initial load
+- Verify API key storage and retrieval works correctly across browser restarts
+- Ensure the extension handles network failures gracefully with user-visible error messages
+- Check that content scripts inject only where needed by scoping `matches` in the manifest
+- Validate all user inputs are sanitized before they reach API calls
+- Test on sites with strict Content Security Policies, which may block your content script's DOM writes
 
-Chrome's developer dashboard provides testing capabilities through developer accounts. Load your unpacked extension for local testing before submission.
+Chrome's developer dashboard provides testing capabilities through developer accounts. Load your unpacked extension for local testing before submission. Use the `chrome.runtime.lastError` pattern consistently in callbacks to catch silent failures that would otherwise produce confusing behavior in production:
+
+```javascript
+chrome.storage.local.get('apiKey', (result) => {
+  if (chrome.runtime.lastError) {
+    console.error('Storage read failed:', chrome.runtime.lastError.message);
+    return;
+  }
+  // Safe to use result here
+});
+```
+
+Silent errors in Chrome extensions are a common source of hard-to-reproduce user complaints. Logging them explicitly from the start saves significant debugging time after launch.
 
 
 ## Related Reading

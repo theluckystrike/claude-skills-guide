@@ -211,6 +211,163 @@ For most development scenarios, consider this decision tree:
 
 Chrome extensions give you the most flexibility for local development, while server-side solutions scale better for team environments.
 
+## Handling Non-JSON Response Types
+
+The background script shown above only handles JSON responses. Real APIs return HTML, plain text, binary data, and streaming responses. Here is a more robust version of the fetch proxy that preserves the response type:
+
+```javascript
+// background.js - Type-aware proxy
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'fetchProxy') {
+    fetch(request.url, {
+      method: request.method || 'GET',
+      headers: request.headers || {},
+      body: request.body ? JSON.stringify(request.body) : undefined
+    })
+    .then(async response => {
+      const contentType = response.headers.get('content-type') || '';
+      let data;
+
+      if (contentType.includes('application/json')) {
+        data = await response.json();
+      } else if (contentType.includes('text/')) {
+        data = await response.text();
+      } else {
+        // Binary: return as base64
+        const buffer = await response.arrayBuffer();
+        data = btoa(String.fromCharCode(...new Uint8Array(buffer)));
+      }
+
+      sendResponse({
+        success: true,
+        data,
+        status: response.status,
+        contentType
+      });
+    })
+    .catch(error => sendResponse({ success: false, error: error.message }));
+
+    return true;
+  }
+});
+```
+
+The caller can inspect `contentType` in the response to decide how to consume `data`, making this a drop-in proxy for any API surface.
+
+## Persisting Allowed Origins in Extension Storage
+
+Hardcoding `ALLOWED_DEV_DOMAINS` as a constant gets unwieldy when you work across many projects. A better pattern stores the allowed list in `chrome.storage.sync` and exposes a settings popup to manage it:
+
+```javascript
+// popup.js - Load and save allowed origins
+document.addEventListener('DOMContentLoaded', () => {
+  const list = document.getElementById('origins');
+  const input = document.getElementById('new-origin');
+  const addBtn = document.getElementById('add');
+
+  chrome.storage.sync.get({ allowedOrigins: [] }, ({ allowedOrigins }) => {
+    allowedOrigins.forEach(origin => appendOriginItem(origin, list));
+  });
+
+  addBtn.addEventListener('click', () => {
+    const origin = input.value.trim();
+    if (!origin) return;
+    chrome.storage.sync.get({ allowedOrigins: [] }, ({ allowedOrigins }) => {
+      if (!allowedOrigins.includes(origin)) {
+        allowedOrigins.push(origin);
+        chrome.storage.sync.set({ allowedOrigins });
+        appendOriginItem(origin, list);
+      }
+      input.value = '';
+    });
+  });
+});
+
+function appendOriginItem(origin, container) {
+  const li = document.createElement('li');
+  li.textContent = origin;
+  container.appendChild(li);
+}
+```
+
+In `background.js`, replace the static array with a lookup against `chrome.storage.sync`:
+
+```javascript
+async function isAllowedOrigin(url) {
+  return new Promise(resolve => {
+    chrome.storage.sync.get({ allowedOrigins: [] }, ({ allowedOrigins }) => {
+      try {
+        const hostname = new URL(url).hostname;
+        const allowed = allowedOrigins.some(pattern => {
+          if (pattern.startsWith('*.')) {
+            return hostname.endsWith(pattern.slice(2));
+          }
+          return hostname === pattern;
+        });
+        resolve(allowed);
+      } catch {
+        resolve(false);
+      }
+    });
+  });
+}
+```
+
+Now adding a new development API host takes three seconds through the popup instead of a code change and extension reload.
+
+## Debugging the Extension Itself
+
+When the proxy silently fails, the most common culprits are the message channel closing before the async response arrives, a missing `return true` in the listener, or a permission gap in `manifest.json`. The following checklist catches most issues:
+
+**Check the service worker console.** In `chrome://extensions`, click the "service worker" link next to your extension. This opens a DevTools window attached to the background context where `console.log` calls and uncaught errors appear.
+
+**Verify host permissions match the target URL.** A request to `https://api.internal.example.com` will silently fail if your manifest only grants `http://localhost/*`. Use `<all_urls>` during development and scope it down before any wider distribution.
+
+**Confirm the message channel stays open.** The `return true` at the end of the `onMessage` listener is not optional — omitting it closes the channel synchronously, so `sendResponse` called inside a promise always arrives after the channel is gone, and the caller receives `undefined`.
+
+**Test the background fetch in isolation.** Open the service worker DevTools console and call fetch directly on the target URL. If this fails, the problem is network-level (firewall, DNS, TLS certificate) not extension logic.
+
+## Using declarativeNetRequest for Header Injection in MV3
+
+The `webRequest` API with the `"blocking"` option shown earlier is not permitted in Manifest V3 for extensions distributed through the Chrome Web Store. The modern equivalent is `declarativeNetRequest`, which lets you declare header modification rules statically or update them dynamically at runtime:
+
+```javascript
+// background.js - Add CORS headers to responses from a dev API
+chrome.declarativeNetRequest.updateDynamicRules({
+  addRules: [
+    {
+      id: 1,
+      priority: 1,
+      action: {
+        type: 'modifyHeaders',
+        responseHeaders: [
+          {
+            header: 'Access-Control-Allow-Origin',
+            operation: 'set',
+            value: '*'
+          }
+        ]
+      },
+      condition: {
+        urlFilter: '*://api.dev.local/*',
+        resourceTypes: ['xmlhttprequest', 'fetch']
+      }
+    }
+  ],
+  removeRuleIds: []
+});
+```
+
+This requires the `declarativeNetRequest` permission in your manifest rather than `webRequestBlocking`. The rule activates immediately and persists across browser restarts until you remove it programmatically. For development use, call `updateDynamicRules` on extension startup and clear rules matching your dev hosts when the popup is toggled off.
+
+## Packaging the Extension for Your Team
+
+A custom CORS helper extension does not need to go through the Chrome Web Store to be shared with teammates. You can distribute it as a packed `.crx` file or, more practically, as a zipped source directory that each developer loads unpacked.
+
+For teams using a monorepo, commit the extension source under a `tools/cors-dev-helper/` directory. Add a brief note in the project README explaining how to load it. This keeps the tooling versioned alongside the project so updates to allowed origins or proxy logic ship with normal pull requests.
+
+If the extension needs to be installed on many developer machines, an organization-level Chrome policy can force-install it from a local path or internal hosting without requiring the Chrome Web Store. The `ExtensionInstallForcelist` policy accepts a path to a `.crx` and an update manifest URL, enabling centralized distribution and updates.
+
 ---
 
 
