@@ -6,6 +6,10 @@ description: "Master Chrome Enterprise auto update settings for controlled brows
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-auto-update-settings/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Enterprise Auto Update Settings: A Developer's Guide
