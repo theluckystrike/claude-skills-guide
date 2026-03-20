@@ -11,8 +11,7 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 ---
-
-
+{% raw %}
 # Zotero Chrome Extension Setup Guide
 
 Zotero's Chrome connector transforms your browser into a powerful research assistant, automatically detecting and saving academic papers, web articles, and citations as you browse. For developers and power users, the extension offers granular control over metadata extraction, storage behavior, and integration with local Zotero installations. This guide covers the complete setup process, configuration options, and practical troubleshooting strategies.
@@ -300,3 +299,4 @@ This enables automated literature reviews, research notifications, and custom ci
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
