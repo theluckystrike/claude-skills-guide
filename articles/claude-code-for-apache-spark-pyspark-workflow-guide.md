@@ -34,6 +34,30 @@ numpy>=1.24.0
 
 When Claude Code assists you, it can automatically detect Spark-related code and suggest optimizations. The key is establishing clear context about your Spark version and cluster configuration in your project documentation.
 
+A good starting pattern is a `SparkSession` factory function that you reuse across your codebase:
+
+```python
+from pyspark.sql import SparkSession
+
+def create_spark_session(app_name: str, env: str = "local") -> SparkSession:
+    builder = (
+        SparkSession.builder
+        .appName(app_name)
+        .config("spark.sql.shuffle.partitions", "50")
+        .config("spark.sql.adaptive.enabled", "true")
+        .config("spark.sql.adaptive.coalescePartitions.enabled", "true")
+    )
+
+    if env == "local":
+        builder = builder.master("local[*]")
+
+    return builder.getOrCreate()
+
+spark = create_spark_session("my-pipeline", env="local")
+```
+
+Claude Code can review this factory function against your cluster specs and suggest environment-specific tuning values, such as adjusting shuffle partitions for larger datasets or enabling adaptive query execution on Spark 3.x clusters.
+
 ## Building Efficient Data Processing Pipelines
 
 PySpark workflows benefit from careful architectural planning. Design your pipelines with these principles in mind, and Claude Code will help you implement them correctly.
@@ -60,6 +84,20 @@ df = spark.read.csv("s3://your-bucket/data/", schema=schema, header=True)
 
 Claude Code can review your data reading patterns and suggest improvements like partitioning, bucketing, or using appropriate file formats like Parquet for better query performance.
 
+### Comparing File Formats
+
+Choosing the right storage format has a significant impact on pipeline speed. The table below summarizes the tradeoffs you will encounter most often:
+
+| Format  | Compression | Schema evolution | Columnar reads | Best for                        |
+|---------|-------------|-----------------|----------------|---------------------------------|
+| Parquet | Yes         | Limited         | Yes            | Analytical queries, large scans |
+| ORC     | Yes         | Limited         | Yes            | Hive-heavy workloads            |
+| Delta   | Yes         | Full            | Yes            | ACID workloads, upserts         |
+| CSV     | No          | No              | No             | Small, human-readable exports   |
+| JSON    | No          | Flexible        | No             | Semi-structured, nested data    |
+
+For most production pipelines, Parquet or Delta Lake is the right choice. Claude Code can inspect your current read/write code and flag CSV usage in hot paths where Parquet would meaningfully reduce I/O.
+
 ### Transformation Patterns
 
 When writing transformations, prefer DataFrame operations over RDD operations. DataFrames benefit from Spark's Catalyst optimizer and Tungsten execution engine:
@@ -84,6 +122,20 @@ result_df.cache()
 
 Avoid collecting large datasets to the driver. Use `df.show()` for debugging small samples, and use `df.take(n)` or `df.head(n)` for specific row inspection rather than `df.collect()` on large DataFrames.
 
+A common mistake is writing a UDF where a built-in function exists. Built-in functions run in native JVM code, while Python UDFs serialize data back and forth through the Py4J bridge. Claude Code will often catch this pattern and suggest a replacement:
+
+```python
+from pyspark.sql import functions as F
+
+# Avoid: Python UDF for simple string ops
+# from pyspark.sql.functions import udf
+# upper_udf = udf(lambda x: x.upper())
+# df.withColumn("name_upper", upper_udf(col("name")))
+
+# Prefer: built-in function
+df.withColumn("name_upper", F.upper(col("name")))
+```
+
 ## Debugging and Optimization Strategies
 
 Spark jobs can be challenging to debug. Claude Code helps identify common issues before they become production problems.
@@ -99,6 +151,25 @@ result_df.explain(True)  # True for formatted output
 
 Look for signs of inefficiency: broad Cartesian products, missing filter pushdowns, or unnecessary shuffles. Claude Code can interpret these plans and suggest specific optimizations.
 
+Paste the output of `explain(True)` directly into a Claude Code session. Ask it to identify the most expensive stages and what changes to the DataFrame API calls would reduce shuffles. This is one of the highest-leverage uses of Claude Code in a Spark workflow because plan output is dense and difficult to parse without experience.
+
+### Diagnosing Data Skew
+
+Skewed partitions are a leading cause of slow Spark jobs. If one executor is still running while all others have finished, you likely have skew. A quick diagnostic:
+
+```python
+# Check partition sizes
+from pyspark.sql import functions as F
+
+df.withColumn("partition_id", F.spark_partition_id()) \
+  .groupBy("partition_id") \
+  .count() \
+  .orderBy("count", ascending=False) \
+  .show(20)
+```
+
+If you see a handful of partitions with ten times more rows than the rest, common fixes include salting the join key or using `repartition()` with a higher number before an aggregation. Claude Code can propose the specific salting logic once you share the skewed column name and row counts.
+
 ### Performance Tuning Tips
 
 Key parameters to tune based on your workload:
@@ -113,6 +184,8 @@ from pyspark.sql.functions import broadcast
 # Broadcast small dimension table for efficient join
 fact_df.join(broadcast(dim_df), "key", "left")
 ```
+
+A practical rule of thumb: tables under 10 MB are safe to broadcast. Anything larger risks driver OOM errors. If Spark's auto-broadcast threshold is not catching a small table, explicitly wrap it with `broadcast()`.
 
 ## Production-Ready Workflow Patterns
 
@@ -153,6 +226,8 @@ query = (
 )
 ```
 
+The watermark setting is critical for late-arriving data. Without it, Spark holds state indefinitely, which leads to unbounded memory growth in long-running streaming jobs. Claude Code can review your streaming topology and flag missing watermarks or misconfigured trigger intervals.
+
 ### Error Handling and Recovery
 
 Implement proper error handling with try-catch blocks and dead letter queues for failed records:
@@ -172,6 +247,54 @@ def safe_transform(row):
 result_df = input_df.rdd.map(safe_transform).toDF()
 ```
 
+For batch jobs, a more maintainable pattern separates good and bad records into distinct output paths:
+
+```python
+from pyspark.sql.functions import col, when
+
+validated_df = raw_df.withColumn(
+    "is_valid",
+    when(col("amount").isNull(), False)
+    .when(col("user_id").isNull(), False)
+    .otherwise(True)
+)
+
+good_records = validated_df.filter(col("is_valid") == True).drop("is_valid")
+bad_records = validated_df.filter(col("is_valid") == False).drop("is_valid")
+
+good_records.write.parquet("s3://output/processed/")
+bad_records.write.parquet("s3://output/dead-letter/")
+```
+
+Claude Code can generate this validation logic from a schema definition, inferring not-null and type constraints automatically.
+
+### Testing PySpark Pipelines
+
+Unit testing PySpark is underutilized in many teams. A lightweight approach uses `pytest` with a local SparkSession fixture:
+
+```python
+import pytest
+from pyspark.sql import SparkSession
+
+@pytest.fixture(scope="session")
+def spark():
+    return (
+        SparkSession.builder
+        .master("local[2]")
+        .appName("pytest-pyspark")
+        .getOrCreate()
+    )
+
+def test_filter_active_users(spark):
+    data = [("u1", "active", 100), ("u2", "inactive", 50)]
+    df = spark.createDataFrame(data, ["user_id", "status", "amount"])
+    result = df.filter(df.status == "active")
+    assert result.count() == 1
+    assert result.collect()[0]["user_id"] == "u1"
+```
+
+Claude Code is effective at generating these fixtures and test cases when you paste in your transformation function and describe the expected behavior. Ask it to cover both the happy path and edge cases like empty DataFrames or null values.
+
 ## Actionable Advice for Spark Development
 
 Follow these practical recommendations to improve your PySpark workflows:
@@ -182,9 +305,13 @@ Follow these practical recommendations to improve your PySpark workflows:
 
 3. **Partition your output data** - Write partitioned data to enable predicate pushdown on reads
 
-4. **Monitor with Spark UI** - Use the UI to identify stage bottlenecks,skewed partitions, and memory pressure
+4. **Monitor with Spark UI** - Use the UI to identify stage bottlenecks, skewed partitions, and memory pressure
 
 5. **Test with small data first** - Validate logic with `spark.createDataFrame()` using local data before scaling to cluster
+
+6. **Ask Claude Code to explain execution plans** - Paste `explain(True)` output directly and ask what the most expensive operation is and how to reduce it. This single habit has the highest ROI of any Claude Code technique for Spark developers.
+
+7. **Use Adaptive Query Execution (AQE)** - On Spark 3.x, set `spark.sql.adaptive.enabled=true`. This allows Spark to re-optimize the plan at runtime based on actual partition statistics, often eliminating skew and reducing shuffle without any code changes.
 
 Claude Code can assist you at every step—reviewing your code, suggesting optimizations, and helping you understand Spark's complex execution model. By combining your domain knowledge with AI-assisted development, you can build robust, efficient Spark pipelines that scale with your data needs.
 
