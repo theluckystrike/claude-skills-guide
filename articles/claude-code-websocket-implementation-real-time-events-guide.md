@@ -387,6 +387,51 @@ Secure WebSocket connections with WSS (WebSocket Secure) and implement authentic
 
 Test reconnection logic thoroughly. Simulate network partitions, server crashes, and connection timeouts to ensure your error handling works as designed.
 
+## Step-by-Step Guide: Building a Production WebSocket System
+
+Here is a concrete approach to building a production-ready real-time event system with Claude Code.
+
+**Step 1 — Choose your transport layer.** Decide between raw WebSockets, Socket.IO (which adds rooms, namespaces, and auto-reconnect), or Server-Sent Events (SSE) for one-way push. Claude Code explains the trade-offs for your specific use case — SSE is simpler for dashboards that only receive data, while raw WebSockets are better when clients also send events. For most applications, raw `ws` with a custom client wrapper strikes the best balance between control and simplicity.
+
+**Step 2 — Define your message protocol.** Before writing server code, define the message envelope format your system will use. A typed discriminated union in TypeScript ensures every message has a `type` field, a `requestId` for request-response correlation, and a `payload` with a shape specific to each type. Claude Code generates the full TypeScript type definitions and the corresponding JSON schema for validation.
+
+**Step 3 — Implement the server with connection lifecycle tracking.** The production server needs to track not just the raw WebSocket connections but also the user identity, subscription topics, and last activity timestamp for each connection. Claude Code generates the connection registry with proper cleanup on close events and a garbage collection pass that removes stale connections that did not close cleanly.
+
+**Step 4 — Add authentication at the handshake stage.** Authenticate clients before upgrading the HTTP connection to WebSocket. Parse a JWT or session token from the query string or `Sec-WebSocket-Protocol` header during the `upgrade` event. Claude Code generates the authentication middleware that rejects unauthorized connections with a 401 before the WebSocket handshake completes, keeping your event stream private.
+
+**Step 5 — Deploy behind a load balancer with sticky sessions.** When scaling horizontally, each WebSocket connection must route consistently to the same server instance. Configure your load balancer (NGINX, AWS ALB, or Cloudflare) with sticky sessions based on the client IP or a session cookie. For stateless broadcasting across instances, Claude Code generates the Redis pub/sub bridge that allows any server instance to broadcast to connections held by other instances.
+
+## Common Pitfalls
+
+**Not handling the `CLOSING` ready state.** Between `OPEN` and `CLOSED`, there is a brief `CLOSING` state where the connection has been asked to close but has not finished. Attempting to `send()` during this window throws an error. Claude Code generates a defensive send helper that checks `readyState === WebSocket.OPEN` before every write.
+
+**Memory leaks from uncleared event listeners.** Each time a client reconnects, new event listeners are attached. Without removing the old listeners on close, your server accumulates thousands of listeners per client over time. Claude Code generates cleanup functions that remove all listeners during the `close` event handler.
+
+**Broadcasting to disconnected clients.** The `clients` Set or Map on your server can contain WebSocket objects whose `readyState` has moved to `CLOSED` if the garbage collection logic is slow. Sending to a closed socket throws silently in some libraries and loudly in others. Always check `readyState === WebSocket.OPEN` before calling `send()` in broadcast loops.
+
+**Not implementing a message size limit.** Clients can send arbitrarily large messages. Without a `maxPayload` limit on your `ws.Server` configuration, a malicious or buggy client can exhaust server memory with a single oversized message. Claude Code generates the server configuration with sensible payload limits and a handler that closes the connection when the limit is exceeded.
+
+**Exposing internal errors in error messages sent to clients.** When your server catches an exception while processing a client message, do not include the full stack trace or internal error details in the response. Log the full error server-side and send the client only a sanitized error code. Claude Code generates the error serialization layer that maps internal exceptions to client-safe error codes.
+
+## Best Practices
+
+**Use binary messages for high-frequency updates.** For applications that push many small updates per second (trading tickers, game state, sensor readings), JSON text messages carry significant overhead from field name serialization. MessagePack or Protocol Buffers reduce message size by 30-60%. Claude Code generates the serialization layer and the TypeScript decoder for the client side.
+
+**Implement back-pressure on the server.** If a slow client is not reading messages fast enough, its send buffer fills up. Continuing to push messages causes memory growth and eventually crashes the server. Claude Code generates a per-connection send queue with a maximum depth, dropping or rejecting new messages when the queue is full and emitting a metric so you can monitor slow consumers.
+
+**Version your WebSocket protocol.** Include a protocol version in the initial handshake so you can evolve message formats without breaking existing clients. Claude Code generates the version negotiation handshake and a compatibility layer that translates between protocol versions during the transition period when old and new clients coexist.
+
+**Test reconnection under realistic conditions.** Use `toxiproxy` or `tc netem` to simulate packet loss, high latency, and connection drops during your integration tests. Verify that your client reconnects correctly, re-subscribes to topics, and does not miss events that occurred during the disconnect window. Claude Code generates the test scaffold for each failure scenario.
+
+## Integration Patterns
+
+**React and Next.js client integration.** Claude Code generates a custom React hook (`useWebSocket`) that manages the connection lifecycle, handles reconnection, and exposes typed message streams as React state. The hook integrates with React's cleanup mechanism to close the connection when the component unmounts, preventing memory leaks in single-page applications.
+
+**Redis pub/sub for horizontal scaling.** When your application runs on multiple servers, a client connected to server A cannot receive events published by code running on server B. Claude Code generates the Redis adapter that subscribes to a shared channel and re-publishes messages to local WebSocket connections, enabling stateless horizontal scaling.
+
+**Event sourcing integration.** For applications built on event sourcing, Claude Code generates the WebSocket gateway that subscribes to your event store's change stream and pushes relevant events to subscribed clients in real time, replacing polling-based refresh patterns with instant push notifications.
+
+
 ## Related Reading
 
 - [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
