@@ -5,6 +5,10 @@ description: "Build a Chrome extension to measure Core Web Vitals directly in yo
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-core-web-vitals-checker/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

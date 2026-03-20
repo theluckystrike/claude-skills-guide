@@ -6,6 +6,10 @@ description: "Learn how to build and use chrome extensions for managing Facebook
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-facebook-page-manager/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
