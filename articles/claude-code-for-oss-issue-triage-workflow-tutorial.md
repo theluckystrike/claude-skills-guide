@@ -341,6 +341,19 @@ For low-quality bug reports missing reproduction steps, Claude Code generates a 
 
 **Review the triage rules quarterly.** Your project evolves, and so does the type of issues you receive. Schedule a quarterly review of your classification rules, updating keyword lists based on false positives and false negatives observed in the prior quarter.
 
+## Metrics and Continuous Improvement
+
+Triage automation is only valuable if it measurably improves your project's health metrics.
+
+**Time-to-first-response tracking.** The most important metric for open source health is how quickly reporters receive an acknowledgment. Claude Code generates the metrics collector that measures time-to-first-response for each issue, segments it by classification (bug vs. feature request vs. question), and produces a weekly report showing trends. You can see immediately whether your automation is improving response times.
+
+**False positive rate monitoring.** Automated classification makes mistakes. Claude Code generates the feedback loop that tracks when maintainers override the automated classification — changing a "feature-request" label to "bug" or vice versa — and accumulates these overrides into a training dataset. Monthly review of the false positive rate helps you identify when your classification rules need refinement.
+
+**Contributor retention correlation.** Track whether first-time contributors who received an automated triage response within one hour had higher retention rates than those who waited days for a response. Claude Code generates the cohort analysis query that correlates response time with whether the reporter made a second contribution, giving you data to justify continued investment in triage automation.
+
+**Regression detection from changelogs.** When a bug report references behavior that worked in a previous version, identifying the breaking change requires correlating the report with your release history. Claude Code generates the regression detective that extracts the version where behavior changed from the issue description, queries your GitHub releases API for the changelog between that version and the current one, and identifies commits that modified relevant files. The triage comment links directly to the suspect commits for maintainer review.
+
+
 ## Integration Patterns
 
 **Zapier or n8n integration.** If your team prefers low-code automation, Claude Code can help you design the webhook payload format that integrates cleanly with Zapier or n8n workflows, routing issues to project management tools or Slack channels based on their triage classification.
