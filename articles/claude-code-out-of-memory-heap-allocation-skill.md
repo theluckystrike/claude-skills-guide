@@ -30,6 +30,10 @@ Heap allocation refers to dynamic memory management where data is allocated at r
 
 When the heap exceeds available system RAM, you encounter the dreaded "JavaScript heap out of memory" error. Understanding this mechanism helps you design skills that work efficiently within memory constraints.
 
+Node.js divides heap memory into two main segments: the young generation (for short-lived objects) and the old generation (for long-lived objects). The garbage collector runs frequently on the young generation and less often on the old generation. When large datasets get promoted to the old generation, a full garbage collection cycle can cause noticeable pauses—and if the old generation fills completely before collection can occur, the process crashes.
+
+Claude Code tasks that involve reading large codebases, processing bulk files, or building large in-memory indexes are the scenarios most likely to trigger this failure mode.
+
 ## Common Causes of Heap Exhaustion
 
 Before learning solutions, identify the root causes:
@@ -39,6 +43,36 @@ Before learning solutions, identify the root causes:
 3. **Multiple concurrent operations**: Running parallel tasks that consume memory
 4. **Inefficient data structures**: Using arrays or objects that grow unboundedly
 5. **Memory leaks**: Resources not being properly released
+6. **Accumulating tool results**: Storing every intermediate output instead of only what is needed downstream
+7. **Recursive processing without depth limits**: Traversing deep directory trees or nested JSON structures without a guard
+
+Recognizing which cause applies to your situation shapes the right solution. A one-time file load crash calls for a different fix than a gradual leak that only surfaces after an hour of runtime.
+
+## Diagnosing the Error Before You Fix It
+
+When Claude Code prints `FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory`, the immediate priority is capturing context. Add this diagnostic wrapper before you change anything else:
+
+```javascript
+process.on('exit', (code) => {
+  if (code !== 0) {
+    const mem = process.memoryUsage();
+    console.error('[heap-exit]', {
+      code,
+      heapUsedMB: Math.round(mem.heapUsed / 1024 / 1024),
+      heapTotalMB: Math.round(mem.heapTotal / 1024 / 1024),
+      rssMB: Math.round(mem.rss / 1024 / 1024),
+    });
+  }
+});
+```
+
+Run Claude Code with the `--expose-gc` flag to enable manual garbage collection calls, and the `--trace-gc` flag to log when collections occur:
+
+```bash
+NODE_OPTIONS="--expose-gc --trace-gc" claude
+```
+
+The GC log lines show how often the collector runs and how much memory is reclaimed each cycle. If heap usage climbs monotonically between collections, you have a leak. If it spikes once on a specific operation, you have an allocation problem that chunking can solve.
 
 ## Essential Memory Management Skills
 
@@ -74,12 +108,33 @@ claudeSkill.register('process-large-dataset', async (params) => {
 
 This approach processes files line-by-line, keeping memory usage constant regardless of file size.
 
+For binary files or files where line-based splitting does not apply, use a fixed-size buffer instead:
+
+```javascript
+async function streamBinaryFile(filePath, bufferSize = 65536) {
+  const fd = fs.openSync(filePath, 'r');
+  const buffer = Buffer.alloc(bufferSize);
+  let bytesRead;
+
+  try {
+    while ((bytesRead = fs.readSync(fd, buffer, 0, bufferSize, null)) > 0) {
+      const chunk = buffer.slice(0, bytesRead);
+      await processChunk(chunk);
+    }
+  } finally {
+    fs.closeSync(fd);
+  }
+}
+```
+
+The `finally` block ensures the file descriptor is released even if processing throws, which matters for long-running skill sessions where file handle exhaustion is also possible.
+
 ### Skill 2: Implementing Memory-Efficient Caching
 
 Create a bounded cache that automatically evicts old entries:
 
 ```javascript
-class LRU cache {
+class LRUCache {
   constructor(maxSize = 100) {
     this.cache = new Map();
     this.maxSize = maxSize;
@@ -95,7 +150,7 @@ class LRU cache {
 
   get(key) {
     if (!this.cache.has(key)) return null;
-    
+
     // Move to end (most recently used)
     const value = this.cache.get(key);
     this.cache.delete(key);
@@ -106,6 +161,32 @@ class LRU cache {
 
 const fileCache = new LRUCache(50);
 ```
+
+For caches where you want entries to be garbage-collected automatically when nothing else holds a reference to the values, use `WeakRef` in Node.js 14+:
+
+```javascript
+class WeakCache {
+  constructor() {
+    this.cache = new Map();
+    this.registry = new FinalizationRegistry((key) => {
+      this.cache.delete(key);
+    });
+  }
+
+  set(key, value) {
+    const ref = new WeakRef(value);
+    this.cache.set(key, ref);
+    this.registry.register(value, key);
+  }
+
+  get(key) {
+    const ref = this.cache.get(key);
+    return ref ? ref.deref() : undefined;
+  }
+}
+```
+
+This pattern is useful for large parsed objects like ASTs or JSON trees where you want the cache to hold on to live objects but release them under memory pressure without explicit eviction logic.
 
 ### Skill 3: Memory Profiling in Skills
 
@@ -128,6 +209,27 @@ claudeSkill.register('check-memory', async () => {
 });
 ```
 
+For more granular profiling, wrap individual skill handlers with a memory delta reporter:
+
+```javascript
+function withMemoryTracking(skillName, handler) {
+  return async (...args) => {
+    const before = process.memoryUsage().heapUsed;
+    const result = await handler(...args);
+    const after = process.memoryUsage().heapUsed;
+    const deltaMB = ((after - before) / 1024 / 1024).toFixed(2);
+    console.log(`[memory] ${skillName}: ${deltaMB} MB delta`);
+    return result;
+  };
+}
+
+claudeSkill.register('parse-codebase', withMemoryTracking('parse-codebase', async (params) => {
+  // ... heavy processing
+}));
+```
+
+This gives you a per-invocation memory cost that appears in your terminal logs, making it easy to identify which skill is the culprit when heap usage climbs.
+
 ### Skill 4: Chunked Processing for Large Data
 
 Process data in manageable chunks:
@@ -139,13 +241,31 @@ async function processInChunks(data, chunkSize, processor) {
     const chunk = data.slice(i, i + chunkSize);
     const chunkResult = await processor(chunk);
     results.push(chunkResult);
-    
+
     // Allow GC to reclaim memory between chunks
     if (global.gc) global.gc();
   }
   return results;
 }
 ```
+
+If you do not need all results simultaneously, use a generator to produce results lazily:
+
+```javascript
+async function* chunkedGenerator(data, chunkSize, processor) {
+  for (let i = 0; i < data.length; i += chunkSize) {
+    const chunk = data.slice(i, i + chunkSize);
+    yield await processor(chunk);
+  }
+}
+
+// Consume without accumulating all results in memory
+for await (const result of chunkedGenerator(largeArray, 500, processChunk)) {
+  await writeResult(result);
+}
+```
+
+The generator pattern is the right choice when results need to be written to disk or streamed to another process, since you never hold more than one chunk worth of output at once.
 
 ## Configuring Claude Code for Higher Memory Limits
 
@@ -154,11 +274,11 @@ Sometimes the issue isn't your skill but Claude Code's default memory allocation
 ```bash
 # macOS/Linux
 export NODE_OPTIONS="--max-old-space-size=4096"
-claude-code
+claude
 
 # Windows (PowerShell)
 $env:NODE_OPTIONS="--max-old-space-size=4096"
-claude-code
+claude
 ```
 
 For persistent configuration, add to your shell profile:
@@ -169,6 +289,17 @@ echo 'export NODE_OPTIONS="--max-old-space-size=4096"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
+Use this table as a starting point for sizing the heap based on your machine:
+
+| Available System RAM | Recommended `--max-old-space-size` | Notes |
+|---|---|---|
+| 8 GB | 2048 MB | Leave room for the OS and other apps |
+| 16 GB | 4096 MB | Good default for most development work |
+| 32 GB | 8192 MB | Enables large codebase indexing |
+| 64 GB+ | 16384 MB | Appropriate for multi-repo analysis tasks |
+
+Do not set the limit above 80% of physical RAM. The operating system needs headroom, and pushing too close to the physical limit causes swapping, which is far slower than a graceful out-of-memory crash.
+
 ## Best Practices for Memory-Efficient Skills
 
 1. **Load only what you need**: Use lazy loading for skill components
@@ -177,6 +308,8 @@ source ~/.zshrc
 4. **Monitor memory**: Add memory checks in long-running skills
 5. **Test with large datasets**: Verify skills handle real-world data volumes
 6. **Handle errors gracefully**: Catch out-of-memory errors and provide useful feedback
+7. **Avoid synchronous reads for large files**: `fs.readFileSync` on a 500 MB log file will allocate that entire buffer in one operation; always prefer async streams
+8. **Keep intermediate results small**: If you only need a count or a summary, compute it in the processing loop rather than collecting all items then post-processing
 
 ## Detecting and Preventing Memory Leaks
 
@@ -188,7 +321,7 @@ class BadProcessor {
   constructor() {
     this.listeners = [];
   }
-  
+
   addListener(fn) {
     this.listeners.push(fn); // Never cleaned up
   }
@@ -199,26 +332,60 @@ class GoodProcessor {
   constructor() {
     this.listeners = new Set();
   }
-  
+
   addListener(fn) {
     this.listeners.add(fn);
   }
-  
+
   removeListener(fn) {
     this.listeners.delete(fn);
   }
-  
+
   clear() {
     this.listeners.clear();
   }
 }
 ```
 
+Another common leak source is timers. Any `setInterval` call that is never cleared will keep both the callback and any closure variables alive indefinitely:
+
+```javascript
+// Bad: interval never cleared, closures accumulate
+function startPolling(skill) {
+  setInterval(() => {
+    skill.ping(); // skill stays in memory forever
+  }, 5000);
+}
+
+// Good: store the timer ID and expose a stop method
+function startPolling(skill) {
+  const id = setInterval(() => {
+    skill.ping();
+  }, 5000);
+
+  return {
+    stop: () => clearInterval(id)
+  };
+}
+```
+
+Leaked timers are particularly insidious because the heap growth is slow—often a few kilobytes per hour—and only becomes visible after a long-running session.
+
+## When to Reach for External Storage Instead
+
+Some tasks simply exceed what in-process memory can reasonably handle. If you find yourself configuring heaps larger than 8 GB to process a dataset, consider pushing the data to a more appropriate store:
+
+- **SQLite via better-sqlite3**: Handles multi-GB datasets with indexed queries while keeping memory usage flat
+- **LevelDB via leveldown**: Efficient key-value storage for large lookup tables
+- **Temporary files on disk**: For intermediate results that need to survive across processing stages but do not need random access
+
+Claude Code skills can invoke shell commands to work with these stores, keeping the Node.js heap small while still operating on large data volumes.
+
 ## Conclusion
 
 Managing heap allocation effectively in Claude Code skills requires understanding memory mechanics and implementing proper techniques. By using streaming, bounded caches, chunked processing, and memory monitoring, you can build robust skills that handle large-scale operations without running out of memory.
 
-Remember: the goal isn't just to fix out-of-memory errors but to prevent them through thoughtful design. Start with memory-efficient patterns, monitor usage in production, and iterate based on real-world performance data.
+Remember: the goal isn't just to fix out-of-memory errors but to prevent them through thoughtful design. Start with memory-efficient patterns, monitor usage in production, and iterate based on real-world performance data. Increasing the heap limit is a valid short-term fix, but the durable solution is always designing skills that keep memory usage proportional to the task rather than to the size of the input.
 
 {% endraw %}
 
