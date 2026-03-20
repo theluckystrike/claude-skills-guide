@@ -388,6 +388,95 @@ async function executeAction(action: string, params: any) {
 4. **持续改进**：基于历史数据优化工作流
 
 开始小规模试点，选择低风险场景，逐步扩展到关键业务系统。
+
+## Practical Integration Patterns
+
+### Routing Alerts from Multiple Sources
+
+The most effective Rootly and Claude Code setups pipe alerts from PagerDuty, Datadog, and custom webhooks into one standardized Rootly incident. A routing function maps each source into a consistent incident payload:
+
+```typescript
+// alert-router.ts
+interface AlertPayload {
+  source: string;
+  severity: 'critical' | 'high' | 'medium' | 'low';
+  title: string;
+  description: string;
+}
+
+async function routeAlertToRootly(alert: AlertPayload) {
+  const incident = await createIncident({
+    title: `[${alert.source.toUpperCase()}] ${alert.title}`,
+    severity: alert.severity,
+    description: alert.description
+  });
+
+  // Tag incident with originating source for retrospectives
+  await rootly.incident_attributes.set(incident.data.id, {
+    alert_source: alert.source,
+    auto_created: true
+  });
+
+  return incident;
+}
+```
+
+This centralizes incident creation so your team works from one view regardless of which monitoring tool fired.
+
+### Auto-Creating Slack Channels
+
+Automatically create a dedicated Slack channel when an incident is declared:
+
+```typescript
+import { WebClient } from '@slack/web-api';
+const slack = new WebClient(process.env.SLACK_BOT_TOKEN);
+
+async function createIncidentChannel(incident: any) {
+  const channelName = `inc-${incident.data.id}`.toLowerCase();
+  const channel = await slack.conversations.create({ name: channelName });
+
+  await slack.chat.postMessage({
+    channel: channel.channel!.id!,
+    text: `Incident: ${incident.data.attributes.title} | Severity: ${incident.data.attributes.severity}`
+  });
+
+  await rootly.incident_attributes.set(incident.data.id, {
+    slack_channel_id: channel.channel!.id
+  });
+
+  return channel;
+}
+```
+
+## Common Pitfalls to Avoid
+
+**Over-automating too quickly**: Start with read-only diagnosis — log analysis, metric queries, runbook retrieval. Only expand to write operations after the read-only workflow has proven reliable over several real incidents. Moving too fast to automated remediation before the analysis is accurate leads to automation making things worse during an outage.
+
+**Missing human approval gates**: Even well-tested automation can execute destructive actions at the wrong moment. Keep the `REQUIRES_APPROVAL` list from the workflow example, and expand it conservatively. Rollbacks, cache clears, and infrastructure scaling should always require an explicit human confirmation before execution.
+
+**Ignoring rate limits**: The Rootly API enforces rate limits per organization. During a major outage, dozens of alerts can fire simultaneously. Implement exponential backoff and use Rootly's `unique_identifier` field to deduplicate incidents. Pass a hash of the alert title and affected service name so Rootly links subsequent alerts to the existing incident rather than creating duplicates.
+
+**Severity case sensitivity**: In the Rootly API, severity values must be lowercase (`critical`, `high`, `medium`, `low`). Passing `CRITICAL` or `Critical` returns a 422 validation error that can silently drop incident creation in automated pipelines.
+
+## Measuring Impact Over Time
+
+Track these metrics to quantify improvement after deployment:
+
+- **MTTA (Mean Time to Acknowledge)**: Should decrease as Claude Code auto-assigns incidents and creates channels instantly. Establish a baseline before deployment.
+- **MTTR (Mean Time to Resolve)**: Improves when automated runbook execution handles the first 15-20 minutes of triage. Compare incidents where runbooks fired versus those that required full manual response.
+- **False positive remediation rate**: How often automated responses ran unnecessarily. Use this signal to tighten alert thresholds and improve runbook decision logic over time.
+- **Post-mortem completion rate**: With auto-generation, this typically rises from 60-70% to near 100% because the skeleton is pre-filled before the incident closes.
+
+Review metrics weekly for the first month after deployment. If MTTA improves but MTTR does not, the bottleneck has shifted to the resolution phase — that becomes your next automation target.
+
+## Troubleshooting Common Issues
+
+**MCP server fails to connect on startup**: Verify `ROOTLY_API_KEY` is exported in your shell before launching Claude Code. The MCP server reads credentials at startup, not lazily per request. Restart Claude Code after setting the variable.
+
+**Runbook steps time out**: The default HTTP timeout in the Python executor is 10 seconds. For steps that call slow internal services, increase it to 30-60 seconds and add idempotency checks so retries do not double-execute destructive steps.
+
+**Post-mortem call returns 409**: The `incident_documents.create` endpoint requires the incident to be in `resolved` or `monitoring` status. Calling it while the incident is still `triggered` returns a 409 conflict. Add a status check before generating the post-mortem, or subscribe to the Rootly `incident.resolved` webhook event to trigger generation automatically at the right time.
+
 {% endraw %}
 
 ## Related Reading
