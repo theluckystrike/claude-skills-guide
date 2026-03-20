@@ -276,4 +276,102 @@ For Flutter development, consider installing complementary skills like the `fron
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
+
+## Writing a Project CLAUDE.md for Flutter
+
+A `CLAUDE.md` at your Flutter project root gives Claude Code persistent context about your state management choice, folder structure, and conventions without requiring skill invocations each session:
+
+```markdown
+# CLAUDE.md — MyApp Flutter
+
+## Project
+Flutter 3.19 cross-platform app (iOS, Android). State management: Riverpod 2.x with
+code generation. Architecture: Feature-first with Clean Architecture layers.
+
+## Commands
+flutter run                         # run on connected device
+flutter test                        # unit and widget tests
+flutter test integration_test/      # integration tests (device required)
+flutter pub run build_runner watch  # code generation for Riverpod + freezed
+
+## Folder Structure
+lib/
+  features/
+    auth/
+      data/         # repositories, data sources, models
+      domain/       # entities, use cases, repository interfaces
+      presentation/ # screens, widgets, providers
+  core/
+    router/         # GoRouter configuration
+    theme/          # ThemeData and design tokens
+    utils/          # shared utilities
+
+## Conventions
+- All providers use @riverpod annotation (code generation required after changes)
+- State classes use freezed for immutability (run build_runner after changes)
+- Network calls go through Dio with interceptors in core/network/
+- Use GoRouter for navigation — never Navigator.push directly
+- Asset strings go in AppAssets class; localization strings in AppStrings
+
+## Testing
+- Unit tests: test/ folder, mirrors lib/ structure
+- Widget tests: use WidgetTester, find widgets by Key not text where possible
+- Mock providers using ProviderContainer with overrides in tests
+- Run `flutter test --coverage` to generate coverage report
+```
+
+## Practical Workflow: Generating Features with Claude Code
+
+### Creating a New Screen
+
+Describe your feature requirements and let Claude Code scaffold the complete slice:
+
+```
+Using our Riverpod + Clean Architecture conventions (see CLAUDE.md),
+create a product detail screen with these requirements:
+- Fetch product by ID from /api/products/{id}
+- Show loading skeleton while fetching
+- Handle error state with retry button
+- Add to cart button that calls the cart provider
+- Use our standard AppTheme text styles and spacing
+```
+
+Claude Code generates the data model with freezed annotations, the repository interface and implementation, the Riverpod provider with AsyncValue, and the screen widget — all in the right folders with correct imports.
+
+### Updating Code Generation After Changes
+
+When you modify a freezed class or add a Riverpod provider, remind Claude Code to trigger code generation:
+
+```
+I added an isWishlisted field to the Product model.
+Update the freezed class, regenerate build artifacts, and update any widgets
+that display Product to show the wishlisted state with a heart icon.
+```
+
+Claude Code runs `flutter pub run build_runner build --delete-conflicting-outputs` after modifying generated files, ensuring the project compiles without manual intervention.
+
+## Handling Platform-Specific Code with Claude Code
+
+Flutter's platform channel API requires matching implementations on both iOS (Swift/ObjC) and Android (Kotlin/Java). Claude Code handles both sides when given clear context:
+
+```
+Create a platform channel for retrieving the device's battery level.
+- Dart side: BatteryService class with getBatteryLevel() returning Future<int>
+- Android side: BatteryMethodCallHandler.kt in the main activity
+- iOS side: Swift implementation in AppDelegate.swift
+- Include error handling for when the API is unavailable
+
+Use our existing channel naming convention: com.myapp/device_info
+```
+
+This saves significant context-switching time compared to manually writing and testing each platform implementation.
+
+## Common Flutter + Claude Code Pitfalls
+
+**Missing build_runner step**: After Claude Code creates new freezed models or Riverpod providers, always run `flutter pub run build_runner build`. If the generated `.g.dart` and `.freezed.dart` files are not updated, the project will have type errors that Claude Code cannot resolve without running code generation first.
+
+**Provider scope mismatches**: When Claude Code creates providers, confirm that the correct scope is used. Providers that should reset on user logout must be under an appropriate `ProviderScope` override, not at the root level where they persist across sessions.
+
+**Widget test pump timing**: If Claude Code generates widget tests and they fail with "widget not found" errors, the issue is usually that an async operation has not settled. Add `await tester.pumpAndSettle()` after user interactions that trigger async state updates.
+
 {% endraw %}
