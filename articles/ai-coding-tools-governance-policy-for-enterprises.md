@@ -8,6 +8,7 @@ permalink: /ai-coding-tools-governance-policy-for-enterprises/
 categories: [guides]
 reviewed: true
 tags: [claude-code, enterprise, governance]
+score: 7
 ---
 
 # AI Coding Tools Governance Policy for Enterprises

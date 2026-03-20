@@ -7,6 +7,8 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-first-oss-contribution-workflow-guide/
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -221,4 +223,14 @@ Your first OSS contribution is a significant milestone. Using Claude Code as you
 Start small, stay curious, and keep contributing. Each PR makes you more comfortable with the workflow and builds relationships with maintainers. Soon, you'll be helping other newcomers navigate their first contributions.
 
 Good luck with your OSS journey!
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

@@ -254,4 +254,7 @@ Remember: the goal isn't abstraction for its own sake—it's about decoupling yo
 - [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — Dependency Inversion is one of the five SOLID principles
 - [Claude Code Coupling and Cohesion Improvement](/claude-skills-guide/claude-code-coupling-and-cohesion-improvement/) — DIP reduces coupling between high-level and low-level modules
 - [Claude Code Test Driven Refactoring Guide](/claude-skills-guide/claude-code-test-driven-refactoring-guide/) — Test coverage is essential before refactoring to DIP
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

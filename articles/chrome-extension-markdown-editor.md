@@ -251,4 +251,11 @@ Once the basic editor functions, consider adding features like syntax highlighti
 
 Building a Chrome extension markdown editor combines familiar web technologies with Chrome's unique APIs. The skills you develop—working with service workers, managing browser storage, and creating polished user interfaces—transfer directly to other extension projects and browser-based applications.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -162,5 +162,12 @@ Private extension hosting in enterprise environments requires balancing security
 
 Choose your deployment method based on your organization's existing infrastructure, security requirements, and the sensitivity of your extension's functionality. With proper configuration and regular auditing, private extension deployment enables powerful internal tooling while maintaining enterprise security standards.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -7,6 +7,8 @@ author: Claude Skills Guide
 permalink: /claude-code-for-wiki-analytics-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 # Claude Code for Wiki Analytics: Workflow Tutorial Guide
@@ -206,3 +208,12 @@ Claude Code transforms wiki analytics from a manual, time-consuming process into
 Start with simple metrics and progressively add complexity as your analytics maturity grows. The key is consistency—regular analysis beats sporadic deep dives every time.
 
 Implement the workflows outlined in this guide, adapt them to your specific wiki platform, and watch your knowledge management capabilities transform.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

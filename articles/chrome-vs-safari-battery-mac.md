@@ -169,4 +169,11 @@ For Mac users concerned with battery life, Safari provides 2-3x better efficienc
 
 The optimal strategy depends on your workflow: use Safari for research, documentation, and battery-critical situations. Reserve Chrome for active development and debugging sessions, then close it when finished. This hybrid approach maximizes both productivity and battery life.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

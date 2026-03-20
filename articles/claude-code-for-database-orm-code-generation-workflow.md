@@ -8,6 +8,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-database-orm-code-generation-workflow/
 categories: [workflows]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -216,4 +218,14 @@ With practice, you'll find the right balance between AI-generated code and hand-
 Claude Code transforms database ORM code generation from a tedious chore into a streamlined workflow. By starting with well-defined schemas and providing clear prompts, you can generate type-safe, consistent ORM code that follows best practices. The key is treating AI as a powerful assistant that handles the boilerplate while you maintain creative control over your application's architecture.
 
 Start with simple entity generation, gradually add repository and service layers, and soon you'll have a complete, maintainable data access layer generated in minutes instead of hours.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

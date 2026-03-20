@@ -262,5 +262,12 @@ function runTests() {
 
 Building an AI distraction blocker Chrome extension combines web development skills with behavioral understanding. Start with simple selector-based blocking, then layer in AI analysis as you refine your understanding of what constitutes distraction in your workflow. The key is creating a system that disappears into the background while protecting your attention when you need it most.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

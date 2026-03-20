@@ -310,4 +310,11 @@ Building a Chrome extension for Dropbox quick share combines web APIs, browser e
 
 The Dropbox API offers extensive capabilities beyond basic sharing. Explore the official API documentation to add features like shared folder management, team spaces, or file request creation. With the foundation in place, you can continuously improve your extension based on user feedback and workflow requirements.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

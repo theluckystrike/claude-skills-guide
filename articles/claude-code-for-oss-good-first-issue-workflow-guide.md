@@ -7,6 +7,8 @@ author: Claude Skills Guide
 permalink: /claude-code-for-oss-good-first-issue-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 # Claude Code for OSS Good First Issue Workflow Guide
@@ -165,3 +167,12 @@ Contributing to open source through good first issues builds skills, establishes
 Start with a small issue, follow this workflow systematically, and gradually tackle more complex contributions. Each successful PR builds confidence and expertise, opening doors to deeper involvement in the open source ecosystem.
 
 Remember: every expert contributor began exactly where you are now. The community welcomes your contributions.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

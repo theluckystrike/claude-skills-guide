@@ -7,6 +7,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-jmh-benchmark-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -230,4 +232,14 @@ This workflow transforms JMH from a complex tool into an approachable part of yo
 ## Conclusion
 
 Claude Code makes JMH benchmarking accessible by handling project setup, generating benchmark code, and interpreting results. Start with simple benchmarks, follow best practices, and let Claude Code guide you through the process. Your performance optimization efforts will benefit from more accurate, reliable benchmark data—and you'll learn JMH in the process.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

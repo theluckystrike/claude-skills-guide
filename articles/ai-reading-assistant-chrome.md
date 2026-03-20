@@ -164,6 +164,13 @@ Store API keys using Chrome's secure storage APIs rather than hardcoding them in
 
 Building an AI reading assistant Chrome extension requires understanding content extraction, API integration, and efficient UI patterns. The examples above provide a starting point for developers looking to create custom solutions or integrate existing services. Focus on performance optimization and user privacy to build tools that developers and power users actually want to use.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 {% endraw %}

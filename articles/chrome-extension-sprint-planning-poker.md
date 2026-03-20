@@ -126,4 +126,11 @@ Most extensions work immediately without configuration. If your team adopts plan
 
 The convenience of browser-based planning poker makes it accessible for teams wanting to try estimation games without committing to additional software. As your team grows more comfortable with sprint estimation, you can evaluate whether the extension meets your needs or whether a more full-featured platform would serve better.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

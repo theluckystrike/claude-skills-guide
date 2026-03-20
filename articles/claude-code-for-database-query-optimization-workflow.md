@@ -8,6 +8,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-database-query-optimization-workflow/
 categories: [workflows]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -202,4 +204,14 @@ Database query optimization doesn't have to be a painful manual process. By comb
 Start by documenting your schema, capturing execution plans for slow queries, and using Claude to interpret results and suggest optimizations. Build these practices into your development workflow, and you'll catch performance issues before they reach production.
 
 Remember: optimization is iterative. Measure, improve, measure again—and let Claude help you understand the "why" behind each optimization. Your users (and your cloud bill) will thank you.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

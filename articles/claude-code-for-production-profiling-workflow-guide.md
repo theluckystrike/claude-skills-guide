@@ -8,6 +8,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-production-profiling-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -184,4 +186,14 @@ Integrating Claude Code into your production profiling workflow transforms how y
 Start with one of the scenarios above that matches your current challenges. As you become comfortable with AI-assisted profiling, expand to more complex workflows. The key is building confidence in the process while maintaining the rigor that good profiling requires.
 
 Remember that effective profiling combines tools, processes, and expertise. Claude enhances your team's capabilities but doesn't replace the need for understanding your application's behavior. Use it to amplify your skills and speed up your optimization efforts.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

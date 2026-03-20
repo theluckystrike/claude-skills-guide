@@ -7,6 +7,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-performance-budget-workflow-tutorial/
 categories: [guides, tutorials]
 tags: [claude-code, claude-skills, performance, devops, ci-cd]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -231,4 +233,14 @@ Claude Code transforms performance budgeting from a manual, error-prone process 
 Start small: create the basic audit skill, run it locally, and gradually integrate it into your CI/CD pipeline. As your team grows accustomed to performance budgets, you can add more sophisticated analysis and remediation capabilities.
 
 Remember, the goal isn't to make development slower—it's to make fast applications a sustainable reality.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

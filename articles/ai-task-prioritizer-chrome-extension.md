@@ -321,5 +321,12 @@ Building an AI task prioritizer Chrome extension combines browser APIs, local st
 
 The code patterns shown here provide a foundation—you can extend the scoring algorithm, integrate more sophisticated AI services, or add features like calendar synchronization, time tracking, and team collaboration. Start with a minimal viable version and iterate based on your own productivity patterns.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

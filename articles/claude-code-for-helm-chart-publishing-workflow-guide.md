@@ -7,6 +7,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-helm-chart-publishing-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -220,4 +222,14 @@ Claude Code transforms Helm chart publishing from manual effort into an automate
 Start by automating your validation checks, then gradually build toward fully automated publishing workflows. The investment pays off in improved reliability and developer productivity.
 
 Remember: always validate charts before publishing, maintain consistent versioning, and document your publishing process for team consistency.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

@@ -283,5 +283,12 @@ The declarativeNetRequest API has constraints to be aware of. You can define up 
 
 For users who need more advanced features like password-protected blocking or detailed analytics, consider integrating a backend service or combining with other APIs.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

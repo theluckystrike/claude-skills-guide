@@ -231,4 +231,14 @@ Follow these guidelines for maintainable plugins:
 Building custom ESLint plugins with Claude Code transforms what used to be a manual process into a collaborative, AI-assisted workflow. From scaffolding new rules to testing and publishing, Claude Code understands your plugin's structure and can meaningfully contribute to development.
 
 Start small with a single rule addressing a specific pain point, then expand as you see the benefits. Your team will appreciate the consistency, and future developers will thank you for catching issues before they reach production.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

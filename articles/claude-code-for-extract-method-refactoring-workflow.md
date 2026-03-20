@@ -188,4 +188,14 @@ The skill can include prompts for each step of the workflow, examples from your 
 ## Conclusion
 
 Claude Code transforms extract method refactoring from a manual, error-prone process into a structured, assisted workflow. By following this systematic approach—identifying candidates, designing signatures, creating methods, replacing code, and verifying with tests—you can refactor with confidence while maintaining code quality. The key is treating Claude as a partner that handles the mechanical aspects while you focus on architectural decisions.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

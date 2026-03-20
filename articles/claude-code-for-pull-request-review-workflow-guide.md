@@ -7,6 +7,8 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pull-request-review-workflow-guide/
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -242,4 +244,14 @@ To get started with Claude-powered PR reviews today:
 Claude doesn't replace thoughtful code review—it makes you more effective by handling the mechanical detection work, so you can focus on the higher-level architectural and design decisions that truly matter.
 
 The result: faster reviews, more consistent quality, and more time for the nuanced discussions that improve your codebase.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

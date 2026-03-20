@@ -171,5 +171,12 @@ Chrome extensions for royalty-free image search combine browser APIs with image 
 
 The patterns shown here—search interfaces, API integration, and download handling—form the foundation for more complex extensions. You can extend these basics with features like bulk downloading, collections management, or integration with design tools.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

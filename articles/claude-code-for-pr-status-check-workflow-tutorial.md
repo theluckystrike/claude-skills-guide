@@ -7,6 +7,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-pr-status-check-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -240,4 +242,14 @@ gh rule-check list
 Automating PR status checks with Claude Code transforms how you manage pull requests. By combining Claude Code's natural language capabilities with GitHub's API, you can build sophisticated workflows that save time and improve code quality. Start with simple checks and gradually add complexity as your needs evolve.
 
 Remember: The goal is not to replace human review, but to handle repetitive tasks so developers can focus on code quality and innovation.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

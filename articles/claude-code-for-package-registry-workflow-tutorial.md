@@ -229,3 +229,12 @@ npm publish --dry-run 2>&1 | tee release-log.txt
 Claude Code transforms package registry workflows from manual, error-prone processes into automated, reliable operations. Whether you're managing npm packages, Python distributions, or container images, the patterns covered in this tutorial provide a foundation for efficient registry automation.
 
 Start with simple workflows like version bumping and dependency checking, then gradually expand to full publication pipelines. The key is maintaining the balance between automation and the oversight necessary to catch issues before they reach your users.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

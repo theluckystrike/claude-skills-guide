@@ -195,3 +195,12 @@ A well-designed skill accelerates future bottleneck identification efforts and e
 Effective bottleneck identification requires systematic investigation rather than guesswork. Claude Code provides the tools and capabilities to analyze your codebase, run targeted profiling, interpret results, and implement fixes. By following the workflow outlined in this guide—establishing baselines, profiling hot paths, analyzing memory behavior, and validating improvements—you can identify and resolve performance bottlenecks with confidence.
 
 Remember that optimization is an iterative process. Focus on the highest-impact bottlenecks first, validate your changes, and continuously monitor performance as your application evolves.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

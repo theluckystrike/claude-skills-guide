@@ -165,4 +165,11 @@ For developers on Chromebooks seeking the lightest browser, **Falkon** offers th
 
 The "best" lightest browser ultimately depends on your specific workflow. Test each option with your actual development tasks before committing. Resource monitoring tools like Chrome's Task Manager (`Shift+Esc`) help you measure real-world impact.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

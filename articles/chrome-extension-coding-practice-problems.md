@@ -258,4 +258,11 @@ These practice problems cover the core patterns you'll encounter building Chrome
 
 Building real extensions—even simple ones—provides the best learning experience. Start with a problem you want to solve, then work through the implementation details using these patterns as reference.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

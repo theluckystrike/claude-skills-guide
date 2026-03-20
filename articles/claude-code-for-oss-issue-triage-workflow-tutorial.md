@@ -7,6 +7,8 @@ author: Claude Skills Guide
 permalink: /claude-code-for-oss-issue-triage-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 # Claude Code for OSS Issue Triage Workflow Tutorial
@@ -301,3 +303,12 @@ Create a CONTRIBUTING.md section explaining your triage labels. Contributors who
 Automating issue triage with Claude Code transforms an overwhelming backlog into a manageable workflow. Start with classification and priority assignment, then expand to duplicate detection and maintainer routing as your rules mature. The key is maintaining human oversight for edge cases while letting Claude handle the predictable 80% of incoming issues.
 
 Your maintainers will thank you—and so will contributors who see their issues addressed promptly.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

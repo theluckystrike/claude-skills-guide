@@ -169,4 +169,11 @@ This configuration provides Standard protection, disables extended reporting, en
 
 Chrome Safe Browsing enterprise settings provide organizations with flexible control over browser security. By leveraging group policies, registry configurations, or JSON policy files, you can deploy consistent protection across your entire fleet while maintaining control over data handling and reporting preferences. Test your configuration thoroughly in a staging environment before rolling out organization-wide, and monitor the `chrome://policy` page to confirm settings are applied correctly.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

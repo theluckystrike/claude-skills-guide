@@ -216,3 +216,12 @@ To get the most out of your heap profiling workflow with Claude Code, follow the
 Heap profiling doesn't have to be a daunting task. With Claude Code assisting your workflow, you can efficiently identify memory issues, understand allocation patterns, and implement targeted optimizations. The key is establishing a systematic approach: set up proper profiling infrastructure, capture meaningful snapshots, use Claude Code's analysis capabilities, and validate your fixes through repeated profiling.
 
 By integrating Claude Code into your heap profiling workflow, you'll not only solve memory issues faster but also develop a deeper understanding of your application's memory behavior. Start small, profile regularly, and let Claude Code help you build more efficient, memory-conscious applications.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

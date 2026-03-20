@@ -8,6 +8,7 @@ permalink: /cost-allocation-and-chargebacks-for-enterprise-claude-code/
 categories: [guides]
 reviewed: true
 tags: [claude-code, enterprise, cost-management, chargebacks]
+score: 7
 ---
 
 # Cost Allocation and Chargebacks for Enterprise Claude Code

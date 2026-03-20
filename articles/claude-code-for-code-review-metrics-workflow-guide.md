@@ -8,6 +8,8 @@ author: Claude Skills Guide
 permalink: /claude-code-for-code-review-metrics-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -181,4 +183,14 @@ Follow these guidelines to ensure your metrics workflow remains valuable:
 Implementing a code review metrics workflow with Claude Code transforms abstract data into actionable insights that improve your development process. By automating collection, building dashboards, and analyzing trends, you gain visibility into how your team reviews code and where improvements are possible.
 
 Start small with basic metrics like PR count and review time, then expand as your workflow matures. The key is consistency—regular collection and analysis that builds the historical data needed to identify meaningful patterns and drive continuous improvement in your code review process.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

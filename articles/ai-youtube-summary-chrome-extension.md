@@ -170,5 +170,12 @@ For teams, consider implementing collaboration features that allow sharing summa
 
 The ability to quickly extract and summarize video content represents a significant productivity enhancement for developers and researchers. By understanding the underlying architecture and APIs, you can build tailored solutions that fit specific workflows and requirements.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

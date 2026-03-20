@@ -195,4 +195,11 @@ function detectTypographyVariables() {
 
 AI font identifier Chrome extensions have evolved from simple utilities to sophisticated tools that leverage machine learning for accurate font recognition. For developers and power users, understanding their underlying technology enables more effective use and integration into custom workflows. While limitations exist around web font loading and image-based text, these tools significantly streamline the process of identifying and documenting typography across the web.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

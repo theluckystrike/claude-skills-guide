@@ -162,4 +162,11 @@ Chrome's multi-process architecture, while resource-intensive, provides crucial 
 
 Remember: the goal isn't to minimize process count, but to ensure each process is doing useful work. Regular maintenance—discarding unused tabs, managing extensions, and monitoring Task Manager—keeps Chrome running smoothly even with heavy daily use.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

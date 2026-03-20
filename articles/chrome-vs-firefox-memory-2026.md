@@ -198,4 +198,11 @@ For developers with 16GB+ RAM, either browser works well with proper configurati
 
 Implement the measurement techniques in this guide to establish your baseline, apply optimization strategies appropriate to your chosen browser, and establish regular profiling habits to maintain optimal performance throughout your development sessions.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -124,4 +124,14 @@ Version your codemods alongside your codebase. As your codebase evolves, you may
 Finally, consider contributing to the codemod community. Many codemods address common transformation challenges, and sharing your work helps others avoid duplicating effort. Tools like codemod-cli often have registries where you can publish and discover community-authored transformations.
 
 By combining Claude Code's reasoning capabilities with systematic codemod development practices, you can automate complex refactoring tasks that would otherwise require extensive manual effort. The initial investment in setting up your workflow pays dividends whenever you need to apply consistent changes across large codebases.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

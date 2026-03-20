@@ -8,6 +8,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-bug-report-workflow-tutorial/
 categories: [tutorials, workflows]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 # Claude Code for OSS Bug Report Workflow Tutorial
@@ -189,3 +191,12 @@ To maximize the likelihood of your bug being addressed quickly, follow these pri
 Claude Code transforms bug reporting from a tedious chore into an efficient, systematic process. By automating environment capture, helping create minimal reproduction cases, and structuring your findings professionally, you produce bug reports that maintainers can actually use—and you'll earn a reputation as a valuable OSS contributor.
 
 Start implementing this workflow today, and you'll find that not only do your bug reports get resolved faster, but the process of finding and reporting bugs becomes significantly less stressful.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -5,6 +5,8 @@ description: "Explore approaches to building and using AI-powered tools for writ
 date: 2026-03-15
 author: theluckystrike
 permalink: /ai-linkedin-post-writer-chrome/
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -281,6 +283,13 @@ For developers wanting to build more advanced features:
 - **Cross-Platform Adaptation**: Extend to Twitter, Medium, or newsletter formats
 
 The key to successful implementation lies in augmentation rather than replacement. Use AI to handle repetitive aspects of writing while maintaining your authentic voice in the final output.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

@@ -270,4 +270,14 @@ claude --load-kb-manager "generate a new article about API design best practices
 Experiment with these patterns in your own knowledge base. Start by creating a simple article generator, then progressively add search, indexing, and skill-based workflows. The combination of Claude Code's file operations with its language capabilities creates a powerful toolkit for maintaining documentation that grows with your project.
 
 Remember: the best knowledge base is one that stays current. Use these automation patterns to reduce the friction of maintenance, and your documentation will thank you.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

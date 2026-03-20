@@ -341,3 +341,12 @@ See `docs/api/patterns.md` for retry logic, error handling, and pagination conve
 Configuring Claude Code for internal APIs is an investment that pays dividends in developer productivity, code quality, and reduced debugging time. Start with CLAUDE.md documentation, graduate to OpenAPI integration for larger APIs, and consider MCP servers for the most dynamic API surfaces. The key is keeping your configuration as current as your actual API.
 
 Remember: Claude Code is only as effective as the context you provide. Invest in your API configuration, and Claude will become an expert in your API ecosystem.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

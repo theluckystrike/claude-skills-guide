@@ -262,4 +262,11 @@ Test with various image sizes and formats, including edge cases like extremely w
 
 A well-designed social media image resizer extension eliminates repetitive manual work. The patterns outlined here provide a foundation for building extensions that integrate smoothly with users' existing workflows while handling the diverse requirements of modern social platforms.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

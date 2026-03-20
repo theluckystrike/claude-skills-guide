@@ -208,5 +208,12 @@ Building a Cornell Notes Chrome extension requires understanding Manifest V3 arc
 
 The Cornell method's separation of cues, notes, and summary encourages active engagement with captured content—a principle that translates well to digital workflows when implemented thoughtfully. Start with the core components outlined above, then iterate based on your specific use cases and user feedback.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -7,6 +7,8 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-architecture-decision-record-workflow/
+score: 7
+reviewed: true
 ---
 
 # Claude Code for Architecture Decision Record Workflow
@@ -150,3 +152,12 @@ Consider maintaining an ADR index. Create a master document that lists all ADRs 
 Claude Code transforms ADR creation from a tedious chore into a streamlined workflow. By generating well-structured drafts, identifying gaps in existing documents, and helping maintain consistency, it lets your team focus on the technical decisions themselves rather than the documentation overhead.
 
 Start by using Claude Code for your next architectural decision. You'll be surprised how much time you save while producing better documentation that your future self will thank you for.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

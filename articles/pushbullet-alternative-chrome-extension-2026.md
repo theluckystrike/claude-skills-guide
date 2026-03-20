@@ -239,4 +239,11 @@ Migrating from Pushbullet requires evaluating your existing use cases:
 
 For CI/CD notifications specifically, Pushover and ntfy integrate naturally with existing build pipelines. Mobile companion apps ensure you receive alerts regardless of your primary device.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -210,4 +210,11 @@ Always test thoroughly across different websites since network request patterns 
 
 Building a network request blocker is a straightforward process once you understand the `declarativeNetRequest` API. Whether you're creating a privacy tool, debugging API calls, or developing developer utilities, the declarative approach provides the performance and flexibility needed for production-quality extensions.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

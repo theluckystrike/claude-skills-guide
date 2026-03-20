@@ -7,6 +7,8 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-documentation-contribution-guide/
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -240,4 +242,14 @@ Claude Code transforms documentation contribution from an intimidating task into
 Start small: find a typo to fix, clarify a confusing sentence, or add an example to an API endpoint. Each contribution makes open source more accessible to everyone.
 
 Ready to begin? Clone a repository you've been meaning to explore, ask Claude Code to analyze its documentation needs, and make your first contribution today.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

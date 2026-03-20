@@ -295,5 +295,12 @@ Memory limits in background service workers can cause timeouts on complex pages.
 
 Building a Chrome extension for running Lighthouse audits transforms your browser into a powerful performance testing tool. The architecture shown here—using the debugger API for accurate measurements, a service worker for orchestration, and a popup for user interaction—provides a solid foundation for custom audit workflows. Extend this base with automation, reporting, and integration features that match your specific development needs.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

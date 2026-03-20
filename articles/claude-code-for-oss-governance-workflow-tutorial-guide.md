@@ -8,6 +8,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-governance-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -326,4 +328,14 @@ Claude Code transforms OSS governance from a manual, error-prone process into an
 The key is starting with clear definitions of your governance policies, then gradually automating each aspect. Claude Code's combination of AI understanding and tool execution makes it exceptionally well-suited for these tasks, providing both automation efficiency and intelligent interpretation of results.
 
 Start implementing these workflows today, and you'll see significant improvements in your project's governance consistency while reducing the manual burden on your team.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

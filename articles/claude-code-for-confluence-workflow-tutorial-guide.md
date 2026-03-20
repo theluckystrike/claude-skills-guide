@@ -7,6 +7,8 @@ author: Claude Skills Guide
 permalink: /claude-code-for-confluence-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -238,4 +240,14 @@ async function analyzePageAndSuggestImprovements(pageId) {
 Automating Confluence workflows with Claude Code transforms how your team manages documentation. Start with simple scripts like page creation, then gradually build complex approval chains and scheduled tasks. The key is to identify repetitive tasks, prototype solutions, and iterate based on team feedback.
 
 Remember to test thoroughly in a non-production environment before deploying automation scripts. With proper error handling and logging, your Confluence automation will become a reliable asset in your development workflow.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

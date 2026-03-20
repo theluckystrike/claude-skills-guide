@@ -7,6 +7,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-runbook-authoring-workflow-tutorial/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -213,4 +215,14 @@ last_reviewed: {DATE}
 Claude Code transforms runbook authoring from a documentation chore into a collaborative, maintainable practice. By treating runbooks as living documents and leveraging Claude Code's contextual understanding, you create operational procedures that actually get used when incidents occur.
 
 Start with one critical runbook, refine it through actual use, and gradually expand your library. Your future self—and your on-call team—will thank you.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

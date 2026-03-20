@@ -222,4 +222,11 @@ For developers, building your own extension gives you full control over the summ
 
 Ready to build? Start with the manifest and content script above, add your API integration, and test on a single e-commerce site first. Expand to additional sites as you refine your extraction selectors.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

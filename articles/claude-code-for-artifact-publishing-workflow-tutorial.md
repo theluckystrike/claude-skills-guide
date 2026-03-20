@@ -7,6 +7,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-artifact-publishing-workflow-tutorial/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -225,4 +227,14 @@ Start simple and iterate:
 Claude Code transforms artifact publishing from a manual, error-prone process into a reliable automated workflow. By combining version management, testing, building, and publishing in well-designed skills, you can release faster and more consistently. Start with one publishing channel—npm or Docker—and expand as you gain confidence in your automation.
 
 The key is treating your publishing workflow as code: version it, test it, and continuously improve it.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

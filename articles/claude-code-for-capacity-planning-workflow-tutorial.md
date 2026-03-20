@@ -7,6 +7,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-capacity-planning-workflow-tutorial/
 categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 # Claude Code for Capacity Planning Workflow Tutorial
@@ -217,3 +219,12 @@ Claude Code transforms capacity planning from a reactive, manual process into an
 The key is starting simple: collect metrics, generate basic recommendations, and gradually add sophistication as you learn what works for your specific infrastructure. With this tutorial's patterns as a foundation, you'll be able to build capacity planning workflows that save both money and prevent outages.
 
 Remember that the most effective capacity planning combines automation with human judgment. Use Claude Code to do the heavy lifting of data analysis and recommendation generation, but keep experienced engineers in the loop for critical decisions.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

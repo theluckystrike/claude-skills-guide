@@ -248,4 +248,11 @@ When your extension is ready, package it for distribution:
 
 Building a bibliography generator Chrome extension combines practical utility with valuable development experience. The extension architecture—manifest configuration, content scripts, message passing—applies directly to countless other extension projects. Start with the basic implementation above, then expand with features like citation collection management, export to BibTeX or RIS formats, and integration with reference managers like Zotero.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

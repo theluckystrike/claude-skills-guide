@@ -256,3 +256,12 @@ Track these metrics to understand how Claude Code improves your on-call experien
 Claude Code transforms on-call from a painful necessity into a more manageable, automated process. By investing time in setting up triage workflows, executable runbooks, and post-incident automation, you can significantly reduce the burden on your on-call engineers.
 
 Start with one painful alert type, automate its triage, and expand from there. Your future self—and your sleep schedule—will thank you.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -149,6 +149,13 @@ A well-crafted CLAUDE.md file transforms API versioning from a source of frictio
 
 The investment in writing comprehensive API versioning documentation pays dividends in reduced support burden, smoother client migrations, and fewer unexpected breaking changes. Update your CLAUDE.md whenever your versioning strategy evolves, and treat it as living documentation that grows alongside your API.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 {% endraw %}

@@ -269,4 +269,14 @@ Building LSP hover provider workflows with Claude Code brings the power of intel
 The key is to iterate: begin simple, test with real workflows, and expand capabilities as you discover new use cases. Your hover provider skills will become invaluable tools for understanding unfamiliar code, reviewing changes, and learning new APIs.
 
 Remember, the goal isn't to replicate a visual hover UI—it's to provide the same rich, contextual information through a conversational interface that uses Claude Code's strengths in understanding and explaining code.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

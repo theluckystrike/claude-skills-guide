@@ -7,6 +7,8 @@ author: Claude Skills Guide
 permalink: /claude-code-for-benchmark-ci-integration-workflow/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -220,4 +222,14 @@ When integrating Claude Code into your CI pipeline, follow these practical recom
 Integrating Claude Code into your CI/CD pipeline transforms it from a simple automation tool into an intelligent partner in your development process. By setting up automated benchmarks for code quality, performance, and security, you gain consistent insights that help your team ship better software faster.
 
 Start with a single benchmark, measure your baseline, and gradually expand to more comprehensive analysis. The investment in setting up these workflows pays dividends in reduced bugs, better performance, and more confident releases.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

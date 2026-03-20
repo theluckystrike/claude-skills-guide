@@ -294,5 +294,12 @@ Chrome's developer tools make debugging straightforward. Use chrome://extensions
 
 Building a robust batch image download extension requires handling many real-world edge cases, but the core patterns covered here provide a solid foundation. With these components in place, you can extend functionality to support downloading videos, documents, or any other file type by adapting the content script selectors and download logic.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -188,4 +188,11 @@ Some teams prefer calendar-native solutions over browser extensions. Browser-bas
 
 For developers who want maximum customization, building your own extension following the patterns above provides the most flexibility. You can integrate with internal scheduling systems, enforce team conventions automatically, and adapt the interface to your exact workflow.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

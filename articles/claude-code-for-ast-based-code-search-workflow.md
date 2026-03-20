@@ -222,4 +222,14 @@ Integrate AST search into your CI pipeline for automated enforcement. Run querie
 Finally, combine AST search with Claude Code's AI capabilities. Use natural language to refine queries, explain results, and generate fixes. The combination of structural search and AI understanding creates a workflow that's greater than either approach alone.
 
 Start with one query, refine it, and expand from there. Your future self will thank you when the next major refactoring takes hours instead of weeks.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

@@ -157,4 +157,11 @@ The Miro Chrome extension transforms how developers and power users interact wit
 
 Start by installing the extension, exploring your recent boards, and gradually incorporating it into your daily workflow. The productivity gains become apparent within the first few sessions.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

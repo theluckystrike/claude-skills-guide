@@ -110,4 +110,14 @@ Finally, version control your grammar changes. Tree-sitter grammars evolve, and 
 Combining Claude Code with Tree-sitter Playground creates a powerful development environment for parser development. By using Claude Code's ability to understand and generate code, analyze grammar structures, and automate repetitive tasks, you can significantly accelerate your Tree-sitter workflow. Start with the interactive exploration features, then gradually incorporate automation for testing and parser generation. Your future self will thank you when debugging complex grammar conflicts becomes more manageable.
 
 The key is to treat Claude Code as a collaborative partner in your grammar development process. Describe your goals, share your current approach, and let it help you navigate the complexities of parser design. With practice, you'll develop an efficient workflow that makes Tree-sitter development more enjoyable and productive.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

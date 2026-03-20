@@ -292,4 +292,11 @@ Beyond basic citation generation, consider adding these enhancements:
 
 Building your own MLA citation generator gives you complete control over formatting preferences and eliminates dependence on third-party services. The extension runs entirely in your browser, keeping your research data private while providing instant citations whenever you need them.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

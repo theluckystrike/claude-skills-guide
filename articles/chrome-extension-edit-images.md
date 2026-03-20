@@ -221,4 +221,11 @@ Building a Chrome extension for image editing combines web technologies with Chr
 
 The implementation patterns shown here form a foundation you can extend with additional features like filters, transformations, drawing tools, and integration with cloud storage. Start with the core functionality, then add complexity as you understand your users' workflows.
 
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

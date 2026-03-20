@@ -8,6 +8,7 @@ permalink: /claude-code-for-interview-preparation-workflow/
 categories: [workflows]
 reviewed: true
 tags: [claude-code, interview-prep, workflow]
+score: 7
 ---
 
 # Claude Code for Interview Preparation Workflow
