@@ -242,6 +242,88 @@ Implement browser audits as part of your standard operating procedures. Schedule
 
 For development teams specifically, maintain documentation of browser versions your applications support. This prevents compatibility issues and reduces support tickets.
 
+## Step-by-Step: Building the Enterprise Browser Audit Tool
+
+1. **Set up Manifest V3** with `management`, `storage`, `history`, and `tabs` permissions. The `management` API is what makes enterprise auditing possible — it lists all installed extensions.
+2. **Audit installed extensions**: call `chrome.management.getAll()` to retrieve all installed extensions. For each one, check its permissions against a policy-defined allowlist of approved permissions.
+3. **Audit browser history patterns**: use `chrome.history.search` to identify visits to high-risk domains (e.g., file sharing sites, competitor URLs, or known phishing domains from your threat feed).
+4. **Check download history**: call `chrome.downloads.search` to identify large downloads or downloads from unapproved domains that may indicate data exfiltration.
+5. **Generate the audit report**: compile findings into a JSON report with severity (critical, warning, info) for each finding. Export to CSV or JSON for import into your SIEM or ticketing system.
+6. **Deploy via Chrome Enterprise policy**: package the extension as a force-installed extension via Google Admin Console so it runs on all managed Chrome browsers in the organization.
+
+## Extension Permission Risk Scoring
+
+```javascript
+const HIGH_RISK_PERMISSIONS = [
+  'nativeMessaging',     // Can communicate with native apps
+  'debugger',            // Can intercept and modify all requests
+  'proxy',               // Can route all traffic
+  'webRequestBlocking',  // Can block/modify all requests
+];
+
+const MEDIUM_RISK_PERMISSIONS = [
+  'history',
+  'bookmarks',
+  'cookies',
+  'clipboardRead',
+];
+
+function scoreExtensionRisk(extension) {
+  let score = 0;
+  const perms = extension.permissions || [];
+  const hostPerms = extension.hostPermissions || [];
+
+  if (hostPerms.includes('<all_urls>')) score += 30;
+  perms.forEach(p => {
+    if (HIGH_RISK_PERMISSIONS.includes(p)) score += 20;
+    else if (MEDIUM_RISK_PERMISSIONS.includes(p)) score += 5;
+  });
+
+  return { extension: extension.name, score, risk: score >= 30 ? 'HIGH' : score >= 10 ? 'MEDIUM' : 'LOW' };
+}
+```
+
+## Comparison with Enterprise Browser Management Tools
+
+| Tool | Extension audit | History audit | Policy enforcement | Deployment | Cost |
+|---|---|---|---|---|---|
+| This extension | Yes (build it) | Yes | Via Admin Console | Force-install | Free |
+| Chrome Enterprise | Limited | No | Yes | Native | Free |
+| Tanium | Yes | Yes | Yes | Agent-based | Enterprise |
+| CrowdStrike Falcon | Yes | Yes | Yes | Agent-based | Enterprise |
+| Kandji (macOS) | Limited | No | Yes | MDM | $4/device/mo |
+
+The self-built extension is most cost-effective for organizations that have Chrome Enterprise already deployed and need a lightweight audit layer on top of existing policies.
+
+## Advanced: Real-Time Policy Violation Alerts
+
+Push audit findings to a central webhook in real time as violations are detected:
+
+```javascript
+async function reportViolation(violation) {
+  await fetch('https://your-siem.company.com/api/chrome-audit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + AUDIT_API_KEY
+    },
+    body: JSON.stringify({
+      machine: await getMachineId(),
+      user: await getCurrentUser(),
+      violation,
+      timestamp: new Date().toISOString(),
+    })
+  });
+}
+```
+
+## Troubleshooting
+
+**`management` API not available**: The `management` API requires the `management` permission in the manifest AND is only available on managed devices where the extension is force-installed via Chrome Enterprise policy. It is not available for user-installed extensions.
+
+**History search returning no results**: `chrome.history.search` requires the query to include at minimum `startTime` or `text`. An empty query with no startTime returns nothing. Set `startTime: Date.now() - (30 * 86400000)` to search the last 30 days.
+
+**Audit report too large to export**: For organizations with thousands of browser history entries, paginate the history search using `maxResults` and multiple time-windowed queries rather than fetching the entire history in one call.
 
 ## Related Reading
 

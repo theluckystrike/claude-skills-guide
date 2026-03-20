@@ -273,4 +273,79 @@ Building an AI study helper Chrome extension combines web development skills wit
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Building the AI Study Helper
+
+1. **Set up Manifest V3** with `storage`, `contextMenus`, and `sidePanel` permissions. The side panel keeps the study assistant visible while the student reads.
+2. **Implement text selection to flashcard**: right-click on selected text and choose "Create flashcard". The background script extracts the term and sends it to the AI API to generate a definition and example sentence.
+3. **Build the flashcard storage**: store flashcards as `{ id, term, definition, example, source_url, created_at, next_review }` in `chrome.storage.local`. The `next_review` field supports spaced repetition scheduling.
+4. **Implement spaced repetition**: after each review, update `next_review` using the SM-2 algorithm. Cards rated "easy" get a longer interval; cards rated "hard" reset to a short interval.
+5. **Add quiz mode**: in the side panel, show the term and ask the student to recall the definition. Show the answer on button click. Record the result and update the card's next_review.
+6. **Export study sets**: let students export their flashcards as CSV for import into Anki, Quizlet, or a printable sheet.
+
+## Spaced Repetition Implementation
+
+```javascript
+// SM-2 simplified implementation
+function updateCardSchedule(card, quality) {
+  // quality: 0-5 (0=blackout, 3=correct with difficulty, 5=perfect)
+  if (quality < 3) {
+    card.repetitions = 0;
+    card.interval = 1;
+  } else {
+    if (card.repetitions === 0) card.interval = 1;
+    else if (card.repetitions === 1) card.interval = 6;
+    else card.interval = Math.round(card.interval * card.easeFactor);
+
+    card.easeFactor = Math.max(
+      1.3,
+      card.easeFactor + 0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02)
+    );
+    card.repetitions++;
+  }
+
+  const msPerDay = 86400000;
+  card.next_review = Date.now() + card.interval * msPerDay;
+  return card;
+}
+```
+
+## Comparison with Existing Study Tools
+
+| Tool | Browser integration | AI generation | Spaced repetition | Export | Cost |
+|---|---|---|---|---|---|
+| This extension | Native (side panel) | Yes | Yes (build it) | CSV | Free |
+| Anki | No | No (manual) | Yes | Yes | Free |
+| Quizlet | Web app | Yes (paid) | Limited | Limited | Free/Plus |
+| Readwise | Extension + app | Yes | Yes | Yes | $7.99/mo |
+| RemNote | No | Limited | Yes | Yes | Free/Pro |
+
+The key advantage is zero friction — flashcards are created from any web page without switching context, and the side panel keeps the review queue always accessible.
+
+## Advanced: Concept Map Generation
+
+After a student creates 10+ flashcards from a single page, offer to generate a concept map that shows how the terms relate:
+
+```javascript
+async function generateConceptMap(flashcards) {
+  const terms = flashcards.map(c => c.term).join(', ');
+  const response = await callAI(
+    'Given these terms from the same article: ' + terms +
+    '\nIdentify 3-5 key relationships between them as JSON: ' +
+    '[{"from": "term1", "to": "term2", "relationship": "is a type of"}]'
+  );
+  return JSON.parse(response);
+}
+```
+
+Render the concept map as an SVG in the side panel using D3.js bundled with the extension.
+
+## Troubleshooting
+
+**Flashcard generation producing incorrect definitions**: Add the source text snippet to the AI prompt so it generates the definition in context rather than from general knowledge. A term means different things in different domains — "recursion" in computer science versus linguistics.
+
+**Side panel closing when navigating to a new page**: The side panel persists across navigations within the same tab by default when you use `chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true })`. Ensure this call is in the background service worker on install.
+
+**Storage filling up with large study sets**: Compress the flashcard JSON using `CompressionStream` (Chrome 80+) before storing. A study set of 500 flashcards compresses from ~50 KB to under 5 KB.
+
 {% endraw %}

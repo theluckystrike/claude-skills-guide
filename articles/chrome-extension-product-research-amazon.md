@@ -304,4 +304,82 @@ For developers, the extension serves as a foundation for more advanced tools—i
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Building the Amazon Product Researcher
+
+1. **Detect Amazon product pages**: check the URL for `/dp/` and extract the ASIN from the path. The ASIN is the 10-character alphanumeric identifier in the URL segment after `/dp/`.
+2. **Aggregate product data from the page**: read product title, brand, price, rating, review count, and BSR (Best Sellers Rank) from the DOM. All of these are present in structured data (`application/ld+json`) or in predictable elements.
+3. **Analyze reviews**: collect the top 10-20 reviews from the page and send them to the AI API with a prompt asking for the top 3 customer complaints and top 3 customer praises. This gives you a quick competitive intelligence summary.
+4. **Check historical pricing**: compare the current price against the average from the last 90 days (use a price history API or your own stored history) to flag whether this is a good time to buy.
+5. **Research competitor products**: based on the product category and BSR, suggest 3-5 competing products. You can use the Amazon Product Advertising API for this, or scrape the "Customers also bought" section.
+6. **Export research notes**: let users save their product research as a structured note (title, ASIN, price, pros, cons, verdict) to `chrome.storage.local` with export to Notion or Airtable.
+
+## Extracting Amazon Structured Data
+
+```javascript
+function extractProductData() {
+  // Try JSON-LD first
+  const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  for (const script of scripts) {
+    try {
+      const data = JSON.parse(script.textContent);
+      if (data['@type'] === 'Product') {
+        return {
+          name: data.name,
+          brand: data.brand?.name,
+          sku: data.sku,
+          price: data.offers?.price,
+          rating: data.aggregateRating?.ratingValue,
+          reviewCount: data.aggregateRating?.reviewCount,
+        };
+      }
+    } catch {}
+  }
+
+  // Fall back to DOM selectors
+  return {
+    name: document.getElementById('productTitle')?.textContent?.trim(),
+    price: document.querySelector('.a-price .a-offscreen')?.textContent,
+    rating: document.querySelector('.a-icon-star span')?.textContent,
+    reviewCount: document.getElementById('acrCustomerReviewText')?.textContent,
+  };
+}
+```
+
+## Comparison with Dedicated Research Tools
+
+| Tool | Real-time data | AI analysis | Review sentiment | Export | Cost |
+|---|---|---|---|---|---|
+| This extension | Yes (from page) | Yes | Yes | Custom | Free |
+| Jungle Scout | Yes (API) | Limited | No | Yes | $49/mo |
+| Helium 10 | Yes (API) | Limited | No | Yes | $39/mo |
+| AMZScout | Yes | No | No | Yes | $16/mo |
+| Keepa | Price history only | No | No | Limited | Free/Pro |
+
+The custom extension is most powerful for individual buyers and small sellers who need AI-driven review analysis without paying for a full research platform subscription.
+
+## Advanced: Review Sentiment Analysis
+
+Classify reviews into sentiment categories for quick competitive analysis:
+
+```javascript
+async function analyzeReviews(reviews) {
+  const text = reviews.map(r => r.text).join('\n---\n');
+  const analysis = await callAI(
+    'Analyze these Amazon reviews and return JSON with: ' +
+    '{"top_complaints": ["..."], "top_praises": ["..."], ' +
+    '"quality_score": 1-10, "value_score": 1-10, "summary": "..."}\n\n' + text
+  );
+  return JSON.parse(analysis);
+}
+```
+
+## Troubleshooting
+
+**BSR not found on all product pages**: BSR is only shown for products ranked in a category. Check for `productDetails` table rows matching "Best Sellers Rank" text — the format changes between categories and product types.
+
+**Reviews paginated across multiple pages**: The extension can only read reviews on the currently visible page. For deeper analysis, open the "See all reviews" page and run analysis there, where more reviews are loaded at once.
+
+**AI analysis of reviews hitting token limits**: Amazon review sections can contain hundreds of reviews. Sample a random subset of 15-20 reviews that represent the rating distribution (5 five-star, 5 three-star, 5 one-star) rather than sending all reviews.
+
 {% endraw %}

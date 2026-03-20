@@ -272,4 +272,91 @@ def handler(event, context):
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Integrating Claude Skills with AWS Lambda
+
+1. **Create the Lambda function**: ask Claude Code to scaffold a Python or Node.js Lambda handler that accepts a Claude skill invocation payload and returns a structured response.
+2. **Package the Anthropic SDK**: bundle the `anthropic` Python package (or `@anthropic-ai/sdk` for Node.js) with your Lambda deployment package, or use a Lambda Layer to share it across functions.
+3. **Store credentials securely**: put the Claude API key in AWS Secrets Manager or Parameter Store. Retrieve it at function startup using the AWS SDK — never hard-code it in the function code.
+4. **Configure the function URL or API Gateway**: expose the Lambda function as an HTTPS endpoint. A Lambda Function URL is the simplest option for development; API Gateway gives you rate limiting and authentication for production.
+5. **Connect the skill**: register the Lambda endpoint URL as the skill's action endpoint. Claude will POST the user's request to this URL and render the response.
+6. **Add error handling and logging**: wrap the handler in a try/catch that returns structured error responses. Use CloudWatch Logs with structured JSON logging so failures are easy to diagnose.
+
+## Lambda Handler for Claude Skill
+
+```python
+import json
+import boto3
+import anthropic
+
+secrets_client = boto3.client('secretsmanager')
+
+def get_claude_key():
+    secret = secrets_client.get_secret_value(SecretId='claude-api-key')
+    return json.loads(secret['SecretString'])['CLAUDE_API_KEY']
+
+def handler(event, context):
+    try:
+        body = json.loads(event.get('body', '{}'))
+        user_message = body.get('message', '')
+
+        client = anthropic.Anthropic(api_key=get_claude_key())
+        message = client.messages.create(
+            model='claude-opus-4-6',
+            max_tokens=1024,
+            messages=[{'role': 'user', 'content': user_message}]
+        )
+
+        return {
+            'statusCode': 200,
+            'headers': {'Content-Type': 'application/json'},
+            'body': json.dumps({'response': message.content[0].text})
+        }
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps({'error': str(e)})
+        }
+```
+
+## AWS Lambda + Claude Skill Architecture Options
+
+| Approach | Latency | Cost | Complexity | Scalability |
+|---|---|---|---|---|
+| Lambda + Function URL | Low | Pay-per-use | Low | High (auto) |
+| Lambda + API Gateway | Low | Pay-per-use + API GW | Medium | High |
+| Lambda + ALB | Low | Pay-per-use + ALB | Medium | High |
+| ECS Fargate (persistent) | Very low (no cold start) | Higher (always-on) | High | Manual |
+| EC2 (always-on) | Very low | Higher | High | Manual |
+
+Lambda + Function URL is the right starting point for most skills — zero infrastructure overhead, automatic scaling, and costs nothing during periods of no usage.
+
+## Advanced: Caching Skill Responses with ElastiCache
+
+For skills that call expensive external APIs (database queries, web searches), add Redis caching via ElastiCache to reduce latency and cost:
+
+```python
+import redis, hashlib, json
+
+redis_client = redis.Redis(host=ELASTICACHE_ENDPOINT, port=6379, decode_responses=True)
+
+def cached_claude_call(message, ttl=300):
+    cache_key = 'skill:' + hashlib.md5(message.encode()).hexdigest()
+    cached = redis_client.get(cache_key)
+    if cached:
+        return json.loads(cached)
+
+    result = call_claude(message)
+    redis_client.setex(cache_key, ttl, json.dumps(result))
+    return result
+```
+
+## Troubleshooting
+
+**Cold start latency making the skill feel slow**: Pre-warm the Lambda function by invoking it on a scheduled EventBridge rule every 5 minutes. This keeps the execution environment warm and eliminates the 1-3 second cold start for Python functions with large dependencies.
+
+**Lambda timing out on long Claude responses**: The default Lambda timeout is 3 seconds. Increase it to 30-60 seconds for Claude skill calls. Set `max_tokens` in the Anthropic API call appropriately — `max_tokens=4096` can take 10-20 seconds for complex responses.
+
+**Secrets Manager adding latency**: Cache the API key in a module-level variable after the first retrieval. AWS Lambda reuses execution environments between invocations — the cached key persists across warm invocations without repeated Secrets Manager calls.
+
 {% endraw %}

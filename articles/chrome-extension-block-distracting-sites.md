@@ -291,4 +291,87 @@ For users who need more advanced features like password-protected blocking or de
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Building the Distraction Blocker
+
+1. **Set up Manifest V3** with `declarativeNetRequest`, `storage`, and `alarms` permissions.
+2. **Build the blocklist UI**: create a popup with an input field to add domains. Store the list in `chrome.storage.local` as `{ blocklist: ["reddit.com", "twitter.com", ...] }`.
+3. **Generate declarativeNetRequest rules**: convert the blocklist to DNR rules that redirect blocked domains to an extension-hosted focus page. Update the ruleset dynamically using `chrome.declarativeNetRequest.updateDynamicRules`.
+4. **Add focus session scheduling**: let users set a focus session duration (25-90 minutes). Start a `chrome.alarms` timer. While the alarm is active, enforce the blocklist; when it fires, temporarily allow access.
+5. **Track productivity stats**: record daily block counts per domain in `chrome.storage.local`. Display a weekly chart in the popup showing which sites consumed the most attempted visit attempts.
+6. **Add allowlist for exceptions**: let users mark specific subpages as allowed even if the root domain is blocked (e.g., block reddit.com but allow reddit.com/r/learnprogramming).
+
+## Dynamic Rule Management
+
+```javascript
+// Convert blocklist array to declarativeNetRequest rules
+function buildBlockRules(domains) {
+  return domains.map((domain, index) => ({
+    id: index + 1,
+    priority: 1,
+    action: {
+      type: 'redirect',
+      redirect: { extensionPath: '/focus.html' }
+    },
+    condition: {
+      urlFilter: '||' + domain + '^',
+      resourceTypes: ['main_frame']
+    }
+  }));
+}
+
+async function updateBlockRules(domains) {
+  const existing = await chrome.declarativeNetRequest.getDynamicRules();
+  const removeIds = existing.map(r => r.id);
+  await chrome.declarativeNetRequest.updateDynamicRules({
+    removeRuleIds: removeIds,
+    addRules: buildBlockRules(domains)
+  });
+}
+```
+
+## Comparison with Distraction Blockers
+
+| Tool | Scheduling | Stats | Sync | Bypass protection | Cost |
+|---|---|---|---|---|---|
+| This extension | Yes | Yes | chrome.storage.sync | Build it | Free |
+| Freedom | Yes | Yes | Cloud | Strong (kernel-level) | $7.99/mo |
+| Cold Turkey | Yes | Limited | No | Very strong | $39 one-time |
+| StayFocusd | Basic | No | No | Weak | Free |
+| BlockSite | Yes | Basic | Account | Medium | Free/Pro |
+
+The custom extension is most appropriate for developers who want full control over the blocking logic and no subscription fees. Freedom and Cold Turkey are better for users who need strong bypass protection against their own impulses.
+
+## Advanced: Intelligent Block Suggestions
+
+After a week of usage, analyze the domains in the browser history with high visit counts and suggest adding them to the blocklist:
+
+```javascript
+async function suggestBlockCandidates() {
+  const oneWeekAgo = Date.now() - 7 * 86400000;
+  const history = await chrome.history.search({
+    text: '', startTime: oneWeekAgo, maxResults: 500
+  });
+
+  const domainCounts = {};
+  history.forEach(item => {
+    const domain = new URL(item.url).hostname;
+    domainCounts[domain] = (domainCounts[domain] || 0) + item.visitCount;
+  });
+
+  return Object.entries(domainCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 10)
+    .map(([domain, count]) => ({ domain, count }));
+}
+```
+
+## Troubleshooting
+
+**declarativeNetRequest rules not blocking all requests**: DNR rules match the `main_frame` resource type for full-page navigations. If the blocked site is loaded in an iframe, add `sub_frame` to the `resourceTypes` array as well.
+
+**Focus session timer not surviving browser restart**: `chrome.alarms` persist across browser restarts. However, `chrome.storage.session` (which you might use to store session state) is cleared on restart. Store the session start time and duration in `chrome.storage.local` instead so the timer can be reconstructed after a restart.
+
+**Users bypassing the blocker by using incognito**: The extension only runs in incognito if the user has explicitly allowed it in the extensions settings. For self-blocking use cases, consider adding a note in the focus page that the block does not apply in incognito mode.
+
 {% endraw %}

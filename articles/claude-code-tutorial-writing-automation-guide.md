@@ -276,6 +276,83 @@ This system reduces tutorial writing time by roughly 60 percent while maintainin
 
 ---
 
+## Step-by-Step: Automating Tutorial Writing with Claude Code
+
+1. **Define the tutorial structure**: ask Claude Code to generate a tutorial outline from a topic description. A good outline includes prerequisites, what the reader will build, step-by-step sections, troubleshooting, and next steps.
+2. **Write sections iteratively**: for each section in the outline, ask Claude Code to write the content with working code examples. Review each section before moving to the next.
+3. **Generate code examples**: ask Claude Code to write the code for each step, then ask it to also write the explanation of what the code does and why. Keep code and explanation synchronized.
+4. **Add screenshots and diagrams**: describe what diagram or screenshot would help in each section. Claude Code can generate Mermaid diagrams and ASCII art where visual aids would help.
+5. **Create the exercise section**: ask Claude Code to generate 3-5 exercises that build on the tutorial. Include hints and solutions. Exercises dramatically improve tutorial retention.
+6. **Write the troubleshooting section**: ask Claude Code to identify the top 5 common mistakes a beginner would make in this tutorial and write debugging guidance for each one.
+
+## Tutorial Structure Template
+
+Claude Code can fill this template for any topic:
+
+```markdown
+# Tutorial Title
+
+## Prerequisites
+- ...
+
+## What You Will Build
+[Brief description with a screenshot or diagram]
+
+## Step 1: [First milestone]
+[Context paragraph explaining why this step matters]
+
+### Code
+[Working code snippet]
+
+### What This Does
+[Explanation of each key line]
+
+## Step 2: ...
+
+## Common Mistakes and Fixes
+[Top 3-5 mistakes beginners make]
+
+## Exercises
+1. [Modify X to do Y]
+2. [Add feature Z]
+3. [Debug this broken code snippet]
+
+## Next Steps
+[Links to advanced topics]
+```
+
+## Comparison with Manual Tutorial Writing
+
+| Approach | Time per tutorial | Consistency | Code accuracy | Beginner-friendliness |
+|---|---|---|---|---|
+| Manual writing | 4-8 hours | Variable | High (you test it) | High with effort |
+| Claude Code assisted | 1-2 hours | High | High (you review it) | High (AI optimizes) |
+| AI-only (no review) | 20-30 min | Medium | Medium (needs testing) | Medium |
+| Template-only | 3-5 hours | High | High | Medium |
+
+The Claude Code-assisted approach hits the sweet spot: you maintain quality control while Claude handles the repetitive parts (boilerplate explanations, code formatting, exercise generation).
+
+## Advanced: Consistency Checking
+
+After writing all sections, ask Claude Code to review the complete tutorial for consistency:
+
+```
+claude> Read tutorial.md and check:
+1. All code snippets use consistent variable names
+2. Each code example builds on the previous one without skipping steps
+3. Technical terms are defined before use
+4. The difficulty level is appropriate for the stated audience
+Return a list of specific inconsistencies to fix.
+```
+
+## Troubleshooting
+
+**Claude Code generating code that does not work**: Always run the generated code yourself before publishing. Ask Claude Code to also write a test for each code snippet — this surfaces bugs immediately and gives readers a way to verify their implementation.
+
+**Tutorials becoming too long**: Set a word count budget per section (e.g., 200 words max per step). Ask Claude Code to be concise. Long tutorials lose readers; a 1,500-word tutorial that works is more valuable than a 5,000-word one that is not finished.
+
+**Code examples becoming outdated**: Add a `date` front matter field and a "last tested with version X" note at the top of each tutorial. Ask Claude Code to flag which libraries or APIs in the tutorial are likely to change in the next 6-12 months.
+
 ## Related Reading
 
 - [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — Documentation automation paired with tutorial writing

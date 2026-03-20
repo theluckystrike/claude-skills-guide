@@ -273,4 +273,72 @@ Start with basic content extraction, add one AI provider integration, and expand
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Building the AI Presentation Maker
+
+1. **Set up Manifest V3** with `storage`, `downloads`, and `activeTab` permissions.
+2. **Extract content from the current page**: when the user clicks "Create Presentation", extract the page's headings (h1-h3), key paragraphs, and any data tables. This forms the raw material for the presentation.
+3. **Send to the AI API**: pass the extracted content with a prompt asking for a presentation outline with slide titles and bullet points. Specify the number of slides and target audience.
+4. **Generate slide HTML**: for each slide in the outline, generate an HTML template with a title, bullet points, and optional speaker notes. Use a clean CSS framework (like simple.css or water.css bundled with the extension) for visual polish.
+5. **Assemble and preview**: display the presentation in a new tab using a simple slide viewer that supports keyboard navigation (left/right arrows, F for fullscreen).
+6. **Export to PowerPoint**: convert the HTML slides to a PPTX file using the `pptxgenjs` library bundled with the extension and trigger a download.
+
+## Generating Slide Content
+
+```javascript
+async function generatePresentation(pageContent, config) {
+  const prompt =
+    'Create a ' + config.slideCount + '-slide presentation for ' + config.audience +
+    ' based on this content:\n\n' + pageContent.slice(0, 3000) +
+    '\n\nRespond with JSON: {"slides": [{"title": "...", "bullets": ["..."], "notes": "..."}]}';
+
+  const response = await callAI(prompt);
+  return JSON.parse(response);
+}
+
+async function buildSlideHTML(slide, template) {
+  return template
+    .replace('{{TITLE}}', slide.title)
+    .replace('{{BULLETS}}', slide.bullets.map(b => '<li>' + b + '</li>').join(''))
+    .replace('{{NOTES}}', slide.notes || '');
+}
+```
+
+## Comparison with Presentation Tools
+
+| Tool | AI generation | From web page | Export format | Cost |
+|---|---|---|---|---|
+| This extension | Yes | Yes | PPTX, HTML | Free (build it) |
+| Gamma | Yes | No | PDF, PPTX | Free/Pro |
+| Beautiful.ai | No | No | PPTX | $12/mo |
+| Canva AI | Yes | Limited | PDF, PPTX | Free/Pro |
+| Tome | Yes | No | PDF | Free/Pro |
+
+The extension's advantage is its ability to convert any web page — an article, a Wikipedia page, a research paper — directly into a presentation without copy-pasting.
+
+## Advanced: Speaker Notes Generation
+
+After generating slide bullets, ask the AI to write 2-3 sentences of speaker notes for each slide:
+
+```javascript
+async function generateSpeakerNotes(slide) {
+  const prompt =
+    'Write 2-3 sentences of speaker notes for this slide:\n' +
+    'Title: ' + slide.title + '\n' +
+    'Bullets: ' + slide.bullets.join('; ') +
+    '\n\nKeep the tone conversational and expand on the bullet points without repeating them.';
+  return await callAI(prompt);
+}
+```
+
+Speaker notes make the exported PPTX immediately usable for live presentations without additional preparation.
+
+## Troubleshooting
+
+**AI generating too many or too few slides**: Add explicit constraints to the prompt — "Exactly 8 slides, no more, no fewer". If the model still produces the wrong count, post-process the response to trim or pad the slide array to the target count.
+
+**pptxgenjs export not working in extension context**: `pptxgenjs` uses `FileSaver.js` internally, which calls `URL.createObjectURL`. In a service worker context, this is not available. Run the PPTX generation in the extension popup or an offscreen document where DOM APIs are available.
+
+**Slide content too long for the slide template**: Limit each bullet to 10 words maximum by adding this to the AI prompt. Long bullets are a common presentation mistake and the AI will respect explicit word-count constraints.
+
 {% endraw %}

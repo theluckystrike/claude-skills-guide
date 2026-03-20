@@ -303,6 +303,81 @@ self.onmessage = async (e) => {
 
 The extension ecosystem continues evolving with more powerful local models, better WebGPU support, and improved integration capabilities. Expect to see more sophisticated enhancement features running entirely in-browser as hardware acceleration improves.
 
+## Step-by-Step: Building the AI Photo Enhancer
+
+1. **Set up Manifest V3** with `activeTab`, `contextMenus`, and `storage` permissions.
+2. **Add a context menu for images**: when the user right-clicks on an image, show "Enhance this image" in the context menu. The background script receives the image URL from the `contextMenus` callback.
+3. **Fetch the image**: in the background service worker, fetch the image from its URL and convert it to a base64 data URL or a Blob for API submission.
+4. **Send to the enhancement API**: submit the image to your chosen AI enhancement API (Real-ESRGAN via Replicate, Cloudinary AI, or a self-hosted model). Pass enhancement parameters like upscale factor, denoising level, and sharpening.
+5. **Display the enhanced result**: open a new tab showing a side-by-side comparison of the original and enhanced images with a download button for the enhanced version.
+6. **Batch enhancement**: let users select multiple images on a page using a selection mode (ctrl+click) and enhance them all in sequence, displaying a progress indicator.
+
+## Fetching and Processing Images
+
+```javascript
+// background.js — fetch image and convert to base64
+async function fetchImageAsBase64(url) {
+  const response = await fetch(url);
+  const blob = await response.blob();
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result.split(',')[1]); // Strip data: prefix
+    reader.readAsDataURL(blob);
+  });
+}
+
+// Submit to enhancement API
+async function enhanceImage(base64Image, options) {
+  const response = await fetch('https://api.replicate.com/v1/predictions', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Token ' + REPLICATE_API_TOKEN,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      version: 'nightmareai/real-esrgan:42fed1c4...',
+      input: { image: 'data:image/jpeg;base64,' + base64Image, scale: options.scale || 2 }
+    })
+  });
+  return response.json();
+}
+```
+
+## Comparison with AI Photo Enhancement Tools
+
+| Tool | Browser-native | Batch processing | API cost | Offline support | Cost |
+|---|---|---|---|---|---|
+| This extension | Yes | Yes (build it) | API usage | No | Free (build it) |
+| Adobe Photoshop AI | No | Yes | Adobe CC | No | $22/mo |
+| Topaz Gigapixel | No | Yes | One-time | Yes | $99 |
+| Let's Enhance | Web app | Yes | Credits | No | $9/mo |
+| Upscayl | No | Yes | Free | Yes | Free |
+
+The extension wins for users who frequently encounter low-resolution images while browsing and want to enhance them in place without downloading a separate application.
+
+## Advanced: Smart Cropping
+
+Add an AI-powered smart crop feature that identifies the most important region of an image:
+
+```javascript
+async function smartCrop(imageUrl, targetAspectRatio) {
+  // Use a face detection or saliency API to find the focal point
+  const saliencyResult = await callSaliencyAPI(imageUrl);
+  const focalPoint = saliencyResult.focal_point; // { x: 0.4, y: 0.3 }
+
+  // Crop around the focal point while maintaining target aspect ratio
+  return computeCropRect(imageWidth, imageHeight, targetAspectRatio, focalPoint);
+}
+```
+
+## Troubleshooting
+
+**CORS error when fetching images**: Cross-origin images cannot be fetched directly from a content script. Move the fetch to the background service worker where CORS restrictions do not apply to extension contexts. Use `chrome.runtime.sendMessage` to pass the image URL from the content script to the background worker.
+
+**Enhancement API slow for large images**: Resize images to a maximum of 1024px on the longest side before submitting to the API. Most enhancement APIs produce good results from 1024px inputs, and the API call completes 3-4x faster with smaller inputs.
+
+**Downloaded enhanced image has wrong filename**: The enhanced image URL from the API is a temporary URL with no meaningful filename. Set the download filename explicitly using `chrome.downloads.download({ url, filename: 'enhanced_' + originalFilename })`.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

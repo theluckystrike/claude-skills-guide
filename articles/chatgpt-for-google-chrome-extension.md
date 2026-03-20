@@ -268,4 +268,85 @@ Start with the basics, test thoroughly, and iterate based on your specific use c
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Building a ChatGPT-Style Extension
+
+1. **Obtain an API key**: sign up at platform.openai.com, generate an API key, and store it securely in `chrome.storage.sync` via an options page — never bundle it in the extension source.
+2. **Set up Manifest V3** with `storage`, `contextMenus`, and `sidePanel` permissions.
+3. **Build the chat interface**: create a side panel with a message list, an input field, and a send button. Style messages to visually distinguish user messages from assistant responses.
+4. **Implement the API call**: on send, POST to `https://api.openai.com/v1/chat/completions` with the conversation history and the new user message. Use `stream: true` to render responses token by token.
+5. **Maintain conversation context**: store the message history in `chrome.storage.session` so the conversation persists while the browser is open but clears when it closes — protecting privacy.
+6. **Add page context injection**: when the user asks about the current page, extract the page text and prepend it as a system message so the assistant has relevant context.
+
+## Streaming API Response Rendering
+
+```javascript
+async function streamResponse(messages, onToken) {
+  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer ' + apiKey,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'gpt-4o',
+      messages,
+      stream: true,
+    }),
+  });
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+
+    const lines = decoder.decode(value).split('\n');
+    for (const line of lines) {
+      if (line.startsWith('data: ') && line !== 'data: [DONE]') {
+        try {
+          const delta = JSON.parse(line.slice(6)).choices[0].delta.content;
+          if (delta) onToken(delta);
+        } catch {}
+      }
+    }
+  }
+}
+```
+
+## Comparison with Browser AI Assistants
+
+| Tool | Model | Page context | Privacy | Offline | Cost |
+|---|---|---|---|---|---|
+| This extension | GPT-4o / Claude | Yes (build it) | Your API key | No | API usage |
+| ChatGPT extension | GPT-4o | No | OpenAI account | No | ChatGPT Plus |
+| Claude.ai extension | Claude | No | Anthropic account | No | Claude Pro |
+| Perplexity extension | GPT-4 / Claude | Yes | Server-side | No | Free/Pro |
+| Arc Sidebar | Multiple | Yes | Arc account | No | Free |
+
+Building your own gives full control over the model, context injection strategy, and data handling. You choose which model to use and can switch between providers.
+
+## Advanced: Custom Personas and System Prompts
+
+Let users configure custom system prompts for different use cases:
+
+```javascript
+const personas = {
+  coding_assistant: "You are an expert programmer. Provide concise, correct code with brief explanations.",
+  writing_editor: "You are an editor. Improve clarity and conciseness. Track changes with before/after.",
+  research_analyst: "You are a research analyst. Cite sources, identify gaps, and provide balanced perspectives.",
+};
+```
+
+Store the selected persona in `chrome.storage.sync` and prepend it as the system message for every conversation.
+
+## Troubleshooting
+
+**Rate limit errors (429)**: Implement exponential backoff — retry after 1 second, then 2, then 4. Store the retry count in the request state and surface a "Rate limited, retrying..." message in the UI so the user knows to wait.
+
+**Response truncated mid-sentence**: The default `max_tokens` may cut off long responses. Increase it or implement a continuation mechanism that detects an incomplete response (no sentence-ending punctuation at the end) and automatically sends a "continue" message.
+
+**Page context exceeding token limit**: Summarize long pages before injecting them. Extract only the first 2,000 characters, or use the page's meta description and h1/h2 headings as a compact representation of the page content.
+
 {% endraw %}
