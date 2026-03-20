@@ -2,51 +2,38 @@
 
 layout: default
 title: "Chrome Extension Facebook Page Manager: A Developer Guide"
-description: "Learn how to build and use chrome extensions for managing Facebook pages programmatically, with practical examples and code snippets."
+description: "Learn how to build and use Chrome extensions for Facebook page management. Practical code examples, API integration patterns, and automation techniques for developers."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-facebook-page-manager/
-categories: [guides]
-tags: [claude-code, claude-skills]
-reviewed: true
-score: 8
 ---
 
-{% raw %}
-Chrome extensions offer a powerful way to interact with Facebook's web interface, enabling developers and power users to automate page management tasks, extract data, and streamline workflows. This guide covers the technical aspects of building a chrome extension for Facebook page management.
+# Chrome Extension Facebook Page Manager: A Developer Guide
 
-Managing multiple Facebook pages manually is tedious work. You switch tabs to check notifications, copy-paste content across properties, manually pull engagement numbers into spreadsheets, and hunt through nested menus to find the settings you need. A purpose-built Chrome extension can eliminate most of that friction by living directly in your browser and operating on the same DOM that you see — no API rate limits, no OAuth dance for basic tasks, and full access to the rendered page state.
+Managing a Facebook Page through the web interface can become repetitive when you handle multiple posts, respond to messages, or monitor analytics daily. For developers and power users, a well-crafted Chrome extension can streamline these workflows, reducing manual effort and providing quick access to frequently used Page functions directly from the browser.
 
-## Understanding the Facebook Page Management API
+This guide covers the technical aspects of building and using Chrome extensions for Facebook Page management, including manifest configuration, content script patterns, message handling, and practical automation techniques.
 
-Facebook provides the Marketing API for programmatic page access, but many developers find chrome extensions useful for scenarios requiring direct DOM manipulation or browser-based automation. The chrome extension approach works well for:
+## Understanding the Extension Architecture
 
-- Post scheduling and publishing
-- Comment moderation
-- Analytics extraction
-- Bulk message management
-- Page insights monitoring
-- Multi-page dashboard aggregation
-- Exporting data Facebook does not expose through its official API
+A Chrome extension for Facebook Page management typically consists of three main components: the manifest file, background service worker, and content scripts. Each serves a distinct purpose in the extension ecosystem.
 
-The extension approach has real tradeoffs compared to the Marketing API. Extensions run in your browser using your logged-in session — so there is no need to request app review or manage access tokens for personal use. The downside is that Facebook's DOM changes frequently, and selectors that work today may break after a UI update. Production-quality extensions need robust selector strategies and graceful degradation when expected elements are not found.
+The manifest defines permissions, declares resources, and specifies the extension's capabilities. For Facebook Page management, you'll need permissions to interact with the Facebook domain, storage for saving user preferences, and potentially the Identity API for authentication.
 
-## Extension Architecture
+## Setting Up Your Manifest
 
-A chrome extension for Facebook page management typically consists of several components:
-
-### Manifest File (manifest.json)
+Create a `manifest.json` file with the required configuration:
 
 ```json
 {
   "manifest_version": 3,
   "name": "Facebook Page Manager",
   "version": "1.0.0",
+  "description": "Streamline Facebook Page management tasks",
   "permissions": [
     "storage",
     "activeTab",
-    "scripting",
-    "alarms"
+    "scripting"
   ],
   "host_permissions": [
     "https://www.facebook.com/*",
@@ -54,536 +41,168 @@ A chrome extension for Facebook page management typically consists of several co
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "icon.png"
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://www.facebook.com/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
-    }
-  ]
+  "content_scripts": [{
+    "matches": [
+      "https://www.facebook.com/*",
+      "https://web.facebook.com/*"
+    ],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
 }
 ```
 
-Note the addition of `"alarms"` permission — you need this for the service worker to schedule posts reliably, since Manifest V3 service workers can be terminated by Chrome when idle.
+This configuration grants the extension access to Facebook's web pages while declaring the popup interface and background worker that handles cross-page communication.
 
-### Content Script for Page Detection
+## Content Script Integration
 
-Content scripts run in the context of Facebook pages and can interact with the DOM:
+Content scripts run in the context of web pages, allowing direct interaction with the Facebook interface. For Page management, you can automate form filling, extract post data, or add custom UI elements.
+
+Here's a pattern for detecting whether the user is on a Page they manage:
 
 ```javascript
-// content.js
-// Detect current page context
-function detectPageContext() {
-  const url = window.location.href;
-
-  if (url.includes('/page')) {
-    return 'page';
-  } else if (url.includes('/groups')) {
-    return 'group';
-  } else if (url.includes('/messages')) {
-    return 'messages';
-  }
-  return 'unknown';
-}
-
-// Extract page data from DOM
-function extractPageMetrics() {
-  const metrics = {};
-
-  // Follower count
-  const followerElement = document.querySelector('[data-pagelet="PageHeader"]');
-  if (followerElement) {
-    metrics.followers = followerElement.textContent.match(/\d+/)?.[0];
+// content.js - Detect Facebook Page admin context
+(function() {
+  function detectPageAdmin() {
+    const adminPanel = document.querySelector('[data-pagelet="LeftRail"]');
+    const pageTitle = document.querySelector('h1[class*="x1n2onr6"]');
+    
+    return {
+      isPage: window.location.pathname.includes('/pages/'),
+      pageName: pageTitle ? pageTitle.textContent : null,
+      hasAdminAccess: adminPanel !== null
+    };
   }
 
-  // Engagement rate calculation
-  const likeButtons = document.querySelectorAll('[aria-label*="Like"]');
-  const commentSections = document.querySelectorAll('[aria-label*="Comment"]');
-
-  metrics.likes = likeButtons.length;
-  metrics.comments = commentSections.length;
-
-  return metrics;
-}
-
-// Listen for messages from popup or background
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'getPageContext') {
-    sendResponse({
-      context: detectPageContext(),
-      metrics: extractPageMetrics()
-    });
-  }
-});
+  // Listen for messages from popup or background
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === 'getPageInfo') {
+      const pageInfo = detectPageInfo();
+      sendResponse(pageInfo);
+    }
+    return true;
+  });
+})();
 ```
 
-Because Facebook uses React with obfuscated class names, relying on class selectors is fragile. The code above uses `data-pagelet` attributes and `aria-label` attributes, which are more stable since they reflect semantic intent rather than styling.
+## Building the Popup Interface
 
-### Popup Interface for User Interaction
-
-The popup provides the user interface for managing pages:
-
-```html
-<!-- popup.html -->
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body { width: 320px; padding: 16px; font-family: system-ui; }
-    .page-list { list-style: none; padding: 0; }
-    .page-item {
-      padding: 12px;
-      border: 1px solid #ddd;
-      margin-bottom: 8px;
-      border-radius: 8px;
-    }
-    .btn {
-      background: #1877f2;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .btn:hover { background: #166fe5; }
-    .status-badge {
-      display: inline-block;
-      font-size: 11px;
-      padding: 2px 6px;
-      border-radius: 4px;
-      background: #e7f3ff;
-      color: #1877f2;
-      margin-left: 6px;
-    }
-  </style>
-</head>
-<body>
-  <h3>Page Manager</h3>
-  <div id="statusBar"></div>
-  <ul id="pageList" class="page-list"></ul>
-  <button id="refreshBtn" class="btn">Refresh Pages</button>
-  <button id="exportBtn" class="btn" style="margin-left:8px;background:#42b72a">Export CSV</button>
-  <script src="popup.js"></script>
-</body>
-</html>
-```
+The popup provides quick actions without leaving the browser. Connect it to your background worker for complex operations:
 
 ```javascript
-// popup.js
+// popup.js - Quick action handlers
 document.addEventListener('DOMContentLoaded', () => {
-  loadManagedPages();
-
-  document.getElementById('refreshBtn').addEventListener('click', () => {
-    loadManagedPages();
-  });
-
-  document.getElementById('exportBtn').addEventListener('click', () => {
-    exportPageData();
+  const statusEl = document.getElementById('status');
+  const postBtn = document.getElementById('quickPost');
+  
+  postBtn.addEventListener('click', async () => {
+    const message = document.getElementById('messageInput').value;
+    
+    // Send to background worker for processing
+    chrome.runtime.sendMessage({
+      action: 'createPost',
+      message: message,
+      pageId: await getSelectedPageId()
+    }, (response) => {
+      statusEl.textContent = response.success 
+        ? 'Post published successfully' 
+        : 'Error: ' + response.error;
+    });
   });
 });
 
-function loadManagedPages() {
-  chrome.storage.local.get(['managedPages'], (result) => {
-    const pages = result.managedPages || [];
-    const list = document.getElementById('pageList');
-    list.innerHTML = '';
-
-    if (pages.length === 0) {
-      list.innerHTML = '<li style="color:#666;padding:8px">No pages found. Visit a Facebook page to register it.</li>';
-      return;
-    }
-
-    pages.forEach(page => {
-      const li = document.createElement('li');
-      li.className = 'page-item';
-      li.innerHTML = `
-        <strong>${page.name}</strong>
-        <span class="status-badge">${page.followers || '?'} followers</span><br>
-        <small style="color:#666">Last synced: ${page.lastSynced || 'never'}</small><br>
-        <button data-page-id="${page.id}" class="btn" style="margin-top:6px">Analyze</button>
-      `;
-      list.appendChild(li);
+async function getSelectedPageId() {
+  return new Promise((resolve) => {
+    chrome.storage.local.get(['selectedPageId'], (result) => {
+      resolve(result.selectedPageId);
     });
-  });
-}
-
-function exportPageData() {
-  chrome.storage.local.get(['managedPages'], (result) => {
-    const pages = result.managedPages || [];
-    const csv = [
-      ['Name', 'Followers', 'Likes', 'Comments', 'Last Synced'].join(','),
-      ...pages.map(p => [p.name, p.followers, p.likes, p.comments, p.lastSynced].join(','))
-    ].join('\n');
-
-    const blob = new Blob([csv], { type: 'text/csv' });
-    const url = URL.createObjectURL(blob);
-    chrome.downloads.download({ url, filename: 'facebook-pages.csv' });
   });
 }
 ```
 
-## Practical Use Cases
+## Background Worker for API Communication
 
-### Automated Post Scheduling
+The service worker handles operations that require more processing power or communicate with external APIs. This separation keeps your extension responsive:
 
 ```javascript
-// background.js - Service worker for scheduling
-class PostScheduler {
-  constructor() {
-    this.schedule = new Map();
-    this.loadSchedule();
-  }
-
-  loadSchedule() {
-    chrome.storage.local.get(['scheduledPosts'], (result) => {
-      if (result.scheduledPosts) {
-        this.schedule = new Map(Object.entries(result.scheduledPosts));
-        // Re-register alarms for any pending posts
-        this.schedule.forEach((post, id) => {
-          const delay = post.publishTime - Date.now();
-          if (delay > 0) {
-            chrome.alarms.create(`post_${id}`, { when: post.publishTime });
-          }
-        });
-      }
-    });
-  }
-
-  schedulePost(postData, publishTime) {
-    const delay = publishTime - Date.now();
-
-    if (delay > 0) {
-      // Use chrome.alarms so the alarm survives service worker termination
-      chrome.alarms.create(`post_${postData.id}`, { when: publishTime });
-      this.schedule.set(postData.id, { postData, publishTime });
-      this.persistSchedule();
-    }
-  }
-
-  publishPost(postData) {
-    // Inject content script to publish
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      chrome.tabs.sendMessage(tabs[0].id, {
-        action: 'publishPost',
-        content: postData.content,
-        media: postData.media
-      });
-    });
-  }
-
-  persistSchedule() {
-    chrome.storage.local.set({
-      scheduledPosts: Object.fromEntries(this.schedule)
-    });
-  }
-}
-
-const scheduler = new PostScheduler();
-
-// Handle alarm fires
-chrome.alarms.onAlarm.addListener((alarm) => {
-  if (alarm.name.startsWith('post_')) {
-    const postId = alarm.name.replace('post_', '');
-    chrome.storage.local.get(['scheduledPosts'], (result) => {
-      const posts = result.scheduledPosts || {};
-      if (posts[postId]) {
-        scheduler.publishPost(posts[postId].postData);
-      }
-    });
+// background.js - Handle message routing
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  switch (message.action) {
+    case 'createPost':
+      handlePostCreation(message, sendResponse);
+      return true; // Keep message channel open for async response
+    case 'schedulePost':
+      handleScheduledPost(message, sendResponse);
+      return true;
+    case 'getInsights':
+      handleInsightsRequest(message, sendResponse);
+      return true;
   }
 });
-```
 
-The switch from `setTimeout` to `chrome.alarms` is important for Manifest V3 service workers. Service workers can be suspended by Chrome at any time when idle, which would silently kill a `setTimeout`-based scheduler. Chrome Alarms persist through service worker restarts and wake the worker when the alarm fires.
-
-### Comment Moderation Automation
-
-```javascript
-// Moderation content script
-function autoModerateComments() {
-  const commentSelectors = document.querySelectorAll('[data-pagelet*="FeedbackPopover"]');
-
-  commentSelectors.forEach(comment => {
-    const text = comment.textContent.toLowerCase();
-    const spamIndicators = ['spam', 'buy now', 'click here', 'free money'];
-
-    const isSpam = spamIndicators.some(indicator => text.includes(indicator));
-
-    if (isSpam) {
-      // Mark for review or hide
-      comment.dataset.moderationStatus = 'flagged';
-      comment.style.borderLeft = '3px solid red';
-    }
-  });
-}
-
-// Run periodically
-setInterval(autoModerateComments, 5000);
-```
-
-### Page Insights Scraping
-
-When Facebook's Insights UI does not export the granularity you need, a content script can capture the rendered data:
-
-```javascript
-// Extract insights data from the Insights dashboard DOM
-function scrapeInsightsDashboard() {
-  const metrics = {};
-
-  // Reach
-  const reachEl = document.querySelector('[data-testid="reach_metric"]');
-  if (reachEl) metrics.reach = parseMetricText(reachEl.textContent);
-
-  // Engagement
-  const engagementEl = document.querySelector('[data-testid="engagement_metric"]');
-  if (engagementEl) metrics.engagement = parseMetricText(engagementEl.textContent);
-
-  // Page likes trend
-  const likeTrendEls = document.querySelectorAll('[aria-label*="Page likes"]');
-  metrics.likeTrend = Array.from(likeTrendEls).map(el => ({
-    label: el.getAttribute('aria-label'),
-    value: parseMetricText(el.textContent)
-  }));
-
-  return metrics;
-}
-
-function parseMetricText(text) {
-  // Handle "1.2K", "4.5M" formats
-  const cleaned = text.trim().replace(/,/g, '');
-  if (cleaned.endsWith('K')) return parseFloat(cleaned) * 1000;
-  if (cleaned.endsWith('M')) return parseFloat(cleaned) * 1000000;
-  return parseFloat(cleaned) || 0;
-}
-```
-
-## Handling Facebook's Dynamic UI
-
-Facebook's React-based frontend is a moving target. Here are strategies to make your extension more resilient:
-
-### MutationObserver for Dynamic Content
-
-Facebook loads content asynchronously. Relying on `document.querySelector` at page load will often return null. Use MutationObserver to wait for specific elements:
-
-```javascript
-function waitForElement(selector, timeout = 5000) {
-  return new Promise((resolve, reject) => {
-    const el = document.querySelector(selector);
-    if (el) return resolve(el);
-
-    const observer = new MutationObserver(() => {
-      const found = document.querySelector(selector);
-      if (found) {
-        observer.disconnect();
-        resolve(found);
-      }
+async function handlePostCreation(message, sendResponse) {
+  try {
+    // In production, you'd use Facebook's Marketing API
+    // This example shows the extension's internal logic
+    const tab = await chrome.tabs.query({ 
+      active: true, 
+      currentWindow: true 
     });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    setTimeout(() => {
-      observer.disconnect();
-      reject(new Error(`Timeout waiting for ${selector}`));
-    }, timeout);
-  });
-}
-
-// Usage
-waitForElement('[data-pagelet="PageHeader"]')
-  .then(header => {
-    console.log('Page header found:', header.textContent);
-  })
-  .catch(err => {
-    console.warn('Header not found within timeout');
-  });
-```
-
-### Selector Resilience Strategy
-
-Because Facebook changes class names with every deploy, use a layered approach to finding elements:
-
-```javascript
-function findFollowerCount() {
-  // Try data attributes first (most stable)
-  const byPagelet = document.querySelector('[data-pagelet="PageHeader"] [role="heading"]');
-  if (byPagelet) return byPagelet.textContent;
-
-  // Fall back to aria-label patterns
-  const byAria = document.querySelector('[aria-label*="followers"]');
-  if (byAria) return byAria.closest('a')?.textContent;
-
-  // Last resort: text content scan
-  const spans = document.querySelectorAll('span');
-  for (const span of spans) {
-    if (/^\d[\d,.KkMm]*\s+followers?$/i.test(span.textContent.trim())) {
-      return span.textContent.trim();
-    }
+    
+    await chrome.tabs.sendMessage(tab[0].id, {
+      action: 'executePost',
+      message: message.message
+    });
+    
+    sendResponse({ success: true });
+  } catch (error) {
+    sendResponse({ success: false, error: error.message });
   }
-
-  return null;
 }
 ```
+
+## Practical Use Cases for Page Managers
+
+Beyond basic posting, Chrome extensions can handle several advanced scenarios:
+
+**Automated Response Templates**: Store predefined responses for common inquiries. When a message arrives, content scripts can detect the new message element and offer template suggestions through a floating button.
+
+**Analytics Dashboard Overlays**: Inject a custom dashboard into Facebook's Page Insights view. Extract data from the native interface and present it in charts or exportable formats using your preferred visualization library.
+
+**Content Scheduling**: While Facebook offers native scheduling, a custom extension can maintain a local queue of scheduled posts, sync across devices via storage, and provide visual calendar interfaces.
+
+**Bulk Operations**: Select multiple posts or comments and perform batch actions—deleting, hiding, or marking as spam—without navigating through individual confirmation dialogs.
 
 ## Security Considerations
 
-When building Facebook page management extensions, prioritize security:
+When building extensions that interact with social media platforms, security remains paramount:
 
-1. **Token Storage**: Never store Facebook access tokens in localStorage. Use chrome.storage with encryption
-2. **Content Security Policy**: Restrict script sources in your manifest
-3. **Permission Scope**: Request minimum necessary permissions
-4. **HTTPS Only**: Ensure all communications use HTTPS
-5. **Data Minimization**: Only store what you actually need — avoid persisting sensitive user data
+- Never store Facebook access tokens in local storage without encryption
+- Use Chrome's identity API for OAuth flows rather than custom token handling
+- Implement Content Security Policy headers in your extension
+- Regularly audit your code for XSS vulnerabilities, especially when injecting HTML
 
-```javascript
-// Secure token storage
-async function secureStore(token) {
-  const encrypted = await crypto.subtle.encrypt(
-    { name: 'AES-GCM', iv: crypto.getRandomValues(new Uint8Array(12)) },
-    await crypto.subtle.importKey('raw', getEncryptionKey()),
-    new TextEncoder().encode(token)
-  );
+Facebook's terms of service prohibit automated interactions that violate their platform policies. Ensure your extension operates within these guidelines—primarily enhancing manual workflows rather than creating autonomous bots.
 
-  chrome.storage.local.set({ authToken: Array.from(new Uint8Array(encrypted)) });
-}
-```
+## Testing Your Extension
 
-### Extension Permissions Audit
+Load your unpacked extension in Chrome via `chrome://extensions/`. Enable Developer mode, then click "Load unpacked" and select your extension directory. Use Chrome DevTools to debug both the popup and content scripts.
 
-Review your manifest permissions before publishing. Each permission is a vector for abuse if your extension is compromised:
+For content script testing, inspect the Facebook page and find your script in the Sources panel under "Content Scripts."
 
-| Permission | Why Needed | Risk If Absent |
-|-----------|-----------|----------------|
-| `storage` | Persist page list and settings | Data lost on popup close |
-| `activeTab` | Read current Facebook tab | Cannot scrape page data |
-| `scripting` | Inject content scripts dynamically | Cannot automate UI interactions |
-| `alarms` | Survive service worker termination | Post scheduler silently breaks |
-| `downloads` | Export CSV files | Cannot offer data export |
+## Conclusion
 
-Only request `"host_permissions"` for the exact Facebook domains you need — do not use broad patterns like `<all_urls>` unless your extension genuinely operates across the web.
+A well-designed Chrome extension transforms Facebook Page management from repetitive clicking into an efficient workflow. By understanding manifest configuration, content script injection patterns, and message passing between extension components, developers can create tools tailored to specific Page management needs.
 
-## Debugging Your Extension
-
-Chrome DevTools provides full debugging support for extensions:
-
-- **Content scripts**: Open DevTools on the Facebook page and select your extension's content script from the Sources panel
-- **Service worker**: Navigate to `chrome://extensions`, click "Service Worker" under your extension to open a dedicated DevTools window
-- **Storage inspection**: Use the Application panel in DevTools to inspect `chrome.storage.local` and `chrome.storage.session` contents
-- **Message tracing**: Add `console.log` calls in both content.js and background.js — they surface in different DevTools windows, so check both
-
-```javascript
-// Add to content.js for easier debugging during development
-const DEBUG = true;
-
-function log(...args) {
-  if (DEBUG) console.log('[FB Page Manager]', ...args);
-}
-```
-
-## Best Practices for Production
-
-- Implement proper error handling for API rate limits
-- Add user consent mechanisms for data collection
-- Include graceful degradation when Facebook updates their UI
-- Test extensively across different Facebook page types
-- Document your extension's data handling practices
-- Version your stored data schema so you can migrate gracefully across extension updates
-- Add a `try/catch` wrapper around all DOM operations — Facebook's DOM can be in unpredictable states during navigation
-
-```javascript
-// Wrap DOM operations defensively
-async function safeExtract(fn, fallback = null) {
-  try {
-    return await fn();
-  } catch (err) {
-    console.warn('[FB Page Manager] Extraction failed:', err.message);
-    return fallback;
-  }
-}
-
-// Usage
-const metrics = await safeExtract(() => extractPageMetrics(), {});
-```
-
-Chrome extensions for Facebook page management provide flexibility for automation workflows that the official API may not easily support. By understanding the extension architecture and implementing proper security practices, developers can create powerful tools for managing multiple pages efficiently. The key to longevity is building resilience into your selectors from day one — Facebook will change its UI, and your extension should degrade gracefully and surface clear errors rather than silently failing.
-
-
-## Related Reading
-
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+The architecture demonstrated here—manifest declaration, content script detection, popup interface, and background worker—provides a foundation you can extend with Facebook Marketing API integration, custom analytics, or team collaboration features.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-
-## Advanced: Batch Operations Across Multiple Pages
-
-Managing a portfolio of Facebook pages means repeating the same operations over and over. A batch operations layer reduces this to a single click:
-
-```javascript
-async function batchOperation(action) {
-  const { managedPages = [] } = await chrome.storage.local.get('managedPages');
-  const results = [];
-  for (const page of managedPages) {
-    try {
-      results.push({ page: page.name, success: true, result: await performAction(page, action) });
-    } catch (err) {
-      results.push({ page: page.name, success: false, error: err.message });
-    }
-  }
-  return results;
-}
-```
-
-Expose `batchOperation` through the popup's action menu so page managers can trigger multi-page updates without writing code.
-
-## Scheduled Analytics Export
-
-Automate weekly summary reports with the `alarms` API:
-
-```javascript
-chrome.alarms.create('weeklyExport', { periodInMinutes: 10080 });
-
-chrome.alarms.onAlarm.addListener(async (alarm) => {
-  if (alarm.name !== 'weeklyExport') return;
-  const { managedPages = [] } = await chrome.storage.local.get('managedPages');
-  const report = managedPages.map(page => ({
-    name: page.name,
-    followers: page.followers,
-    weeklyGrowth: page.followers - (page.lastWeekFollowers || page.followers),
-    engagement: ((page.likes + page.comments) / (page.followers || 1) * 100).toFixed(2) + '%'
-  }));
-  const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
-  chrome.downloads.download({ url: URL.createObjectURL(blob), filename: `fb-report-${Date.now()}.json`, saveAs: false });
-});
-```
-
-## Comparison with Facebook Business Suite
-
-| Feature | Chrome Extension | Facebook Business Suite |
-|---|---|---|
-| Setup time | Minutes | Requires business account |
-| Custom automation | Full control | Limited workflows |
-| Data export | Any format | CSV only |
-| Maintenance | DOM selectors | API deprecations |
-
-The extension wins on flexibility and speed of iteration. Business Suite wins on long-term stability.
-
-## Troubleshooting Common Issues
-
-**Content script not injecting**: Facebook uses aggressive CSP headers. Ensure `host_permissions` includes both `"https://www.facebook.com/*"` and `"https://web.facebook.com/*"`.
-
-**Message timeout on slow pages**: Send a readiness signal from the content script so the popup knows when it can safely communicate:
-
-```javascript
-// content.js
-chrome.runtime.sendMessage({ action: 'contentScriptReady' });
-```
-
-**Storage quota hit**: `chrome.storage.local` is limited to 10MB. Prune old data on a rolling basis by keeping only the most recent 100 page snapshots.
-
-{% endraw %}
