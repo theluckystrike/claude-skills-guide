@@ -29,6 +29,28 @@ The fundamental components are:
 - **Binding Key**: Defines the pattern queue binds to (e.g., `*.order.*` or `notifications.#`)
 - **Routing Key**: The specific key attached to each message
 
+### Topic Exchange vs. Other Exchange Types
+
+Choosing the right exchange type matters before you write a line of code. Here is how the four types compare:
+
+| Exchange Type | Routing Mechanism | Best For |
+|---|---|---|
+| Direct | Exact routing key match | Simple point-to-point routing |
+| Fanout | Broadcasts to all bound queues | Broadcasting identical messages |
+| Topic | Wildcard pattern matching | Multi-category routing, flexible subscription |
+| Headers | Message header attributes | Complex attribute-based routing |
+
+Topic exchanges win when your consumers need to subscribe to categories of messages rather than exact event names. An analytics service wants all `order.*` events. A fraud detection service wants only `payment.failed` and `payment.disputed`. Topic exchanges handle both subscriptions on the same infrastructure without duplicating messages or building custom routing logic.
+
+### Wildcard Rules
+
+Two wildcards control topic routing behavior:
+
+- `*` matches exactly one word segment (e.g., `order.*` matches `order.created` but not `order.item.added`)
+- `#` matches zero or more word segments (e.g., `order.#` matches `order.created`, `order.item.added`, and `order` itself)
+
+A common mistake is using `#` when you mean `*`. If your binding key is `order.#` and you only want single-level events, you will accidentally receive deeply nested keys you did not intend to consume.
+
 ## Setting Up Your Project
 
 Begin by initializing a Node.js project with the AMQP library:
@@ -55,12 +77,12 @@ class RabbitMQConnection {
   async connect() {
     this.connection = await amqp.connect(this.url);
     this.channel = await this.connection.createChannel();
-    
+
     this.connection.on('error', (err) => {
       console.error('Connection error:', err);
       this.reconnect();
     });
-    
+
     return this.channel;
   }
 
@@ -71,6 +93,8 @@ class RabbitMQConnection {
 
 module.exports = RabbitMQConnection;
 ```
+
+When you ask Claude Code to generate this module, also ask it to add exponential backoff to the reconnection logic. The naive 5-second fixed delay can cause reconnection storms when a broker restarts and dozens of services all reconnect simultaneously. Claude Code will generate a proper exponential backoff with jitter in seconds.
 
 ## Implementing the Topic Exchange
 
@@ -85,14 +109,14 @@ async function setupTopicExchange(channel) {
 
   // Queue for order notifications
   await channel.assertQueue('order.notifications', { durable: true });
-  
+
   // Bind with wildcard patterns
   await channel.bindQueue(
     'order.notifications',
     'orders.topic',
     'order.created'
   );
-  
+
   await channel.bindQueue(
     'order.notifications',
     'orders.topic',
@@ -110,6 +134,8 @@ async function setupTopicExchange(channel) {
 ```
 
 The `*` wildcard matches exactly one word, while `#` matches zero or more words. This flexibility allows complex routing scenarios.
+
+**Important**: Use `durable: true` on both exchanges and queues for any production setup. Without durability, a broker restart wipes your queue definitions and you lose messages in flight. Claude Code defaults to durable in its generated code, but double-check any scaffold it produces against your environment settings.
 
 ## Publishing Messages with Claude Code
 
@@ -144,6 +170,25 @@ function publishOrderEvent(channel, eventType, orderData) {
 }
 ```
 
+Setting `persistent: true` on published messages tells RabbitMQ to write messages to disk before acknowledging. Combined with durable queues, this ensures messages survive broker restarts. Without persistence, a crash between publish and consume silently drops messages.
+
+### Designing a Consistent Routing Key Taxonomy
+
+Before writing any producers, design your routing key naming convention. Inconsistent keys are the most common source of routing bugs in topic exchange setups. A reliable pattern is `action.entity.subentity`:
+
+| Event | Routing Key |
+|---|---|
+| Order placed | `order.created` |
+| Order item added | `order.item.added` |
+| Payment captured | `payment.captured` |
+| Payment failed | `payment.failed` |
+| Shipment dispatched | `shipment.dispatched` |
+| Shipment delivered | `shipment.delivered` |
+
+With this taxonomy, a queue bound to `order.#` receives all order events. A queue bound to `payment.*` receives both `payment.captured` and `payment.failed`. A queue bound to `*.created` receives `order.created` but not `order.item.added`—because `item.added` is two segments, not one.
+
+Ask Claude Code to generate a `ROUTING_KEYS` constants file early in the project. Centralizing key definitions prevents producers and consumers from drifting into inconsistent string literals.
+
 ## Consuming Messages Effectively
 
 Consumer implementation requires careful consideration of acknowledgment modes and prefetch settings:
@@ -166,6 +211,10 @@ async function startConsumer(channel, queueName, handler) {
   });
 }
 ```
+
+The `prefetch(10)` call sets a QoS limit — the broker will not send more than 10 unacknowledged messages to this consumer at once. Without prefetch, a slow consumer can receive thousands of messages it cannot process, creating a memory spike on the consumer side. Start with prefetch values between 5 and 20 and adjust based on your processing time per message.
+
+**Requeue strategy**: `channel.nack(msg, false, true)` requeues the message on failure. This is appropriate for transient failures like network timeouts. For permanent failures (malformed messages, schema validation errors), use `channel.nack(msg, false, false)` to discard without requeuing, then route to a dead letter queue for inspection.
 
 ## Practical Workflow Example
 
@@ -210,6 +259,8 @@ async function setupEcommerceWorkflow(channel) {
 }
 ```
 
+This topology means a single `order.created` publish hits the notification queue and the analytics queue simultaneously. A `order.completed` publish hits the notification queue and the shipping queue. No application-level routing logic required—RabbitMQ handles it.
+
 ## Best Practices and Actionable Advice
 
 When implementing RabbitMQ topic exchanges, follow these guidelines:
@@ -227,6 +278,8 @@ await channel.assertQueue('orders.dlq', {
 });
 ```
 
+Messages that exhaust their retry attempts or are explicitly rejected without requeue land in the dead letter queue. From there, you can inspect them, replay them after fixing the bug, or alert on unexpected patterns. Claude Code can generate a dead letter inspector script that reads from the DLQ and logs message content alongside the original routing key.
+
 **Monitor Queue Depth**: Set up alerts for queue length to prevent memory issues:
 
 ```javascript
@@ -236,6 +289,8 @@ channel.checkQueue('order.notifications', (err, ok) => {
   }
 });
 ```
+
+A growing queue means consumers cannot keep up with producers. Catching this early lets you scale consumers before the backlog becomes a memory problem on the broker.
 
 **Graceful Shutdown**: Always close connections properly:
 
@@ -247,6 +302,10 @@ process.on('SIGINT', async () => {
 });
 ```
 
+Without graceful shutdown, in-flight messages remain unacknowledged. RabbitMQ will redeliver them when the consumer reconnects, but if this happens frequently you will see spurious duplicate processing.
+
+**Test bindings before shipping**: Write a small integration test that publishes one message per routing key pattern and asserts the correct queues receive it. Claude Code can generate this test suite from your exchange topology definition. Binding bugs are silent—the producer succeeds, the broker accepts the message, but the intended consumer never sees it.
+
 ## Debugging with Claude Code
 
 When issues arise, Claude Code can help analyze your topology. Describe your problem and ask for diagnostic queries. Common debugging scenarios include:
@@ -256,9 +315,15 @@ When issues arise, Claude Code can help analyze your topology. Describe your pro
 - Consumer prefetch problems
 - Memory consumption from unacked messages
 
+A useful debugging prompt for Claude Code: "I have a topic exchange named `ecommerce.orders`. Messages with routing key `order.item.added` are not reaching my notification queue bound to `order.*`. Explain why and suggest the fix."
+
+Claude Code will immediately identify that `order.*` only matches a single word segment after `order.`, so `order.item.added` has two segments and falls through. The fix is either changing the binding to `order.#` or restructuring the routing key to `orderitem.added`.
+
+The RabbitMQ Management UI at `http://localhost:15672` provides a real-time view of exchanges, queues, bindings, and message rates. Enable it with `rabbitmq-plugins enable rabbitmq_management`. When debugging, describe what you see in the management UI to Claude Code and it can suggest root causes faster than reading logs manually.
+
 ## Conclusion
 
-RabbitMQ topic exchanges provide the flexibility needed for complex, evolving message routing requirements. By combining Claude Code's development assistance with solid RabbitMQ patterns, you can rapidly build robust messaging systems that scale with your application's needs. Start with simple routing patterns and gradually add complexity as your system grows.
+RabbitMQ topic exchanges provide the flexibility needed for complex, evolving message routing requirements. By combining Claude Code's development assistance with solid RabbitMQ patterns, you can rapidly build robust messaging systems that scale with your application's needs. Start with simple routing patterns and gradually add complexity as your system grows. Design your routing key taxonomy first, build the topology second, and let Claude Code handle the boilerplate so you can focus on consumer logic that actually differentiates your system.
 {% endraw %}
 
 ## Related Reading
