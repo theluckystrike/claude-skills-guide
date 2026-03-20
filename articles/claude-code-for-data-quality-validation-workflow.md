@@ -283,6 +283,192 @@ Claude Code transforms data quality validation from a manual, error-prone proces
 Start small—validate one dataset with a simple schema—and progressively add complexity as your validation framework matures. The investment in robust data quality validation pays dividends in system reliability and data-driven decision making.
 
 Remember: **Clean data leads to clean insights**. Let Claude Code help you achieve both.
+
+## Advanced Validation Patterns
+
+### Cross-Field Validation
+
+Real-world data quality often requires validating relationships between fields, not just individual field values:
+
+```python
+from datetime import date, datetime
+from typing import Dict, List
+
+def validate_date_logic(record: Dict) -> List[str]:
+    """Check that date fields have logical relationships"""
+    errors = []
+    
+    signup_date = parse_date(record.get('signup_date'))
+    last_login = parse_date(record.get('last_login'))
+    cancellation_date = parse_date(record.get('cancellation_date'))
+    
+    if signup_date and last_login:
+        if last_login < signup_date:
+            errors.append(f"last_login ({last_login}) before signup_date ({signup_date})")
+    
+    if cancellation_date and signup_date:
+        if cancellation_date < signup_date:
+            errors.append("cancellation_date cannot be before signup_date")
+    
+    if record.get('status') == 'active' and cancellation_date:
+        errors.append("Active customer has a cancellation_date set")
+    
+    return errors
+
+def validate_financial_consistency(record: Dict) -> List[str]:
+    """Validate financial field relationships"""
+    errors = []
+    
+    subtotal = record.get('subtotal', 0)
+    tax = record.get('tax', 0)
+    discount = record.get('discount', 0)
+    total = record.get('total', 0)
+    
+    expected_total = subtotal + tax - discount
+    tolerance = 0.01  # allow for floating point rounding
+    
+    if abs(total - expected_total) > tolerance:
+        errors.append(
+            f"Total {total} does not match subtotal+tax-discount={expected_total:.2f}"
+        )
+    
+    if discount > subtotal:
+        errors.append(f"Discount {discount} exceeds subtotal {subtotal}")
+    
+    return errors
+```
+
+Cross-field validation catches the category of bugs that slip through column-level checks: timestamps in impossible sequences, financial totals that do not add up, and status fields inconsistent with associated data.
+
+### Statistical Anomaly Detection
+
+For large datasets, statistical validation surfaces outliers that rule-based checks miss:
+
+```python
+import statistics
+from typing import Optional
+
+def detect_statistical_anomalies(
+    data: List[Dict],
+    numeric_field: str,
+    z_score_threshold: float = 3.0
+) -> List[Dict]:
+    """Flag records where a numeric field is a statistical outlier"""
+    
+    values = [r[numeric_field] for r in data if numeric_field in r and r[numeric_field] is not None]
+    
+    if len(values) < 10:
+        return []  # Need enough data for meaningful statistics
+    
+    mean = statistics.mean(values)
+    stdev = statistics.stdev(values)
+    
+    if stdev == 0:
+        return []  # All values identical, no outliers
+    
+    anomalies = []
+    for record in data:
+        value = record.get(numeric_field)
+        if value is None:
+            continue
+        
+        z_score = abs((value - mean) / stdev)
+        if z_score > z_score_threshold:
+            anomalies.append({
+                'record': record,
+                'field': numeric_field,
+                'value': value,
+                'z_score': round(z_score, 2),
+                'mean': round(mean, 2),
+                'stdev': round(stdev, 2)
+            })
+    
+    return anomalies
+
+# Usage
+anomalies = detect_statistical_anomalies(customer_data, 'lifetime_value')
+for a in anomalies:
+    print(f"Customer {a['record']['customer_id']}: LTV={a['value']} (z={a['z_score']})")
+```
+
+Statistical anomaly detection is particularly valuable for financial data, sensor readings, and any field where extreme values indicate data entry errors or system bugs rather than genuine outliers.
+
+## Building a Validation Dashboard
+
+Track data quality metrics over time with a simple reporting layer:
+
+```python
+from datetime import datetime
+import json
+
+class ValidationDashboard:
+    def __init__(self, metrics_file: str = 'validation_metrics.json'):
+        self.metrics_file = metrics_file
+        self.history = self._load_history()
+    
+    def _load_history(self) -> list:
+        try:
+            with open(self.metrics_file) as f:
+                return json.load(f)
+        except FileNotFoundError:
+            return []
+    
+    def record_run(self, dataset_name: str, results: Dict) -> None:
+        total = len(results['valid']) + len(results['invalid'])
+        entry = {
+            'timestamp': datetime.now().isoformat(),
+            'dataset': dataset_name,
+            'total_records': total,
+            'valid_records': len(results['valid']),
+            'invalid_records': len(results['invalid']),
+            'pass_rate': len(results['valid']) / total if total > 0 else 0,
+            'error_categories': self._categorize_errors(results['errors'])
+        }
+        
+        self.history.append(entry)
+        
+        with open(self.metrics_file, 'w') as f:
+            json.dump(self.history, f, indent=2)
+    
+    def _categorize_errors(self, errors: list) -> Dict:
+        categories = {}
+        for error in errors:
+            # Extract field name from error string
+            field = error.get('error', '').split(':')[0].strip()
+            categories[field] = categories.get(field, 0) + 1
+        return categories
+    
+    def get_trend(self, dataset_name: str, last_n_runs: int = 10) -> list:
+        runs = [h for h in self.history if h['dataset'] == dataset_name]
+        return runs[-last_n_runs:]
+```
+
+Use this dashboard to detect data quality degradation early: if pass rate drops from 98% to 90% between two pipeline runs, that signals a change in upstream data that warrants investigation before it reaches production systems.
+
+## Integrating Validation into CI/CD Pipelines
+
+Configure your validation framework to block deployments when data quality falls below acceptable thresholds:
+
+```bash
+#!/bin/bash
+# validate-data.sh - Run before deploying to production
+
+MIN_PASS_RATE=0.95
+
+result=$(python3 scripts/validate_data.py --output json)
+pass_rate=$(echo "$result" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['pass_rate'])")
+
+if python3 -c "exit(0 if float('$pass_rate') >= $MIN_PASS_RATE else 1)"; then
+  echo "Data validation passed: ${pass_rate} pass rate"
+  exit 0
+else
+  echo "Data validation FAILED: ${pass_rate} pass rate is below minimum ${MIN_PASS_RATE}"
+  exit 1
+fi
+```
+
+This gate catches data pipeline failures before they corrupt production databases, which is far cheaper than discovering corrupt data after the fact through customer complaints or financial audits.
+
 {% endraw %}
 
 ## Related Reading

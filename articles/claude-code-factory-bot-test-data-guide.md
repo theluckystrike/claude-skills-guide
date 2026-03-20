@@ -356,6 +356,146 @@ end
 ## Conclusion
 
 Factory Bot combined with Claude Code creates a powerful testing workflow. Use Claude Code to generate factories from your models, create test data scenarios, and maintain clean, reusable factory definitions. This approach ensures your test suite remains fast, maintainable, and expressive.
+
+## Troubleshooting Factory Bot Performance
+
+### Diagnosing Slow Test Suites
+
+Factory Bot is often blamed for slow test suites, but the real culprit is usually unnecessary database writes. Profile your factories to find the hot spots:
+
+```ruby
+# spec/support/factory_bot_profiler.rb
+module FactoryBotProfiler
+  SLOW_THRESHOLD_MS = 100
+
+  def self.enable!
+    ActiveSupport::Notifications.subscribe('factory_bot.run_factory') do |name, start, finish, id, payload|
+      duration_ms = ((finish - start) * 1000).round(1)
+      factory_name = payload[:name]
+      strategy = payload[:strategy]
+      
+      if duration_ms > SLOW_THRESHOLD_MS
+        Rails.logger.warn "[FactoryBot] Slow factory: #{factory_name} took #{duration_ms}ms"
+      end
+    end
+  end
+end
+```
+
+Run with `PROFILE_FACTORIES=1 bundle exec rspec` to identify which factories consistently exceed the threshold.
+
+### Replacing create with build_stubbed at Scale
+
+The single most impactful optimization for pure unit tests is replacing `create` with `build_stubbed`. The stubbed strategy skips the database entirely:
+
+```ruby
+RSpec.describe User do
+  describe "#display_name" do
+    it "combines first and last name" do
+      # Bad: writes to database, unnecessary for this test
+      user = create(:user, first_name: "Jane", last_name: "Smith")
+      
+      # Good: no database write, 10-100x faster
+      user = build_stubbed(:user, first_name: "Jane", last_name: "Smith")
+      
+      expect(user.display_name).to eq("Jane Smith")
+    end
+  end
+end
+```
+
+Apply this pattern to any test that exercises business logic without querying the database. A test suite that replaces 40% of `create` calls with `build_stubbed` often sees 30-50% overall speed improvement.
+
+## Generating Realistic Test Data
+
+### Using Faker for Realistic Attributes
+
+Static factory values like `"John Doe"` can mask bugs that only appear with real-world input variation. Use Faker to generate realistic data:
+
+```ruby
+# spec/factories/users.rb
+require 'faker'
+
+FactoryBot.define do
+  factory :user do
+    first_name { Faker::Name.first_name }
+    last_name  { Faker::Name.last_name }
+    sequence(:email) { |n| "user-#{n}@#{Faker::Internet.domain_name}" }
+    phone      { Faker::PhoneNumber.cell_phone_in_e164 }
+    born_on    { Faker::Date.birthday(min_age: 18, max_age: 75) }
+    
+    trait :international do
+      country_code { Faker::Address.country_code }
+    end
+  end
+end
+```
+
+Faker generates unique values on each test run, catching encoding issues, boundary conditions, and display formatting bugs that static fixtures never surface.
+
+### Building State-Machine Factories
+
+Applications with AASM or StateMachines need factories that respect state transitions. Use callbacks to advance through states correctly:
+
+```ruby
+FactoryBot.define do
+  factory :order do
+    user
+    sequence(:reference) { |n| "ORD-#{n.to_s.rjust(6, '0')}" }
+    state { 'pending' }
+    
+    trait :confirmed do
+      after(:create, &:confirm!)
+    end
+    
+    trait :shipped do
+      after(:create) do |order|
+        order.confirm!
+        order.ship!(tracking_number: "TRACK#{rand(1_000_000)}")
+      end
+    end
+    
+    trait :cancelled do
+      after(:create, &:cancel!)
+    end
+  end
+end
+```
+
+This ensures your test objects always arrive in a valid state, preventing the flakiness that comes from manually setting state columns without triggering callbacks.
+
+## Using Claude Code to Generate Factories
+
+When using Claude Code to generate new factories for your Rails app, include your existing factory conventions in the prompt:
+
+```
+Using Factory Bot, create a factory for the Payment model with these requirements:
+- Required associations: user, order
+- Amount should use Faker::Commerce.price
+- Include traits for: authorized, captured, refunded, failed
+- The captured and refunded traits should advance through state machine transitions
+- Include a transient attribute for amount_in_cents that calculates from amount
+
+Reference our existing patterns in spec/factories/orders.rb for consistency.
+```
+
+Claude Code reads your existing factories and generates new ones that follow the same patterns: correct trait structure, proper callback placement, and consistent Faker usage across your test suite.
+
+## Linting Your Factory Definitions
+
+Use Factory Bot's built-in linter to catch misconfigured factories before they cause mysterious test failures:
+
+```ruby
+# spec/support/factory_linter.rb
+RSpec.describe "Factory Bot Linting" do
+  it "has valid factories" do
+    expect { FactoryBot.lint }.not_to raise_error
+  end
+end
+```
+
+The linter instantiates each factory and checks that the resulting object is valid according to your model validations. Run this in your CI pipeline on every push. A factory that fails validation silently in tests can cause hours of debugging.
+
 {% endraw %}
 
 
