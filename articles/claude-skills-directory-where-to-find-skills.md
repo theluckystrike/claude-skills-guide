@@ -34,6 +34,22 @@ To see which skills are available in your session, check your `~/.claude/skills/
 ls ~/.claude/skills/
 ```
 
+For a more readable listing that shows each skill on its own line with file sizes:
+
+```bash
+ls -lh ~/.claude/skills/
+```
+
+If you want to quickly preview what each skill does without opening every file, scan the first few lines of each one — most well-written skills open with a one-sentence purpose statement:
+
+```bash
+for f in ~/.claude/skills/*.md; do
+  echo "=== $f ==="
+  head -5 "$f"
+  echo ""
+done
+```
+
 To load a skill's full guidance, invoke it with a slash command:
 
 ```
@@ -41,6 +57,8 @@ To load a skill's full guidance, invoke it with a slash command:
 /tdd
 /supermemory
 ```
+
+You can also verify that a skill loaded correctly by asking Claude to summarize what the skill does immediately after invoking it. If the skill file is malformed or empty, Claude will tell you it found no instructions.
 
 ## Community Skills
 
@@ -51,6 +69,18 @@ The community maintains additional skills in public GitHub repositories. The bes
 - Check the [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) community list
 
 Community skills are `.md` files you clone or download and place in `~/.claude/skills/`.
+
+### GitHub Search Tips
+
+GitHub's search is powerful if you know the right queries. A few searches that surface real skill files:
+
+- `filename:*.md path:.claude/skills` — finds any public repo that has committed skill files to the standard path
+- `"## Usage" "claude-code" language:Markdown` — finds Markdown files written in the typical skill documentation format
+- `"slash command" "claude code" language:Markdown` — surfaces skill guides that describe their own invocation syntax
+
+When browsing search results, filter by **Recently updated** rather than Best match. Skill files that haven't been touched in many months may reference deprecated Claude Code APIs or assume an older model.
+
+It also helps to follow active Claude Code community members on GitHub directly. Contributors who publish useful MCP servers often publish companion skill files in the same repository.
 
 ## Installing a Community Skill
 
@@ -81,7 +111,7 @@ After installing, restart your Claude Code session and invoke the skill with `/s
 | Browser automation testing | `/webapp-testing` |
 | Build custom MCP servers | `/skill-creator` |
 
-## Evaluating Community Skills
+## Evaluating Skill Quality
 
 Before adding a community skill:
 
@@ -91,6 +121,48 @@ Before adding a community skill:
 4. Test in a non-critical session first
 
 Official skills from Anthropic are tested and maintained. Community skills vary in quality — reading the `.md` file directly is the fastest way to evaluate one.
+
+### What Makes a Good Skill File
+
+Not all `.md` files labeled as skills are equally useful. A well-crafted skill file has a few consistent qualities.
+
+**Clear opening statement.** The first paragraph should tell Claude exactly what role to adopt and what task the skill covers. Vague openings like "This skill helps with code" leave Claude without a strong behavioral anchor. Good openings are specific: "You are operating as a database migration specialist. When invoked, your job is to..."
+
+**Concrete examples, not just principles.** A skill that says "write clean code" gives Claude nothing it doesn't already know. A skill that shows example inputs and expected outputs — or that names specific frameworks, file formats, and edge cases — is far more useful.
+
+**Scoped instructions.** A skill should stay focused on one domain. Skills that try to cover ten different workflows in a single file end up being mediocre at all of them. If you find a community skill that does too much, it's often better to split it or find a narrower alternative.
+
+**No contradictory rules.** Some community skill files accumulate instructions from multiple contributors and end up with conflicting directives. Look for lines like "always do X" paired with "never do X" elsewhere in the same file. These cause inconsistent behavior.
+
+**Maintained alongside a changelog.** Repos where the skill file has its own version history in commit messages, or where the author responds to issues, are significantly more reliable than one-off file drops.
+
+A quick way to assess a skill file before installing it is to paste its contents into a Claude session and ask: "Does this skill file contain any contradictions or ambiguous instructions?" Claude will surface problems that might not be obvious on a quick read.
+
+## Organizing Your Local Skills Directory
+
+As your skills collection grows, a flat directory of `.md` files becomes hard to navigate. A few organizational approaches that work well.
+
+**Name files descriptively.** The filename becomes the slash command. `db-migration.md` invokes as `/db-migration`, which is more self-explanatory than `skill3.md`. Stick to lowercase with hyphens — Claude Code is case-sensitive on some platforms.
+
+**Use a naming prefix for related skills.** If you have several testing-related skills, naming them `test-tdd.md`, `test-e2e.md`, and `test-coverage.md` keeps them grouped when you list the directory:
+
+```bash
+ls ~/.claude/skills/ | sort
+```
+
+**Keep a local README in the skills directory.** A short `README.md` in `~/.claude/skills/` won't conflict with skill invocation (Claude only loads files you explicitly invoke), but it gives you a place to track what each skill does and where you got it:
+
+```bash
+# View your local skills README
+cat ~/.claude/skills/README.md
+```
+
+**Archive stale skills rather than deleting them.** If a skill breaks after a Claude Code update, move it to `~/.claude/skills/archive/` instead of deleting it. Skills directories are not recursive — only files directly in `~/.claude/skills/` are available as slash commands, so anything in a subdirectory is effectively archived without being lost.
+
+```bash
+mkdir -p ~/.claude/skills/archive
+mv ~/.claude/skills/old-skill.md ~/.claude/skills/archive/
+```
 
 ## Keeping Skills Updated
 
@@ -106,6 +178,27 @@ For community skills stored as Git repos, pull updates periodically:
 git -C /path/to/skills-repo pull
 cp /path/to/skills-repo/*.md ~/.claude/skills/
 ```
+
+If you manage several community skills from different sources, a small shell script makes bulk updates less tedious:
+
+```bash
+#!/bin/bash
+# update-skills.sh — pull all Git-tracked skill repos and copy files
+SKILLS_REPOS=(
+  "/path/to/skills-repo-one"
+  "/path/to/skills-repo-two"
+)
+
+for repo in "${SKILLS_REPOS[@]}"; do
+  echo "Updating $repo..."
+  git -C "$repo" pull
+  cp "$repo"/*.md ~/.claude/skills/
+done
+
+echo "Skills updated."
+```
+
+Save this as `update-skills.sh`, make it executable with `chmod +x update-skills.sh`, and run it whenever you want to sync.
 
 ---
 
