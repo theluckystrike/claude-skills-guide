@@ -154,11 +154,123 @@ Document every Claude-assisted security decision. Use the supermemory skill to t
 
 Review generated code for sensitive data before committing. Claude skills accelerate development but don't replace security review. The [Claude Code secret scanning guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) shows how to add automated credential detection before any code leaves your machine.
 
+## SOC2 Pre-Audit Readiness Checklist
+
+Auditors arrive with a standard evidence request list. Running through this checklist before your audit window opens prevents last-minute scrambles. Use the skills above to generate or verify each item.
+
+**Logical Access Controls (CC6.1)**
+- [ ] Access provisioning and deprovisioning procedures documented and tested
+- [ ] MFA enforced for all systems processing cardholder or sensitive data
+- [ ] Privileged access reviewed quarterly; evidence stored via supermemory
+- [ ] Failed login attempt limits defined in code and tested via tdd
+- [ ] Terminated employee access revocation completed within 24 hours (policy + test)
+
+**Change Management (CC8.1)**
+- [ ] All production changes tied to approved tickets with reviewer documented
+- [ ] Separation of duties enforced: developer cannot deploy their own code
+- [ ] Security regression tests run automatically on every pull request
+- [ ] Change log preserved in supermemory with ticket IDs and approver emails
+
+**Audit Logging (CC7.1, CC7.2)**
+- [ ] Log sources identified: application, infrastructure, authentication systems
+- [ ] Log retention period meets SOC2 requirements (minimum 12 months)
+- [ ] Logs are immutable and stored outside the production environment
+- [ ] Log review process documented with cadence and responsible owner
+
+**Incident Response (CC7.4)**
+- [ ] Incident response plan current, approved, and tested in the last 12 months
+- [ ] Runbooks generated and exported to PDF for offline access
+- [ ] Post-incident review process documented with corrective action tracking
+
+**Availability (A1.1)**
+- [ ] Uptime SLA defined and monitored
+- [ ] Backup and recovery procedures tested; results documented
+- [ ] RTO and RPO targets established and reflected in architecture decisions
+
+---
+
+## ISO27001 Control Implementation Reference
+
+ISO27001 Annex A contains 93 controls across four categories. The table below maps the controls most commonly flagged during gap assessments to the Claude skills that help address them.
+
+| Annex A Control | Control Title | Claude Skill | Implementation Notes |
+|-----------------|---------------|--------------|----------------------|
+| A.5.15 | Access control | tdd, frontend-design | Test access boundaries; generate MFA and RBAC components |
+| A.5.23 | Info security for cloud services | supermemory, pdf | Document cloud service risk decisions; extract SLA terms from vendor PDFs |
+| A.8.8 | Management of technical vulnerabilities | tdd | Automate security regression tests; integrate with SAST output |
+| A.8.9 | Configuration management | supermemory | Log configuration changes with approver and rationale |
+| A.8.24 | Use of cryptography | tdd, frontend-design | Assert encryption standards in tests; enforce TLS headers in components |
+| A.8.28 | Secure coding | tdd | Test-first approach produces auditable proof that security requirements were specified before implementation |
+
+For Annex A controls not covered by Claude skills directly, use the pdf skill to extract requirements from your existing policy library and identify gaps. Running that extraction quarterly keeps your Statement of Applicability current without a full manual review.
+
+---
+
+## Practical Audit Preparation Workflow
+
+Treat audit preparation as a six-week sprint, not a two-day fire drill. This workflow uses Claude skills at each phase.
+
+**Six Weeks Out: Evidence Inventory**
+
+Pull together every piece of evidence an auditor could request. Use the pdf skill to process policy documents and extract control references:
+
+```bash
+/pdf extract all controls referenced in information-security-policy.pdf and list by section number
+```
+
+Compare the extracted list against your target framework controls. Gaps become your sprint backlog.
+
+**Four Weeks Out: Control Testing**
+
+Run the tdd skill to generate tests for each technical control that lacks automated verification:
+
+```bash
+/tdd create test suite for session timeout enforcement aligned to SOC2 CC6.1
+```
+
+Each test file should reference the specific control in its docstring. This creates machine-readable evidence that the control exists and is tested.
+
+**Two Weeks Out: Documentation Review**
+
+Use the pdf skill to consolidate your evidence package:
+
+```bash
+/pdf create report combining access-review-q1.pdf and access-review-q2.pdf with unified table of contents
+```
+
+Auditors prefer structured evidence packages over loose files. A consolidated PDF with a table of contents reduces back-and-forth during fieldwork.
+
+**Final Week: Audit Trail Reconciliation**
+
+Query supermemory to confirm that all significant security decisions made during the audit period are recorded:
+
+```bash
+/supermemory List all security decisions and access changes logged since January 2026
+```
+
+Any gaps in the timeline need to be reconstructed from calendar records, Slack, or ticketing systems before the auditor arrives.
+
+---
+
+## Continuous Compliance: Moving Beyond Point-in-Time Audits
+
+SOC2 Type II and ISO27001 surveillance audits evaluate your controls over a period of time, not just at a snapshot. Point-in-time readiness is necessary but not sufficient. The real goal is a compliance posture that holds up on any randomly selected day in the audit window.
+
+Three practices make this achievable with Claude skills:
+
+**Commit security tests alongside feature code.** Every new feature that touches authentication, authorization, or data handling gets a corresponding tdd-generated test file committed in the same pull request. The test references the applicable SOC2 or ISO27001 control. Over a 12-month audit period, this produces hundreds of timestamped, version-controlled evidence items.
+
+**Log decisions in real time, not retroactively.** Security decisions are easiest to document when they happen. Train your team to use the supermemory skill immediately after approving IAM changes, exception grants, or policy deviations. Reconstructing six months of decisions the week before an audit is error-prone and unconvincing to auditors.
+
+**Schedule monthly evidence pulls.** Set a recurring calendar event to run your pdf extraction and supermemory query workflow. A monthly 30-minute evidence review catches drift early—a misconfigured MFA setting or an expired policy document discovered in month two is far less damaging than one discovered during fieldwork.
+
+---
+
 ## Building Your Compliance Stack
 
 Start with the tdd skill for test-driven security. Add the pdf skill for documentation management. Use supermemory for audit trails. These three skills cover the majority of technical controls required by both SOC2 and ISO27001.
 
-The goal isn't to use Claude skills for everything—it's to use them strategically where they provide the most value: consistent test coverage, auditable documentation, and maintainable security patterns.
+The goal isn't to use Claude skills for everything—it's to use them strategically where they provide the most value: consistent test coverage, auditable documentation, and maintainable security patterns. Pair skill-generated artifacts with a clear ownership model—every control needs a named owner accountable for its evidence—and your compliance program becomes something auditors can verify rather than something you assemble in a panic.
 
 ## Related Reading
 

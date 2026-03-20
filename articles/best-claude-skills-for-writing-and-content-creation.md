@@ -159,6 +159,102 @@ These skills work together in sequence. A typical long-form content workflow:
 
 Each skill handles one stage of the content lifecycle. The result is a consistent output across formats without rebuilding content from scratch at each step.
 
+## Content Repurposing Workflow
+
+One of the highest-leverage uses for writing skills is content repurposing — taking a single source piece and producing multiple derivative formats without rewriting from scratch.
+
+A blog post published Monday becomes a slide deck for Wednesday's webinar, a PDF guide for the newsletter download, and a data table embedded in the follow-up email. Skills make each conversion a single command rather than a multi-hour manual task.
+
+**Source: a 2,000-word research article**
+
+Convert to slides for a webinar:
+```
+/pptx create a 12-slide deck from this article. Lead with the problem statement, use one key stat per slide, and close with a next-steps slide: [paste article]
+```
+
+Export as a gated PDF lead magnet:
+```
+/pdf create a formatted PDF guide from this article. Add a title page with "Free Guide" as a subtitle, page numbers, and a footer with the company URL: [paste article]
+```
+
+Build a supporting data table:
+```
+/xlsx create a comparison table from the statistics in this article. Columns: Metric, Industry Average, Our Finding, Source: [paste article]
+```
+
+The article, the deck, the PDF, and the spreadsheet all originate from the same source. No content is rewritten — it is restructured. This is the core productivity gain writing skills provide.
+
+## Client Deliverable Templates
+
+Writers who produce recurring deliverables for clients benefit from building reusable invocation patterns rather than typing full instructions each session.
+
+**Monthly report template:**
+```
+/docx create a monthly performance report with these sections: Executive Summary (3 bullets max), Key Metrics (table: Metric, This Month, Last Month, Change %), Highlights, Risks and Issues, Next Steps. Brand: [client name]. Month: [month].
+```
+
+**Client pitch deck:**
+```
+/pptx create a 7-slide pitch deck: title slide, problem we solve, our solution, how it works (3 bullets), case study, pricing table, call to action. Use this brand brief: [paste brief]
+```
+
+**Technical specification document:**
+```
+/docx create a technical specification with: Overview, Requirements (numbered list), Architecture (with a placeholder for a diagram), API Endpoints (table: Endpoint, Method, Description, Auth Required), Error Codes (table), Changelog. Author: [name]. Version: 1.0.
+```
+
+Save these as plain text snippets in a notes file or store them in supermemory. Retrieve and fire them at the start of each client engagement.
+
+```
+/supermemory store: acme-monthly-report-template = [paste full invocation text]
+```
+
+Then in any future session:
+
+```
+/supermemory What is the Acme monthly report template?
+```
+
+Paste the recalled template, swap in the current month and metrics, and the document is generated in seconds.
+
+## Productivity Patterns for Writers
+
+Skills accelerate writing work most when they eliminate the transitions between tools — the switching between a text editor, spreadsheet, presentation app, and PDF viewer that fragments a writing session.
+
+**Pattern 1 — Draft everything in a single session.** Use the `docx` skill for the main deliverable, the `xlsx` skill for any supporting data, and the `pdf` skill for the final export. Stay in Claude Code throughout rather than opening separate applications for each format.
+
+**Pattern 2 — Store client context before the first word.** Before drafting anything for a client, pull their brand voice and style rules from supermemory. This front-loads the constraint-setting so every subsequent command in the session inherits the right tone automatically.
+
+```
+/supermemory What are the Thomson Industries writing rules?
+```
+
+Then prefix each draft request with the recalled guidelines. Every output in that session stays on-brand without repeating the brand brief at each step.
+
+**Pattern 3 — Use tracked changes for revision rounds.** Rather than sending a redline-free draft and waiting for feedback, use the `docx` skill to add tracked changes directly:
+
+```
+/docx open draft-v1.docx and apply these revisions as tracked changes: replace all instances of "utilize" with "use", shorten the introduction to 3 sentences, and add a comment on paragraph 4 noting that the stat needs a source
+```
+
+Clients or editors receive a document with visible changes they can accept or reject in Word — a workflow they already know, with no new tools for them to learn.
+
+**Pattern 4 — Batch content production by format.** When producing a content series — say, six topic guides for a product launch — generate all six Word drafts first, then convert all six to PDF in sequence. Batching by format keeps the work organized and prevents context-switching mid-session.
+
+```
+/docx create a 1,200-word guide on [topic 1] following this brief: [paste brief]
+/docx create a 1,200-word guide on [topic 2] following this brief: [paste brief]
+```
+
+Once all drafts are approved:
+
+```
+/pdf convert guide-topic-1.docx to a formatted PDF with standard header and footer
+/pdf convert guide-topic-2.docx to a formatted PDF with standard header and footer
+```
+
+The batch approach keeps session context stable and produces a consistent output quality across the series because the same guidelines are active throughout.
+
 ---
 
 ## Related Reading
