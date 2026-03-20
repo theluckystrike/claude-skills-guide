@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /chrome-extension-onenote-clipper-setup/
 reviewed: true
 score: 8
-categories: [chrome-extensions, onenote, productivity]
+categories: [guides, productivity]
 tags: [chrome-extension, onenote, web-clipping, productivity-tools]
 ---
 
