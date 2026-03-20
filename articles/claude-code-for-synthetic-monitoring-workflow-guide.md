@@ -234,6 +234,53 @@ echo "✓ All synthetic checks passed"
 exit 0
 ```
 
+
+## Step-by-Step Guide: Building Your Monitoring Stack
+
+Here is a practical workflow for building an intelligent synthetic monitoring system from scratch.
+
+**Step 1 — Define your monitoring targets.** List the endpoints and user journeys that matter most to your business. For an e-commerce site, these might be the product listing page, cart flow, checkout API, and payment confirmation. Claude Code helps you prioritize based on business impact and failure blast radius.
+
+**Step 2 — Write baseline synthetic scripts.** For each target, write a synthetic check that simulates the critical path. Claude Code generates the APIMonitor class shown in this guide and extends it with business-specific assertions—checking that product prices are positive numbers, cart totals match line items, and payment responses contain required fields.
+
+**Step 3 — Set up a results store.** Write check results to a time-series database or simple JSON files. Claude Code generates the write functions with proper timestamping and result normalization, ensuring consistent format regardless of which endpoint produced the result.
+
+**Step 4 — Build the analysis workflow.** Configure the Claude API call that analyzes your results. Provide historical context by including the last 24 hours of results alongside the current run. Claude Code generates the prompt template that guides the analysis toward actionable conclusions rather than generic observations.
+
+**Step 5 — Integrate alerts.** Wire the analysis output to your alerting channel—PagerDuty, Slack, or email. Claude Code generates the routing logic that sends high-severity alerts to on-call and lower-severity findings to a monitoring channel for async review.
+
+## Common Pitfalls
+
+**Tests that pass on retries but hide flakiness.** If your synthetic scripts retry on failure, you may see green results even when endpoints are intermittently failing. Claude Code can help you build a flakiness tracker that logs retry counts alongside results, surfacing intermittent issues before they become sustained outages.
+
+**Hardcoding expected response times.** Response time thresholds that work for one region or time of day may trigger false positives in others. Claude Code can generate adaptive threshold functions that calculate acceptable ranges based on historical distributions, automatically adjusting for time-of-day patterns and regional latency differences.
+
+**Not rotating test credentials.** Synthetic tests that authenticate as real users use credentials that expire. Build credential refresh logic into your monitoring framework. Claude Code generates the token refresh pattern and integrates it with your secret management system.
+
+**Ignoring certificate expiration.** SSL certificates expire and can take down HTTPS endpoints suddenly. Add certificate expiration checks to your synthetic suite. Claude Code generates certificate inspection code that warns when certs are within 30 days of expiration, giving you time to renew before users see errors.
+
+**Running checks too infrequently.** A five-minute check interval means you can miss outages that resolve quickly and still lose significant revenue. Balance check frequency against API rate limits and monitoring costs. For critical payment flows, one-minute intervals are often appropriate.
+
+## Best Practices
+
+**Separate health checks from synthetic transactions.** A simple ping-style health check tells you if a server is responding. A full synthetic transaction tells you if the business workflow is working. Maintain both types—health checks for immediate alerting and synthetic transactions for deeper validation.
+
+**Use geographic distribution for checks.** Running checks from only one location misses regional issues like CDN misconfiguration or DNS propagation problems. Claude Code can help you distribute your monitoring across multiple regions using cloud functions or a dedicated monitoring service.
+
+**Version your synthetic scripts.** Store your monitoring scripts in version control alongside your application code. When you deploy changes, update the corresponding synthetic scripts. Claude Code generates the test update scripts mentioned in the Automating Test Maintenance section and can run them as part of your CI/CD pipeline.
+
+**Build a runbook for each alert type.** Each alert that Claude Code generates should link to a runbook explaining how to diagnose and fix the underlying issue. Claude Code can help you write initial runbooks based on historical incident data, creating a knowledge base that improves on-call response times.
+
+**Review Claude recommendations over time.** Log the recommendations Claude makes during analysis and track whether following them resolved the underlying issues. This feedback loop helps you refine your prompts to generate more accurate, actionable guidance.
+
+## Integration Patterns
+
+**Datadog Synthetics integration.** If your team uses Datadog, Claude Code can generate scripts that push synthetic check results to Datadog custom metrics. This lets you combine AI-generated insights with Datadog dashboards, alerts, and anomaly detection.
+
+**Grafana integration.** Export synthetic check results to a Prometheus-compatible endpoint and visualize them in Grafana alongside your application metrics. Claude Code generates the Prometheus exposition format writer and example Grafana dashboard JSON.
+
+**Incident management integration.** When Claude Code analysis identifies a high-severity issue, automatically create an incident in PagerDuty or OpsGenie. Claude Code generates the incident creation API calls with proper severity mapping based on the analysis output.
+
 ## Best Practices for Claude-Driven Monitoring
 
 When implementing Claude Code in your synthetic monitoring workflow:
