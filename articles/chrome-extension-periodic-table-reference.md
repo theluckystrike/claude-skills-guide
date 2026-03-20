@@ -77,9 +77,9 @@ Communication between extension components uses message passing:
 
 ```javascript
 // From content script to background
-chrome.runtime.sendMessage({ 
-  action: "fetchData", 
-  url: "https://api.example.com/data" 
+chrome.runtime.sendMessage({
+  action: "fetchData",
+  url: "https://api.example.com/data"
 }).then((response) => {
   console.log("Response:", response);
 });
@@ -123,8 +123,8 @@ To share data between content scripts and page JavaScript, use custom events:
 
 ```javascript
 // Content script dispatching to page
-const event = new CustomEvent("myExtensionEvent", { 
-  detail: { data: "important information" } 
+const event = new CustomEvent("myExtensionEvent", {
+  detail: { data: "important information" }
 });
 document.dispatchEvent(event);
 
@@ -227,6 +227,133 @@ Always follow security best practices:
 - Validate all data from external sources
 - Avoid `eval()` and inline scripts where possible
 - Implement Content Security Policy in manifest
+
+## Tabs and Windows API: Practical Patterns
+
+The tabs and windows APIs are among the most commonly used in real-world extensions. They let you query, create, update, and close tabs programmatically, enabling everything from simple tab counters to full-featured workflow managers.
+
+### Querying and Updating Active Tabs
+
+A common pattern is grabbing the current active tab and modifying its URL or injecting a script:
+
+```javascript
+// Get the active tab and inject a script dynamically
+chrome.tabs.query({ active: true, currentWindow: true }).then(([tab]) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    func: () => {
+      document.body.style.backgroundColor = "lightyellow";
+    }
+  });
+});
+```
+
+This approach is useful for one-off injections triggered by a popup button click, without needing a persistent content script running on every page. The `scripting` permission must be declared in the manifest.
+
+### Creating and Grouping Tabs
+
+Chrome 89+ introduced tab groups, which let extensions organize tabs programmatically:
+
+```javascript
+// Open multiple related tabs and group them
+async function openDocumentationSet(urls) {
+  const tabIds = [];
+  for (const url of urls) {
+    const tab = await chrome.tabs.create({ url, active: false });
+    tabIds.push(tab.id);
+  }
+  const groupId = await chrome.tabs.group({ tabIds });
+  await chrome.tabGroups.update(groupId, {
+    title: "Reference Docs",
+    color: "blue",
+    collapsed: false
+  });
+}
+
+openDocumentationSet([
+  "https://developer.chrome.com/docs/extensions/",
+  "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions"
+]);
+```
+
+This requires the `tabGroups` permission. Tab groups persist across sessions when Chrome's tab restore feature is active, making them practical for saving research workflows.
+
+## Options Page Patterns
+
+An options page lets users configure extension behavior without cluttering the popup. It's a full HTML page with access to all Chrome APIs.
+
+### Connecting Options Page to Storage
+
+```javascript
+// options.js — save user preferences
+document.getElementById("saveBtn").addEventListener("click", () => {
+  const theme = document.getElementById("themeSelect").value;
+  const autoRun = document.getElementById("autoRunCheckbox").checked;
+
+  chrome.storage.sync.set({ theme, autoRun }).then(() => {
+    const status = document.getElementById("status");
+    status.textContent = "Settings saved.";
+    setTimeout(() => { status.textContent = ""; }, 2000);
+  });
+});
+
+// Load existing values on page open
+chrome.storage.sync.get(["theme", "autoRun"]).then((prefs) => {
+  if (prefs.theme) document.getElementById("themeSelect").value = prefs.theme;
+  if (prefs.autoRun !== undefined) {
+    document.getElementById("autoRunCheckbox").checked = prefs.autoRun;
+  }
+});
+```
+
+Using `storage.sync` here ensures that settings follow the user across devices where they are signed into Chrome. Keep sync storage payloads small — Chrome limits sync storage to 100KB total with individual keys capped at 8KB.
+
+## Alarms API for Scheduled Tasks
+
+Service workers can be terminated by Chrome after a period of inactivity. The alarms API provides a reliable mechanism for scheduling recurring tasks that survive service worker restarts.
+
+```javascript
+// background.js — schedule a recurring check every 30 minutes
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.alarms.create("dataRefresh", { periodInMinutes: 30 });
+});
+
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === "dataRefresh") {
+    fetch("https://api.example.com/status")
+      .then(res => res.json())
+      .then(data => {
+        chrome.storage.local.set({ lastStatus: data, lastChecked: Date.now() });
+      });
+  }
+});
+```
+
+The alarms API requires the `"alarms"` permission. Unlike `setTimeout`, alarms fire even after the service worker has been idle and restarted, making them essential for any extension that needs reliable background polling.
+
+## Notifications API
+
+Extensions can surface native OS notifications without requiring the user to have the extension popup open:
+
+```javascript
+// Show a notification with an action button
+chrome.notifications.create("alert-001", {
+  type: "basic",
+  iconUrl: "icon128.png",
+  title: "Task Complete",
+  message: "Your data export is ready to download.",
+  buttons: [{ title: "Open File" }],
+  priority: 2
+});
+
+chrome.notifications.onButtonClicked.addListener((notificationId, buttonIndex) => {
+  if (notificationId === "alert-001" && buttonIndex === 0) {
+    chrome.tabs.create({ url: "https://example.com/download" });
+  }
+});
+```
+
+Notifications require the `"notifications"` permission. On macOS, users must grant notification permissions to Chrome at the OS level for these to appear. Always clear notifications once they are no longer relevant using `chrome.notifications.clear()` to avoid notification buildup.
 
 ## Building for Production
 

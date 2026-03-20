@@ -154,6 +154,85 @@ Large codebases can slow down skill operations that scan entire repositories. Op
 
 These constraints prevent skills from wasting resources on irrelevant files and keep operations fast even in massive repositories.
 
+## Enforcing Skill Standards Across Teams
+
+In large organizations, inconsistency between team skill configurations is as damaging as having no standards at all. Two teams using the same **tdd** skill with different coverage thresholds will produce codebases with wildly different test quality over time. The solution is a governance layer that validates configurations at CI time.
+
+Add a skill lint step to your CI pipeline:
+
+```yaml
+# .github/workflows/skill-lint.yml
+name: Validate Skill Configurations
+on: [pull_request]
+
+jobs:
+  skill-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate skill configs
+        run: |
+          node scripts/validate-skills.js .claude/skills/
+```
+
+The validation script checks that required fields are present, coverage thresholds meet minimums, and team overrides stay within permitted ranges. Teams that drift from organizational standards get immediate feedback in their pull request rather than discovering inconsistencies during code review.
+
+This is particularly valuable when onboarding new teams. Rather than walking every new team lead through skill configuration best practices verbally, the CI gate enforces them automatically. A misconfigured skill definition fails the pipeline, and the error message points to the organization's standard.
+
+## Skill Namespacing to Prevent Conflicts
+
+When multiple teams contribute to the same monorepo, naming conflicts in skill definitions become a real problem. Two teams independently creating a skill called `deploy` or `test-all` creates ambiguity that slows everyone down.
+
+Adopt a namespacing convention that mirrors your team structure:
+
+```
+.claude/skills/
+├── shared/
+│   ├── core-tdd.yaml
+│   └── core-review.yaml
+├── frontend/
+│   ├── fe-component-test.yaml
+│   └── fe-accessibility-check.yaml
+├── backend/
+│   ├── be-api-review.yaml
+│   └── be-db-migration.yaml
+└── platform/
+    ├── platform-deploy.yaml
+    └── platform-security-scan.yaml
+```
+
+The prefix convention (`fe-`, `be-`, `platform-`) makes the owning team immediately obvious and prevents any two skill files from sharing a name. When a developer runs `/fe-component-test` versus `/be-api-review`, there is no ambiguity about scope or expected behavior.
+
+Document this convention in your onboarding materials. New team members who understand the namespacing pattern can discover relevant skills by browsing the directory structure rather than asking colleagues.
+
+## Gradual Rollout Strategy for New Skills
+
+Introducing a new skill to an enterprise codebase with hundreds of active developers is not something to do all at once. A phased rollout reduces the risk of disrupting productive workflows while giving you time to gather feedback.
+
+A practical rollout pattern looks like this:
+
+**Phase 1: Pilot team.** Select one team that volunteered or has a clear use case for the skill. Run the skill in their workflows for two to three weeks, collect feedback on edge cases, and refine the configuration. Document the lessons learned.
+
+**Phase 2: Domain expansion.** Roll out to all teams within the same domain (for example, all backend teams). Monitor for configuration issues that did not surface during the pilot. Update the shared configuration based on findings.
+
+**Phase 3: Organization-wide deployment.** Push the finalized configuration to the central submodule. All projects pick it up at their next submodule update. Send a brief announcement with usage examples.
+
+This staged approach is especially valuable for skills that touch build or deployment pipelines. The **infrastructure** skill category in particular should never be deployed organization-wide before a thorough pilot, since unexpected behavior in that area carries the highest impact.
+
+## Cross-Domain Skill Auditing
+
+Over time, skills accumulate. Teams create domain-specific skills for one-off situations, and those skills live on long after the original need disappears. A quarterly skills audit prevents configuration drift and keeps the skill library useful.
+
+Structure your audit around three questions:
+
+1. Which skills have not been invoked in the past 90 days?
+2. Which skills have configurations that diverge from the current organizational standard?
+3. Which skills have open issues or feedback that has not been acted on?
+
+Use your version control history to answer the first question — commit timestamps on skill configuration files give a rough proxy for usage. For the second, run your CI lint script against all skill files and capture the diff. For the third, search your team's issue tracker for labels attached to skill configuration files.
+
+The audit output becomes a backlog of cleanup work. Unused skills get archived rather than deleted — move them to a `deprecated/` directory with a note explaining when and why they were retired. This preserves institutional knowledge while keeping the active skill library lean.
+
 ## Practical Implementation Steps
 
 Start implementing structured skills in your enterprise codebase with these steps:
@@ -163,6 +242,9 @@ Start implementing structured skills in your enterprise codebase with these step
 3. **Create shared configurations** — Establish base configurations for common patterns
 4. **Document skill relationships** — Use supermemory to create an internal capability map
 5. **Set up submodule distribution** — Enable centralized skill updates across projects
+6. **Add CI validation** — Enforce configuration standards automatically on every pull request
+7. **Adopt namespacing conventions** — Prefix skill files with team identifiers to prevent conflicts
+8. **Plan phased rollouts** — Pilot new skills with one team before organization-wide deployment
 
 ## Conclusion
 

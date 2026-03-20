@@ -180,6 +180,128 @@ du -sh ~/.claude/skills
 
 Run this monthly and adjust retention days if storage grows unexpectedly.
 
+## Tagging Conversations for Smarter Retention
+
+Flat time-based deletion works for most cases, but high-value conversations deserve more nuanced treatment. A session where you worked through a complex architecture decision with Claude is not the same as a session where you asked it to rename some variables. Treating them identically wastes the archive value of the former.
+
+Build a tagging habit into your workflow. At the end of any session that produced a decision worth keeping, add a brief marker:
+
+```bash
+# At end of a significant session
+claude -p "Add note to this session: architecture-decision, auth-redesign, 2026-03-15"
+```
+
+Your retention script can then query for tagged sessions before applying the standard time-based policy:
+
+```bash
+#!/bin/bash
+# Tagged sessions bypass normal deletion
+CLAUDE_PROJECTS="$HOME/.claude/projects"
+RETENTION_DAYS=30
+
+for dir in "$CLAUDE_PROJECTS"/*/; do
+    project=$(basename "$dir")
+    # Skip if tagged as keep-forever
+    if [ -f "$dir/.keep" ]; then
+        echo "Skipping tagged project: $project"
+        continue
+    fi
+    find "$dir" -type d -mtime +$RETENTION_DAYS -exec rm -rf {} \; 2>/dev/null
+done
+```
+
+Creating a `.keep` file inside a project directory is a low-friction way to mark it for indefinite retention. The script costs nothing extra in complexity and saves you from accidentally deleting a conversation you need six months later.
+
+## Retention Policies for Team Environments
+
+Individual developer workflows and shared team environments have different retention requirements. On a shared development server where multiple engineers run Claude Code sessions, a single flat policy is not appropriate — one developer's client project should not be deleted because a colleague's experiment triggered a sweep.
+
+Structure shared environments with per-user subdirectories:
+
+```
+/shared/claude-data/
+├── alice/
+│   ├── projects/
+│   └── retention-policy.yaml
+├── bob/
+│   ├── projects/
+│   └── retention-policy.yaml
+└── team-shared/
+    ├── projects/
+    └── retention-policy.yaml
+```
+
+Each user owns their subdirectory and configures their own policy. A team-shared directory holds conversations and artifacts that belong to the group rather than any individual. Apply a longer default retention period to the team-shared directory since those sessions typically carry higher business value.
+
+Coordinate cleanup timing so multiple engineers' cron jobs do not run simultaneously and compete for the same resources. Stagger them by user — Alice's cron runs at 2am, Bob's at 3am. This is a small detail that prevents confusing log entries and the occasional file-lock conflict on shared storage.
+
+## Integrating Retention with Git Workflows
+
+Conversation history often maps to code changes in your repository. A session where you designed a new API endpoint with Claude's help is directly related to the pull request that implemented it. Linking the two gives you a richer audit trail than either provides alone.
+
+Add a convention to your git commit messages when a session was significant:
+
+```bash
+# Reference the Claude session hash in your commit
+git commit -m "Redesign auth token flow
+
+Implementation based on architecture discussion.
+Claude session: ~/.claude/projects/api-service/sessions/2026-03-15-auth"
+```
+
+Your retention script can then respect the git reference before deleting:
+
+```bash
+#!/bin/bash
+# Find sessions referenced in git history and protect them
+referenced=$(git log --all --format="%B" | grep "Claude session:" | \
+    awk '{print $NF}')
+
+for session_path in $referenced; do
+    touch "$session_path/.keep"
+done
+```
+
+Running this script before your cleanup pass automatically protects any session that a commit message references. Sessions that never made it into a meaningful commit get cleaned up on schedule. This turns your git history into a natural signal for retention importance without requiring manual tagging.
+
+## Verifying Your Retention Policy Works
+
+A retention policy that runs silently is difficult to trust. You need a way to verify that cleanup actually happened, that the right files were deleted, and that archives were created correctly before deletion.
+
+Add a dry-run mode to your cleanup script:
+
+```bash
+#!/bin/bash
+# Add --dry-run flag for verification
+DRY_RUN=false
+if [ "$1" == "--dry-run" ]; then
+    DRY_RUN=true
+    echo "DRY RUN - no files will be deleted"
+fi
+
+CLAUDE_PROJECTS="$HOME/.claude/projects"
+RETENTION_DAYS=30
+
+find "$CLAUDE_PROJECTS" -type d -mtime +$RETENTION_DAYS | while read dir; do
+    if [ "$DRY_RUN" == "true" ]; then
+        echo "Would delete: $dir ($(du -sh "$dir" | cut -f1))"
+    else
+        rm -rf "$dir"
+    fi
+done
+```
+
+Run the dry-run version before your first live execution against any environment. Review the output to confirm the script is targeting the right directories and nothing critical is in scope. Once you are satisfied, run it live and compare the before/after disk usage numbers.
+
+Schedule a monthly verification run:
+
+```bash
+# Monthly audit cron - dry run only, sends output to log
+0 6 1 * * /path/to/retention-cleanup.sh --dry-run >> /var/log/claude-retention-audit.log 2>&1
+```
+
+Reviewing this log quarterly tells you whether your retention window is correctly calibrated. If the dry run shows hundreds of directories that would be deleted, your actual cleanup is running correctly. If it shows almost nothing, either your cleanup is working well or there is a bug — the log history helps you tell which.
+
 ## Best Practices Summary
 
 - **Define retention periods per project** based on client requirements and personal needs
@@ -188,6 +310,10 @@ Run this monthly and adjust retention days if storage grows unexpectedly.
 - **Encrypt sensitive data** before applying aggressive retention policies
 - **Monitor storage trends** and adjust policies quarterly
 - **Test cleanup scripts** on non-critical data first
+- **Tag high-value sessions** with `.keep` files to bypass time-based deletion
+- **Use dry-run mode** to verify scripts target the correct directories before live runs
+- **Link sessions to git commits** for automatic protection of architecturally significant conversations
+- **Stagger cron schedules** in shared environments to avoid resource conflicts
 
 ## Conclusion
 

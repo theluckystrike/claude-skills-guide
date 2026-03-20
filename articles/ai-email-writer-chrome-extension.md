@@ -160,6 +160,72 @@ To begin using AI email writer extensions effectively:
 
 For developers interested in building custom solutions, Chrome's extension documentation provides comprehensive guidance on content scripts, message passing, and the permissions system.
 
+## Building a Custom Prompt Library
+
+One of the highest-leverage investments you can make when working with AI email extensions is building a personal prompt library. Rather than relying on the default prompts bundled with an extension, maintaining your own set of reusable instructions gives you consistent, predictable output across different scenarios.
+
+A practical prompt library typically organizes prompts by category. Common categories include cold outreach, follow-up sequences, internal communication, client-facing updates, and incident reports. Each category benefits from a slightly different tone and structure. Cold outreach prompts should emphasize brevity and a clear call to action. Internal updates can be more direct and assume shared context. Client-facing messages often require a more formal register.
+
+Here is an example of how a developer might structure a prompt library as a JSON config that an extension can consume:
+
+```json
+{
+  "prompts": {
+    "cold_outreach": {
+      "system": "You are writing a concise cold email. Keep it under 100 words. Lead with value, not credentials.",
+      "temperature": 0.8
+    },
+    "incident_update": {
+      "system": "You are writing a technical incident update for an engineering audience. Be factual, include timeline, and state current status clearly.",
+      "temperature": 0.3
+    },
+    "client_follow_up": {
+      "system": "You are writing a professional follow-up email to a client. Be polite, reference the previous conversation, and clearly state the next action required.",
+      "temperature": 0.5
+    }
+  }
+}
+```
+
+Lower temperature values produce more deterministic, consistent output — useful for incident reports where accuracy matters more than creativity. Higher values work better for outreach where slight variation across emails can improve deliverability and avoid spam filters.
+
+## Handling Tone and Voice Calibration
+
+A common frustration with AI email tools is that generated drafts sound generic. The solution is explicit voice calibration during setup. Most extensions that support custom system prompts allow you to embed a style reference directly in the prompt.
+
+One effective technique is to paste three or four emails you have written previously into the extension's style settings. The extension uses these as examples when framing its generation instructions. Over time, the output begins to reflect your actual phrasing patterns — contractions you favor, sentence lengths you prefer, and whether you tend to open with context or with the main ask.
+
+If the extension does not support direct style examples, you can approximate the same effect by writing a short style guide in the system prompt:
+
+```
+Write in first person. Use short paragraphs (2-3 sentences max).
+Avoid filler phrases like "I hope this finds you well."
+Get to the point in the first sentence.
+Sign off with "Thanks," not "Best regards."
+```
+
+This kind of explicit instruction costs very few tokens but dramatically improves how closely the output matches your real voice.
+
+## Debugging Generation Issues
+
+When an AI email extension produces poor output, the cause is almost always one of three things: insufficient context, a misconfigured prompt, or a model temperature that is too high or too low.
+
+Start by checking what context the extension is actually sending to the API. Many extensions expose a debug mode or a log view in their settings panel. If yours does not, you can intercept the request using Chrome DevTools by opening the Network tab, filtering for API calls to your configured endpoint, and inspecting the request payload.
+
+A common finding is that the extension is stripping the email thread context before sending, so the model is generating a reply without knowing what it is replying to. If you see this, look for a setting labeled "include thread context" or "conversation history depth" and increase it.
+
+For developers running their own endpoint, adding a logging middleware layer is straightforward:
+
+```javascript
+app.post('/generate', async (req, res) => {
+  console.log('Incoming prompt payload:', JSON.stringify(req.body, null, 2));
+  const result = await callAIProvider(req.body);
+  console.log('Model response:', result.choices[0].message.content);
+  res.json(result);
+});
+```
+
+This kind of visibility makes it much faster to identify whether the problem is in the prompt construction, the model selection, or the downstream parsing of the response.
 
 ## Related Reading
 

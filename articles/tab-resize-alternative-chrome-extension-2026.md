@@ -86,7 +86,7 @@ async function splitWindow(windowId, direction = 'horizontal') {
   const window = await chrome.windows.get(windowId);
   const width = window.width;
   const height = window.height;
-  
+
   if (direction === 'horizontal') {
     // Create two horizontal panes
     await chrome.windows.create({
@@ -145,6 +145,100 @@ Power users often prefer keyboard-driven solutions. Several extensions focus on 
 - **Shortkeys**: Customizable keyboard shortcuts for various browser actions
 
 While these don't provide visual splitting, they dramatically improve tab navigation speed.
+
+## Advanced Custom Tab Manager: A Practical Walkthrough
+
+The basic split-window example above is a useful starting point, but a production-quality custom tab manager needs a few more pieces. Here is an expanded implementation that moves the active tab into one of the two new windows and cleans up the original:
+
+```javascript
+// background.js — move current tab into split layout
+async function splitCurrentTab(windowId) {
+  const currentWindow = await chrome.windows.get(windowId);
+  const tabs = await chrome.tabs.query({ active: true, windowId });
+  const activeTab = tabs[0];
+
+  const halfWidth = Math.floor(currentWindow.width / 2);
+  const screenHeight = currentWindow.height;
+  const screenTop = currentWindow.top;
+  const screenLeft = currentWindow.left;
+
+  // Left pane — reuse current window
+  await chrome.windows.update(windowId, {
+    width: halfWidth,
+    left: screenLeft
+  });
+
+  // Right pane — new window with the active tab
+  const rightWindow = await chrome.windows.create({
+    tabId: activeTab.id,
+    width: halfWidth,
+    height: screenHeight,
+    left: screenLeft + halfWidth,
+    top: screenTop
+  });
+
+  return rightWindow.id;
+}
+
+chrome.action.onClicked.addListener((tab) => {
+  splitCurrentTab(tab.windowId);
+});
+```
+
+This approach moves the tab rather than duplicating it, preserving page state and scroll position. The `windows.update` call resizes the original window to occupy the left half of the screen while the new window takes the right half.
+
+## Using Tab Groups as a Tab Resize Alternative
+
+Chrome's native tab groups feature, introduced in Chrome 89, offers a compelling alternative to visual splitting for many workflows. Groups let you visually separate related tabs with color labels and collapse them to save space on the tab strip.
+
+For developers working on a feature branch, a typical workflow might look like this:
+
+1. Open your GitHub PR tab, your local dev server, and your test results tab
+2. Select all three tabs, right-click, and choose "Add tabs to new group"
+3. Name the group after the feature (e.g., "auth-refactor") and assign a color
+4. Collapse the group when switching contexts, expand it to resume
+
+You can automate this via a small extension that groups tabs by domain or URL pattern:
+
+```javascript
+// background.js — auto-group tabs matching a pattern
+chrome.tabs.onCreated.addListener(async (tab) => {
+  // Wait for the tab to have a URL
+  await new Promise(resolve => setTimeout(resolve, 500));
+  const updatedTab = await chrome.tabs.get(tab.id);
+
+  if (updatedTab.url && updatedTab.url.includes("github.com")) {
+    const existingGroups = await chrome.tabGroups.query({ title: "GitHub" });
+    if (existingGroups.length > 0) {
+      await chrome.tabs.group({ tabIds: [tab.id], groupId: existingGroups[0].id });
+    } else {
+      const groupId = await chrome.tabs.group({ tabIds: [tab.id] });
+      await chrome.tabGroups.update(groupId, { title: "GitHub", color: "green" });
+    }
+  }
+});
+```
+
+This requires the `"tabGroups"` permission. The result is that every new GitHub tab automatically lands in a labeled group, making it easy to collapse and expand the entire set with one click.
+
+## Vertical Tab Managers: A Different Take on Screen Real Estate
+
+Horizontal tab strips become unwieldy past 15–20 tabs. Vertical tab sidebars address this by using the side of the screen instead, leaving more vertical space for page content. Several extensions bring this to Chrome:
+
+- **Tree Style Tabs (via Firefox port concepts)**: Shows tab hierarchy in a collapsible tree, useful when you open many related pages in sequence
+- **Workona**: Organizes tabs into workspaces with a sidebar, particularly popular for remote workers juggling multiple projects
+- **Toby**: Replaces the new tab page with a visual workspace where you can drag tabs into collections
+
+None of these replicate Tab Resize's visual splitting, but they solve the core problem of finding the right tab quickly. For developers who rarely need two sites visible simultaneously but constantly lose tabs in a crowded strip, a vertical manager often delivers more value than a splitter.
+
+## Choosing Based on Your Screen Setup
+
+Your monitor configuration should inform which alternative you adopt:
+
+- **Single 1080p monitor**: Native window snapping plus a vertical tab manager is usually sufficient. Splitting a 1920px-wide window into two 960px panes makes most sites readable, and you avoid the overhead of a third-party splitting extension.
+- **Single ultrawide (3440px+)**: Tab Resize or Tile Tabs WE genuinely shine here. Three-column layouts are practical, and the extra pixel budget means split content is never cramped.
+- **Dual monitor setup**: Opening tabs in separate windows on each monitor typically outperforms any in-window splitter. Assign one monitor to documentation or monitoring dashboards and keep the other for active editing.
+- **Laptop screen (1366×768 or 1440×900)**: Splitting is rarely worth it at these resolutions. OneTab or session managers reduce clutter more effectively than trying to fit two sites side by side.
 
 ## Making the Right Choice
 

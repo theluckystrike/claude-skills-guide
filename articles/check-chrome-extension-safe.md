@@ -164,13 +164,96 @@ google-chrome --profile-directory="TestProfile"
 
 Install the extension there first. Monitor network activity using Chrome DevTools to detect unexpected data transmission.
 
+## Monitoring Extensions After Installation
+
+Most guides focus on pre-install checks, but ongoing monitoring is just as important. Extensions update silently in the background, and a legitimate extension acquired by a new owner can introduce malicious behavior in a subsequent update. This is a real attack vector — threat actors have purchased well-reviewed extensions specifically to push malicious updates to an established user base.
+
+Chrome does not send notifications when an extension updates, which means you need a proactive monitoring strategy. The simplest approach is to periodically review the changelog in the Chrome Web Store and compare it against the installed version shown in `chrome://extensions`. A large jump in version numbers with no documented changelog is a warning sign worth investigating.
+
+For a more systematic approach, developers can use the Chrome Extensions Update History tool or write a lightweight script that checks installed extension versions against the Web Store API and flags discrepancies:
+
+```bash
+# Fetch current version from Chrome Web Store API
+curl -s "https://clients2.google.com/service/update2/crx?response=manifest&x=id%3DEXTENSION_ID%26uc" \
+  | grep -o 'version="[^"]*"' | head -1
+```
+
+Compare the result against what is installed. If the extension updated unexpectedly and the new version requests additional permissions, Chrome will prompt you to re-approve — never ignore those prompts or dismiss them without reading the new permission list.
+
+## Network Traffic Analysis
+
+Reviewing source code catches static patterns, but dynamic analysis tells you what an extension actually does at runtime. Chrome DevTools provides everything you need to monitor extension network activity without additional software.
+
+Open DevTools and navigate to the Network tab before triggering the extension's main functionality. Filter by "XHR" and "Fetch" request types to isolate API calls. Look for requests to domains you do not recognize, particularly any that send data in the request body.
+
+A cleaner approach for sustained monitoring is to use a local proxy like mitmproxy or Charles Proxy. Configure Chrome to route traffic through the proxy, then use the extension normally for a session. Review the captured traffic log afterward:
+
+```bash
+# Start mitmproxy in transparent mode
+mitmproxy --mode transparent --showhost
+
+# Filter to see only requests from a specific extension
+# Look for requests originating during extension actions
+```
+
+Pay particular attention to POST requests that fire immediately after you complete a form or enter a password. Legitimate extensions with no stated data-collection purpose have no reason to make these calls.
+
+## Sandboxing Extensions with Browser Profiles
+
+Testing an extension in a separate Chrome profile is mentioned in many security guides, but few explain how to make this a sustainable part of a developer workflow rather than a one-off step.
+
+The most practical setup is to maintain three Chrome profiles: your primary work profile, a testing profile with no saved credentials or personal data, and an isolated profile specifically for extensions that require broad permissions but that you have decided to trust after review.
+
+You can launch Chrome profiles directly from the command line and script the creation of new testing sessions:
+
+```bash
+# Launch Chrome with a specific profile for extension testing
+google-chrome --profile-directory="ExtensionTest" \
+  --no-first-run \
+  --no-default-browser-check \
+  --disable-sync
+```
+
+Within the testing profile, install only the extension under evaluation. Open DevTools and enable network logging before you trigger any extension functionality. After testing, review the network log and any console output. If the extension passes your review, you can install it in your primary profile with confidence.
+
+For extensions that require access to specific sites (like a GitHub productivity tool that only needs access to github.com), use the Chrome permission controls to restrict the extension even further. Right-click the extension icon and select "This can read and change site data" to limit access to "When you click the extension" rather than granting automatic access on every page load.
+
+## Building an Internal Allowlist
+
+Teams managing multiple developer machines benefit from maintaining a shared allowlist of reviewed and approved extensions. Rather than each developer independently evaluating the same tools, a single review can be documented and the result shared across the team.
+
+A simple allowlist can be maintained as a JSON file in a shared repository:
+
+```json
+{
+  "approved_extensions": [
+    {
+      "name": "uBlock Origin",
+      "id": "cjpalhdlnbpafiamejdnhcphjbkeiagm",
+      "last_reviewed": "2026-02-10",
+      "reviewer": "security-team",
+      "notes": "Open source, well-audited, permissions match stated functionality"
+    },
+    {
+      "name": "JSON Formatter",
+      "id": "bcjindcccaagfpapjibcncadphpiiphl",
+      "last_reviewed": "2026-01-22",
+      "reviewer": "dev-team",
+      "notes": "Only requests activeTab, no network requests observed"
+    }
+  ]
+}
+```
+
+This approach creates an audit trail and ensures that approval decisions are documented with reasoning rather than being implicit. When an extension updates and requests new permissions, it triggers a re-review rather than silent approval.
+
 ## Conclusion
 
-Verifying Chrome extension safety requires multiple layers of inspection. No single method guarantees safety, but combining permission analysis, source code review, and automated tools significantly reduces risk. Always question why an extension needs certain permissions, and prefer open-source extensions with active communities.
+Verifying Chrome extension safety requires multiple layers of inspection. No single method guarantees safety, but combining permission analysis, source code review, automated tools, and ongoing monitoring significantly reduces risk. Always question why an extension needs certain permissions, and prefer open-source extensions with active communities.
 
 For developers building extensions, minimize permissions requested. Only ask for access your functionality absolutely requires. Users will increasingly scrutinize extensions, and transparent, minimal permission requests build trust.
 
-Stay vigilant. Your browser extension security depends on proactive evaluation before installation.
+Stay vigilant. Your browser extension security depends on proactive evaluation before installation, and continued attention after.
 
 
 ## Related Reading

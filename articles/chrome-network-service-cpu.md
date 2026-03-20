@@ -186,6 +186,113 @@ upstream backend {
 }
 ```
 
+## Isolating the Cause: A Systematic Approach
+
+Knowing that the network service is spiking is only the first step. The diagnostic challenge is determining whether the spike is caused by what Chrome is doing on your behalf (legitimate network work), by a misbehaving extension, or by a Chrome bug interacting with your specific environment. A structured isolation process saves significant time.
+
+### Step 1: Reproduce in an Incognito Window
+
+Incognito mode disables most extensions by default. If the CPU spike disappears in Incognito, you have confirmed an extension is the culprit. Open an Incognito window with `Ctrl+Shift+N` (Windows/Linux) or `Cmd+Shift+N` (macOS) and navigate to the pages that triggered the issue in normal mode.
+
+If the problem persists in Incognito, the issue is with Chrome itself, a site's network behavior, or a system-level proxy configuration.
+
+### Step 2: Profile Network Activity During the Spike
+
+Chrome's built-in Performance panel can capture what the network service is doing during a spike:
+
+1. Open DevTools with `F12`
+2. Go to the Performance tab
+3. Click the record button and reproduce the spike
+4. Stop recording and look for long tasks related to network calls in the flame chart
+
+Specifically look for patterns like rapid DNS lookups clustering together, TLS handshake overhead from many short-lived HTTPS connections, or repeated failed connection attempts that put the network service in a retry loop.
+
+### Step 3: Check for Runaway Background Tabs
+
+Service workers and background JavaScript can trigger constant network requests from tabs you are not actively viewing. Open Chrome's Task Manager with `Shift+Esc` and sort by Network column. Any tab or extension showing sustained network activity while you are not actively using it is worth investigating.
+
+```javascript
+// In the browser console on a suspected page, check for active service workers
+navigator.serviceWorker.getRegistrations().then(registrations => {
+    registrations.forEach(reg => console.log(reg.scope, reg.active));
+});
+```
+
+An active service worker with a poorly written fetch event handler can send thousands of requests per minute and drive the network service CPU to high usage even when the page appears idle.
+
+## Flags and Configuration for Power Users
+
+Chrome exposes experimental flags that can directly influence network service behavior. These are unsupported and may change between Chrome versions, but they are valuable for developers diagnosing persistent issues.
+
+### Disable QUIC Protocol
+
+QUIC (HTTP/3) is Chrome's UDP-based transport protocol. On networks with poor UDP support or high packet reordering, QUIC can increase CPU usage as the protocol repeatedly tries to establish connections that fail. You can disable it:
+
+1. Open `chrome://flags/#enable-quic`
+2. Set to "Disabled"
+3. Restart Chrome
+
+Monitor the network service CPU after disabling QUIC. If usage drops, your network environment likely has a compatibility issue with UDP-based protocols and you should leave QUIC disabled until your network configuration can be improved.
+
+### Reduce DNS-over-HTTPS Overhead
+
+Chrome's Secure DNS (DNS-over-HTTPS) feature adds encryption overhead to every DNS lookup. On low-powered machines or during periods of intense browsing, this processing adds up. To adjust:
+
+1. Open `chrome://settings/security`
+2. Scroll to "Advanced" and find "Use secure DNS"
+3. Either disable it or select a faster DNS-over-HTTPS provider like Cloudflare (1.1.1.1) instead of the ISP default
+
+The difference between DNS providers is measurable. Cloudflare's resolver typically responds in under 10ms while some ISP resolvers take 50-100ms, which multiplies across a page load with 50+ third-party domains.
+
+### Limit Extension Network Permissions
+
+Extensions with broad network access can intercept and process every request Chrome makes. Review permissions for installed extensions:
+
+1. Open `chrome://extensions/`
+2. Click "Details" on each extension
+3. Look for "Read and change all your data on all websites"
+4. Consider switching to extensions that request access "on click" rather than always
+
+Narrowing extension permissions to only the sites they actually need reduces the number of requests the extension can intercept, directly cutting network service overhead.
+
+## Practical Examples: Real Developer Scenarios
+
+### Scenario 1: High CPU During Local Development
+
+A common pattern for developers is the network service spiking while running a local dev server with hot reload. Tools like webpack-dev-server or Vite open persistent WebSocket connections and may also serve assets over HTTP/2. If you have browser-sync or live reload configured alongside a framework dev server, Chrome may be managing three or four persistent connections simultaneously.
+
+```bash
+# Check how many ports your dev environment has open
+lsof -i -P -n | grep LISTEN
+
+# On Windows
+netstat -an | findstr LISTENING
+```
+
+If you find many open connections, consolidate your dev server setup to use a single entry point where possible. Running webpack through a proxy rather than directly reduces the number of concurrent network service connections Chrome has to manage.
+
+### Scenario 2: CPU Spike on Corporate Networks
+
+Corporate networks often use transparent proxies or SSL inspection that intercepts HTTPS traffic. Chrome's network service repeatedly renegotiates TLS sessions that the proxy has modified, which adds significant CPU overhead. The symptom is high network service CPU specifically on corporate WiFi but not on home networks.
+
+Diagnosing this requires checking `chrome://net-internals/#proxy` to confirm whether a proxy is active, then testing with a direct connection (VPN tunnel bypassing the corporate proxy) to see if CPU usage improves.
+
+### Scenario 3: Extension-Triggered Request Storms
+
+Ad blockers, security scanners, and privacy tools with custom filter lists evaluate every network request against potentially thousands of rules. A large uBlock Origin filter list, for example, runs each outgoing request against custom regex patterns. On content-heavy pages with hundreds of requests, this processing accumulates.
+
+To test whether your ad blocker is contributing, temporarily disable it and compare CPU usage:
+
+```bash
+# Baseline test (with extension disabled): load a complex page like a news site
+# Measure CPU with Chrome Task Manager
+
+# Compare against the same page with the extension enabled
+# A 2x or greater difference in network service CPU points to filter list overhead
+```
+
+If the extension is the cause, reducing the number of active filter lists (removing redundant ones) often brings CPU usage back to acceptable levels without giving up meaningful protection.
+
 ## When to Report Chrome Bugs
 
 If you've exhausted troubleshooting and the issue persists across Chrome versions, consider reporting a bug:
@@ -203,6 +310,9 @@ Provide detailed environment information: OS version, Chrome channel (stable/bet
 - Regularly clear browser cache and extensions
 - Monitor system resources with dedicated tools
 - Use Chrome's built-in task manager (`Shift+Esc`) for quick diagnostics
+- Review extension network permissions periodically and revoke what is not needed
+- Disable QUIC on networks where UDP traffic is unreliable
+- Test in Incognito first before spending time on system-level diagnostics
 
 High CPU usage from Chrome's network service often stems from extension conflicts, cached corruption, or aggressive prefetching. By systematically diagnosing and applying these solutions, developers and power users can restore browser performance and maintain productivity.
 
