@@ -27,6 +27,9 @@ The integration works through Spacelift's exposed APIs and webhook system. Claud
 - Review pull requests for infrastructure changes
 - Enforce compliance policies before deployments
 - Troubleshoot failed runs with contextual awareness
+- Generate OPA Rego policies from plain-language compliance requirements
+
+Where Spacelift provides the enforcement layer, Claude Code provides the intelligence layer—translating business requirements into infrastructure code, and infrastructure errors into actionable fixes.
 
 ## Setting Up the Connection
 
@@ -40,6 +43,18 @@ export SPACELIFT_ACCOUNT="your-account-id"
 
 You'll want to create a dedicated service account in Spacelift with read-write access to the stacks you want Claude Code to manage. Avoid using admin credentials for daily operations—principle of least privilege applies here.
 
+The Spacelift GraphQL API is the primary integration surface. You can verify connectivity with a basic query:
+
+```bash
+curl -X POST \
+  -H "Authorization: Bearer $SPACELIFT_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"query": "{ viewer { id login } }"}' \
+  "https://$SPACELIFT_ACCOUNT.app.spacelift.io/graphql"
+```
+
+Once connectivity is confirmed, Claude Code can use this API surface to query stack states, trigger runs, and retrieve run logs for analysis.
+
 ## Practical Examples
 
 ### Generating Infrastructure Configurations
@@ -47,20 +62,20 @@ You'll want to create a dedicated service account in Spacelift with read-write a
 Suppose you need to set up a new AWS ECS cluster with specific requirements. Instead of writing Terraform from scratch, describe your needs to Claude Code:
 
 ```
-Create an ECS cluster on AWS with auto-scaling, 
+Create an ECS cluster on AWS with auto-scaling,
 Fargate launch type, and CloudWatch logging enabled
 ```
 
-Claude Code can generate the appropriate Terraform configuration using the `tdd` skill for test-driven infrastructure development:
+Claude Code can generate the appropriate Terraform configuration:
 
 ```hcl
 # Generated ECS Cluster Configuration
 module "ecs_cluster" {
   source  = "terraform-aws-modules/ecs/aws"
   version = "~> 5.0"
-  
+
   cluster_name = "production-cluster"
-  
+
   cluster_configuration = {
     execute_command_configuration = {
       logging = "OVERRIDE"
@@ -69,30 +84,32 @@ module "ecs_cluster" {
       }
     }
   }
-  
+
   fargate_capacity_providers = {
     default = {
       weight = 100
     }
   }
-  
+
   autoscaling_capacity_providers = {
     FARGATE = {
       auto_scaling_group_arn = module.asg.autoscaling_group_arn
       managed_scaling = {
         maximum_scaling_step_size = 5
         minimum_scaling_step_size = 1
-        status = "ENABLED"
-        target_capacity = 70
+        status                    = "ENABLED"
+        target_capacity           = 70
       }
     }
   }
 }
 ```
 
+After generation, ask Claude Code to explain the configuration choices and flag anything that needs to be customized for your environment. This is more educational than copy-pasting from examples, because you end up understanding what you've deployed.
+
 ### Policy Review Workflows
 
-Spacelift's policy engine uses Open Policy Agent (OPA) Rego language. Writing these policies can be challenging. Use the `frontend-design` skill to prototype policy UIs, or use Claude Code's understanding of Rego to generate policies from natural language descriptions.
+Spacelift's policy engine uses Open Policy Agent (OPA) Rego language. Writing these policies can be challenging. Claude Code's understanding of Rego lets you generate policies from natural language compliance requirements rather than writing raw Rego from scratch.
 
 For example, to enforce tagging requirements:
 
@@ -115,48 +132,166 @@ deny[msg] {
 keys(s) := {k | s[k]}
 ```
 
+You can prompt Claude Code to generate more complex policies as well. For instance, a policy that enforces region constraints:
+
+```rego
+package spacelift
+
+allowed_regions := {"us-east-1", "us-west-2", "eu-west-1"}
+
+deny[msg] {
+  input.change.kind == "terraform"
+  resource := input.change.resource_changes[_]
+  region := resource.change.after.region
+  not allowed_regions[region]
+  msg := sprintf("Resource %s is targeting disallowed region: %s", [resource.address, region])
+}
+```
+
+A useful workflow is to write your compliance requirement in plain English, paste it to Claude Code, and ask it to produce the Rego policy. Then ask Claude Code to write test cases for the policy using OPA's built-in testing framework—this catches edge cases before the policy reaches production.
+
 ### Troubleshooting Failed Deployments
 
 When Spacelift runs fail, the error messages aren't always intuitive. Claude Code can analyze the run logs and suggest fixes:
 
 ```bash
-# Example: Analyzing a failed Terraform plan output
+# Capture a failed Terraform plan output
 terraform plan -out=tfplan 2>&1 | grep -A 20 "Error:"
 ```
 
-Claude Code interprets these errors in context—considering your existing infrastructure, recent changes, and known constraints—to provide actionable solutions rather than generic error messages.
+Paste the error output to Claude Code with context about what you were trying to do. A prompt like this gets better results than just pasting the error:
+
+```
+This Terraform plan failed in our Spacelift stack for the payments service.
+We were adding a new RDS instance. Here is the error output:
+
+[paste error]
+
+We're on AWS, us-east-1. The VPC was created last month and has two private subnets.
+What's wrong and what's the fix?
+```
+
+Claude Code interprets these errors in context—considering your existing infrastructure, recent changes, and known constraints—to provide actionable solutions rather than generic error messages. Common Spacelift failure patterns it handles well include state lock conflicts, provider version mismatches, and IAM permission errors that produce misleading error text.
+
+### Writing Spacelift Stack Configurations
+
+Beyond Terraform, Claude Code can help write Spacelift's own configuration files. The `.spacelift/config.yml` file controls stack behavior:
+
+```yaml
+version: "1"
+
+stacks:
+  payments-service:
+    terraform_version: "1.7.0"
+    autodeploy: false
+    before_init:
+      - aws sts get-caller-identity
+    environment:
+      - name: TF_VAR_environment
+        value: production
+      - name: TF_VAR_region
+        value: us-east-1
+    policies:
+      - mandatory-tagging
+      - region-constraint
+      - cost-center-required
+```
+
+Ask Claude Code to generate this configuration from a description of your stack's requirements, then refine it through dialogue to add the specific hooks and policies your organization requires.
 
 ## Advanced Workflow Patterns
 
 ### Automated Pull Request Reviews
 
-Set up a workflow where Claude Code reviews every infrastructure change:
+Set up a workflow where Claude Code reviews every infrastructure change before it reaches Spacelift:
 
-1. Configure Spacelift to trigger on pull request events
-2. Have Claude Code analyze the proposed changes
-3. Generate a compliance report using the `pdf` skill for documentation
+1. Configure Spacelift to trigger preview runs on pull request events
+2. Export the plan output to a location Claude Code can access (an S3 bucket or a CI artifact)
+3. Have Claude Code analyze the proposed changes for security issues, cost implications, and policy compliance
+4. Post the analysis as a pull request comment using the GitHub or GitLab API
 
-This creates an intelligent gate that catches configuration issues before they reach production.
+This creates an intelligent gate that catches configuration issues before they reach production. The review Claude Code produces is more useful than raw `terraform plan` output because it explains the *impact* of changes in plain language—"this change adds a public-facing security group rule allowing all inbound traffic on port 22" is more actionable than the raw plan diff.
+
+### Drift Detection and Remediation
+
+Spacelift can detect configuration drift—when live infrastructure diverges from the Terraform state. Claude Code adds intelligence to this process:
+
+```bash
+# Retrieve drift detection results from Spacelift API
+curl -X POST \
+  -H "Authorization: Bearer $SPACELIFT_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"query": "{ stack(id: \"payments-service\") { driftDetection { state } } }"}' \
+  "https://$SPACELIFT_ACCOUNT.app.spacelift.io/graphql"
+```
+
+When drift is detected, paste the results to Claude Code and ask it to analyze whether the drift is expected (a manual hotfix that needs to be codified) or unexpected (a change that needs to be reverted). This distinction matters enormously—blindly running `terraform apply` to remediate drift can overwrite legitimate emergency changes.
 
 ### Multi-Cloud Orchestration
 
-For organizations using multiple cloud providers, Claude Code can manage complex dependencies across AWS, GCP, and Azure. The `supermemory` skill helps maintain context across these orchestration sessions, remembering which resources exist where and how they interrelate.
+For organizations using multiple cloud providers, Claude Code can manage complex dependencies across AWS, GCP, and Azure. When resources in one cloud depend on resources in another, the dependency graph becomes difficult to reason about manually.
+
+Claude Code helps by maintaining context across these orchestration sessions. You can describe a multi-cloud architecture in plain language and ask Claude Code to generate the Terraform configurations for each provider, along with the remote state data sources that connect them:
+
+```hcl
+# AWS side: share VPC CIDR via remote state
+output "vpc_cidr" {
+  value = aws_vpc.main.cidr_block
+}
+
+# GCP side: consume AWS remote state
+data "terraform_remote_state" "aws" {
+  backend = "s3"
+  config = {
+    bucket = "my-terraform-state"
+    key    = "aws/networking/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
+resource "google_compute_firewall" "allow_aws" {
+  name    = "allow-aws-vpc"
+  network = google_compute_network.main.name
+
+  allow {
+    protocol = "tcp"
+    ports    = ["443", "8080"]
+  }
+
+  source_ranges = [data.terraform_remote_state.aws.outputs.vpc_cidr]
+}
+```
 
 ## Security Considerations
 
 When integrating Claude Code with Spacelift, follow these security practices:
 
-- **Credential Rotation**: Regularly rotate API tokens
-- **Audit Logging**: Enable detailed logging for all Claude Code actions
-- **Policy Boundaries**: Define clear OPA policies that Claude Code must follow
-- **Approval Gates**: Require human approval for production changes
+- **Credential Rotation**: Regularly rotate API tokens, and use short-lived tokens where Spacelift's OIDC integration supports it
+- **Audit Logging**: Enable detailed logging for all Claude Code actions that trigger Spacelift runs
+- **Policy Boundaries**: Define clear OPA policies that enforce what Claude Code can and cannot change—treat AI-generated infrastructure with the same skepticism you'd apply to any external contribution
+- **Approval Gates**: Require human approval for production changes; use Spacelift's approval policies to enforce this even when changes originate from automated workflows
+- **Scope Limitation**: Create separate service accounts for different stack groups; Claude Code managing the staging environment should not have credentials that reach production
+
+A useful pattern is to have Claude Code generate the change, have Spacelift run a plan, and require a human to approve before apply. The AI accelerates the generation and analysis steps; the human remains responsible for final authorization.
+
+## Spacelift Feature Support Comparison
+
+| Feature | Manual Workflow | With Claude Code |
+|---------|----------------|-----------------|
+| Config generation | Write from scratch | Generate from requirements |
+| OPA policy authoring | Learn Rego manually | Natural language to Rego |
+| Error diagnosis | Read docs, search Stack Overflow | Contextual analysis |
+| Drift remediation | Manual judgment call | Analyzed recommendation |
+| PR review | Read raw plan diff | Plain-language impact summary |
+| Multi-cloud deps | Manual dependency mapping | Generated with explanations |
 
 ## Best Practices
 
-Start small with non-critical stacks to build confidence in the workflow. Document your infrastructure patterns so Claude Code can generate consistent configurations. Use the `tdd` skill to write tests alongside your infrastructure code—this catches issues early and gives Claude Code better context when generating changes.
+Start small with non-critical stacks to build confidence in the workflow. Document your infrastructure patterns so Claude Code can generate consistent configurations—a short description of your naming conventions, tagging standards, and module preferences gives Claude Code the context to produce configurations that fit your codebase rather than generic examples.
+
+Write tests alongside your infrastructure code. Terraform's `terratest` framework and OPA's built-in test runner both work well here. Ask Claude Code to generate test cases after generating configurations—this catches issues early and gives Claude Code better context when generating future changes.
 
 The combination of Claude Code's contextual understanding and Spacelift's policy enforcement creates infrastructure automation that's both intelligent and compliant. As your infrastructure grows, this integration scales to manage hundreds of stacks while maintaining consistent governance.
-
 
 ## Related Reading
 
