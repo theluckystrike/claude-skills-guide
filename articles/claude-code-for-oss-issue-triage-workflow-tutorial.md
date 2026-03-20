@@ -298,6 +298,57 @@ Log triage decisions and their outcomes. Periodically review misclassifications 
 
 Create a CONTRIBUTING.md section explaining your triage labels. Contributors who understand the process are more likely to provide complete issue reports.
 
+
+## Step-by-Step Guide: Deploying Your Triage Workflow
+
+Here is a concrete deployment plan for adding automated triage to your open source project.
+
+**Step 1 — Inventory your existing issues.** Before automating new issues, run your triage script against existing open issues to understand how your current backlog would be classified. This reveals edge cases in your rules and helps you calibrate priority thresholds against real data.
+
+**Step 2 — Start with read-only mode.** Deploy the triage bot in a mode where it only adds comments explaining the classification without applying labels. This lets contributors see the triage reasoning and provide feedback before the automation takes effect permanently.
+
+**Step 3 — Add labels incrementally.** After validating classification accuracy in read-only mode for a week or two, enable automated label assignment for clear-cut cases. Keep human review for edge cases—security reports, first-time contributors, and issues with unusual content.
+
+**Step 4 — Set up the GitHub webhook.** Register a webhook on your repository that triggers when new issues are opened. Claude Code generates the webhook handler endpoint including signature verification to prevent spoofed payloads.
+
+**Step 5 — Monitor triage accuracy.** Add a feedback mechanism where maintainers can correct triage decisions. Track correction rates over time. When accuracy drops below 85%, review your classification rules and update them to handle the new patterns.
+
+## Advanced Duplicate Detection
+
+The basic keyword matching shown earlier handles clear duplicates. For semantic duplicate detection, use embedding-based similarity:
+
+The approach: fetch the 50 most recently opened issues, compute text embeddings for each using a lightweight model, then compare cosine similarity against the new issue. Issues with similarity above 0.8 are flagged as potential duplicates. Claude Code generates the full implementation including embedding caching to avoid recomputing unchanged issues.
+
+This approach catches duplicates that use different terminology for the same problem—for example, someone reporting a crash using the word segfault while existing issues describe the same crash as a null pointer exception.
+
+## Filtering Spam and Low-Quality Reports
+
+Spam and low-effort issues waste maintainer time. Add classification logic that flags them for closure:
+
+Indicators of spam include: issues shorter than 50 characters, URLs pointing to unrelated commercial sites, identical content submitted multiple times, and issues that contain only a screenshot with no text description. Claude Code generates the spam detection patterns and the auto-response template that politely explains why the issue was closed and how to submit a proper report.
+
+For low-quality bug reports missing reproduction steps, Claude Code generates a response template that asks the reporter specific questions: What version are you using? What operating system? What did you expect to happen? What actually happened? Providing a checklist helps first-time contributors understand what is needed.
+
+## Best Practices
+
+**Explain automated decisions to contributors.** When the bot closes or labels an issue, include a brief explanation of the reasoning. This turns the automation into a teaching moment that improves future issue quality from that contributor.
+
+**Preserve contributor dignity.** Automated responses that feel dismissive discourage contributions. Claude Code can help you draft triage response templates that acknowledge the reporter's effort and clearly explain next steps, even when closing invalid issues.
+
+**Run triage during off-hours.** Schedule batch triage for overnight runs rather than processing each issue synchronously as it arrives. This reduces API rate limit pressure and lets you process bursts of issues during major announcements without delays.
+
+**Create a triage dashboard.** Track weekly volumes, classification distribution, time-to-triage, and accuracy metrics in a simple dashboard. Claude Code generates the data aggregation scripts and a basic HTML report that you can host as a GitHub Pages site.
+
+**Review the triage rules quarterly.** Your project evolves, and so does the type of issues you receive. Schedule a quarterly review of your classification rules, updating keyword lists based on false positives and false negatives observed in the prior quarter.
+
+## Integration Patterns
+
+**Zapier or n8n integration.** If your team prefers low-code automation, Claude Code can help you design the webhook payload format that integrates cleanly with Zapier or n8n workflows, routing issues to project management tools or Slack channels based on their triage classification.
+
+**Connecting to Sentry or Bugsnag.** For projects that use error monitoring tools, link automated triage to your error tracker. When a bug report matches an existing Sentry issue, automatically add the Sentry link to the triage comment so maintainers can see crash frequency before prioritizing the fix.
+
+**Multi-repository triage.** For organizations managing multiple related repositories, deploy a shared triage service that applies consistent labeling standards across all projects. Claude Code generates the multi-repo webhook handler and a shared rules configuration that all repositories reference.
+
 ## Conclusion
 
 Automating issue triage with Claude Code transforms an overwhelming backlog into a manageable workflow. Start with classification and priority assignment, then expand to duplicate detection and maintainer routing as your rules mature. The key is maintaining human oversight for edge cases while letting Claude handle the predictable 80% of incoming issues.
