@@ -257,4 +257,75 @@ The patterns covered here—content script injection, background service worker 
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Building the Research Assistant
+
+1. **Set up Manifest V3** with `storage`, `contextMenus`, `sidePanel`, and `activeTab` permissions. The `sidePanel` permission (Chrome 114+) lets you open a persistent sidebar panel alongside the web page — ideal for research workflows.
+2. **Implement text selection capture**: use a context menu with `contexts: ['selection']` so users can right-click any selected text and send it to the research assistant. The text is passed to the background script via `chrome.runtime.sendMessage`.
+3. **Build the research pipeline**: when text is received, send it to the AI API with a research-focused system prompt. Ask it to summarize the concept, identify related terms, and suggest 2-3 questions for deeper investigation.
+4. **Display results in the side panel**: render the AI response in the side panel with the original text quoted at the top. Format the output with clear sections: Summary, Key Concepts, Related Topics, and Suggested Readings.
+5. **Save to research notes**: add a "Save to Notes" button that appends the research result to a collection in `chrome.storage.local`. Display saved notes in a second tab within the side panel.
+6. **Export research session**: at the end of a research session, let users export all saved notes as a Markdown file with the source URL and timestamp for each entry.
+
+## Using the Chrome Side Panel API
+
+The Side Panel API gives the extension a persistent, browser-managed sidebar that opens alongside the page:
+
+```javascript
+// manifest.json additions
+// "side_panel": { "default_path": "sidepanel.html" }
+// "permissions": ["sidePanel"]
+
+// background.js — open side panel on extension icon click
+chrome.action.onClicked.addListener((tab) => {
+  chrome.sidePanel.open({ tabId: tab.id });
+});
+
+// Keep side panel active across navigations on same tab
+chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
+```
+
+The side panel persists across page navigations within the same tab, which is exactly what researchers need — the notes panel stays open as they move between sources.
+
+## Comparison with Research Tools
+
+| Tool | Browser integration | AI analysis | Note export | Offline | Cost |
+|---|---|---|---|---|---|
+| This extension | Native (side panel) | Configurable | Markdown/JSON | Cached notes | Free (build it) |
+| Elicit | Web app | Semantic scholar | Limited | No | Free/Pro |
+| Perplexity | Web app / extension | GPT-4/Claude | No | No | Free/Pro |
+| Notion Web Clipper | Extension | No AI | Notion import | No | Free with Notion |
+| Readwise Reader | Extension + app | AI summary | Yes | No | $7.99/mo |
+
+The key advantage of a custom extension is the tight integration with the side panel and local storage — research notes accumulate automatically as you browse, with no account required.
+
+## Advanced: Cross-Page Research Graph
+
+Build a knowledge graph of research sessions by tracking how concepts from different pages connect:
+
+```javascript
+async function linkConcepts(newNote, existingNotes) {
+  const existingConcepts = existingNotes.map(n => n.keywords).flat();
+  const overlap = newNote.keywords.filter(k => existingConcepts.includes(k));
+
+  if (overlap.length > 0) {
+    // Create a link between notes that share keywords
+    newNote.linkedTo = existingNotes
+      .filter(n => n.keywords.some(k => overlap.includes(k)))
+      .map(n => n.id);
+  }
+  return newNote;
+}
+```
+
+Display this graph as a simple list of "Related notes" links within each note, or render it as a visual node graph using a lightweight library like Cytoscape.js bundled with the extension.
+
+## Troubleshooting
+
+**Side panel not opening on some pages**: The side panel requires the `sidePanel` permission and Chrome 114+. On older Chrome versions, fall back to opening a popup window using `chrome.windows.create`. Check `chrome.sidePanel` availability at runtime before calling its API.
+
+**Research notes lost when storage quota is exceeded**: Add a storage usage check on every save. Call `chrome.storage.local.getBytesInUse(null)` and warn the user when usage exceeds 8 MB (leaving 2 MB buffer from the 10 MB limit). Offer an export-and-clear option to free space without losing research.
+
+**AI responses too long for the side panel**: Constrain the response length in your prompt. Ask for "a 3-sentence summary followed by exactly 3 bullet points for key concepts". Longer responses are harder to scan in the narrow side panel width.
+
 {% endraw %}

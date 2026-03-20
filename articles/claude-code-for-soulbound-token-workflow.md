@@ -351,6 +351,95 @@ npx hardhat run scripts/deploy.js --network sepolia
 Soulbound tokens represent an emerging standard in Web3 with applications spanning credentials, identity, and reputation systems. By using Claude Code's development workflow capabilities, you can efficiently implement, test, and deploy secure soulbound token contracts. Start with the basic implementation provided in this guide, then extend it based on your specific requirements—whether that's multi-token support, governance integration, or advanced metadata handling.
 
 Remember to always audit your smart contracts and consider professional security reviews before deploying to mainnet. Claude Code can help you identify potential vulnerabilities, but final security verification requires expert review.
+
+## Step-by-Step: Building a Soulbound Token with Claude Code
+
+1. **Set up your development environment**: install Hardhat or Foundry, configure a local network, and ask Claude Code to scaffold the project structure with the correct directory layout for contracts, tests, and deployment scripts.
+2. **Define the SBT interface**: describe to Claude Code what the token represents (a credential, achievement, or identity document) and it will generate the Solidity interface with the appropriate metadata fields.
+3. **Implement transfer restrictions**: the core of an SBT is that it cannot be transferred. Claude Code generates the override for the `_transfer` function that reverts on any transfer attempt, while still allowing mint and burn.
+4. **Add an issuance authority**: decide who can mint tokens. Common patterns are a single issuer address (a university, employer, or DAO), a multisig, or a merkle-proof-based allowlist. Claude Code can implement all three patterns.
+5. **Write the test suite**: ask Claude Code to generate a Foundry or Hardhat test file that covers mint success, transfer failure, burn by holder, and metadata retrieval. Run `forge test` or `npx hardhat test` to verify.
+6. **Deploy and verify**: generate the deployment script and the contract verification command for Etherscan or Blockscout. Claude Code produces both from the contract name and constructor arguments.
+
+## Core SBT Contract
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract SoulboundToken is ERC721, Ownable {
+    uint256 private _nextTokenId;
+
+    constructor(address initialOwner)
+        ERC721("SoulboundCredential", "SBT")
+        Ownable(initialOwner)
+    {}
+
+    function mint(address to) external onlyOwner returns (uint256) {
+        uint256 tokenId = _nextTokenId++;
+        _safeMint(to, tokenId);
+        return tokenId;
+    }
+
+    // Prevent all transfers — tokens are bound to the recipient
+    function _update(address to, uint256 tokenId, address auth)
+        internal override returns (address)
+    {
+        address from = _ownerOf(tokenId);
+        if (from != address(0) && to != address(0)) {
+            revert("SBT: tokens are non-transferable");
+        }
+        return super._update(to, tokenId, auth);
+    }
+}
+```
+
+## SBT Use Case Comparison
+
+| Use Case | Transferable | Revocable | Privacy needs | Example |
+|---|---|---|---|---|
+| Academic credential | No | Yes (revocation by issuer) | Medium | Degree certificate |
+| Professional certification | No | Yes | Medium | AWS certification |
+| DAO membership | No | Yes (vote to revoke) | Low | Governance rights |
+| KYC attestation | No | Yes | High (ZK proof) | Identity verification |
+| Achievement badge | No | No (permanent) | Low | Gaming achievement |
+
+Claude Code can generate different contract variants for each pattern from this table — just describe the use case and constraints.
+
+## Advanced: Off-Chain Metadata with IPFS
+
+Store the credential metadata on IPFS for decentralization while keeping the token itself on-chain:
+
+```javascript
+// Deploy metadata to IPFS and mint SBT
+const metadata = {
+  name: "Graduate Certificate in Computer Science",
+  description: "Issued by Example University, 2026",
+  attributes: [
+    { trait_type: "Institution", value: "Example University" },
+    { trait_type: "Year", value: "2026" },
+    { trait_type: "Field", value: "Computer Science" }
+  ]
+};
+
+const { cid } = await ipfs.add(JSON.stringify(metadata));
+const tokenURI = 'ipfs://' + cid.toString();
+await sbtContract.mint(recipientAddress, tokenURI);
+```
+
+Ask Claude Code to generate the complete minting workflow including IPFS upload, metadata pinning via Pinata, and the on-chain mint transaction.
+
+## Troubleshooting
+
+**Contract reverting on OpenZeppelin 5.x with transfer override**: OpenZeppelin 5.x replaced `_beforeTokenTransfer` with `_update`. The correct override function is `_update(address to, uint256 tokenId, address auth)`. Claude Code generates the correct pattern for the OZ version you have installed — specify the version explicitly in your prompt.
+
+**Metadata not showing on OpenSea**: OpenSea requires `tokenURI` to return a valid JSON URL with `name`, `description`, and `image` fields. Ask Claude Code to implement a `tokenURI` override that returns a correctly formatted IPFS URL and verify it with the OpenSea metadata validator.
+
+**Tests failing after Hardhat upgrade**: Hardhat 3.x changed the way accounts are accessed in tests. Ask Claude Code to migrate your test file to the new `hre.ethers.getSigners()` pattern if you see `TypeError: Cannot read properties of undefined`.
+
 {% endraw %}
 
 ## Related Reading

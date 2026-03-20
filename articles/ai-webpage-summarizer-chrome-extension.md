@@ -294,4 +294,73 @@ The key to a successful implementation lies in robust content extraction that ha
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Building the AI Summarizer
+
+1. **Set up Manifest V3** with `activeTab`, `storage`, and `contextMenus` permissions. No host permissions are required — `activeTab` grants temporary access to the current page when the user interacts with the extension.
+2. **Extract page text**: in the content script, extract readable text from the page by stripping `<script>`, `<style>`, `<nav>`, and `<footer>` elements, then reading `document.body.innerText`. For article pages, target the main content element (`<article>`, `<main>`, `.content`) to skip navigation and ads.
+3. **Send text to the summarization API**: pass the extracted text to your chosen AI API (Claude, OpenAI, or the built-in Chrome Summarizer API). Chunk the text if it exceeds the model's context window — for most articles, this is not necessary.
+4. **Display the summary**: show the summary in a popup or in a sidebar panel injected into the page. Provide three length options: one-sentence, three-bullet, and full paragraph.
+5. **Cache summaries locally**: store the summary in `chrome.storage.local` keyed by the page URL. When the user reopens the extension on the same page, show the cached summary instantly without a new API call.
+6. **Add reading time estimate**: show the original article's estimated reading time alongside the summary so users can decide whether to read in full or just use the summary.
+
+## Using the Chrome Built-in Summarizer API
+
+Chrome 131+ includes an on-device Summarizer API as an origin trial. This eliminates API costs and latency for eligible users:
+
+```javascript
+// Check availability and create a summarizer
+if ('ai' in self && 'summarizer' in self.ai) {
+  const available = await self.ai.summarizer.capabilities();
+  if (available.available !== 'no') {
+    const summarizer = await self.ai.summarizer.create({
+      type: 'key-points',
+      length: 'medium',
+    });
+    const summary = await summarizer.summarize(articleText);
+    displaySummary(summary);
+    summarizer.destroy(); // Free memory
+  }
+}
+```
+
+Fall back to a cloud API for users on older Chrome versions or when the on-device model is not ready.
+
+## Comparison with Existing Summarization Tools
+
+| Tool | Model | Offline support | Privacy | Context limit | Cost |
+|---|---|---|---|---|---|
+| This extension | Configurable | With Chrome AI | Local (optional) | Model-dependent | Free (build it) |
+| TLDR This | Various | No | Server-side | ~10K tokens | Free/Pro |
+| Merlin | GPT-4 | No | Server-side | 32K tokens | Free/Pro |
+| Summari | Proprietary | No | Server-side | Varies | Freemium |
+| Kagi Universal Summarizer | Claude/GPT | No | Kagi account | Large | $5/mo |
+
+The built-in Chrome AI API gives this extension a unique advantage — zero cost and zero latency for on-device summaries with no data leaving the device.
+
+## Advanced: Summary Quality Scoring
+
+After generating a summary, run a quick quality check by asking the model to rate its own output:
+
+```javascript
+async function scoreSummary(originalText, summary) {
+  const resp = await callAPI(
+    'Rate this summary on accuracy (1-10) and completeness (1-10). ' +
+    'Original: ' + originalText.slice(0, 500) + '...\n\nSummary: ' + summary +
+    '\n\nRespond with JSON: {"accuracy": N, "completeness": N, "issues": []}'
+  );
+  return JSON.parse(resp);
+}
+```
+
+Show a quality indicator in the UI. If the score is below 7, offer a "Try again with more detail" button that re-runs with a more specific prompt.
+
+## Troubleshooting
+
+**Summarizer producing summaries of navigation menus instead of article content**: Use `document.querySelector('article, main, [role="main"], .post-content')` to target the main content area before falling back to `document.body`. Remove sidebar content (`aside`), comment sections, and related article widgets before passing text to the API.
+
+**API key exposed in extension source**: Store the key in `chrome.storage.sync` via the options page. Never bundle it in the extension package files. The extension should prompt for the key on first use and store it encrypted.
+
+**Summary cached for outdated page content**: Add a content hash to the cache key so that when the article is updated, the old cached summary is invalidated. Compute a simple 32-character hash of the first 2,000 characters of the page text and append it to the URL key.
+
 {% endraw %}

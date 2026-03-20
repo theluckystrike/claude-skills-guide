@@ -268,4 +268,83 @@ With the right skill design, your team can make data-driven performance decision
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
+## Step-by-Step: Load Test Analysis Workflow
+
+1. **Run your load test**: use k6, Locust, JMeter, or Artillery to generate load. Output results to a JSON or CSV file — all major tools support structured output formats.
+2. **Feed results to Claude Code**: pass the results file path to Claude Code: `claude> analyze the load test results in results.json and identify bottlenecks`. Claude reads the file and produces a prioritized list of findings.
+3. **Identify the critical path**: ask Claude to identify which endpoint or service accounts for the most latency. Usually one or two endpoints dominate the 95th percentile response time.
+4. **Compare against baseline**: if you have a previous results file, ask Claude to diff the two runs and explain what changed and why performance improved or degraded.
+5. **Generate fix recommendations**: for each bottleneck Claude identifies, ask for specific code-level recommendations. Claude can suggest database query optimizations, caching strategies, or connection pool sizing changes.
+6. **Draft a performance report**: ask Claude to write a structured report with executive summary, methodology, findings, and recommendations. This report can be shared with stakeholders without requiring them to interpret raw numbers.
+
+## Parsing k6 Results with Claude Code
+
+k6 outputs a summary JSON with all key metrics. Claude Code can parse this directly:
+
+```javascript
+// k6 test script generating structured output
+import { check } from 'k6';
+import http from 'k6/http';
+
+export const options = {
+  vus: 100,
+  duration: '60s',
+  summaryTrendStats: ['min', 'med', 'avg', 'p(90)', 'p(95)', 'p(99)', 'max'],
+};
+
+export default function() {
+  const res = http.get('https://api.example.com/v1/products');
+  check(res, {
+    'status is 200': (r) => r.status === 200,
+    'response time < 500ms': (r) => r.timings.duration < 500,
+  });
+}
+```
+
+Pass `k6 run --summary-export=results.json test.js` and then ask Claude Code to analyze `results.json`.
+
+## Load Test Analysis Comparison
+
+| Analysis method | Speed | Depth | Actionability | Repeatability |
+|---|---|---|---|---|
+| Manual review of charts | Slow (1-2 hours) | Medium | Low | Medium |
+| Automated alerts (p95 > threshold) | Instant | Low (single metric) | Low | High |
+| Claude Code analysis | Fast (5-10 min) | High (cross-metric) | High | High |
+| Dedicated APM (Datadog, New Relic) | Fast | High | Medium | High |
+| Performance consultant | Slow (days) | Very high | Very high | Low |
+
+Claude Code analysis sits in a valuable middle ground: faster than manual review, cheaper than APM tools for one-off analysis, and more actionable than simple threshold alerts.
+
+## Advanced: Automated Regression Detection
+
+Add Claude Code to your CI/CD pipeline to automatically compare load test results against a stored baseline:
+
+```python
+import json, subprocess, sys
+
+baseline = json.load(open('load-test-baseline.json'))
+current = json.load(open('load-test-results.json'))
+
+p95_delta = current['metrics']['http_req_duration']['p(95)'] - baseline['metrics']['http_req_duration']['p(95)']
+error_delta = current['metrics']['http_req_failed']['rate'] - baseline['metrics']['http_req_failed']['rate']
+
+if p95_delta > 50 or error_delta > 0.01:
+    # Call Claude Code for detailed analysis
+    result = subprocess.run(
+        ['claude', '-p', 'Compare these load test results and explain the regression: baseline=' +
+         json.dumps(baseline['metrics']) + ' current=' + json.dumps(current['metrics'])],
+        capture_output=True, text=True
+    )
+    print(result.stdout)
+    sys.exit(1)  # Fail the CI pipeline
+```
+
+## Troubleshooting
+
+**Claude Code output too verbose for CI use**: Add "Respond in 5 bullet points maximum" to your analysis prompt. Long reports are valuable for investigation but not for CI gate decisions where a concise pass/fail with a reason is more actionable.
+
+**Load test results file too large for Claude's context**: Pre-aggregate the results before passing them. Instead of sending 100,000 raw response time measurements, compute the p50/p90/p95/p99 percentiles and error rates per endpoint yourself and pass only the aggregated table.
+
+**Inconsistent findings across repeated analysis runs**: Use Claude's temperature 0 setting for analysis tasks. Add "Be consistent and deterministic in your analysis" to the prompt. For CI regression detection, define explicit thresholds in your prompt rather than asking Claude to judge whether a regression is "significant".
+
 {% endraw %}
