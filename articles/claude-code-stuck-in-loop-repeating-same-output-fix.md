@@ -166,6 +166,7 @@ For persistent problems, examine your project configuration and skill definition
 
 ## Related Reading
 
+- [How to Fix Claude Skill Infinite Loop Issues](/claude-skills-guide/how-to-fix-claude-skill-infinite-loop-issue/) — Skill-author fixes for tool re-invocation loops and exit conditions
 - [Claude Code Keeps Making the Same Mistake: Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/) — See also
 - [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/) — See also
 - [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/) — See also
