@@ -78,6 +78,10 @@ As the name suggests, Simple JSON Viewer prioritizes simplicity and speed. It fo
 
 For developers who prefer minimal chrome and maximum speed, Simple JSON Viewer delivers exactly what it promises without unnecessary features.
 
+### 5. JSON Lite
+
+JSON Lite focuses on speed and simplicity with the smallest footprint of any JSON extension. Despite its minimal size, it includes essential features like tree navigation, search functionality, and copy-to-clipboard for selected values. The interface prioritizes clarity without overwhelming options, and it respects your system dark mode preference automatically. If you frequently work with massive API responses or configuration files and want minimal resource usage, JSON Lite deserves consideration.
+
 ## Practical Examples
 
 ### Formatting an API Response
@@ -140,7 +144,7 @@ Consider your typical workflow when selecting a JSON formatter extension:
 - **Backend developers** value speed and clean tree navigation
 - **Full-stack developers** may prefer all-in-one tools like JSON Awesome
 
-All four extensions covered here are free to use, with optional premium features for power users. Test each to see which interface and feature set matches your workflow.
+All five extensions covered here are free to use, with optional premium features for power users. Test each to see which interface and feature set matches your workflow.
 
 ## Installation and Setup
 
