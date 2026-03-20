@@ -186,6 +186,102 @@ npm install -g @anthropic-ai/claude-code@1.x.x
 claude -p "/tdd Write integration tests for this agent pipeline script: $(cat agent-pipeline.sh)"
 ```
 
+## Environment Isolation for Agent Skills
+
+When running Claude Code agents in production, skill files should never live only on a developer's laptop. Store your `~/.claude/skills/` directory contents in a dedicated repository and deploy them as part of your CI/CD pipeline:
+
+```bash
+# deploy-skills.sh
+SKILLS_REPO="git@github.com:your-org/claude-skills.git"
+SKILLS_DIR="$HOME/.claude/skills"
+
+mkdir -p "$SKILLS_DIR"
+git clone "$SKILLS_REPO" /tmp/claude-skills
+cp /tmp/claude-skills/*.md "$SKILLS_DIR/"
+rm -rf /tmp/claude-skills
+echo "Skills deployed: $(ls $SKILLS_DIR | wc -l) files"
+```
+
+Run this script at container startup. Any change to a skill — updated instructions, new examples, corrected behavior — ships through a pull request rather than a manual file copy, giving you an audit trail of every skill modification.
+
+For containerized agents running in Docker, add the skills copy step to your Dockerfile so the image is self-contained:
+
+```dockerfile
+FROM node:20-slim
+RUN npm install -g @anthropic-ai/claude-code@1.x.x
+COPY skills/ /root/.claude/skills/
+COPY agent-pipeline.sh /app/agent-pipeline.sh
+RUN chmod +x /app/agent-pipeline.sh
+CMD ["/app/agent-pipeline.sh"]
+```
+
+## Validating Skill Output Quality in Production
+
+Retry logic handles transient failures, but it does not catch outputs that succeed technically yet return wrong answers. Add an output validation step between each skill call and the next stage of your pipeline:
+
+```bash
+validate_output() {
+    local OUTPUT="$1"
+    local MIN_LENGTH="${2:-20}"
+
+    if [[ -z "$OUTPUT" ]]; then
+        echo "INVALID: empty output" >&2
+        return 1
+    fi
+
+    if [[ ${#OUTPUT} -lt $MIN_LENGTH ]]; then
+        echo "INVALID: output too short (${#OUTPUT} chars)" >&2
+        return 1
+    fi
+
+    if echo "$OUTPUT" | grep -qi "i cannot\|unable to process\|error:"; then
+        echo "INVALID: refusal or error phrase detected" >&2
+        return 1
+    fi
+
+    return 0
+}
+
+EXTRACTED=$(claude -p "/pdf Extract order details from $PDF_FILE")
+if ! validate_output "$EXTRACTED" 50; then
+    echo "PDF extraction failed quality check, aborting pipeline" >&2
+    exit 1
+fi
+```
+
+This pattern catches the cases where the pdf skill runs without error but returns a refusal message because the document was unreadable or password-protected. Catching these early prevents garbage data from propagating to downstream steps and corrupting your supermemory store.
+
+## Scaling Agent Pipelines Horizontally
+
+Single-threaded shell pipelines hit throughput limits when order volume grows. Use a simple queue-based architecture to run multiple agent instances in parallel without duplicating processing:
+
+```bash
+# worker.sh — run N copies of this on separate machines or containers
+QUEUE_DIR="/shared/queue/pending"
+DONE_DIR="/shared/queue/done"
+
+while true; do
+    JOB=$(ls "$QUEUE_DIR" | head -1)
+    if [[ -z "$JOB" ]]; then
+        sleep 2
+        continue
+    fi
+
+    # Atomic claim: move file before processing
+    mv "$QUEUE_DIR/$JOB" "/shared/queue/processing/$JOB" 2>/dev/null || continue
+
+    PDF_FILE=$(jq -r '.pdf' "/shared/queue/processing/$JOB")
+    CUSTOMER_ID=$(jq -r '.customer_id' "/shared/queue/processing/$JOB")
+
+    bash /app/agent-pipeline.sh "$PDF_FILE" "$CUSTOMER_ID" \
+        > "/shared/queue/results/$JOB.result" 2>&1
+
+    mv "/shared/queue/processing/$JOB" "$DONE_DIR/$JOB"
+done
+```
+
+Each worker claims jobs atomically by moving the file before processing. Multiple workers can run on separate containers pointing at the same shared volume without stepping on each other. The supermemory skill remains a single source of truth for customer history because all workers invoke it through the same API endpoint rather than maintaining local state.
+
 ---
 
 ## Related Reading

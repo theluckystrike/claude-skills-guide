@@ -203,6 +203,182 @@ Never store Twitter API secrets directly in your extension code. Use server-side
 
 For production extensions, consider implementing end-to-end encryption for stored tweet content using the Web Crypto API, protecting sensitive scheduled content if the browser is compromised.
 
+## Threading Composer: Full Popup Flow
+
+A thread composer needs more than a single textarea. Users need to add, reorder, and preview individual tweets in a sequence before scheduling. Here is a practical implementation that manages a dynamic list of thread parts:
+
+```javascript
+// popup.js - Thread composer state
+let threadParts = [''];
+
+function renderThread() {
+  const container = document.getElementById('threadContainer');
+  container.innerHTML = '';
+
+  threadParts.forEach((text, index) => {
+    const div = document.createElement('div');
+    div.className = 'thread-part';
+    div.innerHTML = `
+      <span class="part-label">${index + 1}/${threadParts.length}</span>
+      <textarea maxlength="280">${text}</textarea>
+      <span class="char-count">${280 - text.length}</span>
+      <button class="add-part" data-index="${index}">+ Add after</button>
+      ${threadParts.length > 1
+        ? `<button class="remove-part" data-index="${index}">Remove</button>`
+        : ''}
+    `;
+    container.appendChild(div);
+  });
+}
+
+document.getElementById('threadContainer').addEventListener('input', (e) => {
+  if (e.target.tagName === 'TEXTAREA') {
+    const index = Array.from(
+      document.querySelectorAll('.thread-part')
+    ).indexOf(e.target.closest('.thread-part'));
+    threadParts[index] = e.target.value;
+    renderThread();
+  }
+});
+```
+
+This approach keeps the UI and state in sync without a framework dependency. For extensions, avoiding React or Vue keeps the bundle small and reduces Chrome Web Store review friction.
+
+## Debugging Scheduled Jobs
+
+Scheduled jobs that fire inside a service worker are notoriously hard to trace. Add structured logging to chrome.storage so you can inspect what fired and when, even after the worker has terminated:
+
+```javascript
+async function logEvent(type, payload) {
+  const { logs = [] } = await chrome.storage.local.get('logs');
+  logs.push({
+    type,
+    payload,
+    ts: Date.now()
+  });
+  // Keep only the last 200 log entries to avoid bloating storage
+  const trimmed = logs.slice(-200);
+  await chrome.storage.local.set({ logs: trimmed });
+}
+
+// Usage inside processScheduledTweets
+async function processScheduledTweets() {
+  const { tweets } = await chrome.storage.local.get('tweets');
+  const now = Date.now();
+
+  const dueTweets = (tweets || []).filter(
+    t => t.status === 'pending' && t.scheduledTime <= now
+  );
+
+  await logEvent('scheduler_run', { due: dueTweets.length, now });
+
+  for (const tweet of dueTweets) {
+    try {
+      await postTweet(tweet);
+      await logEvent('tweet_posted', { id: tweet.id });
+    } catch (err) {
+      await logEvent('tweet_failed', { id: tweet.id, error: err.message });
+    }
+  }
+}
+```
+
+To inspect logs during development, open `chrome://extensions`, click "Service Worker" to open DevTools for the background context, then run `chrome.storage.local.get('logs', console.log)` in the console.
+
+## OAuth 2.0 PKCE Authentication Flow
+
+For client-side extensions, Twitter's OAuth 2.0 with PKCE is the correct approach. It avoids embedding secrets in extension code and works entirely within the browser. The flow involves generating a code verifier and challenge, redirecting to Twitter's authorization endpoint via `chrome.identity.launchWebAuthFlow`, and exchanging the authorization code for tokens:
+
+```javascript
+// auth.js
+function generateCodeVerifier() {
+  const array = new Uint8Array(32);
+  crypto.getRandomValues(array);
+  return btoa(String.fromCharCode(...array))
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=/g, '');
+}
+
+async function generateCodeChallenge(verifier) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(verifier);
+  const digest = await crypto.subtle.digest('SHA-256', data);
+  return btoa(String.fromCharCode(...new Uint8Array(digest)))
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=/g, '');
+}
+
+export async function startOAuthFlow(clientId, redirectUri) {
+  const verifier = generateCodeVerifier();
+  const challenge = await generateCodeChallenge(verifier);
+
+  const params = new URLSearchParams({
+    response_type: 'code',
+    client_id: clientId,
+    redirect_uri: redirectUri,
+    scope: 'tweet.read tweet.write users.read offline.access',
+    state: crypto.randomUUID(),
+    code_challenge: challenge,
+    code_challenge_method: 'S256'
+  });
+
+  const authUrl = `https://twitter.com/i/oauth2/authorize?${params}`;
+
+  return new Promise((resolve, reject) => {
+    chrome.identity.launchWebAuthFlow(
+      { url: authUrl, interactive: true },
+      (responseUrl) => {
+        if (chrome.runtime.lastError) return reject(chrome.runtime.lastError);
+        const code = new URL(responseUrl).searchParams.get('code');
+        resolve({ code, verifier });
+      }
+    );
+  });
+}
+```
+
+Store the code verifier in `chrome.storage.session` (not `local`) since it is single-use and should not persist across sessions.
+
+## Retry Logic and Error Recovery
+
+Not every tweet will post successfully on the first attempt. Network errors, temporary API outages, and rate limit responses all require distinct handling. A tiered retry strategy prevents cascading failures:
+
+```javascript
+const RETRY_DELAYS = [60000, 300000, 900000]; // 1m, 5m, 15m
+
+async function postTweetWithRetry(tweet) {
+  try {
+    const result = await postTweet(tweet);
+    await updateTweetStatus(tweet.id, { status: 'posted', tweetId: result.data.id });
+  } catch (err) {
+    const nextRetry = tweet.retryCount || 0;
+
+    if (nextRetry < RETRY_DELAYS.length) {
+      const delay = RETRY_DELAYS[nextRetry];
+      await updateTweetStatus(tweet.id, {
+        retryCount: nextRetry + 1,
+        scheduledTime: Date.now() + delay,
+        status: 'pending'
+      });
+
+      chrome.alarms.create(`tweet-retry-${tweet.id}`, { when: Date.now() + delay });
+    } else {
+      await updateTweetStatus(tweet.id, { status: 'failed' });
+      chrome.notifications.create({
+        type: 'basic',
+        iconUrl: 'icons/icon48.png',
+        title: 'Tweet Failed',
+        message: `Could not post: "${tweet.text.slice(0, 50)}..."`
+      });
+    }
+  }
+}
+```
+
+Add `notifications` to your manifest permissions when using this pattern. Users appreciate knowing when automation fails rather than discovering missed posts hours later.
+
 ## Building for Production
 
 When deploying your extension, ensure you handle error states gracefully, provide clear user feedback, and implement proper logging for debugging. Test extensively with Twitter's sandbox environment before production release.

@@ -229,6 +229,142 @@ traced_model = torch.jit.trace(model, example_inputs)
 traced_model.save("model.pt")
 ```
 
+## Fine-Tuning Workflows with Claude Code
+
+One of the most common NeMo use cases is parameter-efficient fine-tuning of pre-trained LLMs for domain-specific tasks. Claude Code is particularly useful here because fine-tuning configurations involve many interdependent hyperparameters that are easy to misconfigure.
+
+### Setting Up LoRA Fine-Tuning
+
+Low-Rank Adaptation (LoRA) lets you fine-tune large models with a fraction of the compute by freezing most weights and training small adapter matrices. Here is a representative NeMo configuration:
+
+```yaml
+# lora_finetune.yaml
+model:
+  restore_from_path: "llama3-8b-nemo.nemo"
+  peft:
+    peft_scheme: "lora"
+    lora_tuning:
+      target_modules: ["attention_qkv", "attention_dense"]
+      adapter_dim: 32
+      adapter_dropout: 0.05
+      column_init_method: "normal"
+      row_init_method: "zero"
+  data:
+    train_ds:
+      file_path: "data/train.jsonl"
+      max_seq_length: 2048
+      micro_batch_size: 2
+    validation_ds:
+      file_path: "data/val.jsonl"
+      max_seq_length: 2048
+      micro_batch_size: 2
+```
+
+When you paste this configuration to Claude Code and describe your dataset format, it can flag mismatches immediately—for example, if `max_seq_length` exceeds the base model's positional embedding limit, or if `adapter_dim` is too large relative to the hidden dimension for efficient memory use.
+
+### Launching Fine-Tuning Jobs
+
+```bash
+# Single-GPU LoRA fine-tune
+python examples/nlp/language_modeling/tuning/megatron_gpt_peft_tuning.py \
+  --config-path=conf \
+  --config-name=lora_finetune \
+  trainer.devices=1 \
+  trainer.max_steps=2000 \
+  exp_manager.exp_dir=experiments/lora_run1
+```
+
+Provide this command to Claude Code along with any error output. It will identify common issues such as missing environment variables (`NEMO_HOME`, `CUDA_VISIBLE_DEVICES`) or incorrect path formats that the framework expects as absolute paths.
+
+## Experiment Tracking and Reproducibility
+
+Reproducibility is a persistent challenge in ML engineering. Claude Code can help you establish tracking practices that prevent the common problem of losing the exact configuration that produced your best checkpoint.
+
+### Integrating Weights and Biases
+
+NeMo's experiment manager supports W&B logging with minimal configuration:
+
+```yaml
+exp_manager:
+  exp_dir: "experiments/"
+  name: "nemo_lora_run"
+  create_wandb_logger: true
+  wandb_logger_kwargs:
+    project: "nemo-finetune"
+    name: "lora-llama3-8b-v1"
+    tags: ["lora", "llama3", "domain-adapt"]
+    log_model: false
+```
+
+Ask Claude Code to generate a standard experiment config template for your project. It can produce a base YAML that includes consistent tagging conventions, checkpointing intervals, and logging frequency values tuned to your typical run length.
+
+### Automated Config Snapshots
+
+Beyond W&B, save a copy of the resolved Hydra config at the start of every run so you can reproduce it exactly regardless of any config file edits:
+
+```python
+from omegaconf import OmegaConf
+import os
+
+def save_config_snapshot(cfg, output_dir):
+    os.makedirs(output_dir, exist_ok=True)
+    config_path = os.path.join(output_dir, "run_config.yaml")
+    OmegaConf.save(cfg, config_path)
+    print(f"Config snapshot saved to {config_path}")
+```
+
+Claude Code can integrate this into a custom NeMo callback so the snapshot fires automatically before the first training step, without requiring you to remember to call it manually.
+
+## Working with Multimodal NeMo Pipelines
+
+NeMo's multimodal capabilities extend beyond text to speech-to-text (Canary, Parakeet), text-to-speech (FastPitch, VITS), and vision-language models. Claude Code handles the complexity of cross-modal pipelines where data preprocessing, tokenization, and model architecture must align precisely.
+
+### Speech Recognition Pipeline
+
+A typical automatic speech recognition (ASR) workflow with NeMo requires audio preprocessing before model ingestion:
+
+```python
+import nemo.collections.asr as nemo_asr
+
+# Load a pre-trained Parakeet model
+asr_model = nemo_asr.models.ASRModel.from_pretrained("nvidia/parakeet-tdt-1.1b")
+
+# Transcribe a batch of audio files
+audio_files = ["interview_01.wav", "interview_02.wav"]
+transcriptions = asr_model.transcribe(audio_files, batch_size=4)
+
+for path, text in zip(audio_files, transcriptions):
+    print(f"{path}: {text}")
+```
+
+When adapting a pre-trained ASR model to domain-specific vocabulary (medical, legal, technical), ask Claude Code to generate a custom vocabulary insertion script and the corresponding decoder configuration update. It can also help you structure a CTC fine-tuning dataset from raw audio and transcript pairs into the NeMo manifest format:
+
+```json
+{"audio_filepath": "audio/clip_001.wav", "duration": 4.2, "text": "the patient reported onset of symptoms"}
+{"audio_filepath": "audio/clip_002.wav", "duration": 3.8, "text": "administered 50 milligrams intravenously"}
+```
+
+### Aligning Tokenization Across Modalities
+
+Multimodal LLM pipelines require consistent tokenizer configuration between the vision encoder and the language model decoder. A mismatch in special token IDs is one of the most common bugs in these pipelines and produces training loss spikes that are hard to diagnose without knowing where to look.
+
+```python
+from nemo.collections.multimodal.models.multimodal_llm.neva.neva_model import MegatronNevaModel
+
+# Load model and inspect token alignment
+model = MegatronNevaModel.restore_from("neva_model.nemo")
+
+# Verify image token ID matches the embedding table
+img_token_id = model.tokenizer.token_to_id("<image>")
+embed_table_size = model.model.embedding.word_embeddings.weight.shape[0]
+
+assert img_token_id < embed_table_size, (
+    f"Image token ID {img_token_id} out of range for embedding table size {embed_table_size}"
+)
+```
+
+Paste this validation check to Claude Code along with your model card and it will adapt the assertion to your specific architecture, including any additional special tokens your pipeline uses.
+
 ## Practical Tips for NeMo Development
 
 1. **Start Small**: Test configurations with smaller models before scaling up

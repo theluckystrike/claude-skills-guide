@@ -199,11 +199,156 @@ Restaurant POS systems connect closely with inventory management. Track ingredie
 /xlsx create food-cost-report.xlsx: link to sales data, calculate actual food cost percentage per day, highlight variance over 5%
 ```
 
+## Shift and Labor Reporting
+
+Beyond orders and inventory, restaurant POS systems must handle labor data: clock-in and clock-out times, shift assignments, overtime calculations, and tip distributions. This is an area where the xlsx skill provides immediate value because restaurant managers typically want labor data in spreadsheet form alongside sales data for cost-of-labor analysis.
+
+```python
+# Example: Compute shift duration and flag overtime
+from datetime import datetime, timedelta
+
+def calculate_shift_metrics(shifts: list[dict]) -> list[dict]:
+    results = []
+    for shift in shifts:
+        clock_in = datetime.fromisoformat(shift["clock_in"])
+        clock_out = datetime.fromisoformat(shift["clock_out"])
+        duration_hours = (clock_out - clock_in).seconds / 3600
+
+        results.append({
+            "employee_id": shift["employee_id"],
+            "name": shift["name"],
+            "date": clock_in.date().isoformat(),
+            "hours_worked": round(duration_hours, 2),
+            "overtime": round(max(0, duration_hours - 8), 2),
+            "role": shift["role"]
+        })
+    return results
+```
+
+Use the xlsx skill to generate the weekly labor summary managers review every Monday:
+
+```
+/xlsx create labor-report.xlsx: Sheet1=daily_shifts, Sheet2=weekly_totals, Sheet3=overtime_summary, conditional formatting for rows where overtime > 0
+```
+
+```
+/xlsx analyze shifts-march.csv: group by employee, calculate total hours, flag employees over 40 hours this week, calculate labor cost using hourly rates from staff.csv
+```
+
+Exporting labor reports as PDFs for payroll records is a natural extension of this workflow—use the pdf skill to merge weekly labor sheets into a single monthly payroll reference document.
+
+## Kitchen Display System Integration and Ticket Routing
+
+A functional POS system in a full-service restaurant needs to route orders to the correct kitchen station: cold prep, grill, fryer, and expediter. Building and testing this routing logic is where the tdd skill earns its place in the workflow.
+
+```python
+# Example: Order routing logic with TDD
+class KitchenRouter:
+    STATION_MAP = {
+        "burger": "grill",
+        "steak": "grill",
+        "salad": "cold-prep",
+        "fries": "fryer",
+        "onion-rings": "fryer",
+        "dessert": "cold-prep"
+    }
+
+    def route_order_items(self, order: dict) -> dict:
+        tickets = {}
+        for item in order["items"]:
+            station = self.STATION_MAP.get(item["category"], "expediter")
+            if station not in tickets:
+                tickets[station] = {"station": station, "items": [], "order_id": order["id"]}
+            tickets[station]["items"].append(item)
+        return tickets
+```
+
+```python
+# Tests generated with /tdd
+class TestKitchenRouter:
+    def test_burger_routes_to_grill(self):
+        router = KitchenRouter()
+        order = {"id": "100", "items": [{"name": "Burger", "category": "burger", "qty": 1}]}
+        tickets = router.route_order_items(order)
+        assert "grill" in tickets
+        assert tickets["grill"]["items"][0]["name"] == "Burger"
+
+    def test_mixed_order_splits_across_stations(self):
+        router = KitchenRouter()
+        order = {
+            "id": "101",
+            "items": [
+                {"name": "Salad", "category": "salad", "qty": 1},
+                {"name": "Fries", "category": "fries", "qty": 2}
+            ]
+        }
+        tickets = router.route_order_items(order)
+        assert "cold-prep" in tickets
+        assert "fryer" in tickets
+
+    def test_unknown_category_routes_to_expediter(self):
+        router = KitchenRouter()
+        order = {"id": "102", "items": [{"name": "Special", "category": "daily-special", "qty": 1}]}
+        tickets = router.route_order_items(order)
+        assert "expediter" in tickets
+```
+
+Generate this test suite with Claude:
+
+```
+/tdd write pytest tests for KitchenRouter: test routing for each station, test mixed orders split correctly, test unknown categories default to expediter, test order_id preserved in all tickets
+```
+
+## End-of-Day Closing Reports
+
+Every restaurant closes out the day by reconciling cash drawers, reviewing voids and refunds, and summarizing sales by category. This report goes to the owner or GM and often needs to be both a digital record and a printed document. The combination of xlsx for data and pdf for the final deliverable handles this pattern well.
+
+```python
+# Example: Build end-of-day summary structure
+def build_eod_summary(orders: list[dict], payments: list[dict]) -> dict:
+    total_sales = sum(o["total"] for o in orders if o["status"] == "paid")
+    total_voids = sum(o["total"] for o in orders if o["status"] == "voided")
+    cash_total = sum(p["amount"] for p in payments if p["method"] == "cash")
+    card_total = sum(p["amount"] for p in payments if p["method"] == "card")
+
+    category_sales = {}
+    for order in orders:
+        if order["status"] != "paid":
+            continue
+        for item in order["items"]:
+            cat = item.get("category", "uncategorized")
+            category_sales[cat] = category_sales.get(cat, 0) + item["price"] * item["qty"]
+
+    return {
+        "date": orders[0]["date"] if orders else None,
+        "total_orders": len([o for o in orders if o["status"] == "paid"]),
+        "total_sales": round(total_sales, 2),
+        "total_voids": round(total_voids, 2),
+        "cash": round(cash_total, 2),
+        "card": round(card_total, 2),
+        "category_breakdown": category_sales
+    }
+```
+
+Skill commands for generating the closing report package:
+
+```
+/xlsx create eod-2026-03-20.xlsx: Sheet1=order_summary, Sheet2=payment_breakdown, Sheet3=category_sales, Sheet4=voids_refunds, bold totals row, freeze header row on all sheets
+```
+
+```
+/pdf create eod-report-2026-03-20.pdf: include restaurant name header, daily totals table, category breakdown chart, payment method split, footer with manager signature line
+```
+
+```
+/pdf merge eod-report-2026-03-20.pdf with eod-2026-03-20.xlsx export: combine into single closing-package-2026-03-20.pdf for records
+```
+
 ## Why These Skills Matter for POS Development
 
-Restaurant POS development involves multiple data types: orders, payments, menus, inventory, and reports. Claude skills handle the document and data automation that would otherwise consume significant development time.
+Restaurant POS development involves multiple data types: orders, payments, menus, inventory, labor, and reports. Claude skills handle the document and data automation that would otherwise consume significant development time.
 
-The spreadsheet skill transforms raw transaction data into actionable insights. The PDF skill generates the receipts and invoices every restaurant needs. Testing skills ensure the complex state transitions in order processing work correctly.
+The spreadsheet skill transforms raw transaction data into actionable insights for managers who live in Excel. The PDF skill generates the receipts, invoices, and closing reports every restaurant operation requires. Testing skills ensure the complex state transitions in order processing and kitchen routing work correctly before a single table is served.
 
 Start with these skills when building restaurant POS solutions. They handle the operational complexity so you can focus on core POS functionality.
 

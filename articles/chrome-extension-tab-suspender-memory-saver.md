@@ -165,6 +165,137 @@ The technical foundation for tab suspenders is straightforward, but optimizing f
 
 Several established extensions implement these patterns effectively. The Great Suspender, originally a popular choice, has been succeeded by modern alternatives that maintain compatibility with current Chrome versions. When evaluating options, prioritize extensions with active maintenance, open-source codebases, and transparent privacy policies.
 
+## Advanced Suspension Strategies
+
+Beyond the basics, experienced developers and power users can layer additional strategies on top of a standard tab suspender to squeeze even more efficiency out of the browser.
+
+### Priority-Based Suspension Queues
+
+Not all inactive tabs deserve equal treatment. A tab containing an open form, a long-running API response, or an active WebSocket connection should be treated differently from a tab opened for casual reading five hours ago. The following pattern assigns each tab a suspension score and processes the highest-priority candidates first:
+
+```javascript
+function suspensionScore(tab, lastActiveTime) {
+  let score = 0;
+  const minutesIdle = (Date.now() - lastActiveTime) / 60000;
+
+  // Older tabs get higher scores
+  score += minutesIdle * 2;
+
+  // Penalize tabs the user visits often
+  if (tab.highlighted) score -= 20;
+
+  // Penalize tabs with audible media
+  if (tab.audible) score -= 50;
+
+  // Penalize pinned tabs
+  if (tab.pinned) score -= 100;
+
+  return score;
+}
+
+async function suspendByPriority(tabLastActive) {
+  const tabs = await chrome.tabs.query({ active: false, discarded: false });
+  const scored = tabs
+    .map(tab => ({
+      tab,
+      score: suspensionScore(tab, tabLastActive[tab.id] || 0)
+    }))
+    .filter(entry => entry.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+  // Only suspend the top candidates in each cycle
+  for (const entry of scored.slice(0, 5)) {
+    await suspendTab(entry.tab.id);
+  }
+}
+```
+
+Running this function on a 60-second interval instead of a simple idle check gives finer control over which tabs lose resources first, while protecting the ones users actually care about.
+
+### Tracking Real Tab Activity
+
+The idle API tells you whether the user is interacting with the machine at all, but it does not tell you which tab they last visited. Tracking that separately produces much better suspension decisions:
+
+```javascript
+const tabLastActive = {};
+
+chrome.tabs.onActivated.addListener(({ tabId }) => {
+  tabLastActive[tabId] = Date.now();
+});
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+  if (changeInfo.status === 'complete') {
+    tabLastActive[tabId] = Date.now();
+  }
+});
+```
+
+Storing this map in memory (and optionally persisting it to `chrome.storage.session`) means the suspension queue always reflects actual user behavior rather than just global idle time.
+
+### Handling Form and Media State
+
+One of the most common complaints about tab suspenders is losing an unsaved form. Before discarding a tab, the extension can inject a content script to check for dirty form state:
+
+```javascript
+async function hasDirtyForms(tabId) {
+  try {
+    const results = await chrome.scripting.executeScript({
+      target: { tabId },
+      func: () => {
+        const inputs = document.querySelectorAll('input, textarea, select');
+        return Array.from(inputs).some(el => {
+          if (el.tagName === 'SELECT') return false;
+          return el.defaultValue !== undefined && el.value !== el.defaultValue;
+        });
+      }
+    });
+    return results[0]?.result === true;
+  } catch {
+    return false; // Can't inject into this tab, treat as safe
+  }
+}
+```
+
+If `hasDirtyForms` returns `true`, the tab is skipped entirely. This single guard eliminates the most frustrating failure mode of automated tab suspension.
+
+## Debugging and Observability
+
+Building a tab suspender without visibility into its decisions leads to confusing behavior. Adding a simple event log helps during development and when supporting users:
+
+```javascript
+const eventLog = [];
+
+function logSuspensionEvent(tabId, reason, skipped = false) {
+  eventLog.push({
+    time: new Date().toISOString(),
+    tabId,
+    reason,
+    skipped
+  });
+  // Keep the log bounded
+  if (eventLog.length > 200) eventLog.shift();
+}
+```
+
+Expose this log in your extension's options page or a dedicated DevTools panel so you can see exactly which tabs were suspended and why. Chrome's `chrome://discards` page is also a useful reference — it shows every tab the browser is tracking for potential discard, along with its current memory state.
+
+For profiling the background service worker itself, open the extensions management page, find your extension, and click the "service worker" link. This opens a dedicated DevTools panel where you can inspect CPU and memory usage, set breakpoints, and view console output from the background context.
+
+## Real-World Memory Impact: Before and After
+
+To understand how much difference a well-tuned tab suspender actually makes, consider a typical developer workstation running a morning research session:
+
+- 4 documentation tabs (MDN, framework docs, two Stack Overflow threads)
+- 3 staging environment tabs (all React apps with hot module replacement enabled)
+- 2 Gmail tabs (multiple accounts)
+- 1 Slack web tab
+- 5 miscellaneous reading tabs opened but not yet read
+
+Without a suspender, all 15 tabs remain fully loaded. The staging environment tabs alone can consume 400-600MB each. A conservative estimate for the full session is 2.5-4GB of RAM devoted solely to browser tabs.
+
+After a suspender with a 10-minute idle threshold runs on the same session, the five unread reading tabs and two older documentation tabs get discarded almost immediately. The staging tabs are excluded because the content script detects active webpack sockets. The net result is typically 800MB-1.5GB freed within the first 15 minutes of inactivity, with no perceptible loss of functionality for the tabs the user actually needs.
+
+The RAM freed by the suspender is immediately available to other processes — locally running servers, Docker containers, or the IDE — which often shows more visible performance improvement than the browser itself.
 
 ## Related Reading
 

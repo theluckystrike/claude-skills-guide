@@ -189,6 +189,172 @@ async function storeKeyPair(publicKey, privateKey) {
 }
 ```
 
+## Secure Message Passing Between Extension Components
+
+One often-overlooked attack surface in Chrome extensions is the internal message passing layer. Content scripts, background service workers, and popup pages all communicate using `chrome.runtime.sendMessage` and `chrome.runtime.onMessage`. If this channel is not validated, a malicious webpage can spoof messages to trigger privileged actions inside your extension.
+
+Always validate the sender and message shape before acting on incoming messages:
+
+```javascript
+// background.js — validate all incoming messages
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  // Reject messages from external origins
+  if (!sender.tab || sender.tab.url.startsWith('chrome-extension://')) {
+    return;
+  }
+
+  // Whitelist allowed message types
+  const ALLOWED_ACTIONS = ['encryptDraft', 'blockPixel', 'fetchPublicKey'];
+  if (!ALLOWED_ACTIONS.includes(message.action)) {
+    console.warn('SecureMail: unknown action rejected', message.action);
+    return;
+  }
+
+  // Sanitize string payloads before processing
+  if (typeof message.payload === 'string') {
+    message.payload = DOMPurify.sanitize(message.payload);
+  }
+
+  handleAction(message, sender, sendResponse);
+  return true; // keep channel open for async response
+});
+```
+
+This pattern prevents cross-extension message injection attacks where a compromised tab attempts to call privileged encryption functions by mimicking internal message formats.
+
+### Popup-to-Background Key Exchange
+
+When a user initiates encryption from the popup UI, the popup should never hold the private key in memory. Delegate key operations entirely to the background service worker:
+
+```javascript
+// popup.js — request encryption without exposing private key
+async function requestEncrypt(recipientEmail, plaintext) {
+  return new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage(
+      { action: 'encryptDraft', payload: { recipientEmail, plaintext } },
+      (response) => {
+        if (chrome.runtime.lastError) {
+          reject(chrome.runtime.lastError.message);
+        } else if (response.error) {
+          reject(response.error);
+        } else {
+          resolve(response.ciphertext);
+        }
+      }
+    );
+  });
+}
+```
+
+The background worker performs key lookup, encryption, and returns only the ciphertext—the popup never touches the private key material.
+
+## Phishing Detection Patterns
+
+Secure email extensions can add a meaningful layer of defense against phishing by analyzing links and sender domains before the user clicks anything.
+
+### Link Analysis
+
+Inspect all hrefs inside an email body against known patterns of homograph attacks and lookalike domains:
+
+```javascript
+function detectSuspiciousLinks(container) {
+  const links = container.querySelectorAll('a[href]');
+  const warnings = [];
+
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    let parsed;
+    try {
+      parsed = new URL(href);
+    } catch (_) {
+      return;
+    }
+
+    const hostname = parsed.hostname.toLowerCase();
+
+    // Flag non-ASCII characters in domain (homograph attack indicator)
+    if (/[^\x00-\x7F]/.test(hostname)) {
+      warnings.push({ link, reason: 'Non-ASCII domain detected' });
+    }
+
+    // Flag domains impersonating well-known providers
+    const IMPERSONATION_PATTERNS = [
+      /paypa[l1]\./, /g[o0]{2}gle\./, /m[i1]cr[o0]s[o0]ft\./
+    ];
+    if (IMPERSONATION_PATTERNS.some(p => p.test(hostname))) {
+      warnings.push({ link, reason: 'Possible brand impersonation' });
+    }
+  });
+
+  return warnings;
+}
+```
+
+### Sender Spoofing Detection
+
+When display names and actual email domains diverge, it is a common social engineering tactic. A content script can surface this discrepancy directly in the email thread view:
+
+```javascript
+function checkSenderMismatch(displayName, fromAddress) {
+  const TRUSTED_BRANDS = ['paypal', 'google', 'microsoft', 'amazon', 'apple'];
+  const displayLower = displayName.toLowerCase();
+  const domain = fromAddress.split('@')[1]?.toLowerCase() || '';
+
+  for (const brand of TRUSTED_BRANDS) {
+    const nameClaimsBrand = displayLower.includes(brand);
+    const domainMatchesBrand = domain.includes(brand);
+
+    if (nameClaimsBrand && !domainMatchesBrand) {
+      return {
+        suspicious: true,
+        message: `Display name claims "${brand}" but sender domain is "${domain}"`
+      };
+    }
+  }
+  return { suspicious: false };
+}
+```
+
+These checks run entirely client-side, adding no network latency and exposing no email content to external services.
+
+## Testing Your Extension's Security
+
+Building a secure extension requires a structured testing workflow. Chrome DevTools and the extension inspection tools provide everything needed to validate behavior without external tooling.
+
+### Testing Content Script Injection
+
+Verify your content script activates correctly on target pages and does not bleed state between navigations:
+
+```javascript
+// In your content script, emit a testable signal
+if (typeof __SECUREMAIL_LOADED__ === 'undefined') {
+  window.__SECUREMAIL_LOADED__ = true;
+  document.dispatchEvent(new CustomEvent('securemailReady'));
+}
+```
+
+In the DevTools console on `mail.google.com`, confirm the event fires on load:
+
+```javascript
+document.addEventListener('securemailReady', () => console.log('extension active'));
+```
+
+### Auditing Storage Hygiene
+
+Check that no plaintext keys or sensitive content end up in accessible storage:
+
+```javascript
+// DevTools console — inspect session and local storage
+chrome.storage.session.get(null, (items) => console.log('session:', items));
+chrome.storage.local.get(null, (items) => console.log('local:', items));
+```
+
+Private key material should never appear as a readable string in either store. If it does, the key wrapping logic described in the earlier section needs to be applied.
+
+### Network Monitoring for Data Exfiltration
+
+Open the DevTools Network tab and apply a filter for requests initiated by the extension (filter by `initiator: extension`). Confirm that no email body content, subject lines, or contact information is transmitted to any external endpoint not documented in the extension's privacy policy. This step is essential for due diligence before deploying an extension to a team or publishing to the Chrome Web Store.
+
 ## Limitations and Considerations
 
 Chrome secure email extensions operate within browser constraints. They cannot:

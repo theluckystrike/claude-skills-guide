@@ -179,11 +179,104 @@ def full_stack_task(requirement: str) -> dict:
     return results
 ```
 
+## Handling Errors and Retries in Agent Loops
+
+Agent workflows break in production when individual LangChain steps fail silently. Wrap your chain invocations in explicit error handlers so Claude Code receives meaningful feedback rather than an empty output:
+
+```python
+import time
+
+def safe_invoke(executor, input_data: dict, retries: int = 3) -> str:
+    """Invoke an agent executor with retry logic."""
+    for attempt in range(retries):
+        try:
+            result = executor.invoke(input_data)
+            return result["output"]
+        except Exception as e:
+            if attempt < retries - 1:
+                wait = 2 ** attempt  # exponential backoff
+                time.sleep(wait)
+            else:
+                return f"Agent failed after {retries} attempts: {str(e)}"
+```
+
+Call `safe_invoke` instead of `executor.invoke` directly. When Claude Code runs the Python script, it gets a meaningful error string instead of a stack trace, which it can then surface or route to a fallback path.
+
+For chains that call external APIs — web search, database lookups — add token usage tracking so one slow tool call does not stall the entire pipeline:
+
+```python
+from langchain.callbacks import get_openai_callback
+
+with get_openai_callback() as cb:
+    result = safe_invoke(agent_executor, {"input": user_query})
+    print(f"Tokens used: {cb.total_tokens}, Cost: ${cb.total_cost:.4f}")
+```
+
+Logging token usage per invocation helps you spot runaway chains before they burn through your API quota.
+
+## Structuring Outputs for Claude Code Consumption
+
+Claude Code works best when your LangChain agent returns structured data rather than free-form prose. Use output parsers to enforce a predictable schema:
+
+```python
+from langchain.output_parsers import PydanticOutputParser
+from pydantic import BaseModel, Field
+from typing import List
+
+class CodeReviewResult(BaseModel):
+    issues: List[str] = Field(description="List of identified bugs or style issues")
+    suggestions: List[str] = Field(description="Improvement suggestions")
+    severity: str = Field(description="overall severity: low, medium, or high")
+
+parser = PydanticOutputParser(pydantic_object=CodeReviewResult)
+
+review_prompt = PromptTemplate(
+    template="Review this code. {format_instructions}\n\nCode:\n{code}",
+    input_variables=["code"],
+    partial_variables={"format_instructions": parser.get_format_instructions()}
+)
+
+review_chain = review_prompt | llm | parser
+```
+
+When Claude Code invokes this chain, it receives a clean JSON-compatible object. You can then pipe the `severity` field into conditional logic — skipping a pull request comment if severity is `low`, or blocking a merge if it is `high`.
+
+## Persisting Agent State Between Claude Code Sessions
+
+One common pain point is that LangChain's in-memory objects disappear when the Python process exits. To persist state across Claude Code sessions, serialize memory to disk:
+
+```python
+import json
+from pathlib import Path
+
+STATE_FILE = Path(".agent_memory.json")
+
+def save_memory(memory_obj):
+    history = memory_obj.chat_memory.messages
+    data = [{"role": m.type, "content": m.content} for m in history]
+    STATE_FILE.write_text(json.dumps(data, indent=2))
+
+def load_memory(memory_obj):
+    if STATE_FILE.exists():
+        data = json.loads(STATE_FILE.read_text())
+        for entry in data:
+            if entry["role"] == "human":
+                memory_obj.chat_memory.add_user_message(entry["content"])
+            else:
+                memory_obj.chat_memory.add_ai_message(entry["content"])
+```
+
+Call `load_memory` at startup and `save_memory` before exit. Claude Code can trigger these via a wrapper script, so every session picks up where the last one left off. For long-running projects, combine this with the **supermemory** skill to store high-level summaries that survive even if you rotate your local state file.
+
 ## Best Practices
 
 Keep your LangChain agents focused on specific tasks rather than trying to handle everything. Use the **supermemory** skill to persist learnings across sessions. Structure your prompts clearly, and always provide examples in your prompt templates when expecting specific output formats.
 
-DebugLangChain agents by enabling verbose mode during development. This shows you exactly how the model is reasoning through your prompts and where failures occur.
+Debug LangChain agents by enabling verbose mode during development. This shows you exactly how the model is reasoning through your prompts and where failures occur.
+
+When deploying agent workflows that Claude Code will trigger repeatedly, pin your LangChain version in `requirements.txt`. Minor version updates sometimes change prompt hub formats or tool-calling signatures, which breaks working pipelines without warning.
+
+Finally, keep your `CLAUDE.md` tool descriptions concise and action-oriented. Claude Code reads these descriptions to decide when to invoke a tool, so vague descriptions lead to missed invocations or redundant calls.
 
 ## Conclusion
 

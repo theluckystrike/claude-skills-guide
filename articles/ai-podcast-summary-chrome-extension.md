@@ -147,6 +147,157 @@ const summaryPresets = {
 };
 ```
 
+## Handling Transcription Before Summarization
+
+Summarization quality depends entirely on transcription accuracy. For extensions that process audio directly, integrating a transcription service is a prerequisite step. OpenAI's Whisper API is a common choice because it handles accented speech, technical jargon, and overlapping conversation reasonably well.
+
+```javascript
+// Background script - transcription via Whisper API
+async function transcribeAudio(audioBlob, apiKey) {
+  const formData = new FormData();
+  formData.append('file', audioBlob, 'podcast.mp3');
+  formData.append('model', 'whisper-1');
+  formData.append('language', 'en');
+
+  const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
+    method: 'POST',
+    headers: { 'Authorization': `Bearer ${apiKey}` },
+    body: formData
+  });
+
+  const data = await response.json();
+  return data.text;
+}
+```
+
+One practical issue is audio file size. Browser extensions cannot always stream audio data directly to an API—you may need to capture a download URL and pass it server-side, or limit transcription to episodes under a certain file size. A thin backend relay that accepts an audio URL, downloads the file, and forwards it to the transcription API solves this cleanly without exposing API keys in the extension code.
+
+For YouTube-hosted podcast content, the extension can retrieve auto-generated captions via the YouTube Data API instead of transcribing raw audio, which is significantly faster and cheaper. This approach requires an additional OAuth permission and a different extraction path, but the quality improvement is worth the implementation effort.
+
+## Managing State Across Browser Sessions
+
+A common mistake in early extension builds is losing generated summaries when the user closes and reopens the popup. Chrome's `chrome.storage.local` API persists data across sessions, but it requires thoughtful key design.
+
+```javascript
+// Storage helpers for summary persistence
+const STORAGE_KEY_PREFIX = 'podcast_summary_';
+
+async function saveSummary(episodeUrl, summaryData) {
+  const key = STORAGE_KEY_PREFIX + btoa(episodeUrl).slice(0, 50);
+  const payload = {
+    summary: summaryData,
+    generatedAt: Date.now(),
+    url: episodeUrl
+  };
+  await chrome.storage.local.set({ [key]: payload });
+}
+
+async function loadSummary(episodeUrl) {
+  const key = STORAGE_KEY_PREFIX + btoa(episodeUrl).slice(0, 50);
+  const result = await chrome.storage.local.get(key);
+  return result[key] || null;
+}
+
+async function pruneOldSummaries(maxAgeDays = 30) {
+  const all = await chrome.storage.local.get(null);
+  const cutoff = Date.now() - maxAgeDays * 24 * 60 * 60 * 1000;
+  const keysToRemove = Object.entries(all)
+    .filter(([k, v]) => k.startsWith(STORAGE_KEY_PREFIX) && v.generatedAt < cutoff)
+    .map(([k]) => k);
+  if (keysToRemove.length > 0) {
+    await chrome.storage.local.remove(keysToRemove);
+  }
+}
+```
+
+Calling `pruneOldSummaries` on extension startup keeps storage tidy without requiring manual user intervention. Budget around 5MB of storage per user—well within the 10MB limit Chrome enforces for local storage. For enterprise deployments or shared devices, consider syncing summaries via `chrome.storage.sync` with the understanding that the per-item size limit is 8KB, which may require chunking longer summaries.
+
+## Building a Usable Popup UI
+
+A functional popup needs to communicate three states clearly: no podcast detected, summary generating, and summary ready. Ambiguity in these states leads to user confusion and negative reviews.
+
+```html
+<!-- popup.html - core state structure -->
+<div id="state-idle" class="state">
+  <p>No podcast detected on this page.</p>
+</div>
+
+<div id="state-loading" class="state hidden">
+  <div class="spinner"></div>
+  <p id="progress-label">Transcribing audio...</p>
+</div>
+
+<div id="state-ready" class="state hidden">
+  <div id="summary-content"></div>
+  <button id="btn-copy">Copy Summary</button>
+  <button id="btn-export">Export to Markdown</button>
+</div>
+```
+
+```javascript
+// popup.js - state transitions
+function setState(state, message) {
+  document.querySelectorAll('.state').forEach(el => el.classList.add('hidden'));
+  document.getElementById(`state-${state}`).classList.remove('hidden');
+  if (message && state === 'loading') {
+    document.getElementById('progress-label').textContent = message;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  const cached = await loadSummary(tab.url);
+
+  if (cached) {
+    renderSummary(cached.summary);
+    setState('ready');
+  } else {
+    const audioSrc = await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      func: extractAudioSource
+    });
+
+    if (!audioSrc[0].result) {
+      setState('idle');
+    } else {
+      setState('loading', 'Detecting episode...');
+      generateSummary(tab.url, audioSrc[0].result);
+    }
+  }
+});
+```
+
+Adding a copy-to-clipboard button and a plain-text export function significantly increases retention. Many users want to paste summaries into Notion, Obsidian, or email—meeting that expectation removes friction that would otherwise cause them to abandon the extension.
+
+## Prompt Engineering for Better Summaries
+
+The quality of the final summary depends as much on the prompt structure as on the model chosen. Generic prompts produce generic results. Prompts that specify structure, length, and audience produce output users actually find useful.
+
+A well-structured prompt for podcast summarization might look like this:
+
+```javascript
+function buildSummaryPrompt(transcript, options = {}) {
+  const { style = 'standard', audience = 'professional' } = options;
+
+  const styleInstructions = {
+    brief: 'Write 3-5 bullet points covering only the main takeaways.',
+    standard: 'Write a structured summary with: (1) a 2-sentence overview, (2) 5-7 key points as bullets, (3) any action items or recommended resources mentioned.',
+    detailed: 'Write a comprehensive breakdown with: section headings for major topics, detailed notes under each, speaker attributions where identifiable, and a final takeaways section.'
+  };
+
+  return `You are summarizing a podcast transcript for a ${audience} reader.
+
+${styleInstructions[style]}
+
+Focus on concrete information, statistics, and specific recommendations. Avoid vague phrases like "the host discusses" — instead state what was actually said.
+
+Transcript:
+${transcript.slice(0, 12000)}`;
+}
+```
+
+Truncating the transcript to 12,000 characters before passing it to the model keeps API costs predictable while capturing the majority of episode content. For longer episodes, consider splitting the transcript into thirds, generating three partial summaries, and then asking the model to synthesize them into a final summary—a two-pass approach that handles 90-minute episodes without hitting context limits.
+
 ## Getting Started
 
 If you're ready to build, start with a minimal viable product: detect audio, send to a single API, display the result. Iterate based on user feedback. The Chrome Extension documentation provides excellent starting points for understanding the platform capabilities.

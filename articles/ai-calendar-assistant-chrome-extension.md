@@ -211,6 +211,161 @@ class RateLimitedClient {
 }
 ```
 
+## Injecting a Scheduling Prompt Into Gmail and Google Meet
+
+Content scripts allow your extension to inject UI directly into pages the user is already visiting. A practical enhancement is detecting meeting invites in Gmail and offering a one-click "Add to Calendar" button powered by your NLP layer:
+
+```javascript
+// content.js - inject button into Gmail thread view
+function injectCalendarButton(emailText) {
+  const toolbar = document.querySelector('.G-atb');
+  if (!toolbar || document.getElementById('ai-cal-btn')) return;
+
+  const btn = document.createElement('button');
+  btn.id = 'ai-cal-btn';
+  btn.textContent = 'Add to Calendar (AI)';
+  btn.style.cssText = 'margin-left:8px;padding:4px 10px;font-size:13px;cursor:pointer;';
+
+  btn.addEventListener('click', async () => {
+    btn.disabled = true;
+    btn.textContent = 'Parsing...';
+
+    const parsed = await chrome.runtime.sendMessage({
+      type: 'PARSE_EMAIL',
+      text: emailText
+    });
+
+    if (parsed.event) {
+      btn.textContent = 'Creating event...';
+      const result = await chrome.runtime.sendMessage({
+        type: 'CREATE_EVENT',
+        event: parsed.event
+      });
+      btn.textContent = result.success ? 'Added!' : 'Failed — try again';
+    } else {
+      btn.textContent = 'Could not parse date';
+    }
+  });
+
+  toolbar.appendChild(btn);
+}
+
+// Extract visible email body text and trigger injection
+const observer = new MutationObserver(() => {
+  const body = document.querySelector('.a3s.aiL');
+  if (body) injectCalendarButton(body.innerText);
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
+```
+
+The background service worker receives the `PARSE_EMAIL` message and calls your NLP service, keeping API keys out of the content script context entirely.
+
+## Handling Recurring Events
+
+Recurring events are one of the trickiest cases for natural language scheduling. Phrases like "every Tuesday at 3 PM for the next 6 weeks" require generating an RFC 5545-compliant recurrence rule. Google Calendar's API accepts these as a `recurrence` array on the event object:
+
+```javascript
+function buildRecurrenceRule(nlpResult) {
+  // nlpResult.frequency: 'WEEKLY', 'DAILY', 'MONTHLY'
+  // nlpResult.byDay: ['TU'] for Tuesdays
+  // nlpResult.count: 6 occurrences
+
+  const parts = [`RRULE:FREQ=${nlpResult.frequency}`];
+
+  if (nlpResult.byDay && nlpResult.byDay.length) {
+    parts[0] += `;BYDAY=${nlpResult.byDay.join(',')}`;
+  }
+
+  if (nlpResult.count) {
+    parts[0] += `;COUNT=${nlpResult.count}`;
+  } else if (nlpResult.until) {
+    parts[0] += `;UNTIL=${nlpResult.until}`;
+  }
+
+  return parts;
+}
+
+// Usage when creating the event
+const event = {
+  summary: parsed.title,
+  start: { dateTime: parsed.startTime, timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone },
+  end:   { dateTime: parsed.endTime,   timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone },
+  recurrence: buildRecurrenceRule(parsed.recurrence)
+};
+```
+
+Always pass the user's local timezone using `Intl.DateTimeFormat().resolvedOptions().timeZone`. Failing to do so is the most common source of events appearing one hour off for users in non-UTC zones.
+
+## Conflict Detection Before Event Creation
+
+Creating an event that overlaps an existing one is a poor user experience. Add a conflict check step that queries the user's free/busy status before committing to the creation:
+
+```javascript
+async function checkConflicts(accessToken, startTime, endTime) {
+  const response = await fetch(
+    'https://www.googleapis.com/calendar/v3/freeBusy',
+    {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        timeMin: startTime,
+        timeMax: endTime,
+        items: [{ id: 'primary' }]
+      })
+    }
+  );
+
+  const data = await response.json();
+  const busy = data.calendars?.primary?.busy || [];
+  return busy.length > 0 ? busy : null;
+}
+
+// In your event creation flow
+const conflicts = await checkConflicts(token, parsed.startTime, parsed.endTime);
+if (conflicts) {
+  results.textContent = `Conflict detected: you have ${conflicts.length} overlapping event(s). Reschedule?`;
+  showRescheduleOptions(conflicts, parsed);
+} else {
+  await calendar.createEvent(event);
+  results.textContent = 'Event created successfully!';
+}
+```
+
+The `freeBusy` endpoint is lightweight and fast, making it practical to call on every creation attempt without a noticeable performance hit.
+
+## Caching Calendar Data Locally
+
+Fetching the full event list every time the popup opens creates unnecessary latency and burns through API quota. A simple TTL cache in `chrome.storage.local` dramatically improves perceived performance:
+
+```javascript
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
+async function getCachedEvents(accessToken, timeMin, timeMax) {
+  const cacheKey = `events_${timeMin}_${timeMax}`;
+  const stored = await chrome.storage.local.get(cacheKey);
+  const cached = stored[cacheKey];
+
+  if (cached && Date.now() - cached.fetchedAt < CACHE_TTL) {
+    return cached.data;
+  }
+
+  const calendar = new CalendarService(accessToken);
+  const fresh = await calendar.listEvents(timeMin, timeMax);
+
+  await chrome.storage.local.set({
+    [cacheKey]: { data: fresh, fetchedAt: Date.now() }
+  });
+
+  return fresh;
+}
+```
+
+Invalidate the cache whenever you create, update, or delete an event so the next popup open reflects the correct state. A simple approach is to delete all keys matching the `events_` prefix after any write operation.
+
 ## Extension Distribution
 
 For Chrome Web Store submission, prepare your extension with proper icons (128x128, 48x48, 16x16), a detailed description, and privacy policy. Users increasingly scrutinize calendar permissions, so explain exactly how AI processes their data.
