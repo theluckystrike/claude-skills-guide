@@ -214,6 +214,185 @@ writeFileSync('output/tokens.ts', typeDefs);
 By combining Claude Code's automation capabilities with Figma Variables, you create a powerful design-to-code pipeline that reduces manual work and ensures consistency. The key is establishing clear workflows and using tools that bridge the design-development gap effectively.
 
 Start small with basic color and typography tokens, then expand to spacing, shadows, and more complex token structures as your design system matures.
+
+## Advanced Token Transformation Patterns
+
+### Multi-Brand Token Support
+
+Large design systems often support multiple brands or themes from a single token source. Structure your transformation pipeline to handle brand overrides:
+
+```python
+# multi_brand_transform.py
+import json
+from pathlib import Path
+
+def transform_for_brand(base_tokens: dict, brand_override_file: str) -> dict:
+    """Merge brand-specific overrides onto base tokens"""
+    try:
+        with open(brand_override_file) as f:
+            overrides = json.load(f)
+    except FileNotFoundError:
+        return base_tokens
+    
+    def deep_merge(base: dict, override: dict) -> dict:
+        result = base.copy()
+        for key, value in override.items():
+            if key in result and isinstance(result[key], dict) and isinstance(value, dict):
+                result[key] = deep_merge(result[key], value)
+            else:
+                result[key] = value
+        return result
+    
+    return deep_merge(base_tokens, overrides)
+
+def generate_brand_artifacts(tokens_dir: str, output_dir: str):
+    base_tokens = load_tokens(f"{tokens_dir}/base.json")
+    
+    for brand_file in Path(tokens_dir).glob("brand-*.json"):
+        brand_name = brand_file.stem.replace("brand-", "")
+        merged = transform_for_brand(base_tokens, str(brand_file))
+        
+        # Generate CSS variables for each brand
+        css = transform_to_css_variables(merged)
+        output_path = f"{output_dir}/{brand_name}/tokens.css"
+        Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+        with open(output_path, 'w') as f:
+            f.write(css)
+        
+        print(f"Generated tokens for brand: {brand_name}")
+```
+
+### Handling Token References (Aliases)
+
+Figma Variables support aliasing — one token referencing the value of another. Your transformer needs to resolve these chains:
+
+```python
+def resolve_token_aliases(tokens: dict) -> dict:
+    """Resolve alias references like {color.primary.500} to actual values"""
+    
+    def get_by_path(obj: dict, path: str):
+        parts = path.strip('{}').split('.')
+        current = obj
+        for part in parts:
+            if not isinstance(current, dict) or part not in current:
+                return None
+            current = current[part]
+        return current.get('value') if isinstance(current, dict) else current
+    
+    def resolve_value(tokens: dict, value: str) -> str:
+        if isinstance(value, str) and value.startswith('{') and value.endswith('}'):
+            resolved = get_by_path(tokens, value)
+            if resolved:
+                return resolve_value(tokens, resolved)
+        return value
+    
+    def walk_and_resolve(obj: dict) -> dict:
+        result = {}
+        for key, val in obj.items():
+            if isinstance(val, dict) and 'value' in val:
+                result[key] = {**val, 'value': resolve_value(tokens, val['value'])}
+            elif isinstance(val, dict):
+                result[key] = walk_and_resolve(val)
+            else:
+                result[key] = val
+        return result
+    
+    return walk_and_resolve(tokens)
+```
+
+Alias resolution is critical for semantic token systems where `color-button-primary` references `color-brand-500`, which in turn references the raw hex value.
+
+## Integrating Tokens into Your Build Pipeline
+
+### GitHub Actions Workflow
+
+Automate token generation on every Figma export push:
+
+```yaml
+# .github/workflows/design-tokens.yml
+name: Design Token Pipeline
+
+on:
+  push:
+    paths:
+      - 'tokens/**'
+
+jobs:
+  generate-tokens:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Generate tokens
+        run: python scripts/transform_tokens.py
+      
+      - name: Validate output
+        run: python scripts/validate_tokens.py
+      
+      - name: Commit generated files
+        run: |
+          git config user.name "Design Token Bot"
+          git config user.email "bot@example.com"
+          git add output/
+          git diff --staged --quiet || git commit -m "chore: regenerate design tokens"
+          git push
+```
+
+### Validating Token Output
+
+Before tokens land in production, validate that all expected tokens are present and values are well-formed:
+
+```python
+# scripts/validate_tokens.py
+import re
+import sys
+from pathlib import Path
+
+def validate_css_tokens(css_file: str) -> list[str]:
+    errors = []
+    with open(css_file) as f:
+        css = f.read()
+    
+    # Check required token families are present
+    required_prefixes = ['--color-', '--spacing-', '--typography-', '--radius-']
+    for prefix in required_prefixes:
+        if prefix not in css:
+            errors.append(f"Missing token family: {prefix}")
+    
+    # Check no unresolved aliases remain
+    unresolved = re.findall(r'var\(--[^)]+\)', css)
+    for ref in unresolved:
+        var_name = ref[4:-1]
+        if var_name not in css:
+            errors.append(f"Unresolved token reference: {ref}")
+    
+    return errors
+
+errors = validate_css_tokens('output/tokens.css')
+if errors:
+    print("Token validation failed:")
+    for e in errors:
+        print(f"  - {e}")
+    sys.exit(1)
+
+print("Token validation passed")
+```
+
+## Common Pitfalls
+
+**Figma variable naming collisions**: When exporting from multiple variable collections, token names from different collections can collide. Prefix each collection with its name (e.g., `primitive/color/blue-500` vs `semantic/color/button-primary`) and preserve the namespace in your output.
+
+**Missing dark mode tokens**: If your Figma file uses variable modes for dark/light theme, the export includes both modes. Make sure your transformer generates separate CSS files (or CSS `prefers-color-scheme` blocks) for each mode, not just the default.
+
+**Token drift between design and code**: Schedule weekly automated checks that compare the latest Figma export against what is deployed in production. A simple diff on the token JSON surfaces discrepancies before they become visual regressions in the application.
+
+**Ignoring deprecated tokens**: As design systems evolve, old tokens get retired. Add a `deprecated` flag to your token schema and emit CSS comments or TypeScript `@deprecated` annotations to guide developers away from obsolete values.
+
 {% endraw %}
 
 
