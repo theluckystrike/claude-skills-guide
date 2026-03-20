@@ -140,7 +140,7 @@ As you develop more skills and understand your patterns, you'll naturally gravit
 
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understand the auto invocation system deeply before troubleshooting intermittent failures.
 - [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/) — Diagnose and fix skills that never auto-invoke, not just intermittently.
-- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Resolve visibility issues that prevent skills from being available for auto invocation.
+- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Resolve visibility issues that prevent skills from being available for auto invocation.
 - [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn correct skill setup to avoid common auto invocation configuration mistakes.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

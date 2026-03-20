@@ -247,7 +247,7 @@ The `supermemory` skill can help you track which versions work best for your wor
 
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-skills-guide/claude-code-dotfiles-management-and-skill-sync-workflow/) — Version-control your skills with dotfiles so rollback is always one git command away.
 - [How Do I Share Claude Skills Across Multiple Projects](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) — Pin shared skill versions across projects to prevent bad updates from propagating everywhere.
-- [Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Diagnose whether a skill issue is update-related or a loading/configuration problem.
+- [Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Diagnose whether a skill issue is update-related or a loading/configuration problem.
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Find more troubleshooting guides for common skill problems including update and version issues.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -199,7 +199,7 @@ Silent failures in Claude skills usually stem from permission issues, YAML synta
 
 ## Related Reading
 
-- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Fix skills that don't appear in the skill list at all
+- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Fix skills that don't appear in the skill list at all
 - [Claude Code Crashes When Loading Skill: Debug Steps](/claude-skills-guide/claude-code-crashes-when-loading-skill-debug-steps/) — Handle hard crashes and fatal errors during skill initialization
 - [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) — Diagnose and fix YAML parsing errors that cause silent skill failures
 - [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions to common Claude skill problems and failures

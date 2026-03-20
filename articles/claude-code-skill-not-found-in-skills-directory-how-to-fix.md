@@ -104,6 +104,19 @@ Common YAML errors include:
 - Missing colons after keys
 - Improper indentation
 - Unquoted strings with special characters
+- Tabs instead of spaces for indentation
+
+For example, colons inside description values cause silent parsing failures:
+
+```yaml
+# WRONG — unquoted colon in description
+description: Generates components: buttons, forms, modals
+
+# CORRECT — quote descriptions containing colons
+description: "Generates components: buttons, forms, modals"
+```
+
+If you copied skill content from a PDF or a rich text editor, invisible non-UTF-8 characters (smart quotes, em-dashes, zero-width spaces) can silently break YAML parsing. Open the file in a plain text editor and verify there are no unusual characters in the front matter block.
 
 Use a YAML validator to check your skill's front matter if you suspect syntax issues.
 
@@ -134,6 +147,10 @@ Certain skills are more prone to installation issues because of their complexity
 - **supermemory** — Often needs API key configuration
 
 When installing these skills, pay extra attention to any README or setup instructions that come with them.
+
+### Note on Built-in Skills
+
+The built-in skills — `/pdf`, `/tdd`, `/docx`, `/xlsx`, `/pptx`, `/frontend-design`, `/canvas-design`, `/supermemory`, `/webapp-testing`, `/skill-creator` — do not require external API keys or additional installations. If one of these built-in skills isn't responding, the issue is likely a Claude Code version problem rather than a directory placement issue.
 
 ## Quick Diagnostic Checklist
 
@@ -169,7 +186,6 @@ The "skill not found" error is almost always a path or naming issue that takes m
 
 ## Related Reading
 
-- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Address skill visibility issues beyond directory placement problems
 - [Why Does Claude Code Ignore My Skill MD File Entirely](/claude-skills-guide/why-does-claude-code-ignore-my-skill-md-file-entirely/) — Diagnose cases where skills are found but silently ignored by Claude Code
 - [Claude Code Skill Permission Denied Error Fix 2026](/claude-skills-guide/claude-code-skill-permission-denied-error-fix-2026/) — Resolve file permission issues that prevent skill files from loading
 - [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions for common Claude skill setup and discovery problems

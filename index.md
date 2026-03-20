@@ -2065,7 +2065,6 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Why Is Claude Code Producing Code That Does Not Run?](/claude-skills-guide/why-is-claude-code-producing-code-that-does-not-run/)
 - [Why Is Claude Code Reading the Wrong Directory Entirely?](/claude-skills-guide/why-is-claude-code-reading-the-wrong-directory-entirely/)
 - [Why Is Claude Code Suddenly Worse Than It Was Before?](/claude-skills-guide/why-is-claude-code-suddenly-worse-than-it-was-before/)
-- [Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/)
 
 ## 🔧 Workflows (111 articles)
 

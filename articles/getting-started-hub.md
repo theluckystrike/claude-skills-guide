@@ -299,7 +299,7 @@ Auto-invocation keeps sessions fast for common tasks. For less common skills, or
 - [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/)
 - [Why Does Claude Skill Auto Invocation Fail Intermittently?](/claude-skills-guide/why-does-claude-skill-auto-invocation-fail-intermittently/)
 - [How Do I Know Which Claude Skill Is Currently Active?](/claude-skills-guide/how-do-i-know-which-claude-skill-is-currently-active/)
-- [Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/)
+- [Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/)
 
 ---
 
@@ -485,7 +485,7 @@ Understanding and configuring Claude Code's permission model.
 
 Fixing the most common errors you will encounter with Claude Code skills.
 
-- [Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/)
+- [Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/)
 - [Claude Code Crashes When Loading Skill: Debug Guide](/claude-skills-guide/claude-code-crashes-when-loading-skill-debug-steps/)
 - [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/)
 - [Claude Code Skill Invalid YAML Syntax Error How to Debug](/claude-skills-guide/claude-code-skill-invalid-yaml-syntax-error-how-to-debug/)

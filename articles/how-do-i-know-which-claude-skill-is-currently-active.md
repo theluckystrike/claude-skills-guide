@@ -191,7 +191,7 @@ Understanding your active skill context transforms Claude Code from a general-pu
 
 - [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/) — Diagnose why a skill you expected to be active is not behaving as expected.
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understand how auto-invocation affects which skill becomes active without explicit commands.
-- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Fix skill visibility issues that can make it unclear which skills are available.
+- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Fix skill visibility issues that can make it unclear which skills are available.
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Find more troubleshooting guides for skill activation and session management issues.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

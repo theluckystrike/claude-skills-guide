@@ -120,7 +120,7 @@ Building reliable skills takes iteration. Start with a minimal working skill, ve
 
 - [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/how-do-i-debug-a-claude-skill-that-silently-fails/) — Go deeper on diagnosing skills that load but produce no output
 - [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) — Fix malformed YAML that causes Claude Code to skip your skill entirely
-- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — Systematic checklist for skill visibility and discovery issues
+- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Systematic checklist for skill visibility and discovery issues
 - [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions to common skill loading and configuration problems
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -181,7 +181,7 @@ With your skill properly configured, you can invoke it with `/skill-name` and Cl
 
 ## Related Reading
 
-- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) — If the skill isn't recognized even after registration, this guide addresses the skill list display issues
+- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — If the skill isn't recognized even after registration, this guide addresses the skill list display issues
 - [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Ensure your skill name and metadata follow the correct format to guarantee recognition by Claude Code
 - [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/how-do-i-debug-a-claude-skill-that-silently-fails/) — Use these debugging techniques when your skill is recognized but not behaving as expected
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore skill registration, naming conventions, and troubleshooting patterns across the Claude ecosystem

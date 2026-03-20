@@ -38,7 +38,7 @@ Start here. Find your error, check the likely cause, apply the fix, then follow 
 | Error | Likely Cause | Quick Fix | Full Guide |
 |-------|-------------|-----------|------------|
 | Skill not triggering automatically | Missing or weak trigger keywords in front matter | Add specific `tags` and sharpen the `description` field | [Not Triggering Guide](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/) |
-| Skill not showing up in list | File not in correct directory or wrong extension | Check that the file is `.md` and in the skills directory | [Not Showing Up Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) |
+| Skill not showing up in list | File not in correct directory or wrong extension | Check that the file is `.md` and in the skills directory | [Not Showing Up Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) |
 | YAML parsing error | Syntax error in front matter (bad quotes, missing colon) | Validate YAML with a linter; check for tabs vs spaces | [YAML Error Fix](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) |
 | Permission denied | Skill requesting file system or shell access without approval | Grant required permissions in Claude Code settings | [Permission Denied Fix](/claude-skills-guide/claude-code-skill-permission-denied-error-fix-2026/) |
 | Permission scope error | Skill scope is broader than the approved permission level | Narrow the skill's requested scope or elevate permissions | [Permission Scope Guide](/claude-skills-guide/claude-code-skill-permission-denied-error-fix-2026/) |
@@ -61,7 +61,7 @@ The most common frustration with Claude skills: you installed the skill, but not
 **Not triggering automatically** means the file loads fine but auto-invocation doesn't fire. Claude's auto-invocation system pattern-matches your messages against the skill's `description`, `tags`, and any trigger hints in the body. Vague descriptions like "a helpful skill" don't provide enough signal. Sharpen the description to include specific action verbs and domain nouns.
 
 - [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/)
-- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/)
+- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/)
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/)
 - [Claude Code Crashes When Loading Skill: Debug Guide](/claude-skills-guide/claude-code-crashes-when-loading-skill-debug-steps/)
 
@@ -189,7 +189,7 @@ These issues are usually caused by insufficient context in the skill body or CLA
 | Article | What You'll Learn |
 |---------|-------------------|
 | [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/) | Why skills sometimes don't activate and how to fix it |
-| [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/why-is-my-claude-skill-not-showing-up-fix-guide/) | Step-by-step fixes for skills that fail to appear |
+| [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) | Step-by-step fixes for skills that fail to appear |
 | [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) | Diagnose and fix YAML parsing errors in skill files |
 | [Claude Code Crashes When Loading Skill: Debug Guide](/claude-skills-guide/claude-code-crashes-when-loading-skill-debug-steps/) | Debugging crashes triggered by skill load failures |
 | [Claude Skill Not Saving State Between Sessions Fix](/claude-skills-guide/claude-skill-not-saving-state-between-sessions-fix/) | Why session state is lost and how to preserve it |
