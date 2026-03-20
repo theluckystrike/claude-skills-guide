@@ -10,7 +10,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-github-actions-matrix-builds-guide/
 ---
-
+{% raw %}
 GitHub Actions matrix builds are one of the most powerful features for modern CI/CD pipelines. They allow you to automatically run your tests and build processes across multiple Node versions, operating systems, and configurations—all from a single workflow definition. Instead of maintaining separate workflows for each environment, you define a matrix strategy that GitHub Actions expands into parallel jobs.
 
 If you've been manually creating duplicate workflows or manually testing across environments, you're missing out on efficiency gains that can save hours of development time. This guide shows you how to use Claude Code to generate, understand, and optimize GitHub Actions matrix builds.
@@ -189,3 +189,4 @@ To leverage Claude Code for matrix builds, use prompts like:
 ---
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
