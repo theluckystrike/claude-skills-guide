@@ -5,7 +5,7 @@ description: "Learn how to build Chrome extensions that analyze page speed perfo
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-page-speed-insights/
-categories: [development, chrome-extension, performance]
+categories: [guides]
 reviewed: true
 score: 0
 tags: [chrome-extension, page-speed, lighthouse, web-performance]
