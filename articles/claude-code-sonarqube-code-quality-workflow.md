@@ -10,7 +10,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-sonarqube-code-quality-workflow/
 ---
-
+{% raw %}
 # Claude Code SonarQube Code Quality Workflow
 
 Integrating Claude Code with SonarQube creates a powerful code quality pipeline that catches issues before they reach production. This workflow combines Claude's AI-assisted development capabilities with SonarQube's static analysis engine, giving you automated quality gates that improve codebases systematically. Where SonarQube identifies what is wrong, Claude helps you understand why it matters and how to fix it efficiently — a pairing that turns static analysis from a blocking step into an actionable feedback loop.
@@ -307,3 +307,4 @@ Over weeks and months, you will see measurable improvements in code quality metr
 - [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Integrate SonarQube into CI/CD pipelines
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
