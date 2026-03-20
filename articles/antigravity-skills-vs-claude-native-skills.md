@@ -110,6 +110,109 @@ Then:
 
 The native `tdd` skill handles unit tests; the Antigravity `webapp-testing` skill covers browser-level integration. Both are invoked the same way — the only difference is where the `.md` file came from.
 
+## Side-by-Side Comparison
+
+| Dimension | Native Skills | Antigravity Skills |
+|---|---|---|
+| Installation | Pre-installed, zero setup | Manual `curl` or copy to `~/.claude/skills/` |
+| Updates | Automatic with Claude Code releases | Manual — you re-download when a new version ships |
+| Quality guarantee | Tested by Anthropic | Varies by maintainer; inspect before trusting |
+| Scope | General-purpose (PDF, spreadsheets, TDD, memory) | Specialized or niche (PPTX, DOCX, browser testing) |
+| Customization | Cannot edit without losing updates | Fork the `.md` file freely — it's plain text |
+| Auditability | Viewable in `~/.claude/skills/` | Same — read the file before running it |
+| Best for | Daily foundation tasks | Filling specific gaps in the native set |
+
+The table makes one thing clear: the two types are complementary, not competing. You will almost always want both.
+
+## How to Audit Any Skill Before Using It
+
+Because every skill is a plain `.md` file, you have complete visibility into what instructions it gives Claude. This is the most important habit to build before running community skills on sensitive codebases.
+
+Open the file and look for three things:
+
+**1. Scope — what it's allowed to do.** A well-written skill defines its purpose narrowly. A `pptx` skill should describe slide generation. If you see instructions to read environment variables, make network requests, or modify files outside the working directory, treat that as a red flag.
+
+```bash
+# Inspect any installed skill before invoking it
+cat ~/.claude/skills/pptx.md
+```
+
+**2. Tool permissions.** Claude Code skills can call bash, read files, and invoke other tools. Check whether the skill restricts or expands those permissions beyond what the task requires.
+
+**3. Prompt injection surface.** If the skill asks Claude to process external content (URLs, user-pasted text, uploaded files), verify it includes instructions to treat that content as data, not as additional commands.
+
+Native skills pass this audit by default — Anthropic reviews them before shipping. For Antigravity skills, the audit takes two minutes and can prevent a skill from doing something unexpected in your project.
+
+## Decision Framework: Which Skill Type to Reach For
+
+Use this decision tree before installing a new community skill:
+
+```
+Does a native skill cover this task?
+  YES → Use the native skill. No setup needed.
+  NO  → Does an Antigravity skill exist for it?
+          YES → Read the .md file. Is it well-scoped and recently maintained?
+                  YES → Install and test in a low-stakes project first.
+                  NO  → Write a custom skill or use a prompt instead.
+          NO  → Write a one-off prompt or create your own skill file.
+```
+
+The key principle: native skills are zero-friction defaults. Community skills are deliberate additions you vet and maintain. Custom skill files are a last resort that you own entirely.
+
+## Writing Your Own Skills When Neither Option Fits
+
+If neither native nor Antigravity covers your use case, you can write a skill file in under ten minutes. A minimal skill file looks like this:
+
+```markdown
+---
+name: db-schema
+description: Generate SQL migration files from a plain-English schema description
+---
+
+You are a database migration assistant. When invoked, you:
+1. Parse the user's plain-English schema description
+2. Generate a single SQL migration file compatible with PostgreSQL 15
+3. Include `CREATE TABLE`, `ALTER TABLE`, and index statements as needed
+4. Output only valid SQL — no prose, no explanations unless asked
+
+Always use snake_case for table and column names.
+Always add `created_at` and `updated_at` timestamp columns to every table.
+```
+
+Save that file to `~/.claude/skills/db-schema.md` and invoke it immediately:
+
+```
+/db-schema users table with email, hashed password, and optional display name
+```
+
+Custom skills you write yourself sit between native and Antigravity in the trust hierarchy — you have full control, but you are also the maintainer. Store them in version control alongside your dotfiles so they survive machine migrations.
+
+## Maintaining a Mixed Skill Set Over Time
+
+Running native skills alongside several Antigravity skills and a handful of custom ones is the normal, productive state. A few habits keep that setup healthy:
+
+**Pin specific skill versions for production workflows.** If a community skill updates and changes behavior, your workflow breaks silently. Save a copy of the version you tested:
+
+```bash
+# Save a known-good version before updating
+cp ~/.claude/skills/pptx.md ~/.claude/skills/pptx.md.bak
+curl -o ~/.claude/skills/pptx.md https://antigravity.dev/skills/pptx.md
+```
+
+**Keep a local inventory.** A one-file record of what you have installed and why pays off when you return to a project after months away:
+
+```
+# ~/.claude/skills/INVENTORY.md
+pdf         native   - PDF extraction, pre-installed
+tdd         native   - Test-driven development, pre-installed
+supermemory native   - Cross-session memory, pre-installed
+pptx        agrav    - Slide generation; installed 2026-03-10, last checked 2026-03-10
+docx        agrav    - Word doc generation; installed 2026-02-28
+db-schema   custom   - SQL migration generator, written locally
+```
+
+**Retire skills you stop using.** An unused skill file in `~/.claude/skills/` does not consume resources, but it adds noise to your available command set. Delete or archive skills that no longer serve active projects.
+
 ## Making the Right Choice
 
 Neither type is universally better. Native skills offer stability and deep integration. Community skills offer flexibility and specialized functionality. Most productive setups combine both: native skills for daily tasks, carefully selected Antigravity skills for specific needs.

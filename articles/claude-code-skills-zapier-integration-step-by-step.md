@@ -171,6 +171,197 @@ curl -s -X POST "$ZAPIER_WEBHOOK" \
 
 In Zapier, route this to Gmail or SendGrid with the report content in the email body.
 
+## Multi-Step Zap Configurations for Developer Workflows
+
+Single-action Zaps are a starting point. Real productivity comes from chaining steps. Here are three complete Zap configurations tuned for Claude skill output.
+
+### Zap: Code Review Alert → Jira Ticket → Slack Notification
+
+This three-step Zap handles the full handoff when Claude flags an issue during code review.
+
+**Trigger:** Webhooks by Zapier — Catch Hook
+
+**Step 1 — Filter:** Only continue if `event` equals `code_review_issue`. This prevents unrelated payloads from creating noise in Jira.
+
+**Step 2 — Jira Software — Create Issue:**
+```
+Project: BACKEND
+Issue Type: Task
+Summary: Automated review flag — {{output.timestamp}}
+Description: {{output.summary}}
+Priority: Medium
+Labels: claude-automated, code-review
+```
+
+**Step 3 — Slack — Send Channel Message:**
+```
+Channel: #code-review
+Message: Jira ticket created: {{step2.key}} — {{output.summary}}
+```
+
+The shell side is straightforward. Run Claude with a review prompt and include `"event": "code_review_issue"` in the payload only when the output contains a flag phrase:
+
+```bash
+#!/bin/bash
+ZAPIER_WEBHOOK="https://hooks.zapier.com/hooks/catch/YOUR_ID/YOUR_KEY/"
+FILE="$1"
+
+OUTPUT=$(claude -p "Review $FILE for security issues. If you find any, start your response with ISSUE_FOUND." 2>/dev/null)
+
+if echo "$OUTPUT" | grep -q "ISSUE_FOUND"; then
+  EVENT="code_review_issue"
+else
+  EVENT="code_review_clean"
+fi
+
+curl -s -X POST "$ZAPIER_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"event\": \"$EVENT\",
+    \"file\": \"$FILE\",
+    \"summary\": $(echo "$OUTPUT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))'),
+    \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+  }"
+```
+
+The filter in Zapier stops the Jira+Slack chain when the review is clean, so you only create tickets for real issues.
+
+### Zap: Daily Standup Report → Google Sheets → Email Digest
+
+Claude can generate a standup summary from your git log and ship it automatically each morning.
+
+**Trigger:** Schedule by Zapier — Every Day at 9:00 AM (or use a cron job to hit the webhook on a schedule)
+
+**Step 1 — Google Sheets — Append Row:**
+```
+Sheet: Standup Log
+A: {{output.timestamp}}
+B: {{output.summary}}
+C: {{output.author}}
+```
+
+**Step 2 — Gmail — Send Email:**
+```
+To: team@yourcompany.com
+Subject: Daily standup — {{output.timestamp}}
+Body: {{output.summary}}
+```
+
+The script generates the summary using your local git history and POSTs it:
+
+```bash
+#!/bin/bash
+ZAPIER_WEBHOOK="https://hooks.zapier.com/hooks/catch/YOUR_ID/YOUR_KEY/"
+GIT_LOG=$(git log --since="24 hours ago" --oneline 2>/dev/null)
+
+OUTPUT=$(claude -p "Write a concise standup summary from these commits: $GIT_LOG" 2>/dev/null)
+
+curl -s -X POST "$ZAPIER_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"event\": \"standup\",
+    \"author\": \"$(git config user.name)\",
+    \"summary\": $(echo "$OUTPUT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))'),
+    \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+  }"
+```
+
+Add this to your crontab with `crontab -e`:
+
+```
+0 9 * * 1-5 /path/to/standup.sh
+```
+
+Weekday standups delivered and logged automatically, zero manual effort.
+
+## Error Handling and Retry Patterns
+
+Zapier retries failed actions automatically for most app steps, but webhook delivery from your shell is fire-and-forget. Build retry logic into the sending side.
+
+### Retry with Exponential Backoff
+
+```bash
+#!/bin/bash
+ZAPIER_WEBHOOK="https://hooks.zapier.com/hooks/catch/YOUR_ID/YOUR_KEY/"
+PAYLOAD="$1"
+MAX_RETRIES=3
+DELAY=2
+
+for i in $(seq 1 $MAX_RETRIES); do
+  HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$ZAPIER_WEBHOOK" \
+    -H "Content-Type: application/json" \
+    -d "$PAYLOAD")
+
+  if [ "$HTTP_STATUS" = "200" ]; then
+    echo "Delivered on attempt $i"
+    exit 0
+  fi
+
+  echo "Attempt $i failed (HTTP $HTTP_STATUS), retrying in ${DELAY}s..."
+  sleep $DELAY
+  DELAY=$((DELAY * 2))
+done
+
+echo "ERROR: Failed to deliver after $MAX_RETRIES attempts" >&2
+exit 1
+```
+
+Zapier returns HTTP 200 immediately on receipt — it does not wait for downstream steps. An HTTP 200 means your payload arrived; it does not mean Slack received the message. Check the Zapier task history for downstream step failures.
+
+### Dead-Letter Logging
+
+When delivery fails entirely, log the payload locally so you can replay it later:
+
+```bash
+LOG_DIR="$HOME/.zapier-failed"
+mkdir -p "$LOG_DIR"
+
+if ! ./send-with-retry.sh "$PAYLOAD"; then
+  TIMESTAMP=$(date -u +%Y%m%dT%H%M%SZ)
+  echo "$PAYLOAD" > "$LOG_DIR/failed-$TIMESTAMP.json"
+  echo "Payload saved to $LOG_DIR/failed-$TIMESTAMP.json"
+fi
+```
+
+Replay failed payloads by looping over the log directory once connectivity is confirmed:
+
+```bash
+for f in "$HOME/.zapier-failed"/*.json; do
+  ./send-with-retry.sh "$(cat "$f")" && rm "$f"
+done
+```
+
+## Structuring Payloads for Complex Zaps
+
+As your Zaps grow past two or three steps, a flat payload gets unwieldy. Nest your data to keep field mapping readable in the Zapier editor.
+
+```bash
+PAYLOAD=$(python3 -c "
+import json, sys
+
+summary = sys.argv[1]
+author = sys.argv[2]
+event = sys.argv[3]
+
+payload = {
+    'meta': {
+        'event': event,
+        'timestamp': '$(date -u +%Y-%m-%dT%H:%M:%SZ)',
+        'source': 'claude-code',
+        'author': author
+    },
+    'content': {
+        'summary': summary,
+        'char_count': len(summary),
+        'has_issues': 'ISSUE_FOUND' in summary
+    }
+}
+print(json.dumps(payload))
+" "$OUTPUT" "$(git config user.name)" "code_review")
+```
+
+In Zapier, you now reference `meta.event`, `meta.timestamp`, `content.summary`, and `content.has_issues` as distinct fields. Filters and formatters can branch on `content.has_issues` without parsing text.
+
 ## Troubleshooting
 
 **Zapier shows no data received**: Check that your curl command succeeds locally with `--verbose`. Ensure the webhook URL is not expired — Zapier test webhooks time out after a few minutes.
@@ -178,6 +369,10 @@ In Zapier, route this to Gmail or SendGrid with the report content in the email 
 **JSON parse errors**: Use `python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))'` to safely encode any text output before embedding it in JSON.
 
 **Action not triggering**: Put the Zap into test mode and send a sample payload manually. Confirm field names match what Zapier expects.
+
+**Zapier task history shows step errors**: HTTP 200 from the webhook means Zapier received the payload, not that downstream steps succeeded. Always check the task history under Zap Runs in your Zapier dashboard — each step shows its status and error message independently.
+
+**Payload too large**: Zapier webhooks accept up to 10MB. If Claude output is a long document, truncate or summarize before sending. Use Claude itself to condense: pipe the raw output back through a second `claude -p "Summarize this in 3 sentences: ..."` call before delivery.
 
 ---
 

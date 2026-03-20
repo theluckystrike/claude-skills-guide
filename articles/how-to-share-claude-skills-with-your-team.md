@@ -154,6 +154,92 @@ As your team grows and changes, your skills should evolve too:
 
 **Deprecation Process**: When you need to remove or significantly change a skill, communicate this clearly and provide migration guidance. A skill that disappears without warning breaks workflows.
 
+## Permission Models: Who Can Change What
+
+Not everyone should have write access to the shared skills repo. Treat skills like shared configuration — they affect everyone's workflow, so changes deserve scrutiny.
+
+A workable permission model for most teams:
+
+**Owners (1-2 people)**: Maintainers with merge rights. Responsible for quality, naming consistency, and deprecation decisions. This is usually a senior engineer or tech lead on each squad.
+
+**Contributors (all engineers)**: Can open PRs to add or modify skills. No direct push to main. All changes go through at least one owner review before merge.
+
+**Consumers (read-only)**: Developers who clone and use the repo but do not contribute. This is the default state for new hires until they have enough context to propose changes.
+
+To enforce this in GitHub, use a `CODEOWNERS` file:
+
+```
+# .github/CODEOWNERS
+# All .md skill files require owner review
+*.md @yourorg/skills-owners
+```
+
+This automatically requests a review from the skills-owners team on every PR that touches skill files, with no manual process required.
+
+## Onboarding New Developers: A Step-by-Step Workflow
+
+New hires often skip skill setup because nobody shows them the process. Make it explicit in your onboarding checklist:
+
+**Step 1 — Clone the skills repo on day one:**
+```bash
+git clone git@github.com:yourorg/claude-skills.git ~/team-claude-skills
+mkdir -p ~/.claude/skills
+cp ~/team-claude-skills/*.md ~/.claude/skills/
+```
+
+**Step 2 — Add the update alias to their shell config:**
+```bash
+echo 'alias skills-update="cd ~/team-claude-skills && git pull && cp *.md ~/.claude/skills/ && echo Skills updated"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+**Step 3 — Walk them through two or three skills during their first pairing session.** Have a senior engineer invoke each skill live and explain the expected output. Reading skill docs is less effective than watching them run once.
+
+**Step 4 — Assign a skill improvement task in the first two weeks.** New team members are excellent sources of feedback — they notice gaps that experienced engineers stopped seeing. A lightweight task like "use the `pr-review` skill on three PRs and note anything that felt off" produces useful signal fast.
+
+This four-step process takes under thirty minutes and significantly improves the chance that new hires actually adopt the shared skills.
+
+## Team Conventions That Prevent Conflicts
+
+When multiple people contribute skills over time, naming collisions and overlapping functionality become real problems. Establish these conventions early:
+
+**One skill, one purpose.** If a skill is doing two distinct jobs, split it. A `deploy-check` skill that also generates release notes is harder to maintain and harder to reason about. Keep skills narrow.
+
+**Prefix squads when scope is limited.** If a skill is only useful to the infrastructure team, name it `infra-deploy-check` rather than `deploy-check`. This signals to everyone else that it may not apply to their work.
+
+**Never shadow official skill names.** Claude Code ships built-in skills. If your custom workflow overlaps with one, name yours explicitly: `pdf-internal`, `commit-team`, `review-security`. Generic names cause silent conflicts where the wrong skill gets invoked.
+
+**Document why a skill exists, not just what it does.** The front matter description should answer "what does this do?" The skill body should include a short paragraph answering "why does our team need this instead of the default behavior?" That context prevents future maintainers from deleting skills that appear redundant but aren't.
+
+**Agree on a review turnaround.** If skill PRs sit for two weeks, contributors stop opening them. Set an explicit expectation: owners review skill PRs within three business days. Skills are low-risk changes — fast review cycles keep the repo healthy.
+
+## Splitting Skills by Environment
+
+Some skills should only run in specific environments. A production deployment skill should not be invocable casually during local development. Consider maintaining separate skill sets:
+
+```
+claude-skills/
+├── local/
+│   ├── debug-local.md
+│   └── scaffold-feature.md
+├── ci/
+│   ├── test-coverage.md
+│   └── lint-report.md
+└── production/
+    ├── deploy-check.md
+    └── rollback.md
+```
+
+Developers install all three sets but document clearly in the README which skills are safe to invoke in each context. This is especially important for teams where junior engineers have local access but limited CI or production access — the skill file can include a note: "This skill assumes you have production AWS credentials configured. Do not invoke in a local-only environment."
+
+## Measuring Adoption
+
+Ask developers which skills they actually use in team retrospectives. Remove or simplify skills that nobody invokes — a smaller, well-maintained skill set beats a large, confusing one.
+
+Track which skills generate the most questions or corrections. A skill that consistently produces output requiring manual editing is a signal the skill itself needs updating, not the developer's usage. Add that feedback directly to the skill's "known limitations" section so others don't repeat the same trial and error.
+
+A quarterly skill audit — thirty minutes in a team meeting — is enough to keep the repo from accumulating dead weight. Review each skill: still used? still accurate? owner still on the team? Three questions, fast decisions.
+
 ---
 
 ## Related Reading

@@ -69,6 +69,30 @@ export function Dashboard({ user, onNavigate }: DashboardProps) {
 
 The skill applies your design system automatically—consistent spacing, colors, and accessibility attributes without manual specification.
 
+## Sprint Ticket Workflow: From Backlog to Branch
+
+Most frontend developers work from a ticket queue. Claude Code integrates cleanly into this pattern. At the start of each day, pull your assigned tickets and describe the work to Claude in plain terms:
+
+```
+I have three tickets today:
+- PROJ-442: Add loading skeleton to ProductList component
+- PROJ-448: Fix dropdown closing on scroll in mobile nav
+- PROJ-451: Migrate UserCard from class component to function component
+```
+
+Claude responds with a sequenced approach—which ticket to tackle first based on dependencies, estimated complexity, and whether any share code paths. For PROJ-451, it will flag that migrating UserCard might affect components that import it and suggest running a quick grep to find all consumers before touching anything.
+
+For the skeleton ticket, a natural follow-up gets you moving immediately:
+
+```
+Create a loading skeleton for ProductList that matches
+the dimensions of the actual list items
+```
+
+Claude inspects your existing `ProductList` component, reads the structure, and generates a `ProductListSkeleton` that mirrors the real layout using your project's skeleton utility or Tailwind's animate-pulse. No back-and-forth about column counts or spacing—it reads your existing component and matches it.
+
+This ticket-by-ticket rhythm—describe, inspect, generate, review—compounds over a sprint. By Wednesday you are shipping Thursday's scope.
+
 ## Mid-Day Debugging Sessions
 
 When bugs arise, Claude Code accelerates diagnosis. Describe the issue naturally:
@@ -131,6 +155,39 @@ For design system documentation, use the pdf skill to generate style guides:
 ```
 
 This creates a comprehensive PDF with color palettes, typography scales, and component examples.
+
+## State and API Integration Patterns
+
+Frontend work that hits real complexity tends to cluster around two areas: state management and API integration. Claude Code handles both well if you give it enough context upfront.
+
+For state, describe what you're modeling rather than asking for boilerplate:
+
+```
+We need to track filter state for the product listing page.
+Filters include category (single), price range (min/max),
+sort order, and page number. Filters persist to URL params.
+Using Zustand. Show the slice and the URL sync hook.
+```
+
+Claude generates the Zustand slice with selectors, a custom `useFilterSync` hook that reads from and writes to `URLSearchParams`, and notes any edge cases—like what happens when the URL contains an invalid price range. This is the kind of output that would take 45 minutes to write from scratch and would accumulate subtle bugs in the URL-sync logic.
+
+For API integration with React Query, the pattern is similar. Give Claude your endpoint contract and let it generate the full query configuration:
+
+```
+POST /api/v2/orders/bulk-update accepts an array of order IDs
+and a status string. Returns updated count and any failed IDs.
+Create the mutation with optimistic updates on the order list cache.
+```
+
+The resulting `useBulkUpdateOrders` mutation includes optimistic cache manipulation, rollback on failure, and invalidation of the affected order queries. Writing this by hand requires knowing React Query's cache update API precisely—Claude knows it cold.
+
+Keep a `patterns.md` file in your `.claude/` directory documenting the conventions you settle on. Reference it explicitly:
+
+```
+Follow the API mutation pattern in .claude/patterns.md
+```
+
+After a few weeks, your patterns file becomes a project-specific playbook that Claude applies consistently without re-explanation.
 
 ## End-of-Day Code Review Preparation
 
@@ -224,6 +281,8 @@ Create a useDebounce hook following our pattern in hooks/useDebounce.ts
 ## Conclusion
 
 Claude Code becomes more valuable as you integrate it consistently into your daily workflow. Start with essential skills (frontend-design, supermemory), add specialized tools as needed, and maintain context through CLAUDE.md. The initial setup time pays dividends in reduced boilerplate, faster debugging, and consistent code quality—all critical for frontend development success.
+
+The developers who get the most out of Claude Code treat it like a senior pair programmer who happens to have infinite patience and no context-switching cost. They write clear prompts that include the "why" alongside the "what," maintain a well-structured CLAUDE.md, and build a `.claude/patterns.md` that captures project conventions over time. They also resist the temptation to use Claude for everything indiscriminately—knowing when to type a quick change yourself versus when to delegate a complex state management problem is a skill worth developing. Once that judgment is calibrated, a well-integrated Claude Code workflow routinely adds two to three productive hours to a frontend development day.
 
 ---
 
