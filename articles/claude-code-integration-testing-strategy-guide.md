@@ -10,7 +10,7 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 ---
-
+{% raw %}
 # Claude Code Integration Testing Strategy Guide
 
 Testing Claude Code skills requires a different approach than traditional unit testing. Since skills combine prompt engineering, tool definitions, and runtime behavior, your testing strategy must cover all three dimensions. This guide walks through practical patterns for building reliable integration tests that validate your skills work correctly in real scenarios.
@@ -313,3 +313,4 @@ Integration testing for Claude Code skills combines input-output validation, too
 - [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
