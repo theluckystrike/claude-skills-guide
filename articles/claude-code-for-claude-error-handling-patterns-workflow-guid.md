@@ -5,7 +5,7 @@ description: "A comprehensive guide to implementing error handling patterns in C
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-claude-error-handling-patterns-workflow-guid/
-categories: [Development, Workflow Automation, Error Handling]
+categories: [guides]
 tags: [claude-code, claude-skills]
 score: 7
 reviewed: true

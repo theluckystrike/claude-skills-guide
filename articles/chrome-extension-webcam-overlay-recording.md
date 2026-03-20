@@ -5,6 +5,10 @@ description: "Learn how to build Chrome extensions that overlay webcam feeds on 
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-webcam-overlay-recording/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}

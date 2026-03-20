@@ -6,6 +6,10 @@ description: "Explore the best Chrome extensions for CSS gradient generation. Le
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-css-gradient-generator/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension CSS Gradient Generator: Tools and Techniques for Developers
