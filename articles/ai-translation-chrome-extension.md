@@ -264,4 +264,81 @@ The foundation established here scales from simple selection translation to comp
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Building the Translation Pipeline
+
+1. **Set up Manifest V3** with `contextMenus`, `storage`, and `activeTab` permissions.
+2. **Add a context menu entry**: when the user right-clicks on selected text, show "Translate with AI". Register it in the background service worker on `chrome.runtime.onInstalled`.
+3. **Detect source language automatically**: pass the selected text to your translation API without specifying a source language — most models detect it reliably for common languages.
+4. **Show a floating tooltip**: inject a small overlay near the selection that displays the translated text. Position it using `getBoundingClientRect()` on the selection's range object.
+5. **Cache translations**: store `{ sourceText, sourceLang, targetLang, translation }` in `chrome.storage.session` keyed by a hash of the source text and language pair. Subsequent translations of the same phrase are instant without hitting the API again.
+6. **Add a settings popup**: let users select their preferred target language, toggle auto-translate on page load, and enter their API key (stored encrypted in `chrome.storage.sync`).
+
+## Handling the Chrome AI APIs (Built-in Translation)
+
+Chrome 138+ ships the `translation` API as an origin trial, which enables on-device translation without any external API call:
+
+```javascript
+// Check if the built-in Translation API is available
+if ('translation' in self && 'createTranslator' in self.translation) {
+  const translator = await self.translation.createTranslator({
+    sourceLanguage: 'es',
+    targetLanguage: 'en',
+  });
+  const result = await translator.translate('Hola, mundo');
+  console.log(result); // "Hello, world"
+}
+```
+
+For users on older Chrome versions, fall back to a cloud API. The extension can detect which path to use at runtime and only prompt for an API key when the built-in API is unavailable.
+
+## Comparison with Existing Translation Extensions
+
+| Tool | Translation engine | Offline support | API key required | Cost |
+|---|---|---|---|---|
+| This extension | Configurable (Claude/GPT/built-in) | With Chrome AI API | Optional | Free (build it) |
+| Google Translate extension | Google NMT | No | No | Free |
+| DeepL extension | DeepL | No | DeepL Pro account | Free/Pro |
+| Immersive Translate | Multiple | No | Optional | Free/Pro |
+| Lingvanex | Lingvanex | Yes (premium) | Yes | Freemium |
+
+The key differentiator of a custom-built extension is the ability to use a model that fits your specific domain. Legal, medical, and technical translations often benefit from a domain-aware model rather than a general-purpose one.
+
+## Advanced: Page-Level Auto-Translation
+
+For users reading foreign-language documentation regularly, add an auto-translate mode that replaces all text nodes on the page with their translations:
+
+```javascript
+async function translatePage(targetLang) {
+  const walker = document.createTreeWalker(
+    document.body,
+    NodeFilter.SHOW_TEXT,
+    { acceptNode: (node) => node.textContent.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP }
+  );
+
+  const chunks = [];
+  let node;
+  while ((node = walker.nextNode())) {
+    chunks.push({ node, text: node.textContent });
+  }
+
+  // Batch translate to reduce API calls
+  const texts = chunks.map(c => c.text);
+  const translations = await batchTranslate(texts, targetLang);
+  chunks.forEach((chunk, i) => {
+    chunk.node.textContent = translations[i];
+  });
+}
+```
+
+Batch translation reduces API calls from hundreds to a handful per page by grouping text nodes and sending them together.
+
+## Troubleshooting
+
+**Tooltip appearing behind page elements**: Set `z-index: 2147483647` on the tooltip container (the maximum CSS z-index value) and use `position: fixed` instead of `position: absolute` so it is not clipped by `overflow: hidden` ancestors.
+
+**API key exposed in extension source**: Never hard-code the key. Store it in `chrome.storage.sync` after the user enters it in the options page. The key is then only in the user's browser storage, not in the extension package that is distributed through the Web Store.
+
+**Translation breaking on React/Vue pages**: Single-page apps re-render the DOM after navigation, undoing direct text node replacements. Use a `MutationObserver` to re-apply translations to newly added nodes, and skip nodes that already contain translated text by checking a custom data attribute like `data-translated="true"`.
+
 {% endraw %}

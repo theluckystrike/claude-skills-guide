@@ -288,6 +288,55 @@ Chrome extension hotel price comparison tools rely on API integrations, web scra
 
 Whether integrating existing APIs or building from scratch, the architecture decisions around data sourcing, caching, and notifications directly impact the extension's reliability and user experience.
 
+## Step-by-Step: Price Scraping Architecture
+
+Building a hotel price comparison extension requires navigating several technical challenges: rate limiting, CORS restrictions, and the fact that most hotel booking sites render prices via JavaScript rather than static HTML.
+
+1. **Start with a content script** that runs on Booking.com, Expedia, Hotels.com, and Agoda — the four sites that together cover most hotel inventory.
+2. **Read page prices from the DOM**: each site renders prices inside predictable CSS selectors. Use `document.querySelectorAll` to extract price, hotel name, and dates. Wrap each extractor in a try/catch so one broken site does not crash the others.
+3. **Normalize the data**: prices may be per-night or per-stay, in different currencies, and with or without taxes. Store a `{ site, hotelName, pricePerNight, totalPrice, currency, checkIn, checkOut }` object for each result.
+4. **Deduplicate by property name**: fuzzy-match hotel names across sites using Levenshtein distance to identify the same property listed differently (e.g., "Hilton NYC Midtown" vs "Hilton New York Midtown").
+5. **Display the comparison panel**: inject a floating sidebar into the page that ranks results by price and highlights the cheapest option with a green badge.
+6. **Cache results in `chrome.storage.session`**: prices expire when the browser session ends, so session storage is appropriate — it avoids stale data showing up on a new search.
+
+## Advanced: Handling JavaScript-Rendered Prices
+
+Most hotel sites load prices after the initial HTML response via XHR or WebSocket. Use a `MutationObserver` to detect when price elements appear in the DOM rather than reading them on `DOMContentLoaded`:
+
+```javascript
+const observer = new MutationObserver((mutations) => {
+  for (const mutation of mutations) {
+    for (const node of mutation.addedNodes) {
+      if (node.nodeType === 1 && node.matches('[data-testid="price-and-discounted-price"]')) {
+        extractAndStorePrice(node);
+      }
+    }
+  }
+});
+observer.observe(document.body, { childList: true, subtree: true });
+```
+
+Stop observing after 10 seconds or once you have collected at least one price to avoid continuous CPU usage.
+
+## Comparison with Existing Aggregators
+
+| Tool | Data freshness | Sites covered | Privacy | Cost |
+|---|---|---|---|---|
+| This extension | Real-time (from page) | 4 major sites | Local only | Free (build it) |
+| Google Hotels | Near real-time | Many OTAs | Google account | Free |
+| Kayak | Minutes delay | 200+ sites | Account optional | Free (ads) |
+| Trivago | Minutes delay | 400+ sites | Account optional | Free (ads) |
+| Hopper | Predictive | Major OTAs | Account required | Free |
+
+The extension's advantage is privacy: no search data leaves the browser. Prices are read directly from pages the user already has open, so there is no third-party API call and no account required.
+
+## Troubleshooting
+
+**Prices not extracting from Booking.com**: Booking.com uses server-side A/B testing that changes DOM structure. Add a fallback selector chain: try `[data-testid="price-and-discounted-price"]` first, then `.bui-price-display__value`, then any element with text matching `/\$[\d,]+/`. Log which selector matched so you can update it when Booking.com deploys a new layout.
+
+**Currency mismatch in comparison**: If a user is browsing with a VPN, different sites may return prices in different currencies. Fetch a lightweight exchange rate from `https://api.frankfurter.app/latest?from=USD` on extension install and cache it for 24 hours, then normalize all prices to the user's preferred currency before comparing.
+
+**Extension slowing down hotel search pages**: Content scripts that run on every mutation can tax the main thread. Move price extraction to a debounced function that fires at most once every 500 ms, and avoid synchronous `querySelectorAll` on the entire document. Target the smallest subtree that contains the price list instead.
 
 ## Related Reading
 

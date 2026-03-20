@@ -364,6 +364,86 @@ Connecting Claude skills to external APIs transforms static prompts into dynamic
 
 ---
 
+## Step-by-Step: Wiring a Skill to an External API
+
+1. **Identify the API endpoint**: determine the base URL, authentication method (API key, OAuth2, or Bearer token), and the specific endpoint your skill will call.
+2. **Define the skill's input schema**: describe what parameters the user will provide — e.g., `{ "city": "string", "units": "celsius|fahrenheit" }` for a weather skill.
+3. **Write the fetch call**: in the skill's action handler, call the API using the `fetch` function and pass the user's input as query parameters or a request body.
+4. **Parse and normalize the response**: extract only the fields relevant to your use case. Flatten nested objects so the model does not have to navigate complex JSON structures.
+5. **Return structured output**: provide the model with clean, labeled data. A response like `{ "tempC": 22, "description": "partly cloudy", "wind_kph": 15 }` is easier for the model to reason about than the raw API response.
+6. **Handle errors gracefully**: if the API returns a 4xx or 5xx, return a user-friendly error message instead of throwing — the model should be able to explain the failure to the user.
+
+## Authentication Patterns
+
+**API Key (most common)**
+```javascript
+const response = await fetch(`https://api.example.com/v1/data?q=${query}`, {
+  headers: {
+    'Authorization': `Bearer ${process.env.API_KEY}`,
+    'Content-Type': 'application/json'
+  }
+});
+```
+
+**OAuth2 Client Credentials**
+```javascript
+// Exchange client_id + client_secret for an access token first
+const tokenResp = await fetch('https://auth.example.com/token', {
+  method: 'POST',
+  body: new URLSearchParams({
+    grant_type: 'client_credentials',
+    client_id: process.env.CLIENT_ID,
+    client_secret: process.env.CLIENT_SECRET,
+  })
+});
+const { access_token } = await tokenResp.json();
+// Then use the token in subsequent requests
+```
+
+Store credentials in environment variables — never embed them in the skill source code.
+
+## Common External API Integrations
+
+| API Type | Example | Skill Use Case |
+|---|---|---|
+| Weather | OpenWeatherMap, WeatherAPI | Real-time forecasts, travel planning |
+| Finance | Alpha Vantage, Polygon.io | Stock prices, portfolio summaries |
+| Search | Brave Search, Serper | Web research, fact-checking |
+| Databases | Airtable, Notion API | Reading/writing structured records |
+| Communication | Twilio, SendGrid | Sending SMS or email on user request |
+| Calendar | Google Calendar, Caldav | Creating events, reading schedules |
+
+## Advanced: Rate Limiting and Caching
+
+External APIs impose rate limits. Add a simple in-memory cache to avoid redundant calls:
+
+```javascript
+const cache = new Map();
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
+async function cachedFetch(url, options) {
+  const key = url + JSON.stringify(options?.body || '');
+  const cached = cache.get(key);
+  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
+    return cached.data;
+  }
+  const resp = await fetch(url, options);
+  const data = await resp.json();
+  cache.set(key, { data, timestamp: Date.now() });
+  return data;
+}
+```
+
+For skills deployed as long-running servers, replace the in-memory Map with Redis so the cache survives restarts and is shared across multiple skill instances.
+
+## Troubleshooting
+
+**CORS errors when calling APIs from a browser-based skill**: Some APIs do not allow cross-origin requests from browser contexts. Use a server-side skill proxy so the fetch call happens on the server where CORS rules do not apply.
+
+**Timeouts on slow APIs**: Set an `AbortController` timeout to prevent the skill from hanging indefinitely. A 10-second timeout is appropriate for most APIs — if the response takes longer, return a helpful message asking the user to retry.
+
+**API responses changing schema**: Pin the API version in the URL (e.g., `/v2/`) and add a schema validation step using `zod` so the skill fails fast with a clear error if the API changes its response shape rather than silently passing malformed data to the model.
+
 ## Related Reading
 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Profiles the skills most commonly wired to external APIs (tdd, pdf, supermemory) with practical invocation patterns

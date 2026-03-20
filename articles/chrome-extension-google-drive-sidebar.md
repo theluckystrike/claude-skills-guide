@@ -277,6 +277,75 @@ A Drive sidebar extension serves multiple workflows. Support teams can pull know
 
 For deeper integration, consider implementing file upload from the sidebar, folder tree navigation, or direct sharing capabilities. Each adds value but increases complexity—start simple and iterate based on user feedback.
 
+## Step-by-Step: Building the Drive Sidebar
+
+1. **Request OAuth2 access**: add `identity` to your manifest permissions and call `chrome.identity.getAuthToken({ interactive: true })` to get a Google OAuth2 token scoped to `https://www.googleapis.com/auth/drive.readonly` (or `.file` for write access).
+2. **List recent files**: call `GET https://www.googleapis.com/drive/v3/files?orderBy=modifiedTime desc&pageSize=20&fields=files(id,name,mimeType,webViewLink,modifiedTime)` using the token in the `Authorization` header.
+3. **Inject the sidebar**: use a content script to append a fixed-position sidebar `<div>` to the right side of the page on domains the user specifies (e.g., their company's Jira or project management tool).
+4. **Render the file list**: display file name, type icon, and last-modified date. Make each entry a link that opens the Drive file in a new tab.
+5. **Add search**: call `GET https://www.googleapis.com/drive/v3/files?q=name contains 'query'` to search Drive without leaving the current page.
+6. **Persist the sidebar state**: store whether the sidebar is open or closed in `chrome.storage.sync` so it maintains its state across sessions and devices.
+
+## Google Drive API Integration
+
+```javascript
+async function listRecentFiles(token) {
+  const response = await fetch(
+    'https://www.googleapis.com/drive/v3/files?' +
+    new URLSearchParams({
+      orderBy: 'modifiedTime desc',
+      pageSize: '20',
+      fields: 'files(id,name,mimeType,webViewLink,modifiedTime,iconLink)',
+    }),
+    { headers: { Authorization: `Bearer ${token}` } }
+  );
+  if (!response.ok) throw new Error(`Drive API error: ${response.status}`);
+  const { files } = await response.json();
+  return files;
+}
+```
+
+The `fields` parameter restricts the response to only the properties you need, reducing payload size significantly for users with large Drives.
+
+## Comparison with Native Drive Interfaces
+
+| Access method | Speed | Offline | Context switching | Customization |
+|---|---|---|---|---|
+| This extension | Fast (cached) | No | None (stays in current tab) | Full |
+| drive.google.com | Normal | Limited | Full tab switch | None |
+| Google Drive desktop app | Fast | Yes | App switch | Limited |
+| Drive for Docs/Sheets sidebar | Built-in | No | None | None |
+
+The extension is most valuable when users need to reference Drive files while working in a third-party web app. It eliminates the tab-switching overhead that interrupts flow.
+
+## Advanced: Recent Files Badge
+
+Show a badge on the extension icon when new files have been shared with the user in the last 24 hours:
+
+```javascript
+async function checkForNewShares(token) {
+  const yesterday = new Date(Date.now() - 86400000).toISOString();
+  const resp = await fetch(
+    `https://www.googleapis.com/drive/v3/files?q=sharedWithMe and modifiedTime > '${yesterday}'&fields=files(id,name)`,
+    { headers: { Authorization: `Bearer ${token}` } }
+  );
+  const { files } = await resp.json();
+  if (files.length > 0) {
+    chrome.action.setBadgeText({ text: String(files.length) });
+    chrome.action.setBadgeBackgroundColor({ color: '#4285f4' });
+  }
+}
+```
+
+Run this check on a 30-minute alarm to keep the badge current without hammering the API.
+
+## Troubleshooting
+
+**OAuth token expiring mid-session**: `chrome.identity.getAuthToken` returns cached tokens that expire after 1 hour. If a Drive API call returns 401, call `chrome.identity.removeCachedAuthToken({ token })` and then `getAuthToken` again to force a token refresh.
+
+**Sidebar injecting on all pages instead of target domains**: Add a content script `matches` filter in the manifest for only the specific domains where the sidebar is useful (e.g., `["https://jira.yourcompany.com/*", "https://linear.app/*"]`). This also reduces unnecessary permissions.
+
+**Drive API returning 403 for some files**: If the user's Drive contains files owned by an organization with domain-restricted sharing, the API may return files that cannot be opened by the extension's OAuth client. Filter the file list to exclude items where `capabilities.canDownload` is false.
 
 ## Related Reading
 

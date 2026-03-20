@@ -300,6 +300,67 @@ This foundation gives you a functional shopping list organizer. Several enhancem
 
 The beauty of building your own extension is the ability to adapt it to your specific workflow. Start with the basics, then iterate based on what actually saves you time.
 
+## Step-by-Step: Building the Core List Feature
+
+1. **Set up Manifest V3** with `storage` and `activeTab` permissions — these are sufficient for a shopping list extension with no server backend.
+2. **Design the data model**: each list is an object with `id`, `name`, `items[]`, and `createdAt`. Each item has `id`, `text`, `checked`, and optional `quantity`.
+3. **Create the popup UI** with an input field, Add button, and a scrollable `<ul>` that renders existing items on load.
+4. **Wire up storage**: call `chrome.storage.local.get('lists')` on popup open and `chrome.storage.local.set` on every mutation (add, check, delete).
+5. **Add list switching**: a `<select>` at the top lets users pick "Groceries", "Hardware Store", or any custom list they created.
+6. **Implement drag-to-reorder** using the HTML5 Drag and Drop API — set `draggable="true"` on each `<li>` and handle `dragstart`, `dragover`, and `drop` events to reorder the items array.
+7. **Export to clipboard**: a small "Copy list" button serializes the current list to plain text (one item per line) and calls `navigator.clipboard.writeText()`.
+
+## Advanced Features
+
+### Barcode / UPC Lookup
+Extend the extension with a barcode lookup so users can scan a product and auto-populate the item name and typical price. Use the `BarcodeDetector` API (Chrome 83+) from a content script running on the active tab's camera feed:
+
+```javascript
+const detector = new BarcodeDetector({ formats: ['ean_13', 'upc_a'] });
+const barcodes = await detector.detect(videoFrame);
+if (barcodes.length) {
+  const upc = barcodes[0].rawValue;
+  const resp = await fetch(`https://api.upcitemdb.com/prod/trial/lookup?upc=${upc}`);
+  const data = await resp.json();
+  addItem(data.items[0]?.title || upc);
+}
+```
+
+### Shared Lists via QR Code
+Generate a QR code from the serialized list JSON so another person on a different device can scan it and import the list instantly — no account required:
+
+```javascript
+// Use qrcode.js library bundled with the extension
+QRCode.toDataURL(JSON.stringify(currentList), { width: 200 }, (err, url) => {
+  document.getElementById('qr-img').src = url;
+});
+```
+
+### Price Threshold Alerts
+Store a budget cap per list and display a warning badge when the estimated total exceeds it. Pull unit prices from the page the user is browsing (Amazon, Walmart, Instacart) using a content script that reads structured product data from `window.__NEXT_DATA__` or JSON-LD `<script>` tags.
+
+## Comparison with Existing Tools
+
+| Feature | This Extension | Google Keep | AnyList | OurGroceries |
+|---|---|---|---|---|
+| Browser-native | Yes | Via web app | No | No |
+| Works offline | Yes (chrome.storage) | No | Yes (mobile) | No |
+| Barcode scan | Add it yourself | No | Yes | Yes |
+| Shared lists | QR code export | Yes (account) | Yes (account) | Yes (account) |
+| Price tracking | Add it yourself | No | No | No |
+| Cost | Free (build it) | Free | Free/Premium | Free/Premium |
+
+The extension approach wins for users who do most of their shopping research in the browser — they never leave their workflow to switch to a separate app.
+
+## Troubleshooting Common Issues
+
+**Items not persisting after browser restart**: Ensure you are using `chrome.storage.local` and not `localStorage`. The extension popup is a separate browsing context — `localStorage` is scoped to the popup's origin and survives restarts, but `chrome.storage.local` is the correct cross-context store.
+
+**List grows beyond storage quota**: `chrome.storage.local` has a 10 MB limit. For users with hundreds of lists and items, compress the stored JSON using `CompressionStream` (Chrome 80+) before writing. A shopping list of 500 items compresses to under 5 KB easily.
+
+**Drag-and-drop not working on touch screens**: The HTML5 DnD API does not fire touch events. Add a touch event polyfill or use the `@shopify/draggable` library (bundle it with the extension) for mobile Chrome on Android.
+
+**Export button copying empty text**: The Clipboard API requires a user gesture. Ensure `navigator.clipboard.writeText()` is called directly inside the button's `click` handler — not inside a `setTimeout` or `Promise.then` that runs after the gesture expires.
 
 ## Related Reading
 

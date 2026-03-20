@@ -301,6 +301,85 @@ wait
 
 ---
 
+## Step-by-Step: Orchestrating a Multi-Agent Workflow
+
+1. **Define agent roles**: before writing code, map out which agent does what. A typical setup has an orchestrator agent that breaks tasks into subtasks and n worker agents that each handle one specialized domain (e.g., code writing, test generation, documentation).
+2. **Choose a communication pattern**: agents can communicate synchronously (orchestrator waits for each worker to finish before proceeding) or asynchronously (orchestrator fans out all tasks at once and collects results). Async fan-out is faster for independent tasks.
+3. **Set up a shared context store**: use a simple key-value store (Redis, a JSON file, or an in-memory Map) where agents write their outputs. The orchestrator reads from this store rather than maintaining a chain of direct return values.
+4. **Implement task queueing**: put subtasks into a queue (an array or a real queue like BullMQ) so worker agents can pull from it. This decouples producers from consumers and makes it easy to add more workers.
+5. **Handle failures with retries**: wrap each agent invocation in a retry loop with exponential backoff. A subagent that fails once due to a transient API error should retry 2-3 times before the orchestrator marks the task as failed.
+6. **Aggregate and merge results**: once all subagents have written to the context store, the orchestrator reads all outputs and merges them into a coherent final result.
+
+## Communication Patterns Compared
+
+```
+// Pattern 1: Sequential chain
+// A -> B -> C -> D (output of each is input to next)
+const resultA = await agentA(input);
+const resultB = await agentB(resultA);
+const resultC = await agentC(resultB);
+
+// Pattern 2: Fan-out / Fan-in (parallel)
+// A -> [B, C, D] -> E (all three run concurrently)
+const [resultB, resultC, resultD] = await Promise.all([
+  agentB(input),
+  agentC(input),
+  agentD(input),
+]);
+const finalResult = await agentE({ resultB, resultC, resultD });
+
+// Pattern 3: Hierarchical (orchestrator spawns sub-orchestrators)
+// A -> [B1 -> [C1, C2], B2 -> [C3, C4]] -> D
+```
+
+For Claude Code workflows, pattern 2 is most efficient when the subtasks are truly independent — it cuts total wall-clock time by the number of parallel workers.
+
+## Common Multi-Agent Architectures
+
+| Architecture | Best For | Complexity | Fault Tolerance |
+|---|---|---|---|
+| Sequential chain | Dependent, ordered tasks | Low | Breaks on any step failure |
+| Fan-out / fan-in | Independent parallel tasks | Medium | One failed worker doesn't block others |
+| Hierarchical | Complex nested tasks | High | Configurable per level |
+| Peer-to-peer | Collaborative refinement | High | Requires conflict resolution |
+| Blackboard | Shared knowledge building | Medium | Any agent can contribute |
+
+## Advanced: Agent-to-Agent Tool Calls
+
+In Claude's agent SDK, a subagent can be exposed as a tool that the orchestrator calls. This means the orchestrator does not need to know the implementation details of each subagent — it just calls a named tool and gets a result:
+
+```javascript
+const tools = [
+  {
+    name: "code_review_agent",
+    description: "Reviews code for bugs, style, and security issues",
+    input_schema: {
+      type: "object",
+      properties: {
+        code: { type: "string" },
+        language: { type: "string" }
+      },
+      required: ["code", "language"]
+    }
+  }
+];
+
+// Orchestrator calls the subagent as a tool
+const response = await claude.messages.create({
+  model: "claude-opus-4-6",
+  tools,
+  messages: [{ role: "user", content: "Review this Python function: ..." }]
+});
+```
+
+## Troubleshooting
+
+**Context window overflow in the orchestrator**: Each subagent's output gets appended to the orchestrator's context. For long-running workflows, summarize each subagent's output before passing it back to the orchestrator instead of passing the full raw output. A 200-word summary is usually sufficient for the orchestrator to make routing decisions.
+
+**Subagents producing inconsistent output formats**: Define a strict JSON schema for each subagent's output and validate it before the orchestrator consumes it. Reject and retry if the schema validation fails — models sometimes produce slightly malformed JSON on the first attempt.
+
+**Deadlocks in bidirectional agent communication**: If agent A waits for agent B and agent B waits for agent A, the workflow hangs. Prevent this by using a unidirectional communication pattern: agents only write to the shared store, the orchestrator is the only reader, and agents never directly call each other.
+
 ## Related Reading
 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The skills most suited for subagent use (tdd, pdf, frontend-design) are profiled here with invocation patterns that translate to multi-agent workflows

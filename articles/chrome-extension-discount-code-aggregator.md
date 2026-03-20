@@ -397,6 +397,51 @@ A Chrome extension discount code aggregator combines web scraping, programmatic 
 
 This guide provides the foundation for building your own aggregator. You can extend it with additional features like price tracking, deal alerts, or integration with deal-sharing communities. Remember to test thoroughly across different e-commerce platforms, as each has unique checkout flows and coupon field implementations.
 
+## Step-by-Step: Auto-Apply Coupon Architecture
+
+1. **Detect checkout pages**: match URLs against a list of known checkout patterns (`/checkout`, `/cart`, `/order`) using `chrome.declarativeNetRequest` or a content script `matches` filter.
+2. **Identify the coupon input field**: use a ranked list of selectors — `input[name*="coupon"]`, `input[placeholder*="promo"]`, `input[id*="discount"]` — stopping at the first match.
+3. **Fetch available codes**: query your codes database (stored in `chrome.storage.local`) filtered by the current domain. Sort codes by historical success rate descending.
+4. **Try codes sequentially**: inject each code into the input, click the apply button, wait 1-2 seconds for the page to respond, and check whether a discount appeared in the order total.
+5. **Record outcomes**: store each attempt as `{ domain, code, success, discountAmount, testedAt }` to improve future ranking.
+6. **Show results in a popup badge**: update the extension action badge with the number of successful codes found. A green badge with "2" tells the user two codes worked without requiring them to open the popup.
+
+## Advanced: Price Drop Reactivation
+
+Some discount codes expire but later get reactivated by retailers for seasonal sales. Add a background job that re-tests expired codes monthly:
+
+```javascript
+chrome.alarms.create('retestExpiredCodes', { periodInMinutes: 43200 }); // 30 days
+
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name === 'retestExpiredCodes') {
+    const { codes } = await chrome.storage.local.get('codes');
+    const expired = codes.filter(c => !c.active && c.lastTested < Date.now() - 30 * 86400000);
+    // Queue them for testing on the next checkout page visit
+    await chrome.storage.local.set({ pendingRetest: expired.map(c => c.code) });
+  }
+});
+```
+
+## Comparison with Existing Coupon Extensions
+
+| Tool | Auto-apply | Code sources | Privacy | Cost |
+|---|---|---|---|---|
+| This extension | Yes (build it) | Your curated DB | Local only | Free |
+| Honey (PayPal) | Yes | Crowdsourced | PayPal collects data | Free |
+| Capital One Shopping | Yes | Proprietary | Account required | Free |
+| CouponFollow | Manual paste | Aggregated | Cookies tracked | Free |
+| RetailMeNot extension | Manual | Aggregated | Account optional | Free |
+
+The custom extension advantage is data privacy: Honey and Capital One Shopping send your browsing data to their servers. A self-hosted extension stores everything locally and only fetches codes from sources you control.
+
+## Troubleshooting
+
+**Apply button not being clicked**: Many checkout pages use custom React or Vue components whose click handlers are not triggered by a synthetic `element.click()`. Use `element.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }))` to simulate a realistic click event that bubbles through the component tree.
+
+**Code field validation rejecting programmatic input**: Some sites validate that the input value was typed character by character (tracking `input` events). Simulate typing by calling `element.dispatchEvent(new InputEvent('input', { inputType: 'insertText', data: char, bubbles: true }))` for each character of the code.
+
+**False positives — code "applied" but no discount shown**: Parse the order summary after each attempt and compare the total before and after. If the total is unchanged, mark the code as failed even if the page showed a success message (some sites accept invalid codes silently).
 
 ## Related Reading
 

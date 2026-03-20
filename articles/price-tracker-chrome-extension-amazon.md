@@ -329,4 +329,81 @@ A custom Amazon price tracker Chrome extension puts you in control of your shopp
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
+## Step-by-Step: Building the Amazon Price Tracker
+
+1. **Detect Amazon product pages**: check `window.location.hostname` for `amazon.com` (or regional variants) and the URL path for `/dp/` which identifies product detail pages.
+2. **Extract ASIN and current price**: the ASIN is in the URL path segment after `/dp/`. The price is in `#priceblock_ourprice`, `#priceblock_dealprice`, or `.a-price-whole` depending on the product type and whether a deal is active.
+3. **Store a price history record**: on each visit, append `{ asin, price, currency, timestamp }` to the product's history array in `chrome.storage.local`.
+4. **Draw a sparkline chart**: in the popup, render a small SVG line chart of the price history using only vanilla JS — no library needed for a simple sparkline.
+5. **Set a target price alert**: add an input field where the user types their maximum acceptable price. Store it alongside the history. Check on every price read whether the current price has dropped to or below the target.
+6. **Trigger a browser notification**: when the price drops below the target, call `chrome.notifications.create()` with the product name, current price, and a direct link to the product page.
+
+## Reading Amazon Prices Reliably
+
+Amazon's product page DOM is complex and changes frequently. Use a waterfall of selectors with a final regex fallback:
+
+```javascript
+function extractPrice() {
+  const selectors = [
+    '#priceblock_ourprice',
+    '#priceblock_dealprice',
+    '#priceblock_saleprice',
+    '.a-price[data-a-size="xl"] .a-offscreen',
+    '.a-price .a-offscreen',
+  ];
+  for (const sel of selectors) {
+    const el = document.querySelector(sel);
+    if (el) {
+      const match = el.textContent.match(/[\d,]+\.?\d*/);
+      if (match) return parseFloat(match[0].replace(/,/g, ''));
+    }
+  }
+  // Regex fallback on page text
+  const match = document.body.innerText.match(/\$\s*([\d,]+\.\d{2})/);
+  return match ? parseFloat(match[1].replace(/,/g, '')) : null;
+}
+```
+
+## Comparison with Dedicated Price Trackers
+
+| Tool | Amazon support | Price history | Alerts | Privacy | Cost |
+|---|---|---|---|---|---|
+| This extension | Yes | Local storage | Browser notification | Local only | Free (build it) |
+| CamelCamelCamel | Yes | Years of history | Email | Server-side | Free |
+| Keepa | Yes | Years of history | Email/app | Server-side | Free/Premium |
+| Honey | Yes | 30-day chart | No alerts | PayPal data | Free |
+| PriceSpy | Limited | 3 months | Email | Server-side | Free |
+
+Building your own tracker means price history is private and never sent to a third party. The trade-off is that you only track products you have personally visited — there is no pre-populated database of historical prices.
+
+## Advanced: Multi-Region Price Comparison
+
+The same product is often cheaper on Amazon.co.uk or Amazon.de than on Amazon.com after currency conversion. Add a background fetch that checks the current price on 3-4 regional Amazon domains for the same ASIN:
+
+```javascript
+async function checkRegionalPrices(asin) {
+  const regions = [
+    { domain: 'amazon.com', currency: 'USD' },
+    { domain: 'amazon.co.uk', currency: 'GBP' },
+    { domain: 'amazon.de', currency: 'EUR' },
+    { domain: 'amazon.ca', currency: 'CAD' },
+  ];
+  // Note: requires CORS proxy since Amazon sets same-site cookies
+  // Use a lightweight server-side fetch function or background offscreen document
+  const results = await Promise.allSettled(
+    regions.map(r => fetchPriceFromRegion(asin, r.domain, r.currency))
+  );
+  return results.filter(r => r.status === 'fulfilled').map(r => r.value);
+}
+```
+
+## Troubleshooting
+
+**Price reading as null on some products**: Amazon uses different page layouts for third-party sellers, warehouse deals, and subscribe-and-save items. Check that your selector list includes `.a-price[data-a-size="b"]` for Subscribe & Save prices and `#usedBuySection .a-color-price` for used listings.
+
+**Storage filling up for heavily tracked products**: Limit price history to the last 365 entries per ASIN. On each write, check the history array length and slice off the oldest entries if it exceeds the limit.
+
+**Notification not firing even when price drops**: `chrome.notifications` requires the `notifications` permission in the manifest. Also verify that the user has allowed notifications from Chrome in the OS notification settings — extensions respect the system-level permission.
+
 {% endraw %}

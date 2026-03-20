@@ -305,6 +305,90 @@ Claude Code significantly accelerates CDN optimization by automating analysis, g
 
 Remember: CDN optimization is an ongoing process. Regular monitoring, analysis, and iteration will continuously improve your performance and reduce costs.
 
+## Step-by-Step: CDN Optimization Workflow with Claude Code
+
+1. **Audit current asset delivery**: run `claude> analyze my webpack bundle and identify assets over 100KB that are not split or lazy-loaded`. Claude Code will read your bundle stats and produce a prioritized list.
+2. **Configure cache headers**: ask Claude Code to generate the correct `Cache-Control` headers for each asset type — immutable for hashed assets, `no-store` for HTML, and `s-maxage` for API responses.
+3. **Set up cache busting**: if you are not already using content-hashed filenames, ask Claude Code to configure your build tool (webpack, Vite, or Rollup) to append content hashes automatically.
+4. **Implement lazy loading**: for images, ask Claude Code to convert your `<img>` tags to use `loading="lazy"` and `decoding="async"`. For JavaScript modules, convert synchronous imports to dynamic `import()` calls.
+5. **Configure CDN-specific behaviors**: each CDN (Cloudflare, CloudFront, Fastly) has provider-specific configuration syntax. Claude Code can generate Cloudflare Workers scripts, CloudFront behaviors, or Fastly VCL from a plain-language description of your caching rules.
+6. **Measure and iterate**: generate a Lighthouse CI configuration to track CDN performance metrics across deployments. Ask Claude Code to add the Lighthouse CI step to your existing GitHub Actions workflow.
+
+## Cloudflare Workers Cache API
+
+For fine-grained control over what Cloudflare caches, use a Worker to intercept requests and apply custom cache logic:
+
+```javascript
+// Cloudflare Worker: cache API responses for 5 minutes, bypass cache for authenticated requests
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+
+    // Never cache authenticated requests
+    if (request.headers.has('Authorization')) {
+      return fetch(request);
+    }
+
+    // Only cache GET requests to /api/
+    if (request.method !== 'GET' || !url.pathname.startsWith('/api/')) {
+      return fetch(request);
+    }
+
+    const cacheKey = new Request(url.toString(), request);
+    const cache = caches.default;
+    let response = await cache.match(cacheKey);
+
+    if (!response) {
+      response = await fetch(request);
+      const headers = new Headers(response.headers);
+      headers.set('Cache-Control', 'public, max-age=300, s-maxage=300');
+      response = new Response(response.body, { ...response, headers });
+      ctx.waitUntil(cache.put(cacheKey, response.clone()));
+    }
+
+    return response;
+  }
+};
+```
+
+Claude Code can generate, review, and deploy this kind of Worker from a plain-language description of your caching requirements.
+
+## CDN Configuration Comparison
+
+| Provider | Config format | Worker/edge compute | Price tier | Claude Code support |
+|---|---|---|---|---|
+| Cloudflare | Dashboard / Terraform / Workers JS | Yes (Workers) | Free–Enterprise | Full (Terraform + Workers) |
+| CloudFront | AWS Console / CloudFormation / CDK | Yes (Lambda@Edge) | Pay-per-use | Full (CDK + Lambda) |
+| Fastly | VCL / Fiddle | Yes (Compute@Edge) | Pay-per-use | Good (VCL generation) |
+| Vercel Edge | vercel.json / Edge Functions | Yes (Edge Functions) | Free–Enterprise | Full (native integration) |
+| Netlify | netlify.toml / Edge Functions | Yes (Deno-based) | Free–Pro | Full (netlify.toml) |
+
+## Advanced: Stale-While-Revalidate for API Routes
+
+The `stale-while-revalidate` directive lets the CDN serve a cached (potentially stale) response immediately while fetching a fresh version in the background. This eliminates cache-miss latency for frequently updated data:
+
+```javascript
+// Express route with CDN-friendly cache headers
+app.get('/api/leaderboard', async (req, res) => {
+  const data = await getLeaderboard();
+  res
+    .set('Cache-Control', 'public, max-age=60, stale-while-revalidate=300')
+    .json(data);
+  // CDN serves cached data instantly for up to 5 minutes
+  // while revalidating in the background after 1 minute
+});
+```
+
+Ask Claude Code to audit all your API routes and suggest appropriate `max-age` and `stale-while-revalidate` values based on how frequently each endpoint's data changes.
+
+## Troubleshooting
+
+**Assets not being cached at the CDN edge**: Check the response `CF-Cache-Status` header (Cloudflare) or `X-Cache` header (CloudFront). A value of `MISS` means the request reached your origin. A value of `HIT` means it was served from cache. If you always see `MISS`, verify that your origin is not sending `Cache-Control: private` or `Set-Cookie` headers, which instruct CDNs not to cache the response.
+
+**Cache invalidation not working**: After deploying new assets, the CDN may continue serving stale files. For Cloudflare, use the Cache Purge API. For CloudFront, create an invalidation. Claude Code can generate a deployment script that automatically purges the CDN cache for your changed files after each deploy.
+
+**Inconsistent behavior across CDN PoPs**: CDN edge nodes do not share caches. A request routed to a Dallas PoP may get a cache miss while a London PoP has the item cached. This is normal — use shorter TTLs during rollouts and longer TTLs once a deployment is stable.
+
 {% endraw %}
 
 ## Related Reading

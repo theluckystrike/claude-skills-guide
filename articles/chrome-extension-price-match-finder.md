@@ -268,6 +268,77 @@ Building a price match finder demonstrates several Chrome extension concepts: co
 
 Start with a minimal viable product that detects products on two or three major retailers, then expand based on your use case and API access.
 
+## Step-by-Step: Building the Price Match Workflow
+
+1. **Detect product pages**: identify product detail pages on major retailers by matching URL patterns (`/product/`, `/item/`, `/p/`) and the presence of structured data (`<script type="application/ld+json">` with `@type: "Product"`).
+2. **Extract product identifiers**: read the UPC, EAN, or model number from the page. These are more reliable for cross-retailer matching than product names, which vary significantly between stores.
+3. **Query comparison sources**: use a price comparison API (e.g., Google Shopping Content API, PriceAPI, or your own scraper) to look up the same product at competing retailers.
+4. **Parse retailer price-match policies**: store a database of major retailer policies — which competitors they match, the time window (e.g., "within 30 days of purchase"), and any exclusions (marketplace sellers, lightning deals).
+5. **Present the match opportunity**: if a lower price is found at an eligible competitor, show a notification with the price difference and a link to the retailer's price-match request page.
+6. **Track match history**: store successful price matches in `chrome.storage.local` with the amount saved. Display a cumulative savings counter in the popup — users love seeing their total savings grow.
+
+## Parsing Structured Product Data
+
+Most modern e-commerce sites include structured data that makes product identification reliable:
+
+```javascript
+function extractProductData() {
+  const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  for (const script of scripts) {
+    try {
+      const data = JSON.parse(script.textContent);
+      const product = Array.isArray(data)
+        ? data.find(d => d['@type'] === 'Product')
+        : data['@type'] === 'Product' ? data : null;
+      if (product) {
+        return {
+          name: product.name,
+          sku: product.sku,
+          gtin: product.gtin13 || product.gtin12 || product.gtin,
+          brand: product.brand?.name,
+          price: product.offers?.price,
+          currency: product.offers?.priceCurrency,
+        };
+      }
+    } catch {}
+  }
+  return null;
+}
+```
+
+## Retailer Price Match Policy Summary
+
+| Retailer | Matches competitors | Time window | Exclusions |
+|---|---|---|---|
+| Best Buy | Amazon, Walmart, Target + others | At purchase | Third-party sellers, limited-time deals |
+| Target | Amazon, Walmart, select others | 14 days | Target.com exclusive prices |
+| Walmart | Amazon, Target, select others | At purchase | Marketplace sellers |
+| Home Depot | Amazon, local stores | 30 days | Installation items |
+| Staples | Amazon, Office Depot + others | At purchase | Clearance items |
+
+Store this policy table in `chrome.storage.local` and update it periodically — policies change during sales events.
+
+## Advanced: Historical Price Trend Analysis
+
+A price match is most valuable when the competitor's price is at a historical low. Add trend analysis to surface the best timing:
+
+```javascript
+async function isPriceAtHistoricalLow(asin, currentPrice) {
+  const { priceHistory = [] } = await chrome.storage.local.get('priceHistory');
+  const productHistory = priceHistory.filter(h => h.asin === asin);
+  if (productHistory.length < 5) return false; // Not enough data
+  const minPrice = Math.min(...productHistory.map(h => h.price));
+  return currentPrice <= minPrice * 1.05; // Within 5% of all-time low
+}
+```
+
+## Troubleshooting
+
+**UPC not found in structured data**: Fall back to reading the product page's meta tags (`<meta itemprop="sku">`, `<meta property="og:upc">`) and the URL itself, which often contains a numeric product ID that can be used as a fallback identifier for the comparison API query.
+
+**Price comparison API rate limits**: Cache API responses for at least 2 hours per product. Most users revisit the same product page multiple times before purchasing, so a cached comparison result is still valuable. Use the product's UPC as the cache key.
+
+**False positives — same model number, different configuration**: Laptops and appliances are often sold in multiple configurations under the same model number but with different specs (RAM, storage). Add a specification fingerprint step that also compares CPU/RAM/storage values extracted from the product page before flagging a price match.
 
 ## Related Reading
 
