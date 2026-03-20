@@ -5,6 +5,10 @@ description: "Learn how to test structured data using Chrome extensions. Compare
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-structured-data-tester/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 # Chrome Extension Structured Data Tester: A Developer Guide
