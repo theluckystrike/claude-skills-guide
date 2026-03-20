@@ -457,6 +457,82 @@ database unavailability."
 
 Each step is independent and reversible. If the generated migration looks wrong, fix it before generating the handlers. Claude Code gives you checkpoints rather than a single opaque output.
 
+
+## Step-by-Step Guide: Building Your First Actix Web API with Claude Code
+
+Here is a concrete workflow for building a production-ready Actix Web API from scratch using Claude Code at every stage.
+
+**Step 1 — Project scaffolding.** Open a Claude Code session in your new project directory. Ask it to generate a complete Cargo.toml with all necessary dependencies: actix-web, actix-rt, tokio with full features, serde with derive, serde_json, and uuid with v4 feature. Claude Code produces the correct dependency versions and avoids common incompatibility issues between async runtimes.
+
+**Step 2 — Define your data models.** Describe your domain in plain language. Claude Code generates Rust structs with appropriate Serde derives, proper field types, and consideration for JSON serialization edge cases like optional fields and default values.
+
+**Step 3 — Implement handler functions.** Use Claude Code with the /tdd skill to generate tests first, then implement each handler. The TDD workflow works particularly well with Actix Web because handler signatures are explicit about their dependencies, making test doubles straightforward.
+
+**Step 4 — Wire up routing and middleware.** Ask Claude Code to generate the App configuration block with your route definitions, CORS middleware, JSON error handlers, and request logging. Getting middleware order correct in Actix Web requires attention to detail that Claude Code handles consistently.
+
+**Step 5 — Add database integration.** Tell Claude Code which database you're using and it generates the connection pool setup, connection extraction in handlers, and an example repository pattern to keep database logic separate from HTTP handling.
+
+## Common Pitfalls
+
+**Forgetting to call `.await` on async handlers.** Actix Web handlers must be async functions, but forgetting to await inner futures produces compilation errors with confusing messages. Claude Code generates correctly awaited handler bodies and the /tdd skill writes tests that verify async behavior.
+
+**Using `unwrap()` in production handlers.** Rust's unwrap panics the thread on None or Err, which Actix Web converts into a 500 error with no useful response. Use the `?` operator with a custom error type that implements `ResponseError`. Claude Code can generate this error type and the required trait implementations automatically.
+
+**Blocking the async runtime.** CPU-intensive operations in Actix handlers block the tokio runtime. For heavy computation, use `web::block()` to move work to a thread pool. Claude Code recognizes when operations are synchronous and wraps them appropriately.
+
+**Not validating request bodies.** The `web::Json<T>` extractor returns a 400 error if deserialization fails, but the error message is generic. Add a custom JSON error handler to your App configuration that provides specific validation messages. Claude Code generates this handler as part of a standard app setup.
+
+**Ignoring connection pool exhaustion.** When every handler holds a database connection, pool exhaustion causes request timeouts under load. Claude Code can review your handler patterns and suggest connection borrowing scopes that release connections as quickly as possible.
+
+## Best Practices
+
+**Use custom error types instead of Box<dyn Error>.** Define an AppError enum that implements Actix Web's ResponseError trait. This lets you return specific HTTP status codes and structured JSON error responses from any handler. Claude Code generates a complete error module with common variants like NotFound, Unauthorized, and InternalError.
+
+**Extract shared state into Data<T>.** Application state like database pools, configuration, and API clients should be registered with `.app_data(web::Data::new(...))` and extracted in handlers. This makes dependencies explicit and testable. Claude Code generates state structs and Data extractors correctly.
+
+**Structure routes by resource, not HTTP method.** Group related routes together using `web::scope()` rather than a flat list of route registrations. Claude Code generates scope-based routing that scales cleanly as your API grows.
+
+**Add structured logging with tracing.** The tracing crate integrates with Actix Web's request logging and provides structured, queryable logs. Claude Code can add tracing instrumentation to your handlers and configure the subscriber for both development and production environments.
+
+**Write integration tests with actix-web's test utilities.** The actix-web::test module provides an HTTP test client that exercises your actual App configuration. Claude Code with the /tdd skill generates integration tests that cover authentication, error responses, and business logic without a running server.
+
+## Advanced: State Management and Middleware
+
+For production APIs, you need request-level state management and cross-cutting middleware:
+
+```rust
+use actix_web::middleware::Logger;
+use actix_web::web::Data;
+use std::sync::Arc;
+
+struct AppState {
+    db_pool: sqlx::PgPool,
+    config: Arc<Config>,
+}
+
+async fn build_app(state: web::Data<AppState>) -> App<...> {
+    App::new()
+        .app_data(state)
+        .wrap(Logger::default())
+        .wrap(actix_cors::Cors::permissive())
+        .service(
+            web::scope("/api/v1")
+                .service(users_routes())
+                .service(products_routes())
+        )
+}
+```
+
+Claude Code generates this configuration with proper type annotations and handles the lifetime complexity that async Actix Web applications require.
+
+## Integration Patterns
+
+**Combining with the /supermemory skill.** Store your API conventions—error format, pagination parameters, authentication patterns—in supermemory at the start of a project. Claude Code retrieves these conventions in future sessions, ensuring consistency across all endpoints even when working on different parts of the API weeks apart.
+
+**Generating OpenAPI documentation.** Use the `utoipa` crate with Claude Code to generate OpenAPI spec directly from your handler definitions. Claude Code adds the required macro annotations to your structs and handler functions, producing accurate API documentation that stays synchronized with your implementation.
+
+**Connecting to a React frontend.** Use the /frontend-design skill to scaffold React components that consume your Actix Web API. The skill generates typed fetch functions based on your API response shapes, keeping the frontend and backend in sync.
+
 ## Conclusion
 
 Claude Code accelerates Actix Web development by generating tests, documenting APIs, and maintaining consistent patterns across your codebase. The combination of Rust's performance and AI-assisted development creates a productive workflow for building high-performance web services.
