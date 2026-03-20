@@ -177,11 +177,69 @@ For these users, the solution involves optimizing system resources rather than d
 
 Upgrade your system RAM or GPU if consistent high memory usage occurs. A system with 8GB RAM and an integrated GPU will struggle with multiple GPU-intensive tabs.
 
+## Identifying Which Tabs Are the Culprits
+
+One of the most underused diagnostic approaches is isolating exactly which tab or extension is responsible. Chrome Task Manager shows per-process memory, but multiple tabs can share a single GPU process entry, making attribution tricky.
+
+A reliable workflow for pinpointing the source:
+
+1. Open `chrome://task-manager` and note the GPU process memory baseline with only the new tab page open. On most systems this sits between 80-150MB.
+2. Open your usual tabs one at a time, waiting 30 seconds between each. Watch for sudden jumps in the GPU process row.
+3. When you find a tab that causes a spike of 100MB or more, check whether the page loads WebGL content, autoplays video, or runs canvas-heavy animations.
+
+Sites that commonly spike GPU memory include online 3D modeling tools, interactive data visualization dashboards, video editing platforms, and mapping services that render 3D terrain. If a specific site is responsible, you can keep it isolated using Chrome's site isolation feature:
+
+```bash
+# Launch Chrome with strict site isolation
+google-chrome --site-per-process
+```
+
+This places each site in its own renderer process, giving you finer Task Manager visibility at the cost of slightly higher total memory overhead.
+
+## Extension-Specific GPU Memory Leaks
+
+Extensions that render overlays or inject canvas elements are a frequently overlooked source of GPU memory growth. Some screenshot tools, annotation extensions, and drawing tools hold GPU texture buffers that are never released.
+
+To test whether an extension is the cause:
+
+1. Open `chrome://extensions`
+2. Toggle every extension off
+3. Restart Chrome and measure baseline GPU memory
+4. Re-enable extensions one at a time, restarting Chrome between each
+
+If the GPU process spikes when a specific extension is re-enabled, that extension is the culprit. Check the extension's issue tracker for known memory leak reports. Many popular extensions have fixed GPU memory leaks in recent releases, so updating before uninstalling is worth trying first.
+
+For developers building Chrome extensions that use the Canvas API or WebGL, always call `canvas.getContext('webgl').getExtension('WEBGL_lose_context').loseContext()` during cleanup to explicitly release GPU resources rather than relying on garbage collection.
+
+## Profile and Flag-Level Tuning for Power Users
+
+Chrome's `chrome://flags` page exposes experimental settings that can meaningfully reduce GPU process memory in specific scenarios. These flags are subject to change across Chrome versions but are stable enough for long-term use on current builds:
+
+- **`#enable-zero-copy`**: Reduces memory copies between CPU and GPU for rasterization. Can lower peak usage on integrated GPU systems.
+- **`#enable-gpu-rasterization`**: When enabled alongside zero-copy, improves efficiency. When disabled, forces CPU rasterization, cutting GPU memory at a CPU performance cost.
+- **`#enable-oop-rasterization`**: Out-of-process rasterization can isolate memory pressure from the main GPU process.
+
+A practical starting point for a developer machine with 16GB RAM and a discrete GPU is to leave hardware acceleration on, enable zero-copy and GPU rasterization, and set a soft memory cap with `--gpu-memory-buffer-mb=768`. This preserves the performance benefits of GPU rendering while preventing runaway allocation.
+
+For machines with integrated Intel or Apple Silicon graphics sharing system RAM, disabling hardware acceleration and relying on Chrome's Skia software renderer is often the better trade-off once GPU memory exceeds 600MB regularly.
+
+## Reading chrome://gpu Output Effectively
+
+The `chrome://gpu` page is dense but provides the clearest picture of your GPU configuration. The most actionable sections are:
+
+**Graphics Feature Status**: Each row shows whether a feature is hardware-accelerated or software-fallback. Rows marked "Software only, hardware acceleration unavailable" indicate driver blocklist entries. If your GPU supports a feature but Chrome has blocked it, updating drivers often resolves the blocklist hit.
+
+**Driver Bug Workarounds**: This section lists active driver workarounds. A long list here means Chrome is compensating for known driver issues, which typically increases memory usage. Cross-reference the listed workaround IDs against the Chromium bug tracker if you need detail on a specific entry.
+
+**Video Acceleration Information**: Shows whether hardware video decode and encode are active. If these are disabled, your CPU handles all video processing, reducing GPU memory but significantly increasing CPU load during video playback.
+
 ## Summary
 
 Chrome GPU process memory usage varies based on your browsing activity, hardware, and driver configuration. Normal usage typically ranges from 100-400MB. Values exceeding this indicate heavy graphics usage or potential issues.
 
 Start with basic troubleshooting by updating drivers and monitoring Task Manager. For persistent issues, disable hardware acceleration selectively or use command-line flags to constrain memory. Most users find that closing unnecessary tabs and updating drivers resolves the problem without sacrificing functionality.
+
+Developers building web applications should pay close attention to WebGL context cleanup and canvas lifecycle management, as these are the most common sources of GPU memory that grows over a browser session. Power users benefit most from learning to read `chrome://gpu` output and using Tab Manager combined with selective extension disabling to isolate the source quickly.
 
 
 ## Related Reading

@@ -22,7 +22,7 @@ Privacy-focused browsers have matured significantly. What once required extensiv
 
 Each browser is evaluated on:
 - Anti-fingerprinting effectiveness
-- Tracker blocking capabilities  
+- Tracker blocking capabilities
 - Source code transparency
 - Developer tooling and extension ecosystem
 - Memory security and sandboxing
@@ -88,7 +88,7 @@ fingerprintingprotection.off       // For compatibility
 
 The browser automatically randomizes:
 - Canvas rendering
-- WebGL parameters  
+- WebGL parameters
 - Font enumeration
 - Screen resolution reporting
 
@@ -177,6 +177,67 @@ For developers testing applications under anonymity conditions, Tor Browser is e
 **For extension-heavy workflows**: LibreWolf maintains Firefox's extension ecosystem while eliminating telemetry.
 
 All five browsers listed here are free and open source, allowing security researchers to verify implementations. Choose based on your specific threat model and workflow requirements.
+
+## Hardening Your Browser Beyond Default Settings
+
+Shipping defaults vary significantly across these browsers, but every option on this list benefits from additional configuration. The goal of hardening is to reduce the browser's attack surface without breaking your day-to-day workflow.
+
+For Firefox and LibreWolf, the `about:config` page is where meaningful hardening happens. A practical hardening checklist that preserves general usability:
+
+```javascript
+// Reduce network fingerprinting
+network.http.sendRefererHeader = 1        // Send referer to same origin only
+network.http.referer.XOriginPolicy = 2    // Never send cross-origin referer
+network.dns.disablePrefetch = true        // Disable DNS prefetching
+network.prefetch-next = false             // Disable link prefetching
+
+// Disable telemetry
+toolkit.telemetry.enabled = false
+datareporting.healthreport.uploadEnabled = false
+
+// Tighten WebRTC to prevent IP leaks
+media.peerconnection.enabled = false
+```
+
+WebRTC leaks are a particularly dangerous blind spot. Even with a VPN active, a browser that allows WebRTC can expose your real local IP address to any site that requests it. Testing for this is straightforward: visit a WebRTC leak test site such as browserleaks.com while connected to a VPN. If your real IP appears alongside the VPN IP, disable WebRTC in `about:config` or install an extension that enforces WebRTC policy.
+
+Brave handles most of this automatically at the Shields level, but power users can still tighten the `brave://settings/privacy` page by enabling "Prevent sites from fingerprinting me based on my language settings" and setting the WebRTC IP handling policy to "Disable non-proxied UDP."
+
+## Using Multiple Browsers as a Privacy Strategy
+
+A single browser is rarely the right answer for privacy-conscious developers. A practical multi-browser strategy segments browsing activity by risk level and purpose:
+
+**Primary work browser (Firefox or Brave)**: All development work, authenticated services, and tools you use with your real identity. Cookie isolation is managed per-container. Extensions are evaluated and kept minimal.
+
+**Research and reading browser (LibreWolf or Mullvad)**: Investigating competitors, reading sensitive industry content, or any browsing where you prefer not to be correlated with your primary identity. No extensions installed. Cookies cleared on close.
+
+**High-sensitivity browser (Tor Browser)**: Used when anonymity is a hard requirement — security research, accessing .onion services, or reviewing content that could be legally sensitive. JavaScript restricted to Safer or Safest mode.
+
+This approach avoids a common failure mode: trying to make one browser do everything. A browser hardened for anonymity tends to break web applications that developers depend on. Keeping contexts separate means you never have to weaken your anonymous browser just to log into a SaaS tool.
+
+## Testing Your Browser's Privacy Posture
+
+Developers should verify their browser configuration actively rather than trusting defaults. A standard verification workflow uses three tools:
+
+**Cover Your Tracks (EFF)** — `coveryourtracks.eff.org` — Tests whether your browser's fingerprint is unique among visitors. A strong privacy browser should show "randomized" or "strong protection" rather than a stable unique fingerprint.
+
+**BrowserLeaks** — `browserleaks.com` — A comprehensive suite covering WebGL fingerprinting, canvas fingerprinting, WebRTC leaks, font enumeration, and more. Run this against each browser in your stack and compare the results.
+
+**DNS Leak Test** — `dnsleaktest.com` — Confirms DNS queries are routed through your VPN or chosen resolver rather than your ISP's default. A common failure mode is a browser that respects your VPN's traffic routing but still sends DNS queries to the system default resolver.
+
+Run these tests both before and after any hardening changes. Document the baseline for each browser you use regularly. When a browser update ships, re-run the tests to catch any regressions in privacy defaults.
+
+## Extension Hygiene for Privacy Browsers
+
+Every extension added to a privacy browser partially undermines it. Extensions can read page content, intercept network requests, and contribute to a unique browser fingerprint. The rule for privacy browsers is to install only extensions that are open source, widely audited, and narrowly scoped.
+
+The short list that consistently passes scrutiny:
+
+- **uBlock Origin**: Network-level content blocking. Open source, community maintained, and significantly more transparent than closed alternatives. Pre-installed in LibreWolf, available on Firefox and Brave.
+- **Privacy Badger (EFF)**: Learning-based tracker blocking. Complements uBlock Origin by catching trackers that blocklists miss. Developed and audited by the EFF.
+- **LocalCDN**: Intercepts CDN requests and serves common libraries locally, preventing CDN providers from correlating your browsing across sites. Useful for developers who load libraries from third-party CDNs in their applications and want to understand the tracking surface.
+
+Avoid installing extensions that require broad permissions ("Read and change all your data on the websites you visit") unless they are foundational tools like uBlock Origin where the permission is inherent to the function. Even then, review the extension's changelog after each update.
 
 ## Related Reading
 

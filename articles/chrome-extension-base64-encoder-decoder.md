@@ -178,6 +178,191 @@ Input: "编码测试"
 Encoded: "5rqQ5Zu+测试"
 ```
 
+## Adding a Copy-to-Clipboard Button
+
+One of the most requested quality-of-life improvements for any encoding tool is instant clipboard support. Requiring users to manually select and copy the output adds friction that slows down repetitive workflows. Here is how to add a copy button to the popup:
+
+```javascript
+// Add to popup.js after setting the output text
+function setOutput(text) {
+  const outputEl = document.getElementById('output');
+  outputEl.textContent = text;
+
+  const copyBtn = document.getElementById('copy');
+  copyBtn.style.display = 'inline-block';
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(text).then(() => {
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => { copyBtn.textContent = 'Copy'; }, 1500);
+    });
+  };
+}
+```
+
+Update popup.html to include the copy button element:
+
+```html
+<button id="copy" style="display:none;">Copy</button>
+```
+
+The `navigator.clipboard.writeText` API is available without additional permissions in Manifest V3 popup contexts because the popup has focus at the time of the call. The button resets its label after 1.5 seconds, giving users clear confirmation that the copy succeeded.
+
+## Integrating with the Current Page via Content Scripts
+
+A standalone popup is useful, but a more powerful pattern is letting the extension detect and operate on Base64 content that already exists on the page you are viewing. This requires a content script.
+
+Add a content script entry to manifest.json:
+
+```json
+{
+  "manifest_version": 3,
+  "name": "Base64 Encoder/Decoder",
+  "version": "1.0",
+  "description": "Encode and decode Base64 strings quickly",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+```
+
+The content script can scan for strings that match the Base64 pattern and expose them for decoding on demand. A conservative pattern for detecting Base64 strings:
+
+```javascript
+// content.js
+const BASE64_PATTERN = /^[A-Za-z0-9+/]{20,}={0,2}$/;
+
+function findBase64InSelection() {
+  const selection = window.getSelection().toString().trim();
+  if (BASE64_PATTERN.test(selection)) {
+    return selection;
+  }
+  return null;
+}
+
+// Listen for messages from the popup
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'getSelection') {
+    sendResponse({ text: findBase64InSelection() });
+  }
+});
+```
+
+In the popup, send a message to retrieve whatever the user has selected before the popup opened:
+
+```javascript
+chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  chrome.tabs.sendMessage(tabs[0].id, { action: 'getSelection' }, (response) => {
+    if (response && response.text) {
+      document.getElementById('input').value = response.text;
+    }
+  });
+});
+```
+
+This pattern lets users highlight a Base64 string anywhere on a page, open the extension popup, and immediately see the selected text pre-filled in the input field.
+
+## Handling JWT Tokens
+
+JSON Web Tokens (JWTs) are one of the most common real-world uses of Base64 encoding that developers encounter. A JWT consists of three Base64url-encoded segments separated by periods: header, payload, and signature. Decoding the header and payload reveals the token's algorithm and claims without needing to verify the signature.
+
+Extend the extension to detect and parse JWTs automatically:
+
+```javascript
+function isJWT(str) {
+  const parts = str.split('.');
+  return parts.length === 3 && parts.every(p => /^[A-Za-z0-9_-]+$/.test(p));
+}
+
+function decodeJWT(token) {
+  const parts = token.split('.');
+  const decode = (segment) => {
+    // Restore padding for standard atob
+    const padded = segment + '=='.slice((segment.length % 4 || 4) - 2);
+    const base64 = padded.replace(/-/g, '+').replace(/_/g, '/');
+    return JSON.parse(decodeURIComponent(escape(atob(base64))));
+  };
+
+  return {
+    header: decode(parts[0]),
+    payload: decode(parts[1]),
+    signatureRaw: parts[2]
+  };
+}
+```
+
+Add detection logic in the decode button handler:
+
+```javascript
+document.getElementById('decode').addEventListener('click', () => {
+  const input = document.getElementById('input').value.trim();
+  try {
+    if (isJWT(input)) {
+      const jwt = decodeJWT(input);
+      const output = JSON.stringify(jwt, null, 2);
+      document.getElementById('output').textContent = output;
+    } else {
+      const decoded = decodeURIComponent(escape(atob(input)));
+      document.getElementById('output').textContent = decoded;
+    }
+  } catch (e) {
+    document.getElementById('output').textContent = 'Invalid Base64 or JWT string';
+  }
+});
+```
+
+This makes the extension immediately useful for API debugging workflows where developers frequently need to inspect JWT claims without switching to a separate tool.
+
+## Packaging and Loading the Extension Locally
+
+Once your extension files are ready, load them into Chrome for testing without publishing to the Chrome Web Store.
+
+Your file structure should look like this:
+
+```
+base64-extension/
+  manifest.json
+  popup.html
+  popup.js
+  content.js
+  icon.png
+```
+
+To load the extension:
+
+1. Open `chrome://extensions` in Chrome
+2. Enable "Developer mode" using the toggle in the top-right corner
+3. Click "Load unpacked"
+4. Select the `base64-extension/` directory
+
+The extension icon will appear in your toolbar immediately. Any changes you make to the source files take effect after clicking the reload button on the extension card in `chrome://extensions`. You do not need to re-load the entire extension for most changes.
+
+For the icon, a simple 128x128 PNG works fine. You can generate one programmatically using a canvas element in a one-off HTML file, or use any image editing tool to create a minimal icon that distinguishes the extension in the toolbar.
+
+## Real-World Workflows Where a Base64 Extension Saves Time
+
+Understanding where Base64 encoding actually shows up in daily development work helps you get more value from the tool you have built.
+
+**Debugging API authentication.** Many APIs use HTTP Basic Authentication, which encodes a username and password as a single Base64 string in the Authorization header. When an API call fails with a 401, inspecting the raw request header and decoding the credential string immediately tells you whether the right credentials were sent. Rather than switching to a terminal and running a Python one-liner, you can paste the header value directly into the extension popup.
+
+**Inspecting image data URIs.** CSS and HTML files sometimes embed small images as Base64-encoded data URIs to eliminate HTTP requests. These strings are opaque and difficult to reason about visually. Decoding and re-encoding them lets you verify that a data URI contains the image you expect, or helps you compare two versions of the same image asset during a refactor.
+
+**Working with environment variables.** Some deployment platforms and CI systems store secrets as Base64-encoded environment variables to avoid issues with special characters in shell contexts. When you receive a base64 blob in a deployment log or environment config, being able to decode it instantly in the browser without context-switching to a separate tool speeds up troubleshooting significantly.
+
+**Reading serialized cookies and tokens.** Session cookies and authentication tokens frequently use Base64 encoding. When you open Chrome DevTools and inspect the Application tab, cookie values often appear as opaque Base64 strings. Having the decoder a single click away in the toolbar means you can spot-check token expiry times, user IDs, or session metadata without leaving the browser.
+
+**Encoding small assets inline during prototyping.** During rapid prototyping, it is sometimes faster to embed a small icon or font directly in a stylesheet as a Base64 data URI rather than setting up a separate static asset server. Your extension's encode function handles this: drop the file into the file encoder input and paste the output directly into your CSS. This avoids the CORS and static-server configuration overhead that comes with separate asset hosting in local development.
+
+Each of these workflows represents a case where switching to a terminal, Python, or an online tool adds a small but real context-switching cost. Keeping encoding and decoding in the browser toolbar, always one click away, compounds into meaningful time savings across a development day.
+
 ## Conclusion
 
 A Chrome extension for Base64 encoding and decoding is a valuable tool for developers working with APIs, handling data transfers, or managing binary content in text formats. Building your own gives you complete control over features and ensures you understand the underlying mechanisms. Start with the basic implementation outlined here, then expand with URL-safe variants, file support, and other features that match your specific needs.

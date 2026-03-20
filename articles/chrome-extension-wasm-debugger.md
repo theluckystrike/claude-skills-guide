@@ -143,6 +143,94 @@ emcc -g4 -p mymodule.c -o mymodule.js
 
 This generates instrumentation that appears in DevTools profiling data.
 
+## Dealing with Content Security Policy in Manifest V3
+
+Content Security Policy is one of the most frequent blockers when loading WASM inside a Manifest V3 extension. MV3 removed the ability to use `unsafe-eval`, which older WASM toolchains relied on. If you see a CSP error like `Refused to compile or instantiate WebAssembly module`, your WASM binary is likely using a loading strategy that requires runtime code evaluation.
+
+The fix is to compile your WASM to use the `--no-dynamic-execution` flag in Emscripten, or to ensure you instantiate the binary using `WebAssembly.instantiate` directly from an `ArrayBuffer` rather than from a blob URL:
+
+```javascript
+// This approach works under MV3 CSP restrictions
+async function loadWasmSafe(extensionRelativePath) {
+  const url = chrome.runtime.getURL(extensionRelativePath);
+  const response = await fetch(url);
+  const buffer = await response.arrayBuffer();
+  const result = await WebAssembly.instantiate(buffer, {
+    env: {
+      memory: new WebAssembly.Memory({ initial: 256 }),
+      abort: (msg) => console.error('WASM abort:', msg)
+    }
+  });
+  return result.instance.exports;
+}
+```
+
+Never use `WebAssembly.instantiateStreaming` directly from `chrome.runtime.getURL` sources — fetch the buffer first, then pass it to `instantiate`. This ensures CSP compliance on both background service workers and content scripts.
+
+## Isolating WASM Bugs: Test Outside the Extension First
+
+One of the most effective debugging strategies is separating WASM problems from extension problems entirely. Before diagnosing an issue inside your extension context, create a minimal HTML test page that loads the same WASM module:
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+(async () => {
+  const response = await fetch('./mymodule.wasm');
+  const buffer = await response.arrayBuffer();
+  const { instance } = await WebAssembly.instantiate(buffer, {});
+  const result = instance.exports.myFunction(10, 20);
+  console.log('Result:', result);
+})();
+</script>
+</body>
+</html>
+```
+
+Serve this from a local development server and debug it in a regular browser tab. You get full DevTools access without the extension CSP and origin restrictions. If the WASM behaves correctly here but fails inside the extension, the problem is almost certainly a permissions, fetch URL, or CSP issue — not a WASM bug.
+
+This isolation discipline saves hours. Fix WASM logic bugs in the plain page context, then move the confirmed-working binary into the extension.
+
+## Reading WASM Error Messages Accurately
+
+WASM runtime errors surface through JavaScript exceptions and can be cryptic without context. A `RuntimeError: unreachable executed` error means your WASM code hit an explicit trap — usually a failed assertion, an out-of-bounds access, or a null pointer dereference in the original source language.
+
+When you encounter these, use the DevTools call stack to trace backward through both WASM frames and JavaScript frames:
+
+```javascript
+// Wrap WASM calls to capture full context on failure
+function callWasm(exports, fn, ...args) {
+  try {
+    return exports[fn](...args);
+  } catch (err) {
+    console.error(`WASM call "${fn}" failed with args:`, args);
+    console.error('Error:', err.message);
+    console.error('Stack:', err.stack);
+    throw err;
+  }
+}
+
+// Usage
+const result = callWasm(wasmExports, 'processImage', width, height, dataPtr);
+```
+
+For `LinkError` messages — which appear at instantiation time rather than at runtime — the problem is almost always a missing import. Your WASM module expects a function to be provided in the imports object, and you didn't supply it. Read the error message carefully: it names the exact import namespace and function name that is missing.
+
+## End-to-End Debugging Workflow
+
+Putting all these techniques together, a reliable debugging workflow for WASM in a Chrome extension looks like this:
+
+1. **Compile with debug symbols.** Always use `-g4` (or `-g` for non-Emscripten toolchains) during development. Strip them for production builds.
+2. **Test in isolation.** Verify the WASM module works in a plain HTML page before loading it inside the extension.
+3. **Open the extension DevTools.** Navigate to `chrome://extensions`, enable Developer Mode, click "Service Worker" to open the background context inspector.
+4. **Check the Network panel.** Confirm the `.wasm` file loads with HTTP 200 and the correct `application/wasm` MIME type.
+5. **Set breakpoints in source view.** If source maps loaded correctly, the Sources panel shows your original `.c` or `.cpp` files alongside the WASM binary view.
+6. **Inspect memory on failure.** When a function returns wrong values, dump the relevant memory region and compare against expected data.
+7. **Profile before optimizing.** Use the Performance panel to identify actual bottlenecks before restructuring WASM logic.
+
+This structured approach prevents the common trap of optimizing code that is not actually the bottleneck, or debugging WASM logic that was never the source of the failure.
+
 ## Best Practices
 
 Always test your WASM module in a regular web page first before debugging within the extension context. Most WASM issues are not extension-specific, and the standard DevTools workflow is simpler.
@@ -150,6 +238,8 @@ Always test your WASM module in a regular web page first before debugging within
 Keep your development extension separate from production. Use separate extension IDs or manifest configurations to avoid caching issues during development.
 
 When distributing an extension with WASM, consider inlining the WASM binary using base64 encoding to avoid loading external resources. This simplifies deployment but increases extension size.
+
+For team projects, document the exact compiler flags and toolchain version used to build each WASM binary. Subtle differences between Emscripten versions can produce different memory layouts and calling conventions, which makes debugging across machines much harder than it needs to be.
 
 
 ## Related Reading

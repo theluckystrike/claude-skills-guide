@@ -159,11 +159,116 @@ async function captureDocs() {
 }
 ```
 
+## Building Screenshot Workflows into CI/CD Pipelines
+
+Screenshot capture as a manual step is a bottleneck. Teams that document APIs, track UI regressions, or publish visual changelogs need automated pipelines that run without human intervention. Chrome extensions alone cannot achieve this — you need headless automation running in your build environment.
+
+The most practical approach is Puppeteer or Playwright combined with GitHub Actions. Here is a working GitHub Actions workflow that captures documentation pages on every push to main:
+
+```yaml
+name: Capture Docs Screenshots
+on:
+  push:
+    branches: [main]
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install puppeteer
+
+      - name: Capture screenshots
+        run: node scripts/capture-screenshots.js
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: ./screenshots/
+```
+
+The capture script handles multiple pages in sequence:
+
+```javascript
+// scripts/capture-screenshots.js
+const puppeteer = require('puppeteer');
+const fs = require('fs');
+
+const PAGES = [
+  { url: 'https://docs.example.com/api', name: 'api-reference' },
+  { url: 'https://docs.example.com/quickstart', name: 'quickstart' },
+  { url: 'https://docs.example.com/changelog', name: 'changelog' }
+];
+
+async function run() {
+  fs.mkdirSync('./screenshots', { recursive: true });
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+
+  for (const page of PAGES) {
+    const tab = await browser.newPage();
+    await tab.setViewport({ width: 1440, height: 900 });
+    await tab.goto(page.url, { waitUntil: 'networkidle2' });
+    await tab.screenshot({
+      path: `./screenshots/${page.name}.png`,
+      fullPage: true
+    });
+    console.log(`Captured: ${page.name}`);
+    await tab.close();
+  }
+
+  await browser.close();
+}
+
+run();
+```
+
+This generates consistent, timestamped screenshots that live in your repository artifacts rather than a cloud service controlled by a third-party extension vendor.
+
+## Keyboard Shortcuts and Speed Techniques for Power Users
+
+The difference between a fast screenshot workflow and a slow one is almost entirely keyboard usage. Every tool listed in this guide has keyboard shortcuts, but most users never configure them.
+
+**Chrome DevTools native shortcuts** (no extension required):
+- `Cmd+Shift+P` / `Ctrl+Shift+P` opens the Command Palette — type "screenshot" to access all four capture modes instantly
+- In the Elements panel, right-click any node and select "Capture node screenshot" to export a specific component as PNG
+
+**Lightshot** lets you reassign the trigger key. Set it to a dedicated key on a programmable keyboard so capturing never requires a mode switch.
+
+**GoFullPage** processes pages faster when you reduce the auto-scroll delay. Navigate to extension settings and lower the delay from the default 200ms to 80ms for static pages that do not have lazy-loading images.
+
+For developers on macOS, the system-level shortcuts deserve consideration before adding any extension at all:
+- `Cmd+Shift+4` followed by Space captures a specific window with its shadow
+- `Cmd+Shift+4` with a drag captures a region
+- Adding `Ctrl` to either copies to clipboard instead of saving a file
+
+If your screenshot need is simply "grab this UI element during a bug report," the system shortcut plus clipboard paste into Slack or Jira is faster than any extension.
+
+## Annotating Screenshots Consistently Across Teams
+
+Individual annotation is inconsistent. One engineer draws arrows in red, another uses blue boxes, a third types comments in whatever font happens to be available. This creates visual noise in documentation and makes screenshots harder to scan.
+
+The practical solution is a shared annotation template. Nimbus Capture supports saved annotation presets. Establish one set of conventions for your team:
+
+- Red filled rectangle: broken or incorrect UI
+- Yellow highlight: area of interest without a value judgment
+- Numbered callouts: step-by-step instructions in sequential order
+- Black bar: sensitive data that must be redacted before sharing
+
+Export these as a Nimbus template and share the import file with your team so everyone starts from the same annotation kit.
+
+For teams not using Nimbus, a simpler approach is a Figma component library containing pre-built annotation shapes. Engineers paste the raw screenshot into Figma, apply annotations from the shared library, and export. This separates capture (any tool) from annotation (one consistent tool), which prevents annotation style from being locked to whichever extension happens to be installed.
+
 ## Conclusion
 
 Awesome Screenshot remains a viable option for basic capture needs. However, developers and power users benefit significantly from alternatives that offer API access, headless automation, code-friendly exports, and team collaboration features. Nimbus Capture provides the most comprehensive feature set, while Pesticide and Chrome DevTools serve developers preferring native browser tools.
 
-Evaluate your specific workflow requirements—whether speed, automation, or team features matter most—and select the alternative that integrates seamlessly with your development process.
+Evaluate your specific workflow requirements — whether speed, automation, team consistency, or CI/CD integration matters most — and select the alternative that fits into your existing process rather than requiring you to build a new one around it. For most engineering teams, the answer is a combination: a fast extension for ad-hoc captures and a Puppeteer-based pipeline for anything that needs to run repeatably.
 
 ---
 

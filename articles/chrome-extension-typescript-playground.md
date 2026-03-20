@@ -198,6 +198,219 @@ Avoid these frequent issues when developing Chrome extensions with TypeScript:
 - **Service worker timeouts**: Service workers can terminate after 30 seconds of inactivity
 - **Cross-origin requests**: Use the Chrome API for network requests from background scripts
 
+## Hot Reload Without Manual Refresh
+
+One of the most frustrating parts of Chrome extension development is the constant cycle of building, reloading the extension in `chrome://extensions/`, and refreshing the test page. You can eliminate most of this friction with a watch script combined with a small reload helper.
+
+Add a watch script to your `package.json`:
+
+```json
+{
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  }
+}
+```
+
+Then install `web-ext` from Mozilla, which works with Chromium-based browsers for auto-reloading during development:
+
+```bash
+npm install --save-dev web-ext
+```
+
+Run both in parallel:
+
+```bash
+npm run dev &
+npx web-ext run --target=chromium --source-dir=dist
+```
+
+For projects where `web-ext` is overkill, you can write a lightweight background script that polls for file changes using the `chrome.runtime.reload()` API. The key insight is that the service worker can call `chrome.runtime.reload()` programmatically, so any reload trigger you can inject—whether through a WebSocket connection to a dev server or a simple polling interval—works cleanly.
+
+## Structuring Message Passing with Types
+
+The Chrome message passing system is a frequent source of runtime bugs because messages are untyped by default. A typed message bus prevents an entire class of errors where the sender and receiver disagree on message shape.
+
+Define a discriminated union for all your messages in a shared types file:
+
+```typescript
+// src/types/messages.ts
+export type ExtensionMessage =
+  | { action: 'getData'; tabId: number }
+  | { action: 'setData'; payload: string }
+  | { action: 'ping' };
+
+export type ExtensionResponse =
+  | { success: true; data: string }
+  | { success: false; error: string };
+```
+
+Then create typed wrappers around the raw Chrome APIs:
+
+```typescript
+// src/utils/messaging.ts
+import type { ExtensionMessage, ExtensionResponse } from '../types/messages';
+
+export function sendToBackground(
+  message: ExtensionMessage
+): Promise<ExtensionResponse> {
+  return new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage(message, (response: ExtensionResponse) => {
+      if (chrome.runtime.lastError) {
+        reject(new Error(chrome.runtime.lastError.message));
+      } else {
+        resolve(response);
+      }
+    });
+  });
+}
+
+export function sendToTab(
+  tabId: number,
+  message: ExtensionMessage
+): Promise<ExtensionResponse> {
+  return new Promise((resolve, reject) => {
+    chrome.tabs.sendMessage(tabId, message, (response: ExtensionResponse) => {
+      if (chrome.runtime.lastError) {
+        reject(new Error(chrome.runtime.lastError.message));
+      } else {
+        resolve(response);
+      }
+    });
+  });
+}
+```
+
+On the receiving end, your handler narrows the type automatically:
+
+```typescript
+chrome.runtime.onMessage.addListener(
+  (message: ExtensionMessage, sender, sendResponse) => {
+    if (message.action === 'getData') {
+      // TypeScript knows message.tabId exists here
+      fetchData(message.tabId).then((data) => {
+        sendResponse({ success: true, data });
+      });
+      return true;
+    }
+    if (message.action === 'ping') {
+      sendResponse({ success: true, data: 'pong' });
+    }
+  }
+);
+```
+
+This pattern catches mismatches at compile time rather than during a frustrating debugging session at 11pm.
+
+## Storage Abstraction with TypeScript
+
+Chrome's `storage.local` and `storage.sync` APIs are weakly typed. Wrapping them in a typed storage layer makes your code far easier to maintain and refactor.
+
+```typescript
+// src/utils/storage.ts
+interface StorageSchema {
+  userPreferences: {
+    theme: 'light' | 'dark';
+    fontSize: number;
+    autoSave: boolean;
+  };
+  sessionData: {
+    lastVisited: string;
+    itemCount: number;
+  };
+}
+
+type StorageKey = keyof StorageSchema;
+
+export async function getStorage<K extends StorageKey>(
+  key: K
+): Promise<StorageSchema[K] | null> {
+  return new Promise((resolve) => {
+    chrome.storage.local.get(key, (result) => {
+      resolve((result[key] as StorageSchema[K]) ?? null);
+    });
+  });
+}
+
+export async function setStorage<K extends StorageKey>(
+  key: K,
+  value: StorageSchema[K]
+): Promise<void> {
+  return new Promise((resolve) => {
+    chrome.storage.local.set({ [key]: value }, resolve);
+  });
+}
+```
+
+Usage becomes completely type-safe:
+
+```typescript
+// TypeScript enforces the correct shape
+await setStorage('userPreferences', {
+  theme: 'dark',
+  fontSize: 14,
+  autoSave: true
+});
+
+const prefs = await getStorage('userPreferences');
+if (prefs) {
+  console.log(prefs.theme); // typed as 'light' | 'dark'
+}
+```
+
+This pattern also makes it straightforward to add storage migrations later when your schema changes between extension versions.
+
+## Handling Permissions at Runtime
+
+Manifest V3 encourages requesting permissions at runtime rather than bundling everything in the manifest upfront. TypeScript makes it easy to build a safe permissions helper:
+
+```typescript
+// src/utils/permissions.ts
+type ChromePermission = chrome.permissions.Permissions;
+
+export async function requestPermission(
+  permission: string,
+  origins?: string[]
+): Promise<boolean> {
+  const request: ChromePermission = { permissions: [permission] };
+  if (origins) {
+    request.origins = origins;
+  }
+
+  return new Promise((resolve) => {
+    chrome.permissions.request(request, (granted) => {
+      resolve(granted);
+    });
+  });
+}
+
+export async function hasPermission(permission: string): Promise<boolean> {
+  return new Promise((resolve) => {
+    chrome.permissions.contains(
+      { permissions: [permission] },
+      (result) => resolve(result)
+    );
+  });
+}
+```
+
+Call this before any feature that requires elevated permissions rather than letting the browser surface a confusing error to the user:
+
+```typescript
+async function readClipboard(): Promise<string | null> {
+  const granted = await hasPermission('clipboardRead');
+  if (!granted) {
+    const approved = await requestPermission('clipboardRead');
+    if (!approved) {
+      console.warn('[Content] Clipboard permission denied');
+      return null;
+    }
+  }
+  return navigator.clipboard.readText();
+}
+```
+
 ## Production Build
 
 When ready to publish, create a production build:
@@ -206,9 +419,17 @@ When ready to publish, create a production build:
 npm run build
 ```
 
-This generates optimized files in your dist directory. Test the production build locally before submitting to the Chrome Web Store.
+This generates optimized files in your dist directory. Test the production build locally before submitting to the Chrome Web Store. Before submitting, run through a manual checklist: verify all declared permissions are actually used (the Chrome Web Store reviewers check this), confirm your content security policy in the manifest does not include `unsafe-eval`, and test the extension in an incognito window where most extensions are disabled by default.
 
-A well-configured TypeScript playground for Chrome extension development gives you confidence in your code quality and speeds up iteration. The setup described here provides a solid foundation for building robust extensions with modern JavaScript tooling.
+Consider adding a pre-publish script that zips only the `dist` directory:
+
+```bash
+cd dist && zip -r ../extension.zip . && cd ..
+```
+
+This creates a clean package ready for the Chrome Web Store upload form.
+
+A well-configured TypeScript playground for Chrome extension development gives you confidence in your code quality and speeds up iteration. The typed message passing, storage abstraction, and permission helpers described here prevent the most common runtime errors while making your codebase easier for collaborators to navigate. The setup described here provides a solid foundation for building robust extensions with modern JavaScript tooling.
 
 
 ## Related Reading
