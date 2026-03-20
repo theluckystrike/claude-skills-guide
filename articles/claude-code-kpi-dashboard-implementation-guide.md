@@ -12,7 +12,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
+{% raw %}
 # Claude Code KPI Dashboard Implementation Guide
 
 Building a KPI dashboard with Claude Code transforms how you track and visualize project metrics. This implementation guide walks through creating a custom skill that aggregates data, generates visualizations, and delivers real-time insights directly in your development workflow.
@@ -377,3 +377,4 @@ The most important step is simply starting. A five-metric ASCII dashboard you ac
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
