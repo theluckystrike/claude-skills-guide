@@ -163,7 +163,7 @@ The Telegram MCP server transforms Claude Code into a powerful bot development p
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Discord MCP Server Community Automation Guide](/claude-skills-guide/discord-mcp-server-community-automation-guide/)
 - [Slack MCP Server Team Notification Automation](/claude-skills-guide/slack-mcp-server-team-notification-automation/)
 - [Integrations Hub: MCP Servers and Claude Skills](/claude-skills-guide/integrations-hub/)

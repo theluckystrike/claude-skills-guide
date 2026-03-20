@@ -52,7 +52,7 @@ GitHub Copilot Workspace and Claude Code are both aiming at the same big idea: a
 
 **Model flexibility.** Claude Code gives you the option to use different Claude models (Sonnet for speed, Opus 4.6 for quality) depending on task complexity. This token-cost optimization is not available in Copilot Workspace.
 
-**MCP server ecosystem.** [Claude Code can connect to any MCP server](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — your internal Jira, your custom deployment pipeline, your observability tools. Copilot Workspace is limited to GitHub-native integrations.
+**MCP server ecosystem.** [Claude Code can connect to any MCP server](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) — your internal Jira, your custom deployment pipeline, your observability tools. Copilot Workspace is limited to GitHub-native integrations.
 
 ---
 

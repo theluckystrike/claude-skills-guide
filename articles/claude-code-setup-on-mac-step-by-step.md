@@ -156,7 +156,7 @@ Haiku responds faster for straightforward tasks.
 
 ## Advanced: Using MCP Servers
 
-For expanded capabilities, [configure Model Context Protocol servers](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/). Create or edit `~/.claude/settings.json`:
+For expanded capabilities, [configure Model Context Protocol servers](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/). Create or edit `~/.claude/settings.json`:
 
 ```json
 {
@@ -257,7 +257,7 @@ cat ~/.claude/prompts/explain-code.txt src/utils.js | claude
 
 - [Claude Code for Beginners: Complete Getting Started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code Project Initialization Best Practices](/claude-skills-guide/claude-code-project-initialization-best-practices/)
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

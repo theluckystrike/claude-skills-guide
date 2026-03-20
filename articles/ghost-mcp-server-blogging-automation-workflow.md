@@ -13,11 +13,11 @@ permalink: /ghost-mcp-server-blogging-automation-workflow/
 
 # Ghost MCP Server: Blogging Automation Workflow
 
-[The Ghost MCP server enables Claude to interact directly with your Ghost blog](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), automating post creation, content updates, tag management, and publishing workflows through natural language commands. This guide shows developers and power users how to set up, configure, and use this integration for efficient content management.
+[The Ghost MCP server enables Claude to interact directly with your Ghost blog](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), automating post creation, content updates, tag management, and publishing workflows through natural language commands. This guide shows developers and power users how to set up, configure, and use this integration for efficient content management.
 
 ## Prerequisites
 
-[Before configuring the Ghost MCP server, ensure you have the prerequisites](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+[Before configuring the Ghost MCP server, ensure you have the prerequisites](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 
 - A Ghost site (self-hosted or Ghost Pro)
 - Claude Code or Claude Desktop installed
@@ -211,7 +211,7 @@ For teams managing regular content schedules, this automation significantly redu
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Claude Skills for SEO Content Generation Workflow](/claude-skills-guide/claude-skills-for-seo-content-generation-workflow/)
 - [ClickUp MCP Server Workflow Automation Guide](/claude-skills-guide/clickup-mcp-server-workflow-automation-guide/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

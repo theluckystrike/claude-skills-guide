@@ -13,7 +13,7 @@ permalink: /anthropic-model-context-protocol-updates-march-2026/
 
 # MCP Updates March 2026: What Developers Need to Know
 
-[The Model Context Protocol (MCP) March 2026 release brings meaningful improvements](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) for developers building Claude Code workflows. This article covers the key changes, what they mean in practice, and how to migrate existing configurations.
+[The Model Context Protocol (MCP) March 2026 release brings meaningful improvements](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) for developers building Claude Code workflows. This article covers the key changes, what they mean in practice, and how to migrate existing configurations.
 
 ## What Changed in March 2026
 

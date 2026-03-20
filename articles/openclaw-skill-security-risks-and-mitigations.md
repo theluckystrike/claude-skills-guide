@@ -234,7 +234,7 @@ The OpenCLAW ecosystem continues evolving, and new attack patterns will emerge. 
 ## Related Reading
 
 - [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/)
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
 - [How to Audit Claude Code MCP Server Permissions](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
 - [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/)

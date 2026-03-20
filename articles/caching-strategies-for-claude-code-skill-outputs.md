@@ -104,7 +104,7 @@ The `supermemory` skill demonstrates this effectively. It maintains an indexed m
 
 ## MCP-Based Persistent Caching
 
-For more sophisticated caching, use [MCP (Model Context Protocol) servers](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) with persistent storage capabilities. This approach works across sessions and supports distributed caching for teams.
+For more sophisticated caching, use [MCP (Model Context Protocol) servers](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) with persistent storage capabilities. This approach works across sessions and supports distributed caching for teams.
 
 ### MCP Cache Server Example
 

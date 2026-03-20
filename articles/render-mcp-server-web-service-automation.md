@@ -148,7 +148,7 @@ Start by configuring the MCP server with your Render API credentials, then gradu
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Railway MCP Server Deployment Automation Guide](/claude-skills-guide/railway-mcp-server-deployment-automation-guide/)
 - [Fly.io MCP Server Deployment Workflow Guide](/claude-skills-guide/fly-io-mcp-server-deployment-workflow-guide/)
 - [Integrations Hub: MCP Servers and Claude Skills](/claude-skills-guide/integrations-hub/)

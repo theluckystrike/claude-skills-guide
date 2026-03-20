@@ -13,7 +13,7 @@ permalink: /slack-mcp-server-team-notification-automation/
 
 # Slack MCP Server Team Notification Automation
 
-[The Slack MCP server bridges Claude Code with your team's communication hub](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), enabling automated notifications triggered by code changes, deployment events, or system alerts. When combined with other Claude skills like `tdd` for test results or `pdf` for automated reports, you can build powerful notification workflows that keep everyone informed without manual updates.
+[The Slack MCP server bridges Claude Code with your team's communication hub](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), enabling automated notifications triggered by code changes, deployment events, or system alerts. When combined with other Claude skills like `tdd` for test results or `pdf` for automated reports, you can build powerful notification workflows that keep everyone informed without manual updates.
 
 ## What is Slack MCP Server?
 
@@ -193,7 +193,7 @@ The Slack MCP server enables powerful team notification automation within Claude
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup Complete Guide](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — Foundation setup for all MCP servers including Slack
+- [Building Your First MCP Tool Integration Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) — Foundation setup for all MCP servers including Slack
 - [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills that complement Slack notifications for infrastructure workflows
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Building the CI/CD foundation that triggers Slack notifications
 

@@ -256,7 +256,7 @@ Publishing platform integrations let Claude participate directly in the content 
 | [Automated GitHub Issue Triage with Claude Skills Guide](/claude-skills-guide/claude-skills-for-automated-github-issue-triage/) | Classifying and routing GitHub issues automatically |
 | [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/how-to-connect-claude-skills-to-external-apis-guide/) | General patterns for external API connections |
 | [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) | Top skills for infrastructure and deployment work |
-| [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) | Setting up MCP servers to extend skill capabilities |
+| [Building Your First MCP Tool Integration Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) | Setting up MCP servers to extend skill capabilities |
 | [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) | When to use MCP vs a skill for integrations |
 | [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) | Distributing skills across a team or organization |
 | [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) | Build matrix strategies in GitHub Actions workflows with Claude |

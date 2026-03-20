@@ -13,7 +13,7 @@ permalink: /mcp-zero-trust-architecture-implementation/
 
 # MCP Zero Trust Architecture Implementation: Practical Guide
 
-Zero trust security has become the standard for modern AI tool integrations. [implementing Model Context Protocol (MCP) servers](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) ensures that every request is authenticated, every resource is validated, and no implicit trust exists between components. This guide shows you how to implement zero trust architecture for your MCP deployments.
+Zero trust security has become the standard for modern AI tool integrations. [implementing Model Context Protocol (MCP) servers](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) ensures that every request is authenticated, every resource is validated, and no implicit trust exists between components. This guide shows you how to implement zero trust architecture for your MCP deployments.
 
 ## What Zero Trust Means for MCP
 

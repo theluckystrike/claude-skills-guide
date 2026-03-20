@@ -13,7 +13,7 @@ permalink: /mcp-tool-description-injection-attack-explained/
 
 # MCP Tool Description Injection Attack Explained
 
-[The Model Context Protocol (MCP) has transformed how Claude Code interacts with external tools](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) and services. However, this powerful extensibility comes with security considerations that developers must understand. One such vulnerability is the **tool description injection attack** — a technique where maliciously crafted tool descriptions can influence Claude's behavior in unexpected ways.
+[The Model Context Protocol (MCP) has transformed how Claude Code interacts with external tools](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) and services. However, this powerful extensibility comes with security considerations that developers must understand. One such vulnerability is the **tool description injection attack** — a technique where maliciously crafted tool descriptions can influence Claude's behavior in unexpected ways.
 
 ## What Is MCP and How Do Tool Descriptions Work?
 
@@ -154,7 +154,7 @@ As AI assistants become more integrated into development workflows, security awa
 
 - [MCP Prompt Injection Attack Prevention Guide](/claude-skills-guide/mcp-prompt-injection-attack-prevention-guide/)
 - [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/)
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

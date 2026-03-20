@@ -13,7 +13,7 @@ permalink: /mcp-credential-management-and-secrets-handling/
 
 # MCP Credential Management and Secrets Handling
 
-[Building MCP servers that interact with databases, cloud services, and third-party APIs](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) requires careful handling of credentials and secrets. Whether you're building a custom MCP server for AWS, connecting the `pdf` skill to process documents from a secure bucket, or wiring the `tdd` skill to your CI/CD pipeline — the way you manage secrets directly impacts security and reliability. This guide covers practical approaches to credential management for MCP servers, with code examples you can adapt immediately.
+[Building MCP servers that interact with databases, cloud services, and third-party APIs](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) requires careful handling of credentials and secrets. Whether you're building a custom MCP server for AWS, connecting the `pdf` skill to process documents from a secure bucket, or wiring the `tdd` skill to your CI/CD pipeline — the way you manage secrets directly impacts security and reliability. This guide covers practical approaches to credential management for MCP servers, with code examples you can adapt immediately.
 
 ## Understanding the Threat Landscape
 

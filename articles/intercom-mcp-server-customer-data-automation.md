@@ -13,7 +13,7 @@ permalink: /intercom-mcp-server-customer-data-automation/
 
 # Intercom MCP Server: Automating Customer Data Workflows
 
-Building integrations between customer data platforms and messaging tools often involves repetitive API calls, manual data synchronization, and constant maintenance. [An Intercom MCP server provides a standardized way to interact with customer data](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) structured way to automate these workflows directly from your development environment, enabling you to interact with Intercom's customer data through Claude and other MCP-compatible tools.
+Building integrations between customer data platforms and messaging tools often involves repetitive API calls, manual data synchronization, and constant maintenance. [An Intercom MCP server provides a standardized way to interact with customer data](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) structured way to automate these workflows directly from your development environment, enabling you to interact with Intercom's customer data through Claude and other MCP-compatible tools.
 
 ## What is an Intercom MCP Server?
 
@@ -223,7 +223,7 @@ Start with a single automation—perhaps syncing new user signups—and expand a
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Salesforce MCP Server Data Integration Guide](/claude-skills-guide/salesforce-mcp-server-data-integration-guide/)
 - [Jira MCP Server Claude Code Integration Guide](/claude-skills-guide/jira-mcp-server-claude-code-integration-guide/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

@@ -17,7 +17,7 @@ When building Model Context Protocol (MCP) servers, logging and audit trails are
 
 ## Why Logging Matters for MCP Servers
 
-[MCP servers act as bridges between Claude and external services](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) Each request passing through your server represents a potential security boundary crossing. Without proper logging, you lose visibility into:
+[MCP servers act as bridges between Claude and external services](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) Each request passing through your server represents a potential security boundary crossing. Without proper logging, you lose visibility into:
 
 - Who accessed what resources and when
 - Which tools were invoked and with what parameters

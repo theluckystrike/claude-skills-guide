@@ -270,7 +270,7 @@ Brave Search MCP server integration enables powerful research automation within 
 
 - [MCP Credential Management and Secrets Handling](/claude-skills-guide/mcp-credential-management-and-secrets-handling/) — Secure API keys for your MCP server integrations
 - [MCP Servers vs. Claude Skills: What Is the Difference](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand when to use each approach
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — Configure MCP servers from scratch
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) — Configure MCP servers from scratch
 - [Competitive Analysis Automation Workflow](/claude-skills-guide/claude-skills-competitive-analysis-automation-workflow/) — Build multi-source research pipelines
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

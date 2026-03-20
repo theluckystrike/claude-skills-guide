@@ -13,7 +13,7 @@ permalink: /kubernetes-mcp-server-cluster-management-guide/
 
 # Kubernetes MCP Server Cluster Management Guide
 
-Managing Kubernetes clusters at scale presents significant challenges for development teams. From monitoring pod health to automating deployments, the operational overhead can quickly become overwhelming. [Model Context Protocol (MCP) servers can bridge Claude and your Kubernetes cluster](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)rotocol (MCP) servers provide a powerful solution for extending Claude's capabilities into your cluster management workflows, enabling intelligent automation and real-time cluster interaction.
+Managing Kubernetes clusters at scale presents significant challenges for development teams. From monitoring pod health to automating deployments, the operational overhead can quickly become overwhelming. [Model Context Protocol (MCP) servers can bridge Claude and your Kubernetes cluster](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)rotocol (MCP) servers provide a powerful solution for extending Claude's capabilities into your cluster management workflows, enabling intelligent automation and real-time cluster interaction.
 
 This guide covers practical approaches to integrating MCP servers with Kubernetes, with code examples you can apply immediately to your own infrastructure.
 
@@ -172,7 +172,7 @@ The investment in setting up these connections pays dividends through reduced co
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

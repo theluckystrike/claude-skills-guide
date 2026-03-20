@@ -16,7 +16,7 @@ permalink: /claude-code-github-actions-notification-setup/
 
 # Claude Code GitHub Actions Notification Setup
 
-[Setting up notifications for GitHub Actions when working with Claude Code](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) ensures you stay informed about workflow status, test results, and deployment outcomes. This guide walks you through configuring notifications across multiple channels.
+[Setting up notifications for GitHub Actions when working with Claude Code](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) ensures you stay informed about workflow status, test results, and deployment outcomes. This guide walks you through configuring notifications across multiple channels.
 
 ## Why Configure GitHub Actions Notifications
 

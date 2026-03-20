@@ -19,7 +19,7 @@ This guide covers practical approaches to sandbox isolation for MCP servers, wit
 
 ## Understanding MCP Server Security Boundaries
 
-[MCP servers extend Claude Code's capabilities by connecting to external services, databases, and APIs](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) Each server potentially has access to credentials, filesystem paths, and network resources. Without proper isolation, a compromised or misconfigured server could expose your entire development environment.
+[MCP servers extend Claude Code's capabilities by connecting to external services, databases, and APIs](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) Each server potentially has access to credentials, filesystem paths, and network resources. Without proper isolation, a compromised or misconfigured server could expose your entire development environment.
 
 The core principle is simple: limit what each MCP server can access to the minimum required for its function. This follows the security principle of least privilege, reducing the blast radius if something goes wrong.
 

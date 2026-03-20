@@ -175,7 +175,7 @@ For complex multi-service projects, consider using docker-compose to manage depe
 ## Related Reading
 
 - [Claude Code With Docker Container Skill Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) — See also
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — See also
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) — See also
 - [Claude Code Error: Rate Limit Exceeded 429 Workaround](/claude-skills-guide/claude-code-error-rate-limit-exceeded-429-workaround/) — See also
 - [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
 

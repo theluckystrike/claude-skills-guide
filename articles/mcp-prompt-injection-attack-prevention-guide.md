@@ -16,11 +16,11 @@ permalink: /mcp-prompt-injection-attack-prevention-guide/
 
 # MCP Prompt Injection Attack Prevention Guide
 
-[The Model Context Protocol (MCP) enables powerful integrations between Claude and external services](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), but these connections create potential attack surfaces for prompt injection. Understanding how to prevent these attacks is essential for developers building secure MCP-powered applications.
+[The Model Context Protocol (MCP) enables powerful integrations between Claude and external services](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), but these connections create potential attack surfaces for prompt injection. Understanding how to prevent these attacks is essential for developers building secure MCP-powered applications.
 
 ## What Is Prompt Injection in MCP?
 
-[Prompt injection occurs when malicious input manipulates an AI system's behavior through carefully crafted prompts](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) In MCP contexts, this becomes particularly dangerous because external data sources—databases, APIs, file systems—can deliver untrusted content directly into your prompt context.
+[Prompt injection occurs when malicious input manipulates an AI system's behavior through carefully crafted prompts](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) In MCP contexts, this becomes particularly dangerous because external data sources—databases, APIs, file systems—can deliver untrusted content directly into your prompt context.
 
 Consider a scenario where your MCP server fetches user-generated content:
 

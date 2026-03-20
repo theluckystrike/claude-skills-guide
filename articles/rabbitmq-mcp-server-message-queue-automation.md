@@ -19,7 +19,7 @@ Message queue automation has become essential for building scalable, resilient s
 
 RabbitMQ implements the Advanced Message Queuing Protocol (AMQP), providing reliable message delivery, routing, and queuing semantics. When you integrate RabbitMQ with an MCP server, you create a programmable layer that can respond to queue events, manage message flows, and coordinate distributed systems without manual intervention.
 
-The MCP server acts as a bridge between your message queue and external automation systems. This pattern works exceptionally well when you need Claude Code or other AI assistants to interact with your message infrastructure programmatically. Before building queue automation, review the [MCP server setup complete guide](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) for foundational configuration.
+The MCP server acts as a bridge between your message queue and external automation systems. This pattern works exceptionally well when you need Claude Code or other AI assistants to interact with your message infrastructure programmatically. Before building queue automation, review the [MCP server setup complete guide](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) for foundational configuration.
 
 ## Setting Up Your MCP Server with RabbitMQ
 
@@ -219,7 +219,7 @@ The key to success lies in treating your message infrastructure as a programmabl
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/)
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
 - [Integrations Hub: MCP Servers and Claude Skills](/claude-skills-guide/integrations-hub/)

@@ -13,7 +13,7 @@ permalink: /aws-mcp-server-cloud-automation-with-claude-code/
 
 # AWS MCP Server Cloud Automation with Claude Code
 
-[The Model Context Protocol (MCP) server for AWS enables Claude Code to interact directly with your cloud infrastructure](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) This integration transforms how developers manage AWS resources, allowing you to provision, configure, and monitor cloud services through natural language commands. This guide covers practical setup and automation patterns for AWS MCP server cloud automation with Claude Code.
+[The Model Context Protocol (MCP) server for AWS enables Claude Code to interact directly with your cloud infrastructure](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) This integration transforms how developers manage AWS resources, allowing you to provision, configure, and monitor cloud services through natural language commands. This guide covers practical setup and automation patterns for AWS MCP server cloud automation with Claude Code.
 
 ## Setting Up the AWS MCP Server
 
@@ -177,7 +177,7 @@ Start with simple queries to verify your setup, then gradually introduce more co
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
 - [Claude Code Skills for Writing CloudFormation Templates](/claude-skills-guide/claude-code-cloudformation-template-generation-workflow-guid/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

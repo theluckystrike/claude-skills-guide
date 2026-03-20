@@ -27,7 +27,7 @@ You will also need a ClickUp API token from your workspace settings.
 
 ## Setting Up the ClickUp MCP Server
 
-[The ClickUp MCP server acts as a bridge between Claude and ClickUp](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)'s REST API. Install it using npm:
+[The ClickUp MCP server acts as a bridge between Claude and ClickUp](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)'s REST API. Install it using npm:
 
 ```bash
 npm install -g @clickup/mcp-server
@@ -187,7 +187,7 @@ For developers looking to extend this further, explore combining the ClickUp MCP
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Discord MCP Server Community Automation Guide](/claude-skills-guide/discord-mcp-server-community-automation-guide/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

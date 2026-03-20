@@ -34,7 +34,7 @@ permalink: /claude-code-vs-gemini-cli-for-developers-2026/
 | Skills / plugins | Claude skills ecosystem | Google Cloud integrations |
 | Offline / local models | No | No |
 | Pricing (as of 2026) | Usage-based via Anthropic API | Usage-based via Google AI / Vertex |
-| IDE integration | Via [MCP server](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)s | Cloud Code plugin ecosystem |
+| IDE integration | Via [MCP server](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)s | Cloud Code plugin ecosystem |
 | GitHub integration | Native via MCP | Via Cloud Build / GitHub Actions |
 | Primary language support | All major languages | All major languages |
 

@@ -13,7 +13,7 @@ permalink: /claude-code-mcp-server-soc2-compliance-guide/
 
 # Claude Code MCP Server SOC 2 Compliance Guide
 
-[Building MCP (Model Context Protocol) servers that meet SOC 2 compliance requirements](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) is essential for enterprises deploying AI assistants in regulated environments. This guide walks you through the technical implementation of security controls, audit trails, and access management patterns that satisfy SOC 2 Trust Service Criteria.
+[Building MCP (Model Context Protocol) servers that meet SOC 2 compliance requirements](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) is essential for enterprises deploying AI assistants in regulated environments. This guide walks you through the technical implementation of security controls, audit trails, and access management patterns that satisfy SOC 2 Trust Service Criteria.
 
 ## Understanding SOC 2 Requirements for MCP Servers
 

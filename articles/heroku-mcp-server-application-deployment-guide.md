@@ -13,7 +13,7 @@ permalink: /heroku-mcp-server-application-deployment-guide/
 
 # Heroku MCP Server Application Deployment Guide
 
-[Deploying a Model Context Protocol (MCP) server on Heroku provides a reliable, scalable way](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) to expose AI capabilities to your applications. This guide walks through the complete deployment process, from local development to production-ready infrastructure.
+[Deploying a Model Context Protocol (MCP) server on Heroku provides a reliable, scalable way](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) to expose AI capabilities to your applications. This guide walks through the complete deployment process, from local development to production-ready infrastructure.
 
 ## Understanding MCP Servers
 
@@ -226,7 +226,7 @@ Deploying an MCP server on Heroku bridges the gap between Claude's capabilities 
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Railway MCP Server Deployment Automation Guide](/claude-skills-guide/railway-mcp-server-deployment-automation-guide/)
 - [Render MCP Server Web Service Automation](/claude-skills-guide/render-mcp-server-web-service-automation/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

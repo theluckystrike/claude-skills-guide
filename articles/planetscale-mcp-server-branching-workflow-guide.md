@@ -16,11 +16,11 @@ permalink: /planetscale-mcp-server-branching-workflow-guide/
 
 # Planetscale MCP Server Branching Workflow Guide
 
-Database branching represents one of the most powerful capabilities in modern development workflows. [When combined with the Model Context Protocol (MCP), you can automate schema migrations](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), validate database states, and synchronize branch environments without manual intervention. This guide walks you through building an efficient Planetscale MCP server branching workflow that fits into your development pipeline.
+Database branching represents one of the most powerful capabilities in modern development workflows. [When combined with the Model Context Protocol (MCP), you can automate schema migrations](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), validate database states, and synchronize branch environments without manual intervention. This guide walks you through building an efficient Planetscale MCP server branching workflow that fits into your development pipeline.
 
 ## Understanding Planetscale Branching
 
-[Planetscale offers database branching similar to git branches](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)—each branch is an isolated development environment with its own schema and data. This approach enables teams to:
+[Planetscale offers database branching similar to git branches](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)—each branch is an isolated development environment with its own schema and data. This approach enables teams to:
 
 - Create isolated environments for each feature branch
 - Test schema changes safely before production deployment
@@ -219,7 +219,7 @@ The patterns in this guide work particularly well when combined with other Claud
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

@@ -16,7 +16,7 @@ permalink: /fly-io-mcp-server-deployment-workflow-guide/
 
 # Fly.io MCP Server Deployment Workflow Guide
 
-[Deploying a Model Context Protocol (MCP) server to Fly.io gives you](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) a globally distributed, low-latency endpoint that Claude Code can connect to for enhanced tool-calling capabilities. This guide covers the complete deployment workflow, from containerization to automated deployments using Claude skills.
+[Deploying a Model Context Protocol (MCP) server to Fly.io gives you](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) a globally distributed, low-latency endpoint that Claude Code can connect to for enhanced tool-calling capabilities. This guide covers the complete deployment workflow, from containerization to automated deployments using Claude skills.
 
 ## Why Deploy MCP Servers on Fly.io
 
@@ -248,7 +248,7 @@ With your MCP server deployed on Fly.io, explore extending its capabilities. The
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Claude Code for Fly.io Deployment Automation Workflow](/claude-skills-guide/claude-code-for-fly-io-deployment-automation-workflow/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

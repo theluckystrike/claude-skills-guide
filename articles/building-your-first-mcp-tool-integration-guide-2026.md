@@ -148,6 +148,32 @@ Once configured, you can ask Claude Code to perform GitHub operations:
 /github summarize open pull requests
 ```
 
+## Connecting to Production Services
+
+Beyond local stdio connections, MCP servers can run as persistent services using different transport types. The protocol supports three primary connection methods: stdio (standard input/output) for local processes, SSE (Server-Sent Events) for remote servers, and WebSocket for bidirectional communication. SSE and WebSocket suit production deployments where servers run independently.
+
+Here's a configuration for an SSE-based server alongside a memory service:
+
+```json
+{
+  "mcpServers": {
+    "database": {
+      "url": "http://localhost:3000/sse",
+      "transport": "sse"
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@supermemory/mcp-server"],
+      "env": {
+        "SUPERMEMORY_API_KEY": "your-api-key"
+      }
+    }
+  }
+}
+```
+
+This approach works well for databases, API gateways, and microservices that need to stay running between Claude Code sessions.
+
 ## Building a Custom Skill for MCP Integration
 
 While MCP servers provide the technical connection, Claude Code skills provide the conversational interface. Skills let you define how Claude should interact with your MCP tools.
@@ -219,6 +245,29 @@ Now you can manage issues through conversation:
 ```
 /linear list all issues assigned to me in the current sprint
 ```
+
+## Using Claude Skills with MCP Servers
+
+Many built-in Claude skills work directly with MCP servers to create powerful combined workflows. The pdf skill can process documents retrieved through MCP tools. The xlsx skill handles spreadsheet operations on data fetched from external sources. The webapp-testing skill validates frontend behavior while MCP servers provide test data.
+
+For example, combine the tdd skill with a database MCP server to generate tests against live data fixtures:
+
+```javascript
+// MCP server provides test data
+const testData = await mcp.callTool('database', 'fetchUsers', { limit: 10 });
+
+// tdd skill generates appropriate test cases
+describe('UserService', () => {
+  testData.forEach(user => {
+    it(`should handle user ${user.id}`, async () => {
+      const result = await UserService.process(user);
+      expect(result.success).toBe(true);
+    });
+  });
+});
+```
+
+This pattern—MCP servers for data access, skills for workflow guidance—is the foundation of productive Claude Code setups.
 
 ## Best Practices for MCP Integration
 

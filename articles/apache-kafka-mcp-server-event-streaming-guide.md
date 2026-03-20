@@ -13,7 +13,7 @@ permalink: /apache-kafka-mcp-server-event-streaming-guide/
 
 # Apache Kafka MCP Server for Event Streaming Guide
 
-Event streaming has transformed how modern applications handle real-time data. Apache Kafka leads this space as a distributed event streaming platform capable of processing millions of messages per second. [When you combine Apache Kafka with an MCP server](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)ne Kafka with an MCP (Model Context Protocol) server, you create a powerful automation layer that can react to events, manage streaming pipelines, and coordinate complex workflows without manual oversight.
+Event streaming has transformed how modern applications handle real-time data. Apache Kafka leads this space as a distributed event streaming platform capable of processing millions of messages per second. [When you combine Apache Kafka with an MCP server](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)ne Kafka with an MCP (Model Context Protocol) server, you create a powerful automation layer that can react to events, manage streaming pipelines, and coordinate complex workflows without manual oversight.
 
 This [build and integrate an Apache Kafka MCP server for event streaming automation](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/) for event streaming automation. You'll find practical code examples and patterns that work well with Claude Code and other AI assistants.
 
@@ -239,7 +239,7 @@ Start with the basic producer and consumer patterns shown here, then evolve towa
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [RabbitMQ MCP Server Message Queue Automation](/claude-skills-guide/rabbitmq-mcp-server-message-queue-automation/)
 - [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

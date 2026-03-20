@@ -17,7 +17,7 @@ permalink: /notion-mcp-server-knowledge-base-automation/
 
 ## Understanding the Notion MCP Server
 
-[The Notion MCP server exposes Notion's API through Model Context Protocol tools](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), allowing Claude Code to interact with your workspace without manual API token handling in each request. When properly configured, you can instruct Claude to search your entire knowledge base, extract specific information, create new pages from templates, and maintain synchronized documentation across multiple tools.
+[The Notion MCP server exposes Notion's API through Model Context Protocol tools](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), allowing Claude Code to interact with your workspace without manual API token handling in each request. When properly configured, you can instruct Claude to search your entire knowledge base, extract specific information, create new pages from templates, and maintain synchronized documentation across multiple tools.
 
 Before configuring the server, you'll need a Notion integration token. Create one at [notion.so/my-integrations](https://www.notion.so/my-integrations) and ensure you share relevant pages with your integration. The server supports both personal and workspace-level integrations, making it suitable for individual knowledge management or team documentation systems.
 
@@ -128,7 +128,7 @@ The Notion MCP server transforms your knowledge base from passive documentation 
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
 - [ClickUp MCP Server Workflow Automation Guide](/claude-skills-guide/clickup-mcp-server-workflow-automation-guide/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

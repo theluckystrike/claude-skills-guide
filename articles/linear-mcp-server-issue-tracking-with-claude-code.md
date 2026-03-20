@@ -13,7 +13,7 @@ permalink: /linear-mcp-server-issue-tracking-with-claude-code/
 
 # Linear MCP Server Issue Tracking with Claude Code
 
-Managing issues and projects directly from your coding environment saves context-switching overhead and keeps your development workflow fluid. [The Linear MCP server enables Claude Code to interact with your Linear workspace](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), creating, updating, and querying issues without leaving your terminal or IDE.
+Managing issues and projects directly from your coding environment saves context-switching overhead and keeps your development workflow fluid. [The Linear MCP server enables Claude Code to interact with your Linear workspace](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), creating, updating, and querying issues without leaving your terminal or IDE.
 
 This guide walks you through setting up the Linear MCP server and demonstrates practical workflows for issue tracking with Claude Code.
 
@@ -170,7 +170,7 @@ The Linear MCP server transforms Claude Code into a powerful issue tracking hub.
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Jira MCP Server Claude Code Integration Guide](/claude-skills-guide/jira-mcp-server-claude-code-integration-guide/)
 - [ClickUp MCP Server Workflow Automation Guide](/claude-skills-guide/clickup-mcp-server-workflow-automation-guide/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

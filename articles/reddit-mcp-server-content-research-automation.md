@@ -13,11 +13,11 @@ permalink: /reddit-mcp-server-content-research-automation/
 
 # Reddit MCP Server for Content Research Automation
 
-Building automated research workflows has become essential for content creators and developers who need to stay ahead of trends. The [Reddit MCP server provides a powerful way](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) to programmatic access Reddit's vast collection of discussions, trends, and community insights. This guide walks through practical implementations for content research automation.
+Building automated research workflows has become essential for content creators and developers who need to stay ahead of trends. The [Reddit MCP server provides a powerful way](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) to programmatic access Reddit's vast collection of discussions, trends, and community insights. This guide walks through practical implementations for content research automation.
 
 ## What is Reddit MCP Server?
 
-The Model Context Protocol (MCP) server for Reddit enables AI assistants like Claude to interact with Reddit's API through a standardized interface. Instead of writing raw API calls, you can use natural language commands to fetch posts, analyze comments, and extract valuable insights from subreddit communities. If you are new to connecting MCP servers, the [Claude Code MCP server setup guide](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) covers the foundational configuration steps.
+The Model Context Protocol (MCP) server for Reddit enables AI assistants like Claude to interact with Reddit's API through a standardized interface. Instead of writing raw API calls, you can use natural language commands to fetch posts, analyze comments, and extract valuable insights from subreddit communities. If you are new to connecting MCP servers, the [Claude Code MCP server setup guide](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) covers the foundational configuration steps.
 
 This approach works well with the [Claude supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) for storing research findings, the pdf skill for generating reports, and the docx skill for creating formatted documents. The combination creates an effective content research pipeline.
 
@@ -195,7 +195,7 @@ Start with simple keyword searches, add trend tracking, and progressively build 
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [Tavily MCP Server Research Automation Guide](/claude-skills-guide/tavily-mcp-server-research-automation-guide/)
 - [Brave Search MCP Server Research Automation](/claude-skills-guide/brave-search-mcp-server-research-automation/)
 - [Integrations Hub: MCP Servers and Claude Skills](/claude-skills-guide/integrations-hub/)

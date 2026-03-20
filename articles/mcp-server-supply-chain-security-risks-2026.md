@@ -13,7 +13,7 @@ permalink: /mcp-server-supply-chain-security-risks-2026/
 
 # MCP Server Supply Chain Security Risks: A Practical Guide for 2026
 
-The Model Context Protocol (MCP) has become the backbone of how Claude Code connects to external services, databases, and APIs. As we move through 2026, the ecosystem of MCP servers continues to expand rapidly, with community-contributed servers now outnumbering official offerings by a significant margin. This growth brings genuine security concerns that every developer and power user needs to understand. For an overview of MCP server patterns, see the [MCP server setup guide](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/).
+The Model Context Protocol (MCP) has become the backbone of how Claude Code connects to external services, databases, and APIs. As we move through 2026, the ecosystem of MCP servers continues to expand rapidly, with community-contributed servers now outnumbering official offerings by a significant margin. This growth brings genuine security concerns that every developer and power user needs to understand. For an overview of MCP server patterns, see the [MCP server setup guide](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/).
 
 Supply chain attacks targeting developer tools have increased substantially over the past year. MCP servers, which operate with elevated permissions to access files, run commands, and interact with your development environment, represent a high-value target for attackers. Understanding these risks and implementing proper mitigations is no longer optional—it's a fundamental part of secure Claude Code usage.
 
@@ -97,7 +97,7 @@ By applying these practices consistently, you can enjoy the productivity benefit
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — foundational guide to configuring MCP servers securely
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) — foundational guide to configuring MCP servers securely
 - [Claude Code Security Code Review Checklist Automation](/claude-skills-guide/claude-code-security-code-review-checklist-automation/) — automate security reviews across MCP server code and dependencies
 - [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — detect secrets accidentally exposed through MCP server configurations
 - [Advanced Hub](/claude-skills-guide/advanced-hub/) — explore more patterns for secure multi-agent and MCP-integrated architectures

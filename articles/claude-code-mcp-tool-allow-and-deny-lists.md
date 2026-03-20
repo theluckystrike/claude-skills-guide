@@ -13,7 +13,7 @@ permalink: /claude-code-mcp-tool-allow-and-deny-lists/
 
 # Claude Code MCP Tool Allow and Deny Lists
 
-[The Model Context Protocol (MCP) serves as the backbone for extending Claude Code's capabilities](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) through external tools and services. When you connect MCP servers to Claude Code, you gain access to a wide array of tools—from file system operations to database queries. However, with great power comes the need for careful access control. This is where tool allow and deny lists become essential for developers and power users who need granular control over their AI assistant's capabilities.
+[The Model Context Protocol (MCP) serves as the backbone for extending Claude Code's capabilities](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) through external tools and services. When you connect MCP servers to Claude Code, you gain access to a wide array of tools—from file system operations to database queries. However, with great power comes the need for careful access control. This is where tool allow and deny lists become essential for developers and power users who need granular control over their AI assistant's capabilities.
 
 ## Understanding MCP Tool Access Control
 
@@ -150,7 +150,7 @@ When tools you previously used suddenly become unavailable, you may have acciden
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
 - [Claude Code Skill Permission Scope Error Explained](/claude-skills-guide/claude-code-skill-permission-denied-error-fix-2026/)
 - [Advanced Hub](/claude-skills-guide/advanced-hub/)

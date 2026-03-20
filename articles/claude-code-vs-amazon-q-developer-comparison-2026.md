@@ -52,7 +52,7 @@ Amazon Q Developer and Claude Code both target professional software developers,
 
 **Instruction following on complex tasks.** Claude Opus 4.6's ability to hold multiple constraints through a long task execution is a consistent advantage on nuanced coding work.
 
-**MCP ecosystem.** [connect to your internal tools](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), observability systems, databases, and APIs via MCP servers. Amazon Q Developer's integrations are largely limited to the AWS ecosystem.
+**MCP ecosystem.** [connect to your internal tools](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), observability systems, databases, and APIs via MCP servers. Amazon Q Developer's integrations are largely limited to the AWS ecosystem.
 
 ---
 

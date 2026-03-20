@@ -40,7 +40,7 @@ The Model Context Protocol is the extension layer that lets Claude skills reach 
 The practical benefit is separation of concerns: a well-configured MCP server handles authentication, input validation, and rate limiting so your skill file stays focused on logic. The security implication is equally important — an MCP server that is not correctly configured can become an attack surface. These guides cover both.
 
 **Setup and fundamentals:**
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) — End-to-end setup for MCP servers, from installation to first connection
+- [Building Your First MCP Tool Integration Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) — End-to-end setup for MCP servers, from installation to first connection
 - [MCP Updates March 2026: What Developers Need to Know](/claude-skills-guide/anthropic-model-context-protocol-updates-march-2026/) — Latest protocol changes and what they mean for existing integrations
 - [AI Agent Skills Standardization Efforts 2026](/claude-skills-guide/ai-agent-skills-standardization-efforts-2026/) — How the industry is converging on standards for agent skill interoperability
 
@@ -349,7 +349,7 @@ This section lists every article in the guides cluster alphabetically for quick 
 | [Claude Code MCP Server Data Exfiltration Prevention](/claude-skills-guide/claude-code-mcp-server-data-exfiltration-prevention/) | MCP Security |
 | [Claude Code MCP Server Incident Response Guide](/claude-skills-guide/claude-code-mcp-server-incident-response-guide/) | MCP Security |
 | [Claude Code MCP Server Least Privilege Configuration](/claude-skills-guide/claude-code-mcp-server-least-privilege-configuration/) | MCP Security |
-| [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) | MCP |
+| [Building Your First MCP Tool Integration Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) | MCP |
 | [Claude Code MCP Server SOC 2 Compliance Guide](/claude-skills-guide/claude-code-mcp-server-soc2-compliance-guide/) | MCP Security |
 | [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/claude-code-mongodb-to-postgresql-migration-workflow/) | Backend |
 | [Claude Code Multilingual Codebase Management Guide](/claude-skills-guide/claude-code-multilingual-codebase-management-guide/) | Localization |

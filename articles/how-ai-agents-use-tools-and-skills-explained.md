@@ -118,6 +118,26 @@ Claude:
 - Updates all references throughout the codebase
 - Ensures no breaking changes are introduced
 
+## How Claude Code Prioritizes Tools
+
+When multiple tools could accomplish a similar goal, Claude Code applies prioritization logic:
+
+**Prefer read operations over write operations.** Reading files is safe and reversible, so the agent will always examine existing code before modifying it. This conservative approach prevents accidental changes.
+
+**Use the most specific tool available.** If you ask to "list files in a directory," Claude Code uses a directory listing tool rather than attempting to grep through the filesystem or making assumptions.
+
+**Batch related operations when possible.** Instead of reading five files individually, Claude Code might read them in parallel to reduce latency. This optimization happens automatically within the agent's planning phase.
+
+## Influencing Tool Decisions as a User
+
+You can guide Claude Code's tool decisions through how you frame requests:
+
+**Be specific about what you need.** "Find all Python files that import requests" gives Claude Code clear direction to use file search and content analysis tools. Vague requests like "help with imports" might lead to conversational responses instead of tool actions.
+
+**Indicate when you want action versus discussion.** Starting with action verbs—"Create a new file," "Run this command," "Find all instances"—signals that tool use is expected. Questions like "How would you structure this?" often get conceptual responses.
+
+**Set context about your environment.** Mentioning "in our React app" or "the backend service" helps Claude Code narrow down which files and tools are relevant.
+
 ## Chaining Skills for Complex Workflows
 
 One of Claude Code's powerful features is the ability to chain multiple skills together. You might combine:

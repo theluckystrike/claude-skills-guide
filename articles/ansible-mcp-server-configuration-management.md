@@ -20,7 +20,7 @@ Managing infrastructure configuration across multiple environments demands preci
 
 ## Understanding the Ansible MCP Server Architecture
 
-[The Ansible MCP server acts as a bridge between Claude Code and your Ansible infrastructure](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/) It exposes Ansible's powerful configuration management capabilities through MCP tools, allowing you to execute playbooks, manage variables, and query inventory data without leaving your conversational context.
+[The Ansible MCP server acts as a bridge between Claude Code and your Ansible infrastructure](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) It exposes Ansible's powerful configuration management capabilities through MCP tools, allowing you to execute playbooks, manage variables, and query inventory data without leaving your conversational context.
 
 When you configure the Ansible MCP server, it runs as a separate process that communicates with Claude Code via stdio or HTTP transport. This architecture keeps your Ansible execution environment isolated while integrating with Claude's reasoning capabilities.
 
@@ -191,7 +191,7 @@ The Ansible MCP server transforms how you manage infrastructure configuration. B
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
 - [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)

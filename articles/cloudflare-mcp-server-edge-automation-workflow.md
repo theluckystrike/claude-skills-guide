@@ -13,7 +13,7 @@ permalink: /cloudflare-mcp-server-edge-automation-workflow/
 
 # Cloudflare MCP Server Edge Automation Workflow
 
-[The Model Context Protocol (MCP) server for Cloudflare enables Claude Code](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/), KV stores, Durable Objects, DNS records, and edge configurations through natural language. This workflow transforms infrastructure management into conversational commands, reducing the friction between intent and deployment.
+[The Model Context Protocol (MCP) server for Cloudflare enables Claude Code](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), KV stores, Durable Objects, DNS records, and edge configurations through natural language. This workflow transforms infrastructure management into conversational commands, reducing the friction between intent and deployment.
 
 This guide walks through setting up the Cloudflare MCP server, configuring authentication, and building practical automation workflows for edge deployments.
 
@@ -189,7 +189,7 @@ Start with small automationsâ€”perhaps DNS queries or single Worker deploymentsâ
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/claude-code-mcp-server-setup-complete-guide-2026/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
 - [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Claude Skills Serverless Function Development Workflow](/claude-skills-guide/claude-skills-serverless-function-development-workflow/)
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
