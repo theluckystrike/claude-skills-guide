@@ -7,7 +7,7 @@ description: "Master API testing with Claude Code and Insomnia. Learn practical 
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, insomnia, api-testing]
-author: "Claude Skills Guide"
+author: "theluckystrike"
 permalink: /claude-code-insomnia-api-testing-workflow/
 reviewed: true
 score: 7
