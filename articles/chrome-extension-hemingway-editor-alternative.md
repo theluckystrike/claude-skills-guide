@@ -1,4 +1,6 @@
 ---
+
+
 layout: default
 title: "Chrome Extension Hemingway Editor Alternative for Developers"
 description: "Find the best Chrome extension Hemingway editor alternative for clean, distraction-free writing. Compare options with real-time readability analysis and Markdown support."
