@@ -14,7 +14,7 @@ score: 8
 {% raw %}
 # Chrome Extension Favicon Generator: Complete Guide for Developers
 
-Chrome extensions require properly sized favicon assets to display correctly across the browser interface, the extensions management page, and the Chrome Web Store. This guide covers everything you need to generate and implement favicons for your Chrome extension.
+Chrome extensions require properly sized favicon assets to display correctly across the browser interface, the extensions management page, and the Chrome Web Store. This guide covers everything you need to generate and implement favicons for your Chrome extension — from understanding the spec, to writing build scripts, to handling dynamic icon states at runtime.
 
 ## Understanding Chrome Extension Icon Requirements
 
@@ -22,16 +22,29 @@ Chrome extensions need multiple icon sizes to display properly in different cont
 
 Your extension requires these standard sizes:
 
-- **16x16**: Address bar and small contexts
-- **32x32**: Standard extension icons
-- **48x48**: Extension management page
-- **128x128**: Chrome Web Store and installation
+- **16x16**: Address bar, favicons in tabs, and small inline contexts
+- **32x32**: Standard toolbar icon on Windows high-DPI displays
+- **48x48**: Extension management page (`chrome://extensions`)
+- **128x128**: Chrome Web Store listings and during installation
 
-When creating your icons, generate all four sizes from a single source image. A 512x512 pixel master image provides enough resolution to downscale cleanly to all required sizes.
+Missing any of these sizes doesn't always break your extension, but Chrome will upscale or downscale to compensate — and upscaled icons look blurry. A 16x16 icon upscaled to 48x48 looks terrible on the extensions management page. Getting all four sizes right is a one-time task that pays dividends in perceived quality.
+
+When creating your icons, always generate all four sizes from a single high-resolution source image. A 512x512 or 1024x1024 pixel master image provides enough resolution to downscale cleanly to all required sizes without visible degradation.
+
+### Why Size Matters More Than You Think
+
+At 16x16 pixels, an icon has only 256 total pixels to work with. A complex logo with thin lines or subtle gradients will be completely unrecognizable at that size. Good extension icons follow a few universal principles:
+
+- **Bold, solid shapes** instead of thin strokes
+- **High contrast** between foreground and background
+- **One or two colors** maximum at small sizes
+- **No thin text** unless the letter is the entire icon
+
+Compare two approaches: an extension icon using a full company logo (wordmark + icon) versus a simple lettermark. The wordmark becomes unreadable at 16x16. The lettermark reads clearly even on low-density displays.
 
 ## Creating Favicons with Code
 
-You can generate favicons programmatically using canvas in JavaScript. This approach gives you full control over the output and integrates well with build pipelines.
+You can generate favicons programmatically using canvas in JavaScript. This approach gives you full control over the output and integrates cleanly with build pipelines.
 
 ```javascript
 const fs = require('fs');
@@ -42,31 +55,82 @@ const sizes = [16, 32, 48, 128];
 function generateFavicon(size) {
   const canvas = createCanvas(size, size);
   const ctx = canvas.getContext('2d');
-  
-  // Draw background
+
+  // Draw rounded rectangle background
+  const radius = size * 0.15;
   ctx.fillStyle = '#4285F4';
-  ctx.fillRect(0, 0, size, size);
-  
+  ctx.beginPath();
+  ctx.moveTo(radius, 0);
+  ctx.lineTo(size - radius, 0);
+  ctx.quadraticCurveTo(size, 0, size, radius);
+  ctx.lineTo(size, size - radius);
+  ctx.quadraticCurveTo(size, size, size - radius, size);
+  ctx.lineTo(radius, size);
+  ctx.quadraticCurveTo(0, size, 0, size - radius);
+  ctx.lineTo(0, radius);
+  ctx.quadraticCurveTo(0, 0, radius, 0);
+  ctx.closePath();
+  ctx.fill();
+
   // Draw letter or symbol
   ctx.fillStyle = '#FFFFFF';
-  ctx.font = `bold ${size * 0.6}px Arial`;
+  ctx.font = `bold ${Math.floor(size * 0.6)}px Arial`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText('A', size / 2, size / 2);
-  
+  ctx.fillText('A', size / 2, size / 2 + size * 0.03);
+
   return canvas.toBuffer('image/png');
 }
 
 sizes.forEach(size => {
-  fs.writeFileSync(`icon${size}.png`, generateFavicon(size));
+  const buf = generateFavicon(size);
+  fs.writeFileSync(`icons/icon${size}.png`, buf);
+  console.log(`Generated icon${size}.png (${buf.length} bytes)`);
 });
 ```
 
-This script generates all required icon sizes from a single master design. Adjust the colors and symbol to match your brand.
+Install the dependency first:
+
+```bash
+npm install canvas
+```
+
+This script generates all required icon sizes from a single design. Adjust the colors, font choice, and symbol to match your brand. The rounded rectangle pattern mirrors the design language Chrome uses in the Web Store thumbnail display.
+
+### Adding Gradient Backgrounds
+
+Flat single-color backgrounds work, but a subtle gradient can make icons feel more polished:
+
+```javascript
+function generateGradientFavicon(size) {
+  const canvas = createCanvas(size, size);
+  const ctx = canvas.getContext('2d');
+
+  // Diagonal gradient background
+  const gradient = ctx.createLinearGradient(0, 0, size, size);
+  gradient.addColorStop(0, '#4285F4');
+  gradient.addColorStop(1, '#0F52BA');
+
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, size, size);
+
+  ctx.fillStyle = '#FFFFFF';
+  ctx.font = `bold ${Math.floor(size * 0.55)}px Arial`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('A', size / 2, size / 2);
+
+  return canvas.toBuffer('image/png');
+}
+```
+
+At 16x16 the gradient is subtle but gives the icon a depth that flat fills lack.
 
 ## Using SVG for Scalable Icons
 
-SVG icons scale perfectly without quality loss. Chrome supports SVG icons starting from manifest version 3, though you should still provide raster fallbacks for maximum compatibility.
+SVG icons scale perfectly without quality loss. Chrome supports SVG icons in manifest version 3, though providing raster fallbacks remains recommended for maximum compatibility across Chrome versions and platforms.
+
+The standard PNG manifest entry looks like this:
 
 ```json
 {
@@ -79,7 +143,7 @@ SVG icons scale perfectly without quality loss. Chrome supports SVG icons starti
 }
 ```
 
-For the SVG version, reference it directly in your manifest:
+For the SVG version, reference it directly:
 
 ```json
 {
@@ -91,30 +155,60 @@ For the SVG version, reference it directly in your manifest:
 }
 ```
 
+A minimal SVG icon for an extension looks like this:
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="16" fill="#4285F4"/>
+  <text
+    x="64" y="72"
+    font-family="Arial, sans-serif"
+    font-size="76"
+    font-weight="bold"
+    fill="white"
+    text-anchor="middle"
+  >A</text>
+</svg>
+```
+
+The `viewBox` attribute lets the SVG scale to any size without pixel artifacts. Set `rx` on the rectangle to control corner rounding.
+
+**One important caveat**: SVG rendering in Chrome's extension context can differ slightly from what you see in a browser tab. Always validate that your SVG icon renders correctly on the `chrome://extensions` page before shipping.
+
 ## Optimizing Icons for Chrome Web Store
 
-The Chrome Web Store has specific requirements beyond the browser itself. Your 128x128 icon appears prominently in store listings. Follow these guidelines:
+The Chrome Web Store has specific requirements beyond the browser itself. Your 128x128 icon appears prominently in store listings and drives user decisions about whether to install your extension.
 
-- Use simple, recognizable designs
-- Ensure the icon works on both light and dark backgrounds
-- Avoid text unless it's essential to your brand
-- Test how your icon looks as a small thumbnail
+Follow these guidelines:
 
-Upload a 128x128 PNG with transparency for the store icon. Chrome automatically generates smaller sizes from your upload.
+- **Simple, recognizable design**: The icon competes with dozens of other extensions in search results. A clean, distinct shape wins over elaborate detail.
+- **Works on both light and dark backgrounds**: Warp Store pages can render icons on light or dark card backgrounds depending on user theme.
+- **Avoid text unless essential**: At thumbnail sizes in search results, text becomes illegible and wastes visual space.
+- **Test at thumbnail size**: Mentally squint at your icon. If you can't identify it, users can't either.
+
+The store also requires a separate 440x280 promotional tile image for featured slots. This is separate from your icon and is worth investing time in if you plan to run any Chrome Web Store campaigns.
+
+Upload a 128x128 PNG with transparency for the store icon. Chrome generates smaller sizes from your upload for store display purposes, but the extension itself still requires all four icon sizes in the manifest.
 
 ## Favicon Generators and Online Tools
 
-Several online tools can help you generate Chrome extension icons:
+Several online tools can help you generate Chrome extension icons without writing code:
 
-1. **Favicon.io**: Upload a PNG or image and download multiple sizes
-2. **RealFaviconGenerator**: Comprehensive tool with preview features
-3. **Canva**: Design icons with templates specifically sized for extensions
+| Tool | Free Tier | Custom Sizes | Export Formats | Best For |
+|------|-----------|--------------|----------------|----------|
+| Favicon.io | Yes | Limited | PNG, ICO | Quick PNG generation |
+| RealFaviconGenerator | Yes | All sizes | PNG, ICO, SVG | Comprehensive output |
+| Canva | Yes (with limits) | Custom | PNG, SVG | Branded designs |
+| Figma | Yes | Custom | PNG, SVG | Professional design work |
+| IconKitchen | Yes | All sizes | PNG | Adaptive icon generation |
 
-When using online generators, verify you receive all four required sizes. Many generators focus on website favicons and omit the larger sizes Chrome extensions need.
+When using online generators, verify you receive all four required sizes (16, 32, 48, 128). Many generators focus on website favicons and omit the 48x48 size that Chrome's extensions page specifically uses. A missing 48px icon shows up as a blurry upscaled version of your 32px image.
+
+**Recommended workflow for non-designers**: Design your icon concept in Canva or Figma, export the master at 512x512, then run it through a script (like the `sharp`-based example below) to produce all required sizes from that master.
 
 ## Implementing Action Icons
 
-If your extension uses browser action or page action icons, you may need additional sizes. The action icon appears in the Chrome toolbar when your extension is active.
+If your extension uses a browser action icon, it appears in the Chrome toolbar. This is separate from the extension icons in `manifest.json` — the action icon has its own declaration under the `action` key.
 
 ```json
 {
@@ -123,73 +217,179 @@ If your extension uses browser action or page action icons, you may need additio
       "16": "images/action16.png",
       "32": "images/action32.png"
     },
-    "default_title": "My Extension"
+    "default_title": "My Extension",
+    "default_popup": "popup.html"
   }
 }
 ```
 
-For dynamic icons that change based on state, use the `setIcon()` method in your background script:
+For dynamic icons that change based on extension state, use the `setIcon()` method in your background service worker:
 
 ```javascript
-chrome.runtime.onMessage.addListener((message) => {
-  if (message.active) {
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === 'SET_ACTIVE') {
     chrome.action.setIcon({
-      path: 'images/active32.png'
+      path: {
+        16: 'images/active16.png',
+        32: 'images/active32.png'
+      }
     });
-  } else {
+    chrome.action.setTitle({ title: 'Extension Active' });
+  } else if (message.type === 'SET_INACTIVE') {
     chrome.action.setIcon({
-      path: 'images/inactive32.png'
+      path: {
+        16: 'images/inactive16.png',
+        32: 'images/inactive32.png'
+      }
     });
+    chrome.action.setTitle({ title: 'Extension Paused' });
   }
+  sendResponse({ ok: true });
 });
 ```
+
+### Drawing Icons Dynamically with Canvas
+
+Instead of maintaining separate active/inactive image files, you can generate icon states programmatically at runtime using an offscreen canvas:
+
+```javascript
+function createBadgedIcon(size, isActive) {
+  const canvas = new OffscreenCanvas(size, size);
+  const ctx = canvas.getContext('2d');
+
+  // Base icon
+  ctx.fillStyle = isActive ? '#34A853' : '#9AA0A6';
+  ctx.beginPath();
+  ctx.arc(size / 2, size / 2, size / 2 - 1, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Symbol
+  ctx.fillStyle = '#FFFFFF';
+  ctx.font = `bold ${Math.floor(size * 0.5)}px Arial`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('A', size / 2, size / 2);
+
+  return ctx.getImageData(0, 0, size, size);
+}
+
+async function updateIcon(isActive) {
+  const imageData16 = createBadgedIcon(16, isActive);
+  const imageData32 = createBadgedIcon(32, isActive);
+
+  await chrome.action.setIcon({
+    imageData: {
+      16: imageData16,
+      32: imageData32
+    }
+  });
+}
+```
+
+This technique eliminates the need for separate icon files for each state and keeps icon logic centralized in your background script.
 
 ## Best Practices for Extension Icons
 
 Follow these recommendations for professional-looking extension icons:
 
-- **Consistency**: Match your extension icon with your website and other branding
-- **Simplicity**: Complex details disappear at small sizes
-- **Testing**: Install your extension and verify icons appear correctly in all contexts
-- **Updates**: When updating your icon, increment your version number and test thoroughly
+- **Consistency**: Match your extension icon with your website, documentation, and other branding assets. Users who arrive from your website should immediately recognize the extension.
+- **Simplicity**: Complex details disappear at small sizes. If an element is not visible at 16x16, it adds nothing and might confuse the shape.
+- **Testing across contexts**: Install your unpacked extension locally. Check the toolbar icon, the extensions page, and the browser tab favicon (for extensions that have popup pages). Each context renders at different sizes with different surrounding UI.
+- **Version control your master**: Keep the 512x512 master source file in your repository. When your brand updates, you'll want to regenerate all sizes from a single source of truth.
+- **Dark mode consideration**: Chrome does not automatically invert extension icons for dark mode. If your icon uses dark colors on a transparent background, it will be nearly invisible in the dark-themed extensions page. Use a colored background or explicitly test in dark mode.
 
 ## Troubleshooting Common Issues
 
-If your icon doesn't appear correctly, check these common problems:
+If your icon doesn't appear correctly, check these problems in order:
 
-- **File paths**: Ensure the paths in manifest.json match your actual file structure
-- **File format**: Use PNG for maximum compatibility
-- **Size mismatch**: Verify each icon file contains the correct pixel dimensions
-- **Cache**: Chrome caches icons aggressively—restart the browser after updating
+- **File paths**: Ensure the paths in `manifest.json` match your actual file structure. Paths are relative to the extension root, not the manifest file location.
+- **File format**: Use PNG for maximum compatibility. JPEG does not support transparency and will look wrong on any non-white background.
+- **Size mismatch**: Verify each icon file actually contains the correct pixel dimensions. A PNG file named `icon48.png` but containing a 128x128 image will display incorrectly.
+- **Cache**: Chrome caches extension icons aggressively. After updating icons in an unpacked extension, disable and re-enable the extension, or restart Chrome entirely.
+- **Permissions**: Ensure the icon files are included in the extension package. If you're using a build tool, verify that your output directory contains all the image files the manifest references.
+- **Web Store rejection**: The Store checks that your 128x128 icon does not contain excessive whitespace, inappropriate content, or misleading branding. A common rejection reason is an icon that looks like a Google product icon.
 
 ## Automating Icon Generation in Build Scripts
 
-Integrate icon generation into your build process using npm packages. This ensures consistent icons across builds and environments.
+Integrate icon generation into your build process using the `sharp` npm package. Sharp uses libvips under the hood for fast, high-quality image processing.
 
-```javascript
-const sharp = require('sharp');
-
-async function generateIcons(inputPath) {
-  const sizes = [16, 32, 48, 128];
-  
-  for (const size of sizes) {
-    await sharp(inputPath)
-      .resize(size, size)
-      .png()
-      .toFile(`dist/images/icon${size}.png`);
-  }
-}
-
-generateIcons('./src/icon512.png');
+```bash
+npm install sharp --save-dev
 ```
 
-This approach generates pixel-perfect icons from a single master file, eliminating manual resizing errors.
+```javascript
+// scripts/generate-icons.js
+const sharp = require('sharp');
+const path = require('path');
+const fs = require('fs');
+
+const INPUT_PATH = path.resolve(__dirname, '../src/assets/icon-master.png');
+const OUTPUT_DIR = path.resolve(__dirname, '../dist/images');
+const SIZES = [16, 32, 48, 128];
+
+async function generateIcons() {
+  // Ensure output directory exists
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+
+  const results = await Promise.all(
+    SIZES.map(async (size) => {
+      const outputPath = path.join(OUTPUT_DIR, `icon${size}.png`);
+      await sharp(INPUT_PATH)
+        .resize(size, size, {
+          kernel: sharp.kernel.lanczos3,  // High-quality downscaling
+          fit: 'contain',
+          background: { r: 0, g: 0, b: 0, alpha: 0 }
+        })
+        .png({ compressionLevel: 9 })
+        .toFile(outputPath);
+      return { size, path: outputPath };
+    })
+  );
+
+  results.forEach(({ size, path: p }) => {
+    const stat = fs.statSync(p);
+    console.log(`icon${size}.png → ${stat.size} bytes`);
+  });
+}
+
+generateIcons().catch(console.error);
+```
+
+Add this to your `package.json` scripts:
+
+```json
+{
+  "scripts": {
+    "build:icons": "node scripts/generate-icons.js",
+    "build": "npm run build:icons && webpack --config webpack.config.js"
+  }
+}
+```
+
+The `lanczos3` kernel produces significantly sharper results than the default bicubic algorithm for small-size downscaling. It is the recommended kernel for generating small icons from large masters.
+
+### Integrating with CI/CD
+
+If your extension goes through a CI/CD pipeline, add the icon generation step before packaging:
+
+```yaml
+# .github/workflows/build.yml (excerpt)
+- name: Generate icons
+  run: npm run build:icons
+
+- name: Package extension
+  run: zip -r extension.zip dist/ manifest.json
+```
+
+This ensures every build produces consistent icons regardless of what's committed to the repository. The master source file stays in version control; the generated sizes are build artifacts.
 
 ## Summary
 
-Creating proper favicons for Chrome extensions requires multiple sizes and careful attention to detail. Generate all four required sizes (16, 32, 48, and 128 pixels), test thoroughly across different Chrome contexts, and consider SVG for future-proof scalability. Automate the generation process in your build pipeline to maintain consistency across versions.
+Creating proper favicons for Chrome extensions requires multiple sizes and careful attention to detail. Generate all four required sizes (16, 32, 48, and 128 pixels), test thoroughly across different Chrome contexts, and consider SVG for future-proof scalability. Automate the generation process using `sharp` in your build pipeline to maintain consistency across versions and avoid manual resizing errors.
 
-With correct icon implementation, your extension presents professionally in the browser, the extensions page, and the Chrome Web Store—establishing credibility with users from the first interaction.
+Pay particular attention to how your icon reads at 16x16 — that's the smallest context and the one most developers skip testing. A bold, simple design that works at 16px will look great at every size above it.
+
+With correct icon implementation, your extension presents professionally in the browser toolbar, the extensions management page, and the Chrome Web Store — establishing credibility with users from the first interaction and avoiding the blurry-icon problem that plagues many otherwise well-built extensions.
 {% endraw %}
 
 
