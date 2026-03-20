@@ -16,11 +16,28 @@ score: 7
 {% raw %}
 # Claude Code Design Token Automation from Figma Variables
 
-Design tokens have become the backbone of modern design systems, enabling teams to maintain consistency across products. When combined with Claude Code's powerful automation capabilities and Figma's Variables feature, you can create a seamless pipeline that transforms design decisions into code automatically.
+Design tokens have become the backbone of modern design systems, enabling teams to maintain consistency across products. When combined with Claude Code's powerful automation capabilities and Figma's Variables feature, you can create a seamless pipeline that transforms design decisions into code automatically. This guide walks through the full setup: exporting tokens from Figma, transforming them into CSS, JavaScript, and TypeScript, and wiring everything into a CI/CD pipeline so your codebase stays in sync with your design file without manual work.
 
 ## What Are Figma Variables?
 
 Figma Variables (formerly Design Tokens) allow designers to define semantic values like colors, typography, spacing, and more that can be referenced throughout designs. These variables bridge the gap between design and development by providing a single source of truth.
+
+Variables in Figma are organized into collections and can hold four types of values: color, number, string, and boolean. You can define multiple modes per collection — for example, a "Theme" collection with a "light" mode and a "dark" mode. When exported as JSON, these map cleanly to token structures that your build tools can consume.
+
+### Token Naming Conventions Matter
+
+Before you export anything, naming consistency in Figma is the most important investment you can make. Token names become CSS variable names and TypeScript identifiers, so ambiguous or inconsistent names in Figma become ambiguous or inconsistent code.
+
+| Figma variable name | Resulting CSS variable | Quality |
+|---|---|---|
+| `blue-5` | `--blue-5` | Poor — not semantic |
+| `Brand/Primary` | `--brand-primary` | Good — semantic namespace |
+| `color/text/primary` | `--color-text-primary` | Best — full intent expressed |
+| `spacing/4` | `--spacing-4` | Poor — ambiguous unit |
+| `spacing/base-4` | `--spacing-base-4` | Better — but still no unit |
+| `spacing/16px` | `--spacing-16px` | Good — explicit unit |
+
+Establish a naming convention before your design system grows. Renaming tokens after they are referenced across hundreds of components is expensive on both the design and engineering sides.
 
 ## Why Automate with Claude Code?
 
@@ -30,6 +47,8 @@ Claude Code excels at:
 - **Executing shell commands** to run build tools
 - **Generating code** in multiple languages
 - **Monitoring file changes** for automated workflows
+
+Beyond those raw capabilities, the real value of using Claude Code in a token pipeline is the ability to handle edge cases in natural language. When Token Studio exports a malformed JSON structure because a designer renamed a collection mid-sprint, you can describe the problem to Claude Code and get a corrected transform script without hunting through documentation. Claude Code becomes the glue between your design tooling and your build system.
 
 ## Setting Up the Workflow
 
@@ -41,6 +60,39 @@ First, install the Token Studio plugin in Figma to export your variables:
 2. Go to Plugins → Token Studio
 3. Export tokens as JSON using the export option
 
+The exported JSON follows the W3C Design Token Community Group (DTCG) spec format, which looks like this:
+
+```json
+{
+  "color": {
+    "brand": {
+      "primary": { "value": "#0066CC", "type": "color" },
+      "secondary": { "value": "#FF6B35", "type": "color" }
+    },
+    "text": {
+      "primary": { "value": "#1A1A1A", "type": "color" },
+      "secondary": { "value": "#6B6B6B", "type": "color" },
+      "inverse": { "value": "#FFFFFF", "type": "color" }
+    }
+  },
+  "spacing": {
+    "xs": { "value": "4", "type": "dimension" },
+    "sm": { "value": "8", "type": "dimension" },
+    "md": { "value": "16", "type": "dimension" },
+    "lg": { "value": "24", "type": "dimension" },
+    "xl": { "value": "40", "type": "dimension" }
+  },
+  "typography": {
+    "size": {
+      "body": { "value": "16", "type": "dimension" },
+      "heading-lg": { "value": "32", "type": "dimension" }
+    }
+  }
+}
+```
+
+Save this file as `tokens/design-tokens.json` in your project.
+
 ### Step 2: Create the Claude Code Project
 
 Set up your project structure:
@@ -50,6 +102,8 @@ mkdir design-token-automation
 cd design-token-automation
 mkdir -p tokens scripts output
 ```
+
+Your `output` directory will hold the generated artifacts: CSS custom properties, JavaScript constants, TypeScript definitions, and optionally Tailwind config extensions. You commit the `tokens/` directory (the source of truth from Figma) and also commit `output/` (the generated artifacts), so your application code can import from `output/` directly without running the build step at runtime.
 
 ### Step 3: Write the Token Processor Script
 
@@ -69,42 +123,57 @@ def load_tokens(token_file):
 def transform_to_css_variables(tokens):
     """Transform tokens to CSS custom properties"""
     css_output = ":root {\n"
-    
+    lines = []
+
     def process_token(obj, prefix=""):
         for key, value in obj.items():
             if isinstance(value, dict):
                 if "value" in value:
-                    var_name = f"--{prefix}-{key}".replace(".", "-")
-                    css_output += f"  {var_name}: {value['value']};\n"
+                    var_name = f"--{prefix}-{key}".replace(".", "-").strip("-")
+                    token_type = value.get("type", "")
+                    raw_value = value["value"]
+                    # Add px unit for dimension tokens
+                    if token_type == "dimension" and str(raw_value).isdigit():
+                        formatted_value = f"{raw_value}px"
+                    else:
+                        formatted_value = raw_value
+                    lines.append(f"  {var_name}: {formatted_value};")
                 else:
-                    process_token(value, f"{prefix}-{key}")
-    
+                    process_token(value, f"{prefix}-{key}" if prefix else key)
+
     process_token(tokens)
-    css_output += "}\n"
+    css_output += "\n".join(lines)
+    css_output += "\n}\n"
     return css_output
 
 def transform_to_js_constants(tokens):
     """Transform tokens to JavaScript constants"""
-    js_output = "export const tokens = "
+    js_output = "// Auto-generated from Figma Variables — do not edit manually\n"
+    js_output += "export const tokens = "
     js_output += json.dumps(tokens, indent=2)
+    js_output += ";\n"
     return js_output
 
 def main():
     tokens = load_tokens("tokens/design-tokens.json")
-    
+
     css_vars = transform_to_css_variables(tokens)
     with open("output/tokens.css", "w") as f:
         f.write(css_vars)
-    
+    print("Generated output/tokens.css")
+
     js_constants = transform_to_js_constants(tokens)
     with open("output/tokens.js", "w") as f:
         f.write(js_constants)
-    
+    print("Generated output/tokens.js")
+
     print("Tokens transformed successfully!")
 
 if __name__ == "__main__":
     main()
 ```
+
+The key improvement over a naive transformer is the `dimension` type handling. Without it, spacing values like `16` become `--spacing-md: 16;` which is invalid CSS. The script checks the token type and appends `px` for raw numeric dimension values.
 
 ### Step 4: Create the Claude Code Automation Script
 
@@ -116,31 +185,37 @@ Now create a script that Claude Code can run:
 # Design Token Automation Script
 # Run with: bash process-tokens.sh  # then describe results to claude
 
-echo "🔄 Starting design token automation..."
+echo "Starting design token automation..."
 
 # Step 1: Check for new tokens
 if [ -f "tokens/design-tokens.json" ]; then
-    echo "📦 Found design tokens, processing..."
-    
+    echo "Found design tokens, processing..."
+
     # Run the transformation
     python3 scripts/transform_tokens.py
-    
+
     # Check if output was generated
     if [ -f "output/tokens.css" ]; then
-        echo "✅ CSS variables generated"
+        echo "CSS variables generated"
         git add output/tokens.css
     fi
-    
+
     if [ -f "output/tokens.js" ]; then
-        echo "✅ JavaScript constants generated"
+        echo "JavaScript constants generated"
         git add output/tokens.js
     fi
-    
+
+    if [ -f "output/tokens.ts" ]; then
+        echo "TypeScript definitions generated"
+        git add output/tokens.ts
+    fi
+
     # Commit changes
     git commit -m "Update design tokens $(date +%Y-%m-%d)"
-    echo "✅ Token automation complete!"
+    echo "Token automation complete!"
 else
-    echo "⚠️ No tokens found at tokens/design-tokens.json"
+    echo "No tokens found at tokens/design-tokens.json"
+    exit 1
 fi
 ```
 
@@ -152,13 +227,22 @@ Use Claude Code's ability to monitor file changes:
 # Watch for changes in the tokens directory
 while true; do
     inotifywait -e modify tokens/design-tokens.json 2>/dev/null || sleep 5
-    
-    echo "🔔 Detected token changes, re-processing..."
+
+    echo "Detected token changes, re-processing..."
     python3 scripts/transform_tokens.py
-    
+
     # Optionally auto-commit
     git add -A
     git commit -m "Auto-update: Design tokens modified" 2>/dev/null || true
+done
+```
+
+On macOS, replace `inotifywait` with `fswatch`:
+
+```bash
+fswatch -o tokens/design-tokens.json | while read; do
+    echo "Token file changed, regenerating..."
+    python3 scripts/transform_tokens.py
 done
 ```
 
@@ -181,7 +265,7 @@ interface TokenGroup {
 
 function generateTypeDefs(tokens: TokenGroup, prefix = ''): string {
   let output = 'export const tokens = {\n';
-  
+
   for (const [key, value] of Object.entries(tokens)) {
     if ('value' in value) {
       output += `  ${key}: '${value.value}',\n`;
@@ -191,7 +275,7 @@ function generateTypeDefs(tokens: TokenGroup, prefix = ''): string {
       output += '  },\n';
     }
   }
-  
+
   output += '};\n';
   return output;
 }
@@ -202,197 +286,116 @@ const typeDefs = generateTypeDefs(tokens);
 writeFileSync('output/tokens.ts', typeDefs);
 ```
 
+The generated `tokens.ts` file gives you autocomplete in your editor for every token path. When a designer removes a token from Figma, TypeScript will flag every usage site that breaks — your build fails loudly instead of silently shipping a missing CSS variable.
+
+## Advanced: Generating a Tailwind Config Extension
+
+If your project uses Tailwind CSS, you can generate a `tailwind.config.js` extension directly from your tokens:
+
+```python
+def transform_to_tailwind_config(tokens):
+    """Generate a Tailwind CSS theme extension from tokens"""
+    colors = {}
+    spacing = {}
+
+    def extract_colors(obj, prefix=""):
+        for key, value in obj.items():
+            if isinstance(value, dict):
+                if "value" in value and value.get("type") == "color":
+                    path = f"{prefix}.{key}" if prefix else key
+                    # Set nested keys using dotted path
+                    parts = path.split(".")
+                    target = colors
+                    for part in parts[:-1]:
+                        target = target.setdefault(part, {})
+                    target[parts[-1]] = value["value"]
+                elif isinstance(value, dict) and "value" not in value:
+                    extract_colors(value, f"{prefix}.{key}" if prefix else key)
+
+    if "color" in tokens:
+        extract_colors(tokens["color"])
+
+    if "spacing" in tokens:
+        for key, value in tokens["spacing"].items():
+            if isinstance(value, dict) and "value" in value:
+                spacing[key] = f"{value['value']}px"
+
+    config = {
+        "theme": {
+            "extend": {
+                "colors": colors,
+                "spacing": spacing
+            }
+        }
+    }
+
+    output = "// Auto-generated from Figma Variables — do not edit manually\n"
+    output += f"module.exports = {json.dumps(config, indent=2)};\n"
+    return output
+```
+
+Save this as `output/tailwind-tokens.config.js` and import it from your main `tailwind.config.js`:
+
+```javascript
+const tokenExtension = require('./output/tailwind-tokens.config.js');
+
+module.exports = {
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      ...tokenExtension.theme.extend
+    }
+  }
+};
+```
+
+Now `text-brand-primary` and `bg-color-text-inverse` are real Tailwind classes, derived directly from your Figma file.
+
+## Integrating into CI/CD
+
+The full power of this pipeline emerges when you automate it in CI. Add a GitHub Actions workflow that runs on every PR:
+
+```yaml
+name: Validate Design Tokens
+
+on:
+  pull_request:
+    paths:
+      - 'tokens/**'
+
+jobs:
+  transform-tokens:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Transform tokens
+        run: python3 scripts/transform_tokens.py
+      - name: Check for uncommitted changes
+        run: |
+          git diff --exit-code output/
+          echo "Token outputs are up to date"
+```
+
+This workflow fails the PR if a designer exports new tokens from Figma and opens a PR without also running the transform script. It enforces the invariant that `output/` always reflects `tokens/` exactly.
+
 ## Best Practices
 
-1. **Version Control Tokens**: Store your raw Figma exports in Git
-2. **Semantic Naming**: Use meaningful names like `color-primary-500` instead of `blue-5`
-3. **Automate CI/CD**: Integrate token processing into your build pipeline
-4. **Document Changes**: Keep a CHANGELOG for token updates
+1. **Version Control Tokens**: Store your raw Figma exports in Git alongside the generated output. This gives you a clear history of every design decision and lets you `git diff` to see what changed when a designer exports a new version.
+2. **Semantic Naming**: Use meaningful names like `color-primary-500` instead of `blue-5`. The semantic name survives a rebrand; `blue-5` does not.
+3. **Automate CI/CD**: Integrate token processing into your build pipeline so stale generated files are caught before they reach production.
+4. **Document Changes**: Keep a CHANGELOG for token updates, especially breaking changes like token renames that require a find-and-replace across your component library.
+5. **Separate raw values from semantic aliases**: Define raw values (`color-blue-500: #0066CC`) separately from semantic uses (`color-brand-primary: {color.blue.500}`). This makes rebrand changes a single-line edit.
 
 ## Conclusion
 
 By combining Claude Code's automation capabilities with Figma Variables, you create a powerful design-to-code pipeline that reduces manual work and ensures consistency. The key is establishing clear workflows and using tools that bridge the design-development gap effectively.
 
-Start small with basic color and typography tokens, then expand to spacing, shadows, and more complex token structures as your design system matures.
+Start small with basic color and typography tokens, then expand to spacing, shadows, and more complex token structures as your design system matures. Once the pipeline is running, the real dividend is organizational: designers can make changes in Figma with confidence that they will land in code correctly, and engineers stop manually translating hex codes from Slack messages into CSS files.
 
-## Advanced Token Transformation Patterns
-
-### Multi-Brand Token Support
-
-Large design systems often support multiple brands or themes from a single token source. Structure your transformation pipeline to handle brand overrides:
-
-```python
-# multi_brand_transform.py
-import json
-from pathlib import Path
-
-def transform_for_brand(base_tokens: dict, brand_override_file: str) -> dict:
-    """Merge brand-specific overrides onto base tokens"""
-    try:
-        with open(brand_override_file) as f:
-            overrides = json.load(f)
-    except FileNotFoundError:
-        return base_tokens
-    
-    def deep_merge(base: dict, override: dict) -> dict:
-        result = base.copy()
-        for key, value in override.items():
-            if key in result and isinstance(result[key], dict) and isinstance(value, dict):
-                result[key] = deep_merge(result[key], value)
-            else:
-                result[key] = value
-        return result
-    
-    return deep_merge(base_tokens, overrides)
-
-def generate_brand_artifacts(tokens_dir: str, output_dir: str):
-    base_tokens = load_tokens(f"{tokens_dir}/base.json")
-    
-    for brand_file in Path(tokens_dir).glob("brand-*.json"):
-        brand_name = brand_file.stem.replace("brand-", "")
-        merged = transform_for_brand(base_tokens, str(brand_file))
-        
-        # Generate CSS variables for each brand
-        css = transform_to_css_variables(merged)
-        output_path = f"{output_dir}/{brand_name}/tokens.css"
-        Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-        with open(output_path, 'w') as f:
-            f.write(css)
-        
-        print(f"Generated tokens for brand: {brand_name}")
-```
-
-### Handling Token References (Aliases)
-
-Figma Variables support aliasing — one token referencing the value of another. Your transformer needs to resolve these chains:
-
-```python
-def resolve_token_aliases(tokens: dict) -> dict:
-    """Resolve alias references like {color.primary.500} to actual values"""
-    
-    def get_by_path(obj: dict, path: str):
-        parts = path.strip('{}').split('.')
-        current = obj
-        for part in parts:
-            if not isinstance(current, dict) or part not in current:
-                return None
-            current = current[part]
-        return current.get('value') if isinstance(current, dict) else current
-    
-    def resolve_value(tokens: dict, value: str) -> str:
-        if isinstance(value, str) and value.startswith('{') and value.endswith('}'):
-            resolved = get_by_path(tokens, value)
-            if resolved:
-                return resolve_value(tokens, resolved)
-        return value
-    
-    def walk_and_resolve(obj: dict) -> dict:
-        result = {}
-        for key, val in obj.items():
-            if isinstance(val, dict) and 'value' in val:
-                result[key] = {**val, 'value': resolve_value(tokens, val['value'])}
-            elif isinstance(val, dict):
-                result[key] = walk_and_resolve(val)
-            else:
-                result[key] = val
-        return result
-    
-    return walk_and_resolve(tokens)
-```
-
-Alias resolution is critical for semantic token systems where `color-button-primary` references `color-brand-500`, which in turn references the raw hex value.
-
-## Integrating Tokens into Your Build Pipeline
-
-### GitHub Actions Workflow
-
-Automate token generation on every Figma export push:
-
-```yaml
-# .github/workflows/design-tokens.yml
-name: Design Token Pipeline
-
-on:
-  push:
-    paths:
-      - 'tokens/**'
-
-jobs:
-  generate-tokens:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-      
-      - name: Generate tokens
-        run: python scripts/transform_tokens.py
-      
-      - name: Validate output
-        run: python scripts/validate_tokens.py
-      
-      - name: Commit generated files
-        run: |
-          git config user.name "Design Token Bot"
-          git config user.email "bot@example.com"
-          git add output/
-          git diff --staged --quiet || git commit -m "chore: regenerate design tokens"
-          git push
-```
-
-### Validating Token Output
-
-Before tokens land in production, validate that all expected tokens are present and values are well-formed:
-
-```python
-# scripts/validate_tokens.py
-import re
-import sys
-from pathlib import Path
-
-def validate_css_tokens(css_file: str) -> list[str]:
-    errors = []
-    with open(css_file) as f:
-        css = f.read()
-    
-    # Check required token families are present
-    required_prefixes = ['--color-', '--spacing-', '--typography-', '--radius-']
-    for prefix in required_prefixes:
-        if prefix not in css:
-            errors.append(f"Missing token family: {prefix}")
-    
-    # Check no unresolved aliases remain
-    unresolved = re.findall(r'var\(--[^)]+\)', css)
-    for ref in unresolved:
-        var_name = ref[4:-1]
-        if var_name not in css:
-            errors.append(f"Unresolved token reference: {ref}")
-    
-    return errors
-
-errors = validate_css_tokens('output/tokens.css')
-if errors:
-    print("Token validation failed:")
-    for e in errors:
-        print(f"  - {e}")
-    sys.exit(1)
-
-print("Token validation passed")
-```
-
-## Common Pitfalls
-
-**Figma variable naming collisions**: When exporting from multiple variable collections, token names from different collections can collide. Prefix each collection with its name (e.g., `primitive/color/blue-500` vs `semantic/color/button-primary`) and preserve the namespace in your output.
-
-**Missing dark mode tokens**: If your Figma file uses variable modes for dark/light theme, the export includes both modes. Make sure your transformer generates separate CSS files (or CSS `prefers-color-scheme` blocks) for each mode, not just the default.
-
-**Token drift between design and code**: Schedule weekly automated checks that compare the latest Figma export against what is deployed in production. A simple diff on the token JSON surfaces discrepancies before they become visual regressions in the application.
-
-**Ignoring deprecated tokens**: As design systems evolve, old tokens get retired. Add a `deprecated` flag to your token schema and emit CSS comments or TypeScript `@deprecated` annotations to guide developers away from obsolete values.
-
+The naming convention investment at the start of the project pays off every time you add a new token category. A well-named, consistently structured token file makes every downstream transform — CSS, TypeScript, Tailwind, iOS, Android — a simple traversal rather than a bespoke parsing problem.
 {% endraw %}
 
 
