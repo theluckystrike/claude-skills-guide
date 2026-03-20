@@ -5,7 +5,7 @@ description: "Learn how to integrate Claude Code with SonarQube to automate code
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-sonarqube-quality-gate-workflow-guide/
-categories: [Development, DevOps, CI/CD]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
