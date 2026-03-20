@@ -100,6 +100,72 @@ function detectEmailClient() {
 }
 ```
 
+### Content Script Implementation
+
+The content script bridges your extension and the email client's interface. Since Gmail, Outlook, and other providers use different DOM structures, you need to detect the service and adapt insertion accordingly:
+
+```javascript
+// content-script.js
+const emailServices = {
+  'mail.google.com': { composeSelector: '[role="textbox"][aria-label*="Body"]', insertMethod: 'paste' },
+  'outlook.live.com': { composeSelector: '.RichTextEditor', insertMethod: 'execCommand' },
+  'yahoo.com': { composeSelector: '.msg-body', insertMethod: 'paste' }
+};
+
+function insertTemplate(text, serviceConfig) {
+  const editor = document.querySelector(serviceConfig.composeSelector);
+  if (!editor) return false;
+
+  editor.focus();
+  document.execCommand('insertText', false, text);
+  return true;
+}
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'insertTemplate') {
+    const hostname = window.location.hostname;
+    for (const domain in emailServices) {
+      if (hostname.includes(domain)) {
+        const success = insertTemplate(request.text, emailServices[domain]);
+        sendResponse({ success });
+        return;
+      }
+    }
+  }
+});
+```
+
+### Building the Popup Interface
+
+The popup provides a lightweight control panel for browsing and inserting templates:
+
+```html
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 320px; padding: 16px; font-family: system-ui; }
+    .template-list { max-height: 300px; overflow-y: auto; }
+    .template-item {
+      padding: 8px; border: 1px solid #ddd; margin-bottom: 8px;
+      border-radius: 4px; cursor: pointer;
+    }
+    .template-item:hover { background: #f5f5f5; }
+    input { width: 100%; margin-bottom: 8px; }
+    button { background: #4285f4; color: white; padding: 8px 16px; border: none; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h3>Email Templates</h3>
+  <input type="text" id="search" placeholder="Search templates...">
+  <div class="template-list" id="templateList"></div>
+  <button id="newTemplate">New Template</button>
+  <script src="popup.js"></script>
+</body>
+</html>
+```
+
 ### Security and Privacy Considerations
 
 Since template managers often contain sensitive information like customer names or order numbers, security is paramount. Evaluate extensions based on:
