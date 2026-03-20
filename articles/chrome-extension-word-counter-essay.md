@@ -6,6 +6,10 @@ description: "Build a Chrome extension that counts words in essays and documents
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-word-counter-essay/
+categories: [guides]
+tags: [claude-code, claude-skills]
+reviewed: true
+score: 8
 ---
 
 {% raw %}
