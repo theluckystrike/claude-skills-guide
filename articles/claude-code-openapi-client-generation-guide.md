@@ -320,6 +320,7 @@ The key is providing clear context about your project structure, only requesting
 
 ## Related Reading
 
+- [Claude Code OpenAPI Spec Generation Guide](/claude-skills-guide/claude-code-openapi-spec-generation-guide/) — Generate OpenAPI specs from existing code (the reverse workflow)
 - [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
 - [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)

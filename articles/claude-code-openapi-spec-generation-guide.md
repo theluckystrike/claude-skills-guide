@@ -257,6 +257,7 @@ Combine with the tdd skill to generate tests from your OpenAPI specs, creating a
 
 ## Related Reading
 
+- [Claude Code OpenAPI Client Generation Guide](/claude-skills-guide/claude-code-openapi-client-generation-guide/) — Generate type-safe API clients from OpenAPI specs (the reverse workflow)
 - [Claude Code Swagger Documentation Workflow](/claude-skills-guide/claude-code-swagger-documentation-workflow/)
 - [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/)
 - [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-best-practices/)
