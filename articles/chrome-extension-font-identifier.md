@@ -33,6 +33,8 @@ Several Chrome extensions provide robust font identification capabilities:
 
 **Fontanello** offers similar functionality with a slightly different interface. It displays font information in a sidebar panel when you select text, making it convenient for comparing multiple fonts on the same page.
 
+**Type Sample** focuses on collecting font samples. Instead of just identifying a single element, you can click multiple text blocks and build a collection of fonts used across a site. Export options let you save these samples for later reference.
+
 **CSS Peeper** provides font identification as part of a broader set of design inspection tools. While primarily aimed at designers, developers can benefit from its comprehensive style inspection capabilities.
 
 ## Practical Usage for Developers
@@ -206,6 +208,8 @@ Font identifier extensions have inherent limitations worth understanding:
 **Dynamic Content**: Fonts loaded dynamically through JavaScript may not be immediately detectable. Waiting for page fully load ensures accurate results.
 
 **Cross-Origin Resources**: Fonts loaded from external domains may have restricted access, limiting what extensions can detect.
+
+**Licensing**: Font identifier extensions cannot determine licensing information. Even when you identify a font, using it in your own projects requires verifying you have appropriate rights or licenses.
 
 ## Alternative Approaches for Font Detection
 

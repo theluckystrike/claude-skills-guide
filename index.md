@@ -281,7 +281,6 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 - [Chrome Extension Watermark Images: A Developer Guide](/claude-skills-guide/chrome-extension-watermark-images/)
 - [Chrome Extension Webcam Overlay Recording: A Developer's.](/claude-skills-guide/chrome-extension-webcam-overlay-recording/)
 - [Chrome Extension WebP to PNG Converter: A Developer Guide](/claude-skills-guide/chrome-extension-webp-to-png-converter/)
-- [Chrome Extension WhatFont Identifier: Identify Fonts on.](/claude-skills-guide/chrome-extension-whatfont-identifier/)
 - [Chrome Extension Wireframe Builder: A Developer's Guide](/claude-skills-guide/chrome-extension-wireframe-builder/)
 - [Chrome Extension Wolfram Alpha Helper](/claude-skills-guide/chrome-extension-wolfram-alpha-helper/)
 - [Chrome Extension Word Count Tracker: Complete Guide for.](/claude-skills-guide/chrome-extension-word-count-tracker/)
