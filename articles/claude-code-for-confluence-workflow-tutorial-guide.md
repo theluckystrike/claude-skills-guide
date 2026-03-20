@@ -235,6 +235,53 @@ async function analyzePageAndSuggestImprovements(pageId) {
 }
 ```
 
+
+## Step-by-Step Guide: Setting Up Your First Automation
+
+Here is a concrete workflow for automating Confluence page creation and review processes using Claude Code.
+
+**Step 1 — Create a dedicated automation project.** Set up a Node.js project with the Confluence REST API client, dotenv for credentials, and node-cron for scheduling. Claude Code generates the package.json and initial project structure with sensible defaults.
+
+**Step 2 — Test your API connection.** Before building workflows, verify your credentials work by listing your spaces. Claude Code generates a simple test script and explains common authentication errors like expired tokens or incorrect domain formatting.
+
+**Step 3 — Build your first page creation function.** Start with a simple meeting notes creator. Claude Code generates the function with proper error handling, retry logic for rate limits, and structured logging so you can track what the automation did.
+
+**Step 4 — Add approval workflow triggers.** Extend your script to notify reviewers when new pages are created. Claude Code generates the notification logic including adding watchers, creating structured review request comments, and updating page titles with status prefixes.
+
+**Step 5 — Schedule recurring automations.** Wire up node-cron to run your automation on a schedule. Weekly standup templates, monthly review reminders, and quarterly documentation audits all benefit from scheduled creation. Claude Code generates the cron expressions and validates them against your timezone requirements.
+
+## Common Pitfalls
+
+**Using page IDs that expire across environments.** Confluence page IDs are environment-specific—a page ID from your staging instance does not work in production. Claude Code can help you build lookup functions that find pages by title and space key rather than hardcoded IDs.
+
+**Ignoring Confluence markup vs storage format.** Confluence uses a proprietary storage format for page content, not standard HTML. When you read a page with the API, you get storage format XML. Claude Code understands both formats and generates content in the correct storage format for your target Confluence version.
+
+**Missing rate limit handling.** Confluence Cloud enforces rate limits that cause 429 errors under heavy automation. Without retry logic with exponential backoff, bulk operations fail partway through. Claude Code generates the withRetry wrapper shown in this guide and integrates it throughout your automation scripts.
+
+**Not versioning page updates correctly.** The Confluence API requires you to specify the current page version when updating. If you provide the wrong version, the API returns a conflict error. Claude Code generates update functions that always fetch the current version first before attempting an update.
+
+**Creating pages without checking for duplicates.** Running your automation twice can create duplicate pages if you do not check for existing content first. Claude Code generates idempotent creation functions that check for existing pages by title before creating new ones.
+
+## Best Practices
+
+**Use a dedicated automation account.** Create a service account for your Claude Code automations rather than using a personal account. This makes audit logs clearer, limits the scope of compromise if credentials are exposed, and prevents automation actions from appearing in your personal notification stream.
+
+**Store page templates as version-controlled files.** Keep your Confluence page templates in your Git repository as Markdown or storage format files. Claude Code can help you build a template rendering system that fills in dynamic values like dates, team names, and sprint numbers.
+
+**Test automations in a non-production space.** Create a dedicated Automation Testing space in Confluence where your scripts can create, modify, and delete content freely. Claude Code can help you configure environment-specific settings that route test runs to this sandbox space.
+
+**Log all automated changes with context.** Each automated page modification should include a comment explaining what triggered the change, which script ran, and what values were substituted. This makes audit trails readable for humans and helps debug automation misbehavior.
+
+**Implement dry-run mode.** Add a DRY_RUN environment variable that causes your automation to log what it would do without actually making API calls. Claude Code generates the dry-run scaffolding that wraps API calls in conditional blocks, making it safe to test logic changes in production-connected environments.
+
+## Integration Patterns
+
+**GitHub Actions integration.** Trigger Confluence updates automatically when pull requests are merged. Claude Code generates the GitHub Actions workflow that calls your automation scripts, updating your documentation space with release notes, API changes, and deployment records.
+
+**Jira issue linking.** When creating Confluence pages for features or bugs, automatically link them to the relevant Jira issues. Claude Code generates the Jira-Confluence cross-linking API calls and the Smart Links format that Confluence renders as rich link cards.
+
+**Slack notifications for page reviews.** When your automation creates a review request, also send a Slack notification to the reviewer. Claude Code generates the Slack webhook call with a properly formatted message block including the page title, space, and a direct link for one-click access.
+
 ## Conclusion
 
 Automating Confluence workflows with Claude Code transforms how your team manages documentation. Start with simple scripts like page creation, then gradually build complex approval chains and scheduled tasks. The key is to identify repetitive tasks, prototype solutions, and iterate based on team feedback.
