@@ -152,9 +152,157 @@ Chrome policies interact with security-sensitive browser features. The `DefaultC
 - `DeveloperToolsAvailability` — restrict to authorized users only
 - `URLBlocklist` and `URLAllowlist` — implement content filtering
 
+## Configuring Policies for Developer Workstations
+
+Development environments have different requirements than standard employee desktops. Developers frequently need access to features that security-conscious organizations lock down by default — DevTools, experimental flags, local overrides for proxy settings. Rather than exempting individual users on an ad hoc basis, create a dedicated OU for developer workstations with its own policy set.
+
+Policies that commonly need relaxation for developer OUs:
+
+```json
+{
+  "DeveloperToolsAvailability": 1,
+  "RemoteDebuggingEnabled": true,
+  "AllowDinosaurEasterEgg": true,
+  "BrowserSigninPolicy": 0,
+  "SyncDisabled": false,
+  "BuiltInDnsClientEnabled": true,
+  "DnsOverHttpsMode": "off"
+}
+```
+
+`DeveloperToolsAvailability` accepts three values: 0 disallows DevTools entirely, 1 (shown above) allows them, and 2 disallows them except for force-installed extensions. Most production environments use 2 as a compromise — developers can inspect their own extension's background page without full DevTools access across all sites.
+
+For developers who need to test against multiple proxy configurations, consider using the `ProxySettings` policy set to `direct` in the developer OU, which bypasses the corporate proxy entirely. Document this explicitly, because security teams often flag it during audits. A policy comment in your version-controlled configuration file helps:
+
+```json
+{
+  "_comment_ProxySettings": "Developer OU only — approved by InfoSec 2026-01-15",
+  "ProxySettings": {
+    "ProxyMode": "direct"
+  }
+}
+```
+
+Chrome policies do not support comments natively; maintain these in your source repository alongside the deployed JSON.
+
+## Enforcing Extension Policies Without Breaking Workflows
+
+Extension policy management causes more user friction than any other policy category. Getting it wrong means blocked productivity tools, help desk tickets, and shadow installs from personal profiles. A staged rollout approach prevents most of these problems.
+
+Start by enabling `ExtensionInstallSources` to allow extensions from your internal distribution server alongside the Chrome Web Store. This gives you a path to deploy vetted versions of commonly requested extensions before users ask:
+
+```json
+{
+  "ExtensionInstallSources": [
+    "https://clients2.google.com/service/update2/crx",
+    "https://extensions.company.intern/*"
+  ],
+  "ExtensionInstallBlocklist": [
+    "*"
+  ],
+  "ExtensionInstallAllowlist": [
+    "aapbdbdomjkkjkaonfhkkikfgjllcleb",
+    "hdokiejnpimakedhajhdlcegeplioahd",
+    "nkbihfbeogaeaoehlefnkodbefgpgknn"
+  ]
+}
+```
+
+Setting `ExtensionInstallBlocklist` to `["*"]` blocks all extensions by default, then `ExtensionInstallAllowlist` selectively permits known-good extension IDs. This allowlist approach is more secure than a denylist, which requires constant maintenance as new extensions emerge.
+
+When an extension needs to be removed from all managed devices, do not simply delete it from the allowlist — add it to the blocklist explicitly. Chrome will uninstall it from active sessions on next policy refresh:
+
+```json
+{
+  "ExtensionInstallBlocklist": [
+    "abcdefghijklmnopabcdefghijklmnop"
+  ]
+}
+```
+
+## Version Pinning and Chrome Update Policies
+
+Enterprise environments frequently need to delay Chrome updates to allow time for compatibility testing. The `TargetVersionPrefix` and `RollbackToTargetVersion` policies give you granular control:
+
+```json
+{
+  "TargetVersionPrefix": "123.",
+  "RollbackToTargetVersion": 1
+}
+```
+
+`TargetVersionPrefix` accepts a major version prefix. Setting it to `"123."` pins devices to Chrome 123.x and prevents automatic updates to 124 or later. Setting `RollbackToTargetVersion` to 1 will actively downgrade devices already on a newer version — use this carefully since it triggers a full browser reinstall on affected machines.
+
+For testing new Chrome versions before broad rollout, create a pilot OU with a different `TargetVersionPrefix`:
+
+```json
+{
+  "TargetVersionPrefix": "124.",
+  "ChromeVariations": 1
+}
+```
+
+`ChromeVariations` controls whether Chrome field trials run on managed devices. Setting it to 1 enables all variations, 2 disables them for critical environments. During incident response, disabling variations (`"ChromeVariations": 2`) is useful when a Chrome field trial may be causing unexpected behavior.
+
+## Auditing Policy Compliance at Scale
+
+The admin console reports current policy values but does not tell you which devices have actually applied a policy versus which are pending sync. For compliance reporting, combine the Admin SDK with device status queries:
+
+```python
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+import json
+
+def audit_policy_compliance(credentials_path, expected_policies):
+    credentials = service_account.Credentials.from_service_account_file(
+        credentials_path,
+        scopes=[
+            'https://www.googleapis.com/auth/admin.directory.device.chromeos',
+            'https://www.googleapis.com/auth/admin.directory.chromeos'
+        ]
+    )
+
+    service = build('admin', 'directory_v1', credentials=credentials)
+
+    devices = []
+    request = service.chromeosdevices().list(customerId='my_customer', maxResults=100)
+
+    while request is not None:
+        response = request.execute()
+        devices.extend(response.get('chromeosdevices', []))
+        request = service.chromeosdevices().list_next(request, response)
+
+    non_compliant = []
+    for device in devices:
+        last_sync = device.get('lastSync', '')
+        ou = device.get('orgUnitPath', '')
+        # Flag devices that haven't synced in over 7 days
+        if device.get('status') == 'ACTIVE' and should_flag(last_sync):
+            non_compliant.append({
+                'deviceId': device['deviceId'],
+                'serialNumber': device.get('serialNumber'),
+                'orgUnitPath': ou,
+                'lastSync': last_sync
+            })
+
+    return non_compliant
+
+def should_flag(last_sync_str):
+    from datetime import datetime, timezone, timedelta
+    if not last_sync_str:
+        return True
+    try:
+        last_sync = datetime.fromisoformat(last_sync_str.replace('Z', '+00:00'))
+        return (datetime.now(timezone.utc) - last_sync) > timedelta(days=7)
+    except ValueError:
+        return True
+```
+
+Run this audit weekly and route the output to your ticketing system. Devices that haven't synced policies in seven or more days represent a genuine compliance gap, not just a reporting artifact.
+
 ## Summary
 
-Google Workspace's Chrome policy integration provides enterprise-grade browser management without additional tooling. Start with the admin console for basic configurations, escalate to policy templates for advanced control, and build programmatic management when scaling across many organizational units. The `chrome://policy` internal page remains your best debugging tool when things don't work as expected.
+Google Workspace's Chrome policy integration provides enterprise-grade browser management without additional tooling. Start with the admin console for basic configurations, escalate to policy templates for advanced control, and build programmatic management when scaling across many organizational units. For developer teams, maintain separate OUs with explicitly documented policy relaxations rather than ad hoc exemptions. Version-pin Chrome in sensitive environments and audit sync compliance on a schedule — the `chrome://policy` internal page remains your best on-device debugging tool when things don't apply as expected, but programmatic auditing is the only way to catch drift at fleet scale.
 
 ---
 

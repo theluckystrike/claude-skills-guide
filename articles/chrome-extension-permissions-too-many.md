@@ -119,7 +119,7 @@ Open `chrome://extensions/` in your browser. Enable "Developer mode" in the top 
 
 Click "Details" on each extension to review:
 - Host permissions
-- API permissions  
+- API permissions
 - What data it can access
 
 ### Step 3: Check the Manifest
@@ -153,11 +153,57 @@ If an extension shows suspicious permission behavior:
 3. **Search for the extension** name along with "privacy" or "security" to find community discussions
 4. **Report concerns** to Google if you believe an extension violates policies
 
+## Understanding Manifest V3 and Permission Changes
+
+Google's transition to Manifest V3 introduced meaningful permission reforms that affect both developers and users. The most significant change is the deprecation of `webRequestBlocking`, which previously let extensions intercept and modify network requests synchronously. Under Manifest V3, this capability is replaced by the more limited `declarativeNetRequest` API.
+
+From a user perspective, this matters because `webRequestBlocking` was one of the most powerful and potentially abusive permissions in the V2 era. Extensions that still claim to require it are either legacy software or requesting capabilities beyond what legitimate use cases demand.
+
+Manifest V3 also introduces stricter host permission handling. Extensions must now declare host permissions separately from API permissions in the manifest, making it easier to spot exactly which sites an extension can access:
+
+```json
+{
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://*.example.com/*"]
+}
+```
+
+This separation is useful when auditing. If `host_permissions` contains `<all_urls>` or broad wildcard patterns, that deserves scrutiny regardless of what the extension claims to do.
+
+## The Real Cost of Over-Permissioned Extensions
+
+Security risk is the obvious concern, but over-permissioned extensions carry other costs worth considering.
+
+**Performance degradation.** Extensions with broad host permissions often inject content scripts into every page you visit. Each injected script adds CPU and memory overhead. A browser with a dozen poorly-scoped extensions can feel sluggish on pages that have nothing to do with those tools.
+
+**Network exposure.** Extensions that can intercept network requests can also log them. Even without malicious intent, sending browsing telemetry to third-party servers is a common extension monetization practice. The permission structure that enables "helpful" features like smart suggestions can simultaneously enable comprehensive activity tracking.
+
+**Supply chain risk.** Extensions change ownership. A legitimate, well-reviewed extension today may be sold to a different company tomorrow. The new owner inherits all existing permissions and the installed user base. This has happened repeatedly — a reputable productivity extension gets acquired, and the next update quietly adds data collection. The permissions were already in place; the behavior just changed.
+
+Keeping your extension count low and reviewing permissions after updates directly mitigates this risk.
+
+## Evaluating Extensions Before You Install
+
+Before installing any extension, spend two minutes on this checklist:
+
+**Check the publisher.** Does the extension come from a known company with a privacy policy? Anonymous publishers with no web presence deserve extra scrutiny.
+
+**Compare user count and age.** An extension with one million users and a three-year history has more accountability than something uploaded last month. Recent extensions with aggressive permission requests and minimal reviews are higher risk.
+
+**Read one-star reviews.** Positive reviews are often gamed. One-star reviews from real users frequently mention specific problems — unexpected behavior, privacy violations, or browser slowdowns.
+
+**Search the extension ID.** Each extension has a unique ID visible in `chrome://extensions/` under Developer mode. Searching that ID often surfaces security research, vulnerability disclosures, or forum discussions that don't appear in store reviews.
+
+**Look for open-source alternatives.** Many popular extensions have open-source equivalents. When the source code is publicly auditable, the permission requests are much easier to verify against what the code actually does.
+
 ## Building Better Extension Habits
 
 The "too many permissions" problem stems from both over-reaching developers and uninformed users. By understanding what permissions mean and auditing what you install, you take control of your browser's security posture.
 
 Permission warnings exist for a reason. When an extension asks for access that seems excessive for its purpose, trust your instinct and look for alternatives.
+
+Treat your extension list the same way you treat installed software — review it periodically, remove what you no longer use, and question anything that requests more access than its stated function requires.
 
 
 ## Related Reading

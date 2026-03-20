@@ -235,6 +235,185 @@ class ProcessPaymentJob implements ShouldQueue
 }
 ```
 
+## Using Job Batches for Parallel Processing
+
+When you need to process a large collection of items in parallel and then react when the entire batch completes, Laravel's batch system is the right tool. Claude Code can scaffold the batch dispatch and callback structure for you in seconds.
+
+```php
+use Illuminate\Bus\Batch;
+use Illuminate\Support\Facades\Bus;
+use Throwable;
+
+class ImportProductCatalog
+{
+    public function handle(array $productChunks): void
+    {
+        $jobs = collect($productChunks)->map(
+            fn ($chunk) => new ImportProductChunkJob($chunk)
+        )->all();
+
+        Bus::batch($jobs)
+            ->then(function (Batch $batch) {
+                // All jobs completed successfully
+                \Log::info("Product import complete. Processed {$batch->totalJobs} chunks.");
+                event(new CatalogImportCompleted($batch->id));
+            })
+            ->catch(function (Batch $batch, Throwable $e) {
+                // First job failure detected
+                \Log::error("Catalog import batch failed: {$e->getMessage()}", [
+                    'batch_id' => $batch->id,
+                    'failed_jobs' => $batch->failedJobs,
+                ]);
+                event(new CatalogImportFailed($batch->id));
+            })
+            ->finally(function (Batch $batch) {
+                // Runs regardless of success or failure
+                CatalogImport::where('batch_id', $batch->id)
+                    ->update(['finished_at' => now()]);
+            })
+            ->name('Product Catalog Import')
+            ->allowFailures()
+            ->dispatch();
+    }
+}
+```
+
+The `allowFailures()` call lets the batch continue processing remaining jobs even when some fail. This is the right default for import pipelines where one bad record should not abort thousands of valid ones. Remove it for financial workflows where partial completion is worse than a full rollback.
+
+To track batch progress from a controller or API endpoint:
+
+```php
+use Illuminate\Bus\Batch;
+use Illuminate\Support\Facades\Bus;
+
+public function importStatus(string $batchId): JsonResponse
+{
+    $batch = Bus::findBatch($batchId);
+
+    if (! $batch) {
+        return response()->json(['error' => 'Batch not found'], 404);
+    }
+
+    return response()->json([
+        'id'             => $batch->id,
+        'name'           => $batch->name,
+        'total_jobs'     => $batch->totalJobs,
+        'pending_jobs'   => $batch->pendingJobs,
+        'failed_jobs'    => $batch->failedJobs,
+        'progress'       => $batch->progress(),
+        'finished'       => $batch->finished(),
+        'cancelled'      => $batch->cancelled(),
+    ]);
+}
+```
+
+## Rate Limiting and Throttling Jobs
+
+Some external APIs enforce rate limits that your queue workers must respect. Laravel provides a `RateLimiter`-based approach that works directly inside job classes, preventing excessive calls without complex external coordination.
+
+```php
+use Illuminate\Queue\Middleware\RateLimited;
+
+class SyncContactToHubspot implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    public int $tries = 10;
+
+    public function __construct(
+        public readonly int $contactId
+    ) {}
+
+    public function middleware(): array
+    {
+        return [new RateLimited('hubspot-api')];
+    }
+
+    public function handle(HubspotClient $client): void
+    {
+        $contact = Contact::findOrFail($this->contactId);
+        $client->upsertContact($contact->toHubspotPayload());
+    }
+}
+```
+
+Register the limiter in a service provider:
+
+```php
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Support\Facades\RateLimiter;
+
+RateLimiter::for('hubspot-api', function () {
+    // HubSpot allows 100 requests per 10 seconds per app
+    return Limit::perSeconds(10, 100);
+});
+```
+
+When a job hits the rate limit, Laravel automatically releases it back onto the queue and retries after the window expires. You do not need to write any retry logic yourself. Claude Code can generate this pattern for any third-party API by asking it: "scaffold a throttled job for the [service] API respecting [N] requests per [period]."
+
+## Testing Queue Jobs Locally
+
+Debugging jobs in production is painful. Set up a proper local testing workflow from day one. The `Queue::fake()` helper lets you assert job dispatches without actually running workers.
+
+```php
+use App\Jobs\SendWelcomeEmail;
+use Illuminate\Support\Facades\Queue;
+
+class UserRegistrationTest extends TestCase
+{
+    public function test_welcome_email_job_is_dispatched_after_registration(): void
+    {
+        Queue::fake();
+
+        $response = $this->postJson('/api/register', [
+            'name'     => 'Alice',
+            'email'    => 'alice@example.com',
+            'password' => 'secret-password-123',
+        ]);
+
+        $response->assertCreated();
+
+        Queue::assertPushed(SendWelcomeEmail::class, function ($job) {
+            return $job->user->email === 'alice@example.com';
+        });
+
+        Queue::assertNotPushed(\App\Jobs\SendAdminAlert::class);
+    }
+}
+```
+
+For integration tests where you want the job to actually execute, use `Queue::fake()` with `Bus::dispatchSync()` or switch to the `sync` queue driver in your `phpunit.xml` environment config:
+
+```xml
+<env name="QUEUE_CONNECTION" value="sync"/>
+```
+
+With `sync`, every dispatched job runs immediately in the same process, so you can assert on the side effects (database records written, emails sent) rather than just the dispatch itself. Reserve this for tests that are explicitly checking job behavior end-to-end, not for unit tests of controllers or services.
+
+## Debugging Stuck or Failed Jobs
+
+When jobs start piling up or failing silently, the first place to look is the `failed_jobs` table. Run this Artisan command to list recent failures with their exception messages:
+
+```bash
+php artisan queue:failed
+```
+
+To retry all failed jobs at once:
+
+```bash
+php artisan queue:retry all
+```
+
+To inspect a single failure before retrying:
+
+```bash
+php artisan queue:failed --id=12345
+```
+
+For jobs that appear to be processing but never complete, check the `retry_after` value in `config/queue.php`. If a job takes longer than `retry_after` seconds, Laravel assumes the worker died and re-queues the job, which can produce duplicate processing. Always set `retry_after` to at least 30 seconds more than your job's expected worst-case runtime.
+
+Horizon gives you a live view of this data. The "Metrics" tab shows throughput and runtime averages per queue and per job class, which makes it easy to spot a job that normally takes 2 seconds suddenly averaging 45 seconds—a sign of an upstream dependency degrading.
+
 ## Best Practices for Queue-Based Systems
 
 When building queue-based systems with Claude Code, follow these practical guidelines:

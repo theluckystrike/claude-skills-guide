@@ -127,6 +127,147 @@ For production systems, API keys, database credentials, and other sensitive deve
 
 The best password manager is the one you actually use consistently. For developers who already live in Chrome, the built-in manager removes friction while providing baseline security. Just understand its limitations and supplement with dedicated tools for high-value credentials.
 
+## Understanding Chrome's Passkey Integration
+
+Chrome's password manager has quietly expanded beyond traditional passwords to include passkey support, which changes the security conversation substantially. Passkeys use asymmetric cryptography: your device holds a private key that never leaves local storage, and the server stores only a public key.
+
+When you authenticate with a passkey in Chrome, the browser generates a cryptographic signature using your private key stored in the OS keychain. The server verifies the signature against the public key it holds. There is no shared secret transmitted, which eliminates entire categories of attacks—phishing, credential stuffing, and server-side breaches all become far less effective.
+
+```javascript
+// Passkey creation (simplified PublicKeyCredential flow)
+const credential = await navigator.credentials.create({
+  publicKey: {
+    challenge: serverChallenge,
+    rp: { name: "Example App", id: "example.com" },
+    user: {
+      id: new Uint8Array(16),
+      name: "user@example.com",
+      displayName: "User"
+    },
+    pubKeyCredParams: [
+      { alg: -7, type: "public-key" },  // ES256
+      { alg: -257, type: "public-key" } // RS256
+    ],
+    authenticatorSelection: {
+      residentKey: "required",
+      userVerification: "preferred"
+    }
+  }
+});
+```
+
+For developers building applications, supporting passkeys through Chrome's credential management API is increasingly the right default. Users who rely on Chrome's built-in manager get seamless passkey authentication, and you eliminate the password reset support burden entirely.
+
+## How Malicious Extensions Can Compromise Chrome Credentials
+
+Browser extensions represent the most realistic threat vector for Chrome credential theft in 2026, and it's worth understanding the mechanism precisely. Extensions granted `activeTab` or broad host permissions can read the DOM of any page the user visits, including password fields before Chrome autofills them.
+
+A malicious extension does not need to break encryption. It observes credentials at the point of use:
+
+```javascript
+// What a malicious extension could do (for educational understanding)
+// This runs in content script context with host permissions
+document.addEventListener('submit', (event) => {
+  const form = event.target;
+  const passwordField = form.querySelector('input[type="password"]');
+  const usernameField = form.querySelector('input[type="text"], input[type="email"]');
+
+  if (passwordField && usernameField) {
+    // Credentials are readable at this point regardless of
+    // how they were stored — Chrome autofill, password manager, or typed
+    exfiltrate(usernameField.value, passwordField.value);
+  }
+});
+```
+
+This attack works identically against Chrome's built-in manager and dedicated managers like Bitwarden or 1Password. The extension reads credentials from the DOM after they are decrypted and inserted—not from the encrypted storage. The practical defense is auditing your installed extensions aggressively. Keep only what you actively use, and prefer extensions from publishers with public source code repositories.
+
+```bash
+# Audit your Chrome extensions periodically
+# Navigate to: chrome://extensions/
+# Review each extension's requested permissions
+# Remove extensions that request access to all sites without clear need
+```
+
+## Practical Workflow: Segmenting Credentials by Risk Level
+
+The most effective approach for developers is not choosing one password manager but segmenting credentials by sensitivity and routing them to appropriate storage.
+
+**Tier 1: Chrome built-in (low risk, high convenience)**
+- Personal streaming services, e-commerce accounts, forums
+- Development tool accounts with no production access
+- Internal dashboards behind SSO where the SSO itself has MFA
+
+**Tier 2: Dedicated password manager (medium risk)**
+- GitHub and GitLab accounts
+- Cloud console accounts (AWS, GCP, Azure) for non-production environments
+- Third-party API accounts for development projects
+- Domain registrar and DNS management accounts
+
+**Tier 3: Hardware key or secrets manager (high risk)**
+- Production AWS/GCP root account credentials
+- SSH keys for production infrastructure
+- Database master passwords
+- Code signing certificates
+
+Implementing this segmentation requires initial discipline but becomes automatic. The mental model is: if compromising this credential gives an attacker production access or financial leverage, it should not live in Chrome's password manager regardless of how secure it is.
+
+```bash
+# Store production secrets properly using environment variables
+# and a secrets manager like AWS Secrets Manager or HashiCorp Vault
+
+# Example: Retrieving a secret from AWS Secrets Manager
+aws secretsmanager get-secret-value \
+  --secret-id prod/database/master \
+  --query SecretString \
+  --output text
+```
+
+## Auditing and Monitoring Chrome Passwords
+
+Chrome provides a built-in password checkup tool that checks your saved credentials against Google's database of known breaches. For developers who have accumulated hundreds of saved passwords over years of Chrome use, this tool surfaces real problems.
+
+Navigate to `chrome://password-manager/checkup` to run an audit. The tool identifies three categories of issues: passwords exposed in data breaches, reused passwords across multiple sites, and weak passwords. Address these in priority order—breached credentials first, then reused passwords on high-value accounts.
+
+For a more programmatic approach to credential hygiene, you can export your saved passwords from Chrome and analyze them locally:
+
+```python
+# Chrome allows password export as CSV from chrome://password-manager/settings
+# Analyze offline, then delete the export file immediately
+
+import csv
+from collections import Counter
+
+def audit_passwords(csv_path):
+    passwords = []
+    with open(csv_path, newline='') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            passwords.append({
+                'url': row.get('url', ''),
+                'username': row.get('username', ''),
+                'password': row.get('password', '')
+            })
+
+    # Find duplicates
+    password_counts = Counter(p['password'] for p in passwords)
+    reused = {pw: count for pw, count in password_counts.items() if count > 1}
+
+    # Find weak passwords (under 12 chars)
+    weak = [p for p in passwords if len(p['password']) < 12]
+
+    print(f"Total saved: {len(passwords)}")
+    print(f"Reused passwords: {len(reused)} unique passwords reused across {sum(reused.values())} accounts")
+    print(f"Weak passwords: {len(weak)}")
+
+    # IMPORTANT: Delete the CSV after analysis
+    import os
+    os.unlink(csv_path)
+
+# Run: audit_passwords('/path/to/exported_passwords.csv')
+```
+
+The exported CSV contains plaintext credentials, so treat it with extreme care—run the analysis on a trusted machine, never upload the file anywhere, and delete it immediately after.
 
 ## Related Reading
 

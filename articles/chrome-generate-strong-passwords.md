@@ -120,6 +120,125 @@ gpg --gen-random --armor 1 20 | tr -dc 'A-Za-z0-9!@#$%^&*()' | head -c 20
 
 These commands generate passwords with similar entropy to Chrome's built-in generator. The key difference is that CLI-generated passwords won't automatically sync to Chrome's password manager—they require manual entry or additional tooling to store.
 
+## Integrating Chrome Passwords with a Team Workflow
+
+Individual password hygiene is straightforward, but teams face a different challenge: sharing credentials for shared services, CI pipelines, and staging environments without compromising the security of personal accounts. Chrome's password manager is designed for personal use, not team sharing. Here is how developers typically handle both layers.
+
+For personal accounts accessed from your own Chrome profile, use Chrome's generator and let it sync via your Google account. This covers everything from SaaS dashboards to your own AWS console login.
+
+For shared team credentials, use a dedicated secrets manager. Popular options include:
+
+- **1Password Teams** — browser extension integrates alongside Chrome's native password manager without conflict
+- **Bitwarden** (self-hosted) — open-source, integrates via a Chrome extension, REST API available for CI injection
+- **HashiCorp Vault** — appropriate for infrastructure secrets; not a daily-driver browser tool
+
+The workflow that avoids conflicts: disable Chrome's "Offer to save passwords" for your browser profile if you are using a team manager, so you do not end up with duplicates and outdated credentials in both places. Navigate to `chrome://settings/passwords` and toggle off "Offer to save passwords" to prevent Chrome from prompting you on every login form.
+
+## Using Chrome DevTools to Audit Password Field Behavior
+
+Developers building login forms or password change flows often need to verify that Chrome's autofill and generator behave correctly with their own forms. Chrome DevTools makes this straightforward.
+
+Open DevTools (F12 or Cmd+Option+I on macOS) and select the Elements panel. Click on your password input field. In the Styles pane, confirm the field has `type="password"` — Chrome's password generator only activates on inputs with this type attribute. If the field uses `type="text"` for any reason (a common pattern in "show password" toggles), Chrome will not offer to generate or save.
+
+A reliable "show/hide password" toggle that preserves Chrome's autofill behavior looks like this:
+
+```html
+<input id="password" type="password" name="password" autocomplete="new-password">
+<button type="button" id="toggle-pw">Show</button>
+```
+
+```javascript
+document.getElementById('toggle-pw').addEventListener('click', function () {
+  const field = document.getElementById('password');
+  const isHidden = field.type === 'password';
+  field.type = isHidden ? 'text' : 'password';
+  this.textContent = isHidden ? 'Hide' : 'Show';
+});
+```
+
+Note that switching `type` from `password` to `text` clears Chrome's "Suggest strong password" UI. If preserving the suggestion overlay matters for your UX, use CSS to mask the characters instead of changing the input type:
+
+```css
+.password-masked {
+  -webkit-text-security: disc;
+}
+```
+
+This CSS property keeps the input as `type="text"` while visually masking the characters, which prevents Chrome from disabling its generator. Browser support is limited to Chromium-based browsers, so test on Firefox before deploying.
+
+## Password Generation in Automated Testing
+
+When writing Playwright or Puppeteer tests for authentication flows, you need to generate realistic test passwords programmatically rather than hard-coding a string like `password123`. Hard-coded test passwords have a habit of leaking into production config files and commit history.
+
+Here is a reusable test helper using the Web Crypto API (available in Node.js 16+ via `globalThis.crypto`):
+
+```javascript
+// test-helpers/password.js
+function generateTestPassword(length = 20) {
+  const upper   = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const lower   = 'abcdefghijklmnopqrstuvwxyz';
+  const digits  = '0123456789';
+  const symbols = '!@#$%^&*';
+
+  // Guarantee at least one of each character class
+  const required = [
+    upper[Math.floor(Math.random() * upper.length)],
+    lower[Math.floor(Math.random() * lower.length)],
+    digits[Math.floor(Math.random() * digits.length)],
+    symbols[Math.floor(Math.random() * symbols.length)],
+  ];
+
+  const all = upper + lower + digits + symbols;
+  const bytes = new Uint8Array(length - required.length);
+  globalThis.crypto.getRandomValues(bytes);
+
+  const rest = Array.from(bytes).map(b => all[b % all.length]);
+  const combined = [...required, ...rest];
+
+  // Fisher-Yates shuffle to avoid always starting with uppercase
+  for (let i = combined.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [combined[i], combined[j]] = [combined[j], combined[i]];
+  }
+
+  return combined.join('');
+}
+
+module.exports = { generateTestPassword };
+```
+
+Use it in a Playwright test:
+
+```javascript
+const { generateTestPassword } = require('./test-helpers/password');
+
+test('user can register and log in', async ({ page }) => {
+  const password = generateTestPassword(20);
+
+  await page.goto('/register');
+  await page.fill('input[name="email"]', 'test@example.com');
+  await page.fill('input[name="password"]', password);
+  await page.fill('input[name="password_confirmation"]', password);
+  await page.click('button[type="submit"]');
+
+  await expect(page).toHaveURL('/dashboard');
+});
+```
+
+Each test run gets a unique, strong password that meets typical registration requirements. You never have to worry about a test password showing up in a breach database or a code review comment.
+
+## What Chrome's Password Manager Does Not Do
+
+Understanding the limits of Chrome's built-in manager helps you decide when a dedicated tool is worth the overhead.
+
+Chrome does not generate passwords outside of browser form contexts. If you need a strong password for an SSH key passphrase, a GPG key, a Wi-Fi network, or a database credential, you are back to CLI tools or a separate password manager.
+
+Chrome does not support custom password policies. Some enterprise systems require exactly 12 characters, no symbols, or a specific character composition. Chrome's generator will produce its default format regardless. In those cases, use the CLI approach described earlier or a manager like Bitwarden that lets you configure rules per site.
+
+Chrome does not offer emergency access or password inheritance. If you are managing critical credentials for a business, a dedicated team password manager with audit logs and emergency access grants is a better fit than a personal browser manager.
+
+Chrome also does not encrypt its local password storage with a user-supplied master password on macOS or Linux (it relies on the OS keychain on macOS and a fixed encryption key derived from the OS login on Linux). On a shared machine or a compromised OS, this matters. If you are working on a shared developer machine, export nothing from Chrome's password manager and use a manager with its own master password instead.
+
 ## Common Issues and Solutions
 
 **Password not saving.** Some websites use non-standard form fields that Chrome doesn't recognize as password fields. Try manually triggering the generator or use a dedicated password manager as a fallback.

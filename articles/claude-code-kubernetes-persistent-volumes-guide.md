@@ -189,6 +189,98 @@ spec:
 
 For application-level backups, consider scheduling jobs that export data to object storage. Tools like Velero provide cluster-level disaster recovery, including persistent volume snapshots.
 
+## Access Modes in Practice
+
+Choosing the wrong access mode is one of the most common sources of confusion with persistent volumes. Kubernetes defines three modes, but not all storage backends support all three.
+
+`ReadWriteOnce` (RWO) mounts the volume as read-write on a single node. This covers the majority of production use cases: databases, message queues, application logs. AWS EBS, GCE PD, and Azure Disk all support RWO exclusively—if your application needs a volume on more than one node simultaneously, you cannot use these backends.
+
+`ReadOnlyMany` (ROX) allows the volume to be mounted read-only on many nodes at once. This is useful for distributing configuration files, static assets, or reference data across a fleet of pods without the complexity of a shared writable volume.
+
+`ReadWriteMany` (RWX) allows read-write access from multiple nodes. This requires a network-attached storage solution. On AWS you would use EFS via the `efs.csi.aws.com` provisioner. On GKE, Filestore provides NFS-backed volumes. On-premises deployments commonly use CephFS or an NFS server. RWX volumes carry additional latency compared to block storage—measure throughput before committing shared-write volumes to performance-sensitive paths.
+
+Here is an RWX claim against EFS on AWS:
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: shared-assets-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: efs-sc
+```
+
+And the corresponding StorageClass:
+
+```yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: efs-sc
+provisioner: efs.csi.aws.com
+parameters:
+  provisioningMode: efs-ap
+  fileSystemId: fs-0123456789abcdef0
+  directoryPerms: "700"
+```
+
+## StatefulSet Volume Lifecycle
+
+StatefulSets handle volumes differently from Deployments. Each replica in a StatefulSet gets its own PVC created from the `volumeClaimTemplates` section. Critically, these PVCs are not deleted when the StatefulSet is scaled down or deleted—this is intentional. The data survives the workload.
+
+This behavior matters operationally. When you scale a StatefulSet from three replicas down to one, the PVCs for replicas 1 and 2 remain bound. When you scale back up, those exact volumes are reattached to the revived pods. For a Kafka cluster this means partitions reconnect to their original brokers. For a Redis Cluster it means slots are not reshuffled.
+
+The flip side: you must manage PVC cleanup explicitly. After decommissioning a StatefulSet, clean up orphaned claims:
+
+```bash
+kubectl get pvc -l app=postgres
+kubectl delete pvc postgres-data-postgres-statefulset-1
+kubectl delete pvc postgres-data-postgres-statefulset-2
+```
+
+For production teardowns, verify there is no data you need before deleting these claims. The `kubectl get pv` output will show volumes in Released state after their PVC is deleted; the Reclaim Policy on the PV determines whether the underlying disk is deleted or retained.
+
+## Reclaim Policies
+
+The Reclaim Policy controls what happens to the underlying storage resource when a PVC is deleted:
+
+- `Retain`: The PV moves to Released state. The disk is preserved and must be manually reclaimed. Useful when you need to extract data from a decommissioned PVC.
+- `Delete`: The PV and the underlying cloud disk are deleted automatically. This is the default for most dynamic provisioners.
+- `Recycle`: Deprecated. Do not use in new deployments.
+
+Set Reclaim Policy on the StorageClass:
+
+```yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: retain-storage
+provisioner: kubernetes.io/gce-pd
+reclaimPolicy: Retain
+allowVolumeExpansion: true
+parameters:
+  type: pd-standard
+```
+
+For critical production databases, prefer `Retain`. A bug in a deployment pipeline that accidentally deletes a StatefulSet should not cascade into data loss. With `Retain`, the disk sits in Released state waiting for manual intervention. You can create a new PV referencing the same disk and bind it to a new PVC to recover.
+
+## Using Claude Code to Audit Volume Configuration
+
+Claude Code is well-suited for analyzing existing Kubernetes manifests and identifying configuration gaps. Feed it your current YAML files with a prompt like: "Review these StatefulSet and StorageClass definitions. Identify any missing reclaim policies, volumes without resource limits, or PVCs that use the default StorageClass where a named class would be more appropriate."
+
+Claude will cross-reference the manifests and flag issues like:
+
+- PVCs with no explicit `storageClassName` that will fall back to cluster defaults, which may have `Delete` reclaim policy
+- StatefulSets missing resource requests on their `volumeClaimTemplates`, making capacity planning impossible
+- StorageClasses without `allowVolumeExpansion: true`, which will block resizing later
+
+Combine Claude Code with the `tdd` skill to write integration tests that verify storage behavior. A practical test suite for a stateful application should include: a test that writes data to the mounted volume, deletes the pod, waits for it to reschedule, and confirms the data persists.
+
 ## Common Pitfalls and Solutions
 
 One frequent issue is PVCs stuck in Pending state. This typically occurs when no available PV matches the claim requirements or the StorageClass provisioner is misconfigured. Check events on the PVC to identify the root cause:
@@ -197,7 +289,15 @@ One frequent issue is PVCs stuck in Pending state. This typically occurs when no
 kubectl describe pvc <pvc-name>
 ```
 
-Another common problem is pod startup failures due to volume mount issues. Verify the PVC is bound (`kubectl get pvc`) and check pod events for mount errors.
+Look for messages like "no persistent volumes available for this claim" (static provisioning exhausted), "storageclass not found" (incorrect StorageClass name), or provisioner-specific errors indicating the cloud API call failed due to permissions.
+
+Another common problem is pod startup failures due to volume mount issues. Verify the PVC is bound first:
+
+```bash
+kubectl get pvc
+```
+
+A PVC in `Bound` state with a pod still failing to start usually points to a mount path conflict, incorrect file permissions on the mounted volume, or a previous pod holding the volume on a different node (common with RWO volumes after node failures). Force-deleting a stuck pod with `kubectl delete pod --grace-period=0 --force` often releases the volume lock.
 
 For production workloads, always set appropriate resource requests and limits on your storage. Use the `supermemory` skill to maintain documentation of your storage architecture decisions and the reasoning behind storage class selections.
 

@@ -181,9 +181,186 @@ async function checkForUpdates(article) {
 
 **Error handling** for network requests, storage failures, and content extraction errors ensures a robust user experience. Always provide meaningful feedback when operations fail.
 
+## Structuring Saved Article Data for Retrieval
+
+Saving content is only half the problem. If users can't find an article they saved three weeks ago, the extension fails its core purpose. Invest in a clean data schema from the start, because retrofitting one later requires migrating existing stored data.
+
+A well-structured article record should capture metadata beyond the content itself:
+
+```javascript
+const articleSchema = {
+  id: crypto.randomUUID(),
+  url: 'https://example.com/article',
+  title: 'Article Title',
+  byline: 'Author Name',
+  siteName: 'Publication Name',
+  excerpt: 'First 200 characters of content...',
+  content: '<article HTML>',
+  wordCount: 1450,
+  estimatedReadingTime: 6, // minutes
+  savedAt: Date.now(),
+  lastRead: null,
+  readProgress: 0,    // 0–100 percent
+  tags: [],
+  isRead: false,
+  isFavorite: false
+};
+```
+
+Storing `readProgress` alongside the article lets you restore scroll position when users return to a partially read piece. This small addition dramatically improves the reading experience with minimal storage overhead.
+
+For search, maintain a separate lightweight index rather than scanning full content records on every query. The index can store just the id, title, excerpt, and tags, keeping lookups fast even when the full content records grow large.
+
+## Managing Storage Quotas in Practice
+
+Chrome's `chrome.storage.local` has a 10MB default quota. IndexedDB quotas are computed dynamically based on available disk space — typically 20–80% of free disk — but Chrome can evict IndexedDB data under storage pressure without warning. Both constraints require active management in production extensions.
+
+Implement a quota monitor that checks remaining capacity and enforces a per-user budget:
+
+```javascript
+async function getStorageUsage() {
+  if (navigator.storage && navigator.storage.estimate) {
+    const estimate = await navigator.storage.estimate();
+    return {
+      used: estimate.usage,
+      quota: estimate.quota,
+      percentUsed: ((estimate.usage / estimate.quota) * 100).toFixed(1)
+    };
+  }
+  return null;
+}
+
+async function enforceStorageLimit(maxArticles = 500) {
+  const db = await openDatabase();
+  const tx = db.transaction('articles', 'readwrite');
+  const store = tx.objectStore('articles');
+  const index = store.index('timestamp');
+
+  // Count total articles
+  const count = await store.count();
+  if (count <= maxArticles) return;
+
+  // Delete oldest articles beyond limit
+  const deleteCount = count - maxArticles;
+  const cursor = await index.openCursor(null, 'next');
+  let deleted = 0;
+
+  while (cursor && deleted < deleteCount) {
+    await cursor.delete();
+    deleted++;
+    await cursor.continue();
+  }
+}
+```
+
+Call `enforceStorageLimit` after each save operation. For user-facing extensions, surface quota information in the options page so users understand why older articles get pruned.
+
+## Implementing a Manifest V3 Service Worker
+
+Chrome's Manifest V3 replaced persistent background pages with service workers. This change breaks several patterns common in older offline extensions, particularly anything that assumed a long-lived background process. Service workers terminate after a short idle period, which means you cannot store state in module-level variables.
+
+A compliant background service worker for Manifest V3 looks like this:
+
+```javascript
+// service_worker.js — registered in manifest.json as "background": {"service_worker": ...}
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({
+    id: 'saveArticle',
+    title: 'Save article for offline reading',
+    contexts: ['page']
+  });
+});
+
+chrome.contextMenus.onClicked.addListener(async (info, tab) => {
+  if (info.menuItemId !== 'saveArticle') return;
+
+  // Inject content script to extract article data
+  const results = await chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    func: extractAndReturn
+  });
+
+  if (results && results[0].result) {
+    await saveArticleOffline(results[0].result);
+    chrome.action.setBadgeText({ text: '+1', tabId: tab.id });
+    setTimeout(() => {
+      chrome.action.setBadgeText({ text: '', tabId: tab.id });
+    }, 2000);
+  }
+});
+
+function extractAndReturn() {
+  // This runs in the page context — no extension APIs available here
+  const title = document.title;
+  const url = location.href;
+  const content = document.body.innerHTML;
+  return { title, url, content, savedAt: Date.now() };
+}
+```
+
+The key shift from Manifest V2: use `chrome.scripting.executeScript` to run code in the page context rather than relying on a persistent background page to coordinate. Each handler must be self-contained and use storage rather than in-memory state for persistence between invocations.
+
+## Reading Saved Articles in Offline Mode
+
+Displaying saved articles requires a dedicated reader view. A clean approach renders saved content in a sandboxed iframe or a purpose-built reader page served from the extension's own origin:
+
+```javascript
+// reader.js — handles the extension's reader page (reader.html)
+
+async function loadArticle(articleId) {
+  const result = await chrome.storage.local.get(`article_${articleId}`);
+  const article = result[`article_${articleId}`];
+
+  if (!article) {
+    document.getElementById('error').textContent = 'Article not found.';
+    return;
+  }
+
+  document.title = article.title;
+  document.getElementById('title').textContent = article.title;
+  document.getElementById('byline').textContent = article.byline || '';
+  document.getElementById('content').innerHTML = article.content;
+
+  // Restore reading progress
+  if (article.readProgress > 0) {
+    const targetScroll = (document.body.scrollHeight * article.readProgress) / 100;
+    window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+  }
+}
+
+// Track and persist reading progress
+let progressTimer = null;
+window.addEventListener('scroll', () => {
+  clearTimeout(progressTimer);
+  progressTimer = setTimeout(async () => {
+    const progress = (window.scrollY / document.body.scrollHeight) * 100;
+    const articleId = new URLSearchParams(location.search).get('id');
+    const key = `article_${articleId}`;
+    const result = await chrome.storage.local.get(key);
+    if (result[key]) {
+      result[key].readProgress = Math.round(progress);
+      await chrome.storage.local.set({ [key]: result[key] });
+    }
+  }, 500);
+});
+```
+
+Pair this reader page with a minimal content security policy in your manifest to prevent XSS from saved HTML, since you are rendering arbitrary third-party content inside your extension:
+
+```json
+{
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'"
+  }
+}
+```
+
 ## Conclusion
 
 Building offline article storage capabilities into Chrome extensions requires thoughtful consideration of storage mechanisms, content extraction methods, and media handling. The approaches outlined here provide a foundation for creating robust offline reading solutions tailored to specific use cases.
+
+Manifest V3 demands rethinking several architectural patterns from the V2 era — service workers replace background pages, and state must live in storage rather than memory. Get the data schema right early, enforce storage limits proactively, and invest in a clean reader view that respects reading progress. These elements together determine whether users will actually rely on the extension when they go offline, or quietly uninstall it after the first frustrating experience.
 
 Whether implementing a simple personal archive or a full-featured read-later service, understanding these core concepts enables developers to build extensions that serve users reliably regardless of connectivity. The key lies in choosing the right combination of storage, extraction, and synchronization strategies for your specific requirements.
 

@@ -36,11 +36,11 @@ Here's a simplified implementation pattern:
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'expandText') {
     const { trigger, context } = request;
-    
+
     // Retrieve snippet from storage
     chrome.storage.local.get(['snippets'], ({ snippets }) => {
       const snippet = snippets.find(s => s.trigger === trigger);
-      
+
       if (snippet && snippet.useAI) {
         // Call AI API for intelligent expansion
         fetchAIExpansion(snippet.prompt, context)
@@ -94,22 +94,22 @@ document.addEventListener('keydown', async (e) => {
   if (e.target.matches('input[autocomplete], textarea, [contenteditable="true"]')) {
     return;
   }
-  
+
   buffer += e.key;
-  
+
   // Check for matching trigger
   const trigger = buffer.slice(-MAX_BUFFER).match(/;(\w+)$/);
   if (trigger) {
     const abbreviation = trigger[1];
     const context = getSurroundingText(e.target);
-    
+
     // Send expansion request to background
     const response = await chrome.runtime.sendMessage({
       action: 'expandText',
       trigger: abbreviation,
       context: context
     });
-    
+
     if (response.expanded) {
       // Replace the trigger text with expansion
       replaceText(abbreviation, response.expanded);
@@ -140,7 +140,7 @@ For production extensions, consider using chrome.storage.sync for cross-device c
 const SnippetManager = {
   async addSnippet(trigger, text, options = {}) {
     const { snippets = [] } = await chrome.storage.sync.get('snippets');
-    
+
     const newSnippet = {
       trigger,
       text,
@@ -149,17 +149,17 @@ const SnippetManager = {
       category: options.category || 'general',
       createdAt: Date.now()
     };
-    
+
     snippets.push(newSnippet);
     await chrome.storage.sync.set({ snippets });
     return newSnippet;
   },
-  
+
   async getSnippets() {
     const { snippets = [] } = await chrome.storage.sync.get('snippets');
     return snippets;
   },
-  
+
   async deleteSnippet(trigger) {
     const { snippets = [] } = await chrome.storage.sync.get('snippets');
     const filtered = snippets.filter(s => s.trigger !== trigger);
@@ -189,6 +189,69 @@ AI text expanders shine in several developer-focused scenarios:
 
 **API Responses**: Standardize customer support responses with context-aware AI that references specific user queries.
 
+## Handling Edge Cases in Trigger Detection
+
+Reliable trigger detection is harder than it looks. Several edge cases will break a naive implementation.
+
+**Rich text editors.** Many modern web apps use contenteditable divs or custom editors like Quill, CodeMirror, or Monaco. These don't fire standard keyboard events in the same way as a plain textarea. For these environments, you often need to use a MutationObserver on the DOM tree rather than keydown listeners:
+
+```javascript
+const observer = new MutationObserver((mutations) => {
+  for (const mutation of mutations) {
+    if (mutation.type === 'characterData') {
+      const text = mutation.target.textContent;
+      checkForTrigger(text, mutation.target);
+    }
+  }
+});
+
+observer.observe(document.body, {
+  subtree: true,
+  characterData: true
+});
+```
+
+**Input method editors (IME).** Users typing in Chinese, Japanese, Korean, or other CJK languages use IME composition. During composition, the keydown events fire differently and your buffer logic can corrupt the composition session. Use the `compositionstart` and `compositionend` events to pause trigger detection:
+
+```javascript
+let composing = false;
+
+document.addEventListener('compositionstart', () => { composing = true; });
+document.addEventListener('compositionend', () => { composing = false; });
+
+document.addEventListener('keydown', (e) => {
+  if (composing) return;
+  // normal trigger logic
+});
+```
+
+**Undo behavior.** When your extension replaces text via `document.execCommand('insertText')`, it creates an undo entry. Users who hit Ctrl+Z will undo the expansion and see the raw trigger again, which can be confusing. A better approach is to replace both the trigger and any preceding delimiter in a single execCommand call so the undo restores a clean state.
+
+## Designing a Snippet Library That Scales
+
+For individual users, a flat list of snippets works fine. For teams or high-volume use, you need a more structured approach.
+
+**Category-based organization.** Group snippets by context: `support`, `engineering`, `legal`, `sales`. Your popup interface can then filter by category, making large libraries browsable.
+
+**Versioned snippets.** When AI generates an expansion, store the result with a timestamp and the prompt that produced it. This lets users review what was generated, roll back to a previous version, and identify when a prompt stopped producing good output.
+
+**Conflict detection.** As snippet libraries grow, trigger collisions become a real problem. Two team members might define different expansions for `;intro`. Implement a validation step in `addSnippet` that checks for existing triggers before writing:
+
+```javascript
+async addSnippet(trigger, text, options = {}) {
+  const { snippets = [] } = await chrome.storage.sync.get('snippets');
+
+  const conflict = snippets.find(s => s.trigger === trigger);
+  if (conflict) {
+    throw new Error(`Trigger "${trigger}" already exists in category: ${conflict.category}`);
+  }
+
+  // proceed with save
+}
+```
+
+**Export and import.** Power users maintain their snippet library across machines and browser reinstalls. Provide a JSON export format and a corresponding import function that validates the schema before writing. This is also useful for team onboarding — new hires import the team library on day one.
+
 ## Optimization Considerations
 
 When building or using AI text expanders, consider these performance aspects:
@@ -197,9 +260,21 @@ When building or using AI text expanders, consider these performance aspects:
 - **Token Usage**: Structure prompts efficiently to minimize API costs
 - **Privacy**: Be cautious about sending sensitive context to external APIs; consider local models for confidential data
 
+## Choosing Between Local and Remote AI Models
+
+The question of where AI inference happens is not just a performance decision — it directly affects what data leaves the user's machine.
+
+Remote API calls to services like Anthropic or OpenAI give you access to the most capable models with no infrastructure to manage. The tradeoff is that every expansion request containing context sends that context off-device. For developers typing in codebases with proprietary code, or support agents working with customer PII, this is a real concern.
+
+Local models running in the browser via WebAssembly (tools like WebLLM or transformers.js) keep all data on device. The current generation of browser-local models is noticeably less capable than their cloud counterparts, but for structured tasks like filling in a documentation template or generating a polite email sign-off, they perform well enough. Latency is also fully predictable — no network round trips, no API rate limits.
+
+A practical hybrid approach: use local inference for short, structured templates and reserve remote API calls for complex generation tasks where quality matters more than speed. You can make this configurable per snippet by adding an `inferenceMode` field — set it to `'local'` by default and override it to `'remote'` only on snippets that genuinely need the more capable model.
+
 ## Conclusion
 
 AI text expander chrome extensions bridge the gap between simple text substitution and intelligent automation. By combining trigger-based expansion with AI-powered generation, developers and power users can create highly personalized text automation that adapts to their specific workflows. The Chrome Extension platform provides robust APIs for building production-quality implementations with sync support, cross-device availability, and flexible integration options.
+
+The most durable implementations treat the snippet library as a first-class data structure — versioned, categorized, and exportable — and give users explicit control over where inference happens. Start with a minimal trigger detection loop, validate it against edge cases like IME and rich text editors, then layer in AI capabilities once the foundation is solid.
 
 
 ## Related Reading

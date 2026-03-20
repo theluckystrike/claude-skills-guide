@@ -154,6 +154,51 @@ app.post('/api/approve', async (req, res) => {
 });
 ```
 
+## Scoping Permissions During Review
+
+The permission list in a Chrome extension's manifest is the primary attack surface to evaluate. Reviewers who lack security backgrounds often approve extensions without examining what permissions actually allow. Build permission explanations directly into your review interface so approvers understand what they are signing off on.
+
+The permissions that warrant the most scrutiny in enterprise environments:
+
+`webRequest` and `webRequestBlocking`: These allow the extension to intercept, inspect, and modify all HTTP requests the browser makes—including authenticated sessions to your internal tools. An extension with these permissions that connects to an external server is a potential data exfiltration path. Treat this combination as high-risk regardless of the vendor's stated purpose.
+
+`cookies`: Grants read access to cookies on any domain the extension has host permissions for. Combined with broad host patterns like `<all_urls>`, this means session cookies for every web application your employees use.
+
+`nativeMessaging`: Allows the extension to communicate with a native application installed on the host machine, bypassing the browser sandbox entirely. Extensions using this permission need OS-level review, not just browser-level review.
+
+`declarativeNetRequest`: The modern replacement for `webRequest` in Manifest V3. Less dangerous than `webRequestBlocking` because it cannot read request content, but it can still redirect or block requests based on rules—relevant for compliance.
+
+Encode these distinctions in your scoring rubric so reviewers do not have to hold this knowledge in their heads. A reviewer approving an extension with `webRequest` plus `<all_urls>` should see a clear warning before they can proceed.
+
+## Integrating with Existing IT Systems
+
+Most enterprise IT teams already run ticketing and approval systems. Building a parallel approval portal that employees ignore is worse than no portal at all. The practical approach is integrating the extension approval workflow into systems employees already use.
+
+For organizations on ServiceNow, create a custom request catalog item for extension approvals. The catalog form captures the extension ID, justification, and business owner. ServiceNow's built-in approval flows handle the routing, notifications, and audit trail. On approval, a ServiceNow workflow can call your deployment API to trigger force-installation via the Google Workspace Admin SDK.
+
+For Jira-based organizations, a custom issue type with required fields works similarly. A Jira automation rule watches for issues transitioning to Approved status and calls a webhook:
+
+```javascript
+// Webhook handler receiving Jira approval event
+app.post('/webhooks/jira-approval', async (req, res) => {
+  const { issue } = req.body;
+  const extensionId = issue.fields.customfield_10050;
+  const approvedBy = issue.fields.assignee.emailAddress;
+
+  await db.approvals.insert({
+    extensionId,
+    approvedBy,
+    approvedAt: new Date(),
+    issueKey: issue.key
+  });
+
+  await deployExtension(extensionId);
+  res.status(200).json({ status: 'deployment triggered' });
+});
+```
+
+Slack-native teams can use a Slack workflow with a form submission step, routed to an approval channel where reviewers respond with emoji reactions or block-kit buttons. The Slack API posts the decision back to your system. This approach has lower adoption friction than a dedicated portal because it lives where reviewers already work.
+
 ## Handling Updates and Re-approval
 
 Chrome extensions update automatically, which can introduce new permissions or changed behavior. Your workflow must account for this:
@@ -162,7 +207,52 @@ Chrome extensions update automatically, which can introduce new permissions or c
 2. **Re-assessment triggers**: Define thresholds that require re-review (new permissions, major version bumps)
 3. **Auto-revocation**: Maintain the ability to quickly disable an extension fleet-wide if a critical vulnerability emerges
 
-Schedule quarterly reviews of all approved extensions. Document your findings and update approvals as needed.
+For automated update detection, poll the Chrome Web Store API against your approved extension inventory and compare manifest versions:
+
+```javascript
+async function checkForUpdates(approvedExtensions) {
+  const updates = [];
+  for (const ext of approvedExtensions) {
+    const current = await fetchCWSManifest(ext.extensionId);
+    if (current.version !== ext.approvedVersion) {
+      const newPerms = current.permissions.filter(
+        p => !ext.approvedPermissions.includes(p)
+      );
+      updates.push({
+        extensionId: ext.extensionId,
+        previousVersion: ext.approvedVersion,
+        newVersion: current.version,
+        addedPermissions: newPerms,
+        requiresReview: newPerms.length > 0
+      });
+    }
+  }
+  return updates;
+}
+```
+
+Extensions that added new permissions automatically trigger a re-review ticket. Extensions that updated without permission changes are logged but do not require manual approval unless they cross a major version boundary. Define those boundaries explicitly in your policy document so reviewers apply them consistently.
+
+Schedule quarterly reviews of all approved extensions regardless of update activity. Vendors change ownership, get acquired, or introduce malicious updates that slip through permission checks. A quarterly review forces a fresh look at whether each extension still serves its original purpose and whether the vendor's reputation remains intact.
+
+## Enforcing Allowlists via Group Policy
+
+For Windows-managed devices not using Google Workspace, Group Policy provides an enforcement mechanism. Chrome's administrative templates expose the `ExtensionInstallAllowlist` and `ExtensionInstallBlocklist` policies.
+
+Deploy the Chrome ADMX templates to your Group Policy Central Store, then configure the allowlist under `Computer Configuration > Administrative Templates > Google > Google Chrome > Extensions`:
+
+```
+ExtensionInstallAllowlist:
+  1 = abcdefghijklmnopqrstuvwxyz  (approved extension 1)
+  2 = zyxwvutsrqponmlkjihgfedcba  (approved extension 2)
+
+ExtensionInstallBlocklist:
+  1 = *  (block all not in allowlist)
+```
+
+Setting the blocklist to `*` with an explicit allowlist creates a default-deny posture. Employees attempting to install an unapproved extension see a policy error from Chrome rather than a permission error, which directs them toward the approval process rather than toward workarounds.
+
+For macOS endpoints managed via Jamf, deploy equivalent Chrome preferences as a plist configuration profile. The key structure mirrors the Group Policy names, translated to Chrome's preference namespace under `com.google.Chrome`.
 
 ## Building Your Workflow Starting Points
 
