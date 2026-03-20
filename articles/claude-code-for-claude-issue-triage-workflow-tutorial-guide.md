@@ -7,6 +7,8 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-claude-issue-triage-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills, workflow, automation, issue-tracking]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -203,4 +205,14 @@ Periodically review these corrections to refine your classification criteria.
 Claude Code transforms issue triage from a manual chore into an automated workflow that scales with your project. By combining carefully crafted skills with GitHub's CLI and API, you can automatically classify, label, and route issues while maintaining human oversight for complex cases. Start with simple label automation, then gradually expand to more sophisticated classification as your triage skill improves.
 
 The key is treating your triage system as a collaborative effort between Claude and your team—automating the routine while keeping humans available for nuanced decisions that require domain expertise or contextual judgment.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

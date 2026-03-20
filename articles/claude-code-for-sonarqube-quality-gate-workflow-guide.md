@@ -7,6 +7,8 @@ author: Claude Skills Guide
 permalink: /claude-code-for-sonarqube-quality-gate-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+score: 7
+reviewed: true
 ---
 
 {% raw %}
@@ -205,4 +207,14 @@ Integrating Claude Code with SonarQube creates a robust, automated quality gate 
 Start with the basic integration outlined in this guide, then gradually add custom checks tailored to your project's specific needs. The investment in quality automation pays dividends in reduced bugs, improved security, and more maintainable codebases.
 
 Remember: quality gates work best when they're collaborative tools that guide developers toward better code, not obstacles that slow down delivery. Use Claude Code's intelligent processing capabilities to create a workflow that educates and empowers your team while protecting your production systems.
+
+
+## Related Reading
+
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}
