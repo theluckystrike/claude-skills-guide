@@ -1,294 +1,253 @@
 ---
-
-
 layout: default
-title: "Chrome Extension Core Web Vitals Checker: A Practical Guide"
-description: "Learn how to build and use a Chrome extension for checking Core Web Vitals. Practical code examples for measuring LCP, FID, and CLS in your browser."
+title: "Chrome Extension Core Web Vitals Checker: Developer Guide"
+description: "Build a Chrome extension to measure Core Web Vitals directly in your browser. Practical code examples, APIs, and implementation patterns for developers and power users."
 date: 2026-03-15
-author: "Claude Skills Guide"
+author: theluckystrike
 permalink: /chrome-extension-core-web-vitals-checker/
-reviewed: true
-score: 8
-categories: [guides]
-tags: [claude-code, claude-skills]
 ---
 
+{% raw %}
+# Chrome Extension Core Web Vitals Checker: Developer Guide
 
-# Chrome Extension Core Web Vitals Checker: A Practical Guide
+Core Web Vitals have become the standard for measuring web performance and user experience. Building a Chrome extension that checks these metrics gives you real-time insights without leaving your browser. This guide walks you through creating a functional Core Web Vitals checker extension from scratch.
 
-Core Web Vitals have become essential metrics for understanding web performance and user experience. Google uses these metrics as ranking signals, making them critical for developers and SEO professionals alike. A Chrome extension that checks Core Web Vitals provides immediate feedback without requiring external tools or command-line interfaces.
+## What Are Core Web Vitals
 
-This guide walks you through understanding Core Web Vitals, building a Chrome extension to measure them, and applying the results to improve your websites.
+Core Web Vitals consist of three metrics that Google uses to evaluate page experience:
 
-## Understanding the Three Core Web Vitals
+- **Largest Contentful Paint (LCP)** measures loading performance. A good LCP is under 2.5 seconds.
+- **First Input Delay (FID)** measures interactivity. A good FID is under 100 milliseconds.
+- **Cumulative Layout Shift (CLS)** measures visual stability. A good CLS is under 0.1.
 
-Core Web Vitals consist of three specific metrics that measure different aspects of user experience:
+Building an extension to track these metrics requires understanding the Chrome APIs available for performance measurement and how to extract meaningful data from them.
 
-**Largest Contentful Paint (LCP)** measures loading performance. It marks the point when the largest content element in the viewport becomes visible. Good LCP occurs under 2.5 seconds, while anything above 4.0 seconds needs improvement. This metric matters because users often leave pages that take too long to display meaningful content.
+## Extension Architecture
 
-**First Input Delay (FID)** measures interactivity. It records the time between a user's first interaction (click, tap, keypress) and the browser's ability to respond. Good FID is under 100 milliseconds, while poor FID exceeds 300 milliseconds. Heavy JavaScript execution blocking the main thread typically causes high FID values.
+Your Core Web Vitals checker will need three main components:
 
-**Cumulative Layout Shift (CLS)** measures visual stability. It quantifies how much page content shifts unexpectedly during loading. Good CLS stays below 0.1, while values above 0.25 indicate poor stability. Elements loading without reserved space or dynamically injected content often cause CLS issues.
+1. **Content script** - Injected into pages to collect performance data
+2. **Background worker** - Handles message passing and data aggregation
+3. **Popup UI** - Displays metrics to users in a clean interface
 
-## Building a Core Web Vitals Checker Extension
+The content script uses the Performance API to gather metrics, then communicates with the popup through Chrome's message passing system.
 
-Creating a Chrome extension to measure these metrics requires understanding the Performance Observer API and the web-vitals library from Google. Here is a practical implementation:
+## Setting Up the Manifest
 
-### Project Structure
-
-```
-core-web-vitals-extension/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── content.js
-└── background.js
-```
-
-### Manifest Configuration
-
-Your extension needs proper permissions to access performance data:
+Every Chrome extension starts with the manifest file. For a Core Web Vitals checker, you need Manifest V3 with specific permissions:
 
 ```json
 {
   "manifest_version": 3,
   "name": "Core Web Vitals Checker",
-  "version": "1.0",
-  "description": "Measure LCP, FID, and CLS for any webpage",
-  "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["<all_urls>"],
+  "version": "1.0.0",
+  "description": "Measure Core Web Vitals on any page",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "action": {
-    "default_popup": "popup.html"
-  }
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
 }
 ```
 
-### Measuring Web Vitals in Content Script
+The `activeTab` permission lets your extension interact with the currently active tab, while `scripting` allows you to execute content scripts. The host permissions `<all_urls>` grants access to measure performance on any website.
 
-The content script uses the web-vitals library to capture metrics:
+## Collecting Performance Metrics
+
+The content script is where the actual measurement happens. You'll use the Performance API to extract Core Web Vitals data:
 
 ```javascript
 // content.js
-function onCLS(metric) {
-  chrome.runtime.sendMessage({
-    type: 'CLS',
-    value: metric.value,
-    id: metric.id
+function getCoreWebVitals() {
+  return new Promise((resolve) => {
+    if (!window.PerformanceObserver) {
+      resolve(null);
+      return;
+    }
+
+    const metrics = {};
+    let observer;
+
+    // Measure LCP
+    try {
+      observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        metrics.lcp = Math.round(lastEntry.renderTime || lastEntry.loadTime);
+      });
+      observer.observe({ type: 'largest-contentful-paint', buffered: true });
+    } catch (e) {
+      console.log('LCP not supported');
+    }
+
+    // Measure CLS
+    try {
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            metrics.cls = (metrics.cls || 0) + (entry as any).value;
+          }
+        }
+      });
+      clsObserver.observe({ type: 'layout-shift', buffered: true });
+    } catch (e) {
+      console.log('CLS not supported');
+    }
+
+    // Get FID from event timing
+    const paintEntries = performance.getEntriesByType('paint');
+    const fcpEntry = paintEntries.find(e => e.name === 'first-contentful-paint');
+    if (fcpEntry) {
+      metrics.fcp = Math.round(fcpEntry.startTime);
+    }
+
+    // Return metrics after a delay to ensure collection
+    setTimeout(() => {
+      resolve(metrics);
+    }, 2000);
   });
 }
 
-function onLCP(metric) {
-  chrome.runtime.sendMessage({
-    type: 'LCP',
-    value: metric.value,
-    id: metric.id
-  });
-}
-
-function onFID(metric) {
-  chrome.runtime.sendMessage({
-    type: 'FID',
-    value: metric.value,
-    id: metric.id
-  });
-}
-
-// Use web-vitals library or implement manually
-if (typeof webVitals !== 'undefined') {
-  webVitals.onCLS(onCLS);
-  webVitals.onLCP(onLCP);
-  webVitals.onFID(onFID);
-}
+// Listen for messages from popup
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'getMetrics') {
+    getCoreWebVitals().then(sendResponse);
+    return true;
+  }
+});
 ```
 
-### Popup Display
+This script uses PerformanceObserver to watch for Largest Contentful Paint and layout shift events. The CLS calculation filters out entries with recent user input, as those shouldn't count toward cumulative shift. The script returns metrics after a 2-second delay to ensure enough time for all paint events to fire.
 
-The popup receives messages from the content script and displays results:
+## Building the Popup Interface
+
+The popup provides the user-facing interface. It requests metrics from the content script and displays them with visual indicators:
+
+```html
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 300px; padding: 16px; font-family: system-ui, sans-serif; }
+    .metric { margin-bottom: 12px; padding: 12px; border-radius: 8px; background: #f5f5f5; }
+    .metric.good { border-left: 4px solid #34d399; }
+    .metric.needs-improvement { border-left: 4px solid #fbbf24; }
+    .metric.poor { border-left: 4px solid #f87171; }
+    .metric-label { font-size: 12px; color: #666; }
+    .metric-value { font-size: 24px; font-weight: bold; margin-top: 4px; }
+    h2 { margin: 0 0 16px 0; font-size: 18px; }
+    .refresh { width: 100%; padding: 8px; background: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .refresh:hover { background: #2563eb; }
+  </style>
+</head>
+<body>
+  <h2>Core Web Vitals</h2>
+  <div id="metrics"></div>
+  <button class="refresh" id="refreshBtn">Refresh Metrics</button>
+  <script src="popup.js"></script>
+</body>
+</html>
+```
+
+## Handling Metric Display Logic
+
+The popup JavaScript bridges the gap between the content script and the UI:
 
 ```javascript
 // popup.js
-const metrics = { LCP: null, FID: null, CLS: null };
-
-chrome.runtime.onMessage.addListener((message) => {
-  if (message.type === 'LCP') metrics.LCP = message.value;
-  if (message.type === 'FID') metrics.FID = message.value;
-  if (message.type === 'CLS') metrics.CLS = message.value;
-  
-  updateDisplay();
-});
-
-function updateDisplay() {
-  const results = document.getElementById('results');
-  results.innerHTML = `
-    <p>LCP: ${metrics.LCP ? metrics.LCP.toFixed(2) + 'ms' : 'Measuring...'}</p>
-    <p>FID: ${metrics.FID ? metrics.FID.toFixed(2) + 'ms' : 'Measuring...'}</p>
-    <p>CLS: ${metrics.CLS ? metrics.CLS.toFixed(3) : 'Measuring...'}</p>
-  `;
-}
-```
-
-## Manual Measurement Using Chrome DevTools
-
-If you prefer not to build an extension, Chrome DevTools provides built-in Core Web Vitals measurement through the Performance panel.
-
-Open DevTools (F12 or Cmd+Opt+I), navigate to the Lighthouse tab, and run an analysis. Lighthouse provides detailed Core Web Vitals reports with specific recommendations:
-
-```javascript
-// Alternative: Use Performance API directly in console
-const observer = new PerformanceObserver((list) => {
-  for (const entry of list.getEntries()) {
-    console.log(`${entry.name}: ${entry.value}`);
+function getRating(value, type) {
+  if (type === 'lcp') {
+    return value < 2500 ? 'good' : value < 4000 ? 'needs-improvement' : 'poor';
+  } else if (type === 'fid') {
+    return value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor';
+  } else if (type === 'cls') {
+    return value < 0.1 ? 'good' : value < 0.25 ? 'needs-improvement' : 'poor';
   }
-});
-
-observer.observe({ type: 'largest-contentful-paint', buffered: true });
-observer.observe({ type: 'first-input', buffered: true });
-observer.observe({ type: 'layout-shift', buffered: true });
-```
-
-## Interpreting Results and Taking Action
-
-Once you have metrics, understanding what they mean and how to improve them matters most.
-
-### Improving LCP
-
-Largest Contentful Paint issues typically stem from slow server response times, render-blocking resources, or client-side rendering delays. Address these problems by:
-
-- Enabling compression (gzip or Brotli) on your server
-- Optimizing images using modern formats like WebP or AVIF
-- Preloading critical resources with `<link rel="preload">`
-- Using a CDN to serve assets from edge locations closer to users
-
-For a WordPress site, plugins like Perfmatters or WP Rocket can handle many of these optimizations automatically.
-
-### Improving FID
-
-First Input Delay problems indicate JavaScript execution is blocking the main thread. Reduce FID by:
-
-- Code-splitting your JavaScript bundles to load only what is needed
-- Deferring non-critical JavaScript with `defer` or `async` attributes
-- Removing unused code using tree-shaking and code minimization
-- Breaking long tasks into smaller chunks using `requestIdleCallback()`
-
-```javascript
-// Example: Breaking a long task into chunks
-function processItems(items) {
-  const chunkSize = 10;
-  let index = 0;
-  
-  function processChunk() {
-    const end = Math.min(index + chunkSize, items.length);
-    for (; index < end; index++) {
-      processItem(items[index]);
-    }
-    if (index < items.length) {
-      requestIdleCallback(processChunk);
-    }
-  }
-  
-  requestIdleCallback(processChunk);
-}
-```
-
-### Improving CLS
-
-Cumulative Layout Shift issues occur when content shifts after initial render. Prevent CLS by:
-
-- Setting explicit width and height attributes on images and videos
-- Reserving space for dynamically loaded content with min-height
-- Avoiding inserting content above existing content unless user-initiated
-- Using font-display: optional or preload for web fonts
-
-```css
-/* Example: Preventing CLS from font loading */
-@font-face {
-  font-family: 'CustomFont';
-  src: url('/fonts/custom-font.woff2') format('woff2');
-  font-display: optional;
+  return 'needs-improvement';
 }
 
-/* Example: Setting dimensions for images */
-.hero-image {
-  width: 800px;
-  height: 600px;
-  aspect-ratio: 4 / 3;
-}
-```
+function displayMetrics(metrics) {
+  const container = document.getElementById('metrics');
+  container.innerHTML = '';
 
-## Using Existing Extensions
+  const metricDefinitions = [
+    { key: 'lcp', label: 'Largest Contentful Paint', unit: 'ms' },
+    { key: 'cls', label: 'Cumulative Layout Shift', unit: '' },
+    { key: 'fcp', label: 'First Contentful Paint', unit: 'ms' }
+  ];
 
-Several ready-made extensions can measure Core Web Vitals without building your own:
+  metricDefinitions.forEach(def => {
+    const value = metrics[def.key];
+    if (value === undefined) return;
 
-- **Web Vitals** by Google provides real-time metrics in a simple interface
-- **Lighthouse** extension runs comprehensive performance audits including Core Web Vitals
-- **PageSpeed Insights** extension shows field data from Chrome User Experience Report
+    const rating = getRating(value, def.key);
+    const displayValue = def.unit ? `${value}${def.unit}` : value.toFixed(3);
 
-These tools work well for quick audits, while custom extensions offer more control over measurement methodology.
-
-## Integration with Development Workflow
-
-For ongoing monitoring, consider integrating Core Web Vitals into your CI/CD pipeline:
-
-```yaml
-# Example: GitHub Actions workflow
-- name: Core Web Vitals Check
-  uses: google lighthouse-ci/action@v1
-  with:
-    urls: https://your-site.com
-    budgetPath: ./lighthouse Budget.json
-```
-
-Setting performance budgets in your build process ensures metrics do not degrade over time.
-
-### Development Workflow Best Practices
-
-Use a Web Vitals extension continuously during development to catch regressions early:
-
-1. **Establish a baseline**: Before making significant changes, note current Web Vitals values for key pages
-2. **Test after each major change**: Check metrics after updating styles, adding JavaScript, or modifying DOM structure
-3. **Check mobile simulation**: Use Chrome's device toolbar to simulate mobile conditions alongside the extension
-
-The extension proves especially valuable when optimizing third-party scripts. Many analytics, ads, and widget integrations cause CLS issues or increase FID — with the extension running, you can immediately see whether adding a new script degrades user experience.
-
-### Real User Monitoring Integration
-
-Extensions handle manual testing, but production requires continuous monitoring. Integrate the web-vitals library for real user data collection:
-
-```javascript
-import {getCLS, getFID, getLCP} from 'web-vitals';
-
-function sendToAnalytics({name, delta, id}) {
-  ga('send', 'event', {
-    eventCategory: 'Web Vitals',
-    eventAction: name,
-    eventValue: Math.round(name === 'CLS' ? delta * 1000 : delta),
-    eventLabel: id,
-    nonInteraction: true,
+    const div = document.createElement('div');
+    div.className = `metric ${rating}`;
+    div.innerHTML = `
+      <div class="metric-label">${def.label}</div>
+      <div class="metric-value">${displayValue}</div>
+    `;
+    container.appendChild(div);
   });
 }
 
-getCLS(sendToAnalytics);
-getFID(sendToAnalytics);
-getLCP(sendToAnalytics);
+async function fetchMetrics() {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  if (!tab || !tab.id) return;
+
+  try {
+    const response = await chrome.tabs.sendMessage(tab.id, { action: 'getMetrics' });
+    if (response) {
+      displayMetrics(response);
+    }
+  } catch (error) {
+    document.getElementById('metrics').innerHTML = 
+      '<p>Unable to fetch metrics. Try refreshing the page.</p>';
+  }
+}
+
+document.getElementById('refreshBtn').addEventListener('click', fetchMetrics);
+fetchMetrics();
 ```
 
-This captures data across different devices, network conditions, and geographic locations that manual testing cannot replicate.
+The rating function applies Google's official thresholds for each metric, coloring the results green for good, yellow for needs improvement, and red for poor performance. The fetchMetrics function queries the active tab and requests performance data from the content script.
 
-### Browser Compatibility
+## Testing Your Extension
 
-Web Vitals extensions work in Chrome, Edge, Brave, and other Chromium-based browsers. Firefox users have fewer options but can use the Web Vitals Extension from the Mozilla add-ons store. Safari's extensions framework has limited support for Web Vitals APIs at this time.
+To test the extension locally:
 
-## Conclusion
+1. Open Chrome and navigate to `chrome://extensions/`
+2. Enable "Developer mode" in the top right corner
+3. Click "Load unpacked" and select your extension folder
+4. Visit any website and click the extension icon to see metrics
 
-A Chrome extension for checking Core Web Vitals gives you immediate, actionable performance data directly in your browser. Whether you build your own extension using the web-vitals library or use existing tools, understanding LCP, FID, and CLS helps you create faster, more stable websites that provide better user experiences.
+For debugging, check the popup console and the background service worker console in the extensions page. PerformanceObserver can be finicky, so test across multiple sites to ensure reliable data collection.
 
-Start by measuring your own sites, identify the worst-performing metrics, and work through the specific optimizations for each issue. Performance improvements compound—better Core Web Vitals lead to higher user engagement, better search rankings, and improved conversion rates.
+## Limitations and Considerations
 
+This approach captures metrics at the time of measurement, which differs from field data that Chrome's CrUX reports. Your extension provides lab data—a snapshot of performance under specific conditions. For comprehensive analysis, combine your extension with PageSpeed Insights or Chrome DevTools.
 
-## Related Reading
+Some Single Page Applications may not trigger fresh LCP events on navigation, requiring users to manually refresh after content changes. The extension works best on traditional multi-page sites where full page loads occur.
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+Building this extension gives you a practical tool for quick performance audits while learning the Chrome extension APIs and Performance API in depth.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
