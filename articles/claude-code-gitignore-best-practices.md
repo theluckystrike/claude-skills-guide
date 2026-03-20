@@ -32,13 +32,24 @@ Add these patterns to your project's `.gitignore` to keep your repository clean 
 # Claude Code directories
 .claude/
 .claude/settings.json
+.claude/settings.local.json
+
+# Claude Code skills cache and logs
 .claude/skills/.cache/
 .claude/skills/*.log
+.claude/skills/state/
+.claude/skills/tmp/
+
+# Claude Code conversation and session data
+.claude/conversations/
+.claude/sessions/
+.claude/checkpoints/
 
 # Skill-specific exclusions
 *.skill-backup
 skill-state.json
 conversation-history/
+.claude-history
 
 # Generated artifacts
 dist/
@@ -69,6 +80,18 @@ __pycache__/
 .DS_Store
 Thumbs.db
 ```
+
+A few patterns deserve special attention. The `.claude/settings.local.json` file is where Claude Code stores per-machine overrides — things like local MCP server paths or workspace-specific tool permissions that differ from developer to developer. The `.claude/conversations/` and `.claude/sessions/` directories accumulate quickly when you use Claude Code heavily; they are safe to regenerate and add significant size to a repository if left unignored.
+
+If you want to commit your shared Claude Code settings (useful for team alignment on which skills are enabled), you can selectively un-ignore the base settings file while keeping local overrides excluded:
+
+```
+# Commit base settings but not local overrides
+!.claude/settings.json
+.claude/settings.local.json
+```
+
+This pattern lets your team share a baseline configuration through source control without clobbering each developer's local preferences.
 
 ## Skill-Specific Gitignore Recommendations
 
@@ -106,19 +129,64 @@ docx-cache/
 
 ## Global vs Project-Level Gitignore
 
-Consider setting up a global gitignore for Claude Code that applies to all your projects:
+Git supports two tiers of ignore rules, and understanding the difference is important for Claude Code workflows.
+
+**Project-level `.gitignore`** lives in your repository root and is committed to source control. Every developer who clones the repo gets these rules automatically. Use it for patterns that are true for everyone — things like `node_modules/`, `dist/`, and skill output directories that your project always generates.
+
+**Global gitignore** lives on your machine and applies to every repository you touch, without being committed anywhere. This is the right place for patterns that are specific to your environment — your editor's scratch files, OS metadata, and Claude Code's local data directories.
+
+Set up a global gitignore file once and it covers all your repositories:
 
 ```bash
 git config --global core.excludesFile ~/.gitignore_global
 ```
 
-Add Claude Code patterns to `~/.gitignore_global`:
+Then populate `~/.gitignore_global` with machine-specific patterns:
 
 ```
-# Claude Code global
-.claude/
-.claude/
+# Claude Code local data (all projects)
+.claude/conversations/
+.claude/sessions/
+.claude/checkpoints/
+.claude/settings.local.json
+.claude-history
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# VS Code workspace settings
+.vscode/settings.json
+.vscode/*.code-workspace
+
+# Vim / Emacs swap and backup files
+*.swp
+*.swo
+*~
+\#*\#
 ```
+
+The rule of thumb: if a pattern applies to your personal development environment rather than the project itself, it belongs in the global gitignore, not in the project's `.gitignore`. This keeps project-level ignore files focused and readable for other contributors.
+
+**When team settings need sharing**, keep `.claude/settings.json` (the base config) in the project `.gitignore` as an explicit exception:
+
+```
+# Ignore most of .claude/ but share the base settings
+.claude/
+!.claude/settings.json
+```
+
+This approach is common on teams that want all developers running the same skill set without enforcing local machine paths or personal preferences.
 
 ## Verifying Your Gitignore
 
@@ -137,10 +205,166 @@ git check-ignore -v filename
 
 ## Common Mistakes to Avoid
 
-1. **Committing `.claude/settings.json`** — This file may contain API keys and project-specific configurations
-2. **Including skill cache directories** — These can be regenerated and add noise to diffs
-3. **Forgetting to exclude `.env` files** — Always keep environment variables local
-4. **Not excluding build directories** — Generated code should not be versioned
+### Ignoring Lock Files
+
+One of the most damaging gitignore mistakes is accidentally excluding lock files. Lock files (`package-lock.json`, `yarn.lock`, `poetry.lock`, `Gemfile.lock`) record the exact dependency versions your project used when it last worked. They should almost always be committed.
+
+The problem typically happens when a developer adds an overly broad pattern like `*.lock` intending to exclude database lock files or editor lock files, but accidentally catches package manager lock files at the same time. Always be explicit:
+
+```
+# Safe: exclude only specific lock-like files
+*.swp
+*.swo
+
+# Dangerous: excludes package-lock.json and yarn.lock too
+*.lock
+```
+
+### Over-Ignoring Source Directories
+
+Adding `src/` or `lib/` to `.gitignore` by mistake wipes your source code from tracking. This usually happens when someone copies a gitignore template from a different project type. Always review templates before applying them — a Node.js template might safely ignore `lib/` (where TypeScript compiles to), but in a Python project `lib/` might be where your actual source lives.
+
+### Committing `.claude/settings.json` with Embedded Credentials
+
+Claude Code settings files can accumulate API keys, MCP server URLs with embedded tokens, and file paths that expose your directory structure. Even if a key is rotated, its presence in git history creates a security audit trail problem. If you have already committed sensitive data, use `git filter-repo` or `BFG Repo Cleaner` to scrub history — simply deleting the file in a new commit is not enough.
+
+### Forgetting Already-Tracked Files
+
+Adding a pattern to `.gitignore` does not automatically un-track files that are already in the repository. If you accidentally committed `.claude/settings.json` and then added it to `.gitignore`, git will keep tracking it. You must explicitly remove it from tracking:
+
+```bash
+git rm --cached .claude/settings.json
+git commit -m "stop tracking claude settings"
+```
+
+The `--cached` flag removes the file from git's index without deleting it from your working directory.
+
+### Duplicate and Conflicting Patterns
+
+Gitignore files read top to bottom, and negation patterns (`!pattern`) only un-ignore something that was ignored by an earlier rule. A common mistake is placing a negation before the rule it is meant to override:
+
+```
+# Broken — negation comes before the ignore rule, so it has no effect
+!.claude/settings.json
+.claude/
+
+# Correct — negate after the broader ignore
+.claude/
+!.claude/settings.json
+```
+
+## Gitignore Templates for Different Project Types
+
+Claude Code is used across a wide variety of project structures. Here are focused gitignore examples for the most common setups.
+
+### Node.js / TypeScript Projects
+
+```
+# Claude Code
+.claude/
+!.claude/settings.json
+.claude/settings.local.json
+.claude/skills/.cache/
+.claude/skills/*.log
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.next/
+.nuxt/
+out/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Lock files — DO NOT IGNORE
+# package-lock.json and yarn.lock should be committed
+```
+
+### Python Projects
+
+```
+# Claude Code
+.claude/
+!.claude/settings.json
+.claude/settings.local.json
+.claude/skills/.cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Distribution and packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Environment variables
+.env
+.env.local
+
+# Jupyter notebooks — optional, include if notebooks are source
+# .ipynb_checkpoints/
+```
+
+### Jekyll / Static Site Projects
+
+If you use Claude Code to generate or edit content for a Jekyll site (as this very guide does), your gitignore needs to account for both Jekyll's build output and Claude Code's working files:
+
+```
+# Claude Code
+.claude/
+!.claude/settings.json
+.claude/settings.local.json
+.claude/skills/.cache/
+
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler
+vendor/
+.bundle/
+
+# Environment
+.env
+
+# OS
+.DS_Store
+```
+
+Note that `_site/` is always safe to gitignore for Jekyll projects — GitHub Pages rebuilds it on every push, so committing it adds churn without value.
 
 ## Integrating with Claude Skills Workflow
 

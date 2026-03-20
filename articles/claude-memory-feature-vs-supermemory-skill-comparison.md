@@ -34,7 +34,15 @@ Now check the rate limiting logic in the same file
 
 Claude understands "the same file" because the conversation history is still in context. No skill is needed for this.
 
-**The limitation**: this context disappears when the session ends. Start a new session and Claude starts fresh with no memory of the previous conversation.
+Built-in session memory also shines for iterative refinement. If you ask Claude to write a function, then ask it to add error handling, then ask it to add tests, each message builds on the previous ones naturally. Claude is not re-reading files on each turn — it is drawing on everything already in the conversation window.
+
+**Where session memory wins:**
+- Multi-step refactoring where each step builds on the last
+- Debugging sessions with a tight edit-run-fix loop
+- Code review passes where you are working through a diff section by section
+- Exploratory architecture discussions where the thinking-aloud context matters
+
+**The limitation**: this context disappears when the session ends. Start a new session and Claude starts fresh with no memory of the previous conversation. This is the gap that supermemory and CLAUDE.md are designed to fill.
 
 ## The /supermemory Skill
 
@@ -65,14 +73,66 @@ What are the conventions and tech stack for this project?
 
 Claude reads back what was stored and can apply those conventions to the current task.
 
+**Where supermemory wins:**
+- Long-running projects you return to weekly or monthly — storing naming conventions, auth approach, or test patterns saves re-explaining every session
+- Accumulated decisions that evolve over time, such as "we decided in March to migrate from Redux to Zustand, here is why"
+- Personal preferences that should follow you across machines but are not appropriate for a shared CLAUDE.md
+- Post-mortems and lessons learned that should inform future debugging on the same project
+
+### More Supermemory Invocation Examples
+
+Storing a post-incident note:
+
+```
+/supermemory
+Store this incident note:
+Date: 2026-03-14
+Service: payments-api
+Root cause: missing DB index on orders.user_id caused full table scans under load
+Fix: added composite index, query time dropped from 4s to 40ms
+Lesson: always check EXPLAIN ANALYZE before merging ORM schema changes
+```
+
+Storing a style decision:
+
+```
+/supermemory
+Store project style rule:
+Project: invoice-generator
+Rule: all monetary values must use the Money value object, never raw floats
+Reason: float precision bugs burned us in Q4 2025 billing run
+```
+
+Retrieving before starting a session:
+
+```
+/supermemory
+Retrieve all stored context for the invoice-generator project including
+style rules, architectural decisions, and any incident notes.
+```
+
+Appending a new decision without overwriting old ones:
+
+```
+/supermemory
+Append to invoice-generator decisions:
+2026-03-20: switched PDF rendering from Puppeteer to WeasyPrint for
+better CSS support and smaller Docker image
+```
+
 ## Key Differences
 
-| Aspect | Built-in Session Memory | /supermemory Skill |
-|---|---|---|
-| Scope | Current session only | Persists across sessions |
-| Setup | Zero setup | Invoke with /supermemory |
-| How it works | Conversation history in context window | Skill writes to persistent storage |
-| Best for | Within-session context | Long-term project context |
+| Aspect | Built-in Session Memory | /supermemory Skill | CLAUDE.md |
+|---|---|---|---|
+| Scope | Current session only | Persists across sessions | Persists across sessions |
+| Setup | Zero — automatic | Invoke with `/supermemory` | Create the file manually |
+| How it works | Conversation history in context window | Skill writes to persistent storage | File read automatically at session start |
+| Updated by | Claude automatically (passive) | You invoke it explicitly | You edit the file manually |
+| Version control | No | No | Yes — lives in your repo |
+| Shareable with team | No | No | Yes — commit and push |
+| Handles evolving decisions | Yes (within session) | Yes (across sessions) | Only if you manually update |
+| Best for | Within-session iteration | Long-term accumulated decisions | Stable project conventions |
+| Survives machine change | No | Depends on skill backend | Yes if committed to repo |
 
 ## When to Use Each
 
@@ -80,33 +140,58 @@ Claude reads back what was stored and can apply those conventions to the current
 - You are doing a single focused task within one session
 - The context only matters for the current work
 - You are debugging a specific issue with a short feedback loop
+- You are doing a multi-pass code review and want Claude to track what it has already flagged
+- You are having an exploratory conversation about a design problem and the reasoning chain matters
 
 **Use /supermemory when:**
 - You return to a project across multiple sessions
 - You want Claude to remember architectural decisions, conventions, or preferences
 - You are building up a knowledge base about a project over time
+- You want to store post-incident lessons that should inform future debugging
+- You work across multiple machines and need context to follow you
+- You want to log the "why" behind decisions (not just what was decided, but the reasoning)
 
 **Use CLAUDE.md as an alternative to supermemory when:**
 - You want project context that is version-controllable and shareable with your team
 - The context is static rather than accumulated over time
 - You prefer explicit files over skill-managed storage
+- You want context to load automatically without any invocation step
+- The project has multiple contributors who all need the same baseline context
 
-## Combining Both
+## Combining All Three Effectively
 
-Many workflows use all three together:
+Many workflows use all three together, and each layer has a distinct role:
 
-- `CLAUDE.md` holds the stable project description: tech stack, file structure, how to run tests
-- `/supermemory` stores decisions made over time: architectural choices, lessons learned, established patterns
-- Session memory handles the ephemeral context of the current work
+- `CLAUDE.md` holds the stable project description: tech stack, file structure, how to run tests, and team conventions that rarely change
+- `/supermemory` stores decisions made over time: architectural choices, lessons learned, established patterns, and anything that evolved after the CLAUDE.md was last updated
+- Session memory handles the ephemeral context of the current work — which files are open, what was just refactored, what error message appeared two messages ago
 
-When starting a new session on a long-running project:
+**A practical session startup pattern for a long-running project:**
 
 ```
 /supermemory
 Retrieve all stored context and decisions for the payments module.
 ```
 
-Then proceed with the session, letting both the retrieved supermemory context and the evolving conversation history inform Claude's responses.
+Claude reads back the accumulated decisions. CLAUDE.md has already loaded the baseline context automatically, and the supermemory retrieval adds the evolved layer on top. Session memory then builds on both as the conversation progresses.
+
+**End-of-session storage pattern:**
+
+After a productive session where significant decisions were made, close the loop by storing what was learned:
+
+```
+/supermemory
+Append to payments-module decisions:
+- Decided to use idempotency keys on all Stripe calls to handle webhook retries safely
+- Added retry logic with exponential backoff capped at 3 attempts
+- Settled on storing raw Stripe event JSON in payment_events table for audit trail
+```
+
+Over weeks, this builds a running log that gives Claude — and you — a reliable way to reconstruct the reasoning behind the codebase.
+
+**When CLAUDE.md and supermemory diverge:**
+
+If supermemory records a decision that contradicts what is in CLAUDE.md, it is a signal to update CLAUDE.md. The rule of thumb: if a decision has become stable and is now team policy, it graduates from supermemory into CLAUDE.md where it is version-controlled and shared.
 
 ## The CLAUDE.md Alternative
 
