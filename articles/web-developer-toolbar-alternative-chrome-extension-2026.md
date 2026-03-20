@@ -157,10 +157,10 @@ Wappalyzer identifies technologies used on websites, including frameworks, CMS p
 {
   url: "example.com",
   technologies: [
-    { name: "React", categories: ["JavaScript frameworks"] },
-    { name: "Next.js", categories: ["JavaScript frameworks"] },
-    { name: "Vercel", categories: ["PaaS"] },
-    { name: "Google Analytics", categories: ["Analytics"] }
+    { name: "React", categories: [guides] },
+    { name: "Next.js", categories: [guides] },
+    { name: "Vercel", categories: [guides] },
+    { name: "Google Analytics", categories: [guides] }
   ]
 }
 ```
