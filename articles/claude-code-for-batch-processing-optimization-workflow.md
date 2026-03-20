@@ -261,6 +261,51 @@ def monitor_batch(func):
     return wrapper
 ```
 
+## Step-by-Step Guide: Building a Production Batch Pipeline
+
+Here is a concrete approach to building a reliable batch processing pipeline from scratch with Claude Code as your implementation partner.
+
+**Step 1 — Profile before you parallelize.** Before adding concurrency, run your pipeline sequentially on a representative sample and measure where time actually goes. Use Python's `cProfile` or a simple `time.perf_counter()` wrapper. Claude Code generates the profiling harness and interprets the output, identifying whether your bottleneck is I/O-bound (network, disk, database) or CPU-bound. This determines whether threading or multiprocessing will help.
+
+**Step 2 — Define your record schema and validator.** Create a Pydantic or dataclass schema that every input record must satisfy before processing. Claude Code generates the schema from your sample data and adds validation logic that routes invalid records to the dead letter queue rather than raising exceptions that halt the batch. This single step prevents the most common class of mid-batch failures.
+
+**Step 3 — Implement checkpointing on a durable store.** File-based checkpoints work for single-machine jobs, but fail silently if the disk fills or the process is killed. For production workloads, Claude Code generates a Redis or SQLite-backed checkpoint store with atomic write semantics—either the checkpoint is saved or it is not, never partially.
+
+**Step 4 — Add a progress reporter.** Long-running batches without visible progress make operators nervous. Claude Code generates a progress reporter using `tqdm` for interactive runs and structured JSON log lines for CI/CD contexts. The reporter calculates ETA based on a rolling average of per-record processing time, which is more accurate than a simple linear projection.
+
+**Step 5 — Wire up alerting for stuck batches.** A batch that stops halfway through without failing is harder to detect than one that crashes. Claude Code generates a watchdog process that monitors the checkpoint file's modification time and fires a Slack or PagerDuty alert if no progress has been recorded for more than a configurable threshold.
+
+## Common Pitfalls
+
+**Choosing thread count based on CPU cores for I/O-bound work.** For tasks that spend most of their time waiting on network or disk, the optimal thread count is often 10–50x the number of CPU cores. Starting with `cpu_count()` as your thread pool size severely under-utilizes the system. Claude Code generates a load-testing script that sweeps thread counts and reports throughput at each level, letting you find the empirical optimum for your specific workload.
+
+**Writing output files inside the processing loop without buffering.** Opening and closing a file for each record creates enormous I/O overhead. Claude Code generates buffered writers that accumulate results in memory and flush to disk in configurable batch sizes, reducing file system operations by orders of magnitude.
+
+**Not handling partial batch failures idempotently.** If your batch writes to a database and crashes halfway through, re-running without idempotency creates duplicates. Claude Code generates upsert patterns and idempotency keys so re-runs are safe. For external APIs, it generates deduplication logic based on record IDs.
+
+**Losing the original record in error logging.** When a record fails, you need the full original record in your dead letter queue, not just the error message. Teams that log only the exception lose the ability to reprocess failed records later. Claude Code generates dead letter queue writers that serialize the complete original record alongside the error context and stack trace.
+
+**Not testing with production-scale data in CI.** Batch jobs that work perfectly on 1,000 records often fail on 10 million due to memory accumulation, checkpoint file size, or database connection pool exhaustion. Claude Code generates parameterized performance tests that run against scaled-down but proportionally representative datasets in CI, catching these issues before production.
+
+## Best Practices
+
+**Separate orchestration from transformation logic.** Keep the code that decides what to process (orchestration) separate from the code that transforms individual records (business logic). Claude Code generates this separation using a strategy pattern, making it straightforward to swap out the transformation logic without changing the checkpointing, error handling, or parallelism infrastructure.
+
+**Use structured logging throughout.** Replace `print()` statements with structured JSON log lines that include the batch run ID, current record index, record ID, and processing duration. Claude Code generates a logging configuration that writes machine-readable logs to a file and human-readable logs to the console simultaneously, without duplicating configuration.
+
+**Implement dry-run mode.** Add a `--dry-run` flag that reads and validates all records, reports what would happen, but makes no writes. Claude Code generates the dry-run scaffolding that wraps every write operation in a conditional block. This is invaluable for validating a new batch configuration before committing to a multi-hour run.
+
+**Archive processed input files.** After successfully processing a batch, move the input file to an archive directory with the run timestamp appended to the filename. Claude Code generates the archive rotation logic with configurable retention policies so your archive directory does not grow unbounded.
+
+## Integration Patterns
+
+**AWS S3 and Lambda.** For serverless batch processing, Claude Code generates the S3 event trigger configuration and Lambda function that fans out processing across multiple invocations. Each Lambda invocation handles one chunk, and a coordinating Step Functions state machine tracks completion and aggregates results.
+
+**Apache Airflow DAGs.** Claude Code generates Airflow DAG definitions for your batch pipeline with proper sensor tasks that wait for input data availability, operator tasks that invoke your processing functions, and downstream tasks that notify stakeholders on completion or failure.
+
+**dbt integration for data transformation batches.** If your batch processing is primarily data transformation, Claude Code generates dbt models that replace custom Python transformation code with SQL-based transformations that are versioned, tested, and observable through the dbt lineage graph.
+
+
 ## Conclusion
 
 Optimizing batch processing workflows requires balancing throughput, reliability, and resource efficiency. Claude Code can help you implement these patterns quickly, debug issues, and iterate on your implementation. Start with the basic sequential approach, add parallelization where it matters most, implement checkpointing for long jobs, and always monitor your performance metrics.
