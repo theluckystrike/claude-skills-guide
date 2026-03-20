@@ -38,9 +38,43 @@ Create a project-specific prompt by adding a `CLAUDE.md` file in your project ro
 
 This is a Python FastAPI project using SQLAlchemy.
 Run tests with `pytest` and format with `black`.
+Use Python 3.12. Prefer pydantic v2 for data validation.
+All error messages should support both English and Chinese.
 ```
 
-When Claude Code reads this file, it understands your project conventions automatically.
+When Claude Code reads this file, it understands your project conventions automatically. Keep this file focused — under 500 characters is ideal. Verbose CLAUDE.md files slow down Claude's context processing and can push important details out of focus.
+
+### Choosing the Right Python Version
+
+Claude Code generates code that matches the Python version you specify. In 2026, most production environments run Python 3.11 or 3.12. When you mention your version in CLAUDE.md, Claude automatically uses compatible syntax:
+
+| Python Version | Key Features Used by Claude |
+|---|---|
+| 3.10 | `match` statements, `X \| Y` union types |
+| 3.11 | `ExceptionGroup`, `tomllib`, fine-grained tracebacks |
+| 3.12 | `@override`, improved f-strings, `pathlib` enhancements |
+
+Always specify your version. Without it, Claude defaults to broadly compatible code that avoids newer syntax, which may mean missing out on cleaner patterns.
+
+### Virtual Environment Integration
+
+Claude Code respects your virtual environment when you configure it. For projects using `venv`:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install claude-code
+```
+
+Then tell Claude your environment path in CLAUDE.md:
+
+```
+# Environment
+venv: .venv
+interpreter: .venv/bin/python
+```
+
+Claude will use the correct interpreter when running test commands and generating import statements.
 
 ## Essential Claude Skills for Python Developers
 
@@ -63,6 +97,8 @@ Create a user authentication module with password hashing using bcrypt.
 
 Claude generates test cases first using pytest, then implements the module to satisfy those tests. This test-driven approach produces more reliable code from the start.
 
+The key difference from asking Claude to "write code" is that `/tdd` forces a red-green-refactor cycle. The tests appear first, they describe the exact behavior expected, and the implementation is written specifically to make those tests pass. This means the generated code is immediately testable and the tests themselves document the module's intended behavior.
+
 ### The PDF Skill
 
 For documentation-heavy Python projects, the `pdf` skill processes existing PDF documents:
@@ -71,7 +107,12 @@ For documentation-heavy Python projects, the `pdf` skill processes existing PDF 
 Use the pdf skill to extract text from ./docs/api-reference.pdf
 ```
 
-This extracts documentation you can then use to generate code comments or API wrappers automatically.
+This extracts documentation you can then use to generate code comments or API wrappers automatically. A common use case: Chinese enterprise teams often receive vendor API documentation as PDF files. The pdf skill lets you turn those documents into working Python wrapper code without manually transcribing every endpoint.
+
+```
+Use the pdf skill on ./docs/payment-gateway-api.pdf, then generate a Python client class
+that wraps every documented endpoint with proper type hints and docstrings.
+```
 
 ### The Super Memory Skill
 
@@ -81,7 +122,15 @@ This extracts documentation you can then use to generate code comments or API wr
 /supermemory remember that we use Python 3.12 and prefer pydantic v2
 ```
 
-Later sessions automatically know your preferences without re-explaining them.
+Later sessions automatically know your preferences without re-explaining them. This is especially useful for teams where multiple developers use Claude Code on the same project — you store shared preferences once and everyone benefits from consistent code generation.
+
+Practical things to store in supermemory:
+
+- Database conventions (table naming, relationship patterns)
+- Error handling style (exceptions vs. return codes)
+- Logging format and level preferences
+- Which internal libraries are available for import
+- Team-specific security requirements
 
 ## Python Code Generation Patterns
 
@@ -92,20 +141,102 @@ Claude Code excels at generating Python code that follows best practices. Here a
 Request an endpoint with specific requirements:
 
 ```
-Create a FastAPI endpoint that accepts JSON payload with user_id and returns their order history from a PostgreSQL database. Include proper error handling and rate limiting.
+Create a FastAPI endpoint that accepts JSON payload with user_id and returns
+their order history from a PostgreSQL database. Include proper error handling
+and rate limiting. Add Chinese-language error messages.
 ```
 
-Claude generates a complete endpoint with async database queries, proper HTTP status codes, and middleware integration.
+Claude generates a complete endpoint with async database queries, proper HTTP status codes, and middleware integration:
+
+```python
+from fastapi import FastAPI, HTTPException, Depends
+from fastapi_limiter.depends import RateLimiter
+from sqlalchemy.ext.asyncio import AsyncSession
+from pydantic import BaseModel
+from typing import List
+
+app = FastAPI()
+
+class OrderResponse(BaseModel):
+    order_id: str
+    amount: float
+    status: str
+    created_at: str
+
+@app.get(
+    "/users/{user_id}/orders",
+    response_model=List[OrderResponse],
+    dependencies=[Depends(RateLimiter(times=10, seconds=60))]
+)
+async def get_order_history(
+    user_id: str,
+    db: AsyncSession = Depends(get_db)
+):
+    user = await db.get(User, user_id)
+    if not user:
+        raise HTTPException(
+            status_code=404,
+            detail={"message": "用户不存在", "en": "User not found"}
+        )
+    orders = await get_orders_for_user(db, user_id)
+    return orders
+```
 
 ### Data Processing Pipelines
 
 For data-heavy applications, describe your pipeline structure:
 
 ```
-Build a data pipeline that reads CSV files from ./input, applies transformations using pandas, and writes Parquet files to ./output. Handle missing values and validate schema.
+Build a data pipeline that reads CSV files from ./input, applies transformations
+using pandas, and writes Parquet files to ./output. Handle missing values and
+validate schema. Log progress in Chinese and English.
 ```
 
-The generated code includes proper logging, error handling, and configuration management.
+The generated code includes proper logging, error handling, and configuration management:
+
+```python
+import pandas as pd
+import logging
+from pathlib import Path
+from typing import Optional
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+SCHEMA = {
+    "user_id": str,
+    "amount": float,
+    "transaction_date": str,
+    "category": str
+}
+
+def process_csv_to_parquet(
+    input_dir: Path,
+    output_dir: Path,
+    chunk_size: int = 10_000
+) -> dict:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    stats = {"processed": 0, "errors": 0, "files": []}
+
+    for csv_file in input_dir.glob("*.csv"):
+        logger.info(f"处理文件 / Processing file: {csv_file.name}")
+        try:
+            df = pd.read_csv(csv_file, dtype=SCHEMA, parse_dates=["transaction_date"])
+            df = df.dropna(subset=["user_id", "amount"])
+            df["amount"] = df["amount"].clip(lower=0)
+
+            output_path = output_dir / csv_file.with_suffix(".parquet").name
+            df.to_parquet(output_path, engine="pyarrow", index=False)
+
+            stats["processed"] += len(df)
+            stats["files"].append(str(output_path))
+            logger.info(f"完成 / Done: {len(df)} rows written to {output_path}")
+        except Exception as e:
+            logger.error(f"错误 / Error processing {csv_file.name}: {e}")
+            stats["errors"] += 1
+
+    return stats
+```
 
 ### Testing with Pytest
 
@@ -119,14 +250,23 @@ from your_module import calculate_discount
 class TestCalculateDiscount:
     def test_standard_discount(self):
         assert calculate_discount(100, "standard") == 90
-    
+
     def test_vip_discount(self):
         assert calculate_discount(100, "vip") == 75
-    
+
     def test_invalid_type_raises_error(self):
         with pytest.raises(ValueError):
             calculate_discount(100, "invalid")
+
+    def test_zero_price_returns_zero(self):
+        assert calculate_discount(0, "standard") == 0
+
+    def test_negative_price_raises_error(self):
+        with pytest.raises(ValueError, match="价格不能为负"):
+            calculate_discount(-10, "standard")
 ```
+
+Notice that when you request Chinese-language error messages, the test assertions also verify the Chinese message text. This keeps your tests aligned with what users will actually see.
 
 ## Integrating Claude Skills into Your Workflow
 
@@ -140,7 +280,13 @@ Start your coding session by loading relevant skills:
 /tdd /supermemory
 ```
 
-The tdd skill keeps you focused on test-driven development while supermemory recalls project-specific preferences.
+The tdd skill keeps you focused on test-driven development while supermemory recalls project-specific preferences. A productive daily cycle looks like:
+
+1. Load skills and review CLAUDE.md is current
+2. Ask Claude to summarize yesterday's unfinished tasks from git log
+3. Write tests first for today's feature using `/tdd`
+4. Implement until tests pass
+5. Ask Claude to review the diff before committing
 
 ### Code Review Workflow
 
@@ -148,19 +294,27 @@ Use the `tdd` skill during code review to verify test coverage:
 
 ```
 Review the authentication.py file and check if edge cases are covered by tests.
+List any scenarios that have no test, especially for Chinese user inputs like
+names with special characters or mixed Chinese/English fields.
 ```
 
-Claude analyzes your code and identifies gaps in test coverage.
+Claude analyzes your code and identifies gaps in test coverage. For Python projects handling Chinese text, common untested edge cases include:
+
+- Unicode normalization differences (full-width vs. half-width characters)
+- Mixed Chinese-English strings in validation fields
+- Chinese date formats in user input parsing
+- GB2312 vs. UTF-8 encoding edge cases in file uploads
 
 ### Documentation Generation
 
 Combine skills for documentation:
 
 ```
-Use the pdf skill to read the API spec, then generate docstrings for all endpoints in main.py
+Use the pdf skill to read the API spec, then generate docstrings for all
+endpoints in main.py. Write docstrings in both Chinese and English.
 ```
 
-This creates consistent documentation that matches your actual API behavior.
+This creates consistent documentation that matches your actual API behavior. For codebases shared between Chinese and international teams, bilingual docstrings eliminate a major communication bottleneck.
 
 ## Chinese Language Support
 
@@ -172,6 +326,33 @@ Claude Code handles Chinese naturally in both code and comments. You can write r
 
 Claude generates Python code with Chinese comments and error messages when appropriate. This is particularly useful for projects targeting Chinese users or teams.
 
+You can also mix languages within a single prompt — Claude handles code-switching fluidly:
+
+```
+实现一个用户注册API. Use FastAPI. 需要验证手机号码格式（中国大陆）和邮箱.
+Return validation errors in Chinese. Tests should use pytest with Chinese
+docstrings explaining each test case.
+```
+
+Chinese phone number validation is a recurring need. Claude generates the correct regex for mainland China mobile numbers (13x, 14x, 15x, 16x, 17x, 18x, 19x prefixes) without you needing to specify the details:
+
+```python
+import re
+from pydantic import validator
+
+CHINA_MOBILE_PATTERN = re.compile(r'^1[3-9]\d{9}$')
+
+class UserRegistration(BaseModel):
+    phone: str
+    email: str
+
+    @validator('phone')
+    def validate_china_phone(cls, v):
+        if not CHINA_MOBILE_PATTERN.match(v):
+            raise ValueError('手机号格式不正确，请输入有效的中国大陆手机号')
+        return v
+```
+
 ## Performance Considerations
 
 For large Python projects, optimize Claude Code's performance:
@@ -179,8 +360,11 @@ For large Python projects, optimize Claude Code's performance:
 - Keep `CLAUDE.md` focused and under 500 characters
 - Use specific file paths rather than asking Claude to scan entire directories
 - Break large tasks into smaller steps for faster responses
+- Reference specific functions or classes rather than entire modules when asking for changes
 
-The `frontend-design` skill, while primarily for web development, helps when building Python web apps that need user interfaces—you can generate HTML templates alongside your backend code.
+When working with large codebases, be explicit about scope. Instead of "refactor the authentication system," say "refactor the `verify_token` function in `auth/jwt_handler.py`." This produces faster, more focused responses.
+
+The `frontend-design` skill, while primarily for web development, helps when building Python web apps that need user interfaces — you can generate HTML templates alongside your backend code. For Python developers building admin panels or internal tools, this skill eliminates the context switch between backend logic and frontend templates.
 
 ## Security Best Practices
 
@@ -189,8 +373,28 @@ When using AI code generation, follow these security principles:
 - Review generated code before committing, especially for authentication and data handling
 - Never paste sensitive credentials or API keys into conversations
 - Use environment variables for configuration in generated code
+- Audit generated SQL queries for injection risks before production deployment
 
-Claude generates secure code by default, but always validate against your specific security requirements.
+Claude generates secure code by default, but always validate against your specific security requirements. For Chinese enterprise environments, additional considerations apply:
+
+- Generated code that handles ID card numbers (身份证) must mask the full number in logs
+- API keys for Chinese cloud providers (Aliyun, Tencent Cloud) follow different formats than AWS — specify the provider so Claude generates the correct authentication pattern
+- Data residency requirements may affect how you structure database connections; tell Claude your compliance requirements upfront
+
+A practical prompt pattern for security-sensitive features:
+
+```
+Create a password reset flow for a Chinese financial application.
+Requirements:
+- SMS verification via Aliyun SMS
+- Rate limit: 3 attempts per phone number per hour
+- Token expires in 10 minutes
+- Log attempts without storing the token value itself
+- Error messages in Chinese
+Assume PCI DSS compliance is required.
+```
+
+This level of detail produces code that handles the security requirements correctly from the first generation, rather than requiring multiple rounds of review and revision.
 
 ---
 
