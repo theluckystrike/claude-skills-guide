@@ -323,6 +323,45 @@ claude --print "ตรวจสอบว่า:
 [build log]"
 ```
 
+
+## ตัวอย่างการใช้งานจริง: E-Commerce Project
+
+ลองดูตัวอย่างการใช้ Claude Code ในโปรเจกต์ e-commerce ไทยจริงๆ Claude Code เข้าใจ format ของ PromptPay EMV payload และสามารถ generate โค้ดที่ถูกต้องได้โดยอัตโนมัติ รวมถึงการจัดการกับ edge cases เช่น การตรวจสอบ phone number format และการคำนวณ checksum สำหรับ QR code
+
+### Integration กับ LINE Notify
+
+LINE เป็น messaging app ที่ใช้กันมากในไทย Claude Code ช่วย implement webhook handlers สำหรับ LINE Messaging API รวมถึง signature verification และการจัดการ event types ต่างๆ ทีมพัฒนาสามารถใช้ Claude Code สร้าง notification system ที่ส่ง LINE message เมื่อมี order ใหม่ payment ผ่าน หรือเมื่อเกิด system alert
+
+### Thai Text Processing
+
+นักพัฒนาที่ต้องทำงานกับภาษาไทยมักเจอปัญหาเรื่อง word segmentation และ character encoding Claude Code ช่วยสร้าง utility functions สำหรับ Thai NLP ได้ เช่น การตัดคำ การ normalize Unicode และการ extract ข้อมูลจากข้อความภาษาไทย
+
+## Advanced Tips สำหรับ Senior Developers
+
+### การใช้ Claude Code สำหรับ Architecture Review
+
+สำหรับ senior developers การใช้ Claude Code เป็น architecture advisor ช่วยได้มาก ให้ describe ระบบที่มีอยู่แล้วถามหา potential issues เช่น single points of failure, scalability bottlenecks, หรือ data consistency problems Claude Code จะวิเคราะห์และเสนอ improvements พร้อม tradeoffs ที่ต้องพิจารณา ช่วยให้ทีมตัดสินใจได้อย่างมีข้อมูลมากขึ้น
+
+### การ Refactor Legacy Code
+
+ทีมหลายทีมมี legacy code ที่เขียนมานานหลายปี Claude Code ช่วยในกระบวนการ refactor ได้อย่างมีระบบ ตั้งแต่การอธิบายว่าโค้ดเก่าทำอะไร ไปจนถึงการเสนอ migration path ที่ปลอดภัย พร้อม test strategy ที่ช่วย verify behavior ยังคงเดิม ทำให้ refactor risk ลดลงอย่างมีนัยสำคัญ
+
+### Automated Code Review ใน Pipeline
+
+เพิ่ม Claude Code เข้าไปใน pre-commit hooks หรือ CI pipeline เพื่อ review โค้ดก่อน merge ตั้งค่าให้ตรวจหา anti-patterns ที่พบบ่อยใน codebase ของทีม ช่วยให้ catch issues ได้เร็วขึ้นและลด back-and-forth ใน code review
+
+## Integration Patterns สำหรับ CI/CD Pipeline ไทย
+
+บริษัทไทยหลายแห่งใช้ GitLab CI แทน GitHub Actions Claude Code ช่วยสร้าง pipeline ได้ทั้งสองระบบ รวมถึงการ integrate กับ tools ที่นิยมในไทยเช่น SonarQube สำหรับ code quality, Nexus สำหรับ artifact management, และ Harbor สำหรับ container registry
+
+### Agile Workflow Integration
+
+Claude Code ช่วยใน Agile ceremony ต่างๆ ได้อย่างมีประสิทธิภาพ ตั้งแต่ sprint planning ไปจนถึง retrospective การใช้ AI ช่วย generate sprint summaries, estimate story points จาก user stories, และวิเคราะห์ velocity trends ทำให้ Scrum Master มีเวลาโฟกัสกับงานที่ต้องใช้ human judgment มากขึ้น
+
+## การจัดการ Secrets และ Security
+
+เรื่องความปลอดภัยเป็นสิ่งสำคัญมาก Claude Code สามารถช่วย audit โค้ดหา hardcoded secrets, weak authentication patterns, และ SQL injection vulnerabilities ได้อัตโนมัติ นอกจากนี้ยังช่วย implement best practices เช่น การใช้ environment variables, secrets management tools, และ proper error handling ที่ไม่ leak sensitive information ออกไปยัง logs หรือ error messages
+
 ## บทสรุป
 
 การใช้ Claude Code อย่างมีประสิทธิภาพไม่ใช่แค่การพิมพ์คำถามแล้วรอคำตอบ แต่ต้องอาศัย:
