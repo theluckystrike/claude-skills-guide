@@ -260,6 +260,17 @@ Here is a concrete approach to standing up a reliable ScyllaDB integration with 
 
 **Test failover with chaos engineering.** Stop individual nodes in your test cluster and verify your application continues to read and write with acceptable latency degradation. Claude Code generates the chaos test script that kills nodes, measures latency during recovery, and verifies data consistency after the node rejoins.
 
+## Schema Design Validation
+
+Getting ScyllaDB schema design right before writing production data prevents costly migrations later. Claude Code generates the validation tooling that catches schema anti-patterns before they become performance problems.
+
+**Access pattern documentation.** ScyllaDB schema design starts with access patterns, not normalized data models. Claude Code generates the access pattern documentation template that lists every query your application needs to run — including the WHERE clause conditions and ORDER BY requirements — then validates your proposed table schemas against each access pattern, flagging any query that would require an unsupported filter or an inefficient full-table scan.
+
+**Partition key cardinality analysis.** Low-cardinality partition keys cause data to cluster on a small number of nodes, creating hot spots. Claude Code generates the cardinality analyzer that estimates the number of distinct partition key values in your dataset and warns when a proposed partition key would create fewer than ten times the number of partitions as nodes in your cluster.
+
+**Tombstone accumulation prediction.** Frequent deletes or TTL expirations create tombstones that degrade read performance until compaction removes them. Claude Code generates the tombstone analysis query that estimates tombstone accumulation rate based on your delete frequency and compaction strategy configuration, recommending TWCS for time-series workloads with TTLs and STCS for workloads with infrequent deletes.
+
+
 ## Integration Patterns
 
 **Django with the ScyllaDB Django backend.** A Django ORM backend exists for ScyllaDB. Claude Code generates the Django settings configuration, model definitions with proper partition key declarations, and the migration workflow that creates tables without the standard makemigrations and migrate flow.

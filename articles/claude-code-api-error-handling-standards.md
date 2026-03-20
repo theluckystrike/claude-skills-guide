@@ -248,6 +248,17 @@ Here is a concrete approach to adding robust error handling to Claude Code API i
 
 **Token budget overflow recovery.** When a response is truncated due to `max_tokens` being too low, some workflows can recover by requesting a continuation with the truncated response as context. Claude Code generates the continuation logic that detects `stop_reason: max_tokens` and automatically requests completion, up to a configurable maximum number of continuation rounds.
 
+## Production Hardening Patterns
+
+Moving from development to production requires additional error handling patterns that address the full range of failure modes your Claude API integration will encounter at scale.
+
+**Connection pool exhaustion handling.** Under high load, your HTTP client's connection pool can exhaust available connections, causing requests to queue indefinitely. Claude Code generates the connection pool configuration with explicit pool size limits and a queue timeout that fails fast rather than allowing requests to accumulate indefinitely. The error handling layer distinguishes connection pool exhaustion (a local resource problem) from API unavailability (a remote problem), triggering different alerting paths for each.
+
+**Streaming response error recovery.** When using the streaming API, errors can occur mid-stream after partial content has already been delivered. Claude Code generates the streaming error recovery pattern that buffers the partial response, detects stream termination errors, and either retries the request from the beginning (for idempotent use cases) or surfaces the partial result with a truncation indicator (for use cases where partial responses are acceptable).
+
+**Multi-region failover.** For critical applications requiring high availability beyond what the Claude API SLA guarantees, Claude Code generates the multi-region failover configuration that routes requests to a secondary region endpoint when the primary region returns consecutive errors. The failover includes circuit breaker state synchronization across your application instances using a shared Redis store, preventing thundering herd reconnection when the primary region recovers.
+
+
 ## Integration Patterns
 
 **Sentry integration.** Claude Code generates the Sentry SDK configuration that captures API errors with full context, groups similar errors intelligently, and sets alert thresholds based on error frequency. The integration includes custom fingerprinting rules so rate limit errors do not flood your Sentry issue inbox.

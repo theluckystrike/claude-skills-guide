@@ -274,6 +274,27 @@ Here is a concrete workflow for automating Confluence page creation and review p
 
 **Implement dry-run mode.** Add a DRY_RUN environment variable that causes your automation to log what it would do without actually making API calls. Claude Code generates the dry-run scaffolding that wraps API calls in conditional blocks, making it safe to test logic changes in production-connected environments.
 
+## Advanced Automation Scenarios
+
+Confluence automation reaches its full potential when integrated with the events driving your engineering workflow. Claude Code generates the integration layer that connects Confluence to the tools your team already uses.
+
+**Sprint retrospective automation.** At the end of each sprint, Jira's webhook fires a sprint:completed event. Claude Code generates the handler that fetches completed issues from Jira's REST API, groups them by epic and status, and creates a structured retrospective page in Confluence with sections for achievements, blockers, and action items. The page template includes velocity charts generated from the sprint data using the Confluence chart macro.
+
+**ADR (Architecture Decision Record) lifecycle management.** Architecture decisions require updates as systems evolve. Claude Code generates the ADR tracking system that monitors your confluence ADR space for pages with a "Proposed" status label, sends weekly digest emails listing decisions pending review, and automatically moves ADRs to "Superseded" status when a newer decision references them.
+
+**On-call runbook synchronization.** Runbooks drift from actual system behavior over time. Claude Code generates the synchronization script that compares runbook steps against your infrastructure-as-code repository, identifying command syntax that has changed, environment variables that no longer exist, and service names that have been renamed. Discrepancies are added as inline Confluence comments on the specific runbook steps that need updating.
+
+**Customer-facing release notes generation.** Engineering-focused commit messages rarely translate well to customer communication. Claude Code generates the release notes pipeline that reads merged pull requests since the last release, filters out internal and infrastructure changes, rewrites remaining changes in business-friendly language using a configurable prompt template, and creates a formatted Confluence release notes page in your public documentation space.
+
+## Security Considerations
+
+Automating Confluence requires careful handling of credentials and content permissions to avoid exposing sensitive information or creating security gaps in your documentation.
+
+**API token rotation.** Confluence API tokens do not expire automatically. Claude Code generates the token rotation script that creates a new API token, tests it against a non-destructive API call, updates the token in your secrets manager, and invalidates the old token — all without requiring manual intervention or downtime.
+
+**Content permission inheritance.** Pages created by automation scripts inherit permissions from their parent page. If your automation creates pages in a space with broad read access, sensitive content (salary information, customer data summaries) can be inadvertently exposed. Claude Code generates the permission-setting API calls that apply explicit restrictions to sensitive automated pages immediately after creation.
+
+
 ## Integration Patterns
 
 **GitHub Actions integration.** Trigger Confluence updates automatically when pull requests are merged. Claude Code generates the GitHub Actions workflow that calls your automation scripts, updating your documentation space with release notes, API changes, and deployment records.

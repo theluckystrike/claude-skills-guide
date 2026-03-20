@@ -246,6 +246,35 @@ One of the most important properties of a fan-out architecture is that a failure
 
 When your orchestrator collects results from parallel tasks, design it to handle cases where some tasks succeeded and others failed. Claude Code generates the result aggregation pattern that distinguishes between hard failures requiring retry and soft failures that are acceptable as partial results, generating appropriate notifications for each case.
 
+## Step Function Composition Patterns
+
+Complex workflows often require dynamic fan-out based on runtime conditions rather than static task lists. Claude Code generates the compositional patterns that make Inngest step functions flexible and maintainable.
+
+**Dynamic fan-out based on data shape.** When the number of parallel tasks is not known at function definition time — for example, processing every row of a dynamically sized dataset — you cannot pre-define a fixed number of step.run() calls. Claude Code generates the dynamic fan-out pattern using inngest.createStepFunction with step.run() calls inside a loop, respecting Inngest's limit on concurrent executions within a single function invocation and batching excess items for sequential processing.
+
+**Hierarchical fan-out with aggregation.** Some workflows require two levels of parallelism: first fan out to departments, then within each department fan out to individual tasks. Claude Code generates the hierarchical coordinator that uses Inngest's sendEvent API to trigger child functions for each department, each of which fans out further to individual tasks. The parent coordinator uses step.waitForEvent to collect completion signals from all child functions before proceeding to aggregation.
+
+**Conditional branch merging.** Different parallel branches may produce outputs with incompatible shapes that need normalization before aggregation. Claude Code generates the result normalization layer that maps each branch's output to a common interface using discriminated unions in TypeScript, ensuring the aggregator receives consistently typed data regardless of which branches succeeded or failed.
+
+**Retry budget management.** When parallel tasks retry independently, a thundering herd of retries can overwhelm downstream services. Claude Code generates the retry budget tracker using Inngest's step.sleep() for exponential backoff, coordinated across parallel tasks through a shared Redis key that counts active retries and delays new retry attempts when the budget is exhausted.
+
+## Testing Fan-out Workflows
+
+Testing distributed fan-out workflows is significantly harder than testing sequential code. Claude Code generates the testing infrastructure that makes fan-out workflows testable in isolation.
+
+**Unit testing step functions.** Each Inngest step function is a plain async function that can be tested without the Inngest runtime. Claude Code generates Jest test suites that invoke step functions directly with mock step objects, verifying the correct sequence of step.run() calls and the correct handling of step results without requiring a running Inngest server.
+
+**Integration testing with the Inngest Dev Server.** The Inngest Dev Server runs locally and simulates the Inngest cloud environment. Claude Code generates the integration test setup that starts the Dev Server, registers your functions, triggers test events, and waits for function completion using the Inngest REST API — enabling end-to-end workflow testing in CI without external dependencies.
+
+**Chaos testing for partial failure.** Fan-out workflows must handle partial failure gracefully. Claude Code generates the chaos test harness that randomly injects failures into individual step functions using a configurable failure rate, verifying that the orchestrator correctly identifies which tasks succeeded and which failed, and that retries are triggered for failed tasks without re-running successful ones.
+
+## Observability and Debugging
+
+**Structured logging for parallel execution traces.** When multiple tasks run concurrently, unstructured logs become impossible to correlate. Claude Code generates the structured logging middleware that adds the function run ID, step ID, and attempt number to every log line, enabling log aggregation tools to reconstruct the complete execution trace of a workflow across multiple parallel tasks.
+
+**Custom metrics for workflow performance.** Beyond Inngest's built-in metrics, Claude Code generates the custom metrics instrumentation that tracks domain-specific workflow health: median task completion time per task type, distribution of fan-out sizes, percentage of workflows requiring at least one retry, and the ratio of successful aggregations to total workflow runs.
+
+
 ## Common Pitfalls
 
 **Sharing mutable state between parallel steps.** Parallel Inngest steps run on different servers. Never share in-memory state between steps. Pass data explicitly through event payloads or retrieve it from a database in each step.

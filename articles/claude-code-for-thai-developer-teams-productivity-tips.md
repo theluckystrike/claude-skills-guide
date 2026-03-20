@@ -544,6 +544,93 @@ jobs:
 
 ผลลัพธ์จะได้ test suite ที่ครอบคลุมและมีคุณภาพสูง ซึ่งช่วยให้ทีมมั่นใจก่อน deploy production
 
+## เคล็ดลับที่ 12: การจัดการ Error ด้วย Claude Code อย่างมีระบบ
+
+Error handling เป็นส่วนสำคัญที่มักถูกมองข้ามในการพัฒนาซอฟต์แวร์ Claude Code สามารถช่วยสร้างระบบจัดการ error ที่มีประสิทธิภาพ:
+
+```
+"สร้าง custom error classes สำหรับ API ของเรา โดย:
+- แยก business errors จาก technical errors
+- รวม error codes ที่ consistent
+- เพิ่ม logging metadata
+- สร้าง user-friendly messages ภาษาไทยและอังกฤษ"
+```
+
+ผลลัพธ์ที่ได้คือระบบ error handling ที่ทีมทั้งหมดใช้ได้อย่าง consistent ทำให้ debug ง่ายและประหยัดเวลามากขึ้น
+
+## เคล็ดลับที่ 13: Code Review อัตโนมัติด้วย Claude Code
+
+ก่อนส่ง PR ให้ทีม ใช้ Claude Code ตรวจสอบโค้ดก่อนเสมอ:
+
+```
+"Review โค้ดใน userAuthService.ts นี้โดยตรวจสอบ:
+1. Security vulnerabilities โดยเฉพาะ SQL injection และ XSS
+2. Performance issues เช่น N+1 queries
+3. TypeScript type safety
+4. Error handling completeness
+5. Unit test coverage gaps
+แสดงผลเป็นรายการพร้อม severity level"
+```
+
+การใช้ Claude Code เป็น pre-review ช่วยให้ code review จากเพื่อนร่วมทีมมีคุณภาพสูงขึ้น เพราะปัญหาง่ายๆ ถูกแก้ไขก่อนแล้ว
+
+## เคล็ดลับที่ 14: การเขียน Documentation ที่สมบูรณ์
+
+ทีมไทยมักประสบปัญหา documentation ไม่ครบถ้วน Claude Code ช่วยแก้ปัญหานี้ได้:
+
+```
+"สร้าง API documentation สำหรับ endpoint เหล่านี้:
+[วาง endpoint definitions]
+
+รวมถึง:
+- Request/Response examples
+- Error codes และความหมาย
+- Rate limiting information
+- Authentication requirements
+- ตัวอย่าง curl commands"
+```
+
+Documentation ที่ดีช่วยให้ทีมใหม่เข้าใจระบบได้เร็วขึ้นและลดคำถามซ้ำๆ ในทีม
+
+## เคล็ดลับที่ 15: การ Refactor Legacy Code อย่างปลอดภัย
+
+Legacy code เป็นความท้าทายที่ทุกทีมต้องเผชิญ Claude Code ช่วยให้การ refactor ปลอดภัยมากขึ้น:
+
+**ขั้นตอนที่แนะนำ:**
+
+1. ให้ Claude วิเคราะห์โค้ดและระบุ dependencies ก่อน
+2. สร้าง characterization tests เพื่อ capture behavior ปัจจุบัน
+3. Refactor ทีละ module โดยมี tests คุ้มครอง
+4. ให้ Claude ตรวจสอบว่า behavior ไม่เปลี่ยน
+
+```
+"วิเคราะห์ legacyPaymentService.js นี้และ:
+1. ระบุทุก side effect
+2. สร้าง characterization tests
+3. เสนอ refactoring plan ที่ปลอดภัย
+4. แสดง dependencies ที่อาจได้รับผลกระทบ"
+```
+
+## การวัดผลลัพธ์และ ROI
+
+การใช้ Claude Code อย่างมีประสิทธิภาพควรวัดผลได้ชัดเจน ทีมควรติดตาม:
+
+- **Development velocity**: จำนวน story points ที่ทำได้ต่อสัปดาห์
+- **Bug rate**: จำนวน bugs ที่พบใน production ต่อ sprint
+- **Code review time**: เวลาเฉลี่ยที่ใช้ใน code review
+- **Documentation coverage**: เปอร์เซ็นต์ของ API ที่มี documentation
+
+ทีมที่ใช้ Claude Code อย่างเต็มที่มักรายงานว่า development velocity เพิ่มขึ้น 30-50% ในช่วง 2-3 เดือนแรก
+
+## การแก้ปัญหาที่พบบ่อยในการใช้งาน
+
+**Claude ไม่เข้าใจ context ของโปรเจกต์**: แก้ด้วยการสร้าง CLAUDE.md ที่ละเอียด รวมถึง business rules และ technical constraints ที่เฉพาะเจาะจงกับโปรเจกต์
+
+**Output ไม่ตรงกับ coding style ของทีม**: ใส่ตัวอย่างโค้ดที่ดีใน CLAUDE.md และระบุ style guide ที่ใช้ เช่น Airbnb หรือ Google JavaScript Style Guide
+
+**การตอบสนองช้าเมื่อ context ใหญ่**: แบ่งงานย่อยและส่ง context เฉพาะที่จำเป็น หลีกเลี่ยงการส่งทั้ง codebase ในครั้งเดียว
+
+
 ## บทสรุป
 
 การใช้ Claude Code อย่างมีประสิทธิภาพไม่ใช่แค่การพิมพ์คำถามแล้วรอคำตอบ แต่ต้องอาศัย:

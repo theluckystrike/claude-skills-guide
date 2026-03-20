@@ -315,6 +315,35 @@ def test_aggregation(spark):
     assert result[0]["sum(amount)"] == 300
 ```
 
+## Advanced DataFrame Patterns
+
+Claude Code excels at generating sophisticated Spark patterns that handle production-scale challenges beyond basic transformations.
+
+**Window functions for time-series analysis.** Calculating rolling averages, cumulative sums, and lag/lead values over time-series data requires careful window specification. Claude Code generates the Window.partitionBy().orderBy().rowsBetween() chain with correct boundary conditions, avoiding common off-by-one errors in sliding window calculations.
+
+**Broadcast joins for dimension tables.** When joining a large fact table with a small dimension table, Spark can broadcast the small table to each executor, eliminating shuffle overhead. Claude Code identifies when broadcast joins are appropriate based on table size estimates and generates the broadcast() hint in the correct position within the join expression.
+
+**Handling schema evolution in streaming.** When reading from Kafka or file sources with evolving schemas, column additions and type changes can break your pipeline. Claude Code generates the schema merging logic using mergeSchema options and Spark's schema_of_json() for semi-structured data, with explicit handling for both nullable and non-nullable field additions.
+
+**Delta Lake MERGE operations.** Upserting data efficiently requires the MERGE INTO syntax when using Delta Lake. Claude Code generates the complete MERGE statement with matched update conditions, not-matched insert conditions, and source deduplication logic to prevent duplicate key violations when the source contains multiple updates for the same key.
+
+## Performance Optimization Deep Dive
+
+Understanding Spark's execution model helps Claude Code generate more targeted optimization suggestions.
+
+**Analyzing the query execution plan.** Before optimizing, you need to understand what Spark is doing. Claude Code generates the explain() calls with the extended mode that shows the physical plan, including exchange nodes (shuffles), sort operations, and broadcast joins. It then interprets the plan output and highlights the most expensive operators.
+
+**Adaptive Query Execution configuration.** Spark 3.0+ includes AQE, which dynamically optimizes the query plan at runtime based on actual data statistics. Claude Code generates the AQE configuration properties — spark.sql.adaptive.enabled, spark.sql.adaptive.coalescePartitions.enabled, and spark.sql.adaptive.skewJoin.enabled — tuned to your cluster's characteristics.
+
+**Memory pressure and spill diagnosis.** When Spark tasks spill to disk, performance degrades significantly. Claude Code generates the Spark UI analysis queries that identify spill-heavy stages and suggests targeted fixes: increasing executor memory, reducing partition data size through earlier filtering, or switching from sort-based aggregation to hash-based aggregation for smaller key spaces.
+
+## Integration Patterns
+
+**Reading from REST APIs in parallel.** Claude Code generates a custom DataSource that reads paginated REST API responses in parallel using Spark's PartitionedFile abstraction. Each partition corresponds to one page of API results, enabling distributed ingestion from rate-limited APIs by splitting the request budget across multiple executors.
+
+**Writing results to multiple sinks simultaneously.** When a single Spark job needs to write results to S3, a JDBC database, and a Kafka topic, Claude Code generates the foreachBatch pattern for streaming jobs and the multi-path write pattern for batch jobs, ensuring consistent output across all sinks within the same job run.
+
+
 ## Conclusion
 
 Claude Code significantly enhances your Apache Spark DataFrame development workflow by generating optimized code, suggesting best practices, and helping you build maintainable pipelines. The key is to use Claude's capabilities for:

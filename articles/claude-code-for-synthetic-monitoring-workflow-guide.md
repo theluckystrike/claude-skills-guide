@@ -281,6 +281,27 @@ Here is a practical workflow for building an intelligent synthetic monitoring sy
 
 **Incident management integration.** When Claude Code analysis identifies a high-severity issue, automatically create an incident in PagerDuty or OpsGenie. Claude Code generates the incident creation API calls with proper severity mapping based on the analysis output.
 
+## Advanced Monitoring Patterns
+
+Production synthetic monitoring requires more sophistication than simple HTTP checks. Claude Code generates the patterns that handle multi-step user journeys, authenticated workflows, and cross-region consistency verification.
+
+**Multi-step user journey testing.** E-commerce checkouts, SaaS onboarding flows, and authentication sequences involve multiple dependent HTTP requests. Claude Code generates the state machine that chains requests, passing session cookies and CSRF tokens from one step to the next. When any step fails, the failure context includes the full sequence of prior requests so you can diagnose failures in the middle of complex flows.
+
+**Synthetic canary for third-party dependencies.** When your application depends on external APIs — payment processors, identity providers, mapping services — outages in those services cause your synthetic checks to fail with cryptic errors. Claude Code generates dedicated canary checks for each third-party dependency using their status page APIs or health endpoints, creating a dependency health dashboard that separates your infrastructure failures from upstream provider failures.
+
+**Geo-distributed consistency checks.** Global CDN configurations sometimes cause content inconsistencies across regions. Claude Code generates the multi-region check that queries the same endpoint from different geographic locations using cloud function triggers, comparing response hashes to detect regional divergence. When inconsistency is detected, the alert includes which regions are affected and which are serving stale content.
+
+**SLA compliance monitoring.** Service level agreements require continuous measurement, not just alerting on breaches. Claude Code generates the SLA tracking system that accumulates check results into rolling 30-day error budgets, calculates current burn rate, and forecasts whether you will breach your SLA target before the measurement window closes. This gives your team time to intervene before customers experience SLA-violating downtime.
+
+## Cost Optimization
+
+Running synthetic checks at high frequency across many endpoints can accumulate significant infrastructure costs. Claude Code generates the cost optimization patterns that maintain coverage without unnecessary spending.
+
+**Adaptive check frequency.** During business hours when your team can respond to incidents, run checks every minute. Overnight and on weekends, reduce frequency to every five minutes for non-critical endpoints. Claude Code generates the cron schedule configuration and the deployment scripts that switch frequency profiles on a schedule tied to your team's on-call rotation.
+
+**Result caching for static content checks.** For checks that verify static assets — CSS files, JavaScript bundles, image CDN responses — content that has not changed does not need full validation on every check run. Claude Code generates the ETag and Last-Modified caching layer that skips expensive assertion logic when the upstream resource has not changed, reducing both execution time and compute cost.
+
+
 ## Best Practices for Claude-Driven Monitoring
 
 When implementing Claude Code in your synthetic monitoring workflow:

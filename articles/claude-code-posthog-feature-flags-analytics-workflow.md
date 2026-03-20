@@ -298,6 +298,19 @@ Third, require owner attribution. Add a team and owner field to every flag using
 
 **Test flag states in your test suite.** Every code path gated by a feature flag needs test coverage in both the enabled and disabled state. Claude Code generates the test utilities that let you mock PostHog flag evaluation and verify your application behaves correctly in each flag state.
 
+## Advanced Analytics Patterns
+
+PostHog's API surface extends well beyond basic feature flag management. Claude Code generates the advanced analytics patterns that extract deep insights from your product usage data.
+
+**Funnel analysis with flag correlation.** Understanding whether a feature flag affects conversion rates requires correlating funnel drop-off points with flag exposure. Claude Code generates the PostHog Insights API query that segments your conversion funnel by flag variant, returning separate conversion rates for control and treatment groups. The query accounts for exposure bias by only including users in the funnel who were exposed to the flag at or before the first funnel step.
+
+**Cohort-based rollout with behavioral triggers.** Rolling out a feature to users who exhibit specific behaviors — users who have logged in three times, users who have invited a teammate — requires combining cohort membership with flag targeting. Claude Code generates the PostHog cohort definition using the behavioral filter API and the flag targeting rule that references the cohort, enabling behavior-triggered rollouts without manual user list management.
+
+**Session recording integration.** Feature flags affect user experience in ways that metrics alone cannot capture. Claude Code generates the PostHog session recording filter that surfaces recordings where users encountered a specific flag variant and triggered an error event. Watching these recordings reveals friction points that quantitative data obscures — hesitation before a button click, confusion navigating a new UI flow.
+
+**Warehouse export for long-term analysis.** PostHog's built-in analysis has a 90-day data retention window for most plans. For longitudinal studies spanning quarters or years, Claude Code generates the PostHog warehouse export configuration that syncs flag exposure events and user properties to your data warehouse — Snowflake, BigQuery, or Redshift — where you can run unlimited historical queries.
+
+
 ## Integration Patterns
 
 **Connecting PostHog to your CI/CD pipeline.** When a deployment completes, automatically update the rollout percentage for the corresponding feature flag. Claude Code generates the deployment webhook handler that maps your deployment environment to the appropriate flag rollout increment.

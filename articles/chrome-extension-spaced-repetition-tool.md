@@ -291,6 +291,19 @@ Here is a concrete approach to taking a spaced repetition extension from prototy
 
 **Implement undo for rating mistakes.** Accidentally rating a card incorrectly changes its schedule significantly. An undo stack that remembers the last few rating actions lets users correct mistakes. Claude Code generates the undo system with a keyboard shortcut and an undo button in the review UI.
 
+## Study Algorithm Customization
+
+The SM-2 algorithm that powers most spaced repetition systems was designed in the 1980s for flashcard memorization. Modern research suggests several improvements that Claude Code can generate for your extension.
+
+**Leech detection and handling.** Cards that you repeatedly rate "Again" despite multiple reviews are called leeches — they waste study time without being learned. Claude Code generates the leech detection algorithm that tracks the ratio of "Again" ratings to total reviews for each card, flags cards exceeding a configurable threshold (typically 8 or more lapses), and moves them to a suspended state with a notification prompting you to rewrite the card as multiple simpler cards.
+
+**Interleaved practice scheduling.** Blocking practice — studying all cards from one topic before moving to the next — produces worse long-term retention than interleaved practice that mixes topics. Claude Code generates the scheduler modification that groups due cards by deck and interleaves them in round-robin order, ensuring you switch topics every few cards rather than burning through one deck at a time.
+
+**Contextual review sessions.** Some knowledge is easier to recall in the context where it was learned. Claude Code generates the session context tagging system that associates cards with the URL where they were created, and a context-aware review mode that opens the original source page alongside the review card — useful for vocabulary learned in specific articles or code patterns seen in particular repositories.
+
+**Adaptive daily limits.** Fixed daily review limits cause card backlogs after missed days. Claude Code generates the adaptive limit algorithm that increases the daily review target after missed days (catching up gradually) and decreases it when your retention rate drops below a threshold (preventing overwhelm), keeping your review load sustainable without manual adjustment.
+
+
 ## Integration Patterns
 
 **Obsidian plugin integration.** Claude Code generates a companion Obsidian plugin that reads flashcard definitions from your vault's markdown files and syncs them to your Chrome extension's IndexedDB through a local API. This lets you manage cards in Obsidian and review them in the browser.

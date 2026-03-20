@@ -306,6 +306,17 @@ Here is a concrete approach to building a reliable batch processing pipeline fro
 **dbt integration for data transformation batches.** If your batch processing is primarily data transformation, Claude Code generates dbt models that replace custom Python transformation code with SQL-based transformations that are versioned, tested, and observable through the dbt lineage graph.
 
 
+## Scaling Beyond Single-Machine Processing
+
+When batch jobs outgrow a single machine, distributed processing becomes necessary. Claude Code generates the scaling patterns that transition your batch workflows from local execution to distributed infrastructure without rewriting core processing logic.
+
+**Work queue distribution with Redis.** Claude Code generates the producer script that splits your input dataset into chunks, enqueues each chunk as a separate job in a Redis list, and the worker scripts that pop jobs atomically using BLPOP, process them, and write results to a shared output store. The atomic pop prevents two workers from claiming the same chunk, eliminating duplicate processing without requiring a coordination service.
+
+**Result deduplication across retries.** In distributed processing, network failures can cause the same chunk to be processed twice — once by a worker that timed out and again by its replacement. Claude Code generates the idempotent write pattern using Redis SET NX or a database unique constraint on the chunk ID, ensuring that even if a chunk is processed twice, only one result is written.
+
+**Dead letter queue for poisoned jobs.** Some input records cause processing failures regardless of retry count — corrupt data, incompatible formats, or logic bugs triggered by specific values. Claude Code generates the dead letter queue pattern that moves repeatedly failing jobs to a separate queue after a configurable retry limit, allowing the main queue to continue processing while failed records are preserved for manual inspection.
+
+
 ## Conclusion
 
 Optimizing batch processing workflows requires balancing throughput, reliability, and resource efficiency. Claude Code can help you implement these patterns quickly, debug issues, and iterate on your implementation. Start with the basic sequential approach, add parallelization where it matters most, implement checkpointing for long jobs, and always monitor your performance metrics.
