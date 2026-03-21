@@ -52,6 +52,32 @@ jobs:
 
 The `needs` directive creates explicit dependencies, ensuring jobs run in the correct order. The `if` condition on the deploy job prevents accidental deployments from feature branches.
 
+A common mistake is letting deploy jobs run on pull requests. Adding `if: github.ref == 'refs/heads/main'` is a minimal guard, but for multi-environment setups you should also gate on `github.event_name != 'pull_request'` to avoid surprises when someone pushes a branch that happens to match a pattern. Consider making environment gates explicit:
+
+```yaml
+  deploy-staging:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to staging
+        run: ./scripts/deploy.sh staging
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to production
+        run: ./scripts/deploy.sh production
+```
+
+Using GitHub Environments here is important: the `environment` key enables required reviewers, deployment protection rules, and environment-scoped secrets. This prevents a situation where a flawed workflow can self-approve a production deploy.
+
 ## Matrix Strategies for Comprehensive Testing
 
 Matrix builds let you test across multiple configurations simultaneously. This is invaluable for supporting multiple Node.js versions, Python versions, or operating systems without writing duplicate jobs.
@@ -89,6 +115,26 @@ strategy:
         experimental: true
 ```
 
+One practical pattern is combining `fail-fast` control with `continue-on-error` for experimental matrix legs. When you set `strategy.fail-fast: false`, all matrix jobs run to completion even if one fails. This gives you a full picture of what breaks across versions. For a canary configuration you want to try but not block on:
+
+```yaml
+strategy:
+  fail-fast: false
+  matrix:
+    node-version: [18, 20]
+    include:
+      - node-version: 22
+        experimental: true
+steps:
+  - name: Run tests
+    continue-on-error: ${{ matrix.experimental }}
+    run: npm test
+```
+
+This pattern is useful when adopting a new major version. You collect test results without blocking CI, and you can monitor the experimental column to see when it stabilizes before promoting it to a required leg.
+
+For larger matrices, costs add up quickly. If your suite takes five minutes per configuration and you have a 4x3 matrix, that is 60 minutes of compute per push. Use path filtering (covered below) and `workflow_dispatch` inputs to let engineers request full matrix runs on demand rather than running them on every push to a feature branch.
+
 ## Conditional Execution Patterns
 
 GitHub Actions provides rich conditional logic through workflow syntax. Use path filters to run workflows only when relevant files change:
@@ -123,6 +169,45 @@ steps:
 
 Combine conditions with AND (`&&`) and OR (`||`) operators for sophisticated routing logic.
 
+A frequently overlooked pattern is using job outputs to pass decisions between jobs. This avoids duplicating condition logic across multiple steps:
+
+```yaml
+jobs:
+  check-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      api-changed: ${{ steps.filter.outputs.api }}
+      frontend-changed: ${{ steps.filter.outputs.frontend }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            api:
+              - 'api/**'
+            frontend:
+              - 'frontend/**'
+
+  test-api:
+    needs: check-changes
+    if: needs.check-changes.outputs.api-changed == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cd api && npm test
+
+  test-frontend:
+    needs: check-changes
+    if: needs.check-changes.outputs.frontend-changed == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cd frontend && npm test
+```
+
+This approach is effective in monorepos where running all tests on every change to any file wastes time and money. The `dorny/paths-filter` action is a popular choice; it works reliably on both push and pull request events.
+
 ## Reusable Workflows for Modular Automation
 
 As your repository grows, extract common workflow patterns into reusable workflows. This reduces duplication and ensures consistent practices across projects.
@@ -141,6 +226,9 @@ on:
       test-command:
         type: string
         default: 'npm test'
+    secrets:
+      NPM_TOKEN:
+        required: false
 
 jobs:
   test:
@@ -173,6 +261,19 @@ jobs:
       node-version: '18'
       test-command: 'npm run test:integration'
 ```
+
+Reusable workflows also work across repositories. A platform team can define a standard build-and-push workflow and organizations can call it from their application repos:
+
+```yaml
+jobs:
+  build:
+    uses: my-org/platform-workflows/.github/workflows/docker-build.yml@main
+    with:
+      image-name: my-service
+    secrets: inherit
+```
+
+The `secrets: inherit` directive passes all calling workflow secrets through to the reusable workflow. Be deliberate about using it — passing only named secrets is safer when calling third-party or less trusted reusable workflows.
 
 ## Performance Optimization Techniques
 
@@ -209,9 +310,44 @@ For monorepos, use sparse checkout to fetch only necessary files:
     sparse-checkout-cone-mode: false
 ```
 
+Beyond caching dependencies, consider caching build artifacts between jobs in the same workflow run. This avoids rebuilding when a downstream job only needs the compiled output:
+
+```yaml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: npm run build
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 1
+
+  e2e-test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: Run E2E tests
+        run: npm run test:e2e
+```
+
+The `retention-days: 1` setting prevents artifact storage from accumulating costs. For artifacts that only need to exist within a single workflow run, one day is sufficient.
+
+Another performance consideration is runner selection. GitHub-hosted runners are convenient but `ubuntu-latest` machines have modest specs. For CPU-intensive builds, consider larger runners (available on GitHub Team and Enterprise) or self-hosted runners on faster hardware. For builds that are I/O bound (many small file reads during bundling), the difference can be dramatic.
+
 ## Security Best Practices
 
-Secure your workflows by following these essential practices:
+Secure your workflows by following these essential practices.
 
 Never expose secrets in workflow files. Use encrypted secrets:
 
@@ -240,6 +376,31 @@ permissions:
   packages: write
 ```
 
+OIDC is the right approach for cloud authentication in 2026. AWS, GCP, and Azure all support GitHub's OIDC provider. Instead of storing long-lived access keys in GitHub Secrets, you configure a trust relationship between your cloud account and your GitHub repository. The workflow requests a short-lived token at runtime, scoped to a specific role. This eliminates the risk of a leaked secret being used outside a workflow run and removes the operational burden of rotating keys.
+
+A minimal AWS setup looks like this. In AWS, create an IAM OIDC provider for `token.actions.githubusercontent.com` and attach a trust policy to the role:
+
+```json
+{
+  "Condition": {
+    "StringEquals": {
+      "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
+      "token.actions.githubusercontent.com:sub": "repo:my-org/my-repo:ref:refs/heads/main"
+    }
+  }
+}
+```
+
+Scoping the trust to a specific ref prevents a compromised feature branch from assuming a production role. Add environment conditions when using GitHub Environments for even tighter control.
+
+Pin third-party actions to a specific commit SHA rather than a mutable tag. A tag like `@v4` can be reassigned by the action author. A SHA is immutable:
+
+```yaml
+- uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+```
+
+This protects against supply chain attacks where a compromised action tag delivers malicious code to your workflow. Tools like Dependabot and Renovate can keep these SHAs up to date automatically.
+
 ## Debugging and Monitoring
 
 When workflows fail, use detailed logging to identify issues. Enable step debug logging:
@@ -261,17 +422,50 @@ Use workflow run URLs in notifications to provide direct links to failed runs:
     echo "Workflow failed: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 ```
 
-Implement custom status badges that reflect your workflow health:
+Debug logging at the runner level can be enabled by setting the `ACTIONS_RUNNER_DEBUG` and `ACTIONS_STEP_DEBUG` repository secrets to `true`. This produces verbose output from every step, including the runner infrastructure itself. It is too noisy for normal use but invaluable when a workflow behaves differently in CI than it does locally.
+
+For persistent monitoring, push workflow metrics to an observability platform. GitHub's API exposes run duration, conclusion, and billing minutes per run. A simple script scheduled on a `schedule` trigger can collect these and push them to a dashboard:
 
 ```yaml
-![CI](https://github.com/${{ github.repository }}/actions/workflows/ci.yml/badge.svg)
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # Every Monday at 8am UTC
+
+jobs:
+  report-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch workflow run stats
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api repos/${{ github.repository }}/actions/runs \
+            --jq '.workflow_runs[] | {name: .name, status: .conclusion, duration: .run_started_at}' \
+            > runs.json
+      - name: Send to dashboard
+        run: ./scripts/push-metrics.sh runs.json
 ```
+
+For Slack or Teams notifications on failure, use the `if: failure()` condition with a dedicated notification step at the end of your job. Include the workflow name, the triggering commit SHA, and the direct link to the failed run. This reduces the time engineers spend hunting for context when they receive an alert.
+
+## Using Claude Code to Generate and Refine Workflows
+
+Claude Code is particularly effective for GitHub Actions work because it can see your full repository context — your package.json, existing workflows, Dockerfile, and deployment scripts — before generating a workflow. This context awareness means the output fits your actual project rather than being a generic template.
+
+Practical ways to use Claude Code for workflow automation:
+
+- Ask it to audit an existing workflow for security issues (missing permission scopes, mutable action pins, secrets referenced in `run` steps where they might appear in logs).
+- Give it a deploy script and ask it to write a workflow that calls it correctly, including caching the build, gating on environment approvals, and sending a Slack notification on failure.
+- Paste a failing workflow log and ask it to explain what went wrong and propose a fix.
+- Ask it to convert a set of Makefile targets into a structured multi-job workflow with appropriate dependencies.
+
+When Claude Code generates YAML, review the `permissions` block specifically. The default `GITHUB_TOKEN` permission level varies by repository setting, and Claude may not know your org's default. Explicitly declaring permissions in your workflow file is always safer than relying on defaults.
 
 ## Conclusion
 
 Building effective GitHub Actions workflows requires thoughtful organization, strategic use of matrix builds, careful conditional logic, and attention to performance and security. Claude Code can help you implement these patterns, generate boilerplate code, and optimize existing workflows. Start with simple workflows and progressively adopt advanced techniques as your automation needs grow.
 
-With these custom workflow automation tips, you can create CI/CD pipelines that are efficient, secure, and maintainable. Remember to regularly review and optimize your workflows as your project evolves.
+The most impactful improvements to most CI/CD setups come from four places: splitting jobs for parallelism, adding dependency caching, switching to OIDC for cloud auth, and pinning action versions to SHAs. None of these require complex tooling — they are straightforward YAML changes that meaningfully reduce cost, execution time, and security exposure. With these custom workflow automation tips, you can create CI/CD pipelines that are efficient, secure, and maintainable.
 
 ---
 
