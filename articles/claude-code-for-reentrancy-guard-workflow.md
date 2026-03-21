@@ -40,13 +40,19 @@ async function processPayment(orderId) {
   const order = await db.orders.find(orderId);
   order.status = 'processing';
   await order.save();
-  
+
   // If this await pauses and another call comes in...
   await paymentGateway.charge(order.amount);
   order.status = 'completed';
   await order.save();
 }
 ```
+
+The danger here is subtle. Between the first `await order.save()` and `await paymentGateway.charge()`, the event loop yields control. If a duplicate webhook arrives during that window — or a retry is triggered by a timeout — a second call to `processPayment` will find the order in `processing` status and may proceed to charge the customer again. This is the exact scenario that leads to double-charges, which are both a product failure and a regulatory liability.
+
+Node.js's single-threaded event loop does not protect you from this class of bug. Any `await` is a yield point where another invocation can begin. Go's goroutines, Python's asyncio, and Java's virtual threads all face equivalent patterns. The language or runtime being "safe" in the memory-corruption sense does not prevent logical reentrancy.
+
+Claude Code helps by recognizing these patterns when you share code, then generating the appropriate guard for your specific situation. The output is not generic boilerplate — it takes the shape of your actual data models and async patterns.
 
 ## Building Reentrancy Guards with Claude Code
 
@@ -83,6 +89,52 @@ class PaymentProcessor {
 }
 ```
 
+The `try/finally` block is critical. Without it, an exception thrown inside `processPaymentInternal` would leave the order ID in the `processing` Set permanently, blocking all future attempts to process that order — a deadlock at the application level. Claude Code generates the `finally` block automatically and will flag existing code that omits it.
+
+When the guard returns early (the order is already being processed), you have a decision to make: silently skip, return an indicator, or queue the request for retry. Claude can help you implement each variant. For webhook deduplication, silent skip is often correct. For UI-triggered actions like a "submit" button, returning a status indicator and disabling the button is better UX. For job queues, queuing the request and processing it after the current execution completes is the safest approach.
+
+### Queue-on-Contention Pattern
+
+Rather than dropping concurrent calls, you can queue them:
+
+```javascript
+class QueuedProcessor {
+  constructor() {
+    this.queues = new Map();
+  }
+
+  async process(key, task) {
+    if (!this.queues.has(key)) {
+      this.queues.set(key, Promise.resolve());
+    }
+
+    const queue = this.queues.get(key);
+    const next = queue.then(() => task());
+    this.queues.set(key, next.catch(() => {}));
+
+    try {
+      return await next;
+    } finally {
+      if (this.queues.get(key) === next) {
+        this.queues.delete(key);
+      }
+    }
+  }
+}
+
+// Usage
+const processor = new QueuedProcessor();
+
+// All three calls will execute, but sequentially for the same key
+await Promise.all([
+  processor.process('order-123', () => processPayment('order-123')),
+  processor.process('order-123', () => processPayment('order-123')),
+  processor.process('order-123', () => processPayment('order-123')),
+]);
+```
+
+This pattern serializes access to a resource without losing requests. It is useful for database writes where the second and third callers should wait rather than fail, but you still need them to eventually succeed.
+
 ### Distributed Reentrancy Guards
 
 For multi-instance deployments, you need distributed locks. Claude Code can help you implement Redis-based locks:
@@ -114,6 +166,76 @@ class DistributedLock {
       end
     `;
     await this.redis.eval(script, 1, `lock:${key}`, ownerId);
+  }
+}
+```
+
+The Lua script in `releaseLock` is an important detail. It atomically checks that the lock is still owned by the calling instance before deleting it. Without this check, a race condition exists: instance A's lock could expire, instance B acquires it, then instance A's `releaseLock` call deletes instance B's lock — leaving the resource unprotected. Claude Code generates the atomic Lua script by default because it understands this edge case.
+
+A complete usage pattern wraps `acquireLock` and `releaseLock` in a higher-order function:
+
+```javascript
+async function withDistributedLock(lockClient, key, fn) {
+  const ownerId = crypto.randomUUID();
+  const acquired = await lockClient.acquireLock(key, ownerId);
+
+  if (!acquired) {
+    throw new Error(`Could not acquire lock for key: ${key}`);
+  }
+
+  try {
+    return await fn();
+  } finally {
+    await lockClient.releaseLock(key, ownerId);
+  }
+}
+
+// Usage
+await withDistributedLock(lockClient, `payment:${orderId}`, async () => {
+  await processPaymentInternal(orderId);
+});
+```
+
+Claude Code can generate this wrapper and integrate it into your existing service classes, adapting variable names and error handling to match your codebase's conventions.
+
+### Lock TTL and Crash Recovery
+
+The TTL on your distributed lock is a safety valve, not a guarantee. If your function takes longer than `lockTTL` milliseconds, the lock expires and another instance can acquire it while the original is still running. This means you should:
+
+1. Set TTL significantly longer than your expected worst-case execution time
+2. Instrument lock acquisition and release to monitor actual hold times
+3. Consider lock extension (refreshing TTL periodically) for long-running operations
+
+Claude can generate a lock extender that refreshes the TTL every N seconds while the function is still executing:
+
+```javascript
+class LockExtender {
+  constructor(redisClient, key, ownerId, interval = 10000) {
+    this.redis = redisClient;
+    this.key = key;
+    this.ownerId = ownerId;
+    this.interval = interval;
+    this.timer = null;
+  }
+
+  start() {
+    this.timer = setInterval(async () => {
+      const script = `
+        if redis.call("get", KEYS[1]) == ARGV[1] then
+          return redis.call("pexpire", KEYS[1], ARGV[2])
+        else
+          return 0
+        end
+      `;
+      await this.redis.eval(script, 1, `lock:${this.key}`, this.ownerId, 30000);
+    }, this.interval);
+  }
+
+  stop() {
+    if (this.timer) {
+      clearInterval(this.timer);
+      this.timer = null;
+    }
   }
 }
 ```
@@ -157,6 +279,37 @@ class IdempotentPaymentService {
 }
 ```
 
+Idempotency keys differ from reentrancy guards in an important way: a guard prevents concurrent duplicate executions (happening at the same time), while an idempotency key prevents repeated executions over time (including retries hours later). Production payment systems need both.
+
+The idempotency key should be generated by the caller and passed in, not generated internally. This allows clients to safely retry failed requests using the same key — if the first request succeeded but the response was lost, the retry returns the cached result without re-charging. Stripe, Braintree, and most major payment APIs use this exact pattern.
+
+Claude Code can also help you implement idempotency at the database level using PostgreSQL's `ON CONFLICT DO NOTHING` or `INSERT ... ON CONFLICT DO UPDATE`:
+
+```sql
+-- Idempotent insert using idempotency key as unique constraint
+INSERT INTO payment_results (idempotency_key, order_id, status, amount, processed_at)
+VALUES ($1, $2, $3, $4, NOW())
+ON CONFLICT (idempotency_key) DO NOTHING
+RETURNING *;
+```
+
+This approach is more durable than Redis caching because it survives cache flushes and server restarts. Claude generates the migration to add the unique constraint alongside the query.
+
+## Comparing Guard Approaches
+
+Understanding which guard type fits your situation prevents over-engineering. Here is a comparison of the main approaches:
+
+| Approach | Scope | Persistence | Use Case |
+|---|---|---|---|
+| In-memory Set/Map | Single process | Lost on restart | Single-instance services, UI guards |
+| Database row lock | Single DB | Durable | Critical writes, financial operations |
+| Redis distributed lock | All instances | Lost on Redis restart | Horizontally scaled services |
+| Idempotency key (Redis) | All instances | ~24h (configurable) | Webhook handlers, API retries |
+| Idempotency key (DB) | All instances | Permanent | Payment processing, order creation |
+| Queue serialization | Single process | Lost on restart | Sequential processing, message queues |
+
+Claude Code helps you choose the right tool by asking about your deployment topology (single instance vs. horizontal scale), durability requirements (can a duplicate slip through during a restart?), and acceptable latency (database locks add overhead vs. in-memory checks).
+
 ## Automating Guard Implementation with Claude Code Skills
 
 You can create a Claude Code skill that specifically targets reentrancy vulnerabilities in your codebase.
@@ -185,6 +338,10 @@ Focus on:
 - Recursive function calls
 ```
 
+When you invoke this skill against a service file, Claude reads the file and returns a structured analysis. A typical output identifies each risky function, explains why it is vulnerable, and provides a drop-in replacement with the appropriate guard pattern applied. This is faster and more thorough than manual code review, especially for large codebases where the reentrancy surface area is spread across dozens of files.
+
+You can extend the skill to also generate tests for each guard it adds, ensuring the protection works correctly before the code ships to production.
+
 ## Testing Reentrancy Guards
 
 A guard is only as good as its tests. Claude Code can help you write comprehensive tests that verify your guards work correctly.
@@ -195,10 +352,10 @@ A guard is only as good as its tests. Claude Code can help you write comprehensi
 async function testConcurrentExecution() {
   const processor = new PaymentProcessor();
   const orderId = 'order-123';
-  
+
   // Launch 10 concurrent calls
   const results = await Promise.all(
-    Array(10).fill(null).map(() => 
+    Array(10).fill(null).map(() =>
       processor.processPayment(orderId)
     )
   );
@@ -206,11 +363,59 @@ async function testConcurrentExecution() {
   // Verify only one actually processed
   const successCount = results.filter(r => r.success).length;
   console.log(`Successful executions: ${successCount}`);
-  
+
   // This should be exactly 1
   expect(successCount).toBe(1);
 }
 ```
+
+This test launches 10 concurrent calls and verifies that exactly one succeeded. Claude can generate the full test suite including edge cases: what happens when the guarded function throws? Does the guard release correctly so future calls can proceed? What if two separate order IDs are processed concurrently — do they block each other (they should not)?
+
+### Testing Lock Expiry and Recovery
+
+For distributed lock scenarios, you need to test TTL expiry behavior:
+
+```javascript
+describe('DistributedLock', () => {
+  it('allows reacquisition after TTL expires', async () => {
+    const lock = new DistributedLock(redisClient);
+    lock.lockTTL = 100; // 100ms for testing
+
+    // First acquisition
+    const firstOwner = 'owner-1';
+    const acquired = await lock.acquireLock('test-key', firstOwner);
+    expect(acquired).toBe(true);
+
+    // Wait for TTL to expire
+    await new Promise(resolve => setTimeout(resolve, 150));
+
+    // Second acquisition should succeed
+    const secondOwner = 'owner-2';
+    const reacquired = await lock.acquireLock('test-key', secondOwner);
+    expect(reacquired).toBe(true);
+
+    // Cleanup
+    await lock.releaseLock('test-key', secondOwner);
+  });
+
+  it('prevents release by non-owner', async () => {
+    const lock = new DistributedLock(redisClient);
+    await lock.acquireLock('test-key', 'owner-1');
+
+    // Attempt to release with wrong owner ID
+    await lock.releaseLock('test-key', 'owner-2');
+
+    // Lock should still exist
+    const value = await redisClient.get('lock:test-key');
+    expect(value).toBe('owner-1');
+
+    // Cleanup
+    await lock.releaseLock('test-key', 'owner-1');
+  });
+});
+```
+
+Claude Code generates tests like these automatically when you ask it to write a test suite for a guard implementation. It knows to test the failure modes — expired locks, wrong owners, concurrent acquisitions — not just the happy path.
 
 ## Actionable Advice for Implementation
 
@@ -231,6 +436,26 @@ Always remember to:
 - Set appropriate timeouts to prevent deadlocks
 - Log reentrancy attempts for monitoring and debugging
 - Test under concurrent load before deploying to production
+
+Logging reentrancy attempts deserves special attention. When a guard fires and blocks a duplicate call, that event should produce a log entry with context: which function was blocked, what the resource key was, how long the original call has been running. In production, a sudden spike in blocked calls can indicate a performance regression that's causing functions to run longer than expected, leading to more overlapping calls. Without logging, you would never know the guards are firing until the problem becomes severe enough to notice via other symptoms.
+
+Claude Code can augment your guard implementations with structured logging automatically:
+
+```javascript
+async processPayment(orderId) {
+  if (this.processing.has(orderId)) {
+    logger.warn('reentrancy_blocked', {
+      function: 'processPayment',
+      orderId,
+      currentlyProcessing: [...this.processing],
+    });
+    return { success: false, reason: 'already_processing' };
+  }
+  // ...
+}
+```
+
+This gives your observability stack the data it needs to alert on guard-firing rates and correlate them with latency trends.
 
 By following these patterns and using Claude Code's implementation capabilities, you can build robust systems that gracefully handle concurrent execution attempts while maintaining data integrity and consistent behavior.
 {% endraw %}
