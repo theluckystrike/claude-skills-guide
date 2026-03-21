@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://theluckystrike.github.io/claude-skills-guide/sitemap.xml
+
+# Crawl-delay (be polite)
+Crawl-delay: 1
+
+# Block non-content paths
+Disallow: /assets/
+Disallow: /404.html
