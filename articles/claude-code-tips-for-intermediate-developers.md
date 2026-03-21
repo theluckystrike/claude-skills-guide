@@ -16,40 +16,61 @@ tags: [claude-code, claude-skills]
 {% raw %}
 # Claude Code Tips for Intermediate Developers
 
-If you have moved past the basics of Claude Code and are ready to unlock its full potential, these practical tips will help you work smarter, not harder. This guide covers skill selection strategies, prompt engineering patterns, and automation techniques that developers and power users actually use in production workflows.
+If you have moved past the basics of Claude Code and are ready to unlock its full potential, these practical tips will help you work smarter, not harder. This guide covers skill selection strategies, prompt engineering patterns, file operation techniques, and automation approaches that developers and power users actually use in production workflows. Each section builds on the assumption that you are already comfortable with basic Claude Code usage and are looking for the kind of depth that separates competent users from truly efficient ones.
 
 ## Choose the Right Skill for the Job
 
-Claude Code skills are not one-size-fits-all tools. Each skill is designed for specific use cases, and selecting the correct one dramatically affects your productivity.
+Claude Code skills are not one-size-fits-all tools. Each skill is designed for specific use cases, and selecting the correct one dramatically affects your productivity and the quality of output you receive.
 
-For frontend development, the **frontend-design** skill provides specialized guidance on component architecture, CSS frameworks, and responsive design patterns. When working with documentation, the **pdf** skill handles PDF generation, text extraction, and form manipulation more effectively than generic prompts.
+For frontend development, the **frontend-design** skill provides specialized guidance on component architecture, CSS frameworks, and responsive design patterns. It understands the conventions of modern component-based UIs in ways that a generic prompt does not — it will suggest appropriate accessibility attributes, recommend sensible default props, and structure component files the way the community expects.
 
-If you practice test-driven development, the **tdd** skill structures your workflow around red-green-refactor cycles and generates appropriate test cases. For knowledge management across projects, **supermemory** helps you organize, search, and retrieve context across large codebases.
+When working with documents, the **pdf** skill handles PDF generation, text extraction, and form manipulation more effectively than generic prompts. The **docx** and **xlsx** skills follow the same principle for Word documents and spreadsheets respectively. These skills carry embedded knowledge about the libraries and APIs involved, which means you spend less time correcting output and more time using it.
+
+If you practice test-driven development, the **tdd** skill structures your workflow around red-green-refactor cycles and generates appropriate test cases with proper isolation and mocking patterns. For knowledge management across large codebases or multiple projects, **supermemory** helps you organize, search, and retrieve context that would otherwise be lost between sessions.
 
 The key principle: match your task to the skill's specialty. Using a general-purpose prompt when a specialized skill exists means leaving performance on the table.
 
+### Skill Selection Decision Guide
+
+| Task Type | Recommended Skill | Why |
+|---|---|---|
+| React/Vue component work | frontend-design | Component patterns, props, accessibility |
+| Writing unit/integration tests | tdd | Test structure, mocking, coverage thinking |
+| PDF generation or parsing | pdf | pdf-lib / puppeteer context built in |
+| Spreadsheet automation | xlsx | SheetJS API awareness |
+| Cross-session context tracking | supermemory | Persistent memory patterns |
+| Word document generation | docx | docx.js conventions |
+| Presentation decks | pptx | pptx generation library patterns |
+| General coding tasks | (none) | Default Claude Code is fine |
+
 ## Master Prompt Engineering Patterns
 
-Beyond basic instructions, intermediate developers benefit from structured prompt patterns that produce consistent, high-quality outputs.
+Beyond basic instructions, intermediate developers benefit from structured prompt patterns that produce consistent, high-quality outputs on the first attempt. The cost of vague prompts is wasted round-trips: you get output that is roughly correct but needs correction, which takes more total time than writing a clear prompt up front.
 
 ### The Context-Frame-Output Pattern
 
 Structure your prompts with three clear sections:
 
-1. **Context**: What you are working on
-2. **Frame**: Constraints and requirements
-3. **Output**: What you expect to receive
+1. **Context**: What you are working on and why
+2. **Frame**: Constraints, requirements, and what to avoid
+3. **Output**: What you expect to receive, in what format
 
-Example:
+Example for an authentication feature:
 
 ```
 Context: Building a React authentication flow with JWT tokens.
-Frame: Use functional components with hooks, implement error handling,
-       follow the existing file structure in src/auth/
-Output: Generate the AuthProvider component and login/logout hooks.
+The app uses React 18, TypeScript, and React Query for server state.
+
+Frame: Use functional components with hooks only (no class components).
+Implement error handling for network failures and invalid credentials.
+Follow the existing file structure in src/auth/ — one file per concern.
+Do not use localStorage; tokens go in memory or httpOnly cookies.
+
+Output: Generate the AuthProvider component and useLogin/useLogout hooks.
+Include TypeScript types for the auth context value.
 ```
 
-This pattern reduces ambiguity and produces more accurate code the first time.
+This pattern reduces ambiguity and produces more accurate code the first time. The Frame section is where most developers underinvest — specifying what NOT to do is as important as specifying what to do.
 
 ### Chain-of-Thought for Complex Tasks
 
@@ -60,46 +81,102 @@ Work through this problem step by step, showing your reasoning.
 Then implement the solution: [describe your problem]
 ```
 
-This approach works especially well for debugging mysterious issues, designing API contracts, or refactoring complex modules.
+This approach works especially well for debugging mysterious issues, designing API contracts, architecting data models, or refactoring complex modules where the right approach is not obvious. The intermediate step of reasoning-before-code tends to produce better solutions because it forces the model to identify constraints and edge cases before getting into implementation details.
+
+For performance problems specifically:
+
+```
+First analyze why this code might be slow. List the possible bottlenecks
+in order of likelihood before suggesting any changes.
+```
+
+This avoids the common trap of jumping to premature optimization.
+
+### Role and Persona Framing
+
+Setting an explicit role or perspective at the start of a complex session sharpens the quality of responses:
+
+```
+You are a senior backend engineer doing a code review.
+Review this authentication service for security vulnerabilities,
+performance issues, and maintainability concerns. Be direct and specific.
+```
+
+Versus the more common:
+
+```
+Review my authentication service.
+```
+
+The first prompt produces structured, actionable feedback. The second produces generic observations. Role framing is particularly effective for review tasks, architectural decisions, and security analysis.
+
+### The Minimal Failing Example Pattern
+
+For debugging, the single most effective prompt pattern is asking for a minimal reproduction first:
+
+```
+Reduce this bug to the smallest possible failing example before
+suggesting a fix. Show me the minimal code that demonstrates the issue.
+```
+
+This forces the problem to be isolated from the complexity of your real codebase. A surprising number of bugs disappear during this process, which tells you the root cause was in the surrounding code rather than the suspected location.
 
 ## Leverage File Operations Strategically
 
-Claude Code's file operations become powerful when you understand how to use them efficiently.
+Claude Code's file operations become powerful when you understand how to use them efficiently. The difference between a fast workflow and a slow one often comes down to how you structure file reads and edits.
 
 ### Batch Related Operations
 
 Instead of multiple separate operations, group related changes:
 
 ```bash
-# Instead of reading files one at a time
+# Less efficient: reading files one at a time in separate prompts
 read_file path: "src/components/Button.tsx"
 read_file path: "src/components/Input.tsx"
 read_file path: "src/components/Form.tsx"
 
-# Read them together when possible
-# Use a glob pattern or list multiple files
+# More efficient: ask Claude to read related files together in one prompt
+# "Read Button.tsx, Input.tsx, and Form.tsx in src/components/
+# to understand the component patterns, then generate a Modal component
+# that follows the same conventions."
 ```
+
+When you ask Claude to read multiple related files in a single prompt, it can reason about their relationships and conventions before generating output. Reading them sequentially in separate prompts means re-establishing context each time.
 
 ### Use Edit Operations Over Rewrite
 
-When modifying existing code, prefer edit_file over write_file:
+When modifying existing code, prefer targeted edits over full file rewrites:
 
 ```python
-# Edit operation - preserves file permissions and git history
-edit_file new_str: "const API_URL = process.env.API_URL;", 
+# Edit operation - surgical change, preserves surrounding code
+edit_file new_str: "const API_URL = process.env.API_URL;",
           old_str: "const API_URL = 'http://localhost:3000';",
           path: "src/config.ts"
 ```
 
-This matters in collaborative projects where preserving git blame and file metadata reduces friction.
+Full rewrites introduce risk: something in the existing file that Claude did not regenerate correctly. Edit operations limit the blast radius of any error and make code review faster — reviewers can see exactly what changed rather than diffing an entire file.
+
+This matters especially in collaborative projects where preserving git blame and file metadata reduces friction during PR reviews.
+
+### Provide Architecture Context Before Deep Dives
+
+For projects with non-obvious structure, invest one prompt in establishing architectural context:
+
+```
+Before we start: read src/app.ts, src/routes/index.ts, and
+src/middleware/auth.ts to understand the application structure.
+Summarize what you learned, then we will work on adding a new endpoint.
+```
+
+This front-loaded context read pays dividends throughout the session. Without it, Claude makes assumptions about your structure that may not match reality, producing code that needs manual adjustment to fit.
 
 ## Automate Repetitive Workflows
 
-Intermediate users should build reusable patterns for common tasks.
+Intermediate users should build reusable patterns for common tasks rather than re-explaining the same context in every session.
 
 ### Create Project-Specific Skills
 
-For recurring project needs, create custom skills in your project repository:
+For recurring project needs, create custom skills in your project repository that encode your conventions:
 
 ```markdown
 ---
@@ -107,97 +184,202 @@ name: api-test
 description: Generate integration tests for API endpoints
 ---
 
-When asked to create API tests:
-1. Read the OpenAPI spec or route definitions
-2. Generate tests using the project's test framework
-3. Include proper setup and teardown
-4. Mock external dependencies
+When asked to create API tests for this project:
+1. Read the route file and any related controller
+2. Generate tests using Vitest with Supertest for HTTP assertions
+3. Import test helpers from tests/helpers/setup.ts
+4. Mock the database using the mock factory in tests/helpers/db-mock.ts
+5. Include both success cases and error cases (400, 401, 404, 500)
+6. Follow the naming pattern: describe("POST /endpoint", () => { ... })
 ```
 
-Save this as `skills/api-test.md` in your project and invoke it with `/api-test` or similar trigger.
+Save this as `skills/api-test.md` in your project. Team members who clone the repo get the same skill, and the skill encodes your project's specific test setup rather than a generic one.
+
+Good project skills document:
+- Which libraries your project uses (not just "a test framework")
+- Where helpers and fixtures live
+- Naming conventions
+- What to mock and what to test against the real implementation
 
 ### Script Common Sequences
 
-For multi-step workflows, bash scripts work well:
+For multi-step workflows that you run regularly, shell scripts provide repeatability:
 
 ```bash
 #!/bin/bash
-# Generate component and its tests
-claude "Create a Button component with variants: primary, secondary, ghost"
-claude "Generate tests for the Button component using vitest"
+# scaffold-component.sh: Generate a new component with tests and stories
+COMPONENT_NAME=$1
+if [ -z "$COMPONENT_NAME" ]; then
+  echo "Usage: ./scaffold-component.sh ComponentName"
+  exit 1
+fi
+
+claude "Create a React component named $COMPONENT_NAME.
+Use TypeScript, include proper prop types, and export both
+the component and its prop type interface."
+
+claude "Generate Vitest unit tests for $COMPONENT_NAME
+covering: renders without error, prop validation, key interactions."
+
+claude "Generate a Storybook story for $COMPONENT_NAME
+with a Default story and at least two variant stories."
 ```
 
-You can wrap these in npm scripts for team-wide consistency.
+Wrapping these in npm scripts makes them accessible to the whole team without requiring everyone to know the shell script details:
+
+```json
+{
+  "scripts": {
+    "scaffold": "bash scripts/scaffold-component.sh"
+  }
+}
+```
 
 ## Work Effectively with Context
 
-Managing Claude's context window efficiently improves long-running session performance.
+Managing Claude's context window efficiently improves long-running session performance. Context is a finite resource — filling it with redundant or irrelevant information degrades the quality of responses on complex tasks.
 
 ### Use Reference Files Strategically
 
-Instead of pasting large files into prompts:
+Instead of pasting large files into prompts, reference them by path and let Claude read them:
 
 ```
-The error is in src/services/payment.ts. Read that file and the 
-related test at tests/services/payment.test.ts to understand the issue.
+The error is in src/services/payment.ts around line 47.
+Read that file and the related test at tests/services/payment.test.ts
+to understand what the function is supposed to do, then identify the bug.
 ```
 
-This approach keeps context lean while providing necessary information.
+This approach keeps your prompt lean while providing all necessary information. It also ensures Claude is reading the current version of the file rather than a version you pasted earlier in the session.
+
+For large files, guide Claude to the relevant section rather than expecting it to read everything:
+
+```
+In src/services/payment.ts, focus on the processRefund function
+(around line 200-280). Read just that function and its helper calls.
+```
 
 ### Implement Context Refresh Points
 
-For complex projects, periodically summarize and restart context:
+For complex sessions spanning many tasks, periodically summarize progress before continuing:
 
 ```
-Summarize our progress on the user authentication feature so far,
-then continue with implementing the password reset flow.
+Summarize what we have accomplished in this session on the
+user authentication feature. List what is done, what is in progress,
+and what remains. Then continue with implementing the password reset flow.
 ```
 
-This prevents context pollution and keeps Claude focused on current tasks.
+This serves two purposes: it confirms you and Claude have the same understanding of where things stand, and it effectively resets the active context to focus on what matters next rather than accumulating the full history of the session.
+
+### Separate Concerns Across Sessions
+
+Resist the urge to keep a single session running for an entire day. Each session starts with a clean, focused context. Starting a new session for each distinct feature or bug fix tends to produce better results than one long session where context accumulates and becomes noisy.
+
+Keep a brief working note of where you left off between sessions — a few lines in a scratch file or a commented-out block in the relevant file is enough to re-establish context quickly in a new session.
 
 ## Debug Smarter, Not Harder
 
-When things go wrong, these patterns help you diagnose issues quickly.
+Debugging with Claude Code is most effective when you treat it as a structured investigation rather than asking for a fix directly.
 
 ### Reproduce Before Fixing
 
-Always ask Claude to reproduce the issue first:
+Always establish a reproduction case before discussing solutions:
 
 ```
-First, show me how to reproduce this bug with a minimal test case.
-Then we can discuss the fix.
+First, show me how to reproduce this bug with a minimal test case
+that does not depend on the full application setup.
+Once we have the reproduction, we can discuss the fix.
 ```
 
-This ensures you understand the root cause rather than treating symptoms.
+This ensures you understand the root cause rather than treating symptoms. It also gives you a regression test — once you have the minimal reproduction, you can add it to your test suite to prevent the bug from returning.
 
 ### Use Structured Error Analysis
 
-When encountering errors, provide structured information:
+When encountering errors, provide complete structured information rather than just the error message:
 
 ```
-Error message: [paste exact error]
-Expected behavior: [what should happen]
-Actual behavior: [what happens instead]
-Environment: [relevant config details]
+Error message: TypeError: Cannot read property 'userId' of undefined
+  at validateSession (src/middleware/auth.ts:23)
+  at Layer.handle [as handle_request]
+
+Expected behavior: Authenticated requests should have req.session.userId available.
+
+Actual behavior: req.session is undefined for requests that include a valid cookie.
+
+Environment: Express 4.18, express-session 1.17, running on Node 20.
+The issue only occurs in the test environment, not locally.
+
+Relevant config: tests use supertest; session middleware is in src/app.ts.
 ```
 
-This eliminates guesswork and produces faster, more accurate solutions.
+Providing "only occurs in tests" type information immediately focuses the diagnosis. This eliminates guesswork and produces faster, more accurate solutions because Claude can rule out entire categories of causes.
 
-## Build Your Skill Library
+### Ask for Explanation Alongside the Fix
 
-Over time, curate skills that match your actual workflow:
+After a fix is proposed, ask for the explanation separately:
 
-- **pdf**: Document generation and manipulation
-- **docx**: Technical documentation in Word format  
-- **xlsx**: Data analysis and spreadsheet automation
-- **pptx**: Presentation creation for technical reviews
-- **tdd**: Test-driven development workflows
+```
+Before implementing that fix, explain why the bug happened
+and why the fix resolves it. I want to understand the root cause.
+```
 
-Only keep skills you actively use. A lean skill library performs better and reduces cognitive overhead.
+This deepens your understanding and helps you catch similar issues in the future. It also gives you a chance to validate that the reasoning is sound before committing to the change.
+
+## Build Your Skill Library Intentionally
+
+Over time, curate a skill library that reflects your actual workflow rather than collecting every available skill:
+
+| Skill | Best For | Install When |
+|---|---|---|
+| pdf | Document generation, PDF manipulation | Working with reports, invoices, exports |
+| docx | Technical documentation in Word format | Client deliverables, spec docs |
+| xlsx | Data analysis, spreadsheet automation | Data pipelines, reporting |
+| pptx | Presentation creation for technical reviews | Architecture decks, demos |
+| tdd | Test-driven development workflows | Active TDD practice |
+| frontend-design | Component architecture, CSS, UI patterns | Frontend-heavy projects |
+| supermemory | Cross-session context management | Long-running projects |
+
+The discipline of only keeping skills you actively use is important. Every installed skill adds a small amount of noise to Claude's context about what capabilities are available. A library of 15 skills where you use 3 is less effective than a library of 5 skills where you use all 5.
+
+Review your skill library every few weeks and remove skills you have not used. Community skills also receive updates — re-reading a skill's documentation after a version update often reveals new capabilities you were not aware of.
+
+## Advanced Pattern: The Task Brief
+
+For complex, multi-day features, write a task brief as a markdown file at the start of work and reference it in every session:
+
+```markdown
+# Task: User Authentication System
+
+## Scope
+- JWT-based auth with refresh tokens
+- Email/password login
+- Session invalidation endpoint
+- Integration with existing User model in src/models/user.ts
+
+## Constraints
+- No new dependencies beyond jsonwebtoken (already in package.json)
+- Must maintain backward compatibility with existing /api/user routes
+- Test coverage must remain above 80%
+
+## Progress
+- [x] AuthService class skeleton
+- [x] Login endpoint
+- [ ] Refresh token rotation
+- [ ] Logout and session invalidation
+- [ ] Integration tests
+```
+
+Reference this file at the start of each session:
+
+```
+Read TASK_AUTH.md to understand the scope and current progress,
+then continue with implementing refresh token rotation.
+```
+
+This approach eliminates the friction of re-establishing context and ensures continuity even if you work on the feature across multiple days or switch between tasks.
 
 ---
 
-These tips represent patterns that working developers use daily. Start with one or two that match your current workflow, then gradually incorporate more as they become natural. The goal is not to use every feature, but to identify which capabilities genuinely improve your productivity.
+These tips represent patterns that working developers use daily. Start with one or two that match your current workflow, then gradually incorporate more as they become natural. The goal is not to use every feature, but to identify which capabilities genuinely improve your productivity and eliminate the friction that slows you down.
 
 
 ## Related Reading
