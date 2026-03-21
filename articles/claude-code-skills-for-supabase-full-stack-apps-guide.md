@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-skills-for-supabase-full-stack-apps-guide/
 ---
+{% raw %}
 
 # Claude Code Skills for Supabase Full Stack Apps Guide
 
@@ -486,3 +487,4 @@ Start with the skills matching your current bottleneck. As your project matures,
 - [Claude Skills with Supabase Database Integration](/claude-skills-guide/claude-skills-with-supabase-database-integration/) — connect Claude skills directly to your Supabase database for live queries
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

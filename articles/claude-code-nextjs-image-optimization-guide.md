@@ -10,6 +10,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-nextjs-image-optimization-guide/
 ---
+{% raw %}
 
 # Claude Code Next.js Image Optimization Guide
 
@@ -358,3 +359,4 @@ Next.js image optimization works best when you understand the component's key fe
 - [Workflows Hub](/claude-skills-guide/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
 
 
 # Claude Code Indie Developer Side Project Workflow Guide
@@ -277,3 +278,4 @@ Start with the foundation: create your `CLAUDE.md` before writing your first lin
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

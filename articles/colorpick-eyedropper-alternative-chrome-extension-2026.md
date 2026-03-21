@@ -11,6 +11,7 @@ score: 8
 categories: [integrations, guides]
 tags: [chrome-extension, colorpicker, developer-tools]
 ---
+{% raw %}
 
 # Colorpick Eyedropper Alternative Chrome Extension in 2026
 
@@ -391,3 +392,4 @@ Evaluate your specific workflow needs, test the extensions that match your requi
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

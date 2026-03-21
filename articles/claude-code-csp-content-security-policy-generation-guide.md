@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-csp-content-security-policy-generation-guide/
 ---
+{% raw %}
 
 # Claude Code CSP Content Security Policy Generation Guide
 
@@ -359,3 +360,4 @@ Remember that CSP is not a one-time configuration—it requires ongoing maintena
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Efficiently generate and iterate on security policy configurations
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
