@@ -203,6 +203,148 @@ readers, focus moves to the first error field, and all form
 controls are keyboard accessible"
 ```
 
+## Handling Multi-Step Form Accessibility
+
+Multi-step forms (wizards) introduce additional accessibility challenges beyond single-form validation. Users need to understand their progress, navigate between steps, and recover from errors in earlier steps without losing data.
+
+Claude Code's frontend-design skill generates multi-step form patterns with these accessibility requirements built in. The key elements:
+
+```html
+<!-- Progress indicator with accessible labeling -->
+<nav aria-label="Form progress">
+  <ol>
+    <li aria-current="step">
+      <span class="step-number" aria-hidden="true">1</span>
+      <span class="step-label">Personal Information</span>
+    </li>
+    <li>
+      <span class="step-number" aria-hidden="true">2</span>
+      <span class="step-label">Account Details</span>
+    </li>
+    <li>
+      <span class="step-number" aria-hidden="true">3</span>
+      <span class="step-label">Review</span>
+    </li>
+  </ol>
+</nav>
+
+<!-- Dynamic heading that updates per step -->
+<h1 id="step-heading" aria-live="polite">
+  Step 1 of 3: Personal Information
+</h1>
+```
+
+The `aria-current="step"` attribute tells screen readers which step the user is currently on. The `aria-live="polite"` on the heading announces step transitions without interrupting the user's current action.
+
+For validating across steps, maintain a validation state object that tracks errors per step. When a user tries to advance, validate the current step and announce any errors:
+
+```javascript
+class MultiStepFormValidator {
+  constructor(totalSteps) {
+    this.errors = Array.from({ length: totalSteps }, () => ({}));
+    this.currentStep = 0;
+  }
+
+  validateStep(stepIndex, formData) {
+    const stepErrors = {};
+    const validators = this.getValidatorsForStep(stepIndex);
+
+    for (const [field, validator] of Object.entries(validators)) {
+      const result = validator(formData[field]);
+      if (!result.valid) {
+        stepErrors[field] = result.message;
+      }
+    }
+
+    this.errors[stepIndex] = stepErrors;
+    return Object.keys(stepErrors).length === 0;
+  }
+
+  announceErrors(stepIndex) {
+    const errors = this.errors[stepIndex];
+    const errorCount = Object.keys(errors).length;
+
+    if (errorCount === 0) return;
+
+    // Create announcement
+    const announcement = `${errorCount} error${errorCount > 1 ? 's' : ''} found. ` +
+      Object.values(errors).join('. ');
+
+    // Announce via live region
+    const liveRegion = document.getElementById('form-announcements');
+    liveRegion.textContent = '';  // Clear first to ensure re-announcement
+    requestAnimationFrame(() => {
+      liveRegion.textContent = announcement;
+    });
+  }
+}
+```
+
+The `requestAnimationFrame` trick ensures the DOM change triggers the screen reader's live region announcement even when the text was previously the same string.
+
+## Automated Accessibility Testing for Forms
+
+Manual testing with screen readers is essential but time-consuming. Automated testing catches the most common accessibility violations and runs on every commit, preventing regressions.
+
+The tdd skill generates accessible form tests using `jest-dom` and `@testing-library/user-event`, which simulate real keyboard interactions:
+
+```javascript
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { axe, toHaveNoViolations } from 'jest-axe';
+import { LoginForm } from '../LoginForm';
+
+expect.extend(toHaveNoViolations);
+
+describe('LoginForm accessibility', () => {
+  it('has no axe violations', async () => {
+    const { container } = render(<LoginForm />);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+
+  it('announces validation errors to screen readers', async () => {
+    const user = userEvent.setup();
+    render(<LoginForm />);
+
+    // Submit without filling fields
+    await user.click(screen.getByRole('button', { name: /submit/i }));
+
+    // Error should be in an aria-live region
+    const emailError = screen.getByRole('alert');
+    expect(emailError).toHaveTextContent(/email is required/i);
+  });
+
+  it('associates errors with their fields', async () => {
+    const user = userEvent.setup();
+    render(<LoginForm />);
+
+    await user.click(screen.getByRole('button', { name: /submit/i }));
+
+    const emailInput = screen.getByLabelText(/email/i);
+    const errorId = emailInput.getAttribute('aria-describedby');
+
+    // The referenced error element should exist and contain the error text
+    const errorElement = document.getElementById(errorId);
+    expect(errorElement).toBeInTheDocument();
+    expect(errorElement).toHaveTextContent(/.+/); // Has some error text
+  });
+
+  it('moves focus to first error on submit', async () => {
+    const user = userEvent.setup();
+    render(<LoginForm />);
+
+    await user.click(screen.getByRole('button', { name: /submit/i }));
+
+    // Focus should move to first invalid field
+    const emailInput = screen.getByLabelText(/email/i);
+    expect(emailInput).toHaveFocus();
+  });
+});
+```
+
+Running these tests in CI ensures that accessible form behavior is maintained as the component evolves. The `jest-axe` integration catches WCAG violations automatically, while the custom tests verify specific accessible interaction patterns that axe cannot detect through static analysis alone.
+
 ## Summary
 
 Accessible form validation requires attention to both implementation and user experience. Use these key practices:

@@ -179,6 +179,88 @@ After implementing bandwidth controls, you need visibility into actual usage. Ch
 
 Export this data regularly to track the effectiveness of your policies and identify unexpected consumption patterns.
 
+## Bandwidth Management for Remote Workers on Metered Connections
+
+Remote workers on cellular connections or home internet with data caps face different bandwidth challenges than office workers. Chrome Enterprise policies can be conditionally applied based on network type, though this requires a more nuanced configuration approach.
+
+The Chrome `NetworkPredictionOptions` policy controls how aggressively Chrome prefetches and preloads resources. Setting this to `2` (disabling all network prediction) is appropriate for metered connections:
+
+```json
+{
+  "Browser": {
+    "NetworkPredictionOptions": 2
+  }
+}
+```
+
+For organizations using Chrome Browser Cloud Management (CBCM), you can apply different policies to different organizational units. Create a separate OU for remote workers and apply more conservative bandwidth policies there, while leaving office workers on default settings where bandwidth is less constrained.
+
+The Chrome Enterprise management console's Device activity reports show which users are consuming the most sync bandwidth. Before broadly restricting sync, review these reports to identify whether sync bandwidth is actually a problem or whether the concern is theoretical.
+
+For workers on truly limited connections (satellite internet, mobile hotspots), the most impactful change is disabling background updates entirely during work hours:
+
+```json
+{
+  "Browser": {
+    "ComponentUpdatesEnabled": false,
+    "BackgroundModeEnabled": false
+  }
+}
+```
+
+`BackgroundModeEnabled: false` prevents Chrome from running background tasks when the browser window is closed, which eliminates background sync and update traffic during work hours. Pair this with a scheduled update window during off-hours through your MDM.
+
+## Auditing Bandwidth Policies with Chrome Policy Analyzer
+
+Before deploying bandwidth policies fleet-wide, test them in a staging OU and measure actual impact. Chrome's built-in policy analysis tools help verify policies are applied correctly and identify conflicts between policies.
+
+Navigate to `chrome://policy` on a managed device to see all active policies and their sources. A policy that's showing as "ignored" or has a conflict marker is not taking effect, even though it's deployed. Common causes:
+
+- Policy set at both machine and user level with different values (machine-level wins)
+- Policy requiring a specific Chrome version not yet deployed to all devices
+- Policy blocked by a higher-priority GPO or MDM profile
+
+For the Chrome Management API, you can programmatically audit which policies are active across your fleet:
+
+```python
+from google.cloud import chromemanagement_v1
+
+
+def audit_bandwidth_policies(customer_id: str) -> list:
+    """
+    List all devices and their active bandwidth-related policies.
+    Returns a list of devices with their policy status.
+    """
+    client = chromemanagement_v1.ChromeManagementServiceClient()
+
+    bandwidth_policy_keys = [
+        "DataSaverEnabled",
+        "LinkPrefetchEnabled",
+        "PrerenderEnabled",
+        "NetworkPredictionOptions",
+        "SyncDisabled",
+        "ComponentUpdatesEnabled"
+    ]
+
+    results = []
+    request = chromemanagement_v1.ListTelemetryDevicesRequest(
+        parent=f"customers/{customer_id}",
+        page_size=100
+    )
+
+    for device in client.list_telemetry_devices(request=request):
+        device_info = {
+            "device_id": device.name,
+            "policies": {}
+        }
+        # In production: query the Policy API for each device's active policies
+        results.append(device_info)
+
+    return results
+```
+
+The Policy API is separate from the Management API shown earlier. Combining both lets you deploy policies through Management and audit their effective application through Policy, closing the loop on fleet-wide bandwidth configuration.
+
 ## Summary
 
 Chrome Enterprise provides a robust set of tools for managing browser bandwidth at scale. Key configurations include enabling Data Saver for general compression, disabling prefetch and prerender features to reduce unnecessary traffic, controlling extension updates through custom URLs, and selectively managing sync to balance functionality with bandwidth savings.

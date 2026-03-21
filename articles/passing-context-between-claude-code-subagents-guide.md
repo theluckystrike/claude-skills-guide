@@ -125,6 +125,145 @@ If subagents appear to miss context, verify the parent agent actually received a
 
 When results seem inconsistent across subagents, ensure they're reading from the same version of shared files. Timestamp your context files to detect stale data issues.
 
+## Implementing a Context Registry for Complex Pipelines
+
+When multi-agent workflows grow beyond 3-4 subagents, ad-hoc file-based context passing becomes difficult to reason about. A lightweight context registry—a structured JSON store with a consistent read/write interface—brings order to complex pipelines.
+
+The registry pattern gives each subagent a named context slot and enforces a consistent structure:
+
+```python
+import json
+import os
+from datetime import datetime, timezone
+from pathlib import Path
+
+
+class ContextRegistry:
+    """Simple file-backed context registry for multi-agent workflows."""
+
+    def __init__(self, registry_path: str = ".claude/context/registry.json"):
+        self.registry_path = Path(registry_path)
+        self.registry_path.parent.mkdir(parents=True, exist_ok=True)
+        if not self.registry_path.exists():
+            self._write({})
+
+    def _read(self) -> dict:
+        with open(self.registry_path) as f:
+            return json.load(f)
+
+    def _write(self, data: dict):
+        with open(self.registry_path, 'w') as f:
+            json.dump(data, f, indent=2)
+
+    def store(self, agent_name: str, key: str, value, ttl_minutes: int = 60):
+        """Store a value in the registry with an expiry."""
+        registry = self._read()
+        if agent_name not in registry:
+            registry[agent_name] = {}
+        registry[agent_name][key] = {
+            "value": value,
+            "stored_at": datetime.now(timezone.utc).isoformat(),
+            "expires_at": None if ttl_minutes == 0 else (
+                datetime.now(timezone.utc).timestamp() + (ttl_minutes * 60)
+            )
+        }
+        self._write(registry)
+
+    def retrieve(self, agent_name: str, key: str):
+        """Retrieve a value, returning None if missing or expired."""
+        registry = self._read()
+        entry = registry.get(agent_name, {}).get(key)
+        if not entry:
+            return None
+
+        # Check expiry
+        if entry.get("expires_at"):
+            if datetime.now(timezone.utc).timestamp() > entry["expires_at"]:
+                return None  # Expired
+
+        return entry["value"]
+
+    def list_context(self, agent_name: str) -> dict:
+        """List all non-expired context for an agent."""
+        registry = self._read()
+        now = datetime.now(timezone.utc).timestamp()
+        return {
+            k: v["value"]
+            for k, v in registry.get(agent_name, {}).items()
+            if not v.get("expires_at") or v["expires_at"] > now
+        }
+
+
+# Usage in parent agent orchestration
+registry = ContextRegistry()
+
+# Store output from first subagent
+registry.store("data-extractor", "requirements", extracted_requirements, ttl_minutes=120)
+registry.store("data-extractor", "schema_version", "2.1")
+
+# Second subagent reads what it needs
+context = registry.list_context("data-extractor")
+print(f"Available context: {list(context.keys())}")
+```
+
+The TTL (time-to-live) on stored context prevents stale data from persisting across workflow runs. Set shorter TTLs for intermediate results that shouldn't be reused, and longer TTLs (or 0 for no expiry) for stable configuration data.
+
+The registry also serves as an audit log. The `stored_at` timestamps let you reconstruct the exact sequence of context-passing events when debugging a failed pipeline run.
+
+## Validating Context Integrity Before Subagent Invocation
+
+Context corruption is subtle—a subagent receiving malformed JSON or truncated data will produce incorrect results without obvious errors. Adding validation before passing context to a subagent catches these issues early.
+
+A simple schema validation pattern using Python's `typing` module:
+
+```python
+from typing import TypedDict, Optional
+
+
+class ReviewTaskContext(TypedDict):
+    task_id: str
+    priority: str  # "high" | "medium" | "low"
+    files_under_review: list[str]
+    previous_review_comments: list[dict]
+    reviewer: Optional[str]
+
+
+def validate_review_context(data: dict) -> tuple[bool, list[str]]:
+    """
+    Validate that a context dict matches ReviewTaskContext schema.
+    Returns (is_valid, list_of_errors).
+    """
+    errors = []
+
+    required_fields = ["task_id", "priority", "files_under_review", "previous_review_comments"]
+    for field in required_fields:
+        if field not in data:
+            errors.append(f"Missing required field: {field}")
+
+    if "priority" in data and data["priority"] not in ("high", "medium", "low"):
+        errors.append(f"Invalid priority value: {data['priority']}")
+
+    if "files_under_review" in data:
+        if not isinstance(data["files_under_review"], list):
+            errors.append("files_under_review must be a list")
+        elif len(data["files_under_review"]) == 0:
+            errors.append("files_under_review cannot be empty")
+
+    return len(errors) == 0, errors
+
+
+# Before invoking subagent
+context_data = load_context_from_registry()
+is_valid, validation_errors = validate_review_context(context_data)
+
+if not is_valid:
+    print(f"Context validation failed: {validation_errors}")
+    # Handle gracefully: use defaults, skip the subagent, or raise
+else:
+    invoke_subagent("code-review", context_data)
+```
+
+This validation layer prevents the cascading failures that occur when a subagent at step 3 fails because of malformed context set at step 1—a failure mode that's frustrating to diagnose without explicit validation.
 
 ## Related Reading
 

@@ -178,6 +178,101 @@ claude -p "/pdf Analyze document.pdf"
 
 Review the log periodically to identify which skills consume the most calls and optimize accordingly.
 
+## Estimating Token Consumption Before Invocation
+
+Preventing rate limit errors is more reliable than handling them after the fact. Before invoking a heavy skill, estimate how many tokens the operation will consume. This lets you decide whether to proceed immediately, wait, or chunk the task.
+
+A practical estimation approach for document processing:
+
+```python
+import tiktoken  # OpenAI's tokenizer, works for approximation
+
+def estimate_tokens(text: str, model: str = "gpt-4") -> int:
+    """Estimate token count for a given text string."""
+    enc = tiktoken.encoding_for_model(model)
+    return len(enc.encode(text))
+
+
+def should_proceed_or_chunk(file_path: str, chunk_threshold: int = 50000) -> dict:
+    """Determine whether to process a file directly or chunk it."""
+    with open(file_path, 'r', errors='replace') as f:
+        content = f.read()
+
+    token_count = estimate_tokens(content)
+    word_count = len(content.split())
+
+    return {
+        "token_count": token_count,
+        "word_count": word_count,
+        "recommendation": "chunk" if token_count > chunk_threshold else "direct",
+        "suggested_chunks": max(1, token_count // chunk_threshold)
+    }
+
+
+# Usage before invoking /pdf skill
+result = should_proceed_or_chunk("annual-report.pdf")
+print(f"Tokens: ~{result['token_count']:,}")
+print(f"Recommendation: {result['recommendation']}")
+if result['recommendation'] == 'chunk':
+    print(f"Split into ~{result['suggested_chunks']} sections")
+```
+
+For the `/pdf` skill specifically, a rough rule of thumb: each page of a text-heavy document contributes approximately 300-600 tokens to the context. A 50-page specification document will consume 15,000-30,000 tokens before your prompt and the model's response. If you're at 80% of your TPM limit, wait for the window to reset rather than triggering a rate limit error mid-processing.
+
+## Building a Rate Limit Dashboard for Automated Pipelines
+
+When running unattended Claude Code pipelines overnight or in CI systems, a simple monitoring dashboard prevents the silent failure mode where rate limits stop your pipeline and you discover incomplete results hours later.
+
+The logging approach shown earlier gets you the raw data. A lightweight script that reads those logs and summarizes usage patterns helps identify which workflows are consuming the most API budget:
+
+```bash
+#!/bin/bash
+# analyze-skill-usage.sh — summarize skill invocation log
+
+LOG_FILE="${1:-$HOME/.claude/skill-usage.log}"
+
+if [ ! -f "$LOG_FILE" ]; then
+    echo "No log file found at $LOG_FILE"
+    exit 1
+fi
+
+echo "=== Skill Usage Summary ==="
+echo "Total invocations: $(wc -l < "$LOG_FILE")"
+echo ""
+echo "By skill:"
+grep -oP 'SKILL_CALL: \K\S+' "$LOG_FILE" | sort | uniq -c | sort -rn
+
+echo ""
+echo "By hour (last 24h):"
+awk -v cutoff="$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || \
+    date -u -v-24H +%Y-%m-%dT%H:%M:%SZ)" \
+    '$1 >= cutoff {
+        hour = substr($1, 1, 13)
+        count[hour]++
+    }
+    END { for (h in count) print count[h], h }' "$LOG_FILE" | sort -k2
+
+echo ""
+echo "Recent invocations (last 10):"
+tail -10 "$LOG_FILE"
+```
+
+For automated pipelines where rate limits are a real risk, emit a warning when approaching the threshold. Most orchestration scripts can check whether a prior run was rate-limited before starting the next batch:
+
+```bash
+# Check if last run hit a rate limit error
+if grep -q "rate_limit_exceeded" ~/.claude/skill-usage.log 2>/dev/null; then
+    LAST_ERROR=$(grep "rate_limit_exceeded" ~/.claude/skill-usage.log | tail -1 | awk '{print $1}')
+    MINUTES_AGO=$(( ($(date +%s) - $(date -d "$LAST_ERROR" +%s 2>/dev/null || echo 0)) / 60 ))
+    if [ "$MINUTES_AGO" -lt 5 ]; then
+        echo "Rate limit hit $MINUTES_AGO minutes ago. Waiting..."
+        sleep $(( (5 - MINUTES_AGO) * 60 ))
+    fi
+fi
+```
+
+This prevents pipelines from immediately retrying after a rate limit, which would just trigger another rate limit error.
+
 ## Summary
 
 Managing rate limits in skill-intensive workflows:

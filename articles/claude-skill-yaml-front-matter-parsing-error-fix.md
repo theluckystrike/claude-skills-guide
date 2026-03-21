@@ -223,6 +223,125 @@ description: "One sentence description of what this skill does"
 
 Fields like `tools`, `version`, `tags`, `permissions`, `auto_invoke`, and `context_files` are not recognized by Claude Code. Do not add them to skill files.
 
+## Diagnosing Skills That Load But Behave Incorrectly
+
+A skill whose front matter parses correctly can still malfunction if the metadata causes the skill system to behave unexpectedly. Two common cases:
+
+**Name mismatch**: The `name` field in front matter must match the filename (without `.md`). If your file is `tdd.md` but the front matter says `name: test-driven-development`, Claude Code may not correctly associate the `/tdd` invocation with this skill.
+
+```yaml
+# File: ~/.claude/skills/tdd.md
+# Correct — name matches filename
+---
+name: tdd
+description: "Write tests before implementation using TDD workflow"
+---
+
+# Incorrect — name doesn't match filename
+---
+name: test-driven-development
+description: "Write tests before implementation using TDD workflow"
+---
+```
+
+**Description too long**: While there's no hard character limit documented, extremely long `description` values (multi-paragraph strings) can cause issues with how the skill is displayed in the skill list. Keep descriptions to one or two sentences—describe what the skill does, not how it does it.
+
+A quick check to find skills where name doesn't match filename:
+
+```bash
+python3 << 'EOF'
+import yaml, os, glob
+
+skills_dir = os.path.expanduser('~/.claude/skills')
+
+for path in glob.glob(f'{skills_dir}/*.md'):
+    filename_base = os.path.splitext(os.path.basename(path))[0]
+    content = open(path).read()
+    parts = content.split('---')
+    if len(parts) < 3:
+        continue
+    try:
+        data = yaml.safe_load(parts[1])
+        skill_name = data.get('name', '')
+        if skill_name != filename_base:
+            print(f'MISMATCH: file={filename_base} name={skill_name} ({path})')
+        else:
+            print(f'OK: {filename_base}')
+    except yaml.YAMLError as e:
+        print(f'PARSE ERROR: {filename_base}: {e}')
+EOF
+```
+
+## Creating a Pre-Commit Hook for Skill File Validation
+
+If you manage skill files in a git repository (useful for sharing skills across a team), a pre-commit hook that validates YAML front matter prevents broken skills from being committed.
+
+Create `.git/hooks/pre-commit`:
+
+```bash
+#!/bin/bash
+# Validate YAML front matter in Claude skill files before commit
+
+set -e
+
+SKILL_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.claude/skills/.*\.md$' || true)
+
+if [ -z "$SKILL_FILES" ]; then
+    exit 0
+fi
+
+echo "Validating Claude skill YAML front matter..."
+
+ERRORS=0
+
+for file in $SKILL_FILES; do
+    result=$(python3 -c "
+import yaml, sys
+
+path = '$file'
+try:
+    content = open(path).read()
+except FileNotFoundError:
+    sys.exit(0)  # Deleted file, skip
+
+parts = content.split('---')
+if len(parts) < 3:
+    print(f'ERROR: {path}: missing front matter delimiters')
+    sys.exit(1)
+
+try:
+    data = yaml.safe_load(parts[1])
+    if not data:
+        print(f'ERROR: {path}: empty front matter')
+        sys.exit(1)
+    if 'name' not in data:
+        print(f'WARNING: {path}: missing name field')
+    if 'description' not in data:
+        print(f'WARNING: {path}: missing description field')
+    print(f'OK: {path}')
+except yaml.YAMLError as e:
+    print(f'ERROR: {path}: {e}')
+    sys.exit(1)
+" 2>&1)
+
+    echo "$result"
+
+    if echo "$result" | grep -q "^ERROR:"; then
+        ERRORS=$((ERRORS + 1))
+    fi
+done
+
+if [ "$ERRORS" -gt 0 ]; then
+    echo ""
+    echo "Commit blocked: $ERRORS skill file(s) have YAML errors. Fix them and re-stage."
+    exit 1
+fi
+
+echo "All skill files valid."
+```
+
+Make it executable with `chmod +x .git/hooks/pre-commit`. Now any skill file with a YAML parse error is rejected at commit time rather than discovered when a team member tries to invoke the skill.
+
 ---
 
 ## Related Reading

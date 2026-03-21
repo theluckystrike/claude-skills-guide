@@ -102,6 +102,72 @@ Consider documenting your best practices in a team knowledge base. Share what pr
 
 Remember that AI tools evolve rapidly. Stay current with new features and capabilities. The skills system in Claude Code receives regular updates that expand what's possible. Regular exploration of new skills and capabilities pays dividends in productivity.
 
+## Maintaining AI Context Across Long Development Sessions
+
+One of the most underappreciated challenges with AI coding tools is context degradation over long sessions. As a session extends, the AI's context window fills with earlier exchanges that become less relevant, while its attention to your most recent code and requirements can drift. Here are practical strategies to keep context sharp.
+
+Summarize and reset rather than continuing indefinitely. After 60-90 minutes of active work, start a new session with a brief summary of where you left off. Something like:
+
+```
+Starting from: completed user authentication module (JWT, refresh tokens,
+password reset). Tests passing. Next: implement authorization middleware
+that checks user roles from the database before allowing route access.
+Stack: Node.js, Express, Prisma, PostgreSQL.
+```
+
+This 3-sentence handoff gives the AI everything it needs without carrying forward the full conversation history. The new session often produces sharper output than a worn-down old one.
+
+Use CLAUDE.md to externalize persistent project context. Rather than re-explaining your tech stack, coding conventions, and project structure each session, document them once:
+
+```markdown
+## Current Sprint
+Building out the authorization layer. Key files:
+- src/middleware/auth.ts — authentication (complete)
+- src/middleware/authorize.ts — authorization (in progress)
+- src/services/permissions.ts — role/permission lookups (to do)
+
+## Database Schema Key Tables
+- users (id, email, role_id, created_at)
+- roles (id, name, permissions jsonb)
+```
+
+Update this file as you make progress. The supermemory skill takes this further by maintaining context across sessions automatically, which is worth installing on projects where you're working across multiple days or weeks.
+
+## Measuring Your AI Coding Productivity
+
+Tracking which AI tool usage patterns actually improve your output helps you double down on what works. Most developers who report AI tools as "not that useful" are using them for the wrong tasks or with insufficient context.
+
+A simple measurement approach: track time-to-working-code for different task types with and without AI assistance. You don't need sophisticated tooling—a simple log works:
+
+```
+2026-03-15 | Task: Add pagination to products API endpoint
+Without AI estimate: 45 minutes
+With AI: 18 minutes (3 iterations with Claude Code)
+What worked: sharing the existing endpoint code + my pagination utility
+What didn't: first prompt was too vague, needed to specify cursor-based not offset
+
+2026-03-15 | Task: Debug race condition in cache invalidation
+Without AI estimate: 2+ hours
+With AI: 2.5 hours
+What worked: nothing — AI couldn't help without deeper system context
+Lesson: complex distributed system bugs need human debugging
+```
+
+After a few weeks, patterns emerge. For most developers, AI tools deliver 2-4x speed improvements on well-defined tasks with clear requirements (CRUD operations, boilerplate, test generation, refactoring to a defined pattern). They deliver near-zero improvement on ambiguous architecture decisions, novel debugging, and security review.
+
+Concentrating your AI tool usage on the high-leverage tasks and staying skeptical in the low-leverage areas produces better outcomes than trying to use AI for everything.
+
+## Team Adoption Strategies That Actually Work
+
+Individual developers adopting AI coding tools is straightforward. Getting a team to use them consistently and well is harder. The approaches that work in practice:
+
+Start with concrete workflows rather than general encouragement. Instead of "use Claude Code when you find it useful," define specific workflows: "use Claude Code to write first drafts of unit tests," or "use Claude Code to review your PR diff before requesting review." Concrete triggers reduce the cognitive overhead of deciding when to use the tool.
+
+Create a team prompt library. When someone discovers an effective prompt for a common task—generating migration scripts, writing component tests, creating API documentation—add it to a shared document. A team library of 20-30 proven prompts has more impact than individual discovery because it encodes collective experience.
+
+Normalize discussing AI tool results in code review. When reviewing AI-generated code, make it natural for the reviewer to note which parts looked AI-generated and why. This builds shared understanding of where AI output needs the most scrutiny (error handling, edge cases, security checks) and creates psychological safety around admitting that a piece of code came from AI.
+
+Avoid mandating AI use for tasks where individual developers don't find it helpful. The fastest way to generate resentment is requiring AI tool usage for tasks where it doesn't fit a particular developer's workflow. Let adoption follow demonstrated value rather than policy.
 
 ## Related Reading
 
