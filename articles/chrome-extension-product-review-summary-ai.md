@@ -218,6 +218,95 @@ If building from scratch isn't your goal, several existing tools handle this:
 
 For developers, building your own extension gives you full control over the summarization logic, the UI, and which sites to support.
 
+## Testing Your Extension Across Sites
+
+Review site markup evolves constantly. Amazon redesigns its product pages, G2 updates its HTML structure, and Trustpilot occasionally rotates class names. Building robust tests into your development workflow prevents silent failures.
+
+Use a simple health check approach in your content script that verifies extraction worked before sending to the API:
+
+```javascript
+function validateExtractionResult(reviews) {
+  if (!reviews || reviews.length === 0) {
+    console.warn('[AI Summarizer] No reviews extracted. Selectors may need updating.');
+    return false;
+  }
+  const minLength = reviews.filter(r => r.text && r.text.length > 20);
+  if (minLength.length < 3) {
+    console.warn('[AI Summarizer] Too few meaningful reviews extracted:', reviews.length);
+    return false;
+  }
+  return true;
+}
+```
+
+For regression testing, capture a static snapshot of each supported site and run your extractor against it. Store the snapshot HTML in your test fixtures and verify selector behavior without hitting live sites.
+
+When a site breaks, a useful pattern is to inject a warning badge into the page itself—this surfaces extraction failures to end users without requiring them to open the developer console:
+
+```javascript
+function showExtractionError() {
+  const badge = document.createElement('div');
+  badge.textContent = 'AI Summary unavailable — site structure changed.';
+  badge.style.cssText = 'background:#fee2e2;color:#991b1b;padding:8px 12px;margin:8px 0;border-radius:4px;font-size:14px;';
+  const target = document.querySelector('#reviews') || document.body;
+  target.prepend(badge);
+}
+```
+
+## Prompt Engineering for Better Summaries
+
+The quality of your summaries depends as much on prompt design as on the AI model. Generic prompts produce generic summaries. Tailoring your prompt to the review context dramatically improves output relevance.
+
+For product comparisons, instruct the model to focus on differentiating attributes rather than generic praise:
+
+```javascript
+const PROMPTS = {
+  product: `Analyze these product reviews. Respond with:
+1. **Top 3 praised features** (with evidence from reviews)
+2. **Top 3 complained-about issues** (with evidence)
+3. **Overall verdict** (1-2 sentences, include sentiment score 1-10)
+Keep each section concise. Reviews: `,
+
+  software: `Analyze these software reviews. Focus on:
+1. **Setup difficulty** — easy, moderate, or painful?
+2. **Reliability** — stability issues mentioned?
+3. **Support quality** — positive or negative mentions?
+4. **Best use case** — who is this for?
+Reviews: `,
+};
+
+function getPromptForSite(hostname) {
+  if (hostname.includes('g2') || hostname.includes('capterra')) return PROMPTS.software;
+  return PROMPTS.product;
+}
+```
+
+For cost-sensitive applications, a two-stage approach can reduce token usage: first run a lightweight classification step to determine if the product has mostly positive, negative, or mixed reviews. Only perform the full detailed summary for mixed or negative cases where users need more nuance.
+
+## Privacy-First Architecture
+
+Sending review text to third-party AI APIs raises legitimate privacy concerns, especially in enterprise contexts. Several design patterns let you build privacy-respecting extensions.
+
+**Client-side models** via the Web AI API (Chrome's built-in Gemini Nano) allow on-device inference for short summaries. This approach requires no API key and sends nothing to external servers:
+
+```javascript
+// Check for on-device AI capability
+async function tryOnDeviceSummary(reviewText) {
+  if (!('ai' in window) || !window.ai.summarizer) return null;
+
+  const summarizer = await window.ai.summarizer.create({
+    type: 'tl;dr',
+    format: 'plain-text',
+    length: 'medium'
+  });
+  return await summarizer.summarize(reviewText);
+}
+```
+
+**Data minimization** means stripping reviewer names, dates, and platform-specific metadata before sending to an API. Only the review body text needs to reach the AI model. This reduces payload size and limits potential privacy exposure.
+
+**User consent flows** should be explicit. Show a brief notice the first time the extension is activated on a page, explaining that review text will be sent to an AI service. Store consent state in `chrome.storage.local` and respect the user's choice across sessions.
+
 ---
 
 Ready to build? Start with the manifest and content script above, add your API integration, and test on a single e-commerce site first. Expand to additional sites as you refine your extraction selectors.

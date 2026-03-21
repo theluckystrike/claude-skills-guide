@@ -200,6 +200,147 @@ const filterPresets = {
 
 Append these filters to your base queries to quickly narrow results.
 
+## Integrating with Citation Managers
+
+Most serious researchers use citation managers like Zotero, Mendeley, or EndNote. A PubMed Chrome extension can export results directly in formats these tools understand, eliminating copy-paste friction.
+
+Zotero uses a COinS (Context Objects in Spans) metadata format that your extension can inject into popup HTML. Alternatively, export search results as RIS format, which every major citation manager imports:
+
+```javascript
+function exportToRIS(articles) {
+  const lines = [];
+
+  Object.keys(articles.result).forEach(pmid => {
+    if (pmid === 'uids') return;
+    const article = articles.result[pmid];
+
+    lines.push('TY  - JOUR');
+    lines.push(`TI  - ${article.title}`);
+    lines.push(`JO  - ${article.fulljournalname}`);
+    lines.push(`PY  - ${article.pubdate?.split(' ')[0] || ''}`);
+
+    (article.authors || []).forEach(author => {
+      lines.push(`AU  - ${author.name}`);
+    });
+
+    lines.push(`UR  - https://pubmed.ncbi.nlm.nih.gov/${pmid}/`);
+    lines.push('ER  -');
+    lines.push('');
+  });
+
+  return lines.join('\n');
+}
+
+function downloadRIS(risContent, filename = 'pubmed-results.ris') {
+  const blob = new Blob([risContent], { type: 'application/x-research-info-systems' });
+  const url = URL.createObjectURL(blob);
+  chrome.downloads.download({ url, filename });
+}
+```
+
+For BibTeX export, map PubMed fields to BibTeX keys. Most downstream tools like LaTeX editors and Overleaf accept BibTeX directly:
+
+```javascript
+function exportToBibTeX(articles) {
+  return Object.keys(articles.result).filter(k => k !== 'uids').map(pmid => {
+    const a = articles.result[pmid];
+    const year = a.pubdate?.match(/\d{4}/)?.[0] || '';
+    const key = `${(a.authors?.[0]?.name?.split(' ').pop() || 'Unknown')}${year}`;
+
+    return `@article{${key},
+  title = {${a.title}},
+  journal = {${a.fulljournalname}},
+  year = {${year}},
+  url = {https://pubmed.ncbi.nlm.nih.gov/${pmid}/}
+}`;
+  }).join('\n\n');
+}
+```
+
+## Rate Limiting and API Etiquette
+
+The NCBI E-utilities API has rate limits that matter for production extensions. Without an API key, you're limited to 3 requests per second. With a registered API key, the limit increases to 10 requests per second.
+
+Register for a free NCBI API key at the NCBI website and include it in all requests:
+
+```javascript
+const NCBI_API_KEY = 'your_api_key_here'; // Store in chrome.storage, not hardcoded
+
+async function searchPubMedWithKey(query, maxResults = 20) {
+  const baseUrl = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi';
+  const params = new URLSearchParams({
+    db: 'pubmed',
+    term: query,
+    retmax: maxResults,
+    retmode: 'json',
+    sort: 'relevance',
+    api_key: NCBI_API_KEY
+  });
+
+  const response = await fetch(`${baseUrl}?${params}`);
+  if (!response.ok) {
+    if (response.status === 429) throw new Error('Rate limit exceeded. Wait before retrying.');
+    throw new Error(`API error: ${response.status}`);
+  }
+
+  return response.json();
+}
+```
+
+Add exponential backoff for retries. Batch multiple PMID fetches into single requests rather than one request per article—the `id` parameter accepts comma-separated lists of up to 200 PMIDs.
+
+For extensions serving multiple users from the same IP (unlikely but possible in shared environments), cache results aggressively. A 24-hour cache on search results is reasonable for most research workflows since PubMed indexing has its own delay.
+
+## Handling Advanced PubMed Query Syntax
+
+The basic `term` parameter in the E-utilities search API accepts PubMed's full advanced query syntax, which is substantially more powerful than plain keyword search. Building a query builder UI in your extension dramatically improves search precision for researchers.
+
+PubMed field tags let researchers target specific parts of records. Common tags your extension should support:
+
+- `[tiab]` — Title and abstract only (avoids MeSH noise)
+- `[au]` — Author name
+- `[dp]` — Date of publication
+- `[mh]` — MeSH heading
+- `[pt]` — Publication type (e.g., `review[pt]`, `clinical trial[pt]`)
+- `[ta]` — Journal name abbreviation
+
+Build a simple query constructor function that assembles these:
+
+```javascript
+function buildAdvancedQuery(params) {
+  const parts = [];
+
+  if (params.keywords) {
+    parts.push(`(${params.keywords})[tiab]`);
+  }
+  if (params.author) {
+    parts.push(`${params.author}[au]`);
+  }
+  if (params.journal) {
+    parts.push(`${params.journal}[ta]`);
+  }
+  if (params.publicationType) {
+    parts.push(`${params.publicationType}[pt]`);
+  }
+  if (params.yearFrom && params.yearTo) {
+    parts.push(`${params.yearFrom}:${params.yearTo}[dp]`);
+  }
+
+  return parts.join(' AND ');
+}
+
+// Example usage
+const query = buildAdvancedQuery({
+  keywords: 'machine learning cancer diagnosis',
+  publicationType: 'review',
+  yearFrom: 2022,
+  yearTo: 2026
+});
+// Produces: (machine learning cancer diagnosis)[tiab] AND review[pt] AND 2022:2026[dp]
+```
+
+Add a UI panel in your popup where researchers can fill in structured fields rather than writing raw query syntax. Display the assembled query string so users can copy it to PubMed directly if needed. This makes your extension useful both as a search tool and as a query learning aid for researchers new to PubMed's syntax.
+
 ## Deployment and Distribution
 
 When your extension is ready, package it for distribution:

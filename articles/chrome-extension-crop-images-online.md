@@ -170,6 +170,139 @@ const workerCode = `
 `;
 ```
 
+## Supporting Image Format Conversion During Crop
+
+Cropping is often just one step in a larger image preparation workflow. Adding format conversion alongside cropping removes the need for a separate tool. The Canvas API exports to any format supported by the browser—PNG, JPEG, and WebP are universally available.
+
+Let users choose their output format with quality control for lossy formats:
+
+```javascript
+function exportCroppedImage(canvas, format = 'png', quality = 0.9) {
+  const mimeTypes = {
+    'png': 'image/png',
+    'jpg': 'image/jpeg',
+    'webp': 'image/webp'
+  };
+
+  const mimeType = mimeTypes[format] || 'image/png';
+  // quality parameter applies to jpeg and webp only
+  return canvas.toDataURL(mimeType, quality);
+}
+
+// Generate multiple sizes for responsive images
+async function exportResponsiveSizes(canvas, cropRegion) {
+  const sizes = [
+    { width: 1200, suffix: '@2x' },
+    { width: 600, suffix: '@1x' },
+    { width: 300, suffix: '-thumb' }
+  ];
+
+  return sizes.map(size => {
+    const scaled = document.createElement('canvas');
+    const ratio = size.width / cropRegion.width;
+    scaled.width = size.width;
+    scaled.height = Math.round(cropRegion.height * ratio);
+
+    const ctx = scaled.getContext('2d');
+    ctx.drawImage(canvas, 0, 0, scaled.width, scaled.height);
+
+    return {
+      filename: `image${size.suffix}.webp`,
+      dataUrl: scaled.toDataURL('image/webp', 0.85)
+    };
+  });
+}
+```
+
+WebP is generally the right default for web use—smaller file sizes than JPEG at equivalent quality, with transparency support like PNG. Offer PNG as a fallback for users who need lossless output or compatibility with older tools.
+
+## Cropping Images from External URLs and Cross-Origin Restrictions
+
+A common extension feature request is cropping images from the current web page. This hits a significant technical constraint: the Canvas API taints itself when drawing cross-origin images, preventing `toDataURL()` from working. An image loaded from a different domain will cause the canvas to throw a security error.
+
+The cleanest solution is proxying the image through your extension's background script using the `fetch` API, which has different CORS handling:
+
+```javascript
+// background.js: fetch cross-origin image and convert to object URL
+async function fetchImageAsObjectURL(imageUrl) {
+  try {
+    const response = await fetch(imageUrl);
+    const blob = await response.blob();
+    return URL.createObjectURL(blob);
+  } catch (err) {
+    console.error('Failed to fetch image:', err);
+    return null;
+  }
+}
+
+// content.js: handle right-click on image to trigger cropping
+document.addEventListener('contextmenu', (e) => {
+  if (e.target.tagName === 'IMG') {
+    chrome.runtime.sendMessage({
+      type: 'PREPARE_CROP',
+      src: e.target.src
+    });
+  }
+});
+```
+
+The background script fetches the image without CORS restrictions (since extensions have elevated network access), converts it to an object URL, and passes it back to the popup or content script where the canvas can draw it without tainting.
+
+For images protected by hotlink prevention or requiring authentication cookies, this approach may still fail. Gracefully handle these cases by falling back to a "right-click and save" prompt that guides the user to upload the image manually.
+
+## Keyboard Shortcuts and Accessibility
+
+A well-built image cropping extension respects keyboard users and integrates naturally into existing browser workflows. Adding keyboard shortcuts reduces friction for power users who prefer not to reach for the mouse during precise cropping operations.
+
+Register keyboard shortcuts through the extension manifest:
+
+```json
+{
+  "commands": {
+    "activate-cropper": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+X",
+        "mac": "Command+Shift+X"
+      },
+      "description": "Activate image crop tool"
+    },
+    "copy-cropped": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+C",
+        "mac": "Command+Shift+C"
+      },
+      "description": "Copy cropped selection to clipboard"
+    }
+  }
+}
+```
+
+Handle these shortcuts in the background script and relay to the active content script:
+
+```javascript
+// background.js
+chrome.commands.onCommand.addListener((command) => {
+  if (command === 'activate-cropper') {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      chrome.tabs.sendMessage(tabs[0].id, { type: 'ACTIVATE_CROPPER' });
+    });
+  }
+});
+```
+
+For accessibility compliance, ensure your crop selection UI communicates its state via ARIA attributes. Screen reader users benefit from live region announcements when the selection changes:
+
+```javascript
+function updateSelectionAnnouncement(x, y, width, height) {
+  const liveRegion = document.getElementById('crop-live-region');
+  if (liveRegion) {
+    liveRegion.textContent = `Selection: ${Math.round(width)} by ${Math.round(height)} pixels at position ${Math.round(x)}, ${Math.round(y)}`;
+  }
+}
+```
+
+Add keyboard-based nudging for precise crop adjustments. Arrow keys should move the selection by 1px, and Shift+Arrow by 10px. This level of precision is impossible with mouse dragging on high-DPI displays and makes the extension genuinely useful for professional design workflows.
+
 ## Use Cases for Developers and Power Users
 
 Image cropping extensions serve various workflows beyond simple photo editing:

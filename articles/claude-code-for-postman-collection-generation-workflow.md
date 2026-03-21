@@ -297,6 +297,131 @@ jobs:
           path: collection.json
 ```
 
+## Adding Pre-request Scripts and Test Assertions
+
+The real power of Postman collections lies in automated test assertions and dynamic pre-request scripts. Claude Code can generate these alongside the collection structure, giving you executable tests rather than just request definitions.
+
+A pre-request script handles dynamic auth tokens that expire between requests:
+
+```javascript
+// Pre-request script: auto-refresh Bearer token
+const tokenKey = 'access_token';
+const tokenExpiry = 'token_expiry';
+
+const token = pm.environment.get(tokenKey);
+const expiry = pm.environment.get(tokenExpiry);
+
+if (!token || Date.now() > parseInt(expiry)) {
+  pm.sendRequest({
+    url: pm.environment.get('baseUrl') + '/auth/token',
+    method: 'POST',
+    header: { 'Content-Type': 'application/json' },
+    body: {
+      mode: 'raw',
+      raw: JSON.stringify({
+        client_id: pm.environment.get('client_id'),
+        client_secret: pm.environment.get('client_secret')
+      })
+    }
+  }, (err, res) => {
+    const body = res.json();
+    pm.environment.set(tokenKey, body.access_token);
+    pm.environment.set(tokenExpiry, Date.now() + (body.expires_in * 1000));
+  });
+}
+```
+
+Test scripts validate response contracts automatically. Instruct Claude Code to generate assertions matching your OpenAPI response schemas:
+
+```javascript
+// Test script: validate user list response
+pm.test("Status code is 200", () => {
+  pm.response.to.have.status(200);
+});
+
+pm.test("Response is array", () => {
+  const json = pm.response.json();
+  pm.expect(json).to.be.an('array');
+});
+
+pm.test("Each user has required fields", () => {
+  const json = pm.response.json();
+  json.forEach(user => {
+    pm.expect(user).to.have.property('id');
+    pm.expect(user).to.have.property('name');
+    pm.expect(user).to.have.property('email');
+  });
+});
+
+// Store first user ID for subsequent requests
+if (pm.response.json().length > 0) {
+  pm.environment.set('test_user_id', pm.response.json()[0].id);
+}
+```
+
+## Running Collections from the Command Line with Newman
+
+For CI integration beyond artifact uploads, Newman—Postman's CLI runner—executes collections directly in pipelines and produces JUnit-compatible test reports:
+
+```bash
+npm install -g newman newman-reporter-htmlextra
+
+# Run with environment file and generate HTML report
+newman run collection.json \
+  --environment environment.json \
+  --reporters cli,htmlextra,junit \
+  --reporter-junit-export results/junit.xml \
+  --reporter-htmlextra-export results/report.html
+```
+
+Integrate Newman into your GitHub Actions workflow for comprehensive API test reporting:
+
+```yaml
+- name: Run API Tests
+  run: |
+    newman run postman/collection.json \
+      --environment postman/env-staging.json \
+      --reporters junit \
+      --reporter-junit-export test-results.xml
+
+- name: Publish Test Results
+  uses: dorny/test-reporter@v1
+  with:
+    name: API Tests
+    path: test-results.xml
+    reporter: java-junit
+```
+
+Ask Claude Code to generate environment files for each deployment target alongside the collection. A staging environment file differs from production only in base URL and credential values—Claude can produce both from a single template description.
+
+## Documenting Collections with Generated Descriptions
+
+A common failing of auto-generated Postman collections is sparse documentation. Request names and folder structures exist, but descriptions that explain business context, edge cases, and expected behavior are missing. This is where Claude Code adds value beyond structural generation.
+
+For each endpoint in your collection, prompt Claude Code to generate contextual descriptions based on your OpenAPI spec's operation summaries and your codebase's route handler logic:
+
+```
+For each endpoint in my collection, write a Postman request description that includes:
+1. What this endpoint does in plain English
+2. Required prerequisites (auth, parent resource must exist, etc.)
+3. Common error codes and what they mean
+4. An example use case from the application's perspective
+```
+
+Claude Code produces descriptions that make collections self-documenting for new team members. This is particularly valuable when sharing collections with non-developer stakeholders like QA teams, product managers, and external API consumers.
+
+Store these descriptions in the collection's `description` field at both the folder and request level:
+
+```json
+{
+  "name": "Create User",
+  "description": "Creates a new user account. Requires `admin` scope in the Bearer token. Returns 409 if the email address already exists in the system. The created user is immediately active—no email verification step required in staging environments.",
+  "request": { }
+}
+```
+
+A well-documented collection becomes your API's living reference manual. When combined with Newman's HTML report output, it produces test run reports that communicate results to stakeholders without requiring them to understand HTTP status codes.
+
 ## Conclusion
 
 Automating Postman collection generation with Claude Code transforms a tedious manual process into a streamlined, repeatable workflow. By following this guide, you can reduce collection creation time from hours to minutes while maintaining consistency and best practices across your API projects.

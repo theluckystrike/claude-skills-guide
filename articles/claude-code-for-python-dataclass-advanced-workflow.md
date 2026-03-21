@@ -222,6 +222,138 @@ class Employee:
         self.addresses.append(address)
 ```
 
+## Using __post_init__ for Complex Transformations
+
+The `__post_init__` method does more than validation. It's the right place for data normalization, computed fields, and relationship initialization that should happen automatically at construction time.
+
+A practical pattern is using `__post_init__` to normalize input data into canonical forms, so downstream code never needs to handle inconsistency:
+
+```python
+from dataclasses import dataclass, field
+from typing import List
+import re
+
+@dataclass
+class ContactRecord:
+    name: str
+    phone: str
+    email: str
+    tags: List[str] = field(default_factory=list)
+
+    def __post_init__(self):
+        # Normalize name: strip and title-case
+        self.name = self.name.strip().title()
+
+        # Normalize phone: strip non-numeric, format as E.164
+        digits = re.sub(r'\D', '', self.phone)
+        if len(digits) == 10:
+            self.phone = f'+1{digits}'
+        elif len(digits) == 11 and digits[0] == '1':
+            self.phone = f'+{digits}'
+        else:
+            self.phone = f'+{digits}'
+
+        # Normalize email to lowercase
+        self.email = self.email.strip().lower()
+
+        # Normalize tags: strip whitespace, deduplicate, sort
+        self.tags = sorted(set(t.strip().lower() for t in self.tags if t.strip()))
+```
+
+This ensures that regardless of how input arrives—from a form, a CSV import, or an API response—the stored data is always in the same canonical format. Claude Code is particularly good at generating these normalization routines when you describe your input sources and desired output format.
+
+## Combining Dataclasses with Protocol for Structural Typing
+
+Python's `Protocol` type (from `typing`) enables structural subtyping without inheritance. Combining dataclasses with Protocol definitions creates flexible, type-safe interfaces that work well with static analysis tools like mypy.
+
+Define a Protocol to describe what your dataclass must support, then implement it:
+
+```python
+from dataclasses import dataclass
+from typing import Protocol, runtime_checkable
+
+@runtime_checkable
+class Serializable(Protocol):
+    def to_dict(self) -> dict: ...
+
+    @classmethod
+    def from_dict(cls, data: dict) -> 'Serializable': ...
+
+@dataclass
+class Config:
+    host: str
+    port: int
+    debug: bool = False
+
+    def to_dict(self) -> dict:
+        return {
+            'host': self.host,
+            'port': self.port,
+            'debug': self.debug
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict) -> 'Config':
+        return cls(
+            host=data['host'],
+            port=int(data['port']),
+            debug=data.get('debug', False)
+        )
+
+# Type-safe handling of any Serializable
+def save_config(obj: Serializable, path: str) -> None:
+    import json
+    with open(path, 'w') as f:
+        json.dump(obj.to_dict(), f, indent=2)
+```
+
+The `@runtime_checkable` decorator allows `isinstance(obj, Serializable)` checks at runtime. This is useful when handling objects from external sources where static types cannot be verified at compile time. Claude Code can generate complete Protocol+dataclass combinations when you describe the interface contract you need to enforce.
+
+## Dataclass Slots for Memory Efficiency
+
+Python 3.10 introduced the `slots=True` parameter for dataclasses, which generates `__slots__` automatically. This optimization matters for applications that create large numbers of instances—reducing per-instance memory overhead and speeding up attribute access.
+
+```python
+from dataclasses import dataclass
+
+@dataclass(slots=True)
+class Point:
+    x: float
+    y: float
+    z: float = 0.0
+
+# Without slots: ~200 bytes per instance (varies by Python version)
+# With slots: ~72 bytes per instance
+# For 1 million points, that's ~128MB saved
+```
+
+The performance difference compounds when you store millions of dataclass instances in memory—common in scientific computing, financial modeling, and data pipeline processing. Attribute access on slotted dataclasses is also faster since attribute lookup bypasses the instance `__dict__`:
+
+```python
+import timeit
+
+@dataclass
+class RegularPoint:
+    x: float
+    y: float
+
+@dataclass(slots=True)
+class SlottedPoint:
+    x: float
+    y: float
+
+# Benchmark attribute access
+regular = RegularPoint(1.0, 2.0)
+slotted = SlottedPoint(1.0, 2.0)
+
+# Slotted is typically 10-30% faster for attribute reads
+regular_time = timeit.timeit(lambda: regular.x, number=1_000_000)
+slotted_time = timeit.timeit(lambda: slotted.x, number=1_000_000)
+print(f"Regular: {regular_time:.3f}s, Slotted: {slotted_time:.3f}s")
+```
+
+One important constraint: slotted dataclasses cannot combine with multiple inheritance unless all parent classes also use slots. Claude Code is aware of this limitation and will flag incompatible inheritance hierarchies when you use `slots=True` in a complex class hierarchy.
+
 ## Practical Workflow Tips
 
 When working with dataclasses in your projects, consider these best practices:
@@ -234,7 +366,7 @@ When working with dataclasses in your projects, consider these best practices:
 
 4. **Document complex fields**: Add docstrings explaining the purpose of non-obvious fields.
 
-5. **use field transformers**: Use `field()` with validators and converters for automatic data cleaning.
+5. **Use field transformers**: Use `field()` with validators and converters for automatic data cleaning.
 
 Claude Code can accelerate all of these workflows. When you need to add validation, create serialization methods, or refactor dataclass hierarchies, simply describe what you want to achieve and let Claude Code generate the implementation.
 
