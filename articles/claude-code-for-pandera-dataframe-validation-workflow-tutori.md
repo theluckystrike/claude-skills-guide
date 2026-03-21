@@ -5,7 +5,7 @@ description: "Learn how to use Claude Code to create robust Pandera dataframe va
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-pandera-dataframe-validation-workflow-tutori/
-categories: [Programming, Python, Data Engineering]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
