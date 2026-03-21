@@ -18,9 +18,11 @@ Citation management remains one of the most tedious aspects of academic and tech
 
 ## Why AI-Powered Citations Matter
 
-Traditional citation tools rely on database lookups—CrossRef, PubMed, or Google Scholar. These work well for published papers with DOIs but struggle with blog posts, GitHub repositories, conference talks, and dynamic web content. AI citation generators fill this gap by extracting metadata from any webpage and formatting it appropriately.
+Traditional citation tools rely on database lookups — CrossRef, PubMed, or Google Scholar. These work well for published papers with DOIs but struggle with blog posts, GitHub repositories, conference talks, and dynamic web content. AI citation generators fill this gap by extracting metadata from any webpage and formatting it appropriately.
 
-The key advantage is contextual understanding. An AI can distinguish between a software library's official documentation and a random blog post about that library, applying the correct citation style based on content type.
+The key advantage is contextual understanding. An AI can distinguish between a software library's official documentation and a random blog post about that library, applying the correct citation style based on content type. A DOI-based lookup for a GitHub repository either fails entirely or returns incomplete metadata. An AI reading the same page extracts the repository name, primary author from the contributors list, the organization, and the last commit date — then formats all of it correctly for your target citation style.
+
+For developers specifically, the citation problem extends beyond academic papers. Technical blog posts, Stack Overflow answers, RFCs, npm package documentation, and internal wikis all need to be citable in different contexts. No citation database covers this space. An AI-powered extension that can handle any URL is the only practical solution.
 
 ## Architecture Patterns for Chrome Extensions
 
@@ -43,11 +45,13 @@ Your extension needs specific permissions to function:
 }
 ```
 
-The `activeTab` permission allows your extension to access the current page's DOM when the user invokes it, while `storage` enables saving citation preferences and history.
+The `activeTab` permission allows your extension to access the current page's DOM when the user invokes it, while `storage` enables saving citation preferences and history. Manifest V3 requires `scripting` permission for `chrome.scripting.executeScript`, which replaced the older `chrome.tabs.executeScript` pattern. If you are building on an older codebase, updating to MV3 is worth doing — Google will eventually remove MV2 support.
+
+Note that `host_permissions: ["<all_urls>"]` is broad. For a personal tool this is fine. For a published extension, consider restricting it to specific domains and expanding based on user feedback. Chrome Web Store reviewers scrutinize extensions with broad host permissions, and some users will decline to install them.
 
 ### Content Extraction Layer
 
-The core extraction logic runs in a content script orvia the Chrome DevTools Protocol. Here's a practical extraction pattern:
+The core extraction logic runs in a content script or via the Chrome DevTools Protocol. Here's a practical extraction pattern:
 
 ```javascript
 async function extractPageMetadata(tabId) {
@@ -62,7 +66,7 @@ async function extractPageMetadata(tabId) {
         publishedDate: document.querySelector('meta[property="article:published_time"]')?.content,
         description: document.querySelector('meta[name="description"]')?.content
       };
-      
+
       // Fallback for GitHub repositories
       if (window.location.hostname.includes('github.com')) {
         const repoMeta = document.querySelector('[itemprop="name"]');
@@ -71,7 +75,7 @@ async function extractPageMetadata(tabId) {
           meta.author = document.querySelector('[itemprop="author"]')?.textContent;
         }
       }
-      
+
       return meta;
     }
   });
@@ -79,7 +83,39 @@ async function extractPageMetadata(tabId) {
 }
 ```
 
-This extraction function handles both standard web pages and GitHub repositories, demonstrating how to handle different content types.
+This extraction function handles both standard web pages and GitHub repositories, demonstrating how to handle different content types. In practice you will want to extend these fallbacks significantly. Here are the most common cases that require special handling:
+
+**arXiv papers**: The canonical author and abstract data is in specific `<meta>` tags (`citation_author`, `citation_title`, `citation_arxiv_id`). Standard OGP tags exist but are less precise.
+
+**Medium posts**: The author byline is in a `<meta name="author">` tag, but the publication date requires scraping the `<time>` element.
+
+**MDN Web Docs**: No reliable author metadata. The contributor list is in the DOM but requires parsing. For MDN, treating Mozilla as the publisher and using the page title and URL is usually sufficient.
+
+**YouTube videos**: Channel name maps to author, upload date is available in structured data embedded as JSON-LD in a `<script>` tag.
+
+For JSON-LD, which many modern sites use for structured metadata, add a dedicated extraction path:
+
+```javascript
+function extractJsonLd() {
+  const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  for (const script of scripts) {
+    try {
+      const data = JSON.parse(script.textContent);
+      if (data['@type'] === 'Article' || data['@type'] === 'BlogPosting') {
+        return {
+          title: data.headline,
+          author: data.author?.name,
+          publishedDate: data.datePublished,
+          publisher: data.publisher?.name
+        };
+      }
+    } catch (e) {
+      // malformed JSON-LD, skip
+    }
+  }
+  return null;
+}
+```
 
 ### AI Processing Integration
 
@@ -93,7 +129,7 @@ async function generateCitation(metadata, style = 'APA') {
     Author: ${metadata.author || 'Unknown'}
     Date: ${metadata.publishedDate || 'n.d.'}
     Publisher: ${metadata.publisher || 'Unknown'}`;
-  
+
   const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -107,12 +143,31 @@ async function generateCitation(metadata, style = 'APA') {
       messages: [{ role: 'user', content: prompt }]
     })
   });
-  
+
   return response.json();
 }
 ```
 
 This example uses Claude for citation generation, but you can adapt the pattern for other AI models.
+
+For a tighter prompt that produces more consistent output, include a concrete example of what you expect:
+
+```javascript
+const prompt = `Generate a ${style} citation for the following source.
+Output ONLY the citation text, no explanation, no markdown formatting.
+
+Source metadata:
+Title: ${metadata.title}
+URL: ${metadata.url}
+Author: ${metadata.author || 'Unknown'}
+Date: ${metadata.publishedDate || 'n.d.'}
+Publisher: ${metadata.publisher || 'Unknown'}
+
+Example of correct ${style} format for a web source:
+${styleExamples[style]}`;
+```
+
+Providing a format example in the prompt reduces hallucinated formatting. Language models know citation styles but sometimes introduce variation (extra punctuation, different date formats) that a rigid example constrains.
 
 ## Citation Style Support
 
@@ -142,19 +197,57 @@ const citationStyles = {
 };
 ```
 
+The rule-based formatters are fast and deterministic — no API cost. The AI path is better for sources with incomplete or ambiguous metadata, where the AI can make reasonable inferences rather than leaving fields blank. A hybrid approach works well: try the rule-based formatter first, fall back to the AI path only when required fields are missing.
+
+| Style | Primary Use Case | Key Quirks |
+|---|---|---|
+| APA 7th | Psychology, social sciences | Author last name first; retrieval date sometimes required |
+| MLA 9th | Humanities, literature | Title in quotes; container in italics; access date required |
+| Chicago 17th | History, arts | Two forms: notes-bibliography and author-date |
+| IEEE | Engineering, computer science | Numbered references; abbreviated journal names |
+| Harvard | Business, sciences | Author-date similar to APA but different punctuation |
+
+For developers citing technical sources, APA and MLA cover most use cases. IEEE is worth including if your users work in engineering or publish to IEEE venues. The AI path handles Chicago footnote format better than a rule-based approach because Chicago's note structure varies based on whether it is a first citation or a subsequent one.
+
 ## Practical Deployment Considerations
 
 When building a citation generator for Chrome, consider these production concerns:
 
-**Privacy**: Users may cite sensitive research. Process citations locally when possible, and if using external AI APIs, clearly disclose data handling practices. Store citations in Chrome's encrypted storage rather than cloud databases.
+**Privacy**: Users may cite sensitive research. Process citations locally when possible, and if using external AI APIs, clearly disclose data handling practices. Store citations in Chrome's encrypted storage rather than cloud databases. For enterprise or academic environments, a locally-running model (via Ollama or similar) eliminates the data transmission concern entirely and may be required by institutional policy.
 
 **Offline Support**: Implement caching for previously cited sources. When a user requests a citation for a URL they've cited before, serve the cached version immediately rather than re-processing.
 
-**Rate Limiting**: If using paid AI APIs, implement request throttling. Queue citation requests and process them sequentially to avoid unexpected costs.
+```javascript
+async function getCachedOrGenerate(url, style) {
+  const cacheKey = `citation:${style}:${btoa(url)}`;
+  const cached = await chrome.storage.local.get(cacheKey);
+  if (cached[cacheKey]) {
+    return cached[cacheKey];
+  }
+  const citation = await generateCitationForUrl(url, style);
+  await chrome.storage.local.set({ [cacheKey]: citation });
+  return citation;
+}
+```
+
+**Rate Limiting**: If using paid AI APIs, implement request throttling. Queue citation requests and process them sequentially to avoid unexpected costs. A practical limit for a personal tool is 100 API calls per day — most users will not approach this, but it protects against runaway usage loops in your own code.
+
+**API Key Security**: Storing an API key in a Chrome extension is inherently risky — the key lives in the extension's storage and is accessible to anyone who can inspect the extension package. For a personal tool, use Chrome's `storage.sync` encrypted storage and accept that risk. For a published extension with multiple users, route requests through your own backend so the API key never leaves your server.
 
 ## Extension Ecosystem and Alternatives
 
 Several existing tools implement similar functionality. ZoteroBib offers web-based citation generation without installation. The CiteThisForMe extension provides a more polished UI at the cost of subscription fees. For developers who want full control, building your own solution using the patterns above gives you complete customization.
+
+The comparison between existing tools and a custom build:
+
+| Tool | Cost | Customizable | Works Offline | Handles Dev Sources |
+|---|---|---|---|---|
+| ZoteroBib | Free | No | No | Limited |
+| CiteThisForMe | Freemium | No | No | Limited |
+| Zotero (full) | Free | Via plugins | Yes | With connector |
+| Custom extension | API costs only | Fully | With caching | Yes |
+
+For developers who primarily cite technical sources — GitHub repos, npm packages, API documentation, RFCs — the custom extension wins on coverage even if it requires more setup effort. Existing tools are optimized for academic citation databases and handle developer resources as an afterthought.
 
 ## Integration with Development Workflows
 
@@ -176,11 +269,44 @@ function formatAsMarkdown(meta) {
 
 This enables seamless citation insertion into README files, technical documentation, and developer blogs.
 
+Extend this further with output format presets for common contexts:
+
+```javascript
+const outputFormats = {
+  markdown: (citation, meta) => `[${meta.title}](${meta.url})`,
+  latex: (citation, meta) => `\\footnote{${citation}}`,
+  bibtex: (meta) => `@misc{${slugify(meta.title)},
+  title={${meta.title}},
+  author={${meta.author || 'Unknown'}},
+  url={${meta.url}},
+  year={${new Date(meta.publishedDate || Date.now()).getFullYear()}}
+}`,
+  rst: (citation, meta) => `\`${meta.title} <${meta.url}>\`_`,
+  plaintext: (citation) => citation
+};
+```
+
+The BibTeX output is particularly useful for developers who write papers or technical reports — you can generate a `.bib` entry directly from the browser without any copy-paste reformatting.
+
+## Testing Your Extension
+
+Before publishing or distributing your extension, test it against a representative set of URL types:
+
+1. A peer-reviewed paper on arXiv or PubMed Central
+2. A GitHub repository with multiple contributors
+3. A Medium or Substack article
+4. Official documentation (MDN, Python docs, AWS docs)
+5. A YouTube video
+6. A news article from a major publication
+7. A personal blog with minimal metadata
+
+For each URL, verify that the extracted metadata is correct before sending it to the AI, and that the final citation matches the expected format for your target style. Citation errors are easy to miss and hard to catch after the fact — a short testing checklist pays for itself.
+
 ## Conclusion
 
-Building an AI-powered citation generator for Chrome combines web scraping, AI processing, and format standardization into a practical tool. The architecture patterns shown here—metadata extraction, AI enhancement, and style formatting—provide a foundation for customization to your specific workflow needs. Whether you're citing academic papers, open-source projects, or web resources, automation significantly reduces the manual effort involved.
+Building an AI-powered citation generator for Chrome combines web scraping, AI processing, and format standardization into a practical tool. The architecture patterns shown here — metadata extraction, AI enhancement, and style formatting — provide a foundation for customization to your specific workflow needs. Whether you're citing academic papers, open-source projects, or web resources, automation significantly reduces the manual effort involved.
 
-Start with the basic extraction logic, add AI processing for complex sources, and layer on style support as needed. The result is a personalized citation workflow that adapts to how you actually work with web content.
+Start with the basic extraction logic and a single citation style. Add JSON-LD extraction as a second pass for richer metadata. Layer in AI processing for sources where the metadata is incomplete. Add caching once the basic flow works. The result is a personalized citation workflow that handles the full range of sources you actually encounter — not just the sources that happen to be indexed in academic databases.
 
 
 ## Related Reading

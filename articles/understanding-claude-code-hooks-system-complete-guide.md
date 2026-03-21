@@ -24,7 +24,9 @@ A hook receives event data via stdin as JSON and can:
 - Modify the event data (output modified JSON to stdout, exit 0)
 - Block the event (exit non-zero, optionally print a reason to stderr)
 
-Hooks never interact with the Claude model directly. They are a CLI-level interception layer.
+Hooks never interact with the Claude model directly. They are a CLI-level interception layer. This is a crucial distinction: hooks operate on the tool calls that Claude issues, not on Claude's reasoning or outputs. You cannot use hooks to rewrite Claude's prose responses, but you can intercept every file it reads, every command it runs, and every file it writes.
+
+This design has important implications for how you think about hooks. They are not middleware in a request/response pipeline — they are gatekeepers and observers at the tool execution boundary. Claude decides it wants to run `rm -rf ./dist`, but before that command reaches the shell, your hook has the opportunity to allow, block, or modify it.
 
 ## Hook Types
 
@@ -54,6 +56,8 @@ Use cases: logging, blocking dangerous commands, enforcing project standards bef
 }
 ```
 
+The `pre-tool` hook is where you enforce policy. If your project prohibits certain shell commands, disallows writes to protected directories, or requires that every file modification is associated with an open task, this is the hook type you want. Because it fires before the tool executes, you can prevent damage rather than reacting to it.
+
 ### `post-tool`
 
 Fires after a tool call completes, regardless of success or failure.
@@ -65,6 +69,10 @@ Event data includes everything from `pre-tool`, plus:
 
 Use cases: logging outcomes, triggering external notifications, updating audit trails.
 
+The `post-tool` hook is valuable for observability. You can record that a file was written and what it contained, track how long Bash commands take over a session, or detect when Claude encounters repeated errors trying the same approach. This data is useful both for debugging Claude's behavior in a specific session and for improving your prompts and skills over time.
+
+One practical pattern: write all `post-tool` events to an append-only JSONL file during a session, then analyze it afterward to understand where Claude spent time, what commands it ran, and where it got stuck.
+
 ### `session`
 
 Two sub-events: `session.start` and `session.end`.
@@ -72,6 +80,8 @@ Two sub-events: `session.start` and `session.end`.
 `session.start` fires when Claude Code begins a new session. Use it to inject project context, validate environment variables, or initialize logging.
 
 `session.end` fires when the session closes. Use it to write summary logs, clean up temp files, or sync state.
+
+Session hooks are often overlooked but are among the most powerful. A well-crafted `session.start` hook can give Claude a precise picture of what work is in progress before it reads a single file. Instead of relying on Claude to discover state by exploring directories, you hand it a structured summary the moment it starts. This is particularly useful for long-running projects where Claude operates in many short sessions.
 
 ## Hook Configuration
 
@@ -118,6 +128,8 @@ For `session`:
 
 Multiple hooks of the same type run in order. If any hook exits non-zero, subsequent hooks do not run for that event.
 
+Understanding matcher specificity matters when you have multiple hooks. A hook matching only `["Bash"]` will not fire for `Write` calls. An empty matcher fires for everything. Order them so that the broadest hooks come last and specific blocking hooks come first — this keeps your security-critical checks fast because they short-circuit before logging hooks run.
+
 ## Writing a Hook Script
 
 A complete Python hook that blocks `bash` commands containing `rm -rf`:
@@ -157,6 +169,8 @@ Register it in `.claude/settings.json`:
 }
 ```
 
+A few things worth noting about this script. First, it reads from stdin exactly once — do not read stdin in a loop or you will hang. Second, on the pass-through path it outputs the original JSON to stdout. If you forget to output JSON on the pass-through path and just exit 0, the hook chain may behave unexpectedly. Third, the error message on stderr is surfaced to Claude Code's output, so make it informative. Claude may see it and adjust its approach.
+
 ## Modifying Tool Input
 
 A hook can modify the event data before it is processed. Output modified JSON to stdout and exit 0.
@@ -179,17 +193,86 @@ print(json.dumps(data))
 sys.exit(0)
 ```
 
+Modification hooks are powerful but require care. You are changing what Claude believes it requested. If you silently modify a command and something goes wrong, the discrepancy between what Claude intended and what actually ran can be confusing to debug. Consider logging any modification you make in addition to performing it, so you have a record of what was changed and why.
+
+A more complex modification pattern: rewriting file paths. If your project has a staging directory and you want all Write calls to go there during a review session, a hook can intercept every `Write` call and remap the path from `src/` to `staging/src/`. Claude continues to work as if writing to the production path, but the actual file operations go to staging.
+
+```python
+#!/usr/bin/env python3
+# .claude/hooks/redirect-to-staging.py
+import sys
+import json
+
+data = json.load(sys.stdin)
+
+if data.get("tool_name") == "Write":
+    file_path = data.get("tool_input", {}).get("file_path", "")
+    if file_path.startswith("/Users/dev/myapp/src/"):
+        new_path = file_path.replace(
+            "/Users/dev/myapp/src/",
+            "/Users/dev/myapp/staging/src/"
+        )
+        data["tool_input"]["file_path"] = new_path
+        print(f"Redirected write: {file_path} -> {new_path}", file=sys.stderr)
+
+print(json.dumps(data))
+sys.exit(0)
+```
+
 ## Hook Performance
 
 Hooks are synchronous — Claude Code waits for each hook to complete before proceeding. Slow hooks slow down every relevant operation.
 
 Keep hooks fast. If you need to do heavy async work such as sending data to a logging service, write to a local queue file and process it separately rather than doing network I/O synchronously in the hook.
 
+Here is a practical pattern for async logging without blocking Claude:
+
+```python
+#!/usr/bin/env python3
+# .claude/hooks/async-audit.py
+import sys
+import json
+import os
+import time
+
+data = json.load(sys.stdin)
+
+# Write to a local JSONL file — fast, non-blocking
+log_path = os.path.join(
+    os.environ.get("PROJECT_ROOT", "."),
+    ".claude/logs/audit.jsonl"
+)
+os.makedirs(os.path.dirname(log_path), exist_ok=True)
+
+entry = dict(data)
+entry["logged_at"] = time.time()
+
+with open(log_path, "a") as f:
+    f.write(json.dumps(entry) + "\n")
+
+print(json.dumps(data))
+sys.exit(0)
+```
+
+A separate process (cron job, background daemon, or post-session script) can then ship those entries to your logging infrastructure without any impact on Claude's response time.
+
 ## Global vs Project Hooks
 
 Like skills, hooks can be configured globally (`~/.claude/settings.json`) or per project (`.claude/settings.json`). Both sets are loaded. Global hooks run first, then project hooks. This is different from [auto-invocation](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/), which is skill-level behavior. They stack — there is no override mechanism that prevents a global hook from running.
 
 This lets you have a global audit hook that logs all tool calls, plus project-specific hooks that enforce project-specific rules, without conflict.
+
+A practical layered setup might look like this:
+
+| Scope | Hook | Purpose |
+|---|---|---|
+| Global | `post-tool` logger | Records every tool call across all projects |
+| Global | `pre-tool` safety check | Blocks known dangerous patterns everywhere |
+| Project | `pre-tool` path guard | Prevents writes outside project root |
+| Project | `session.start` context | Injects project-specific task state |
+| Project | `session.end` cleanup | Commits log files, cleans temp directories |
+
+The global hooks give you a consistent baseline of observability and safety. The project hooks give you fine-grained control for that project's specific needs. Neither interferes with the other.
 
 ## Example: Session Start Context Injection
 
@@ -237,6 +320,38 @@ Register it:
   }
 }
 ```
+
+## Debugging Hooks
+
+When a hook behaves unexpectedly, the first step is to test it in isolation. Because hooks read from stdin and write to stdout, you can pipe test JSON directly:
+
+```bash
+echo '{"event":"pre-tool","tool_name":"Bash","tool_input":{"command":"rm -rf ./dist"}}' \
+  | python3 .claude/hooks/no-dangerous-rm.py
+```
+
+If the hook exits non-zero, check the exit code and stderr output. If it passes through when it should block, add debug prints to stderr (they appear in Claude Code's output without affecting the hook protocol).
+
+Common mistakes:
+- Forgetting to `print(json.dumps(data))` on the pass-through path
+- Reading stdin twice (the second read returns empty)
+- Assuming `tool_name` casing — check whether it is `"bash"` or `"Bash"` for your version
+- Slow hooks caused by imports that take time to initialize — pre-import heavy libraries at the top of the file
+
+## Comparing Hook Types: When to Use Each
+
+| Scenario | Hook Type |
+|---|---|
+| Block dangerous shell commands | `pre-tool` on `Bash` |
+| Prevent writes to protected files | `pre-tool` on `Write` |
+| Rewrite file paths to staging | `pre-tool` on `Write` |
+| Log all tool calls to JSONL | `post-tool`, empty matcher |
+| Alert on failed commands | `post-tool`, check `tool_error` |
+| Inject task state at session start | `session`, `session.start` |
+| Write session summary to file | `session`, `session.end` |
+| Clean up temp files after session | `session`, `session.end` |
+
+The hooks system rewards incremental adoption. Start with a simple `post-tool` logger so you can see what Claude is actually doing. Once you understand the patterns in your own usage, add targeted `pre-tool` guards for the operations you care about. Session hooks are a final layer that pays dividends on projects where Claude operates in many short sessions and needs state continuity between them.
 
 ---
 
