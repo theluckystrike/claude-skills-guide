@@ -6,8 +6,8 @@ date: 2026-03-21
 categories: [guides]
 tags: [claude-code, claude-skills, github-codespaces, gitpod, cloud-ide, development-environment, comparison]
 author: "Claude Skills Guide"
-reviewed: false
-score: 0
+reviewed: true
+score: 7
 permalink: /claude-code-for-github-codespaces-vs-gitpod-workflow-guide/
 ---
 
