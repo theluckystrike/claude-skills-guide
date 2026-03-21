@@ -15,13 +15,21 @@ tags: [claude-code, claude-skills]
 {% raw %}
 # Claude Code Next.js Deployment Optimization
 
-Deploying Next.js applications to production requires attention to build configuration, environment management, and CI/CD pipeline optimization. Claude Code combined with specialized skills can automate much of this workflow, helping you achieve faster deployments and more reliable releases.
+Deploying Next.js applications to production requires attention to build configuration, environment management, and CI/CD pipeline optimization. Claude Code combined with specialized skills can automate much of this workflow, helping you achieve faster deployments and more reliable releases. This guide walks through every layer of a production-grade Next.js deployment strategy, from build output modes to rollback automation.
 
 ## Setting Up Optimized Build Configurations
 
 The foundation of efficient Next.js deployments starts with proper build configuration. Modern Next.js offers multiple output strategies that directly impact deployment speed and server resource usage.
 
-Create a production-optimized `next.config.js`:
+The three main output modes are:
+
+| Output Mode | Use Case | Artifact | Notes |
+|---|---|---|---|
+| `standalone` | Docker / self-hosted servers | Node.js server + static files | Smallest image size |
+| `export` | Static hosting (S3, Cloudflare Pages) | Pure HTML/CSS/JS | No server-side rendering |
+| Default (no `output`) | Vercel, managed PaaS | `.next` directory | Requires Next.js server runtime |
+
+For most containerized deployments, `standalone` is the correct choice. Create a production-optimized `next.config.js`:
 
 ```javascript
 /** @type {import('next').NextConfig} */
@@ -33,7 +41,10 @@ const nextConfig = {
   images: {
     domains: ['your-cdn.com'],
     minimumCacheTTL: 60,
+    formats: ['image/avif', 'image/webp'],
   },
+  compress: true,
+  poweredByHeader: false,
   async headers() {
     return [
       {
@@ -41,6 +52,14 @@ const nextConfig = {
         headers: [
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        ],
+      },
+      {
+        source: '/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
     ];
@@ -50,7 +69,32 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 
-The `output: 'standalone'` option creates a self-contained deployment that reduces container image size significantly. This is particularly valuable when deploying to Vercel, AWS ECS, or Kubernetes environments.
+The `output: 'standalone'` option creates a self-contained deployment that reduces container image size significantly. This is particularly valuable when deploying to Vercel, AWS ECS, or Kubernetes environments. The `poweredByHeader: false` setting removes the `X-Powered-By: Next.js` response header, which is a minor security improvement that prevents version fingerprinting.
+
+### Bundle Analysis Before Deployment
+
+Always analyze your bundle before shipping. The `@next/bundle-analyzer` package gives you a visual breakdown of what is eating into your JavaScript budget:
+
+```bash
+npm install --save-dev @next/bundle-analyzer
+```
+
+```javascript
+// next.config.js
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+module.exports = withBundleAnalyzer(nextConfig);
+```
+
+Run it before any major deployment to catch accidental large dependencies:
+
+```bash
+ANALYZE=true npm run build
+```
+
+Claude Code is useful here — you can paste the analyzer output and ask it to identify which imports should be lazy-loaded or replaced with lighter alternatives.
 
 ## Environment-Specific Configuration
 
@@ -59,38 +103,63 @@ Managing environment variables across development, staging, and production is cr
 The `supermemory` skill proves invaluable for maintaining deployment documentation and environment-specific notes. Create a structured `.env` hierarchy:
 
 ```bash
-# .env.local - never committed
-DATABASE_URL=postgresql://...
+# .env.local - never committed to source control
+DATABASE_URL=postgresql://localhost:5432/myapp_dev
+REDIS_URL=redis://localhost:6379
 
-# .env.production
+# .env.production - committed, only public/non-secret values
 NEXT_PUBLIC_API_URL=https://api.production.com
+NEXT_PUBLIC_APP_VERSION=1.0.0
 NODE_ENV=production
+
+# .env.staging - committed, staging-specific public values
+NEXT_PUBLIC_API_URL=https://api.staging.com
 ```
 
-Use runtime environment validation to catch configuration errors early:
+Secrets like `DATABASE_URL` and API keys should never appear in committed `.env` files. Inject them through your CI/CD platform's secret store (GitHub Actions Secrets, AWS Secrets Manager, Doppler, etc.).
+
+Use runtime environment validation to catch configuration errors before they surface as cryptic runtime failures:
 
 ```typescript
 // lib/config.ts
-const requiredEnvVars = ['DATABASE_URL', 'REDIS_URL', 'NEXT_PUBLIC_API_URL'];
+import { z } from 'zod';
 
-export function validateEnv() {
-  const missing = requiredEnvVars.filter(
-    (key) => !process.env[key]
-  );
-  
-  if (missing.length > 0) {
-    throw new Error(
-      `Missing required environment variables: ${missing.join(', ')}`
-    );
+const envSchema = z.object({
+  DATABASE_URL: z.string().url(),
+  REDIS_URL: z.string().url(),
+  NEXT_PUBLIC_API_URL: z.string().url(),
+  NODE_ENV: z.enum(['development', 'test', 'production']),
+  // Optional with defaults
+  PORT: z.string().default('3000'),
+  LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']).default('info'),
+});
+
+type Env = z.infer<typeof envSchema>;
+
+let _env: Env;
+
+export function getEnv(): Env {
+  if (!_env) {
+    const result = envSchema.safeParse(process.env);
+    if (!result.success) {
+      const missing = result.error.issues
+        .map((i) => `${i.path.join('.')}: ${i.message}`)
+        .join('\n');
+      throw new Error(`Environment validation failed:\n${missing}`);
+    }
+    _env = result.data;
   }
+  return _env;
 }
 ```
+
+Using Zod for validation (rather than a manual array check) gives you typed access to every environment variable with proper coercion and default values. Call `getEnv()` at the top of any module that depends on configuration so failures are loud and immediate.
 
 ## CI/CD Pipeline Optimization
 
 GitHub Actions combined with Claude Code creates powerful deployment pipelines. The `automated-testing-pipeline-with-claude-tdd-skill` workflow ensures your tests run efficiently before deployment.
 
-A streamlined deployment workflow:
+A production-ready deployment pipeline with caching and parallelism:
 
 ```yaml
 name: Production Deploy
@@ -99,7 +168,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -107,83 +176,156 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Type check
         run: npx tsc --noEmit
-      
+
       - name: Lint
         run: npm run lint
-      
-      - name: Build
-        run: npm run build
-      
-      - name: Test
-        run: npm run test --if-present
+
+      - name: Unit tests
+        run: npm test -- --coverage
+
+  build:
+    needs: quality
+    runs-on: ubuntu-latest
+    outputs:
+      image-tag: ${{ steps.meta.outputs.tags }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Deploy to production
-        run: npm run deploy:prod
+        run: |
+          # Your deployment command here
+          # e.g., kubectl set image deployment/app app=${{ needs.build.outputs.image-tag }}
+          echo "Deploying ${{ needs.build.outputs.image-tag }}"
+
+      - name: Run smoke tests
+        run: |
+          sleep 15
+          curl --fail https://yourapp.com/api/health
 ```
+
+Key optimizations in this pipeline:
+- `cache: 'npm'` in setup-node caches the npm cache directory across runs, cutting install time by 60-80% on repeat builds
+- Docker layer caching (`cache-from: type=gha`) reuses unchanged image layers, which is critical for large Next.js apps
+- The `quality` and `build` jobs run sequentially but the quality job parallelizes type checking, linting, and tests as separate steps — use `continue-on-error: false` so all quality gates must pass before the Docker build starts
 
 The `best-claude-skills-for-devops-and-deployment` skill provides additional context on optimizing CI/CD workflows specifically for Next.js applications. It covers caching strategies, parallel job execution, and artifact management.
 
 ## Docker Multi-Stage Builds
 
-For containerized deployments, multi-stage builds dramatically reduce image size and improve deployment speed:
+For containerized deployments, multi-stage builds dramatically reduce image size and improve deployment speed. A poorly written Dockerfile for a Next.js app can produce images over 2GB — the multi-stage pattern with `output: 'standalone'` gets you under 200MB.
 
 ```dockerfile
-# Build stage
-FROM node:20-alpine AS builder
+# -------- Dependencies stage --------
+FROM node:20-alpine AS deps
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
+# Use --frozen-lockfile for reproducible installs
+RUN npm ci --frozen-lockfile
+
+# -------- Builder stage --------
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+
+# Inject build-time env vars (non-secret only)
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+
 RUN npm run build
 
-# Production stage
+# -------- Production runner stage --------
 FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 
-# Create non-root user
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+# Create non-root user for security
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
 
-# Copy necessary files from builder
+# Copy only what the standalone output needs
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
 EXPOSE 3000
-ENV PORT 3000
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD wget -qO- http://localhost:3000/api/health || exit 1
 
 CMD ["node", "server.js"]
 ```
 
-This approach reduces typical Next.js images from over 1GB to under 150MB. The `claude-code-dockerfile-generation-multi-stage-build-guide` skill can help you customize this pattern for specific needs.
+### Image Size Comparison
+
+| Approach | Typical Image Size |
+|---|---|
+| Single-stage, full node_modules | 1.8 GB – 2.5 GB |
+| Multi-stage, no `standalone` output | 600 MB – 900 MB |
+| Multi-stage + `standalone` output | 100 MB – 200 MB |
+| Multi-stage + `standalone` + distroless base | 80 MB – 140 MB |
+
+Switching to a distroless base (`gcr.io/distroless/nodejs20-debian12`) provides the smallest image and the best security posture, but it removes shell access which complicates debugging. Use it in production only when your team is comfortable with the tradeoff.
+
+The `claude-code-dockerfile-generation-multi-stage-build-guide` skill can help you customize this pattern for specific needs.
 
 ## Database Migrations in Deployment
 
-Production deployments often require database migrations. The `best-way-to-use-claude-code-for-database-migrations` workflow provides a safe approach:
+Production deployments that include schema changes require careful migration sequencing. Running migrations as part of container startup is a common antipattern — if you scale to multiple replicas, every instance tries to run migrations concurrently, which causes conflicts.
+
+The correct approach is a dedicated pre-deployment migration job:
 
 ```typescript
 // scripts/migrate.ts
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
-import { db } from '@/lib/db';
+import { db, pool } from '@/lib/db';
 
 async function main() {
   console.log('Running migrations...');
-  
+
   await migrate(db, { migrationsFolder: './drizzle' });
-  
+
   console.log('Migrations completed');
+  await pool.end();
 }
 
 main()
@@ -194,77 +336,273 @@ main()
   });
 ```
 
-Integrate this into your deployment pipeline with proper rollback strategies. The key is separating migration execution from application startup to handle failures gracefully.
+In your GitHub Actions workflow, run this as a separate job between `build` and `deploy`:
+
+```yaml
+  migrate:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Run database migrations
+        run: npx tsx scripts/migrate.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+  deploy:
+    needs: [build, migrate]
+    # ...
+```
+
+This guarantees the schema is updated before the new application version starts receiving traffic. If migrations fail, the deployment stops and the current version continues running.
+
+For rollback scenarios, always write backward-compatible migrations. A migration that renames a column will break the currently deployed version during the window between migration execution and deployment completion. The safer pattern is: add the new column, deploy, backfill data, then remove the old column in a subsequent release.
 
 ## Health Checks and Monitoring
 
-Production Next.js deployments require robust health check endpoints. Configure proper liveness and readiness probes:
+Production Next.js deployments require robust health check endpoints that load balancers and orchestrators can query. A minimal health route is not enough — your check should verify that downstream dependencies are actually reachable.
 
 ```typescript
 // app/api/health/route.ts
 import { NextResponse } from 'next/server';
+import { db } from '@/lib/db';
+import { redis } from '@/lib/redis';
+
+interface HealthStatus {
+  status: 'healthy' | 'degraded' | 'unhealthy';
+  timestamp: string;
+  uptime: number;
+  version: string;
+  checks: {
+    database: 'ok' | 'error';
+    cache: 'ok' | 'error';
+  };
+}
 
 export async function GET() {
-  const checks = {
+  const health: HealthStatus = {
     status: 'healthy',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
-    environment: process.env.NODE_ENV,
+    version: process.env.NEXT_PUBLIC_APP_VERSION ?? 'unknown',
+    checks: {
+      database: 'ok',
+      cache: 'ok',
+    },
   };
-  
-  // Add database check
+
+  // Database liveness check
   try {
-    // await db.query('SELECT 1');
-    checks.database = 'connected';
+    await db.execute('SELECT 1');
   } catch {
-    checks.database = 'disconnected';
-    checks.status = 'degraded';
+    health.checks.database = 'error';
+    health.status = 'degraded';
   }
-  
-  const status = checks.status === 'healthy' ? 200 : 503;
-  return NextResponse.json(checks, { status });
+
+  // Redis liveness check
+  try {
+    await redis.ping();
+  } catch {
+    health.checks.cache = 'error';
+    // Cache failure doesn't necessarily degrade the app
+    // depending on whether it's required or optional
+  }
+
+  const httpStatus = health.status === 'healthy' ? 200 : 503;
+  return NextResponse.json(health, { status: httpStatus });
 }
 ```
+
+Configure this endpoint in your Kubernetes readiness and liveness probes:
+
+```yaml
+livenessProbe:
+  httpGet:
+    path: /api/health
+    port: 3000
+  initialDelaySeconds: 15
+  periodSeconds: 30
+  failureThreshold: 3
+
+readinessProbe:
+  httpGet:
+    path: /api/health
+    port: 3000
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  failureThreshold: 3
+```
+
+A separate `/api/ready` endpoint that is more strict (fails if any dependency is down) gives your orchestrator finer control over when to route traffic to a new pod.
 
 ## Reducing Deployment Cold Starts
 
-Serverless Next.js deployments benefit from prewarming strategies. Configure Vercel or your edge runtime appropriately:
+Serverless Next.js deployments on Vercel, AWS Lambda@Edge, or similar platforms suffer from cold start latency when a function instance has not been invoked recently. Several strategies mitigate this.
 
-```javascript
-// middleware.ts
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+**Minimize the function bundle.** Each additional import added to an API route increases the cold start time. Use dynamic imports for heavy dependencies that are not needed on every request:
 
-export function middleware(request: NextRequest) {
-  // Warm up common routes
-  const warmupRoutes = ['/api/health', '/'];
-  const pathname = request.nextUrl.pathname;
-  
-  if (!warmupRoutes.includes(pathname)) {
-    return NextResponse.next();
-  }
-  
-  return NextResponse.next();
+```typescript
+// app/api/generate-pdf/route.ts
+export async function POST(req: Request) {
+  // Only loaded when this route is actually called
+  const { generatePdf } = await import('@/lib/pdf-generator');
+
+  const data = await req.json();
+  const pdf = await generatePdf(data);
+
+  return new Response(pdf, {
+    headers: { 'Content-Type': 'application/pdf' },
+  });
 }
-
-export const config = {
-  matcher: '/:path*',
-};
 ```
+
+**Use the Edge Runtime for latency-sensitive routes.** Edge functions start in under 1ms versus the 100-500ms cold start of standard Node.js functions:
+
+```typescript
+// app/api/auth/session/route.ts
+export const runtime = 'edge';
+
+export async function GET(req: Request) {
+  // Session check runs at the edge, near the user
+  const token = req.headers.get('authorization');
+  // ...
+}
+```
+
+**Keep-warm pinging.** For routes that absolutely must not cold start in production, a simple scheduled ping from an external monitor (UptimeRobot, Checkly) every 5 minutes keeps at least one function instance warm.
 
 The `claude-code-response-latency-optimization-with-skills` skill offers additional techniques for minimizing cold start times in serverless environments.
 
 ## Rolling Updates and Rollbacks
 
-Implement blue-green or canary deployment strategies for zero-downtime releases. The `best-claude-skills-for-devops-and-deployment` skill covers these patterns in detail.
+Zero-downtime deployments require a strategy for transitioning traffic from the old version to the new version without dropping requests in flight.
 
-Key practices include maintaining previous deployment artifacts, implementing health checks between deployment stages, and having automated rollback triggers based on error rate thresholds.
+### Blue-Green Deployments
+
+Blue-green maintains two identical production environments. At any time, one is live ("blue") and one is idle ("green"). You deploy to the idle environment, run smoke tests, then switch the load balancer:
+
+```yaml
+# Example AWS ECS blue-green via CodeDeploy
+appspec.yaml:
+  version: 0.0
+  Resources:
+    - TargetService:
+        Type: AWS::ECS::Service
+        Properties:
+          TaskDefinition: <TASK_DEFINITION>
+          LoadBalancerInfo:
+            ContainerName: "app"
+            ContainerPort: 3000
+  Hooks:
+    - BeforeAllowTraffic: "RunSmokeTests"
+    - AfterAllowTraffic: "RunIntegrationTests"
+```
+
+### Canary Releases
+
+Canary releases send a small percentage of traffic to the new version before a full rollout. On Kubernetes with Argo Rollouts:
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+spec:
+  strategy:
+    canary:
+      steps:
+        - setWeight: 10
+        - pause: { duration: 5m }
+        - analysis:
+            templates:
+              - templateName: error-rate-check
+        - setWeight: 50
+        - pause: { duration: 10m }
+        - setWeight: 100
+```
+
+### Automated Rollback Triggers
+
+Define error rate thresholds that trigger automatic rollbacks. An `AnalysisTemplate` in Argo Rollouts can query your metrics backend:
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: error-rate-check
+spec:
+  metrics:
+    - name: error-rate
+      interval: 1m
+      successCondition: result[0] < 0.05  # Less than 5% error rate
+      failureLimit: 3
+      provider:
+        prometheus:
+          address: http://prometheus:9090
+          query: |
+            sum(rate(http_requests_total{status=~"5.."}[2m]))
+            /
+            sum(rate(http_requests_total[2m]))
+```
+
+This setup means a bad deploy that starts returning 5xx errors will automatically roll back within minutes without human intervention.
+
+## Output Caching and CDN Strategy
+
+Proper caching configuration at the Next.js level prevents unnecessary server load and reduces the latency users experience.
+
+```typescript
+// app/api/products/route.ts
+export async function GET() {
+  const products = await getProducts();
+
+  return NextResponse.json(products, {
+    headers: {
+      // Cache at the CDN for 60 seconds, allow stale-while-revalidate for 300s
+      'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300',
+    },
+  });
+}
+```
+
+For page-level caching with the App Router:
+
+```typescript
+// app/products/page.tsx
+
+// Revalidate the page every 60 seconds
+export const revalidate = 60;
+
+// Or make it fully static
+export const dynamic = 'force-static';
+
+export default async function ProductsPage() {
+  const products = await getProducts();
+  return <ProductList products={products} />;
+}
+```
+
+### Caching Strategy by Route Type
+
+| Route Type | Recommended Strategy | Next.js Config |
+|---|---|---|
+| Marketing / static pages | Full CDN cache | `dynamic = 'force-static'` |
+| Product listings (changes hourly) | ISR with short TTL | `revalidate = 3600` |
+| User dashboard | No CDN cache, per-user | `dynamic = 'force-dynamic'` |
+| API endpoints (public data) | `s-maxage` + SWR | `Cache-Control` header |
+| API endpoints (user data) | No cache | `Cache-Control: private, no-store` |
 
 ## Summary
 
-Optimizing Next.js deployments involves multiple layers: build configuration, containerization, CI/CD pipelines, and runtime optimization. Claude Code accelerates this work through specialized skills that understand deployment patterns and best practices.
+Optimizing Next.js deployments involves multiple layers: build configuration, containerization, CI/CD pipelines, database migration sequencing, health monitoring, and traffic routing strategy. Claude Code accelerates this work through specialized skills that understand deployment patterns and best practices.
 
-The combination of proper Next.js configuration, efficient Dockerfiles, automated testing pipelines, and robust health monitoring creates production deployments that are fast, reliable, and maintainable. Leverage skills like `frontend-design`, `tdd`, and `superagent` to continuously improve your deployment workflow over time.
+The combination of proper Next.js configuration (`output: 'standalone'`, security headers, bundle analysis), efficient multi-stage Dockerfiles, robust CI/CD pipelines with layer caching, safe database migration workflows, and automated rollback triggers creates production deployments that are fast, reliable, and maintainable.
+
+Start with the build configuration and Docker setup — those changes have the most immediate impact on deployment speed and container cost. Layer in the health check endpoints and migration job next, then invest in canary releases and automated rollbacks once your deployment frequency justifies the added orchestration complexity. Leverage skills like `frontend-design`, `tdd`, and `superagent` to continuously improve your deployment workflow over time.
 
 
 ## Related Reading
