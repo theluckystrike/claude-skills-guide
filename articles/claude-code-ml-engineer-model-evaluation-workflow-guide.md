@@ -23,13 +23,84 @@ Machine learning model evaluation extends far beyond simple accuracy metrics. Re
 
 Claude Code enables ML engineers to create evaluation workflows that are reproducible, automated, and comprehensive. Rather than manually running tests and compiling results, you can build pipelines that continuously assess model performance, trigger alerts when degradation occurs, and provide detailed insights into model behavior.
 
+The difference between a good evaluation workflow and a great one comes down to coverage and automation. Good workflows run tests periodically. Great workflows run tests continuously, track every metric over time, and automatically surface regressions the moment they appear. Claude Code helps you build the great version without requiring you to write all the scaffolding from scratch.
+
+## Choosing the Right Evaluation Metrics
+
+Before writing a single line of evaluation code, you need to decide what you are actually measuring. This depends heavily on your task type and production requirements. Here is a practical overview of the most commonly used metric categories:
+
+| Metric Type | Examples | Best For |
+|---|---|---|
+| Classification accuracy | Precision, recall, F1, ROC-AUC | NLP classification, intent detection |
+| Generation quality | ROUGE, BLEU, BERTScore | Summarization, translation, paraphrasing |
+| Factual accuracy | FactScore, hallucination rate | RAG systems, knowledge-intensive tasks |
+| Latency | p50/p95/p99 inference time | Real-time applications, user-facing APIs |
+| Token efficiency | Tokens per second, cost per 1K requests | LLM API usage, budget-constrained deployments |
+| Human preference | Win rate, ELO rating, Likert scores | Open-ended generation, creative tasks |
+
+A common mistake is optimizing for a single metric like ROUGE-L while ignoring factual consistency. Claude Code helps you track multiple metrics simultaneously and weight them according to your production priorities.
+
 ## Setting Up Your Model Evaluation Pipeline
 
 The foundation of any evaluation workflow begins with defining your evaluation criteria. What does "success" look like for your specific use case? Consider multiple dimensions: accuracy metrics, latency requirements, cost constraints, and behavioral safeguards.
 
 Create a structured evaluation dataset that represents real-world usage patterns. This dataset should include typical inputs, challenging edge cases, and adversarial examples designed to expose weaknesses. Store this data in a format that supports easy versioning and comparison across model iterations.
 
-Claude Code can assist by generating synthetic test cases, analyzing your existing data distributions, and identifying gaps in your evaluation coverage. Use the code editing capabilities to build evaluation scripts that run consistently across different environments and model versions.
+A well-organized evaluation directory structure looks like this:
+
+```
+eval/
+  datasets/
+    v1/
+      typical_cases.jsonl
+      edge_cases.jsonl
+      adversarial.jsonl
+    v2/
+      ...
+  scripts/
+    run_eval.py
+    compare_models.py
+    generate_report.py
+  results/
+    2026-03-01_baseline.json
+    2026-03-14_experiment_A.json
+  config/
+    thresholds.yaml
+    metrics.yaml
+```
+
+This layout keeps your datasets versioned alongside your results, so you can always reproduce any past evaluation run. Claude Code can assist by generating synthetic test cases, analyzing your existing data distributions, and identifying gaps in your evaluation coverage. Use the code editing capabilities to build evaluation scripts that run consistently across different environments and model versions.
+
+A synthetic test case generator built with Claude Code might look like this:
+
+```python
+import anthropic
+
+def generate_adversarial_cases(seed_examples: list[dict], n: int = 50) -> list[dict]:
+    """Use Claude to generate adversarial variations of existing test cases."""
+    client = anthropic.Anthropic()
+    adversarial = []
+
+    for example in seed_examples[:10]:  # Generate from first 10 seeds
+        prompt = f"""Given this test case:
+Input: {example['input']}
+Expected output: {example['expected']}
+
+Generate {n // 10} adversarial variants that would challenge a model:
+- Paraphrase the input while preserving intent
+- Add irrelevant context that might confuse the model
+- Use edge-case formatting or unusual syntax
+Return as JSON array with 'input' and 'expected' fields."""
+
+        response = client.messages.create(
+            model="claude-opus-4-6",
+            max_tokens=2048,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        adversarial.extend(parse_json_response(response.content[0].text))
+
+    return adversarial
+```
 
 ## Automating Benchmark Comparisons
 
@@ -51,6 +122,30 @@ def run_benchmark(model_config, test_dataset):
 
 This skill can be invoked automatically whenever you deploy a new model version, ensuring every change undergoes rigorous comparison against baseline performance. Store results in a tracking system that visualizes trends over time and highlights regressions.
 
+For more detailed benchmarking, add per-category breakdowns so you can see exactly where model performance diverges:
+
+```python
+def run_benchmark_by_category(model_config, test_dataset):
+    """Run benchmarks broken down by input category."""
+    categories = group_by_category(test_dataset)
+    breakdown = {}
+
+    for category, examples in categories.items():
+        breakdown[category] = {
+            "n": len(examples),
+            "accuracy": calculate_accuracy(model_config, examples),
+            "avg_latency_ms": measure_inference_latency(model_config, examples),
+            "failure_modes": collect_failure_examples(model_config, examples, top_n=5)
+        }
+
+    return {
+        "overall": run_benchmark(model_config, test_dataset),
+        "by_category": breakdown
+    }
+```
+
+Category-level breakdowns often reveal that a model performs well on average but has a specific blind spot for a particular input type — a regression you would never catch with aggregate metrics alone.
+
 ## Evaluating Model Responses Quality
 
 Beyond quantitative metrics, evaluating the qualitative aspects of model outputs requires careful prompt engineering and comparison frameworks. Claude Code provides capabilities for setting up blind comparisons, where human evaluators can assess outputs without knowing which model generated them.
@@ -59,6 +154,34 @@ Implement a structured scoring system that covers relevance, coherence, factual 
 
 For tasks involving code generation, use Claude Code's ability to execute and validate generated code as part of the evaluation process. This ensures not just syntactic correctness but functional accuracy as well.
 
+Here is a practical LLM-as-judge pattern that uses Claude to evaluate outputs automatically:
+
+```python
+import anthropic
+
+EVAL_RUBRIC = """Score the following model output on a scale of 1-5 for each dimension:
+1. Relevance: Does the output address the input question?
+2. Accuracy: Are facts correct and not hallucinated?
+3. Clarity: Is the response clear and well-organized?
+4. Completeness: Does the response cover all necessary aspects?
+
+Return JSON: {"relevance": N, "accuracy": N, "clarity": N, "completeness": N, "reasoning": "..."}"""
+
+def llm_judge_score(input_text: str, model_output: str) -> dict:
+    client = anthropic.Anthropic()
+    response = client.messages.create(
+        model="claude-opus-4-6",
+        max_tokens=512,
+        messages=[{
+            "role": "user",
+            "content": f"{EVAL_RUBRIC}\n\nInput: {input_text}\n\nOutput: {model_output}"
+        }]
+    )
+    return parse_json_response(response.content[0].text)
+```
+
+The LLM-as-judge approach scales far better than manual human evaluation and produces surprisingly consistent scores when paired with a detailed rubric. It is especially useful for open-ended generation tasks where traditional metrics like ROUGE fail to capture semantic quality.
+
 ## Building Regression Detection Systems
 
 Continuous model evaluation requires detecting performance regressions before they reach production. Claude Code skills can monitor evaluation metrics and trigger alerts when results deviate from expected ranges.
@@ -66,6 +189,54 @@ Continuous model evaluation requires detecting performance regressions before th
 Implement threshold-based alerts that notify your team when accuracy drops below acceptable levels, latency exceeds service level objectives, or error rates increase beyond baseline. More sophisticated approaches use statistical process control to detect gradual degradation that might not trigger simple threshold alerts.
 
 Store evaluation results in a time-series database that supports historical analysis. This enables correlating model performance changes with specific deployments, dataset updates, or code modifications.
+
+A practical regression detector in Python:
+
+```python
+import json
+from pathlib import Path
+from datetime import datetime
+
+THRESHOLDS = {
+    "accuracy": 0.90,         # Alert if accuracy drops below 90%
+    "avg_latency_ms": 500,    # Alert if latency exceeds 500ms
+    "error_rate": 0.05,       # Alert if error rate exceeds 5%
+    "hallucination_rate": 0.02  # Alert if hallucination rate exceeds 2%
+}
+
+def check_regression(current_results: dict, baseline_path: str) -> list[str]:
+    """Compare current results against baseline and return any regression alerts."""
+    with open(baseline_path) as f:
+        baseline = json.load(f)
+
+    alerts = []
+    for metric, threshold in THRESHOLDS.items():
+        current_val = current_results.get(metric)
+        baseline_val = baseline.get(metric)
+
+        if current_val is None:
+            continue
+
+        # For latency and error rates, flag increases
+        if metric in ("avg_latency_ms", "error_rate", "hallucination_rate"):
+            if current_val > threshold:
+                pct_change = ((current_val - baseline_val) / baseline_val) * 100
+                alerts.append(
+                    f"REGRESSION: {metric} = {current_val:.3f} "
+                    f"(+{pct_change:.1f}% vs baseline, threshold={threshold})"
+                )
+        else:
+            # For accuracy, flag decreases
+            if current_val < threshold:
+                alerts.append(
+                    f"REGRESSION: {metric} = {current_val:.3f} "
+                    f"(below threshold={threshold})"
+                )
+
+    return alerts
+```
+
+For gradual drift that does not trigger single-point thresholds, implement a rolling average check that flags when a 7-day average drops compared to a 30-day average. This catches the kind of slow degradation that comes from data distribution shift in production.
 
 ## Integration with MLOps Pipelines
 
@@ -85,6 +256,56 @@ evaluation_step:
 ```
 
 This integration ensures that model quality is validated at every stage of your deployment process, preventing regressions from reaching production environments.
+
+Here is a more complete GitHub Actions workflow that runs evaluation and blocks deployment on failure:
+
+```yaml
+name: Model Evaluation Gate
+
+on:
+  push:
+    paths:
+      - 'models/**'
+      - 'prompts/**'
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements-eval.txt
+
+      - name: Run evaluation suite
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python eval/scripts/run_eval.py \
+            --model ${{ github.sha }} \
+            --dataset eval/datasets/v2 \
+            --output eval/results/ci_${{ github.sha }}.json
+
+      - name: Check regression thresholds
+        run: |
+          python eval/scripts/check_regression.py \
+            --current eval/results/ci_${{ github.sha }}.json \
+            --baseline eval/results/baseline.json \
+            --fail-on-regression
+
+      - name: Upload evaluation artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: eval/results/ci_${{ github.sha }}.json
+```
+
+This pipeline runs on every push that touches model files or prompts, producing a clear pass/fail signal before any deployment proceeds.
 
 ## Practical Example: Evaluating LLM Summarization Quality
 
@@ -106,134 +327,101 @@ async def evaluate_summary(summary, reference):
 
 Run this evaluation across your test dataset to identify specific failure modes. Perhaps the model struggles with technical documents, or tends to hallucinate details in longer inputs. These insights guide both model selection and prompting strategies.
 
-## Evaluating Models on Fairness and Bias Metrics
-
-Production ML systems increasingly require fairness evaluation alongside accuracy metrics. A model that achieves strong overall accuracy may still exhibit systematic bias across demographic subgroups—an issue that raw accuracy numbers hide. Claude Code can help structure a fairness evaluation pipeline that runs alongside your standard benchmarks.
-
-The core components of a fairness evaluation pass:
+For a complete summarization evaluation workflow, add a head-to-head comparison runner that compares two model versions side by side:
 
 ```python
-from typing import Dict, List, Tuple
-import numpy as np
+def compare_models_on_dataset(model_a_config, model_b_config, dataset):
+    """Run head-to-head comparison of two model configs."""
+    results = {"model_a_wins": 0, "model_b_wins": 0, "ties": 0, "examples": []}
 
-def evaluate_fairness(
-    predictions: List,
-    labels: List,
-    sensitive_attributes: Dict[str, List]
-) -> Dict[str, Dict]:
-    """
-    Compute fairness metrics across sensitive attribute groups.
+    for example in dataset:
+        output_a = run_inference(model_a_config, example["input"])
+        output_b = run_inference(model_b_config, example["input"])
 
-    Returns per-group accuracy, false positive rate, and false negative rate.
-    """
-    results = {}
+        score_a = evaluate_summary(output_a, example["reference"])
+        score_b = evaluate_summary(output_b, example["reference"])
 
-    for attr_name, groups in sensitive_attributes.items():
-        results[attr_name] = {}
-        unique_groups = set(groups)
+        composite_a = weighted_composite(score_a)
+        composite_b = weighted_composite(score_b)
 
-        for group in unique_groups:
-            mask = [i for i, g in enumerate(groups) if g == group]
-            group_preds = [predictions[i] for i in mask]
-            group_labels = [labels[i] for i in mask]
+        if composite_a > composite_b + 0.05:
+            winner = "model_a"
+            results["model_a_wins"] += 1
+        elif composite_b > composite_a + 0.05:
+            winner = "model_b"
+            results["model_b_wins"] += 1
+        else:
+            winner = "tie"
+            results["ties"] += 1
 
-            tp = sum(p == l == 1 for p, l in zip(group_preds, group_labels))
-            fp = sum(p == 1 and l == 0 for p, l in zip(group_preds, group_labels))
-            fn = sum(p == 0 and l == 1 for p, l in zip(group_preds, group_labels))
-            tn = sum(p == l == 0 for p, l in zip(group_preds, group_labels))
+        results["examples"].append({
+            "input": example["input"][:200],
+            "score_a": score_a,
+            "score_b": score_b,
+            "winner": winner
+        })
 
-            total = len(mask)
-            results[attr_name][group] = {
-                "accuracy": (tp + tn) / total if total > 0 else None,
-                "fpr": fp / (fp + tn) if (fp + tn) > 0 else None,
-                "fnr": fn / (fn + tp) if (fn + tp) > 0 else None,
-                "sample_size": total
-            }
-
-    # Compute disparate impact ratio
-    for attr_name, group_metrics in results[attr_name].items():
-        accuracies = [m["accuracy"] for m in results[attr_name].values() if m["accuracy"] is not None]
-        if len(accuracies) >= 2:
-            disparate_impact = min(accuracies) / max(accuracies)
-            for group in results[attr_name]:
-                results[attr_name][group]["disparate_impact_ratio"] = disparate_impact
-
+    total = len(dataset)
+    results["model_a_win_rate"] = results["model_a_wins"] / total
+    results["model_b_win_rate"] = results["model_b_wins"] / total
     return results
 ```
 
-Ask Claude Code to analyze fairness evaluation results and flag groups where performance falls below acceptable thresholds:
+A 5% composite score margin is used as the tie threshold here to avoid declaring winners based on statistical noise. Adjust this margin based on the variance you observe across multiple runs of the same model.
 
-```
-Our fairness evaluation shows FNR of 0.18 for group A and 0.09 for group B
-on the loan approval model. Is this disparity within acceptable range for
-a financial application? What remediation options should I evaluate?
-```
+## Tracking Evaluation Results Over Time
 
-Claude Code provides a structured analysis of the disparity, references relevant fairness criteria (equalized odds, demographic parity, individual fairness), and suggests concrete steps: rebalancing training data, applying post-processing calibration, or using in-processing fairness constraints during training.
-
-## Version Tracking and Evaluation Artifacts
-
-Evaluation results become most valuable when you can compare them across model versions, dataset updates, and configuration changes. Without a structured artifact system, you end up with evaluation results scattered across notebooks and log files with no consistent way to track what changed.
-
-Build a lightweight evaluation artifact store that integrates with your workflow:
+Point-in-time metrics are useful, but trends tell you the whole story. Build a lightweight results tracker that stores every evaluation run and generates trend reports:
 
 ```python
 import json
-import hashlib
+import os
 from datetime import datetime
-from pathlib import Path
-from dataclasses import dataclass, asdict
 
-@dataclass
-class EvaluationArtifact:
-    model_id: str
-    model_version: str
-    dataset_hash: str
-    eval_timestamp: str
-    metrics: dict
-    config: dict
-    notes: str = ""
+RESULTS_DIR = "eval/results"
 
-    def save(self, output_dir: str = "eval_results"):
-        Path(output_dir).mkdir(exist_ok=True)
-        artifact_id = f"{self.model_id}_{self.model_version}_{self.eval_timestamp}"
-        artifact_path = Path(output_dir) / f"{artifact_id}.json"
+def save_eval_result(result: dict, label: str = None):
+    """Persist evaluation result with timestamp and optional label."""
+    timestamp = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    filename = f"{timestamp.replace(':', '-')}_{label or 'run'}.json"
+    path = os.path.join(RESULTS_DIR, filename)
+    result["_meta"] = {"timestamp": timestamp, "label": label}
+    with open(path, "w") as f:
+        json.dump(result, f, indent=2)
+    return path
 
-        with open(artifact_path, "w") as f:
-            json.dump(asdict(self), f, indent=2)
-
-        return str(artifact_path)
-
-def hash_dataset(dataset_path: str) -> str:
-    """Generate a reproducible hash of the evaluation dataset."""
-    with open(dataset_path, "rb") as f:
-        return hashlib.sha256(f.read()).hexdigest()[:12]
-
-# Usage in evaluation pipeline
-def run_tracked_evaluation(model, dataset_path, config):
-    results = run_benchmark(model, dataset_path)
-
-    artifact = EvaluationArtifact(
-        model_id=model.id,
-        model_version=model.version,
-        dataset_hash=hash_dataset(dataset_path),
-        eval_timestamp=datetime.utcnow().isoformat(),
-        metrics=results,
-        config=config
-    )
-
-    path = artifact.save()
-    print(f"Evaluation saved: {path}")
-    return results, artifact
+def load_trend_data(metric: str, last_n: int = 30) -> list[dict]:
+    """Load the last N evaluation runs for trend analysis."""
+    files = sorted(Path(RESULTS_DIR).glob("*.json"))[-last_n:]
+    trend = []
+    for f in files:
+        with open(f) as fp:
+            data = json.load(fp)
+        trend.append({
+            "timestamp": data["_meta"]["timestamp"],
+            "value": data.get(metric),
+            "label": data["_meta"].get("label")
+        })
+    return trend
 ```
 
-With this structure, Claude Code can compare any two evaluation runs directly: "Compare the artifact from eval_results/v2.3.0_2026-03-15.json against v2.2.0. What metrics regressed and by how much?" This transforms evaluation from a one-off exercise into a tracked history of model quality over time.
+With a trend dataset in hand, you can generate a simple ASCII chart for terminal output or pipe the data to a tool like Weights & Biases, MLflow, or a custom dashboard. Claude Code can help you write the integration code for whichever tracking platform your team already uses.
+
+## Practical Tips for Sustainable Evaluation
+
+After setting up the infrastructure, these operational practices keep your evaluation workflows healthy long-term:
+
+- **Version your evaluation datasets** alongside your model checkpoints. If you update the dataset, keep old versions so you can make apples-to-apples comparisons with historical results.
+- **Run a smoke-test evaluation on every commit** with a small 50-100 example subset, and save the full evaluation suite for nightly or pre-release runs. This keeps CI times manageable.
+- **Review failure examples manually every sprint.** Automated metrics tell you that something is wrong; failure examples tell you why. Schedule time to read through them.
+- **Set conservative thresholds and tighten them over time.** Starting with a 90% accuracy threshold and gradually moving it to 93% as your model improves creates a natural quality ratchet.
+- **Document what each metric measures and why it matters.** New team members should be able to read your metrics config and understand the production contract each number represents.
 
 ## Conclusion
 
 Building robust model evaluation workflows with Claude Code transforms ad-hoc testing into systematic, reproducible science. By automating benchmark execution, implementing regression detection, and integrating with deployment pipelines, ML engineers can ensure consistent model quality throughout the development lifecycle.
 
-The key is starting simple: define your evaluation criteria, build baseline metrics, and gradually add sophistication as your needs evolve. Claude Code's flexibility allows you to adapt your evaluation workflows as your models and applications grow more complex.
+The key is starting simple: define your evaluation criteria, build baseline metrics, and gradually add sophistication as your needs evolve. Claude Code's flexibility allows you to adapt your evaluation workflows as your models and applications grow more complex. The goal is a system where every model change is validated automatically, regressions are caught before production, and the full history of model performance is available for analysis at any time.
 
 {% endraw %}
 
