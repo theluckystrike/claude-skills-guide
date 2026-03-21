@@ -11,6 +11,7 @@ permalink: /claude-code-keeps-generating-placeholder-todo-comments/
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 
 # Claude Code Keeps Generating Placeholder TODO Comments
@@ -128,7 +129,6 @@ The difference is dramatic. The second prompt eliminates every TODO because ther
 
 Create a `CLAUDE.md` file in your project root with clear instructions about TODO comments:
 
-{% raw %}
 ```markdown
 # Project Guidelines
 
@@ -140,7 +140,6 @@ Create a `CLAUDE.md` file in your project root with clear instructions about TOD
 - Never scaffold functions with empty bodies or placeholder comments
 - If a feature is out of scope for the current task, say so explicitly rather than leaving a TODO
 ```
-{% endraw %}
 
 This tells Claude Code upfront that placeholder comments aren't acceptable in your codebase. The CLAUDE.md file is loaded at the start of every session in that directory, so it reliably enforces this rule project-wide without you having to repeat it in every prompt.
 
@@ -161,7 +160,6 @@ Adding the phrase "or ask me clarifying questions first" is especially useful. I
 
 Create a custom skill that specifically addresses code completeness. In `~/.claude/skills/complete-code.md`:
 
-{% raw %}
 ```markdown
 # Complete Implementation Skill
 
@@ -177,7 +175,6 @@ If you find yourself wanting to add a TODO comment, instead either:
 - Implement a reasonable default behavior
 - Write a comment explaining what needs to be decided, not as a placeholder
 ```
-{% endraw %}
 
 Invoke this skill with `/complete-code` when generating new code.
 
@@ -206,7 +203,6 @@ Each function gets full attention, and there's no pressure to scaffold over gaps
 
 If you already have TODO comments scattered throughout your codebase, you can use Claude Code to find and address them:
 
-{% raw %}
 ```bash
 # Search for TODO comments in your codebase
 grep -r "TODO" --include="*.ts" --include="*.js" src/
@@ -215,7 +211,6 @@ grep -r "TODO" --include="*.ts" --include="*.js" src/
 grep -r "TODO" --include="*.ts" --include="*.js" src/ -l | \
   xargs -I{} sh -c 'echo "$(grep -c TODO {}) {}"' | sort -rn
 ```
-{% endraw %}
 
 Then ask Claude Code to review each one systematically:
 
@@ -311,3 +306,4 @@ Remember: TODO comments should be deliberate tracking tools, not AI-generated pl
 - [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -11,6 +11,7 @@ permalink: /why-is-claude-code-reading-the-wrong-directory-entirely/
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 
 # Why Is Claude Code Reading the Wrong Directory Entirely?
@@ -94,7 +95,6 @@ Please edit /Users/mike/myproject/src/config.json (use the absolute path)
 
 The simplest fix is to provide absolute paths for all file operations:
 
-{% raw %}
 ```bash
 # Instead of
 read_file path: "config.json"
@@ -102,7 +102,6 @@ read_file path: "config.json"
 # Use
 read_file path: "/Users/mike/projects/myapp/config.json"
 ```
-{% endraw %}
 
 ### Solution 2: Set the Working Directory Explicitly
 
@@ -126,7 +125,6 @@ This changes Claude Code's working directory for subsequent operations.
 
 If MCP servers are causing issues, check their configuration:
 
-{% raw %}
 ```json
 {
   "mcpServers": {
@@ -137,7 +135,6 @@ If MCP servers are causing issues, check their configuration:
   }
 }
 ```
-{% endraw %}
 
 The last argument specifies the allowed directory for file operations.
 
@@ -145,12 +142,10 @@ The last argument specifies the allowed directory for file operations.
 
 Before performing critical operations, verify the working directory:
 
-{% raw %}
 ```bash
 bash
 command: "pwd"
 ```
-{% endraw %}
 
 This shows exactly where Claude Code thinks it is operating.
 
@@ -203,3 +198,4 @@ By understanding how Claude Code resolves paths and taking a few simple precauti
 - [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

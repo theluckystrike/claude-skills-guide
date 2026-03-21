@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-struts-to-spring-boot-migration-workflow/
 ---
+{% raw %}
 
 # Claude Code Struts to Spring Boot Migration Workflow
 
@@ -36,7 +37,6 @@ These skills provide the foundation for analyzing Java code structures, understa
 
 The first phase involves inventorying your Struts application structure. Create a migration analysis skill that scans the codebase:
 
-{% raw %}
 ```java
 // Analyze Struts Action classes for migration planning
 public class StrutsActionAnalyzer {
@@ -67,7 +67,6 @@ public class StrutsActionAnalyzer {
     }
 }
 ```
-{% endraw %}
 
 Claude Code can execute this analysis across your entire codebase, generating a comprehensive report mapping each Struts component to its Spring Boot equivalent.
 
@@ -84,7 +83,6 @@ The core transformation converts Struts Action classes to Spring MVC controllers
 
 Practical conversion example:
 
-{% raw %}
 ```java
 // Struts Original
 public class UserAction extends ActionSupport {
@@ -117,7 +115,6 @@ public class UserController {
     }
 }
 ```
-{% endraw %}
 
 Claude Code's transformation skills preserve business logic while updating the presentation layer. The skill identifies dependencies requiring injection and rewires the component accordingly.
 
@@ -125,7 +122,6 @@ Claude Code's transformation skills preserve business logic while updating the p
 
 Struts XML configurations become Spring Boot's annotation-driven approach. Claude Code parses `struts.xml` and generates equivalent Spring configurations:
 
-{% raw %}
 ```java
 // Configuration migration pattern
 @Configuration
@@ -148,7 +144,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
     }
 }
 ```
-{% endraw %}
 
 For properties previously in `struts.xml`, migrate to `application.properties`:
 
@@ -166,7 +161,6 @@ spring.mvc.view.suffix=.jsp
 
 Update your build configuration from Struts to Spring Boot dependencies:
 
-{% raw %}
 ```xml
 <!-- pom.xml Struts dependencies -->
 <dependency>
@@ -185,7 +179,6 @@ Update your build configuration from Struts to Spring Boot dependencies:
     <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
 ```
-{% endraw %}
 
 Claude Code's build analysis skill identifies all transitive dependencies requiring updates, preventing runtime conflicts that often plague manual migrations.
 
@@ -193,7 +186,6 @@ Claude Code's build analysis skill identifies all transitive dependencies requir
 
 The migration workflow concludes with comprehensive validation. Generate test cases that verify functional equivalence:
 
-{% raw %}
 ```java
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -211,7 +203,6 @@ public class UserControllerMigrationTest {
     }
 }
 ```
-{% endraw %}
 
 Run parallel testing comparing Struts and Spring Boot responses to ensure business logic preservation.
 
@@ -219,13 +210,11 @@ Run parallel testing comparing Struts and Spring Boot responses to ensure busine
 
 Chain these phases into a reproducible Claude Code skill:
 
-{% raw %}
 ```yaml
 # Migration workflow skill
 name: struts-to-spring-boot-migration
 description: Automated Struts to Spring Boot migration
 ```
-{% endraw %}
 
 Execute the complete migration by invoking the skill in a Claude Code session:
 
@@ -247,3 +236,4 @@ Claude Code transforms the daunting Struts to Spring Boot migration from months 
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

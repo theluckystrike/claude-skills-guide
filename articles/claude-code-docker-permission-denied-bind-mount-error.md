@@ -12,6 +12,7 @@ reviewed: true
 score: 7
 ---
 
+{% raw %}
 
 # Understanding and Fixing Docker Permission Denied Bind Mount Errors in Claude Code
 
@@ -31,7 +32,6 @@ When Claude Code executes Docker commands through its docker skill, these permis
 
 Named volumes are managed by Docker and automatically handle permission issues. Create a volume instead of a bind mount:
 
-{% raw %}
 ```bash
 # Create a named volume
 docker volume create my-project-data
@@ -39,7 +39,6 @@ docker volume create my-project-data
 # Use the volume in your container
 docker run -v my-project-data:/app myimage
 ```
-{% endraw %}
 
 This approach works well for persistent data but doesn't give you direct access to host directories.
 
@@ -47,12 +46,10 @@ This approach works well for persistent data but doesn't give you direct access 
 
 You can run containers with your host user's UID and GID to match ownership:
 
-{% raw %}
 ```bash
 # Run container with host user permissions
 docker run -v $(pwd):/app -u $(id -u):$(id -g) myimage
 ```
-{% endraw %}
 
 This tells Docker to run the container process as your host user, eliminating permission mismatches.
 
@@ -60,7 +57,6 @@ This tells Docker to run the container process as your host user, eliminating pe
 
 If the container is already running, you can fix permissions from inside:
 
-{% raw %}
 ```bash
 # Access container shell
 docker exec -it container_name /bin/bash
@@ -71,7 +67,6 @@ chown -R user:user /app
 # Or set permissive permissions (less secure)
 chmod -R 777 /app
 ```
-{% endraw %}
 
 However, this requires manual intervention and may not persist across container recreations.
 
@@ -79,7 +74,6 @@ However, this requires manual intervention and may not persist across container 
 
 Docker Compose simplifies permission handling with the `user` directive:
 
-{% raw %}
 ```yaml
 version: '3.8'
 services:
@@ -92,21 +86,17 @@ services:
       - UID=${UID}
       - GID=${GID}
 ```
-{% endraw %}
 
 Run with environment variables set:
 
-{% raw %}
 ```bash
 UID=$(id -u) GID=$(id -g) docker-compose up -d
 ```
-{% endraw %}
 
 ## Solution 5: Creating a Custom Claude Code Skill for Docker Permissions
 
 You can create a Claude Code skill that automatically handles Docker permission issues. Create a file at `~/.claude/skills/docker-permission-fixer/skill.md`:
 
-{% raw %}
 ```markdown
 ---
 name: docker-permission-fixer
@@ -129,7 +119,6 @@ When you encounter "permission denied" errors with bind mounts:
 - Run "analyze my container permissions" to diagnose the issue
 - Run "generate compose file for current directory" to create a permission-safe configuration
 ```
-{% endraw %}
 
 This skill can then provide contextual help when Claude Code detects Docker permission errors.
 
@@ -150,7 +139,6 @@ When working with Claude Code and Docker, follow these best practices:
 
 **Solution**: Ensure the mounted directory is readable:
 
-{% raw %}
 ```bash
 # Make directory readable
 chmod -R 755 /path/to/project
@@ -158,7 +146,6 @@ chmod -R 755 /path/to/project
 # Or if ownership is wrong
 chown -R $(id -u):$(id -g) /path/to/project
 ```
-{% endraw %}
 
 ### Scenario: Container Can't Write Build Outputs
 
@@ -166,11 +153,9 @@ chown -R $(id -u):$(id -g) /path/to/project
 
 **Solution**: Use the `-u` flag with matching UID/GID:
 
-{% raw %}
 ```bash
 docker run -v $(pwd)/output:/output -u $(id -u):$(id -g) build-image
 ```
-{% endraw %}
 
 ### Scenario: Docker-in-Docker with Claude Code
 
@@ -178,11 +163,9 @@ docker run -v $(pwd)/output:/output -u $(id -u):$(id -g) build-image
 
 **Solution**: Mount the Docker socket with appropriate permissions:
 
-{% raw %}
 ```bash
 docker run -v /var/run/docker.sock:/var/run/docker.sock -u $(id -u):$(id -g) docker-image
 ```
-{% endraw %}
 
 Note: This grants the container full Docker access—use only with trusted images.
 
@@ -190,11 +173,9 @@ Note: This grants the container full Docker access—use only with trusted image
 
 Here's a handy one-liner to run any container with your current user's permissions:
 
-{% raw %}
 ```bash
 docker run -it --rm -v "$(pwd)":/workspace -w /workspace -u $(id -u):$(id -g) <image> <command>
 ```
-{% endraw %}
 
 This mounts the current directory, sets the working directory, and runs as your host user—perfect for development with Claude Code.
 
@@ -211,3 +192,4 @@ Docker bind mount permission errors are common but solvable. By understanding th
 - [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

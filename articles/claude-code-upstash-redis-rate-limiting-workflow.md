@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-upstash-redis-rate-limiting-workflow/
 ---
+{% raw %}
 # Claude Code Upstash Redis Rate Limiting Workflow
 
 Building robust rate limiting into your applications is essential for API protection, cost control, and abuse prevention. When combined with Claude Code's automation capabilities, Upstash Redis provides a powerful foundation for implementing sophisticated rate limiting workflows. This guide walks you through creating an integrated system that uses Claude Code skills with Upstash's edge-friendly Redis solution.
@@ -56,7 +57,6 @@ When working with Upstash Redis rate limiting, use these approaches:
 
 The simplest approach limits requests within fixed time windows:
 
-{% raw %}
 ```typescript
 import { Redis } from '@upstash/redis';
 
@@ -79,13 +79,11 @@ async function fixedWindowLimit(key: string, limit: number, windowSeconds: numbe
   };
 }
 ```
-{% endraw %}
 
 ### 2. Sliding Window Rate Limiting
 
 More accurate rate limiting using sorted sets:
 
-{% raw %}
 ```typescript
 async function slidingWindowLimit(
   key: string, 
@@ -116,13 +114,11 @@ async function slidingWindowLimit(
   };
 }
 ```
-{% endraw %}
 
 ### 3. Token Bucket Algorithm
 
 Flexible rate limiting supporting burst traffic:
 
-{% raw %}
 ```typescript
 interface TokenBucket {
   tokens: number;
@@ -163,7 +159,6 @@ async function tokenBucketCheck(
   };
 }
 ```
-{% endraw %}
 
 ## Claude Code Workflow Integration
 
@@ -316,4 +311,4 @@ Combining Claude Code's automation capabilities with Upstash Redis creates a pow
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
-```
+{% endraw %}

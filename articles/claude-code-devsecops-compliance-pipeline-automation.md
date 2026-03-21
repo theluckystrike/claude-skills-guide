@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, devsecops, compliance]
 ---
 
+{% raw %}
 Building automated compliance pipelines is essential for modern development teams that need to maintain security standards while moving quickly. Claude Code skills provide powerful capabilities for automating security checks, compliance validations, and audit documentation throughout your development workflow. This guide explores practical approaches to implementing DevSecOps compliance automation using Claude Code.
 
 ## Understanding DevSecOps Compliance Pipelines
@@ -25,7 +26,6 @@ One of the most valuable applications of Claude Code in compliance pipelines is 
 
 Consider a scenario where you need to verify that all production databases have encryption at rest enabled. A Claude Code skill can analyze your infrastructure configurations across Terraform, CloudFormation, or Kubernetes manifests to identify misconfigurations.
 
-{% raw %}
 ```yaml
 # Example: Claude Code skill for infrastructure security scanning
 # This skill examines infrastructure-as-code files for compliance violations
@@ -34,17 +34,16 @@ skill:
   triggers:
     - on: pr_created
       files_changed: ["*.tf", "*.yaml", "*.yml"]
-  
+
   instructions: |
     Scan infrastructure files for security compliance violations:
     1. Check that database resources have encryption enabled
     2. Verify storage buckets are not publicly accessible
     3. Ensure network security groups restrict unauthorized access
     4. Validate secret management using approved services
-    
+
     Report findings in markdown with severity levels.
 ```
-{% endraw %}
 
 This approach shifts security left—catching misconfigurations before they reach production rather than discovering them during audit preparation.
 
@@ -111,7 +110,6 @@ First, define the controls you need to satisfy, such as:
 
 For each control, create Claude Code skills that continuously verify compliance:
 
-{% raw %}
 ```bash
 # Example: Running compliance verification in CI/CD
 claude --print \
@@ -127,7 +125,6 @@ else
   exit 1
 fi
 ```
-{% endraw %}
 
 The skill examines your identity provider configuration, access control policies, and logs to verify that logical access controls meet SOC 2 requirements.
 
@@ -161,3 +158,4 @@ Remember that compliance automation augments your security program rather than r
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

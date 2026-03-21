@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 
 # Claude Code: Helping Students Understand Recursion Concepts
@@ -29,12 +30,10 @@ One of Claude Code's most valuable features for recursion learning is its abilit
 
 Consider a student who writes a basic factorial function:
 
-{% raw %}
 ```python
 def factorial(n):
     return n * factorial(n - 1)
 ```
-{% endraw %}
 
 A textbook might explain that this calculates n! by multiplying n times (n-1) times (n-2) and so on. Claude Code can do something more powerful—it can simulate the execution and show exactly what happens:
 
@@ -51,14 +50,12 @@ This visible unwinding process helps students build the mental model they need. 
 
 For visual learners, Claude Code can generate diagrams and ASCII art representations of recursive call stacks. When explaining binary search recursion, Claude might produce:
 
-{% raw %}
 ```
 binary_search([1,3,5,7,9], target=7, low=0, high=4)
   └── binary_search([1,3,5,7,9], target=7, low=3, high=4)
         └── binary_search([1,3,5,7,9], target=7, low=3, high=3)
               └── returns index 3
 ```
-{% endraw %}
 
 This visual representation makes the otherwise abstract call stack concrete. Students can see how the search space narrows with each recursive call, reinforcing the divide-and-conquer pattern that underlies many recursive algorithms.
 
@@ -109,3 +106,4 @@ Recursion education benefits enormously from interactive, personalized guidance�
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
