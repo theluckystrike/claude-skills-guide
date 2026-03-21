@@ -5,7 +5,7 @@ description: "Learn how to use Claude Code with GNU Stow to manage your dotfiles
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-stow-dotfiles-manager-workflow-tutorial/
-categories: [tutorials, dotfiles, dev-tools]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills, stow, dotfiles, workflow]
 ---
 
