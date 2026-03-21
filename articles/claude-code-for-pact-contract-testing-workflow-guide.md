@@ -5,7 +5,7 @@ description: "Learn how to integrate Claude Code into your Pact contract testing
 date: 2026-03-20
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pact-contract-testing-workflow-guide/
-categories: [guides, testing]
+categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills]
