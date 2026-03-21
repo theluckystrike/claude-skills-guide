@@ -16,13 +16,27 @@ score: 7
 {% raw %}
 # Claude Code Laravel Sanctum API Authentication Guide
 
-Building secure APIs requires robust authentication mechanisms. Laravel Sanctum provides a lightweight, token-based authentication system perfect for SPAs, mobile applications, and APIs. This guide walks you through implementing complete API authentication with Laravel Sanctum, from installation to advanced token management.
+Building secure APIs requires robust authentication mechanisms. Laravel Sanctum provides a lightweight, token-based authentication system perfect for SPAs, mobile applications, and APIs. This guide walks you through implementing complete API authentication with Laravel Sanctum, from installation to advanced token management, using Claude Code to accelerate the process.
 
 ## What is Laravel Sanctum?
 
-Laravel Sanctum (formerly Aircode) is Laravel's official authentication package for SPAs and mobile applications. Unlike OAuth2, Sanctum uses simple token-based authentication that doesn't require complex JWT libraries or external providers. It issues personal access tokens that clients include in request headers.
+Laravel Sanctum is Laravel's official authentication package for SPAs and mobile applications. Unlike OAuth2, Sanctum uses simple token-based authentication that doesn't require complex JWT libraries or external providers. It issues personal access tokens that clients include in request headers.
 
 Sanctum is ideal when you need to authenticate: single-page applications communicating with Laravel APIs, mobile apps consuming Laravel backends, or any client requiring simple API token authentication without the overhead of Passport.
+
+### Sanctum vs. Passport vs. JWT: When to Choose What
+
+| Feature | Sanctum | Passport | JWT (tymon) |
+|---|---|---|---|
+| Complexity | Low | High | Medium |
+| OAuth2 support | No | Yes | No |
+| SPA cookie auth | Yes | No | No |
+| Token abilities/scopes | Yes (simple) | Yes (full OAuth) | Custom |
+| Third-party integrations | No | Yes | No |
+| Setup time | Minutes | Hours | 30–60 min |
+| Best for | APIs, SPAs, mobile | Enterprise OAuth flows | Stateless microservices |
+
+Sanctum is the right choice for the majority of Laravel API projects. If you're building an internal API consumed by your own frontend or mobile app, Sanctum gets you production-ready in minutes rather than hours.
 
 ## Installing and Configuring Sanctum
 
@@ -44,16 +58,34 @@ Run the migrations to create the necessary database tables:
 php artisan migrate
 ```
 
+This creates the `personal_access_tokens` table, which stores every issued token alongside its hashed value, abilities, and optional expiration timestamp.
+
 Next, configure your User model to use the HasApiTokens trait:
 
 ```php
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens;
-    // ... rest of the model
+    use HasApiTokens, Notifiable;
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
+    ];
 }
 ```
 
@@ -65,6 +97,28 @@ use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
+```
+
+### Configuring Token Expiration
+
+Out of the box, Sanctum tokens do not expire. For most production APIs, you should set a sensible default expiration in `config/sanctum.php`:
+
+```php
+// config/sanctum.php
+'expiration' => 60 * 24 * 30, // 30 days in minutes
+
+// Or null for tokens that never expire (not recommended for production)
+'expiration' => null,
+```
+
+You can also set expiration per token at creation time:
+
+```php
+$token = $user->createToken(
+    'mobile-app',
+    ['*'],
+    now()->addDays(30)
+)->plainTextToken;
 ```
 
 ## Creating API Authentication Endpoints
@@ -132,6 +186,14 @@ class AuthController extends Controller
 
         return response()->json(['message' => 'Logged out successfully']);
     }
+
+    public function logoutAll(Request $request)
+    {
+        // Revoke all tokens for this user (log out from all devices)
+        $request->user()->tokens()->delete();
+
+        return response()->json(['message' => 'Logged out from all devices']);
+    }
 }
 ```
 
@@ -142,7 +204,38 @@ use App\Http\Controllers\AuthController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout']);
+    Route::post('/logout-all', [AuthController::class, 'logoutAll']);
+});
+```
+
+### Adding a Token Refresh Endpoint
+
+Unlike JWTs, Sanctum tokens don't have a built-in refresh mechanism. A pragmatic pattern is to issue a new token on request and revoke the old one:
+
+```php
+public function refresh(Request $request)
+{
+    $user = $request->user();
+
+    // Delete the current token
+    $user->currentAccessToken()->delete();
+
+    // Issue a fresh token
+    $newToken = $user->createToken('auth-token')->plainTextToken;
+
+    return response()->json([
+        'token' => $newToken,
+    ]);
+}
+```
+
+Add the route under the `auth:sanctum` middleware group:
+
+```php
+Route::post('/token/refresh', [AuthController::class, 'refresh']);
 ```
 
 ## Protecting API Routes
@@ -158,7 +251,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Protected resource endpoints
     Route::apiResource('/posts', PostController::class);
-    
+
     // User-specific data
     Route::get('/dashboard', function (Request $request) {
         return response()->json([
@@ -178,6 +271,41 @@ Route::middleware(['auth:sanctum', 'can:admin'])->prefix('admin')->group(functio
 });
 ```
 
+### Token Abilities (Scopes)
+
+Sanctum supports a lightweight ability system that lets you restrict what a given token can do. This is useful for issuing read-only tokens to third-party integrations:
+
+```php
+// Issue a token with specific abilities
+$token = $user->createToken('readonly-token', ['read:posts', 'read:comments'])->plainTextToken;
+
+// Issue an admin token with all abilities
+$token = $user->createToken('admin-token', ['*'])->plainTextToken;
+```
+
+Check abilities in your controllers or middleware:
+
+```php
+public function store(Request $request)
+{
+    if (!$request->user()->tokenCan('create:posts')) {
+        abort(403, 'This token does not have permission to create posts.');
+    }
+
+    // proceed with creating the post
+}
+```
+
+You can also use the `CheckAbilities` and `CheckForAnyAbility` middleware provided by Sanctum:
+
+```php
+use Laravel\Sanctum\Http\Middleware\CheckAbilities;
+use Laravel\Sanctum\Http\Middleware\CheckForAnyAbility;
+
+Route::middleware(['auth:sanctum', CheckAbilities::class . ':create:posts,update:posts'])
+    ->post('/posts', [PostController::class, 'store']);
+```
+
 ## Managing Tokens Effectively
 
 Sanctum provides powerful token management capabilities. Issue tokens with descriptive names for better tracking:
@@ -189,8 +317,8 @@ $token = $user->createToken('mobile-app-iphone')->plainTextToken;
 // Get all tokens for the user
 $tokens = $user->tokens;
 
-// Revoke specific token
-$token->delete();
+// Revoke specific token by ID
+$user->tokens()->where('id', $tokenId)->delete();
 
 // Revoke all tokens (logout from all devices)
 $user->tokens()->delete();
@@ -201,17 +329,52 @@ if ($token->can('create-posts')) {
 }
 ```
 
-Implement token expiration for enhanced security by configuring the expiration in your auth config:
+### Building a Token Management Endpoint
+
+Expose token management to your users so they can see and revoke active sessions:
 
 ```php
-// config/auth.php
-'guards' => [
-    'sanctum' => [
-        'driver' => 'sanctum',
-        'provider' => 'users',
-        'token_expiration' => 60 * 24 * 7, // 7 days in minutes
-    ],
-],
+class TokenController extends Controller
+{
+    public function index(Request $request)
+    {
+        return response()->json([
+            'tokens' => $request->user()->tokens->map(function ($token) {
+                return [
+                    'id' => $token->id,
+                    'name' => $token->name,
+                    'abilities' => $token->abilities,
+                    'last_used_at' => $token->last_used_at,
+                    'created_at' => $token->created_at,
+                    'expires_at' => $token->expires_at,
+                ];
+            }),
+        ]);
+    }
+
+    public function destroy(Request $request, int $tokenId)
+    {
+        $deleted = $request->user()
+            ->tokens()
+            ->where('id', $tokenId)
+            ->delete();
+
+        if (!$deleted) {
+            return response()->json(['message' => 'Token not found'], 404);
+        }
+
+        return response()->json(['message' => 'Token revoked']);
+    }
+}
+```
+
+Register the routes:
+
+```php
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/tokens', [TokenController::class, 'index']);
+    Route::delete('/tokens/{token}', [TokenController::class, 'destroy']);
+});
 ```
 
 ## Consuming the API from Clients
@@ -228,24 +391,57 @@ async function fetchProtectedData(token) {
             'Accept': 'application/json',
         },
     });
-    
+
     return response.json();
 }
 
-// Axios example
-axios.get('/api/user', {
-    headers: {
-        'Authorization': `Bearer ${userToken}`,
-        'Accept': 'application/json'
+// Axios example with an interceptor that attaches the token to every request
+import axios from 'axios';
+
+const api = axios.create({ baseURL: '/api' });
+
+api.interceptors.request.use((config) => {
+    const token = localStorage.getItem('auth_token');
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
     }
+    return config;
 });
+
+// Usage
+const user = await api.get('/user');
 ```
 
-For mobile applications, store tokens securely (not in localStorage) and attach them to every authenticated request:
+### Handling Token Expiry on the Client
+
+When a token expires, the API returns a 401 Unauthorized response. A robust client should handle this gracefully:
+
+```javascript
+api.interceptors.response.use(
+    (response) => response,
+    async (error) => {
+        if (error.response?.status === 401) {
+            // Clear stored token and redirect to login
+            localStorage.removeItem('auth_token');
+            window.location.href = '/login';
+        }
+        return Promise.reject(error);
+    }
+);
+```
+
+For mobile applications, store tokens securely using platform-specific secure storage and attach them to every authenticated request:
 
 ```dart
-// Flutter/Dart example
-Future<Map<String, dynamic>> fetchUserData(String token) async {
+// Flutter/Dart example with flutter_secure_storage
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:http/http.dart' as http;
+
+final storage = FlutterSecureStorage();
+
+Future<Map<String, dynamic>> fetchUserData() async {
+    final token = await storage.read(key: 'auth_token');
+
     final response = await http.get(
         Uri.parse('https://api.example.com/api/user'),
         headers: {
@@ -253,8 +449,75 @@ Future<Map<String, dynamic>> fetchUserData(String token) async {
             'Accept': 'application/json',
         },
     );
-    
+
     return json.decode(response.body);
+}
+```
+
+## Testing Sanctum Authentication
+
+Always write tests for your authentication endpoints. Laravel provides convenient helpers for authenticating as a user in tests:
+
+```php
+use Laravel\Sanctum\Sanctum;
+
+class AuthTest extends TestCase
+{
+    public function test_user_can_register()
+    {
+        $response = $this->postJson('/api/register', [
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+            'password' => 'password123',
+            'password_confirmation' => 'password123',
+        ]);
+
+        $response->assertStatus(201)
+                 ->assertJsonStructure(['user', 'token']);
+    }
+
+    public function test_user_can_login()
+    {
+        $user = User::factory()->create([
+            'password' => bcrypt('password123'),
+        ]);
+
+        $response = $this->postJson('/api/login', [
+            'email' => $user->email,
+            'password' => 'password123',
+        ]);
+
+        $response->assertOk()->assertJsonStructure(['user', 'token']);
+    }
+
+    public function test_protected_route_requires_authentication()
+    {
+        $response = $this->getJson('/api/dashboard');
+
+        $response->assertUnauthorized();
+    }
+
+    public function test_authenticated_user_can_access_dashboard()
+    {
+        $user = User::factory()->create();
+
+        Sanctum::actingAs($user, ['*']);
+
+        $response = $this->getJson('/api/dashboard');
+
+        $response->assertOk();
+    }
+
+    public function test_token_with_limited_abilities_is_restricted()
+    {
+        $user = User::factory()->create();
+
+        Sanctum::actingAs($user, ['read:posts']); // read-only token
+
+        $response = $this->postJson('/api/posts', ['title' => 'New Post']);
+
+        $response->assertForbidden();
+    }
 }
 ```
 
@@ -277,13 +540,54 @@ Route::post('/login', [AuthController::class, 'login'])
     ->middleware('throttle:5,1'); // 5 attempts per minute
 ```
 
-Rotate tokens periodically and provide mechanisms for users to revoke all sessions. Log token creation and revocation for audit purposes, and consider implementing two-factor authentication for sensitive operations.
+### Security Checklist
+
+| Practice | Why it matters |
+|---|---|
+| Always use HTTPS | Tokens are bearer credentials — anyone who intercepts them can impersonate the user |
+| Set token expiration | Limits the damage window if a token is leaked |
+| Rate-limit login | Prevents brute-force credential attacks |
+| Use token abilities | Limits blast radius for compromised third-party tokens |
+| Revoke on logout | Ensures server-side invalidation, not just client-side deletion |
+| Log token creation and revocation | Provides an audit trail for suspicious activity |
+| Hash passwords with bcrypt | Laravel's default; never store plain text passwords |
+| Validate email on registration | Reduces fake accounts and spam |
+
+### Cleaning Up Expired Tokens
+
+Expired tokens accumulate in the `personal_access_tokens` table over time. Use Laravel's pruning feature to clean them up automatically:
+
+```bash
+php artisan sanctum:prune-expired --hours=24
+```
+
+Schedule this in your `routes/console.php` (Laravel 11) or `app/Console/Kernel.php` (Laravel 10):
+
+```php
+// Laravel 11 — routes/console.php
+Schedule::command('sanctum:prune-expired --hours=24')->daily();
+```
+
+## Using Claude Code to Scaffold Sanctum Authentication
+
+Claude Code can accelerate the entire setup process. A well-structured prompt like the one below generates most of the boilerplate instantly:
+
+```
+Set up Laravel Sanctum API authentication with:
+- AuthController with register, login, logout, logoutAll methods
+- Token abilities: read:profile, write:profile, admin
+- Rate limiting on login (5 req/min)
+- Tests for all endpoints using Sanctum::actingAs
+- CORS configured for https://app.example.com
+```
+
+Claude Code understands the full Laravel ecosystem and can generate the controller, routes, middleware, and tests in a single pass. You can then iterate with follow-up prompts to add features like two-factor authentication, social login, or custom token expiration logic.
 
 ## Conclusion
 
 Laravel Sanctum provides a secure, straightforward solution for API authentication in Laravel applications. Its token-based approach integrates smoothly with Laravel's authentication system while remaining simple enough for quick implementation. By following this guide, you can build robust API authentication that protects your endpoints while providing a smooth experience for API consumers.
 
-Remember to keep your tokens secure, implement proper CORS and rate limiting configurations, and provide clear token management features for your users. With these practices in place, your Laravel API will have professional-grade authentication ready for production use.
+The key areas to get right in production are: setting meaningful token expiration, using abilities to scope third-party integrations, implementing rate limiting on auth endpoints, and writing comprehensive tests using `Sanctum::actingAs`. With these practices in place, your Laravel API will have professional-grade authentication ready for production use.
 {% endraw %}
 
 ## Related Reading
