@@ -54,6 +54,33 @@ spec:
 
 Claude Code can generate this configuration from a simple description. Ask it to create an Ingress that routes `/api` to your backend service and `/` to your frontend, and you'll receive a properly formatted manifest.
 
+The `pathType` field deserves extra attention. `Prefix` matches any path starting with the given value, `Exact` requires a perfect match, and `ImplementationSpecific` delegates interpretation to the ingress controller. Choosing the wrong pathType causes routing bugs that are difficult to trace. When you use `Prefix` with `/api`, a request to `/api/users` matches correctly. With `Exact`, it does not—which bites developers when they test with a browser that hits `/api` exactly but production traffic hits nested routes.
+
+The `rewrite-target` annotation in the example above strips the path prefix before forwarding to the backend. If your API service handles requests at `/users` internally but you expose it at `/api/users` externally, the rewrite is necessary. Forgetting this annotation causes 404 errors at the service level even though Ingress routing works correctly.
+
+## Ingress Controllers: Choosing the Right One
+
+Not all ingress controllers behave the same way. Your annotation choices depend entirely on which controller is installed in your cluster.
+
+| Controller | Best For | Annotation Prefix | Notable Features |
+|---|---|---|---|
+| nginx-ingress (community) | General purpose, self-hosted | `nginx.ingress.kubernetes.io/` | Mature, wide annotation support |
+| NGINX Inc (commercial) | Enterprise, high performance | `nginx.org/` | Active health checks, JWT auth |
+| Traefik | Dynamic environments, microservices | `traefik.ingress.kubernetes.io/` | Native Let's Encrypt, middleware CRDs |
+| AWS ALB | EKS clusters on AWS | `alb.ingress.kubernetes.io/` | Native AWS integration, WAF support |
+| GKE Ingress | GKE clusters | `kubernetes.io/ingress.class: gce` | Google Cloud Armor, CDN integration |
+| Contour | High-throughput APIs | none (uses HTTPProxy CRD) | Envoy proxy, progressive delivery |
+
+When you start a project with Claude Code, tell it which ingress controller you're using. This ensures every annotation generated is correct for your environment rather than requiring manual cross-referencing of controller-specific documentation.
+
+To check which controller is running in your cluster:
+
+```bash
+kubectl get pods -n ingress-nginx
+kubectl get pods -n kube-system | grep ingress
+kubectl get ingressclass
+```
+
 ## Configuring TLS Termination
 
 Securing traffic with TLS requires a certificate and the appropriate Ingress annotations. Claude Code handles certificate generation through cert-manager automatically, or you can provide existing certificates.
@@ -86,6 +113,26 @@ spec:
 ```
 
 For environments requiring custom TLS settings, Claude Code can configure specific cipher suites, minimum TLS versions, and certificate verification options through appropriate annotations.
+
+When using cert-manager, the certificate issuance process takes 30–90 seconds after you first apply the Ingress. During this period, the `myapp-tls` Secret does not exist yet. The ingress controller will serve a self-signed fallback certificate in the interim, which may trigger browser warnings. To avoid surprising team members or CI tests, check certificate readiness before running integration tests:
+
+```bash
+kubectl get certificate myapp-tls -w
+kubectl describe certificaterequest
+```
+
+For production workloads requiring stricter TLS settings:
+
+```yaml
+annotations:
+  nginx.ingress.kubernetes.io/ssl-ciphers: "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256"
+  nginx.ingress.kubernetes.io/ssl-protocols: "TLSv1.2 TLSv1.3"
+  nginx.ingress.kubernetes.io/hsts: "true"
+  nginx.ingress.kubernetes.io/hsts-max-age: "31536000"
+  nginx.ingress.kubernetes.io/hsts-include-subdomains: "true"
+```
+
+HSTS (HTTP Strict Transport Security) tells browsers to always use HTTPS. Set this carefully—once a user's browser caches the HSTS header, HTTP access to your domain will fail for `max-age` seconds. Enable HSTS in staging first and confirm everything works before enabling it in production.
 
 ## Path-Based and Host-Based Routing
 
@@ -133,6 +180,36 @@ spec:
 
 This configuration demonstrates versioned API routing alongside a separate frontend host. Claude Code can generate similar configurations when you describe your routing requirements in plain language.
 
+One common gotcha with multi-service routing: path ordering matters. Kubernetes evaluates paths in order for some controllers, and others sort by specificity. Always place more specific paths before less specific ones when the controller does not do this automatically. `/api/admin` should appear before `/api` in your rules.
+
+For canary deployments, nginx-ingress supports traffic splitting by weight:
+
+```yaml
+# Canary ingress - add this alongside your main ingress
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myapp-ingress-canary
+  annotations:
+    nginx.ingress.kubernetes.io/canary: "true"
+    nginx.ingress.kubernetes.io/canary-weight: "10"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: myapp.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: app-service-v2
+            port:
+              number: 80
+```
+
+This sends 10% of traffic to v2. Increment the weight gradually as confidence grows. Claude Code can generate both the main and canary Ingress manifests together, ensuring the annotations are correctly paired.
+
 ## Load Balancing and Performance Tuning
 
 Ingress controllers provide numerous options for tuning load balancing behavior. These settings matter significantly for applications with specific performance requirements.
@@ -170,21 +247,34 @@ spec:
 
 The affinity configuration ensures sticky sessions using cookies, while upstream hashing provides consistent hashing for cache-friendly load distribution. Claude Code can recommend appropriate settings based on your application's session requirements.
 
-## Working with Claude Code Skills
+When choosing between session affinity approaches, consider the tradeoffs:
 
-Several Claude skills enhance Ingress configuration workflows. The **kubernetes-mcp-server** skill provides direct cluster interaction for applying and verifying Ingress resources. The **k6-load-testing** skill helps validate Ingress performance under traffic conditions.
+| Method | Mechanism | Sticky Session | Cache-Friendly | Notes |
+|---|---|---|---|---|
+| `round-robin` (default) | Rotates pods | No | No | Simplest, stateless apps |
+| `cookie` affinity | Browser cookie pins pod | Yes | No | Server-side session stores |
+| `upstream-hash-by` | Hash of URI/header/IP | Partial | Yes | CDN-like caching at pod level |
+| `least_conn` | Pod with fewest connections | No | No | Long-lived connections |
 
-For documentation workflows, the **pdf** skill can generate Ingress configuration guides for team members who need visual references. The **frontend-design** skill assists when Ingress configurations affect frontend routing behavior.
+For WebSocket connections, which hold open TCP connections for extended periods, `least_conn` often produces more even distribution than round-robin, which distributes new connections evenly but ignores connection duration.
 
-When managing Ingress across multiple environments, the **supermemory** skill maintains context about environment-specific configurations, making it easier to track differences between staging and production setups.
+Buffer sizing affects throughput for APIs with large payloads:
 
-The **tdd** skill proves valuable when writing tests for Ingress-dependent functionality, ensuring your routing rules work as expected before deployment.
+```yaml
+annotations:
+  nginx.ingress.kubernetes.io/proxy-buffer-size: "8k"
+  nginx.ingress.kubernetes.io/proxy-buffers-number: "8"
+  nginx.ingress.kubernetes.io/proxy-body-size: "100m"
+  nginx.ingress.kubernetes.io/client-body-buffer-size: "1m"
+```
+
+Increase `proxy-body-size` for file upload endpoints. The default is 1m, which rejects most file uploads with a 413 error. Set it to a specific path using separate Ingress resources for the upload route if you don't want to increase the limit globally.
 
 ## Common Configuration Patterns
 
 Claude Code handles several frequently needed Ingress patterns:
 
-** websocket support:
+**WebSocket support:**
 
 ```yaml
 annotations:
@@ -192,7 +282,7 @@ annotations:
   nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
 ```
 
-** CORS configuration:
+**CORS configuration:**
 
 ```yaml
 annotations:
@@ -202,7 +292,7 @@ annotations:
   nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
 ```
 
-** Rate limiting:
+**Rate limiting:**
 
 ```yaml
 annotations:
@@ -211,6 +301,27 @@ annotations:
 ```
 
 Each pattern addresses specific production requirements. Claude Code can explain why each annotation matters and suggest which ones your specific application needs.
+
+For authentication offloading, you can delegate auth to an external service using the `auth-url` annotation. This centralizes auth logic outside your application code entirely:
+
+```yaml
+annotations:
+  nginx.ingress.kubernetes.io/auth-url: "http://auth-service.auth.svc.cluster.local/validate"
+  nginx.ingress.kubernetes.io/auth-signin: "https://login.example.com/signin"
+  nginx.ingress.kubernetes.io/auth-response-headers: "X-User-ID, X-User-Email"
+```
+
+The ingress controller calls `auth-url` with the original request headers before forwarding to your backend. If the auth service returns 200, the request proceeds. Any 4xx response causes the user to be redirected to `auth-signin`. The `auth-response-headers` passes values from the auth service's response into the upstream request—your backend can read `X-User-ID` without touching JWT tokens.
+
+## Working with Claude Code Skills
+
+Several Claude skills enhance Ingress configuration workflows. The **kubernetes-mcp-server** skill provides direct cluster interaction for applying and verifying Ingress resources. The **k6-load-testing** skill helps validate Ingress performance under traffic conditions.
+
+For documentation workflows, the **pdf** skill can generate Ingress configuration guides for team members who need visual references. The **frontend-design** skill assists when Ingress configurations affect frontend routing behavior.
+
+When managing Ingress across multiple environments, the **supermemory** skill maintains context about environment-specific configurations, making it easier to track differences between staging and production setups.
+
+The **tdd** skill proves valuable when writing tests for Ingress-dependent functionality, ensuring your routing rules work as expected before deployment.
 
 ## Validation and Troubleshooting
 
@@ -226,6 +337,29 @@ Claude Code can generate troubleshooting commands when you're debugging routing 
 
 For complex debugging scenarios, the ingress controller's logs provide detailed information about how requests are being processed. Claude Code can help interpret these logs and identify misconfigurations.
 
+A methodical debugging sequence for routing issues:
+
+```bash
+# 1. Confirm the Ingress resource is accepted
+kubectl get ingress myapp-ingress -o yaml
+
+# 2. Verify the backend service and endpoints exist
+kubectl get service api-service
+kubectl get endpoints api-service
+
+# 3. Check ingress controller logs for errors
+kubectl logs -n ingress-nginx deployment/ingress-nginx-controller --tail=100
+
+# 4. Test connectivity from within the cluster
+kubectl run debug --image=curlimages/curl -it --rm -- \
+  curl -H "Host: myapp.example.com" http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/api/users
+
+# 5. Confirm DNS resolution externally
+dig myapp.example.com
+```
+
+The most frequent causes of Ingress failures are: the Service name in the Ingress spec not matching the actual Service name (case-sensitive), the Service port number mismatching what the pod listens on, and missing or incorrect `ingressClassName`. Step through these checks systematically before diving into annotation debugging.
+
 ## Best Practices
 
 Follow these practices when configuring Ingress with Claude Code assistance:
@@ -236,6 +370,9 @@ Follow these practices when configuring Ingress with Claude Code assistance:
 - Document annotation usage in code comments or accompanying documentation
 - Test Ingress changes in non-production environments first
 - Use ingress controllers' validation webhooks when available
+- Keep Ingress resources per-service or per-team rather than creating one monolithic Ingress for the entire cluster
+- Pin annotation values as strings (surround numeric values in quotes) since YAML parsers may misinterpret bare numbers
+- Store Ingress manifests in version control and apply changes through CI/CD rather than directly with kubectl
 
 Claude Code accelerates implementing these practices by generating compliant configurations from your requirements and flagging potential issues before deployment.
 

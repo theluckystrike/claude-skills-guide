@@ -41,6 +41,10 @@ async function getWebcamStream() {
 }
 ```
 
+The `getUserMedia()` call returns a `MediaStream` object. You can pass this directly to a `<video>` element's `srcObject` property to display a live preview. The stream contains one or more `MediaStreamTrack` objects — for video you'll work with the first video track when applying constraints later.
+
+One subtlety worth noting: calling `getUserMedia()` a second time with different constraints does not modify the existing stream. It creates an entirely new stream and triggers another browser permission prompt if the previous session was closed. For a settings adjuster that needs to change parameters on the fly, you should keep a reference to the original stream and modify the track directly using `applyConstraints()`.
+
 ## Enumerating Available Devices
 
 Before adjusting settings, your extension should discover all available video input devices. The `navigator.mediaDevices.enumerateDevices()` method returns an array of MediaDeviceInfo objects.
@@ -53,6 +57,30 @@ async function getVideoDevices() {
 ```
 
 This returns devices with properties like `deviceId`, `label`, and `groupId`. The `label` property only populates after user permission has been granted, so you'll need to request camera access before displaying meaningful device names.
+
+To populate a device selector in your popup UI, combine enumeration with the initial `getUserMedia()` call:
+
+```javascript
+async function initDeviceList() {
+  // First, request permission so labels become available
+  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+  stream.getTracks().forEach(track => track.stop()); // Release the stream immediately
+
+  // Now enumerate with labels available
+  const videoDevices = await getVideoDevices();
+  const selector = document.getElementById('device-select');
+  selector.innerHTML = '';
+
+  videoDevices.forEach(device => {
+    const option = document.createElement('option');
+    option.value = device.deviceId;
+    option.textContent = device.label || `Camera ${selector.options.length + 1}`;
+    selector.appendChild(option);
+  });
+}
+```
+
+The pattern of requesting then immediately stopping a stream to unlock device labels is a common workaround. Once the browser has granted camera permission for the current origin, subsequent calls to `enumerateDevices()` will include labels for the rest of the session.
 
 ## Implementing Real-Time Settings Adjustment
 
@@ -78,6 +106,44 @@ async function applyVideoConstraints(track, constraints) {
 
 Note that not all constraints are supported across all devices. Chrome handles certain adjustments like brightness and contrast through CSS filters on the video element itself, while others like resolution and frame rate go through the track constraints.
 
+To change resolution without restarting the stream entirely, call `applyConstraints()` with new width and height values:
+
+```javascript
+async function changeResolution(track, width, height) {
+  const success = await applyVideoConstraints(track, {
+    width: { exact: width },
+    height: { exact: height }
+  });
+
+  if (!success) {
+    // Fall back to ideal constraints if exact values are unavailable
+    await applyVideoConstraints(track, {
+      width: { ideal: width },
+      height: { ideal: height }
+    });
+  }
+}
+```
+
+Using `exact` constraints throws an `OverconstrainedError` if the device cannot satisfy the request, which is why the fallback to `ideal` is important. The `ideal` keyword instructs the browser to get as close as possible to the specified value without failing.
+
+### What CSS Filters Can and Cannot Do
+
+CSS filters operate on the rendered video frame after the browser has decoded it from the camera stream. This means they have no effect on what the receiving end of a video call sees — they only change the local preview display. For a standalone viewer or recording application this is fine, but if your goal is to visually process the stream before it reaches a WebRTC peer connection, you need to use the Canvas API to capture frames and re-stream the processed output.
+
+The full set of CSS filter functions useful for a webcam adjuster:
+
+| Filter | CSS Function | Typical Range |
+|--------|-------------|---------------|
+| Brightness | `brightness(n)` | 0.5 to 2.0 |
+| Contrast | `contrast(n)` | 0.5 to 2.0 |
+| Saturation | `saturate(n)` | 0 to 3.0 |
+| Hue rotation | `hue-rotate(deg)` | 0 to 360 |
+| Blur | `blur(px)` | 0 to 10px |
+| Grayscale | `grayscale(n)` | 0 to 1.0 |
+
+Combining multiple filters in a single `filter` string is more efficient than applying them separately, since the browser composes them in a single GPU pass.
+
 ## Building the Extension Popup UI
 
 Your extension needs a popup interface for users to adjust settings. Create a popup.html with sliders for various parameters:
@@ -96,17 +162,17 @@ Your extension needs a popup interface for users to adjust settings. Create a po
 </head>
 <body>
   <h2>Webcam Settings</h2>
-  
+
   <div class="control-group">
     <label>Brightness <span id="brightness-val" class="value-display">100%</span></label>
     <input type="range" id="brightness" min="50" max="150" value="100">
   </div>
-  
+
   <div class="control-group">
     <label>Contrast <span id="contrast-val" class="value-display">100%</span></label>
     <input type="range" id="contrast" min="50" max="150" value="100">
   </div>
-  
+
   <div class="control-group">
     <label>Resolution</label>
     <select id="resolution">
@@ -115,12 +181,61 @@ Your extension needs a popup interface for users to adjust settings. Create a po
       <option value="1920x1080">1920 x 1080</option>
     </select>
   </div>
-  
+
   <video id="preview" autoplay playsinline style="width: 100%;"></video>
-  
+
   <script src="popup.js"></script>
 </body>
 </html>
+```
+
+The popup.js file ties the sliders to the live preview and communicates changes to the content script:
+
+```javascript
+// popup.js
+let currentStream = null;
+let currentTrack = null;
+
+async function init() {
+  const stream = await getWebcamStream();
+  currentStream = stream;
+  currentTrack = stream.getVideoTracks()[0];
+
+  const preview = document.getElementById('preview');
+  preview.srcObject = stream;
+
+  bindSlider('brightness', 'brightness-val', '%', updateFilters);
+  bindSlider('contrast', 'contrast-val', '%', updateFilters);
+
+  document.getElementById('resolution').addEventListener('change', (e) => {
+    const [w, h] = e.target.value.split('x').map(Number);
+    changeResolution(currentTrack, w, h);
+  });
+}
+
+function bindSlider(id, displayId, suffix, onChange) {
+  const slider = document.getElementById(id);
+  const display = document.getElementById(displayId);
+  slider.addEventListener('input', () => {
+    display.textContent = slider.value + suffix;
+    onChange();
+  });
+}
+
+function updateFilters() {
+  const brightness = document.getElementById('brightness').value;
+  const contrast = document.getElementById('contrast').value;
+  const settings = { brightness: brightness / 100, contrast: contrast / 100 };
+
+  // Apply to local preview
+  const preview = document.getElementById('preview');
+  preview.style.filter = `brightness(${settings.brightness}) contrast(${settings.contrast})`;
+
+  // Send to content script for active tab
+  chrome.runtime.sendMessage({ action: 'applySettings', settings });
+}
+
+init();
 ```
 
 ## Managing Background Processing
@@ -148,14 +263,18 @@ The content script then listens for these messages and applies CSS filters to al
 chrome.runtime.onMessage.addListener((message) => {
   if (message.type === 'UPDATE_FILTERS') {
     const videos = document.querySelectorAll('video');
-    const filterString = `brightness(${message.settings.brightness}%) 
-                          contrast(${message.settings.contrast}%)`;
+    const filterString = `brightness(${message.settings.brightness})
+                          contrast(${message.settings.contrast})`;
     videos.forEach(video => {
       video.style.filter = filterString;
     });
   }
 });
 ```
+
+This approach works well for pages like Google Meet, Zoom Web, or any video conferencing service running in the browser. The CSS filter targets all video elements on the page, so it affects both your local camera preview and any remote participant videos. For a more targeted approach, add a class selector or data attribute to identify only the local video element.
+
+One limitation to be aware of: some conference platforms render video inside Shadow DOM or iframes. The content script cannot easily reach into cross-origin iframes. In that case, you may need to inject the script at the iframe level using the `all_frames: true` option in the manifest's content script declaration.
 
 ## Extension Manifest Configuration
 
@@ -183,6 +302,41 @@ Your manifest.json needs appropriate permissions to access the webcam and inject
 }
 ```
 
+For Manifest V3, note that `"navigator.mediaDevices"` is not a valid permission string — camera access is governed by the host permissions and the browser's standard permission prompts. The correct set of permissions for a webcam adjuster is:
+
+```json
+{
+  "manifest_version": 3,
+  "name": "Webcam Settings Adjuster",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  }
+}
+```
+
+Camera permission is requested at runtime via `getUserMedia()` — you do not declare it in the manifest. Chrome's permission system handles it automatically and presents the user with the standard camera prompt the first time the popup calls `getUserMedia()`.
+
 ## Handling Device Changes
 
 Users frequently connect and disconnect webcams. Your extension should listen for device change events to maintain functionality:
@@ -192,7 +346,7 @@ navigator.mediaDevices.ondevicechange = async (event) => {
   const devices = await navigator.mediaDevices.enumerateDevices();
   const videoDevices = devices.filter(d => d.kind === 'videoinput');
   console.log('Available cameras:', videoDevices.length);
-  
+
   // Notify user or update UI accordingly
   chrome.runtime.sendMessage({
     action: 'devicesChanged',
@@ -201,13 +355,57 @@ navigator.mediaDevices.ondevicechange = async (event) => {
 };
 ```
 
+When a device disconnects and `ondevicechange` fires, you should also check whether the current active track has ended. A track can end spontaneously if the camera is unplugged or if another application takes exclusive control:
+
+```javascript
+function watchTrackHealth(track, onEnded) {
+  track.addEventListener('ended', () => {
+    console.warn('Camera track ended unexpectedly');
+    onEnded();
+  });
+}
+```
+
+Handling this gracefully means showing a notification in the popup UI and automatically re-enumerating available devices so the user can switch to another camera without reopening the extension.
+
+## Saving and Restoring Settings
+
+A useful quality-of-life feature is persisting settings across browser sessions. Chrome extensions can use `chrome.storage.sync` to save preferences that follow the user across devices:
+
+```javascript
+// Save settings
+async function saveSettings(settings) {
+  await chrome.storage.sync.set({ webcamSettings: settings });
+}
+
+// Load settings on popup open
+async function loadSettings() {
+  const result = await chrome.storage.sync.get('webcamSettings');
+  return result.webcamSettings || { brightness: 100, contrast: 100 };
+}
+```
+
+Initialize the popup sliders from stored values before acquiring the camera stream to avoid a brief flash of default values. This small detail makes the extension feel polished and professional.
+
 ## Limitations and Browser Support
 
-Not all webcam settings can be controlled programmatically. Most consumer webcatches support resolution and frame rate adjustments through constraints, but advanced features like manual focus, white balance, and exposure compensation vary significantly between devices. The CSS filter approach for brightness and contrast provides consistent results across all browsers since it processes the rendered video output rather than the raw camera stream.
+Not all webcam settings can be controlled programmatically. Most consumer webcams support resolution and frame rate adjustments through constraints, but advanced features like manual focus, white balance, and exposure compensation vary significantly between devices. The CSS filter approach for brightness and contrast provides consistent results across all browsers since it processes the rendered video output rather than the raw camera stream.
 
 Chrome's implementation of the MediaDevices API is more complete than Firefox or Safari, making it the ideal target for this type of extension. Always provide fallback controls or clear messaging when certain features are unavailable.
 
-Building a webcam settings adjuster demonstrates the intersection of extension development and web APIs. The techniques covered here—MediaDevices enumeration, constraint application, CSS video filtering, and cross-context messaging—apply broadly to other camera-related projects.
+The following table summarizes what each control method can achieve and where it works:
+
+| Setting | Method | Works in Chrome | Works in Firefox | Affects Stream Output |
+|---------|--------|-----------------|------------------|-----------------------|
+| Resolution | `applyConstraints` | Yes | Yes | Yes |
+| Frame rate | `applyConstraints` | Yes | Yes | Yes |
+| Brightness | CSS filter | Yes | Yes | No (local display only) |
+| Contrast | CSS filter | Yes | Yes | No (local display only) |
+| Focus | `applyConstraints` | Device-dependent | No | Yes |
+| Zoom | `applyConstraints` | Device-dependent | No | Yes |
+| White balance | `applyConstraints` | Device-dependent | No | Yes |
+
+Building a webcam settings adjuster demonstrates the intersection of extension development and web APIs. The techniques covered here — MediaDevices enumeration, constraint application, CSS video filtering, and cross-context messaging — apply broadly to other camera-related projects. Once you understand how tracks, constraints, and cross-context message passing work together, you have the foundation to build screen recorders, virtual background processors, or even real-time video effects pipelines entirely within a Chrome extension.
 
 
 ## Related Reading
