@@ -16,7 +16,7 @@ score: 7
 {% raw %}
 # Claude Code ArXiv Paper Implementation Guide
 
-Research papers on ArXiv contain cutting-edge algorithms and techniques, but translating academic descriptions into working code can be challenging. This guide shows you how to use Claude Code to efficiently understand and implement algorithms directly from ArXiv papers.
+Research papers on ArXiv contain cutting-edge algorithms and techniques, but translating academic descriptions into working code can be challenging. The gap between a paper's mathematical formalism and a running implementation often takes experienced engineers days of careful reading, failed experiments, and hard-won debugging. This guide shows you how to use Claude Code to efficiently understand and implement algorithms directly from ArXiv papers — from reading the abstract to running validated tests against reported benchmarks.
 
 ## Why Use Claude Code for Paper Implementation
 
@@ -26,8 +26,21 @@ Claude Code excels at parsing dense technical writing and converting it into exe
 - Identify the core algorithm steps from pseudocode
 - Suggest appropriate testing approaches
 - Explain unclear passages in context
+- Identify hidden implementation details buried in appendices
+- Flag common numerical stability issues before they become bugs
 
 The key is providing Claude with the right context and structure to work effectively.
+
+### Claude Code vs. Manual Implementation
+
+| Approach | Time to First Running Code | Risk of Misreading Paper | Handles Math Notation | Suggests Tests |
+|---|---|---|---|---|
+| Manual (experienced dev) | 1-3 days | Medium | Manual lookup | Sometimes |
+| Claude Code assisted | 2-4 hours | Low (with verification) | Built-in | Yes |
+| Existing repo (if available) | Minutes | Low | N/A | Usually |
+| Claude Code + existing repo | 30-60 min | Very low | N/A | Yes |
+
+The sweet spot for Claude Code is papers where no reference implementation exists — which is the case for most papers published within the last 12 months.
 
 ## Setting Up Your Workflow
 
@@ -36,24 +49,52 @@ Before implementing a paper, prepare your workspace:
 ```bash
 # Create a dedicated project directory
 mkdir paper-implementation && cd paper-implementation
-mkdir -p src tests data
+mkdir -p src tests data notebooks
 
-# Initialize a basic structure
+# Initialize Python package structure
 touch src/__init__.py tests/__init__.py
+
+# Create a virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install common ML/scientific dependencies
+pip install torch numpy scipy pytest matplotlib jupyter
+
+# Initialize git for tracking implementation iterations
+git init
+git add .
+git commit -m "Initial project structure"
 ```
 
 When you start a new implementation session with Claude, provide context about:
 
-1. The paper's title and ArXiv ID
+1. The paper's title and ArXiv ID (e.g., `arXiv:1706.03762`)
 2. The specific algorithm or technique you want to implement
-3. Your target programming language
-4. Any constraints (dependencies, performance requirements)
+3. Your target programming language and framework (Python + PyTorch, JAX, etc.)
+4. Any constraints such as dependencies, performance requirements, or hardware availability
+5. Whether you need training code, inference only, or evaluation tooling
+
+Creating a brief `PAPER.md` file at the start of each project helps Claude maintain context across a multi-session implementation:
+
+```markdown
+# Paper: Attention Is All You Need
+- ArXiv: 1706.03762
+- Authors: Vaswani et al., Google Brain
+- Goal: Implement the Transformer architecture for sequence-to-sequence tasks
+- Target: PyTorch, Python 3.11
+- Hardware: Single GPU (RTX 3090), no TPU access
+- Scope: Model architecture + training loop; skip dataset download scripts
+- Key sections: Section 3 (Model Architecture), Section 5 (Training)
+```
+
+Reference this file at the start of each Claude session to restore context instantly.
 
 ## Extracting Algorithms from Papers
 
 The first step is getting Claude to understand the paper's core contribution. Share the paper's abstract and key sections, then ask Claude to extract the algorithm:
 
-> "Extract the main algorithm from this paper as pseudocode. Include input/output specifications, initialization steps, and the core loop."
+> "Extract the main algorithm from this paper as pseudocode. Include input/output specifications, initialization steps, and the core loop. Flag any steps where the paper is ambiguous or where standard practice might differ from what's written."
 
 Claude will break down complex algorithms into actionable steps. For instance, when implementing a transformer architecture from "Attention Is All You Need," Claude will identify:
 
@@ -61,10 +102,29 @@ Claude will break down complex algorithms into actionable steps. For instance, w
 - Positional encoding formulas
 - Feed-forward network structure
 - Layer normalization placement
+- Residual connection ordering (pre-norm vs post-norm)
+
+That last point — residual connection ordering — is a classic example of an ambiguity where the original paper uses post-norm but most modern reimplementations use pre-norm for training stability. Claude will flag this kind of practical deviation and explain the trade-off.
+
+### Structuring Your Extraction Prompt
+
+Vague prompts produce vague extractions. Here is a prompt template that consistently produces high-quality pseudocode:
+
+```
+Paper context:
+[Paste abstract + Section 3 here]
+
+Task:
+1. Identify the primary algorithm introduced in this paper.
+2. Write it as numbered pseudocode with named variables matching the paper's notation.
+3. For each step, note whether it is described explicitly or must be inferred.
+4. List all hyperparameters with their reported default values.
+5. Flag any equations that require numerical stability considerations.
+```
 
 ## Translating Mathematics to Code
 
-Research papers express algorithms mathematically. Claude Code excels at converting these formulas into executable functions. Here's a practical example:
+Research papers express algorithms mathematically. Claude Code excels at converting these formulas into executable functions.
 
 **Paper Formula (Attention Mechanism):**
 ```
@@ -77,42 +137,105 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-def scaled_dot_product_attention(query, key, value, scale=True):
+def scaled_dot_product_attention(query, key, value, mask=None, scale=True):
     """
     Implement scaled dot-product attention.
-    
+
     Args:
         query: Tensor of shape (batch, heads, seq_len, d_k)
         key: Tensor of shape (batch, heads, seq_len, d_k)
         value: Tensor of shape (batch, heads, seq_len, d_v)
+        mask: Optional boolean tensor of shape (batch, 1, seq_len, seq_len)
         scale: Whether to scale by sqrt(d_k)
-    
+
     Returns:
-        Attention output and attention weights
+        output: Tensor of shape (batch, heads, seq_len, d_v)
+        attention_weights: Tensor of shape (batch, heads, seq_len, seq_len)
     """
     d_k = query.size(-1)
-    
-    # Compute attention scores
+
+    # Compute attention scores: (batch, heads, seq_len, seq_len)
     scores = torch.matmul(query, key.transpose(-2, -1))
-    
-    # Scale if specified
+
+    # Scale if specified — prevents vanishing gradients in deep models
     if scale:
         scores = scores / np.sqrt(d_k)
-    
-    # Apply softmax
+
+    # Apply mask before softmax (used for causal attention or padding)
+    if mask is not None:
+        scores = scores.masked_fill(mask == 0, float('-inf'))
+
+    # Apply softmax along the key dimension
     attention_weights = F.softmax(scores, dim=-1)
-    
+
     # Apply attention to values
     output = torch.matmul(attention_weights, value)
-    
+
     return output, attention_weights
 ```
 
-Notice how the docstring captures input/output specifications—this is essential for maintainability.
+Notice how the docstring captures input/output specifications — this is essential for maintainability. It also adds the `mask` parameter which the formula does not show but which is required for any practical transformer implementation.
+
+### Multi-Head Attention: From Formula to Module
+
+The full multi-head attention module shows how a single formula expands into a complete class:
+
+```python
+import torch
+import torch.nn as nn
+
+class MultiHeadAttention(nn.Module):
+    """
+    Multi-Head Attention as described in Vaswani et al. (2017).
+
+    Equation: MultiHead(Q,K,V) = Concat(head_1,...,head_h) * W_O
+    where head_i = Attention(Q*W_Q_i, K*W_K_i, V*W_V_i)
+    """
+
+    def __init__(self, d_model: int, num_heads: int, dropout: float = 0.1):
+        super().__init__()
+        assert d_model % num_heads == 0, "d_model must be divisible by num_heads"
+
+        self.d_model = d_model
+        self.num_heads = num_heads
+        self.d_k = d_model // num_heads
+
+        # Projection matrices (W_Q, W_K, W_V, W_O)
+        self.w_q = nn.Linear(d_model, d_model, bias=False)
+        self.w_k = nn.Linear(d_model, d_model, bias=False)
+        self.w_v = nn.Linear(d_model, d_model, bias=False)
+        self.w_o = nn.Linear(d_model, d_model, bias=False)
+
+        self.dropout = nn.Dropout(dropout)
+
+    def split_heads(self, x: torch.Tensor) -> torch.Tensor:
+        """Split last dimension into (num_heads, d_k) and transpose."""
+        batch_size = x.size(0)
+        x = x.view(batch_size, -1, self.num_heads, self.d_k)
+        return x.transpose(1, 2)  # (batch, heads, seq_len, d_k)
+
+    def forward(self, query, key, value, mask=None):
+        batch_size = query.size(0)
+
+        # Linear projections
+        q = self.split_heads(self.w_q(query))
+        k = self.split_heads(self.w_k(key))
+        v = self.split_heads(self.w_v(value))
+
+        # Scaled dot-product attention across all heads
+        attn_output, attn_weights = scaled_dot_product_attention(q, k, v, mask)
+        attn_output = self.dropout(attn_output)
+
+        # Concatenate heads and project
+        attn_output = attn_output.transpose(1, 2).contiguous()
+        attn_output = attn_output.view(batch_size, -1, self.d_model)
+
+        return self.w_o(attn_output), attn_weights
+```
 
 ## Handling Pseudocode Translation
 
-Papers often include pseudocode that differs from actual programming languages. Claude can convert pseudocode to your target language while handling ambiguities:
+Papers often include pseudocode that differs from actual programming languages. Claude can convert pseudocode to your target language while handling ambiguities. A common source of bugs is when pseudocode uses 1-based indexing, mathematical notation for in-place updates, or assumes operations that are not atomic in practice.
 
 **Pseudocode from Paper:**
 ```
@@ -123,99 +246,341 @@ for i = 1 to n:
 
 **Resulting Implementation:**
 ```python
-def update_with_gradient_clipping(parameters, gradients, clip_value=1.0):
+def update_with_gradient_clipping(parameters, gradients, learning_rate=0.01, clip_value=1.0):
     """
     Update parameters using gradients with gradient clipping.
-    
+
     Args:
         parameters: List of parameter tensors
         gradients: List of gradient tensors
+        learning_rate: Step size for gradient descent
         clip_value: Maximum absolute value for gradients
-    
+
     Returns:
         Updated parameters
     """
-    clipped_gradients = [torch.clamp(g, -clip_value, clip_value) 
-                         for g in gradients]
-    
-    updated_params = [p - g for p, g in zip(parameters, clipped_gradients)]
-    
+    updated_params = []
+    for param, grad in zip(parameters, gradients):
+        # Clip gradient to [-clip_value, clip_value]
+        clipped_grad = torch.clamp(grad, -clip_value, clip_value)
+        # Gradient descent update
+        updated_params.append(param - learning_rate * clipped_grad)
+
     return updated_params
 ```
 
+When pseudocode is ambiguous, prompt Claude explicitly: "The pseudocode uses `update(x, g)` without defining it. Based on the paper's surrounding context and the optimization method described in Section 4, what is the most likely intended operation?"
+
 ## Building Complete Implementations
 
-Once you have core functions, ask Claude to help assemble a complete implementation:
+Once you have core functions, ask Claude to help assemble a complete implementation. A well-structured modular layout looks like this:
 
-1. **Data preprocessing** - Handle paper-specific data formats
-2. **Model architecture** - Structure classes and layers
-3. **Training loops** - Implement the learning procedure
-4. **Evaluation metrics** - Calculate relevant metrics
-
-Request that Claude organize code into logical modules:
 ```
-"Create a modular implementation with separate files for: 
-model.py, data.py, training.py, and evaluation.py"
+src/
+├── __init__.py
+├── model.py          # Architecture: layers, blocks, full model class
+├── attention.py      # Attention mechanisms (can be large)
+├── data.py           # Dataset loading and preprocessing
+├── training.py       # Training loop, optimizer setup, checkpointing
+├── evaluation.py     # Metrics, benchmarking, result logging
+└── config.py         # Hyperparameters as dataclass or config file
+```
+
+### A Practical Config Module
+
+Papers report specific hyperparameter values that must be preserved exactly for reproducibility. A dataclass config makes this explicit:
+
+```python
+# config.py
+from dataclasses import dataclass, field
+from typing import Optional
+
+@dataclass
+class TransformerConfig:
+    """
+    Hyperparameters from Vaswani et al. (2017), Table 3.
+    Base model configuration.
+    """
+    # Architecture
+    d_model: int = 512
+    num_heads: int = 8
+    num_encoder_layers: int = 6
+    num_decoder_layers: int = 6
+    d_ff: int = 2048
+    dropout: float = 0.1
+    max_seq_len: int = 512
+    vocab_size: int = 37000
+
+    # Training
+    batch_size: int = 25000         # Tokens per batch (not sentences)
+    warmup_steps: int = 4000
+    label_smoothing: float = 0.1
+    beta1: float = 0.9
+    beta2: float = 0.98
+    epsilon: float = 1e-9
+
+    # Paper reference
+    paper_arxiv_id: str = "1706.03762"
+    paper_section: str = "Section 5.3"
+
+def get_base_config() -> TransformerConfig:
+    return TransformerConfig()
+
+def get_big_config() -> TransformerConfig:
+    """Big model from Table 3."""
+    return TransformerConfig(
+        d_model=1024,
+        num_heads=16,
+        d_ff=4096,
+        dropout=0.3
+    )
+```
+
+### Training Loop with Warmup Schedule
+
+The paper's custom learning rate schedule is easy to miss in a first pass. Here is how Claude translates the formula into a scheduler:
+
+```python
+# training.py
+import torch
+import torch.optim as optim
+
+class NoamScheduler:
+    """
+    Learning rate schedule from Vaswani et al. (2017), Section 5.3.
+
+    Formula: lr = d_model^(-0.5) * min(step^(-0.5), step * warmup^(-1.5))
+    """
+    def __init__(self, optimizer, d_model: int, warmup_steps: int):
+        self.optimizer = optimizer
+        self.d_model = d_model
+        self.warmup_steps = warmup_steps
+        self.step_num = 0
+
+    def step(self):
+        self.step_num += 1
+        lr = self._compute_lr()
+        for param_group in self.optimizer.param_groups:
+            param_group['lr'] = lr
+        return lr
+
+    def _compute_lr(self):
+        step = self.step_num
+        return (self.d_model ** -0.5) * min(
+            step ** -0.5,
+            step * self.warmup_steps ** -1.5
+        )
+
+def train_epoch(model, dataloader, optimizer, scheduler, criterion, device):
+    model.train()
+    total_loss = 0.0
+
+    for batch_idx, (src, tgt) in enumerate(dataloader):
+        src, tgt = src.to(device), tgt.to(device)
+
+        # Teacher forcing: use target shifted by one
+        tgt_input = tgt[:, :-1]
+        tgt_output = tgt[:, 1:]
+
+        optimizer.zero_grad()
+        logits, _ = model(src, tgt_input)
+
+        # Flatten for cross-entropy
+        loss = criterion(
+            logits.reshape(-1, logits.size(-1)),
+            tgt_output.reshape(-1)
+        )
+
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+        optimizer.step()
+        scheduler.step()
+
+        total_loss += loss.item()
+
+        if batch_idx % 100 == 0:
+            print(f"Batch {batch_idx}, Loss: {loss.item():.4f}, LR: {scheduler._compute_lr():.6f}")
+
+    return total_loss / len(dataloader)
 ```
 
 ## Testing Your Implementation
 
-Always validate against the paper's reported results. Claude can help generate test cases:
+Always validate against the paper's reported results. Claude can help generate test cases at multiple levels: unit tests for individual functions, integration tests for full forward passes, and regression tests against known outputs.
 
 ```python
+# tests/test_attention.py
 import pytest
+import torch
+from src.attention import scaled_dot_product_attention, MultiHeadAttention
+from src.config import get_base_config
+
+@pytest.fixture
+def base_config():
+    return get_base_config()
 
 def test_attention_output_shape():
     """Test that attention produces expected output shape."""
-    batch_size = 2
-    num_heads = 8
-    seq_len = 10
-    d_k = 64
-    
+    batch_size, num_heads, seq_len, d_k = 2, 8, 10, 64
+
     q = torch.randn(batch_size, num_heads, seq_len, d_k)
     k = torch.randn(batch_size, num_heads, seq_len, d_k)
     v = torch.randn(batch_size, num_heads, seq_len, d_k)
-    
+
     output, weights = scaled_dot_product_attention(q, k, v)
-    
+
     assert output.shape == (batch_size, num_heads, seq_len, d_k)
     assert weights.shape == (batch_size, num_heads, seq_len, seq_len)
-    assert torch.allclose(weights.sum(dim=-1), torch.ones_like(weights.sum(dim=-1)))
+
+def test_attention_weights_sum_to_one():
+    """Attention weights must sum to 1.0 along the key dimension."""
+    q = torch.randn(2, 4, 8, 32)
+    k = torch.randn(2, 4, 8, 32)
+    v = torch.randn(2, 4, 8, 32)
+
+    _, weights = scaled_dot_product_attention(q, k, v)
+
+    row_sums = weights.sum(dim=-1)
+    assert torch.allclose(row_sums, torch.ones_like(row_sums), atol=1e-5), \
+        "Attention weights do not sum to 1.0"
+
+def test_causal_mask_prevents_future_access():
+    """With causal mask, position i should not attend to positions > i."""
+    seq_len = 5
+    causal_mask = torch.tril(torch.ones(1, 1, seq_len, seq_len))
+
+    q = torch.randn(1, 1, seq_len, 16)
+    k = torch.randn(1, 1, seq_len, 16)
+    v = torch.randn(1, 1, seq_len, 16)
+
+    _, weights = scaled_dot_product_attention(q, k, v, mask=causal_mask)
+
+    # Upper triangle should be zero (no future attention)
+    upper_triangle = weights[:, :, :, :].triu(diagonal=1)
+    assert upper_triangle.max().item() < 1e-6, \
+        "Causal mask is not preventing future attention"
+
+def test_multihead_attention_output_shape(base_config):
+    """Full MHA should preserve sequence length and model dimension."""
+    mha = MultiHeadAttention(base_config.d_model, base_config.num_heads)
+    batch_size, seq_len = 2, 10
+    x = torch.randn(batch_size, seq_len, base_config.d_model)
+
+    output, weights = mha(x, x, x)
+
+    assert output.shape == (batch_size, seq_len, base_config.d_model)
+    assert weights.shape == (batch_size, base_config.num_heads, seq_len, seq_len)
+
+def test_attention_is_permutation_invariant_for_keys():
+    """
+    Sanity check: shuffling key/value pairs should change attention weights
+    but the weighted sum should still be valid.
+    """
+    q = torch.randn(1, 1, 1, 8)
+    k = torch.randn(1, 1, 4, 8)
+    v = torch.eye(4).unsqueeze(0).unsqueeze(0)  # Identity so output = weights
+
+    output1, weights1 = scaled_dot_product_attention(q, k, v)
+
+    perm = torch.randperm(4)
+    k_perm = k[:, :, perm, :]
+    v_perm = v[:, :, perm, :]
+
+    _, weights2 = scaled_dot_product_attention(q, k_perm, v_perm)
+
+    # Weights should differ (different key order = different scores)
+    assert not torch.allclose(weights1, weights2, atol=1e-4)
 ```
 
-Run these tests to verify your implementation matches expected behavior.
+Run these tests to verify your implementation matches expected behavior:
+
+```bash
+pytest tests/ -v --tb=short
+```
+
+For numerical validation against the paper, compare your model's output on the paper's toy example if one is provided, or reproduce a single training step and compare loss values to any reported curves.
 
 ## Best Practices for Paper Implementation
 
-Follow these guidelines for successful implementations:
-
 **Provide Complete Context**
-Include the paper's relevant sections, not just excerpts. Claude needs full context to handle edge cases and dependencies correctly.
+Include the paper's relevant sections, not just excerpts. Claude needs full context to handle edge cases and dependencies correctly. If a paper is 30+ pages, paste in Section 3 (Method), relevant appendices, and the main table of results. Skip the related work and introduction.
 
 **Verify Mathematical Correctness**
-Double-check that Claude's code matches the paper's formulas. Ask Claude to explain any assumptions it made during translation.
+Double-check that Claude's code matches the paper's formulas. Ask Claude to explain any assumptions it made during translation, especially for notation that is ambiguous (e.g., whether a superscript means a power or an index).
 
 **Test Incrementally**
-Build and test component-by-component rather than implementing everything at once. This makes debugging easier.
+Build and test component-by-component rather than implementing everything at once. A good order is: individual functions, then modules, then the full forward pass, then a training step, then a full epoch.
 
 **Document Deviations**
-If you simplify or modify the algorithm, document why. Future maintainers (including yourself) will thank you.
+If you simplify or modify the algorithm, document why. A comment like `# Pre-norm instead of post-norm per modern practice (see Xiong et al. 2020)` gives future readers essential context.
 
 **Use Version Control**
-Commit after each major milestone. Paper implementations often require iteration.
+Commit after each major milestone. Paper implementations often require iteration, and being able to roll back a failed experiment saves significant time:
+
+```bash
+git commit -m "feat: implement scaled dot-product attention (eq. 1)"
+git commit -m "feat: add multi-head attention module"
+git commit -m "feat: add positional encoding"
+git commit -m "test: validate attention weight normalization"
+```
 
 ## Common Pitfalls to Avoid
 
-- **Skipping preprocessing details**: Papers often omit data preparation steps—ask Claude to infer reasonable defaults
-- **Ignoring hyperparameters**: Request the specific hyperparameter values reported in the paper
-- **Assuming floating-point precision**: Some algorithms are sensitive to numerical stability—implement in double precision first
-- **Overlooking computational constraints**: Some paper techniques require specific hardware
+| Pitfall | Description | How to Avoid |
+|---|---|---|
+| Skipping preprocessing | Papers omit data prep steps | Ask Claude to infer reasonable defaults; check reference repos |
+| Missing hyperparameters | Default values buried in appendix | Explicitly ask: "List all hyperparameters with paper-reported defaults" |
+| Floating-point instability | Log-softmax, large dot products | Use `torch.float64` for initial validation; add log-space operations |
+| Off-by-one in positional encoding | 0-indexed vs 1-indexed positions | Reproduce the encoding for position 0 and verify against paper's figure |
+| Wrong normalization order | Pre-norm vs post-norm residual | Check which variant the paper uses; they produce different results |
+| Ignoring hardware constraints | Batch size assumes specific GPU memory | Start with batch_size=1 and scale up with gradient accumulation |
+| Missing the masking | Causal or padding masks described in prose | Read every sentence in the forward pass description, not just equations |
+
+### Handling Numerical Stability
+
+Some algorithms are sensitive to numerical precision. Claude can flag these proactively if you ask:
+
+```
+"Review this attention implementation and identify any operations that could
+produce NaN or Inf values during training. For each risk, suggest a fix."
+```
+
+Common fixes Claude will suggest:
+
+```python
+# Problem: log(0) when computing log-softmax manually
+# Fix: use torch.nn.functional.log_softmax which is numerically stable
+log_probs = F.log_softmax(logits, dim=-1)  # Correct
+# NOT: torch.log(torch.softmax(logits, dim=-1))  # Can produce -inf
+
+# Problem: attention scores overflow for large d_k
+# Fix: ensure scaling always happens
+scores = torch.matmul(q, k.transpose(-2, -1)) / math.sqrt(d_k)  # Always scale
+
+# Problem: gradient explosion in deep models
+# Fix: gradient clipping before optimizer step
+torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+```
+
+## Accelerating the Workflow with Claude Code Sessions
+
+For a complete paper implementation, a productive Claude Code session flow looks like this:
+
+1. **Session 1 — Read and Plan**: Feed Claude the paper. Ask for a pseudocode outline and a list of all required modules. Produce `PAPER.md` and a skeleton file structure.
+2. **Session 2 — Core Algorithm**: Implement and test the primary algorithm (e.g., attention). Commit.
+3. **Session 3 — Full Architecture**: Wire up the complete model. Run a forward pass. Commit.
+4. **Session 4 — Training**: Implement the training loop with the paper's optimizer settings. Run a smoke test for a few steps. Commit.
+5. **Session 5 — Validation**: Compare loss curves or outputs against the paper's reported values. Fix discrepancies.
+
+Keeping sessions focused on one module at a time prevents context overflow and makes each Claude interaction more precise.
 
 ## Conclusion
 
 Claude Code transforms paper implementation from a tedious translation exercise into an interactive learning experience. By providing clear context, requesting modular implementations, and validating against paper results, you can efficiently bring academic research into your projects.
 
-Start with well-structured prompts, verify mathematical correctness at each step, and test thoroughly. With practice, you'll find implementing ArXiv papers becomes a reproducible workflow rather than a one-off challenge.
+Start with well-structured prompts that include specific paper sections and notation, verify mathematical correctness at each step, and test thoroughly at multiple levels — unit, integration, and benchmark. The practices in this guide — structured configs, incremental testing, numerical stability awareness, and disciplined git commits — apply equally whether you are implementing a two-page workshop paper or a 50-page foundational architecture.
+
+With practice, you will find implementing ArXiv papers becomes a reproducible workflow rather than a one-off challenge. The combination of Claude's ability to parse academic notation and your domain knowledge produces implementations that are both correct and maintainable.
 {% endraw %}
 
 ## Related Reading
