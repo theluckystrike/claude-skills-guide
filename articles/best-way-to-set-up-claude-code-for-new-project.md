@@ -177,6 +177,34 @@ claude /skill config supermemory --auto-load true
 
 This means every new session starts withClaude understanding your project without manual context sharing. The skill maintains awareness of your tech stack, recent changes, and architectural decisions.
 
+## Using Claude Code for Initial Project Scaffolding
+
+One of the highest-value uses of Claude Code at project start is automated scaffolding. Rather than manually creating directory structures, configuration files, and boilerplate, describe the project to Claude and let it generate everything.
+
+A useful scaffolding prompt for a new API service:
+
+```
+Set up a Node.js REST API project with the following structure:
+- Express with TypeScript
+- PostgreSQL via Prisma
+- Jest for testing
+- ESLint + Prettier
+- Docker Compose for local services
+
+Create:
+1. The directory structure per our CLAUDE.md standards
+2. package.json with all dependencies
+3. tsconfig.json configured for strict mode
+4. A basic Express server in src/index.ts
+5. A .env.example with all required variables
+6. Docker Compose for PostgreSQL
+7. Makefile with common commands
+```
+
+Claude Code generates all these files consistently and correctly. Review the output, make any adjustments to match your preferences, and commit the scaffold as your initial commit. This baseline becomes the reference point for all future Claude Code changes in the project.
+
+For larger projects that will grow over time, ask Claude Code to also generate a `decisions.md` or `ADR` (Architecture Decision Records) directory from the start. Documenting architectural decisions as they're made is much easier than reconstructing them later.
+
 ## Verify Your Setup Works
 
 After initial configuration, run a quick validation:

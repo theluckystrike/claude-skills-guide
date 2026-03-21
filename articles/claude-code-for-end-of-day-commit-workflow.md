@@ -21,6 +21,37 @@ Manually staging files, crafting commit messages, and pushing to remote reposito
 
 The key advantage is consistency. Every end-of-day commit follows the same quality standards, whether you wrote it at 9 AM or 5 PM. Claude can enforce your team's commit conventions, check for sensitive data, and even run quick tests before pushing.
 
+## Reviewing Your Changes Before Committing
+
+The end-of-day commit workflow is also the right time for a quick self-review. Committing without reviewing what you're about to push is one of the most common sources of embarrassing commits—debug logs, console.log statements, commented-out code blocks, and unfinished work-in-progress that shouldn't be in the commit.
+
+Ask Claude Code to review your staged diff before committing:
+
+```
+Review my staged changes (git diff --cached) for:
+1. Console.log or print statements that should be removed
+2. TODO/FIXME comments in newly added code
+3. Hardcoded values that should be environment variables
+4. Obvious logic errors or missing error handling
+5. Any sensitive strings like API keys or passwords
+
+Show me a summary and flag any issues.
+```
+
+This pre-commit review takes less than a minute and catches the category of mistakes that waste everyone's time during code review. It's not a substitute for proper code review by teammates, but it eliminates the most easily-preventable issues before they reach the PR.
+
+For projects with a strict no-debug-code policy, add the specific patterns your team cares about to your CLAUDE.md:
+
+```markdown
+## Pre-commit Checks
+- No console.log in production code (src/, lib/, not tests/)
+- No hardcoded values for: API_URL, DATABASE_URL, SECRET_KEY
+- No commented-out code blocks longer than 3 lines
+- No .env files or files matching *.pem, *.key, *.p12
+```
+
+Claude Code reads these rules from CLAUDE.md and applies them automatically in every session.
+
 ## Setting Up Your Commit Workflow Skill
 
 Create a dedicated skill for your end-of-day commit workflow. This skill should live in your project or your global Claude skills directory.

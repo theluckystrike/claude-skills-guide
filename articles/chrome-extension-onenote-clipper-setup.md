@@ -139,6 +139,23 @@ OneNote sync typically completes within seconds. If clips don't appear:
 2. Check your internet connection
 3. Verify the clip destination notebook exists
 
+## Clipping Code Snippets and Technical Documentation
+
+Developers have specific needs when clipping technical content that general-purpose web clippers don't always handle well. The OneNote Clipper's Article mode preserves most code formatting from documentation sites, but understanding its behavior on different source types helps you get clean clips.
+
+For GitHub README files and documentation pages, Article mode strips the navigation cleanly and preserves code blocks with their syntax structure intact. The formatting is rarely perfect—indentation sometimes collapses—but the content is readable and searchable.
+
+For API documentation sites built with tools like Swagger UI or Redoc, Full Page mode works better. Article mode may omit the interactive elements, but Full Page captures the full rendered output as a static snapshot.
+
+For Stack Overflow answers, clip the specific answer you want using Selection mode rather than the full page. This avoids capturing dozens of other answers, comments, and the full question thread when you only need the solution.
+
+When a code snippet clips poorly, a more reliable alternative is:
+1. Copy the code directly from the page
+2. Clip the article for context
+3. Open the clipped note and paste the code manually with proper formatting
+
+OneNote preserves code block formatting well when pasted from a properly formatted source. Use the `Courier New` font or a OneNote code block style for consistency.
+
 ## Alternatives and Complementary Tools
 
 While the OneNote Clipper excels at web clipping, developers might also consider:
