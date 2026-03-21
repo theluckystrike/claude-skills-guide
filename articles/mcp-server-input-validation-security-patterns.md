@@ -24,6 +24,25 @@ MCP servers act as bridges between Claude Code and your backend systems. Every t
 
 Consider a simple MCP server that executes shell commands based on user input. If you pass user data directly to shell execution without validation, you create a command injection vulnerability. The same principle applies to database queries, API calls, and file operations.
 
+What makes MCP servers particularly worth securing is their position in the trust chain. When Claude Code invokes a tool, it sends structured data based on user intent — but the user intent is not always benign. An MCP server might sit in front of a filesystem, a database, a third-party API, or a build system. Any one of those downstream targets can be exploited if an attacker discovers that the MCP layer does not enforce constraints.
+
+The attack surface is also broader than it might first appear. MCP servers can be invoked not just by Claude Code running locally, but potentially by any client that speaks the MCP protocol. Treating validation as optional or as a concern for "later" is a common mistake that leads to vulnerabilities being discovered in production.
+
+## Threat Model: What You Are Defending Against
+
+Before writing validation code, it helps to be explicit about the threats:
+
+| Threat | Example | Mitigation |
+|---|---|---|
+| Command injection | `; rm -rf /` appended to a shell command parameter | Sanitize or reject shell metacharacters |
+| SQL injection | `' OR '1'='1` in a query field | Parameterized queries plus type validation |
+| Path traversal | `../../etc/passwd` in a filename parameter | Normalize and allowlist path components |
+| Privilege escalation | Passing `role: "admin"` when authenticated as a reader | Context-aware validation against session claims |
+| DoS via large inputs | A 10 MB string passed to a text-processing tool | Enforce maximum length limits |
+| Type confusion | Passing a string where an integer is expected | Schema validation with strict type coercion |
+
+Building validation with this threat model in mind keeps your code purposeful — each check maps back to a concrete risk rather than being cargo-culted from a checklist.
+
 ## Core Validation Strategies
 
 ### Type Checking and Schema Validation
@@ -47,6 +66,37 @@ export async function handleUserQuery(input: unknown) {
 
 This pattern ensures that only properly structured data reaches your business logic. The validation layer rejects unexpected types before they can cause issues.
 
+Zod is particularly well-suited for MCP servers because its schemas are both runtime validators and TypeScript type generators. You define the shape once and get both validation and type safety:
+
+```typescript
+type UserQuery = z.infer<typeof UserQuerySchema>;
+
+// TypeScript now knows exactly what shape validated has
+async function fetchUsers(query: UserQuery) {
+  // query.userId is guaranteed to be a valid UUID string
+  // query.limit is guaranteed to be 1-100
+  // query.sortBy is guaranteed to be one of the three enum values
+}
+```
+
+Prefer `z.parse()` in development to get full error details, and `z.safeParse()` in production when you want to handle errors gracefully without exceptions:
+
+```typescript
+const result = UserQuerySchema.safeParse(input);
+
+if (!result.success) {
+  return {
+    success: false,
+    errors: result.error.errors.map(e => ({
+      field: e.path.join('.'),
+      message: e.message
+    }))
+  };
+}
+
+// result.data is now the validated, typed object
+```
+
 ### Allowlist Validation for Discrete Values
 
 When you know the valid options, use allowlists rather than blocklists. For example, if your tool accepts a status parameter:
@@ -63,6 +113,32 @@ function validateStatus(status: string): string {
 ```
 
 Allowlists prevent attackers from discovering new attack vectors by testing unexpected values.
+
+The key insight behind allowlists is that they encode what you have designed your system to handle. Blocklists, by contrast, try to enumerate everything you haven't designed for — an impossible task. New attack vectors emerge constantly, but your set of valid inputs changes far less frequently.
+
+For filename validation specifically, combine an allowlist with normalization to stop path traversal:
+
+```typescript
+const ALLOWED_EXTENSIONS = ['.txt', '.csv', '.json', '.md'];
+
+function validateFilename(input: string): string {
+  // Normalize to just the basename — no directories
+  const basename = path.basename(input);
+
+  // Check extension against allowlist
+  const ext = path.extname(basename).toLowerCase();
+  if (!ALLOWED_EXTENSIONS.includes(ext)) {
+    throw new Error(`File type not allowed. Permitted: ${ALLOWED_EXTENSIONS.join(', ')}`);
+  }
+
+  // Reject names with suspicious patterns
+  if (/[<>:"|?*\x00-\x1f]/.test(basename)) {
+    throw new Error('Filename contains invalid characters');
+  }
+
+  return basename;
+}
+```
 
 ### Sanitizing String Inputs
 
@@ -87,6 +163,26 @@ function sanitizeFilename(input: string): string {
 }
 ```
 
+One important caveat: sanitization is a secondary defense, not a replacement for parameterized queries or proper shell escaping. If your MCP server executes shell commands, the right approach is to avoid shell execution entirely where possible, or to use child process APIs that accept argument arrays rather than shell strings:
+
+```typescript
+import { execFile } from 'child_process';
+import { promisify } from 'util';
+
+const execFileAsync = promisify(execFile);
+
+// BAD: shell injection risk
+async function runBad(userInput: string) {
+  await execFileAsync(`/usr/bin/grep ${userInput} /var/log/app.log`, { shell: true });
+}
+
+// GOOD: arguments are passed as an array, never interpolated into a shell string
+async function runGood(userInput: string) {
+  const sanitized = validateSearchTerm(userInput); // still validate first
+  await execFileAsync('/usr/bin/grep', [sanitized, '/var/log/app.log']);
+}
+```
+
 ## Context-Aware Validation
 
 Validation rules should depend on the calling context. A request from an authenticated user with elevated permissions might pass different checks than an anonymous request.
@@ -106,16 +202,61 @@ const PermissionMatrix = {
 
 function validateWithContext(input: string, context: ValidationContext) {
   const limits = PermissionMatrix[context.userRole];
-  
+
   if (input.length > limits.maxQueryLength) {
     throw new Error(`Input exceeds ${limits.maxQueryLength} character limit for ${context.userRole} role`);
   }
-  
+
   return input;
 }
 ```
 
 This approach prevents privilege escalation where a user attempts actions beyond their assigned role.
+
+Extend this pattern to validate that write operations are only accepted from contexts that have write permission:
+
+```typescript
+const WriteOperationSchema = z.object({
+  operation: z.enum(['create', 'update', 'delete']),
+  targetId: z.string().uuid(),
+  payload: z.record(z.unknown())
+});
+
+function validateWriteOperation(input: unknown, context: ValidationContext) {
+  const limits = PermissionMatrix[context.userRole];
+
+  if (!limits.canWrite) {
+    throw new Error(`Role '${context.userRole}' does not have write permission`);
+  }
+
+  return WriteOperationSchema.parse(input);
+}
+```
+
+Context-aware validation works best when the context itself is not user-supplied. Pull the user role from your authentication layer — a verified JWT, a session store, or an API key lookup — rather than trusting a role field in the request body.
+
+## Nested and Recursive Input Validation
+
+Real-world MCP tools often accept nested data structures: a task object with subtasks, a configuration blob with nested overrides, or a query with nested filter conditions. Flat validation schemas break down when inputs are deeply nested.
+
+Zod handles this naturally through composition:
+
+```typescript
+const FilterSchema = z.object({
+  field: z.string().max(50),
+  operator: z.enum(['eq', 'gt', 'lt', 'contains', 'startsWith']),
+  value: z.union([z.string().max(200), z.number(), z.boolean()])
+});
+
+const QuerySchema = z.object({
+  table: z.enum(['users', 'orders', 'products']),
+  filters: z.array(FilterSchema).max(10), // cap number of filters to prevent abuse
+  limit: z.number().int().min(1).max(500).default(50),
+  offset: z.number().int().min(0).default(0)
+});
+```
+
+Capping array lengths (`.max(10)` on filters, `.max(500)` on limit) is a simple but effective denial-of-service protection. Without these caps, a single malicious request could trigger a query that returns millions of rows or applies thousands of filter conditions.
 
 ## Rate Limiting and Abuse Prevention
 
@@ -127,16 +268,16 @@ const rateLimiter = new Map<string, { count: number; resetTime: number }>();
 function checkRateLimit(identifier: string, maxRequests: number, windowMs: number): boolean {
   const now = Date.now();
   const record = rateLimiter.get(identifier);
-  
+
   if (!record || now > record.resetTime) {
     rateLimiter.set(identifier, { count: 1, resetTime: now + windowMs });
     return true;
   }
-  
+
   if (record.count >= maxRequests) {
     return false;
   }
-  
+
   record.count++;
   return true;
 }
@@ -144,6 +285,30 @@ function checkRateLimit(identifier: string, maxRequests: number, windowMs: numbe
 // Usage in tool handler
 if (!checkRateLimit(context.userId, 100, 60000)) {
   throw new Error('Rate limit exceeded. Please try again later.');
+}
+```
+
+The in-memory rate limiter above works well for single-process MCP servers. For multi-instance deployments behind a load balancer, use a shared store like Redis to coordinate rate limit state across processes:
+
+```typescript
+import { createClient } from 'redis';
+
+const redis = createClient({ url: process.env.REDIS_URL });
+
+async function checkRateLimitRedis(
+  identifier: string,
+  maxRequests: number,
+  windowSecs: number
+): Promise<boolean> {
+  const key = `ratelimit:${identifier}`;
+  const current = await redis.incr(key);
+
+  if (current === 1) {
+    // First request in this window — set the expiry
+    await redis.expire(key, windowSecs);
+  }
+
+  return current <= maxRequests;
 }
 ```
 
@@ -171,6 +336,32 @@ test('accepts valid input', () => {
 });
 ```
 
+A complete test suite for your validation layer should cover boundary conditions systematically:
+
+```typescript
+describe('limit validation', () => {
+  test('rejects 0', () => {
+    expect(() => UserQuerySchema.parse({ userId: VALID_UUID, limit: 0 })).toThrow();
+  });
+
+  test('accepts 1', () => {
+    expect(() => UserQuerySchema.parse({ userId: VALID_UUID, limit: 1 })).not.toThrow();
+  });
+
+  test('accepts 100', () => {
+    expect(() => UserQuerySchema.parse({ userId: VALID_UUID, limit: 100 })).not.toThrow();
+  });
+
+  test('rejects 101', () => {
+    expect(() => UserQuerySchema.parse({ userId: VALID_UUID, limit: 101 })).toThrow();
+  });
+
+  test('rejects non-integer', () => {
+    expect(() => UserQuerySchema.parse({ userId: VALID_UUID, limit: 10.5 })).toThrow();
+  });
+});
+```
+
 After implementing validation, use the pdf skill to generate security audit reports documenting your validation rules and test coverage.
 
 ## Error Handling Best Practices
@@ -185,7 +376,7 @@ function handleValidationError(error: unknown, context: ValidationContext) {
     userId: context.userId,
     timestamp: new Date().toISOString()
   });
-  
+
   // Return sanitized error to user
   if (error instanceof z.ZodError) {
     return {
@@ -197,7 +388,7 @@ function handleValidationError(error: unknown, context: ValidationContext) {
       }))
     };
   }
-  
+
   return {
     success: false,
     message: 'Validation failed'
@@ -205,11 +396,42 @@ function handleValidationError(error: unknown, context: ValidationContext) {
 }
 ```
 
+The pattern here is deliberate: the internal log captures everything — the full error, user identity, and timestamp — while the response to the user only includes what they need to correct their input. Stack traces, database schema information, and internal field names should never appear in client-facing error messages.
+
+For security-sensitive failures like authentication errors or permission violations, consider returning a generic message even if you have specific information:
+
+```typescript
+// BAD: tells an attacker which part of their probe worked
+if (!userExists) throw new Error('User not found');
+if (!passwordMatch) throw new Error('Incorrect password');
+
+// GOOD: provides no information about which check failed
+if (!userExists || !passwordMatch) {
+  throw new Error('Invalid credentials');
+}
+```
+
+## Checklist: Validation Before Deployment
+
+Before shipping an MCP server to production, verify each of the following:
+
+- All tool input schemas are defined with explicit types and constraints
+- String fields have maximum length limits
+- Array fields have maximum item counts
+- Enum fields use allowlists rather than blocklists
+- File path inputs are normalized and checked for traversal sequences
+- Shell command arguments use array-based invocation, not string interpolation
+- Context-based permission checks run before business logic
+- Rate limiting is in place per user and per tool
+- Validation errors are logged internally with full context
+- Client-facing error messages do not expose schema or infrastructure details
+- Test coverage includes boundary values and known attack patterns
+
 ## Conclusion
 
 Input validation forms the foundation of secure MCP server development. By implementing type checking, allowlists, context-aware validation, and rate limiting, you create multiple layers of defense against malicious requests. Combine these patterns with thorough testing using the tdd skill and comprehensive documentation with the pdf skill to build robust, secure MCP integrations.
 
-Remember that validation is not a one-time implementation but an ongoing process. Review and update your validation rules as new attack vectors emerge and your system evolves.
+Remember that validation is not a one-time implementation but an ongoing process. Review and update your validation rules as new attack vectors emerge and your system evolves. The threat landscape changes — a validation pattern that was sufficient last year may not cover techniques that are common today. Build validation reviews into your regular security cadence alongside dependency updates and penetration testing.
 
 ## Related Reading
 
