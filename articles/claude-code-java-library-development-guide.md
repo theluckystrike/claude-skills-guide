@@ -33,9 +33,30 @@ plugins {
     id("org.gradle.test-retry") version "1.5.8"
 }
 
+group = "com.example"
+version = "1.0.0"
+
 java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
     withSourcesJar()
     withJavadocJar()
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api("com.google.guava:guava:32.1.3-jre")
+    implementation("org.slf4j:slf4j-api:2.0.9")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    testImplementation("org.mockito:mockito-core:5.6.0")
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 publishing {
@@ -54,9 +75,24 @@ publishing {
 
 The `java-library` plugin automatically configures the `api` and `implementation` configurations, allowing you to control which dependencies are exposed to consumers of your library.
 
+### Maven vs Gradle: Which to Choose
+
+Both build tools are well-supported, but they have different strengths for library development:
+
+| Concern | Maven | Gradle (Kotlin DSL) |
+|---|---|---|
+| IDE support | Excellent | Excellent |
+| Build speed | Slower (no incremental) | Faster (incremental builds) |
+| Configuration style | XML — verbose | Kotlin — concise, type-safe |
+| Plugin ecosystem | Mature | Maturing quickly |
+| Maven Central publishing | Straightforward | Requires Nexus plugin or manual setup |
+| Build caching | Basic | Advanced (local + remote) |
+
+For new projects, Gradle with the Kotlin DSL is the better default. For libraries that target enterprise environments where Maven is the standard, matching that tooling reduces friction for contributors.
+
 ## Defining Clear Public APIs
 
-A well-designed library exposes a clean, minimal public API. Use interfaces to define contracts and provide implementation details only when necessary. The **tdd** skill can help you write tests before implementing features, ensuring your API remains intuitive from a user's perspective.
+A well-designed library exposes a clean, minimal public API. Use interfaces to define contracts and provide implementation details only when necessary. The principle of least surprise applies here — if a developer can guess what a method does from its name and signature, you've designed it well.
 
 Consider this example of a simple utility class:
 
@@ -65,18 +101,47 @@ public final class StringUtils {
     private StringUtils() {
         // Prevent instantiation
     }
-    
+
     public static boolean isBlank(String str) {
         return str == null || str.trim().isEmpty();
     }
-    
+
     public static String defaultIfBlank(String str, String defaultValue) {
         return isBlank(str) ? defaultValue : str;
+    }
+
+    public static String truncate(String str, int maxLength) {
+        if (str == null) return null;
+        return str.length() <= maxLength ? str : str.substring(0, maxLength) + "...";
     }
 }
 ```
 
-Notice the private constructor preventing instantiation—this signals to users that the class is a utility and should be used statically. Document each public method with Javadoc, including param descriptions and return values.
+Notice the private constructor preventing instantiation — this signals to users that the class is a utility and should be used statically. For more complex types, define a public interface and package-private implementations:
+
+```java
+// Public contract — part of the library API
+public interface Transformer<T, R> {
+    R transform(T input);
+    default R transformOrNull(T input) {
+        try {
+            return transform(input);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+}
+
+// Package-private implementation — hidden from consumers
+class UpperCaseTransformer implements Transformer<String, String> {
+    @Override
+    public String transform(String input) {
+        return input.toUpperCase();
+    }
+}
+```
+
+This pattern lets you change the implementation freely without breaking binary compatibility. Claude Code is useful here — ask it to review your public API surface before you ship: "Review this class and identify any methods or fields that should be package-private or moved to an internal package."
 
 ## Implementing Core Features
 
@@ -86,31 +151,100 @@ When implementing library features, follow the single responsibility principle. 
 public class HttpClient {
     private final HttpClientFactory factory;
     private final RetryPolicy defaultRetryPolicy;
-    
+
     public HttpClient(HttpClientFactory factory, RetryPolicy defaultRetryPolicy) {
-        this.factory = factory;
-        this.defaultRetryPolicy = defaultRetryPolicy;
+        this.factory = Objects.requireNonNull(factory, "factory must not be null");
+        this.defaultRetryPolicy = Objects.requireNonNull(
+            defaultRetryPolicy, "defaultRetryPolicy must not be null");
     }
-    
+
     public Response get(String url) {
         return get(url, defaultRetryPolicy);
     }
-    
+
     public Response get(String url, RetryPolicy retryPolicy) {
+        Objects.requireNonNull(url, "url must not be null");
+        Objects.requireNonNull(retryPolicy, "retryPolicy must not be null");
         // Implementation details
     }
 }
 ```
 
-This design allows callers to provide custom retry policies while maintaining sensible defaults. The **pdf** skill can help generate documentation from your Javadoc comments, making it easy to create reference materials for library users.
+Note the use of `Objects.requireNonNull` with descriptive messages. Failing fast with a clear error is better than a NullPointerException deep in call stack later.
+
+### The Builder Pattern for Complex Configuration
+
+When a class needs more than three or four constructor parameters, the Builder pattern dramatically improves readability:
+
+```java
+public final class ClientConfig {
+    private final String baseUrl;
+    private final int connectTimeoutMs;
+    private final int readTimeoutMs;
+    private final RetryPolicy retryPolicy;
+    private final boolean followRedirects;
+
+    private ClientConfig(Builder builder) {
+        this.baseUrl = builder.baseUrl;
+        this.connectTimeoutMs = builder.connectTimeoutMs;
+        this.readTimeoutMs = builder.readTimeoutMs;
+        this.retryPolicy = builder.retryPolicy;
+        this.followRedirects = builder.followRedirects;
+    }
+
+    public static Builder builder(String baseUrl) {
+        return new Builder(baseUrl);
+    }
+
+    public static final class Builder {
+        private final String baseUrl;
+        private int connectTimeoutMs = 5000;
+        private int readTimeoutMs = 30000;
+        private RetryPolicy retryPolicy = RetryPolicy.noRetry();
+        private boolean followRedirects = true;
+
+        private Builder(String baseUrl) {
+            this.baseUrl = Objects.requireNonNull(baseUrl, "baseUrl must not be null");
+        }
+
+        public Builder connectTimeoutMs(int timeout) {
+            this.connectTimeoutMs = timeout;
+            return this;
+        }
+
+        public Builder readTimeoutMs(int timeout) {
+            this.readTimeoutMs = timeout;
+            return this;
+        }
+
+        public Builder retryPolicy(RetryPolicy policy) {
+            this.retryPolicy = Objects.requireNonNull(policy);
+            return this;
+        }
+
+        public Builder followRedirects(boolean follow) {
+            this.followRedirects = follow;
+            return this;
+        }
+
+        public ClientConfig build() {
+            return new ClientConfig(this);
+        }
+    }
+}
+```
+
+This design allows callers to configure only what they care about, with all other settings using sensible defaults.
 
 ## Writing Tests with TDD Patterns
 
-The **tdd** skill emphasizes writing tests before implementation, which naturally leads to better API design. Create a test directory structure matching your source packages:
+Test-driven development leads to better API design because you write the code from a consumer's perspective before you write the implementation. Create a test directory structure matching your source packages:
 
 ```
-src/test/java/com/example/library/
-src/test/resources/
+src/
+  main/java/com/example/library/
+  test/java/com/example/library/
+  test/resources/
 ```
 
 Write unit tests using JUnit 5 and Mockito:
@@ -118,37 +252,51 @@ Write unit tests using JUnit 5 and Mockito:
 ```java
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
+import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class StringUtilsTest {
-    
-    @Test
-    void isBlank_returnsTrueForNull() {
-        assertTrue(StringUtils.isBlank(null));
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    @ValueSource(strings = {"   ", "\t", "\n"})
+    void isBlank_returnsTrueForBlankInput(String input) {
+        assertTrue(StringUtils.isBlank(input));
     }
-    
-    @Test
-    void isBlank_returnsTrueForEmptyString() {
-        assertTrue(StringUtils.isBlank(""));
+
+    @ParameterizedTest
+    @ValueSource(strings = {"hello", " hello", "hello "})
+    void isBlank_returnsFalseForNonBlankInput(String input) {
+        assertFalse(StringUtils.isBlank(input));
     }
-    
-    @Test
-    void isBlank_returnsTrueForWhitespace() {
-        assertTrue(StringUtils.isBlank("   "));
-    }
-    
-    @Test
-    void isBlank_returnsFalseForNonBlankString() {
-        assertFalse(StringUtils.isBlank("hello"));
-    }
-    
+
     @Test
     void defaultIfBlank_returnsDefaultWhenNull() {
         assertEquals("default", StringUtils.defaultIfBlank(null, "default"));
     }
+
+    @Test
+    void defaultIfBlank_returnsOriginalWhenNotBlank() {
+        assertEquals("value", StringUtils.defaultIfBlank("value", "default"));
+    }
+
+    @Test
+    void truncate_shortensLongStrings() {
+        String result = StringUtils.truncate("Hello, World!", 5);
+        assertEquals("Hello...", result);
+    }
+
+    @Test
+    void truncate_returnsOriginalWhenWithinLimit() {
+        assertEquals("Hi", StringUtils.truncate("Hi", 10));
+    }
 }
 ```
+
+Using `@ParameterizedTest` with `@NullAndEmptySource` and `@ValueSource` covers edge cases concisely. Claude Code is excellent at generating comprehensive test cases — ask: "Generate a complete JUnit 5 parameterized test suite for this method covering edge cases, boundary values, and error conditions."
 
 Run tests continuously during development:
 
@@ -156,26 +304,67 @@ Run tests continuously during development:
 ./gradlew test --continuous
 ```
 
-This enables incremental compilation and test execution, providing rapid feedback as you modify code.
+For integration tests that require external services, separate them from unit tests using JUnit 5 tags:
 
-## Managing Dependencies Carefully
-
-Library dependencies carry forward to your users, so minimize your dependency footprint. Prefer libraries that are already widely used in the ecosystem. For logging, use SLF4J as the API with a runtime implementation. Avoid pulling in heavy frameworks unless absolutely necessary.
-
-Use the `api` configuration in Gradle to expose dependencies that form part of your public API, while keeping implementation details in `implementation`:
-
-```kotlin
-dependencies {
-    api("com.google.guava:guava:32.1.3-jre")
-    implementation("org.slf4j:slf4j-api:2.0.9")
+```java
+@Tag("integration")
+class HttpClientIntegrationTest {
+    @Test
+    void get_fetchesRealUrl() {
+        // Requires network access
+    }
 }
 ```
 
+Then in `build.gradle.kts`, exclude integration tests from the default test task:
+
+```kotlin
+tasks.test {
+    useJUnitPlatform {
+        excludeTags("integration")
+    }
+}
+
+tasks.register<Test>("integrationTest") {
+    useJUnitPlatform {
+        includeTags("integration")
+    }
+}
+```
+
+## Managing Dependencies Carefully
+
+Library dependencies carry forward to your users — every dependency you add is a dependency they must resolve, and potential conflicts multiply. The goal is a small, stable dependency footprint.
+
+Practical rules:
+
+- Use `api` only for types that appear in your public API (method signatures, return types, thrown exceptions)
+- Use `implementation` for everything else — these are hidden from your library's consumers
+- Prefer `compileOnly` for annotation processors and tools not needed at runtime
+- Never pull in a large framework like Spring as a hard dependency; use optional integrations instead
+
+```kotlin
+dependencies {
+    // Exposed in public API — consumers get this transitively
+    api("com.google.guava:guava:32.1.3-jre")
+
+    // Internal use only — NOT exposed to consumers
+    implementation("org.slf4j:slf4j-api:2.0.9")
+
+    // Only needed at compile time (e.g., null-safety annotations)
+    compileOnly("org.jetbrains:annotations:24.0.0")
+
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    testImplementation("org.mockito:mockito-core:5.6.0")
+    testRuntimeOnly("org.slf4j:slf4j-simple:2.0.9")
+}
+```
+
+Run `./gradlew dependencies` regularly to inspect your full dependency tree and spot unexpected transitive pulls. Claude Code can help you audit this output: paste the tree and ask "Which of these transitive dependencies pose version conflict risks, and how should I resolve them?"
+
 ## Documenting Your Library
 
-Good documentation makes your library usable. Include a README with getting-started instructions, API reference links, and examples. The **frontend-design** skill can help you create a clean README layout if you prefer a more visual approach.
-
-Add Javadoc to all public classes and methods:
+Good documentation makes your library usable. The most important documentation is the Javadoc on every public class and method, because IDEs surface it directly in autocomplete.
 
 ```java
 /**
@@ -190,40 +379,81 @@ Add Javadoc to all public classes and methods:
  *     .build();
  * }</pre>
  *
+ * <p>Instances are immutable and safe for concurrent use once built.</p>
+ *
  * @since 1.0.0
+ * @see Response
  */
-public class Request {
+public final class Request {
     // Class implementation
 }
 ```
 
+Key Javadoc conventions:
+
+- First sentence is the summary (shown in IDE tooltips) — make it a complete, informative sentence
+- Use `@param`, `@return`, and `@throws` for every non-trivial method
+- Include `@since` tags so users know when features were added
+- Document thread safety explicitly
+- Link related types with `@see`
+
+Generate the Javadoc site as part of your build to catch broken `{@code}` blocks and missing parameters early:
+
+```bash
+./gradlew javadoc
+open build/docs/javadoc/index.html
+```
+
+### Writing a Useful README
+
+Your README is the first thing a developer sees. It should answer three questions in the first ten lines: what does this library do, how do I add it as a dependency, and what does basic usage look like? Put a copy-pasteable dependency snippet at the top, not buried below a wall of text.
+
 ## Publishing to Maven Central
 
-To share your library with the Java community, publish to Maven Central. First, create a Sonatype account and request a group ID. Then configure your Gradle publishing:
+To share your library with the Java community, publish to Maven Central. The modern path uses the Central Portal at `central.sonatype.com` rather than the legacy OSSRH Nexus.
+
+First, configure signing (required by Maven Central):
+
+```kotlin
+plugins {
+    signing
+}
+
+signing {
+    val signingKey = providers.environmentVariable("GPG_SIGNING_KEY")
+    val signingPassword = providers.environmentVariable("GPG_SIGNING_PASSWORD")
+    useInMemoryPgpKeys(signingKey.orNull, signingPassword.orNull)
+    sign(publishing.publications["library"])
+}
+```
+
+Then add the full POM metadata Maven Central requires:
 
 ```kotlin
 publishing {
     publications {
         create<MavenPublication>("library") {
+            from(components["java"])
             pom {
                 name.set("My Java Library")
                 description.set("A description")
                 url.set("https://github.com/yourusername/my-java-library")
-                
+
                 licenses {
                     license {
                         name.set("MIT")
                         url.set("https://opensource.org/licenses/MIT")
                     }
                 }
-                
+
                 developers {
                     developer {
                         id.set("your-github-username")
                         name.set("Your Name")
+                        email.set("you@example.com")
                     }
                 }
-                
+
                 scm {
                     connection.set("scm:git:git@github.com:yourusername/my-java-library.git")
                     developerConnection.set("scm:git:git@github.com:yourusername/my-java-library.git")
@@ -235,19 +465,62 @@ publishing {
 }
 ```
 
-Run the publish command to release your library:
+A typical release workflow using GitHub Actions:
+
+```yaml
+name: Publish to Maven Central
+on:
+  release:
+    types: [published]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+      - name: Publish
+        run: ./gradlew publish
+        env:
+          GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
+          GPG_SIGNING_PASSWORD: ${{ secrets.GPG_SIGNING_PASSWORD }}
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+```
+
+Run the publish command locally when testing:
 
 ```bash
 ./gradlew publish
 ```
 
-## Using Claude Skills for Library Development
+### Versioning Strategy
 
-Several Claude skills accelerate Java library development. The **tdd** skill provides test-first workflows and assertion helpers. The **mcp-builder** skill assists in creating Model Context Protocol servers in Java when your library needs to expose AI capabilities. For documentation generation, the **pdf** skill converts Javadoc into polished PDF manuals.
+Follow semantic versioning strictly for libraries — consumers depend on it to make upgrade decisions:
 
-The **supermemory** skill helps maintain context across long development sessions, remembering architectural decisions and API design rationale. When your library includes frontend components, the **frontend-design** skill ensures consistent styling.
+| Version bump | When to use |
+|---|---|
+| Patch (1.0.x) | Bug fixes, no API change |
+| Minor (1.x.0) | New features, backward compatible |
+| Major (x.0.0) | Breaking API changes |
 
-Building a Java library is an exercise in restraint—expose only what users need, test thoroughly, and document generously. Claude Code accelerates each phase of this process, from initial setup through ongoing maintenance.
+Never break binary compatibility in a patch or minor release. Use `@Deprecated` with a `forRemoval = true` flag to signal upcoming removals at least one minor version before the breaking major release.
+
+## Using Claude Code for Library Development
+
+Claude Code accelerates every phase of Java library development. Here are specific prompts that produce high-value results:
+
+- **API design review**: "Review the public API surface of this package. Identify any methods that should be removed, renamed for clarity, or moved to an internal package."
+- **Test generation**: "Write a comprehensive JUnit 5 test class for `StringUtils` covering nulls, empty strings, whitespace, Unicode edge cases, and very long strings."
+- **Dependency audit**: "Here is my Gradle dependency tree. Which dependencies are exposed via `api` that should be `implementation`? Are there any known CVEs in this list?"
+- **Migration assistance**: "Migrate these JUnit 4 tests to JUnit 5, using parameterized tests where it reduces duplication."
+- **Javadoc drafting**: "Write Javadoc for every public method in this class, including `@param`, `@return`, `@throws`, and a code example in `@code` blocks."
+
+Claude Code works best when you give it the full context — paste in the class, describe the audience (library consumers vs. internal developers), and specify what kind of feedback you want.
+
+Building a Java library is an exercise in restraint — expose only what users need, test thoroughly, and document generously. Claude Code accelerates each phase of this process, from initial project scaffold through API review, test generation, and release automation.
 
 
 ## Related Reading
