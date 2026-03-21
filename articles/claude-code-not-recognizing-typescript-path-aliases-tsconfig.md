@@ -52,6 +52,8 @@ import { formatDate } from '../../../../utils/date';
 
 When Claude Code does not recognize these aliases, it may generate relative imports that are harder to maintain, or fail to resolve existing alias imports when reading your code.
 
+The frustration compounds in large monorepos where a file buried five directories deep would otherwise require imports like `../../../../../../../../shared/utils/format`. Path aliases eliminate this entirely, and when your AI assistant keeps reverting to relative paths, it defeats much of the point.
+
 ## Root Causes
 
 Several factors can cause Claude Code to miss your TypeScript path aliases:
@@ -60,6 +62,9 @@ Several factors can cause Claude Code to miss your TypeScript path aliases:
 2. **Build tool configuration mismatch**: Your bundler (Vite, Webpack, Rollup) may not have the corresponding alias configuration
 3. **Project structure issues**: Claude Code may not be analyzing the correct `tsconfig.json`
 4. **Language server restart needed**: The TypeScript language server needs to reload after configuration changes
+5. **No CLAUDE.md context**: Claude Code reads your filesystem but doesn't automatically parse every `tsconfig.json` unless you direct its attention there
+
+The most common root cause in practice is a mismatch between what TypeScript knows and what your bundler knows. TypeScript compilation can succeed with path aliases, but at runtime your bundler may not know how to resolve them, leading to import errors that look like path alias failures even when the `tsconfig.json` is correctly written.
 
 ## Solutions
 
@@ -80,6 +85,26 @@ Ensure your `tsconfig.json` has the correct path alias configuration:
 
 The `baseUrl` must point to the directory containing the paths defined in `paths`. Place this in your root `tsconfig.json` or in a `tsconfig.json` that extends it.
 
+A common mistake is setting `baseUrl` to `"./src"` and then writing paths relative to that. This breaks the relationship between `baseUrl` and your actual project root. Keep `baseUrl` at `"."` and write paths that reflect your real directory structure:
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@store/*": ["src/store/*"],
+      "@types/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"],
+      "@/*": ["src/*"]
+    }
+  }
+}
+```
+
+Note the order: more specific aliases (`@components/*`) should appear before the catch-all (`@/*`). TypeScript resolves paths in order, and a catch-all defined first will match everything before your specific aliases get a chance.
+
 ### Solution 2: Install ts-node and Ensure Type Resolution
 
 If you are using Node.js tools, install the necessary TypeScript resolution packages:
@@ -88,19 +113,39 @@ If you are using Node.js tools, install the necessary TypeScript resolution pack
 npm install --save-dev tsconfig-paths typescript
 ```
 
-Create a `tsconfig.json` that includes path resolution support:
+For ts-node scripts that use path aliases, register `tsconfig-paths` at startup:
+
+```bash
+ts-node -r tsconfig-paths/register src/index.ts
+```
+
+Or add it to your `package.json` scripts:
 
 ```json
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+  "scripts": {
+    "dev": "ts-node -r tsconfig-paths/register src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
   }
 }
 ```
+
+At build time TypeScript resolves aliases correctly, but the compiled JavaScript output still contains the alias strings unless you use a tool like `tsc-alias` to replace them:
+
+```bash
+npm install --save-dev tsc-alias
+```
+
+```json
+{
+  "scripts": {
+    "build": "tsc && tsc-alias"
+  }
+}
+```
+
+This post-processes the compiled output and replaces `@utils/format` with the actual relative path `../../utils/format` in the `.js` files. Without this step, your compiled code will fail at runtime even if TypeScript compilation succeeds.
 
 ### Solution 3: Configure Your Bundler to Match
 
@@ -114,12 +159,32 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      '@components': path.resolve(__dirname, './src/components'),
+      '@utils': path.resolve(__dirname, './src/utils'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
     },
   },
 });
 ```
 
-For Next.js projects, use `next.config.js`:
+A more maintainable approach reads the aliases directly from your `tsconfig.json` using the `vite-tsconfig-paths` plugin:
+
+```bash
+npm install --save-dev vite-tsconfig-paths
+```
+
+```typescript
+import { defineConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
+export default defineConfig({
+  plugins: [tsconfigPaths()],
+});
+```
+
+This plugin automatically syncs your Vite alias configuration with whatever is in `tsconfig.json`, eliminating the risk of drift between the two files.
+
+For Next.js projects, modern versions (13+) support path aliases natively through `tsconfig.json` with no additional bundler configuration needed. For older Next.js or custom Webpack configurations:
 
 ```javascript
 /** @type {import('next').NextConfig} */
@@ -136,12 +201,31 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 
+For Webpack projects without a framework, add the alias resolution directly to `webpack.config.js`:
+
+```javascript
+const path = require('path');
+
+module.exports = {
+  resolve: {
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@utils': path.resolve(__dirname, 'src/utils/'),
+      '@lib': path.resolve(__dirname, 'src/lib/'),
+    },
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
+};
+```
+
 ### Solution 4: Restart the TypeScript Language Server
 
 Claude Code relies on the TypeScript language server for code intelligence. After modifying your `tsconfig.json`:
 
 1. Run the TypeScript: Restart TS Server command in VS Code
 2. Or create a new Claude Code session to pick up the updated configuration
+
+The TypeScript language server caches resolution data aggressively. Even after you correct your `tsconfig.json`, the old (incorrect) resolution data stays in memory until the server restarts. This is one of the more confusing debugging experiences because the configuration looks right but the behavior hasn't changed yet. Always restart the language server as the last step when troubleshooting path alias issues.
 
 ### Solution 5: Provide Explicit Context to Claude Code
 
@@ -165,6 +249,90 @@ This project uses TypeScript path aliases:
 
 Please use these aliases in all generated imports.
 ```
+
+The CLAUDE.md approach is the most reliable long-term solution because it persists across sessions. Every time you open Claude Code in your project, it reads CLAUDE.md first and carries that context into all code generation. Without it, you're re-educating Claude about your aliases every session.
+
+A well-written CLAUDE.md entry for path aliases might look like this:
+
+```markdown
+## Import Conventions
+
+This project uses TypeScript path aliases configured in tsconfig.json.
+Always use aliases in generated imports — never use relative paths with ../
+
+Alias mapping:
+- `@components/` → `src/components/` (React components)
+- `@hooks/` → `src/hooks/` (custom hooks)
+- `@store/` → `src/store/` (Redux/Zustand state)
+- `@utils/` → `src/utils/` (utility functions)
+- `@types/` → `src/types/` (TypeScript type definitions)
+- `@lib/` → `src/lib/` (third-party library wrappers)
+- `@api/` → `src/api/` (API client functions)
+
+Example correct import:
+import { useAuth } from '@hooks/useAuth';
+import { Button } from '@components/ui/Button';
+
+Example WRONG import (never do this):
+import { useAuth } from '../../hooks/useAuth';
+```
+
+## Diagnosing Path Alias Problems Systematically
+
+When Claude Code keeps generating wrong imports despite your configuration, work through this diagnostic checklist:
+
+**Step 1: Verify `tsconfig.json` is valid JSON**
+
+```bash
+npx tsc --noEmit --diagnostics
+```
+
+A single syntax error in `tsconfig.json` can silently disable path resolution. The TypeScript compiler will fall back to default behavior rather than error loudly.
+
+**Step 2: Trace how TypeScript resolves a specific import**
+
+```bash
+npx tsc --traceResolution 2>&1 | grep "@components"
+```
+
+The `--traceResolution` flag outputs every resolution decision TypeScript makes. Filter it by your alias prefix to see exactly what's happening. A working resolution looks like:
+
+```
+======== Resolving module '@components/Button' ========
+Module resolution kind is not specified, using 'Node'.
+baseUrl option is set to '.', using this value to resolve non-relative module name '@components/Button'
+Resolving module name '@components/Button' relative to base url '.' gives 'src/components/Button'.
+```
+
+**Step 3: Check whether multiple tsconfig files conflict**
+
+In monorepos or projects with separate `tsconfig.build.json` and `tsconfig.json`, aliases defined in one file may not be inherited by the other:
+
+```bash
+ls tsconfig*.json
+```
+
+If you see multiple files, verify which one your editor and bundler are actually reading.
+
+**Step 4: Confirm the target directories exist**
+
+```bash
+ls src/components src/utils src/lib src/hooks
+```
+
+TypeScript and bundlers will silently fail to resolve aliases pointing at non-existent directories. No error, just incorrect behavior.
+
+## Bundler Comparison Table
+
+| Bundler | Path Alias Support | Recommended Approach |
+|---|---|---|
+| Vite | Native via config | Use `vite-tsconfig-paths` plugin |
+| Next.js 13+ | Automatic from tsconfig | No extra config needed |
+| Webpack 5 | Manual alias config | Add `resolve.alias` to webpack config |
+| esbuild | Native plugin needed | Use `esbuild-plugin-tsconfig-paths` |
+| Rollup | Plugin needed | Use `@rollup/plugin-alias` |
+| Parcel | Automatic from tsconfig | No extra config needed |
+| ts-node | Requires registration | Use `-r tsconfig-paths/register` |
 
 ## Integration with Claude Skills
 
@@ -190,6 +358,33 @@ Avoid these frequent errors when setting up path aliases:
 2. **Incorrect wildcard usage**: Use `*` only once per path pattern
 3. **Mismatched directories**: Ensure the mapped directories actually exist
 4. **Conflicting configurations**: Multiple `tsconfig.json` files may have conflicting settings
+5. **Missing tsc-alias for Node builds**: TypeScript compiles aliases correctly but the output JS still contains alias strings that Node can't resolve
+6. **Jest configuration missing**: Tests fail because Jest has its own module resolution and doesn't read `tsconfig.json` paths by default
+
+For Jest, add the `moduleNameMapper` configuration to your `jest.config.js`:
+
+```javascript
+module.exports = {
+  moduleNameMapper: {
+    '^@components/(.*)$': '<rootDir>/src/components/$1',
+    '^@utils/(.*)$': '<rootDir>/src/utils/$1',
+    '^@hooks/(.*)$': '<rootDir>/src/hooks/$1',
+    '^@lib/(.*)$': '<rootDir>/src/lib/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+};
+```
+
+Or use `ts-jest` with its path mapping support:
+
+```javascript
+module.exports = {
+  preset: 'ts-jest',
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+};
+```
 
 ## Testing Your Configuration
 
@@ -205,6 +400,20 @@ npx tsc --traceResolution
 
 The `--traceResolution` flag shows how TypeScript resolves each import, helping you identify configuration issues.
 
+Run an end-to-end test by creating a small file that imports through an alias and verifying it compiles and runs:
+
+```typescript
+// test-aliases.ts
+import { formatDate } from '@utils/date';
+console.log(formatDate(new Date()));
+```
+
+```bash
+npx ts-node -r tsconfig-paths/register test-aliases.ts
+```
+
+If this executes without error, your alias configuration is working correctly for both TypeScript compilation and runtime resolution.
+
 ## Summary
 
 Claude Code recognition of TypeScript path aliases requires proper configuration in both your `tsconfig.json` and your build tool. The key steps are:
@@ -213,6 +422,8 @@ Claude Code recognition of TypeScript path aliases requires proper configuration
 2. Match the aliases in your bundler configuration (Vite, Webpack, Next.js)
 3. Restart the TypeScript language server after changes
 4. Provide explicit context to Claude Code about your aliases via CLAUDE.md
+5. Add `moduleNameMapper` to Jest config to fix test resolution separately
+6. Use `tsc-alias` for Node.js builds to replace alias strings in compiled output
 
 By ensuring consistency across your TypeScript and build configurations, Claude Code will correctly recognize and use your path aliases throughout your project.
 
