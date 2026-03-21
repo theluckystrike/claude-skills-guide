@@ -11,6 +11,8 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
+
 
 
 # Claude Code Docker Compose Development Workflow
@@ -590,3 +592,4 @@ Claude Code transforms Docker Compose from a manual orchestration tool into an i
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
