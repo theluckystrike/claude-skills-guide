@@ -3,6 +3,7 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://theluckystrike.github.io/claude-skills-guide/sitemap.xml
+Sitemap: https://theluckystrike.github.io/claude-skills-guide/sitemap-topics.xml
 
 # Crawl-delay (be polite)
 Crawl-delay: 1

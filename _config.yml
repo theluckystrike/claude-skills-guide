@@ -15,6 +15,7 @@ author:
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
 
 # FLEET NOTE (PM1, PM2, PM3): render_with_liquid: false is set here but
 # GitHub Pages IGNORES this setting. Articles with {{ or {% syntax MUST be
