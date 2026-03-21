@@ -41,3 +41,34 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit to IndexNow
+        run: |
+          SITE_URL="https://theluckystrike.github.io/claude-skills-guide"
+          KEY="c4ded4558ba249bbbd828bbfd67ebe80"
+          SITEMAP_URL="${SITE_URL}/sitemap.xml"
+
+          # Fetch sitemap and extract URLs
+          curl -s "$SITEMAP_URL" | grep -oP '(?<=<loc>)[^<]+' | head -10000 > /tmp/urls.txt
+          URL_COUNT=$(wc -l < /tmp/urls.txt)
+
+          if [ "$URL_COUNT" -eq 0 ]; then
+            echo "No URLs found in sitemap"
+            exit 0
+          fi
+
+          # Build JSON payload file (avoids argument list too long)
+          jq -R -s --arg host "theluckystrike.github.io" --arg key "$KEY" --arg keyloc "${SITE_URL}/${KEY}.txt" \
+            '{host: $host, key: $key, keyLocation: $keyloc, urlList: (split("\n") | map(select(length > 0)))}' \
+            /tmp/urls.txt > /tmp/indexnow-payload.json
+
+          # Submit to IndexNow using file-based payload
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d @/tmp/indexnow-payload.json)
+
+          echo "Submitted $URL_COUNT URLs to IndexNow (HTTP $RESPONSE)"
