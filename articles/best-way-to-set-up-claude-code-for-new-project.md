@@ -189,6 +189,84 @@ After initial configuration, run a quick validation:
 
 If responses lack context, check your CLAUDE.md syntax and ensure it's in the correct location.
 
+## Configuring Claude's Permissions and Safety Boundaries
+
+Part of setting up Claude Code for a new project is defining what it's allowed to do. The default configuration is permissive, which is fine for solo projects with good version control. For shared repositories or production-adjacent work, adding explicit permission boundaries reduces the risk of unintended changes.
+
+Add a `settings.json` to your `.claude` directory:
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git status:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Read",
+      "Write",
+      "Edit"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(git push --force:*)",
+      "Bash(git reset --hard:*)"
+    ]
+  }
+}
+```
+
+This allow/deny list lets Claude perform normal development tasks while blocking destructive operations that should require explicit human confirmation. Adjust as your project requires—a deployment script might legitimately need different permissions than a frontend development workflow.
+
+The goal is not to be overly restrictive, but to make the permission model explicit so you know exactly what Claude can do without asking.
+
+## Writing CLAUDE.md for Team Onboarding
+
+When multiple developers work on the same project, CLAUDE.md serves as the project's AI onboarding document. A well-written CLAUDE.md eliminates the pattern where every developer has to re-explain project context to Claude at the start of each session.
+
+A team-oriented CLAUDE.md goes beyond technical configuration:
+
+```markdown
+# Project: PaymentService API
+
+## Stack
+- Node.js 22, TypeScript strict mode
+- PostgreSQL 16 via Prisma ORM
+- Redis for rate limiting and session storage
+- Deployed on AWS ECS with RDS
+
+## Codebase Rules
+- All database queries go through service layer (never direct Prisma in routes)
+- Error handling uses our AppError class, not generic Error
+- API responses use the APIResponse<T> wrapper type
+- No `any` types — use `unknown` with type guards
+
+## Local Development
+- Run `npm run dev` to start with hot reload
+- `npm run db:seed` populates test data
+- Redis must be running: `docker compose up redis`
+
+## Testing Standards
+- Unit tests: Vitest, colocated with source files (*.test.ts)
+- Integration tests: /tests/integration/, uses a separate test database
+- Target: 80% line coverage, 100% coverage on payment-critical paths
+
+## Key Files
+- /src/types/api.ts — All request/response types
+- /src/services/payments.ts — Core payment processing, handle with care
+- /src/middleware/auth.ts — Auth validation, changes require security review
+
+## Do Not Touch Without Team Discussion
+- Database migrations (migration files are permanent)
+- Any file in /src/services/payments.ts
+- Environment variable names (referenced in multiple systems)
+```
+
+This level of detail means any developer (or any Claude session) understands not just the technology but the project-specific conventions that prevent bugs and maintain consistency.
+
 ## Iterative Improvement
 
 Your CLAUDE.md evolves with the project. Update it when:
