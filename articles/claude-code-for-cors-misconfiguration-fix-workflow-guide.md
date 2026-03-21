@@ -5,7 +5,7 @@ description: "A comprehensive guide to identifying, analyzing, and fixing CORS m
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-cors-misconfiguration-fix-workflow-guide/
-categories: [Development, Security]
+categories: [guides, security]
 tags: [claude-code, claude-skills]
 ---
 
