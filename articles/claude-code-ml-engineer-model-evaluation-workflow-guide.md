@@ -106,6 +106,129 @@ async def evaluate_summary(summary, reference):
 
 Run this evaluation across your test dataset to identify specific failure modes. Perhaps the model struggles with technical documents, or tends to hallucinate details in longer inputs. These insights guide both model selection and prompting strategies.
 
+## Evaluating Models on Fairness and Bias Metrics
+
+Production ML systems increasingly require fairness evaluation alongside accuracy metrics. A model that achieves strong overall accuracy may still exhibit systematic bias across demographic subgroups—an issue that raw accuracy numbers hide. Claude Code can help structure a fairness evaluation pipeline that runs alongside your standard benchmarks.
+
+The core components of a fairness evaluation pass:
+
+```python
+from typing import Dict, List, Tuple
+import numpy as np
+
+def evaluate_fairness(
+    predictions: List,
+    labels: List,
+    sensitive_attributes: Dict[str, List]
+) -> Dict[str, Dict]:
+    """
+    Compute fairness metrics across sensitive attribute groups.
+
+    Returns per-group accuracy, false positive rate, and false negative rate.
+    """
+    results = {}
+
+    for attr_name, groups in sensitive_attributes.items():
+        results[attr_name] = {}
+        unique_groups = set(groups)
+
+        for group in unique_groups:
+            mask = [i for i, g in enumerate(groups) if g == group]
+            group_preds = [predictions[i] for i in mask]
+            group_labels = [labels[i] for i in mask]
+
+            tp = sum(p == l == 1 for p, l in zip(group_preds, group_labels))
+            fp = sum(p == 1 and l == 0 for p, l in zip(group_preds, group_labels))
+            fn = sum(p == 0 and l == 1 for p, l in zip(group_preds, group_labels))
+            tn = sum(p == l == 0 for p, l in zip(group_preds, group_labels))
+
+            total = len(mask)
+            results[attr_name][group] = {
+                "accuracy": (tp + tn) / total if total > 0 else None,
+                "fpr": fp / (fp + tn) if (fp + tn) > 0 else None,
+                "fnr": fn / (fn + tp) if (fn + tp) > 0 else None,
+                "sample_size": total
+            }
+
+    # Compute disparate impact ratio
+    for attr_name, group_metrics in results[attr_name].items():
+        accuracies = [m["accuracy"] for m in results[attr_name].values() if m["accuracy"] is not None]
+        if len(accuracies) >= 2:
+            disparate_impact = min(accuracies) / max(accuracies)
+            for group in results[attr_name]:
+                results[attr_name][group]["disparate_impact_ratio"] = disparate_impact
+
+    return results
+```
+
+Ask Claude Code to analyze fairness evaluation results and flag groups where performance falls below acceptable thresholds:
+
+```
+Our fairness evaluation shows FNR of 0.18 for group A and 0.09 for group B
+on the loan approval model. Is this disparity within acceptable range for
+a financial application? What remediation options should I evaluate?
+```
+
+Claude Code provides a structured analysis of the disparity, references relevant fairness criteria (equalized odds, demographic parity, individual fairness), and suggests concrete steps: rebalancing training data, applying post-processing calibration, or using in-processing fairness constraints during training.
+
+## Version Tracking and Evaluation Artifacts
+
+Evaluation results become most valuable when you can compare them across model versions, dataset updates, and configuration changes. Without a structured artifact system, you end up with evaluation results scattered across notebooks and log files with no consistent way to track what changed.
+
+Build a lightweight evaluation artifact store that integrates with your workflow:
+
+```python
+import json
+import hashlib
+from datetime import datetime
+from pathlib import Path
+from dataclasses import dataclass, asdict
+
+@dataclass
+class EvaluationArtifact:
+    model_id: str
+    model_version: str
+    dataset_hash: str
+    eval_timestamp: str
+    metrics: dict
+    config: dict
+    notes: str = ""
+
+    def save(self, output_dir: str = "eval_results"):
+        Path(output_dir).mkdir(exist_ok=True)
+        artifact_id = f"{self.model_id}_{self.model_version}_{self.eval_timestamp}"
+        artifact_path = Path(output_dir) / f"{artifact_id}.json"
+
+        with open(artifact_path, "w") as f:
+            json.dump(asdict(self), f, indent=2)
+
+        return str(artifact_path)
+
+def hash_dataset(dataset_path: str) -> str:
+    """Generate a reproducible hash of the evaluation dataset."""
+    with open(dataset_path, "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()[:12]
+
+# Usage in evaluation pipeline
+def run_tracked_evaluation(model, dataset_path, config):
+    results = run_benchmark(model, dataset_path)
+
+    artifact = EvaluationArtifact(
+        model_id=model.id,
+        model_version=model.version,
+        dataset_hash=hash_dataset(dataset_path),
+        eval_timestamp=datetime.utcnow().isoformat(),
+        metrics=results,
+        config=config
+    )
+
+    path = artifact.save()
+    print(f"Evaluation saved: {path}")
+    return results, artifact
+```
+
+With this structure, Claude Code can compare any two evaluation runs directly: "Compare the artifact from eval_results/v2.3.0_2026-03-15.json against v2.2.0. What metrics regressed and by how much?" This transforms evaluation from a one-off exercise into a tracked history of model quality over time.
+
 ## Conclusion
 
 Building robust model evaluation workflows with Claude Code transforms ad-hoc testing into systematic, reproducible science. By automating benchmark execution, implementing regression detection, and integrating with deployment pipelines, ML engineers can ensure consistent model quality throughout the development lifecycle.

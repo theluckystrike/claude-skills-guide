@@ -198,6 +198,96 @@ Claude Code is a powerful ally in building sustainable open source projects. By 
 Start small: create your FUNDING.yml today, then gradually add more sophisticated funding workflows as your project grows. Your future self (and your sponsors) will thank you.
 
 Remember, sustainable open source isn't just about getting funded—it's about building relationships with people who believe in your work. Let Claude Code handle the logistics while you nurture those connections.
+
+## Generating Compelling Sponsor Profiles and README Sections
+
+The most common mistake OSS maintainers make with funding is treating it as an afterthought. A one-line "please sponsor me" link buried in the README converts far worse than a well-crafted section that explains the value sponsors receive.
+
+Claude Code can help write a sponsor section that converts visitors into supporters. Provide your project stats and let it generate compelling copy:
+
+```
+Write a GitHub Sponsors section for my README.
+Project: A TypeScript utility library for data validation (500k weekly npm downloads, 3k stars)
+Current sponsors: 2
+What I do with funding: spend 2 days/week on maintenance and feature development
+
+Format: 2-3 sentences about why I'm asking, what funding enables, and a table of tiers.
+Tone: direct, not begging. Emphasize mutual benefit.
+```
+
+Claude produces copy like:
+
+```markdown
+## Supporting This Project
+
+This library is used in production by hundreds of teams. Your sponsorship
+directly funds the time I spend fixing bugs, responding to issues, and shipping
+features—work that isn't tracked in commit counts but keeps the library reliable.
+
+| Tier | Monthly | Benefits |
+|------|---------|---------|
+| Supporter | $5 | Name in CONTRIBUTORS.md, warm fuzzies |
+| Sponsor | $25 | Dedicated issue priority, early access to betas |
+| Partner | $100 | Logo in README, direct Slack access, roadmap input |
+```
+
+For projects targeting corporate sponsors, Claude Code can draft the more formal proposal content—executive summary, ROI section, support terms—that corporate procurement teams expect.
+
+## Tracking Funding ROI and Reporting to Sponsors
+
+Sponsors stay longer when they see their contribution is working. Quarterly or monthly updates showing concrete progress builds trust and reduces churn. Claude Code can help generate consistent sponsor updates from your GitHub activity.
+
+Build a simple script that fetches your recent activity and asks Claude to summarize it for sponsors:
+
+```python
+import subprocess
+import json
+from datetime import datetime, timedelta
+
+def get_git_activity(since_days=30):
+    """Get commits, closed issues, and merged PRs from the last N days."""
+    since_date = (datetime.now() - timedelta(days=since_days)).strftime('%Y-%m-%d')
+
+    commits = subprocess.check_output([
+        'git', 'log', f'--since={since_date}',
+        '--pretty=format:%s', '--no-merges'
+    ]).decode().strip().split('\n')
+
+    return {
+        'commits': [c for c in commits if c],
+        'period': f'Last {since_days} days',
+        'since': since_date
+    }
+
+def generate_sponsor_update(activity, project_name):
+    prompt = f"""
+Write a brief sponsor update for {project_name}.
+
+Activity this period ({activity['period']}):
+- {len(activity['commits'])} commits merged
+- Key changes: {', '.join(activity['commits'][:5])}
+
+Format as:
+1. 2-3 sentence summary of what got done
+2. What's coming next (infer from recent commits)
+3. Thank you to sponsors
+
+Keep it under 200 words, professional but warm tone.
+"""
+    return prompt  # Pass to Claude Code for completion
+
+activity = get_git_activity(30)
+prompt = generate_sponsor_update(activity, "my-library")
+# Pass prompt to Claude Code: claude --print "$prompt"
+```
+
+Consistent, data-backed updates to your sponsors demonstrate accountability and make the sponsorship feel like a genuine business relationship rather than a donation.
+
+## Conclusion
+
+Claude Code is a powerful ally in building sustainable open source projects. By automating funding setup, communications, and tier management, you can focus more on what matters—building great software.
+
+Start small: create your FUNDING.yml today, then gradually add more sophisticated funding workflows as your project grows. Your future self (and your sponsors) will thank you.
 {% endraw %}
 
 ## Related Reading

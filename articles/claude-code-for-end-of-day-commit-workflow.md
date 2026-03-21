@@ -146,6 +146,66 @@ This approach scales well for developers managing several projects simultaneousl
 
 **Solution:** Include a step in your workflow where Claude analyzes your changes using `git diff --stat` and generates a message based on the actual file modifications. For even better results, integrate with the `supermemory` skill to include task context.
 
+## Writing Meaningful Commit Messages with Claude
+
+The most consistent way to improve your commit history is having Claude analyze your diff before writing the message. Instead of rushing through a generic "WIP" or "fix stuff" commit at the end of a long day, describe what you changed in plain language and let Claude produce a conventional commit message.
+
+A simple end-of-day prompt pattern that works well:
+
+```
+Here's my git diff. Write a conventional commit message that describes what changed and why.
+Focus on the functional impact, not just which files changed.
+Use one of: feat, fix, refactor, docs, test, chore.
+
+[paste git diff --stat output here]
+```
+
+Claude produces messages like:
+
+```
+feat(auth): add refresh token rotation to prevent session fixation
+
+Implements automatic token rotation on refresh to ensure that each
+successful token refresh invalidates the previous refresh token.
+Addresses security requirement from the auth review.
+```
+
+This is dramatically more useful than `fix: update auth` when you're reading history six months later. The commit message carries the "why" that the diff alone doesn't capture.
+
+For teams with specific commit message conventions, add your format to CLAUDE.md:
+
+```markdown
+## Commit Messages
+Format: type(scope): short description (50 chars max)
+Body: explain WHY, not WHAT (the diff shows what)
+Footer: closes #ISSUE-NUMBER if applicable
+
+Types: feat|fix|refactor|docs|test|chore|perf
+Scopes: auth|api|frontend|database|infra|deps
+```
+
+Claude Code will follow these conventions consistently across every session, removing the need to mentally switch into "commit message writing mode" at the end of your workday.
+
+## Handling Sensitive Files and Accidental Staging
+
+One of the real risks of automated commit workflows is accidentally including files that shouldn't be committed: `.env` files, credential files, or debug logs. Build an explicit check into your workflow before staging anything.
+
+A pre-staging review pattern for Claude:
+
+```
+Before staging, check git status and identify any files that:
+1. End in .env or .env.*
+2. Are in node_modules/ or dist/ directories
+3. Contain the strings "password", "secret", or "api_key"
+4. Are large binary files (images, videos, archives)
+
+List any suspicious files. Do NOT stage them.
+```
+
+This prevents the common mistake of committing local configuration or accidentally staging a file that was temporarily modified during debugging. Pair this with a well-configured `.gitignore` file—Claude can audit your `.gitignore` and flag patterns that are missing based on your tech stack.
+
+For projects with strict data handling requirements, add your sensitive data patterns to CLAUDE.md so Claude checks them on every commit automatically.
+
 ## Conclusion
 
 Automating your end-of-day commit workflow with Claude Code removes friction from your development process. What used to take several minutes of manual git commands now happens in seconds, with consistent quality and fewer mistakes. Start with a simple workflow and add complexity as needed—pre-commit checks, test validation, and documentation verification can all be incorporated over time.

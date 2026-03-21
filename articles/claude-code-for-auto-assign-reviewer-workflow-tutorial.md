@@ -210,6 +210,112 @@ When deploying your auto-assign system, keep these recommendations in mind:
 4. **Provide feedback loops**: Let developers report misassigned reviews
 5. **Handle code owner requirements**: Respect CODEOWNERS file for critical paths
 
+## Reading CODEOWNERS for Required Reviewers
+
+Most mature repositories use a `CODEOWNERS` file to designate required reviewers for specific paths. Your auto-assign system should respect these requirements rather than bypassing them—overriding code owners creates friction with your security and compliance workflows.
+
+Integrate CODEOWNERS parsing into your selection logic:
+
+```javascript
+const fs = require('fs');
+const path = require('path');
+const { minimatch } = require('minimatch');
+
+function parseCodeOwners(repoRoot) {
+  const codeownersPath = path.join(repoRoot, '.github', 'CODEOWNERS');
+  if (!fs.existsSync(codeownersPath)) return [];
+
+  const lines = fs.readFileSync(codeownersPath, 'utf8').split('\n');
+  return lines
+    .filter(line => line.trim() && !line.startsWith('#'))
+    .map(line => {
+      const parts = line.trim().split(/\s+/);
+      return {
+        pattern: parts[0],
+        owners: parts.slice(1).map(o => o.replace('@', ''))
+      };
+    });
+}
+
+function getRequiredOwners(changedFiles, codeownersRules) {
+  const required = new Set();
+
+  changedFiles.forEach(file => {
+    // CODEOWNERS rules are applied in reverse order (last match wins)
+    const reversed = [...codeownersRules].reverse();
+    for (const rule of reversed) {
+      if (minimatch(file, rule.pattern, { matchBase: true })) {
+        rule.owners.forEach(owner => required.add(owner));
+        break;
+      }
+    }
+  });
+
+  return Array.from(required);
+}
+
+// Updated selection function that respects code owners
+function selectReviewers(changes, reviewers, config) {
+  const rules = parseCodeOwners(config.repoRoot);
+  const requiredOwners = getRequiredOwners(changes.files, rules);
+
+  // Always include required owners first
+  const selected = new Set(requiredOwners.filter(o => reviewers.find(r => r.name === o)));
+
+  // Add additional reviewers up to config.maxReviewers
+  if (selected.size < config.maxReviewers) {
+    const additional = advancedSelect(changes, reviewers, {
+      ...config,
+      exclude: [...selected] // Don't double-assign code owners
+    });
+    selected.add(additional.name);
+  }
+
+  return Array.from(selected);
+}
+```
+
+This ensures code owners are always notified for their sections while still distributing load for files that don't have required reviewers.
+
+## Handling PR Size and Complexity
+
+Large pull requests are harder to review thoroughly regardless of who reviews them. Your auto-assign system can factor in PR size and nudge authors toward splitting large changes before assigning reviewers.
+
+Add a size classification step:
+
+```javascript
+function classifyPRSize(changes) {
+  const totalLines = changes.additions + changes.deletions;
+  const fileCount = changes.files.length;
+
+  if (totalLines > 500 || fileCount > 20) return 'large';
+  if (totalLines > 150 || fileCount > 8) return 'medium';
+  return 'small';
+}
+
+async function handleAssignment(pr, changes, reviewers, config) {
+  const size = classifyPRSize(changes);
+
+  if (size === 'large') {
+    // Add a comment suggesting the PR be split
+    await addPRComment(pr, `
+> **Large PR detected** (${changes.additions + changes.deletions} lines across ${changes.files.length} files)
+>
+> Consider splitting this into smaller, focused PRs for easier review.
+> Assigning reviewers now, but small PRs receive faster and more thorough reviews.
+    `);
+    // For large PRs, assign 2 reviewers
+    config.maxReviewers = 2;
+  }
+
+  const assigned = selectReviewers(changes, reviewers, config);
+  await assignReviewers(pr, assigned);
+  return { assigned, size };
+}
+```
+
+This gives authors actionable feedback while still unblocking them — the assignment happens immediately, but the size signal encourages better PR hygiene over time.
+
 ## Wrapping Up
 
 Automating reviewer assignment with Claude Code transforms a tedious manual task into a consistent, efficient process. Start simple with basic load balancing, then add sophistication as your team learns the patterns.
