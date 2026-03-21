@@ -29,6 +29,34 @@ Beyond network restrictions, self-hosted stores provide:
 - **Security vetting**: Review extensions before making them available company-wide
 - **Audit trails**: Track which users have installed which extensions
 - **Offline support**: Serve extensions without internet connectivity
+- **Forced installations**: Push required extensions to all managed devices automatically
+- **Update control**: Choose when updates deploy rather than accepting Google's schedule
+
+### Self-Hosted vs. Chrome Web Store: Comparison
+
+| Feature | Chrome Web Store | Self-Hosted Store |
+|---|---|---|
+| Works on air-gapped networks | No | Yes |
+| IT controls update timing | No | Yes |
+| Security review before install | Limited | Full control |
+| Supports private extensions | No | Yes |
+| Requires infrastructure | No | Yes |
+| Cost | Free | Server + maintenance |
+| Audit trail | Minimal | Full |
+
+For small teams or consumer use cases the Web Store is sufficient. For organizations with security requirements, compliance obligations, or internal-only tools, self-hosting is the correct approach.
+
+## Planning Your Extension Infrastructure
+
+Before writing any configuration, decide on your hosting topology. There are three common architectures:
+
+**Single central server**: One Nginx or Apache server hosts all CRX files. Simple to manage, single point of failure. Good for up to a few hundred devices.
+
+**CDN-backed hosting**: Place your CRX files behind a CDN (internal or external). Handles geographic distribution and load, but adds CDN configuration complexity.
+
+**Object storage**: Host CRX files in an S3-compatible bucket or Azure Blob Storage with a public read policy scoped to corporate IP ranges. Minimal operational overhead once configured.
+
+For most enterprise deployments, a single server behind an internal load balancer hits the right balance of simplicity and reliability. The rest of this guide uses that model.
 
 ## Setting Up Your Extension Repository
 
@@ -41,13 +69,17 @@ Organize your extension repository with a clear structure:
 ```
 /var/www/extensions/
 ├── manifest.json
+├── update.xml
+├── icons/
+│   ├── internal-tool-128.png
+│   └── password-manager-128.png
 ├── internal-tool-1.2.0.crx
 ├── internal-tool-1.2.1.crx
 ├── company-password-manager.crx
 └── custom-integration-0.5.0.crx
 ```
 
-The manifest.json file lists available extensions in a format Chrome understands.
+Keep old CRX versions around for at least one revision cycle. Devices that missed an update cycle need to pull the previous version before upgrading to the latest. Deleting old files breaks staged rollouts.
 
 ### manifest.json Structure
 
@@ -65,7 +97,7 @@ Create a manifest that describes your extension catalog:
       "id": "gjflkafdjjglhfjpgbognhfcnakkgbhe",
       "package": "internal-tool-1.2.1.crx",
       "icons": {
-        "128": "icons/icon-128.png"
+        "128": "icons/internal-tool-128.png"
       }
     },
     {
@@ -81,6 +113,28 @@ Create a manifest that describes your extension catalog:
 
 The extension ID is critical. Chrome uses the ID to track installations and updates. Generate IDs using the official extension packaging process in Chrome.
 
+### Chrome's Update XML Format
+
+For automatic update detection, Chrome also supports an XML update manifest format. This is the format used by the `update_url` field inside an extension's own manifest. Create an `update.xml` file alongside your JSON manifest:
+
+```xml
+<?xml version='1.0' encoding='UTF-8'?>
+<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
+  <app appid='gjflkafdjjglhfjpgbognhfcnakkgbhe'>
+    <updatecheck
+      codebase='https://extensions.company.internal/internal-tool-1.2.1.crx'
+      version='1.2.1' />
+  </app>
+  <app appid='abcdefghijklmnopqrstuvwxyz123456'>
+    <updatecheck
+      codebase='https://extensions.company.internal/custom-integration-0.5.0.crx'
+      version='0.5.0' />
+  </app>
+</gupdate>
+```
+
+Chrome fetches this XML when the extension's `update_url` is called. The `appid` must exactly match the extension ID, and the `version` triggers updates only when it is higher than what is installed.
+
 ### Required Server Configuration
 
 Your web server must serve CRX files with specific CORS headers. Without these headers, Chrome blocks the installation.
@@ -88,22 +142,56 @@ Your web server must serve CRX files with specific CORS headers. Without these h
 For Nginx, add these headers to your server block:
 
 ```nginx
-location ~* \.crx$ {
-    add_header Access-Control-Allow-Origin *;
-    add_header X-Content-Type-Options nosniff;
-    add_header Content-Type application/x-chrome-extension;
+server {
+    listen 443 ssl;
+    server_name extensions.company.internal;
+
+    ssl_certificate     /etc/ssl/company/cert.pem;
+    ssl_certificate_key /etc/ssl/company/key.pem;
+
+    root /var/www/extensions;
+
+    location ~* \.crx$ {
+        add_header Access-Control-Allow-Origin *;
+        add_header X-Content-Type-Options nosniff;
+        add_header Content-Type application/x-chrome-extension;
+        expires -1;
+        add_header Cache-Control "no-store, no-cache, must-revalidate";
+    }
+
+    location ~* \.(json|xml)$ {
+        add_header Content-Type application/json;
+        expires -1;
+        add_header Cache-Control "no-store, no-cache, must-revalidate";
+    }
 }
 ```
 
 For Apache, use mod_headers in your .htaccess or server configuration:
 
 ```apache
-<FilesMatch "\.crx$">
-    Header set Access-Control-Allow-Origin "*"
-    Header set X-Content-Type-Options "nosniff"
-    Header set Content-Type "application/x-chrome-extension"
-</FilesMatch>
+<VirtualHost *:443>
+    ServerName extensions.company.internal
+    DocumentRoot /var/www/extensions
+
+    SSLEngine on
+    SSLCertificateFile    /etc/ssl/company/cert.pem
+    SSLCertificateKeyFile /etc/ssl/company/key.pem
+
+    <FilesMatch "\.crx$">
+        Header set Access-Control-Allow-Origin "*"
+        Header set X-Content-Type-Options "nosniff"
+        Header set Content-Type "application/x-chrome-extension"
+        Header set Cache-Control "no-store, no-cache, must-revalidate"
+    </FilesMatch>
+
+    <FilesMatch "\.(json|xml)$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate"
+    </FilesMatch>
+</VirtualHost>
 ```
+
+Cache headers on the manifest and XML files are just as important as on the CRX files. If your update manifest is cached, Chrome will not pick up new versions until the cache expires.
 
 ## Configuring Chrome to Use Your Store
 
@@ -119,6 +207,39 @@ Deploy this policy through Group Policy Management:
 
 The policy accepts patterns like `https://extensions.company.internal/*` or `https://cdn.company.com/*`.
 
+For forced installations, also configure the "Configure the list of force-installed apps and extensions" policy. Each entry uses the format `EXTENSION_ID;UPDATE_URL`.
+
+### macOS Configuration Profile
+
+On macOS, deploy Chrome policies through an MDM solution (Jamf, Mosyle, or Kandji) using a `.mobileconfig` profile:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>PayloadType</key>
+            <string>com.google.Chrome</string>
+            <key>ExtensionInstallSources</key>
+            <array>
+                <string>https://extensions.company.internal/*</string>
+            </array>
+            <key>ExtensionInstallForcelist</key>
+            <array>
+                <string>gjflkafdjjglhfjpgbognhfcnakkgbhe;https://extensions.company.internal/update.xml</string>
+            </array>
+        </dict>
+    </array>
+</dict>
+</plist>
+```
+
+Upload this profile to your MDM and scope it to the appropriate device groups.
+
 ### JSON Configuration (Linux/Chromium OS)
 
 Create a JSON policy file at `/etc/opt/chrome/policies/managed/extensions.json`:
@@ -130,79 +251,183 @@ Create a JSON policy file at `/etc/opt/chrome/policies/managed/extensions.json`:
     "https://cdn.company.com/*"
   ],
   "ExtensionInstallForcelist": [
-    "gjflkafdjjglhfjpgbognhfcnakkgbhe;https://extensions.company.internal/internal-tool-1.2.1.crx",
-    "abcdefghijklmnopqrstuvwxyz123456;https://extensions.company.internal/custom-integration-0.5.0.crx"
+    "gjflkafdjjglhfjpgbognhfcnakkgbhe;https://extensions.company.internal/update.xml",
+    "abcdefghijklmnopqrstuvwxyz123456;https://extensions.company.internal/update.xml"
+  ],
+  "ExtensionInstallBlocklist": [
+    "*"
+  ],
+  "ExtensionInstallAllowlist": [
+    "gjflkafdjjglhfjpgbognhfcnakkgbhe",
+    "abcdefghijklmnopqrstuvwxyz123456"
   ]
 }
 ```
 
 The `ExtensionInstallForcelist` policy forces specific extensions onto managed devices without user interaction—useful for security tools that must be present on all machines.
 
+Adding `ExtensionInstallBlocklist` with a wildcard `*` combined with an allowlist creates a whitelist-only environment. Users cannot install any extension not explicitly permitted by IT.
+
+### Policy Deployment Verification
+
+After deploying policies, verify they applied correctly on a test device:
+
+1. Open `chrome://policy` in the browser
+2. Look for your extension policies under the "Chrome policies" section
+3. Entries should show the source as "Platform" (machine-level policy) or "Cloud" (if using Chrome Browser Cloud Management)
+
+If policies do not appear, check file permissions on the policy JSON file. Chrome requires the file to be owned by root and not world-writable.
+
 ## Managing Updates
 
-Self-hosted extensions require manual update management. Chrome checks for updates based on the `update_url` in the extension manifest. For internally hosted extensions, point this to your manifest.json.
+Self-hosted extensions require manual update management. Chrome checks for updates based on the `update_url` in the extension manifest. For internally hosted extensions, point this to your update.xml.
 
-In your extension's manifest.json:
+In your extension's manifest.json (the extension's own manifest, not the repository manifest):
 
 ```json
 {
-  "update_url": "https://extensions.company.internal/manifest.json"
+  "manifest_version": 3,
+  "name": "Internal Tool",
+  "version": "1.2.1",
+  "update_url": "https://extensions.company.internal/update.xml",
+  "permissions": ["storage", "activeTab"]
 }
 ```
 
-When you upload a new version to your repository, update the version number in your repository manifest. Chrome detects the new version on its next check cycle and prompts users to update.
+When you upload a new version to your repository, update the version number in your update.xml. Chrome detects the new version on its next check cycle (every few hours by default) and installs the update automatically.
 
-Automate this process with a simple script that increments version numbers and regenerates your repository manifest:
+Automate this process with a deployment script that packages the extension, uploads it, and regenerates your manifests:
 
 ```bash
 #!/bin/bash
+set -euo pipefail
+
 EXTENSION_DIR="/var/www/extensions"
+SOURCE_DIR="/opt/extensions/internal-tool"
 NEW_VERSION="1.2.2"
+EXTENSION_ID="gjflkafdjjglhfjpgbognhfcnakkgbhe"
+UPDATE_URL="https://extensions.company.internal/update.xml"
+KEY_FILE="/opt/extensions/keys/internal-tool.pem"
 
-cd "$EXTENSION_DIR"
-zip -r "internal-tool-${NEW_VERSION}.crx" internal-tool/
-mv "internal-tool-${NEW_VERSION}.crx" internal-tool-latest.crx
+# Package the extension
+google-chrome --pack-extension="$SOURCE_DIR" \
+              --pack-extension-key="$KEY_FILE" \
+              --no-message-box
 
-# Regenerate manifest with new version
-python3 << EOF
-import json
-manifest = json.load(open('manifest.json'))
-for ext in manifest['extensions']:
-    if ext['name'] == 'Internal Tool':
-        ext['version'] = '${NEW_VERSION}'
-        ext['package'] = 'internal-tool-${NEW_VERSION}.crx'
-json.dump(manifest, open('manifest.json', 'w'), indent=2)
-EOF
+# Move the packaged CRX to the repository
+mv "${SOURCE_DIR}.crx" "${EXTENSION_DIR}/internal-tool-${NEW_VERSION}.crx"
+
+# Update the XML update manifest
+python3 - <<PYEOF
+import xml.etree.ElementTree as ET
+
+tree = ET.parse('${EXTENSION_DIR}/update.xml')
+root = tree.getroot()
+ns = {'g': 'http://www.google.com/update2/response'}
+
+for app in root.findall('g:app', ns):
+    if app.get('appid') == '${EXTENSION_ID}':
+        uc = app.find('g:updatecheck', ns)
+        uc.set('version', '${NEW_VERSION}')
+        uc.set('codebase', '${UPDATE_URL}'.replace(
+            'update.xml',
+            'internal-tool-${NEW_VERSION}.crx'
+        ))
+
+tree.write('${EXTENSION_DIR}/update.xml',
+           xml_declaration=True, encoding='UTF-8')
+PYEOF
+
+echo "Deployed internal-tool version ${NEW_VERSION}"
 ```
+
+Store the private key (`internal-tool.pem`) in a secrets manager or hardware security module. Losing this key means you cannot issue signed updates—you would need to redistribute the extension as a new ID.
 
 ## Security Considerations
 
-Host your extension repository over HTTPS. Chrome blocks extensions loaded over insecure HTTP connections in modern versions.
+### HTTPS Is Mandatory
 
-Restrict access to your extension server using network ACLs or authentication. Only devices on your corporate network or VPN should reach the extension endpoints.
+Host your extension repository over HTTPS. Chrome blocks extensions loaded over insecure HTTP connections in modern versions. Use a certificate from your internal PKI if your devices trust it, or a public CA if you prefer not to manage certificate distribution.
 
-For highly sensitive environments, implement signed CRX files. Chrome validates signatures during installation, ensuring packages haven't been tampered with during hosting.
+Self-signed certificates work only if you distribute the CA certificate to all managed devices and configure Chrome to trust it via policy:
 
-## Common Pitfalls
-
-Extension IDs change when you repackage an extension. If you generate a new CRX file without preserving the original private key, Chrome treats it as a different extension. Keep your private keys secure and reuse them across versions.
-
-Caching breaks update detection. Ensure your web server doesn't cache manifest.json or CRX files with long TTLs. Configure appropriate cache headers:
-
-```nginx
-location /extensions/ {
-    expires -1;
-    add_header Cache-Control "no-store, no-cache, must-revalidate";
+```json
+{
+  "CACertificates": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0t..."
 }
 ```
 
-Testing in incognito mode reveals permission issues. Extensions that work in regular mode sometimes fail in incognito due to additional restrictions. Test both modes before deploying organization-wide.
+The value is the base64-encoded DER certificate. Managed via the `CACertificates` Chrome policy or through your MDM's certificate profile.
+
+### Network Access Controls
+
+Restrict access to your extension server using network ACLs or firewall rules. Only devices on your corporate network or connected via VPN should reach the extension endpoints. A simple approach on Linux with iptables:
+
+```bash
+# Allow only corporate IP range to access the extension server
+iptables -A INPUT -p tcp --dport 443 -s 10.0.0.0/8 -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j DROP
+```
+
+Combine this with HTTP basic authentication as a second layer:
+
+```nginx
+location /extensions/ {
+    auth_basic "Corporate Extensions";
+    auth_basic_user_file /etc/nginx/.htpasswd;
+}
+```
+
+### CRX Signing and Verification
+
+Chrome validates the CRX file signature during installation. When you package an extension using Chrome's built-in packager or the `crx` command-line tool, it signs the file with your private key. If someone replaces a CRX file on your server with a malicious file, the signature check fails and Chrome refuses to install it.
+
+For extra assurance, generate a checksum file alongside each CRX:
+
+```bash
+sha256sum internal-tool-1.2.2.crx > internal-tool-1.2.2.crx.sha256
+```
+
+Your deployment automation can verify checksums before updating the manifest, preventing a corrupted upload from reaching end users.
+
+## Common Pitfalls
+
+**Extension IDs change when repackaged without the original key.** If you generate a new CRX file without preserving the original private key, Chrome treats it as a different extension. Users lose their settings and the old extension remains installed alongside the new one. Keep your private keys in source-controlled secret storage (HashiCorp Vault, AWS Secrets Manager, etc.) and back them up.
+
+**Caching breaks update detection.** Ensure your web server doesn't cache `manifest.json`, `update.xml`, or CRX files with long TTLs. The cache header configuration shown earlier in the Nginx and Apache sections handles this. Verify with `curl -I https://extensions.company.internal/update.xml` that `Cache-Control: no-store` appears in the response.
+
+**Policy files with incorrect permissions are silently ignored.** Chrome requires policy JSON files to be owned by root and have permissions of `644` or stricter. A file owned by your deploy user with `777` permissions will be ignored, and extensions will not be forced-installed. Check with `ls -la /etc/opt/chrome/policies/managed/`.
+
+**Testing in incognito mode reveals permission issues.** Extensions that work in regular mode sometimes fail in incognito due to additional restrictions. Test both modes before deploying organization-wide. Enable your extension in incognito explicitly during development via `chrome://extensions` and check the "Allow in incognito" toggle.
+
+**Manifest version mismatches cause silent failures.** If your extension targets Manifest V3 but your update XML references a Manifest V2 package, Chrome may refuse to install the update. Always package and test extensions against the manifest version you intend to ship.
+
+## Rolling Out to a Subset of Devices
+
+Rather than pushing updates to your entire fleet at once, use organizational units (OUs) in your directory service or MDM device groups to stage rollouts:
+
+1. Create a "Canary" OU containing a small set of test machines.
+2. Point the Canary OU's extension policy at a separate `update-canary.xml` that references the new version.
+3. After 24-48 hours of successful operation, update the main `update.xml` for the rest of the fleet.
+
+This pattern catches permission regressions or compatibility issues before they affect all users.
+
+## Monitoring and Audit
+
+Chrome Browser Cloud Management (free for basic use) provides a dashboard showing which extensions are installed across your managed fleet. For organizations not using Chrome Browser Cloud Management, build your own audit by scraping Chrome's reporting endpoint or parsing extension installation logs:
+
+```bash
+# On Linux, Chrome logs extension events to syslog
+journalctl -u chrome --since "1 hour ago" | grep -i extension
+```
+
+Combine this with a nightly cron job that checks each managed device's installed extension list against your approved list and alerts on deviations.
 
 ## Wrap-Up
 
-A self-hosted Chrome extension store provides the control enterprises need for secure extension distribution. The setup requires basic web hosting, proper CORS configuration, and Chrome Enterprise policies for deployment.
+A self-hosted Chrome extension store provides the control enterprises need for secure extension distribution. The setup requires basic web hosting, proper CORS and cache configuration, signed CRX files, and Chrome Enterprise policies for deployment.
 
-Start small—host a single internal tool and expand as your organization gains confidence with the infrastructure. The investment pays off in security, compliance, and operational control.
+Start small—host a single internal tool, verify the update cycle works end-to-end, then expand. Pay particular attention to key management and cache headers; those two areas cause the majority of real-world deployment failures. The investment pays off in security, compliance, and operational control over every extension running on your managed fleet.
 
 
 ## Related Reading
