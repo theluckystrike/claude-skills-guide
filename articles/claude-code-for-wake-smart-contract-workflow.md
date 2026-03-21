@@ -225,3 +225,4 @@ Start by setting up a Wake project, creating a specialized Claude Skill, and gra
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+```

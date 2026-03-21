@@ -11,8 +11,7 @@ permalink: /claude-code-github-actions-skill-step-failed-debug/
 reviewed: true
 score: 7
 ---
-
-
+{% raw %}
 # Debugging Failed GitHub Actions Skill Steps in Claude Code
 
 When you're building CI/CD workflows with Claude Code skills, encountering failed GitHub Actions steps is inevitable. The key to efficient debugging lies in understanding how Claude Code interacts with GitHub Actions and knowing which techniques to use when things go wrong. This guide walks you through practical strategies for diagnosing and resolving failed workflow steps.
@@ -29,7 +28,7 @@ Before diving into debugging, ensure your skill has the necessary permissions. G
 
 The most frequent cause of step failures is authentication issues. When Claude Code attempts to interact with GitHub, you might see errors like "Bad credentials" or "Resource not found".
 
-{% raw %}
+
 ```yaml
 # Example workflow with permission issues
 jobs:
@@ -44,7 +43,7 @@ jobs:
             -X POST \
             -f environment='production'
 ```
-{% endraw %}
+
 
 To debug authentication, first verify the token has the required scopes. The `GITHUB_TOKEN` provided by GitHub Actions automatically has permissions matching the workflow's repository settings, but custom tokens might lack necessary access.
 
@@ -52,7 +51,7 @@ To debug authentication, first verify the token has the required scopes. The `GI
 
 YAML indentation mistakes or incorrect expression syntax can cause immediate step failures. Claude Code skills that generate or modify workflows should validate syntax before execution.
 
-{% raw %}
+
 ```yaml
 # Common syntax error: incorrect conditional
 jobs:
@@ -64,7 +63,7 @@ jobs:
         if: ${{ matrix.os }} == "ubuntu-latest"  # Missing brackets
         run: npm test
 ```
-{% endraw %}
+
 
 The fix requires proper expression syntax using double curly braces with the full expression: `matrix.os == "ubuntu-latest"` (inside GitHub Actions expression syntax).
 
@@ -78,7 +77,7 @@ Sometimes the runner itself lacks required dependencies. Claude Code can help id
 
 GitHub provides verbose debug output when you enable debug logging in your repository settings or workflow. Add the following to your workflow to capture detailed step information:
 
-{% raw %}
+
 ```yaml
 jobs:
   debug-workflow:
@@ -93,7 +92,7 @@ jobs:
           echo "Step started at: ${{ steps.debug-step.start_time }}"
           echo "Runner OS: ${{ runner.os }}"
 ```
-{% endraw %}
+
 
 ### Use Claude Code to Analyze Logs
 
@@ -110,7 +109,7 @@ Claude Code can help identify whether the issue stems from incorrect repository 
 
 Within your skill, use the `gh` CLI for more readable output:
 
-{% raw %}
+
 ```bash
 # Debug workflow run status
 gh run view $RUN_ID --log
@@ -121,7 +120,7 @@ gh run view $RUN_ID --job $JOB_ID --log
 # Check specific step output
 gh api repos/${{ github.repository }}/actions/runs/$RUN_ID/jobs/$JOB_ID
 ```
-{% endraw %}
+
 
 This approach provides cleaner JSON output that Claude Code can parse and analyze programmatically.
 
@@ -146,7 +145,7 @@ This catches environment-related issues before consuming GitHub Actions minutes.
 
 Add debug steps that only run when explicitly enabled:
 
-{% raw %}
+
 ```yaml
 jobs:
   build:
@@ -162,7 +161,7 @@ jobs:
       - name: Normal build step
         run: npm run build
 ```
-{% endraw %}
+
 
 This pattern lets you enable detailed debugging without modifying your main workflow logic.
 
@@ -170,7 +169,7 @@ This pattern lets you enable detailed debugging without modifying your main work
 
 GitHub API rate limits can cause intermittent failures. Implement retry logic in your skill:
 
-{% raw %}
+
 ```bash
 # Retry logic for GitHub API calls
 for i in {1..3}; do
@@ -179,7 +178,7 @@ for i in {1..3}; do
   sleep $((i * 10))
 done
 ```
-{% endraw %}
+
 
 ## Best Practices for Claude Code Skills
 
@@ -189,12 +188,12 @@ done
 
 3. **Log extensively** within skill code to help trace failures:
 
-{% raw %}
+
 ```bash
 echo "::debug::Starting deployment to $ENVIRONMENT"
 echo "::debug::Using token with scopes: $TOKEN_SCOPES"
 ```
-{% endraw %}
+
 
 4. **Handle errors gracefully** with descriptive messages:
 
@@ -221,3 +220,4 @@ Remember that most failures stem from authentication, syntax, or environment iss
 - [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -245,3 +245,4 @@ Effective prompts for Claude Code share common characteristics: clear task frami
 - [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/how-to-optimize-claude-skill-prompts-for-accuracy/) — advanced prompt optimization to improve skill output quality
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+```

@@ -264,3 +264,4 @@ Start with the basic cost query skill, then progressively add budget alerts, ano
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+```

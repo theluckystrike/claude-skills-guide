@@ -239,3 +239,4 @@ Claude Code skills provide structured workflows for applying these practices. Th
 - [Claude Code Skills for QA Engineers: Automating Test Suites](/claude-skills-guide/claude-code-skills-for-qa-engineers-automating-test-suites/) — broader test suite automation patterns for QA workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+```
