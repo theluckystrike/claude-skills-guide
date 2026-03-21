@@ -160,6 +160,143 @@ For best results with multimedia in Claude skills:
 
 Claude skills become genuinely powerful multimedia workstations when you combine the right skill templates with appropriate tool access. The key is understanding that Claude orchestrates — it generates the instructions, while the actual media processing happens through the tools it calls.
 
+## Configuring MCP Image Generation Integrations
+
+MCP (Model Context Protocol) tools provide the most capable path to actual AI image generation within Claude skills. Setting up an MCP integration for image generation requires configuring the MCP server, registering it in your Claude settings, and writing skill prompts that guide Claude to use it appropriately.
+
+A typical MCP image generation server exposes a `generate_image` tool. Your skill prompt instructs Claude when and how to invoke it:
+
+```markdown
+---
+name: visual-asset-generator
+description: Generate images and visual assets using AI generation tools
+---
+
+# Visual Asset Generator
+
+When asked to create images or visual assets, use the generate_image MCP tool.
+
+## Tool Usage
+
+- For illustrations and artwork: use style "digital-art"
+- For product mockups: use style "photorealistic"
+- For diagrams and charts: prefer canvas-design skill or mermaid for technical diagrams
+- Always describe the output format required (PNG, square, 1024x1024, etc.)
+
+## Prompting Guidelines
+
+Write image generation prompts that specify:
+1. Subject and composition
+2. Style and aesthetic
+3. Color palette if relevant
+4. Negative constraints (what to avoid)
+```
+
+Once configured, Claude invokes the MCP tool and returns the file path of the generated image. Skills can chain this with file operations — generating an image and then embedding it in a PDF report, for example.
+
+For teams standardizing on a specific generation service, the MCP configuration lives in your `.claude/settings.json` and applies across all skill invocations.
+
+## Batch Media Processing Patterns
+
+Processing multiple media files efficiently requires structuring your skill invocations to avoid redundant work and manage context window limits. For image-heavy workflows, the pattern is to process files in batches using bash loops rather than loading all files into a single skill invocation.
+
+A practical batch processing pattern for image conversion:
+
+```bash
+#!/bin/bash
+# Batch convert and resize images using Claude Code bash tool
+# Claude invokes this script via the bash tool in the image-processor skill
+
+INPUT_DIR="${1:-./images/raw}"
+OUTPUT_DIR="${2:-./images/processed}"
+TARGET_WIDTH="${3:-1200}"
+
+mkdir -p "$OUTPUT_DIR"
+
+processed=0
+failed=0
+
+for img in "$INPUT_DIR"/*.{jpg,jpeg,png,webp}; do
+    [ -f "$img" ] || continue
+
+    filename=$(basename "$img")
+    base="${filename%.*}"
+    output="$OUTPUT_DIR/${base}.webp"
+
+    if convert "$img" \
+        -resize "${TARGET_WIDTH}x>" \
+        -quality 85 \
+        -strip \
+        "$output" 2>/dev/null; then
+        echo "OK: $filename -> ${base}.webp"
+        ((processed++))
+    else
+        echo "FAIL: $filename"
+        ((failed++))
+    fi
+done
+
+echo "Done: $processed processed, $failed failed"
+```
+
+The skill prompt guiding Claude to use this script would specify when batch processing is appropriate (multiple files, consistent transforms) versus individual processing (unique per-file operations).
+
+For PDF batch processing with the pdf skill, the chunking strategy prevents context overflow. Process documents in groups of 5-10 pages, accumulate results in a shared JSON file, then generate a final summary from the accumulated data.
+
+## Working with PDFs Programmatically via the Graph API
+
+The pdf skill handles document operations natively, but some workflows need programmatic PDF manipulation beyond what the skill provides interactively. Python's `pypdf` library combined with Claude skill orchestration covers most enterprise PDF workflows.
+
+A common pattern: extract structured data from a batch of PDFs, then generate a consolidated report.
+
+```python
+import pypdf
+import json
+from pathlib import Path
+
+def extract_pdf_metadata(pdf_path: str) -> dict:
+    """Extract text content and metadata from a PDF file."""
+    reader = pypdf.PdfReader(pdf_path)
+
+    metadata = {
+        "file": Path(pdf_path).name,
+        "pages": len(reader.pages),
+        "title": reader.metadata.get("/Title", ""),
+        "author": reader.metadata.get("/Author", ""),
+        "content": []
+    }
+
+    for i, page in enumerate(reader.pages):
+        text = page.extract_text()
+        if text.strip():
+            metadata["content"].append({
+                "page": i + 1,
+                "text": text[:2000]  # First 2000 chars per page
+            })
+
+    return metadata
+
+
+def batch_extract(pdf_dir: str, output_file: str):
+    """Process all PDFs in a directory and write extracted data to JSON."""
+    results = []
+
+    for pdf_file in Path(pdf_dir).glob("*.pdf"):
+        try:
+            data = extract_pdf_metadata(str(pdf_file))
+            results.append(data)
+            print(f"Extracted: {pdf_file.name} ({data['pages']} pages)")
+        except Exception as e:
+            print(f"Failed: {pdf_file.name} — {e}")
+
+    with open(output_file, "w") as f:
+        json.dump(results, f, indent=2)
+
+    print(f"Wrote {len(results)} documents to {output_file}")
+```
+
+The pdf skill then takes this extracted JSON and generates formatted reports, summaries, or comparisons. This division — Python for reliable extraction, Claude pdf skill for intelligent synthesis — plays to each tool's strengths.
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 ## Related Reading

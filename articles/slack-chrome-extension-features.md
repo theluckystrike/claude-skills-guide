@@ -164,6 +164,74 @@ const morningWorkflow = {
 
 This setup automates routine communications while keeping developers focused on actual work.
 
+## Building Custom Slack Integrations vs Installing Extensions
+
+Understanding the difference between Chrome extensions that modify Slack's web interface and proper Slack integrations helps you choose the right approach for your needs.
+
+Chrome extensions operate at the browser layer. They inject JavaScript into Slack's web app, intercept network requests, and modify the DOM. This approach gives you quick wins for personal productivity features—keyboard shortcuts, template insertion, visual tweaks—but it breaks regularly when Slack updates their frontend, and it cannot create genuine two-way integrations with Slack's backend.
+
+Slack's Bolt framework and API create proper integrations that survive Slack updates:
+
+```javascript
+// Proper Slack bot using Bolt — survives UI changes
+const { App } = require('@slack/bolt');
+
+const app = new App({
+  token: process.env.SLACK_BOT_TOKEN,
+  signingSecret: process.env.SLACK_SIGNING_SECRET
+});
+
+// Listen for a message containing "deploy status"
+app.message(/deploy status/i, async ({ message, say }) => {
+  const status = await getPipelineStatus(); // your CI/CD API
+  await say({
+    thread_ts: message.ts,
+    text: `Pipeline: ${status.name} — ${status.status} (${status.lastRun})`
+  });
+});
+
+app.start(3000);
+```
+
+This approach handles the use case more reliably than a Chrome extension attempting to intercept messages. For developer workflows involving CI/CD status, incident management, or deployment coordination, building a proper Slack app gives you more control and longevity.
+
+Chrome extensions still make sense for personal productivity features that don't require Slack API access: template insertion, notification filtering, visual customization. Use them for what they're good at—UI augmentation—rather than trying to build integrations that belong in a proper Slack app.
+
+## Managing Notifications Without Losing Important Alerts
+
+Notification overload is one of the biggest productivity problems in developer Slack workspaces. Chrome extensions can help manage this, but so can Slack's built-in notification customization which many users overlook.
+
+Notification keywords are underused. In Slack preferences, you can specify words that trigger notifications even in channels you've muted. Add your name, your team's alert keywords, and project-specific terms:
+
+```
+Alert keywords: @your-name, on-call, prod-down, deploy failed, P1, SEV1
+```
+
+This lets you mute high-volume channels like `#general` or `#engineering-random` while still receiving alerts for anything genuinely urgent.
+
+Chrome extensions extend this with do-not-disturb scheduling. If your team spans time zones, an extension that automatically enables DND during off-hours prevents late-night notification anxiety. Combine this with a `#critical-alerts` channel that bypasses DND for true emergencies.
+
+For developers who monitor Slack during active incidents but want silence otherwise, extensions that implement focus modes—blocking all Slack notifications while your IDE is in focus—reduce interruptions without requiring you to manually toggle DND.
+
+## Debugging Extension Conflicts and Slack API Changes
+
+Chrome extensions modifying Slack's interface break with some regularity. Slack deploys frontend changes frequently, and any extension relying on specific CSS selectors or DOM structure will eventually stop working. Here's how to diagnose and handle extension failures.
+
+First, isolate whether the problem is the extension or Slack itself. Open a fresh Chrome profile without any extensions and test the behavior. If the problem disappears, the extension is the cause.
+
+For extensions you rely on that have stopped working, check the extension's repository or issue tracker before spending time debugging. Many Slack extensions are open source and the maintainer may have already fixed the issue. If not, the extension's issue tracker will tell you whether the problem is known.
+
+When debugging a misbehaving extension yourself, open Chrome DevTools on the Slack tab and look for JavaScript errors in the Console. Extensions that inject scripts log errors to the page's console. Use the Sources panel to inspect what scripts the extension has injected:
+
+```javascript
+// In Chrome DevTools console, list injected scripts
+performance.getEntriesByType('resource')
+  .filter(e => e.initiatorType === 'script')
+  .map(e => e.name);
+```
+
+Extension updates sometimes change permissions. When Chrome prompts you that an extension needs new permissions, review them carefully before accepting. An extension that previously only needed to read the page content now requesting network access to all sites is a red flag worth investigating.
+
 ## Conclusion
 
 Slack Chrome extension features extend the platform's capabilities far beyond its native functionality. For developers and power users, these tools reduce friction in daily communications, automate repetitive tasks, and integrate smoothly with development workflows. Start with one or two features that address your biggest pain points, then expand as you discover new possibilities.
