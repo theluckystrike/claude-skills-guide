@@ -13,13 +13,31 @@ permalink: /claude-code-with-convex-backend-real-time-data-setup/
 
 # Claude Code With Convex Backend Real-Time Data Setup
 
-Convex provides a powerful backend-as-a-service platform that handles real-time data synchronization automatically. When combined with Claude Code, you get an end-to-end development experience where your AI assistant can read, write, and react to data changes in real time. This guide shows you how to integrate Convex with Claude Code to build reactive applications.
+Convex provides a powerful backend-as-a-service platform that handles real-time data synchronization automatically. When combined with Claude Code, you get an end-to-end development experience where your AI assistant can read, write, and react to data changes in real time. This guide shows you how to integrate Convex with Claude Code to build reactive applications — covering schema design, backend functions, frontend hooks, scheduled jobs, and production concerns.
 
 ## Why Convex Works Well With Claude Code
 
 Convex eliminates the need for manual API endpoints and WebSocket connections. The platform automatically synchronizes data between your frontend and backend, which means Claude Code can query and mutate data without complex setup. When you use the **supermemory** skill alongside Convex, you can persist conversation context across sessions while maintaining real-time sync with your application data.
 
 The combination is particularly effective for building collaborative features like live dashboards, chat applications, and collaborative editing tools. Your Claude Code agent can directly interact with Convex functions, making it feel like working with a knowledgeable teammate who understands your entire data layer.
+
+Beyond the DX convenience, Convex's architecture removes an entire category of bugs. Traditional stacks require you to invalidate caches, emit WebSocket events, and handle reconnection logic manually. Convex uses a reactive query model — every `query` function is re-run automatically when the underlying data changes, and the result is pushed to every subscribed client. This means you cannot accidentally forget to broadcast an update.
+
+### Convex vs. Alternatives
+
+Before committing to Convex, it helps to understand how it sits alongside other backend options a Claude Code project might use:
+
+| Feature | Convex | Supabase | Firebase | PlanetScale |
+|---------|--------|----------|----------|-------------|
+| Real-time subscriptions | Built-in, reactive | Via Realtime channels | Via Firestore listeners | Polling only |
+| TypeScript-first schema | Yes (codegen) | Partial | No | Partial (via Prisma) |
+| Serverless functions | Yes (collocated) | Edge Functions | Cloud Functions | No |
+| Scheduled jobs | Built-in cron | pg_cron (manual) | Cloud Scheduler | No |
+| Full-text search | Built-in | pg_trgm / pgvector | Third-party | Third-party |
+| Transactions | ACID per mutation | ACID | Limited | ACID |
+| Pricing model | Function executions | Compute + storage | Pay per read/write | Rows + connections |
+
+Convex is the strongest choice when your primary need is reactive UIs with minimal backend infrastructure. Supabase wins if you need raw SQL power. Firebase suits mobile-first projects with existing GCP infrastructure.
 
 ## Setting Up Convex in Your Project
 
@@ -32,25 +50,33 @@ npx convex dev
 
 The initialization process creates a `convex/` directory with generated TypeScript types and a `_generated/` folder. These types ensure type safety between your frontend queries and backend functions.
 
+The `npx convex dev` command does two things: it starts a local development server that syncs your `convex/` directory to Convex's cloud, and it watches for file changes and regenerates types automatically. Leave it running in a terminal while you develop — every time you save a backend function, the updated version is live within seconds.
+
 Create a schema file at `convex/schema.ts` to define your data structure:
 
 ```typescript
 import { defineSchema, defineTable } from "convex/server";
+import { v } from "convex/values";
 
 export default defineSchema({
   tasks: defineTable({
-    title: "string",
-    completed: "boolean",
-    assignee: "string",
-    createdAt: "number",
-  }),
+    title: v.string(),
+    completed: v.boolean(),
+    assignee: v.string(),
+    createdAt: v.number(),
+    priority: v.optional(v.union(v.literal("low"), v.literal("medium"), v.literal("high"))),
+  }).index("by_assignee", ["assignee"])
+    .index("by_completed", ["completed"]),
   messages: defineTable({
-    content: "string",
-    userId: "string",
-    timestamp: "number",
-  }),
+    content: v.string(),
+    userId: v.string(),
+    timestamp: v.number(),
+    roomId: v.string(),
+  }).index("by_room", ["roomId", "timestamp"]),
 });
 ```
+
+A few notes on schema design. Using `v.optional()` for fields added after launch prevents migration friction — Convex does not require backfilling existing documents when you add optional fields. Adding indexes at schema definition time avoids full-table scans in production; the `by_room` composite index on `[roomId, timestamp]` means fetching a room's message history is a direct index lookup rather than filtering the entire `messages` table.
 
 ## Writing Backend Functions
 
@@ -99,6 +125,60 @@ export const toggleComplete = mutation({
 
 These functions handle reading and writing data. The `query` functions run on read operations, while `mutation` functions handle writes. Claude Code can call these functions directly through the Convex client.
 
+For more complex data access, use the index-based query API to avoid collection scans:
+
+```typescript
+export const getTasksByAssignee = query({
+  args: { assignee: v.string() },
+  handler: async (ctx, args) => {
+    return await ctx.db
+      .query("tasks")
+      .withIndex("by_assignee", (q) => q.eq("assignee", args.assignee))
+      .filter((q) => q.eq(q.field("completed"), false))
+      .collect();
+  },
+});
+
+export const updatePriority = mutation({
+  args: {
+    id: v.id("tasks"),
+    priority: v.union(v.literal("low"), v.literal("medium"), v.literal("high")),
+  },
+  handler: async (ctx, args) => {
+    await ctx.db.patch(args.id, { priority: args.priority });
+  },
+});
+```
+
+The `.withIndex()` call tells Convex to use the `by_assignee` index rather than scanning every document. This is the single most important performance habit in Convex — any query on a field that is not an index key will degrade linearly as your table grows.
+
+### Validation and Authorization in Mutations
+
+Production mutations should validate identity before performing writes. Convex integrates with Clerk, Auth0, and other identity providers through the `ctx.auth` context:
+
+```typescript
+export const createTaskSecure = mutation({
+  args: {
+    title: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthenticated: must be logged in to create tasks");
+    }
+
+    return await ctx.db.insert("tasks", {
+      title: args.title,
+      completed: false,
+      assignee: identity.subject,
+      createdAt: Date.now(),
+    });
+  },
+});
+```
+
+Putting authorization checks inside the mutation — rather than relying on the client to enforce them — ensures that even direct API calls cannot bypass access control.
+
 ## Connecting Frontend to Real-Time Data
 
 Install the Convex client in your frontend:
@@ -110,10 +190,11 @@ npm install convex
 Configure the provider in your application entry point:
 
 ```typescript
-import { ConvexProvider } from "convex/react";
-import { convex } from "./convex";
+import { ConvexProvider, ConvexReactClient } from "convex/react";
 
-export function App({ children }) {
+const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+
+export function App({ children }: { children: React.ReactNode }) {
   return (
     <ConvexProvider client={convex}>
       {children}
@@ -126,19 +207,20 @@ Query real-time data with the `useQuery` hook:
 
 ```typescript
 import { useQuery } from "convex/react";
+import { api } from "../convex/_generated/api";
 
 function TaskList() {
-  const tasks = useQuery("tasks:getTasks");
-  
+  const tasks = useQuery(api.tasks.getTasks);
+
   if (!tasks) return <div>Loading...</div>;
-  
+
   return (
     <ul>
       {tasks.map((task) => (
         <li key={task._id}>
-          <input 
-            type="checkbox" 
-            checked={task.completed} 
+          <input
+            type="checkbox"
+            checked={task.completed}
             onChange={() => toggleComplete(task._id)}
           />
           {task.title} - {task.assignee}
@@ -151,6 +233,38 @@ function TaskList() {
 
 The hook automatically re-renders when data changes on the server. This means multiple users see updates without polling or manual refresh.
 
+For mutations, use the `useMutation` hook:
+
+```typescript
+import { useMutation } from "convex/react";
+import { api } from "../convex/_generated/api";
+
+function AddTaskForm() {
+  const createTask = useMutation(api.tasks.createTask);
+  const [title, setTitle] = React.useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!title.trim()) return;
+    await createTask({ title, assignee: "current-user" });
+    setTitle("");
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Task title"
+      />
+      <button type="submit">Add Task</button>
+    </form>
+  );
+}
+```
+
+Convex mutations are optimistic by default when used through `useMutation` — the UI updates immediately and rolls back if the server rejects the write. This removes a class of latency problems common in traditional REST APIs.
+
 ## Using Claude Code With Convex
 
 When Claude Code has access to your Convex setup, it can generate CRUD operations, suggest schema improvements, and even write test cases. Use the **tdd** skill to create comprehensive tests for your Convex functions:
@@ -159,16 +273,45 @@ When Claude Code has access to your Convex setup, it can generate CRUD operation
 // test/tasks.spec.ts
 import { expect, test } from "vitest";
 import { api } from "../convex/_generated/api";
+import { convexTest } from "convex-test";
+import schema from "../convex/schema";
 
 test("createTask adds a new task", async () => {
-  const taskId = await mutation(api.tasks.createTask({
+  const t = convexTest(schema);
+
+  const taskId = await t.mutation(api.tasks.createTask, {
     title: "Test task",
     assignee: "testuser",
-  }));
-  
+  });
+
   expect(taskId).toBeDefined();
+
+  const tasks = await t.query(api.tasks.getTasks, {});
+  expect(tasks).toHaveLength(1);
+  expect(tasks[0].title).toBe("Test task");
+  expect(tasks[0].completed).toBe(false);
+});
+
+test("toggleComplete flips completion state", async () => {
+  const t = convexTest(schema);
+
+  const taskId = await t.mutation(api.tasks.createTask, {
+    title: "Flippable task",
+    assignee: "testuser",
+  });
+
+  await t.mutation(api.tasks.toggleComplete, { id: taskId });
+
+  const tasks = await t.query(api.tasks.getTasks, {});
+  expect(tasks[0].completed).toBe(true);
+
+  await t.mutation(api.tasks.toggleComplete, { id: taskId });
+  const tasksAfter = await t.query(api.tasks.getTasks, {});
+  expect(tasksAfter[0].completed).toBe(false);
 });
 ```
+
+The `convex-test` package provides an in-memory Convex environment so you do not need a live deployment to run unit tests. This makes CI fast and deterministic.
 
 The **frontend-design** skill helps generate UI components that work with your Convex data, ensuring your interface properly handles loading states and real-time updates.
 
@@ -177,25 +320,68 @@ The **frontend-design** skill helps generate UI components that work with your C
 Convex supports scheduled functions for background processing. Create at `convex/scheduled.ts`:
 
 ```typescript
-import { scheduledJob } from "./_generated/server";
+import { internalMutation, cronJobs } from "./_generated/server";
+import { internal } from "./_generated/api";
 
-export const cleanupOldTasks = scheduledJob({
-  cron: "0 2 * * *",
+const crons = cronJobs();
+
+crons.daily(
+  "cleanup old tasks",
+  { hourUTC: 2, minuteUTC: 0 },
+  internal.scheduled.cleanupOldTasks
+);
+
+export default crons;
+
+export const cleanupOldTasks = internalMutation({
+  args: {},
   handler: async (ctx) => {
     const thirtyDaysAgo = Date.now() - 30 * 24 * 60 * 60 * 1000;
     const oldTasks = await ctx.db
       .query("tasks")
       .filter((q) => q.lt(q.field("createdAt"), thirtyDaysAgo))
       .collect();
-    
+
     for (const task of oldTasks) {
       await ctx.db.delete(task._id);
     }
+
+    return { deleted: oldTasks.length };
   },
 });
 ```
 
-This runs daily at 2 AM to remove stale data. Your Claude Code agent can help maintain and debug these scheduled jobs.
+Note the use of `internalMutation` instead of `mutation`. Internal functions cannot be called from the client — they are only reachable from other server-side functions and scheduled jobs. This is the right pattern for maintenance operations you do not want to expose as a public API.
+
+Convex also supports one-off scheduled calls from within a mutation:
+
+```typescript
+export const createTaskWithReminder = mutation({
+  args: {
+    title: v.string(),
+    assignee: v.string(),
+    reminderInMs: v.number(),
+  },
+  handler: async (ctx, args) => {
+    const taskId = await ctx.db.insert("tasks", {
+      title: args.title,
+      completed: false,
+      assignee: args.assignee,
+      createdAt: Date.now(),
+    });
+
+    await ctx.scheduler.runAfter(
+      args.reminderInMs,
+      internal.notifications.sendReminder,
+      { taskId, assignee: args.assignee }
+    );
+
+    return taskId;
+  },
+});
+```
+
+`ctx.scheduler.runAfter` schedules a function to run after a delay in milliseconds. This is useful for reminders, follow-up emails, or deferred processing without needing a separate queue infrastructure.
 
 ## Production Considerations
 
@@ -205,23 +391,103 @@ When deploying to production, configure your Convex deployment appropriately:
 npx convex deploy
 ```
 
-Set up environment variables for sensitive configuration:
+Set environment variables for sensitive configuration through the Convex dashboard rather than in code. Access them in functions via `process.env`:
 
 ```typescript
-export default defineSchema({
-  apiKeys: defineTable({
-    key: "string",
-    service: "string",
-    encrypted: "boolean",
-  }),
+export const sendWebhook = internalMutation({
+  args: { payload: v.string() },
+  handler: async (ctx, args) => {
+    const webhookUrl = process.env.WEBHOOK_SECRET_URL;
+    if (!webhookUrl) throw new Error("WEBHOOK_SECRET_URL not configured");
+
+    await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: args.payload,
+    });
+  },
 });
 ```
 
-Use the **pdf** skill if you need to generate reports from your Convex data for stakeholders.
+For rate limiting, Convex does not provide built-in rate limiting primitives, but you can implement token bucket logic in a mutation using a dedicated table:
+
+```typescript
+// convex/schema.ts — add to schema
+rateLimits: defineTable({
+  key: v.string(),
+  tokens: v.number(),
+  lastRefill: v.number(),
+}).index("by_key", ["key"]),
+```
+
+```typescript
+// convex/rateLimit.ts
+export async function checkRateLimit(
+  ctx: MutationCtx,
+  key: string,
+  maxTokens: number,
+  refillRateMs: number
+): Promise<boolean> {
+  const existing = await ctx.db
+    .query("rateLimits")
+    .withIndex("by_key", (q) => q.eq("key", key))
+    .unique();
+
+  const now = Date.now();
+
+  if (!existing) {
+    await ctx.db.insert("rateLimits", { key, tokens: maxTokens - 1, lastRefill: now });
+    return true;
+  }
+
+  const elapsed = now - existing.lastRefill;
+  const refilled = Math.min(maxTokens, existing.tokens + Math.floor(elapsed / refillRateMs));
+
+  if (refilled <= 0) return false;
+
+  await ctx.db.patch(existing._id, { tokens: refilled - 1, lastRefill: now });
+  return true;
+}
+```
+
+Call `checkRateLimit` at the top of any mutation that handles external-facing actions, such as sending messages or creating accounts.
+
+Use the **pdf** skill if you need to generate reports from your Convex data for stakeholders. Pair it with a scheduled export mutation that aggregates metrics nightly into a summary document.
+
+## Debugging and Observability
+
+Convex provides a dashboard at dashboard.convex.dev where you can inspect function logs, query execution times, and document contents. During development, `console.log` inside functions surfaces in both the dashboard and the terminal running `npx convex dev`.
+
+For structured logging in production, emit log objects rather than strings:
+
+```typescript
+export const processPayment = mutation({
+  args: { amount: v.number(), userId: v.string() },
+  handler: async (ctx, args) => {
+    console.log(JSON.stringify({
+      event: "payment_started",
+      userId: args.userId,
+      amount: args.amount,
+      timestamp: Date.now(),
+    }));
+
+    // ... payment logic
+
+    console.log(JSON.stringify({
+      event: "payment_completed",
+      userId: args.userId,
+      amount: args.amount,
+      timestamp: Date.now(),
+    }));
+  },
+});
+```
+
+Structured logs are easier to filter in the dashboard and to pipe into external log aggregators via Convex's log streaming feature, available on paid plans.
 
 ## Summary
 
-Convex simplifies backend development by handling real-time synchronization automatically. Combined with Claude Code, you have a powerful setup for building reactive applications. Define your schema, write backend functions, and connect your frontend with minimal boilerplate. The real-time updates work across all connected clients without additional configuration.
+Convex simplifies backend development by handling real-time synchronization automatically. Combined with Claude Code, you have a powerful setup for building reactive applications. Define your schema with proper indexes, write backend functions using the `query`/`mutation`/`internalMutation` primitives, connect your frontend with the `useQuery` and `useMutation` hooks, and let Convex handle the broadcast infrastructure. The real-time updates work across all connected clients without additional configuration, and scheduled jobs give you a clean path for background processing without a separate queue service.
 
 
 ## Related Reading
