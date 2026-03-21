@@ -19,9 +19,24 @@ Android Studio provides a robust IDE with visual tools, emulator management, and
 
 ## Why Consider Claude Code for Android Development
 
-Android Studio excels at visual layout editing, APK signing, and device management. Yet when it comes to writing repetitive boilerplate—ViewModels, Room entities, repository patterns—developers often find themselves typing the same code across multiple files. Claude Code addresses this gap by providing an AI partner that understands your codebase context and generates code aligned with your existing patterns.
+Android Studio excels at visual layout editing, APK signing, and device management. Yet when it comes to writing repetitive boilerplate—ViewModels, Room entities, repository patterns—developers often find themselves typing the same code across multiple files. A single feature in a modern Android app following Clean Architecture can require touching half a dozen files before a single business logic line is written: the entity, the DAO, the repository interface, the repository implementation, the use case, the ViewModel, and the UI state class.
+
+Claude Code addresses this gap by providing an AI partner that understands your codebase context and generates code aligned with your existing patterns. Instead of spending 45 minutes scaffolding a new feature module, you describe the requirements conversationally and Claude produces a working first draft across all the necessary files.
 
 The transition does not mean abandoning Android Studio. Instead, you use Claude Code for code generation, debugging, and architecture discussions while keeping Android Studio for visual tasks and running emulators. This hybrid approach uses the strengths of both tools.
+
+| Task | Best Tool |
+|---|---|
+| Code generation & refactoring | Claude Code |
+| Layout editing (drag-and-drop) | Android Studio |
+| Debugging runtime state | Android Studio debugger |
+| Stack trace analysis | Claude Code |
+| APK signing & release builds | Android Studio / Gradle |
+| ViewModel & repository boilerplate | Claude Code |
+| Memory/CPU profiling | Android Studio Profiler |
+| Architecture discussions | Claude Code |
+| Emulator management | Android Studio |
+| Dependency version research | Claude Code |
 
 ## Setting Up Your Development Environment
 
@@ -45,7 +60,21 @@ cd your-android-project
 claude
 ```
 
-This opens an interactive session in your project directory. Describe your project to Claude so it can tailor its assistance to your codebase.
+This opens an interactive session in your project directory. Describe your project to Claude so it can tailor its assistance to your codebase. A good opening prompt includes your architecture pattern, dependency injection framework, minimum SDK version, and whether you're using View-based layouts or Jetpack Compose:
+
+```
+I'm working on a Kotlin Android app targeting API 26+. We use:
+- MVVM architecture with Clean Architecture layering
+- Hilt for dependency injection
+- Room for local persistence
+- Retrofit + OkHttp for networking
+- Jetpack Compose for UI
+- Kotlin Coroutines and Flow for async
+
+Please keep all generated code consistent with these patterns.
+```
+
+This context front-loads Claude with everything it needs to generate code that fits your project without needing correction.
 
 ## Core Workflow Differences
 
@@ -54,7 +83,7 @@ This opens an interactive session in your project directory. Describe your proje
 In Android Studio, you might use "Generate" menu options or Live Templates to create Activities, Fragments, or ViewModels. With Claude Code, you describe what you need in plain language:
 
 ```
-User: Create a LoginActivity with email and password fields, form validation, 
+User: Create a LoginActivity with email and password fields, form validation,
 and a ViewModel that calls a AuthRepository. Use Hilt for dependency injection.
 ```
 
@@ -65,11 +94,11 @@ Claude generates the complete implementation:
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     private val viewModel: LoginViewModel by viewModels()
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        
+
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString()
             val password = etPassword.text.toString()
@@ -83,10 +112,10 @@ class LoginActivity : AppCompatActivity() {
 class LoginViewModel @Inject constructor(
     private val authRepository: AuthRepository
 ) : ViewModel() {
-    
+
     private val _uiState = MutableStateFlow<LoginUiState>(LoginUiState.Idle)
     val uiState: StateFlow<LoginUiState> = _uiState
-    
+
     fun login(email: String, password: String) {
         viewModelScope.launch {
             _uiState.value = LoginUiState.Loading
@@ -98,12 +127,68 @@ class LoginViewModel @Inject constructor(
 }
 ```
 
+For Jetpack Compose, the same conversational approach works equally well. Ask Claude to generate a Compose screen and it will produce a composable that follows the Compose state-hoisting conventions and Material3 component guidelines:
+
+```kotlin
+@Composable
+fun LoginScreen(
+    uiState: LoginUiState,
+    onLoginClick: (String, String) -> Unit
+) {
+    var email by rememberSaveable { mutableStateOf("") }
+    var password by rememberSaveable { mutableStateOf("") }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 24.dp),
+        verticalArrangement = Arrangement.Center
+    ) {
+        OutlinedTextField(
+            value = email,
+            onValueChange = { email = it },
+            label = { Text("Email") },
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth()
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        OutlinedTextField(
+            value = password,
+            onValueChange = { password = it },
+            label = { Text("Password") },
+            visualTransformation = PasswordVisualTransformation(),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth()
+        )
+        Spacer(modifier = Modifier.height(24.dp))
+        Button(
+            onClick = { onLoginClick(email, password) },
+            enabled = uiState !is LoginUiState.Loading,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            if (uiState is LoginUiState.Loading) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(20.dp),
+                    color = MaterialTheme.colorScheme.onPrimary
+                )
+            } else {
+                Text("Log In")
+            }
+        }
+    }
+}
+```
+
+Claude handles the state hoisting, loading state visual feedback, and keyboard type configuration automatically—details that are easy to forget when writing from scratch.
+
 ### Debugging and Error Resolution
 
 Android Studio's debugger excels at runtime inspection. However, understanding crash stacks or diagnosing logic errors often requires significant manual effort. When you encounter an error, paste the stack trace to Claude:
 
 ```
-User: This coroutine is throwing a CancellationException but I don't 
+User: This coroutine is throwing a CancellationException but I don't
 understand why. Here's the stack trace:
 
 java.util.concurrent.CancellationException
@@ -112,6 +197,52 @@ java.util.concurrent.CancellationException
 ```
 
 Claude analyzes the context, identifies the likely cause (often a scope management issue), and suggests a fix. This accelerates debugging significantly compared to manually tracing through coroutine lifecycle management.
+
+For more complex issues like memory leaks, share your relevant code and ask Claude to identify retention paths:
+
+```
+User: The LeakCanary report shows my MainFragment is leaking.
+It references a listener that holds a Context. Here's the relevant code:
+[paste code]
+```
+
+Claude identifies the leak site, explains why it occurs, and generates the corrected code using weak references or proper lifecycle cleanup—often in under a minute.
+
+### Refactoring Legacy Code
+
+One area where Claude Code significantly outpaces Android Studio's built-in refactoring tools is large-scale architectural migrations. If you're moving from an MVP codebase to MVVM, or migrating from RxJava to Coroutines/Flow, Claude can guide the migration systematically.
+
+For a RxJava to Coroutines migration:
+
+```
+User: Convert this RxJava chain to Kotlin Coroutines and Flow.
+Preserve the error handling and keep the thread management equivalent.
+
+val disposable = userRepository.fetchUser(userId)
+    .subscribeOn(Schedulers.io())
+    .observeOn(AndroidSchedulers.mainThread())
+    .subscribe(
+        { user -> updateUI(user) },
+        { error -> showError(error) }
+    )
+```
+
+Claude produces the equivalent Coroutines implementation:
+
+```kotlin
+viewModelScope.launch {
+    try {
+        val user = withContext(Dispatchers.IO) {
+            userRepository.fetchUser(userId)
+        }
+        updateUI(user)
+    } catch (e: Exception) {
+        showError(e)
+    }
+}
+```
+
+And can extend that to a full Flow-based reactive pattern if your repository returns `Flow<User>` instead.
 
 ## Integrating Claude Skills for Android Development
 
@@ -124,17 +255,19 @@ The **tdd** skill helps you write tests before implementation, a practice that i
 @Test
 fun `login with invalid email shows error state`() = runTest {
     val viewModel = LoginViewModel(fakeAuthRepository)
-    
+
     viewModel.login("invalid-email", "password123")
-    
+
     assertTrue(viewModel.uiState.value is LoginUiState.Error)
 }
 ```
 
+The tdd skill can also generate the full test suite for a ViewModel in one shot. Ask it to generate tests for all public methods and state transitions, and it will produce tests for the happy path, error paths, loading state management, and edge cases like empty inputs or network timeouts.
+
 The **pdf** skill enables generating documentation directly from your codebase. After implementing a feature, ask Claude to document the API surface:
 
 ```
-User: Generate documentation for the authentication module including 
+User: Generate documentation for the authentication module including
 all public methods and their contracts.
 ```
 
@@ -146,7 +279,7 @@ The **frontend-design** skill assists with XML layouts and Jetpack Compose probl
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
-    
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -156,12 +289,12 @@ The **frontend-design** skill assists with XML layouts and Jetpack Compose probl
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-        
+
     <!-- Additional fields generated based on requirements -->
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-The **supermemory** skill tracks decisions made across your project. When you return to a codebase after weeks, ask Claude what architecture decisions were made and why—essential for maintaining consistency in larger teams.
+The **supermemory** skill tracks decisions made across your project. When you return to a codebase after weeks, ask Claude what architecture decisions were made and why—essential for maintaining consistency in larger teams. Supermemory is particularly useful on Android projects where the same team may be working across multiple feature modules with different patterns inherited from different contributors.
 
 ## Adapting Your Build Process
 
@@ -175,18 +308,109 @@ e: file.kt:10: Unresolved reference: ViewModelScope
 How do I fix this?
 ```
 
-Claude identifies missing dependencies or import issues, guiding you toward resolution without requiring manual investigation of build.gradle files.
+Claude identifies missing dependencies or import issues, guiding you toward resolution without requiring manual investigation of build.gradle files. In this case it would note that `viewModelScope` requires the `androidx.lifecycle:lifecycle-viewmodel-ktx` dependency and show you the exact line to add to your `build.gradle.kts`:
+
+```kotlin
+dependencies {
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+}
+```
+
+Claude is also helpful for Gradle version catalog migrations. If you're moving from inline dependency declarations to `libs.versions.toml`, describe the pattern and Claude will generate the toml entries and the corresponding updated build.gradle references together:
+
+```toml
+# libs.versions.toml
+[versions]
+lifecycle = "2.7.0"
+
+[libraries]
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+```
+
+```kotlin
+// build.gradle.kts after migration
+dependencies {
+    implementation(libs.lifecycle.viewmodel.ktx)
+}
+```
+
+## Working With Room Databases
+
+Room is one of the highest-boilerplate areas of Android development. For a single entity, you typically need the entity class, the DAO interface, the Database class extension, and migration scripts for schema changes. Claude generates all of these together when you describe the data model:
+
+```
+User: Create a Room entity for a Task with id, title, description,
+due date, completion status, and priority level. Include the DAO
+with CRUD operations and a query for incomplete tasks sorted by due date.
+```
+
+Claude produces:
+
+```kotlin
+@Entity(tableName = "tasks")
+data class TaskEntity(
+    @PrimaryKey(autoGenerate = true)
+    val id: Long = 0,
+    val title: String,
+    val description: String?,
+    val dueDate: Long?,  // Unix timestamp
+    val isCompleted: Boolean = false,
+    val priority: Int = 0  // 0=Low, 1=Medium, 2=High
+)
+
+@Dao
+interface TaskDao {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(task: TaskEntity): Long
+
+    @Update
+    suspend fun update(task: TaskEntity)
+
+    @Delete
+    suspend fun delete(task: TaskEntity)
+
+    @Query("SELECT * FROM tasks WHERE id = :id")
+    suspend fun getById(id: Long): TaskEntity?
+
+    @Query("""
+        SELECT * FROM tasks
+        WHERE isCompleted = 0
+        ORDER BY
+            CASE WHEN dueDate IS NULL THEN 1 ELSE 0 END,
+            dueDate ASC,
+            priority DESC
+    """)
+    fun getIncompleteTasks(): Flow<List<TaskEntity>>
+}
+```
+
+The `getIncompleteTasks` query handles null due dates gracefully (pushing them to the bottom) and sorts by both date and priority—the kind of nuanced SQL that takes time to write correctly from scratch.
 
 ## When to Keep Android Studio
 
 Certain tasks remain better suited for Android Studio:
 
-- Visual layout editing with drag-and-drop
+- Visual layout editing with drag-and-drop in the layout editor
 - Running and debugging on physical devices or emulators
 - Managing signing configurations and APK variants
-- Using the profiler for memory and performance analysis
+- Using the profiler for memory, CPU, and network analysis
+- Viewing the full accessibility scanner results for a running app
+- Navigating to resource declarations and usages with IDE shortcuts
+- Managing Android Virtual Device (AVD) configurations
 
-The optimal workflow combines both tools: generate code and debug with Claude Code, then switch to Android Studio for visual refinement and device testing.
+The optimal workflow combines both tools: generate code and debug with Claude Code, then switch to Android Studio for visual refinement and device testing. Many developers keep both open simultaneously—Claude Code in the terminal for generation, Android Studio for running builds and checking the layout preview.
+
+## Practical Tips for the Transition
+
+**Start with new features, not existing code.** It's easier to build new features with Claude Code than to migrate a large existing codebase all at once. Pick the next feature on your backlog and build it entirely using this workflow.
+
+**Give Claude your existing patterns early.** Before asking Claude to generate a new screen, show it an example of an existing screen in your codebase. This dramatically improves consistency.
+
+**Use Claude to write your Gradle dependency updates.** Dependency management in Android is tedious. Ask Claude to research the latest stable versions of your dependencies and generate the updated `libs.versions.toml` block.
+
+**Let Claude explain unfamiliar APIs.** If you encounter an API you haven't used before, ask Claude to explain it with a concrete example tailored to your use case—faster than reading through official documentation.
+
+**Commit Claude-generated code in logical units.** Don't generate a huge feature and commit it all at once. Generate in pieces, review each piece, and commit incrementally. This keeps your git history clean and makes code review manageable.
 
 ## Conclusion
 
