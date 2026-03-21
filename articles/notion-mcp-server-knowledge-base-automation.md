@@ -10,6 +10,8 @@ reviewed: true
 score: 7
 permalink: /notion-mcp-server-knowledge-base-automation/
 ---
+{% raw %}
+
 
 # Notion MCP Server Knowledge Base Automation
 
@@ -423,3 +425,4 @@ The Notion MCP server transforms your knowledge base from passive documentation 
 - [Integrations Hub](/claude-skills-guide/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
