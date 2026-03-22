@@ -10,6 +10,7 @@ permalink: /claude-code-for-architecture-decision-record-workflow/
 score: 7
 reviewed: true
 ---
+{% raw %}
 
 # Claude Code for Architecture Decision Record Workflow
 
@@ -433,3 +434,4 @@ Start by using Claude Code for your next architectural decision. You will be sur
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-sentry-error-tracking-source-maps-workflow/
 ---
+{% raw %}
 
 # Claude Code Sentry Error Tracking Source Maps Workflow
 
@@ -298,3 +299,4 @@ Claude's output gives your on-call engineer an immediate triage summary without 
 - [Claude Skills Hub](/claude-skills-guide/workflows-hub/) — Explore monitoring, observability, and debugging workflows with Claude Code
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

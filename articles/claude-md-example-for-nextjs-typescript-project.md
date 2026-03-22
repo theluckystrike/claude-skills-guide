@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
 
 
 # Claude MD Example for Next.js TypeScript Project
@@ -593,3 +594,4 @@ The investment in writing a good skill file is small compared to the accumulated
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
