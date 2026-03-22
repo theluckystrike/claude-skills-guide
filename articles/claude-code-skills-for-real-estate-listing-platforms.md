@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-skills-for-real-estate-listing-platforms/
 ---
+{% raw %}
 
 # Claude Code Skills for Real Estate Listing Platforms
 
@@ -618,3 +619,4 @@ The xlsx and pdf skills reduce the engineering burden on the data pipeline and d
 - [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for property and booking platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

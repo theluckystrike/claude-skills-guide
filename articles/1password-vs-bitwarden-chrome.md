@@ -11,6 +11,7 @@ score: 8
 categories: [comparisons]
 tags: [chrome, claude-skills]
 ---
+{% raw %}
 
 
 # 1Password vs Bitwarden Chrome: Which Password Manager Works Best for Developers?
@@ -314,3 +315,4 @@ Evaluate based on your team's specific needs, security requirements, and budget 
 - [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
