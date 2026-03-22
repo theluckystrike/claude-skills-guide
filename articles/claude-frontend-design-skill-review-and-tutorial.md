@@ -10,6 +10,7 @@ reviewed: true
 score: 7
 permalink: /claude-frontend-design-skill-review-and-tutorial/
 ---
+{% raw %}
 
 # Claude Frontend Design Skill Review and Tutorial
 
@@ -805,3 +806,4 @@ Start with simple components to understand the skill's patterns, then scale to c
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)
 *
+{% endraw %}
