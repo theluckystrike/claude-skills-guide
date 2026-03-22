@@ -34,6 +34,23 @@ Modern HTML5 semantic elements automatically map to these landmarks. The `<main>
 
 However, improper implementation creates problems. A page with multiple `<nav>` elements but no accessible names forces screen reader users to guess which navigation contains the primary menu versus supplementary links. Similarly, pages without a main landmark force users to read through headers, sidebars, and footers to find actual content.
 
+### HTML5 Elements to ARIA Role Mapping
+
+Understanding the implicit mappings eliminates redundant role attributes in your markup. When a semantic element already provides the correct implicit role, adding an explicit `role` attribute is noise—not a problem per se, but unnecessary.
+
+| HTML5 Element | Implicit ARIA Role | Notes |
+|---|---|---|
+| `<header>` (top-level) | `banner` | Only when not nested inside `<article>`, `<aside>`, `<main>`, `<nav>`, or `<section>` |
+| `<nav>` | `navigation` | Each `<nav>` element creates a separate navigation landmark |
+| `<main>` | `main` | Only one allowed per page |
+| `<aside>` | `complementary` | Supporting content, not required reading |
+| `<footer>` (top-level) | `contentinfo` | Only when not nested inside sectioning elements |
+| `<form>` | `form` | Only when the form has an accessible name via `aria-label` or `aria-labelledby` |
+| `<section>` | `region` | Only when the section has an accessible name |
+| `<search>` | `search` | HTML living standard addition; use `role="search"` for broader support |
+
+A header nested inside an `<article>` does not get the `banner` role—it remains a generic `<header>` element with no landmark semantics. This distinction catches many developers off guard during audits.
+
 ## Setting Up Your Accessibility Environment
 
 Before implementing landmark regions, configure Claude Code with appropriate skills. The **accessibility-testing** skill provides automated auditing capabilities, while the **frontend-design** skill offers templates for proper landmark implementation.
@@ -54,6 +71,16 @@ The **tdd** skill complements accessibility work by generating automated tests t
 
 These skills work together—frontend-design generates proper markup, while tdd ensures landmarks remain correctly implemented through refactoring and updates.
 
+### Prompting Claude Code Effectively for Accessibility Work
+
+The quality of output from Claude Code scales directly with how specifically you describe your page structure. Compare these two prompts:
+
+**Vague prompt**: "Add landmark regions to my page."
+
+**Effective prompt**: "I have a marketing landing page built with generic `<div>` elements. The page has: a top header with a logo and primary nav, a hero section, three feature cards in a row, a pricing table, a contact form, and a footer with social links and legal text. Audit this HTML and add appropriate landmark regions with aria-label values for any duplicated landmark types. Flag any places where I have nested landmarks."
+
+The second prompt gives Claude Code enough context to generate accurate, non-generic markup rather than a boilerplate skeleton you have to adapt anyway.
+
 ## Implementing Landmark Regions Correctly
 
 ### Using Semantic HTML
@@ -67,9 +94,9 @@ The simplest approach uses semantic HTML5 elements, which browsers and assistive
   <title>E-commerce Product Page</title>
 </head>
 <body>
-  <header role="banner">
+  <header>
     <img src="logo.svg" alt="Company Name">
-    <nav role="navigation" aria-label="Primary">
+    <nav aria-label="Primary">
       <ul>
         <li><a href="/products">Products</a></li>
         <li><a href="/about">About</a></li>
@@ -77,25 +104,25 @@ The simplest approach uses semantic HTML5 elements, which browsers and assistive
     </nav>
   </header>
 
-  <main role="main">
+  <main>
     <article>
       <h1>Product Name</h1>
       <p>Product description...</p>
     </article>
   </main>
 
-  <aside role="complementary" aria-label="Related products">
+  <aside aria-label="Related products">
     <h2>Related Products</h2>
   </aside>
 
-  <footer role="contentinfo">
+  <footer>
     <p>&copy; 2026 Company Name</p>
   </footer>
 </body>
 </html>
 ```
 
-Notice each landmark includes an `aria-label` or `aria-labelledby` attribute when multiple elements share the same role. This provides context—screen readers announce "navigation, primary" rather than simply "navigation."
+Notice the navigation element includes an `aria-label` attribute. When multiple elements share the same role, the label provides context—screen readers announce "navigation, primary" rather than simply "navigation." Without the label, users navigating between landmarks cannot distinguish one `<nav>` from another.
 
 ### Adding Landmarks to Existing Projects
 
@@ -107,15 +134,35 @@ For legacy applications without semantic markup, add landmark roles to existing 
   <div class="logo"></div>
   <div class="menu"></div>
 </div>
+<div class="content">
+  <p>Main page content here</p>
+</div>
+<div class="sidebar">
+  <p>Related links</p>
+</div>
+<div class="footer">
+  <p>&copy; 2026</p>
+</div>
 
 <!-- After: Proper landmarks added -->
 <div class="header" role="banner">
   <div class="logo"></div>
   <nav class="menu" role="navigation" aria-label="Main menu"></nav>
 </div>
+<main class="content" role="main">
+  <p>Main page content here</p>
+</main>
+<aside class="sidebar" role="complementary" aria-label="Related links">
+  <p>Related links</p>
+</aside>
+<div class="footer" role="contentinfo">
+  <p>&copy; 2026</p>
+</div>
 ```
 
 When adding roles to existing elements, ensure the element's semantics remain compatible. Adding `role="navigation"` to a `<div>` works, but avoid adding conflicting roles like `role="button"` to elements that function as headings.
+
+For large legacy codebases, Claude Code can scan your templates and flag every element that should carry a landmark role but does not. Provide it with a representative page template and ask for a full audit with specific line-number references to fix.
 
 ### Dynamic Content and Single-Page Applications
 
@@ -132,6 +179,99 @@ Single-page applications and dynamically loaded content require special attentio
 ```
 
 JavaScript then populates the main content area without requiring new landmark containers. This approach maintains consistent navigation structure regardless of which view displays.
+
+### Route Changes and Focus Management in SPAs
+
+In a single-page application, navigating between routes does not trigger a page reload, so the browser does not automatically move focus or announce a new page to screen readers. Proper landmark structure is necessary but not sufficient—you also need to manage focus on route transitions.
+
+```javascript
+// React example with focus management on route change
+import { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
+
+function RouteChangeAnnouncer() {
+  const location = useLocation();
+  const mainRef = useRef(null);
+  const announceRef = useRef(null);
+
+  useEffect(() => {
+    // Get the page title from the document or a data attribute
+    const pageTitle = document.title || 'New page loaded';
+
+    // Update the live region so screen readers announce the navigation
+    if (announceRef.current) {
+      announceRef.current.textContent = '';
+      // Small timeout forces re-announcement even if text is the same
+      setTimeout(() => {
+        announceRef.current.textContent = `Navigated to ${pageTitle}`;
+      }, 100);
+    }
+
+    // Move focus to the main content area
+    if (mainRef.current) {
+      mainRef.current.focus();
+    }
+  }, [location.pathname]);
+
+  return (
+    <>
+      {/* Visually hidden live region for announcements */}
+      <div
+        ref={announceRef}
+        aria-live="polite"
+        aria-atomic="true"
+        style={{
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          overflow: 'hidden',
+          clip: 'rect(0,0,0,0)',
+          whiteSpace: 'nowrap'
+        }}
+      />
+      <main ref={mainRef} tabIndex={-1} id="main-content">
+        {/* Route content renders here */}
+      </main>
+    </>
+  );
+}
+```
+
+The `tabIndex={-1}` on the `<main>` element allows programmatic focus without placing it in the natural tab order. This is a standard pattern for focus management in accessible SPAs.
+
+### Form and Search Landmarks
+
+The `form` and `search` landmarks are commonly missed. A form only gains the `form` landmark role when it has an accessible name. An unnamed `<form>` element has no implicit landmark role at all.
+
+```html
+<!-- This form has NO landmark role — it is just a generic container -->
+<form method="post" action="/subscribe">
+  <input type="email" name="email">
+  <button type="submit">Subscribe</button>
+</form>
+
+<!-- This form IS a landmark — it has an accessible name -->
+<form method="post" action="/subscribe" aria-label="Newsletter signup">
+  <input type="email" name="email" aria-label="Email address">
+  <button type="submit">Subscribe</button>
+</form>
+
+<!-- Search landmark — prefer the HTML element for new builds -->
+<search>
+  <label for="site-search">Search this site</label>
+  <input type="search" id="site-search" name="q">
+  <button type="submit">Search</button>
+</search>
+
+<!-- For older browsers that do not support <search> -->
+<form role="search" aria-label="Site search">
+  <label for="site-search">Search this site</label>
+  <input type="search" id="site-search" name="q">
+  <button type="submit">Search</button>
+</form>
+```
+
+Ask Claude Code to audit your forms specifically for accessible names. In a typical codebase, fewer than half of forms that should be landmarks actually carry the necessary label.
 
 ## Auditing Landmark Implementation
 
@@ -152,6 +292,106 @@ Common issues discovered during audits include:
 - Empty landmark containers that confuse users
 - Landmark roles added but semantic elements ignored
 
+### Automated Auditing with axe-core
+
+For programmatic auditing during development and CI pipelines, axe-core provides reliable landmark checks:
+
+```javascript
+// Install: npm install axe-core
+import axe from 'axe-core';
+
+async function auditLandmarks(pageUrl) {
+  // Run axe with landmark-specific rules
+  const results = await axe.run(document, {
+    runOnly: {
+      type: 'rule',
+      values: [
+        'landmark-banner-is-top-level',
+        'landmark-complementary-is-top-level',
+        'landmark-contentinfo-is-top-level',
+        'landmark-main-is-top-level',
+        'landmark-no-duplicate-banner',
+        'landmark-no-duplicate-contentinfo',
+        'landmark-no-duplicate-main',
+        'landmark-one-main',
+        'landmark-unique',
+        'region'
+      ]
+    }
+  });
+
+  if (results.violations.length > 0) {
+    console.error('Landmark violations found:');
+    results.violations.forEach(violation => {
+      console.error(`  [${violation.impact}] ${violation.description}`);
+      violation.nodes.forEach(node => {
+        console.error(`    Element: ${node.html}`);
+        console.error(`    Fix: ${node.failureSummary}`);
+      });
+    });
+  } else {
+    console.log('No landmark violations found.');
+  }
+
+  return results;
+}
+```
+
+Integrate this into your CI pipeline with Playwright or Puppeteer to catch regressions before they reach production:
+
+```javascript
+// In your Playwright test suite
+import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+
+test('homepage has correct landmark structure', async ({ page }) => {
+  await page.goto('/');
+
+  const results = await new AxeBuilder({ page })
+    .include('body')
+    .withRules([
+      'landmark-one-main',
+      'landmark-no-duplicate-banner',
+      'landmark-unique'
+    ])
+    .analyze();
+
+  expect(results.violations).toEqual([]);
+});
+
+test('all navigation landmarks are labeled', async ({ page }) => {
+  await page.goto('/');
+
+  const navElements = await page.locator('nav, [role="navigation"]').all();
+
+  // If there are multiple nav elements, each needs an aria-label
+  if (navElements.length > 1) {
+    for (const nav of navElements) {
+      const label = await nav.getAttribute('aria-label');
+      const labelledby = await nav.getAttribute('aria-labelledby');
+      expect(label || labelledby).toBeTruthy();
+    }
+  }
+});
+```
+
+Ask Claude Code to generate a complete Playwright accessibility test suite for your project. Provide your site map and page types, and request tests that cover landmark structure, focus order, and keyboard navigation.
+
+### Manual Testing with Screen Readers
+
+Automated tools catch structural problems but cannot verify that the landmark labels are meaningful to real users. Manual testing with actual screen readers remains essential.
+
+| Screen Reader | OS | Navigation Shortcut | Landmark List |
+|---|---|---|---|
+| NVDA | Windows | `D` to next landmark, `Shift+D` to previous | Insert+F7 |
+| JAWS | Windows | `R` to next landmark | Insert+F3 |
+| VoiceOver | macOS | `VO+U` opens rotor, then arrow to Landmarks | VO+U, then arrow |
+| VoiceOver | iOS | Rotor gesture, select Landmarks | Two-finger twist |
+| TalkBack | Android | Swipe to navigate, use local context menu | Via navigation settings |
+| Narrator | Windows | `Caps Lock+F5` lists landmarks | Caps Lock+F5 |
+
+A practical testing workflow: open your page in NVDA or VoiceOver, navigate directly to the landmarks list, and verify that each landmark has a meaningful name. Then navigate the page using only landmark shortcuts and ask: can I reach every section of this page without using the tab key? If the answer is no, a section is likely missing a landmark.
+
 ## Best Practices and Common Pitfalls
 
 ### Do
@@ -160,6 +400,8 @@ Common issues discovered during audits include:
 - Label multiple landmarks of the same type
 - Include landmarks in all page templates
 - Test with actual screen readers (NVDA, VoiceOver, JAWS)
+- Verify landmarks on error pages, empty states, and modal dialogs
+- Use skip links in addition to landmarks for keyboard users who do not use screen readers
 
 ### Don't
 
@@ -167,25 +409,92 @@ Common issues discovered during audits include:
 - Add landmark roles to non-landmark containers without cause
 - Leave landmark containers empty
 - Use landmarks for styling hooks (use classes instead)
+- Add role attributes that duplicate the implicit role of an HTML element
 
-The most common mistake involves placing one landmark inside another. For example, putting a `<nav>` inside `<header>` works, but creating a landmark inside another landmark causes confusion:
+### Skip Links: The Companion to Landmarks
+
+Landmark regions help screen reader users, but keyboard-only users who do not use screen readers benefit from skip links. These are anchors that appear on focus and allow users to jump past repetitive navigation directly to main content. Skip links and landmarks serve different but overlapping audiences and should both be present.
 
 ```html
-<!-- Avoid: nested landmarks cause confusion -->
-<main role="main">
-  <nav role="navigation">
-    <!-- This navigation is inside main, unclear to users -->
-  </nav>
+<!-- Place this as the first element inside <body> -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Visually hidden until focused -->
+<style>
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+</style>
+
+<header>...</header>
+<main id="main-content" tabindex="-1">
+  <!-- tabindex="-1" allows the skip link focus to land here -->
+  <h1>Page title</h1>
 </main>
 ```
 
-Instead, use the navigation within main without making it a landmark itself, or accept that users will encounter the nested navigation after reaching main content.
+### Nested Landmarks: The Most Common Mistake
+
+The most common mistake involves placing one landmark inside another in ways that create confusing page structure. For example, putting a `<nav>` inside `<header>` is perfectly acceptable—a primary navigation inside a banner is expected. But creating a landmark inside `<main>` when you simply want to group content visually is incorrect.
+
+```html
+<!-- Avoid: navigation inside main creates a confusing landmark tree -->
+<main role="main">
+  <nav role="navigation">
+    <!-- This in-page navigation is inside main — misleading to users -->
+  </nav>
+</main>
+
+<!-- Better: use a plain <ul> for in-page anchor links -->
+<main>
+  <nav aria-label="On this page">
+    <!-- Acceptable — clearly labeled in-page TOC navigation -->
+    <ul>
+      <li><a href="#section-1">Section 1</a></li>
+      <li><a href="#section-2">Section 2</a></li>
+    </ul>
+  </nav>
+  <section id="section-1">...</section>
+  <section id="section-2">...</section>
+</main>
+```
+
+In the corrected example, the in-page table of contents navigation carries a clear `aria-label` that tells screen reader users exactly what it is. Users navigating by landmarks will encounter "navigation, on this page" — clear and expected.
+
+### Landmark Density: More Is Not Better
+
+Adding a landmark to every `<section>` on your page creates a landmark list that is as useless as no landmarks at all. The WCAG guidance on the `region` role (which `<section>` maps to) is explicit: only use it for sections that are important enough to be listed in the landmark navigation.
+
+A useful heuristic: if a user would reasonably want to navigate directly to this section from a landmarks list, give it a landmark. If it is just a visual grouping of related content, use `<section>` without a label and it will not become a region landmark.
+
+## Testing Your Implementation End-to-End
+
+A complete accessibility workflow for landmark regions involves three layers of verification:
+
+1. **Static analysis**: Lint your HTML with tools like HTML-validate configured with accessibility rules. Catches structural problems at build time.
+
+2. **Automated runtime audit**: Run axe-core in CI via Playwright or Cypress. Catches landmark violations in rendered output, including JavaScript-generated markup.
+
+3. **Manual screen reader testing**: Verify that the landmark labels are meaningful and navigation is practical. No automated tool can tell you whether "navigation, nav-1" is a useful label (it is not).
+
+Claude Code can generate the configuration for all three layers. Describe your build toolchain—whether you use Vite, Next.js, Astro, or a custom setup—and ask for a complete accessibility testing pipeline that runs on every pull request.
 
 ## Conclusion
 
-Landmark regions form the navigation backbone of accessible websites. By leveraging Claude Code and accessibility skills, you can implement proper landmarks from project start and maintain them through development cycles. The investment minimal—proper landmark implementation takes minutes—while the benefit to screen reader users is substantial. Users gain the ability to navigate directly to content that matters to them, bypassing repetitive elements that would otherwise require dozens of tab presses.
+Landmark regions form the navigation backbone of accessible websites. By leveraging Claude Code and accessibility skills, you can implement proper landmarks from project start and maintain them through development cycles. The investment is minimal—proper landmark implementation takes minutes—while the benefit to screen reader users is substantial. Users gain the ability to navigate directly to content that matters to them, bypassing repetitive elements that would otherwise require dozens of tab presses.
 
-Start by auditing your current projects for landmark presence, then add missing regions and labels. Your users will notice the improvement immediately.
+Start by auditing your current projects for landmark presence using axe-core, then add missing regions and labels. Pair your landmarks with skip links for keyboard-only users, and validate with at least one real screen reader before shipping. Your users will notice the improvement immediately.
 
 {% endraw %}
 
