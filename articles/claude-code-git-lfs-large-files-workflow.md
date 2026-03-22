@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 
 # Git LFS with Claude Code: Managing Large Files Effectively
@@ -463,3 +464,4 @@ Investing time in a solid CLAUDE.md that documents your LFS setup pays dividends
 - [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Git workflow automation guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
