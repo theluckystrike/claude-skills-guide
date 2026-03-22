@@ -5,7 +5,7 @@ description: "A comprehensive guide to integrating Claude Code with Single Sign-
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-claude-sso-integration-workflow-tutorial-gui/
-categories: [Developer Tools, Authentication, Security]
+categories: [guides, security]
 tags: [claude-code, claude-skills]
 ---
 

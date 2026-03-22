@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code to automate and streamline your 
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-claude-rfp-response-ai-workflow-tutorial-gui/
-categories: [Development, AI, Automation]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
