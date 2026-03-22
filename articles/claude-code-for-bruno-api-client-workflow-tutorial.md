@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code to streamline your Bruno API cli
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-bruno-api-client-workflow-tutorial/
-categories: [tutorials, api-development]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills, bruno, api-client, workflow-automation]
 ---
 
