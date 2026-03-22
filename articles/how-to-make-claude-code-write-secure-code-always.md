@@ -23,7 +23,59 @@ The foundation of secure code generation starts with how you instruct Claude. Ad
 
 Your system prompt should include requirements like validating all inputs, sanitizing data before use, avoiding hardcoded secrets, and following the principle of least privilege. When you explicitly state these requirements, Claude incorporates them into its decision-making process for every code generation task.
 
-For example, when generating a Python API endpoint, Claude will automatically add input validation, use parameterized queries for database operations, and avoid exposing sensitive data in error messages.
+Here is a practical example of a security-focused system prompt you can drop into your Claude Code configuration:
+
+```
+You are a security-conscious developer. For every code generation task:
+- Validate and sanitize all user inputs before processing
+- Use parameterized queries or prepared statements for all database operations
+- Never hardcode secrets, API keys, passwords, or tokens
+- Apply the principle of least privilege to all permissions and access controls
+- Use framework-provided escaping functions for all output rendering
+- Wrap sensitive operations in try/catch blocks that do not leak stack traces
+- Prefer well-audited libraries over hand-rolled cryptography
+- Always use HTTPS for external API calls
+- Log security events but never log credentials or PII
+```
+
+When this prompt is active, Claude will automatically add input validation when generating a Python API endpoint, use parameterized queries for database operations, and avoid exposing sensitive data in error messages. The explicit declaration removes ambiguity — Claude does not have to guess your standards.
+
+### A Real Example: Insecure vs. Secure Output
+
+Without a security-focused system prompt, Claude might generate this login handler:
+
+```python
+# WITHOUT security instructions — dangerous
+def login(username, password):
+    query = f"SELECT * FROM users WHERE username='{username}' AND password='{password}'"
+    user = db.execute(query).fetchone()
+    if user:
+        return {"status": "ok", "user": dict(user)}
+    return {"status": "fail", "error": f"No user found for {username}"}
+```
+
+This code is vulnerable to SQL injection, leaks usernames in error messages, and likely stores plaintext passwords. With a security-focused system prompt active, Claude instead produces:
+
+```python
+# WITH security instructions — secure
+import bcrypt
+from sqlalchemy import text
+
+def login(username: str, password: str) -> dict:
+    if not username or not password:
+        return {"status": "fail", "error": "Invalid credentials"}
+
+    query = text("SELECT id, password_hash FROM users WHERE username = :username")
+    user = db.execute(query, {"username": username}).fetchone()
+
+    if not user or not bcrypt.checkpw(password.encode(), user.password_hash):
+        # Generic error prevents username enumeration
+        return {"status": "fail", "error": "Invalid credentials"}
+
+    return {"status": "ok", "user_id": user.id}
+```
+
+The difference is dramatic — parameterized queries, bcrypt for password comparison, and a generic error message that prevents username enumeration attacks.
 
 ## Use the TDD Skill for Test-Driven Security
 
@@ -35,7 +87,39 @@ Create tests that verify:
 - Sensitive data gets properly encrypted
 - Error handling doesn't leak information
 
-The TDD skill then guides Claude to write code that passes these security tests. This approach catches vulnerabilities early rather than discovering them after deployment.
+Here is a concrete set of security tests you would write before implementing a user registration endpoint:
+
+```python
+import pytest
+from app import create_user
+
+class TestUserRegistration:
+
+    def test_rejects_sql_injection_in_username(self):
+        result = create_user("admin'--", "password123")
+        assert result["status"] == "error"
+
+    def test_rejects_script_tags_in_username(self):
+        result = create_user("<script>alert(1)</script>", "password123")
+        assert result["status"] == "error"
+
+    def test_password_is_not_stored_in_plaintext(self):
+        create_user("alice", "mysecretpassword")
+        raw = db.execute("SELECT password FROM users WHERE username='alice'").scalar()
+        assert raw != "mysecretpassword"
+        assert raw.startswith("$2b$")  # bcrypt hash prefix
+
+    def test_error_does_not_reveal_existing_usernames(self):
+        create_user("bob", "pass1")
+        result = create_user("bob", "pass2")
+        assert "already exists" not in result.get("error", "")
+
+    def test_rejects_empty_credentials(self):
+        assert create_user("", "password")["status"] == "error"
+        assert create_user("user", "")["status"] == "error"
+```
+
+The TDD skill then guides Claude to write code that passes these security tests. This approach catches vulnerabilities early rather than discovering them after deployment. Security tests also serve as executable documentation that communicates your security requirements to every developer on the team.
 
 ## Use MCP Skills for Security Validation
 
@@ -47,6 +131,16 @@ Model Context Protocol (MCP) skills extend Claude's capabilities in powerful way
 
 Install these MCP skills to add an automated security layer. After Claude generates code, these tools can flag potential issues before you even review the output. This creates a feedback loop where Claude learns from security scans and improves subsequent code generation.
 
+### Setting Up a Security Scanning Pipeline
+
+The real power comes from chaining these skills. Configure Claude to run this sequence after generating any production code:
+
+1. Run `secret-detection` on the generated files — blocks anything with hardcoded credentials
+2. Run `dependency-scanner` against the package manifest — catches CVEs in new dependencies
+3. Run `static-analysis` for OWASP Top 10 patterns — flags injection risks, broken access control, and insecure deserialization
+
+When the secret-detection skill flags an issue, Claude receives the output and revises the code. This is faster than a human review cycle and eliminates an entire class of accidental credential exposure that is common in rapid development.
+
 ## Create Custom Security Skills
 
 Build a custom skill specifically for security enforcement. This skill contains your organization's security policies, compliance requirements, and coding standards. When activated, it adds a security lens to every code generation task.
@@ -57,7 +151,125 @@ Your custom security skill should include:
 2. **Forbidden practices** - Clear list of what not to do: eval(), string concatenation for SQL, hardcoded credentials
 3. **Validation rules** - Requirements for input sanitization, output encoding, and error handling
 
+Here is an example skill definition for a Node.js backend project:
+
+```markdown
+# Security Skill: NodeJS Backend
+
+## Approved Patterns
+
+### Password Hashing
+Always use bcrypt with a cost factor of at least 12:
+```javascript
+const bcrypt = require('bcrypt');
+const SALT_ROUNDS = 12;
+const hash = await bcrypt.hash(plaintext, SALT_ROUNDS);
+```
+
+### JWT Generation
+Use short-lived access tokens with refresh token rotation:
+```javascript
+const accessToken = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '15m' });
+const refreshToken = crypto.randomBytes(40).toString('hex');
+```
+
+### Input Validation
+Use Joi or Zod schema validation on all request bodies before processing.
+
+## Forbidden Practices
+- Never use eval() or new Function() with user input
+- Never concatenate user data into SQL strings
+- Never log req.body, passwords, or tokens
+- Never use MD5 or SHA1 for password storage
+
+## Compliance Notes
+- All endpoints handling PII must log access to the audit table
+- Encryption at rest required for all columns tagged [sensitive]
+```
+
 Call this skill at the start of any security-sensitive task. Claude will reference it throughout the coding session, producing code that aligns with your requirements.
+
+## Prevent Common Vulnerabilities
+
+Focus on preventing the vulnerabilities that plague most projects. Here is how to configure Claude for each of the OWASP Top 10:
+
+### SQL Injection
+
+Always use parameterized queries or ORMs. When using database skills, specify ORM usage explicitly in your prompts. Compare the two approaches:
+
+```python
+# Vulnerable — never generate this
+def get_user(user_id):
+    query = f"SELECT * FROM users WHERE id = {user_id}"
+    return db.execute(query).fetchone()
+
+# Secure — always generate this
+def get_user(user_id: int):
+    return db.execute(
+        text("SELECT id, username, email FROM users WHERE id = :id"),
+        {"id": user_id}
+    ).fetchone()
+```
+
+Add this to your system prompt: "Always use SQLAlchemy's text() with bound parameters or the ORM. Never use f-strings or string concatenation in SQL queries."
+
+### Cross-Site Scripting (XSS)
+
+Ensure output encoding happens at the right layer. Tell Claude to use framework-provided escaping functions:
+
+```javascript
+// Vulnerable
+element.innerHTML = userInput;
+
+// Secure — use textContent for text, or a sanitizer for HTML
+element.textContent = userInput;
+
+// When HTML is required, use DOMPurify
+element.innerHTML = DOMPurify.sanitize(userInput);
+```
+
+### Broken Authentication
+
+Specify proper session management, token expiration, and rate limiting in your requirements. A secure authentication configuration looks like this:
+
+```python
+# Rate limiting on login endpoint
+from slowapi import Limiter
+limiter = Limiter(key_func=get_remote_address)
+
+@app.post("/login")
+@limiter.limit("5/minute")
+async def login(request: Request, credentials: LoginSchema):
+    # Constant-time comparison prevents timing attacks
+    user = await get_user_by_email(credentials.email)
+    if not user:
+        # Still run bcrypt to prevent timing-based user enumeration
+        bcrypt.checkpw(b"dummy", b"$2b$12$dummy_hash_to_waste_time_AAAAAAAAAAAAAAAAAAAAAA")
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+    ...
+```
+
+### Sensitive Data Exposure
+
+Remind Claude to never log sensitive information, use environment variables for secrets, and implement proper encryption at rest and in transit:
+
+```python
+import logging
+
+# Configure logger to redact sensitive fields
+class SensitiveDataFilter(logging.Filter):
+    SENSITIVE_KEYS = {'password', 'token', 'api_key', 'secret', 'ssn', 'credit_card'}
+
+    def filter(self, record):
+        if hasattr(record, 'data') and isinstance(record.data, dict):
+            record.data = {
+                k: '[REDACTED]' if k in self.SENSITIVE_KEYS else v
+                for k, v in record.data.items()
+            }
+        return True
+```
+
+The **supermemory** skill helps you track which vulnerabilities you've addressed in past projects, building institutional knowledge about your security requirements.
 
 ## Implement Code Review Workflows
 
@@ -67,31 +279,62 @@ Even with all precautions, automated checks won't catch everything. Pair Claude'
 - **diff-review**: Helps you examine changes for security implications
 - **documentation-skill**: Ensures security considerations get documented
 
-When Claude generates code, run it through this review workflow. The combination of proactive configuration and reactive review creates defense in depth.
+When Claude generates code, run it through this review workflow. The combination of proactive configuration and reactive review creates defense in depth. A practical security checklist for every pull request should cover:
+
+```markdown
+## Security Checklist
+
+- [ ] No secrets or credentials in code or comments
+- [ ] All user inputs are validated before use
+- [ ] Database queries use parameterized statements
+- [ ] Error messages do not expose internal details
+- [ ] New dependencies scanned for known CVEs
+- [ ] Authentication and authorization checks present on protected routes
+- [ ] Sensitive data not written to logs
+- [ ] HTTPS enforced for all external calls
+```
+
+Paste this checklist into your pull-request-skill configuration. Claude will automatically populate it and flag unchecked items before requesting review.
 
 ## Use Environment-Specific Security Rules
 
 Different environments require different security approaches. Configure Claude with environment-specific rules that activate based on context:
 
-- **Development**: Relaxed rules for faster prototyping, but still enforce input validation
-- **Staging**: Full security enforcement matching production standards
-- **Production**: Strictest rules including audit logging, encryption requirements, and compliance checks
+| Environment | Validation | Logging | Encryption | Audit Trail |
+|---|---|---|---|---|
+| Development | Basic | Verbose | Optional | Off |
+| Staging | Full | Standard | Required | On |
+| Production | Strict | Minimal | Required | On |
+
+```python
+import os
+
+SECURITY_CONFIG = {
+    "development": {
+        "validate_inputs": True,
+        "strict_csp": False,
+        "require_https": False,
+        "log_level": "DEBUG"
+    },
+    "staging": {
+        "validate_inputs": True,
+        "strict_csp": True,
+        "require_https": True,
+        "log_level": "INFO"
+    },
+    "production": {
+        "validate_inputs": True,
+        "strict_csp": True,
+        "require_https": True,
+        "log_level": "WARNING",
+        "audit_log_pii_access": True
+    }
+}
+
+config = SECURITY_CONFIG[os.environ.get("APP_ENV", "development")]
+```
 
 Claude detects the environment from your working directory or configuration and applies appropriate security constraints automatically.
-
-## Prevent Common Vulnerabilities
-
-Focus on preventing the vulnerabilities that plague most projects:
-
-**SQL Injection**: Always use parameterized queries or ORMs. When using database skills, specify ORM usage explicitly in your prompts.
-
-**XSS Attacks**: Ensure output encoding happens at the right layer. Tell Claude to use framework-provided escaping functions.
-
-**Authentication Flaws**: Specify proper session management, token expiration, and multi-factor authentication in your requirements.
-
-**Sensitive Data Exposure**: Remind Claude to never log sensitive information, use environment variables for secrets, and implement proper encryption at rest and in transit.
-
-The **supermemory** skill helps you track which vulnerabilities you've addressed in past projects, building institutional knowledge about your security requirements.
 
 ## Monitor and Iterate
 
@@ -102,7 +345,31 @@ Track metrics like:
 - Security issues found in code review
 - Time spent fixing security bugs versus feature work
 
-This data helps you refine your configuration and training approach. Claude learns from the corrections, improving its security output over time.
+A simple tracking approach is to keep a security log in your project notes:
+
+```
+2026-03-01: Claude generated MD5 password hash — added explicit bcrypt requirement to system prompt
+2026-03-08: Missing rate limiting on signup endpoint — added rate limiting to security skill patterns
+2026-03-15: JWT secret not loaded from env — added dotenv requirement to forbidden practices list
+```
+
+This log becomes the changelog for your security configuration. Each entry tightens the constraints so the same issue never reappears. Claude learns from the corrections, improving its security output over time.
+
+## Comparison: Default vs. Configured Claude Code Security Output
+
+The following table summarizes the difference between running Claude Code without security configuration versus with the full setup described in this guide:
+
+| Concern | Default Claude | Configured Claude |
+|---|---|---|
+| SQL queries | Mixed — sometimes parameterized | Always parameterized |
+| Password storage | Variable — may use SHA256 | Always bcrypt with cost 12+ |
+| Error messages | May leak internals | Generic, non-revealing |
+| Secrets handling | May hardcode in comments | Always env vars |
+| Input validation | Often missing | Present on every endpoint |
+| Dependency choice | Popular libraries | Security-audited libraries |
+| Rate limiting | Rarely added | Added to auth endpoints |
+
+The investment in configuration is small compared to the cost of a security incident. Most of the setup described here — system prompt, custom skill, and MCP tools — takes under an hour to configure and applies automatically to every subsequent session.
 
 ## Conclusion
 
