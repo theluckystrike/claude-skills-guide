@@ -238,6 +238,28 @@ Deploying Chrome Enterprise through Jamf Pro combines package distribution with 
 For teams managing development environments, Chrome Enterprise's extension management and managed bookmarks provide consistent tooling across machines. The combination of Jamf's device management and Chrome's enterprise policies gives administrators the control needed for secure, standardized browser deployments.
 
 
+## Monitoring Compliance with Jamf Reporting
+
+After deployment, ongoing compliance monitoring ensures managed Macs maintain the intended Chrome configuration. Users occasionally work around managed settings by installing a personal Chrome alongside the managed Enterprise build, or by using private browsing to bypass extension restrictions. Jamf's reporting capabilities help surface these situations.
+
+Create a Jamf inventory query that checks Chrome Enterprise installation and configuration status:
+
+```bash
+# Extension Attribute script — run on managed Macs, reports to Jamf inventory
+#!/bin/bash
+CHROME_PATH="/Applications/Google Chrome.app"
+if [ -d "$CHROME_PATH" ]; then
+  VERSION=$(/usr/bin/defaults read "${CHROME_PATH}/Contents/Info" CFBundleShortVersionString 2>/dev/null)
+  BUNDLE_ID=$(/usr/bin/defaults read "${CHROME_PATH}/Contents/Info" CFBundleIdentifier 2>/dev/null)
+  POLICY_COUNT=$(/usr/bin/defaults read /Library/Preferences/com.google.Chrome 2>/dev/null | wc -l | tr -d ' ')
+  echo "Version: ${VERSION}, Bundle: ${BUNDLE_ID}, Policies: ${POLICY_COUNT}"
+else
+  echo "Not installed"
+fi
+```
+
+Add this as an Extension Attribute in Jamf Pro and include it in your compliance Smart Groups. Macs reporting zero policies applied are candidates for a remediation trigger that re-deploys the Configuration Profile.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

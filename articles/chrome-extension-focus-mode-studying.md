@@ -268,6 +268,30 @@ This pattern lets users customize their blocklist in the extension options while
 Chrome extensions transform the browser from a distraction source into a focused study environment. Whether using established tools like LeechBlock NG or building custom solutions with the Chrome Extension API, the key lies in matching features to personal study habits. Start simple—block your most problematic sites, use a timer, and gradually expand your system as focus becomes automatic.
 
 
+## Syncing Focus Schedules Across Devices
+
+A focus mode extension that only blocks sites on one device is only partially effective — distractions are always one device switch away. For students and developers who move between a desktop, laptop, and mobile device, syncing block schedules makes the system more robust.
+
+Chrome's `chrome.storage.sync` API automatically syncs data to all Chrome instances where the user is signed in:
+
+```javascript
+// settings.js — use sync storage for cross-device consistency
+async function saveBlockList(domains) {
+  await chrome.storage.sync.set({ blockList: domains });
+  // Also update dynamic rules on the current device
+  await setFocusMode(await isFocusActive());
+}
+
+async function loadBlockList() {
+  const data = await chrome.storage.sync.get(['blockList']);
+  return data.blockList || ['twitter.com', 'facebook.com', 'reddit.com'];
+}
+```
+
+This means block list changes made on a laptop automatically appear on the user's desktop the next time Chrome syncs. Active focus sessions (the timer state) remain local to the current device since a study session on one machine should not pause Chrome on another.
+
+For users who want centrally managed focus schedules without per-device configuration — such as students in a managed classroom environment — the same GPO-based deployment approach that forces extension installation can also push pre-configured block lists via managed extension storage.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

@@ -267,6 +267,18 @@ Combine these policies with `HomepageLocation` for a completely cohesive experie
 ---
 
 
+## Testing Startup Page Policy Before Rollout
+
+Before deploying startup page configuration to your entire organization, test it on a single machine to verify the policy applies correctly and the URLs load as expected. A three-step verification process avoids the common issues of policy not applying or URLs failing to load.
+
+First, apply the policy to a test machine (a local VM or your own workstation) and verify it appears in `chrome://policy`. Look for your policy under "Chrome Policies" in the Machine policies section. The "Status" column should show "OK" with a green checkmark for each applied policy.
+
+Second, restart Chrome completely and observe startup behavior. The configured URLs should open automatically without any user interaction. If Chrome opens a previous session instead, verify that `RestoreOnStartup` is set to `4` (open specific URLs) rather than `1` (restore previous session).
+
+Third, check that each URL actually loads. Startup pages that return 404, require VPN authentication, or display certificate errors create a poor first impression for users. For internal URLs, test the policy from outside the corporate network (using a VPN) to simulate the experience for remote workers.
+
+Document the test results — which policies applied, which URLs loaded, and any issues encountered — before requesting approval for organization-wide deployment. This documentation also serves as a rollback reference if you need to revert the configuration quickly.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

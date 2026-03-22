@@ -182,6 +182,25 @@ Understanding these techniques opens several testing possibilities. You can iden
 For development workflows, consider integrating these checks into your continuous integration pipeline. Run automated tests against throttled conditions to catch performance regressions before they reach production.
 
 
+## Throttling Third-Party Resources Specifically
+
+A common performance mistake is attributing slow page loads to first-party JavaScript when the actual culprit is a slow third-party analytics or chat widget. Chrome DevTools lets you filter the network log to isolate third-party requests, making it easier to identify which external domains are causing delays under throttled conditions.
+
+In the Network tab, use the filter bar to search by domain:
+
+```
+-domain:yourdomain.com
+```
+
+This hides all requests from your own domain, leaving only third-party requests visible. With throttling applied, you can immediately see which external resources take the longest to load. Common slow third-party resources include:
+
+- Tag manager scripts (Google Tag Manager, Adobe Launch) that load additional scripts
+- Chat widgets (Intercom, Drift, Zendesk) that make API calls on initialization
+- A/B testing tools (Optimizely, LaunchDarkly) with large client-side bundles
+- Social share buttons that load full platform SDKs
+
+For each slow third-party resource you identify, consider whether it is render-blocking (loaded in `<head>` without `async` or `defer`) or simply network-heavy. Render-blocking resources delay your First Contentful Paint directly; network-heavy resources delay Time to Interactive. Both show up clearly in a throttled session but require different optimization approaches.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

@@ -167,6 +167,31 @@ Blocked tool attempts appear as error entries in the log. Regular auditing of th
 
 The `disallowedTools` configuration in Claude Code provides essential security control for development teams. By carefully designing your tool access restrictions, you create safe, focused AI assistant environments that enhance productivity without introducing unnecessary risk. Start with restrictive configurations, understand the tool interactions in your workflows, and regularly audit your settings as your usage evolves.
 
+## Documenting Tool Restrictions for Your Team
+
+When deploying Claude Code with restricted tool configurations in a team environment, documenting the restrictions prevents confusion when team members encounter unexpected refusals. A developer who does not know that `Bash` is blocked in the CI environment will waste time troubleshooting what looks like a Claude Code bug.
+
+Add a `CLAUDE.md` file to each project with a section describing active tool restrictions:
+
+```markdown
+## Claude Code Configuration
+
+This project runs Claude Code with the following tool restrictions:
+
+**Disallowed in CI/CD environments:**
+- `Bash` — shell execution disabled; use Read/Write/Edit for file operations
+- `WebFetch` / `WebSearch` — no external network access in CI
+
+**Available everywhere:**
+- Read, Write, Edit, Glob, Grep — full file system access
+- All MCP tools configured in .claude/mcp-servers.json
+
+If you encounter "tool not available" errors locally, check ~/.claude/settings.json
+for any project-overriding restrictions applied during onboarding.
+```
+
+This documentation surfaces in every Claude Code session because CLAUDE.md is read automatically at session start. Developers working in the project know upfront which capabilities are available rather than discovering restrictions through error messages during active work.
+
 ## Related Reading
 
 - [Claude Code MCP Tool Allow and Deny Lists](/claude-skills-guide/claude-code-mcp-tool-allow-and-deny-lists/)

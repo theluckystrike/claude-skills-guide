@@ -170,6 +170,22 @@ AI color picker Chrome extensions represent a practical application of machine l
 The best extension is the one that fits seamlessly into your workflow. Experiment with a few options, configure them to match your tech stack preferences, and establish conventions for how your team uses color in your projects.
 
 
+## Color Accessibility in Practice
+
+Generating a visually pleasing palette is only half the work. Every color pair that appears together — text on a background, a button on its container, an icon on a card — must meet WCAG 2.1 contrast requirements. The minimum ratios are 4.5:1 for normal text (AA) and 3:1 for large text and UI components (AA). AAA standard requires 7:1 for normal text.
+
+AI color pickers surface these ratios automatically. When you select a foreground and background color, the extension computes the luminance difference and shows a pass/fail badge for each WCAG level. This catches problems like light gray text on a white background — a combination that looks fine on a high-brightness monitor but fails on most displays and for users with low vision.
+
+A practical checklist before finalizing a palette:
+
+1. Check body text color against the main background — must be AA at minimum
+2. Check placeholder text in forms — often fails because designers use a light color for "subtle" appearance
+3. Check CTA button text against the button background color
+4. Check disabled state — disabled buttons often use gray-on-gray combinations that fail WCAG
+5. Check focus ring color against both the element background and the page background
+
+For team projects, export the final accessibility report from the AI color picker and include it in your design review documentation. Having contrast ratios documented prevents regression when designers later adjust brand colors without re-checking accessibility.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
