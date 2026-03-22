@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-workflow-for-turkish-developer-teams/
 ---
+{% raw %}
 
 # Claude Code Workflow for Turkish Developer Teams
 
@@ -389,3 +390,4 @@ The teams that get the most value from Claude Code treat it as a team member rat
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
